@@ -10,7 +10,7 @@ The **`bookmarks.BookmarkTreeNodeType`** type is used to describe whether a node
 
 ## Type
 
-`bookmarks.BookmarkTreeNodeType` is a {{jsxref("string")}} which can have one of the following three values:
+`bookmarks.BookmarkTreeNodeType` is a {{jsxref("String")}} which can have one of the following three values:
 
 - `"bookmark"`: the node is a bookmark.
 - `"folder"`: the node is a folder.

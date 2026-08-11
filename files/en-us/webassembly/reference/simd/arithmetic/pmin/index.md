@@ -3,10 +3,11 @@ title: "pmin: Wasm SIMD arithmetic instruction"
 short-title: pmin
 slug: WebAssembly/Reference/SIMD/arithmetic/pmin
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.pmin
 sidebar: webassemblysidebar
 ---
 
-The **`pmin`** instruction compares two [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) floating point value interpretations and returns a new interpretation with each output lane set to the smaller of the corresponding input lanes. It is defined as `b < a ? b : a`, meaning that NaN in the first operand propagates to the output but NaN in the second operand does not — unlike [`min`](/en-US/docs/WebAssembly/Reference/Numeric/min), which propagates NaN from either operand.
+The **`pmin`** instruction compares two [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) floating point value interpretations and returns a new interpretation with each output lane set to the smaller of the corresponding input lanes. It is defined as `b < a ? b : a`, meaning that NaN in the first operand propagates to the output but NaN in the second operand does not — unlike [`min`](/en-US/docs/WebAssembly/Reference/Numeric/min), which propagates NaN from either operand.
 
 {{InteractiveExample("Wat Demo: pmin", "tabbed-taller")}}
 
@@ -64,6 +65,14 @@ value_type.pmin
 | ------------ | -------------- | -------------------------------- |
 | `f32x4.pmin` | `0xfd 234:u32` | `f32x4.pmin` => `0xfd 0xea 0x01` |
 | `f64x2.pmin` | `0xfd 246:u32` | `f64x2.pmin` => `0xfd 0xf6 0x01` |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

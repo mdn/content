@@ -3,11 +3,11 @@ title: "load16x4_s: Wasm SIMD load/store instruction"
 short-title: load16x4_s
 slug: WebAssembly/Reference/SIMD/load_store/load16x4_s
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.load16x4_s
+browser-compat: webassembly.instructions.load16x4_s
 sidebar: webassemblysidebar
 ---
 
-The **`load16x4_s`** [SIMD load/store instruction](/en-US/docs/WebAssembly/Reference/SIMD/load_store) loads four 16-bit integers from a given memory address and sign extends each one to a 32-bit lane, outputting a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) type `i32x4` value interpretation.
+The **`load16x4_s`** [SIMD load/store instruction](/en-US/docs/WebAssembly/Reference/SIMD/load_store) loads four 16-bit integers from a given memory address and sign extends each one to a 32-bit lane, outputting a [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) type `i32x4` value interpretation.
 
 {{InteractiveExample("Wat Demo: load16x4_s", "tabbed-taller")}}
 
@@ -76,7 +76,3 @@ v128.load16x4_s mem_idx offset=int align=int
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD load/store instructions](/en-US/docs/WebAssembly/Reference/SIMD/load_store)

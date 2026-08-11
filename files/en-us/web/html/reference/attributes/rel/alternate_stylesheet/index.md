@@ -12,7 +12,7 @@ The **`alternate stylesheet`** keyword pair, when used as a value for the [`rel`
 > [!NOTE]
 > This feature is not well supported in browsers without an extension. To offer alternative presentations that work with a user's existing preferences, see the CSS [media features](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features) {{cssxref("@media/prefers-color-scheme","prefers-color-scheme")}} and {{cssxref("@media/prefers-contrast","prefers-contrast")}}.
 
-Firefox lets users select alternate {{glossary("stylesheet", "stylesheets")}} using the _View > Page Style_ submenu, which displays the values of the [`title`](/en-US/docs/Web/HTML/Reference/Global_attributes/title) attributes. Other browsers require an extension to enable this functionality. The web page can also provide its own user interface to let users switch styles.
+Firefox lets users select alternate {{glossary("style sheet", "stylesheets")}} using the _View > Page Style_ submenu, which displays the values of the [`title`](/en-US/docs/Web/HTML/Reference/Global_attributes/title) attributes. Other browsers require an extension to enable this functionality. The web page can also provide its own user interface to let users switch styles.
 
 ## Examples
 

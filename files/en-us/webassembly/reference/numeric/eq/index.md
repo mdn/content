@@ -1,12 +1,13 @@
 ---
-title: "eq: Wasm text instruction"
+title: "eq: Wasm numeric instruction"
 short-title: eq
 slug: WebAssembly/Reference/Numeric/eq
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.eq
 sidebar: webassemblysidebar
 ---
 
-The **`eq`** instruction, short for _equal_, checks if two numbers are equal.
+The **`eq`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _equal_, checks if two numbers are equal.
 
 {{InteractiveExample("Wat Demo: eq", "tabbed-taller")}}
 
@@ -50,7 +51,7 @@ value_type.eq
     - `i64`
     - `f32`
     - `f64`
-    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) interpretations:
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) interpretations:
       - `i8x16`
       - `i16x8`
       - `i32x4`
@@ -75,7 +76,7 @@ value_type.eq
 
 For a non-SIMD `eq`, the inputs will be basic numeric values such as `1` or `3.5`. If the input values are equal, `1` will be pushed on to the stack as an output, otherwise `0` will be pushed on to the stack.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `eq`, the inputs will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `f32x4 0x9 0xa 0xb 0xc`. Each lane of the output pushed to the stack is a `1` or `0` indicating the equality of the corresponding lanes in the input values.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `eq`, the inputs will be [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations, for example `f32x4 0x9 0xa 0xb 0xc`. Each lane of the output pushed to the stack is a `1` or `0` indicating the equality of the corresponding lanes in the input values.
 
 ### Binary encoding
 
@@ -151,3 +152,11 @@ The output is as follows:
 {{embedlivesample("simd_eq", "100%", 100)}}
 
 The result is `0` because the values stored in lane `7` of the two input values are not equal.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

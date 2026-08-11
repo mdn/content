@@ -1,12 +1,13 @@
 ---
-title: "mul: Wasm text instruction"
+title: "mul: Wasm numeric instruction"
 short-title: mul
 slug: WebAssembly/Reference/Numeric/mul
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.mul
 sidebar: webassemblysidebar
 ---
 
-The **`mul`** instruction, short for _multiplication_, is used for multiplying one number by another number, similar to the **`*`** operator in other languages.
+The **`mul`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _multiplication_, is used for multiplying one number by another number, similar to the **`*`** operator in other languages.
 
 {{InteractiveExample("Wat Demo: mul", "tabbed-taller")}}
 
@@ -42,7 +43,7 @@ value_type.mul
     - `i64`
     - `f32`
     - `f64`
-    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) interpretations:
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) interpretations:
       - `i16x8`
       - `i32x4`
       - `i64x2`
@@ -66,7 +67,7 @@ value_type.mul
 
 For a non-SIMD `mul`, these will be basic numeric values such as `3` or `3.5`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `mul`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `f32x4 0x9 0xa 0xb 0xc`. Each lane of the output pushed to the stack is the product of the two inputs' corresponding lane values being multiplied together.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `mul`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations, for example `f32x4 0x9 0xa 0xb 0xc`. Each lane of the output pushed to the stack is the product of the two inputs' corresponding lane values being multiplied together.
 
 ### Binary encoding
 
@@ -141,3 +142,11 @@ The output is as follows:
 {{embedlivesample("simd_mul", "100%", 100)}}
 
 The result is `108`, because the value stored in lane `3` of output value is the result of `12 * 9`.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

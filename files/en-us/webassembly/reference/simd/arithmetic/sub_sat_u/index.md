@@ -3,11 +3,11 @@ title: "sub_sat_u: Wasm SIMD arithmetic instruction"
 short-title: sub_sat_u
 slug: WebAssembly/Reference/SIMD/arithmetic/sub_sat_u
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.sub_sat_u
+browser-compat: webassembly.instructions.sub_sat_u
 sidebar: webassemblysidebar
 ---
 
-The **`sub_sat_u`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic) performs a [saturating](https://en.wikipedia.org/wiki/Saturation_arithmetic) subtraction of two unsigned [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations — clamping the output to the range allowed by the value type. Each lane of the output value is the result of subtracting the corresponding lane of the second input from the corresponding lane of the first input.
+The **`sub_sat_u`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic) performs a [saturating](https://en.wikipedia.org/wiki/Saturation_arithmetic) subtraction of two unsigned [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations — clamping the output to the range allowed by the value type. Each lane of the output value is the result of subtracting the corresponding lane of the second input from the corresponding lane of the first input.
 
 {{InteractiveExample("Wat Demo: sub_sat_u", "tabbed-taller")}}
 
@@ -79,4 +79,3 @@ value_type.sub_sat_u
 ## See also
 
 - [`sub`](/en-US/docs/WebAssembly/Reference/Numeric/sub)
-- [SIMD arithmetic instructions](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic)

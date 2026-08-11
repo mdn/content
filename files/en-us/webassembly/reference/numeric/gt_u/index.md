@@ -1,12 +1,13 @@
 ---
-title: "gt_u: Wasm text instruction"
+title: "gt_u: Wasm numeric instruction"
 short-title: gt_u
 slug: WebAssembly/Reference/Numeric/gt_u
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.gt_u
 sidebar: webassemblysidebar
 ---
 
-The **`gt_u`** instruction, short for _greater than unsigned_, checks if an unsigned integer is greater than another unsigned integer.
+The **`gt_u`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _greater than unsigned_, checks if an unsigned integer is greater than another unsigned integer.
 
 There are other `gt` instructions available:
 
@@ -53,7 +54,7 @@ value_type.gt_u
   - : The type of value the instruction is being run on. The following types support `gt_u`:
     - `i32`
     - `i64`
-    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) interpretations:
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) interpretations:
       - `i8x16`
       - `i16x8`
       - `i32x4`
@@ -75,7 +76,7 @@ value_type.gt_u
 
 For a non-SIMD `gt_u`, the inputs will be basic numeric values such as `3` or `12`. If the first input is greater than the second input, `1` will be pushed on to the stack as an output, otherwise `0` will be pushed on to the stack.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `gt_u`, the inputs will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `i32x4 2 30 86 120`. Each lane of the output pushed to the stack is a `1` or `0` indicating whether the corresponding lane of the first input value is greater than the corresponding lane of the second input value.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `gt_u`, the inputs will be [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations, for example `i32x4 2 30 86 120`. Each lane of the output pushed to the stack is a `1` or `0` indicating whether the corresponding lane of the first input value is greater than the corresponding lane of the second input value.
 
 ### Binary encoding
 
@@ -147,6 +148,14 @@ The output is as follows:
 {{embedlivesample("simd_gt_u", "100%", 100)}}
 
 The result is `1` because the value stored in lane `3` of the first input value is greater than the value stored in lane `3` of the second input value.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

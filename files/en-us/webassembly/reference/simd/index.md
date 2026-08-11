@@ -23,4 +23,4 @@ WebAssembly SIMD (single instruction, multiple data) instructions.
 
 ## See also
 
-- [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) type
+- [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) type

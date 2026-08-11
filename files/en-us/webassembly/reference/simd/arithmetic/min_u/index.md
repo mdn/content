@@ -3,10 +3,11 @@ title: "min_u: Wasm SIMD arithmetic instruction"
 short-title: min_u
 slug: WebAssembly/Reference/SIMD/arithmetic/min_u
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.min_u
 sidebar: webassemblysidebar
 ---
 
-The **`min_u`** instruction compares two [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) unsigned integer value interpretations and returns a new interpretation with each lane set to the lower of that lane index's value on the two inputs.
+The **`min_u`** instruction compares two [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) unsigned integer value interpretations and returns a new interpretation with each lane set to the lower of that lane index's value on the two inputs.
 
 {{InteractiveExample("Wat Demo: min_u", "tabbed-taller")}}
 
@@ -57,7 +58,7 @@ value_type.min_u
 - `input2`
   - : The second input value.
 - `output`
-  - : The output value. A new `v128` of the same type as the inputs, with each lane set to the greater of that lane index's value on the two inputs.
+  - : The output value. A new `v128` of the same type as the inputs, with each lane set to the lower of that lane index's value on the two inputs.
 
 ### Binary encoding
 
@@ -66,6 +67,14 @@ value_type.min_u
 | `i8x16.min_u` | `0xfd 119:u32` | `i8x16.min_u` => `0xfd 0x77`      |
 | `i16x8.min_u` | `0xfd 151:u32` | `i16x8.min_u` => `0xfd 0x97 0x01` |
 | `i32x4.min_u` | `0xfd 183:u32` | `i32x4.min_u` => `0xfd 0xb7 0x01` |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

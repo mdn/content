@@ -1,12 +1,13 @@
 ---
-title: "le: Wasm text instruction"
+title: "le: Wasm numeric instruction"
 short-title: le
 slug: WebAssembly/Reference/Numeric/le
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.le
 sidebar: webassemblysidebar
 ---
 
-The **`le`** instruction, short for _less or equal_, checks if a floating point number is less than or equal to another floating point number.
+The **`le`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _less or equal_, checks if a floating point number is less than or equal to another floating point number.
 
 Integer types have separate less than or equal to signed ([**`le_s`**](/en-US/docs/WebAssembly/Reference/Numeric/le_s)) and unsigned ([**`le_u`**](/en-US/docs/WebAssembly/Reference/Numeric/le_u)) instructions.
 
@@ -50,7 +51,7 @@ value_type.le
   - : The type of value the instruction is being run on. The following types support `le`:
     - `f32`
     - `f64`
-    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) interpretations:
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) interpretations:
       - `f32x4`
       - `f64x2`
 - `le`
@@ -71,7 +72,7 @@ value_type.le
 
 For a non-SIMD `le`, the inputs will be basic numeric values such as `3.0` or `3.5`. If the first input is less than or equal to the second input, `1` will be pushed on to the stack as an output, otherwise `0` will be pushed on to the stack.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `le`, the inputs will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `f32x4 2.0 30 86.9 120`. Each lane of the output pushed to the stack is a `1` or `0` indicating whether the corresponding lane of the first input value is less than or equal to the corresponding lane of the second input value.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `le`, the inputs will be [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations, for example `f32x4 2.0 30 86.9 120`. Each lane of the output pushed to the stack is a `1` or `0` indicating whether the corresponding lane of the first input value is less than or equal to the corresponding lane of the second input value.
 
 ### Binary encoding
 
@@ -142,6 +143,14 @@ The output is as follows:
 {{embedlivesample("simd_le", "100%", 100)}}
 
 The result is `0` because the value stored in lane `3` of the first input value is not less than or equal to the value stored in lane `3` of the second input value.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

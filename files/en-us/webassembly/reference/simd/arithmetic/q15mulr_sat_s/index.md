@@ -3,11 +3,11 @@ title: "q15mulr_sat_s: Wasm SIMD arithmetic instruction"
 short-title: q15mulr_sat_s
 slug: WebAssembly/Reference/SIMD/arithmetic/q15mulr_sat_s
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.q15mulr_sat_s
+browser-compat: webassembly.instructions.q15mulr_sat_s
 sidebar: webassemblysidebar
 ---
 
-The **`q15mulr_sat_s`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic) performs a lane-wise [saturating](https://en.wikipedia.org/wiki/Saturation_arithmetic) rounding multiplication in Q15 format on two signed [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `i16x8` value interpretations — clamping the output to the range allowed by the value type (a single `i16x8` value interpretation).
+The **`q15mulr_sat_s`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic) performs a lane-wise [saturating](https://en.wikipedia.org/wiki/Saturation_arithmetic) rounding multiplication in Q15 format on two signed [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) `i16x8` value interpretations — clamping the output to the range allowed by the value type (a single `i16x8` value interpretation).
 
 {{InteractiveExample("Wat Demo: q15mulr_sat_s", "tabbed-taller")}}
 
@@ -83,7 +83,3 @@ i16x8.q15mulr_sat_s
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD arithmetic instructions](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic)

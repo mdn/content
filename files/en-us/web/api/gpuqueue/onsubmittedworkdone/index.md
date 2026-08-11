@@ -63,7 +63,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with {{jsxref("Undefined")}}.
+A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}}.
 
 ## Examples
 

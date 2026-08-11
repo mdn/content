@@ -76,8 +76,8 @@ In your extension's `manifest.json` file, declare `host_permissions` for the dom
 Add a mechanism to enter the registration JSON. In this case, a pop-up; you could also use an extension page. This example uses a simple `popup.html` with a `textarea` for the JSON input and two buttons: one for registration and one for authentication.
 
 ```html
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en-US">
   <head>
     <meta charset="UTF-8" />
     <title>WebAuthn Extension</title>
@@ -176,6 +176,6 @@ The JSON you use to perform the assertion, with `rpId` set to an external domain
 When your relying party server validates a WebAuthn response originating from an extension, it must accept the **extension origin** in addition to regular web origins. Parse `clientDataJSON` and check the `origin` field:
 
 - For Chrome extensions: `chrome-extension://<extension-id>`
-- For Firefox extensions: `moz-extension://<sha256-hash>` (using the `a'–`p` encoding described in [Extension origin and server-side validation](#extension_origin_and_server-side_validation)).
+- For Firefox extensions: `moz-extension://<sha256-hash>` (using the `a`–`p` encoding described in [Extension origin and server-side validation](#extension_origin_and_server-side_validation)).
 
 Your server's origin allowlist must include these values for end-to-end authentication.

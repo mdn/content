@@ -10,7 +10,7 @@ WebAssembly SIMD load/store instructions.
 ## Load and load lane
 
 - [`load`](/en-US/docs/WebAssembly/Reference/SIMD/load_store/load)
-  - : Loads all lanes of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretation with values from a given memory address.
+  - : Loads all lanes of a [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretation with values from a given memory address.
 - [`load8_lane`](/en-US/docs/WebAssembly/Reference/SIMD/load_store/load8_lane)
   - : Loads a single value from a given memory address into the specified lane of a `v128` `i8x16` value interpretation.
 - [`load16_lane`](/en-US/docs/WebAssembly/Reference/SIMD/load_store/load16_lane)

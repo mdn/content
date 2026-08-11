@@ -23,21 +23,21 @@ The HTML `<marquee>` element is deprecated and its use is strongly discouraged. 
   - : Sets the background color through color name or hexadecimal value.
 - `direction` {{Deprecated_Inline}}
   - : Sets the direction of the scrolling within the marquee. Possible values are `left`, `right`, `up` and `down`. If no value is specified, the default value is `left`.
-- `height` {{Deprecated_Inline}}
+- `height` {{Deprecated_Inline}} {{non-standard_inline}}
   - : Sets the height in pixels or percentage value.
-- `hspace` {{Deprecated_Inline}}
+- `hspace` {{Deprecated_Inline}} {{non-standard_inline}}
   - : Sets the horizontal margin
 - `loop` {{Deprecated_Inline}}
   - : Sets the number of times the marquee will scroll. If no value is specified, the default value is −1, which means the marquee will scroll continuously.
-- `scrollamount` {{Deprecated_Inline}}
+- `scrollamount` {{Deprecated_Inline}} {{non-standard_inline}}
   - : Sets the amount of scrolling at each interval in pixels. The default value is 6.
-- `scrolldelay` {{Deprecated_Inline}}
+- `scrolldelay` {{Deprecated_Inline}} {{non-standard_inline}}
   - : Sets the interval between each scroll movement in milliseconds. The default value is 85. Note that any value smaller than 60 is ignored and the value 60 is used instead unless `truespeed` is specified.
 - `truespeed` {{Deprecated_Inline}}
   - : By default, `scrolldelay` values lower than 60 are ignored. If `truespeed` is present, those values are not ignored.
-- `vspace` {{Deprecated_Inline}}
+- `vspace` {{Deprecated_Inline}} {{non-standard_inline}}
   - : Sets the vertical margin in pixels or percentage value.
-- `width` {{Deprecated_Inline}}
+- `width` {{Deprecated_Inline}} {{non-standard_inline}}
   - : Sets the width in pixels or percentage value.
 
 ## Examples

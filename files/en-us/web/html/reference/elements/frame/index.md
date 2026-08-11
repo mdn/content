@@ -19,19 +19,19 @@ Using the `<frame>` element is not encouraged because of certain disadvantages s
 
 Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
-- `src` {{Deprecated_Inline}}
+- `src` {{Deprecated_Inline}} {{non-standard_inline}}
   - : This attribute specifies the document that will be displayed by the frame.
-- `name` {{Deprecated_Inline}}
+- `name` {{Deprecated_Inline}} {{non-standard_inline}}
   - : This attribute is used for labeling frames. Without labeling, every link will open in the frame that it's in – the closest parent frame. See the [`target`](/en-US/docs/Web/HTML/Reference/Elements/a#target) attribute for more information.
-- `noresize` {{Deprecated_Inline}}
+- `noresize` {{Deprecated_Inline}} {{non-standard_inline}}
   - : This attribute prevents resizing of frames by users.
-- `scrolling` {{Deprecated_Inline}}
+- `scrolling` {{Deprecated_Inline}} {{non-standard_inline}}
   - : This attribute defines the existence of a scrollbar. If this attribute is not used, the browser adds a scrollbar when necessary. There are two choices: "yes" for forcing a scrollbar even when it is not necessary and "no" for forcing no scrollbar even when it _is_ necessary.
-- `marginheight` {{Deprecated_Inline}}
+- `marginheight` {{Deprecated_Inline}} {{non-standard_inline}}
   - : This attribute defines the height of the margin between frames.
-- `marginwidth` {{Deprecated_Inline}}
+- `marginwidth` {{Deprecated_Inline}} {{non-standard_inline}}
   - : This attribute defines the width of the margin between frames.
-- `frameborder` {{Deprecated_Inline}}
+- `frameborder` {{Deprecated_Inline}} {{non-standard_inline}}
   - : This attribute allows you to specify a frame's border.
 
 ## Example

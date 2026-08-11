@@ -62,7 +62,7 @@ jobs:
 
       - name: Checkout
         if: steps.identify-pr.outputs.number
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           path: mdn-content
           ref: main
@@ -72,7 +72,7 @@ jobs:
         if: steps.check.outputs.HAS_ARTIFACT == 'true'
         uses: reviewdog/action-setup@d8a7baabd7f3e8544ee4dbde3ee41d0011c3a93f # v1.5.0
         with:
-          reviewdog_version: latest
+          reviewdog_version: v0.21.0
 
       - name: Add PR review with suggested changes using `git diff` output
         if: steps.check.outputs.HAS_ARTIFACT == 'true' && hashFiles('lint-results/lint.diff') != ''

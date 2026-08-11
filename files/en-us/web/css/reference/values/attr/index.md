@@ -80,7 +80,7 @@ The parameters are:
         ```css
         @namespace svg url("http://www.w3.org/2000/svg");
         a {
-          fill: attr(svg|myattr type(*), green);
+          fill: attr(svg|myAttr type(*), green);
         }
         ```
 
@@ -128,29 +128,31 @@ If no `<fallback-value>` is set, the return value will default to an empty strin
 
 ### Limitations and security
 
-The `attr()` function can reference attributes that were never intended for styling use and might contain sensitive information (for example, a security token used by scripts on the page). In general, this is fine, but it can become a security threat when used in URLs. Therefore, you can't use `attr()` to dynamically construct URLs.
+The `attr()` function can reference attributes that were never intended for styling use and might contain sensitive information (for example, a security token used by scripts on the page). In general, this is fine, but it can become a security threat when used in URLs.
 
-```html
+For this reason, you can't use `attr()` to dynamically construct URLs:
+
+```html example-bad
 <!-- This won't work! -->
 <span data-icon="https://example.org/icons/question-mark.svg">help</span>
 ```
 
-```css
+```css example-bad
 span[data-icon] {
   background-image: url(attr(data-icon));
 }
 ```
 
-However, this restriction applies only to places that strictly require a `<url>` type.
-Some functions — such as {{CSSxRef("image/image-set","image-set()")}} — can accept a `<string>` value that is later interpreted as a URL, allowing `attr()` to work in those contexts, depending on browser support:
+This restriction also applies to any context that could potentially result in a `<url>` value.
+Values that use `attr()` get marked as _`attr()`-tainted_, and using them as or in a `<url>` makes a declaration become ["invalid at computed value time" (IACVT)](https://www.bram.us/2024/02/26/css-what-is-iacvt/).
 
-```css
+So, for example, functions like {{CSSxRef("image/image-set","image-set()")}} that take values that resolve to `<url>` also won't work:
+
+```css example-bad
 span[data-icon] {
   background: image-set(attr(data-icon));
 }
 ```
-
-Values that use `attr()` get marked as _`attr()`-tainted_. Using an `attr()`-tainted value as or in a `<url>` makes a declaration become ["invalid at computed value time" or IACVT for short](https://www.bram.us/2024/02/26/css-what-is-iacvt/).
 
 ### Backwards compatibility
 

@@ -8,16 +8,12 @@ browser-compat: api.RTCError.sentAlert
 
 {{APIRef("WebRTC")}}
 
-The read-only **`sentAlert`** property in an
-{{domxref("RTCError")}} object specifies the {{Glossary("DTLS")}} alert number occurred
-while sending data to the remote peer, if the error represents an outbound DTLS error.
+The **`sentAlert`** read-only property of the {{domxref("RTCError")}} interface specifies the {{Glossary("DTLS")}} alert number sent to the remote peer, if the error represents an outbound DTLS error.
 
 ## Value
 
-An unsigned integer value providing the DTLS alert number corresponding to the DTLS
-error which was sent to the remote peer, as represented by this `RTCError`
-object. This property is `null` if {{domxref("RTCError.errorDetail", "errorDetail")}}
-isn't `dtls-failure`.
+A positive integer value providing the DTLS alert number corresponding to the DTLS error which was sent to the remote peer, as represented by this `RTCError` object.
+This property is `null` if {{domxref("RTCError.errorDetail", "errorDetail")}} isn't `dtls-failure`.
 
 ## Specifications
 

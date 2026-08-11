@@ -1,5 +1,5 @@
 ---
-title: browser module
+title: "`browser` module"
 short-title: browser
 slug: Web/WebDriver/Reference/BiDi/Modules/browser
 page-type: listing-page
@@ -31,11 +31,21 @@ Each user context has a unique string identifier (user context ID). The browser 
 
 Multiple tabs from different user contexts can share the same [client window](#client_windows).
 
+For example, a regular browser tab lives in the `"default"` user context.
+A tab opened in a separate container lives in a different user context.
+Both tabs can appear in the same client window, but their cookies and session data are completely isolated from each other.
+
 User contexts can be created using [`browser.createUserContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/createUserContext) and removed using [`browser.removeUserContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/removeUserContext).
 
 ## Commands
 
-{{ListSubPages}}
+- [`browser.close`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/close)
+- [`browser.createUserContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/createUserContext)
+- [`browser.getClientWindows`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/getClientWindows)
+- [`browser.getUserContexts`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/getUserContexts)
+- [`browser.removeUserContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/removeUserContext)
+- [`browser.setClientWindowState`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/setClientWindowState)
+- [`browser.setDownloadBehavior`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/setDownloadBehavior)
 
 ## Events
 

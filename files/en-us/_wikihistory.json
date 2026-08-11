@@ -4661,7 +4661,7 @@
     "modified": "2020-03-27T15:58:36.525Z",
     "contributors": ["RafeyIqbalRahman", "Iqbalh11", "Sheppy"]
   },
-  "Glossary/Stylesheet": {
+  "Glossary/Style_sheet": {
     "modified": "2019-12-03T08:33:18.728Z",
     "contributors": ["chrisdavidmills", "nicho110"]
   },
@@ -15507,19 +15507,6 @@
   "Mozilla/Add-ons/WebExtensions/manifest.json/name": {
     "modified": "2020-10-15T21:38:35.254Z",
     "contributors": ["wbamberg", "abbycar", "Makyen"]
-  },
-  "Mozilla/Add-ons/WebExtensions/manifest.json/offline_enabled": {
-    "modified": "2020-11-04T21:11:17.147Z",
-    "contributors": [
-      "sideshowbarker",
-      "room.booking7788",
-      "apselivi",
-      "Alling",
-      "wbamberg",
-      "hellosct1",
-      "ExE-Boss",
-      "vitaly-zdanevich"
-    ]
   },
   "Mozilla/Add-ons/WebExtensions/manifest.json/omnibox": {
     "modified": "2020-10-15T21:52:06.691Z",
@@ -56137,10 +56124,6 @@
       "Sheppy",
       "Jeremie"
     ]
-  },
-  "Web/API/SVGRenderingIntent": {
-    "modified": "2020-10-15T21:53:52.961Z",
-    "contributors": ["fscholz", "Sebastianz"]
   },
   "Web/API/SVGSVGElement": {
     "modified": "2020-10-15T21:05:32.581Z",

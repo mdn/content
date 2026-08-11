@@ -80,7 +80,7 @@ Interfaces that define audio sources for use in the Web Audio API.
 - {{domxref("AudioScheduledSourceNode")}}
   - : The **`AudioScheduledSourceNode`** is a parent interface for several types of audio source node interfaces. It is an {{domxref("AudioNode")}}.
 - {{domxref("OscillatorNode")}}
-  - : The **`OscillatorNode`** interface represents a periodic waveform, such as a sine or triangle wave. It is an {{domxref("AudioNode")}} audio-processing module that causes a given _frequency_ of wave to be created.
+  - : The **`OscillatorNode`** interface represents a periodic waveform, which can be sine, square, sawtooth, triangle, or custom. It is an {{domxref("AudioNode")}} audio-processing module that causes a given _frequency_ of wave to be created.
 - {{domxref("AudioBuffer")}}
   - : The **`AudioBuffer`** interface represents a short audio asset residing in memory, created from an audio file using the {{ domxref("BaseAudioContext.decodeAudioData") }} method, or created with raw data using {{ domxref("BaseAudioContext.createBuffer") }}. Once decoded into this form, the audio can then be put into an {{ domxref("AudioBufferSourceNode") }}.
 - {{domxref("AudioBufferSourceNode")}}
@@ -124,10 +124,12 @@ Once you are done processing your audio, these interfaces define where to output
 
 ### Data analysis and visualization
 
-If you want to extract time, frequency, and other data from your audio, the `AnalyserNode` is what you need.
+Interfaces for extracting audio graph statistics, for the purposes of data analysis and visualization.
 
 - {{domxref("AnalyserNode")}}
-  - : The **`AnalyserNode`** interface represents a node able to provide real-time frequency and time-domain analysis information, for the purposes of data analysis and visualization.
+  - : Represents a node able to provide real-time frequency and time-domain analysis information.
+- {{domxref("AudioPlaybackStats")}}
+  - : Provides access to duration, underrun, and latency statistics for the associated {{domxref("AudioContext")}}. These statistics allow you to measure audio delay and glitches.
 
 ### Splitting and merging audio channels
 

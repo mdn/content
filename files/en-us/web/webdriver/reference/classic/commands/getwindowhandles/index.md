@@ -23,7 +23,7 @@ In order to determine whether or not a particular interaction with the browser o
 
 ### Errors
 
-- Invalid session ID
+- `invalid session id`
   - : Session does not exist.
 
 ## Example

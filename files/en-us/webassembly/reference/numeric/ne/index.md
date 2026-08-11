@@ -1,12 +1,13 @@
 ---
-title: "ne: Wasm text instruction"
+title: "ne: Wasm numeric instruction"
 short-title: ne
 slug: WebAssembly/Reference/Numeric/ne
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.ne
 sidebar: webassemblysidebar
 ---
 
-The **`ne`** instruction, short for _not equal_, checks if two numbers are not equal.
+The **`ne`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _not equal_, checks if two numbers are not equal.
 
 {{InteractiveExample("Wat Demo: ne", "tabbed-taller")}}
 
@@ -50,7 +51,7 @@ value_type.ne
     - `i64`
     - `f32`
     - `f64`
-    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) interpretations:
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) interpretations:
       - `i8x16`
       - `i16x8`
       - `i32x4`
@@ -75,7 +76,7 @@ value_type.ne
 
 For a non-SIMD `ne`, the input values will be basic numeric values such as `3` or `3.5`. If the two input values are not equal, `1` will be pushed on to the stack as an output, otherwise `0` will be pushed on to the stack.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `ne`, the input values will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `f32x4 0x9 0xa 0xb 0xc`. Each lane of the output pushed to the stack is a `1` or `0` indicating whether the corresponding lanes of the two input values are not equal.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `ne`, the input values will be [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations, for example `f32x4 0x9 0xa 0xb 0xc`. Each lane of the output pushed to the stack is a `1` or `0` indicating whether the corresponding lanes of the two input values are not equal.
 
 ### Binary encoding
 
@@ -150,3 +151,11 @@ The output is as follows:
 {{embedlivesample("simd_ne", "100%", 100)}}
 
 `1` is output because the values in lane `1` of the two input values are not equal.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

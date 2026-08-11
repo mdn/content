@@ -47,16 +47,16 @@ A `<meta name="robots">` element can have the following additional attributes:
         Used by: [Google](https://developers.google.com/search/docs/crawling-indexing/special-tags?visit_id=637855965074074862-574753619&rd=1).
     - `noarchive`
       - : Requests that the search engine not cache the page content.
-        Used by: [Google](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag), [Yahoo](https://help.yahoo.com/kb/search-for-desktop/SLN2213.html), [Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240).
+        Used by: [Google](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag), [Yahoo](https://help.yahoo.com/kb/search-for-desktop/SLN2213.html), [Bing](https://www.bing.com/webmasters/help/robots-meta-tags-and-attributes-that-bing-supports-5198d240).
     - `nosnippet`
       - : Prevents displaying any description of the page in search engine results.
-        Used by: [Google](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag), [Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240).
+        Used by: [Google](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag), [Bing](https://www.bing.com/webmasters/help/robots-meta-tags-and-attributes-that-bing-supports-5198d240).
     - `noimageindex`
       - : Requests that this page not appear as the referring page of an indexed image.
         Used by: [Google](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag).
     - `nocache`
       - : Synonym of `noarchive`.
-        Used by: [Bing](https://www.bing.com/webmasters/help/which-robots-metatags-does-bing-support-5198d240).
+        Used by: [Bing](https://www.bing.com/webmasters/help/robots-meta-tags-and-attributes-that-bing-supports-5198d240).
 
 ## Description
 

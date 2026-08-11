@@ -3,11 +3,11 @@ title: "shuffle: Wasm SIMD conversion instruction"
 short-title: shuffle
 slug: WebAssembly/Reference/SIMD/conversion/shuffle
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.shuffle
+browser-compat: webassembly.instructions.shuffle
 sidebar: webassemblysidebar
 ---
 
-The **`shuffle`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) returns a new [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value with its lane values selected from two input `v128` values, determined by provided index values.
+The **`shuffle`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) returns a new [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value with its lane values selected from two input `v128` values, determined by provided index values.
 
 {{InteractiveExample("Wat Demo: shuffle", "tabbed-taller")}}
 
@@ -39,7 +39,7 @@ value_type.shuffle indices
 ```
 
 - `value_type`
-  - : The type of value the instruction is being run on. The following [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations support `shuffle`:
+  - : The type of value the instruction is being run on. The following [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations support `shuffle`:
     - `i8x16`
 - `shuffle`
   - : The `shuffle` instruction. Must always be included after the `value_type` and a period (`.`).
@@ -72,7 +72,3 @@ value_type.shuffle indices
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD conversion instructions](/en-US/docs/WebAssembly/Reference/SIMD/conversion)

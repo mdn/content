@@ -1,12 +1,13 @@
 ---
-title: "const: Wasm text instruction"
+title: "const: Wasm numeric instruction"
 short-title: const
 slug: WebAssembly/Reference/Numeric/const
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.const
 sidebar: webassemblysidebar
 ---
 
-The **`const`** [WebAssembly numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) is used to declare numbers.
+The **`const`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) is used to declare numbers.
 
 {{InteractiveExample("Wat Demo: const", "tabbed-standard")}}
 
@@ -40,7 +41,7 @@ value_type.const
     - `i64`
     - `f32`
     - `f64`
-    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128)
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128)
 - `const`
   - : The `const` instruction. Must always be included after the `value_type` and a period (`.`).
 
@@ -53,7 +54,7 @@ value_type.const
 - `output`
   - : The value being pushed onto the stack:
     - For a non-SIMD `value_type`, this will be a basic numeric value such as `3` or `3.5`.
-    - For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `value_type`, this will be a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) type followed by a SIMD value interpretation, for example `i32x4 0x9 0xa 0xb 0xc`.
+    - For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `value_type`, this will be a [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) type followed by a SIMD value interpretation, for example `i32x4 0x9 0xa 0xb 0xc`.
 
 ### Binary encoding
 
@@ -64,3 +65,11 @@ value_type.const
 | `f32.const`  | `0x43 f:float32`       | `f32.const 2.5` => `0x43 0x00 0x00 0x20 0x40`                                                                                     |
 | `f64.const`  | `0x44 f:float64`       | `f64.const 2.5` => `0x44 0x00 0x00 0x00 0x00 0x00 0x00 0x04 0x40`                                                                 |
 | `v128.const` | `0xfd 0x0c (b:byte)¹⁶` | `v128.const i32x4 0x9 0xa 0xb 0xc` => `0xfd 0x0c 0x09 0x00 0x00 0x00 0x0a 0x00 0x00 0x00 0x0b 0x00 0x00 0x00 0x0c 0x00 0x00 0x00` |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

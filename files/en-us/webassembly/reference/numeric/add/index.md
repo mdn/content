@@ -1,12 +1,13 @@
 ---
-title: "add: Wasm text instruction"
+title: "add: Wasm numeric instruction"
 short-title: add
 slug: WebAssembly/Reference/Numeric/add
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.add
 sidebar: webassemblysidebar
 ---
 
-The **`add`** instruction is used for adding up two numbers, similar to the **`+`** operator in other languages.
+The **`add`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) is used for adding up two numbers, similar to the **`+`** operator in other languages.
 
 {{InteractiveExample("Wat Demo: add", "tabbed-taller")}}
 
@@ -42,7 +43,7 @@ value_type.add
     - `i64`
     - `f32`
     - `f64`
-    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) interpretations:
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) interpretations:
       - `i8x16`
       - `i16x8`
       - `i32x4`
@@ -67,7 +68,7 @@ value_type.add
 
 For a non-SIMD `add`, these will be basic numeric values such as `3` or `3.5`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `add`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `f32x4 0x9 0xa 0xb 0xc`. Each lane of the output pushed to the stack is the addition of the corresponding lanes in the input values.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `add`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations, for example `f32x4 0x9 0xa 0xb 0xc`. Each lane of the output pushed to the stack is the addition of the corresponding lanes in the input values.
 
 ### Binary encoding
 
@@ -143,3 +144,11 @@ The output is as follows:
 {{embedlivesample("simd_add", "100%", 100)}}
 
 The result is `24`, because the value stored in lane `3` of each of the input values is `12`. Once added together, the output value's lane `3` will contain the value `24`.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

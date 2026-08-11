@@ -3,11 +3,11 @@ title: "not: Wasm SIMD bitwise instruction"
 short-title: not
 slug: WebAssembly/Reference/SIMD/bitwise/not
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.not
+browser-compat: webassembly.instructions.not
 sidebar: webassemblysidebar
 ---
 
-The **`not`** [SIMD bitwise instruction](/en-US/docs/WebAssembly/Reference/SIMD/bitwise) performs a bitwise NOT on each byte of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value and returns a new `v128` value containing the result.
+The **`not`** [SIMD bitwise instruction](/en-US/docs/WebAssembly/Reference/SIMD/bitwise) performs a bitwise NOT on each byte of a [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value and returns a new `v128` value containing the result.
 
 {{InteractiveExample("Wat Demo: not", "tabbed-taller")}}
 
@@ -86,7 +86,3 @@ v128.not
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD bitwise instructions](/en-US/docs/WebAssembly/Reference/SIMD/bitwise)

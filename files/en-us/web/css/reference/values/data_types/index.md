@@ -121,7 +121,7 @@ The [CSS images](/en-US/docs/Web/CSS/Guides/Images) module defines the data type
 
 ## 2D positioning
 
-The {{cssxref("&lt;position&gt;")}} data type is interpreted as defined for the {{cssxref("&lt;background-position&gt;")}} property.
+The {{cssxref("&lt;position&gt;")}} data type is interpreted as defined for the {{cssxref("background-position")}} property.
 
 - {{cssxref("&lt;position&gt;")}}
   - : Defines the position of an object area. Accepts a keyword value such as `top` or `left`, or a `<length-percentage>`.
@@ -192,6 +192,7 @@ The [CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes) and [CSS borders and box dec
 - {{cssxref("length")}}
 - {{cssxref("length-percentage")}}
 - {{cssxref("line-style")}}
+- {{cssxref("line-width")}}
 - {{cssxref("named-color")}}
 - {{cssxref("number")}}
 - {{cssxref("overflow_value", "&lt;overflow&gt;")}}

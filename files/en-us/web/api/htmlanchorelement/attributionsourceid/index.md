@@ -3,12 +3,10 @@ title: "HTMLAnchorElement: attributionSourceId property"
 short-title: attributionSourceId
 slug: Web/API/HTMLAnchorElement/attributionSourceId
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.HTMLAnchorElement.attributionSourceId
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
 The **`attributionSourceId`** property of the {{domxref("HTMLAnchorElement")}} interface gets and sets the `attributionsourceid` HTML attribute on an {{htmlelement("a")}} element.
 

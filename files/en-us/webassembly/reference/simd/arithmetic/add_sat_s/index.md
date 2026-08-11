@@ -3,11 +3,11 @@ title: "add_sat_s: Wasm SIMD arithmetic instruction"
 short-title: add_sat_s
 slug: WebAssembly/Reference/SIMD/arithmetic/add_sat_s
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.add_sat_s
+browser-compat: webassembly.instructions.add_sat_s
 sidebar: webassemblysidebar
 ---
 
-The **`add_sat_s`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic) performs a [saturating](https://en.wikipedia.org/wiki/Saturation_arithmetic) addition of two signed [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations — clamping the output to the range allowed by the value type. Each lane of the output value is the result of adding the corresponding lanes of the input value.
+The **`add_sat_s`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic) performs a [saturating](https://en.wikipedia.org/wiki/Saturation_arithmetic) addition of two signed [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations — clamping the output to the range allowed by the value type. Each lane of the output value is the result of adding the corresponding lanes of the input value.
 
 {{InteractiveExample("Wat Demo: add_sat_s", "tabbed-taller")}}
 
@@ -79,4 +79,3 @@ value_type.add_sat_s
 ## See also
 
 - [`add`](/en-US/docs/WebAssembly/Reference/Numeric/add)
-- [SIMD arithmetic instructions](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic)

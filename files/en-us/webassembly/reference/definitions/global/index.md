@@ -66,9 +66,9 @@ global identifier type initial_value
         - `i64`
         - `f32`
         - `f64`
-        - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128)
-        - [`funcref`](/en-US/docs/WebAssembly/Reference/Types/funcref)
-        - [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref)
+        - [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128)
+        - [`funcref`](/en-US/docs/WebAssembly/Reference/Value_types/funcref)
+        - [`externref`](/en-US/docs/WebAssembly/Reference/Value_types/externref)
         - Other reference types such as structs (for example, `structref`), exceptions (for example, `exnref`), `i31` (`i31ref`), etc.
 - `initial_value`
   - : The initializer for the new global. Its value can be:
@@ -92,11 +92,11 @@ The WebAssembly `global` definition enables globally-scoped variables to be defi
   ```
 
 > [!NOTE]
-> If a global contains a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) (SIMD) or exception (`exnref`) type, you can export it, but attempting to read the global's value via JavaScript will result in a `TypeError`.
+> If a global contains a [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) (SIMD) or exception (`exnref`) type, you can export it, but attempting to read the global's value via JavaScript will result in a `TypeError`.
 
 ### Creating globals from JavaScript
 
-It is also possible to create a Wasm global from within the JavaScript host using the {{jsxref("WebAssembly.Global.Global", "WebAssembly.Global()")}} constructor then importing it into the module.
+It is also possible to create a Wasm global from within the JavaScript host using the [`WebAssembly.Global()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global/Global) constructor then importing it into the module.
 
 For example:
 

@@ -3,11 +3,11 @@ title: "store: Wasm SIMD load/store instruction"
 short-title: store
 slug: WebAssembly/Reference/SIMD/load_store/store
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.store
+browser-compat: webassembly.instructions.store
 sidebar: webassemblysidebar
 ---
 
-The **`store`** [SIMD load/store instruction](/en-US/docs/WebAssembly/Reference/SIMD/load_store) stores all lanes of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretation at a given memory address.
+The **`store`** [SIMD load/store instruction](/en-US/docs/WebAssembly/Reference/SIMD/load_store) stores all lanes of a [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretation at a given memory address.
 
 {{InteractiveExample("Wat Demo: store", "tabbed-taller")}}
 
@@ -79,7 +79,3 @@ v128.store mem_idx offset=int align=int
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD load/store instructions](/en-US/docs/WebAssembly/Reference/SIMD/load_store)

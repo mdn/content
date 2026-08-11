@@ -16,6 +16,8 @@ Note that this property is only populated while the [`intercept()`](/en-US/docs/
 
 ## Instance properties
 
+- {{domxref("NavigationTransition.committed", "committed")}} {{ReadOnlyInline}}
+  - : Returns a {{jsxref("Promise")}} that fulfills when {{domxref("Navigation.currentEntry")}} is updated and the new URL is displayed in the browser, marking the navigation as committed.
 - {{domxref("NavigationTransition.finished", "finished")}} {{ReadOnlyInline}}
   - : Returns a {{jsxref("Promise")}} that fulfills at the same time the {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}} event fires, or rejects at the same time the {{domxref("Navigation/navigateerror_event", "navigateerror")}} event fires.
 - {{domxref("NavigationTransition.from", "from")}} {{ReadOnlyInline}}

@@ -1,12 +1,13 @@
 ---
-title: "neg: Wasm text instruction"
+title: "neg: Wasm numeric instruction"
 short-title: neg
 slug: WebAssembly/Reference/Numeric/neg
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.neg
 sidebar: webassemblysidebar
 ---
 
-The **`neg`** instruction, short for _negate_, is used to negate a number. That is, it turns a positive number into a negative number and a negative number into a positive number.
+The **`neg`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _negate_, is used to negate a number. That is, it turns a positive number into a negative number and a negative number into a positive number.
 
 {{InteractiveExample("Wat Demo: neg", "tabbed-standard")}}
 
@@ -39,7 +40,7 @@ value_type.neg
   - : The type of value the instruction is being run on. The following types support `neg`:
     - `f32`
     - `f64`
-    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) interpretations:
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) interpretations:
       - `i8x16`
       - `i16x8`
       - `i32x4`
@@ -62,7 +63,7 @@ value_type.neg
 
 For a non-SIMD `neg`, the values will be basic numeric values such as `3` or `-3.5`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `neg`, the values will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `f32x4 8 -27.3 30 -0.5`. Each lane of the output pushed to the stack will be equal to the corresponding lane of the input value, negated.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `neg`, the values will be [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations, for example `f32x4 8 -27.3 30 -0.5`. Each lane of the output pushed to the stack will be equal to the corresponding lane of the input value, negated.
 
 ### Binary encoding
 
@@ -134,3 +135,11 @@ The output is as follows:
 {{embedlivesample("simd_neg", "100%", 100)}}
 
 `6` is output because it is the negation of the value in lane `15` of the input value.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

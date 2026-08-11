@@ -165,10 +165,6 @@ These interfaces offer access to the browser window and document that contain th
 - {{DOMxRef("Navigator")}}
 - {{DOMxRef("Window")}}
 
-#### Deprecated web app and browser integration interfaces
-
-- {{DOMxRef("External")}} {{deprecated_inline}}
-
 #### Obsolete web app and browser integration interfaces
 
 - {{DOMxRef("Plugin")}} {{deprecated_inline}}

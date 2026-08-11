@@ -88,7 +88,7 @@ To set your `PATH` variable on a macOS system and on most Linux systems:
    You should see it printed out in the terminal.
 
 > [!NOTE]
-> To set your `PATH` variable on Windows, follow the instructions at [How can I add a new folder to my system path?](https://www.itprotoday.com/)
+> To set your `PATH` variable on Windows, follow the instructions at [How can I add a new folder to my system path?](https://stackoverflow.com/questions/44272416/add-a-folder-to-the-path-environment-variable-in-windows-10-with-screenshots)
 
 Let's try a quick test to make sure everything is working.
 
@@ -806,7 +806,7 @@ To get started, see for example:
 - [Using Sauce Labs with Travis CI](https://docs.travis-ci.com/user/sauce-connect/)
 
 > [!NOTE]
-> If you wish to perform continuous testing with **codeless automation** then you can use [Endtest](https://www.endtest.io/) or [TestingBot](https://testingbot.com/).
+> If you wish to perform continuous testing with **codeless automation** then you can use [Endtest](https://endtest.io/) or [TestingBot](https://testingbot.com/).
 
 ## Summary
 

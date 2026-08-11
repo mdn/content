@@ -11,7 +11,7 @@ WebAssembly SIMD-specific arithmetic instructions.
 ## Add adjacent pairs
 
 - [`extadd_pairwise_i8x16_s`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/extadd_pairwise_i8x16_s)
-  - : Adds each adjacent pair of lanes of a signed [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `i8x16` value interpretation, outputting the results into an `i16x8` value interpretation.
+  - : Adds each adjacent pair of lanes of a signed [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) `i8x16` value interpretation, outputting the results into an `i16x8` value interpretation.
 - [`extadd_pairwise_i8x16_u`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/extadd_pairwise_i8x16_u)
   - : Adds each adjacent pair of lanes of an unsigned `v128` `i8x16` value interpretation, outputting the results into an `i16x8` value interpretation.
 - [`extadd_pairwise_i16x8_s`](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic/extadd_pairwise_i16x8_s)

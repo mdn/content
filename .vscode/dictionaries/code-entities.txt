@@ -36,10 +36,12 @@ allowevents
 alternatingbackground
 ALTGR
 amssymb
+andnot
 android-safetynet
 animalfound
 anims
 anonid
+anyref
 apacheconf
 apachectl
 appcache
@@ -54,6 +56,7 @@ armeabi
 armn
 armnlow
 armv81
+arrayref
 arrowpanel
 assetlinks
 associationlist
@@ -66,6 +69,7 @@ audiocontext
 authorid
 autolocate
 autospace
+avgr_u
 backdrag
 backgroundfetchabort
 backgroundfetchclick
@@ -83,6 +87,7 @@ BGRX
 bgtest
 bhks
 biske
+bitselect
 bmatrix
 BPPV1
 Brai
@@ -136,7 +141,9 @@ congres
 connectionavailable
 contentaccessible
 contentdelete
+contentoccluded
 contentvisibilityautostatechange
+contextoverflow
 controlslist
 cookiechange
 cpanel-dcv
@@ -165,6 +172,7 @@ currentscreenchange
 cwrap
 daala
 dangi
+dataidx
 deviceproximity
 devtools.aboutdebugging
 devtools.errorconsole
@@ -213,6 +221,7 @@ ehtml
 EISU
 elementname
 elementtiming
+elemidx
 elems
 emailtracking
 emcc
@@ -225,6 +234,7 @@ enable-tracejit
 enableiOES
 endstreaming
 enterpictureinpicture
+eqref
 equalsize
 EquationiOES
 ethi
@@ -232,7 +242,9 @@ ethioaa
 exitpictureinpicture
 exnref
 Exsel
+extadd
 externref
+extmul
 fangsong
 fencedframe
 fgets
@@ -303,6 +315,7 @@ iexact
 ifchanged
 ifequal
 ifnotequal
+ifrac
 imageset
 imghp
 imgur
@@ -377,6 +390,7 @@ Kore
 krai
 kwriteconfig
 lanatham
+laneidx
 laoo
 largeop
 latexmlc
@@ -437,6 +451,7 @@ mediasidebar
 mediastream
 mediummathspace
 mediump
+memidx
 menupanel
 merchantvalidation
 meterbar
@@ -519,6 +534,9 @@ nsIURL
 nsIXSLT
 nsPIDOMWindow
 nsresult
+nullexternref
+nullfuncref
+nullref
 nums
 OEM_CUSEL
 OEM_ENLW
@@ -535,6 +553,7 @@ oncanmakepayment
 oncharacterboundsupdate
 onclipboardchange
 oncontentvisibilityautostatechange
+oncontextoverflow
 oncurrententrychange
 oncurrentscreenchange
 ondequeue
@@ -567,6 +586,7 @@ ontextformatupdate
 ontextupdate
 onuncapturederror
 onvalidationstatuschange
+onvisibilitymaskchange
 onwebkitmouseforcewillbegin
 onzoomlevelchange
 opendocument
@@ -613,6 +633,8 @@ pjpeg
 PlatformNaclArch
 platformversion
 pmatrix
+pmax
+pmin
 pnum
 pointerrawupdate
 popcnt
@@ -650,6 +672,7 @@ pwasidebar
 pwid
 pythonanywhere
 pyxpidl
+q15mulr_sat_s
 queryset
 quicktime
 raddr
@@ -722,6 +745,7 @@ SHA-256-sess
 SHA-512-sess
 shadowrootcustomelementregistry
 shadowrootreferencetarget
+shadowrootslotassignment
 sharpyuv
 shrd
 shtm
@@ -754,6 +778,7 @@ streamfilter
 stripslashes
 stripsurroundingwhitespace
 strncpy
+structref
 SUBDOCUMENT
 sund
 sunu
@@ -764,8 +789,10 @@ svgref
 svgz
 tabbox
 tabbrowser
+tableidx
 tabs-closebutton
 tabular-nums
+tagidx
 takr
 talu
 taml
@@ -776,6 +803,7 @@ testingbot-api
 texlive
 texlive-fontsextra
 textformatupdate
+TEXTPATH_SIDETYPE
 textupdate
 TEXTUREI
 thickmathspace
@@ -823,6 +851,7 @@ urlsidebar
 urpmi
 usedtx
 useinbandfec
+useraction
 usercontext-content
 userhash
 userproximity
@@ -846,6 +875,7 @@ viewsource.css
 VIRTUALENVWRAPPER
 virtualkeyboardpolicy
 virtuals
+visibilitymaskchange
 VK_CRSEL
 VK_EREOF
 VK_EXSEL

@@ -3,11 +3,11 @@ title: "extmul_low_i16x8_s: Wasm SIMD arithmetic instruction"
 short-title: extmul_low_i16x8_s
 slug: WebAssembly/Reference/SIMD/arithmetic/extmul_low_i16x8_s
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.extmul_low_i16x8_s
+browser-compat: webassembly.instructions.extmul_low_i16x8_s
 sidebar: webassemblysidebar
 ---
 
-The **`extmul_low_i16x8_s`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic) takes lanes 0–3 of two signed [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `i16x8` value interpretations, multiplies the values in the corresponding lanes, and outputs the result of those operations into an `i32x4` value interpretation.
+The **`extmul_low_i16x8_s`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic) takes lanes 0–3 of two signed [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) `i16x8` value interpretations, multiplies the values in the corresponding lanes, and outputs the result of those operations into an `i32x4` value interpretation.
 
 {{InteractiveExample("Wat Demo: extmul_low_i16x8_s", "tabbed-taller")}}
 
@@ -91,7 +91,3 @@ i32x4.extmul_low_i16x8_s
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD arithmetic instructions](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic)

@@ -248,7 +248,7 @@ As mentioned in the last chapter, you can take a lot of the pain out of browser 
 
 There are also commercial tools available such as [Sauce Labs](https://saucelabs.com/) and [Browser Stack](https://www.browserstack.com/) that do this kind of thing for you, without you having to worry about the setup, if you wish to invest some money in your testing.
 
-Another alternative is to use no-code test automation tools such as [Endtest](https://www.endtest.io/).
+Another alternative is to use no-code test automation tools such as [Endtest](https://endtest.io/).
 
 We will look at how to use such tools later on in the module.
 

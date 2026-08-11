@@ -102,7 +102,7 @@ You can specify:
 - {{httpheader("Permissions-Policy/aria-notify", "aria-notify")}} {{Experimental_Inline}}
   - : Controls whether the current document is allowed to use the {{domxref("Document.ariaNotify", "ariaNotify()")}} method to fire {{glossary("screen reader")}} announcements.
 
-- {{httpheader('Permissions-Policy/attribution-reporting','attribution-reporting')}} {{deprecated_inline}}
+- {{httpheader('Permissions-Policy/attribution-reporting','attribution-reporting')}} {{deprecated_inline}} {{non-standard_inline}}
   - : Controls whether the current document is allowed to use the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API).
 
 - {{httpheader('Permissions-Policy/autoplay','autoplay')}} {{Experimental_Inline}}
@@ -169,8 +169,20 @@ You can specify:
 - {{httpheader("Permissions-Policy/language-detector", "language-detector")}} {{Experimental_Inline}}
   - : Controls access to the language detection functionality of the [Translator and Language Detector APIs](/en-US/docs/Web/API/Translator_and_Language_Detector_APIs).
 
+- {{httpheader("Permissions-Policy/language-model", "language-model")}} {{Experimental_Inline}}
+  - : Controls access to the [Prompt API](/en-US/docs/Web/API/Prompt_API).
+
 - {{httpheader('Permissions-Policy/local-fonts','local-fonts')}} {{Experimental_Inline}}
   - : Controls whether the current document is allowed to gather data on the user's locally-installed fonts via the {{DOMxRef("Window.queryLocalFonts()")}} method (see also the {{domxref("Local Font Access API", "Local Font Access API", "", "nocode")}}).
+
+- {{httpheader('Permissions-Policy/local-network','local-network')}} {{Experimental_Inline}}
+  - : Controls whether the current document is allowed to make network requests to local addresses.
+
+- {{httpheader('Permissions-Policy/local-network-access','local-network-access')}} {{Experimental_Inline}}
+  - : Controls whether the current document is allowed to make network requests to local and loopback addresses. This policy directive is an alias for the more granular `local-network` and `loopback-network` directives.
+
+- {{httpheader('Permissions-Policy/loopback-network','loopback-network')}} {{Experimental_Inline}}
+  - : Controls whether the current document is allowed to make network requests to loopback addresses.
 
 - {{httpheader('Permissions-Policy/magnetometer','magnetometer')}} {{Experimental_Inline}}
   - : Controls whether the current document is allowed to gather information about the orientation of the device through the {{DOMxRef("Magnetometer")}} interface.

@@ -54,7 +54,7 @@ The following conditions must be met for the `@property` rule to be valid:
 
 - The `@property` rule must include both the {{cssxref("@property/syntax","syntax")}} and {{cssxref("@property/inherits","inherits")}} descriptors.
   If either is missing, the entire `@property` rule is invalid and ignored.
-- The `syntax` may be a data type name (such as `<color>`, `<length>`, or `<number>`, etc.), with multipliers (`+`, `#`) and combinators (`|`), a custom ident, or the universal syntax definition (`*`), meaning the syntax can be any valid token stream. The value is a {{cssxref("string")}}. As such, it must be in quotes.
+- The `syntax` may be a data type name (such as `<color>`, `<length>`, or `<number>`, etc.), with multipliers (`+` to accept a space-separated list, or `#` to accept a comma-separated list) and combinators (`|` to accept one data type or another), a custom ident, or the universal syntax definition (`*`), meaning the syntax can be any valid token stream. The value is a {{cssxref("string")}}. As such, it must be in quotes.
 - The {{cssxref("@property/initial-value","initial-value")}} descriptor is optional if the value of the `syntax` descriptor is the universal syntax definition (`syntax: "*"`).
   If the `initial-value` descriptor is required but omitted, the entire `@property` rule is invalid and ignored.
 - If the value of the `syntax` descriptor is not the universal syntax definition, the {{cssxref("@property/initial-value","initial-value")}} descriptor has to be a [computationally independent](https://drafts.css-houdini.org/css-properties-values-api-1/#computationally-independent) value.

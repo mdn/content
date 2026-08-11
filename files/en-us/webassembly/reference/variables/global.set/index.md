@@ -1,13 +1,13 @@
 ---
-title: "global.set: Wasm text instruction"
+title: "global.set: Wasm variable instruction"
 short-title: global.set
 slug: WebAssembly/Reference/Variables/global.set
 page-type: webassembly-instruction
-browser-compat: webassembly.instructions.global_get
+browser-compat: webassembly.instructions.global_set
 sidebar: webassemblysidebar
 ---
 
-The **`global.set`** instruction sets the values of a global variable.
+The **`global.set`** [variable instruction](/en-US/docs/WebAssembly/Reference/Variables) sets the value of a global variable.
 
 {{InteractiveExample("Wat Demo: global_set", "tabbed-taller")}}
 
@@ -42,7 +42,7 @@ global.set identifier
 - `identifier`
   - : An identifier for the global whose value you want to set. This can be one of the following:
     - `name`
-      - : The [identifying name](/en-US/docs/WebAssembly/Reference/Definitions/global#identifier) set for the global when it was first intialized. This must begin with a `$` symbol, for example `$my_global`.
+      - : The [identifying name](/en-US/docs/WebAssembly/Reference/Definitions/global#identifier) set for the global when it was first initialized. This must begin with a `$` symbol, for example `$my_global`.
     - `index`
       - : The global's index number, for example `0` for the first global in the Wasm script, `1` for the second, etc.
 

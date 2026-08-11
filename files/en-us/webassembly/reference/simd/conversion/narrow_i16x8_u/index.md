@@ -3,11 +3,11 @@ title: "narrow_i16x8_u: Wasm SIMD conversion instruction"
 short-title: narrow_i16x8_u
 slug: WebAssembly/Reference/SIMD/conversion/narrow_i16x8_u
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.narrow_i16x8_u
+browser-compat: webassembly.instructions.narrow_i16x8_u
 sidebar: webassemblysidebar
 ---
 
-The **`narrow_i16x8_u`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) converts two signed [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `i16x8` value interpretations into an `i8x16` value interpretation using unsigned saturation (clamping to the range between `0` to `255`).
+The **`narrow_i16x8_u`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) converts two signed [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) `i16x8` value interpretations into an `i8x16` value interpretation using unsigned saturation (clamping to the range between `0` to `255`).
 
 {{InteractiveExample("Wat Demo: narrow_i16x8_u", "tabbed-taller")}}
 
@@ -65,7 +65,3 @@ i8x16.narrow_i16x8_u
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD conversion instructions](/en-US/docs/WebAssembly/Reference/SIMD/conversion)

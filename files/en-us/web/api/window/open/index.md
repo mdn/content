@@ -89,9 +89,12 @@ If the {{httpheader("Cross-Origin-Opener-Policy")}} HTTP header is being used, a
 
 ## Description
 
-The [`Window`](/en-US/docs/Web/API/Window) interface's `open()` method takes a URL as a parameter, and loads the resource it identifies into a new or existing tab or window. The `target` parameter determines which window or tab to load the resource into, and the `windowFeatures` parameter can be used to control to open a new popup with minimal UI features and control its size and position.
+The [`Window`](/en-US/docs/Web/API/Window) interface's `open()` method takes a URL as a parameter, and loads the resource it identifies into a new or existing browsing context.
+The `target` parameter determines which window, tab, or frame, to load the resource into, and the `windowFeatures` parameter can be used to control the features of the new window, such as whether it is a tab or a popup with minimal UI features, its size and position, and so on.
 
-Remote URLs won't load immediately. When `window.open()` returns, the window always contains `about:blank`. The actual fetching of the URL is deferred and starts after the current script block finishes executing. The window creation and the loading of the referenced resource are done asynchronously.
+When `window.open()` creates a new browsing context (i.e., when no existing window with that name is found), the window initially contains `about:blank`.
+If a different URL was provided, it is loaded asynchronously, and the global object is reused for that navigation if it is same-origin — so any properties set on the window before the load may persist.
+If target refers to an existing navigable (`_self`, `_parent`, `_top`, or a known window name), no `about:blank` phase occurs — the browser navigates the existing context directly.
 
 Modern browsers have strict popup blocker policies. Popup windows must be opened in direct response to user input, and a separate user gesture event is required for each `Window.open()` call. This prevents sites from spamming users with lots of windows. However, this poses an issue for multi-window applications. To work around this limitation, you can design your applications to:
 

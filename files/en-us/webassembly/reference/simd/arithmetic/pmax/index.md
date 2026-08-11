@@ -3,10 +3,11 @@ title: "pmax: Wasm SIMD arithmetic instruction"
 short-title: pmax
 slug: WebAssembly/Reference/SIMD/arithmetic/pmax
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.pmax
 sidebar: webassemblysidebar
 ---
 
-The **`pmax`** instruction compares two [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) floating point value interpretations and returns a new interpretation with each output lane set to the larger of the corresponding input lanes. It is defined as `a < b ? b : a`, meaning that NaN in the first operand propagates to the output but NaN in the second operand does not — unlike [`max`](/en-US/docs/WebAssembly/Reference/Numeric/max), which propagates NaN from either operand.
+The **`pmax`** instruction compares two [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) floating point value interpretations and returns a new interpretation with each output lane set to the larger of the corresponding input lanes. It is defined as `a < b ? b : a`, meaning that NaN in the first operand propagates to the output but NaN in the second operand does not — unlike [`max`](/en-US/docs/WebAssembly/Reference/Numeric/max), which propagates NaN from either operand.
 
 {{InteractiveExample("Wat Demo: pmax", "tabbed-taller")}}
 
@@ -64,6 +65,14 @@ value_type.pmax
 | ------------ | -------------- | -------------------------------- |
 | `f32x4.pmax` | `0xfd 235:u32` | `f32x4.pmax` => `0xfd 0xeb 0x01` |
 | `f64x2.pmax` | `0xfd 247:u32` | `f64x2.pmax` => `0xfd 0xf7 0x01` |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

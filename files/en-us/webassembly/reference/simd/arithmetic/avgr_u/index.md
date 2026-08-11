@@ -3,11 +3,11 @@ title: "avgr_u: Wasm SIMD arithmetic instruction"
 short-title: avgr_u
 slug: WebAssembly/Reference/SIMD/arithmetic/avgr_u
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.avgr_u
+browser-compat: webassembly.instructions.avgr_u
 sidebar: webassemblysidebar
 ---
 
-The **`avgr_u`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic) performs a rounding average of two unsigned [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations. Each lane of the output value is `(a + b + 1) / 2`, i.e., the mean average of the corresponding lanes of the input values, rounded up to the nearest integer.
+The **`avgr_u`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic) performs a rounding average of two unsigned [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations. Each lane of the output value is `(a + b + 1) / 2`, i.e., the mean average of the corresponding lanes of the input values, rounded up to the nearest integer.
 
 {{InteractiveExample("Wat Demo: avgr_u", "tabbed-taller")}}
 
@@ -70,7 +70,3 @@ value_type.avgr_u
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD arithmetic instructions](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic)

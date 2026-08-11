@@ -3,11 +3,11 @@ title: "load64_lane: Wasm SIMD load/store instruction"
 short-title: load64_lane
 slug: WebAssembly/Reference/SIMD/load_store/load64_lane
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.load64_lane
+browser-compat: webassembly.instructions.load64_lane
 sidebar: webassemblysidebar
 ---
 
-The **`load64_lane`** [SIMD load/store instruction](/en-US/docs/WebAssembly/Reference/SIMD/load_store) loads a single value from a given memory address into the specified lane of a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) type `i64x2` value interpretation.
+The **`load64_lane`** [SIMD load/store instruction](/en-US/docs/WebAssembly/Reference/SIMD/load_store) loads a single value from a given memory address into the specified lane of a [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) type `i64x2` value interpretation.
 
 {{InteractiveExample("Wat Demo: load64_lane", "tabbed-taller")}}
 
@@ -81,7 +81,3 @@ v128.load64_lane mem_idx offset=int align=int lane_idx
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD load/store instructions](/en-US/docs/WebAssembly/Reference/SIMD/load_store)

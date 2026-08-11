@@ -71,7 +71,7 @@ async function fetchURL(url) {
 }
 ```
 
-This also prevents key-value pairs that identify the same issue occuring at different times or places from overwriting one another. In this case, we differentiate crash report data set in the top-level document versus data set in embedded documents.
+This also prevents key-value pairs that identify the same issue occurring at different times or places from overwriting one another. In this case, we differentiate crash report data set in the top-level document versus data set in embedded documents.
 
 ## Specifications
 

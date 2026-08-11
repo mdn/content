@@ -3,11 +3,11 @@ title: "extend_high_i32x4_u: Wasm SIMD conversion instruction"
 short-title: extend_high_i32x4_u
 slug: WebAssembly/Reference/SIMD/conversion/extend_high_i32x4_u
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.extend_high_i32x4_u
+browser-compat: webassembly.instructions.extend_high_i32x4_u
 sidebar: webassemblysidebar
 ---
 
-The **`extend_high_i32x4_u`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) converts lanes 2–3 of an unsigned [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `i32x4` value interpretation into an `i64x2` value interpretation.
+The **`extend_high_i32x4_u`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) converts lanes 2–3 of an unsigned [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) `i32x4` value interpretation into an `i64x2` value interpretation.
 
 {{InteractiveExample("Wat Demo: extend_high_i32x4_u", "tabbed-taller")}}
 
@@ -62,7 +62,3 @@ i64x2.extend_high_i32x4_u
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD conversion instructions](/en-US/docs/WebAssembly/Reference/SIMD/conversion)

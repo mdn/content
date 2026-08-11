@@ -61,7 +61,15 @@ var(--custom-prop, var(--default-value));
 var(--custom-prop, var(--default-value, red));
 ```
 
-The first argument to the function is the name of the custom property to be substituted. An optional second argument to the function serves as a fallback value. If the custom property referenced by the first argument is not defined or equals a [CSS-wide keyword](/en-US/docs/Web/CSS/Reference/Values/Data_types#css-wide_keywords), the function uses the second value.
+The first argument to the function is the name of the custom property to be substituted. An optional second argument to the function serves as a fallback value. The fallback is used when the referenced custom property doesn't have a usable value — what the specification calls the {{Glossary("guaranteed_invalid_value", "guaranteed-invalid value")}}. In practice, this means the fallback is used when:
+
+- The custom property hasn't been declared on a rule that applies to the element, and it isn't registered (with {{cssxref("@property")}}) with an `initial-value` descriptor.
+- The custom property is set to the [`initial`](/en-US/docs/Web/CSS/Reference/Values/initial) keyword and isn't a registered custom property with an `initial-value`. Setting a non-registered custom property to `initial` resets it to the {{Glossary("guaranteed_invalid_value", "guaranteed-invalid value")}}.
+- The custom property's declared value is [invalid at computed-value time](/en-US/docs/Web/CSS/Guides/Syntax/Error_handling#invalid_custom_properties) — for example, because of a cyclic dependency between custom properties — and the property is non-registered or is registered with the universal `*` syntax.
+
+If the custom property is registered with {{cssxref("@property")}} using a non-universal `syntax` and an `initial-value`, that initial value is substituted when no other declaration applies. The fallback is _not_ used in that case.
+
+The other [CSS-wide keywords](/en-US/docs/Web/CSS/Reference/Values/Data_types#css-wide_keywords) — `inherit`, `unset`, `revert`, `revert-layer`, and `revert-rule` — behave in the same way when set as a custom property value as they do on any other property. They can resolve the custom property to an inherited or previously-cascaded value rather than to the {{Glossary("guaranteed_invalid_value", "guaranteed-invalid value")}}, so they don't necessarily trigger the fallback. For example, if `--foo` is set to `revert-layer` in one cascade layer and to a color in another layer, `var(--foo)` resolves to the color value instead of using the fallback.
 
 The syntax of the fallback, like that of custom properties, allows commas. For example, `var(--foo, red, blue)` defines a fallback of `red, blue`; that is, anything between the first comma and the end of the function is considered a fallback value.
 
@@ -71,10 +79,10 @@ The syntax of the fallback, like that of custom properties, allows commas. For e
   - : A custom property's name represented by an identifier that starts with two dashes. Custom properties are solely for use by authors and users; CSS will never give them a meaning beyond what is presented here.
 
 - `<declaration-value>`
-  - : The custom property's fallback value, which is used in case the custom property is not defined or equals a [CSS-wide keyword](/en-US/docs/Web/CSS/Reference/Values/Data_types#css-wide_keywords). This value may contain any character except some characters with special meaning like newlines, unmatched closing brackets, i.e., `)`, `]`, or `}`, top-level semicolons, or exclamation marks. The fallback value can itself be a custom property using the `var()` syntax. If the fallback value is omitted, and the custom property is not defined, the `var()` function resolves to an [invalid value](#invalid_values).
+  - : A fallback value for the custom property, used when the referenced custom property has the {{Glossary("guaranteed_invalid_value", "guaranteed-invalid value")}} (see the [Syntax](#syntax) section above for the conditions under which this happens). This value may contain any character except some characters with special meaning like newlines, unmatched closing brackets, i.e., `)`, `]`, or `}`, top-level semicolons, or exclamation marks. The fallback value can itself be a custom property using the `var()` syntax. If the fallback value is omitted, and the custom property has the {{Glossary("guaranteed_invalid_value", "guaranteed-invalid value")}}, the `var()` function resolves to an [invalid value](#invalid_values).
 
     > [!NOTE]
-    > `var(--a,)` is valid, specifying that if the `--a` custom property is not defined or equals a [CSS-wide keyword](/en-US/docs/Web/CSS/Reference/Values/Data_types#css-wide_keywords), the `var()` should be replaced with nothing.
+    > `var(--a,)` is valid, specifying that if the `--a` custom property has the guaranteed-invalid value, the `var()` should be replaced with nothing.
 
 ## Formal syntax
 

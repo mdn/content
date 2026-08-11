@@ -3,11 +3,11 @@ title: "extend_low_i16x8_u: Wasm SIMD conversion instruction"
 short-title: extend_low_i16x8_u
 slug: WebAssembly/Reference/SIMD/conversion/extend_low_i16x8_u
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.extend_low_i16x8_u
+browser-compat: webassembly.instructions.extend_low_i16x8_u
 sidebar: webassemblysidebar
 ---
 
-The **`extend_low_i16x8_u`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) converts lanes 0–3 of an unsigned [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) `i16x8` value interpretation into an `i32x4` value interpretation.
+The **`extend_low_i16x8_u`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) converts lanes 0–3 of an unsigned [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) `i16x8` value interpretation into an `i32x4` value interpretation.
 
 {{InteractiveExample("Wat Demo: extend_low_i16x8_u", "tabbed-taller")}}
 
@@ -62,7 +62,3 @@ i32x4.extend_low_i16x8_u
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD conversion instructions](/en-US/docs/WebAssembly/Reference/SIMD/conversion)

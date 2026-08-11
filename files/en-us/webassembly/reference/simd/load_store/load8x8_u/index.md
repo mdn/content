@@ -3,11 +3,11 @@ title: "load8x8_u: Wasm SIMD load/store instruction"
 short-title: load8x8_u
 slug: WebAssembly/Reference/SIMD/load_store/load8x8_u
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.load8x8_u
+browser-compat: webassembly.instructions.load8x8_u
 sidebar: webassemblysidebar
 ---
 
-The **`load8x8_u`** [SIMD load/store instruction](/en-US/docs/WebAssembly/Reference/SIMD/load_store) loads eight 8-bit integers from a given memory address and zero extends each one to a 16-bit lane, outputting a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) type `i16x8` value interpretation.
+The **`load8x8_u`** [SIMD load/store instruction](/en-US/docs/WebAssembly/Reference/SIMD/load_store) loads eight 8-bit integers from a given memory address and zero extends each one to a 16-bit lane, outputting a [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) type `i16x8` value interpretation.
 
 {{InteractiveExample("Wat Demo: load8x8_u", "tabbed-taller")}}
 
@@ -76,7 +76,3 @@ v128.load8x8_u mem_idx offset=int align=int
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD load/store instructions](/en-US/docs/WebAssembly/Reference/SIMD/load_store)

@@ -1,12 +1,13 @@
 ---
-title: "sub: Wasm text instruction"
+title: "sub: Wasm numeric instruction"
 short-title: sub
 slug: WebAssembly/Reference/Numeric/sub
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.sub
 sidebar: webassemblysidebar
 ---
 
-The **`sub`** instruction, short for _subtraction_, is used for subtracting one number from another number, similar to the **`-`** operator in other languages.
+The **`sub`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _subtraction_, is used for subtracting one number from another number, similar to the **`-`** operator in other languages.
 
 {{InteractiveExample("Wat Demo: sub", "tabbed-taller")}}
 
@@ -42,7 +43,7 @@ value_type.sub
     - `i64`
     - `f32`
     - `f64`
-    - [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) interpretations:
+    - [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) interpretations:
       - `18x16`
       - `i16x8`
       - `i32x4`
@@ -67,7 +68,7 @@ value_type.sub
 
 For a non-SIMD `sub`, these will be basic numeric values such as `14` or `3.1`.
 
-For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `sub`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) value interpretations, for example `f32x4 9 3.8 -16 101`. Each lane of the output pushed to the stack is equal to the second input's corresponding lane subtracted from the first input's corresponding lane.
+For a [SIMD](/en-US/docs/WebAssembly/Reference/SIMD) `sub`, these will be [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value interpretations, for example `f32x4 9 3.8 -16 101`. Each lane of the output pushed to the stack is equal to the second input's corresponding lane subtracted from the first input's corresponding lane.
 
 ### Binary encoding
 
@@ -142,3 +143,11 @@ The output is as follows:
 {{embedlivesample("simd_sub", "100%", 100)}}
 
 `-24` is output because this is the result of subtracting lane 7 of the second value (`30`) from lane 7 of the first value (`6`).
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

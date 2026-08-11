@@ -208,7 +208,9 @@ In the case of radio buttons, you generally need to provide the value that would
 
 #### Specialized text field inputs
 
-The second exercise above raises an interesting point. The second input field specifically expects an email address and validates entered values as such. If you look at the form code again, you'll see why — the second `<input>` has a `type` of `email`. There are several specialized text field input types designed to handle specific types of data — [`<input type="number">`](/en-US/docs/Web/HTML/Reference/Elements/input/number), [`<input type="password">`](/en-US/docs/Web/HTML/Reference/Elements/input/password), [`<input type="tel">`](/en-US/docs/Web/HTML/Reference/Elements/input/tel), etc.
+The second exercise above raises an interesting point. The second input field specifically expects an email address and validates entered values as such. If you look at the form code again, you'll see why — the second `<input>` has a `type` of `email`.
+
+There are several specialized text field input types designed to handle specific types of data such as [`<input type="number">`](/en-US/docs/Web/HTML/Reference/Elements/input/number), [`<input type="password">`](/en-US/docs/Web/HTML/Reference/Elements/input/password), [`<input type="tel">`](/en-US/docs/Web/HTML/Reference/Elements/input/tel), [`<input type="url">`](/en-US/docs/Web/HTML/Reference/Elements/input/url), and so on.
 
 Follow some of the links above to find out what these input types are used for. Have a look around our [`<input>`](/en-US/docs/Web/HTML/Reference/Elements/input) reference and see if you can find any more specialized text field input types.
 
@@ -459,6 +461,8 @@ Drop-down menus, for example, the "How are you getting here" selection control i
 The `<select>` element wraps all the different value choices. It is where you set the `id` attribute that associates the control with its label, and the `name` attribute that sets the name of the data item to be submitted.
 
 Each possible value for the data item is represented by an `<option>` element, nested inside the `<select>` element. Each `<option>` element can take a `value` attribute, which specifies the value to be submitted if that option is chosen from the drop-down list. If you don't specify a `value`, the text inside the `<option></option>` tags is used as the value.
+
+You can also split the options inside a `<select>` drop-down menu into multiple subgroups using the {{htmlelement("optgroup")}} element. Take a look at this element's reference page to find out how.
 
 > [!NOTE]
 > If you want to have a specific option selected on page load, you can add a `selected` attribute to the relevant `<option>` element.

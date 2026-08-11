@@ -3,11 +3,11 @@ title: "load32x2_s: Wasm SIMD load/store instruction"
 short-title: load32x2_s
 slug: WebAssembly/Reference/SIMD/load_store/load32x2_s
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.load32x2_s
+browser-compat: webassembly.instructions.load32x2_s
 sidebar: webassemblysidebar
 ---
 
-The **`load32x2_s`** [SIMD load/store instruction](/en-US/docs/WebAssembly/Reference/SIMD/load_store) loads two 32-bit integers from a given memory address and sign extends each one to a 64-bit lane, outputting a [`v128`](/en-US/docs/WebAssembly/Reference/Types/v128) type `i64x2` value interpretation.
+The **`load32x2_s`** [SIMD load/store instruction](/en-US/docs/WebAssembly/Reference/SIMD/load_store) loads two 32-bit integers from a given memory address and sign extends each one to a 64-bit lane, outputting a [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) type `i64x2` value interpretation.
 
 {{InteractiveExample("Wat Demo: load32x2_s", "tabbed-taller")}}
 
@@ -76,7 +76,3 @@ v128.load32x2_s mem_idx offset=int align=int
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD load/store instructions](/en-US/docs/WebAssembly/Reference/SIMD/load_store)
