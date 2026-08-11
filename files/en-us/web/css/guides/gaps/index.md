@@ -178,7 +178,7 @@ In this example, the 2021 poem from the USA inauguration, _The Hill We Climb_, b
         step="0.1"
         id="columnRuleWidth" />
       <label for="columnRuleWidth">rule width: </label
-      ><output id="ruleWidth">0.3em;</output>
+      ><output id="ruleWidth">0.3em</output>
     </p>
     <p>
       <label for="colColor">rule color:</label>
@@ -264,7 +264,7 @@ ruleInset.addEventListener("change", () => {
 columnRuleWidth.addEventListener("change", () => {
   page.style.columnRuleWidth = `${columnRuleWidth.value}em`;
   page.style.ruleWidth = `${columnRuleWidth.value}em`;
-  ruleWidth.innerText = `${columnRuleWidth.value}em;`;
+  ruleWidth.innerText = `${columnRuleWidth.value}em`;
 });
 
 columnRuleStyle.addEventListener("change", () => {
