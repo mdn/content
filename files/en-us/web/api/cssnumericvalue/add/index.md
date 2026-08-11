@@ -26,7 +26,7 @@ add(number1, number2, /* …, */ numberN)
 
 ### Return value
 
-A {{domxref('CSSMathSum')}}
+A {{domxref('CSSMathSum')}}, or a {{domxref('CSSUnitValue')}} if `this` and every argument share the same unit.
 
 ### Exceptions
 
@@ -38,10 +38,7 @@ A {{domxref('CSSMathSum')}}
 ### Basic usage
 
 ```js
-let mathSum = CSS.px("23")
-  .add(CSS.percent("4"))
-  .add(CSS.cm("3"))
-  .add(CSS.in("9"));
+let mathSum = CSS.px(23).add(CSS.percent(4)).add(CSS.cm(3)).add(CSS.in(9));
 // Prints "calc(23px + 4% + 3cm + 9in)"
 console.log(mathSum.toString());
 ```
