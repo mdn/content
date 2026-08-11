@@ -74,7 +74,7 @@ For example:
 
 The resulting {{domxref("ViewTimeline")}} tracks the position of the `.trigger` element across the block-axis of the nearest ancestor scroller. The trigger is activated and deactivated when the tracked element is scrolled to certain positions inside the scrollport. By default, activation occurs when the tracked element starts to enter the scrollport, and deactivation occurs when the tracked element completely exits the scrollport.
 
-An animated element can be triggered by the previously-described trigger by referencing its `timeline-trigger-name` in its {{cssxref("animation-trigger")}} property, which accepts a comma-separated list of values, each value being the name of the trigger and one or two {{cssxref("animation-action")}} keywords that specify what the animation should do when its trigger activates and deactivates:
+An animated element can be triggered by the previously described trigger by referencing its `timeline-trigger-name` in its {{cssxref("animation-trigger")}} property. The `animation-trigger` value consists of a comma-separated list, each containing the name of a trigger and one or two {{cssxref("animation-action")}} keywords that specify what the animation should do when its trigger activates and deactivates.
 
 For example:
 
