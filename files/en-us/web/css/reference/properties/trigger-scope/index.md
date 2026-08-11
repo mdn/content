@@ -359,7 +359,7 @@ section {
 
 #### Result
 
-{{embedlivesample("Basic usage", "100%", 400)}}
+{{embedlivesample("trigger-scope", "100%", 400)}}
 
 Scroll the example down. You will see one square animate at a time, because each square animates only when the trigger element located inside the same `<section>` (in the same scope) is visible in the scrollport. Even though the three triggers share the same trigger name, each `.animated` element's animation is triggered by a different trigger.
 
