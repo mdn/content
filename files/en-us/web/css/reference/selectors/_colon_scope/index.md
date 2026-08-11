@@ -145,7 +145,7 @@ The scope of `context` is the element with the [`id`](/en-US/docs/Web/HTML/Refer
 
 ### Sibling combinators to the right of `:scope` never match
 
-The relationship defined by `:scope` is always ancestor-to-descendant from the scope root. Because of that, putting a sibling combinator to the right of `:scope` creates a selector that can never match.
+The relationship defined by `:scope` is always ancestor-to-descendant from the scope root. Because of that, putting a sibling combinator to the right of `:scope` creates a selector that can never match, because no element can both be within the selector scope and also be a sibling of `:scope`.
 
 ```css
 :scope + p {
@@ -157,9 +157,7 @@ The relationship defined by `:scope` is always ancestor-to-descendant from the s
 }
 ```
 
-In this case, no element can be both "a sibling of `:scope`" and also inside the same scoped matching relationship, so these selectors never produce a match.
-
-In Firefox, selectors like these can trigger a warning in DevTools because they will never match.
+Selectors never match may trigger a warning in browser DevTools.
 
 ## Specifications
 
