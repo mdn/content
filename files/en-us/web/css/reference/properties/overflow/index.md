@@ -79,9 +79,9 @@ overflow: revert-layer;
 overflow: unset;
 ```
 
-The `overflow` property is specified as one or two {{CSSXref("overflow_value", "&lt;overflow&gt;")}} keyword values.
-
 ### Values
+
+This property is specified as one or two space-separated {{CSSXref("overflow_value", "&lt;overflow&gt;")}} keyword values:
 
 - `visible`
   - : Overflow content is not clipped and may be visible outside the element's padding box. The element box is not a {{glossary("scroll container")}}. This is the default value.
@@ -443,15 +443,6 @@ In some browsers, scrolling content areas are not keyboard-focusable, so they ca
     feel."
   </p>
 </div>
-
-<div>
-  <code>overlay</code>
-  <p class="overlay">
-    Maya Angelou: "I've learned that people will forget what you said, people
-    will forget what you did, but people will never forget how you made them
-    feel."
-  </p>
-</div>
 ```
 
 #### CSS
@@ -501,10 +492,6 @@ p.scroll {
 
 p.auto {
   overflow: auto;
-}
-
-p.overlay {
-  overflow: overlay;
 }
 ```
 

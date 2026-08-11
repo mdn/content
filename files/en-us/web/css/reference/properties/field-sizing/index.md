@@ -28,6 +28,8 @@ field-sizing: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `content`
   - : Allows the element to adjust its size to fit its contents.
 - `fixed`

@@ -23,13 +23,12 @@ createAttributeNS(namespaceURI, qualifiedName)
 
 - `namespaceURI`
   - : A string that specifies the {{DOMxRef("Attr.namespaceURI", "namespaceURI")}} to associate with the attribute, or the empty string.
-    Some important namespace URIs are:
-    - [HTML](/en-US/docs/Web/HTML)
-      - : `http://www.w3.org/1999/xhtml`
-    - [SVG](/en-US/docs/Web/SVG)
-      - : `http://www.w3.org/2000/svg`
-    - [MathML](/en-US/docs/Web/MathML)
-      - : `http://www.w3.org/1998/Math/MathML`
+    In HTML documents, most attributes are in the **null namespace** — use the empty string for these.
+    Use a specific namespace URI only when creating a namespaced attribute, such as `xml:lang` or `xml:space`.
+    Some namespace URIs are:
+    - XML: `http://www.w3.org/XML/1998/namespace` (for `xml:lang`, `xml:space`)
+    - XMLNS: `http://www.w3.org/2000/xmlns/` (for `xmlns`, `xmlns:*`)
+    - XLink: `http://www.w3.org/1999/xlink` (for `xlink:href`, `xlink:title`, etc.)
 - `qualifiedName`
   - : A string containing the qualified name of the new attribute.
     The {{DOMxRef("Attr.name", "name")}} property of the created attribute is initialized with this value.
@@ -68,14 +67,46 @@ The new {{domxref("Attr")}} node.
 
 ## Examples
 
-### Basic usage
+### Creating a namespaced attribute
+
+This example creates an `xml:lang` attribute with the XML namespace and attaches it to a paragraph element.
+This attribute specifies the language of the element's content for XML processing.
+
+```html
+<p id="greeting">Bonjour!</p>
+```
 
 ```js
-const node = document.getElementById("svg");
-const a = document.createAttributeNS("http://www.w3.org/2000/svg", "viewBox");
-a.value = "0 0 100 100";
-node.setAttributeNode(a);
-console.log(node.getAttribute("viewBox")); // "0 0 100 100"
+const el = document.getElementById("greeting");
+const attr = document.createAttributeNS(
+  "http://www.w3.org/XML/1998/namespace",
+  "xml:lang",
+);
+attr.value = "fr";
+el.setAttributeNode(attr);
+```
+
+### Creating an unprefixed attribute
+
+In HTML documents, unprefixed attributes (such as SVG presentation attributes like `viewBox`) are in the null namespace.
+Use the empty string for the `namespaceURI` parameter to match this.
+
+```html
+<svg id="svg"></svg>
+```
+
+```js
+const svg = document.getElementById("svg");
+const attr = document.createAttributeNS("", "viewBox");
+attr.value = "0 0 100 100";
+svg.setAttributeNode(attr);
+console.log(svg.getAttribute("viewBox")); // "0 0 100 100"
+```
+
+Note that, in most cases, you can use {{domxref("Element.setAttribute()")}} instead of `createAttributeNS()` for unprefixed attributes:
+
+```js
+svg.setAttribute("viewBox", "0 0 100 100");
 ```
 
 ## Specifications

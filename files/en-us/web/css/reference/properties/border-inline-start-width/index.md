@@ -50,7 +50,7 @@ direction: rtl;
 ## Syntax
 
 ```css
-/* <'border-width'> values */
+/* <'line-width'> values */
 border-inline-start-width: 5px;
 border-inline-start-width: thick;
 
@@ -66,8 +66,8 @@ Related properties are {{cssxref("border-block-start-width")}}, {{cssxref("borde
 
 ### Values
 
-- `<'border-width'>`
-  - : The width of the border. See {{ cssxref("border-width") }}.
+- {{cssxref("&lt;line-width&gt;")}}
+  - : Defines the width of the border, either as an explicit non-negative {{cssxref("&lt;length&gt;")}} or the keywords: `thin`, `medium`, or `thick`. The default is `medium`.
 
 ## Formal definition
 

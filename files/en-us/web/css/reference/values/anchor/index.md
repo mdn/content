@@ -154,7 +154,7 @@ This example positions the right edge of the positioned element flush to the anc
 ```css
 .positionedElement {
   right: anchor(left);
-  margin-left: 10px;
+  margin-right: 10px;
 }
 ```
 
