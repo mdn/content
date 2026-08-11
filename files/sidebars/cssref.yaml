@@ -29,6 +29,10 @@ sidebar:
       - /Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds
       - /Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images
       - /Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds
+  - title: Borders_and_box_decorations
+    details: closed
+    children:
+      - /Web/CSS/Guides/Borders_and_box_decorations/Border_shape_nav_menu
   - title: Box alignment
     details: closed
     children:
@@ -415,6 +419,7 @@ l10n:
     Anchor_positioning: Anchor positioning
     Animations: Animations
     Backgrounds_and_Borders: Backgrounds and borders
+    Borders_and_box_decorations: Borders and box decorations
     Box_model: Box model
     Cascade: Cascade
     Colors: Colors

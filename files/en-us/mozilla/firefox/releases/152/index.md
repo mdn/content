@@ -1,8 +1,8 @@
 ---
-title: Firefox 152 release notes for developers (Stable)
-short-title: Firefox 152 (Stable)
+title: Firefox 152 release notes for developers
+short-title: Firefox 152
 slug: Mozilla/Firefox/Releases/152
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
@@ -121,3 +121,8 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **`<timeline-range-name>` values in `@keyframes` selectors**: `layout.css.scroll-driven-animations.enabled`
 
   The {{cssxref("@keyframes")}} at-rule now supports [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name) values. These [values](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names#timeline_range_names) let you specify the segment within which a scroll-driven animation takes place. ([Firefox bug 1824875](https://bugzil.la/1824875)).
+
+- **Crash Reporting** (Nightly): `dom.reporting.crash.enabled`
+
+  Crash report can now be sent through the [Reporting API](/en-US/docs/Web/API/Reporting_API).
+  ([Firefox bug 2036160](https://bugzil.la/2036160)).

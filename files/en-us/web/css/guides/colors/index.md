@@ -45,6 +45,7 @@ The CSS colors module also introduces the {{cssxref("@color-profile")}} at-rule,
   - [`oklab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklab)
   - [`oklch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch)
   - [`color()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color)
+- [`alpha()`](/en-US/docs/Web/CSS/Reference/Values/color_value/alpha)
 - [`color-mix()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color-mix)
 - [`contrast-color()`](/en-US/docs/Web/CSS/Reference/Values/color_value/contrast-color)
 - {{CSSXref("color_value/light-dark", "light-dark()")}}

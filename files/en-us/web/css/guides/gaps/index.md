@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-gaps/
 sidebar: cssref
 ---
 
-The **CSS gaps** module lets you specify spacing, or "gaps", between items in [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout), [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) layouts. The [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) module originally defined gaps and rules controlling the spacing between columns in multi-column containers. This module expands on these visible separators, called _gap decorations_, extending it to grid.
+The **CSS gaps** module lets you specify spacing, or "gaps", between items in [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout), [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) layouts. The [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) module originally defined gaps and rules that control the spacing between columns in multi-column containers. This module expands on these visible separators, called _gap decorations_, extending it to grid and flexbox.
 
 While {{cssxref("margin")}} and {{cssxref("padding")}} specify visual spacing around individual boxes, the properties in this module enable specifying the spacing between adjacent boxes within a given layout context for layouts that have {{glossary("gutters")}} and gaps, when the spacing is different between sibling boxes as opposed to between the first box, last box, and the container's edge. You can show rules in every gap or in a subset of gaps, defining fully animatable rule widths, colors, and insets.
 
@@ -275,7 +275,7 @@ function setColSpan(control, element) {
 article {
   column-count: 5;
   gap: 1em;
-  column-rule: 0.25em dashed currentcolor;
+  column-rule: 0.25em dashed currentColor;
 }
 .title {
   column-span: all;
@@ -289,7 +289,7 @@ p {
   line-height: 1.4;
 }
 .code {
-  font-style: monospace;
+  font-family: monospace;
 }
 .breakInside * {
   break-inside: avoid;
@@ -350,13 +350,8 @@ When the column rule is larger than the column gap, the decorative line appears 
 
 - {{cssxref("column-gap")}}
 - {{cssxref("column-rule")}}
-- {{cssxref("column-rule-color")}}
-- {{cssxref("column-rule-style")}}
-- {{cssxref("column-rule-width")}}
-- {{cssxref("gap")}}
-- {{cssxref("row-gap")}}
-<!-- Will be uncommented when issue https://github.com/mdn/content/issues/44435 is resolved.
 - {{cssxref("column-rule-break")}}
+- {{cssxref("column-rule-color")}}
 - {{cssxref("column-rule-inset")}}
 - {{cssxref("column-rule-inset-cap")}}
 - {{cssxref("column-rule-inset-cap-end")}}
@@ -366,7 +361,11 @@ When the column rule is larger than the column gap, the decorative line appears 
 - {{cssxref("column-rule-inset-junction-end")}}
 - {{cssxref("column-rule-inset-junction-start")}}
 - {{cssxref("column-rule-inset-start")}}
+- {{cssxref("column-rule-style")}}
 - {{cssxref("column-rule-visibility-items")}}
+- {{cssxref("column-rule-width")}}
+- {{cssxref("gap")}}
+- {{cssxref("row-gap")}}
 - {{cssxref("row-rule")}}
 - {{cssxref("row-rule-break")}}
 - {{cssxref("row-rule-color")}}
@@ -393,7 +392,7 @@ When the column rule is larger than the column gap, the decorative line appears 
 - {{cssxref("rule-overlap")}}
 - {{cssxref("rule-style")}}
 - {{cssxref("rule-visibility-items")}}
-- {{cssxref("rule-width")}} -->
+- {{cssxref("rule-width")}}
 
 ### Terms and glossary definitions
 
@@ -430,6 +429,7 @@ When the column rule is larger than the column gap, the decorative line appears 
 - {{CSSxRef("grid")}}
 - {{CSSxRef("grid-column")}}
 - {{CSSxRef("grid-row")}}
+- {{cssxref("repeat()")}}
 
 [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) module
 

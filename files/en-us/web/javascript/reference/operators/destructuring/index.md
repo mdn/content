@@ -197,6 +197,8 @@ const [a, ...b,] = [1, 2, 3];
 // Always consider using rest operator as the last element
 ```
 
+Like any other JavaScript language feature, there is no implicit deep-copying. The rest property creates a new object (or array), but all its member values, if they are object references, remain the same.
+
 ## Examples
 
 ### Array destructuring

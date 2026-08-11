@@ -32,7 +32,7 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
 _Also inherits methods from {{DOMxRef("EventTarget")}}._
 
 - {{DOMxRef("RTCDtlsTransport.getRemoteCertificates", "getRemoteCertificates()")}}
-  - : Returns an array of {{jsxref("ArrayBuffer")}} containing the certificates of the remote peer of the connection.
+  - : Returns an array of {{jsxref("ArrayBuffer")}} objects representing the remote peer's certificate chain.
 
 ## Events
 
@@ -48,6 +48,7 @@ _Also inherits methods from {{DOMxRef("EventTarget")}}._
 
 `RTCDtlsTransport` objects are created when an app calls either {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} or {{domxref("RTCPeerConnection.setRemoteDescription", "setRemoteDescription()")}}. The number of DTLS transports created and how they're used depends on the bundling mode used when creating the {{domxref("RTCPeerConnection")}}.
 
+[Bundling](https://datatracker.ietf.org/doc/rfc8843/) lets you use one `RTCDtlsTransport` to carry the data for multiple higher-level transports, such as multiple {{domxref("RTCRtpTransceiver")}}s.
 Whether bundling is used depends on what the other endpoint is able to negotiate. All browsers support bundling, so when both endpoints are browsers, you can rest assured that bundling will be used.
 
 Some non-browser legacy endpoints, however, may not support bundle. To be able to negotiate with such endpoints (or to exclude them entirely), the `bundlePolicy` property may be provided when creating the connection. The `bundlePolicy` lets you control how to negotiate with these legacy endpoints. The default policy is `"balanced"`, which provides a balance between performance and compatibility.
@@ -61,8 +62,6 @@ const rtcConfig = {
 
 const pc = new RTCPeerConnection(rtcConfig);
 ```
-
-[Bundling](https://datatracker.ietf.org/doc/rfc8843/) lets you use one `RTCDtlsTransport` to carry the data for multiple higher-level transports, such as multiple {{domxref("RTCRtpTransceiver")}}s.
 
 #### When not using BUNDLE
 
