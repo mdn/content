@@ -157,7 +157,7 @@ The relationship defined by `:scope` is always ancestor-to-descendant from the s
 }
 ```
 
-Selectors never match may trigger a warning in browser DevTools.
+Selectors that never match may trigger a warning in browser DevTools.
 
 ## Specifications
 
