@@ -55,7 +55,7 @@ Trigger names, defined with the {{cssxref("timeline-trigger-name")}} property, a
 2. If it can't find a suitable ancestor trigger, it will use the _last_ element in the HTML source order with that `timeline-trigger-name` value.
 3. If it can't find an element anywhere in the DOM with that `timeline-trigger-name` value, the animated element won't be scroll-triggered; it will be animated on page load.
 
-So if multiple elements define triggers with the same trigger name, only the last one in the document tree will be used as the trigger for an animated element referencing that trigger name in its `animation-trigger` property. This is likely not the desired behavior.
+If multiple elements define triggers with the same trigger name, only the last one in the document tree will be used as the trigger for animated elements referencing that trigger name in their `animation-trigger` properties. This is likely not the desired behavior.
 
 The `trigger-scope` property can solve this problem by limiting the scope of a trigger name to a subtree of the document. This means the trigger is visible only to elements within the same subtree and has no effect on elements outside the subtree. When `trigger-scope` is set on an element, when that element or its descendants are defined as triggers, animated elements are only associated with those triggers if they are within the same subtree.
 
