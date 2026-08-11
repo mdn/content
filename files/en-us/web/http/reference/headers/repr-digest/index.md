@@ -124,9 +124,9 @@ Content-Digest: sha-256=:pKQv0IAKChzGfyfxu5TNqcnvxIzaG4XICf6NQnB1YhY=:
 Repr-Digest: sha-256=:bMGjiT1wkArOzyB9ReAdpW51FV4mHlQygPXGp+TtzG4=:
 ```
 
-### Digest of a GZIP-encoded representation
+### Digest of a gzip-encoded representation
 
-If the client indicates it accepts GZIP compression, the server may select a GZIP-encoded representation of the same resource:
+In this request the client uses the {{httpheader("Accept-Encoding")}} header to indicate that it accepts gzip compression:
 
 ```http
 GET /items/123 HTTP/1.1
@@ -134,8 +134,10 @@ Host: example.com
 Accept-Encoding: gzip
 ```
 
-`Content-Encoding` identifies a different representation of the resource, so the digest is calculated over the encoded bytes, not the original unencoded text.
-Here, the 16-byte JSON body `{"hello": "mdn"}` is GZIP-compressed to a 36-byte representation, and `Content-Digest` and `Repr-Digest` are calculated over those 36 bytes (shown here as hex for readability):
+The server response includes the {{httpheader("Content-Encoding")}} header, incicating that the message bytes are from the gzip representation of the resource.
+
+The digest is calculated over the gzip-encoded bytes instead of the original unencoded text.
+Here, the 16-byte JSON body `{"hello": "mdn"}` is gzip-compressed to a 36-byte representation, and `Content-Digest` and `Repr-Digest` are calculated over those 36 bytes (shown here as hex for readability):
 
 ```http
 HTTP/1.1 200 OK
