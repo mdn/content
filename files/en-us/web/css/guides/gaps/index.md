@@ -169,7 +169,7 @@ In this example, the 2021 poem from the USA inauguration, _The Hill We Climb_, b
       <input type="range" min="0" max="4" value="1" step="0.5" id="gapSize" />
       <label for="gapSize">gap: </label><output id="gap">1em;</output>
     </p>
-    <p class="code">
+    <p>
       <input
         type="range"
         min="0"
@@ -177,15 +177,15 @@ In this example, the 2021 poem from the USA inauguration, _The Hill We Climb_, b
         value="0.3"
         step="0.1"
         id="columnRuleWidth" />
-      <label for="columnRuleWidth">rule-width: </label
+      <label for="columnRuleWidth">rule width: </label
       ><output id="ruleWidth">0.3em;</output>
     </p>
-    <p class="code">
-      <label for="colColor">rule-color:</label>
+    <p>
+      <label for="colColor">rule color:</label>
       <input type="color" id="colColor" value="#FF0000" />
     </p>
-    <p class="code">
-      <label for="columnRuleStyle">rule-style:</label>
+    <p>
+      <label for="columnRuleStyle">rule style:</label>
       <select id="columnRuleStyle">
         <option>none</option>
         <option>hidden</option>
