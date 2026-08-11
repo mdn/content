@@ -312,13 +312,9 @@ function setColSpan(control, element) {
 article {
   column-count: 5;
   gap: 1em;
-<<<<<<< Updated upstream
-  column-rule: 0.25em dashed currentColor;
-=======
   column-rule: 0.3em double #ff0000;
   rule: 0.3em double #ff0000;
   column-height: 20vh;
->>>>>>> Stashed changes
 }
 .title {
   column-span: all;
