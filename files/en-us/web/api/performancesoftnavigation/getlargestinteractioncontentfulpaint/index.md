@@ -14,7 +14,7 @@ Some {{Glossary("SPA", "Single Page Applications (SPAs)")}} may paint first, and
 
 The `getLargestInteractionContentfulPaint()` method avoids developers having to do that by providing a means to get the latest, largest `InteractionContentfulPaint` for the soft navigation.
 
-It is a method and not a static property as it returns the latest, largest entry and so may return different results over time if increasing `InteractionContentfulPaint` entries are recorded after the soft navigation.
+It is defined as a method rather than a static property because it returns the latest, largest entry, and therefore may return different results over time if increasing `InteractionContentfulPaint` entries are recorded after the soft navigation.
 
 ## Syntax
 
