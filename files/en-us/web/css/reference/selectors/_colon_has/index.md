@@ -240,7 +240,16 @@ The analogous construct in CSS would be `.abc:has(+ .xyz)`: it selects the eleme
 
 ### Negative lookahead (?!pattern)
 
-Similarly, for the negative lookahead case, in the regular expression `abc(?!xyz)`, the string `abc` is matched only if it is _not_ followed by `xyz`. The analogous CSS construct `.abc:has(+ :not(.xyz))` doesn't select the element `.abc` if the next element is `.xyz`.
+Similarly, for the negative lookahead case, in the regular expression `abc(?!xyz)`, the string `abc` is matched only if it is _not_ followed by `xyz` (which includes when `abc` appears at the end of the string with no following characters).
+
+The basic CSS construct `.abc:has(+ :not(.xyz))` selects the element `.abc` if there is a next sibling and that sibling is not `.xyz`. Note that unlike the regular expression, this basic selector will not match if `.abc` has no following sibling (i.e. when it is the last child). To fully replicate the negative lookahead behavior including the last element, you can combine it with the [`:last-child`](/en-US/docs/Web/CSS/Reference/Selectors/:last-child) pseudo-class:
+
+```css
+.abc:has(+ :not(.xyz)),
+.abc:last-child {
+  /* styles applied when not followed by .xyz or when it is the last element */
+}
+```
 
 ## Performance considerations
 
