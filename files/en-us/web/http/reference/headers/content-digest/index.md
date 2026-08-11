@@ -18,10 +18,6 @@ For example, in [range requests](/en-US/docs/Web/HTTP/Guides/Range_requests), a 
 For this reason, a `Content-Digest` is identical to a {{HTTPHeader("Repr-Digest")}} when a representation is sent in a single message.
 
 > [!NOTE]
-> `Content-Digest` supports several hashing algorithms, some of which are deprecated for security reasons.
-> See [Section 5 of RFC 9530](https://www.rfc-editor.org/rfc/rfc9530.html#section-5) for the relevant security considerations.
-
-> [!NOTE]
 > A `Digest` header was defined in earlier specifications, but it didn't distinguish between a message's content and a resource's representation.
 > It was obsoleted by `Content-Digest` and `Repr-Digest`.
 

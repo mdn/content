@@ -16,14 +16,6 @@ Details about the representation can be determined from {{Glossary("Representati
 The representation digest applies to the whole representation rather than the encoding or chunking of the messages that are used to send it.
 A {{HTTPHeader("Content-Digest")}} applies to the content of a specific message, and will have different values based on the {{HTTPHeader("Content-Encoding")}} and {{HTTPHeader("Content-Range")}} of each message.
 
-> [!NOTE]
-> `Repr-Digest` supports several hashing algorithms, some of which are deprecated for security reasons.
-> See [Section 5 of RFC 9530](https://www.rfc-editor.org/rfc/rfc9530.html#section-5) for the relevant security considerations.
-
-> [!NOTE]
-> A `Digest` header was defined in earlier specifications, but it didn't distinguish between a message's content and a resource's representation.
-> It was obsoleted by `Content-Digest` and `Repr-Digest`.
-
 <table class="properties">
   <tbody>
     <tr>
