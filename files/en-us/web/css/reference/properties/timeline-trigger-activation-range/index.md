@@ -143,7 +143,7 @@ In this example, we inset a scroll-triggered animation trigger's activation rang
 
 #### HTML
 
-Our markup contains two {{htmlelement("div")}} elements, one to animate and one to create a trigger on, plus some basic text content to cause the page to scroll. We have hidden the text content for brevity.
+Our markup contains two {{htmlelement("div")}} elements, one to animate and one on which to create a trigger, plus some basic text content to cause the page to scroll. We have hidden the text content for brevity.
 
 ```html
 <div class="animated">I am animated</div>
@@ -219,7 +219,7 @@ Our markup contains two {{htmlelement("div")}} elements, one to animate and one 
 
 #### CSS
 
-We start by giving the `.animated` `<div>` element a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the scrollport so we can see when its animation starts and stops.
+The animated `<div>` element's {{cssxref("position")}} is set to `fixed`, positioning it near the top-left of the scrollport to enable us to see when its animation starts and stops.
 
 ```css hidden live-sample___basic-example live-sample___compare-multiple-values
 body {
@@ -245,14 +245,14 @@ div {
 ```
 
 ```css live-sample___basic-example live-sample___compare-multiple-values
-div.animated {
+.animated {
   position: fixed;
   top: 25px;
   left: 25px;
 }
 ```
 
-Next, we define the {{cssxref("@keyframes")}} for a `rotate` animation that we will apply later:
+Next, we define the {{cssxref("@keyframes")}} for the `rotate` animation we will use later:
 
 ```css live-sample___basic-example live-sample___compare-multiple-values
 @keyframes rotate {
@@ -266,23 +266,23 @@ Next, we define the {{cssxref("@keyframes")}} for a `rotate` animation that we w
 }
 ```
 
-We apply the animation to the `.animated` `<div>` for infinite iterations using the {{cssxref("animation")}} shorthand. We then set an {{cssxref("animation-trigger")}} value on it that references a trigger name of `--t` and specifies two {{cssxref("animation-action")}} values — `play` and `pause` — which specify that the animation will play on activation, and pause on deactivation.
+Using the `animation` shorthand, the `.animated` element has the `rotate` animation applied. Without an associated trigger, the element would start animating when the page loads. The `animation-trigger` property makes it a triggered animation. The value references a `timeline-trigger-name` of `--t` and specifies two `<animation-action>` values — `play` and `pause` — which specify that the animation will play on activation, and pause on deactivation.
 
 ```css live-sample___basic-example
-div.animated {
+.animated {
   animation: rotate 3s infinite linear;
   animation-trigger: --t play pause;
 }
 ```
 
-The `.trigger` `<div>` element creates a trigger for the animated `<div>` using:
+The `.trigger` `<div>` element creates the animated `<div>`'s trigger via the following properties:
 
-- A {{cssxref("timeline-trigger-name")}} value of `--t`, which is equal to the identifier referenced in the animated `<div>`'s `animation-trigger` property value, associating the two together.
-- A {{cssxref("timeline-trigger-source")}} value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
+- A {{cssxref("timeline-trigger-name")}} with value `--t`, which is equal to the identifier referenced in the animated `<div>`'s `animation-trigger` property value, associating the two together.
+- A {{cssxref("timeline-trigger-source")}} with value [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
 - A `timeline-trigger-activation-range` of `entry 50% exit 50%`, which sets the trigger's activation range to a range between `50%` through the `entry` range (when `50%` of the tracked element has entered the scrollport via the scrollport's end edge) and `50%` through the `exit` range (when `50%` of the tracked element has exited the scrollport via the scrollport's start edge).
 
 ```css live-sample___basic-example
-div.trigger {
+.trigger {
   timeline-trigger-name: --t;
   timeline-trigger-source: view();
   timeline-trigger-activation-range: entry 50% exit 50%;
@@ -370,12 +370,12 @@ select {
 ```
 
 ```css live-sample___compare-multiple-values
-div.animated {
+.animated {
   animation: rotate 3s infinite linear;
   animation-trigger: --t play pause;
 }
 
-div.trigger {
+.trigger {
   timeline-trigger-name: --t;
   timeline-trigger-source: view();
 }

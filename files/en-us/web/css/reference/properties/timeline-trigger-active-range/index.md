@@ -156,7 +156,7 @@ In this example, we demonstrate the effect of defining a `timeline-trigger-activ
 
 #### HTML
 
-Our markup contains two {{htmlelement("div")}} elements — one to animate and one to create a trigger on — an [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) that we will use to toggle the active range on and off, and some basic text content to cause the page to scroll.
+Our markup contains two {{htmlelement("div")}} elements — one to animate and one on which to create a trigger — an [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) that we will use to toggle the active range on and off, and some basic text content to cause the page to scroll.
 
 We have hidden the text content for brevity.
 
@@ -244,7 +244,7 @@ We have hidden the text content for brevity.
 
 #### CSS
 
-We start by giving the `.animated` `<div>` element a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the scrollport so we can see when its animation starts and stops.
+The animated `<div>` element's {{cssxref("position")}} is set to `fixed`, positioning it near the top-left of the scrollport to enable us to see when its animation starts and stops.
 
 ```css hidden live-sample___basic-example
 body {
@@ -279,14 +279,14 @@ form {
 ```
 
 ```css live-sample___basic-example
-div.animated {
+.animated {
   position: fixed;
   top: 25px;
   left: 25px;
 }
 ```
 
-Next, we define the {{cssxref("@keyframes")}} for a `rotate` animation that we will apply later:
+Next, we define the {{cssxref("@keyframes")}} for the `rotate` animation we will use later:
 
 ```css live-sample___basic-example
 @keyframes rotate {
@@ -300,23 +300,23 @@ Next, we define the {{cssxref("@keyframes")}} for a `rotate` animation that we w
 }
 ```
 
-The `.animated` `<div>` has the `rotate` `animation` applied. We the set an {{cssxref("animation-trigger")}} value on it that references a trigger name of `--t`; we also specify two {{cssxref("animation-action")}} values — `play` and `pause` — which specify that the animation will play on activation, and pause on deactivation.
+Using the `animation` shorthand, the `.animated` element has the `rotate` animation applied. Without an associated trigger, the element would start animating when the page loads. The `animation-trigger` property makes it a triggered animation. The value references a `timeline-trigger-name` of `--t` and specifies two `<animation-action>` values — `play` and `pause` — which specify that the animation will play on activation, and pause on deactivation.
 
 ```css live-sample___basic-example
-div.animated {
+.animated {
   animation: rotate 3s infinite linear;
   animation-trigger: --t play pause;
 }
 ```
 
-The `.trigger` `<div>` element creates a trigger for the animated `<div>` using:
+The `.trigger` `<div>` element creates the animated `<div>`'s trigger via the following properties:
 
-- A {{cssxref("timeline-trigger-name")}} value of `--t`, which is equal to the identifier referenced in the animated `<div>`'s `animation-trigger` property value, associating the two together.
-- A {{cssxref("timeline-trigger-source")}} value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
+- A {{cssxref("timeline-trigger-name")}} with value `--t`, which is equal to the identifier referenced in the animated `<div>`'s `animation-trigger` property value, associating the two together.
+- A {{cssxref("timeline-trigger-source")}} with value [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
 - A `timeline-trigger-activation-range` of `entry` — on its own, this means that the trigger will activate when the tracked element starts to enter the scrollport via the scrollport's end edge and deactivate when the tracked element has completely entered the scrollport.
 
 ```css live-sample___basic-example
-div.trigger {
+.trigger {
   timeline-trigger-name: --t;
   timeline-trigger-source: view();
   timeline-trigger-activation-range: entry;
@@ -326,7 +326,7 @@ div.trigger {
 Now we use a combination of the {{cssxref(":has()")}} and {{cssxref(":checked")}} pseudo-classes to select the tracked element only when the checkbox is checked. The `<form>` element appears right after the `.trigger` `<div>` as a direct sibling, hence using the `+` combinator in the selector that we are checking for. The result is that when the checkbox is unchecked, the trigger deactivates as soon as the tracked element leaves the `entry` range, but when it is checked (as it is by default), the `timeline-trigger-active-range` property is applied, and the trigger won't deactivate until the tracked element leaves the `cover` range.
 
 ```css live-sample___basic-example
-div.trigger:has(+ form input:checked) {
+.trigger:has(+ form input:checked) {
   timeline-trigger-active-range: cover;
 }
 ```

@@ -284,7 +284,7 @@ label {
 }
 ```
 
-The animated `<div>` elements' {{cssxref("position")}} is set to `fixed`, positioning them near the top of the scrollport to enable keeping the animatable elements visible at all times.
+The animated `<div>` elements' {{cssxref("position")}} is set to `fixed`, positioning them near the top of the scrollport to keep the animatable elements visible at all times.
 
 Each animated element has the same `animation-trigger` value — their animations are triggered by a trigger with a `timeline-trigger-name` of `--t`, and the animations will play when their trigger activates and then reset when their trigger deactivates.
 

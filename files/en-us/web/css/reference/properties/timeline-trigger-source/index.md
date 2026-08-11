@@ -246,7 +246,7 @@ The markup contains two {{htmlelement("div")}} elements, one to animate and one 
 
 #### CSS
 
-The animated `<div>` element's {{cssxref("position")}} is set to `fixed`, positioning it near the top-left of the scrollport to keep it visible, so we can see when its animation starts and stops.
+The animated `<div>` element's {{cssxref("position")}} is set to `fixed`, positioning it near the top-left of the scrollport to enable us to see when its animation starts and stops.
 
 ```css hidden live-sample___basic-view-progress-example live-sample___basic-scroll-progress-example
 body {
@@ -272,14 +272,14 @@ div {
 ```
 
 ```css live-sample___basic-view-progress-example live-sample___basic-scroll-progress-example
-div.animated {
+.animated {
   position: fixed;
   top: 25px;
   left: 25px;
 }
 ```
 
-Next, we define the {{cssxref("@keyframes")}} for a `rotate` animation that we'll apply later:
+Next, we define the {{cssxref("@keyframes")}} for the `rotate` animation we will use later:
 
 ```css live-sample___basic-view-progress-example live-sample___basic-scroll-progress-example
 @keyframes rotate {
@@ -293,12 +293,10 @@ Next, we define the {{cssxref("@keyframes")}} for a `rotate` animation that we'l
 }
 ```
 
-We use the {{cssxref("animation")}} shorthand to apply the animation, setting infinite iterations. Without an associated trigger, the element would start animating when the page loads.
-
-We then set an {{cssxref("animation-trigger")}} value on it that references a trigger name of `--t` and specifies two {{cssxref("animation-action")}} values — `play` and `pause` — which specify that the animation will play when its trigger activates, and pause when it deactivates.
+Using the `animation` shorthand, the `.animated` element has the `rotate` animation applied. Without an associated trigger, the element would start animating when the page loads. The `animation-trigger` property makes it a triggered animation. The value references a `timeline-trigger-name` of `--t` and specifies two `<animation-action>` values — `play` and `pause` — which specify that the animation will play on activation, and pause on deactivation.
 
 ```css live-sample___basic-view-progress-example
-div.animated {
+.animated {
   animation: rotate 3s infinite linear;
   animation-trigger: --t play pause;
 }
@@ -306,11 +304,11 @@ div.animated {
 
 The `.trigger` `<div>` element creates the animated `<div>`'s trigger via the following properties:
 
-- A {{cssxref("timeline-trigger-name")}} value of `--t`, which is equal to the identifier referenced in the animated `<div>`'s `animation-trigger` property value, associating the two together.
-- A `timeline-trigger-source` value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
+- A {{cssxref("timeline-trigger-name")}} with value `--t`, which is equal to the identifier referenced in the animated `<div>`'s `animation-trigger` property value, associating the two together.
+- A `timeline-trigger-source` with value [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
 
 ```css live-sample___basic-view-progress-example
-div.trigger {
+.trigger {
   timeline-trigger-name: --t;
   timeline-trigger-source: view();
 }
@@ -331,14 +329,14 @@ The HTML and CSS are nearly identical, except that this time we have set our `.t
 We have also set a {{cssxref("timeline-trigger-activation-range")}} of `600px`, which means that the trigger will activate (meaning the animation will start playing) when the tracked element scrolls upwards by `600px`. If we didn't set this, the trigger would activate immediately on page load.
 
 ```css hidden live-sample___basic-scroll-progress-example
-div.animated {
+.animated {
   animation: rotate 3s infinite linear;
   animation-trigger: --t play pause;
 }
 ```
 
 ```css live-sample___basic-scroll-progress-example
-div.trigger {
+.trigger {
   timeline-trigger-name: --t;
   timeline-trigger-source: scroll();
   timeline-trigger-activation-range: 600px;

@@ -282,7 +282,7 @@ div {
 ```
 
 ```css live-sample___basic-example live-sample___multiple-triggers
-div.animated {
+.animated {
   position: fixed;
   top: 25px;
   left: 25px;
