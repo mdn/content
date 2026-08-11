@@ -49,9 +49,9 @@ timeline-trigger-source: unset;
 Specified as a comma-separated list of values. Each value can be one of the following types:
 
 - `none`
-  - : The element does not create a animation trigger, as it has no timeline. Associated animations will not animated.
+  - : The element does not create an animation trigger; it is not associated with a timeline.
 - `auto`
-  - : The element does not create a trigger. Associated animations are set to the document's default time-based timeline.
+  - : The element does not create an animation trigger; its associated timeline is the document's default time-based timeline.
 - {{cssxref("dashed-ident")}}
   - : The element creates a scroll-triggered animation trigger as a [named view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_view_progress_timeline).
 - [`scroll()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/scroll)
