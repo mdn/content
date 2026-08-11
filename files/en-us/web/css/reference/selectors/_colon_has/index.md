@@ -240,7 +240,7 @@ The analogous construct in CSS would be `.abc:has(+ .xyz)`: it selects the eleme
 
 ### Negative lookahead (?!pattern)
 
-Similarly, for the negative lookahead case, in the regular expression `abc(?!xyz)`, the string `abc` is matched only if it is _not_ followed by `xyz`. The analogous CSS construct `.abc:has(+ :not(.xyz))` doesn't select the element `.abc` if the next element is `.xyz`.
+Similarly, for the negative lookahead case, in the regular expression `abc(?!xyz)`, the string `abc` is matched only if it is _not_ followed by `xyz`. The analogous CSS construct `.abc:has(+ :not(.xyz))` doesn't select the element `.abc` if the next element is `.xyz` or if there is no next element.
 
 ## Performance considerations
 
