@@ -68,7 +68,7 @@ Host: example.com
 ```
 
 The server responds with a `Content-Digest` of the message content using the SHA-256 algorithm.
-The digest is calculated over the exact bytes of the message body, `{"hello": "mdn"}` (16 bytes, with no trailing line break):
+The digest is calculated over the exact bytes of the message body, `{"hello": "mdn"}` (16 bytes, explicitly not including any trailing line break):
 
 ```http
 HTTP/1.1 200 OK
