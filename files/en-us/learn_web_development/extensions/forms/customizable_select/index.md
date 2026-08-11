@@ -215,7 +215,7 @@ The drop-down picker can be targeted using the {{cssxref("::picker()", "::picker
 The picker is a [popover](/en-US/docs/Web/API/Popover_API). Therefore, when the picker is opened, its contents (contained within the `::picker(select)` pseudo-element) are promoted to the {{glossary("top layer")}}. This ensures that the picker displays on top of other elements and interacts gracefully with other popovers on the page (for example, closing unrelated popovers that are already open).
 
 > [!NOTE]
-> The select picker is also subject to [top-layer ancestor matching boundary](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes#top-layer_ancestor_matching_boundary) behavior, which ensures that {{cssxref(":hover")}}, {{cssxref(":active")}}, or {{cssxref(":focus-within")}} styles applied to the `<select>` will only match the picker's descendants while the picker is interacted with, not the `<select>` itself.
+> The select's drop-down picker is also subject to [top-layer ancestor matching boundary](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes#top-layer_ancestor_matching_boundary) behavior. This ensures that {{cssxref(":hover")}}, {{cssxref(":active")}}, or {{cssxref(":focus-within")}} styles applied to the `<select>` will only match the picker's descendants while the picker is interacted with, not the `<select>` itself.
 
 In our example, we start by removing the picker's default black {{cssxref("border")}}:
 
