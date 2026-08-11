@@ -26,7 +26,7 @@ div(number1, number2, /* …, */ numberN)
 
 ### Return value
 
-A {{domxref('CSSMathProduct')}}.
+A {{domxref('CSSMathProduct')}}, or a {{domxref('CSSUnitValue')}} if `this` and every argument are plain numbers, or all but one of them are.
 
 ### Exceptions
 
@@ -40,7 +40,7 @@ A {{domxref('CSSMathProduct')}}.
 ### Basic usage
 
 ```js
-let mathProduct = CSS.px("24").div(CSS.percent("4"));
+let mathProduct = CSS.px(24).div(CSS.percent(4));
 // Prints "calc(24px / 4%)"
 mathProduct.toString();
 ```
