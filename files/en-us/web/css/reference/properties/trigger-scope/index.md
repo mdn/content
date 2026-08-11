@@ -284,7 +284,7 @@ label {
 }
 ```
 
-The animated `<div>` elements's {{cssxref("position")}} are set to `fixed`, positioning them near the top of the scrollport to enable us to keep the animatable elements visible at all times.
+The animated `<div>` elements' {{cssxref("position")}} is set to `fixed`, positioning them near the top of the scrollport to enable keeping the animatable elements visible at all times.
 
 Each animated element has the same `animation-trigger` value — their animations are triggered by a trigger with a `timeline-trigger-name` of `--t`, and the animations will play when their trigger activates and then reset when their trigger deactivates.
 
@@ -296,7 +296,7 @@ Each animated element has the same `animation-trigger` value — their animation
 }
 ```
 
-Each `.animated` element is set to a different named `animation`, and a different {{cssxref("left")}} value so that they are not positioned on top of one another.
+Each `.animated` element is given a different named `animation`, and a different {{cssxref("left")}} value so that they are not positioned on top of one another.
 
 ```css live-sample___trigger-scope
 #one .animated {
@@ -315,7 +315,7 @@ Each `.animated` element is set to a different named `animation`, and a differen
 }
 ```
 
-The `.trigger` elements are set as triggers for the `.animated` elements by giving them a {{cssxref("timeline-trigger-name")}} value that references the same name value, `--t`, and a `timeline-trigger-source` of `view()`. We set the `timeline-trigger-activation-range` to `contain`, so the activation and deactivation occurs when the trigger is still visible. We also set some rudimentary styles to make them stand out from the rest of the text.
+The `.trigger` elements are set as triggers for the `.animated` elements by giving them a {{cssxref("timeline-trigger-name")}} value that references the same name value, `--t`, and a `timeline-trigger-source` of `view()`. We set the `timeline-trigger-activation-range` to `contain`, so activation and deactivation occur while the trigger is still visible. We also set some rudimentary styles to make them stand out from the rest of the text.
 
 ```css live-sample___trigger-scope
 .trigger {
@@ -361,9 +361,9 @@ section {
 
 {{embedlivesample("Basic usage", "100%", 400)}}
 
-We only see one square animate at a time as each square animates only when the trigger element located inside the same `<section>` is visible in the scrollport. Even though the three triggers share the same trigger name, each `.animated` element's animation is triggered by a different trigger. Only one square animates at a time as each one animates only when their same-scoped trigger element, located inside the same `<section>`, is visible in the scrollport.
+Scroll the example down. You will see one square animate at a time, because each square animates only when the trigger element located inside the same `<section>` (in the same scope) is visible in the scrollport. Even though the three triggers share the same trigger name, each `.animated` element's animation is triggered by a different trigger.
 
-Now check the checkbox to remove `trigger-scope: all` from the `<section>` element. Scroll through the content again. None of the squares animate until the third `.trigger` is visible in the scrollport, at which point all of the squares start animating at the same time. This is because scoping has been removed, so each `.animated` element's animation is activated and deactivated by the last `.trigger`'s trigger; all three animatable elements are now using the last trigger element in the DOM as their trigger.
+Now check the checkbox to remove `trigger-scope: all` from the `<section>` elements. Scroll through the content again. None of the squares animate until the third `.trigger` is visible in the scrollport, at which point all of the squares start animating at the same time. This is because scoping has been removed, so each `.animated` element's animation is activated and deactivated by the last `.trigger` element's trigger.
 
 ## Specifications
 
