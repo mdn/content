@@ -123,7 +123,8 @@ font-family: "Gill Sans Extrabold", sans-serif;
       - : All glyphs have the same fixed width.
 
         For example: Fira Mono, DejaVu Sans Mono, Menlo, Consolas, Liberation Mono, Monaco, Lucida Console, monospace.
-
+        > [!NOTE]
+        > Browsers may render `font-family: monospace` at a smaller font size than defined (a common default being 0.8125em). To avoid this behavior, define multiple values, such as `font-family: monospace, monospace`.
     - `cursive`
       - : Glyphs in cursive fonts generally have either joining strokes or other cursive characteristics beyond those of italic typefaces. The glyphs are partially or completely connected, and the result looks more like handwritten pen or brush writing than printed letter work.
 
