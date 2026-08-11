@@ -254,7 +254,7 @@ select,
 }
 ```
 
-{{embedlivesample("matching-boundary", "100%", 200)}}
+{{EmbedLiveSample("matching-boundary", "100%", 200)}}
 
 Note how when you hover the `<select>` or the popover toggle button, all ancestors of those elements will get the border. However, when you open the select picker or the popover and hover one of their descendants, the matching stops at the top-layer ancestor (the select picker or popover themselves).
 
