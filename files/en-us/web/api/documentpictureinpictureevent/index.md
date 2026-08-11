@@ -2,12 +2,10 @@
 title: DocumentPictureInPictureEvent
 slug: Web/API/DocumentPictureInPictureEvent
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.DocumentPictureInPictureEvent
 ---
 
-{{APIRef("Document Picture-in-Picture API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("Document Picture-in-Picture API")}}{{SecureContext_Header}}
 
 The **`DocumentPictureInPictureEvent`** interface of the {{domxref("Document Picture-in-Picture API", "Document Picture-in-Picture API", "", "nocode")}} is the event object for the {{domxref("DocumentPictureInPicture/enter_event", "enter")}} event, which fires when the Picture-in-Picture window is opened.
 
@@ -15,14 +13,14 @@ The **`DocumentPictureInPictureEvent`** interface of the {{domxref("Document Pic
 
 ## Constructor
 
-- {{domxref("DocumentPictureInPictureEvent.DocumentPictureInPictureEvent", "DocumentPictureInPictureEvent()")}} {{Experimental_Inline}}
+- {{domxref("DocumentPictureInPictureEvent.DocumentPictureInPictureEvent", "DocumentPictureInPictureEvent()")}}
   - : Creates a new `DocumentPictureInPictureEvent` object instance.
 
 ## Instance properties
 
 _Inherits properties from its parent, {{DOMxRef("Event")}}._
 
-- {{domxref("DocumentPictureInPictureEvent.window", "window")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("DocumentPictureInPictureEvent.window", "window")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Window")}} instance representing the browsing context inside the `DocumentPictureInPicture` window the event was fired on.
 
 ## Instance methods

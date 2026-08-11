@@ -3,8 +3,8 @@ title: points
 slug: Web/SVG/Reference/Attribute/points
 page-type: svg-attribute
 spec-urls:
-  - https://svgwg.org/svg2-draft/shapes.html#PolygonElementPointsAttribute
-  - https://svgwg.org/svg2-draft/shapes.html#PolylineElementPointsAttribute
+  - https://w3c.github.io/svgwg/svg2-draft/shapes.html#PolygonElementPointsAttribute
+  - https://w3c.github.io/svgwg/svg2-draft/shapes.html#PolylineElementPointsAttribute
 sidebar: svgref
 ---
 

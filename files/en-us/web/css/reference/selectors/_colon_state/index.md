@@ -1,5 +1,6 @@
 ---
-title: :state()
+title: "`:state()` CSS pseudo-class"
+short-title: :state()
 slug: Web/CSS/Reference/Selectors/:state
 page-type: css-pseudo-class
 browser-compat: css.selectors.state

@@ -1,5 +1,6 @@
 ---
-title: justify-items
+title: "`justify-items` CSS property"
+short-title: justify-items
 slug: Web/CSS/Reference/Properties/justify-items
 page-type: css-property
 browser-compat: css.properties.justify-items

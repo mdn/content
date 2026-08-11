@@ -285,7 +285,7 @@ For how instances are created, see the {{jsxref("Classes/constructor", "construc
 
 ### Binding this with instance and static methods
 
-When a static or instance method is called without a value for {{jsxref("Operators/this", "this")}}, such as by assigning the method to a variable and then calling it, the `this` value will be `undefined` inside the method. This behavior is the same even if the [`"use strict"`](/en-US/docs/Web/JavaScript/Reference/Strict_mode) directive isn't present, because code within the `class` body is always executed in strict mode.
+When a static or instance method is called without a value for {{jsxref("this")}}, such as by assigning the method to a variable and then calling it, the `this` value will be `undefined` inside the method. This behavior is the same even if the [`"use strict"`](/en-US/docs/Web/JavaScript/Reference/Strict_mode) directive isn't present, because code within the `class` body is always executed in strict mode.
 
 ```js
 class Animal {

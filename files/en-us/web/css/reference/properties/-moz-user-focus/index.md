@@ -1,5 +1,6 @@
 ---
-title: -moz-user-focus
+title: "`-moz-user-focus` CSS property"
+short-title: -moz-user-focus
 slug: Web/CSS/Reference/Properties/-moz-user-focus
 page-type: css-property
 status:

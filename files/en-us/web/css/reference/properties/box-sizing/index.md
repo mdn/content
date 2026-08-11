@@ -1,5 +1,6 @@
 ---
-title: box-sizing
+title: "`box-sizing` CSS property"
+short-title: box-sizing
 slug: Web/CSS/Reference/Properties/box-sizing
 page-type: css-property
 browser-compat: css.properties.box-sizing

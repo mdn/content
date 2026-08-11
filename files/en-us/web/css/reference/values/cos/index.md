@@ -1,5 +1,6 @@
 ---
-title: cos()
+title: "`cos()` CSS function"
+short-title: cos()
 slug: Web/CSS/Reference/Values/cos
 page-type: css-function
 browser-compat: css.types.cos

@@ -1,5 +1,6 @@
 ---
-title: appearance
+title: "`appearance` CSS property"
+short-title: appearance
 slug: Web/CSS/Reference/Properties/appearance
 page-type: css-property
 browser-compat: css.properties.appearance

@@ -5,11 +5,12 @@ slug: Web/HTTP/Reference/Headers/Permissions-Policy/attribution-reporting
 page-type: http-permissions-policy-directive
 status:
   - deprecated
+  - non-standard
 browser-compat: http.headers.Permissions-Policy.attribution-reporting
 sidebar: http
 ---
 
-{{deprecated_header}}
+{{deprecated_header}}{{non-standard_header}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `attribution-reporting` directive controls whether the current document is allowed to use the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API).
 

@@ -3,10 +3,12 @@ title: "ManagedMediaSource: endstreaming event"
 short-title: endstreaming
 slug: Web/API/ManagedMediaSource/endstreaming_event
 page-type: web-api-event
+status:
+  - experimental
 browser-compat: api.ManagedMediaSource.endstreaming_event
 ---
 
-{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}{{SeeCompatTable}}
 
 The **`endstreaming`** event of the {{domxref("ManagedMediaSource")}} interface is fired when the {{domxref("ManagedMediaSource.streaming", "streaming")}} property changes from `true` to `false`. This indicates that the user agent has enough data buffered to ensure uninterrupted playback, and the application can stop fetching new media segments.
 

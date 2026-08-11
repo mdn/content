@@ -1,5 +1,6 @@
 ---
-title: <acronym>
+title: "`<acronym>` HTML acronym or abbreviation element"
+short-title: <acronym>
 slug: Web/HTML/Reference/Elements/acronym
 page-type: html-element
 status:

@@ -1,5 +1,6 @@
 ---
-title: "@font-face"
+title: "`@font-face` CSS at-rule"
+short-title: "@font-face"
 slug: Web/CSS/Reference/At-rules/@font-face
 page-type: css-at-rule
 browser-compat: css.at-rules.font-face

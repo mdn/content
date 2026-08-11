@@ -1,5 +1,6 @@
 ---
-title: orphans
+title: "`orphans` CSS property"
+short-title: orphans
 slug: Web/CSS/Reference/Properties/orphans
 page-type: css-property
 browser-compat: css.properties.orphans

@@ -1,5 +1,6 @@
 ---
-title: :has-slotted
+title: "`:has-slotted` CSS pseudo-class"
+short-title: :has-slotted
 slug: Web/CSS/Reference/Selectors/:has-slotted
 page-type: css-pseudo-class
 browser-compat: css.selectors.has-slotted

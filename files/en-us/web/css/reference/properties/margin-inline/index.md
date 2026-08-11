@@ -1,5 +1,6 @@
 ---
-title: margin-inline
+title: "`margin-inline` CSS property"
+short-title: margin-inline
 slug: Web/CSS/Reference/Properties/margin-inline
 page-type: css-shorthand-property
 browser-compat: css.properties.margin-inline

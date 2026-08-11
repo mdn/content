@@ -175,7 +175,7 @@ The max amount of available heap memory can be increased with a flag:
 node --max-old-space-size=6000 index.js
 ```
 
-We can also expose the garbage collector for debugging memory issues using a flag and the [Chrome Debugger](https://nodejs.org/en/learn/getting-started/debugging):
+We can also expose the garbage collector for debugging memory issues using a flag and the [Chrome Debugger](https://nodejs.org/learn/getting-started/debugging):
 
 ```bash
 node --expose-gc --inspect index.js

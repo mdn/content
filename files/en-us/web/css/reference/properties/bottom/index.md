@@ -1,5 +1,6 @@
 ---
-title: bottom
+title: "`bottom` CSS property"
+short-title: bottom
 slug: Web/CSS/Reference/Properties/bottom
 page-type: css-property
 browser-compat: css.properties.bottom

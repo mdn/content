@@ -405,9 +405,9 @@ After the last two sections, the final updated state of our `<select>` is render
 
 {{EmbedLiveSample("full-render", "100%", "410px")}}
 
-## Styling optgroups
+## Styling optgroup elements
 
-The default styling of {{htmlelement("optgroup")}} elements in customizable selects is the same as in classic `<select>` elements — bolded and indented less than the contained options. In customizable selects, however, optgroups behave just like any other block-level container, and can be styled as such. In addition, the {{htmlelement("legend")}} element is allowed as a child of `<optgroup>`, to provide a label that is easy to target and style. This replaces any text set in the `<optgroup>` element's `label` attribute, and it has the same semantics.
+The default styling of {{htmlelement("optgroup")}} elements in customizable selects is the same as in classic `<select>` elements — bolded and indented less than the contained options. In customizable selects, however, option groups behave just like any other block-level container, and can be styled as such. In addition, the {{htmlelement("legend")}} element is allowed as a child of `<optgroup>`, to provide a label that is easy to target and style. This replaces any text set in the `<optgroup>` element's `label` attribute, and it has the same semantics.
 
 Let's look at a basic example. Our HTML looks like this:
 
@@ -429,7 +429,7 @@ Let's look at a basic example. Our HTML looks like this:
 </select>
 ```
 
-We start our CSS by styling the `<optgroup>` elements themselves. These are mostly rudimentary styles to make the optgroups look like containers for their descendant `<option>` elements. We've given them some {{cssxref("margin-top")}} to put some space between each optgroup, and between the top optgroup and the select button.
+We start our CSS by styling the `<optgroup>` elements themselves. These are mostly rudimentary styles to make the optgroup elements look like containers for their descendant `<option>` elements. We've given them some {{cssxref("margin-top")}} to put some space between each optgroup, and between the top optgroup and the select button.
 
 ```css hidden live-sample___optgroup-example
 * {
@@ -437,7 +437,7 @@ We start our CSS by styling the `<optgroup>` elements themselves. These are most
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 select,
@@ -447,8 +447,8 @@ select,
 }
 
 select {
-  border: 2px solid #ddd;
-  background: #eee;
+  border: 2px solid #dddddd;
+  background: #eeeeee;
   padding: 10px;
 }
 
@@ -459,9 +459,9 @@ select {
 
 ```css live-sample___optgroup-example
 optgroup {
-  border: 2px solid #ddd;
+  border: 2px solid #dddddd;
   border-radius: 8px;
-  background: #eee;
+  background: #eeeeee;
   padding: 10px 0 0 0;
   margin-top: 5px;
 }
@@ -480,7 +480,7 @@ Finally, we style the `<option>` elements, providing a {{cssxref("background")}}
 
 ```css live-sample___optgroup-example
 option {
-  background: #eee;
+  background: #eeeeee;
   padding: 10px;
 }
 
@@ -489,7 +489,7 @@ option:last-of-type {
 }
 
 option:nth-of-type(odd) {
-  background: #fff;
+  background: white;
 }
 
 option:hover,

@@ -1,5 +1,6 @@
 ---
-title: -webkit-device-pixel-ratio
+title: "`-webkit-device-pixel-ratio` CSS media feature"
+short-title: -webkit-device-pixel-ratio
 slug: Web/CSS/Reference/At-rules/@media/-webkit-device-pixel-ratio
 page-type: css-media-feature
 browser-compat: css.at-rules.media.-webkit-device-pixel-ratio

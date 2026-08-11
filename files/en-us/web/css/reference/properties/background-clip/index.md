@@ -1,5 +1,6 @@
 ---
-title: background-clip
+title: "`background-clip` CSS property"
+short-title: background-clip
 slug: Web/CSS/Reference/Properties/background-clip
 page-type: css-property
 browser-compat: css.properties.background-clip

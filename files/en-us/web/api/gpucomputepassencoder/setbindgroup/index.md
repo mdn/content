@@ -40,7 +40,7 @@ If a {{jsxref("Uint32Array")}} value is specified for `dynamicOffsets`, both of 
 
 ### Return value
 
-None ({{jsxref("Undefined")}}).
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

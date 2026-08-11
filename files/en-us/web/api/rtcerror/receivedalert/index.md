@@ -8,19 +8,15 @@ browser-compat: api.RTCError.receivedAlert
 
 {{APIRef("WebRTC")}}
 
-The {{domxref("RTCError")}} read-only property
-**`receivedAlert`** specifies the fatal {{Glossary("DTLS")}}
-error which resulted in an alert being received from the remote peer.
+The **`receivedAlert`** read-only property of the {{domxref("RTCError")}} interface specifies the fatal {{Glossary("DTLS")}} error which resulted in an alert being received from the remote peer.
 
 ## Value
 
-An unsigned long integer value specifying the fatal {{Glossary("DTLS")}} error which
-resulted in an alert being received from the remote peer.
+A positive integer value.
 
 > [!NOTE]
-> This property is `null` if the `RTCError` doesn't represent a
-> DTLS error (with {{domxref("RTCError.errorDetail", "errorDetail")}} set to
-> `dtls-failure`).
+> This property is `null` if the `RTCError` doesn't represent a DTLS error.
+> DTLS errors are indicated by the {{domxref("RTCError.errorDetail", "errorDetail")}} property being set to `dtls-failure`.
 
 ## Specifications
 

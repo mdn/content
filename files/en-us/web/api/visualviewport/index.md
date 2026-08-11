@@ -7,16 +7,8 @@ browser-compat: api.VisualViewport
 
 {{APIRef("CSSOM view API")}}
 
-The **`VisualViewport`** interface of the [CSSOM view API](/en-US/docs/Web/API/CSSOM_view_API) represents the visual viewport for a given window. For a page containing iframes, each iframe, as well as the containing page, will have a unique window object. Each window on a page will have a unique `VisualViewport` representing the properties associated with that window.
-
-The mobile web contains two viewports, the layout viewport and the visual viewport. The layout viewport covers all the elements on a page and the visual viewport is what is actually visible on the screen. When the user pinch-zooms into the page, the visual viewport shrinks but the layout viewport is unchanged. User-interface features like the on-screen keyboard (OSK) can shrink the visual viewport without affecting the layout viewport.
-
-What happens when a web page element needs to be visible on screen regardless of the visible portion of a web page? For example, what if you need a set of image controls to remain on screen regardless of the pinch-zoom level of the device? Current browsers vary in how they handle this. The visual viewport lets web developers solve this by positioning elements relative to what's shown on-screen.
-
-You can get a window's visual viewport using {{domxref("Window.visualViewport")}}.
-
-> [!NOTE]
-> Only the top-level window has a visual viewport that's distinct from the layout viewport. Therefore, it's generally only the `VisualViewport` object of the top-level window that's useful. For an {{htmlelement("iframe")}}, visual viewport metrics like {{domxref("VisualViewport.width")}} always correspond to layout viewport metrics like {{domxref("Element.clientWidth", "document.documentElement.clientWidth")}}.
+The **`VisualViewport`** interface of the [CSSOM view API](/en-US/docs/Web/API/CSSOM_view_API) represents the visual viewport for a given window. For a page containing frames, each {{htmlelement("iframe")}} , as well as the containing page, will have a unique window object.
+Each window on a page will have a unique `VisualViewport` representing the properties associated with that window.
 
 {{InheritanceDiagram}}
 
@@ -57,9 +49,22 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
   - : Fired when a scrolling operation on the visual viewport ends.
     Also available via the `onscrollend` property.
 
+## Description
+
+The mobile web contains two viewports, the layout viewport and the visual viewport. The layout viewport covers all the elements on a page and the visual viewport is what is actually visible on the screen. When the user pinch-zooms into the page, the visual viewport shrinks but the layout viewport is unchanged. User-interface features like the on-screen keyboard (OSK) can shrink the visual viewport without affecting the layout viewport.
+
+What happens when a web page element needs to be visible on screen regardless of the visible portion of a web page? For example, what if you need a set of image controls to remain on screen regardless of the pinch-zoom level of the device? Current browsers vary in how they handle this. The visual viewport lets web developers solve this by positioning elements relative to what's shown on-screen.
+
+You can get a window's visual viewport using {{domxref("Window.visualViewport")}}.
+
+> [!NOTE]
+> Only the top-level window has a visual viewport that's distinct from the layout viewport.
+> Therefore, it's generally only the `VisualViewport` object of the top-level window that's useful.
+> For an {{htmlelement("iframe")}}, visual viewport metrics like {{domxref("VisualViewport.width")}} always correspond to layout viewport metrics like {{domxref("Element.clientWidth", "document.documentElement.clientWidth")}}.
+
 ## Examples
 
-## Getting visual viewport information during scrolling and zooming
+### Getting visual viewport information during scrolling and zooming
 
 Our [visual viewport](https://mdn.github.io/dom-examples/visual-viewport-api/) example provides a basic demonstration of how the different visual viewport features work, including the three event types. Load the page in supporting desktop and mobile browsers and try scrolling around the page and pinch-zooming. On `resize` and `scroll`, the information box is repositioned to keep the same position relative to the visual viewport, and the viewport and scroll information it shows is updated. Also, on `resize` and `scroll` we change the box color to indicate something is happening, changing it back on `scrollend`.
 

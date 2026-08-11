@@ -1,5 +1,6 @@
 ---
-title: rotateY()
+title: "`rotateY()` CSS function"
+short-title: rotateY()
 slug: Web/CSS/Reference/Values/transform-function/rotateY
 page-type: css-function
 browser-compat: css.types.transform-function.rotateY

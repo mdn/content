@@ -3,10 +3,12 @@ title: "ManagedMediaSource: streaming property"
 short-title: streaming
 slug: Web/API/ManagedMediaSource/streaming
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.ManagedMediaSource.streaming
 ---
 
-{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}{{SeeCompatTable}}
 
 The **`streaming`** read-only property of the {{domxref("ManagedMediaSource")}} interface is a boolean indicating whether the application should actively fetch and append media data.
 

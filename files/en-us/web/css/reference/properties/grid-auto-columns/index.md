@@ -1,5 +1,6 @@
 ---
-title: grid-auto-columns
+title: "`grid-auto-columns` CSS property"
+short-title: grid-auto-columns
 slug: Web/CSS/Reference/Properties/grid-auto-columns
 page-type: css-property
 browser-compat: css.properties.grid-auto-columns

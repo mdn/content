@@ -52,7 +52,7 @@ Because there is a risk of exposing data intended for one site to other sites, b
 This is in contrast to _partitioned_ cookies, where embedded resources under each top-level site are given a unique cookie storage space, isolated from those of other sites.
 Since there is no privacy risk, because it is not possible to track users across sites via partitioned cookies, browsers send partitioned cookies in requests and make them available to embedded resources.
 Note however that, because the cookies aren't shared between sites, they are also not automatically synchronized across sites.
-Browsers have various mechanisms to partition third-party cookie access, for example [Firefox Total Cookie Protection](https://blog.mozilla.org/en/mozilla/firefox-rolls-out-total-cookie-protection-by-default-to-all-users-worldwide/) and [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies).
+Browsers have various mechanisms to partition third-party cookie access, for example [Firefox Total Cookie Protection](https://blog.mozilla.org/en/mozilla/firefox-rolls-out-total-cookie-protection-by-default-to-all-users-worldwide/) and [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies).
 
 When we talk about third-party cookies in the context of the Storage Access API, we implicitly mean _unpartitioned_ third-party cookies.
 
@@ -67,7 +67,7 @@ Third party content embedded in an {{htmlelement("iframe")}} that needs to acces
    - Safari shows prompts for all embedded content that has not previously received storage access.
    - Firefox only prompts users after an origin has requested storage access on more than a threshold number of sites.
    - Chrome shows prompts for all embedded content that has not previously received storage access.
-     It will however automatically grant access and skip prompts if the embedded content and embedding site are part of the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets).
+     It will however automatically grant access and skip prompts if the embedded content and embedding site are part of the same [related website set](https://privacysandbox.google.com/cookies/related-website-sets-integration).
 
 3. Permission is granted or denied based on whether the content meets all the security requirements — see [Security considerations](#security_considerations) for general requirements, and [Browser-specific variations](#browser-specific_variations) for some browser-specific security requirements.
    The {{jsxref("Promise")}}-based nature of `requestStorageAccess()` allows you to run code to handle success and failure cases.
@@ -311,8 +311,8 @@ Documentation for Firefox's new storage access policy for blocking tracking cook
   - : New name for {{domxref("Document.hasStorageAccess()")}}.
 - {{domxref("Document.requestStorageAccess()")}}
   - : Allows content loaded in a third-party context (i.e., embedded in an {{htmlelement("iframe")}}) to request access to third-party cookies and unpartitioned state; returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
-- {{domxref("Document.requestStorageAccessFor()")}} {{experimental_inline}}
-  - : A proposed extension to the Storage Access API that allows top-level sites to request third-party cookie access on behalf of embedded content originating from another site in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets). Returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
+- {{domxref("Document.requestStorageAccessFor()")}} {{deprecated_inline}}
+  - : A non-standard deprecated extension to the Storage Access API that allows top-level sites to request third-party cookie access on behalf of embedded content originating from another site in the same [related website set](https://privacysandbox.google.com/cookies/related-website-sets-integration). Returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
 
 > [!NOTE]
 > User interaction propagates to the promise returned by these methods, allowing the callers to take actions requiring user interaction without requiring a second click. For example, a caller could open a pop-up window from the resolved promise without triggering Firefox's pop-up blocker.

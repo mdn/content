@@ -1,5 +1,6 @@
 ---
-title: background-attachment
+title: "`background-attachment` CSS property"
+short-title: background-attachment
 slug: Web/CSS/Reference/Properties/background-attachment
 page-type: css-property
 browser-compat: css.properties.background-attachment
@@ -87,9 +88,9 @@ background-attachment: revert-layer;
 background-attachment: unset;
 ```
 
-The `background-attachment` property is specified as one or more of the keyword values, separated by commas.
-
 ### Values
+
+This property is specified as one or more comma-separated keyword values:
 
 - `fixed`
   - : The background is fixed relative to the viewport. Even if an element has a scrolling mechanism, the background doesn't move with the element. If set, the {{cssxref("background-origin")}} property is ignored.
@@ -158,7 +159,7 @@ This property supports multiple background images. You can specify a different `
 
 #### HTML
 
-We include all of Dr. Suess's poem.
+We include all of Dr. Seuss's poem.
 
 ```html
 <div>
@@ -222,7 +223,7 @@ ul {
 
 {{EmbedLiveSample("Multiple_background_images")}}
 
-Note how the first background image is fixed to the viewport while the the second background image is fixed relative to the list.
+Note how the first background image is fixed to the viewport while the second background image is fixed relative to the list.
 
 ## Specifications
 

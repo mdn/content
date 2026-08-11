@@ -1,5 +1,6 @@
 ---
-title: inverted-colors
+title: "`inverted-colors` CSS media feature"
+short-title: inverted-colors
 slug: Web/CSS/Reference/At-rules/@media/inverted-colors
 page-type: css-media-feature
 browser-compat: css.at-rules.media.inverted-colors

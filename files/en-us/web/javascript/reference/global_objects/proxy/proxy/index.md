@@ -50,11 +50,11 @@ object.
 - {{jsxref("Proxy/Proxy/apply", "handler.apply()")}}
   - : A trap for a function call.
 - {{jsxref("Proxy/Proxy/construct", "handler.construct()")}}
-  - : A trap for the {{jsxref("Operators/new", "new")}} operator.
+  - : A trap for the {{jsxref("new")}} operator.
 - {{jsxref("Proxy/Proxy/defineProperty", "handler.defineProperty()")}}
   - : A trap for {{jsxref("Object.defineProperty")}}.
 - {{jsxref("Proxy/Proxy/deleteProperty", "handler.deleteProperty()")}}
-  - : A trap for the {{jsxref("Operators/delete", "delete")}} operator.
+  - : A trap for the {{jsxref("delete")}} operator.
 - {{jsxref("Proxy/Proxy/get", "handler.get()")}}
   - : A trap for getting property values.
 - {{jsxref("Proxy/Proxy/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}

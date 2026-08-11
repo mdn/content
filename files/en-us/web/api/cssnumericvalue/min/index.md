@@ -6,21 +6,23 @@ page-type: web-api-instance-method
 browser-compat: api.CSSNumericValue.min
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`min()`** method of the
-{{domxref("CSSNumericValue")}} interface returns the lowest value from among those
-values passed. The passed values must be of the same type.
+The **`min()`** method of the {{domxref("CSSNumericValue")}} interface returns the lowest value from among those values passed.
+The passed values must be of the same type.
 
 ## Syntax
 
 ```js-nolint
-min(number1, /* …, */ numberN)
+min()
+min(number1)
+min(number1, number2)
+min(number1, number2, /* …, */ numberN)
 ```
 
 ### Parameters
 
-- `number1`, …, `numberN`
+- `number1`, …, `numberN` {{optional_inline}}
   - : Either a number or a {{domxref('CSSNumericValue')}}.
 
 ### Return value
@@ -34,8 +36,10 @@ A {{domxref('CSSUnitValue')}}.
 
 ## Examples
 
-As stated earlier, all passed values must be of the same type and value. Some of the
-following examples illustrate what happens when they are not.
+### Basic usage
+
+As stated earlier, all passed values must be of the same type and value.
+Some of the following examples illustrate what happens when they are not.
 
 ```js
 // Prints "1cm"

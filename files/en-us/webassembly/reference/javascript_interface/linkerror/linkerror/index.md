@@ -46,7 +46,7 @@ details to the console:
 try {
   throw new WebAssembly.LinkError("Hello", "someFile", 10);
 } catch (e) {
-  console.log(e instanceof LinkError); // true
+  console.log(e instanceof WebAssembly.LinkError); // true
   console.log(e.message); // "Hello"
   console.log(e.name); // "LinkError"
   console.log(e.fileName); // "someFile"

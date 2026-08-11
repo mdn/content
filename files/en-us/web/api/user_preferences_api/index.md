@@ -2,6 +2,8 @@
 title: User Preferences API
 slug: Web/API/User_Preferences_API
 page-type: web-api-overview
+status:
+  - experimental
 browser-compat:
   - api.Navigator.preferences
   - api.PreferenceManager

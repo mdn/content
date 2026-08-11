@@ -1,5 +1,6 @@
 ---
-title: page-break-before
+title: "`page-break-before` CSS property"
+short-title: page-break-before
 slug: Web/CSS/Reference/Properties/page-break-before
 page-type: css-property
 status:
@@ -86,6 +87,8 @@ page-break-before: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : Initial value. Automatic page breaks (neither forced nor forbidden).

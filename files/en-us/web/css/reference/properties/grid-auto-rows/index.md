@@ -1,5 +1,6 @@
 ---
-title: grid-auto-rows
+title: "`grid-auto-rows` CSS property"
+short-title: grid-auto-rows
 slug: Web/CSS/Reference/Properties/grid-auto-rows
 page-type: css-property
 browser-compat: css.properties.grid-auto-rows

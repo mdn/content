@@ -1,5 +1,6 @@
 ---
-title: transition-timing-function
+title: "`transition-timing-function` CSS property"
+short-title: transition-timing-function
 slug: Web/CSS/Reference/Properties/transition-timing-function
 page-type: css-property
 browser-compat: css.properties.transition-timing-function

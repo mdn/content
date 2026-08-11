@@ -1,5 +1,6 @@
 ---
-title: :scope
+title: "`:scope` CSS pseudo-class"
+short-title: :scope
 slug: Web/CSS/Reference/Selectors/:scope
 page-type: css-pseudo-class
 browser-compat: css.selectors.scope

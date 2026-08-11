@@ -1,5 +1,6 @@
 ---
-title: <url>
+title: "`<url>` CSS type"
+short-title: <url>
 slug: Web/CSS/Reference/Values/url_value
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-values/#url-value

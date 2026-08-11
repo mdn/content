@@ -5,10 +5,11 @@ slug: Web/API/CSSPrimitiveValue/getStringValue
 page-type: web-api-instance-method
 status:
   - deprecated
+  - non-standard
 browser-compat: api.CSSPrimitiveValue.getStringValue
 ---
 
-{{APIRef("CSSOM")}}{{deprecated_header}}
+{{APIRef("CSSOM")}}{{deprecated_header}}{{non-standard_header}}
 
 The **`getStringValue()`** method of the
 {{domxref("CSSPrimitiveValue")}} interface is used to get a string value. If this CSS

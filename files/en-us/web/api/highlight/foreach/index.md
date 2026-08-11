@@ -9,7 +9,7 @@ spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-set.prot
 
 {{APIRef("CSS Custom Highlight API")}}
 
-The **`forEach()`** method of the {{domxref("Highlight")}} interface executes a provided function once for each {{domxref("Range")}} object in the `Highlight` object, in insertion order.
+The **`forEach()`** method of the {{domxref("Highlight")}} interface executes a provided function once for each {{domxref("AbstractRange")}} object in the `Highlight` object, in insertion order.
 
 `Highlight` is a {{jsxref("Set")}}-like object, so this is similar to using {{jsxref("Set.forEach()")}}.
 
@@ -23,9 +23,9 @@ forEach(callbackFn, thisArg)
 ### Parameters
 
 - `callback`
-  - : Function to execute for each `Range` object, taking three arguments:
+  - : Function to execute for each `AbstractRange` object, taking three arguments:
     - `range`, `key`
-      - : The current `Range` object being processed in the `Highlight`. As there are no
+      - : The current `AbstractRange` object being processed in the `Highlight`. As there are no
         keys in `Highlight`, the `range` is passed for both arguments.
     - `highlight`
       - : The `Highlight` object which `forEach()` was called upon.

@@ -7,6 +7,9 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties","Learn_web_development/Core/Frameworks_libraries/Vue_refs_focus_management", "Learn_web_development/Core/Frameworks_libraries")}}
 
+> [!NOTE]
+> The MDN Vue articles are no longer being maintained and will be removed from the website in 3 months (by August 20, 2026). The content will be archived in the [MDN Museum](https://github.com/mdn/museum). See [this discussion](https://github.com/orgs/mdn/discussions/827) for further information.
+
 Now it is time to add one of the major parts of functionality that we're still missing — the ability to edit existing todo items. To do this, we will take advantage of Vue's conditional rendering capabilities — namely `v-if` and `v-else` — to allow us to toggle between the existing todo item view, and an edit view where you can update todo item labels. We'll also look at adding functionality to delete todo items.
 
 <table>

@@ -1,5 +1,6 @@
 ---
-title: scroll-padding-inline
+title: "`scroll-padding-inline` CSS property"
+short-title: scroll-padding-inline
 slug: Web/CSS/Reference/Properties/scroll-padding-inline
 page-type: css-shorthand-property
 browser-compat: css.properties.scroll-padding-inline

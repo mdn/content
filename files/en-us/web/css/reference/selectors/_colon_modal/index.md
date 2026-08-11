@@ -1,5 +1,6 @@
 ---
-title: :modal
+title: "`:modal` CSS pseudo-class"
+short-title: :modal
 slug: Web/CSS/Reference/Selectors/:modal
 page-type: css-pseudo-class
 browser-compat: css.selectors.modal

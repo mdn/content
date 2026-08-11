@@ -1,5 +1,6 @@
 ---
-title: box-direction
+title: "`box-direction` CSS property"
+short-title: box-direction
 slug: Web/CSS/Reference/Properties/box-direction
 page-type: css-property
 status:
@@ -31,9 +32,9 @@ box-direction: revert-layer;
 box-direction: unset;
 ```
 
-The `box-direction` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `normal`
   - : The box lays out its contents from the start (the left or top edge).

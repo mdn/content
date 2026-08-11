@@ -1,5 +1,6 @@
 ---
-title: :blank
+title: "`:blank` CSS pseudo-class"
+short-title: :blank
 slug: Web/CSS/Reference/Selectors/:blank
 page-type: css-pseudo-class
 status:

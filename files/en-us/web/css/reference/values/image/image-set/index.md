@@ -1,5 +1,6 @@
 ---
-title: image-set()
+title: "`image-set()` CSS function"
+short-title: image-set()
 slug: Web/CSS/Reference/Values/image/image-set
 page-type: css-function
 browser-compat: css.types.image.image-set

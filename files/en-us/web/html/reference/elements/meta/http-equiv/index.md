@@ -1,6 +1,6 @@
 ---
-title: <meta> http-equiv attribute
-short-title: <meta> http-equiv
+title: "`<meta http-equiv>` HTML attribute"
+short-title: <meta http-equiv>
 slug: Web/HTML/Reference/Elements/meta/http-equiv
 page-type: html-attribute
 browser-compat: html.elements.meta.http-equiv

@@ -1,5 +1,6 @@
 ---
-title: inherit
+title: "`inherit` CSS keyword"
+short-title: inherit
 slug: Web/CSS/Reference/Values/inherit
 page-type: css-keyword
 browser-compat: css.types.global_keywords.inherit
@@ -159,5 +160,5 @@ The `<h2>` elements are all `green`. However, if they are nested in a {{htmlelem
 
 ## See also
 
-- {{cssxref("initial")}}, {{cssxref("revert")}}, {{cssxref("revert-layer")}}, and {{cssxref("unset")}} keywords
+- {{cssxref("initial")}}, {{cssxref("revert")}}, {{cssxref("revert-layer")}}, {{cssxref("revert-rule")}}, and {{cssxref("unset")}} keywords
 - [Inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance)

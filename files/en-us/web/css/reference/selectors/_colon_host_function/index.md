@@ -1,5 +1,6 @@
 ---
-title: :host()
+title: "`:host()` CSS pseudo-class"
+short-title: :host()
 slug: Web/CSS/Reference/Selectors/:host_function
 page-type: css-pseudo-class
 browser-compat: css.selectors.hostfunction

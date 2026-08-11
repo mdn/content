@@ -1,5 +1,6 @@
 ---
-title: column-span
+title: "`column-span` CSS property"
+short-title: column-span
 slug: Web/CSS/Reference/Properties/column-span
 page-type: css-property
 browser-compat: css.properties.column-span
@@ -71,9 +72,9 @@ column-span: revert-layer;
 column-span: unset;
 ```
 
-The `column-span` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `none`
   - : The element does not span multiple columns.

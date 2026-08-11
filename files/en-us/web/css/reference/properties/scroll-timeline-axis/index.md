@@ -1,5 +1,6 @@
 ---
-title: scroll-timeline-axis
+title: "`scroll-timeline-axis` CSS property"
+short-title: scroll-timeline-axis
 slug: Web/CSS/Reference/Properties/scroll-timeline-axis
 page-type: css-property
 browser-compat: css.properties.scroll-timeline-axis
@@ -129,8 +130,8 @@ body {
       content: "Your browser doesn't support the `scroll-timeline-axis` property.";
       background-color: wheat;
       display: block;
-      width: 100%;
       text-align: center;
+      padding: 1rem 0;
     }
   }
 }

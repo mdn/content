@@ -204,13 +204,13 @@ The XSS-safe baseline configuration defines the items that must be removed from 
 - {{htmlelement("embed")}}, {{htmlelement("frame")}}, {{htmlelement("iframe")}}, {{htmlelement("object")}}, {{htmlelement("script")}}, and {{SVGElement("use")}}.
 - All event handler content attributes, such as `onafterprint`, `onbeforeinput`, and so on.
 
-The configuration is automatically applied to {{domxref("Element.setHTML()")}} and the other [safe sanitization methods](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods), and ensures that XSS-unsafe items are removed from the output even if they are allowed by a passed sanitizer.
+The configuration is automatically applied to {{domxref("Element.setHTML()")}} and the other [safe sanitization methods](#sanitization_methods), and ensures that XSS-unsafe items are removed from the output even if they are allowed by a passed sanitizer.
 You can also call {{domxref("Sanitizer/removeUnsafe","removeUnsafe")}} on a {{domxref("Sanitizer")}} instance to apply this configuration and make it XSS-safe.
 
 #### Default sanitizer configuration
 
 The default sanitizer configuration is more restrictive than the XSS-safe baseline.
-It defines the sanitizer that is used if you call {{domxref("Element.setHTML()")}} or the other [safe sanitization methods](/en-US/docs/Web/API/HTML_Sanitizer_API#sanitization_methods) without passing a sanitizer object.
+It defines the sanitizer that is used if you call {{domxref("Element.setHTML()")}} or the other [safe sanitization methods](#sanitization_methods) without passing a sanitizer object.
 It is also the configuration that is returned by the [`Sanitizer()` constructor](/en-US/docs/Web/API/Sanitizer/Sanitizer) when no configuration is set.
 
 The configuration removes the following sorts of items:

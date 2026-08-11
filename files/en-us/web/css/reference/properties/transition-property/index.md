@@ -1,5 +1,6 @@
 ---
-title: transition-property
+title: "`transition-property` CSS property"
+short-title: transition-property
 slug: Web/CSS/Reference/Properties/transition-property
 page-type: css-property
 browser-compat: css.properties.transition-property

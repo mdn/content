@@ -1,5 +1,6 @@
 ---
-title: text-decoration-color
+title: "`text-decoration-color` CSS property"
+short-title: text-decoration-color
 slug: Web/CSS/Reference/Properties/text-decoration-color
 page-type: css-property
 browser-compat: css.properties.text-decoration-color
@@ -73,6 +74,8 @@ text-decoration-color: unset;
 ```
 
 ### Values
+
+This property is specified as one `<color>` value:
 
 - {{cssxref("&lt;color&gt;")}}
   - : The color of the line decoration.

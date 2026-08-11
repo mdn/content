@@ -26,13 +26,6 @@ A {{domxref("MIDIMessageEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MIDIMessageEvent")}}
 
-## Event properties
-
-_This interface also inherits properties from {{domxref("Event")}}._
-
-- {{domxref("MIDIMessageEvent.data")}}
-  - : A {{jsxref("Uint8Array")}} containing the data bytes of a single MIDI message. See the [MIDI specification](https://midi.org/summary-of-midi-1-0-messages) for more information on its form.
-
 ## Examples
 
 In the following example `midimessage` events are listened for on all input ports. When a message is received the {{domxref("MIDIMessageEvent.data")}} property is printed to the console.
