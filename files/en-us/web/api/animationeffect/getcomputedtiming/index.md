@@ -41,7 +41,7 @@ An object which contains:
   - `progress`
     - : `null` or a `number` at least `0` and less than `1`.
 
-      Indicates the effect's progress through its current iteration. At the start of the `activeDuration`, this equals the fractional part of `iterationStart`.
+      Indicates the effect's progress through its current iteration. Easing functions can produce values less than 0 or greater than 1. At the start of the `activeDuration`, this equals the fractional part of `iterationStart`.
 
       Returns `null` if the effect isn't mid-iteration, for example because the effect is in the `delay` or `endDelay` periods, the effect is finished, or `localTime` is `null`.
 
