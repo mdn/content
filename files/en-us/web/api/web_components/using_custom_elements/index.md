@@ -593,7 +593,7 @@ class ExpandingList extends HTMLUListElement {
 
 Note that this time we extend {{domxref("HTMLUListElement")}}, rather than {{domxref("HTMLElement")}}. This means that we get the default behavior of a list, and only have to implement our own customizations.
 
-As before, all of the code is in the `connectedCallback()` lifecycle callback. The class does not declare a constructor at all: there is no initial state to set up here, so the implicit constructor that just calls `super()` is enough. Inside the callback, `this` refers to the custom element instance, which is how the code reaches the list's own children.
+As before, most of the code is in the `connectedCallback()` lifecycle callback.
 
 Next, we register the element using the `define()` method as before, except that this time it also includes an options object that details what element our custom element inherits from:
 
