@@ -17,7 +17,6 @@ In certain cases, a {{HTTPHeader("Repr-Digest")}} can be used to validate the in
 For example, in [range requests](/en-US/docs/Web/HTTP/Guides/Range_requests), a `Repr-Digest` will always have the same value if only the requested byte ranges differ, whereas the content digest will be different for each part.
 For this reason, a `Content-Digest` is identical to a {{HTTPHeader("Repr-Digest")}} when a representation is sent in a single message.
 
-
 <table class="properties">
   <tbody>
     <tr>
