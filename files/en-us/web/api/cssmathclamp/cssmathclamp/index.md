@@ -29,7 +29,7 @@ new CSSMathClamp(lower, value, upper)
 
 - [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError)
   - : Thrown if the parameters have conflicting unit types.
-    For example, specifying parameters that specify length and time bounds.
+    For example, mixing a length value with a time value.
 
 ## Examples
 
@@ -48,7 +48,7 @@ console.log(clamp.upper); // CSSUnitValue {value: 500, unit: "px"}
 
 ### Handling incompatible types
 
-The constructor throws a `TypeError` if the three arguments don't resolve to a compatible type
+The constructor throws a `TypeError` if the three arguments don't resolve to a compatible type.
 In the following code we mix a length with a time, and log the error.
 
 ```js

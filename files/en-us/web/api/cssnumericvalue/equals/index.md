@@ -15,12 +15,15 @@ This allows structural equality to be tested quickly.
 ## Syntax
 
 ```js-nolint
-equals(number)
+equals()
+equals(number1)
+equals(number1, number2)
+equals(number1, number2, /* …, */ numberN)
 ```
 
 ### Parameters
 
-- `number`
+- `number1`, …, `numberN` {{optional_inline}}
   - : Either a number or a {{domxref('CSSNumericValue')}}.
 
 ### Return value
