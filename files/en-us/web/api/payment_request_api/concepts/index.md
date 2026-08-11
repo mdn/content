@@ -44,12 +44,12 @@ Standardized payment method identifiers are those listed in the [payment method 
 
 ### URL-based payment method identifiers
 
-These may vary substantially depending on the specifics of the service, and a given processing service may have multiple URLs used, depending on the version of their API, their communication technology, and so forth.
+These identifiers are typically provided by payment service providers during onboarding or integration and may vary substantially depending on the specifics of the service, API version, and communication technology. Developers will usually obtain these identifiers directly from their chosen payment service provider's documentation rather than discovering them independently.
 
 - `https://apple.com/apple-pay`
-  - : Payments are handled using the [Apple Pay](https://www.apple.com/apple-pay/) service. Currently, Apple Pay is only supported by Safari.
+  - : Payments are handled using the [Apple Pay](https://www.apple.com/apple-pay/) service. This payment method is primarily supported in Safari on compatible Apple devices.
 - `https://google.com/pay`
-  - : Payments are processed by [Google Pay](https://pay.google.com/payments/home). This is currently supported only by Chrome and Chromium-based browsers.
+  - : Payments are processed by [Google Pay](https://pay.google.com/payments/home/). Support depends on browsers that implement the Payment Handler API (currently primarily Chromium-based browsers).
 
 ## Functions of a payment handler
 
@@ -87,3 +87,5 @@ Thus, it's important to note that the {{Glossary("user agent")}} never sends a {
 - [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - [Introducing the Payment Request API for Apple Pay](https://webkit.org/blog/8182/introducing-the-payment-request-api-for-apple-pay/)
 - [Google Pay API PaymentRequest Tutorial](https://developers.google.com/pay/api/web/guides/paymentrequest/tutorial)
+- [Android Payment Apps Developers Guide](https://web.dev/articles/android-payment-apps-developers-guide)
+- [Samsung Internet Web Payments Integration Guide](https://developer.samsung.com/internet/android/web-payments-integration-guide.html)

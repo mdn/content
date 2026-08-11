@@ -1,5 +1,6 @@
 ---
-title: <input type="email">
+title: '`<input type="email">` HTML attribute value'
+short-title: <input type="email">
 slug: Web/HTML/Reference/Elements/input/email
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_email
@@ -397,12 +398,6 @@ As an added touch, the {{HTMLElement("label")}} element is used to establish a l
     <tr>
       <td><strong>DOM interface</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>

@@ -33,7 +33,7 @@ draw(vertexCount, instanceCount, firstVertex, firstInstance)
 
 ### Return value
 
-None ({{jsxref("Undefined")}}).
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

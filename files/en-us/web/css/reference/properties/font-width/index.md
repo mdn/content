@@ -1,5 +1,6 @@
 ---
-title: font-width
+title: "`font-width` CSS property"
+short-title: font-width
 slug: Web/CSS/Reference/Properties/font-width
 page-type: css-property
 status:
@@ -94,9 +95,9 @@ font-width: revert-layer;
 font-width: unset;
 ```
 
-This property may be specified as a single keyword or {{cssxref("&lt;percentage&gt;")}} value.
-
 ### Values
+
+This property is specified as a single value from the following list:
 
 - `normal`
   - : Specifies a normally condensed font face.
@@ -339,6 +340,7 @@ p {
 - Legacy {{cssxref("font-stretch")}} alias property with better browser support
 - {{cssxref("font-style")}} property
 - {{cssxref("font-weight")}} property
+- SVG {{SVGAttr("font-width")}} attribute
 - SVG {{SVGAttr("font-stretch")}} attribute
 - [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)
 - [CSS fonts](/en-US/docs/Web/CSS/Guides/Fonts) module

@@ -7,6 +7,9 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_components","Learn_web_development/Core/Frameworks_libraries/Svelte_stores", "Learn_web_development/Core/Frameworks_libraries")}}
 
+> [!NOTE]
+> The MDN Svelte articles are no longer being maintained and will be removed from the website in 3 months (by August 20, 2026). The content will be archived in the [MDN Museum](https://github.com/mdn/museum). See [this discussion](https://github.com/orgs/mdn/discussions/827) for further information.
+
 In the last article we added more features to our to-do list and started to organize our app into components. In this article we will add the app's final features and further componentize our app. We will learn how to deal with reactivity issues related to updating objects and arrays. To avoid common pitfalls, we'll have to dig a little deeper into Svelte's reactivity system. We'll also look at solving some accessibility focus issues, and more besides.
 
 <table>

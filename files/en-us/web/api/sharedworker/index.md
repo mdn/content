@@ -7,10 +7,11 @@ browser-compat: api.SharedWorker
 
 {{APIRef("Web Workers API")}}
 
-The **`SharedWorker`** interface represents a specific kind of worker that can be _accessed_ from several browsing contexts, such as multiple windows or iframes. Shared workers implement a different interface than dedicated workers, have a different global scope ({{domxref("SharedWorkerGlobalScope")}}), and their constructor is not exposed in {{domxref("DedicatedWorkerGlobalScope")}}, so they cannot be instantiated from dedicated workers.
+The **`SharedWorker`** interface represents a specific kind of worker that can be _accessed_ from several browsing contexts, such as multiple windows or iframes.
+Shared workers implement a different interface than dedicated workers, have a different global scope ({{domxref("SharedWorkerGlobalScope")}}), and their constructor is not exposed in {{domxref("DedicatedWorkerGlobalScope")}}, so they cannot be instantiated from dedicated workers.
 
 > [!NOTE]
-> If SharedWorker can be accessed from several browsing contexts, all those browsing contexts must share the exact same origin (same protocol, host and port).
+> If SharedWorker can be accessed from several browsing contexts, all those browsing contexts must share the exact same origin (same protocol, host, and port).
 
 {{InheritanceDiagram}}
 
@@ -37,18 +38,27 @@ _Inherits methods from its parent, {{domxref("EventTarget")}}._
 
 ## Example
 
+### Basic usage
+
 In our [Basic shared worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-shared-worker) ([run shared worker](https://mdn.github.io/dom-examples/web-workers/simple-shared-worker/)), we have two HTML pages, each of which uses some JavaScript to perform a simple calculation. The different scripts are using the same worker file to perform the calculation — they can both access it, even if their pages are running inside different windows.
 
-The following code snippet shows creation of a `SharedWorker` object using the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor. Both scripts contain this:
+The following code snippet shows creation of a `SharedWorker` object using the {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} constructor.
+Both scripts contain this:
 
 ```js
 const myWorker = new SharedWorker("worker.js");
 ```
 
 > [!NOTE]
-> Once a shared worker is created, any script running in the same origin can obtain a reference to that worker and communicate with it. The shared worker will be alive as long as its global scope's owner set (a set of `Document` and `WorkerGlobalScope` objects) is not empty (for example, if there is any live page holding a reference to it, maybe through `new SharedWorker()`). To read more about shared worker lifetime, see [The worker's lifetime](https://html.spec.whatwg.org/multipage/workers.html#the-worker's-lifetime) section of the HTML specification.
+> Once a shared worker is created, any script running in the same origin can obtain a reference to that worker and communicate with it.
+>
+> A shared worker will remain alive as long as any open page holds a reference to it.
+> The [`extendedLifetime`](/en-US/docs/Web/API/SharedWorker/SharedWorker#extendedlifetime) constructor option can be set to keep a shared worker alive for a short period after all references are closed.
+> This allows the worker to perform any clean up tasks, such as writing state information to storage, or sending analytics data back to servers.
+> For more information, see [Shared worker lifetime](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers#shared_worker_lifetime) in _Using web workers_.
 
-Both scripts then access the worker through a {{domxref("MessagePort")}} object created using the {{domxref("SharedWorker.port")}} property. If the onmessage event is attached using addEventListener, the port is manually started using its `start()` method:
+Both scripts then access the worker through a {{domxref("MessagePort")}} object created using the {{domxref("SharedWorker.port")}} property.
+If the `onmessage` event is attached using `addEventListener`, the port is manually started using its `start()` method:
 
 ```js
 myWorker.port.start();
@@ -73,7 +83,7 @@ myWorker.port.onmessage = (e) => {
 };
 ```
 
-Inside the worker we use the {{domxref("SharedWorkerGlobalScope.connect_event", "onconnect")}} handler to connect to the same port discussed above. The ports associated with that worker are accessible in the {{domxref("SharedWorkerGlobalScope/connect_event", "connect")}} event's `ports` property — we then use {{domxref("MessagePort")}} `start()` method to start the port, and the `onmessage` handler to deal with messages sent from the main threads.
+Inside the worker we use the {{domxref("SharedWorkerGlobalScope.connect_event", "onconnect")}} handler to connect to the same port discussed above. The ports associated with that worker are accessible in the {{domxref("SharedWorkerGlobalScope/connect_event", "connect")}} event's `ports` property — we then use the {{domxref("MessagePort")}} `start()` method to start the port, and the `onmessage` handler to deal with messages sent from the main threads.
 
 ```js
 onconnect = (e) => {

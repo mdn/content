@@ -1,12 +1,9 @@
 ---
-title: "grow: Wasm text instruction"
+title: "grow: Wasm memory instruction"
 short-title: grow
 slug: WebAssembly/Reference/Memory/grow
 page-type: webassembly-instruction
-browser-compat:
-  - webassembly.api.Memory.grow
-  - webassembly.multiMemory
-spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
+browser-compat: webassembly.instructions.memory_grow
 sidebar: webassemblysidebar
 ---
 
@@ -24,8 +21,8 @@ Currently each page is 64KiB.
   (func $main
 
     ;; grow memory by 1 page
-    ;; grow returns in 1 for success and -1 for failure
-    ;; will fail if you change to more more than 1 page
+    ;; grow returns 1 for success and -1 for failure
+    ;; will fail if you grow to more than 2 pages
     (memory.grow (i32.const 1))
     call $log ;; log the result
 
@@ -41,7 +38,7 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 
 ## Syntax
 
-Grow default memory
+Grow the default (0-index) memory
 
 ```wat
 ;; Grow default memory by a number of pages indicated by the top value on the stack
@@ -49,11 +46,11 @@ i32.const 3  ;; Number of pages to grow the memory (3)
 memory.grow  ;; Grow the memory (by 3 pages)
 ;; the top item on the stack will now either be the previous number of pages (success) or `-1` (failure)
 
-;; grow default memory by two pages using an S-function
+;; grow default memory by two pages using an S-expression
 (memory.grow (i32.const 2))
 ```
 
-Grow specified memory (if multi-memory supported)
+Grow a specified memory
 
 ```wat
 ;; Grow memory with index 1
@@ -64,7 +61,7 @@ memory.grow (memory 1) ;; Grow memory index 1
 i32.const 1  ;; Number of pages to grow specified memory (1)
 memory.grow (memory $memory1) ;; Grow $memory1 by 1 page
 
-;; Grow memory with name $memory1 by three pages using an S-function
+;; Grow memory with name $memory1 by three pages using an S-expression
 (memory.grow (memory $memory1) (i32.const 3))
 ;; Will return -1 as max value is 4!
 ```
@@ -77,7 +74,7 @@ memory.grow (memory $memory1) ;; Grow $memory1 by 1 page
 
 ## Examples
 
-### Growing default memory
+### Growing the default (0-index) memory
 
 The first memory added to a Wasm module is the default memory and has index 0.
 We can grow this memory by first adding a variable specifying the amount to grow the memory, and then calling `grow`.
@@ -95,7 +92,7 @@ The code below shows a WAT file that demonstrates this:
     memory.grow
     call $log ;; log the result (previous no. pages = 1)
 
-    ;; grow default memory, using an S-function
+    ;; grow default memory, using an S-expression
     (memory.grow (i32.const 1))
     call $log ;; log the result (-1: max is 2 pages for default memory declared above!)
   )
@@ -181,6 +178,3 @@ The WAT files could be loaded using the same JavaScript code as the first exampl
 ## Browser compatibility
 
 {{Compat}}
-
-> [!NOTE]
-> The `multiMemory` compatibility table indicates versions in which `grow` can be used with a specified memory.

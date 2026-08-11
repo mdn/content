@@ -105,6 +105,11 @@ The following criteria must be met when calling **`createTexture()`**, otherwise
   - `dimension` is set to `"2d"`.
 - If `usage` includes the `GPUTextureUsage.STORAGE_BINDING` flag:
   - The specified `format` includes the `STORAGE_BINDING` capability (see the [Plain color formats](https://gpuweb.github.io/gpuweb/#plain-color-formats) table for reference).
+- If `usage` includes the `GPUTextureUsage.TRANSIENT_ATTACHMENT` flag:
+  - `usage` is equal to `TRANSIENT_ATTACHMENT | RENDER_ATTACHMENT`.
+  - `dimension` is equal to `"2d"`.
+  - `mipLevelCount` is equal to `1`.
+  - `size.depthOrArrayLayers` is equal to `1`.
 
 ## Tier 1 and Tier 2 texture formats
 

@@ -62,6 +62,9 @@ Your code will be richer and more professional as a result, and you'll be able t
 
 ## Other framework choices
 
+> [!NOTE]
+> This section of MDN is no longer being maintained and will be removed from the website in 3 months (by August 20, 2026). The content will be archived in the [MDN Museum](https://github.com/mdn/museum). See [this discussion](https://github.com/orgs/mdn/discussions/827) for further information.
+
 ### Ember tutorials
 
 > [!NOTE]

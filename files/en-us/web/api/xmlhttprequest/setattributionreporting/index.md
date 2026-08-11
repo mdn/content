@@ -5,10 +5,11 @@ slug: Web/API/XMLHttpRequest/setAttributionReporting
 page-type: web-api-instance-method
 status:
   - deprecated
+  - non-standard
 browser-compat: api.XMLHttpRequest.setAttributionReporting
 ---
 
-{{APIRef("Attribution Reporting API")}}{{securecontext_header}}{{deprecated_header}}
+{{APIRef("Attribution Reporting API")}}{{securecontext_header}}{{deprecated_header}}{{non-standard_header}}
 
 The **`setAttributionReporting()`** method of the
 {{domxref("XMLHttpRequest")}} interface indicates that you want the request's response to be able to register a JavaScript-based [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources) or [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers).

@@ -1,5 +1,6 @@
 ---
-title: flex-wrap
+title: "`flex-wrap` CSS property"
+short-title: flex-wrap
 slug: Web/CSS/Reference/Properties/flex-wrap
 page-type: css-property
 browser-compat: css.properties.flex-wrap

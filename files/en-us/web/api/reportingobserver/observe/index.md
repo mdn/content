@@ -8,9 +8,7 @@ browser-compat: api.ReportingObserver.observe
 
 {{APIRef("Reporting API")}}{{AvailableInWorkers}}
 
-The **`observe()`** method of the
-{{domxref("ReportingObserver")}} interface instructs a reporting observer to start
-collecting reports in its report queue.
+The **`observe()`** method of the {{domxref("ReportingObserver")}} interface instructs a reporting observer to start collecting reports in its report queue.
 
 ## Syntax
 
@@ -27,6 +25,8 @@ None.
 None ({{jsxref("undefined")}}).
 
 ## Examples
+
+### Basic usage
 
 ```js
 const options = {

@@ -1,5 +1,6 @@
 ---
-title: :default
+title: "`:default` CSS pseudo-class"
+short-title: :default
 slug: Web/CSS/Reference/Selectors/:default
 page-type: css-pseudo-class
 browser-compat: css.selectors.default

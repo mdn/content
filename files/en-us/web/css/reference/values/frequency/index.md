@@ -1,5 +1,6 @@
 ---
-title: <frequency>
+title: "`<frequency>` CSS type"
+short-title: <frequency>
 slug: Web/CSS/Reference/Values/frequency
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-values/#frequency-value

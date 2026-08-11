@@ -5,10 +5,11 @@ slug: Web/API/MerchantValidationEvent/MerchantValidationEvent
 page-type: web-api-constructor
 status:
   - deprecated
+  - non-standard
 browser-compat: api.MerchantValidationEvent.MerchantValidationEvent
 ---
 
-{{APIRef("Payment Request API")}}{{deprecated_header}}{{securecontext_header}}
+{{APIRef("Payment Request API")}}{{deprecated_header}}{{securecontext_header}}{{non-standard_header}}
 
 The **`MerchantValidationEvent()`** constructor creates a new {{domxref("MerchantValidationEvent")}} object. You should not have to create these events yourself; instead, just handle the {{domxref("PaymentRequest.merchantvalidation_event", "merchantvalidation")}} event.
 

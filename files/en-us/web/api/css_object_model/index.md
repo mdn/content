@@ -64,6 +64,7 @@ Several other interfaces are also extended by the CSSOM-related specifications: 
 
 - {{DOMxRef("CSSImageValue")}}
 - {{DOMxRef("CSSKeywordValue")}}
+- {{DOMxRef("CSSMathClamp")}}
 - {{DOMxRef("CSSMathInvert")}}
 - {{DOMxRef("CSSMathMax")}}
 - {{DOMxRef("CSSMathMin")}}

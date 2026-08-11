@@ -138,7 +138,11 @@ If you want caches to always check for content updates while reusing stored cont
 
 Note that `no-cache` does not mean "don't cache". `no-cache` allows caches to store a response but requires them to revalidate it before reuse. If the sense of "don't cache" that you want is actually "don't store", then `no-store` is the directive to use.
 
-#### `must-revalidate`
+> [!NOTE]
+> The `no-cache` directive does not guarantee revalidation for history navigations — such as those made using the <kbd>Back</kbd> button.
+> If the back/forward cache ({{Glossary('bfcache')}}) is used, the browser restores a snapshot of the page without revalidating.
+> Even when bfcache is not used, the browser may still serve the cached response without revalidating.
+> This is [allowed by the specification](https://httpwg.org/specs/rfc7234.html#history.lists) because history navigations are usually treated as restoring a snapshot of a historical session and not a new request for a previously visited page.
 
 The `must-revalidate` response directive indicates that the response can be stored in caches and can be reused while [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age). If the response becomes [stale](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age), it must be validated with the origin server before reuse.
 
@@ -149,6 +153,12 @@ Cache-Control: max-age=604800, must-revalidate
 ```
 
 HTTP allows caches to reuse [stale responses](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age) when they are disconnected from the origin server. `must-revalidate` is a way to prevent this from happening - either the stored response is revalidated with the origin server or a 504 (Gateway Timeout) response is generated.
+
+> [!NOTE]
+> The `must-revalidate` directive does not guarantee revalidation for history navigations — such as those made using the <kbd>Back</kbd> button.
+> If the back/forward cache ({{Glossary('bfcache')}}) is used, the browser restores a snapshot of the page without revalidating.
+> Even when bfcache is not used, the browser may still serve the cached response without revalidating.
+> This is [allowed by the specification](https://httpwg.org/specs/rfc7234.html#history.lists) because history navigations are usually treated as restoring a snapshot of a historical session and not a new request for a previously visited page.
 
 #### `proxy-revalidate`
 
@@ -302,6 +312,12 @@ Cache-Control: max-age=0
 
 If the `max-age` value is negative (for example, `-1`) or isn't an integer (for example, `3599.99`), then the caching behavior is unspecified. Caches are encouraged to treat the value as if it were `0`.
 
+> [!NOTE]
+> The `max-age` directive does not guarantee revalidation for history navigations — such as those made using the <kbd>Back</kbd> button.
+> If the back/forward cache ({{Glossary('bfcache')}}) is used, the browser restores a snapshot of the page without revalidating.
+> Even when bfcache is not used, the browser may still serve the cached response without revalidating.
+> This is [allowed by the specification](https://httpwg.org/specs/rfc7234.html#history.lists) because history navigations are usually treated as restoring a snapshot of a historical session and not a new request for a previously visited page.
+
 #### `max-stale`
 
 The `max-stale=N` request directive indicates that the client allows a stored response that is [stale](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age) within _N_ seconds.
@@ -450,7 +466,7 @@ Note that this will not affect shared or intermediate caches.
 ## See also
 
 - [HTTP caching](/en-US/docs/Web/HTTP/Guides/Caching)
-- [Caching Tutorial for Web Authors and Webmasters](https://www.mnot.net/cache_docs/)
+- [Caching Tutorial for Web Authors and Webmasters](https://mnot.net/cache_docs/)
 - [Caching best practices & max-age gotchas](https://jakearchibald.com/2016/caching-best-practices/)
 - [Cache-Control for Civilians](https://csswizardry.com/2019/03/cache-control-for-civilians/)
 - [RFC 9111 – HTTP Caching](https://httpwg.org/specs/rfc9111.html)

@@ -7,6 +7,9 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Ember_conditional_footer","Learn_web_development/Core/Frameworks_libraries/Ember_resources", "Learn_web_development/Core/Frameworks_libraries")}}
 
+> [!NOTE]
+> The MDN Ember articles are no longer being maintained and will be removed from the website in 3 months (by August 20, 2026). The content will be archived in the [MDN Museum](https://github.com/mdn/museum). See [this discussion](https://github.com/orgs/mdn/discussions/827) for further information.
+
 In this article we learn about **routing**, or URL-based filtering as it is sometimes referred to. We'll use it to provide a unique URL for each of the three todo views — "All", "Active", and "Completed".
 
 <table>

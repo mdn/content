@@ -1,5 +1,6 @@
 ---
-title: :enabled
+title: "`:enabled` CSS pseudo-class"
+short-title: :enabled
 slug: Web/CSS/Reference/Selectors/:enabled
 page-type: css-pseudo-class
 browser-compat: css.selectors.enabled

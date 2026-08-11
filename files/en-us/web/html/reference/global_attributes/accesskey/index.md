@@ -1,5 +1,5 @@
 ---
-title: HTML accesskey global attribute
+title: "`accesskey` HTML global attribute"
 short-title: accesskey
 slug: Web/HTML/Reference/Global_attributes/accesskey
 page-type: html-attribute
@@ -60,7 +60,8 @@ The way to activate the accesskey depends on the browser and its platform:
     </tr>
     <tr>
       <th>Opera</th>
-      <td colspan="2"><kbd>Alt</kbd> + <kbd><em>key</em></kbd></td>
+      <td><kbd>Alt</kbd> + <kbd><em>key</em></kbd></td>
+      <td><kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd><em>key</em></kbd></td>
       <td><kbd>Control</kbd> + <kbd>Alt</kbd> + <kbd><em>key</em></kbd></td>
     </tr>
   </tbody>

@@ -21,7 +21,6 @@ svg {
 ```
 
 ```html
-<?xml version="1.0"?>
 <svg viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg">
   <circle r="10" tabindex="0" fill="green" cx="60" cy="60" />
   <circle r="40" tabindex="0" fill="red" cx="60" cy="160" />

@@ -5,7 +5,16 @@ page-type: landing-page
 sidebar: webassemblysidebar
 ---
 
-WebAssembly variable instructions.
+WebAssembly variable getter and setter instructions.
+
+## Global
+
+- [`global.get`](/en-US/docs/WebAssembly/Reference/Variables/global.get)
+  - : Load the value of a global variable onto the stack.
+- [`global.set`](/en-US/docs/WebAssembly/Reference/Variables/global.set)
+  - : Set the value of a global variable.
+
+## Local
 
 - [`local`](/en-US/docs/WebAssembly/Reference/Variables/local)
   - : Declare a new local variable.
@@ -15,9 +24,3 @@ WebAssembly variable instructions.
   - : Set the value of a local variable.
 - [`local.tee`](/en-US/docs/WebAssembly/Reference/Variables/local.tee)
   - : Set the value of a local variable and keep the value on the stack.
-- [`global`](/en-US/docs/WebAssembly/Reference/Variables/global)
-  - : Declare a new global variable.
-- [`global.get`](/en-US/docs/WebAssembly/Reference/Variables/global.get)
-  - : Load the value of a global variable onto the stack.
-- [`global.set`](/en-US/docs/WebAssembly/Reference/Variables/global.set)
-  - : Set the value of a global variable.

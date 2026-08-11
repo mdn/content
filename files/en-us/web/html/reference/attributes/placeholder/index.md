@@ -1,5 +1,5 @@
 ---
-title: "HTML attribute: placeholder"
+title: "`placeholder` HTML attribute"
 short-title: placeholder
 slug: Web/HTML/Reference/Attributes/placeholder
 page-type: html-attribute

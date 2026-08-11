@@ -1,5 +1,6 @@
 ---
-title: <dashed-ident>
+title: "`<dashed-ident>` CSS type"
+short-title: <dashed-ident>
 slug: Web/CSS/Reference/Values/dashed-ident
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-values/#dashed-idents
@@ -75,6 +76,22 @@ h2,
 h3,
 h4 {
   font-palette: --my-palette;
+}
+```
+
+### Using with env() and param()
+
+When a `<dashed-dent>` is used in an external resource in an {{cssxref("env")}} CSS function, it can be updated using the {{cssxref("param")}} CSS function.
+
+```svg
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <path fill="env(--color, black)" d="..." />
+</svg>
+```
+
+```css
+path:hover {
+  link-parameters: param(--color, tomato);
 }
 ```
 

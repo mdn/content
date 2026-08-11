@@ -303,7 +303,7 @@ Explore the links provided earlier in this section to read about the different l
 
 Work released into the public domain is sometimes referred to as "no rights reserved" — no copyright applies to it, and it can be used without permission and without having to fulfill any licensing conditions. Work can end up in the public domain by various means such as expiration of copyright, or specific waiving of rights.
 
-One of the most effective ways to place work in the public domain is to license it under [CC0](https://creativecommons.org/public-domain/cc0/), a specific creative commons license that provides a clear and unambiguous legal tool for this purpose.
+One of the most effective ways to place work in the public domain is to license it under [CC0](https://wiki.creativecommons.org/wiki/CC0), a specific creative commons license that provides a clear and unambiguous legal tool for this purpose.
 
 When using public domain images, obtain proof that the image is in the public domain and keep the proof for your records. For example, take a screenshot of the original source with the licensing status clearly displayed, and consider adding a page to your website with a list of the images acquired along with their license requirements.
 

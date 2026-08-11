@@ -2,10 +2,12 @@
 title: BufferedChangeEvent
 slug: Web/API/BufferedChangeEvent
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.BufferedChangeEvent
 ---
 
-{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}{{SeeCompatTable}}
 
 The **`BufferedChangeEvent`** interface of the {{domxref("Media Source Extensions API", "Media Source Extensions API", "", "nocode")}} represents the event object for the {{domxref("ManagedSourceBuffer.bufferedchange_event", "bufferedchange")}} event fired on a {{domxref("ManagedSourceBuffer")}}. This event is fired whenever the buffered ranges of the `ManagedSourceBuffer` change, for example as a result of {{domxref("SourceBuffer.appendBuffer", "appendBuffer()")}}, {{domxref("SourceBuffer.remove", "remove()")}}, or {{domxref("MediaSource.endOfStream", "endOfStream()")}} calls, or when the user agent runs the memory cleanup algorithm.
 
@@ -13,16 +15,16 @@ The **`BufferedChangeEvent`** interface of the {{domxref("Media Source Extension
 
 ## Constructor
 
-- {{domxref("BufferedChangeEvent.BufferedChangeEvent", "BufferedChangeEvent()")}}
+- {{domxref("BufferedChangeEvent.BufferedChangeEvent", "BufferedChangeEvent()")}} {{experimental_inline}}
   - : Creates and returns a new `BufferedChangeEvent` object.
 
 ## Instance properties
 
 _Also inherits properties from its parent interface, {{domxref("Event")}}._
 
-- {{domxref("BufferedChangeEvent.addedRanges")}} {{ReadOnlyInline}}
+- {{domxref("BufferedChangeEvent.addedRanges")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : A {{domxref("TimeRanges")}} object representing the time ranges that were added to the {{domxref("ManagedSourceBuffer")}}'s buffer.
-- {{domxref("BufferedChangeEvent.removedRanges")}} {{ReadOnlyInline}}
+- {{domxref("BufferedChangeEvent.removedRanges")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : A {{domxref("TimeRanges")}} object representing the time ranges that were removed from the {{domxref("ManagedSourceBuffer")}}'s buffer.
 
 ## Examples

@@ -1,5 +1,6 @@
 ---
-title: place-self
+title: "`place-self` CSS property"
+short-title: place-self
 slug: Web/CSS/Reference/Properties/place-self
 page-type: css-shorthand-property
 browser-compat: css.properties.place-self
@@ -89,6 +90,8 @@ place-self: unset;
 ```
 
 ### Values
+
+This property is specified as one or two of the following keyword values:
 
 - `auto`
   - : Computes to the parent's {{cssxref("align-items")}} value.

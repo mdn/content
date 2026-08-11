@@ -1,5 +1,6 @@
 ---
-title: flex-flow
+title: "`flex-flow` CSS property"
+short-title: flex-flow
 slug: Web/CSS/Reference/Properties/flex-flow
 page-type: css-shorthand-property
 browser-compat: css.properties.flex-flow

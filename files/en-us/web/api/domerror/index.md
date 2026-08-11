@@ -4,18 +4,19 @@ slug: Web/API/DOMError
 page-type: web-api-interface
 status:
   - deprecated
+  - non-standard
 browser-compat: api.DOMError
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}{{Deprecated_Header}}{{non-standard_header}}
 
 The **`DOMError`** interface describes an error object that contains an error name.
 
 ## Instance properties
 
-- {{domxref("DOMError.name")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{domxref("DOMError.name")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : Returns a string representing one of the error type names (see below).
-- {{domxref("DOMError.message")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{domxref("DOMError.message")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : Returns a string representing a message or description associated with the given error type name.
 
 ## Error types

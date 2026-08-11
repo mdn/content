@@ -1,12 +1,17 @@
 ---
-title: mix-blend-mode
+title: "`mix-blend-mode` CSS property"
+short-title: mix-blend-mode
 slug: Web/CSS/Reference/Properties/mix-blend-mode
 page-type: css-property
 browser-compat: css.properties.mix-blend-mode
 sidebar: cssref
 ---
 
-The **`mix-blend-mode`** [CSS](/en-US/docs/Web/CSS) property sets how an element's content should blend with the content of the element's parent and the element's background.
+The **`mix-blend-mode`** [CSS](/en-US/docs/Web/CSS) property sets how an element's content should blend with its _backdrop_ — the content rendered behind the element within the same [stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context).
+
+> [!NOTE]
+> This property blends the element with content _behind_ it in the stacking context.
+> To blend an element's own background layers with each other, use {{cssxref("background-blend-mode")}} instead.
 
 {{InteractiveExample("CSS Demo: mix-blend-mode")}}
 
@@ -79,9 +84,9 @@ mix-blend-mode: unset;
 - {{cssxref("&lt;blend-mode&gt;")}}
   - : The blending mode that should be applied.
 - `plus-darker`
-  - : Blending using the [_plus-darker_ compositing operator](https://drafts.fxtf.org/compositing/#porterduffcompositingoperators_plus_darker).
+  - : Blending using the [_plus-darker_ compositing operator](https://drafts.csswg.org/compositing-2/#porterduffcompositingoperators_plus_darker).
 - `plus-lighter`
-  - : Blending using the [_plus-lighter_ compositing operator](https://drafts.fxtf.org/compositing/#porterduffcompositingoperators_plus_lighter). Useful for cross-fade effects (prevents unwanted blinking when two overlaying elements animate their opacity in opposite directions).
+  - : Blending using the [_plus-lighter_ compositing operator](https://drafts.csswg.org/compositing-2/#porterduffcompositingoperators_plus_lighter). Useful for cross-fade effects (prevents unwanted blinking when two overlaying elements animate their opacity in opposite directions).
 
 ## Formal definition
 

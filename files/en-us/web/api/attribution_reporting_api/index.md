@@ -4,10 +4,11 @@ slug: Web/API/Attribution_Reporting_API
 page-type: web-api-overview
 status:
   - deprecated
+  - non-standard
 browser-compat: html.elements.a.attributionsrc
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Attribution Reporting API")}}{{deprecated_header}}
+{{securecontext_header}}{{DefaultAPISidebar("Attribution Reporting API")}}{{deprecated_header}}{{non-standard_header}}
 
 The **Attribution Reporting API** enables developers to measure conversions — for example when a user clicks an ad embedded on one site and then proceeds to purchase the item over on the vendor's site — and then access reports on those conversions. It does this without relying on third-party tracking cookies.
 
@@ -93,7 +94,7 @@ The Attribution Reporting API doesn't define any distinct interfaces of its own.
 
 ## Enrollment and local testing
 
-To use the Attribution Reporting API in your sites, you must specify it in the [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment). If you don't do this, the API flow is blocked at response time, i.e., the response headers are ignored and sources and triggers are not registered.
+To use the Attribution Reporting API in your sites, you must specify it in the [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox#enrollment). If you don't do this, the API flow is blocked at response time, i.e., the response headers are ignored and sources and triggers are not registered.
 
 You can still test your Attribution Reporting API code locally without enrollment. To allow local testing, enable the following Chrome developer flag:
 

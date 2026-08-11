@@ -1,5 +1,6 @@
 ---
-title: polygon()
+title: "`polygon()` CSS function"
+short-title: polygon()
 slug: Web/CSS/Reference/Values/basic-shape/polygon
 page-type: css-function
 browser-compat: css.types.basic-shape.polygon
@@ -193,5 +194,5 @@ p {
 
 ## See also
 
-- Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
+- Properties that use this data type: {{cssxref("border-shape")}}, {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
 - [Guide to Basic Shapes](/en-US/docs/Web/CSS/Guides/Shapes/Using_shape-outside)

@@ -6,11 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.StylePropertyMapReadOnly.values
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`StylePropertyMapReadOnly.values()`** method returns a
-new _array iterator_ containing the values for each index in the
-`StylePropertyMapReadOnly` object.
+The **`StylePropertyMapReadOnly.values()`** method returns a new _array iterator_ containing the values for each index in the `StylePropertyMapReadOnly` object.
 
 ## Syntax
 
@@ -28,8 +26,9 @@ A new {{jsxref("Array")}}.
 
 ## Examples
 
-In this example we use the `values()` method to be able to access the values
-within our [`Element.computedStyleMap()`](/en-US/docs/Web/API/Element/computedStyleMap).
+### Basic usage
+
+In this example, we use the `values()` method to access the values within the [`Element.computedStyleMap()`](/en-US/docs/Web/API/Element/computedStyleMap).
 
 ```js
 // get a button element

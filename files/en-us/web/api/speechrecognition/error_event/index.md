@@ -26,15 +26,6 @@ A {{domxref("SpeechRecognitionErrorEvent")}}. Inherits from {{domxref("Event")}}
 
 {{InheritanceDiagram("SpeechRecognitionErrorEvent")}}
 
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref("SpeechRecognitionErrorEvent.error")}} {{ReadOnlyInline}}
-  - : Returns the type of error raised.
-- {{domxref("SpeechRecognitionErrorEvent.message")}} {{ReadOnlyInline}}
-  - : Returns a message describing the error in more detail.
-
 ## Examples
 
 You can use the `error` event in an [`addEventListener`](/en-US/docs/Web/API/EventTarget/addEventListener) method:

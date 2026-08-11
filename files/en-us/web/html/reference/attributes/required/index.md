@@ -1,5 +1,5 @@
 ---
-title: "HTML attribute: required"
+title: "`required` HTML attribute"
 short-title: required
 slug: Web/HTML/Reference/Attributes/required
 page-type: html-attribute

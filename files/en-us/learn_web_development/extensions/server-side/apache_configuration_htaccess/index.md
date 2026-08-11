@@ -94,7 +94,7 @@ To mitigate the possibility of these attacks, you should use the `crossorigin` a
 </IfModule>
 ```
 
-Google Chrome's [Google Fonts troubleshooting guide](https://developers.google.com/fonts/docs/troubleshooting) tells us that, while Google Fonts may send the CORS header with every response, some proxy servers may strip it before the browser can use it to render the font.
+Google Chrome's [Google Fonts troubleshooting guide](https://fonts.google.com/faq#troubleshooting) tells us that, while Google Fonts may send the CORS header with every response, some proxy servers may strip it before the browser can use it to render the font.
 
 ```apacheconf
 <IfModule mod_headers.c>
@@ -174,7 +174,6 @@ Servers should use `text/javascript` for JavaScript resources as indicated in th
   # Manifest files
     AddType application/manifest+json     webmanifest
     AddType application/x-web-app-manifest+json         webapp
-    AddType text/cache-manifest           appcache
   # Media files
     AddType audio/mp4                     f4a f4b m4a
     AddType audio/ogg                     oga ogg opus
@@ -237,7 +236,7 @@ Serve the following file types with the `charset` parameter set to `UTF-8` using
 
 ```apacheconf
 <IfModule mod_mime.c>
-  AddCharset utf-8 .appcache \
+  AddCharset utf-8 \
     .bbaw \
     .css \
     .htc \
@@ -289,7 +288,7 @@ The required steps are:
 
 ### Forcing HTTPS
 
-These Rewrite rules will redirect from the `http://` insecure version to the `https://` secure version of the URL as described in the [Apache HTTPD wiki](https://cwiki.apache.org/confluence/display/httpd/RewriteHTTPToHTTPS).
+These Rewrite rules will redirect from the `http://` insecure version to the `https://` secure version of the URL as described in the [Apache HTTPD wiki](https://cwiki.apache.org/confluence/spaces/HTTPD/pages/115522478/RewriteHTTPToHTTPS).
 
 ```apacheconf
 <IfModule mod_rewrite.c>

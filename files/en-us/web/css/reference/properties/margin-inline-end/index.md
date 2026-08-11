@@ -1,5 +1,6 @@
 ---
-title: margin-inline-end
+title: "`margin-inline-end` CSS property"
+short-title: margin-inline-end
 slug: Web/CSS/Reference/Properties/margin-inline-end
 page-type: css-property
 browser-compat: css.properties.margin-inline-end

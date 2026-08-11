@@ -1,5 +1,6 @@
 ---
-title: font-variant
+title: "`font-variant` CSS property"
+short-title: font-variant
 slug: Web/CSS/Reference/Properties/font-variant
 page-type: css-shorthand-property
 browser-compat: css.properties.font-variant
@@ -102,6 +103,8 @@ font-variant: unset;
 ```
 
 ### Values
+
+This property is specified as a space-separated list of the following values:
 
 - `normal`
   - : Specifies a normal font face. Each longhand property has an initial value of `normal`.

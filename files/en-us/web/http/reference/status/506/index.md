@@ -2,7 +2,7 @@
 title: 506 Variant Also Negotiates
 slug: Web/HTTP/Reference/Status/506
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc2295#section-8.1
+spec-urls: https://www.rfc-editor.org/info/rfc2295/#section-8.1
 sidebar: http
 ---
 

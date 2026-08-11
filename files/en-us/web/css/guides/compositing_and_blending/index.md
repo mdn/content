@@ -3,7 +3,7 @@ title: CSS compositing and blending
 short-title: Compositing and blending
 slug: Web/CSS/Guides/Compositing_and_blending
 page-type: css-module
-spec-urls: https://drafts.fxtf.org/compositing/
+spec-urls: https://drafts.csswg.org/compositing-1/
 sidebar: cssref
 ---
 

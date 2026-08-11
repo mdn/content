@@ -1,5 +1,6 @@
 ---
-title: text-decoration-inset
+title: "`text-decoration-inset` CSS property"
+short-title: text-decoration-inset
 slug: Web/CSS/Reference/Properties/text-decoration-inset
 page-type: css-property
 status:
@@ -139,9 +140,8 @@ li {
     content: "Your browser doesn't support the text-decoration-inset property.";
     background-color: wheat;
     display: block;
-    padding: 10px 0;
-    width: 100%;
     text-align: center;
+    padding: 1rem 0;
   }
 }
 ```
@@ -198,9 +198,8 @@ u {
     content: "Your browser doesn't support the text-decoration-inset property.";
     background-color: wheat;
     display: block;
-    padding: 10px 0;
-    width: 100%;
     text-align: center;
+    padding: 1rem 0;
   }
 }
 ```

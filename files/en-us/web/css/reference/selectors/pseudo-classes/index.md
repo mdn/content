@@ -49,6 +49,8 @@ These pseudo-classes enable the selection of elements based on their display sta
   - : Matches an element that is currently in fullscreen mode.
 - {{CSSxRef(":picture-in-picture")}}
   - : Matches an element that is currently in picture-in-picture mode.
+- {{CSSXref(":xr-overlay")}}
+  - : Matches the DOM overlay element during an immersive AR or VR session.
 
 ## Input pseudo-classes
 
@@ -404,6 +406,10 @@ V
 W
 
 - {{cssxref(":where()")}}
+
+X
+
+- {{CSSXref(":xr-overlay")}} {{Experimental_Inline}}
 
 ### Non-standard pseudo-classes
 

@@ -1,5 +1,6 @@
 ---
-title: accent-color
+title: "`accent-color` CSS property"
+short-title: accent-color
 slug: Web/CSS/Reference/Properties/accent-color
 page-type: css-property
 browser-compat: css.properties.accent-color
@@ -73,6 +74,8 @@ accent-color: unset;
 ```
 
 ### Values
+
+This property is specified as the keyword `auto` or one `<color>` value:
 
 - `auto`
   - : Represents a UA-chosen color, which should match the accent color of the platform, if any.

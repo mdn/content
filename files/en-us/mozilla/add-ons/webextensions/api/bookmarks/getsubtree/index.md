@@ -23,7 +23,7 @@ let gettingSubTree = browser.bookmarks.getSubTree(
 ### Parameters
 
 - `id`
-  - : A {{jsxref("string")}} specifying the ID of the root of the subtree to retrieve.
+  - : A {{jsxref("String")}} specifying the ID of the root of the subtree to retrieve.
 
 ### Return value
 

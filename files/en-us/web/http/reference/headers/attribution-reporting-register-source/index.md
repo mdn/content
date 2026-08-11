@@ -5,11 +5,12 @@ slug: Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source
 page-type: http-header
 status:
   - deprecated
+  - non-standard
 browser-compat: http.headers.Attribution-Reporting-Register-Source
 sidebar: http
 ---
 
-{{deprecated_header}}
+{{deprecated_header}}{{non-standard_header}}
 
 The HTTP **`Attribution-Reporting-Register-Source`** {{Glossary("response header")}} registers a page feature as an [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources).
 This header is included as part of a response to a request that contains the {{HTTPHeader("Attribution-Reporting-Eligible")}} header. It provides the information that the browser should store when a user interacts with the attribution source. The information you include in this header also determines the types of reports the browser can generate.
@@ -17,7 +18,7 @@ This header is included as part of a response to a request that contains the {{H
 See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
 > [!NOTE]
-> If the calling site does not have the Attribution Reporting API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment), the `Attribution-Reporting-Register-Source` header is ignored and attribution sources are not registered.
+> If the calling site does not have the Attribution Reporting API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox#enrollment), the `Attribution-Reporting-Register-Source` header is ignored and attribution sources are not registered.
 
 <table class="properties">
   <tbody>

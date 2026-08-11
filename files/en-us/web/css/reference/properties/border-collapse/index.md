@@ -1,5 +1,6 @@
 ---
-title: border-collapse
+title: "`border-collapse` CSS property"
+short-title: border-collapse
 slug: Web/CSS/Reference/Properties/border-collapse
 page-type: css-property
 browser-compat: css.properties.border-collapse
@@ -71,9 +72,9 @@ border-collapse: revert-layer;
 border-collapse: unset;
 ```
 
-The `border-collapse` property is specified as a single keyword, which may be chosen from the list below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `collapse`
   - : Adjacent cells have shared borders (the collapsed-border table rendering model).

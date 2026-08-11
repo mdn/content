@@ -1,5 +1,6 @@
 ---
-title: scroll-padding-inline-start
+title: "`scroll-padding-inline-start` CSS property"
+short-title: scroll-padding-inline-start
 slug: Web/CSS/Reference/Properties/scroll-padding-inline-start
 page-type: css-property
 browser-compat: css.properties.scroll-padding-inline-start

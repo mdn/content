@@ -1,5 +1,6 @@
 ---
-title: tan()
+title: "`tan()` CSS function"
+short-title: tan()
 slug: Web/CSS/Reference/Values/tan
 page-type: css-function
 browser-compat: css.types.tan

@@ -1,5 +1,6 @@
 ---
-title: box-pack
+title: "`box-pack` CSS property"
+short-title: box-pack
 slug: Web/CSS/Reference/Properties/box-pack
 page-type: css-property
 status:
@@ -33,9 +34,9 @@ box-pack: initial;
 box-pack: unset;
 ```
 
-The `box-pack` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `start`
   - : The box packs contents at the start, leaving any extra space at the end.

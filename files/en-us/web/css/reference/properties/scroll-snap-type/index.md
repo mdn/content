@@ -1,5 +1,6 @@
 ---
-title: scroll-snap-type
+title: "`scroll-snap-type` CSS property"
+short-title: scroll-snap-type
 slug: Web/CSS/Reference/Properties/scroll-snap-type
 page-type: css-property
 browser-compat: css.properties.scroll-snap-type
@@ -106,6 +107,8 @@ scroll-snap-type: unset;
 ```
 
 ### Values
+
+This property is specified as one or two of the following keyword values:
 
 - `none`
   - : When the visual {{Glossary("viewport")}} of this scroll container is scrolled, it must ignore snap points.

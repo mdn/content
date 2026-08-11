@@ -2,7 +2,7 @@
 title: 204 No Content
 slug: Web/HTTP/Reference/Status/204
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.204
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#status.204
 sidebar: http
 ---
 

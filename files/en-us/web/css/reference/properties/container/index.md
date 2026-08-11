@@ -1,5 +1,6 @@
 ---
-title: container
+title: "`container` CSS property"
+short-title: container
 slug: Web/CSS/Reference/Properties/container
 page-type: css-shorthand-property
 browser-compat: css.properties.container
@@ -73,7 +74,7 @@ The explicit way to create a container context is to declare a `container-type` 
 }
 ```
 
-The `container` shorthand is intended to make this simpler to define in a single declaration:
+The `container` shorthand is intended to make this definable in a single declaration:
 
 ```css
 .post {

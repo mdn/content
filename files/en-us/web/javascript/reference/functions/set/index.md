@@ -116,7 +116,7 @@ Static setters and private setters use similar syntaxes, which are described in 
 
 ### Removing a setter with the `delete` operator
 
-If you want to remove the setter, you can just {{jsxref("Operators/delete", "delete")}}
+If you want to remove the setter, you can just {{jsxref("delete")}}
 it:
 
 ```js
