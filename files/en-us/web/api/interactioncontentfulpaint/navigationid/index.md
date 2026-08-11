@@ -8,11 +8,9 @@ browser-compat: api.InteractionContentfulPaint.navigationId
 
 {{APIRef("Performance API")}}
 
-The **`navigationId`** read-only property of the {{domxref("InteractionContentfulPaint")}} interface returns the id of the navigation that this paint is attributable to.
+The **`navigationId`** read-only property of the {{domxref("InteractionContentfulPaint")}} interface returns the id of the navigation that this paint is happened under.
 
-Note that, for {{glossary("Soft Navigation", "Soft Navigations")}}, this will return the navigation id of the navigation under which the paint happened. Paints happening before the URL is updated will be attributable to the existing URL; you may wish to consider these for the {{Glossary("Largest Contentful Paint", "Largest Contentful Paint (LCP)")}} of the navigation that is in flight.
-
-The {{domxref("PerformanceSoftNavigation.getLargestInteractionContentfulPaint()")}} and {{domxref("InteractionContentfulPaint.interactionId")}} are more effective for calculating LCP.
+Note that, for {{glossary("Soft Navigation", "Soft Navigations")}}, paints happening before the URL is updated may wish to considered for the {{Glossary("Largest Contentful Paint", "Largest Contentful Paint (LCP)")}} of the soft navigation that is in flight. For the LCP case, {{domxref("PerformanceSoftNavigation.getLargestInteractionContentfulPaint()")}} and {{domxref("InteractionContentfulPaint.interactionId")}} are more effective for calculating that metric to consider all relevant paint regardless of the `navigationId`.
 
 ## Value
 

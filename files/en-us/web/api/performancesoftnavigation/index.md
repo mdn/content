@@ -46,7 +46,7 @@ _This interface also inherits methods from {{domxref("PerformanceEntry")}}._
 
 The `PerformanceSoftNavigation` interface is driven by the browser observing the following:
 
-- A user interaction.
+- A [trusted](/en-US/docs/Web/API/Event/isTrusted) user interaction.
 - A visible, {{Glossary("Contentful Paint", "contentful paint")}} as a result of that interaction updating the screen.
 - A URL update in the user's address bar as a result of that interaction.
 
