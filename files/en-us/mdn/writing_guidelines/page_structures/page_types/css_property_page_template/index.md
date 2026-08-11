@@ -191,5 +191,5 @@ Include links to reference pages and guides related to the current property. For
 
 - link1
 - link2
-- ModuleLink 
+- ModuleLink
 - external_link (year)
