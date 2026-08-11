@@ -79,7 +79,7 @@ sidebar: mdnsidebar
 {{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 Begin the content on the page with an introductory paragraph, which names the property and says what it does.
-This should ideally be one or two short sentences. All other explanations, if any, should be in the Description section. 
+This should ideally be one or two short sentences. All other explanations, if any, should be in the Description section.
 
 ## Try it
 
