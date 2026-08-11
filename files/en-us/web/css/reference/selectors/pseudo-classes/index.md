@@ -215,7 +215,7 @@ These pseudo-classes require some interaction by the user in order for them to a
 
 ### Top-layer ancestor matching boundary
 
-When setting styles using a `:hover`, `:active`, or `:focus-within` pseudo-class selector, a nested set of elements will match the selector up the DOM tree. If the hierarchy includes an element in the {{glossary("top layer")}} (for example, a [popover](/en-US/docs/Web/API/Popover_API) or [customizable `<select>`](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) picker), the matching will stop at that element.
+When setting styles using a `:hover`, `:active`, or `:focus-within` pseudo-class selector, the selector matches a nested set of elements up the DOM tree. If the hierarchy includes an element in the {{glossary("top layer")}} (for example, a [popover](/en-US/docs/Web/API/Popover_API) or [customizable `<select>`](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) picker), the matching stops at that top-layer element.
 
 For example, the following code features a customizable `<select>` element and a popover. We've set every element in the page to have a thick blue dashed {{cssxref("border")}} on hover.
 
