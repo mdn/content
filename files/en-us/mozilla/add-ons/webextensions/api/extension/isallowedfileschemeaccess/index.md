@@ -8,6 +8,11 @@ sidebar: addonsidebar
 
 Returns `true` if the extension can access the "file://" scheme, `false` otherwise.
 
+Access is determined by a user-controlled option in the extension's permissions: '_Allow access to File URLs_' on Chrome and '_Access local files on your computer_' on Firefox.
+
+> [!NOTE]
+> In Firefox 152 and earlier, access to local files is covered by the "Access your data for all websites" host permission and this method always returns `false`.
+
 ## Syntax
 
 ```js-nolint

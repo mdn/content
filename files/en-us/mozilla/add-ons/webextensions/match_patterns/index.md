@@ -16,14 +16,16 @@ Match patterns are used in several places across the manifest.json keys and Java
 
 - Manifest keys:
   - [`host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) and [`optional_host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_host_permissions), to request access to hosts.
+  - [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) (Manifest V2 only) and [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) (Firefox only for Manifest V3), which can include host permissions alongside named API permissions.
   - [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) (Manifest V2 only) and [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions), which can include host permissions alongside named API permissions.
   - The `matches` and `exclude_matches` fields of [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) entries.
   - The `matches` field of [`web_accessible_resources`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources#manifest_v3_syntax) entries (Manifest V3 only).
   - The `show_matches` and `hide_matches` fields of [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action).
 - JavaScript APIs:
-  - The `origins` property of the object passed to {{WebExtAPIRef("permissions.request()")}} and returned by other {{WebExtAPIRef("permissions")}} methods.
-  - The `matches` and `excludeMatches` properties passed to {{WebExtAPIRef("scripting.registerContentScripts()")}}.
-  - The `matches` and `excludeMatches` properties passed to {{WebExtAPIRef("userScripts.register()")}}.
+  - The `origins` property of the {{WebExtAPIRef("permissions.Permissions")}} object passed to {{WebExtAPIRef("permissions.request()")}} and returned by other {{WebExtAPIRef("permissions")}} methods.
+  - The `matches` and `excludeMatches` properties of the {{WebExtAPIRef("scripting.RegisteredContentScript")}} object passed to {{WebExtAPIRef("scripting.registerContentScripts()")}} and {{WebExtAPIRef("scripting.updateContentScripts()")}}, and returned by {{WebExtAPIRef("scripting.getRegisteredContentScripts()")}}.
+  - The `matches` and `excludeMatches` properties passed to {{WebExtAPIRef("userScripts.register()")}} and {{WebExtAPIRef("userScripts.update()")}} and returned by {{WebExtAPIRef("userScripts.getScripts()")}}.
+  - The `matches` and `excludeMatches` properties passed to {{WebExtAPIRef("contentScripts.register()")}}.
   - The `documentUrlPatterns` and `targetUrlPatterns` properties passed to {{WebExtAPIRef("menus.create()")}} and {{WebExtAPIRef("menus.update()")}}.
   - The `urls` property of the {{WebExtAPIRef("webRequest.RequestFilter")}} object, used to filter `webRequest` events and also reused by {{WebExtAPIRef("proxy.onRequest")}}
   - The `urls` property of the filter object passed to {{WebExtAPIRef("tabs.onUpdated")}}.
@@ -71,8 +73,18 @@ The _scheme_ component may take one of two forms:
       </td>
       <td>Only the given scheme, where:
         <ul>
-          <li>Firefox supports "http", "https", "ws", "wss", "file", "ftp", and "data".</li>
-          <li>Chrome supports "http", "https", "file", "ftp", "chrome-extension", "ws", "wss", "data", "filesystem" (old File API), "uuid-in-package" (used by Web Bundles), and "chrome" (browser internals).</li>
+          <li>Firefox supports "http", "https", "ws", "wss", "file", "ftp", and "data".
+            <div class="notecard note">
+              <p><strong>Note:</strong>
+              Some API support any validly formatted scheme, including:</p>
+              <ul>
+                <li><code>targetUrlPatterns</code> in the {{WebExtAPIRef("menus")}} and {{WebExtAPIRef("contextMenus")}} APIs.</li>
+                <li>the <code>urls</code> filter in {{WebExtAPIRef("tabs.onUpdated")}}. (Firefox desktop only.)</li>
+                <li><code>url</code> in {{WebExtAPIRef("tabs.query")}}.</li>
+              </ul>
+            </div>
+          </li>
+          <li>Chrome supports "http", "https", "file", "ftp", "chrome-extension", "ws", "wss", "data", "filesystem" (<a href="/en-US/docs/Web/API/File_and_Directory_Entries_API#history">old FileSystem API</a>), "uuid-in-package" (used by Web Bundles), and "chrome" (browser internals).</li>
           <li>Safari supports "http", "https", "file", "ftp", and "webkit-extension" (internal scheme for extensions).</li>
         </ul>
       </td>
@@ -136,7 +148,7 @@ The special value `<all_urls>` matches all URLs under the browser-supported sche
 > Access to `file://` URLs requires an user permission grant beyond declaring `<all_urls>` or a `file://` match pattern:
 >
 > - In Chrome, the user must enable "Allow access to file URLs" for the extension on the `chrome://extensions` page.
-> - In Firefox 153 and later, the user must enable "Access local files on your computer". (Previously, access to local files was covered by the "Access your data for all websites" host permission.). See [Changes for add-on developers](<>) in the Firefox 153 release notes for more information.
+> - In Firefox 153 and later, the user must enable "Access local files on your computer". See {{WebExtAPIRef("extension.isAllowedFileSchemeAccess")}} for more information.
 
 ## Examples
 
