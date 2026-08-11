@@ -55,7 +55,7 @@ timeline-trigger: unset;
 
 ### Values
 
-A shorthand specifying the various timeline trigger-related properties separated by spaces, or the keyword `none`.
+Specified as a space-separated list of the constituent timeline trigger property values, or the keyword `none`.
 
 - `none`
   - : Specifies that the element does not create a trigger, resetting all four longhand properties to their default values.

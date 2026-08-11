@@ -36,7 +36,7 @@ timeline-trigger-name: unset;
 
 ### Values
 
-The `timeline-trigger-name` property may be specified using the keyword `none`, or one or more {{cssxref("dashed-ident")}} values separated by commas.
+Specified as one or more {{cssxref("dashed-ident")}} values separated by commas, or the keyword `none`.
 
 - `none`
   - : Specifies that the element does not define any scroll-triggered animation triggers.

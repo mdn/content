@@ -36,7 +36,7 @@ trigger-scope: unset;
 
 ### Values
 
-This property is specified as `none`, `all`, or a comma-separated list of {{cssxref("dashed-ident")}} values:
+Specified as `none`, `all`, or a comma-separated list of {{cssxref("dashed-ident")}} values:
 
 - `none`
   - : Specifies that no trigger scoping is set. This is the default value.

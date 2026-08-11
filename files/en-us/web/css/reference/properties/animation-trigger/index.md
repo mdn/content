@@ -41,7 +41,7 @@ animation-trigger: unset;
 
 ### Values
 
-The property accepts a comma-separated list of values. Each value is either the keyword `none` or a {{cssxref("dashed-ident")}} followed by one or two {{cssxref("animation-action")}} values.
+Specified as a comma-separated list of values. Each value is either the keyword `none` or a {{cssxref("dashed-ident")}} followed by one or two {{cssxref("animation-action")}} values.
 
 - `none`
   - : The associated animation is not a triggered animation.

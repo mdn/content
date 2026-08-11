@@ -46,7 +46,7 @@ timeline-trigger-source: unset;
 
 ### Values
 
-This property is specified as a comma-separated list of values. Each value can be one of the following value types:
+Specified as a comma-separated list of values. Each value can be one of the following types:
 
 - `none`
   - : The element does not create a animation trigger, as it has no timeline. Associated animations will not animated.
