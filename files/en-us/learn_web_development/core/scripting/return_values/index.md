@@ -52,27 +52,13 @@ When the function completes (finishes running), it returns a value, which is a n
 
 If you look at the [`replace()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace) function MDN reference page, you'll see a section called [return value](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#return_value). It is very useful to know and understand what values are returned by functions, so we try to include this information wherever possible.
 
-Some functions don't return any value. (In these cases, our reference pages list the return value as [`void`](/en-US/docs/Web/JavaScript/Reference/Operators/void) or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined).) For example, in the [`displayMessage()`](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-stage-4.html#L50) function we built in the previous article, no specific value is returned when the function is invoked. It just makes a box appear somewhere on the screen — that's it!
+Some functions don't return any value. (In these cases, our reference pages list the return value as [`void`](/en-US/docs/Web/JavaScript/Reference/Operators/void) or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined).) For example, in the `displayMessage()` function we built in the [previous article's example](/en-US/docs/Learn_web_development/Core/Scripting/Build_your_own_function#final_result), no specific value is returned when the function is invoked. It just makes a box appear somewhere on the screen — that's it!
 
 Generally, a return value is used where the function is an intermediate step in a calculation of some kind. You want to get to a final result, which involves some values that need to be calculated by a function. After the function calculates the value, it can return the result so it can be stored in a variable; and you can use this variable in the next stage of the calculation.
 
 ## How to return a value
 
-To return a value from a custom function, you need to use the [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) keyword. We saw this in action recently in our [random-canvas-circles.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/random-canvas-circles.html) example. Our `draw()` function draws 100 random circles somewhere on an HTML {{htmlelement("canvas")}}:
-
-```js
-function draw() {
-  ctx.clearRect(0, 0, WIDTH, HEIGHT);
-  for (let i = 0; i < 100; i++) {
-    ctx.beginPath();
-    ctx.fillStyle = "rgb(255 0 0 / 50%)";
-    ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
-    ctx.fill();
-  }
-}
-```
-
-Inside each loop iteration, three calls are made to the `random()` function, to generate a random value for the current circle's _x-coordinate_, _y-coordinate_, and _radius_, respectively. The `random()` function takes one parameter — a whole number — and returns a random whole number between `0` and that number. It looks like this:
+To return a value from a custom function, you need to use the [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) keyword. You've already seen this in action several times. Returning again to our [100 random circles](/en-US/docs/Learn_web_development/Core/Scripting/Loops#looping_code_example) example, three calls are made to a `random()` function inside each loop iteration to generate a random value for each circle's _x-coordinate_, _y-coordinate_, and _radius_. The `random()` function takes one parameter — a whole number — and returns a random whole number between `0` and that number. It looks like this:
 
 ```js
 function random(number) {
@@ -109,11 +95,39 @@ The function calls on the line are run first, and their return values are substi
 
 ## Implementing function return values
 
-Let's have a go at writing some functions featuring return values.
+Let's have a go at writing some functions featuring return values. This function will allow you to enter a number into a text field, and will output the square, cube, and factorial of that number.
 
-1. Make a local copy of the [function-library.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-library.html) file from GitHub. This is a simple HTML page containing a text {{htmlelement("input")}} field and a paragraph. There's also a {{htmlelement("script")}} element, in which we have stored a reference to both HTML elements in two variables. This page will allow you to enter a number into the text box, and display different numbers related to it below.
+1. Create a new HTML on your local file system and add the following content to it:
 
-2. Add some useful functions to this `<script>` element below the two existing lines:
+   ```html
+   <!DOCTYPE html>
+   <html lang="en-US">
+     <head>
+       <meta charset="utf-8" />
+       <meta name="viewport" content="width=device-width" />
+       <title>Function library example</title>
+       <style>
+         input {
+           font-size: 2em;
+           margin: 10px 1px 0;
+         }
+       </style>
+     </head>
+     <body>
+       <input class="numberInput" type="text" />
+       <p></p>
+
+       <script>
+         const input = document.querySelector(".numberInput");
+         const para = document.querySelector("p");
+       </script>
+     </body>
+   </html>
+   ```
+
+   This is a basic HTML page containing a text {{htmlelement("input")}} field and a paragraph. There's also a {{htmlelement("script")}} element, in which we have stored a reference to both HTML elements in two variables. This page will allow you to enter a number into the text box, and display different numbers related to it below.
+
+2. Add some functions to this `<script>` element below the two existing lines:
 
    ```js
    function squared(num) {
@@ -161,8 +175,62 @@ Here are some explanations for the `addEventListener()` function in step 3 above
 - The `if` statement prints an error message if the entered value is not a number. The condition checks if the expression `isNaN(num)` returns `true`. The [`isNaN()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN) function tests whether the `num` value is not a number — if so, it returns `true`, and if not, it returns `false`.
 - If the condition returns `false`, the `num` value is a number and the function prints out a sentence inside the paragraph element that states the square, cube, and factorial values of the number. The sentence calls the `squared()`, `cubed()`, and `factorial()` functions to calculate the required values.
 
+### Final result
+
+When finished, the example should render like so:
+
+```html hidden live-sample___function-library
+<input class="numberInput" type="text" />
+<p></p>
+```
+
+```css hidden live-sample___function-library
+input {
+  font-size: 2em;
+  margin: 10px 1px 0;
+}
+```
+
+```js hidden live-sample___function-library
+const input = document.querySelector(".numberInput");
+const para = document.querySelector("p");
+
+function squared(num) {
+  return num * num;
+}
+
+function cubed(num) {
+  return num * num * num;
+}
+
+function factorial(num) {
+  let x = num;
+  while (x > 1) {
+    num *= x - 1;
+    x--;
+  }
+
+  return num;
+}
+
+input.addEventListener("change", () => {
+  const num = parseFloat(input.value);
+  if (isNaN(num)) {
+    para.textContent = "You need to enter a number!";
+  } else {
+    para.textContent = `${num} squared is ${squared(num)}. `;
+    para.textContent += `${num} cubed is ${cubed(num)}. `;
+    para.textContent += `${num} factorial is ${factorial(num)}. `;
+  }
+});
+```
+
+{{embedlivesample("function-library", "100%", 200)}}
+
+Try entering a number into the text field, and press Return/Enter.
+
 > [!NOTE]
-> If you have trouble getting the example to work, check your code against the [finished version on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-library-finished.html) ([see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html) also).
+> If you have trouble getting the example to work, check your code against our finished version — press the Play button on the rendered example to see the full source in the MDN Playground.
 
 ### Add some functions of your own!
 
