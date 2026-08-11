@@ -258,7 +258,7 @@ select,
 
 Note that when you hover over the `<select>` element or the popover toggle button, all ancestors of those elements get the border. However, once the select picker or the popover is open, hovering over one of its descendants applies the border only up to the top-layer element itself (the select picker or the popover), that is, the matching stops at this element.
 
-This behavior stops component styles set on those pseudo-classes from spilling out of a top layer component into the surrounding page, which can cause a user interface to look broken.
+This behavior stops the pseudo-class matching from spilling out of a top-layer component into the surrounding page, which can otherwise cause a user interface to look broken.
 
 ## Functional pseudo-classes
 
