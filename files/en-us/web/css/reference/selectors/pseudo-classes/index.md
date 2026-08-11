@@ -256,7 +256,7 @@ select,
 
 {{EmbedLiveSample("matching-boundary", "100%", 200)}}
 
-Note how when you hover the `<select>` or the popover toggle button, all ancestors of those elements will get the border. However, when you open the select picker or the popover and hover one of their descendants, the matching stops at the top-layer ancestor (the select picker or popover themselves).
+Note that when you hover over the `<select>` element or the popover toggle button, all ancestors of those elements get the border. However, once the select picker or the popover is open, hovering over one of its descendants applies the border only up to the top-layer element itself (the select picker or the popover), that is, the matching stops at this element.
 
 This behavior stops component styles set on those pseudo-classes from spilling out of a top layer component into the surrounding page, which can cause a user interface to look broken.
 
