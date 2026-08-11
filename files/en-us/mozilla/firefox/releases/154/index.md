@@ -32,7 +32,9 @@ Firefox 154 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### CSS -->
+### CSS
+
+- The {{cssxref("text-box-edge")}}, {{cssxref("text-box-trim")}} properties and {{cssxref("text-box")}} shorthand property are now supported. These properties make it easier to control the space above and below text, especially when a block contains multiple fonts. The `text-box-edge` property allows you to specify where the edge of the text trimmed to. The `text-box-trim` property allows you to specify where to trim the space, either above, below, both or not at all. The `text-box` shorthand property combines both of these. ([Firefox bug 2050141](https://bugzil.la/2050141)).
 
 <!-- #### Removals -->
 
