@@ -11,6 +11,9 @@ The **CSS gaps** module lets you specify spacing, or "gaps", between items in [m
 
 While {{cssxref("margin")}} and {{cssxref("padding")}} specify visual spacing around individual boxes, the properties in this module enable specifying the spacing between adjacent boxes within a given layout context for layouts that have {{glossary("gutters")}} and gaps, when the spacing is different between sibling boxes as opposed to between the first box, last box, and the container's edge. You can show rules in every gap or in a subset of gaps, defining fully animatable rule widths, colors, and insets.
 
+Gap decorations are painted within a gap as one or more gap decoration segments, with segments occurring between any two adjacent items.
+When all segments are drawn, column and row rules extend the entire height and width of the container. The {{cssxref("rule-visibility-items")}} defines if segments are to be drawn around areas that are not occupied by items. The {{cssxref("rule-break")}} poperties determine in otherwise unbroken lines break where rules intersect, while {{cssxref("rule-inset")}} define where segments start and end when rules do break. If they don't break, the {{cssxref("rule-overlap")}} property defines the painting order of the rules.
+
 ## Gaps in action
 
 In this example, the 2021 poem from the USA inauguration, _The Hill We Climb_, by Amanda Gorman, is displayed across multiple columns, similar to the way articles are displayed in printed newspapers. If you have JavaScript enabled, controls enable changing the {{cssxref("column-gap")}}, {{cssxref("column-rule-color")}}, {{cssxref("column-rule-style")}} and {{cssxref("column-rule-width")}} properties, as well as the preferred number of columns and whether the title and a quote should span all of the columns.
@@ -152,40 +155,60 @@ In this example, the 2021 poem from the USA inauguration, _The Hill We Climb_, b
       <input type="checkbox" id="blockSpan" />
       <label for="blockSpan">Blockquote spans all columns</label>
     </p>
+    <p>
+      <label for="colHeight">Column height:</label>
+      <input
+        type="number"
+        min="0"
+        max="100"
+        value="20"
+        id="colHeight"
+        step="5" /><label for="colHeight">vh</label>
+    </p>
     <p class="code">
-      <input type="range" min="0" max="10" value="1" step="0.5" id="gapSize" />
-      <label for="gapSize">column-gap: </label><output id="gap">1em;</output>
+      <input type="range" min="0" max="4" value="1" step="0.5" id="gapSize" />
+      <label for="gapSize">gap: </label><output id="gap">1em;</output>
     </p>
     <p class="code">
       <input
         type="range"
         min="0"
-        max="10"
-        value="0.25"
-        step="0.25"
+        max="3"
+        value="0.3"
+        step="0.1"
         id="columnRuleWidth" />
-      <label for="columnRuleWidth">column-rule-width: </label
-      ><output id="ruleWidth">0.25em;</output>
+      <label for="columnRuleWidth">rule-width: </label
+      ><output id="ruleWidth">0.3em;</output>
     </p>
     <p class="code">
-      <label for="colColor">column-rule-color:</label>
-      <input type="color" id="colColor" />
+      <label for="colColor">rule-color:</label>
+      <input type="color" id="colColor" value="#FF0000" />
     </p>
     <p class="code">
-      <label for="columnRuleStyle">column-rule-style:</label>
+      <label for="columnRuleStyle">rule-style:</label>
       <select id="columnRuleStyle">
         <option>none</option>
         <option>hidden</option>
         <option>dotted</option>
-        <option selected>dashed</option>
+        <option>dashed</option>
         <option>solid</option>
-        <option>double</option>
+        <option selected>double</option>
         <option>groove</option>
         <option>ridge</option>
         <option>inset</option>
         <option>outset</option>
         <option></option>
       </select>
+    </p>
+    <p class="code">
+      <input
+        type="range"
+        min="-50"
+        max="200"
+        value="0"
+        step="5"
+        id="ruleInset" />
+      <label for="ruleInset">rule-inset: </label><output id="inset">0%;</output>
     </p>
   </div>
 </fieldset>
@@ -210,6 +233,9 @@ const ruleWidth = document.getElementById("ruleWidth");
 const columnRuleStyle = document.getElementById("columnRuleStyle");
 const ruleStyle = document.getElementById("ruleStyle");
 const columnRuleColor = document.getElementById("colColor");
+const colHeight = document.getElementById("colHeight");
+const ruleInset = document.getElementById("ruleInset");
+const inset = document.getElementById("inset");
 
 // Make options visible if JavaScript is enabled
 option.style.display = "revert";
@@ -222,18 +248,28 @@ colCount.addEventListener("change", () => {
   page.style.columnCount = colCount.value;
 });
 
+colHeight.addEventListener("change", () => {
+  page.style.columnHeight = `${colHeight.value}vh`;
+});
+
 gapSize.addEventListener("change", () => {
   page.style.gap = `${gapSize.value}em`;
   gap.innerText = `${gapSize.value}em;`;
 });
+ruleInset.addEventListener("change", () => {
+  page.style.ruleInset = `${ruleInset.value}%`;
+  inset.innerText = `${ruleInset.value}%;`;
+});
 
 columnRuleWidth.addEventListener("change", () => {
   page.style.columnRuleWidth = `${columnRuleWidth.value}em`;
+  page.style.ruleWidth = `${columnRuleWidth.value}em`;
   ruleWidth.innerText = `${columnRuleWidth.value}em;`;
 });
 
 columnRuleStyle.addEventListener("change", () => {
   page.style.columnRuleStyle = columnRuleStyle.value;
+  page.style.ruleStyle = columnRuleStyle.value;
 });
 
 colSpan.addEventListener("change", () => {
@@ -246,6 +282,7 @@ blockSpan.addEventListener("change", () => {
 
 columnRuleColor.addEventListener("change", () => {
   page.style.columnRuleColor = colColor.value;
+  page.style.ruleColor = colColor.value;
 });
 
 function showAndHideMenu() {
@@ -275,7 +312,13 @@ function setColSpan(control, element) {
 article {
   column-count: 5;
   gap: 1em;
+<<<<<<< Updated upstream
   column-rule: 0.25em dashed currentColor;
+=======
+  column-rule: 0.3em double #ff0000;
+  rule: 0.3em double #ff0000;
+  column-height: 20vh;
+>>>>>>> Stashed changes
 }
 .title {
   column-span: all;
