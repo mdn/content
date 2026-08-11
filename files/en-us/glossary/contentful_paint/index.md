@@ -5,16 +5,16 @@ page-type: glossary-definition
 sidebar: glossarysidebar
 ---
 
-Several performance metrics like {{Glossary("First_contentful_paint", "First Contentful Paint (FCP)")}}, {{Glossary("Largest_contentful_paint", "Largest Contentful Paint (LCP)")}} use the concept of a "contentful paint".
+Several performance metrics such as {{Glossary("First_contentful_paint", "First Contentful Paint (FCP)")}} and {{Glossary("Largest_contentful_paint", "Largest Contentful Paint (LCP)")}} use the concept of a "contentful paint".
 
-This is used to differentiate less important paints that contain no useful content for the user, for example just background color paints. For example, a page that loads, sets the background color, but then shows no actual content for a long period afterwards is not as useful as one that shows text, images or other content.
+Contentful paints are paint operations that render significant content and are therefore significant for performance measurements. These stand apart from less important paints that contain no useful content for the user, such as background color paints. For example, a page that loads, sets the background color, but then shows no actual content for a long period afterwards is not as useful as one that shows text, images, or other content.
 
-What exactly counts as "content" is inherently heuristic-based to some extent and may not perfectly align to user perception or developer intent. This means some paints drawn to screen in different ways may count as "contentful" or not even if they appear to be the same to the user. For example, using a `<div>` with a background color would not be contentful while using an `<img>` or `<svg>` for that color may be considered contentful.
+What exactly counts as "content" is heuristic-based to some extent and may not perfectly align with user perception or developer intent. This means paints drawn to screen in different ways may count as "contentful" or not, even if they appear the same to the user. For example, using a {{htmlelement("div")}} with a background color would not be contentful, while using an {{htmlelement("img")}} or {{htmlelement("svg")}} for that color may be considered contentful.
 
-The types of contentful paints considered also differs slightly between the metrics:
+The types of paints considered contentful also differ slightly between metrics:
 
-- FCP is intended to measure when the page starts to load. It therefore [includes most elements that paint](https://w3c.github.io/paint-timing/#contentful) including `<canvas>` and `<svg>` elements. Skeleton screens using just `<div>` elements would not count as contentful.
-- LCP is intended to measure when the page is mostly loaded and ready for the user, so it tries to ensure there is meaningful content before triggering. It has stricter criteria and only includes [timing-eligible](https://w3c.github.io/paint-timing/#timing-eligible) elements and so does not include `<canvas>` nor `<svg>` elements, since those are more difficult to measure as to when (or even if) they are representative of when the largest content of the page is drawn. Furthermore, LCP also excludes low-entropy images.
+- FCP is intended to measure when the page starts to load. It therefore [includes most elements that paint](https://w3c.github.io/paint-timing/#contentful) including {{htmlelement("canvas")}} and `<svg>` elements. Skeleton screens using only `<div>` elements would not count as contentful.
+- LCP is intended to measure when the page is mostly loaded and ready for the user, so it tries to ensure there is meaningful content before triggering. It has stricter criteria than FCP, only counting [timing-eligible](https://w3c.github.io/paint-timing/#timing-eligible) elements as contentful. It therefore doesn't include `<canvas>` or `<svg>` elements, since those are more difficult to measure in terms of when (or even if) they are representative of the largest content drawn on the page. Furthermore, LCP also excludes low-entropy images.
 - Other metrics like {{domxref("InteractionContentfulPaint", "Interaction Contentful Paint")}}, {{domxref("PerformanceSoftNavigation", "soft navigations")}}, {{domxref("PerformanceElementTiming", "Element Timing")}}, and the upcoming [Container Timing](https://github.com/WICG/container-timing) are closer to the LCP model with some small differences like low-entropy images not being excluded.
 
 ## See also
