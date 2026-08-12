@@ -38,7 +38,7 @@ A collection of WebVR API test examples, including basic display info, stage par
 - **Retired:** August 2026
 - **Archived content:** [museum/learn_web_development/frameworks_libraries](https://github.com/mdn/museum/tree/main/learn_web_development/frameworks_libraries)
 - **Discussion:** [Removing the old and out-of-date JavaScript framework articles from Learn web development](https://github.com/orgs/mdn/discussions/827)
-- **PR on GitHub:** [Archive JS framework content](https://github.com/mdn/content/pull/xxx)
+- **PR on GitHub:** [Archive JS framework content](https://github.com/mdn/content/pull/45105)
 
 A set of beginner's tutorials showing how to build a basic web app using the Angular, Ember, Svelte, and Vue frameworks.
 
