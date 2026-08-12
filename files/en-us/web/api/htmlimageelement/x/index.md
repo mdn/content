@@ -12,7 +12,7 @@ The read-only **`x`** property of the {{domxref("HTMLImageElement")}} interface 
 
 ## Value
 
-An integer value indicating the distance in pixels from the left edge of the element's nearest root element and the left edge of the {{HTMLElement("img")}} element's border box. The nearest root element is the outermost {{HTMLElement("html")}} element that contains the image. If the image is in an {{HTMLElement("iframe")}}, its `x` is relative to that frame.
+An integer value indicating the distance in pixels from the left edge of the element's nearest root element to the left edge of the {{HTMLElement("img")}} element's border box. The nearest root element is the outermost {{HTMLElement("html")}} element that contains the image. If the image is in an {{HTMLElement("iframe")}}, its `x` is relative to that frame.
 
 In the diagram below, the left border edge is the left edge of the blue padding area. So the value returned by `x` would be the distance from that point to the left edge of the content area.
 
@@ -50,10 +50,12 @@ Finally, we can look up and display the values of the `HTMLImageElement`'s `x` a
 
 ### CSS
 
-The CSS defining the image size:
+The CSS defining the image size and its position:
 
 ```css
 img {
+  margin-left: 30px;
+  margin-top: 20px;
   max-width: 4em;
 }
 ```
