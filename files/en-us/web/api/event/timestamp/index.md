@@ -12,12 +12,8 @@ The **`timeStamp`** read-only property of the {{domxref("Event")}} interface ret
 
 ## Value
 
-This value is the number of milliseconds elapsed from the beginning of the time origin until the event was created.
-If the global object is {{domxref("Window")}}, the time origin is the moment the user clicked on the link, or the script that initiated the loading of the document.
-In a worker, the time origin is the moment of creation of the worker.
-
-The value is a number representing a timestamp in milliseconds. Although this value is intended to use the {{domxref("DOMHighResTimeStamp")}} type, in practice its resolution and behavior vary between browsers and can be affected by privacy-related settings. To mitigate [fingerprinting](/en-US/docs/Glossary/Fingerprinting), browsers may reduce or coarsen the effective time resolution.
-
+The value is a {{domxref("DOMHighResTimeStamp")}} representing the number of milliseconds elapsed from the relevant global object's [time origin](/en-US/docs/Web/API/Performance/timeOrigin) until the event was created.
+Its effective resolution may be reduced or coarsened by the browser to mitigate timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting).
 
 ## Example
 
@@ -49,8 +45,7 @@ document.body.addEventListener("keypress", getTime);
 
 To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `event.timeStamp` might get rounded depending on browser settings. In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 2ms. You can also enable `privacy.resistFingerprinting`, in which case the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
 
-For example, with reduced time precision enabled, the value of `event.timeStamp` may be rounded or coarsened according to the active privacy settings. The exact rounding behavior and effective resolution are browser-specific and are not guaranteed to produce fixed multiples.
-
+For example, with reduced time precision, the result of `event.timeStamp` will always be a multiple of 2, or a multiple of 100 (or `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`) with `privacy.resistFingerprinting` enabled.
 
 ```js
 // reduced time precision (2ms) in Firefox 60
