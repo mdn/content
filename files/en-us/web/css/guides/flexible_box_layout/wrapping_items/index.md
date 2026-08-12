@@ -183,7 +183,7 @@ The updated rendering looks like so:
 
 {{EmbedLiveSample("balanced-wrap")}}
 
-Note how the items are now distributed more evenly, with two lines of three and two lines of two.
+Note how the items are now distributed more evenly, with two lines of three items and two lines of two items.
 
 If you want to distribute your balanced flex items across a greater number of lines, you can do so using the {{cssxref("flex-line-count")}} property. This specifies a minimum number of lines. If we add the following to the previous example:
 
