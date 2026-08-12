@@ -126,7 +126,7 @@ In this example, the main-axis is the block direction with a reversed main-start
 }
 ```
 
-To distribute the flex items evenly across each flex line, you can include the [`balance`](/en-US/docs/Web/CSS/Reference/Properties/flex-wrap#balance) `flex-wrap` keyword in addition to `wrap`:
+To distribute the flex items evenly across each flex line, you can include the `flex-wrap` keyword [`balance`](/en-US/docs/Web/CSS/Reference/Properties/flex-wrap#balance) in addition to `wrap`:
 
 ```css
 .container {
