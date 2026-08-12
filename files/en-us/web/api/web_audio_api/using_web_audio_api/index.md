@@ -221,6 +221,35 @@ track.connect(gainNode).connect(panner).connect(audioContext.destination);
 
 The only thing left to do is give the app a try: [Check out the final demo here live](https://mdn.github.io/webaudio-examples/audio-basics/).
 
+## Adding audio effects
+
+We've seen how to use audio nodes to control the volume and stereo position of our audio. We can use the same approach to create audio effects by connecting modification nodes between the source and destination.
+
+A simple effect can use a single node:
+
+`source → effect → destination`
+
+More complex effects can combine several nodes:
+
+`source → effect node 1 → effect node 2 → destination`
+
+For example, a {{domxref("BiquadFilterNode")}} can be inserted between the audio source and destination:
+
+```js
+const filter = audioContext.createBiquadFilter();
+
+filter.type = "lowpass";
+filter.frequency.value = 1000;
+
+track.connect(filter).connect(audioContext.destination);
+```
+
+The [Voice-change-O-matic](https://github.com/mdn/webaudio-examples/tree/main/voice-change-o-matic) example demonstrates how to build several different effects from these building blocks. It creates a {{domxref("WaveShaperNode")}} for distortion, a {{domxref("BiquadFilterNode")}} for filtering, and a {{domxref("ConvolverNode")}} for convolution.
+
+The example also demonstrates how to create a more complex effect from multiple nodes. Its echo effect combines a {{domxref("DelayNode")}}, {{domxref("GainNode")}}, and {{domxref("BiquadFilterNode")}} to create a feedback path.
+
+To add a new effect to an application, create and configure the required audio nodes, connect them to form the effect's audio graph, and connect that graph between the existing source and destination. If an application provides multiple effects, you can change the connections between nodes when the user selects an effect, as the Voice-change-O-matic example does.
+
 ## Summary
 
 Great! We have a boombox that plays our 'tape', and we can adjust the volume and stereo panning, giving us a fairly basic working audio graph.
