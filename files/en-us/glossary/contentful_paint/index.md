@@ -9,7 +9,7 @@ Several performance metrics such as {{Glossary("First_contentful_paint", "First 
 
 Contentful paints are paint operations that render significant content and are therefore significant for performance measurements. These stand apart from less important paints that contain no useful content for the user, such as background color paints. For example, a page that loads, sets the background color, but then shows no actual content for a long period afterwards is not as useful as one that shows text, images, or other content.
 
-What exactly counts as "content" is heuristic-based to some extent and may not perfectly align with user perception or developer intent. This means paints drawn to screen in different ways may count as "contentful" or not, even if they appear the same to the user. For example, using a {{htmlelement("div")}} with a background color would not be contentful, while using an {{htmlelement("img")}} or {{htmlelement("svg")}} for that color may be considered contentful.
+What exactly counts as "content" is heuristic-based to some extent and may not perfectly align with user perception or developer intent. This means paints drawn to screen in different ways may count as "contentful" or not, even if they appear the same to the user. For example, using a {{htmlelement("div")}} with a background color would not be contentful, while using an {{htmlelement("img")}} or {{svgelement("svg")}} for that color may be considered contentful.
 
 The types of paints considered contentful also differ slightly between metrics:
 
