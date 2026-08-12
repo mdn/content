@@ -29,7 +29,7 @@ For this section we will put our data into the clip space coordinate system dire
 <!-- Shared setup -->
 
 ```html hidden live-sample___clip_space_ex live-sample___homogenous_coordinates_ex live-sample___model_transform_ex live-sample___divide_by_w_ex live-sample___simple_projection_ex live-sample___projection_matrix_ex live-sample___view_matrix_ex
-<canvas id="canvas" width="1000" height="1000"></canvas>
+<canvas id="my-canvas" width="1000" height="1000"></canvas>
 ```
 
 ```css hidden live-sample___clip_space_ex live-sample___homogenous_coordinates_ex live-sample___model_transform_ex live-sample___divide_by_w_ex live-sample___simple_projection_ex live-sample___projection_matrix_ex live-sample___view_matrix_ex
@@ -310,7 +310,7 @@ This example will create a custom `WebGLBox` object that will draw a 2D box on t
 
 ```js live-sample___clip_space_ex
 class WebGLBox {
-  canvas = document.getElementById("canvas");
+  canvas = document.getElementById("my-canvas");
   gl = this.canvas.getContext("webgl");
   webglProgram = createWebGLProgramFromIds(
     this.gl,

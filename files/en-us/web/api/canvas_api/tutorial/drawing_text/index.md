@@ -23,14 +23,14 @@ The text is filled using the current `fillStyle`.
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
   ctx.font = "48px serif";
   ctx.fillText("Hello world", 10, 50);
 }
 ```
 
 ```html hidden
-<canvas id="canvas" width="300" height="100"></canvas>
+<canvas id="my-canvas" width="300" height="100"></canvas>
 ```
 
 ```js hidden
@@ -45,14 +45,14 @@ The text is filled using the current `strokeStyle`.
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
   ctx.font = "48px serif";
   ctx.strokeText("Hello world", 10, 50);
 }
 ```
 
 ```html hidden
-<canvas id="canvas" width="300" height="100"></canvas>
+<canvas id="my-canvas" width="300" height="100"></canvas>
 ```
 
 ```js hidden
@@ -86,12 +86,12 @@ This example demonstrates the various `textBaseline` property values.
 See the [`CanvasRenderingContext2D.textBaseline`](/en-US/docs/Web/API/CanvasRenderingContext2D/textBaseline) page for more information and detailed examples.
 
 ```html hidden live-sample___textBaseline
-<canvas id="canvas" width="400" height="100"></canvas>
+<canvas id="my-canvas" width="400" height="100"></canvas>
 ```
 
 ```js live-sample___textBaseline
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
   ctx.font = "48px serif";
 
   ctx.textBaseline = "hanging";
