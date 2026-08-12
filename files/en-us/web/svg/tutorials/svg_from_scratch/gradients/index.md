@@ -18,7 +18,7 @@ Linear gradients change along a straight line. To insert one, you create a {{SVG
 ### Basic example
 
 ```html
-<svg width="120" height="240" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg width="120" height="240" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="Gradient1">
       <stop class="stop1" offset="0%" />
@@ -108,8 +108,7 @@ Radial gradients are similar to linear ones but draw a gradient that radiates ou
 ### Basic example
 
 ```html
-<?xml version="1.0" standalone="no"?>
-<svg width="120" height="240" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg width="120" height="240" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <radialGradient id="RadialGradient1">
       <stop offset="0%" stop-color="red" />
@@ -149,9 +148,7 @@ The second point is called the focal point and is defined by the `fx` and `fy` a
 ### Center and focal point
 
 ```html
-<?xml version="1.0" standalone="no"?>
-
-<svg width="120" height="120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg width="120" height="120" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <radialGradient id="Gradient" cx="0.5" cy="0.5" r="0.5" fx="0.25" fy="0.25">
       <stop offset="0%" stop-color="red" />
@@ -197,9 +194,7 @@ Both linear and radial gradients also take a few other attributes to describe tr
 ### spreadMethod
 
 ```html
-<?xml version="1.0" standalone="no"?>
-
-<svg width="220" height="220" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg width="220" height="220" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <radialGradient
       id="GradientPad"

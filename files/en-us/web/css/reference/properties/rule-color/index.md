@@ -3,9 +3,13 @@ title: "`rule-color` CSS property"
 short-title: rule-color
 slug: Web/CSS/Reference/Properties/rule-color
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.rule-color
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`rule-color`** [CSS](/en-US/docs/Web/CSS) property defines the colors of the lines drawn between columns and rows in multi-column grid, flex, and multi-col layouts, setting the colors of the column and row rules to the same value.
 
@@ -121,7 +125,7 @@ The `rule-color` property accepts a comma-separated list of values, including:
 The `rule-color` property defines the colors of any lines drawn in the gaps between columns and rows in [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout), [flex](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) containers with more than one column or row. It is a shorthand property that sets both the {{cssxref("row-rule-color")}} and {{cssxref("column-rule-color")}} properties to the same value.
 
 The value is a comma-separated list of components, which can include `<line-color>`, `<repeat-line-color>`, and `<auto-repeat-line-color>` types.
-The `rule-color` property, along with the {{cssxref("rule-width")}} and {{cssxref("rule-style")}} properties, can be set using the {{cssxref("rule")}} shothand.
+The `rule-color` property, along with the {{cssxref("rule-width")}} and {{cssxref("rule-style")}} properties, can be set using the {{cssxref("rule")}} shorthand.
 
 ### Line colors
 

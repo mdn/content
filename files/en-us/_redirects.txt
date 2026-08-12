@@ -12533,7 +12533,7 @@
 /en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement	/en-US/docs/Web/CSS/Guides/Grid_layout
 /en-US/docs/Web/CSS/CSS_Grid_Layout/Grid_logical_values_and_writing_modes	/en-US/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes
 /en-US/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid	/en-US/docs/Web/CSS/Guides/Grid_layout/Line-based_placement
-/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry	/en-US/docs/Web/CSS/Guides/Grid_layout/Masonry_layout
+/en-US/docs/Web/CSS/CSS_Grid_Layout/Masonry	/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_lanes
 /en-US/docs/Web/CSS/CSS_Grid_Layout/Realising_common_layouts_using_CSS_Grid_	/en-US/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts
 /en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout	/en-US/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts
 /en-US/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout_	/en-US/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts
@@ -12714,7 +12714,7 @@
 /en-US/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes	/en-US/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes
 /en-US/docs/Web/CSS/CSS_grid_layout/Layout_using_line-based_placement	/en-US/docs/Web/CSS/Guides/Grid_layout/Line-based_placement
 /en-US/docs/Web/CSS/CSS_grid_layout/Layout_using_named_grid_lines	/en-US/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines
-/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout	/en-US/docs/Web/CSS/Guides/Grid_layout/Masonry_layout
+/en-US/docs/Web/CSS/CSS_grid_layout/Masonry_layout	/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_lanes
 /en-US/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids	/en-US/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts
 /en-US/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods	/en-US/docs/Web/CSS/Guides/Grid_layout/Relationship_with_other_layout_methods
 /en-US/docs/Web/CSS/CSS_grid_layout/Subgrid	/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid
@@ -13010,7 +13010,7 @@
 /en-US/docs/Web/CSS/align-content	/en-US/docs/Web/CSS/Reference/Properties/align-content
 /en-US/docs/Web/CSS/align-items	/en-US/docs/Web/CSS/Reference/Properties/align-items
 /en-US/docs/Web/CSS/align-self	/en-US/docs/Web/CSS/Reference/Properties/align-self
-/en-US/docs/Web/CSS/align-tracks	/en-US/docs/Web/CSS/Guides/Grid_layout/Masonry_layout
+/en-US/docs/Web/CSS/align-tracks	/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_lanes
 /en-US/docs/Web/CSS/alignment-baseline	/en-US/docs/Web/CSS/Reference/Properties/alignment-baseline
 /en-US/docs/Web/CSS/all	/en-US/docs/Web/CSS/Reference/Properties/all
 /en-US/docs/Web/CSS/alpha-value	/en-US/docs/Web/CSS/Reference/Values/alpha-value
@@ -13459,7 +13459,7 @@
 /en-US/docs/Web/CSS/justify-content	/en-US/docs/Web/CSS/Reference/Properties/justify-content
 /en-US/docs/Web/CSS/justify-items	/en-US/docs/Web/CSS/Reference/Properties/justify-items
 /en-US/docs/Web/CSS/justify-self	/en-US/docs/Web/CSS/Reference/Properties/justify-self
-/en-US/docs/Web/CSS/justify-tracks	/en-US/docs/Web/CSS/Guides/Grid_layout/Masonry_layout
+/en-US/docs/Web/CSS/justify-tracks	/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_lanes
 /en-US/docs/Web/CSS/kerning	/en-US/docs/Web/CSS/Reference/Properties/font-kerning
 /en-US/docs/Web/CSS/left	/en-US/docs/Web/CSS/Reference/Properties/left
 /en-US/docs/Web/CSS/length	/en-US/docs/Web/CSS/Reference/Values/length

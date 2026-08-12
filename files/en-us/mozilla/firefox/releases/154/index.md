@@ -77,12 +77,23 @@ Firefox 154 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ## Changes for add-on developers
 
-<!-- ### Removals -->
-
-<!-- ### Other -->
+- Adds support for the [`sandbox`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sandbox) manifest key, enabling extensions to designate pages that load with an opaque origin, without direct access to extension APIs. A sandboxed page can use `eval()` and similar constructs that are otherwise blocked by the extension's [content security policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy). ([Firefox bug 1685123](https://bugzil.la/1685123))
 
 ## Experimental web features
 
 These features are shipping in Firefox 154 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **Truncating content with `line-clamp`**: `layout.css.line-clamp.enabled`
+
+  The {{cssxref("line-clamp")}} CSS property now works without the `-webkit-` vendor prefix, though at this stage it does not support the `no-ellipsis` and `<string>` values. ([Firefox bug 2042986](https://bugzil.la/2042986)).
+
+- **Percentage values for `text-decoration-inset`**: `layout.css.text-decoration-inset-percentage.enabled`
+
+  The {{cssxref("text-decoration-inset")}} CSS property now supports percentages as values. The percentage value specifies the size of the inset as a percentage of the {{cssxref("font-size")}}. ([Firefox bug 2044602](https://bugzil.la/2044602)).
+
+- **CSS Typed Object Model Level 1** (Nightly): `layout.css.typed-om.enabled`
+
+  The [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) (as defined in the CSS Typed Object Model Level 1 specification) is now implemented.
+  This simplifies CSS property manipulation by exposing CSS values as typed JavaScript objects rather than strings. ([Firefox bug 2051047](https://bugzil.la/2051047)).

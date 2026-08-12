@@ -105,7 +105,7 @@ The file to describe is chosen using an [`<input type="file">`](/en-US/docs/Web/
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
 }
 
 body {
@@ -126,7 +126,7 @@ img {
   display: block;
   flex: 1;
   max-width: 300px;
-  border: 1px solid #999;
+  border: 1px solid #999999;
 }
 
 form div {

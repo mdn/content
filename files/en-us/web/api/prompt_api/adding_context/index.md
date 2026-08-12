@@ -211,7 +211,7 @@ Technically, this is very similar to the [complete example](/en-US/docs/Web/API/
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
 }
 
 body {
@@ -642,7 +642,7 @@ To reduce the perceived latency between the user's prompt and the response, it c
 
 The {{domxref("LanguageModel.append()")}} method exists to provide such context — it adds further inputs for the API to process, without generating a model response.
 
-For example, in the following snippet we provide an excerpt from a fairly famous book. We use `append()` to feed the excerpt into the API session, and then ask a question about it using a `prompt()` call. The browser can get a headstart on processing the excerpt while it waits for the question to be asked.
+For example, in the following snippet we provide an excerpt from a fairly famous book. We use `append()` to feed the excerpt into the API session, and then ask a question about it using a `prompt()` call. The browser can get a head start on processing the excerpt while it waits for the question to be asked.
 
 ```js
 const excerpt =

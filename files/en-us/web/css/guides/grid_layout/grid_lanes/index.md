@@ -1,26 +1,26 @@
 ---
-title: Masonry layout
-slug: Web/CSS/Guides/Grid_layout/Masonry_layout
+title: Grid lanes layout
+slug: Web/CSS/Guides/Grid_layout/Grid_lanes
 page-type: guide
 status:
   - experimental
 browser-compat:
-  - css.properties.grid-template-columns.masonry
-  - css.properties.grid-template-rows.masonry
+  - css.properties.display.grid-lanes
+  - css.properties.display.inline-grid-lanes
 sidebar: cssref
 ---
 
 {{SeeCompatTable}}
 
-Level 3 of the [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) specification defines **masonry layout** (also known as **grid-lanes** layout), which is accessed via the {{cssxref("display")}} values `grid-lanes` and `inline-grid-lanes`. This guide details what masonry layout is and how to use it.
+Level 3 of the [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) specification defines **grid lanes layout**, which is accessed via the {{cssxref("display")}} values `grid-lanes` and `inline-grid-lanes`. This guide explains how grid lanes layout works and how to use it.
 
-Masonry layout is a layout method where one axis uses a typical strict grid layout, most often columns, and the other a **stacking** (masonry) layout. On the stacking axis, rather than sticking to a strict grid with gaps being left after shorter items, the items in the following row rise up to fill the gaps.
+Grid lanes layout is a layout method where one axis uses a typical strict grid layout, most often columns, and the other uses a stacking algorithm. On the stacking axis, rather than sticking to a strict grid with gaps being left after shorter items, the items in the following row rise up to fill the gaps.
 
-## Creating a masonry layout
+## Creating a grid lanes layout
 
-To create the most common masonry layout where the columns are laid out in a grid, and the rows stack like masonry, use **`display: grid-lanes`** along with {{cssxref("grid-template-columns")}}.
+To create the most common grid lanes layout, where the columns are laid out in a grid and the rows are packed using the grid lanes layout algorithm, use **`display: grid-lanes`** along with {{cssxref("grid-template-columns")}}.
 
-The child elements of this container will lay out item by item along the stacking axis according to the masonry algorithm: each row of items loads into the column with the most room, causing a tightly packed layout without strict row tracks.
+The child elements of this container will lay out item by item along the stacking axis according to the grid lanes layout algorithm: each row of items loads into the column with the most room, causing a tightly packed layout without strict row tracks.
 
 ```css hidden live-sample___block-axis live-sample___inline-axis live-sample___spanners live-sample___positioned
 * {
@@ -83,7 +83,7 @@ for (let i = 0; i < items.length; i++) {
 
 {{EmbedLiveSample("block-axis", "", "250px")}}
 
-It is also possible to create a masonry layout with items loading into rows.
+It is also possible to create a grid lanes layout with items loading into rows.
 
 ```js live-sample___inline-axis
 // prettier-ignore
@@ -111,9 +111,9 @@ for (let i = 0; i < items.length; i++) {
 
 On the grid axis, things will work just as you expect them to in grid layout. You can cause items to span multiple tracks while remaining in auto-placement, using the `span` keyword. Items may also be positioned using line-based positioning.
 
-### Masonry layout with spanning items
+### Grid lanes layout with spanning items
 
-In this example two of the items span two tracks, and the masonry items work around them.
+In this example two of the items span two tracks, and the remaining items are packed around them by the grid lanes layout algorithm.
 
 ```html live-sample___spanners
 <div class="grid">
@@ -144,7 +144,7 @@ In this example two of the items span two tracks, and the masonry items work aro
 
 {{EmbedLiveSample("spanners", "", "270px")}}
 
-This example includes an item which has positioning for columns. Items with definite placement are placed before the masonry layout happens.
+This example includes an item which has positioning for columns. Items with definite placement are placed before the grid lanes layout algorithm runs.
 
 ```html live-sample___positioned
 <div class="grid">
@@ -176,10 +176,6 @@ This example includes an item which has positioning for columns. Items with defi
 
 {{EmbedLiveSample("positioned", "", "290px")}}
 
-## Fallbacks for masonry layout
-
-In browsers [that do not support masonry](#browser_compatibility), regular grid auto-placement will be used instead.
-
 ## Specifications
 
 {{Specifications}}
@@ -191,4 +187,3 @@ In browsers [that do not support masonry](#browser_compatibility), regular grid 
 ## See also
 
 - {{cssxref("grid-auto-flow")}} for controlling grid auto-placement
-- [Native CSS masonry layout in CSS grid](https://www.smashingmagazine.com/native-css-masonry-layout-css-grid/) via Smashing Magazine (2020)
