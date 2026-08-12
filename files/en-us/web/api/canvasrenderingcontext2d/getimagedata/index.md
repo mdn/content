@@ -61,6 +61,9 @@ canvas specified. The coordinates of the rectangle's top-left corner are
 `(sx, sy)`, while the coordinates of the bottom corner are
 `(sx + sw - 1, sy + sh - 1)`.
 
+> [!NOTE]
+> With certain privacy settings (such as fingerprinting protection), random subtle noise is introduced to the `getImageData()` result to prevent the website from inferring the user's rendering device. Therefore, `putImageData()` and `getImageData()` may not round-trip.
+
 ### Exceptions
 
 - `IndexSizeError` {{domxref("DOMException")}}
