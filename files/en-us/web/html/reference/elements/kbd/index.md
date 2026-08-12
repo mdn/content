@@ -9,6 +9,8 @@ sidebar: htmlsidebar
 
 The **`<kbd>`** [HTML](/en-US/docs/Web/HTML) element represents user input (typically keyboard input). By default, the content text is displayed using the {{Glossary("user agent", "user agent's")}} default monospace font.
 
+`<kbd>` may be nested in various combinations with the {{HTMLElement("samp")}} (Sample Output) element to represent various forms of input or output based on visual cues.
+
 {{InteractiveExample("HTML Demo: &lt;kbd&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
@@ -35,8 +37,6 @@ kbd {
   white-space: nowrap;
 }
 ```
-
-`<kbd>` may be nested in various combinations with the {{HTMLElement("samp")}} (Sample Output) element to represent various forms of input or output based on visual cues.
 
 ## Attributes
 
