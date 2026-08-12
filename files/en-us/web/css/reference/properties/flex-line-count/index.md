@@ -7,9 +7,13 @@ browser-compat: css.properties.flex-line-count
 sidebar: cssref
 ---
 
-The **`flex-line-count`** [CSS](/en-US/docs/Web/CSS) property sets the minimum number of flex lines that flex items will be distributed over in cases where a flex container's {{cssxref("flex-wrap")}} property includes the `balance` keyword. If `balance` if not included in `flex-wrap`, the `flex-line-count` property has no effect.
+The **`flex-line-count`** [CSS](/en-US/docs/Web/CSS) property sets the minimum number of flex lines that flex items will be balanced over in cases where a flex container's {{cssxref("flex-wrap")}} or {{cssxref("flex-flow")}} property includes the `balance` keyword.
 
 {{InteractiveExample("CSS Demo: flex-line-count")}}
+
+```css interactive-example-choice
+flex-line-count: 1;
+```
 
 ```css interactive-example-choice
 flex-line-count: 2;
@@ -83,15 +87,25 @@ This property is specified as the following value:
 
 {{csssyntax}}
 
+## Description
+
+The `flex-line-count` property sets the minimum number of flex lines that flex items will be distributed over in wrapping, balanced flex containers — in other words, flex containers that include a {{cssxref("flex-wrap")}} or {{cssxref("flex-flow")}} property with the `balance` keyword set in addition to the `wrap` or `wrap-reverse` keyword.
+
+A key use case for `flex-line-count` is creating a balanced set of two (or more) columns. This is useful for cases such as wiki reference sections, where the layout requirement might be a set number of balanced columns, regardless of the number of items in the list. Setting an explicit {{cssxref("height")}} or {{cssxref("max-height")}} in this case doesn't work, as you don't know how much content you will have, and threfore may end up with less or more columns than desired. See [Creating balanced columns](#creating_balanced_columns) for an example implementation.
+
+If `balance` is not included, or if the other keyword is omitted or set to `nowrap`, the `flex-line-count` property has no effect. If `balance` is set, but `flex-line-count` is omitted or explicitly set to `1`, the `balance` value has no effect.
+
+If the `flex-line-count` value is equal to or greater than the number of flex items, there will be one flex item per flex line.
+
 ## Examples
 
 ### Effect of different `flex-line-count` values
 
-This example includes four identical flex containers with different combinations of `flex-wrap` and `flex-line-count` set on them to demonstrate the effects of `flex-line-count`.
+This example demonstrates the effects of different values of `flex-line-count` on four boxes.
 
 #### HTML
 
-We include four identical container {{htmlelement("div")}}s with a `class` of `box`, each of which has ten child `<div>`s. Each container has a different `id`.
+We include four container {{htmlelement("div")}}s, each with a `class` of `box`, and ten child `<div>`s, but different `id` values.
 
 ```html
 <div class="box" id="box-no-balance">
@@ -176,28 +190,50 @@ We include four identical container {{htmlelement("div")}}s with a `class` of `b
 
 #### CSS
 
-The CSS applied to the flex containers and their children is shown below. Most notably in this first block, we apply `flex-wrap: wrap balance` to all the containers. We also set a {{cssxref("flex")}} value of `1 1 150px` on the flex children so they will take a base width of 150px and then share out the remaining space on each flex line equally.
+```css hidden live-sample___flex-line-count
+* {
+  box-sizing: border-box;
+}
 
-```css live-sample___flex-line-count
 .box {
   width: 100%;
   border: 2px dotted gray;
   margin-bottom: 20px;
-  display: flex;
-  flex-wrap: wrap balance;
+  gap: 10px;
 }
 
 .box > * {
   border: 2px solid rgb(96 139 168);
   border-radius: 5px;
   background-color: lightgray;
+}
+```
+
+We apply `display: flex` to all the boxes to make them into flex containers, then give them a `flex-wrap` value of `wrap balance` to make all their flex children wrap onto multiple lines in a balanced fashion.
+
+```css live-sample___flex-line-count
+.box {
+  display: flex;
+  flex-wrap: wrap balance;
+}
+```
+
+We also set a {{cssxref("flex")}} value of `1 1 150px` on the flex children, so they have a base width of `150px` and will distribute any excess space evenly across the items in each flex line.
+
+```css live-sample___flex-line-count
+.box > * {
   flex: 1 1 150px;
 }
 ```
 
-We then apply a different `flex-line-count` value to each flex container. Note how, for the `#box-no-balance` flex container, we also override the original `flex-wrap: wrap balance` value with `wrap`.
+Next, we apply a different `flex-line-count` value to each flex container. Note how, for the `#box-no-balance` flex container, we also override the original `flex-wrap: wrap balance` value with `wrap`.
 
 ```css live-sample___flex-line-count
+#box-no-balance {
+  flex-line-count: 6;
+  flex-wrap: wrap;
+}
+
 #box1 {
   flex-line-count: 3;
 }
@@ -209,18 +245,13 @@ We then apply a different `flex-line-count` value to each flex container. Note h
 #box3 {
   flex-line-count: 5;
 }
-
-#box-no-balance {
-  flex-line-count: 6;
-  flex-wrap: wrap;
-}
 ```
 
 We've hidden the rest of the CSS for brevity.
 
 #### Results
 
-{{ EmbedLiveSample("flex-line-count", "100%", "600") }}
+{{ EmbedLiveSample("flex-line-count", "100%", "700") }}
 
 Note the effect of the different property combinations:
 
@@ -230,13 +261,28 @@ Note the effect of the different property combinations:
 
 ### Creating balanced columns
 
-This example demonstrates how `flex-line-count` can be used to create a balanced set of two columns. This is useful for cases such as wiki reference sections, where the layout requirement might be a set number of balanced columns, regardless of the number of items in the list. Setting an explicit {{cssxref("height")}} or {{cssxref("max-height")}} in this case doesn't work, as you may end up with less or more columns than desired.
+This example demonstrates how `flex-line-count` can be used to create a balanced set of two columns.
 
 #### HTML
 
 We include an {{htmlelement("ol")}} element containing ten {{htmlelement("li")}} elements.
 
-```html live-sample___balanced-columns
+```html
+<ol>
+  <li>
+    <a href="#">The Silent Cartographer</a>, published by Meridian House,
+    released March 12, 2014.
+  </li>
+  <li>
+    <a href="#">Echoes of the Fallow Field</a>, published by Northbridge Press,
+    released July 4, 2009.
+  </li>
+
+  ...
+</ol>
+```
+
+```html hidden live-sample___balanced-columns
 <ol>
   <li>
     <a href="#">The Silent Cartographer</a>, published by Meridian House,
@@ -338,5 +384,5 @@ We've hidden the rest of the CSS for brevity.
 - {{CSSXRef("flex-wrap")}}
 - {{CSSXRef("flex-flow")}} shorthand
 - [Basic concepts of flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
-- [Mastering wrapping of flex items](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items)
+- [Mastering wrapping of flex items > Balanced wrapping](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Wrapping_items#balanced_wrapping)
 - [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) module

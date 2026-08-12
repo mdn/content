@@ -79,7 +79,7 @@ flex-wrap: unset;
 
 ### Values
 
-The `flex-wrap` property is specified as a single keyword chosen from the following values, or two space-separated keywords consisting of `balance` and either `wrap` or `wrap-reverse`, in any order.
+Specified as a single value from the following list or as two space-separated values when using `balance`:
 
 - `nowrap`
   - : The flex items are laid out in a single line which may cause the flex container to overflow. This is the initial value.
@@ -94,15 +94,17 @@ The `flex-wrap` property is specified as a single keyword chosen from the follow
 
 The `flex-wrap` property is used to specify whether items laid out inside a flex container will wrap onto multiple flex lines or not.
 
-The initial value of `nowrap` specifies that all items should be laid out on a single line, which means that they may overflow the container.
+The initial value of `nowrap` specifies that all items should be laid out on a single flex line, which means they may overflow the container. The `wrap` and `wrap-reverse` keywords prevent overflow by specifying that flex items can flow, or wrap, across multiple lines.
 
-The `wrap` keyword specifies that the flex items should be broken across multiple lines to avoid overflow, with the cross-start being the equivalent of [inline-start or block-start](/en-US/docs/Glossary/Flow_relative_values), depending on the current [writing mode](/en-US/docs/Web/CSS/Guides/Writing_modes) and the {{cssxref("flex-direction")}} value. The lines are laid out along the cross-axis from start to end.
-
-The `wrap-reverse` keyword has the same effect as `wrap`, except that the lines are laid out along the cross-axis in reverse order, from end to start.
+With `wrap`, cross-start is the equivalent of [inline-start or block-start](/en-US/docs/Glossary/Flow_relative_values), depending on the {{cssxref("flex-direction")}} value and the current [writing mode](/en-US/docs/Web/CSS/Guides/Writing_modes). With `wrap-reverse`, cross-start is the equivalent of inline-end or block-end.
 
 ### Balancing flex item distribution
 
-By default, when `wrap` or `wrap-reverse` are specified, each line is filled with flex items before moving onto the next line. This can result in uneven distribution of items, with only one or two items sitting in the last line for example. To evenly distribute the items across lines, specify the `balance` keyword along with `wrap` or `wrap-reverse`. If `balance` is the only keyword specified, the other keyword defaults to `wrap`.
+By default, when `wrap` or `wrap-reverse` is specified, each flex line is filled with flex items before items are wrapped onto the next line. This can result in an uneven distribution of items, with the last flex line composed of fewer items. If those items' {{cssxref("flex-grow")}} values are non-zero, the extra available space is distributed across these fewer items, making them much larger than the items on filled flex lines.
+
+The `balance` keyword, along with the {{cssxref("flex-line-count")}} property, can be used to distribute the items across lines in a more even manner.
+
+If `balance` is the only keyword specified, the other keyword defaults to `wrap`. If `balance` is specified alongside `nowrap`, the property is invalid.
 
 Note that when specifying the `balance` keyword inside the `flex-wrap` value, you can include the {{cssxref("flex-line-count")}} property alongside it to specify the minimum number of lines you want to distribute the flex items over. The `flex-line-count` property has no effect if `balance` is not specified inside `flex-wrap`.
 
@@ -190,15 +192,13 @@ Note that when specifying the `balance` keyword inside the `flex-wrap` value, yo
 
 {{ EmbedLiveSample("flex-wrap-values", "100%", "700") }}
 
-### Demonstrating the effects of the `balance` keyword
+### Demonstrating the `balance` keyword
 
-This example provides a JavaScript-powered form that you can use to change the `flex-wrap` and `flex-line-count` values applied to a flex container, demonstrating the effect of the `balance` keyword and associated features in the process.
+This example demonstrates the effects of the `balance` keyword within the `flex-wrap` property and different `flex-line-count` values.
 
 #### HTML
 
-First, we include three form controls — an [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) that toggles between setting `flex-wrap: wrap` and `wrap-reverse` on the flex container, another checkbox that toggles between setting the `balance` keyword in `flex-wrap` and not setting it, and a [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) slider that changes the `flex-line-count` value applied to the flex container.
-
-```html live-sample___the-balance-keyword
+```html hidden live-sample___the-balance-keyword
 <form>
   <div>
     <input type="checkbox" id="reverse" name="reverse" />
@@ -222,17 +222,13 @@ First, we include three form controls — an [`<input type="checkbox">`](/en-US/
 </form>
 
 <hr />
-```
 
-We also include a {{htmlelement("p")}} element into which we'll print the updated `flex-wrap` and `flex-line-count` values applied to the flex container as the form elements are manipulated.
-
-```html live-sample___the-balance-keyword
 <p>Currently set: <code>flex-wrap: wrap; flex-line-count: 3;</code></p>
 
 <hr />
 ```
 
-Finally, we include a container {{htmlelement("div")}} with a `class` of `box`, which has ten child `<div>`s. The `<div class="box">` is the container that will be laid out using flexbox.
+We include a container {{htmlelement("div")}} with a `class` of `box`, which has ten child `<div>`s.
 
 ```html live-sample___the-balance-keyword
 <div class="box">
@@ -249,28 +245,42 @@ Finally, we include a container {{htmlelement("div")}} with a `class` of `box`, 
 </div>
 ```
 
+We also include:
+
+- Three JavaScript-powered form controls — one to toggle between setting `flex-wrap: wrap` and `wrap-reverse` on the flex container, one to toggle between setting the `balance` keyword in `flex-wrap` and not setting it, and one to change the `flex-line-count` value applied to the flex container.
+- A {{htmlelement("p")}} element into which we print the updated `flex-wrap` and `flex-line-count` values applied to the flex container as the form elements are manipulated.
+
+We've hidden the HTML and JavaScript code for these features for brevity.
+
 #### CSS
 
-The CSS applied to the flex container and its children is shown below. Most notably, we apply some `flex-wrap` and `flex-line-count` values to the flex container to begin with, which we'll later change via JavaScript when the form controls are manipulated. We also set a {{cssxref("flex")}} value of `1 1 150px` on the flex children so they will take a base width of 150px and then share out the remaining space on each flex line equally.
+We apply `display: flex` to the `.box` to turn it into a flex container, then set some `flex-wrap` and `flex-line-count` values to make the flex children wrap evenly over a minimum of three flex lines. We'll change these later via JavaScript when the form controls are manipulated. We also set a {{cssxref("flex")}} value of `1 1 150px` on the flex children so they will take a base width of `150px` and then share out the remaining space on each flex line equally.
 
 ```css live-sample___the-balance-keyword
 .box {
-  width: 100%;
-  border: 2px dotted rgb(96 139 168);
   display: flex;
   flex-wrap: wrap;
   flex-line-count: 3;
 }
 
 .box > * {
-  border: 2px solid rgb(96 139 168);
-  border-radius: 5px;
-  background-color: rgb(96 139 168 / 0.2);
   flex: 1 1 150px;
 }
 ```
 
 ```css hidden live-sample___the-balance-keyword
+.box {
+  width: 100%;
+  border: 2px dotted rgb(96 139 168);
+  gap: 10px;
+}
+
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -295,11 +305,7 @@ body {
 
 We've hidden the rest of the CSS for brevity.
 
-#### JavaScript
-
-We start our script by grabbing references to all the HTML elements we need to access via JavaScript. We also create two variables, `wrapValue` and `lineCountValue`, into which we store the starting values of the `flex-wrap` and `flex-line-count` properties.
-
-```js live-sample___the-balance-keyword
+```js hidden live-sample___the-balance-keyword
 const boxElem = document.querySelector(".box");
 const outputElem = document.querySelector("output");
 const pCodeElem = document.querySelector("p code");
@@ -309,19 +315,11 @@ const lineCountInput = document.getElementById("line-count");
 
 let wrapValue = "wrap";
 let lineCountValue = "3";
-```
 
-Next, we define a custom function called `updateCurrentlySet()`, which updates the `flex-wrap` and `flex-line-count` values displayed in the `<p>` element with the values stored in `wrapValue` and `lineCountValue`:
-
-```js live-sample___the-balance-keyword
 function updateCurrentlySet() {
   pCodeElem.textContent = `flex-wrap: ${wrapValue}; flex-line-count: ${lineCountValue};`;
 }
-```
 
-Next, we define a function called `setFlexWrap()`. This constructs a new value to set for the flex container's `flex-wrap` property depending on whether the two checkboxes are checked, storing it in `wrapValue`. It then sets that as the property value then runs `updateCurrentlySet()` to update the displayed property value in the `<p>` ellement.
-
-```js live-sample___the-balance-keyword
 function setFlexWrap() {
   wrapValue = "";
   if (reverseInput.checked) {
@@ -337,22 +335,14 @@ function setFlexWrap() {
   boxElem.style.flexWrap = wrapValue;
   updateCurrentlySet();
 }
-```
 
-Next, we define a function called `setFlexLineCount()`. This constructs a new value to set for the flex container's `flex-line-count` property equal to the range slider's value, storing it in `lineCountValue`. It then sets that as the property value then runs `updateCurrentlySet()` to update the displayed property value in the `<p>` ellement.
-
-```js live-sample___the-balance-keyword
 function setFlexLineCount() {
   lineCountValue = lineCountInput.value;
   boxElem.style.flexLineCount = lineCountValue;
   outputElem.textContent = lineCountValue;
   updateCurrentlySet();
 }
-```
 
-Finally, we set event listeners on the form controls, running `setFlexWrap()` if either of the checkboxes are toggled, and running `setFlexLineCount()` whenever the range slider's value is changed.
-
-```js live-sample___the-balance-keyword
 reverseInput.addEventListener("change", setFlexWrap);
 balanceInput.addEventListener("change", setFlexWrap);
 lineCountInput.addEventListener("input", setFlexLineCount);
