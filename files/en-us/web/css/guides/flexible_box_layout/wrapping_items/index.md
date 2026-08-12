@@ -214,8 +214,7 @@ We end up with the following:
 
 We now have five lines of two flex items.
 
-> [!NOTE]
-> The `flex-line-count` property has no effect on flex-containers that do not have the `balance` keyword included in their `flex-wrap` property values.
+The `flex-line-count` property has no effect on flex-containers that do not have the `balance` keyword included in their `flex-wrap` property values.
 
 ## Single-dimensional layout explained
 
