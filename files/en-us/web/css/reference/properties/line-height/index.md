@@ -71,14 +71,9 @@ line-height: revert-layer;
 line-height: unset;
 ```
 
-The `line-height` property is specified as any one of the following:
-
-- a `<number>`
-- a `<length>`
-- a `<percentage>`
-- the keyword `normal`.
-
 ### Values
+
+This property is specified as a single value from the following list:
 
 - `normal`
   - : Depends on the user agent. Desktop browsers (including Firefox) use a default value of roughly **`1.2`**, depending on the element's `font-family`.

@@ -21,7 +21,7 @@ Custom properties are represented by `CSSUnparsedValue` and {{cssxref("var", "va
 
 ## Instance properties
 
-- {{domxref('CSSUnparsedValue.length')}}
+- {{domxref('CSSUnparsedValue.length')}} {{ReadOnlyInline}}
   - : Returns the number of items in the `CSSUnparsedValue` object.
 
 ## Instance methods

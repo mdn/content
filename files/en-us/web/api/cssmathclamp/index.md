@@ -35,7 +35,111 @@ _Also inherits methods from its parent interface, {{DOMxRef("CSSMathValue")}}._
 
 _Also inherits methods from its parent interface, {{DOMxRef("CSSMathValue")}}._
 
+## Description
+
+The CSS {{CSSXref("clamp", "clamp()")}} function takes three arguments: a minimum, preferred, and maximum value, and returns the preferred value, clamped between the minimum and maximum.
+
+If all three arguments are absolute values, such as pixel lengths, `clamp()` is resolved to a single value at parse time, represented by the CSS Typed Object Model as a {{domxref("CSSUnitValue")}}.
+If the `clamp()` expression can't be resolved to a single value at parse time (say, because one of its arguments uses a relative unit like `vw` or `%`), the function is represented as a `CSSMathClamp` object, and the three arguments passed to `clamp()` (or to the `CSSMathClamp()` constructor) are exposed as the `lower`, `value`, and `upper` properties.
+
+Note that `CSSMathClamp` represents the `clamp()` function, not its resolved value.
+In order to determine the value of a clamped property, you need to read its computed style (for example with {{domxref("Window.getComputedStyle", "getComputedStyle()")}}).
+
 ## Examples
+
+### Basic usage
+
+The following code creates a `CSSMathClamp` instance from three lengths, then reads back its `lower`, `value`, and `upper` properties.
+
+```js
+const clamp = new CSSMathClamp(CSS.px(10), CSS.percent(50), CSS.px(500));
+
+console.log(clamp.constructor.name); // "CSSMathClamp"
+console.log(clamp.lower); // CSSUnitValue {value: 10, unit: "px"}
+console.log(clamp.value); // CSSUnitValue {value: 50, unit: "percent"}
+console.log(clamp.upper); // CSSUnitValue {value: 500, unit: "px"}
+```
+
+### `clamp()` representations
+
+This example shows how {{CSSXref("clamp","clamp()")}} is represented by a {{domxref("CSSUnitValue")}} or a `CSSMathClamp`, depending on whether all of its arguments are absolute values.
+
+#### HTML
+
+First we declare a {{htmlelement("div")}} element, `#demoBox`, on which we'll set some clamped properties.
+
+```html
+<div id="demoBox">Text</div>
+```
+
+```html hidden
+<pre id="log"></pre>
+```
+
+#### CSS
+
+The `width` of the box is set using a `clamp()` whose three arguments are all absolute lengths, so the browser can resolve it to a single fixed value immediately.
+`font-size` is set using a `clamp()` whose preferred value uses the relative unit `vw`, so the browser can't resolve it until layout (this will be represented by a `CSSMathClamp`).
+
+```css
+#demoBox {
+  width: clamp(10px, 50px, 500px);
+  font-size: clamp(1rem, 5vw, 3rem);
+}
+```
+
+```css hidden
+#log {
+  height: 200px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+#### JavaScript
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText += `${text}\n`;
+}
+```
+
+First we find the demo box's style rule and read its `width` and `font-size` values using {{domxref("CSSStyleRule.styleMap", "styleMap")}}.
+
+```js
+const demoBox = document.querySelector("#demoBox");
+
+const rules = document.getElementById("css-output").sheet.cssRules;
+const rule = [...rules].find((r) => r.selectorText === "#demoBox");
+const styleMap = rule.styleMap;
+const width = styleMap.get("width");
+const fontSize = styleMap.get("font-size");
+```
+
+We then log the type and value of the CSS Typed OM representations, followed by the computed (resolved) values.
+
+```js
+log("width");
+log(` type: ${width.constructor.name}`);
+log(` value: ${width}`);
+log(` resolved: ${getComputedStyle(demoBox).width}`);
+
+log("\nfont-size");
+log(` type: ${fontSize.constructor.name}`);
+log(` lower: ${fontSize.lower}`);
+log(` value: ${fontSize.value}`);
+log(` upper: ${fontSize.upper}`);
+log(` resolved: ${getComputedStyle(demoBox).fontSize}`);
+```
+
+#### Result
+
+`width` logs as a single `CSSUnitValue`, and its resolved value matches that value directly.
+`font-size` logs as a `CSSMathClamp`, exposing the `clamp()` function's original operands.
+
+{{EmbedLiveSample("`clamp()` representations", 300, 300)}}
 
 ### Inspecting a clamped value
 
