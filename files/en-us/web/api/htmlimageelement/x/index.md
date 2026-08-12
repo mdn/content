@@ -18,7 +18,7 @@ In the diagram below, the left border edge is the left edge of the blue padding 
 
 ![Diagram showing the relationships between the various boxes associated with an element](boxmodel-3.png)
 
-## Example
+## Examples
 
 The example below demonstrates the use of the `HTMLImageElement` properties `x` and {{domxref("HTMLImageElement.y", "y")}}.
 
