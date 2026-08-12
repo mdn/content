@@ -177,8 +177,7 @@ This example uses the same HTML as the previous example, and nearly the same CSS
 flex-wrap: wrap balance;
 ```
 
-> [!NOTE]
-> This line could be written as just `flex-wrap: balance` — If `balance` is specified as the only keyword in the `flex-wrap` value, the other keyword defaults to `wrap`. However, we decided to write it out explicitly so it is clearer what is going on.
+This line could also have been written as just `flex-wrap: balance` — If `balance` is specified as the only keyword in the `flex-wrap` value, the other keyword defaults to `wrap`. However, we decided to write it out explicitly so it is clearer what is going on.
 
 The updated rendering looks like so:
 
