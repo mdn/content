@@ -453,8 +453,8 @@ ul {
   list-style-type: none;
   gap: 20px;
 
-  row-rule: 10px solid olive;
-  column-rule: 10px solid palegoldenrod;
+  column-rule: 10px solid olive;
+  row-rule: 10px solid palegoldenrod;
   rule-overlap: column-over-row;
 
   column-rule-break: intersection;
