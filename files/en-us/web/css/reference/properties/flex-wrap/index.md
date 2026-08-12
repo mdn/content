@@ -84,7 +84,7 @@ The `flex-wrap` property is specified as a single keyword chosen from the follow
 - `nowrap`
   - : The flex items are laid out in a single line which may cause the flex container to overflow. This is the initial value.
 - `wrap`
-  - : The flex items break into multiple lines.
+  - : The flex items can break into multiple lines.
 - `wrap-reverse`
   - : Behaves the same as `wrap`, but with the lines laid out in reverse order.
 - `balance`
