@@ -44,38 +44,21 @@ Given a manifest.json entry like this:
 
 ```json
 "commands": {
-  "toggle-feature": {
+  "duplicate-tab": {
     "suggested_key": {
-      "default": "Ctrl+Shift+Y"
+      "default": "Ctrl+Shift+D"
     },
-    "description": "Send a 'toggle-feature' event"
+    "description": "Duplicate the active tab"
   }
 }
 ```
 
-You could listen for this command like this:
-
-```js
-browser.commands.onCommand.addListener((command) => {
-  if (command === "toggle-feature") {
-    console.log("toggling the feature!");
-  }
-});
-```
-
-You could listen for this command and send a message to any [content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) or extension pages or iframe in the active tab so that they can act on the command, like this:
+You can listen for this command and use the `tab` passed to the listener to duplicate the active tab, like this:
 
 ```js
 browser.commands.onCommand.addListener((command, tab) => {
-  if (command === "toggle-feature") {
-    console.log("toggling the feature!");
-    console.log("Command triggered on tab:", tab.id, tab.url);
-
-    browser.tabs.sendMessage(tab.id, {
-      type: "toggle-feature",
-      tabId: tab.id,
-      url: tab.url,
-    });
+  if (command === "duplicate-tab") {
+    browser.tabs.duplicate(tab.id);
   }
 });
 ```
