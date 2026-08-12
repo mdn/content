@@ -80,9 +80,9 @@ console.log(fileWithoutDate.lastModified); // returns current time
 
 ## Reduced time precision
 
-To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `someFile.lastModified` might get rounded depending on browser settings. In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 2ms. You can also enable `privacy.resistFingerprinting`, in which case the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `someFile.lastModified` might get rounded depending on browser settings. In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 2ms. You can also enable `privacy.resistFingerprinting`, in which case the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` (converted to milliseconds), whichever is larger.
 
-For example, with reduced time precision, the result of `someFile.lastModified` will always be a multiple of 2, or a multiple of 100 (or `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`) with `privacy.resistFingerprinting` enabled.
+For example, with reduced time precision, the result of `someFile.lastModified` will always be a multiple of 2, or a multiple of 100 (or `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` converted to milliseconds) with `privacy.resistFingerprinting` enabled.
 
 ```js
 // reduced time precision (2ms) in Firefox 60
