@@ -10,7 +10,7 @@ browser-compat: api.PerformanceSoftNavigation.getLargestInteractionContentfulPai
 
 The **`getLargestInteractionContentfulPaint()`** method of the {{domxref("PerformanceSoftNavigation")}} interface returns the current largest {{domxref("InteractionContentfulPaint")}} relevant to this soft navigation.
 
-Some {{Glossary("SPA", "Single Page Applications (SPAs)")}} may paint first, and update the URL afterwards. When measuring {{Glossary("Largest contentful paint", "Largest Contentful Paint (LCP)")}} for {{Glossary("Soft navigation", "soft navigations")}}, developers will want to include these paints, despite them happening before the URL updates. Because any interaction with any paints could in theory also lead to a URL update and thus soft navigation at any point in the future this could be difficult to measure without potentially saving a temporary reference to every interaction's LCP, should it be needed.
+Some {{Glossary("SPA", "Single Page Applications (SPAs)")}} may paint first and update the URL afterwards. Despite this, developers will want to include these paints when measuring {{Glossary("Largest contentful paint", "Largest Contentful Paint (LCP)")}} for {{Glossary("Soft navigation", "soft navigations")}}. Because interaction with any paints could also lead to a URL update and thus a soft navigation at any point in the future, this could be difficult to measure without potentially saving a temporary reference to every interaction's LCP, should it be needed.
 
 The `getLargestInteractionContentfulPaint()` method avoids developers having to do that by providing a means to get the latest, largest `InteractionContentfulPaint` for the soft navigation.
 
