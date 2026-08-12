@@ -93,4 +93,5 @@ Not part of any standard.
 
 ## See also
 
-{{cssxref("mask-repeat", "-webkit-mask-repeat")}}, {{cssxref("-webkit-mask-repeat-y")}}
+- {{cssxref("mask-repeat", "-webkit-mask-repeat")}}
+- {{cssxref("-webkit-mask-repeat-y")}}

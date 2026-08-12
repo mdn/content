@@ -1,12 +1,13 @@
 ---
-title: "trunc: Wasm text instruction"
+title: "trunc: Wasm numeric instruction"
 short-title: trunc
 slug: WebAssembly/Reference/Numeric/trunc
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.trunc
 sidebar: webassemblysidebar
 ---
 
-The **`trunc`** instruction, short for _truncate_, is used for getting the value of a floating point number without its fractional part.
+The **`trunc`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _truncate_, is used for getting the value of a floating point number without its fractional part.
 
 `trunc` differs from [**`floor`**](/en-US/docs/WebAssembly/Reference/Numeric/floor) when used on negative numbers — `floor` will round down in those cases while `trunc` will round up.
 
@@ -135,6 +136,14 @@ The output is as follows:
 {{embedlivesample("simd_trunc", "100%", 100)}}
 
 `2000` is output because this is the result of removing the fractional part from lane 1 of the input value (`2000.1`).
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

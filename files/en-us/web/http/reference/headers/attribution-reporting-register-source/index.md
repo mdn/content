@@ -18,7 +18,7 @@ This header is included as part of a response to a request that contains the {{H
 See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
 > [!NOTE]
-> If the calling site does not have the Attribution Reporting API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment), the `Attribution-Reporting-Register-Source` header is ignored and attribution sources are not registered.
+> If the calling site does not have the Attribution Reporting API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox#enrollment), the `Attribution-Reporting-Register-Source` header is ignored and attribution sources are not registered.
 
 <table class="properties">
   <tbody>

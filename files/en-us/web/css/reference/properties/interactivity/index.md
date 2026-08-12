@@ -30,6 +30,8 @@ interactivity: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `auto`
   - : Selected elements are in their default state in terms of inertness. This usually means that they are interactive, but this is [not always the case](#default_inertness). This is the default value.
 

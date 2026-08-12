@@ -154,7 +154,7 @@ const thenable = {
 Promise.resolve(thenable); // A promise fulfilled with 42
 ```
 
-The `then()` method is responsible for scheduling the execution of the provided `onFulfilled` and `onRejected` callbacks. Its semantics, including error handling and asynchronicity, are precisely defined in the [Promises/A+ specification](https://promisesaplus.com/), and we shall not repeat them here. It's very rare that you need to implement a thenable yourself; even if you are not using native promises, you would probably be using a Promise library such as [Bluebird](http://bluebirdjs.com/).
+The `then()` method is responsible for scheduling the execution of the provided `onFulfilled` and `onRejected` callbacks. Its semantics, including error handling and asynchronicity, are precisely defined in the [Promises/A+ specification](https://promisesaplus.com/), and we shall not repeat them here. It's very rare that you need to implement a thenable yourself; even if you are not using native promises, you would probably be using a Promise library such as [Bluebird](https://www.npmjs.com/package/bluebird).
 
 ### Promise concurrency
 

@@ -77,6 +77,18 @@ You can further nest {{HTMLElement("option")}} elements inside {{HTMLElement("op
 
 For further examples, see [The native form widgets: Drop-down content](/en-US/docs/Learn_web_development/Extensions/Forms/Other_form_controls#drop-down_controls).
 
+### Options inside wrapper elements
+
+The `<select>` element builds its list of options from all `<option>` descendants, not just its direct children.
+This means that options can be wrapped in other elements, such as {{HTMLElement("div")}} elements, and they will still appear as selectable options in the dropdown and be included in form submission.
+Wrapper elements are useful for styling in [customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) but have no effect on the select's behavior: they don't create groups, labels, or separators.
+To group options under a heading, use an {{HTMLElement("optgroup")}}; an {{HTMLElement("option")}} counts as part of an `<optgroup>` if the group is an ancestor, so wrapper elements may also be used inside a group without breaking the association.
+
+> [!NOTE]
+> Browsers with modern parsing behavior preserve all elements written inside a `<select>` in the DOM — including wrapper elements, {{HTMLElement("button")}}, and {{HTMLElement("selectedcontent")}}.
+> Older browsers instead remove non-permitted elements while parsing, keeping only the `<option>`, `<optgroup>`, and `<hr>` structure.
+> As a result, styling, markup, or scripting that depends on the removed elements will not work on older browsers.
+
 ### Selecting multiple options
 
 On a desktop computer, there are a number of ways to select multiple options in a `<select>` element with a `multiple` attribute and a `size` attribute greater than `1`.
