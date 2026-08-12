@@ -164,12 +164,14 @@ new Subclass(); // In some dev tools, it shows Subclass {#privateField: 42, #sub
 A class's constructor can return a different object, which will be used as the new `this` for the derived class constructor. The derived class may then define private fields on that returned object — meaning it is possible to "stamp" private fields onto unrelated objects.
 
 ```js
-class Stamper extends class {
+class Base {
   // A base class whose constructor returns the object it's given
   constructor(obj) {
     return obj;
   }
-} {
+}
+
+class Stamper extends Base {
   // This declaration will "stamp" the private field onto the object
   // returned by the base class constructor
   #stamp = 42;
