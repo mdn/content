@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`column-rule-break`** [CSS](/en-US/docs/Web/CSS) property sets the behavior for breaking column decorations within a given column gap into segments wherever columns intersect row gaps.
+The **`column-rule-break`** [CSS](/en-US/docs/Web/CSS) property sets the behavior for breaking column rules within a given column gap into segments wherever column rules intersect row gaps.
 
 {{InteractiveExample("CSS Demo: rule")}}
 
@@ -95,29 +95,29 @@ column-rule-break: unset;
 This property is specified as a single keyword from the following list:
 
 - `none`
-  - : There are no breaks when column rule intersects a row gap; rather, a single continuous column-rule is painted the whole height of the container, from edge to edge.
+  - : There are no breaks in column rules when they intersect row gaps; rather, a continuous column rule is painted the whole height of the container, from edge to edge.
 - `normal`
   - : In grid and flex containers, behaves as `none`. In multi-col, behaves as `intersection`. This is the default value.
 - `intersection`
-  - : Rules start and end at visible "T" and "cross" intersections.
+  - : Column rules always break when they intersect row gaps, with column rule segments starting and ending at container and gap edges.
 
 ## Description
 
-The `column-rule-break` property is used to set the behavior for breaking column rules into segments when it crosses a row gap at visible "T" and "cross" intersections.
+The `column-rule-break` property sets the behavior for whether or not to break column rules into segments when they cross row gaps.
 
-Column rules are painted within a column gap as one or more segments, with segments occurring between adjacent grid items in separate columns, between items or flex line in flex layout, depending on the `flex-direction`, or between columns in multi-col layouts.
+Column rules are painted within a column gap as one or more segments, with segments occurring between adjacent grid items in separate columns, between flex items or flex lines in flex layouts depending on the `flex-direction`, or between columns in multi-col layouts.
 
 The `column-rule-break` property only determines if the break occurs. By default, the break between column rule segments is the width of the row gap, as each segments starts and ends at the edge of the gap (or edge of the container). If the row gap is `0`, this break may not be visible. The end positions can be controlled with the {{cssxref("column-rule-inset")}} properties.
 
-If set to `none`, there are no breaks. In this case, the column rule line is continuos, and any `column-rule-inset` values only effect the left and right edges of the column rule at the container's edge. When there are breaks, the `column-rule-inset` properties effect the start and end of every column rule segment.
+If `column-rule-break` is set to `none`, there are no breaks. In this case, the column rule line is continuous, and any `column-rule-inset` values only affect the left and right edges of the column rule at the container's edge. When there are breaks, the `column-rule-inset` properties affect the start and end of every column rule segment.
 
-The `column-rule-break`, along with the {{cssxref("row-rule-break")}} property, can be set using the {{cssxref("rule-break")}} shorthand.
+The `column-rule-break` property, along with the {{cssxref("row-rule-break")}} property, can be set using the {{cssxref("rule-break")}} shorthand.
 
-Whether a column rule is by default composed of a single continuous segment that spans the entire width of the container or if the column rule is composed of multiple segments, breaking at each row gap edge, depends on the container type.
+Whether a column rule is by default composed of a single continuous segment or segments that break when intersecting row gaps depends on the container type.
 
 ### Grid containers
 
-In grid containers, by default, column rule segments continue through visible "cross" intersections. Setting `column-rule-break: intersection` will force the segments to break at every row gap, where they would otherwise cross.
+In grid containers, by default, column rule segments continue through row gap intersections, equivalent to `column-rule-break: none`. Setting `column-rule-break: intersection` forces the segments to break at every row gap they would otherwise cross.
 
 ```html hidden
 <h1>Default rule breaks in grid</h1>
@@ -176,7 +176,7 @@ By default, there are no column rule breaks. Check the checkbox to set the `colu
 
 ### Flex containers
 
-In flexbox, rule segments do not start or end at visible "T". When the `flex-direction` is `row` or `row-reverse`, the column rules are painted between flex items, with the column segments starting and ending at the edges of the row gaps. When the `flex-direction` is `column` or `column-reverse`, the column rule is in the gap between flex lines. By default, gap decorations between flex lines are continuous, with the column rule spanning the height of the container in horizontal writing modes.
+In flexbox, by default, gap rules between flex items span the item only while gap rules between flex lines are continuous. Therefore, whether the column rules break at every row gap by default depends on the `flex-direction`. In horizontal writing modes, when set to `row` or `row-reverse`, the column rule breaks at every row gap, equivalent to `column-rule-break: intersection`. When the `flex-direction` is `column` or `column-reverse`, the column rule is continuous by default, equivalent to `column-rule-break: none`.
 
 ```html hidden
 <h1>Default rule breaks in flexbox</h1>
@@ -262,11 +262,11 @@ section {
 
 {{EmbedLiveSample("Flex containers", "", "300")}}
 
-Whether the column rules break at every row gap by default depends on the `flex-direction`. When set to `row` or `row-reverse`, the column rule breaks at every row gap. When the `flex-direction` is `column` or `column-reverse`, the column rule is continuous by default. Setting the `column-rule-break` to `intersection`, only impacts the column rules in the `column` and `column-reverse` scenarios.
+In horizontal wrting modes, setting the `column-rule-break` to `intersection` only impacts the column rules in the `column` and `column-reverse` scenarios.
 
 ### Multi-col containers
 
-In multi-col containers, the default `normal` value behaves the same as `intersection`. While the row decorations are continuous by default, column rules breaks at every intersection. Column rules break into segments at every row gap, with each segment starting and ending at the edge of the gap. These start and end positions can be changed with the `column-rule-inset` properties.
+In multi-col containers, the default `normal` value behaves the same as `intersection`. While the row decorations are continuous by default, column rules break at every intersection. Column rules break into segments at every row gap, with each segment starting and ending at the edge of the gap. These start and end positions can be changed with the `column-rule-inset` properties.
 
 ```html hidden
 <h1>Default rule breaks in multi-col</h1>
@@ -365,11 +365,11 @@ If you select `none`, the column rule will no longer break into segments; rather
 
 ### Basic usage
 
-In this example, we use the `column-rule-break` property to break each rule segment in a gap container so column rule segments are created between row gaps. Changing the `row-gap` property will change the size of the segments.
+In this example, we use the `column-rule-break` property to break each rule segment in a grid container so column rule segments are created between row gaps. Changing the `row-gap` property will change the size of the segments.
 
 #### HTML
 
-We create a list of 50 items, and a slider to select the gap width. Most of the HTML is hidden for brevity.
+We create a list of 50 items and a slider to select the row gap width. Most of the HTML is hidden for brevity.
 
 ```html
 <ul>
@@ -480,7 +480,7 @@ const gap = document.getElementById("gap");
 const ul = document.getElementById("ul");
 const output = document.getElementById("o");
 
-gap.addEventListener("change", () => {
+gap.addEventListener("input", () => {
   o.innerText = ul.style.rowGap = `${gap.value}px`;
 });
 ```
@@ -489,7 +489,7 @@ gap.addEventListener("change", () => {
 
 {{EmbedLiveSample("Basic", "", "600")}}
 
-Make the row gap wider and note how the break between column segments grows. Bring the row gap width down to `0px`, and notice how the column decoration appears continuous. It isn't!
+Make the row gap wider and note how the break between column segments grows. Bring the row gap width down to `0px`, and notice how the column decoration appears continuous. It isn't! The `0px` gap between segments may not be visible, but the segments still start and end at the gap, so any offsets set with `column-rule-inset` properties will still be applied.
 
 ## Specifications
 
