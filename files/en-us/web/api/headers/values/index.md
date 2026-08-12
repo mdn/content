@@ -47,6 +47,10 @@ text/xml
 Accept-Language
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

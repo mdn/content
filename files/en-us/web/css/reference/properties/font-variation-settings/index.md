@@ -1,5 +1,6 @@
 ---
-title: font-variation-settings
+title: "`font-variation-settings` CSS property"
+short-title: font-variation-settings
 slug: Web/CSS/Reference/Properties/font-variation-settings
 page-type: css-property
 browser-compat: css.properties.font-variation-settings
@@ -67,7 +68,7 @@ font-variation-settings: unset;
 
 ### Values
 
-This property's value can take one of two forms:
+This property is specified as `normal` or a comma-separated list of string-number value pairs:
 
 - `normal`
   - : Text is laid out using default settings.

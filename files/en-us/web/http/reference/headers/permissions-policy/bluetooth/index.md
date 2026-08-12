@@ -30,35 +30,36 @@ Permissions-Policy: bluetooth=<allowlist>;
 
 ## Default policy
 
-The default allowlist for `bluetooth` is `self`.
+The default allowlist for `bluetooth` is `self`. The top-level browsing context and same-origin iframes are allowed access to the `bluetooth` feature by default.
 
 ## Examples
 
-### General example
+### Basic usage
 
-SecureCorp Inc. wants to disable the Web Bluetooth API within all browsing contexts except for its own origin and those whose origin is `https://example.com`.
-It can do so by delivering the following HTTP response header to define a Permissions Policy:
+SecureCorp Inc. wants to disallow `bluetooth` within all cross-origin iframes except those whose origin is `https://example.com`. It can do so by delivering the following HTTP response header to define a Permissions Policy:
 
 ```http
 Permissions-Policy: bluetooth=(self "https://example.com")
 ```
 
-### With an \<iframe> element
+SecureCorp Inc. must also include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on each `<iframe>` element where `bluetooth` is to be allowed:
 
-FastCorp Inc. wants to disable `bluetooth` for all cross-origin child frames, except for a specific `<iframe>`.
-It can do so by delivering the following HTTP response header to define a Permissions Policy:
-
-```http
-Permissions-Policy: bluetooth=(self https://other.com/blue)
+```html
+<iframe src="https://example.com/blue" allow="bluetooth"></iframe>
 ```
 
-Then include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on the `<iframe>` element:
+> [!NOTE]
+> Specifying the `Permissions-Policy` header in this manner disallows `bluetooth` for other origins, even if they are allowed by the `<iframe>` `allow` attribute.
+
+### Using the default policy
+
+If an allowlist for `bluetooth` is not defined by a `Permissions-Policy` response header, user agents will apply the default allowlist `self`. In this mode, `bluetooth` is automatically allowed in the top-level browsing context and same-origin iframes, but not in cross-origin iframes.
+
+To allow `bluetooth` in a cross-origin iframe, include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on the `<iframe>` element:
 
 ```html
 <iframe src="https://other.com/blue" allow="bluetooth"></iframe>
 ```
-
-`<iframe>` attributes can selectively enable features in certain frames, and not in others, even if those frames contain documents from the same origin.
 
 ## Specifications
 

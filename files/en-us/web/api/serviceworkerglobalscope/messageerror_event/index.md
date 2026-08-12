@@ -28,21 +28,6 @@ An {{domxref("ExtendableMessageEvent")}}. Inherits from {{domxref("ExtendableEve
 
 {{InheritanceDiagram("ExtendableMessageEvent")}}
 
-## Event properties
-
-_Inherits properties from its parent, {{domxref("ExtendableEvent")}}_.
-
-- {{domxref("ExtendableMessageEvent.data")}} {{ReadOnlyInline}}
-  - : Returns the event's data. It can be any data type. If dispatched in `messageerror` event, the property will be `null`.
-- {{domxref("ExtendableMessageEvent.origin")}} {{ReadOnlyInline}}
-  - : Returns the origin of the {{domxref("Client")}} that sent the message.
-- {{domxref("ExtendableMessageEvent.lastEventId")}} {{ReadOnlyInline}}
-  - : Represents, in [server-sent events](/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events), the last event ID of the event source.
-- {{domxref("ExtendableMessageEvent.source")}} {{ReadOnlyInline}}
-  - : Returns a reference to the {{domxref("Client")}} object that sent the message.
-- {{domxref("ExtendableMessageEvent.ports")}} {{ReadOnlyInline}}
-  - : Returns the array containing the {{domxref("MessagePort")}} objects representing the ports of the associated message channel.
-
 ## Examples
 
 In the below example a page gets a handle to the {{domxref("ServiceWorker")}} object via {{domxref("ServiceWorkerRegistration.active")}}, and then calls its `postMessage()` function.

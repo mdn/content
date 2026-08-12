@@ -1,5 +1,6 @@
 ---
-title: "<dir>: The Directory element"
+title: "`<dir>` HTML directory element"
+short-title: <dir>
 slug: Web/HTML/Reference/Elements/dir
 page-type: html-element
 status:
@@ -23,7 +24,7 @@ This element implements the {{domxref("HTMLDirectoryElement")}} interface.
 
 Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
-- `compact` {{Deprecated_Inline}}
+- `compact` {{Deprecated_Inline}} {{non-standard_inline}}
   - : This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute depends on the user agent and it doesn't work in all browsers.
 
 <!-- ## Technical summary -->

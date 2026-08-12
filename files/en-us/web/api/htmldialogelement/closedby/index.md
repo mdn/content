@@ -22,7 +22,7 @@ A string; possible values are:
 - `none`
   - : The dialog can only be dismissed with a developer-specified mechanism.
 
-### Default behaviour
+### Default behavior
 
 If the `closedby` attribute is absent or invalid, it falls back to the **Auto** state. In the **Auto** state:
 

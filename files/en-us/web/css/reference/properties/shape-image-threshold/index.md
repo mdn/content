@@ -1,5 +1,6 @@
 ---
-title: shape-image-threshold
+title: "`shape-image-threshold` CSS property"
+short-title: shape-image-threshold
 slug: Web/CSS/Reference/Properties/shape-image-threshold
 page-type: css-property
 browser-compat: css.properties.shape-image-threshold
@@ -45,11 +46,11 @@ shape-image-threshold: 0.6;
   <div class="example-container">
     <div class="transition-all" id="example-element"></div>
     We had agreed, my companion and I, that I should call for him at his house,
-    after dinner, not later than eleven o’clock. This athletic young Frenchman
-    belongs to a small set of Parisian sportsmen, who have taken up “ballooning”
+    after dinner, not later than eleven o'clock. This athletic young Frenchman
+    belongs to a small set of Parisian sportsmen, who have taken up "ballooning"
     as a pastime. After having exhausted all the sensations that are to be found
-    in ordinary sports, even those of “automobiling” at a breakneck speed, the
-    members of the “Aéro Club” now seek in the air, where they indulge in all
+    in ordinary sports, even those of "automobiling" at a breakneck speed, the
+    members of the "Aéro Club" now seek in the air, where they indulge in all
     kinds of daring feats, the nerve-racking excitement that they have ceased to
     find on earth.
   </div>

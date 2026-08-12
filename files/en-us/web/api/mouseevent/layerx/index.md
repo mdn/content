@@ -8,7 +8,7 @@ status:
 browser-compat: api.MouseEvent.layerX
 ---
 
-{{APIRef("UI Events")}}{{Non-standard_Header}}
+{{APIRef("Pointer Events")}}{{Non-standard_Header}}
 
 The **`MouseEvent.layerX`** read-only property returns the
 horizontal coordinate of the event relative to the current layer.

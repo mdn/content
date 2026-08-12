@@ -1,5 +1,6 @@
 ---
-title: :-moz-locale-dir(rtl)
+title: "`:-moz-locale-dir(rtl)` CSS pseudo-class"
+short-title: :-moz-locale-dir(rtl)
 slug: Web/CSS/Reference/Selectors/:-moz-locale-dir_rtl
 page-type: css-pseudo-class
 status:

@@ -1,5 +1,6 @@
 ---
-title: linear-gradient()
+title: "`linear-gradient()` CSS function"
+short-title: linear-gradient()
 slug: Web/CSS/Reference/Values/gradient/linear-gradient
 page-type: css-function
 browser-compat: css.types.gradient.linear-gradient

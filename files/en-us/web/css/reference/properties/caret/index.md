@@ -1,5 +1,6 @@
 ---
-title: caret
+title: "`caret` CSS property"
+short-title: caret
 slug: Web/CSS/Reference/Properties/caret
 page-type: css-shorthand-property
 status:

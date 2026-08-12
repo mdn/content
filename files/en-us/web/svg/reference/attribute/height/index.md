@@ -3,11 +3,11 @@ title: height
 slug: Web/SVG/Reference/Attribute/height
 page-type: svg-attribute
 spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-height
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-height
-  - https://drafts.fxtf.org/css-masking-1/#element-attrdef-mask-height
-  - https://svgwg.org/svg2-draft/geometry.html#Sizing
-  - https://svgwg.org/svg2-draft/pservers.html#PatternElementHeightAttribute
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-filter-height
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-filter-primitive-height
+  - https://drafts.csswg.org/css-masking-1/#element-attrdef-mask-height
+  - https://w3c.github.io/svgwg/svg2-draft/geometry.html#Sizing
+  - https://w3c.github.io/svgwg/svg2-draft/pservers.html#PatternElementHeightAttribute
 sidebar: svgref
 ---
 

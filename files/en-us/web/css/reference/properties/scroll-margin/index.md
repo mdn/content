@@ -1,5 +1,6 @@
 ---
-title: scroll-margin
+title: "`scroll-margin` CSS property"
+short-title: scroll-margin
 slug: Web/CSS/Reference/Properties/scroll-margin
 page-type: css-shorthand-property
 browser-compat: css.properties.scroll-margin
@@ -209,5 +210,5 @@ Try it for yourself:
 
 ## See also
 
-- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap)
-- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)
+- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) module
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap) on web.dev (2018)

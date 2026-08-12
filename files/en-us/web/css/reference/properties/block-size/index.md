@@ -1,5 +1,6 @@
 ---
-title: block-size
+title: "`block-size` CSS property"
+short-title: block-size
 slug: Web/CSS/Reference/Properties/block-size
 page-type: css-property
 browser-compat: css.properties.block-size

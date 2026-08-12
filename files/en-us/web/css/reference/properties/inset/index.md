@@ -1,5 +1,6 @@
 ---
-title: inset
+title: "`inset` CSS property"
+short-title: inset
 slug: Web/CSS/Reference/Properties/inset
 page-type: css-shorthand-property
 browser-compat: css.properties.inset
@@ -104,7 +105,7 @@ inset: unset;
 
 ### Values
 
-The `inset` property takes the same values as the {{cssxref("left")}} property.
+The `inset` property takes the same values as the {{cssxref("top")}} property.
 
 ## Formal definition
 

@@ -35,36 +35,36 @@ new WebTransport(url, options)
     - `requireUnreliable` {{optional_inline}}
       - : A boolean value.
         If `true`, the connection cannot be established over HTTP/2 if an HTTP/3 connection is not possible.
-        By default the value is `false`.
+        By default, the value is `false`.
     - `serverCertificateHashes` {{optional_inline}}
       - : An array of objects, each defining the hash value of a server certificate along with the name of the algorithm that was used to generate it.
         This option is only supported for transports using dedicated connections (`allowPooling` is `false`).
 
         If specified, the browser will attempt to authenticate the certificate provided by the server against the provided certificate hash(es) in order to connect, instead of using the Web public key infrastructure (PKI).
-        If any hashes match, the browser knows that the server has possession of a trusted certificate and will connect as normal.
-        If empty the user agent uses the same PKI certificate verification procedures it would use for a normal fetch operation.
+        If any hashes match, the browser knows that the server possesses a trusted certificate and will connect as normal.
+        If empty, the user agent uses the same PKI certificate verification procedures it would use for a normal fetch operation.
 
-        This feature allows developers to connect to WebTransport servers that would normally find obtaining a publicly trusted certificate challenging, such as hosts that are not publicly routable, or ephemeral hosts like virtual machines.
+        This feature allows developers to connect to WebTransport servers that would normally find it challenging to obtain a publicly trusted certificate, such as hosts that are not publicly routable, or ephemeral hosts like virtual machines.
 
         > [!NOTE]
         > The web application might typically fetch the hashes from a trusted intermediary.
         > For example, you might use a cloud provider to provision VMs that run your WebTransport servers.
-        > The provider has trusted access to the server and can request its certificate, generate hashes, and provide these to the application via an API (which is mediated via PKI), or a cloud console.
+        > The provider has trusted access to the server and can request its certificate, generate hashes, and provide these to the application via an API (mediated via PKI) or a cloud console.
         > The web application can now connect directly to the VM-hosted server using the supplied hashes, even though the VM itself does not have a long-lived TLS certificate.
 
-        The certificate must be an X.509v3 certificate that has a validity period of less that 2 weeks, and the current time must be within that validity period.
+        The certificate must be an X.509v3 certificate with a validity period of less than 2 weeks, and the current time must be within that validity period.
         The format of the public key in the certificate depends on the implementation, but must minimally include ECDSA with the secp256r1 (NIST P-256) named group, and must not include RSA keys.
-        An ECSDA key is therefore an interoperable default public key format.
+        An ECSDA key is, therefore, an interoperable default public key format.
         A user agent may add further requirements; these will be listed in the [browser compatibility](#browser_compatibility) section if known.
 
         Each object in the array has the following properties:
         - `algorithm`
           - : A string with the value: `sha-256` (case-insensitive).
             Note that this string represents the algorithm to use to verify the hash, and that any hash using an unknown algorithm will be ignored.
-            At time of writing, `SHA-256` is the only hash algorithm listed in the specification.
+            At the time of writing, `SHA-256` is the only hash algorithm listed in the specification.
 
         - `value`
-          - : An [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) or {{jsxref("TypedArray")}} containing the hash value.
+          - : An [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), {{jsxref("TypedArray")}} or [`DataView`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView) containing the hash value.
 
 ### Exceptions
 
@@ -79,11 +79,11 @@ new WebTransport(url, options)
 
 ### Connecting with default options
 
-This example shows how you might construct a `WebTransport` using just a URL, wait for it to connect, and then monitor the transport and report when it has closed.
+This example shows how you might construct a `WebTransport` using just a URL, wait for it to connect, and then monitor the transport and report when it closes.
 
-First we define an `async` method that takes a URL and uses it to construct the `WebTransport` object.
-No constructor options are specified, so the connection uses default options: dedicated connection, support for unreliable transports is not required, default congestion control, and normal Web PKI authentication with the server.
-Note that the scheme needs to be HTTPS, and the port number needs to be explicitly specified.
+First, we define an `async` method that takes a URL and uses it to construct the `WebTransport` object.
+No constructor options are specified, so the connection uses default options: dedicated connection, support for unreliable transports isn't required, default congestion control, and normal Web PKI authentication with the server.
+Note that the scheme must be HTTPS, and the port number must be explicitly specified.
 
 Once the {{domxref("WebTransport.ready")}} promise fulfills, you can start using the connection.
 
@@ -102,7 +102,7 @@ You can respond to the connection closing by waiting for the {{domxref("WebTrans
 Errors returned by `WebTransport` operations are of type {{domxref("WebTransportError")}}, and contain additional data on top of the standard {{domxref("DOMException")}} set.
 
 The `closeTransport()` method below shows how.
-Within a `try...catch` block it uses `await` to wait for the `closed` promise to fulfill or reject, and then reports whether or not the connection closed intentionally or due to error.
+Within a `try...catch` block, it uses `await` to wait for the `closed` promise to fulfill or reject, and then reports whether or not the connection closed intentionally or due to an error.
 
 ```js
 async function closeTransport(transport) {
@@ -137,19 +137,31 @@ useTransport(url);
 ### Connecting with server certificate hashes
 
 The example below shows the code to construct a `WebTransport` that specifies the `serverCertificateHashes` option.
-In this case the array contains two hashes, both encoded using the SHA-256 algorithm.
+In this case, the array contains two hashes, both encoded using the SHA-256 algorithm.
 Note that the `allowPooling` option must be `false` (the default).
+
+The `value` of each hash can be an `ArrayBuffer`, a `TypedArray` (for example, a `Uint8Array`), or a `DataView`. The example below represents each SHA-256 hash value as a `Uint8Array`; for example, the hexadecimal string `5a1559...` corresponds to the byte values `0x5a`, `0x15`, `0x59`, and so on.
 
 ```js
 const transport = new WebTransport(url, {
   serverCertificateHashes: [
     {
+      // 5a155927eba7996228455e4721e6fe5f739ae15db6915d765e5db302b4f8a274
       algorithm: "sha-256",
-      value: "5a155927eba7996228455e4721e6fe5f739ae15db6915d765e5db302b4f8a274",
+      value: new Uint8Array([
+        0x5a, 0x15, 0x59, 0x27, 0xeb, 0xa7, 0x99, 0x62, 0x28, 0x45, 0x5e, 0x47,
+        0x21, 0xe6, 0xfe, 0x5f, 0x73, 0x9a, 0xe1, 0x5d, 0xb6, 0x91, 0x5d, 0x76,
+        0x5e, 0x5d, 0xb3, 0x02, 0xb4, 0xf8, 0xa2, 0x74,
+      ]),
     },
     {
+      // 7d7094e7a8d3097feff3b5ee84fa5cab58e4de78f38bcfdee5ea8b51f4bfa8fd
       algorithm: "sha-256",
-      value: "7d7094e7a8d3097feff3b5ee84fa5cab58e4de78f38bcfdee5ea8b51f4bfa8fd",
+      value: new Uint8Array([
+        0x7d, 0x70, 0x94, 0xe7, 0xa8, 0xd3, 0x09, 0x7f, 0xef, 0xf3, 0xb5, 0xee,
+        0x84, 0xfa, 0x5c, 0xab, 0x58, 0xe4, 0xde, 0x78, 0xf3, 0x8b, 0xcf, 0xde,
+        0xe5, 0xea, 0x8b, 0x51, 0xf4, 0xbf, 0xa8, 0xfd,
+      ]),
     },
   ],
 });

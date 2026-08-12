@@ -316,6 +316,9 @@ First, here's code that rotates a point around the origin without using matrices
 // Manually rotating a point about the origin without matrices
 const point = [10, 2];
 
+// Calculate the angle from the positive x-axis, counterclockwise, in radians
+const angleInRadians = Math.atan2(point[1], point[0]);
+
 // Calculate the distance from the origin
 const distance = Math.sqrt(point[0] * point[0] + point[1] * point[1]);
 
@@ -323,8 +326,8 @@ const distance = Math.sqrt(point[0] * point[0] + point[1] * point[1]);
 const rotationInRadians = Math.PI / 3;
 
 const transformedPoint = [
-  Math.cos(rotationInRadians) * distance,
-  Math.sin(rotationInRadians) * distance,
+  Math.cos(angleInRadians + rotationInRadians) * distance,
+  Math.sin(angleInRadians + rotationInRadians) * distance,
 ];
 ```
 

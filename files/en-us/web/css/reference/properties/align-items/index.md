@@ -1,5 +1,6 @@
 ---
-title: align-items
+title: "`align-items` CSS property"
+short-title: align-items
 slug: Web/CSS/Reference/Properties/align-items
 page-type: css-property
 browser-compat: css.properties.align-items
@@ -92,6 +93,8 @@ align-items: unset;
 ```
 
 ### Values
+
+This property is specified as one or two of the following keyword values:
 
 - `normal`
   - : The effect of this keyword is dependent of the layout mode we are in:

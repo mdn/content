@@ -1,5 +1,6 @@
 ---
-title: ::-webkit-search-cancel-button
+title: "`::-webkit-search-cancel-button` CSS pseudo-element"
+short-title: ::-webkit-search-cancel-button
 slug: Web/CSS/Reference/Selectors/::-webkit-search-cancel-button
 page-type: css-pseudo-element
 status:

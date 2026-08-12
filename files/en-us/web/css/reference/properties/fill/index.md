@@ -1,5 +1,6 @@
 ---
-title: fill
+title: "`fill` CSS property"
+short-title: fill
 slug: Web/CSS/Reference/Properties/fill
 page-type: css-property
 browser-compat: css.properties.fill
@@ -44,6 +45,8 @@ fill: unset;
 ```
 
 ### Values
+
+This property is specified as one keyword, `<color>`, or `url()` with an optional `<color>`:
 
 - `none`
   - : No `fill` is painted; the areas inside the stroke, if any, are transparent.

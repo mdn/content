@@ -4,10 +4,11 @@ slug: Web/API/Shared_Storage_API
 page-type: web-api-overview
 status:
   - deprecated
+  - non-standard
 browser-compat: api.SharedStorage
 ---
 
-{{DefaultAPISidebar("Shared Storage API")}}{{deprecated_header}}
+{{DefaultAPISidebar("Shared Storage API")}}{{deprecated_header}}{{non-standard_header}}
 
 > [!WARNING]
 > This feature is currently opposed by one browser vendor.
@@ -251,7 +252,7 @@ Lastly, data in `localStorage` persists until it is manually cleared. `sessionSt
 
 ## Enrollment and local testing
 
-To use the Shared Storage API in your sites, you must specify it in the [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment). If you don't, the Shared Storage API methods won't run successfully.
+To use the Shared Storage API in your sites, you must specify it in the [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox#enrollment). If you don't, the Shared Storage API methods won't run successfully.
 
 You can test your Shared Storage API code locally without enrollment. To allow local testing, enable the following Chrome developer flag:
 

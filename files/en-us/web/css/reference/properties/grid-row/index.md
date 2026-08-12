@@ -1,5 +1,6 @@
 ---
-title: grid-row
+title: "`grid-row` CSS property"
+short-title: grid-row
 slug: Web/CSS/Reference/Properties/grid-row
 page-type: css-shorthand-property
 browser-compat: css.properties.grid-row

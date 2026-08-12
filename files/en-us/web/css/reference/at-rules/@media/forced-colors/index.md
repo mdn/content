@@ -1,5 +1,6 @@
 ---
-title: forced-colors
+title: "`forced-colors` CSS media feature"
+short-title: forced-colors
 slug: Web/CSS/Reference/At-rules/@media/forced-colors
 page-type: css-media-feature
 browser-compat: css.at-rules.media.forced-colors

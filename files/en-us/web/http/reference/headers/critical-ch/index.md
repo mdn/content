@@ -5,11 +5,12 @@ slug: Web/HTTP/Reference/Headers/Critical-CH
 page-type: http-header
 status:
   - experimental
+  - non-standard
 browser-compat: http.headers.Critical-CH
 sidebar: http
 ---
 
-{{SeeCompatTable}}{{SecureContext_Header}}
+{{SeeCompatTable}}{{SecureContext_Header}}{{non-standard_header}}
 
 The HTTP **`Critical-CH`** {{Glossary("response header")}} is used along with {{HTTPHeader("Accept-CH")}} to identify the accepted [client hints](/en-US/docs/Web/HTTP/Guides/Client_hints) that are [critical](/en-US/docs/Web/HTTP/Guides/Client_hints#critical_client_hints).
 

@@ -1,5 +1,6 @@
 ---
-title: translateX()
+title: "`translateX()` CSS function"
+short-title: translateX()
 slug: Web/CSS/Reference/Values/transform-function/translateX
 page-type: css-function
 browser-compat: css.types.transform-function.translateX

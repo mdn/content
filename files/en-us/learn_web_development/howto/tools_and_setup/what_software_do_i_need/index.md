@@ -159,7 +159,7 @@ All desktop operating systems come with a basic text editor. These editors are a
       <td>ChromeOS</td>
       <td>
         <ul>
-          <li><a href="https://en.wikipedia.org/wiki/Text_(Chrome_app)">Text</a></li>
+          <li><a href="https://github.com/GoogleChromeLabs/text-app">Text</a></li>
         </ul>
       </td>
       <td>

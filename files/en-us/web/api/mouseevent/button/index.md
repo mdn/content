@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.MouseEvent.button
 ---
 
-{{APIRef("UI Events")}}
+{{APIRef("Pointer Events")}}
 
 The **`MouseEvent.button`** read-only property indicates which button was pressed or released on the mouse to trigger the event.
 

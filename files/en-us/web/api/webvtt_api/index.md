@@ -53,6 +53,8 @@ Most important WebVTT features can be accessed using either the file format or W
 
 ### Related interfaces
 
+- {{domxref("DataCue")}}
+  - : Represents a cue for associating arbitrary timed data (rather than text) with a media resource, such as in-band event messages.
 - {{domxref("TrackEvent")}}
   - : Part of the HTML DOM API, this is the interface for the `addtrack` and `removetrack` events that are fired when a track is added or removed from {{domxref("TextTrackList")}} (or more generally, when a track is added/removed from an HTML media element).
 

@@ -54,6 +54,10 @@ The result is:
 2
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

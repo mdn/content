@@ -29,9 +29,14 @@ pre-commit:
       glob: "files/**/*.md"
       run: node scripts/log-url-issues.js
 
-    - name: Front matter tests
-      glob: "tests/**/*.*"
-      run: npm run test:front-matter-linter
+    - name: Run unit tests
+      glob:
+        - "*.*"
+        - "scripts/**"
+        - "tests/**"
+      exclude:
+        - "*.md"
+      run: npm test
 
     - name: Fix markdown
       glob: "*.md"

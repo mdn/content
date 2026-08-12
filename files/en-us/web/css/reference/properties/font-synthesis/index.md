@@ -1,5 +1,6 @@
 ---
-title: font-synthesis
+title: "`font-synthesis` CSS property"
+short-title: font-synthesis
 slug: Web/CSS/Reference/Properties/font-synthesis
 page-type: css-shorthand-property
 browser-compat: css.properties.font-synthesis
@@ -120,6 +121,8 @@ font-synthesis: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `none`
   - : Indicates that no bold, italic, or small-caps typeface may be synthesized by the browser.

@@ -1,5 +1,5 @@
 ---
-title: HTML spellcheck global attribute
+title: "`spellcheck` HTML global attribute"
 short-title: spellcheck
 slug: Web/HTML/Reference/Global_attributes/spellcheck
 page-type: html-attribute
@@ -18,12 +18,10 @@ The **`spellcheck`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_at
 
 ```html interactive-example
 <textarea spellcheck="true">
-This exampull will be checkd fur spellung when you try to edit it.</textarea
->
+This exampull will be checkd fur spellung when you try to edit it.</textarea>
 
 <textarea spellcheck="false">
-This exampull will nut be checkd fur spellung when you try to edit it.</textarea
->
+This exampull will nut be checkd fur spellung when you try to edit it.</textarea>
 ```
 
 It may have the following values:

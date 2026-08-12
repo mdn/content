@@ -1,5 +1,6 @@
 ---
-title: :-moz-broken
+title: "`:-moz-broken` CSS pseudo-class"
+short-title: :-moz-broken
 slug: Web/CSS/Reference/Selectors/:-moz-broken
 page-type: css-pseudo-class
 status:

@@ -1,5 +1,6 @@
 ---
-title: scroll-target-group
+title: "`scroll-target-group` CSS property"
+short-title: scroll-target-group
 slug: Web/CSS/Reference/Properties/scroll-target-group
 page-type: css-property
 status:

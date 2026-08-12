@@ -1,5 +1,6 @@
 ---
-title: margin-left
+title: "`margin-left` CSS property"
+short-title: margin-left
 slug: Web/CSS/Reference/Properties/margin-left
 page-type: css-property
 browser-compat: css.properties.margin-left

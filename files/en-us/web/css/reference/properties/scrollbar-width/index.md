@@ -1,5 +1,6 @@
 ---
-title: scrollbar-width
+title: "`scrollbar-width` CSS property"
+short-title: scrollbar-width
 slug: Web/CSS/Reference/Properties/scrollbar-width
 page-type: css-property
 browser-compat: css.properties.scrollbar-width

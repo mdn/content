@@ -141,7 +141,9 @@ Lazy loading has historically been handled using JavaScript, but browsers now ha
 
 See [Browser-level image lazy loading for the web](https://web.dev/articles/browser-level-image-lazy-loading) on web.dev for detailed information.
 
-You can also lazy load video content by using the `preload` attribute. For example:
+### Lazy loading video and audio
+
+You can also lazy load video content until the video is played, by using the `preload` attribute. For example:
 
 ```html
 <video controls preload="none" poster="poster.jpg">
@@ -151,6 +153,26 @@ You can also lazy load video content by using the `preload` attribute. For examp
 ```
 
 Giving `preload` a value of `none` tells the browser to not preload any of the video data before the user decides to play it, which is obviously good for performance. Instead, it will just show the image indicated by the `poster` attribute. Different browsers have different default video loading behavior, so it is good to be explicit.
+
+Giving `preload` a value of `metadata` asks the browser to download the minimal data needed to display the video before playing (for example the length, dimensions, and maybe initial frame).
+
+The `loading` attribute can further enhance lazy loading for videos by deferring loading of any video data, regardless of the `preload` value, as well as deferring loading of the `poster` image, until the video is near the viewport (at which point the `preload` value is used as per usual).
+
+```html
+<video controls preload="none" poster="poster.jpg" loading="lazy">
+  <source src="video.webm" type="video/webm" />
+  <source src="video.mp4" type="video/mp4" />
+</video>
+```
+
+This also can be used with audio content:
+
+```html
+<audio
+  controls
+  src="/shared-assets/audio/t-rex-roar.mp3"
+  loading="lazy"></audio>
+```
 
 See [Fast playback with audio and video preload](https://web.dev/articles/fast-playback-with-preload) on web.dev for detailed information.
 

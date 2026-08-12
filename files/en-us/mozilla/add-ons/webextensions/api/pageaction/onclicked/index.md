@@ -8,7 +8,7 @@ sidebar: addonsidebar
 
 Fired when a page action icon is clicked. This event will not fire if the page action has a popup.
 
-To define a right-click action, use the {{WebExtAPIRef('contextMenus')}} API with the "page_action" {{WebExtAPIRef('contextMenus/ContextType', 'context type', '', 'nocode')}}.
+To define a right-click action, use the {{WebExtAPIRef('menus')}} API with the "page_action" {{WebExtAPIRef('menus/ContextType', 'context type', '', 'nocode')}}.
 
 ## Syntax
 

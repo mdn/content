@@ -1,5 +1,6 @@
 ---
-title: ::part()
+title: "`::part()` CSS pseudo-element"
+short-title: ::part()
 slug: Web/CSS/Reference/Selectors/::part
 page-type: css-pseudo-element
 browser-compat: css.selectors.part

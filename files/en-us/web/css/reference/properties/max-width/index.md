@@ -1,5 +1,6 @@
 ---
-title: max-width
+title: "`max-width` CSS property"
+short-title: max-width
 slug: Web/CSS/Reference/Properties/max-width
 page-type: css-property
 browser-compat: css.properties.max-width

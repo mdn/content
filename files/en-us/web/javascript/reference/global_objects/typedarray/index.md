@@ -232,7 +232,7 @@ These methods are defined on the `TypedArray` prototype object and are thus shar
 - {{jsxref("TypedArray.prototype.entries()")}}
   - : Returns a new _array iterator_ object that contains the key/value pairs for each index in the array. See also {{jsxref("Array.prototype.entries()")}}.
 - {{jsxref("TypedArray.prototype.every()")}}
-  - : Returns `false` if it finds one element in the array that does not satisfy the provided testing function. Otherwise, it returns `true`. See also {{jsxref("Array.prototype.every()")}}.
+  - : Returns `false` if it finds an element in the array that does not satisfy the provided testing function. Otherwise, it returns `true`. See also {{jsxref("Array.prototype.every()")}}.
 - {{jsxref("TypedArray.prototype.fill()")}}
   - : Fills all the elements of an array from a start index to an end index with a static value. See also {{jsxref("Array.prototype.fill()")}}.
 - {{jsxref("TypedArray.prototype.filter()")}}
@@ -252,7 +252,7 @@ These methods are defined on the `TypedArray` prototype object and are thus shar
 - {{jsxref("TypedArray.prototype.indexOf()")}}
   - : Returns the first (least) index of an element within the array equal to the specified value, or `-1` if none is found. See also {{jsxref("Array.prototype.indexOf()")}}.
 - {{jsxref("TypedArray.prototype.join()")}}
-  - : Joins all elements of an array into a string. See also {{jsxref("Array.prototype.join()")}}.
+  - : Returns a new string that is the concatenation of all elements in this typed array, separated by commas or a specified separator string. See also {{jsxref("Array.prototype.join()")}}.
 - {{jsxref("TypedArray.prototype.keys()")}}
   - : Returns a new array iterator that contains the keys for each index in the array. See also {{jsxref("Array.prototype.keys()")}}.
 - {{jsxref("TypedArray.prototype.lastIndexOf()")}}
@@ -270,7 +270,7 @@ These methods are defined on the `TypedArray` prototype object and are thus shar
 - {{jsxref("TypedArray.prototype.slice()")}}
   - : Extracts a section of an array and returns a new array. See also {{jsxref("Array.prototype.slice()")}}.
 - {{jsxref("TypedArray.prototype.some()")}}
-  - : Returns `true` if it finds one element in the array that satisfies the provided testing function. Otherwise, it returns `false`. See also {{jsxref("Array.prototype.some()")}}.
+  - : Returns `true` if it finds an element in the array that satisfies the provided testing function. Otherwise, it returns `false`. See also {{jsxref("Array.prototype.some()")}}.
 - {{jsxref("TypedArray.prototype.sort()")}}
   - : Sorts the elements of an array in place and returns the array. See also {{jsxref("Array.prototype.sort()")}}.
 - {{jsxref("TypedArray.prototype.subarray()")}}

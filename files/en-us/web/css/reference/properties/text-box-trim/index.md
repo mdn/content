@@ -1,5 +1,6 @@
 ---
-title: text-box-trim
+title: "`text-box-trim` CSS property"
+short-title: text-box-trim
 slug: Web/CSS/Reference/Properties/text-box-trim
 page-type: css-property
 browser-compat: css.properties.text-box-trim

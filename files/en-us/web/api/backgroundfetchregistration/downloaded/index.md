@@ -16,7 +16,7 @@ If the value of this property changes, the [progress](/en-US/docs/Web/API/Backgr
 
 ## Value
 
-A {{jsxref("number")}}.
+A {{jsxref("Number")}}.
 
 ## Examples
 

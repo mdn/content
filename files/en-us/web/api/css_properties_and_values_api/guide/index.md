@@ -110,3 +110,7 @@ Second, unlike standard properties, registered properties aren't validated when 
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Registering custom properties with CSS](/en-US/docs/Web/CSS/Guides/Properties_and_values_API/Registering_properties)

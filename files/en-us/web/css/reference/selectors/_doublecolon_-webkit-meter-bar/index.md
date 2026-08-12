@@ -1,5 +1,6 @@
 ---
-title: ::-webkit-meter-bar
+title: "`::-webkit-meter-bar` CSS pseudo-element"
+short-title: ::-webkit-meter-bar
 slug: Web/CSS/Reference/Selectors/::-webkit-meter-bar
 page-type: css-pseudo-element
 status:

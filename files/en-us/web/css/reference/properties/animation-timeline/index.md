@@ -1,5 +1,6 @@
 ---
-title: animation-timeline
+title: "`animation-timeline` CSS property"
+short-title: animation-timeline
 slug: Web/CSS/Reference/Properties/animation-timeline
 page-type: css-property
 browser-compat: css.properties.animation-timeline
@@ -169,7 +170,7 @@ The only difference is the `animation-timeline` declaration (or lack thereof in 
       background-color: wheat;
       display: block;
       text-align: center;
-      padding: 1em;
+      padding: 1rem 0;
     }
   }
 }
@@ -205,7 +206,7 @@ Our container includes three stretcher elements which will be wide enough to ens
 
 We define the container as a flex container, setting a {{cssxref("width")}} on the container that is half the width of it's combined flex children. Adding an {{cssxref("overflow-x")}} value of `scroll` sets it to have a horizontal scrollbar.
 
-Our scroll progress timeline, defined using the {{cssxref("scroll-timeline-name")}} and {{cssxref("scroll-timeline-axis")}} properties, is named `--square-timeline`. This timeline is applied to our `#square` element using `animation-timeline: --square-timeline`.
+Our scroll progress timeline, defined using the {{cssxref("scroll-timeline-name")}} and {{cssxref("scroll-timeline-axis")}} properties, is named `--square-timeline`. This timeline is applied to our `#shape` element using `animation-timeline: --square-timeline`.
 
 ```css live-sample___named_scroll live-sample___anonymous_scroll
 #container {
@@ -255,7 +256,7 @@ The CSS below defines a square that rotates in alternate directions according to
       background-color: wheat;
       display: block;
       text-align: center;
-      padding: 1em;
+      padding: 1rem 0;
     }
   }
 }
@@ -289,7 +290,7 @@ We include all the CSS from the previous example, only setting the `animation-ti
       background-color: wheat;
       display: block;
       text-align: center;
-      padding: 1em;
+      padding: 1rem 0;
     }
   }
 }

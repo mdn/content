@@ -1,5 +1,6 @@
 ---
-title: position-try-order
+title: "`position-try-order` CSS property"
+short-title: position-try-order
 slug: Web/CSS/Reference/Properties/position-try-order
 page-type: css-property
 browser-compat: css.properties.position-try-order

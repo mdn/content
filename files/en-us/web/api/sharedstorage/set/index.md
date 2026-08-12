@@ -5,10 +5,11 @@ slug: Web/API/SharedStorage/set
 page-type: web-api-instance-method
 status:
   - deprecated
+  - non-standard
 browser-compat: api.SharedStorage.set
 ---
 
-{{APIRef("Shared Storage API")}}{{deprecated_header}}
+{{APIRef("Shared Storage API")}}{{deprecated_header}}{{non-standard_header}}
 
 The **`set()`** method of the {{domxref("SharedStorage")}} interface either stores a new key-value pair in the current origin's shared storage or updates an existing one.
 
@@ -39,7 +40,7 @@ A {{jsxref("Promise")}} that fulfills with `undefined`.
 - The `Promise` rejects with a {{jsxref("TypeError")}} if:
   - The created entry was not successfully stored in the database due to shared storage not being available (for example it is disabled using a browser setting).
   - `key` and/or `value` exceed the browser-defined maximum length.
-  - The calling site does not have the Shared Storage API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment).
+  - The calling site does not have the Shared Storage API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox#enrollment).
 - In the case of {{domxref("WorkletSharedStorage")}}, the `Promise` rejects with a {{jsxref("TypeError")}} if the worklet module has not been added with {{domxref("Worklet.addModule", "SharedStorageWorklet.addModule()")}}.
 
 > [!NOTE]

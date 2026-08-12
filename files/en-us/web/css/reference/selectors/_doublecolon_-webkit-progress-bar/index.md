@@ -1,5 +1,6 @@
 ---
-title: ::-webkit-progress-bar
+title: "`::-webkit-progress-bar` CSS pseudo-element"
+short-title: ::-webkit-progress-bar
 slug: Web/CSS/Reference/Selectors/::-webkit-progress-bar
 page-type: css-pseudo-element
 status:

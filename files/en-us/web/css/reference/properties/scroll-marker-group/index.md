@@ -1,5 +1,6 @@
 ---
-title: scroll-marker-group
+title: "`scroll-marker-group` CSS property"
+short-title: scroll-marker-group
 slug: Web/CSS/Reference/Properties/scroll-marker-group
 page-type: css-property
 status:
@@ -32,6 +33,8 @@ scroll-marker-group: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `after`
   - : A {{cssxref("::scroll-marker-group")}} pseudo-element is generated as a sibling of the scroll container's child DOM elements, immediately preceding them, and any generated {{cssxref("::scroll-button()")}} pseudo-elements. It appears at the end of the container's tab order and layout box order (but not DOM structure).

@@ -1,5 +1,6 @@
 ---
-title: cy
+title: "`cy` CSS property"
+short-title: cy
 slug: Web/CSS/Reference/Properties/cy
 page-type: css-property
 browser-compat: css.properties.cy

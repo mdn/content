@@ -28,6 +28,7 @@ A new BFC is created in the following situations:
 - block elements where `overflow` has a value other than `visible`
 - elements with `display: flow-root` or `display: flow-root list-item`
 - elements with {{cssxref("contain", "contain: layout", "#layout")}}, `content`, or `strict`
+- query containers (elements where {{cssxref("container-type")}} isn't `normal`)
 - {{Glossary("flex item", "flex items")}}
 - grid items
 - [multicol containers](/en-US/docs/Web/CSS/Guides/Multicol_layout/Basic_concepts)

@@ -1,5 +1,6 @@
 ---
-title: <input type="search">
+title: '`<input type="search">` HTML attribute value'
+short-title: <input type="search">
 slug: Web/HTML/Reference/Elements/input/search
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_search
@@ -456,14 +457,6 @@ You can see a good example of a search form used in context at our [website-aria
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
-        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}.
-      </td>
-    </tr>
-     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
       <td>
         with no <code>list</code> attribute:

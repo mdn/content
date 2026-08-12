@@ -1,5 +1,6 @@
 ---
-title: asin()
+title: "`asin()` CSS function"
+short-title: asin()
 slug: Web/CSS/Reference/Values/asin
 page-type: css-function
 browser-compat: css.types.asin

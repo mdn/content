@@ -1,5 +1,6 @@
 ---
-title: stroke-dashoffset
+title: "`stroke-dashoffset` CSS property"
+short-title: stroke-dashoffset
 slug: Web/CSS/Reference/Properties/stroke-dashoffset
 page-type: css-property
 browser-compat: css.properties.stroke-dashoffset

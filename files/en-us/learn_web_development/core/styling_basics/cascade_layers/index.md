@@ -146,7 +146,7 @@ Layers can be created using any one of the following methods:
 All three methods create a layer if a layer with that name has not already been initialized. If no layer name is provided in the `@layer` at-rule or `@import` with `layer()`, a new anonymous (unnamed) layer is created.
 
 > [!NOTE]
-> The order of precedence of layers is the order in which they are created. Styles not in a layer, or "unlayered styles", cascade together into a final implicit label.
+> The order of precedence of layers is the order in which they are created. Styles not in a layer, or "unlayered styles", cascade together into a final implicit layer.
 
 Let's cover the three ways of creating a layer in a little more detail before discussing nested layers.
 

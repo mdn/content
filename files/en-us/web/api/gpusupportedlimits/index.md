@@ -9,12 +9,6 @@ browser-compat: api.GPUSupportedLimits
 
 The **`GPUSupportedLimits`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} describes the limits supported by a {{domxref("GPUAdapter")}}.
 
-The `GPUSupportedLimits` object for the current adapter is accessed via the {{domxref("GPUAdapter.limits")}} property.
-
-You should note that, rather than reporting the exact limits of each GPU, browsers will likely report different tier values of different limits to reduce the unique information available to drive-by fingerprinting. For example, the tiers of a certain limit might be 2048, 8192, and 32768. If your GPU's actual limit is 16384, the browser will still report 8192.
-
-Given that different browsers will handle this differently and the tier values may change over time, it is hard to provide an accurate account of what limit values to expect — thorough testing is advised.
-
 {{InheritanceDiagram}}
 
 ## Instance properties
@@ -33,7 +27,11 @@ The following limits are represented by properties in a `GPUSupportedLimits` obj
 | `maxDynamicStorageBuffersPerPipelineLayout`                                                                                                                                                                                                                           | 4                        |
 | `maxSampledTexturesPerShaderStage`                                                                                                                                                                                                                                    | 16                       |
 | `maxSamplersPerShaderStage`                                                                                                                                                                                                                                           | 16                       |
+| `maxStorageBuffersInFragmentStage`                                                                                                                                                                                                                                    | 8                        |
+| `maxStorageBuffersInVertexStage`                                                                                                                                                                                                                                      | 8                        |
 | `maxStorageBuffersPerShaderStage`                                                                                                                                                                                                                                     | 8                        |
+| `maxStorageTexturesInFragmentStage`                                                                                                                                                                                                                                   | 4                        |
+| `maxStorageTexturesInVertexStage`                                                                                                                                                                                                                                     | 4                        |
 | `maxStorageTexturesPerShaderStage`                                                                                                                                                                                                                                    | 4                        |
 | `maxUniformBuffersPerShaderStage`                                                                                                                                                                                                                                     | 12                       |
 | `maxUniformBufferBindingSize`                                                                                                                                                                                                                                         | 65536 bytes              |
@@ -55,9 +53,23 @@ The following limits are represented by properties in a `GPUSupportedLimits` obj
 | `maxComputeWorkgroupSizeZ`                                                                                                                                                                                                                                            | 64                       |
 | `maxComputeWorkgroupsPerDimension`                                                                                                                                                                                                                                    | 65535                    |
 
+## Description
+
+The `GPUSupportedLimits` object for the current adapter is accessed via the {{domxref("GPUAdapter.limits")}} property.
+
+Instead of reporting the exact limits of each GPU, browsers typically report different tier values of different limits (to reduce the unique information available to drive-by fingerprinting).
+For example, the tiers of a certain limit might be 2048, 8192, and 32768.
+If your GPU's actual limit is 16384, the browser will still report 8192.
+
+Given that different browsers will handle this differently and the tier values may change over time, it is hard to provide an accurate account of what limit values to expect — thorough testing is advised.
+
+Note that when calling {{domxref("GPUAdapter.requestDevice()")}} to request a {{domxref("GPUDevice")}} that meets some minimum requirements ("limits"), you pass an object that has the same property names as `GPUSupportedLimits`.
+
 ## Examples
 
-In the following code we query the `GPUAdapter.limits` value of `maxBindGroups` to see if it is equal to or greater than 6. Our theoretical example app ideally needs 6 bind groups, so if the returned value is >= 6, we add a maximum limit of 6 to the `requiredLimits` object. We then request a device with that limit requirement using {{domxref("GPUAdapter.requestDevice()")}}:
+In the following code we query the `GPUAdapter.limits` value of `maxBindGroups` to see if it is equal to or greater than 6.
+Our theoretical example app ideally needs 6 bind groups, so if the returned value is >= 6, we add a maximum limit of 6 to the `requiredLimits` object.
+We then request a device with that limit requirement using {{domxref("GPUAdapter.requestDevice()")}}:
 
 ```js
 async function init() {

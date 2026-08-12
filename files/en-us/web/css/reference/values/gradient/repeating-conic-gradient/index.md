@@ -1,5 +1,6 @@
 ---
-title: repeating-conic-gradient()
+title: "`repeating-conic-gradient()` CSS function"
+short-title: repeating-conic-gradient()
 slug: Web/CSS/Reference/Values/gradient/repeating-conic-gradient
 page-type: css-function
 browser-compat: css.types.gradient.repeating-conic-gradient
@@ -49,7 +50,7 @@ repeating-conic-gradient(
 )
 
 /* Interpolation in polar color space
-  with longer hue interpolation method */
+  with shorter hue interpolation method */
 repeating-conic-gradient(in hsl shorter hue, red, blue 90deg, green 180deg)
 ```
 

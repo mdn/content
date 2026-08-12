@@ -1,5 +1,6 @@
 ---
-title: <custom-ident>
+title: "`<custom-ident>` CSS type"
+short-title: <custom-ident>
 slug: Web/CSS/Reference/Values/custom-ident
 page-type: css-type
 spec-urls:

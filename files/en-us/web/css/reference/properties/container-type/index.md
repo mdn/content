@@ -1,15 +1,16 @@
 ---
-title: container-type
+title: "`container-type` CSS property"
+short-title: container-type
 slug: Web/CSS/Reference/Properties/container-type
 page-type: css-property
 browser-compat: css.properties.container-type
+spec-urls:
+  - https://drafts.csswg.org/css-conditional-5/#container-type
+  - https://drafts.csswg.org/css-anchor-position-2/#container-type-anchored
 sidebar: cssref
 ---
 
-An element can be established as a query container using the **`container-type`** [CSS](/en-US/docs/Web/CSS) property. `container-type` is used to define the type of container context used in a container query. The available container contexts are:
-
-- [Size](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries): Enable selectively applying CSS rules to a container's children based on a general size or inline size condition such as a maximum or minimum dimension, aspect ratio, or orientation.
-- [Scroll-state](/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries): Enable selectively applying CSS rules to a container's children based on a scroll-state condition such as whether the container is a scroll container that is partially scrolled or whether the container is a [snap target](/en-US/docs/Glossary/Scroll_snap#snap_target) that is going to be snapped to its scroll snap container.
+The **container-type** [CSS](/en-US/docs/Web/CSS) property specifies the type of container context used in a container query.
 
 ## Syntax
 
@@ -19,6 +20,7 @@ container-type: normal;
 container-type: size;
 container-type: inline-size;
 container-type: scroll-state;
+container-type: anchored;
 
 /* Two values */
 container-type: size scroll-state;
@@ -33,14 +35,16 @@ container-type: unset;
 
 ### Values
 
-The `container-type` property can take a single value from the list below, or two values — one must be `scroll-state` and the other can be `inline-size` or `size`. In other words, an element can be established as a size query container, a scroll-state query container, both, or neither.
+The `container-type` property can take a single value from the list below, or two values. In the two-value case, one must be `scroll-state` and the other can be `inline-size` or `size`.
 
+- `anchored`
+  - : Establishes a query container for anchored container queries on the container. In this case, the size of the element is not computed in isolation; no [containment](/en-US/docs/Web/CSS/Guides/Containment/Using) is applied.
 - `inline-size`
   - : Establishes a query container for dimensional queries on the [inline axis](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#block_and_inline_dimensions) of the container.
     Applies [style](/en-US/docs/Web/CSS/Reference/Properties/contain#style) and [inline-size](/en-US/docs/Web/CSS/Reference/Properties/contain#inline-size) containment to the element. The inline size of the element can be [computed in isolation](/en-US/docs/Web/CSS/Guides/Containment/Using#size_containment), ignoring the child elements (see [Using CSS containment](/en-US/docs/Web/CSS/Guides/Containment/Using)).
 
 - `normal`
-  - : Default value. The element is not a query container for any container size queries, but remains a query container for [container style queries](/en-US/docs/Web/CSS/Reference/At-rules/@container#container_style_queries).
+  - : Default value. The element is not a query container for any container size, scroll-state, or anchored queries, but can be used as a query container for [container style queries](/en-US/docs/Web/CSS/Reference/At-rules/@container#container_style_queries) and [name-only container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries#name-only_container_queries).
 
 - `scroll-state`
   - : Establishes a query container for scroll-state queries on the container. In this case, the size of the element is not computed in isolation; no containment is applied.
@@ -61,7 +65,13 @@ The `container-type` property can take a single value from the list below, or tw
 
 Container queries allow you to selectively apply styles inside a container based on conditional queries performed on the container. The {{cssxref("@container")}} at-rule is used to specify the tests performed on a container, and the rules that will apply to the container's contents if the query returns `true`.
 
-The container query tests are only performed on elements with a `container-type` property, which defines the elements as a size or scroll-state container, or both.
+Certain types of container query can only be performed on elements with specific `container-type` property values set, which establish specific container contexts on those containers:
+
+- [Size](#container_size_queries): Enable selectively applying CSS rules to a container's children based on a general size or inline size condition such as a maximum or minimum dimension, aspect ratio, or orientation.
+- [Scroll-state](#container_scroll-state_queries): Enable selectively applying CSS rules to a container's children based on a scroll-state condition such as whether the container is a scroll container that is partially scrolled or whether the container is a [snap target](/en-US/docs/Glossary/Scroll_snap#snap_target) that is going to be snapped to its scroll snap container.
+- [Anchored](#anchored_container_queries): Enable selectively applying CSS rules to a container's children based on whether the container is [anchor-positioned](/en-US/docs/Web/CSS/Guides/Anchor_positioning) and has a [position-try fallback option](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) applied to it.
+
+If a `container-type` is not set on a container, the element is not a query container for container size, scroll-state, or anchored queries, but can still be used as a query container for [container style queries](/en-US/docs/Web/CSS/Reference/At-rules/@container#container_style_queries) and [name-only container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries#name-only_container_queries).
 
 ### Container size queries
 
@@ -70,6 +80,9 @@ The container query tests are only performed on elements with a `container-type`
 Size containers additionally have size containment applied to them — this turns off the ability of an element to get size information from its contents, which is important for container queries to avoid infinite loops. If this were not the case, a CSS rule inside a container query could change the content size, which in turn could make the query evaluate to false and change the parent element's size, which in turn could change the content size and flip the query back to true, and so on. This sequence would then repeat itself in an endless loop.
 
 The container size has to be set by context, such as block-level elements that stretch to the full width of their parent, or explicitly defined. If a contextual or explicit size is not available, elements with size containment will collapse.
+
+> [!NOTE]
+> Size containers' descendants can be sized using [container query length units](/en-US/docs/Web/CSS/Guides/Containment/Container_queries#container_query_length_units).
 
 ### Container scroll-state queries
 
@@ -80,6 +93,22 @@ The container size has to be set by context, such as block-level elements that s
 - Whether the container is positioned via [`position: sticky`](/en-US/docs/Web/CSS/Reference/Properties/display) and stuck to a boundary of a {{glossary("scroll container", "scrolling container")}}.
 
 In the first case, the queried container is the scroll container itself. In the other two cases the queried container is an element that is affected by the scroll position of an ancestor scroll container.
+
+### Anchored container queries
+
+[Anchored container queries](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries) allow you to selectively apply CSS rules to the descendants of an anchor-positioned container when it has a position-try fallback active on it, as specified via the {{cssxref("position-try-fallbacks")}} property.
+
+For example, you might have an anchor-positioned tooltip element that is positioned above its anchor by default via a {{cssxref("position-area")}} value of `top`, but has a `position-try-fallbacks` value of `flip-block` specified. This will cause the tooltip to flip in the block direction to the bottom of its anchor when it starts to overflow the top of the viewport. If we set `container-type: anchored` on it, we can detect when the position-try fallback is applied via a `@container` at-rule and apply CSS as a result.
+
+```css
+.tooltip {
+  position: absolute;
+  position-anchor: --myAnchor;
+  position-area: top;
+  position-try-fallbacks: flip-block;
+  container-type: anchored;
+}
+```
 
 ## Examples
 
@@ -109,8 +138,7 @@ Given the following HTML example which is a card component with an image, a titl
 </div>
 ```
 
-To create a container context, add the `container-type` property to an element.
-The following uses the `inline-size` value to create a containment context for the [inline axis](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts#block_and_inline_dimensions) of the container:
+To create an inline size container context, add the `container-type` property to an element with a value of `inline-size`:
 
 ```css
 .container {
@@ -146,7 +174,7 @@ h3 {
 }
 ```
 
-Writing a container query via the {{Cssxref("@container")}} at-rule will apply styles to the elements of the container when it is wider than 400px:
+Writing a container query via the {{Cssxref("@container")}} at-rule will apply styles to the elements of the container when it is wider than `400px`:
 
 ```css
 @container (width > 400px) {
@@ -172,6 +200,7 @@ Writing a container query via the {{Cssxref("@container")}} at-rule will apply s
 - [CSS container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries)
 - [Using container size and style queries](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)
 - [Using container scroll-state queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries)
+- [Using anchored container queries](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Anchored_container_queries)
 - {{Cssxref("@container")}} at-rule
 - CSS {{Cssxref("container")}} shorthand property
 - CSS {{Cssxref("container-name")}} property

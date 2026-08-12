@@ -29,7 +29,7 @@ parseFromString(input, mimeType)
 ### Parameters
 
 - `input`
-  - : A {{domxref("TrustedHTML")}} or string instance defining HTML to be parsed.
+  - : A {{domxref("TrustedHTML")}} instance or a string defining HTML to be parsed.
     The markup must contain either an {{Glossary("HTML")}}, {{Glossary("XML")}}, {{Glossary("XHTML")}}, or {{Glossary("SVG")}} document.
 - `mimeType`
   - : A string that specifies whether the XML parser or the HTML parser is used to parse the string.
@@ -103,7 +103,7 @@ if (typeof trustedTypes === "undefined")
 ```
 
 Next we create a {{domxref("TrustedTypePolicy")}} that defines a {{domxref("TrustedTypePolicy/createHTML", "createHTML()")}} for transforming an input string into {{domxref("TrustedHTML")}} instances.
-Commonly, implementations of `createHTML()` use a library such as [DOMPurify](https://github.com/cure53/DOMPurify) to sanitize the, input as shown below:
+Commonly, implementations of `createHTML()` use a library such as [DOMPurify](https://github.com/cure53/DOMPurify) to sanitize the input, as shown below:
 
 ```js
 const policy = trustedTypes.createPolicy("my-policy", {

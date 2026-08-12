@@ -135,7 +135,7 @@ Here is a list of common features controllable with HTTP:
   HTTP requests then go through proxies to cross this network barrier.
   Not all proxies are HTTP proxies.
   The SOCKS protocol, for example, operates at a lower level.
-  Other protocols, like ftp, can be handled by these proxies.
+  Other protocols, like FTP, can be handled by these proxies.
 - _Sessions_:
   Using HTTP cookies allows you to link requests with the state of the server.
   This creates sessions, despite basic HTTP being a state-less protocol.
@@ -192,7 +192,7 @@ There are two types of HTTP messages, requests and responses, each with its own 
 
 An example HTTP request:
 
-![Overview of a HTTP GET request with headers](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-request.svg)
+![Overview of an HTTP GET request with headers](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-request.svg)
 
 Requests consist of the following elements:
 

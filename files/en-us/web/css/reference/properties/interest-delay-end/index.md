@@ -1,5 +1,6 @@
 ---
-title: interest-delay-end
+title: "`interest-delay-end` CSS property"
+short-title: interest-delay-end
 slug: Web/CSS/Reference/Properties/interest-delay-end
 page-type: css-shorthand-property
 status:
@@ -31,6 +32,8 @@ interest-delay-end: unset;
 ```
 
 ### Values
+
+This property is specified as one `<time>` value or the keyword `normal`:
 
 - `normal`
   - : Sets the delay to the browser's default delay. This is the initial value.

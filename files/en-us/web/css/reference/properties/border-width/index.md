@@ -1,5 +1,6 @@
 ---
-title: border-width
+title: "`border-width` CSS property"
+short-title: border-width
 slug: Web/CSS/Reference/Properties/border-width
 page-type: css-shorthand-property
 browser-compat: css.properties.border-width
@@ -96,14 +97,8 @@ The `border-width` property may be specified using one, two, three, or four valu
 
 ### Values
 
-- `<line-width>`
-  - : Defines the width of the border, either as an explicit nonnegative {{cssxref("&lt;length&gt;")}} or a keyword. If it's a keyword, it must be one of the following values:
-    - `thin`
-    - `medium`
-    - `thick`
-
-> [!NOTE]
-> Because the specification doesn't define the exact thickness denoted by each keyword, the precise result when using one of them is implementation-specific. Nevertheless, they always follow the pattern `thin ≤ medium ≤ thick`, and the values are constant within a single document.
+- {{cssxref("&lt;line-width&gt;")}}
+  - : Defines the width of the border, either as an explicit non-negative {{cssxref("&lt;length&gt;")}} or the keywords: `thin`, `medium`, or `thick`. The default is `medium`.
 
 ## Formal definition
 
