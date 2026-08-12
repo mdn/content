@@ -5,13 +5,11 @@ page-type: glossary-definition
 sidebar: glossarysidebar
 ---
 
-In 3D graphics, a **texel** is a single pixel within a texture. _Textures_ are images presented on a polygon's surface within a 3D rendered image. A texture is characterized by a collection of texels, similar to how an image is characterized by a collection of pixels.
+In 3D graphics, a **texel** (short for "texture pixel") is an individual element of a texture. A texture consists of a grid of texels, much as a raster image consists of a grid of [pixels](/en-US/docs/Glossary/Pixel). Textures are rendered onto 3D surfaces to convey qualities such as color, depth, and reflectivity. Multiple textures may be layered to create complex surface overlays.
 
-A pixel in a raster image file is a series of bits containing color data, and sometimes opacity data, which maps to display pixels on an output device such as a computer monitor. When a pixel belongs to an image used as a texture resource, it is called a 'texture pixel' or shortened to 'texel'. Instead of mapping directly to screen pixels, a texel's data is mapped to a location in the coordinate space of the 3D object being modeled. Textures can be used to convey color and other surface qualities such as depth and reflectivity. Multiple textures may be layered to create complex surface overlays.
+**Texture mapping** associates points on a model's surface with positions in a texture, commonly through texture coordinates (a.k.a. UV coordinates) assigned to polygon vertices. During rendering, these coordinates are interpolated across the polygon and used to sample the texture. A fragment's sampling location may fall between texel centers, or its footprint in texture space may cover multiple texels. **Texture filtering** determines how texel values are selected or combined during texture _magnification_ or _minification_.
 
-**Texture mapping** associates positions on a model's surface, often stored as UV coordinates on polygons, with positions in a 2D texture image. During rendering, the renderer uses those coordinates to sample texels from the texture and apply the sampled values to the surface. Because the size and orientation of the textured surface on screen usually differ from the texture image's resolution, a screen pixel may sample between texels or combine multiple texels. **Texture filtering** defines how those samples are chosen or blended for texture _magnification_ or _minification_.
-
-During the render pipeline, texture mapping is typically done prior to lighting the scene; however, in WebGL, lighting is performed as part of the texture mapping process.
+In programmable graphics APIs such as [WebGL](/en-US/docs/Glossary/WebGL), texture sampling and lighting calculations are controlled by shaders and may be performed together in the same shader.
 
 ## See also
 
