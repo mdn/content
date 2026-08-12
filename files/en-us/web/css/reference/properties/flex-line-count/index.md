@@ -70,7 +70,6 @@ flex-line-count: unset;
 
 ### Values
 
-
 This property is specified as the following value:
 
 - {{cssxref("integer")}}
