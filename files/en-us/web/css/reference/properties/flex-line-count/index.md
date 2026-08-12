@@ -70,7 +70,11 @@ flex-line-count: unset;
 
 ### Values
 
-The `flex-line-count` property is specified as a single positive {{cssxref("integer")}} that defines the minimum number of flex lines that balanced, wrapped flex items will be distributed over.
+
+This property is specified as the following value:
+
+- {{cssxref("integer")}}
+  - : A positive integer setting the minimum number of flex lines that balanced, wrapped flex items will be distributed over. The default value is `1`.
 
 ## Formal definition
 
