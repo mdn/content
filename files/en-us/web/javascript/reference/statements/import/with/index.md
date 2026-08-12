@@ -114,7 +114,7 @@ Failed to load module script: Expected a JavaScript module script but the server
 
 #### CSS Modules (`{ type: "css" }`)
 
-The HTML spec defines the `css` type, which imports a stylesheet into a script as an {{domxref("CSSStyleSheet")}} object.
+The HTML spec defines the `css` type, which imports a stylesheet into a script as a {{domxref("CSSStyleSheet")}} object.
 
 The code below shows how you might import a style and add it to your document.
 The import will throw an exception if `example_styles.css` is served with any media type other than `"text/css"`.
