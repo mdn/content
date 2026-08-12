@@ -13,6 +13,10 @@ horizontal distance, in CSS pixels, of the left border of the user's browser vie
 the left side of the screen.
 
 > [!NOTE]
+> In current browsers, this value reflects the viewport position and does not change
+> when browser UI such as toolbars or sidebars shifts the visible content area.
+
+> [!NOTE]
 > An alias of `screenX` was implemented across modern
 > browsers in more recent times — {{domxref("Window.screenLeft")}}. This was originally
 > supported only in IE but was introduced everywhere due to popularity.
