@@ -13,6 +13,9 @@ This includes both changes in the selected range of characters, or if the caret 
 
 This event is not cancelable.
 
+> [!NOTE]
+> Unlike most other UI events, the `selectionchange` event is scheduled asynchronously as a task on the user interaction task source rather than fired synchronously at the moment the selection or caret position changes.
+
 The event is usually processed by adding an event listener on the {{HTMLElement("textarea")}}, and in the handler function read by the {{domxref("HTMLTextAreaElement")}} `selectionStart`, `selectionEnd` and `selectionDirection` properties.
 
 It is also possible to add a listener on the global `onselectionchange` event handler, and within the handler function use {{domxref("Document.getSelection()")}} to get the {{domxref("Selection", "Selection")}}. However this is not very useful for getting changes to _text_ selections.
