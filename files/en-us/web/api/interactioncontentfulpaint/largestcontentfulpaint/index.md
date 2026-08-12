@@ -12,7 +12,7 @@ The **`largestContentfulPaint`** read-only property of the {{domxref("Performanc
 
 This can remain the same between two `InteractionContentfulPaint` entries for the same interaction if a new contentful paint is smaller than the current largest contentful paint for that interaction. When using this API to measure {{Glossary("Largest Contentful Paint", "Largest Contentful Paint (LCP)")}} for soft navigations you may only be interested in the largest paint.
 
-Note that, at present `InteractionContentfulPaint` is scoped to increasing paint sizes, so it can be used to measure {{Glossary("Largest Contentful Paint", "Largest Contentful Paint (LCP)")}} for {{glossary("Soft Navigation", "Soft Navigations")}}, so the the `largestContentfulPaint` value should change each time for now. However, the API has been designed to allow for all paints relevant to an interaction to be emitted so this is liable to change.
+Note that, in current implementations, `InteractionContentfulPaint` is scoped to increasing paint sizes, so it can be used to measure {{Glossary("Largest Contentful Paint", "Largest Contentful Paint (LCP)")}} for {{glossary("Soft Navigation", "Soft Navigations")}}; the `largestContentfulPaint` value should change each time. However, the API has been designed to allow for all paints relevant to an interaction to be emitted, so this is liable to change.
 
 ## Value
 
