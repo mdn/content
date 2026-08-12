@@ -10,6 +10,10 @@ updates:
       - "automated pr"
       - "dependencies"
       - "javascript"
+    commit-message:
+      prefix: chore
+      prefix-development: build
+      include: scope
 
   - package-ecosystem: "github-actions"
     directory: "/"
@@ -20,4 +24,5 @@ updates:
       - "dependencies"
       - "github actions"
     commit-message:
-      prefix: "ci(deps): "
+      prefix: ci
+      include: scope

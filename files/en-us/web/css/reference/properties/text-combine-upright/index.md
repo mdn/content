@@ -56,6 +56,8 @@ text-combine-upright: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `none`
   - : There is no special processing.
 - `all`

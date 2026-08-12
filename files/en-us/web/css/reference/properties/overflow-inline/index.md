@@ -30,9 +30,9 @@ overflow-inline: revert-layer;
 overflow-inline: unset;
 ```
 
-The `overflow-inline` property is specified as a single {{CSSXref("overflow_value", "&lt;overflow&gt;")}} keyword value.
-
 ### Values
+
+This property is specified as one of the following {{CSSXref("overflow_value", "&lt;overflow&gt;")}} keyword values:
 
 - `visible`
   - : Content is not clipped and may be rendered outside the padding box's inline start and end edges.

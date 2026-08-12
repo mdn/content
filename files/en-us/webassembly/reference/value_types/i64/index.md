@@ -3,7 +3,7 @@ title: "i64: Wasm value type"
 short-title: i64
 slug: WebAssembly/Reference/Value_types/i64
 page-type: webassembly-instruction
-spec-urls: https://webassembly.github.io/spec/core/syntax/types.html#syntax-numtype
+browser-compat: webassembly.types.i64
 sidebar: webassemblysidebar
 ---
 
@@ -50,6 +50,10 @@ When moving from JavaScript over to Wasm, a `BigInt` passed as an `i64` argument
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

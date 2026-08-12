@@ -41,9 +41,9 @@ These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} 
 - {{domxref("RTCTransportStats.localCertificateId", "localCertificateId")}} {{optional_inline}}
   - : A string containing the id of the local certificate used by this transport.
     Only present for DTLS transports, and after DTLS has been negotiated.
-- {{domxref("RTCTransportStats.packetsReceived", "packetsReceived")}} {{optional_inline}} {{experimental_inline}}
+- {{domxref("RTCTransportStats.packetsReceived", "packetsReceived")}} {{optional_inline}}
   - : The total number of packets received on this transport.
-- {{domxref("RTCTransportStats.packetsSent", "packetsSent")}} {{optional_inline}} {{experimental_inline}}
+- {{domxref("RTCTransportStats.packetsSent", "packetsSent")}} {{optional_inline}}
   - : The total number of packets sent over this transport.
 - {{domxref("RTCTransportStats.remoteCertificateId", "remoteCertificateId")}} {{optional_inline}}
   - : A string containing the id or the remote certificate used by this transport.
@@ -80,18 +80,16 @@ The function waits for the result of a call to {{domxref("RTCPeerConnection.getS
 It then returns the statistics, or `null`, using the data in the report.
 
 ```js
-async function numberOpenConnections (peerConnection) {
+async function getTransportStats(peerConnection) {
   const stats = await peerConnection.getStats();
-  let transportStats = null;
 
-  stats.forEach((report) => {
+  for (const report of stats.values()) {
     if (report.type === "transport") {
-      transportStats = report;
-      break;
+      return report;
     }
-  });
+  }
 
-return transportStats
+  return null;
 }
 ```
 

@@ -11,73 +11,12 @@ However, there are significant differences between Chrome (and Chromium-based br
 
 - Support for WebExtension APIs differs across browsers. See [Browser support for JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) for details.
 - Support for `manifest.json` keys differs across browsers. See the ["Browser compatibility" section](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json#browser_compatibility) on the [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) page for more details.
-- Extension API namespace:
-  - **In Firefox and Safari:** Extension APIs are accessed under the `browser` namespace. The `chrome` namespace is also supported for compatibility with Chrome.
-  - **In Chrome:** Extension APIs are accessed under the `chrome` namespace. (cf. [Chrome bug 798169](https://crbug.com/798169))
-
-- Asynchronous APIs:
-  - **In Firefox and Safari:** Asynchronous APIs are implemented using promises.
-  - **In Chrome:** In Manifest V2, asynchronous APIs are implemented using callbacks. In Manifest V3, support is provided for [promises](https://developer.chrome.com/docs/extensions/develop/migrate#promises) on most appropriate methods. (cf. [Chrome bug 328932](https://crbug.com/328932)) Callbacks are supported in Manifest V3 for backward compatibility.
 
 The rest of this page details these and other incompatibilities.
 
+Support for the `browser` namespace and promises are no longer a source of incompatibility. See [Historical differences](#historical_differences).
+
 ## JavaScript APIs
-
-### chrome.\* and browser.\* namespace
-
-- **In Firefox and Safari:** The APIs are accessed using the `browser` namespace.
-
-  ```js
-  browser.browserAction.setIcon({ path: "path/to/icon.png" });
-  ```
-
-- **In Chrome:** The APIs are accessed using the `chrome` namespace.
-
-  ```js
-  chrome.browserAction.setIcon({ path: "path/to/icon.png" });
-  ```
-
-### Callbacks and promises
-
-- **In Firefox and Safari (all versions), and Chrome (starting from Manifest Version 3):** Asynchronous APIs use [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) to return values.
-
-  ```js
-  function logCookie(c) {
-    console.log(c);
-  }
-
-  function logError(e) {
-    console.error(e);
-  }
-
-  let setCookie = browser.cookies.set({
-    url: "https://developer.mozilla.org/",
-  });
-  setCookie.then(logCookie, logError);
-  ```
-
-- **In Chrome:** In Manifest V2, asynchronous APIs use callbacks to return values and {{WebExtAPIRef("runtime.lastError")}} to communicate errors. In Manifest V3, callbacks are supported for backward compatibility, along with support for [promises](https://developer.chrome.com/docs/extensions/develop/migrate#promises) on most appropriate methods.
-
-  ```js
-  function logCookie(c) {
-    if (chrome.runtime.lastError) {
-      console.error(chrome.runtime.lastError);
-    } else {
-      console.log(c);
-    }
-  }
-
-  chrome.cookies.set({ url: "https://developer.mozilla.org/" }, logCookie);
-  ```
-
-### Firefox supports both the chrome and browser namespaces
-
-As a porting aid, the Firefox implementation of WebExtensions supports `chrome` using callbacks and `browser` using promises. This means that many Chrome extensions work in Firefox without changes.
-
-> [!NOTE]
-> The `browser` namespace is supported by Firefox and Safari. Chrome does not offer the `browser` namespace, until [Chrome bug 798169](https://crbug.com/798169) is resolved.
-
-If you choose to write your extension to use `browser` and promises, Firefox provides a polyfill that should enable it to run in Chrome: <https://github.com/mozilla/webextension-polyfill>.
 
 ### Partially supported APIs
 
@@ -270,3 +209,15 @@ Some extension APIs allow an extension to send data from one part of the extensi
 The Structured clone algorithm supports more types than the JSON serialization algorithm. A notable exception are (DOM) objects with a `toJSON` method. DOM objects are not cloneable nor JSON-serializable by default, but with a `toJSON()` method, these can be JSON-serialized (but still not cloned with the structured cloning algorithm). Examples of JSON-serializable objects that are not structured cloneable include instances of {{domxref("URL")}} and {{domxref("PerformanceEntry")}}.
 
 Extensions that rely on the `toJSON()` method of the JSON serialization algorithm can use {{jsxref("JSON.stringify()")}} followed by {{jsxref("JSON.parse()")}} to ensure that a message can be exchanged because a parsed JSON value is always structurally cloneable.
+
+## Historical differences
+
+### chrome.\* and browser.\* namespace
+
+Before Chrome 148, Chrome exposed APIs only under the `chrome` namespace rather than `browser`. For example, `browser.browserAction.setIcon({ path: "path/to/icon.png" });` would instead be `chrome.browserAction.setIcon({ path: "path/to/icon.png" });`.
+
+Chrome introduced support for promise-based return values from APIs in Manifest V3, with some APIs supported later. Before the introduction of promises, a call such as `browser.cookies.set({ url: "https://developer.mozilla.org/" }).then(logCookie);` would use a callback like this: `browser.cookies.set({ url: "https://developer.mozilla.org/" }, logCookie);`.
+
+For extensions that use the `devtools_page` manifest key, Chrome support for the `browser` namespace and promises was introduced in Chrome 152.
+
+If you're targeting older Chrome browser versions, Firefox offers a polyfill that provides the `browser` namespace and promise support: <https://github.com/mozilla/webextension-polyfill>.

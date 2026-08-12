@@ -6,35 +6,41 @@ page-type: web-api-constructor
 browser-compat: api.CSSRotate.CSSRotate
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`CSSRotate()`** constructor creates a new
-{{domxref("CSSRotate")}} object representing the {{cssxref("transform-function/rotate", "rotate()")}} value of the
-individual {{CSSXref('transform')}} property in CSS.
+The **`CSSRotate()`** constructor creates a new {{domxref("CSSRotate")}} object representing the {{cssxref("transform-function/rotate", "rotate()")}} value of the individual {{CSSXref('transform')}} property in CSS.
+
+This can be specified as either a 2D rotation by a particular angle, or as a 3D rotation by an angle around a particular axis.
 
 ## Syntax
 
 ```js-nolint
+new CSSRotate(angle)
 new CSSRotate(x, y, z, angle)
 ```
 
 ### Parameters
 
-- {{domxref('CSSRotate.x','x')}}
-  - : A value for the x-axis of the {{domxref('CSSRotate')}} object to be constructed. This must either be a number (which is wrapped into a {{domxref("CSSUnitValue")}} of `unit: "number"`) or a {{domxref("CSSNumericValue")}}.
-- {{domxref('CSSRotate.y','y')}}
-  - : A value for the y-axis of the {{domxref('CSSRotate')}} object to be constructed. This must either be a number (which is wrapped into a {{domxref("CSSUnitValue")}} of `unit: "number"`) or a {{domxref("CSSNumericValue")}}.
-- {{domxref('CSSRotate.z','z')}}
-  - : A value for the z-axis of the {{domxref('CSSRotate')}} object to be constructed. This must either be a number (which is wrapped into a {{domxref("CSSUnitValue")}} of `unit: "number"`) or a {{domxref("CSSNumericValue")}}.
 - {{domxref('CSSRotate.angle','angle')}}
-  - : A value for the angle of the {{domxref('CSSRotate')}} object to be constructed. This
-    must be a {{domxref('CSSNumericValue')}}.
+  - : A value for the angle of the {{domxref('CSSRotate')}} object to be constructed.
+    This must be a {{domxref('CSSNumericValue')}}.
+- {{domxref('CSSRotate.x','x')}} {{optional_inline}}
+  - : A value for the x-axis of the {{domxref('CSSRotate')}} object to be constructed.
+    This must either be a number (which is wrapped into a {{domxref("CSSUnitValue")}} of `unit: "number"`) or a {{domxref("CSSNumericValue")}}.
+    Only used, and required, when constructing a 3D rotation.
+- {{domxref('CSSRotate.y','y')}} {{optional_inline}}
+  - : A value for the y-axis of the {{domxref('CSSRotate')}} object to be constructed.
+    This must either be a number (which is wrapped into a {{domxref("CSSUnitValue")}} of `unit: "number"`) or a {{domxref("CSSNumericValue")}}.
+    Only used, and required, when constructing a 3D rotation.
+- {{domxref('CSSRotate.z','z')}} {{optional_inline}}
+  - : A value for the z-axis of the {{domxref('CSSRotate')}} object to be constructed.
+    This must either be a number (which is wrapped into a {{domxref("CSSUnitValue")}} of `unit: "number"`) or a {{domxref("CSSNumericValue")}}.
+    Only used, and required, when constructing a 3D rotation.
 
 ### Exceptions
 
 - [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError)
-  - : Raised if the value of `CSSRotate.angle` is not an [\<angle>](/en-US/docs/Web/CSS/Reference/Values/angle) value
-    or `CSSRotate.x`, `CSSRotate.y`, `CSSRotate.z` are
+  - : Raised if the value of `CSSRotate.angle` is not an [\<angle>](/en-US/docs/Web/CSS/Reference/Values/angle) value or `CSSRotate.x`, `CSSRotate.y`, `CSSRotate.z` are
     not [\<number>](/en-US/docs/Web/CSS/Reference/Values/number) values.
 
 ## Examples

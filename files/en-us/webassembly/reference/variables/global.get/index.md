@@ -1,5 +1,5 @@
 ---
-title: "global.get: Wasm text instruction"
+title: "global.get: Wasm variable instruction"
 short-title: global.get
 slug: WebAssembly/Reference/Variables/global.get
 page-type: webassembly-instruction
@@ -7,7 +7,7 @@ browser-compat: webassembly.instructions.global_get
 sidebar: webassemblysidebar
 ---
 
-The **`global.get`** instruction loads the value of a global variable onto the stack.
+The **`global.get`** [variable instruction](/en-US/docs/WebAssembly/Reference/Variables) loads the value of a global variable onto the stack.
 
 {{InteractiveExample("Wat Demo: global_get", "tabbed-standard")}}
 

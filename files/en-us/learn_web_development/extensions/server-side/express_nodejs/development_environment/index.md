@@ -342,7 +342,7 @@ This example may not look any shorter than the original command, but you can inc
 
 ## Installing the Express Application Generator
 
-The [Express Application Generator](https://expressjs.com/en/starter/generator.html) tool generates an Express application "skeleton". Install the generator using npm as shown:
+The [Express Application Generator](https://expressjs.com/en/starter/generator/) tool generates an Express application "skeleton". Install the generator using npm as shown:
 
 ```bash
 npm install express-generator -g
@@ -443,8 +443,8 @@ In the next article we start working through a tutorial to build a complete web 
 ## See also
 
 - [Downloads](https://nodejs.org/en/download) page (nodejs.org)
-- [Installing Express](https://expressjs.com/en/starter/installing.html) (expressjs.com)
-- [Express Application Generator](https://expressjs.com/en/starter/generator.html) (expressjs.com)
+- [Installing Express](https://expressjs.com/en/starter/installing/) (expressjs.com)
+- [Express Application Generator](https://expressjs.com/en/starter/generator/) (expressjs.com)
 - [Using Node.js with Windows subsystem for Linux](https://learn.microsoft.com/en-us/windows/dev-environment/javascript/) (docs.microsoft.com)
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

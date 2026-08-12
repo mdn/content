@@ -39,7 +39,7 @@ Attackers can compromise your project by exploiting weaknesses in these dependen
 - [Updating existing dependencies](/en-US/docs/Web/Security/Defenses/Operational_security#updating_dependencies)
 - [Maintaining a _Software Bill of Materials_ (SBOM)](/en-US/docs/Web/Security/Defenses/Operational_security#maintaining_a_software_bill_of_materials)
 
-Additionally, projects should [use Subresource Integrity](/en-US/docs/Web/Security/Attacks/Supply_chain_attacks#using_subresource_integrity) for scripts and stylesheets that are hosted by a third-party site.
+Additionally, projects should [use Subresource Integrity](#using_subresource_integrity) for scripts and stylesheets that are hosted by a third-party site.
 
 ### Using Subresource Integrity
 
