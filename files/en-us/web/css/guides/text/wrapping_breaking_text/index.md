@@ -189,7 +189,7 @@ CSS provides additional hyphenation control: the {{cssxref("hyphenate-limit-char
 
 ## The `<wbr>` element
 
-If you know where you want a long string to be allowed to break, you can also use the HTML {{HTMLElement("wbr")}} element. The `<wbr>` element introduces a line break opportunity, but does not force a break. The browser will only break the word at these positions if there is a need to do so. This allows you to preserve meaningful segments in the string, such as long URLs.
+If you know where you want a long string to be allowed to break, you can also use the HTML {{HTMLElement("wbr")}} element. The `<wbr>` element introduces a line break opportunity—if the word overflows, it will wrap at this position. This allows you to preserve meaningful segments in the string, such as long URLs.
 
 In the example below, the browser may break the text at the location of the {{HTMLElement("wbr")}}.
 
