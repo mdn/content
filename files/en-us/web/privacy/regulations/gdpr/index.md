@@ -106,5 +106,5 @@ See [Everything you need to know about the GPDR Data Protection Officer (DPO)](h
 ## See also
 
 - [GDPR.EU](https://gdpr.eu/)
-- [What is GDPR, the EU’s new data protection law?](https://gdpr.eu/what-is-gdpr/)
+- [What is GDPR, the EU's new data protection law?](https://gdpr.eu/what-is-gdpr/)
 - [GDPR compliance checklist](https://gdpr.eu/checklist/)
