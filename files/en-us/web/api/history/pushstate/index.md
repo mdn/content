@@ -51,9 +51,12 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : Thrown if the associated document is not fully active, or if the provided `url` parameter is not a valid URL, or if the method is called too frequently.
+  - : Thrown if the associated document is not fully active, or if the provided `url` parameter is not a valid URL.
 - `DataCloneError` {{domxref("DOMException")}}
   - : Thrown if the provided `state` parameter is not serializable.
+
+> [!NOTE]
+> Calling `pushState()` too frequently may be blocked by the user agent. When blocked, the call is silently ignored — no exception is thrown. The exact rate limit is implementation-defined.
 
 ## Description
 
