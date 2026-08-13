@@ -26,7 +26,7 @@ None.
 
 A {{jsxref("Promise")}} that resolves with a [map-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#map-like_browser_apis). Each key is a string representing the name of a secure payment confirmation feature, and each value is a boolean representing whether the feature is available (`true`) or not (`false`).
 
-Available features are as follows:
+Known features are as follows:
 
 - `browserBoundKeyHardware`
   - : The Secure Payment Confirmation API is capable of using browser bound keys that are stored in hardware secure elements on the device. A browser-bound key is a public-private key pair that signs over the transaction details in addition to the [WebAuthn](/en-US/docs/Web/API/Web_Authentication_API) credential and is tied to a single device by the user agent.
