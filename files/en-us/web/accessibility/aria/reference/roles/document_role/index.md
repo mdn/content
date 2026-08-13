@@ -14,7 +14,7 @@ The `document` role is for focusable content within complex composite [widgets](
 The `document` role is for the top container containing content that assistive technology users may want to browse in a reading mode. Only useful on focusable sections within complex composite [widgets](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/widget_role) or [applications](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role), the `document` role informs assistive technologies to the reading context back to a reading mode: The `document` role tells assistive technologies with reading or browse modes to use the document mode to read the content contained within this element.
 
 ```html
-<div role="dialog">
+<div role="application">
   …
   <div id="InfoText" role="document" tabindex="0">
     <p>Some informational text goes here.</p>
@@ -24,7 +24,7 @@ The `document` role is for the top container containing content that assistive t
 </div>
 ```
 
-This example shows a [dialog](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role), a complex composite widget role, with some controls and a section with some informational text that the assistive technology user can go into reading mode when tabbed to.
+This example shows an [application](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/application_role) role with some controls and a section with some informational text that the assistive technology user can go into reading mode when tabbed to.
 
 By default, web pages are treated as documents; assistive technologies (AT) enter browse or read mode when entering a new web page. This mode can be altered through various roles, including the widget and application roles. The `document` role brings the AT back into browse or read mode.
 
@@ -34,15 +34,16 @@ Because ATs with reading mode default to that mode for all elements except for t
 
 Assistive technologies should switch context back to document mode, possibly intercepting from controls rewired for the parent's dynamic context, re-enabling the standard input events, such as Up or Down arrow keyboard events, to control the reading cursor.
 
-In contrast to the [`article`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/article_role) role, the `document` role does not have any relation to other elements with a document role, it merely has a relationship to the containing composite widget. An article can have associated articles.
+In contrast to the [`article`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/article_role) role, the `document` role does not define any relationship to other elements with a document role; it only has a relationship to the containing widget or application. Articles are not programmatically associated with each other either — any relationship between articles must be conveyed through the surrounding context, such as a shared parent heading, a list, or a landmark.
 
 ### Associated WAI-ARIA roles, states, and properties
 
-- [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded)
-  - : Include with a value of `true` or `false` if the document element is collapsible, to indicate if the document is currently expanded or collapsed. Other values include the default `undefined` which means the document is not collapsible.
+- The `document` role has no required or supported ARIA states and properties of its own. Only global ARIA attributes, such as `aria-label` or `aria-describedby`, can be used with it.
 
-- tabindex="0"
-  - : Used to make it focusable so the assistive technology user can tab to it and start reading right away.
+### Associated HTML attributes
+
+- `tabindex="0"`
+  - : Used to make it focusable so the assistive technology user can tab to it and start reading right away. Note that `tabindex` is an HTML attribute, not an ARIA state or property.
 
 ### Keyboard interactions
 
@@ -50,7 +51,7 @@ The element should be made focusable by setting the `tabindex="0"` attribute / v
 
 ### Required JavaScript features
 
-None, except as required by any attributes. For example, if the `document` is collapsible, then the state and the value of `aria-expanded` must be maintained.
+None.
 
 ## Examples
 
