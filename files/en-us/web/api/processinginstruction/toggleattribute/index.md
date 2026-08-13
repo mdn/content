@@ -8,7 +8,7 @@ browser-compat: api.ProcessingInstruction.toggleAttribute
 
 {{APIRef("DOM")}}
 
-The **`toggleAttribute()`** method of the {{domxref("ProcessingInstruction")}} interface toggles a Boolean attribute on the given processing instruction, removing it if present and adding it if not present.
+The **`toggleAttribute()`** method of the {{domxref("ProcessingInstruction")}} interface toggles a boolean attribute on the given processing instruction, removing it if present and adding it if not present.
 
 ## Syntax
 
@@ -23,15 +23,14 @@ toggleAttribute(name, force)
   - : A string specifying the name of the attribute to be toggled.
     The attribute name is automatically converted to all lower-case when `toggleAttribute()` is called on an HTML processing instruction in an HTML document.
 - `force` {{optional_inline}}
-  - : A boolean value which has the following effects:
-    - if not specified at all, the `toggleAttribute` method "toggles" the attribute named `name` — removing it if it is present, or else adding it if it is not present
-    - if true, the `toggleAttribute` method adds an attribute named `name`
-    - if false, the `toggleAttribute` method removes the attribute named `name`
+  - : A boolean value that has the following effects:
+    - If not specified at all, the attribute is removed if it is present and added if it is not present.
+    - If set to true, the attribute is added if it is not present, but it isn't removed if it is present.
+    - If false, the attribute is removed if it is present, but it isn't added if it is not present.
 
 ### Return value
 
-`true` if attribute **`name`** is eventually
-present, and `false` otherwise.
+`true` if the attribute is present after the `toggleAttribute()` operation completes, and `false` if not.
 
 ### Exceptions
 
@@ -40,6 +39,8 @@ present, and `false` otherwise.
     The `name` must have at least one character, and may not contain ASCII whitespace, `NULL`, `/`, `=` or `>` (U+0000, U+002F, U+003D, or U+003E, respectively).
 
 ## Examples
+
+### Basic usage
 
 ```js
 const pi = document.createProcessingInstruction("start", 'name=""');

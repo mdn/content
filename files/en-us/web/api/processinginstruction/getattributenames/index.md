@@ -17,7 +17,7 @@ Using `getAttributeNames()` along with
 {{domxref("ProcessingInstruction.getAttribute","getAttribute()")}}, is a memory-efficient and
 performant alternative to accessing `ProcessingInstruction.data`.
 
-The names returned by **`getAttributeNames()`** are _qualified_ attribute names, meaning that attributes with a namespace prefix have their names returned with that namespace prefix (_not_ the actual namespace), followed by a colon, followed by the attribute name (for example, **`xlink:href`**), while any attributes which have no namespace prefix have their names returned as-is (for example, **`href`**).
+The names returned by **`getAttributeNames()`** are _qualified_ attribute names, meaning that attributes with a namespace prefix have their names returned with that namespace prefix (_not_ the actual namespace), followed by a colon, followed by the attribute name (for example, **`xlink:href`**). Any attributes without a namespace prefix have their names returned as-is (for example, **`href`**).
 
 ## Syntax
 
@@ -31,14 +31,16 @@ None.
 
 ### Return value
 
-An ({{jsxref("Array")}}) of strings.
+An {{jsxref("Array")}} of strings.
 
 ## Examples
+
+### Basic usage
 
 ```js
 const pi = document.createProcessingInstruction("start", 'name="placeholder"');
 
-console.log(pi.getAttributeNames("name"));
+console.log(pi.getAttributeNames());
 // logs:
 // ['name']
 
@@ -47,7 +49,6 @@ for (const name of pi.getAttributeNames()) {
   const value = pi.getAttribute(name);
   console.log(name, value);
 }
-
 // logs:
 // name placeholder
 ```

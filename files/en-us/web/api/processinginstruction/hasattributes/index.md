@@ -28,6 +28,8 @@ A boolean.
 
 ## Examples
 
+### Basic usage
+
 ```js
 const pi = document.createProcessingInstruction("start", 'name="placeholder"');
 

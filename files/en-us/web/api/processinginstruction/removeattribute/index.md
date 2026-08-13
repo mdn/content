@@ -31,10 +31,12 @@ None ({{jsxref("undefined")}}).
 
 ## Usage notes
 
-You should use `removeAttribute()` instead of setting the attribute value to `null` either directly or using {{domxref("ProcessingInstruction.setAttribute", "setAttribute()")}}.
+You should use `removeAttribute()` instead of setting the attribute value to `null` (either directly or using {{domxref("ProcessingInstruction.setAttribute", "setAttribute()")}}).
 Many attributes will not behave as expected if you set them to `null`.
 
 ## Examples
+
+### Basic usage
 
 ```js
 const pi = document.createProcessingInstruction("start", 'name="placeholder"');

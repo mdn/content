@@ -8,8 +8,8 @@ browser-compat: api.ProcessingInstruction.hasAttribute
 
 {{APIRef("DOM")}}
 
-The **`ProcessingInstruction.hasAttribute()`** method returns a
-**Boolean** value indicating whether the specified element has the
+The **`hasAttribute()`** method of the {{domxref("ProcessingInstruction")}} interface returns a
+boolean value indicating whether the specified element has the
 specified attribute or not.
 
 ## Syntax
@@ -21,13 +21,15 @@ hasAttribute(name)
 ### Parameters
 
 - `name`
-  - : is a string representing the name of the attribute.
+  - : A string representing the name of the attribute.
 
 ### Return value
 
 A boolean.
 
 ## Examples
+
+### Basic usage
 
 ```js
 const pi = document.createProcessingInstruction("start", 'name="placeholder"');

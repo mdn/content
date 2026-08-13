@@ -31,6 +31,8 @@ A string containing the value of `attributeName` if the attribute exists, otherw
 
 ## Examples
 
+### Basic usage
+
 ```js
 const pi = document.createProcessingInstruction("start", 'name="placeholder"');
 
@@ -50,7 +52,7 @@ When called on an HTML element in a DOM flagged as an HTML document,
 
 HTML [character references](/en-US/docs/Glossary/Character_reference) in an attribute's source markup (for example, `&lt;`, `&amp;`, or `&#x3C;`) are decoded by the HTML parser when the document is parsed, so `getAttribute()` returns the decoded value, not the original source.
 
-Given:
+For example:
 
 ```js
 const pi = document.createProcessingInstruction(

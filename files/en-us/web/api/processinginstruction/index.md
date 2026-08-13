@@ -7,7 +7,7 @@ browser-compat: api.ProcessingInstruction
 
 {{APIRef("DOM")}}
 
-The **`ProcessingInstruction`** interface represents a [processing instruction](https://www.w3.org/TR/xml/#sec-pi); that is, a {{domxref("Node")}} which embeds an instruction targeting a specific application but that can be ignored by any other applications which don't recognize the instruction.
+The **`ProcessingInstruction`** interface represents a [processing instruction](https://www.w3.org/TR/xml/#sec-pi) — a {{domxref("Node")}} that embeds an instruction targeting a specific application, which can be ignored by any application that doesn't recognize the instruction.
 
 > [!WARNING]
 > Until recently, `ProcessingInstruction` were only supported in XML documents, not in HTML documents. In non-supporting browsers, a process instruction will be considered as a comment and be represented as a {{domxref("Comment")}} object in the tree. Check the [browser compatibility](#browser_compatibility) section for support information.
@@ -44,7 +44,7 @@ _This interface also inherits methods from its parent interfaces, {{domxref("Cha
 - {{domxref("ProcessingInstruction.getAttribute()")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Retrieves the value of the named attribute from the current node and returns it as a string.
 - {{domxref("ProcessingInstruction.getAttributeNames()")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns an array of attribute names from the current element.
+  - : Returns an array of attribute names from the current node.
 - {{domxref("ProcessingInstruction.hasAttribute()")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a boolean value indicating if the element has the specified attribute or not.
 - {{domxref("ProcessingInstruction.hasAttributes()")}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -52,7 +52,7 @@ _This interface also inherits methods from its parent interfaces, {{domxref("Cha
 - {{domxref("ProcessingInstruction.removeAttribute()")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Removes the named attribute from the current node.
 - {{domxref("ProcessingInstruction.setAttribute()")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Sets the value of a named attribute of the current node.
+  - : Sets the named attribute of the current node to a new value.
 - {{domxref("ProcessingInstruction.toggleAttribute()")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Toggles a boolean attribute, removing it if it is present and adding it if it is not present, on the specified element.
 
