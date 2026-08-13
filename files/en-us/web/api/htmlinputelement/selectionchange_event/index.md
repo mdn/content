@@ -17,6 +17,8 @@ The event is usually processed by adding an event listener on the {{HTMLElement(
 
 It is also possible to add a listener on the `onselectionchange` event handler, and within the handler function use {{domxref("Document.getSelection()")}} to get the {{domxref("Selection", "Selection")}}. However this is not very useful for getting changes to _text_ selections.
 
+> **Note:** Unlike many other UI events, the `selectionchange` event is not fired synchronously. It is scheduled as a task on the [user interaction task source](/en-US/docs/Web/API/HTML_DOM_API/Microtask_guide#tasks_vs_microtasks), so it may fire after the code that changed the selection has finished running. If you need to react to a selection change immediately after making one, read the selection properties directly instead of relying on the event.
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
