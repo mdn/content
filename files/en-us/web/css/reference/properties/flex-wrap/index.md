@@ -104,9 +104,11 @@ By default, when `wrap` or `wrap-reverse` is specified, each flex line is filled
 
 The `balance` keyword, along with the {{cssxref("flex-line-count")}} property, can be used to distribute the items across lines in a more even manner.
 
-If `balance` is the only keyword specified, the other keyword defaults to `wrap`. If `balance` is specified alongside `nowrap`, the property is invalid.
+If `balance` is the only keyword specified, the other keyword defaults to `wrap`. 
 
-Note that when specifying the `balance` keyword inside the `flex-wrap` value, you can include the {{cssxref("flex-line-count")}} property alongside it to specify the minimum number of lines you want to distribute the flex items over. The `flex-line-count` property has no effect if `balance` is not specified inside `flex-wrap`.
+A balanced wrapping flex container can have a {{cssxref("flex-line-count")}} value applied to specify the minimum number of lines the flex items should be distributed over. The `flex-line-count` property has no effect if `balance` is not specified inside `flex-wrap`.
+
+If `balance` is specified alongside `nowrap`, the property is invalid.
 
 ## Formal definition
 
