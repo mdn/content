@@ -92,7 +92,7 @@ Specified as a single value from the following list or as two space-separated va
 
 ## Description
 
-The `flex-wrap` property is used to specify whether items laid out inside a flex container will wrap onto multiple flex lines or not.
+The `flex-wrap` property is used to specify whether items laid out inside a flex container will wrap onto multiple flex lines or not and, if set to wrap, whether the children should be evenly distributed across flex lines.
 
 The initial value of `nowrap` specifies that all items should be laid out on a single flex line, which means they may overflow the container. The `wrap` and `wrap-reverse` keywords prevent overflow by specifying that flex items can flow, or wrap, across multiple lines.
 
