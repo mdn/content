@@ -105,7 +105,7 @@ This example demonstrates the effects of different values of `flex-line-count` o
 
 #### HTML
 
-We include four container {{htmlelement("div")}}s, each with a `class` of `box`, and ten child `<div>`s, but different `id` values.
+We include four container {{htmlelement("div")}}s, each with a `class` of `box` and ten child `<div>`s; each container `<div>` has a different `id` value.
 
 ```html
 <div class="box" id="box-no-balance">
