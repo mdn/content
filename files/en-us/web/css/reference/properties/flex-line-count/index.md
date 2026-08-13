@@ -79,6 +79,16 @@ This property is specified as the following value:
 - {{cssxref("integer")}}
   - : A positive integer setting the minimum number of flex lines that balanced, wrapped flex items will be distributed over. The default value is `1`.
 
+## Description
+
+The `flex-line-count` property sets the minimum number of flex lines that flex items will be distributed over in wrapping, balanced flex containers — in other words, flex containers that include a {{cssxref("flex-wrap")}} or {{cssxref("flex-flow")}} property with the `balance` keyword set in addition to the `wrap` or `wrap-reverse` keyword.
+
+A key use case for `flex-line-count` is creating a balanced set of two (or more) columns. This is useful for cases such as wiki reference sections, where the layout requirement might be a set number of balanced columns, regardless of the number of items in the list. Setting an explicit {{cssxref("height")}} or {{cssxref("max-height")}} in this case doesn't work, as you don't know how much content you will have, and threfore may end up with less or more columns than desired. See [Creating balanced columns](#creating_balanced_columns) for an example implementation.
+
+If `balance` is not included, or if flex items are not set to wrap onto multiple flex lines, the `flex-line-count` property has no effect. If `balance` is set, but `flex-line-count` is omitted or explicitly set to `1`, the `balance` value has no effect.
+
+If the `flex-line-count` value is equal to or greater than the number of flex items, there will be one flex item per flex line.
+
 ## Formal definition
 
 {{cssinfo}}
@@ -86,16 +96,6 @@ This property is specified as the following value:
 ## Formal syntax
 
 {{csssyntax}}
-
-## Description
-
-The `flex-line-count` property sets the minimum number of flex lines that flex items will be distributed over in wrapping, balanced flex containers — in other words, flex containers that include a {{cssxref("flex-wrap")}} or {{cssxref("flex-flow")}} property with the `balance` keyword set in addition to the `wrap` or `wrap-reverse` keyword.
-
-A key use case for `flex-line-count` is creating a balanced set of two (or more) columns. This is useful for cases such as wiki reference sections, where the layout requirement might be a set number of balanced columns, regardless of the number of items in the list. Setting an explicit {{cssxref("height")}} or {{cssxref("max-height")}} in this case doesn't work, as you don't know how much content you will have, and threfore may end up with less or more columns than desired. See [Creating balanced columns](#creating_balanced_columns) for an example implementation.
-
-If `balance` is not included, or if the other keyword is omitted or set to `nowrap`, the `flex-line-count` property has no effect. If `balance` is set, but `flex-line-count` is omitted or explicitly set to `1`, the `balance` value has no effect.
-
-If the `flex-line-count` value is equal to or greater than the number of flex items, there will be one flex item per flex line.
 
 ## Examples
 

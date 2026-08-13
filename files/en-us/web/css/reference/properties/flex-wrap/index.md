@@ -248,9 +248,10 @@ We include a container {{htmlelement("div")}} with a `class` of `box`, which has
 ```
 
 We also include controls to enable changing features of the flex container, including:
-  - Toggling `flex-wrap` between the `wrap` and `wrap-reverse` values.
-  - Toggling the `balance` keyword on and off.
-  - Changing the `flex-line-count` value.
+
+- Toggling `flex-wrap` between the `wrap` and `wrap-reverse` values.
+- Toggling the `balance` keyword on and off.
+- Changing the `flex-line-count` value.
 
 We've hidden the HTML and JavaScript code for these features for brevity.
 
@@ -357,8 +358,8 @@ lineCountInput.addEventListener("input", setFlexLineCount);
 Change the form control settings to see how they affect the output. Note how:
 
 - Toggling between `wrap` and `wrap-reverse` changes the direction in which the flex lines are laid out along the cross-axis.
-- Checking `balance` causes the space to be evenly distributed across the flex items in each line.
-- The `flex-line-count` property, and therefore the slider, has no effect unless `balance` is checked.
+- Setting `balance` causes the flex items to be evenly distributed across the available flex lines.
+- Changing the `flex-line-count` value changes the minimum number of lines the items will be distributed across. The `flex-line-count` property, and therefore the slider, has no effect unless `balance` is checked.
 - As the flex items are distributed over four flex lines by default, changing the `flex-line-count` to a value of less than `5` has no effect. Values from `5` to `10` add an extra flex line.
 - As there are 10 flex items, `flex-line-count` values of `10` or greater will all have the same effect — one item will be placed on each of 10 flex lines.
 
