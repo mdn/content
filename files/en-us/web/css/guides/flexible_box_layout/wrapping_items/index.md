@@ -123,7 +123,7 @@ Note that the reversing is only happening in the inline, row direction. We start
 
 ## Balanced wrapping
 
-One potential issue with flexbox wrapping is that, by default, the flex items are not distributed evenly across the lines. In the previous example, we have three items on the first three lines, but only one on the last line. We can distribute the flex items more evenly across the four flex lines by including the `flex-wrap` [`balance`](/en-US/docs/Web/CSS/Reference/Properties/flex-wrap#balance) keyword alongside the `wrap` or `wrap-reverse` keyword.
+One potential issue with flexbox wrapping is that, by default, the flex items are not distributed evenly across the lines. In the previous example, we have three items on the first three lines, but only one on the last line. We can distribute the flex items more evenly across the four flex lines by including the [`balance`](/en-US/docs/Web/CSS/Reference/Properties/flex-wrap#balance) keyword within the `flex-wrap` value, alongside the `wrap` or `wrap-reverse` keyword.
 
 This example uses the same HTML as the previous example, and nearly the same CSS, except that the `flex-wrap` value has been changed from `wrap` to `wrap balance`.
 
