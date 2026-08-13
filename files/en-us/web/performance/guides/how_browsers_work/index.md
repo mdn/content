@@ -88,13 +88,15 @@ TCP packets are split into segments during transmission. Because TCP guarantees 
 
 If the server waits for an ACK after each segment, that will result in frequent ACKs from the client and may increase transmission time, even in the case of a low-load network.
 
-On the other hand, sending too many segments at once can lead to the problem that in a busy network the client will not be able to receive the segments and will just keep responding with ACKs for a long time, and the server will have to keep re-sending the segments.
+On the other hand, sending too many segments at once can cause problems in a busy network: segments that are dropped by the network, or that the client cannot accept because they exceed the size of the client's receive window, are not acknowledged. A client only sends ACKs for data it has received in order, so when a segment is missing, the client responds with duplicate ACKs for the last segment it did receive. The server interprets the missing or duplicate ACKs as a signal of packet loss and re-transmits the missing segments — after a timeout, or as soon as it receives several duplicate ACKs.
 
 In order to balance the number of transmitted segments, the {{glossary('TCP slow start')}} algorithm is used to gradually increase the amount of transmitted data until the maximum network bandwidth can be determined, and to reduce the amount of transmitted data in case of high network load.
 
-The number of segments to be transmitted is controlled by the value of the congestion window (CWND), which can be initialized to 1, 2, 4, or 10 MSS (MSS is 1500 bytes over the Ethernet protocol). That value is the number of bytes to send, upon receipt of which the client must send an ACK.
+The number of segments to be transmitted is controlled by the value of the congestion window (CWND), which can be initialized to 1, 2, 4, or 10 MSS (MSS is 1500 bytes over the Ethernet protocol). The CWND is the maximum amount of unacknowledged data the server may have in flight. The client also advertises a receive window — the amount of data it is willing to buffer and process — and the server sends at most the smaller of the two.
 
 If an ACK is received, then the CWND value will be doubled, and so the server will be able to send more segments the next time. If instead no ACK is received, then the CWND value will be halved. That mechanism thus achieves a balance between sending too many segments, and sending too few.
+
+Both the sender and the receiver maintain buffers for segments in flight: the server keeps unacknowledged segments so that it can re-transmit them if they are lost, and the client buffers out-of-order segments so that it can re-assemble the received data in order.
 
 ## Parsing
 
