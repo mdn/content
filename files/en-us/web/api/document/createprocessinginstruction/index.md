@@ -44,6 +44,8 @@ Initially, `ProcessingInstruction` nodes were only supported in XML documents, n
 
 ### Basic usage
 
+This example creates an `<xml-stylesheet>` processing instruction and adds it to the top of the example XML document.
+
 ```js
 const doc = new DOMParser().parseFromString("<foo />", "application/xml");
 const pi = doc.createProcessingInstruction(
