@@ -226,7 +226,7 @@ We also set a {{cssxref("flex")}} value of `1 1 150px` on the flex children, so 
 }
 ```
 
-Next, we apply a different `flex-line-count` value to each flex container. Note how, for the `#box-no-balance` flex container, we also override the original `flex-wrap: wrap balance` value with `wrap`.
+Next, we apply a different `flex-line-count` value to each flex container. For the `#box-no-balance` flex container, we also override the original `flex-wrap: wrap balance` value with `wrap`.
 
 ```css live-sample___flex-line-count
 #box-no-balance {
