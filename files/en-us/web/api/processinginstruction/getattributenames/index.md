@@ -47,7 +47,7 @@ const pi = document.createProcessingInstruction(
 
 console.log(pi.getAttributeNames());
 // logs:
-// ['name']
+// ['name', 'more']
 
 // Iterate over processing instruction's attributes
 for (const name of pi.getAttributeNames()) {
