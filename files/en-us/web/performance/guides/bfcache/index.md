@@ -121,6 +121,8 @@ window.addEventListener("pageshow", (event) => {
 
 For [browsers that do not support `notRestoredReasons`](/en-US/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons#browser_compatibility), the `pageshow` `persisted` property is still a good signal as to whether the bfcache was used or not.
 
+For [browsers that do not support `notRestoredReasons`](/en-US/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons#browser_compatibility), the `pageshow` `persisted` property is still a good signal as to whether the bfcache was used or not.
+
 You can also test bfcache behavior in Chrome DevTools by navigating to **Application > Back/forward cache** and clicking **Test back/forward cache**.
 
 ## Best practices
