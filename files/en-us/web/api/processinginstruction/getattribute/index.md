@@ -27,29 +27,17 @@ getAttribute(attributeName)
 
 ### Return value
 
-A string containing the value of `attributeName` if the attribute exists, otherwise `null`.
-
-## Examples
-
-### Basic usage
-
-```js
-const pi = document.createProcessingInstruction("start", 'name="placeholder"');
-
-console.log(pi.getAttribute("name"));
-// Logs:
-// "placeholder"
-```
+A string containing the value of `attributeName` if the attribute exists; otherwise `null`.
 
 ## Description
 
 ### Casing
 
-Processing instruction arguments are case sensitive
+Processing instruction arguments are case-sensitive.
 
 ### Decoded character references in attribute values
 
-HTML [character references](/en-US/docs/Glossary/Character_reference) in an attribute's source markup (for example, `&lt;`, `&amp;`, or `&#x3C;`) are decoded by the HTML parser when the document is parsed, so `getAttribute()` returns the decoded value, not the original source.
+HTML [character references](/en-US/docs/Glossary/Character_reference) in an attribute's source markup (for example, `&lt;`, `&amp;`, or `&#x3C;`) are decoded by the HTML parser when the document is parsed, so `getAttribute()` returns the decoded value, not the source.
 
 For example:
 
@@ -61,6 +49,18 @@ const pi = document.createProcessingInstruction(
 
 pi.getAttribute("data-payload");
 // <b>hi</b>
+```
+
+## Examples
+
+### Basic usage
+
+```js
+const pi = document.createProcessingInstruction("start", 'name="placeholder"');
+
+console.log(pi.getAttribute("name"));
+// Logs:
+// "placeholder"
 ```
 
 ## Specifications
