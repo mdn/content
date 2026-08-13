@@ -83,7 +83,7 @@ Consumers can direct a business not to sell or share their personal information.
 
 There are two main methods consumers can use to opt out:
 
-- Businesses that sell personal information must provide a clear and conspicuous “Do Not Sell or Share My Personal Information” link on their website that allows consumers to opt out.
+- Businesses that sell personal information must provide a clear and conspicuous "Do Not Sell or Share My Personal Information" link on their website that allows consumers to opt out.
 
 - Businesses that sell personal information must respect the [Global Privacy Control](https://globalprivacycontrol.org/) signal, as conveyed in the {{httpheader("Sec-GPC")}} HTTP header.
 
