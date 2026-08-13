@@ -247,10 +247,10 @@ We include a container {{htmlelement("div")}} with a `class` of `box`, which has
 </div>
 ```
 
-We also include:
-
-- Three JavaScript-powered form controls — one to toggle between setting `flex-wrap: wrap` and `wrap-reverse` on the flex container, one to toggle between setting the `balance` keyword in `flex-wrap` and not setting it, and one to change the `flex-line-count` value applied to the flex container.
-- A {{htmlelement("p")}} element into which we print the updated `flex-wrap` and `flex-line-count` values applied to the flex container as the form elements are manipulated.
+We also include controls to enable changing features of the flex container, including:
+  - Toggling `flex-wrap` between the `wrap` and `wrap-reverse` values.
+  - Toggling the `balance` keyword on and off.
+  - Changing the `flex-line-count` value.
 
 We've hidden the HTML and JavaScript code for these features for brevity.
 
