@@ -61,13 +61,13 @@ When written in documents directly, rather than created by {{domxref("document.c
 
 When written in HTML, processing instructions can be provided with or without the trailing `?`, and the browser will add it if not supplied. That is both `<?my-target?>` and `<?my-target>` are acceptable and will both include the trailing `?` when processed into the DOM by the parser. XML, being stricter, requires the trailing `?`.
 
-HTML also has [more restrictions on the `target` name](https://html.spec.whatwg.org/multipage/parsing.html#processing-instruction-target-state) for backwards compatibility. Effectively, it must match `[A-Za-z_][-_A-Za-z0-9]*` or it is processed as a comment.
+HTML also has [more restrictions on the `target` name](https://html.spec.whatwg.org/multipage/parsing.html#processing-instruction-target-state) in the HTML parser for backwards compatibility. Effectively, it must match `[A-Za-z_][-_A-Za-z0-9]*` or it is processed as a comment.
 
 Although the syntax is identical to that for processing instructions, the [XML declaration](/en-US/docs/Web/XML/Guides/XML_introduction#xml_declaration) (`<?xml version="1.0"?>`) is not considered to be a processing instruction and is not added as such to the DOM.
 
 User-defined processing instructions cannot begin with `"xml"`, as `xml`-prefixed processing-instruction target names are reserved by the XML specification for particular, standard uses (see, for example, `<?xml-stylesheet ?>`).
 
-For backwards compatibility, `xml`-prefixed processing instructions are parsed as comments in HTML documents.
+For backwards compatibility, if the target is `xml` or `xml-stylesheet` then they are parsed as comments in HTML documents. This applies whether in the original HTML or inserted with the likes of {{domxref("Element.innerHTML")}}. These can be created as processing instruction targets with {{domxref("document.createProcessingInstruction()")}}.
 
 ## Examples
 
