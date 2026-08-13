@@ -72,6 +72,13 @@ The [`<rectangular-color-space>`](/en-US/docs/Web/CSS/Reference/Values/color-int
 
 The `<polar-color-space>` category includes [`hsl`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl), [`hwb`](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb), [`lch`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch), and [`oklch`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch). With these you can optionally follow the color space name with a {{CSSXref("&lt;hue-interpolation-method&gt;")}}. This value defaults to `shorter hue`, but can also be set to `longer hue`, `increasing hue`, or `decreasing hue`.
 
+If you omit the hue interpolation method when mixing in a polar color space, it defaults to `shorter hue`. For example, the following two declarations are equivalent:
+
+```css
+color-mix(in lch, red, blue);
+color-mix(in lch shorter hue, red, blue);
+```
+
 ### Color percentages
 
 Each color can be declared with a `<percentage>` value between `0%` and `100%`, which specifies the amount of the corresponding color to mix. The percentages are normalized if the total value of the declared percentages does not equal `100%`.
