@@ -58,6 +58,8 @@ To define an autonomous custom element, you should omit the `options` parameter.
 
 To define a customized built-in element, you must pass the `options` parameter with its `extends` property set to the name of the built-in element that you are extending, and this must correspond to the interface that your custom element class definition inherits from. For example, to customize the {{htmlelement("p")}} element, you must pass `{extends: "p"}` to `define()`, and the class definition for your element must inherit from {{domxref("HTMLParagraphElement")}}.
 
+If your custom element class implements an `attributeChangedCallback()` lifecycle callback, the browser reads the static `observedAttributes` property from the constructor when `define()` is called. The list of attribute names it returns determines which attribute changes trigger the callback. This means that `observedAttributes` must be declared as a static property (or static getter) on the class, and that it is read when the element is defined, not when elements are created or upgraded: if it returns `undefined`, the element observes no attributes, and `attributeChangedCallback()` will never be invoked.
+
 ### Valid custom element names
 
 Custom element names must:
