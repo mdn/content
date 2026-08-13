@@ -24,8 +24,8 @@ toggleAttribute(name, force)
 - `force` {{optional_inline}}
   - : A boolean value that has the following effects:
     - If not specified at all, the attribute is removed if it is present and added if it is not present.
-    - If set to true, the attribute is added if it is not present, but it isn't removed if it is present.
-    - If false, the attribute is removed if it is present, but it isn't added if it is not present.
+    - If set to `true`, the attribute is added if it is not present, but it isn't removed if it is present.
+    - If set to `false`, the attribute is removed if it is present, but it isn't added if it is not present.
 
 ### Return value
 
