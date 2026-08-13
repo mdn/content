@@ -21,7 +21,6 @@ toggleAttribute(name, force)
 
 - `name`
   - : A string specifying the name of the attribute to be toggled.
-    The attribute name is automatically converted to all lower-case when `toggleAttribute()` is called on an HTML processing instruction in an HTML document.
 - `force` {{optional_inline}}
   - : A boolean value that has the following effects:
     - If not specified at all, the attribute is removed if it is present and added if it is not present.
@@ -49,7 +48,7 @@ pi.toggleAttribute("name");
 pi.toggleAttribute("surname");
 console.log(pi);
 // logs:
-// <?start surname?>
+// <?start surname=""?>
 ```
 
 ## Specifications

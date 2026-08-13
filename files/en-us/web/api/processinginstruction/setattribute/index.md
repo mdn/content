@@ -8,7 +8,7 @@ browser-compat: api.ProcessingInstruction.setAttribute
 
 {{APIRef("DOM")}}
 
-The **`setAttribute()`** method of the {{domxref("ProcessingInstruction")}} interface sets the value of an attribute on the specified processing instruction.
+The **`setAttribute()`** method of the {{domxref("ProcessingInstruction")}} interface sets the value of an attribute on the processing instruction.
 If the attribute already exists, the value is updated; otherwise, a new attribute is added with the specified name and value.
 
 ## Syntax
@@ -21,7 +21,6 @@ setAttribute(qualifiedName, value)
 
 - `qualifiedName`
   - : A string containing the qualified name of the attribute whose value is to be set.
-    The attribute name is automatically converted to all lower-case when `setAttribute()` is called on an HTML processing instruction in an HTML document.
 
     The format of the qualified name is `prefix:localName` or `localName`, where the parts are defined as:
     - `prefix` {{optional_inline}}
@@ -47,9 +46,6 @@ None ({{jsxref("undefined")}}).
     - The `prefix` must have at least one character, and cannot contain ASCII whitespace, `NULL`, `/`, or `>` (U+0000, U+002F, or U+003E, respectively).
     - The `localName` must have at least one character, and may not contain ASCII whitespace, `NULL`, `/`, `=` or `>` (U+0000, U+002F, U+003D, or U+003E, respectively).
 
-    > [!NOTE]
-    > Earlier versions of the specification were more restrictive, requiring that the `qualifiedName` be a valid [XML name](https://www.w3.org/TR/xml/#dt-name).
-
 ## Description
 
 **`setAttribute()`** sets the value of an attribute on the specified processing instruction.
@@ -69,10 +65,10 @@ To get the current value of an attribute, use {{domxref("ProcessingInstruction.g
 ```js
 const pi = document.createProcessingInstruction("start", 'name="placeholder"');
 
-pi.setAttribute("name", "placeholder");
+pi.setAttribute("name", "new text");
 console.log(pi);
 // logs:
-// <?start?>
+// <?start name="new text"?>
 ```
 
 ## Specifications

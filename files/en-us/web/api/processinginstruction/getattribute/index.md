@@ -45,7 +45,6 @@ console.log(pi.getAttribute("name"));
 
 ### Lower casing
 
-When called on an HTML element in a DOM flagged as an HTML document,
 `getAttribute()` lower-cases its argument before proceeding.
 
 ### Decoded character references in attribute values
@@ -63,10 +62,6 @@ const pi = document.createProcessingInstruction(
 pi.getAttribute("data-payload");
 // <b>hi</b>
 ```
-
-Treating the return value from `getAttribute()` as already-escaped HTML is unsafe. If you read an attribute that holds untrusted data and then assign it to {{domxref("Element.innerHTML", "innerHTML")}} or insert it into the document as markup, any HTML references used to escape special characters will already be decoded, and the result can be exploited for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS).
-
-Use {{domxref("Node.textContent", "textContent")}} (or another text-safe API) for untrusted data instead of `innerHTML`.
 
 ## Specifications
 

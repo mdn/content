@@ -9,23 +9,12 @@ browser-compat: api.ProcessingInstruction
 
 The **`ProcessingInstruction`** interface represents a [processing instruction](https://www.w3.org/TR/xml/#sec-pi) — a {{domxref("Node")}} that embeds an instruction targeting a specific application, which can be ignored by any application that doesn't recognize the instruction.
 
-> [!WARNING]
-> Until recently, `ProcessingInstruction` were only supported in XML documents, not in HTML documents. In non-supporting browsers, a process instruction will be considered as a comment and be represented as a {{domxref("Comment")}} object in the tree. Check the [browser compatibility](#browser_compatibility) section for support information.
+## Constructor
 
-A processing instruction may be different than the [XML declaration](/en-US/docs/Web/XML/Guides/XML_introduction#xml_declaration).
+- {{domxref("ProcessingInstruction.ProcessingInstruction()")}}
+  - : Creates a new ProcessingInstruction object instance.
 
-> [!NOTE]
-> User-defined processing instructions cannot begin with `"xml"`, as `xml`-prefixed processing-instruction target names are reserved by the XML specification for particular, standard uses (see, for example, `<?xml-stylesheet ?>`.
-
-For example:
-
-```html
-<?xml version="1.0"?>
-```
-
-is a processing instruction whose `target` is `xml`.
-
-{{InheritanceDiagram}}
+    Developers cannot use the `ProcessingInstruction()` constructor directly to create a new `ProcessingInstruction` instance, and must use the {{domxref("document.createProcessingInstruction()")}} method instead. Attempting to use the `ProcessingInstruction()` constructor directly results in an "illegal constructor" error.
 
 ## Instance properties
 
@@ -55,6 +44,76 @@ _This interface also inherits methods from its parent interfaces, {{domxref("Cha
   - : Sets the named attribute of the current node to a new value.
 - {{domxref("ProcessingInstruction.toggleAttribute()")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Toggles a boolean attribute, removing it if it is present and adding it if it is not present, on the specified element.
+
+These methods provide easier access to the {domxref("CharacterData.data", "data")} string attributes.
+
+## Description
+
+Processing instructions are, as the name suggests, are instructions about how to process the document. They can include stylesheets for XML documents, placeholders for HTML documents, or other processing instructions.
+
+They are {{domxref("Node", "Nodes")}} and not {{domxref("Element", "Elements")}} in that they do not change the shape of the {{domxref("Document Object Model", "Document Object Model (DOM)")}} in that they do not have children or cause nesting as demonstrated in the [Patching example](#usage_with_template_for_patching) later.
+
+{{InheritanceDiagram}}
+
+Initially, `ProcessingInstruction` nodes were only supported in XML documents, not in HTML documents. In non-supporting browsers, a process instruction will be considered as a comment and be represented as a {{domxref("Comment")}} object in the tree. Check the [browser compatibility](#browser_compatibility) section for support information.
+
+When written in XML or HTML directly, rather than created by {{domxref("document.createProcessingInstruction()")}}, they begin with `<?`, followed by the `target`, optional `data` attributes and end with `?>`. For example: `<?my-target name="my-name"?>`.
+
+When written in HTML, processing instructions can be provided with or without the trailing `?`, and the browser will add it if not supplied. That is both `<?my-target?>` and `<?my-target>` are acceptable and will both include the trailing `?` when processed into the DOM by the parser. XML, being stricter, requires the trailing `?`.
+
+Although the syntax is identical to that for processing instructions, the [XML declaration](/en-US/docs/Web/XML/Guides/XML_introduction#xml_declaration) (`<?xml version="1.0"?>`) is not considered to be a processing instruction and is not added as such to the DOM.
+
+User-defined processing instructions cannot begin with `"xml"`, as `xml`-prefixed processing-instruction target names are reserved by the XML specification for particular, standard uses (see, for example, `<?xml-stylesheet ?>`).
+
+## Examples
+
+### Basic usage
+
+```xml
+<?display table-view?>
+```
+
+This example shows a processing instruction whose `target` is `display` and who's data is `table-view`.
+
+### Reserved XML target example
+
+```xml
+<?xml-stylesheet href="styles.css"?>
+```
+
+This example shows a processing instruction whose `xml-stylesheet` is `display` and who's data is `href="styles.css"`.
+
+### Usage with `<template for>` patching
+
+```html
+<body>
+  <div><?start name="placeholder"> Loading... <?end></div>
+  ...
+  <template for="placeholder"> Lorem Ipsum... </template>
+  ...
+</body>
+```
+
+Uses the `<?start>` and `<?end>` processing instructions as placeholders and later on fills in the contents using `<template for>`. Both exclude the optional trailing `?`.
+
+This example also demonstrates the lack of children and nesting as shown with the indentation in the previous example. The `<?start>` and `<?end>` processing instructions, although linked in terms of `<template for>`, are not linked in terms of the DOM and do not cause the `Loading..` text contents in between to be a child (as demonstrated by the lack of indentation).
+
+### Using methods as opposed to the `data` attribute
+
+```js
+const pi = document.createProcessingInstruction(
+  "my-target",
+  "my-data1='value1' my-data2='value2'",
+);
+
+console.log(pi.data);
+console.log(pi.getAttribute("my-data1"));
+console.log(pi.getAttribute("my-data1"));
+// logs
+// my-data1='value1' my-data2='value2'
+// value1
+// value2
+```
 
 ## Specifications
 

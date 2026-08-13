@@ -10,8 +10,6 @@ browser-compat: api.Document.createProcessingInstruction
 
 `createProcessingInstruction()` generates a new [processing instruction](/en-US/docs/Web/API/ProcessingInstruction) node and returns it.
 
-The new node usually will be inserted into an XML document in order to accomplish anything with it, such as with {{ domxref("node.insertBefore") }}.
-
 ## Syntax
 
 ```js-nolint
@@ -20,8 +18,6 @@ createProcessingInstruction(target, data)
 
 ### Parameters
 
-- `piNode`
-  - : The resulting {{ domxref("ProcessingInstruction") }} node.
 - `target`
   - : A string containing the first part of the processing instruction (i.e., `<?target … ?>`)
 - `data`
@@ -29,7 +25,7 @@ createProcessingInstruction(target, data)
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+- The resulting {{ domxref("ProcessingInstruction") }} node.
 
 ### Exceptions
 
@@ -37,6 +33,12 @@ None ({{jsxref("undefined")}}).
   - : Thrown if either of the following are true:
     - The [`target`](#target) value is not a valid [XML name](https://www.w3.org/TR/xml/#dt-name); for example, it starts with a number, hyphen, or period, or contains characters other than alphanumeric characters, underscores, hyphens, or periods.
     - The _closing processing instruction sequence_ (`?>`) is part of the [`data`](#data) value.
+
+## Description
+
+The new node usually will be inserted into a document in order to accomplish anything with it, such as with {{ domxref("node.insertBefore") }}.
+
+Initially, `ProcessingInstruction` nodes were only supported in XML documents, not in HTML documents. In non-supporting browsers, a process instruction will be considered as a comment and be represented as a {{domxref("Comment")}} object in the tree. Check the [browser compatibility](#browser_compatibility) section for support information.
 
 ## Examples
 

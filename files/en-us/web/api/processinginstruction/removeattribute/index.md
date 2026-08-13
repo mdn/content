@@ -8,9 +8,7 @@ browser-compat: api.ProcessingInstruction.removeAttribute
 
 {{ APIRef("DOM") }}
 
-The {{domxref("ProcessingInstruction")}} method
-**`removeAttribute()`** removes the attribute with the
-specified name from the Processing Instruction.
+The **`removeAttribute()`** method of the {{domxref("ProcessingInstruction")}} removes the attribute with the specified name from the processing instruction.
 
 ## Syntax
 
