@@ -40,7 +40,7 @@ HTML also has [additional restrictions on the `target` name](https://html.spec.w
 
 The new node usually will be inserted into a document in order to accomplish anything with it, such as with {{ domxref("node.insertBefore") }}.
 
-Initially, `ProcessingInstruction` nodes were only supported in XML documents, not in HTML documents. In non-supporting browsers, a process instruction will be considered as a comment and be represented as a {{domxref("Comment")}} object in the tree. Check the [browser compatibility](#browser_compatibility) section for support information.
+Initially, `ProcessingInstruction` nodes were only supported in XML documents, not in HTML documents. In non-supporting browsers, a processing instruction will be considered as a comment and be represented as a {{domxref("Comment")}} object in the tree. Check the [browser compatibility](#browser_compatibility) section for support information.
 
 ## Examples
 
