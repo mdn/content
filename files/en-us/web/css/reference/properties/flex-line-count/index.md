@@ -255,7 +255,7 @@ We've hidden the rest of the CSS for brevity.
 
 Note the effect of the different property combinations:
 
-- The first flex container doesn't have the `balance` keyword set in its `flex-wrap` value. Its flex children are therefore not given a balanced distribution and are still laid out over three flex lines: its `flex-line-count` value of `6` is ignored.
+- As the first flex container doesn't have the `balance` keyword set in its `flex-wrap` value, its children are not given a balanced distribution and its `flex-line-count` value is ignored.
 - The other flex containers are given a balanced distribution for their flex children and laid out over progressively greater numbers of flex lines as the `flex-line-count` value increases.
 - Note that the second flex container has `flex-line-count: 3` set on it, but this actually makes no difference to the layout of its flex children, because they fit on a minimum of three lines anyway. You can prove this by inspecting the second flex container using your browser's developer tools and disabling the `flex-line-count` property — the layout should not change.
 
