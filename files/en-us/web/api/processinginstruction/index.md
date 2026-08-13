@@ -57,7 +57,7 @@ Processing instructions are {{domxref("Node", "Nodes")}} rather than {{domxref("
 
 Initially, `ProcessingInstruction` nodes were only supported in XML documents, not HTML documents. In non-supporting browsers, processing instructions will be interpreted as comments and represented as {{domxref("Comment")}} objects in the DOM tree.
 
-Processing instructions are normally created using the {{domxref("document.createProcessingInstruction()")}} method. When written in documents directly, they begin and end with `<?` and `?>` tags, and contain a `target` and optional `data` attributes. For example:
+When written in documents directly, rather than created by {{domxref("document.createProcessingInstruction()")}}, they begin and end with `<?` and `?>` delimiters, and contain a `target` and optional `data` attributes. For example:
 
 ```xml
 <?my-target name="my-name"?>`.
