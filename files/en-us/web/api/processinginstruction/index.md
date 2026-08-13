@@ -85,14 +85,23 @@ This example shows a processing instruction whose `xml-stylesheet` is `display` 
 
 ### Usage with `<template for>` patching
 
+<!-- Have prettier ignore this, as indentation is important and discussed next -->
+<!-- prettier-ignore-start -->
 ```html
 <body>
-  <div><?start name="placeholder"> Loading... <?end></div>
+  <div>
+    <?start name="placeholder">
+    Loading...
+    <?end>
+  </div>
   ...
-  <template for="placeholder"> Lorem Ipsum... </template>
+  <template for="placeholder">
+    Lorem Ipsum...
+  </template>
   ...
 </body>
 ```
+<!-- prettier-ignore-end -->
 
 Uses the `<?start>` and `<?end>` processing instructions as placeholders and later on fills in the contents using `<template for>`. Both exclude the optional trailing `?`.
 
