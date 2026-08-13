@@ -117,7 +117,7 @@ This example also demonstrates the lack of processing instruction children and n
 
 ### Using methods as opposed to the `data` attribute
 
-This example creates a processing instruction using the `createProcessingInstruction()` method. It then logs the processing instruction's data (accessed via its {{domxref("CharacterData.data")}} property) and attributes (accessed via its {{domxref("ProcessingInstruction.getAttribute()")}} method).
+This example creates a processing instruction using the `createProcessingInstruction()` method. It then logs the processing instruction's data (accessed via its {{domxref("CharacterData.data")}} property) and then its two attributes individually (accessed via its {{domxref("ProcessingInstruction.getAttribute()")}} method).
 
 ```js
 const pi = document.createProcessingInstruction(
