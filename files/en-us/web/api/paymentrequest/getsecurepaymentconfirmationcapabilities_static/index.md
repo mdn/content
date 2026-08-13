@@ -24,7 +24,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with a map-like object. Each key is a string representing the name of a secure payment confirmation feature, and each value is a boolean representing whether the feature is available (`true`) or not (`false`).
+A {{jsxref("Promise")}} that resolves with a [map-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#map-like_browser_apis). Each key is a string representing the name of a secure payment confirmation feature, and each value is a boolean representing whether the feature is available (`true`) or not (`false`).
 
 Available features are as follows:
 
