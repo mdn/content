@@ -23,6 +23,8 @@ createProcessingInstruction(target, data)
 - `data`
   - : A string containing any information the processing instruction should carry, after the target. The data is up to you, but it can't contain `?>`, since that closes the processing instruction.
 
+HTML also has [additional restrictions on the `target` name](https://html.spec.whatwg.org/multipage/parsing.html#processing-instruction-target-state) for backwards compatibility. Effectively, it must match `[A-Za-z_][-_A-Za-z0-9]*` and not be prefixed with `xml` or the `InvalidCharacterError` exception is thrown. Processing instructions with invalid names in HTML documents are parsed as comments.
+
 ### Return value
 
 - The resulting {{ domxref("ProcessingInstruction") }} node.

@@ -57,13 +57,17 @@ They are {{domxref("Node", "Nodes")}} and not {{domxref("Element", "Elements")}}
 
 Initially, `ProcessingInstruction` nodes were only supported in XML documents, not in HTML documents. In non-supporting browsers, a process instruction will be considered as a comment and be represented as a {{domxref("Comment")}} object in the tree. Check the [browser compatibility](#browser_compatibility) section for support information.
 
-When written in XML or HTML directly, rather than created by {{domxref("document.createProcessingInstruction()")}}, they begin with `<?`, followed by the `target`, optional `data` attributes and end with `?>`. For example: `<?my-target name="my-name"?>`.
+When written in documents directly, rather than created by {{domxref("document.createProcessingInstruction()")}}, they begin with `<?`, followed by the `target`, optional `data` attributes and end with `?>`. For example: `<?my-target name="my-name"?>`.
 
 When written in HTML, processing instructions can be provided with or without the trailing `?`, and the browser will add it if not supplied. That is both `<?my-target?>` and `<?my-target>` are acceptable and will both include the trailing `?` when processed into the DOM by the parser. XML, being stricter, requires the trailing `?`.
+
+HTML also has [more restrictions on the `target` name](https://html.spec.whatwg.org/multipage/parsing.html#processing-instruction-target-state) for backwards compatibility. Effectively, it must match `[A-Za-z_][-_A-Za-z0-9]*` or it is processed as a comment.
 
 Although the syntax is identical to that for processing instructions, the [XML declaration](/en-US/docs/Web/XML/Guides/XML_introduction#xml_declaration) (`<?xml version="1.0"?>`) is not considered to be a processing instruction and is not added as such to the DOM.
 
 User-defined processing instructions cannot begin with `"xml"`, as `xml`-prefixed processing-instruction target names are reserved by the XML specification for particular, standard uses (see, for example, `<?xml-stylesheet ?>`).
+
+For backwards compatibility, `xml`-prefixed processing instructions are parsed as comments in HTML documents.
 
 ## Examples
 

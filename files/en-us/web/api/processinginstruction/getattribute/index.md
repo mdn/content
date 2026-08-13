@@ -43,9 +43,9 @@ console.log(pi.getAttribute("name"));
 
 ## Description
 
-### Lower casing
+### Casing
 
-`getAttribute()` lower-cases its argument before proceeding.
+Processing instruction arguments are case sensitive
 
 ### Decoded character references in attribute values
 

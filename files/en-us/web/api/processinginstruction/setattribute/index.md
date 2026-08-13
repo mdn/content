@@ -46,6 +46,8 @@ None ({{jsxref("undefined")}}).
     - The `prefix` must have at least one character, and cannot contain ASCII whitespace, `NULL`, `/`, or `>` (U+0000, U+002F, or U+003E, respectively).
     - The `localName` must have at least one character, and may not contain ASCII whitespace, `NULL`, `/`, `=` or `>` (U+0000, U+002F, U+003D, or U+003E, respectively).
 
+HTML also has [additional restrictions on the `target` name](https://html.spec.whatwg.org/multipage/parsing.html#processing-instruction-target-state) for backwards compatibility. Effectively, it must match `[A-Za-z_][-_A-Za-z0-9]*` and not be prefixed with `xml` or the `InvalidCharacterError` exception is thrown. Processing instructions with invalid names in HTML documents are parsed as comments.
+
 ## Description
 
 **`setAttribute()`** sets the value of an attribute on the specified processing instruction.
