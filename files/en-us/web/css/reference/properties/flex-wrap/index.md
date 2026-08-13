@@ -359,7 +359,6 @@ Change the form control settings to see how they affect the output. Note how:
 - The `flex-line-count` property, and therefore the slider, has no effect unless `balance` is checked.
 - As the flex items are distributed over four flex lines by default, changing the `flex-line-count` to a value of less than `5` has no effect. Values from `5` to `10` add an extra flex line.
 - As there are 10 flex items, `flex-line-count` values of `10` or greater will all have the same effect — one item will be placed on each of 10 flex lines.
-- Varying `flex-line-count` between `3` and `5` will produce the most interesting effects.
 
 ## Specifications
 
