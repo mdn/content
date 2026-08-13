@@ -315,7 +315,6 @@ The following are examples of read-only `Map`-like browser objects:
 - {{domxref("MIDIInputMap")}}
 - {{domxref("MIDIOutputMap")}}
 - {{domxref("RTCStatsReport")}}
-- The return value of {{domxref("PaymentRequest.getSecurePaymentConfirmationCapabilities()")}}
 
 ## Constructor
 
