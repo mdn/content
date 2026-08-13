@@ -329,7 +329,7 @@ We include an {{htmlelement("ol")}} element containing ten {{htmlelement("li")}}
 
 #### CSS
 
-We set the list's {{cssxref("display")}} to `flex`, then set a {{cssxref("gap")}} of `10px` between flex items and `40px` between flex lines. We then set a {{cssxref("flex-direction")}} value of `column` and a {{cssxref("flex-wrap")}} value of `balance` using the {{cssxref("flex-flow")}} shorthand so that the flex lines are arranged in columns and will balance when wrapped.
+We set the list's {{cssxref("display")}} to `flex` with a {{cssxref("gap")}} of `10px` between flex items and `40px` between flex lines. We then set a {{cssxref("flex-direction")}} value of `column` and a {{cssxref("flex-wrap")}} value of `balance` using the {{cssxref("flex-flow")}} shorthand so that the flex lines are arranged in columns and will balance when wrapped.
 
 Finally, we set a `flex-line-count` value of `2`, meaning that, even though no fixed height is set on the list, its content will always be wrapped over two balanced columns, regardless of how much content is included.
 
