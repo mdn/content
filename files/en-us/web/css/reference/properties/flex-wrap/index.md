@@ -357,7 +357,7 @@ Change the form control settings to see how they affect the output. Note how:
 - Toggling between `wrap` and `wrap-reverse` changes the direction in which the flex lines are laid out along the cross-axis.
 - Checking `balance` causes the space to be evenly distributed across the flex items in each line.
 - The `flex-line-count` property, and therefore the slider, has no effect unless `balance` is checked.
-- Changing the `flex-line-count` between `1` and `3` has no effect, as in this case, the flex items will fit into a minimum of three lines anyway.
+- As the flex items are distributed over four flex lines by default, changing the `flex-line-count` to a value of less than `5` has no effect. Values from `5` to `10` add an extra flex line.
 - Setting `flex-line-count` values of `10` or more will always have the same effect — there are ten flex items, and you will see one flex item placed in each of ten flex lines.
 - Varying `flex-line-count` between `3` and `5` will produce the most interesting effects.
 
