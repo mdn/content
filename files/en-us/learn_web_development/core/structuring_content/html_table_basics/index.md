@@ -677,6 +677,9 @@ Let's look at how the above code renders:
 Notice how the different columns receive the styles specified in the classes.
 
 > [!NOTE]
+> If you're following along in your own editor using the [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css) template, note that it sets background colors on the `th` and `td` cells. Because cell backgrounds are painted over the column backgrounds, the column shading in this example won't be visible unless you override those rules first — for example, by adding `td, th { background-color: transparent; }` to your CSS.
+
+> [!NOTE]
 > Even though `<colgroup>` and `<col>` mainly facilitate styling, they are an HTML feature, so we've covered them here rather than in our CSS modules. It is also fair to say that they are a _limited_ feature — as shown on the [`<colgroup>` reference page](/en-US/docs/Web/HTML/Reference/Elements/colgroup#usage_notes), only a limited subset of styles can be applied to a `<col>` element, and most of the other settings that were historically available have been deprecated (removed, or flagged for removal).
 
 ## Interactive recap of table concepts
