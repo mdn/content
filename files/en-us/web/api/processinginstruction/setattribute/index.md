@@ -33,7 +33,7 @@ setAttribute(qualifiedName, value)
 
     Specified non-string values are automatically converted into strings.
 
-    For Boolean attributes, you should, by convention, set `value` to the empty string (`""`) or the attribute's name, with no leading or trailing whitespace.
+    For boolean attributes, you should, by convention, set `value` to the empty string (`""`) or the attribute's name, with no leading or trailing whitespace.
 
 ### Return value
 
@@ -53,7 +53,7 @@ If the attribute already exists, the value is updated; otherwise, a new attribut
 
 To set the value of a Boolean attribute, such as `disabled`, you can specify any value.
 It doesn't matter what value you use; if the attribute is present, its value is considered to be `true`.
-By convention we enable boolean attributes by setting their value to either the name of the attribute or the empty string (`""`).
+By convention, we enable boolean attributes by setting their value to either the name of the attribute or the empty string (`""`).
 The absence of a boolean attribute means its value is `false`; you must call {{domxref("ProcessingInstruction.removeAttribute()")}} to "undo" the effect of enabling a boolean attribute.
 
 To get the current value of an attribute, use {{domxref("ProcessingInstruction.getAttribute", "getAttribute()")}}; to remove an attribute, call {{domxref("ProcessingInstruction.removeAttribute", "removeAttribute()")}}.
