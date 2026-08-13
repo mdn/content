@@ -78,9 +78,6 @@ This topic provides an index to the main _sorts_ of events you might be interest
       </td>
       <td>
         Events fired on
-        <a href="/en-US/docs/Web/API/Document#clipboard_events"
-          ><code>Document</code></a
-        >,
         <a href="/en-US/docs/Web/API/Element#clipboard_events"
           ><code>Element</code></a
         >,
@@ -199,8 +196,8 @@ This topic provides an index to the main _sorts_ of events you might be interest
       <td>
         <p>
           Drag events fired on
-          <a href="/en-US/docs/Web/API/Document#drag_drop_events"
-            ><code>Document</code></a
+          <a href="/en-US/docs/Web/API/HTMLElement#drag_drop_events"
+            ><code>HTMLElement</code></a
           >
         </p>
         <p>
@@ -356,7 +353,7 @@ This topic provides an index to the main _sorts_ of events you might be interest
       </td>
       <td>
         Events fired on
-        <a href="/en-US/docs/Web/API/HTMLElement#input_events"
+        <a href="/en-US/docs/Web/API/HTMLElement#events"
           ><code>HTMLElement</code></a
         >,
         <a href="/en-US/docs/Web/API/HTMLInputElement#events"
@@ -375,9 +372,6 @@ This topic provides an index to the main _sorts_ of events you might be interest
       </td>
       <td>
         Events fired on
-        <a href="/en-US/docs/Web/API/Document#keyboard_events"
-          ><code>Document</code></a
-        >,
         <a href="/en-US/docs/Web/API/Element#keyboard_events"
           ><code>Element</code></a
         >.
@@ -520,7 +514,7 @@ This topic provides an index to the main _sorts_ of events you might be interest
         </p>
         <p>
           Events fired on
-          <a href="/en-US/docs/Web/API/NetworkInformation#event_handler"
+          <a href="/en-US/docs/Web/API/NetworkInformation#events"
             ><code>NetworkInformation</code></a
           >
           (<a href="/en-US/docs/Web/API/Network_Information_API"
