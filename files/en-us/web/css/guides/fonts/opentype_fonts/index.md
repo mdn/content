@@ -1173,5 +1173,5 @@ For example, small caps can be set several ways, but if you want to ensure that 
 
 ### Other resources
 
-- [Using OpenType features](https://helpx.adobe.com/fonts/using/use-open-type-features.html) by Tim Brown, Head of Typography, Adobe
-- [Adobe's Syntax for OpenType features in CSS](https://helpx.adobe.com/fonts/using/open-type-syntax.html)
+- [Using OpenType features](https://helpx.adobe.com/fonts/web/language-support-and-opentype-features/use-open-type-features.html) by Tim Brown, Head of Typography, Adobe
+- [Adobe's Syntax for OpenType features in CSS](https://helpx.adobe.com/fonts/web/language-support-and-opentype-features/open-type-syntax.html)

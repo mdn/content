@@ -110,7 +110,7 @@ Profiles are created in the systems temporary folder. This is also where the enc
 `profile` is provided. By default geckodriver will create a new profile in this location.
 
 The effective profile in use by the WebDriver session is returned to the user in the `moz:profile`
-capability in the [new session response](/en-US/docs/Web/WebDriver/Reference/Commands/NewSession).
+capability in the [new session response](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/NewSession).
 
 To have geckodriver pick up an existing profile on the filesystem, please set the `args` field to
 `{"args": ["-profile", "/path/to/your/profile"]}`. Note that if you use a remote client targeting a server
@@ -278,4 +278,4 @@ This runs the GeckoView example application as installed on the first Android em
 - [Chrome-specific WebDriver capabilities](https://developer.chrome.com/docs/chromedriver/capabilities)
   (`goog:chromeOptions)`
 - [List of WebDriver capabilities](/en-US/docs/Web/WebDriver/Reference/Capabilities)
-- [New Session](/en-US/docs/Web/WebDriver/Reference/Commands/NewSession) command
+- [New Session](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/NewSession) command

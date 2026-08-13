@@ -20,7 +20,7 @@ A {{domxref("NodeList")}} containing the nodes removed from the target of the mu
 
 In the following example, there are two buttons: one to add new nodes to a target node, and one to remove them. A {{domxref("MutationObserver")}} is used to observe the target node for changes; when a change is detected, the observer calls a function, `logRemovedNodes()`.
 
-The `logRemovedNodes()` function checks that the MutationRecord's `type` is `childList`, which means that the target node's children have changed. If the type is `childlist` the function updates the total number of nodes that have been removed. However, note that clicking the "Add a node" button will not increment the total number of removed nodes, because in this case `record.removedNodes` will have a length of `0`.
+The `logRemovedNodes()` function checks that the MutationRecord's `type` is `childList`, which means that the target node's children have changed. If the type is `childList` the function updates the total number of nodes that have been removed. However, note that clicking the "Add a node" button will not increment the total number of removed nodes, because in this case `record.removedNodes` will have a length of `0`.
 
 #### HTML
 
@@ -67,10 +67,10 @@ reset.addEventListener("click", () => self.location.reload());
 
 function logRemovedNodes(records) {
   for (const record of records) {
-    // Check if the childlist of the target node has been mutated
+    // Check if the childList of the target node has been mutated
     if (record.type === "childList") {
       totalRemovedNodes += record.removedNodes.length;
-      // Log the number of nodes added
+      // Log the number of nodes removed
       counter.textContent = `Total removed nodes: ${totalRemovedNodes}`;
     }
   }

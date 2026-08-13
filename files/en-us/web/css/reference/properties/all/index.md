@@ -79,9 +79,9 @@ all: revert;
 all: revert-layer;
 ```
 
-The `all` property is specified as one of the CSS global keyword values. Note that none of these values affect the {{cssxref("unicode-bidi")}} and {{cssxref("direction")}} properties.
-
 ### Values
+
+The `all` property is specified as one of the CSS global keyword values. Note that none of these values affect the {{cssxref("unicode-bidi")}} and {{cssxref("direction")}} properties.
 
 - {{cssxref("initial")}}
   - : Specifies that all the element's properties should be changed to their [initial values](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value).

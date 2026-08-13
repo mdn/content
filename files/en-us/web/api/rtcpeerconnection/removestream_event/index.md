@@ -37,13 +37,6 @@ A {{domxref("MediaStreamEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MediaStreamEvent")}}
 
-## Event properties
-
-_A {{domxref("MediaStreamEvent")}} being an {{domxref("Event")}}, this event also implements these properties_.
-
-- {{domxref("MediaStreamEvent.stream")}} {{ReadOnlyInline}}
-  - : Contains the {{domxref("MediaStream")}} containing the stream associated with the event.
-
 ## Browser compatibility
 
 {{Compat}}
