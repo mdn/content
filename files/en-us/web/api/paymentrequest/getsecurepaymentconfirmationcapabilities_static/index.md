@@ -15,7 +15,7 @@ The **`getSecurePaymentConfirmationCapabilities()`** static method of the {{domx
 ## Syntax
 
 ```js-nolint
-getSecurePaymentConfirmationCapabilities()
+PaymentRequest.getSecurePaymentConfirmationCapabilities()
 ```
 
 ### Parameters
