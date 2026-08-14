@@ -127,7 +127,7 @@ Host: example.com
 Accept-Encoding: gzip
 ```
 
-The server response includes the {{httpheader("Content-Encoding")}} header, incicating that the message bytes are from the gzip representation of the resource.
+The server response includes the {{httpheader("Content-Encoding")}} header, indicating that the message bytes are from the gzip representation of the resource.
 
 The digest is calculated over the gzip-encoded bytes instead of the original unencoded text.
 Here, the 16-byte JSON body `{"hello": "mdn"}` is gzip-compressed to a 36-byte representation, and `Content-Digest` and `Repr-Digest` are calculated over those 36 bytes (shown here as hex for readability):
