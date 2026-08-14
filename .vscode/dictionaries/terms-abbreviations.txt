@@ -317,6 +317,7 @@ iconset
 idents
 IDOR
 IERS
+Immediates
 IMSC
 Indo-Pacific
 inferencing
@@ -555,6 +556,7 @@ prerenders
 preresolved
 presnap
 pressable
+pressuresource
 Procfile
 proportionless
 protan
