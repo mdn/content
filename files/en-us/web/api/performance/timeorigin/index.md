@@ -33,23 +33,26 @@ A high resolution timestamp which considered to be the beginning of the current 
 
 To account for the different time origins in window and worker contexts, you can translate the timestamps coming from worker scripts with the help of the `timeOrigin` property, so the timings synchronize for the entire application.
 
+> [!WARNING]
+> [The monotonic clock may not tick while the operating system sleeps](/en-US/docs/Web/API/Performance/now#ticking_during_sleep). If a window is put to sleep, restarts, and spawns a worker, the window's clock will have "lost" that time while the worker's clock has not. If this is a concern, use {{jsxref("Date.now()")}}, accepting its unreliability (as mentioned in [`performance.now()`](/en-US/docs/Web/API/Performance/now#ticking_during_sleep), if the measured duration is long enough for the computer to go to sleep, the imprecision is usually acceptable).
+
 In worker.js
 
 ```js
 self.addEventListener("connect", (event) => {
   const port = event.ports[0];
 
-  port.onmessage = (event) => {
+  port.onmessage = () => {
     const workerTaskStart = performance.now();
     // doSomeWork()
     const workerTaskEnd = performance.now();
-  };
 
-  // Convert worker-relative timestamps to absolute timestamps, then send to the window
-  port.postMessage({
-    startTime: workerTaskStart + performance.timeOrigin,
-    endTime: workerTaskEnd + performance.timeOrigin,
-  });
+    // Convert worker-relative timestamps to absolute timestamps, then send to the window
+    port.postMessage({
+      startTime: workerTaskStart + performance.timeOrigin,
+      endTime: workerTaskEnd + performance.timeOrigin,
+    });
+  };
 });
 ```
 
@@ -65,6 +68,8 @@ worker.port.addEventListener("message", (event) => {
   console.log("Worker task start: ", workerTaskStart);
   console.log("Worker task end: ", workerTaskEnd);
 });
+worker.port.start();
+worker.port.postMessage("start");
 ```
 
 ## Specifications
