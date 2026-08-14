@@ -110,6 +110,8 @@ setTimeout("alert('Hello World!');", 500);
 const f = new Function("console.log('foo');");
 ```
 
+If an extension needs to run code that relies on `eval()`-like constructs, such as some templating libraries, it can isolate that code in a [sandboxed page](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sandbox) instead of loosening the extension's CSP.
+
 ### Inline JavaScript
 
 Under the default CSP, inline JavaScript is not executed. This disallows both JavaScript placed directly in `<script>` tags and inline event handlers, meaning that the following are not permitted:

@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.CSSNumericArray
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`CSSNumericArray`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) contains a list of {{domxref("CSSNumericValue")}} objects.
 

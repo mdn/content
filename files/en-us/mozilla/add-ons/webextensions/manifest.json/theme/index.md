@@ -172,7 +172,7 @@ Images should be 200 pixels high to ensure they always fill the header space ver
           controlled by <a href="#properties"><code>"properties":</code></a>.
         </p>
         <p>
-          As additional background items display behind the <code>theme_frame</code>item, if <code>theme_frame</code> is set as a CSS gradient, any additional background items are hidden.
+          As additional background items display behind the <code>theme_frame</code> item, if <code>theme_frame</code> is set as a CSS gradient, any additional background items are hidden.
         </p>
       </td>
     </tr>
@@ -1482,7 +1482,7 @@ The following example uses most of the different values for `theme.colors`:
 
 It will give you a browser that looks like this:
 
-![A browser window with two open tabs and dark green background color in the header area. The inactive tab has a white text color. The active tab and the toolbar have a blue background color with cyan-colored text. The URL bar has an orange background with white borders, a green text color and a white-colored vertical line separator. A red-colored line is used to separate the tabs on the top and a white line to separate the tabs from the content bellow them.](theme.png)
+![A browser window with two open tabs and dark green background color in the header area. The inactive tab has a white text color. The active tab and the toolbar have a blue background color with cyan-colored text. The URL bar has an orange background with white borders, a green text color and a white-colored vertical line separator. A red-colored line is used to separate the tabs on the top and a white line to separate the tabs from the content below them.](theme.png)
 
 In this screenshot, `"toolbar_vertical_separator"` is the white vertical line in the URL bar dividing the Reader Mode icon from the other icons.
 
