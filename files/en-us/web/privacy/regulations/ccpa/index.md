@@ -10,7 +10,7 @@ The **California Consumer Privacy Act (CCPA)** is a California privacy law that 
 The CCPA gives Californians the rights to know, delete, opt out, correct, and limit the use of their personal data.
 The CCPA applies to organizations that meet certain thresholds (e.g., revenue, data volume). It grants consumers rights over their personal data and requires businesses to be transparent, responsive, and responsible in how they handle that data.
 
-## Scope
+## Scope and penalties
 
 The CCPA applies to for-profit businesses that collect personal information of California residents and meet any of the following criteria:
 
@@ -19,6 +19,8 @@ The CCPA applies to for-profit businesses that collect personal information of C
 - Derive most of their revenue from the selling or sharing of personal data belonging to California residents.
 
 Non-profit organizations and businesses that don't meet the criteria listed above are generally exempt.
+
+Penalties for violating the CCPA vary based on the severity of the violation and are periodically revised. They are calculated per violation, so the total amount can escalate quickly for sites that have a lot of users.
 
 ## CCPA terminology
 
