@@ -72,7 +72,7 @@ Host: example.com
 ```
 
 The server responds with a `Repr-Digest` of the representation using the SHA-256 algorithm.
-The digest is calculated over the exact bytes of the representation, `{"hello": "mdn"}` (16 bytes, with no trailing line break):
+The digest is calculated over the exact bytes of the representation, `{"hello": "mdn"}` (16 bytes, explicitly not including any trailing line break):
 
 ```http
 HTTP/1.1 200 OK
@@ -183,7 +183,7 @@ Repr-Digest: sha-256=:bMGjiT1wkArOzyB9ReAdpW51FV4mHlQygPXGp+TtzG4=:
 ### User-agent sending digests in requests
 
 In the following example, a user-agent sends a digest of the message content using SHA-512.
-The digest is calculated over the exact bytes of the message body, `{"recipient":"Alex","amount":900000000}` (39 bytes, with no trailing line break).
+The digest is calculated over the exact bytes of the message body, `{"recipient":"Alex","amount":900000000}` (39 bytes, explicitly not including any trailing line break).
 Since the entire representation is sent in this single request, `Content-Digest` and `Repr-Digest` have the same value:
 
 ```http
