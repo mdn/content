@@ -74,17 +74,17 @@ See also [Chapter 3](https://gdpr.eu/tag/chapter-3/).
 
 Data controllers must be able to show that they comply with the terms of the GDPR. The GDPR calls this _accountability_.
 
-### Record of Processing Activities
+### Record of processing activities
 
-A key component of accountability is a record of the data processing activities that the data controller engages in, also called a _Record of Processing Activities_ (ROPA). This documents the data that is collected and how it is used. Both data controllers and data processors must maintain ROPAs.
+A key component of accountability is a record of the data processing activities that the data controller engages in, also called a _record of processing activities_. This documents the data that is collected and how it is used. Both data controllers and data processors must maintain these records.
 
-Organizations with fewer than 250 employees may be exempt from maintaining a ROPA, depending on the type of processing that they carry out.
+Organizations with fewer than 250 employees may be exempt from this requirement, depending on the type of processing that they carry out.
 
 See also [Article 30](https://gdpr.eu/article-30-records-of-processing-activities/).
 
-### Data Protection Impact Assessment
+### Data protection impact assessment
 
-A _Data Protection Impact Assessment_ (DPIA) is another practice that an organization can follow to show that they are in compliance with the GDPR. It is performed as part of the planning for a project that involves processing personal data, and includes:
+A _data protection impact assessment_ (DPIA) is another practice that an organization can follow to show that they are in compliance with the GDPR. It is performed as part of the planning for a project that involves processing personal data, and includes:
 
 - A description of the data that the controller expects to collect and the purposes for which it will be used.
 - An assessment of the necessity and proportionality of the processing, in relation to its goals.
