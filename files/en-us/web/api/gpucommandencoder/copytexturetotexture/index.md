@@ -79,7 +79,7 @@ For `source` and `destination`:
 - If the {{domxref("GPUTexture.format")}} is a [depth-or-stencil format](https://gpuweb.github.io/gpuweb/#combined-depth-stencil-format) or {{domxref("GPUTexture.sampleCount")}} is more than 1, the subresource size is equal to `size`.
 - If the {{domxref("GPUTexture.format")}} is a [depth-or-stencil format](https://gpuweb.github.io/gpuweb/#combined-depth-stencil-format), the `source` and `destination` `aspect`s both refer to all aspects of their respective textures' {{domxref("GPUTexture.format")}}s.
 - The `texture` is compatible with the `copySize`.
-- The sets of subresources defined by `source` and `destination`, combined with `copySize`, are disjoint.
+- The sets of subresources defined by `source` combined with `copySize`, and `destination` combined with `copySize`, are disjoint.
 
 ## Examples
 
