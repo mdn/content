@@ -23,10 +23,15 @@ This example uses a {{domxref("PerformanceObserver")}} to log new `interaction-c
 ```js
 const observer = new PerformanceObserver((list) => {
   for (const entry of list.getEntries()) {
-    console.log('Interaction Contentful Paint:', entry.startTime, entry.paintTime);
+    console.log(
+      "Interaction Contentful Paint:",
+      entry.startTime,
+      entry.paintTime,
+    );
   }
 });
 observer.observe({ type: "interaction-contentful-paint", buffered: true });
+```
 
 ## Specifications
 
@@ -39,4 +44,3 @@ observer.observe({ type: "interaction-contentful-paint", buffered: true });
 ## See also
 
 - {{domxref("LargestContentfulPaint.presentationTime")}}
-```
