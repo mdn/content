@@ -47,7 +47,7 @@ Repr-Digest: <digest-algorithm>=<digest-value>,…,<digest-algorithmN>=<digest-v
     Only two registered digest algorithms are considered secure: `sha-512` and `sha-256`.
     The insecure (legacy) registered digest algorithms are: `md5`, `sha` (SHA-1), `unixsum`, `unixcksum`, `adler` (ADLER32) and `crc32c`.
 - `<digest-value>`
-  - : The digest of the entire selected representation data (see [Section 8.1 of the HTTP Semantics specification](https://www.rfc-editor.org/rfc/rfc9110#section-8.1)) using the `<digest-algorithm>`, encoded as a [Byte Sequence](https://www.rfc-editor.org/info/rfc9651/#name-byte-sequences): {{Glossary("base64")}}-encoded and wrapped in colons (`:`, ASCII 0x3A).
+  - : The digest of the entire selected representation data (see [Section 8.1 of the HTTP Semantics specification](https://www.rfc-editor.org/rfc/rfc9110#section-8.1)) using the `<digest-algorithm>`, {{Glossary("base64")}}-encoded and wrapped in colons (`:`, ASCII 0x3A). This encoding is referred to as a [byte sequence](https://www.rfc-editor.org/info/rfc9651/#name-byte-sequences) in the specification.
 
 Usage of insecure digest algorithms is discouraged as collisions can realistically be forced, rendering the digest's usefulness weak.
 Unless working with legacy systems (which is unlikely since most will expect the deprecated `Digest` header and not understand this specification), consider omitting a `Repr-Digest` instead of including one with an insecure digest algorithm.

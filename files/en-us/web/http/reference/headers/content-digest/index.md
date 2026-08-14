@@ -48,7 +48,7 @@ Content-Digest: <digest-algorithm>=<digest-value>,<digest-algorithm>=<digest-val
     Only two registered digest algorithms are considered secure: `sha-512` and `sha-256`.
     The insecure (legacy) registered digest algorithms are: `md5`, `sha` (SHA-1), `unixsum`, `unixcksum`, `adler` (ADLER32) and `crc32c`.
 - `<digest-value>`
-  - : The digest of the message content using the `<digest-algorithm>`, encoded as a [Byte Sequence](https://www.rfc-editor.org/info/rfc9651/#name-byte-sequences): {{Glossary("base64")}}-encoded and wrapped in colons (`:`, ASCII 0x3A).
+  - : The digest of the message content using the `<digest-algorithm>`, {{Glossary("base64")}}-encoded and wrapped in colons (`:`, ASCII 0x3A). This encoding is referred to as a [Byte Sequence](https://www.rfc-editor.org/info/rfc9651/#name-byte-sequences) in the specification.
 
 ## Description
 
