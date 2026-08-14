@@ -166,11 +166,11 @@ The total value of both colors in a `color-mix()` function is 100%, even if the 
 
 When mixing colors without a color space or hue interpolation method, the `oklab` color space is used, using `shorter` as the hue interpolation method. The three following declarations are equivalent:
 
-````css
- background-color: color-mix(red, blue);
- background-color: color-mix(in oklab, red, blue);
- background-color: color-mix(in oklab shorter hue, red, blue);
-``` `
+```css
+background-color: color-mix(red, blue);
+background-color: color-mix(in oklab, red, blue);
+background-color: color-mix(in oklab shorter hue, red, blue);
+```
 ### Adding transparency
 
 This example demonstrates using the `color-mix()` function to add transparency to a color by mixing any color with [`transparent`](/en-US/docs/Web/CSS/Reference/Values/named-color#transparent).
