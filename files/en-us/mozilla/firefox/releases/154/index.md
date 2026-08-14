@@ -72,7 +72,7 @@ Firefox 154 is the current [Beta version of Firefox](https://www.firefox.com/en-
 #### General
 
 - Improved the handling of `deltaX` and `deltaY` properties for asynchronous widget wheel scroll events by taking the layout viewport into account. ([Firefox bug 1971979](https://bugzil.la/1971979)).
-- Fixed the bug when a navigation would resolve prematurely for subframes when calling `history.replaceState` or when navigating to an error page (e.g., blocked by X-Frame-Options). ([Firefox bug 2051908](https://bugzil.la/2051908)).
+- Fixed a bug where a navigation would resolve prematurely for subframes when calling `history.replaceState` or when navigating to an error page (e.g., blocked by X-Frame-Options). ([Firefox bug 2051908](https://bugzil.la/2051908)).
 
 #### WebDriver BiDi
 
@@ -81,7 +81,7 @@ Firefox 154 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - Added a `userContext` field (a.k.a. Firefox container) to the payload of several WebDriver BiDi events and commands, which makes it easier to filter out incoming data for clients subscribing to events by user context id. ([Firefox bug 2018611](https://bugzil.la/2018611)).
 - Implemented the `browsingContext.startScreencast` and `browsingContext.stopScreencast` commands, which will record a browsing context and save the result as a video file. ([Firefox bug 2042671](https://bugzil.la/2042671)).
 - Updated the `emulation.setLocaleOverride` command to allow overriding the `Accept-Language` header for fetch and `WebSocket` requests in workers. ([Firefox bug 2052932](https://bugzil.la/2052932)).
-- Fixed the bug when the `script.realmDestroyed` event was missing for a worker after cross-process navigation. ([Firefox bug 2018154](https://bugzil.la/2018154)).
+- Fixed a bug where the `script.realmDestroyed` event was missing for a worker after cross-process navigation. ([Firefox bug 2018154](https://bugzil.la/2018154)).
 
 ## Changes for add-on developers
 
