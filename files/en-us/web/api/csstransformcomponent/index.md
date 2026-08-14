@@ -11,8 +11,8 @@ The **`CSSTransformComponent`** interface of the [CSS Typed Object Model API](/e
 
 ## Instance properties
 
-- {{domxref("CSSTransformComponent.is2D")}} {{ReadOnlyInline}}
-  - : Returns a boolean indicting whether the transform is 2D or 3D.
+- {{domxref("CSSTransformComponent.is2D")}}
+  - : A boolean that represents whether the transform is 2D or 3D.
 
 ## Instance methods
 

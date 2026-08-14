@@ -80,7 +80,7 @@ execCommand(commandName, showDefaultUI, valueArgument)
     - `insertHorizontalRule`
       - : Inserts a {{HTMLElement("hr")}} element at the insertion point, or replaces the selection with it.
     - `insertHTML`
-      - : Inserts an {{domxref("TrustedHTML")}} instance or string of HTML markup at the insertion point (deletes selection).
+      - : Inserts a {{domxref("TrustedHTML")}} instance or string of HTML markup at the insertion point (deletes selection).
         This requires valid HTML markup.
 
         > [!WARNING]
