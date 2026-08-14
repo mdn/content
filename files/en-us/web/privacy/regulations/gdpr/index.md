@@ -17,7 +17,7 @@ It applies when any such organizations [process](#processing_data) the [personal
 
 The GDPR does not make an exception for small organizations, although organizations with fewer than 250 employees are in some circumstances [exempt from some record-keeping requirements](#record_of_processing_activities).
 
-Organizations who violate the GDPR may be fined. Fines vary depending on the severity of the violation and the size of the company, but they can be very severe: up to €10 million, or 2% of the organization's worldwide annual revenue from the previous financial year.
+Organizations who violate the GDPR may be fined. Fines vary depending on the severity of the violation and the size of the company, but they can be very severe: up to €20 million, or 4% of the organization's worldwide annual revenue from the previous financial year.
 
 ## GDPR terminology
 
