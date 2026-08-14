@@ -34,7 +34,7 @@ A high resolution timestamp which considered to be the beginning of the current 
 To account for the different time origins in window and worker contexts, you can translate the timestamps coming from worker scripts with the help of the `timeOrigin` property, so the timings synchronize for the entire application.
 
 > [!WARNING]
-> [The monotonic clock may not tick while the operating system sleeps](/en-US/docs/Web/API/Performance/now#ticking_during_sleep). If a window is put to sleep, restarts, and spawns a worker, the window's clock will have "lost" that time while the worker's clock has not. If this is a concern, use {{jsxref("Date.now()")}}, accepting its unreliability (as mentioned in [`performance.now()`](/en-US/docs/Web/API/Performance/now#ticking_during_sleep), if the measured duration is long enough for the computer to go to sleep, the imprecision is usually acceptable).
+> [The monotonic clock may not tick while the operating system sleeps](/en-US/docs/Web/API/Performance/now#ticking_during_sleep). If a window remains open during system sleep and then spawns a worker, translated timestamps from the two contexts may be offset by the duration of the sleep. There is no way to restore exact synchronization: {{jsxref("Date.now()")}} is subject to clock adjustments, while estimating the offset by exchanging timestamps introduces inaccuracy due to message latency.
 
 In worker.js
 
