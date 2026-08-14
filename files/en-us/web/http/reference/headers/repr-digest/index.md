@@ -38,6 +38,8 @@ Repr-Digest: <digest-algorithm>=<digest-value>
 Repr-Digest: <digest-algorithm>=<digest-value>,…,<digest-algorithmN>=<digest-valueN>
 ```
 
+`Repr-Digest` is a _structured field dictionary_ ({{rfc("9651","Structured Field Values for HTTP")}}), whose keys are `<digest-algorithm>` and values are `<digest-value>`.
+
 ## Directives
 
 - `<digest-algorithm>`
@@ -45,9 +47,7 @@ Repr-Digest: <digest-algorithm>=<digest-value>,…,<digest-algorithmN>=<digest-v
     Only two registered digest algorithms are considered secure: `sha-512` and `sha-256`.
     The insecure (legacy) registered digest algorithms are: `md5`, `sha` (SHA-1), `unixsum`, `unixcksum`, `adler` (ADLER32) and `crc32c`.
 - `<digest-value>`
-  - : The digest in bytes of the representation using the `<digest-algorithm>`.
-    The choice of digest algorithm also determines the encoding to use: `sha-512` and `sha-256` use {{Glossary("base64")}} encoding, while some legacy digest algorithms such as `unixsum` use a decimal integer.
-    In contrast to earlier drafts of the specification, the standard-base64-encoded digest bytes are wrapped in colons (`:`, ASCII 0x3A) as part of the [dictionary syntax](https://www.rfc-editor.org/info/rfc8941/#name-byte-sequences).
+  - : The digest of the entire selected representation data (see [Section 8.1 of the HTTP Semantics specification](https://www.rfc-editor.org/rfc/rfc9110#section-8.1)) using the `<digest-algorithm>`, {{Glossary("base64")}}-encoded and wrapped in colons (`:`, ASCII 0x3A). This encoding is referred to as a [byte sequence](https://www.rfc-editor.org/info/rfc9651/#name-byte-sequences) in the specification.
 
 ## Examples
 
