@@ -5,7 +5,7 @@ page-type: guide
 sidebar: privacy
 ---
 
-The **California Consumer Privacy Act (CCPA)** is a California privacy law that gives California residents rights over their personal information and places requirements on businesses that collect, use, or share that data. The CCPA was originally enacted in 2018 and strengthened by the **California Privacy Rights Act (CPRA)** in 2023, amending and expanding the CCPA, with the **California Consumer Privacy Act Regulations (CCPAR)** taking effect January 1, 2026.
+The **California Consumer Privacy Act (CCPA)** is a California privacy law that gives California residents rights over their personal information and places requirements on businesses that collect, use, or share that data.
 
 The CCPA gives Californians the rights to know, delete, opt out, correct, and limit the use of their personal data.
 The CCPA applies to organizations that meet certain thresholds (e.g., revenue, data volume). It grants consumers rights over their personal data and requires businesses to be transparent, responsive, and responsible in how they handle that data.
