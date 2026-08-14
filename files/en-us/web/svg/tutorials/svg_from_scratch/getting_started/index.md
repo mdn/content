@@ -86,7 +86,7 @@ Content-Encoding: gzip
 Vary: Accept-Encoding
 ```
 
-You can check that your server is sending the correct HTTP headers with your SVG files by opening your browser's developer tools and inspecting the response headers in the [Network panel](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#headers). Look at the HTTP response headers for one of your SVG files. If you find that your server is not sending the headers with the values given above, then you should contact your web host or, if you manage the server yourself, update its configuration to serve SVG with the headers shown above.
+You can check that your server is sending the correct HTTP headers with your SVG files by opening your browser's [developer tools](/en-US/docs/Glossary/Developer_Tools) and inspecting the response headers for one of your SVG files — in Firefox, for example, in the [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html#headers). If you find that your server is not sending the headers with the values shown, then you should contact your web host or, if you manage the server yourself, update its configuration to serve SVG with those headers.
 
 Server misconfiguration is a very common reason for SVG failing to load, so make sure you check yours. If your server is not configured to send the correct headers with the SVG files it serves, then Firefox will most likely show the markup of the files as text or encoded garbage, or even ask the viewer to choose an application to open them.
 
