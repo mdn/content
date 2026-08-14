@@ -202,19 +202,11 @@ CSS provides five special universal property values for controlling inheritance.
 - {{cssxref("unset")}}
   - : Resets the property to its natural value, which means that if the property is naturally inherited it acts like `inherit`, otherwise it acts like `initial`.
 
-> [!NOTE]
-> See [Origin types](/en-US/docs/Web/CSS/Guides/Cascade/Introduction#origin_types) for more information on each of these and how they work.
+### Playing with inheritance control values
 
-### Playing with inheritance control properties
+In this section, you will play with the universal property values to get a better idea of their effects. Playing with code really is the best way to gain a deeper understanding of HTML and CSS:
 
-We can look at a list of links and explore how universal values work. The live example below allows you to play with the CSS and see what happens when you make changes. Playing with code really is the best way to better understand HTML and CSS.
-
-For example:
-
-1. The second list item has the class `my-class-1` applied. This sets the color of the `<a>` element nested inside to `inherit`. If you remove the rule, how does it change the color of the link?
-2. Do you understand why the third and fourth links are the color that they are? The third link is set to `initial`, which means it uses the initial value of the property (in this case black) and not the browser default for links, which is blue. The fourth is set to `unset` which means that the link text uses the color of the parent element, green.
-3. Which of the links will change color if you define a new color for the `<a>` element — for example `a { color: red; }`?
-4. After reading the next section on resetting all properties, come back and change the `color` property to `all`. Notice how the second link is on a new line and has a bullet. What properties do you think were inherited?
+The follow HTML defines a list of links:
 
 ```html live-sample___keywords
 <ul>
@@ -225,8 +217,12 @@ For example:
 </ul>
 ```
 
+We've applied the following CSS to it; note how the second, third, and fourth links have different universal property values set as their {{cssxref("color")}} property values:
+
 ```css live-sample___keywords
 body {
+  font-family: sans-serif;
+  font-size: 1.3rem;
   color: green;
 }
 
@@ -243,7 +239,38 @@ body {
 }
 ```
 
+The example renders like so:
+
 {{EmbedLiveSample("keywords")}}
+
+Click on the "Play" button to open the example in the MDN Playground, then follow the steps below:
+
+1. The second list item has the class `my-class-1` applied. As a result, the `color` of the second `<a>` element is set to `inherit`, so it inherits its parent `<li>` element's `green` color (the `color` property is inherited by default). If you remove the `.my-class-1 a` rule, how does it change the color of the link?
+
+   You should see the second `<a>` element change to `blue` — it no longer inherits the `green` color, and instead adopts its default `blue` color, as set by the browser's own stylesheet.
+
+   Put the `.my-class-1 a` rule back before continuing.
+
+2. Do you understand why the third and fourth links are the color that they are? Read the earlier explanations of the `initial` and `unset` values and think about it before reading the explanations below.
+
+   The third `<a>` element's `color` is set to `initial`, which means it uses the initial value of the `color` property, which is `black`, and not the browser's default `blue` link color.
+
+   The fourth `<a>` element's `color` is set to `unset`, which unsets any `color` value applied to the `<a>` element, in the browser's stylesheet or elsewhere. This means that the `<a>` element adopts the `color` of its parent `<li>` element: `green`.
+
+3. Which of the links will change color if you define a new `color` for all of the `<a>` elements — for example `a { color: hotpink; }`? Think of what the answer might be, and then add the rule at the bottom of the CSS.
+
+   This is actually a bit of a trick question — the only `<a>` element that adopts the new color is the first one. The others don't adopt the new color set later in the stylesheet because the selectors in the rules that apply `color` values to them earlier in the stylesheet (`.my-class-1 a`, etc.) have a higher [specificity](#specificity) than the `a` selector.
+
+4. The {{cssxref("all")}} property allows you to set a universal property value as the value of nearly all of an element's properties. You'll learn a bit more about this in the next section, but for now, try changing the second, third, and fourth `color` property names to `all`. For example, update `color: inherit` to `all: inherit`.
+
+   This has the effect of setting all properties on those `<a>` elements to `inherit`, `initial`, and `unset`, respectively. Notice how the second link is on a new line and has a bullet. What property values do you think it has inherited to cause this?
+
+   To give you some hints, it has inherited:
+
+   - A {{cssxref("display")}} value of `block` to cause it to sit on a new line.
+   - A {{cssxref("text-decoration")}} value of `none` to remove its underline.
+   - A {{cssxref("list-style-type")}} value of `disc` to give it a filled circle bullet.
+   - A {{cssxref("color")}} value of `green`, like it did in the first place.
 
 ### Resetting all property values
 
