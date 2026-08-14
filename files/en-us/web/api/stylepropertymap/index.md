@@ -7,17 +7,21 @@ browser-compat: api.StylePropertyMap
 
 {{APIRef("CSS Typed Object Model API")}}
 
-The **`StylePropertyMap`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model#css_typed_object_model) provides a representation of a CSS declaration block that is an alternative to {{DOMxRef("CSSStyleDeclaration")}}.
+The **`StylePropertyMap`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) provides a representation of a CSS declaration block that is an alternative to {{DOMxRef("CSSStyleDeclaration")}}.
 
 {{InheritanceDiagram}}
 
+> [!NOTE]
+> This interface is only available on the window thread; unlike other interfaces in this API it cannot be accessed in {{domxref("Worker")}} or {{domxref("Worklet")}} contexts.
+> Worklets receive a read-only snapshot of an element's style through {{domxref("StylePropertyMapReadOnly")}}.
+
 ## Instance properties
 
-_Inherits properties from its parent, {{DOMxRef("StylePropertyMapReadOnly")}}._
+_Also inherits properties from its parent interface, {{DOMxRef("StylePropertyMapReadOnly")}}._
 
 ## Instance methods
 
-_Inherits methods from its parent, {{DOMxRef("StylePropertyMapReadOnly")}}._
+_Also inherits methods from its parent interface, {{DOMxRef("StylePropertyMapReadOnly")}}._
 
 - {{DOMxRef("StylePropertyMap.append()")}}
   - : Adds a new CSS declaration to the `StylePropertyMap` with the given property and value.
