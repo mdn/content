@@ -151,6 +151,6 @@ In this example, the user's local copy of "Helvetica Neue Bold" is used; if the 
 ## See also
 
 - [About WOFF](/en-US/docs/Web/CSS/Guides/Fonts/WOFF)
-- [FontSquirrel @font-face generator](https://www.fontsquirrel.com/tools/webfont-generator)
+- [Transfonter webfont generator](https://transfonter.org/)
 - [Beautiful fonts with @font-face](https://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/)
 - [Font Library](https://fontlibrary.org/)

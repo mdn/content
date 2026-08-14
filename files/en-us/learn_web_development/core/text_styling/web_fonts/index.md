@@ -28,7 +28,7 @@ In the first article of the module, we explored the basic CSS features available
          <li>Understand that web fonts allow developers to go beyond the web safe font set and use custom fonts on their web apps.</li>
          <li>Basic setup — the <code>@font-face</code> at-rule, and common descriptors.</li>
          <li>Using a web font with the <code>font-family</code> property.</li>
-         <li>Using an online service to find web fonts and generate web font code, for example, <a href="https://www.fontsquirrel.com/">Font Squirrel</a> or <a href="https://fonts.google.com/">Google Fonts</a>.</li>
+         <li>Using online services to find web fonts and generate web font code.</li>
        </ul>
       </td>
     </tr>
@@ -76,7 +76,7 @@ Here are some important things to bear in mind about web fonts:
 2. All major browsers support WOFF/WOFF2 (Web Open Font Format versions 1 and 2). Even older browsers such as IE9 (released in 2011) support the WOFF format.
 3. WOFF2 supports the entirety of the TrueType and OpenType specifications, including variable fonts, chromatic fonts, and font collections.
 4. The order in which you list font files is important. If you provide the browser with a list of multiple font files to download, the browser will choose the first font file it can use. That's why the format you list first should be the preferred format — that is, WOFF2 — with the older formats listed after that. Browsers that don't understand one format will then fall back to the next format in the list.
-5. If you need to work with legacy browsers, you should provide EOT (Embedded Open Type), TTF (TrueType Font), and SVG web fonts for download. This article explains how to use the Fontsquirrel Webfont Generator to generate the required files.
+5. If you need to work with legacy browsers, you should provide EOT (Embedded Open Type), TTF (TrueType Font), and SVG web fonts for download. This article explains how to use the Transfonter Webfont Generator to generate the required files.
 
 You can use the [Firefox Font Editor](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_fonts/index.html) to investigate and manipulate the fonts in use on your page, whether they are web fonts or not.
 
@@ -88,16 +88,13 @@ With this in mind, let's build up a basic web font example from first principles
 
 For this example, we'll use two web fonts: one for the headings and one for the body text. To start with, we need to find the font files that contain the fonts. Fonts are created by font foundries and are stored in different file formats. There are generally three types of sites where you can obtain fonts:
 
-- A free font distributor: This is a site that makes free fonts available for download (there may still be some license conditions, such as crediting the font creator). Examples include [Font Squirrel](https://www.fontsquirrel.com/), [DaFont](https://www.dafont.com/), and [Everything Fonts](https://everythingfonts.com/).
+- A free font distributor: This is a site that makes free fonts available for download (there may still be some license conditions, such as crediting the font creator). Examples include [DaFont](https://www.dafont.com/) and [Everything Fonts](https://everythingfonts.com/).
 - A paid font distributor: This is a site that makes fonts available for a charge, such as [myfonts.com](https://www.myfonts.com/). You can also buy fonts directly from font foundries, for example [Linotype](https://www.linotype.com/), [Monotype](https://www.monotype.com/), or [Exljbris](https://www.exljbris.com/).
 - An online font service: This is a site that stores and serves the fonts for you, making the whole process easier. See the [Using an online font service](#using_an_online_font_service) section for more details.
 
-Let's find some fonts! Go to [Font Squirrel](https://www.fontsquirrel.com/) and choose two fonts: a nice interesting font for the headings (maybe a nice display or slab serif font), and a slightly less flashy and more readable font for the paragraphs. When you've found a font, press the download button and save the file inside the same directory as the HTML and CSS files you saved earlier. It doesn't matter whether they are TTF (True Type Fonts) or OTF (Open Type Fonts).
+Let's find some fonts! Go to [DaFont](https://www.dafont.com/) and choose two fonts: a nice interesting font for the headings (maybe a nice display or slab serif font), and a slightly less flashy and more readable font for the paragraphs. When you've found a font, press the download button and save the file inside the same directory as the HTML and CSS files you saved earlier. It doesn't matter whether they are TTF (True Type Fonts) or OTF (Open Type Fonts).
 
 Unzip the two font packages (Web fonts are usually distributed in ZIP files containing the font file(s) and licensing information). You may find multiple font files in the package — some fonts are distributed as a family with different variants available — for example, thin, medium, bold, italic, thin italic, etc. For this example, we just want you to concern yourself with a single font file for each choice.
-
-> [!NOTE]
-> In Font Squirrel, under the "Find fonts" section in the right-hand column, you can click on the different tags and classifications to filter the displayed choices.
 
 ### Generating the required code
 
