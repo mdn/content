@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Window.toolbar
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 Returns the `toolbar` object.
 

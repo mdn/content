@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Window.moveBy
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
 The **`moveBy()`** method of the {{domxref("Window")}}
 interface moves the current window by a specified amount.

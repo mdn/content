@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Window.name
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The `Window.name` property
 gets/sets the name of the window's browsing context.
