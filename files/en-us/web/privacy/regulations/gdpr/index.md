@@ -42,7 +42,7 @@ The GDPR defines restrictions on what personal data may be processed and how it 
 
 - You may only process a subject's personal data if they explicitly consent to it, or in various other specific cases (including, for example, that you need to process personal data in order to comply with a legal obligation). See [Article 6: Lawfulness of processing](https://gdpr.eu/article-6-how-to-process-personal-data-legally/).
 
-- Consent must be explicit and freely given. The subject must be able to withdraw their consent at any time, and withdrawing consent must be as easy as granting it. If a website makes access to a service dependent on consent, while the personal data being requested was not needed for the service, then this indicates coercion: that is, the consent may not have been freely given. See [Article 7](https://gdpr.eu/article-7-how-to-get-consent-to-collect-personal-data/).
+- Consent must be explicit and freely given. The subject must be able to withdraw their consent at any time, and withdrawing consent must be as easy as granting it. If a website makes access to a service dependent on consent, while the personal data being requested was not needed for the service, then this indicates coercion: that is, the consent may not have been freely given. See [Article 7: Conditions for consent](https://gdpr.eu/article-7-how-to-get-consent-to-collect-personal-data/).
 
 - You may only use personal data for the purposes indicated when you requested it.
 
@@ -52,7 +52,7 @@ The GDPR defines restrictions on what personal data may be processed and how it 
 
 - You must maintain the accuracy of any stored personal data.
 
-See also [Article 5](https://gdpr.eu/article-5-how-to-process-personal-data/).
+See also [Article 5: Principles relating to processing of personal data](https://gdpr.eu/article-5-how-to-process-personal-data/).
 
 ## Data security
 
@@ -60,7 +60,11 @@ You must maintain the confidentiality and integrity of any stored personal data.
 
 If you have a data breach, you must tell the supervisory authority within 72 hours and, depending on the severity of the breach, may also have to inform the affected data subjects.
 
-See also [Article 32](https://gdpr.eu/article-32-security-of-processing/), [Article 33](https://gdpr.eu/article-33-notification-of-a-personal-data-breach/), and [Article 34](https://gdpr.eu/article-34-communication-of-a-personal-data-breach/).
+See also:
+
+- [Article 32: Security of processing](https://gdpr.eu/article-32-security-of-processing/)
+- [Article 33: Notification of a personal data breach to the supervisory authority](https://gdpr.eu/article-33-notification-of-a-personal-data-breach/)
+- [Article 34: Communication of a personal data breach to the data subject](https://gdpr.eu/article-34-communication-of-a-personal-data-breach/).
 
 ## Rights of data subjects
 
@@ -68,7 +72,7 @@ The GDPR recognizes a number of rights for data subjects, and mandates that data
 
 Data subjects have the right to know what personal data is processed, how it will be processed, who has access to it, and how it is protected. They also have the right to retrieve, correct, delete, and transfer their data.
 
-See also [Chapter 3](https://gdpr.eu/tag/chapter-3/).
+See also [Chapter 3: Rights of the data subject](https://gdpr.eu/tag/chapter-3/).
 
 ## Demonstrating compliance
 
@@ -80,7 +84,7 @@ A key component of accountability is a record of the data processing activities 
 
 Organizations with fewer than 250 employees may be exempt from this requirement, depending on the type of processing that they carry out.
 
-See also [Article 30](https://gdpr.eu/article-30-records-of-processing-activities/).
+See also [Article 30: Records of processing activities](https://gdpr.eu/article-30-records-of-processing-activities/).
 
 ### Data protection impact assessment
 
@@ -93,7 +97,7 @@ A _data protection impact assessment_ (DPIA) is another practice that an organiz
 
 Depending on the specific activity they are engaged in, organizations don't always have to produce a DPIA, but it always offers good evidence that a controller is in compliance with the GDPR.
 
-See also [Article 35](https://gdpr.eu/article-35-impact-assessment/) and [Data Protection Impact Assessment (DPIA)](https://gdpr.eu/data-protection-impact-assessment-template/).
+See also [Article 35: Data protection impact assessment](https://gdpr.eu/article-35-impact-assessment/) and [Data Protection Impact Assessment (DPIA)](https://gdpr.eu/data-protection-impact-assessment-template/).
 
 ### Data Protection Officer
 
