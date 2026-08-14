@@ -5,7 +5,7 @@ page-type: guide
 sidebar: privacy
 ---
 
-Respecting a user's privacy is not just a good practice and a way to build trust: it's legally required in various jurisdictions. In this section of our privacy documentation we'll describe two of the most important regulations, the [General Data Protection Regulation (GDPR)](/en-US/docs/Web/Privacy/Regulations/GDPR), which applies to users in the European Union, and the [California Consumer Privacy Act (CCPA)](/en-US/docs/Web/Privacy/Regulations/CCPA), which applies to users in California. In each case we'll explain the conditions in which a website is required to comply with the regulation and what compliance looks like.
+Respecting a user's privacy is not just a good practice and a way to build trust: it's legally required in various jurisdictions. This section describes the most important regulations, the conditions in which a website is required to comply, and what compliance looks like.
 
 ## GDPR: Europe's privacy law
 

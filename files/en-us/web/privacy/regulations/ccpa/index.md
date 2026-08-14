@@ -12,7 +12,7 @@ The CCPA applies to organizations that meet certain thresholds (e.g., revenue, d
 
 ## Scope
 
-The CCPA applies to for‑profit businesses that collect personal information of California residents and meet any of the following criteria:
+The CCPA applies to for-profit businesses that collect personal information of California residents and meet any of the following criteria:
 
 - Have an annual revenue of over 25 million US dollars.
 - Buy, sell, or share the personal data of over 100,000 California residents
@@ -29,7 +29,7 @@ Non-profit organizations and businesses that don't meet the criteria listed abov
   - : The person whose information is collected and processed by the business.
 
 - **Personal information**
-  - : Information that identifies, relates to, or could reasonably be linked with an individual or their household. This includes, name, email address, social security number, browsing history, purchase history, or any other data that could be used to build a profile about an individual.
+  - : Information that identifies, relates to, or could reasonably be linked with an individual or their household. This includes: name, email address, social security number, browsing history, purchase history, or any other data that could be used to build a profile about an individual.
 
 - **Sensitive personal information**
   - : A subset of personal information including government identifiers such as a social security number, account login details, credit card number, biometric data, contents of messages, information about health, sex life or sexual orientation, information about racial or ethnic origin, religious or philosophical beliefs, or union membership.
@@ -93,7 +93,7 @@ Consumers can direct a business to limit its use of their [sensitive personal in
 
 ### Right to non-discrimination
 
-This means that if a consumer exercises one of their other rights under CCPA, then businesses must not retaliate against them. For example, either of the following could be considered discrmination:
+This means that if a consumer exercises one of their other rights under CCPA, then businesses must not retaliate against them. For example, either of the following could be considered discrimination:
 
 - A consumer opts out of sharing their data, and the business then denies access to a service that does not depend on sharing that data.
 

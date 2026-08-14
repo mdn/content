@@ -7,7 +7,7 @@ sidebar: privacy
 
 The **General Data Protection Regulation (GDPR)** is a comprehensive data protection law enacted by the [European Union (EU)](https://en.wikipedia.org/wiki/European_Union). It gives individuals control over how their personal data is used by organizations, and imposes restrictions on how an organization is allowed to handle this personal data.
 
-This article explains what the GDPR is, which organizations it applies to, and provides a basic introduction to the requirements imposed by GDPR on web developers. The GDPR is a complex regulation and we can't provide a complete guide to compliance here: we will just outline the most important responsibilities. The website [GDPR.EU](https://gdpr.eu/) provides comprehensive guidance.
+This article explains what the GDPR is, which organizations it applies to, and provides a basic introduction to the requirements imposed by GDPR on web developers. The GDPR is a complex regulation and we can't provide a complete guide to compliance here: instead we just outline the most important responsibilities. The website [GDPR.EU](https://gdpr.eu/) provides comprehensive guidance.
 
 ## Scope and penalties
 
@@ -40,7 +40,7 @@ Organizations who violate the GDPR may be fined. Fines vary depending on the sev
 
 The GDPR defines restrictions on what personal data may be processed and how it may be processed, including:
 
-- You may only process a subject's personal data if they explicitly consent to it, or in various other specific cases (including, for example, that you need to process personal data in order to comply with a legal obligation). See [Article 6](https://gdpr.eu/article-6-how-to-process-personal-data-legally/).
+- You may only process a subject's personal data if they explicitly consent to it, or in various other specific cases (including, for example, that you need to process personal data in order to comply with a legal obligation). See [Article 6: Lawfulness of processing](https://gdpr.eu/article-6-how-to-process-personal-data-legally/).
 
 - Consent must be explicit and freely given. The subject must be able to withdraw their consent at any time, and withdrawing consent must be as easy as granting it. If a website makes access to a service dependent on consent, while the personal data being requested was not needed for the service, then this indicates coercion: that is, the consent may not have been freely given. See [Article 7](https://gdpr.eu/article-7-how-to-get-consent-to-collect-personal-data/).
 
@@ -48,7 +48,7 @@ The GDPR defines restrictions on what personal data may be processed and how it 
 
 - You must practice data minimization: that is, you may only request personal data which you need to process in order to meet the purposes indicated.
 
-- You may only store personally identifying data for as long as you need in order to meet the purposes indicated.
+- You may only store personal data for as long as you need in order to meet the purposes indicated.
 
 - You must maintain the accuracy of any stored personal data.
 
@@ -101,7 +101,7 @@ A Data Protection Officer (DPO) is an individual nominated by a controller or pr
 
 Some organizations must appoint a DPO, while for others this is optional: however, it's considered to be a good way to help demonstrate that an organization is compliant.
 
-See [Everything you need to know about the GPDR Data Protection Officer (DPO)](https://gdpr.eu/data-protection-officer/).
+See [Everything you need to know about the GDPR Data Protection Officer (DPO)](https://gdpr.eu/data-protection-officer/).
 
 ## See also
 
