@@ -22,7 +22,7 @@ Organizations who violate the GDPR may be fined. Fines vary depending on the sev
 ## GDPR terminology
 
 - **Personal data**
-  - : Any information relating to an identified or identifiable natural person. This includes data that can be directly used to identify a person, such as a name, social security number, date of birth, or address. It may also include physical attributes, such as biometric data or ethnicity, and societal data such as religious or political affiliation.
+  - : Any information relating to an identified or identifiable natural person. This includes data that can be directly used to identify a person, such as a name, social security number, date of birth, or address. It may also include physical attributes, such as biometric data or ethnicity, societal data such as religious or political affiliation, or finance-related information such as a credit card number.
 
 - **Processing data**
   - : This term includes both collecting data in the first place and working with data that has been collected. Working with data includes activities such as recording, organizing, storing data, or using it in almost any other way.
