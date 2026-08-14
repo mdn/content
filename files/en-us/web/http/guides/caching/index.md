@@ -335,8 +335,6 @@ In such a case, using the `private` directive will cause the personalized respon
 Cache-Control: private
 ```
 
-In such a case, even if `no-store` is given, `private` must also be given.
-
 ### Provide up-to-date content every time
 
 The `no-store` directive prevents a response from being stored, but does not delete any already-stored response for the same URL.
