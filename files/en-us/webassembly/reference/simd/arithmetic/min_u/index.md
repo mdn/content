@@ -3,6 +3,7 @@ title: "min_u: Wasm SIMD arithmetic instruction"
 short-title: min_u
 slug: WebAssembly/Reference/SIMD/arithmetic/min_u
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.min_u
 sidebar: webassemblysidebar
 ---
 
@@ -66,6 +67,14 @@ value_type.min_u
 | `i8x16.min_u` | `0xfd 119:u32` | `i8x16.min_u` => `0xfd 0x77`      |
 | `i16x8.min_u` | `0xfd 151:u32` | `i16x8.min_u` => `0xfd 0x97 0x01` |
 | `i32x4.min_u` | `0xfd 183:u32` | `i32x4.min_u` => `0xfd 0xb7 0x01` |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

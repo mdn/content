@@ -33,6 +33,8 @@ image-resolution: unset;
 
 ### Values
 
+This property is specified as one or more space-separated values from the following list:
+
 - {{cssxref("resolution")}}
   - : Specifies the intrinsic resolution explicitly.
 - `from-image`

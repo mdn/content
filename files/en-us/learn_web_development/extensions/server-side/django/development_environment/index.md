@@ -525,11 +525,13 @@ This is a useful change to make, but mostly we're doing it to show you how to pu
    It should look a bit like the listing below.
 
    ```bash
-   > git status
-   On branch main
-   Your branch is up-to-date with 'origin/update_gitignore'.
+   git status
+   ```
+
+   ```plain
+   On branch update_gitignore
    Changes to be committed:
-     (use "git reset HEAD <file>..." to unstage)
+     (use "git restore --staged <file>..." to unstage)
 
            modified:   .gitignore
    ```

@@ -144,6 +144,22 @@ The scope of `context` is the element with the [`id`](/en-US/docs/Web/HTML/Refer
 
 {{ EmbedLiveSample('Using :scope in JavaScript') }}
 
+### Sibling combinators to the right of `:scope` never match
+
+The relationship defined by `:scope` is always ancestor-to-descendant from the scope root. Because of that, putting a sibling combinator to the right of `:scope` creates a selector that can never match, because no element can both be within the selector scope and also be a sibling of `:scope`.
+
+```css example-bad
+:scope + p {
+  color: red;
+}
+
+:scope ~ * {
+  color: red;
+}
+```
+
+Selectors that never match may trigger a warning in browser DevTools.
+
 ## Specifications
 
 {{Specifications}}
