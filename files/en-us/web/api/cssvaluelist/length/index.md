@@ -5,10 +5,11 @@ slug: Web/API/CSSValueList/length
 page-type: web-api-instance-property
 status:
   - deprecated
+  - non-standard
 browser-compat: api.CSSValueList.length
 ---
 
-{{APIRef("CSSOM")}}{{Deprecated_header}}
+{{APIRef("CSSOM")}}{{Deprecated_header}}{{non-standard_header}}
 
 The **`length`** read-only property of the
 {{domxref("CSSValueList")}} interface represents the number of {{domxref("CSSValue")}}s

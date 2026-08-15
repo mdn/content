@@ -1,5 +1,6 @@
 ---
-title: columns
+title: "`columns` CSS property"
+short-title: columns
 slug: Web/CSS/Reference/Properties/columns
 page-type: css-shorthand-property
 browser-compat: css.properties.columns
@@ -23,7 +24,7 @@ columns: 12em;
 ```
 
 ```css interactive-example-choice
-columns: 3;
+columns: 2 / 5em;
 ```
 
 ```html interactive-example

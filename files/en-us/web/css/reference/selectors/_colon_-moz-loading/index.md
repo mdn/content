@@ -1,5 +1,6 @@
 ---
-title: :-moz-loading
+title: "`:-moz-loading` CSS pseudo-class"
+short-title: :-moz-loading
 slug: Web/CSS/Reference/Selectors/:-moz-loading
 page-type: css-pseudo-class
 status:

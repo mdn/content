@@ -11,7 +11,7 @@ spec-urls: https://drafts.csswg.org/mediaqueries-5/#request-override-method
 
 {{APIRef("User Preferences API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`requestOverride`** method of the {{domxref("PreferenceObject")}} interface sets an {{domxref("PreferenceObject.override" "override")}} value for a particular preference.
+The **`requestOverride`** method of the {{domxref("PreferenceObject")}} interface sets an {{domxref("PreferenceObject.override", "override")}} value for a particular preference.
 
 ## Syntax
 
@@ -37,7 +37,7 @@ A {{jsxref("Promise")}} which resolves to {{jsxref("undefined")}} on success, or
 
 ### Basic usage
 
-The following example requests an override of the {{domxref("PreferenceObject.colorScheme" "colorScheme")}}.
+The following example requests an override of the {{domxref("PreferenceObject.colorScheme", "colorScheme")}}.
 
 ```js
 await navigator.preferences.colorScheme.requestOverride("dark");

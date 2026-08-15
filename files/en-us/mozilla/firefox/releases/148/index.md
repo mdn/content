@@ -1,8 +1,8 @@
 ---
-title: Firefox 148 release notes for developers (Stable)
-short-title: Firefox 148 (Stable)
+title: Firefox 148 release notes for developers
+short-title: Firefox 148
 slug: Mozilla/Firefox/Releases/148
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
@@ -102,3 +102,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   The [Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Picture-in-Picture_API) makes it possible to open an always-on-top window that can be populated with arbitrary HTML content such as a video with custom controls or a set of streams showing the participants of a video conference call.
   ([Firefox bug 1858562](https://bugzil.la/1858562)).
+
+- **Custom media queries**: `layout.css.custom-media.enabled`
+
+  The [`@custom-media`](/en-US/docs/Web/CSS/Reference/At-rules/@custom-media) CSS at-rule defines aliases for long or complex media queries. Instead of repeating the same hardcoded `<media-query-list>` in multiple `@media` at-rules, it can be defined once in a `@custom-media` at-rule and referenced throughout the stylesheet whenever needed. ([Firefox bug 2004653](https://bugzil.la/2004653)).

@@ -1,5 +1,6 @@
 ---
-title: scroll-padding-right
+title: "`scroll-padding-right` CSS property"
+short-title: scroll-padding-right
 slug: Web/CSS/Reference/Properties/scroll-padding-right
 page-type: css-property
 browser-compat: css.properties.scroll-padding-right
@@ -95,7 +96,7 @@ scroll-padding-right: unset;
 ### Values
 
 - `<length-percentage>`
-  - : An inwards offset from the top edge of the scrollport, as a valid length or a percentage.
+  - : An inwards offset from the right edge of the scrollport, as a valid length or a percentage.
 - `auto`
   - : The offset is determined by the user agent. This will generally be 0px, but a user agent is able to detect and do something else if a non-zero value is more appropriate.
 

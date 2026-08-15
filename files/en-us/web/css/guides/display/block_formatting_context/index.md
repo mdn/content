@@ -22,6 +22,7 @@ A block formatting context is created by at least one of the following:
 - Grid items (direct children of the element with {{cssxref("display", "display: grid")}} or `inline-grid`) if they are neither [flex](/en-US/docs/Glossary/Flex_Container) nor [grid](/en-US/docs/Glossary/Grid_Container) nor [table](/en-US/docs/Web/CSS/Guides/Table) containers themselves.
 - Block elements where {{ cssxref("overflow") }} has a value other than `visible` and `clip`.
 - Elements with {{cssxref("contain", "contain: layout")}}, `content`, or `paint`.
+- Query containers (elements where {{cssxref("container-type")}} isn't `normal`).
 - Multicol containers (elements where {{ cssxref("column-count") }} or {{ cssxref("column-width") }} isn't `auto`, including elements with `column-count: 1`).
 - {{cssxref("column-span", "column-span: all")}}, even when the `column-span: all` element isn't contained by a multicol container.
 

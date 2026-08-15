@@ -1,5 +1,6 @@
 ---
-title: round()
+title: "`round()` CSS function"
+short-title: round()
 slug: Web/CSS/Reference/Values/round
 page-type: css-function
 browser-compat: css.types.round

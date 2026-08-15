@@ -1,5 +1,6 @@
 ---
-title: accent-color
+title: "`accent-color` CSS property"
+short-title: accent-color
 slug: Web/CSS/Reference/Properties/accent-color
 page-type: css-property
 browser-compat: css.properties.accent-color
@@ -74,6 +75,8 @@ accent-color: unset;
 
 ### Values
 
+This property is specified as the keyword `auto` or one `<color>` value:
+
 - `auto`
   - : Represents a UA-chosen color, which should match the accent color of the platform, if any.
 - {{cssxref("&lt;color&gt;")}}
@@ -92,6 +95,9 @@ Each user agent has an accent color, with variations to ensure legibility and
 contrast. That accent color is not used by every user-interface control nor in
 every state of the control. The `accent-color` is only applied to user-interface
 controls that use an accent color in the states where it is applicable.
+
+> [!NOTE]
+> To reduce the risk of {{glossary("fingerprinting")}}, some browsers return a fixed value for `accent-color: auto` unless it is used in certain restricted circumstances. See [browser compatibility](#browser_compatibility) for details.
 
 ## Formal definition
 

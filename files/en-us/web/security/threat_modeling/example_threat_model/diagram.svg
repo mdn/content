@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560"
+     font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif">
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="10" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#3d3d3d"/>
+    </marker>
+
+    <style>
+      .actor { fill:#f9f9fb; stroke:#6b7280; stroke-width:1.5; }
+      .component { fill:#ffffff; stroke:#3d3d3d; stroke-width:1.5; }
+      .asset { fill:#fef3c7; stroke:#92400e; stroke-width:1.5; }
+      .external { fill:#f3f4f6; stroke:#6b7280; stroke-dasharray:5 4; }
+      .boundary { fill:none; stroke:#9ca3af; stroke-dasharray:6 5; }
+      .label { font-size:14px; fill:#111827; }
+      .small { font-size:12px; fill:#374151; }
+      .threat { font-size:12px; fill:#7c2d12; }
+      .flow { stroke:#3d3d3d; stroke-width:1.4; marker-end:url(#arrow); }
+    </style>
+  </defs>
+
+  <!-- Trust boundary -->
+  <rect x="250" y="60" width="460" height="420" rx="14" class="boundary"/>
+  <text x="480" y="45" text-anchor="middle" class="small">
+    Server-side system (trust boundary) (E2)
+  </text>
+
+  <!-- Actor -->
+  <rect x="40" y="260" width="160" height="64" rx="8" class="actor"/>
+  <text x="120" y="288" text-anchor="middle" class="label">User (S1-S4)</text>
+  <text x="120" y="306" text-anchor="middle" class="small">Web browser (E1)</text>
+
+  <!-- Components -->
+  <rect x="290" y="100" width="380" height="70" rx="10" class="component"/>
+  <text x="480" y="130" text-anchor="middle" class="label">Web server with blog software (C1)</text>
+  <text x="480" y="150" text-anchor="middle" class="threat">
+    T5 DoS
+  </text>
+
+  <rect x="290" y="190" width="380" height="70" rx="10" class="component"/>
+  <text x="480" y="220" text-anchor="middle" class="label">Authentication system (C2)</text>
+  <text x="480" y="240" text-anchor="middle" class="threat">
+    T2 Account takeover
+  </text>
+
+  <rect x="290" y="280" width="380" height="70" rx="10" class="component"/>
+  <text x="480" y="310" text-anchor="middle" class="label">User-submitted content systems (C3, C4)</text>
+  <text x="480" y="330" text-anchor="middle" class="threat">
+    T1 XSS · T3 Spam
+  </text>
+
+  <!-- C6 Third-party scripts -->
+  <rect x="290" y="370" width="380" height="70" rx="10" class="component"/>
+  <text x="480" y="400" text-anchor="middle" class="label">Third-party script loader (C5)</text>
+  <text x="480" y="420" text-anchor="middle" class="threat">
+    T4 Data leakage
+  </text>
+
+  <!-- Asset -->
+  <rect x="330" y="460" width="300" height="60" rx="8" class="asset"/>
+  <text x="480" y="490" text-anchor="middle" class="label">User Data (A1–A5)</text>
+  <text x="480" y="508" text-anchor="middle" class="threat">
+    T4 Information disclosure
+  </text>
+
+  <!-- External dependency -->
+  <rect x="750" y="260" width="180" height="80" rx="10" class="external"/>
+  <text x="840" y="295" text-anchor="middle" class="label">Third-party services (E3)</text>
+  <text x="840" y="315" text-anchor="middle" class="small">
+    Analytics, embeds
+  </text>
+
+  <!-- Flows from user -->
+  <line x1="200" y1="292" x2="290" y2="135" class="flow"/>
+  <text x="210" y="190" class="small">F3 Page rendering</text>
+
+  <line x1="200" y1="292" x2="290" y2="225" class="flow"/>
+  <text x="210" y="255" class="small">F1 Authentication</text>
+
+  <line x1="200" y1="292" x2="290" y2="315" class="flow"/>
+  <text x="210" y="330" class="small">F2 / F4 Submission</text>
+
+  <!-- Outgoing third-party flow -->
+  <line x1="670" y1="405" x2="750" y2="300" class="flow"/>
+  <text x="713" y="369" class="small">F5 Track page views</text>
+  <text x="713" y="389" class="small">F6 Load external data</text>
+
+</svg>

@@ -1,5 +1,6 @@
 ---
-title: ruby-align
+title: "`ruby-align` CSS property"
+short-title: ruby-align
 slug: Web/CSS/Reference/Properties/ruby-align
 page-type: css-property
 browser-compat: css.properties.ruby-align
@@ -26,6 +27,8 @@ ruby-align: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `start`
   - : Is a keyword indicating that the ruby will be aligned with the start of the base text.

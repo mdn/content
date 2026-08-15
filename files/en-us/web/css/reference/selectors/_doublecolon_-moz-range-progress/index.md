@@ -1,5 +1,6 @@
 ---
-title: ::-moz-range-progress
+title: "`::-moz-range-progress` CSS pseudo-element"
+short-title: ::-moz-range-progress
 slug: Web/CSS/Reference/Selectors/::-moz-range-progress
 page-type: css-pseudo-element
 status:

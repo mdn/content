@@ -1,5 +1,6 @@
 ---
-title: <display-legacy>
+title: "`<display-legacy>` CSS type"
+short-title: <display-legacy>
 slug: Web/CSS/Reference/Values/display-legacy
 page-type: css-type
 browser-compat:

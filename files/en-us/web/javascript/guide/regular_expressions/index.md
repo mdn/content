@@ -82,8 +82,8 @@ If you want to look at all the special characters that can be used in regular ex
         <code>\d</code>, <code>\D</code>, <code>\w</code>, <code>\W</code>,
         <code>\s</code>, <code>\S</code>, <code>\t</code>, <code>\r</code>,
         <code>\n</code>, <code>\v</code>, <code>\f</code>, <code>[\b]</code>,
-        <code>\0</code>, <code>\c<em>X</em></code>, <code>\x<em>hh</em></code>,
-        <code>\u<em>hhhh</em></code>, <code>\u<em>{hhhh}</em></code>,
+        <code>\0</code>, <code>\c<em>X</em></code>, <code>\x<em>HH</em></code>,
+        <code>\u<em>HHHH</em></code>, <code>\u<em>{H…H}</em></code>,
         <code><em>x</em>|<em>y</em></code>
       </td>
       <td>

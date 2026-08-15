@@ -5,10 +5,11 @@ slug: Web/API/CSSValueList/item
 page-type: web-api-instance-method
 status:
   - deprecated
+  - non-standard
 browser-compat: api.CSSValueList.item
 ---
 
-{{APIRef("CSSOM")}}{{Deprecated_header}}
+{{APIRef("CSSOM")}}{{Deprecated_header}}{{non-standard_header}}
 
 The **`item()`** method of the {{domxref("CSSValueList")}}
 interface is used to retrieve a {{domxref("CSSValue")}} by ordinal index.

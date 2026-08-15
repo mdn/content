@@ -1,5 +1,6 @@
 ---
-title: position-try
+title: "`position-try` CSS property"
+short-title: position-try
 slug: Web/CSS/Reference/Properties/position-try
 page-type: css-shorthand-property
 browser-compat: css.properties.position-try

@@ -1,5 +1,6 @@
 ---
-title: :left
+title: "`:left` CSS pseudo-class"
+short-title: :left
 slug: Web/CSS/Reference/Selectors/:left
 page-type: css-pseudo-class
 browser-compat: css.selectors.left

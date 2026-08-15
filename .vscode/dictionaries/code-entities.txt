@@ -36,10 +36,12 @@ allowevents
 alternatingbackground
 ALTGR
 amssymb
+andnot
 android-safetynet
 animalfound
 anims
 anonid
+anyref
 apacheconf
 apachectl
 appcache
@@ -54,16 +56,20 @@ armeabi
 armn
 armnlow
 armv81
+arrayref
 arrowpanel
 assetlinks
 associationlist
 associationlistitemkey
 associationlistitemvalue
+attributiondestination
+attributionsourceid
 attributionsrc
 audiocontext
 authorid
 autolocate
 autospace
+avgr_u
 backdrag
 backgroundfetchabort
 backgroundfetchclick
@@ -81,6 +87,7 @@ BGRX
 bgtest
 bhks
 biske
+bitselect
 bmatrix
 BPPV1
 Brai
@@ -92,6 +99,7 @@ browser.safebrowsing
 browser.sessionhistory
 browsingtopics
 bstack
+bufferedchange
 buttondisabledaccept
 bvec
 byterange
@@ -133,7 +141,9 @@ congres
 connectionavailable
 contentaccessible
 contentdelete
+contentoccluded
 contentvisibilityautostatechange
+contextoverflow
 controlslist
 cookiechange
 cpanel-dcv
@@ -162,6 +172,7 @@ currentscreenchange
 cwrap
 daala
 dangi
+dataidx
 deviceproximity
 devtools.aboutdebugging
 devtools.errorconsole
@@ -210,6 +221,7 @@ ehtml
 EISU
 elementname
 elementtiming
+elemidx
 elems
 emailtracking
 emcc
@@ -220,7 +232,9 @@ emptytext
 emsdk
 enable-tracejit
 enableiOES
+endstreaming
 enterpictureinpicture
+eqref
 equalsize
 EquationiOES
 ethi
@@ -228,7 +242,9 @@ ethioaa
 exitpictureinpicture
 exnref
 Exsel
+extadd
 externref
+extmul
 fangsong
 fencedframe
 fgets
@@ -279,6 +295,7 @@ hansfin
 hantfin
 hebr
 highp
+hiliteColor
 HMDVRDevice
 hmng
 hmnp
@@ -298,6 +315,7 @@ iexact
 ifchanged
 ifequal
 ifnotequal
+ifrac
 imageset
 imghp
 imgur
@@ -372,6 +390,7 @@ Kore
 krai
 kwriteconfig
 lanatham
+laneidx
 laoo
 largeop
 latexmlc
@@ -432,6 +451,7 @@ mediasidebar
 mediastream
 mediummathspace
 mediump
+memidx
 menupanel
 merchantvalidation
 meterbar
@@ -514,6 +534,9 @@ nsIURL
 nsIXSLT
 nsPIDOMWindow
 nsresult
+nullexternref
+nullfuncref
+nullref
 nums
 OEM_CUSEL
 OEM_ENLW
@@ -525,16 +548,19 @@ oldstyle
 oldstyle-nums
 onao
 onbeforematch
+onbufferedchange
 oncanmakepayment
 oncharacterboundsupdate
 onclipboardchange
 oncontentvisibilityautostatechange
+oncontextoverflow
 oncurrententrychange
 oncurrentscreenchange
 ondequeue
 ondispose
 ondownloadprogress
 onefive
+onendstreaming
 ongesturestart
 oninterest
 onlocation
@@ -555,10 +581,12 @@ onscreenschange
 onscrollsnapchange
 onscrollsnapchanging
 onsinkchange
+onstartstreaming
 ontextformatupdate
 ontextupdate
 onuncapturederror
 onvalidationstatuschange
+onvisibilitymaskchange
 onwebkitmouseforcewillbegin
 onzoomlevelchange
 opendocument
@@ -605,6 +633,8 @@ pjpeg
 PlatformNaclArch
 platformversion
 pmatrix
+pmax
+pmin
 pnum
 pointerrawupdate
 popcnt
@@ -619,6 +649,7 @@ preg_replace
 premkproject
 prerenderingchange
 presentationml
+pressuresource
 prettyping
 previousslide
 previoustrack
@@ -642,6 +673,7 @@ pwasidebar
 pwid
 pythonanywhere
 pyxpidl
+q15mulr_sat_s
 queryset
 quicktime
 raddr
@@ -714,6 +746,7 @@ SHA-256-sess
 SHA-512-sess
 shadowrootcustomelementregistry
 shadowrootreferencetarget
+shadowrootslotassignment
 sharpyuv
 shrd
 shtm
@@ -738,6 +771,7 @@ sscanf
 stackoverflow_url
 startapp
 startproject
+startstreaming
 staticfiles
 storageaccess
 strcmp
@@ -745,6 +779,7 @@ streamfilter
 stripslashes
 stripsurroundingwhitespace
 strncpy
+structref
 SUBDOCUMENT
 sund
 sunu
@@ -755,8 +790,10 @@ svgref
 svgz
 tabbox
 tabbrowser
+tableidx
 tabs-closebutton
 tabular-nums
+tagidx
 takr
 talu
 taml
@@ -767,6 +804,7 @@ testingbot-api
 texlive
 texlive-fontsextra
 textformatupdate
+TEXTPATH_SIDETYPE
 textupdate
 TEXTUREI
 thickmathspace
@@ -814,6 +852,7 @@ urlsidebar
 urpmi
 usedtx
 useinbandfec
+useraction
 usercontext-content
 userhash
 userproximity
@@ -837,6 +876,7 @@ viewsource.css
 VIRTUALENVWRAPPER
 virtualkeyboardpolicy
 virtuals
+visibilitymaskchange
 VK_CRSEL
 VK_EREOF
 VK_EXSEL

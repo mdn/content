@@ -1,5 +1,6 @@
 ---
-title: <input type="file">
+title: '`<input type="file">` HTML attribute value'
+short-title: <input type="file">
 slug: Web/HTML/Reference/Elements/input/file
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_file
@@ -124,7 +125,7 @@ Including the [`multiple`](#multiple) attribute, as shown above, specifies that 
 
 ### Getting information on selected files
 
-The selected files' are returned by the element's `HTMLInputElement.files` property, which is a {{domxref("FileList")}} object containing a list of {{domxref("File")}} objects. The `FileList` behaves like an array, so you can check its `length` property to get the number of selected files.
+The selected files are returned by the element's `HTMLInputElement.files` property, which is a {{domxref("FileList")}} object containing a list of {{domxref("File")}} objects. The `FileList` behaves like an array, so you can check its `length` property to get the number of selected files.
 
 Each `File` object contains the following information:
 
@@ -472,12 +473,6 @@ The example looks like this; have a play:
     <tr>
       <td><strong>DOM interface</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>

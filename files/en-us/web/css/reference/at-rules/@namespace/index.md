@@ -1,5 +1,6 @@
 ---
-title: "@namespace"
+title: "`@namespace` CSS at-rule"
+short-title: "@namespace"
 slug: Web/CSS/Reference/At-rules/@namespace
 page-type: css-at-rule
 browser-compat: css.at-rules.namespace

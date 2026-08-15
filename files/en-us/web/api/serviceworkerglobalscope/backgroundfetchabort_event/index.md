@@ -30,13 +30,6 @@ A {{domxref("BackgroundFetchEvent")}}.
 
 {{InheritanceDiagram("BackgroundFetchEvent")}}
 
-## Event properties
-
-_Inherits properties from its parent, {{domxref("ExtendableEvent")}}._
-
-- {{domxref("BackgroundFetchEvent.registration")}}
-  - : Returns the {{domxref("BackgroundFetchRegistration")}} for the aborted fetch.
-
 ## Description
 
 In the background fetch API, the browser shows a UI element to the user to indicate the progress of the operation. This element also enables the user to cancel the fetch. The app itself can also cancel the fetch by calling {{domxref("BackgroundFetchRegistration.abort()")}}.

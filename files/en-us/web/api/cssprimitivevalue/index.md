@@ -4,10 +4,11 @@ slug: Web/API/CSSPrimitiveValue
 page-type: web-api-interface
 status:
   - deprecated
+  - non-standard
 browser-compat: api.CSSPrimitiveValue
 ---
 
-{{APIRef("CSSOM")}}{{deprecated_header}}
+{{APIRef("CSSOM")}}{{deprecated_header}}{{non-standard_header}}
 
 The **`CSSPrimitiveValue`** interface derives from the {{DOMxRef("CSSValue")}} interface and represents the current computed value of a CSS property.
 
@@ -30,7 +31,7 @@ Conversions are allowed between absolute values (from millimeters to centimeters
 
 _Inherits properties from its parent, {{DOMxRef("CSSValue")}}_.
 
-- {{DOMxRef("CSSPrimitiveValue.primitiveType")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
+- {{DOMxRef("CSSPrimitiveValue.primitiveType")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : An `unsigned short` representing the type of the value. Possible values are:
 
     | Constant         | Description                                                                                                                                                                 |
@@ -64,19 +65,19 @@ _Inherits properties from its parent, {{DOMxRef("CSSValue")}}_.
 
 ## Instance methods
 
-- {{DOMxRef("CSSPrimitiveValue.getCounterValue()")}} {{Deprecated_Inline}}
+- {{DOMxRef("CSSPrimitiveValue.getCounterValue()")}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : This method is used to get the [counter](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters) value. If this CSS value doesn't contain a counter value, a {{DOMxRef("DOMException")}} is raised. Modification to the corresponding style property can be achieved using the {{DOMxRef("Counter")}} interface.
-- {{DOMxRef("CSSPrimitiveValue.getFloatValue()")}} {{Deprecated_Inline}}
+- {{DOMxRef("CSSPrimitiveValue.getFloatValue()")}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : This method is used to get a float value in a specified unit. If this CSS value doesn't contain a float value or can't be converted into the specified unit, a {{DOMxRef("DOMException")}} is raised.
-- {{DOMxRef("CSSPrimitiveValue.getRGBColorValue()")}} {{Deprecated_Inline}}
+- {{DOMxRef("CSSPrimitiveValue.getRGBColorValue()")}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : This method is used to get the RGB color. If this CSS value doesn't contain a RGB color value, a {{DOMxRef("DOMException")}} is raised. Modification to the corresponding style property can be achieved using the {{DOMxRef("RGBColor")}} interface.
-- {{DOMxRef("CSSPrimitiveValue.getRectValue()")}} {{Deprecated_Inline}}
+- {{DOMxRef("CSSPrimitiveValue.getRectValue()")}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : This method is used to get the Rect value. If this CSS value doesn't contain a rect value, a {{DOMxRef("DOMException")}} is raised. Modification to the corresponding style property can be achieved using the {{DOMxRef("Rect")}} interface.
-- {{DOMxRef("CSSPrimitiveValue.getStringValue()")}} {{Deprecated_Inline}}
+- {{DOMxRef("CSSPrimitiveValue.getStringValue()")}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : This method is used to get the string value. If the CSS value doesn't contain a string value, a {{DOMxRef("DOMException")}} is raised.
-- {{DOMxRef("CSSPrimitiveValue.setFloatValue()")}} {{Deprecated_Inline}}
+- {{DOMxRef("CSSPrimitiveValue.setFloatValue()")}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : A method to set the float value with a specified unit. If the property attached with this value can not accept the specified unit or the float value, the value will be unchanged and a {{DOMxRef("DOMException")}} will be raised.
-- {{DOMxRef("CSSPrimitiveValue.setStringValue()")}} {{Deprecated_Inline}}
+- {{DOMxRef("CSSPrimitiveValue.setStringValue()")}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : A method to set the string value with the specified unit. If the property attached to this value can't accept the specified unit or the string value, the value will be unchanged and a {{DOMxRef("DOMException")}} will be raised.
 
 ## Specifications

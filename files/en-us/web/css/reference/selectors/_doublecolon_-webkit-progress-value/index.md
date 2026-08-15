@@ -1,5 +1,6 @@
 ---
-title: ::-webkit-progress-value
+title: "`::-webkit-progress-value` CSS pseudo-element"
+short-title: ::-webkit-progress-value
 slug: Web/CSS/Reference/Selectors/::-webkit-progress-value
 page-type: css-pseudo-element
 status:

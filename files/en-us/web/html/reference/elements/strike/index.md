@@ -1,5 +1,6 @@
 ---
-title: <strike>
+title: "`<strike>` HTML strikethrough element"
+short-title: <strike>
 slug: Web/HTML/Reference/Elements/strike
 page-type: html-element
 status:

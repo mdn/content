@@ -12,7 +12,7 @@ The **`animated`** property of the {{domxref("ImageTrack")}} interface returns `
 
 ## Value
 
-A {{jsxref("boolean")}}, if `true` this is an animated track.
+A {{jsxref("Boolean")}}, if `true` this is an animated track.
 
 ## Examples
 

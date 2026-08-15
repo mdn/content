@@ -1,5 +1,6 @@
 ---
-title: <hex-color>
+title: "`<hex-color>` CSS type"
+short-title: <hex-color>
 slug: Web/CSS/Reference/Values/hex-color
 page-type: css-type
 browser-compat: css.types.color.rgb_hexadecimal_notation

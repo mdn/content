@@ -1,5 +1,6 @@
 ---
-title: contain-intrinsic-size
+title: "`contain-intrinsic-size` CSS property"
+short-title: contain-intrinsic-size
 slug: Web/CSS/Reference/Properties/contain-intrinsic-size
 page-type: css-shorthand-property
 browser-compat: css.properties.contain-intrinsic-size

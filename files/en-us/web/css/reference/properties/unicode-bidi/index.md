@@ -1,5 +1,6 @@
 ---
-title: unicode-bidi
+title: "`unicode-bidi` CSS property"
+short-title: unicode-bidi
 slug: Web/CSS/Reference/Properties/unicode-bidi
 page-type: css-property
 browser-compat: css.properties.unicode-bidi

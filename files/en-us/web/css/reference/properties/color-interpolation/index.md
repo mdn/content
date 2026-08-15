@@ -1,5 +1,6 @@
 ---
-title: color-interpolation
+title: "`color-interpolation` CSS property"
+short-title: color-interpolation
 slug: Web/CSS/Reference/Properties/color-interpolation
 page-type: css-property
 browser-compat: css.properties.color-interpolation
@@ -18,6 +19,8 @@ color-interpolation: linearRGB;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : Indicates that the user agent can choose either the `sRGB` or `linearRGB` spaces for color interpolation. This option indicates that the author doesn't require that color interpolation occur in a particular color space.

@@ -1,5 +1,6 @@
 ---
-title: user-select
+title: "`user-select` CSS property"
+short-title: user-select
 slug: Web/CSS/Reference/Properties/user-select
 page-type: css-property
 browser-compat: css.properties.user-select

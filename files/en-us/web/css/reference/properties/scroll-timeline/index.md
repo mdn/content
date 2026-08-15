@@ -1,5 +1,6 @@
 ---
-title: scroll-timeline
+title: "`scroll-timeline` CSS property"
+short-title: scroll-timeline
 slug: Web/CSS/Reference/Properties/scroll-timeline
 page-type: css-shorthand-property
 browser-compat: css.properties.scroll-timeline
@@ -140,7 +141,7 @@ Without content that overflows the container, there would be no scrollbar, and h
       background-color: wheat;
       display: block;
       text-align: center;
-      padding: 1em;
+      padding: 1rem 0;
     }
   }
 }

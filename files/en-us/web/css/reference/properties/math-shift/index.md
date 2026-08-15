@@ -1,5 +1,6 @@
 ---
-title: math-shift
+title: "`math-shift` CSS property"
+short-title: math-shift
 slug: Web/CSS/Reference/Properties/math-shift
 page-type: css-property
 browser-compat: css.properties.math-shift
@@ -24,6 +25,8 @@ math-shift: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `normal`
   - : The initial value, indicates normal rendering. Superscripts in MathML formulas use the [superscriptShiftUp](https://w3c.github.io/mathml-core/#dfn-superscriptshiftup) parameter from the OpenType MATH table.

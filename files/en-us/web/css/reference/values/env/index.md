@@ -1,12 +1,13 @@
 ---
-title: env()
+title: "`env()` CSS function"
+short-title: env()
 slug: Web/CSS/Reference/Values/env
 page-type: css-function
 browser-compat: css.types.env
 sidebar: cssref
 ---
 
-The **`env()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) can be used to insert the value of a user-agent defined [environment variable](/en-US/docs/Web/CSS/Guides/Environment_variables/Using) into your CSS.
+The **`env()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) can be used to insert the value of a user-agent defined [environment variable](/en-US/docs/Web/CSS/Guides/Environment_variables/Using) into your CSS. Alternatively `env()` can be used to make dynamic values in external SVG files which updated using the {{cssxref("link-parameters")}} CSS property.
 
 ## Syntax
 
@@ -22,9 +23,15 @@ env(titlebar-area-y, 40px);
 env(viewport-segment-width 0 0, 40%);
 ```
 
+```svg
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <path fill="env(--color, black)" d="..." />
+</svg>
+```
+
 ### Parameters
 
-The `env( <environment-variable>, <fallback> )` function accepts the following parameters:
+The `env( <environment-variable> | <dashed-ident>, <fallback> | <declaration-value> )` function accepts the following parameters:
 
 - [`<environment-variable>`](/en-US/docs/Web/CSS/Guides/Environment_variables/Using#browser-defined_environment_variables)
   - : A {{cssxref("&lt;custom-ident>")}} specifying the name of the environment variable to be inserted. If the name provided represents an array-like environment variable, the name is followed by {{cssxref("&lt;integer>")}} values identifying the specific instance the name is referencing. The case-sensitive environment variable name can be one of the following:
@@ -36,11 +43,19 @@ The `env( <environment-variable>, <fallback> )` function accepts the following p
       - : The dimensions of a visible `titlebar-area-*` area. These variables are available when using the `window-controls-overlay` [`display_override`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display_override) manifest field. The variables' values can be used to ensure content doesn't overlap window control buttons (that is, minimize, maximize, and close) with progressive web apps (PWA) installed on desktop devices.
     - `keyboard-inset-top`, `keyboard-inset-right`, `keyboard-inset-bottom`, `keyboard-inset-left`, `keyboard-inset-width`, `keyboard-inset-height`
       - : The insets from the edge of the viewport and dimensions of the device's on-screen virtual keyboard. Defined in the {{domxref("VirtualKeyboard API", "VirtualKeyboard API", "", "nocode")}}.
+    - `preferred-text-scale`
+      - : The user's preferred font scaling factor, a number set in browser or OS-level preferences. This can be used to size content proportionally to browser or OS-set font sizes.
     - `viewport-segment-width`, `viewport-segment-height`, `viewport-segment-top`, `viewport-segment-right`, `viewport-segment-bottom`, `viewport-segment-left`
       - : The dimensions and offset positions of specific viewport segments. The `viewport-segment-*` keyword is followed by two space-separated {{cssxref("&lt;integer>")}} values that indicate the segment's horizontal and vertical position, or indices. The viewport-segment keywords are only defined when the viewport is made up of two or more segments, as with foldable or hinged devices.
 
+- [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident)
+  - : A `<dashed-ident>` is a user defined variable that can be used as an identifier in the {{cssxref("param")}} CSS function to update the value.
+
 - `<fallback>` {{optional_inline}}
   - : A fallback value to be inserted if the environment variable referenced in the first argument does not exist. Everything after the first comma is deemed to be the fallback value. This can be a single value, another `env()` function, or a comma-separated list of values.
+
+- `<declaration_value>` {{optional_inline}}
+  - : A `<declaration_value>` is the default value of the SVG attribute being set dynamically. If the `<declaration-value>` is omitted, it represents an empty value.
 
 ## Description
 
@@ -63,6 +78,19 @@ Originally provided by the iOS browser to allow developers to place their conten
 Another use case for `env()` variables is for desktop [Progressive web apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) that use the [Window Controls Overlay](/en-US/docs/Web/API/Window_Controls_Overlay_API) feature to take advantage of the full application window surface area. Using the [`titlebar-area-*` values](#titlebar-area-x) values, developers can position elements where the title bar would have been and [ensure content is not obscured by window control buttons](#using_env_to_ensure_content_is_not_obscured_by_window_control_buttons_in_desktop_pwas).
 
 The `viewport-segment-*` variable names can be used to set your containers to fit neatly into the available segments of a multi-viewport-segment device such as a hinged or foldable device. The integers following the `viewport-segment-*` name indicate which segment of the multiple segments the environment variable is referencing.
+
+The `preferred-text-scale` variable can be used to size website text or other UI features proportionally to browser or OS-set font sizes. For example, you could set the body font size to be a percentage based on the user-defined text scale:
+
+```css
+body {
+  font-size: calc(100% * env(preferred-text-scale));
+}
+```
+
+Sizes can also be set to be proportional to browser or OS-level font size by including [`<meta name="text-scale" content="scale">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/text-scale) inside the document `<head>`. The `<meta>` tag should be used in favor of the `env(preferred-text-scale)` when possible, as the `<meta>` tag is supported across a wider range of platforms and is also simpler to use.
+
+> [!WARNING]
+> Be careful using `env(preferred-text-scale)` when `<meta name="text-scale" content="scale">` is set as this will result in text scaling being applied twice when combined with relative sizes, such as `em` and `rem`. For example, when the `<meta>` is set, a declaration such as `font-size: calc(2rem * env(preferred-text-scale))` will cause small font sizes to be made even smaller and large font sizes larger.
 
 ### Names followed by integers
 
@@ -244,6 +272,7 @@ The [Viewport segment API demo](https://mdn.github.io/dom-examples/viewport-segm
 - {{CSSxRef("var")}}
 - [CSS custom properties for cascading variables](/en-US/docs/Web/CSS/Guides/Cascading_variables) module
 - [Custom properties (`--*`): CSS variables](/en-US/docs/Web/CSS/Reference/Properties/--*)
+- [`<meta name="text-scale">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/text-scale)
 - [Using CSS custom properties (variables)](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties)
 - [Viewport Segments API](/en-US/docs/Web/API/Viewport_segments_API)
 - [Customize the window controls overlay of your PWA's title bar](https://web.dev/articles/window-controls-overlay)

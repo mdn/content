@@ -1,5 +1,6 @@
 ---
-title: interest-delay
+title: "`interest-delay` CSS property"
+short-title: interest-delay
 slug: Web/CSS/Reference/Properties/interest-delay
 page-type: css-shorthand-property
 status:

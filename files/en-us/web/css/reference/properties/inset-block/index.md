@@ -1,5 +1,6 @@
 ---
-title: inset-block
+title: "`inset-block` CSS property"
+short-title: inset-block
 slug: Web/CSS/Reference/Properties/inset-block
 page-type: css-shorthand-property
 browser-compat: css.properties.inset-block

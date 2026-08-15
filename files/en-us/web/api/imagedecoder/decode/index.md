@@ -24,19 +24,19 @@ decode(options)
     - `frameIndex` {{optional_inline}}
       - : An integer representing the index of the frame to decode. Defaults to `0` (the first frame).
     - `completeFramesOnly` {{optional_inline}}
-      - : A {{jsxref("boolean")}} defaulting to `true`.
+      - : A {{jsxref("Boolean")}} defaulting to `true`.
         When `true`, the `Promise` returned by the method resolves only when the image is fully decoded.
         When `false`, the method will return a new `Promise` that may resolve with a partially decoded image.
         The method can be called repeatedly until `result.complete` is true, with each step providing an image with the next available level of detail.
 
 ### Return value
 
-A {{jsxref("promise")}} that resolves with an object containing the following members:
+A {{jsxref("Promise")}} that resolves with an object containing the following members:
 
 - `image`
   - : A {{domxref("VideoFrame")}} containing the decoded image.
 - `complete`
-  - : A {{jsxref("boolean")}}, if `true` indicates that `image` contains the final full-detail output.
+  - : A {{jsxref("Boolean")}}, if `true` indicates that `image` contains the final full-detail output.
 
 ### Exceptions
 

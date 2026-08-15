@@ -1,5 +1,6 @@
 ---
-title: list-style-type
+title: "`list-style-type` CSS property"
+short-title: list-style-type
 slug: Web/CSS/Reference/Properties/list-style-type
 page-type: css-property
 browser-compat: css.properties.list-style-type

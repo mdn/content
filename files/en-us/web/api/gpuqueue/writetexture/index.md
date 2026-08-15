@@ -59,7 +59,7 @@ writeTexture(destination, data, dataLayout, size)
 
 ### Return value
 
-None ({{jsxref("Undefined")}}).
+None ({{jsxref("undefined")}}).
 
 ### Validation
 

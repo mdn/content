@@ -1,5 +1,6 @@
 ---
-title: align-content
+title: "`align-content` CSS property"
+short-title: align-content
 slug: Web/CSS/Reference/Properties/align-content
 page-type: css-property
 browser-compat: css.properties.align-content
@@ -96,6 +97,8 @@ align-content: unset;
 ```
 
 ### Values
+
+This property is specified as one or two of the following keyword values:
 
 - `normal`
   - : The items are packed in their default position as if no `align-content` value was set.

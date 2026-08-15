@@ -52,7 +52,7 @@ if (!("BarcodeDetector" in globalThis)) {
 
 ### Getting Supported Formats
 
-The following example calls the `getSupportFormat()` static method and logs the results to the console.
+The following example calls the `getSupportedFormats()` static method and logs the results to the console.
 
 ```js
 // check supported types

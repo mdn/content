@@ -1,5 +1,6 @@
 ---
-title: background-repeat
+title: "`background-repeat` CSS property"
+short-title: background-repeat
 slug: Web/CSS/Reference/Properties/background-repeat
 page-type: css-property
 browser-compat: css.properties.background-repeat
@@ -48,6 +49,13 @@ background-repeat: space repeat;
   min-height: 100%;
 }
 ```
+
+## Constituent properties
+
+This property is a shorthand for the following CSS properties:
+
+- {{cssxref("background-repeat-x")}}
+- {{cssxref("background-repeat-y")}}
 
 ## Syntax
 

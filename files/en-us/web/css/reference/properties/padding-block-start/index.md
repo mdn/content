@@ -1,5 +1,6 @@
 ---
-title: padding-block-start
+title: "`padding-block-start` CSS property"
+short-title: padding-block-start
 slug: Web/CSS/Reference/Properties/padding-block-start
 page-type: css-property
 browser-compat: css.properties.padding-block-start
@@ -75,9 +76,9 @@ padding-block-start: unset;
 ### Values
 
 - {{cssxref("&lt;length&gt;")}}
-  - : The size of the padding as a fixed value. Must be nonnegative.
+  - : The size of the padding as a fixed value. Must be non-negative.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : The size of the padding as a percentage, relative to the [inline-size](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout) (_width_ in a horizontal language) of the [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block). Must be nonnegative.
+  - : The size of the padding as a percentage, relative to the [inline-size](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout) (_width_ in a horizontal language) of the [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block). Must be non-negative.
 
 ## Description
 

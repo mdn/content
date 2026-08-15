@@ -365,12 +365,13 @@ function changeVideoCodec(mimeType) {
     let recvCodecs = RTCRtpReceiver.getCapabilities(kind).codecs;
 
     if (kind === "video") {
-      sendCodecs = preferCodec(mimeType);
-      recvCodecs = preferCodec(mimeType);
+      sendCodecs = preferCodec(sendCodecs, mimeType);
+      recvCodecs = preferCodec(recvCodecs, mimeType);
       transceiver.setCodecPreferences([...sendCodecs, ...recvCodecs]);
     }
   });
 
+  // Manually trigger a new negotiation (setCodecPreferences() does not automatically do so).
   peerConnection.onnegotiationneeded();
 }
 ```
@@ -391,10 +392,9 @@ The `preferCodec()` function called by the code above looks like this to move a 
 function preferCodec(codecs, mimeType) {
   let otherCodecs = [];
   let sortedCodecs = [];
-  let count = codecs.length;
 
   codecs.forEach((codec) => {
-    if (codec.mimeType === mimeType) {
+    if (codec.mimeType.toLowerCase() === mimeType.toLowerCase()) {
       sortedCodecs.push(codec);
     } else {
       otherCodecs.push(codec);

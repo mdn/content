@@ -24,7 +24,7 @@ submit(commandBuffers)
 
 ### Return value
 
-None ({{jsxref("Undefined")}}).
+None ({{jsxref("undefined")}}).
 
 ### Validation
 

@@ -2,10 +2,12 @@
 title: ManagedSourceBuffer
 slug: Web/API/ManagedSourceBuffer
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.ManagedSourceBuffer
 ---
 
-{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}{{SeeCompatTable}}
 
 The **`ManagedSourceBuffer`** interface of the {{domxref("Media Source Extensions API", "Media Source Extensions API", "", "nocode")}} is a {{domxref("SourceBuffer")}} that is created by a {{domxref("ManagedMediaSource")}} when {{domxref("MediaSource.addSourceBuffer", "addSourceBuffer()")}} is called. It inherits all the properties and methods of `SourceBuffer`, and additionally fires a {{domxref("ManagedSourceBuffer.bufferedchange_event", "bufferedchange")}} event whenever the buffered ranges change — including when the user agent evicts content as part of its memory cleanup algorithm.
 
@@ -25,7 +27,7 @@ _Inherits methods from its parent interface, {{domxref("SourceBuffer")}}._
 
 _Also inherits events from its parent interface, {{domxref("SourceBuffer")}}._
 
-- {{domxref("ManagedSourceBuffer.bufferedchange_event", "bufferedchange")}}
+- {{domxref("ManagedSourceBuffer.bufferedchange_event", "bufferedchange")}} {{experimental_inline}}
   - : Fired when the `ManagedSourceBuffer`'s buffered range changes, following a call to {{domxref("SourceBuffer.appendBuffer", "appendBuffer()")}}, {{domxref("SourceBuffer.remove", "remove()")}}, {{domxref("MediaSource.endOfStream", "endOfStream()")}}, or as a consequence of the user agent running the memory cleanup algorithm.
 
 ## Examples

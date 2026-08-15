@@ -1,5 +1,6 @@
 ---
-title: ::column
+title: "`::column` CSS pseudo-element"
+short-title: ::column
 slug: Web/CSS/Reference/Selectors/::column
 page-type: css-pseudo-element
 status:

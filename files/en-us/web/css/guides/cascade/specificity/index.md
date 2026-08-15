@@ -6,16 +6,16 @@ spec-urls: https://drafts.csswg.org/selectors/#specificity-rules
 sidebar: cssref
 ---
 
-**Specificity** is the algorithm used by browsers to determine the [CSS declaration](/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#css_syntax_basics) that is the most relevant to an element, which in turn, determines the property value to apply to the element. The specificity algorithm calculates the weight of a [CSS selector](/en-US/docs/Web/CSS/Reference#selectors) to determine which rule from competing CSS declarations gets applied to an element.
+**Specificity** is the weight that browsers use in the cascade algorithm to determine the [CSS declaration](/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#css_syntax_basics) that is the most relevant to an element, which in turn, determines the property value to apply to the element. The specificity algorithm calculates this weight from a [CSS selector](/en-US/docs/Web/CSS/Reference#selectors), and compares the resulting values to decide which rule, from competing CSS declarations within the same origin and layer, gets applied to an element.
 
 > [!NOTE]
 > Browsers consider specificity **after** determining [cascade origin and importance](/en-US/docs/Web/CSS/Guides/Cascade/Introduction). In other words, for competing property declarations, specificity is relevant and compared only between selectors from the one [cascade origin and layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer) that has precedence for the property. [Scoping proximity](/en-US/docs/Web/CSS/Reference/At-rules/@scope#how_scope_conflicts_are_resolved) and order of appearance become relevant when the selector specificities of the competing declarations in the cascade layer with precedence are equal.
 
 ## How is specificity calculated?
 
-Specificity is an algorithm that calculates the weight that is applied to a given CSS declaration. The weight is determined by the number of [selectors of each weight category](#selector_weight_categories) in the selector matching the element (or pseudo-element). If there are two or more declarations providing different property values for the same element, the declaration value in the style block having the matching selector with the greatest algorithmic weight gets applied.
+Specificity is the weight that is applied to a given CSS declaration. The specificity algorithm calculates that weight based on the number of [selectors of each weight category](#selector_weight_categories) in the selector matching the element (or pseudo-element). If there are two or more declarations providing different property values for the same element, the declaration value in the style block having the matching selector with the greatest weight gets applied.
 
-The specificity algorithm is basically a three-column value of three categories or weights - ID, CLASS, and TYPE - corresponding to the three types of selectors. The value represents the count of selector components in each weight category and is written as _ID - CLASS - TYPE_. The three columns are created by counting the number of selector components for each selector weight category in the selectors that match the element.
+The specificity value is basically a three-column value of three categories or weights - ID, CLASS, and TYPE - corresponding to the three types of selectors. The value represents the count of selector components in each weight category and is written as _ID - CLASS - TYPE_. The three columns are created by counting the number of selector components for each selector weight category in the selectors that match the element.
 
 ### Selector weight categories
 

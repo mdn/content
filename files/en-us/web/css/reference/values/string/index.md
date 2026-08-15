@@ -1,5 +1,6 @@
 ---
-title: <string>
+title: "`<string>` CSS type"
+short-title: <string>
 slug: Web/CSS/Reference/Values/string
 page-type: css-type
 browser-compat: css.types.string

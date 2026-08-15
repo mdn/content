@@ -132,7 +132,7 @@ A key that is stored as part of the stored value. It is found using a _key path_
 
 A data value by which stored values are organized and retrieved in the object store. The object store can derive the key from one of three sources: a _[key generator](#key_generator)_, a _[key path](#key_path)_, or an explicitly specified value. The key must be of a data type that has a number that is greater than the one before it. Each record in an object store must have a key that is unique within the same store, so you cannot have multiple records with the same key in a given object store.
 
-A key can be one of the following types: [string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String), [date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date), float, a binary blob, and [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array). For arrays, the key can range from an empty value to infinity. And you can include an array within an array.
+A key can be one of the following types: [string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String), [date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date), float, binary data (represented by an [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) or a [`TypedArray`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) view such as a [`Uint8Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array)), and [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array). The length of an array key can range from `0` (an empty array) to infinity, and you can include an array within an array.
 
 Alternatively, you can also look up records in an object store using the _[index](#index)._
 

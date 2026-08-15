@@ -98,7 +98,7 @@ Some common authentication schemes include:
 - **SCRAM**
   - : See {{rfc(7804)}}
 - **AWS4-HMAC-SHA256**
-  - : See [AWS docs](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html). This scheme is used for AWS3 server authentication.
+  - : See [AWS docs](https://docs.aws.amazon.com/AmazonS3/latest/developerguide/sigv4-auth-using-authorization-header.html). This scheme is used for AWS3 server authentication.
 
 Schemes can differ in security strength and in their availability in client or server software.
 

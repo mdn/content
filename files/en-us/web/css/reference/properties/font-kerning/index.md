@@ -1,5 +1,6 @@
 ---
-title: font-kerning
+title: "`font-kerning` CSS property"
+short-title: font-kerning
 slug: Web/CSS/Reference/Properties/font-kerning
 page-type: css-property
 browser-compat: css.properties.font-kerning
@@ -58,6 +59,8 @@ font-kerning: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : The browser determines whether font kerning should be used or not. For example, some browsers will disable kerning on small fonts, since applying it could harm the readability of text.

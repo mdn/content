@@ -1,5 +1,6 @@
 ---
-title: overflow-inline
+title: "`overflow-inline` CSS media feature"
+short-title: overflow-inline
 slug: Web/CSS/Reference/At-rules/@media/overflow-inline
 page-type: css-media-feature
 browser-compat: css.at-rules.media.overflow-inline

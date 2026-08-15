@@ -3,7 +3,7 @@ title: CSS motion path
 short-title: Motion path
 slug: Web/CSS/Guides/Motion_path
 page-type: css-module
-spec-urls: https://drafts.fxtf.org/motion/
+spec-urls: https://drafts.csswg.org/motion-1/
 sidebar: cssref
 ---
 

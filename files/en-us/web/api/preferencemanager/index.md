@@ -21,15 +21,15 @@ The `PreferenceManager` interface inherits from {{domxref("EventTarget")}}.
 ## Instance properties
 
 - {{domxref("PreferenceManager.colorScheme")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A {{domxref("PreferenceObject")}} used to override the user's preference for the [color scheme](/en-US/docs/Web/CSS/Reference/Reference/At-rules/@media/prefers-color-scheme) of the site.
+  - : A {{domxref("PreferenceObject")}} used to override the user's preference for the [color scheme](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) of the site.
 - {{domxref("PreferenceManager.contrast")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A {{domxref("PreferenceObject")}} used to override the user's preference for the [contrast](/en-US/docs/Web/CSS/Reference/Reference/At-rules/@media/prefers-contrast) of the site.
+  - : A {{domxref("PreferenceObject")}} used to override the user's preference for the [contrast](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-contrast) of the site.
 - {{domxref("PreferenceManager.reducedMotion")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A {{domxref("PreferenceObject")}} used to override the user's preference for the [reduced motion](/en-US/docs/Web/CSS/Reference/Reference/At-rules/@media/prefers-reduced-motion) of the site.
+  - : A {{domxref("PreferenceObject")}} used to override the user's preference for the [reduced motion](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) of the site.
 - {{domxref("PreferenceManager.reducedTransparency")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A {{domxref("PreferenceObject")}} used to override the user's preference for the [reduced transparency](/en-US/docs/Web/CSS/Reference/Reference/At-rules/@media/prefers-reduced-transparency) of the site.
+  - : A {{domxref("PreferenceObject")}} used to override the user's preference for the [reduced transparency](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-transparency) of the site.
 - {{domxref("PreferenceManager.reducedData")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : A {{domxref("PreferenceObject")}} used to override the user's preference for the [reduced data](/en-US/docs/Web/CSS/Reference/Reference/At-rules/@media/prefers-reduced-data) of the site.
+  - : A {{domxref("PreferenceObject")}} used to override the user's preference for the [reduced data](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-data) of the site.
 
 ## Examples
 

@@ -42,8 +42,8 @@ sidebar: mdnsidebar
 >
 > ```plain
 > spec-urls:
->     - https://drafts.fxtf.org/filter-effects-2/
->     - https://drafts.fxtf.org/filter-effects-1/
+>     - https://drafts.csswg.org/filter-effects-2/
+>     - https://drafts.csswg.org/filter-effects-1/
 > ```
 >
 > - **sidebar**

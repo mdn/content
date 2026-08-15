@@ -33,11 +33,11 @@ Express apps can use many different databases, and there are several approaches 
 
 ### What databases can I use?
 
-_Express_ apps can use any database supported by _Node_ (_Express_ itself doesn't define any specific additional behavior/requirements for database management). There are [many popular options](https://expressjs.com/en/guide/database-integration.html), including PostgreSQL, MySQL, Redis, SQLite, and MongoDB.
+_Express_ apps can use any database supported by _Node_ (_Express_ itself doesn't define any specific additional behavior/requirements for database management). There are [many popular options](https://expressjs.com/en/guide/database-integration/), including PostgreSQL, MySQL, Redis, SQLite, and MongoDB.
 
 When choosing a database, you should consider things like time-to-productivity/learning curve, performance, ease of replication/backup, cost, community support, etc. While there is no single "best" database, almost any of the popular solutions should be more than acceptable for a small-to-medium-sized site like our Local Library.
 
-For more information on the options see [Database integration](https://expressjs.com/en/guide/database-integration.html) (Express docs).
+For more information on the options see [Database integration](https://expressjs.com/en/guide/database-integration/) (Express docs).
 
 ### What is the best way to interact with a database?
 
@@ -889,7 +889,7 @@ Last of all, we tested our models by creating a number of instances (using a sta
 
 ## See also
 
-- [Database integration](https://expressjs.com/en/guide/database-integration.html) (Express docs)
+- [Database integration](https://expressjs.com/en/guide/database-integration/) (Express docs)
 - [Mongoose website](https://mongoosejs.com/) (Mongoose docs)
 - [Mongoose Guide](https://mongoosejs.com/docs/guide.html) (Mongoose docs)
 - [Validation](https://mongoosejs.com/docs/validation.html) (Mongoose docs)

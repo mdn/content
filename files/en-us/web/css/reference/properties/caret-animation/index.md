@@ -1,5 +1,6 @@
 ---
-title: caret-animation
+title: "`caret-animation` CSS property"
+short-title: caret-animation
 slug: Web/CSS/Reference/Properties/caret-animation
 page-type: css-property
 status:
@@ -12,7 +13,10 @@ sidebar: cssref
 
 The **`caret-animation`** [CSS](/en-US/docs/Web/CSS) property is used to enable or disable the blinking behavior of the **insertion caret**, the visible marker that appears in editable elements to indicate where the next character will be inserted or deleted.
 
-When applying a custom animation to the caret, you should stop the default blinking so that it doesn't interfere with the animation.
+The `caret-animation` property can also be set as part of the {{cssxref("caret")}} shorthand property.
+
+> [!NOTE]
+> When applying a custom animation to the caret, you should stop the default blinking so that it doesn't interfere with the animation.
 
 ## Syntax
 

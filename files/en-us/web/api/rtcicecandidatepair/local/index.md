@@ -3,19 +3,24 @@ title: "RTCIceCandidatePair: local property"
 short-title: local
 slug: Web/API/RTCIceCandidatePair/local
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.RTCIceCandidatePair.local
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
-The **`local`** property of the **{{domxref("RTCIceCandidatePair")}}** dictionary specifies the {{domxref("RTCIceCandidate")}} which describes the configuration of the local end of a viable WebRTC connection.
+The **`local`** property of the {{domxref("RTCIceCandidatePair")}} interface specifies the {{domxref("RTCIceCandidate")}} that describes the configuration of the local end of a viable WebRTC connection.
+
+The `RTCIceCandidatePair` is returned by the {{domxref("RTCIceTransport.getSelectedCandidatePair", "getSelectedCandidatePair()")}} method of {{domxref("RTCIceTransport")}}.
 
 ## Value
 
-An {{domxref("RTCIceCandidate")}} which describes the configuration of the local end of a viable pair of ICE candidates.
-The `RTCIceCandidatePair` is returned by the {{domxref("RTCIceTransport")}} method {{domxref("RTCIceTransport.getSelectedCandidatePair", "getSelectedCandidatePair()")}}.
+An {{domxref("RTCIceCandidate")}}.
 
 ## Examples
+
+### Basic usage
 
 This one-line example obtains the current candidate pair and then from that gets the local candidate.
 
