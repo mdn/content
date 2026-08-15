@@ -41,7 +41,7 @@ BigInt.asUintN(bits, bigint)
 
 ### Return value
 
-The value of `bigint` modulo 2<sup>`bits`</sup>, as a BigInt.
+A BigInt containing the value of `bigint` expressed as a two's compliment integer, truncated to `bits` bits, and interpreted as an unsigned integer.
 
 ### Exceptions
 
