@@ -24,7 +24,7 @@ The message inside `<noembed>` tag will appear only when your browser does not s
 
 ```html
 <embed
-  type="vide/webm"
+  type="video/webm"
   src="/media/examples/flower.mp4"
   width="200"
   height="200" />
