@@ -41,7 +41,7 @@ BigInt.asIntN(bits, bigint)
 
 ### Return value
 
-A BigInt containing the value of `bigint` expressed as a two's compliment integer, truncated to `bits` bits, and interpreted as a two's compliment integer.
+A BigInt containing the bit representation of `bigint` truncated to `bits` bits, interpreted as a signed integer.
 
 ### Exceptions
 
