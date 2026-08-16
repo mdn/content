@@ -502,3 +502,4 @@ console.log(MyClass.prototype.y); // 1
 - {{jsxref("Functions/set", "set")}}
 - {{jsxref("Object.create()")}}
 - {{jsxref("Reflect.defineProperty()")}}
+- run
