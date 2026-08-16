@@ -33,7 +33,7 @@ new WebAssembly.Global(descriptor, value)
 
 - `value`
   - : The value the variable contains. This can be any value, as long as its type matches the variable's data type.
-    If no value is specified, a typed `0` value is used where the value of `descriptor.value` is one of `i32`, `i64`, `f32`, or `f64`, and `null` is used if `descriptor.value` is `externref` or `anyfunc`.
+    If no value is specified, a typed `0` value is used where the value of `descriptor.value` is one of `i32`, `i64`, `f32`, or `f64`; a reference to `undefined` is used if it is `externref`; and `null` is used if it is `anyfunc`.
 
 ## Examples
 
