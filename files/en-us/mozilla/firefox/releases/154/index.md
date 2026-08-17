@@ -32,7 +32,9 @@ Firefox 154 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### CSS -->
+### CSS
+
+- The {{cssxref("sibling-count")}} and {{cssxref("sibling-index")}} functions are now supported. The `sibling-count()` function returns the number of sibling elements as well as the element itself. The `sibling-index()` function returns the index number of the element in relation to its siblings. The index starts at `1`, not `0`. ([Firefox bug 2045706](https://bugzil.la/2045706)).
 
 <!-- #### Removals -->
 
