@@ -43,15 +43,15 @@ The `params` field can contain:
 
     - `"window"`: A realm whose global object is a {{domxref("Window")}}.
       This includes sandbox realms.
-    - `"worker"`: A realm whose global object is a {{domxref("WorkerGlobalScope")}} that is not one of the more specific worker global scopes.
+    - `"worker"`: A realm whose global object is a {{domxref("WorkerGlobalScope")}}, but not one of the more specific dedicated, shared, or service worker global scopes.
     - `"dedicated-worker"`: A realm whose global object is a {{domxref("DedicatedWorkerGlobalScope")}}.
     - `"shared-worker"`: A realm whose global object is a {{domxref("SharedWorkerGlobalScope")}}.
     - `"service-worker"`: A realm whose global object is a {{domxref("ServiceWorkerGlobalScope")}}.
-    - `"worklet"`: A realm whose global object is a {{domxref("WorkletGlobalScope")}} that is not one of the more specific worklet global scopes.
+    - `"worklet"`: A realm whose global object is a {{domxref("WorkletGlobalScope")}}, but not one of the more specific audio or paint worklet global scopes.
     - `"audio-worklet"`: A realm whose global object is an {{domxref("AudioWorkletGlobalScope")}}.
     - `"paint-worklet"`: A realm whose global object is a {{domxref("PaintWorkletGlobalScope")}}.
 
-    If not specified, realms of all types are returned.
+    If the `type` field is not specified, realms of all types are returned.
 
 ### Return value
 
@@ -59,7 +59,7 @@ The `result` object in the response contains the following field:
 
 - `realms`
   - : An array of realm objects, one for each matching realm, or an empty array if there are no matching realms.
-    The value of the `type` field in each object determines which additional fields are present:
+    The value of the `type` field in each object determines the other fields that are present:
 
     - `context` {{optional_inline}}
       - : A string that contains the ID of the context to which the realm belongs.
