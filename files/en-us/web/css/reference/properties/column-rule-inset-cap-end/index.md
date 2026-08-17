@@ -55,6 +55,10 @@ column-rule-inset-cap-end: overlap-join;
     <i>O</i>
     <i>P</i>
     <i>Q</i>
+
+    <i id="y">Y</i>
+    <i id="z">Z</i>
+    <i id="bang">!</i>
   </div>
 </section>
 ```
@@ -74,6 +78,18 @@ column-rule-inset-cap-end: overlap-join;
 #example-element i {
   padding: 8px;
   background: #efefef;
+}
+#y {
+  grid-column: 4 / 5;
+  grid-row: 4 / 5;
+}
+#z {
+  grid-column: 5 / 6;
+  grid-row: 4 / 5;
+}
+#bang {
+  grid-column: 6 / 7;
+  grid-row: 4 / 5;
 }
 ```
 
@@ -119,6 +135,8 @@ To set the start and ends of caps, the `column-rule-inset-cap-end` property, alo
 To set the ends of all column segments, the `column-rule-inset-cap-end` property can also be set, along with the {{cssxref("column-rule-inset-junction-end")}} property, can be set using the {{cssxref("column-rule-inset-end")}} shorthand.
 
 To set the same values for row and column cap endpoints, the `column-rule-inset-cap-end` property, along with the {{cssxref("row-rule-inset-cap-end")}} property, can be set using the {{cssxref("rule-inset-cap-end")}} shorthand.
+
+All of these shorthand properties, along with their `-start`, `-junction`, and `row-` equivalents, can be set using the {{cssxref("rule-inset")}} shorthand.
 
 ### Understanding cap end
 
@@ -275,7 +293,7 @@ What length a percentage value is relative to depends on the location of the enp
 
 Select `around` as the `rule-visibility-items` value. The first three columns end at the container edge, so any percentage value will resolve to `0`. The last two columns rules end at interior gaps where row rule segments are present, so these column segments are not cap segment endpoints.
 
-Select `between` as the `rule-visibility-items` value. The first two columns end at the container edge, so they have a `0` inset. The third column rule ends at an interior gaps where a row rule segment is present, so this column segment is not a cap segment endpoint. The last two columns rules end at interior gaps where no other rule segments are present, so the percentage offset is relative to the size of the {{cssxref("rule-gap")}} width, which in this case is `20px`. Setting `100%` insets the end of the last two column rule segments by `20px`. Setting `-200%` will outset these segments by `40px`, with the lines being drawn through the `20px` gap, with `20px` protruding into the last row of items. Negative values that are larger than combined heights of the last row and row gap will cause the last two column rules to protrude below the container's end edge.
+Select `between` as the `rule-visibility-items` value. The first two columns end at the container edge, so they have a `0` inset. The third column rule ends at an interior gaps where a row rule segment is present, so this column segment is not a cap segment endpoint. The last two columns rules end at interior gaps where no other rule segments are present, so the percentage offset is relative to the size of the {{cssxref("row-gap")}} width, which in this case is `20px`. Setting `100%` insets the end of the last two column rule segments by `20px`. Setting `-200%` will outset these segments by `40px`, with the lines being drawn through the `20px` gap, with `20px` protruding into the last row of items. Negative values that are larger than combined heights of the last row and row gap will cause the last two column rules to protrude below the container's end edge.
 
 ## Formal definition
 
