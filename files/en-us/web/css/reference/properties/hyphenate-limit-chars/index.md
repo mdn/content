@@ -37,9 +37,9 @@ hyphenate-limit-chars: revert-layer;
 hyphenate-limit-chars: unset;
 ```
 
-The `hyphenate-limit-chars` property takes 1–3 values that can be numeric or `auto`, as explained below.
-
 ### Values
+
+This property is specified as one to three numeric or `auto` values:
 
 - `<number> <number> <number>`
   - : The first value is the minimum word length before words should be hyphenated. The second value is the minimum number of characters before the hyphen. The third value is the minimum number of characters after the hyphen.

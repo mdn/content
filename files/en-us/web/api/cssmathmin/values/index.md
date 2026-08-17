@@ -16,7 +16,32 @@ A {{domxref('CSSNumericArray')}}.
 
 ## Examples
 
-To do
+### Basic usage
+
+The following code creates a `CSSMathMin` object and logs its `values` and length.
+
+```js
+const min = new CSSMathMin(CSS.px(10), CSS.em(5), CSS.percent(50));
+
+console.log(min.values);
+// CSSNumericArray {0: CSSUnitValue, 1: CSSUnitValue, 2: CSSUnitValue, length: 3}
+console.log(min.values.length); // 3
+```
+
+We then iterate over the `values`, logging their type, value, unit, and stringified text.
+Each of these matches the {{domxref("CSSNumericValue")}} objects that were passed into the constructor (or the operands of the CSS {{cssxref("min", "min()")}} function it represents), in the same order.
+
+```js
+for (const value of min.values) {
+  console.log(
+    `${value.constructor.name}: ${value.value} ${value.unit} (${value})`,
+  );
+}
+
+// CSSUnitValue: 10 px (10px)
+// CSSUnitValue: 5 em (5em)
+// CSSUnitValue: 50 percent (50%)
+```
 
 ## Specifications
 
