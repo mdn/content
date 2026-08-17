@@ -126,6 +126,11 @@ Follow the sentence with a definition list that includes one term and definition
 
 Include a description of the property and explain how it works. Use this section to explain related terms and add use cases for the property.
 
+> [!NOTE]
+> If the property is part of a shorthand, include this information in the same format as the following example:
+>
+> The `animation-range-end` property, along with the \{{cssxref("animation-range-start")}} property, can also be set by using the \{{cssxref("animation-range")}} shorthand.
+
 ## Formal definition
 
 `\{{CSSInfo}}`
