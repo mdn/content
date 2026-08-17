@@ -76,7 +76,7 @@ Chromium browsers:
 - If a read isn't allowed by the spec and the document has focus, it triggers a request to use permission `clipboard-read`, and succeeds if the permission is granted (either because the user accepted the prompt, or because the permission was granted already).
 - Writing requires either the `clipboard-write` permission or transient activation.
   If the permission is granted, it persists, and further transient activation is not required.
-- The HTTP [Permissions-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy) permissions `clipboard-read` and `clipboard-write` must be allowed for {{HTMLElement("iframe")}} elements that access the clipboard.
+- The HTTP [Permissions-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy) permissions {{httpheader("Permissions-Policy/clipboard-read", "clipboard-read")}} and {{httpheader("Permissions-Policy/clipboard-write", "clipboard-write")}} must be allowed for {{HTMLElement("iframe")}} elements that access the clipboard.
 
 Firefox & Safari:
 
