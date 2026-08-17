@@ -22,7 +22,7 @@ None.
 
 ### Return value
 
-A new [iterable iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
+A new [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator).
 
 ## Examples
 
