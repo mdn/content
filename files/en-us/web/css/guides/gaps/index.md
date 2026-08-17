@@ -12,7 +12,7 @@ The **CSS gaps** module lets you specify spacing, or "gaps", between items in [m
 While {{cssxref("margin")}} and {{cssxref("padding")}} specify visual spacing around individual boxes, the properties in this module enable specifying the spacing between adjacent boxes within a given layout context for layouts that have {{glossary("gutters")}} and gaps, when the spacing is different between sibling boxes as opposed to between the first box, last box, and the container's edge. You can show rules in every gap or in a subset of gaps, defining fully animatable rule widths, colors, and insets.
 
 Gap decorations are painted within a gap as one or more gap decoration segments, with segments occurring between any two adjacent items.
-When all segments are drawn, column and row rules extend the entire height and width of the container. The {{cssxref("rule-visibility-items")}} defines if segments are to be drawn around areas that are not occupied by items. The {{cssxref("rule-break")}} poperties determine in otherwise unbroken lines break where rules intersect, while {{cssxref("rule-inset")}} define where segments start and end when rules do break. If they don't break, the {{cssxref("rule-overlap")}} property defines the painting order of the rules.
+When all segments are drawn, column and row rules span the entire height and width of the container. The {{cssxref("rule-visibility-items")}} defines whether segments are to be drawn around areas that are not occupied by items. The {{cssxref("rule-break")}} properties determine if lines break when they intersect a gap, while {{cssxref("rule-inset")}} defines where segments start and end when rules do break. If they don't break, the {{cssxref("rule-overlap")}} property defines the painting order of the rules.
 
 ## Gaps in action
 
@@ -144,10 +144,6 @@ In this example, the 2021 poem from the USA inauguration, _The Hill We Climb_, b
   </legend>
   <div id="controls">
     <p>
-      <label for="colCount">Number of columns:</label>
-      <input type="number" min="0" max="5" value="5" id="colCount" />
-    </p>
-    <p>
       <input type="checkbox" checked id="colSpan" />
       <label for="colSpan">Byline spans all columns</label>
     </p>
@@ -155,61 +151,69 @@ In this example, the 2021 poem from the USA inauguration, _The Hill We Climb_, b
       <input type="checkbox" id="blockSpan" />
       <label for="blockSpan">Blockquote spans all columns</label>
     </p>
-    <p>
-      <label for="colHeight">Column height:</label>
-      <input
-        type="number"
-        min="0"
-        max="100"
-        value="20"
-        id="colHeight"
-        step="5" /><label for="colHeight">vh</label>
-    </p>
-    <p class="code">
-      <input type="range" min="0" max="4" value="1" step="0.5" id="gapSize" />
-      <label for="gapSize">gap: </label><output id="gap">1em;</output>
-    </p>
-    <p>
-      <input
-        type="range"
-        min="0"
-        max="3"
-        value="0.3"
-        step="0.1"
-        id="columnRuleWidth" />
-      <label for="columnRuleWidth">rule width: </label
-      ><output id="ruleWidth">0.3em</output>
-    </p>
-    <p>
-      <label for="colColor">rule color:</label>
-      <input type="color" id="colColor" value="#FF0000" />
-    </p>
-    <p>
-      <label for="columnRuleStyle">rule style:</label>
-      <select id="columnRuleStyle">
-        <option>none</option>
-        <option>hidden</option>
-        <option>dotted</option>
-        <option>dashed</option>
-        <option>solid</option>
-        <option selected>double</option>
-        <option>groove</option>
-        <option>ridge</option>
-        <option>inset</option>
-        <option>outset</option>
-        <option></option>
-      </select>
-    </p>
-    <p class="code">
-      <input
-        type="range"
-        min="-50"
-        max="200"
-        value="0"
-        step="5"
-        id="ruleInset" />
-      <label for="ruleInset">rule-inset: </label><output id="inset">0%;</output>
-    </p>
+    <section>
+      <p>
+        <label for="colCount">column-count</label>
+        <input type="number" min="0" max="5" value="5" id="colCount" />
+      </p>
+      <p>
+        <label for="colHeight">column-height:</label>
+        <input
+          type="number"
+          min="0"
+          max="100"
+          value="20"
+          id="colHeight"
+          step="5" /><label for="colHeight">vh</label>
+      </p>
+      <p>
+        <label for="colColor">rule-color:</label>
+        <input type="color" id="colColor" value="#FF0000" />
+      </p>
+      <p>
+        <label for="columnRuleStyle">rule-style:</label>
+        <select id="columnRuleStyle">
+          <option>none</option>
+          <option>hidden</option>
+          <option>dotted</option>
+          <option>dashed</option>
+          <option>solid</option>
+          <option selected>double</option>
+          <option>groove</option>
+          <option>ridge</option>
+          <option>inset</option>
+          <option>outset</option>
+          <option></option>
+        </select>
+      </p>
+      <p>
+        <input type="range" min="0" max="4" value="1" step="0.5" id="gapSize" />
+        <label for="gapSize">gap: </label
+        ><output id="gap" class="output">1em</output>
+      </p>
+      <p>
+        <input
+          type="range"
+          min="0"
+          max="3"
+          value="0.3"
+          step="0.1"
+          id="columnRuleWidth" />
+        <label for="columnRuleWidth">rule-width: </label
+        ><output id="ruleWidth" class="output">0.3em</output>
+      </p>
+      <p>
+        <input
+          type="range"
+          min="-50"
+          max="200"
+          value="0"
+          step="5"
+          id="ruleInset" />
+        <label for="ruleInset">rule-inset: </label
+        ><output id="inset" class="output">0%</output>
+      </p>
+    </section>
   </div>
 </fieldset>
 ```
@@ -248,26 +252,26 @@ colCount.addEventListener("change", () => {
   page.style.columnCount = colCount.value;
 });
 
-colHeight.addEventListener("change", () => {
+colHeight.addEventListener("input", () => {
   page.style.columnHeight = `${colHeight.value}vh`;
 });
 
-gapSize.addEventListener("change", () => {
+gapSize.addEventListener("input", () => {
   page.style.gap = `${gapSize.value}em`;
-  gap.innerText = `${gapSize.value}em;`;
+  gap.innerText = `${gapSize.value}em`;
 });
-ruleInset.addEventListener("change", () => {
+ruleInset.addEventListener("input", () => {
   page.style.ruleInset = `${ruleInset.value}%`;
-  inset.innerText = `${ruleInset.value}%;`;
+  inset.innerText = `${ruleInset.value}%`;
 });
 
-columnRuleWidth.addEventListener("change", () => {
+columnRuleWidth.addEventListener("input", () => {
   page.style.columnRuleWidth = `${columnRuleWidth.value}em`;
   page.style.ruleWidth = `${columnRuleWidth.value}em`;
   ruleWidth.innerText = `${columnRuleWidth.value}em`;
 });
 
-columnRuleStyle.addEventListener("change", () => {
+columnRuleStyle.addEventListener("input", () => {
   page.style.columnRuleStyle = columnRuleStyle.value;
   page.style.ruleStyle = columnRuleStyle.value;
 });
@@ -280,7 +284,7 @@ blockSpan.addEventListener("change", () => {
   setColSpan(blockSpan, blockquote);
 });
 
-columnRuleColor.addEventListener("change", () => {
+columnRuleColor.addEventListener("input", () => {
   page.style.columnRuleColor = colColor.value;
   page.style.ruleColor = colColor.value;
 });
@@ -327,45 +331,6 @@ p {
   margin: 0 0 1em 0;
   line-height: 1.4;
 }
-.code {
-  font-family: monospace;
-}
-.breakInside * {
-  break-inside: avoid;
-}
-#options {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  background: white;
-  display: none;
-}
-fieldset p {
-  margin-bottom: 0.25em;
-}
-legend {
-  position: relative;
-  top: 0;
-  transition: 200ms;
-}
-legend.closed {
-  top: 0.75em;
-}
-legend.closed + #controls {
-  display: none;
-}
-legend {
-  background-color: #dedede;
-  padding: 0.5em;
-}
-legend > button {
-  all: unset;
-  cursor: pointer;
-}
-legend.closed {
-  margin: -1em;
-  display: inline-block;
-}
 blockquote {
   font-weight: bold;
   font-style: italic;
@@ -376,6 +341,50 @@ blockquote p::after {
   content: '"';
   vertical-align: baseline;
   color: red;
+}
+
+@layer form {
+  #options {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: white;
+    display: none;
+    padding: 0.5em 1em;
+  }
+  section {
+    font-family: monospace;
+  }
+  fieldset p {
+    margin-bottom: 0.25em;
+  }
+  legend {
+    position: relative;
+    top: 0;
+    transition: 200ms;
+  }
+  legend.closed {
+    top: 0.75em;
+  }
+  legend.closed + #controls {
+    display: none;
+  }
+  legend {
+    background-color: #dedede;
+    padding: 0.5em;
+  }
+  legend > button {
+    all: unset;
+    cursor: pointer;
+  }
+  legend.closed {
+    margin: -1em;
+    display: inline-block;
+  }
+  .output {
+    display: inline-block;
+    width: 2em;
+  }
 }
 ```
 
