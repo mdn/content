@@ -120,6 +120,10 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   The {{cssxref("text-decoration-inset")}} CSS property now supports percentages as values. The percentage value specifies the size of the inset as a percentage of the {{cssxref("font-size")}}. ([Firefox bug 2044602](https://bugzil.la/2044602)).
 
+- **Calculating a value based upon `progress()`**: `layout.css.progress-function.enabled`
+
+  The {{cssxref("progress")}} CSS function is now supported. This allows the user calculate a {{cssxref("number")}} based upon a value (or progress) in between a minimum and maximum value. ([Firefox bug 2047015](https://bugzil.la/2047015)).
+
 - **CSS Typed Object Model Level 1** (Nightly): `layout.css.typed-om.enabled`
 
   The [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) (as defined in the CSS Typed Object Model Level 1 specification) is now implemented.

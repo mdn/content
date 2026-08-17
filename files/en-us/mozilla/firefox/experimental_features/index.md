@@ -449,6 +449,20 @@ The {{cssxref("text-decoration-inset")}} CSS property now supports percentages a
 - `layout.css.text-decoration-inset-percentage.enabled`
   - : Set to `true` to enable.
 
+### Calculating a value based upon `progress()`
+
+The {{cssxref("progress")}} CSS function is now supported. This allows the user calculate a {{cssxref("number")}} based upon a value (or progress) in between a minimum and maximum value. ([Firefox bug 2047015](https://bugzil.la/2047015)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 154           | Yes                 |
+| Developer Edition | 153           | No                  |
+| Beta              | 153           | No                  |
+| Release           | 153           | No                  |
+
+- `layout.css.progress-function.enabled`
+  - : Set to `true` to enable.
+
 ## SVG
 
 **No experimental features in this release cycle.**
