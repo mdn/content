@@ -23,7 +23,7 @@ reportError(throwable)
 ### Parameters
 
 - `throwable`
-  - : An error object such as a {{jsxref("TypeError")}}.
+  - : Any JavaScript value, but preferably an error object such as a {{jsxref("TypeError")}}.
 
 ### Return value
 
@@ -36,6 +36,8 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
+### Feature detection
+
 Feature test for the method using:
 
 ```js
@@ -44,26 +46,40 @@ if (typeof window.reportError === "function") {
 }
 ```
 
-The following code shows how you might create and report an error, and how it may be caught using either the `onerror` event handler property or by adding a listener for the `error` event.
-Note that the handler assigned to `onerror` must return `true` to stop the event propagating further.
+### Telemetry
+
+`reportError()` allows asynchronous errors to be reported just like built-in errors. Aggregating all errors at a single point makes it easier to collect telemetry about errors occurring in an application.
+
+For example, a web application might set up a global [`error`](/en-US/docs/Web/API/Window/error_event) event listener to collect all uncaught errors, and send them to a server for analysis, such as by using [Sentry](https://sentry.io/):
 
 ```js
-const newError = new Error("Some error message", "someFile.js", 11);
-window.reportError(newError);
-
-window.onerror = (message, source, lineno, colno, error) => {
-  console.error(`message: ${error.message}, lineno: ${lineno}`);
-  return true;
-};
-
-window.addEventListener("error", (error) => {
-  console.error(error.filename);
+window.addEventListener("error", (event) => {
+  event.preventDefault(); // Prevent the default logging to console
+  Sentry.captureException(event.error);
+  console.error("Error encountered:", event.error);
+  showToastNotification("An error occurred. Our team has been notified.");
 });
-
-// Output
-// > "message:Some error message, lineno: 11"
-// > "someFile.js"
 ```
+
+By default, this listener can listen for uncaught exceptions thrown in synchronous `<script>` execution, `setTimeout` callbacks, event handlers, asynchronous promise callbacks, and so on. Libraries and applications can use `reportError()` to deliver their own errors to this same listener, ensuring that all errors are captured in a consistent manner.
+
+```js
+function fetchUser(userId) {
+  return fetch(`/api/users?id=${encodeURIComponent(userId)}`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Failed to fetch user with ID ${userId}`);
+      }
+      return response.json();
+    })
+    .catch((error) => {
+      // Report the error to the global error handler
+      window.reportError(error);
+    });
+}
+```
+
+By using `reportError()` instead of letting the error go uncaught, subsequent code execution is not interrupted, while still ensuring that the error is logged and can be analyzed. For example, this function can be called in a test runner without extra `try...catch` handling.
 
 ## Specifications
 

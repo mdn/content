@@ -1,5 +1,6 @@
 ---
-title: border-block-start-width
+title: "`border-block-start-width` CSS property"
+short-title: border-block-start-width
 slug: Web/CSS/Reference/Properties/border-block-start-width
 page-type: css-property
 browser-compat: css.properties.border-block-start-width
@@ -53,7 +54,7 @@ writing-mode: vertical-lr;
 ## Syntax
 
 ```css
-/* <'border-width'> values */
+/* <'line-width'> values */
 border-block-start-width: 5px;
 border-block-start-width: thick;
 
@@ -69,8 +70,8 @@ Related properties are {{cssxref("border-block-end-width")}}, {{cssxref("border-
 
 ### Values
 
-- `<'border-width'>`
-  - : The width of the border. See {{ cssxref("border-width") }}.
+- {{cssxref("&lt;line-width&gt;")}}
+  - : Defines the width of the border, either as an explicit non-negative {{cssxref("&lt;length&gt;")}} or the keywords: `thin`, `medium`, or `thick`. The default is `medium`.
 
 ## Formal definition
 
@@ -122,6 +123,6 @@ div {
 
 ## See also
 
-- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values)
 - This property maps to one of the physical border properties: {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}}, and {{cssxref("border-left-width")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

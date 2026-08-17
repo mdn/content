@@ -54,7 +54,7 @@ number of elements in a list:
 
 ```js example-bad
 const names = document.getElementsByClassName("names");
-const name_list = Array.prototype.reduce.call(
+const nameList = Array.prototype.reduce.call(
   names,
   (acc, name) => `${acc}, ${name}`,
 );

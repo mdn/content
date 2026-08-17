@@ -1,5 +1,6 @@
 ---
-title: mask-border-repeat
+title: "`mask-border-repeat` CSS property"
+short-title: mask-border-repeat
 slug: Web/CSS/Reference/Properties/mask-border-repeat
 page-type: css-property
 browser-compat: css.properties.mask-border-repeat
@@ -69,7 +70,7 @@ Chromium-based browsers support an outdated version of this property — `mask-b
 ```
 
 > [!NOTE]
-> The [`mask-border`](/en-US/docs/Web/CSS/Reference/Properties/mask-border) page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.
+> The {{cssxref("mask-border")}} page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.
 
 ## Specifications
 

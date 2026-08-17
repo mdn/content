@@ -1,5 +1,5 @@
 ---
-title: HTML part global attribute
+title: "`part` HTML global attribute"
 short-title: part
 slug: Web/HTML/Reference/Global_attributes/part
 page-type: html-attribute
@@ -27,4 +27,4 @@ See the [`exportparts` attribute](/en-US/docs/Web/HTML/Reference/Global_attribut
 - [`ShadowRoot`](/en-US/docs/Web/API/ShadowRoot) interface
 - {{DOMxRef("Element.part")}} property
 - [Using templates and slots](/en-US/docs/Web/API/Web_components/Using_templates_and_slots)
-- [CSS scoping](/en-US/docs/Web/CSS/CSS_scoping) module
+- [CSS scoping](/en-US/docs/Web/CSS/Guides/Scoping) module

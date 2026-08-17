@@ -1,5 +1,6 @@
 ---
-title: font-variant-numeric
+title: "`font-variant-numeric` CSS property"
+short-title: font-variant-numeric
 slug: Web/CSS/Reference/Properties/font-variant-numeric
 page-type: css-property
 browser-compat: css.properties.font-variant-numeric
@@ -48,21 +49,23 @@ font-variant-numeric: diagonal-fractions;
 <section id="default-example">
   <div id="example-element">
     <table>
-      <tr>
-        <td><span class="tabular">0</span></td>
-      </tr>
-      <tr>
-        <td><span class="tabular">3.54</span></td>
-      </tr>
-      <tr>
-        <td><span class="tabular">1.71</span></td>
-      </tr>
-      <tr>
-        <td><span class="tabular">1st</span></td>
-      </tr>
-      <tr>
-        <td><span class="tabular">3/4</span></td>
-      </tr>
+      <tbody>
+        <tr>
+          <td><span class="tabular">0</span></td>
+        </tr>
+        <tr>
+          <td><span class="tabular">3.54</span></td>
+        </tr>
+        <tr>
+          <td><span class="tabular">1.71</span></td>
+        </tr>
+        <tr>
+          <td><span class="tabular">1st</span></td>
+        </tr>
+        <tr>
+          <td><span class="tabular">3/4</span></td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </section>
@@ -116,12 +119,9 @@ font-variant-numeric: revert-layer;
 font-variant-numeric: unset;
 ```
 
-This property can take one of two forms:
-
-- either the keyword value `normal`
-- or one or more of the other values listed below, space-separated, in any order.
-
 ### Values
+
+This property is specified either as `normal` or a space-separated list of the following values:
 
 - `normal`
   - : This keyword leads to the deactivation of the use of such alternate glyphs.
@@ -193,10 +193,10 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
 
 ## See also
 
-- [`font-variant`](/en-US/docs/Web/CSS/Reference/Properties/font-variant)
-- [`font-variant-alternates`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-alternates)
-- [`font-variant-caps`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-caps)
-- [`font-variant-east-asian`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-east-asian)
-- [`font-variant-emoji`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-emoji)
-- [`font-variant-ligatures`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-ligatures)
-- [`font-variant-position`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-position)
+- {{cssxref("font-variant")}}
+- {{cssxref("font-variant-alternates")}}
+- {{cssxref("font-variant-caps")}}
+- {{cssxref("font-variant-east-asian")}}
+- {{cssxref("font-variant-emoji")}}
+- {{cssxref("font-variant-ligatures")}}
+- {{cssxref("font-variant-position")}}

@@ -48,6 +48,10 @@ content-type: text/xml
 vary: Accept-Language
 ```
 
+## Specifications
+
+{{Specifications}}
+
 ## Browser compatibility
 
 {{Compat}}

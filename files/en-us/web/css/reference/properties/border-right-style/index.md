@@ -1,5 +1,6 @@
 ---
-title: border-right-style
+title: "`border-right-style` CSS property"
+short-title: border-right-style
 slug: Web/CSS/Reference/Properties/border-right-style
 page-type: css-property
 browser-compat: css.properties.border-right-style
@@ -7,6 +8,9 @@ sidebar: cssref
 ---
 
 The **`border-right-style`** [CSS](/en-US/docs/Web/CSS) property sets the line style of an element's right {{cssxref("border")}}.
+
+> [!NOTE]
+> The specification doesn't define how borders of different styles connect in the corners.
 
 {{InteractiveExample("CSS Demo: border-right-style")}}
 
@@ -57,9 +61,6 @@ body {
 }
 ```
 
-> [!NOTE]
-> The specification doesn't define how borders of different styles connect in the corners.
-
 ## Syntax
 
 ```css
@@ -101,22 +102,24 @@ The `border-right-style` property is specified as a single {{cssxref("line-style
 
 ```html
 <table>
-  <tr>
-    <td class="b1">none</td>
-    <td class="b2">hidden</td>
-    <td class="b3">dotted</td>
-    <td class="b4">dashed</td>
-  </tr>
-  <tr>
-    <td class="b5">solid</td>
-    <td class="b6">double</td>
-    <td class="b7">groove</td>
-    <td class="b8">ridge</td>
-  </tr>
-  <tr>
-    <td class="b9">inset</td>
-    <td class="b10">outset</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td class="b1">none</td>
+      <td class="b2">hidden</td>
+      <td class="b3">dotted</td>
+      <td class="b4">dashed</td>
+    </tr>
+    <tr>
+      <td class="b5">solid</td>
+      <td class="b6">double</td>
+      <td class="b7">groove</td>
+      <td class="b8">ridge</td>
+    </tr>
+    <tr>
+      <td class="b9">inset</td>
+      <td class="b10">outset</td>
+    </tr>
+  </tbody>
 </table>
 ```
 

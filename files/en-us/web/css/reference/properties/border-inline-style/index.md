@@ -1,5 +1,6 @@
 ---
-title: border-inline-style
+title: "`border-inline-style` CSS property"
+short-title: border-inline-style
 slug: Web/CSS/Reference/Properties/border-inline-style
 page-type: css-property
 browser-compat: css.properties.border-inline-style
@@ -7,6 +8,8 @@ sidebar: cssref
 ---
 
 The **`border-inline-style`** [CSS](/en-US/docs/Web/CSS) property defines the style of the logical inline borders of an element, which maps to a physical border style depending on the element's writing mode, directionality, and text orientation. It corresponds to the {{cssxref("border-top-style")}} and {{cssxref("border-bottom-style")}}, or {{cssxref("border-left-style")}} and {{cssxref("border-right-style")}} properties depending on the values defined for {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}.
+
+The border style in the other dimension can be set with {{cssxref("border-block-style")}}, which sets {{cssxref("border-block-start-style")}}, and {{cssxref("border-block-end-style")}}.
 
 {{InteractiveExample("CSS Demo: border-inline-style")}}
 
@@ -46,12 +49,10 @@ direction: rtl;
 }
 ```
 
-The border style in the other dimension can be set with {{cssxref("border-block-style")}}, which sets {{cssxref("border-block-start-style")}}, and {{cssxref("border-block-end-style")}}.
-
 ## Syntax
 
 ```css
-/* <'border-style'> values */
+/* Keyword values */
 border-inline-style: dashed;
 border-inline-style: dotted;
 border-inline-style: groove;
@@ -66,7 +67,7 @@ border-inline-style: unset;
 
 ### Values
 
-- `<'border-style'>`
+- {{cssxref("&lt;line-style&gt;")}}
   - : The line style of the border. See {{ cssxref("border-style") }}.
 
 ## Formal definition
@@ -117,6 +118,6 @@ div {
 
 ## See also
 
-- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values)
 - This property maps to one of the physical border properties: {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, or {{cssxref("border-left-style")}}.
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

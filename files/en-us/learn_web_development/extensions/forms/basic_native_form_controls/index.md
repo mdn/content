@@ -96,7 +96,7 @@ The `password` value doesn't add any special constraints to the entered text, bu
 
 Keep in mind this is just a user interface feature; unless you submit your form securely, it will get sent in plain text, which is bad for security — a malicious party could intercept your data and steal passwords, credit card details, or whatever else you've submitted. The best way to protect users from this is to host any pages involving forms over a secure connection (i.e., located at an `https://` address), so the data is encrypted before it is sent.
 
-Browsers recognize the security implications of sending form data over an insecure connection, and have warnings to deter users from using insecure forms. For more information on what Firefox implements, see [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords).
+Browsers recognize the security implications of sending form data over an insecure connection, and have warnings to deter users from using insecure forms.
 
 ### Hidden content
 
@@ -285,7 +285,7 @@ If the image button is used to submit the form, this control doesn't submit its 
 So for example when you click on the image at coordinate (123, 456) and it submits via the `get` method, you'll see the values appended to the URL as follows:
 
 ```url
-http://foo.com?pos.x=123&pos.y=456
+https://example.com?pos.x=123&pos.y=456
 ```
 
 This is a very convenient way to build a "hot map". How these values are sent and retrieved is detailed in the [Sending form data](/en-US/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data) article.

@@ -14,6 +14,7 @@ alphanumerals
 ambisonic
 amore
 analyzability
+animateable-feature
 ANMF
 anonymization
 antialiasing
@@ -25,6 +26,7 @@ arcseconds
 ARGB
 arsinh
 artanh
+ASACP
 ASCAP
 ascendingly
 ASCIIID
@@ -99,10 +101,12 @@ CCPA
 CCPL
 CELP
 CGATS
+chatbots
 cheatsheet
 checkboard
 checkedness
 checkmarks
+cheesemakers
 childlist
 chipsets
 choosable
@@ -156,11 +160,13 @@ datestamped
 DBFS
 DCDM
 DCSP
+debiased
 decodability
 Deinonychus
 demi
 demultiplexing
 demux
+demuxer
 demuxing
 deoptimize
 deprioritized
@@ -203,6 +209,7 @@ equirect
 equirectangular
 ESSL
 ETSI
+exfiltrates
 exfiltrating
 EXIF
 expando
@@ -246,6 +253,7 @@ fragmentainers
 framebuffers
 framebusting
 frontmost
+fuhao
 Fullband
 fullscreened
 fullwidth
@@ -293,6 +301,7 @@ holodeck
 homescreen
 homothetic
 hotlinking
+HOTP
 hotspot
 hotspots
 hoverable
@@ -308,6 +317,7 @@ iconset
 idents
 IDOR
 IERS
+immediates
 IMSC
 Indo-Pacific
 inferencing
@@ -366,6 +376,7 @@ lifecycles
 lightshow
 linecaps
 linkability
+linkified
 linkify
 livemark
 livemarks
@@ -390,6 +401,7 @@ maplike
 MBASW
 Mbit
 Mbps
+mediacapabilities
 metalness
 metastring
 microcontrollers
@@ -433,6 +445,8 @@ multivalued
 multiview
 muscaria
 musicogenic
+muxer
+muxing
 MVVM
 namedspace
 narrowband
@@ -468,6 +482,7 @@ OOJS
 OPFS
 optimizability
 opto-electronic
+OTAC
 outdents
 outsetting
 overengineering
@@ -499,6 +514,7 @@ phonorecord
 phonorecords
 pilcrow
 pillarboxed
+pillarboxing
 pingback
 pingbacks
 pingpong
@@ -565,6 +581,7 @@ QWERTZ
 RAII
 rari
 rasterizes
+raycaster
 RDBMS
 RDBMSes
 readback
@@ -573,6 +590,7 @@ reauthenticated
 reauthentication
 redirections
 redisplaying
+refbox
 regionless
 reimplementation
 remarketing
@@ -625,6 +643,7 @@ scorpionfish
 screenful
 scriptable
 scriptless
+scroll-snappable
 scrollers
 scrollport
 SECAM
@@ -648,6 +667,7 @@ side-scrollers
 sideload
 sideloaded
 SIDX
+signedness
 significand
 singlecast
 singlecasts
@@ -675,6 +695,7 @@ spatializations
 spatialize
 spatialized
 SPDY
+spearphishing
 speedwalk
 spinbuttons
 spinlocking
@@ -765,6 +786,8 @@ superpowered
 superscaling
 supersets
 SVCB
+swashy
+swooshy
 syncbase
 tablists
 tabstrip
@@ -772,6 +795,7 @@ Tanuki
 targetable
 taskbars
 taskboard
+tealish
 teleporting
 telepresence
 texels
@@ -827,6 +851,8 @@ tweens
 UAAG
 ufrag
 UMTS
+unblinded
+unblinds
 unbookmark
 unbundling
 uncacheable
@@ -856,6 +882,7 @@ ungroup
 ungrouping
 unguaranteed
 unhovered
+unhovering
 uninterpolated
 unintuitively
 unioned
@@ -900,6 +927,7 @@ Videobridge
 Viewmodel
 virosa
 virtualizes
+VOPRF
 WAAPI
 wallclock
 WAMP

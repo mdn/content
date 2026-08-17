@@ -1,7 +1,9 @@
 ---
-title: if...else
+title: "if...else: Wasm text instruction"
+short-title: if...else
 slug: WebAssembly/Reference/Control_flow/if...else
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.if_else
 sidebar: webassemblysidebar
 ---
 
@@ -72,3 +74,11 @@ i32.const 0
 | ----------- | ------------- |
 | `if`        | `0x04`        |
 | `else`      | `0x05`        |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

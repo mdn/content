@@ -25,7 +25,7 @@ WebIDL is defined in [its specification](https://webidl.spec.whatwg.org/). But i
 
 - For Gecko, Mozilla created the [documentation](https://firefox-source-docs.mozilla.org/dom/webIdlBindings/index.html) of its dialectal WebIDL.
 - For Chromium, Google also created a [document](https://www.chromium.org/blink/webidl/) to describe its extensions.
-- For WebCore, Apple also made available a [page](https://trac.webkit.org/wiki/WebKitIDL) for its dialect.
+- For WebCore, Apple also made available a [page](https://docs.webkit.org/Deep%20Dive/Architecture/JSWrappers.html) for its dialect.
 
 > [!NOTE]
 > We describe here only the subset of WebIDL which is most useful when writing documentation. There are many more annotations useful for implementers; refer to the four documents linked above to have a complete overview.
@@ -245,6 +245,12 @@ If the keyword `readonly` is present, the property can't be modified. It must be
 
 > [!NOTE]
 > Only read-only properties can be described as 'returning' a value. Non read-only properties can also be used to set a value.
+
+Some properties have the `[PutForwards=xyz]` annotation. This means that the property is a reference to another object, and when assigned a new value, the assignment is forwarded to the `xyz` property of the referenced object.
+
+Add a paragraph similar to the following to the end of the _Value_ section of the article:
+
+_Although the `style` property itself is read-only in the sense that you can't replace the `CSSStyleDeclaration` object, you can still assign to the `style` property directly, which is equivalent to assigning to its {{domxref("CSSStyleDeclaration/cssText", "cssText")}} property. You can also modify the `CSSStyleDeclaration` object using the {{domxref("CSSStyleDeclaration/setProperty", "setProperty()")}} and {{domxref("CSSStyleDeclaration/removeProperty", "removeProperty()")}} methods._
 
 ### Throwing exceptions
 

@@ -302,12 +302,12 @@ The examples above show how to work with numbers in assembly code, adding them t
 
 For working with strings and other more complex data types, we use `memory`, which can be created in either WebAssembly or JavaScript, and shared between environments (more recent versions of WebAssembly can also use [Reference types](#reference_types)).
 
-In WebAssembly, `memory` is just a large contiguous, mutable array of raw bytes that can grow over time (see [linear memory](https://webassembly.github.io/spec/core/intro/overview.html?highlight=linear+memory) in the specification). WebAssembly contains [memory instructions](/en-US/docs/WebAssembly/Reference/Memory) like [`i32.load`](/en-US/docs/WebAssembly/Reference/Memory/Load) and [`i32.store`](/en-US/docs/WebAssembly/Reference/Memory/Store) for reading and writing bytes between the stack and any location in a memory.
+In WebAssembly, `memory` is just a large contiguous, mutable array of raw bytes that can grow over time (see [linear memory](https://webassembly.github.io/spec/core/intro/overview.html?highlight=linear+memory) in the specification). WebAssembly contains [memory instructions](/en-US/docs/WebAssembly/Reference/Memory) like [`i32.load`](/en-US/docs/WebAssembly/Reference/Memory/load) and [`i32.store`](/en-US/docs/WebAssembly/Reference/Memory/store) for reading and writing bytes between the stack and any location in a memory.
 
 From JavaScript's point of view, it's as though memory is all inside one big growable {{jsxref("ArrayBuffer")}}.
 JavaScript can create WebAssembly linear memory instances via the [`WebAssembly.Memory()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory) interface and export them to a memory instance, or access a memory instance created within the WebAssembly code and exported. JavaScript `Memory` instances have a [`buffer`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory/buffer) getter, which returns an `ArrayBuffer` that points at the whole linear memory.
 
-Memory instances can also grow, for example via the [`Memory.grow()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory/grow) method in JavaScript or [`memory.grow`](/en-US/docs/WebAssembly/Reference/Memory/Grow) in the WebAssembly.
+Memory instances can also grow, for example via the [`Memory.grow()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory/grow) method in JavaScript or [`memory.grow`](/en-US/docs/WebAssembly/Reference/Memory/grow) in the WebAssembly.
 Since `ArrayBuffer` objects can't change size, the current `ArrayBuffer` is detached and a new `ArrayBuffer` is created to point to the newer, bigger memory.
 
 Note that when you create the memory, you need to define the initial size, and you can optionally specify the maximum size to which the memory can grow.
@@ -445,7 +445,7 @@ More recent implementations allow you to use multiple memory objects in your Web
 Multiple memories can be useful for separating data that should be treated differently from other application data, such as public vs private data, data that needs to be persisted, and data that needs to be shared between threads.
 It may also be useful for very large applications that need to scale beyond the Wasm 32-bit address space, and for other purposes.
 
-Memories that are made available to the WebAssembly code, either declared directly or imported, are given a zero-indexed, sequentially allocated memory index number. All the [memory instructions](/en-US/docs/WebAssembly/Reference/Memory), such as [`load`](/en-US/docs/WebAssembly/Reference/Memory/Load) or [`store`](/en-US/docs/WebAssembly/Reference/Memory/Store), can reference any particular memory via its index so you can control which memory you're working with.
+Memories that are made available to the WebAssembly code, either declared directly or imported, are given a zero-indexed, sequentially allocated memory index number. All the [memory instructions](/en-US/docs/WebAssembly/Reference/Memory), such as [`load`](/en-US/docs/WebAssembly/Reference/Memory/load) or [`store`](/en-US/docs/WebAssembly/Reference/Memory/store), can reference any particular memory via its index so you can control which memory you're working with.
 
 The memory instructions have a default index of 0, the index of the first memory added to the WebAssembly instance.
 As a result, if you only add one memory, your code doesn't have to specify the index.

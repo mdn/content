@@ -1,12 +1,21 @@
 ---
-title: vertical-align
+title: "`vertical-align` CSS property"
+short-title: vertical-align
 slug: Web/CSS/Reference/Properties/vertical-align
-page-type: css-property
+page-type: css-shorthand-property
 browser-compat: css.properties.vertical-align
 sidebar: cssref
 ---
 
-The **`vertical-align`** [CSS](/en-US/docs/Web/CSS) property sets vertical alignment of an inline, inline-block or table-cell box.
+The **`vertical-align`** [CSS](/en-US/docs/Web/CSS) shorthand property sets the vertical alignment of an inline, inline-block, or table-cell box.
+
+## Constituent properties
+
+This property is a shorthand for the following CSS properties:
+
+- {{cssxref("alignment-baseline")}}
+- {{cssxref("baseline-source")}}
+- {{cssxref("baseline-shift")}}
 
 {{InteractiveExample("CSS Demo: vertical-align")}}
 
@@ -56,6 +65,8 @@ The `vertical-align` property can be used in two contexts:
 
 - To vertically align an inline-level element's box inside its containing line box. For example, it could be used to [vertically position an image in a line of text](#vertical_alignment_in_a_line_box).
 - To vertically align [the content of a cell in a table](#vertical_alignment_in_a_table_cell).
+
+Use this shorthand (`vertical-align`) instead of its corresponding longhand properties, unless you need to cascade them independently or (on SVG elements) to support legacy SVG implementations.
 
 Note that `vertical-align` only applies to inline, inline-block and table-cell elements: you can't use it to vertically align [block-level elements](/en-US/docs/Glossary/Block-level_content).
 
@@ -250,17 +261,19 @@ The sixth cell is only used to ensure that the cells are tall enough to see the 
 
 ```html
 <table>
-  <tr class="bottom">
-    <td class="baseline">baseline</td>
-    <td class="top">top</td>
-    <td class="middle">middle</td>
-    <td>bottom</td>
-    <td>Row's style</td>
-    <td>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-      pretium felis eu sem mattis vulputate.
-    </td>
-  </tr>
+  <tbody>
+    <tr class="bottom">
+      <td class="baseline">baseline</td>
+      <td class="top">top</td>
+      <td class="middle">middle</td>
+      <td>bottom</td>
+      <td>Row's style</td>
+      <td>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        pretium felis eu sem mattis vulputate.
+      </td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -315,7 +328,7 @@ td {
 
 ## See also
 
-- [Typical use cases of flexbox, section "Center item"](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox#center_item)
+- [Typical use cases of flexbox, section "Center item"](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Use_cases#center_item)
 - {{Cssxref("line-height")}}, {{Cssxref("text-align")}}, {{Cssxref("margin")}}
 - [Understanding `vertical-align`, or "How (Not) To Vertically Center Content"](https://phrogz.net/css/vertical-align/index.html)
 - [Vertical-Align: All You Need To Know](https://christopheraue.net/design/vertical-align)

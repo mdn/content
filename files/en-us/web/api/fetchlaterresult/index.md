@@ -7,9 +7,9 @@ status:
 browser-compat: api.FetchLaterResult
 ---
 
-{{APIRef("fetchLater API")}}{{SeeCompatTable}}
+{{APIRef("Fetch API")}}{{SeeCompatTable}}
 
-The **`FetchLaterResult`** interface of the [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API) is returned by the {{domxref("Window.fetchLater()")}} method after a deferred fetch has been created.
+The **`FetchLaterResult`** interface of the [Fetch API](/en-US/docs/Web/API/Fetch_API) is returned by the {{domxref("Window.fetchLater()")}} method after a deferred fetch has been created.
 
 It contains a single `activated` property that indicates whether the deferred request has been sent out or not.
 
@@ -31,7 +31,7 @@ const result = fetchLater("https://report.example.com", {
   activateAfter: 60000 /* 1 minute */,
 });
 
-function check_if_fetched() {
+function checkIfFetched() {
   return result.activated;
 }
 ```
@@ -46,5 +46,5 @@ function check_if_fetched() {
 
 ## See also
 
-- [`fetchLater()` API](/en-US/docs/Web/API/fetchLater_API)
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)
+- [Using Deferred Fetch](/en-US/docs/Web/API/Fetch_API/Using_Deferred_Fetch)

@@ -1,5 +1,6 @@
 ---
-title: accent-color
+title: "`accent-color` CSS property"
+short-title: accent-color
 slug: Web/CSS/Reference/Properties/accent-color
 page-type: css-property
 browser-compat: css.properties.accent-color
@@ -29,7 +30,7 @@ accent-color: hsl(250 100% 34%);
 ```html interactive-example
 <section class="default-example container" id="default-example">
   <div>
-    <input checked="" id="example-element" type="checkbox" />
+    <input checked id="example-element" type="checkbox" />
     <label for="example-element" id="example-label">Example Label</label>
   </div>
 </section>
@@ -51,18 +52,6 @@ accent-color: hsl(250 100% 34%);
   font-size: x-large;
 }
 ```
-
-Browsers that support `accent-color` currently apply it to the following HTML elements:
-
-- [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox)
-- [`<input type="radio">`](/en-US/docs/Web/HTML/Reference/Elements/input/radio)
-- [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range)
-- [`<progress>`](/en-US/docs/Web/HTML/Reference/Elements/progress)
-
-Each user agent has an accent color, with variations to ensure legibility and
-contrast. That accent color is not used by every user-interface control nor in
-every state of the control. The `accent-color` is only applied to user-interface
-controls that use an accent color in the states where it is applicable.
 
 ## Syntax
 
@@ -86,10 +75,29 @@ accent-color: unset;
 
 ### Values
 
+This property is specified as the keyword `auto` or one `<color>` value:
+
 - `auto`
   - : Represents a UA-chosen color, which should match the accent color of the platform, if any.
 - {{cssxref("&lt;color&gt;")}}
   - : Specifies the color to be used as the accent color.
+
+## Description
+
+Browsers that support `accent-color` currently apply it to the following HTML elements:
+
+- [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox)
+- [`<input type="radio">`](/en-US/docs/Web/HTML/Reference/Elements/input/radio)
+- [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range)
+- [`<progress>`](/en-US/docs/Web/HTML/Reference/Elements/progress)
+
+Each user agent has an accent color, with variations to ensure legibility and
+contrast. That accent color is not used by every user-interface control nor in
+every state of the control. The `accent-color` is only applied to user-interface
+controls that use an accent color in the states where it is applicable.
+
+> [!NOTE]
+> To reduce the risk of {{glossary("fingerprinting")}}, some browsers return a fixed value for `accent-color: auto` unless it is used in certain restricted circumstances. See [browser compatibility](#browser_compatibility) for details.
 
 ## Formal definition
 

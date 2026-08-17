@@ -1,5 +1,6 @@
 ---
-title: white-space
+title: "`white-space` CSS property"
+short-title: white-space
 slug: Web/CSS/Reference/Properties/white-space
 page-type: css-property
 browser-compat: css.properties.white-space
@@ -66,7 +67,7 @@ white-space: preserve nowrap;
 
 The property specifies two things:
 
-- Whether and how white space is [collapsed](/en-US/docs/Web/CSS/CSS_text/Whitespace#collapsing_and_transformation).
+- Whether and how white space is [collapsed](/en-US/docs/Web/CSS/Guides/Text/Whitespace#collapsing_and_transformation).
 - Whether and how lines wrap.
 
 > [!NOTE]
@@ -111,13 +112,13 @@ white-space: unset;
 The `white-space` property values can be specified as one or two keywords representing the values for the {{CSSxRef("white-space-collapse")}} and {{cssxref("text-wrap-mode")}} properties, or the following special keywords:
 
 - `normal`
-  - : Sequences of white space are [collapsed](/en-US/docs/Web/CSS/CSS_text/Whitespace#collapsing_and_transformation). Newline characters in the source are handled the same as other white spaces. Lines are broken as necessary to fill line boxes. Equivalent to `collapse wrap`.
+  - : Sequences of white space are [collapsed](/en-US/docs/Web/CSS/Guides/Text/Whitespace#collapsing_and_transformation). Newline characters in the source are handled the same as other white spaces. Lines are broken as necessary to fill line boxes. Equivalent to `collapse wrap`.
 - `pre`
   - : Sequences of white space are preserved. Lines are only broken at newline characters in the source and at {{HTMLElement("br")}} elements. Equivalent to `preserve nowrap`.
 - `pre-wrap`
   - : Sequences of white space are preserved. Lines are broken at newline characters, at {{HTMLElement("br")}}, and as necessary to fill line boxes. Equivalent to `preserve wrap`.
 - `pre-line`
-  - : Sequences of white space are [collapsed](/en-US/docs/Web/CSS/CSS_text/Whitespace#collapsing_and_transformation). Lines are broken at newline characters, at {{HTMLElement("br")}}, and as necessary to fill line boxes. Equivalent to `preserve-breaks wrap`.
+  - : Sequences of white space are [collapsed](/en-US/docs/Web/CSS/Guides/Text/Whitespace#collapsing_and_transformation). Lines are broken at newline characters, at {{HTMLElement("br")}}, and as necessary to fill line boxes. Equivalent to `preserve-breaks wrap`.
 
 > [!NOTE]
 > The `white-space` property as a shorthand is a relatively new feature (see [browser compatibility](#browser_compatibility)). Originally, it had six keyword values; now, the value `nowrap` is instead interpreted as a value for {{cssxref("text-wrap-mode")}}, while the value `break-spaces` is interpreted as a value for {{cssxref("white-space-collapse")}}. The above four keywords are still specific to `white-space`, but they have longhand equivalents. The change to make `white-space` a shorthand expands acceptable values to even more keywords and combinations, such as `wrap` and `collapse`.
@@ -171,7 +172,7 @@ The following table summarizes the behavior of these four `white-space` keyword 
   </tbody>
 </table>
 
-A tab defaults to 8 spaces and can be configured using the [`tab-size`](/en-US/docs/Web/CSS/Reference/Properties/tab-size) property. In the case of `normal`, `nowrap`, and `pre-line` values, every tab is converted to a space (U+0020) character.
+A tab defaults to 8 spaces and can be configured using the {{cssxref("tab-size")}} property. In the case of `normal`, `nowrap`, and `pre-line` values, every tab is converted to a space (U+0020) character.
 
 > [!NOTE]
 > There is a distinction made between **spaces** and **other space separators**. These are defined as follows:
@@ -277,16 +278,18 @@ select.addEventListener("change", (e) => {
 
 ```html
 <table>
-  <tr>
-    <td></td>
-    <td>Very long content that splits</td>
-    <td class="nw">Very long content that don't split</td>
-  </tr>
-  <tr>
-    <td class="nw">white-space:</td>
-    <td>normal</td>
-    <td>nowrap</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td></td>
+      <td>Very long content that splits</td>
+      <td class="nw">Very long content that don't split</td>
+    </tr>
+    <tr>
+      <td class="nw">white-space:</td>
+      <td>normal</td>
+      <td>nowrap</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -354,5 +357,5 @@ text {
 ## See also
 
 - Properties that define how words break _within themselves_: {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, {{CSSxRef("hyphens")}}
-- [`tab-size`](/en-US/docs/Web/CSS/Reference/Properties/tab-size)
-- [Handling whitespace in CSS](/en-US/docs/Web/CSS/CSS_text/Whitespace)
+- {{cssxref("tab-size")}}
+- [Handling whitespace in CSS](/en-US/docs/Web/CSS/Guides/Text/Whitespace)

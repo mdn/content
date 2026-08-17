@@ -95,13 +95,42 @@ As we learned in [Sizing items in CSS](/en-US/docs/Learn_web_development/Core/St
 
 Try adding `max-width: 100%` to the `<img>` element rule in the example above. You will see that the smaller image remains unchanged, but the larger one becomes smaller to fit into the box.
 
-### Handling image overflow with `object-fit`
+### Handling image display issues with `object-fit`
 
-You can make other choices about images inside containers. For example, you may want to size an image so it completely covers a box.
+The above example uncovers another set of issues with displaying images inside containers. You'll notice that, after you set `max-width: 100%` on the images, the second image doesn't quite fill its container; there's a gap left at the bottom. This is because giving an image a specific width causes its height to be set so that its {{glossary("aspect ratio")}} is preserved.
 
-The {{cssxref("object-fit")}} property can help you here. When using `object-fit` the replaced element can be sized to fit a box in a variety of ways.
+How can we size the image so it completely covers its container? We could set the container to have a fixed `width` _and_ `height`, and then give the image a `width` and `height` of `100%`, as shown in the next example:
 
-Below, the first example uses the value `cover`, which sizes the image down, maintaining the aspect ratio so that it neatly fills the box. As the aspect ratio is maintained, some parts of the image will be cropped by the box. The second example uses `contain` as a value: this scales the image down until it is small enough to fit inside the box. This results in "letterboxing" as it is not the same aspect ratio as the box.
+```html live-sample___object-fit1
+<div class="box">
+  <img
+    alt="balloons"
+    src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+</div>
+```
+
+```css live-sample___object-fit1
+.box {
+  border: 5px solid darkblue;
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+```
+
+{{EmbedLiveSample("object-fit1", "", "250px")}}
+
+However, the image is distorted as its aspect ratio has been changed — it looks _stretched_. To fix this, you can use the {{cssxref("object-fit")}} property, which sets how the image is resized to fit its container (the `<img>` element). The `object-fit` property can take a few different values, the most useful of which are as follows:
+
+- `cover`: The image completely fills the `<img>` element while maintaining its aspect ratio, therefore some parts of the image are not displayed.
+- `contain`: The image completely fits inside the `<img>` element while maintaining its aspect ratio, therefore some parts of the `<img>` element are not filled. This results in "letterboxing" or "pillarboxing".
+
+The next example shows the `cover` and `contain` values set on two copies of the image shown in the previous example, so you can see what their effects are:
 
 ```html live-sample___object-fit
 <div class="wrapper">
@@ -152,7 +181,13 @@ img {
 
 {{EmbedLiveSample("object-fit", "", "250px")}}
 
-You could also try the value of `fill`, which will fill the box but not maintain the aspect ratio.
+> [!NOTE]
+> Key takeaway points here are:
+>
+> 1. The `object-fit` property resizes the image itself to fit inside the `<img>` element that is embedding it onto the page
+> 2. The `<img>` needs to be resized for `object-fit` to have any effect.
+>
+> If the `<img>` element is not resized, the image will be shown at its original (or _intrinsic_) size and aspect ratio, therefore `object-fit` will have no effect.
 
 ## Replaced elements in layout
 

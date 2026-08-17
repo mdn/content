@@ -118,9 +118,9 @@ for await (using reader of asyncIterableOfSyncDisposables) {
 ```
 
 ```js
-const syncIterableOfAsyncDisposables = fs
-  .globSync("*.txt")
-  .map((path) => fs.open(path, "r"));
+const syncIterableOfAsyncDisposables = await Promise.all(
+  fs.globSync("*.txt").map((path) => fs.open(path, "r")),
+);
 for (await using file of syncIterableOfAsyncDisposables) {
   console.log(await file.read());
 }

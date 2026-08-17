@@ -1,5 +1,6 @@
 ---
-title: overscroll-behavior-x
+title: "`overscroll-behavior-x` CSS property"
+short-title: overscroll-behavior-x
 slug: Web/CSS/Reference/Properties/overscroll-behavior-x
 page-type: css-property
 browser-compat: css.properties.overscroll-behavior-x
@@ -26,9 +27,9 @@ overscroll-behavior-x: revert-layer;
 overscroll-behavior-x: unset;
 ```
 
-The `overscroll-behavior-x` property is specified as a keyword chosen from the list of values below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : The default scroll overflow behavior occurs as normal.
@@ -79,4 +80,4 @@ main > div {
 - {{cssxref("overscroll-behavior-y")}}
 - {{cssxref("overscroll-behavior-inline")}}
 - {{cssxref("overscroll-behavior-block")}}
-- [CSS overscroll behavior](/en-US/docs/Web/CSS/CSS_overscroll_behavior) module
+- [CSS overscroll behavior](/en-US/docs/Web/CSS/Guides/Overscroll_behavior) module

@@ -1,12 +1,13 @@
 ---
-title: scroll-padding-inline
+title: "`scroll-padding-inline` CSS property"
+short-title: scroll-padding-inline
 slug: Web/CSS/Reference/Properties/scroll-padding-inline
 page-type: css-shorthand-property
 browser-compat: css.properties.scroll-padding-inline
 sidebar: cssref
 ---
 
-The `scroll-padding-inline` [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets the scroll padding of an element in the inline dimension.
+The `scroll-padding-inline` [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) sets the scroll padding of an element in the inline dimension.
 
 {{InteractiveExample("CSS Demo: scroll-padding-inline")}}
 
@@ -79,8 +80,8 @@ The scroll-padding properties define offsets for the _optimal viewing region_ of
 
 This property is a shorthand for the following CSS properties:
 
-- [`scroll-padding-inline-end`](/en-US/docs/Web/CSS/Reference/Properties/scroll-padding-inline-end)
-- [`scroll-padding-inline-start`](/en-US/docs/Web/CSS/Reference/Properties/scroll-padding-inline-start)
+- {{cssxref("scroll-padding-inline-end")}}
+- {{cssxref("scroll-padding-inline-start")}}
 
 ## Syntax
 
@@ -126,5 +127,5 @@ scroll-padding-inline: unset;
 
 ## See also
 
-- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
-- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)
+- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) module
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap) on web.dev (2018)

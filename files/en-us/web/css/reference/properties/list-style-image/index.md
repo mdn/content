@@ -1,5 +1,6 @@
 ---
-title: list-style-image
+title: "`list-style-image` CSS property"
+short-title: list-style-image
 slug: Web/CSS/Reference/Properties/list-style-image
 page-type: css-property
 browser-compat: css.properties.list-style-image
@@ -96,7 +97,9 @@ list-style-image: unset;
 
 ### Values
 
-- {{cssxref("&lt;image&gt;")}}
+This property is specified as a single value from the following list:
+
+- {{cssxref("image")}}
   - : A valid image to use as the marker.
 - `none`
   - : Specifies that no image is used as the marker. If this value is set, the marker defined in {{ Cssxref("list-style-type") }} will be used instead. This is the default value for {{cssxref("list-style")}}.
@@ -138,7 +141,7 @@ ul {
 
 ### Using a gradient
 
-This example has a [CSS gradient](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients) as a marker, which we create uses the {{cssxref("gradient/linear-gradient", "linear-gradient()")}} image function.
+This example has a [CSS gradient](/en-US/docs/Web/CSS/Guides/Images/Using_gradients) as a marker, which we create uses the {{cssxref("gradient/linear-gradient", "linear-gradient()")}} image function.
 
 #### HTML
 
@@ -176,5 +179,5 @@ ul {
 - {{Cssxref("list-style-type")}} property
 - {{Cssxref("list-style-position")}} property
 - {{cssxref("::marker")}} pseudo-element
-- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
-- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module
+- [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module

@@ -1,5 +1,6 @@
 ---
-title: mask-mode
+title: "`mask-mode` CSS property"
+short-title: mask-mode
 slug: Web/CSS/Reference/Properties/mask-mode
 page-type: css-property
 browser-compat: css.properties.mask-mode
@@ -44,8 +45,8 @@ The `mask-mode` property can take multiple comma-separated `<masking-mode>` keyw
 
 ## Description
 
-A mask transfers its transparency, and depending on the mask type, it's luminance, to the element it is masking.
-If the mask is of type {{cssxref("&lt;image&gt;")}}, by default the alpha values of the mask image determine the visibility of each part of the masked element: where the mask is opaque, the corresponding part of the masked element is visible; where the mask is translucent, the element is as well, with those areas of the element being hidden. This is the default behavior for `<image>` masks when the `mask-mode` property is set to or defaults to `match-source`, and it is always the case when the `mask-mode` is explicitly set to `alpha`.
+A mask transfers its transparency, and depending on the mask type, its luminance, to the element it is masking.
+If the mask is of type {{cssxref("image")}}, by default the alpha values of the mask image determine the visibility of each part of the masked element: where the mask is opaque, the corresponding part of the masked element is visible; where the mask is translucent, the element is as well, with those areas of the element being hidden. This is the default behavior for `<image>` masks when the `mask-mode` property is set to or defaults to `match-source`, and it is always the case when the `mask-mode` is explicitly set to `alpha`.
 
 ### Understanding luminance
 
@@ -144,7 +145,7 @@ Because the mask source is an `<image>` and not an SVG `<mask>`, the `match-sour
 - {{cssxref("mask-type")}}
 - {{cssxref("mask-image")}}
 - {{cssxref("mask")}} shorthand
-- [Introduction to CSS masking](/en-US/docs/Web/CSS/CSS_masking/Masking)
-- [CSS `mask` properties](/en-US/docs/Web/CSS/CSS_masking/Mask_properties)
-- [Declaring multiple masks](/en-US/docs/Web/CSS/CSS_masking/Multiple_masks)
-- [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
+- [Introduction to CSS masking](/en-US/docs/Web/CSS/Guides/Masking/Introduction)
+- [CSS `mask` properties](/en-US/docs/Web/CSS/Guides/Masking/Mask_properties)
+- [Declaring multiple masks](/en-US/docs/Web/CSS/Guides/Masking/Multiple_masks)
+- [CSS masking](/en-US/docs/Web/CSS/Guides/Masking) module

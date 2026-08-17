@@ -1,5 +1,6 @@
 ---
-title: transform-box
+title: "`transform-box` CSS property"
+short-title: transform-box
 slug: Web/CSS/Reference/Properties/transform-box
 page-type: css-property
 browser-compat: css.properties.transform-box
@@ -110,7 +111,7 @@ svg {
 
 ## See also
 
-- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms/Using)
 - {{cssxref("transform")}}, {{cssxref("transform-origin")}}
 - Individual transform properties:
   - {{cssxref("translate")}}

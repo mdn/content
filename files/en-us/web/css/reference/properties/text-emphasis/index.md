@@ -1,12 +1,13 @@
 ---
-title: text-emphasis
+title: "`text-emphasis` CSS property"
+short-title: text-emphasis
 slug: Web/CSS/Reference/Properties/text-emphasis
 page-type: css-shorthand-property
 browser-compat: css.properties.text-emphasis
 sidebar: cssref
 ---
 
-The **`text-emphasis`** [CSS](/en-US/docs/Web/CSS) property applies emphasis marks to text (except spaces and control characters). It is a [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) for {{cssxref("text-emphasis-style")}} and {{cssxref("text-emphasis-color")}}.
+The **`text-emphasis`** [CSS](/en-US/docs/Web/CSS) property applies emphasis marks to text (except spaces and control characters). It is a [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) for {{cssxref("text-emphasis-style")}} and {{cssxref("text-emphasis-color")}}.
 
 {{InteractiveExample("CSS Demo: text-emphasis")}}
 
@@ -53,8 +54,8 @@ The size of the emphasis symbol, like ruby symbols, is about 50% of the size of 
 
 This property is a shorthand for the following CSS properties:
 
-- [`text-emphasis-color`](/en-US/docs/Web/CSS/Reference/Properties/text-emphasis-color)
-- [`text-emphasis-style`](/en-US/docs/Web/CSS/Reference/Properties/text-emphasis-style)
+- {{cssxref("text-emphasis-color")}}
+- {{cssxref("text-emphasis-style")}}
 
 ## Syntax
 

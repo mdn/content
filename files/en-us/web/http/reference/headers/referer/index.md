@@ -25,7 +25,7 @@ The `Referer` should also be sent in requests following a {{httpheader("Refresh"
 
 > [!WARNING]
 > This header may have undesirable consequences for user security and privacy.
-> See [Referer header: privacy and security concerns](/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) for more information and mitigation hints.
+> See [Referer header: privacy and security concerns](/en-US/docs/Web/Privacy/Guides/Referer_header:_privacy_and_security_concerns) for more information and mitigation hints.
 
 <table class="properties">
   <tbody>
@@ -72,7 +72,7 @@ Referer: https://example.com/
 ## See also
 
 - {{HTTPHeader("Referrer-Policy")}}
-- [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
+- [Same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy)
 - [Fetch](/en-US/docs/Web/API/Fetch_API): {{domxref("Request.referrerPolicy")}}
 - [Tighter Control Over Your Referrers – Mozilla Security Blog](https://blog.mozilla.org/security/2015/01/21/meta-referrer/)
 - [HTTP referer on Wikipedia](https://en.wikipedia.org/wiki/HTTP_referer)

@@ -8,7 +8,7 @@ browser-compat: api.SVGElement.nonce
 
 {{APIRef("SVG")}}
 
-The **`nonce`** property of the {{DOMxRef("SVGElement")}} interface returns the nonce that is used by [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) to determine whether a given fetch will be allowed to proceed.
+The **`nonce`** property of the {{DOMxRef("SVGElement")}} interface returns the {{Glossary("Nonce", "nonce")}} that is used by [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) to determine whether a given fetch will be allowed to proceed.
 
 ## Value
 

@@ -20,13 +20,13 @@ Transient activation expires after a timeout (if not renewed by further interact
 
 Transient activation is commonly used as a mechanism for ensuring that a web API can only function if triggered by user interaction.
 For example, scripts cannot arbitrarily launch a popup that requires _transient activation_ ⁠— it must be triggered from a UI element's event handler.
-See [Features gated by user activation](/en-US/docs/Web/Security/User_activation) for information about APIs that require _transient activation_.
+See [Features gated by user activation](/en-US/docs/Web/Security/Defenses/User_activation) for information about APIs that require _transient activation_.
 
 The {{domxref("UserActivation.isActive")}} property can be used to programmatically check the current window's transient activation state.
 
 ## See also
 
-- [Comparison between transient and sticky activation](/en-US/docs/Web/Security/User_activation#comparison_between_transient_and_sticky_activation) in _Features gated by user activation_
+- [Comparison between transient and sticky activation](/en-US/docs/Web/Security/Defenses/User_activation#comparison_between_transient_and_sticky_activation) in _Features gated by user activation_
 - Related glossary terms:
   - {{Glossary("Sticky activation")}}
 - {{domxref("UserActivation.isActive")}}

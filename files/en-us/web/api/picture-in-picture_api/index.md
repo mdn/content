@@ -12,6 +12,11 @@ The **Picture-in-Picture API** allow websites to create a floating, always-on-to
 > [!NOTE]
 > The [Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Picture-in-Picture_API) extends the Picture-in-Picture API to allow the always-on-top window to be populated with _any_ arbitrary HTML content, not just a video.
 
+> [!NOTE]
+> You can run code when the always-on-top window is programmatically opened, using the {{domxref("HTMLVideoElement.enterpictureinpicture_event", "enterpictureinpicture")}} event. However, this event isn't fired when the browser itself (rather than your code) triggers moving content into the always-on-top window. This can occur, for example, due to the content being occluded, by the displayed tab being switched, or by the user selecting a "picture-in-picture" option from a video's context menu or the browser chrome.
+>
+> To run code in response to such actions, set up a media session action handler using {{domxref("MediaSession.setActionHandler()")}} with a `type` of `enterpictureinpicture`.
+
 ## Interfaces
 
 - {{DOMxRef("PictureInPictureWindow")}}
@@ -69,7 +74,7 @@ If media action handlers have been set via the [Media Session API](/en-US/docs/W
 
 ## Controlling styling
 
-The [`:picture-in-picture`](/en-US/docs/Web/CSS/:picture-in-picture) [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches the video element currently in picture-in-picture mode, allowing you to configure your stylesheets to automatically adjust the size, style, or layout of content when a video switches back and forth between picture-in-picture and traditional presentation modes.
+The {{cssxref(":picture-in-picture")}} [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) matches the video element currently in picture-in-picture mode, allowing you to configure your stylesheets to automatically adjust the size, style, or layout of content when a video switches back and forth between picture-in-picture and traditional presentation modes.
 
 ## Controlling access
 

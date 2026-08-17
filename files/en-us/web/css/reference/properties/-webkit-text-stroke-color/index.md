@@ -1,12 +1,13 @@
 ---
-title: -webkit-text-stroke-color
+title: "`-webkit-text-stroke-color` CSS property"
+short-title: -webkit-text-stroke-color
 slug: Web/CSS/Reference/Properties/-webkit-text-stroke-color
 page-type: css-property
 browser-compat: css.properties.-webkit-text-stroke-color
 sidebar: cssref
 ---
 
-The **`-webkit-text-stroke-color`** [CSS](/en-US/docs/Web/CSS) property specifies the stroke [color](/en-US/docs/Web/CSS/color_value) of characters of text. If this property is not set, the value of the {{cssxref("color")}} property is used.
+The **`-webkit-text-stroke-color`** [CSS](/en-US/docs/Web/CSS) property specifies the stroke [color](/en-US/docs/Web/CSS/Reference/Values/color_value) of characters of text. If this property is not set, the value of the {{cssxref("color")}} property is used.
 
 ## Syntax
 
@@ -25,6 +26,8 @@ The **`-webkit-text-stroke-color`** [CSS](/en-US/docs/Web/CSS) property specifie
 ```
 
 ### Values
+
+This property is specified as one `<color>` value:
 
 - `<color>`
   - : The color of the stroke.

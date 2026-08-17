@@ -11,7 +11,7 @@ browser-compat: api.XRSystem.requestSession
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **{{domxref("XRSystem")}}** interface's
-**`requestSession()`** method returns a {{jsxref("promise")}}
+**`requestSession()`** method returns a {{jsxref("Promise")}}
 which resolves to an {{domxref("XRSession")}} object through which you can manage the
 requested type of WebXR session.
 
@@ -119,7 +119,7 @@ Several session features and the various reference spaces have minimum security 
 | `unbounded`     | Always required                     | `xr-spatial-tracking`          |
 | `viewer`        | Always required                     | —                              |
 
-See also [transient user activation](/en-US/docs/Web/Security/User_activation).
+See also [transient user activation](/en-US/docs/Web/Security/Defenses/User_activation).
 
 ## Examples
 

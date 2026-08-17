@@ -7,12 +7,12 @@ browser-compat: api.CompressionStream
 
 {{APIRef("Compression Streams API")}}{{AvailableInWorkers}}
 
-The **`CompressionStream`** interface of the {{domxref('Compression Streams API','','',' ')}} is an API for compressing a stream of data.
+The **`CompressionStream`** interface of the {{domxref('Compression Streams API','','',' ')}} compresses a stream of data. It implements the same shape as a {{domxref("TransformStream")}}, allowing it to be used in {{domxref("ReadableStream.pipeThrough()")}} and similar methods.
 
 ## Constructor
 
 - {{domxref("CompressionStream.CompressionStream", "CompressionStream()")}}
-  - : Creates a new `CompressionStream`
+  - : Creates a new `CompressionStream`.
 
 ## Instance properties
 
@@ -38,3 +38,8 @@ const compressedReadableStream = inputReadableStream.pipeThrough(
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("DecompressionStream")}}
+- {{domxref("TransformStream")}}

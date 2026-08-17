@@ -1,5 +1,6 @@
 ---
-title: "<center>: The Centered Text element"
+title: "`<center>` HTML centered text element"
+short-title: <center>
 slug: Web/HTML/Reference/Elements/center
 page-type: html-element
 status:

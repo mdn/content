@@ -207,7 +207,7 @@ registerPaint(
 );
 ```
 
-The three parameters of the `paint()` function include the drawing context, paint size and properties. To be able to access properties, we include the static `inputProperties()` method, which provides live access to CSS properties, including regular properties and [custom properties](/en-US/docs/Web/CSS/CSS_cascading_variables), and returns an {{jsxref("Array", "array", "", 1)}} of property names. We'll take a look at [`inputArguments`](#passing_parameters) in the last section.
+The three parameters of the `paint()` function include the drawing context, paint size and properties. To be able to access properties, we include the static `inputProperties()` method, which provides live access to CSS properties, including regular properties and [custom properties](/en-US/docs/Web/CSS/Guides/Cascading_variables), and returns an {{jsxref("Array", "array", "", 1)}} of property names. We'll take a look at [`inputArguments`](#passing_parameters) in the last section.
 
 Let's create a list of items with a background image that rotates between three different colors and three widths.
 
@@ -387,7 +387,7 @@ We can then create a little HTML that will accept this image as backgrounds:
 <h6 class="fancy">Smallest Header</h6>
 ```
 
-We give each header a different value for the `--high-color` [custom property](/en-US/docs/Web/CSS/CSS_cascading_variables)
+We give each header a different value for the `--high-color` [custom property](/en-US/docs/Web/CSS/Guides/Cascading_variables)
 
 ```css
 .fancy {

@@ -1,5 +1,6 @@
 ---
-title: grid-row-start
+title: "`grid-row-start` CSS property"
+short-title: grid-row-start
 slug: Web/CSS/Reference/Properties/grid-row-start
 page-type: css-property
 browser-compat: css.properties.grid-row-start
@@ -212,5 +213,5 @@ This property is specified as a single `<grid-line>` value. A `<grid-line>` valu
 - {{cssxref("grid-column-start")}}
 - {{cssxref("grid-column-end")}}
 - {{cssxref("grid-column")}}
-- [Line-based placement with CSS grid](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- [Line-based placement with CSS grid](/en-US/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
 - Video: [Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)

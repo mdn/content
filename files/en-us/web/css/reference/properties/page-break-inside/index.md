@@ -1,5 +1,6 @@
 ---
-title: page-break-inside
+title: "`page-break-inside` CSS property"
+short-title: page-break-inside
 slug: Web/CSS/Reference/Properties/page-break-inside
 page-type: css-property
 status:
@@ -85,6 +86,8 @@ page-break-inside: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : Initial value. Automatic page breaks (neither forced nor forbidden).

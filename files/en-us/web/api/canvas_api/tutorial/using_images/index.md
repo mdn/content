@@ -135,12 +135,12 @@ Once we have a reference to our source image object we can use the `drawImage()`
 In the following example, we will use an external image as the backdrop for a small line graph. Using backdrops can make your script considerably smaller because we can avoid the need for code to generate the background. In this example, we're only using one image, so I use the image object's `load` event handler to execute the drawing statements. The `drawImage()` method places the backdrop at the coordinate (0, 0), which is the top-left corner of the canvas.
 
 ```html hidden
-<canvas id="canvas" width="180" height="150"></canvas>
+<canvas id="my-canvas" width="180" height="150"></canvas>
 ```
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
   const img = new Image();
   img.onload = () => {
     ctx.drawImage(img, 0, 0);
@@ -176,12 +176,12 @@ In this example, we'll use an image as a wallpaper and repeat it several times o
 > Images can become blurry when scaling up or grainy if they're scaled down too much. Scaling is probably best not done if you've got some text in it which needs to remain legible.
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="my-canvas" width="150" height="150"></canvas>
 ```
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
   const img = new Image();
   img.onload = () => {
     for (let i = 0; i < 4; i++) {
@@ -290,18 +290,20 @@ We loop through the {{domxref("document.images")}} container and add new canvas 
 
 ```html
 <table>
-  <tr>
-    <td><img src="gallery_1.jpg" /></td>
-    <td><img src="gallery_2.jpg" /></td>
-    <td><img src="gallery_3.jpg" /></td>
-    <td><img src="gallery_4.jpg" /></td>
-  </tr>
-  <tr>
-    <td><img src="gallery_5.jpg" /></td>
-    <td><img src="gallery_6.jpg" /></td>
-    <td><img src="gallery_7.jpg" /></td>
-    <td><img src="gallery_8.jpg" /></td>
-  </tr>
+  <tbody>
+    <tr>
+      <td><img src="gallery_1.jpg" /></td>
+      <td><img src="gallery_2.jpg" /></td>
+      <td><img src="gallery_3.jpg" /></td>
+      <td><img src="gallery_4.jpg" /></td>
+    </tr>
+    <tr>
+      <td><img src="gallery_5.jpg" /></td>
+      <td><img src="gallery_6.jpg" /></td>
+      <td><img src="gallery_7.jpg" /></td>
+      <td><img src="gallery_8.jpg" /></td>
+    </tr>
+  </tbody>
 </table>
 <img id="frame" src="canvas_picture_frame.png" width="132" height="150" />
 ```

@@ -43,10 +43,10 @@ Here, the contents of `data.className` or `data.color` could contain HTML that c
 
 ### jQuery
 
-When using jQuery, functions such as `attr()` and `text()` escape content as it's added to a DOM. So, the "favorite color" example from above, implemented in jQuery, would look like this:
+When using jQuery, functions such as `attr()` and `text()` avoid treating any character as HTML syntax. So, the "favorite color" example from above, implemented in jQuery, would look like this:
 
 ```js example-good
-let node = $("</div>");
+let node = $("<div>");
 node.addClass(data.className);
 node.text(`Your favorite color is now ${data.color}`);
 ```
@@ -78,11 +78,11 @@ let cleanHTML = DOMPurify.sanitize(externalHTML);
 elem.innerHTML = cleanHTML;
 ```
 
-You can use any method to add the sanitized HTML to your DOM, for example jQuery's `.html()` function. Remember though that the `SAFE_FOR_JQUERY` flag needs to be used in this case:
+You can use any method to add the sanitized HTML to your DOM, for example jQuery's `.html()` function:
 
 ```js
 let elem = $("<div/>");
-let cleanHTML = DOMPurify.sanitize(externalHTML, { SAFE_FOR_JQUERY: true });
+let cleanHTML = DOMPurify.sanitize(externalHTML);
 elem.html(cleanHTML);
 ```
 

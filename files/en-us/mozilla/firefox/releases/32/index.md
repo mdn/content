@@ -8,7 +8,7 @@ sidebar: firefox
 
 Firefox 32 was released on September 2, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer Tools
 
@@ -51,7 +51,7 @@ Highlights:
 - The {{domxref("KeyboardEvent.getModifierState()")}} and {{domxref("MouseEvent.getModifierState()")}} methods have been extended to support the `Accel` virtual modifier ([Firefox bug 1009388](https://bugzil.la/1009388)).
 - The {{domxref("KeyboardEvent.code")}} property have been experimentally implemented: it is disabled on release build ([Firefox bug 865649](https://bugzil.la/865649)).
 - Scoped selectors for {{domxref("Document.querySelector()")}} and {{domxref("Document.querySelectorAll()")}}, for example `querySelector(":scope > li")` have been implemented ([Firefox bug 528456](https://bugzil.la/528456)).
-- The experimental implementation of the {{domxref("Document.timeline")}} interface, related to the [Web Animation API](https://drafts.fxtf.org/web-animations/), has been added ([Firefox bug 998246](https://bugzil.la/998246)). It is controlled by `layout.web-animations.api.enabled` preference, enabled only on Nightly and Aurora for the moment.
+- The experimental implementation of the {{domxref("Document.timeline")}} interface, related to the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API), has been added ([Firefox bug 998246](https://bugzil.la/998246)). It is controlled by `layout.web-animations.api.enabled` preference, enabled only on Nightly and Aurora for the moment.
 - The [Data Store API](https://web.archive.org/web/20210613234447/https://developer.mozilla.org/en-US/docs/Archive/B2G_OS/API/Data_Store_API) has been made available to [Web Workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers) ([Firefox bug 949325](https://bugzil.la/949325)). It still is only activated for certified applications.
 - The [ServiceWorker](/en-US/docs/Web/API/Service_Worker_API) `InstallPhaseEvent` and {{domxref("InstallEvent")}} interfaces have been implemented ([Firefox bug 967264](https://bugzil.la/967264)).
 - The MSISDN Verification API, only activated for privileged apps, has been added ([Firefox bug 988469](https://bugzil.la/988469)).

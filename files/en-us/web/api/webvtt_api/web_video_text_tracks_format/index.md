@@ -623,4 +623,4 @@ Transcribed by Célestes™
 
 ## See also
 
-- The CSS [`::cue` and `::cue()`](/en-US/docs/Web/CSS/::cue) pseudo-elements
+- The CSS [`::cue` and `::cue()`](/en-US/docs/Web/CSS/Reference/Selectors/::cue) pseudo-elements

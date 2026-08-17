@@ -1,5 +1,6 @@
 ---
-title: border-inline-start-style
+title: "`border-inline-start-style` CSS property"
+short-title: border-inline-start-style
 slug: Web/CSS/Reference/Properties/border-inline-start-style
 page-type: css-property
 browser-compat: css.properties.border-inline-start-style
@@ -49,7 +50,7 @@ direction: rtl;
 ## Syntax
 
 ```css
-/* <'border-style'> values */
+/* Keyword values */
 border-inline-start-style: dashed;
 border-inline-start-style: dotted;
 border-inline-start-style: groove;
@@ -66,7 +67,7 @@ Related properties are {{cssxref("border-block-start-style")}}, {{cssxref("borde
 
 ### Values
 
-- `<'border-style'>`
+- {{cssxref("&lt;line-style&gt;")}}
   - : The line style of the border. See {{ cssxref("border-style") }}.
 
 ## Formal definition
@@ -115,6 +116,6 @@ div {
 
 ## See also
 
-- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values)
 - This property maps to one of the physical border properties: {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, or {{cssxref("border-left-style")}}.
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

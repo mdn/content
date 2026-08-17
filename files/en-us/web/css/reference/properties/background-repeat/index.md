@@ -1,5 +1,6 @@
 ---
-title: background-repeat
+title: "`background-repeat` CSS property"
+short-title: background-repeat
 slug: Web/CSS/Reference/Properties/background-repeat
 page-type: css-property
 browser-compat: css.properties.background-repeat
@@ -48,6 +49,13 @@ background-repeat: space repeat;
   min-height: 100%;
 }
 ```
+
+## Constituent properties
+
+This property is a shorthand for the following CSS properties:
+
+- {{cssxref("background-repeat-x")}}
+- {{cssxref("background-repeat-y")}}
 
 ## Syntax
 
@@ -229,6 +237,6 @@ In this example, each list item is matched with a different value of `background
 ## See also
 
 - The other {{cssxref("background")}} shorthand components: {{cssxref("background-attachment")}}, {{cssxref("background-clip")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-origin")}}, {{cssxref("background-position")}} ({{cssxref("background-position-x")}} and {{cssxref("background-position-y")}}), and {{cssxref("background-size")}}
-- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
-- [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds) module
-- [Understanding aspect ratios](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
+- [Using multiple backgrounds](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
+- [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module
+- [Understanding aspect ratios](/en-US/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)

@@ -114,7 +114,7 @@ This topic provides an index to the main _sorts_ of events you might be interest
       <td>
         <p>
           Events related to
-          <a href="/en-US/docs/Web/CSS/CSS_transitions">CSS Transitions</a>.
+          <a href="/en-US/docs/Web/CSS/Guides/Transitions">CSS Transitions</a>.
         </p>
         <p>
           Provides notification events when CSS transitions start, stop, are

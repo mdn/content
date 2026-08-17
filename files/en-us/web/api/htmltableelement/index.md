@@ -83,10 +83,12 @@ To add a row and some cells to an existing table:
 
 ```html
 <table id="table0">
-  <tr>
-    <td>Row 0 Cell 0</td>
-    <td>Row 0 Cell 1</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td>Row 0 Cell 0</td>
+      <td>Row 0 Cell 1</td>
+    </tr>
+  </tbody>
 </table>
 ```
 

@@ -1,5 +1,5 @@
 ---
-title: HTML nonce global attribute
+title: "`nonce` HTML global attribute"
 short-title: nonce
 slug: Web/HTML/Reference/Global_attributes/nonce
 page-type: html-attribute
@@ -8,7 +8,7 @@ sidebar: htmlsidebar
 ---
 
 The **`nonce`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes)
-is a content attribute defining a cryptographic nonce ("number used once") which can be used by
+is a content attribute defining a cryptographic {{Glossary("Nonce", "nonce")}} ("number used once") which can be used by
 [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) to determine whether or not a given fetch will
 be allowed to proceed for a given element.
 

@@ -188,34 +188,36 @@ MathML contains an [operator dictionary](https://w3c.github.io/mathml-core/#oper
 
 ```html
 <table>
-  <tr>
-    <td>Prefix plus</td>
-    <td>
-      <math>
-        <mo>+</mo>
-        <mi>i</mi>
-      </math>
-    </td>
-  </tr>
-  <tr>
-    <td>Infix plus</td>
-    <td>
-      <math>
-        <mi>j</mi>
-        <mo>+</mo>
-        <mi>i</mi>
-      </math>
-    </td>
-  </tr>
-  <tr>
-    <td>Prefix sum</td>
-    <td>
-      <math>
-        <mo>∑</mo>
-        <mi>i</mi>
-      </math>
-    </td>
-  </tr>
+  <tbody>
+    <tr>
+      <td>Prefix plus</td>
+      <td>
+        <math>
+          <mo>+</mo>
+          <mi>i</mi>
+        </math>
+      </td>
+    </tr>
+    <tr>
+      <td>Infix plus</td>
+      <td>
+        <math>
+          <mi>j</mi>
+          <mo>+</mo>
+          <mi>i</mi>
+        </math>
+      </td>
+    </tr>
+    <tr>
+      <td>Prefix sum</td>
+      <td>
+        <math>
+          <mo>∑</mo>
+          <mi>i</mi>
+        </math>
+      </td>
+    </tr>
+  </tbody>
 </table>
 ```
 

@@ -35,7 +35,7 @@ The `Crypto` is available in windows using the {{domxref("Window.crypto")}} prop
 ## See also
 
 - [Web security](/en-US/docs/Web/Security)
-- [Secure contexts](/en-US/docs/Web/Security/Secure_Contexts)
-- [Features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
-- [Transport Layer Security](/en-US/docs/Web/Security/Transport_Layer_Security)
+- [Secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts)
+- [Features restricted to secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts)
+- [Transport Layer Security](/en-US/docs/Web/Security/Defenses/Transport_Layer_Security)
 - [Strict-Transport-Security](/en-US/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)

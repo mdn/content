@@ -1,5 +1,6 @@
 ---
-title: mask-border-outset
+title: "`mask-border-outset` CSS property"
+short-title: mask-border-outset
 slug: Web/CSS/Reference/Properties/mask-border-outset
 page-type: css-property
 browser-compat: css.properties.mask-border-outset
@@ -73,7 +74,7 @@ Chromium-based browsers support an outdated version of this property — `mask-b
 ```
 
 > [!NOTE]
-> The [`mask-border`](/en-US/docs/Web/CSS/Reference/Properties/mask-border) page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.
+> The {{cssxref("mask-border")}} page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.
 
 ## Specifications
 

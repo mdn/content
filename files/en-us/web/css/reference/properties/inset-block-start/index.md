@@ -1,5 +1,6 @@
 ---
-title: inset-block-start
+title: "`inset-block-start` CSS property"
+short-title: inset-block-start
 slug: Web/CSS/Reference/Properties/inset-block-start
 page-type: css-property
 browser-compat: css.properties.inset-block-start
@@ -90,7 +91,7 @@ inset-block-start: unset;
 
 ### Values
 
-The `inset-block-start` property takes the same values as the {{cssxref("left")}} property.
+The `inset-block-start` property takes the same values as the {{cssxref("top")}} property.
 
 ## Formal definition
 
@@ -143,6 +144,6 @@ div {
 
 ## See also
 
-- The properties which defines other insets: {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}}
+- The properties that define other insets: {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, and {{cssxref("inset-inline-end")}}
 - The mapped physical properties: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

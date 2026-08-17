@@ -1,12 +1,13 @@
 ---
-title: list-style
+title: "`list-style` CSS property"
+short-title: list-style
 slug: Web/CSS/Reference/Properties/list-style
 page-type: css-shorthand-property
 browser-compat: css.properties.list-style
 sidebar: cssref
 ---
 
-The **`list-style`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) allows you to set all the list style properties at once.
+The **`list-style`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) allows you to set all the list style properties at once.
 
 {{InteractiveExample("CSS Demo: list-style")}}
 
@@ -91,9 +92,9 @@ The values of this property are applied to list items, including {{HTMLElement("
 
 This property is a shorthand for the following CSS properties:
 
-- [`list-style-image`](/en-US/docs/Web/CSS/Reference/Properties/list-style-image)
-- [`list-style-position`](/en-US/docs/Web/CSS/Reference/Properties/list-style-position)
-- [`list-style-type`](/en-US/docs/Web/CSS/Reference/Properties/list-style-type)
+- {{cssxref("list-style-image")}}
+- {{cssxref("list-style-position")}}
+- {{cssxref("list-style-type")}}
 
 ## Syntax
 
@@ -229,5 +230,5 @@ List 2
 
 - Component properties: {{Cssxref("list-style-type")}}, {{Cssxref("list-style-image")}}, and {{Cssxref("list-style-position")}}
 - {{Cssxref("::marker")}} pseudo-element
-- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
-- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module
+- [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module

@@ -1,5 +1,6 @@
 ---
-title: font-variant-position
+title: "`font-variant-position` CSS property"
+short-title: font-variant-position
 slug: Web/CSS/Reference/Properties/font-variant-position
 page-type: css-property
 browser-compat: css.properties.font-variant-position
@@ -30,9 +31,9 @@ font-variant-position: revert-layer;
 font-variant-position: unset;
 ```
 
-The `font-variant-position` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `normal`
   - : Deactivates alternate superscript and subscript glyphs.
@@ -95,10 +96,10 @@ p {
 
 ## See also
 
-- [`font-variant`](/en-US/docs/Web/CSS/Reference/Properties/font-variant)
-- [`font-variant-alternates`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-alternates)
-- [`font-variant-caps`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-caps)
-- [`font-variant-east-asian`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-east-asian)
-- [`font-variant-emoji`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-emoji)
-- [`font-variant-ligatures`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-ligatures)
-- [`font-variant-numeric`](/en-US/docs/Web/CSS/Reference/Properties/font-variant-numeric)
+- {{cssxref("font-variant")}}
+- {{cssxref("font-variant-alternates")}}
+- {{cssxref("font-variant-caps")}}
+- {{cssxref("font-variant-east-asian")}}
+- {{cssxref("font-variant-emoji")}}
+- {{cssxref("font-variant-ligatures")}}
+- {{cssxref("font-variant-numeric")}}

@@ -1,5 +1,6 @@
 ---
-title: backface-visibility
+title: "`backface-visibility` CSS property"
+short-title: backface-visibility
 slug: Web/CSS/Reference/Properties/backface-visibility
 page-type: css-property
 browser-compat: css.properties.backface-visibility
@@ -7,6 +8,8 @@ sidebar: cssref
 ---
 
 The **`backface-visibility`** [CSS](/en-US/docs/Web/CSS) property sets whether the back face of an element is visible when turned towards the user.
+
+An element's back face is a mirror image of its front face. Though invisible in 2D, the back face can become visible when a transformation causes the element to be rotated in 3D space. (This property has no effect on 2D transforms, which have no perspective.)
 
 {{InteractiveExample("CSS Demo: backface-visibility")}}
 
@@ -76,8 +79,6 @@ backface-visibility: hidden;
 }
 ```
 
-An element's back face is a mirror image of its front face. Though invisible in 2D, the back face can become visible when a transformation causes the element to be rotated in 3D space. (This property has no effect on 2D transforms, which have no perspective.)
-
 ## Syntax
 
 ```css
@@ -93,9 +94,9 @@ backface-visibility: revert-layer;
 backface-visibility: unset;
 ```
 
-The `backface-visibility` property is specified as one of the keywords listed below.
-
 ### Values
+
+This property is specified as one of the following keywords:
 
 - `visible`
   - : The back face is visible when turned towards the user.
@@ -120,41 +121,45 @@ This example shows a cube with transparent faces, and one with opaque faces.
 
 ```html
 <table>
-  <tr>
-    <th><code>backface-visibility: visible;</code></th>
-    <th><code>backface-visibility: hidden;</code></th>
-  </tr>
-  <tr>
-    <td>
-      <div class="container">
-        <div class="cube show-bf">
-          <div class="face front">1</div>
-          <div class="face back">2</div>
-          <div class="face right">3</div>
-          <div class="face left">4</div>
-          <div class="face top">5</div>
-          <div class="face bottom">6</div>
+  <thead>
+    <tr>
+      <th><code>backface-visibility: visible;</code></th>
+      <th><code>backface-visibility: hidden;</code></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <div class="container">
+          <div class="cube show-bf">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
         </div>
-      </div>
-      <p>
-        Since all faces are partially transparent, the back faces (2, 4, 5) are
-        visible through the front faces (1, 3, 6).
-      </p>
-    </td>
-    <td>
-      <div class="container">
-        <div class="cube hide-bf">
-          <div class="face front">1</div>
-          <div class="face back">2</div>
-          <div class="face right">3</div>
-          <div class="face left">4</div>
-          <div class="face top">5</div>
-          <div class="face bottom">6</div>
+        <p>
+          Since all faces are partially transparent, the back faces (2, 4, 5)
+          are visible through the front faces (1, 3, 6).
+        </p>
+      </td>
+      <td>
+        <div class="container">
+          <div class="cube hide-bf">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
         </div>
-      </div>
-      <p>The three back faces (2, 4, 5) are hidden.</p>
-    </td>
-  </tr>
+        <p>The three back faces (2, 4, 5) are hidden.</p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -258,4 +263,4 @@ td {
 
 ## See also
 
-- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms/Using)

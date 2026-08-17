@@ -4,11 +4,12 @@ short-title: attributionSrc
 slug: Web/API/HTMLScriptElement/attributionSrc
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
+  - non-standard
 browser-compat: api.HTMLScriptElement.attributionSrc
 ---
 
-{{APIRef("Attribution Reporting API")}}{{securecontext_header}}{{SeeCompatTable}}
+{{APIRef("Attribution Reporting API")}}{{securecontext_header}}{{deprecated_header}}{{non-standard_header}}
 
 The **`attributionSrc`** property of the {{domxref("HTMLScriptElement")}} interface gets and sets the [`attributionsrc`](/en-US/docs/Web/HTML/Reference/Elements/script#attributionsrc) attribute on a {{htmlelement("script")}} element programmatically, reflecting the value of that attribute. `attributionsrc` specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the script resource request.
 

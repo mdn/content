@@ -1,14 +1,11 @@
 ---
-title: position-visibility
+title: "`position-visibility` CSS property"
+short-title: position-visibility
 slug: Web/CSS/Reference/Properties/position-visibility
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.position-visibility
 sidebar: cssref
 ---
-
-{{seecompattable}}
 
 The **`position-visibility`** [CSS](/en-US/docs/Web/CSS) property enables conditionally hiding an anchor-positioned element depending on, for example, whether it is overflowing its containing element or the viewport.
 
@@ -17,6 +14,7 @@ The **`position-visibility`** [CSS](/en-US/docs/Web/CSS) property enables condit
 ```css
 /* Single values */
 position-visibility: always;
+position-visibility: anchors-valid;
 position-visibility: anchors-visible;
 position-visibility: no-overflow;
 
@@ -30,24 +28,30 @@ position-visibility: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `always`
   - : The positioned element is always displayed.
+- `anchors-valid`
+  - : If the positioned element's {{cssxref("position-anchor")}} value doesn't point to a valid anchor element, the positioned element will be strongly hidden.
 - `anchors-visible`
   - : If the anchor is completely hidden, either by overflowing its containing element (or the viewport) or being covered by other elements, the positioned element will be strongly hidden.
 - `no-overflow`
   - : If the positioned element starts to overflow its containing element or the viewport, it will be strongly hidden.
 
-The specification also defines the `anchors-valid` value, which has not yet been implemented in any browser.
-
 ## Description
 
-In some situations you might not want to display an anchor-positioned element. For example, if its associated anchor has been scrolled offscreen but the anchor positioned element would otherwise still be partially or fully visible, it might be unclear what it refers to and take up space unnecessarily, so you may want to hide it altogether.
+In some situations, you might not want to display an anchor-positioned element. For example, if its associated anchor has been scrolled offscreen but the anchor-positioned element would otherwise still be partially or fully visible, it might be unclear what it refers to and take up space unnecessarily, so you may want to hide it altogether.
 
-The `position-visibility` property can be used to `always` show the anchor-positioned element, or conditionally hide it if the associated anchor element is completely hidden (`anchors-visible`) or if the anchor-positioned element itself is partially hidden (`no-overflow`).
+The `position-visibility` property can be used to `always` show the anchor-positioned element, or conditionally hide it in certain situations:
+
+- `anchors-visible`: The associated anchor element is completely hidden.
+- `anchors-valid`: The anchor-positioned element's `position-anchor` property doesn't reference a valid {{cssxref("anchor-name")}} set on an anchor element in the same document.
+- `no-overflow`: The anchor-positioned element is partially or completely hidden.
 
 When an element is hidden due to `position-visibility`, it is referred to as **strongly hidden**. This means that it will act as though it and its descendant elements have a {{cssxref("visibility")}} value of `hidden` set, regardless of what their actual visibility value is.
 
-`position-visibility` should only be used in situations in which hiding the positioned element altogether is preferred. In most cases, it makes more sense to attempt to change the placement of positioned elements when they start to overflow, to keep them on-screen and usable. This can be done with the {{cssxref("position-try-fallbacks")}} property and {{cssxref("@position-try")}} at-rule. See the [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide for more information.
+`position-visibility` should only be used in situations in which hiding the positioned element altogether is preferred. In most cases, it makes more sense to attempt to change the placement of positioned elements when they start to overflow, to keep them on-screen and usable. This can be done with the {{cssxref("position-try-fallbacks")}} property and {{cssxref("@position-try")}} at-rule. See the [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) guide for more information.
 
 ## Formal definition
 
@@ -65,7 +69,7 @@ This example enables changing the value of an anchor positioned element's `posit
 
 #### HTML
 
-We specify two {{htmlelement("div")}} elements; an anchor element with a class of `anchor` and a positioned element with a class of `infobox`.
+We specify two {{htmlelement("div")}} elements: an anchor element with a class of `anchor` and a positioned element with a class of `infobox`.
 
 ```html hidden
 <p>
@@ -235,6 +239,6 @@ Select different `position-visibility` values and then scroll the page up and do
 - {{cssxref("position-anchor")}}
 - {{cssxref("position")}}
 - {{cssxref("position-area")}}
-- [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module
-- [Using CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using) guide
-- [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding) guide
+- [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module
+- [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) guide
+- [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) guide

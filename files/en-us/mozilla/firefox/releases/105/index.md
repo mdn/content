@@ -17,7 +17,7 @@ No notable changes.
 ### CSS
 
 - Embedded content, such as SVG definitions and content in an [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe), now respects the theme preferences of the elements in which it is embedded, rather than OS or browser preferences (which may be different).
-  Specifically, embedded content now inherits the [`color-scheme`](/en-US/docs/Web/CSS/Reference/Properties/color-scheme) of the embedding element, and [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media queries in the embedded content respect this value rather than the OS/browser level theme setting ([Firefox bug 1779457](https://bugzil.la/1779457)).
+  Specifically, embedded content now inherits the [`color-scheme`](/en-US/docs/Web/CSS/Reference/Properties/color-scheme) of the embedding element, and [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) media queries in the embedded content respect this value rather than the OS/browser level theme setting ([Firefox bug 1779457](https://bugzil.la/1779457)).
 
 ### JavaScript
 

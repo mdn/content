@@ -1,5 +1,6 @@
 ---
-title: transition-duration
+title: "`transition-duration` CSS property"
+short-title: transition-duration
 slug: Web/CSS/Reference/Properties/transition-duration
 page-type: css-property
 browser-compat: css.properties.transition-duration
@@ -167,7 +168,7 @@ changeButton.addEventListener("click", change);
 
 ## See also
 
-- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [Using CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions/Using)
 - {{cssxref('transition')}}
 - {{cssxref('transition-property')}}
 - {{cssxref('transition-timing-function')}}

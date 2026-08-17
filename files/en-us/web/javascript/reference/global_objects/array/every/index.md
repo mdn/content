@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.every
 sidebar: jsref
 ---
 
-The **`every()`** method of {{jsxref("Array")}} instances returns `false` if it finds one element in the array that does not satisfy the provided testing function. Otherwise, it returns `true`.
+The **`every()`** method of {{jsxref("Array")}} instances returns `false` if it finds an element in the array that does not satisfy the provided testing function. Otherwise, it returns `true`.
 
 {{InteractiveExample("JavaScript Demo: Array.prototype.every()", "shorter")}}
 

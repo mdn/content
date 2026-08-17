@@ -3,13 +3,9 @@ title: Map.prototype.getOrInsert()
 short-title: getOrInsert()
 slug: Web/JavaScript/Reference/Global_Objects/Map/getOrInsert
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Map.getOrInsert
 sidebar: jsref
 ---
-
-{{SeeCompatTable}}
 
 The **`getOrInsert()`** method of {{jsxref("Map")}} instances returns the value corresponding to the specified key in this `Map`. If the key is not present, it inserts a new entry with the key and a given default value, and returns the inserted value.
 
@@ -62,6 +58,14 @@ map.set(key, map.get(key) ?? defaultValue);
 ```
 
 ## Examples
+
+### Multimap
+
+In a map where each key is mapped to an array of values, you can use `getOrInsert()` to ensure that the array exists for a given key before attempting to push a new value to the array.
+
+```js
+map.getOrInsert(key, []).push(value);
+```
 
 ### Applying default values
 

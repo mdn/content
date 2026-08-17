@@ -8,7 +8,7 @@ browser-compat: api.WorkerGlobalScope.location
 
 {{APIRef("Web Workers API")}}{{AvailableInWorkers("worker")}}
 
-The **`location`** read-only property of the {{domxref("WorkerGlobalScope")}} interface returns the {{domxref("WorkerLocation")}} associated with the worker. It is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.
+The read-only **`location`** property of the {{domxref("WorkerGlobalScope")}} interface returns the {{domxref("WorkerLocation")}} associated with the worker. It is a specific location object, mostly a subset of the {{domxref("Location")}} for browsing scopes, but adapted to workers.
 
 ## Value
 
@@ -53,4 +53,4 @@ You could use this location object to return more information about the document
 
 ## See also
 
-{{domxref("WorkerGlobalScope")}}
+- {{domxref("WorkerGlobalScope")}}

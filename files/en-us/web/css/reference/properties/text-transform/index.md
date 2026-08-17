@@ -1,5 +1,6 @@
 ---
-title: text-transform
+title: "`text-transform` CSS property"
+short-title: text-transform
 slug: Web/CSS/Reference/Properties/text-transform
 page-type: css-property
 browser-compat: css.properties.text-transform
@@ -97,8 +98,8 @@ text-transform: unset;
 - `capitalize`
   - : Is a keyword that converts the first _letter_ of each word to uppercase. Other characters remain unchanged (they retain their original case as written in the element's text). A letter is defined as a character that is part of Unicode's Letter or Number general categories; thus, any punctuation marks or symbols at the beginning of a word are ignored.
 
-    > [!NOTE]
-    > Authors should not expect `capitalize` to follow language-specific title casing conventions (such as skipping articles in English).
+    > [!WARNING]
+    > In many languages, it is considered incorrect to capitalize every word in a sentence, even in titles and names. If you don't know the language of the text the style will be applied to, you should avoid using `capitalize`. Furthermore, `capitalize` does not create title casing, because it does not apply language-specific rules such as skipping articles in English.
 
     > [!NOTE]
     > The `capitalize` keyword was under-specified in CSS 1 and CSS 2.1. This resulted in differences between browsers in the way the first letter was calculated (Firefox considered `-` and `_` as letters, but other browsers did not. Both WebKit and Gecko incorrectly considered letter-based symbols like `ⓐ` to be real letters.) By precisely defining the correct behavior, CSS Text Level 3 cleans this mess up. The `capitalize` line in the browser compatibility table contains the version the different engines started to support this now precisely-defined behavior.
@@ -434,14 +435,14 @@ This demonstrates how the Lithuanian letters `Ĩ` and `J́` retain their dot whe
 <p>
   Initial String
   <strong
-    >0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&()*+,-./:;<=>?@{|}~</strong
+    >0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&()*+,-./:;&lt;=&gt;?@{|}~</strong
   >
 </p>
 <p>
   text-transform: full-width
   <strong
     ><span
-      >0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&()*+,-./:;<=>?@{|}~</span
+      >0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&()*+,-./:;&lt;=&gt;?@{|}~</span
     ></strong
   >
 </p>

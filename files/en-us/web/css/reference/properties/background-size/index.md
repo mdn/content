@@ -1,5 +1,6 @@
 ---
-title: background-size
+title: "`background-size` CSS property"
+short-title: background-size
 slug: Web/CSS/Reference/Properties/background-size
 page-type: css-property
 browser-compat: css.properties.background-size
@@ -8,6 +9,8 @@ sidebar: cssref
 
 The **`background-size`** [CSS](/en-US/docs/Web/CSS) property sets the size of the element's background image.
 The image can be left to its natural size, stretched, or constrained to fit the available space.
+
+Spaces not covered by a background image are filled with the {{cssxref("background-color")}} property, and the background color will be visible behind background images that have transparency/translucency.
 
 {{InteractiveExample("CSS Demo: background-size")}}
 
@@ -45,8 +48,6 @@ background-size: 200px 100px;
   min-height: 100%;
 }
 ```
-
-Spaces not covered by a background image are filled with the {{cssxref("background-color")}} property, and the background color will be visible behind background images that have transparency/translucency.
 
 ## Syntax
 
@@ -118,11 +119,11 @@ These attributes are as follows:
 - A vector image (such as SVG) does not necessarily have intrinsic dimensions.
   If it has both horizontal and vertical intrinsic dimensions, it also has intrinsic proportions.
   If it has no dimensions or only one dimension, it may or may not have proportions.
-- CSS {{cssxref("&lt;gradient&gt;")}}s have no intrinsic dimensions or intrinsic proportions.
-- Background images created with the {{cssxref("element", "element()")}} function use the intrinsic dimensions and proportions of the generating element.
+- CSS {{cssxref("gradient")}}s have no intrinsic dimensions or intrinsic proportions.
+- Background images created with the {{cssxref("element()")}} function use the intrinsic dimensions and proportions of the generating element.
 
 > [!NOTE]
-> In Gecko, background images created using the [`element()`](/en-US/docs/Web/CSS/element) function are currently treated as images with the dimensions of the element, or of the background positioning area if the element is SVG, with the corresponding intrinsic proportion. This is non-standard behavior.
+> In Gecko, background images created using the [`element()`](/en-US/docs/Web/CSS/Reference/Values/element) function are currently treated as images with the dimensions of the element, or of the background positioning area if the element is SVG, with the corresponding intrinsic proportion. This is non-standard behavior.
 
 Based on the intrinsic dimensions and proportions, the rendered size of the background image is computed as follows:
 
@@ -189,7 +190,7 @@ To do this, we can use a fixed `background-size` value of 150 pixels.
 
 {{EmbedLiveSample("Tiling_a_large_image", 340, 340)}}
 
-See [Resizing background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images) for more examples.
+See [Resizing background images](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images) for more examples.
 
 ## Specifications
 
@@ -201,6 +202,6 @@ See [Resizing background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders
 
 ## See also
 
-- [Resizing background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
-- [Scaling SVG backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds)
+- [Resizing background images](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images)
+- [Scaling SVG backgrounds](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds)
 - {{cssxref("object-fit")}}

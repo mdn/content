@@ -82,7 +82,7 @@ The first form is full, with four form controls: one {{htmlelement("fieldset")}}
 </form>
 
 <form id="sparseForm">
-  <object>Lone form control</object>
+  <object data="lone-form-control.jpg">Lone form control</object>
 </form>
 ```
 

@@ -1,5 +1,6 @@
 ---
-title: mask-border-slice
+title: "`mask-border-slice` CSS property"
+short-title: mask-border-slice
 slug: Web/CSS/Reference/Properties/mask-border-slice
 page-type: css-property
 browser-compat: css.properties.mask-border-slice
@@ -91,7 +92,7 @@ Chromium-based browsers support an outdated version of this property — `mask-b
 ```
 
 > [!NOTE]
-> The [`mask-border`](/en-US/docs/Web/CSS/Reference/Properties/mask-border) page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.
+> The {{cssxref("mask-border")}} page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.
 
 > [!NOTE]
 > The fill keyword needs to be included if you want the element's content to be visible.
@@ -112,4 +113,4 @@ Chromium-based browsers support an outdated version of this property — `mask-b
 - {{cssxref("mask-border-repeat")}}
 - {{cssxref("mask-border-source")}}
 - {{cssxref("mask-border-width")}}
-- [Illustrated description of the 1-to-4-value syntax](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties#tricky_edge_cases)
+- [Illustrated description of the 1-to-4-value syntax](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties#tricky_edge_cases)

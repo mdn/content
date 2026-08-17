@@ -1,5 +1,6 @@
 ---
-title: clip-rule
+title: "`clip-rule` CSS property"
+short-title: clip-rule
 slug: Web/CSS/Reference/Properties/clip-rule
 page-type: css-property
 browser-compat: css.properties.clip-rule
@@ -128,7 +129,7 @@ We include an SVG with two `<clipPath>` elements that define star shapes, which 
 
 #### CSS
 
-We provide the `<div>` elements with a set {{cssxref("width")}} and {{cssxref("height")}}, adding a [`conic-gradient()`](/en-US/docs/Web/CSS/gradient/conic-gradient) for their {{cssxref("background-image")}} value:
+We provide the `<div>` elements with a set {{cssxref("width")}} and {{cssxref("height")}}, adding a [`conic-gradient()`](/en-US/docs/Web/CSS/Reference/Values/gradient/conic-gradient) for their {{cssxref("background-image")}} value:
 
 ```css hidden
 body {
@@ -279,8 +280,8 @@ In this case, because the outer part of the path moves in a clockwise (left-to-r
 
 - {{cssxref("fill-rule")}}
 - {{cssxref("clip-path")}}
-- [Introduction to CSS clipping](/en-US/docs/Web/CSS/CSS_masking/Clipping)
-- [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
+- [Introduction to CSS clipping](/en-US/docs/Web/CSS/Guides/Masking/Clipping)
+- [CSS masking](/en-US/docs/Web/CSS/Guides/Masking) module
 - SVG {{SVGAttr("clip-rule")}} attribute
 - SVG {{SVGElement("clipPath")}} element
 - SVG {{SVGAttr("fill-rule")}} attribute

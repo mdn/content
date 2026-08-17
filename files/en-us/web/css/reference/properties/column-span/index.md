@@ -1,5 +1,6 @@
 ---
-title: column-span
+title: "`column-span` CSS property"
+short-title: column-span
 slug: Web/CSS/Reference/Properties/column-span
 page-type: css-property
 browser-compat: css.properties.column-span
@@ -7,6 +8,8 @@ sidebar: cssref
 ---
 
 The **`column-span`** [CSS](/en-US/docs/Web/CSS) property makes it possible for an element to span across all columns when its value is set to `all`.
+
+An element that spans more than one column is called a **spanning element**.
 
 {{InteractiveExample("CSS Demo: column-span")}}
 
@@ -54,8 +57,6 @@ column-span: all;
 }
 ```
 
-An element that spans more than one column is called a **spanning element**.
-
 ## Syntax
 
 ```css
@@ -71,9 +72,9 @@ column-span: revert-layer;
 column-span: unset;
 ```
 
-The `column-span` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `none`
   - : The element does not span multiple columns.
@@ -148,6 +149,6 @@ h2 {
 
 ## See also
 
-- [Spanning and balancing columns](/en-US/docs/Web/CSS/CSS_multicol_layout/Spanning_balancing_columns)
+- [Spanning and balancing columns](/en-US/docs/Web/CSS/Guides/Multicol_layout/Spanning_balancing_columns)
 - [Inline-level elements](/en-US/docs/Glossary/Inline-level_content)
 - {{domxref("HTMLSpanElement")}}

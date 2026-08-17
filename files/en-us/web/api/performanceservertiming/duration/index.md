@@ -8,7 +8,7 @@ browser-compat: api.PerformanceServerTiming.duration
 
 {{APIRef("Performance API")}}{{AvailableInWorkers}}
 
-The **`duration`** read-only property returns a double that contains the server-specified metric duration, or the value `0.0`.
+The **`duration`** read-only property returns a double that contains the server-specified metric duration (usually in milliseconds), or the value `0.0`.
 
 ## Value
 

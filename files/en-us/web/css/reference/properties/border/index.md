@@ -1,12 +1,13 @@
 ---
-title: border
+title: "`border` CSS property"
+short-title: border
 slug: Web/CSS/Reference/Properties/border
 page-type: css-shorthand-property
 browser-compat: css.properties.border
 sidebar: cssref
 ---
 
-The **`border`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets an element's border. It sets the values of {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, and {{Cssxref("border-color")}}.
+The **`border`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets an element's border. It sets the values of {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, and {{Cssxref("border-color")}}.
 
 {{InteractiveExample("CSS Demo: border")}}
 
@@ -52,9 +53,9 @@ border: 4mm ridge rgb(211 220 50 / 0.6);
 
 This property is a shorthand for the following CSS properties:
 
-- [`border-width`](/en-US/docs/Web/CSS/Reference/Properties/border-width)
-- [`border-style`](/en-US/docs/Web/CSS/Reference/Properties/border-style)
-- [`border-color`](/en-US/docs/Web/CSS/Reference/Properties/border-color)
+- {{cssxref("border-width")}}
+- {{cssxref("border-style")}}
+- {{cssxref("border-color")}}
 
 ## Syntax
 
@@ -95,7 +96,7 @@ The `border` property may be specified using one, two, or three of the values li
 
 ## Description
 
-As with all shorthand properties, any omitted sub-values will be set to their [initial value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#initial_value). Importantly, `border` cannot be used to specify a custom value for {{cssxref("border-image")}}, but instead sets it to its initial value, i.e., `none`.
+As with all shorthand properties, any omitted sub-values will be set to their [initial value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value). Importantly, `border` cannot be used to specify a custom value for {{cssxref("border-image")}}, but instead sets it to its initial value, i.e., `none`.
 
 The `border` shorthand is especially useful when you want all four borders to be the same. To make them different from each other, however, you can use the longhand {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, and {{Cssxref("border-color")}} properties, which accept different values for each side. Alternatively, you can target one border at a time with the physical (e.g., {{Cssxref("border-top")}} ) and logical (e.g., {{Cssxref("border-block-start")}}) border properties.
 
@@ -157,5 +158,5 @@ div {
 - {{Cssxref("border-style")}}
 - {{Cssxref("border-color")}}
 - {{Cssxref("outline")}}
-- [Backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders)
+- [Backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders)
 - [Learn CSS: Backgrounds and borders](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)

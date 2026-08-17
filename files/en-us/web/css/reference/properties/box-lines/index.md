@@ -1,5 +1,6 @@
 ---
-title: box-lines
+title: "`box-lines` CSS property"
+short-title: box-lines
 slug: Web/CSS/Reference/Properties/box-lines
 page-type: css-property
 status:
@@ -12,7 +13,7 @@ sidebar: cssref
 {{Non-standard_header}}{{Deprecated_Header}}
 
 > [!WARNING]
-> This is a property of the original CSS flexible box layout Module draft. It has been replaced in the specification. See [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) for information about the current standard.
+> This is a property of the original CSS flexible box layout Module draft. It has been replaced in the specification. See [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) for information about the current standard.
 
 The **`box-lines`** [CSS](/en-US/docs/Web/CSS) property determines whether the box may have a single or multiple lines (rows for horizontally oriented boxes, columns for vertically oriented boxes).
 
@@ -39,9 +40,9 @@ box-lines: initial;
 box-lines: unset;
 ```
 
-The `box-lines` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `single`
   - : Box elements lay out in a single row or column.
@@ -70,7 +71,7 @@ div {
 }
 ```
 
-The modern flexbox equivalent is [`flex-wrap`](/en-US/docs/Web/CSS/Reference/Properties/flex-wrap).
+The modern flexbox equivalent is {{cssxref("flex-wrap")}}.
 
 ## Specifications
 

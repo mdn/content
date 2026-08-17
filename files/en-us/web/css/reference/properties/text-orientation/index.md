@@ -1,5 +1,6 @@
 ---
-title: text-orientation
+title: "`text-orientation` CSS property"
+short-title: text-orientation
 slug: Web/CSS/Reference/Properties/text-orientation
 page-type: css-property
 browser-compat: css.properties.text-orientation
@@ -49,9 +50,9 @@ text-orientation: revert-layer;
 text-orientation: unset;
 ```
 
-The `text-orientation` property is specified as a single keyword from the list below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `mixed`
   - : Rotates the characters of horizontal scripts 90° clockwise. Lays out the characters of vertical scripts naturally. Default value.
@@ -104,6 +105,6 @@ p {
 ## See also
 
 - The other vertical-script related CSS properties: {{cssxref("writing-mode")}}, {{cssxref("text-combine-upright")}}, and {{cssxref("unicode-bidi")}}.
-- [CSS Logical properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
+- [CSS Logical properties](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values)
 - [Styling vertical text (Chinese, Japanese, Korean and Mongolian)](https://www.w3.org/International/articles/vertical-text/)
 - Extensive browsers support test results: <https://w3c.github.io/i18n-tests/results/horizontal-in-vertical.html#text_orientation>

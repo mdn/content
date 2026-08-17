@@ -1,5 +1,6 @@
 ---
-title: image-rendering
+title: "`image-rendering` CSS property"
+short-title: image-rendering
 slug: Web/CSS/Reference/Properties/image-rendering
 page-type: css-property
 browser-compat: css.properties.image-rendering
@@ -63,6 +64,8 @@ image-rendering: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `auto`
   - : The scaling algorithm is UA dependent. Since version 1.9 (Firefox 3.0), Gecko uses _bilinear_ resampling (high quality).
 - `smooth`
@@ -76,7 +79,7 @@ image-rendering: unset;
 > The values `optimizeQuality` and `optimizeSpeed` present in an early draft (and coming from its SVG counterpart {{SVGAttr("image-rendering")}}) are defined as synonyms for the `smooth` and `pixelated` values respectively.
 
 > [!NOTE]
-> The [CSS images](/en-US/docs/Web/CSS/CSS_images) module defines a `high-quality` value for the `image-rendering` property to provide a preference for higher-quality scaling, however, this is not supported in any browsers.
+> The [CSS images](/en-US/docs/Web/CSS/Guides/Images) module defines a `high-quality` value for the `image-rendering` property to provide a preference for higher-quality scaling, however, this is not supported in any browsers.
 
 ## Formal definition
 
@@ -90,7 +93,7 @@ image-rendering: unset;
 
 ### Setting image scaling algorithms
 
-In this example, an image is repeated three times, with each having a different `image-rendering` value applied.
+In this example, an image is repeated four times, with each having a different `image-rendering` value applied.
 
 ```html hidden
 <div>
@@ -157,5 +160,5 @@ img {
 - {{cssxref("object-position")}}
 - {{cssxref("image-orientation")}}
 - {{cssxref("image-resolution")}}
-- [CSS images](/en-US/docs/Web/CSS/CSS_images) module
+- [CSS images](/en-US/docs/Web/CSS/Guides/Images) module
 - SVG {{SVGAttr("image-rendering")}} attribute

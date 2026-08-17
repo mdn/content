@@ -3,13 +3,9 @@ title: Temporal.PlainDateTime.prototype.microsecond
 short-title: microsecond
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/microsecond
 page-type: javascript-instance-accessor-property
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.PlainDateTime.microsecond
 sidebar: jsref
 ---
-
-{{SeeCompatTable}}
 
 The **`microsecond`** accessor property of {{jsxref("Temporal.PlainDateTime")}} instances returns an integer from 0 to 999 representing the microsecond (10<sup>-6</sup> second) component of this time.
 

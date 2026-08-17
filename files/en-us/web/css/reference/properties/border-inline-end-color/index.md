@@ -1,5 +1,6 @@
 ---
-title: border-inline-end-color
+title: "`border-inline-end-color` CSS property"
+short-title: border-inline-end-color
 slug: Web/CSS/Reference/Properties/border-inline-end-color
 page-type: css-property
 browser-compat: css.properties.border-inline-end-color
@@ -113,6 +114,6 @@ div {
 
 ## See also
 
-- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values)
 - This property maps to one of the physical border properties: {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, or {{cssxref("border-left-color")}}.
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

@@ -1,5 +1,6 @@
 ---
-title: d
+title: "`d` CSS property"
+short-title: d
 slug: Web/CSS/Reference/Properties/d
 page-type: css-property
 browser-compat: css.properties.d
@@ -32,7 +33,7 @@ d: unset;
 
 ### Values
 
-The value is either a {{cssxref("basic-shape/path", "path()")}} function with a single {{cssxref("&lt;string&gt;")}} parameter or the keyword `none`.
+The value is either a {{cssxref("basic-shape/path", "path()")}} function with a single {{cssxref("&lt;string&gt;")}} parameter or the keyword `none`:
 
 - `none`
   - : No path is drawn.
@@ -153,5 +154,5 @@ To view the animation, hover over the SVG.
 - {{cssxref("stroke")}}
 - {{cssxref("basic-shape/path", "path()")}} function
 - {{cssxref("basic-shape")}} data type
-- [Overview of CSS shapes](/en-US/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
-- [CSS shapes](/en-US/docs/Web/CSS/CSS_shapes) module
+- [Overview of CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes/Overview)
+- [CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes) module

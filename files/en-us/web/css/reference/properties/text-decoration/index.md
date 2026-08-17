@@ -1,12 +1,13 @@
 ---
-title: text-decoration
+title: "`text-decoration` CSS property"
+short-title: text-decoration
 slug: Web/CSS/Reference/Properties/text-decoration
 page-type: css-shorthand-property
 browser-compat: css.properties.text-decoration
 sidebar: cssref
 ---
 
-The **`text-decoration`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the appearance of decorative lines on text. It is a shorthand for {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-style")}}, and the newer {{cssxref("text-decoration-thickness")}} property.
+The **`text-decoration`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the appearance of decorative lines on text. It is a shorthand for {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-style")}}, and the newer {{cssxref("text-decoration-thickness")}} property.
 
 {{InteractiveExample("CSS Demo: text-decoration")}}
 
@@ -52,10 +53,10 @@ Text decorations are drawn across descendant text elements. This means that if a
 
 This property is a shorthand for the following CSS properties:
 
-- [`text-decoration-color`](/en-US/docs/Web/CSS/Reference/Properties/text-decoration-color)
-- [`text-decoration-line`](/en-US/docs/Web/CSS/Reference/Properties/text-decoration-line)
-- [`text-decoration-style`](/en-US/docs/Web/CSS/Reference/Properties/text-decoration-style)
-- [`text-decoration-thickness`](/en-US/docs/Web/CSS/Reference/Properties/text-decoration-thickness)
+- {{cssxref("text-decoration-color")}}
+- {{cssxref("text-decoration-line")}}
+- {{cssxref("text-decoration-style")}}
+- {{cssxref("text-decoration-thickness")}}
 
 ## Syntax
 

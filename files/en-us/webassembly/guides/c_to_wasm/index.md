@@ -7,6 +7,9 @@ sidebar: webassemblysidebar
 
 When you've written a new code module in a language like C/C++, you can compile it into WebAssembly using a tool like [Emscripten](https://emscripten.org/). Let's look at how it works.
 
+> [!NOTE]
+> This guide uses Emscripten, which is the most full-featured toolchain for compiling to WebAssembly. It emulates a C standard library, a file system, and other operating-system features that C programs commonly expect. If your code doesn't need that runtime support, you can also compile C directly to WebAssembly with a lower-level toolchain such as [Clang/LLVM](https://surma.dev/things/c-to-webassembly/) or the [WASI SDK](https://github.com/WebAssembly/wasi-sdk), both of which produce smaller modules with fewer dependencies.
+
 ## Emscripten Environment Setup
 
 First, let's set up the required development environment.
@@ -159,7 +162,7 @@ If you want to call a function defined in your C code from JavaScript, you can u
    > We are including the `#ifdef` blocks so that if you are trying to include this in C++ code, the example will still work. Due to C versus C++ name mangling rules, this would otherwise break, but here we are setting it so that it treats it as an external C function if you are using C++.
 
 2. Now add `html_template/shell_minimal.html` with `\{\{{ SCRIPT }}}` as content into this new directory too, just for convenience (you'd obviously put this in a central place in your real dev environment).
-3. Now let's run the compilation step again. From inside your latest directory (and while inside your Emscripten compiler environment terminal window), compile your C code with the following command. Note that we need to compile with `NO_EXIT_RUNTIME`: otherwise, when `main()` exits, the runtime would be shut down and it wouldn't be valid to call compiled code. This is necessary for proper C emulation: for example, to ensure that [`atexit()`](https://en.cppreference.com/w/c/program/atexit) functions are called.
+3. Now let's run the compilation step again. From inside your latest directory (and while inside your Emscripten compiler environment terminal window), compile your C code with the following command. Note that we need to compile with `NO_EXIT_RUNTIME`: otherwise, when `main()` exits, the runtime would be shut down and it wouldn't be valid to call compiled code. This is necessary for proper C emulation: for example, to ensure that [`atexit()`](https://en.cppreference.com/c/program/atexit) functions are called.
 
    ```bash
    emcc -o hello3.html hello3.c --shell-file html_template/shell_minimal.html -s NO_EXIT_RUNTIME=1 -s "EXPORTED_RUNTIME_METHODS=['ccall']"

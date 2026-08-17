@@ -3,12 +3,10 @@ title: "Navigation: navigateerror event"
 short-title: navigateerror
 slug: Web/API/Navigation/navigateerror_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.Navigation.navigateerror_event
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`navigateerror`** event of the {{domxref("Navigation")}} interface is fired when a navigation fails.
 

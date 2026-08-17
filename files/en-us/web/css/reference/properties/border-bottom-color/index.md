@@ -1,5 +1,6 @@
 ---
-title: border-bottom-color
+title: "`border-bottom-color` CSS property"
+short-title: border-bottom-color
 slug: Web/CSS/Reference/Properties/border-bottom-color
 page-type: css-property
 browser-compat: css.properties.border-bottom-color
@@ -68,9 +69,9 @@ border-bottom-color: revert-layer;
 border-bottom-color: unset;
 ```
 
-The `border-bottom-color` property is specified as a single value.
-
 ### Values
+
+This property is specified as one value:
 
 - {{cssxref("&lt;color&gt;")}}
   - : The color of the bottom border.
@@ -129,4 +130,4 @@ The `border-bottom-color` property is specified as a single value.
 - The border-related CSS shorthand properties: {{Cssxref("border")}}, {{Cssxref("border-bottom")}}, and {{Cssxref("border-color")}}.
 - The color-related CSS properties for the other borders: {{Cssxref("border-right-color")}}, {{Cssxref("border-top-color")}}, and {{Cssxref("border-left-color")}}.
 - The other border-related CSS properties applying to the same border: {{cssxref("border-bottom-style")}} and {{cssxref("border-bottom-width")}}.
-- The default [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword) color value.
+- The default [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) color value.

@@ -1,5 +1,5 @@
 ---
-title: "HTML attribute: required"
+title: "`required` HTML attribute"
 short-title: required
 slug: Web/HTML/Reference/Attributes/required
 page-type: html-attribute
@@ -22,6 +22,8 @@ In the case of a same named group of {{HTMLElement("input/checkbox","checkbox")}
 
 > [!NOTE]
 > Setting [`aria-required="true"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required) tells a screen reader that an element (any element) is required, but has no bearing on the optionality of the element.
+
+## Description
 
 ### Attribute interactions
 

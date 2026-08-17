@@ -1,12 +1,13 @@
 ---
-title: box-decoration-break
+title: "`box-decoration-break` CSS property"
+short-title: box-decoration-break
 slug: Web/CSS/Reference/Properties/box-decoration-break
 page-type: css-property
 browser-compat: css.properties.box-decoration-break
 sidebar: cssref
 ---
 
-The **`box-decoration-break`** [CSS](/en-US/docs/Web/CSS) property specifies how an element's [fragments](/en-US/docs/Web/CSS/CSS_fragmentation) should be rendered when broken across multiple lines, columns, or pages.
+The **`box-decoration-break`** [CSS](/en-US/docs/Web/CSS) property specifies how an element's [fragments](/en-US/docs/Web/CSS/Guides/Fragmentation) should be rendered when broken across multiple lines, columns, or pages.
 
 {{InteractiveExample("CSS Demo: box-decoration-break")}}
 
@@ -49,16 +50,6 @@ box-decoration-break: clone;
 }
 ```
 
-The specified value will impact the appearance of the following properties:
-
-- {{Cssxref("background")}}
-- {{Cssxref("border")}}
-- {{Cssxref("border-image")}}
-- {{Cssxref("box-shadow")}}
-- {{Cssxref("clip-path")}}
-- {{Cssxref("margin")}}
-- {{Cssxref("padding")}}
-
 ## Syntax
 
 ```css
@@ -74,14 +65,26 @@ box-decoration-break: revert-layer;
 box-decoration-break: unset;
 ```
 
-The `box-decoration-break` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `slice`
   - : The element is initially rendered as if its box were not fragmented, after which the rendering for this hypothetical box is sliced into pieces for each line/column/page. Note that the hypothetical box can be different for each fragment since it uses its own height if the break occurs in the inline direction, and its own width if the break occurs in the block direction. See the CSS specification for details.
 - `clone`
   - : Each box fragment is rendered independently with the specified border, padding, and margin wrapping each fragment. The {{ Cssxref("border-radius") }}, {{ Cssxref("border-image") }}, and {{ Cssxref("box-shadow") }} are applied to each fragment independently. The background is also drawn independently for each fragment, which means that a background image with {{ Cssxref("background-repeat", "background-repeat: no-repeat") }} may nevertheless repeat multiple times.
+
+## Description
+
+The specified value will impact the appearance of the following properties:
+
+- {{Cssxref("background")}}
+- {{Cssxref("border")}}
+- {{Cssxref("border-image")}}
+- {{Cssxref("box-shadow")}}
+- {{Cssxref("clip-path")}}
+- {{Cssxref("margin")}}
+- {{Cssxref("padding")}}
 
 ## Formal definition
 

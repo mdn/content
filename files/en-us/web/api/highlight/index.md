@@ -7,11 +7,11 @@ browser-compat: api.Highlight
 
 {{APIRef("CSS Custom Highlight API")}}
 
-The **`Highlight`** interface of the [CSS Custom Highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API) is used to represent a collection of {{domxref("Range")}} instances to be styled using the API.
+The **`Highlight`** interface of the [CSS Custom Highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API) is used to represent a collection of {{domxref("AbstractRange")}} instances to be styled using the API.
 
-To style arbitrary ranges in a page, instantiate a new `Highlight` object, add one or more `Range` objects to it, and register it using the {{domxref("HighlightRegistry")}}.
+To style arbitrary ranges in a page, instantiate a new `Highlight` object, add one or more `AbstractRange` objects to it, and register it using the {{domxref("HighlightRegistry")}}.
 
-A `Highlight` instance is a [`Set`-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_browser_apis) that can hold one or more `Range` objects.
+A `Highlight` instance is a [`Set`-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_browser_apis) that can hold one or more `AbstractRange` objects.
 
 {{InheritanceDiagram}}
 
@@ -107,5 +107,5 @@ The following CSS code snippet demonstrates how to style the registered custom h
 ## See also
 
 - {{domxref("css_custom_highlight_api", "The CSS Custom Highlight API", "", "nocode")}}
-- [CSS custom highlight API](/en-US/docs/Web/CSS/CSS_custom_highlight_API) module
+- [CSS custom highlight API](/en-US/docs/Web/CSS/Guides/Custom_highlight_API) module
 - [CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web](https://css-tricks.com/css-custom-highlight-api-early-look/)

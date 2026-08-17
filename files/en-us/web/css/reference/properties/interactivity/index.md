@@ -1,13 +1,15 @@
 ---
-title: interactivity
+title: "`interactivity` CSS property"
+short-title: interactivity
 slug: Web/CSS/Reference/Properties/interactivity
 page-type: css-property
 status:
   - experimental
 browser-compat: css.properties.interactivity
+sidebar: cssref
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{seecompattable}}
 
 The **`interactivity`** [CSS](/en-US/docs/Web/CSS) property specifies whether an element and its descendant nodes are set to be [inert](/en-US/docs/Web/HTML/Reference/Global_attributes/inert).
 
@@ -27,6 +29,8 @@ interactivity: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : Selected elements are in their default state in terms of inertness. This usually means that they are interactive, but this is [not always the case](#default_inertness). This is the default value.
@@ -117,7 +121,7 @@ The markup features two {{htmlelement("p")}} elements, each of which contain a l
   in-browser search features, and focus and click the link. There is a
   <code>click</code> event handler set on the paragraph that changes the border
   color for a second when it is clicked anywhere.
-  <span contenteditable="">This sentence has <code>contenteditable</code> set on
+  <span contenteditable>This sentence has <code>contenteditable</code> set on
   it, so it is editable</span>.
 </p>
 
@@ -130,7 +134,7 @@ The markup features two {{htmlelement("p")}} elements, each of which contain a l
   in-browser search features, focus and click the link, or issue
   <code>click</code> events on it (the border color won't change when it is
   clicked).
-  <span contenteditable=""
+  <span contenteditable
     >This sentence has <code>contenteditable</code> set on it, but it is not
     editable because it is inert</span
   >.
@@ -196,7 +200,7 @@ Note how the second paragraph is inert; it therefore does not behave like the fi
 
 ### Setting off-screen elements to inert using a view timeline
 
-This example shows horizontally-scrolling paginated content, with each page snapped to using [CSS Scroll Snap](/en-US/docs/Web/CSS/CSS_scroll_snap), and the inertness controlled via a [scroll-driven animation](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) that uses a [view progress timeline](/en-US/docs/Web/CSS/Reference/Properties/view-timeline-name). Content displayed in the {{glossary("scroll container")}} is interactive; it becomes inert when it moves out into the overflowing content.
+This example shows horizontally-scrolling paginated content, with each page snapped to using [CSS Scroll Snap](/en-US/docs/Web/CSS/Guides/Scroll_snap), and the inertness controlled via a [scroll-driven animation](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) that uses a [view progress timeline](/en-US/docs/Web/CSS/Reference/Properties/view-timeline-name). Content displayed in the {{glossary("scroll container")}} is interactive; it becomes inert when it moves out into the overflowing content.
 
 #### HTML
 

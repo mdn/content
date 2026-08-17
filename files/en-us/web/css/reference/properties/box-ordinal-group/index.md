@@ -1,5 +1,6 @@
 ---
-title: box-ordinal-group
+title: "`box-ordinal-group` CSS property"
+short-title: box-ordinal-group
 slug: Web/CSS/Reference/Properties/box-ordinal-group
 page-type: css-property
 status:
@@ -12,7 +13,7 @@ sidebar: cssref
 {{Non-standard_Header}}{{Deprecated_Header}}
 
 > [!WARNING]
-> This is a property of the original CSS flexible box layout Module draft. It has been replaced in the specification. See [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) for information about the current standard.
+> This is a property of the original CSS flexible box layout Module draft. It has been replaced in the specification. See [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) for information about the current standard.
 
 The **`box-ordinal-group`** [CSS](/en-US/docs/Web/CSS) property assigns the flexbox's child elements to an ordinal group.
 

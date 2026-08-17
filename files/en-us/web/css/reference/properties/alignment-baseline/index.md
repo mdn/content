@@ -1,5 +1,6 @@
 ---
-title: alignment-baseline
+title: "`alignment-baseline` CSS property"
+short-title: alignment-baseline
 slug: Web/CSS/Reference/Properties/alignment-baseline
 page-type: css-property
 browser-compat: css.properties.alignment-baseline
@@ -47,6 +48,8 @@ alignment-baseline: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `baseline`
   - : Use the {{cssxref("dominant-baseline")}} value of the parent.
@@ -153,5 +156,5 @@ text:nth-of-type(8) {
 
 - {{cssxref("dominant-baseline")}}
 - SVG {{SVGAttr("alignment-baseline")}} attribute
-- [CSS inline layout](/en-US/docs/Web/CSS/CSS_inline_layout) module
-- [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
+- [CSS inline layout](/en-US/docs/Web/CSS/Guides/Inline_layout) module
+- [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module

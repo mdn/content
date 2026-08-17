@@ -7,7 +7,7 @@ sidebar: glossarysidebar
 
 **Bun** is a fast and modern {{Glossary("JavaScript")}} runtime environment designed to prioritize performance and developer tooling.
 
-Unlike [Node.js](https://nodejs.org/) and [Deno](https://deno.com/), Bun is built on Apple's [JavaScriptCore](https://trac.webkit.org/wiki/JavaScriptCore). Notable features of Bun include:
+Unlike [Node.js](https://nodejs.org/) and [Deno](https://deno.com/), Bun is built on Apple's [JavaScriptCore](https://docs.webkit.org/Deep%20Dive/JSC/JavaScriptCore.html). Notable features of Bun include:
 
 - Drop-in Node.js replacement: almost all Node.js programs can run using Bun-equivalent commands.
 - State-of-the-art JavaScript execution speed in most real-world scenarios.

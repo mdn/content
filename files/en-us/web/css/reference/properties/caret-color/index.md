@@ -1,5 +1,6 @@
 ---
-title: caret-color
+title: "`caret-color` CSS property"
+short-title: caret-color
 slug: Web/CSS/Reference/Properties/caret-color
 page-type: css-property
 browser-compat: css.properties.caret-color
@@ -7,6 +8,8 @@ sidebar: cssref
 ---
 
 The **`caret-color`** [CSS](/en-US/docs/Web/CSS) property sets the color of the **insertion caret**, sometimes referred to as the **text input cursor**. This is the visible marker appearing at the insertion point where the next character typed will be added or where the next character deleted will be removed.
+
+The `caret-color` property can also be set as part of the {{cssxref("caret")}} shorthand property.
 
 {{InteractiveExample("CSS Demo: caret-color")}}
 
@@ -61,8 +64,10 @@ caret-color: unset;
 
 ### Values
 
+This property is specified as one `<color>` value or the keyword `auto`.
+
 - `auto`
-  - : Generally resolves to [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword), the {{cssxref("color")}} of the text that will be modified.
+  - : Generally resolves to [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword), the {{cssxref("color")}} of the text that will be modified.
 
 - {{cssxref("&lt;color&gt;")}}
   - : The color of the caret.
@@ -91,7 +96,7 @@ The mouse cursor image shown for certain {{cssxref("cursor")}} property values (
 
 ### Animating from `auto`
 
-Generally, when the `caret-color` is set to or defaults to `auto`, user agents use `currentColor`, which is animatable. However, `auto` is not an animatable value by default: when animating or transitioning the `caret-color` from `auto` to any color value, no interpolation happens. The animation is [discrete](/en-US/docs/Web/CSS/CSS_animated_properties#discrete); the color switches from or to the `currentColor` color at the midpoint of the {{cssxref("animation-duration")}} or {{cssxref("transition-duration")}}.
+Generally, when the `caret-color` is set to or defaults to `auto`, user agents use `currentColor`, which is animatable. However, `auto` is not an animatable value by default: when animating or transitioning the `caret-color` from `auto` to any color value, no interpolation happens. The animation is [discrete](/en-US/docs/Web/CSS/Guides/Animations/Animatable_properties#discrete); the color switches from or to the `currentColor` color at the midpoint of the {{cssxref("animation-duration")}} or {{cssxref("transition-duration")}}.
 
 ## Formal definition
 

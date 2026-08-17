@@ -8,7 +8,7 @@ sidebar: jsref
 
 The **`SuppressedError`** object represents an error generated while handing another error. It is generated during resource disposal using {{jsxref("Statements/using", "using")}} or {{jsxref("Statements/await_using", "await using")}}.
 
-Compared to {{jsxref("AggregateError")}}, `SuppressedError` is used to represent a single error that is suppressed by another error, while `AggregateError` represents a list of unrelated errors. It is possible, though, for a `SuppressedError` to contain a chain of suppressed errors (`e.suppressed.suppressed.suppressed...`). It is also semantically different from {{jsxref("Error/cause", "cause")}} because the error is not _caused_ by another error, but _happens when_ handling another error.
+Compared to {{jsxref("AggregateError")}}, `SuppressedError` represents an error that happened during the handling of another error, while `AggregateError` represents a list of unrelated errors. It is possible, though, for a `SuppressedError` to contain a chain of suppressed errors (`e.suppressed.suppressed.suppressed...`). It is also semantically different from {{jsxref("Error/cause", "cause")}} because the error is not _caused_ by another error, but _happens when_ handling another error.
 
 `SuppressedError` is a subclass of {{jsxref("Error")}}.
 

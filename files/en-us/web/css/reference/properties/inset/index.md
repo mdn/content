@@ -1,5 +1,6 @@
 ---
-title: inset
+title: "`inset` CSS property"
+short-title: inset
 slug: Web/CSS/Reference/Properties/inset
 page-type: css-shorthand-property
 browser-compat: css.properties.inset
@@ -65,7 +66,7 @@ inset: 0;
 }
 ```
 
-While part of the [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module, it does not define _logical_ offsets. It defines _physical_ offsets, regardless of the element's writing mode, directionality, and text orientation.
+While part of the [CSS logical properties and values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values) module, it does not define _logical_ offsets. It defines _physical_ offsets, regardless of the element's writing mode, directionality, and text orientation.
 
 ## Constituent properties
 
@@ -104,7 +105,7 @@ inset: unset;
 
 ### Values
 
-The `inset` property takes the same values as the {{cssxref("left")}} property.
+The `inset` property takes the same values as the {{cssxref("top")}} property.
 
 ## Formal definition
 
@@ -161,5 +162,5 @@ div {
 - {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}}
 - {{cssxref("inset-block")}} and {{cssxref("inset-inline")}}
 - {{cssxref("position")}}
-- [CSS positioned layout](/en-US/docs/Web/CSS/CSS_positioned_layout) module
-- [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
+- [CSS positioned layout](/en-US/docs/Web/CSS/Guides/Positioned_layout) module
+- [CSS logical properties and values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values)

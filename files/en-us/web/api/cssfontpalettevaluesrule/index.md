@@ -7,7 +7,7 @@ browser-compat: api.CSSFontPaletteValuesRule
 
 {{APIRef("CSSOM")}}
 
-The **`CSSFontPaletteValuesRule`** interface represents an {{cssxref("@font-palette-values")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule).
+The **`CSSFontPaletteValuesRule`** interface represents an {{cssxref("@font-palette-values")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
 
 {{InheritanceDiagram}}
 

@@ -1,12 +1,13 @@
 ---
-title: transition-property
+title: "`transition-property` CSS property"
+short-title: transition-property
 slug: Web/CSS/Reference/Properties/transition-property
 page-type: css-property
 browser-compat: css.properties.transition-property
 sidebar: cssref
 ---
 
-The **`transition-property`** [CSS](/en-US/docs/Web/CSS) property sets the CSS properties to which a [transition effect](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) should be applied.
+The **`transition-property`** [CSS](/en-US/docs/Web/CSS) property sets the CSS properties to which a [transition effect](/en-US/docs/Web/CSS/Guides/Transitions/Using) should be applied.
 
 {{InteractiveExample("CSS Demo: transition-property")}}
 
@@ -101,7 +102,7 @@ transition-property: unset;
 
 ### Basic example
 
-When the button is hovered or focused, it undergoes a one-second color transition; the `transition-property` is [`background-color`](/en-US/docs/Web/CSS/Reference/Properties/background-color).
+When the button is hovered or focused, it undergoes a one-second color transition; the `transition-property` is {{cssxref("background-color")}}.
 
 #### HTML
 
@@ -140,7 +141,7 @@ button {
 
 {{EmbedLiveSample('Basic_example', 600, 100)}}
 
-See our [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) guide for more `transition-property` examples.
+See our [Using CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions/Using) guide for more `transition-property` examples.
 
 ## Specifications
 
@@ -152,7 +153,7 @@ See our [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_tr
 
 ## See also
 
-- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
+- [Using CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions/Using)
 - {{cssxref('transition')}}
 - {{cssxref('transition-duration')}}
 - {{cssxref('transition-timing-function')}}

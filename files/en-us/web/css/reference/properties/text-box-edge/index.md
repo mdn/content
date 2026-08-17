@@ -1,5 +1,6 @@
 ---
-title: text-box-edge
+title: "`text-box-edge` CSS property"
+short-title: text-box-edge
 slug: Web/CSS/Reference/Properties/text-box-edge
 page-type: css-property
 browser-compat: css.properties.text-box-edge
@@ -138,5 +139,5 @@ For a complete interactive `text-box-edge` example, see the [`text-box-trim` pag
 
 - {{cssxref("text-box")}}, {{cssxref("text-box-trim")}}
 - {{cssxref("&lt;text-edge&gt;")}} data type
-- [CSS inline layout](/en-US/docs/Web/CSS/CSS_inline_layout) module
+- [CSS inline layout](/en-US/docs/Web/CSS/Guides/Inline_layout) module
 - [CSS text-box-edge](https://developer.chrome.com/blog/css-text-box-trim) on developer.chrome.com (2025)

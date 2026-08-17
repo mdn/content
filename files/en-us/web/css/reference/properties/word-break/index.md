@@ -1,5 +1,6 @@
 ---
-title: word-break
+title: "`word-break` CSS property"
+short-title: word-break
 slug: Web/CSS/Reference/Properties/word-break
 page-type: css-property
 browser-compat: css.properties.word-break
@@ -193,4 +194,4 @@ The specification also lists an additional value, `manual`, which is not current
 - {{cssxref("white-space")}}
 - {{cssxref("hyphens")}}
 - {{cssxref("line-break")}}
-- [Guide to wrapping and breaking text](/en-US/docs/Web/CSS/CSS_text/Wrapping_breaking_text)
+- [Guide to wrapping and breaking text](/en-US/docs/Web/CSS/Guides/Text/Wrapping_breaking_text)

@@ -74,7 +74,7 @@ In the example above, the pseudo-element selects the first line of every paragra
 {{EmbedLiveSample("highlight_first_line2")}}
 
 > [!NOTE]
-> When combining pseudo-elements with other selectors in a [complex](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#complex_selector) or [compound](/en-US/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) selector, the pseudo-elements must appear after all the other components in the selector in which they appear.
+> When combining pseudo-elements with other selectors in a [complex](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#complex_selector) or [compound](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#compound_selector) selector, the pseudo-elements must appear after all the other components in the selector in which they appear.
 
 ## See also
 

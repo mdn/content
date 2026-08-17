@@ -9,7 +9,7 @@ browser-compat: api.CryptoKey
 
 The **`CryptoKey`** interface of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) represents a cryptographic {{glossary("key")}} obtained from one of the {{domxref("SubtleCrypto")}} methods {{domxref("SubtleCrypto.generateKey", "generateKey()")}}, {{domxref("SubtleCrypto.deriveKey", "deriveKey()")}}, {{domxref("SubtleCrypto.importKey", "importKey()")}}, or {{domxref("SubtleCrypto.unwrapKey", "unwrapKey()")}}.
 
-For security reasons, the `CryptoKey` interface can only be used in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+For security reasons, the `CryptoKey` interface can only be used in a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 
 ## Instance properties
 

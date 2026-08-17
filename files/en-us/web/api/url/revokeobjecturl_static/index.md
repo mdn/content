@@ -18,6 +18,8 @@ Call this method when you've finished
 using an object URL to let the browser know not to keep the reference to the file any
 longer.
 
+If the `objectURL` argument passed is not a currently-active object URL — for example if it is an invalid URL, non-object URL, or is already revoked — then calling this method does nothing.
+
 > [!NOTE]
 > This method is _not_ available in [Service Workers](/en-US/docs/Web/API/Service_Worker_API), due to
 > issues with the {{domxref("Blob")}} interface's life cycle and the potential for leaks.

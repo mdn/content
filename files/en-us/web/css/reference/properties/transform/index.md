@@ -1,5 +1,6 @@
 ---
-title: transform
+title: "`transform` CSS property"
+short-title: transform
 slug: Web/CSS/Reference/Properties/transform
 page-type: css-property
 browser-compat: css.properties.transform
@@ -7,10 +8,10 @@ sidebar: cssref
 ---
 
 The **`transform`** [CSS](/en-US/docs/Web/CSS) property lets you rotate, scale, skew, or translate an element.
-It modifies the coordinate space of the CSS [visual formatting model](/en-US/docs/Web/CSS/CSS_display/Visual_formatting_model).
+It modifies the coordinate space of the CSS [visual formatting model](/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model).
 
-If the property has a value different from `none`, a [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context) will be created.
-In that case, the element will act as a [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block) for any `position: fixed;` or `position: absolute;` elements that it contains.
+If the property has a value different from `none`, a [stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) will be created.
+In that case, the element will act as a [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block) for any `position: fixed;` or `position: absolute;` elements that it contains.
 
 You can also use the individual transform properties: {{cssxref('translate')}}, {{cssxref('rotate')}}, and {{cssxref('scale')}}. These properties are applied in the order: `translate`, `rotate`, `scale`, and finally `transform`.
 
@@ -95,13 +96,13 @@ transform: revert-layer;
 transform: unset;
 ```
 
-The `transform` property may be specified as either the keyword value `none` or as one or more `<transform-function>` values.
-
 ### Values
 
+This property is specified as either the keyword value `none` or as a space-separated list of `<transform-function>` values:
+
 - {{cssxref("&lt;transform-function&gt;")}}
-  - : One or more of the [CSS transform functions](/en-US/docs/Web/CSS/transform-function) to be applied.
-    The transform functions are multiplied in order from left to right, meaning that composite transforms are effectively [applied in order from right to left](#transform_order).
+  - : One or more of the [CSS transform functions](/en-US/docs/Web/CSS/Reference/Values/transform-function) to be applied.
+    The transform functions are combined from left to right – each function establishes a new coordinate space for the next function and so on – so the visual result matches the written order of the functions. Alternatively, keeping the parent coordinate space fixed, the same transformation can be described as applying the functions in reverse order (right to left).
 - `none`
   - : Specifies that no transform should be applied.
 
@@ -110,7 +111,7 @@ The `transform` property may be specified as either the keyword value `none` or 
 Scaling/zooming animations are problematic for accessibility, as they are a common trigger for certain types of migraine.
 If you need to include such animations on your website, you should provide a control to allow users to turn off animations, preferably site-wide.
 
-Also, consider making use of the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} media feature — use it to write a [media query](/en-US/docs/Web/CSS/CSS_media_queries) that will turn off animations if the user has reduced animation specified in their system preferences.
+Also, consider making use of the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} media feature — use it to write a [media query](/en-US/docs/Web/CSS/Guides/Media_queries) that will turn off animations if the user has reduced animation specified in their system preferences.
 
 Find out more:
 
@@ -150,9 +151,11 @@ div {
 
 {{EmbedLiveSample("Translating_and_rotating_an_element", "400", "160")}}
 
-### Transform order
+### Comparing the order of transform functions
 
-The order of transform functions matters. In this example, two boxes are rotated and translated by the same values; only the transform function order is different.
+The order of transform functions matters.
+
+In this example, two boxes are rotated and translated by the same values, but the functions are in the opposite order. The dotted lines mark the X-axis before and after rotation.
 
 #### HTML
 
@@ -212,11 +215,9 @@ div {
 
 {{EmbedLiveSample("Transform_order", "400", "460")}}
 
-When an element is rotated before being translated, the translate direction is on the rotated axis. The axis as indicated with the dotted lines.
-
-### More examples
-
-Please see [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) and {{cssxref("&lt;transform-function&gt;")}} for more examples.
+- Box 1 (first `translateX()`, then `rotate()`): The coordinate space first shifts `200px` along the X axis, then rotates `135deg` within that shifted space, so the element ends up to the right of its original position, rotated.
+- Box 2 (first `rotate()`, then `translateX()`): The coordinate space first rotates `135deg`, so the element then moves `200px` along the rotated axis, in the direction shown by the dotted lines.
+  Please see [Using CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms/Using) and {{cssxref("&lt;transform-function&gt;")}} for more examples.
 
 ## Specifications
 
@@ -228,7 +229,7 @@ Please see [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_t
 
 ## See also
 
-- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms/Using)
 - {{cssxref("&lt;transform-function&gt;")}} data type with all the transform functions explained.
 - Individual CSS properties: {{cssxref('translate')}}, {{cssxref('rotate')}}, and {{cssxref('scale')}} (there is no `skew` property).
 - SVG {{SVGAttr("transform")}} attribute

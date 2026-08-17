@@ -42,8 +42,6 @@ User agents based on WebKit or Blink (such as Safari and Chrome) support several
 
 ### M
 
-- `-webkit-margin-after`
-- `-webkit-margin-before`
 - {{CSSxRef("-webkit-mask-box-image")}}: See {{cssxref("mask-border")}} and {{cssxref("border-image")}}.
 - {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-outset")}}: See {{cssxref("mask-border")}} and {{cssxref("border-image")}}.
 - {{CSSxRef("-webkit-mask-box-image", "-webkit-mask-box-image-repeat")}}: See {{cssxref("mask-border")}} and {{cssxref("border-image")}}.
@@ -107,21 +105,21 @@ For each of the properties below, use the standard equivalents.
 - `-webkit-border-start-color`: Use {{CSSxRef("border-inline-start-color")}}
 - `-webkit-border-start-style`: Use {{CSSxRef("border-inline-start-style")}}.
 - `-webkit-border-start-width`: Use {{CSSxRef("border-inline-start-width")}}.
-- `-webkit-box-align`: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("align-items")}}.
-- `-webkit-box-direction`: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("flex-direction")}}.
-- {{CSSxRef("box-flex-group", "-webkit-box-flex-group")}}: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("flex-basis")}}, {{CSSxRef("flex-grow")}}, and {{CSSxRef("flex-shrink")}}.
-- `-webkit-box-flex`: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("flex-grow")}}.
-- `-webkit-box-lines`: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("flex-flow")}}.
-- `-webkit-box-ordinal-group`: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("order")}}.
-- `-webkit-box-orient`: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("flex-direction")}}.
-- `-webkit-box-pack`: Use [CSS flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) with {{CSSxRef("justify-content")}}.
-- {{CSSxRef("-webkit-box-reflect")}}: Use the CSS {{CSSxRef("element", "element()")}} function.
+- `-webkit-box-align`: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("align-items")}}.
+- `-webkit-box-direction`: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("flex-direction")}}.
+- {{CSSxRef("box-flex-group", "-webkit-box-flex-group")}}: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("flex-basis")}}, {{CSSxRef("flex-grow")}}, and {{CSSxRef("flex-shrink")}}.
+- `-webkit-box-flex`: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("flex-grow")}}.
+- `-webkit-box-lines`: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("flex-flow")}}.
+- `-webkit-box-ordinal-group`: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("order")}}.
+- `-webkit-box-orient`: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("flex-direction")}}.
+- `-webkit-box-pack`: Use [CSS flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) with {{CSSxRef("justify-content")}}.
+- {{CSSxRef("-webkit-box-reflect")}}: Use the CSS {{cssxref("element()")}} function.
 
 ### C-I
 
-- `-webkit-column-break-after`: Use [CSS multicolumn layout](/en-US/docs/Web/CSS/CSS_multicol_layout) with {{CSSxRef("break-after")}}.
-- `-webkit-column-break-before`: Use [CSS multicolumn layout](/en-US/docs/Web/CSS/CSS_multicol_layout) with {{CSSxRef("break-before")}}.
-- `-webkit-column-break-inside`: Use [CSS multicolumn layout](/en-US/docs/Web/CSS/CSS_multicol_layout) with {{CSSxRef("break-inside")}}.
+- `-webkit-column-break-after`: Use [CSS multicolumn layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) with {{CSSxRef("break-after")}}.
+- `-webkit-column-break-before`: Use [CSS multicolumn layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) with {{CSSxRef("break-before")}}.
+- `-webkit-column-break-inside`: Use [CSS multicolumn layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) with {{CSSxRef("break-inside")}}.
 - `-webkit-font-feature-settings`: Use {{CSSxRef("font-feature-settings")}} (the prefixed version not supported in Safari).
 - `-webkit-hyphenate-character`: Use {{CSSxRef("hyphenate-character")}}.
 - `-webkit-initial-letter`: Use {{CSSxRef("initial-letter")}}.
@@ -129,8 +127,10 @@ For each of the properties below, use the standard equivalents.
 ### J-Z
 
 - `-webkit-line-clamp`: Use {{CSSxRef("line-clamp")}}.
-- `-webkit-margin-end`: Use {{CSSxRef("margin-block-end")}}.
-- `-webkit-margin-start`: Use {{CSSxRef("margin-block-start")}}.
+- `-webkit-margin-after`: Use {{CSSxRef("margin-block-end")}}.
+- `-webkit-margin-before`: Use {{CSSxRef("margin-block-start")}}.
+- `-webkit-margin-end`: Use {{CSSxRef("margin-inline-end")}}.
+- `-webkit-margin-start`: Use {{CSSxRef("margin-inline-start")}}.
 - `-webkit-padding-after`: Use {{CSSxRef("padding-block-end")}}.
 - `-webkit-padding-before`: Use {{CSSxRef("padding-block-start")}}.
 - `-webkit-padding-end`: Use {{CSSxRef("padding-inline-end")}}.
@@ -192,4 +192,3 @@ If a pseudo-element (but not pseudo-class) has a `-webkit-` prefix, Blink, WebKi
 
 - [Mozilla (-moz-) vendor-prefixed CSS extensions](/en-US/docs/Web/CSS/Reference/Mozilla_extensions)
 - {{glossary("Vendor Prefix")}} glossary entry
-- [Styling Form Controls on the WebKit Trac](https://trac.webkit.org/wiki/Styling%20Form%20Controls)

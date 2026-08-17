@@ -1,12 +1,13 @@
 ---
-title: grid-template
+title: "`grid-template` CSS property"
+short-title: grid-template
 slug: Web/CSS/Reference/Properties/grid-template
 page-type: css-shorthand-property
 browser-compat: css.properties.grid-template
 sidebar: cssref
 ---
 
-The **`grid-template`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) for defining {{glossary("grid column", "grid columns")}}, {{glossary("grid_row", "grid rows")}}, and {{glossary("grid areas", "grid areas")}}.
+The **`grid-template`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) for defining {{glossary("grid column", "grid columns")}}, {{glossary("grid_row", "grid rows")}}, and {{glossary("grid areas", "grid areas")}}.
 
 {{InteractiveExample("CSS Demo: grid-template")}}
 
@@ -74,9 +75,9 @@ grid-template:
 
 This property is a shorthand for the following CSS properties:
 
-- [`grid-template-areas`](/en-US/docs/Web/CSS/Reference/Properties/grid-template-areas)
-- [`grid-template-columns`](/en-US/docs/Web/CSS/Reference/Properties/grid-template-columns)
-- [`grid-template-rows`](/en-US/docs/Web/CSS/Reference/Properties/grid-template-rows)
+- {{cssxref("grid-template-areas")}}
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-template-rows")}}
 
 ## Syntax
 
@@ -120,7 +121,7 @@ grid-template: unset;
   - : Sets {{cssxref("grid-template-areas")}} to the strings listed, {{cssxref("grid-template-rows")}} to the track sizes following each string (filling in `auto` for any missing sizes), and splicing in the named lines defined before/after each size, and {{cssxref("grid-template-columns")}} to the track listing specified after the slash (or `none`, if not specified).
 
     > [!NOTE]
-    > The {{cssxref("repeat", "repeat()")}} function isn't allowed in these track listings, as the tracks are intended to visually line up one-to-one with the rows/columns in the "ASCII art".
+    > The {{cssxref("repeat()")}} function isn't allowed in these track listings, as the tracks are intended to visually line up one-to-one with the rows/columns in the "ASCII art".
 
 > [!NOTE]
 > The {{cssxref("grid")}} shorthand accepts the same syntax, but also resets the implicit grid properties to their initial values. Use `grid` (as opposed to `grid-template`) to prevent these values from cascading in separately.
@@ -200,6 +201,6 @@ footer {
 - {{cssxref("grid-template-rows")}}
 - {{cssxref("grid-template-columns")}}
 - {{cssxref("grid-template-areas")}}
-- [Line-based placement with CSS grid](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-- [Grid template areas: grid definition shorthands](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#grid_definition_shorthands)
+- [Line-based placement with CSS grid](/en-US/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
+- [Grid template areas: grid definition shorthands](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas#grid_definition_shorthands)
 - Video: [Grid template shorthand](https://gridbyexample.com/video/grid-template-shorthand/)

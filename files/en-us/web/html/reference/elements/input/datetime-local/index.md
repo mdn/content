@@ -1,5 +1,6 @@
 ---
-title: <input type="datetime-local">
+title: '`<input type="datetime-local">` HTML attribute value'
+short-title: <input type="datetime-local">
 slug: Web/HTML/Reference/Elements/input/datetime-local
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_datetime-local
@@ -226,7 +227,7 @@ You can use the [`min`](/en-US/docs/Web/HTML/Reference/Elements/input#min) and [
 
 Only days in June 2025 can be selected. Depending on what browser you are using, times outside the specified values might not be selectable. In other browsers, invalid dates and times are selectable but will match {{CSSXref(":invalid")}} and {{CSSXref(":out-of-range")}} and will fail [validation](#validation).
 
-In some browsers (Chrome and Edge), only the "days" part of the date value will be editable, and dates outside June can't be scrolled. In others (Safari), the date picker will appear to allow any date, but the value will be clamped to the valid range when a date is selected.
+In some browsers (Safari), the date picker will appear to allow any date, but the value will be clamped to the valid range when a date is selected.
 
 The valid range included all times between the `min` and `max` values; the time of day is only constrained on the first and last dates in the range.
 
@@ -272,14 +273,6 @@ The valid range included all times between the `min` and `max` values; the time 
     <tr>
       <td><strong>DOM interface</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
-        {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>

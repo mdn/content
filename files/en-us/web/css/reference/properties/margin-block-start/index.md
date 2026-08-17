@@ -1,5 +1,6 @@
 ---
-title: margin-block-start
+title: "`margin-block-start` CSS property"
+short-title: margin-block-start
 slug: Web/CSS/Reference/Properties/margin-block-start
 page-type: css-property
 browser-compat: css.properties.margin-block-start
@@ -92,7 +93,7 @@ It relates to {{cssxref("margin-block-end")}}, {{cssxref("margin-inline-start")}
 
 ### Values
 
-The `margin-block-start` property takes the same values as the {{cssxref("margin-left")}} property.
+The `margin-block-start` property takes the same values as the {{cssxref("margin-top")}} property.
 
 ## Formal definition
 
@@ -144,6 +145,6 @@ div {
 
 ## See also
 
-- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values)
 - The mapped physical properties: {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

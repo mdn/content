@@ -9,8 +9,6 @@ sidebar: glossarysidebar
 
 The following example shows an HTML document and corresponding "XHTML" document, and the accompanying {{Glossary("HTTP")}} {{HTTPHeader("Content-Type")}} headers they should be served with.
 
-### HTML document
-
 ```html
 <!-- Content-Type: text/html -->
 
@@ -21,12 +19,10 @@ The following example shows an HTML document and corresponding "XHTML" document,
     <title>HTML</title>
   </head>
   <body>
-    <p>I am a HTML document</p>
+    <p>I am an HTML document</p>
   </body>
 </html>
 ```
-
-### XHTML document
 
 ```xml
 <!-- Content-Type: application/xhtml+xml -->

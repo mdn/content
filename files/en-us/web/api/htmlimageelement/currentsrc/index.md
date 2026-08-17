@@ -8,28 +8,19 @@ browser-compat: api.HTMLImageElement.currentSrc
 
 {{APIRef("HTML DOM")}}
 
-The read-only {{domxref("HTMLImageElement")}} property
-**`currentSrc`** indicates the URL of the image which is
-currently presented in the {{HTMLElement("img")}} element it represents.
+The **`currentSrc`** read-only property of the {{domxref("HTMLImageElement")}} interface indicates the URL of the image selected by the browser to load.
 
 ## Value
 
-A string indicating the full URL of the image currently visible in
-the {{HTMLElement("img")}} element represented by the `HTMLImageElement`.
-This is useful when you provide multiple image options using the
-{{domxref("HTMLImageElement.sizes", "sizes")}} and/or
-{{domxref("HTMLImageElement.srcset")}} properties. `currentSrc` lets you
-determine which image from the set of provided images was selected by the browser.
+A string indicating the full URL of the image currently selected by the browser to load. If the image uses the {{domxref("HTMLImageElement.srcset", "srcset")}} attribute, `currentSrc` lets you determine which image from the set of provided images was selected by the browser. The property's value is unrelated to whether the image has successfully loaded or not.
 
 ## Examples
 
-In this example, two different sizes are provided for an image of a clock. One is 200px
-wide and the other is 400px wide. The [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) attribute is
-provided to indicate that the image should be drawn at 50% of the document width if the
-viewport is under 400px wide; otherwise, the image is drawn at 90% width of the
-document.
+### Testing which image is loaded
 
-### HTML
+In this example, two different sizes are provided for an image of a clock. One is 200px wide and the other is 400px wide. The [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) attribute is provided to indicate that the image should be drawn at 50% of the document width if the viewport is under 400px wide; otherwise, the image is drawn at 90% width of the document.
+
+#### HTML
 
 ```html
 <img
@@ -42,7 +33,7 @@ document.
   sizes="(width <= 400px) 50%, 90%" />
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
 const clockImage = document.querySelector("img");
@@ -54,9 +45,9 @@ p.textContent = clockImage.currentSrc.endsWith("200px.png")
 document.body.appendChild(p);
 ```
 
-### Result
+#### Result
 
-{{EmbedLiveSample("Examples", 640, 370)}}
+{{EmbedLiveSample("Testing which image is loaded", 640, 370)}}
 
 ## Specifications
 
@@ -65,3 +56,8 @@ document.body.appendChild(p);
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("HTMLImageElement.src")}}
+- {{domxref("HTMLImageElement.srcSet")}}

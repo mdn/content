@@ -1,5 +1,6 @@
 ---
-title: text-underline-position
+title: "`text-underline-position` CSS property"
+short-title: text-underline-position
 slug: Web/CSS/Reference/Properties/text-underline-position
 page-type: css-property
 browser-compat: css.properties.text-underline-position
@@ -62,8 +63,10 @@ text-underline-position: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `auto`
-  - : The {{glossary("user agent")}} uses its own algorithm to place the line at or under the {{glossary("/Baseline/Typography", "alphabetic baseline")}}.
+  - : The {{glossary("user agent")}} uses its own algorithm to place the line at or under the {{glossary("Baseline/Typography", "alphabetic baseline")}}.
 - `from-font`
   - : If the font file includes information about a preferred position, use that value. If the font file doesn't include this information, behave as if `auto` was set, with the browser choosing an appropriate position.
 - `under`
@@ -123,7 +126,7 @@ p {
 
 In this example we set both the paragraphs to have a thick underline. In the horizontal text we use `text-underline-position: under;` to put the underline below all the descenders.
 
-In the text with a vertical [`writing-mode`](/en-US/docs/Web/CSS/Reference/Properties/writing-mode) set, we can then use values of `left` or `right` to make the underline appear on the left or right of the text as required.
+In the text with a vertical {{cssxref("writing-mode")}} set, we can then use values of `left` or `right` to make the underline appear on the left or right of the text as required.
 
 The live example looks like this:
 

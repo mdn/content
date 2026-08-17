@@ -1,7 +1,9 @@
 ---
-title: loop
+title: "loop: Wasm text instruction"
+short-title: loop
 slug: WebAssembly/Reference/Control_flow/loop
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.loop
 sidebar: webassemblysidebar
 ---
 
@@ -67,3 +69,11 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 | Instruction | Binary opcode |
 | ----------- | ------------- |
 | `loop`      | `0x03`        |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

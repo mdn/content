@@ -71,7 +71,7 @@ If you really value the clarity of using `.mjs` for modules versus using `.js` f
 It is also worth noting that:
 
 - Some tools may never support `.mjs`.
-- The `<script type="module">` attribute is used to denote when a module is being pointed to, as you'll see below.
+- The `<script type="module">` attribute is used to denote when a module is being pointed to, as described in [Applying the module to your HTML](#applying_the_module_to_your_html).
 
 ## Exporting module features
 
@@ -421,7 +421,7 @@ Module-defined variables are scoped to the module unless explicitly attached to 
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <title></title>
+    <title>Example page</title>
     <link rel="stylesheet" href="" />
   </head>
   <body>

@@ -1,5 +1,6 @@
 ---
-title: stroke-width
+title: "`stroke-width` CSS property"
+short-title: stroke-width
 slug: Web/CSS/Reference/Properties/stroke-width
 page-type: css-property
 browser-compat: css.properties.stroke-width

@@ -64,7 +64,7 @@ Tracks created in the implicit grid are auto-sized by default, however you can d
 
 ## See also
 
-- [Basic concepts of grid layout](/en-US/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [Basic concepts of grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts)
 - [Definition of grid tracks in the CSS grid layout specification](https://drafts.csswg.org/css-grid/#grid-track-concept)
 - Property reference
   - {{cssxref("grid-template-columns")}}

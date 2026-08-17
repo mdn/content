@@ -1,5 +1,6 @@
 ---
-title: list-style-type
+title: "`list-style-type` CSS property"
+short-title: list-style-type
 slug: Web/CSS/Reference/Properties/list-style-type
 page-type: css-property
 browser-compat: css.properties.list-style-type
@@ -42,7 +43,7 @@ list-style-type: "\1F44D";
     <p>
       <code>space-counter</code> is defined with
       <a
-        href="//developer.mozilla.org/docs/Web/CSS/@counter-style"
+        href="//developer.mozilla.org/docs/Web/CSS/Reference/At-rules/@counter-style"
         target="_parent"
         ><code>@counter-style</code></a
       >
@@ -87,7 +88,7 @@ hr {
 }
 ```
 
-The marker will be [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword), the same as the computed [color](/en-US/docs/Web/CSS/color_value) of the element it applies to.
+The marker will be [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword), the same as the computed [color](/en-US/docs/Web/CSS/Reference/Values/color_value) of the element it applies to.
 
 Only a few elements ({{HTMLElement("li")}} and {{HTMLElement("summary")}}) have a default value of `display: list-item`. However, the `list-style-type` property may be applied to any element whose {{cssxref("display")}} value is set to `list-item`. Moreover, because this property is inherited, it can be set on a parent element (commonly {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make it apply to all list items.
 
@@ -136,7 +137,7 @@ Note that:
 
 - {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
   - : An identifier matching the value of a {{cssxref("@counter-style")}} or one of the predefined styles:
-- {{cssxref("symbols", "symbols()")}}
+- {{cssxref("symbols()")}}
   - : Defines an anonymous style of the list.
 - {{cssxref("&lt;string&gt;")}}
   - : The specified string will be used as the item's marker.
@@ -656,18 +657,18 @@ ol.shortcut {
       value="disclosure-closed" />disclosure-closed
   </label>
 
-  <label for="-moz-ethiopic-halehame">
+  <label for="moz-ethiopic-halehame">
     <input
       type="radio"
-      id="-moz-ethiopic-halehame"
+      id="moz-ethiopic-halehame"
       name="type"
       value="-moz-ethiopic-halehame" />-moz-ethiopic-halehame
   </label>
 
-  <label for="-moz-ethiopic-halehame-am">
+  <label for="moz-ethiopic-halehame-am">
     <input
       type="radio"
-      id="-moz-ethiopic-halehame-am"
+      id="moz-ethiopic-halehame-am"
       name="type"
       value="-moz-ethiopic-halehame-am" />-moz-ethiopic-halehame-am
   </label>
@@ -704,40 +705,40 @@ ol.shortcut {
     <input type="radio" id="urdu" name="type" value="urdu" />urdu
   </label>
 
-  <label for="-moz-ethiopic-halehame-ti-er">
+  <label for="moz-ethiopic-halehame-ti-er">
     <input
       type="radio"
-      id="-moz-ethiopic-halehame-ti-er"
+      id="moz-ethiopic-halehame-ti-er"
       name="type"
       value="-moz-ethiopic-halehame-ti-er" />-moz-ethiopic-halehame-ti-er
   </label>
 
-  <label for="-moz-ethiopic-halehame-ti-et">
+  <label for="moz-ethiopic-halehame-ti-et">
     <input
       type="radio"
-      id="-moz-ethiopic-halehame-ti-et"
+      id="moz-ethiopic-halehame-ti-et"
       name="type"
       value="-moz-ethiopic-halehame-ti-et" />-moz-ethiopic-halehame-ti-et
   </label>
 
-  <label for="-moz-hangul">
+  <label for="moz-hangul">
     <input
       type="radio"
-      id="-moz-hangul"
+      id="moz-hangul"
       name="type"
       value="-moz-hangul" />-moz-hangul
   </label>
 
-  <label for="-moz-hangul-consonant">
+  <label for="moz-hangul-consonant">
     <input
       type="radio"
-      id="-moz-hangul-consonant"
+      id="moz-hangul-consonant"
       name="type"
       value="-moz-hangul-consonant" />-moz-hangul-consonant
   </label>
 
-  <label for="-moz-urdu">
-    <input type="radio" id="-moz-urdu" name="type" value="-moz-urdu" />-moz-urdu
+  <label for="moz-urdu">
+    <input type="radio" id="moz-urdu" name="type" value="-moz-urdu" />-moz-urdu
   </label>
 </div>
 ```
@@ -793,5 +794,5 @@ We're not limited to the list style types defined on this page or the specificat
 - {{Cssxref("list-style-image")}} property
 - {{Cssxref("list-style-position")}} property
 - {{Cssxref("::marker")}} pseudo-element
-- [CSS lists and counters](/en-US/docs/Web/CSS/CSS_lists) module
-- [CSS counter styles](/en-US/docs/Web/CSS/CSS_counter_styles) module
+- [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module
+- [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module

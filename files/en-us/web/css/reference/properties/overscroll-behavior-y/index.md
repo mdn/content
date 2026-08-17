@@ -1,5 +1,6 @@
 ---
-title: overscroll-behavior-y
+title: "`overscroll-behavior-y` CSS property"
+short-title: overscroll-behavior-y
 slug: Web/CSS/Reference/Properties/overscroll-behavior-y
 page-type: css-property
 browser-compat: css.properties.overscroll-behavior-y
@@ -73,4 +74,4 @@ See {{cssxref("overscroll-behavior")}} for a full example and explanation.
 - {{cssxref("overscroll-behavior-x")}}
 - {{cssxref("overscroll-behavior-inline")}}
 - {{cssxref("overscroll-behavior-block")}}
-- [CSS overscroll behavior](/en-US/docs/Web/CSS/CSS_overscroll_behavior) module
+- [CSS overscroll behavior](/en-US/docs/Web/CSS/Guides/Overscroll_behavior) module

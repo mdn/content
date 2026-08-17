@@ -3,12 +3,10 @@ title: "NavigateEvent: hasUAVisualTransition property"
 short-title: hasUAVisualTransition
 slug: Web/API/NavigateEvent/hasUAVisualTransition
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.NavigateEvent.hasUAVisualTransition
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`hasUAVisualTransition`** read-only property of the {{domxref("NavigateEvent")}} interface returns `true` if the user agent performed a visual transition for this navigation before dispatching this event, or `false` otherwise.
 

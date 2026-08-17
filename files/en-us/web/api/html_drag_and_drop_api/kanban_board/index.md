@@ -95,9 +95,15 @@ This defines the basic structure and styles for our application. The tasks are e
 
 We want to make the task columns into valid [drop targets](/en-US/docs/Web/API/HTML_Drag_and_Drop_API#drop_target) for the dragged tasks. As a baseline, we need to listen for {{domxref("HTMLElement/dragover_event", "dragover")}} and cancel it. However, we take care and only cancel the event if the drag event is dragging a task—if we are trying to drop anything else, the column should not be a drop target.
 
+First, save all columns in a global variable.
+
 ```js live-sample___kanban
 const columns = document.querySelectorAll(".task-column");
+```
 
+Then, declare a `dragover` event handler for each column—this event handler will be expanded later.
+
+```js
 columns.forEach((column) => {
   column.addEventListener("dragover", (event) => {
     // Test a custom type we will set later
@@ -177,12 +183,17 @@ function makePlaceholder(draggedTask) {
 }
 ```
 
-This indicator will be moved around on {{domxref("HTMLElement/dragover_event", "dragover")}}. This is the most complex of all, so we've extracted it into a separate function. We first get the elements we need:
+This indicator will be moved around on {{domxref("HTMLElement/dragover_event", "dragover")}}. This is the most complex of all, so we've extracted it into a separate function. The previous code for the `dragover` event has been moved to this function. We first get the elements we need, safely aborting if the drag is not a task:
 
 ```js live-sample___kanban
 function movePlaceholder(event) {
-  const column = event.currentTarget;
+  if (!event.dataTransfer.types.includes("task")) {
+    return;
+  }
+  event.preventDefault();
+  // Must exist because the ID is added for all drag events with a "task" data entry
   const draggedTask = document.getElementById("dragged-task");
+  const column = event.currentTarget;
   const tasks = column.children[1];
   const existingPlaceholder = column.querySelector(".placeholder");
 ```

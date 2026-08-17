@@ -1,5 +1,6 @@
 ---
-title: corner-right-shape
+title: "`corner-right-shape` CSS property"
+short-title: corner-right-shape
 slug: Web/CSS/Reference/Properties/corner-right-shape
 page-type: css-property
 status:
@@ -128,5 +129,5 @@ The rendered result looks like this:
 - {{cssxref("corner-block-start-shape")}}, {{cssxref("corner-block-end-shape")}}, {{cssxref("corner-inline-start-shape")}}, and {{cssxref("corner-inline-end-shape")}}
 - {{cssxref("border-radius")}} shorthand property
 - {{cssxref("border-top-right-radius")}} and {{cssxref("border-bottom-right-radius")}}
-- [CSS borders and box decorations](/en-US/docs/Web/CSS/CSS_borders_and_box_decorations) module
-- [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module
+- [CSS borders and box decorations](/en-US/docs/Web/CSS/Guides/Borders_and_box_decorations) module
+- [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module

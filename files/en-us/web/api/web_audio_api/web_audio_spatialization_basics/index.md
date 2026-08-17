@@ -177,7 +177,7 @@ We can move it left and right, up and down, and back and forth; we can also rota
 The sound direction is coming from the boombox speaker at the front, so when we rotate it, we can alter the sound's direction — i.e., make it project to the back when the boombox is rotated 180 degrees and facing away from us.
 
 We need to set up a few things for the interface.
-First, we'll get references to the elements we want to move, then we'll store references to the values we'll change when we set up [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) to actually do the movement.
+First, we'll get references to the elements we want to move, then we'll store references to the values we'll change when we set up [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms) to actually do the movement.
 Finally, we'll set some bounds so our boombox doesn't move too far in any direction:
 
 ```js

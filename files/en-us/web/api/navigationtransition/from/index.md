@@ -3,12 +3,10 @@ title: "NavigationTransition: from property"
 short-title: from
 slug: Web/API/NavigationTransition/from
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.NavigationTransition.from
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`from`** read-only property of the
 {{domxref("NavigationTransition")}} interface returns the {{domxref("NavigationHistoryEntry")}} that the transition is coming from.

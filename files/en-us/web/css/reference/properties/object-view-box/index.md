@@ -1,13 +1,15 @@
 ---
-title: object-view-box
+title: "`object-view-box` CSS property"
+short-title: object-view-box
 slug: Web/CSS/Reference/Properties/object-view-box
 page-type: css-property
 status:
   - experimental
 browser-compat: css.properties.object-view-box
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`object-view-box`** [CSS](/en-US/docs/Web/CSS) property defines a rectangle as a viewable area (viewbox) within a {{glossary("replaced elements", "replaced element")}}, enabling the content of the replaced element to be zoomed or panned. It works similarly to the SVG {{SVGAttr("viewBox")}} attribute.
 
@@ -88,7 +90,7 @@ object-view-box: unset;
 - `none`
   - : The element does not have a view box. This is the default.
 
-- [`<basic-shape-rect>`](/en-US/docs/Web/CSS/basic-shape#syntax_for_rectangles_basic-shape-rect)
+- [`<basic-shape-rect>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape#syntax_for_rectangles_basic-shape-rect)
   - : An {{cssxref("basic-shape/inset","inset()")}}, {{cssxref("basic-shape/xywh","xywh()")}}, or {{cssxref("basic-shape/rect","rect()")}} function specifying a view box for an element with natural dimensions (replaced elements). Resolves to `none` otherwise.
 
 ## Description
@@ -362,9 +364,9 @@ img {
 
 ## See also
 
-- [Using the CSS `object-view-box` property](/en-US/docs/Web/CSS/CSS_images/Using_object-view-box)
+- [Using the CSS `object-view-box` property](/en-US/docs/Web/CSS/Guides/Images/Using_object-view-box)
 - {{cssxref("object-fit")}}
 - {{cssxref("object-position")}}
 - {{cssxref("background-size")}}
-- [Understanding aspect ratio](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
-- [CSS images](/en-US/docs/Web/CSS/CSS_images) module
+- [Understanding aspect ratio](/en-US/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)
+- [CSS images](/en-US/docs/Web/CSS/Guides/Images) module

@@ -3,13 +3,9 @@ title: Temporal.PlainMonthDay.prototype.toLocaleString()
 short-title: toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay/toLocaleString
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.PlainMonthDay.toLocaleString
 sidebar: jsref
 ---
-
-{{SeeCompatTable}}
 
 The **`toLocaleString()`** method of {{jsxref("Temporal.PlainMonthDay")}} instances returns a string with a language-sensitive representation of this month-day. In implementations with [`Intl.DateTimeFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) support, this method delegates to `Intl.DateTimeFormat`.
 

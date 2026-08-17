@@ -3,12 +3,10 @@ title: "WorkerNavigator: appName property"
 short-title: appName
 slug: Web/API/WorkerNavigator/appName
 page-type: web-api-instance-property
-status:
-  - deprecated
 browser-compat: api.WorkerNavigator.appName
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}{{AvailableInWorkers("worker")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers("worker")}}
 
 The value of the **`WorkerNavigator.appName`** property is always
 `"Netscape"`, in any browser. This property is kept only for compatibility

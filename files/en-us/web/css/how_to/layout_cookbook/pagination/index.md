@@ -104,7 +104,7 @@ nav {
 
 ## Choices made
 
-This pattern is laid out using [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) — one flex container nested inside another. The {{htmlelement("nav")}} element is designated a flex container in order that we can center the list inside using the {{cssxref("justify-content")}} property.
+This pattern is laid out using [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) — one flex container nested inside another. The {{htmlelement("nav")}} element is designated a flex container in order that we can center the list inside using the {{cssxref("justify-content")}} property.
 
 The list itself also becomes a flex container to lay the items out as a row. To space the items out we can either use a {{cssxref("margin")}} on the flex items or add a {{cssxref("gap")}} on the flex container.
 

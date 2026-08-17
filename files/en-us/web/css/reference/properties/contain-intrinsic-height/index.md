@@ -1,12 +1,13 @@
 ---
-title: contain-intrinsic-height
+title: "`contain-intrinsic-height` CSS property"
+short-title: contain-intrinsic-height
 slug: Web/CSS/Reference/Properties/contain-intrinsic-height
 page-type: css-property
 browser-compat: css.properties.contain-intrinsic-height
 sidebar: cssref
 ---
 
-The **`contain-intrinsic-height`** [CSS](/en-US/docs/Web/CSS) property sets the height of an element that a browser can use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#size_containment).
+The **`contain-intrinsic-height`** [CSS](/en-US/docs/Web/CSS) property sets the height of an element that a browser can use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/Guides/Containment/Using#size_containment).
 
 ## Syntax
 
@@ -42,7 +43,7 @@ The following values may be specified for an element.
 
 ## Description
 
-The property is commonly applied alongside elements that can trigger size containment, such as [`contain: size`](/en-US/docs/Web/CSS/Reference/Properties/contain) and [`content-visibility`](/en-US/docs/Web/CSS/Reference/Properties/content-visibility), and may also be set using the [`contain-intrinsic-size`](/en-US/docs/Web/CSS/Reference/Properties/contain-intrinsic-size) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties).
+The property is commonly applied alongside elements that can trigger size containment, such as [`contain: size`](/en-US/docs/Web/CSS/Reference/Properties/contain) and {{cssxref("content-visibility")}}, and may also be set using the {{cssxref("contain-intrinsic-size")}} [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties).
 
 Size containment allows a user agent to lay out an element as though it had a fixed size, preventing unnecessary reflows by avoiding the re-rendering of child elements to determine the actual size (thereby improving user experience).
 By default, size containment treats elements as though they had no contents, and may collapse the layout in the same way as if the contents had no height (or width).
@@ -74,7 +75,7 @@ The HTML below defines an element "contained_element" that will be subject to si
 </div>
 ```
 
-The CSS below sets the [`content-visibility`](/en-US/docs/Web/CSS/Reference/Properties/content-visibility) of `contained_element` to `auto`, so if the element is hidden it will be size constrained.
+The CSS below sets the {{cssxref("content-visibility")}} of `contained_element` to `auto`, so if the element is hidden it will be size constrained.
 The width and height that are used when it is size constrained are set at the same time using `contain-intrinsic-width` and `contain-intrinsic-height`, respectively.
 
 ```css

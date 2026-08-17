@@ -1,5 +1,6 @@
 ---
-title: "<rt>: The Ruby Text element"
+title: "`<rt>` HTML ruby text element"
+short-title: <rt>
 slug: Web/HTML/Reference/Elements/rt
 page-type: html-element
 browser-compat: html.elements.rt
@@ -115,3 +116,4 @@ body {
 - {{HTMLElement("rb")}}
 - {{HTMLElement("rtc")}}
 - {{CSSXRef("text-transform", "text-transform: full-size-kana")}}
+- [CSS ruby layout](/en-US/docs/Web/CSS/Guides/Ruby_layout) module

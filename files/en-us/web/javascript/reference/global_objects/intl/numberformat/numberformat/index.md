@@ -104,7 +104,7 @@ Depending on the `style` used, some of them may be ignored, and others may be re
 - `currencySign`
   - : In many locales, accounting format means to wrap the number with parentheses instead of appending a minus sign. Possible values are `"standard"` and `"accounting"`; the default is `"standard"`.
 - `unit`
-  - : The unit to use in `unit` formatting, Possible values are listed in [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_unit_identifiers). Pairs of simple units can be concatenated with "-per-" to make a compound unit. There is no default value; if the `style` is `"unit"`, the `unit` property must be provided.
+  - : The unit to use in `unit` formatting. Possible values are listed in [`Intl.supportedValuesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_unit_identifiers). Pairs of simple units can be concatenated with "-per-" to make a compound unit. There is no default value; if the `style` is `"unit"`, the `unit` property must be provided.
 - `unitDisplay`
   - : The unit formatting style to use in `unit` formatting. Possible values are:
     - `"short"` (default)

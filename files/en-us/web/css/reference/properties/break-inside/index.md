@@ -1,5 +1,6 @@
 ---
-title: break-inside
+title: "`break-inside` CSS property"
+short-title: break-inside
 slug: Web/CSS/Reference/Properties/break-inside
 page-type: css-property
 browser-compat: css.properties.break-inside
@@ -27,7 +28,7 @@ break-inside: avoid;
   <button id="print-btn">Show Print Preview</button>
   <div class="box-container">
     <div class="box">Content before the property</div>
-    <div class="box" id="example-element">Content with 'break-before'</div>
+    <div class="box" id="example-element">Content with 'break-inside'</div>
     <div class="box">Content after the property</div>
   </div>
 </div>

@@ -8,7 +8,7 @@ browser-compat: api.DOMMatrixReadOnly.toString
 
 {{APIRef("DOM")}}
 
-The **`toString()`** {{Glossary("stringifier")}} of the {{domxref("DOMMatrixReadOnly")}} interface returns the value of the matrix as a string in the form of a `matrix()` or `matrix3d()` CSS [transform function](/en-US/docs/Web/CSS/transform-function); comma-separated lists of 6 or 16 coordinate values, prepended by `"matrix(` or `"matrix3d(` respectively, appended by `)"`.
+The **`toString()`** {{Glossary("stringifier")}} of the {{domxref("DOMMatrixReadOnly")}} interface returns the value of the matrix as a string in the form of a `matrix()` or `matrix3d()` CSS [transform function](/en-US/docs/Web/CSS/Reference/Values/transform-function); comma-separated lists of 6 or 16 coordinate values, prepended by `"matrix(` or `"matrix3d(` respectively, appended by `)"`.
 
 For a 2D matrix, the elements [`a` through `f`](/en-US/docs/Web/API/DOMMatrix#a) are listed, for a total of six values and the form `matrix(a, b, c, d, e, f)`. See the {{cssxref("transform-function/matrix", "matrix()")}} CSS function for details on this syntax.
 

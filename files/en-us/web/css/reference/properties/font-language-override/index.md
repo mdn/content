@@ -1,5 +1,6 @@
 ---
-title: font-language-override
+title: "`font-language-override` CSS property"
+short-title: font-language-override
 slug: Web/CSS/Reference/Properties/font-language-override
 page-type: css-property
 browser-compat: css.properties.font-language-override

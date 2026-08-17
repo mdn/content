@@ -47,7 +47,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 
 ### DOM
 
-- [Using media queries from code](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
+- [Using media queries from code](/en-US/docs/Web/CSS/Guides/Media_queries/Testing)
   - : You can now test the result of a media query string programmatically using the {{ domxref("window.matchMedia()") }} method and the {{ domxref("MediaQueryList") }} interface.
 - [Touch events](/en-US/docs/Web/API/Touch_events)
   - : Firefox 6 adds support for W3C standard touch events; these make it easy to interpret one or more touches at a time on touch-sensitive surfaces such as touch screens and trackpads.
@@ -65,7 +65,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 - The {{ domxref("FileReader") }} interface's `abort()` method now throws an exception when used if no file read is in progress.
 - The {{ domxref("window.postMessage()") }} method now uses [the structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) to let you pass JavaScript objects instead of just strings from one window to another.
 - The {{ domxref("window.history") }} API now uses [the structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) to serialize the objects you pass to the `pushState()` and `replaceState()` methods; this lets you use more complex objects (including those that contain cyclic graphs of references).
-- You can now [detect when printing has been initiated and has completed](/en-US/docs/Web/CSS/CSS_media_queries/Printing#detecting_print_requests) by listening for the new `beforeprint` and `afterprint` events.
+- You can now [detect when printing has been initiated and has completed](/en-US/docs/Web/CSS/Guides/Media_queries/Printing#detecting_print_requests) by listening for the new `beforeprint` and `afterprint` events.
 - The `document.strictErrorChecking` property has been removed, since it was never implemented and was removed from the DOM specification.
 - The standard {{ domxref("event.defaultPrevented") }} property is now supported; you should use this instead of the non-standard `getPreventDefault()` method to detect whether or not {{ domxref("event.preventDefault()") }} was called on the event.
 - The {{ domxref("window.top") }} property is now properly read only.

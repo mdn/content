@@ -28,7 +28,7 @@ This article provides information about the changes in Firefox 69 that will affe
 
 #### Network
 
-- Resources that got blocked because of [CSP](/en-US/docs/Web/HTTP/Guides/CSP) or [Mixed Content](/en-US/docs/Web/Security/Mixed_content) are now shown in the Network panel, with details of the reason ([Firefox bug 1556451](https://bugzil.la/1556451)).
+- Resources that got blocked because of [CSP](/en-US/docs/Web/HTTP/Guides/CSP) or [Mixed Content](/en-US/docs/Web/Security/Defenses/Mixed_content) are now shown in the Network panel, with details of the reason ([Firefox bug 1556451](https://bugzil.la/1556451)).
 - A new optional _URL_ column in the Network panel can be enabled to show the full URL for resources ([Firefox bug 1341155](https://bugzil.la/1341155)).
 
 #### Inspector

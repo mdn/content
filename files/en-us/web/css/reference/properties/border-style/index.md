@@ -1,12 +1,13 @@
 ---
-title: border-style
+title: "`border-style` CSS property"
+short-title: border-style
 slug: Web/CSS/Reference/Properties/border-style
 page-type: css-shorthand-property
 browser-compat: css.properties.border-style
 sidebar: cssref
 ---
 
-The **`border-style`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the line style for all four sides of an element's border.
+The **`border-style`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the line style for all four sides of an element's border.
 
 {{InteractiveExample("CSS Demo: border-style")}}
 
@@ -61,10 +62,10 @@ body {
 
 This property is a shorthand for the following CSS properties:
 
-- [`border-bottom-style`](/en-US/docs/Web/CSS/Reference/Properties/border-bottom-style)
-- [`border-left-style`](/en-US/docs/Web/CSS/Reference/Properties/border-left-style)
-- [`border-right-style`](/en-US/docs/Web/CSS/Reference/Properties/border-right-style)
-- [`border-top-style`](/en-US/docs/Web/CSS/Reference/Properties/border-top-style)
+- {{cssxref("border-bottom-style")}}
+- {{cssxref("border-left-style")}}
+- {{cssxref("border-right-style")}}
+- {{cssxref("border-top-style")}}
 
 ## Syntax
 
@@ -112,9 +113,9 @@ Each value is a keyword chosen from the list below.
 - `<line-style>`
   - : Describes the style of the border. It can have the following values:
     - `none`
-      - : Like the `hidden` keyword, displays no border. Unless a {{cssxref("background-image")}} is set, the computed value of the same side's {{cssxref("border-width")}} will be `0`, even if the specified value is something else. In the case of table cell and border collapsing, the `none` value has the _lowest_ priority: if any other conflicting border is set, it will be displayed.
+      - : Like the `hidden` keyword, displays no border. Unless a {{cssxref("background-image")}} is set, the [used value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value) of the same side's {{cssxref("border-width")}} will be `0`, even if the specified value is something else. In the case of table cell and border collapsing, the `none` value has the _lowest_ priority: if any other conflicting border is set, it will be displayed.
     - `hidden`
-      - : Like the `none` keyword, displays no border. Unless a {{cssxref("background-image")}} is set, the computed value of the same side's {{cssxref("border-width")}} will be `0`, even if the specified value is something else. In the case of table cell and border collapsing, the `hidden` value has the _highest_ priority: if any other conflicting border is set, it won't be displayed.
+      - : Like the `none` keyword, displays no border. Unless a {{cssxref("background-image")}} is set, the [used value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value) of the same side's {{cssxref("border-width")}} will be `0`, even if the specified value is something else. In the case of table cell and border collapsing, the `hidden` value has the _highest_ priority: if any other conflicting border is set, it won't be displayed.
     - `dotted`
       - : Displays a series of rounded dots. The spacing of the dots is not defined by the specification and is implementation-specific. The radius of the dots is half the computed value of the same side's {{cssxref("border-width")}}.
     - `dashed`

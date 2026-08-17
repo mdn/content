@@ -1,12 +1,13 @@
 ---
-title: border-color
+title: "`border-color` CSS property"
+short-title: border-color
 slug: Web/CSS/Reference/Properties/border-color
 page-type: css-shorthand-property
 browser-compat: css.properties.border-color
 sidebar: cssref
 ---
 
-The **`border-color`** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the color of an element's border.
+The **`border-color`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the color of an element's border.
 
 {{InteractiveExample("CSS Demo: border-color")}}
 
@@ -49,18 +50,14 @@ border-color: red yellow green transparent;
 }
 ```
 
-Each side can be set individually using {{CSSxRef("border-top-color")}}, {{CSSxRef("border-right-color")}}, {{CSSxRef("border-bottom-color")}}, and {{CSSxRef("border-left-color")}}; or using the writing mode-aware {{CSSxRef("border-block-start-color")}}, {{CSSxRef("border-block-end-color")}}, {{CSSxRef("border-inline-start-color")}}, and {{CSSxRef("border-inline-end-color")}}.
-
-You can find out more information about border colors in [Applying colors to HTML elements](/en-US/docs/Web/CSS/CSS_colors/Applying_color#borders).
-
 ## Constituent properties
 
 This property is a shorthand for the following CSS properties:
 
-- [`border-bottom-color`](/en-US/docs/Web/CSS/Reference/Properties/border-bottom-color)
-- [`border-left-color`](/en-US/docs/Web/CSS/Reference/Properties/border-left-color)
-- [`border-right-color`](/en-US/docs/Web/CSS/Reference/Properties/border-right-color)
-- [`border-top-color`](/en-US/docs/Web/CSS/Reference/Properties/border-top-color)
+- {{cssxref("border-bottom-color")}}
+- {{cssxref("border-left-color")}}
+- {{cssxref("border-right-color")}}
+- {{cssxref("border-top-color")}}
 
 ## Syntax
 
@@ -96,6 +93,12 @@ The `border-color` property may be specified using one, two, three, or four valu
 
 - {{CSSxRef("&lt;color&gt;")}}
   - : Defines the color of the border.
+
+## Description
+
+Each side can be set individually using {{CSSxRef("border-top-color")}}, {{CSSxRef("border-right-color")}}, {{CSSxRef("border-bottom-color")}}, and {{CSSxRef("border-left-color")}}; or using the writing mode-aware {{CSSxRef("border-block-start-color")}}, {{CSSxRef("border-block-end-color")}}, {{CSSxRef("border-inline-start-color")}}, and {{CSSxRef("border-inline-end-color")}}.
+
+You can find out more information about border colors in [Applying colors to HTML elements](/en-US/docs/Web/CSS/Guides/Colors/Applying_color#borders).
 
 ## Formal definition
 
@@ -201,4 +204,4 @@ ul {
 - Other border-related CSS properties: {{CSSxRef("border-width")}}, {{CSSxRef("border-style")}}
 - The {{CSSxRef("&lt;color&gt;")}} data type
 - Other color-related properties: {{CSSxRef("color")}}, {{CSSxRef("background-color")}}, {{CSSxRef("outline-color")}}, {{CSSxRef("text-decoration-color")}}, {{CSSxRef("text-emphasis-color")}}, {{CSSxRef("text-shadow")}}, {{CSSxRef("caret-color")}}, and {{CSSxRef("column-rule-color")}}
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color)
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/Guides/Colors/Applying_color)

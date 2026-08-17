@@ -55,5 +55,5 @@ console.log(mediaList.toString());
 
 - {{domxref("MediaList.mediaText")}}
 - {{domxref("MediaList.appendMedium()")}}
-- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries)
-- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/Guides/Media_queries)
+- [Using media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)

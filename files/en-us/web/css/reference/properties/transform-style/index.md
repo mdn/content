@@ -1,5 +1,6 @@
 ---
-title: transform-style
+title: "`transform-style` CSS property"
+short-title: transform-style
 slug: Web/CSS/Reference/Properties/transform-style
 page-type: css-property
 browser-compat: css.properties.transform-style
@@ -66,6 +67,8 @@ transform-style: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `flat`
   - : Indicates that the children of the element are lying in the plane of the element itself.
 - `preserve-3d`
@@ -74,7 +77,7 @@ transform-style: unset;
 ## Description
 
 The spec lists some [grouping property values](https://drafts.csswg.org/css-transforms-2/#grouping-property-values), which
-require the user agent to create a flattened representation of the descendant elements before they can be applied, and therefore force the element to have a [used value](/en-US/docs/Web/CSS/CSS_cascade/Value_processing#used_value) of `transform-style: flat`, even when `preserve-3d` is specified. These property values include:
+require the user agent to create a flattened representation of the descendant elements before they can be applied, and therefore force the element to have a [used value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value) of `transform-style: flat`, even when `preserve-3d` is specified. These property values include:
 
 - {{cssxref("overflow")}}: any value other than `visible` or `clip`.
 - {{cssxref("opacity")}}: any value less than `1`.
@@ -200,4 +203,4 @@ checkbox.addEventListener("change", () => {
 
 ## See also
 
-- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms/Using)

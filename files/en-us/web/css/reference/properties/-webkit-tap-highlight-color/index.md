@@ -1,5 +1,6 @@
 ---
-title: -webkit-tap-highlight-color
+title: "`-webkit-tap-highlight-color` CSS property"
+short-title: -webkit-tap-highlight-color
 slug: Web/CSS/Reference/Properties/-webkit-tap-highlight-color
 page-type: css-property
 status:
@@ -50,6 +51,6 @@ Not part of any standard. Apple has [a description in the Safari Web Content Gui
 
 - [WebKit CSS extensions](/en-US/docs/Web/CSS/Reference/Webkit_extensions)
 - Related CSS pseudo-classes:
-  - [`:hover`](/en-US/docs/Web/CSS/:hover)
-  - [`:active`](/en-US/docs/Web/CSS/:active)
-  - [`:visited`](/en-US/docs/Web/CSS/:visited)
+  - {{cssxref(":hover")}}
+  - {{cssxref(":active")}}
+  - {{cssxref(":visited")}}

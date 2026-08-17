@@ -3,13 +3,9 @@ title: Temporal.PlainDateTime.prototype.round()
 short-title: round()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDateTime/round
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.PlainDateTime.round
 sidebar: jsref
 ---
-
-{{SeeCompatTable}}
 
 The **`round()`** method of {{jsxref("Temporal.PlainDateTime")}} instances returns a new `Temporal.PlainDateTime` object representing this date-time rounded to the given unit.
 

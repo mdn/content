@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Navigator.getGamepads
 ---
 
-{{APIRef("Gamepad API")}}{{securecontext_header}}
+{{APIRef("Gamepad API")}}
 
 The **`Navigator.getGamepads()`** method returns an array of
 {{domxref("Gamepad")}} objects, one for each gamepad connected to the device.

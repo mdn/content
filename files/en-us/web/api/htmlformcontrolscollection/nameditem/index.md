@@ -32,7 +32,12 @@ namedItem(name)
 
 ### Return value
 
-A {{domxref("RadioNodeList")}}, {{domxref("Element")}}, or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
+- A {{domxref("RadioNodeList")}} if there are multiple elements with the given `name` or `id`,
+- An {{domxref("Element")}} if there is exactly one element with the given `name` or `id`, or
+- [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) if no element has the given `name` or `id`.
+
+> [!NOTE]
+> The returned {{domxref("RadioNodeList")}} is live, meaning that its contents automatically update if elements that match the given name are added to or removed from the collection. Furthermore, it may contain non-radio input elements despite the collection's name.
 
 ## Examples
 
@@ -42,11 +47,15 @@ A {{domxref("RadioNodeList")}}, {{domxref("Element")}}, or [`null`](/en-US/docs/
 
 ```html
 <form>
-  <label for="notes">Notes:</label>
-  <input id="notes" name="my-form-control" type="text" />
-
-  <label for="start">Start date:</label>
-  <input id="start" name="my-form-control" type="date" />
+  <label for="yes">Yes</label>
+  <input id="yes" name="my-radio" type="radio" />
+  <label for="no">No</label>
+  <input id="no" name="my-radio" type="radio" />
+  <label for="maybe">Maybe</label>
+  <input id="maybe" name="my-radio" type="radio" />
+  <br />
+  <label for="text1">Text input 1</label>
+  <input id="text1" name="my-form-control" type="text" />
 </form>
 
 <div id="output"></div>
@@ -62,13 +71,16 @@ div {
 
 ```js
 const form = document.querySelector("form");
-const items = form.elements.namedItem("my-form-control");
+const items = form.elements.namedItem("my-radio");
 
 const output = document.querySelector("#output");
 const itemIDs = Array.from(items)
   .map((item) => `"${item.id}"`)
   .join(", ");
-output.textContent = `My items: ${itemIDs}`;
+
+const item2 = form.elements.namedItem("my-form-control");
+output.textContent = `My items: ${itemIDs}
+My single item: "${item2.id}"`;
 ```
 
 #### Result

@@ -2,13 +2,9 @@
 title: Temporal.PlainTime()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime/PlainTime
 page-type: javascript-constructor
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.PlainTime.PlainTime
 sidebar: jsref
 ---
-
-{{SeeCompatTable}}
 
 The **`Temporal.PlainTime()`** constructor creates {{jsxref("Temporal.PlainTime")}} objects.
 

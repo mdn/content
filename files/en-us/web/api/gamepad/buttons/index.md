@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Gamepad.buttons
 ---
 
-{{APIRef("Gamepad API")}}{{SecureContext_Header}}
+{{APIRef("Gamepad API")}}
 
 The **`buttons`** property of the {{domxref("Gamepad")}} interface returns an array of {{domxref("GamepadButton")}} objects representing the buttons present on the device.
 

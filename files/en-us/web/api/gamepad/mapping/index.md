@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Gamepad.mapping
 ---
 
-{{APIRef("Gamepad API")}}{{SecureContext_Header}}
+{{APIRef("Gamepad API")}}
 
 The **`Gamepad.mapping`** property of the
 {{domxref("Gamepad")}} interface returns a string indicating whether the browser has

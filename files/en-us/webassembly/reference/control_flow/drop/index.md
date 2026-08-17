@@ -1,11 +1,13 @@
 ---
-title: Drop
-slug: WebAssembly/Reference/Control_flow/Drop
+title: "drop: Wasm text instruction"
+short-title: drop
+slug: WebAssembly/Reference/Control_flow/drop
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.drop
 sidebar: webassemblysidebar
 ---
 
-The **`drop`** instruction, pops a value from the stack, and discards it.
+The **`drop`** instruction pops a value from the stack, and discards it.
 
 {{InteractiveExample("Wat Demo: drop", "tabbed-taller")}}
 
@@ -48,3 +50,11 @@ drop
 | Instruction | Binary opcode |
 | ----------- | ------------- |
 | `drop`      | `0x1a`        |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

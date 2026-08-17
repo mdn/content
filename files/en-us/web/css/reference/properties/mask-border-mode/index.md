@@ -1,8 +1,9 @@
 ---
-title: mask-border-mode
+title: "`mask-border-mode` CSS property"
+short-title: mask-border-mode
 slug: Web/CSS/Reference/Properties/mask-border-mode
 page-type: css-property
-spec-urls: https://drafts.fxtf.org/css-masking-1/#the-mask-border-mode
+spec-urls: https://drafts.csswg.org/css-masking-1/#the-mask-border-mode
 sidebar: cssref
 ---
 
@@ -24,6 +25,8 @@ mask-border-mode: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `luminance`
   - : The luminance values of the mask border image are used as the mask values.
@@ -50,11 +53,11 @@ Currently, no browsers support this feature.
 
 - {{cssxref("mask-mode")}}
 - {{cssxref("mask-type")}}
-- [Alpha transparency versus luminance](/en-US/docs/Web/CSS/CSS_masking/Masking#alpha_transparency_versus_luminance)
+- [Alpha transparency versus luminance](/en-US/docs/Web/CSS/Guides/Masking/Introduction#alpha_transparency_versus_luminance)
 - {{cssxref("mask-border")}} shorthand
 - {{cssxref("mask-border-outset")}}
 - {{cssxref("mask-border-repeat")}}
 - {{cssxref("mask-border-source")}}
 - {{cssxref("mask-border-width")}}
 - {{cssxref("mask-mode")}}
-- [CSS masking](/en-US/docs/Web/CSS/CSS_masking) module
+- [CSS masking](/en-US/docs/Web/CSS/Guides/Masking) module

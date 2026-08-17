@@ -1,12 +1,13 @@
 ---
-title: border-block-end
+title: "`border-block-end` CSS property"
+short-title: border-block-end
 slug: Web/CSS/Reference/Properties/border-block-end
 page-type: css-shorthand-property
 browser-compat: css.properties.border-block-end
 sidebar: cssref
 ---
 
-The **`border-block-end`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) for setting the individual logical block-end border property values in a single place in the style sheet.
+The **`border-block-end`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) for setting the individual logical block-end border property values in a single place in the style sheet.
 
 {{InteractiveExample("CSS Demo: border-block-end")}}
 
@@ -53,9 +54,9 @@ writing-mode: vertical-lr;
 
 This property is a shorthand for the following CSS properties:
 
-- [`border-block-end-color`](/en-US/docs/Web/CSS/Reference/Properties/border-block-end-color)
-- [`border-block-end-style`](/en-US/docs/Web/CSS/Reference/Properties/border-block-end-style)
-- [`border-block-end-width`](/en-US/docs/Web/CSS/Reference/Properties/border-block-end-width)
+- {{cssxref("border-block-end-color")}}
+- {{cssxref("border-block-end-style")}}
+- {{cssxref("border-block-end-width")}}
 
 ## Syntax
 
@@ -80,9 +81,9 @@ Related properties are {{cssxref("border-block-start")}}, {{cssxref("border-inli
 
 The `border-block-end` is specified with one or more of the following, in any order:
 
-- `<'border-width'>`
+- {{cssxref("&lt;line-width&gt;")}}
   - : The width of the border. See {{cssxref("border-width")}}.
-- `<'border-style'>`
+- {{cssxref("&lt;line-style&gt;")}}
   - : The line style of the border. See {{cssxref("border-style")}}.
 - {{CSSXref("&lt;color&gt;")}}
   - : The color of the border.
@@ -136,6 +137,6 @@ div {
 
 ## See also
 
-- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values)
 - This property maps to one of the physical border properties: {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, or {{cssxref("border-left")}}.
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

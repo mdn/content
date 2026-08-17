@@ -8,7 +8,7 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting")}}
 
-Now you've learned something about the theory of JavaScript and what you can do with it, we are going to give you an idea of what the process of creating a simple JavaScript program is like, by guiding you through a practical tutorial. Here you'll build up a simple "Guess the number" game, step by step.
+Now that you've learned some theory about JavaScript and what you can do with it, we'll walk you through a practical tutorial so you can see how to create a simple JavaScript program. Here you'll build a simple "Guess the number" game, step by step.
 
 <table>
   <tbody>
@@ -27,6 +27,9 @@ Now you've learned something about the theory of JavaScript and what you can do 
     </tr>
   </tbody>
 </table>
+
+> [!NOTE]
+> Starting with [Write your first JavaScript variable](https://scrimba.com/learn-javascript-c0v/~04?via=mdn), Scrimba<sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> provides useful interactive lessons that take you through the basics of JavaScript.
 
 We want to set really clear expectations here: You won't be expected to learn JavaScript by the end of this article, or even understand all the code we are asking you to write. Instead, we want to give you an idea of how JavaScript's features work together, and what writing JavaScript feels like. In subsequent articles you'll revisit all the features shown here in a lot more detail, so don't worry if you don't understand it all immediately!
 
@@ -506,7 +509,7 @@ All we have left to do now in this article is to talk about a few other importan
 
 Above, we mentioned **Loops**, a very important concept in programming, which allow you to keep running a piece of code over and over again, until a certain condition is met.
 
-Let's explore a basic example to show you with this means. Go to your [browser developer tools JavaScript console](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) again, paste the following code into it, and press <kbd>Enter</kbd>/<kbd>Return</kbd>:
+Let's explore a basic example to show you what this means. Go to your [browser developer tools JavaScript console](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) again, paste the following code into it, and press <kbd>Enter</kbd>/<kbd>Return</kbd>:
 
 ```js
 const fruits = ["apples", "bananas", "cherries"];

@@ -19,5 +19,5 @@ A media query may optionally be prefixed by a single media query modifier or `no
 
 ## See also
 
-- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries) module
+- [Using media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
+- [CSS media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using) module

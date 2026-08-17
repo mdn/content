@@ -100,10 +100,10 @@ await navigator.locks.request("my_resource", async (lock) => {
 The following example shows how to use the `mode` option for readers and writers.
 
 Notice that both functions use a lock called `my_resource`.
-The `do_read()` requests a lock in `'shared'` mode meaning that multiple calls may occur simultaneously across different event handlers, tabs, or workers.
+The `doRead()` requests a lock in `'shared'` mode meaning that multiple calls may occur simultaneously across different event handlers, tabs, or workers.
 
 ```js
-async function do_read() {
+async function doRead() {
   await navigator.locks.request(
     "my_resource",
     { mode: "shared" },
@@ -114,11 +114,11 @@ async function do_read() {
 }
 ```
 
-The `do_write()` function use the same lock but in `'exclusive'` mode which will delay invocation of the `request()` call in `do_read()` until the write operation has completed.
+The `doWrite()` function use the same lock but in `'exclusive'` mode which will delay invocation of the `request()` call in `doRead()` until the write operation has completed.
 This applies across event handlers, tabs, or workers.
 
 ```js
-async function do_write() {
+async function doWrite() {
   await navigator.locks.request(
     "my_resource",
     { mode: "exclusive" },

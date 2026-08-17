@@ -1,7 +1,9 @@
 ---
-title: block
+title: "block: Wasm text instruction"
+short-title: block
 slug: WebAssembly/Reference/Control_flow/block
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.block
 sidebar: webassemblysidebar
 ---
 
@@ -80,3 +82,11 @@ await WebAssembly.instantiateStreaming(fetch(url), { console }).then(
 | Instruction | Binary opcode |
 | ----------- | ------------- |
 | `block`     | `0x02`        |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

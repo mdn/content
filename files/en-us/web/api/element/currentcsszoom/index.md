@@ -37,9 +37,9 @@ The "child2" element contains two nested elements, one of which is not rendered,
     child1 (zoom: 2)
     <div style="zoom: 3" id="child2">
       child2 (zoom: 3)
-      <div id="child3_rendered">child3_rendered</div>
-      <div style="display: none" id="child3_not-rendered">
-        child3_not-rendered
+      <div id="child3-rendered">child3-rendered</div>
+      <div style="display: none" id="child3-not-rendered">
+        child3-not-rendered
       </div>
     </div>
   </div>
@@ -77,13 +77,13 @@ if ("currentCSSZoom" in Element.prototype) {
   log(`child1 (zoom: 2). currentCSSZoom: ${child1.currentCSSZoom}`);
   const child2 = document.querySelector("#child2");
   log(`child2 (zoom: 2). currentCSSZoom: ${child2.currentCSSZoom}`);
-  const top_child3_rendered = document.querySelector("#child3_rendered");
+  const child3Rendered = document.querySelector("#child3-rendered");
   log(
-    `child3_rendered (unzoomed). currentCSSZoom: ${child3_rendered.currentCSSZoom}`,
+    `child3-rendered (unzoomed). currentCSSZoom: ${child3Rendered.currentCSSZoom}`,
   );
-  const top_child3_notRendered = document.querySelector("#child3_not-rendered");
+  const child3NotRendered = document.querySelector("#child3-not-rendered");
   log(
-    `child3_notRendered (not rendered): ${child3_notRendered.currentCSSZoom}`,
+    `child3-not-rendered (not rendered): ${child3NotRendered.currentCSSZoom}`,
   );
 } else {
   log("Element.currentCSSZoom not supported in this browser");
@@ -94,7 +94,7 @@ The resulting rendered `<div>` structure and log are shown below.
 First note that the parent, child1 and child2 have zoom levels 1, 2, and 3, respectively, and render at 1, 2 and 6 times the size of the parent text.
 This is reflected by the logged `currentCSSZoom` values.
 
-The `<div>` with id `child3_rendered` does not have `zoom` set but inherits the `currentCSSZoom` value of 6 as shown in the log.
+The `<div>` with id `child3-rendered` does not have `zoom` set but inherits the `currentCSSZoom` value of 6 as shown in the log.
 The final `<div>` is not rendered and therefore has a `currentCSSZoom` value of 1.
 
 {{EmbedLiveSample('Examples', '100%', "400px")}}

@@ -1,12 +1,13 @@
 ---
-title: contain-intrinsic-block-size
+title: "`contain-intrinsic-block-size` CSS property"
+short-title: contain-intrinsic-block-size
 slug: Web/CSS/Reference/Properties/contain-intrinsic-block-size
 page-type: css-property
 browser-compat: css.properties.contain-intrinsic-block-size
 sidebar: cssref
 ---
 
-The **`contain-intrinsic-block-size`** [CSS](/en-US/docs/Web/CSS) [logical property](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) defines the block size of an element that a browser can use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#size_containment).
+The **`contain-intrinsic-block-size`** [CSS](/en-US/docs/Web/CSS) [logical property](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values) defines the block size of an element that a browser can use for layout when the element is subject to [size containment](/en-US/docs/Web/CSS/Guides/Containment/Using#size_containment).
 
 Block size is the size of an element in the dimension perpendicular to the flow of text within a line. In a horizontal [writing mode](/en-US/docs/Web/CSS/Reference/Properties/writing-mode) like standard English, block size is the vertical dimension (height); in a vertical writing mode, block size is the horizontal dimension.
 
@@ -45,7 +46,7 @@ The following values can be specified for the intrinsic block size of an element
 
 ## Description
 
-The property is commonly applied alongside elements that can trigger size containment, such as [`contain: size`](/en-US/docs/Web/CSS/Reference/Properties/contain) and [`content-visibility`](/en-US/docs/Web/CSS/Reference/Properties/content-visibility).
+The property is commonly applied alongside elements that can trigger size containment, such as [`contain: size`](/en-US/docs/Web/CSS/Reference/Properties/contain) and {{cssxref("content-visibility")}}.
 
 Size containment allows a user agent to lay out an element as though it had a fixed size.
 This prevents unnecessary reflows by avoiding the re-rendering of child elements to determine the actual size (thereby improving user experience).
@@ -76,7 +77,7 @@ The HTML below defines an element "contained_element" that will be subject to si
 </div>
 ```
 
-The CSS below sets the [`content-visibility`](/en-US/docs/Web/CSS/Reference/Properties/content-visibility) of `contained_element` to `auto`, so if the element is hidden it will be size constrained.
+The CSS below sets the {{cssxref("content-visibility")}} of `contained_element` to `auto`, so if the element is hidden it will be size constrained.
 The intrinsic block size and inline size that are used when it is size constrained are set at the same time using `contain-intrinsic-block-size` and `contain-intrinsic-inline-size`, respectively.
 
 ```css

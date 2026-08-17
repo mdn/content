@@ -8,13 +8,13 @@ browser-compat: api.HTMLIFrameElement.sandbox
 
 {{APIRef("HTML DOM")}}
 
-The **`sandbox`** read-only property of the {{domxref("HTMLIFrameElement")}} interface returns a {{domxref("DOMTokenList")}} indicating extra restrictions on the behavior of the nested content.
-
-It reflects the `sandbox` attribute of the {{HTMLElement("iframe")}} element.
+The read-only **`sandbox`** property of the {{domxref("HTMLIFrameElement")}} returns a live {{domxref("DOMTokenList")}} object indicating extra restrictions on the behavior of the nested content. It reflects the {{HTMLElement("iframe")}} element's [`sandbox`](/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox) content attribute.
 
 ## Value
 
-A {{domxref("DOMTokenList")}}. Each item must be one of the tokens listed in the `sandbox` attribute of the {{HTMLElement("iframe")}} element.
+A live {{domxref("DOMTokenList")}} object.
+
+Although the `sandbox` property itself is read-only in the sense that you can't replace the `DOMTokenList` object, you can still assign to the `sandbox` property directly, which is equivalent to assigning to its {{domxref("DOMTokenList/value", "value")}} property. You can also modify the `DOMTokenList` object using the {{domxref("DOMTokenList/add", "add()")}}, {{domxref("DOMTokenList/remove", "remove()")}}, {{domxref("DOMTokenList/replace", "replace()")}}, and {{domxref("DOMTokenList/toggle", "toggle()")}} methods.
 
 ## Examples
 

@@ -1,5 +1,6 @@
 ---
-title: overflow-inline
+title: "`overflow-inline` CSS property"
+short-title: overflow-inline
 slug: Web/CSS/Reference/Properties/overflow-inline
 page-type: css-property
 browser-compat: css.properties.overflow-inline
@@ -29,9 +30,9 @@ overflow-inline: revert-layer;
 overflow-inline: unset;
 ```
 
-The `overflow-inline` property is specified as a single {{CSSXref("overflow_value", "&lt;overflow&gt;")}} keyword value.
-
 ### Values
+
+This property is specified as one of the following {{CSSXref("overflow_value", "&lt;overflow&gt;")}} keyword values:
 
 - `visible`
   - : Content is not clipped and may be rendered outside the padding box's inline start and end edges.
@@ -133,7 +134,7 @@ div {
 ## See also
 
 - {{cssxref("clip")}}, {{cssxref("display")}}, {{cssxref("overflow")}}, {{cssxref("overflow-block")}}, {{cssxref("overflow-clip-margin")}}, {{cssxref("overflow-x")}}, {{cssxref("overflow-y")}}, {{cssxref("text-overflow")}}, {{cssxref("white-space")}}
-- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
-- [CSS logical properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
-- [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes)
+- [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
+- [CSS logical properties](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values)
+- [CSS writing modes](/en-US/docs/Web/CSS/Guides/Writing_modes)
 - [Learn: Overflowing content](/en-US/docs/Learn_web_development/Core/Styling_basics/Overflow)

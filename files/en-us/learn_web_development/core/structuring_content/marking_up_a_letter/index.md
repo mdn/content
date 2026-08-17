@@ -62,10 +62,10 @@ ideas you submitted we were most intrigued by are as follows, in order of
 priority:
 
 Turning H2O into wine, and the health benefits of Resveratrol
-(C14H12O3.)
+(C14H12O3).
 Measuring the effect on performance of funk bass players at temperatures
 exceeding 30°C (86°F), when the audience size exponentially increases
-(effect of 3 × 103 increasing to 3 × 104.)
+(effect of 3 × 103 increasing to 3 × 104).
 HTML, Hypertext Markup Language, and CSS,
 Cascading Style Sheets, constructs for representing musical scores.
 
@@ -123,7 +123,7 @@ For this project, your task is to mark up a letter that needs to be hosted on a 
 - The names of the sender and receiver (and _Tel_ and _Email_) should be marked up with strong importance.
 - The four dates in the document should be wrapped in appropriate elements containing machine-readable dates.
 - The first address and first date in the letter should have a `class` attribute value of `sender-column` set on them. The CSS you'll add later will cause these to be right aligned, as it should be in the case in a classic letter layout.
-- Mark up the following five acronyms/abbreviations in the main text of the letter — "PhD," "HTML," "CSS," "BC," and "Esq." — to provide expansions of each one.
+- Mark up the following five acronyms/abbreviations in the main text of the letter — "PhD," "HTML," "CSS," "BCE," and "Esq." — to provide expansions of each one.
 - The six sub/superscripts should be marked up appropriately — in the chemical formulae, and the numbers 103 and 104 (they should be 10 to the power of 3 and 4, respectively).
 - Mark up at least two other appropriate words in the text with strong importance/emphasis.
 - Mark up the university motto quote and citation with appropriate elements.
@@ -265,12 +265,12 @@ Your finished HTML should look like this:
     <ol>
       <li>
         Turning H<sub>2</sub>O into wine, and the health benefits of Resveratrol
-        (C<sub>14</sub>H<sub>12</sub>O<sub>3</sub>.)
+        (C<sub>14</sub>H<sub>12</sub>O<sub>3</sub>).
       </li>
       <li>
         Measuring the effect on performance of funk bass players at temperatures
         exceeding 30°C (86°F), when the audience size exponentially increases
-        (effect of 3 × 10<sup>3</sup> increasing to 3 × 10<sup>4</sup>.)
+        (effect of 3 × 10<sup>3</sup> increasing to 3 × 10<sup>4</sup>).
       </li>
       <li>
         <abbr>HTML</abbr>, Hypertext Markup Language, and <abbr>CSS</abbr>,

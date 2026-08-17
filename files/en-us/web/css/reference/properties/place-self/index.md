@@ -1,12 +1,13 @@
 ---
-title: place-self
+title: "`place-self` CSS property"
+short-title: place-self
 slug: Web/CSS/Reference/Properties/place-self
 page-type: css-shorthand-property
 browser-compat: css.properties.place-self
 sidebar: cssref
 ---
 
-The **`place-self`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) allows you to align an individual item in both the block and inline directions at once (i.e., the {{cssxref("align-self")}} and {{cssxref("justify-self")}} properties). This property applies to block-level boxes, absolutely-positioned boxes, and grid items. If the second value is not present, the first value is also used for it.
+The **`place-self`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) allows you to align an individual item in both the block and inline directions at once (i.e., the {{cssxref("align-self")}} and {{cssxref("justify-self")}} properties). This property applies to block-level boxes, absolutely-positioned boxes, and grid items. If the second value is not present, the first value is also used for it.
 
 {{InteractiveExample("CSS Demo: place-self")}}
 
@@ -56,8 +57,8 @@ place-self: end center;
 
 This property is a shorthand for the following CSS properties:
 
-- [`align-self`](/en-US/docs/Web/CSS/Reference/Properties/align-self)
-- [`justify-self`](/en-US/docs/Web/CSS/Reference/Properties/justify-self)
+- {{cssxref("align-self")}}
+- {{cssxref("justify-self")}}
 
 ## Syntax
 
@@ -90,6 +91,8 @@ place-self: unset;
 
 ### Values
 
+This property is specified as one or two of the following keyword values:
+
 - `auto`
   - : Computes to the parent's {{cssxref("align-items")}} value.
 - `normal`
@@ -116,7 +119,7 @@ place-self: unset;
 - `stretch`
   - : If the combined size of the items along the cross axis is less than the size of the alignment container and the item is `auto`-sized, its size is increased equally (not proportionally), while still respecting the constraints imposed by {{cssxref("max-height")}}/{{cssxref("max-width")}} (or equivalent functionality), so that the combined size of all `auto`-sized items exactly fills the alignment container along the cross axis.
 - `anchor-center`
-  - : In the case of [anchor-positioned](/en-US/docs/Web/CSS/CSS_anchor_positioning) elements, aligns the item to the center of the associated anchor element in the block and inline direction. See [Centering on the anchor using `anchor-center`](/en-US/docs/Web/CSS/CSS_anchor_positioning/Using#centering_on_the_anchor_using_anchor-center).
+  - : In the case of [anchor-positioned](/en-US/docs/Web/CSS/Guides/Anchor_positioning) elements, aligns the item to the center of the associated anchor element in the block and inline direction. See [Centering on the anchor using `anchor-center`](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#centering_on_the_anchor_using_anchor-center).
 
 ## Formal definition
 
@@ -130,7 +133,7 @@ place-self: unset;
 
 ### Basic demonstration
 
-In the following example we have a 2 x 2 grid layout. Initially the grid container has [`justify-items`](/en-US/docs/Web/CSS/Reference/Properties/justify-items) and [`align-items`](/en-US/docs/Web/CSS/Reference/Properties/align-items) values of `stretch` — the defaults — which causes the grid items to stretch across the entire width of their cells.
+In the following example we have a 2 x 2 grid layout. Initially the grid container has {{cssxref("justify-items")}} and {{cssxref("align-items")}} values of `stretch` — the defaults — which causes the grid items to stretch across the entire width of their cells.
 
 The second, third, and fourth grid items are then given different values of `place-self`, to show how these override the default placements. These values cause the grid items to span only as wide/tall as their content width/height, and align in different positions across their cells, in the block and inline directions.
 
@@ -205,7 +208,7 @@ span {
 
 - {{cssxref("align-self")}}
 - {{cssxref("justify-self")}}
-- [Basic concepts of flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [Aligning items in a flex container](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-- [Box alignment in grid layout](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
-- [CSS box alignment](/en-US/docs/Web/CSS/CSS_box_alignment) module
+- [Basic concepts of flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts)
+- [Aligning items in a flex container](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Aligning_items)
+- [Box alignment in grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
+- [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module

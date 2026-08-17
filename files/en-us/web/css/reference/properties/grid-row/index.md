@@ -1,12 +1,13 @@
 ---
-title: grid-row
+title: "`grid-row` CSS property"
+short-title: grid-row
 slug: Web/CSS/Reference/Properties/grid-row
 page-type: css-shorthand-property
 browser-compat: css.properties.grid-row
 sidebar: cssref
 ---
 
-The **`grid-row`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) specifies a grid item's size and location within a {{glossary("grid row")}} by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its {{glossary("grid areas", "grid area")}}.
+The **`grid-row`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) specifies a grid item's size and location within a {{glossary("grid row")}} by contributing a line, a span, or nothing (automatic) to its grid placement, thereby specifying the inline-start and inline-end edge of its {{glossary("grid areas", "grid area")}}.
 
 {{InteractiveExample("CSS Demo: grid-row")}}
 
@@ -61,8 +62,8 @@ grid-row: 1 / span 2;
 
 This property is a shorthand for the following CSS properties:
 
-- [`grid-row-end`](/en-US/docs/Web/CSS/Reference/Properties/grid-row-end)
-- [`grid-row-start`](/en-US/docs/Web/CSS/Reference/Properties/grid-row-start)
+- {{cssxref("grid-row-end")}}
+- {{cssxref("grid-row-start")}}
 
 ## Syntax
 
@@ -199,5 +200,5 @@ Each `<grid-line>` value can be specified as:
 - {{cssxref("grid-column")}}
 - {{cssxref("grid-column-start")}}
 - {{cssxref("grid-column-end")}}
-- [Line-based placement with CSS grid](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- [Line-based placement with CSS grid](/en-US/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
 - Video: [Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)

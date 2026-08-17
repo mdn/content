@@ -1,35 +1,26 @@
 ---
-title: view()
+title: "`view()` CSS function"
+short-title: view()
 slug: Web/CSS/Reference/Properties/animation-timeline/view
 page-type: css-function
 browser-compat: css.properties.animation-timeline.view
 sidebar: cssref
 ---
 
-The **`view()`** [CSS function](/en-US/docs/Web/CSS/CSS_values_and_units/CSS_value_functions) can be used with {{cssxref("animation-timeline")}} to indicate a subject element that will provide an anonymous view progress timeline to animate. The view progress timeline is progressed through by a change in visibility of the subject element inside the nearest ancestor scroller. The visibility of the subject inside the scroller is tracked — by default, the timeline is at 0% when the subject is first visible at one edge of the scroller, and 100% when it reaches the opposite edge.
-
-The function parameters can specify the scrollbar axis along which timeline progress will be tracked and an inset that adjusts the position of the box in which the subject is deemed to be visible.
-
-> [!NOTE]
-> If the indicated axis does not contain a scrollbar, then the animation timeline will be inactive (have zero progress).
-
-> [!NOTE]
-> Each use of `view()` corresponds to its own unique instance of {{domxref("ViewTimeline")}} in the [Web Animations API](/en-US/docs/Web/API/Web_Animations_API).
+The **`view()`** [CSS function](/en-US/docs/Web/CSS/Reference/Values/Functions) is used with the {{cssxref("animation-timeline")}} property to create an [anonymous view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_view_progress_timeline_the_view_function) based on when an element comes into view inside its nearest {{glossary("scroll container")}}. You can adjust the tracking axis and the optional insets to control when the element is considered "in view".
 
 ## Syntax
 
 ```css
-/* Function with no parameters set */
+/* No parameters */
 animation-timeline: view();
 
-/* Values for selecting the axis */
-animation-timeline: view(block); /* Default */
-animation-timeline: view(inline);
-animation-timeline: view(y);
+/* Axis parameter */
+animation-timeline: view(block);
 animation-timeline: view(x);
 
-/* Values for the inset */
-animation-timeline: view(auto); /* Default */
+/* Inset parameter */
+animation-timeline: view(auto);
 animation-timeline: view(20%);
 animation-timeline: view(200px);
 animation-timeline: view(20% 40%);
@@ -37,36 +28,32 @@ animation-timeline: view(20% 200px);
 animation-timeline: view(100px 200px);
 animation-timeline: view(auto 200px);
 
-/* Examples that specify axis and inset */
-animation-timeline: view(block auto); /* Default */
+/* Axis and inset parameters */
+animation-timeline: view(block auto);
 animation-timeline: view(inline 20%);
 animation-timeline: view(x 200px auto);
 ```
 
 ### Parameters
 
-- axis
-  - : The scrollbar axis value can be any one of the following:
-    - `block`
-      - : The scrollbar on the block axis of the scroll container, which is the axis in the direction perpendicular to the flow of text within a line.
-        For horizontal writing modes, such as standard English, this is the same as `y`, while for vertical writing modes, it is the same as `x`. This is the default value.
-    - `inline`
-      - : The scrollbar on the inline axis of the scroll container, which is the axis in the direction parallel to the flow of text in a line.
-        For horizontal writing modes, this is the same as `x`, while for vertical writing modes, this is the same as `y`.
-    - `y`
-      - : The scrollbar on the vertical axis of the scroll container.
-    - `x`
-      - : The scrollbar on the horizontal axis of the scroll container.
+- `<axis>`
+  - : Specifies the scroll direction used by the view progress timeline. The value can be one of the {{cssxref("axis")}} keywords: `block`, `inline`, `x`, or `y`. The default value is `block`.
+- `<view-timeline-inset>`
+  - : Specifies the inset area that defines when an element is considered "in view". The value can be the keyword `auto` or up to two {{cssxref("length-percentage")}} values.
 
-- inset
-  - : The inset value can be one or two values, which can be either `auto` or a {{cssxref("length-percentage")}}. It specifies an inset (positive) or outset (negative) adjustment of the [scrollport](/en-US/docs/Glossary/Scroll_container#scrollport). The inset is used to determine whether the element is in view which determines the length of the animation timeline. In other words, the animation lasts as long as the element is in the inset-adjusted view.
-    - start
-      - : Inward offset from beginning of the scrollport.
-    - end
-      - : Inward offset from end of the scrollport.
+## Description
 
-> [!NOTE]
-> The scroller and inset values can be specified in any order.
+A view progress timeline progresses based on changes in the visibility of a subject element inside its nearest scroll container. The `view()` function is used with the {{cssxref("animation-timeline")}} property to create such a view progress timeline.
+
+The function's parameters can specify the scrollbar axis along which timeline progress is tracked and insets that adjust the position of the box in which the subject is considered visible.
+
+- **Axis**: By default, `view()` uses the block axis. You can change this by providing an explicit `<axis>` value. If the chosen axis does not contain a scrollbar, then the animation timeline will be inactive (zero progress).
+- **Inset**: By default, the timeline is at `0%` (the `from` keyframe in the {{cssxref("@keyframes")}} animation) when the subject is first visible at one edge of the scroller, and at `100%` (the `to` keyframe) when the subject's outer border edge reaches the opposite edge of the scroller. You can control these points with the `<view-timeline-inset>` parameters.
+  The animation lasts as long as the element is in the inset-adjusted view. The inset is used to determine whether the element is in view, which in turn determines the length of the animation timeline. The inset consists of up to two values, each of which can be either `auto` or a {{cssxref("length-percentage")}}.
+  - The first value defines the start, an inward offset from the scrollport's beginning.
+  - The second value, if present, specifies the end, an inward offset from the scrollport's end. If the value is greater than `0`, it specifies an inset (positive). A negative value defines an outset adjustment to the [scrollport](/en-US/docs/Glossary/Scroll_container#scrollport).
+
+The axis and inset components can be specified in any order. Within the inset component, the first value defines the start inset, and the second value defines the end inset.
 
 ## Formal syntax
 
@@ -74,15 +61,21 @@ animation-timeline: view(x 200px auto);
 
 ## Examples
 
-### Setting an anonymous view progress timeline
+### Creating an anonymous view progress timeline using `view()`
 
-An anonymous view progress timeline is set on an element with class `subject` using `animation-timeline: view()`. The result is that the `subject` element animates as it moves upwards through the document as it is scrolled.
+In this example, we create an anonymous view progress timeline for the element with the `subject` and `animation` classes using `animation-timeline: view()`. The result is that as you scroll the document, this element animates as it moves upward through the document.
 
 #### HTML
 
-The HTML for the example is shown below.
+In the middle of the text, we include the following (note that the HTML includes a lot of content that we've hidden for brevity):
 
-```html
+```html live-sample__not_included_in_result
+<div class="subject-container">
+  <div class="subject animation"></div>
+</div>
+```
+
+```html hidden
 <div class="content">
   <h1>Content</h1>
   <p>
@@ -116,13 +109,18 @@ The HTML for the example is shown below.
     scelerisque. Netus et malesuada fames ac.
   </p>
 </div>
+```
+
+We also include two overlays to enable visualizing the animation range:
+
+```html
 <div class="overlay top">inset start 50%</div>
 <div class="overlay bottom">inset end 10%</div>
 ```
 
 #### CSS
 
-The `subject` element and `content` elements are minimally styled and the text content is given some basic font settings:
+The styles for the `subject` and `subject-container` include:
 
 ```css
 .subject {
@@ -130,43 +128,23 @@ The `subject` element and `content` elements are minimally styled and the text c
   height: 200px;
   background-color: deeppink;
 }
-
-.content {
-  width: 75%;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-p {
-  font-size: 1.5rem;
-  line-height: 1.8;
-}
-```
-
-To aid the understanding of the result, extra elements `subject-container`, `top`, and `bottom` have been used. The `subject-container` shows the bounds of the animation. And semi-transparent `top` and `bottom` overlays mark inset offsetted scrollport.
-
-```css
 .subject-container {
   border: 2px dashed black;
   width: 300px;
   margin: 0 auto;
 }
+```
 
+The `subject-container` class shows the bounds of the animation. We define `top` and `bottom` overlays to mark the inset-adjusted scrollport.
+
+```css
 .overlay {
   position: fixed;
-  width: 100%;
-  background-color: #f5deb3aa;
-  display: flex;
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: red;
-  justify-content: flex-end;
 }
 
 .top {
   top: 0;
   height: 50%;
-  align-items: end;
 }
 
 .bottom {
@@ -175,19 +153,16 @@ To aid the understanding of the result, extra elements `subject-container`, `top
 }
 ```
 
-In the following code, the `<div>` with the class of `subject` is also given a class of `animation`. The `grow` animation causes the `subject` element to grow or shrink. The `animation-timeline: view(block 55% 10%)` is set to declare that it will be animated as it progresses through the view progress timeline provided by its scrolling ancestor (in this case the document's root element).
+The `<div>` element with the `subject` class is also given a class of `animation`. The `grow` animation causes the `subject` element to grow or shrink. The `animation-timeline: view(block 50% 10%)` rule sets the element to be animated as it progresses through the view progress timeline created by its nearest scroll container (in this case, the document's root element).
 
-While scrolling down, note how the inset value of `50% 10%` causes the animation to start at 10% from the bottom and finish at 50% from the top. As animation moves forward along the timeline the `subject` grows. Conversely, when scrolling up the animation proceeds in the reverse direction, starting at 50% from the top, moving backward through the animation, and ending at 10% from the bottom. So, as the animation happens backwards the `subject` shrinks.
+While scrolling down, note how the inset values `50% 10%` cause the animation to start when the element is 10% from the bottom of the scrollport and to finish when it is 50% from the top. As the animation progresses along the timeline, the `subject` grows. When scrolling up the animation proceeds in the reverse direction, starting at 50% from the top, moving backward through the keyframes, and ending at 10% from the bottom. So, as the animation runs backward, the `subject` shrinks.
 
-An important point to remember is that the animation lasts as long as the `subject` element is in the view which has been set and to be offset using `50% 10%` inset values.
+An important point to remember is that the animation lasts only as long as the `subject` element is within view, which is defined here by `50% 10%` inset values.
 
 ```css
 .animation {
   animation-timeline: view(block 50% 10%);
-
   animation-name: grow;
-  animation-fill-mode: both;
-  animation-duration: 1ms; /* Firefox requires this to apply the animation */
   animation-timing-function: linear;
 }
 
@@ -202,11 +177,55 @@ An important point to remember is that the animation lasts as long as the `subje
 }
 ```
 
+```css hidden
+.content {
+  width: 75%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+}
+
+.overlay {
+  width: 100%;
+  background-color: #f5deb3aa;
+  display: flex;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: red;
+  justify-content: flex-end;
+}
+.top {
+  align-items: end;
+}
+
+@layer no-support {
+  @supports not (animation-timeline: view()) {
+    body::after {
+      content: "Your browser doesn't support the CSS `view()` function.";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+
+      position: absolute;
+      inset: 0;
+      bottom: auto;
+    }
+  }
+}
+```
+
+The rest of the CSS is hidden for brevity.
+
 #### Result
 
-Scroll to see the subject element being animated.
+{{EmbedLiveSample("Examples", "100%", "480px")}}
 
-{{EmbedLiveSample("Setting an anonymous view progress timeline", "100%", "480px")}}
+Scroll to see the element with the `subject` class animate as it enters and leaves the adjusted inset view.
 
 ## Specifications
 
@@ -218,6 +237,10 @@ Scroll to see the subject element being animated.
 
 ## See also
 
-- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- [`animation-timeline`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline)
+- {{cssxref("animation-timeline")}}
+- [Scroll-driven animation timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
+- [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module
+- [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
+- {{domxref("ViewTimeline")}}
+- [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)

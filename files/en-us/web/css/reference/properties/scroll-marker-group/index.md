@@ -1,5 +1,6 @@
 ---
-title: scroll-marker-group
+title: "`scroll-marker-group` CSS property"
+short-title: scroll-marker-group
 slug: Web/CSS/Reference/Properties/scroll-marker-group
 page-type: css-property
 status:
@@ -33,6 +34,8 @@ scroll-marker-group: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `after`
   - : A {{cssxref("::scroll-marker-group")}} pseudo-element is generated as a sibling of the scroll container's child DOM elements, immediately preceding them, and any generated {{cssxref("::scroll-button()")}} pseudo-elements. It appears at the end of the container's tab order and layout box order (but not DOM structure).
 
@@ -55,7 +58,7 @@ scroll-marker-group: unset;
 
 ## Examples
 
-See [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels) for full examples that use the `scroll-marker-group` property.
+See [Creating CSS carousels](/en-US/docs/Web/CSS/Guides/Overflow/Carousels) for full examples that use the `scroll-marker-group` property.
 
 ### Placement of the scroll markers
 
@@ -187,6 +190,8 @@ Note the placement of the scroll marker group container. Check out how the keybo
 - {{cssxref("::scroll-marker-group")}}
 - {{cssxref("::scroll-marker")}}
 - {{cssxref(":target-current")}}
-- [Creating CSS carousels](/en-US/docs/Web/CSS/CSS_overflow/CSS_carousels)
-- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
+- {{cssxref(":target-before")}}
+- {{cssxref(":target-after")}}
+- [Creating CSS carousels](/en-US/docs/Web/CSS/Guides/Overflow/Carousels)
+- [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
 - [CSS Carousel Gallery](https://chrome.dev/carousel/) via chrome.dev (2025)

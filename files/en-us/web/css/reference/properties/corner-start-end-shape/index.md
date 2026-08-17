@@ -1,5 +1,6 @@
 ---
-title: corner-start-end-shape
+title: "`corner-start-end-shape` CSS property"
+short-title: corner-start-end-shape
 slug: Web/CSS/Reference/Properties/corner-start-end-shape
 page-type: css-property
 status:
@@ -114,5 +115,5 @@ The rendered result looks like this:
 - {{cssxref("corner-top-left-shape")}}, {{cssxref("corner-top-right-shape")}}, {{cssxref("corner-bottom-left-shape")}}, and {{cssxref("corner-bottom-right-shape")}}
 - {{cssxref("border-radius")}} shorthand property
 - {{cssxref("border-start-end-radius")}}
-- [CSS borders and box decorations](/en-US/docs/Web/CSS/CSS_borders_and_box_decorations) module
-- [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module
+- [CSS borders and box decorations](/en-US/docs/Web/CSS/Guides/Borders_and_box_decorations) module
+- [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module

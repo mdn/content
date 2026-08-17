@@ -74,10 +74,25 @@ For example, consider a line like this in an extension's document:
 This doesn't load the requested resource: it fails silently, and any object that you expect to be present from the resource is not found. There are two main solutions to this:
 
 - download the resource, package it in your extension, and refer to this version of the resource.
-- allow the remote origin you need using the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) key or, in Manifest V3, the `content_scripts` property.
+- allow the remote origin you need using the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) key.
 
 > [!NOTE]
 > If your modified CSP allows remote script injection, your extension will get rejected from addons.mozilla.org (AMO) during the review. For more information, see details about [security best practices](https://extensionworkshop.com/documentation/develop/build-a-secure-extension/).
+
+#### Scripts from localhost
+
+The default CSP blocks all remote scripts, including scripts from localhost. However, to support local extension development, the CSP accepts localhost sources as an exception. You can use this feature for unpacked Manifest V3 extensions from Chrome 110 and temporarily loaded extensions from Firefox 147, by specifying CSP sources based at `http://localhost` or `http://127.0.0.1` in the [`content_security_policy`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) key. For example:
+
+```json
+{
+  "manifest_version": 3,
+  "name": "example",
+  "version": "1.0.0",
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' http://localhost:3000"
+  }
+}
+```
 
 ### eval() and friends
 
@@ -94,6 +109,8 @@ setTimeout("alert('Hello World!');", 500);
 ```js
 const f = new Function("console.log('foo');");
 ```
+
+If an extension needs to run code that relies on `eval()`-like constructs, such as some templating libraries, it can isolate that code in a [sandboxed page](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sandbox) instead of loosening the extension's CSP.
 
 ### Inline JavaScript
 

@@ -1,5 +1,6 @@
 ---
-title: corner-inline-end-shape
+title: "`corner-inline-end-shape` CSS property"
+short-title: corner-inline-end-shape
 slug: Web/CSS/Reference/Properties/corner-inline-end-shape
 page-type: css-property
 status:
@@ -16,7 +17,7 @@ For a full description of corner shape behavior and multiple examples, see the {
 
 ## Constituent properties
 
-The `corner-inline-end-shape` property is a shorthand for the following physical properties:
+The `corner-inline-end-shape` property is a shorthand for the following logical properties:
 
 - {{cssxref("corner-start-end-shape")}}
 - {{cssxref("corner-end-end-shape")}}
@@ -128,5 +129,5 @@ The rendered result looks like this:
 - {{cssxref("corner-top-shape")}}, {{cssxref("corner-bottom-shape")}}, {{cssxref("corner-left-shape")}}, and {{cssxref("corner-right-shape")}}
 - {{cssxref("border-radius")}} shorthand property
 - {{cssxref("border-start-end-radius")}} and {{cssxref("border-end-end-radius")}}
-- [CSS borders and box decorations](/en-US/docs/Web/CSS/CSS_borders_and_box_decorations) module
-- [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module
+- [CSS borders and box decorations](/en-US/docs/Web/CSS/Guides/Borders_and_box_decorations) module
+- [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module

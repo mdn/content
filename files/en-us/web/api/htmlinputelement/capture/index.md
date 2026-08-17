@@ -12,7 +12,7 @@ The **`capture`** property of the {{domxref("HTMLInputElement")}} interface refl
 
 ## Value
 
-A string; Generally either `user` or `environment`, or an empty string (`""`).
+A string; generally either `user` or `environment`, or an empty string (`""`).
 
 ## Example
 

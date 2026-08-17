@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Game_over", "Games/Tutorials/2D_breakout_game_Phaser/Collision_detection")}}
 
-This is the **9th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Let's explore how to create a group of bricks and print them on the screen using a loop. Building the brick field is a little bit more complicated than adding a single object to the screen, although it's still easier with Phaser than in pure JavaScript.
+This is the **9th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Let's explore how to create a group of bricks and print them on the screen using a loop. Building the brick field is a little bit more complicated than adding a single object to the screen, although likely less complicated to do with Phaser than in pure JavaScript.
 
 ## New properties
 
@@ -21,7 +21,7 @@ class ExampleScene extends Phaser.Scene {
 }
 ```
 
-The `bricks` property will be used to create a group of bricks, which will make it easy to manage multiple bricks at once.
+The `bricks` property will be used to create a group of bricks, which enables managing multiple bricks at once.
 
 ## Rendering the brick image
 

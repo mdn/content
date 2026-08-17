@@ -1,5 +1,6 @@
 ---
-title: font-weight
+title: "`font-weight` CSS property"
+short-title: font-weight
 slug: Web/CSS/Reference/Properties/font-weight
 page-type: css-property
 browser-compat: css.properties.font-weight
@@ -82,9 +83,9 @@ font-weight: revert-layer;
 font-weight: unset;
 ```
 
-The `font-weight` property is specified using either a `<font-weight-absolute>` value or a relative weight value, as listed below.
-
 ### Values
+
+This property is specified as a single value from the following list:
 
 - `normal`
   - : Normal font weight. Same as `400`.
@@ -304,4 +305,4 @@ span {
 - {{cssxref("font-style")}}
 - SVG {{SVGAttr("font-weight")}} attribute
 - [Learn: Fundamental text and font styling](/en-US/docs/Learn_web_development/Core/Text_styling/Fundamentals)
-- [CSS fonts](/en-US/docs/Web/CSS/CSS_fonts) module
+- [CSS fonts](/en-US/docs/Web/CSS/Guides/Fonts) module

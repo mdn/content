@@ -32,8 +32,9 @@ This is a good simple program to test whether you can get the source code of lib
 To compile this program, you need to tell the compiler where it can find libwebp's header files using the `-I` flag and also pass it all the C files of libwebp that it needs. A useful strategy is to just give it **all** the C files and rely on the compiler to strip out everything that is unnecessary. It seems to work brilliantly for this library:
 
 ```bash
-emcc -O3 -s WASM=1 -s EXPORTED_RUNTIME_METHODS='["cwrap"]' \
+emcc -O3 -s WASM=1 -s EXPORTED_RUNTIME_METHODS='["cwrap", "HEAP8"]' \
     -I libwebp \
+    -I libwebp/src \
     webp.c \
     libwebp/src/{dec,dsp,demux,enc,mux,utils}/*.c \
     libwebp/sharpyuv/*.c
@@ -63,7 +64,7 @@ And you will see the correct version number in the [output](https://googlechrome
 > [!NOTE]
 > libwebp returns the current version a.b.c as a hexadecimal number 0xabc. For example, v0.6.1 is encoded as 0x000601 = 1537.
 
-### Get an image from JavaScript into Wasm
+## Get an image from JavaScript into Wasm
 
 Getting the encoder's version number is great, but encoding an actual image would be more impressive. How do we do that?
 
@@ -121,7 +122,7 @@ Module.HEAP8.set(image.data, p);
 api.destroy_buffer(p);
 ```
 
-### Encode the Image
+## Encode the Image
 
 The image is now available in Wasm. It is time to call the WebP encoder to do its job. Looking at the [WebP documentation](https://developers.google.com/speed/webp/docs/api#simple_encoding_api), you'll find that `WebPEncodeRGBA` seems like a perfect fit. The function takes a pointer to the input image and its dimensions, as well as a quality option between 0 and 100. It also allocates an output buffer for us that we need to free using `WebPFree()` once we are done with the WebP image.
 

@@ -1,5 +1,6 @@
 ---
-title: background-origin
+title: "`background-origin` CSS property"
+short-title: background-origin
 slug: Web/CSS/Reference/Properties/background-origin
 page-type: css-property
 browser-compat: css.properties.background-origin
@@ -7,6 +8,8 @@ sidebar: cssref
 ---
 
 The **`background-origin`** [CSS](/en-US/docs/Web/CSS) property sets the background's origin: from the border start, inside the border, or inside the padding.
+
+Note that `background-origin` is ignored when {{cssxref("background-attachment")}} is `fixed`.
 
 {{InteractiveExample("CSS Demo: background-origin")}}
 
@@ -43,8 +46,6 @@ background-repeat: no-repeat;
 }
 ```
 
-Note that `background-origin` is ignored when {{cssxref("background-attachment")}} is `fixed`.
-
 ## Syntax
 
 ```css
@@ -61,9 +62,9 @@ background-origin: revert-layer;
 background-origin: unset;
 ```
 
-The `background-origin` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `border-box`
   - : The background is positioned relative to the border box.

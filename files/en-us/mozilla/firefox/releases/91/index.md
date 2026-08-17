@@ -35,13 +35,13 @@ No changes
 
 ### HTTP
 
-- The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) now requires a [secure context](/en-US/docs/Web/Security/Secure_Contexts) ([Firefox bug 1704005](https://bugzil.la/1704005)).
+- The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) now requires a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts) ([Firefox bug 1704005](https://bugzil.la/1704005)).
 
 ### APIs
 
 #### DOM
 
-- The [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API) is now enabled by default on Firefox desktop releases (it has been enabled on Firefox for Android since version 68).
+- The [Visual Viewport API](/en-US/docs/Web/API/VisualViewport) is now enabled by default on Firefox desktop releases (it has been enabled on Firefox for Android since version 68).
   The API provides access to information describing the position of the {{Glossary("visual viewport")}} relative to the document, as well as to the window's content area.
   It also provides events that allow changes to the viewport to be monitored. ([Firefox bug 1551302](https://bugzil.la/1551302)).
 - The [Gamepad API](/en-US/docs/Web/API/Gamepad_API) is now protected by `Feature-Policy: gamepad`.

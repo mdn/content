@@ -1,5 +1,6 @@
 ---
-title: grid-column-end
+title: "`grid-column-end` CSS property"
+short-title: grid-column-end
 slug: Web/CSS/Reference/Properties/grid-column-end
 page-type: css-property
 browser-compat: css.properties.grid-column-end
@@ -204,5 +205,5 @@ grid-column-end: unset;
 - {{cssxref("grid-row-start")}}
 - {{cssxref("grid-row-end")}}
 - {{cssxref("grid-row")}}
-- [Line-based placement with CSS grid](/en-US/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- [Line-based placement with CSS grid](/en-US/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
 - Video: [Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)

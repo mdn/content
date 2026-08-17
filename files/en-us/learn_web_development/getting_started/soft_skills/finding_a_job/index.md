@@ -26,7 +26,7 @@ Technical job interviews can be very demanding, and some have quite specific req
         <ul>
           <li>Deciding what kind of job you want.</li>
           <li>Searching for jobs.</li>
-          <li>Developing qualities for that employers look for.</li>
+          <li>Developing qualities that employers look for.</li>
           <li>Selling yourself to would-be employers.</li>
           <li>Applying for jobs.</li>
           <li>Preparing yourself for job interviews.</li>
@@ -203,7 +203,7 @@ Above all:
 
 Not all job applications require the same things; you'll probably have to:
 
-- Fill out some details on an online form. Type out your answers locally (for example, in VSCode) or in an online document (for example, a Google Docs file) before entering them into the form fields, in case something (for example, a browser crash) causes you to lose your work. This can save you hours of frustration; text is also easier to review and get feedback on if you put it somewhere else first.
+- Fill out some details on an online form. Type out your answers locally (for example, in VS Code) or in an online document (for example, a Google Docs file) before entering them into the form fields, in case something (for example, a browser crash) causes you to lose your work. This can save you hours of frustration; text is also easier to review and get feedback on if you put it somewhere else first.
 - Upload your CV/résumé.
 - Write and upload a covering letter. There are many guides to writing effective covering letters elsewhere online, but in general, such a letter should provide a description of why you:
   - Want to work for the company.
@@ -322,6 +322,6 @@ Be patient. Even the best candidates will get rejections from multiple job appli
 - [Getting hired](https://scrimba.com/the-frontend-developer-career-path-c0j/~0156?via=mdn), Scrimba <sup>Course Partner</sup>
 - [Technical Interviewing 101: Ultimate Guide to Acing Your Tech Interview](https://learntocodewith.me/posts/technical-interview/), learntocodewith.me (2022)
 - [30 Technical Interview Questions and Tips for Answering](https://www.coursera.org/articles/technical-interview-questions), Coursera (2023)
-- [How to land your first developer job](/en-US/blog/how-to-land-your-first-developer-job), MDN Blog, 2024
+- [How to land your first developer job](/en-US/blog/how-to-land-your-first-developer-job/), MDN Blog, 2024
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes", "Learn_web_development/Core", "Learn_web_development/Getting_started/Soft_skills")}}

@@ -1,5 +1,6 @@
 ---
-title: background-position-x
+title: "`background-position-x` CSS property"
+short-title: background-position-x
 slug: Web/CSS/Reference/Properties/background-position-x
 page-type: css-property
 browser-compat: css.properties.background-position-x
@@ -7,6 +8,8 @@ sidebar: cssref
 ---
 
 The **`background-position-x`** [CSS](/en-US/docs/Web/CSS) property sets the initial horizontal position for each background image. The position is relative to the position layer set by {{cssxref("background-origin")}}.
+
+The value of this property is overridden by any declaration of the {{cssxref("background")}} or {{cssxref("background-position")}} shorthand properties applied to the element after it.
 
 {{InteractiveExample("CSS Demo: background-position-x")}}
 
@@ -45,8 +48,6 @@ background-position-x: right 32px;
 }
 ```
 
-The value of this property is overridden by any declaration of the {{cssxref("background")}} or {{cssxref("background-position")}} shorthand properties applied to the element after it.
-
 ## Syntax
 
 ```css
@@ -78,9 +79,9 @@ background-position-x: revert-layer;
 background-position-x: unset;
 ```
 
-The `background-position-x` property is specified as one or more values, separated by commas.
-
 ### Values
+
+This property is specified as one or more comma-separated values:
 
 - `left`
   - : Aligns the left edge of the background image with the left edge of the background position layer.
@@ -171,4 +172,4 @@ div {
 
 - {{cssxref("background-position")}}
 - {{cssxref("background-position-y")}}
-- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [Using multiple backgrounds](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)

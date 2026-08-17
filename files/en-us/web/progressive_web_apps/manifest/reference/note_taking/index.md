@@ -12,7 +12,7 @@ sidebar: pwasidebar
 
 The `note_taking` member identifies a web app as a note-taking app and defines related information, for example a URL pointing to functionality for taking a new note. This enables operating systems to integrate the app's note taking functionality, for example including a "New note" option in the app's context menu, or providing the app as an option for taking a note in other apps.
 
-### Values
+## Values
 
 An object, which may contain the following values:
 

@@ -25,7 +25,7 @@ To complete the task:
 
 <!-- Code shared across examples -->
 
-```css hidden live-sample___forms-buttons-1 live-sample___forms-buttons-2 live-sample___forms-buttons-3 live-sample___forms-buttons-4 live-sample___forms-buttons-5 live-sample___forms-buttons-6
+```css hidden live-sample___forms-buttons-1 live-sample___forms-buttons-2 live-sample___forms-buttons-3 live-sample___forms-buttons-4 live-sample___forms-buttons-5 live-sample___forms-buttons-6 live-sample___forms-buttons-1-finished live-sample___forms-buttons-2-finished live-sample___forms-buttons-3-finished live-sample___forms-buttons-4-finished live-sample___forms-buttons-5-finished live-sample___forms-buttons-6-finished
 body {
   background-color: white;
   color: #333333;
@@ -45,6 +45,12 @@ body {
 
 <!-- Example-specific code -->
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("forms-buttons-1", "100%", 150) }}
+
+Here's the underlying code for this starting point:
+
 ```html live-sample___forms-buttons-1
 <form>
   <ul>
@@ -55,14 +61,16 @@ body {
 </form>
 ```
 
-{{ EmbedLiveSample("forms-buttons-1", "100%", 150) }}
+The updated form should look like this:
+
+{{ EmbedLiveSample("forms-buttons-1-finished", "100%", 150) }}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look something like this:
 
-```html
+```html live-sample___forms-buttons-1-finished
 <form>
   <ul>
     <li>
@@ -92,6 +100,12 @@ To complete the task:
 2. Make it so that the first radio button is selected upon page load.
 3. Turn the second `<fieldset>`'s content into a set of checkboxes.
 4. Add a couple more hotdog choices of your own.
+
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("forms-buttons-2", "100%", 350) }}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___forms-buttons-2
 <form>
@@ -124,14 +138,16 @@ To complete the task:
 </form>
 ```
 
-{{ EmbedLiveSample("forms-buttons-2", "100%", 350) }}
+The updated form should look like this:
+
+{{ EmbedLiveSample("forms-buttons-2-finished", "100%", 360) }}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look something like this:
 
-```html
+```html live-sample___forms-buttons-2-finished
 <form>
   <fieldset>
     <legend>Who is your favorite pony?</legend>
@@ -155,20 +171,20 @@ Your finished HTML should look something like this:
     <ul>
       <li>
         <label for="vegan">Vegan</label>
-        <input type="checkbox" id="vegan" name="hotdog" value="vegan" />
+        <input type="checkbox" id="vegan" name="hotdog_vegan" />
       </li>
       <li>
         <label for="onions">Onions</label>
-        <input type="checkbox" id="onions" name="hotdog" value="onions" />
+        <input type="checkbox" id="onions" name="hotdog_onions" />
       </li>
       <li>
         <label for="mustard">Mustard</label>
-        <input type="checkbox" id="mustard" name="hotdog" value="mustard" />
+        <input type="checkbox" id="mustard" name="hotdog_mustard" />
       </li>
 
       <li>
         <label for="ketchup">Ketchup</label>
-        <input type="checkbox" id="ketchup" name="hotdog" value="ketchup" />
+        <input type="checkbox" id="ketchup" name="hotdog_ketchup" />
       </li>
     </ul>
   </fieldset>
@@ -180,12 +196,18 @@ Your finished HTML should look something like this:
 
 ## Forms and buttons 3
 
-In this task you'll explore some more specific input types. We want you to create appropriate inputs for a user to update their details for:
+In this task, you'll explore some more specific input types. We want you to create appropriate inputs for a user to update their details:
 
 1. Email
 2. Website
 3. Phone number
 4. Favorite color
+
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("forms-buttons-3", "100%", 250) }}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___forms-buttons-3
 <form>
@@ -210,14 +232,16 @@ In this task you'll explore some more specific input types. We want you to creat
 </form>
 ```
 
-{{ EmbedLiveSample("forms-buttons-3", "100%", 250) }}
+The updated form should look like this:
+
+{{ EmbedLiveSample("forms-buttons-3-finished", "100%", 250) }}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look something like this:
 
-```html
+```html live-sample___forms-buttons-3-finished
 <form>
   <h2>Edit your preferences</h2>
   <ul>
@@ -256,6 +280,12 @@ To complete the task:
 2. Associate it semantically with the provided "food" label.
 3. Inside the list, split the choices up into 2 subgroups — "mains" and "snacks".
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("forms-buttons-4", "100%", 120) }}
+
+Here's the underlying code for this starting point:
+
 ```html live-sample___forms-buttons-4
 <form>
   <ul>
@@ -271,14 +301,16 @@ To complete the task:
 </form>
 ```
 
-{{ EmbedLiveSample("forms-buttons-4", "100%", 250) }}
+The updated form should look like this:
+
+{{ EmbedLiveSample("forms-buttons-4-finished", "100%", 120) }}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look something like this:
 
-```html
+```html live-sample___forms-buttons-4-finished
 <form>
   <ul>
     <li>
@@ -317,6 +349,12 @@ To complete the task:
 2. Mark up each text label with an appropriate element so that it is semantically associated with its respective form field.
 3. Add a suitable set of structural elements around the label/field pairs to separate them out.
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("forms-buttons-5", "100%", 120) }}
+
+Here's the underlying code for this starting point:
+
 ```html live-sample___forms-buttons-5
 <form>
   Name:
@@ -333,14 +371,16 @@ To complete the task:
 </form>
 ```
 
-{{ EmbedLiveSample("forms-buttons-5", "100%", 250) }}
+The updated form should look like this:
+
+{{ EmbedLiveSample("forms-buttons-5-finished", "100%", 300) }}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look something like this:
 
-```html
+```html live-sample___forms-buttons-5-finished
 <form>
   <fieldset>
     <legend>Personal details</legend>
@@ -385,6 +425,12 @@ To complete the task:
 
 Try submitting your form — it should refuse to submit until the above constraints are followed, and give suitable error messages.
 
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("forms-buttons-6", "100%", 300) }}
+
+Here's the underlying code for this starting point:
+
 ```html live-sample___forms-buttons-6
 <form>
   <h2>Enter your support query</h2>
@@ -412,14 +458,14 @@ Try submitting your form — it should refuse to submit until the above constrai
 </form>
 ```
 
-{{ EmbedLiveSample("forms-buttons-6", "100%", 300) }}
+We've not provided finished content for this task, as it looks the same as the starting point.
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look something like this:
 
-```html
+```html live-sample___forms-buttons-6-finished
 <form>
   <h2>Enter your support query</h2>
   <ul>

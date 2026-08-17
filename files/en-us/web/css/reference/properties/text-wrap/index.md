@@ -1,5 +1,6 @@
 ---
-title: text-wrap
+title: "`text-wrap` CSS property"
+short-title: text-wrap
 slug: Web/CSS/Reference/Properties/text-wrap
 page-type: css-shorthand-property
 browser-compat: css.properties.text-wrap
@@ -38,7 +39,7 @@ text-wrap: stable;
   <div class="whole-content-wrapper">
     <p>Edit the text in the box:</p>
     <div class="transition-all" id="example-element">
-      <p contenteditable="">
+      <p contenteditable>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut
         cum eum id quos est.
       </p>
@@ -65,8 +66,8 @@ text-wrap: stable;
 
 This property is a shorthand for the following CSS properties:
 
-- [`text-wrap-mode`](/en-US/docs/Web/CSS/Reference/Properties/text-wrap-mode)
-- [`text-wrap-style`](/en-US/docs/Web/CSS/Reference/Properties/text-wrap-style)
+- {{cssxref("text-wrap-mode")}}
+- {{cssxref("text-wrap-style")}}
 
 ## Syntax
 
@@ -86,9 +87,9 @@ text-wrap: revert-layer;
 text-wrap: unset;
 ```
 
-The `text-wrap` property is specified as a single keyword chosen from the list of values below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `wrap`
   - : Text is wrapped across lines at appropriate characters (for example spaces, in languages like English that use space separators) to minimize overflow. This is the default value.
@@ -180,7 +181,7 @@ The text in the example is editable. Change the text, adding long words, to view
 
 - {{CSSxRef("white-space")}}
 - {{CSSxRef("white-space-collapse")}}
-- [CSS text module](/en-US/docs/Web/CSS/CSS_text)
+- [CSS text module](/en-US/docs/Web/CSS/Guides/Text)
 - [CSS `text-wrap: balance`](https://developer.chrome.com/docs/css-ui/css-text-wrap-balance) on developer.chrome.com (2023)
 - [CSS `text-wrap: pretty`](https://developer.chrome.com/blog/css-text-wrap-pretty/) on developer.chrome.com (2023)
 - [Balancing Japanese and Korean typography](https://ryelle.codes/2025/04/typography-troubles-balancing-in-japanese-korean/) by Kelly Choyce-Dwan (2025)

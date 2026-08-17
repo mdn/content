@@ -1,5 +1,6 @@
 ---
-title: mask-border-source
+title: "`mask-border-source` CSS property"
+short-title: mask-border-source
 slug: Web/CSS/Reference/Properties/mask-border-source
 page-type: css-property
 browser-compat: css.properties.mask-border-source
@@ -32,7 +33,7 @@ mask-border-source: unset;
 
 - `none`
   - : No mask border is used.
-- {{cssxref("&lt;image&gt;")}}
+- {{cssxref("image")}}
   - : Image reference to use for the mask border.
 
 ## Formal definition
@@ -60,7 +61,7 @@ Chromium-based browsers support an outdated version of this property — `mask-b
 ```
 
 > [!NOTE]
-> The [`mask-border`](/en-US/docs/Web/CSS/Reference/Properties/mask-border) page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.
+> The {{cssxref("mask-border")}} page features a working example (using the out-of-date prefixed border mask properties supported in Chromium), so you can get an idea of the effect.
 
 ## Specifications
 

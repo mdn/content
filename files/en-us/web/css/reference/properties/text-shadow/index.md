@@ -1,12 +1,13 @@
 ---
-title: text-shadow
+title: "`text-shadow` CSS property"
+short-title: text-shadow
 slug: Web/CSS/Reference/Properties/text-shadow
 page-type: css-property
 browser-compat: css.properties.text-shadow
 sidebar: cssref
 ---
 
-The **`text-shadow`** [CSS](/en-US/docs/Web/CSS) property adds shadows to text. It accepts a comma-separated list of shadows to be applied to the text and any of its [`decorations`](/en-US/docs/Web/CSS/Reference/Properties/text-decoration). Each shadow is described by some combination of X and Y offsets from the element, blur radius, and color.
+The **`text-shadow`** [CSS](/en-US/docs/Web/CSS) property adds shadows to text. It accepts a comma-separated list of shadows to be applied to the text and any of its {{cssxref("text-decoration")}}. Each shadow is described by some combination of X and Y offsets from the element, blur radius, and color.
 
 {{InteractiveExample("CSS Demo: text-shadow")}}
 
@@ -87,7 +88,7 @@ Each shadow is specified as two or three `<length>` values, followed optionally 
 
 When more than one shadow is given, shadows are applied front-to-back, with the first-specified shadow on top.
 
-This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first-letter")}} [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements).
+This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first-letter")}} [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements).
 
 ### Values
 
@@ -159,8 +160,8 @@ This property applies to both {{cssxref("::first-line")}} and {{cssxref("::first
 
 ## See also
 
-- [Introduction to text shadows](/en-US/docs/Web/CSS/CSS_text_decoration/Text_shadows)
+- [Introduction to text shadows](/en-US/docs/Web/CSS/Guides/Text_decoration/Text_shadows)
 - {{cssxref("&lt;color&gt;")}}
 - {{cssxref("box-shadow")}}
 - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-- [CSS text decoration](/en-US/docs/Web/CSS/CSS_text_decoration) module
+- [CSS text decoration](/en-US/docs/Web/CSS/Guides/Text_decoration) module

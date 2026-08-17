@@ -9,4 +9,4 @@ In CSS, a **pseudo-class** selector targets elements depending on their state ra
 
 ## See also
 
-- [Pseudo-class documentation](/en-US/docs/Web/CSS/Pseudo-classes)
+- [Pseudo-class documentation](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes)

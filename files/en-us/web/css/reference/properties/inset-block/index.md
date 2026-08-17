@@ -1,5 +1,6 @@
 ---
-title: inset-block
+title: "`inset-block` CSS property"
+short-title: inset-block
 slug: Web/CSS/Reference/Properties/inset-block
 page-type: css-shorthand-property
 browser-compat: css.properties.inset-block
@@ -98,7 +99,7 @@ inset-block: unset;
 
 ### Values
 
-The `inset-block` property takes the same values as the {{cssxref("left")}} property.
+The `inset-block` property takes the same values as the {{cssxref("top")}} property.
 
 ## Formal definition
 

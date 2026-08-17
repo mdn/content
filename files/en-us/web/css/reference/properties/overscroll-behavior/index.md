@@ -1,5 +1,6 @@
 ---
-title: overscroll-behavior
+title: "`overscroll-behavior` CSS property"
+short-title: overscroll-behavior
 slug: Web/CSS/Reference/Properties/overscroll-behavior
 page-type: css-shorthand-property
 browser-compat: css.properties.overscroll-behavior
@@ -128,6 +129,8 @@ In some cases, these behaviors are not desirable. You can use `overscroll-behavi
 
 Note that this property applies only to {{Glossary("Scroll_container", "scroll containers")}}. In particular, since an [`<iframe>`](/en-US/docs/Web/HTML/Reference/Elements/iframe) is not a scroll container, setting this property on an iframe has no effect. To control scroll chaining from an iframe, set `overscroll-behavior` on both the [`<html>`](/en-US/docs/Web/HTML/Reference/Elements/html) and the [`<body>`](/en-US/docs/Web/HTML/Reference/Elements/body) elements of the iframe's document.
 
+A {{Glossary("Scroll_container", "scroll container")}} that has no scrollable overflow, such as an element with `overflow: hidden`, is always considered to be at its {{Glossary("Scroll_boundary", "scroll boundary")}}. So setting a non-default `overscroll-behavior` such as `contain` or `none` on it will prevent scroll chaining to ancestor scroll containers. This can be used to prevent background scrolling while a dialog or overlay is open.
+
 ## Formal definition
 
 {{cssinfo}}
@@ -173,6 +176,6 @@ html {
 
 ## See also
 
-- [CSS overscroll behavior](/en-US/docs/Web/CSS/CSS_overscroll_behavior) module
-- [CSS scroll anchoring](/en-US/docs/Web/CSS/CSS_scroll_anchoring) module
+- [CSS overscroll behavior](/en-US/docs/Web/CSS/Guides/Overscroll_behavior) module
+- [CSS scroll anchoring](/en-US/docs/Web/CSS/Guides/Scroll_anchoring) module
 - [Take control of your scroll: customizing pull-to-refresh and overflow effects](https://developer.chrome.com/blog/overscroll-behavior) on developer.chrome.com (2017)

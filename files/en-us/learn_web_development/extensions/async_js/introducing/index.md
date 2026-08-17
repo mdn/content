@@ -228,7 +228,7 @@ After adding the event listener we send the request. Note that after this, we ca
 <button id="xhr">Click to start request</button>
 <button id="reload">Reload</button>
 
-<pre readonly class="event-log"></pre>
+<pre class="event-log"></pre>
 ```
 
 ```css hidden

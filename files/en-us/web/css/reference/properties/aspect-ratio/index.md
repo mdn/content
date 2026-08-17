@@ -1,14 +1,13 @@
 ---
-title: aspect-ratio
+title: "`aspect-ratio` CSS property"
+short-title: aspect-ratio
 slug: Web/CSS/Reference/Properties/aspect-ratio
 page-type: css-property
 browser-compat: css.properties.aspect-ratio
 sidebar: cssref
 ---
 
-The **`aspect-ratio`** [CSS](/en-US/docs/Web/CSS) property allows you to define the desired width-to-height ratio of an element's box. This means that even if the parent container or viewport size changes, the browser will adjust the element's dimensions to maintain the specified width-to-height ratio. The specified {{glossary("aspect ratio")}} is used in the calculation of auto sizes and some other layout functions.
-
-At least one of the box's sizes needs to be automatic in order for `aspect-ratio` to have any effect. If neither the width nor height is an automatic size, then the provided aspect ratio has no effect on the box's preferred sizes.
+The **`aspect-ratio`** [CSS](/en-US/docs/Web/CSS) property allows you to define the desired width-to-height ratio of an element's box.
 
 {{InteractiveExample("CSS Demo: aspect-ratio")}}
 
@@ -64,11 +63,9 @@ aspect-ratio: revert-layer;
 aspect-ratio: unset;
 ```
 
-This property is specified as one or both of the keyword auto or a `<ratio>`. If both are given, and the element is a {{ glossary("replaced elements", "replaced element")}}, such as [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img), then the given ratio is used until the content is loaded. After the content is loaded, the `auto` value is applied, so the intrinsic aspect ratio of the loaded content is used.
-
-If the element is not a replaced element, then the given `ratio` is used.
-
 ### Values
+
+This property is specified as one or both of the keyword `auto` or a `<ratio>`.
 
 - `auto`
   - : {{glossary("Replaced elements")}} with an intrinsic aspect ratio use _that_ aspect ratio, otherwise the box has no preferred aspect ratio. Size calculations involving intrinsic aspect ratio always work with the content box dimensions.
@@ -78,6 +75,16 @@ If the element is not a replaced element, then the given `ratio` is used.
 
 - `auto && <ratio>`
   - : When both `auto` and a `<ratio>` are specified together, `auto` is used if the element is a replaced element with a natural aspect ratio, like an `<img>` element. Otherwise, the specified ratio of `width` / `height` is used as the preferred aspect ratio.
+
+## Description
+
+The `aspect-ratio` property defines a desired width-to-height ratio of an element's box. This means that even if the parent container or viewport size changes, the browser will adjust the element's dimensions to maintain the specified width-to-height ratio. The specified {{glossary("aspect ratio")}} is used in the calculation of auto sizes and some other layout functions.
+
+At least one of the box's sizes needs to be automatic in order for `aspect-ratio` to have any effect. If neither the width nor height is an automatic size, then the provided aspect ratio has no effect on the box's preferred sizes.
+
+This property is specified as one or both of the keyword auto or a `<ratio>`. If both are given, and the element is a {{ glossary("replaced elements", "replaced element")}}, such as [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img), then the given ratio is used until the content is loaded. After the content is loaded, the `auto` value is applied, so the intrinsic aspect ratio of the loaded content is used.
+
+If the element is not a replaced element, then the given `ratio` is used.
 
 ## Formal definition
 
@@ -169,7 +176,7 @@ Note how the first image without replaced content keeps the `3/2` aspect ratio, 
 
 ## See also
 
-- [Understanding aspect ratios](/en-US/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
+- [Understanding aspect ratios](/en-US/docs/Web/CSS/Guides/Box_sizing/Aspect_ratios)
 - [Image aspect-ratio: preventing jank](/en-US/docs/Learn_web_development/Extensions/Performance/Multimedia#rendering_strategy_preventing_jank_when_loading_images)
 - [Designing an aspect ratio unit for CSS](https://www.smashingmagazine.com/2019/03/aspect-ratio-unit-css/)
 - [Setting Height And Width On Images Is Important Again](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/)

@@ -25,7 +25,7 @@ TypeError: Cannot access invalid private field (evaluating 'this.#x') (Safari)
 
 You are trying to get or set a private field or method on an object, but that object does not contain this private element. Private instance properties can only be accessed on instances of the class (including its subclasses) that declares them; private static properties can only be accessed on the class itself that declares them, and not on subclasses.
 
-This error occurs when the private name exists in the class scope but the object it's accessed on is invalid, If the private name does not exist, you will get a [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Undeclared_private_field_or_method) instead.
+This error occurs when the private name exists in the class scope but the object it's accessed on is invalid. If the private name does not exist, you will get a [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Undeclared_private_field_or_method) instead.
 
 ## Examples
 

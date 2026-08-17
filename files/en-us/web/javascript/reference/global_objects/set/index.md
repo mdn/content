@@ -99,7 +99,7 @@ To make them more generalizable, these methods don't just accept `Set` objects, 
 
 ### Set-like objects
 
-All [set composition methods](#set_composition) require {{jsxref("Operators/this", "this")}} to be an actual `Set` instance, but their arguments just need to be set-like. A _set-like object_ is an object that provides the following:
+All [set composition methods](#set_composition) require {{jsxref("this")}} to be an actual `Set` instance, but their arguments just need to be set-like. A _set-like object_ is an object that provides the following:
 
 - A {{jsxref("Set/size", "size")}} property that contains a number.
 - A {{jsxref("Set/has", "has()")}} method that takes an element and returns a boolean.
@@ -142,7 +142,7 @@ interface GPUSupportedFeatures {
 
 `Set`-like objects are either read-only or read-writable (see the `readonly` keyword in the IDL above).
 
-- Read-only `Set`-like objects have the property {{jsxref("Set/size", "size")}}, and the methods: {{jsxref("Set/entries", "entries()")}}, {{jsxref("Set/forEach", "forEach()")}}, {{jsxref("Set/has", "has()")}}, {{jsxref("Set/keys", "keys()")}}, {{jsxref("Set/values", "values()")}}, and [`Symbol.iterator()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator).
+- Read-only `Set`-like objects have the property {{jsxref("Set/size", "size")}}, and the methods: {{jsxref("Set/entries", "entries()")}}, {{jsxref("Set/forEach", "forEach()")}}, {{jsxref("Set/has", "has()")}}, {{jsxref("Set/keys", "keys()")}}, {{jsxref("Set/values", "values()")}}, and [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator).
 - Writeable `Set`-like objects additionally have the methods: {{jsxref("Set/clear", "clear()")}}, {{jsxref("Set/delete", "delete()")}}, and {{jsxref("Set/add", "add()")}}.
 
 The methods and properties have the same behavior as the equivalent entities in `Set`, except for the restriction on the types of the entry.
@@ -157,6 +157,7 @@ The following are examples of writable `Set`-like browser objects:
 - {{domxref("CustomStateSet")}}
 - {{domxref("FontFaceSet")}}
 - {{domxref("Highlight")}}
+- {{domxref("ViewTransitionTypeSet")}}
 
 ## Constructor
 

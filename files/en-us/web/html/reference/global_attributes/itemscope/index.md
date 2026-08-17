@@ -1,5 +1,5 @@
 ---
-title: HTML itemscope global attribute
+title: "`itemscope` HTML global attribute"
 short-title: itemscope
 slug: Web/HTML/Reference/Global_attributes/itemscope
 page-type: html-attribute
@@ -15,6 +15,8 @@ Every HTML element may have an `itemscope` attribute specified. An `itemscope` e
 
 > [!NOTE]
 > Find more about `itemtype` attributes at <https://schema.org/Thing>
+
+## Usage notes
 
 ### itemscope id attributes
 

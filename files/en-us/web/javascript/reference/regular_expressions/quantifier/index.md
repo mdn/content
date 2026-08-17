@@ -28,6 +28,9 @@ atom{min,}?
 atom{min,max}?
 ```
 
+> [!NOTE]
+> Adding `?` after `{count}` is syntactically valid but practically useless. Since `{count}` always matches exactly `count` times, `atom{count}?` behaves the same as `atom{count}`.
+
 ### Parameters
 
 - `atom`

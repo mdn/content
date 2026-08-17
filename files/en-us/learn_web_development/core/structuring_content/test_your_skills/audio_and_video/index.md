@@ -13,7 +13,7 @@ The aim of this skill test is to help you assess whether you understand how to [
 > [!NOTE]
 > To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
-## Task 1
+## Audio and video 1
 
 In this task, we want you to embed an audio file onto the page.
 
@@ -21,6 +21,12 @@ To complete this task:
 
 1. Add the path to the audio file to an appropriate attribute to embed it on the page. The audio is called `audio.mp3`, and it available at a path of `https://github.com/mdn/learning-area/raw/refs/heads/main/html/multimedia-and-embedding/tasks/media-embed/media/audio.mp3`.
 2. Add an attribute to make browsers display some default controls.
+
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample('audio-1', "100%", 150) }}
+
+Here's the underlying code for this starting point:
 
 ```html live-sample___audio-1
 <h1>Basic audio embed</h1>
@@ -30,7 +36,7 @@ To complete this task:
 
 <!-- Shared styles -->
 
-```css hidden live-sample___video-1 live-sample___audio-1
+```css hidden live-sample___video-1 live-sample___audio-1 live-sample___video-1-finished live-sample___audio-1-finished
 body {
   background-color: white;
   color: #333333;
@@ -53,14 +59,16 @@ video {
 }
 ```
 
-{{ EmbedLiveSample('audio-1', "100%", 150) }}
+The updated content should look like this:
+
+{{ EmbedLiveSample('audio-1-finished', "100%", 180) }}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look like this:
 
-```html
+```html live-sample___audio-1-finished
 <h1>Basic audio embed</h1>
 
 <audio
@@ -70,7 +78,7 @@ Your finished HTML should look like this:
 
 </details>
 
-## Task 2
+## Audio and video 2
 
 In this task, we want you to mark up a slightly more complex video player, with multiple sources, subtitles, and other features besides.
 
@@ -86,20 +94,28 @@ To complete this task:
 6. Display the text tracks contained in the `media` folder, in a file called `https://raw.githubusercontent.com/mdn/learning-area/refs/heads/main/html/multimedia-and-embedding/tasks/media-embed/media/subtitles_en.vtt`, when the video is playing. You must explicitly set the type as subtitles, and the subtitle language to English.
 7. Make sure the readers can identify the subtitle language when they use the default controls.
 
+The starting point of the task looks like this:
+
+{{EmbedLiveSample('video-1', "100%", 300)}}
+
+Here's the underlying code for this starting point:
+
 ```html live-sample___video-1
 <h1>Video embed</h1>
 
 <video></video>
 ```
 
-{{EmbedLiveSample('video-1', "100%", 300)}}
+The updated content should look like this:
+
+{{EmbedLiveSample('video-1-finished', "100%", 380)}}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Your finished HTML should look like this:
 
-```html
+```html live-sample___video-1-finished
 <h1>Video embed</h1>
 
 <video controls width="320" height="240" muted>

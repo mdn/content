@@ -23,9 +23,9 @@ rotateFromVectorSelf(rotX, rotY)
 ### Parameters
 
 - `rotX` {{optional_inline}}
-  - : A number; The x-coordinate of x,y vector that determines the rotation angle. If undefined, `0` is used.
+  - : A number; the x-coordinate of x,y vector that determines the rotation angle. If undefined, `0` is used.
 - `rotY` {{optional_inline}}
-  - : A number; The y-coordinate of x,y vector that determines the rotation angle. If undefined, `0` is used.
+  - : A number; the y-coordinate of x,y vector that determines the rotation angle. If undefined, `0` is used.
 
 ### Return value
 
@@ -58,6 +58,6 @@ console.log(matrix.toString());
 - {{domxref("DOMMatrix.rotateAxisAngleSelf()")}}
 - CSS {{cssxref("transform")}} property and {{cssxref("transform-function/rotate3d", "rotate3d()")}} function
 - CSS {{cssxref("rotate")}} property
-- [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module
+- [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms) module
 - SVG [`transform`](/en-US/docs/Web/SVG/Reference/Attribute/transform) attribute
 - {{domxref("CanvasRenderingContext2D")}} interface and {{domxref("CanvasRenderingContext2D.rotate()", "rotate()")}} method

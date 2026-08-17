@@ -298,7 +298,7 @@ filter: drop-shadow(16px 16px 20px red) invert(75%);
         </p>
         <p>
           The <code>cover</code> value means that the viewport is scaled to fill the device display.
-          It is highly recommended to make use of the <a href="/en-US/docs/Web/CSS/env">safe area inset</a> variables to
+          It is highly recommended to make use of the <a href="/en-US/docs/Web/CSS/Reference/Values/env">safe area inset</a> variables to
           ensure that important content doesn't end up outside the display.
         </p>
       </td>

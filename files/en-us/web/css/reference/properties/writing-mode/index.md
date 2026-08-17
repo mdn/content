@@ -1,12 +1,13 @@
 ---
-title: writing-mode
+title: "`writing-mode` CSS property"
+short-title: writing-mode
 slug: Web/CSS/Reference/Properties/writing-mode
 page-type: css-property
 browser-compat: css.properties.writing-mode
 sidebar: cssref
 ---
 
-The **`writing-mode`** [CSS](/en-US/docs/Web/CSS) property sets whether lines of text are laid out horizontally or vertically, as well as the direction in which blocks progress. When set for an entire document, it should be set on the root element (`html` element for HTML documents).
+The **`writing-mode`** [CSS](/en-US/docs/Web/CSS) property sets whether lines of text are laid out horizontally or vertically, as well as the direction in which text flows.
 
 {{InteractiveExample("CSS Demo: writing-mode")}}
 
@@ -47,18 +48,14 @@ writing-mode: sideways-lr;
   padding: 0.75em;
   width: 80%;
   max-height: 300px;
-  display: flex;
 }
 
 #example-element > div {
   background-color: rgb(0 0 255 / 0.2);
   border: 3px solid blue;
   margin: 10px;
-  flex: 1;
 }
 ```
-
-This property specifies the _block flow direction_, which is the direction in which block-level containers are stacked, and the direction in which inline-level content flows within a block container. Thus, it also determines the ordering of block-level content.
 
 ## Syntax
 
@@ -78,16 +75,16 @@ writing-mode: revert-layer;
 writing-mode: unset;
 ```
 
-The `writing-mode` property is specified as one of the values listed below. The flow direction in horizontal scripts is also affected by the [directionality of that script](https://www.w3.org/International/questions/qa-scripts.en), either left-to-right (`ltr`, like English and most other languages) or right-to-left (`rtl`, like Hebrew or Arabic).
-
 ### Values
+
+This property is specified as one of the following keywords:
 
 - `horizontal-tb`
   - : For `ltr` scripts, content flows horizontally from left to right. For `rtl` scripts, content flows horizontally from right to left. The next horizontal line is positioned below the previous line.
 - `vertical-rl`
-  - : For `ltr` scripts, content flows vertically from top to bottom, and the next vertical line is positioned to the left of the previous line. For `rtl` scripts, content flows vertically from bottom to top, and the next vertical line is positioned to the right of the previous line.
+  - : For `ltr` scripts, content flows vertically from top to bottom, and the next vertical line is positioned to the left of the previous line. For `rtl` scripts, content flows vertically from bottom to top, and the next vertical line is positioned to the left of the previous line.
 - `vertical-lr`
-  - : For `ltr` scripts, content flows vertically from top to bottom, and the next vertical line is positioned to the right of the previous line. For `rtl` scripts, content flows vertically from bottom to top, and the next vertical line is positioned to the left of the previous line.
+  - : For `ltr` scripts, content flows vertically from top to bottom, and the next vertical line is positioned to the right of the previous line. For `rtl` scripts, content flows vertically from bottom to top, and the next vertical line is positioned to the right of the previous line.
 - `sideways-rl`
   - : For `ltr` scripts, content flows vertically from top to bottom. For `rtl` scripts, content flows vertically from bottom to top. All the glyphs, even those in vertical scripts, are set sideways toward the right.
 - `sideways-lr`
@@ -104,6 +101,14 @@ The `writing-mode` property is specified as one of the values listed below. The 
   - : Deprecated except for SVG1 documents. For CSS, use `vertical-lr` instead.
 - `tb-rl`
   - : Deprecated except for SVG1 documents. For CSS, use `vertical-rl` instead.
+
+## Description
+
+The `writing-mode` property sets whether lines of text are laid out horizontally or vertically. It specifies the _block flow direction_, which is the direction in which block-level containers are stacked, and the direction in which inline-level content flows within a block container. Thus, it also determines the ordering of block-level content.
+
+The flow direction in horizontal scripts is also affected by the [directionality of that script](https://www.w3.org/International/questions/qa-scripts.en), either left-to-right (`ltr`, like English and most other languages) or right-to-left (`rtl`, like Hebrew or Arabic).
+
+When set for an entire document, it should be set on the root element (`html` element for HTML documents).
 
 ## Formal definition
 
@@ -128,48 +133,52 @@ The HTML is a {{HTMLElement("table")}} with each writing mode in a row with a co
   <caption>
     Using multiple writing modes
   </caption>
-  <tr>
-    <th>Value</th>
-    <th>Vertical script</th>
-    <th>Horizontal (LTR) script</th>
-    <th>Horizontal (RTL) script</th>
-    <th>Mixed script</th>
-  </tr>
-  <tr class="text1">
-    <th>horizontal-tb</th>
-    <td>我家没有电脑。</td>
-    <td>Example text</td>
-    <td>מלל ארוך לדוגמא</td>
-    <td>1994年に至っては</td>
-  </tr>
-  <tr class="text2">
-    <th>vertical-lr</th>
-    <td>我家没有电脑。</td>
-    <td>Example text</td>
-    <td>מלל ארוך לדוגמא</td>
-    <td>1994年に至っては</td>
-  </tr>
-  <tr class="text3">
-    <th>vertical-rl</th>
-    <td>我家没有电脑。</td>
-    <td>Example text</td>
-    <td>מלל ארוך לדוגמא</td>
-    <td>1994年に至っては</td>
-  </tr>
-  <tr class="experimental text4">
-    <th>sideways-lr</th>
-    <td>我家没有电脑。</td>
-    <td>Example text</td>
-    <td>מלל ארוך לדוגמא</td>
-    <td>1994年に至っては</td>
-  </tr>
-  <tr class="experimental text5">
-    <th>sideways-rl</th>
-    <td>我家没有电脑。</td>
-    <td>Example text</td>
-    <td>מלל ארוך לדוגמא</td>
-    <td>1994年に至っては</td>
-  </tr>
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Vertical script</th>
+      <th>Horizontal (LTR) script</th>
+      <th>Horizontal (RTL) script</th>
+      <th>Mixed script</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="text1">
+      <th>horizontal-tb</th>
+      <td>我家没有电脑。</td>
+      <td>Example text</td>
+      <td>מלל ארוך לדוגמא</td>
+      <td>1994年に至っては</td>
+    </tr>
+    <tr class="text2">
+      <th>vertical-lr</th>
+      <td>我家没有电脑。</td>
+      <td>Example text</td>
+      <td>מלל ארוך לדוגמא</td>
+      <td>1994年に至っては</td>
+    </tr>
+    <tr class="text3">
+      <th>vertical-rl</th>
+      <td>我家没有电脑。</td>
+      <td>Example text</td>
+      <td>מלל ארוך לדוגמא</td>
+      <td>1994年に至っては</td>
+    </tr>
+    <tr class="experimental text4">
+      <th>sideways-lr</th>
+      <td>我家没有电脑。</td>
+      <td>Example text</td>
+      <td>מלל ארוך לדוגמא</td>
+      <td>1994年に至っては</td>
+    </tr>
+    <tr class="experimental text5">
+      <th>sideways-rl</th>
+      <td>我家没有电脑。</td>
+      <td>Example text</td>
+      <td>מלל ארוך לדוגמא</td>
+      <td>1994年に至っては</td>
+    </tr>
+  </tbody>
 </table>
 <p class="notice">
   Your browser does not support the <code>sideways-lr</code> or
@@ -342,9 +351,9 @@ span {
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("text-orientation")}}
 - {{Cssxref("text-combine-upright")}}
-- [CSS logical properties](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
-- [CSS writing modes](/en-US/docs/Web/CSS/CSS_writing_modes) module
+- [CSS logical properties](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values)
+- [CSS writing modes](/en-US/docs/Web/CSS/Guides/Writing_modes) module
 - SVG {{SVGAttr("writing-mode")}} attribute
-- [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
+- [Creating vertical form controls](/en-US/docs/Web/CSS/Guides/Writing_modes/Vertical_controls)
 - [Handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)
 - [Styling vertical text (Chinese, Japanese, Korean and Mongolian)](https://www.w3.org/International/articles/vertical-text/) on W3.org (2022)

@@ -1,5 +1,6 @@
 ---
-title: content-visibility
+title: "`content-visibility` CSS property"
+short-title: content-visibility
 slug: Web/CSS/Reference/Properties/content-visibility
 page-type: css-property
 browser-compat: css.properties.content-visibility
@@ -72,18 +73,20 @@ content-visibility: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `visible`
   - : No effect. The element's contents are laid out and rendered as normal. This is the default value.
 - `hidden`
-  - : The element [skips its contents](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents). The skipped contents must not be accessible to user-agent features, such as find-in-page, tab-order navigation, etc., nor be selectable or focusable. This is similar to giving the contents `display: none`.
+  - : The element [skips its contents](/en-US/docs/Web/CSS/Guides/Containment/Using#skips_its_contents). The skipped contents must not be accessible to user-agent features, such as find-in-page, tab-order navigation, etc., nor be selectable or focusable. This is similar to giving the contents `display: none`.
 - `auto`
-  - : The element turns on layout containment, style containment, and paint containment. If the element is not [relevant to the user](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#relevant_to_the_user), it also skips its contents. Unlike hidden, the skipped contents must still be available as normal to user-agent features such as find-in-page, tab order navigation, etc., and must be focusable and selectable as normal.
+  - : The element turns on layout containment, style containment, and paint containment. If the element is not [relevant to the user](/en-US/docs/Web/CSS/Guides/Containment/Using#relevant_to_the_user), it also skips its contents. Unlike hidden, the skipped contents must still be available as normal to user-agent features such as find-in-page, tab order navigation, etc., and must be focusable and selectable as normal.
 
 ## Description
 
 ### Animating and transitioning content-visibility
 
-[Supporting browsers](#browser_compatibility) animate/transition `content-visibility` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/CSS_animated_properties#discrete).
+[Supporting browsers](#browser_compatibility) animate/transition `content-visibility` with a variation on the [discrete animation type](/en-US/docs/Web/CSS/Guides/Animations/Animatable_properties#discrete).
 
 Discrete animation generally means that the property will flip between two values 50% of the way through the animation. In the case of `content-visibility`, however, the browser will flip between the two values to show the animated content for the entire animation duration. So, for example:
 
@@ -92,10 +95,10 @@ Discrete animation generally means that the property will flip between two value
 
 This behavior is useful for creating entry/exit animations where you want to, for example, remove some content from the DOM with `content-visibility: hidden`, but you want a smooth transition (such as a fade-out) rather than it disappearing immediately.
 
-When animating `content-visibility` with [CSS transitions](/en-US/docs/Web/CSS/CSS_transitions), [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior) needs to be set on `content-visibility`. This effectively enables `content-visibility` transitions.
+When animating `content-visibility` with [CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions), [`transition-behavior: allow-discrete`](/en-US/docs/Web/CSS/Reference/Properties/transition-behavior) needs to be set on `content-visibility`. This effectively enables `content-visibility` transitions.
 
 > [!NOTE]
-> When transitioning an element's `content-visibility` value, you don't need to provide a set of starting values for transitioned properties using a [`@starting-style`](/en-US/docs/Web/CSS/@starting-style) block, like you do when [transitioning `display`](/en-US/docs/Web/CSS/Reference/Properties/display#animating_display). This is because `content-visibility` doesn't hide an element from the DOM like `display` does: it just skips rendering the element's content.
+> When transitioning an element's `content-visibility` value, you don't need to provide a set of starting values for transitioned properties using a {{cssxref("@starting-style")}} block, like you do when [transitioning `display`](/en-US/docs/Web/CSS/Reference/Properties/display#animating_display). This is because `content-visibility` doesn't hide an element from the DOM like `display` does: it just skips rendering the element's content.
 
 ## Formal definition
 
@@ -230,7 +233,7 @@ In this example, we have a {{htmlelement("div")}} element, the content of which 
 
 #### CSS
 
-In the CSS we initially set `content-visibility: hidden;` on the `<div>` to hide its content. We then set up `@keyframes` animations and attach them to classes to show and hide the `<div>`, animating `content-visibility` and [`color`](/en-US/docs/Web/CSS/Reference/Properties/color) so that you get a smooth animation effect as the content is shown/hidden.
+In the CSS we initially set `content-visibility: hidden;` on the `<div>` to hide its content. We then set up `@keyframes` animations and attach them to classes to show and hide the `<div>`, animating `content-visibility` and {{cssxref("color")}} so that you get a smooth animation effect as the content is shown/hidden.
 
 ```css
 div {
@@ -318,7 +321,7 @@ The rendered result looks like this:
 
 ## See also
 
-- [CSS Containment](/en-US/docs/Web/CSS/CSS_containment)
-- [`contain-intrinsic-size`](/en-US/docs/Web/CSS/Reference/Properties/contain-intrinsic-size)
+- [CSS Containment](/en-US/docs/Web/CSS/Guides/Containment)
+- {{cssxref("contain-intrinsic-size")}}
 - {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}}
 - [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/articles/content-visibility) (web.dev)

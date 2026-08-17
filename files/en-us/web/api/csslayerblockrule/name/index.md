@@ -47,9 +47,7 @@ output {
 ```js
 const item1 = document.getElementsByTagName("output")[0];
 const item2 = document.getElementsByTagName("output")[1];
-const rules = document.styleSheets[1].cssRules;
-// Note that stylesheet #1 is the stylesheet associated with this embedded example,
-// while stylesheet #0 is the stylesheet associated with the whole MDN page
+const rules = document.getElementById("css-output").sheet.cssRules;
 
 const layer = rules[1]; // A CSSLayerBlockRule
 const anonymous = rules[2]; // An anonymous CSSLayerBlockRule

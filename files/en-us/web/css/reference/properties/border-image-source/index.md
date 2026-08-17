@@ -1,5 +1,6 @@
 ---
-title: border-image-source
+title: "`border-image-source` CSS property"
+short-title: border-image-source
 slug: Web/CSS/Reference/Properties/border-image-source
 page-type: css-property
 browser-compat: css.properties.border-image-source
@@ -7,6 +8,8 @@ sidebar: cssref
 ---
 
 The **`border-image-source`** [CSS](/en-US/docs/Web/CSS) property sets the source image used to create an element's [border image](/en-US/docs/Web/CSS/Reference/Properties/border-image).
+
+The {{cssxref("border-image-slice")}} property is used to divide the source image into regions, which are then dynamically applied to the final border image.
 
 {{InteractiveExample("CSS Demo: border-image-source")}}
 
@@ -53,8 +56,6 @@ border-image-source: none;
 }
 ```
 
-The {{cssxref("border-image-slice")}} property is used to divide the source image into regions, which are then dynamically applied to the final border image.
-
 ## Syntax
 
 ```css
@@ -77,7 +78,7 @@ border-image-source: unset;
 
 - `none`
   - : No border image is used. The appearance defined by {{cssxref("border-style")}} is displayed instead.
-- {{cssxref("&lt;image&gt;")}}
+- {{cssxref("image")}}
   - : Image reference to use for the border.
 
 ## Formal definition

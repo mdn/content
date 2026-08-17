@@ -1,5 +1,6 @@
 ---
-title: text-decoration-thickness
+title: "`text-decoration-thickness` CSS property"
+short-title: text-decoration-thickness
 slug: Web/CSS/Reference/Properties/text-decoration-thickness
 page-type: css-property
 browser-compat: css.properties.text-decoration-thickness

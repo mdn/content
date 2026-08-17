@@ -1,12 +1,13 @@
 ---
-title: scroll-margin-inline
+title: "`scroll-margin-inline` CSS property"
+short-title: scroll-margin-inline
 slug: Web/CSS/Reference/Properties/scroll-margin-inline
 page-type: css-shorthand-property
 browser-compat: css.properties.scroll-margin-inline
 sidebar: cssref
 ---
 
-The `scroll-margin-inline` [shorthand property](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) sets the scroll margins of an element in the inline dimension.
+The `scroll-margin-inline` [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) sets the scroll margins of an element in the inline dimension.
 
 {{InteractiveExample("CSS Demo: scroll-margin-inline")}}
 
@@ -81,8 +82,8 @@ scroll-margin-inline: 0px 3em;
 
 This property is a shorthand for the following CSS properties:
 
-- [`scroll-margin-inline-end`](/en-US/docs/Web/CSS/Reference/Properties/scroll-margin-inline-end)
-- [`scroll-margin-inline-start`](/en-US/docs/Web/CSS/Reference/Properties/scroll-margin-inline-start)
+- {{cssxref("scroll-margin-inline-end")}}
+- {{cssxref("scroll-margin-inline-start")}}
 
 ## Syntax
 
@@ -212,5 +213,5 @@ Try it for yourself:
 
 ## See also
 
-- [CSS scroll snap](/en-US/docs/Web/CSS/CSS_scroll_snap)
-- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)
+- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) module
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap) on web.dev (2018)

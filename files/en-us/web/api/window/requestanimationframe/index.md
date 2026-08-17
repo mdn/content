@@ -55,7 +55,7 @@ in the callback list. You should not make any assumptions about its value. You c
 > While unlikely to cause issues for short-lived applications, you should avoid `0` as a sentinel value for invalid request identifier IDs and instead prefer unattainable values such as `null`.
 > The spec doesn't specify the overflowing behavior, so browsers have divergent behaviors. When overflowing, the value would either wrap around to 0, to a negative value, or fail with an error.
 > Unless overflow throws, request IDs are also not truly unique because there are only finitely many 32-bit integers for possibly infinitely many callbacks.
-> Note, however, that it would take ~500 days to reach the issue when rendering at 60Hz with 100 calls to `requestAnimationFrame()` per frame.
+> Note, however, that it would take approximately 800 days to reach the issue when rendering at 60Hz with a single call to `requestAnimationFrame()` per frame.
 
 ## Examples
 
@@ -146,7 +146,7 @@ function animate() {
   const value = (performance.now() - zero) / duration;
   if (value < 1) {
     element.style.opacity = value;
-    requestAnimationFrame((t) => animate(t));
+    requestAnimationFrame(animate);
   } else element.style.opacity = 1;
 }
 ```
@@ -164,5 +164,5 @@ function animate() {
 - {{domxref("Window.cancelAnimationFrame()")}}
 - {{domxref("DedicatedWorkerGlobalScope.requestAnimationFrame()")}}
 - [Animating with JavaScript: from setInterval to requestAnimationFrame](https://hacks.mozilla.org/2011/08/animating-with-javascript-from-setinterval-to-requestanimationframe/) - Blog post
-- [TestUFO: Test your web browser for requestAnimationFrame() Timing Deviations](https://www.testufo.com/#test=animation-time-graph)
+- [TestUFO: Test your web browser for requestAnimationFrame() Timing Deviations](https://testufo.com/#test=animation-time-graph)
 - [Firefox switching to uint32_t for the requestAnimationFrame request ID](https://phabricator.services.mozilla.com/rMOZILLACENTRAL149722297f033d5c3ad126d0c72edcb1cb96d72e)

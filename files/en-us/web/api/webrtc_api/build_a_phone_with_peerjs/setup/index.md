@@ -14,7 +14,7 @@ So let's get started by setting up the basis for our WebRTC-powered phone app.
 2. Next, create a new app by running `yarn init`. Follow the prompts, providing a name, version, description, etc. to your project.
 3. Next, install the required dependencies using the following commands:
    - [Express](https://expressjs.com/): `yarn add express`
-   - [PeerJS](https://peerjs.com/docs/): `yarn add peerjs`
+   - [PeerJS](https://peerjs.com/): `yarn add peerjs`
    - [Peer](https://github.com/peers/peerjs-server): `yarn add peer`
 
    Peer will be used for the peer server and PeerJS will be used to access the PeerJS API and framework. Your `package.json` should something look like this when you've finished installing the dependencies:

@@ -28,11 +28,6 @@ A {{domxref("PageRevealEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PageRevealEvent")}}
 
-## Event properties
-
-- {{domxref("PageRevealEvent.viewTransition")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("ViewTransition")}} object representing the inbound cross-document view transition, if one is active when the event is fired. If this is not the case, it returns `null`.
-
 ## Examples
 
 ```js

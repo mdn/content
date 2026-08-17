@@ -3,12 +3,10 @@ title: "NavigationHistoryEntry: dispose event"
 short-title: dispose
 slug: Web/API/NavigationHistoryEntry/dispose_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.NavigationHistoryEntry.dispose_event
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`dispose`** event of the {{domxref("NavigationHistoryEntry")}} interface is fired when the entry is no longer part of the history entry list.
 

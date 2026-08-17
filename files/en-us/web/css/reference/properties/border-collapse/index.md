@@ -1,5 +1,6 @@
 ---
-title: border-collapse
+title: "`border-collapse` CSS property"
+short-title: border-collapse
 slug: Web/CSS/Reference/Properties/border-collapse
 page-type: css-property
 browser-compat: css.properties.border-collapse
@@ -7,6 +8,10 @@ sidebar: cssref
 ---
 
 The **`border-collapse`** [CSS](/en-US/docs/Web/CSS) property sets whether cells inside a {{htmlElement("table")}} have shared or separate borders.
+
+When cells are collapsed, the {{cssxref("border-style")}} value of `inset` behaves like `ridge`, and `outset` behaves like `groove`.
+
+When cells are separated, the distance between cells is defined by the {{cssxref("border-spacing")}} property.
 
 {{InteractiveExample("CSS Demo: border-collapse")}}
 
@@ -21,18 +26,20 @@ border-collapse: separate;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <table class="transition-all" id="example-element">
-    <tr>
-      <td>Cell 1.1</td>
-      <td>Cell 1.2</td>
-    </tr>
-    <tr>
-      <td>Cell 2.1</td>
-      <td>Cell 2.2</td>
-    </tr>
-    <tr>
-      <td>Cell 3.1</td>
-      <td>Cell 3.2</td>
-    </tr>
+    <tbody>
+      <tr>
+        <td>Cell 1.1</td>
+        <td>Cell 1.2</td>
+      </tr>
+      <tr>
+        <td>Cell 2.1</td>
+        <td>Cell 2.2</td>
+      </tr>
+      <tr>
+        <td>Cell 3.1</td>
+        <td>Cell 3.2</td>
+      </tr>
+    </tbody>
   </table>
 </section>
 ```
@@ -50,10 +57,6 @@ td {
 }
 ```
 
-When cells are collapsed, the {{cssxref("border-style")}} value of `inset` behaves like `ridge`, and `outset` behaves like `groove`.
-
-When cells are separated, the distance between cells is defined by the {{cssxref("border-spacing")}} property.
-
 ## Syntax
 
 ```css
@@ -69,9 +72,9 @@ border-collapse: revert-layer;
 border-collapse: unset;
 ```
 
-The `border-collapse` property is specified as a single keyword, which may be chosen from the list below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `collapse`
   - : Adjacent cells have shared borders (the collapsed-border table rendering model).
@@ -224,4 +227,4 @@ table td {
 
 - {{cssxref("border-spacing")}}, {{cssxref("border-style")}}
 - The `border-collapse` property alters the appearance of the {{htmlelement("table")}} HTML element.
-- [CSS table](/en-US/docs/Web/CSS/CSS_table) module
+- [CSS table](/en-US/docs/Web/CSS/Guides/Table) module

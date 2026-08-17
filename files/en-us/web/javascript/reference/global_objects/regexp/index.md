@@ -277,7 +277,7 @@ The [Unicode property escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expr
 ### Extracting subdomain name from URL
 
 ```js
-const url = "http://xxx.domain.com";
+const url = "http://xxx.example.com";
 console.log(/^https?:\/\/(.+?)\./.exec(url)[1]); // 'xxx'
 ```
 

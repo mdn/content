@@ -1,5 +1,6 @@
 ---
-title: empty-cells
+title: "`empty-cells` CSS property"
+short-title: empty-cells
 slug: Web/CSS/Reference/Properties/empty-cells
 page-type: css-property
 browser-compat: css.properties.empty-cells
@@ -7,6 +8,8 @@ sidebar: cssref
 ---
 
 The **`empty-cells`** [CSS](/en-US/docs/Web/CSS) property sets whether borders and backgrounds appear around {{htmlelement("table")}} cells that have no visible content.
+
+This property has an effect only when the {{cssxref("border-collapse")}} property is `separate`.
 
 {{InteractiveExample("CSS Demo: empty-cells")}}
 
@@ -21,26 +24,28 @@ empty-cells: hide;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <table class="transition-all" id="example-element">
-    <tr>
-      <th>Client Name</th>
-      <th>Age</th>
-    </tr>
-    <tr>
-      <td></td>
-      <td>25</td>
-    </tr>
-    <tr>
-      <td>Louise Q.</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Owen B.</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Stan L.</td>
-      <td>71</td>
-    </tr>
+    <tbody>
+      <tr>
+        <th>Client Name</th>
+        <th>Age</th>
+      </tr>
+      <tr>
+        <td></td>
+        <td>25</td>
+      </tr>
+      <tr>
+        <td>Louise Q.</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Owen B.</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Stan L.</td>
+        <td>71</td>
+      </tr>
+    </tbody>
   </table>
 </section>
 ```
@@ -52,8 +57,6 @@ td {
   padding: 0.25rem 0.5rem;
 }
 ```
-
-This property has an effect only when the {{cssxref("border-collapse")}} property is `separate`.
 
 ## Syntax
 
@@ -70,9 +73,9 @@ empty-cells: revert-layer;
 empty-cells: unset;
 ```
 
-The `empty-cells` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `show`
   - : Borders and backgrounds are drawn like in normal cells.
@@ -95,25 +98,29 @@ The `empty-cells` property is specified as one of the keyword values listed belo
 
 ```html
 <table class="table_1">
-  <tr>
-    <td>Moe</td>
-    <td>Larry</td>
-  </tr>
-  <tr>
-    <td>Curly</td>
-    <td></td>
-  </tr>
+  <tbody>
+    <tr>
+      <td>Moe</td>
+      <td>Larry</td>
+    </tr>
+    <tr>
+      <td>Curly</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 <br />
 <table class="table_2">
-  <tr>
-    <td>Moe</td>
-    <td>Larry</td>
-  </tr>
-  <tr>
-    <td>Curly</td>
-    <td></td>
-  </tr>
+  <tbody>
+    <tr>
+      <td>Moe</td>
+      <td>Larry</td>
+    </tr>
+    <tr>
+      <td>Curly</td>
+      <td></td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -151,4 +158,4 @@ th {
 
 - {{cssxref("border-collapse")}}
 - [Learn: Styling tables](/en-US/docs/Learn_web_development/Core/Styling_basics/Tables)
-- [CSS table](/en-US/docs/Web/CSS/CSS_table) module
+- [CSS table](/en-US/docs/Web/CSS/Guides/Table) module

@@ -10,7 +10,7 @@ browser-compat: api.CanvasRenderingContext2D.roundRect
 
 The **`CanvasRenderingContext2D.roundRect()`** method of the Canvas 2D API adds a rounded rectangle to the current path.
 
-The radii of the corners can be specified in much the same way as the CSS [`border-radius`](/en-US/docs/Web/CSS/Reference/Properties/border-radius) property.
+The radii of the corners can be specified in much the same way as the CSS {{cssxref("border-radius")}} property.
 
 Like other methods that modify the current path, this method does not directly render anything.
 To draw the rounded rectangle onto a canvas, you can use the {{domxref("CanvasRenderingContext2D.fill", "fill()")}} or {{domxref("CanvasRenderingContext2D.stroke", "stroke()")}} methods.
@@ -33,7 +33,7 @@ roundRect(x, y, width, height, radii)
   - : The rectangle's height. Positive values are down, and negative are up.
 - `radii`
   - : A number or list specifying the radii of the circular arc to be used for the corners of the rectangle.
-    The number and order of the radii function in the same way as the [`border-radius`](/en-US/docs/Web/CSS/Reference/Properties/border-radius) CSS property when `width` and `height` are _positive_:
+    The number and order of the radii function in the same way as the {{cssxref("border-radius")}} CSS property when `width` and `height` are _positive_:
     - `all-corners`
     - `[all-corners]`
     - `[top-left-and-bottom-right, top-right-and-bottom-left]`

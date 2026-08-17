@@ -1,5 +1,6 @@
 ---
-title: box-align
+title: "`box-align` CSS property"
+short-title: box-align
 slug: Web/CSS/Reference/Properties/box-align
 page-type: css-property
 status:
@@ -16,7 +17,7 @@ sidebar: cssref
 
 The **`box-align`** [CSS](/en-US/docs/Web/CSS) property specifies how an element aligns its contents across its layout in a perpendicular direction. The effect of the property is only visible if there is extra space in the box.
 
-See [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) for information about the current standard.
+See [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) for information about the current standard.
 
 The direction of layout depends on the element's orientation: horizontal or vertical.
 
@@ -36,9 +37,9 @@ box-lines: initial;
 box-lines: unset;
 ```
 
-The `box-align` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `start`
   - : The box aligns contents at the start, leaving any extra space at the end.

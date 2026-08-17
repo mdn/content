@@ -1,5 +1,6 @@
 ---
-title: text-rendering
+title: "`text-rendering` CSS property"
+short-title: text-rendering
 slug: Web/CSS/Reference/Properties/text-rendering
 page-type: css-property
 browser-compat: css.properties.text-rendering
@@ -153,12 +154,12 @@ p {
 ## See also
 
 - [Drawing text in a `<canvas>`](/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text)
-- [CSS Text Decoration](/en-US/docs/Web/CSS/CSS_text_decoration) CSS module
+- [CSS Text Decoration](/en-US/docs/Web/CSS/Guides/Text_decoration) CSS module
 - Related CSS properties
-  - [`text-decoration`](/en-US/docs/Web/CSS/Reference/Properties/text-decoration) (and its longhand properties, such as [`text-decoration-line`](/en-US/docs/Web/CSS/Reference/Properties/text-decoration-line), [`text-decoration-style`](/en-US/docs/Web/CSS/Reference/Properties/text-decoration-style), and [`text-decoration-thickness`](/en-US/docs/Web/CSS/Reference/Properties/text-decoration-thickness))
-  - [`text-emphasis`](/en-US/docs/Web/CSS/Reference/Properties/text-emphasis) (and its longhand properties, including [`text-emphasis-color`](/en-US/docs/Web/CSS/Reference/Properties/text-emphasis-color), [`text-emphasis-position`](/en-US/docs/Web/CSS/Reference/Properties/text-emphasis-position), and [`text-emphasis-style`](/en-US/docs/Web/CSS/Reference/Properties/text-emphasis-style))
-  - [`text-shadow`](/en-US/docs/Web/CSS/Reference/Properties/text-shadow)
-  - [`text-transform`](/en-US/docs/Web/CSS/Reference/Properties/text-transform)
+  - {{cssxref("text-decoration")}} (and its longhand properties, such as {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-style")}}, and {{cssxref("text-decoration-thickness")}})
+  - {{cssxref("text-emphasis")}} (and its longhand properties, including {{cssxref("text-emphasis-color")}}, {{cssxref("text-emphasis-position")}}, and {{cssxref("text-emphasis-style")}})
+  - {{cssxref("text-shadow")}}
+  - {{cssxref("text-transform")}}
 
 - The [SVG](/en-US/docs/Web/SVG) {{SVGAttr("text-rendering")}} attribute
 - [SVG and CSS](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/SVG_and_CSS)

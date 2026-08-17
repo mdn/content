@@ -3,12 +3,10 @@ title: "Window: unload event"
 short-title: unload
 slug: Web/API/Window/unload_event
 page-type: web-api-event
-status:
-  - deprecated
 browser-compat: api.Window.unload_event
 ---
 
-{{APIRef}}{{deprecated_header}}
+{{APIRef}}
 
 > [!WARNING]
 > Developers should avoid using this event. See "Usage notes" below.

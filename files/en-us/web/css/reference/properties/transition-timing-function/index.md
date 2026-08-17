@@ -1,12 +1,13 @@
 ---
-title: transition-timing-function
+title: "`transition-timing-function` CSS property"
+short-title: transition-timing-function
 slug: Web/CSS/Reference/Properties/transition-timing-function
 page-type: css-property
 browser-compat: css.properties.transition-timing-function
 sidebar: cssref
 ---
 
-The **`transition-timing-function`** [CSS](/en-US/docs/Web/CSS) property sets how intermediate values are calculated for CSS properties being affected by a [transition effect](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions).
+The **`transition-timing-function`** [CSS](/en-US/docs/Web/CSS) property sets how intermediate values are calculated for CSS properties being affected by a [transition effect](/en-US/docs/Web/CSS/Guides/Transitions/Using).
 
 {{InteractiveExample("CSS Demo: transition-timing-function")}}
 
@@ -52,7 +53,7 @@ transition-timing-function: cubic-bezier(0.29, 1.01, 1, -0.68);
 
 This, in essence, lets you establish an acceleration curve so that the speed of the transition can vary over its duration.
 
-This acceleration curve is defined using one {{cssxref("&lt;easing-function&gt;")}} for each property to be transitioned.
+This acceleration curve is defined using one {{cssxref("easing-function")}} for each property to be transitioned.
 
 You may specify multiple easing functions; each one will be applied to the corresponding property as specified by the {{ cssxref("transition-property") }} property, which acts as a `transition-property` list. If there are fewer easing functions specified than in the `transition-property` list, the user agent must calculate which value is used by repeating the list of values until there is one for each transition property. If there are more easing functions, the list is truncated to the right size. In both cases, the CSS declaration stays valid.
 
@@ -94,7 +95,7 @@ transition-timing-function: unset;
 ### Values
 
 - `<easing-function>`
-  - : Each {{cssxref("&lt;easing-function&gt;")}} represents the easing function to link to the corresponding property to transition, as defined in {{ cssxref("transition-property") }}.
+  - : Each {{cssxref("easing-function")}} represents the easing function to link to the corresponding property to transition, as defined in {{ cssxref("transition-property") }}.
 
     The non-step keyword values (ease, linear, ease-in-out, etc.) each represent cubic Bézier curve with fixed four point values, with the cubic-bezier() function value allowing for a non-predefined value. The step easing functions divide the input time into a specified number of intervals that are equal in length. It is defined by a number of steps and a step position.
     - `ease`
@@ -133,7 +134,7 @@ transition-timing-function: unset;
 
 Some animations can be helpful such as to guide users to understand what actions are expected, to show relationships within the user interface, and to inform users as to what actions have occurred. Animations can help reduce cognitive load, prevent change blindness, and establish better recall in spatial relationships. However, some animations can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD) and certain kinds of motion can be a trigger for Vestibular disorders, epilepsy, and migraine and Scotopic sensitivity.
 
-Consider providing a mechanism for pausing or disabling animation, as well as using the [Reduced Motion Media Query](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) (or equivalent [User Agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints) {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}) to create a complimentary experience for users who have expressed a preference for less animation.
+Consider providing a mechanism for pausing or disabling animation, as well as using the [Reduced Motion Media Query](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) (or equivalent [User Agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints) {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}) to create a complimentary experience for users who have expressed a preference for less animation.
 
 ## Formal definition
 
@@ -297,9 +298,9 @@ const intervalID = setInterval(updateTransition, 10000);
 
 ## See also
 
-- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
-- [`<easing-function>`](/en-US/docs/Web/CSS/easing-function)
-- [CSS easing functions](/en-US/docs/Web/CSS/CSS_easing_functions) module
+- [Using CSS transitions](/en-US/docs/Web/CSS/Guides/Transitions/Using)
+- {{cssxref("easing-function")}}
+- [CSS easing functions](/en-US/docs/Web/CSS/Guides/Easing_functions) module
 - {{cssxref('transition')}}
 - {{cssxref('transition-property')}}
 - {{cssxref('transition-duration')}}

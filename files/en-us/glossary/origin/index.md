@@ -20,7 +20,7 @@ It will also fail same-origin checks with any other resource, and hence be restr
 Common cases where opaque origins are used include:
 
 - A document within an iframe that has the [sandbox](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/sandbox) attribute set, and does not include the `allow-same-origin` flag.
-- `file:` URLs are usually treated as opaque origins so that files on they file system cannot read each other.
+- `file:` URLs are usually treated as opaque origins so that files on the file system cannot read each other.
 - Documents created programmatically using APIs like {{domxref("DOMImplementation.createDocument()")}}.
 
 ## Examples
@@ -53,7 +53,7 @@ These are not same origin because they use different ports:
 
 ## See also
 
-- [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
+- [Same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy)
 - Related glossary terms:
   - {{Glossary("Site")}}
 - [HTML specification: origin](https://html.spec.whatwg.org/multipage/origin.html#origin)

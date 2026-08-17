@@ -1,12 +1,13 @@
 ---
-title: quotes
+title: "`quotes` CSS property"
+short-title: quotes
 slug: Web/CSS/Reference/Properties/quotes
 page-type: css-property
 browser-compat: css.properties.quotes
 sidebar: cssref
 ---
 
-The [CSS](/en-US/docs/Web/CSS) **`quotes`** property sets how the browser should render quotation marks that are automatically added to the HTML {{HTMLElement("q")}} element or added using the `open-quotes` or `close-quotes` (or omitted using the `no-open-quote` and `no-close-quote`) values of the of the CSS [`content`](/en-US/docs/Web/CSS/Reference/Properties/content) property.
+The [CSS](/en-US/docs/Web/CSS) **`quotes`** property sets how the browser should render quotation marks that are automatically added to the HTML {{HTMLElement("q")}} element or added using the `open-quotes` or `close-quotes` (or omitted using the `no-open-quote` and `no-close-quote`) values of the of the CSS {{cssxref("content")}} property.
 
 {{InteractiveExample("CSS Demo: quotes")}}
 
@@ -80,7 +81,7 @@ quotes: unset;
     Which pair of quotes is used depends on the depth, or nesting level, of quotes: the number of occurrences of `<q>` quotes or `open-quote` (or `no-open-quote`) in all generated text before the current occurrence, minus the number of occurrences of closing quotes, either as `</q>`, `close-quote`, or `no-close-quote`. If the depth is 0, the first pair is used, if the depth is 1, the second pair is used, etc.
 
 > [!NOTE]
-> The CSS `content` property value `open-quote` increments and `no-close-quote` decrements the quoting level, but does not insert a quotation marks.
+> The CSS `content` property value `no-open-quote` increments and `no-close-quote` decrements the quoting level, but they do not insert quotation marks.
 
 ## Formal definition
 
@@ -94,7 +95,7 @@ quotes: unset;
 
 ### Default quotes and overrides
 
-This examples compares the default quotes provided by the semantic HTML `<q>` element to those we define using the CSS `quotes` property.
+This example compares the default quotes provided by the semantic HTML `<q>` element to those we define using the CSS `quotes` property.
 
 The default value of `quotes` is [`auto`](#auto). In this example, the first list item has `quotes: auto` set, so gets the default quotes for the language specified; the same as if no `quotes` property was set. The second list item defines which quotation marks to use for quotes and nested quotes; these quotation marks will be used for descendants of an element with `specialQuotes` class regardless of the language (like any [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute values set).
 
@@ -122,7 +123,6 @@ The default value of `quotes` is [`auto`](#auto). In this example, the first lis
       >, - писал Раджу.
     </p>
   </li>
-  <ul></ul>
 </ul>
 ```
 
@@ -228,7 +228,7 @@ In this example, instead of using the `<q>` element, we are adding quotation mar
 
 ### Text as quotes and empty quotes
 
-This example demonstrates using something other than quotation marks as the `<string>` values. The open-quote indicates the speaker and, as there is not opening quotation mark, the close-quote is the empty. (Mixing a `<string>` with an enumerated keyword to create a pair is not supported). We set `auto` for the nested quotes. These nested quotes will be book-ended by whatever the language dictates is normal for nested quotes.
+This example demonstrates using something other than quotation marks as the `<string>` values. The open-quote indicates the speaker and, as there is no opening quotation mark, the close-quote is empty. (Mixing a `<string>` with an enumerated keyword to create a pair is not supported). We set `auto` for the nested quotes. These nested quotes will be book-ended by whatever the language dictates is normal for nested quotes.
 
 #### HTML
 
@@ -282,6 +282,6 @@ li {
 
 ## See also
 
-- [CSS generated content](/en-US/docs/Web/CSS/CSS_generated_content) module
+- [CSS generated content](/en-US/docs/Web/CSS/Guides/Generated_content) module
 - {{ Cssxref("contain") }}
 - {{ Cssxref("content") }}

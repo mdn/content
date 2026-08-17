@@ -1,5 +1,6 @@
 ---
-title: table-layout
+title: "`table-layout` CSS property"
+short-title: table-layout
 slug: Web/CSS/Reference/Properties/table-layout
 page-type: css-property
 browser-compat: css.properties.table-layout
@@ -33,26 +34,28 @@ width: 100%;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <table class="transition-all" id="example-element">
-    <tr>
-      <th>Name</th>
-      <th>Location</th>
-    </tr>
-    <tr>
-      <td>Lion</td>
-      <td>Africa</td>
-    </tr>
-    <tr>
-      <td>Norwegian Lemming</td>
-      <td>Europe</td>
-    </tr>
-    <tr>
-      <td>Seal</td>
-      <td>Antarctica</td>
-    </tr>
-    <tr>
-      <td>Tiger</td>
-      <td>Asia</td>
-    </tr>
+    <tbody>
+      <tr>
+        <th>Name</th>
+        <th>Location</th>
+      </tr>
+      <tr>
+        <td>Lion</td>
+        <td>Africa</td>
+      </tr>
+      <tr>
+        <td>Norwegian Lemming</td>
+        <td>Europe</td>
+      </tr>
+      <tr>
+        <td>Seal</td>
+        <td>Antarctica</td>
+      </tr>
+      <tr>
+        <td>Tiger</td>
+        <td>Asia</td>
+      </tr>
+    </tbody>
   </table>
 </section>
 ```
@@ -86,11 +89,13 @@ table-layout: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `auto`
   - : The automatic table layout algorithm is used. The widths of the table and its cells are adjusted to fit the content. Most browsers use this algorithm by default.
 
 - `fixed`
-  - : The fixed table layout algorithm is used. When using this keyword, the table's width _needs to be specified explicitly_ using the [`width`](/en-US/docs/Web/CSS/Reference/Properties/width) property. If the value of the `width` property is set to `auto` or is not specified, the browser uses the automatic table layout algorithm, in which case the `fixed` value has no effect.\
+  - : The fixed table layout algorithm is used. When using this keyword, the table's width _needs to be specified explicitly_ using the {{cssxref("width")}} property. If the value of the `width` property is set to `auto` or is not specified, the browser uses the automatic table layout algorithm, in which case the `fixed` value has no effect.\
     The fixed table layout algorithm is faster than the automatic layout algorithm because the horizontal layout of the table depends only on the table's width, the width of the columns, and borders or cell spacing. The horizontal layout doesn't depend on the contents of the cells because it depends only on explicitly set widths.
 
     In the fixed table layout algorithm, the width of each column is determined as follows:
@@ -118,22 +123,24 @@ This example uses a fixed table layout, combined with the {{cssxref("width")}} p
 
 ```html
 <table>
-  <tr>
-    <td>Ed</td>
-    <td>Wood</td>
-  </tr>
-  <tr>
-    <td>Albert</td>
-    <td>Schweitzer</td>
-  </tr>
-  <tr>
-    <td>Jane</td>
-    <td>Fonda</td>
-  </tr>
-  <tr>
-    <td>William</td>
-    <td>Shakespeare</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td>Ed</td>
+      <td>Wood</td>
+    </tr>
+    <tr>
+      <td>Albert</td>
+      <td>Schweitzer</td>
+    </tr>
+    <tr>
+      <td>Jane</td>
+      <td>Fonda</td>
+    </tr>
+    <tr>
+      <td>William</td>
+      <td>Shakespeare</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -169,4 +176,4 @@ td {
 ## See also
 
 - [`<table>`](/en-US/docs/Web/HTML/Reference/Elements/table)
-- [CSS table](/en-US/docs/Web/CSS/CSS_table) module
+- [CSS table](/en-US/docs/Web/CSS/Guides/Table) module

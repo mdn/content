@@ -3,12 +3,10 @@ title: "WorkerNavigator: product property"
 short-title: product
 slug: Web/API/WorkerNavigator/product
 page-type: web-api-instance-property
-status:
-  - deprecated
 browser-compat: api.WorkerNavigator.product
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}{{AvailableInWorkers("worker")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers("worker")}}
 
 The value of the **`WorkerNavigator.product`** property is always
 `"Gecko"`, in any browser. This property is kept only for compatibility

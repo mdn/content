@@ -1,5 +1,6 @@
 ---
-title: overflow-anchor
+title: "`overflow-anchor` CSS property"
+short-title: overflow-anchor
 slug: Web/CSS/Reference/Properties/overflow-anchor
 page-type: css-property
 browser-compat: css.properties.overflow-anchor
@@ -117,6 +118,8 @@ overflow-anchor: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `auto`
   - : The element becomes a potential anchor when adjusting scroll position.
 - `none`
@@ -152,5 +155,5 @@ To prevent scroll anchoring in a document, use the `overflow-anchor` property.
 
 ## See also
 
-- [Overview of scroll anchoring](/en-US/docs/Web/CSS/CSS_scroll_anchoring/Scroll_anchoring)
-- [CSS scroll anchoring](/en-US/docs/Web/CSS/CSS_scroll_anchoring) module
+- [Overview of scroll anchoring](/en-US/docs/Web/CSS/Guides/Scroll_anchoring/Overview)
+- [CSS scroll anchoring](/en-US/docs/Web/CSS/Guides/Scroll_anchoring) module

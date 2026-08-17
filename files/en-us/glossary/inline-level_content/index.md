@@ -45,5 +45,5 @@ body {
 
 - Related glossary terms:
   - {{Glossary("Block-level content")}}
-- [Inline formatting context](/en-US/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context)
+- [Inline formatting context](/en-US/docs/Web/CSS/Guides/Inline_layout/Inline_formatting_context)
 - {{cssxref("display")}}

@@ -1,5 +1,6 @@
 ---
-title: user-select
+title: "`user-select` CSS property"
+short-title: user-select
 slug: Web/CSS/Reference/Properties/user-select
 page-type: css-property
 browser-compat: css.properties.user-select
@@ -71,7 +72,7 @@ user-select: unset;
   - : The content of the element shall be selected atomically: If a selection would contain part of the element, then the selection must contain the entire element including all its descendants. If a double-click or context-click occurred in sub-elements, the highest ancestor with this value will be selected.
 
 > [!NOTE]
-> The [CSS basic user interface](/en-US/docs/Web/CSS/CSS_basic_user_interface) module defines a `contain` value for the `user-select` property to enable selection to start within the element to be contained by the bounds of that element, however, this is not supported in any browsers.
+> The [CSS basic user interface](/en-US/docs/Web/CSS/Guides/Basic_user_interface) module defines a `contain` value for the `user-select` property to enable selection to start within the element to be contained by the bounds of that element, however, this is not supported in any browsers.
 
 ## Formal definition
 

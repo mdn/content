@@ -1,5 +1,6 @@
 ---
-title: cursor
+title: "`cursor` CSS property"
+short-title: cursor
 slug: Web/CSS/Reference/Properties/cursor
 page-type: css-property
 browser-compat: css.properties.cursor
@@ -12,6 +13,10 @@ The cursor setting should inform users of the mouse operations that can be perfo
 You can specify either the _type_ of cursor using a keyword, or load a specific icon to use (with optional fallback images and mandatory keyword as a final fallback).
 
 {{InteractiveExample("CSS Demo: cursor")}}
+
+```css interactive-example-choice
+cursor: pointer;
+```
 
 ```css interactive-example-choice
 cursor: help;
@@ -31,10 +36,6 @@ cursor: not-allowed;
 
 ```css interactive-example-choice
 cursor: zoom-in;
-```
-
-```css interactive-example-choice
-cursor: grab;
 ```
 
 ```html interactive-example

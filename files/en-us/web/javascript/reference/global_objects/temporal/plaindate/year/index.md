@@ -3,17 +3,30 @@ title: Temporal.PlainDate.prototype.year
 short-title: year
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/year
 page-type: javascript-instance-accessor-property
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.PlainDate.year
 sidebar: jsref
 ---
 
-{{SeeCompatTable}}
+The **`year`** accessor property of {{jsxref("Temporal.PlainDate")}} instances returns an integer representing the number of years of this date relative to the start of a calendar-specific epoch year. This property has the same function as the {{jsxref("Temporal/PlainDate/era", "era")}}/{{jsxref("Temporal/PlainDate/eraYear", "eraYear")}} pair as a unique identifier of a year in a calendar. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
 
-The **`year`** accessor property of {{jsxref("Temporal.PlainDate")}} instances returns an integer representing the number of years of this date relative to the start of a calendar-specific epoch year. It is [calendar](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal#calendars)-dependent.
+## Value
 
-This property has the same function as the {{jsxref("Temporal/PlainDate/era", "era")}}/{{jsxref("Temporal/PlainDate/eraYear", "eraYear")}} pair as a unique identifier of a year in a calendar. Usually year 1 is either the first year of the latest era or the ISO 8601 year `0001`. Because `year` is relative to the start of the epoch year, not the epoch date, if the epoch is in the middle of the year, that year will have the same value before and after the start date of the era.
+Usually year 1 is either the first year of the latest era or the ISO 8601 year `0001`. Because `year` is relative to the start of the epoch year, not the epoch date, if the epoch is in the middle of the year (only known to happen for the `japanese` calendar), that year will have the same `year` value before and after the start date of the era (for the `japanese` calendar, `year` is the same as the ISO 8601 year).
+
+All [specified calendars](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf#supported_calendar_types) have arithmetic years fully defined by the spec.
+
+- The following calendars have the same epoch year as ISO 8601: `chinese`, `dangi`, `gregory`, `japanese`, in which `year: 1` corresponds to the ISO year `1`.
+- The `buddhist` calendar uses the Buddhist epoch of 543 BCE, so `year: 1` corresponds to the ISO year `-542`.
+- The `coptic` calendar uses the Coptic epoch of 284 CE, so `year: 1` corresponds to the ISO year `284`.
+- The `ethioaa` calendar uses the Anno Mundi epoch of 5493 BCE, so `year: 1` corresponds to the ISO year `-5492`.
+- The `ethiopic` calendar uses the Ethiopic epoch of 8 CE, so `year: 1` corresponds to the ISO year `8`.
+- The `hebrew` calendar uses the Anno Mundi epoch of 3761 BCE, so `year: 1` corresponds to the ISO year `-3760`.
+- The `indian` calendar uses the Śaka epoch of 79 CE, so `year: 1` corresponds to the ISO year `79`.
+- The following calendars use the Hijri epoch of 622 CE: `islamic-civil`, `islamic-tbla`, `islamic-umalqura`, `persian`, in which `year: 1` corresponds to the ISO year `622`.
+- The `roc` calendar uses the Minguo epoch of 1912 CE, so `year: 1` corresponds to the ISO year `1912`.
+
+> [!NOTE]
+> For the `chinese` and `dangi` calendars, the CLDR data uses the Huangdi epoch of 2637 BCE by default, but Temporal defined it to use the ISO 8601 epoch for simplicity.
 
 The set accessor of `year` is `undefined`. You cannot change this property directly. Use the {{jsxref("Temporal/PlainDate/with", "with()")}} method to create a new `Temporal.PlainDate` object with the desired new value.
 

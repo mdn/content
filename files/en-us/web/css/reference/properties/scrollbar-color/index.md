@@ -1,5 +1,6 @@
 ---
-title: scrollbar-color
+title: "`scrollbar-color` CSS property"
+short-title: scrollbar-color
 slug: Web/CSS/Reference/Properties/scrollbar-color
 page-type: css-property
 browser-compat: css.properties.scrollbar-color
@@ -57,7 +58,7 @@ scrollbar-color: unset;
     </table>
 
 > [!NOTE]
-> [`@media (forced-colors: active)`](/en-US/docs/Web/CSS/@media/forced-colors) sets `scrollbar-color` to `auto`.
+> [`@media (forced-colors: active)`](/en-US/docs/Web/CSS/Reference/At-rules/@media/forced-colors) sets `scrollbar-color` to `auto`.
 
 ## Accessibility
 
@@ -112,8 +113,8 @@ When using `scrollbar-color` property with specific color values, authors should
 
 ## See also
 
-- [CSS overflow](/en-US/docs/Web/CSS/CSS_overflow) module
-- [CSS scrollbars styling](/en-US/docs/Web/CSS/CSS_scrollbars_styling) module
+- [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
+- [CSS scrollbars styling](/en-US/docs/Web/CSS/Guides/Scrollbars_styling) module
 - {{CSSxRef("overflow")}}
 - {{CSSxRef("scrollbar-gutter")}}
 - {{CSSxRef("scrollbar-width")}}

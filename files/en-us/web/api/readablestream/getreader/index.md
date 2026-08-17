@@ -59,7 +59,7 @@ function fetchStream() {
     // value - some data. Always undefined when done is true.
     if (done) {
       console.log("Stream complete");
-      para.textContent = value;
+      para.textContent = result;
       return;
     }
 

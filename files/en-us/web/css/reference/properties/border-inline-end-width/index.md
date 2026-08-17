@@ -1,5 +1,6 @@
 ---
-title: border-inline-end-width
+title: "`border-inline-end-width` CSS property"
+short-title: border-inline-end-width
 slug: Web/CSS/Reference/Properties/border-inline-end-width
 page-type: css-property
 browser-compat: css.properties.border-inline-end-width
@@ -49,7 +50,7 @@ direction: rtl;
 ## Syntax
 
 ```css
-/* <'border-width'> values */
+/* <'line-width'> values */
 border-inline-end-width: 2px;
 border-inline-end-width: thick;
 
@@ -65,8 +66,8 @@ Related properties are {{cssxref("border-block-start-width")}}, {{cssxref("borde
 
 ### Values
 
-- `<'border-width'>`
-  - : The width of the border. See {{ cssxref("border-width") }}.
+- {{cssxref("&lt;line-width&gt;")}}
+  - : Defines the width of the border, either as an explicit non-negative {{cssxref("&lt;length&gt;")}} or the keywords: `thin`, `medium`, or `thick`. The default is `medium`.
 
 ## Formal definition
 
@@ -118,6 +119,6 @@ div {
 
 ## See also
 
-- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values)
+- [CSS Logical Properties and Values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values)
 - This property maps to one of the physical border properties: {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}}, and {{cssxref("border-left-width")}}
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

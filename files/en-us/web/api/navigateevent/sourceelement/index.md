@@ -3,12 +3,10 @@ title: "NavigateEvent: sourceElement property"
 short-title: sourceElement
 slug: Web/API/NavigateEvent/sourceElement
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.NavigateEvent.sourceElement
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`sourceElement`** read-only property of the
 {{domxref("NavigateEvent")}} interface returns an {{domxref("Element")}} object representing the initiating element, in cases where the navigation was initiated by an element.
@@ -25,6 +23,8 @@ The initiating element can be:
 An {{domxref("Element")}} object representing the element that initiated the navigation, or `null` if the navigation was not initiated by an element.
 
 ## Examples
+
+### Getting the `sourceElement` for an event
 
 ```js
 navigation.addEventListener("navigate", (event) => {

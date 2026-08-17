@@ -2,7 +2,7 @@
 title: CSS properties
 short-title: Properties
 slug: Web/CSS/Reference/Properties
-page-type: landing-page
+page-type: listing-page
 spec-urls:
   - https://drafts.csswg.org/css-syntax/
   - https://drafts.csswg.org/css-2024/
@@ -10,7 +10,7 @@ spec-urls:
 sidebar: cssref
 ---
 
-A [CSS](/en-US/docs/Web/CSS) **_property_** is a parameter used in a [CSS declaration](/en-US/docs/Web/CSS/CSS_syntax/Syntax#css_declarations) that lets you style certain aspects of selected elements.
+A [CSS](/en-US/docs/Web/CSS) **_property_** is a parameter used in a [CSS declaration](/en-US/docs/Web/CSS/Guides/Syntax/Introduction#css_declarations) that lets you style certain aspects of selected elements.
 For example, the {{CSSxRef("opacity")}} property is used to set the opacity of a selected element, allowing you to control if content behind that element is visible:
 
 ```css
@@ -56,6 +56,7 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("alignment-baseline")}}
 - {{CSSxRef("all")}} (shorthand)
 - {{CSSxRef("anchor-name")}}
+- {{CSSxRef("anchor-scope")}}
 - {{CSSxRef("animation-composition")}}
 - {{CSSxRef("animation-delay")}}
 - {{CSSxRef("animation-direction")}}
@@ -86,9 +87,13 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("background-position-x")}}
 - {{CSSxRef("background-position-y")}}
 - {{CSSxRef("background-position")}}
-- {{CSSxRef("background-repeat")}}
+- {{CSSxRef("background-repeat")}} (shorthand)
+- {{CSSxRef("background-repeat-x")}}
+- {{CSSxRef("background-repeat-y")}}
 - {{CSSxRef("background-size")}}
 - {{CSSxRef("background")}} (shorthand)
+- {{CSSxRef("baseline-shift")}}
+- {{CSSxRef("baseline-source")}}
 - {{CSSxRef("block-size")}}
 
 ### Border-\*
@@ -173,7 +178,10 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("break-before")}}
 - {{CSSxRef("break-inside")}}
 - {{CSSxRef("caption-side")}}
+- {{CSSxRef("caret-animation")}}
 - {{CSSxRef("caret-color")}}
+- {{CSSxRef("caret-shape")}}
+- {{CSSxRef("caret")}} (shorthand)
 - {{CSSxRef("clear")}}
 - {{CSSxRef("clip-path")}}
 - {{CSSxRef("clip-rule")}}
@@ -185,12 +193,14 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("column-count")}}
 - {{CSSxRef("column-fill")}}
 - {{CSSxRef("column-gap")}}
+- {{CSSxRef("column-height")}}
 - {{CSSxRef("column-rule-color")}}
 - {{CSSxRef("column-rule-style")}}
 - {{CSSxRef("column-rule-width")}}
 - {{CSSxRef("column-rule")}} (shorthand)
 - {{CSSxRef("column-span")}}
 - {{CSSxRef("column-width")}}
+- {{CSSxRef("column-wrap")}}
 - {{CSSxRef("columns")}} (shorthand)
 - {{CSSxRef("contain-intrinsic-block-size")}}
 - {{CSSxRef("contain-intrinsic-height")}}
@@ -203,6 +213,23 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("container")}} (shorthand)
 - {{CSSxRef("content-visibility")}}
 - {{CSSxRef("content")}}
+- {{CSSxRef("corner-block-end-shape")}}
+- {{CSSxRef("corner-block-start-shape")}}
+- {{CSSxRef("corner-bottom-left-shape")}}
+- {{CSSxRef("corner-bottom-right-shape")}}
+- {{CSSxRef("corner-bottom-shape")}} (shorthand)
+- {{CSSxRef("corner-end-end-shape")}}
+- {{CSSxRef("corner-end-start-shape")}}
+- {{CSSxRef("corner-inline-end-shape")}}
+- {{CSSxRef("corner-inline-start-shape")}}
+- {{CSSxRef("corner-left-shape")}} (shorthand)
+- {{CSSxRef("corner-right-shape")}} (shorthand)
+- {{CSSxRef("corner-shape")}} (shorthand)
+- {{CSSxRef("corner-start-end-shape")}}
+- {{CSSxRef("corner-start-start-shape")}}
+- {{CSSxRef("corner-top-left-shape")}}
+- {{CSSxRef("corner-top-right-shape")}}
+- {{CSSxRef("corner-top-shape")}} (shorthand)
 - {{CSSxRef("counter-increment")}}
 - {{CSSxRef("counter-reset")}}
 - {{CSSxRef("counter-set")}}
@@ -216,6 +243,7 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("direction")}}
 - {{CSSxRef("display")}}
 - {{CSSxRef("dominant-baseline")}}
+- {{CSSxRef("dynamic-range-limit")}}
 - {{CSSxRef("empty-cells")}}
 - {{CSSxRef("field-sizing")}}
 - {{CSSxRef("fill-opacity")}}
@@ -258,6 +286,7 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("font-variant")}} (shorthand)
 - {{CSSxRef("font-variation-settings")}}
 - {{CSSxRef("font-weight")}}
+- {{CSSxRef("font-width")}}
 - {{CSSxRef("font")}} (shorthand)
 - {{CSSxRef("forced-color-adjust")}}
 
@@ -299,6 +328,10 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("inset-inline")}} (shorthand)
 - {{CSSxRef("inset")}} (shorthand)
 - {{CSSxRef("inset")}} (shorthand)
+- {{CSSxRef("interactivity")}}
+- {{CSSxRef("interest-delay")}}
+- {{CSSxRef("interest-delay-end")}}
+- {{CSSxRef("interest-delay-start")}}
 - {{CSSxRef("interpolate-size")}}
 - {{CSSxRef("isolation")}}
 
@@ -369,6 +402,7 @@ Standard properties defined by CSS specifications include the following:
 
 - {{CSSxRef("object-fit")}}
 - {{CSSxRef("object-position")}}
+- {{CSSxRef("object-view-box")}}
 - {{CSSxRef("offset-anchor")}}
 - {{CSSxRef("offset-distance")}}
 - {{CSSxRef("offset-path")}}
@@ -413,6 +447,7 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("page-break-inside")}}
 - {{CSSxRef("page")}}
 - {{CSSxRef("paint-order")}}
+- {{CSSxRef("path-length")}}
 - {{CSSxRef("perspective-origin")}}
 - {{CSSxRef("perspective")}}
 - {{CSSxRef("place-content")}} (shorthand)
@@ -439,11 +474,13 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("rotate")}}
 - {{CSSxRef("row-gap")}}
 - {{CSSxRef("ruby-align")}}
+- {{CSSxRef("ruby-overhang")}}
 - {{CSSxRef("ruby-position")}}
 - {{CSSxRef("rx")}}
 - {{CSSxRef("ry")}}
 - {{CSSxRef("scale")}}
 - {{CSSxRef("scroll-behavior")}}
+- {{CSSxRef("scroll-initial-target")}}
 - {{CSSxRef("scroll-margin-block-end")}}
 - {{CSSxRef("scroll-margin-block-start")}}
 - {{CSSxRef("scroll-margin-block")}} (shorthand)
@@ -470,6 +507,7 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("scroll-snap-align")}}
 - {{CSSxRef("scroll-snap-stop")}}
 - {{CSSxRef("scroll-snap-type")}}
+- {{CSSxRef("scroll-target-group")}}
 - {{CSSxRef("scroll-timeline-axis")}}
 - {{CSSxRef("scroll-timeline-name")}}
 - {{CSSxRef("scroll-timeline")}} (shorthand)
@@ -499,11 +537,13 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("text-align-last")}}
 - {{CSSxRef("text-align")}}
 - {{CSSxRef("text-anchor")}}
+- {{CSSxRef("text-autospace")}}
 - {{CSSxRef("text-box-edge")}}
 - {{CSSxRef("text-box-trim")}}
 - {{CSSxRef("text-box")}} (shorthand)
 - {{CSSxRef("text-combine-upright")}}
 - {{CSSxRef("text-decoration-color")}}
+- {{CSSxRef("text-decoration-inset")}}
 - {{CSSxRef("text-decoration-line")}}
 - {{CSSxRef("text-decoration-skip-ink")}}
 - {{CSSxRef("text-decoration-skip")}}
@@ -546,7 +586,7 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("user-modify")}}
 - {{CSSxRef("user-select")}}
 - {{CSSxRef("vector-effect")}}
-- {{CSSxRef("vertical-align")}}
+- {{CSSxRef("vertical-align")}} (shorthand)
 - {{CSSxRef("view-timeline-axis")}}
 - {{CSSxRef("view-timeline-inset")}}
 - {{CSSxRef("view-timeline-name")}}
@@ -569,7 +609,7 @@ Standard properties defined by CSS specifications include the following:
 
 ### Non-standard properties
 
-Non-standard, or vendor-prefixed properties include the following:
+Non-standard vendor-prefixed properties include:
 
 #### `-moz-` prefix
 
@@ -603,8 +643,8 @@ Non-standard, or vendor-prefixed properties include the following:
 
 ## See also
 
-- [CSS syntax](/en-US/docs/Web/CSS/CSS_syntax/Syntax)
-- [Pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements)
+- [CSS syntax](/en-US/docs/Web/CSS/Guides/Syntax/Introduction)
+- [Pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
 - [Firefox (-moz-) vendor-prefixed CSS extensions](/en-US/docs/Web/CSS/Reference/Mozilla_extensions)
 - [WebKit (-webkit-) vendor-prefixed CSS extensions](/en-US/docs/Web/CSS/Reference/Webkit_extensions)
 - {{Glossary("Vendor prefix")}}

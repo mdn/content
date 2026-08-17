@@ -1,5 +1,6 @@
 ---
-title: background-image
+title: "`background-image` CSS property"
+short-title: background-image
 slug: Web/CSS/Reference/Properties/background-image
 page-type: css-property
 browser-compat: css.properties.background-image
@@ -46,15 +47,6 @@ background-image:
 }
 ```
 
-The background images are drawn on stacking context layers on top of each other. The first layer specified is drawn as if it is closest to the user.
-
-The [borders](/en-US/docs/Web/CSS/Reference/Properties/border) of the element are then drawn on top of them, and the {{cssxref("background-color")}} is drawn beneath them. How the images are drawn relative to the box and its borders is defined by the {{cssxref("background-clip")}} and {{cssxref("background-origin")}} CSS properties.
-
-If a specified image cannot be drawn (for example, when the file denoted by the specified URI cannot be loaded), browsers handle it as they would a `none` value.
-
-> [!NOTE]
-> Even if the images are opaque and the color won't be displayed in normal circumstances, web developers should always specify a {{cssxref("background-color")}}. If the images cannot be loaded—for instance, when the network is down—the background color will be used as a fallback.
-
 ## Syntax
 
 ```css
@@ -75,16 +67,27 @@ background-image: revert-layer;
 background-image: unset;
 ```
 
-Each background image is specified either as the keyword `none` or as an {{cssxref("&lt;image&gt;")}} value.
-
-To specify multiple background images, supply multiple values, separated by a comma.
-
 ### Values
+
+This property is specified as the keyword `none` or as a comma-separated list of {{cssxref("image")}} values.
 
 - `none`
   - : Is a keyword denoting the absence of images.
 - `<image>`
-  - : Is an {{cssxref("&lt;image&gt;")}} denoting the image to display. There can be several of them, separated by commas, as [multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds) are supported.
+  - : Is an {{cssxref("image")}} denoting the image to display.
+
+## Description
+
+The `background-image` property sets background images on an element.
+
+You can define [multiple backgrounds](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds) on an element by specifying a list of comma-separated image. The background images are drawn on stacking context layers on top of each other. The first layer specified is drawn as if it is closest to the user.
+
+The [borders](/en-US/docs/Web/CSS/Reference/Properties/border) of the element are then drawn on top of them, and the {{cssxref("background-color")}} is drawn beneath them. How the images are drawn relative to the box and its borders is defined by the {{cssxref("background-clip")}} and {{cssxref("background-origin")}} CSS properties.
+
+If a specified image cannot be drawn (for example, when the file denoted by the specified URI cannot be loaded), browsers handle it as they would a `none` value.
+
+> [!NOTE]
+> Even if the images are opaque and the color won't be displayed in normal circumstances, web developers should always specify a {{cssxref("background-color")}}. If the images cannot be loaded—for instance, when the network is down—the background color will be used as a fallback.
 
 ## Accessibility
 
@@ -171,9 +174,9 @@ div {
   - {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
   - {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
   - {{cssxref("url_value", "&lt;url&gt;")}}
-- [Using CSS gradients](/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-- [Implementing image sprites in CSS](/en-US/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)
-- [CSS images](/en-US/docs/Web/CSS/CSS_images) module
+- [Using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_gradients)
+- [Implementing image sprites in CSS](/en-US/docs/Web/CSS/Guides/Images/Implementing_image_sprites)
+- [CSS images](/en-US/docs/Web/CSS/Guides/Images) module
 
 - Background-related properties
   - {{cssxref("background-attachment")}}
@@ -185,6 +188,6 @@ div {
   - {{cssxref("background-size")}}
   - {{cssxref("background")}} shorthand
 - [Learn: Backgrounds and borders](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
-- [Using multiple backgrounds](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
-- [Resizing background images](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
-- [CSS backgrounds and borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module
+- [Using multiple backgrounds](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds)
+- [Resizing background images](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images)
+- [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module

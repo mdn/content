@@ -1,5 +1,5 @@
 ---
-title: "HTML attribute: maxlength"
+title: "`maxlength` HTML attribute"
 short-title: maxlength
 slug: Web/HTML/Reference/Attributes/maxlength
 page-type: html-attribute
@@ -14,10 +14,6 @@ The **`maxlength`** attribute defines the maximum [string length](/en-US/docs/We
 The length is measured in {{glossary("UTF-16", "UTF-16 code units")}}, which is often but not always equal to the number of characters. If no `maxlength` is specified, or an invalid value is specified, the input has no maximum length.
 
 Any `maxlength` value must be greater than or equal to the value of [`minlength`](/en-US/docs/Web/HTML/Reference/Attributes/minlength), if present and valid. The input will fail constraint validation if the length of the text value of the field is greater than maxlength UTF-16 code units long. Constraint validation is only applied when the value is changed by the user.
-
-### Constraint validation
-
-While the browser will generally prevent user from entering more text than the maxlength attribute allows, should the length be longer than the maxlength allows, the read-only {{domxref("ValidityState.tooLong", "tooLong")}} property of a {{domxref("ValidityState")}} object will be true.
 
 {{InteractiveExample("HTML Demo: maxlength", "tabbed-shorter")}}
 
@@ -52,6 +48,12 @@ textarea:valid {
   background-color: palegreen;
 }
 ```
+
+## Description
+
+### Constraint validation
+
+While the browser will generally prevent user from entering more text than the maxlength attribute allows, should the length be longer than the maxlength allows, the read-only {{domxref("ValidityState.tooLong", "tooLong")}} property of a {{domxref("ValidityState")}} object will be true.
 
 ## Examples
 

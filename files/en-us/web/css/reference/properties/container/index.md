@@ -1,12 +1,13 @@
 ---
-title: container
+title: "`container` CSS property"
+short-title: container
 slug: Web/CSS/Reference/Properties/container
 page-type: css-shorthand-property
 browser-compat: css.properties.container
 sidebar: cssref
 ---
 
-The **container** [shorthand](/en-US/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property establishes the element as a query container and specifies the name and type of the [containment context](/en-US/docs/Web/CSS/CSS_containment/Container_queries#naming_containment_contexts) used in a [container query](/en-US/docs/Web/CSS/CSS_containment/Container_queries).
+The **container** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property establishes the element as a query container and specifies the name and type of the [containment context](/en-US/docs/Web/CSS/Guides/Containment/Container_queries#naming_containment_contexts) used in a [container query](/en-US/docs/Web/CSS/Guides/Containment/Container_queries).
 
 ## Constituent properties
 
@@ -73,7 +74,7 @@ The explicit way to create a container context is to declare a `container-type` 
 }
 ```
 
-The `container` shorthand is intended to make this simpler to define in a single declaration:
+The `container` shorthand is intended to make this definable in a single declaration:
 
 ```css
 .post {
@@ -99,8 +100,8 @@ You can then target that container by name using the {{cssxref("@container")}} a
 
 ## See also
 
-- [CSS container queries](/en-US/docs/Web/CSS/CSS_containment/Container_queries)
-- [Using container size and style queries](/en-US/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
+- [CSS container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries)
+- [Using container size and style queries](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries)
 - {{Cssxref("@container")}} at-rule
 - CSS {{Cssxref("contain")}} property
 - CSS {{Cssxref("container-type")}} property

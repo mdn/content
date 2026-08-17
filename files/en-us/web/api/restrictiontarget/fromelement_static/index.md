@@ -22,8 +22,8 @@ RestrictionTarget.fromElement(element)
 
 - `element`
   - : A reference to an {{domxref("Element")}} that you want to use as a restriction target. For an element to be used as a restriction target, it must:
-    - Form a [stacking context](/en-US/docs/Web/CSS/CSS_positioned_layout/Stacking_context).
-    - Be flattened in 3D space (for example, it is not subjected to any 3D [transforms](/en-US/docs/Web/CSS/CSS_transforms)).
+    - Form a [stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context).
+    - Be flattened in 3D space (for example, it is not subjected to any 3D [transforms](/en-US/docs/Web/CSS/Guides/Transforms)).
     - Be rendered (for example, not be off-screen or hidden via `display: none`).
     - Contain only one box fragment (for example, not be broken across multiple lines).
 

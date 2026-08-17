@@ -1,5 +1,6 @@
 ---
-title: box-pack
+title: "`box-pack` CSS property"
+short-title: box-pack
 slug: Web/CSS/Reference/Properties/box-pack
 page-type: css-property
 status:
@@ -12,7 +13,7 @@ sidebar: cssref
 {{Non-standard_header}}{{Deprecated_Header}}
 
 > [!WARNING]
-> This is a property of the original CSS flexible box layout Module draft, and has been replaced by a newer standard. See [flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) for information about the current standard.
+> This is a property of the original CSS flexible box layout Module draft, and has been replaced by a newer standard. See [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) for information about the current standard.
 
 The **`-moz-box-pack`** and **`-webkit-box-pack`** [CSS](/en-US/docs/Web/CSS) properties specify how a `-moz-box` or `-webkit-box` packs its contents in the direction of its layout. The effect of this is only visible if there is extra space in the box.
 
@@ -33,9 +34,9 @@ box-pack: initial;
 box-pack: unset;
 ```
 
-The `box-pack` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `start`
   - : The box packs contents at the start, leaving any extra space at the end.

@@ -61,9 +61,9 @@ sidebar: mdnsidebar
 >
 > You should update or delete the following macros according to the advice below:
 >
-> - `\{{SecureContext_Header}}` — this generates a **Secure context** banner that indicates the technology is only available in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+> - `\{{SecureContext_Header}}` — this generates a **Secure context** banner that indicates the technology is only available in a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 >   If it isn't, then you can remove the macro call.
->   If it is, then you should also fill in an entry for it in the [Features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts) page.
+>   If it is, then you should also fill in an entry for it in the [Features restricted to secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts) page.
 > - `\{{AvailableInWorkers}}` — this generates an **Available In Workers** note that indicates that the technology is available in [worker context](/en-US/docs/Web/API/Web_Workers_API).
 >   If it is only available in window context, then you can remove the macro call.
 >   If it is also available or only available in worker context, then you may also need to passing a parameter to it due to its availability (see [\\{{AvailableInWorkers}} macros source code](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs) for all available values), you may also need to fill in an entry for it in the [Web APIs available in workers](/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers#web_apis_available_in_workers) page.
@@ -115,15 +115,6 @@ Or, for example:
 _An {{domxref("XRSessionEvent")}}. Inherits from {{domxref("Event")}}._
 
 {{InheritanceDiagram("XRSessionEvent")}}
-
-## Event properties
-
-If the event is not just a generic {{domxref("Event")}}, list the additional properties the event has.
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref("XRSessionEvent.session", "session")}} {{ReadOnlyInline}}
-  - : The {{domxref("XRSession")}} to which the event refers.
 
 ## Description
 
