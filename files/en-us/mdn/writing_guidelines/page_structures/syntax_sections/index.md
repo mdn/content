@@ -236,11 +236,17 @@ CSS property reference pages include a "Syntax" section, which used to be found 
 > [!NOTE]
 > We do this because CSS formal syntax is complex, not used by many of the MDN readership, and off-putting for beginners. Real syntax and examples are more useful to the majority of people.
 
-Inside the syntax section you'll find the following contents.
+Inside the "Syntax" section, you'll find the following sub-sections.
 
 #### Values section
 
-Next, you should include a "Values" section — this contains an introductory sentence explaining the syntax order, multiple values, etc., followed by a definition list of the CSS value types that make up the value of the property. Each value type should be wrapped in angle brackets and linked to the MDN reference page covering that value type if a page exists for it. For example, see the {{CSSxRef("border")}} property reference — this reference three value types, which are linked to their respective data-type reference pages.
+You should include a "Values" section.
+
+This section begins with an introductory sentence explaining how the property's value is constructed — a single value, one or two values, or a space- or comma-separated list — along with any constraint on order or combination. Begin this sentence with "This property is specified as" and end it with a colon, so that it leads into the definition list of the CSS value types and keywords that make up the value of the property. For example, the `font-style` property [Values](/en-US/docs/Web/CSS/Reference/Properties/font-style#values) section leads its definition list with this sentence:
+
+> This property is specified as one of the following keyword values. The `oblique` keyword can optionally be followed by an `<angle>`:
+
+In the definition list, wrap each value type in angle brackets and link it to the MDN reference page covering that value type if a page exists for it. For an example, see the "Values" section of {{CSSxRef("list-style-image"}}.
 
 #### Formal syntax
 
