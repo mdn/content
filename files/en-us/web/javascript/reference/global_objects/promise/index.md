@@ -21,7 +21,7 @@ A `Promise` is in one of these states:
 - _rejected_: meaning that the operation failed.
 
 The _eventual state_ of a pending promise can either be _fulfilled_ with a value or _rejected_ with a reason (error).
-When either of these options occur, the associated handlers queued up by a promise's `then` method are called. If the promise has already been fulfilled or rejected when a corresponding handler is attached, the handler will be called, so there is no race condition between an asynchronous operation completing and its handlers being attached.
+When either of these options occurs, the associated handlers queued up by a promise's `then` method are called. If the promise has already been fulfilled or rejected when a corresponding handler is attached, the handler will be called, so there is no race condition between an asynchronous operation completing and its handlers being attached.
 
 A promise is said to be _settled_ if it is either fulfilled or rejected, but not pending.
 

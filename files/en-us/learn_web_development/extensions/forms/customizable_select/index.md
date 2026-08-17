@@ -72,28 +72,28 @@ Our example is a typical {{htmlelement("select")}} menu that allows you to choos
 
       <option value="">Please select a pet</option>
       <option value="cat">
-        <span class="icon" aria-hidden="true">🐱</span
-        ><span class="option-label">Cat</span>
+        <span class="icon" aria-hidden="true">🐱</span>
+        <span class="option-label">Cat</span>
       </option>
       <option value="dog">
-        <span class="icon" aria-hidden="true">🐶</span
-        ><span class="option-label">Dog</span>
+        <span class="icon" aria-hidden="true">🐶</span>
+        <span class="option-label">Dog</span>
       </option>
       <option value="hamster">
-        <span class="icon" aria-hidden="true">🐹</span
-        ><span class="option-label">Hamster</span>
+        <span class="icon" aria-hidden="true">🐹</span>
+        <span class="option-label">Hamster</span>
       </option>
       <option value="chicken">
-        <span class="icon" aria-hidden="true">🐔</span
-        ><span class="option-label">Chicken</span>
+        <span class="icon" aria-hidden="true">🐔</span>
+        <span class="option-label">Chicken</span>
       </option>
       <option value="fish">
-        <span class="icon" aria-hidden="true">🐟</span
-        ><span class="option-label">Fish</span>
+        <span class="icon" aria-hidden="true">🐟</span>
+        <span class="option-label">Fish</span>
       </option>
       <option value="snake">
-        <span class="icon" aria-hidden="true">🐍</span
-        ><span class="option-label">Snake</span>
+        <span class="icon" aria-hidden="true">🐍</span>
+        <span class="option-label">Snake</span>
       </option>
     </select>
   </p>

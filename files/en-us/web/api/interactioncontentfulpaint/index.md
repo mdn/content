@@ -45,7 +45,7 @@ At present this is scoped to increasing paint sizes, so it can be used to measur
 
 ### Relationship with Event Timing and INP
 
-The {{domxref("PerformanceEventTiming", "Event Timing API")}} API provides details about UIEvents — scheduling and processing durations, and total duration to next paint — but does not actually directly track the effects of those events, nor any future paints those effects might cause. It is intended to measure the responsiveness time during which a user receives no feedback, which should be kept to a minimum and forms the basis for metrics such as {{Glossary("Interaction to Next Paint", "Interaction to Next Paint (INP)")}}.
+The [Event Timing API](/en-US/docs/Web/API/PerformanceEventTiming) provides details about UIEvents — scheduling and processing durations, and total duration to next paint — but does not actually directly track the effects of those events, nor any future paints those effects might cause. It is intended to measure the responsiveness time during which a user receives no feedback, which should be kept to a minimum and forms the basis for metrics such as {{Glossary("Interaction to Next Paint", "Interaction to Next Paint (INP)")}}.
 
 `InteractionContentfulPaint`, despite being similarly named to Interaction to Next Paint, serves a different purpose. `InteractionContentfulPaint` excludes non-contentful paints which do count for Event Timing and INP but also measures additional paints beyond the first paint. It allows enables measurement of a more complete understanding of the effects and content updates directly attributable to an interaction.
 
@@ -66,7 +66,7 @@ observer.observe({ type: "interaction-contentful-paints", buffered: true });
 
 ### Observing interaction contentful paints specific to a soft navigation
 
-One of the key uses of the `InteractionContentfulPaint` interface is to measure all contentful paints related to a {{domxref("PerformanceSoftNavigation", "soft navigation")}} to calculate the {{Glossary("Largest Contentful Paint", "Largest Contentful Paint (LCP)")}} for that soft navigation.
+One of the key uses of the `InteractionContentfulPaint` interface is to measure all contentful paints related to a [soft navigation](/en-US/docs/Web/API/PerformanceSoftNavigation) to calculate the {{Glossary("Largest Contentful Paint", "Largest Contentful Paint (LCP)")}} for that soft navigation.
 
 To do this, it is recommended to use the {{domxref("PerformanceSoftNavigation.interactionId")}} rather than the {{domxref("PerformanceSoftNavigation.navigationId")}}, since some LCP candidates can happen before the soft navigation is defined (for paints, before the URL is updated) and will therefore have the old `navigationId`.
 
