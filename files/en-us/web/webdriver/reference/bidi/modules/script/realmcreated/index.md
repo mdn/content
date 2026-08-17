@@ -7,7 +7,7 @@ browser-compat: webdriver.bidi.script.realmCreated_event
 sidebar: webdriver
 ---
 
-The `script.realmCreated` [event](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#events) of the [`script`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script) module fires when a new [realm](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script#realms) is created for a window, a worker, or a worklet.
+The `script.realmCreated` [event](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#events) of the [`script`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script) module fires when a new [realm](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script#realms) is created for a document, a worker, or a worklet.
 
 ## Event data
 
@@ -43,7 +43,8 @@ The `params` field in the event notification is a [realm object](/en-US/docs/Web
 
 ## Description
 
-Together with [`script.realmDestroyed`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/realmDestroyed), use this event to monitor the lifetime of the JavaScript realms of a context and its workers.
+Together with [`script.realmDestroyed`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/realmDestroyed), use this event to monitor the lifetime of JavaScript realms.
+
 When you [subscribe](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to this event, the browser first sends a `script.realmCreated` event for each realm that already exists and is ready to run scripts, and then sends further events as new realms are created.
 This means you don't need to call [`script.getRealms`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/getRealms) to discover the realms that existed before you subscribed.
 
