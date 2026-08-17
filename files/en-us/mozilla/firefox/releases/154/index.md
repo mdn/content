@@ -35,6 +35,7 @@ Firefox 154 is the current [Beta version of Firefox](https://www.firefox.com/en-
 ### CSS
 
 - The {{cssxref("sibling-count")}} and {{cssxref("sibling-index")}} functions are now supported. The `sibling-count()` function returns the number of sibling elements as well as the element itself. The `sibling-index()` function returns the index number of the element in relation to its siblings. The index starts at `1`, not `0`. ([Firefox bug 2045706](https://bugzil.la/2045706)).
+- The {{cssxref("text-box-edge")}} and {{cssxref("text-box-trim")}} properties and the {{cssxref("text-box")}} shorthand are now supported. These properties make it easier to control text spacing in the block direction, especially when a block contains multiple fonts. The `text-box-edge` property allows you to specify the amount of space to trim from the text element's block container. The `text-box-trim` property allows you to specify which edges to trim: the over edge, the under edge, both, or neither. The `text-box` shorthand combines these two properties. ([Firefox bug 2050141](https://bugzil.la/2050141)).
 
 <!-- #### Removals -->
 
