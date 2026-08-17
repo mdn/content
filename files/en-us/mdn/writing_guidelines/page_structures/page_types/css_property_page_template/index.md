@@ -129,7 +129,7 @@ Include a description of the property and explain how it works. Use this section
 If the property is part of a shorthand, include alternative ways of declaring the value:
 
 ```md
-The `property-name` property, along with the {{cssxref("sibling-property")}} property, can also be set by using the {{cssxref("shorthand-property")}} shorthand.
+The `property-name` property, along with the \{{cssxref("sibling-property")}} property, can also be set by using the \{{cssxref("shorthand-property")}} shorthand.
 ```
 
 ## Formal definition
