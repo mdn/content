@@ -16,7 +16,10 @@ Firefox 154 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ## Changes for web developers
 
-<!-- ### Developer Tools -->
+### Developer Tools
+
+- The [JSON Viewer](https://firefox-source-docs.mozilla.org/devtools-user/json_viewer/index.html) now displays a breadcrumb at the bottom of the panel indicating the location of the selected entry within the JSON structure.
+  ([Firefox bug 1805447](https://bugzil.la/1850288)).
 
 <!-- ### HTML -->
 
