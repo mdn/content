@@ -231,7 +231,9 @@ JavaScript built-in object reference pages follow the same basic rules as API re
 
 ### Properties
 
-CSS property reference pages include a "Syntax" section, which used to be found at the top of the page but is increasingly commonly found below a section containing a block of code showing typical usage of the feature, plus a live example to illustrate what the feature does (see {{CSSxRef("animation")}} for example).
+CSS property reference pages include a "Syntax" section. It is follows a live example that illustrates what the property does. For shorthand properties, it follows the "Constituent properties" section.
+
+The "Syntax" section itself begins with a code block to illustrate typical declarations for the property (see {{CSSxRef("animation")}} for example).
 
 > [!NOTE]
 > We do this because CSS formal syntax is complex, not used by many of the MDN readership, and off-putting for beginners. Real syntax and examples are more useful to the majority of people.
