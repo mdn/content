@@ -214,7 +214,7 @@ In our threat modeling above, we focus on the four key questions as defined in t
 
 ## See also
 
-- [Threat model frameworks an resources](/en-US/docs/Web/Security/Threat_modeling/Frameworks)
+- [Threat model frameworks and resources](/en-US/docs/Web/Security/Threat_modeling/Frameworks)
 - [Example threat model](/en-US/docs/Web/Security/Threat_modeling/Example_threat_model)
 - [Security](/en-US/docs/Web/Security)
 - [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org)
