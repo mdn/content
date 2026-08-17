@@ -20,8 +20,8 @@ Web Components aims to solve such problems — it consists of three main technol
 - **Custom elements**
   - : A set of JavaScript APIs that allow you to define custom elements and their behavior, which can then be used as desired in your user interface.
 - **Shadow DOM**
-  - : A mechanisms for attaching an encapsulated "shadow" DOM tree to an element, either imperatively via JavaScript APIs or declaratively in HTML.
-    These allow you to keep an element's features private, so their styles and IDs don't collide with other parts of the document.
+  - : A mechanism for attaching an encapsulated "shadow" DOM tree to an element, either imperatively via JavaScript APIs or declaratively in HTML.
+    This allows you to keep an element's features private, so their styles and IDs don't collide with other parts of the document.
 - **HTML templates**
   - : The {{HTMLElement("template")}} and {{HTMLElement("slot")}} elements enable you to write markup templates that are not displayed in the rendered page. These can then be reused multiple times as the basis of a custom element's structure.
 
