@@ -455,10 +455,10 @@ The {{cssxref("progress")}} CSS function is now supported. This allows the user 
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 154           | Yes                 |
-| Developer Edition | 153           | No                  |
-| Beta              | 153           | No                  |
-| Release           | 153           | No                  |
+| Nightly           | 155           | Yes                 |
+| Developer Edition | 154           | No                  |
+| Beta              | 154           | No                  |
+| Release           | 154           | No                  |
 
 - `layout.css.progress-function.enabled`
   - : Set to `true` to enable.
