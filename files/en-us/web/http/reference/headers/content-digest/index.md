@@ -161,7 +161,7 @@ Repr-Digest: sha-256=:bMGjiT1wkArOzyB9ReAdpW51FV4mHlQygPXGp+TtzG4=:
 ```
 
 Instead of omitting `Content-Digest` when there is no content, a server can explicitly compute it over an empty string.
-Per [Section 6.3 of RFC 9530](https://www.rfc-editor.org/rfc/rfc9530.html#section-6.3), this lets a recipient, particularly when the digest is covered by an HTTP message signature, verify that no content was added or removed, rather than only that the header was left out:
+Per [Section 6.3 of RFC 9530](https://www.rfc-editor.org/info/rfc9530/#section-6.3), this lets a recipient, particularly when the digest is covered by an HTTP message signature, verify that no content was added or removed, rather than only that the header was left out:
 
 ```http
 HTTP/1.1 200 OK
