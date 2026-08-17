@@ -48,20 +48,8 @@ text {
     <textPath href="#circle2" side="right">Text on right of path</textPath>
   </text>
 
-  <circle
-    id="circle1"
-    cx="100"
-    cy="100"
-    r="70"
-    fill="transparent"
-    stroke="silver" />
-  <circle
-    id="circle2"
-    cx="320"
-    cy="100"
-    r="70"
-    fill="transparent"
-    stroke="silver" />
+  <circle id="circle1" cx="100" cy="100" r="70" fill="none" stroke="silver" />
+  <circle id="circle2" cx="320" cy="100" r="70" fill="none" stroke="silver" />
 </svg>
 ```
 
