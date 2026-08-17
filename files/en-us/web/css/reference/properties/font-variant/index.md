@@ -104,6 +104,8 @@ font-variant: unset;
 
 ### Values
 
+This property is specified as a space-separated list of the following values:
+
 - `normal`
   - : Specifies a normal font face. Each longhand property has an initial value of `normal`.
 
