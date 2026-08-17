@@ -38,6 +38,8 @@ Firefox 154 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### JavaScript
 
+- The {{jsxref("Iterator.prototype.includes()")}} method is now supported, allowing developers to check whether an iterator contains a given value.
+  ([Firefox bug 2034104](https://bugzil.la/2034104)).
 - The {{jsxref("Iterator.prototype.join()")}} method is now supported, returning a string that is the concatenation of all elements produced by the iterator, separated by commas or a specified separator string.
   This is similar to {{jsxref("Array.prototype.join()")}}.
   ([Firefox bug 2047995](https://bugzil.la/2047995)).
@@ -62,6 +64,9 @@ Firefox 154 is the current [Beta version of Firefox](https://www.firefox.com/en-
   ([Firefox bug 2019332](https://bugzil.la/2019332)).
 - The {{domxref("RTCDtlsTransport/error_event", "error")}} event is now fired on {{domxref("RTCDtlsTransport")}} to report DTLS and fingerprinting errors.
   ([Firefox bug 1805447](https://bugzil.la/1805447)).
+- The `rtcp` property is now included in the object returned from {{domxref("RTCRtpReceiver.getParameters()")}} and {{domxref("RTCRtpSender.getParameters()")}}, and can be set in the object passed to {{domxref("RTCRtpSender.setParameters()")}}.
+  This provides the {{glossary("RTCP")}} configuration parameters for the connection.
+  ([Firefox bug 1584318](https://bugzil.la/1584318)).
 
 <!-- #### Removals -->
 
