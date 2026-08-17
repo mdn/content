@@ -89,8 +89,8 @@ a {
 
 ```css live-sample___basic-element-scoped
 ul {
-  border: 2px solid #999;
-  background: #ccc;
+  border: 2px solid #999999;
+  background: #cccccc;
   position: relative;
 }
 ```
@@ -99,7 +99,7 @@ Next, we give the {{htmlelement("a")}} elements their own `border` styles and ap
 
 ```css live-sample___basic-element-scoped
 a {
-  border: 2px solid #aaa;
+  border: 2px solid #aaaaaa;
   transition: border 0.6s;
 }
 
@@ -153,8 +153,8 @@ ul::before {
   width: 100px;
   background-image: linear-gradient(
     to right,
-    rgb(255 255 255),
-    rgb(255 255 255) 25%,
+    white,
+    white 25%,
     rgb(255 255 255 / 0)
   );
   z-index: 1;
@@ -279,8 +279,8 @@ body {
 }
 
 section {
-  border: 2px solid #999;
-  background: #ddd;
+  border: 2px solid #999999;
+  background: #dddddd;
   margin: 0 auto;
 }
 
@@ -332,7 +332,7 @@ section p {
 }
 ```
 
-For brevity, the {{cssxref("@keyframes")}} definition code is hidden. It is nearly identical to the [previous example](#css:~:text=%40keyframes%20rotate%2Dout); the only difference is that the rotation in this example occurs around the y-axis rather than the x-axis.
+For brevity, the {{cssxref("@keyframes")}} definition code is hidden. It is nearly identical to the [previous example](#:~:text=%40keyframes%20rotate%2Dout); the only difference is that the rotation in this example occurs around the y-axis rather than the x-axis.
 
 ### JavaScript
 
@@ -437,7 +437,7 @@ body {
 ul {
   list-style-type: none;
   padding-left: 0;
-  border: 2px solid #999;
+  border: 2px solid #999999;
   margin: 0 auto;
   position: relative;
   flex: 1;
@@ -451,7 +451,7 @@ a {
   text-align: center;
   background: white;
   margin: 10px;
-  border: 2px solid #aaa;
+  border: 2px solid #aaaaaa;
   transition: border 0.6s;
 }
 

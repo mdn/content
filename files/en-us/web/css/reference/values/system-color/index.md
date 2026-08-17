@@ -130,6 +130,9 @@ Depending on your settings, the sample colors displayed in the table may change.
   </tbody>
 </table>
 
+> [!NOTE]
+> To reduce the risk of {{glossary("fingerprinting")}}, some browsers return a fixed value for `AccentColor` and `AccentColorText` unless they are used in certain restricted circumstances. See [browser compatibility](#browser_compatibility) for details.
+
 ### Deprecated system color keywords
 
 The following keywords were defined in earlier versions of the CSS Color Module. They are now deprecated for use on public web pages.

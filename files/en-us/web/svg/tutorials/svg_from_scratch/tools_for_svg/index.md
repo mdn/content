@@ -29,13 +29,13 @@ URL: [xmlgraphics.apache.org/batik/](https://xmlgraphics.apache.org/batik/)
 
 Batik is a set of open source tools under the roof of the Apache Software Foundation. The toolkit is written in Java and offers almost complete SVG 1.1 support, as well as some features that were originally planned for SVG 1.2.
 
-Batik offers a viewer (Squiggle), a rasterizer for PNG output, an SVG pretty printer to format SVG files, and a TrueType-to-SVG-Font converter.
+Batik offers a viewer (Squiggle), a rasterizer for PNG output, and an SVG pretty printer to format SVG files.
 
 Together with [Apache FOP](https://xmlgraphics.apache.org/fop/) Batik can transform SVG to PDF.
 
 ### Other renderers
 
-Several projects exist that can create a raster image from an SVG source. [ImageMagick](https://imagemagick.org/) is one of the most famous command-line image processing tools. The GNOME library [rsvg](https://wiki.gnome.org/Projects/LibRsvg) is used by the Wikipedia to raster their SVG graphics. Usage of headless browsers such as SlimerJS and PhantomJS are also popular for this purpose, as the image produced is closer to what the SVG will look like in the browser.
+Several projects exist that can create a raster image from an SVG source. [ImageMagick](https://imagemagick.org/) is one of the most famous command-line image processing tools. The GNOME library [librsvg](https://gitlab.gnome.org/GNOME/librsvg) is used by Wikipedia to rasterize their SVG graphics, and [resvg](https://github.com/linebender/resvg) is a fast standalone renderer. Headless browsers driven by [Puppeteer](https://pptr.dev/) or [Playwright](https://playwright.dev/) are also popular for this purpose, as the image produced is closer to what the SVG will look like in the browser.
 
 ## Google Docs
 
@@ -45,9 +45,9 @@ Drawings from Google Docs can be exported as SVG.
 
 ## Science
 
-The well-known plotting tools xfig and gnuplot both support exporting as SVG. To render graphs on the web [JSXGraph](https://jsxgraph.uni-bayreuth.de/home/) supports VML, SVG and canvas, automatically deciding which technology to use based on browser capabilities.
+The well-known plotting tools, xfig and gnuplot, both support exporting as SVG. To render graphs on the web, [JSXGraph](https://jsxgraph.uni-bayreuth.de/home/) supports SVG and canvas, automatically deciding which technology to use based on browser capabilities.
 
-In GIS (Geographic Information System) applications SVG is often used as both storage and rendering format. See [carto.net](https://carto.net/) for details.
+In Geographic Information System (GIS) applications, SVG is often used as both storage and rendering format.
 
 ## More tools!
 
