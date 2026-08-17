@@ -79,7 +79,7 @@ sidebar: mdnsidebar
 {{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 Begin the content on the page with an introductory paragraph, which names the property and says what it does.
-This should ideally be one or two short sentences. All other explanations, if any, should be in the Description section.
+This should ideally be one or two short sentences. All other explanations, if any, should be included in the "Description" section.
 
 ## Try it
 
@@ -102,9 +102,17 @@ Include the common use cases as a code block and describe the component subvalue
 
 ### Values
 
-Include one term and definition for each subvalue.
+Include a sentence, like one of the following, to convey how the property's value is constructed:
 
-This property is specified as \[the following value] || \[one of the following keyword values]:
+```md
+This property is specified as one of the following keyword values:
+
+This property is specified as a single value from the following list:
+
+This property is specified as a space-separated list of the following values:
+```
+
+Follow the sentence with a definition list that includes one term and definition for each subvalue. If an MDN reference page exists for a value type, add that link on the term.
 
 - `subvalue1`
   - : Include a description of the subvalue, its data type, and what it represents.
@@ -140,7 +148,7 @@ Note that we use the plural "Examples" even if the page only contains one exampl
 
 ### Add a descriptive heading
 
-Each example must have an H3 heading (`###`) naming the example. The heading should be descriptive of what the example is doing. For example, "A simple example" does not say anything about the example and therefore is not a good heading. That said, "Basic usage" is okay as the first heading, when complex examples follow, when only demonstrating value assignment. The heading should be concise. For a longer description, use the paragraph after the heading.
+Each example must have an H3 heading (`###`) naming the example. The heading should be descriptive of what the example is doing. For example, "A simple example" does not say anything about the example and therefore is not a good heading. That said, "Basic usage" is acceptable for the first example heading when it only demonstrates value assignment and more complex examples follow. The heading should be concise. For a longer description, use the paragraph after the heading.
 
 See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.
 
@@ -191,5 +199,5 @@ Include links to reference pages and guides related to the current property. For
 
 - link1
 - link2
-- ModuleLink
+- module_link
 - external_link (year)
