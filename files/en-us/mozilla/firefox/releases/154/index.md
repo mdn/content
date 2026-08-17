@@ -73,6 +73,8 @@ Firefox 154 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The `rtcp` property is now included in the object returned from {{domxref("RTCRtpReceiver.getParameters()")}} and {{domxref("RTCRtpSender.getParameters()")}}, and can be set in the object passed to {{domxref("RTCRtpSender.setParameters()")}}.
   This provides the {{glossary("RTCP")}} configuration parameters for the connection.
   ([Firefox bug 1584318](https://bugzil.la/1584318)).
+- Firefox now reports all WebRTC `certificate` statistics defined in the {{domxref("RTCCertificateStats")}} dictionary, and the following additional WebRTC `transport` statistics defined in the {{domxref("RTCTransportStats")}} dictionary: {{domxref("RTCTransportStats/remoteCertificateId", "remoteCertificateId")}}, {{domxref("RTCTransportStats/localCertificateId", "localCertificateId")}}, {{domxref("RTCTransportStats/packetsSent", "packetsSent")}}, {{domxref("RTCTransportStats/packetsReceived", "packetsReceived")}}, {{domxref("RTCTransportStats/bytesSent", "bytesSent")}}, and {{domxref("RTCTransportStats/bytesReceived", "bytesReceived")}}.
+  ([Firefox bug 2019349](https://bugzil.la/2019349) and [Firefox bug 2019333](https://bugzil.la/2019333)).
 
 <!-- #### Removals -->
 
