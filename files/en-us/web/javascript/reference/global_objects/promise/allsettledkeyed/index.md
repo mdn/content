@@ -84,6 +84,8 @@ console.log(result);
 
 ## See also
 
+- [Polyfill of `Promise.allSettledKeyed` in `core-js`](https://core-js.io/docs/features/proposals/await-dictionary)
+- [es-shims polyfill of `Promise.allSettledKeyed`](https://www.npmjs.com/package/promise.allsettledkeyed)
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.allKeyed()")}}
 - {{jsxref("Promise.allSettled()")}}
