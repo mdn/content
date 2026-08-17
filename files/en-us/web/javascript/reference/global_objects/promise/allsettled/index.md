@@ -79,6 +79,8 @@ Promise.allSettled([
 // ]
 ```
 
+Be careful: if the original promises and the result variables' order don't match, you may run into subtle bugs. The {{jsxref("Promise.allSettledKeyed()")}} method solves exactly this problem.
+
 ## Specifications
 
 {{Specifications}}
