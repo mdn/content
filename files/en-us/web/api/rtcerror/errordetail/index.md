@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.RTCError.errorDetail
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`errorDetail`** read-only property of the {{domxref("RTCError")}} interface is a string indicating the [WebRTC](/en-US/docs/Web/API/WebRTC_API)-specific error code that occurred.
 
