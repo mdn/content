@@ -1,14 +1,14 @@
 ---
-title: "CSSUnparsedValue: forEach() method"
+title: "CSSNumericArray: forEach() method"
 short-title: forEach()
-slug: Web/API/CSSUnparsedValue/forEach
+slug: Web/API/CSSNumericArray/forEach
 page-type: web-api-instance-method
-browser-compat: api.CSSUnparsedValue.forEach
+browser-compat: api.CSSNumericArray.forEach
 ---
 
 {{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`forEach()`** method of the {{domxref("CSSUnparsedValue")}} interface executes a provided function once for each item in the object.
+The **`forEach()`** method of the {{domxref("CSSNumericArray")}} interface executes a provided function once for each item in the object.
 
 ## Syntax
 
@@ -26,7 +26,7 @@ forEach(callbackFn, thisArg)
     - `index` {{optional_inline}}
       - : The index of the current element being processed.
     - `array` {{optional_inline}}
-      - : The `CSSUnparsedValue` that `forEach()` is being called on.
+      - : The `CSSNumericArray` that `forEach()` is being called on.
 - `thisArg` {{optional_inline}}
   - : Value to use as `this` when executing `callbackFn`.
 
@@ -39,14 +39,14 @@ None ({{jsxref("undefined")}}).
 ### Iterating with forEach()
 
 ```js
-const value = new CSSUnparsedValue(["1em", "#445566", "-45px"]);
+const sum = new CSSMathSum(CSS.px(10), CSS.em(5), CSS.percent(50));
 
-value.forEach((fragment, index) => {
-  console.log(index, fragment);
+sum.values.forEach((value, index) => {
+  console.log(index, value.toString());
 });
-// 0 "1em"
-// 1 "#445566"
-// 2 "-45px"
+// 0 "10px"
+// 1 "5em"
+// 2 "50%"
 ```
 
 ## Specifications
@@ -59,10 +59,9 @@ value.forEach((fragment, index) => {
 
 ## See also
 
-- {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}}
-- {{domxref("CSSUnparsedValue.entries()")}}
-- {{domxref("CSSUnparsedValue.keys()")}}
-- {{domxref("CSSUnparsedValue.length")}}
-- {{domxref("CSSUnparsedValue.values()")}}
+- {{domxref("CSSNumericArray.entries()")}}
+- {{domxref("CSSNumericArray.keys()")}}
+- {{domxref("CSSNumericArray.length")}}
+- {{domxref("CSSNumericArray.values()")}}
 - [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
 - [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)
