@@ -68,7 +68,7 @@ font-variation-settings: unset;
 
 ### Values
 
-This property's value can take one of two forms:
+This property is specified as `normal` or a comma-separated list of string-number value pairs:
 
 - `normal`
   - : Text is laid out using default settings.

@@ -649,6 +649,7 @@ preg_replace
 premkproject
 prerenderingchange
 presentationml
+pressuresource
 prettyping
 previousslide
 previoustrack

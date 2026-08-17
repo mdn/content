@@ -23,7 +23,7 @@ For example, the value `42px` (a {{cssxref("&lt;dimension&gt;")}}) would be repr
 - {{domxref('CSSUnitValue.value')}}
   - : A number representing the number of units.
     For a `CSSNumericValue` representing `42px`, this would be `42`.
-- {{domxref('CSSUnitValue.unit')}}
+- {{domxref('CSSUnitValue.unit')}} {{ReadOnlyInline}}
   - : Returns a string indicating the type of unit. For a `CSSNumericValue` representing `42px`, this would be `"px"`.
 
 ## Static methods
