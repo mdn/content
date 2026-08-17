@@ -40,6 +40,9 @@ Firefox 154 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - The {{jsxref("Iterator.prototype.includes()")}} method is now supported, allowing developers to check whether an iterator contains a given value.
   ([Firefox bug 2034104](https://bugzil.la/2034104)).
+- The {{jsxref("Iterator.prototype.join()")}} method is now supported, returning a string that is the concatenation of all elements produced by the iterator, separated by commas or a specified separator string.
+  This is similar to {{jsxref("Array.prototype.join()")}}.
+  ([Firefox bug 2047995](https://bugzil.la/2047995)).
 
 <!-- #### Removals -->
 
