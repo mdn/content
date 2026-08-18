@@ -79,7 +79,7 @@ flex-wrap: unset;
 
 ### Values
 
-Specified as a single value from the following list or as two space-separated values when using `balance`:
+This property is specified as a single value from the following list or as two space-separated values when using `balance`:
 
 - `nowrap`
   - : The flex items are laid out in a single line which may cause the flex container to overflow. This is the initial value.
