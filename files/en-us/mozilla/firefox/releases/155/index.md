@@ -1,13 +1,13 @@
 ---
-title: Firefox 155 release notes for developers (Nightly)
-short-title: Firefox 155 (Nightly)
+title: Firefox 155 release notes for developers (Beta)
+short-title: Firefox 155 (Beta)
 slug: Mozilla/Firefox/Releases/155
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 155 that affect developers.
-Firefox 155 is the current [Nightly version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [September 1, 2026](https://whattrainisitnow.com/release/?version=155).
+Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [September 1, 2026](https://whattrainisitnow.com/release/?version=155).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress.

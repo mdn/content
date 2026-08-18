@@ -67,7 +67,7 @@ For the `source`:
 
 For the `destination`:
 
-- The `source`'s {{domxref("GPUTexture.usage")}} includes the `GPUTextureUsage.COPY_DST` flag.
+- The `destination`'s {{domxref("GPUTexture.usage")}} includes the `GPUTextureUsage.COPY_DST` flag.
 
 For `source` and `destination`:
 
@@ -77,10 +77,9 @@ For `source` and `destination`:
 - The source and destination `texture` {{domxref("GPUTexture.format")}}s are copy-compatible.
 - The source and destination `texture` {{domxref("GPUTexture.sampleCount")}}s are equal.
 - If the {{domxref("GPUTexture.format")}} is a [depth-or-stencil format](https://gpuweb.github.io/gpuweb/#combined-depth-stencil-format) or {{domxref("GPUTexture.sampleCount")}} is more than 1, the subresource size is equal to `size`.
-- The `texture`'s {{domxref("GPUTexture.sampleCount")}} is 1.
-- `aspect` refers to a single aspect of the {{domxref("GPUTexture.format")}}.
-- That aspect is a valid image copy source/destination according to [depth-or-stencil formats](https://gpuweb.github.io/gpuweb/#combined-depth-stencil-format).
+- If the {{domxref("GPUTexture.format")}} is a [depth-or-stencil format](https://gpuweb.github.io/gpuweb/#combined-depth-stencil-format), the `source` and `destination` `aspect`s both refer to all aspects of their respective textures' {{domxref("GPUTexture.format")}}s.
 - The `texture` is compatible with the `copySize`.
+- The sets of subresources defined by `source` combined with `copySize`, and `destination` combined with `copySize`, are disjoint.
 
 ## Examples
 
