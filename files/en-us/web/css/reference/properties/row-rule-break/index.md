@@ -348,7 +348,7 @@ label {
 
 {{EmbedLiveSample("multi-col containers", "", "540")}}
 
-If you select `intersection`, the row rule will break into segment whenever it reaches a column gap, with each segment starting and ending at the edge of the gap. The start and end positions can be changed with the `row-rule-inset` properties.
+If you select `intersection`, the row rule will break into segments whenever it reaches a column gap, with each segment starting and ending at the edge of the gap. The start and end positions can be changed with the `row-rule-inset` properties.
 
 ## Formal definition
 
