@@ -8,7 +8,7 @@ browser-compat: api.HTMLTableSectionElement.deleteRow
 
 {{APIRef("HTML DOM")}}
 
-The **`deleteRow()`** method of the {{domxref("HTMLTableSectionElement")}} interface removes a specific row ({{HtmlElement("tr")}}) from the given table sectioning element ({{HTMLElement("thead")}}, {{HTMLElement("tfoot")}}, or {{HTMLElement("tbody")}}).
+The **`deleteRow()`** method of the {{domxref("HTMLTableSectionElement")}} interface removes a specific row ({{HTMLElement("tr")}}) from the given table sectioning element ({{HTMLElement("thead")}}, {{HTMLElement("tfoot")}}, or {{HTMLElement("tbody")}}).
 
 ## Syntax
 

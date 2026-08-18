@@ -14,7 +14,7 @@ The **`caption`** property of the {{domxref("HTMLTableElement")}} interface repr
 
 An {{domxref("HTMLTableCaptionElement")}} or `null`.
 
-This property can be assigned, which causes the existing first {{HTMLElement("caption")}} element child, if any, to be removed, and the given value, if it is not `null`, to be inserted as the first child. If the assigned value is not an {{domxref("HTMLTableCaptionElement")}} or `null`, a {{jsxref("TypeError")}} is thrown.
+This property can be assigned, which causes the existing first {{HTMLElement("caption")}} element child, if any, to be removed, and the given value, if it is not `null`, to be inserted as the first child. Therefore, setting `null` has the same effect as calling {{domxref("HTMLTableElement.deleteCaption", "deleteCaption()")}}. If the assigned value is not an {{domxref("HTMLTableCaptionElement")}} or `null`, a {{jsxref("TypeError")}} is thrown.
 
 ## Examples
 

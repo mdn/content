@@ -14,7 +14,7 @@ The **`tHead`** property of the {{domxref("HTMLTableElement")}} interface repres
 
 An {{domxref("HTMLTableSectionElement")}} (which is always a `thead`) or `null`.
 
-This property can be assigned, which causes the existing first {{HTMLElement("thead")}} element child, if any, to be removed, and the given value, if it is not `null`, to be inserted immediately before the first element child that's neither a {{HTMLElement("caption")}} nor a {{HTMLElement("colgroup")}}, or as the last child if there is no such element. If the assigned value is not an {{domxref("HTMLTableSectionElement")}} or `null`, a {{jsxref("TypeError")}} is thrown; otherwise, if it is not a {{HTMLElement("thead")}} element or `null`, a `HierarchyRequestError` {{domxref("DOMException")}} is thrown.
+This property can be assigned, which causes the existing first {{HTMLElement("thead")}} element child, if any, to be removed, and the given value, if it is not `null`, to be inserted immediately before the first element child that's neither a {{HTMLElement("caption")}} nor a {{HTMLElement("colgroup")}}, or as the last child if there is no such element. Therefore, setting `null` has the same effect as calling {{domxref("HTMLTableElement.deleteTHead", "deleteTHead()")}}. If the assigned value is not an {{domxref("HTMLTableSectionElement")}} or `null`, a {{jsxref("TypeError")}} is thrown; otherwise, if it is not a {{HTMLElement("thead")}} element or `null`, a `HierarchyRequestError` {{domxref("DOMException")}} is thrown.
 
 ## Examples
 

@@ -8,8 +8,7 @@ browser-compat: api.HTMLTableElement.deleteTHead
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLTableElement.deleteTHead()`** removes the
-{{HTMLElement("thead")}} element from a given {{HtmlElement("table")}}.
+The **`deleteTHead()`** method of the {{domxref("HTMLTableElement")}} interface removes the first {{HTMLElement("thead")}} element child from a given {{HTMLElement("table")}}, if any.
 
 ## Syntax
 
@@ -70,3 +69,9 @@ table.deleteTHead();
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("HTMLTableElement.createTHead()")}}
+- {{domxref("HTMLTableElement.deleteCaption()")}}
+- {{domxref("HTMLTableElement.deleteTFoot()")}}

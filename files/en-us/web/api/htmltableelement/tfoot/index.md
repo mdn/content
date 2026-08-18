@@ -14,7 +14,7 @@ The **`tFoot`** property of the {{domxref("HTMLTableElement")}} interface repres
 
 An {{domxref("HTMLTableSectionElement")}} (which is always a `tfoot`) or `null`.
 
-This property can be assigned, which causes the existing first {{HTMLElement("tfoot")}} element child, if any, to be removed, and the given value, if it is not `null`, to be inserted as the last child. If the assigned value is not an {{domxref("HTMLTableSectionElement")}} or `null`, a {{jsxref("TypeError")}} is thrown; otherwise, if it is not a {{HTMLElement("tfoot")}} element or `null`, a `HierarchyRequestError` {{domxref("DOMException")}} is thrown.
+This property can be assigned, which causes the existing first {{HTMLElement("tfoot")}} element child, if any, to be removed, and the given value, if it is not `null`, to be inserted as the last child. Therefore, setting `null` has the same effect as calling {{domxref("HTMLTableElement.deleteTFoot", "deleteTFoot()")}}. If the assigned value is not an {{domxref("HTMLTableSectionElement")}} or `null`, a {{jsxref("TypeError")}} is thrown; otherwise, if it is not a {{HTMLElement("tfoot")}} element or `null`, a `HierarchyRequestError` {{domxref("DOMException")}} is thrown.
 
 ## Examples
 
