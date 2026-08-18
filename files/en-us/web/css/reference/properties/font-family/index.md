@@ -134,6 +134,9 @@ font-family: "Gill Sans Extrabold", sans-serif;
           - : All glyphs have the same fixed width.
 
             For example: Fira Mono, DejaVu Sans Mono, Menlo, Consolas, Liberation Mono, Monaco, Lucida Console, monospace.
+            > [!NOTE]
+            > When `font-family` is set to the single keyword `monospace` and no `font-size` is set, browsers use the user's monospace font size preference, which is often smaller than the size used for proportional fonts. See [Monospace font size](#monospace_font_size) for details and how to control this.
+
 
         - `cursive`
           - : Glyphs in cursive fonts generally have either joining strokes or other cursive characteristics beyond those of italic typefaces. The glyphs are partially or completely connected, and the result looks more like handwritten pen or brush writing than printed letter work.
@@ -144,16 +147,6 @@ font-family: "Gill Sans Extrabold", sans-serif;
           - : Fantasy fonts are primarily decorative fonts that contain playful representations of characters.
 
             For example: Papyrus, Herculanum, Party LET, Curlz MT, Harrington, fantasy.
-
-        - `math`
-          - : This is for the particular stylistic concerns of representing mathematics: superscript and subscript, brackets that cross several lines, nesting expressions, and double struck glyphs with distinct meanings.
-        > [!NOTE]
-        > When `font-family` is set to the single keyword `monospace` and no `font-size` is set, browsers use the user's monospace font size preference, which is often smaller than the size used for proportional fonts. See [Monospace font size](#monospace_font_size) for details and how to control this.
-
-    - `cursive`
-      - : Glyphs in cursive fonts generally have either joining strokes or other cursive characteristics beyond those of italic typefaces. The glyphs are partially or completely connected, and the result looks more like handwritten pen or brush writing than printed letter work.
-
-            UA stylesheets may set `math { font-family: math }` so that the {{MathMLElement("math")}} element uses appropriate fonts by default.
 
         - `system-ui`
           - : Glyphs are taken from the default user interface font on a given platform. Because typographic traditions vary widely across the world, this generic is provided for typefaces that don't map cleanly into the other generics.
