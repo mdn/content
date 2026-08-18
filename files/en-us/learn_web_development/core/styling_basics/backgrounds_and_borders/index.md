@@ -381,7 +381,112 @@ Another option we have available for backgrounds is specifying how they scroll w
 - `fixed`: causes an element's background to be fixed to the viewport so that it doesn't scroll when the page or element content is scrolled. It will always remain in the same position on the screen.
 - `local`: fixes the background to the element it is set on, so when you scroll the element, the background scrolls with it.
 
-The {{cssxref("background-attachment")}} property only has an effect when there is content to scroll, so we've made a demo to demonstrate the differences between the three values — have a look at [background-attachment.html](https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html) (also [see the source code](https://github.com/mdn/learning-area/tree/main/css/styling-boxes/backgrounds) here).
+The {{cssxref("background-attachment")}} property only has an effect when there is content to scroll, so we've made a demo to demonstrate the differences between the three values:
+
+```html hidden live-sample___background-atachment
+<section>
+  <article class="scroll">
+    <p>
+      <code>background-attachment: scroll</code> causes the element's background
+      to be fixed to the page, so that it scrolls when the page is scrolled. If
+      the element content is scrolled, the background does not move.
+    </p>
+
+    <pre></pre>
+  </article>
+
+  <article class="fixed">
+    <p>
+      <code>background-attachment: fixed</code> causes an element's background
+      to be fixed to the viewport, so that it doesn't scroll when the page or
+      element content is scrolled. It will always remain in the same position on
+      the screen.
+    </p>
+
+    <pre></pre>
+  </article>
+
+  <article class="local">
+    <p>
+      <code>background-attachment: local</code> causes an element's background
+      to be fixed to the actual element itself. When the page is scrolled, the
+      element's background will move along with it only if the element does so.
+      When the element's content is scrolled, the background will scroll along
+      with it.
+    </p>
+
+    <pre></pre>
+  </article>
+</section>
+```
+
+```css hidden live-sample___background-atachment
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+body {
+  padding: 1em;
+}
+
+html {
+  background-color: yellow;
+  font-family: sans-serif;
+}
+
+body {
+  height: 2000px;
+}
+
+p {
+  padding: 10px;
+  color: white;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+section {
+  display: flex;
+  gap: 10px;
+}
+
+article {
+  flex: 1;
+  height: 300px;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url(https://mdn.github.io/shared-assets/images/examples/grapefruit-slice.jpg);
+  background-size: 400px 400px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding: 1%;
+  overflow: auto;
+}
+
+article pre {
+  height: 800px;
+}
+
+.fixed {
+  background-attachment: fixed;
+}
+
+.scroll {
+  background-attachment: scroll;
+}
+
+.local {
+  background-attachment: local;
+}
+```
+
+{{embedlivesample("background-attachment", "100%", 350)}}
+
+Try scrolling the whole of the embedded example and then the individual containers, and observe the differences in behavior of the container backgrounds.
 
 ## Using the background shorthand property
 
