@@ -209,7 +209,7 @@ We include four container {{htmlelement("div")}}s, each with a `class` of `box` 
 }
 ```
 
-We apply `display: flex` to all the boxes to make them into flex containers, then give them a `flex-wrap` value of `wrap balance` to make all their flex children wrap onto multiple lines in a balanced fashion.
+We apply `display: flex` to all the boxes to make them flex containers, then give them a `flex-wrap` value of `wrap balance` to make all their flex children wrap onto multiple, balanced lines.
 
 ```css live-sample___flex-line-count
 .box {
