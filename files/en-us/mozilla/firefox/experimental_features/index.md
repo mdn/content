@@ -463,20 +463,6 @@ The {{cssxref("progress")}} CSS function is now supported. This allows the user 
 - `layout.css.progress-function.enabled`
   - : Set to `true` to enable.
 
-### Updating transparency of a color with `alpha()`
-
-The {{cssxref("alpha")}} CSS function is now supported. This allows the user to update the alpha value (or transparency) of a color. ([Firefox bug 2047437](https://bugzil.la/2047437)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 155           | Yes                 |
-| Developer Edition | 154           | No                  |
-| Beta              | 154           | No                  |
-| Release           | 154           | No                  |
-
-- `layout.css.alpha-color-function.enabled`
-  - : Set to `true` to enable.
-
 ## SVG
 
 **No experimental features in this release cycle.**
