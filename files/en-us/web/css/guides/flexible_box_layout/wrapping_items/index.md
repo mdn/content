@@ -177,10 +177,7 @@ This example uses the same HTML as the previous example, and nearly the same CSS
 flex-wrap: wrap balance;
 ```
 
-This line could also have been written as just `flex-wrap: balance`. If `balance` is specified as the only keyword in the `flex-wrap` value, the other keyword defaults to `wrap`. We wrote it out explicitly so it is clearer what is going on.
-
-> [!NOTE]
-> Including the `balance` keyword with the `nowrap` value is invalid, and the declaration will be ignored.
+This line could also have been written as just `flex-wrap: balance`. If `balance` is specified as the only keyword in the `flex-wrap` value, the other keyword defaults to `wrap`. We wrote it out explicitly so it is clearer what is going on. Note that including the `balance` keyword with the `nowrap` value is invalid, and the declaration will be ignored.
 
 The updated rendering looks like so:
 
