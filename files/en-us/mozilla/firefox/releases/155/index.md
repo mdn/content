@@ -52,7 +52,7 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### APIs
 
-- The [`dual-source-blending` GPU feature](/en-US/docs/Web/API/GPUSupportedFeatures#available_features) is now supported.
+- The [`dual-source-blending` GPU feature](/en-US/docs/Web/API/GPUSupportedFeatures#available_features) is now supported on desktop.
   This allows the blend operations `src1`, `one-minus-src1`, `src1-alpha`, and `one-minus-src1-alpha` to be specified in the [`dstFactor`](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#dstfactor) and [`srcFactor`](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#srcfactor) properties of {{domxref("GPUDevice.createRenderPipeline", "createRenderPipeline()")}} and {{domxref("GPUDevice.createRenderPipelineAsync", "createRenderPipelineAsync()")}}.
   ([Firefox bug 1924328](https://bugzil.la/1924328)).
 
