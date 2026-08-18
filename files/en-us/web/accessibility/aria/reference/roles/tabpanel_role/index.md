@@ -39,6 +39,8 @@ Include [`tabindex="-1"`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabin
 
 Make sure to define styles for a `tabpanel` for when it receives focus, optimally using the CSS {{CSSXref(':focus')}} pseudo-class, so keyboard users know there was a change in focus and are aware of what content currently has focus.
 
+If a `tabpanel` has no content to show — for example because its data is still loading or the underlying record is empty — avoid leaving it as an empty container that can still receive focus, as keyboard and assistive technology users would land on it with nothing to read. Either remove the `tab` and its `tabpanel` from the interface when there is genuinely nothing to show, or keep the `tabpanel` and give it a short placeholder message such as "No data" so that focusing it exposes meaningful content.
+
 Carousels can be created using this tab pattern: A slide picker controls can be marked up as `tabs` in a `tablist` with the slide represented by a `tabpanel` element.
 
 ### Associated Roles and Attributes
