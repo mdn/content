@@ -102,7 +102,7 @@ With `wrap`, cross-start is the equivalent of [inline-start or block-start](/en-
 
 By default, when `wrap` or `wrap-reverse` is specified, each flex line is filled with flex items before items are wrapped onto the next line. This can result in an uneven distribution of items, with the last flex line composed of fewer items. If those items' {{cssxref("flex-grow")}} values are non-zero, the extra available space is distributed across these fewer items, making them much larger than the items on filled flex lines.
 
-The `balance` keyword, along with the {{cssxref("flex-line-count")}} property, can be used to distribute the items across lines in a more even manner.
+The `balance` keyword can be used to distribute the items across lines in a more even manner. Optionally, the {{cssxref("flex-line-count")}} property can be used to define the minimum number of lines across which the balanced items should be distributed.
 
 If `balance` is the only keyword specified, the other keyword defaults to `wrap`.
 
