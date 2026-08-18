@@ -5,10 +5,11 @@ slug: Web/API/Document/featurePolicy
 page-type: web-api-instance-property
 status:
   - experimental
+  - non-standard
 browser-compat: api.Document.featurePolicy
 ---
 
-{{APIRef("Feature Policy")}}{{SeeCompatTable}}
+{{APIRef("Feature Policy")}}{{SeeCompatTable}}{{non-standard_header}}
 
 The **`featurePolicy`** read-only property of the {{domxref("Document")}} interface returns the {{domxref("FeaturePolicy")}} interface which provides a simple API for inspecting the [Permissions Policies](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) applied to a specific document.
 

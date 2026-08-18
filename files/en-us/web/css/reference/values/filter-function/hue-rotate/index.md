@@ -1,5 +1,6 @@
 ---
-title: hue-rotate()
+title: "`hue-rotate()` CSS function"
+short-title: hue-rotate()
 slug: Web/CSS/Reference/Values/filter-function/hue-rotate
 page-type: css-function
 browser-compat: css.types.filter-function.hue-rotate

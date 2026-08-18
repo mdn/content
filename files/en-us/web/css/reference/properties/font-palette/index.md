@@ -1,5 +1,6 @@
 ---
-title: font-palette
+title: "`font-palette` CSS property"
+short-title: font-palette
 slug: Web/CSS/Reference/Properties/font-palette
 page-type: css-property
 browser-compat: css.properties.font-palette

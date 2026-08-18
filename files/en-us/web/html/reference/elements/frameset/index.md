@@ -1,5 +1,6 @@
 ---
-title: <frameset>
+title: "`<frameset>` HTML frameset element"
+short-title: <frameset>
 slug: Web/HTML/Reference/Elements/frameset
 page-type: html-element
 status:
@@ -19,9 +20,9 @@ The **`<frameset>`** [HTML](/en-US/docs/Web/HTML) element is used to contain {{H
 
 Like all other HTML elements, this element supports the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
-- `cols` {{Deprecated_Inline}}
+- `cols` {{Deprecated_Inline}} {{non-standard_inline}}
   - : This attribute specifies the number and size of horizontal spaces in a frameset.
-- `rows` {{Deprecated_Inline}}
+- `rows` {{Deprecated_Inline}} {{non-standard_inline}}
   - : This attribute specifies the number and size of vertical spaces in a frameset.
 
 ## Example

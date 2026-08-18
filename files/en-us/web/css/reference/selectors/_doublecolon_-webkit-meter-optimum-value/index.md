@@ -1,5 +1,6 @@
 ---
-title: ::-webkit-meter-optimum-value
+title: "`::-webkit-meter-optimum-value` CSS pseudo-element"
+short-title: ::-webkit-meter-optimum-value
 slug: Web/CSS/Reference/Selectors/::-webkit-meter-optimum-value
 page-type: css-pseudo-element
 status:

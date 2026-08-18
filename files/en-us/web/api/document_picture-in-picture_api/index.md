@@ -2,12 +2,10 @@
 title: Document Picture-in-Picture API
 slug: Web/API/Document_Picture-in-Picture_API
 page-type: web-api-overview
-status:
-  - experimental
 browser-compat: api.Window.documentPictureInPicture
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Document Picture-in-Picture API")}}{{securecontext_header}}
+{{DefaultAPISidebar("Document Picture-in-Picture API")}}{{securecontext_header}}
 
 The **Document Picture-in-Picture API** makes it possible to open an always-on-top window that can be populated with arbitrary HTML content — for example a video with custom controls or a set of streams showing the participants of a video conference call. It extends the earlier [Picture-in-Picture API for `<video>`](/en-US/docs/Web/API/Picture-in-Picture_API), which specifically enables an HTML {{htmlelement("video")}} element to be put into an always-on-top window.
 
@@ -42,6 +40,11 @@ The Picture-in-Picture window is similar to a blank same-origin window opened vi
 Apart from that, you can manipulate the Picture-in-Picture window's `Window` instance however you want, for example appending the content you want to display there onto its DOM, and copying stylesheets to it so that the appended content will be styled the same way as when it is in the main window. You can also close the Picture-in-Picture window (by clicking the browser-provided control, or by running {{domxref("Window.close()")}} on it), and then react to it closing using the standard [`pagehide`](/en-US/docs/Web/API/Window/pagehide_event). When it closes, you'll want to put the content it was showing back into the main app window.
 
 See [Using the Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Picture-in-Picture_API/Using) for a detailed usage guide.
+
+> [!NOTE]
+> You can run code when the always-on-top window is programmatically opened, using the {{domxref("DocumentPictureInPicture.enter_event", "enter")}} event. However, this event isn't fired when the browser itself (rather than your code) triggers moving content into the always-on-top window. This can occur, for example, due to the content being occluded, by the displayed tab being switched, or by the user selecting a "picture-in-picture" option from some relevant content's context menu or the browser chrome.
+>
+> To run code in response to such actions, set up a media session action handler using {{domxref("MediaSession.setActionHandler()")}} with a `type` of `enterpictureinpicture`.
 
 ## Interfaces
 

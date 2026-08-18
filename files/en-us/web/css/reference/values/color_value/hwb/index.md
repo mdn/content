@@ -1,5 +1,6 @@
 ---
-title: hwb()
+title: "`hwb()` CSS function"
+short-title: hwb()
 slug: Web/CSS/Reference/Values/color_value/hwb
 page-type: css-function
 browser-compat: css.types.color.hwb

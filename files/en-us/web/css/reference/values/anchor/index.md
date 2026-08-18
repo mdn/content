@@ -1,5 +1,6 @@
 ---
-title: anchor()
+title: "`anchor()` CSS function"
+short-title: anchor()
 slug: Web/CSS/Reference/Values/anchor
 page-type: css-function
 browser-compat: css.types.anchor
@@ -153,7 +154,7 @@ This example positions the right edge of the positioned element flush to the anc
 ```css
 .positionedElement {
   right: anchor(left);
-  margin-left: 10px;
+  margin-right: 10px;
 }
 ```
 

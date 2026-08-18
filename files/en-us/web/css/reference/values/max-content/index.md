@@ -1,5 +1,6 @@
 ---
-title: max-content
+title: "`max-content` CSS keyword"
+short-title: max-content
 slug: Web/CSS/Reference/Values/max-content
 page-type: css-keyword
 browser-compat: css.properties.width.max-content

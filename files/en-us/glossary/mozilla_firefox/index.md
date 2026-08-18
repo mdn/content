@@ -18,8 +18,8 @@ Firefox is available on multiple platforms and comes in different versions for d
 Use these links to download Firefox for different platforms, devices, or deployment needs:
 
 - [Desktop](https://www.firefox.com/en-US/)
-- [Android](https://www.firefox.com/en-US/browsers/mobile/)
-- [iOS](https://www.firefox.com/en-US/browsers/mobile/)
+- [Android](https://www.firefox.com/en-US/mobile/)
+- [iOS](https://www.firefox.com/en-US/mobile/)
 - [Firefox for Enterprise](https://www.firefox.com/en-US/browsers/enterprise/)
 
 ### Web developers

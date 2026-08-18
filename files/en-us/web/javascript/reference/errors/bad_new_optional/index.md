@@ -5,7 +5,7 @@ page-type: javascript-error
 sidebar: jssidebar
 ---
 
-The JavaScript exception "new keyword cannot be used with an optional chain" occurs when the constructor of a {{jsxref("Operators/new", "new")}} expression is an [optional chain](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining), or if there's an optional chain between the constructor and the parenthesized list of arguments.
+The JavaScript exception "new keyword cannot be used with an optional chain" occurs when the constructor of a {{jsxref("new")}} expression is an [optional chain](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining), or if there's an optional chain between the constructor and the parenthesized list of arguments.
 
 ## Message
 
@@ -62,6 +62,6 @@ Note that there's no needs to use `?.` on the `new` expression itself: `new a()?
 
 ## See also
 
-- {{jsxref("Operators/new", "new")}}
+- {{jsxref("new")}}
 - [Optional chaining (`?.`)](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 - [Original discussion on whether "optional new" should be allowed](https://github.com/tc39/proposal-optional-chaining/issues/22)

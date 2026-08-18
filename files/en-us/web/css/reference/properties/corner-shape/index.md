@@ -1,5 +1,6 @@
 ---
-title: corner-shape
+title: "`corner-shape` CSS property"
+short-title: corner-shape
 slug: Web/CSS/Reference/Properties/corner-shape
 page-type: css-shorthand-property
 status:
@@ -116,7 +117,7 @@ div {
 }
 ```
 
-### Properties that follow the corner shape
+### Properties that follow `corner-shape`
 
 The following properties all follow the shape of the corner when set on the container:
 
@@ -129,6 +130,12 @@ The following properties all follow the shape of the corner when set on the cont
 - {{cssxref("backdrop-filter")}}
 
 See [Demonstration of properties that follow the `corner-shape`](#demonstration_of_properties_that_follow_the_corner-shape) for some examples.
+
+### Interaction with `border-shape`
+
+The `corner-shape` property has no effect when the {{cssxref("border-shape")}} property is set on an element. This is because `border-shape` is incompatible with `border-radius`: when `border-shape` is set, any specified `border-radius` is ignored; `corner-shape` depends on `border-radius` and therefore has no effect either.
+
+If you want to use shaped corners in a `border-shape`, you will have to draw them directly as part of the shape.
 
 ## Formal definition
 
@@ -186,10 +193,6 @@ div {
     width: 100%;
     text-align: center;
     padding: 1rem 0;
-  }
-
-  body > * {
-    display: none;
   }
 }
 ```
@@ -259,22 +262,13 @@ div {
 }
 
 @supports not (corner-shape: scoop notch) {
-  body {
-    all: unset !important;
-  }
-
-  body::before {
+  :root::before {
     content: "Your browser does not support the 'corner-shape' property.";
     color: black;
-    background-color: #ffcd33;
+    background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
     padding: 1rem 0;
-  }
-
-  body > * {
-    display: none;
   }
 }
 ```
@@ -397,22 +391,12 @@ section {
 }
 
 @supports not (corner-shape: scoop) {
-  body {
-    all: unset !important;
-  }
-
-  body::before {
+  :root::before {
     content: "Your browser does not support the 'corner-shape' property.";
-    color: black;
-    background-color: #ffcd33;
+    background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
     padding: 1rem 0;
-  }
-
-  body > * {
-    display: none;
   }
 }
 ```
@@ -522,22 +506,12 @@ section {
 }
 
 @supports not (corner-shape: superellipse(0)) {
-  body {
-    all: unset !important;
-  }
-
-  body::before {
+  :root::before {
     content: "Your browser does not support the 'corner-shape' property.";
-    color: black;
-    background-color: #ffcd33;
+    background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
     padding: 1rem 0;
-  }
-
-  body > * {
-    display: none;
   }
 }
 ```
@@ -612,22 +586,12 @@ div {
 }
 
 @supports not (corner-shape: square) {
-  body {
-    all: unset !important;
-  }
-
-  body::before {
+  :root::before {
     content: "Your browser does not support the 'corner-shape' property.";
-    color: black;
-    background-color: #ffcd33;
+    background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
     padding: 1rem 0;
-  }
-
-  body > * {
-    display: none;
   }
 }
 ```
@@ -670,7 +634,8 @@ The rendered result looks like this:
 
 ## See also
 
-- {{Cssxref("border-radius")}}
+- {{cssxref("border-radius")}}
+- {{cssxref("border-shape")}}
 - [CSS borders and box decorations](/en-US/docs/Web/CSS/Guides/Borders_and_box_decorations) module
 - [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module

@@ -5,10 +5,11 @@ slug: Web/API/CSSPrimitiveValue/setFloatValue
 page-type: web-api-instance-method
 status:
   - deprecated
+  - non-standard
 browser-compat: api.CSSPrimitiveValue.setFloatValue
 ---
 
-{{APIRef("CSSOM")}}{{deprecated_header}}
+{{APIRef("CSSOM")}}{{deprecated_header}}{{non-standard_header}}
 
 The **`setFloatValue()`** method of the
 {{domxref("CSSPrimitiveValue")}} interface is used to set a float value. If the property

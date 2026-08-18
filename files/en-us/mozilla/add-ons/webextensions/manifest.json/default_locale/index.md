@@ -15,7 +15,7 @@ sidebar: addonsidebar
     <tr>
       <th scope="row">Mandatory</th>
       <td>
-        Contingent: must be present if the _locales subdirectory is present,
+        Contingent: must be present if the <code>_locales</code> subdirectory is present,
         must be absent otherwise.
       </td>
     </tr>
@@ -26,9 +26,9 @@ sidebar: addonsidebar
   </tbody>
 </table>
 
-This key must be present if the extension contains the \_locales directory, and must be absent otherwise. It identifies a subdirectory of \_locales, and this subdirectory will be used to find the default strings for your extension.
+This key must be present if the extension contains the `\_locales` directory, and must be absent otherwise. It identifies a subdirectory of `\_locales` where the i18n system finds the extension's default localization strings.
 
-See [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization).
+See [Internationalization](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization) for more information.
 
 ## Example
 

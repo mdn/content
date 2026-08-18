@@ -1,5 +1,6 @@
 ---
-title: overflow-block
+title: "`overflow-block` CSS media feature"
+short-title: overflow-block
 slug: Web/CSS/Reference/At-rules/@media/overflow-block
 page-type: css-media-feature
 browser-compat: css.at-rules.media.overflow-block

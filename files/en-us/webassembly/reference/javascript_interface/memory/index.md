@@ -91,6 +91,19 @@ const memory = new WebAssembly.Memory({
 
 This memory's `buffer` property will return a {{jsxref("SharedArrayBuffer")}}.
 
+### Using a 64-bit address
+
+The following snippet creates a new WebAssembly Memory instance with a 64-bit address type.
+The `initial` and `maximum` values must be {{jsxref("BigInt")}} values:
+
+```js
+const memory = new WebAssembly.Memory({
+  address: "i64",
+  initial: 1n,
+  maximum: 10n,
+});
+```
+
 ## Specifications
 
 {{Specifications}}

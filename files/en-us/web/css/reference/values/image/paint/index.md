@@ -1,5 +1,6 @@
 ---
-title: paint()
+title: "`paint()` CSS function"
+short-title: paint()
 slug: Web/CSS/Reference/Values/image/paint
 page-type: css-function
 browser-compat: css.types.image.paint

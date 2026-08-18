@@ -1,5 +1,6 @@
 ---
-title: max-height
+title: "`max-height` CSS property"
+short-title: max-height
 slug: Web/CSS/Reference/Properties/max-height
 page-type: css-property
 browser-compat: css.properties.max-height

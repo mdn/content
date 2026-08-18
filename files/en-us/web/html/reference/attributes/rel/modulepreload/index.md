@@ -1,5 +1,6 @@
 ---
-title: rel="modulepreload"
+title: '`rel="modulepreload"` HTML attribute value'
+short-title: modulepreload
 slug: Web/HTML/Reference/Attributes/rel/modulepreload
 page-type: html-attribute-value
 browser-compat: html.elements.link.rel.modulepreload
@@ -21,7 +22,7 @@ If `crossorigin` is set to [`anonymous`](/en-US/docs/Web/HTML/Reference/Attribut
 If `crossorigin` is set to [`use-credentials`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin#use-credentials) then the credentials mode is [`include`](/en-US/docs/Web/API/Request/credentials#include), and user credentials for both single- and cross-origin requests.
 
 The [`as`](/en-US/docs/Web/HTML/Reference/Elements/link#as) attribute is optional for links with `rel="modulepreload"`, and defaults to `"script"`.
-It can be set to `"script"`, `"style"`, `"json"`, or any script-like destination, such as `"audioworklet"`, `"paintworklet"`, `"serviceworker"`, `"sharedworker"`, or `"worker"`.
+It can be set to `"script"`, `"style"`, `"json"`, `"text"`, or any script-like destination, such as `"audioworklet"`, `"paintworklet"`, `"serviceworker"`, `"sharedworker"`, or `"worker"`. The full set of allowed values is defined in the HTML spec's [module preload destination](https://html.spec.whatwg.org/multipage/links.html#module-preload-destination) mapping. For the list of script-like destinations, refer to the [Fetch spec](https://fetch.spec.whatwg.org/#request-destination-script-like).
 An [`Event`](/en-US/docs/Web/API/Event/Event) named "error" is fired on the element if any other destination is used.
 
 A browser _may_ additionally also choose to automatically fetch any dependencies of the module resource.

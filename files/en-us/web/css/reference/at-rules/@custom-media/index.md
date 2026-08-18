@@ -1,5 +1,6 @@
 ---
-title: "@custom-media"
+title: "`@custom-media` CSS at-rule"
+short-title: "@custom-media"
 slug: Web/CSS/Reference/At-rules/@custom-media
 page-type: css-at-rule
 status:
@@ -58,7 +59,7 @@ Because a `@custom-media` value is just a normal `<media-query-list>`, you can c
 The `not` operator negates an entire media condition. This is useful when you want a rule to apply only when a specific condition is `false`.
 
 ```css
-@custom-media --no-script not (script);
+@custom-media --no-script not (scripting);
 
 @media (--no-script) {
 }

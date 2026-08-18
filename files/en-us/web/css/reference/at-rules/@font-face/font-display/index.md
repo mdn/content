@@ -1,5 +1,6 @@
 ---
-title: font-display
+title: "`font-display` CSS at-rule descriptor"
+short-title: font-display
 slug: Web/CSS/Reference/At-rules/@font-face/font-display
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.font-display

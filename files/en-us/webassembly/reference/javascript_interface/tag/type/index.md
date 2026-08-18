@@ -6,7 +6,7 @@ browser-compat: webassembly.api.Tag.type
 sidebar: webassemblysidebar
 ---
 
-The **`type()`** prototype method of the [`Tag`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag) object can be used to get the sequence of data types associated with the tag.
+The **`type()`** method of the [`Tag`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag) object can be used to get the sequence of data types associated with the tag.
 
 ## Syntax
 
@@ -26,17 +26,19 @@ This is a copy of the `type` object that was originally passed into the [`Tag()`
 
 ## Examples
 
-This code snippet creates a tag defining two data types and then exports them using `type()`.
-The result is printed to the console:
+This code snippet creates a tag defining two data types and then retrieves them using `type()`:
 
 ```js
 const tag = new WebAssembly.Tag({ parameters: ["i32", "i64"] });
 console.log(tag.type());
+```
 
-// Console output:
-// Object { parameters: (2) […] }
-//   parameters: Array [ "i32", "i64" ]
-//   <prototype>: Object { … }
+The object logged to the console will look like so:
+
+```json
+{
+  "parameters": ["i32", "i64"]
+}
 ```
 
 ## Specifications

@@ -1,5 +1,6 @@
 ---
-title: image-resolution
+title: "`image-resolution` CSS property"
+short-title: image-resolution
 slug: Web/CSS/Reference/Properties/image-resolution
 page-type: css-property
 status:
@@ -31,6 +32,8 @@ image-resolution: unset;
 ```
 
 ### Values
+
+This property is specified as one or more space-separated values from the following list:
 
 - {{cssxref("resolution")}}
   - : Specifies the intrinsic resolution explicitly.

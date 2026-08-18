@@ -135,7 +135,7 @@ try {
     console.error("Timeout: It took more than 5 seconds to get the result!");
   } else if (err.name === "AbortError") {
     console.error(
-      "Fetch aborted by user action (browser stop button, closing tab, etc.",
+      "Fetch aborted by user action (browser stop button, closing tab, etc.)",
     );
   } else {
     // A network error, or some other problem.

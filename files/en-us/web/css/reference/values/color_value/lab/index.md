@@ -1,5 +1,6 @@
 ---
-title: lab()
+title: "`lab()` CSS function"
+short-title: lab()
 slug: Web/CSS/Reference/Values/color_value/lab
 page-type: css-function
 browser-compat: css.types.color.lab

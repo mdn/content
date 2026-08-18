@@ -1,5 +1,6 @@
 ---
-title: border-image
+title: "`border-image` CSS property"
+short-title: border-image
 slug: Web/CSS/Reference/Properties/border-image
 page-type: css-shorthand-property
 browser-compat: css.properties.border-image
@@ -68,6 +69,8 @@ This property is a shorthand for the following CSS properties:
 - {{cssxref("border-image-slice")}}
 - {{cssxref("border-image-source")}}
 - {{cssxref("border-image-width")}}
+
+This shorthand property is reset, with all the longhand properties set to their initial values, by the CSS {{cssxref("border")}} shorthand property.
 
 ## Syntax
 

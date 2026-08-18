@@ -3,7 +3,7 @@ title: intercept
 slug: Web/SVG/Reference/Attribute/intercept
 page-type: svg-attribute
 browser-compat: svg.elements.feFuncR
-spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomponenttransfer-intercept
+spec-urls: https://drafts.csswg.org/filter-effects-1/#element-attrdef-fecomponenttransfer-intercept
 sidebar: svgref
 ---
 

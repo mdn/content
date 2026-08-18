@@ -1,5 +1,6 @@
 ---
-title: Unknown method
+title: "`unknown method` error code"
+short-title: unknown method
 slug: Web/WebDriver/Reference/Errors/UnknownMethod
 page-type: webdriver-error
 sidebar: webdriver

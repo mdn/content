@@ -74,7 +74,7 @@ No notable changes.
 ## Changes for add-on developers
 
 - {{WebExtAPIRef("browsingData.removeLocalStorage")}} and {{WebExtAPIRef("browsingData.remove")}} (when `localStorage` is set in {{WebExtAPIRef("browsingData.DataTypeSet")}}) now delete objects from [`sessionStorage`](/en-US/docs/Web/API/Window/sessionStorage). ([Firefox bug 1886894](https://bugzil.la/1886894))
-- The {{WebExtAPIRef("proxy.onRequest")}} API adds support for MASQUE proxies (proxy tunnel over QUIC) in the {{WebExtAPIRef("proxy.ProxyInfo")}} return type. ([Firefox bug 1988988](https://bugzil.la/1988988) and Firefox bug 1998894](https://bugzil.la/1998894))
+- The {{WebExtAPIRef("proxy.onRequest")}} API adds support for MASQUE proxies (proxy tunnel over QUIC) in the {{WebExtAPIRef("proxy.ProxyInfo")}} return type. ([Firefox bug 1988988](https://bugzil.la/1988988) and [Firefox bug 1998894](https://bugzil.la/1998894))
 
 ## Experimental web features
 
@@ -95,7 +95,3 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **Relative control points in CSS `shape()` curve commands**: `layout.css.basic-shape-shape.enabled`
 
   You can use [`<relative-control-point>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#relative-control-point) values when specifying a [`<curve-command>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#curve-command) or [`<smooth-command>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#smooth-command) in a CSS `shape()` function. These values let you specify control points that are positioned relative to the start or end point of the current command, or relative to the origin (top-left) of the container the shape is being drawn inside.
-
-- **Custom media queries**: `layout.css.custom-media.enabled`
-
-  The [`@custom-media`](/en-US/docs/Web/CSS/Reference/At-rules/@custom-media) CSS at-rule defines aliases for long or complex media queries. Instead of repeating the same hardcoded `<media-query-list>` in multiple `@media` at-rules, it can be defined once in a `@custom-media` at-rule and referenced throughout the stylesheet whenever needed. ([Firefox bug 1744292](https://bugzil.la/1744292)).

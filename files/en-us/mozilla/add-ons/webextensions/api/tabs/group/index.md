@@ -6,7 +6,7 @@ browser-compat: webextensions.api.tabs.group
 sidebar: addonsidebar
 ---
 
-Adds one or more tabs to a group or, if no group is specified, adds the tabs to a new group. All tabs in a tab group must be adjacent, and tabs are moved if needed. Any pinned tabs are unpinned before grouping.
+Adds one or more tabs to a group or, if no group is specified, adds the tabs to a new group. All tabs in a tab group must be adjacent, and tabs are moved if needed. A [split view](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API#working_with_tab_split_views) is added to the group if either of its tabs is specified. Any pinned tabs are unpinned before grouping.
 
 If a call moves tabs out of tab groups and any of those tab groups become empty, the empty tab groups are removed.
 

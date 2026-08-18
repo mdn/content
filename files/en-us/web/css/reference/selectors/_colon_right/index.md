@@ -1,5 +1,6 @@
 ---
-title: :right
+title: "`:right` CSS pseudo-class"
+short-title: :right
 slug: Web/CSS/Reference/Selectors/:right
 page-type: css-pseudo-class
 browser-compat: css.selectors.right

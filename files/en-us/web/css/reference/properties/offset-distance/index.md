@@ -1,5 +1,6 @@
 ---
-title: offset-distance
+title: "`offset-distance` CSS property"
+short-title: offset-distance
 slug: Web/CSS/Reference/Properties/offset-distance
 page-type: css-property
 browser-compat: css.properties.offset-distance

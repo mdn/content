@@ -1,5 +1,6 @@
 ---
-title: <content-position>
+title: "`<content-position>` CSS type"
+short-title: <content-position>
 slug: Web/CSS/Reference/Values/content-position
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-align/#typedef-content-position

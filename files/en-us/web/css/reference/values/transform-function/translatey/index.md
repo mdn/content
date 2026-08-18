@@ -1,5 +1,6 @@
 ---
-title: translateY()
+title: "`translateY()` CSS function"
+short-title: translateY()
 slug: Web/CSS/Reference/Values/transform-function/translateY
 page-type: css-function
 browser-compat: css.types.transform-function.translateY

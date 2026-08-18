@@ -1,5 +1,6 @@
 ---
-title: <absolute-size>
+title: "`<absolute-size>` CSS type"
+short-title: <absolute-size>
 slug: Web/CSS/Reference/Values/absolute-size
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-fonts/#typedef-absolute-size

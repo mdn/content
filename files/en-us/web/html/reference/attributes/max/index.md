@@ -1,5 +1,5 @@
 ---
-title: "HTML attribute: max"
+title: "`max` HTML attribute"
 short-title: max
 slug: Web/HTML/Reference/Attributes/max
 page-type: html-attribute

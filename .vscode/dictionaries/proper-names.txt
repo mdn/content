@@ -6,16 +6,19 @@ Addy
 Adham
 Adhemar
 Adilah
+Aisyah
 Akhgari
 alastairc
 Aldous
 Alexa
 Alman
+Amara
 Amit
 Amorim
 Amstelvar
 Amélie
 Anand
+Ananya
 ANDI
 Andreas
 Andreessen
@@ -27,12 +30,14 @@ Ansyari
 Apapou
 Aptana
 Araneae
+Arjun
 Arkanoid
 Artur
 Arun
 Ashlyn
 Ashok
 Audiocogs
+Audre
 Austerstræti
 Autonavi
 Avenir
@@ -59,6 +64,7 @@ Bitwarden
 Bixa
 Blackman
 Blackmoon
+Blacktooth
 Blankers
 Bloggs
 Bobtown
@@ -93,6 +99,7 @@ Cassini
 Caterina
 caugner
 cdxgen
+Chaiyaporn
 Chakra
 Chamakh
 Chimero
@@ -140,6 +147,7 @@ Dedreux
 Deepti
 Deke
 Delaville
+Demir
 Denicola
 DeSandro
 Desaulniers
@@ -185,6 +193,7 @@ Elchi
 Elfie
 Elliotte
 Elly
+Elrond
 Emscripten
 Endtest
 Ensatina
@@ -196,6 +205,7 @@ Erba
 ERCIM
 ericwbailey
 Esben
+Evaristo
 Eventbrite
 Exljbris
 Exocoetidae
@@ -204,6 +214,7 @@ Fairchild
 FDCP
 Firefogg
 Firesheep
+Firestore
 Firmata
 Firtman
 Flagfox
@@ -227,6 +238,7 @@ Giorgio
 Golightly
 Googlebot
 Gordo
+Gorman
 Grahl
 Grande-Dixence
 Graywolf9
@@ -234,12 +246,15 @@ Grigsby
 Grissom
 Groff
 Grosso
+Gruber
 GSAP
 Guildford
+Haddad
 Haile
 Hamish
 hamishwillee
 Haml
+Hassan
 Haverbeke
 Headsight
 Hemiptera
@@ -249,6 +264,8 @@ Hickson
 Hidde
 Highrise
 Hildy
+Hiroshi
+Hitman
 hmatrjp
 Hobday
 hochan
@@ -275,7 +292,9 @@ Ionos
 Irena
 ITCSS
 ITEC
+Ivanova
 Jada
+Jakub
 Jalkhov
 jamiedoe
 Janc
@@ -304,6 +323,7 @@ Kadlec
 Kahlo
 Kaku
 Kang
+Kanya
 Kaply
 Karmadrome
 KASI
@@ -316,6 +336,7 @@ Kerckhoffs
 Kersee
 Kesteren
 Khronos
+Kimberlé
 Kinlan
 Kinnon
 kirsty
@@ -332,6 +353,7 @@ Koen
 Kokoro
 Konva
 Kravets
+Kwame
 Kyouko
 Kütük
 Laravel
@@ -349,11 +371,14 @@ Leyla
 Lianghekou
 Libera.Chat
 Libertinus
+librsvg
 Lighttpd
+LINDDUN
 Lindenberg
 Lindesay
 Liskov
 Lorc
+Lorde
 Loycom
 Luxon
 Léonie
@@ -369,8 +394,10 @@ Mapquest
 mapsort
 marcelozarate
 Marcotte
+Mariam
 Marijn
 Masayuki
+Mateo
 Mathoid
 Matomo
 Matroska
@@ -382,8 +409,10 @@ mcdetect
 McLellan
 McNally
 McVerry
+Mediabunny
 Megalosaurus
 Menard
+Mensah
 Mercure
 Merkle
 mfuji
@@ -431,6 +460,7 @@ Neocities
 Nixpacks
 Noida
 Norah
+Novak
 Nurek
 Nuxt
 Nyman
@@ -443,6 +473,7 @@ Odelola
 Odenwald
 Oeschger
 Oikarinen
+Okafor
 Oleksii
 Oliveira
 olliej
@@ -451,7 +482,6 @@ Orendorff
 Osmani
 Owlman
 Paavo
-Paciello
 Pacman
 Pagella
 Paletton
@@ -462,6 +492,7 @@ Pereira
 Perlin
 Petrov
 Phong
+Picos
 Picryl
 Pinterest
 Pissuti
@@ -472,9 +503,11 @@ Platane
 Pogany
 Poki
 Polycom
+Popescu
 potappo
 Powerbook
 Powermapper
+Prasetyo
 Prateek
 Presskit
 Prisca
@@ -486,17 +519,21 @@ Quora
 rachelandrew
 Radev
 Radimir
+Rahman
 Ramesh
 Rapp
 Rauschmayer
 Realtek
 Recep
+Redbeard
 Reis
 Rekapi
 Remy
 Resian
 Resig
+resvg
 Rigby
+Rivendell
 Robison
 Rocher
 Rohini
@@ -512,6 +549,7 @@ Ryuno
 Sagat
 Saionaro
 Sakura
+Salah
 Salame
 Salva
 Sandrina
@@ -574,6 +612,7 @@ Symfony
 Szewinska
 Tabliss
 Tamaran
+Tanaka
 Tanx
 Techopedia
 Tegra
@@ -593,6 +632,7 @@ Tonisha
 Transcribear
 Transfonter
 Transformiix
+Treanor
 Trekhleb
 Trint
 Trish
@@ -601,6 +641,7 @@ Trustwave
 twgl
 Usain
 usrsctp
+Valentina
 Vallejoanderson
 Vanderheiden
 Vandermonde
@@ -611,6 +652,7 @@ Verou
 Vieno
 Vint
 Visio
+Vispero
 Voikko
 Volkman
 Vorbis
@@ -626,6 +668,7 @@ Webhint
 Webopedia
 webref
 Weinstein
+Westover
 Weyl
 Widevine
 Wikibooks
@@ -655,8 +698,10 @@ Yoshi
 Yousafzai
 Yslow
 YubiKey
+YubiKeys
 Yuki
 Yura
+Yusuf
 Zakas
 Zakirt
 Zangief
@@ -671,6 +716,7 @@ Zheng
 Zilla
 Zinsser
 Zosia
+Zoya
 zxcvbn
 Émanuel
 Österreich

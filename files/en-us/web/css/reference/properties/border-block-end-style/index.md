@@ -1,5 +1,6 @@
 ---
-title: border-block-end-style
+title: "`border-block-end-style` CSS property"
+short-title: border-block-end-style
 slug: Web/CSS/Reference/Properties/border-block-end-style
 page-type: css-property
 browser-compat: css.properties.border-block-end-style
@@ -53,7 +54,7 @@ writing-mode: vertical-lr;
 ## Syntax
 
 ```css
-/* <'border-style'> values */
+/* Keyword values */
 border-block-end-style: dashed;
 border-block-end-style: dotted;
 border-block-end-style: groove;
@@ -70,7 +71,7 @@ Related properties are {{cssxref("border-block-start-style")}}, {{cssxref("borde
 
 ### Values
 
-- `<'border-style'>`
+- {{cssxref("&lt;line-style&gt;")}}
   - : The line style of the border. See {{ cssxref("border-style") }}.
 
 ## Formal definition
