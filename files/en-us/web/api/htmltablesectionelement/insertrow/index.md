@@ -10,7 +10,7 @@ browser-compat: api.HTMLTableSectionElement.insertRow
 
 The **`insertRow()`** method of the {{domxref("HTMLTableSectionElement")}} interface creates a {{HTMLElement("tr")}} element, inserts it at the specified child position in the given table sectioning element ({{HTMLElement("thead")}}, {{HTMLElement("tfoot")}}, or {{HTMLElement("tbody")}}), and returns it.
 
-This method is a convenience method for DOM methods such as {{domxref("Document.createElement()")}} followed by {{domxref("Node.appendChild()")}}.
+This method creates and inserts the element directly, without requiring separate calls to methods such as {{domxref("Document.createElement()")}}, {{domxref("Node.insertBefore()")}}, and {{domxref("Node.appendChild()")}}.
 
 ## Syntax
 

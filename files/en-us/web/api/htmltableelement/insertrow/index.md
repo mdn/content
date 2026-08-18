@@ -10,7 +10,7 @@ browser-compat: api.HTMLTableElement.insertRow
 
 The **`insertRow()`** method of the {{domxref("HTMLTableElement")}} interface creates a {{HTMLElement("tr")}} element, inserts it at the specified position in the {{domxref("HTMLTableElement.rows", "rows")}} collection, and returns it. If the `rows` collection is empty and the table also has no {{HTMLElement("tbody")}} elements, a `<tbody>` element is first created and inserted.
 
-This method is a convenience method for DOM methods such as {{domxref("Document.createElement()")}} followed by {{domxref("Node.appendChild()")}}.
+This method creates and inserts the element directly, without requiring separate calls to methods such as {{domxref("Document.createElement()")}}, {{domxref("Node.insertBefore()")}}, and {{domxref("Node.appendChild()")}}.
 
 To explicitly insert a row into a specific section, use {{domxref("HTMLTableSectionElement.insertRow()")}}.
 
@@ -26,7 +26,7 @@ insertRow(index)
 - `index` {{optional_inline}}
   - : The index of the new row in the {{domxref("HTMLTableElement.rows", "rows")}} collection. If `index` is `-1` or equal to the number of rows, the row is appended as the last row. If `index` is omitted, it defaults to `-1`.
 
-    If `rows` is empty, the new row is appended to the last `<tbody>` element (one is created if there's none). Otherwise, the new row is inserted immediately before the row at `index`, or immediately after the last row if it's to become the last row. The new row is inserted to the same parent as the reference row, so it could be inserted to any table sectioning element (`<thead>`, `<tbody>`, `<tfoot>`).
+    If `rows` is empty, the new row is appended to the last `<tbody>` element (one is created if there's none). Otherwise, the new row is inserted immediately before the row at `index`, or appended to the parent of the last row if the new row is to become the last row. The new row is inserted into the same parent as the reference row, so it can be inserted directly into the `<table>` or into any table sectioning element (`<thead>`, `<tbody>`, or `<tfoot>`).
 
 ### Return value
 

@@ -8,7 +8,7 @@ browser-compat: api.HTMLTableElement.deleteRow
 
 {{APIRef("HTML DOM")}}
 
-The **`deleteRow()`** method of the {{domxref("HTMLTableElement")}} interface removes a specific row ({{HTMLElement("tr")}}) from a given {{HtmlElement("table")}}.
+The **`deleteRow()`** method of the {{domxref("HTMLTableElement")}} interface removes a specific row ({{HTMLElement("tr")}}) from a given {{HTMLElement("table")}}.
 
 ## Syntax
 

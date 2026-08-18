@@ -10,7 +10,7 @@ browser-compat: api.HTMLTableElement.createTBody
 
 The **`createTBody()`** method of the {{domxref("HTMLTableElement")}} interface creates a {{HTMLElement("tbody")}} element, inserts it immediately after the last {{HTMLElement("tbody")}} element child of the given {{HTMLElement("table")}}, or as the last child if there is no such element, and returns it.
 
-This method is a convenience method for DOM methods such as {{domxref("Document.createElement()")}} followed by {{domxref("Node.appendChild()")}}.
+This method creates and inserts the element directly, without requiring separate calls to methods such as {{domxref("Document.createElement()")}}, {{domxref("Node.insertBefore()")}}, and {{domxref("Node.appendChild()")}}.
 
 > [!NOTE]
 > Unlike {{domxref("HTMLTableElement.createTHead()")}} and {{domxref("HTMLTableElement.createTFoot()")}}, `createTBody()` always creates a new `<tbody>` element, even if the table already contains one or more bodies.

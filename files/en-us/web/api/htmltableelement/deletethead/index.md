@@ -54,7 +54,7 @@ This example uses JavaScript to delete a table's header.
 ### JavaScript
 
 ```js
-let table = document.querySelector("table");
+const table = document.querySelector("table");
 table.deleteTHead();
 ```
 
