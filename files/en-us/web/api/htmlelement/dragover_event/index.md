@@ -8,7 +8,7 @@ browser-compat: api.HTMLElement.dragover_event
 
 {{APIRef("HTML Drag and Drop API")}}
 
-The `dragover` event is fired when an element or text selection is being dragged over a valid drop target (every few hundred milliseconds).
+The `dragover` event is fired when an element or text selection is being dragged over a valid drop target. Per the [HTML specification](https://html.spec.whatwg.org/multipage/dnd.html#drag-and-drop-processing-model), it fires every 350 ms (±200 ms) for as long as the drag is ongoing.
 
 This event is cancelable and may bubble up to the {{domxref("Document")}} and {{domxref("Window")}} objects.
 
