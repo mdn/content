@@ -37,6 +37,7 @@ Arun
 Ashlyn
 Ashok
 Audiocogs
+Audre
 Austerstræti
 Autonavi
 Avenir
@@ -63,6 +64,7 @@ Bitwarden
 Bixa
 Blackman
 Blackmoon
+Blacktooth
 Blankers
 Bloggs
 Bobtown
@@ -191,6 +193,7 @@ Elchi
 Elfie
 Elliotte
 Elly
+Elrond
 Emscripten
 Endtest
 Ensatina
@@ -202,6 +205,7 @@ Erba
 ERCIM
 ericwbailey
 Esben
+Evaristo
 Eventbrite
 Exljbris
 Exocoetidae
@@ -210,6 +214,7 @@ Fairchild
 FDCP
 Firefogg
 Firesheep
+Firestore
 Firmata
 Firtman
 Flagfox
@@ -331,6 +336,7 @@ Kerckhoffs
 Kersee
 Kesteren
 Khronos
+Kimberlé
 Kinlan
 Kinnon
 kirsty
@@ -365,12 +371,14 @@ Leyla
 Lianghekou
 Libera.Chat
 Libertinus
+librsvg
 Lighttpd
 LINDDUN
 Lindenberg
 Lindesay
 Liskov
 Lorc
+Lorde
 Loycom
 Luxon
 Léonie
@@ -517,12 +525,15 @@ Rapp
 Rauschmayer
 Realtek
 Recep
+Redbeard
 Reis
 Rekapi
 Remy
 Resian
 Resig
+resvg
 Rigby
+Rivendell
 Robison
 Rocher
 Rohini
@@ -657,6 +668,7 @@ Webhint
 Webopedia
 webref
 Weinstein
+Westover
 Weyl
 Widevine
 Wikibooks
@@ -704,6 +716,7 @@ Zheng
 Zilla
 Zinsser
 Zosia
+Zoya
 zxcvbn
 Émanuel
 Österreich

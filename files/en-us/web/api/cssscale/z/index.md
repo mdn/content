@@ -6,9 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.CSSScale.z
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`z`** property of the {{domxref("CSSScale")}} interface representing the z-component of the translating vector.
+The **`z`** property of the {{domxref("CSSScale")}} interface represents the z-component of the translating vector.
 A positive value moves the element towards the viewer, and a negative value farther away.
 
 If this value is present, then the transform is a 3D transform and the `is2D` property will be set to false.

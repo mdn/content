@@ -6,9 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.CSSMathMax.values
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The CSSMathMax.values read-only property of the {{domxref("CSSMathMax")}} interface returns a {{domxref('CSSNumericArray')}} object which contains one or more {{domxref('CSSNumericValue')}} objects.
+The **`values`** read-only property of the {{domxref("CSSMathMax")}} interface returns a {{domxref("CSSNumericArray")}} containing the {{domxref("CSSNumericValue")}} objects being compared to find the maximum.
 
 ## Value
 
@@ -16,7 +16,32 @@ A {{domxref('CSSNumericArray')}}.
 
 ## Examples
 
-To do
+### Basic usage
+
+The following code creates a `CSSMathMax` object and logs its `values` and length.
+
+```js
+const max = new CSSMathMax(CSS.px(10), CSS.em(5), CSS.percent(50));
+
+console.log(max.values);
+// CSSNumericArray {0: CSSUnitValue, 1: CSSUnitValue, 2: CSSUnitValue, length: 3}
+console.log(max.values.length); // 3
+```
+
+We then iterate over the `values`, logging their type, value, unit, and stringified text.
+Each of these matches the {{domxref("CSSNumericValue")}} objects that were passed into the constructor (or the operands of the CSS {{cssxref("max", "max()")}} function it represents), in the same order.
+
+```js
+for (const value of max.values) {
+  console.log(
+    `${value.constructor.name}: ${value.value} ${value.unit} (${value})`,
+  );
+}
+
+// CSSUnitValue: 10 px (10px)
+// CSSUnitValue: 5 em (5em)
+// CSSUnitValue: 50 percent (50%)
+```
 
 ## Specifications
 

@@ -11,7 +11,7 @@ browser-compat: api.CSSFontFeatureValuesMap
 
 The **`CSSFontFeatureValuesMap`** interface of the [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) represents an iterable and read-only set of the [CSSFontFeatureValuesRule](/en-US/docs/Web/API/CSSFontFeatureValuesRule) properties, such as [`swash`](/en-US/docs/Web/API/CSSFontFeatureValuesRule/swash), [`annotation`](/en-US/docs/Web/API/CSSFontFeatureValuesRule/annotation), [`ornaments`](/en-US/docs/Web/API/CSSFontFeatureValuesRule/ornaments), etc.
 
-An `CSSFontFeatureValuesMap` instance is a read-only [Map-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#map-like_browser_apis), in which each key is the user-defined name used to reference a font feature, and the corresponding value is the index for the font feature within the font.
+A `CSSFontFeatureValuesMap` instance is a read-only [Map-like object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map#map-like_browser_apis), in which each key is the user-defined name used to reference a font feature, and the corresponding value is the index for the font feature within the font.
 
 ## Instance properties
 

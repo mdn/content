@@ -3,10 +3,12 @@ title: "RTCIceCandidatePair: remote property"
 short-title: remote
 slug: Web/API/RTCIceCandidatePair/remote
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.RTCIceCandidatePair.remote
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{SeeCompatTable}}
 
 The **`remote`** property of the {{domxref("RTCIceCandidatePair")}} interface specifies the {{domxref("RTCIceCandidate")}} that describes the configuration of the remote end of a viable WebRTC connection.
 

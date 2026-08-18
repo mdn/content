@@ -6,7 +6,7 @@ browser-compat: svg.elements.switch
 sidebar: svgref
 ---
 
-The **`<switch>`** [SVG](/en-US/docs/Web/SVG) element evaluates any {{SVGAttr("requiredFeatures")}}, {{SVGAttr("requiredExtensions")}} and {{SVGAttr("systemLanguage")}} attributes on its direct child elements in order, and then renders the first child where these attributes evaluate to true.
+The **`<switch>`** [SVG](/en-US/docs/Web/SVG) element evaluates any {{SVGAttr("requiredExtensions")}} and {{SVGAttr("systemLanguage")}} attributes on its direct child elements in order, and then renders the first child where these attributes evaluate to true.
 
 Other direct children will be bypassed and therefore not rendered. If a child element is a container element, like {{SVGElement("g")}}, then its subtree is also processed/rendered or bypassed/not rendered.
 
@@ -63,4 +63,5 @@ This example demonstrates showing different text content depending on the browse
 
 ## See also
 
-- {{SVGAttr("requiredFeatures")}}
+- {{SVGAttr("requiredExtensions")}}
+- {{SVGAttr("systemLanguage")}}

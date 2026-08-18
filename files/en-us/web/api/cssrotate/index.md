@@ -5,10 +5,9 @@ page-type: web-api-interface
 browser-compat: api.CSSRotate
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`CSSRotate`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents the rotate value of the individual {{CSSXRef('transform')}} property in CSS.
-It inherits properties and methods from its parent {{domxref('CSSTransformValue')}}.
 
 {{InheritanceDiagram}}
 
@@ -19,6 +18,8 @@ It inherits properties and methods from its parent {{domxref('CSSTransformValue'
 
 ## Instance properties
 
+_Also inherits properties from its parent interface, {{DOMxRef("CSSTransformComponent")}}._
+
 - {{domxref('CSSRotate.x','x')}}
   - : Returns or sets the x-axis value.
 - {{domxref('CSSRotate.y','y')}}
@@ -27,6 +28,10 @@ It inherits properties and methods from its parent {{domxref('CSSTransformValue'
   - : Returns or sets the z-axis value.
 - {{domxref('CSSRotate.angle','angle')}}
   - : Returns or sets the angle value.
+
+## Instance methods
+
+_Also inherits methods from its parent interface, {{DOMxRef("CSSTransformComponent")}}._
 
 ## Examples
 
