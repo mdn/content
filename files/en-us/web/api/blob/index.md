@@ -41,6 +41,8 @@ The APIs accepting `Blob` objects are also listed in the {{DOMxRef("File")}} doc
   - : Returns a {{DOMxRef("ReadableStream")}} that can be used to read the contents of the `Blob`.
 - {{DOMxRef("Blob.text()")}}
   - : Returns a promise that resolves with a string containing the entire contents of the `Blob` interpreted as UTF-8 text.
+- {{domxref("Blob.textStream()")}}
+  - : Returns a {{domxref("ReadableStream")}}. Reading the stream returns UTF-8 text chunks containing the blob's content.
 
 ## Examples
 
