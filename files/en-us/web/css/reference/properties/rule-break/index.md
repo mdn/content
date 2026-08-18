@@ -109,13 +109,13 @@ This property is specified as a single keyword from the following list:
 
 ## Description
 
-The `rule-break` property is used to set the behavior for breaking gap rules into segments when they cross gaps.
+The `rule-break` property is used to set the behavior for breaking rules into segments when they cross gaps.
 
 Gap decorations are painted within a gap as one or more gap decoration segments, with segments occurring between any two adjacent items. Depending on the container type, by default, these segments may either end at the edge of a gap, or the column and row rule may extend the entire height and width of the container.
 
-When there is a break in a rule, by default, the segments starts and ends at the edge of the gap. If the gap is `0`, the break may not be visible. The `rule-break` property determines if the break occurs. You can control the size of the break at the end of each segment with the `rule-inset` properties. When there are no breaks, and the line is continuous, `rule-inset` properties only affect the the rule at the start and end edges of the container. When there are breaks, the `rule-inset` properties affect the start and end of every rule segment.
+When there is a break in a rule, by default, the segments start and end at the edge of the gaps. If the gap size is `0`, the break may not be visible. The `rule-break` property determines if the break occurs. You can control the size of the break at the end of each segment with the `rule-inset` properties. When there are no breaks, and the line is continuous, `rule-inset` properties only affect the rule at the start and end edges of the container. When there are breaks, the `rule-inset` properties affect the start and end of every rule segment.
 
-Whether a rule continues from container edge to edge by default or is broken into segments that start and end where gaps meet, depends on the container type and rule direction.
+Whether a rule is by default composed of a single continuous segment or segments that break when intersecting gaps depends on the container type.
 
 ### Grid containers
 
@@ -175,7 +175,7 @@ Check the checkbox to set the `rule-break` to `intersection`, which makes the co
 
 ### Flex containers
 
-In flexbox, rule segments do not start or end at visible "T". When the `flex-direction` is `row` or `row-reverse`, the row rule is continuous, with the column segments starting and ending at the at the edge of the row gaps. When the `flex-direction` is `column` or `column-reverse`, the column rule is continuous, with the row segments starting and ending at the at the edge of the column gaps.
+In flexbox, when the `flex-direction` is `row` or `row-reverse`, the row rule is continuous, with the column segments starting and ending at the edge of the row gaps. When the `flex-direction` is `column` or `column-reverse`, the column rule is continuous, with the row segments starting and ending at the edge of the column gaps.
 
 ```html hidden
 <h1>Default rule breaks in flexbox</h1>
@@ -259,13 +259,13 @@ section {
 
 {{EmbedLiveSample("Flex containers", "", "300")}}
 
-Note how, depending on the `flex-direction`, the column or row rules are continuous by default. If you set the `rule-break` to `intersection`, those continuous rules break at every "T" intersection.
+Note how, depending on the `flex-direction`, the column or row rules are continuous by default. If you set the `rule-break` to `intersection`, those continuous rules break at every intersection.
 
 Rather, rules run as a single continuous decoration from one end of a gap to the other. Setting `intersection` changes this default behavior.
 
 ### Multi-col containers
 
-In multi-col containers, the default `normal` behavior differs between row rules and column rules. On `column-rule-break`, gap rule segments start and end when they intersect a row gap, behaving as `column-rule-break: intersection`, while row rules don't breaks, with `row-rule-break` behaving the same as `none`.
+In multi-col containers, the default `normal` behavior differs between row rules and column rules. Column rule segments start and end when they intersect a row gap, behaving as `column-rule-break: intersection`, while row rules don't break when they intersect a column gap, behaving as `row-rule-break: none`.
 
 ```html hidden
 <h1>Default rule breaks in multi-col</h1>
@@ -362,7 +362,7 @@ Check the radio buttons for each value to see the value's effect.
 
 ### Basic usage
 
-In this example, we use the `rule-break` property to break each rule segment in a grid container so no rules intersects
+In this example, we use the `rule-break` property to break each rule segment in a grid container so no rules intersect.
 
 #### HTML
 
