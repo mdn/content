@@ -62,6 +62,8 @@ You can create a new `Response` object using the {{domxref("Response.Response", 
   - : Returns a promise that resolves with the result of parsing the response body text as {{jsxref("JSON")}}.
 - {{domxref("Response.text()")}}
   - : Returns a promise that resolves with a text representation of the response body.
+- {{domxref("Response.textStream()")}}
+  - : Returns a {{domxref("ReadableStream")}}. Reading the stream returns UTF-8 text chunks containing the response body.
 
 ## Examples
 
