@@ -7,7 +7,7 @@ browser-compat: css.types.progress
 sidebar: cssref
 ---
 
-The **`progress()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) returns a {{cssxref("&lt;number>")}} value representing the position of one value (the progress value) relative to two other values (the progress start and end values).
+The **`progress()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) returns a {{cssxref("number")}} value representing the position of one value (the progress value) relative to two other values (the progress start and end values).
 
 ## Syntax
 
