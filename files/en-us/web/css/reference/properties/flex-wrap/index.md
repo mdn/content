@@ -253,7 +253,7 @@ We also include controls to enable changing features of the flex container, incl
 - Toggling the `balance` keyword on and off.
 - Changing the `flex-line-count` value.
 
-We've hidden the HTML and JavaScript code for these features for brevity.
+We've hidden the HTML and JavaScript for brevity.
 
 #### CSS
 
