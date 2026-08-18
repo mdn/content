@@ -12,6 +12,9 @@ The **`textStream()`** method of the {{domxref("Blob")}} interface returns a {{d
 
 This provides an easier mechanism for streaming the content than piping a {{domxref("Blob.stream()")}} bytestream through a {{domxref("TextDecoderStream")}}.
 
+> [!NOTE]
+> The `textStream()` method differs from {{domxref("FileReaderSync.readAsText()")}} in that the former always uses UTF-8 encoding, whereas the latter has a parameter that sets the encoding used.
+
 ## Syntax
 
 ```js-nolint
