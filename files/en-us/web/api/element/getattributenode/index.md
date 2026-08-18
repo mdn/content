@@ -26,7 +26,7 @@ getAttributeNode(attrName)
 
 ### Return value
 
-An `Attr` node for the attribute.
+An `Attr` node for the attribute, or `null`.
 
 ## Examples
 
