@@ -261,8 +261,6 @@ section {
 
 Note how, depending on the `flex-direction`, the column or row rules are continuous by default. If you set the `rule-break` to `intersection`, those continuous rules break at every intersection.
 
-Rather, rules run as a single continuous decoration from one end of a gap to the other. Setting `intersection` changes this default behavior.
-
 ### Multi-col containers
 
 In multi-col containers, the default `normal` behavior differs between row rules and column rules. Column rule segments start and end when they intersect a row gap, behaving as `column-rule-break: intersection`, while row rules don't break when they intersect a column gap, behaving as `row-rule-break: none`.
@@ -466,7 +464,7 @@ li {
 
 #### Result
 
-{{EmbedLiveSample("Basic", "", "510")}}
+{{EmbedLiveSample("Basic", "", "530")}}
 
 ## Specifications
 

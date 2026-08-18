@@ -379,6 +379,13 @@ We create a list of 50 items and a slider to change the column gap width. Most o
 ```
 
 ```html hidden live-sample___basic
+<p>
+  <label
+    >Change the width of the column gap.
+    <input type="range" min="0" max="32" value="16" id="gap"
+  /></label>
+  <output id="o"></output>
+</p>
 <ul id="ul">
   <li>1</li>
   <li>2</li>
@@ -430,13 +437,6 @@ We create a list of 50 items and a slider to change the column gap width. Most o
   <li>49</li>
   <li>50</li>
 </ul>
-<p>
-  <label
-    >Change the width of the column gap.
-    <input type="range" min="0" max="32" value="16" id="gap"
-  /></label>
-  <output id="o"></output>
-</p>
 ```
 
 #### CSS
