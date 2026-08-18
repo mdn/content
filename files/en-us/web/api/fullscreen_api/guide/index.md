@@ -70,7 +70,7 @@ Some mobile browsers while in fullscreen mode ignore viewport meta-tag settings 
 
 You'll want to be sure to let your users know that they can press the <kbd>Esc</kbd> key (or <kbd>F11</kbd>) to exit fullscreen mode.
 
-In addition, navigating to another page, changing tabs, or switching to another application (using, for example, <kbd>Alt</kbd>-<kbd>Tab</kbd>) while in fullscreen mode exits fullscreen mode as well.
+In addition, navigating to another page, changing tabs, or switching to another application (using, for example, <kbd>Alt</kbd>-<kbd>Tab</kbd>) while in fullscreen mode usually exits fullscreen mode as well. This is not guaranteed, though: in multi-monitor setups, or on some platforms where fullscreen mode is presented as its own space (such as macOS), switching applications may not exit fullscreen mode. The reliable way to exit fullscreen mode is with the <kbd>Esc</kbd> or <kbd>F11</kbd> keys, which always exit fullscreen mode.
 
 ## Example
 
