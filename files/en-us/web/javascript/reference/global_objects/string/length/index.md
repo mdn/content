@@ -30,9 +30,9 @@ This property returns the number of code units in the string. JavaScript uses [U
 
 The language specification requires strings to have a maximum length of 2<sup>53</sup> - 1 elements, which is the upper limit for [precise integers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER). However, a string with this length needs 16384TiB of storage, which cannot fit in any reasonable device's memory, so implementations tend to lower the threshold, which allows the string's length to be conveniently stored in a 32-bit integer.
 
-- In V8 (used by Chrome and Node), the maximum length is 2<sup>29</sup> - 24 (\~1GiB). On 32-bit systems, the maximum length is 2<sup>28</sup> - 16 (\~512MiB).
-- In Firefox, the maximum length is 2<sup>30</sup> - 2 (\~2GiB). Before Firefox 65, the maximum length was 2<sup>28</sup> - 1 (\~512MiB).
-- In Safari, the maximum length is 2<sup>31</sup> - 1 (\~4GiB).
+- In V8 (used by Chrome and Node), the maximum length is 2<sup>29</sup> - 24 (\~512MiB). On 32-bit systems, the maximum length is 2<sup>28</sup> - 16 (\~256MiB).
+- In Firefox, the maximum length is 2<sup>30</sup> - 2 (\~1GiB). Before Firefox 65, the maximum length was 2<sup>28</sup> - 1 (\~256MiB).
+- In Safari, the maximum length is 2<sup>31</sup> - 1 (\~2GiB).
 
 If you are working with large strings in other encodings (such as UTF-8 files or blobs), note that when you load the data into a JS string, the encoding always becomes UTF-16. The size of the string may be different from the size of the source file.
 
