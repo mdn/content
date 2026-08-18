@@ -186,7 +186,7 @@ This is the gradient that we will clip using the `circle()` (we do this by setti
   width: 640px;
   height: 480px;
   overflow: hidden;
-  border: 1px solid #888;
+  border: 1px solid #888888;
 }
 
 .refbox {

@@ -37,7 +37,7 @@ A {{jsxref("Promise")}} which resolves to {{jsxref("undefined")}} on success, or
 
 ### Basic usage
 
-The following example requests an override of the {{domxref("PreferenceObject.colorScheme", "colorScheme")}}.
+The following example requests an override of the {{domxref("PreferenceManager.colorScheme", "colorScheme")}}.
 
 ```js
 await navigator.preferences.colorScheme.requestOverride("dark");

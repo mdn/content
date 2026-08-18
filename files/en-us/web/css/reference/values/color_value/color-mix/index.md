@@ -33,8 +33,8 @@ color-mix(in oklab, teal 20%, olive 30%, blue 50%)
 
 The `color-mix( <color-interpolation-method>? , [ <color> && <percentage [0,100]>? ]#)` accepts the following parameters:
 
-- {{CSSXref("&lt;color-interpolation-method&gt;")}}
-  - : Specifies what interpolation method should be used to mix the colors. It consists of the `in` keyword followed by a {{glossary("color space")}} (one of the color spaces listed in the [formal syntax](#formal_syntax)), and, optionally, a {{CSSXref("&lt;hue-interpolation-method&gt;")}}.
+- {{CSSXref("&lt;color-interpolation-method&gt;")}} {{optional_inline}}
+  - : Specifies what interpolation method should be used to mix the colors. It consists of the `in` keyword followed by a {{glossary("color space")}} (one of the color spaces listed in the [formal syntax](#formal_syntax), defaulting to `oklab`), and, optionally, a {{CSSXref("&lt;hue-interpolation-method&gt;")}}, which defaults to `shorter hue`.
 
 - {{CSSXref("&lt;color&gt;")}}
   - : A color to mix; can be any valid `<color>` value.
@@ -163,6 +163,14 @@ li:nth-child(6) {
 {{EmbedLiveSample("mixing_two_colors", "100%", 120)}}
 
 The total value of both colors in a `color-mix()` function is 100%, even if the values set by the developer don't total 100%. In this example, as only one color has a percentage assigned, the other color is implicitly given a percentage value so that the combined total equals 100%. In the last {{htmlelement("li")}}, where neither color is assigned a percentage, both default to 50%.
+
+When mixing colors without a color space or hue interpolation method, the `oklab` color space is used, using `shorter` as the hue interpolation method. The three following declarations are equivalent:
+
+```css
+background-color: color-mix(red, blue);
+background-color: color-mix(in oklab, red, blue);
+background-color: color-mix(in oklab shorter hue, red, blue);
+```
 
 ### Adding transparency
 
