@@ -16,10 +16,6 @@ flex-line-count: 1;
 ```
 
 ```css interactive-example-choice
-flex-line-count: 2;
-```
-
-```css interactive-example-choice
 flex-line-count: 3;
 ```
 
@@ -85,7 +81,7 @@ The `flex-line-count` property sets the minimum number of flex lines that flex i
 
 A key use case for `flex-line-count` is creating a balanced set of two (or more) columns, regardless of the number of items in a list. In such cases, setting an explicit {{cssxref("height")}} or {{cssxref("max-height")}} won't work as you don't know how much content you will have, and may end up with fewer or more columns than desired. See [Creating balanced columns](#creating_balanced_columns) for an example implementation.
 
-If `balance` is not included, or if flex items are not set to wrap onto multiple flex lines, the `flex-line-count` property has no effect. If `balance` is set, but `flex-line-count` is omitted or explicitly set to `1`, the `balance` value has no effect.
+If `balance` is not set, or if flex items are not set to wrap onto multiple flex lines, the `flex-line-count` property has no effect.
 
 If the `flex-line-count` value is equal to or greater than the number of flex items, there will be one flex item per flex line.
 
@@ -226,7 +222,7 @@ We also set a {{cssxref("flex")}} value of `1 1 150px` on the flex children, so 
 }
 ```
 
-Next, we apply a different `flex-line-count` value to each flex container. For the `#box-no-balance` flex container, we also override the original `flex-wrap: wrap balance` value with `wrap`.
+For the `#box-no-balance` flex container, we remove the balancing, thereby nullifying the line count, by overriding the original `flex-wrap: wrap balance` value with `wrap`. We apply different `flex-line-count` values to each flex container, incrementing them so their children are laid out over a progressively greater number of flex lines.
 
 ```css live-sample___flex-line-count
 #box-no-balance {
@@ -253,11 +249,10 @@ We've hidden the rest of the CSS for brevity.
 
 {{ EmbedLiveSample("flex-line-count", "100%", "700") }}
 
-Note the effect of the different property combinations:
+Note the following:
 
 - As the first flex container doesn't have the `balance` keyword set in its `flex-wrap` value, its children are not given a balanced distribution and its `flex-line-count` value is ignored.
-- The flex items of the other flex containers are balanced, with their children laid out over a progressively greater number of flex lines as the `flex-line-count` value increases.
-- Note that the second flex container has `flex-line-count: 3` set on it, but this actually makes no difference to the layout of its flex children, because they fit on a minimum of three lines anyway. You can prove this by inspecting the second flex container using your browser's developer tools and disabling the `flex-line-count` property — the layout should not change.
+- The second flex container's `flex-line-count: 3` declaration doesn't effect the layout of the flex children; as the flex items are by default distributed over four flex lines, any value of `4` or less has no effect.
 
 ### Creating balanced columns
 
@@ -329,7 +324,7 @@ We include an {{htmlelement("ol")}} element containing ten {{htmlelement("li")}}
 
 #### CSS
 
-We set the list's {{cssxref("display")}} to `flex` with a {{cssxref("gap")}} of `10px` between flex items and `40px` between flex lines. We then set a {{cssxref("flex-direction")}} value of `column` and a {{cssxref("flex-wrap")}} value of `balance` using the {{cssxref("flex-flow")}} shorthand so that the flex lines are arranged in columns and will balance when wrapped.
+We set the list's {{cssxref("display")}} to `flex`. We set a {{cssxref("flex-direction")}} value of `column`and a {{cssxref("flex-wrap")}} value of `balance` using the {{cssxref("flex-flow")}} shorthand so that the flex lines are arranged in columns and will balance when wrapped. The {{cssxref("gap")}} value `10px 40px` specifies a gap of `10px` between flex items within each column and `40px` between flex lines.
 
 Finally, we set a `flex-line-count` value of `2`, meaning that, even though no fixed height is set on the list, its content will always be wrapped over two balanced columns, regardless of how much content is included.
 
@@ -342,7 +337,7 @@ ol {
 }
 ```
 
-```css hidden live-sample___flex-line-count, live-sample___balanced-columns
+```css hidden live-sample___flex-line-count live-sample___balanced-columns
 * {
   box-sizing: border-box;
 }

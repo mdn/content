@@ -207,7 +207,7 @@ This example demonstrates the effects of the `balance` keyword within the `flex-
     <label for="reverse">Set <code>wrap-reverse</code>?</label>
   </div>
   <div>
-    <input type="checkbox" id="balance" name="balance" />
+    <input type="checkbox" id="balance" name="balance" checked />
     <label for="balance">Set <code>balance</code>?</label>
   </div>
   <div>
@@ -262,7 +262,7 @@ We apply `display: flex` to the `.box` to turn it into a flex container, then se
 ```css live-sample___the-balance-keyword
 .box {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap balance;
   flex-line-count: 3;
 }
 

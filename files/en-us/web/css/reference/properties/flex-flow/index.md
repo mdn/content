@@ -20,7 +20,7 @@ flex-flow: row-reverse nowrap;
 ```
 
 ```css interactive-example-choice
-flex-flow: row-reverse wrap-reverse balance;
+flex-flow: row wrap balance;
 ```
 
 ```css interactive-example-choice
