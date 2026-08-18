@@ -173,7 +173,7 @@ As with `scroll`, you get a scrollbar in the scrolling dimension whether or not 
 
 ### Only displaying scrollbars when needed
 
-If you only want scrollbars to appear when there is more content than can fit in the box, use `overflow: auto`. This allows the browser to determine if it should display scrollbars.
+If you only want scrollbars to appear when there is more content than can fit in the box, use `overflow: auto`. This allows the browser to determine if it should display scrollbars, so scrollbars appear only when they are actually needed. For most boxes that need to scroll, `auto` is a better choice than `scroll`, which always shows scrollbars even when there is nothing to scroll.
 
 In the example below, remove content until it fits into the box. You should see the scrollbars disappear:
 
@@ -197,6 +197,15 @@ In the example below, remove content until it fits into the box. You should see 
 ```
 
 {{EmbedLiveSample("auto", "", "200px")}}
+
+### Clipping overflowing content
+
+If you want to cut off overflowing content without creating a scrollable area, you can use `overflow: clip`. Unlike `overflow: hidden`, `clip` does not create a scroll container, and it lets you clip on one axis while keeping the other axis as `visible`. For example, `overflow-x: clip; overflow-y: visible` clips horizontally but lets content overflow vertically. With `overflow: hidden`, the visible axis would instead become `hidden` too.
+
+By default, `clip` cuts content off at the box's border edge, leaving no way to access the clipped content. You can adjust where the clipping starts using the {{cssxref("overflow-clip-margin")}} property.
+
+> [!NOTE]
+> `overflow: clip` is newer than the other values. Check the [browser compatibility](/en-US/docs/Web/CSS/Reference/Properties/overflow#browser_compatibility) for `overflow` before relying on it.
 
 ## Unwanted overflow in web design
 
