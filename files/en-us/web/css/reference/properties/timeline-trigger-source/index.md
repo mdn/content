@@ -49,9 +49,9 @@ timeline-trigger-source: unset;
 Specified as a comma-separated list of values. Each value can be one of the following types:
 
 - `none`
-  - : The element does not create an animation trigger; it is not associated with a timeline.
+  - : The element does not have a trigger source; it is not associated with a timeline.
 - `auto`
-  - : The element does not create an animation trigger; its associated timeline is the document's default time-based timeline.
+  - : The element's trigger source is the document's default time-based {{domxref("DocumentTimeline")}}. This is the default value.
 - {{cssxref("dashed-ident")}}
   - : The element creates a scroll-triggered animation trigger as a [named view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_view_progress_timeline).
 - [`scroll()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/scroll)
@@ -132,14 +132,12 @@ Scroll progress timelines are arguably not as useful for scroll-triggered animat
 
 ### Other values
 
-- `none`
+It is also possible to set `timeline-trigger-source` to a keyword of `auto` or `none`. These both result in a non-scroll-triggered animation, but their effeects are different.
 
-- `auto`
-  <!--if auto is used, is always a documentTimeline, or will it be a scroll-driven animation if that is also set? -->
+- The default value, `auto`, sets the element's trigger source to the document's default time-based {{domxref("DocumentTimeline")}}. This results in any animations applied to the element playing on page load.
+- The `none` value results in the element having no trigger source, which means that any animations applied to the element will not play at all.
 
 ### Multiple sources
-
-<!-- this section sounds inaccurate to me -->
 
 When you specify multiple comma-separated values on a single `timeline-trigger-source` property, they are applied to the timeline triggers in the order in which the {{cssxref("timeline-trigger-name")}}s appear. When the number of triggers and `timeline-trigger-source` property values do not match, they are applied in the same way as [multiple animation property values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values).
 
@@ -363,12 +361,6 @@ We have also set a {{cssxref("timeline-trigger-activation-range")}} of `600px`, 
 {{EmbedLiveSample("basic-scroll-progress-example", "100%", "240")}}
 
 The animation will start when the tracked element scrolls `600px` upwards.
-
-### Disabling animations
-
-In this example, we demonstrate the effects of the `none` and `auto` values.
-
-<!-- and an example here -->
 
 ## Specifications
 
