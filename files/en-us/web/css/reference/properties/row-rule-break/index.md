@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`row-rule-break`** [CSS](/en-US/docs/Web/CSS) property sets the behavior for breaking row rules within a given row gap into segments where row rules intersect column rules.
+The **`row-rule-break`** [CSS](/en-US/docs/Web/CSS) property sets the behavior for breaking row rules into segments where row rules intersect column gaps.
 
 {{InteractiveExample("CSS Demo: rule")}}
 
@@ -94,17 +94,17 @@ row-rule-break: unset;
 This property is specified as a single keyword from the following list:
 
 - `none`
-  - : There are no breaks in row rules when row rules intersect column gaps; rather, a continuous row rule is painted the whole width of the container, from edge to edge.
+  - : There are no breaks in row rules when they intersect column gaps; rather, a continuous row rule is painted the whole width of the container, from edge to edge.
 - `normal`
-  - : In flex and flex containers, behaves as `none`. In multi-col, behaves as `none`. This is the default value.
+  - : In grid and flex containers, behaves as `none`. In multi-col, behaves as `none`. This is the default value.
 - `intersection`
   - : Row rules always break when they intersect column gaps, with row rule segments starting and ending at container and gap edges.
 
 ## Description
 
-The `row-rule-break` property sets the behavior for whether or not to break row rules into segments when they cross column gaps.
+The `row-rule-break` property specifies whether or not to break row rules into segments when they cross column gaps.
 
-Row rules are painted within a row gap as one or more segments, with segments occurring between adjacent grid items in separate rows, between flex items or flex lines, depending on the {{cssxref("flex-direction")}}, in flex layouts, or in gaps between adjacent rows of columns in multi-col layouts when {{cssxref("column-height")}} creates multiple rows of columns.
+Row rules are painted within a row gap as one or more segments, with segments occurring between adjacent grid items in separate rows, between flex items or flex lines, depending on the {{cssxref("flex-direction")}} in flex layouts, or in gaps between adjacent rows of columns in multi-col layouts when {{cssxref("column-height")}} creates multiple rows of columns.
 
 The `row-rule-break` property only determines if the break occurs. By default, the break, or space, between row rule segments is the width of the column gap, as each segments starts and ends at the edge of the gap (or edge of the container). If the gap is `0`, this break may not be visible. The end positions can be controlled with the {{cssxref("row-rule-inset")}} properties.
 
@@ -170,11 +170,11 @@ h2 {
 
 {{EmbedLiveSample("grid containers", "", "240")}}
 
-By default, there are no row rule breaks. Check the checkbox to set the `row-rule-break` to `intersection`, which makes the continuous rules break at every "cross" intersection. By default, the break between segments is the width of the {{cssxref("column-gap")}}.
+By default, there are no row rule breaks. Check the checkbox to set `ow-rule-break` to `intersection`, which makes the continuous rules break at every "cross" intersection. By default, the break between segments is the width of the {{cssxref("column-gap")}}.
 
 ### Flex containers
 
-In flexbox, by default, gap rules between flex items span the item only while gap rules between flex lines are continuous. In horizontal writing modes, when the `flex-direction` is `row` or `row-reverse`, the row rule is continuous, with the column segments starting and ending at the at the edge of the row gaps. When the `flex-direction` is `column` or `column-reverse`, the column rule is continuous, with the row segments starting and ending at the at the edge of the column gaps.
+In flexbox, when the `flex-direction` is `row` or `row-reverse` in horizontal writing modes, the row rule is continuous, with the column segments starting and ending at the at the edge of the row gaps. When the `flex-direction` is `column` or `column-reverse`, the column rule is continuous, with the row segments starting and ending at the at the edge of the column gaps.
 
 ```html hidden
 <h1>Default rule breaks in flexbox</h1>
@@ -260,7 +260,7 @@ section {
 
 {{EmbedLiveSample("Flex containers", "", "300")}}
 
-Whether the row rules break at every column gap by default depends on the `flex-direction`. When set to `row` or `row-reverse`, the row rule is continuous by default, where as with `column` or `column-reverse`, the row rule breaks at every column gap. Setting the `row-rule-break` to `intersection`, only impacts the row rules in the `row` and `row-reverse` scenarios.
+In horizontal writing modes, when set to `row` or `row-reverse`, the row rule is continuous by default, where as with `column` or `column-reverse`, the row rule breaks at every column gap. Setting the `row-rule-break` to `intersection` only impacts the row rules in the `row` and `row-reverse` scenarios.
 
 ### Multi-col containers
 
@@ -348,7 +348,7 @@ label {
 
 {{EmbedLiveSample("multi-col containers", "", "540")}}
 
-If you select `intersection`, the row rule will break into segment every time it reaches a column gap, with each segment starting and ending at the edge of the gap. The start and end positions can be changed with the `row-rule-inset` properties.
+If you select `intersection`, the row rule will break into segment whenever it reaches a column gap, with each segment starting and ending at the edge of the gap. The start and end positions can be changed with the `row-rule-inset` properties.
 
 ## Formal definition
 
@@ -441,7 +441,7 @@ We create a list of 50 items and a slider to change the column gap width. Most o
 
 #### CSS
 
-We define the unordered list as a 8-column container, creating columns and rows with the {{cssxref("grid-template-columns")}} property and setting {{cssxref("list-style-type")}} to `none` to remove the bullets. We include a {{cssxref("gap")}} of `20px` to provide enough room between the columns and rows to fit our `20px` solid column and row rules. Last, we set the rule decorations to break into segments at every intersection.
+We define the unordered list as a 8-column container, creating columns and rows with the {{cssxref("grid-template-columns")}} property and setting {{cssxref("list-style-type")}} to `none` to remove the bullets. We include a {{cssxref("gap")}} of `20px` to provide enough room between the columns and rows to fit our `20px` solid column and row rules. Last, we set the row rules to break into segments at every intersection.
 
 ```css live-sample___basic
 ul {
@@ -485,7 +485,7 @@ gap.addEventListener("input", () => {
 
 {{EmbedLiveSample("Basic", "", "600")}}
 
-Make the column gap wider and note how the break between row segments grows. Bring the column gap width down to `0px`, and notice how the breaks seems to disappear. The `0px` gap between segments may not be visible, but the segments still start and end at the gap, and `row-rule-inset` declarations can impact the segment width.
+Make the column gaps wider and note how the breaks between row segments grow. Bring the column gap width down to `0px`, and notice how the row decoration appears continuous. It isn't! The `0px` gap between segments may not be visible, but the segments still start and end at the gap, so any offsets set with `row-rule-inset` properties will still be applied.
 
 ## Specifications
 

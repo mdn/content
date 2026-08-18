@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`rule-break`** [CSS](/en-US/docs/Web/CSS) property sets the behavior for breaking column and row rules within a gap into segments where rows and column rules intersect, setting {{cssxref("column-rule-break")}} and {{cssxref("row-rule-break")}} to the same value.
+The **`rule-break`** [CSS](/en-US/docs/Web/CSS) property sets the behavior for breaking column and row rules into segments where rows and column gaps intersect, setting {{cssxref("column-rule-break")}} and {{cssxref("row-rule-break")}} to the same value.
 
 {{InteractiveExample("CSS Demo: rule")}}
 
@@ -101,9 +101,9 @@ rule-break: unset;
 This property is specified as a single keyword from the following list:
 
 - `none`
-  - : There are no breaks when row and column rules intersect; rather, a single continuous decoration is painted from one end of the gap to the other.
+  - : There are no breaks where row and column rules intersect; rather, a single continuous decoration is painted from one end of each gap to the other.
 - `normal`
-  - : In flex containers, behaves as `none`. In multi-col, `column-rule-break` behaves as `intersection` and `row-rule-break` behaves as `none`. In grid containers, rules do not break when intersecting, but will start and end at visible "T" intersections. This is the default value.
+  - : In flex and grid containers, behaves as `none`. In multi-col, `column-rule-break` behaves as `intersection` and `row-rule-break` behaves as `none`. This is the default value.
 - `intersection`
   - : Rules always break when they intersect a gap, with rule segments starting and ending at container and gap edges.
 
