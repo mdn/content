@@ -12,6 +12,9 @@ The **`textStream()`** method of the {{domxref("Request")}} interface returns a 
 
 This provides an easier mechanism for streaming the request body than piping the {{domxref("Request.body")}} bytestream through a {{domxref("TextDecoderStream")}}.
 
+> [!NOTE]
+> If invoked on a `Request` with a null body, for example a {{httpmethod("GET")}} request, `textStream()` will return a valid empty stream.
+
 ## Syntax
 
 ```js-nolint
