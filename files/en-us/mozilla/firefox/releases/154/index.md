@@ -89,6 +89,10 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   The {{cssxref("progress")}} CSS function is now supported. This allows the user calculate a {{cssxref("number")}} based upon a value (or progress) in between a minimum and maximum value. ([Firefox bug 2047015](https://bugzil.la/2047015)).
 
+- **Updating transparency of a color with `alpha()`**: `layout.css.alpha-color-function.enabled`
+
+  The {{cssxref("alpha")}} CSS function is now supported. This allows the user to update the alpha value (or transparency) of a color. ([Firefox bug 2047437](https://bugzil.la/2047437)).
+
 - **CSS Typed Object Model Level 1** (Nightly): `layout.css.typed-om.enabled`
 
   The [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) (as defined in the CSS Typed Object Model Level 1 specification) is now implemented.
