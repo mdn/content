@@ -257,7 +257,7 @@ We've hidden the HTML and JavaScript code for these features for brevity.
 
 #### CSS
 
-We apply `display: flex` to the `.box` to turn it into a flex container, then set some `flex-wrap` and `flex-line-count` values to make the flex children wrap evenly over a minimum of three flex lines. We'll change these later via JavaScript when the form controls are manipulated. We also set a {{cssxref("flex")}} value of `1 1 150px` on the flex children so they will take a base width of `150px` and then share out the remaining space on each flex line equally.
+We apply `display: flex` to the `.box` to turn it into a flex container, then set some `flex-wrap` and `flex-line-count` values to make the flex children wrap evenly over a minimum of three flex lines. You can change the values in the live demo. We also set a {{cssxref("flex")}} value of `1 1 150px` on the flex children so they will have a base width of `150px`, with any remaining space distributed evenly between items on the same flex line.
 
 ```css live-sample___the-balance-keyword
 .box {
