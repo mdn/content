@@ -180,7 +180,7 @@ We set the {{HTMLElement("ul")}} to be a flex container with the {{cssxref("disp
 ```css
 ul {
   display: flex;
-  width: 20em;
+  width: 31em;
   gap: 1em;
 
   flex-flow: row-reverse wrap-reverse;
