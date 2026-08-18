@@ -108,11 +108,51 @@ See {{cssxref("flex-direction")}} and {{cssxref("flex-wrap")}} for details on th
 
 In this example, the main-axis is the block direction with a reversed main-start and main-end. The flex items are allowed to wrap, creating new lines if needed.
 
+#### HTML
+
+```html
+<div id="container" class="container">
+  <div class="box red">A</div>
+  <div class="box lightblue">B</div>
+  <div class="box yellow">C</div>
+  <div class="box red">D</div>
+  <div class="box lightblue">E</div>
+  <div class="box yellow">F</div>
+</div>
+```
+
+#### CSS
+
 ```css
 .container {
+  width: 200px;
+  height: 150px;
+  border: 1px solid #c3c3c3;
+  display: flex;
   flex-flow: column-reverse wrap;
 }
+
+.box {
+  width: 50px;
+  height: 50px;
+}
+
+.red {
+  background-color: red;
+}
+
+.lightblue {
+  background-color: lightblue;
+}
+
+.yellow {
+  background-color: yellow;
+}
 ```
+
+#### Result
+
+{{EmbedLiveSample('Setting_column-reverse_and_wrap', '', '300')}}
 
 ## Specifications
 
