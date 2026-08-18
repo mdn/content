@@ -50,11 +50,15 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### APIs -->
+### APIs
 
 <!-- #### DOM -->
 
-<!-- #### Media, WebRTC, and Web Audio -->
+#### Media, WebRTC, and Web Audio
+
+- The [`error` event](/en-US/docs/Web/API/RTCDataChannel/error_event) fired at {{domxref("RTCDataChannel")}} may now specify ["sctp-failure"](/en-US/docs/Web/API/RTCError/errorDetail#sctp-failure) in its {{domxref("RTCError.errorDetail", "error.errorDetail")}} property if the transport is closed due to an error.
+  In addition, the event is now exposed on dedicated workers.
+  ([Firefox bug 1814460](https://bugzil.la/1814460)).
 
 <!-- #### Removals -->
 
