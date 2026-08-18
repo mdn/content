@@ -30,7 +30,7 @@ getAttributeNodeNS(namespace, nodeName)
 
 ### Return value
 
-The node for specified attribute.
+The node for specified attribute, or `null`.
 
 ## Notes
 
