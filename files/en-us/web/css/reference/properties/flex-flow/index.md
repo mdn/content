@@ -206,7 +206,7 @@ li:nth-of-type(even) {
 
 #### Result
 
-{{EmbedLiveSample("Basic usage","",300)}}
+{{EmbedLiveSample("Basic usage","",310)}}
 
 ## Specifications
 
