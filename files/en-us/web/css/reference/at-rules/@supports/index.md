@@ -112,7 +112,7 @@ The following table describes the available formats (`<font-format>` values) tha
 
 #### `font-tech()`
 
-This function checks if a browser supports the specified font technology for layout and rendering.
+The `font-tech()` checks whether a browser supports the specified font technology for layout and rendering.
 The following example returns true and applies the contained CSS styles if the browser supports the `COLRv1` font technology:
 
 ```css
