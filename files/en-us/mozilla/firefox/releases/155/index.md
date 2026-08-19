@@ -50,9 +50,13 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### APIs -->
+### APIs
 
-<!-- #### DOM -->
+#### DOM
+
+- The {{domxref("SVGNumberList")}}, {{domxref("SVGPointList")}}, {{domxref("SVGStringList")}}, and {{domxref("SVGTransformList")}} interfaces now support indexed setters, so an item in the list can be replaced using bracket notation, such as `transformList[0] = newTransform`, instead of calling {{domxref("SVGTransformList.replaceItem", "replaceItem()")}}.
+  The {{domxref("SVGLengthList")}} interface already supported this.
+  ([Firefox bug 2059426](https://bugzil.la/2059426)).
 
 <!-- #### Media, WebRTC, and Web Audio -->
 
