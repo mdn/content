@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Element.getAttributeNode
 ---
 
-{{ APIRef("DOM") }}
+{{APIRef("DOM")}}
 
 The **`getAttributeNode()`** method of the {{domxref("Element")}} interface returns the specified attribute of the specified element, as an {{domxref("Attr")}} node. It returns `null` if the element doesn't have an attribute with the given name.
 
@@ -22,7 +22,7 @@ getAttributeNode(attrName)
 ### Parameters
 
 - `attrName`
-  - : A string containing the name of the attribute. When called on an HTML element in a DOM flagged as an HTML document, the name is normalized to lowercase.
+  - : A string specifying the name of the attribute. When called on an HTML element in a DOM flagged as an HTML document, the name is normalized to lowercase.
 
 ### Return value
 
