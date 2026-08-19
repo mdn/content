@@ -155,7 +155,7 @@ The following {{cssxref("ident")}} values can be specified as arguments for the 
 - `anchor-position-follows-transforms`
   - : Specifies that an when an anchor element (see [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning)) has [transforms](/en-US/docs/Web/CSS/Guides/Transforms) applied, any elements that are positioned relative to that anchor have their placement shifted to the correct position relative to the transformed anchor. Older versions of the anchor positioning specification did not take transforms into account.
 
-These named features represent conditions that are not possible to test for using other `@supports` mechanisms, but which are considered valuable to test for.
+These named features represent valuable conditions that are not possible to test using other `@supports` mechanisms.
 
 #### `selector()`
 
