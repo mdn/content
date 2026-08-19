@@ -49,7 +49,7 @@ timeline-trigger-source: unset;
 Specified as a comma-separated list of values. Each value can be one of the following types:
 
 - `none`
-  - : The element does not have a trigger source; it is not associated with a timeline.
+  - : The element's trigger does not have a source; it is not associated with a timeline.
 - `auto`
   - : The element's trigger source is the document's default time-based {{domxref("DocumentTimeline")}}. This is the default value.
 - {{cssxref("dashed-ident")}}
@@ -135,7 +135,7 @@ Scroll progress timelines are arguably not as useful for scroll-triggered animat
 It is also possible to set `timeline-trigger-source` to a keyword of `auto` or `none`. These both result in a non-scroll-triggered animation, but their effeects are different.
 
 - The default value, `auto`, sets the element's trigger source to the document's default time-based {{domxref("DocumentTimeline")}}. This results in any animations applied to the element playing on page load.
-- The `none` value results in the element having no trigger source, which means that any animations applied to the element will not play at all.
+- The `none` value results in the element's trigger having no source, which means that any animations applied to the element will not play at all.
 
 ### Multiple sources
 
