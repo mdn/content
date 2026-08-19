@@ -92,9 +92,11 @@ The `result` field in the response is an empty object (`{}`).
 
 ## Description
 
-This command allows you to change the characteristics of the viewport of a specific context, which can be useful to emulate narrow viewports or test responsive design. Specify `context` to resize a single top-level context or `userContexts` to resize every top-level context in one or more [user contexts](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts).
+This command allows you to change the characteristics of the viewport of a specific context, which can be useful to emulate narrow viewports or test responsive design.
+Specify `context` to apply the viewport settings to a single top-level context or `userContexts` to apply them to every top-level context in one or more [user contexts](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts).
 
-When `userContexts` is specified, the `viewport` size and `devicePixelRatio` you provide apply to every top-level context currently in each given user context. They also apply to every top-level context created later in that user context until you change or clear them with another `setViewport` command.
+When `userContexts` is specified, the `viewport` size and `devicePixelRatio` you provide apply to every top-level context currently in each given user context.
+They also apply to every top-level context created later in that user context until you change or clear them with another `setViewport` command.
 
 ## Examples
 
@@ -153,7 +155,7 @@ The browser responds as follows:
 
 ### Applying a viewport override to a user context
 
-Using the same connection and session as in the first example, send the following message to resize every top-level context in the specified user context:
+Using the same connection and session as in the first example, send the following message to apply the viewport settings to every top-level context in the specified user context:
 
 ```json
 {

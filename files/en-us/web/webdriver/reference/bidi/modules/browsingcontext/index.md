@@ -37,8 +37,11 @@ Calling [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Mod
 - [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree)
 - [`browsingContext.handleUserPrompt`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/handleUserPrompt)
 - [`browsingContext.locateNodes`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/locateNodes)
+- [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate)
 - [`browsingContext.print`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/print)
+- [`browsingContext.reload`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/reload)
 - [`browsingContext.setViewport`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/setViewport)
+- [`browsingContext.traverseHistory`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/traverseHistory)
 
 ## Events
 

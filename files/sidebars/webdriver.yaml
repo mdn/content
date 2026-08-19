@@ -52,7 +52,7 @@ sidebar:
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/handleUserPrompt
-            code: true         
+            code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/locateNodes
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate

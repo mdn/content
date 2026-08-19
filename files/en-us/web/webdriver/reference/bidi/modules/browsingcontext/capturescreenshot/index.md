@@ -46,13 +46,13 @@ The `browsingContext.captureScreenshot` [command](/en-US/docs/Web/WebDriver/Refe
 The `params` field contains:
 
 - `clip` {{optional_inline}}
-  - : An object that specifies whether to limit the image capture to an area or an element.
+  - : An object that limits the capture to a rectangular area or to a single element.
     If `clip` is not specified, the entire `origin` area is captured.
     It contains the following fields:
 
     - `type`
       - : A string that specifies whether the screenshot area is a rectangular region or a specific element.
-        It can take one of the following two values:
+        It can take one of the following values:
 
         - `"box"`
           - : Captures a rectangular region.
@@ -69,7 +69,7 @@ The `params` field contains:
               - : A number that specifies the vertical offset of the rectangle from the top-left corner of `origin`.
         - `"element"`
           - : Captures the bounding box of a specific element.
-            The clip object also has the following field for `type: "element"`:
+            The `clip` object also has the following field for `type: "element"`:
 
             - `element`
               - : An object containing the ID that uniquely identifies the DOM element to capture.
@@ -88,8 +88,8 @@ The `params` field contains:
 - `origin` {{optional_inline}}
   - : A string that specifies the area for the screenshot.
     It can take one of the following values:
-    - `"document"`: The area spans the entire scrollable document, including content outside the visible viewport.
-    - `"viewport"`: The area is the [visible viewport](/en-US/docs/Glossary/Visual_Viewport). This is the default.
+    - `"document"`: The area spans the entire scrollable document, including content outside the [visible viewport](/en-US/docs/Glossary/Visual_Viewport).
+    - `"viewport"`: The area is the visible viewport. This is the default.
 
 ### Return value
 
@@ -103,11 +103,11 @@ The `result` object in the response contains the following fields:
 - [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
   - : A required parameter is missing or has an invalid type.
 
-- `no such frame`
-  - : No context with the given context ID is found.
-
 - `no such element`
   - : The DOM element referenced by `clip.element` cannot be resolved or does not belong to the document of the context being captured.
+
+- `no such frame`
+  - : No context with the given context ID is found.
 
 - `unable to capture screen`
   - : The requested `clip` region, after being intersected with the `origin` area, has zero width or height.
