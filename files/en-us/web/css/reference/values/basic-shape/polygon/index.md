@@ -183,7 +183,7 @@ This results in the same triangle shape, but with `20px` radius rounded corners:
 {{EmbedLiveSample("basic-rounded", '100%', 200)}}
 
 > [!NOTE]
-> In each case, the maximum corner radius is clamped to the smaller of `tan(corner-angle/2) * (segment-length / 2)` evaluated against both line segments forming the corner. This ensures that the applied corner radius is never larger than half of any line segment length. [The specification](https://drafts.csswg.org/css-shapes-1/#funcdef-basic-shape-polygon) contains further details for those interested.
+> In each case, the corner radius is clamped to ensure it is never larger than half of any line segment length. The maximum corner radius is clamped to the smaller of `tan(corner-angle/2) * (segment-length / 2)` evaluated against both line segments forming the corner. [The specification](https://drafts.csswg.org/css-shapes-1/#funcdef-basic-shape-polygon) contains further details for those interested.
 
 ## Formal syntax
 
