@@ -18,14 +18,14 @@ If you are working with HTML documents and you don't need to specify the request
 ## Syntax
 
 ```js-nolint
-getAttributeNodeNS(namespace, attrName)
+getAttributeNodeNS(namespace, localName)
 ```
 
 ### Parameters
 
 - `namespace`
-  - : A string specifying the namespace of the attribute, or `null` to use the default namespace.
-- `attrName`
+  - : A string specifying the namespace of the attribute, or `null` for no explicit namespace.
+- `localName`
   - : A string specifying the name of the attribute.
 
 ### Return value
