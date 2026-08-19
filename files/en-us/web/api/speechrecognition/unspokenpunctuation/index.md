@@ -17,7 +17,7 @@ The **`unspokenPunctuation`** property of the
 
 A boolean value.
 
-- If set to `true`, punction will be inferred and inserted automatically.
+- If set to `true`, punctuation will be inferred and inserted automatically.
 - If set to `false` (the default), no punctuation will be inserted automatically.
 
 ## Description
