@@ -1231,7 +1231,7 @@ input[type="radio"]:checked::before {
 
 {{EmbedLiveSample("radios-styled", "100%", 200, , , , , "allow-forms")}}
 
-Basically, we build the styling for a radio button's "inner circle" using the `::before` pseudo-element, but set a `scale(0)` {{cssxref("transform")}} on it. We then use a {{cssxref("transition")}} to make the generated content on the label nicely animate into view when the radio is selected/checked. The advantage of using a transform rather than transitioning {{cssxref("width")}}/{{cssxref("height")}} is that you can use {{cssxref("transform-origin")}} to make it grow from the center of the circle, rather than having it appear to grow from the circle's corner, and there is no jumping behavior as no box model property values are updated.
+Basically, we build the styling for a radio button's "inner circle" using the `::before` pseudo-element, but set a `scale(0)` {{cssxref("transform")}} on it. We then use a {{cssxref("transition")}} to make the generated content on the input nicely animate into view when the radio is selected/checked. The advantage of using a transform rather than transitioning {{cssxref("width")}}/{{cssxref("height")}} is that you can use {{cssxref("transform-origin")}} to make it grow from the center of the circle, rather than having it appear to grow from the circle's corner, and there is no jumping behavior as no box model property values are updated.
 
 ### :default and :indeterminate
 

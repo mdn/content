@@ -251,9 +251,9 @@ Note that built-in operations expecting BigInts often truncate the BigInt to a f
 ## Static methods
 
 - {{jsxref("BigInt.asIntN()")}}
-  - : Clamps a BigInt value to a signed integer value, and returns that value.
+  - : Truncates a `BigInt` value to the given number of least significant bits and returns that value as a signed integer.
 - {{jsxref("BigInt.asUintN()")}}
-  - : Clamps a BigInt value to an unsigned integer value, and returns that value.
+  - : Truncates a `BigInt` value to the given number of least significant bits and returns that value as an unsigned integer.
 
 ## Instance properties
 

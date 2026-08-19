@@ -22,6 +22,12 @@ sidebar:
     details: closed
   - link: /Web/Privacy/Guides/Third-party_cookies
   - link: /Web/Privacy/Threat_modeling
+  - type: listSubPages
+    path: /Web/Privacy/Regulations
+    depth: 2
+    nested: true
+    link: /Web/Privacy/Regulations
+    details: closed
 l10n:
   fr:
     Privacy: Confidentialité

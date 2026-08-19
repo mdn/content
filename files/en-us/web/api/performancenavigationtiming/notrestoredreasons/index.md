@@ -10,7 +10,7 @@ browser-compat: api.PerformanceNavigationTiming.notRestoredReasons
 
 {{APIRef("Performance API")}}{{SeeCompatTable}}
 
-The **`notRestoredReasons`** read-only property of the {{domxref("PerformanceNavigationTiming")}} interface returns a {{domxref("NotRestoredReasons")}} object providing report data on reasons why the current document was blocked from using the back/forward cache ({{Glossary("bfcache")}}) on navigation.
+The **`notRestoredReasons`** read-only property of the {{domxref("PerformanceNavigationTiming")}} interface returns a {{domxref("NotRestoredReasons")}} object providing report data on [the reasons](/en-US/docs/Web/API/Performance_API/Monitoring_bfcache_blocking_reasons#blocking_reasons) why the current document was blocked from using the back/forward cache ({{Glossary("bfcache")}}) on navigation.
 
 ## Value
 

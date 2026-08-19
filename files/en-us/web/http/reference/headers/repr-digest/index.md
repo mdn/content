@@ -47,7 +47,7 @@ Repr-Digest: <digest-algorithm>=<digest-value>,…,<digest-algorithmN>=<digest-v
     Only two registered digest algorithms are considered secure: `sha-512` and `sha-256`.
     The insecure (legacy) registered digest algorithms are: `md5`, `sha` (SHA-1), `unixsum`, `unixcksum`, `adler` (ADLER32) and `crc32c`.
 - `<digest-value>`
-  - : The digest of the entire selected representation data (see [Section 8.1 of the HTTP Semantics specification](https://www.rfc-editor.org/rfc/rfc9110#section-8.1)) using the `<digest-algorithm>`, {{Glossary("base64")}}-encoded and wrapped in colons (`:`, ASCII 0x3A). This encoding is referred to as a [byte sequence](https://www.rfc-editor.org/info/rfc9651/#name-byte-sequences) in the specification.
+  - : The digest of the entire selected representation data (see [Section 8.1 of the HTTP Semantics specification](https://www.rfc-editor.org/info/rfc9110/#section-8.1)) using the `<digest-algorithm>`, {{Glossary("base64")}}-encoded and wrapped in colons (`:`, ASCII 0x3A). This encoding is referred to as a [byte sequence](https://www.rfc-editor.org/info/rfc9651/#name-byte-sequences) in the specification.
 
 ## Examples
 
@@ -127,7 +127,7 @@ Host: example.com
 Accept-Encoding: gzip
 ```
 
-The server response includes the {{httpheader("Content-Encoding")}} header, incicating that the message bytes are from the gzip representation of the resource.
+The server response includes the {{httpheader("Content-Encoding")}} header, indicating that the message bytes are from the gzip representation of the resource.
 
 The digest is calculated over the gzip-encoded bytes instead of the original unencoded text.
 Here, the 16-byte JSON body `{"hello": "mdn"}` is gzip-compressed to a 36-byte representation, and `Content-Digest` and `Repr-Digest` are calculated over those 36 bytes (shown here as hex for readability):
@@ -162,7 +162,7 @@ Repr-Digest: sha-256=:bMGjiT1wkArOzyB9ReAdpW51FV4mHlQygPXGp+TtzG4=:
 ```
 
 Instead of omitting `Content-Digest` when there is no content, a server can explicitly compute it over an empty string.
-Per [Section 6.3 of RFC 9530](https://www.rfc-editor.org/rfc/rfc9530.html#section-6.3), this lets a recipient, particularly when the digest is covered by an HTTP message signature, verify that no content was added or removed, rather than only that the header was left out:
+Per [Section 6.3 of RFC 9530](https://www.rfc-editor.org/info/rfc9530/#section-6.3), this lets a recipient, particularly when the digest is covered by an HTTP message signature, verify that no content was added or removed, rather than only that the header was left out:
 
 ```http
 HTTP/1.1 200 OK
