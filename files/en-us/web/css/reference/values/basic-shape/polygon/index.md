@@ -71,9 +71,6 @@ The `polygon()` function accepts an optional first parameter containing values t
 - {{cssxref("length-percentage")}}
   - : Each vertex, or point, of the polygon is represented by a space-separated pair of `<length-percentage>` values defining the x/y coordinates of the vertex relative to the shape's [reference box](/en-US/docs/Web/CSS/Guides/Shapes/Using_shape-outside#the_reference_box).
 
-> [!NOTE]
-> The SVG [`<polygon>`](/en-US/docs/Web/SVG/Reference/Element/polygon) element has separate attributes for [`fill-rule`](/en-US/docs/Web/SVG/Reference/Attribute/fill-rule) and [`points`](/en-US/docs/Web/SVG/Reference/Attribute/points), and `points` is flexible about the use of space and comma separators. CSS `polygon()` functions require all parameters to be separated by spaces.
-
 ### Return value
 
 A {{cssxref("basic-shape")}} value.
