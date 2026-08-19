@@ -8,7 +8,7 @@ browser-compat: api.Element.getAttributeNodeNS
 
 {{ APIRef("DOM") }}
 
-The **`getAttributeNodeNS()`** method of the {{domxref("Element")}} interface returns the namespaced {{domxref("Attr")}} node of an element.
+The **`getAttributeNodeNS()`** method of the {{domxref("Element")}} interface returns the specified attribute in a namespace of the specified element, as an {{domxref("Attr")}} node. It returns `null` if the element doesn't have an attribute with the given name in the namespace.
 
 This method is useful if you need the namespaced attribute's [instance properties](/en-US/docs/Web/API/Attr#instance_properties).
 If you only need the namespaced attribute's value, you can use the {{domxref("Element.getAttributeNS()", "getAttributeNS()")}} method instead.
@@ -24,17 +24,13 @@ getAttributeNodeNS(namespace, nodeName)
 ### Parameters
 
 - `namespace`
-  - : A string specifying the namespace of the attribute.
+  - : A string specifying the namespace of the attribute, or `null` to use the default namespace.
 - `nodeName`
   - : A string specifying the name of the attribute.
 
 ### Return value
 
-The node for specified attribute, or `null`.
-
-## Notes
-
-`getAttributeNodeNS` is more specific than [getAttributeNode](/en-US/docs/Web/API/Element/getAttributeNode) in that it allows you to specify attributes that are part of a particular namespace. The corresponding setter method is [setAttributeNodeNS](/en-US/docs/Web/API/Element/setAttributeNodeNS).
+An `Attr` node for the attribute, or `null` if the element doesn't have an attribute with the given name in the namespace.
 
 ## Specifications
 
