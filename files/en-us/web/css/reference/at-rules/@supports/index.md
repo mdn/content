@@ -413,7 +413,7 @@ We include two {{htmlelement("div")}} elements to represent our anchor and posit
 We store the size of our anchor element in a [CSS custom property](/en-US/docs/Web/CSS/Reference/Properties/--*):
 
 ```css
-body {
+:root {
   --anchor-length: 100px;
 }
 ```
