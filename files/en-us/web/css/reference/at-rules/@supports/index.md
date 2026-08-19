@@ -455,7 +455,7 @@ The above code works OK in browsers that support newer versions of the anchor po
 ```css
 @supports not named-feature(anchor-position-follows-transforms) {
   .anchor:hover + .positionedElem,
-  .anchor:hover + .positionedElem {
+  .anchor:focus + .positionedElem {
     left: calc(anchor(right) + (var(--anchor-length) * 0.5));
   }
 }
