@@ -159,7 +159,7 @@ The `polygon()` function accepts an optional first parameter modifying the rende
 - A [`<fill-rule>`](/en-US/docs/Web/SVG/Reference/Attribute/fill-rule) keyword equal to `nonzero` (the default) or `evenodd`, which specifies the algorithm used to fill the polygon shape. This only has an effect when the lines drawn between coordinate values overlap.
 - The `round` keyword followed by a {{cssxref("length")}} value. This specifies that the polygon should have rounded corners, with the `<length>` value specifying the radius of those corners.
 
-For example, we could modify the earlier triangle example to use the following `clip-path` declaration:
+For example, we could expand upon the previous triangle example and add rounded corners:
 
 ```css
 clip-path: polygon(round 20px, 0% 0%, 100% 0%, 100% 100%);
