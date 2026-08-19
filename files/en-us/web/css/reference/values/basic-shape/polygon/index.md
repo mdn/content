@@ -62,7 +62,7 @@ polygon(evenodd round 2em, 0% 0%, 50% 50%, 0% 100%)
 
 ### Parameters
 
-The `polygon` function accepts an optional first parameter containing values that modify the polygon's behavior — a {{SVGAttr("fill-rule")}} keyword and/or the `round` keyword followed by a {{cssxref("length")}} value, separated by spaces — plus one or more parameters containing x/y coordinate pairs of {{cssxref("length-percentage")}} values.
+The `polygon()` function accepts an optional first parameter containing values that modify the polygon's appearance — a {{SVGAttr("fill-rule")}} keyword, the `round` keyword followed by a {{cssxref("length")}} value, or both. The first parameter's components are separated by spaces. The other parameters are space-separated x/y coordinate pairs of {{cssxref("length-percentage")}} values.
 
 - [`<fill-rule>`](/en-US/docs/Web/SVG/Reference/Attribute/fill-rule) {{optional_inline}}
   - : A keyword equal to `nonzero` (the default) or `evenodd`, which specifies the algorithm used to fill the polygon shape.
