@@ -19,7 +19,7 @@ deleteCell(index)
 ### Parameters
 
 - `index`
-  - : The index of the cell to remove. If `index` is `-1`, the last cell of the row is removed.
+  - : The index of the cell to remove in the {{domxref("HTMLTableRowElement.cells", "cells")}} collection. If `index` is `-1`, the last cell of the row is removed.
 
 ### Return value
 

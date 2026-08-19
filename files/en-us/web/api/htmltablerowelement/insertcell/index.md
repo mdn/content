@@ -8,7 +8,7 @@ browser-compat: api.HTMLTableRowElement.insertCell
 
 {{APIRef("HTML DOM")}}
 
-The **`insertCell()`** method of the {{domxref("HTMLTableRowElement")}} interface creates a {{HTMLElement("td")}} element, inserts it at the specified child position in the given {{HTMLElement("tr")}} element, and returns it.
+The **`insertCell()`** method of the {{domxref("HTMLTableRowElement")}} interface creates a {{HTMLElement("td")}} element, inserts it at the specified position in the given {{HTMLElement("tr")}} element, and returns it.
 
 This method creates and inserts the element directly, without requiring separate calls to methods such as {{domxref("Document.createElement()")}}, {{domxref("Node.insertBefore()")}}, and {{domxref("Node.appendChild()")}}. However, you cannot use `insertCell()` to create a new `<th>` element.
 
@@ -22,7 +22,7 @@ insertCell(index)
 ### Parameters
 
 - `index` {{optional_inline}}
-  - : The index of the new cell. If `index` is `-1` or equal to the number of cells, the cell is appended as the last cell in the row. If `index` is omitted, it defaults to `-1`.
+  - : The index of the new cell in the {{domxref("HTMLTableRowElement.cells", "cells")}} collection. If `index` is `-1` or equal to the number of cells, the cell is appended as the last cell in the row. If `index` is omitted, it defaults to `-1`.
 
 ### Return value
 

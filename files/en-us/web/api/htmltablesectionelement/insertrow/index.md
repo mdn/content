@@ -8,7 +8,7 @@ browser-compat: api.HTMLTableSectionElement.insertRow
 
 {{APIRef("HTML DOM")}}
 
-The **`insertRow()`** method of the {{domxref("HTMLTableSectionElement")}} interface creates a {{HTMLElement("tr")}} element, inserts it at the specified child position in the given table sectioning element ({{HTMLElement("thead")}}, {{HTMLElement("tfoot")}}, or {{HTMLElement("tbody")}}), and returns it.
+The **`insertRow()`** method of the {{domxref("HTMLTableSectionElement")}} interface creates a {{HTMLElement("tr")}} element, inserts it at the specified position in the given table sectioning element ({{HTMLElement("thead")}}, {{HTMLElement("tfoot")}}, or {{HTMLElement("tbody")}}), and returns it.
 
 This method creates and inserts the element directly, without requiring separate calls to methods such as {{domxref("Document.createElement()")}}, {{domxref("Node.insertBefore()")}}, and {{domxref("Node.appendChild()")}}.
 
@@ -22,7 +22,7 @@ insertRow(index)
 ### Parameters
 
 - `index` {{optional_inline}}
-  - : The index of the new row. If `index` is `-1` or equal to the number of rows, the row is appended as the last row. If `index` is omitted, it defaults to `-1`.
+  - : The index of the new row in the {{domxref("HTMLTableSectionElement.rows", "rows")}} collection. If `index` is `-1` or equal to the number of rows, the row is appended as the last row. If `index` is omitted, it defaults to `-1`.
 
 ### Return value
 

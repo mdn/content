@@ -19,7 +19,7 @@ deleteRow(index)
 ### Parameters
 
 - `index`
-  - : The index of the row to remove. If `index` is `-1`, the last row is removed.
+  - : The index of the row to remove in the {{domxref("HTMLTableSectionElement.rows", "rows")}} collection. If `index` is `-1`, the last row is removed.
 
 ### Return value
 
