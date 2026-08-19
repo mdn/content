@@ -154,7 +154,7 @@ The second `polygon()` function has its points specified in a different order fr
 
 ### Specifying polygon modifiers
 
-The `polygon()` function can accept an optional first parameter containing values that modify the rendering of the resulting shape. The parameter value can include any or all of the following, separated by spaces:
+The `polygon()` function accepts an optional first parameter modifying the rendering of the resulting shape. The parameter value can include either or both of the following, separated by spaces:
 
 - A [`<fill-rule>`](/en-US/docs/Web/SVG/Reference/Attribute/fill-rule) keyword equal to `nonzero` (the default) or `evenodd`, which specifies the algorithm used to fill the polygon shape. This rarely has much of an effect.
 - The `round` keyword followed by a {{cssxref("length")}} value. This specifies that the polygon should have rounded corners, with the `<length>` value specifying the radius of those corners.
