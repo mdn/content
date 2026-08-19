@@ -159,7 +159,7 @@ These named features represent valuable conditions that are not possible to test
 
 #### `selector()`
 
-This function checks if a browser supports the specified selector syntax.
+The `selector()` function checks whether a browser supports the specified selector syntax.
 The following example returns true and applies the contained CSS styles if the browser supports the [child combinator](/en-US/docs/Web/CSS/Reference/Selectors/Child_combinator):
 
 ```css
