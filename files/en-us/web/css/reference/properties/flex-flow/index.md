@@ -108,7 +108,7 @@ See {{cssxref("flex-direction")}} and {{cssxref("flex-wrap")}} for details on th
 
 ## Description
 
-The `flex-flow` shorthand property specifies the {{cssxref("flex-direction")}} and {{cssxref("flex-wrap")}} properties, defining the direction of a flex container, its wrapping behavior. It can also defines flex items to be balanced when wrapping is allowed.
+The `flex-flow` shorthand property specifies the {{cssxref("flex-direction")}} and {{cssxref("flex-wrap")}} properties, defining the direction of a flex container and its wrapping behavior. It can also define flex items to be balanced when wrapping is allowed.
 
 For example, `column-reverse wrap` will set the main-axis to the block direction with a reversed main-start and main-end, with flex items being allowed to wrap, creating new lines if needed.
 
@@ -142,7 +142,7 @@ This example demonstrates using the `flex-flow` shorthand on a flex container so
 
 #### HTML
 
-We include an list of words in alphabetical order:
+We include a list of words in alphabetical order:
 
 ```html
 <ul>
@@ -175,7 +175,7 @@ We include an list of words in alphabetical order:
 
 #### CSS
 
-We set the {{HTMLElement("ul")}} to be a flex container with the {{cssxref("display")}} property, define a {{cssxref("width")}}, add a {{cssxref("gap")}} so there is some room between flex items and flex lines, and then set the `flex-flow` to wrapping the items in reverse order. Additional CSS has been hidden for brevity.
+We set the {{HTMLElement("ul")}} to be a flex container with the {{cssxref("display")}} property, define a {{cssxref("width")}}, add a {{cssxref("gap")}} so there is some room between flex items and flex lines, and then set the `flex-flow` to wrap the items in reverse order. Additional CSS has been hidden for brevity.
 
 ```css
 ul {
