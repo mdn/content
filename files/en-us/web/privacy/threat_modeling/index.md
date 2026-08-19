@@ -87,15 +87,15 @@ Ask yourself:
 
 For example, a website publishes "anonymous" user reviews but includes each reviewer's city, employer, and posting dates. By comparing this information with publicly available social media profiles, someone can determine who wrote many of the reviews.
 
-#### Information disclosure and data compromise
+#### Information disclosure
 
 Unauthorized or unnecessary exposure of personal information to other people, systems, or organizations.
 
 Ask yourself:
 
-- Are personal data, backups, logs, and exports adequately protected?
-- Could a database breach or unintentional access to storage buckets expose sensitive personal information?
 - Do analytics or third-party services receive unnecessary personal information?
+- Do you have contracts with the third-party in place to have some assurance that they will look after the data and only use it for the intended purposes?
+- Do you de-identify data before sharing it with the third party?
 
 For example, a contact form sends visitors' names, email addresses, and message contents to a third-party analytics service because the developer configured analytics to capture every form submission. The analytics provider now receives personal information that it does not need to perform its service.
 
@@ -109,6 +109,17 @@ Ask yourself:
 - Are users aware of and able to control secondary uses of their data?
 
 For example: Users create accounts solely to purchase products. Months later, the company begins using their purchase history to train a recommendation model and to send targeted marketing emails without informing users or providing a way to opt out.
+
+#### Stored data compromise
+
+Unauthorized access to or disclosure of stored personal information due to security failures or data breaches.
+
+Ask yourself:
+
+- Are personal data, backups, logs, and exports adequately protected?
+- Could a database breach or unintentional access to storage buckets expose sensitive personal information?
+
+For example, a website stores user profiles, addresses, and password hashes in an unencrypted database backup that is accidentally exposed through a publicly accessible cloud storage bucket. Anyone who discovers the bucket can download the entire dataset.
 
 #### Lack of comprehension or control
 
