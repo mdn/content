@@ -54,7 +54,7 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 #### DOM
 
-- The {{domxref("SVGAElement")}} interface now implements the [`HyperlinkElementUtils`](https://html.spec.whatwg.org/multipage/links.html#hyperlinkelementutils) mixin, so SVG {{SVGElement("a")}} elements expose the same URL component properties as HTML links: {{domxref("SVGAElement.protocol", "protocol")}}, {{domxref("SVGAElement.username", "username")}}, {{domxref("SVGAElement.password", "password")}}, {{domxref("SVGAElement.host", "host")}}, {{domxref("SVGAElement.hostname", "hostname")}}, {{domxref("SVGAElement.port", "port")}}, {{domxref("SVGAElement.pathname", "pathname")}}, {{domxref("SVGAElement.search", "search")}}, and {{domxref("SVGAElement.hash", "hash")}}, along with the read-only {{domxref("SVGAElement.origin", "origin")}} property.
+- The {{domxref("SVGAElement")}} interface now implements the [`HyperlinkElementUtils`](https://html.spec.whatwg.org/multipage/links.html#hyperlinkelementutils) mixin. As a result, SVG {{SVGElement("a")}} elements expose the same URL component properties as HTML {{HTMLElement("a")}} elements: {{domxref("SVGAElement.protocol", "protocol")}}, {{domxref("SVGAElement.username", "username")}}, {{domxref("SVGAElement.password", "password")}}, {{domxref("SVGAElement.host", "host")}}, {{domxref("SVGAElement.hostname", "hostname")}}, {{domxref("SVGAElement.port", "port")}}, {{domxref("SVGAElement.pathname", "pathname")}}, {{domxref("SVGAElement.search", "search")}}, and {{domxref("SVGAElement.hash", "hash")}}. The read-only {{domxref("SVGAElement.origin", "origin")}} property is also exposed.
   ([Firefox bug 2058578](https://bugzil.la/2058578)).
 
 <!-- #### Media, WebRTC, and Web Audio -->
