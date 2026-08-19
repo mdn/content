@@ -142,11 +142,11 @@ team, which currently consists of [@Rumyra](https://github.com/Rumyra/).
 
 - [Web accessibility content](https://github.com/mdn/content/tree/main/files/en-us/web/accessibility):
   - [@ericwbailey](https://github.com/ericwbailey)
-- [General learning content](https://github.com/mdn/content/tree/main/files/en-us/learn):
+- [General learning content](https://github.com/mdn/content/tree/main/files/en-us/learn_web_development):
   - [@chrisdavidmills](https://github.com/chrisdavidmills/)
 - [CSS learning content](https://github.com/mdn/content/tree/main/files/en-us/learn/css):
   - [@rachelandrew](https://github.com/rachelandrew)
-- [Server-side learning content](https://github.com/mdn/content/tree/main/files/en-us/learn/server-side):
+- [Server-side learning content](https://github.com/mdn/content/tree/main/files/en-us/learn_web_development/extensions/server-side):
   - [@hamishwillee](https://github.com/hamishwillee)
 - [MDN meta docs](https://github.com/mdn/content/tree/main/files/en-us/mdn)
   — the [@yari-content-mdn](https://github.com/orgs/mdn/teams/yari-content-mdn)
