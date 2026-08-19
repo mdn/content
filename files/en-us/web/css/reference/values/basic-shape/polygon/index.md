@@ -54,7 +54,7 @@ polygon(0px 0px, 200px 100px, 0px 200px)
 polygon(0% 0px, 100% 100px, 0px 100%)
 polygon(0 0, 50% 1rem, 100% 2vw, calc(100% - 20px) 100%, 0 100%)
 
-/* Coordinate list plus fill rule and/or round value */
+/* Coordinate list with fill-rule and/or round value */
 polygon(nonzero, 0% 0%, 50% 50%, 0% 100%)
 polygon(round 20px, 0% 0%, 50% 50%, 0% 100%)
 polygon(evenodd round 2em, 0% 0%, 50% 50%, 0% 100%)
