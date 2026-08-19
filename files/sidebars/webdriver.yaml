@@ -43,17 +43,25 @@ sidebar:
             title: Commands
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/activate
             code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/captureScreenshot
+            code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/close
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/create
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree
             code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/handleUserPrompt
+            code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/locateNodes
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate
             code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/print
+            code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/reload
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/setViewport
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/traverseHistory
             code: true
