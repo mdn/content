@@ -80,7 +80,7 @@ The functions supported in the function syntax are described in the following se
 
 #### `at-rule()`
 
-This function checks if a browser supports the specified [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
+The `at-rule()` function checks whether a browser supports the specified [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
 The following example returns true and applies the contained CSS styles if the browser supports the {{cssxref("@keyframes")}} at-rule:
 
 ```css
@@ -112,7 +112,7 @@ The following table describes the available formats (`<font-format>` values) tha
 
 #### `font-tech()`
 
-The `font-tech()` checks whether a browser supports the specified font technology for layout and rendering.
+The `font-tech()` function checks whether a browser supports the specified font technology for layout and rendering.
 The following example returns true and applies the contained CSS styles if the browser supports the `COLRv1` font technology:
 
 ```css
@@ -153,7 +153,7 @@ The `named-feature()` function checks whether a browser supports the specified n
 The following {{cssxref("ident")}} values can be specified as arguments for the `named-feature()` function:
 
 - `anchor-position-follows-transforms`
-  - : Specifies that an when an anchor element (see [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning)) has [transforms](/en-US/docs/Web/CSS/Guides/Transforms) applied, any elements that are positioned relative to that anchor have their placement shifted to the correct position relative to the transformed anchor. Older versions of the anchor positioning specification did not take transforms into account.
+  - : Checks whether the browser's [anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) calculations are [transform](/en-US/docs/Web/CSS/Guides/Transforms)-aware. In other words, when an anchor element has transforms applied, do elements positioned relative to that anchor have their placement shifted to the correct position relative to the anchor's transformed size or position? Older versions of the anchor positioning specification did not take transforms into account.
 
 These named features represent valuable conditions that are not possible to test using other `@supports` mechanisms.
 
@@ -396,13 +396,13 @@ The following example applies a set of scoped color scheme styles if the browser
 
 ### Testing for the support of a named feature
 
-In this example, we show how to use the `named-feature()` function to fix [anchor-positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) instances where a transform is applied to an anchor element and the browser doesn't automatically shift anchor-positioned element positions to account for the transform changing the anchor element's size, position, etc.
+This example shows how to use the `named-feature()` function to adjust [anchor-positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) instances when a transform is applied to an anchor element and the browser doesn't automatically shift anchor-positioned element placement to account for the anchor element's transformed size, position, etc.
 
 #### HTML
 
 We include two {{htmlelement("div")}} elements to represent our anchor and positioned elements:
 
-```html
+```html live-sample___named-feature
 <div class="anchor" tabindex="0">Anchor</div>
 
 <div class="positionedElem">Positioned</div>
@@ -410,17 +410,13 @@ We include two {{htmlelement("div")}} elements to represent our anchor and posit
 
 #### CSS
 
-We store the size of our anchor element in a [CSS custom property](/en-US/docs/Web/CSS/Reference/Properties/--*):
+We store the size of our anchor element in a [CSS custom property](/en-US/docs/Web/CSS/Reference/Properties/--*), and use that to define the size of the first `<div>` element, which we designate as an anchor by giving it an {{cssxref("anchor-name")}}:
 
-```css
+```css live-sample___named-feature
 :root {
   --anchor-length: 100px;
 }
-```
 
-We designate the first `<div>` element as an anchor by giving it an {{cssxref("anchor-name")}}, and set it to be a `100px` x `100px` square by setting the {{cssxref("width")}} and {{cssxref("height")}} equal to our `--anchor-length` custom property.
-
-```css
 .anchor {
   anchor-name: --myAnchor;
   width: var(--anchor-length);
@@ -428,9 +424,20 @@ We designate the first `<div>` element as an anchor by giving it an {{cssxref("a
 }
 ```
 
-We position our second `<div>` relative to the first `<div>` by setting its {{cssxref("position")}} to `absolute`, setting its {{cssxref("position-anchor")}} equal to the first `<div>`'s `anchor-name` identifier, and setting its {{cssxref("left")}} and {{cssxref("top")}} properties to {{cssxref("anchor()")}} functions. The `anchor(right)` function positions the positioned element's left edge next to the anchor's right edge, while `top: anchor(top);` positions the two element's top edges flush with one another. Finally, we set a {{cssxref("margin-left")}} of `20px` to create some horizontal space between the two elements.
+```css hidden live-sample___named-feature
+.anchor,
+.positionedElem {
+  border: 1px solid gray;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+```
 
-```css
+We position our second `<div>` relative to the first `<div>` by setting its {{cssxref("position")}} to `absolute`, setting its {{cssxref("position-anchor")}} equal to the first `<div>`'s `anchor-name` identifier, and setting its {{cssxref("left")}} and {{cssxref("top")}} properties to {{cssxref("anchor()")}} functions. The `anchor(right)` function positions the positioned element's left edge next to the anchor's right edge, while `top: anchor(top);` positions the two element's top edges flush with one another. Finally, we set a {{cssxref("margin-left")}} of `20px` to create some horizontal space between the two elements:
+
+```css live-sample___named-feature
 .positionedElem {
   position: absolute;
   position-anchor: --myAnchor;
@@ -440,19 +447,19 @@ We position our second `<div>` relative to the first `<div>` by setting its {{cs
 }
 ```
 
-On {{cssxref(":hover")}} and {{cssxref(":focus")}}, we {{cssxref("scale")}} the anchor by a factor of `1.5`. We set its {{cssxref("transform-origin")}} to `left` so that the anchor's left edge stays in the same place, and the scaling happens to the right.
+On {{cssxref(":hover")}} and {{cssxref(":focus")}}, we {{cssxref("scale")}} the anchor by a factor of `1.5`. We set its {{cssxref("transform-origin")}} to `top left` so that the anchor's top-left corner stays in the same place, and the scaling happens towards the bottom-right corner:
 
-```css
+```css live-sample___named-feature
 .anchor:hover,
 .anchor:focus {
-  transform-origin: left;
+  transform-origin: top left;
   scale: 1.5;
 }
 ```
 
-The above code works OK in browsers that support newer versions of the anchor positioning spec, where anchor-positioned elements have their position adjusted automatically when anchors are transformed, but not in browsers that support older versions of the spec. We can detect these browsers using `@supports not named-feature(anchor-position-follows-transforms)`. In these cases, we update the positioned element's `left` value to `anchor(right)` plus half the `--anchor-length` custom property value when the anchor element is hovered or focused, so that it will remain in the correct position.
+We can detect browsers that don't automatically adjust transformed anchor-positioned elements when their anchors are transformed using `@supports not named-feature(anchor-position-follows-transforms)` and manually correct the positioned element's position by setting the `left` value to `anchor(right)` plus half the `--anchor-length` custom property value when the anchor element is hovered or focused:
 
-```css
+```css live-sample___named-feature
 @supports not named-feature(anchor-position-follows-transforms) {
   .anchor:hover + .positionedElem,
   .anchor:focus + .positionedElem {
@@ -460,6 +467,12 @@ The above code works OK in browsers that support newer versions of the anchor po
   }
 }
 ```
+
+#### Result
+
+{{embedlivesample("named-feature", "100%", 200)}}
+
+Hover or focus the anchor `<div>` to transform it; you should see the positioned `<div>` move over so that it is still positioned the same distance from the anchor's right edge, both in browsers with transform-aware anchor positioning, and those without.
 
 ## Specifications
 
