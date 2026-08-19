@@ -143,7 +143,7 @@ The table below describes the font technologies (`<font-tech>`), including color
 
 #### `named-feature()`
 
-This function checks if a browser supports the specified named feature. The following example returns true and applies the contained CSS styles if the browser supports the [`anchor-position-follows-transforms`](#anchor-position-follows-transforms) feature:
+The `named-feature()` function checks whether a browser supports the specified named feature. The following example returns true and applies the contained CSS styles if the browser supports the [`anchor-position-follows-transforms`](#anchor-position-follows-transforms) feature:
 
 ```css
 @supports named-feature(anchor-position-follows-transforms) {
