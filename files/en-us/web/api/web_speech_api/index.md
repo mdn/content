@@ -86,6 +86,8 @@ Specifically, where a defined policy blocks usage, any attempts to call the API'
 
 Our [Web Speech API examples](https://mdn.github.io/dom-examples/web-speech-api/) illustrate speech recognition and synthesis.
 
+Also see the [Web Speech API Playground](https://speech.evanliu.com/).
+
 ## Specifications
 
 {{Specifications}}
