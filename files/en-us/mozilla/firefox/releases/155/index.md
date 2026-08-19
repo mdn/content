@@ -50,9 +50,12 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### APIs -->
+### APIs
 
-<!-- #### DOM -->
+#### DOM
+
+- The {{domxref("SVGGraphicsElement.getBBox()")}} method now honors its [`options`](/en-US/docs/Web/API/SVGGraphicsElement/getBBox#options) argument, so the returned bounding box can include the element's stroke and markers, and can be clipped.
+  ([Firefox bug 2060873](https://bugzil.la/2060873)).
 
 <!-- #### Media, WebRTC, and Web Audio -->
 
