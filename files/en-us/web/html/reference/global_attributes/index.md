@@ -55,7 +55,7 @@ In addition to the basic HTML global attributes, the following global attributes
 - [`exportparts`](/en-US/docs/Web/HTML/Reference/Global_attributes/exportparts)
   - : Used to transitively export shadow parts from a nested shadow tree into a containing light tree.
 - [`headingoffset`](/en-US/docs/Web/HTML/Reference/Global_attributes/headingoffset) {{experimental_inline}}
-  - : Increases the computed heading level of the [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) inside the element, without changing the tags used to write them.
+  - : Increases the computed heading level of the [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) inside the element, without changing the elements used to write them.
 - [`headingreset`](/en-US/docs/Web/HTML/Reference/Global_attributes/headingreset) {{experimental_inline}}
   - : A boolean attribute that stops the `headingoffset` values of ancestor elements from applying to the headings inside the element.
 - [`hidden`](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden)

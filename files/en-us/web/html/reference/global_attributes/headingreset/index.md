@@ -3,25 +3,16 @@ title: "`headingreset` HTML global attribute"
 short-title: headingreset
 slug: Web/HTML/Reference/Global_attributes/headingreset
 page-type: html-attribute
-status:
-  - experimental
-browser-compat: html.global_attributes.headingreset
 sidebar: htmlsidebar
 ---
 
 {{SeeCompatTable}}
 
-The **`headingreset`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is a [boolean attribute](/en-US/docs/Glossary/Boolean/HTML) that stops the [`headingoffset`](/en-US/docs/Web/HTML/Reference/Global_attributes/headingoffset) values of ancestor elements from applying to the [headings](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) inside it.
+The **`headingreset`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) stops the [`headingoffset`](/en-US/docs/Web/HTML/Reference/Global_attributes/headingoffset) values of ancestor elements from applying to the [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) inside the element it is set on.
 
-## Syntax
+## Values
 
-```html
-<dialog headingreset>
-  <h1>This heading has a computed heading level of 1</h1>
-</dialog>
-```
-
-Like other boolean attributes, its presence enables it. The value is ignored, so `headingreset`, `headingreset=""`, and `headingreset="false"` all have the same effect.
+This is a [boolean attribute](/en-US/docs/Glossary/Boolean/HTML). Its presence enables it. The value is ignored, so `headingreset`, `headingreset=""`, and `headingreset="false"` all have the same effect.
 
 ## Description
 
