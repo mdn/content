@@ -144,7 +144,7 @@ The `<shape-radius>` arguments represent _rx_ and _ry_, the x-axis and y-axis ra
 
 ### Syntax for polygons
 
-The {{cssxref("basic-shape/polygon","polygon()")}} function defines a polygon using an optional first parameter containing values that modify the polygon's behavior, plus one or more parameters containing coordinate pairs. Each parameter is separated by a comma.
+The {{cssxref("basic-shape/polygon","polygon()")}} function defines a polygon using a set of comma-separated coordinate pairs, optionally preceded by an SVG {{SVGAttr("fill-rule")}}, a corner-rounding parameter, or both. 
 
 ```plain
 polygon( <'fill-rule'>? [ round <length> ]? , [ <length-percentage> <length-percentage> ]# )
