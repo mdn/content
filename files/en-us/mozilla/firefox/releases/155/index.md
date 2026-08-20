@@ -60,7 +60,11 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
   The {{domxref("SVGLengthList")}} interface already supports indexed setters.
   ([Firefox bug 2059426](https://bugzil.la/2059426)).
 
-<!-- #### Media, WebRTC, and Web Audio -->
+#### Media, WebRTC, and Web Audio
+
+- The [`error` event](/en-US/docs/Web/API/RTCDataChannel/error_event) fired on an {{domxref("RTCDataChannel")}} object may now report [`sctp-failure`](/en-US/docs/Web/API/RTCError/errorDetail#sctp-failure) in its {{domxref("RTCError.errorDetail", "error.errorDetail")}} property if the transport is closed due to an error.
+  In addition, {{domxref("RTCError")}} and {{domxref("RTCErrorEvent")}} are now available in dedicated workers (this exposure is not yet in the specification).
+  ([Firefox bug 1814460](https://bugzil.la/1814460)).
 
 <!-- #### Removals -->
 
