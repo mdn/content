@@ -83,13 +83,15 @@ A `<details>` widget can be in one of two states. The default _closed_ state dis
 
 When the user clicks on the widget or focuses it then presses the space bar, it "twists" open, revealing its contents. The common use of a triangle which rotates or twists around to represent opening or closing the widget is why these are sometimes called "twisty".
 
-You can use CSS to style the disclosure widget, and you can programmatically open and close the widget by setting/removing its [`open`](#open) attribute.
+You can programmatically open and close the widget by setting or removing its [`open`](#open) attribute.
 
-By default when closed, the widget is only tall enough to display the disclosure triangle and summary. When open, it expands to display the details contained within.
+By default, the element when closed is only tall enough to display the disclosure triangle and summary. When open, it expands to display the details contained within.
 
-To animate the transition between open and closed, use the {{cssxref("::details-content")}} pseudo-element.
+### Styling the `<details>` element
 
-Fully standards-compliant implementations automatically apply the CSS `{{cssxref("display")}}: list-item` to the {{HTMLElement("summary")}} element. You can use this or the {{cssxref("::marker")}} pseudo-element to [customize the disclosure widget](/en-US/docs/Web/HTML/Reference/Elements/summary#changing_the_summarys_icon).
+The `<summary>` element is automatically given a {{cssxref("display")} value of {{cssxref("<display-listitem>")}}, enabling you to style the disclosure icon using the {{cssxref("list-style-type")}} and {{cssxref("list-style-position")}} properties or the {{cssxref("::marker")}} pseudo-element. See also [Changing the summary's icon](/en-US/docs/Web/HTML/Reference/Elements/summary#changing_the_summarys_icon).
+
+You can style the content of the `<details>` element using the {{cssxref("::details-content")}} pseudo-element.
 
 ## Examples
 
