@@ -54,6 +54,8 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 #### DOM
 
+- The {{domxref("SVGAElement")}} interface now implements the [`HyperlinkElementUtils`](https://html.spec.whatwg.org/multipage/links.html#hyperlinkelementutils) mixin. As a result, SVG {{SVGElement("a")}} elements expose the same URL component properties as HTML {{HTMLElement("a")}} elements: {{domxref("SVGAElement.protocol", "protocol")}}, {{domxref("SVGAElement.username", "username")}}, {{domxref("SVGAElement.password", "password")}}, {{domxref("SVGAElement.host", "host")}}, {{domxref("SVGAElement.hostname", "hostname")}}, {{domxref("SVGAElement.port", "port")}}, {{domxref("SVGAElement.pathname", "pathname")}}, {{domxref("SVGAElement.search", "search")}}, and {{domxref("SVGAElement.hash", "hash")}}. The read-only {{domxref("SVGAElement.origin", "origin")}} property is also exposed.
+  ([Firefox bug 2058578](https://bugzil.la/2058578)).
 - The {{domxref("SVGNumberList")}}, {{domxref("SVGPointList")}}, {{domxref("SVGStringList")}}, and {{domxref("SVGTransformList")}} interfaces now support indexed setters. This means you can replace an item in the list using bracket notation, such as `transformList[0] = newTransform`, instead of calling {{domxref("SVGTransformList.replaceItem", "replaceItem()")}}.
   The {{domxref("SVGLengthList")}} interface already supports indexed setters.
   ([Firefox bug 2059426](https://bugzil.la/2059426)).
