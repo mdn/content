@@ -79,7 +79,7 @@ details.addEventListener("toggle", (event) => {
 
 ## Usage notes
 
-A `<details>` widget can be in one of two states. The default _closed_ state displays only the triangle and the label inside `<summary>` (or a {{Glossary("user agent")}}-defined default string if no `<summary>`).
+A `<details>` widget can be in one of two states. The default _closed_ state displays only the triangle and the label inside the enclosed `<summary>` element, or a {{Glossary("user agent")}}-defined default string if no `<summary>` element is defined.
 
 When the user clicks on the widget or focuses it then presses the space bar, it "twists" open, revealing its contents. The common use of a triangle which rotates or twists around to represent opening or closing the widget is why these are sometimes called "twisty".
 
