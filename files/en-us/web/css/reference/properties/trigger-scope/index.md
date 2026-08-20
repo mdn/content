@@ -81,7 +81,7 @@ This example demonstrates using the `trigger-scope` property to limit the scope 
 
 #### HTML
 
-We include three {{htmlelement("section")}} elements contains two {{htmlelement("div")}} elements: an `.animated` element and a `.trigger` element.
+We include three {{htmlelement("section")}} elements, each containing two {{htmlelement("div")}} elements: an `.animated` element and a `.trigger` element.
 
 Most of the HTML, including a [checkbox](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) toggle that enables or disables the `trigger-scope` property, has been hidden for brevity.
 
