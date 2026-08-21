@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Window.self
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`Window.self`** read-only property returns the window itself, as a {{glossary("WindowProxy")}}. It can be used with dot notation on a `window` object (that is, `window.self`) or standalone (`self`). The advantage of the standalone notation is that a similar notation exists for non-window contexts, such as in {{domxref("Worker", "Web Workers", "", 1)}}. By using `self`, you can refer to the global scope in a way that will work not only in a window context (`self` will resolve to `window.self`) but also in a worker context (`self` will then resolve to {{domxref("WorkerGlobalScope.self")}}).
 
