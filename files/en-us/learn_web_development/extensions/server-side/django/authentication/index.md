@@ -110,7 +110,7 @@ Start the development server and navigate to the admin site in your local web br
 
 ![Admin site - add groups or users](admin_authentication_add.png)
 
-First lets create a new group for our library members.
+First let's create a new group for our library members.
 
 1. Click the **Add** button (next to Group) to create a new _Group_; enter the **Name** "Library Members" for the group.
    ![Admin site - add group](admin_authentication_add_group.png)

@@ -141,7 +141,7 @@ The following sections explain some of the common things you'll see when working
 
 ### Helloworld Express
 
-First lets consider the standard Express [Hello World](https://expressjs.com/en/starter/hello-world/) example (we discuss each part of this below, and in the following sections).
+First let's consider the standard Express [Hello World](https://expressjs.com/en/starter/hello-world/) example (we discuss each part of this below, and in the following sections).
 
 > [!NOTE]
 > If you have Node and Express already installed (or if you install them as shown in the [next article](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment)), you can save this code in a text file called **app.js** and run it in a bash command prompt by calling:

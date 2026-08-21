@@ -8,7 +8,7 @@ sidebar: webdriver
 
 The **unknown method** error is a [WebDriver error](/en-US/docs/Web/WebDriver/Reference/Errors) that occurs when the driver does not recognize the [HTTP request method](/en-US/docs/Web/HTTP/Reference/Methods) used for the endpoint.
 
-WebDriver provides a largely REST-ish API and not all endpoints in this API has `GET`, `POST`, and `DELETE` methods. This error occurs when you try to call an endpoint with an HTTP request method it does not support.
+WebDriver provides a largely REST-ish API and not all endpoints in this API have `GET`, `POST`, and `DELETE` methods. This error occurs when you try to call an endpoint with an HTTP request method it does not support.
 
 ## Examples
 
