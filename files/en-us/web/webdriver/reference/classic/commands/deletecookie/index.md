@@ -33,7 +33,7 @@ The _Delete Cookie_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Comman
 - `Unexpected alert open`
   - : A user prompt, such as [`window.alert`](/en-US/docs/Web/API/Window/alert), blocks execution of the command until it is dealt with.
 - [`Invalid session id`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidSessionID)
-  - : Session does not exist.
+  - : The specified session does not exist.
 
 ## Examples
 

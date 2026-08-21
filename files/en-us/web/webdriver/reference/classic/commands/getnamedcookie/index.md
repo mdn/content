@@ -24,7 +24,7 @@ The _Get Named Cookie_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Com
 
 ### Return value
 
-A single **cookie object** with the following fields:
+A single cookie object with the following fields:
 
 - `name`
   - : The name of the cookie.
@@ -39,9 +39,9 @@ A single **cookie object** with the following fields:
 - `httpOnly`
   - : Whether the cookie is an HTTP-only cookie.
 - `expiry`
-  - : When the cookie expires, specified in seconds since the Unix epoch. Omitted for session cookies.
+  - : The cookie's expiry time in seconds since the Unix epoch. Omitted for session cookies.
 - `sameSite`
-  - : The cookie's [same-site policy](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value). One of `"Lax"`, `"Strict"`, or `"None"`.
+  - : The cookie's [same-site policy](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value). Possible values include `"Lax"`, `"Strict"`, and `"None"`. Defaults to `"None"` if omitted.
 
 ### Errors
 
@@ -52,7 +52,7 @@ A single **cookie object** with the following fields:
 - `Unexpected alert open`
   - : A user prompt, such as [`window.alert`](/en-US/docs/Web/API/Window/alert), blocks execution of the command until it is dealt with.
 - [`Invalid session id`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidSessionID)
-  - : Session does not exist.
+  - : The specified session does not exist.
 
 ## Examples
 

@@ -22,7 +22,7 @@ The _Get All Cookies_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Comm
 
 ### Return value
 
-An array of **cookie objects**. Each cookie object has the following fields:
+An array of cookie objects. Each cookie object has the following fields:
 
 - `name`
   - : The name of the cookie.
@@ -37,9 +37,9 @@ An array of **cookie objects**. Each cookie object has the following fields:
 - `httpOnly`
   - : Whether the cookie is an HTTP-only cookie.
 - `expiry`
-  - : When the cookie expires, specified in seconds since the Unix epoch. Omitted for session cookies.
+  - : The cookie's expiry time in seconds since the Unix epoch. Omitted for session cookies.
 - `sameSite`
-  - : The cookie's [same-site policy](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value). One of `"Lax"`, `"Strict"`, or `"None"`.
+  - : The cookie's [same-site policy](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value). Possible values include `"Lax"`, `"Strict"`, and `"None"`. Defaults to `"None"` if omitted.
 
 ### Errors
 
@@ -48,7 +48,7 @@ An array of **cookie objects**. Each cookie object has the following fields:
 - `Unexpected alert open`
   - : A user prompt, such as [`window.alert`](/en-US/docs/Web/API/Window/alert), blocks execution of the command until it is dealt with.
 - [`Invalid session id`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidSessionID)
-  - : Session does not exist.
+  - : The specified session does not exist.
 
 ## Examples
 

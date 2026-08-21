@@ -22,12 +22,12 @@ The _Add Cookie_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands)
 
 ### Payload
 
-The body is a JSON Object with a single `cookie` field whose value is a **cookie object**:
+The input is a JSON object with a single `cookie` key whose value is a cookie object with the following fields:
 
 - `name`
-  - : The name of the cookie. Required.
+  - : The name of the cookie.
 - `value`
-  - : The cookie value. Required.
+  - : The cookie value.
 - `path` {{optional_inline}}
   - : The cookie path. Defaults to `"/"`.
 - `domain` {{optional_inline}}
@@ -37,9 +37,9 @@ The body is a JSON Object with a single `cookie` field whose value is a **cookie
 - `httpOnly` {{optional_inline}}
   - : Whether the cookie is an HTTP-only cookie. Defaults to `false`.
 - `expiry` {{optional_inline}}
-  - : When the cookie expires, specified in seconds since the Unix epoch. Must be a number in the 0 to 2^53 − 1 range. If omitted, the cookie is a session cookie.
+  - : The cookie's expiry time in seconds since the Unix epoch. This value must be a number in the 0 to 2^53 − 1 range. If omitted, the cookie is treated as a session cookie.
 - `sameSite` {{optional_inline}}
-  - : The cookie's [same-site policy](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value). One of `"Lax"`, `"Strict"`, or `"None"`.
+  - : The cookie's [same-site policy](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value). Possible values include `"Lax"`, `"Strict"`, and `"None"`. Defaults to `"None"` if omitted.
 
 ### Return value
 
@@ -48,7 +48,7 @@ The body is a JSON Object with a single `cookie` field whose value is a **cookie
 ### Errors
 
 - [`Invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
-  - : The `cookie` object is missing, is not a JSON Object, is missing a required field, or one of its fields does not meet the type or value constraints.
+  - : The `cookie` object is missing, is not a JSON object, is missing a required field, or one of its fields does not meet the type or value constraints.
 - [`Invalid cookie domain`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidCookieDomain)
   - : Attempted to set a cookie on a domain that is different from the current browsing context's document domain.
 - `No such window`
@@ -58,7 +58,7 @@ The body is a JSON Object with a single `cookie` field whose value is a **cookie
 - `Unexpected alert open`
   - : A user prompt, such as [`window.alert`](/en-US/docs/Web/API/Window/alert), blocks execution of the command until it is dealt with.
 - [`Invalid session id`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidSessionID)
-  - : Session does not exist.
+  - : The specified session does not exist.
 
 ## Examples
 
