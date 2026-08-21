@@ -14,6 +14,7 @@ alphanumerals
 ambisonic
 amore
 analyzability
+animateable-feature
 ANMF
 anonymization
 antialiasing
@@ -100,10 +101,12 @@ CCPA
 CCPL
 CELP
 CGATS
+chatbots
 cheatsheet
 checkboard
 checkedness
 checkmarks
+cheesemakers
 childlist
 chipsets
 choosable
@@ -157,6 +160,7 @@ datestamped
 DBFS
 DCDM
 DCSP
+debiased
 decodability
 Deinonychus
 demi
@@ -249,6 +253,7 @@ fragmentainers
 framebuffers
 framebusting
 frontmost
+fuhao
 Fullband
 fullscreened
 fullwidth
@@ -312,6 +317,7 @@ iconset
 idents
 IDOR
 IERS
+immediates
 IMSC
 Indo-Pacific
 inferencing
@@ -395,6 +401,7 @@ maplike
 MBASW
 Mbit
 Mbps
+mediacapabilities
 metalness
 metastring
 microcontrollers
@@ -583,6 +590,7 @@ reauthenticated
 reauthentication
 redirections
 redisplaying
+refbox
 regionless
 reimplementation
 remarketing
@@ -659,6 +667,7 @@ side-scrollers
 sideload
 sideloaded
 SIDX
+signedness
 significand
 singlecast
 singlecasts
@@ -786,6 +795,7 @@ Tanuki
 targetable
 taskbars
 taskboard
+tealish
 teleporting
 telepresence
 texels

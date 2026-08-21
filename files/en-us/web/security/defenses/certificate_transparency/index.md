@@ -11,7 +11,7 @@ In this way, certificate authorities (CAs) can be subject to much greater public
 
 ## Background
 
-CT logs are built upon the foundation of the _Merkle tree_ data structure. Nodes are labelled with the _cryptographic hashes_ of their child nodes. Leaf nodes contain hashes of actual pieces of data. The label of the root node therefore depends on all other nodes in the tree.
+CT logs are built upon the foundation of the _Merkle tree_ data structure. Nodes are labeled with the _cryptographic hashes_ of their child nodes. Leaf nodes contain hashes of actual pieces of data. The label of the root node therefore depends on all other nodes in the tree.
 
 In the context of certificate transparency, the data hashed by the leaf nodes are the certificates that have been issued by the various different CAs operating today. Certificate inclusion can be verified via an _audit proof_ which can be generated and verified efficiently, in logarithmic O(log n) time.
 
@@ -33,8 +33,7 @@ With the latter methods, servers will need to be updated to send the required da
 
 ## Browser Requirements
 
-Google Chrome 107 and later requires CT log inclusion for all certificates issued with a notBefore date of after 30 April 2018. Users will be prevented from visiting sites using non-compliant TLS certificates.
-Chrome had previously required CT inclusion for _Extended Validation_ (EV) and Symantec-issued certificates.
+Chrome validates a website's TLS certificates for compliance against the [Chrome CT Policy](https://googlechrome.github.io/CertificateTransparency/ct_policy.html). Publicly-trusted certificates must be accompanied by SCTs satisfying the policy and successfully validate.
 
 Apple [requires](https://support.apple.com/en-gb/103214) a varying number of SCTs in order for Safari and other servers to trust server certificates.
 

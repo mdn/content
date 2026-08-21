@@ -3,12 +3,10 @@ title: "InstallEvent: InstallEvent() constructor"
 short-title: InstallEvent()
 slug: Web/API/InstallEvent/InstallEvent
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.InstallEvent.InstallEvent
 ---
 
-{{APIRef("Service Workers API")}}{{SeeCompatTable}}
+{{APIRef("Service Workers API")}}
 
 The **`InstallEvent()`** constructor creates a new {{domxref("InstallEvent")}} object.
 

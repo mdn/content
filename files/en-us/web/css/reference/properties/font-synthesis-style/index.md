@@ -29,6 +29,8 @@ font-synthesis-style: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `auto`
   - : Indicates that the missing oblique typeface may be synthesized by the browser if needed.
 - `none`

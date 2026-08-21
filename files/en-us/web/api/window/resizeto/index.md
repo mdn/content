@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Window.resizeTo
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
 The **`Window.resizeTo()`** method dynamically resizes the
 window.

@@ -3,10 +3,12 @@ title: "Request: targetAddressSpace property"
 short-title: targetAddressSpace
 slug: Web/API/Request/targetAddressSpace
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.Request.targetAddressSpace
 ---
 
-{{APIRef("Fetch API")}}{{AvailableInWorkers}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`targetAddressSpace`** read-only property of the {{DOMxRef("Request")}} interface returns the request's target address space, which indicates whether it is intended to be a loopback, local, or public request.
 

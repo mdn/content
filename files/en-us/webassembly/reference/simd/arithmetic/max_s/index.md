@@ -3,6 +3,7 @@ title: "max_s: Wasm SIMD arithmetic instruction"
 short-title: max_s
 slug: WebAssembly/Reference/SIMD/arithmetic/max_s
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.max_s
 sidebar: webassemblysidebar
 ---
 
@@ -66,6 +67,14 @@ value_type.max_s
 | `i8x16.max_s` | `0xfd 120:u32` | `i8x16.max_s` => `0xfd 0x78`      |
 | `i16x8.max_s` | `0xfd 152:u32` | `i16x8.max_s` => `0xfd 0x98 0x01` |
 | `i32x4.max_s` | `0xfd 184:u32` | `i32x4.max_s` => `0xfd 0xb8 0x01` |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

@@ -155,8 +155,8 @@ This sample animation uses {{cssxref("display")}}, {{cssxref("grid-template-colu
 - [Subgrid](/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid)
   - : What subgrid does with use cases and design patterns that subgrid solves.
 
-- [Masonry layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Masonry_layout)
-  - : Details what masonry layout is and it is used.
+- [Grid lanes layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_lanes)
+  - : Details what grid lanes layout is and how to use it.
 
 - [Box alignment in CSS grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
   - : How box alignment works in the context of grid layout.
@@ -173,14 +173,17 @@ This sample animation uses {{cssxref("display")}}, {{cssxref("grid-template-colu
 - {{cssxref("align-content")}}
 - {{cssxref("align-items")}}
 - {{cssxref("align-self")}}
-- {{cssxref("column-gap")}}
-- {{cssxref("gap")}}
 - {{cssxref("justify-content")}}
 - {{cssxref("justify-items")}}
 - {{cssxref("justify-self")}}
 - {{cssxref("place-content")}}
 - {{cssxref("place-items")}}
 - {{cssxref("place-self")}}
+
+[CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module
+
+- {{cssxref("column-gap")}}
+- {{cssxref("gap")}}
 - {{cssxref("row-gap")}}
 
 [CSS box sizing](/en-US/docs/Web/CSS/Guides/Box_sizing) module

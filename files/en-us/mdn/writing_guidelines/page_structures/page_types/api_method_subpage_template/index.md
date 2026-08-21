@@ -39,7 +39,6 @@ sidebar: mdnsidebar
 >     If the method is static, then the slug must have a `_static` suffix, like: `Web/API/NameOfTheParentInterface/NameOfTheMethod_static`. This enables us to support instance and static methods which have the same name.
 >
 >     Note that the name of the method in the slug omits the parenthesis (it ends in `NameOfTheMethod` not `NameOfTheMethod()`).
->
 > - **page-type**
 >   - : The `page-type` key for Web/API methods is either `web-api-instance-method` (for instance methods) or `web-api-static-method` (for static methods).
 > - **status**

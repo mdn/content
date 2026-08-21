@@ -1,12 +1,13 @@
 ---
-title: "local.tee: Wasm text instruction"
+title: "local.tee: Wasm variable instruction"
 short-title: local.tee
 slug: WebAssembly/Reference/Variables/local.tee
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.local_tee
 sidebar: webassemblysidebar
 ---
 
-The **`local.tee`** instruction sets the value of a local variable and loads the value onto the stack.
+The **`local.tee`** [variable instruction](/en-US/docs/WebAssembly/Reference/Variables) sets the value of a local variable and loads the value onto the stack.
 
 The instruction is named after the T-splitter used in plumbing.
 
@@ -45,3 +46,11 @@ local.tee $val
 | Instruction | Binary opcode |
 | ----------- | ------------- |
 | `local.tee` | `0x22`        |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

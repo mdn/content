@@ -12,9 +12,25 @@ The `browser.createUserContext` [command](/en-US/docs/Web/WebDriver/Reference/Bi
 ## Syntax
 
 ```json-nolint
+/* Without optional parameters */
 {
   "method": "browser.createUserContext",
   "params": {}
+}
+
+/* With optional parameters */
+{
+  "method": "browser.createUserContext",
+  "params": {
+    "acceptInsecureCerts": true,
+    "proxy": {
+      "proxyType": "manual",
+      "httpProxy": "127.0.0.1:80"
+    },
+    "unhandledPromptBehavior": {
+      "default": "accept"
+    }
+  }
 }
 ```
 

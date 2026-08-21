@@ -8,10 +8,7 @@ browser-compat: api.HTMLTableElement.deleteCaption
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLTableElement.deleteCaption()`** method removes the
-{{HtmlElement("caption")}} element from a given {{HtmlElement("table")}}. If there is no
-`<caption>` element associated with the table, this method does
-nothing.
+The **`deleteCaption()`** method of the {{domxref("HTMLTableElement")}} interface removes the first {{HTMLElement("caption")}} element child from a given {{HTMLElement("table")}}, if any.
 
 ## Syntax
 
@@ -54,7 +51,7 @@ This example uses JavaScript to delete a table's caption.
 ### JavaScript
 
 ```js
-let table = document.querySelector("table");
+const table = document.querySelector("table");
 table.deleteCaption();
 ```
 
@@ -69,3 +66,9 @@ table.deleteCaption();
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("HTMLTableElement.createCaption()")}}
+- {{domxref("HTMLTableElement.deleteTFoot()")}}
+- {{domxref("HTMLTableElement.deleteTHead()")}}

@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Window.blur_event
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 The **`blur`** event fires when an element has lost focus.
 
@@ -29,13 +29,6 @@ onblur = (event) => { }
 A {{domxref("FocusEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxref("Event")}}.
 
 {{InheritanceDiagram("FocusEvent")}}
-
-## Event properties
-
-_This interface also inherits properties from its parent {{domxref("UIEvent")}}, and indirectly from {{domxref("Event")}}._
-
-- {{domxref("FocusEvent.relatedTarget")}}
-  - : An {{domxref("EventTarget")}} representing a secondary target for this event. In some cases (such as when tabbing in or out a page), this property may be set to `null` for security reasons.
 
 ## Examples
 

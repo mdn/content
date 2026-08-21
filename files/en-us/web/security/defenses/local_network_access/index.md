@@ -25,7 +25,7 @@ Local network access mitigates these risks, controlling local network access via
 
 ## Address spaces
 
-Local network access defines three different **address spaces**, which all network addresses are categorised under:
+Local network access defines three different **address spaces**, which all network addresses are categorized under:
 
 - Local
   - : A local address is only accessible on the local network; its target will differ on different networks. For example, `192.168.0.1`.
@@ -34,15 +34,16 @@ Local network access defines three different **address spaces**, which all netwo
 - Public
   - : A public address is available from anywhere on the internet; its target is the same for all devices globally. For example, `104.18.27.120` (the IP address of `example.com`).
 
-Depending on which address space a request URL is categorised in, the browser will handle its permissions differently.
+Depending on which address space a request URL is categorized in, the browser will handle its permissions differently.
 
-## What request types are effected?
+## What request types are affected?
 
 Local network access restrictions apply to:
 
 - Subresource requests
 - {{domxref("Window.fetch", "fetch()")}} requests
 - Navigating subframes
+- [Service Workers](/en-US/docs/Web/API/Service_Worker_API), including requests made via {{domxref("WindowClient.navigate()")}} when the navigated {{domxref("WindowClient")}} is a subframe
 - [WebSockets](/en-US/docs/Web/API/WebSockets_API)
 - [WebTransport](/en-US/docs/Web/API/WebTransport_API)
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)
@@ -98,7 +99,7 @@ Some addresses, such as private IP literals (for example, `192.168.0.1`) and `.l
 
 You can control access to local and loopback addresses at the document level using the {{httpheader('Permissions-Policy/local-network','local-network')}} and {{httpheader('Permissions-Policy/loopback-network','loopback-network')}} {{httpheader('Permissions-Policy')}} directives.
 
-The default allowlist for these directives is `self`, which means that requests will be allowed in the current document and embedded browsing contexts in the same origin only. To allow local or loopback requests at the document level for a particular origin, use these directives in an `Permissions-Policy` HTTP header:
+The default allowlist for these directives is `self`, which means that requests will be allowed in the current document and embedded browsing contexts in the same origin only. To allow local or loopback requests at the document level for a particular origin, use these directives in a `Permissions-Policy` HTTP header:
 
 ```http
 Permissions-Policy: local-network=("https://example.com")
@@ -137,8 +138,9 @@ However, the `local-network-access` permission continues to be supported for bac
 When querying the permission status of `local-network-access`, for example:
 
 ```js
-navigator.permissions.query({ name: "local-network-access" })
-.then((result) => { ... });
+navigator.permissions.query({ name: "local-network-access" }).then((result) => {
+  // ...
+});
 ```
 
 The returned result is a combination of the state of the two more recent permissions. If only one of `local-network` or `loopback-network` has a non-`prompt` state, that value will be returned. If either permission was previously `denied`, then the `local-network-access` permission will also return `denied`. The following table summarizes all possible permission results:

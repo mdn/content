@@ -50,6 +50,8 @@ It also provides messaging APIs enabling you to:
 
 - {{WebExtAPIRef("runtime.getBackgroundPage()")}}
   - : Retrieves the [Window](/en-US/docs/Web/API/Window) object for the background page running inside the current extension.
+- {{WebExtAPIRef("runtime.getDocumentId()")}}
+  - : Returns the document ID of any window global or frame element.
 - {{WebExtAPIRef("runtime.openOptionsPage()")}}
   - : Opens your extension's [options page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages).
 - {{WebExtAPIRef("runtime.getContexts()")}}

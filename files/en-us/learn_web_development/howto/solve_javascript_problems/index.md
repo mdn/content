@@ -168,7 +168,7 @@ For more information on JavaScript debugging, see [JavaScript debugging and erro
 - [How do you create your own functions?](/en-US/docs/Learn_web_development/Core/Scripting/Build_your_own_function)
 - [How do you run (call, or invoke) a function?](/en-US/docs/Learn_web_development/Core/Scripting/Functions#invoking_functions)
 - [What is an anonymous function?](/en-US/docs/Learn_web_development/Core/Scripting/Functions#anonymous_functions_and_arrow_functions)
-- [How do you specify parameters (or arguments) when invoking a function?](/en-US/docs/Learn_web_development/Core/Scripting/Functions#function_parameters)
+- [How do you specify parameters (or arguments) when invoking a function?](/en-US/docs/Learn_web_development/Core/Scripting/Functions#function_arguments_and_parameters)
 - [What is function scope?](/en-US/docs/Learn_web_development/Core/Scripting/Functions#function_scope_and_conflicts)
 - [What are return values, and how do you use them?](/en-US/docs/Learn_web_development/Core/Scripting/Return_values)
 

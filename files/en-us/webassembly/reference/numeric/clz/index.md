@@ -1,12 +1,13 @@
 ---
-title: "clz: Wasm text instruction"
+title: "clz: Wasm numeric instruction"
 short-title: clz
 slug: WebAssembly/Reference/Numeric/clz
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.clz
 sidebar: webassemblysidebar
 ---
 
-The **`clz`** instructions, short for _count leading zeros_, are used to count the amount of zeros at the start of the numbers binary representation.
+The **`clz`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric)s, short for _count leading zeros_, are used to count the amount of zeros at the start of the numbers binary representation.
 
 {{InteractiveExample("Wat Demo: clz", "tabbed-taller")}}
 
@@ -54,3 +55,11 @@ i32.clz
 | ----------- | ------------- |
 | `i32.clz`   | `0x67`        |
 | `i64.clz`   | `0x79`        |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

@@ -75,7 +75,7 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
     A `name` with a value of `'_charset_'` indicates that the part is not an HTML field, but the default charset to use for parts without explicit charset information.
 
 - `filename`
-  - : Is followed by a string containing the original name of the file transmitted. This parameter provides mostly indicative information. The suggestions in [RFC2183](https://www.rfc-editor.org/rfc/rfc2183#section-2.3) apply:
+  - : Is followed by a string containing the original name of the file transmitted. This parameter provides mostly indicative information. The suggestions in [RFC2183](https://www.rfc-editor.org/info/rfc2183/#section-2.3) apply:
     - Prefer ASCII characters if possible (the client may percent-encode it, as long as the server implementation decodes it).
     - Any path information should be stripped, such as by replacing `/` with `_`.
     - When writing to disk, it should not overwrite an existing file.

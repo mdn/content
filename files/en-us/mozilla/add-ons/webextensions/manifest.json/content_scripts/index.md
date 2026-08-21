@@ -128,7 +128,7 @@ This table details all the properties you can include.
           Defaults to <code>"author"</code>.
         </p>
         <p>
-          This property is case incentive insensitive in Firefox and Safari.
+          This property is case insensitive in Firefox and Safari.
         </p>
       </td>
     </tr>

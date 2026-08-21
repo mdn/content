@@ -420,7 +420,7 @@ The live example below has the `direction` property set to `rtl` to force a righ
 
 ## Alignment and `flex-direction`
 
-The direction of `start` of the line will also change if you change the `flex-direction` property — for example, using `row-reverse` instead of `row`.
+The direction of `flex-start` of the line will also change if you change the `flex-direction` property — for example, using `row-reverse` instead of `row`. The directions of `start` and `end` are unaffected by `flex-direction` changes.
 
 In this next example, `flex-direction: row-reverse` and `justify-content: flex-end` define the direction and location of the items within the flex container. In a left to right language, the items line up on the left. Try changing `flex-direction: row-reverse` to `flex-direction: row`. You will see that the items now move to the right-hand side, and the visual order of the items is reversed.
 
@@ -451,7 +451,7 @@ In this next example, `flex-direction: row-reverse` and `justify-content: flex-e
 
 {{EmbedLiveSample("justify-content-reverse")}}
 
-While this may all seem a little confusing, the rule to remember is that unless you do something to change it, flex items lay themselves out in the direction that words are laid out in the language of your document along the inline, row axis. `start` and `flex-start` will be where the beginning of a sentence of text would start.
+While this may all seem a little confusing, the rule to remember is that unless you do something to change it, flex items lay themselves out in the direction that words are laid out in the language of your document along the inline, row axis. `flex-start` will be where the beginning of a sentence of text would start.
 
 ![Diagram showing start on the left and end on the right.](align8.png)
 
@@ -459,11 +459,10 @@ You can switch them to display in the block direction for the language of your d
 
 ![Diagram showing start at the top and end at the bottom.](align10.png)
 
-If you change `flex-direction` to one of the reverse values, they will lay themselves out from the end axis and in the reverse order to the way words are written in the language of your document. Then, `start` and `flex-start` will change to the end of that axis — so to the location where your lines would wrap if working in rows, or at the end of your last paragraph of text in the block direction.
+If you change `flex-direction` to one of the reverse values, they will lay themselves out from the end axis and in the reverse order to the way words are written in the language of your document. Then, `flex-start` will change to the end of that axis — so to the location where your lines would wrap if working in rows, or at the end of your last paragraph of text in the block direction.
 
-![Diagram showing start on the right and end on the left.](align9.png)
-
-![Diagram showing end at the top and start at the bottom](align11.png)
+![Diagram showing flex-start on the right and flex-end on the left.](align9.png)
+![Diagram showing flex-start on the bottom and flex-end on the top.](align11.png)
 
 ## Using auto margins for main axis alignment
 

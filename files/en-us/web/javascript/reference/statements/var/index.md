@@ -142,7 +142,14 @@ var a;
 console.log(a); // 2; not undefined
 ```
 
-`var` declarations can also be in the same scope as a `function` declaration. In this case, the `var` declaration's initializer always overrides the function's value, regardless of their relative position. This is because function declarations are hoisted before any initializer gets evaluated, so the initializer comes later and overrides the value.
+`var` declarations can also be in the same scope as a `function` declaration. Both the function declaration and the `var` declaration are hoisted to the top, so the function value is only accessible from the start of its scope until the variable's initializer or first assignment, regardless of the two declarations' relative positions in the source code.
+
+```js
+console.log(typeof a); // "function"
+function a() {}
+var a;
+console.log(typeof a); // "function"
+```
 
 ```js
 var a = 1;

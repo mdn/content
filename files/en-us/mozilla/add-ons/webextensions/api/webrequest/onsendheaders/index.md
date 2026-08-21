@@ -51,7 +51,7 @@ Events have three functions:
 ### details
 
 - `documentId` {{optional_inline}}
-  - : `string`. The UUID of the document making the request.
+  - : `string`. The UUID of the document making the request. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
 - `documentLifecycle`
   - : `string`. The lifecycle the document is in. Returns the values `"prerender"`, `"active"`, `"cached"`, or `"pending_deletion"`.
 - `cookieStoreId`
@@ -71,8 +71,8 @@ Events have three functions:
 
     The `originUrl` is often but not always the same as the `documentUrl`. For example, if a page contains an iframe, and the iframe contains a link that loads a new document into the iframe, then the `documentUrl` for the resulting request will be the iframe's parent document, but the `originUrl` will be the URL of the document in the iframe that contained the link.
 
-- `parentDocumentId`{{optional_inline}}
-  - : `string`. A UUID of the parent document owning the frame. Not set if there is no parent.
+- `parentDocumentId` {{optional_inline}}
+  - : `string`. A UUID of the parent document owning the frame. Not set if there is no parent. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
 - `parentFrameId`
   - : `integer`. ID of the frame that contains the frame which sent the request. Set to -1 if no parent frame exists.
 - `proxyInfo`
