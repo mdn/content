@@ -9,8 +9,6 @@ browser-compat: css.properties.clip
 sidebar: cssref
 ---
 
-{{Deprecated_Header}}
-
 > [!WARNING]
 > Authors are encouraged to use the {{cssxref("clip-path")}} property instead.
 

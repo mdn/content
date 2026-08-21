@@ -9,7 +9,7 @@ status:
 browser-compat: api.VRStageParameters.sizeX
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 The **`sizeX`** read-only property of the {{domxref("VRStageParameters")}} interface _returns the width_ of the play-area bounds in meters.
 

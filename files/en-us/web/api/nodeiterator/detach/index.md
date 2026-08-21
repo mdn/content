@@ -8,7 +8,7 @@ status:
 browser-compat: api.NodeIterator.detach
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}
+{{APIRef("DOM")}}
 
 The **`NodeIterator.detach()`** method is a no-op, kept for
 backward compatibility only.

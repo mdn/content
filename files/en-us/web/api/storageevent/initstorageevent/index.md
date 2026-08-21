@@ -8,7 +8,7 @@ status:
 browser-compat: api.StorageEvent.initStorageEvent
 ---
 
-{{ApiRef("Web Storage API")}}{{deprecated_header}}
+{{ApiRef("Web Storage API")}}
 
 The **`StorageEvent.initStorageEvent()`** method is used to initialize the value of a {{ domxref("StorageEvent") }}.
 

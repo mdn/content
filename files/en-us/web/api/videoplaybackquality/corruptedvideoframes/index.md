@@ -8,7 +8,7 @@ status:
 browser-compat: api.VideoPlaybackQuality.corruptedVideoFrames
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 The {{domxref("VideoPlaybackQuality")}} interface's read-only
 **`corruptedVideoFrames`** property the number of corrupted

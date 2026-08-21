@@ -9,7 +9,7 @@ status:
 browser-compat: api.PaymentRequest.shippingaddresschange_event
 ---
 
-{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Non-standard_Header}}
 
 The **`shippingaddresschange`** event is sent to the {{domxref("PaymentRequest")}} object when the user selects a shipping address or changes details of their shipping address.
 
