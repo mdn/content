@@ -54,10 +54,10 @@ An object property is either a data property or an accessor property, but it can
 
 ```js
 const obj = {
-  set prop() {
+  set prop(val) {
     // setter, the code executed when setting obj.prop
   },
-}
+};
 ```
 
 Properties defined using this syntax are own properties of the created object, and they are configurable and enumerable.
