@@ -37,7 +37,7 @@ The error might appear when attempting to produce an {{jsxref("Array")}} or {{js
 - Non-integer length, via the constructor or setting the {{jsxref("Array/length", "length")}} property. (The `ArrayBuffer` constructor coerces the length to an integer, but the `Array` constructor does not.)
 - Exceeding the maximum length supported by the platform. For arrays, the maximum length is 2<sup>32</sup>-1. For `ArrayBuffer`, the maximum length is 2<sup>31</sup>-1 (2GiB-1) on 32-bit systems, or 2<sup>33</sup> (8GiB) on 64-bit systems. This can happen via the constructor, setting the `length` property, or array methods that implicitly set the length property (such as {{jsxref("Array/push", "push")}} and {{jsxref("Array/concat", "concat")}}).
 
-If you are creating an `Array` using the constructor, you probably want to use the literal notation instead, as the first argument is interpreted as the length of the `Array`. Otherwise, you might want to clamp the length before setting the length property, or using it as argument of the constructor.
+If you are creating an `Array` using the constructor, you probably want to use the literal notation instead, as the first argument is interpreted as the length of the `Array`. Otherwise, you might want to clamp the length before setting the length property, or using it as an argument of the constructor.
 
 ## Examples
 
