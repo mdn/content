@@ -80,7 +80,7 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - A [module](/en-US/docs/Web/JavaScript/Guide/Modules) that fails to load because of a network error or an incorrect [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types) is no longer cached as a failure, so importing the same module specifier again can succeed once the server recovers.
   This applies to JavaScript, [JSON](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#json_modules_type_json), [CSS](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#css_modules_type_css), and [text](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#text_modules_type_text) modules, loaded either statically or with [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import), in both windows and workers.
-  Relatedly, [`<link rel="modulepreload">`](/en-US/docs/Web/HTML/Reference/Attributes/rel/modulepreload) now fires the [`load`](/en-US/docs/Web/API/HTMLElement/load_event) event rather than [`error`](/en-US/docs/Web/API/HTMLElement/error_event) for modules that are already fetched or still fetching, and a module script now loads even if an earlier `modulepreload` of the same URL failed its [integrity check](/en-US/docs/Web/Security/Defenses/Subresource_Integrity).
+  Relatedly, [`<link rel="modulepreload">`](/en-US/docs/Web/HTML/Reference/Attributes/rel/modulepreload) now fires the {{domxref("HTMLElement/load_event", "load")}} event rather than {{domxref("HTMLElement/error_event", "error")}} for modules that are already fetched or still fetching, and a module script now loads even if an earlier `modulepreload` of the same URL failed its [integrity check](/en-US/docs/Web/Security/Defenses/Subresource_Integrity).
   ([Firefox bug 2055211](https://bugzil.la/2055211) and [Firefox bug 2052949](https://bugzil.la/2052949)).
 
 <!-- #### Removals -->
@@ -109,7 +109,7 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
     ([Firefox bug 2007200](https://bugzil.la/2007200)).
   - The {{domxref("WebTransportDatagramDuplexStream.createWritable()")}} method, which returns a {{domxref("WebTransportDatagramsWritable")}} stream for sending datagrams, with {{domxref("WebTransportDatagramsWritable.sendGroup", "sendGroup")}} and {{domxref("WebTransportDatagramsWritable.sendOrder", "sendOrder")}} properties for prioritizing it against other senders.
     ([Firefox bug 2007174](https://bugzil.la/2007174)).
-  - Subprotocol negotiation. The [`WebTransport()`](/en-US/docs/Web/API/WebTransport/WebTransport) constructor now accepts a `protocols` option listing the application protocols the client supports, which is sent to the server in the `wt-available-protocols` request header, and the protocol chosen by the server is exposed in the `WebTransport.protocol` property.
+  - Subprotocol negotiation. The {{domxref("WebTransport.WebTransport", "WebTransport()")}} constructor now accepts a `protocols` option listing the application protocols the client supports, which is sent to the server in the `wt-available-protocols` request header, and the protocol chosen by the server is exposed in the `WebTransport.protocol` property.
     ([Firefox bug 2007150](https://bugzil.la/2007150)).
   - The `WebTransport.draining` property, which returns a promise that is fulfilled when the server asks the client to stop opening new streams.
     Note that this is not yet fulfilled for server-initiated draining.
@@ -133,7 +133,7 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 #### Media, WebRTC, and Web Audio
 
-- The [`error` event](/en-US/docs/Web/API/RTCDataChannel/error_event) fired on an {{domxref("RTCDataChannel")}} object may now report [`sctp-failure`](/en-US/docs/Web/API/RTCError/errorDetail#sctp-failure) in its {{domxref("RTCError.errorDetail", "error.errorDetail")}} property if the transport is closed due to an error.
+- The {{domxref("RTCDataChannel/error_event", "error")}} event fired on an {{domxref("RTCDataChannel")}} object may now report [`sctp-failure`](/en-US/docs/Web/API/RTCError/errorDetail#sctp-failure) in its {{domxref("RTCError.errorDetail", "error.errorDetail")}} property if the transport is closed due to an error.
   In addition, {{domxref("RTCError")}} and {{domxref("RTCErrorEvent")}} are now available in dedicated workers (this exposure is not yet in the specification).
   ([Firefox bug 1814460](https://bugzil.la/1814460)).
 - The {{domxref("RTCPeerConnection.sctp")}} property now returns an {{domxref("RTCSctpTransport")}} at the times required by the specification, including in the `have-remote-offer` signaling state, where it was previously `null`.
@@ -202,7 +202,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **CSS basic shapes allow `farthest-corner` and `closest-corner` keywords** (Nightly): `layout.css.ellipse-corners.enabled`
 
-  The `farthest-corner` and `closest-corner` keywords can be used for specifying the radii values of the [`ellipse()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/ellipse) and [`circle()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/circle) CSS basic shapes.
+  The `farthest-corner` and `closest-corner` keywords can be used for specifying the radii values of the {{cssxref("basic-shape/ellipse", "ellipse()")}} and {{cssxref("basic-shape/circle", "circle()")}} CSS basic shapes.
 
 - **Customizable `<select>` elements**: `dom.select.customizable_select.enabled`
 
@@ -218,7 +218,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **RegExp buffer boundaries**: `javascript.options.experimental.regexp_buffer_boundaries`
 
-  The [TC39 RegExp buffer boundaries proposal](https://github.com/tc39/proposal-regexp-buffer-boundaries) adds the `\A`, `\z`, and `\Z` escapes to [regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions), which match the start and the end of the input regardless of whether the [`m` flag](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline) is set.
+  The [TC39 RegExp buffer boundaries proposal](https://github.com/tc39/proposal-regexp-buffer-boundaries) adds the `\A`, `\z`, and `\Z` escapes to [regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions), which match the start and the end of the input regardless of whether the {{jsxref("RegExp/multiline", "m")}} flag is set.
 
 - **`border-area` value for `background-clip`**: `layout.css.background-clip.border-area.enabled`
 
