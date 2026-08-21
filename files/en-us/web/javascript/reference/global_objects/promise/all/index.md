@@ -331,6 +331,7 @@ Promise.all([p1.catch((error) => error), p2.catch((error) => error)]).then(
 ## See also
 
 - {{jsxref("Promise")}}
+- {{jsxref("Promise.allKeyed()")}}
 - {{jsxref("Promise.allSettled()")}}
 - {{jsxref("Promise.any()")}}
 - {{jsxref("Promise.race()")}}

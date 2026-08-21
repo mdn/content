@@ -7,7 +7,9 @@ browser-compat: javascript.builtins.Promise.allKeyed
 sidebar: jsref
 ---
 
-The **`Promise.allKeyed()`** static method is like {{jsxref("Promise.all()")}}, except that it takes an object of promises and returns a promise of an object. This allows you to associate results with semantically meaningful keys, instead of arbitrary array ordering which can be difficult to maintain.
+The **`Promise.allKeyed()`** static method is like {{jsxref("Promise.all()")}}, except that instead of using arrays/iterables as input/output, it uses objects. It takes an object where each own key is associated with a promise, and returns a single {{jsxref("Promise")}}. This returned promise fulfills when all of the input's promises fulfill, with an object of the same keys mapped to the corresponding fulfillment values. It rejects when any of the input's promises rejects, with this first rejection reason.
+
+Compared to {{jsxref("Promise.all()")}}, `Promise.allKeyed()` allows you to associate results with semantically meaningful keys, instead of arbitrary array ordering which can be difficult to maintain.
 
 ## Syntax
 
@@ -18,7 +20,7 @@ Promise.allKeyed(object)
 ### Parameters
 
 - `object`
-  - : An ordinary object. All of its [own enumerable properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties), whether the key is a string or a symbol, should have {{jsxref("Promise")}} values.
+  - : An object. All of its [own enumerable properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties), whether the key is a string or a symbol, should have {{jsxref("Promise")}} values.
 
 ### Return value
 
@@ -88,6 +90,8 @@ console.log(result);
 //   },
 // }
 ```
+
+For more examples related to concurrency behavior common to `Promise.all()` and `Promise.allKeyed()`, see {{jsxref("Promise.all()")}}.
 
 ## Specifications
 

@@ -7,7 +7,9 @@ browser-compat: javascript.builtins.Promise.allSettledKeyed
 sidebar: jsref
 ---
 
-The **`Promise.allSettledKeyed()`** static method is like {{jsxref("Promise.allSettled()")}}, except that it takes an object of promises and returns a promise of an object. This allows you to associate results with semantically meaningful keys, instead of arbitrary array ordering which can be difficult to maintain.
+The **`Promise.allSettledKeyed()`** static method is like {{jsxref("Promise.allSettled()")}}, except that instead of using arrays/iterables as input/output, it uses objects. It takes an object where each own key is associated with a promise, and returns a single {{jsxref("Promise")}}. This returned promise fulfills when all of the input's promises settle, with an object of the same keys mapped to objects that describe the outcome of the corresponding promise.
+
+Compared to {{jsxref("Promise.allSettled()")}}, `Promise.allSettledKeyed()` allows you to associate results with semantically meaningful keys, instead of arbitrary array ordering which can be difficult to maintain.
 
 ## Syntax
 
@@ -18,14 +20,14 @@ Promise.allSettledKeyed(object)
 ### Parameters
 
 - `object`
-  - : An ordinary object. All of its [own enumerable properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties), whether the key is a string or a symbol, should have {{jsxref("Promise")}} values.
+  - : An object. All of its [own enumerable properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties), whether the key is a string or a symbol, should have {{jsxref("Promise")}} values.
 
 ### Return value
 
 A {{jsxref("Promise")}} that is:
 
 - **Already fulfilled**, if the `object` passed has no own enumerable properties.
-- **Asynchronously fulfilled**, when all promises in the given `object` have settled (either fulfilled or rejected). The fulfillment value is an object, with the same keys in the same order as the given `object`, and each property's value being an object describing the outcome of one promise in the `iterable`, in the order of the promises passed, regardless of completion order. Each outcome object has the following properties:
+- **Asynchronously fulfilled**, when all promises in the given `object` have settled (either fulfilled or rejected). The fulfillment value is an object, with the same keys in the same order as the given `object`, and each property's value being an object describing the outcome of the corresponding promise in `object`, regardless of completion order. Each outcome object has the following properties:
   - `status`
     - : A string, either `"fulfilled"` or `"rejected"`, indicating the eventual state of the promise.
   - `value`
@@ -37,7 +39,7 @@ A {{jsxref("Promise")}} that is:
 
 ## Description
 
-The `Promise.allSettledKeyed()` method is one of the [promise concurrency](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#promise_concurrency) methods. It performs the same kind of task as {{jsxref("Promise.allSettled()")}}. `Promise.allSettledKeyed()` is preferred when you don't already have an array of promises and/or you are immediately destructuring the results; ead {{jsxref("Promise.allKeyed()")}} for more description.
+The `Promise.allSettledKeyed()` method is one of the [promise concurrency](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#promise_concurrency) methods. It performs the same kind of task as {{jsxref("Promise.allSettled()")}}. `Promise.allSettledKeyed()` is preferred when you don't already have an array of promises and/or you are immediately destructuring the results; see {{jsxref("Promise.allKeyed()")}} for more description.
 
 ## Examples
 
@@ -63,7 +65,7 @@ const promises = {
   },
 };
 
-const result = await Promise.allKeyed(promises);
+const result = await Promise.allSettledKeyed(promises);
 console.log(result);
 // {
 //   a: { status: "fulfilled", value: "a" },
@@ -73,6 +75,8 @@ console.log(result);
 //   },
 // }
 ```
+
+For more examples related to concurrency behavior common to `Promise.allSettled()` and `Promise.allSettledKeyed()`, see {{jsxref("Promise.allSettled()")}}.
 
 ## Specifications
 
