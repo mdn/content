@@ -517,6 +517,23 @@ These give developers more flexibility when structuring and loading JavaScript m
 - `dom.multiple_import_maps.enabled`
   - : Set to `true` to enable.
 
+### Buffer boundary assertions in regular expressions
+
+The [`\A`, `\z`, and `\Z` buffer boundary assertions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Buffer_boundary_assertion) are now supported.
+`\A` and `\z` allow you to match the start or end of the entire string, while `\Z` matches the end of the string even if it has a line terminator.
+The assertions are unaffected by the [`m`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline) flag (unlike `^` and `$`) and can only be used in [unicode mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) (with `u` or `v` flag set).
+([Firefox bug 2047706](https://bugzil.la/2047706)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 155           | No                  |
+| Developer Edition | —             | —                   |
+| Beta              | —             | —                   |
+| Release           | —             | —                   |
+
+- `javascript.options.experimental.regexp_buffer_boundaries`
+  - : Set to `true` to enable on Nightly.
+
 ## APIs
 
 ### Crash Reporting
