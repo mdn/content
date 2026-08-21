@@ -152,7 +152,7 @@ Let's look at a basic example that includes all the essential features you'd nee
   width="100"
   height="30"
   alt="Login"
-  src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png" />
+  src="https://mdn.github.io/shared-assets/images/examples/login-button.png" />
 ```
 
 {{ EmbedLiveSample('Essential_image_input_features', 600, 50) }}
@@ -192,7 +192,7 @@ Let's look at a basic example that includes all the essential features you'd nee
 
 ### Using the x and y data points
 
-When you submit a form using a button created with `<input type="image">`, two extra data points are submitted to the server automatically by the browser — `x` and `y`. You can see this in action in our [X Y coordinates example](https://mdn.github.io/learning-area/html/forms/image-type-example/xy-coordinates-example.html).
+When you submit a form using a button created with `<input type="image">`, two extra data points are submitted to the server automatically by the browser — `x` and `y`. You can see this in action in our [X Y coordinates example](https://mdn.github.io/learning-area/html/forms/image-type-xy-coords/).
 
 When you click on the image to submit the form, you'll see the data appended to the URL as parameters, such as `?x=52&y=55`. If the image input has a [`name`](/en-US/docs/Web/HTML/Reference/Elements/input#name) attribute, then the specified name is prefixed to each coordinate entry's name with a dot separator. For example, if the `name` were `position`, then the returned coordinates would be formatted in the URL as `?position.x=52&position.y=55`.
 
@@ -209,8 +209,6 @@ You can use the {{cssxref("object-position")}} property to adjust the positionin
 ### A login form
 
 The following example shows the same button as before, but included in the context of a typical login form.
-
-{{ EmbedLiveSample('A_login_form', 600, 170) }}
 
 #### HTML
 
@@ -229,7 +227,7 @@ The following example shows the same button as before, but included in the conte
     <input
       id="image"
       type="image"
-      src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"
+      src="https://mdn.github.io/shared-assets/images/examples/login-button.png"
       alt="Login"
       width="100" />
   </div>
@@ -253,11 +251,13 @@ label {
 }
 ```
 
+#### Result
+
+{{ EmbedLiveSample('A_login_form', 600, 170) }}
+
 ### Adjusting the image position and scaling
 
 In this example, we adapt the previous example to set aside more space for the image and then adjust the actual image's size and positioning using {{cssxref("object-fit")}} and {{cssxref("object-position")}}.
-
-{{EmbedLiveSample("Adjusting_the_image_position_and_scaling", 600, 300)}}
 
 #### HTML
 
@@ -276,7 +276,7 @@ In this example, we adapt the previous example to set aside more space for the i
     <input
       id="image"
       type="image"
-      src="https://raw.githubusercontent.com/mdn/learning-area/master/html/forms/image-type-example/login.png"
+      src="https://mdn.github.io/shared-assets/images/examples/login-button.png"
       alt="Login"
       width="200"
       height="100" />
@@ -304,6 +304,10 @@ label {
   background-color: #dddddd;
 }
 ```
+
+#### Result
+
+{{EmbedLiveSample("Adjusting_the_image_position_and_scaling", 600, 300)}}
 
 Here, `object-position` is configured to draw the image in the top-right corner of the element, while `object-fit` is set to `contain`, which indicates that the image should be drawn at the largest size that will fit within the element's box without altering its aspect ratio. Note the visible grey background of the element still visible in the area not covered by the image.
 

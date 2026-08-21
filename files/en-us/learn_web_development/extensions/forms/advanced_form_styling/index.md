@@ -275,7 +275,7 @@ You can see the live result:
 
 We've also created a couple of other examples to give you more ideas:
 
-- [Styled radio buttons](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html): Custom radio button styling.
+- [Styled radio buttons](https://mdn.github.io/learning-area/html/forms/custom-radio-styles/index.html): Custom radio button styling.
 - [Toggle switch example](https://mdn.github.io/learning-area/html/forms/toggle-switch-example/): A checkbox styled to look like a toggle switch.
 
 ## What can be done about the "ugly" elements?
