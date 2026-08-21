@@ -32,7 +32,7 @@ The `\A` and `\z` assertions are only useful when the `m` flag is used. Without 
 
 Suppose you have a pattern that needs to match either at the start of the whole string or the start of one line. You can turn on `m` so that you can use `^` to refer to the latter, and then use `\A` to refer to the former (you also need to turn on `u` so you can use `\A`).
 
-Suppose you are only interested in line comments on their own lines, which can be either a hashbang at start of file or a line comment.
+This example matches line comments on their own lines, which can be a [hashbang](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#hashbang_comments) at start of a file or a line comment on any line. It does not match line comments at the end of a line containing code.
 
 ```js
 function findLineComments(code) {
