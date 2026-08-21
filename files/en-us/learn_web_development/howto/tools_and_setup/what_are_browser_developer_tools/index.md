@@ -116,7 +116,7 @@ Each browser's JavaScript debugger is divided into three panes. The layout of th
 
 The first pane on the left contains the list of files associated with the page you are debugging. Select the file you want to work with from this list. Click a file to select it and view its contents in the Debugger's center pane.
 
-![Snippet of the sources pane of the debugger tab in the browser developer tools. The files related to the current page that you are debugging are visible under the folder whose name is same as the url of the site that is open in the current browser tab.](file_list.png)
+![Snippet of the sources pane of the debugger tab in the browser developer tools. The files related to the current page that you are debugging are visible under the folder whose name is the same as the URL of the site that is open in the current browser tab.](file_list.png)
 
 #### Source code
 

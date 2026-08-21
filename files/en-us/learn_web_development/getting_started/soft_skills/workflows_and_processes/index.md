@@ -63,7 +63,7 @@ On MDN, we are mainly concerned with the front-end part, but even that can be br
 
 - You will probably use a JavaScript framework (such as [React](/en-US/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)) to define the components that go together to create the user interface.
 - The framework will probably use some kind of templating language (such as [Mustache](https://mustache.github.io/)) to define the HTML structure but also provide functionality to dynamically include variable content.
-- You will include information to style your content via CSS in a way that is compatible with the framework. This might written in pure CSS, or a CSS framework (such as [Tailwind](https://tailwindcss.com/)) or preprocessor (such as [Sass](https://sass-lang.com/)).
+- You will include information to style your content via CSS in a way that is compatible with the framework. This might be written in pure CSS, or a CSS framework (such as [Tailwind](https://tailwindcss.com/)) or preprocessor (such as [Sass](https://sass-lang.com/)).
 - A JavaScript project should include tests, to make sure that any new code additions don't break its functionality. Tests are usually implemented using a testing framework (like [Jest](https://jestjs.io/)).
 - Larger websites will use a packaging/build tool (such as [Parcel](https://parceljs.org/)) to improve performance by keeping file sizes down, removing unused components from the production code, etc.
 - And so on.
