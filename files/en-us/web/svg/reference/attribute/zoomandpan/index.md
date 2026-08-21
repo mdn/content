@@ -10,8 +10,6 @@ browser-compat:
 sidebar: svgref
 ---
 
-{{Deprecated_Header}}
-
 The **`zoomAndPan`** attribute specifies whether the SVG document can be magnified and panned.
 
 Magnification in this context means the effect of a supplemental scale and translate transformation on the outermost SVG document fragment.

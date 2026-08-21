@@ -8,7 +8,7 @@ status:
 browser-compat: api.PerformanceNavigation.redirectCount
 ---
 
-{{APIRef("Performance API")}}{{Deprecated_Header}}
+{{APIRef("Performance API")}}
 
 The legacy
 **`PerformanceNavigation.redirectCount`**

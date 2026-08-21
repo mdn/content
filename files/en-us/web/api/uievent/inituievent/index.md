@@ -8,7 +8,7 @@ status:
 browser-compat: api.UIEvent.initUIEvent
 ---
 
-{{APIRef("UI Events")}} {{deprecated_header}}
+{{APIRef("UI Events")}}
 
 The **`UIEvent.initUIEvent()`** method initializes a UI event
 once it's been created.
