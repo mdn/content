@@ -8,7 +8,7 @@ status:
 browser-compat: api.WorkletSharedStorage.length
 ---
 
-{{APIRef("Shared Storage API")}}{{deprecated_header}}
+{{APIRef("Shared Storage API")}}
 
 The **`length()`** method of the
 {{domxref("WorkletSharedStorage")}} interface returns the number of entries currently stored in shared storage for the current origin.

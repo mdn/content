@@ -9,7 +9,7 @@ status:
 browser-compat: api.CSSPrimitiveValue.getStringValue
 ---
 
-{{APIRef("CSSOM")}}{{deprecated_header}}{{non-standard_header}}
+{{APIRef("CSSOM")}}{{non-standard_header}}
 
 The **`getStringValue()`** method of the
 {{domxref("CSSPrimitiveValue")}} interface is used to get a string value. If this CSS

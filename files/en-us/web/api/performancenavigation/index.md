@@ -7,7 +7,7 @@ status:
 browser-compat: api.PerformanceNavigation
 ---
 
-{{APIRef("Performance API")}}{{Deprecated_Header}}
+{{APIRef("Performance API")}}
 
 The legacy **`PerformanceNavigation`** interface represents information about how the navigation to the current document was done.
 

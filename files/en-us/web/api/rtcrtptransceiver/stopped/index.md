@@ -9,7 +9,7 @@ status:
 browser-compat: api.RTCRtpTransceiver.stopped
 ---
 
-{{APIRef("WebRTC")}}{{deprecated_header}}{{non-standard_header}}
+{{APIRef("WebRTC")}}{{non-standard_header}}
 
 > [!NOTE]
 > Instead of using this deprecated property, compare {{domxref("RTCRtpTransceiver.currentDirection", "currentDirection")}} to `"stopped"`.
