@@ -8,7 +8,7 @@ status:
 browser-compat: api.WindowSharedStorage.selectURL
 ---
 
-{{APIRef("Shared Storage API")}}{{deprecated_header}}
+{{APIRef("Shared Storage API")}}
 
 The **`selectURL()`** method of the
 {{domxref("WindowSharedStorage")}} interface executes a [URL Selection operation](/en-US/docs/Web/API/SharedStorageSelectURLOperation) that is registered in a module added to the current origin's {{domxref("SharedStorageWorklet")}}.

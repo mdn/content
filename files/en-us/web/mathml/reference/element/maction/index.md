@@ -8,8 +8,6 @@ browser-compat: mathml.elements.maction
 sidebar: mathmlref
 ---
 
-{{Deprecated_Header}}
-
 The **`<maction>`** [MathML](/en-US/docs/Web/MathML) element allows to bind actions to mathematical expressions. By default, only the first child is rendered but some browsers may take into account `actiontype` and `selection` attributes to implement custom behaviors.
 
 > [!NOTE]

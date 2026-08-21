@@ -9,7 +9,7 @@ status:
 browser-compat: api.SharedStorage.delete
 ---
 
-{{APIRef("Shared Storage API")}}{{deprecated_header}}{{non-standard_header}}
+{{APIRef("Shared Storage API")}}{{non-standard_header}}
 
 The **`delete()`** method of the {{domxref("SharedStorage")}} interface deletes an existing key-value pair from the current origin's shared storage.
 
