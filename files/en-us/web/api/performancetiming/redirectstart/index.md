@@ -18,7 +18,7 @@ The legacy
 **`PerformanceTiming.redirectStart`**
 read-only property returns an `unsigned long long` representing the moment,
 in milliseconds since the UNIX epoch, the first HTTP redirect starts. If there is no
-redirect, or if one of the redirect is not of the same origin, the value returned is
+redirect, or if one of the redirects is not of the same origin, the value returned is
 `0`.
 
 ## Value
