@@ -54,7 +54,7 @@ The primary use case is to load non-JS modules, such as JSON modules and CSS mod
 import data from "https://example.com/data.json";
 ```
 
-On the web, each import statement results in a HTTP request. The response is then prepared into a JavaScript value and made available to the program by the runtime. For example, the response may look like this:
+On the web, each import statement results in an HTTP request. The response is then prepared into a JavaScript value and made available to the program by the runtime. For example, the response may look like this:
 
 ```http
 HTTP/1.1 200 OK
