@@ -7,7 +7,9 @@ browser-compat: api.CSSRule
 
 {{APIRef("CSSOM")}}
 
-The **`CSSRule`** interface represents a single CSS rule. There are several types of rules which inherit properties from `CSSRule`.
+The **`CSSRule`** interface of the [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) represents a single CSS rule.
+
+There are several types of rules which inherit properties from `CSSRule`.
 
 - {{DOMXRef("CSSGroupingRule")}}
 - {{DOMXRef("CSSStyleRule")}}
