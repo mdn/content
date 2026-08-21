@@ -3,7 +3,9 @@ title: CSS flexible box layout
 short-title: Flexible box layout
 slug: Web/CSS/Guides/Flexible_box_layout
 page-type: css-module
-spec-urls: https://drafts.csswg.org/css-flexbox/
+spec-urls:
+  - https://drafts.csswg.org/css-flexbox-2/
+  - https://drafts.csswg.org/css-flexbox/
 sidebar: cssref
 ---
 
@@ -54,6 +56,7 @@ body {
 - {{cssxref("flex-direction")}}
 - {{cssxref("flex-flow")}}
 - {{cssxref("flex-grow")}}
+- {{cssxref("flex-line-count")}}
 - {{cssxref("flex-shrink")}}
 - {{cssxref("flex-wrap")}}
 - {{cssxref("justify-content")}}

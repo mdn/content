@@ -23,14 +23,14 @@ The text is filled using the current `fillStyle`.
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
   ctx.font = "48px serif";
   ctx.fillText("Hello world", 10, 50);
 }
 ```
 
 ```html hidden
-<canvas id="canvas" width="300" height="100"></canvas>
+<canvas id="my-canvas" width="300" height="100"></canvas>
 ```
 
 ```js hidden
@@ -45,14 +45,14 @@ The text is filled using the current `strokeStyle`.
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
   ctx.font = "48px serif";
   ctx.strokeText("Hello world", 10, 50);
 }
 ```
 
 ```html hidden
-<canvas id="canvas" width="300" height="100"></canvas>
+<canvas id="my-canvas" width="300" height="100"></canvas>
 ```
 
 ```js hidden
@@ -86,12 +86,12 @@ This example demonstrates the various `textBaseline` property values.
 See the [`CanvasRenderingContext2D.textBaseline`](/en-US/docs/Web/API/CanvasRenderingContext2D/textBaseline) page for more information and detailed examples.
 
 ```html hidden live-sample___textBaseline
-<canvas id="canvas" width="400" height="100"></canvas>
+<canvas id="my-canvas" width="400" height="100"></canvas>
 ```
 
 ```js live-sample___textBaseline
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
   ctx.font = "48px serif";
 
   ctx.textBaseline = "hanging";
@@ -129,11 +129,5 @@ function draw() {
   text.width; // 16;
 }
 ```
-
-## Accessibility concerns
-
-The `<canvas>` element is just a bitmap and does not provide information about any drawn objects. Text written on canvas can cause legibility issues with users relying on screen magnification. The pixels within a canvas element do not scale and can become blurry with magnification. This is because they are not a vector but letter-shaped collection of pixels. When zooming in on it, the pixels become bigger.
-
-Canvas content is not exposed to accessibility tools like semantic HTML is. In general, you should avoid using canvas in an accessible website or app. An alternative is to use HTML elements or SVG instead of canvas.
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Applying_styles_and_colors", "Web/API/Canvas_API/Tutorial/Using_images")}}

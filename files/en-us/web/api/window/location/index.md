@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Window.location
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The read-only **`location`** property of the {{domxref("Window")}} interface returns a {{domxref("Location")}} object with information about the current location of the document.
 

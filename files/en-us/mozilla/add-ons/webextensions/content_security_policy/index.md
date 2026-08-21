@@ -63,7 +63,7 @@ These policies are applied to any extension that has not explicitly set its own 
 
 ### Location of script and object resources
 
-Under the default CSP, you can only load code that is local to the extension. The CSP limits {{CSP("script-src")}} to secure sources only, which covers [\<script>](/en-US/docs/Web/HTML/Reference/Elements/script) resources, [ES6 modules](/en-US/docs/Web/JavaScript/Guide/Modules) and [web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers). In browsers that support obsolete [plugins](/en-US/docs/Glossary/Plugin), the {{CSP("object-src")}} directive is also restricted. For more information on object-src in extensions, see the WECG issue [Remove object-src from the CSP (at least in MV3)](https://github.com/w3c/webextensions/issues/204)).
+Under the default CSP, you can only load code that is local to the extension. The CSP limits {{CSP("script-src")}} to secure sources only, which covers [\<script>](/en-US/docs/Web/HTML/Reference/Elements/script) resources, [ES6 modules](/en-US/docs/Web/JavaScript/Guide/Modules) and [web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers). In browsers that support obsolete [plugins](/en-US/docs/Glossary/Plugin), the {{CSP("object-src")}} directive is also restricted. For more information on object-src in extensions, see the WECG issue [Remove object-src from the CSP (at least in MV3)](https://github.com/w3c/webextensions/issues/204).
 
 For example, consider a line like this in an extension's document:
 
