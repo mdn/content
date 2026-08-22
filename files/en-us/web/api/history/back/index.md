@@ -35,7 +35,10 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : Thrown if the associated document is not fully active. Browsers also throttle navigations and may throw this error, generate a warning, or ignore the call if it's called too frequently.
+  - : Thrown if the associated document is not fully active.
+
+> [!NOTE]
+> Calling `back()` too frequently may be blocked by the user agent. When blocked, the call is silently ignored — no exception is thrown. The exact rate limit is implementation-defined.
 
 ## Examples
 
