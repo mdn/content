@@ -8,152 +8,245 @@ page-type: guide
 
 **XML namespace** is a standardized mechanism that allows identifiers (element or attribute names) defined by different specifications with different semantics to coexist in the same XML document without ambiguity.
 
-Several XML languages are relevant to the web. [HTML](/en-US/docs/Web/HTML) (although it also has its own syntax) uses `http://www.w3.org/1999/xhtml`, [SVG](/en-US/docs/Web/SVG) uses `http://www.w3.org/2000/svg`, and [MathML](/en-US/docs/Web/MathML) uses `http://www.w3.org/1998/Math/MathML`. XML also defines reserved namespaces for features such as `xml:lang` and for namespace declarations themselves. This guide explains how these namespaces are represented and manipulated through the DOM.
+In the [Anatomy of the DOM](/en-US/docs/Web/API/Document_Object_Model/Anatomy_of_the_DOM) guide, we introduced the basic data associated with [`Element`](/en-US/docs/Web/API/Document_Object_Model/Anatomy_of_the_DOM#element) and [`Attr`](/en-US/docs/Web/API/Document_Object_Model/Anatomy_of_the_DOM#attr) nodes, which include the {{domxref("Element.tagName", "tagName")}} and {{domxref("Attr.name", "name")}} properties. These properties return the _qualified name_. In the DOM, there are actually four properties that pertain to the element or attribute's name:
 
-a HTML
+- The **namespace** is a namespace URI or `null`. It's returned by the {{domxref("Element.namespaceURI")}} or {{domxref("Attr.namespaceURI")}} property.
+- The **local name** identifies the element or attribute within that namespace. It's returned by the {{domxref("Element.localName")}} or {{domxref("Attr.localName")}} property.
+- The **namespace prefix** is a short name that is bound to the namespace URI in the current XML namespace context. It's returned by the {{domxref("Element.prefix")}} or {{domxref("Attr.prefix")}} property.
+- The **qualified name** is the local name by itself when there is no prefix, or the prefix and local name joined by a colon when there is one. It's returned by the {{domxref("Element.tagName")}} (but uppercased if in HTML) or {{domxref("Attr.name")}} property.
+
+The namespace URI is an identifier. Although it often looks like a web address, it does not have to identify a resource that can be retrieved from the web. Applications compare the strings; no requests are ever sent to the URI. However, by convention, the URI points to a domain that the standard body controls to avoid collisions.
+
+Several XML languages are relevant to the web, and each defines elements and attributes in their namespace. [HTML](/en-US/docs/Web/HTML) (although it also has its own syntax) uses `http://www.w3.org/1999/xhtml`, [SVG](/en-US/docs/Web/SVG) uses `http://www.w3.org/2000/svg`, and [MathML](/en-US/docs/Web/MathML) uses `http://www.w3.org/1998/Math/MathML`. The {{Glossary("XLink")}} namespace `http://www.w3.org/1999/xlink` is now deprecated for web purposes. XML also defines two reserved namespaces, `xml` and `xmlns`, for features such as `xml:lang` and for namespace declarations themselves. This guide explains how these namespaces are represented and manipulated through the DOM.
 
 > [!WARNING]
-> **XML namespace declarations are very restricted in HTML documents.** When markup is parsed as `text/html`, `xmlns` attributes do not bind prefixes or change an element's namespace, and the namespace prefix syntax usually does not work. This guide mainly applies to XML documents, with occasional references to HTML behavior.
+> **XML namespace declarations are very restricted in HTML documents.** This guide mainly applies to XML documents, with occasional references to HTML behavior (see [Namespaces in HTML](#namespaces_in_html)).
 
-## Element and attribute names
+## XML element and attribute names
 
-In the [Anatomy of the DOM](/en-US/docs/Web/API/Document_Object_Model/Anatomy_of_the_DOM) guide, we introduced the basic data associated with [`Element`](/en-US/docs/Web/API/Document_Object_Model/Anatomy_of_the_DOM#element) and [`Attr`](/en-US/docs/Web/API/Document_Object_Model/Anatomy_of_the_DOM#attr) nodes, which include the {{domxref("Element.tagName", "tagName")}} and {{domxref("Attr.name", "name")}} properties.
+### The default namespace
 
-- **In HTML documents:** Namespace declarations in markup do not work as they do in XML. The HTML parser chooses the HTML, SVG, or MathML namespace from HTML parsing rules rather than from author-defined prefix bindings; arbitrary XML namespace declarations require an XML document.
-- Why namespaces let XML vocabularies such as HTML, SVG, and MathML use the same local names without collisions.
-- A namespace is identified by a namespace URI string; the URI is an identifier and does not need to be retrievable.
-- The difference between a namespace, a namespace prefix, a local name, and a qualified name (`prefix:localName`).
-- Prefixes are aliases, not namespace identities: different prefixes can bind to the same namespace, and the same prefix can bind to different namespaces in different scopes.
-- The difference between a null namespace and a default namespace, including the normalization of an empty namespace string to `null` in DOM APIs.
-- Namespace declaration attributes: `xmlns` for the default namespace and `xmlns:prefix` for a prefixed binding.
-- The reserved `xml` prefix and XML namespace (`http://www.w3.org/XML/1998/namespace`), and the reserved `xmlns` name and XMLNS namespace (`http://www.w3.org/2000/xmlns/`).
-- The standard HTML (`http://www.w3.org/1999/xhtml`), SVG (`http://www.w3.org/2000/svg`), and MathML (`http://www.w3.org/1998/Math/MathML`) namespace URIs.
+In XML, if an element name does not have an explicit [namespace prefix](#the_namespace_prefix), its namespace is defined by the closest `xmlns` attribute (either on the element itself or on the closest ancestor element). If there's no such `xmlns` declaration, the namespace is `null` (the `null` namespace functions just like any other namespace). The namespace established by the `xmlns` declaration (or its lack thereof) is the _default namespace_.
 
-XML namespaces make it possible to use elements and attributes from different XML vocabularies in the same document without name collisions. A namespace is identified by a **namespace URI**, such as `http://www.w3.org/2000/svg` for SVG.
+```js
+// The utility function for creating XML documents
+const xml = (strings, ...values) =>
+  new DOMParser().parseFromString(
+    String.raw({ raw: strings }, ...values),
+    "application/xml",
+  );
 
-The namespace URI is an identifier. Although it often looks like a web address, it does not have to identify a resource that can be retrieved from the web. Applications compare the URI strings; they do not fetch the addresses to determine what the namespaces mean.
+// No xmlns declaration -> namespace is null
+const doc = xml`<parent></parent>`;
+console.log(doc.querySelector("parent").namespaceURI); // null
 
-For example, this SVG document contains two elements named `title`. One belongs to SVG, while the other belongs to an application-specific metadata vocabulary:
-
-```xml
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:meta="https://example.com/metadata">
-  <title>An SVG title</title>
-  <meta:title>A metadata title</meta:title>
-</svg>
+// The xmlns attribute applies to the element itself and nested elements
+const doc2 = xml`<parent xmlns="https://developer.mozilla.org/">
+  <child><grandchild></grandchild></child>
+</parent>`;
+console.log(doc2.querySelector("parent").namespaceURI); // https://developer.mozilla.org/
+console.log(doc2.querySelector("child").namespaceURI); // https://developer.mozilla.org/
+console.log(doc2.querySelector("grandchild").namespaceURI); // https://developer.mozilla.org/
 ```
 
-The two elements have the same **local name**, `title`, but different namespace URIs. Their namespace/local-name pairs therefore identify different kinds of elements.
+For all APIs that deal with namespace identifiers, the empty string is equivalent to `null`. So for example, you can set `xmlns=""` to reset to the null namespace.
 
-### Namespaces in HTML
-
-Namespace declarations in markup only have their XML meaning when the document is parsed as XML, such as when SVG is served as `image/svg+xml` or XHTML is served as `application/xhtml+xml`.
-
-When a document is parsed as `text/html`, an `xmlns` attribute does not select a namespace, declare an arbitrary prefix, or change how descendants are parsed. Instead, the HTML parser assigns namespaces using fixed rules:
-
-- Most elements are placed in the HTML namespace.
-- A `<svg>` element and its foreign-content descendants are placed in the SVG namespace.
-- A `<math>` element and its foreign-content descendants are placed in the MathML namespace.
-- A fixed set of attributes in SVG and MathML content, such as `xml:lang` and `xlink:href`, are assigned to their predefined namespaces.
-
-For example, a `<svg>` element embedded in an HTML document is placed in the SVG namespace because its local name is `svg`, not because of an `xmlns` attribute. Adding another `xmlns` value would not change the namespace chosen by the HTML parser.
-
-Namespace-aware DOM APIs are not subject to this parsing restriction. Scripts running in an HTML document can use methods such as {{domxref("Document/createElementNS", "createElementNS()")}} and {{domxref("Element/setAttributeNS", "setAttributeNS()")}} to create elements and attributes in any namespace. However, if arbitrary namespace declarations need to be interpreted directly from source markup, the document must use XML syntax and an XML MIME type.
-
-### Local names, prefixes, and qualified names
-
-A namespaced element or attribute has several related parts:
-
-- Its **namespace** is a namespace URI or `null`.
-- Its **local name** identifies the element or attribute within that namespace.
-- Its **namespace prefix** is a short name that is bound to the namespace URI in the current XML namespace context. A prefix is optional.
-- Its **qualified name** is the local name by itself when there is no prefix, or the prefix and local name joined by a colon when there is one.
-
-In the preceding example, the two `title` elements have the following names:
-
-| Markup         | Namespace URI                  | Prefix | Local name | Qualified name |
-| -------------- | ------------------------------ | ------ | ---------- | -------------- |
-| `<title>`      | `http://www.w3.org/2000/svg`   | `null` | `title`    | `title`        |
-| `<meta:title>` | `https://example.com/metadata` | `meta` | `title`    | `meta:title`   |
-
-The namespace and local name determine the identity of a name. The prefix does not. Multiple prefixes can be bound to the same namespace URI, so these two elements have the same namespace and local name despite having different qualified names:
-
-```xml
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:a="https://example.com/metadata"
-  xmlns:b="https://example.com/metadata">
-  <a:title>First title</a:title>
-  <b:title>Second title</b:title>
-</svg>
+```js
+const doc = xml`<parent xmlns="https://developer.mozilla.org/">
+  <child xmlns="">
+    <grandchild></grandchild>
+  </child>
+</parent>`;
+console.log(doc.querySelector("parent").namespaceURI); // https://developer.mozilla.org/
+console.log(doc.querySelector("child").namespaceURI); // null
+console.log(doc.querySelector("grandchild").namespaceURI); // null
 ```
 
-Conversely, a prefix can be rebound to a different namespace URI in a nested scope. Code must not assume that a particular prefix always identifies the same namespace. It should use the namespace URI and local name when comparing or locating namespaced nodes.
+Attributes do not use the default namespace; unprefixed attributes always use the `null` namespace. The only exception is the `xmlns` attribute itself, which uses the XMLNS namespace, `http://www.w3.org/2000/xmlns/`.
 
-### Default and null namespaces
-
-A declaration written as `xmlns="namespace URI"` defines the **default namespace** for its element and, unless overridden, its descendant elements. In the first example, the default namespace declaration places the unprefixed `svg` and `title` element names in the SVG namespace.
-
-A default namespace is an in-scope namespace binding. It is different from the **null namespace**, which means that a DOM element or attribute has no namespace at all. DOM namespace APIs represent the null namespace with `null`. For the namespace arguments accepted by most namespace-aware DOM methods, the empty string is treated as `null` as well.
-
-The default namespace applies to unprefixed element names, but it does not apply to unprefixed attribute names. Consider the attributes on this SVG element:
-
-```xml
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:meta="https://example.com/metadata"
-  viewBox="0 0 100 100"
-  meta:viewBox="overview"
-  xml:lang="en"></svg>
+```js
+const doc = xml`<parent xmlns="https://developer.mozilla.org/" foo="bar">
+  <child foo="bar"></child>
+</parent>`;
+console.log(doc.querySelector("parent").getAttributeNode("foo").namespaceURI);
+// null
+console.log(doc.querySelector("parent").getAttributeNode("xmlns").namespaceURI);
+// http://www.w3.org/2000/xmlns/
+console.log(doc.querySelector("child").getAttributeNode("foo").namespaceURI);
+// null
 ```
 
-The `svg` element is in the SVG namespace. Its unprefixed `viewBox` attribute is in the null namespace, while `meta:viewBox` is in the metadata namespace. The two attributes can coexist because an attribute is identified by its namespace URI and local name, not by its local name alone. The `xml:lang` attribute is in the reserved XML namespace.
+In all examples above, because we've never used the namespace prefix syntax, the `prefix` property is always `null`, even when there is a non-null `namespaceURI`.
 
-### Namespace declaration attributes
+### The namespace prefix
 
-XML provides two forms of namespace declaration:
+The namespace prefix syntax allows a specific element to use a non-default namespace or a specific attribute to use a non-null namespace. The syntax is `prefix:name`, where `prefix` is the _namespace prefix_ and `name` is the _local name_.
 
-- `xmlns="namespace URI"` binds the default namespace.
-- `xmlns:prefix="namespace URI"` binds `prefix` to the namespace URI.
+By default, only two valid namespace prefix identifiers exist: `xmlns` and `xml`.
 
-Namespace declarations are themselves represented as attributes in the XMLNS namespace, `http://www.w3.org/2000/xmlns/`. A default declaration has the local name `xmlns` and no prefix. A prefixed declaration has the prefix `xmlns` and uses the declared prefix as its local name. For example, `xmlns:meta` has the prefix `xmlns` and the local name `meta`.
-
-Again, this description applies to XML parsing. On an HTML element parsed from `text/html`, an `xmlns` attribute is placed in the null namespace and has no namespace-declaration effect. The HTML parser recognizes `xmlns` and `xmlns:xlink` as namespaced attributes only in its SVG and MathML foreign-content handling, and even there the parser—not the declaration's value—determines the namespace of elements.
-
-### Reserved namespaces and common namespace URIs
-
-The `xml` and `xmlns` prefixes have predefined meanings:
-
+- `xmlns` is bound to the XMLNS namespace, `http://www.w3.org/2000/xmlns/`, and is reserved for namespace declaration attributes.
 - `xml` is bound to the XML namespace, `http://www.w3.org/XML/1998/namespace`. It is used by attributes such as `xml:lang` and `xml:space`.
-- `xmlns` is associated with the XMLNS namespace, `http://www.w3.org/2000/xmlns/`, and is reserved for namespace declaration attributes.
 
-Namespace-aware DOM creation and attribute methods enforce these relationships. For example, they reject a qualified name with the `xml` prefix if the supplied namespace is not the XML namespace, and reject invalid combinations of `xmlns` and the XMLNS namespace.
+For example, the following uses the `lang` attribute from the `xml` namespace:
 
-The namespace URIs most commonly encountered in web documents are:
+```js
+const doc = xml`<element xml:lang="en-US" />`;
+const xmlLangAttr = doc.querySelector("element").getAttributeNode("xml:lang");
+console.log(xmlLangAttr.namespaceURI); // http://www.w3.org/XML/1998/namespace
+console.log(xmlLangAttr.prefix); // xml
+```
 
-| Vocabulary | Namespace URI                          |
-| ---------- | -------------------------------------- |
-| HTML       | `http://www.w3.org/1999/xhtml`         |
-| SVG        | `http://www.w3.org/2000/svg`           |
-| MathML     | `http://www.w3.org/1998/Math/MathML`   |
-| XML        | `http://www.w3.org/XML/1998/namespace` |
-| XMLNS      | `http://www.w3.org/2000/xmlns/`        |
+New namespace prefix identifiers can be declared with the `xmlns:prefix="namespace URI"` attribute. This creates a new namespace prefix called `prefix` which resolves to the namespace `"namespace URI"`. Now this prefix can be used in the element and all descendant elements that don't override it.
 
-These strings must be written exactly. Namespace URI comparison is case-sensitive, and a trailing slash or other spelling difference identifies a different namespace.
+```js
+const doc = xml`<parent mdn:foo="bar" xmlns:mdn="https://developer.mozilla.org/"></parent>`;
+console.log(
+  doc.querySelector("parent").getAttributeNode("mdn:foo").namespaceURI,
+);
+// https://developer.mozilla.org/
 
-## How the DOM represents namespaced names
+const doc2 = xml`<parent xmlns:mdn="https://developer.mozilla.org/"><mdn:child /></parent>`;
+console.log(doc2.querySelector("child").namespaceURI);
+// https://developer.mozilla.org/
+```
 
-- **In HTML documents:** Parsed HTML elements are in the HTML namespace with a null prefix; parsed `<svg>` and `<math>` subtrees use the SVG and MathML namespaces. A colon in an HTML element or ordinary HTML attribute name is treated as a literal character, not as a namespace separator; only the parser's fixed foreign-content cases produce prefixed namespaced attributes.
-- Elements and attributes store a namespace, namespace prefix, and local name separately; their namespace and prefix can be `null`.
-- {{domxref("Element/namespaceURI", "Element.namespaceURI")}}, {{domxref("Element/prefix", "Element.prefix")}}, and {{domxref("Element/localName", "Element.localName")}}.
-- {{domxref("Attr/namespaceURI", "Attr.namespaceURI")}}, {{domxref("Attr/prefix", "Attr.prefix")}}, and {{domxref("Attr/localName", "Attr.localName")}}.
-- How qualified names are derived from a prefix and local name, and how {{domxref("Element/tagName", "Element.tagName")}}, {{domxref("Attr/name", "Attr.name")}}, and {{domxref("Node/nodeName", "Node.nodeName")}} expose qualified names.
-- Qualified names are returned in uppercase for HTML elements in HTML documents, versus case-sensitive names in XML documents and for non-HTML namespaces.
-- An element's expanded name as the namespace/local-name pair; the prefix is syntax and is not part of namespace identity.
-- An attribute's expanded name as the namespace/local-name pair; one element can therefore contain attributes with the same qualified name but different namespaces.
-- Namespace declarations determine which namespace the XML parser assigns to a name, but changing a declaration later does not change an existing node's stored `namespaceURI`, `prefix`, or `localName`.
-- Default namespaces apply to element names, while unprefixed attributes have no namespace.
+> [!NOTE]
+> The [CSS type selector](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors) selects by the local name (the part after `:`), so we write `child` instead of `mdn:child` in the selector above. To use the [namespace separator](/en-US/docs/Web/CSS/Reference/Selectors/Namespace_separator) syntax, the namespace identifier must be declared separately in CSS via [`@namespace`](/en-US/docs/Web/CSS/Reference/At-rules/@namespace), which is not possible with {{domxref("Document.querySelector()")}}.
+
+When the `prefix` is `null`, the qualified name of the element/attribute is just the `localName`; when the `prefix` is not null, the qualified name is `prefix:localName` (basically, what you actually wrote in the source code).
+
+```js
+const doc = xml`<parent mdn:foo="bar" xmlns:mdn="https://developer.mozilla.org/"></parent>`;
+const fooAttr = doc.querySelector("parent").getAttributeNode("mdn:foo");
+console.log(fooAttr.prefix); // mdn
+console.log(fooAttr.localName); // foo
+console.log(fooAttr.name); // mdn:foo
+```
+
+There is no mechanism for rebinding the `xmlns` or `xml` prefix. Attempting to do so raises a parser error. It is also a parser error to use namespace names that begin with, case-insensitively, `xml`, or to define any custom prefix that binds to the XML or XMLNS namespace.
+
+> [!NOTE]
+> Some browsers may be lenient in their XML parser and simply ignore these attributes.
+
+```js example-bad
+xml`<element xmlns:xmlns="https://developer.mozilla.org/" />`;
+// XML Parsing Error: reserved prefix (xmlns) must not be declared or undeclared
+
+xml`<element xmlns:mdn="http://www.w3.org/XML/1998/namespace" />`;
+// XML Parsing Error: prefix must not be bound to one of the reserved namespace names
+```
+
+All other prefix identifiers can be freely associated. This means you can have two prefixes that map to the same namespace URI, or the same prefix mapping to different namespace URIs in different parts of the document.
+
+```js
+const doc = xml`<mdn:parent xmlns:mdn="a">
+  <mdn:child xmlns:mdn="b"></mdn:child>
+</mdn:parent>`;
+console.log(doc.querySelector("parent").namespaceURI); // a
+console.log(doc.querySelector("child").namespaceURI); // b
+```
+
+> [!NOTE]
+> Note that the default namespace and the namespace prefix are parsing-time concepts. At runtime, programmatically adding/updating the `xmlns` attributes do not change the namespaces of existing elements.
+
+## Namespaces in HTML
+
+Once again, everything mentioned to this point only work in XML (which is why we've used the `xml` utility function that calls {{domxref("DOMParser")}}). In an HTML document parsed from `text/html`, by default all elements are HTML elements and belong to the HTML namespace `http://www.w3.org/1999/xhtml`. The HTML parser recognizes the {{SVGElement("svg")}} and the {{MathMLElement("math")}} elements, which put them and almost all their descendants into the SVG `http://www.w3.org/2000/svg` and MathML `http://www.w3.org/1998/Math/MathML` namespaces (unless escape hatches like {{SVGElement("foreignObject")}} are used). The following do not work:
+
+- The `xmlns` attribute has absolutely no effect. If specified on HTML elements, its value must be `"http://www.w3.org/1999/xhtml"`.
+- The namespace prefix syntax does not exist and the prefix is simply seen as a part of the local name. The parser special-cases several attribute names, but only on SVG and MathML elements: `xlink:actuate`, `xlink:arcrole`, `xlink:href`, `xlink:role`, `xlink:show`, `xlink:title`, `xlink:type`, `xml:lang`, `xml:space`, `xmlns`, `xmlns:xlink`. These have hard-coded namespace associations and are the only ones for which the namespace URI is not one of HTML, SVG, or MathML. None of them are necessary on the modern web because the SVG and MathML specs have defined their own alternatives where appropriate.
+
+For example:
+
+```js
+// The utility function for creating HTML documents
+const html = (strings, ...values) =>
+  new DOMParser().parseFromString(
+    String.raw({ raw: strings }, ...values),
+    "text/html",
+  );
+
+const doc = html`<html>
+  <body xmlns:xlink="foo">
+    <svg xmlns:xlink="foo" xlink:href="bar"></svg>
+    <math></math>
+  </body>
+</html>`;
+console.log(doc.querySelector("body").namespaceURI); // http://www.w3.org/1999/xhtml
+console.log(doc.querySelector("svg").namespaceURI); // http://www.w3.org/2000/svg
+console.log(doc.querySelector("math").namespaceURI); // http://www.w3.org/1998/Math/MathML
+
+// xmlns:xlink seen as a normal attribute (and is non-conforming)
+console.log(
+  doc.querySelector("body").getAttributeNode("xmlns:xlink").namespaceURI,
+); // null
+// xmlns:xlink recognized but has no effect
+console.log(
+  doc.querySelector("svg").getAttributeNode("xmlns:xlink").namespaceURI,
+); // http://www.w3.org/2000/xmlns/
+// xlink:href always binds the XLink namespace despite xmlns:xlink
+console.log(
+  doc.querySelector("svg").getAttributeNode("xlink:href").namespaceURI,
+); // http://www.w3.org/1999/xlink
+```
+
+## Looking up the prefix-namespace association
+
+Each element in the document has a bi-directional association between prefix identifiers and namespace URIs. It either inherits the association from its parent or declares itself via its `xmlns="..."` and `xmlns:prefix="..."` attributes. You can lookup this association on any node, which uses the node's relevant element:
+
+- When called on {{domxref("Attr")}} nodes, its {{domxref("Attr.ownerElement", "ownerElement")}} is searched.
+- When called on {{domxref("Document")}} nodes, its {{domxref("Document.documentElement", "documentElement")}} is searched.
+- Other types of non-element nodes search their {{domxref("Node.parentElement", "parentElement")}}.
+
+`null` is always returned if there is no relevant element for the node.
+
+{{domxref("Node.lookupNamespaceURI()")}} takes a prefix and returns the corresponding namespace URI; `null` or `""` requests the default namespace (which, once again, is `null` by default and also `null` when reset with `xmlns=""`). The reserved prefixes `xml` and `xmlns` always resolve to the XML and XMLNS namespaces, or otherwise `null` is returned if no association is found.
+
+```js
+const doc = xml`<parent xmlns="default namespace" xmlns:mdn="https://developer.mozilla.org/"></parent>`;
+const parent = doc.querySelector("parent");
+console.log(parent.lookupNamespaceURI("mdn")); // https://developer.mozilla.org/
+console.log(parent.lookupNamespaceURI("xmlns")); // http://www.w3.org/2000/xmlns/
+console.log(parent.lookupNamespaceURI("xlink")); // null
+console.log(parent.lookupNamespaceURI(null)); // default namespace
+```
+
+{{domxref("Node.lookupPrefix()")}} performs the reverse: takes a namespace URI and returns a prefix. If the namespace URI is `null` or `""`, `null` is returned. If there are multiple prefixes that bind to the same namespace URI, then the prefix used or declared by the nearest element is returned (and the first declaration is preferred among all declarations on the same element).
+
+```js
+const doc = xml`<parent
+  xmlns:mdn="https://developer.mozilla.org/"
+  xmlns:mdn2="https://developer.mozilla.org/">
+  <mdn2:child></mdn2:child>
+</parent>`;
+const child = doc.querySelector("child");
+console.log(child.lookupPrefix("https://developer.mozilla.org/")); // mdn2
+// child itself uses the mdn2 prefix, so mdn2 is preferred
+
+const parent = doc.querySelector("parent");
+console.log(parent.lookupPrefix("https://developer.mozilla.org/")); // mdn
+// parent declares both prefixes, so the first one is preferred
+```
+
+> [!NOTE]
+> The above disambiguation mechanism matches the specification but may not match all browsers' behavior.
+
+`Node.lookupPrefix()` does not special-case the XML/XMLNS namespaces. Because these namespaces cannot be bound to custom prefixes, they will always return `null`. It also doesn't consider `xmlns` attributes.
+
+```js
+const doc = xml`<parent xmlns="https://developer.mozilla.org/"></parent>`;
+const parent = doc.querySelector("parent");
+console.log(parent.lookupPrefix("https://developer.mozilla.org/")); // null
+console.log(parent.lookupPrefix("http://www.w3.org/2000/xmlns/")); // null
+console.log(parent.lookupPrefix("http://www.w3.org/XML/1998/namespace")); // null
+```
+
+{{domxref("Node.isDefaultNamespace()")}} takes a namespace and returns whether it's the default. `node.isDefaultNamespace(namespace)` (when `namespace` is not the empty string) is equivalent to `node.lookupNamespaceURI(null) === namespace`.
+
+In HTML documents, these methods exist, but again `xmlns` attributes have no effect. Lookup can still use a node's stored namespace and prefix, the reserved `xml` and `xmlns` mappings, and namespaced nodes created from script (see below).
+
+> [!NOTE]
+> In HTML documents, Firefox returns `null` as the default namespace URI for all elements, while Chrome and Safari return the default namespaces that would be produced by the HTML parser (HTML, SVG, MathML).
 
 ## Creating namespaced nodes and documents
 
@@ -194,17 +287,6 @@ These strings must be written exactly. Namespace URI comparison is case-sensitiv
 - How {{domxref("Element/getAttributeNames", "Element.getAttributeNames()")}} returns qualified names and can contain duplicates when attributes with different namespaces share a qualified name.
 - How `setAttributeNode()` and `NamedNodeMap.setNamedItem()` replace attributes by namespace and local name despite their non-`NS` names, and how {{domxref("Element/removeAttributeNode", "Element.removeAttributeNode()")}} removes a particular `Attr` object.
 - Namespace behavior of {{domxref("Element/id", "id")}}, {{domxref("Element/className", "className")}}, {{domxref("Element/classList", "classList")}}, and {{domxref("Element/slot", "slot")}}: their DOM concepts use null-namespace attributes even on elements outside the HTML namespace.
-
-## Resolving prefixes and namespace declarations
-
-- **In HTML documents:** These methods exist, but arbitrary `xmlns` attributes on HTML elements do not participate in lookup because the HTML parser puts them in the null namespace. Lookup can still use a node's stored namespace and prefix, the reserved `xml` and `xmlns` mappings, recognized declarations on parsed SVG or MathML foreign content, and namespaced nodes created from script.
-- {{domxref("Node/lookupNamespaceURI", "Node.lookupNamespaceURI()")}} for resolving a prefix in a node's namespace context; `null` or `""` requests the default namespace.
-- {{domxref("Node/lookupPrefix", "Node.lookupPrefix()")}} for finding an in-scope prefix for a namespace URI; the result is not necessarily unique.
-- {{domxref("Node/isDefaultNamespace", "Node.isDefaultNamespace()")}} and its equivalence to comparing a namespace with `lookupNamespaceURI(null)`.
-- How lookup uses an element's own name, namespace declaration attributes, and then ancestor elements.
-- The implicit mappings returned for the reserved `xml` and `xmlns` prefixes.
-- How lookup starts from a document's document element, an attribute's owner element, or another node's parent element; `DocumentType` and `DocumentFragment` have no namespace context.
-- Clearing the default namespace with an empty namespace declaration and the resulting `null` lookup result.
 
 ## Namespaces across other DOM operations
 
