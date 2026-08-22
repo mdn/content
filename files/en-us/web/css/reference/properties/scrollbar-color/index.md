@@ -15,6 +15,12 @@ The **thumb** refers to the moving part of the scrollbar, which usually floats o
 
 When `scrollbar-color` value is set on the document's root element, the values are applied to the viewport scrollbars.
 
+> [!NOTE]
+> Browsers that support `scrollbar-color` ignore the non-standard {{cssxref("::-webkit-scrollbar")}} family of pseudo-elements on any element whose _computed_ value for this property is not `auto`.
+> Because `scrollbar-color` is inherited, this includes elements that don't set it themselves but inherit a non-`auto` value from an ancestor.
+> Setting `scrollbar-color: auto` on such an element restores its `::-webkit-scrollbar-*` styling.
+> See [Adding a fallback for scrollbar styles](/en-US/docs/Web/CSS/Reference/Selectors/::-webkit-scrollbar#adding_a_fallback_for_scrollbar_styles).
+
 ## Syntax
 
 ```css
