@@ -668,6 +668,9 @@ td {
 - The `<col>` elements with a `column-fixed-width` class have a narrow fixed width set on them.
 - The `<col>` element with a `column-background-border` class has a solid background color and a thick border set on it.
 
+> [!NOTE]
+> A cell's own background is painted on top of the column's, so any background set on `<td>` or `<th>` hides the one coming from `<col>`. If you try this in the template from the start of this article, the column colors will not show up, because `minimal-table.css` gives `<th>` and alternating rows their own background colors. Remove those rules from your copy of the stylesheet to see the column backgrounds.
+
 You don't need to worry about how the CSS works for now; you'll learn about it in detail later on in our [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics) module.
 
 Let's look at how the above code renders:
