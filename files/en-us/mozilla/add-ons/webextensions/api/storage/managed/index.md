@@ -8,6 +8,9 @@ sidebar: addonsidebar
 
 A {{WebExtAPIRef("storage.StorageArea")}} object that represents the `managed` storage area. Items in `managed` storage are set by the domain administrator or other native applications installed on the user's computer and are read-only for the extension. Trying to modify this storage area results in an error.
 
+> [!NOTE]
+> Enterprise intent: Managed storage is provisioned and controlled by administrators (for example via a managed storage native manifest or the Firefox Enterprise Policy [`3rdparty`](https://mozilla.github.io/policy-templates/#3rdparty) policy) and is read-only to extensions and end users. Extensions should treat managed values as authoritative configuration provided by the administrator and may fall back to other storage (for example {{WebExtAPIRef("storage.local")}}) only when a managed key is absent. To change managed values, administrators must update the native manifest or enterprise policy. See the [Enterprise Policy templates](https://mozilla.github.io/policy-templates/) for details.
+
 ## Provisioning managed storage
 
 The procedure for provisioning managed storage varies between browsers. For Chrome instructions, see the ["Manifest for storage areas"](https://developer.chrome.com/docs/extensions/reference/manifest/storage) article.
