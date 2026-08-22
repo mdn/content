@@ -10,6 +10,8 @@ browser-compat: api.HTMLImageElement.src
 
 The **`src`** property of the {{domxref("HTMLImageElement")}} interface specifies the image to display in the {{HTMLElement("img")}} element. It reflects the `<img>` element's [`src`](/en-US/docs/Web/HTML/Reference/Elements/img#src) content attribute.
 
+Setting the `src` property starts the browser's request for the specified image resource right away, even if the `<img>` element has not yet been added to the document.
+
 ## Value
 
 A string. For more information about the syntax of the `src` attribute, see the HTML [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#src) reference.
