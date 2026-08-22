@@ -37,6 +37,9 @@ The `Document` object `selectionchange` event is fired when:
 
 The event object itself does not contain the updated selection details. You can retrieve the current selection by calling {{domxref("Document.getSelection()", "document.getSelection()")}} within your event listener.
 
+> [!NOTE]
+> Unlike most other UI events, the `selectionchange` event is scheduled asynchronously as a task on the user interaction task source. This means event listeners are not invoked synchronously at the exact moment a script modifies the selection, but on a subsequent turn of the event loop.
+
 This event differs significantly from the `selectionchange` event fired on {{HTMLElement("input")}} and {{HTMLElement("textarea")}} text controls:
 
 - Document selections use DOM node positions and require {{domxref("Document.getSelection()")}} for inspection. Text inputs maintain independent selections within their internal text values, using character offsets inspected via `selectionStart`, `selectionEnd`, and `selectionDirection`.
