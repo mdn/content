@@ -79,6 +79,7 @@ gap: 3vmin;
 gap: 0.5cm;
 gap: 16%;
 gap: 100%;
+gap: thick;
 gap: calc(10% + 20px);
 
 /* Two values */
@@ -100,18 +101,20 @@ gap: unset;
 
 ### Values
 
+This property is specified as one or two `<length-percentage>`, `<line-width>`, or `normal` keyword values:
+
 - `normal`
-  - : A value of `1em` on multi-column containers and `0` in all other contexts.
-- {{CSSxRef("&lt;length&gt;")}}
-  - : The size of the gap as a non-negative {{CSSxRef("&lt;length&gt;")}} value.
-- {{CSSxRef("&lt;percentage&gt;")}}
-  - : The size of the gap as a non-negative {{CSSxRef("&lt;percentage&gt;")}} value relative to the [content box](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#content_area) size of the container element in that dimension.
+  - : For multi-column layout, resolves to `1em`; otherwise `0`. This is the default value.
+- `<line-width>`
+  - : A {{cssxref("&lt;line-width&gt;")}}: one of the keywords `thin`, `medium`, or `thick`, or a positive {{cssxref("length")}} value.
+- {{CSSxRef("length-percentage")}}
+  - : A non-negative {{CSSxRef("&lt;length&gt;")}} or {{CSSxRef("&lt;percentage&gt;")}} value. Percentages are relative to the [content box](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#content_area) size of the container element in that dimension.
 
 ## Description
 
 The `gap` property defines gaps between columns and rows, with the effect of the definition depending on whether the container is a grid container, a flexbox container, or a multi-column layout container.
 
-The shorthand property is specified as a value for `<'row-gap'>`, followed optionally by a value for `<'column-gap'>`. While the default value is `normal` for both sub-properties, if only one value is declared, that value applies to both. Both `<'row-gap'>` and `<'column-gap'>` can each be specified as a `<length>`, a `<percentage>`, or the keyword `normal`.
+The shorthand property is specified as a value for `<'row-gap'>`, followed optionally by a value for `<'column-gap'>`. While the default value is `normal` for both sub-properties, if only one value is declared, that value applies to both. Both `<'row-gap'>` and `<'column-gap'>` can each be specified as a `<length>`, a `<percentage>`, or the keyword `normal`. The specification also allows for any {{cssxref("line-width")}} value, including `thin`, `medium`, or `thick`.
 
 Percentage gap values are always calculated against the [content box](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#content_area) size of the container element. The behavior is well-defined and consistent across layout modes when the container size is definite.
 
@@ -375,7 +378,9 @@ In case of the flex layout, the percentage gap always results in zero value.
 
 - {{CSSxRef("row-gap")}}
 - {{CSSxRef("column-gap")}}
+- {{CSSxRef("rule")}}
 - [Basic concepts of grid layout: gutters](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#gutters)
+- [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module
 - [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module
 - [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) module
 - [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) module

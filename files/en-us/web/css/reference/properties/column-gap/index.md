@@ -67,6 +67,11 @@ column-gap: 2.5em;
 column-gap: 3%;
 column-gap: calc(3% - 6px);
 
+/* <line-width> values */
+column-gap: thin;
+column-gap: medium;
+column-gap: thick;
+
 /* Global values */
 column-gap: inherit;
 column-gap: initial;
@@ -77,12 +82,14 @@ column-gap: unset;
 
 ### Values
 
+This property is specified as either a `<length-percentage>`, `<line-width>`, or the keyword `normal`:
+
 - `normal`
   - : For multi-column layout, resolves to `1em`; otherwise `0`. This is the default value.
-- {{CSSxRef("&lt;length&gt;")}}
-  - : The size of the gap between columns, as a non-negative {{CSSxRef("&lt;length&gt;")}} value.
-- {{CSSxRef("&lt;percentage&gt;")}}
-  - : The size of the gap between columns, defined as a non-negative {{CSSxRef("&lt;percentage&gt;")}} value.
+- `<line-width>`
+  - : A {{cssxref("&lt;line-width&gt;")}}: one of the keywords `thin`, `medium`, or `thick`, or a positive {{cssxref("length")}} value.
+- {{CSSxRef("length-percentage")}}
+  - : A non-negative {{CSSxRef("&lt;length&gt;")}} or {{CSSxRef("&lt;percentage&gt;")}} value. Percentages are relative to the inline-size of the content box.
 
 ## Description
 
@@ -90,11 +97,11 @@ The `column-gap` property sets the size of the gap between an element's columns.
 
 Percentages are calculated against the [content box](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#content_area) size of the container element's inline axis when this size is definite, against `0` otherwise, except in grid layout, for which cyclic percentage sizes resolve against zero for determining {{glossary("intrinsic size")}} contributions but resolve against the element's content box when laying out the contents.
 
-The column gap may contain a visible separator as a gap decoration. If there is a rule between the columns, set with the {{cssxref("column-rule")}} property or {{cssxref("rule")}} shorthand, it will appear in the middle of the gap, but has no effect on the size of the gaps between the column.
+The column gap may contain a visible separator as a [gap decoration](/en-US/docs/Web/CSS/Guides/Gaps). If there is a rule between the columns, set with the {{cssxref("column-rule")}} or {{cssxref("rule")}} shorthand properties, it will appear in the middle of the gap, but has no effect on the size of the gaps between the column.
+
+The `column-gap`, along with the {{cssxref("row-gap")}} property, can also be set using the {{cssxref("gap")}} shorthand property which sets both the `row-gap` and `column-gap` in one declaration, in that order.
 
 A legacy `grid-column-gap` is an alias for `column-gap`. It was initially defined in [grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) for creating gaps between grid columns.
-
-The `column-gap`, along with the {{cssxref("row-gap")}} property, can also be set using the {{cssxref("gap")}} shorthand.
 
 ## Formal definition
 
@@ -108,9 +115,11 @@ The `column-gap`, along with the {{cssxref("row-gap")}} property, can also be se
 
 ### Flex layout
 
-In this example, a flex container contains six flex items of two different widths (`200px` and `300px`), creating flex items that are not laid out as a grid. The `column-gap` property is used to add horizontal space between the adjacent flex items.
+This example demonstrates using the `column-gap` property to create horizontal space between adjacent flex items.
 
 #### HTML
+
+We include six items in a container element:
 
 ```html
 <div class="flexbox">
@@ -125,17 +134,17 @@ In this example, a flex container contains six flex items of two different width
 
 #### CSS
 
-To create a flex container, we set its {{cssxref("display")}} property value to `flex`. We then use the {{cssxref("flex-flow")}} shorthand property to set the {{cssxref("flex-direction")}} to row (the default) and {{cssxref("flex-wrap")}} to `wrap`, allowing the flex items to flow onto new lines if needed. By default, flex items stretch to be as tall as their container. By setting a {{cssxref("height")}}, even the empty flex items will be `100px` tall.
+We set the {{cssxref("display")}} property to `flex` and {{cssxref("flex-flow")}} to `row wrap` to create a flex container with rows of flex items, allowing flex items to flow onto new lines if needed. The flex items are each set to be either `200px` or `300px`.
 
-To better demonstrate the `column-gap` property, the flex items in this example have two different width values. The width of the flex items is set within the `<div>` flex items. We use the {{cssxref("flex-basis")}} component of the {{cssxref("flex")}} shorthand property to make all the flex items `200px` wide. We then target every third flex item by using the {{cssxref(":nth-of-type", ":nth-of-type(3n)")}} selector, widening them to `300px`.
-
-The `column-gap` value is set as `20px` on the flex container to create a `20px` gap between the adjacent flex items in each row.
+The `column-gap` value is set as `20px` on the flex container to create a `20px` gap between the adjacent flex items in each row. We also add a {{cssxref("column-rule")}}, which will draw a thin, solid, magenta line in the middle of the gap.
 
 ```css
 .flexbox {
   display: flex;
   flex-flow: row wrap;
   height: 100px;
+  column-rule: 1px solid magenta;
+
   column-gap: 20px;
 }
 
@@ -153,15 +162,19 @@ div:nth-of-type(3n) {
 
 {{EmbedLiveSample("Flex_layout", "auto", "220px")}}
 
-> [!NOTE]
-> While there is horizontal space between adjacent flex items in each flex row, there is no space between the rows. To set vertical space between flex rows, you can specify a non-zero value for the {{cssxref("row-gap")}} property. The {{cssxref("gap")}} shorthand property is also available to set both the `row-gap` and `column-gap` in one declaration, in that order.
+To set vertical space between flex rows, specify a non-zero value for the {{cssxref("row-gap")}} property, optionally setting both the `column-gap` and `row-gap` using the `gap` shorthand.
 
 ### Grid layout
 
+This example demonstrates using the `column-gap` property with a `<percentage>` value in a grid layout. It also demonstrates how the `column-gap` size is not effected by the size of the column rule.
+
 #### HTML
+
+We include seven items in a container element:
 
 ```html
 <div id="grid">
+  <div></div>
   <div></div>
   <div></div>
   <div></div>
@@ -173,18 +186,27 @@ div:nth-of-type(3n) {
 
 #### CSS
 
+We set the {{cssxref("display")}} property to `grid`, the {{cssxref("width")}} to `400px` and {{cssxref("grid-template-columns")}} to `repeat(3, 1fr)`, to create a 400px-wide grid container with three columns and as many rows as needed. Each row is `100px` tall, as defined by the {{cssxref("grid-template-rows")}} property. Every odd grid item is `lime` with the even grid items being semi-opaque.
+
+The `column-gap` is set to `5%`, which will create a gap that is `20px` wide. We've also set a very wide, semi-opaque `column-rule` to demonstrate how the rule is painted behind the content, with the width of the rule having no impact on the size of the gap.
+
 ```css
 #grid {
   display: grid;
-  height: 100px;
+  width: 400px;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 100px;
-  column-gap: 20px;
+  grid-auto-rows: 100px;
+  column-rule: 30px solid #ff00ff33;
+
+  column-gap: 5%;
 }
 
 #grid > div {
-  border: 1px solid green;
+  outline: 1px solid green;
   background-color: lime;
+}
+#grid > div:nth-of-type(even) {
+  background-color: #00ff0033;
 }
 ```
 
@@ -192,14 +214,19 @@ div:nth-of-type(3n) {
 
 {{EmbedLiveSample("Grid_layout", "auto", "220px")}}
 
+The column rule is wider than the column gap, and is only visible when the items drawn on top are semi-transparent.s
+
 ### Multi-column layout
+
+This example demonstrates using the `column-gap` property with a `<line-width>` keyword value in a multi-col layout.
 
 #### HTML
 
 ```html
 <p class="content-box">
-  This is some multi-column text with a 40px column gap created with the CSS
-  `column-gap` property. Don't you think that's fun and exciting? I sure do!
+  This is some multi-column text with a thin column gap created with the CSS
+  `column-gap` property. The `normal` default value for the `column-gap`
+  property in multi-col layout is 1em.
 </p>
 ```
 
@@ -208,7 +235,21 @@ div:nth-of-type(3n) {
 ```css
 .content-box {
   column-count: 3;
-  column-gap: 40px;
+  column-gap: thin;
+}
+```
+
+```css hidden
+@layer no-support {
+  @supports not (column-gap: thick) {
+    body::before {
+      content: "Your browser doesn't support the <line-width> keyword values";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
 }
 ```
 
@@ -228,6 +269,8 @@ div:nth-of-type(3n) {
 
 - {{CSSxRef("row-gap")}}
 - {{CSSxRef("gap")}}
+- {{CSSxRef("column-rule")}}
+- {{CSSxRef("rule")}}
 - [Basic concepts of grid layout: gutters](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#gutters)
 - [Styling Columns](/en-US/docs/Web/CSS/Guides/Multicol_layout/Styling_columns)
 - [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module
