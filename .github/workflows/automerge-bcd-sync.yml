@@ -1,0 +1,52 @@
+name: Auto-merge BCD synchronization PRs
+
+on:
+  pull_request:
+    types:
+      - opened
+    paths:
+      - "files/en-us/**/*.md"
+
+# No GITHUB_TOKEN permissions, as we use AUTOMERGE_TOKEN instead.
+permissions: {}
+
+jobs:
+  automerge:
+    runs-on: ubuntu-latest
+    if: >
+      github.repository == 'mdn/content' &&
+      github.actor == 'OnkarRuikar' &&
+      startsWith(github.event.pull_request.title, 'Synchronize with BCD v')
+
+    steps:
+      # Fail if non Markdown files are changed
+      - uses: dorny/paths-filter@v3
+        id: filter
+        with:
+          filters: |
+            only-md-files:
+              - 'files/en-us/**/*.md'
+              - '!**/*'
+
+      - name: Check if only Markdown files are changed
+        if: steps.filter.outputs.only-md-files != 'true'
+        run: |
+          echo "Error: Only Markdown files can be changed in this PR."
+          exit 1
+
+      - name: Wait for other workflows to complete
+        run: sleep 5m
+
+      - name: Approve BCD sync PRs
+        env:
+          GITHUB_TOKEN: ${{ secrets.AUTOMERGE_TOKEN }}
+        run: |
+          echo "Approving PR #${{ github.event.pull_request.number }} ${{ github.event.pull_request.title }}"
+          gh pr review ${{ github.event.pull_request.html_url }} --approve
+
+      - name: Enable auto-merge for BCD sync PRs
+        env:
+          GITHUB_TOKEN: ${{ secrets.AUTOMERGE_TOKEN }}
+        run: |
+          echo "Enabling auto-merge for PR #${{ github.event.pull_request.number }} ${{ github.event.pull_request.title }}"
+          gh pr merge ${{ github.event.pull_request.html_url }} --auto --squash
