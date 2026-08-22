@@ -16,7 +16,7 @@ The **Web Storage API** provides mechanisms by which browsers can store key/valu
 The two mechanisms within Web Storage are as follows:
 
 - `sessionStorage` is partitioned by browser tabs and by {{glossary("origin")}}. The main document, and all embedded {{glossary("browsing context", "browsing contexts")}} (iframes), are grouped by their origin and each origin has access to its own separate storage area. Closing the browser tab destroys all `sessionStorage` data associated with that tab.
-- `localStorage` is partitioned by {{glossary("origin")}} only. All documents with the same origin have access to the same `localStorage` area, and it persists even when the browser is closed and reopened.
+- `localStorage` is partitioned by {{glossary("origin")}}. All documents with the same origin have access to the same `localStorage` area, and it persists even when the browser is closed and reopened. When accessed from a third-party context (e.g., an embedded iframe), `localStorage` is further partitioned by the top-level site through [state partitioning](/en-US/docs/Web/Privacy/Guides/State_Partitioning).
 
 These mechanisms are available via the {{domxref("Window.sessionStorage")}} and {{domxref("Window.localStorage")}} properties. Accessing one of these will return an instance of a {{domxref("Storage")}} object, through which data items can be set, retrieved and removed. A different storage object is used for the `sessionStorage` and `localStorage` for each origin — they function and are controlled separately.
 
