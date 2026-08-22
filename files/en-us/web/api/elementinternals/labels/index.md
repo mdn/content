@@ -31,6 +31,12 @@ let element = document.getElementById("custom-checkbox");
 console.log(element.internals_.label);
 ```
 
+## Accessibility
+
+While the `labels` property returns the label elements associated with a custom element, screen reader support for these labels varies by browser. In most browsers, the label is announced when the custom element receives focus. However, Safari does not reliably narrate labels associated via `ElementInternals` for form-associated custom elements (see [WebKit bug 259124](https://bugs.webkit.org/show_bug.cgi?id=259124)).
+
+For robust screen reader support across browsers, consider supplementing `ElementInternals` label association with ARIA attributes such as [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label).
+
 ## Specifications
 
 {{Specifications}}
