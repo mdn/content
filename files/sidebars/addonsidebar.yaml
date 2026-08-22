@@ -24,6 +24,7 @@ sidebar:
       - /Mozilla/Add-ons/WebExtensions/Content_Security_Policy
       - /Mozilla/Add-ons/WebExtensions/Native_messaging
       - /Mozilla/Add-ons/WebExtensions/Native_manifests
+      - /Mozilla/Add-ons/WebExtensions/Enterprise_policies
       - /Mozilla/Add-ons/WebExtensions/User_actions
       - /Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations
       - /Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
