@@ -2,6 +2,15 @@
 title: height
 slug: Web/SVG/Reference/Attribute/height
 page-type: svg-attribute
+browser-compat:
+  - svg.elements.filter.height
+  - svg.elements.foreignObject.height
+  - svg.elements.image.height
+  - svg.elements.mask.height
+  - svg.elements.pattern.height
+  - svg.elements.rect.height
+  - svg.elements.svg.height
+  - svg.elements.use.height
 spec-urls:
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-filter-height
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-filter-primitive-height
@@ -860,6 +869,10 @@ For {{SVGElement('use')}}, `height` defines the vertical length for the referenc
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

@@ -2,6 +2,7 @@
 title: origin
 slug: Web/SVG/Reference/Attribute/origin
 page-type: svg-attribute
+browser-compat: svg.elements.animateMotion.origin
 spec-urls: https://svgwg.org/specs/animations/#OriginAttribute
 sidebar: svgref
 ---
@@ -34,6 +35,10 @@ You can use this attribute with the following SVG elements:
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

@@ -2,6 +2,10 @@
 title: kernelUnitLength
 slug: Web/SVG/Reference/Attribute/kernelUnitLength
 page-type: svg-attribute
+browser-compat:
+  - svg.elements.feConvolveMatrix.kernelUnitLength
+  - svg.elements.feDiffuseLighting.kernelUnitLength
+  - svg.elements.feSpecularLighting.kernelUnitLength
 spec-urls:
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fespecularlighting-kernelunitlength
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fediffuselighting-kernelunitlength
@@ -114,3 +118,7 @@ If a negative or zero value is specified the default value will be used instead.
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
