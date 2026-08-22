@@ -39,6 +39,9 @@ Some more general guidelines include:
 ### Browser support
 
 When creating code examples for a technology that's not yet available in all major browsers, consider using [feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection) to fall back to a simpler behavior or inform the user that their browser is not yet supported.
+
+When possible, keep examples visible even if they can't run in the reader's browser. For interactive examples, prefer showing a "No support" banner instead of hiding or removing them so readers can still inspect the code and learn how the feature works.
+
 Do not specify supported browsers and their versions in code comments or prose, as this information quickly becomes outdated.
 
 ## MDN code style and formatting
