@@ -34,6 +34,8 @@ For more information see [Multiple memories](/en-US/docs/WebAssembly/Guides/Unde
 
 - [`Memory.prototype.grow()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory/grow)
   - : Increases the size of the memory instance by a specified number of WebAssembly pages (each one is 64KiB in size). Detaches the previous `buffer`.
+- [`Memory.prototype.type()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory/type)
+  - : Returns an object describing the type of this memory (its minimum and maximum page counts and whether it is shared).
 
 ## Examples
 
