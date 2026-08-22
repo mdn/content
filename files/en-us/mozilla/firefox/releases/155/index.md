@@ -52,6 +52,10 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### APIs
 
+- The [`dual-source-blending` GPU feature](/en-US/docs/Web/API/GPUSupportedFeatures#available_features) is now supported on desktop.
+  This allows the blend operations `src1`, `one-minus-src1`, `src1-alpha`, and `one-minus-src1-alpha` to be specified in the [`dstFactor`](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#dstfactor) and [`srcFactor`](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#srcfactor) properties of {{domxref("GPUDevice.createRenderPipeline", "createRenderPipeline()")}} and {{domxref("GPUDevice.createRenderPipelineAsync", "createRenderPipelineAsync()")}}.
+  ([Firefox bug 1924328](https://bugzil.la/1924328)).
+
 #### DOM
 
 - The {{domxref("SVGAElement")}} interface now implements the [`HyperlinkElementUtils`](https://html.spec.whatwg.org/multipage/links.html#hyperlinkelementutils) mixin. As a result, SVG {{SVGElement("a")}} elements expose the same URL component properties as HTML {{HTMLElement("a")}} elements: {{domxref("SVGAElement.protocol", "protocol")}}, {{domxref("SVGAElement.username", "username")}}, {{domxref("SVGAElement.password", "password")}}, {{domxref("SVGAElement.host", "host")}}, {{domxref("SVGAElement.hostname", "hostname")}}, {{domxref("SVGAElement.port", "port")}}, {{domxref("SVGAElement.pathname", "pathname")}}, {{domxref("SVGAElement.search", "search")}}, and {{domxref("SVGAElement.hash", "hash")}}. The read-only {{domxref("SVGAElement.origin", "origin")}} property is also exposed.
