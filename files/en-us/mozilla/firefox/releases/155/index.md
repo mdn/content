@@ -32,7 +32,9 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### CSS -->
+### CSS
+
+- The {{cssxref("alpha")}} CSS function is now supported. This allows the user to update the alpha value (or transparency) of a color. ([Firefox bug 2059738](https://bugzil.la/2059738)).
 
 <!-- #### Removals -->
 
