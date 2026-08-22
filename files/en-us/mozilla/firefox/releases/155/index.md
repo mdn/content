@@ -36,9 +36,12 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### JavaScript -->
+### JavaScript
 
-<!-- No notable changes. -->
+- The {{jsxref("Promise.allKeyed()")}} and {{jsxref("Promise.allSettledKeyed()")}} static methods are now supported.
+  These behave like {{jsxref("Promise.all()")}} and {{jsxref("Promise.allSettled()")}}, respectively, but take an object of promises instead of an iterable, and fulfill with an object that has results in matching properties.
+  This allows you to associate results with semantically meaningful keys, instead of relying on array ordering.
+  ([Firefox bug 2057270](https://bugzil.la/2057270)).
 
 <!-- #### Removals -->
 
