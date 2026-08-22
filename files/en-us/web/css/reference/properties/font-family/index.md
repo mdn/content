@@ -80,7 +80,7 @@ font-family: ui-sans-serif;
 font-family: ui-monospace;
 font-family: ui-rounded;
 font-family: math;
-font-family: fangsong;
+font-family: generic(fangsong);
 
 /* Global values */
 font-family: inherit;
@@ -108,7 +108,7 @@ font-family: "Gill Sans Extrabold", sans-serif;
     See also [Valid family names](#valid_family_names).
 
 - `<generic-name>`
-  - : Generic font families are a fallback mechanism, a means of preserving some of the style sheet author's intent when none of the specified fonts are available. Generic family names are keywords and must not be quoted. A generic font family should be the last item in the list of font family names. The following keywords are defined:
+  - : Generic font families are a fallback mechanism, a means of preserving some of the style sheet author's intent when none of the specified fonts are available. Generic family names are keywords and must not be quoted. A generic font family should be the last item in the list of font family names. The following generic families are defined:
     - `serif`
       - : Glyphs have finishing strokes, flared or tapering ends, or have actual serifed endings.
 
@@ -152,8 +152,16 @@ font-family: "Gill Sans Extrabold", sans-serif;
     - `math`
       - : Font that addresses the particular stylistic concerns of representing mathematics: superscript and subscript, brackets that cross several lines, nesting expressions, and double struck glyphs with distinct meanings.
         UA stylesheets may set `math { font-family: math }` so that the {{MathMLElement("math")}} element uses appropriate fonts by default.
-    - `fangsong`
-      - : A particular style of Chinese characters that are between serif-style Song and cursive-style Kai forms. This style is often used for government documents.
+    - `generic(fangsong)`
+      - : A script-specific generic font family for Fang Song (仿宋) typefaces in Chinese — a relaxed, intermediate form between Song (serif) and Kai (cursive) styles, often used for government documents.
+    - `generic(kai)`
+      - : A script-specific generic font family for Simplified and Traditional Chinese, providing calligraphic styles with notable handwriting features. Kai is commonly used in official documents and textbooks.
+    - `generic(khmer-mul)`
+      - : A script-specific generic font family for the Khmer language (used in Cambodia), for titles and headings or to emphasize important names and nouns. The Khmer mul (âksâr mul) style is characterized by heavier, more rounded letter shapes.
+    - `generic(nastaliq)`
+      - : A script-specific generic font family that is the standard way of writing Urdu and Kashmiri, and often a preferred style for Persian and other language text, especially in literary genres such as poetry.
+
+    These four script-specific generic families use the `generic()` functional syntax. They are defined in the [CSS Fonts 4 specification draft](https://drafts.csswg.org/css-fonts/#generic-font-script-specific) and are not yet supported by any browser.
 
 ## Formal definition
 
@@ -191,10 +199,6 @@ font-family: "Gill Sans Extrabold", sans-serif;
 .math {
   font-family: math;
 }
-
-.fangsong {
-  font-family: fangsong;
-}
 ```
 
 ```css hidden
@@ -213,8 +217,6 @@ div {
 <div class="cursive">This is an example of a cursive font.</div>
 
 <div class="fantasy">This is an example of a fantasy font.</div>
-
-<div class="fangsong">This is an example of a fangsong font.</div>
 
 <div class="math">This is an example of a math font: ℝ, ∫, ∑…</div>
 ```
