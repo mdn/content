@@ -66,5 +66,5 @@ For more examples and syntax features, see the {{cssxref("@supports")}} at-rule.
 
 - The {{cssxref("@supports")}} at-rule that allows for the same functionality but in a
   declarative way.
-- The {{domxref("CSSSupportsRule")}} CSSOM class allowing to manipulate
+- The {{domxref("CSSSupportsRule")}} CSSOM class allowing you to manipulate
   {{cssxref("@supports")}} at-rules.

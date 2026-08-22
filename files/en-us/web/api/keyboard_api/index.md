@@ -50,7 +50,7 @@ To capture the <kbd>W</kbd>, <kbd>A</kbd>, <kbd>S</kbd>, and <kbd>D</kbd> keys, 
 navigator.keyboard.lock(["KeyW", "KeyA", "KeyS", "KeyD"]);
 ```
 
-This captures these keys regardless of which modifiers are used with the key press. Assuming a standard United States QWERTY layout, registering `KeyW` ensures that <kbd>W</kbd>, <kbd>Shift+W</kbd>, <kbd>Control+W</kbd>, <kbd>Control+Shift+W</kbd>, and all other key modifier combinations with <kbd>W</kbd> are sent to the app. The same applies to for `KeyA`, `KeyS`, and `KeyD`.
+This captures these keys regardless of which modifiers are used with the key press. Assuming a standard United States QWERTY layout, registering `KeyW` ensures that <kbd>W</kbd>, <kbd>Shift+W</kbd>, <kbd>Control+W</kbd>, <kbd>Control+Shift+W</kbd>, and all other key modifier combinations with <kbd>W</kbd> are sent to the app. The same applies to `KeyA`, `KeyS`, and `KeyD`.
 
 ### Writing system keys
 

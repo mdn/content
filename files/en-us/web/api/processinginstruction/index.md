@@ -127,7 +127,7 @@ const pi = document.createProcessingInstruction(
 
 console.log(pi.data);
 console.log(pi.getAttribute("my-data1"));
-console.log(pi.getAttribute("my-data1"));
+console.log(pi.getAttribute("my-data2"));
 // logs
 // my-data1='value1' my-data2='value2'
 // value1

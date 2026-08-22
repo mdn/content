@@ -46,9 +46,9 @@ In some cases it can be useful for the application layer to share certificate fi
 
 - If a trust relationship has been established between two web-browsers it can be persisted by storing the certificates and reusing them in a later session (up to a year later).
   The trusted certificates are identified by their fingerprints.
-- Peers than want to identify a particular user can send fingerprints and validate the associated user "out of band" (i.e., outside of the browser-mediated WebRTC communications flow).
+- Peers that want to identify a particular user can send fingerprints and validate the associated user "out of band" (i.e., outside of the browser-mediated WebRTC communications flow).
   The application can use the fingerprint to identify later sessions with the specific user.
-- In some conferencing server ("middlebox") implementations, the server may need to known the fingerprints before doing any offer/answer.
+- In some conferencing server ("middlebox") implementations, the server may need to know the fingerprints before doing any offer/answer.
 
 Peers may support different sets of algorithms.
 When comparing certificates, all fingerprint values for the set of algorithms supported by peers should match.
@@ -70,17 +70,15 @@ const certificates = configuration.certificates;
 let fingerprintsFromClient;
 
 if (certificates && certificates.length > 0) {
-  certificates.forEach((cert) => {
+  for (const cert of certificates) {
     // For purpose of demonstration, just get first certificate
     fingerprintsFromClient = cert.getFingerprints();
     break;
-  });
+  }
 }
 
 // Get the certificate fingerprints from the remote peer for particular certificate (pseudo code)
-const fingerprintsFromServer = [
-  /* … */
-];
+const fingerprintsFromServer = [/* … */];
 ```
 
 There are numerous ways to compare the fingerprint arrays for a particular certificate.

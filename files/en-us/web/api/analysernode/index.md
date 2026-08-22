@@ -11,7 +11,7 @@ The **`AnalyserNode`** interface represents a node able to provide real-time fre
 
 An `AnalyserNode` has exactly one input and one output. The node works even if the output is not connected.
 
-![Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT.](fttaudiodata_en.svg)
+![Without modifying the audio stream, the node allows you to get the frequency and time-domain data associated with it, using an FFT.](fttaudiodata_en.svg)
 
 {{InheritanceDiagram}}
 

@@ -15,7 +15,7 @@ represents an underlying audio processing mechanism of an
 
 > [!NOTE]
 > The `AudioWorkletProcessor` and classes that derive from it
-> cannot be instantiated directly from a user-supplied code. Instead, they are created
+> cannot be instantiated directly from user-supplied code. Instead, they are created
 > only internally by the creation of an associated {{domxref("AudioWorkletNode")}}.
 
 ## Syntax
@@ -44,7 +44,7 @@ new AudioWorkletProcessor(options)
     - `processorOptions` {{optional_inline}}
       - : Any additional data that can be used for custom initialization of the underlying {{domxref("AudioWorkletProcessor")}}.
 
-    Note that there are default values for the first two properties, so even if there are no
+    Note that there are default values for the first two properties, so even if there is no
     _options_ object passed to the {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}} constructor, the _options_ object passed by the node to the `AudioWorkletProcessor` constructor will exist and at minimum have `numberOfInputs` and `numberOfOutputs`.
 
 ### Return value
