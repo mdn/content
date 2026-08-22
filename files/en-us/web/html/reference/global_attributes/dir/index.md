@@ -59,6 +59,71 @@ Chrome and Safari provide a directionality option in the contextual menu of inpu
 Firefox uses <kbd>Ctrl</kbd> (Windows)/<kbd>Cmd</kbd> (macOS) + <kbd>Shift</kbd> + <kbd>X</kbd> inside a `<textarea>` to toggle text direction.
 These features toggle the `dir` attribute value between `ltr` and `rtl`.
 
+## Examples
+
+### Setting text direction explicitly
+
+This example uses `dir="ltr"` and `dir="rtl"` to explicitly set the reading direction for two paragraphs.
+Left-to-right is the default for most Western languages; right-to-left is required for languages such as Arabic and Hebrew.
+
+```html
+<p dir="ltr">This sentence is in English and reads left to right.</p>
+<p dir="rtl">هذه الجملة باللغة العربية وتُقرأ من اليمين إلى اليسار.</p>
+```
+
+### Using `dir="auto"` for user-generated content
+
+When displaying text whose language is not known in advance — for example, content entered by a user or fetched from an external source — use `dir="auto"`.
+The browser inspects the first strongly directional character in the element and applies that direction to the whole element.
+
+```html
+<ul>
+  <li dir="auto">This item contains English text.</li>
+  <li dir="auto">هذا العنصر يحتوي على نص عربي.</li>
+</ul>
+```
+
+Without `dir="auto"`, both list items would inherit the page direction (typically `ltr`), causing the Arabic text to be laid out incorrectly.
+
+### Inline bidirectional text
+
+When a right-to-left word or phrase appears inside a left-to-right sentence (or vice versa), wrap it in a {{ HTMLElement("bdi") }} element so the browser can handle the surrounding punctuation and layout correctly without affecting the direction of the rest of the sentence.
+Use the {{ HTMLElement("bdo") }} element when you want to explicitly override the Unicode bidirectional algorithm for a specific span of text.
+
+```html
+<p>
+  The title of the book is
+  <bdi>مفاهيم البرمجة</bdi>
+  and it was published last year.
+</p>
+
+<p dir="rtl">
+  اسم المستخدم هو
+  <!-- Force the username to always read left-to-right -->
+  <bdo dir="ltr">john_doe</bdo>
+</p>
+```
+
+### Setting document-level direction
+
+Set `dir` on the `<html>` element to establish a base direction for the entire page.
+All elements inherit this direction unless they set their own `dir` attribute.
+
+```html
+<!doctype html>
+<html dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <title>صفحة عربية</title>
+  </head>
+  <body>
+    <p>محتوى الصفحة باللغة العربية.</p>
+    <!-- Override direction for a specific element -->
+    <p dir="ltr">This paragraph is explicitly left-to-right.</p>
+  </body>
+</html>
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -72,3 +137,4 @@ These features toggle the `dir` attribute value between `ltr` and `rtl`.
 - All [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 - {{domxref("HTMLElement.dir")}} that reflects this attribute.
 - [Handling different text directions](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)
+- [Creating HTML pages in Arabic, Hebrew and other right-to-left scripts](https://www.w3.org/International/tutorials/bidi-xhtml/index.en.html) on w3.org
