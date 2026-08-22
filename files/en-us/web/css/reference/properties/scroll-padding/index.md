@@ -122,6 +122,25 @@ While defined in the [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) m
 
 {{csssyntax}}
 
+## Examples
+
+### Preventing content from being hidden by a fixed header
+
+A common use case for `scroll-padding` is to prevent scrolling content from being hidden by a fixed-position header. This example demonstrates how to use `scroll-padding` for this purpose.
+
+```css
+header {
+  position: fixed;
+  top: 0;
+  height: 60px;
+  width: 100%;
+}
+
+html {
+  scroll-padding-top: 60px;
+}
+```
+
 ## Specifications
 
 {{Specifications}}
