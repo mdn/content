@@ -90,7 +90,7 @@ Bear in mind that some built-in browser functions are not part of the core JavaS
 
 The built-in code we've used so far comes in both forms: **functions** and **methods.** You can check the full list of built-in functions, as well as built-in objects and their corresponding methods [in our JavaScript reference](/en-US/docs/Web/JavaScript/Reference/Global_Objects).
 
-You've also seen a lot of **custom functions** in the course so far — functions defined in your code, not inside the browser. Anytime you saw a custom name with parentheses straight after it, you were using a custom function. In our [random-canvas-circles.html](https://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) example (see also the full [source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/random-canvas-circles.html)) from our [loops article](/en-US/docs/Learn_web_development/Core/Scripting/Loops), we included a custom `draw()` function that looked like this:
+You've also seen a lot of **custom functions** in the course so far — functions defined in your code, not inside the browser. Anytime you saw a custom name with parentheses straight after it, you were using a custom function. In the [100 random circles](/en-US/docs/Learn_web_development/Core/Scripting/Loops#looping_code_example) example from our loops article, we included a custom `draw()` function that looks like this:
 
 ```js
 function draw() {
@@ -376,8 +376,42 @@ The zoo keeper is like the global scope — they have the keys to access every e
 
 Let's look at a real example to demonstrate scoping.
 
-1. First, make a local copy of our [function-scope.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-scope.html) example. This contains two functions called `a()` and `b()`, and three variables — `x`, `y`, and `z` — two of which are defined inside the functions, and one in the global scope. It also contains a third function called `output()`, which takes a single argument and outputs it to a paragraph on the page.
+1. First, create a new HTML file on your local file system, and put the following code into it:
+
+   ```html
+   <!DOCTYPE html>
+   <html lang="en-US">
+     <head>
+       <meta charset="utf-8" />
+       <meta name="viewport" content="width=device-width" />
+       <title>Function scope example</title>
+     </head>
+     <body>
+       <script>
+         const x = 1;
+
+         function a() {
+           const y = 2;
+         }
+
+         function b() {
+           const z = 3;
+         }
+
+         function output(value) {
+           const para = document.createElement("p");
+           document.body.appendChild(para);
+           para.textContent = `Value: ${value}`;
+         }
+       </script>
+     </body>
+   </html>
+   ```
+
+   This contains two functions called `a()` and `b()`, and three variables — `x`, `y`, and `z` — two of which are defined inside the functions, and one in the global scope. It also contains a third function called `output()`, which takes a single argument and outputs it to a paragraph on the page.
+
 2. Open the example up in a browser and in your text editor.
+
 3. Open the JavaScript console in your browser developer tools. In the JavaScript console, enter the following command:
 
    ```js
