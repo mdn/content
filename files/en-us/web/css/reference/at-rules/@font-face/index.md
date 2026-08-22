@@ -16,8 +16,7 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Gu
   font-family: "Trickster";
   src:
     local("Trickster"),
-    url("trickster-COLRv1.otf") format("opentype") tech(color-COLRv1),
-    url("trickster-outline.otf") format("opentype"),
+    url("trickster-COLRv1.woff2") format("woff2") tech(color-COLRv1),
     url("trickster-outline.woff2") format("woff2");
 }
 ```
