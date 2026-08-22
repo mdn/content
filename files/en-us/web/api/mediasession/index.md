@@ -116,31 +116,24 @@ if ("mediaSession" in navigator) {
 }
 ```
 
-The following example sets up two functions for playing and pausing, then uses them as callbacks with the relevant action handlers.
+Assuming the page contains an {{HTMLElement("audio")}} element, the following example sets up action handlers that play and pause the element and update the media session's playback state.
 
 ```js
+const audio = document.querySelector("audio");
+
 const actionHandlers = [
-  // play
   [
     "play",
     async () => {
-      // play our audio
-      await audioEl.play();
-      // set playback state
+      await audio.play();
       navigator.mediaSession.playbackState = "playing";
-      // update our status element
-      updateStatus(allMeta[index], "Action: play  |  Track is playing…");
     },
   ],
   [
     "pause",
     () => {
-      // pause out audio
-      audioEl.pause();
-      // set playback state
+      audio.pause();
       navigator.mediaSession.playbackState = "paused";
-      // update our status element
-      updateStatus(allMeta[index], "Action: pause  |  Track has been paused…");
     },
   ],
 ];
@@ -148,7 +141,7 @@ const actionHandlers = [
 for (const [action, handler] of actionHandlers) {
   try {
     navigator.mediaSession.setActionHandler(action, handler);
-  } catch (error) {
+  } catch {
     console.log(`The media session action "${action}" is not supported yet.`);
   }
 }
