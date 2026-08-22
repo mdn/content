@@ -76,7 +76,7 @@ counter-increment: unset;
 
 ### Values
 
-The `counter-increment` property takes as its value either a list of space-separated counter names specified as `<custom-ident>` with an optional `<integer>` value or the keyword `none`. You may specify as many counters to increment as you want, with each name or name-number pair separated by a space.
+This property is specified as a space-separated list of `<custom-ident>` values, each optionally followed by an `<integer>`, or the keyword `none`:
 
 - {{cssxref("&lt;custom-ident&gt;")}}
   - : Specifies the name of the counter to increase or decrease.
