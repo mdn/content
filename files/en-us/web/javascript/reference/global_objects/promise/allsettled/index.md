@@ -79,6 +79,20 @@ Promise.allSettled([
 // ]
 ```
 
+You may also destructure the results to have one variable per settling outcome.
+
+```js
+const [status1, status2] = Promise.allSettled([
+  Promise.resolve(33),
+  new Promise((resolve) => setTimeout(() => resolve(66), 0)),
+]);
+
+// status1 = { status: 'fulfilled', value: 33 }
+// status2 = { status: 'fulfilled', value: 66 }
+```
+
+If you destructure the result, you must keep the result variables in the same order as the input promises; a mismatch may cause subtle bugs. The {{jsxref("Promise.allSettledKeyed()")}} method avoids this problem by associating each input and output with a key.
+
 ## Specifications
 
 {{Specifications}}
@@ -95,5 +109,6 @@ Promise.allSettled([
 - [Graceful asynchronous programming with promises](/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises)
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.all()")}}
+- {{jsxref("Promise.allSettledKeyed()")}}
 - {{jsxref("Promise.any()")}}
 - {{jsxref("Promise.race()")}}

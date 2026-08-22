@@ -110,7 +110,7 @@ Promise.all([p1, p2, p3]).then(([a, b, c]) => {
 const [a, b, c] = await Promise.all([p1, p2, p3]);
 ```
 
-Be careful: if the original promises and the result variables' order don't match, you may run into subtle bugs.
+Be careful: if the original promises and the result variables' order don't match, you may run into subtle bugs. The {{jsxref("Promise.allKeyed()")}} method solves exactly this problem.
 
 ### Asynchronicity or synchronicity of Promise.all
 
@@ -253,6 +253,20 @@ async function getPrice() {
 }
 ```
 
+Note that the following, despite other undesirable aspects (like creating more variables and bug-prone error handling), also achieves concurrency:
+
+```js
+async function getPrice() {
+  // Fire all async operations upfront
+  const choicePromise = promptForDishChoice();
+  const pricesPromise = fetchPrices();
+
+  // Wait for each promise (all in-progress async operations keep running)
+  const choice = await choicePromise;
+  const prices = await pricesPromise;
+}
+```
+
 ### Promise.all fail-fast behavior
 
 `Promise.all` is rejected if any of the elements are rejected. For example, if you pass in four promises that resolve after a timeout and one promise that rejects immediately, then `Promise.all` will reject immediately.
@@ -317,6 +331,7 @@ Promise.all([p1.catch((error) => error), p2.catch((error) => error)]).then(
 ## See also
 
 - {{jsxref("Promise")}}
+- {{jsxref("Promise.allKeyed()")}}
 - {{jsxref("Promise.allSettled()")}}
 - {{jsxref("Promise.any()")}}
 - {{jsxref("Promise.race()")}}
