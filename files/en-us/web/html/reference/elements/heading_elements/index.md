@@ -65,6 +65,7 @@ These elements only include the [global attributes](/en-US/docs/Web/HTML/Referen
 - Heading information can be used by user agents to construct a table of contents for a document automatically.
 - Do not use heading elements to resize text. Instead, use the {{glossary("CSS")}} {{cssxref("font-size")}} property.
 - Do not skip heading levels: always start from `<h1>`, followed by `<h2>` and so on.
+- The [`headingoffset`](/en-US/docs/Web/HTML/Reference/Global_attributes/headingoffset) global attribute {{experimental_inline}} increases the computed heading level of the headings inside the element it is set on, so a component can keep the same heading markup wherever it is used. The [`headingreset`](/en-US/docs/Web/HTML/Reference/Global_attributes/headingreset) attribute stops the offsets of ancestor elements from applying to the headings inside it.
 
 ### Avoid using multiple `<h1>` elements on one page
 
