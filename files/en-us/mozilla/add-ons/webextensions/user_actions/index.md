@@ -31,7 +31,7 @@ function handleClick() {
 browser.browserAction.onClicked.addListener(handleClick);
 ```
 
-In addition to enabling the APIs, these actions also enable the [`"activeTab"` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission). This permission grants extra privileges for the tab visible when the user action takes place.
+In addition to enabling the APIs, these actions also enable the [`activeTab`](/en-US/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission) permission. This permission grants extra privileges for the tab visible when the user action takes place.
 
 User interactions in normal web pages aren't treated as user actions. For example, consider a button on a normal web page that uses a content script. This content script added a click handler for the button that sends a message to the extension's background page. When a user clicks the button, the background page message handler is not considered to be handling a user action.
 

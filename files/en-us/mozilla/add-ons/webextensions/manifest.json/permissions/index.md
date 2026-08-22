@@ -43,7 +43,7 @@ The key can contain three kinds of permissions:
 
 - host permissions (Manifest V2 only, host permissions are specified in the [`host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key for Manifest V3 or higher.)
 - API permissions
-- the `activeTab` permission
+- the [`activeTab`](/en-US/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission) permission
 
 ## Host permissions
 
@@ -143,31 +143,9 @@ In most cases, the permission grants access to the API only, with these exceptio
 
 ## activeTab permission
 
-If an extension has the `"activeTab"` permission, when a user interacts with the extension, the extension is granted extra privileges for the active tab only.
+When a user interacts with an extension that has the `activeTab` permission, the extension is granted extra privileges for the tab where the interaction occurred. This lets an extension act on the current page when the user asks, without requesting broad [host permissions](#host_permissions).
 
-These interactions are known as [user actions](/en-US/docs/Mozilla/Add-ons/WebExtensions/User_actions) and include the user:
-
-- clicking the extension's [toolbar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) or [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions).
-- selecting an extension's context menu item.
-- activating a keyboard shortcut defined by the extension (from Firefox 63).
-- clicking a button on a page bundled with the extension.
-- clicking an extension suggestion in the address bar (omnibox) (from Firefox 142).
-
-The extra privileges are:
-
-- The ability to inject JavaScript or CSS into the tab programmatically (see [Loading content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#loading_content_scripts)).
-- Access to the privileged parts of the tabs API for the current tab: `Tab.url`, `Tab.title`, and `Tab.faviconUrl`.
-
-The intent of this permission is to enable extensions to fulfill a common use case without granting them overly powerful permissions. Many extensions want to "do something to the current page when the user asks".
-
-For example, consider an extension that wants to run a script in the current page when the user clicks a browser action. If the `activeTab` permission did not exist, the extension would need to ask for the host permission `<all_urls>`. But this gives the extension more power than it needs: it can now execute scripts in _any tab_, _any time_ it likes, instead of just the active tab and only in response to a user action.
-
-> [!NOTE]
-> Your extension can only access the tab or data that existed when the user interaction occurred (e.g., a click). When the active tab navigates away (e.g., due to page load finishing or another event), the extension no longer has permission to access the tab.
-
-The `activeTab` permission enables scripting access to the top-level tab's page and same-origin frames. Running scripts or modifying styles inside [cross-origin](/en-US/docs/Web/Security/Defenses/Same-origin_policy#cross-origin_network_access) frames may require additional [host permissions](#host_permissions). Of course, [restrictions and limitations](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#permissions_restrictions_and_limitations) related to particular sites and URI schemes are applied as well.
-
-Usually, the tab that's granted `activeTab` is the active tab, with one exception. An extension can create a menu item using the {{webextAPIref("menus")}} API that displays when the user context-clicks a tab. That is, a menu on an element in the tabstrip that lets the user switch between tabs. If the user clicks this menu, then the `activeTab` permission is granted for the tab the user clicked, even if it's not the active tab (as of Firefox 63, [Firefox bug 1446956](https://bugzil.la/1446956)).
+For details of how the permission is granted, what it enables, when the access ends, and how behavior differs among browsers, see the [`activeTab`](/en-US/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission) permission page.
 
 ## Clipboard access
 
