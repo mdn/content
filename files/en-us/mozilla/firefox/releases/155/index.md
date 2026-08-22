@@ -91,3 +91,8 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
 These features are shipping in Firefox 155 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **Buffer boundary assertions in regular expressions**: `javascript.options.experimental.regexp_buffer_boundaries`
+
+  The [`\A`, `\z`, and `\Z` buffer boundary assertions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Buffer_boundary_assertion) are now supported.
+  These match the start or end of the entire string, unaffected by the [`m`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline) flag. ([Firefox bug 2047706](https://bugzil.la/2047706)).
