@@ -8,11 +8,11 @@ browser-compat: api.StylePropertyMapReadOnly.size
 
 {{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`size`** read-only property of the {{domxref("StylePropertyMapReadOnly")}} interface returns a positive integer containing the size of the `StylePropertyMapReadOnly` object.
+The **`size`** read-only property of the {{domxref("StylePropertyMapReadOnly")}} interface returns a non-negative integer containing the number of declarations in the `StylePropertyMapReadOnly` object.
 
 ## Value
 
-A positive integer.
+A non-negative integer.
 
 ## Examples
 
@@ -39,3 +39,15 @@ console.log(amountStyles); // logs 338
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("StylePropertyMapReadOnly.entries()")}}
+- {{domxref("StylePropertyMapReadOnly.forEach()")}}
+- {{domxref("StylePropertyMapReadOnly.get()")}}
+- {{domxref("StylePropertyMapReadOnly.getAll()")}}
+- {{domxref("StylePropertyMapReadOnly.has()")}}
+- {{domxref("StylePropertyMapReadOnly.keys()")}}
+- {{domxref("StylePropertyMapReadOnly.values()")}}
+- [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)
