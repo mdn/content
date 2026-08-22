@@ -15,150 +15,97 @@ If not used in nested style rule, the `&` nesting selector represents the [scopi
 
 ## Syntax
 
-```css
+```plain
+/* Nested directly — adds whitespace (descendant) */
 parentRule {
-  /* parent rule style properties */
-  & childRule {
-    /* child rule style properties */
-  }
+  & childRule { }
+}
+
+/* Attached to parent — no whitespace (e.g., pseudo-class, compound selector) */
+parentRule {
+  &:pseudo-class { }
+}
+
+/* Reversed context — & placed after another selector */
+parentRule {
+  otherRule & { }
 }
 ```
 
-### `&` nesting selector and whitespace
+## Description
 
-Consider the following code where nesting is done _without_ the `&` nesting selector.
+### `&` and whitespace
+
+When nesting _without_ `&`, the browser automatically inserts whitespace between selectors, producing a descendant selector:
 
 ```css
 .parent-rule {
-  /* parent rule properties */
   .child-rule {
     /* child rule properties */
   }
 }
+/* Equivalent to: .parent-rule .child-rule { … } */
 ```
 
-When the browser parses the nested selectors, it automatically adds whitespace between the selectors to create a new CSS selector rule. The following code shows the equivalent non-nested rules:
+When `&` is used _without_ whitespace — such as with a {{cssxref('Pseudo-classes', 'pseudo-class')}} or a [compound selector](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#compound_selector) — the nested rule attaches directly to the parent:
 
 ```css
 .parent-rule {
-  /* parent rule style properties */
-}
-
-.parent-rule .child-rule {
-  /* style properties for .child-rule descendants for .parent-rule ancestors */
-}
-```
-
-When the nested rule needs to be attached (with no whitespace) to the parent rule, such as when using a {{cssxref('Pseudo-classes', 'pseudo-class')}} or creating [compound selectors](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#compound_selector), the `&` nesting selector must be immediately prepended to achieve the desired effect.
-
-Consider an example where we want to style an element, providing styles to be applied at all times, and also nesting some styles to be applied only on hover. If the `&` nesting selector is not included, whitespace is added and we end up with a ruleset that applies the nested styles to any _hovered descendant of the parent rule selector_. This is, however, not what we want.
-
-```css
-.parent-rule {
-  /* parent rule properties */
-  :hover {
-    /* child rule properties */
-  }
-}
-
-/* the browser parses the above nested rules as shown below */
-.parent-rule {
-  /* parent rule properties */
-}
-
-.parent-rule *:hover {
-  /* child rule properties */
-}
-```
-
-With the `&` nesting selector added with no whitespace, the elements matched by the parent rule will be styled when hovered.
-
-```css
-.parent-rule {
-  /* parent rule properties */
   &:hover {
     /* child rule properties */
   }
 }
-
-/* the browser parses the above nested rules as shown below */
-.parent-rule {
-  /* parent rule properties */
-}
-
-.parent-rule:hover {
-  /* child rule properties */
-}
+/* Equivalent to: .parent-rule:hover { … } */
 ```
 
-### Appending the `&` nesting selector
+Without `&`, `:hover` would become `.parent-rule *:hover`, matching any _hovered descendant_ rather than the parent element itself.
 
-The `&` nesting selector can also be appended to reverse the context of the rules.
+### Appending `&` to reverse context
+
+Placing `&` after another selector reverses the relationship, making the parent rule a descendant of that selector:
 
 ```css
 .card {
-  /* .card styles */
   .featured & {
     /* .featured .card styles */
   }
 }
-
-/* the browser parses above nested rules as */
-
-.card {
-  /* .card styles */
-}
-
-.featured .card {
-  /* .featured .card styles */
-}
+/* Equivalent to: .featured .card { … } */
 ```
 
-The `&` nesting selector can be placed multiple times:
+`&` can appear multiple times in a single selector:
 
 ```css
 .card {
-  /* .card styles */
-  .featured & & & {
-    /* .featured .card .card .card styles */
+  .featured & & {
+    /* .featured .card .card styles */
   }
 }
-
-/* the browser parses above nested rules as */
-
-.card {
-  /* .card styles */
-}
-
-.featured .card .card .card {
-  /* .featured .card .card .card styles */
-}
+/* Equivalent to: .featured .card .card { … } */
 ```
 
-### Cannot represent pseudo-elements
+### `&` cannot represent pseudo-elements
 
-The `&` selector is equivalent to the {{cssxref(":is()")}} selector, and has the same limitation that it cannot represent pseudo-elements.
-
-For example, with the following style rule, no generated content will be styled red, even when nested in `<div class="important">`, because `.important :is(.foo::before)` cannot match anything.
+Because `&` is equivalent to {{cssxref(":is()")}}, it cannot represent pseudo-elements. No generated content will be styled red below, because `.important :is(.foo::before)` cannot match anything:
 
 ```css
 .foo::before {
   content: "Hello";
 
   .important & {
-    color: red;
+    color: red; /* has no effect */
   }
 }
 ```
 
-This limitation also applies to [nested at-rules](/en-US/docs/Web/CSS/Guides/Nesting/At-rules), whose properties are implicitly wrapped in an `&` selector. For example, with the following rule, no generated content will be styled red, even on a small screen, because the `color: red` property is implicitly wrapped in an `&` selector, which in this case is `:is(.foo::before)`.
+This limitation also applies to [nested at-rules](/en-US/docs/Web/CSS/Guides/Nesting/At-rules), whose properties are implicitly wrapped in an `&` selector:
 
 ```css
 .foo::before {
   content: "Hello";
 
   @media (width < 600px) {
-    color: red;
+    color: red; /* has no effect — implicitly wrapped in &, i.e. :is(.foo::before) */
   }
 }
 ```
@@ -237,7 +184,7 @@ This example uses nested CSS styling.
 
 ### Using `&` outside nested rule
 
-If not used in nested style rule, the `&` nesting selector represents the [scoping root](/en-US/docs/Web/CSS/Reference/Selectors/:scope).
+If not used in a nested style rule, `&` represents the [scoping root](/en-US/docs/Web/CSS/Reference/Selectors/:scope). In this case, all styles apply to the [document](/en-US/docs/Web/API/Document).
 
 ```html
 <p>Hover over the output box to change document's background color.</p>
@@ -255,8 +202,6 @@ If not used in nested style rule, the `&` nesting selector represents the [scopi
 ```
 
 #### Result
-
-In this case, all the styles apply to [document](/en-US/docs/Web/API/Document).
 
 {{EmbedLiveSample('Usage_outside_nested_rule','100%','65')}}
 
