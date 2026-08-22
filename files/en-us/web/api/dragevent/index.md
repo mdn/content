@@ -36,7 +36,7 @@ Although this interface has a constructor, it is not possible to create a useful
 - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
   - : This event is fired when a dragged element or text selection leaves a valid drop target.
 - {{domxref("HTMLElement/dragover_event", "dragover")}}
-  - : This event is fired continuously when an element or text selection is being dragged and the mouse pointer is over a valid drop target (every 50 ms WHEN mouse is not moving ELSE much faster between 5 ms (slow movement) and 1ms (fast movement) approximately. This firing pattern is different than {{domxref("Element/mouseover_event", "mouseover")}} ).
+  - : This event is fired continuously while an element or text selection is being dragged and the mouse pointer is over a valid drop target. Per the [HTML specification](https://html.spec.whatwg.org/multipage/dnd.html#drag-and-drop-processing-model), the drag-and-drop processing model runs — and so this event fires — every 350 ms (±200 ms) for as long as the drag is ongoing. This firing pattern is different than {{domxref("Element/mouseover_event", "mouseover")}}.
 - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
   - : This event is fired when the user starts dragging an element or text selection.
 - {{domxref("HTMLElement/drop_event", "drop")}}
