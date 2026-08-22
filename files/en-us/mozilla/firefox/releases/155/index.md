@@ -91,3 +91,7 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
 These features are shipping in Firefox 155 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **Audio Session API** (Nightly): `dom.audio_session.enabled`
+
+  The [Audio Session API](/en-US/docs/Web/API/Audio_Session_API) provides a mechanism for web applications to control how their audio interacts with other audio playing on a device. ([Firefox bug 2055710](https://bugzil.la/2055710)).
