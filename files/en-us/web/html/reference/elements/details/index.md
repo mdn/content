@@ -89,7 +89,7 @@ By default, the element when closed is only tall enough to display the disclosur
 
 ### Styling the `<details>` element
 
-The `<summary>` element is automatically given a `display: list-item` value, enabling you to style the disclosure icon using the {{cssxref("list-style-type")}} and {{cssxref("list-style-position")}} properties or the {{cssxref("::marker")}} pseudo-element. See also [Changing the summary's icon](/en-US/docs/Web/HTML/Reference/Elements/summary#changing_the_summarys_icon).
+The `<summary>` element is automatically given a `display: list-item` value, enabling you to style the summary's marker using the {{cssxref("list-style-type")}} and {{cssxref("list-style-position")}} properties or the {{cssxref("::marker")}} pseudo-element. See also [Changing the summary's icon](/en-US/docs/Web/HTML/Reference/Elements/summary#changing_the_summarys_icon).
 
 You can style the content of the `<details>` element using the {{cssxref("::details-content")}} pseudo-element.
 
