@@ -286,8 +286,8 @@ Chrome supports the non-standard `DownloadURL` type. The payload should be text 
 
 ```js
 event.dataTransfer.items.add(
-  "DownloadURL",
   "image/png:example.png:data:image/png;base64,iVBORw0K...",
+  "DownloadURL",
 );
 ```
 
