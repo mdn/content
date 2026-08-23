@@ -266,8 +266,8 @@ A common way to transfer the element is to use the `text/html` type containing s
 You may also include a plain text representation of the HTML or XML data using the `text/plain` type. The data should be just the text without any of the source tags or attributes. For instance:
 
 ```js
-event.dataTransfer.items.add("text/html", element.outerHTML);
-event.dataTransfer.items.add("text/plain", element.innerText);
+event.dataTransfer.items.add(element.outerHTML, "text/html");
+event.dataTransfer.items.add(element.innerText, "text/plain");
 ```
 
 You can also use other types that you invent for custom purposes. Strive to always include a `text/plain` alternative, unless the dragged object is specific to a particular site or application. In this case, the custom type ensures that the data cannot be dropped elsewhere.
@@ -286,8 +286,8 @@ Chrome supports the non-standard `DownloadURL` type. The payload should be text 
 
 ```js
 event.dataTransfer.items.add(
-  "DownloadURL",
   "image/png:example.png:data:image/png;base64,iVBORw0K...",
+  "DownloadURL",
 );
 ```
 
