@@ -24,7 +24,7 @@ There are two API namespaces in use:
 
 JavaScript provides several ways to handle asynchronous events. The proposed extensions API standard is to use promises. The promises approach offers significant advantages when dealing with chained asynchronous event calls.
 
-Firefox and Safari implement [promises](https://developer.chrome.com/docs/extensions/develop/migrate#promises) for the extensions API. With the introduction of Manifest V3, Chrome, Edge, and Opera also began providing promises for asynchronous methods, with full coverage in Chrome 152. See [Historical differences](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#historical_differences) on the Chrome incompatibilities page for more details.
+Firefox and Safari implement [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) for the extensions API. With the introduction of Manifest V3, Chrome, Edge, and Opera also began providing promises for asynchronous methods, with full coverage in Chrome 152. See [Historical differences](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#historical_differences) on the Chrome incompatibilities page for more details.
 
 > [!NOTE]
 > All the main browsers support callbacks, too, for compatibility.
