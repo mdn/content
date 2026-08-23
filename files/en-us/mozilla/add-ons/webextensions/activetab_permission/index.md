@@ -114,7 +114,7 @@ Firefox, Safari, and Chromium-based browsers, including Chrome and Edge, support
 | Activating the extension's keyboard shortcut    | Yes                                                                                 | From Firefox 63  | Yes                                                                                 |
 | Clicking a button on an extension's own page    | Yes                                                                                 | Yes              | Yes                                                                                 |
 | Accepting an address bar (omnibox) suggestion   | Yes                                                                                 | From Firefox 142 | No, Safari doesn't support the {{WebExtAPIRef("omnibox")}} API                      |
-| Selecting a menu item on a tab in the tab strip | No, Chrome doesn't support the `tab` value of {{WebExtAPIRef("menus.ContextType")}} | From Firefox 63  | No, Safari doesn't support the `tab` value of {{WebExtAPIRef("menus.ContextType")}} |
+| Selecting a menu item on a tab in the tab strip | From Chrome 150 | From Firefox 63  | No, Safari doesn't support the `tab` value of {{WebExtAPIRef("menus.ContextType")}} |
 
 ### Capabilities granted
 
