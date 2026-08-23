@@ -107,13 +107,13 @@ Firefox, Safari, and Chromium-based browsers, including Chrome and Edge, support
 
 ### Actions that grant activeTab
 
-| User action                                     | Chrome                                                                              | Firefox          | Safari                                                                              |
-| ----------------------------------------------- | ----------------------------------------------------------------------------------- | ---------------- | ----------------------------------------------------------------------------------- |
-| Clicking the extension's toolbar button         | Yes                                                                                 | Yes              | Yes                                                                                 |
-| Selecting the extension's context menu item     | Yes                                                                                 | Yes              | Yes                                                                                 |
-| Activating the extension's keyboard shortcut    | Yes                                                                                 | From Firefox 63  | Yes                                                                                 |
-| Clicking a button on an extension's own page    | Yes                                                                                 | Yes              | Yes                                                                                 |
-| Accepting an address bar (omnibox) suggestion   | Yes                                                                                 | From Firefox 142 | No, Safari doesn't support the {{WebExtAPIRef("omnibox")}} API                      |
+| User action                                     | Chrome          | Firefox          | Safari                                                                              |
+| ----------------------------------------------- | --------------- | ---------------- | ----------------------------------------------------------------------------------- |
+| Clicking the extension's toolbar button         | Yes             | Yes              | Yes                                                                                 |
+| Selecting the extension's context menu item     | Yes             | Yes              | Yes                                                                                 |
+| Activating the extension's keyboard shortcut    | Yes             | From Firefox 63  | Yes                                                                                 |
+| Clicking a button on an extension's own page    | Yes             | Yes              | Yes                                                                                 |
+| Accepting an address bar (omnibox) suggestion   | Yes             | From Firefox 142 | No, Safari doesn't support the {{WebExtAPIRef("omnibox")}} API                      |
 | Selecting a menu item on a tab in the tab strip | From Chrome 150 | From Firefox 63  | No, Safari doesn't support the `tab` value of {{WebExtAPIRef("menus.ContextType")}} |
 
 ### Capabilities granted
