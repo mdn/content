@@ -115,7 +115,7 @@ This creates a triangle shape that covers half the area of its parent container 
 
 ### The effect of point order
 
-The order in which you define the points matters and can result in different shapes. For example, the following two `clip-path` declarations both specify a `polygon()` function with four points equal to the four corners of the container.
+The order in which you define the points can result in different shapes. For example, the following two `clip-path` declarations both use a `polygon()` function with X/Y coordinate pairs for the container's four corners, but in a different order.
 
 ```css
 clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
