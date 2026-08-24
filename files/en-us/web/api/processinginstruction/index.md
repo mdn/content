@@ -47,20 +47,20 @@ _This interface also inherits methods from its parent interfaces, {{domxref("Cha
 - {{domxref("ProcessingInstruction.toggleAttribute()")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Toggles a boolean attribute, removing it if it is present and adding it if it is not present, on the specified element.
 
-These methods provide easier access to the {domxref("CharacterData.data", "data")} string attributes.
+These methods provide easier access to the {{domxref("CharacterData.data", "data")}} string attributes.
 
 ## Description
 
 Processing instructions, as the name suggests, specify how to process a document. They can include stylesheets for XML documents, placeholders for HTML documents, or other processing instructions.
 
-Processing instructions are {{domxref("Node", "Nodes")}} rather than {{domxref("Element", "Elements")}}. They don't have children or cause nesting (as demonstrated in our [Patching example](#usage_with_template_for_patching), and therefore don't change the shape of the {{domxref("Document Object Model", "Document Object Model (DOM)")}}.
+Processing instructions are {{domxref("Node", "Nodes")}} rather than {{domxref("Element", "Elements")}}. They don't have children or cause nesting (as demonstrated in our [Patching example](#usage_with_template_for_patching), and therefore don't change the shape of the [Document Object Model (DOM)](/en-US/docs/Web/API/Document_Object_Model).
 
 Initially, `ProcessingInstruction` nodes were only supported in XML documents, not HTML documents. In non-supporting browsers, processing instructions will be interpreted as comments and represented as {{domxref("Comment")}} objects in the DOM tree.
 
 When written in documents directly, rather than created by {{domxref("document.createProcessingInstruction()")}}, they begin and end with `<?` and `?>` delimiters, and contain a `target` and optional `data` attributes. For example:
 
 ```xml
-<?my-target name="my-name"?>`.
+<?my-target name="my-name"?>
 ```
 
 When written in HTML, processing instructions can be provided with or without the trailing `?`, and the browser will add it if not supplied when parsing the DOM. Both `<?my-target?>` and `<?my-target>` are therefore valid. XML is stricter and requires the trailing `?`.
@@ -127,7 +127,7 @@ const pi = document.createProcessingInstruction(
 
 console.log(pi.data);
 console.log(pi.getAttribute("my-data1"));
-console.log(pi.getAttribute("my-data1"));
+console.log(pi.getAttribute("my-data2"));
 // logs
 // my-data1='value1' my-data2='value2'
 // value1

@@ -28,7 +28,7 @@ For more details, see [Layout shift score](https://web.dev/articles/cls#layout_s
 
 ### Logging the entry's layout shift score
 
-The following example shows how use the `value` property to log the layout shift score.
+The following example shows how to use the `value` property to log the layout shift score.
 
 ```js
 const observer = new PerformanceObserver((list) => {

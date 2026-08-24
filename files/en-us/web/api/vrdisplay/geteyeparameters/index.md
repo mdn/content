@@ -9,7 +9,7 @@ status:
 browser-compat: api.VRDisplay.getEyeParameters
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 The **`getEyeParameters()`** method of the {{domxref("VRDisplay")}} interface returns the {{domxref("VREyeParameters")}} object containing the eye parameters for the specified eye.
 
