@@ -32,10 +32,10 @@ It's also possible to include `activeTab` in [`optional_permissions`](/en-US/doc
 The browser grants `activeTab` when the user interacts with the extension. These interactions are known as [user actions](/en-US/docs/Mozilla/Add-ons/WebExtensions/User_actions) and include the user:
 
 - clicking the extension's [toolbar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) or [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions).
-- selecting an extension's context menu item.
-- activating a keyboard shortcut defined by the extension with the {{WebExtAPIRef("commands")}} API.
-- clicking a button on a page bundled with the extension.
-- clicking an extension suggestion in the address bar (omnibox) (from Firefox 142).
+- selecting an extension's context menu item, which triggers the {{WebExtAPIRef("menus.onClicked")}} event.
+- activating a keyboard shortcut defined by the extension with the {{WebExtAPIRef("commands")}} API, which triggers the {{WebExtAPIRef("commands.onCommand")}} event.
+- clicking a button on a page bundled with the extension, which triggers a DOM [`click`](/en-US/docs/Web/API/Element/click_event) event handled by the page's script.
+- clicking an extension suggestion in the address bar (omnibox), which triggers the {{WebExtAPIRef("omnibox.onInputEntered")}} event (from Firefox 142).
 
 Usually, the tab granted `activeTab` is the active tab. There is one exception: an extension can use the {{WebExtAPIRef("menus")}} API to create a menu item that displays when the user context-clicks a tab in the tab strip. If the user selects this menu item, `activeTab` is granted for the tab clicked, even if it isn't the active tab.
 
@@ -100,6 +100,100 @@ browser.action.onClicked.addListener((tab) => {
 ```
 
 The same click also makes the privileged tab properties readable, so `tab.url` and `tab.title` hold real values rather than being `undefined`.
+
+### Further examples
+
+These further examples showing the use of declare the `activeTab` permission are available in the repository of example extensions at <https://github.com/mdn/webextensions-examples>. :
+
+<table>
+  <thead>
+    <tr>
+      <th>Example</th>
+      <th>How <code>activeTab</code> is used</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a href="https://github.com/mdn/webextensions-examples/apply-css/"
+          >apply-css</a
+        >
+      </td>
+      <td>
+        A page action click grants access to inject or remove CSS on the active
+        tab ({{WebExtAPIRef("tabs.insertCSS()")}} and {{WebExtAPIRef("tabs.removeCSS()")}}).
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/mdn/webextensions-examples/beastify/"
+          >beastify</a
+        >
+      </td>
+      <td>
+        A browser action click grants access for
+        {{WebExtAPIRef("scripting.executeScript()")}} and {{WebExtAPIRef("scripting.insertCSS()")}}
+        on the active tab.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="https://github.com/mdn/webextensions-examples/context-menu-copy-link-with-types/"
+          >context-menu-copy-link-with-types</a
+        >
+      </td>
+      <td>
+        A context menu click on a link unlocks the page so the link can be
+        copied to the clipboard.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/mdn/webextensions-examples/export-helpers/"
+          >export-helpers</a
+        >
+      </td>
+      <td>
+        Grants access to the active tab to demo
+        <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts/cloneInto"
+          ><code>cloneInto()</code></a
+        > and export helpers with page scripts.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/mdn/webextensions-examples/history-deleter/"
+          >history-deleter</a
+        >
+      </td>
+      <td>
+        Reads the active tab's URL to determine the domain whose history is to
+        be deleted.
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/mdn/webextensions-examples/menu-demo/"
+          >menu-demo</a
+        >
+      </td>
+      <td>A menu item click unlock the active tab for the menu manipulation demo.</td>
+    </tr>
+    <tr>
+      <td>
+        <a
+          href="https://github.com/mdn/webextensions-examples/menu-remove-element/"
+          >menu-remove-element</a
+        >
+      </td>
+      <td>
+        A menu item click unlocks page access to inject a script that removes
+        the element under the cursor.
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Browser compatibility
 

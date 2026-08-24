@@ -10,6 +10,8 @@ Fired when a command is executed using its associated keyboard shortcut.
 
 The listener is passed the command's name. This matches the name given to the command in its [manifest.json entry](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
 
+If the extension has the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission), activating a command's keyboard shortcut is a user action that grants it temporary access to the active tab.
+
 ## Syntax
 
 ```js-nolint
