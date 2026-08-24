@@ -153,7 +153,7 @@ polygon( <'fill-rule'>? [ round <length> ]? , [ <length-percentage> <length-perc
 The optional first parameter can contain one or both of the following, separated by a space:
 
 - An SVG {{SVGAttr("fill-rule")}} value, either `nonzero` or `evenodd`, specifying the algorithm used to fill the polygon shape.
-- The keyword [`round`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/polygon#round) followed by a {{cssxref("length")}} value, with the two separated by a space. This specifies that the polygon should have rounded corners, with the `<length>` specifying the corner radius.
+- The keyword [`round`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/polygon#round) followed by a {{cssxref("length")}} value, separated by a space. This specifies that the polygon should have rounded corners, with the `<length>` specifying the corner radius.
 
 Each coordinate pair consists of two space-separated `<length-percentage>` values. These values represent the x and y axis coordinates of a polygon vertex.
 
