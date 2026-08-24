@@ -102,13 +102,7 @@ contain: unset;
 
 ### Values
 
-The `contain` property can have any of the following values:
-
-- The keyword `none` **or**
-- One or more of the space-separated keywords `size` (or `inline-size`), `layout`, `style`, and `paint` in any order **or**
-- One of the shorthand values `strict` or `content`
-
-The keywords have the following meanings:
+This property is specified as a single value (`none`, `strict`, or `content`) or as a space-separated list of one or more of `size` (or `inline-size`), `layout`, `style`, and `paint`, in any order:
 
 - `none`
   - : The element renders as normal, with no containment applied.

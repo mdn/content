@@ -128,7 +128,7 @@ console.log(reply2); // "Your name is Alex."
 
 ### Constrained JSON output
 
-The following example shows how do pass JSON to the `responseConstraint` option to specify that you want an array returned by the call to `prompt()`.
+The following example shows how to pass JSON to the `responseConstraint` option to specify that you want an array returned by the call to `prompt()`.
 
 ```js
 const session = await LanguageModel.create();

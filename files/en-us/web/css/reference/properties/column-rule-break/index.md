@@ -262,7 +262,7 @@ section {
 
 {{EmbedLiveSample("Flex containers", "", "300")}}
 
-In horizontal wrting modes, setting the `column-rule-break` to `intersection` only impacts the column rules in the `column` and `column-reverse` scenarios.
+In horizontal writing modes, setting the `column-rule-break` to `intersection` only impacts the column rules in the `column` and `column-reverse` scenarios.
 
 ### Multi-col containers
 
@@ -481,7 +481,7 @@ const ul = document.getElementById("ul");
 const output = document.getElementById("o");
 
 gap.addEventListener("input", () => {
-  o.innerText = ul.style.rowGap = `${gap.value}px`;
+  output.innerText = ul.style.rowGap = `${gap.value}px`;
 });
 ```
 
