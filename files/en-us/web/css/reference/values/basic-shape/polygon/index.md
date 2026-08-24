@@ -256,7 +256,7 @@ In this example, we create a star shape and use the `round` keyword to round its
 @supports not (clip-path: polygon(round 20px, 0% 0%, 100% 0%, 100% 100%)) {
   body::before {
     font-family: sans-serif;
-    content: "Your browser does not support the polygon() round keyword.";
+    content: "Your browser does not support the polygon() function's round keyword.";
     background-color: wheat;
     padding: 1rem 0;
     text-align: center;
