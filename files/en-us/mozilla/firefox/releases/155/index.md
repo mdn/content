@@ -141,10 +141,10 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
   ([Firefox bug 2019361](https://bugzil.la/2019361) and [Firefox bug 2056412](https://bugzil.la/2056412)).
 - Two-byte RTP header extensions are now supported, so header extensions with an id of 15 or above can be negotiated instead of causing an `OperationError`.
   ([Firefox bug 2014357](https://bugzil.la/2014357)).
-- The {{domxref("RTCTransportStats.selectedCandidatePairChanges", "selectedCandidatePairChanges")}} property is now reported in {{domxref("RTCTransportStats")}}, and DTLS and ICE transport statistics are available immediately after {{domxref("RTCPeerConnection.setLocalDescription()", "setLocalDescription()")}} rather than being `undefined`.
+- The {{domxref("RTCTransportStats.selectedCandidatePairChanges", "selectedCandidatePairChanges")}} property is now reported in {{domxref("RTCTransportStats")}}.
   ([Firefox bug 2055911](https://bugzil.la/2055911)).
-- The {{domxref("RTCTransportStats.dtlsRole", "dtlsRole")}} property is now reported as `unknown` before the DTLS role has been negotiated, instead of guessing a role.
-  ([Firefox bug 2053296](https://bugzil.la/2053296)).
+- The `transport` statistics returned by {{domxref("RTCPeerConnection.getStats()")}} are now correct before negotiation, in other words after {{domxref("RTCPeerConnection.setLocalDescription()", "setLocalDescription()")}} but before a remote description has been set.
+  The {{domxref("RTCTransportStats.dtlsRole", "dtlsRole")}} property is now reported as `unknown` until the DTLS handshake selects a role, where previously it was not reported at all ([Firefox bug 2053296](https://bugzil.la/2053296)), and the {{domxref("RTCTransportStats.iceState", "iceState")}} property now starts as `new` rather than `checking`, which incorrectly indicated that connectivity checks were already underway ([Firefox bug 2053297](https://bugzil.la/2053297)).
 
 <!-- #### Removals -->
 
