@@ -101,20 +101,26 @@ text-fit: shrink 50%;
 
 Any text this is applied to will shrink to fit its containing box, but will not scale to a size less than 50% of its original `font-size`.
 
+> [!NOTE]
+> In many situations, word breaking behavior results in `text-fit: shrink` having no effect — the words wrap onto new lines rather than shrinking. In these cases, you need to stop the breaking behavior using something like a {{cssxref("white-space")}} value of `nowrap` to see it working. See this in action in our [basic example](#basic_text-fit_usage).
+
 ### Specifying how scaling factor is applied to multiple text lines
 
 By default, a text node with multiple lines scales all of the lines by the same scaling factor. Each line has its scaling factor calculated separately, and the smallest scaling factor is then applied to all of the lines. This is usually the behavior you'll want, to ensure that each line grows or shrinks by the same proportion.
 
 If you want to adjust this behavior, you can specify a second value after the first keyword and before the percentage, if specified. This value can be specified as the default `consistent` keyword, which keeps the behavior described previously, but you can also specify `per-line` or `per-line-all`. Both of these cause the lines of the text node to be scaled with their own scaling factors. The difference is that, with `per-line`, the last line of the text node, and any lines that end in a forced break (for example, due to a `<br>` element) have no text scaling applied, whereas with `per-line-all` scaling is applied to these lines.
 
-For example:
+For example, this declaration will grow all lines of a text node by their own scaling factor to fit the containing box.
 
 ```css
 text-fit: grow per-line-all;
-text-fit: shrink per-line 50%;
 ```
 
-The first line will grow all lines of a text node by their own scaling factor to fit the containing box. The second line will shrink all lines of a text node by their own scaling factor to fit the containing box, but not the last line or lines with forced breaks, and not below `50%` of the original `font-size`.
+This declaration on the other hand will shrink all lines of a text node by their own scaling factor to fit the containing box, but not the last line or lines with forced breaks, and not below `50%` of the original `font-size`.
+
+```css
+text-fit: shrink per-line 50%;
+```
 
 ## Formal definition
 
@@ -236,29 +242,38 @@ The HTML and JavaScript are identical to the previous example.
 
 #### CSS
 
-We give the containing `<div>` some `padding`, as before. This time however, we also give it a {{cssxref("container-type")}} of `inline-size`, so that we can use [container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries) to selectively apply CSS depending on its width.
-
-```css live-sample___text-fit-percentages
-div {
-  padding: 20px;
-  container-type: inline-size;
-}
-```
-
-We give the `<h1>` a `text-fit` value of `grow 300%`, so that it will grow to fill its container's available inline space, up to 300% of its natural `font-size`. We give the `<h2>` a {{cssxref("white-space")}} value of `nowrap` so that ordinarily, it would all stay on a single line and overflow its container rather than wrapping, if it reaches the container edge. We then set `text-fit: shrink 80%` on it so that, instead of overflowing, it will shrink to fit inside its container's available inline space, down to `80%` of its natural `font-size`.
+We give the `<h1>` a `text-fit` value of `grow 300%`, so that it will grow to fill its container's available inline space, up to 300% of its natural `font-size`:
 
 ```css live-sample___text-fit-percentages
 h1 {
   text-fit: grow 300%;
 }
+```
 
+We give the `<h2>` a {{cssxref("white-space")}} value of `nowrap` so that it will all stay on a single line and overflow its container rather than wrapping, when it touches the container edge. We then set `text-fit: shrink 80%` on it so that, instead of overflowing, it will shrink to fit inside its container's available inline space, down to `80%` of its natural `font-size`.
+
+```css live-sample___text-fit-percentages
 h2 {
   white-space: nowrap;
   text-fit: shrink 80%;
 }
 ```
 
-Finally, we use a container query to change the `<h2>`'s `white-space` value to `wrap` when the `<div>`'s `width` gets smaller than `400px`. This is about the width where the `<h2>` starts to overflow the `<div>`.
+One issue that presents itself at this point is that, when the `<div>`'s `width` gets smaller than about `400px`, the `<h2>` will start to overflow its container. To avoid this, we want to set the text to wrap onto new lines normally at this point. To solve the problem, we first give the containing `<div>` a {{cssxref("container-type")}} of `inline-size`, so that we can use [container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries) to selectively apply CSS depending on its width.
+
+```css hidden live-sample___text-fit-percentages
+div {
+  padding: 20px;
+}
+```
+
+```css live-sample___text-fit-percentages
+div {
+  container-type: inline-size;
+}
+```
+
+We then use a container query to change the `<h2>`'s `white-space` value to `wrap` when the `<div>`'s `width` gets smaller than `400px`:
 
 ```css live-sample___text-fit-percentages
 @container (width < 400px) {
@@ -272,7 +287,7 @@ Finally, we use a container query to change the `<h2>`'s `white-space` value to 
 
 {{EmbedLiveSample("text-fit-percentages","100%","320")}}
 
-Adjust the slider. This time, note how the `<h1>` grows automatically so that it always fills the available space inside its parent `<div>`, but only up to a certain width. Note how the `<h2>` shrinks so that it always fills the available space inside the `<div>` at narrower widths, down to a certain width. When the `<div>` gets narrower than `400px`, the container query kicks in and we turn off `white-space: nowrap`, meaning that the `<h2>` starts to wrap onto multiple lines.
+Adjust the slider. Note how the `<h1>` grows automatically so that it always fills the available space inside its parent `<div>`, but only up to a certain width. Note how the `<h2>` shrinks so that it always fills the available space inside the `<div>` at narrower widths. When the `<div>` gets narrower than `400px`, the container query kicks in and we set `white-space: wrap`, meaning that the `<h2>` starts to wrap onto multiple lines.
 
 ### Demonstrating multi-line scaling behavior keywords
 
@@ -289,14 +304,10 @@ The HTML features three {{htmlelement("p")}} elements containing the same filler
     esse odit autem quisquam saepe repellendus.
   </p>
 
-  <hr />
-
   <p id="per-line">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste vitae in id
     esse odit autem quisquam saepe repellendus.
   </p>
-
-  <hr />
 
   <p id="per-line-all">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste vitae in id
@@ -308,14 +319,6 @@ The HTML features three {{htmlelement("p")}} elements containing the same filler
 The HTML and JavaScript for the width adjustment slider are also included in this example.
 
 #### CSS
-
-We give the containing `<div>` some `padding`, as before.
-
-```css live-sample___multi-line-keywords
-div {
-  padding: 20px;
-}
-```
 
 We give each paragraph a `text-fit` value with the first keyword set to `grow`; the second keyword in each case is set to a different value — `consistent`, `per-line`, and `per-line-all`, respectively.
 
@@ -333,9 +336,40 @@ We give each paragraph a `text-fit` value with the first keyword set to `grow`; 
 }
 ```
 
+```css hidden live-sample___multi-line-keywords
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  overflow: hidden;
+}
+
+div {
+  padding: 20px;
+}
+
+p {
+  padding: 20px;
+  background-color: rgb(0 0 0 / 0.2);
+  position: relative;
+  margin-bottom: 40px;
+}
+
+p::before {
+  content: attr(id);
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  position: absolute;
+  top: -28px;
+  left: 0px;
+}
+```
+
 #### Result
 
-{{EmbedLiveSample("multi-line-keywords","100%","450")}}
+{{EmbedLiveSample("multi-line-keywords","100%","650")}}
 
 Adjust the slider up and down the scale, taking careful note of the behavior of each paragraph. You should note that:
 
