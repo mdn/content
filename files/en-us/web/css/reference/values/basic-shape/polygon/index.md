@@ -145,7 +145,7 @@ body {
 }
 ```
 
-The second `polygon()` function has its points specified in a different order from the first. The first function draws a square, while the second draws an hourglass shape.
+The first function draws a square, while the second draws an hourglass shape.
 
 {{EmbedLiveSample("different-order", '100%', 200)}}
 
