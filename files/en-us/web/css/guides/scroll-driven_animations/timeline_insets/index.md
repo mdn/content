@@ -111,9 +111,9 @@ article {
   background-image: linear-gradient(
     to top,
     transparent calc(var(--start) - 1px),
-    #ccc calc(var(--start) - 1px) calc(var(--start) + 1px),
+    #cccccc calc(var(--start) - 1px) calc(var(--start) + 1px),
     transparent calc(var(--start) + 1px) calc(var(--end) - 1px),
-    #ccc calc(var(--end) - 1px) calc(var(--end) + 1px),
+    #cccccc calc(var(--end) - 1px) calc(var(--end) + 1px),
     transparent calc(var(--end) + 1px)
   );
 }
@@ -257,9 +257,9 @@ article {
     background-image: linear-gradient(
       to top,
       transparent 49.5px,
-      #666 49.5px 50.5px,
+      #666666 49.5px 50.5px,
       transparent 50.5px 99.5px,
-      #666 99.5px 100.5px,
+      #666666 99.5px 100.5px,
       transparent 100.5px
     );
     background-origin: content-box;
@@ -356,9 +356,9 @@ i {
   background-image: linear-gradient(
     to bottom,
     transparent calc(20% - 1px),
-    #3333 calc(20% - 1px) calc(20% + 1px),
+    #33333333 calc(20% - 1px) calc(20% + 1px),
     transparent calc(20% + 1px) calc(60% - 1px),
-    #3333 calc(60% - 1px) calc(60% + 1px),
+    #33333333 calc(60% - 1px) calc(60% + 1px),
     transparent calc(60% + 1px)
   );
 }
@@ -380,11 +380,11 @@ article {
     linear-gradient(
       to top,
       transparent 0 calc(var(--containerHeight) * 0.2 - 0.5px),
-      #3333 calc(var(--containerHeight) * 0.2 - 0.5px)
+      #33333333 calc(var(--containerHeight) * 0.2 - 0.5px)
         calc(var(--containerHeight) * 0.2 + 0.5px),
       transparent calc(var(--containerHeight) * 0.2 + 0.5px)
         calc(var(--containerHeight) * 0.6 - 0.5px),
-      #3333 calc(var(--containerHeight) * 0.6 - 0.5px)
+      #33333333 calc(var(--containerHeight) * 0.6 - 0.5px)
         calc(var(--containerHeight) * 0.6 + 0.5px),
       transparent 0 calc(var(--containerHeight) * 0.6 + 0.5px)
     );

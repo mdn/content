@@ -94,7 +94,7 @@ Now we set a custom {{cssxref("animation-duration")}} and {{cssxref("opacity")}}
 
 ```css hidden live-sample___basic-waituntil
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
 }
 
 body {

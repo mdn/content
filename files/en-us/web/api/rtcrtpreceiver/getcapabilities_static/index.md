@@ -131,11 +131,9 @@ The function below returns a Boolean indicating whether or not the device suppor
 
 ```js
 function canReceiveH264() {
-  let capabilities = RTCRtpReceiver.getCapabilities("video");
+  const capabilities = RTCRtpReceiver.getCapabilities("video");
 
-  return capabilities.codecs.some((codec) => {
-    return codec.mimeType === "video/H264";
-  });
+  return capabilities.codecs.some((codec) => codec.mimeType === "video/H264");
 }
 ```
 

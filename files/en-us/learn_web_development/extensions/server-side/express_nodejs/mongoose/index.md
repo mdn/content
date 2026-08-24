@@ -503,7 +503,7 @@ const bob = new Author({ name: "Bob Smith" });
 
 await bob.save();
 
-// Bob now exists, so lets create a story
+// Bob now exists, so let's create a story
 const story = new Story({
   title: "Bob goes sledding",
   author: bob._id, // assign the _id from our author Bob. This ID is created by default!

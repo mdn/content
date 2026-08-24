@@ -68,4 +68,4 @@ No active session with ID 46197c16-8373-469b-bc56-4c4d9e4132b4
 - [Session not created](/en-US/docs/Web/WebDriver/Reference/Errors/SessionNotCreated)
 - Related WebDriver commands:
   - [New Session](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/NewSession)
-  - [Delete Session](/en-US/docs/Web/WebDriver/Reference/Commands/DeleteSession)
+  - [Delete Session](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/DeleteSession)

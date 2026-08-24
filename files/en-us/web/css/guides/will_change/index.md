@@ -26,7 +26,7 @@ The **CSS will change** module provides a hint to the browser to enable optimiza
 - [CSS filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects)
   - {{cssxref("backdrop-filter")}}
   - {{cssxref("filter")}}
-  - {{cssxref("filter-function", "The CSS filter functions")}}
+  - [The CSS filter functions](/en-US/docs/Web/CSS/Reference/Values/filter-function)
 
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations)
   - {{cssxref("animation")}} shorthand

@@ -82,7 +82,7 @@ You can use the [Firefox Font Editor](https://firefox-source-docs.mozilla.org/de
 
 ## Adding your own web fonts
 
-With this in mind, let's build up a basic web font example from first principles. You should use the [web-font-start.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-start.html) and [web-font-start.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-start.css) files as a starting point to add your code to (see the [live example](https://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-start.html)). Make a copy of these files in a new directory on your computer now. In the `web-font-start.css` file, you'll find some minimal CSS to deal with the basic layout and typesetting of the example.
+With this in mind, let's build up a basic web font example from first principles. You should use the [web-font-start.html](https://github.com/mdn/learning-area/blob/main/css/web-fonts/web-font-start.html) and [web-font-start.css](https://github.com/mdn/learning-area/blob/main/css/web-fonts/web-font-start.css) files as a starting point to add your code to (see the [live example](https://mdn.github.io/learning-area/css/web-fonts/web-font-start.html)). Make a copy of these files in a new directory on your computer now. In the `web-font-start.css` file, you'll find some minimal CSS to deal with the basic layout and typesetting of the example.
 
 ### Finding fonts
 
@@ -147,7 +147,7 @@ You should end up with a demo page with some nice fonts. Because different fonts
 ![The finished design of a Web font exercise. The page has two headings and three paragraphs. The page contains different fonts and text at different sizes.](web-font-example.png)
 
 > [!NOTE]
-> If you have any problems getting this to work, feel free to compare your version to our finished files — see [web-font-finished.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-finished.html) and [web-font-finished.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/web-font-finished.css). You can also download the [code from GitHub](https://github.com/mdn/learning-area/tree/main/css/styling-text/web-fonts) or [run the finished example live](https://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html).
+> If you have any problems getting this to work, feel free to compare your version to our finished files — see [web-font-finished.html](https://github.com/mdn/learning-area/blob/main/css/web-fonts/web-font-finished.html) and [web-font-finished.css](https://github.com/mdn/learning-area/blob/main/css/web-fonts/web-font-finished.css). You can also download the [code from GitHub](https://github.com/mdn/learning-area/tree/main/css/web-fonts) or [run the finished example live](https://mdn.github.io/learning-area/css/web-fonts/web-font-finished.html).
 
 ## Using an online font service
 
@@ -164,7 +164,7 @@ Most of these services are easy to use. Let's have a quick look at Google Fonts 
 7. Copy the provided `font-family` CSS rules and use them in your CSS to apply the fonts, in a similar way to the previous walkthrough.
 
 > [!NOTE]
-> You can find a completed version at [google-font.html](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/google-font.html) and [google-font.css](https://github.com/mdn/learning-area/blob/main/css/styling-text/web-fonts/google-font.css), if you need to check your work against ours ([see it live](https://mdn.github.io/learning-area/css/styling-text/web-fonts/google-font.html)).
+> You can find a completed version at [google-font.html](https://github.com/mdn/learning-area/blob/main/css/web-fonts/google-font.html) and [google-font.css](https://github.com/mdn/learning-area/blob/main/css/web-fonts/google-font.css), if you need to check your work against ours ([see it live](https://mdn.github.io/learning-area/css/web-fonts/google-font.html)).
 
 ## @font-face in more detail
 

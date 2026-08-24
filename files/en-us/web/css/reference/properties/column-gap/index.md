@@ -82,7 +82,7 @@ column-gap: unset;
 
 ### Values
 
-This property is specified as either a `<length-percentage>`, `<line-width>`, or the keyword `normal`:
+This property is specified as a single value from the following list:
 
 - `normal`
   - : For multi-column layout, resolves to `1em`; otherwise `0`. This is the default value.

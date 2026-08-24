@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Window.screenLeft
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
 The **`Window.screenLeft`** read-only property returns the
 horizontal distance, in CSS pixels, from the left border of the user's browser viewport

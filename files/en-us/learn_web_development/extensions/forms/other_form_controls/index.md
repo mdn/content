@@ -50,7 +50,7 @@ Note that even though you can put anything inside a `<textarea>` element (includ
 
 Visually, the text entered wraps and the form control is by default resizable. Most browsers provide a drag handle that you can drag to increase/decrease the size of the text area.
 
-You can find an example of text area usage in the [example](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html) we put together in the first article of this.
+You can find an example of text area usage in the [example](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html) we put together in the first article of this module.
 
 ### Controlling multi-line rendering
 

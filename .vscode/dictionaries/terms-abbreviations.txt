@@ -14,6 +14,7 @@ alphanumerals
 ambisonic
 amore
 analyzability
+animateable-feature
 ANMF
 anonymization
 antialiasing
@@ -100,10 +101,12 @@ CCPA
 CCPL
 CELP
 CGATS
+chatbots
 cheatsheet
 checkboard
 checkedness
 checkmarks
+cheesemakers
 childlist
 chipsets
 choosable
@@ -188,6 +191,7 @@ doorhanger
 dotless
 downsampled
 downsampling
+DPIA
 dragonfish
 DSCP
 DTLSL
@@ -250,6 +254,7 @@ fragmentainers
 framebuffers
 framebusting
 frontmost
+fuhao
 Fullband
 fullscreened
 fullwidth
@@ -313,6 +318,7 @@ iconset
 idents
 IDOR
 IERS
+immediates
 IMSC
 Indo-Pacific
 inferencing
@@ -585,6 +591,7 @@ reauthenticated
 reauthentication
 redirections
 redisplaying
+refbox
 regionless
 reimplementation
 remarketing
@@ -789,6 +796,7 @@ Tanuki
 targetable
 taskbars
 taskboard
+tealish
 teleporting
 telepresence
 texels
@@ -884,6 +892,7 @@ unlayered
 unlocalized
 unmaps
 unminified
+unmutes
 unmuting
 unobserves
 unpartitioned
@@ -891,6 +900,7 @@ unpinch
 unprefix
 unprefixing
 unprioritized
+unpunctuated
 unreadably
 unregisters
 unregistration
