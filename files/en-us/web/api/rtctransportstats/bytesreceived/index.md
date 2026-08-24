@@ -14,7 +14,7 @@ Only data bytes are counted; overhead such as padding, headers, and so on are no
 
 ## Value
 
-A positive integer indicating the number of received payload bytes.
+A non-negative integer indicating the number of received payload bytes.
 
 ## Specifications
 

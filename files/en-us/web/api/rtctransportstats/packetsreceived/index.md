@@ -12,7 +12,7 @@ The **`packetsReceived`** property of the {{domxref("RTCTransportStats")}} dicti
 
 ## Value
 
-A positive integer indicating the number of packets received on the transport.
+A non-negative integer indicating the number of packets received on the transport.
 
 ## Specifications
 
