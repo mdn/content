@@ -13,7 +13,7 @@ The **CSS animation triggers** module provides functionality to trigger standard
 
 These ranges normally come from [view progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines), enabling, for example, an animation to start when an element enters a scrollport and pause when it leaves the scrollport. Properties let you change the timeline range and control the active and activation ranges. Triggers can specify different actions when entering versus exiting the timeline range, allowing control over animation playback.
 
-The animation trigger module also defines **event triggers**. When supported, these activate timeline-based animations when specific DOM events occur.
+The animation triggers module also defines **event triggers**. When supported, these will activate timeline-based animations when specific DOM events occur.
 
 ## Animation triggers in action
 
@@ -187,7 +187,7 @@ html {
 
 {{embedlivesample("in-action", "100%", 400)}}
 
-We defined the animation triggers by specificying a {{cssxref("timeline-trigger-name")}} and {{cssxref("timeline-trigger-source")}} on the "bouncer" elements. The ball has a bouncing {{cssxref("animation")}} set on it twice, along with an {{cssxref("animation-trigger")}} property that references the trigger names of both triggers, and the animation actions to perform when the animations are activated and deactivated, by the bouncer elements coming into and out of view.
+We defined the animation triggers by specifying a {{cssxref("timeline-trigger-name")}} and {{cssxref("timeline-trigger-source")}} on the "bouncer" elements. The ball has a bouncing {{cssxref("animation")}} set on it twice. It also has an {{cssxref("animation-trigger")}} property set: this references the names of both triggers and the actions to perform when the animations are activated and deactivated. Activation and deactivation are caused by the "bouncer" elements coming into and out of view.
 
 ## Reference
 
@@ -247,5 +247,5 @@ The CSS animation triggers module also introduces the `event-trigger`, `event-tr
 
 - [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
 - [Using scroll driven animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
-- [CSS scroll-driven animations timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
+- [CSS scroll-driven animation timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
 - [CSS scroll-triggered animations are coming!](https://developer.chrome.com/blog/scroll-triggered-animations) on developer.chrome.com (2025)
