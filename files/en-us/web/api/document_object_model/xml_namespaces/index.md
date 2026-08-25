@@ -151,14 +151,14 @@ All other prefix identifiers can be freely associated. This means you can have t
 > [!NOTE]
 > Note that the default namespace and the namespace prefix are parsing-time concepts. At runtime, programmatically adding/updating the `xmlns` attributes do not change the namespaces of existing elements.
 >
-> The prefix has almost no runtime significance, apart from a few non-namespaced methods that accept qualified names. All namespaced DOM methods take explicit namespace URIs paired with local names, because that is the only unambiguous way to identify elements and attributes.
+> All namespaced DOM methods take explicit namespace URIs paired with local names, because that is the only unambiguous way to identify elements and attributes. The prefix has about as much semantic significance as the element's text content; it participates in node equality, XML serialization, and a few methods that take qualified names.
 
 ## Namespace syntax in HTML
 
 Once again, the [XML namespace syntax](#xml_namespace_syntax) section only applies to XML (which is why we've used the `xml` utility function that calls {{domxref("DOMParser")}}). In an HTML document parsed from `text/html`, by default all elements are HTML elements and belong to the HTML namespace `http://www.w3.org/1999/xhtml`. The HTML parser recognizes the {{SVGElement("svg")}} and the {{MathMLElement("math")}} elements, which put them and all their descendants into the SVG `http://www.w3.org/2000/svg` and MathML `http://www.w3.org/1998/Math/MathML` namespaces (unless escape hatches like {{SVGElement("foreignObject")}} are used). The following do not work:
 
 - The `xmlns` attribute has absolutely no effect. If specified on HTML elements, its value must be `"http://www.w3.org/1999/xhtml"`.
-- The namespace prefix syntax does not exist and the prefix is simply seen as a part of the local name. The parser special-cases several attribute names, but only on SVG and MathML elements: `xlink:actuate`, `xlink:arcrole`, `xlink:href`, `xlink:role`, `xlink:show`, `xlink:title`, `xlink:type`, `xml:lang`, `xml:space`, `xmlns`, `xmlns:xlink`. These have hard-coded namespace associations and are the only ones for which the namespace URI is not one of HTML, SVG, or MathML. None of them is necessary on the modern web because the SVG and MathML specs have defined their own alternatives where appropriate.
+- The namespace prefix syntax does not exist and the prefix is simply seen as a part of the local name. The parser special-cases several attribute names, but only on SVG and MathML elements: `xlink:actuate`, `xlink:arcrole`, `xlink:href`, `xlink:role`, `xlink:show`, `xlink:title`, `xlink:type`, `xml:lang`, `xml:space`, `xmlns`, `xmlns:xlink`. These have hard-coded namespace associations and are the only ones for which the namespace URI is not `null`. None of them is necessary in modern HTML documents because the SVG and MathML specs have defined their own alternatives where appropriate.
 
 For example:
 
@@ -198,7 +198,7 @@ However, this is only to say that the _syntax_ of namespaces is very limited in 
 
 ## Looking up the prefix-namespace association
 
-Each element in the document has a bi-directional association between prefix identifiers and namespace URIs. It either inherits the association from its parent or declares itself via its `xmlns="..."` and `xmlns:prefix="..."` attributes. You can lookup this association on any node, which uses the node's relevant element:
+Each element in the document has a many-to-one association between prefix identifiers and namespace URIs. It either inherits the association from its parent, declares itself via `xmlns="..."` and `xmlns:prefix="..."` attributes, or gets it from the its own `namespaceURI` and `prefix`. You can lookup this association on any node, which uses the node's relevant element:
 
 - When called on {{domxref("Attr")}} nodes, its {{domxref("Attr.ownerElement", "ownerElement")}} is searched.
 - When called on {{domxref("Document")}} nodes, its {{domxref("Document.documentElement", "documentElement")}} is searched.
@@ -216,6 +216,9 @@ console.log(parent.lookupNamespaceURI("xmlns")); // http://www.w3.org/2000/xmlns
 console.log(parent.lookupNamespaceURI("xlink")); // null
 console.log(parent.lookupNamespaceURI(null)); // default namespace
 ```
+
+> [!NOTE]
+> Firefox has a bug where it does not consult the element's own `namespaceURI` when querying the default namespace on an unprefixed element.
 
 {{domxref("Node.lookupPrefix()")}} performs the reverse: takes a namespace URI and returns a prefix. If the namespace URI is `null` or `""`, `null` is returned. If there are multiple prefixes that bind to the same namespace URI, then the prefix used or declared by the nearest element is returned (and the first declaration is preferred among all declarations on the same element).
 
@@ -237,7 +240,7 @@ console.log(parent.lookupPrefix("https://developer.mozilla.org/")); // mdn
 > [!NOTE]
 > The above disambiguation mechanism matches the specification but may not match all browsers' behavior.
 
-`Node.lookupPrefix()` does not special-case the XML/XMLNS namespaces. Because these namespaces cannot be bound to custom prefixes, they will always return `null`. It also doesn't consider `xmlns` attributes.
+`Node.lookupPrefix()` does not special-case the XML/XMLNS namespaces. Unless explicitly declared, they will return `null`. It also doesn't consider `xmlns="..."` attributes.
 
 ```js
 const doc = xml`<parent xmlns="https://developer.mozilla.org/"></parent>`;
@@ -248,9 +251,6 @@ console.log(parent.lookupPrefix("http://www.w3.org/XML/1998/namespace")); // nul
 ```
 
 {{domxref("Node.isDefaultNamespace()")}} takes a namespace and returns whether it's the default for the relevant element. `node.isDefaultNamespace(namespace)` (when `namespace` is not the empty string) is equivalent to `node.lookupNamespaceURI(null) === namespace`.
-
-> [!NOTE]
-> In HTML documents, Firefox returns `null` as the default namespace URI for all elements, while Chrome and Safari return the default namespaces that would be produced by the HTML parser (HTML, SVG, MathML).
 
 Note that the information you look up has no real significance (other than for usage with {{domxref("XPathEvaluator.createExpression()")}}), because newly created elements and attributes don't consult this mapping, and it does not even reflect the information used as parse time—the results are affected by runtime attribute updates.
 
@@ -348,7 +348,6 @@ a.setAttributeNS(
   "xlink:href",
   "https://developer.mozilla.org",
 );
-svg.appendChild(a);
 ```
 
 ## Querying namespaced elements
@@ -358,11 +357,17 @@ The {{domxref("Document.querySelector()")}} method and its likes use [CSS select
 The {{domxref("Document.getElementsByTagName()")}} takes a qualified name, so it can distinguish, for example, `<a />` and `<mdn:a />`, but only if the elements have explicit prefixes. But as mentioned towards the end of [XML namespace syntax](#xml_namespace_syntax), prefixes and qualified names are unreliable for identification purposes. HTML almost never contains prefixes; in XML, explicit prefixes are also rarer than using `xmlns` to switch default namespaces. To query by the actual namespace, use {{domxref("Document.getElementsByTagNameNS()")}} instead, which takes a namespace and a local name. You can also pass `*` for either argument (to not filter for namespace or local name).
 
 ```js
-const doc1 = xml`<parent><a href="foo" /><mdn:a href="bar" /></parent>`;
+const doc1 = xml`<parent xmlns:mdn="https://developer.mozilla.org">
+  <a href="foo" />
+  <mdn:a href="bar" />
+</parent>`;
 console.log(doc1.getElementsByTagName("a").length); // 1
 console.log(doc1.getElementsByTagName("mdn:a").length); // 1
 
-const doc2 = xml`<parent><a href="foo" /><a href="bar" xmlns="http://www.w3.org/1999/xhtml" /></parent>`;
+const doc2 = xml`<parent>
+  <a href="foo" />
+  <a href="bar" xmlns="http://www.w3.org/1999/xhtml" />
+</parent>`;
 console.log(doc2.getElementsByTagName("a").length); // 2
 console.log(doc2.getElementsByTagNameNS(null, "a").length); // 1
 console.log(
