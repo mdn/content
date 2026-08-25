@@ -26,7 +26,7 @@ If the element carries both `headingoffset` and `headingreset`, its own offset a
 
 ### Resetting heading levels in a dialog
 
-The `<section>` offsets its headings by 2, so its own heading is at level 3. The dialog has `headingreset`, so the heading inside it is back at level 1:
+In this example, the `<section>` offsets its headings by `2`, so the heading directly inside it is at level 3. The `<dialog>` element has `headingreset`, so the section's offset never reaches the heading inside the dialog, which stays at level 1:
 
 ```html
 <section headingoffset="2">
