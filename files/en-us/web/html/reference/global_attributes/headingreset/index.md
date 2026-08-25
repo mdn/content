@@ -18,7 +18,7 @@ This is a [boolean attribute](/en-US/docs/Glossary/Boolean/HTML); it takes effec
 
 When a browser computes the [heading level](/en-US/docs/Web/HTML/Reference/Global_attributes/headingoffset#description) of a heading element, it walks up the ancestor chain and adds up the [`headingoffset`](/en-US/docs/Web/HTML/Reference/Global_attributes/headingoffset) values it finds. The `headingreset` attribute stops that walk: offsets set on the element itself still count, but no ancestor above it contributes an offset.
 
-Use it for content that is not part of the structure of the surrounding document, such as a {{htmlelement("dialog")}}, a popover, or content inserted from another source, where headings should start again at level 1.
+Use this attribute for content that is not part of the structure of the surrounding document, such as a {{htmlelement("dialog")}}, a popover, or markup inserted from another source. Their headings then start again at level 1.
 
 If the element carries both `headingoffset` and `headingreset`, its own offset applies and everything above it is discarded.
 
