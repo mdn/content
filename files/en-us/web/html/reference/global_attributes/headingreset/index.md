@@ -39,7 +39,7 @@ The `<section>` offsets its headings by 2, so its own heading is at level 3. The
 </section>
 ```
 
-### Combining `headingreset` with `headingoffset`
+### Using `headingreset` and `headingoffset` on the same element
 
 Here the outer offset of 3 is discarded, and only the offset on the element with `headingreset` is applied:
 
