@@ -3,7 +3,6 @@ title: "`headingoffset` HTML global attribute"
 short-title: headingoffset
 slug: Web/HTML/Reference/Global_attributes/headingoffset
 page-type: html-attribute
-sidebar: htmlsidebar
 status:
   - experimental
 browser-compat:
