@@ -5,8 +5,8 @@ slug: Web/HTML/Reference/Global_attributes/headingoffset
 page-type: html-attribute
 status:
   - experimental
-browser-compat:
-  - html.global_attributes.headingoffset
+browser-compat: html.global_attributes.headingoffset
+sidebar: htmlsidebar
 ---
 
 {{SeeCompatTable}}
