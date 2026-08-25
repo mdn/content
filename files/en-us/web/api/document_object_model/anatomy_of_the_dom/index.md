@@ -216,7 +216,7 @@ The `isEqualNode()` method compares two nodes structurally. Two nodes are consid
 - For `Document`, there is no data, so only the child nodes need to be compared.
 - For `DocumentType`, the `name`, `publicId`, and `systemId` properties need to be compared.
 - For `Element`, the `tagName` (more accurately, the `namespaceURI`, `prefix`, and `localName`; we will introduce these in the [XML namespaces](/en-US/docs/Web/API/Document_Object_Model/XML_namespaces) guide) and the attributes need to be compared.
-- For `Attr`, the `name` (more accurately, the `namespaceURI`, `prefix`, and `localName`; we will introduce these in the [XML namespaces](/en-US/docs/Web/API/Document_Object_Model/XML_namespaces) guide) and `value` properties need to be compared.
+- For `Attr`, the `name` (more accurately, the `namespaceURI` and `localName`, but not `prefix`; we will introduce these in the [XML namespaces](/en-US/docs/Web/API/Document_Object_Model/XML_namespaces) guide) and `value` properties need to be compared.
 - For all `CharacterData` nodes (`Text`, `CDATASection`, `Comment`, and `ProcessingInstruction`), the `data` property needs to be compared. For `ProcessingInstruction`, the `target` property also needs to be compared.
 
 The `a.compareDocumentPosition(b)` method compares two nodes by tree order. It returns a bitmask indicating their relative positions. The possible cases are:

@@ -8,59 +8,60 @@ browser-compat: api.Attr.localName
 
 {{APIRef("DOM")}}
 
-The read-only **`localName`** property of the {{domxref("Attr")}} interface returns the _local part_ of the _qualified name_ of an attribute, that is the name of the attribute, stripped from any namespace in front of it. For example, if the qualified name is `xml:lang`, the returned local name is `lang`, if the element supports that namespace.
-
-The local name is always in lower case, whatever case at the attribute creation.
+The **`localName`** read-only property of the {{domxref("Attr")}} interface returns the [local name](/en-US/docs/Web/API/Document_Object_Model/XML_namespaces#element_and_attribute_names_in_the_dom) of an attribute, which is the attribute name with the namespace prefix removed, if any.
 
 > [!NOTE]
-> HTML only supports a fixed set of namespaces on SVG and MathML elements. These are `xml` (for the `xml:lang` attribute), `xlink` (for the `xlink:href`, `xlink:show`, `xlink:target` and `xlink:title` attributes) and `xpath`.
+> Attributes in HTML documents are case-normalized by the parser and namespace-unaware methods like {{domxref("document.createAttribute()")}}. This property returns the internally-stored name, which is usually lowercase (camel case for certain SVG/MathML attributes).
 >
-> That means that the local name of an attribute of an HTML element is always be equal to its qualified name: Colons are treated as regular characters. In XML, like in SVG or MathML, the colon denotes the end of the prefix and what is before is the namespace; the local name may be different from the qualified name.
+> The HTML parser special-cases several prefixed attribute names, but only on SVG and MathML elements: `xlink:actuate`, `xlink:arcrole`, `xlink:href`, `xlink:role`, `xlink:show`, `xlink:title`, `xlink:type`, `xml:lang`, `xml:space`, `xmlns:xlink`. For all other attributes, the prefix is simply seen as a part of the local name.
 
 ## Value
 
-A string representing the local part of the attribute's qualified name.
+A string.
 
-## Example
+## Examples
 
-The following example displays the local name of the first attribute of the two first elements, when we click on the appropriate button. The {{SVGElement("svg")}} element is XML and supports namespaces leading to the local name (`lang`) to be different from the qualified name `xml:lang`. The {{HTMLElement("label")}} element is HTML, that doesn't support namespaces, leading to a local name and the qualified name to be both `xml:lang`.
+### Reading the localName
 
-### HTML
-
-```html
-<svg xml:lang="en-US" class="struct" height="1" width="1">Click me</svg>
-<label xml:lang="en-US" class="struct"></label>
-
-<p>
-  <button>Show value for &lt;svg&gt;</button>
-  <button>Show value for &lt;label&gt;</button>
-</p>
-
-<p>
-  Local part of the attribute <code>xml:lang</code>:
-  <output id="result">None.</output>
-</p>
-```
-
-### JavaScript
+We use {{domxref("DOMParser")}} to create an XML document.
 
 ```js
-const elements = document.querySelectorAll(".struct");
-const buttons = document.querySelectorAll("button");
-const outputEl = document.querySelector("#result");
-
-let i = 0;
-for (const button of buttons) {
-  const element = elements[i];
-  button.addEventListener("click", () => {
-    const attribute = element.attributes[0];
-    outputEl.value = attribute.localName;
-  });
-  i++;
-}
+const doc = new DOMParser().parseFromString(
+  `<parent xmlns:mdn="https://developer.mozilla.org/" mdn:status="ready" />`,
+  "application/xml",
+);
+const status = doc.querySelector("parent").getAttributeNode("mdn:status");
+console.log(status.localName); // status
 ```
 
-{{ EmbedLiveSample('Example','100%',100) }}
+### Local names in HTML documents
+
+[The HTML syntax supports namespaces only for a fixed set of attributes on SVG and MathML elements](/en-US/docs/Web/API/Document_Object_Model/XML_namespaces#namespace_syntax_in_html). For other attributes, a colon is part of the local name rather than a namespace separator.
+
+```html
+<svg xml:lang="en-US" mdn:status="ready"></svg>
+```
+
+```js
+const svg = document.querySelector("svg");
+
+console.log(svg.getAttributeNode("xml:lang").localName); // lang
+console.log(svg.getAttributeNode("mdn:status").localName); // mdn:status
+```
+
+However, this is only a parser restriction; you can create prefixed attributes using [`document.createAttributeNS()`](/en-US/docs/Web/API/Document/createAttributeNS) or [`element.setAttributeNS()`](/en-US/docs/Web/API/Element/setAttributeNS) and attach them to the HTML DOM without problems. These methods do not normalize internal casing even when the namespace is HTML.
+
+```js
+const status = document.createAttributeNS(
+  "http://www.w3.org/1999/xhtml",
+  "Mdn:Status",
+);
+document.body.setAttributeNode(status);
+
+console.log(status.name); // Mdn:Status
+console.log(status.prefix); // Mdn
+console.log(status.localName); // Status
+```
 
 ## Specifications
 
@@ -72,5 +73,8 @@ for (const button of buttons) {
 
 ## See also
 
-- The properties {{domxref("Attr.name")}}, returning the qualified name of the attribute, and {{domxref("Attr.prefix")}}, the namespace prefix.
-- The {{domxref("Element.localName()")}} property, returning the local name of an {{domxref("Element")}}.
+- [XML namespaces](/en-US/docs/Web/API/Document_Object_Model/XML_namespaces)
+- {{domxref("Attr.name")}}
+- {{domxref("Attr.namespaceURI")}}
+- {{domxref("Attr.prefix")}}
+- {{domxref("Element.localName")}}

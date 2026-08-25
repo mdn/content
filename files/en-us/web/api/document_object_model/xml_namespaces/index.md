@@ -160,7 +160,9 @@ All other prefix identifiers can be freely associated. This means you can have t
 Once again, the [XML namespace syntax](#xml_namespace_syntax) section only applies to XML (which is why we've used the `xml` utility function that calls {{domxref("DOMParser")}}). In an HTML document parsed from `text/html`, by default all elements are HTML elements and belong to the HTML namespace `http://www.w3.org/1999/xhtml`. The HTML parser recognizes the {{SVGElement("svg")}} and the {{MathMLElement("math")}} elements, which put them and all their descendants into the SVG `http://www.w3.org/2000/svg` and MathML `http://www.w3.org/1998/Math/MathML` namespaces (unless escape hatches like {{SVGElement("foreignObject")}} are used). The following do not work:
 
 - The `xmlns` attribute has absolutely no effect. If specified on HTML elements, its value must be `"http://www.w3.org/1999/xhtml"`.
-- The namespace prefix syntax does not exist and the prefix is simply seen as a part of the local name. The parser special-cases several attribute names, but only on SVG and MathML elements: `xlink:actuate`, `xlink:arcrole`, `xlink:href`, `xlink:role`, `xlink:show`, `xlink:title`, `xlink:type`, `xml:lang`, `xml:space`, `xmlns`, `xmlns:xlink`. These have hard-coded namespace associations and are the only ones for which the namespace URI is not `null`. None of them is necessary in modern HTML documents because the SVG and MathML specs have defined their own alternatives where appropriate.
+- The namespace prefix syntax does not exist and the prefix is simply seen as a part of the local name.
+
+The parser special-cases several attribute names, but only on SVG and MathML elements: `xlink:actuate`, `xlink:arcrole`, `xlink:href`, `xlink:role`, `xlink:show`, `xlink:title`, `xlink:type`, `xml:lang`, `xml:space`, `xmlns`, `xmlns:xlink`. These have hard-coded namespace associations and are the only ones for which the namespace URI is not `null`. None of them is necessary in modern HTML documents because the SVG and MathML specs have defined their own alternatives where appropriate.
 
 For example:
 
