@@ -76,7 +76,7 @@ Here are some important things to bear in mind about web fonts:
 2. All major browsers support WOFF/WOFF2 (Web Open Font Format versions 1 and 2). Even older browsers such as IE9 (released in 2011) support the WOFF format.
 3. WOFF2 supports the entirety of the TrueType and OpenType specifications, including variable fonts, chromatic fonts, and font collections.
 4. The order in which you list font files is important. If you provide the browser with a list of multiple font files to download, the browser will choose the first font file it can use. That's why the format you list first should be the preferred format — that is, WOFF2 — with the older formats listed after that. Browsers that don't understand one format will then fall back to the next format in the list.
-5. If you need to work with legacy browsers, you should provide EOT (Embedded Open Type), TTF (TrueType Font), and SVG web fonts for download. This article explains how to use the Transfonter Webfont Generator to generate the required files.
+5. If you need to work with legacy browsers, you should provide EOT (Embedded Open Type), TTF (TrueType Font), and SVG web fonts for download. This article explains how to use the Transfonter webfont generator to create the required files.
 
 You can use the [Firefox Font Editor](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_fonts/index.html) to investigate and manipulate the fonts in use on your page, whether they are web fonts or not.
 
@@ -92,7 +92,7 @@ For this example, we'll use two web fonts: one for the headings and one for the 
 - A paid font distributor: This is a site that makes fonts available for a charge, such as [myfonts.com](https://www.myfonts.com/). You can also buy fonts directly from font foundries, for example [Linotype](https://www.linotype.com/), [Monotype](https://www.monotype.com/), or [Exljbris](https://www.exljbris.com/).
 - An online font service: This is a site that stores and serves the fonts for you, making the whole process easier. See the [Using an online font service](#using_an_online_font_service) section for more details.
 
-Let's find some fonts! Go to [DaFont](https://www.dafont.com/) and choose two fonts: a nice interesting font for the headings (maybe a nice display or slab serif font), and a slightly less flashy and more readable font for the paragraphs. When you've found a font, press the download button and save the file inside the same directory as the HTML and CSS files you saved earlier. It doesn't matter whether they are TTF (True Type Fonts) or OTF (Open Type Fonts).
+Let's find some fonts! Go to [DaFont](https://www.dafont.com/) and choose two fonts: a nice interesting font for the headings (maybe a nice display or slab serif font), and a slightly less flashy and more readable font for the paragraphs. When you've found a font, press the download button and save the file inside the same directory as the HTML and CSS files you saved earlier. It doesn't matter whether they are TrueType Fonts (TTF) or OpenType Fonts (OTF).
 
 Unzip the two font packages (Web fonts are usually distributed in ZIP files containing the font file(s) and licensing information). You may find multiple font files in the package — some fonts are distributed as a family with different variants available — for example, thin, medium, bold, italic, thin italic, etc. For this example, we just want you to concern yourself with a single font file for each choice.
 
@@ -101,8 +101,8 @@ Unzip the two font packages (Web fonts are usually distributed in ZIP files cont
 Now you'll need to generate the required code (and font formats). For each font, follow these steps:
 
 1. Make sure you have satisfied any licensing requirements if you are going to use this in a commercial and/or Web project.
-2. Go to the Transfonter [Webfont Generator](https://transfonter.org/).
-3. Upload your two font files using the _Add fonts_ button.
+2. Go to the Transfonter [webfont generator](https://transfonter.org/).
+3. Upload your two font files using the _Upload your fonts_ button.
 4. Click _Convert_.
 5. Click _Download_.
 
