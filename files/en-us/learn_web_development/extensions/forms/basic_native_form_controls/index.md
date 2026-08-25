@@ -119,7 +119,7 @@ Checkable items are controls whose state you can change by clicking on them or t
 
 It's worth noting that these widgets do not behave exactly like other form widgets. For most form widgets, once the form is submitted all widgets that have a [`name`](/en-US/docs/Web/HTML/Reference/Elements/input#name) attribute are sent, even if no value has been filled out. In the case of checkable items, their values are sent only if they are checked. If they are not checked, nothing is sent, not even their name. If they are checked but have no value, the name is sent with a value of _on._
 
-For maximum usability/accessibility, you are advised to surround each list of related items in a {{htmlelement("fieldset")}}, with a {{htmlelement("legend")}} providing an overall description of the list. Each individual pair of {{htmlelement("label")}}/{{htmlelement("input")}} elements should be contained in its own list item (or similar). The associated {{htmlelement('label')}} is generally placed immediately before or after the radio button or checkbox, with the instructions for the group of radio button or checkboxes generally being the content of the {{htmlelement("legend")}}. See the examples linked above for structural examples.
+For maximum usability/accessibility, you are advised to surround each list of related items in a {{htmlelement("fieldset")}}, with a {{htmlelement("legend")}} providing an overall description of the list. Each individual pair of {{htmlelement("label")}}/{{htmlelement("input")}} elements should be contained in its own list item (or similar). The associated {{htmlelement('label')}} is generally placed immediately before or after the radio button or checkbox, with the instructions for the group of radio button or checkboxes generally being the content of the {{htmlelement("legend")}}.
 
 ### Checkbox
 
@@ -240,35 +240,37 @@ Then we also have the {{htmlelement("button")}} element itself. This can take a 
 > [!NOTE]
 > The `image` input type also renders as a button. We'll cover that later too.
 
-Below you can find examples of each button `<input>` type, along with the equivalent `<button>` type.
+Below you can find examples of each button `<input>` type, along with the equivalent `<button>` type. Each pair has been wrapped in a {{htmlelement("div")}} element to separate it onto a new line.
 
-submit:
+- Submit button:
 
-```html live-sample___buttons
-<button type="submit">This is a <strong>submit button</strong></button>
+  ```html live-sample___buttons
+  <div>
+    <button type="submit">This is a <strong>submit button</strong></button>
 
-<input type="submit" value="This is a submit button" />
-
-<hr />
-```
+    <input type="submit" value="This is a submit button" />
+  </div>
+  ```
 
 - Reset button:
 
-```html live-sample___buttons
-<button type="reset">This is a <strong>reset button</strong></button>
+  ```html live-sample___buttons
+  <div>
+    <button type="reset">This is a <strong>reset button</strong></button>
 
-<input type="reset" value="This is a reset button" />
-
-<hr />
-```
+    <input type="reset" value="This is a reset button" />
+  </div>
+  ```
 
 - Anonymous button:
 
-```html live-sample___buttons
-<button type="button">This is an <strong>anonymous button</strong></button>
+  ```html live-sample___buttons
+  <div>
+    <button type="button">This is an <strong>anonymous button</strong></button>
 
-<input type="button" value="This is an anonymous button" />
-```
+    <input type="button" value="This is an anonymous button" />
+  </div>
+  ```
 
 These examples render like so:
 

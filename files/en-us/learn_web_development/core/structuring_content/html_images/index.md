@@ -219,16 +219,8 @@ It is better to include such supporting information in the main article text, ra
 It is now your turn to play! This task will get you to embed an image.
 
 1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Edit the existing {{htmlelement("img")}} element so that it embeds the image `dinosaur_small.jpg`:
-
-   ```url
-   dinosaur_small.jpg
-   ```
-
-   > [!NOTE]
-   > Earlier we said to never hotlink to images on other servers without permission, but this image is on our GitHub repo, so it is OK.
-
-3. Add an `alt` attribute to the image. You can check that the alt text works by temporarily misspelling the image URL.
+2. Edit the existing {{htmlelement("img")}} element so that it embeds the image `dinosaur_small.jpg`.
+3. Add an `alt` attribute to the image. You can check that the alt text works by temporarily misspelling the image filename.
 4. Set the image's correct `width` and `height` (hint: it is `200px` wide and `171px` high), then experiment with other values to see what the effect is.
 5. Set a `title` on the image.
 
