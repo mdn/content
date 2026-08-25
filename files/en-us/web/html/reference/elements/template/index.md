@@ -522,9 +522,7 @@ Since `firstClone` is a `DocumentFragment`, only its children are added to `cont
 
 This example uses the `<?marker name="placeholder">` processing instruction as a placeholder and later on fills in the contents using `<template for="placeholder">`. The `<?marker>` processing instructions excludes the optional trailing `?`, but could also be written as `<?marker name="placeholder" ?>` if preferred.
 
-<!-- Have prettier ignore this, as indentation is important and discussed next -->
-<!-- prettier-ignore-start -->
-```html
+```html-nolint
 <body>
   <div>
     <?marker name="placeholder">
@@ -536,28 +534,22 @@ This example uses the `<?marker name="placeholder">` processing instruction as a
   ...
 </body>
 ```
-<!-- prettier-ignore-end -->
 
 Results in an initially empty `<div>` which is then updated to the following after the `<template>` is parsed and processed to the following:
 
-<!-- Have prettier ignore this, as indentation is important and discussed next -->
-<!-- prettier-ignore-start -->
-```html
+```html-nolint
   <div>
 
     Lorem Ipsum...
 
   </div>
 ```
-<!-- prettier-ignore-end -->
 
 ### Using `<template for>` for range patching
 
 This example uses the `<?start>` and `<?end>` processing instructions as placeholders and later on fills in the contents using `<template for>`. Both processing instructions exclude the optional trailing `?` but could also be written as `<?start name="placeholder" ?>` and `<?end?>` if preferred.
 
-<!-- Have prettier ignore this, as indentation is important and discussed next -->
-<!-- prettier-ignore-start -->
-```html
+```html-nolint
 <body>
   <div>
     <?start name="placeholder">
@@ -571,7 +563,6 @@ This example uses the `<?start>` and `<?end>` processing instructions as placeho
   ...
 </body>
 ```
-<!-- prettier-ignore-end -->
 
 Results in an a `<div>` initially containing the `Loading...` text placeholder, which is then updated to the following after the `<template>` is parsed and processed to produce the same output as the previous example (`<div>Lorem Ipsum...</div>`, ignoring the whitespace).
 
@@ -581,9 +572,7 @@ This example also demonstrates the lack of processing instruction children and n
 
 This example shows that `<template for>` elements which are direct children of the `<body>` element can patch `<head>` markers.
 
-<!-- Have prettier ignore this, as indentation is important and discussed next -->
-<!-- prettier-ignore-start -->
-```html
+```html-nolint
 <head>
   ...
   <?start name="title"><title>Loading...</title><?end>
@@ -597,13 +586,10 @@ This example shows that `<template for>` elements which are direct children of t
   ...
 </body>
 ```
-<!-- prettier-ignore-end -->
 
 Results in the following:
 
-<!-- Have prettier ignore this, as indentation is important and discussed next -->
-<!-- prettier-ignore-start -->
-```html
+```html-nolint
 <head>
   ...
   <title>The actual title of the page</title>
@@ -614,7 +600,6 @@ Results in the following:
   ...
 </body>
 ```
-<!-- prettier-ignore-end -->
 
 ### Including markers in `<template for>` to allow contents to be repatched later
 
@@ -622,9 +607,7 @@ It is also possible to insert markers to allow for new placeholders to be create
 
 For example, if you are building an {{glossary("SPA", "Single Page Application (SPA)")}} application with `<template for>` you may wish to allow the `<title>` to be patched on each route update and so would use something like this:
 
-<!-- Have prettier ignore this, as indentation is important and discussed next -->
-<!-- prettier-ignore-start -->
-```html
+```html-nolint
 <head>
   ...
   <?start name="title"><title>Loading...</title><?end>
@@ -636,13 +619,10 @@ For example, if you are building an {{glossary("SPA", "Single Page Application (
   ...
 </body>
 ```
-<!-- prettier-ignore-end -->
 
 This will result in the following
 
-<!-- Have prettier ignore this, as indentation is important and discussed next -->
-<!-- prettier-ignore-start -->
-```html
+```html-nolint
 <head>
   ...
   <?start name="title"><title>The actual title of the page</title><?end>
@@ -652,7 +632,6 @@ This will result in the following
   ...
 </body>
 ```
-<!-- prettier-ignore-end -->
 
 A later a new `<template for="title">` could be inserted into the DOM to replace the `<title>` again.
 
