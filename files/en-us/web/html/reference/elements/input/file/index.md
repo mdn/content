@@ -304,7 +304,7 @@ form button:active {
 }
 ```
 
-This is similar to what we've seen earlier, so we won't spend time describing it. We've also hidden the CSS applied to the example, as it isn't relevant to understanding the file input or the JavaScript that powers it.
+This is similar to what we've seen earlier, so we won't spend time describing it. Also, we've hidden the CSS applied to the example, as it isn't relevant to understanding the file input or the JavaScript that powers it.
 
 #### JavaScript
 
