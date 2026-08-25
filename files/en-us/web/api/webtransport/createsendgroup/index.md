@@ -42,7 +42,7 @@ The returned `WebTransportSendGroup` is not initially associated with any stream
 You can associate it with a {{domxref("WebTransportDatagramsWritable")}} or {{domxref("WebTransportSendStream")}} object in a couple of different ways:
 
 - By passing it as the `sendGroup` option when the object is created — see {{domxref("WebTransport.createUnidirectionalStream()")}}, {{domxref("WebTransport.createBidirectionalStream()")}}, and {{domxref("WebTransportDatagramDuplexStream.createWritable()")}}.
-- By setting the object's `sendGroup` property afterwards — see `WebTransportSendStream.sendGroup` and {{domxref("WebTransportDatagramsWritable.sendGroup")}}.
+- By setting the object's `sendGroup` property afterwards — see {{domxref("WebTransportSendStream.sendGroup")}} and {{domxref("WebTransportDatagramsWritable.sendGroup")}}.
 
 Different groups are expected to be treated as equals for the purposes of bandwidth allocation — though the precise way bandwidth is divided between groups is implementation-defined.
 

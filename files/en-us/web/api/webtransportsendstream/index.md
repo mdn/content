@@ -25,6 +25,8 @@ When a bidirectional stream is initiated by the remote end, an object of this ty
 
 _Also inherits properties from its parent interface, {{domxref("WritableStream")}}._
 
+- {{domxref("WebTransportSendStream.sendGroup")}}
+  - : The {{domxref("WebTransportSendGroup")}} that this stream is grouped under for the purposes of `sendOrder` prioritization.
 - {{domxref("WebTransportSendStream.sendOrder")}}
   - : Indicates the send priority of this stream relative to other streams for which the value has been set.
 

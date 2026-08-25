@@ -53,5 +53,5 @@ See {{domxref("WebTransportDatagramDuplexStream.createWritable", "createWritable
 
 ## See also
 
-- [Using WebTransport](https://developer.chrome.com/docs/capabilities/web-apis/webtransport)
 - {{domxref("Streams API", "Streams API", "", "nocode")}}
+- [Using WebTransport](https://developer.chrome.com/docs/capabilities/web-apis/webtransport)

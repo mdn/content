@@ -30,7 +30,7 @@ A `WebTransportSendGroup` is created using the `createSendGroup()` method of the
 You can then associate it with a `WebTransportDatagramsWritable` or `WebTransportSendStream` by:
 
 - Passing it as the `sendGroup` option when the object is created — see {{domxref("WebTransport.createUnidirectionalStream()")}}, {{domxref("WebTransport.createBidirectionalStream()")}}, and {{domxref("WebTransportDatagramDuplexStream.createWritable()")}}.
-- Setting the object's `sendGroup` property afterwards, for example using {{domxref("WebTransportDatagramsWritable.sendGroup")}}.
+- Setting the object's `sendGroup` property afterwards — see {{domxref("WebTransportSendStream.sendGroup")}} and {{domxref("WebTransportDatagramsWritable.sendGroup")}}.
 
 ## Examples
 
