@@ -76,6 +76,7 @@ console.log(text.match(regexpFoxQuality));
       <td>
         <p>
           <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Buffer_boundary_assertion"><strong>Buffer boundary start assertion:</strong></a> Matches the start of the entire string regardless of the presence of the <code>m</code> flag.
+          Only valid in <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode">Unicode-aware mode</a>.
         </p>
       </td>
     </tr>
@@ -84,6 +85,7 @@ console.log(text.match(regexpFoxQuality));
       <td>
         <p>
           <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Buffer_boundary_assertion"><strong>Buffer boundary end assertion:</strong></a> Matches the end of the entire string regardless of the presence of the <code>m</code> flag.
+          Only valid in <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode">Unicode-aware mode</a>.
         </p>
       </td>
     </tr>
@@ -92,6 +94,7 @@ console.log(text.match(regexpFoxQuality));
       <td>
         <p>
           <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Buffer_boundary_assertion"><strong>Buffer boundary end assertion with optional newline:</strong></a> Matches the end of the entire string, but allows an optional trailing newline character sequence (either a <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#line_terminators">line terminator</a> or a <code>\r\n</code> sequence).
+          Only valid in <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode">Unicode-aware mode</a>.
         </p>
       </td>
     </tr>
