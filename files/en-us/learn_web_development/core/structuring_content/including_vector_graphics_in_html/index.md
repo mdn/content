@@ -45,7 +45,7 @@ To give you an idea of the difference between the two, let's look at an example:
 <img src="star.svg" role="img" alt="A vector star" />
 ```
 
-This shows two seemingly identical images side by side, of a red star with a black drop shadow. The difference is that the left one is a raster (PNG), and the right one is a vector (SVG) image. This renders like so:
+This shows two seemingly identical red stars with black drop shadows, side by side. The difference is that the left one is a raster (PNG), and the right one is a vector (SVG) image.
 
 {{embedlivesample("raster-vector", "100%", 120)}}
 
