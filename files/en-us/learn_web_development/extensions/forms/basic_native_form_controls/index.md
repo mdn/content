@@ -252,7 +252,7 @@ submit:
 <hr />
 ```
 
-reset:
+- Reset button:
 
 ```html live-sample___buttons
 <button type="reset">This is a <strong>reset button</strong></button>
