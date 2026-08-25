@@ -3,7 +3,6 @@ title: "`headingreset` HTML global attribute"
 short-title: headingreset
 slug: Web/HTML/Reference/Global_attributes/headingreset
 page-type: html-attribute
-sidebar: htmlsidebar
 status:
   - experimental
 browser-compat: html.global_attributes.headingreset
