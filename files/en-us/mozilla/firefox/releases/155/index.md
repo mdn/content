@@ -59,6 +59,8 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The {{domxref("SVGNumberList")}}, {{domxref("SVGPointList")}}, {{domxref("SVGStringList")}}, and {{domxref("SVGTransformList")}} interfaces now support indexed setters. This means you can replace an item in the list using bracket notation, such as `transformList[0] = newTransform`, instead of calling {{domxref("SVGTransformList.replaceItem", "replaceItem()")}}.
   The {{domxref("SVGLengthList")}} interface already supports indexed setters.
   ([Firefox bug 2059426](https://bugzil.la/2059426)).
+- The {{domxref("WebTransport.draining")}} property is supported for indicating that the server has requested that the client start graceful shutdown of the session.
+  ([Firefox bug 2007160](https://bugzil.la/2007160)).
 
 #### Media, WebRTC, and Web Audio
 
