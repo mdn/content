@@ -68,7 +68,10 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### WebAssembly -->
+### WebAssembly
+
+- The [Compact import sections](/en-US/docs/WebAssembly/Reference/Definitions/import#compact_import_sections) proposal has been implemented, which allows multiple similar [`import`](/en-US/docs/WebAssembly/Reference/Definitions/import) definitions to be written in a less redundant form, with `namespaces` and `types` deduplicated.
+  ([Firefox bug 2062344](https://bugzil.la/2062344)).
 
 <!-- #### Removals -->
 
