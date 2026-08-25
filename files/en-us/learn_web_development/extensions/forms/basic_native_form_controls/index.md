@@ -262,7 +262,7 @@ submit:
 <hr />
 ```
 
-anonymous:
+- Anonymous button:
 
 ```html live-sample___buttons
 <button type="button">This is an <strong>anonymous button</strong></button>
