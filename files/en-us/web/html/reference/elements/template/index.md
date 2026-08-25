@@ -7,11 +7,14 @@ browser-compat: html.elements.template
 sidebar: htmlsidebar
 ---
 
-The **`<template>`** [HTML](/en-US/docs/Web/HTML) element serves as a mechanism for holding {{Glossary("HTML")}} fragments, which can either be used later via JavaScript or generated immediately into shadow DOM.
+The **`<template>`** [HTML](/en-US/docs/Web/HTML) element serves as a mechanism for holding {{Glossary("HTML")}} fragments, which can either be used later via JavaScript, generated immediately into shadow DOM, or uses as part of out-of-order patching with `<template for='...'>`
 
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
+
+- `for`
+  - : The `for` attribute is used for out-of-order patching with `<template for='...'>` matching an equivalent `<?start id='...'>` or `<?marker '...'>` marker. See the [out of order patching](#out_of_order_patching) and [examples](#examples) sections.
 
 - `shadowrootmode`
   - : Creates a [shadow root](/en-US/docs/Glossary/Shadow_tree) for the parent element.
@@ -73,7 +76,7 @@ This element has no permitted content, because everything nested inside it in th
 
 Due to the way the `<template>` element is parsed, all `<html>`, `<head>`, and `<body>` opening and closing tags inside the template are syntax errors and are ignored by the parser, so `<template><head><title>Test</title></head></template>` is the same as `<template><title>Test</title></template>`.
 
-There are two main ways to use the `<template>` element.
+There are three main ways to use the `<template>` element.
 
 ### Template document fragment
 
@@ -93,6 +96,22 @@ If the element has any other value for `shadowrootmode`, or does not have the `s
 Similarly, if there are multiple declarative shadow roots, only the first one is replaced by a {{domxref("ShadowRoot")}} — subsequent instances are parsed as {{domxref("HTMLTemplateElement")}} objects.
 
 Other attributes prefixed with `shadowroot` allow declarative customization of the `ShadowRoot`, such as controlling how slots are assigned.
+
+### Out-of-order patching
+
+Traditionally, HTML is delivered in order and read, processed and displayed from top to bottom. To change that ordering you need to either hide or rearrange elements using CSS or update the DOM produced by the HTML after the fact with JavaScript. However, many pages are many of of multiple parts that may be ready at different times, or that may be more important to deliver to the user first.
+
+The `<template>` element allows for delivering HTML {{glossary("Out_of_order_patching", "out-of-order")}} and "patching" [processing instructions](/en-US/docs/Web/API/ProcessingInstruction) markers with the contents of the `<template>` element.
+
+As an example, a `<?marker name='my-identifier'>` processing instructions marker can be patched with the contents of a `<template for="my-identifier">` element supplied much later in the HTML. See the [Using `<template for>` for patching](#using_template_for_for_patching) example.
+
+As well as the `<?marker>` processing instructions marker, the `<?start>` and `<?end>` pairing can provide temporary contents (for example, `<?start name='my-identifier'>Loading...<?end>`), where the contents are temporarily shown until the `<template for="my-identifier">` is seen and again the whole section is replaced. See the [Using `<template for>` for range patching](#using_template_for_for_range_patching) example.
+
+When written in HTML, processing instructions can be provided with or without the trailing `?`, and the browser will add it if not supplied when parsing the DOM. Both `<?start?>` and `<?start>` are therefore valid and parsed as `<?start?>`. XML is stricter and requires the trailing `?`.
+
+If the `<for>` attribute does not match any marker `name`, then the `<template>` is left in the DOM (but hidden by default).
+
+To prevent components updating unrelated parts of the DOM, `<template for="...">` elements can only patch markers under the parent of the `<template>` element. The only exception is `<template>` elements which are direct children of the `<body>` element can also patch `<head>` elements to allow updating of `<title>` and other `<head>` elements.
 
 ## Examples
 
@@ -498,6 +517,144 @@ container.appendChild(secondClone);
 Since `firstClone` is a `DocumentFragment`, only its children are added to `container` when `appendChild` is called; the event handlers of `firstClone` are not copied. In contrast, because an event handler is added to the first _child node_ of `secondClone`, the event handler is copied when `appendChild` is called, and clicking on it works as one would expect.
 
 {{EmbedLiveSample(' Data on the DocumentFragment is not cloned')}}
+
+### Using `<template for>` for patching
+
+This example uses the `<?marker name="placeholder">` processing instruction as a placeholder and later on fills in the contents using `<template for="placeholder">`. The `<?marker>` processing instructions excludes the optional trailing `?`, but could also be written as `<?marker name="placeholder" ?>` if preferred.
+
+<!-- Have prettier ignore this, as indentation is important and discussed next -->
+<!-- prettier-ignore-start -->
+```html
+<body>
+  <div>
+    <?marker name="placeholder">
+  </div>
+  ...
+  <template for="placeholder">
+    Lorem Ipsum...
+  </template>
+  ...
+</body>
+```
+<!-- prettier-ignore-end -->
+
+Results in an initially empty `<div>` which is then updated to the following after the `<template>` is parsed and processed to the following:
+
+<!-- Have prettier ignore this, as indentation is important and discussed next -->
+<!-- prettier-ignore-start -->
+```html
+  <div>
+
+    Lorem Ipsum...
+
+  </div>
+```
+<!-- prettier-ignore-end -->
+
+### Using `<template for>` for range patching
+
+This example uses the `<?start>` and `<?end>` processing instructions as placeholders and later on fills in the contents using `<template for>`. Both processing instructions exclude the optional trailing `?` but could also be written as `<?start name="placeholder" ?>` and `<?end?>` if preferred.
+
+<!-- Have prettier ignore this, as indentation is important and discussed next -->
+<!-- prettier-ignore-start -->
+```html
+<body>
+  <div>
+    <?start name="placeholder">
+    Loading...
+    <?end>
+  </div>
+  ...
+  <template for="placeholder">
+    Lorem Ipsum...
+  </template>
+  ...
+</body>
+```
+<!-- prettier-ignore-end -->
+
+Results in an a `<div>` initially containing the `Loading...` text placeholder, which is then updated to the following after the `<template>` is parsed and processed to produce the same output as the previous example (`<div>Lorem Ipsum...</div>`, ignoring the whitespace).
+
+This example also demonstrates the lack of processing instruction children and nesting. The `<?start>` and `<?end>` processing instructions, although linked in terms of `<template for>`, are separate [nodes](/en-US/docs/Web/API/Node) and not [elements](/en-US/docs/Web/API/Element) in the DOM and so do not cause the `Loading...` content in between to be a child (as demonstrated by the lack of indentation).
+
+### Using `<template for>` for patching `<head>` elements
+
+This example shows that `<template for>` elements which are direct children of the `<body>` element can patch `<head>` markers.
+
+<!-- Have prettier ignore this, as indentation is important and discussed next -->
+<!-- prettier-ignore-start -->
+```html
+<head>
+  ...
+  <?start name="title"><title>Loading...</title><?end>
+  <?start name="meta-description"><meta name="description" contents="Loading..."><?end>
+  ...
+</head>
+<body>
+  ...
+  <template for="title"><title>The actual title of the page</title></template>
+  <template for="meta-description"><meta name="description" contents="This is a meaningful description..."></template>
+  ...
+</body>
+```
+<!-- prettier-ignore-end -->
+
+Results in the following:
+
+<!-- Have prettier ignore this, as indentation is important and discussed next -->
+<!-- prettier-ignore-start -->
+```html
+<head>
+  ...
+  <title>The actual title of the page</title>
+  <meta name="description" contents="This is a meaningful description...">
+  ...
+</head>
+<body>
+  ...
+</body>
+```
+<!-- prettier-ignore-end -->
+
+### Including markers in `<template for>` to allow contents to be repatched later
+
+It is also possible to insert markers to allow for new placeholders to be created, to allow the contents to be patched again later. You can even use the existing `name` attributes being replaced.
+
+For example, if you are building an {{glossary("SPA", "Single Page Application (SPA)")}} application with `<template for>` you may wish to allow the `<title>` to be patched on each route update and so would use something like this:
+
+<!-- Have prettier ignore this, as indentation is important and discussed next -->
+<!-- prettier-ignore-start -->
+```html
+<head>
+  ...
+  <?start name="title"><title>Loading...</title><?end>
+  ...
+</head>
+<body>
+  ...
+  <template for="title"><?start name="title"><title>The actual title of the page</title><?end></template>
+  ...
+</body>
+```
+<!-- prettier-ignore-end -->
+
+This will result in the following
+
+<!-- Have prettier ignore this, as indentation is important and discussed next -->
+<!-- prettier-ignore-start -->
+```html
+<head>
+  ...
+  <?start name="title"><title>The actual title of the page</title><?end>
+  ...
+</head>
+<body>
+  ...
+</body>
+```
+<!-- prettier-ignore-end -->
+
+A later a new `<template for="title">` could be inserted into the DOM to replace the `<title>` again.
 
 ## Technical summary
 
