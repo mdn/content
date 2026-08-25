@@ -12,7 +12,7 @@ The **`headingreset`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_
 
 ## Values
 
-This is a [boolean attribute](/en-US/docs/Glossary/Boolean/HTML). Its presence enables it. The value is ignored, so `headingreset`, `headingreset=""`, and `headingreset="false"` all have the same effect.
+This is a [boolean attribute](/en-US/docs/Glossary/Boolean/HTML); it takes effect when it is present. A value for it is ignored, so `headingreset`, `headingreset=""`, and `headingreset="false"` all have the same effect.
 
 ## Description
 
