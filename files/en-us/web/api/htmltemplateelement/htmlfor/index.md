@@ -8,10 +8,7 @@ browser-compat: api.HTMLTemplateElement.htmlFor
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLTemplateElement.htmlFor`** property reflects the value
-of the [`for`](/en-US/docs/Web/HTML/Reference/Elements/template#for) content property. That means that this
-script-accessible property is used to set and read the value of the content property
-`for`, which is the ID of the label's associated control element.
+The **`HTMLTemplateElement.htmlFor`** property reflects the value of the [`for`](/en-US/docs/Web/HTML/Reference/Elements/template#for) content property. That means that this script-accessible property is used to set and read the value of the content property `for`, which is the ID of the label's associated control element.
 
 ## Value
 
@@ -29,7 +26,6 @@ The `for` attribute of a `<template>` element is used for [template out-of-order
 
 ```js
 console.log(document.querySelector("template").htmlFor);
-// Logs:
 // my-identifier
 ```
 

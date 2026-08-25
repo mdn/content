@@ -7,14 +7,14 @@ browser-compat: html.elements.template
 sidebar: htmlsidebar
 ---
 
-The **`<template>`** [HTML](/en-US/docs/Web/HTML) element serves as a mechanism for holding {{Glossary("HTML")}} fragments, which can either be used later via JavaScript, generated immediately into shadow DOM, or uses as part of out-of-order patching with `<template for='...'>`
+The **`<template>`** [HTML](/en-US/docs/Web/HTML) element serves as a mechanism for holding {{Glossary("HTML")}} fragments, which can either be used later via JavaScript, generated immediately into shadow DOM, or uses as part of out-of-order patching with `<template for="...">`
 
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `for`
-  - : The `for` attribute is used for out-of-order patching with `<template for='...'>` matching an equivalent `<?start id='...'>` or `<?marker '...'>` marker. See the [out of order patching](#out_of_order_patching) and [examples](#examples) sections.
+  - : The `for` attribute is used for out-of-order patching with `<template for="...">` matching an equivalent `<?start id="...">` or `<?marker "...">` marker. See the [out of order patching](#out_of_order_patching) and [examples](#examples) sections.
 
 - `shadowrootmode`
   - : Creates a [shadow root](/en-US/docs/Glossary/Shadow_tree) for the parent element.
@@ -103,9 +103,9 @@ Traditionally, HTML is delivered in order and read, processed and displayed from
 
 The `<template>` element allows for delivering HTML {{glossary("Out_of_order_patching", "out-of-order")}} and "patching" [processing instructions](/en-US/docs/Web/API/ProcessingInstruction) markers with the contents of the `<template>` element.
 
-As an example, a `<?marker name='my-identifier'>` processing instructions marker can be patched with the contents of a `<template for="my-identifier">` element supplied much later in the HTML. See the [Using `<template for>` for patching](#using_template_for_for_patching) example.
+As an example, a `<?marker name="my-identifier">` processing instructions marker can be patched with the contents of a `<template for="my-identifier">` element supplied much later in the HTML. See the [Using `<template for>` for patching](#using_template_for_for_patching) example.
 
-As well as the `<?marker>` processing instructions marker, the `<?start>` and `<?end>` pairing can provide temporary contents (for example, `<?start name='my-identifier'>Loading...<?end>`), where the contents are temporarily shown until the `<template for="my-identifier">` is seen and again the whole section is replaced. See the [Using `<template for>` for range patching](#using_template_for_for_range_patching) example.
+As well as the `<?marker>` processing instructions marker, the `<?start>` and `<?end>` pairing can provide temporary contents (for example, `<?start name="my-identifier">Loading...<?end>`), where the contents are temporarily shown until the `<template for="my-identifier">` is seen and again the whole section is replaced. See the [Using `<template for>` for range patching](#using_template_for_for_range_patching) example.
 
 When written in HTML, processing instructions can be provided with or without the trailing `?`, and the browser will add it if not supplied when parsing the DOM. Both `<?start?>` and `<?start>` are therefore valid and parsed as `<?start?>`. XML is stricter and requires the trailing `?`.
 
