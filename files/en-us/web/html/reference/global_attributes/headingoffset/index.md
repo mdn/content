@@ -4,13 +4,15 @@ short-title: headingoffset
 slug: Web/HTML/Reference/Global_attributes/headingoffset
 page-type: html-attribute
 sidebar: htmlsidebar
+status:
+  - experimental
+browser-compat:
+  - html.global_attributes.headingoffset
 ---
 
 {{SeeCompatTable}}
 
 The **`headingoffset`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) increases the computed heading level of the [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) inside the element it is set on, without changing the elements used to write them.
-
-Because the offset comes from the heading and its ancestors, a reusable component can always use the same heading markup, such as an `<h1>` for its title. You can then use the same markup at any depth of a page without editing its headings. This also avoids the accessibility problem caused by picking a heading element for its font size.
 
 ## Values
 
@@ -33,6 +35,8 @@ This attribute affects only the computed heading level. It does not change the f
 - The element's name, so CSS selectors such as `h1` still match, and the default styling of the heading is unchanged.
 - The element's [ARIA role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role), which stays `heading`.
 - An explicit `aria-level` attribute on the heading, which takes precedence over the computed heading level.
+
+Because the offset comes from the heading and its ancestors, a reusable component can always use the same heading markup, such as an `<h1>` for its title. You can then use the same markup at any depth of a page without editing its headings. This also avoids the accessibility problem caused by picking a heading element for its font size.
 
 ## Accessibility
 
