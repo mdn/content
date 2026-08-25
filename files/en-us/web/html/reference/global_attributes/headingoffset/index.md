@@ -94,7 +94,7 @@ An element with the [`headingreset`](/en-US/docs/Web/HTML/Reference/Global_attri
 
 Screen reader users navigate by headings and rely on heading levels to understand how a page is structured. Use `headingoffset` to make those levels match the visual structure of the page, and check the result with a screen reader or the browser's accessibility inspector.
 
-In browsers that do not support this attribute, headings keep the level of their element name, so the markup must still make sense without the offset. Alternatively, you can set [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level) as a fallback.
+In browsers that do not support this attribute, headings keep the level of their element name, so the markup must still make sense without the offset.
 
 ## Specifications
 
