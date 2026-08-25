@@ -36,6 +36,7 @@ Artur
 Arun
 Ashlyn
 Ashok
+Ashwood
 Audiocogs
 Audre
 Austerstræti
@@ -172,6 +173,7 @@ Dottoro
 Downey
 Dragomir
 Drasner
+Draymoor
 Dutton
 Dwan
 Dwyane
@@ -212,6 +214,8 @@ Exocoetidae
 Fadeyev
 Fairchild
 FDCP
+Fenwick
+Ferngate
 Firefogg
 Firesheep
 Firestore
@@ -241,6 +245,7 @@ Gordo
 Gorman
 Grahl
 Grande-Dixence
+Graywolf
 Graywolf9
 Grigsby
 Grissom
@@ -371,6 +376,7 @@ Leyla
 Lianghekou
 Libera.Chat
 Libertinus
+librsvg
 Lighttpd
 LINDDUN
 Lindenberg
@@ -459,6 +465,7 @@ Neocities
 Nixpacks
 Noida
 Norah
+Northbridge
 Novak
 Nurek
 Nuxt
@@ -525,11 +532,13 @@ Rauschmayer
 Realtek
 Recep
 Redbeard
+Redcliffe
 Reis
 Rekapi
 Remy
 Resian
 Resig
+resvg
 Rigby
 Rivendell
 Robison

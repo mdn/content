@@ -407,23 +407,9 @@ The {{cssxref("@keyframes")}} at-rule now supports [`<timeline-range-name>`](/en
 - `layout.css.scroll-driven-animations.enabled`
   - : Set to `true` to enable.
 
-### Tree counting CSS functions
+### Updating attributes of external resources
 
-The {{cssxref("sibling-count")}} and {{cssxref("sibling-index")}} function are now supported. The `sibling-count()` function returns the number sibling elements as well as the element itself. The `sibling-index()` function returns the index number of the element in relation to its siblings, this starts from `1` and not `0`. ([Firefox bug 2042063](https://bugzil.la/2042063)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 154           | Yes                 |
-| Developer Edition | 153           | No                  |
-| Beta              | 153           | No                  |
-| Release           | 153           | No                  |
-
-- `layout.css.tree-counting-functions.enabled`
-  - : Set to `true` to enable.
-
-### Updating attributes of external recourses
-
-The {{cssxref("link-parameters")}} CSS property and {{cssxref("param")}} CSS function are now supported. This allows the user to update attributes of external resources, such as SVGs, that have their attributes set with the {{cssxref("env")}} CSS function. This means that single external resource can be used rather than creating multiple variations that only have different colors or other values. ([Firefox bug 2046153](https://bugzil.la/2046153)).
+The {{cssxref("link-parameters")}} CSS property and {{cssxref("param")}} CSS function are now supported. This allows the user to update attributes of external resources, such as SVGs, that have their attributes set with the {{cssxref("env")}} CSS function. This means that a single external resource can be used rather than creating multiple variations that only have different colors or other values. ([Firefox bug 2046153](https://bugzil.la/2046153)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -463,6 +449,20 @@ The {{cssxref("text-decoration-inset")}} CSS property now supports percentages a
 - `layout.css.text-decoration-inset-percentage.enabled`
   - : Set to `true` to enable.
 
+### Calculating a value based upon `progress()`
+
+The {{cssxref("progress")}} CSS function is now supported. This allows the user calculate a {{cssxref("number")}} based upon a value (or progress) in between a minimum and maximum value. ([Firefox bug 2047015](https://bugzil.la/2047015)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 155           | Yes                 |
+| Developer Edition | 154           | No                  |
+| Beta              | 154           | No                  |
+| Release           | 154           | No                  |
+
+- `layout.css.progress-function.enabled`
+  - : Set to `true` to enable.
+
 ## SVG
 
 **No experimental features in this release cycle.**
@@ -484,23 +484,6 @@ When enabled, the [`href`](/en-US/docs/Web/MathML/Reference/Global_attributes/hr
   - : Set to `true` to enable.
 
 ## JavaScript
-
-### TC39 Iterator includes proposal
-
-The [`Iterator.prototype.includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/includes) method tests whether an `Iterator` instance will produce a specified value.
-The comparison uses the [SameValueZero algorithm](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality).
-This algorithm is similar to strict equality `===` (where `-0` and `+0` are considered equal), but differs in that {{jsxref("NaN")}} is considered equal to itself.
-([Firefox bug 2025779](https://bugzil.la/2025779)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 152           | No                  |
-| Developer Edition | 152           | No                  |
-| Beta              | 152           | No                  |
-| Release           | 152           | No                  |
-
-- `javascript.options.experimental.iterator_includes`
-  - : Set to `true` to enable.
 
 ### TC39 Intl.Locale info proposal
 

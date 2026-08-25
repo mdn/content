@@ -14,12 +14,15 @@ The passed values must be of the same type.
 ## Syntax
 
 ```js-nolint
-max(number1, /* …, */ numberN)
+max()
+max(number1)
+max(number1, number2)
+max(number1, number2, /* …, */ numberN)
 ```
 
 ### Parameters
 
-- `number1`, …, `numberN`
+- `number1`, …, `numberN` {{optional_inline}}
   - : Either a number or a {{domxref('CSSNumericValue')}}.
 
 ### Return value

@@ -24,4 +24,4 @@ A string.
 
 ## See also
 
-- SVG [`<a>`](/en-US/docs/Web/HTML/Reference/Elements/a) element
+- SVG {{SVGElement("a")}} element

@@ -6,7 +6,7 @@ page-type: guide
 sidebar: svgref
 ---
 
-Modern browsers support using [SVG](/en-US/docs/Web/SVG) within [CSS](/en-US/docs/Web/CSS) styles to apply graphical effects to HTML content.
+You can use [SVG](/en-US/docs/Web/SVG) within [CSS](/en-US/docs/Web/CSS) styles to apply graphical effects to HTML content.
 
 You may specify SVG in styles either within the same document or an external style sheet. There are 3 properties you can use: {{cssxref("mask")}}, {{cssxref("clip-path")}}, and {{cssxref("filter")}}.
 
@@ -193,7 +193,6 @@ And some more filters:
 <svg height="0">
   <filter id="f3">
     <feConvolveMatrix
-      filterRes="100 100"
       color-interpolation-filters="sRGB"
       order="3"
       kernelMatrix="0 -1 0

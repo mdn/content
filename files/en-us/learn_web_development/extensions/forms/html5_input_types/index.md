@@ -322,7 +322,7 @@ Let's look at the different available types in brief. Note that the usage of the
 
 [`<input type="week">`](/en-US/docs/Web/HTML/Reference/Elements/input/week) creates a widget to display and pick a week number and its year.
 
-Weeks start on Monday and run to Sunday. Additionally, the first week 1 of each year contains the first Thursday of that year — which may not include the first day of the year, or may include the last few days of the previous year.
+Weeks start on Monday and run to Sunday. Additionally, week 1 of each year contains the first Thursday of that year — which may not include the first day of the year, or may include the last few days of the previous year.
 
 ```html hidden
 <label for="week">Enter the week:</label><br />
