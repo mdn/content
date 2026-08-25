@@ -106,19 +106,11 @@ flex-flow: unset;
 
 See {{cssxref("flex-direction")}} and {{cssxref("flex-wrap")}} for details on the values.
 
-## Formal definition
+## Description
 
-{{cssinfo}}
+The `flex-flow` shorthand property specifies the {{cssxref("flex-direction")}} and {{cssxref("flex-wrap")}} properties, defining the direction of a flex container and its wrapping behavior. It can also define flex items to be balanced when wrapping is allowed.
 
-## Formal syntax
-
-{{csssyntax}}
-
-## Examples
-
-### Setting column-reverse and wrap
-
-In this example, the main-axis is the block direction with a reversed main-start and main-end. The flex items are allowed to wrap, creating new lines if needed.
+For example, `column-reverse wrap` will set the main-axis to the block direction with a reversed main-start and main-end, with flex items being allowed to wrap, creating new lines if needed.
 
 ```css
 .container {
@@ -133,6 +125,88 @@ To distribute the flex items evenly across each flex line, you can include the `
   flex-flow: column-reverse wrap balance;
 }
 ```
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
+
+{{csssyntax}}
+
+## Examples
+
+### Basic usage
+
+This example demonstrates using the `flex-flow` shorthand on a flex container so the items are laid out backwards across multiple rows.
+
+#### HTML
+
+We include a list of words in alphabetical order:
+
+```html
+<ul>
+  <li>Alphabet</li>
+  <li>Banana</li>
+  <li>Crayons</li>
+  <li>Dinosaurs</li>
+  <li>Eggplant</li>
+  <li>Foundation</li>
+  <li>Ghosts</li>
+  <li>Happy</li>
+  <li>Igloo</li>
+  <li>Janitors</li>
+  <li>Kittens</li>
+  <li>Lasso</li>
+  <li>Magic 8-ball</li>
+  <li>Nincompoop</li>
+  <li>Orange</li>
+  <li>Petunia</li>
+  <li>Quality</li>
+  <li>Rancid</li>
+  <li>Shoelace</li>
+  <li>Terydactyl</li>
+  <li>Umbrella</li>
+  <li>Valentine</li>
+  <li>Westward</li>
+  <li>Xylophone</li>
+</ul>
+```
+
+#### CSS
+
+We set the {{HTMLElement("ul")}} to be a flex container with the {{cssxref("display")}} property, define a {{cssxref("width")}}, add a {{cssxref("gap")}} so there is some room between flex items and flex lines, and then set the `flex-flow` to wrap the items in reverse order. Additional CSS has been hidden for brevity.
+
+```css
+ul {
+  display: flex;
+  width: 31em;
+  gap: 1em;
+
+  flex-flow: row-reverse wrap-reverse;
+}
+```
+
+```css hidden
+ul {
+  list-style: none;
+  border: 1px solid;
+  font-family: sans-serif;
+}
+li {
+  font-size: 1.25rem;
+  padding: 5px;
+  border: 1px solid;
+  background-color: lightpink;
+}
+li:nth-of-type(even) {
+  background-color: lightgreen;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Basic usage","",310)}}
 
 ## Specifications
 

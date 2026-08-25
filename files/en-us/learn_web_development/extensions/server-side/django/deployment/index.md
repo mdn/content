@@ -169,7 +169,7 @@ export DJANGO_DEBUG=False
 
 A full checklist of settings you might want to change is provided in [Deployment checklist](https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/) (Django docs). You can also list a number of these using the terminal command below:
 
-```python
+```bash
 python3 manage.py check --deploy
 ```
 
@@ -778,10 +778,10 @@ Run the development web server as usual and then check the site still works as y
 python3 manage.py runserver
 ```
 
-Next, lets `push` the changes to GitHub.
+Next, let's `push` the changes to GitHub.
 In the terminal (after having navigated to our local repository), enter the following commands:
 
-```python
+```bash
 git checkout -b railway_changes
 git add -A
 git commit -m "Added files and changes required for deployment"

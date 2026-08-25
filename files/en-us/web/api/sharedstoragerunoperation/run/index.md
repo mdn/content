@@ -8,7 +8,7 @@ status:
 browser-compat: api.SharedStorageRunOperation.run
 ---
 
-{{APIRef("Shared Storage API")}}{{deprecated_header}}
+{{APIRef("Shared Storage API")}}
 
 The **`run()`** method of the
 {{domxref("SharedStorageRunOperation")}} interface defines the structure to which the `run()` method defined inside a Run output gate operation should conform.

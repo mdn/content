@@ -9,7 +9,7 @@ status:
 browser-compat: api.Screen.lockOrientation
 ---
 
-{{APIRef("Screen Orientation API")}}{{Deprecated_Header}}{{non-standard_header}}
+{{APIRef("Screen Orientation API")}}{{non-standard_header}}
 
 The **`lockOrientation()`** method of the {{DOMxRef("Screen")}}
 interface locks the screen into a specified orientation.
