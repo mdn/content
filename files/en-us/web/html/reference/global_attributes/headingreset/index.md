@@ -6,8 +6,8 @@ page-type: html-attribute
 sidebar: htmlsidebar
 status:
   - experimental
-browser-compat:
-  - html.global_attributes.headingreset
+browser-compat: html.global_attributes.headingreset
+sidebar: htmlsidebar
 ---
 
 {{SeeCompatTable}}
