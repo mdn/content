@@ -8,6 +8,10 @@ page-type: guide
 
 **XML namespace** is a standardized mechanism that allows identifiers (element or attribute names) defined by different specifications with different semantics to coexist in the same XML document without ambiguity.
 
+Several XML languages are relevant to the web, and each defines elements and attributes in their namespace. [HTML](/en-US/docs/Web/HTML) (although it also has its own syntax) uses `http://www.w3.org/1999/xhtml`, [SVG](/en-US/docs/Web/SVG) uses `http://www.w3.org/2000/svg`, and [MathML](/en-US/docs/Web/MathML) uses `http://www.w3.org/1998/Math/MathML`. The {{Glossary("XLink")}} namespace `http://www.w3.org/1999/xlink` is now deprecated for web purposes. XML also defines two reserved namespaces, `xml` and `xmlns`, for features such as `xml:lang` and for namespace declarations themselves. This guide explains how these namespaces are represented and manipulated through the DOM.
+
+## Element and attribute names in the DOM
+
 In the [Anatomy of the DOM](/en-US/docs/Web/API/Document_Object_Model/Anatomy_of_the_DOM) guide, we introduced the basic data associated with [`Element`](/en-US/docs/Web/API/Document_Object_Model/Anatomy_of_the_DOM#element) and [`Attr`](/en-US/docs/Web/API/Document_Object_Model/Anatomy_of_the_DOM#attr) nodes, which include the {{domxref("Element.tagName", "tagName")}} and {{domxref("Attr.name", "name")}} properties. These properties return the _qualified name_. In the DOM, elements and attributes actually keep three properties that identify their names:
 
 - The **namespace** is a string or `null`. We will also refer to it as the _namespace URI_ or _namespace identifier_. It's returned by the {{domxref("Element.namespaceURI")}} or {{domxref("Attr.namespaceURI")}} property.
@@ -19,8 +23,6 @@ In the [Anatomy of the DOM](/en-US/docs/Web/API/Document_Object_Model/Anatomy_of
 - The **namespace prefix** is a string or `null`. If specified, it explicitly sets a namespace during parse time (see [The namespace prefix](#the_namespace_prefix)). It's returned by the {{domxref("Element.prefix")}} or {{domxref("Attr.prefix")}} property.
 
 The **qualified name** is not a primitive property; it's the local name by itself when there is no prefix, or the prefix and local name joined by a colon when there is one. It's returned by the {{domxref("Element.tagName")}} (but uppercased if in HTML) or {{domxref("Attr.name")}} property.
-
-Several XML languages are relevant to the web, and each defines elements and attributes in their namespace. [HTML](/en-US/docs/Web/HTML) (although it also has its own syntax) uses `http://www.w3.org/1999/xhtml`, [SVG](/en-US/docs/Web/SVG) uses `http://www.w3.org/2000/svg`, and [MathML](/en-US/docs/Web/MathML) uses `http://www.w3.org/1998/Math/MathML`. The {{Glossary("XLink")}} namespace `http://www.w3.org/1999/xlink` is now deprecated for web purposes. XML also defines two reserved namespaces, `xml` and `xmlns`, for features such as `xml:lang` and for namespace declarations themselves. This guide explains how these namespaces are represented and manipulated through the DOM.
 
 ## XML namespace syntax
 
@@ -396,20 +398,79 @@ console.log(doc.getElementsByClassName("foo").length); // 1
 
 ## Namespaces across other DOM operations
 
-- **In HTML documents:** Equality, cloning, importing, adopting, and mutation records use the stored namespace fields exactly as they do in XML documents. The main limitation comes earlier, during HTML parsing: most parsed attributes have a null namespace unless they are among the parser's recognized foreign attributes.
-- {{domxref("Node/isEqualNode", "Node.isEqualNode()")}} compares element namespaces, prefixes, and local names, and compares attribute namespaces and local names; attribute prefixes do not affect attribute equality.
-- {{domxref("Node/cloneNode", "Node.cloneNode()")}} and {{domxref("Document/importNode", "Document.importNode()")}} preserve the namespace, prefix, and local name of elements and attributes.
-- {{domxref("Document/adoptNode", "Document.adoptNode()")}} changes a node's document without recomputing its namespace information.
-- {{domxref("MutationRecord/attributeName", "MutationRecord.attributeName")}} reports the changed attribute's local name, while {{domxref("MutationRecord/attributeNamespace", "MutationRecord.attributeNamespace")}} reports its namespace.
-- {{domxref("MutationObserver/observe", "MutationObserver.observe()")}} attribute filters contain local names only and do not match attributes whose namespace is non-null.
+Namespace data is stored on each element and attribute, so most DOM operations use or copy that data directly. They do not consult the node's current `xmlns` declarations or attempt to resolve its prefix again.
+
+The {{domxref("Node.cloneNode()")}} and {{domxref("Document.importNode()")}} methods copy the namespace URI, prefix, and local name of every copied element and attribute. {{domxref("Document.adoptNode()")}} moves a node to another document without copying it, but likewise leaves its namespace information unchanged. Therefore, importing or adopting an SVG element into an HTML document does not turn it into an HTML element; it remains in the SVG namespace.
+
+The {{domxref("Node.isEqualNode()")}} method considers the namespace URI, prefix, and local name when comparing elements. Consequently, two otherwise identical elements with different prefixes are not equal, even if the prefixes are associated with the same namespace. For attributes, it compares the namespace URI, local name, and value, but not the prefix.
+
+```js
+const SVG_NS = "http://www.w3.org/2000/svg";
+
+const circle1 = document.createElementNS(SVG_NS, "svg:circle");
+const circle2 = document.createElementNS(SVG_NS, "s:circle");
+console.log(circle1.isEqualNode(circle2)); // false
+
+const attr1 = document.createAttributeNS(SVG_NS, "svg:fill");
+const attr2 = document.createAttributeNS(SVG_NS, "s:fill");
+attr1.value = "blue";
+attr2.value = "blue";
+console.log(attr1.isEqualNode(attr2)); // true
+```
+
+Attribute [mutation records](/en-US/docs/Web/API/MutationRecord) separate the two parts needed to identify a namespaced attribute: {{domxref("MutationRecord/attributeName", "attributeName")}} is the local name and {{domxref("MutationRecord/attributeNamespace", "attributeNamespace")}} is the namespace URI.
+
+```js
+const SVG_NS = "http://www.w3.org/2000/svg";
+const EXAMPLE_NS = "https://example.com/attributes";
+const circle = document.createElementNS(SVG_NS, "circle");
+
+const observer = new MutationObserver(([record]) => {
+  console.log(record.attributeName); // status
+  console.log(record.attributeNamespace); // https://example.com/attributes
+});
+observer.observe(circle, { attributes: true });
+
+circle.setAttributeNS(EXAMPLE_NS, "example:status", "ready");
+```
+
+The strings in the `attributeFilter` option of {{domxref("MutationObserver/observe", "observe()")}} are local names, but the filter only matches attributes in the `null` namespace. There is no way to include a namespace URI in the filter. For example, observing the `circle` above with `{ attributes: true, attributeFilter: ["status"] }` would not report the change to `example:status`. To observe namespaced attributes selectively, observe all attribute changes and inspect each record's `attributeName` and `attributeNamespace` in the callback.
 
 ## Namespaces in XPath and XSLT
 
-- **In HTML documents:** The XPath APIs are available and namespace resolvers can address HTML, SVG, MathML, and script-created namespaces. The XSLT APIs are also exposed in supporting browsers, but their namespace parameters identify XSLT variables or parameters and do not make `xmlns` declarations functional in HTML markup.
-- The `XPathNSResolver` callback and its `lookupNamespaceURI()` method for resolving prefixes used in XPath expressions.
-- The optional namespace resolver accepted by {{domxref("XPathEvaluator/createExpression", "XPathEvaluator.createExpression()")}} and {{domxref("XPathEvaluator/evaluate", "XPathEvaluator.evaluate()")}}, including a `Node` as a resolver.
-- {{domxref("XPathEvaluator/createNSResolver", "XPathEvaluator.createNSResolver()")}} as a legacy method that returns the supplied node unchanged.
-- {{domxref("XSLTProcessor/setParameter", "XSLTProcessor.setParameter()")}}, {{domxref("XSLTProcessor/getParameter", "XSLTProcessor.getParameter()")}}, and {{domxref("XSLTProcessor/removeParameter", "XSLTProcessor.removeParameter()")}} identify stylesheet parameters by namespace URI and local name.
+XPath expressions use prefixes to refer to namespaces, but like CSS, the expression does not automatically inherit the prefix declarations from the document that it queries. Instead, {{domxref("XPathEvaluator/createExpression", "XPathEvaluator.createExpression()")}} and {{domxref("XPathEvaluator/evaluate", "XPathEvaluator.evaluate()")}} accept a _namespace resolver_. The resolver is called with each prefix used in the expression and returns the corresponding namespace URI, or `null` if it cannot resolve the prefix. It can be a function or an object implementing the `XPathNSResolver` interface's `lookupNamespaceURI()` method.
+
+The prefixes in the XPath expression are arbitrary. They only need to be understood by the resolver; they do not need to match the prefixes used in the document. In the following example, the `vector` prefix selects elements in the SVG namespace even though the SVG markup does not use that prefix:
+
+```xml
+<svg xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="50" r="40" />
+</svg>
+```
+
+```js
+const resolver = (prefix) => {
+  if (prefix === "vector") {
+    return "http://www.w3.org/2000/svg";
+  }
+  return null;
+};
+
+const result = document.evaluate(
+  "//vector:circle",
+  document,
+  resolver,
+  XPathResult.FIRST_ORDERED_NODE_TYPE,
+  null,
+);
+console.log(result.singleNodeValue); // The SVG circle element
+```
+
+The treatment of unprefixed element names differs between HTML and XML documents. In an HTML document, an unprefixed element test uses the HTML namespace. For example, `//a` selects HTML `<a>` elements but not SVG `<a>` elements. Other namespaces, including SVG and MathML, require a prefix and a resolver as shown above. In an XML document, an unprefixed element test uses the `null` namespace, so resolvers are necessary even if if the XML source uses only a default `xmlns` declaration. Unprefixed attribute tests use the `null` namespace in both kinds of document, matching the way unprefixed attributes are normally represented in the DOM.
+
+Instead of a custom resolver, you can pass a {{domxref("Node")}}. Its {{domxref("Node/lookupNamespaceURI", "lookupNamespaceURI()")}} method resolves the prefixes, using the node's current prefix-namespace associations described in [Looking up the prefix-namespace association](#looking_up_the_prefix-namespace_association). This is convenient when the expression uses prefixes declared in an XML document, but it also inherits the limitations of those lookup methods. In particular, it reflects the current DOM rather than necessarily reflecting what the parser used.
+
+Namespaces also appear in the {{domxref("XSLTProcessor")}} parameter methods. {{domxref("XSLTProcessor/setParameter", "setParameter()")}}, {{domxref("XSLTProcessor/getParameter", "getParameter()")}}, and {{domxref("XSLTProcessor/removeParameter", "removeParameter()")}} take a namespace URI and local name to identify an XSLT parameter.
 
 ## Summary
 
@@ -421,3 +482,4 @@ This guide provides an augment to the previous guides: [Anatomy of the DOM](/en-
 - The {{domxref("Node.lookupNamespaceURI()")}}, {{domxref("Node.lookupPrefix()")}}, and {{domxref("Node.isDefaultNamespace()")}} methods can be used to look up the prefix-namespace association.
 - The DOM methods mentioned in [Building and updating the DOM tree](/en-US/docs/Web/API/Document_Object_Model/Building_and_updating_the_DOM_tree) do not take namespace URIs; they take either local names or qualified names. Use the versions suffixed with `NS` when dealing with element and attribute names.
 - The `querySelector` methods cannot select by namespaces due to the lack of `@namespace` declarations. {{domxref("Document.getElementsByTagNameNS()")}} is the only `NS`-suffixed selection method.
+- When using XPath, you need to use namespace prefixes to refer to namespaced elements, which requires passing a namespace resolver. All nodes are namespace resolvers thanks to its `lookupNamespaceURI` method.
