@@ -41,7 +41,7 @@ In this example, the `<section>` offsets its headings by `2`, so the heading dir
 
 ### Using `headingreset` and `headingoffset` on the same element
 
-Here the outer offset of 3 is discarded, and only the offset on the element with `headingreset` is applied:
+In this example, the outer offset of `3` never reaches the heading. Only the offset on the element with `headingreset` applies, so the heading is at level 2:
 
 ```html
 <div headingoffset="3">
