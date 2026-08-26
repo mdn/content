@@ -21,7 +21,7 @@ A valid non-negative integer between `0` and `8`, inclusive. A value that cannot
 
 Each heading element has a **computed heading level**, which is the level assistive technologies expose to users. Without `headingoffset`, that level is the number in the element's name: `1` for [`<h1>`](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements), `2` for `<h2>`, and so on.
 
-The `headingoffset` attribute adds to that number. To find the offset for a heading, the browser starts at the heading element itself and walks up through its ancestors, adding up every `headingoffset` value it finds. The offsets accumulate: an `<h1>` inside an element with `headingoffset="1"` that is itself inside an element with `headingoffset="2"` has a computed heading level of 4.
+The `headingoffset` attribute adds to that number. To find the offset for a heading, the browser starts at the heading element itself, walks up through its ancestors – crossing shadow boundaries into the shadow host – and adds up every `headingoffset` value it finds. The offsets accumulate: an `<h1>` inside an element with `headingoffset="1"` that is itself inside an element with `headingoffset="2"` has a computed heading level of 4.
 
 Because the walk starts at the heading element, an offset on the heading itself also counts: `<h1 headingoffset="2">` has a computed heading level of 3.
 
