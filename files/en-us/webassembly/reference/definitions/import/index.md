@@ -171,7 +171,7 @@ When importing a JavaScript [`WebAssembly.Tag`](/en-US/docs/WebAssembly/Referenc
 
 This includes:
 
-- An optional tag name
+- An optional tag identifier
 - One or more values specifying the represented exception type's parameters and their values (these are the keyword `param`, followed by any [Wasm type](/en-US/docs/WebAssembly/Reference/Value_types))
 
 ### Compact import sections
