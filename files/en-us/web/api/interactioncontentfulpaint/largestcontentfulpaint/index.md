@@ -3,6 +3,8 @@ title: "InteractionContentfulPaint: largestContentfulPaint property"
 short-title: largestContentfulPaint
 slug: Web/API/InteractionContentfulPaint/largestContentfulPaint
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.InteractionContentfulPaint.largestContentfulPaint
 ---
 

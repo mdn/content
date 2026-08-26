@@ -3,6 +3,8 @@ title: "PerformanceSoftNavigation: navigationType property"
 short-title: navigationType
 slug: Web/API/PerformanceSoftNavigation/navigationType
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.PerformanceSoftNavigation.navigationType
 ---
 

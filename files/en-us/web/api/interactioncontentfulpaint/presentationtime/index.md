@@ -3,6 +3,8 @@ title: "InteractionContentfulPaint: presentationTime property"
 short-title: presentationTime
 slug: Web/API/InteractionContentfulPaint/presentationTime
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.InteractionContentfulPaint.presentationTime
 ---
 

@@ -43,7 +43,7 @@ It also extends the following {{domxref("PerformanceEntry")}} properties, qualif
 
 ## Instance methods
 
-_This interface also inherits methods from {{domxref("PerformanceEntry")}}._
+It interface overrides the following {{domxref("PerformanceEntry")}} method to include the additional properties:
 
 - {{domxref("LargestContentfulPaint.toJSON()")}}
   - : Returns a JSON representation of the `LargestContentfulPaint` object.

@@ -15,31 +15,36 @@ A performance entry can also be created by calling the {{domxref("Performance.ma
 
 The `PerformanceEntry` instances will always be one of the following subclasses:
 
+- {{domxref("InteractionContentfulPaint")}} {{Experimental_Inline}}
 - {{domxref("LargestContentfulPaint")}}
-- {{domxref("LayoutShift")}}
+- {{domxref("LayoutShift")}} {{Experimental_Inline}}
+- `PerformanceContainerTiming` {{Experimental_Inline}}
+- {{domxref("PerformanceElementTiming")}} {{Experimental_Inline}}
 - {{domxref("PerformanceEventTiming")}}
-- {{domxref("PerformanceLongAnimationFrameTiming")}}
-- {{domxref("PerformanceLongTaskTiming")}}
+- {{domxref("PerformanceLongAnimationFrameTiming")}} {{Experimental_Inline}}
+- {{domxref("PerformanceLongTaskTiming")}} {{Experimental_Inline}}
 - {{domxref("PerformanceMark")}}
 - {{domxref("PerformanceMeasure")}}
 - {{domxref("PerformanceNavigationTiming")}}
 - {{domxref("PerformancePaintTiming")}}
 - {{domxref("PerformanceResourceTiming")}}
-- {{domxref("PerformanceScriptTiming")}}
-- {{domxref("PerformanceServerTiming")}}
-- {{domxref("TaskAttributionTiming")}}
+- {{domxref("PerformanceScriptTiming")}} {{Experimental_Inline}}
+- {{domxref("PerformanceSoftNavigation")}} {{Experimental_Inline}}
+- {{domxref("TaskAttributionTiming")}} {{Experimental_Inline}}
 - {{domxref("VisibilityStateEntry")}}
 
 ## Instance properties
 
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
   - : A string representing the name for a performance entry. The value depends on the subtype.
-- {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}}
-  - : A string representing the type of performance metric. For example, `"mark"` when {{domxref("PerformanceMark")}} is used.
-- {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} representing the starting time for the performance metric.
 - {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} representing the duration of the performance entry.
+- {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}}
+  - : A string representing the type of performance metric. For example, `"mark"` when {{domxref("PerformanceMark")}} is used.
+- {{domxref("PerformanceEntry.navigationId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : The id of the navigation the performance entry was emitted under
+- {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
+  - : A {{domxref("DOMHighResTimeStamp")}} representing the starting time for the performance metric.
 
 ## Instance methods
 

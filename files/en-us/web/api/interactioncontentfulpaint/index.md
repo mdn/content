@@ -2,6 +2,8 @@
 title: InteractionContentfulPaint
 slug: Web/API/InteractionContentfulPaint
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.InteractionContentfulPaint
 ---
 
@@ -17,8 +19,6 @@ This interface directly defines the following properties:
   - : The id of the interaction that resulted in the paint.
 - {{domxref("InteractionContentfulPaint.largestContentfulPaint")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns details of the largest {{domxref("LargestContentfulPaint")}} for the interaction. This can remain the same between two `InteractionContentfulPaint` entries for the same interaction if a new contentful paint is smaller than the current largest contentful paint for that interaction.
-- {{domxref("InteractionContentfulPaint.navigationId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : The id of the navigation this paint is attributable to.
 - {{domxref("InteractionContentfulPaint.paintTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} of when the first rendering phase ended and the paint phase started.
 - {{domxref("InteractionContentfulPaint.presentationTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
@@ -35,6 +35,13 @@ It also extends the following {{domxref("PerformanceEntry")}} properties, qualif
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} of the interaction that resulted in the soft navigation.
 
+## Instance methods
+
+This interface overrides the following {{domxref("PerformanceEntry")}} method to include the additional properties:
+
+- {{domxref("InteractionContentfulPaint.toJSON()")}}
+  - : Returns a JSON representation of the `InteractionContentfulPaint` object.
+
 ## Description
 
 The `InteractionContentfulPaint` provides a stream of paint updates attributable to an interaction.
@@ -42,6 +49,10 @@ The `InteractionContentfulPaint` provides a stream of paint updates attributable
 At present this is scoped to increasing paint sizes, so it can be used to measure {{Glossary("Largest Contentful Paint", "Largest Contentful Paint (LCP)")}} for {{glossary("Soft Navigation", "Soft Navigations")}}, but the API has been designed to allow for all paints relevant to an interaction to be emitted.
 
 `InteractionContentfulPaint` is needed instead of using the {{domxref("LargestContentfulPaint")}} API as that is only emitted per full page load and is finalized upon interaction (which is a necessary start to a soft navigation).
+
+### Using `navigationId` and `interactionId`
+
+For {{glossary("Soft Navigation", "Soft Navigations")}}, paints happening before the URL is updated may wish to considered for the {{Glossary("Largest Contentful Paint", "Largest Contentful Paint (LCP)")}} of the soft navigation that is in flight. For the LCP case, {{domxref("PerformanceSoftNavigation.getLargestInteractionContentfulPaint()")}} and {{domxref("InteractionContentfulPaint.interactionId")}} are more effective for calculating that metric to consider all relevant paint regardless of the `navigationId`.
 
 ### Relationship with Event Timing and INP
 

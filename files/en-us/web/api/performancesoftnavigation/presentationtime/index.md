@@ -3,6 +3,8 @@ title: "PerformanceSoftNavigation: presentationTime property"
 short-title: presentationTime
 slug: Web/API/PerformanceSoftNavigation/presentationTime
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.PerformanceSoftNavigation.presentationTime
 ---
 
