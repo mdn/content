@@ -156,7 +156,7 @@ When importing a JavaScript [`WebAssembly.table`](/en-US/docs/WebAssembly/Refere
 
 This includes:
 
-- An optional table name
+- An optional table identifier
 - An initial size
 - An optional maximum size
 - The [value type](/en-US/docs/WebAssembly/Reference/Definitions/elem#value_type) stored by the table
