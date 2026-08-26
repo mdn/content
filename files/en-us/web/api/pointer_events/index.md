@@ -92,9 +92,7 @@ The {{domxref("PointerEvent")}} interface extends the {{domxref("MouseEvent")}} 
 
 ### Event types and Global Event Handlers
 
-Pointer events have ten event types, seven of which have similar semantics to their mouse event counterparts (`down`, `up`, `move`, `over`, `out`, `enter`, and `leave`).
-
-Below is a short description of each event type.
+The following event types use the {{domxref("PointerEvent")}} interface:
 
 | Event                                                                                     | Description                                                                                                                                                                                                                                                                                                                                                               |
 | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -109,6 +107,13 @@ Below is a short description of each event type.
 | {{domxref('Element/pointerrawupdate_event', 'pointerrawupdate')}} {{experimental_inline}} | Fired when a pointer changes any properties that don't fire `pointerdown` or `pointerup` events.                                                                                                                                                                                                                                                                          |
 | {{domxref('Element/gotpointercapture_event', 'gotpointercapture')}}                       | Fired when an element receives pointer capture.                                                                                                                                                                                                                                                                                                                           |
 | {{domxref('Element/lostpointercapture_event', 'lostpointercapture')}}                     | Fired after pointer capture is released for a pointer.                                                                                                                                                                                                                                                                                                                    |
+| {{domxref("Element/click_event", "click")}}                                               | Fired when an element is activated, for example by pressing and releasing the primary pointer button or using the keyboard.                                                                                                                                                                                                                                               |
+| {{domxref("Element/auxclick_event", "auxclick")}}                                         | Fired when a non-primary pointer button is pressed and released over an element.                                                                                                                                                                                                                                                                                          |
+| {{domxref("Element/contextmenu_event", "contextmenu")}}                                   | Fired when the user attempts to open a context menu, for example by right-clicking or pressing the context menu key.                                                                                                                                                                                                                                                      |
+
+The `pointerdown`, `pointerup`, `pointermove`, `pointerover`, `pointerout`, `pointerenter`, and `pointerleave` events have similar semantics to their mouse event counterparts, but work with other pointing devices as well, such as pens and touchscreens.
+
+The `click`, `auxclick`, and `contextmenu` events represent higher-level actions, such as activating an element or requesting a context menu. They are not limited to pointer input: for example, a keyboard can trigger `click` or `contextmenu` without any corresponding pointer movement or button press.
 
 ### Element extensions
 
@@ -149,6 +154,9 @@ function leaveHandler(event) {}
 function rawUpdateHandler(event) {}
 function gotCaptureHandler(event) {}
 function lostCaptureHandler(event) {}
+function clickHandler(event) {}
+function auxClickHandler(event) {}
+function contextMenuHandler(event) {}
 
 const el = document.getElementById("target");
 // Register pointer event handlers
@@ -163,6 +171,9 @@ el.onpointerleave = leaveHandler;
 el.onpointerrawupdate = rawUpdateHandler;
 el.ongotpointercapture = gotCaptureHandler;
 el.onlostpointercapture = lostCaptureHandler;
+el.onclick = clickHandler;
+el.onauxclick = auxClickHandler;
+el.oncontextmenu = contextMenuHandler;
 ```
 
 ### Event properties
