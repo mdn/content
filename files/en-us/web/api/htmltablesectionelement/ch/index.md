@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLTableSectionElement.ch
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The **`ch`** property of the {{domxref("HTMLTableSectionElement")}} interface does nothing. It reflects the `char` attribute of the section element.
 

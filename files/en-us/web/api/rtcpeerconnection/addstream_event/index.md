@@ -9,7 +9,7 @@ status:
 browser-compat: api.RTCPeerConnection.addstream_event
 ---
 
-{{APIRef("WebRTC")}}{{Non-standard_Header}}
+{{APIRef("WebRTC")}}{{Non-standard_Header}}{{deprecated_header}}
 
 The obsolete **`addstream`** event is sent to an {{domxref("RTCPeerConnection")}} when new media, in the form of a {{domxref("MediaStream")}} object, has been added to it.
 

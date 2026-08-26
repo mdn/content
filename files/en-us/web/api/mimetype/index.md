@@ -7,7 +7,7 @@ status:
 browser-compat: api.MimeType
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The **`MimeType`** interface provides contains information about a MIME type associated with a particular plugin. {{domxref("Navigator.mimeTypes")}} returns an array of this object.
 

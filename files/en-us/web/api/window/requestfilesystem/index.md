@@ -9,7 +9,7 @@ status:
 browser-compat: api.Window.requestFileSystem
 ---
 
-{{APIRef("HTML DOM")}}{{non-standard_header}}
+{{APIRef("HTML DOM")}}{{non-standard_header}}{{deprecated_header}}
 
 The non-standard {{domxref("Window")}} method
 **`requestFileSystem()`** method is a Google Chrome-specific

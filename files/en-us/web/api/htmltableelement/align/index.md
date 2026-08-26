@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLTableElement.align
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The **`HTMLTableElement.align`** property represents the
 alignment of the table.

@@ -9,7 +9,7 @@ status:
 browser-compat: api.VRFrameData.rightViewMatrix
 ---
 
-{{APIRef("WebVR API")}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}{{deprecated_header}}
 
 The **`rightViewMatrix`** read-only property of the {{domxref("VRFrameData")}} interface returns a {{jsxref("Float32Array")}} representing a 4x4 matrix that describes the view transform to be used for the right eye's rendering.
 

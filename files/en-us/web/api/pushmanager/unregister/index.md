@@ -9,7 +9,7 @@ status:
 browser-compat: api.PushManager.unregister
 ---
 
-{{ApiRef("Push API")}}{{non-standard_header}}{{AvailableInWorkers}}
+{{ApiRef("Push API")}}{{non-standard_header}}{{AvailableInWorkers}}{{deprecated_header}}
 
 The **`unregister()`** method was used to ask the system to
 unregister and delete the specified endpoint.

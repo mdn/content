@@ -9,7 +9,7 @@ status:
 browser-compat: api.CSSStyleDeclaration.getPropertyCSSValue
 ---
 
-{{ APIRef("CSSOM") }} {{non-standard_header}}
+{{ APIRef("CSSOM") }} {{non-standard_header}}{{deprecated_header}}
 
 The **CSSStyleDeclaration.getPropertyCSSValue()**
 method interface returns a {{domxref('CSSValue')}} containing the CSS value for a

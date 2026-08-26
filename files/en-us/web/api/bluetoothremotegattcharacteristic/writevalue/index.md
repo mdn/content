@@ -8,7 +8,7 @@ status:
 browser-compat: api.BluetoothRemoteGATTCharacteristic.writeValue
 ---
 
-{{APIRef("Bluetooth API")}}{{SecureContext_Header}}
+{{APIRef("Bluetooth API")}}{{SecureContext_Header}}{{deprecated_header}}
 
 Use {{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValueWithResponse()")}} and {{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse()")}} instead.
 

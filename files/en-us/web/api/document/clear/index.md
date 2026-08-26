@@ -8,7 +8,7 @@ status:
 browser-compat: api.Document.clear
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{deprecated_header}}
 
 The **`Document.clear()`** method does nothing, but doesn't raise any error.
 

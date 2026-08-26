@@ -8,7 +8,7 @@ status:
 browser-compat: api.PerformanceNavigation.type
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{deprecated_header}}
 
 The legacy
 **`PerformanceNavigation.type`**

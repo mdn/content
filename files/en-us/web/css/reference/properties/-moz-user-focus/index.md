@@ -10,7 +10,7 @@ browser-compat: css.properties.-moz-user-focus
 sidebar: cssref
 ---
 
-{{non-standard_header}}
+{{non-standard_header}}{{deprecated_header}}
 
 The **`-moz-user-focus`** [CSS](/en-US/docs/Web/CSS) property is used to indicate whether an element can have the focus.
 

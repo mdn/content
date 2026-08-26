@@ -7,7 +7,7 @@ status:
 browser-compat: api.TextEvent
 ---
 
-{{APIRef("UI Events")}}
+{{APIRef("UI Events")}}{{deprecated_header}}
 
 The **`TextEvent`** interface is a legacy UI event interface for reporting changes to text UI elements.
 

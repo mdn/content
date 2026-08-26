@@ -9,7 +9,7 @@ status:
 browser-compat: api.Navigator.activeVRDisplays
 ---
 
-{{APIRef("WebVR API")}}{{SecureContext_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{SecureContext_Header}}{{Non-standard_Header}}{{deprecated_header}}
 
 The **`activeVRDisplays`** read-only property of the
 {{domxref("Navigator")}} interface returns an array containing every

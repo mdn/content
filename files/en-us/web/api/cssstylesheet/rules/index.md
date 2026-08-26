@@ -8,7 +8,7 @@ status:
 browser-compat: api.CSSStyleSheet.rules
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM")}}{{deprecated_header}}
 
 **`rules`** is a _deprecated_
 _legacy property_ of the {{domxref("CSSStyleSheet")}} interface. Functionally

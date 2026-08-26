@@ -9,7 +9,7 @@ status:
 browser-compat: api.VRFrameData.timestamp
 ---
 
-{{APIRef("WebVR API")}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}{{deprecated_header}}
 
 The **`timestamp`** read-only property of the {{domxref("VRFrameData")}} interface returns a constantly increasing timestamp value representing the time a frame update occurred.
 

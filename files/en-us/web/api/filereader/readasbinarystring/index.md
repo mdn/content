@@ -8,7 +8,7 @@ status:
 browser-compat: api.FileReader.readAsBinaryString
 ---
 
-{{APIRef("File API")}}{{AvailableInWorkers}}
+{{APIRef("File API")}}{{AvailableInWorkers}}{{deprecated_header}}
 
 > [!NOTE]
 > This method is deprecated in favor of {{DOMxRef("FileReader.readAsArrayBuffer","readAsArrayBuffer()")}}.

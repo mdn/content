@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLImageElement.align
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The _deprecated_ **`align`** property of the {{domxref("HTMLImageElement")}} interface is a string which indicates how to position the image relative to its container. It reflects the `<img>` element's [`align`](/en-US/docs/Web/HTML/Reference/Elements/img#align) content attribute.
 

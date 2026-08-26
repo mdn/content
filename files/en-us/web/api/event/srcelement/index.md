@@ -8,7 +8,7 @@ status:
 browser-compat: api.Event.srcElement
 ---
 
-{{APIRef("DOM")}}{{AvailableInWorkers}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}{{deprecated_header}}
 
 The deprecated **`Event.srcElement`** is an alias for the {{domxref("Event.target")}} property. Use {{domxref("Event.target")}} instead.
 

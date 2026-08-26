@@ -8,7 +8,7 @@ status:
 browser-compat: api.Event.returnValue
 ---
 
-{{APIRef("DOM")}}{{AvailableInWorkers}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}{{deprecated_header}}
 
 The {{domxref("Event")}} property
 **`returnValue`** indicates whether the default action for

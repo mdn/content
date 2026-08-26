@@ -9,7 +9,7 @@ status:
 browser-compat: api.Performance.memory
 ---
 
-{{APIRef("Performance API")}}{{Non-standard_header}}
+{{APIRef("Performance API")}}{{Non-standard_header}}{{deprecated_header}}
 
 The non-standard and legacy **`memory`** read-only property returns the size of the JavaScript heap which can be helpful to measure and reduce the memory footprint of websites.
 

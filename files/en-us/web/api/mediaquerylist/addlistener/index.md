@@ -8,7 +8,7 @@ status:
 browser-compat: api.MediaQueryList.addListener
 ---
 
-{{APIRef("CSSOM view API")}}
+{{APIRef("CSSOM view API")}}{{deprecated_header}}
 
 The deprecated **`addListener()`** method of the
 {{DOMxRef("MediaQueryList")}} interface adds a listener to the

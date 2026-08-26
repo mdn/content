@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLTableElement.cellPadding
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The **`HTMLTableElement.cellPadding`** property represents the
 padding around the individual cells of the table.

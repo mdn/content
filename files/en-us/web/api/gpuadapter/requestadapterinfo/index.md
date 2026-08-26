@@ -9,7 +9,7 @@ status:
 browser-compat: api.GPUAdapter.requestAdapterInfo
 ---
 
-{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{non-standard_header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{non-standard_header}}{{AvailableInWorkers}}{{deprecated_header}}
 
 The **`requestAdapterInfo()`** method of the
 {{domxref("GPUAdapter")}} interface returns a {{jsxref("Promise")}} that fulfills with a {{domxref("GPUAdapterInfo")}} object containing identifying information about an adapter.

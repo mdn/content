@@ -9,7 +9,7 @@ status:
 browser-compat: api.FileSystemEntry.toURL
 ---
 
-{{APIRef("File and Directory Entry API")}}{{Non-standard_Header}}
+{{APIRef("File and Directory Entry API")}}{{Non-standard_Header}}{{deprecated_header}}
 
 The {{domxref("FileSystemEntry")}} interface's method
 **`toURL()`** creates and

@@ -9,6 +9,8 @@ browser-compat: html.elements.param
 sidebar: htmlsidebar
 ---
 
+{{deprecated_header}}
+
 The **`<param>`** [HTML](/en-US/docs/Web/HTML) element defines parameters for an {{HTMLElement("object")}} element.
 
 > [!NOTE]

@@ -9,7 +9,7 @@ status:
 browser-compat: api.FileSystemEntry.getMetadata
 ---
 
-{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}
+{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}{{deprecated_header}}
 
 The {{domxref("FileSystemEntry")}} interface's method
 **`getMetadata()`** obtains a

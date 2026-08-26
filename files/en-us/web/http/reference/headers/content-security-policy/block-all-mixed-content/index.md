@@ -9,6 +9,8 @@ browser-compat: http.headers.Content-Security-Policy.block-all-mixed-content
 sidebar: http
 ---
 
+{{deprecated_header}}
+
 > [!WARNING]
 > This directive is marked as obsolete in the specification.
 > This directive was previously used to prevent "optionally blockable" mixed content from being fetched insecurely and displayed.

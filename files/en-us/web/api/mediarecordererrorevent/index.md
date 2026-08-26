@@ -8,7 +8,7 @@ status:
 browser-compat: api.MediaRecorderErrorEvent
 ---
 
-{{APIRef("MediaStream Recording")}}{{Non-standard_Header}}
+{{APIRef("MediaStream Recording")}}{{Non-standard_Header}}{{deprecated_header}}
 
 The **`MediaRecorderErrorEvent`** interface represents errors returned by the [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API). It is an {{domxref("Event")}} object that encapsulates a reference to a {{domxref("DOMException")}} describing the error that occurred.
 

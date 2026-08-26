@@ -9,7 +9,7 @@ status:
 browser-compat: api.Window.vrdisplaypresentchange_event
 ---
 
-{{APIRef("Window")}}{{Non-standard_Header}}
+{{APIRef("Window")}}{{Non-standard_Header}}{{deprecated_header}}
 
 The **`vrdisplaypresentchange`** event of the [WebVR API](/en-US/docs/Web/API/WebVR_API) is fired when the presenting state of a VR display changes — i.e., goes from presenting to not presenting, or vice versa.
 

@@ -9,7 +9,7 @@ status:
 browser-compat: api.PaymentAddress.city
 ---
 
-{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Non-standard_Header}}
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Non-standard_Header}}{{deprecated_header}}
 
 The **`city`** read-only property of
 the {{domxref('PaymentAddress')}} interface returns a string containing the city or

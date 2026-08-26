@@ -10,7 +10,7 @@ browser-compat: http.headers.Sec-Browsing-Topics
 sidebar: http
 ---
 
-{{non-standard_header}}
+{{non-standard_header}}{{deprecated_header}}
 
 > [!WARNING]
 > This feature is currently opposed by two browser vendors. See the [Standards positions](/en-US/docs/Web/API/Topics_API#standards_positions) section for details of opposition.

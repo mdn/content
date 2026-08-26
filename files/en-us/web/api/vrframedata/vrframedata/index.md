@@ -9,7 +9,7 @@ status:
 browser-compat: api.VRFrameData.VRFrameData
 ---
 
-{{APIRef("WebVR API")}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}{{deprecated_header}}
 
 The **`VRFrameData()`** constructor creates a {{domxref("VRFrameData")}} object instance.
 

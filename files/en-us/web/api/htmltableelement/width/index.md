@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLTableElement.width
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The **`HTMLTableElement.width`** property represents the
 desired width of the table.

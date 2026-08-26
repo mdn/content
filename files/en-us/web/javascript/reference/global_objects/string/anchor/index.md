@@ -9,6 +9,8 @@ browser-compat: javascript.builtins.String.anchor
 sidebar: jsref
 ---
 
+{{deprecated_header}}
+
 The **`anchor()`** method of {{jsxref("String")}} values creates a string that embeds this string in an {{HTMLElement("a")}} element with a name (`<a name="...">str</a>`).
 
 > [!NOTE]

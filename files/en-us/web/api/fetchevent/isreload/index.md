@@ -9,7 +9,7 @@ status:
 browser-compat: api.FetchEvent.isReload
 ---
 
-{{APIRef("Service Workers API")}}{{Non-standard_header}}{{AvailableInWorkers("service")}}
+{{APIRef("Service Workers API")}}{{Non-standard_header}}{{AvailableInWorkers("service")}}{{deprecated_header}}
 
 The **`isReload`** read-only property of the
 {{domxref("FetchEvent")}} interface returns `true` if the event was

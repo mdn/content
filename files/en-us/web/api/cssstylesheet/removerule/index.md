@@ -8,7 +8,7 @@ status:
 browser-compat: api.CSSStyleSheet.removeRule
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM")}}{{deprecated_header}}
 
 The obsolete {{domxref("CSSStyleSheet")}} method
 **`removeRule()`** removes a rule from the stylesheet

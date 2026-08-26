@@ -8,7 +8,7 @@ status:
 browser-compat: api.DOMError
 ---
 
-{{APIRef("DOM")}}{{non-standard_header}}
+{{APIRef("DOM")}}{{non-standard_header}}{{deprecated_header}}
 
 The **`DOMError`** interface describes an error object that contains an error name.
 

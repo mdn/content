@@ -8,7 +8,7 @@ status:
 browser-compat: api.PaymentAddress
 ---
 
-{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Non-standard_Header}}
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Non-standard_Header}}{{deprecated_header}}
 
 The **`PaymentAddress`** interface of the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) is used to store shipping or payment address information.
 

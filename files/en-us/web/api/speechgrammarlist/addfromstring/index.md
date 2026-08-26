@@ -8,7 +8,7 @@ status:
 browser-compat: api.SpeechGrammarList.addFromString
 ---
 
-{{APIRef("Web Speech API")}}
+{{APIRef("Web Speech API")}}{{deprecated_header}}
 
 The **`addFromString()`** method of the
 {{domxref("SpeechGrammarList")}} interface takes a grammar present in a specific

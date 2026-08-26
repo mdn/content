@@ -9,6 +9,8 @@ browser-compat: javascript.builtins.Date.setYear
 sidebar: jsref
 ---
 
+{{deprecated_header}}
+
 The **`setYear()`** method of {{jsxref("Date")}} instances sets the year for a specified date according to local time.
 
 However, the way the legacy `setYear()` method sets year values is different from how the preferred {{jsxref("Date/setFullYear", "setFullYear()")}} method sets year values — and in some cases, also different from how `new Date()` and {{jsxref("Date.parse()")}} set year values. Specifically, given two-digit numbers, such as `22` and `61`:

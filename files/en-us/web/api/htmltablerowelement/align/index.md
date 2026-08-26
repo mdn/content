@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLTableRowElement.align
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The **`align`** property of the {{domxref("HTMLTableRowElement")}} interface is a string indicating how to horizontally align text in the {{htmlelement("tr")}} table row. Individual cells can override it.
 

@@ -9,7 +9,7 @@ status:
 browser-compat: api.VRPose.linearAcceleration
 ---
 
-{{APIRef("WebVR API")}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}{{deprecated_header}}
 
 The **`linearAcceleration`** read-only property of the {{domxref("VRPose")}} interface returns an array representing the linear acceleration vector of the {{domxref("VRDisplay")}} at the current timestamp, in meters per second per second.
 

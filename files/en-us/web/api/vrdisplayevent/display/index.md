@@ -9,7 +9,7 @@ status:
 browser-compat: api.VRDisplayEvent.display
 ---
 
-{{APIRef("WebVR API")}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}{{deprecated_header}}
 
 The **`display`** read-only property of the {{domxref("VRDisplayEvent")}} interface returns the {{domxref("VRDisplay")}} associated with this event.
 

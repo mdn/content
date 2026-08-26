@@ -9,7 +9,7 @@ status:
 browser-compat: api.VideoPlaybackQuality.totalFrameDelay
 ---
 
-{{APIRef("Media Source Extensions")}}{{Non-standard_header}}
+{{APIRef("Media Source Extensions")}}{{Non-standard_header}}{{deprecated_header}}
 
 The **`VideoPlaybackQuality.totalFrameDelay`** read-only
 property returns a `double` containing the sum of the frame delay since the

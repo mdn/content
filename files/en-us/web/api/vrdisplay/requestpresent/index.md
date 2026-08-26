@@ -9,7 +9,7 @@ status:
 browser-compat: api.VRDisplay.requestPresent
 ---
 
-{{APIRef("WebVR API")}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}{{deprecated_header}}
 
 The **`requestPresent()`** method of the {{domxref("VRDisplay")}} interface starts the `VRDisplay` presenting a scene.
 

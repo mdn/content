@@ -8,7 +8,7 @@ status:
 browser-compat: api.ScriptProcessorNode.audioprocess_event
 ---
 
-{{APIRef("Web Audio API")}}
+{{APIRef("Web Audio API")}}{{deprecated_header}}
 
 The **`audioprocess`** event of the {{domxref("ScriptProcessorNode")}} interface is fired when an input buffer of a script processor is ready to be processed.
 

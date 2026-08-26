@@ -9,7 +9,7 @@ status:
 browser-compat: api.CSSPrimitiveValue.getCounterValue
 ---
 
-{{APIRef("CSSOM")}}{{non-standard_header}}
+{{APIRef("CSSOM")}}{{non-standard_header}}{{deprecated_header}}
 
 The **`getCounterValue()`** method of the
 {{domxref("CSSPrimitiveValue")}} interface is used to get the [counter](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters)

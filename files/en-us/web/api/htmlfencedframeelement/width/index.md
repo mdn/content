@@ -4,11 +4,11 @@ short-title: width
 slug: Web/API/HTMLFencedFrameElement/width
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
 browser-compat: api.HTMLFencedFrameElement.width
 ---
 
-{{SeeCompatTable}}{{APIRef("Fenced Frame API")}}
+{{APIRef("Fenced Frame API")}}{{deprecated_header}}
 
 The **`width`** property of the {{domxref("HTMLFencedFrameElement")}} gets and sets the value of the corresponding {{htmlelement("fencedframe")}} `width` attribute, which specifies the width of the element.
 

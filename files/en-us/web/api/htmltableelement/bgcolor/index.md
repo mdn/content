@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLTableElement.bgColor
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The **`bgcolor`** property of the {{domxref("HTMLTableElement")}} represents the
 background color of the table.

@@ -8,7 +8,7 @@ status:
 browser-compat: api.SharedStorageWorkletGlobalScope
 ---
 
-{{APIRef("Shared Storage API")}}{{non-standard_header}}
+{{APIRef("Shared Storage API")}}{{non-standard_header}}{{deprecated_header}}
 
 The **`SharedStorageWorkletGlobalScope`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents the global scope of a {{domxref("SharedStorageWorklet")}} module.
 

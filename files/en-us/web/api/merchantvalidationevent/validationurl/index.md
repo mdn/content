@@ -9,7 +9,7 @@ status:
 browser-compat: api.MerchantValidationEvent.validationURL
 ---
 
-{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{non-standard_header}}
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{non-standard_header}}{{deprecated_header}}
 
 The {{domxref("MerchantValidationEvent")}} property
 **`validationURL`** is a read-only string value providing the

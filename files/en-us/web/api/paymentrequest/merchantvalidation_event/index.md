@@ -9,7 +9,7 @@ status:
 browser-compat: api.PaymentRequest.merchantvalidation_event
 ---
 
-{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{non-standard_header}}
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{non-standard_header}}{{deprecated_header}}
 
 **`merchantvalidation`** events are delivered by the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) to a {{domxref("PaymentRequest")}} object when a payment handler requires that the merchant requesting the purchase validate itself as permitted to use the payment handler.
 

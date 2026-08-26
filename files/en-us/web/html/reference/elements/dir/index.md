@@ -9,6 +9,8 @@ browser-compat: html.elements.dir
 sidebar: htmlsidebar
 ---
 
+{{deprecated_header}}
+
 The **`<dir>`** [HTML](/en-US/docs/Web/HTML) element is used as a container for a directory of files and/or folders, potentially with styles and icons applied by the {{Glossary("user agent")}}. Do not use this obsolete element; instead, you should use the {{HTMLElement("ul")}} element for lists, including lists of files.
 
 > [!WARNING]

@@ -8,7 +8,7 @@ status:
 browser-compat: api.Document.createEvent
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{deprecated_header}}
 
 > [!WARNING]
 > Many methods used with `createEvent`, such as `initCustomEvent`, are deprecated.

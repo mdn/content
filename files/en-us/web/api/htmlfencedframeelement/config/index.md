@@ -4,11 +4,11 @@ short-title: config
 slug: Web/API/HTMLFencedFrameElement/config
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
 browser-compat: api.HTMLFencedFrameElement.config
 ---
 
-{{SeeCompatTable}}{{APIRef("Fenced Frame API")}}
+{{APIRef("Fenced Frame API")}}{{deprecated_header}}
 
 The **`config`** property of the {{domxref("HTMLFencedFrameElement")}} contains a {{domxref("FencedFrameConfig")}} object, which represents the navigation of a {{htmlelement("fencedframe")}}, i.e., what content will be displayed in it. A `FencedFrameConfig` is returned from a source such as the [Protected Audience API](https://privacysandbox.google.com/private-advertising/protected-audience).
 

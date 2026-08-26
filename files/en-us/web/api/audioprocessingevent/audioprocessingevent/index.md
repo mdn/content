@@ -8,7 +8,7 @@ status:
 browser-compat: api.AudioProcessingEvent.AudioProcessingEvent
 ---
 
-{{APIRef("Web Audio API")}}
+{{APIRef("Web Audio API")}}{{deprecated_header}}
 
 The **`AudioProcessingEvent()`** constructor creates a new {{domxref("AudioProcessingEvent")}} object.
 

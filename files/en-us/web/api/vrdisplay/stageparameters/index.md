@@ -9,7 +9,7 @@ status:
 browser-compat: api.VRDisplay.stageParameters
 ---
 
-{{APIRef("WebVR API")}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}{{deprecated_header}}
 
 The **`stageParameters`** read-only property of the {{domxref("VRDisplay")}} interface returns a {{domxref("VRStageParameters")}} object containing room-scale parameters, if the `VRDisplay` is capable of supporting room-scale experiences.
 

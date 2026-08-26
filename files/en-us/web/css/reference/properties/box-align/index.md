@@ -10,7 +10,7 @@ browser-compat: css.properties.box-align
 sidebar: cssref
 ---
 
-{{Non-standard_header}}
+{{Non-standard_header}}{{deprecated_header}}
 
 > [!WARNING]
 > This is a property of the original CSS flexible box layout Module draft, and has been replaced by a newer standard.

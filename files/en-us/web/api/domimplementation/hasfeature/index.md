@@ -8,7 +8,7 @@ status:
 browser-compat: api.DOMImplementation.hasFeature
 ---
 
-{{ApiRef("DOM")}}
+{{ApiRef("DOM")}}{{deprecated_header}}
 
 The
 **`DOMImplementation.hasFeature()`** method returns a

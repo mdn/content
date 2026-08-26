@@ -9,7 +9,7 @@ status:
 browser-compat: api.OffscreenCanvasRenderingContext2D.commit
 ---
 
-{{APIRef("Canvas API")}}{{AvailableInWorkers}}{{non-standard_header}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}{{non-standard_header}}{{deprecated_header}}
 
 The
 **`OffscreenCanvasRenderingContext2D.commit()`**

@@ -9,7 +9,7 @@ status:
 browser-compat: api.PaymentAddress.sortingCode
 ---
 
-{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Non-standard_Header}}
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Non-standard_Header}}{{deprecated_header}}
 
 The **`sortingCode`** read-only property of the
 {{domxref('PaymentAddress')}} interface returns a string containing a postal sorting

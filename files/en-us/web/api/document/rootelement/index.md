@@ -8,7 +8,7 @@ status:
 browser-compat: api.Document.rootElement
 ---
 
-{{ApiRef("DOM")}}
+{{ApiRef("DOM")}}{{deprecated_header}}
 
 **`Document.rootElement`** returns the {{domxref("Element")}}
 that is the root element of the {{domxref("document")}} if it is an

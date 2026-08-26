@@ -9,7 +9,7 @@ status:
 browser-compat: api.PositionSensorVRDevice.resetSensor
 ---
 
-{{APIRef("WebVR API")}}{{Non-standard_header}}
+{{APIRef("WebVR API")}}{{Non-standard_header}}{{deprecated_header}}
 
 The **`resetSensor()`** method of the {{domxref("VRDisplay")}} interface _can be used to reset the sensor if desired, returning the_ position and orientation values to zero.
 

@@ -8,7 +8,7 @@ status:
 browser-compat: api.CSSValueList
 ---
 
-{{APIRef("CSSOM")}}{{non-standard_header}}
+{{APIRef("CSSOM")}}{{non-standard_header}}{{deprecated_header}}
 
 The **`CSSValueList`** interface derives from the {{DOMxRef("CSSValue")}} interface and provides the abstraction of an ordered collection of CSS values.
 

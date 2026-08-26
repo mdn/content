@@ -8,7 +8,7 @@ status:
 browser-compat: api.RTCSessionDescription.RTCSessionDescription
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{deprecated_header}}
 
 The **`RTCSessionDescription()`** constructor creates a new
 {{domxref("RTCSessionDescription")}} with its properties initialized as described in the

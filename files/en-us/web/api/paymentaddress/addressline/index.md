@@ -9,7 +9,7 @@ status:
 browser-compat: api.PaymentAddress.addressLine
 ---
 
-{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Non-standard_Header}}
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Non-standard_Header}}{{deprecated_header}}
 
 The **`addressLine`** read-only
 property of the {{domxref('PaymentAddress')}} interface is an array of

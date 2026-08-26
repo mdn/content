@@ -8,7 +8,7 @@ status:
 browser-compat: api.HMDVRDevice
 ---
 
-{{APIRef("WebVR API")}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}{{deprecated_header}}
 
 The **`HMDVRDevice`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) represents a head mounted display, providing access to information about each eye, and allowing us to modify the current field of view.
 

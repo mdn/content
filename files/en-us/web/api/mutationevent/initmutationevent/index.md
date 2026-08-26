@@ -9,7 +9,7 @@ status:
 browser-compat: api.MutationEvent.initMutationEvent
 ---
 
-{{APIRef("UI Events")}}{{non-standard_header}}
+{{APIRef("UI Events")}}{{non-standard_header}}{{deprecated_header}}
 
 The **`initMutationEvent()`** method of the {{domxref("MutationEvent")}} interface initializes the
 value of a mutation event once it's been created (normally using the {{domxref("Document.createEvent()")}} method).

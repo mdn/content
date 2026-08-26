@@ -10,7 +10,7 @@ browser-compat: http.headers.Permissions-Policy.browsing-topics
 sidebar: http
 ---
 
-{{non-standard_header}}
+{{non-standard_header}}{{deprecated_header}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `browsing-topics` directive controls access to the [Topics API](/en-US/docs/Web/API/Topics_API).
 

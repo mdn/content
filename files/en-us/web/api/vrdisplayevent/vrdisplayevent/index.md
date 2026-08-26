@@ -9,7 +9,7 @@ status:
 browser-compat: api.VRDisplayEvent.VRDisplayEvent
 ---
 
-{{APIRef("WebVR API")}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}{{deprecated_header}}
 
 The **`VRDisplayEvent()`** constructor creates a {{domxref("VRDisplayEvent")}} object.
 

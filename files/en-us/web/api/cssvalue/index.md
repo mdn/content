@@ -8,7 +8,7 @@ status:
 browser-compat: api.CSSValue
 ---
 
-{{APIRef("CSSOM")}}{{non-standard_header}}
+{{APIRef("CSSOM")}}{{non-standard_header}}{{deprecated_header}}
 
 The **`CSSValue`** interface represents the current computed value of a CSS property.
 

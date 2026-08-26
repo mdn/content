@@ -9,7 +9,7 @@ status:
 browser-compat: api.VRDisplay.getFrameData
 ---
 
-{{APIRef("WebVR API")}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}{{deprecated_header}}
 
 The **`getFrameData()`** method of the {{domxref("VRDisplay")}} interface accepts a {{domxref("VRFrameData")}} object and populates it with the information required to render the current frame.
 

@@ -8,7 +8,7 @@ status:
 browser-compat: api.SpeechGrammarList.addFromURI
 ---
 
-{{APIRef("Web Speech API")}}
+{{APIRef("Web Speech API")}}{{deprecated_header}}
 
 The **`addFromURI()`** method of the
 {{domxref("SpeechGrammarList")}} interface takes a grammar present at a specific URI and

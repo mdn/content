@@ -9,7 +9,7 @@ status:
 browser-compat: api.PushManager.registrations
 ---
 
-{{ApiRef("Push API")}}{{non-standard_header}}{{AvailableInWorkers}}
+{{ApiRef("Push API")}}{{non-standard_header}}{{AvailableInWorkers}}{{deprecated_header}}
 
 The **`registrations`** method is used to ask the system about
 existing push endpoint registrations.

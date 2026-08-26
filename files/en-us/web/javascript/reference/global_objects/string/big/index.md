@@ -9,6 +9,8 @@ browser-compat: javascript.builtins.String.big
 sidebar: jsref
 ---
 
+{{deprecated_header}}
+
 The **`big()`** method of {{jsxref("String")}} values creates a string that embeds this string in a {{HTMLElement("big")}} element (`<big>str</big>`), which causes this string to be displayed in a big font.
 
 > [!NOTE]

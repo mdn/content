@@ -9,7 +9,7 @@ status:
 browser-compat: api.HTMLIFrameElement.allowPaymentRequest
 ---
 
-{{APIRef("HTML DOM")}}{{Non-standard_Header}}
+{{APIRef("HTML DOM")}}{{Non-standard_Header}}{{deprecated_header}}
 
 The **`allowPaymentRequest`** property of the
 {{domxref("HTMLIFrameElement")}} interface returns a boolean value indicating

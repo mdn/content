@@ -8,7 +8,7 @@ status:
 browser-compat: api.Window.releaseEvents
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
 Releases the window from trapping events of a specific type.
 

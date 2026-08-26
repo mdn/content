@@ -7,7 +7,7 @@ status:
 browser-compat: api.Plugin
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The `Plugin` interface provides information about a browser plugin.
 

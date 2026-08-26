@@ -10,7 +10,7 @@ browser-compat: css.properties.-moz-user-input
 sidebar: cssref
 ---
 
-{{Non-standard_Header}}
+{{Non-standard_Header}}{{deprecated_header}}
 
 In Mozilla applications, **`-moz-user-input`** determines if an element will accept user input.
 

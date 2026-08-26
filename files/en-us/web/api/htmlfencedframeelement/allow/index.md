@@ -4,11 +4,11 @@ short-title: allow
 slug: Web/API/HTMLFencedFrameElement/allow
 page-type: web-api-instance-property
 status:
-  - experimental
+  - deprecated
 browser-compat: api.HTMLFencedFrameElement.allow
 ---
 
-{{SeeCompatTable}}{{APIRef("Fenced Frame API")}}
+{{APIRef("Fenced Frame API")}}{{deprecated_header}}
 
 The **`allow`** property of the {{domxref("HTMLFencedFrameElement")}} gets and sets the value of the corresponding {{htmlelement("fencedframe")}} `allow` attribute, which represents a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) applied to the content when it is first embedded.
 

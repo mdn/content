@@ -10,7 +10,7 @@ browser-compat: http.headers.Width
 sidebar: http
 ---
 
-{{SecureContext_header}}{{Non-standard_Header}}
+{{SecureContext_header}}{{Non-standard_Header}}{{deprecated_header}}
 
 > [!WARNING]
 > The `Width` header was standardized as {{HTTPHeader("Sec-CH-Width")}} and the new name is now preferred.

@@ -4,11 +4,11 @@ short-title: getNestedConfigs()
 slug: Web/API/Fence/getNestedConfigs
 page-type: web-api-instance-method
 status:
-  - experimental
+  - deprecated
 browser-compat: api.Fence.getNestedConfigs
 ---
 
-{{SeeCompatTable}}{{APIRef("Fenced Frame API")}}
+{{APIRef("Fenced Frame API")}}{{deprecated_header}}
 
 The **`getNestedConfigs()`** method of the
 {{domxref("Fence")}} interface returns the {{domxref("FencedFrameConfig")}}s loaded into `<fencedframe>`s embedded inside the current `<fencedframe>`.

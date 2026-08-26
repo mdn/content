@@ -9,6 +9,8 @@ browser-compat: javascript.builtins.String.substr
 sidebar: jsref
 ---
 
+{{deprecated_header}}
+
 The **`substr()`** method of {{jsxref("String")}} values returns a portion of this string, starting at the specified index and extending for a given number of characters afterwards.
 
 > [!NOTE]

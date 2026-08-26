@@ -9,7 +9,7 @@ status:
 browser-compat: api.Document.createTouch
 ---
 
-{{APIRef("DOM")}}{{Non-standard_header}}
+{{APIRef("DOM")}}{{Non-standard_header}}{{deprecated_header}}
 
 The **`Document.createTouch()`** method creates and returns a new {{DOMxRef("Touch")}} object.
 

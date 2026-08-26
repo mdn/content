@@ -7,7 +7,7 @@ status:
 browser-compat: api.SVGDiscardElement
 ---
 
-{{APIRef("SVG")}}
+{{APIRef("SVG")}}{{deprecated_header}}
 
 The **`SVGDiscardElement`** interface is an interface for the deprecated `<discard>` element.
 

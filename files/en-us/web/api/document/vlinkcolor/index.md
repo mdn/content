@@ -8,7 +8,7 @@ status:
 browser-compat: api.Document.vlinkColor
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{deprecated_header}}
 
 The **`Document.vlinkColor`** property gets/sets the color of
 links that the user has visited in the document.

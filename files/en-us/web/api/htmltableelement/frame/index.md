@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLTableElement.frame
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The {{domxref("HTMLTableElement")}} interface's **`frame`**
 property is a string that indicates which of the table's exterior borders should be

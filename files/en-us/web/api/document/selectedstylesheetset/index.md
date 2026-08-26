@@ -9,7 +9,7 @@ status:
 browser-compat: api.Document.selectedStyleSheetSet
 ---
 
-{{APIRef("DOM")}}{{Non-standard_header}}
+{{APIRef("DOM")}}{{Non-standard_header}}{{deprecated_header}}
 
 The **`selectedStyleSheetSet`** property indicates the name of the style sheet set that's currently in use.
 

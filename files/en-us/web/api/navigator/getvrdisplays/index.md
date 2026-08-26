@@ -9,7 +9,7 @@ status:
 browser-compat: api.Navigator.getVRDisplays
 ---
 
-{{APIRef("WebVR API")}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}{{deprecated_header}}
 
 The **`getVRDisplays()`** method of the {{domxref("Navigator")}} interface returns a promise that resolves to an array of {{domxref("VRDisplay")}} objects representing any available VR displays connected to the computer.
 

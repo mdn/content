@@ -9,7 +9,7 @@ status:
 browser-compat: api.PaymentAddress.dependentLocality
 ---
 
-{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Non-standard_Header}}
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Non-standard_Header}}{{deprecated_header}}
 
 The read-only **`dependentLocality`**
 property of the {{domxref('PaymentAddress')}} interface is a string containing a

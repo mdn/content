@@ -8,7 +8,7 @@ status:
 browser-compat: api.Window.orientation
 ---
 
-{{APIRef}}
+{{APIRef}}{{deprecated_header}}
 
 Returns the orientation in degrees (in 90-degree increments) of the viewport relative to the device's natural orientation.
 

@@ -8,7 +8,7 @@ status:
 browser-compat: api.Document.anchors
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{deprecated_header}}
 
 The **`anchors`** read-only property of the
 {{domxref("Document")}} interface returns a list of all of the anchors in the document.

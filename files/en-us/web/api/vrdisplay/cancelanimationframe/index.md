@@ -9,7 +9,7 @@ status:
 browser-compat: api.VRDisplay.cancelAnimationFrame
 ---
 
-{{APIRef("WebVR API")}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}{{deprecated_header}}
 
 The **`cancelAnimationFrame()`** method of the {{domxref("VRDisplay")}} interface is a special implementation of {{domxref("Window.cancelAnimationFrame")}} that unregisters callbacks registered with {{domxref("VRDisplay.requestAnimationFrame()")}}.
 

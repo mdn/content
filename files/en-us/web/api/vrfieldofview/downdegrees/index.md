@@ -9,7 +9,7 @@ status:
 browser-compat: api.VRFieldOfView.downDegrees
 ---
 
-{{APIRef("WebVR API")}}{{Non-standard_header}}
+{{APIRef("WebVR API")}}{{Non-standard_header}}{{deprecated_header}}
 
 The **`downDegrees`** read-only property of the {{domxref("VRFieldOfView")}} interface returns the number of degrees downwards that the field of view extends in.
 

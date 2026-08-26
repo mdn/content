@@ -9,7 +9,7 @@ status:
 browser-compat: api.MediaStreamTrack.applyConstraints.volume_constraint
 ---
 
-{{APIRef("Media Capture and Streams")}}{{Non-standard_Header}}
+{{APIRef("Media Capture and Streams")}}{{Non-standard_Header}}{{deprecated_header}}
 
 The {{domxref("MediaTrackConstraints")}} dictionary's
 **`volume`** property is a [`ConstrainDouble`](/en-US/docs/Web/API/MediaTrackConstraints#constraindouble)

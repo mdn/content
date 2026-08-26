@@ -8,7 +8,7 @@ status:
 browser-compat: api.SharedStorageWorklet
 ---
 
-{{APIRef("Shared Storage API")}}{{non-standard_header}}
+{{APIRef("Shared Storage API")}}{{non-standard_header}}{{deprecated_header}}
 
 The **`SharedStorageWorklet`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents the shared storage worklet for the current origin.
 

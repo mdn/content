@@ -8,7 +8,7 @@ status:
 browser-compat: api.Window.orientationchange_event
 ---
 
-{{APIRef}}
+{{APIRef}}{{deprecated_header}}
 
 The `orientationchange` event is fired when the orientation of the device has changed.
 

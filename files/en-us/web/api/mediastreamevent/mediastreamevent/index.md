@@ -9,7 +9,7 @@ status:
 browser-compat: api.MediaStreamEvent.MediaStreamEvent
 ---
 
-{{APIRef("WebRTC")}}{{Non-standard_Header}}
+{{APIRef("WebRTC")}}{{Non-standard_Header}}{{deprecated_header}}
 
 The **`MediaStreamEvent()`** constructor creates a new {{domxref("MediaStreamEvent")}} object.
 

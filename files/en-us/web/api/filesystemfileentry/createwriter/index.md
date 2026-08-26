@@ -9,7 +9,7 @@ status:
 browser-compat: api.FileSystemFileEntry.createWriter
 ---
 
-{{APIRef("File and Directories Entries API")}}{{Non-standard_header}}
+{{APIRef("File and Directories Entries API")}}{{Non-standard_header}}{{deprecated_header}}
 
 The {{domxref("FileSystemFileEntry")}} interface's method
 **`createWriter()`** returns a {{domxref("FileWriter")}} object

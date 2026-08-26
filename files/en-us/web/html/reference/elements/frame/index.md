@@ -9,6 +9,8 @@ browser-compat: html.elements.frame
 sidebar: htmlsidebar
 ---
 
+{{deprecated_header}}
+
 The **`<frame>`** [HTML](/en-US/docs/Web/HTML) element defines a particular area in which another HTML document can be displayed. A frame should be used within a {{HTMLElement("frameset")}}.
 
 Using the `<frame>` element is not encouraged because of certain disadvantages such as performance problems and lack of accessibility for users with screen readers. Instead of the `<frame>` element, {{HTMLElement("iframe")}} may be preferred.

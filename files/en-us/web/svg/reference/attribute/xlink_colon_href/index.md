@@ -8,6 +8,8 @@ browser-compat: svg.elements.a.xlink_href
 sidebar: svgref
 ---
 
+{{deprecated_header}}
+
 The **`xlink:href`** attribute defines a reference to a resource as a reference [IRI](/en-US/docs/Web/SVG/Guides/Content_type#iri). The exact meaning of that link depends on the context of each element using it.
 
 > [!NOTE]

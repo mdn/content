@@ -10,7 +10,7 @@ browser-compat: http.headers.Permissions-Policy.attribution-reporting
 sidebar: http
 ---
 
-{{non-standard_header}}
+{{non-standard_header}}{{deprecated_header}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `attribution-reporting` directive controls whether the current document is allowed to use the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API).
 

@@ -9,6 +9,8 @@ browser-compat: http.headers.Pragma
 sidebar: http
 ---
 
+{{deprecated_header}}
+
 The HTTP **`Pragma`** header is an implementation-specific header that may have various effects along the request-response chain.
 This header serves for backwards compatibility with HTTP/1.0 caches that do not support the {{HTTPHeader("Cache-Control")}} HTTP/1.1 header.
 

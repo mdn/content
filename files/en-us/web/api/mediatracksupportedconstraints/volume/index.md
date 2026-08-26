@@ -9,7 +9,7 @@ status:
 browser-compat: api.MediaStreamTrack.applyConstraints.volume_constraint
 ---
 
-{{APIRef("Media Capture and Streams")}}{{Non-standard_Header}}
+{{APIRef("Media Capture and Streams")}}{{Non-standard_Header}}{{deprecated_header}}
 
 The {{domxref("MediaTrackSupportedConstraints")}} dictionary's
 **`volume`** property is a read-only Boolean value which is

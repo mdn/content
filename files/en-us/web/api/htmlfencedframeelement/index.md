@@ -3,11 +3,11 @@ title: HTMLFencedFrameElement
 slug: Web/API/HTMLFencedFrameElement
 page-type: web-api-interface
 status:
-  - experimental
+  - deprecated
 browser-compat: api.HTMLFencedFrameElement
 ---
 
-{{SeeCompatTable}}{{APIRef("Fenced Frame API")}}
+{{APIRef("Fenced Frame API")}}{{deprecated_header}}
 
 The **`HTMLFencedFrameElement`** interface represents a {{htmlelement("fencedframe")}} element in JavaScript and provides configuration properties.
 
@@ -17,13 +17,13 @@ The **`HTMLFencedFrameElement`** interface represents a {{htmlelement("fencedfra
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLFencedFrameElement.allow")}} {{experimental_inline}}
+- {{domxref("HTMLFencedFrameElement.allow")}} {{deprecated_inline}}
   - : Gets and sets the value of the corresponding `<fencedframe>` `allow` attribute, which represents a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) applied to the content when it is first embedded.
-- {{domxref("HTMLFencedFrameElement.config")}} {{experimental_inline}}
+- {{domxref("HTMLFencedFrameElement.config")}} {{deprecated_inline}}
   - : a {{domxref("FencedFrameConfig")}} object, which represents the navigation of a {{htmlelement("fencedframe")}}, i.e., what content will be displayed in it. A `FencedFrameConfig` is returned from a source such as the [Protected Audience API](https://privacysandbox.google.com/private-advertising/protected-audience).
-- {{domxref("HTMLFencedFrameElement.height")}} {{experimental_inline}}
+- {{domxref("HTMLFencedFrameElement.height")}} {{deprecated_inline}}
   - : Gets and sets the value of the corresponding `<fencedframe>` `height` attribute, which specifies the height of the element.
-- {{domxref("HTMLFencedFrameElement.width")}} {{experimental_inline}}
+- {{domxref("HTMLFencedFrameElement.width")}} {{deprecated_inline}}
   - : Gets and sets the value of the corresponding `<fencedframe>` `width` attribute, which specifies the width of the element.
 
 ## Examples

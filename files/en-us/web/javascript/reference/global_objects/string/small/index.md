@@ -9,6 +9,8 @@ browser-compat: javascript.builtins.String.small
 sidebar: jsref
 ---
 
+{{deprecated_header}}
+
 The **`small()`** method of {{jsxref("String")}} values creates a string that embeds this string in a {{HTMLElement("small")}} element (`<small>str</small>`), which causes this string to be displayed in a small font.
 
 > [!NOTE]

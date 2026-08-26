@@ -8,7 +8,7 @@ status:
 browser-compat: api.Attr.specified
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{deprecated_header}}
 
 The read-only **`specified`** property of the {{domxref("Attr")}} interface always returns `true`.
 

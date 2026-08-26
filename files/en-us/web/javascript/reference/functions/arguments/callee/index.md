@@ -9,6 +9,8 @@ browser-compat: javascript.functions.arguments.callee
 sidebar: jssidebar
 ---
 
+{{deprecated_header}}
+
 > [!NOTE]
 > Accessing `arguments.callee` in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) will throw a {{jsxref("TypeError")}}. If a function must reference itself, either give the [function expression](/en-US/docs/Web/JavaScript/Reference/Operators/function) a name or use a [function declaration](/en-US/docs/Web/JavaScript/Reference/Statements/function).
 

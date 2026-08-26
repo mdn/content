@@ -8,7 +8,7 @@ status:
 browser-compat: api.Window.blur
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The **`Window.blur()`** method does nothing.
 

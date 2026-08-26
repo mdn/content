@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLImageElement.vspace
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The _deprecated_ **`vspace`** property of the {{domxref("HTMLImageElement")}} interface specifies the number of pixels of empty space to leave empty on the top and bottom sides of the {{HTMLElement("img")}} element when laying out the page. It reflects the `<img>` element's [`vspace`](/en-US/docs/Web/HTML/Reference/Elements/img#vspace) content attribute.
 

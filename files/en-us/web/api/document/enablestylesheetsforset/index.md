@@ -9,7 +9,7 @@ status:
 browser-compat: api.Document.enableStyleSheetsForSet
 ---
 
-{{APIRef("DOM")}}{{Non-standard_header}}
+{{APIRef("DOM")}}{{Non-standard_header}}{{deprecated_header}}
 
 Enables the style sheets matching the specified name in the current style sheet set,
 and disables all other style sheets (except those without a title, which are always

@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLTableColElement.vAlign
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The **`vAlign`** property of the {{domxref("HTMLTableColElement")}} interface is a string indicating how to vertically align text in a table {{htmlelement("col")}} column element.
 

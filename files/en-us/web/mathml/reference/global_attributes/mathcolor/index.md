@@ -8,6 +8,8 @@ browser-compat: mathml.global_attributes.mathcolor
 sidebar: mathmlref
 ---
 
+{{deprecated_header}}
+
 The **`mathcolor`** [global attribute](/en-US/docs/Web/MathML/Reference/Global_attributes) sets the [color](/en-US/docs/Web/CSS/Reference/Properties/color) of a MathML element.
 
 > [!NOTE]

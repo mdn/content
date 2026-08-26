@@ -8,7 +8,7 @@ status:
 browser-compat: api.Document.bgColor
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{deprecated_header}}
 
 The deprecated `bgColor` property gets or sets the background color of the
 current document.

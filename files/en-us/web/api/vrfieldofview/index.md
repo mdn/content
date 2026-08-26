@@ -8,7 +8,7 @@ status:
 browser-compat: api.VRFieldOfView
 ---
 
-{{APIRef("WebVR API")}}{{Non-standard_header}}
+{{APIRef("WebVR API")}}{{Non-standard_header}}{{deprecated_header}}
 
 The **`VRFieldOfView`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) represents a field of view defined by 4 different degree values describing the view from a center point.
 

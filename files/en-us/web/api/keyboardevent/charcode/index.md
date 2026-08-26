@@ -8,7 +8,7 @@ status:
 browser-compat: api.KeyboardEvent.charCode
 ---
 
-{{APIRef("UI Events")}}
+{{APIRef("UI Events")}}{{deprecated_header}}
 
 The **`charCode`** read-only property of the
 {{domxref("KeyboardEvent")}} interface returns the Unicode value of a character key

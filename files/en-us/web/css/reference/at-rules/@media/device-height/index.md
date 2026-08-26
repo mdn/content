@@ -9,6 +9,8 @@ browser-compat: css.at-rules.media.device-height
 sidebar: cssref
 ---
 
+{{deprecated_header}}
+
 > [!NOTE]
 > To query for the height of the viewport, developers should use the [`height`](/en-US/docs/Web/CSS/Reference/At-rules/@media/height) media feature instead.
 

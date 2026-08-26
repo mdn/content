@@ -9,7 +9,7 @@ status:
 browser-compat: api.CSSPrimitiveValue.setStringValue
 ---
 
-{{APIRef("CSSOM")}}{{non-standard_header}}
+{{APIRef("CSSOM")}}{{non-standard_header}}{{deprecated_header}}
 
 The **`setStringValue()`** method of the
 {{domxref("CSSPrimitiveValue")}} interface is used to set a string value. If the

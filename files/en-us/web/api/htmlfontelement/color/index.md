@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLFontElement.color
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The obsolete
 **`HTMLFontElement.color`**

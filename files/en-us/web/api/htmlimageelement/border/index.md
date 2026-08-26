@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLImageElement.border
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{deprecated_header}}
 
 The _deprecated_ **`border`** property of the {{domxref("HTMLImageElement")}} interface specifies the number of pixels thick the border surrounding the image should be. A value of 0, the default, indicates that no border should be drawn. It reflects the `<img>` element's [`border`](/en-US/docs/Web/HTML/Reference/Elements/img#border) content attribute.
 

@@ -8,7 +8,7 @@ status:
 browser-compat: api.Window.event
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{deprecated_header}}
 
 The read-only {{domxref("Window")}} property **`event`** returns the {{domxref("Event")}} which is currently being handled by the site's code. Outside the context of an event handler, the value is always `undefined`.
 

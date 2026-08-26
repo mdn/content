@@ -8,7 +8,7 @@ status:
 browser-compat: api.VRStageParameters
 ---
 
-{{APIRef("WebVR API")}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}{{deprecated_header}}
 
 The **`VRStageParameters`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) represents the values describing the stage area for devices that support room-scale experiences.
 

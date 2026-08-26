@@ -9,7 +9,7 @@ browser-compat: http.headers.Sec-CH-UA-Full-Version
 sidebar: http
 ---
 
-{{SecureContext_Header}}
+{{SecureContext_Header}}{{deprecated_header}}
 
 > [!NOTE]
 > This is being replaced by the {{HTTPHeader("Sec-CH-UA-Full-Version-List")}}.

@@ -9,7 +9,7 @@ status:
 browser-compat: api.HTMLMediaElement.controller
 ---
 
-{{APIRef("HTML DOM")}}{{Non-standard_Header}}
+{{APIRef("HTML DOM")}}{{Non-standard_Header}}{{deprecated_header}}
 
 The **`HTMLMediaElement.controller`** property represents the media controller assigned to the element.
 

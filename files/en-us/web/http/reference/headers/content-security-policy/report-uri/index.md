@@ -9,6 +9,8 @@ browser-compat: http.headers.Content-Security-Policy.report-uri
 sidebar: http
 ---
 
+{{deprecated_header}}
+
 > [!WARNING]
 > The {{CSP("report-to")}} directive is intended to replace `report-uri`, and in browsers that support `report-to`, the `report-uri` directive is ignored.
 >

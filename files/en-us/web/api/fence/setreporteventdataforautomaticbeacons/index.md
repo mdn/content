@@ -4,11 +4,11 @@ short-title: setReportEventDataForAutomaticBeacons()
 slug: Web/API/Fence/setReportEventDataForAutomaticBeacons
 page-type: web-api-instance-method
 status:
-  - experimental
+  - deprecated
 browser-compat: api.Fence.setReportEventDataForAutomaticBeacons
 ---
 
-{{SeeCompatTable}}{{APIRef("Fenced Frame API")}}
+{{APIRef("Fenced Frame API")}}{{deprecated_header}}
 
 The **`setReportEventDataForAutomaticBeacons()`** method of the
 {{domxref("Fence")}} interface specifies event data that will be sent when a navigation occurs inside a {{htmlelement("fencedframe")}}. This data will be sent via an automatic [beacon](/en-US/docs/Web/API/Beacon_API) to one or more specific URLs registered via the {{domxref("InterestGroupReportingScriptRunnerGlobalScope.registerAdBeacon", "registerAdBeacon()")}} method of the [Protected Audience API](https://privacysandbox.google.com/private-advertising/protected-audience), for the purpose of collecting reporting data for ad auction results.

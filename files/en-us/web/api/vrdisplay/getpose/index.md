@@ -9,7 +9,7 @@ status:
 browser-compat: api.VRDisplay.getPose
 ---
 
-{{APIRef("WebVR API")}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}{{deprecated_header}}
 
 The **`getPose()`** method of the {{domxref("VRDisplay")}} interface returns a {{domxref("VRPose")}} object defining the future predicted pose of the `VRDisplay` as it will be when the current frame is actually presented.
 

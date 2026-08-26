@@ -9,7 +9,7 @@ status:
 browser-compat: api.Screen.mozEnabled
 ---
 
-{{APIRef("CSSOM view API")}}{{Non-standard_Header}}
+{{APIRef("CSSOM view API")}}{{Non-standard_Header}}{{deprecated_header}}
 
 This Boolean attribute controls the device's screen. Setting it to `false`
 will turn off the screen.

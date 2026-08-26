@@ -10,7 +10,7 @@ browser-compat: javascript.builtins.Function.arguments
 sidebar: jsref
 ---
 
-{{Non-standard_Header}}
+{{Non-standard_Header}}{{deprecated_header}}
 
 > [!NOTE]
 > The `arguments` property of {{jsxref("Function")}} objects is deprecated. The recommended way to access the `arguments` object is to refer to the variable {{jsxref("Functions/arguments", "arguments")}} available within functions.

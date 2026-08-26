@@ -3,11 +3,11 @@ title: Fenced Frame API
 slug: Web/API/Fenced_frame_API
 page-type: web-api-overview
 status:
-  - experimental
+  - deprecated
 browser-compat: html.elements.fencedframe
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Fenced Frame API")}}
+{{DefaultAPISidebar("Fenced Frame API")}}{{deprecated_header}}
 
 > [!WARNING]
 > This feature is currently opposed by one browser vendor.

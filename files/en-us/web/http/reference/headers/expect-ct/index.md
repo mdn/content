@@ -9,6 +9,8 @@ browser-compat: http.headers.Expect-CT
 sidebar: http
 ---
 
+{{deprecated_header}}
+
 The `Expect-CT` {{Glossary("response header")}} lets sites opt in to reporting and/or enforcement of [Certificate Transparency](/en-US/docs/Web/Security/Defenses/Certificate_Transparency) requirements.
 Certificate Transparency (CT) aims to prevent the use of misissued certificates for that site from going unnoticed.
 

@@ -9,7 +9,7 @@ status:
 browser-compat: api.Navigator.doNotTrack
 ---
 
-{{ApiRef("HTML DOM")}}{{non-standard_header}}
+{{ApiRef("HTML DOM")}}{{non-standard_header}}{{deprecated_header}}
 
 The **`Navigator.doNotTrack`** property returns the user's Do Not Track setting, which indicates whether the user is requesting websites and advertisers to not track them.
 

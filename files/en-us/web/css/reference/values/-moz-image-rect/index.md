@@ -10,7 +10,7 @@ browser-compat: css.types.-moz-image-rect
 sidebar: cssref
 ---
 
-{{Non-standard_Header}}
+{{Non-standard_Header}}{{deprecated_header}}
 
 The **`-moz-image-rect`** value for [CSS](/en-US/docs/Web/CSS) {{CSSxRef("background-image")}} lets you use a portion of a larger image as a background.
 

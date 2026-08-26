@@ -8,7 +8,7 @@ status:
 browser-compat: api.SpeechGrammar.weight
 ---
 
-{{APIRef("Web Speech API")}}
+{{APIRef("Web Speech API")}}{{deprecated_header}}
 
 The optional **`weight`** property of the
 {{domxref("SpeechGrammar")}} interface sets and returns the weight of the

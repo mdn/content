@@ -9,7 +9,7 @@ status:
 browser-compat: api.HTMLMediaElement.mediaGroup
 ---
 
-{{APIRef("HTML DOM")}}{{Non-standard_Header}}
+{{APIRef("HTML DOM")}}{{Non-standard_Header}}{{deprecated_header}}
 
 The **`HTMLMediaElement.mediaGroup`** property reflects the `mediagroup` HTML attribute, which indicates the name of the group of elements it belongs to. A group of media elements shares a common `controller`.
 

@@ -9,7 +9,7 @@ status:
 browser-compat: api.Range.compareNode
 ---
 
-{{APIRef("DOM")}}{{Non-standard_Header}}
+{{APIRef("DOM")}}{{Non-standard_Header}}{{deprecated_header}}
 
 The **`compareNode()`** method of the {{domxref("Range")}} interface returns a constant indicating the
 position of the {{DOMxRef("Node")}}.

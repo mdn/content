@@ -10,7 +10,7 @@ browser-compat: http.headers.Viewport-Width
 sidebar: http
 ---
 
-{{SecureContext_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{Non-standard_Header}}{{deprecated_header}}
 
 > [!WARNING]
 > The `Viewport-Width` header was standardized as {{HTTPHeader("Sec-CH-Viewport-Width")}} and the new name is now preferred.

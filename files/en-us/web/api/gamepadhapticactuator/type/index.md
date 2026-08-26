@@ -9,7 +9,7 @@ status:
 browser-compat: api.GamepadHapticActuator.type
 ---
 
-{{APIRef("Gamepad API")}}{{non-standard_header}}
+{{APIRef("Gamepad API")}}{{non-standard_header}}{{deprecated_header}}
 
 The **`type`** read-only property of the {{domxref("GamepadHapticActuator")}} interface returns an enumerated value representing the type of the haptic hardware.
 

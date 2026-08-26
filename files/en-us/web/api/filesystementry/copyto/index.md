@@ -9,7 +9,7 @@ status:
 browser-compat: api.FileSystemEntry.copyTo
 ---
 
-{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}
+{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}{{deprecated_header}}
 
 The {{domxref("FileSystemEntry")}} interface's method
 **`copyTo()`** copies the file

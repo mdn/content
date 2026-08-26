@@ -8,7 +8,7 @@ status:
 browser-compat: api.PannerNode.setPosition
 ---
 
-{{APIRef("Web Audio API")}}
+{{APIRef("Web Audio API")}}{{deprecated_header}}
 
 > [!NOTE]
 > The suggested replacement for this deprecated method is to instead set the [`positionX`](/en-US/docs/Web/API/PannerNode/positionX), [`positionY`](/en-US/docs/Web/API/PannerNode/positionY), and [`positionZ`](/en-US/docs/Web/API/PannerNode/positionZ) attributes directly.

@@ -8,7 +8,7 @@ status:
 browser-compat: api.Event.cancelBubble
 ---
 
-{{APIRef("DOM")}}{{AvailableInWorkers}}
+{{APIRef("DOM")}}{{AvailableInWorkers}}{{deprecated_header}}
 
 The **`cancelBubble`** property of the {{domxref("Event")}}
 interface is deprecated. Use {{domxref("Event.stopPropagation()")}} instead.

@@ -9,7 +9,7 @@ status:
 browser-compat: api.SharedStorage.set
 ---
 
-{{APIRef("Shared Storage API")}}{{non-standard_header}}
+{{APIRef("Shared Storage API")}}{{non-standard_header}}{{deprecated_header}}
 
 The **`set()`** method of the {{domxref("SharedStorage")}} interface either stores a new key-value pair in the current origin's shared storage or updates an existing one.
 

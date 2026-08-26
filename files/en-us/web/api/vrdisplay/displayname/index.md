@@ -9,7 +9,7 @@ status:
 browser-compat: api.VRDisplay.displayName
 ---
 
-{{APIRef("WebVR API")}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}{{deprecated_header}}
 
 The **`displayName`** read-only property of the {{domxref("VRDisplay")}} interface returns a human-readable name to identify the `VRDisplay`.
 

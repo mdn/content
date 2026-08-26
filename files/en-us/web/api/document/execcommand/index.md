@@ -9,7 +9,7 @@ status:
 browser-compat: api.Document.execCommand
 ---
 
-{{ApiRef("DOM")}}{{non-standard_header}}
+{{ApiRef("DOM")}}{{non-standard_header}}{{deprecated_header}}
 
 > [!NOTE]
 > Although the `execCommand()` method is deprecated, there are still some valid use cases that do not yet have viable alternatives. For example, unlike direct DOM manipulation, modifications performed by `execCommand()` preserve the undo buffer (edit history). For these use cases, you can still use this method, but test to ensure cross-browser compatibility, such as by using {{domxref("document.queryCommandSupported()")}}.

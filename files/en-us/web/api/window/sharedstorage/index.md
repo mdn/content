@@ -9,7 +9,7 @@ status:
 browser-compat: api.Window.sharedStorage
 ---
 
-{{APIRef("Shared Storage API")}}{{SecureContext_Header}}{{non-standard_header}}
+{{APIRef("Shared Storage API")}}{{SecureContext_Header}}{{non-standard_header}}{{deprecated_header}}
 
 The global read-only **`sharedStorage`** property returns the {{domxref("WindowSharedStorage")}} object for the current origin. This is the main entry point for writing data to shared storage using the [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API).
 

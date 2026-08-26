@@ -8,7 +8,7 @@ status:
 browser-compat: api.Document.write
 ---
 
-{{ApiRef("DOM")}}
+{{ApiRef("DOM")}}{{deprecated_header}}
 
 > [!WARNING]
 > Use of the `document.write()` method is strongly discouraged.
