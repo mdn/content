@@ -8,11 +8,11 @@ browser-compat: api.HTMLTemplateElement.htmlFor
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLTemplateElement.htmlFor`** property reflects the value of the [`for`](/en-US/docs/Web/HTML/Reference/Elements/template#for) content property. That means that this script-accessible property is used to set and read the value of the content property `for`, which is the ID of the label's associated control element.
+The **`htmlFor`** property of the {{domxref("HTMLTemplateElement")}} interface is the ID of the Processing Instruction marker to replace with the contents of the associated `<template>` element. It reflects the value of, and is used to set and get the [`for`](/en-US/docs/Web/HTML/Reference/Elements/template#for) content attribute.
 
 ## Value
 
-A string reflecting the [`for`](/en-US/docs/Web/HTML/Reference/Elements/template#for) HTML attribute, containing the ID of the Processing Instruction marker to replace with the contents of this `<template>` element.
+A string containing the ID of the Processing Instruction marker to replace with the contents of this `<template>` element.
 
 ## Description
 

@@ -111,7 +111,7 @@ When written in HTML, processing instructions can be provided with or without th
 
 If the `<for>` attribute does not match any marker `name`, then the `<template>` is left in the DOM (but hidden by default).
 
-To prevent components updating unrelated parts of the DOM, `<template for="...">` elements can only patch markers under the parent of the `<template>` element. The only exception is `<template>` elements which are direct children of the `<body>` element can also patch `<head>` elements to allow updating of `<title>` and other `<head>` elements.
+To prevent components from updating unrelated parts of the DOM, `<template for="...">` elements can only patch markers inside the `<template>` parent's DOM tree. The only exception is `<template>` elements that are direct children of the `<body>` element — they can also patch `<head>` elements to allow updating `<title>` and other `<head>` elements.
 
 ## Examples
 
@@ -520,7 +520,7 @@ Since `firstClone` is a `DocumentFragment`, only its children are added to `cont
 
 ### Using `<template for>` for patching
 
-This example uses the `<?marker name="placeholder">` processing instruction as a placeholder and later on fills in the contents using `<template for="placeholder">`. The `<?marker>` processing instructions excludes the optional trailing `?`, but could also be written as `<?marker name="placeholder" ?>` if preferred.
+This example uses the `<?marker name="placeholder">` processing instruction as a placeholder and later on fills in the contents using `<template for="placeholder">`.
 
 ```html-nolint
 <body>
@@ -535,7 +535,7 @@ This example uses the `<?marker name="placeholder">` processing instruction as a
 </body>
 ```
 
-Results in an initially empty `<div>` which is then updated to the following after the `<template>` is parsed and processed to the following:
+Initially, this results in an empty `<div>` being rendered. It is then updated to the following after the `<template>` element is parsed and processed:
 
 ```html-nolint
   <div>
@@ -547,7 +547,7 @@ Results in an initially empty `<div>` which is then updated to the following aft
 
 ### Using `<template for>` for range patching
 
-This example uses the `<?start>` and `<?end>` processing instructions as placeholders and later on fills in the contents using `<template for>`. Both processing instructions exclude the optional trailing `?` but could also be written as `<?start name="placeholder" ?>` and `<?end?>` if preferred.
+This example uses the `<?start>` and `<?end>` processing instructions to contain placeholder content, which is initially displayed then replaced by the `<template for>` content later on.
 
 ```html-nolint
 <body>
@@ -566,11 +566,11 @@ This example uses the `<?start>` and `<?end>` processing instructions as placeho
 
 Results in an a `<div>` initially containing the `Loading...` text placeholder, which is then updated to the following after the `<template>` is parsed and processed to produce the same output as the previous example (`<div>Lorem Ipsum...</div>`, ignoring the whitespace).
 
-This example also demonstrates the lack of processing instruction children and nesting. The `<?start>` and `<?end>` processing instructions, although linked in terms of `<template for>`, are separate [nodes](/en-US/docs/Web/API/Node) and not [elements](/en-US/docs/Web/API/Element) in the DOM and so do not cause the `Loading...` content in between to be a child (as demonstrated by the lack of indentation).
+This example also demonstrates the lack of processing instruction children and nesting. The `<?start>` and `<?end>` processing instructions, although linked in terms of their relationship with `<template for>`, are separate [nodes](/en-US/docs/Web/API/Node) and not opening and closing tags. They therefore do not contain the `Loading...` content as a child (as demonstrated by the lack of indentation).
 
 ### Using `<template for>` for patching `<head>` elements
 
-This example shows that `<template for>` elements which are direct children of the `<body>` element can patch `<head>` markers.
+This example shows that `<template for>` elements that are direct children of the `<body>` element can patch `<head>` markers.
 
 ```html-nolint
 <head>
@@ -587,7 +587,7 @@ This example shows that `<template for>` elements which are direct children of t
 </body>
 ```
 
-Results in the following:
+Results in the following once the `<template>` elements have been parsed:
 
 ```html-nolint
 <head>
@@ -603,9 +603,9 @@ Results in the following:
 
 ### Including markers in `<template for>` to allow contents to be repatched later
 
-It is also possible to insert markers to allow for new placeholders to be created, to allow the contents to be patched again later. You can even use the existing `name` attributes being replaced.
+You can also insert markers inside `<template for>` elements, creating new placeholders to enable patching the same content multiple times. You can reuse existing `name` attributes.
 
-For example, if you are building an {{glossary("SPA", "Single Page Application (SPA)")}} application with `<template for>` you may wish to allow the `<title>` to be patched on each route update and so would use something like this:
+For example, if you are building a {{glossary("SPA", "Single Page Application (SPA)")}} with `<template for>`, you may wish to allow the `<title>` to be patched on each route update, which could be achieved like this:
 
 ```html-nolint
 <head>
@@ -620,7 +620,7 @@ For example, if you are building an {{glossary("SPA", "Single Page Application (
 </body>
 ```
 
-This will result in the following
+This will result in the following once the `<template>` element is parsed:
 
 ```html-nolint
 <head>
@@ -633,7 +633,7 @@ This will result in the following
 </body>
 ```
 
-A later a new `<template for="title">` could be inserted into the DOM to replace the `<title>` again.
+Later on, a new `<template for="title">` could be inserted into the DOM to replace the `<title>` again.
 
 ## Technical summary
 
