@@ -114,7 +114,7 @@ When importing a JavaScript function, the `type` field is a [`func`](/en-US/docs
 
 This includes:
 
-- An optional function name
+- An optional function identifier
 - A list of parameter types
 - A list of result types
 
