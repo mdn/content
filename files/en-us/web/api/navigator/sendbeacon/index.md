@@ -103,8 +103,8 @@ thus hurting performance. Others, such as Safari and Chrome on Android, handle i
 
 Firefox will also exclude pages from the bfcache if they contain `beforeunload` handlers.
 
-The `pagehide` event is compatible with the bfcache, but it is not reliably fired, especially on mobile.
-For end-of-session analytics, use `visibilitychange` rather than `pagehide`.
+The `pagehide` event is not as problematic as `unload` or `beforeunload`, because it is compatible with the bfcache.
+However, it suffers from the same reliability problems as the other two events, so we recommend that developers avoid it as well, and use `visibilitychange`.
 
 ## Examples
 
