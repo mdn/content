@@ -72,13 +72,18 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### WebDriver conformance (WebDriver BiDi, Marionette) -->
+### WebDriver conformance (WebDriver BiDi, Marionette)
 
-<!-- #### General -->
+#### General
 
-<!-- #### WebDriver BiDi -->
+- Disabled the download panel to prevent the current document from losing focus when a download begins. ([Firefox bug 2035439](https://bugzil.la/2035439)).
+- Fixed the Actions API so that the `dblclick` event is fired when performing a double-click while holding down the `Ctrl` key on non-macOS platforms. ([Firefox bug 2058556](https://bugzil.la/2058556)).
 
-<!-- #### Marionette -->
+#### WebDriver BiDi
+
+- Updated the Mozilla-specific `moz:debugging` module to no longer rely on the same nested event loop API as DevTools, which prevents conflicts when WebDriver BiDi and DevTools are used in parallel. ([Firefox bug 2041335](https://bugzil.la/2041335)).
+- Fixed the `browsingContext.reload` command failing when used for frames. ([Firefox bug 2030909](https://bugzil.la/2030909)).
+- Removed support for the `contexts` argument in the `session.unsubscribe` command. From now on, clients can unsubscribe only by event name or subscription ID. ([Firefox bug 1988723](https://bugzil.la/1988723)).
 
 ## Changes for add-on developers
 
