@@ -23,7 +23,7 @@ The `::-webkit-scrollbar` CSS pseudo-element affects the style of an element's s
 The {{cssxref("scrollbar-color")}} and {{cssxref("scrollbar-width")}} standard properties may be used as alternatives for browsers that do not support this pseudo-element and the related `::-webkit-scrollbar-*` pseudo-elements (see [Browser compatibility](#browser_compatibility)).
 
 > [!NOTE]
-> If an element's computed values of {{cssxref("scrollbar-color")}} and {{cssxref("scrollbar-width")}} are anything other than `auto`, they will override [`::-webkit-scrollbar-*`](/en-US/docs/Web/CSS/Reference/Selectors/::-webkit-scrollbar) styling.
+> If an element's computed {{cssxref("scrollbar-color")}} and {{cssxref("scrollbar-width")}} values are anything other than `auto`, they will override [`::-webkit-scrollbar-*`](/en-US/docs/Web/CSS/Reference/Selectors/::-webkit-scrollbar) styling.
 > Because `scrollbar-color` is inherited, an element is affected when an ancestor sets it, even if the element itself doesn't.
 > Setting `scrollbar-color: auto` on the element restores its `::-webkit-scrollbar-*` styling if it was previously removed by a `scrollbar-color` setting on an ancestor.
 > See [Adding a fallback for scrollbar styles](#adding_a_fallback_for_scrollbar_styles) for more details.
