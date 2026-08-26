@@ -79,7 +79,7 @@ observer.observe({ type: "interaction-contentful-paints", buffered: true });
 
 One of the key uses of the `InteractionContentfulPaint` interface is to measure all contentful paints related to a [soft navigation](/en-US/docs/Web/API/PerformanceSoftNavigation) to calculate the {{Glossary("Largest Contentful Paint", "Largest Contentful Paint (LCP)")}} for that soft navigation.
 
-To do this, it is recommended to use the {{domxref("PerformanceSoftNavigation.interactionId")}} rather than the {{domxref("PerformanceSoftNavigation.navigationId")}}, since some LCP candidates can happen before the soft navigation is defined (for paints, before the URL is updated) and will therefore have the old `navigationId`.
+To do this, it is recommended to use the {{domxref("PerformanceSoftNavigation.interactionId")}} rather than the {{domxref("PerformanceEntry.navigationId")}}, since some LCP candidates can happen before the soft navigation is defined (for paints, before the URL is updated) and will therefore have the old `navigationId`.
 
 ```js
 let currentNavigationInteractionId = 1045; // hardcoded in this example

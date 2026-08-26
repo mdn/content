@@ -16,8 +16,6 @@ The `PerformanceSoftNavigation` interface provides timing information about {{gl
 This interface directly defines the following properties:
 
 - {{domxref("PerformanceSoftNavigation.interactionId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : The id of the interaction that resulted in the soft navigation.
-- {{domxref("PerformanceSoftNavigation.navigationId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The id of the navigation, unique to this page load.
 - {{domxref("PerformanceSoftNavigation.navigationType")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The type of the navigation.

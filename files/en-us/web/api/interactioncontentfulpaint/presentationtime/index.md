@@ -16,7 +16,7 @@ The `presentationTime` is optional — some browsers may always return `0` or no
 
 ## Value
 
-A {{domxref("DOMHighResTimeStamp")}} or {{jsxref("operators/null", "null")}} if the value is not exposed.
+A {{domxref("DOMHighResTimeStamp")}} or {{jsxref("Operators/null", "null")}} if the value is not exposed.
 
 ## Examples
 
