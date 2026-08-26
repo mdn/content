@@ -196,10 +196,6 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   The `farthest-corner` and `closest-corner` keywords can be used for specifying the radii values of the {{cssxref("basic-shape/ellipse", "ellipse()")}} and {{cssxref("basic-shape/circle", "circle()")}} CSS basic shapes. ([Firefox bug 2037673](https://bugzil.la/2037673)).
 
-- **Customizable `<select>` elements**: `dom.select.customizable_select.enabled`
-
-  [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) let you fully style a {{htmlelement("select")}} element and its picker, using the {{cssxref("::picker()", "::picker(select)")}}, {{cssxref("::checkmark")}}, and {{cssxref("::picker-icon")}} pseudo-elements together with the [`base-select`](/en-US/docs/Web/CSS/Reference/Properties/appearance#base-select) value of the {{cssxref("appearance")}} property. ([Firefox bug 1974787](https://bugzil.la/1974787)).
-
 - **Truncating content with `line-clamp`**: `layout.css.line-clamp.enabled`
 
   The {{cssxref("line-clamp")}} CSS property works without the `-webkit-` vendor prefix, and now also supports the `no-ellipsis` keyword and `<string>` values for choosing what is shown where the text is clamped. ([Firefox bug 2042999](https://bugzil.la/2042999) and [Firefox bug 2043000](https://bugzil.la/2043000)).
