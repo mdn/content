@@ -102,17 +102,17 @@ The `play-once` action is generally used on its own or as part of `play-once pau
 
 See the {{cssxref("animation-action")}} data type for examples and more about each keyword value.
 
-### Triggering the same animation via multiple different triggers
+### Triggering one animation via multiple triggers
 
-If you have an animated element, and you want to define triggers on multiple different elements that all trigger the same animation, you need to specify the animation multiple times on the animated element, giving each animation instance a different trigger.
+If you want to define triggers on multiple different elements that all trigger the same animation on an element, you need to specify the animation multiple times on that animated element, giving each animation instance a different trigger.
 
 For example:
 
 ```css
 .animated {
   animation:
-    moveright 2s 1 ease-out both,
-    moveright 2s 1 ease-out forwards;
+    spinOnce 2s 1 ease-out,
+    spinOnce 2s 1 ease-out;
   animation-trigger:
     --t1 play-forwards play-backwards,
     --t2 play-forwards play-backwards;
@@ -129,13 +129,13 @@ For example:
 
 See [Multiple triggers for the same animation](#multiple_triggers_for_the_same_animation) for a working example.
 
-### Resetting via the `animation` shorthand
+### Reset by the `animation` shorthand
 
 The `animation-trigger` property is a reset-only sub-property of the {{cssxref("animation")}} shorthand property. This means that trigger names and animation actions can not be included in the `animation` shorthand, but setting the `animation` shorthand resets `animation-trigger` to its initial value of `none`. For this reason, you should always set `animation-trigger` after a corresponding `animation` property in a declaration list or declare the `animation-trigger` in a declaration block with selectors with stronger {{cssxref("specificity")}}.
 
 ### Multiple `animation-trigger` values
 
-The {{cssxref("animation-trigger")}} property works in the same way as the {{cssxref("animation")}} shorthand property and the other animation longhand properties concerning setting [multiple values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values):
+Setting multiple {{cssxref("animation-trigger")}} values works in the same way as setting [multiple values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values) for the the {{cssxref("animation")}} shorthand property and the other animation longhand properties:
 
 - If multiple `animation-name` values are set, but only a single `animation-trigger` value is set, the `animation-trigger` will apply to all the animations.
 - If two or more comma-separated `animation-trigger` values are set, they will cycle between the animations until all of them have an `animation-trigger` value set. See an example of [declaring multiple scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations#multiple_scroll-triggered_animations).
@@ -256,7 +256,7 @@ The markup contains two {{htmlelement("div")}} elements, one to animate and one 
 
 #### CSS
 
-The animated `<div>` element's {{cssxref("position")}} is set to `fixed`, positioning it near the top-left of the scrollport to enable us to see when the animation plays and pauses.
+The `.animated` element's {{cssxref("position")}} is set to `fixed`, positioning it near the top-left of the scrollport to enable seeing the animation play and pause.
 
 ```css hidden live-sample___basic-example
 body {
@@ -289,7 +289,7 @@ div {
 }
 ```
 
-Next, we define the {{cssxref("@keyframes")}} for the `rotate` animation we will use later:
+Next, we define the {{cssxref("@keyframes")}} for the `rotate` animation:
 
 ```css live-sample___basic-example live-sample___multiple-triggers
 @keyframes rotate {
@@ -303,7 +303,7 @@ Next, we define the {{cssxref("@keyframes")}} for the `rotate` animation we will
 }
 ```
 
-Using the `animation` shorthand, the `.animated` element has the `rotate` animation applied. Without an associated trigger, the element would start animating when the page loads. The `animation-trigger` property makes it a triggered animation. The value references a `timeline-trigger-name` of `--t` and specifies two `<animation-action>` values — `play` and `pause` — which specify that the animation will play on activation, and pause on deactivation.
+Using the `animation` shorthand, the `rotate` animation is applied to the `.animated` element. Without an associated trigger, the animation would start when the page loads. The `animation-trigger` property makes it a triggered animation. The value references a `timeline-trigger-name` of `--t` and specifies two `<animation-action>` values — `play` and `pause` — which specify that the animation will play on activation, and pause on deactivation.
 
 ```css live-sample___basic-example
 .animated {
@@ -312,7 +312,7 @@ Using the `animation` shorthand, the `.animated` element has the `rotate` animat
 }
 ```
 
-The `.trigger` element creates the animated element's trigger with a `timeline-trigger-name` of `--t`. This value is the identifier referenced in the `.animated` declaration block's `animation-trigger` property value, associating the two together. We also include a {{cssxref("timeline-trigger-source")}} value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a [view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines). We could have declared both together as `timeline-trigger: view() --t`.
+We set a `timeline-trigger-name` of `--t` on the `.trigger` element. As this value is the identifier referenced in the `.animated` declaration block's `animation-trigger` property value, this associates the two together, creating the animated element's trigger. We also include a {{cssxref("timeline-trigger-source")}} value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a [view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines). We could have declared both together as `timeline-trigger: view() --t`.
 
 ```css live-sample___basic-example
 .trigger {
@@ -401,7 +401,7 @@ This time, the markup contains only a single {{htmlelement("div")}} element, plu
 
 #### CSS
 
-The {{htmlelement("div")}} element has an `animation` applied that smoothly inverts its colors, defined as follows:
+We create an `@keyframes` that inverts the background and foreground colors:
 
 ```css hidden live-sample___same-element
 body {
@@ -432,13 +432,13 @@ div {
 }
 ```
 
-We set an `animation-trigger` value on the `<div>` that references a `timeline-trigger-name` of `--t`. We include two `<animation-action>` values — `play-forwards` and `play-backwards` — which specify that the animation will play forwards on activation and play in reverse on deactivation.
+We set the `animation` on the {{htmlelement("div")}} element, setting the colors to invert smoothly over 600ms. We also set an `animation-trigger` value that references a `timeline-trigger-name` of `--t` and include two `<animation-action>` values — `play-forwards` and `play-backwards` — which specify that the animation will play forwards on activation and play in reverse on deactivation.
 
 We also specify a `timeline-trigger` value of `--t view() contain` on the `<div>`, so the `<div>` creates the trigger for its own animation. The `timeline-trigger` shorthand includes three longhand property values:
 
 - A {{cssxref("timeline-trigger-name")}} value: A `<dashed-ident>` identifier referenced in the `animation-trigger` property.
 - A {{cssxref("timeline-trigger-source")}} value: The [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view) value sets the timeline trigger to a view progress timeline tracking the element inside its nearest scrolling ancestor element.
-- A {{cssxref("timeline-trigger-activation-range")}} value: The {{cssxref("timeline-range-name")}} value [`contain`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#contain) represents the range of a view progress timeline where the subject element is fully contained by, or fully contains, the view progress visibility range within the [scrollport](/en-US/docs/Glossary/Scroll_container#scrollport). This means the trigger will activate when the `<div>` is fully inside the scrollport, and deactivate when it starts to exit the scrollport. See [Understanding timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names) for more information.
+- A {{cssxref("timeline-trigger-activation-range")}} value: The {{cssxref("timeline-range-name")}} value [`contain`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#contain) sets the trigger to activate when the `<div>` is fully inside the scrollport, and deactivate when it starts to exit the scrollport. See [Understanding timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names) for more information.
 
 Because we didn't set a value for the {{cssxref("timeline-trigger-active-range")}} component, the active range is the same as the activation range.
 
@@ -454,7 +454,7 @@ div {
 
 {{EmbedLiveSample("same-element", "100%", "240")}}
 
-Try scrolling the content up. When the `<div>` fully appears in the scrollport, its animation will play; when any part of the `<div>` leaves the scrollport at either edge, the animation will play backwards.
+Try scrolling the content up. When the `<div>` is fully in the scrollport, its animation plays. When any part leaves the scrollport at either edge, the animation plays backward.
 
 ### Multiple triggers for the same animation
 
@@ -575,7 +575,7 @@ div {
 }
 ```
 
-The value of the `animation` shorthand property is a comma-separated list of animations, applying the same `rotate` keyframe animation three times. The `animation-trigger` value is a comma-separated list of three animation triggers, one for each animation instance.
+The value of the `animation` shorthand property is a comma-separated list of animations, applying the same `animation-name` of `rotate` three times. The `animation-trigger` value is a comma-separated list with three animation triggers, one for each animation instance.
 
 ```css live-sample___multiple-triggers
 .animated {

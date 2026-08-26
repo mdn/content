@@ -800,7 +800,7 @@ Try carefully scrolling the example, and note how each animation is applied to t
 
 ### Multiple triggers for the same animation
 
-If you have an animated element, and you want to define triggers on multiple different elements that all trigger the same animation, you need to specify the same named animation multiple times on the animated element, and then give each instance of that animation a different trigger. See [Triggering the same animation via multiple different triggers](/en-US/docs/Web/CSS/Reference/Properties/animation-trigger#triggering_the_same_animation_via_multiple_different_triggers) for more information.
+If you have an animated element, and you want to define triggers on multiple different elements that all trigger the same animation, you need to specify the same named animation multiple times on the animated element, and then give each instance of that animation a different trigger. See [Multiple triggers for the same animation](/en-US/docs/Web/CSS/Reference/Properties/animation-trigger#multiple_triggers_for_the_same_animation) for more information.
 
 ## See also
 
