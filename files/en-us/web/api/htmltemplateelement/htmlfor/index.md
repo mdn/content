@@ -16,7 +16,9 @@ A string reflecting the [`for`](/en-US/docs/Web/HTML/Reference/Elements/template
 
 ## Description
 
-The `for` attribute of a `<template>` element is used for [template out-of-order patching](/en-US/docs/Web/HTML/Reference/Elements/template#out-of-order_patching) using `<?marker>` and `<?start>`/`<?end>` [processing instruction](/en-US/docs/Web/API/ProcessingInstruction) markers.
+The `for` attribute of a `<template>` element is used for [template out-of-order patching](/en-US/docs/Web/HTML/Reference/Elements/template#out-of-order_patching) using `<?marker>` and `<?start>`/`<?end>` [processing instruction](/en-US/docs/Web/API/ProcessingInstruction) markers. Those markers are replaced with the contents of the `<template>` element when it is parsed and processed.
+
+The `htmlFor` attribute provides JavaScript access to the attribute value. `htmlFor` is used instead of `for` to avoid clashing with the JavaScript `for` reserved word, though [this is no longer strictly necessary, so may change in the future](https://github.com/whatwg/html/issues/9379).
 
 ## Examples
 

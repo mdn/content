@@ -7,14 +7,14 @@ browser-compat: html.elements.template
 sidebar: htmlsidebar
 ---
 
-The **`<template>`** [HTML](/en-US/docs/Web/HTML) element serves as a mechanism for holding {{Glossary("HTML")}} fragments, which can either be used later via JavaScript, generated immediately into shadow DOM, or uses as part of out-of-order patching with `<template for="...">`
+The **`<template>`** [HTML](/en-US/docs/Web/HTML) element serves as a mechanism for holding {{Glossary("HTML")}} fragments, which can either be used later via JavaScript, generated immediately and inserted into a shadow DOM, or used as part of {{glossary("Out_of_order_patching", "out-of-order patching")}} with `<template for="...">`.
 
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `for`
-  - : The `for` attribute is used for out-of-order patching with `<template for="...">` matching an equivalent `<?start id="...">` or `<?marker "...">` marker. See the [out of order patching](#out_of_order_patching) and [examples](#examples) sections.
+  - : The `for` attribute is used for out-of-order patching with `<template for="...">`, matching an equivalent `<?start id="...">` or `<?marker "...">` marker. See the [out-of-order patching section](#out-of-order_patching) and [examples section](#examples).
 
 - `shadowrootmode`
   - : Creates a [shadow root](/en-US/docs/Glossary/Shadow_tree) for the parent element.
@@ -99,17 +99,17 @@ Other attributes prefixed with `shadowroot` allow declarative customization of t
 
 ### Out-of-order patching
 
-Traditionally, HTML is delivered in order and read, processed and displayed from top to bottom. To change that ordering you need to either hide or rearrange elements using CSS or update the DOM produced by the HTML after the fact with JavaScript. However, many pages are many of of multiple parts that may be ready at different times, or that may be more important to deliver to the user first.
+Traditionally, HTML is delivered in order and read, processed, and displayed from top to bottom. To change that order, you can either hide or rearrange elements with CSS or update the DOM produced by the HTML afterwards with JavaScript. However, many pages are composed of multiple parts that may be ready to render at different times, or that may be more important to deliver to the user earlier.
 
-The `<template>` element allows for delivering HTML {{glossary("Out_of_order_patching", "out-of-order")}} and "patching" [processing instructions](/en-US/docs/Web/API/ProcessingInstruction) markers with the contents of the `<template>` element.
+The `<template>` element allows for delivering HTML {{glossary("Out_of_order_patching", "out-of-order")}}, which involves replacing [processing instruction](/en-US/docs/Web/API/ProcessingInstruction) markers with the contents of the `<template>` element (also referred to as **patching**).
 
 As an example, a `<?marker name="my-identifier">` processing instructions marker can be patched with the contents of a `<template for="my-identifier">` element supplied much later in the HTML. See the [Using `<template for>` for patching](#using_template_for_for_patching) example.
 
-As well as the `<?marker>` processing instructions marker, the `<?start>` and `<?end>` pairing can provide temporary contents (for example, `<?start name="my-identifier">Loading...<?end>`), where the contents are temporarily shown until the `<template for="my-identifier">` is seen and again the whole section is replaced. See the [Using `<template for>` for range patching](#using_template_for_for_range_patching) example.
+As well as the `<?marker>` processing instructions marker, a `<?start>` and `<?end>` pair can be used to contain temporary content (for example, `<?start name="my-identifier">Loading...<?end>`), which is temporarily shown until the `<template for="my-identifier">` is processed and the whole section is replaced. See the [Using `<template for>` for range patching](#using_template_for_for_range_patching) example.
 
 When written in HTML, processing instructions can be provided with or without the trailing `?`, and the browser will add it if not supplied when parsing the DOM. Both `<?start?>` and `<?start>` are therefore valid and parsed as `<?start?>`. XML is stricter and requires the trailing `?`.
 
-If the `<for>` attribute does not match any marker `name`, then the `<template>` is left in the DOM (but hidden by default).
+If the `for` attribute does not match any marker processing instruction `name`, the `<template>` content will remain hidden in the DOM and won't be used in any patch
 
 To prevent components updating unrelated parts of the DOM, `<template for="...">` elements can only patch markers under the parent of the `<template>` element. The only exception is `<template>` elements which are direct children of the `<body>` element can also patch `<head>` elements to allow updating of `<title>` and other `<head>` elements.
 
@@ -528,9 +528,7 @@ This example uses the `<?marker name="placeholder">` processing instruction as a
     <?marker name="placeholder">
   </div>
   ...
-  <template for="placeholder">
-    Lorem Ipsum...
-  </template>
+  <template for="placeholder">Lorem Ipsum...</template>
   ...
 </body>
 ```
@@ -539,9 +537,7 @@ Results in an initially empty `<div>` which is then updated to the following aft
 
 ```html-nolint
   <div>
-
     Lorem Ipsum...
-
   </div>
 ```
 
@@ -557,14 +553,18 @@ This example uses the `<?start>` and `<?end>` processing instructions as placeho
     <?end>
   </div>
   ...
-  <template for="placeholder">
-    Lorem Ipsum...
-  </template>
+  <template for="placeholder">Lorem Ipsum...</template>
   ...
 </body>
 ```
 
-Results in an a `<div>` initially containing the `Loading...` text placeholder, which is then updated to the following after the `<template>` is parsed and processed to produce the same output as the previous example (`<div>Lorem Ipsum...</div>`, ignoring the whitespace).
+Initially the `<div>` is rendered with the `Loading...` placeholder content. This is then updated to the following after the `<template>` is parsed and processed:
+
+```html-nolint
+  <div>
+    Lorem Ipsum...
+  </div>
+```
 
 This example also demonstrates the lack of processing instruction children and nesting. The `<?start>` and `<?end>` processing instructions, although linked in terms of `<template for>`, are separate [nodes](/en-US/docs/Web/API/Node) and not [elements](/en-US/docs/Web/API/Element) in the DOM and so do not cause the `Loading...` content in between to be a child (as demonstrated by the lack of indentation).
 
@@ -610,7 +610,9 @@ For example, if you are building an {{glossary("SPA", "Single Page Application (
 ```html-nolint
 <head>
   ...
-  <?start name="title"><title>Loading...</title><?end>
+  <?start name="title">
+  <title>Loading...</title>
+  <?end>
   ...
 </head>
 <body>
