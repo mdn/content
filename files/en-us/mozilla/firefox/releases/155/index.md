@@ -44,17 +44,17 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
 ### CSS
 
 - The {{cssxref("attr")}} CSS function can now be used in any CSS property, rather than only in {{cssxref("content")}}.
-  Along with this, [`<attr-type>`](/en-US/docs/Web/CSS/Reference/Values/attr#attr-type) values (including unit identifiers such as `px` and `s`), [fallback values](/en-US/docs/Web/CSS/Reference/Values/attr#fallback-value), and [namespaced attributes](/en-US/docs/Web/CSS/Reference/Values/attr#namespaces) are now supported, as is the use of `attr()` inside [container style queries](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries).
-  This lets you drive styling from HTML attributes, such as `width: attr(data-size px)` or `background-color: attr(data-fill type(<color>), gray)`, without using JavaScript.
-  Note that values obtained using `attr()` cannot be used to fetch a URL, which prevents a page that can set an attribute from using it to exfiltrate data.
+  This lets you drive styling from HTML attributes, such as `width: attr(data-size px)`, without using JavaScript.
+  [`<attr-type>`](/en-US/docs/Web/CSS/Reference/Values/attr#attr-type) values (including unit identifiers such as `px` and `s`), [fallback values](/en-US/docs/Web/CSS/Reference/Values/attr#fallback-value), and [namespaced attributes](/en-US/docs/Web/CSS/Reference/Values/attr#namespaces) are now supported.
+  You can now also use `attr()` inside [container style queries](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries).
   ([Firefox bug 2038940](https://bugzil.la/2038940)).
 - The {{cssxref("progress")}} CSS function is now supported.
-  This returns a {{cssxref("number")}} representing how far a value has progressed between a start and an end value, which can then be used to calculate other values, for example `opacity: calc(0.4 + progress(100cqw, 300px, 900px) * 0.6)`.
-  The result is clamped to the range `0` to `1` unless the `no-clamp` keyword is used.
+  This returns a {{cssxref("number")}} representing how far a value has progressed between a start and an end value.
+  The result can then be used to calculate other values, for example `opacity: calc(0.4 + progress(100cqw, 300px, 900px) * 0.6)`.
   ([Firefox bug 2047345](https://bugzil.la/2047345)).
 - The {{cssxref("color_value/alpha", "alpha()")}} CSS function is now supported.
-  This changes only the alpha channel of a color, leaving its color space and other components unchanged, as in `alpha(from currentcolor / 0.5)`.
-  Inside the function, the `alpha` keyword refers to the alpha channel of the original color, so it can also be adjusted relatively with `alpha(from var(--brand) / calc(alpha * 0.5))`.
+  It allows you to pass a color and get back the color with a different alpha (transparency) value, leaving other components of the color unchanged.
+  Inside the function, you can use the `alpha` keyword to refer to the alpha channel of the original color, for example `alpha(from var(--brand) / calc(alpha * 0.5))`.
   ([Firefox bug 2059738](https://bugzil.la/2059738) and [Firefox bug 2059988](https://bugzil.la/2059988)).
 - The {{cssxref("font-width")}} CSS property is now supported, along with the {{cssxref("@font-face/font-width", "font-width")}} {{cssxref("@font-face")}} descriptor and the `CSSStyleDeclaration.fontWidth` property.
   This is the new name for the {{cssxref("font-stretch")}} property, which continues to work as a legacy alias.
@@ -65,17 +65,9 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### JavaScript
 
-- The `Promise.allKeyed()` and `Promise.allSettledKeyed()` static methods are now supported, as defined in the [TC39 await dictionary proposal](https://tc39.es/proposal-await-dictionary/).
-  These behave like {{jsxref("Promise.all()")}} and {{jsxref("Promise.allSettled()")}}, except that they take an object of promises and fulfill with an object that has the same keys, so results can be read by name instead of by position:
+- The {{jsxref("Promise.allKeyed()")}} and {{jsxref("Promise.allSettledKeyed()")}} static methods are now supported, as defined in the [TC39 await dictionary proposal](https://github.com/tc39/proposal-await-dictionary).
+  These behave like {{jsxref("Promise.all()")}} and {{jsxref("Promise.allSettled()")}}, respectively, except that they take an object of promises instead of an iterable. They fulfill with an object that has the same keys, so results can be read by name instead of by position.
 
-  ```js
-  const { user, posts } = await Promise.allKeyed({
-    user: fetch("/api/user").then((r) => r.json()),
-    posts: fetch("/api/posts").then((r) => r.json()),
-  });
-  ```
-
-  Only enumerable own properties of the argument are used, the keys of the returned object follow the property order of the argument rather than the order in which the promises settle, and the returned object has a `null` prototype.
   ([Firefox bug 2057270](https://bugzil.la/2057270)).
 
 - A [module](/en-US/docs/Web/JavaScript/Guide/Modules) that fails to load because of a network error or an incorrect [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types) is no longer cached as a failure, so importing the same module specifier again can succeed once the server recovers.
@@ -114,8 +106,8 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
   - The `WebTransport.draining` property, which returns a promise that is fulfilled when the server asks the client to stop opening new streams.
     Note that this is not yet fulfilled for server-initiated draining.
     ([Firefox bug 2007160](https://bugzil.la/2007160)).
-- The [WebGPU API](/en-US/docs/Web/API/WebGPU_API) now supports the [`dual-source-blending`](/en-US/docs/Web/API/GPUSupportedFeatures) feature, which can be requested in {{domxref("GPUAdapter.requestDevice()")}}.
-  This enables the `src1`, `one-minus-src1`, `src1-alpha`, and `one-minus-src1-alpha` blend factors in {{domxref("GPUDevice.createRenderPipeline()")}}, along with the WGSL `dual_source_blending` extension.
+- The [WebGPU API](/en-US/docs/Web/API/WebGPU_API) now supports the [`dual-source-blending`](/en-US/docs/Web/API/GPUSupportedFeatures#available_features) feature on desktop, which can be requested in {{domxref("GPUAdapter.requestDevice()")}}.
+  This allows `src1`, `one-minus-src1`, `src1-alpha`, and `one-minus-src1-alpha` to be specified in the [`srcFactor`](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#srcfactor) and [`dstFactor`](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#dstfactor) properties of {{domxref("GPUDevice.createRenderPipeline", "createRenderPipeline()")}} and {{domxref("GPUDevice.createRenderPipelineAsync", "createRenderPipelineAsync()")}}. The WGSL `dual_source_blending` extension is also supported.
   ([Firefox bug 1924328](https://bugzil.la/1924328)).
 
 #### DOM
@@ -125,7 +117,7 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The {{domxref("SVGNumberList")}}, {{domxref("SVGPointList")}}, {{domxref("SVGStringList")}}, and {{domxref("SVGTransformList")}} interfaces now support indexed setters. This means you can replace an item in the list using bracket notation, such as `transformList[0] = newTransform`, instead of calling {{domxref("SVGTransformList.replaceItem", "replaceItem()")}}.
   The {{domxref("SVGLengthList")}} interface already supports indexed setters.
   ([Firefox bug 2059426](https://bugzil.la/2059426)).
-- The {{domxref("SVGGraphicsElement.getBBox()")}} method now accepts an `options` argument, with the `fill`, `stroke`, `markers`, and `clipped` properties.
+- The {{domxref("SVGGraphicsElement.getBBox()")}} method now honors its [`options`](/en-US/docs/Web/API/SVGGraphicsElement/getBBox#options) argument, with the `fill`, `stroke`, `markers`, and `clipped` properties.
   This allows you to get a bounding box that accounts for the stroke, markers, and clipping applied to an element, rather than only its fill geometry.
   ([Firefox bug 2060873](https://bugzil.la/2060873)).
 - Elements that are not rendered, such as those inside {{svgelement("mask")}}, {{svgelement("clipPath")}}, {{svgelement("marker")}}, {{svgelement("symbol")}}, and {{svgelement("defs")}}, now return an empty rectangle from {{domxref("Element.getBoundingClientRect()")}} and an empty list from {{domxref("Element.getClientRects()")}}, instead of reporting a box that was never painted.
@@ -198,7 +190,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **Audio Session API** (Nightly): `dom.audio_session.enabled`
 
-  The [Audio Session API](/en-US/docs/Web/API/Audio_Session_API) lets a site declare how its audio should behave relative to other audio playing on the device, such as whether it should mix with, duck, or interrupt other audio.
+  The [Audio Session API](/en-US/docs/Web/API/Audio_Session_API) lets a site declare how its audio should behave relative to other audio playing on the device, such as whether it should mix with, duck, or interrupt other audio. It is now enabled by default in Nightly. ([Firefox bug 2055710](https://bugzil.la/2055710)).
 
 - **CSS basic shapes allow `farthest-corner` and `closest-corner` keywords** (Nightly): `layout.css.ellipse-corners.enabled`
 
@@ -216,9 +208,9 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   A {{domxref("CustomElementRegistry")}} can be constructed and passed to {{domxref("Element.attachShadow()")}}, so that a shadow root can define custom elements that do not clash with those defined in the global registry.
 
-- **RegExp buffer boundaries**: `javascript.options.experimental.regexp_buffer_boundaries`
+- **Buffer boundary assertions in regular expressions** (Nightly): `javascript.options.experimental.regexp_buffer_boundaries`
 
-  The [TC39 RegExp buffer boundaries proposal](https://github.com/tc39/proposal-regexp-buffer-boundaries) adds the `\A`, `\z`, and `\Z` escapes to [regular expressions](/en-US/docs/Web/JavaScript/Guide/Regular_expressions), which match the start and the end of the input regardless of whether the {{jsxref("RegExp/multiline", "m")}} flag is set.
+  The [TC39 RegExp buffer boundaries proposal](https://github.com/tc39/proposal-regexp-buffer-boundaries) adds the [`\A`, `\z`, and `\Z` assertions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Buffer_boundary_assertion) to regular expressions. These match the start or end of the entire input regardless of whether the {{jsxref("RegExp/multiline", "m")}} flag is set. ([Firefox bug 2047706](https://bugzil.la/2047706)).
 
 - **`border-area` value for `background-clip`**: `layout.css.background-clip.border-area.enabled`
 
