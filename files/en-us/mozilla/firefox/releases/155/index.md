@@ -103,8 +103,7 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
     ([Firefox bug 2007174](https://bugzil.la/2007174)).
   - Subprotocol negotiation. The {{domxref("WebTransport.WebTransport", "WebTransport()")}} constructor now accepts a `protocols` option listing the application protocols the client supports, which is sent to the server in the `wt-available-protocols` request header, and the protocol chosen by the server is exposed in the `WebTransport.protocol` property.
     ([Firefox bug 2007150](https://bugzil.la/2007150)).
-  - The `WebTransport.draining` property, which returns a promise that is fulfilled when the server asks the client to stop opening new streams.
-    Note that this is not yet fulfilled for server-initiated draining.
+  - The {{domxref("WebTransport.draining")}} property is supported for indicating that the server has requested that the client start graceful shutdown of the session.
     ([Firefox bug 2007160](https://bugzil.la/2007160)).
 - The [WebGPU API](/en-US/docs/Web/API/WebGPU_API) now supports the [`dual-source-blending`](/en-US/docs/Web/API/GPUSupportedFeatures#available_features) feature on desktop, which can be requested in {{domxref("GPUAdapter.requestDevice()")}}.
   This allows `src1`, `one-minus-src1`, `src1-alpha`, and `one-minus-src1-alpha` to be specified in the [`srcFactor`](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#srcfactor) and [`dstFactor`](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#dstfactor) properties of {{domxref("GPUDevice.createRenderPipeline", "createRenderPipeline()")}} and {{domxref("GPUDevice.createRenderPipelineAsync", "createRenderPipelineAsync()")}}. The WGSL `dual_source_blending` extension is also supported.
