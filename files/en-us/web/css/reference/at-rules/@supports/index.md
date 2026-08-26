@@ -157,6 +157,9 @@ The following {{cssxref("ident")}} values can be specified as arguments for the 
 
 These named features represent valuable conditions that are not possible to test using other `@supports` mechanisms.
 
+> [!NOTE]
+> The specification also defines the [`single-axis-scroll-container`](https://drafts.csswg.org/css-conditional-5/#single-axis-scroll-container) feature. However, this is not currently supported in any browser.
+
 #### `selector()`
 
 The `selector()` function checks whether a browser supports the specified selector syntax.
