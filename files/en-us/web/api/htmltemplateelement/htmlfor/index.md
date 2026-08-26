@@ -22,6 +22,8 @@ The `htmlFor` attribute provides JavaScript access to the attribute value. `html
 
 ## Examples
 
+### Basic usage
+
 ```html
 <template for="my-identifier"> Lorem Ipsum... </template>
 ```
