@@ -128,7 +128,7 @@ When importing a JavaScript [`WebAssembly.Global`](/en-US/docs/WebAssembly/Refer
 
 This includes:
 
-- An optional global name
+- An optional global identifier
 - The [data type](/en-US/docs/WebAssembly/Reference/Definitions/global#data_type) of the global, preceded by the `mut` flag if the global is mutable ([`mutable`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global/Global#mutable) was set to `true` in the definition)
 
 #### Memory
