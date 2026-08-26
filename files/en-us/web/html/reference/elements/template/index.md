@@ -103,13 +103,13 @@ Traditionally, HTML is delivered in order and read, processed, and displayed fro
 
 The `<template>` element allows for delivering HTML {{glossary("Out_of_order_patching", "out-of-order")}}, which involves replacing [processing instruction](/en-US/docs/Web/API/ProcessingInstruction) markers with the contents of the `<template>` element (also referred to as **patching**).
 
-As an example, a `<?marker name="my-identifier">` processing instructions marker can be patched with the contents of a `<template for="my-identifier">` element supplied much later in the HTML. See the [Using `<template for>` for patching](#using_template_for_for_patching) example.
+For example, a `<?marker name="my-identifier">` processing instruction marker can be patched with the contents of a `<template for="my-identifier">` element supplied much later in the HTML. See the [Using `<template for>` for patching](#using_template_for_for_patching) example.
 
 As well as the `<?marker>` processing instructions marker, a `<?start>` and `<?end>` pair can be used to contain temporary content (for example, `<?start name="my-identifier">Loading...<?end>`), which is temporarily shown until the `<template for="my-identifier">` is processed and the whole section is replaced. See the [Using `<template for>` for range patching](#using_template_for_for_range_patching) example.
 
 When written in HTML, processing instructions can be provided with or without the trailing `?`, and the browser will add it if not supplied when parsing the DOM. Both `<?start?>` and `<?start>` are therefore valid and parsed as `<?start?>`. XML is stricter and requires the trailing `?`.
 
-If the `for` attribute does not match any marker processing instruction `name`, the `<template>` content will remain hidden in the DOM and won't be used in any patch
+If the `for` attribute does not match any marker processing instruction `name`, the `<template>` content will remain hidden in the DOM and won't be used in any patch.
 
 To prevent components from updating unrelated parts of the DOM, `<template for="...">` elements can only patch markers inside the `<template>` parent's DOM tree. The only exception is `<template>` elements that are direct children of the `<body>` element — they can also patch `<head>` elements to allow updating `<title>` and other `<head>` elements.
 
