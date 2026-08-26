@@ -496,7 +496,6 @@ You can omit the end value if the area only spans one track.
 }
 
 .box1 {
-  grid-column: 1 / 4;
   grid-row: 1 / 3;
 }
 
@@ -577,17 +576,6 @@ A grid item can become a grid container. In the following example, we extend the
 
 If we set `box1` to `display: grid`, we can give it a track definition and it too will become a grid. The items then lay out on this new grid.
 
-```css
-.box1 {
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 3;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-```
-
 ```html
 <div class="wrapper">
   <div class="box box1">
@@ -625,7 +613,12 @@ If we set `box1` to `display: grid`, we can give it a track definition and it to
 }
 
 .box1 {
-  grid-column: 1 / 4;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .nested {
