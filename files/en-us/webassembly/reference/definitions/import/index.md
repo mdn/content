@@ -141,7 +141,7 @@ When importing a JavaScript [`WebAssembly.Memory`](/en-US/docs/WebAssembly/Refer
 
 This includes:
 
-- An optional memory name
+- An optional memory identifier
 - An initial size, in units of 64KiB pages
 - A maximum size, required only if you specify `shared`
 - The `shared` keyword, which denotes a shared memory
