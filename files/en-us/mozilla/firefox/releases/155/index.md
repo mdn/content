@@ -68,7 +68,10 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### WebAssembly -->
+### WebAssembly
+
+- The [Wide arithmetic](/en-US/docs/WebAssembly/Reference/Numeric#wide_arithmetic) proposal has been implemented, which allows 128-bit integer additions, multiplications, and subtractions to be represented in Wasm.
+  ([Firefox bug 2062374](https://bugzil.la/2062374)).
 
 <!-- #### Removals -->
 
