@@ -174,43 +174,45 @@ These features are shipping in Firefox 155 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
-- **Scroll-driven animations** (Nightly): `layout.css.scroll-driven-animations.enabled`
+- **Scroll-driven animations**: `layout.css.scroll-driven-animations.enabled`
 
   [Scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) let an animation progress with the scroll position of a scroller, or with the position of an element within its scroller, rather than with time.
   This preference covers the {{cssxref("scroll-timeline")}} and {{cssxref("view-timeline")}} properties and their longhands, including the {{cssxref("view-timeline-inset")}} property, along with the {{cssxref("animation-timeline/scroll", "scroll()")}} and {{cssxref("animation-timeline/view", "view()")}} functional notations.
+  In this release the `view-timeline-inset` longhand was added to the `view-timeline` shorthand. ([Firefox bug 2046602](https://bugzil.la/2046602)).
 
-- **CSS Typed Object Model Level 1** (Nightly): `layout.css.typed-om.enabled`
+- **CSS Typed Object Model Level 1**: `layout.css.typed-om.enabled`
 
-  The [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) exposes CSS values as typed JavaScript objects rather than strings, which simplifies manipulating CSS from script.
+  The [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) exposes CSS values as typed JavaScript objects rather than strings, which simplifies manipulating CSS from script. ([Firefox bug 1278697](https://bugzil.la/1278697)).
 
-- **`at-rule()` support queries** (Nightly): `layout.css.supports.at-rule.enabled`
+- **`at-rule()` support queries**: `layout.css.supports.at-rule.enabled`
 
-  The [`at-rule()`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#at-rule) function in the {{cssxref("@supports")}} at-rule lets you test whether the browser supports a given CSS at-rule, for example `@supports at-rule(@scope)`.
+  The [`at-rule()`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#at-rule) function in the {{cssxref("@supports")}} at-rule lets you test whether the browser supports a given CSS at-rule, for example `@supports at-rule(@scope)`. ([Firefox bug 2060754](https://bugzil.la/2060754)).
 
-- **Audio Session API** (Nightly): `dom.audio_session.enabled`
+- **Audio Session API**: `dom.audio_session.enabled`
 
-  The [Audio Session API](/en-US/docs/Web/API/Audio_Session_API) lets a site declare how its audio should behave relative to other audio playing on the device, such as whether it should mix with, duck, or interrupt other audio. It is now enabled by default in Nightly. ([Firefox bug 2055710](https://bugzil.la/2055710)).
+  The [Audio Session API](/en-US/docs/Web/API/Audio_Session_API) lets a site declare how its audio should behave relative to other audio playing on the device, such as whether it should mix with, duck, or interrupt other audio. ([Firefox bug 2055710](https://bugzil.la/2055710)).
 
-- **CSS basic shapes allow `farthest-corner` and `closest-corner` keywords** (Nightly): `layout.css.ellipse-corners.enabled`
+- **CSS basic shapes allow `farthest-corner` and `closest-corner` keywords**: `layout.css.ellipse-corners.enabled`
 
-  The `farthest-corner` and `closest-corner` keywords can be used for specifying the radii values of the {{cssxref("basic-shape/ellipse", "ellipse()")}} and {{cssxref("basic-shape/circle", "circle()")}} CSS basic shapes.
+  The `farthest-corner` and `closest-corner` keywords can be used for specifying the radii values of the {{cssxref("basic-shape/ellipse", "ellipse()")}} and {{cssxref("basic-shape/circle", "circle()")}} CSS basic shapes. ([Firefox bug 2037673](https://bugzil.la/2037673)).
 
 - **Customizable `<select>` elements**: `dom.select.customizable_select.enabled`
 
-  [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) let you fully style a {{htmlelement("select")}} element and its picker, using the {{cssxref("::picker()", "::picker(select)")}}, {{cssxref("::checkmark")}}, and {{cssxref("::picker-icon")}} pseudo-elements together with the [`base-select`](/en-US/docs/Web/CSS/Reference/Properties/appearance#base-select) value of the {{cssxref("appearance")}} property.
+  [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) let you fully style a {{htmlelement("select")}} element and its picker, using the {{cssxref("::picker()", "::picker(select)")}}, {{cssxref("::checkmark")}}, and {{cssxref("::picker-icon")}} pseudo-elements together with the [`base-select`](/en-US/docs/Web/CSS/Reference/Properties/appearance#base-select) value of the {{cssxref("appearance")}} property. ([Firefox bug 1974787](https://bugzil.la/1974787)).
 
 - **Truncating content with `line-clamp`**: `layout.css.line-clamp.enabled`
 
-  The {{cssxref("line-clamp")}} CSS property works without the `-webkit-` vendor prefix, though at this stage it does not support the `no-ellipsis` and `<string>` values.
+  The {{cssxref("line-clamp")}} CSS property works without the `-webkit-` vendor prefix, and now also supports the `no-ellipsis` keyword and `<string>` values for choosing what is shown where the text is clamped. ([Firefox bug 2042999](https://bugzil.la/2042999) and [Firefox bug 2043000](https://bugzil.la/2043000)).
 
 - **Scoped custom element registries**: `dom.scoped-custom-element-registries.enabled`
 
-  A {{domxref("CustomElementRegistry")}} can be constructed and passed to {{domxref("Element.attachShadow()")}}, so that a shadow root can define custom elements that do not clash with those defined in the global registry.
+  A {{domxref("CustomElementRegistry")}} can be constructed and passed to {{domxref("Element.attachShadow()")}}, so that a shadow root can define custom elements that do not clash with those defined in the global registry. ([Firefox bug 2018900](https://bugzil.la/2018900)).
+  This release also adds the `customelementregistry` global attribute, for selecting the registry an element is associated with from markup. ([Firefox bug 2029965](https://bugzil.la/2029965)).
 
-- **Buffer boundary assertions in regular expressions** (Nightly): `javascript.options.experimental.regexp_buffer_boundaries`
+- **Buffer boundary assertions in regular expressions**: `javascript.options.experimental.regexp_buffer_boundaries`
 
   The [TC39 RegExp buffer boundaries proposal](https://github.com/tc39/proposal-regexp-buffer-boundaries) adds the [`\A`, `\z`, and `\Z` assertions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Buffer_boundary_assertion) to regular expressions. These match the start or end of the entire input regardless of whether the {{jsxref("RegExp/multiline", "m")}} flag is set. ([Firefox bug 2047706](https://bugzil.la/2047706)).
 
 - **`border-area` value for `background-clip`**: `layout.css.background-clip.border-area.enabled`
 
-  The [`border-area`](/en-US/docs/Web/CSS/Reference/Properties/background-clip#border-area) value of the {{cssxref("background-clip")}} CSS property clips the background to the area painted by the element's border, which makes it possible to use a gradient or image as a border.
+  The [`border-area`](/en-US/docs/Web/CSS/Reference/Properties/background-clip#border-area) value of the {{cssxref("background-clip")}} CSS property clips the background to the area painted by the element's border, which makes it possible to use a gradient or image as a border. ([Firefox bug 2045230](https://bugzil.la/2045230)).
