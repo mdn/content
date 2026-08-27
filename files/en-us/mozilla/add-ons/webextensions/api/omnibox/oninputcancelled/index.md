@@ -6,7 +6,7 @@ browser-compat: webextensions.api.omnibox.onInputCancelled
 sidebar: addonsidebar
 ---
 
-Fired when the user has cancelled their interaction with your extension (for example, by clicking outside the address bar).
+Fired when the user has canceled their interaction with your extension (for example, by clicking outside the address bar).
 
 ## Syntax
 
