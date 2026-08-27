@@ -35,27 +35,21 @@ There are many other attributes to achieve various purposes:
 - Use both [`width`](#width) and [`height`](#height) to set the intrinsic size of the image, allowing it to take up space before it loads, to mitigate content layout shifts.
 - Responsive image hints with [`sizes`](#sizes) and [`srcset`](#srcset) (see also the {{htmlelement("picture")}} element and our [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images) tutorial).
 
-## Supported image formats
+## Choosing an image format
 
 The HTML standard doesn't list what image formats to support, so {{glossary("user agent","user agents")}} may support different formats.
 
-> [!NOTE]
-> The [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types) provides comprehensive information about image formats and their web browser support.
-> This section is just a summary!
+Choose an image format based on factors such as compression, quality, browser support, and whether you need features such as transparency or animation.
+The [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types) explains the trade-offs in detail.
 
-The image file formats that are most commonly used on the web are:
+For raster images, prefer [WebP](/en-US/docs/Web/Media/Guides/Formats/Image_types#webp_image) or [AVIF](/en-US/docs/Web/Media/Guides/Formats/Image_types#avif_image), which generally provide better compression than PNG, JPEG, and GIF.
+If you need to support browsers without WebP or AVIF support, use the {{HTMLElement("picture")}} element to provide a PNG or JPEG fallback.
 
-- [APNG (Animated Portable Network Graphics)](/en-US/docs/Web/Media/Guides/Formats/Image_types#apng_animated_portable_network_graphics) — Good choice for lossless animation sequences (GIF is less performant)
-- [AVIF (AV1 Image File Format)](/en-US/docs/Web/Media/Guides/Formats/Image_types#avif_image) — Good choice for both images and animated images due to high performance.
-- [GIF (Graphics Interchange Format)](/en-US/docs/Web/Media/Guides/Formats/Image_types#gif_graphics_interchange_format) — Good choice for _simple_ images and animations.
-- [JPEG (Joint Photographic Expert Group image)](/en-US/docs/Web/Media/Guides/Formats/Image_types#jpeg_joint_photographic_experts_group_image) — Good choice for lossy compression of still images (currently the most popular).
-- [PNG (Portable Network Graphics)](/en-US/docs/Web/Media/Guides/Formats/Image_types#png_portable_network_graphics) — Good choice for lossless compression of still images (slightly better quality than JPEG).
-- [SVG (Scalable Vector Graphics)](/en-US/docs/Web/Media/Guides/Formats/Image_types#svg_scalable_vector_graphics) — Vector image format. Use for images that must be drawn accurately at different sizes.
-- [WebP (Web Picture format)](/en-US/docs/Web/Media/Guides/Formats/Image_types#webp_image) — Excellent choice for both images and animated images
+For images that must be drawn accurately at different sizes, use [SVG](/en-US/docs/Web/Media/Guides/Formats/Image_types#svg_scalable_vector_graphics).
 
-Formats like [WebP](/en-US/docs/Web/Media/Guides/Formats/Image_types#webp_image) and [AVIF](/en-US/docs/Web/Media/Guides/Formats/Image_types#avif_image) are recommended as they perform much better than PNG, JPEG, GIF for both still and animated images.
-
-SVG remains the recommended format for images that must be drawn accurately at different sizes.
+When browser support allows, consider [JPEG XL](https://jpeg.org/jpegxl/) for large, high-resolution raster images.
+It supports progressive rendering, which can display an initial version before the full image downloads.
+Use the {{HTMLElement("picture")}} element to provide a fallback for browsers that do not support it.
 
 ## Image loading errors
 
@@ -79,7 +73,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     >
     > - Non-visual browsers (such as those used by people with visual impairments)
     > - The user chooses not to display images (saving bandwidth, privacy reasons)
-    > - The image is invalid or an [unsupported type](#supported_image_formats)
+    > - The image is invalid or an [unsupported type](#choosing_an_image_format)
     >
     > In these cases, the browser may replace the image with the text in the element's `alt` attribute. For these reasons and others, provide a useful value for `alt` whenever possible.
 
