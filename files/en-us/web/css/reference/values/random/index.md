@@ -53,7 +53,7 @@ random(--unique-base, 400px, 100px)
 random(fixed 0.5, 1em, 40vw)
 random(--unique-base property-scoped, 100dpi, 300dpi)
 
-/* With random-key and step values */
+/* With <random-key> and step interval */
 random(property-scoped, 0deg, 360deg, 45deg)
 random(--my-base, 1em, 3rem, 2px)
 ```
