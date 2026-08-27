@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`rule-color`** [CSS](/en-US/docs/Web/CSS) property defines the colors of the lines drawn between columns and rows in multi-column grid, flex, and multi-col layouts, setting the colors of the column and row rules to the same value.
+The **`rule-color`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property defines the colors of the lines drawn between columns and rows in multi-column grid, flex, and multi-col layouts, setting the colors of the column and row rules to the same value.
 
 {{InteractiveExample("CSS Demo: rule-color")}}
 

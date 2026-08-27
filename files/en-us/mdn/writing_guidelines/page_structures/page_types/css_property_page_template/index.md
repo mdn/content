@@ -91,6 +91,16 @@ See the [Interactive examples](/en-US/docs/MDN/Writing_guidelines/Page_structure
 
 Add this section only for shorthand properties, such as [animation](/en-US/docs/Web/CSS/Reference/Properties/animation), to list all the related longhand properties.
 
+Introduce the values with one of the following sentences as appropriate:
+
+```md
+This property is a shorthand for the following CSS properties:
+
+This property is a shorthand for the following logical properties:
+
+This property is a shorthand for the following physical properties:
+```
+
 ## Syntax
 
 Include the common use cases as a code block and describe the component subvalues that make up a complete value.
