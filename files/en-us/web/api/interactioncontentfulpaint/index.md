@@ -52,7 +52,7 @@ At present this is scoped to increasing paint sizes, so it can be used to measur
 
 ### Using `navigationId` and `interactionId`
 
-For {{glossary("Soft Navigation", "Soft Navigations")}}, paints happening before the URL is updated may wish to considered for the {{Glossary("Largest Contentful Paint", "Largest Contentful Paint (LCP)")}} of the soft navigation that is in flight. For the LCP case, {{domxref("PerformanceSoftNavigation.getLargestInteractionContentfulPaint()")}} and {{domxref("InteractionContentfulPaint.interactionId")}} are more effective for calculating that metric to consider all relevant paint regardless of the `navigationId`.
+For {{glossary("Soft Navigation", "Soft Navigations")}}, paints happening before the URL is updated may be considered for the {{Glossary("Largest Contentful Paint", "Largest Contentful Paint (LCP)")}} of the soft navigation that is in flight. For the LCP case, {{domxref("PerformanceSoftNavigation.getLargestInteractionContentfulPaint()")}} and {{domxref("InteractionContentfulPaint.interactionId")}} are more effective at considering all relevant paints regardless of the `navigationId`, when calculating that metric.
 
 ### Relationship with Event Timing and INP
 

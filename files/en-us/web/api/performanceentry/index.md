@@ -42,7 +42,7 @@ The `PerformanceEntry` instances will always be one of the following subclasses:
 - {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}}
   - : A string representing the type of performance metric. For example, `"mark"` when {{domxref("PerformanceMark")}} is used.
 - {{domxref("PerformanceEntry.navigationId")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : The id of the navigation the performance entry was emitted under
+  - : The ID of the navigation the performance entry was emitted under.
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} representing the starting time for the performance metric.
 

@@ -91,11 +91,11 @@ The following interfaces are present in the Performance API:
 - {{domxref("PerformanceScriptTiming")}} {{Experimental_Inline}}
   - : Provides metrics on individual scripts causing [long animation frames (LoAFs)](/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing#what_is_a_long_animation_frame).
 - {{domxref("PerformanceServerTiming")}}
-  - : Surfaces server metrics that are sent with the response in the {{HTTPHeader("Server-Timing")}} HTTP header. This is available through {{domxref("PerformanceNavigationTiming")}} and {{domxref("PerformanceResourceTiming")}}
+  - : Surfaces server metrics sent with the response in the {{HTTPHeader("Server-Timing")}} HTTP header. This is available through {{domxref("PerformanceNavigationTiming")}} and {{domxref("PerformanceResourceTiming")}} entries.
 - {{domxref("PerformanceSoftNavigation")}} {{Experimental_Inline}}
   - : Measures when {{glossary("Soft Navigation", "Soft Navigations")}} occur.
 - {{domxref("TaskAttributionTiming")}} {{Experimental_Inline}}
-  - : Identifies the type of task and the container that is responsible for the long task. This is available through {{domxref("PerformanceLongTaskTiming")}} entries.
+  - : Identifies the type of task and the container that is responsible for a {{glossary("long task")}}. This is available through {{domxref("PerformanceLongTaskTiming")}} entries.
 - {{domxref("VisibilityStateEntry")}}
   - : Measures the timing of page visibility state changes, i.e., when a tab changes from the foreground to the background or vice versa.
 
