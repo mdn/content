@@ -244,11 +244,11 @@ Because each imported function in this example has the same `type`, we can dedup
 
 ```wat
 (import "importNums"
-    (item "num1")
-    (item "num3")
-    (item "num5")
-    (func (result i32))
-  )
+  (item "num1")
+  (item "num3")
+  (item "num5")
+  (func (result i32))
+)
 ```
 
 It is import to note that in the second form, you can't specify name identifiers for the different values in the text format, threfore you have to use index values when referring to them:
