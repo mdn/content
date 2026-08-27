@@ -903,7 +903,7 @@ _Elliptical arc curves_ are curves defined as a portion of an ellipse. It is som
             <ul>
               <li>
                 <code><var>large-arc-flag</var></code> allows you to choose one of
-                the large arc (<code>1</code>) or small arc (<code>0</code>),
+                large arc (<code>1</code>) or small arc (<code>0</code>),
               </li>
               <li>
                 <code><var>sweep-flag</var></code> allows you to choose one of the
