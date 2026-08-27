@@ -496,6 +496,7 @@ You can omit the end value if the area only spans one track.
 }
 
 .box1 {
+  grid-column: 1 / 4;
   grid-row: 1 / 3;
 }
 
