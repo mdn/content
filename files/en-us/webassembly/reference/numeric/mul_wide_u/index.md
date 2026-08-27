@@ -7,7 +7,7 @@ browser-compat: webassembly.instructions.mul_wide_u
 sidebar: webassemblysidebar
 ---
 
-The **`mul_wide_u`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) multiplies two unsigned 64-bit integers to produce a 128-bit result represented by two 64-bit integers.
+The **`mul_wide_u`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) multiplies two unsigned 64-bit integers to produce an unsigned 128-bit result represented by two 64-bit integers.
 
 {{InteractiveExample("Wat Demo: mul_wide_u", "tabbed-taller")}}
 
@@ -34,7 +34,7 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 ## WAT syntax
 
 ```plain
-i64.mul_wide_u <input1> <input2> <output1> <output2>
+i64.mul_wide_u
 ```
 
 - `i64.mul_wide_u`
@@ -47,16 +47,16 @@ None.
 ### Operand stack
 
 ```plain
-[input1:i64 input2:i64] -> [output1:i64 output2:i64]
+[low_input:i64 high_input:i64] -> [low_output:i64 high_output:i64]
 ```
 
-- `input1`
+- `low_input`
   - : The first [`i64`](/en-US/docs/WebAssembly/Reference/Value_types/i64) input.
-- `input2`
+- `high_input`
   - : The second `i64` input.
-- `output1`
+- `low_output`
   - : An `i64` representing the low 64 bits of the result.
-- `output2`
+- `high_output`
   - : An `i64` representing the high 64 bits of the result.
 
 ### Binary encoding
@@ -67,7 +67,9 @@ None.
 
 ## Description
 
-The `mul_wide_u` instruction provides a mechanism by which two unsigned `i64` values can be multiplied together to output a 128-bit result represented by two `i64` values. This so-called wide arithmetic is useful in any situation where larger-than-64-bit numbers are being used in source languages with Wasm as a compile target, for example cryptographic algorithms.
+The `mul_wide_u` instruction multiplies two unsigned `i64` values to produce an unsigned 128-bit result represented by a pair of `i64` values. Such operations are termed **wide arithmetic**, which is useful in any situation where larger-than-64-bit numbers are being used in source languages with Wasm as a compile target, for example cryptographic algorithms.
+
+More importantly, it also allows engines to generate more efficient machine code for these operations than is possible with `i64` arithmetic operations.
 
 ## Specifications
 

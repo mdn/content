@@ -35,7 +35,7 @@ In this example, `i64.const 0xffffffff` pushes the value `0xffffffff` (`42949672
 ## WAT syntax
 
 ```plain
-i64.extend32_s <input> <output>
+i64.extend32_s
 ```
 
 - `i64.extend32_s`

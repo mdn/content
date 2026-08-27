@@ -61,13 +61,13 @@ WebAssembly numeric instructions.
 ## Wide arithmetic
 
 - [`add128`](/en-US/docs/WebAssembly/Reference/Numeric/add128)
-  - : Add two 128-bit integers, represented by four 64-bit integers.
+  - : Add two 128-bit integers, represented by four 64-bit integers, to produce a 128-bit result represented by two 64-bit integers.
 - [`mul_wide_s`](/en-US/docs/WebAssembly/Reference/Numeric/mul_wide_s)
-  - : Multiply two signed 64-bit integers to produce a 128-bit result represented by two 64-bit integers.
+  - : Multiply two signed 64-bit integers to produce a signed 128-bit result represented by two 64-bit integers.
 - [`mul_wide_u`](/en-US/docs/WebAssembly/Reference/Numeric/mul_wide_u)
-  - : Multiply two unsigned 64-bit integers to produce a 128-bit result represented by two 64-bit integers.
+  - : Multiply two unsigned 64-bit integers to produce an unsigned 128-bit result represented by two 64-bit integers.
 - [`sub128`](/en-US/docs/WebAssembly/Reference/Numeric/sub128)
-  - : Subtract one 128-bit integer — represented by two 64-bit integers — from another.
+  - : Subtract one 128-bit integer — represented by two 64-bit integers — from another, to produce a 128-bit result represented by two 64-bit integers.
 
 ## Conversion
 

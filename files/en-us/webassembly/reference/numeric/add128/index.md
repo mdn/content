@@ -7,7 +7,7 @@ browser-compat: webassembly.instructions.add128
 sidebar: webassemblysidebar
 ---
 
-The **`add128`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) adds two 128-bit integers, represented by four 64-bit integers.
+The **`add128`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) adds two 128-bit integers, represented by four 64-bit integers, to produce a 128-bit result represented by two 64-bit integers.
 
 {{InteractiveExample("Wat Demo: add128", "tabbed-taller")}}
 
@@ -36,7 +36,7 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 ## WAT syntax
 
 ```plain
-i64.add128 <input1> <input2> <input3> <input4> <output1> <output2>
+i64.add128
 ```
 
 - `i64.add128`
@@ -49,20 +49,20 @@ None.
 ### Operand stack
 
 ```plain
-[input1:i64 input2:i64 input3:i64 input4:i64] -> [output1:i64 output2:i64]
+[low_left_input:i64 high_left_input:i64 low_right_input:i64 high_right_input:i64] -> [low_output:i64 high_output:i64]
 ```
 
-- `input1`
+- `low_left_input`
   - : An [`i64`](/en-US/docs/WebAssembly/Reference/Value_types/i64) representing the low 64 bits of the left-hand-side 128-bit integer.
-- `input2`
+- `high_left_input`
   - : An `i64` representing the high 64 bits of the left-hand-side 128-bit integer.
-- `input3`
+- `low_right_input`
   - : An `i64` representing the low 64 bits of the right-hand-side 128-bit integer.
-- `input4`
+- `high_right_input`
   - : An `i64` representing the high 64 bits of the right-hand-side 128-bit integer.
-- `output1`
+- `low_output`
   - : An `i64` representing the low 64 bits of the result.
-- `output2`
+- `high_output`
   - : An `i64` representing the high 64 bits of the result.
 
 ### Binary encoding
@@ -73,7 +73,9 @@ None.
 
 ## Description
 
-The `add128` instruction provides a mechanism by which two 128-bit integers — represented by four `i64` values — can be added together, with the result represented by two `i64` values. This so-called wide arithmetic is useful in any situation where larger-than-64-bit numbers are being used in source languages with Wasm as a compile target, for example cryptographic algorithms.
+The `add128` instruction adds two 128-bit integers — represented by four `i64` values — together to produce a 128-bit result represented by two `i64` values. Such operations are termed **wide arithmetic**, which is useful in any situation where larger-than-64-bit numbers are being used in source languages with Wasm as a compile target, for example cryptographic algorithms.
+
+More importantly, it also allows engines to generate more efficient machine code for these operations than is possible with `i64` arithmetic operations.
 
 ## Specifications
 
