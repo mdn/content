@@ -157,7 +157,7 @@ There is a specific type of agile methodology called **scrum**, which has a fixe
 - Before each sprint, potential new work items are discussed, and if accepted into the sprint, they are put into a backlog.
 - Work items are taken from the backlog and move through different phases towards completion, such as "in progress" and "in review".
 - The scrum master holds short daily **stand-up meetings** where everyone talks about the progress they've made and any issues they might be having, so problems can be caught early.
-- At end of each sprint, the scrum master holds a retrospective meeting to review what went well, what didn't go so well, and what lessons can be learnt before the next sprint.
+- At end of each sprint, the scrum master holds a retrospective meeting to review what went well, what didn't go so well, and what lessons can be learned before the next sprint.
 
 Another type of agile methodology is called **kanban**, which has less rules than scrum, doesn't use sprints, and tends to focus more on the continuous improvement aspects of agile. Kanban is particularly useful for managing continuous processes that don't have a clear defined end, such as customer support tickets.
 

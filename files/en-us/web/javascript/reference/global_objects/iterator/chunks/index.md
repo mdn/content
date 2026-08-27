@@ -3,9 +3,13 @@ title: Iterator.prototype.chunks()
 short-title: chunks()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/chunks
 page-type: javascript-instance-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Iterator.chunks
 sidebar: jsref
 ---
+
+{{SeeCompatTable}}
 
 The **`chunks()`** method of {{jsxref("Iterator")}} instances returns a new [iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_objects) that splits the elements from the original iterator into consecutive array chunks. Each time the helper is iterated, it gets the specified number of elements from the underlying iterator and yields them together.
 

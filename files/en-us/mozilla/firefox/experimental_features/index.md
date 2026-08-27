@@ -77,6 +77,20 @@ The HTML [`<input type="color">`](/en-US/docs/Web/HTML/Reference/Elements/input/
 - `dom.forms.html_color_picker.enabled`
   - : Set to `true` to enable.
 
+### `headingoffset` and `headingreset` attributes
+
+The [`headingoffset`](/en-US/docs/Web/HTML/Reference/Global_attributes/headingoffset) global attribute increases the computed heading level of the [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) inside the element it is set on, so that a component can use the same heading markup wherever it appears in a page. The [`headingreset`](/en-US/docs/Web/HTML/Reference/Global_attributes/headingreset) attribute stops the offsets of ancestor elements from applying to the headings inside the element it is set on. ([Firefox bug 1974383](https://bugzil.la/1974383)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 153           | No                  |
+| Developer Edition | 153           | No                  |
+| Beta              | 153           | No                  |
+| Release           | 153           | No                  |
+
+- `dom.headingoffset.enabled`
+  - : Set to `true` to enable.
+
 ## CSS
 
 ### `circle()` and `ellipse()` allow `farthest-corner` and `closest-corner` keywords

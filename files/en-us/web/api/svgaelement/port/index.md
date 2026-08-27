@@ -3,10 +3,12 @@ title: "SVGAElement: port property"
 short-title: port
 slug: Web/API/SVGAElement/port
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.SVGAElement.port
 ---
 
-{{APIRef("SVG")}}
+{{APIRef("SVG")}}{{SeeCompatTable}}
 
 The **`port`** property of the {{domxref("SVGAElement")}} interface returns a string representing the port component, if any, of the referenced URL.
 

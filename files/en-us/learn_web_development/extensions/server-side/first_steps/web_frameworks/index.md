@@ -147,7 +147,7 @@ Web frameworks often provide a mechanism to make it easy to generate other forma
 For example, the Django template system allows you to specify variables using a "double-handlebars" syntax (e.g., `\{{ variable_name }}`), which will be replaced by values passed in from the view function when a page is rendered. The template system also provides support for expressions (with syntax: `{% expression %}`), which allow templates to perform simple operations like iterating list values passed into the template.
 
 > [!NOTE]
-> Many other templating systems use a similar syntax, e.g.: Jinja2 (Python), handlebars (JavaScript), moustache (JavaScript), etc.
+> Many other templating systems use a similar syntax, e.g.: Jinja2 (Python), Handlebars (JavaScript), Mustache (JavaScript), etc.
 
 The code snippet below shows how this works. Continuing the "youngest team" example from the previous section, the HTML template is passed a list variable called `youngest_teams` by the view. Inside the HTML skeleton we have an expression that first checks if the `youngest_teams` variable exists, and then iterates it in a `for` loop. On each iteration the template displays the team's `team_name` value in a list item.
 
@@ -309,7 +309,7 @@ Some of the features provided by Mojolicious are:
 
 [Spring Boot](https://spring.io/projects/spring-boot/) is one of a number of projects provided by [Spring](https://spring.io/). It is a good starting point for doing server-side web development using [Java](https://www.java.com/).
 
-Although definitely not the only framework based on [Java](https://www.java.com/) it is easy to use to create stand-alone, production-grade Spring-based Applications that you can "just run". It is an opinionated view of the Spring platform and third-party libraries but allows to start with minimum fuss and configuration.
+Although definitely not the only framework based on [Java](https://www.java.com/) it is easy to use to create stand-alone, production-grade Spring-based Applications that you can "just run". It is an opinionated view of the Spring platform and third-party libraries but allows you to start with minimum fuss and configuration.
 
 It can be used for small problems but its strength is building larger scale applications that use a cloud approach. Usually multiple applications run in parallel talking to each other, with some providing user interaction and others doing back end work (e.g., accessing databases or other services). Load balancers help to ensure redundancy and reliability or allow geolocated handling of user requests to ensure responsiveness.
 

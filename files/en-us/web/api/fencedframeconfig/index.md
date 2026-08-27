@@ -3,11 +3,11 @@ title: FencedFrameConfig
 slug: Web/API/FencedFrameConfig
 page-type: web-api-interface
 status:
-  - experimental
+  - deprecated
 browser-compat: api.FencedFrameConfig
 ---
 
-{{SeeCompatTable}}{{APIRef("Fenced Frame API")}}
+{{APIRef("Fenced Frame API")}}
 
 The **`FencedFrameConfig`** interface represents the navigation of a {{htmlelement("fencedframe")}}, i.e., what content will be displayed in it.
 
@@ -19,7 +19,7 @@ A `FencedFrameConfig` object instance has an exposed method, but it also maps to
 
 ## Instance methods
 
-- {{domxref("FencedFrameConfig.setSharedStorageContext", "setSharedStorageContext()")}} {{experimental_inline}}
+- {{domxref("FencedFrameConfig.setSharedStorageContext", "setSharedStorageContext()")}} {{deprecated_inline}}
   - : Passes in data from the embedding document to the `<fencedframe>`'s shared storage.
 
 ## Examples

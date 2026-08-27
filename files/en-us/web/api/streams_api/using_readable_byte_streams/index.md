@@ -368,7 +368,7 @@ function readStream(reader) {
 }
 ```
 
-#### Cancelling the stream using the reader
+#### Canceling the stream using the reader
 
 We can use {{domxref("ReadableStreamBYOBReader.cancel()")}} to cancel the stream.
 For this example we call the method if a button is clicked with a reason "user choice" (other HTML and code for the button not shown).
@@ -382,7 +382,7 @@ button.addEventListener("click", () => {
 });
 ```
 
-{{domxref("ReadableStreamBYOBReader.releaseLock()")}} can be used to release the reader without cancelling the stream.
+{{domxref("ReadableStreamBYOBReader.releaseLock()")}} can be used to release the reader without canceling the stream.
 Note however that any outstanding read requests will immediately be rejected.
 A new reader can be acquired later on to read the remaining chunks.
 
