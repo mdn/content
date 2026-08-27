@@ -302,7 +302,7 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
 - {{DOMxRef("Element.requestFullscreen()")}}
   - : Asynchronously asks the browser to make the element fullscreen.
 - {{DOMxRef("Element.requestPointerLock()")}}
-  - : Allows to asynchronously ask for the pointer to be locked on the given element.
+  - : Allows you to asynchronously ask for the pointer to be locked on the given element.
 - {{domxref("Element.scroll()")}}
   - : Scrolls to a particular set of coordinates inside a given element.
 - {{domxref("Element.scrollBy()")}}

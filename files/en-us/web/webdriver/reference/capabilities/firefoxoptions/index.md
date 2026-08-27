@@ -169,7 +169,7 @@ attached, an error will be returned.
 
 Arguments to launch the intent with. Under the hood, geckodriver uses [Android am](https://developer.android.com/tools/adb#am) to start the Android application
 under test. The given intent arguments are appended to the `am start` command. See Android's [specification for intent arguments](https://developer.android.com/tools/adb#IntentSpec) for
-details. This allows to control how the application is launched and to include optional extras for enabling and
+details. This allows you to control how the application is launched and to include optional extras for enabling and
 disabling features. For example, to launch with the view action and a specified URL before navigating as part of a
 test, include:
 

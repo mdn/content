@@ -81,7 +81,7 @@ Highlights:
 
 #### Canvas API
 
-- {{domxref("HTMLCanvasElement.captureStream()")}} and `CanvasCaptureMediaStream` have been added and allow to stream the display of a {{HTMLElement("canvas")}} in real-time ([Firefox bug 1032848](https://bugzil.la/1032848)).
+- {{domxref("HTMLCanvasElement.captureStream()")}} and `CanvasCaptureMediaStream` have been added and allow you to stream the display of a {{HTMLElement("canvas")}} in real-time ([Firefox bug 1032848](https://bugzil.la/1032848)).
 - {{domxref("MediaStream.id")}} now returns the unique id of a stream ([Firefox bug 1089798](https://bugzil.la/1089798)).
 - The initial value of {{domxref("CanvasRenderingContext2D.filter")}} is now correctly set to `none` ([Firefox bug 1163124](https://bugzil.la/1163124)).
 

@@ -91,7 +91,7 @@ No notable changes.
 
 #### WebDriver BiDi
 
-- Added support for the [input.setFiles](https://w3c.github.io/webdriver-bidi/#command-input-setFiles) command which allows to set or update the files for `<input>` elements with `type="file"` ([Firefox bug 1855040](https://bugzil.la/1855040)).
+- Added support for the [input.setFiles](https://w3c.github.io/webdriver-bidi/#command-input-setFiles) command which allows you to set or update the files for `<input>` elements with `type="file"` ([Firefox bug 1855040](https://bugzil.la/1855040)).
 - Added support for the [storage.deleteCookies](https://w3c.github.io/webdriver-bidi/#command-storage-deleteCookies) command to delete cookies ([Firefox bug 1854581](https://bugzil.la/1854581)).
 - Added support for "userContext" as a field of the "partition" argument for cookie commands ([Firefox bug 1875255](https://bugzil.la/1875255)).
 - Fixed an issue where [storage.getCookies](https://w3c.github.io/webdriver-bidi/#command-storage-getCookies) would not retrieve all expected cookies for a given "sourceOrigin" ([Firefox bug 1884647](https://bugzil.la/1884647)).

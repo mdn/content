@@ -309,7 +309,7 @@ Some of the features provided by Mojolicious are:
 
 [Spring Boot](https://spring.io/projects/spring-boot/) is one of a number of projects provided by [Spring](https://spring.io/). It is a good starting point for doing server-side web development using [Java](https://www.java.com/).
 
-Although definitely not the only framework based on [Java](https://www.java.com/) it is easy to use to create stand-alone, production-grade Spring-based Applications that you can "just run". It is an opinionated view of the Spring platform and third-party libraries but allows to start with minimum fuss and configuration.
+Although definitely not the only framework based on [Java](https://www.java.com/) it is easy to use to create stand-alone, production-grade Spring-based Applications that you can "just run". It is an opinionated view of the Spring platform and third-party libraries but allows you to start with minimum fuss and configuration.
 
 It can be used for small problems but its strength is building larger scale applications that use a cloud approach. Usually multiple applications run in parallel talking to each other, with some providing user interaction and others doing back end work (e.g., accessing databases or other services). Load balancers help to ensure redundancy and reliability or allow geolocated handling of user requests to ensure responsiveness.
 
