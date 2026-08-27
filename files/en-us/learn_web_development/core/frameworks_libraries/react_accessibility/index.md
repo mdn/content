@@ -173,7 +173,7 @@ Try it now: use the <kbd>Tab</kbd> key to navigate to one of the "Edit" buttons,
 
 ### Moving focus back to the edit button
 
-At first glance, getting React to move focus back to our "Edit" button when the edit is saved or cancelled appears deceptively easy. Surely we could add a condition to our `useEffect` to focus on the edit button if `isEditing` is `false`? Let's try it now — update your `useEffect()` call like so:
+At first glance, getting React to move focus back to our "Edit" button when the edit is saved or canceled appears deceptively easy. Surely we could add a condition to our `useEffect` to focus on the edit button if `isEditing` is `false`? Let's try it now — update your `useEffect()` call like so:
 
 ```jsx
 useEffect(() => {

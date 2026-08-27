@@ -11,7 +11,7 @@ Erasing part of what you have created might seem contradictory at first. But whe
 
 - **Clipping**, which refers to removing parts of elements defined by other parts. In this case, any half-transparent effects are not possible; it's an all-or-nothing approach.
 
-- **Masking**, which, on the other hand, allows soft edges by taking transparency and grey values of the mask into account.
+- **Masking**, which, on the other hand, allows soft edges by taking transparency and gray values of the mask into account.
 
 ## Creating clips
 

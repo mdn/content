@@ -163,7 +163,7 @@ The [`PreviousNext`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/t
 
 - [`EmbedLiveSample`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/embed_live_sample.rs) lets you embed the output of a code sample on a page, as described in [Live samples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples).
 - [`LiveSampleLink`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/live_sample_link.rs) creates a link to a page containing the output of a code sample on a page, as described in [Live samples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples).
-- [`EmbedGHLiveSample`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/embed_gh_live_sample.rs) allows to embed live samples from GitHub pages.
+- [`EmbedGHLiveSample`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/embed_gh_live_sample.rs) allows you to embed live samples from GitHub pages.
   You can get more information at [GitHub live samples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples#github_live_samples).
 
 ## Adding general-purpose formatting

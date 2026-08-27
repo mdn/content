@@ -421,7 +421,7 @@ You can add all kinds of things to the `scripts` property that help you do your 
 
 ## Summary
 
-This brings us to the end of our tour of package managers. Our next move is to build up a sample toolchain, putting all that we've learnt so far into practice.
+This brings us to the end of our tour of package managers. Our next move is to build up a sample toolchain, putting all that we've learned so far into practice.
 
 ## See also
 

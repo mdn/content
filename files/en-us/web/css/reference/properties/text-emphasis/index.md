@@ -153,4 +153,4 @@ h2 {
 ## See also
 
 - The longhand properties {{cssxref('text-emphasis-style')}}, {{cssxref('text-emphasis-color')}}.
-- The {{cssxref('text-emphasis-position')}} property allowing to define the position of the emphasis marks.
+- The {{cssxref('text-emphasis-position')}} property allowing you to define the position of the emphasis marks.

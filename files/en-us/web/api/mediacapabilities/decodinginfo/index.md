@@ -8,7 +8,7 @@ browser-compat: api.MediaCapabilities.decodingInfo
 
 {{APIRef("Media Capabilities API")}}{{AvailableInWorkers}}
 
-The **`decodingInfo()`** method of the {{domxref("MediaCapabilities")}} interface returns a promise that fulfils with information about how well the user agent can decode/display media with a given configuration.
+The **`decodingInfo()`** method of the {{domxref("MediaCapabilities")}} interface returns a promise that fulfills with information about how well the user agent can decode/display media with a given configuration.
 
 The resolved object contains three boolean properties `supported`, `smooth`, and `powerefficient`, which indicate whether decoding the media described would be supported, and if so, whether decoding would be smooth and power-efficient.
 
