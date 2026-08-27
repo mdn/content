@@ -948,7 +948,7 @@ _Elliptical arc curves_ are curves defined as a portion of an ellipse. It is som
           </li>
           <li>
             <code><var>large-arc-flag</var></code> and
-            <code><var>sweep-flag</var></code> allow you to choose which arc must be
+            <code><var>sweep-flag</var></code> allow you to choose which arc to
             draw; 4 possible arcs can be drawn using the other parameters.
             <ul>
               <li>
