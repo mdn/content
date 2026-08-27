@@ -31,7 +31,7 @@ _Node_ and _Express_ make it very easy to set up your computer in order to start
 
 ### What is the Express development environment?
 
-The _Express_ development environment includes an installation of _Nodejs_, the _npm package manager_, and (optionally) the _Express Application Generator_ on your local computer.
+The _Express_ development environment includes an installation of _Node.js_, the _npm package manager_, and (optionally) the _Express Application Generator_ on your local computer.
 
 _Node_ and the _npm_ package manager are installed together from prepared binary packages, installers, operating system package managers or from source (as shown in the following sections). _Express_ is then installed by npm as a dependency of your individual _Express_ web applications (along with other libraries like template engines, database drivers, authentication middleware, middleware to serve static files, etc.).
 
@@ -62,7 +62,7 @@ Other dependencies, such as database drivers, template engines, authentication e
 
 ## Installing Node
 
-In order to use _Express_ you will have to install _Nodejs_ and the [Node Package Manager (npm)](https://docs.npmjs.com/) on your operating system.
+In order to use _Express_ you will have to install _Node.js_ and the [Node Package Manager (npm)](https://docs.npmjs.com/) on your operating system.
 To make this easier we'll first install a node version manager, and then we'll use it to install the latest Long Term Supported (LTS) versions of node and npm.
 
 > [!NOTE]
@@ -126,7 +126,7 @@ A good way to do this is to use the "version" command in your terminal/command p
 v22.17.0
 ```
 
-The _Nodejs_ package manager _npm_ should also have been installed, and can be tested in the same way:
+The _Node.js_ package manager _npm_ should also have been installed, and can be tested in the same way:
 
 ```bash
 > npm -v

@@ -682,9 +682,9 @@ Once you stop the session, you'll return to the _Live Web Testing_ page, where y
 
 TestingBot has a [restful API](https://testingbot.com/support/api) that allows you to programmatically retrieve details of your account and existing tests, and annotate tests with further details, such as their pass/fail state which isn't recordable by manual testing alone.
 
-TestingBot has several API clients you can use to interact with the API, including clients for NodeJS, Python, Ruby, Java and PHP.
+TestingBot has several API clients you can use to interact with the API, including clients for Node.js, Python, Ruby, Java and PHP.
 
-Below is an example on how to interact with the TestingBot API with the NodeJS client [testingbot-api](https://www.npmjs.com/package/testingbot-api).
+Below is an example on how to interact with the TestingBot API with the Node.js client [testingbot-api](https://www.npmjs.com/package/testingbot-api).
 
 1. First, set up a new npm project to test this out, as detailed in [Setting up Node and npm](#setting_up_node_and_npm). Use a different directory name than before, like `tb-test` for example.
 2. Install the Node TestingBot wrapper using the following command:

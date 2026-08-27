@@ -9,7 +9,7 @@ By default, [view progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_a
 
 This guide explains how to modify timeline range names, specifically examining the various timeline range names, their meanings, and how they are used.
 
-Limiting the animation timeline to a specific portion of an named animation timeline range is discussed in the [insetting scroll animations guide](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets).
+Limiting the animation timeline to a specific portion of a named animation timeline range is discussed in the [insetting scroll animations guide](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets).
 
 ## View progress timeline primer
 

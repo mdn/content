@@ -77,7 +77,7 @@ Some of the things to consider when choosing a host:
 
 - How busy your site is likely to be and the cost of data and computing resources required to meet that demand.
 - Level of support for scaling horizontally (adding more machines) and vertically (upgrading to more powerful machines) and the costs of doing so.
-- Where the supplier has data centres, and hence where access is likely to be fastest.
+- Where the supplier has data centers, and hence where access is likely to be fastest.
 - The host's historical uptime and downtime performance.
 - Tools provided for managing the site — are they easy to use and are they secure (e.g., SFTP vs. FTP).
 - Inbuilt frameworks for monitoring your server.
