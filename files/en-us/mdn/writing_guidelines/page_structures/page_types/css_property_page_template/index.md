@@ -91,7 +91,7 @@ See the [Interactive examples](/en-US/docs/MDN/Writing_guidelines/Page_structure
 
 Add this section only for shorthand properties, such as [animation](/en-US/docs/Web/CSS/Reference/Properties/animation), to list all the related longhand properties.
 
-Introduce the values with one of the following sentences:
+Introduce the values with one of the following sentences as appropriate:
 
 ```md
 This property is a shorthand for the following CSS properties:
