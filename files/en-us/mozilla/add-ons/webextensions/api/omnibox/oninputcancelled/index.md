@@ -33,7 +33,7 @@ The listener function is passed no parameters.
 
 ```js
 browser.omnibox.onInputCancelled.addListener(() => {
-  console.log("The user cancelled the session.");
+  console.log("The user canceled the session.");
 });
 ```
 

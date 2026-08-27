@@ -202,7 +202,7 @@ function promptForDishChoice() {
       if (dialog.returnValue === "ok") {
         resolve(dialog.querySelector("select").value);
       } else {
-        reject(new Error("User cancelled dialog"));
+        reject(new Error("User canceled dialog"));
       }
     });
     document.body.appendChild(dialog);

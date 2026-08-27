@@ -124,7 +124,7 @@ draggableElement.addEventListener("drag", (event) => {
   if (time !== null && Date.now() - time > 1000) {
     event.preventDefault();
     output.textContent =
-      "Drag operation cancelled; if you are still dragging the node, then your browser does not support cancelling the drag programmatically.";
+      "Drag operation canceled; if you are still dragging the node, then your browser does not support canceling the drag programmatically.";
     time = null;
   }
 });

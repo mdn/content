@@ -173,7 +173,7 @@ try {
   console.log(response);
 } catch (err) {
   if (err.name === "AbortError") {
-    console.log("prompt was cancelled.");
+    console.log("prompt was canceled.");
   } else {
     console.error("An unexpected error occurred:", err);
   }
