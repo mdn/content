@@ -40,9 +40,30 @@ Cookie: name=value; name2=value2; name3=value3
 
 ## Examples
 
+### Sending cookies
+
 ```http
 Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1
 ```
+
+### Cookies with the same name
+
+Multiple cookies can have the same name if they were set with different `Path` or `Domain` attributes. If more than one matches a request, the browser can include all of them in the `Cookie` header.
+
+For example, suppose separate responses from the same host set these cookies:
+
+```http
+Set-Cookie: theme=light; Path=/
+Set-Cookie: theme=dark; Path=/docs
+```
+
+A request to `/docs` can contain both of them:
+
+```http
+Cookie: theme=dark; theme=light
+```
+
+The `Cookie` header does not include the cookies' attributes, and the cookie entries are unordered, so the server cannot determine their paths or domains from the header alone.
 
 ## Specifications
 
@@ -57,3 +78,4 @@ Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1
 - {{HTTPStatus("413", "413 Content Too Large")}}
 - {{HTTPHeader("Set-Cookie")}}
 - {{domxref("Document.cookie")}}
+- [Cookie Store API](/en-US/docs/Web/API/Cookie_Store_API)
