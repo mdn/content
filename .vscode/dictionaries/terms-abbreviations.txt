@@ -61,7 +61,8 @@ barcodes
 barebones
 bfcache
 BGRA
-Bignums
+bignum
+bignums
 bikeshedding
 bilevel
 bioinformatics
@@ -594,6 +595,7 @@ redisplaying
 refbox
 regionless
 reimplementation
+relatedly
 remarketing
 remotable
 renderable
