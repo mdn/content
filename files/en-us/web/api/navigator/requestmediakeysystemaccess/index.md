@@ -89,7 +89,7 @@ requestMediaKeySystemAccess(keySystem, supportedConfigurations)
 
 ### Return value
 
-A {{jsxref('Promise')}} that fulfils with a {{domxref('MediaKeySystemAccess')}} object representing the media key system configuration described by `keySystem` and `supportedConfigurations`.
+A {{jsxref('Promise')}} that fulfills with a {{domxref('MediaKeySystemAccess')}} object representing the media key system configuration described by `keySystem` and `supportedConfigurations`.
 
 ### Exceptions
 

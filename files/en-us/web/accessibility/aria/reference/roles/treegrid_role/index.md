@@ -42,7 +42,7 @@ If some rows or columns are not in the DOM and are dynamically loaded when scrol
 
 ### A treegrid's accessible name, description, and focus
 
-The element with the role of `treegrid` must have an accessible name. If an appropriate label is visible in the content, provide the name via [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby). In other words, if there is an element in the user interface that serves as a label for the treegrid, include `aria-labelledby` as an attribute on the element with the role of `treegrid`, and set the value of the attribute to the `id` of the labelling element or elements. If no visible label is present, use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) instead. Not both.
+The element with the role of `treegrid` must have an accessible name. If an appropriate label is visible in the content, provide the name via [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby). In other words, if there is an element in the user interface that serves as a label for the treegrid, include `aria-labelledby` as an attribute on the element with the role of `treegrid`, and set the value of the attribute to the `id` of the labeling element or elements. If no visible label is present, use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) instead. Not both.
 
 If the content includes a caption or description for the `treegrid`, include [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) on the `treegrid` element with the attribute value being the `id` of the element containing the description.
 

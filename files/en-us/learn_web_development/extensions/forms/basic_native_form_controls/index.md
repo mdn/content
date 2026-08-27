@@ -72,7 +72,7 @@ It renders like this:
 
 Single line text fields have only one true constraint: if you type text with line breaks, the browser removes those line breaks before sending the data to the server.
 
-The screenshot below shows a text input in default, focused, and disabled states. Most browsers indicate the focused state using a focus ring around the control and the disabled state using grey text or a faded/semi-opaque control.
+The screenshot below shows a text input in default, focused, and disabled states. Most browsers indicate the focused state using a focus ring around the control and the disabled state using gray text or a faded/semi-opaque control.
 
 ![Screenshot of the default, focused and disabled states text input in Chrome on macOS](disabled.png)
 
@@ -278,7 +278,7 @@ These examples render like so:
 
 Buttons always behave the same whether you use a {{HTMLElement("button")}} element or an {{HTMLElement("input")}} element. As you can see from the examples, however, {{HTMLElement("button")}} elements let you use HTML in their content, which is inserted between the opening and closing `<button>` tags. {{HTMLElement("input")}} elements on the other hand are {{glossary("void element", "void elements")}}; their displayed content is inserted inside the `value` attribute, and therefore only accepts plain text as content.
 
-The following screenshot shows a button in the default, focused, and disabled states. In the focused state, there is a focus ring around the button, and in the disabled state, the button is greyed out.
+The following screenshot shows a button in the default, focused, and disabled states. In the focused state, there is a focus ring around the button, and in the disabled state, the button is grayed out.
 
 ![Default, focus, and disabled button states in chrome 115 on macOS](buttons.png)
 

@@ -35,7 +35,7 @@ This property is specified as one of the following keyword values:
 - `exact`
   - : The element's content has been specifically and carefully crafted to use colors, images, and styles in a thoughtful and/or important way, such that being altered by the browser might actually make things worse rather than better.
     The appearance of the content should not be changed except by the user's request.
-    For example, a page might include a list of information with rows whose background colors alternate between white and a light grey.
+    For example, a page might include a list of information with rows whose background colors alternate between white and a light gray.
     Removing the background color would decrease the legibility of the content.
 
 ## Usage notes
