@@ -24,8 +24,6 @@ Instances of `LayoutShiftAttribution` are returned in an array by calling {{domx
 
 ## Instance methods
 
-This interface overrides the following {{domxref("PerformanceEntry")}} method to include the additional properties added in this interface:
-
 - {{domxref("LayoutShiftAttribution.toJSON()")}} {{Experimental_Inline}}
   - : Returns a JSON representation of the `LayoutShiftAttribution` object.
 
