@@ -368,7 +368,7 @@ function readStream(reader) {
 }
 ```
 
-#### Cancelling the stream using the reader
+#### Canceling the stream using the reader
 
 We can use {{domxref("ReadableStreamBYOBReader.cancel()")}} to cancel the stream.
 For this example we call the method if a button is clicked with a reason "user choice" (other HTML and code for the button not shown).
