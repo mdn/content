@@ -26,7 +26,7 @@ console.timeStamp(label, start, end, trackName, trackGroup, color, data);
 ### Parameters
 
 - `color` {{Optional_Inline}} {{Experimental_Inline}}
-  - : A string for the display colour of the entry. Must be one of `"primary"`, `"primary-light"`, `"primary-dark"`, `"secondary"`, `"secondary-light"`, `"secondary-dark"`, `"tertiary"`, `"tertiary-light"`, `"tertiary-dark"`, `"error"`.
+  - : A string for the display color of the entry. Must be one of `"primary"`, `"primary-light"`, `"primary-dark"`, `"secondary"`, `"secondary-light"`, `"secondary-dark"`, `"tertiary"`, `"tertiary-light"`, `"tertiary-dark"`, `"error"`.
 
 - `data` {{Optional_Inline}} {{Experimental_Inline}}
   - : An object with additional data to display. URLs may automatically be turned into links by some browsers.
