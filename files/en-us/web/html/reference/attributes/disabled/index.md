@@ -52,7 +52,7 @@ label {
 
 ## Overview
 
-If the `disabled` attribute is specified on a form control, the element and its form control descendants do not participate in constraint validation. Often browsers grey out such controls and it won't receive any browsing events, like mouse clicks or focus-related ones.
+If the `disabled` attribute is specified on a form control, the element and its form control descendants do not participate in constraint validation. Often browsers gray out such controls and it won't receive any browsing events, like mouse clicks or focus-related ones.
 
 The `disabled` attribute is supported by {{ HTMLElement("button") }}, {{ HTMLElement("fieldset") }}, {{ HTMLElement("optgroup") }}, {{ HTMLElement("option") }}, {{ HTMLElement("select") }}, {{ HTMLElement("textarea") }} and {{ HTMLElement("input")}}.
 

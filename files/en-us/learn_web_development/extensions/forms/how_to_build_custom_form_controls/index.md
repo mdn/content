@@ -1037,7 +1037,7 @@ selectList.forEach((select) => {
     deactivateSelect(select);
   });
 
-  // Loose focus if the user hits `esc`
+  // Lose focus if the user hits `esc`
   select.addEventListener("keyup", (event) => {
     // deactivate on keyup of `esc`
     if (event.key === "Escape") {

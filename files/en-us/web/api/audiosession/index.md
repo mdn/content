@@ -28,7 +28,7 @@ While audible media is automatically paused/resumed by interruptions, state moni
 
 Listen to these events using {{domxref("EventTarget.addEventListener", "addEventListener()")}} or by assigning an event listener to the `oneventname` property of this interface.
 
-- {{domxref("AudioSession.statechange_event", "statechange")}}
+- {{domxref("AudioSession.statechange_event", "statechange")}} {{experimental_inline}}
   - : Fired when the {{domxref("AudioSession.state", "state")}} property changes.
     Also available through the {{domxref("AudioSession.statechange_event", "onstatechange")}} event handler property.
 

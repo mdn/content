@@ -118,7 +118,7 @@ This topic provides an index to the main _sorts_ of events you might be interest
         </p>
         <p>
           Provides notification events when CSS transitions start, stop, are
-          cancelled, etc.
+          canceled, etc.
         </p>
       </td>
       <td>

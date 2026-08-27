@@ -46,7 +46,7 @@ For audio tracks only:
 - `channelCount`
   - : A range object, containing a `min` and a `max` property (both containing a non-negative integer), describing the supported number of channels.
 - `echoCancellation`
-  - : An array of booleans or strings indicating if echo cancellation is supported. If the source cannot do echo cancellation, a single `false` is reported. If the source can do echo cancellation, then the array starts with `true`. If the script can control the feature, then the array starts with `true, false`. Additionally, if the source allows controlling which audio sources will be cancelled, the array also includes the values `"all"` and/or `"remote-only"`.
+  - : An array of booleans or strings indicating if echo cancellation is supported. If the source cannot do echo cancellation, a single `false` is reported. If the source can do echo cancellation, then the array starts with `true`. If the script can control the feature, then the array starts with `true, false`. Additionally, if the source allows controlling which audio sources will be canceled, the array also includes the values `"all"` and/or `"remote-only"`.
 - `latency`
   - : A range object, containing a `min` and a `max` property (both containing a number), describing the expected amount of latency in seconds from when the sound starts to when data becomes available.
 - `noiseSuppression`

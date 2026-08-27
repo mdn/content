@@ -3,10 +3,12 @@ title: "SVGAElement: username property"
 short-title: username
 slug: Web/API/SVGAElement/username
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.SVGAElement.username
 ---
 
-{{APIRef("SVG")}}
+{{APIRef("SVG")}}{{SeeCompatTable}}
 
 The **`username`** property of the {{domxref("SVGAElement")}} interface returns a string containing the username specified before the domain name.
 
