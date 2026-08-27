@@ -28,6 +28,28 @@ An {{domxref("AbortSignal")}} that is:
 - **Already aborted**, if any of the abort signals given is already aborted. The returned {{domxref("AbortSignal")}}'s reason will be already set to the {{domxref("AbortSignal.reason", "reason")}} of the first abort signal that was already aborted.
 - **Asynchronously aborted**, when any abort signal in `iterable` aborts. The {{domxref("AbortSignal.reason", "reason")}} will be set to the reason of the first abort signal that is aborted.
 
+## Description
+
+To be able to abort the returned signal, `AbortSignal.any()` has to keep it linked to each of the input signals. The returned signal is therefore retained in memory until one of the input signals aborts, or until all of the signals become unreachable — it is not released just because the operation it was used for has finished.
+
+This matters when a long-lived signal is repeatedly combined with short-lived ones. In the following example, every signal returned by `AbortSignal.any()` is retained until the long-lived signal aborts, even after the operation it was created for has completed:
+
+```js
+const globalController = new AbortController();
+
+async function doOperation() {
+  const localController = new AbortController();
+  const signal = AbortSignal.any([
+    globalController.signal,
+    localController.signal,
+  ]);
+  // Perform some operation with `signal`,
+  // without ever aborting `localController`
+}
+```
+
+If this function is called many times (for example, once per request), the combined signals accumulate for as long as `globalController` hasn't aborted, which effectively behaves like a memory leak. To avoid this, abort the short-lived controller once its operation has completed (for example, call `localController.abort()` in a {{jsxref("Statements/try...catch", "finally")}} block), which unlinks and releases the combined signal.
+
 ## Examples
 
 ### Using `AbortSignal.any()`
