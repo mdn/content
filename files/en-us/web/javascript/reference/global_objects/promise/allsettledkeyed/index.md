@@ -20,7 +20,7 @@ Promise.allSettledKeyed(object)
 ### Parameters
 
 - `object`
-  - : An object. All of its [own enumerable properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties), whether the key is a string or a symbol, should have {{jsxref("Promise")}} values.
+  - : An object. All of its [own enumerable properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties), whether the key is a string or a symbol, should have {{jsxref("Promise")}} values. These values are [awaited](/en-US/docs/Web/JavaScript/Reference/Operators/await), so other [thenables](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) are also resolved, while non-thenables are returned as-is.
 
 ### Return value
 

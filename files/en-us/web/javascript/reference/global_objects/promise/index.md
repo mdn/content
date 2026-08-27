@@ -158,7 +158,7 @@ The `then()` method is responsible for scheduling the execution of the provided 
 
 ### Promise concurrency
 
-The `Promise` class offers four static methods to facilitate async task [concurrency](https://en.wikipedia.org/wiki/Concurrent_computing):
+The `Promise` class offers four main static methods to facilitate async task [concurrency](https://en.wikipedia.org/wiki/Concurrent_computing):
 
 - {{jsxref("Promise.all()")}}
   - : Fulfills when **all** of the promises fulfill; rejects when **any** of the promises rejects.
@@ -173,7 +173,7 @@ All these methods take an [iterable](/en-US/docs/Web/JavaScript/Reference/Iterat
 
 Note that JavaScript is [single-threaded](/en-US/docs/Glossary/Thread) by nature, so at a given instant, only one task will be executing, although control can shift between different promises, making execution of the promises appear concurrent. [Parallel execution](https://en.wikipedia.org/wiki/Parallel_computing) in JavaScript can only be achieved through [worker threads](/en-US/docs/Web/API/Web_Workers_API).
 
-There are two other static methods: {{jsxref("Promise.allKeyed()")}} and {{jsxref("Promise.allSettledKeyed()")}}, that behave like `Promise.all()` and `Promise.allSettled()`, but take _objects_ of promises and return promises of _objects_, instead of working with arrays. This allows you to associate results with semantically meaningful keys, instead of arbitrary array ordering which can be difficult to maintain.
+There are two other convenience static methods: {{jsxref("Promise.allKeyed()")}} and {{jsxref("Promise.allSettledKeyed()")}}, that behave like `Promise.all()` and `Promise.allSettled()`, but take _objects_ of promises and return promises that fulfill with _objects_ of the same shape. By working with objects instead of arrays, you can associate results with semantically meaningful keys, instead of arbitrary array ordering which can be difficult to maintain.
 
 ## Constructor
 
@@ -190,11 +190,11 @@ There are two other static methods: {{jsxref("Promise.allKeyed()")}} and {{jsxre
 - {{jsxref("Promise.all()")}}
   - : Takes an iterable of promises as input and returns a single `Promise`. This returned promise fulfills when all of the input's promises fulfill (including when an empty iterable is passed), with an array of the fulfillment values. It rejects when any of the input's promises reject, with this first rejection reason.
 - {{jsxref("Promise.allKeyed()")}}
-  - : Like `Promise.all()`, except that it takes an object of promises and returns a promise of an object, allowing you to associate results with semantically meaningful keys.
+  - : Like `Promise.all()`, except that it takes an object of promises and returns a promise that fulfills with an object of the same shape, allowing you to associate results with semantically meaningful keys.
 - {{jsxref("Promise.allSettled()")}}
   - : Takes an iterable of promises as input and returns a single `Promise`. This returned promise fulfills when all of the input's promises settle (including when an empty iterable is passed), with an array of objects that describe the outcome of each promise.
 - {{jsxref("Promise.allSettledKeyed()")}}
-  - : Like `Promise.allSettled()`, except that it takes an object of promises and returns a promise of an object, allowing you to associate results with semantically meaningful keys.
+  - : Like `Promise.allSettled()`, except that it takes an object of promises and returns a promise that fulfills with an object of the same shape, allowing you to associate results with semantically meaningful keys.
 - {{jsxref("Promise.any()")}}
   - : Takes an iterable of promises as input and returns a single `Promise`. This returned promise fulfills when any of the input's promises fulfill, with this first fulfillment value. It rejects when all of the input's promises reject (including when an empty iterable is passed), with an {{jsxref("AggregateError")}} containing an array of rejection reasons.
 - {{jsxref("Promise.race()")}}
