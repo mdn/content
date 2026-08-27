@@ -74,7 +74,7 @@ random(--my-base, 1em, 3rem, 2px)
     - {{cssxref("dashed-ident")}}
       - : A custom name for the random cache key (e.g., `--my-random-key`). When used without scope keywords, the same random base value is shared across all elements and properties that use the same ident. When combined with scope keywords, the sharing behavior is determined by those keywords.
     - `fixed <number>`
-      - : Bypasses the random cache name and uses the `<number>` as the random base value directly. The value is in the range `[0, 1)` (inclusive of 0, exclusive of 1).
+      - : Bypasses the random cache name and uses the `<number>` — between `0` and `1`, inclusive of 0, exclusive of 1 — as the seed's value.
 
 - `<calc-sum>, <calc-sum>`
   - : Two required, comma-separated, `<number>`, `<dimension>`, or `<percentage>` values, or calculations resolving to one of these types, defining the minimum and maximum values, respectively. Both values must be resolvable to the same [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types). If the maximum is less than the minimum, the function will return the first `<calc-sum>` value.
