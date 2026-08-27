@@ -110,6 +110,8 @@ p {
 }
 ```
 
+<!-- cSpell:ignore maths -->
+
 ```js hidden
 document.getElementById("showSolution").addEventListener("click", () => {
   const maths = Array.from(document.getElementsByTagName("math"));

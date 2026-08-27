@@ -41,6 +41,8 @@ body {
 
 For example, screen readers will represent the following quadratic formula similar to:
 
+<!-- cSpell:ignore maths -->
+
 > x equals fraction start, negative b plus or minus square root of b squared minus 4 a c, end of root, over 2 a, end of fraction, maths
 
 <details>

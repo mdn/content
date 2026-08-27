@@ -320,7 +320,7 @@ The conformance criteria under this guideline relate to ways in which users can 
         >. Also note that you should minimize instances where multiple copies of
         the same text are linked to different places. This can cause problems
         for screen reader users, who will often bring up a list of the links out
-        of context — several links all labelled "click here", "click here",
+        of context — several links all labeled "click here", "click here",
         "click here" would be confusing.
       </td>
     </tr>
@@ -426,7 +426,7 @@ The conformance criteria under this guideline relate to ways in which users can 
         >. Also note that you should minimize instances where multiple copies of
         the same text are linked to different places. This can cause problems
         for screen reader users, who will often bring up a list of the links out
-        of context — several links all labelled "click here", "click here",
+        of context — several links all labeled "click here", "click here",
         "click here" would be confusing.
       </td>
     </tr>
