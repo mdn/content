@@ -63,6 +63,8 @@ This interface also supports the following properties:
 
 ## Instance methods
 
+This interface overrides the following {{domxref("PerformanceEntry")}} method to include the additional properties added in this interface:
+
 - {{domxref("PerformanceLongTaskTiming.toJSON()")}} {{Experimental_Inline}}
   - : Returns a JSON representation of the `PerformanceLongTaskTiming` object.
 

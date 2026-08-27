@@ -69,6 +69,8 @@ It also extends the following {{domxref("PerformanceEntry")}} properties, qualif
 
 ## Instance methods
 
+This interface overrides the following {{domxref("PerformanceEntry")}} method to include the additional properties added in this interface:
+
 - {{domxref("PerformanceElementTiming.toJSON()")}} {{Experimental_Inline}}
   - : Returns a JSON representation of the `PerformanceElementTiming` object.
 

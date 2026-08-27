@@ -37,7 +37,7 @@ It also extends the following {{domxref("PerformanceEntry")}} properties, qualif
 
 ## Instance methods
 
-This interface overrides the following {{domxref("PerformanceEntry")}} method to include the additional properties:
+This interface overrides the following {{domxref("PerformanceEntry")}} method to include the additional properties added in this interface:
 
 - {{domxref("InteractionContentfulPaint.toJSON()")}}
   - : Returns a JSON representation of the `InteractionContentfulPaint` object.
