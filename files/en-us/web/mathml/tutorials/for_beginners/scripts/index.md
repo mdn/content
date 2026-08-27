@@ -110,13 +110,11 @@ p {
 }
 ```
 
-<!-- cSpell:ignore maths -->
-
 ```js hidden
 document.getElementById("showSolution").addEventListener("click", () => {
-  const maths = Array.from(document.getElementsByTagName("math"));
+  const mathElems = Array.from(document.getElementsByTagName("math"));
   Array.from(document.getElementsByTagName("span")).forEach((span, index) => {
-    span.textContent = maths[index].firstElementChild.tagName;
+    span.textContent = mathElems[index].firstElementChild.tagName;
   });
 });
 ```
