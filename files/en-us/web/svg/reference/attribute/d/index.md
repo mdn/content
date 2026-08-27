@@ -906,7 +906,7 @@ _Elliptical arc curves_ are curves defined as a portion of an ellipse. It is som
                 large arc (<code>1</code>) or small arc (<code>0</code>),
               </li>
               <li>
-                <code><var>sweep-flag</var></code> allows you to choose one of the
+                <code><var>sweep-flag</var></code> allows you to choose between
                 clockwise turning arc (<code>1</code>) or counterclockwise
                 turning arc (<code>0</code>)
               </li>
