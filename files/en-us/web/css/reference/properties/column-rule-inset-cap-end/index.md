@@ -120,19 +120,27 @@ This property is specified as a single value from the following list:
 - `overlap-join`
   - : Resolves to `0`.
 - {{cssxref("length-percentage")}}
-  - : Specifies the size of the inset. Percentage values are relative to the gap at the cap endpoint; which is either the `row-gap` or `0`.
+  - : Specifies the size of the inset. Percentage values are relative to the cap endpoint, which is either the `row-gap` or `0`.
 
 ## Description
 
 The `column-rule-inset-cap-end` property can be used to inset the end edge of [cap segment endpoints](#understanding_cap_end). The default value is `0`, which is the same as `overlap-join`. Positive values reduce the size of the segment. Negative values extend it.
 
-Column rules are painted within a column gap as one or more segments, with segments occurring between adjacent grid items in separate columns, between flex items or flex lines in flex layouts depending on the `flex-direction`, or between columns in multi-col layouts. Whether a column rule spans multiple rows or is broken into multiple segments is defined by the {{cssxref("column-rule-break")}} property, with interior breaks between column rule segments being the size of the {{cssxref("row-gap")}}.
+Column rules are painted within a column gap as one or more segments, with segments occurring between:
 
-Length `column-rule-inset-cap-end` values are inset the value specified for both interior and end edge cap segments. Negative length values create an outset, with end edge cap segments extending beyond the end edge of the container. [Percentage values](#understanding_percentage_values) for interior cap segment endpoint insets are relative to the size of the {{cssxref("row-gap")}}. For end edge cap segments, percentage values are relative to `0`, so percentage values never cause cap segment endpoints at the container's end edge to extend beyond the container.
+- Adjacent columns in CSS grid layouts.
+- Flex items or flex lines in flex layouts, depending on the `flex-direction`.
+- Columns in multi-col layouts.
+
+Whether a column rule spans multiple rows or is broken into multiple segments is defined by the {{cssxref("column-rule-break")}} property, with interior breaks between column rule segments being the size of the {{cssxref("row-gap")}}.
+
+Length `column-rule-inset-cap-end` values are inset by the value specified for both interior and end edge cap segments. Negative length values create an outset, with end edge cap segments extending beyond the container's end edge.
+
+[Percentage values](#understanding_percentage_values) for interior cap segment endpoint insets are relative to the size of the {{cssxref("row-gap")}}. For end edge cap segments, percentage values are relative to `0`, so percentage values never cause cap segment endpoints at the container's end edge to extend beyond the container.
 
 To set the start and ends of caps, the `column-rule-inset-cap-end` property, along with the {{cssxref("column-rule-inset-cap-start")}} property, can be set using the {{cssxref("column-rule-inset-cap")}} shorthand.
 
-To set the ends of all column segments, the `column-rule-inset-cap-end` property can also be set, along with the {{cssxref("column-rule-inset-junction-end")}} property, can be set using the {{cssxref("column-rule-inset-end")}} shorthand.
+To set the ends of all column segments, the `column-rule-inset-cap-end` property, along with the {{cssxref("column-rule-inset-junction-end")}} property, can be set using the {{cssxref("column-rule-inset-end")}} shorthand.
 
 To set the same values for row and column cap endpoints, the `column-rule-inset-cap-end` property, along with the {{cssxref("row-rule-inset-cap-end")}} property, can be set using the {{cssxref("rule-inset-cap-end")}} shorthand.
 
