@@ -46,7 +46,7 @@ random(0deg, 360deg)
 random(0, 100, 10)
 random(0rad, 1turn, 30deg)
 
-/* With random-key */
+/* With <random-key> */
 random(auto, 0, 360)
 random(property-scoped, 0s, 5s)
 random(--unique-base, 400px, 100px)
