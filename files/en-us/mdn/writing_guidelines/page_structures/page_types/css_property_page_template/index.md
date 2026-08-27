@@ -54,7 +54,6 @@ sidebar: mdnsidebar
 >
 > - `\{{SeeCompatTable}}`: This macro generates an **Experimental** banner, which indicates that the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 >   If the technology is experimental and is hidden behind a preference in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
-> - `\{{Deprecated_Header}}`: This macro generates a **Deprecated** banner, which indicates that the use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 > - `\{{Non-standard_Header}}` — this generates a **Non-standard** banner that indicates that the feature is not part of any specification.
 >
 > You should update or delete the following macros according to the advice below:
@@ -76,7 +75,7 @@ sidebar: mdnsidebar
 >
 > _Remember to remove this note block before publishing._
 
-{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Non-standard_Header}}
 
 Begin the content on the page with an introductory paragraph, which names the property and says what it does.
 This should ideally be one or two short sentences. All other explanations, if any, should be included in the "Description" section.
