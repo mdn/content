@@ -274,4 +274,4 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
 
 ## See also
 
-- The {{HTMLElement("data")}} element, allowing to signal other kind of values.
+- The {{HTMLElement("data")}} element, allowing you to signal other kind of values.
