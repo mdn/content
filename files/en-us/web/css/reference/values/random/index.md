@@ -72,7 +72,7 @@ random(--my-base, 1em, 3rem, 2px)
     - `property-index-scoped`
       - : Adds the property name and the index of the `random()` function among all random functions used in the same property value to the random cache name, so multiple instances in the same declaration each get different random values.
     - {{cssxref("dashed-ident")}}
-      - : A custom name for the random cache key (e.g., `--my-random-key`). When used without scope keywords, the same random base value is shared across all elements and properties that use the same ident. When combined with scope keywords, the sharing behavior is determined by those keywords.
+      - : A custom name for the random cache key (e.g., `--my-random-key`). When used alone, the same random base value is shared across all elements and properties that use the same identifier. When combined with a `*-scoped` keyword, the sharing behavior is determined by the keyword.
     - `fixed <number>`
       - : Bypasses the random cache name and uses the `<number>` — between `0` and `1`, inclusive of 0, exclusive of 1 — as the seed's value.
 
