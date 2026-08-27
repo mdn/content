@@ -126,7 +126,7 @@ When you specify a `<dashed-ident>` (e.g., `--custom-name`), each element in an 
 
 #### Setting both `<dashed-ident>` and `property-scoped`
 
-Combining a `<dashed-ident>` with `property-scoped` (e.g., `random(--custom-name property-scoped, 0, 100)`) shares the random base value across all elements for each individual property, but not across properties. Given the following, `.a`, `.b`, and `.c` will all be rectangles of the same size, because all elements share the same width value and the same height value, but width and height get different random values:
+Combining a `<dashed-ident>` with `property-scoped` (e.g., `random(--custom-name property-scoped, 0, 100)`) shares the random base value across all elements for each individual property, but not across properties. Given the following, `.a`, `.b`, and `.c` will all be rectangles of the same size, because all elements share the same width value and the same height value, but width and height get independent random values:
 
 ```css
 .a,
