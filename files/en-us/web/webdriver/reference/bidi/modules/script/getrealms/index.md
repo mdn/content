@@ -38,7 +38,7 @@ The `params` field can contain:
     Context IDs are returned by commands such as [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
     If not specified, realms of all contexts are returned.
 - `type` {{optional_inline}}
-  - : A string that contains the type of realm you want.
+  - : A string that contains the [type of realm](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script#types_of_realms) you want.
     It can take one of the following values:
 
     - `"window"`: A realm whose global object is a {{domxref("Window")}}.
@@ -75,8 +75,8 @@ The `result` object in the response contains the following field:
       - : A string that contains the name of the sandbox realm.
         This field is included only for a sandbox realm, which is of type `"window"`.
     - `type`
-      - : A string that indicates the type of the realm.
-        It has one of the same values as the [`type`](#type) parameter.
+      - : A string that indicates the type of realm.
+        See the [`type`](#type) parameter for possible values.
 
 ### Errors
 

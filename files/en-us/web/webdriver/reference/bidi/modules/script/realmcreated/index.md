@@ -11,7 +11,7 @@ The `script.realmCreated` [event](/en-US/docs/Web/WebDriver/Reference/BiDi/Modul
 
 ## Event data
 
-The `params` field in the event notification is a [realm object](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/getRealms#realms) with the following fields, where the value of the `type` field determines the other fields that are present:
+The `params` field in the event notification is an object with the following fields, where the value of the `type` field determines the other fields that are present:
 
 - `context` {{optional_inline}}
   - : A string that contains the ID of the context to which the realm belongs.
@@ -28,7 +28,7 @@ The `params` field in the event notification is a [realm object](/en-US/docs/Web
   - : A string that contains the name of the sandbox realm.
     This field is included only for a sandbox realm, which is of type `"window"`.
 - `type`
-  - : A string that indicates the type of the realm.
+  - : A string that indicates the [type of realm](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script#types_of_realms).
     It has one of the following values:
 
     - `"window"`: A realm whose global object is a {{domxref("Window")}}.
