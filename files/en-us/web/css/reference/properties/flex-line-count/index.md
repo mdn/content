@@ -3,9 +3,13 @@ title: "`flex-line-count` CSS property"
 short-title: flex-line-count
 slug: Web/CSS/Reference/Properties/flex-line-count
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.flex-line-count
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`flex-line-count`** [CSS](/en-US/docs/Web/CSS) property sets the minimum number of flex lines that flex items will be balanced over in cases where a flex container's {{cssxref("flex-wrap")}} or {{cssxref("flex-flow")}} property includes the `balance` keyword.
 
