@@ -72,7 +72,7 @@ It renders like this:
 
 Single line text fields have only one true constraint: if you type text with line breaks, the browser removes those line breaks before sending the data to the server.
 
-The screenshot below shows a text input in default, focused, and disabled states. Most browsers indicate the focused state using a focus ring around the control and the disabled state using grey text or a faded/semi-opaque control.
+The screenshot below shows a text input in default, focused, and disabled states. Most browsers indicate the focused state using a focus ring around the control and the disabled state using gray text or a faded/semi-opaque control.
 
 ![Screenshot of the default, focused and disabled states text input in Chrome on macOS](disabled.png)
 
