@@ -67,9 +67,7 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - The {{jsxref("Promise.allKeyed()")}} and {{jsxref("Promise.allSettledKeyed()")}} static methods are now supported, as defined in the [TC39 await dictionary proposal](https://github.com/tc39/proposal-await-dictionary).
   These behave like {{jsxref("Promise.all()")}} and {{jsxref("Promise.allSettled()")}}, respectively, except that they take an object of promises instead of an iterable. They fulfill with an object that has the same keys, so results can be read by name instead of by position.
-
   ([Firefox bug 2057270](https://bugzil.la/2057270)).
-
 - A [module](/en-US/docs/Web/JavaScript/Guide/Modules) that fails to load because of a network error or an incorrect [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types) is no longer cached as a failure, so importing the same module specifier again can succeed once the server recovers.
   This applies to JavaScript, [JSON](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#json_modules_type_json), [CSS](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#css_modules_type_css), and [text](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#text_modules_type_text) modules, loaded either statically or with [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import), in both windows and workers.
   Relatedly, [`<link rel="modulepreload">`](/en-US/docs/Web/HTML/Reference/Attributes/rel/modulepreload) now fires the {{domxref("HTMLElement/load_event", "load")}} event rather than {{domxref("HTMLElement/error_event", "error")}} for modules that are already fetched or still fetching, and a module script now loads even if an earlier `modulepreload` of the same URL failed its [integrity check](/en-US/docs/Web/Security/Defenses/Subresource_Integrity).
@@ -94,16 +92,16 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
 ### APIs
 
 - Several [WebTransport API](/en-US/docs/Web/API/WebTransport_API) features are now supported:
-  - Send groups, which let you group streams that should share bandwidth, and prioritize streams relative to each other within a group.
-    These are created using {{domxref("WebTransport.createSendGroup()")}}, which returns a {{domxref("WebTransportSendGroup")}}, and are then passed in the `sendGroup` option of {{domxref("WebTransport.createBidirectionalStream()")}} and {{domxref("WebTransport.createUnidirectionalStream()")}}.
+  - Send groups let you group streams that should share bandwidth and prioritize streams relative to each other within a group.
+    You can create one using {{domxref("WebTransport.createSendGroup()")}}. Then pass the returned {{domxref("WebTransportSendGroup")}} in the `sendGroup` option of {{domxref("WebTransport.createBidirectionalStream()")}} or {{domxref("WebTransport.createUnidirectionalStream()")}}.
     ([Firefox bug 2007165](https://bugzil.la/2007165)).
-  - The `WebTransport.exportKeyingMaterial()` method, which derives keying material from the underlying TLS connection for a given label and context, so that both endpoints can obtain the same shared secret.
+  - The `WebTransport.exportKeyingMaterial()` method derives keying material from the underlying TLS connection for a given label and context, so that both endpoints can obtain the same shared secret.
     ([Firefox bug 2007200](https://bugzil.la/2007200)).
-  - The {{domxref("WebTransportDatagramDuplexStream.createWritable()")}} method, which returns a {{domxref("WebTransportDatagramsWritable")}} stream for sending datagrams, with {{domxref("WebTransportDatagramsWritable.sendGroup", "sendGroup")}} and {{domxref("WebTransportDatagramsWritable.sendOrder", "sendOrder")}} properties for prioritizing it against other senders.
+  - The {{domxref("WebTransportDatagramDuplexStream.createWritable()")}} method returns a {{domxref("WebTransportDatagramsWritable")}} stream for sending datagrams, with {{domxref("WebTransportDatagramsWritable.sendGroup", "sendGroup")}} and {{domxref("WebTransportDatagramsWritable.sendOrder", "sendOrder")}} properties for prioritizing it against other senders.
     ([Firefox bug 2007174](https://bugzil.la/2007174)).
-  - Subprotocol negotiation. The {{domxref("WebTransport.WebTransport", "WebTransport()")}} constructor now accepts a `protocols` option listing the application protocols the client supports, which is sent to the server in the `wt-available-protocols` request header, and the protocol chosen by the server is exposed in the `WebTransport.protocol` property.
+  - The {{domxref("WebTransport.WebTransport", "WebTransport()")}} constructor accepts a `protocols` option listing the application protocols the client supports, which is sent to the server in the `wt-available-protocols` request header. The protocol chosen by the server is exposed in the `WebTransport.protocol` property.
     ([Firefox bug 2007150](https://bugzil.la/2007150)).
-  - The {{domxref("WebTransport.draining")}} property is supported for indicating that the server has requested that the client start graceful shutdown of the session.
+  - The {{domxref("WebTransport.draining")}} property indicates when the server has requested the client to start a graceful shutdown of the session.
     ([Firefox bug 2007160](https://bugzil.la/2007160)).
 - The [WebGPU API](/en-US/docs/Web/API/WebGPU_API) now supports the [`dual-source-blending`](/en-US/docs/Web/API/GPUSupportedFeatures#available_features) feature on desktop, which can be requested in {{domxref("GPUAdapter.requestDevice()")}}.
   This allows `src1`, `one-minus-src1`, `src1-alpha`, and `one-minus-src1-alpha` to be specified in the [`srcFactor`](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#srcfactor) and [`dstFactor`](/en-US/docs/Web/API/GPUDevice/createRenderPipeline#dstfactor) properties of {{domxref("GPUDevice.createRenderPipeline", "createRenderPipeline()")}} and {{domxref("GPUDevice.createRenderPipelineAsync", "createRenderPipelineAsync()")}}. The WGSL `dual_source_blending` extension is also supported.
