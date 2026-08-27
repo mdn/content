@@ -102,13 +102,7 @@ contain: unset;
 
 ### Values
 
-The `contain` property can have any of the following values:
-
-- The keyword `none` **or**
-- One or more of the space-separated keywords `size` (or `inline-size`), `layout`, `style`, and `paint` in any order **or**
-- One of the shorthand values `strict` or `content`
-
-The keywords have the following meanings:
+This property is specified as a single value (`none`, `strict`, or `content`) or as a space-separated list of one or more of `size` (or `inline-size`), `layout`, `style`, and `paint`, in any order:
 
 - `none`
   - : The element renders as normal, with no containment applied.
@@ -125,7 +119,7 @@ The keywords have the following meanings:
 - `style`
   - : For properties that can affect more than just an element and its descendants, the effects don't escape the containing element. Counters and quotes are scoped to the element and its contents.
 - `paint`
-  - : Descendants of the element don't display outside its bounds. If the containing box is offscreen, the browser does not need to paint its contained elements — these must also be offscreen as they are contained completely by that box. If a descendant overflows the containing element's bounds, then that descendant will be clipped to the containing element's border-box.
+  - : Descendants of the element don't display outside its bounds. If the containing box is offscreen, the browser does not need to paint its contained elements — these must also be offscreen as they are contained completely by that box. If a descendant overflows the containing element's bounds, then that descendant will be clipped to the containing element's overflow clip edge. By default, this edge corresponds to the padding-box for non-replaced elements.
 
 ## Description
 

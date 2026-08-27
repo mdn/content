@@ -21,7 +21,7 @@ One of the following strings:
 - `""`
   - : The background fetch has not completed, or was successful.
 - `"aborted"`
-  - : The operation was cancelled by the user, or {{domxref("BackgroundFetchRegistration.abort()","abort()")}} was called.
+  - : The operation was canceled by the user, or {{domxref("BackgroundFetchRegistration.abort()","abort()")}} was called.
 - `"bad-status"`
   - : A response had a not-ok status (a status outside the range 200-299).
 - `"fetch-error"`

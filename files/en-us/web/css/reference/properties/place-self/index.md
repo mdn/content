@@ -91,6 +91,8 @@ place-self: unset;
 
 ### Values
 
+This property is specified as one or two of the following keyword values:
+
 - `auto`
   - : Computes to the parent's {{cssxref("align-items")}} value.
 - `normal`

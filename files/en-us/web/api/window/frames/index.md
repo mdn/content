@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Window.frames
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("HTML DOM")}}
 
 Returns the window itself, which is an array-like object, listing the direct sub-frames
 of the current window.

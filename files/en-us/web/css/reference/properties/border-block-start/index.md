@@ -81,9 +81,9 @@ Related properties are {{cssxref("border-block-end")}}, {{cssxref("border-inline
 
 The `border-block-start` is specified with one or more of the following, in any order:
 
-- `<'border-width'>`
+- {{cssxref("&lt;line-width&gt;")}}
   - : The width of the border. See {{cssxref("border-width")}}.
-- `<'border-style'>`
+- {{cssxref("&lt;line-style&gt;")}}
   - : The line style of the border. See {{cssxref("border-style")}}.
 - {{CSSXref("&lt;color&gt;")}}
   - : The color of the border.

@@ -22,7 +22,7 @@ _Inherits properties from its ancestor {{domxref("CSSRule")}}._
 - {{domxref("CSSFontFeatureValuesRule.annotation")}} {{experimental_inline}}
   - : A user defined value definition and value that applies an alternate annotation of the font.
 - {{domxref("CSSFontFeatureValuesRule.characterVariant")}} {{experimental_inline}}
-  - : A user defined value definition and value that applies a stylistic alternatives for characters of the font.
+  - : A user defined value definition and value that applies stylistic alternatives for characters of the font.
 - {{domxref("CSSFontFeatureValuesRule.fontFamily")}}
   - : A string that identifies the font family this rule applies to.
 - {{domxref("CSSFontFeatureValuesRule.ornaments")}} {{experimental_inline}}

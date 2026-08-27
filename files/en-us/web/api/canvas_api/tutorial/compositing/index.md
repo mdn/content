@@ -38,7 +38,7 @@ In this example, we'll use a circular clipping path to restrict the drawing of a
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
   ctx.fillRect(0, 0, 150, 150);
   ctx.translate(75, 75);
 
@@ -90,7 +90,7 @@ function drawStar(ctx, r) {
 ```
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="my-canvas" width="150" height="150"></canvas>
 ```
 
 ```js hidden
@@ -110,12 +110,12 @@ There is no such thing as an inverse clipping mask. However, we can define a mas
 A rectangle does not have a drawing direction, but it behaves as if we drew it clockwise. By default, the arc command also goes clockwise, but we can change its direction with the last argument.
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="my-canvas" width="150" height="150"></canvas>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById("canvas");
+  const canvas = document.getElementById("my-canvas");
   const ctx = canvas.getContext("2d");
   ctx.translate(75, 75);
 

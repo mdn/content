@@ -3,9 +3,13 @@ title: "`row-rule-color` CSS property"
 short-title: row-rule-color
 slug: Web/CSS/Reference/Properties/row-rule-color
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.row-rule-color
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`row-rule-color`** [CSS](/en-US/docs/Web/CSS) property defines the colors of the lines drawn between rows in multi-row grid, flex, and multi-col layouts.
 
@@ -238,11 +242,11 @@ The flex container has six rows, so five gutters. The `repeat()` function repeat
 
 This example demonstrates using `auto`, instead of an integer, within the `repeat()` function.
 
-Using `repeat(auto, <color>)`, we set all the lines to be almost transparent black (`#0003`), except the first and last, which we set to a solid `black`.
+Using `repeat(auto, <color>)`, we set all the lines to be almost transparent black (`#00000033`), except the first and last, which we set to a solid `black`.
 
 ```css live-sample___auto
 ul {
-  row-rule-color: black, repeat(auto, #0003), black;
+  row-rule-color: black, repeat(auto, #00000033), black;
 }
 ```
 

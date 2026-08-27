@@ -113,7 +113,7 @@ All `random()` functions with the `property-scoped` keyword share the same rando
 
 #### Custom names
 
-When you specify a `<dashed-ident>` (e.g., `--custom-name`), all uses of the same `<dashed-ident>` share the same random base value across all elements and properties. If the following is declared, `.a`, `.b`, and `.c` will all be squares of the same size, because the same ident is referenced across the three elements by both properties:
+When you specify a `<dashed-ident>` (e.g., `--custom-name`), each element in an element's styles with the same name shares the same random base value, and ones with different `<dashed-ident>` values will be assigned distinct random base values. When the following is declared, `.a`, `.b`, and `.c` will all be squares, because within each element, all properties that reference the same ident will share the same base value. Therefore, the width of each will be the same as its height. Note that, in this case, `.a`, `.b`, and `.c` will have distinct sizes because the base value sharing is between properties of an element, not between elements.
 
 ```css
 .a,

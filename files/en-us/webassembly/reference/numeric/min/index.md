@@ -1,12 +1,13 @@
 ---
-title: "min: Wasm text instruction"
+title: "min: Wasm numeric instruction"
 short-title: min
 slug: WebAssembly/Reference/Numeric/min
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.min
 sidebar: webassemblysidebar
 ---
 
-The **`min`** instruction is used for getting the lower of two numbers.
+The **`min`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) is used for getting the lower of two numbers.
 
 {{InteractiveExample("Wat Demo: min", "tabbed-taller")}}
 
@@ -132,6 +133,14 @@ The output is as follows:
 {{embedlivesample("simd_min", "100%", 100)}}
 
 The result is `108`. This is because the value stored in lane `3` of the first input value is `1000`, and the value stored in lane `3` of the second input value is `108`. Since `108` is less than `1000`, the new `f32x4` value outputted by the `f32x4.min` instruction has `108` set in lane `3`, which we then extract and output to the DOM.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

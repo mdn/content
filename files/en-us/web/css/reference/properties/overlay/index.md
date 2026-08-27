@@ -35,6 +35,8 @@ overlay: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `auto`
   - : The element is rendered in the top layer if it is promoted to the top layer.
 - `none`

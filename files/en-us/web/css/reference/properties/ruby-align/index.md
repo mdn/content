@@ -28,6 +28,8 @@ ruby-align: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `start`
   - : Is a keyword indicating that the ruby will be aligned with the start of the base text.
 - `center`

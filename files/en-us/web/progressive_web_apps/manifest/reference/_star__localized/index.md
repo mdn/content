@@ -2,9 +2,13 @@
 title: "*_localized"
 slug: Web/Progressive_web_apps/Manifest/Reference/*_localized
 page-type: web-manifest-member
+status:
+  - experimental
 browser-compat: manifests.webapp.localized_members
 sidebar: pwasidebar
 ---
+
+{{SeeCompatTable}}
 
 The `_localized` suffix is added to manifest members to create localized variants of those members. The browser will use the variant that best suits the user based on their browser language settings.
 

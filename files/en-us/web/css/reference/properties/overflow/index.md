@@ -79,9 +79,9 @@ overflow: revert-layer;
 overflow: unset;
 ```
 
-The `overflow` property is specified as one or two {{CSSXref("overflow_value", "&lt;overflow&gt;")}} keyword values.
-
 ### Values
+
+This property is specified as one or two space-separated {{CSSXref("overflow_value", "&lt;overflow&gt;")}} keyword values:
 
 - `visible`
   - : Overflow content is not clipped and may be visible outside the element's padding box. The element box is not a {{glossary("scroll container")}}. This is the default value.

@@ -21,7 +21,7 @@ A `Promise` is in one of these states:
 - _rejected_: meaning that the operation failed.
 
 The _eventual state_ of a pending promise can either be _fulfilled_ with a value or _rejected_ with a reason (error).
-When either of these options occur, the associated handlers queued up by a promise's `then` method are called. If the promise has already been fulfilled or rejected when a corresponding handler is attached, the handler will be called, so there is no race condition between an asynchronous operation completing and its handlers being attached.
+When either of these options occurs, the associated handlers queued up by a promise's `then` method are called. If the promise has already been fulfilled or rejected when a corresponding handler is attached, the handler will be called, so there is no race condition between an asynchronous operation completing and its handlers being attached.
 
 A promise is said to be _settled_ if it is either fulfilled or rejected, but not pending.
 
@@ -251,7 +251,7 @@ The example function `tetheredGetNumber()` shows that a promise generator will u
 
 Note that the function `troubleWithGetNumber()` ends with a `throw`. That is forced because a promise chain goes through all the `.then()` promises, even after an error, and without the `throw`, the error would seem "fixed". This is a hassle, and for this reason, it is common to omit `onRejected` throughout the chain of `.then()` promises, and just have a single `onRejected` in the final `catch()`.
 
-This code can be run under NodeJS. Comprehension is enhanced by seeing the errors actually occur. To force more errors, change the `threshold` values.
+This code can be run under Node.js. Comprehension is enhanced by seeing the errors actually occur. To force more errors, change the `threshold` values.
 
 ```js
 // To experiment with error handling, "threshold" values cause errors randomly

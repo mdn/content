@@ -1,12 +1,13 @@
 ---
-title: "sub: Wasm text instruction"
+title: "sub: Wasm numeric instruction"
 short-title: sub
 slug: WebAssembly/Reference/Numeric/sub
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.sub
 sidebar: webassemblysidebar
 ---
 
-The **`sub`** instruction, short for _subtraction_, is used for subtracting one number from another number, similar to the **`-`** operator in other languages.
+The **`sub`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _subtraction_, is used for subtracting one number from another number, similar to the **`-`** operator in other languages.
 
 {{InteractiveExample("Wat Demo: sub", "tabbed-taller")}}
 
@@ -142,3 +143,11 @@ The output is as follows:
 {{embedlivesample("simd_sub", "100%", 100)}}
 
 `-24` is output because this is the result of subtracting lane 7 of the second value (`30`) from lane 7 of the first value (`6`).
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

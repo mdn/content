@@ -261,7 +261,7 @@ Here we are providing an [RGB](/en-US/docs/Web/CSS/Reference/Values/color_value/
 
 ![Hard to see pill button with white text on an almost white background](unreadable-button.png)
 
-To sort this out, we have added a second `background-color` declaration, which just specifies the `red` color keyword — this is supported way back in really old browsers, and acts as a fallback if the modern shiny features don't work. What happens is a browser visiting this page first applies the first `background-color` value; when it gets to the second `background-color` declaration, it will override the initial value with this value if it supports RGB colors. If not, it will just ignore the entire declaration and move on.
+To sort this out, we have added an initial `background-color` declaration, which just specifies the `red` color keyword — this is supported way back in really old browsers, and acts as a fallback if the modern shiny features don't work. What happens is a browser visiting this page first applies the first `background-color` value; when it gets to the second `background-color` declaration, it will override the initial value with this value if it supports RGB colors. If not, it will just ignore the entire declaration and move on.
 
 > [!NOTE]
 > The same is true for other CSS features like [media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using), {{cssxref("@font-face")}} and {{cssxref("@supports")}} blocks — if they are not supported, the browser just ignores them.

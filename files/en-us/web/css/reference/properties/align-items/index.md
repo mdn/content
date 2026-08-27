@@ -94,6 +94,8 @@ align-items: unset;
 
 ### Values
 
+This property is specified as one or two of the following keyword values:
+
 - `normal`
   - : The effect of this keyword is dependent of the layout mode we are in:
     - In absolutely-positioned layouts, the keyword behaves like `start` on _replaced_ absolutely-positioned boxes, and as `stretch` on _all other_ absolutely-positioned boxes.
@@ -154,7 +156,7 @@ In this example we have a container with six children. A {{htmlelement("select")
 
 ### CSS
 
-We style a the container and items in a manner that ensures we have two lines or rows or items. We defined `.flex` and `.grid` classes, which will be applied to the container with JavaScript. They set the {{cssxref("display")}} value of the container, and change its background and border colors providing an additional indicator that the layout has changed. The six flex items each have a different background color, with the 4th item being two lines long and the 6th item having an enlarged font.
+We style the container and items in a manner that ensures we have two lines or rows of items. We defined `.flex` and `.grid` classes, which will be applied to the container with JavaScript. They set the {{cssxref("display")}} value of the container, and change its background and border colors providing an additional indicator that the layout has changed. The six flex items each have a different background color, with the 4th item being two lines long and the 6th item having an enlarged font.
 
 ```css
 .flex,

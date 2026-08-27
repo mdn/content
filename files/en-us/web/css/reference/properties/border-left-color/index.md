@@ -69,9 +69,9 @@ border-left-color: revert-layer;
 border-left-color: unset;
 ```
 
-The `border-left-color` property is specified as a single value.
-
 ### Values
+
+This property is specified as one value:
 
 - {{cssxref("&lt;color&gt;")}}
   - : The color of the left border.

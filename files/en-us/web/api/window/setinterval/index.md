@@ -33,7 +33,7 @@ setInterval(func, delay, param1, param2, /* …, */ paramN)
 ### Parameters
 
 - `func`
-  - : A {{jsxref("function")}} to be executed every `delay` milliseconds.
+  - : A {{jsxref("Function")}} to be executed every `delay` milliseconds.
     The first execution happens after `delay` milliseconds.
 - `code`
   - : A {{domxref("TrustedScript")}} or a string of arbitrary code that is compiled and executed every `delay` milliseconds.

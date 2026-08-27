@@ -83,6 +83,8 @@ rule-visibility-items: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `all`
   - : Rules should be painted in all gap segments, regardless of whether adjacent areas contain an item.
 

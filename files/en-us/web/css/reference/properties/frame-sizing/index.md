@@ -3,9 +3,13 @@ title: "`frame-sizing` CSS property"
 short-title: frame-sizing
 slug: Web/CSS/Reference/Properties/frame-sizing
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.frame-sizing
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`frame-sizing`** [CSS](/en-US/docs/Web/CSS) property can be used to set an {{htmlelement("iframe")}} element's horizontal or vertical size to equal the layout size of its embedded document in the same dimension, but only if the embedded document has opted in to sharing its size information.
 
@@ -29,7 +33,7 @@ frame-sizing: unset;
 
 ### Values
 
-The `frame-sizing` property value is equal to one of the following keywords:
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : The initial value. The `<iframe>` element's size is not affected by the layout size of its embedded document.

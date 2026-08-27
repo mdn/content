@@ -1,22 +1,21 @@
 ---
-title: Firefox 153 release notes for developers (Beta)
-short-title: Firefox 153 (Beta)
+title: Firefox 153 release notes for developers
+short-title: Firefox 153
 slug: Mozilla/Firefox/Releases/153
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 153 that affect developers.
-Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [July 21, 2026](https://whattrainisitnow.com/release/?version=153).
-
-> [!NOTE]
-> The release notes for this Firefox version are still a work in progress.
-
-<!-- Authors: Please uncomment any headings you are writing notes for -->
+Firefox 153 was released on [July 21, 2026](https://whattrainisitnow.com/release/?version=153).
 
 ## Changes for web developers
 
-<!-- ### Developer Tools -->
+### Developer Tools
+
+- The developer tools now provide the heading level for a heading element in the accessibility highlighter and accessibility tree (previously just the fact that it was a heading was shown).
+  The information can be found in the [Accessibility Inspector panel](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html).
+  ([Firefox bug 1588784](https://bugzil.la/1588784) and [Firefox bug 2044904](https://bugzil.la/2044904)).
 
 ### HTML
 
@@ -26,21 +25,9 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The `muted` attribute has now been updated for the {{htmlelement("audio", "", "#muted")}} and {{htmlelement("video", "", "#muted")}} elements to reflect when it is added to or removed from the DOM. This attribute now also matches the state of the {{cssxref(":muted")}} CSS pseudo-class.
   ([Firefox bug 2037015](https://bugzil.la/2037015)).
 
-<!-- #### Removals -->
-
-<!-- ### MathML -->
-
-<!-- #### Removals -->
-
-<!-- ### SVG -->
-
-<!-- #### Removals -->
-
 ### CSS
 
 - The {{cssxref("::-webkit-scrollbar")}} pseudo-element selector is now recognized, so the `@supports selector(::-webkit-scrollbar)` check returns `true`. Note that this reports the selector as supported even though scrollbar styling via `::-webkit-scrollbar` is not truly implemented. This was added to fix an issue where scrollbars of nested scrollable areas could stack on top of each other. For example, when a scrollbar is set to `display: none` or `width: 0` leaving some content unreachable. ([Firefox bug 2038877](https://bugzil.la/2038877)).
-
-<!-- #### Removals -->
 
 ### JavaScript
 
@@ -57,16 +44,6 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
   It is similar to the normal [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declaration, but instead of loading and evaluating a module, it produces an object representing the module's source code that can be evaluated later.
   Note that this feature is not yet useful for developers, as only the syntax is currently supported: the source representation of WebAssembly modules is implemented separately and is not yet available.
   ([Firefox bug 2043242](https://bugzil.la/2043242)).
-
-<!-- #### Removals -->
-
-<!-- ### HTTP -->
-
-<!-- #### Removals -->
-
-<!-- ### Security -->
-
-<!-- #### Removals -->
 
 ### APIs
 
@@ -97,13 +74,9 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
   In addition the `transportId` property is now available on {{domxref("RTCOutboundRtpStreamStats.transportId","RTCOutboundRtpStreamStats")}}, {{domxref("RTCRemoteOutboundRtpStreamStats.transportId","RTCRemoteOutboundRtpStreamStats")}}, {{domxref("RTCRemoteInboundRtpStreamStats.transportId","RTCRemoteInboundRtpStreamStats")}} and {{domxref("RTCInboundRtpStreamStats.transportId","RTCInboundRtpStreamStats")}}.
   ([Firefox bug 1225723](https://bugzil.la/1225723) and [Firefox bug 2019389](https://bugzil.la/2019389)).
 
-<!-- #### Removals -->
-
 ### WebAssembly
 
 - JavaScript Promise Integration (JS-PI) is now enabled, allowing [WebAssembly](/en-US/docs/WebAssembly) modules to interoperate with asynchronous, {{jsxref("Promise")}}-based JavaScript APIs. This lets WebAssembly code suspend while waiting for a JavaScript promise and resume when the promise settles. See [`WebAssembly.Suspending`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Suspending) for an explanation and working example. ([Firefox bug 2044809](https://bugzil.la/2044809)).
-
-<!-- #### Removals -->
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -130,15 +103,12 @@ Firefox 153 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - Extensions now require explicit user permission to access `file://` URLs. Previously, access to local files was covered by the "Access your data for all websites" host permission. This change introduces a separate "Access local files on your computer" option in the extension's permissions settings (desktop only), and file access is turned off by default for all extensions, including existing ones. The {{WebExtAPIRef("extension.isAllowedFileSchemeAccess()")}} method now correctly returns `true` if the user has granted file scheme access; previously, Firefox always returned `false`. Additionally, calling {{WebExtAPIRef("devtools.inspectedWindow.eval()")}} on `file://` URLs now requires this permission. ([Firefox bug 2034168](https://bugzil.la/2034168))
 - Supports the {{WebExtAPIRef("userScripts.execute()")}} method, enabling extensions to inject user scripts on demand into a tab or frame. Unlike {{WebExtAPIRef("userScripts.register()")}}, this method supports one-off injection of multiple script sources executed in a defined order. ([Firefox bug 1930776](https://bugzil.la/1930776))
 - Adds the {{WebExtAPIRef("publicSuffix")}} API, enabling extensions to determine the registrable domain (eTLD+1) and public suffix of a hostname using the browser's built-in [Public Suffix List](https://publicsuffix.org/). The API provides three synchronous methods: {{WebExtAPIRef("publicSuffix.isKnownSuffix()")}}, {{WebExtAPIRef("publicSuffix.getKnownSuffix()")}}, and {{WebExtAPIRef("publicSuffix.getDomain()")}}. ([Firefox bug 1315558](https://bugzil.la/1315558))
-- Extension content scripts can now read and modify constructed stylesheets in {{domxref("document.adoptedStyleSheets")}} and {{domxref("ShadowRoot.adoptedStyleSheets")}}, without `.wrappedJSObject`. ([Firefox bug 1751346](https://bugzil.la/1751346))
 - Adds `documentId` to a range of WebExtension APIs, including a new {{WebExtAPIRef("runtime.getDocumentId()")}} method, {{WebExtAPIRef("webNavigation")}} events and methods, {{WebExtAPIRef("webRequest")}} events, scripting injection targets, and messaging APIs. See [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) for the full list of supported events and methods, along with guidance on using `documentId`. ([Firefox bug 1891478](https://bugzil.la/1891478))
+- Extension content scripts can now read and modify constructed stylesheets in {{domxref("document.adoptedStyleSheets")}} and {{domxref("ShadowRoot.adoptedStyleSheets")}}, without `.wrappedJSObject`. ([Firefox bug 1751346](https://bugzil.la/1751346))
+- The [`theme`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) manifest key's `images.additional_backgrounds` property now supports CSS gradients in addition to image URLs. A new `properties.additional_backgrounds_size` property controls the size of each additional background item. ([Firefox bug 2036647](https://bugzil.la/2036647))
 - For contextual identities (containers):
   - Adds the {{WebExtAPIRef("contextualIdentities.getSupportedColors()")}} and {{WebExtAPIRef("contextualIdentities.getSupportedIcons()")}} methods to retrieve the supported colors and icons, avoiding the need to hardcode those values. ([Firefox bug 2044712](https://bugzil.la/2044712))
   - Updates the colors available. `"turquoise"` is renamed to `"cyan"`, `"toolbar"` is renamed to `"gray"`, and `"violet"` is added. The legacy names `"turquoise"` and `"toolbar"` are accepted for backward compatibility. To avoid hardcoding color names, use {{WebExtAPIRef("contextualIdentities.getSupportedColors()")}} to retrieve the available colors. ([Firefox bug 2044354](https://bugzil.la/2044354))
-
-<!-- ### Removals -->
-
-<!-- ### Other -->
 
 ## Experimental web features
 
@@ -150,7 +120,20 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   The Rust-based [JPEG XL](https://jpeg.org/jpegxl/) image decoder is now enabled by default in Nightly. ([Firefox bug 2040074](https://bugzil.la/2040074)).
 
+- **`headingoffset` and `headingreset` HTML attributes**: `dom.headingoffset.enabled`
+
+  The [`headingoffset`](/en-US/docs/Web/HTML/Reference/Global_attributes/headingoffset) global attribute increases the computed heading level of the [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) inside the element it is set on, so that a component can use the same heading markup wherever it appears in a page. The [`headingreset`](/en-US/docs/Web/HTML/Reference/Global_attributes/headingreset) attribute stops the offsets of ancestor elements from applying to the headings inside the element it is set on. ([Firefox bug 1974383](https://bugzil.la/1974383)).
+
 - **Tree counting CSS functions**: `layout.css.tree-counting-functions.enabled`
 
-  The {{cssxref("sibling-count")}} and {{cssxref("sibling-index")}} function are now supported. The `sibling-count()` function returns the number sibling elements as well as the element itself. The `sibling-index()` function returns the index number of the element in relation to its siblings, this starts from `1` and not `0`.
+  The {{cssxref("sibling-count")}} and {{cssxref("sibling-index")}} functions are now supported. The `sibling-count()` function returns the number of sibling elements as well as the element itself. The `sibling-index()` function returns the index number of the element in relation to its siblings, this starts from `1` and not `0`.
   ([Firefox bug 2042063](https://bugzil.la/2042063)).
+
+- **Updating attributes of external resources**: `layout.css.link-parameters.enabled`
+
+  The {{cssxref("link-parameters")}} CSS property and {{cssxref("param")}} CSS function are now supported. This allows the user to update attributes of external resources, such as SVGs, that have their attributes set with the {{cssxref("env")}} CSS function. This means that a single external resource can be used rather than creating multiple variations that only have different colors or other values. ([Firefox bug 2046153](https://bugzil.la/2046153)).
+
+- **CSS basic shapes allow `farthest-corner` and `closest-corner` keywords** (Nightly): `layout.css.ellipse-corners.enabled`
+
+  The `farthest-corner` and `closest-corner` keywords can now be used for specifying the radii values of the [`ellipse()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/ellipse) and [`circle()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/circle) CSS basic shapes.
+  ([Firefox bug 2037673](https://bugzil.la/2037673)).

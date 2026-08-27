@@ -1,12 +1,13 @@
 ---
-title: "and: Wasm text instruction"
+title: "and: Wasm numeric instruction"
 short-title: and
 slug: WebAssembly/Reference/Numeric/and
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.and
 sidebar: webassemblysidebar
 ---
 
-The **`and`** instruction is used for performing a bitwise AND, similar to the **`&`** operator in other languages.
+The **`and`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) is used for performing a bitwise AND, similar to the **`&`** operator in other languages.
 
 {{InteractiveExample("Wat Demo: and", "tabbed-taller")}}
 
@@ -146,3 +147,11 @@ The output is as follows:
       -------------------
 AND = 0000 0001 0000 0000 = 256
 ```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

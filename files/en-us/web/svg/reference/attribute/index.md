@@ -272,7 +272,7 @@ Below is a list of all of the attributes available in SVG, along with links to r
 - {{SVGAttr("xChannelSelector")}}
 - {{SVGAttr("xlink:actuate")}}
 - {{SVGAttr("xlink:arcrole")}}
-- {{SVGAttr("xlink:href")}}{{deprecated_inline}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 - {{SVGAttr("xlink:role")}}
 - {{SVGAttr("xlink:show")}}
 - {{SVGAttr("xlink:title")}}
@@ -378,6 +378,7 @@ Most presentation attributes inherit when used as CSS properties (for example, {
 - {{SVGAttr("mask-type")}}
 - {{SVGAttr("opacity")}}
 - {{SVGAttr("overflow")}}
+- {{SVGAttr("pathLength")}}
 - {{SVGAttr("pointer-events")}}
 - {{SVGAttr("r")}}
 - {{SVGAttr("rx")}}
@@ -458,7 +459,7 @@ All HTML and SVG elements support event handler attributes defined on the [`Glob
 
 While event handler attributes, like {{domxref("Element/blur_event", "onblur")}} and {{domxref("Element/auxclick_event", "onauxclick")}}, apply to all elements, they may not have any effect. For example, the {{domxref("HTMLTrackElement/cuechange_event", "oncuechange")}} attribute can be applied to any element, but it is only relevant to the {{htmlelement("track")}} element.
 
-Event handler attributes are discouraged, considered unsafe, and may be blocked by [content security policies (CSP)](/en-US/docs/Web/Security/Practical_implementation_guides/CSP). Use the event name withing an {{domxref("EventTarget.addEventListener", "addEventListener()")}} method instead.
+Event handler attributes are discouraged, considered unsafe, and may be blocked by [content security policies (CSP)](/en-US/docs/Web/Security/Practical_implementation_guides/CSP). Use the event name within an {{domxref("EventTarget.addEventListener", "addEventListener()")}} method instead.
 
 ## See also
 

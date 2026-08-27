@@ -122,6 +122,8 @@ font-synthesis: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `none`
   - : Indicates that no bold, italic, or small-caps typeface may be synthesized by the browser.
 - `weight`

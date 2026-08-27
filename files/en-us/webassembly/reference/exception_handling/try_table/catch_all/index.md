@@ -116,6 +116,14 @@ In the case of `catch_all`, the referenced block doesn't need to declare a resul
 )
 ```
 
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
 ## See also
 
 - [`throw`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw) instruction

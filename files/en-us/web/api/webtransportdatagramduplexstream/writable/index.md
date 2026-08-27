@@ -9,7 +9,7 @@ status:
 browser-compat: api.WebTransportDatagramDuplexStream.writable
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}{{deprecated_header}}{{non-standard_header}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}{{non-standard_header}}
 
 The **`writable`** read-only property of the {{domxref("WebTransportDatagramDuplexStream")}} interface returns a {{domxref("WritableStream")}} instance that can be used to unreliably write outgoing datagrams to the stream.
 

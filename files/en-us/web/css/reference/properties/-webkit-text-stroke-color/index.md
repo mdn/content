@@ -27,6 +27,8 @@ The **`-webkit-text-stroke-color`** [CSS](/en-US/docs/Web/CSS) property specifie
 
 ### Values
 
+This property is specified as one `<color>` value:
+
 - `<color>`
   - : The color of the stroke.
 

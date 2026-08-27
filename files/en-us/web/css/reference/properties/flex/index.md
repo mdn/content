@@ -102,7 +102,7 @@ flex: unset;
 The `flex` property may be specified using one, two, or three values.
 
 - **One-value syntax:** the value must be one of:
-  - a valid value for {{cssxref("flex-grow")}}: then, in all the browsers, the shorthand expands to `flex: <flex-grow> 1 0%`. However the specification says it should expand to `flex: <flex-grow> 1 0`.
+  - a valid value for {{cssxref("flex-grow")}}: then the shorthand expands to `flex: <flex-grow> 1 0%`.
   - a valid value for {{cssxref("flex-basis")}}: then the shorthand expands to `flex: 1 1 <flex-basis>`.
   - the keyword `none` or one of the global keywords.
 
@@ -110,7 +110,7 @@ The `flex` property may be specified using one, two, or three values.
   - The first value must be a valid value for {{cssxref("flex-grow")}}.
 
   - The second value must be one of:
-    - a valid value for {{cssxref("flex-shrink")}}: then, in all the browsers, the shorthand expands to `flex: <flex-grow> <flex-shrink> 0%`.
+    - a valid value for {{cssxref("flex-shrink")}}: then the shorthand expands to `flex: <flex-grow> <flex-shrink> 0%`.
     - a valid value for {{cssxref("flex-basis")}}: then the shorthand expands to `flex: <flex-grow> 1 <flex-basis>`.
 
 - **Three-value syntax:** the values must be in the following order:
@@ -134,10 +134,7 @@ Commonly desired flexbox effects can be achieved using the following `flex` valu
 - `initial`: Flex item doesn't grow but can shrink. This default value expands to `flex: 0 1 auto`. The item is sized according to its `width` or `height` properties, depending on the `flex-direction`. If there is negative available space, the item will shrink to its minimum size to fit within the container but will not grow to absorb any positive space available in the flex container.
 - `auto`: Flex item can grow and shrink. This value expands to `flex: 1 1 auto`. The item is sized according to its `width` or `height` properties, depending on the `flex-direction`, but grows to absorb available positive space in the flex container or shrink down to its minimum size to fit the container in the case of negative space. The flex item is fully flexible.
 - `none`: The flex item neither grows nor shrinks. This value expands to `flex: 0 0 auto`. The item is sized according to its `width` or `height` properties, depending on the direction of the flex container. The flex item is fully inflexible.
-- `flex: <number [1,∞]>`: The flex item's main size will be proportional to the number set. This value expands to `flex: <number> 1 0`. This sets the `flex-basis` to zero and makes the flex item flexible. The item will be at least as wide or tall as its minimum size, with the container's positive available space being proportionally distributed based on the growth factors of this item and its sibling flex items. If all the flex items use this pattern, all will be sized in proportion to their numeric values.
-
-  > [!WARNING]
-  > The browsers use `flex-basis` value `0%` when the `flex-basis` is not specified in a `flex` value. This is not the same as `flex-basis` value `0` which is what the specification says. This may affect flex layout in some cases. See this effect demonstrated in the [Flex-basis `0` versus `0%`](/en-US/docs/Web/CSS/Reference/Properties/flex-basis#flex_basis_0_vs_0) example.
+- `flex: <number [1,∞]>`: The flex item's main size will be proportional to the number set. This value expands to `flex: <number> 1 0%`. This sets the `flex-basis` to `0%` and makes the flex item flexible. The item will be at least as wide or tall as its minimum size, with the container's positive available space being proportionally distributed based on the growth factors of this item and its sibling flex items. If all the flex items use this pattern, all will be sized in proportion to their numeric values.
 
 ## Description
 

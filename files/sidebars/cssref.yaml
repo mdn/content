@@ -157,7 +157,7 @@ sidebar:
       - /Web/CSS/Guides/Grid_layout/Accessibility
       - /Web/CSS/Guides/Grid_layout/Common_grid_layouts
       - /Web/CSS/Guides/Grid_layout/Subgrid
-      - /Web/CSS/Guides/Grid_layout/Masonry_layout
+      - /Web/CSS/Guides/Grid_layout/Grid_lanes
   - title: Images
     details: closed
     children:
@@ -346,7 +346,12 @@ sidebar:
     code: true
   - type: listSubPages
     path: /Web/CSS/Reference/At-rules
-    tags: css-at-rule
+    tags:
+      - css-at-rule
+      - css-at-rule-descriptor
+      - css-media-feature
+    depth: 2
+    nested: true
     link: /Web/CSS/Reference/At-rules
     title: At-rules
     details: closed
