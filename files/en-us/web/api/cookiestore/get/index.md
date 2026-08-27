@@ -42,29 +42,25 @@ A {{jsxref("Promise")}} that resolves with an object representing the first cook
 
 The object returned for a match contains the following properties:
 
+- `name`
+  - : A string containing the name of the cookie.
+- `value`
+  - : A string containing the value of the cookie.
+
+The following properties are now non-standard and should not be relied on:
+
 - `domain` {{experimental_inline}} {{non-standard_inline}}
   - : A string containing the domain of the cookie.
-
 - `expires` {{experimental_inline}} {{non-standard_inline}}
   - : A timestamp, given as {{glossary("Unix time")}} in milliseconds, containing the expiration date of the cookie.
-
-- `name` {{experimental_inline}} {{non-standard_inline}}
-  - : A string containing the name of the cookie.
-
 - `partitioned` {{experimental_inline}} {{non-standard_inline}}
   - : A boolean indicating whether the cookie is a partitioned cookie (`true`) or not (`false`). See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies) for more information.
-
 - `path` {{experimental_inline}} {{non-standard_inline}}
   - : A string containing the path of the cookie.
-
 - `sameSite` {{experimental_inline}} {{non-standard_inline}}
   - : One of the following [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) values: [`"strict"`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#strict), [`"lax"`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#lax), or [`"none"`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#none).
-
 - `secure` {{experimental_inline}} {{non-standard_inline}}
   - : A boolean value indicating whether the cookie is to be used in secure contexts only (`true`) or not (`false`).
-
-- `value` {{experimental_inline}} {{non-standard_inline}}
-  - : A string containing the value of the cookie.
 
 ### Exceptions
 
