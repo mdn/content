@@ -96,7 +96,7 @@ The minimum, maximum and step values specified must be of the same data type for
 
 The random base value works like a [seed for randomness](/en-US/docs/Glossary/RNG). It's a starting number that is used to generate the final random result. When two `random()` functions share the same base value, their results vary together in a predictable pattern. When they have different base values, their results are completely independent of each other.
 
-The optional first `<random-key>` parameter controls how the random base value is shared. Sharing enables reusing the same randomly generated value, a necessity for some design effects. The value can be set to use `auto`, a scope keyword (`element-scoped`, `property-scoped`, or `property-index-scoped`), a custom {{cssxref("dashed-ident")}} , or `fixed <number>`. Including a custom {{cssxref("dashed-ident")}} with a scope keyword, space-separated, is also valid.
+The optional first `<random-key>` parameter controls how the random base value is shared. Sharing enables reusing the same randomly generated value, which is needed for some design effects. The value can be explicitly set to use `auto`, a scope keyword of `element-scoped`, `property-scoped`, or `property-index-scoped`, a custom {{cssxref("dashed-ident")}} , or a `fixed <number>`, or a space-separated scope keyword and custom `<dashed-ident>` pair.
 
 #### The `property-scoped` keyword
 
