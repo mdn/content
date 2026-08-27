@@ -62,7 +62,7 @@ random(--my-base, 1em, 3rem, 2px)
 
 - `<random-key>` {{optional_inline}}
   - : Controls which `random()` functions in the document will share a random base value and which will get distinct values.
-    This can be one of the following values, or a combination of a custom key and scope keywords, separated by a space:
+    This is one of the following values. The `*-scoped` keywords can optionally be combined with a `<dashed-ident>, separated by a space:
     - `auto`
       - : The random function generates independent random values by default. The random cache name, and thus the result, varies across every `random()` instance in a multi-component value, across different properties, and across different elements. This default `<random-key>` value is equivalent to specifying `element-scoped property-index-scoped`.
     - `element-scoped`
