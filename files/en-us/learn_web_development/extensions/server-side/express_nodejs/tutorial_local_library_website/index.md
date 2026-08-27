@@ -42,7 +42,7 @@ In this series of tutorial articles you will:
 - Work with forms.
 - Deploy your application to production.
 
-You have learnt about some of these topics already, and touched briefly on others. By the end of the tutorial series you should know enough to develop simple Express apps by yourself.
+You have learned about some of these topics already, and touched briefly on others. By the end of the tutorial series you should know enough to develop simple Express apps by yourself.
 
 ## The LocalLibrary website
 

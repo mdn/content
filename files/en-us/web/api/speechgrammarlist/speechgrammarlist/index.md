@@ -8,7 +8,7 @@ status:
 browser-compat: api.SpeechGrammarList.SpeechGrammarList
 ---
 
-{{APIRef("Web Speech API")}}{{deprecated_header}}
+{{APIRef("Web Speech API")}}
 
 The **`SpeechGrammarList()`** constructor creates a new
 `SpeechGrammarList` object instance.

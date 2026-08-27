@@ -23,10 +23,11 @@ This example uses a {{domxref("PerformanceObserver")}} to log new `soft-navigati
 ```js
 const observer = new PerformanceObserver((list) => {
   for (const entry of list.getEntries()) {
-    console.log('Soft Nav:', entry.startTime, entry.paintTime);
+    console.log("Soft Nav:", entry.startTime, entry.paintTime);
   }
 });
 observer.observe({ type: "soft-navigation", buffered: true });
+```
 
 ## Specifications
 
@@ -39,4 +40,3 @@ observer.observe({ type: "soft-navigation", buffered: true });
 ## See also
 
 - {{domxref("LargestContentfulPaint.presentationTime")}}
-```

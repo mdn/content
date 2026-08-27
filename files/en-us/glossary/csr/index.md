@@ -34,7 +34,7 @@ Benefits of CSR include:
 
 Both SSR and CSR have their performance tradeoffs, and a mix of SSR and CSR can be used to combine the benefits of both techniques. For example, the server can generate a page skeleton with empty placeholders, and the client can fetch additional data and update the page as needed.
 
-Note that {{glossary("SPA", "single-page applications")}} do not require the site to be CSR. Modern frameworks, such as [React](/en-US/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started), [Vue](https://vuejs.org/svelte), and [Svelte](https://svelte.dev/), can be used to build SPAs with SSR capabilities.
+Note that {{glossary("SPA", "single-page applications")}} do not require the site to be CSR. Modern frameworks, such as [React](/en-US/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started), [Vue](https://vuejs.org/), and [Svelte](https://svelte.dev/), can be used to build SPAs with SSR capabilities.
 
 ## See also
 

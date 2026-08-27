@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.Window
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("HTML DOM")}}
 
 The **`Window`** interface represents a window containing a {{glossary("DOM")}} document; the `document` property points to the [DOM document](/en-US/docs/Web/API/Document) loaded in that window.
 
@@ -49,7 +49,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a reference to the document that the window contains.
 - {{domxref("Window.documentPictureInPicture")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a reference to the [document Picture-in-Picture](/en-US/docs/Web/API/Document_Picture-in-Picture_API) window for the current document context.
-- {{domxref("Window.fence")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref("Window.fence")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns a {{domxref("Fence")}} object instance for the current document context. Available only to documents embedded inside a {{htmlelement("fencedframe")}}.
 - {{domxref("Window.frameElement")}} {{ReadOnlyInline}}
   - : Returns the element in which the window is embedded, or null if the window is not embedded.

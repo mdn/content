@@ -79,7 +79,7 @@ sidebar: mdnsidebar
 {{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 Begin the content on the page with an introductory paragraph, which names the property and says what it does.
-This should ideally be one or two short sentences.
+This should ideally be one or two short sentences. All other explanations, if any, should be included in the "Description" section.
 
 ## Try it
 
@@ -102,7 +102,17 @@ Include the common use cases as a code block and describe the component subvalue
 
 ### Values
 
-Include one term and definition for each subvalue.
+Include a sentence, like one of the following, to convey how the property's value is constructed:
+
+```md
+This property is specified as one of the following keyword values:
+
+This property is specified as a single value from the following list:
+
+This property is specified as a space-separated list of the following values:
+```
+
+Follow the sentence with a definition list that includes one term and definition for each subvalue. If an MDN reference page exists for a value type, add that link on the term.
 
 - `subvalue1`
   - : Include a description of the subvalue, its data type, and what it represents.
@@ -114,7 +124,13 @@ Include one term and definition for each subvalue.
 
 ## Description
 
-This is an optional section to include a description of the property and explain how it works. Use this section to explain related terms and add use cases for the property.
+Include a description of the property and explain how it works. Use this section to explain related terms and add use cases for the property.
+
+If the property is part of a shorthand, include alternative ways of declaring the value:
+
+```md
+The `property-name` property, along with the \{{cssxref("sibling-property")}} property, can also be set by using the \{{cssxref("shorthand-property")}} shorthand.
+```
 
 ## Formal definition
 
@@ -138,7 +154,7 @@ Note that we use the plural "Examples" even if the page only contains one exampl
 
 ### Add a descriptive heading
 
-Each example must have an H3 heading (`###`) naming the example. The heading should be descriptive of what the example is doing. For example, "A simple example" does not say anything about the example and therefore, not a good heading. The heading should be concise. For a longer description, use the paragraph after the heading.
+Each example must have an H3 heading (`###`) naming the example. The heading should be descriptive of what the example is doing. For example, "A simple example" does not say anything about the example and therefore is not a good heading. That said, "Basic usage" is acceptable for the first example heading when it only demonstrates value assignment and more complex examples follow. The heading should be concise. For a longer description, use the paragraph after the heading.
 
 See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.
 
@@ -185,8 +201,9 @@ _To use this macro, remove the backticks and backslash in the markdown file._
 
 ## See also
 
-Include links to reference pages and guides related to the current property. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
+Include links to reference pages and guides related to the current property. Also include a link to the CSS module that the property belongs to. For more guidelines, see the [See also section](/en-US/docs/MDN/Writing_guidelines/Writing_style_guide#see_also_section) in the _Writing style guide_.
 
 - link1
 - link2
+- module_link
 - external_link (year)

@@ -410,8 +410,7 @@ Even though there are more column rule lines than row rule lines, the `<auto-rep
 
 - {{cssxref("rule-color")}}
 - {{cssxref("rule-width")}}
+- {{cssxref("column-rule-style")}}
 - {{cssxref("row-rule-style")}}
-- {{cssxref("rule")}} shorthand
-- {{cssxref("rule-style")}} shorthand
 - {{cssxref("rule")}} shorthand
 - [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module

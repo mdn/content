@@ -7,7 +7,7 @@ status:
 browser-compat: api.SharedStorageRunOperation
 ---
 
-{{APIRef("Shared Storage API")}}{{deprecated_header}}
+{{APIRef("Shared Storage API")}}
 
 The **`SharedStorageRunOperation`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents a [Run output gate](/en-US/docs/Web/API/Shared_Storage_API#run) operation.
 

@@ -112,18 +112,17 @@ async function getSession(history) {
       expectedInputs: [{ type: "text", languages: ["en"] }],
       expectedOutputs: [{ type: "text", languages: ["en"] }],
     });
-  } else {
-    return await LanguageModel.create({
-      initialPrompts: history,
-      expectedInputs: [{ type: "text", languages: ["en"] }],
-      expectedOutputs: [{ type: "text", languages: ["en"] }],
-      monitor(monitor) {
-        monitor.addEventListener("downloadprogress", (e) => {
-          promptOutput.textContent = `Downloading model data ${Math.floor(e.loaded * 100)}%`;
-        });
-      },
-    });
   }
+  return await LanguageModel.create({
+    initialPrompts: history,
+    expectedInputs: [{ type: "text", languages: ["en"] }],
+    expectedOutputs: [{ type: "text", languages: ["en"] }],
+    monitor(monitor) {
+      monitor.addEventListener("downloadprogress", (e) => {
+        promptOutput.textContent = `Downloading model data ${Math.floor(e.loaded * 100)}%`;
+      });
+    },
+  });
 }
 ```
 
