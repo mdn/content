@@ -54,7 +54,7 @@ All basic text controls share some common behaviors:
 - They can benefit from spell-checking (using the [`spellcheck`](/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck) attribute).
 
 > [!NOTE]
-> The {{htmlelement("input")}} element is unique amongst HTML elements because it can take many forms depending on its [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute value. It is used for creating most types of form widgets including single line text fields, time and date controls, controls without text input like checkboxes, radio buttons, and color pickers, and buttons.
+> The {{htmlelement("input")}} element is unique among HTML elements because it can take many forms depending on its [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute value. It is used for creating most types of form widgets including single line text fields, time and date controls, controls without text input like checkboxes, radio buttons, and color pickers, and buttons.
 
 ### Single line text fields
 
