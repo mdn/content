@@ -203,7 +203,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
   A {{domxref("CustomElementRegistry")}} can be constructed and passed to {{domxref("Element.attachShadow()")}}, so that a shadow root can define custom elements that do not clash with those defined in the global registry. ([Firefox bug 2018900](https://bugzil.la/2018900)).
   This release also adds the `customelementregistry` global attribute, for selecting the registry an element is associated with from markup. ([Firefox bug 2029965](https://bugzil.la/2029965)).
 
-- **Buffer boundary assertions in regular expressions**: `javascript.options.experimental.regexp_buffer_boundaries`
+- **Buffer boundary assertions in regular expressions**: (Nightly only) `javascript.options.experimental.regexp_buffer_boundaries`
 
   The [TC39 RegExp buffer boundaries proposal](https://github.com/tc39/proposal-regexp-buffer-boundaries) adds the [`\A`, `\z`, and `\Z` assertions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Buffer_boundary_assertion) to regular expressions. These match the start or end of the entire input regardless of whether the {{jsxref("RegExp/multiline", "m")}} flag is set. ([Firefox bug 2047706](https://bugzil.la/2047706)).
 
