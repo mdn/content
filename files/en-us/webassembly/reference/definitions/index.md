@@ -22,7 +22,7 @@ This set of pages details the top-level module definition features available in 
 - [`global`](/en-US/docs/WebAssembly/Reference/Definitions/global)
   - : Creates a new global.
 - [`import`](/en-US/docs/WebAssembly/Reference/Definitions/import)
-  - : Declares one or more **imports**, which reference values imported from the JavaScript host (such as functions or memories) and makes them available for use in the Wasm module.
+  - : Declares one or more **imports**. Each references a value imported from the host (such as a function or memory) and makes it available for use in the Wasm module.
 - [`memory`](/en-US/docs/WebAssembly/Reference/Definitions/memory)
   - : Declares a block of linear memory in units of 64KB pages.
 - [`table`](/en-US/docs/WebAssembly/Reference/Definitions/table)

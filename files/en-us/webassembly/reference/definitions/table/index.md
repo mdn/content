@@ -77,7 +77,7 @@ WebAssembly tables allow storage of reference values separate from byte-oriented
 
 The `table` definition creates a new table.
 
-A table has to be given an initial size and storage type. This example creates a table wth two storage slots, which will only store references to functions created inside Wasm (signified by [`funcref`](/en-US/docs/WebAssembly/Reference/Value_types/funcref)):
+A table has to be given an initial size and storage type. This example creates a table with two storage slots, which will only store references to functions created inside Wasm (signified by [`funcref`](/en-US/docs/WebAssembly/Reference/Value_types/funcref)):
 
 ```wat
 (table 2 funcref)
