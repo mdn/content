@@ -13,7 +13,7 @@ The **`<template>`** [HTML](/en-US/docs/Web/HTML) element serves as a mechanism 
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
-- `for`
+- `for` {{Experimental_Inline}}
   - : The `for` attribute is used for out-of-order patching with `<template for="...">`, matching an equivalent `<?start id="...">` or `<?marker "...">` marker. See the [out-of-order patching section](#out-of-order_patching) and [examples section](#examples).
 
 - `shadowrootmode`
