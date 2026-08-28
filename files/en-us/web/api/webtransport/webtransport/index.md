@@ -33,11 +33,12 @@ new WebTransport(url, options)
         This is a hint to the user agent.
         The allowed values are: `default` (default), `throughput`, and `low-latency`.
     - `protocols` {{optional_inline}}
-      - : An array of strings, each that indicates an application-specific protocol name.
-        This defaults to an empty array.
+      - : An array of strings, each indicating an application-specific protocol name, listed in order of preference.
+        By default, the value is an empty array.
 
-        The server may select and return one of the protocols, in which case the selected value will become available in the {{domxref("WebTransport/protocol","protocol")}} property after the {{jsxref("Promise")}} returned by the {{domxref("WebTransport/ready","ready")}} property fulfills.
-        The server may also choose not to return its preferred protocol, in which case the `protocol` will return an empty string (`""`).
+        The server may select and return one of the protocols.
+        In this case, the selected value becomes available in the {{domxref("WebTransport/protocol", "protocol")}} property once the {{domxref("WebTransport/ready", "ready")}} promise fulfills.
+        The server may also choose not to select any of the offered protocols, in which case `protocol` will return an empty string (`""`).
         The server may also reject the connection if it doesn't support any of the protocols, in which case {{domxref("WebTransport/ready","ready")}} will reject with an error.
 
     - `requireUnreliable` {{optional_inline}}
@@ -80,6 +81,7 @@ new WebTransport(url, options)
   - : Thrown if `serverCertificateHashes` is specified but the transport protocol does not support this feature.
 - `SyntaxError`
   - : Thrown if the specified `url` is invalid, if the scheme is not HTTPS, or if the URL includes a fragment.
+    Also thrown if `protocols` contains a duplicate value, a value with characters not allowed in a protocol token, or a value whose encoded length is `0` or greater than `512` bytes.
 - `TypeError`
   - : Thrown if a `serverCertificateHashes` is set for a non-dedicated connection (in other words, if `allowPooling` is `true`).
 

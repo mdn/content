@@ -11,8 +11,8 @@ browser-compat: api.WebTransport.protocol
 The **`protocol`** read-only property of the {{domxref("WebTransport")}} interface returns the application-specific protocol selected by the server.
 
 The value is selected from those offered in the [`protocols`](/en-US/docs/Web/API/WebTransport/WebTransport#protocols) constructor option.
-Note that the value is set once the connection is established and the {{domxref("WebTransport.ready","ready")}} promise fulfills.
-It is the empty string if `protocols` was not used, or if the server chose not select one of the offered protocols.
+Note that the value is set once the {{domxref("WebTransport.ready", "ready")}} promise fulfills.
+It is the empty string if `protocols` was not used, or if the server chose not to select one of the offered protocols.
 
 ## Value
 
@@ -21,7 +21,7 @@ Defaults to `""`.
 
 ## Examples
 
-### Basic usage
+### Requesting and reading a negotiated protocol
 
 This example shows how to request a set of candidate protocols and read back the one the server selected.
 
@@ -39,7 +39,7 @@ async function initTransport(url) {
     console.log(transport.protocol); // e.g. "chat", or "" if none was selected
     return transport;
   } catch (error) {
-    // ready may reject if the offered protocols aren't supported
+    // Ready may reject if the offered protocols aren't supported
     console.error(`Connection failed: ${error}`);
   }
 }
