@@ -14,7 +14,7 @@ This includes both changes in the selected range of characters, or if the caret 
 This event is not cancelable.
 
 > [!NOTE]
-> Unlike most other UI events, the `selectionchange` event is scheduled asynchronously as a task on the user interaction task source rather than fired synchronously at the moment the selection or caret position changes.
+> When you change the selection programmatically, for example by calling {{domxref("HTMLTextAreaElement.setSelectionRange()", "setSelectionRange()")}}, the selection updates immediately, but the `selectionchange` event is queued as a task. Its listeners run later, after the current script finishes executing. This contrasts with events such as `focus` and `click`, whose listeners run synchronously when triggered by {{domxref("HTMLElement.focus()", "focus()")}} and {{domxref("HTMLElement.click()", "click()")}}, respectively.
 
 The event is usually processed by adding an event listener on the {{HTMLElement("textarea")}}, and in the handler function read by the {{domxref("HTMLTextAreaElement")}} `selectionStart`, `selectionEnd` and `selectionDirection` properties.
 
