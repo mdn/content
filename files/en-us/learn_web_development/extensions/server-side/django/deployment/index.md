@@ -797,7 +797,7 @@ We should now be ready to start deploying LocalLibrary on Railway.
 To start using Railway you will first need to create an account:
 
 - Go to [railway.com](https://railway.com/) and click the **Login** link in the top toolbar.
-- Select GitHub in the popup to login using your GitHub credentials
+- Select GitHub in the popup to log in using your GitHub credentials
 - You may then need to go to your email and verify your account.
 - You'll then be logged in to the Railway.com dashboard: <https://railway.com/dashboard>.
 
@@ -932,7 +932,7 @@ What we can do is call this command locally on our Django project when it is con
 The Railway client makes this easy by providing a mechanism to run commands locally using the same environment variables as the production server, including the database connection string.
 
 First open a terminal or command prompt in a git clone of your locallibrary project.
-Then login to your browser account using the `login` or `login --browserless` command (follow any resulting prompts and instructions from the client or website to complete the login):
+Then log in to your browser account using the `login` or `login --browserless` command (follow any resulting prompts and instructions from the client or website to complete the login):
 
 ```bash
 railway login
