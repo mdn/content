@@ -2,6 +2,8 @@
 title: The MDN Content Kitchensink
 slug: MDN/Kitchensink
 page-type: guide
+status:
+  - deprecated
 browser-compat: html.elements.video
 ---
 
@@ -455,5 +457,4 @@ The [`AvailableInWorkers`](https://github.com/mdn/rari/blob/main/crates/rari-doc
   - : Information about a particular alarm.
 
 {{Non-standard_Header}}
-{{Deprecated_Header}}
 [![Iceberg pic](iceberg.jpg)](iceberg.jpg)
