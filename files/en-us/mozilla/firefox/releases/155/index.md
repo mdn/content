@@ -99,7 +99,8 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
     ([Firefox bug 2007200](https://bugzil.la/2007200)).
   - The {{domxref("WebTransportDatagramDuplexStream.createWritable()")}} method returns a {{domxref("WebTransportDatagramsWritable")}} stream for sending datagrams, with {{domxref("WebTransportDatagramsWritable.sendGroup", "sendGroup")}} and {{domxref("WebTransportDatagramsWritable.sendOrder", "sendOrder")}} properties for prioritizing it against other senders.
     ([Firefox bug 2007174](https://bugzil.la/2007174)).
-  - The {{domxref("WebTransport.WebTransport", "WebTransport()")}} constructor accepts a `protocols` option listing the application protocols the client supports, which is sent to the server in the `wt-available-protocols` request header. The protocol chosen by the server is exposed in the `WebTransport.protocol` property.
+  - The {{domxref("WebTransport.WebTransport", "WebTransport()")}} constructor accepts a [`protocols`](/en-US/docs/Web/API/WebTransport/WebTransport#protocols) option listing the application protocols that the client supports.
+    The protocol selected by the server, if any, is returned in the {{domxref("WebTransport.protocol")}} property when the connection is established and the {{domxref("WebTransport.ready")}} protocol fulfills.
     ([Firefox bug 2007150](https://bugzil.la/2007150)).
   - The {{domxref("WebTransport.draining")}} property indicates when the server has requested the client to start a graceful shutdown of the session.
     ([Firefox bug 2007160](https://bugzil.la/2007160)).
