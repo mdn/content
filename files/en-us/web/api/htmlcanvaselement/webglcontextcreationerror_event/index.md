@@ -30,13 +30,6 @@ A {{domxref("WebGLContextEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("WebGLContextEvent")}}
 
-## Event properties
-
-_This interface inherits properties from its parent interface, {{domxref("Event")}}._
-
-- {{domxref("WebGLContextEvent.statusMessage")}}
-  - : A read-only property containing additional information about the event.
-
 ## Example
 
 ```js

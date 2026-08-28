@@ -1,5 +1,6 @@
 ---
-title: background-position-y
+title: "`background-position-y` CSS property"
+short-title: background-position-y
 slug: Web/CSS/Reference/Properties/background-position-y
 page-type: css-property
 browser-compat: css.properties.background-position-y
@@ -78,9 +79,9 @@ background-position-y: revert-layer;
 background-position-y: unset;
 ```
 
-The `background-position-y` property is specified as one or more values, separated by commas.
-
 ### Values
+
+This property is specified as one or more comma-separated values:
 
 - `top`
   - : Aligns the top edge of the background image with the top edge of the background position layer.

@@ -184,6 +184,9 @@ To demonstrate on-device speech recognition, we've created a sample app called [
 
 This demo works in a very similar fashion to the online speech color changer demo discussed earlier, with the differences noted below.
 
+> [!NOTE]
+> In the original speech color changer demo, we included extra lines to handle browsers that support the Web Speech API only with vendor-prefixed properties (see the [Prefixed properties](#prefixed_properties) section for more details). In the on-device version of the demo, prefix-handling code is not needed because the implementations that support this functionality do so without prefixes.
+
 ### Specifying on-device recognition
 
 To specify that you want to use the browser's on-device processing, set the {{domxref("SpeechRecognition.processLocally")}} property to `true` before starting any speech recognition (the default value is `false`):
@@ -252,11 +255,46 @@ The use of the `available()` and `install()` methods is controlled by the {{http
 
 The default allowlist value for `on-device-speech-recognition` is `self`. This means you don't need to worry about adjusting the policy unless you're attempting to use these methods in embedded cross-origin documents or want to explicitly disable their use.
 
-### Unprefixed Web Speech API
+### Specifying quality level requirements
 
-In the original speech color changer demo, we included extra lines to handle browsers that support the Web Speech API only with vendor-prefixed properties (see the [Prefixed properties](#prefixed_properties) section for more details).
+The `available()` and `install()` methods both support the [`quality`](/en-US/docs/Web/API/SpeechRecognition/available_static#quality) option. This allows you to check support for varying speech recognition complexity levels — for example, processing short voice commands is much simpler than handling dictation/transcription, and the former use case is likely to be supported by more hardware and language pack combinations than the latter.
 
-In the on-device version of the demo, prefix-handling code is not needed because the implementations that support this functionality do so without prefixes.
+For example, the following code snippet is a modification of code from the [On-device speech color changer](#demo_2) example in which we call the `available()` method with the `quality` option set to `dictation`, to check whether on-device recognition will support this quality level. If the result returned is `unavailable`, we set the `SpeechRecognition` object's {{domxref("SpeechRecognition.processLocally", "processLocally")}} property to `false` to force the API to use a cloud recognition service, then `start()` the recognition service.
+
+If the result is `available`, we are good to go, so we just call `start()` to start on-device recognition. If the result is any other value, we run the `install()` method with the `quality` option set to `dictation` to install the required language packs.
+
+```js
+startBtn.addEventListener("click", () => {
+  // Check availability of on-device target language dictation quality
+  SpeechRecognition.available({
+    langs: ["en-US"],
+    processLocally: true,
+    quality: "dictation",
+  }).then((result) => {
+    if (result === "unavailable") {
+      diagnostic.textContent = `On-device recognition for dictation not available, running with cloud recognition`;
+      recognition.processLocally = false;
+      recognition.start();
+    } else if (result === "available") {
+      recognition.start();
+      console.log("Ready to receive a color command.");
+    } else {
+      diagnostic.textContent = `en-US language pack downloading`;
+      SpeechRecognition.install({
+        langs: ["en-US"],
+        processLocally: true,
+        quality: "dictation",
+      }).then((result) => {
+        if (result) {
+          diagnostic.textContent = `en-US language pack downloaded. Try again.`;
+        } else {
+          diagnostic.textContent = `en-US language pack failed to download. Try again later.`;
+        }
+      });
+    }
+  });
+});
+```
 
 ## Contextual biasing in speech recognition
 

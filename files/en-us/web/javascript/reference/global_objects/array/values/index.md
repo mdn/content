@@ -98,7 +98,7 @@ for (const letter of values) {
 for (const letter of values) {
   console.log(letter);
 }
-// undefined
+// No output
 ```
 
 If you use a [`break`](/en-US/docs/Web/JavaScript/Reference/Statements/break) statement to end the iteration early, the iterator can resume from the current position when continuing to iterate it.

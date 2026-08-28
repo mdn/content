@@ -1,8 +1,9 @@
 ---
-title: mask-border-mode
+title: "`mask-border-mode` CSS property"
+short-title: mask-border-mode
 slug: Web/CSS/Reference/Properties/mask-border-mode
 page-type: css-property
-spec-urls: https://drafts.fxtf.org/css-masking-1/#the-mask-border-mode
+spec-urls: https://drafts.csswg.org/css-masking-1/#the-mask-border-mode
 sidebar: cssref
 ---
 
@@ -24,6 +25,8 @@ mask-border-mode: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `luminance`
   - : The luminance values of the mask border image are used as the mask values.

@@ -22,7 +22,7 @@ The **`RTCRtpReceiver`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRT
 
 ### Obsolete properties
 
-- `rtcpTransport` {{deprecated_inline}}
+- `rtcpTransport` {{deprecated_inline}} {{non-standard_inline}}
   - : This property has been removed; the RTP and RTCP transports have been combined into a single transport. Use the {{domxref("RTCRtpReceiver.transport", "transport")}} property instead.
 
 ## Static methods

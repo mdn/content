@@ -1,5 +1,5 @@
 ---
-title: <meta name="viewport">
+title: '`<meta name="viewport">` HTML attribute value'
 short-title: viewport
 slug: Web/HTML/Reference/Elements/meta/name/viewport
 page-type: html-attribute-value

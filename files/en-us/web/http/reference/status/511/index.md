@@ -2,7 +2,7 @@
 title: 511 Network Authentication Required
 slug: Web/HTTP/Reference/Status/511
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc6585#section-6
+spec-urls: https://www.rfc-editor.org/info/rfc6585/#section-6
 sidebar: http
 ---
 

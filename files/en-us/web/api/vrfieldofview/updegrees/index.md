@@ -9,7 +9,7 @@ status:
 browser-compat: api.VRFieldOfView.upDegrees
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_header}}{{Non-standard_header}}
+{{APIRef("WebVR API")}}{{Non-standard_header}}
 
 The **`upDegrees`** read-only property of the {{domxref("VRFieldOfView")}} interface returns the number of degrees upwards that the field of view extends in.
 

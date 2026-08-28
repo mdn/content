@@ -51,7 +51,7 @@ As we said above, you can drastically speed up common tasks such as linting and 
 Most tools these days are based on {{Glossary("Node.js")}}, so you'll need to install it along with its counterpart package manager, [`npm`](https://www.npmjs.com/):
 
 1. The easiest way to install and update Node.js and `npm` is via a node version manager: Follow the instructions at [Installing Node](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment#installing_node) to do so.
-2. Make sure to [test that your installation was successful](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment#testing_your_nodejs_and_npm_installation) before continuing.
+2. Make sure to [test that your installation was successful](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment#testing_your_node.js_and_npm_installation) before continuing.
 3. If you previously installed Node.js/`npm`, you should update them to their latest versions. This can be done by using the node version manager to install the latest LTS versions (refer again to the linked instructions above).
 
 To start using Node/npm-based packages on your projects, you need to set up your project directories as npm projects. This is easy to do.
@@ -682,9 +682,9 @@ Once you stop the session, you'll return to the _Live Web Testing_ page, where y
 
 TestingBot has a [restful API](https://testingbot.com/support/api) that allows you to programmatically retrieve details of your account and existing tests, and annotate tests with further details, such as their pass/fail state which isn't recordable by manual testing alone.
 
-TestingBot has several API clients you can use to interact with the API, including clients for NodeJS, Python, Ruby, Java and PHP.
+TestingBot has several API clients you can use to interact with the API, including clients for Node.js, Python, Ruby, Java and PHP.
 
-Below is an example on how to interact with the TestingBot API with the NodeJS client [testingbot-api](https://www.npmjs.com/package/testingbot-api).
+Below is an example on how to interact with the TestingBot API with the Node.js client [testingbot-api](https://www.npmjs.com/package/testingbot-api).
 
 1. First, set up a new npm project to test this out, as detailed in [Setting up Node and npm](#setting_up_node_and_npm). Use a different directory name than before, like `tb-test` for example.
 2. Install the Node TestingBot wrapper using the following command:

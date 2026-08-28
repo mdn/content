@@ -1,5 +1,6 @@
 ---
-title: transition-duration
+title: "`transition-duration` CSS property"
+short-title: transition-duration
 slug: Web/CSS/Reference/Properties/transition-duration
 page-type: css-property
 browser-compat: css.properties.transition-duration

@@ -1,5 +1,6 @@
 ---
-title: ruby-overhang
+title: "`ruby-overhang` CSS property"
+short-title: ruby-overhang
 slug: Web/CSS/Reference/Properties/ruby-overhang
 page-type: css-property
 browser-compat: css.properties.ruby-overhang
@@ -49,6 +50,8 @@ ruby-overhang: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : When a ruby annotation container is longer than its corresponding base container, the annotation may partially overlap adjacent text.

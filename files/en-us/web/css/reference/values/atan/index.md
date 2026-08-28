@@ -1,5 +1,6 @@
 ---
-title: atan()
+title: "`atan()` CSS function"
+short-title: atan()
 slug: Web/CSS/Reference/Values/atan
 page-type: css-function
 browser-compat: css.types.atan

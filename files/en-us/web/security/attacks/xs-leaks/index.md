@@ -72,7 +72,7 @@ An attacker may even be able to discover a user's ID, by iteratively trying to l
 
 ### Frame counting using window references
 
-In a frame counting attack, the attacker finds out the number of frames currently loaded in the target page. In turn, that leaks information about the state of the target site, which may enable to attacker to learn, for example, whether the user is currently logged into the site.
+In a frame counting attack, the attacker finds out the number of frames currently loaded in the target page. In turn, that leaks information about the state of the target site, which may enable an attacker to learn, for example, whether the user is currently logged into the site.
 
 If an attacker site gets a reference to a {{domxref("Window")}} object containing the target site, the attacker can count the number of frames in the target site by reading the {{domxref("Window.length", "window.length")}} property.
 
@@ -141,7 +141,7 @@ Since cross-site leaks can work in many different ways, there isn't a single def
 
 ### Fetch metadata
 
-{{glossary("Fetch metadata request header", "Fetch metadata")}} is the term used for a collection of HTTP request headers which provide information about the context of an HTTP request, including:
+[Fetch metadata](/en-US/docs/Web/HTTP/Guides/Fetch_metadata) is the term used for a collection of HTTP request headers which provide information about the context of an HTTP request, including:
 
 - {{httpheader("Sec-Fetch-Site")}}: Whether the request is same-origin, same-site, or cross-site.
 - {{httpheader("Sec-Fetch-Mode")}}: The request's {{domxref("Request.mode", "mode")}}.

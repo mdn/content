@@ -27,7 +27,7 @@ An array of objects containing the deleted cookie(s). Each object contains the f
 - `expires`
   - : A timestamp, given as {{glossary("Unix time")}} in milliseconds, containing the expiration date of the cookie.
 - `secure`
-  - : A {{jsxref("boolean")}} indicating whether the cookie is used only in a secure context (HTTPS rather than HTTP).
+  - : A {{jsxref("Boolean")}} indicating whether the cookie is used only in a secure context (HTTPS rather than HTTP).
 - `sameSite`
   - : One of the following [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) values:
     - `"strict"`
@@ -38,7 +38,7 @@ An array of objects containing the deleted cookie(s). Each object contains the f
       - : Cookies will be sent in all contexts.
 
 - `partitioned`
-  - : A boolean indicating whether the cookie is a partitioned cookie (`true`) or not (`false`). See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies) for more information.
+  - : A boolean indicating whether the cookie is a partitioned cookie (`true`) or not (`false`). See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies) for more information.
 
 ## Examples
 

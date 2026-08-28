@@ -1,5 +1,6 @@
 ---
-title: offset-rotate
+title: "`offset-rotate` CSS property"
+short-title: offset-rotate
 slug: Web/CSS/Reference/Properties/offset-rotate
 page-type: css-property
 browser-compat: css.properties.offset-rotate

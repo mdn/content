@@ -56,9 +56,10 @@ A non-exhaustive list of permission-aware APIs includes:
 - [Compute Pressure API](/en-US/docs/Web/API/Compute_Pressure_API): `compute-pressure`
 - [Geolocation API](/en-US/docs/Web/API/Geolocation_API#security_considerations): `geolocation`
 - [Local Font Access API](/en-US/docs/Web/API/Local_Font_Access_API): `local-fonts`
+- [Local Network Access](/en-US/docs/Web/Security/Defenses/Local_network_access): `local-network`, `loopback-network`. The older `local-network-access` permission is still supported as an alias for the more granular equivalents.
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API): `microphone`, `camera`
 - [Notifications API](/en-US/docs/Web/API/Notifications_API): `notifications`
-- [Payment Handler API](/en-US/docs/Web/API/Payment_Handler_API): `payment-handler`
+- [Web-based Payment Handler API](/en-US/docs/Web/API/Web-Based_Payment_Handler_API): `payment-handler`
 - [Push API](/en-US/docs/Web/API/Push_API): `push`
 - [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API): `captured-surface-control`, `display-capture`
 - [Screen Wake Lock API](/en-US/docs/Web/API/Screen_Wake_Lock_API): `screen-wake-lock`

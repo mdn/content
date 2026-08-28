@@ -19,6 +19,6 @@ In web security, nonces are commonly used in mechanisms such as **Content Securi
 - Related glossary terms:
   - {{Glossary("cryptography")}}
   - {{Glossary("encryption")}}
-  - {{Glossary("hash")}}
+  - {{Glossary("Hash function", "hash")}}
   - {{Glossary("TLS")}}
   - {{Glossary("authentication")}}

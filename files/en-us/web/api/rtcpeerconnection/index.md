@@ -38,6 +38,8 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
   - : Returns a string that describes connection's ICE gathering state.
     This lets you detect, for example, when collection of ICE candidates has finished.
     Possible values are: `new`, `gathering`, or `complete`.
+- {{DOMxRef("RTCPeerConnection.idpLoginUrl", "idpLoginUrl")}} {{ReadOnlyInline}}
+  - : Returns a string containing the endpoint the application can navigate to, to log users in to the {{Glossary("Identity provider", "identity provider")}} (IdP). May be `null` if no login is needed.
 - {{DOMxRef("RTCPeerConnection.localDescription", "localDescription")}} {{ReadOnlyInline}}
   - : Returns an {{DOMxRef("RTCSessionDescription")}}
     describing the session for the local end of the connection.
@@ -107,7 +109,7 @@ _Also inherits methods from {{DOMxRef("EventTarget")}}._
     as reported by {{DOMxRef("RTCPeerConnection.getSenders", "getSenders()")}}.
     If the track is already stopped, or is not in the connection's senders list, this method has no effect.
 - {{DOMxRef("RTCPeerConnection.restartIce", "restartIce()")}}
-  - : Allows to easily request that ICE candidate gathering be redone on both ends of the connection.
+  - : Allows you to easily request that ICE candidate gathering be redone on both ends of the connection.
     This simplifies the process by allowing the same method to be used by either the caller or the receiver to trigger an {{Glossary("ICE")}} restart.
 - {{DOMxRef("RTCPeerConnection.setConfiguration", "setConfiguration()")}}
   - : Sets the current configuration of the connection based on the values included in the specified object.

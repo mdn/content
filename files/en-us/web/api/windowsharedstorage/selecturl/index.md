@@ -8,7 +8,7 @@ status:
 browser-compat: api.WindowSharedStorage.selectURL
 ---
 
-{{APIRef("Shared Storage API")}}{{deprecated_header}}
+{{APIRef("Shared Storage API")}}
 
 The **`selectURL()`** method of the
 {{domxref("WindowSharedStorage")}} interface executes a [URL Selection operation](/en-US/docs/Web/API/SharedStorageSelectURLOperation) that is registered in a module added to the current origin's {{domxref("SharedStorageWorklet")}}.
@@ -40,7 +40,7 @@ selectURL(name, urls, options)
     - `keepAlive` {{optional_inline}}
       - : A boolean value. If set to `true`, the {{domxref("SharedStorageWorkletGlobalScope")}} of the associated worklet is kept alive, and the operation can be run again. Therefore, you need to set `keepAlive` to `true` for each operation that is not intended to be the last one. The default value, `false`, means that the {{domxref("SharedStorageWorkletGlobalScope")}} is terminated after the operation is run and cannot be run again.
     - `resolveToConfig` {{optional_inline}}
-      - : A boolean value. If set to `true`, the fulfillment value of the {{jsxref("Promise")}} returned by `run()` will be a {{domxref("FencedFrameConfig")}} object that can be used to load content into a {{htmlelement("fencedframe")}} via its `config` attribute. The default value, `false`, means that the fulfillment value will be a URL that can be used to load content into an {{htmlelement("iframe")}}.
+      - : A boolean value. If set to `true`, the fulfillment value of the {{jsxref("Promise")}} returned by `selectURL()` will be a {{domxref("FencedFrameConfig")}} object that can be used to load content into a {{htmlelement("fencedframe")}} via its `config` attribute. The default value, `false`, means that the fulfillment value will be a URL that can be used to load content into an {{htmlelement("iframe")}}.
 
 ### Return value
 
@@ -54,7 +54,7 @@ A {{jsxref("Promise")}} that fulfills with a {{domxref("FencedFrameConfig")}} ob
     - `urls` is empty or exceeds the maximum allowed length (which is browser-specific).
     - An object's `url` property contains an invalid URL.
     - Shared storage is disabled (for example, via a browser setting).
-    - The calling site does not have the Shared Storage API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment).
+    - The calling site does not have the Shared Storage API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox#enrollment).
 
 ## Examples
 

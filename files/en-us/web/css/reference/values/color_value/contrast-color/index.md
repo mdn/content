@@ -1,5 +1,6 @@
 ---
-title: contrast-color()
+title: "`contrast-color()` CSS function"
+short-title: contrast-color()
 slug: Web/CSS/Reference/Values/color_value/contrast-color
 page-type: css-function
 browser-compat: css.types.color.contrast-color
@@ -37,7 +38,7 @@ The `contrast-color()` function returns a value of `white` or `black`, depending
 
 ### Contrasting text for a button
 
-In the following example, the browser automatically applies a contrasting color to the submit {{htmlelement("button")}} text when you change its background color.
+In the following example, the browser automatically applies the selected color to the background of the "Button" {{htmlelement("button")}}, and the contrasting color (black or white) to its text.
 
 ```html hidden
 <label>
@@ -45,7 +46,7 @@ In the following example, the browser automatically applies a contrasting color 
   <input type="color" id="colorPicker" value="#660066" />
 </label>
 <br />
-<button>Submit</button>
+<button>Button</button>
 ```
 
 ```css
@@ -79,12 +80,8 @@ button {
     content: "Your browser doesn't support the contrast-color() function.";
     background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
-  }
-
-  body > * {
-    display: none;
+    padding: 1rem 0;
   }
 }
 ```
@@ -97,7 +94,7 @@ function updateColor(color) {
   root.style.setProperty("--button-color", colorPicker.value);
 }
 
-colorPicker.addEventListener("change", updateColor);
+colorPicker.addEventListener("input", updateColor);
 updateColor();
 ```
 
@@ -149,16 +146,8 @@ pre {
     content: "Your browser doesn't support the contrast-color() function.";
     background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
-  }
-
-  body {
-    background-color: white;
-  }
-
-  body > * {
-    display: none;
+    padding: 1rem 0;
   }
 }
 ```

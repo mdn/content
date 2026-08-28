@@ -26,6 +26,7 @@ A server might use them to modify its caching behavior, or the information that 
 
 ## See also
 
+- [Fetch metadata](/en-US/docs/Web/HTTP/Guides/Fetch_metadata)
 - [Protect your resources from web attacks with Fetch Metadata](https://web.dev/articles/fetch-metadata) (web.dev)
 - [Fetch Metadata Request Headers playground](https://secmetadata.appspot.com/) (secmetadata.appspot.com)
 - [List of all HTTP headers](/en-US/docs/Web/HTTP/Reference/Headers)

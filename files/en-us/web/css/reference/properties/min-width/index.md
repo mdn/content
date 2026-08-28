@@ -1,5 +1,6 @@
 ---
-title: min-width
+title: "`min-width` CSS property"
+short-title: min-width
 slug: Web/CSS/Reference/Properties/min-width
 page-type: css-property
 browser-compat: css.properties.min-width

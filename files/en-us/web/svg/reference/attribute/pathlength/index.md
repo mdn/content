@@ -2,7 +2,7 @@
 title: pathLength
 slug: Web/SVG/Reference/Attribute/pathLength
 page-type: svg-attribute
-spec-urls: https://svgwg.org/svg2-draft/paths.html#PathLengthAttribute
+spec-urls: https://w3c.github.io/svgwg/svg2-draft/paths.html#PathLengthAttribute
 sidebar: svgref
 ---
 
@@ -19,6 +19,9 @@ You can use this attribute with the following SVG elements:
 - {{SVGElement('polygon')}}
 - {{SVGElement('polyline')}}
 - {{SVGElement('rect')}}
+
+> [!NOTE]
+> The `pathLength` attribute also has a CSS property counterpart: [`path-length`](/en-US/docs/Web/CSS/Reference/Properties/path-length). When both are specified, the CSS property takes priority.
 
 ## Example
 
@@ -238,3 +241,7 @@ For {{SVGElement('rect')}}, `pathLength` lets authors specify a total length for
 ## Specifications
 
 {{Specifications}}
+
+## See also
+
+- CSS {{cssxref("path-length")}} property

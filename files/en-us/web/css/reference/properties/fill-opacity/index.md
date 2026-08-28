@@ -1,5 +1,6 @@
 ---
-title: fill-opacity
+title: "`fill-opacity` CSS property"
+short-title: fill-opacity
 slug: Web/CSS/Reference/Properties/fill-opacity
 page-type: css-property
 browser-compat: css.properties.fill-opacity

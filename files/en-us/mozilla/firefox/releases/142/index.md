@@ -62,7 +62,7 @@ No notable changes.
 #### WebDriver BiDi
 
 - Implemented the new `emulation.setLocaleOverride` command which allows clients to override a locale in JavaScript APIs ([Firefox bug 1968952](https://bugzil.la/1968952)).
-- Improved setting a proxy with `browsingContext.createUserContext`: added support for host patterns like `.mozilla.org` in `noProxy` property ([Firefox bug 1977180](https://bugzil.la/1977180)) and fixed a bug when setting a HTTP proxy wouldn't allow to navigate to HTTPS URLs ([Firefox bug 1977168](https://bugzil.la/1977168)).
+- Improved setting a proxy with `browsingContext.createUserContext`: added support for host patterns like `.mozilla.org` in `noProxy` property ([Firefox bug 1977180](https://bugzil.la/1977180)) and fixed a bug where setting an HTTP proxy did not allow navigation to HTTPS URLs ([Firefox bug 1977168](https://bugzil.la/1977168)).
 - Fixed a bug where `browsingContext.create` would fail after a `browsingContext.print` command was interrupted by closing a tab with the `browsingContext.close` command ([Firefox bug 1841125](https://bugzil.la/1841125)).
 - Updated the `session.end` command to resume all requests which were blocked by network interceptions ([Firefox bug 1974426](https://bugzil.la/1974426)).
 

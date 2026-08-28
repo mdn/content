@@ -1,5 +1,6 @@
 ---
-title: hwb()
+title: "`hwb()` CSS function"
+short-title: hwb()
 slug: Web/CSS/Reference/Values/color_value/hwb
 page-type: css-function
 browser-compat: css.types.color.hwb
@@ -64,7 +65,7 @@ The angles corresponding to particular hues differ across the sRGB (used by {{CS
 
 An `hwb()` color is fully saturated when its whiteness (`W`) and blackness (`B`) values are both `0`. For any hue value `H`, `hwb(H 0% 0%)` is the same color as `hsl(H 100% 50%)`. Increasing the whiteness value lightens the color. Increasing the blackness darkens the color.
 
-When both the blackness and whiteness are greater than 0, the color gets muted, tending towards grey. When the amount of whiteness and blackness added in are equal to or greater than 100% — in other words, if `W + B >= 100%`, the color function defines a shade of gray. When the sum of both values is greater than 100% (`W + B > 100%`), the whiteness and blackness values of the grey color are effectively normalized as `W / (W + B)` and `B / (W + B)`, respectively.
+When both the blackness and whiteness are greater than 0, the color gets muted, tending towards gray. When the amount of whiteness and blackness added in are equal to or greater than 100% — in other words, if `W + B >= 100%`, the color function defines a shade of gray. When the sum of both values is greater than 100% (`W + B > 100%`), the whiteness and blackness values of the gray color are effectively normalized as `W / (W + B)` and `B / (W + B)`, respectively.
 
 ## Values
 
@@ -179,7 +180,7 @@ hwb(from hsl(0 100% 50% / 0.8) h w b / 0.5)
 /* Computed output color: color(srgb 1 0 0 / 0.5) */
 ```
 
-In the following example, the `hsl()` origin color is again converted into an `hwb()` representation — `hwb(0 0% 0%)`. {{cssxref("calc")}} calculations are applied to the `H`, `W`, `B`, and `A` values, and the final output color is the equivalent of `hwb(120 25% 10% / 0.9` in the sRGB color space: `color(srgb 0.25 0.9 0.25 / 0.9)`.
+In the following example, the `hsl()` origin color is again converted into an `hwb()` representation — `hwb(0 0% 0%)`. {{cssxref("calc")}} calculations are applied to the `H`, `W`, `B`, and `A` values, and the final output color is the equivalent of `hwb(120 25% 10% / 0.9)` in the sRGB color space: `color(srgb 0.25 0.9 0.25 / 0.9)`.
 
 ```css
 hwb(from hsl(0 100% 50%) calc(h + 120) calc(w + 25) calc(b + 10) / calc(alpha - 0.1))

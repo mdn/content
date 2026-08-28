@@ -138,8 +138,8 @@ element.innerHTML = userInput;
 
 This section provides a list of "direct" injection sink interfaces.
 
-Note that there are cases where untrusted strings may be "indirectly injected", such as when an untrusted string is added as the child node of a script element, and then the element is added to the document.
-These cases are evaluated the untrusted script is added to the document.
+These are the API properties and methods which perform trusted type checks when they are evaluated.
+They can be passed trusted types (`TrustedHTML`, `TrustedScript`, or `TrustedScriptURL`) as well as strings, and must be passed trusted types when trusted type enforcement is enabled and no default policy is defined.
 
 #### TrustedHTML
 
@@ -159,10 +159,13 @@ These cases are evaluated the untrusted script is added to the document.
 
 #### TrustedScript
 
-- [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)
+- [`AsyncFunction()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction/AsyncFunction)
+- [`AsyncGeneratorFunction()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction/AsyncGeneratorFunction)
+- {{jsxref("Global_Objects/eval", "eval()")}}
 - [`Element.setAttribute()`](/en-US/docs/Web/API/Element/setAttribute#value) (`value` argument)
 - [`Element.setAttributeNS()`](/en-US/docs/Web/API/Element/setAttributeNS#value) (`value` argument)
 - [`Function()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/Function)
+- [`GeneratorFunction()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction/GeneratorFunction)
 - {{domxref("HTMLScriptElement.innerText")}}
 - {{domxref("HTMLScriptElement.textContent")}}
 - {{domxref("HTMLScriptElement.text")}}
@@ -178,32 +181,52 @@ These cases are evaluated the untrusted script is added to the document.
 - `url` argument to [`Worker()` constructor](/en-US/docs/Web/API/Worker/Worker#url)
 - `url` argument to [`SharedWorker()` constructor](/en-US/docs/Web/API/SharedWorker/SharedWorker#url)
 
-### Cross-browser support for trusted types
+### Indirect injection sinks
 
-The Trusted Types API is not yet available in all modern browsers, but it is usable everywhere today thanks to [compatibility aids created by the W3C](https://github.com/w3c/trusted-types/tree/main?tab=readme-ov-file#polyfill).
+_Indirect injection sinks_ are sinks where untrusted strings are injected into the DOM via an intermediate mechanism that doesn't accept or enforce trusted types.
+These differ from the "direct" [Injection sink interfaces](#injection_sink_interfaces) listed in the previous section, which run trusted type checks on injected strings when they are called.
 
-- The [_full_ polyfill](https://github.com/w3c/trusted-types/blob/main/src/polyfill/full.js) defines the JavaScript API, attempts to infer the CSP from the current document, and enforces the use of trusted types based on the inferred CSP.
-- The [_API only_ polyfill](https://github.com/w3c/trusted-types/blob/main/src/polyfill/api_only.js) defines only the JavaScript API, and does not include the ability to enforce the use of trusted types using a CSP.
+For example, the following code sets script element source indirectly.
+First a text node is created using a string provided by a user, and then a {{htmlelement("script")}} element is constructed and the text node is appended as a child element.
+Next the script element is added to the document as a child of the {{htmlelement("body")}} element — at this point scripts defined in the original string may be executed.
 
-As well as these two polyfills, the W3C provides what it calls a _tinyfill_, which we'll explain in more detail below.
+```js
+// Create a text node
+const untrustedString =
+  "console.log('A potentially malicious script from an untrusted source!');";
+const textNode = document.createTextNode(untrustedString);
 
-Note that as long as you have tested your code on a supporting browser with CSP enforcement enabled, then you don't need to use the _full polyfill_ above on other browsers — you can get the same benefits using the _API only polyfill_ or the _tinyfill_.
+// Create a script element and append the text node
+const script = document.createElement("script");
+script.appendChild(textNode);
 
-This is because the enforcement forces you to refactor your code to ensure that all data is passed through the Trusted Types API (and therefore has been through a sanitization function) before being passed to an injection sink.
-If you then run the refactored code in a different browser without enforcement, it will still go through the same code paths, and give you the same protection.
+// Add the script into the document, where it can run
+document.body.appendChild(script);
+```
 
-#### Trusted Types tinyfill
+When the text node is created there is no reason for the browser to assume it is intended to be used as a trusted type source, so trusted types are serialized to string, and are not enforced.
 
-In this section we'll look at how the trusted types tinyfill can protect a website, even though it doesn't add support for trusted types at all.
+Instead, browsers run the checks when the script element becomes executable — i.e., in this example, when `document.body.appendChild(script)` is called to add the script element to the document.
 
-The trusted types tinyfill is just this:
+The browser will first check if the string used as the script content is trusted.
+Any operation that allows the text source of a {{htmlelement("script")}} to be modified without explicitly setting a {{domxref("TrustedScript")}} makes it untrusted.
+The {{domxref("Node.appendChild()")}} method used above is just one example (a number of others are listed in the WPT Live tests at <https://wpt.live/trusted-types/script-enforcement-001.html>).
+
+If the string is not trusted and trusted types are enforced, the browser will attempt to obtain a `TrustedScript` from a [default policy](#the_default_policy) to use for source instead.
+If a default policy is not defined, or does not return a `TrustedScript`, the operation will throw an exception.
+
+### Trusted Types tinyfill
+
+The _Trusted Types tinyfill_ helps you work with browsers that don't support the Trusted Types API itself.
+
+The tinyfill is just this:
 
 ```js
 if (typeof trustedTypes === "undefined")
   trustedTypes = { createPolicy: (n, rules) => rules };
 ```
 
-It provides an implementation of `trustedTypes.createPolicy()` which just returns the [`policyOptions`](/en-US/docs/Web/API/TrustedTypePolicyFactory/createPolicy#policyoptions) object it was passed. The `policyOptions` object defines sanitization functions for data, and these functions are expected to return strings.
+That is, it provides an implementation of `trustedTypes.createPolicy()` which just returns the [`policyOptions`](/en-US/docs/Web/API/TrustedTypePolicyFactory/createPolicy#policyoptions) object it was passed. The `policyOptions` object defines sanitization functions for data, and these functions are expected to return strings.
 
 With this tinyfill in place, suppose we create a policy:
 
@@ -213,7 +236,7 @@ const policy = trustedTypes.createPolicy("my-policy", {
 });
 ```
 
-In browsers that support trusted types, this will return a `TrustedTypePolicy` which will create a `TrustedHTML` object when we call `policy.createHTML()`. The `TrustedHTML` object can then be passed to an injection sink, and we can enforce that the sink received a trusted type, rather than a string.
+In browsers that support trusted types, this will return a `TrustedTypePolicy`, which will create a `TrustedHTML` object when we call `policy.createHTML()`. The `TrustedHTML` object can then be passed to an injection sink, and we can enforce that the sink received a trusted type, rather than a string.
 
 In browsers that don't support trusted types, this code will return an object with a `createHTML()` function that sanitizes its input and returns it as a string. The sanitized string can then be passed to an injection sink.
 
@@ -231,6 +254,11 @@ element.innerHTML = trustedHTML;
 ```
 
 Either way, the injection sink gets sanitized data, and because we could enforce the use of the policy in the supporting browser, we know that this code path goes through the sanitization function in the non-supporting browser, too.
+
+This means that, as long as you have tested your code on a supporting browser with the `require-trusted-types-for` CSP directive, then the tinyfill is enough to give the same protection even in browsers which don't support the Trusted Types API.
+
+This is because the enforcement forces you to refactor your code to ensure that all data is passed through the Trusted Types API (and therefore has been through a sanitization function) before being passed to an injection sink.
+If you then run the refactored code in a different browser without enforcement, it will still go through the same code paths, and give you the same protection.
 
 ## Interfaces
 
@@ -306,4 +334,3 @@ Read more about this example, and discover other ways to sanitize input in the a
 ## See also
 
 - [Prevent DOM-based cross-site scripting vulnerabilities with Trusted Types](https://web.dev/articles/trusted-types)
-- [Trusted Types polyfill](https://github.com/w3c/trusted-types#polyfill) (also available as an [npm package](https://www.npmjs.com/package/trusted-types))

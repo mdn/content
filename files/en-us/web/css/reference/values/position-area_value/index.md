@@ -1,5 +1,6 @@
 ---
-title: <position-area>
+title: "`<position-area>` CSS type"
+short-title: <position-area>
 slug: Web/CSS/Reference/Values/position-area_value
 page-type: css-type
 browser-compat: css.properties.position-area

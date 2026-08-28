@@ -38,7 +38,7 @@ removeAttribute(attribute)
 Note that `false` might be returned if the internal configuration:
 
 - defines a [`removeAttributes`](/en-US/docs/Web/API/SanitizerConfig#removeattributes) array that already contains the specified attribute (and is hence already filtered)
-- instead defines a [`attributes`](/en-US/docs/Web/API/SanitizerConfig#attributes) array that already omits the attribute (and is hence already disallowed)
+- instead defines an [`attributes`](/en-US/docs/Web/API/SanitizerConfig#attributes) array that already omits the attribute (and is hence already disallowed)
 
 ## Examples
 

@@ -16,7 +16,7 @@ For an alphabetical listing see the sidebar on the left.
 
 Basic keywords and general expressions in JavaScript. These expressions have the highest precedence (higher than [operators](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence)).
 
-- {{jsxref("Operators/this", "this")}}
+- {{jsxref("this")}}
   - : The `this` keyword refers to a special property of an execution context.
 - [Literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#literals)
   - : Basic `null`, boolean, number, and string literals.
@@ -49,10 +49,10 @@ Left values are the destination of an assignment.
   - : Member operators provide access to a property or method of an object (`object.property` and `object["property"]`).
 - {{jsxref("Operators/Optional_chaining", "?.")}}
   - : The optional chaining operator returns `undefined` instead of causing an error if a reference is [nullish](/en-US/docs/Glossary/Nullish) ([`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
-- {{jsxref("Operators/new", "new")}}
+- {{jsxref("new")}}
   - : The `new` operator creates an instance of a constructor.
 - {{jsxref("Operators/new.target", "new.target")}}
-  - : In constructors, `new.target` refers to the constructor that was invoked by {{jsxref("Operators/new", "new")}}.
+  - : In constructors, `new.target` refers to the constructor that was invoked by {{jsxref("new")}}.
 - {{jsxref("Operators/import.meta", "import.meta")}}
   - : An object exposing context-specific metadata to a JavaScript module.
 - {{jsxref("Operators/super", "super")}}
@@ -77,7 +77,7 @@ Postfix/prefix increment and postfix/prefix decrement operators.
 
 A unary operation is an operation with only one operand.
 
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
   - : The `delete` operator deletes a property from an object.
 - {{jsxref("Operators/void", "void")}}
   - : The `void` operator evaluates an expression and discards its return value.
@@ -123,7 +123,7 @@ A comparison operator compares its operands and returns a boolean value based on
   - : Less than or equal operator.
 - {{jsxref("Operators/Greater_than_or_equal", "&gt;=")}}
   - : Greater than or equal operator.
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
   - : The `instanceof` operator determines whether an object is an instance of another object.
 - {{jsxref("Operators/in", "in")}}
   - : The `in` operator determines whether an object has a given property.

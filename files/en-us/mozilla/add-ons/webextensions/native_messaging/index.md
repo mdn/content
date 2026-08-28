@@ -196,6 +196,9 @@ browser.action.onClicked.addListener(() => {
 });
 ```
 
+> [!CALLOUT]
+> To learn about debugging background scripts and viewing console output, see [Debugging background scripts](https://extensionworkshop.com/documentation/develop/debugging/#debugging-background-scripts) on Extension Workshop.
+
 #### Connectionless messaging
 
 With this pattern you call {{WebExtAPIRef("runtime.sendNativeMessage()")}}, passing it:
@@ -238,7 +241,7 @@ The application uses standard input to receive messages and standard output to s
 
 The native application can send messages of up to 1 MB and receive messages of up to 4 GB.
 
-This NodeJS code, `nm_nodejs.mjs`, is an example of sending and receiving messages:
+This Node.js code, `nm_nodejs.mjs`, is an example of sending and receiving messages:
 
 ```js
 #!/usr/bin/env -S /full/path/to/node

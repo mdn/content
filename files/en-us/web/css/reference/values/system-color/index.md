@@ -1,5 +1,6 @@
 ---
-title: <system-color>
+title: "`<system-color>` CSS type"
+short-title: <system-color>
 slug: Web/CSS/Reference/Values/system-color
 page-type: css-type
 browser-compat: css.types.color.system-color
@@ -128,6 +129,9 @@ Depending on your settings, the sample colors displayed in the table may change.
     </tr>
   </tbody>
 </table>
+
+> [!NOTE]
+> To reduce the risk of {{glossary("fingerprinting")}}, some browsers return a fixed value for `AccentColor` and `AccentColorText` unless they are used in certain restricted circumstances. See [browser compatibility](#browser_compatibility) for details.
 
 ### Deprecated system color keywords
 

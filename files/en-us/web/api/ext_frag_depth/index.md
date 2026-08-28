@@ -8,7 +8,7 @@ browser-compat: api.EXT_frag_depth
 
 {{APIRef("WebGL")}}
 
-The **`EXT_frag_depth`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and enables to set a depth value of a fragment from within the fragment shader.
+The **`EXT_frag_depth`** extension is part of the [WebGL API](/en-US/docs/Web/API/WebGL_API) and enables you to set a depth value of a fragment from within the fragment shader.
 
 WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 

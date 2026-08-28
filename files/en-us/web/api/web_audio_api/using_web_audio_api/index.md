@@ -174,7 +174,7 @@ Great, now the user can update the track's volume! The gain node is the perfect 
 
 ## Adding stereo panning to our app
 
-Let's add another modification node to practice what we've just learnt.
+Let's add another modification node to practice what we've just learned.
 
 There's a {{domxref("StereoPannerNode")}} node, which changes the balance of the sound between the left and right speakers, if the user has stereo capabilities.
 

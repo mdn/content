@@ -1,5 +1,6 @@
 ---
-title: border-left-color
+title: "`border-left-color` CSS property"
+short-title: border-left-color
 slug: Web/CSS/Reference/Properties/border-left-color
 page-type: css-property
 browser-compat: css.properties.border-left-color
@@ -68,9 +69,9 @@ border-left-color: revert-layer;
 border-left-color: unset;
 ```
 
-The `border-left-color` property is specified as a single value.
-
 ### Values
+
+This property is specified as one value:
 
 - {{cssxref("&lt;color&gt;")}}
   - : The color of the left border.

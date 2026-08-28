@@ -1,5 +1,6 @@
 ---
-title: min-content
+title: "`min-content` CSS keyword"
+short-title: min-content
 slug: Web/CSS/Reference/Values/min-content
 page-type: css-keyword
 browser-compat: css.properties.width.min-content

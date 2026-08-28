@@ -96,7 +96,7 @@ At registration time:
 2. The website:
    - Generates the shared secret.
    - Securely stores the secret, associating it with the user's account.
-   - Embeds the secret and some related metadata in an [`otpauth`](https://www.rfc-editor.org/rfc/rfc6238) URI.
+   - Embeds the secret and some related metadata in an [`otpauth`](https://www.rfc-editor.org/info/rfc6238/) URI.
    - Encodes the URI as a QR code and invites the user to scan it.
 
 3. The authenticator app on the user's device decodes the URI from the QR code and parses the URI, storing the secret and related metadata.
@@ -134,7 +134,7 @@ The URI includes a number of query string parameters, of which the most importan
 
 ### Authenticator apps
 
-A large number of authenticator apps, both proprietary and open source, support TOTP. For example: [Ente Auth](https://ente.io/auth/), [2FAS](https://2fas.com), and [Microsoft Authenticator](https://www.microsoft.com/en-US/security/mobile-authenticator-app).
+A large number of authenticator apps, both proprietary and open source, support TOTP. For example: [Ente Auth](https://ente.com/auth/), [2FAS](https://2fas.com), and [Microsoft Authenticator](https://www.microsoft.com/en-US/security/mobile-authenticator-app).
 
 ### Securing the secret
 

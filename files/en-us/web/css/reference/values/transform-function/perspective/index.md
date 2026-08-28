@@ -1,5 +1,6 @@
 ---
-title: perspective()
+title: "`perspective()` CSS function"
+short-title: perspective()
 slug: Web/CSS/Reference/Values/transform-function/perspective
 page-type: css-function
 browser-compat: css.types.transform-function.perspective

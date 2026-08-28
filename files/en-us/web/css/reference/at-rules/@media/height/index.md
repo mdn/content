@@ -1,5 +1,6 @@
 ---
-title: height
+title: "`height` CSS media feature"
+short-title: height
 slug: Web/CSS/Reference/At-rules/@media/height
 page-type: css-media-feature
 browser-compat: css.at-rules.media.height

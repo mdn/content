@@ -1,5 +1,6 @@
 ---
-title: :first-of-type
+title: "`:first-of-type` CSS pseudo-class"
+short-title: :first-of-type
 slug: Web/CSS/Reference/Selectors/:first-of-type
 page-type: css-pseudo-class
 browser-compat: css.selectors.first-of-type

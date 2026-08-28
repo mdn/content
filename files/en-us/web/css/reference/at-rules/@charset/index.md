@@ -1,5 +1,6 @@
 ---
-title: "@charset"
+title: "`@charset` CSS at-rule"
+short-title: "@charset"
 slug: Web/CSS/Reference/At-rules/@charset
 page-type: css-at-rule
 browser-compat: css.at-rules.charset

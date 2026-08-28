@@ -8,29 +8,27 @@ browser-compat: api.RTCErrorEvent.error
 
 {{APIRef("WebRTC")}}
 
-The read-only {{domxref("RTCErrorEvent")}} property **`error`**
-contains an {{domxref("RTCError")}} object describing the details of the error which the
-event is announcing.
+The **`error`** read-only property of the {{domxref("RTCErrorEvent")}} interface contains an {{domxref("RTCError")}} object that describes the {{Glossary("WebRTC")}}-specific details of the error.
 
 ## Value
 
-An {{domxref("RTCError")}} object whose properties provide details about the error
-which has occurred in the context of a {{Glossary("WebRTC")}} operation.
+An {{domxref("RTCError")}} object.
 
 ## Examples
 
-In this example, a handler is established for an {{domxref("RTCDataChannel")}}'s
-{{domxref("RTCDataChannel.error_event", "error")}} event.
+### Basic usage
+
+In this example, a handler is established for an {{domxref("RTCDataChannel")}}'s {{domxref("RTCDataChannel.error_event", "error")}} event.
 
 ```js
 dataChannel.addEventListener("error", (event) => {
   let error = event.error;
 
   if (error.errorDetail === "sdp-syntax-error") {
-    let errLine = error.sdpLineNumber;
-    let errMessage = error.message;
+    const errLine = error.sdpLineNumber;
+    const errMessage = error.message;
 
-    let alertMessage = `A syntax error occurred interpreting line ${errLine} of the SDP: ${errMessage}`;
+    const alertMessage = `A syntax error occurred interpreting line ${errLine} of the SDP: ${errMessage}`;
     showMyAlertMessage("Data Channel Error", alertMessage);
   } else {
     terminateMyConnection();
@@ -38,19 +36,13 @@ dataChannel.addEventListener("error", (event) => {
 });
 ```
 
-If the error is an SDP syntax error—indicated by its {{domxref("RTCError.errorDetail", "errorDetail")}}
-property being `sdp-syntax-error`—, a message string is
-constructed to present the error message and the line number within the SDP at which the
-error occurred. This message is then displayed using a function called
-`showMyAlertMessage()`, which stands in for whatever output mechanism this
-code might use.
+If the error is an SDP syntax error—indicated by its {{domxref("RTCError.errorDetail", "errorDetail")}} property being `sdp-syntax-error`— a message string is constructed to present the error message and the SDP message line number where the error occurred.
+This message is then displayed using a function called `showMyAlertMessage()`, which stands in for whatever output mechanism this code might use.
 
-Any other error is treated as terminal, causing a `terminateMyConnection()`
-function to be called.
+Any other error is treated as terminal, causing a `terminateMyConnection()` function to be called.
 
-The above example uses {{domxref("EventTarget.addEventListener", "addEventListener()")}}
-to add the handler for `error` events. You can also use the `RTCDataChannel` object's
-{{domxref("RTCDataChannel.error_event", "onerror")}} event handler property, like this:
+The above example uses {{domxref("EventTarget.addEventListener", "addEventListener()")}} to add the handler for `error` events.
+You can also use the `RTCDataChannel` object's {{domxref("RTCDataChannel.error_event", "onerror")}} event handler property, like this:
 
 ```js
 dataChannel.onerror = (event) => {

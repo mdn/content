@@ -48,7 +48,7 @@ To only provide an `endMark`, you need to provide an empty `measureOptions` obje
             - `track` {{optional_inline}} {{experimental_inline}}
               - : String of the name of the custom track (required for `track-entry`)
             - `trackGroup` {{optional_inline}} {{experimental_inline}}
-              - : String of the name of the grouping withing a custom track (required for `track-entry`)
+              - : String of the name of the grouping within a custom track (required for `track-entry`)
             - `properties` {{optional_inline}} {{experimental_inline}}
               - : Array of key-value pairs. Values can be any JSON-compatible type.
             - `tooltipText` {{optional_inline}} {{experimental_inline}}
