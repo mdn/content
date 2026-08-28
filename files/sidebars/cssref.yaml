@@ -346,7 +346,12 @@ sidebar:
     code: true
   - type: listSubPages
     path: /Web/CSS/Reference/At-rules
-    tags: css-at-rule
+    tags:
+      - css-at-rule
+      - css-at-rule-descriptor
+      - css-media-feature
+    depth: 2
+    nested: true
     link: /Web/CSS/Reference/At-rules
     title: At-rules
     details: closed

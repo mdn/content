@@ -18,7 +18,7 @@ At a high level, here are the possible steps in a drag and drop operation:
 
 ## Starting a drag
 
-The drag starts on a [draggable item](/en-US/docs/Web/API/HTML_Drag_and_Drop_API#draggable_items), which can be a selection, a draggable element (including links, images, and any element with `draggable="true"`), a file from the operating system's file explorer, etc. First, the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event is fired on the _source node_, which is the draggable element or, for selections, the text node that the drag started on. If this event is cancelled, then the drag operation is aborted. Otherwise, the {{domxref("Element/pointercancel_event", "pointercancel")}} event is also fired on the source node.
+The drag starts on a [draggable item](/en-US/docs/Web/API/HTML_Drag_and_Drop_API#draggable_items), which can be a selection, a draggable element (including links, images, and any element with `draggable="true"`), a file from the operating system's file explorer, etc. First, the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event is fired on the _source node_, which is the draggable element or, for selections, the text node that the drag started on. If this event is canceled, then the drag operation is aborted. Otherwise, the {{domxref("Element/pointercancel_event", "pointercancel")}} event is also fired on the source node.
 
 The `dragstart` event is the only time you can modify the {{domxref("DragEvent.dataTransfer", "dataTransfer")}}. For a custom draggable element, you almost always want to modify the drag data, which is covered in detail in [Modifying the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#modifying_the_drag_data_store). There are two other things you can change: the [feedback image](#setting_the_drag_feedback_image) and the [allowed drop effects](#drop_effects).
 
@@ -85,7 +85,7 @@ For the entire course of the drag operation, all device input events (such as mo
 > [!NOTE]
 > `dragleave` always fires _after_ `dragenter`, so conceptually, in between these two events, the target has entered a new element but has not exited the previous one yet.
 
-Every few hundred milliseconds, two events fire: a {{domxref("HTMLElement/drag_event", "drag")}} event at the source node, and a {{domxref("HTMLElement/dragover_event", "dragover")}} event at the element the drag is currently inside. Most areas of a web page or application are not valid places to drop data, so elements by default ignore any drop that happened on it. The element can elect itself to be a valid drop target by cancelling the `dragover` event. If the element is an editable text field, such as a {{HTMLElement("textarea")}} or [`<input type="text">`](/en-US/docs/Web/HTML/Reference/Elements/input/text), and the data store contains one `text/plain` item, then the element is a valid drop target by default without cancelling `dragover`.
+Every few hundred milliseconds, two events fire: a {{domxref("HTMLElement/drag_event", "drag")}} event at the source node, and a {{domxref("HTMLElement/dragover_event", "dragover")}} event at the element the drag is currently inside. Most areas of a web page or application are not valid places to drop data, so elements by default ignore any drop that happened on it. The element can elect itself to be a valid drop target by canceling the `dragover` event. If the element is an editable text field, such as a {{HTMLElement("textarea")}} or [`<input type="text">`](/en-US/docs/Web/HTML/Reference/Elements/input/text), and the data store contains one `text/plain` item, then the element is a valid drop target by default without canceling `dragover`.
 
 ```html
 <div id="drop-target">You can drag and then drop a draggable item here</div>
@@ -100,10 +100,10 @@ dropElement.addEventListener("dragover", (event) => {
 ```
 
 > [!NOTE]
-> The spec requires the `dragenter` event to be cancelled too for a drop target, otherwise the `dragover` or `dragleave` events won't even start firing on this element; in practice no browser implements this, and the "current element" changes every time a new element is entered.
+> The spec requires the `dragenter` event to be canceled too for a drop target, otherwise the `dragover` or `dragleave` events won't even start firing on this element; in practice no browser implements this, and the "current element" changes every time a new element is entered.
 
 > [!NOTE]
-> The spec requires that cancelling the `drag` event [aborts](#a_failed_drop) the drag; in practice no browser implements this. See example below:
+> The spec requires that canceling the `drag` event [aborts](#a_failed_drop) the drag; in practice no browser implements this. See example below:
 >
 > {{EmbedLiveSample("cancel_drag", "", 100)}}
 
@@ -124,7 +124,7 @@ draggableElement.addEventListener("drag", (event) => {
   if (time !== null && Date.now() - time > 1000) {
     event.preventDefault();
     output.textContent =
-      "Drag operation cancelled; if you are still dragging the node, then your browser does not support cancelling the drag programmatically.";
+      "Drag operation canceled; if you are still dragging the node, then your browser does not support canceling the drag programmatically.";
     time = null;
   }
 });
@@ -143,7 +143,7 @@ dropElement.addEventListener("dragover", (event) => {
 });
 ```
 
-In this example, we use the `includes` method to check if the type [`text/uri-list`](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#dragging_links) is present in the list of types. If it is, we will cancel the event so that a drop may be allowed. If the drag data does not contain a link, the event will not be cancelled, and a drop cannot occur at that location.
+In this example, we use the `includes` method to check if the type [`text/uri-list`](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#dragging_links) is present in the list of types. If it is, we will cancel the event so that a drop may be allowed. If the drag data does not contain a link, the event will not be canceled, and a drop cannot occur at that location.
 
 ## Drop feedback
 
@@ -297,7 +297,7 @@ For more complex visual effects, you can perform other operations during the {{d
 
 The {{domxref("HTMLElement/dragover_event", "dragover")}} event will fire at the element the mouse is pointing at. Naturally, you may need to move the insertion marker around inside the {{domxref("HTMLElement/dragover_event", "dragover")}} event handler as well. You can use the event's {{domxref("MouseEvent.clientX","clientX")}} and {{domxref("MouseEvent.clientY","clientY")}} properties as with other mouse events to determine the location of the mouse pointer.
 
-Finally, the {{domxref("HTMLElement/dragleave_event", "dragleave")}} event will fire at an element when the drag leaves the element. This is the time when you should remove any insertion markers or highlighting. You do not need to cancel this event. The {{domxref("HTMLElement/dragleave_event", "dragleave")}} event will always fire, even if the drag is cancelled, so you can always ensure that any insertion point cleanup can be done during this event.
+Finally, the {{domxref("HTMLElement/dragleave_event", "dragleave")}} event will fire at an element when the drag leaves the element. This is the time when you should remove any insertion markers or highlighting. You do not need to cancel this event. The {{domxref("HTMLElement/dragleave_event", "dragleave")}} event will always fire, even if the drag is canceled, so you can always ensure that any insertion point cleanup can be done during this event.
 
 For a practical example of using these events, see our [Kanban board example](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Kanban_board#inserting_at_a_particular_location).
 
@@ -353,7 +353,7 @@ The drag-and-drop operation is considered failed if one of the following is true
 1. The user pressed the <kbd>Escape</kbd> key
 2. The drop happened outside of a valid [drop target](#dragging_over_elements_and_specifying_drop_targets)
 3. The drop effect was `none` at the time of mouse release
-4. The `drop` event was not cancelled and the drop was not dropping text (containing a `text/plain` data) into an editable text field (see [performing a drop](#performing_a_drop))
+4. The `drop` event was not canceled and the drop was not dropping text (containing a `text/plain` data) into an editable text field (see [performing a drop](#performing_a_drop))
 
 For cases 1 and 3, if the abortion happens while hovering over a valid drop target, the drop target receives a {{domxref("HTMLElement/dragleave_event", "dragleave")}} event, as if the drop no longer happens over it, so that it can clean up any [drop feedback](#custom_drop_feedback). In all cases, the `dropEffect` is set to `none` for subsequent events.
 
@@ -363,7 +363,7 @@ Afterwards, a {{domxref("HTMLElement/dragend_event", "dragend")}} event is fired
 
 Once the drag is complete, a {{domxref("HTMLElement/dragend_event", "dragend")}} event is fired at the source of the drag (the same element that received the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event). This event will fire regardless of whether the drag succeeded.
 
-If the {{domxref("DataTransfer.dropEffect","dropEffect")}} property has the value `none` during a {{domxref("HTMLElement/dragend_event", "dragend")}}, then the drag was cancelled. Otherwise, the effect specifies which operation was performed. The source can use this information after a `move` operation to remove the dragged item from the old location.
+If the {{domxref("DataTransfer.dropEffect","dropEffect")}} property has the value `none` during a {{domxref("HTMLElement/dragend_event", "dragend")}}, then the drag was canceled. Otherwise, the effect specifies which operation was performed. The source can use this information after a `move` operation to remove the dragged item from the old location.
 
 A drop can occur inside the same window or over another application. The {{domxref("HTMLElement/dragend_event", "dragend")}} event will always fire regardless. The event's {{domxref("MouseEvent.screenX","screenX")}} and {{domxref("MouseEvent.screenY","screenY")}} properties will be set to the screen coordinates where the drop occurred.
 

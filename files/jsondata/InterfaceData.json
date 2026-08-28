@@ -2056,6 +2056,10 @@
       "inh": "",
       "impl": []
     },
+    "InteractionContentfulPaint": {
+      "inh": "PerformanceEntry",
+      "impl": []
+    },
     "LargestContentfulPaint": {
       "inh": "PerformanceEntry",
       "impl": []
@@ -2662,6 +2666,10 @@
     },
     "PerformanceServerTiming": {
       "inh": "",
+      "impl": []
+    },
+    "PerformanceSoftNavigation": {
+      "inh": "PerformanceEntry",
       "impl": []
     },
     "PerformanceTiming": {

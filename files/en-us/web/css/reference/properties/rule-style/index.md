@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`rule-style`** [CSS](/en-US/docs/Web/CSS) property defines the line style of the lines drawn between columns and rows in multi-column grid, flex, and multi-col layouts, setting the styles of the column and row rules to the same value.
+The **`rule-style`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property defines the line style of the lines drawn between columns and rows in multi-column grid, flex, and multi-col layouts, setting the styles of the column and row rules to the same value.
 
 {{InteractiveExample("CSS Demo: rule-style")}}
 
@@ -410,8 +410,7 @@ Even though there are more column rule lines than row rule lines, the `<auto-rep
 
 - {{cssxref("rule-color")}}
 - {{cssxref("rule-width")}}
+- {{cssxref("column-rule-style")}}
 - {{cssxref("row-rule-style")}}
-- {{cssxref("rule")}} shorthand
-- {{cssxref("rule-style")}} shorthand
 - {{cssxref("rule")}} shorthand
 - [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module

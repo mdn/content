@@ -19,7 +19,7 @@ In this task, we want you to embed an audio file onto the page.
 
 To complete this task:
 
-1. Add the path to the audio file to an appropriate attribute to embed it on the page. The audio is called `audio.mp3`, and it available at a path of `https://github.com/mdn/learning-area/raw/refs/heads/main/html/multimedia-and-embedding/tasks/media-embed/media/audio.mp3`.
+1. Add the path to the audio file to an appropriate attribute to embed it on the page. The audio is called `audio.mp3`, and it is available at the path `https://github.com/mdn/learning-area/raw/refs/heads/main/html/multimedia-and-embedding/tasks/media-embed/media/audio.mp3`.
 2. Add an attribute to make browsers display some default controls.
 
 The starting point of the task looks like this:
@@ -91,7 +91,7 @@ To complete this task:
 3. Let the browser know in advance what video formats the sources point to, so it can make an informed choice of which one to download ahead of time.
 4. Give the `<video>` a width and height equal to its intrinsic size (320 by 240 pixels).
 5. Make the video muted by default.
-6. Display the text tracks contained in the `media` folder, in a file called `https://raw.githubusercontent.com/mdn/learning-area/refs/heads/main/html/multimedia-and-embedding/tasks/media-embed/media/subtitles_en.vtt`, when the video is playing. You must explicitly set the type as subtitles, and the subtitle language to English.
+6. Display the text tracks contained in the `https://raw.githubusercontent.com/mdn/learning-area/refs/heads/main/html/multimedia-and-embedding/tasks/media-embed/media/subtitles_en.vtt` file when the video is playing. You must explicitly set the type as subtitles, and the subtitle language to English.
 7. Make sure the readers can identify the subtitle language when they use the default controls.
 
 The starting point of the task looks like this:

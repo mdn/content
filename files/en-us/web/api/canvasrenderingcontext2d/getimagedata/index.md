@@ -133,13 +133,13 @@ The optional `pixelFormat` setting allows you to get image data in the desired p
 ```js
 const context = canvas.getContext("2d");
 
-const imageData = context.getImageData(0, 0, 1, 1);
-console.log(imageData.pixelFormat); // "rgba-unorm8"
+const defaultImageData = context.getImageData(0, 0, 1, 1);
+console.log(defaultImageData.pixelFormat); // "rgba-unorm8"
 
-const imageData = context.getImageData(0, 0, 1, 1, {
+const float16ImageData = context.getImageData(0, 0, 1, 1, {
   pixelFormat: "rgba-float16",
 });
-console.log(imageData.pixelFormat); // "rgba-float16"
+console.log(float16ImageData.pixelFormat); // "rgba-float16"
 ```
 
 ## Specifications

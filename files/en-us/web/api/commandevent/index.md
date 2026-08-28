@@ -76,7 +76,7 @@ In this example three buttons have been created with [`commands` with custom val
 ```
 
 An event listener is attached to the image using the [`command` event](/en-US/docs/Web/API/HTMLElement/command_event).
-When one of the buttons is clicked, the listener runs code based on the custom `command` value assigned to the button, rotating the image and also updating it's `alt` text to indicate the new angle of the image.
+When one of the buttons is clicked, the listener runs code based on the custom `command` value assigned to the button, rotating the image and also updating its `alt` text to indicate the new angle of the image.
 
 ```js
 const image = document.getElementById("the-image");
