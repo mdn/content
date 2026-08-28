@@ -15053,6 +15053,7 @@
 /en-US/docs/Web/HTTP/Range_requests	/en-US/docs/Web/HTTP/Guides/Range_requests
 /en-US/docs/Web/HTTP/Redirections	/en-US/docs/Web/HTTP/Guides/Redirections
 /en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/document-domain	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy
+/en-US/docs/Web/HTTP/Reference/Status/102	/en-US/docs/Web/HTTP/Reference/Status#102_processing
 /en-US/docs/Web/HTTP/Resources_and_URIs	/en-US/docs/Web/HTTP/Guides/MIME_types
 /en-US/docs/Web/HTTP/Resources_and_specifications	/en-US/docs/Web/HTTP/Reference/Resources_and_specifications
 /en-US/docs/Web/HTTP/Response_codes	/en-US/docs/Web/HTTP/Reference/Status
@@ -15061,7 +15062,7 @@
 /en-US/docs/Web/HTTP/Status	/en-US/docs/Web/HTTP/Reference/Status
 /en-US/docs/Web/HTTP/Status/100	/en-US/docs/Web/HTTP/Reference/Status/100
 /en-US/docs/Web/HTTP/Status/101	/en-US/docs/Web/HTTP/Reference/Status/101
-/en-US/docs/Web/HTTP/Status/102	/en-US/docs/Web/HTTP/Reference/Status/102
+/en-US/docs/Web/HTTP/Status/102	/en-US/docs/Web/HTTP/Reference/Status#102_processing
 /en-US/docs/Web/HTTP/Status/103	/en-US/docs/Web/HTTP/Reference/Status/103
 /en-US/docs/Web/HTTP/Status/200	/en-US/docs/Web/HTTP/Reference/Status/200
 /en-US/docs/Web/HTTP/Status/201	/en-US/docs/Web/HTTP/Reference/Status/201
