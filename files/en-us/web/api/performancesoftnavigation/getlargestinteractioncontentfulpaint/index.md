@@ -3,6 +3,8 @@ title: "PerformanceSoftNavigation: getLargestInteractionContentfulPaint() method
 short-title: getLargestInteractionContentfulPaint()
 slug: Web/API/PerformanceSoftNavigation/getLargestInteractionContentfulPaint
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.PerformanceSoftNavigation.getLargestInteractionContentfulPaint
 ---
 

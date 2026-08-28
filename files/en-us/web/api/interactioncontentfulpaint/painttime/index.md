@@ -3,6 +3,8 @@ title: "InteractionContentfulPaint: paintTime property"
 short-title: paintTime
 slug: Web/API/InteractionContentfulPaint/paintTime
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.InteractionContentfulPaint.paintTime
 ---
 

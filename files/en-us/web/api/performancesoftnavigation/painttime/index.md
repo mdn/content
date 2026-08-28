@@ -3,6 +3,8 @@ title: "PerformanceSoftNavigation: paintTime property"
 short-title: paintTime
 slug: Web/API/PerformanceSoftNavigation/paintTime
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.PerformanceSoftNavigation.paintTime
 ---
 

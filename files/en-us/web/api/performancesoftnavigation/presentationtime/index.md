@@ -3,6 +3,8 @@ title: "PerformanceSoftNavigation: presentationTime property"
 short-title: presentationTime
 slug: Web/API/PerformanceSoftNavigation/presentationTime
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.PerformanceSoftNavigation.presentationTime
 ---
 
@@ -14,7 +16,7 @@ The `presentationTime` is optional — some browsers may always return `0` or no
 
 ## Value
 
-A {{domxref("DOMHighResTimeStamp")}} or {{jsxref("operators/null", "null")}} if the value is not exposed.
+A {{domxref("DOMHighResTimeStamp")}} or {{jsxref("Operators/null", "null")}} if the value is not exposed.
 
 ## Examples
 

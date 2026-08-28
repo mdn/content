@@ -3,6 +3,8 @@ title: "InteractionContentfulPaint: interactionId property"
 short-title: interactionId
 slug: Web/API/InteractionContentfulPaint/interactionId
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.InteractionContentfulPaint.interactionId
 ---
 
