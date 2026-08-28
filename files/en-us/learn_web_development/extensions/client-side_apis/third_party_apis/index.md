@@ -31,9 +31,9 @@ The APIs we've covered so far are built into the browser, but not all APIs are. 
   </tbody>
 </table>
 
-## What are third party APIs?
+## What are third-party APIs?
 
-Third party APIs are APIs provided by third parties — generally companies such as Facebook, Twitter, or Google — to allow you to access their functionality via JavaScript and use it on your site. One of the most obvious examples is using mapping APIs to display custom maps on your pages.
+Third-party APIs are APIs provided by third parties — generally companies such as Facebook, Twitter, or Google — to allow you to access their functionality via JavaScript and use it on your site. One of the most obvious examples is using mapping APIs to display custom maps on your pages.
 
 Let's look at a [Simple Mapquest API example](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/mapquest), and use it to illustrate how third-party APIs differ from browser APIs.
 
@@ -50,7 +50,7 @@ const audioSource = audioCtx.createMediaElementSource(audioElement);
 // etc.
 ```
 
-Third party APIs, on the other hand, are located on third party servers. To access them from JavaScript you first need to connect to the API functionality and make it available on your page. This typically involves first linking to a JavaScript library available on the server via a {{htmlelement("script")}} element, as seen in our Mapquest example:
+Third-party APIs, on the other hand, are located on third-party servers. To access them from JavaScript you first need to connect to the API functionality and make it available on your page. This typically involves first linking to a JavaScript library available on the server via a {{htmlelement("script")}} element, as seen in our Mapquest example:
 
 ```html
 <script
@@ -82,7 +82,7 @@ This is all the information the Mapquest API needs to plot a simple map. The ser
 
 Security for browser APIs tends to be handled by permission prompts, as [discussed in our first article](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction#they_have_additional_security_mechanisms_where_appropriate). The purpose of these is so that the user knows what is going on in the websites they visit and is less likely to fall victim to someone using an API in a malicious way.
 
-Third party APIs have a slightly different permissions system — they tend to use developer keys to allow developers access to the API functionality, which is more to protect the API vendor than the user.
+Third-party APIs have a slightly different permissions system — they tend to use developer keys to allow developers access to the API functionality, which is more to protect the API vendor than the user.
 
 You'll find a line similar to the following in the Mapquest API example:
 
@@ -172,7 +172,7 @@ Below we'll take you through an exercise to show you how to use the NYTimes API,
 
 ### Find the documentation
 
-When you want to use a third party API, it is essential to find out where the documentation is, so you can find out what features the API has, how you use them, etc. The New York Times API documentation is at <https://developer.nytimes.com/>.
+When you want to use a third-party API, it is essential to find out where the documentation is, so you can find out what features the API has, how you use them, etc. The New York Times API documentation is at <https://developer.nytimes.com/>.
 
 ### Get a developer key
 

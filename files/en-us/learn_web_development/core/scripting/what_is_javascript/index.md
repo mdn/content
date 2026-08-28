@@ -135,7 +135,7 @@ They generally fall into two categories.
   People are doing some amazing things using these web technologies — see [Chrome Experiments](https://experiments.withgoogle.com/collection/chrome) and [webglsamples](https://webglsamples.org/).
 - [Audio and Video APIs](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery) like {{domxref("HTMLMediaElement")}} and [WebRTC](/en-US/docs/Web/API/WebRTC_API) allow you to do really interesting things with multimedia, such as play audio and video right in a web page, or grab video from your web camera and display it on someone else's computer (try our simple [Snapshot demo](https://chrisdavidmills.github.io/snapshot/) to get the idea).
 
-**Third party APIs** are not built into the browser by default, and you generally have to grab their code and information from somewhere on the Web. For example:
+**Third-party APIs** are not built into the browser by default, and you generally have to grab their code and information from somewhere on the Web. For example:
 
 - The [Bluesky API](https://bsky.network/) allows you to do things like displaying your latest posts on your website.
 - The [Google Maps API](https://developers.google.com/maps/) and [OpenStreetMap API](https://wiki.openstreetmap.org/wiki/API) allows you to embed custom maps into your website, and other such functionality.
