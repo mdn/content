@@ -87,16 +87,16 @@ If you restrict a box with a `width` or a `height`, CSS trusts you to know what 
 
 ## The overflow property
 
-The {{cssxref("overflow")}} property allows you to specify how the browser should handle overflowing content. The default value of the {{cssxref("&lt;overflow&gt;")}} value type is `visible`. With this default setting, one can see content when it overflows.
+The {{cssxref("overflow")}} property allows you to specify how the browser should handle overflowing content. The default value of the {{cssxref("&lt;overflow&gt;")}} value type is `visible`. With this default setting, you can see content when it overflows.
 
-Two values cover most situations:
+The following two `overflow` values cover most situations:
 
 - `overflow: clip` cuts the overflowing content off, so it is never seen.
 - `overflow: auto` lets the user scroll the box to read the content that does not fit.
 
-The sections below look at each of these, then at the other values and at controlling each axis separately.
+The next two sections look at how to use these. After that, we will look at other `overflow` values and explain how to control the x and y axes' overflow separately.
 
-### Hiding overflowing content
+## Hiding overflowing content
 
 To cut content off when it overflows, set `overflow: clip`. Anything that does not fit is clipped at the edge of the box, and there is no way for the user to reach it. This means some content becomes invisible, so only do this when hiding it won't cause problems.
 
@@ -123,13 +123,14 @@ To cut content off when it overflows, set `overflow: clip`. Anything that does n
 
 Try editing the above example to set the `overflow` value to `visible`, then back to `clip`, to see what the effect is.
 
-By default, `clip` cuts content off at the box's border edge. The {{cssxref("overflow-clip-margin")}} property moves that clip edge outwards, letting a specified amount of the overflow stay visible before the rest is clipped.
+> [!NOTE]
+> By default, `clip` cuts content off at the box's border edge. The {{cssxref("overflow-clip-margin")}} property moves that clip edge outwards, letting a specified amount of the overflow stay visible before the rest is clipped.
 
-### Scrolling overflowing content
+## Scrolling overflowing content
 
 Instead, perhaps you would like to allow your users to scroll the content to read it all. Setting `overflow: auto` makes the box scrollable, and browsers with visible scrollbars display a scrollbar only when there is actually too much content to fit.
 
-In the example below, remove content until it fits into the box. You should see the scrollbars disappear:
+In the example below, remove content from the `<div>` until it no longer overflows. You should see the scrollbar disappear:
 
 ```html live-sample___auto
 <div class="box">
@@ -154,13 +155,13 @@ In the example below, remove content until it fits into the box. You should see 
 
 > [!NOTE]
 > Scrollbar visibility depends on the operating system.
-> You may have to change your browser settings to always show scroll bars in order for the scroll bars to always show in the following examples.
+> You may have to change your browser settings to always show scrollbars for them to display in the following examples.
 
-### Controlling overflow on each axis
+## Controlling overflow on each axis
 
-In the example above, we only need to scroll on the `y` axis, however we get a scroll container on both axes. To control the axes separately, use the {{cssxref("overflow-x")}} and {{cssxref("overflow-y")}} properties. Try setting `overflow-y: auto` in the example above.
+Specifying a single keyword for the `overflow` property value sets the overflow behavior for a container's x _and_ y axes. In the example above, if you set `overflow` to `scroll` (which sets scrollbars to [always appear](#always_displaying_scrollbars) regardless of whether the content overflows), you'll see scrollbars on both axes. To control the axes separately, use the {{cssxref("overflow-x")}} and {{cssxref("overflow-y")}} properties. Try setting `overflow-y: auto` in the example above.
 
-You can also enable scrolling along the x-axis with `overflow-x`, although this is not a recommended way to accommodate long words! If you have a long word in a small box, consider using the {{cssxref("word-break")}} or {{cssxref("overflow-wrap")}} properties. In addition, some of the methods discussed in [Sizing items in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing) may help you create boxes that scale better with varying amounts of content.
+You can also enable scrolling along the x-axis with `overflow-x`, as shown in the next example, although this is not recommended for accommodating long words! If you have a long word in a small box, consider using the {{cssxref("word-break")}} or {{cssxref("overflow-wrap")}} properties to break the word over multiple lines. In addition, some of the methods discussed in [Sizing items in CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Sizing) may help you create boxes that scale better with varying amounts of content.
 
 ```html live-sample___scroll-x
 <div class="word">Overflow</div>
@@ -182,38 +183,17 @@ You can also enable scrolling along the x-axis with `overflow-x`, although this 
 
 `clip` is the only value you can combine with `visible` on the other axis. If you set one axis to a scrolling value (`auto`, `scroll`, or `hidden`) and the other to `visible`, the `visible` value computes to `auto` instead, because a box cannot scroll on one axis while letting content spill out of the other. So `overflow: clip visible` clips horizontally and lets content overflow vertically, whereas `overflow: hidden visible` behaves as `overflow: hidden auto`.
 
-### Always displaying scrollbars
+## Always displaying scrollbars
 
-Setting `overflow: scroll` makes the box scrollable like `auto` does, but browsers with visible scrollbars display them at all times, even when there is not enough content to overflow.
+Setting `overflow: scroll` makes the box scrollable like `overflow: auto` does, except that browsers with visible scrollbars display them at all times, even when the content doesn't overflow.
 
-The main reason to reach for `scroll` is layout consistency: because the scrollbar is always there, the content does not shift when the amount of content changes. If that is all you need, {{cssxref("scrollbar-gutter")}} with a value of `stable` is usually a better fit, as it reserves the space without forcing a scrollbar to be drawn.
+The main reason to use `scroll` is layout consistency: because the scrollbar is always there, the content does not shift when the amount of content changes. However, in such a case, combining `overflow: auto` with a {{cssxref("scrollbar-gutter")}} value of `stable` is usually a better fit, as it reserves the space without forcing a scrollbar to be drawn.
 
-Edit the following example to remove some content from the `box` `<div>`. Notice how the scrollbars remain, even if there is no need for scrolling:
+## The hidden value
 
-```html live-sample___scroll
-<div class="box">
-  This box has a height and a width. This means that if there is too much
-  content to be displayed within the assigned height, there will be an overflow
-  situation. If overflow is set to scroll then scrollbars are always shown.
-</div>
+You will often meet `overflow: hidden` in existing code. Like `clip`, it cuts the overflowing content off and doesn't display scrollbars. Unlike `clip`, it still turns the box into a scroll container, and the content can be scrolled using other means, for example using [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting) or by tabbing to a focusable item further down the content such as a [link element](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links).
 
-<p>This content is outside of the box.</p>
-```
-
-```css live-sample___scroll
-.box {
-  border: 1px solid #333333;
-  width: 250px;
-  height: 100px;
-  overflow: scroll;
-}
-```
-
-{{EmbedLiveSample("scroll", "", "200px")}}
-
-### The hidden value
-
-You will often meet `overflow: hidden` in existing code. Like `clip`, it cuts the overflowing content off. Unlike `clip`, it still makes the box a scroll container: the content can be scrolled programmatically, and the browser can scroll the box when something inside it receives focus. Use `clip` when you want the content genuinely cut off, and reach for `hidden` only when you need that scrollable behavior.
+You should use the `clip` value most of the time; `hidden` is only required if you need the scrollable behavior described above.
 
 ## Unwanted overflow in web design
 
