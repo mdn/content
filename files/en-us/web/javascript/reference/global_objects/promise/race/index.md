@@ -36,7 +36,7 @@ Promise.race(iterable)
 ### Parameters
 
 - `iterable`
-  - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) (such as an {{jsxref("Array")}}) of promises.
+  - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) (such as an {{jsxref("Array")}}) of promises. These values are [awaited](/en-US/docs/Web/JavaScript/Reference/Operators/await), so other [thenables](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) are also resolved, while non-thenables are returned as-is.
 
 ### Return value
 
