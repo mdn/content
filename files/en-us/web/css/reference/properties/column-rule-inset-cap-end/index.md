@@ -77,7 +77,7 @@ column-rule-inset-cap-end: overlap-join;
 }
 #example-element i {
   padding: 8px;
-  background: #efefef;
+  border: 1px dashed;
 }
 #y {
   grid-column: 4 / 5;
@@ -138,11 +138,13 @@ Length `column-rule-inset-cap-end` values are inset by the value specified for b
 
 [Percentage values](#understanding_percentage_values) for interior cap segment endpoint insets are relative to the size of the {{cssxref("row-gap")}}. For end edge cap segments, percentage values are relative to `0`, so percentage values never cause cap segment endpoints at the container's end edge to extend beyond the container.
 
-To set the start and ends of caps, the `column-rule-inset-cap-end` property, along with the {{cssxref("column-rule-inset-cap-start")}} property, can be set using the {{cssxref("column-rule-inset-cap")}} shorthand.
+The `column-rule-inset-cap-end` property is a constituent property of several [shorthand properties](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties):
 
-To set the ends of all column segments, the `column-rule-inset-cap-end` property, along with the {{cssxref("column-rule-inset-junction-end")}} property, can be set using the {{cssxref("column-rule-inset-end")}} shorthand.
+- To set the start and ends of caps, the `column-rule-inset-cap-end` property, along with the {{cssxref("column-rule-inset-cap-start")}} property, can be set using the {{cssxref("column-rule-inset-cap")}} shorthand.
 
-To set the same values for row and column cap endpoints, the `column-rule-inset-cap-end` property, along with the {{cssxref("row-rule-inset-cap-end")}} property, can be set using the {{cssxref("rule-inset-cap-end")}} shorthand.
+- To set the ends of all column segments, the `column-rule-inset-cap-end` property, along with the {{cssxref("column-rule-inset-junction-end")}} property, can be set using the {{cssxref("column-rule-inset-end")}} shorthand.
+
+- To set the same values for row and column cap endpoints, the `column-rule-inset-cap-end` property, along with the {{cssxref("row-rule-inset-cap-end")}} property, can be set using the {{cssxref("rule-inset-cap-end")}} shorthand.
 
 All of these shorthand properties, along with their `-start`, `-junction`, and `row-` equivalents, can be set using the {{cssxref("rule-inset")}} shorthand.
 
