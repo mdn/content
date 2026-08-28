@@ -32,6 +32,14 @@ new WebTransport(url, options)
       - : A string indicating the application's preference that the congestion control algorithm used when sending data over this connection be tuned for either throughput or low-latency.
         This is a hint to the user agent.
         The allowed values are: `default` (default), `throughput`, and `low-latency`.
+    - `protocols` {{optional_inline}}
+      - : An array of strings, each that indicates an application-specific protocol name.
+        This defaults to an empty array.
+
+        The server may select and return one of the protocols, in which case the selected value will become available in the {{domxref("WebTransport/protocol","protocol")}} property after the {{jsxref("Promise")}} returned by the {{domxref("WebTransport/ready","ready")}} property fulfills.
+        The server may also choose not to return its preferred protocol, in which case the `protocol` will return an empty string (`""`).
+        The server may also reject the connection if it doesn't support any of the protocols, in which case {{domxref("WebTransport/ready","ready")}} will reject with an error.
+
     - `requireUnreliable` {{optional_inline}}
       - : A boolean value.
         If `true`, the connection cannot be established over HTTP/2 if an HTTP/3 connection is not possible.
