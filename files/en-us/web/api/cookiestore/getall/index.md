@@ -47,7 +47,7 @@ Each object contains the following properties:
 - `value`
   - : A string containing the value of the cookie.
 
-The following properties are now non-standard and should not be relied on:
+The following properties are non-standard and should not be relied on:
 
 - `domain` {{experimental_inline}} {{non-standard_inline}}
   - : A string containing the domain of the cookie.
