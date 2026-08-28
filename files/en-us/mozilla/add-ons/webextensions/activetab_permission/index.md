@@ -20,7 +20,7 @@ Your extension requests `activeTab` using the [`permissions`](/en-US/docs/Mozill
 "permissions": ["activeTab"]
 ```
 
-`activeTab` is an [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions), not a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions). So, it's requested using the `permissions` key in all manifest versions. Unlike host permissions, it isn't moved to [`host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) in Manifest V3 and later.
+`activeTab` is an [API permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions), not a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions).
 
 It's also possible to include `activeTab` in [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) and request it at runtime using {{WebExtAPIRef("permissions.request()")}}. It's one of the permissions granted silently, without a user prompt.
 
@@ -34,7 +34,6 @@ The browser grants `activeTab` when the user interacts with the extension. These
 - clicking the extension's [toolbar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) or [page action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions).
 - selecting an extension's context menu item, which triggers the {{WebExtAPIRef("menus.onClicked")}} event.
 - activating a keyboard shortcut defined by the extension with the {{WebExtAPIRef("commands")}} API, which triggers the {{WebExtAPIRef("commands.onCommand")}} event.
-- clicking a button on a page bundled with the extension, which triggers a DOM [`click`](/en-US/docs/Web/API/Element/click_event) event handled by the page's script.
 - clicking an extension suggestion in the address bar (omnibox), which triggers the {{WebExtAPIRef("omnibox.onInputEntered")}} event (from Firefox 142).
 
 Usually, the tab granted `activeTab` is the active tab. There is one exception: an extension can use the {{WebExtAPIRef("menus")}} API to create a menu item that displays when the user context-clicks a tab in the tab strip. If the user selects this menu item, `activeTab` is granted for the tab clicked, even if it isn't the active tab.
@@ -45,7 +44,7 @@ While `activeTab` is granted for a tab, the extension can:
 
 - Inject JavaScript or CSS into the tab, using the {{WebExtAPIRef("scripting")}} API (or {{WebExtAPIRef("tabs.executeScript()")}} and {{WebExtAPIRef("tabs.insertCSS()")}} in Manifest V2). See [Loading content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#loading_content_scripts).
 - Read the privileged properties of the tab's {{WebExtAPIRef("tabs.Tab")}} object: `url`, `title`, and `favIconUrl`. Otherwise, these properties require the `"tabs"` permission or a matching host permission.
-- Capture the tab's contents with {{WebExtAPIRef("tabs.captureVisibleTab()")}} (from Firefox 126). With `activeTab`, this method can also capture sensitive pages that are otherwise restricted, such as browser UI pages and other extensions' pages.
+- Capture the tab's contents with {{WebExtAPIRef("tabs.captureVisibleTab()")}} (from Firefox 126).
 - Read the rules matched for the tab with {{WebExtAPIRef("declarativeNetRequest.getMatchedRules()")}}, without the `"declarativeNetRequestFeedback"` permission.
 
 ## Scope of the access
@@ -150,19 +149,6 @@ These further examples showing the use of declare the `activeTab` permission are
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/webextensions-examples/export-helpers/"
-          >export-helpers</a
-        >
-      </td>
-      <td>
-        Grants access to the active tab to demo
-        <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts/cloneInto"
-          ><code>cloneInto()</code></a
-        > and export helpers with page scripts.
-      </td>
-    </tr>
-    <tr>
-      <td>
         <a href="https://github.com/mdn/webextensions-examples/history-deleter/"
           >history-deleter</a
         >
@@ -206,7 +192,6 @@ Firefox, Safari, and Chromium-based browsers, including Chrome and Edge, support
 | Clicking the extension's toolbar button         | Yes             | Yes              | Yes                                                                                 |
 | Selecting the extension's context menu item     | Yes             | Yes              | Yes                                                                                 |
 | Activating the extension's keyboard shortcut    | Yes             | From Firefox 63  | Yes                                                                                 |
-| Clicking a button on an extension's own page    | Yes             | Yes              | Yes                                                                                 |
 | Accepting an address bar (omnibox) suggestion   | Yes             | From Firefox 142 | No, Safari doesn't support the {{WebExtAPIRef("omnibox")}} API                      |
 | Selecting a menu item on a tab in the tab strip | From Chrome 150 | From Firefox 63  | No, Safari doesn't support the `tab` value of {{WebExtAPIRef("menus.ContextType")}} |
 
@@ -215,7 +200,7 @@ Firefox, Safari, and Chromium-based browsers, including Chrome and Edge, support
 | Capability                                                                          | Chrome                               | Firefox                                               | Safari         |
 | ----------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------- | -------------- |
 | Programmatic script and stylesheet injection                                        | Yes                                  | Yes                                                   | Yes            |
-| Privileged {{WebExtAPIRef("tabs.Tab")}} properties (`url`, `title`, `favIconUrl`)   | Yes                                  | Yes                                                   | Yes            |
+| Sensitive {{WebExtAPIRef("tabs.Tab")}} properties (`url`, `title`, `favIconUrl`)   | Yes                                  | Yes                                                   | Yes            |
 | {{WebExtAPIRef("tabs.captureVisibleTab()")}}                                        | Yes                                  | From Firefox 126                                      | Yes            |
 | Intercepting the tab's network requests with the {{WebExtAPIRef("webRequest")}} API | Yes, for the tab's main frame origin | No ([Firefox bug 1617479](https://bugzil.la/1617479)) | Not documented |
 
