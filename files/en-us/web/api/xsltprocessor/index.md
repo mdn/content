@@ -2,6 +2,8 @@
 title: XSLTProcessor
 slug: Web/API/XSLTProcessor
 page-type: web-api-interface
+status:
+  - deprecated
 browser-compat: api.XSLTProcessor
 ---
 
@@ -14,31 +16,31 @@ transformation to documents.
 
 ## Constructor
 
-- {{domxref("XSLTProcessor.XSLTProcessor", "XSLTProcessor()")}}
+- {{domxref("XSLTProcessor.XSLTProcessor", "XSLTProcessor()")}} {{deprecated_inline}}
   - : Create a new `XSLTProcessor`.
 
 ## Instance methods
 
-- {{domxref("XSLTProcessor.importStylesheet()")}}
+- {{domxref("XSLTProcessor.importStylesheet()")}} {{deprecated_inline}}
   - : Imports the XSLT stylesheet.
     If the given node is a document node, you can pass in a full XSL Transform or a [literal result element transform](https://www.w3.org/TR/xslt-30/#literal-result-element);
     otherwise, it must be an `<xsl:stylesheet>` or `<xsl:transform>` element.
-- {{domxref("XSLTProcessor.transformToFragment()")}}
+- {{domxref("XSLTProcessor.transformToFragment()")}} {{deprecated_inline}}
   - : Transforms the node source by applying the XSLT stylesheet imported using the {{domxref("XSLTProcessor.importStylesheet()")}} function.
     The owner document of the resulting document fragment is the owner node.
-- {{domxref("XSLTProcessor.transformToDocument()")}}
+- {{domxref("XSLTProcessor.transformToDocument()")}} {{deprecated_inline}}
   - : Transforms the node source applying the XSLT stylesheet given importing using the {{domxref("XSLTProcessor.importStylesheet()")}} function.
-- {{domxref("XSLTProcessor.setParameter()")}}
+- {{domxref("XSLTProcessor.setParameter()")}} {{deprecated_inline}}
   - : Sets a parameter (`<xsl:param>`) value in the XSLT stylesheet that was imported.
-- {{domxref("XSLTProcessor.getParameter()")}}
+- {{domxref("XSLTProcessor.getParameter()")}} {{deprecated_inline}}
   - : Gets the value of a parameter from the XSLT stylesheet.
-- {{domxref("XSLTProcessor.removeParameter()")}}
+- {{domxref("XSLTProcessor.removeParameter()")}} {{deprecated_inline}}
   - : Removes the parameter if it was previously set.
     This will make the `XSLTProcessor` use the default value for the parameter as specified in the XSLT stylesheet.
-- {{domxref("XSLTProcessor.clearParameters()")}}
+- {{domxref("XSLTProcessor.clearParameters()")}} {{deprecated_inline}}
   - : Removes all set parameters from the `XSLTProcessor`.
     The `XSLTProcessor` will then use the default values specified in the XSLT stylesheet.
-- {{domxref("XSLTProcessor.reset()")}}
+- {{domxref("XSLTProcessor.reset()")}} {{deprecated_inline}}
   - : Removes all parameters and stylesheets from the `XSLTProcessor`.
 
 ## Instance properties
