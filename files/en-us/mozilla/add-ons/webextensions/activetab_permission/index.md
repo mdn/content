@@ -114,7 +114,7 @@ These further examples showing the use of declare the `activeTab` permission are
   <tbody>
     <tr>
       <td>
-        <a href="https://github.com/mdn/webextensions-examples/apply-css/"
+        <a href="https://github.com/mdn/webextensions-examples/tree/main/apply-css/"
           >apply-css</a
         >
       </td>
@@ -125,7 +125,7 @@ These further examples showing the use of declare the `activeTab` permission are
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/webextensions-examples/beastify/"
+        <a href="https://github.com/mdn/webextensions-examples/tree/main/beastify/"
           >beastify</a
         >
       </td>
@@ -138,7 +138,7 @@ These further examples showing the use of declare the `activeTab` permission are
     <tr>
       <td>
         <a
-          href="https://github.com/mdn/webextensions-examples/context-menu-copy-link-with-types/"
+          href="https://github.com/mdn/webextensions-examples/tree/main/context-menu-copy-link-with-types/"
           >context-menu-copy-link-with-types</a
         >
       </td>
@@ -149,7 +149,7 @@ These further examples showing the use of declare the `activeTab` permission are
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/webextensions-examples/history-deleter/"
+        <a href="https://github.com/mdn/webextensions-examples/tree/main/history-deleter/"
           >history-deleter</a
         >
       </td>
@@ -160,7 +160,7 @@ These further examples showing the use of declare the `activeTab` permission are
     </tr>
     <tr>
       <td>
-        <a href="https://github.com/mdn/webextensions-examples/menu-demo/"
+        <a href="https://github.com/mdn/webextensions-examples/tree/main/menu-demo/"
           >menu-demo</a
         >
       </td>
@@ -169,7 +169,7 @@ These further examples showing the use of declare the `activeTab` permission are
     <tr>
       <td>
         <a
-          href="https://github.com/mdn/webextensions-examples/menu-remove-element/"
+          href="https://github.com/mdn/webextensions-examples/tree/main/menu-remove-element/"
           >menu-remove-element</a
         >
       </td>
@@ -200,7 +200,7 @@ Firefox, Safari, and Chromium-based browsers, including Chrome and Edge, support
 | Capability                                                                          | Chrome                               | Firefox                                               | Safari         |
 | ----------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------- | -------------- |
 | Programmatic script and stylesheet injection                                        | Yes                                  | Yes                                                   | Yes            |
-| Sensitive {{WebExtAPIRef("tabs.Tab")}} properties (`url`, `title`, `favIconUrl`)   | Yes                                  | Yes                                                   | Yes            |
+| Sensitive {{WebExtAPIRef("tabs.Tab")}} properties (`url`, `title`, `favIconUrl`)    | Yes                                  | Yes                                                   | Yes            |
 | {{WebExtAPIRef("tabs.captureVisibleTab()")}}                                        | Yes                                  | From Firefox 126                                      | Yes            |
 | Intercepting the tab's network requests with the {{WebExtAPIRef("webRequest")}} API | Yes, for the tab's main frame origin | No ([Firefox bug 1617479](https://bugzil.la/1617479)) | Not documented |
 
