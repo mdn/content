@@ -21,14 +21,14 @@ With the scene set, we'll now look specifically at the common cross-browser prob
         of the high level
         <a
           href="/en-US/docs/Learn_web_development/Extensions/Testing/Introduction"
-          >principles of cross browser testing</a
+          >principles of cross-browser testing</a
         >.
       </td>
     </tr>
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To be able to diagnose common HTML and CSS cross browser problems, and
+        To be able to diagnose common HTML and CSS cross-browser problems, and
         use appropriate tools and techniques to fix them.
       </td>
     </tr>
@@ -39,11 +39,11 @@ With the scene set, we'll now look specifically at the common cross-browser prob
 
 Some of the trouble with HTML and CSS lies with the fact that both languages are fairly simple, and often developers don't take them seriously, in terms of making sure the code is well-crafted, efficient, and semantically describes the purpose of the features on the page. In the worst cases, JavaScript is used to generate the entire web page content and style, which makes your pages inaccessible, and less performant (generating DOM elements is expensive). In other cases, nascent features are not supported consistently across browsers, which can make some features and styles not work for some users. Responsive design problems are also common — a site that looks good in a desktop browser might provide a terrible experience on a mobile device, because the content is too small to read, or perhaps the site is slow because of expensive animations.
 
-Let's go forth and look at how we can reduce cross browser errors that result from HTML/CSS.
+Let's go forth and look at how we can reduce cross-browser errors that result from HTML/CSS.
 
 ## First things first: fixing general problems
 
-We said in the [first article of this series](/en-US/docs/Learn_web_development/Extensions/Testing/Introduction#testingdiscovery) that a good strategy to begin with is to test in a couple of modern browsers on desktop/mobile, to make sure your code is working generally, before going on to concentrate on the cross browser issues.
+We said in the [first article of this series](/en-US/docs/Learn_web_development/Extensions/Testing/Introduction#testingdiscovery) that a good strategy to begin with is to test in a couple of modern browsers on desktop/mobile, to make sure your code is working generally, before going on to concentrate on the cross-browser issues.
 
 In our [Debugging HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML) and [Debugging CSS](/en-US/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS) articles, we provided some really basic guidance on debugging HTML/CSS — if you are not familiar with the basics, you should definitely study these articles before carrying on.
 
@@ -89,9 +89,9 @@ As an example, in Firefox the CSS inspector will show CSS declarations that aren
 
 Other browser devtools have similar features.
 
-## Common cross browser problems
+## Common cross-browser problems
 
-Now let's move on to look at some of the most common cross browser HTML and CSS problems. The main areas we'll look at are lack of support for modern features, and layout issues.
+Now let's move on to look at some of the most common cross-browser HTML and CSS problems. The main areas we'll look at are lack of support for modern features, and layout issues.
 
 ### Browsers not supporting modern features
 
@@ -354,6 +354,6 @@ Aside from that, try searching your favorite search engine for an answer to your
 
 ## Summary
 
-Now you should be familiar with the main types of cross browser HTML and CSS problems that you'll meet in web development, and how to go about fixing them.
+Now you should be familiar with the main types of cross-browser HTML and CSS problems that you'll meet in web development, and how to go about fixing them.
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Testing/Testing_strategies","Learn_web_development/Extensions/Testing/Feature_detection", "Learn_web_development/Extensions/Testing")}}
