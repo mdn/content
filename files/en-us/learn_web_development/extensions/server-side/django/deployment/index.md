@@ -431,7 +431,7 @@ PythonAnywhere provides an entirely web-based interface for uploading, editing, 
 Through the interface you can launch a bash console to a Ubuntu Linux environment in which you can create your application.
 In this demonstration we'll use the console to clone our local library GitHub repository, and create a Python environment in which we can run the web application.
 
-The free plan doesn't provides separate Postgres support.
+The free plan doesn't provide separate Postgres support.
 While we could use some other hosting service for our database, we'll just use the default SQLite database created by Django in the hosted Ubuntu environment (there is more than enough space for demonstrating the library functionality).
 
 Once the application is running, it can be configured for production by setting environment variables through the bash console.
