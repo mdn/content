@@ -112,7 +112,7 @@ Other less common job roles include:
 - **User researcher**
   - : Larger teams will often have a dedicated researcher to do user research and testing.
 - **Search Engine Optimization (SEO) specialist**
-  - : Analyses the content and structure of the website and makes changes that will cause the website to be more visible in relevant search engine results. See {{glossary("SEO")}} for more information.
+  - : Analyzes the content and structure of the website and makes changes that will cause the website to be more visible in relevant search engine results. See {{glossary("SEO")}} for more information.
 
 ## Technical project phases
 
