@@ -633,6 +633,20 @@ See [Firefox bug 1602129](https://bugzil.la/1602129) for our progress on this AP
 
 The following experimental features include those found in media APIs such as the [WebRTC API](/en-US/docs/Web/API/WebRTC_API), the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), the [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API), the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), and the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API).
 
+#### Audio Session API
+
+The [Audio Session API](/en-US/docs/Web/API/Audio_Session_API) provides a mechanism for web applications to control how their audio interacts with other audio playing on a device. ([Firefox bug 2055710](https://bugzil.la/2055710)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 155           | Yes                 |
+| Developer Edition | 153           | No                  |
+| Beta              | 153           | No                  |
+| Release           | 153           | No                  |
+
+- `dom.audio_session.enabled`
+  - : Set to `true` to enable.
+
 #### HTMLMediaElement properties: audioTracks and videoTracks
 
 Enabling this feature adds the {{domxref("HTMLMediaElement.audioTracks")}} and {{domxref("HTMLMediaElement.videoTracks")}} properties to all HTML media elements. However, because Firefox doesn't currently support multiple audio and video tracks, the most common use cases for these properties don't work, so they're both disabled by default. See [Firefox bug 1057233](https://bugzil.la/1057233) for more details.
