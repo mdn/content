@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`column-rule-inset-cap-end`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the endpoint of column rule segments that is not a junction segment endpoint, including column segment endpoints at the container's content end edge and segments at gap intersections where no rule segments intersect.
+The **`column-rule-inset-cap-end`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the end of column rule segment [cap endpoints](#understanding_cap_end) at the container's content end edge and cap endpoints where no rule segments intersect.
 
 {{InteractiveExample("CSS Demo: rule")}}
 
@@ -297,7 +297,7 @@ Select `between` as the `rule-visibility-items` value, which paints rules in a g
 
 ### Understanding percentage values
 
-What length a percentage value is relative to depends on the location of the enpoint. Interior endpoint percentage values are relative to the gap width at the cap endpoint, so relative to the {{cssxref("row-gap")}} if abutting a rule gap. If the cap segment endpoint is at the container's edge, the percentage is relative to `0`, so always computes to `0`. In this demonstration, these endpoints are denoted by the inset, dark and light line style.
+What length a percentage value is relative to depends on the location of the endpoint. Interior endpoint percentage values are relative to the gap width at the cap endpoint, so relative to the {{cssxref("row-gap")}} if abutting a rule gap. In this demonstration, these endpoints are denoted by the inset, dark and light line style. If the cap segment endpoint is at the container's edge, the percentage is relative to `0`, so always computes to `0` (which is only the `between` value has an effect).
 
 {{EmbedLiveSample("percents", "", "300")}}
 
