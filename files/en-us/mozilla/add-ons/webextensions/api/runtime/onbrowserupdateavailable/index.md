@@ -8,8 +8,6 @@ browser-compat: webextensions.api.runtime.onBrowserUpdateAvailable
 sidebar: addonsidebar
 ---
 
-{{Deprecated_header}}
-
 Fired when an update for the browser is available, but it isn't installed immediately because a browser restart is required.
 
 ## Syntax
