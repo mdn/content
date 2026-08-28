@@ -137,7 +137,8 @@ In the example below, remove content from the `<div>` until it no longer overflo
 <div class="box">
   This box has a height and a width. This means that if there is too much
   content to be displayed within the assigned height, there will be an overflow
-  situation. If overflow is set to auto, then scrollbars appear only when needed.
+  situation. If overflow is set to auto, then scrollbars appear only when
+  needed.
 </div>
 
 <p>This content is outside of the box.</p>
