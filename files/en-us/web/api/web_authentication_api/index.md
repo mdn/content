@@ -205,6 +205,36 @@ This essentially enables a website to provide a unified autofill, including both
 > [!NOTE]
 > Note that only [discoverable credentials](#discoverable_and_non-discoverable_credentials) are included in calls that use conditional mediation, because the browser needs to request applicable credentials without knowing the credential ID values for them.
 
+### Automatic passkey creation
+
+Conditional mediation can also be used when creating a credential, but its behavior differs from the [autofill UI](#autofill_ui) used for authentication. With a conditional {{domxref("CredentialsContainer.create()", "create()")}} request, the user agent may create a passkey without additional prominent modal interaction if the user has previously consented to credential creation and the user agent recently mediated an authentication. This is also called _conditional create_ or _automatic passkey creation_.
+
+Use {{domxref("PublicKeyCredential.getClientCapabilities_static", "PublicKeyCredential.getClientCapabilities()")}} to check whether the client supports conditional creation, then set the top-level [`mediation`](/en-US/docs/Web/API/CredentialsContainer/create#mediation) option to `"conditional"` alongside the `publicKey` creation options:
+
+```js
+const capabilities = await PublicKeyCredential.getClientCapabilities();
+
+if (capabilities.conditionalCreate) {
+  try {
+    const credential = await navigator.credentials.create({
+      publicKey: publicKeyOptionsFromServer,
+      mediation: "conditional",
+    });
+
+    if (credential) {
+      await registerCredentialWithServer(credential);
+    }
+  } catch (error) {
+    if (error.name !== "NotAllowedError") {
+      throw error;
+    }
+    // The user agent could not create the credential conditionally.
+  }
+}
+```
+
+The capability check only reports client support. If the user agent did not recently mediate an authentication or does not have consent to create the credential, `create()` rejects with `NotAllowedError`. The resulting credential is otherwise registered with the relying party server like a public key credential created with the standard modal flow.
+
 ### Discoverable credential synchronization methods
 
 It is possible for the information stored in a user's authenticator about a discoverable credential to go out sync with the relying party's server. This might happen when the user deletes a credential or modifies their user/display name on the RP web app without updating the authenticator.
