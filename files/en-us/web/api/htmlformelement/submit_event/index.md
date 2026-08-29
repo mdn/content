@@ -15,8 +15,10 @@ Note that the `submit` event fires on the `<form>` element itself, and not on an
 The `submit` event fires when:
 
 - the user clicks a {{Glossary("submit button")}},
-- the user presses <kbd>Enter</kbd> while editing a field (e.g., {{HtmlElement('input/text', '&lt;input type="text"&gt;')}}) in a form,
-- a script calls the {{domxref("HTMLFormElement.requestSubmit()", "form.requestSubmit()")}} method
+- the user submits the form implicitly (for example, by pressing <kbd>Enter</kbd> while editing a text field, depending on the user agent),
+- a script calls the {{domxref("HTMLFormElement.requestSubmit()", "form.requestSubmit()")}} method.
+
+When a form is submitted implicitly, the user agent fires a `click` event at the form's default submit button (the first submit button in tree order), if one exists and is not disabled. If the default button is disabled, the form is not submitted implicitly. If the form has no submit button, the form is submitted implicitly only when it has no more than one field that blocks implicit submission. Blocking fields include {{HTMLElement("input")}} elements whose `type` is `text`, `search`, `tel`, `url`, `email`, `password`, `date`, `month`, `week`, `time`, `datetime-local`, or `number`.
 
 However, the event is _not_ sent to the form when a script calls the {{domxref("HTMLFormElement.submit()", "form.submit()")}} method directly.
 
