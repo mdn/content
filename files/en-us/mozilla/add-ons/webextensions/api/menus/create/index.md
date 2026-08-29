@@ -137,7 +137,7 @@ browser.menus.onClicked.addListener((info, tab) => {
 });
 ```
 
-This example adds two radio items you can use to apply a green or blue border to the page. This example needs the [`activeTab`](/en-US/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission) permission.
+This example adds two radio items you can use to apply a green or blue border to the page. This example needs the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission).
 
 ```js
 function onCreated() {

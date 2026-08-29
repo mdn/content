@@ -43,7 +43,7 @@ The key can contain three kinds of permissions:
 
 - host permissions (Manifest V2 only, host permissions are specified in the [`host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) manifest key for Manifest V3 or higher.)
 - API permissions
-- the [`activeTab`](/en-US/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission) permission
+- the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission)
 
 ## Host permissions
 
@@ -145,7 +145,7 @@ In most cases, the permission grants access to the API only, with these exceptio
 
 When a user interacts with an extension that has the `activeTab` permission, the extension is granted extra privileges for the tab where the interaction occurred. This lets an extension act on the current page when the user asks, without requesting broad [host permissions](#host_permissions).
 
-For details of how the permission is granted, what it enables, when the access ends, and how behavior differs among browsers, see the [`activeTab`](/en-US/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission) permission page.
+For details of how the permission is granted, what it enables, when the access ends, and how behavior differs among browsers, see the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission) page.
 
 ## Clipboard access
 

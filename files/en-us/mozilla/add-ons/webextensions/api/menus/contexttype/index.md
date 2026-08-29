@@ -42,7 +42,7 @@ Values of this type are strings. The item is displayed when the given context ap
 - `tab`
   - : Applies when the user context-clicks on a tab (specifically, this refers to the tab-strip or other user interface element enabling the user to switch from one browser tab to another, not to the page itself).
 
-    Clicking the menu item on a tab grants the [`activeTab`](/en-US/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission) permission for the tab clicked, even if that isn't the active tab.
+    Clicking the menu item on a tab grants the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission) for the tab clicked, even if that isn't the active tab.
 
 - `tools_menu`
   - : The item will be added to the browser's tools menu. Note that this is only available if you access `ContextType` through the `menus` namespace. It is not available if you access it through the `contextMenus` namespace.

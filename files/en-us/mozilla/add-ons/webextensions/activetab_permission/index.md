@@ -143,7 +143,7 @@ These further examples showing the use of declare the `activeTab` permission are
         >
       </td>
       <td>
-        A context menu click on a link unlocks the page so the link can be
+        A context menu click on a link unlocks access to the page so the link can be
         copied to the clipboard.
       </td>
     </tr>
@@ -197,22 +197,40 @@ Firefox, Safari, and Chromium-based browsers, including Chrome and Edge, support
 
 ### Capabilities granted
 
-| Capability                                                                          | Chrome                               | Firefox                                               | Safari         |
-| ----------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------- | -------------- |
-| Programmatic script and stylesheet injection                                        | Yes                                  | Yes                                                   | Yes            |
-| Sensitive {{WebExtAPIRef("tabs.Tab")}} properties (`url`, `title`, `favIconUrl`)    | Yes                                  | Yes                                                   | Yes            |
-| {{WebExtAPIRef("tabs.captureVisibleTab()")}}                                        | Yes                                  | From Firefox 126                                      | Yes            |
-| Intercepting the tab's network requests with the {{WebExtAPIRef("webRequest")}} API | Yes, for the tab's main frame origin | No ([Firefox bug 1617479](https://bugzil.la/1617479)) | Not documented |
+| Capability                                                                                                                         | Chrome                               | Firefox                                               | Safari  |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------- | ------- |
+| Programmatic script and stylesheet injection                                                                                       | Yes                                  | Yes                                                   | Yes     |
+| Sensitive {{WebExtAPIRef("tabs.Tab")}} properties (`url`, `title`, `favIconUrl`)                                                   | Yes                                  | Yes                                                   | Yes     |
+| {{WebExtAPIRef("tabs.captureVisibleTab()")}}                                                                                       | Yes                                  | From Firefox 126                                      | Yes     |
+| Intercepting the tab's network requests with the {{WebExtAPIRef("webRequest")}} and {{WebExtAPIRef("declarativeNetRequest")}} APIs | Yes, for the tab's main frame origin | No ([Firefox bug 1617479](https://bugzil.la/1617479)) | Unknown |
+
+Also, the access browsers grant with `activeTab` differs:
+
+- Firefox and Safari grant access to the active tab only.
+- Chrome grants the host permissions derived from the tab's URL.
+
+Chrome's logic can provide more access than Firefox's, for example:
+
+- Another tab with the same origin can be scripted in Chrome, but not in Firefox.
+- An extension script (such as a background script or a popup's script) can make a cross-origin request to the tab's URL in Chrome, but not in Firefox.
+- The {{WebExtAPIRef("cookies")}} API requires host permissions to access cookies for specific domains. Chrome allows this with `activeTab`, while Firefox doesn't.
+
+This list isn't exhaustive.
 
 ### When access is revoked
 
-- **Chrome and Safari**: access lasts while the tab stays on the same site. It's revoked when the user navigates the tab to a different origin, or closes the tab. Reloading the page or navigating within the same origin doesn't revoke the access.
-- **Firefox**: access is revoked when the tab navigates, including on a reload or a same-origin navigation. So, the user must repeat the user action after each navigation.
+In all browsers, closing the tab revokes access. However, same-document navigations, such as a fragment (hash) change or a {{DOMxRef("History.pushState()")}} call, don't: the document and its origin are unchanged, so access is preserved.
+
+For navigations that load a new document, the behavior differs:
+
+- **Chrome**: access persists while the tab stays on the same origin, including across reloads. It's revoked when the tab navigates to a different origin.
+- **Safari**: access persists while the tab stays on the same host, including across reloads. It's revoked when the tab navigates to a different host.
+- **Firefox**: access is tied to the document that was in the tab when the user action occurred. Loading a new document, including on a reload or a same-origin navigation, ends the access, and the user must repeat the user action. If that document returns from the [back/forward cache](/en-US/docs/Glossary/bfcache), its access is restored.
 
 ### Other differences
 
 - **Permission prompts**: Firefox and Chrome grant an extension's requested host permissions on installation, so `activeTab` avoids an install-time warning. Safari, by contrast, defaults host permissions to "ask", and prompts the user the first time the extension tries to access a site, offering **Allow for One Day** or **Always Allow**. Using `activeTab` avoids this prompt, as Safari treats the user's interaction with the extension as the grant.
-- **Manifest V2 and V3**: `activeTab` works the same way in both manifest versions in all browsers. In Manifest V3, the {{WebExtAPIRef("scripting")}} API replaces {{WebExtAPIRef("tabs.executeScript()")}} and {{WebExtAPIRef("tabs.insertCSS()")}}, and the `"scripting"` permission is needed alongside `activeTab`.
+- **Manifest V2 and V3**: `activeTab` works the same way in both manifest versions in all browsers except that in Firefox Manifest V3 `activeTab` doesn't enable {{WebExtAPIRef("scripting.executeScript")}} in an iframe with a different origin (see [Bug 1839200](https://bugzil.la/1839200#c3)). In Manifest V3, the {{WebExtAPIRef("scripting")}} API replaces {{WebExtAPIRef("tabs.executeScript()")}} and {{WebExtAPIRef("tabs.insertCSS()")}}, and the `"scripting"` permission is needed alongside `activeTab`.
 
 ## See also
 

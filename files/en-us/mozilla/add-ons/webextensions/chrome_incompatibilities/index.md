@@ -80,7 +80,7 @@ When calling `tabs.remove()`:
 
 - **In Firefox:**
   - Requests can be redirected only if their original URL uses the `http:` or `https:` scheme.
-  - The [`activeTab`](/en-US/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission) permission does not allow for intercepting network requests in the current tab. (See [bug 1617479](https://bugzil.la/1617479))
+  - The [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission) does not allow for intercepting network requests in the current tab. (See [bug 1617479](https://bugzil.la/1617479))
   - Events are not fired for system requests (for example, extension upgrades or search bar suggestions).
     - **From Firefox 57 onwards:** Firefox makes an exception for extensions that need to intercept {{WebExtAPIRef("webRequest.onAuthRequired")}} for proxy authorization. See the documentation for {{WebExtAPIRef("webRequest.onAuthRequired")}}.
 
