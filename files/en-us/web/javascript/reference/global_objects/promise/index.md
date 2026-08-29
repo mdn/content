@@ -189,11 +189,11 @@ There are two other convenience static methods: {{jsxref("Promise.allKeyed()")}}
 
 - {{jsxref("Promise.all()")}}
   - : Takes an iterable of promises as input and returns a single `Promise`. This returned promise fulfills when all of the input's promises fulfill (including when an empty iterable is passed), with an array of the fulfillment values. It rejects when any of the input's promises reject, with this first rejection reason.
-- {{jsxref("Promise.allKeyed()")}}
+- {{jsxref("Promise.allKeyed()")}} {{experimental_inline}}
   - : Like `Promise.all()`, except that it takes an object of promises and returns a promise that fulfills with an object of the same shape, allowing you to associate results with semantically meaningful keys.
 - {{jsxref("Promise.allSettled()")}}
   - : Takes an iterable of promises as input and returns a single `Promise`. This returned promise fulfills when all of the input's promises settle (including when an empty iterable is passed), with an array of objects that describe the outcome of each promise.
-- {{jsxref("Promise.allSettledKeyed()")}}
+- {{jsxref("Promise.allSettledKeyed()")}} {{experimental_inline}}
   - : Like `Promise.allSettled()`, except that it takes an object of promises and returns a promise that fulfills with an object of the same shape, allowing you to associate results with semantically meaningful keys.
 - {{jsxref("Promise.any()")}}
   - : Takes an iterable of promises as input and returns a single `Promise`. This returned promise fulfills when any of the input's promises fulfill, with this first fulfillment value. It rejects when all of the input's promises reject (including when an empty iterable is passed), with an {{jsxref("AggregateError")}} containing an array of rejection reasons.
