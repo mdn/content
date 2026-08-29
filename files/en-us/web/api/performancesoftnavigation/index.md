@@ -7,7 +7,7 @@ status:
 browser-compat: api.PerformanceSoftNavigation
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The `PerformanceSoftNavigation` interface provides timing information about {{glossary("soft navigation", "soft navigations")}} as used by client-side routing on {{Glossary("SPA", "single-page application (SPA)")}} sites. It is emitted when a browser observes a soft navigation to have taken place.
 

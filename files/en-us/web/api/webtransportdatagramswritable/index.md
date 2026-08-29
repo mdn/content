@@ -2,12 +2,10 @@
 title: WebTransportDatagramsWritable
 slug: Web/API/WebTransportDatagramsWritable
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.WebTransportDatagramsWritable
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}{{SeeCompatTable}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`WebTransportDatagramsWritable`** interface of the {{domxref("WebTransport API", "WebTransport API", "", "nocode")}} is a specialized {{domxref("WritableStream")}} that can be used to write outgoing datagrams to a {{domxref("WebTransport")}} connection.
 
@@ -19,9 +17,9 @@ The **`WebTransportDatagramsWritable`** interface of the {{domxref("WebTransport
 
 _Also inherits properties from its parent interface, {{domxref("WritableStream")}}._
 
-- {{domxref("WebTransportDatagramsWritable.sendGroup")}} {{experimental_inline}}
+- {{domxref("WebTransportDatagramsWritable.sendGroup")}}
   - : Gets or sets a {{domxref("WebTransportSendGroup")}} that the stream's datagrams are grouped under for the purposes of `sendOrder` prioritization.
-- {{domxref("WebTransportDatagramsWritable.sendOrder")}} {{experimental_inline}}
+- {{domxref("WebTransportDatagramsWritable.sendOrder")}}
   - : Gets or sets an integer indicating the priority of this stream relative to other streams and datagrams in the same `sendGroup`.
 
 ## Instance methods
