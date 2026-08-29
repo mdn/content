@@ -287,7 +287,7 @@ So it's possible to create a wonderful effect when we mix all of this together. 
 <div class="fancy">Hi! I want to be fancy.</div>
 ```
 
-Let's create some partial drop-shadow effects. The {{cssxref("box-shadow")}} property allow us to create inner light and a flat drop shadow effect, but with some little extra work it becomes possible to create a more natural geometry by using a pseudo-element and the {{cssxref("rotate")}} property, one of the three individual {{cssxref("transform")}} properties.
+Let's create some partial drop-shadow effects. The {{cssxref("box-shadow")}} property allows us to create inner light and a flat drop shadow effect, but with some little extra work it becomes possible to create a more natural geometry by using a pseudo-element and the {{cssxref("rotate")}} property, one of the three individual {{cssxref("transform")}} properties.
 
 ```css
 .fancy {
