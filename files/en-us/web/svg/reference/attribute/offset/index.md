@@ -10,24 +10,32 @@ The **`offset`** attribute indicates the position of a gradient color along a li
 
 ## Example
 
+```css hidden
+html,
+body,
+svg {
+  height: 100%;
+}
+```
+
 ```html
-<svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 20 10" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="linear-gradient" gradientTransform="rotate(60)">
+    <linearGradient id="linear-gradient">
       <stop offset="6%" stop-color="black" />
       <stop offset="70%" stop-color="grey" />
     </linearGradient>
-    <radialGradient id="radial-gradient" gradientTransform="rotate(90)">
-      <stop offset="50%" stop-color="gold" />
+    <radialGradient id="radial-gradient">
+      <stop offset="0%" stop-color="gold" />
       <stop offset="95%" stop-color="grey" />
     </radialGradient>
   </defs>
-  <circle cx="50" cy="30" r="25" fill="url('#linear-gradient')" />
-  <circle cx="150" cy="30" r="25" fill="url('#radial-gradient')" />
+  <circle cx="5" cy="5" r="4" fill="url('#linear-gradient')" />
+  <circle cx="15" cy="5" r="4" fill="url('#radial-gradient')" />
 </svg>
 ```
 
-{{EmbedLiveSample("Example", "200", "200")}}
+{{EmbedLiveSample("Example", 150, '100%')}}
 
 ## Specifications
 
