@@ -24,7 +24,7 @@ To understand what a text node is, consider the following document:
 </html>
 ```
 
-In that document, there are five text nodes, with the following contents in which all spaces are shown as ◦ and all newlines as ⏎:
+In that document, there are five text nodes, with the following contents (all spaces are shown as `◦` and all newlines as `⏎`):
 
 - `"⏎◦◦◦◦"` (after the `<head>` start tag, a newline followed by four spaces)
 - `"Aliens?"` (the contents of the `<title>` element)
