@@ -51,7 +51,7 @@ The `position-try-order` property may be specified as either the keyword value `
 
 The `position-try-order` property has a slightly different focus from the rest of the position-try functionality features, in that it makes use of position-try fallback options when the positioned element is first displayed, rather than when it is being scrolled. For example, you might want to initially display the element in a space that has more available height or width than the default initial position.
 
-The browser will test the available position-try fallback options to find which one gives the anchor-positioned element the most space in the specified dimension. It will then apply that option, overriding the element's initial styling.
+The browser will test each position option — the element's default position as well as the fallback options specified by `position-try-fallbacks` — to find which one gives the anchor-positioned element the most space in the specified dimension. It will then apply that option, overriding the element's initial styling if a fallback option provides more space.
 
 If no position try fallback option is available that provides more width/height than the initial positioning assigned to the element, no position try option will be applied. In effect, the behavior is as if `position-try-order` was set to `normal`.
 
