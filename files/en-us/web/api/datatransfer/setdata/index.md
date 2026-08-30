@@ -19,6 +19,11 @@ same type.
 
 Example data types are `text/plain` and `text/uri-list`.
 
+> [!NOTE]
+> This method can only be used in the handler for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event,
+> because that's the only time the drag operation's data store is writable.
+> Calling it from any other drag event does nothing. See [Modifying the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#modifying_the_drag_data_store) for details.
+
 ## Syntax
 
 ```js-nolint
