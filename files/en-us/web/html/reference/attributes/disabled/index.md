@@ -78,7 +78,7 @@ Because a disabled field cannot have its value changed, [`required`](/en-US/docs
 
 ### Usability
 
-Browsers display disabled form controls greyed as disabled form controls are immutable, won't receive focus or any browsing events, like mouse clicks or focus-related ones, and aren't submitted with the form.
+Browsers display disabled form controls grayed as disabled form controls are immutable, won't receive focus or any browsing events, like mouse clicks or focus-related ones, and aren't submitted with the form.
 
 If present on a supporting elements, the {{cssxref(':disabled')}} pseudo class will match. If the attribute is not included, the {{cssxref(':enabled')}} pseudo class will match. If the element doesn't support the disabled attribute, the attribute will have no effect, including not leading to being matched by the `:disabled` and `:enabled` pseudo classes.
 
@@ -88,7 +88,7 @@ If the element is `disabled`, then the element's value can not receive focus and
 
 ## Examples
 
-When form controls are disabled, many browsers will display them in a lighter, greyed-out color by default. Here are examples of a disabled checkbox, radio button, {{ HTMLElement("option") }} and {{ HTMLElement("optgroup") }}, as well as some form controls that are disabled via the disabled attribute set on the ancestor `{{ HTMLElement("fieldset")}}` element. The {{ HTMLElement("option") }}s are disabled, but the {{ HTMLElement("select") }} itself is not. We could have disable the entire {{ HTMLElement("select") }} by adding the attribute to that element rather than its descendants.
+When form controls are disabled, many browsers will display them in a lighter, grayed-out color by default. Here are examples of a disabled checkbox, radio button, {{ HTMLElement("option") }} and {{ HTMLElement("optgroup") }}, as well as some form controls that are disabled via the disabled attribute set on the ancestor `{{ HTMLElement("fieldset")}}` element. The {{ HTMLElement("option") }}s are disabled, but the {{ HTMLElement("select") }} itself is not. We could have disable the entire {{ HTMLElement("select") }} by adding the attribute to that element rather than its descendants.
 
 ```html
 <fieldset>

@@ -283,7 +283,7 @@ async function authenticateUser() {
     if (err.name === "TimeoutError") {
       console.error("The authentication request timed out.");
     } else if (err.name === "AbortError") {
-      console.log("The request was cancelled by the user.");
+      console.log("The request was canceled by the user.");
     } else {
       console.error("An unexpected error occurred:", err);
     }

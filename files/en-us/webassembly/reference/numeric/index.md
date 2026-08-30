@@ -125,11 +125,11 @@ WebAssembly numeric instructions.
 - [`rotr`](/en-US/docs/WebAssembly/Reference/Numeric/rotr)
   - : Used for performing a bitwise right-rotate.
 - [`clz`](/en-US/docs/WebAssembly/Reference/Numeric/clz)
-  - : Count the amount of leading zeros in a numbers binary representation.
+  - : Count the amount of leading zeros in a number's binary representation.
 - [`ctz`](/en-US/docs/WebAssembly/Reference/Numeric/ctz)
-  - : Count the amount of trailing zeros in a numbers binary representation.
+  - : Count the amount of trailing zeros in a number's binary representation.
 - [`popcnt`](/en-US/docs/WebAssembly/Reference/Numeric/popcnt)
-  - : Count the total amount of 1s in a numbers binary representation.
+  - : Count the total amount of 1s in a number's binary representation.
 
 ## Sign extension operations
 

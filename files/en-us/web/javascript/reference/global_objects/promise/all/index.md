@@ -33,7 +33,7 @@ Promise.all(iterable)
 ### Parameters
 
 - `iterable`
-  - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) (such as an {{jsxref("Array")}}) of promises.
+  - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) (such as an {{jsxref("Array")}}) of promises. These values are [awaited](/en-US/docs/Web/JavaScript/Reference/Operators/await), so other [thenables](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) are also resolved, while non-thenables are returned as-is.
 
 ### Return value
 
@@ -110,7 +110,7 @@ Promise.all([p1, p2, p3]).then(([a, b, c]) => {
 const [a, b, c] = await Promise.all([p1, p2, p3]);
 ```
 
-Be careful: if the original promises and the result variables' order don't match, you may run into subtle bugs.
+Be careful: if the original promises and the result variables' order don't match, you may run into subtle bugs. The {{jsxref("Promise.allKeyed()")}} method solves exactly this problem.
 
 ### Asynchronicity or synchronicity of Promise.all
 
@@ -202,7 +202,7 @@ function promptForDishChoice() {
       if (dialog.returnValue === "ok") {
         resolve(dialog.querySelector("select").value);
       } else {
-        reject(new Error("User cancelled dialog"));
+        reject(new Error("User canceled dialog"));
       }
     });
     document.body.appendChild(dialog);
@@ -250,6 +250,20 @@ async function getPrice() {
   ]);
   // `choice` and `prices` are still the original async functions;
   // Promise.all() does nothing to non-promises
+}
+```
+
+Note that the following, despite other undesirable aspects (like creating more variables and bug-prone error handling), also achieves concurrency:
+
+```js
+async function getPrice() {
+  // Fire all async operations upfront
+  const choicePromise = promptForDishChoice();
+  const pricesPromise = fetchPrices();
+
+  // Wait for each promise (all in-progress async operations keep running)
+  const choice = await choicePromise;
+  const prices = await pricesPromise;
 }
 ```
 
@@ -317,6 +331,7 @@ Promise.all([p1.catch((error) => error), p2.catch((error) => error)]).then(
 ## See also
 
 - {{jsxref("Promise")}}
+- {{jsxref("Promise.allKeyed()")}}
 - {{jsxref("Promise.allSettled()")}}
 - {{jsxref("Promise.any()")}}
 - {{jsxref("Promise.race()")}}
