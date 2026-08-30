@@ -82,10 +82,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 On a desktop computer, there are a number of ways to select multiple options in a `<select>` element with a `multiple` attribute:
 
-Mouse users can hold the <kbd>Ctrl</kbd>, <kbd>Command</kbd>, or <kbd>Shift</kbd> keys (depending on what makes sense for your operating system) and then click multiple options to select/deselect them.
-
-> [!NOTE]
-> On macOS, use the <kbd>Cmd</kbd> key instead of <kbd>Ctrl</kbd> for the keyboard shortcuts described below. Non-contiguous keyboard selection does not currently work in Safari.
+Mouse users can hold the <kbd>Ctrl</kbd> (<kbd>Command</kbd> on macOS), or <kbd>Shift</kbd> keys (depending on what makes sense for your operating system) and then click multiple options to select/deselect them.
 
 Keyboard users can select multiple contiguous items by:
 
@@ -96,7 +93,7 @@ Keyboard users can select multiple contiguous items by:
 Keyboard users can select multiple non-contiguous items by:
 
 - Focusing on the `<select>` element (e.g., using <kbd>Tab</kbd>).
-- Holding down the <kbd>Ctrl</kbd> key (<kbd>Cmd</kbd> on macOS) then using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to change the "focused" select option, i.e., the one that will be selected if you choose to do so. The "focused" select option is highlighted with a dotted outline, in the same way as a keyboard-focused link.
+- Holding down the <kbd>Ctrl</kbd> key  (<kbd>Command</kbd> on macOS) then using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to change the "focused" select option, i.e., the one that will be selected if you choose to do so. The "focused" select option is highlighted with a dotted outline, in the same way as a keyboard-focused link.
 - Pressing <kbd>Space</kbd> to select/deselect "focused" select options.
 
 ## Styling with CSS
