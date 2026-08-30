@@ -36,7 +36,7 @@ url("assets/icon.svg")
 url("../assets/image.png")
 
 /* Absolute URL */
-url("http://example.com/fonts/myFont.ttf")
+url("http://example.com/fonts/myFont.woff")
 url("https://example.com/images/background.jpg")
 
 /* Data URL */
