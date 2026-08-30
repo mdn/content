@@ -932,7 +932,7 @@ What we can do is call this command locally on our Django project when it is con
 The Railway client makes this easy by providing a mechanism to run commands locally using the same environment variables as the production server, including the database connection string.
 
 First open a terminal or command prompt in a git clone of your locallibrary project.
-Then log in to your browser account using the `login` or `login --browserless` command (follow any resulting prompts and instructions from the client or website to complete the login):
+Then log into your browser account using the `login` or `login --browserless` command (follow any resulting prompts and instructions from the client or website to complete the login):
 
 ```bash
 railway login

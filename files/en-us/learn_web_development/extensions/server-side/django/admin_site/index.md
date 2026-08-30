@@ -82,7 +82,7 @@ python3 manage.py runserver
 
 ## Logging in and using the site
 
-To log in to the site, open the _/admin_ URL (e.g., `http://127.0.0.1:8000/admin`) and enter your new superuser userid and password credentials (you'll be redirected to the _login_ page, and then back to the _/admin_ URL after you've entered your details).
+To log into the site, open the _/admin_ URL (e.g., `http://127.0.0.1:8000/admin`) and enter your new superuser userid and password credentials (you'll be redirected to the _login_ page, and then back to the _/admin_ URL after you've entered your details).
 
 This part of the site displays all our models, grouped by installed application. You can click on a model name to go to a screen that lists all its associated records, and you can further click on those records to edit them. You can also directly click the **Add** link next to each model to start creating a record of that type.
 
