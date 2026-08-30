@@ -58,7 +58,7 @@ The markup for the custom controls now looks as follows:
 ```html hidden live-sample___video-player-styled
   <figcaption>
     &copy; Blender Foundation |
-    <a href="http://mango.blender.org">mango.blender.org</a>
+    <a href="https://mango.blender.org">mango.blender.org</a>
   </figcaption>
 </figure>
 ```

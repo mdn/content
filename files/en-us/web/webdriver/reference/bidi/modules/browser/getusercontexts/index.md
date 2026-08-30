@@ -30,7 +30,7 @@ The following field in the `result` object of the response describes the user co
   - : An array of one or more objects, each representing a user context.
     Each object has the following field:
     - `userContext`
-      - : A string that contains the ID ([UUID](/en-US/docs/Glossary/UUID)) that uniquely identifies the user context.
+      - : A string that contains the ID that uniquely identifies the user context.
         The default user context has the value `"default"`; it always exists and cannot be removed, so the array is never empty.
 
 ## Examples

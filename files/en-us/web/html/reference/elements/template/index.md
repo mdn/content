@@ -7,11 +7,14 @@ browser-compat: html.elements.template
 sidebar: htmlsidebar
 ---
 
-The **`<template>`** [HTML](/en-US/docs/Web/HTML) element serves as a mechanism for holding {{Glossary("HTML")}} fragments, which can either be used later via JavaScript or generated immediately into shadow DOM.
+The **`<template>`** [HTML](/en-US/docs/Web/HTML) element serves as a mechanism for holding {{Glossary("HTML")}} fragments, which can either be used later via JavaScript, generated immediately and inserted into a shadow DOM, or used as part of {{glossary("Out_of_order_patching", "out-of-order patching")}} with `<template for="...">`.
 
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
+
+- `for` {{experimental_inline}}
+  - : The `for` attribute is used for out-of-order patching with `<template for="...">`, matching an equivalent `<?start id="...">` or `<?marker "...">` marker. See the [out-of-order patching section](#out-of-order_patching) and [examples section](#examples).
 
 - `shadowrootmode`
   - : Creates a [shadow root](/en-US/docs/Glossary/Shadow_tree) for the parent element.
@@ -73,7 +76,7 @@ This element has no permitted content, because everything nested inside it in th
 
 Due to the way the `<template>` element is parsed, all `<html>`, `<head>`, and `<body>` opening and closing tags inside the template are syntax errors and are ignored by the parser, so `<template><head><title>Test</title></head></template>` is the same as `<template><title>Test</title></template>`.
 
-There are two main ways to use the `<template>` element.
+There are three main ways to use the `<template>` element.
 
 ### Template document fragment
 
@@ -93,6 +96,22 @@ If the element has any other value for `shadowrootmode`, or does not have the `s
 Similarly, if there are multiple declarative shadow roots, only the first one is replaced by a {{domxref("ShadowRoot")}} — subsequent instances are parsed as {{domxref("HTMLTemplateElement")}} objects.
 
 Other attributes prefixed with `shadowroot` allow declarative customization of the `ShadowRoot`, such as controlling how slots are assigned.
+
+### Out-of-order patching
+
+Traditionally, HTML is delivered in order and read, processed, and displayed from top to bottom. To change that order, you can either hide or rearrange elements with CSS or update the DOM produced by the HTML afterwards with JavaScript. However, many pages are composed of multiple parts that may be ready to render at different times, or that may be more important to deliver to the user earlier.
+
+The `<template>` element allows for delivering HTML {{glossary("Out_of_order_patching", "out-of-order")}}, which involves replacing [processing instruction](/en-US/docs/Web/API/ProcessingInstruction) markers with the contents of the `<template>` element (also referred to as **patching**).
+
+For example, a `<?marker name="my-identifier">` processing instruction marker can be patched with the contents of a `<template for="my-identifier">` element supplied much later in the HTML. See the [Using `<template for>` for patching](#using_template_for_for_patching) example.
+
+As well as the `<?marker>` processing instructions marker, a `<?start>` and `<?end>` pair can be used to contain temporary content (for example, `<?start name="my-identifier">Loading...<?end>`), which is temporarily shown until the `<template for="my-identifier">` is processed and the whole section is replaced. See the [Using `<template for>` for range patching](#using_template_for_for_range_patching) example.
+
+When written in HTML, processing instructions can be provided with or without the trailing `?`, and the browser will add it if not supplied when parsing the DOM. Both `<?start?>` and `<?start>` are therefore valid and parsed as `<?start?>`. XML is stricter and requires the trailing `?`.
+
+If the `for` attribute does not match any marker processing instruction `name`, the `<template>` content will remain hidden in the DOM and won't be used in any patch.
+
+To prevent components from updating unrelated parts of the DOM, `<template for="...">` elements can only patch markers inside the `<template>` parent's DOM tree. The only exception is `<template>` elements that are direct children of the `<body>` element — they can also patch `<head>` elements to allow updating `<title>` and other `<head>` elements.
 
 ## Examples
 
@@ -498,6 +517,125 @@ container.appendChild(secondClone);
 Since `firstClone` is a `DocumentFragment`, only its children are added to `container` when `appendChild` is called; the event handlers of `firstClone` are not copied. In contrast, because an event handler is added to the first _child node_ of `secondClone`, the event handler is copied when `appendChild` is called, and clicking on it works as one would expect.
 
 {{EmbedLiveSample(' Data on the DocumentFragment is not cloned')}}
+
+### Using `<template for>` for patching
+
+This example uses the `<?marker name="placeholder">` processing instruction as a placeholder and later on fills in the contents using `<template for="placeholder">`.
+
+```html-nolint
+<body>
+  <div>
+    <?marker name="placeholder">
+  </div>
+  ...
+  <template for="placeholder">Lorem Ipsum...</template>
+  ...
+</body>
+```
+
+Initially, this results in an empty `<div>` being rendered. It is then updated to the following after the `<template>` element is parsed and processed:
+
+```html-nolint
+  <div>
+    Lorem Ipsum...
+  </div>
+```
+
+### Using `<template for>` for range patching
+
+This example uses the `<?start>` and `<?end>` processing instructions to contain placeholder content, which is initially displayed then replaced by the `<template for>` content later on.
+
+```html-nolint
+<body>
+  <div>
+    <?start name="placeholder">
+    Loading...
+    <?end>
+  </div>
+  ...
+  <template for="placeholder">Lorem Ipsum...</template>
+  ...
+</body>
+```
+
+Initially the `<div>` is rendered with the `Loading...` placeholder content. This is then updated to the following after the `<template>` is parsed and processed:
+
+```html-nolint
+  <div>
+    Lorem Ipsum...
+  </div>
+```
+
+This example also demonstrates the lack of processing instruction children and nesting. The `<?start>` and `<?end>` processing instructions, although linked in terms of their relationship with `<template for>`, are separate [nodes](/en-US/docs/Web/API/Node) and not opening and closing tags. They therefore do not contain the `Loading...` content as a child (as demonstrated by the lack of indentation).
+
+### Using `<template for>` for patching `<head>` elements
+
+This example shows that `<template for>` elements that are direct children of the `<body>` element can patch `<head>` markers.
+
+```html-nolint
+<head>
+  ...
+  <?start name="title"><title>Loading...</title><?end>
+  <?start name="meta-description"><meta name="description" contents="Loading..."><?end>
+  ...
+</head>
+<body>
+  ...
+  <template for="title"><title>The actual title of the page</title></template>
+  <template for="meta-description"><meta name="description" contents="This is a meaningful description..."></template>
+  ...
+</body>
+```
+
+Results in the following once the `<template>` elements have been parsed:
+
+```html-nolint
+<head>
+  ...
+  <title>The actual title of the page</title>
+  <meta name="description" contents="This is a meaningful description...">
+  ...
+</head>
+<body>
+  ...
+</body>
+```
+
+### Including markers in `<template for>` to allow contents to be repatched later
+
+You can also insert markers inside `<template for>` elements, creating new placeholders to enable patching the same content multiple times. You can reuse existing `name` attributes.
+
+For example, if you are building a {{glossary("SPA", "Single Page Application (SPA)")}} with `<template for>`, you may wish to allow the `<title>` to be patched on each route update, which could be achieved like this:
+
+```html-nolint
+<head>
+  ...
+  <?start name="title">
+  <title>Loading...</title>
+  <?end>
+  ...
+</head>
+<body>
+  ...
+  <template for="title"><?start name="title"><title>The actual title of the page</title><?end></template>
+  ...
+</body>
+```
+
+This will result in the following once the `<template>` element is parsed:
+
+```html-nolint
+<head>
+  ...
+  <?start name="title"><title>The actual title of the page</title><?end>
+  ...
+</head>
+<body>
+  ...
+</body>
+```
+
+Later on, a new `<template for="title">` could be inserted into the DOM to replace the `<title>` again.
 
 ## Technical summary
 

@@ -1,12 +1,13 @@
 ---
-title: "eq: Wasm text instruction"
+title: "eq: Wasm numeric instruction"
 short-title: eq
 slug: WebAssembly/Reference/Numeric/eq
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.eq
 sidebar: webassemblysidebar
 ---
 
-The **`eq`** instruction, short for _equal_, checks if two numbers are equal.
+The **`eq`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _equal_, checks if two numbers are equal.
 
 {{InteractiveExample("Wat Demo: eq", "tabbed-taller")}}
 
@@ -151,3 +152,11 @@ The output is as follows:
 {{embedlivesample("simd_eq", "100%", 100)}}
 
 The result is `0` because the values stored in lane `7` of the two input values are not equal.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

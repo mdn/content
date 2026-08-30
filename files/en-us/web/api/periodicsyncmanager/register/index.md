@@ -38,11 +38,11 @@ Returns a {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}.
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Returned if there is no active {{domxref('ServiceWorker')}} present.
+  - : Thrown if there is no active {{domxref('ServiceWorker')}} present.
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Returned if permission for background periodic sync is not granted.
+  - : Thrown if the `periodic-background-sync` permission is not granted.
 - `InvalidAccessError` {{domxref("DOMException")}}
-  - : Returned if the active window is not the main window (not of `auxiliary` or `top-level` type).
+  - : Thrown if the active window is not the main window (not of `auxiliary` or `top-level` type).
 
 ## Examples
 

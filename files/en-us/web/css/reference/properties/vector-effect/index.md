@@ -26,6 +26,8 @@ vector-effect: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `none`
   - : No vector effects are applied to the element, meaning it will be fully affected by transforms as normal.
 - `non-scaling-stroke`

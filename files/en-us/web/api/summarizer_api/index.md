@@ -37,6 +37,8 @@ See [Using the Summarizer API](/en-US/docs/Web/API/Summarizer_API/Using) for a w
 
 ## Interfaces
 
+- {{domxref("CreateMonitor")}} {{Experimental_Inline}}
+  - : Provides information on the progress of an AI model download, for example a language pack or some fine-tuning data.
 - {{domxref("Summarizer")}} {{Experimental_Inline}}
   - : Contains all the functionality for the Summarizer API, including checking AI model availability, creating a new `Summarizer` instance, using it to generate a new summary, and more.
 

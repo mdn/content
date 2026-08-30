@@ -57,9 +57,9 @@ If an {{HTMLElement("input")}}, {{HTMLElement("select")}} or {{HTMLElement("text
 
 If the same list of tokens is used in more than one form control, the user-agent will autocomplete all occurrences of the same `autocomplete` value with the same data value.
 
-Some tokens may be used more than once with potentially different expected values, such as the `zip-code` token in a form that contains both shipping and billing addresses. Including multiple different tokens in a space-separated list causes the associated form controls to be given unique autocomplete values: in this case, `autocomplete="shipping zip-code"` and `autocomplete="billing zip-code"`.
+Some tokens may be used more than once with potentially different expected values, such as the `postal-code` token in a form that contains both shipping and billing addresses. Including multiple different tokens in a space-separated list causes the associated form controls to be given unique autocomplete values: in this case, `autocomplete="shipping postal-code"` and `autocomplete="billing postal-code"`.
 
-Some autocomplete values may need to be re-used multiple times. For example, a form may contain multiple shipping addresses and therefore multiple occurrences of `"shipping zip-code"` while still expecting different values. To make the autocomplete value unique in these cases, the first token in the space-separated list of tokens can be a `section-*` token, where the token's first eight characters are always the string "section-", followed by an alphanumeric string. All form fields given the `section-*` token with the same alphanumeric string belong to the same **named group**.
+Some autocomplete values may need to be re-used multiple times. For example, a form may contain multiple shipping addresses and therefore multiple occurrences of `"shipping postal-code"` while still expecting different values. To make the autocomplete value unique in these cases, the first token in the space-separated list of tokens can be a `section-*` token, where the token's first eight characters are always the string "section-", followed by an alphanumeric string. All form fields given the `section-*` token with the same alphanumeric string belong to the same **named group**.
 
 If including the `autocomplete` attribute on {{HTMLElement("input/hidden", "hidden")}} input elements (`<input type="hidden">`), its value must be an ordered list of space-separated tokens; the `on` and `off` keywords are not allowed.
 
@@ -79,7 +79,7 @@ The attribute value is either the keyword `off` or `on`, or a space-separated `<
     > In most modern browsers, setting `autocomplete` to `"off"` will not prevent a password manager from asking the user if they would like to save username and password information, or from automatically filling in those values in a site's login form. See [Managing autofill for login fields](/en-US/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#managing_autofill_for_login_fields).
 
 - `on`
-  - : The browser is allowed to automatically complete the input. No guidance is provided as to the type of data expected in the field, so the browser may use its own judgement.
+  - : The browser is allowed to automatically complete the input. No guidance is provided as to the type of data expected in the field, so the browser may use its own judgment.
 
 - `<token-list>`
   - : An ordered set of [space-separated tokens](#token_list_tokens) consisting of autofill detail tokens preceded by optional sectioning and either billing or shipping grouping tokens. Phone numbers, email addresses, and messaging protocol tokens are preceded by a token identifying the type of recipient.

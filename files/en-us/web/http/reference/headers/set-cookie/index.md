@@ -108,7 +108,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 - `Partitioned` {{optional_inline}}
   - : Indicates that the cookie should be stored using partitioned storage.
     Note that if this is set, the [`Secure` directive](#secure) must also be set.
-    See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies) for more details.
+    See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies) for more details.
 
 - `Path=<path-value>` {{optional_inline}}
   - : Indicates the path that _must_ exist in the requested URL for the browser to send the `Cookie` header.
@@ -149,7 +149,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
         The `Secure` attribute must also be set when using this value.
 
 - `Secure` {{optional_inline}}
-  - : Indicates that the cookie is sent to the server only when a request is made with the `https:` scheme (except on localhost), and therefore, is more resistant to [man-in-the-middle](/en-US/docs/Glossary/MitM) attacks.
+  - : Indicates that the cookie is sent to the server only when a request is made with the `https:` scheme (except on localhost), and therefore, is more resistant to [manipulator in the middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM) attacks.
 
     > [!NOTE]
     > Do not assume that `Secure` prevents all access to sensitive information in cookies (session keys, login details, etc.).

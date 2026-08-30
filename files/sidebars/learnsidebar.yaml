@@ -488,12 +488,37 @@ l10n:
     Django_web_framework_(Python): Django 網站框架 (Python)
     Further_resources: 更多資源
   fr:
+    Advanced JavaScript objects: Objets JavaScript avancés
+    Getting_started_modules: Modules pour bien démarrer
+    Environment_setup: Configuration de l'environnement
+    Your_first_website: Votre premier site web
+    Web_standards: Normes Web
+    Soft_skills: Compétences générales
+    Core_modules: Modules fondamentaux
+    Structuring_content_with_HTML: Structurer le contenu avec HTML
+    CSS_styling_basics: Bases de la mise en forme CSS
+    CSS_text_styling: Mise en forme du texte en CSS
     CSS_layout: Disposition en CSS
-    Asynchronous_JavaScript: JavaScript asynchrone
+    Dynamic_scripting_with_JavaScript: Script dynamique avec JavaScript
+    JavaScript_frameworks_and_libraries: Cadriciels et bibliothèques JavaScript
+    Accessibility: Accessibilité
+    Design_for_developers: Conception pour les développeur·euse·s
+    Version_control: Contrôle de version
+    Extension_modules: Modules étendus
     Client-side_web_APIs: Les API web côté client
-    Web_forms: Formulaires web — Travailler avec les données des utilisateur·rice·s
+    Asynchronous_JavaScript: JavaScript asynchrone
+    Web_forms: Formulaires web
+    Understanding_client-side_tools: Comprendre les outils côté client
     Django_web_framework_(Python): Django (Python)
+    Express_web_framework_(Node.js): Express (Node.js)
+    Web_performance: Performance Web
+    Testing: Tests
     Further_resources: Ressources complémentaires
+    How_to_solve_common_problems: Comment résoudre les problèmes courants
+    About: À propos
+    Resources_for_educators: Ressources pour les éducateur·ice·s
+    Changelog: Journal des modifications
+    Additional_tutorials: Tutoriels supplémentaires
   ja:
     Getting_started_modules: 入門モジュール
     Environment_setup: 環境設定

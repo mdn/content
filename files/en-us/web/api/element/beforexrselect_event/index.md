@@ -30,11 +30,6 @@ An {{domxref("XRSessionEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("XRSessionEvent")}}
 
-## Event properties
-
-- {{domxref("XRSessionEvent.session", "session")}} {{ReadOnlyInline}}
-  - : The {{domxref("XRSession")}} to which the event refers.
-
 ## Event availability
 
 The **`beforexrselect`** event is a global event and available to the following interfaces:
@@ -68,3 +63,4 @@ document
 - {{domxref("XRSession/select_event", "select")}} event
 - {{domxref("XRSession/selectstart_event", "selectstart")}} event
 - {{domxref("XRSession/selectend_event", "selectend")}} event
+- {{cssxref(":xr-overlay")}} pseudo-class

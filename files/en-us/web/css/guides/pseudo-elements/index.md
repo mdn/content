@@ -40,7 +40,9 @@ The specification also defines the `::details-content` pseudo-element and the `:
 
 - {{DOMxRef("CSSPseudoElement")}} interface
   - {{DOMxRef("CSSPseudoElement.element")}} property
+  - {{DOMxRef("CSSPseudoElement.parent")}} property
   - {{DOMxRef("CSSPseudoElement.type")}} property
+  - {{DOMxRef("CSSPseudoElement.pseudo", "pseudo()")}} method
 
 ### Terms
 

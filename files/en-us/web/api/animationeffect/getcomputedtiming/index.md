@@ -39,9 +39,11 @@ An object which contains:
       Indicates the length of time in milliseconds that the effect has run. This is equal to the {{domxref("Animation.currentTime","currentTime")}} of the associated animation, or `null` if the effect is not associated with an animation.
 
   - `progress`
-    - : `null` or a `number` at least `0` and less than `1`.
+    - : `null` or a `number`.
 
       Indicates the effect's progress through its current iteration. At the start of the `activeDuration`, this equals the fractional part of `iterationStart`.
+
+      The value is typically between `0` and `1`, but may fall outside this range depending on the effect's {{cssxref("easing-function")}}'s output. For example, an easing function of `cubic-bezier(0.3, 2, 0.6, 2)` would transform the time progress of `0.5` to approximately `1.65`.
 
       Returns `null` if the effect isn't mid-iteration, for example because the effect is in the `delay` or `endDelay` periods, the effect is finished, or `localTime` is `null`.
 

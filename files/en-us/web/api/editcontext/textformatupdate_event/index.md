@@ -34,13 +34,6 @@ ontextformatupdate = (event) => { }
 
 A {{domxref("TextFormatUpdateEvent")}}. Inherits from {{domxref("Event")}}.
 
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref('TextFormatUpdateEvent.getTextFormats')}}
-  - : Returns the list of text formats that the IME window wants to apply to the text.
-
 ## Examples
 
 ### Rendering IME composition text formatting

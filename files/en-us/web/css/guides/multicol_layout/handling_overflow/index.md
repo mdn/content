@@ -211,7 +211,7 @@ The HTML contains basic text content, which we have hidden for brevity.
 </p>
 ```
 
-We give our content some styles. Most notably, we set the `<body>` element's {{cssxref("column-count")}} to `2`, and its `column-height` to `95vh` so that each row of columns fills up the viewport. We don't need to explicitly set `column-wrap` to `wrap`: when `column-height` is set to a {{cssxref("&lt;length>")}} value, the initial value of `column-wrap` (`auto`) resolves to `wrap`, which is usually the behavior you'll want.
+We give our content some styles. Most notably, we set the `<body>` element's {{cssxref("column-count")}} to `3`, and its `column-height` to `95vh` so that each row of columns fills up the viewport. We don't need to explicitly set `column-wrap` to `wrap`: when `column-height` is set to a {{cssxref("&lt;length>")}} value, the initial value of `column-wrap` (`auto`) resolves to `wrap`, which is usually the behavior you'll want.
 
 ```css
 body {

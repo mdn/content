@@ -94,7 +94,7 @@ Now we set a custom {{cssxref("animation-duration")}} and {{cssxref("opacity")}}
 
 ```css hidden live-sample___basic-waituntil
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
 }
 
 body {
@@ -199,7 +199,7 @@ function showLog() {
 
 {{embedlivesample("basic-waituntil", "100%", 200)}}
 
-Try long pressing on the button with your keyboard, mouse, or other pointing device — you'll see that the cross-fade transition animation occurs, but the content remains greyed out (due to the `opacity: 0.5` set on the view transition pseudo-elements) until you end the long press. This is because the `p` promise referenced inside the `waitUntil()` call is not resolved, and therefore, the view transition is not finished, until the `pointerup`/`keyup` events are fired.
+Try long pressing on the button with your keyboard, mouse, or other pointing device — you'll see that the cross-fade transition animation occurs, but the content remains grayed out (due to the `opacity: 0.5` set on the view transition pseudo-elements) until you end the long press. This is because the `p` promise referenced inside the `waitUntil()` call is not resolved, and therefore, the view transition is not finished, until the `pointerup`/`keyup` events are fired.
 
 The "View transition finished" log message also doesn't appear until the view transition is finished, because the function that handles this is tied to the `ViewTransition.finished` promise.
 

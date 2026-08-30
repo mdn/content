@@ -23,7 +23,7 @@ In the final couple of articles in the series, we will solidify your tooling kno
     <tr>
       <th scope="row">Objective:</th>
       <td>
-        To solidify what we've learnt so far by working through a complete
+        To solidify what we've learned so far by working through a complete
         toolchain case study.
       </td>
     </tr>
