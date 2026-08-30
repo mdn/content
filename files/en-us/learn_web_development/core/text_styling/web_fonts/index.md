@@ -187,7 +187,7 @@ Let's go through it to see what it does:
 - {{cssxref("@font-face/font-display", "font-display")}}: This line specifies how the font is displayed while it is loading.
 
 > [!NOTE]
-> You can also specify particular {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}} and {{cssxref("@font-face/font-stretch", "font-stretch")}} values for your web fonts. In newer browsers, you can also specify a {{cssxref("@font-face/unicode-range", "unicode-range")}} value, which is a specific range of characters you might want to use out of the web font. In supporting browsers, the font will only be downloaded if the page contains those specified characters, saving unnecessary downloads. [Creating Custom Font Stacks with Unicode-Range](https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/) by Drew McLellan provides some useful ideas on how to make use of this.
+> You can also specify particular {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}} and {{cssxref("@font-face/font-width", "font-stretch")}} values for your web fonts. In newer browsers, you can also specify a {{cssxref("@font-face/unicode-range", "unicode-range")}} value, which is a specific range of characters you might want to use out of the web font. In supporting browsers, the font will only be downloaded if the page contains those specified characters, saving unnecessary downloads. [Creating Custom Font Stacks with Unicode-Range](https://24ways.org/2011/creating-custom-font-stacks-with-unicode-range/) by Drew McLellan provides some useful ideas on how to make use of this.
 
 ## Summary
 

@@ -74,7 +74,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
   font-family: "Plex Serif";
   font-weight: normal;
   font-style: normal;
-  font-stretch: normal;
+  font-width: normal;
   src:
     url("https://mdn.github.io/shared-assets/fonts/plex/IBMPlexSerif-Regular.woff")
       format("woff"),
@@ -178,7 +178,7 @@ Fonts can supply a number of different alternatives for various glyphs, such as 
   font-family: "Plex Serif";
   font-weight: normal;
   font-style: normal;
-  font-stretch: normal;
+  font-width: normal;
   src:
     url("https://mdn.github.io/shared-assets/fonts/plex/IBMPlexSerif-Regular.woff")
       format("woff"),
@@ -190,7 +190,7 @@ Fonts can supply a number of different alternatives for various glyphs, such as 
   font-family: "Dancing Script";
   font-weight: normal;
   font-style: normal;
-  font-stretch: normal;
+  font-width: normal;
   src:
     url("https://mdn.github.io/shared-assets/fonts/dancing-script/dancing-script-regular.woff")
       format("woff"),
@@ -338,7 +338,7 @@ While more common in script typefaces, in the below example they are used to cre
   font-family: "Playfair Display";
   font-weight: normal;
   font-style: normal;
-  font-stretch: normal;
+  font-width: normal;
   src:
     url("https://mdn.github.io/shared-assets/fonts/playfair-display/playfair-display-regular.woff")
       format("woff"),
@@ -444,7 +444,7 @@ Position variants are used to enable typographic superscript and subscript glyph
   font-family: "Playfair Display";
   font-weight: normal;
   font-style: normal;
-  font-stretch: normal;
+  font-width: normal;
   src:
     url("https://mdn.github.io/shared-assets/fonts/playfair-display/playfair-display-regular.woff")
       format("woff"),
@@ -562,7 +562,7 @@ One of the more common use cases for OpenType features is proper small caps. The
   font-family: "Playfair Display";
   font-weight: normal;
   font-style: normal;
-  font-stretch: normal;
+  font-width: normal;
   src:
     url("https://mdn.github.io/shared-assets/fonts/playfair-display/playfair-display-regular.woff")
       format("woff"),
@@ -696,7 +696,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
   font-family: "Source Serif";
   font-weight: normal;
   font-style: normal;
-  font-stretch: normal;
+  font-width: normal;
   src:
     url("https://mdn.github.io/shared-assets/fonts/source-serif/SourceSerifPro-Regular.ttf.woff")
       format("woff"),
@@ -811,7 +811,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground:
   font-family: "Source Serif";
   font-weight: normal;
   font-style: normal;
-  font-stretch: normal;
+  font-width: normal;
   src:
     url("https://mdn.github.io/shared-assets/fonts/source-serif/SourceSerifPro-Regular.ttf.woff")
       format("woff"),
@@ -929,7 +929,7 @@ This allows access to various alternate forms of glyphs within a font. The examp
   font-family: "Kokoro";
   font-weight: normal;
   font-style: normal;
-  font-stretch: normal;
+  font-width: normal;
   src: url("https://mdn.github.io/shared-assets/fonts/kokoro/Kokoro.woff2")
     format("woff2");
 }
@@ -1030,7 +1030,7 @@ The {{Cssxref("font-variant")}} property is the shorthand syntax for defining al
   font-family: "Playfair Display";
   font-weight: normal;
   font-style: normal;
-  font-stretch: normal;
+  font-width: normal;
   src:
     url("https://mdn.github.io/shared-assets/fonts/playfair-display/playfair-display-regular.woff")
       format("woff"),

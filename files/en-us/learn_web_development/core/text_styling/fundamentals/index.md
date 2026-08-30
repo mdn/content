@@ -484,7 +484,7 @@ Font styles:
 - {{cssxref("font-variant-numeric")}}: Control the usage of alternate glyphs for numbers, fractions, and ordinal markers.
 - {{cssxref("font-variant-position")}}: Control the usage of alternate glyphs of smaller sizes positioned as superscript or subscript.
 - {{cssxref("font-size-adjust")}}: Adjust the visual size of the font independently of its actual font size.
-- {{cssxref("font-stretch")}}: Switch between possible alternative stretched versions of a given font.
+- {{cssxref("font-width")}}: Switch between possible alternative stretched versions of a given font.
 - {{cssxref("text-underline-position")}}: Specify the position of underlines set using the `text-decoration-line` property `underline` value.
 - {{cssxref("text-rendering")}}: Try to perform some text rendering optimization.
 
@@ -504,7 +504,7 @@ Text layout styles:
 
 ## Font shorthand
 
-Many font properties can also be set through the shorthand property {{cssxref("font")}}. These are written in the following order: {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-weight")}}, {{cssxref("font-stretch")}}, {{cssxref("font-size")}}, {{cssxref("line-height")}}, and {{cssxref("font-family")}}.
+Many font properties can also be set through the shorthand property {{cssxref("font")}}. These are written in the following order: {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-weight")}}, {{cssxref("font-width")}}, {{cssxref("font-size")}}, {{cssxref("line-height")}}, and {{cssxref("font-family")}}.
 
 Among all those properties, only `font-size` and `font-family` are required when using the `font` shorthand property.
 

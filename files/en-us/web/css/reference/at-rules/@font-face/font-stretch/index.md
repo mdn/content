@@ -169,7 +169,7 @@ p:nth-child(3) {
 }
 ```
 
-{{EmbedLiveSample("Setting font stretch percentages", "100%", 200)}}
+{{EmbedLiveSample("Setting a percentage range for font-stretch", "100%", 200)}}
 
 ## Specifications
 

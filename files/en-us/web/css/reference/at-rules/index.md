@@ -37,6 +37,7 @@ sidebar: cssref
   - {{cssxref("@font-face/font-style")}}
   - {{cssxref("@font-face/font-variation-settings")}}
   - {{cssxref("@font-face/font-weight")}}
+  - {{cssxref("@font-face/font-width")}}
   - {{cssxref("@font-face/line-gap-override")}}
   - {{cssxref("@font-face/size-adjust")}}
   - {{cssxref("@font-face/src")}}

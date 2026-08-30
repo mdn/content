@@ -81,7 +81,7 @@ The font display timeline is based on a timer that begins the moment the user ag
 ## See also
 
 - {{cssxref("@font-face/font-family", "font-family")}}
-- {{cssxref("@font-face/font-stretch", "font-stretch")}}
+- {{cssxref("@font-face/font-width", "font-stretch")}}
 - {{cssxref("@font-face/font-style", "font-style")}}
 - {{cssxref("@font-face/font-weight", "font-weight")}}
 - {{cssxref("font-feature-settings", "font-feature-settings")}}

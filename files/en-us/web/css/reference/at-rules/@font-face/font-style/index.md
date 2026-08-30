@@ -85,7 +85,7 @@ On the other hand, if a true italicized version of the font family exists, we ca
 
 - {{cssxref("@font-face/font-display", "font-display")}}
 - {{cssxref("@font-face/font-family", "font-family")}}
-- {{cssxref("@font-face/font-stretch", "font-stretch")}}
+- {{cssxref("@font-face/font-width", "font-stretch")}}
 - {{cssxref("@font-face/font-weight", "font-weight")}}
 - {{cssxref("font-feature-settings", "font-feature-settings")}}
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}

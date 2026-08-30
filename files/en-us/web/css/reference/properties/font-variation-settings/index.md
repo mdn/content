@@ -103,7 +103,7 @@ Here are the registered axes along with their corresponding CSS properties:
     </tr>
     <tr>
       <td>"wdth"</td>
-      <td>{{cssxref("font-stretch")}}</td>
+      <td>{{cssxref("font-width")}}</td>
     </tr>
     <tr>
       <td>"slnt" (slant)</td>
@@ -172,7 +172,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground.
   src: url("https://mdn.github.io/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.woff2")
     format("woff2-variations");
   font-weight: 300 900;
-  font-stretch: 35% 100%;
+  font-width: 35% 100%;
   font-style: normal;
   font-display: swap;
 }
@@ -257,7 +257,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground.
   src: url("https://mdn.github.io/shared-assets/fonts/variable-fonts/Roboto-VF.woff2")
     format("woff2-variations");
   font-weight: 100 900;
-  font-stretch: 75% 100%;
+  font-width: 75% 100%;
   font-style: oblique 0deg 12deg;
   font-display: swap;
 }

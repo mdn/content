@@ -67,7 +67,7 @@ Rules whose selectors include this element may only use the following CSS proper
 - {{cssxref("font")}}
 - {{cssxref("font-family")}}
 - {{cssxref("font-size")}}
-- {{cssxref("font-stretch")}}
+- {{cssxref("font-width")}}
 - {{cssxref("font-style")}}
 - {{cssxref("font-variant")}}
 - {{cssxref("font-weight")}}

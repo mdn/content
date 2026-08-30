@@ -307,7 +307,7 @@ Note that the example paragraph does not get lighter than the `300` paragraph ab
 
 - {{cssxref("@font-face/font-display", "font-display")}}
 - {{cssxref("@font-face/font-family", "font-family")}}
-- {{cssxref("@font-face/font-stretch", "font-stretch")}}
+- {{cssxref("@font-face/font-width", "font-stretch")}}
 - {{cssxref("@font-face/font-style", "font-style")}}
 - {{cssxref("font-feature-settings", "font-feature-settings")}}
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}

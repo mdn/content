@@ -153,7 +153,7 @@ The following CSS properties can be used normally:
 
 - {{cssxref("font-kerning")}}
 - {{cssxref("font-optical-sizing")}}
-- {{cssxref("font-stretch")}}
+- {{cssxref("font-width")}}
 - {{cssxref("font-synthesis-weight")}}
 - {{cssxref("font-synthesis-style")}}
 - {{cssxref("font-synthesis-small-caps")}}

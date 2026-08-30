@@ -170,7 +170,7 @@ const ofInterest = [
   "padding-top",
   "margin-bottom",
   "font-size",
-  "font-stretch",
+  "font-width",
   "animation-duration",
   "animation-iteration-count",
   "width",
@@ -217,7 +217,7 @@ For those of you using a non-supporting browser, the above output should look so
 | {{cssxref("padding-top")}}               | 0     | `px`        |
 | {{cssxref("margin-bottom")}}             | 16    | `px`        |
 | {{cssxref("font-size")}}                 | 16    | `px`        |
-| {{cssxref("font-stretch")}}              | 100   | `%`         |
+| {{cssxref("font-width")}}                | 100   | `%`         |
 | {{cssxref("animation-duration")}}        | 0     | `px`        |
 | {{cssxref("animation-iteration-count")}} | 1     | _number_    |
 | {{cssxref("width")}}                     | auto  | _undefined_ |

@@ -106,7 +106,7 @@ font:
   sans-serif;
 ```
 
-This shorthand declaration is actually equivalent to the longhand declarations above plus `font-variant: normal`, `font-size-adjust: none`, and `font-stretch: normal`.
+This shorthand declaration is actually equivalent to the longhand declarations above plus `font-variant: normal`, `font-size-adjust: none`, and `font-width: normal`.
 
 ## Border properties
 

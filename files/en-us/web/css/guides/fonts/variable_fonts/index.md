@@ -102,7 +102,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground.
   src: url("https://mdn.github.io/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.woff2")
     format("woff2-variations");
   font-weight: 300 900;
-  font-stretch: 35% 100%;
+  font-width: 35% 100%;
   font-style: normal;
   font-display: swap;
 }
@@ -156,13 +156,13 @@ angle.addEventListener("input", (e) => {
 
 ### Width
 
-Width (represented by the `wdth` tag) defines the design axis of how narrow or wide (condensed or extended, in typographic terms) the letterforms can be. This is typically set in CSS using the {{cssxref("font-stretch")}} property, with values expressed as a percentage above or below 'normal' (100%), any number greater than 0 is technically valid—though it is far more likely that the range would fall closer to the 100% mark, such as 75%-125%. If a number value supplied is outside the range encoded in the font, the browser should render the font at the closest value allowed.
+Width (represented by the `wdth` tag) defines the design axis of how narrow or wide (condensed or extended, in typographic terms) the letterforms can be. This is typically set in CSS using the {{cssxref("font-width")}} property, with values expressed as a percentage above or below 'normal' (100%), any number greater than 0 is technically valid—though it is far more likely that the range would fall closer to the 100% mark, such as 75%-125%. If a number value supplied is outside the range encoded in the font, the browser should render the font at the closest value allowed.
 
 > [!NOTE]
 > The % symbol is not used when utilizing `font-variation-settings`.
 
 ```css
-font-stretch: 115%;
+font-width: 115%;
 
 font-variation-settings: "wdth" 115;
 ```
@@ -172,7 +172,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground.
 ```html hidden live-sample___variable-fonts-width-example
 <div>
   <p class="p1">Width</p>
-  <span>(font-stretch: 60%)</span>
+  <span>(font-width: 60%)</span>
 </div>
 <div>
   <p class="p2">Width</p>
@@ -199,7 +199,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground.
   src: url("https://mdn.github.io/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.woff2")
     format("woff2-variations");
   font-weight: 300 900;
-  font-stretch: 35% 100%;
+  font-width: 35% 100%;
   font-style: normal;
   font-display: swap;
 }
@@ -223,7 +223,7 @@ p {
 ```css live-sample___variable-fonts-width-example
 /* width range is 55% to 100% */
 .p1 {
-  font-stretch: 60%;
+  font-width: 60%;
 }
 
 /* width range is an integer from 55 to 100 */
@@ -299,7 +299,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground.
   src: url("https://mdn.github.io/shared-assets/fonts/variable-fonts/jost-VF.woff2")
     format("woff2-variations");
   font-weight: 300 900;
-  font-stretch: 75% 150%;
+  font-width: 75% 150%;
   font-display: swap;
 }
 
@@ -500,7 +500,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground.
   src: url("https://mdn.github.io/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.woff2")
     format("woff2-variations");
   font-weight: 300 900;
-  font-stretch: 75% 150%;
+  font-width: 75% 150%;
   font-style: normal;
   font-display: swap;
 }
@@ -596,7 +596,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground.
   src: url("https://mdn.github.io/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.woff2")
     format("woff2-variations");
   font-weight: 300 900;
-  font-stretch: 75% 150%;
+  font-width: 75% 150%;
   font-style: normal;
   font-display: swap;
 }
@@ -649,7 +649,7 @@ angle.addEventListener("input", (e) => {
 
 The syntax for loading variable fonts is very similar to any other web font, with a few notable differences, which are provided via upgrades to the traditional {{cssxref("@font-face")}} syntax now available in modern browsers.
 
-The basic syntax is the same, but the font technology can be specified, and allowable ranges for descriptors like `font-weight` and `font-stretch` can be supplied, rather than named according to the font file being loaded.
+The basic syntax is the same, but the font technology can be specified, and allowable ranges for descriptors like `font-weight` and `font-width` can be supplied, rather than named according to the font file being loaded.
 
 #### Example for a standard upright (Roman) font
 
@@ -659,7 +659,7 @@ The basic syntax is the same, but the font technology can be specified, and allo
   src: url("path/to/font/file/my-variable-font.woff2")
     format("woff2-variations");
   font-weight: 125 950;
-  font-stretch: 75% 125%;
+  font-width: 75% 125%;
 
   font-style: normal;
 }
@@ -675,7 +675,7 @@ In this case, the `font-style: normal` declaration indicates that this font file
   src: url("path/to/font/file/my-variable-font.woff2")
     format("woff2-variations");
   font-weight: 125 950;
-  font-stretch: 75% 125%;
+  font-width: 75% 125%;
 
   font-style: italic;
 }
@@ -691,7 +691,7 @@ In this case, the `font-style: italic` declaration indicates that this font file
   src: url("path/to/font/file/my-variable-font.woff2")
     format("woff2-variations");
   font-weight: 125 950;
-  font-stretch: 75% 125%;
+  font-width: 75% 125%;
 
   font-style: oblique 0deg 12deg;
 }
@@ -703,7 +703,7 @@ In this case, the `oblique 0deg 12deg` value indicates that this font file shoul
 > Not all browsers have implemented the full syntax for font format, so test carefully. All browsers that support variable fonts will still render them if you set the format to just the file format, rather than format-variations (i.e., `woff2` instead of `woff2-variations`), but it's best to use the proper syntax if possible.
 
 > [!NOTE]
-> Supplying value ranges for `font-weight`, `font-stretch`, and `font-style` will keep the browser from attempting to render an axis outside that range if you are using the appropriate attribute (i.e., `font-weight` or `font-stretch`), but will not block you from supplying an invalid value via `font-variation-settings`, so use with care.
+> Supplying value ranges for `font-weight`, `font-width`, and `font-style` will keep the browser from attempting to render an axis outside that range if you are using the appropriate attribute (i.e., `font-weight` or `font-width`), but will not block you from supplying an invalid value via `font-variation-settings`, so use with care.
 
 ## Working with older browsers
 
@@ -769,7 +769,7 @@ The following example pages show two different ways to structure your CSS. The f
   src: url("https://mdn.github.io/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.woff2")
     format("woff2-variations");
   font-weight: 300 900;
-  font-stretch: 75% 150%;
+  font-width: 75% 150%;
   font-style: normal;
   font-display: swap;
 }
@@ -793,19 +793,19 @@ body {
 .container1 h1 {
   font-optical-sizing: auto;
   font-size: 5rem;
-  font-stretch: 85%;
+  font-width: 85%;
   font-weight: 450;
 }
 .container1 h2 {
   font-optical-sizing: auto;
   font-size: 2.25rem;
-  font-stretch: 90%;
+  font-width: 90%;
   font-weight: 575;
 }
 .container1 p {
   font-optical-sizing: auto;
   font-size: 1rem;
-  font-stretch: 100%;
+  font-width: 100%;
   font-weight: 375;
 }
 .demo2 {
