@@ -10,6 +10,8 @@ browser-compat: api.Element.pointermove_event
 
 The `pointermove` event is fired when a pointer changes coordinates, and the pointer has not been [canceled](/en-US/docs/Web/API/Element/pointercancel_event) by a browser [touch-action](/en-US/docs/Web/CSS/Reference/Properties/touch-action). It's very similar to the {{domxref("Element/mousemove_event", "mousemove")}} event, but with more features.
 
+The event is also fired when a pointer changes any of its other properties, provided the change doesn't produce some other pointer event. This includes any change to pressure, tangential pressure, tilt, twist, contact geometry (width and height), or [chorded buttons](https://w3c.github.io/pointerevents/#dfn-chorded-buttons).
+
 These events happen whether or not any pointer buttons are pressed. They can fire at a very high rate, depends on how fast the user moves the pointer, how fast the machine is, what other tasks and processes are happening, etc.
 
 ## Syntax
