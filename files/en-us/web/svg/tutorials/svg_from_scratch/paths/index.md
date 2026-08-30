@@ -23,13 +23,15 @@ Coordinates in the `d` parameter are **always unitless** and hence in the user c
 
 ## Line commands
 
-There are five line commands for {{SVGElement("path")}} nodes. The first command is the "Move To" or `M`, which was described above. It takes two parameters, a coordinate (`x`) and coordinate (`y`) to move to. If the cursor was already somewhere on the page, no line is drawn to connect the two positions. The "Move To" command appears at the beginning of paths to specify where the drawing should start. For example:
+There are five line commands for {{SVGElement("path")}} nodes. The first command is the "Move To" or `M`, which was described above. It takes at least two parameters, a coordinate (`x`) and coordinate (`y`) to move to. If the cursor was already somewhere on the page, no line is drawn to connect the two positions. The "Move To" command appears at the beginning of paths to specify where the drawing should start. For example:
 
 ```plain
 M x y
 (or)
 m dx dy
 ```
+
+More than one coordinate pair can follow a "Move To" command. Only the first pair moves the cursor; every pair after it draws a line, exactly as though a "Line To" command had been used. So `M 10 10 90 10 90 90` is equivalent to `M 10 10 L 90 10 L 90 90`, and pairs following a relative `m` draw relative lines in the same way.
 
 In the following example there's only a point at (`10`, `10`). Note, though, that it wouldn't show up if a path was just drawn normally. For example:
 
