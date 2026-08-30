@@ -73,15 +73,15 @@ http://username:password@www.example.com:80/path/to/file.php?foo=316&bar=this+ha
 const name = "Ben & Jerry's";
 
 // This is bad:
-const link = encodeURI(`https://example.com/?choice=${name}`); // "https://example.com/?choice=Ben%20&%20Jerry's"
-console.log([...new URL(link).searchParams]); // [['choice', 'Ben '], [" Jerry's", '']
+const badLink = encodeURI(`https://example.com/?choice=${name}`); // "https://example.com/?choice=Ben%20&%20Jerry's"
+console.log([...new URL(badLink).searchParams]); // [['choice', 'Ben '], [" Jerry's", '']]
 
 // Instead:
-const link = encodeURI(
+const goodLink = encodeURI(
   `https://example.com/?choice=${encodeURIComponent(name)}`,
 );
 // "https://example.com/?choice=Ben%2520%2526%2520Jerry's"
-console.log([...new URL(link).searchParams]); // [['choice', "Ben%20%26%20Jerry's"]]
+console.log([...new URL(goodLink).searchParams]); // [['choice', "Ben%20%26%20Jerry's"]]
 ```
 
 ## Examples
