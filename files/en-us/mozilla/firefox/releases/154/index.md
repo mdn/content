@@ -37,6 +37,10 @@ No notable changes.
   The difference between the methods is that the `chunks()` helper splits the elements from the original iterator into consecutive array chunks, while the `windows()` helper returns an array that is a sliding window over the original iterator (each iteration yields an array that slides forward one element: dropping the first element in the previous iteration and fetching a new element from the original iterator).
   ([Firefox bug 2047997](https://bugzil.la/2047997)).
 
+### HTTP
+
+- Support for the {{HTTPHeader("No-Vary-Search")}} HTTP response header is now available for the HTTP cache. The header lets servers declare which URL query parameters don't affect the response, allowing Firefox to reuse cached resources across different URL parameter variations and improve cache hit rates. ([Firefox bug 2038013](https://bugzil.la/2038013)).
+
 ### APIs
 
 #### Media, WebRTC, and Web Audio
