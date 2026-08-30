@@ -40,6 +40,20 @@ The following additions to the {{domxref("Service Worker API", "", "", "nocode")
 - {{domxref("ServiceWorkerGlobalScope/periodicsync_event", "periodicsync")}} event {{Experimental_Inline}}
   - : Occurs at periodic intervals, which were specified when registering a {{domxref("PeriodicSyncManager")}}.
 
+## Security considerations
+
+Access to periodic background sync is controlled by the `periodic-background-sync` permission.
+You can use the [Permissions API](/en-US/docs/Web/API/Permissions_API) to check whether this permission is granted:
+
+```js
+const status = await navigator.permissions.query({
+  name: "periodic-background-sync",
+});
+```
+
+In Chrome, the permission is granted only to an installed web app that has been launched as a separate application.
+Chrome also uses the site's engagement score to determine whether and how often to fire periodic sync events.
+
 ## Examples
 
 The following examples show how to use the interface.
