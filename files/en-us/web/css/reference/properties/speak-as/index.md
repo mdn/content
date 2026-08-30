@@ -1,5 +1,6 @@
 ---
-title: speak-as
+title: "`speak-as` CSS property"
+short-title: speak-as
 slug: Web/CSS/Reference/Properties/speak-as
 page-type: css-property
 status:

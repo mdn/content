@@ -1,5 +1,6 @@
 ---
-title: grid-auto-rows
+title: "`grid-auto-rows` CSS property"
+short-title: grid-auto-rows
 slug: Web/CSS/Reference/Properties/grid-auto-rows
 page-type: css-property
 browser-compat: css.properties.grid-auto-rows
@@ -134,7 +135,7 @@ grid-auto-rows: unset;
 
     As a minimum represents the largest minimum size of items in that track (specified by the {{cssxref("min-width")}}/{{cssxref("min-height")}} of the items). This is often, though not always, the {{cssxref("min-content")}} size.
 
-    If used outside of {{cssxref("minmax", "minmax()")}} notation, `auto` represents the range between the minimum and maximum described above. This behaves similarly to `minmax(min-content,max-content)` in most cases.
+    If used outside of {{cssxref("minmax()")}} notation, `auto` represents the range between the minimum and maximum described above. This behaves similarly to `minmax(min-content,max-content)` in most cases.
 
     > [!NOTE]
     > `auto` track sizes (and only `auto` track sizes) can be stretched by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} properties. Therefore by default, an `auto` sized track will take up any remaining space in the grid container.

@@ -24,7 +24,7 @@ With it, you can configure the encoding used for the corresponding track, get in
 
 ### Obsolete properties
 
-- `rtcpTransport` {{deprecated_inline}}
+- `rtcpTransport` {{deprecated_inline}} {{non-standard_inline}}
   - : This property has been removed; the RTP and RTCP transports have been combined into a single transport. Use the {{domxref("RTCRtpSender.transport", "transport")}} property instead.
 
 ## Static methods

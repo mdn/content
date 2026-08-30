@@ -1,12 +1,13 @@
 ---
-title: <angle>
+title: "`<angle>` CSS type"
+short-title: <angle>
 slug: Web/CSS/Reference/Values/angle
 page-type: css-type
 browser-compat: css.types.angle
 sidebar: cssref
 ---
 
-The **`<angle>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents an angle value expressed in degrees, gradians, radians, or turns. It is used, for example, in {{cssxref("&lt;gradient&gt;")}}s and in some {{cssxref("transform")}} functions.
+The **`<angle>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents an angle value expressed in degrees, gradians, radians, or turns. It is used, for example, in {{cssxref("gradient")}}s and in some {{cssxref("transform")}} functions.
 
 {{InteractiveExample("CSS Demo: &lt;angle&gt;")}}
 
@@ -46,7 +47,8 @@ transform: rotate(1.75turn);
 
 ## Syntax
 
-The `<angle>` data type consists of a {{cssxref("&lt;number&gt;")}} followed by one of the units listed below. As with all dimensions, there is no space between the unit literal and the number. The angle unit is optional after the number `0`.
+The `<angle>` data type consists of a {{cssxref("&lt;number&gt;")}} followed by one of the units listed below. As with all dimensions, there is no space between the unit literal and the number.
+While some legacy uses accept a unitless `0`, you should always include a unit for zero values, such as: `0deg`, `0grad`, `0rad`, or `0turn`.
 
 Optionally, it may be preceded by a single `+` or `-` sign. Positive numbers represent clockwise angles, while negative numbers represent counterclockwise angles. For static properties of a given unit, any angle can be represented by various equivalent values. For example, `90deg` equals `-270deg`, and `1turn` equals `4turn`. For dynamic properties, like when applying an {{cssxref("animation")}} or {{cssxref("transition")}}, the effect will nevertheless be different.
 
@@ -102,7 +104,7 @@ Optionally, it may be preceded by a single `+` or `-` sign. Positive numbers rep
   <tbody>
     <tr>
       <td><img class="default internal" src="angle0.png" alt="A diagram showing a 0-degree rotation. There is no movement." /></td>
-      <td><code>0 = 0deg = 0grad = 0turn = 0rad</code></td>
+      <td><code>0deg = 0grad = 0turn = 0rad</code></td>
     </tr>
   </tbody>
 </table>
@@ -118,7 +120,7 @@ Optionally, it may be preceded by a single `+` or `-` sign. Positive numbers rep
 ## See also
 
 - [CSS data types](/en-US/docs/Web/CSS/Reference/Values/Data_types)
-- The [`<gradient>`](/en-US/docs/Web/CSS/Reference/Values/gradient) type
+- The {{cssxref("gradient")}} type
 - CSS rotation transforms: [`rotate()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/rotate), [`rotate3d()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/rotate3d), [`rotateX()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/rotateX), [`rotateY()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/rotateY), and [`rotateZ()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/rotateZ)
 - [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms)
 - [Using CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms/Using)

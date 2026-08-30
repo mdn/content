@@ -1,5 +1,6 @@
 ---
-title: hwb()
+title: "`hwb()` CSS function"
+short-title: hwb()
 slug: Web/CSS/Reference/Values/color_value/hwb
 page-type: css-function
 browser-compat: css.types.color.hwb
@@ -58,13 +59,13 @@ hwb(from lch(40% 70 240deg) h w calc(b - 30))
 
 ## Description
 
-This color function in the [`sRGB` color space](/en-US/docs/Glossary/Color_space#srgb) is defined by a {{CSSXref("&lt;hue&gt;")}} angle value, a whiteness value, a blackness value, and, optionally, an alpha value representing the color's transparency.
+This color function in the [`sRGB` color space](/en-US/docs/Glossary/Color_space#srgb) is defined by a {{cssxref("hue")}} angle value, a whiteness value, a blackness value, and, optionally, an alpha value representing the color's transparency.
 
-The angles corresponding to particular hues differ across the sRGB (used by {{CSSXref("color_value/hsl", "hsl()")}} and `hwb()`), CIELAB (used by {{CSSXref("color_value/lch", "lch()")}}), and Oklab (used by {{CSSXref("color_value/oklch", "oklch()")}}) color spaces. `hwb()` is in the same color space as `hsl()`, and therefore has the same hue color angles. See the {{CSSXref("&lt;hue&gt;")}} reference page for more detail and examples, or try changing the hues on the [color picker](/en-US/docs/Web/CSS/Guides/Colors#colors_in_action) to see it in action.
+The angles corresponding to particular hues differ across the sRGB (used by {{CSSXref("color_value/hsl", "hsl()")}} and `hwb()`), CIELAB (used by {{CSSXref("color_value/lch", "lch()")}}), and Oklab (used by {{CSSXref("color_value/oklch", "oklch()")}}) color spaces. `hwb()` is in the same color space as `hsl()`, and therefore has the same hue color angles. See the {{cssxref("hue")}} reference page for more detail and examples, or try changing the hues on the [color picker](/en-US/docs/Web/CSS/Guides/Colors#colors_in_action) to see it in action.
 
 An `hwb()` color is fully saturated when its whiteness (`W`) and blackness (`B`) values are both `0`. For any hue value `H`, `hwb(H 0% 0%)` is the same color as `hsl(H 100% 50%)`. Increasing the whiteness value lightens the color. Increasing the blackness darkens the color.
 
-When both the blackness and whiteness are greater than 0, the color gets muted, tending towards grey. When the amount of whiteness and blackness added in are equal to or greater than 100% — in other words, if `W + B >= 100%`, the color function defines a shade of gray. When the sum of both values is greater than 100% (`W + B > 100%`), the whiteness and blackness values of the grey color are effectively normalized as `W / (W + B)` and `B / (W + B)`, respectively.
+When both the blackness and whiteness are greater than 0, the color gets muted, tending towards gray. When the amount of whiteness and blackness added in are equal to or greater than 100% — in other words, if `W + B >= 100%`, the color function defines a shade of gray. When the sum of both values is greater than 100% (`W + B > 100%`), the whiteness and blackness values of the gray color are effectively normalized as `W / (W + B)` and `B / (W + B)`, respectively.
 
 ## Values
 
@@ -79,7 +80,7 @@ hwb(H W B[ / A])
 The parameters are as follows:
 
 - `H`
-  - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none` (equivalent to `0deg` in this case) representing the color's {{CSSXref("&lt;hue&gt;")}} angle.
+  - : A {{CSSXref("&lt;number&gt;")}}, an {{cssxref("angle")}}, or the keyword `none` (equivalent to `0deg` in this case) representing the color's {{cssxref("hue")}} angle.
 
 - `W`
   - : A {{CSSXref("&lt;percentage&gt;")}} representing the color's whiteness or the keyword `none` (equivalent to `0%` in this case) to mix in. `0%` represents no whiteness. `100%` represents full whiteness if `B` is `0`, otherwise both the `W` and `B` values are normalized.
@@ -108,7 +109,7 @@ The parameters are as follows:
   - : The keyword `from` is always included when defining a relative color, followed by a {{cssxref("&lt;color&gt;")}} value representing the **origin color**. This is the original color that the relative color is based on. The origin color can be _any_ valid {{cssxref("&lt;color&gt;")}} syntax, including another relative color.
 
 - `H`
-  - : A {{CSSXref("&lt;number&gt;")}}, an {{CSSXref("&lt;angle&gt;")}}, or the keyword `none` (equivalent to `0deg` in this case) representing the output color's {{CSSXref("&lt;hue&gt;")}} angle.
+  - : A {{CSSXref("&lt;number&gt;")}}, an {{cssxref("angle")}}, or the keyword `none` (equivalent to `0deg` in this case) representing the output color's {{cssxref("hue")}} angle.
 
 - `W`
   - : A {{CSSXref("&lt;percentage&gt;")}} representing the color's whiteness or the keyword `none` (equivalent to `0%` in this case) to mix in. `0%` represents no whiteness. `100%` represents full whiteness if `B` is `0`, otherwise both the `W` and `B` values are normalized.
@@ -179,7 +180,7 @@ hwb(from hsl(0 100% 50% / 0.8) h w b / 0.5)
 /* Computed output color: color(srgb 1 0 0 / 0.5) */
 ```
 
-In the following example, the `hsl()` origin color is again converted into an `hwb()` representation — `hwb(0 0% 0%)`. {{cssxref("calc")}} calculations are applied to the `H`, `W`, `B`, and `A` values, and the final output color is the equivalent of `hwb(120 25% 10% / 0.9` in the sRGB color space: `color(srgb 0.25 0.9 0.25 / 0.9)`.
+In the following example, the `hsl()` origin color is again converted into an `hwb()` representation — `hwb(0 0% 0%)`. {{cssxref("calc")}} calculations are applied to the `H`, `W`, `B`, and `A` values, and the final output color is the equivalent of `hwb(120 25% 10% / 0.9)` in the sRGB color space: `color(srgb 0.25 0.9 0.25 / 0.9)`.
 
 ```css
 hwb(from hsl(0 100% 50%) calc(h + 120) calc(w + 25) calc(b + 10) / calc(alpha - 0.1))
@@ -278,4 +279,4 @@ The output is as follows:
 - [Color format converter tool](/en-US/docs/Web/CSS/Guides/Colors/Color_format_converter)
 - [Using relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors)
 - [CSS colors](/en-US/docs/Web/CSS/Guides/Colors) module
-- {{CSSXref("&lt;hue&gt;")}}: the data type representing a hue angle of a color
+- {{cssxref("hue")}}: the data type representing a hue angle of a color

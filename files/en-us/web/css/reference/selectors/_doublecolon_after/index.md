@@ -1,5 +1,6 @@
 ---
-title: ::after
+title: "`::after` CSS pseudo-element"
+short-title: ::after
 slug: Web/CSS/Reference/Selectors/::after
 page-type: css-pseudo-element
 browser-compat: css.selectors.after

@@ -3,12 +3,10 @@ title: "CloseWatcher: CloseWatcher() constructor"
 short-title: CloseWatcher()
 slug: Web/API/CloseWatcher/CloseWatcher
 page-type: web-api-constructor
-status:
-  - experimental
 browser-compat: api.CloseWatcher.CloseWatcher
 ---
 
-{{APIRef("HTML DOM")}} {{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
 The **`CloseWatcher()`** constructor creates a new {{domxref("CloseWatcher")}} object.
 

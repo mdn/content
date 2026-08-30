@@ -1,5 +1,6 @@
 ---
-title: attr()
+title: "`attr()` CSS function"
+short-title: attr()
 slug: Web/CSS/Reference/Values/attr
 page-type: css-function
 browser-compat: css.types.attr
@@ -9,7 +10,7 @@ sidebar: cssref
 > [!NOTE]
 > The `attr()` function can be used with any CSS property, but support for properties other than {{CSSxRef("content")}} is experimental.
 
-The **`attr()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) is used to retrieve the value of an attribute of the selected element and use it in a property value, similar to how the {{cssxref("var", "var()")}} function substitutes a custom property value. It can also be used with [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), in which case the attribute's value on the pseudo-element's originating element is returned.
+The **`attr()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) is used to retrieve the value of an attribute of the selected element and use it in a property value, similar to how the {{cssxref("var()")}} function substitutes a custom property value. It can also be used with [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), in which case the attribute's value on the pseudo-element's originating element is returned.
 
 {{InteractiveExample("CSS Demo: attr()", "tabbed-shorter")}}
 
@@ -56,6 +57,9 @@ attr(data-size type(<length> | <percentage>))
 attr(data-count type(<number>), 0)
 attr(data-width px, inherit)
 attr(data-something, "default")
+
+/* With namespace */
+attr(color|myAttr type(*), red)
 ```
 
 ### Parameters
@@ -70,6 +74,19 @@ The parameters are:
 
 - `<attr-name>`
   - : The attribute name whose value should be retrieved from the selected HTML element(s).
+    - Namespaces
+      - : The attribute name can contain a [`namespace`](/en-US/docs/Web/CSS/Guides/Namespaces) which allows the targeting elements of [XML](/en-US/docs/Web/XML)-based markup languages such as [SVG](/en-US/docs/Web/SVG) or [MathML](/en-US/docs/Web/MathML).
+
+        ```css
+        @namespace svg url("http://www.w3.org/2000/svg");
+        a {
+          fill: attr(svg|myAttr type(*), green);
+        }
+        ```
+
+        > [!NOTE]
+        > If no namespace is specified (just an identifier is given, like `attr(foo)`), the null namespace is implied. This is usually what's desired, as namespaced attributes are rare. As with attribute selectors, the case-sensitivity of `<attr-name>` depends on the document language.
+
 - `<attr-type>`
   - : Specifies how the attribute value is parsed into a CSS value. This can be the `raw-string` keyword, a {{cssxref("type()")}} function, or a CSS dimension unit (specified using an `<attr-unit>` identifier). When omitted, it defaults to `raw-string`.
     - `raw-string`
@@ -111,29 +128,31 @@ If no `<fallback-value>` is set, the return value will default to an empty strin
 
 ### Limitations and security
 
-The `attr()` function can reference attributes that were never intended for styling use and might contain sensitive information (for example, a security token used by scripts on the page). In general, this is fine, but it can become a security threat when used in URLs. Therefore, you can't use `attr()` to dynamically construct URLs.
+The `attr()` function can reference attributes that were never intended for styling use and might contain sensitive information (for example, a security token used by scripts on the page). In general, this is fine, but it can become a security threat when used in URLs.
 
-```html
+For this reason, you can't use `attr()` to dynamically construct URLs:
+
+```html example-bad
 <!-- This won't work! -->
 <span data-icon="https://example.org/icons/question-mark.svg">help</span>
 ```
 
-```css
+```css example-bad
 span[data-icon] {
   background-image: url(attr(data-icon));
 }
 ```
 
-However, this restriction applies only to places that strictly require a `<url>` type.
-Some functions — such as {{CSSxRef("image/image-set","image-set()")}} — can accept a `<string>` value that is later interpreted as a URL, allowing `attr()` to work in those contexts, depending on browser support:
+This restriction also applies to any context that could potentially result in a `<url>` value.
+Values that use `attr()` get marked as _`attr()`-tainted_, and using them as or in a `<url>` makes a declaration become ["invalid at computed value time" (IACVT)](https://www.bram.us/2024/02/26/css-what-is-iacvt/).
 
-```css
+So, for example, functions like {{CSSxRef("image/image-set","image-set()")}} that take values that resolve to `<url>` also won't work:
+
+```css example-bad
 span[data-icon] {
   background: image-set(attr(data-icon));
 }
 ```
-
-Values that use `attr()` get marked as _`attr()`-tainted_. Using an `attr()`-tainted value as or in a `<url>` makes a declaration become ["invalid at computed value time" or IACVT for short](https://www.bram.us/2024/02/26/css-what-is-iacvt/).
 
 ### Backwards compatibility
 
@@ -369,7 +388,7 @@ The HTML contains four cards with different `id` attributes and a "Shuffle cards
 <div class="warning">
   <p>
     Your browser does not support advanced <code>attr()</code>. As a result,
-    this demo won’t do anything.
+    this demo won't do anything.
   </p>
 </div>
 ```

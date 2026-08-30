@@ -177,7 +177,7 @@ The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs
   - : The server has encountered a situation it does not know how to handle.
     This error is generic, indicating that the server cannot find a more appropriate `5XX` status code to respond with.
 - {{HTTPStatus(501, "501 Not Implemented")}}
-  - : The request method is not supported by the server and cannot be handled. The only methods that servers are required to support (and therefore that must not return this code) are {{HTTPMethod("GET")}} and {{HTTPMethod("HEAD")}}.
+  - : The request method is not supported by the server and cannot be handled. The only methods that servers are required to support (and therefore must not return this code) are {{HTTPMethod("GET")}} and {{HTTPMethod("HEAD")}}.
 - {{HTTPStatus(502, "502 Bad Gateway")}}
   - : This error response means that the server, while working as a gateway to get a response needed to handle the request, got an invalid response.
 - {{HTTPStatus(503, "503 Service Unavailable")}}

@@ -27,7 +27,7 @@ getComputedStyle(element, pseudoElt)
 
 ### Return value
 
-A _live_ {{DOMxRef("CSSStyleProperties")}} object, which updates automatically when the element's styles are changed.
+A _live_ {{DOMxRef("CSSStyleProperties")}} object, which updates automatically when the element's styles change.
 
 > [!NOTE]
 > Earlier versions of the specification returned a {{domxref("CSSStyleDeclaration")}} (from which {{domxref("CSSStyleProperties")}} is derived).
@@ -51,11 +51,11 @@ A _live_ {{DOMxRef("CSSStyleProperties")}} object, which updates automatically w
 The method returns a live read-only {{DOMxRef("CSSStyleProperties")}} object containing the [resolved values](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#resolved_value) of all CSS properties of an element, after applying active stylesheets and resolving any computation those values may contain.
 
 The returned object can be used to inspect the element's styles — including those set inline, using a `<style>` element, or via an external stylesheet.
-Since the object read-only you can't use it to set the styles of an element.
-However because it is "live", if you update the element styles using another API (such as {{domxref("HTMLElement.style")}}), the returned object will be updated with the corresponding resolved value.
+Since the object is read-only, you can't use it to set an element's styles.
+However, because it is "live", if you update the element styles using another API (such as {{domxref("HTMLElement.style")}}), the returned object will be updated with the corresponding resolved value.
 
 The distinction that the object contains [resolved values](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#resolved_value) is important.
-For most properties, in particular those that depend on layout such as `display`, `font-size`, or `line-height`, the resolved value is the computed value.
+For most properties, in particular those that don't depend on layout, such as `display`, `font-size`, or `line-height`, the resolved value is the computed value.
 For properties that depend on layout, the used value may differ slightly from the computed value, and this is what is returned as the resolved value.
 For an animating property value, it will be the computed value at the current point in the animation.
 
@@ -65,20 +65,20 @@ Shorthand CSS properties of the element are expanded to their corresponding long
 For example, an element with style `"border-top: 1px solid black"` would be represented in the returned object by properties with the names {{cssxref("border-top")}} and `borderTop`, and the corresponding longhand properties {{cssxref("border-top-color")}} and `borderTopColor`, {{cssxref("border-top-style")}} and `borderTopStyle`, and {{cssxref("border-top-width")}} and `borderTopWidth`.
 
 Note that the returned object is the same type as the object returned from the element's {{DOMxRef("HTMLElement/style", "style")}} property.
-However the `element.style` object can also be used to **set** styles on that element, and returns just the inline styles or those set via JavaScript.
+However, the `element.style` object can also be used to **set** styles on that element, and returns just the inline styles or those set via JavaScript.
 
 ### Color values
 
-For compatibility reasons, serialized color values specified using the traditional sRGB color space are expressed as [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb) colors if the alpha channel value is exactly `1`, and `rgba()` colors otherwise.
+For compatibility reasons, serialized color values specified using the traditional sRGB color space are expressed as {{cssxref("color_value/rgb", "rgb()")}} colors if the alpha channel value is exactly `1`, and `rgba()` colors otherwise.
 The legacy syntax with commas is used, with commas as separators (for example `rgb(255, 0, 0)`).
 
-For other {{glossary("color space","color spaces")}} the values are serialized using the corresponding functional expressions: [`lab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lab), [`lch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch) [`oklab()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklab), [`oklch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch), [`color()`](/en-US/docs/Web/CSS/Reference/Values/color_value/color).
+For other {{glossary("color space","color spaces")}} the values are serialized using the corresponding functional expressions: {{cssxref("color_value/lab", "lab()")}}, {{cssxref("color_value/lch", "lch()")}} {{cssxref("color_value/oklab", "oklab()")}}, {{cssxref("color_value/oklch", "oklch()")}}, {{cssxref("color_value/color", "color()")}}.
 
 ## Examples
 
 ### Retrieving resolved styles
 
-In this example we style a {{HTMLElement("p")}} element, then retrieve those styles using `getComputedStyle()`, and print them into the text content of the `<p>`.
+In this example, we style a {{HTMLElement("p")}} element, then retrieve those styles using `getComputedStyle()`, and print them into the text content of the `<p>`.
 
 #### HTML
 

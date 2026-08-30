@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Proxy.handler.construct
 sidebar: jsref
 ---
 
-The **`handler.construct()`** method is a trap for the `[[Construct]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as the {{jsxref("Operators/new", "new")}} operator. In order for the new operation to be valid on the resulting Proxy object, the target used to initialize the proxy must itself be a valid constructor.
+The **`handler.construct()`** method is a trap for the `[[Construct]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as the {{jsxref("new")}} operator. In order for the new operation to be valid on the resulting Proxy object, the target used to initialize the proxy must itself be a valid constructor.
 
 {{InteractiveExample("JavaScript Demo: handler.construct()", "taller")}}
 
@@ -77,7 +77,7 @@ The proxy's `[[Construct]]` internal method throws a {{jsxref("TypeError")}} if 
 
 ### Trapping the new operator
 
-The following code traps the {{jsxref("Operators/new", "new")}} operator.
+The following code traps the {{jsxref("new")}} operator.
 
 ```js
 const p = new Proxy(function () {}, {
@@ -103,7 +103,7 @@ const p = new Proxy(function () {}, {
 new p(); // TypeError is thrown
 ```
 
-The following code improperly initializes the proxy. The `target` in Proxy initialization must itself be a valid constructor for the {{jsxref("Operators/new", "new")}} operator.
+The following code improperly initializes the proxy. The `target` in Proxy initialization must itself be a valid constructor for the {{jsxref("new")}} operator.
 
 ```js example-bad
 const p = new Proxy(
@@ -130,5 +130,5 @@ new p(); // TypeError is thrown, "p" is not a constructor
 
 - {{jsxref("Proxy")}}
 - [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
-- {{jsxref("Operators/new", "new")}}
+- {{jsxref("new")}}
 - {{jsxref("Reflect.construct()")}}

@@ -1,5 +1,6 @@
 ---
-title: <input type="color">
+title: '`<input type="color">` HTML attribute value'
+short-title: <input type="color">
 slug: Web/HTML/Reference/Elements/input/color
 page-type: html-attribute-value
 browser-compat:
@@ -64,7 +65,7 @@ In addition to the [global attribute](/en-US/docs/Web/HTML/Reference/Global_attr
 
 - `colorspace` {{experimental_inline}}
   - : Defines the {{glossary("color space")}} for the color and hints at the desired user interface for the color picker widget. Possible {{Glossary("enumerated")}} values are:
-    - `"limited-srgb"`: The color is in the {{glossary("RGB", "sRGB")}} color space. This includes [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb), [`hsl()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb), and {{cssxref("hex-color")}} values. The color value is limited to 8-bits per `r`, `g`, and `b` component. This is the default.
+    - `"limited-srgb"`: The color is in the {{glossary("RGB", "sRGB")}} color space. This includes {{cssxref("color_value/rgb", "rgb()")}}, {{cssxref("color_value/hsl", "hsl()")}}, {{cssxref("color_value/hwb", "hwb()")}}, and {{cssxref("hex-color")}} values. The color value is limited to 8-bits per `r`, `g`, and `b` component. This is the default.
     - `"display-p3"`: The [Display P3 color space](/en-US/docs/Glossary/Color_space#display-p3), e.g., `color(display-p3 1.84 -0.19 0.72 / 0.6)`
 
 ## Using color inputs
@@ -233,12 +234,6 @@ The final result looks like this:
     <tr>
       <td><strong>DOM interface</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>

@@ -25,15 +25,15 @@ setInterval(code, delay)
 
 setInterval(func)
 setInterval(func, delay)
-setInterval(func, delay, arg1)
-setInterval(func, delay, arg1, arg2)
-setInterval(func, delay, arg1, arg2, /* …, */ argN)
+setInterval(func, delay, param1)
+setInterval(func, delay, param1, param2)
+setInterval(func, delay, param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters
 
 - `func`
-  - : A {{jsxref("function")}} to be executed every `delay` milliseconds.
+  - : A {{jsxref("Function")}} to be executed every `delay` milliseconds.
     The first execution happens after `delay` milliseconds.
 - `code`
   - : A {{domxref("TrustedScript")}} or a string of arbitrary code that is compiled and executed every `delay` milliseconds.
@@ -42,7 +42,7 @@ setInterval(func, delay, arg1, arg2, /* …, */ argN)
   - : The delay time between executions of the specified function or code, in milliseconds.
     Defaults to 0 if not specified.
     See [Delay restrictions](#delay_restrictions) below for details on the permitted range of `delay` values.
-- `arg1`, …, `argN` {{optional_inline}}
+- `param1`, …, `paramN` {{optional_inline}}
   - : Additional arguments which are passed through to the function specified by _func_ once the timer expires.
 
 ### Return value
@@ -73,11 +73,10 @@ To mitigate the potential impact this can have on performance, once intervals ar
 Attempts to specify a value less than 4 ms in deeply-nested calls to `setInterval()` will be pinned to 4 ms.
 
 Browsers may enforce even more stringent minimum values for the interval under some circumstances, although these should not be common.
-Note also that the actual amount of time that elapses between calls to the callback may be longer than the given `delay`; see [Reasons for delays longer than specified](/en-US/docs/Web/API/Window/setTimeout#reasons_for_delays_longer_than_specified) for examples.
+Note also that the actual amount of time that elapses between calls to the callback may be longer than the given `delay`; see [Reasons for delays longer than specified](/en-US/docs/Web/API/Window/setTimeout#reasons_for_longer_delays_than_specified) for examples.
 
 > [!NOTE]
-> The `delay` argument is converted to a signed 32-bit integer.
-> This effectively limits `delay` to 2147483647 ms, roughly 24.8 days, since it's specified as a signed integer in the IDL.
+> The `delay` argument is converted to a signed 32-bit integer, which limits the value to 2147483647 ms, or roughly 24.8 days.
 
 ### Interval IDs are shared with `setTimeout()`
 
@@ -114,59 +113,111 @@ While this pattern does not guarantee execution on a fixed interval, it does gua
 
 ### Functions are called with the global `this`
 
-Methods or functions passed to `setInterval()` do not run in the same execution context as `setInterval()`, and hence do not have the same [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this) as the function that called `setInterval()`.
-Instead the called function has a `this` keyword set to the `window` (or `global`) object.
+The functions passed to `setInterval()` is run with normal function call semantics for determining the reference of [`this`](/en-US/docs/Web/JavaScript/Reference/Operators/this).
 This problem is explained in detail in the [JavaScript reference](/en-US/docs/Web/JavaScript/Reference/Operators/this#callbacks).
 
-The following example demonstrates how this can cause unexpected behavior (using `setTimeout()` instead of `setInterval()`, but the problem applies to both timers):
+For non-arrow functions, the `this` context is set to the [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis) (an alias for [`window`](/en-US/docs/Web/API/Window/window) in browsers) object.
+
+The following example demonstrates how this can cause unexpected behavior. Here, when we pass the method `counter.count` directly to `setInterval()`, the `this` context is lost, and the method is called on the global object instead of the `Counter` instance, resulting in a `TypeError` when the `count` method tries to access `this`:
 
 ```js
-myArray = ["zero", "one", "two"];
+class Counter {
+  constructor() {
+    this.data = new Map();
+  }
 
-myArray.myMethod = function (sProperty) {
-  alert(arguments.length > 0 ? this[sProperty] : this);
-};
+  count(item) {
+    this.data.set(item, (this.data.get(item) || 0) + 1);
+  }
+}
 
-myArray.myMethod(); // prints "zero,one,two"
-myArray.myMethod(1); // prints "one"
-setTimeout(myArray.myMethod, 1000); // Alerts "[object Window]" after 1 second
-setTimeout(myArray.myMethod, 1500, "1"); // Alerts "undefined" after 1.5 seconds
+const counter = new Counter();
+
+counter.count("foo"); // Successfully adds "foo" to the map
+setInterval(counter.count, 1000, "bar");
+// TypeError: Cannot read properties of undefined (reading 'set')
 ```
 
-You can use [arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) to adopt the `this` of the function in which `setTimeout()` is called (arrow functions have a lexical `this`).
+To work around this, you must make sure that the function passed to `setInterval` has the correct `this` context. There are three main ways to do this:
 
-You can test this with the following code.
+1. If you want to explicitly specify the `this` context, instead of passing the method directly, wrap the method call in another anonymous function that explicitly calls the method with the correct context:
 
-```js
-setTimeout(() => myArray.myMethod(), 1000); // Alert "zero,one,two" after 1 second
-setTimeout(() => myArray.myMethod(1), 1500); // Alert "one" after 1.5 seconds
-setTimeout(() => myArray.myMethod(2), 3000); // Alert "one" after 3 seconds
-```
+   ```js
+   setInterval(() => counter.count("bar"), 1000);
+   setInterval(function () {
+     counter.count("bar");
+   }, 1000);
+   ```
 
-You might also use the [`Function.prototype.bind()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method, which lets you specify the value that should be used as `this` for all calls to a given function.
-That lets you bypass problems where it's unclear what `this` will be, depending on the context from which your function was called.
+2. If you want to use the `this` context of the code that calls `setInterval()`, always use an arrow function, which inherits the `this` context of its enclosing scope:
+
+   ```js example-bad
+   class Counter {
+     // …
+     repeatedCount(item) {
+       // BAD: the `this` context is lost in the callback
+       setInterval(function () {
+         this.data.set(item, (this.data.get(item) || 0) + 1);
+       }, 1000);
+     }
+   }
+   ```
+
+   ```js example-good
+   class Counter {
+     // …
+     repeatedCount(item) {
+       // GOOD: the arrow function inherits the `this` context of `repeatedCount()`
+       setInterval(() => {
+         this.data.set(item, (this.data.get(item) || 0) + 1);
+       }, 1000);
+     }
+   }
+   ```
+
+3. If you want to avoid extra function wrappers (which increase memory usage) while explicitly specifying the `this` context, you can use the [`Function.prototype.bind()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) method to create a new function with the correct `this` context:
+
+   ```js
+   setInterval(counter.count.bind(counter), 1000, "bar");
+   ```
 
 ### Security considerations
 
 The method can be used to execute arbitrary input passed in the `code` parameter.
 If the input is a potentially unsafe string provided by a user, this is a possible vector for [Cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks.
-For example, the following example assumes the `scriptElement` is an executable `<script>` element, and that `untrustedCode` was provided by a user:
+
+For example, the following code shows how `setInterval()` might execute `untrustedCode` provided by a user:
 
 ```js example-bad
 const untrustedCode = "alert('Potentially evil code!');";
 const id = setInterval(untrustedCode, 1000);
 ```
 
-Websites with a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) will prevent such code running by default; if you need to use the method with `code` then you will first need to allow the [`unsafe-eval`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) in your CSP [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src).
+Websites with a [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) that specifies [`script-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) or [`default-src`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/default-src) will prevent such code running by default.
+You can specify [`unsafe-eval`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) in your CSP to allow `setInterval()` to execute, but this is unsafe as it disables one of the main protections of CSP.
 
-If you must allow the scripts to run you can mitigate these issues by always assigning {{domxref("TrustedScript")}} objects instead of strings, and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
+See [Inline JavaScript](/en-US/docs/Web/HTTP/Guides/CSP#inline_javascript) in the CSP guide.
+
+If you must allow the scripts to run via `setInterval()` you can mitigate these issues by always assigning {{domxref("TrustedScript")}} objects instead of strings, and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
 This ensures that the input is passed through a transformation function.
+
+To allow `setInterval()` to run, you will additionally need to specify the [`trusted-types-eval` keyword](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#trusted-types-eval) in your CSP `script-src` directive.
+This acts in the same way as `unsafe-eval`, but _only_ allows the method to evaluate if trusted types are enabled (if you were to use `unsafe-eval` it would allow execution even on browsers that do not support trusted types).
+
+For example, the required CSP for your site might look like this:
+
+```http
+Content-Security-Policy: require-trusted-types-for 'script'; script-src '<your_allowlist>' 'trusted-types-eval'
+```
 
 The behavior of the transformation function will depend on the specific use case that requires a user provided script.
 If possible you should lock the allowed scripts to exactly the code that you trust to run.
 If that is not possible, you might allow or block the use of certain functions within the provided string.
 
 ## Examples
+
+Note that these examples omit the use of trusted types for brevity.
+See [Using `TrustedScript`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#using_trustedscript) in `eval()` for code showing the expected approach.
 
 ### Example 1: Basic syntax
 
@@ -185,8 +236,7 @@ function myCallback(a, b) {
 
 ### Example 2: Alternating two colors
 
-The following example calls the `flashtext()` function once a second until
-the Stop button is pressed.
+The following example calls the `flashtext()` function once a second until the Stop button is pressed.
 
 #### HTML
 

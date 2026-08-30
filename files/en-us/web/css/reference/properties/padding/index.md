@@ -1,12 +1,13 @@
 ---
-title: padding
+title: "`padding` CSS property"
+short-title: padding
 slug: Web/CSS/Reference/Properties/padding
 page-type: css-shorthand-property
 browser-compat: css.properties.padding
 sidebar: cssref
 ---
 
-The **`padding`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) sets the [padding area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#padding_area) on all four sides of an element at once.
+The **`padding`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets the [padding area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#padding_area) on all four sides of an element at once.
 
 {{InteractiveExample("CSS Demo: padding")}}
 

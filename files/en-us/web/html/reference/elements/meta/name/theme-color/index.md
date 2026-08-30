@@ -1,5 +1,5 @@
 ---
-title: <meta name="theme-color">
+title: '`<meta name="theme-color">` HTML attribute value'
 short-title: theme-color
 slug: Web/HTML/Reference/Elements/meta/name/theme-color
 page-type: html-attribute-value
@@ -76,4 +76,4 @@ For example:
 
 - `<meta>` `name` attribute [`color-scheme`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/color-scheme) value
 - {{cssxref("color-scheme")}} CSS property
-- [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) media query
+- {{cssxref("@media/prefers-color-scheme")}} media query

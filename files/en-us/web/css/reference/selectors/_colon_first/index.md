@@ -1,5 +1,6 @@
 ---
-title: :first
+title: "`:first` CSS pseudo-class"
+short-title: :first
 slug: Web/CSS/Reference/Selectors/:first
 page-type: css-pseudo-class
 browser-compat: css.selectors.first

@@ -1,5 +1,6 @@
 ---
-title: timeline-scope
+title: "`timeline-scope` CSS property"
+short-title: timeline-scope
 slug: Web/CSS/Reference/Properties/timeline-scope
 page-type: css-property
 browser-compat: css.properties.timeline-scope
@@ -44,7 +45,7 @@ The `timeline-scope` property modifies the scope of a named animation timeline. 
 
 The value of the `timeline-scope` is the name of a timeline defined on a descendant element; this changes the scope of the timeline to include the targeted element and its descendants. In other words, that element on which the `timeline-scope` property is defined, and all of its descendant elements, can be controlled using that timeline.
 
-If no timeline (or more than one timeline) exists with the name given for the `timeline-scope` value, an inactive timeline with the specified name is created. The `timeline-scope` property only works with named timelines, and therefore can not be used in conjunction with anonymous timelines created using the {{cssxref("view()")}} or {{cssxref("scroll()")}} animation timeline functions.
+If no timeline (or more than one timeline) exists with the name given for the `timeline-scope` value, an inactive timeline with the specified name is created. The `timeline-scope` property only works with named timelines, and therefore can not be used in conjunction with anonymous timelines created using the {{cssxref("animation-timeline/view", "view()")}} or {{cssxref("animation-timeline/scroll", "scroll()")}} animation timeline functions.
 
 ## Formal definition
 

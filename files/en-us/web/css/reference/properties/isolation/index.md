@@ -1,5 +1,6 @@
 ---
-title: isolation
+title: "`isolation` CSS property"
+short-title: isolation
 slug: Web/CSS/Reference/Properties/isolation
 page-type: css-property
 browser-compat: css.properties.isolation
@@ -63,9 +64,9 @@ isolation: revert-layer;
 isolation: unset;
 ```
 
-The `isolation` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : A new stacking context is created only if one of the properties applied to the element requires it.

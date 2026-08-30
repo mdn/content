@@ -1,5 +1,6 @@
 ---
-title: :only-of-type
+title: "`:only-of-type` CSS pseudo-class"
+short-title: :only-of-type
 slug: Web/CSS/Reference/Selectors/:only-of-type
 page-type: css-pseudo-class
 browser-compat: css.selectors.only-of-type

@@ -14,11 +14,11 @@ In web security, nonces are commonly used in mechanisms such as **Content Securi
 ## See also
 
 - [Cryptographic nonce](https://en.wikipedia.org/wiki/Cryptographic_nonce) on Wikipedia
-- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP)
+- [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP)
 - [Replay attack](https://en.wikipedia.org/wiki/Replay_attack) on Wikipedia
 - Related glossary terms:
   - {{Glossary("cryptography")}}
   - {{Glossary("encryption")}}
-  - {{Glossary("hash")}}
+  - {{Glossary("Hash function", "hash")}}
   - {{Glossary("TLS")}}
   - {{Glossary("authentication")}}

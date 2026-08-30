@@ -1,5 +1,6 @@
 ---
-title: <position-area>
+title: "`<position-area>` CSS type"
+short-title: <position-area>
 slug: Web/CSS/Reference/Values/position-area_value
 page-type: css-type
 browser-compat: css.properties.position-area
@@ -324,7 +325,7 @@ If only a single coordinate grid `<position-area>` keyword is specified, the oth
 
 See the {{cssxref("position-area")}} property page.
 
-For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) guide.
+For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) guide.
 
 ## Specifications
 

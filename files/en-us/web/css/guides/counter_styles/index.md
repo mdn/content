@@ -19,7 +19,7 @@ No properties are defined in this module
 
 ### Functions
 
-- {{cssxref("symbols", "symbols()")}}
+- {{cssxref("symbols()")}}
 
 ### Data types
 
@@ -59,8 +59,8 @@ No properties are defined in this module
 - {{cssxref("counter-set")}} property
 - {{cssxref("list-style-type")}} property
 - {{cssxref("list-style")}} shorthand property
-- {{cssxref("counter", "counter()")}} function
-- {{cssxref("counters", "counters()")}} function
+- {{cssxref("counter()")}} function
+- {{cssxref("counters()")}} function
 
 [CSS pseudo-elements](/en-US/docs/Web/CSS/Guides/Pseudo-elements) module:
 

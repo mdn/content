@@ -44,19 +44,29 @@ The function waits for the result of a call to {{domxref("RTCPeerConnection.getS
 It then returns the total number of open channels, or `null`, using the data in the report.
 
 ```js
-async function numberOpenConnections (peerConnection) {
+async function numberOpenConnections(peerConnection) {
   const stats = await peerConnection.getStats();
   let peerConnectionStats = null;
 
-  stats.forEach((report) => {
+  for (const report of stats.values()) {
     if (report.type === "peer-connection") {
       peerConnectionStats = report;
       break;
     }
-  });
+  }
 
-result = (typeof peerConnectionStats.dataChannelsOpened === 'undefined' || typeof peerConnectionStats.dataChannelsClosed=== 'undefined') ? null : peerConnectionStats.dataChannelsOpened - peerConnectionStats.dataChannelsClosed;
-return result
+  if (
+    peerConnectionStats === null ||
+    typeof peerConnectionStats.dataChannelsOpened === "undefined" ||
+    typeof peerConnectionStats.dataChannelsClosed === "undefined"
+  ) {
+    return null;
+  }
+
+  return (
+    peerConnectionStats.dataChannelsOpened -
+    peerConnectionStats.dataChannelsClosed
+  );
 }
 ```
 

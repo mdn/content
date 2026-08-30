@@ -3,6 +3,7 @@ title: "unreachable: Wasm text instruction"
 short-title: unreachable
 slug: WebAssembly/Reference/Control_flow/unreachable
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.unreachable
 sidebar: webassemblysidebar
 ---
 
@@ -35,3 +36,11 @@ unreachable
 | Instruction   | Binary opcode |
 | ------------- | ------------- |
 | `unreachable` | `0x00`        |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

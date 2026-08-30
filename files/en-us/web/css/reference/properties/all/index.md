@@ -1,12 +1,13 @@
 ---
-title: all
+title: "`all` CSS property"
+short-title: all
 slug: Web/CSS/Reference/Properties/all
 page-type: css-shorthand-property
 browser-compat: css.properties.all
 sidebar: cssref
 ---
 
-The **`all`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property resets all of an element's properties except {{cssxref("unicode-bidi")}}, {{cssxref("direction")}}, and [CSS Custom Properties](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties). It can set properties to their initial or inherited values, or to the values specified in another cascade layer or stylesheet origin.
+The **`all`** [CSS](/en-US/docs/Web/CSS)[shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property resets all of an element's properties except {{cssxref("unicode-bidi")}}, {{cssxref("direction")}}, and [CSS Custom Properties](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties). It can set properties to their initial or inherited values, or to the values specified in another cascade layer or stylesheet origin.
 
 {{InteractiveExample("CSS Demo: all")}}
 
@@ -78,9 +79,9 @@ all: revert;
 all: revert-layer;
 ```
 
-The `all` property is specified as one of the CSS global keyword values. Note that none of these values affect the {{cssxref("unicode-bidi")}} and {{cssxref("direction")}} properties.
-
 ### Values
+
+The `all` property is specified as one of the CSS global keyword values. Note that none of these values affect the {{cssxref("unicode-bidi")}} and {{cssxref("direction")}} properties.
 
 - {{cssxref("initial")}}
   - : Specifies that all the element's properties should be changed to their [initial values](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value).

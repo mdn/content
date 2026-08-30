@@ -2,7 +2,7 @@
 title: 410 Gone
 slug: Web/HTTP/Reference/Status/410
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.410
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#status.410
 sidebar: http
 ---
 

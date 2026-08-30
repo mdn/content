@@ -1,5 +1,6 @@
 ---
-title: initial
+title: "`initial` CSS keyword"
+short-title: initial
 slug: Web/CSS/Reference/Values/initial
 page-type: css-keyword
 browser-compat: css.types.global_keywords.initial
@@ -8,31 +9,40 @@ sidebar: cssref
 
 The **`initial`** [CSS](/en-US/docs/Web/CSS) keyword applies the [initial (or default) value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value) of a property to an element. It can be applied to any CSS property, including the CSS shorthand property {{cssxref("all")}}. With `all` set to `initial`, all CSS properties can be restored to their respective initial values in one go instead of restoring each one separately.
 
-On [inherited properties](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance#inherited_properties), the initial value may be unexpected. You should consider using the {{cssxref("inherit")}}, {{cssxref("unset")}}, {{cssxref("revert")}}, or {{cssxref("revert-layer")}} keywords instead.
+On [inherited properties](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance#inherited_properties), the initial value may be unexpected. You should consider using the {{cssxref("inherit")}}, {{cssxref("unset")}}, {{cssxref("revert")}}, {{cssxref("revert-layer")}}, or {{cssxref("revert-rule")}} keywords instead.
 
 ## Examples
 
-### Using initial to reset color for an element
+### Basic usage
+
+In this example, we use the `initial` keyword to reset an element's {{cssxref("color")}} and {{cssxref("font-size")}} property values.
 
 #### HTML
 
 ```html
 <p>
-  <span>This text is red.</span>
-  <em>This text is in the initial color (typically black).</em>
-  <span>This is red again.</span>
+  This text is red and large.
+  <em
+    >This text is in the initial color (typically black) and initial size
+    (typically 16px).</em
+  >
+  This is red and large again.
 </p>
 ```
 
 #### CSS
 
+We set `color` and `font-size` on the `<p>` element, then set those properties to `initial` on the {{htmlelement("em")}} element to reset them.
+
 ```css
 p {
   color: red;
+  font-size: 2rem;
 }
 
 em {
   color: initial;
+  font-size: initial;
 }
 ```
 
@@ -40,7 +50,7 @@ em {
 
 {{EmbedLiveSample('Using_initial_to_reset_color_for_an_element')}}
 
-With the `initial` keyword in this example, `color` value on the `em` element is restored to the initial value of [`color`](/en-US/docs/Web/CSS/Reference/Properties/color#formal_definition), as defined in the specification.
+With the `initial` keyword in this example, the `color` and `font-size` values on the `em` element are restored to the initial values for [`color`](/en-US/docs/Web/CSS/Reference/Properties/color#formal_definition) and [`font-size`](/en-US/docs/Web/CSS/Reference/Properties/font-size#formal_definition), respectively.
 
 ## Specifications
 
@@ -52,8 +62,6 @@ With the `initial` keyword in this example, `color` value on the `em` element is
 
 ## See also
 
-- Use the {{cssxref("inherit")}} keyword to make an element's property the same as its parent.
-- Use the {{cssxref("revert")}} keyword to reset a property to the value established by the user-agent stylesheet (or by user styles, if any exist).
-- Use the {{cssxref("revert-layer")}} keyword to reset a property to the value established in a previous cascade layer.
-- Use the {{cssxref("unset")}} keyword to set a property to its inherited value if it inherits or to its initial value if not.
-- The {{cssxref("all")}} property lets you reset all properties to their initial, inherited, reverted, or unset state at once.
+- {{cssxref("inherit")}}, {{cssxref("revert")}}, {{cssxref("revert-layer")}}, {{cssxref("revert-rule")}}, and {{cssxref("unset")}} keywords
+- {{cssxref("all")}}
+- [Inheritance](/en-US/docs/Web/CSS/Guides/Cascade/Inheritance)

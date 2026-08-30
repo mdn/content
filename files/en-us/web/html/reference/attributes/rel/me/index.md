@@ -1,5 +1,6 @@
 ---
-title: rel="me"
+title: '`rel="me"` HTML attribute value'
+short-title: me
 slug: Web/HTML/Reference/Attributes/rel/me
 page-type: html-attribute-value
 spec-urls: https://www.gmpg.org/xfn/11#me

@@ -1,12 +1,13 @@
 ---
-title: view-timeline
+title: "`view-timeline` CSS property"
+short-title: view-timeline
 slug: Web/CSS/Reference/Properties/view-timeline
 page-type: css-shorthand-property
 browser-compat: css.properties.view-timeline
 sidebar: cssref
 ---
 
-The **`view-timeline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) defines a [named view progress timeline's](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_view_progress_timeline) name, direction, and inset values.
+The **`view-timeline`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property defines a [named view progress timeline's](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_view_progress_timeline) name, direction, and inset values.
 
 ## Constituent properties
 
@@ -185,7 +186,7 @@ Lastly, an animation is specified on the element that animates its opacity and s
       background-color: wheat;
       display: block;
       text-align: center;
-      padding: 1em;
+      padding: 1rem 0;
     }
   }
 }
@@ -209,6 +210,6 @@ Scroll to see the subject element being animated.
 
 - {{cssxref("animation-timeline")}}
 - {{cssxref("view-timeline-axis")}}, {{cssxref("view-timeline-inset")}}, {{cssxref("view-timeline-name")}}
-- [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view)
+- {{cssxref("animation-timeline/view", "view()")}}
 - [Guide: CSS scroll driven animation timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_view_progress_timeline)
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations)

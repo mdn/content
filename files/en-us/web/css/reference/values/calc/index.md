@@ -1,12 +1,13 @@
 ---
-title: calc()
+title: "`calc()` CSS function"
+short-title: calc()
 slug: Web/CSS/Reference/Values/calc
 page-type: css-function
 browser-compat: css.types.calc
 sidebar: cssref
 ---
 
-The **`calc()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) lets you perform calculations when specifying CSS property values. It can be used with {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;integer&gt;")}}, and {{cssxref("color_value", "&lt;color-function&gt;")}} values.
+The **`calc()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) lets you perform calculations when specifying CSS property values. It can be used with {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("angle")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;integer&gt;")}}, and {{cssxref("color_value", "&lt;color-function&gt;")}} values.
 
 {{InteractiveExample("CSS Demo: calc()")}}
 
@@ -82,10 +83,10 @@ The `calc()` function must stand in place of a full CSS value of one of the foll
 
 - {{cssxref("&lt;length&gt;")}}
 - {{cssxref("&lt;frequency&gt;")}}
-- {{cssxref("&lt;angle&gt;")}}
+- {{cssxref("angle")}}
 - {{cssxref("&lt;time&gt;")}}
 - {{cssxref("flex_value", "&lt;flex&gt;")}}
-- {{cssxref("&lt;resolution&gt;")}}
+- {{cssxref("resolution")}}
 - {{cssxref("&lt;percentage&gt;")}}
 - {{cssxref("&lt;number&gt;")}}
 - {{cssxref("&lt;integer&gt;")}}
@@ -97,11 +98,11 @@ The resulting value of `calc()` must be compatible with the context in which it 
 
 When an {{cssxref("&lt;integer&gt;")}} is expected, the `calc()` expression can also evaluate to a `<number>`, which gets rounded to the nearest integer. So, `calc(1.4)` will result in a value of `1`. If the fractional part of the value is exactly `0.5`, the value is rounded towards positive infinity. For example, `calc(1.5)` will result in a value of `2`, while `calc(-1.5)` will round to `-1`.
 
-`calc()` performs floating point math following the IEEE-754 standard, which results in some considerations concerning the `infinity` and `NaN` values. For more details on how constants are serialized, see the [`calc-keyword`](/en-US/docs/Web/CSS/Reference/Values/calc-keyword) page.
+`calc()` performs floating point math following the IEEE-754 standard, which results in some considerations concerning the `infinity` and `NaN` values. For more details on how constants are serialized, see the {{cssxref("calc-keyword")}} page.
 
 ### Input considerations
 
-- `calc()` cannot perform calculations on [intrinsic size values](/en-US/docs/Glossary/Intrinsic_Size) such as {{cssxref("auto")}} and {{cssxref("fit-content")}}. Use the {{cssxref("calc-size()")}} function instead.
+- `calc()` cannot perform calculations on [intrinsic size values](/en-US/docs/Glossary/Intrinsic_Size) such as {{cssxref("width#auto", "auto"}} and {{cssxref("fit-content")}}. Use the {{cssxref("calc-size()")}} function instead.
 - The `*` and `/` operators do not require whitespace, but adding it for consistency is recommended.
 - It is permitted to nest `calc()` functions, in which case, the inner ones are treated as simple parentheses.
 - Math expressions involving percentages for widths and heights on table columns, table column groups, table rows, table row groups, and table cells in both auto and fixed layout tables _may_ be treated as if `auto` is specified.
@@ -140,7 +141,7 @@ h1 {
 This ensures that text size will scale if the page is zoomed.
 
 - [MDN Understanding WCAG, Guideline 1.4 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
-- [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
+- [Understanding Success Criterion 1.4.4: Resize Text | WAI | W3C](https://www.w3.org/WAI/WCAG22/Understanding/resize-text.html)
 
 ## Examples
 
@@ -220,7 +221,7 @@ After all variables are expanded, `--width-c`'s value will be `calc(calc(100px /
 
 The `calc()` function can be used to adjust individual color channels in [relative colors](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors) without the need for storing color channel values as variables.
 
-In the example below, the first paragraph uses a [`<named-color>`](/en-US/docs/Web/CSS/Reference/Values/named-color).
+In the example below, the first paragraph uses a {{cssxref("named-color")}}.
 In the paragraphs that follow, `calc()` is used with the [`rgb()`](/en-US/docs/Web/CSS/Reference/Values/color_value/rgb) and [`hsl()`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl) functions to adjust the values of each color channel relative to the original named color.
 
 ```html

@@ -1,5 +1,6 @@
 ---
-title: stroke-dasharray
+title: "`stroke-dasharray` CSS property"
+short-title: stroke-dasharray
 slug: Web/CSS/Reference/Properties/stroke-dasharray
 page-type: css-property
 browser-compat: css.properties.stroke-dasharray

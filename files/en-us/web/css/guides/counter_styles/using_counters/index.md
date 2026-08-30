@@ -23,7 +23,7 @@ You can define your own named counters, and you can also manipulate the `list-it
 
 To use a counter it must first be initialized to a value with the {{cssxref("counter-reset")}} property.
 The counter's value can be increased or decreased using the {{cssxref("counter-increment")}} property and can be directly set to a specific value using the {{cssxref("counter-set")}} property.
-The current value of a counter is displayed using the {{cssxref("counter", "counter()")}} or {{cssxref("counters", "counters()")}} function, typically within a [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) {{CSSxRef("content")}} property.
+The current value of a counter is displayed using the {{cssxref("counter()")}} or {{cssxref("counters()")}} function, typically within a [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) {{CSSxRef("content")}} property.
 
 Counters can only be set, reset, or incremented in elements that generate boxes.
 For example, if an element is set to `display: none` then any counter operation on that element will be ignored.
@@ -71,7 +71,7 @@ The counter's name must not be `none`, `inherit`, or `initial`; otherwise the de
 
 ### Displaying a counter
 
-The value of a counter can be displayed using either the {{cssxref("counter", "counter()")}} or {{cssxref("counters", "counters()")}} function in a {{cssxref("content")}} property.
+The value of a counter can be displayed using either the {{cssxref("counter()")}} or {{cssxref("counters()")}} function in a {{cssxref("content")}} property.
 
 For example, the following declaration uses `counter()` to prefix each `h3` heading with the text `Section <number>:`, where `<number>` is the value of the count in decimal (the default display style):
 
@@ -86,7 +86,7 @@ h3::before {
 }
 ```
 
-The {{cssxref("counter", "counter()")}} function is used when the numbering of nesting levels does not include the context of parent levels.
+The {{cssxref("counter()")}} function is used when the numbering of nesting levels does not include the context of parent levels.
 For example, here each nested level restarts from one:
 
 ```plain
@@ -100,7 +100,7 @@ For example, here each nested level restarts from one:
 3 Three
 ```
 
-The {{cssxref("counters", "counters()")}} function is used when the count for nested levels must include the count from parent levels.
+The {{cssxref("counters()")}} function is used when the count for nested levels must include the count from parent levels.
 For example, you might use this to lay out sections as shown:
 
 ```plain
@@ -114,10 +114,10 @@ For example, you might use this to lay out sections as shown:
 3 Three
 ```
 
-The {{cssxref("counter", "counter()")}} function has two forms: `counter(<counter-name>)` and `counter(<counter-name>, <counter-style>)`.
+The {{cssxref("counter()")}} function has two forms: `counter(<counter-name>)` and `counter(<counter-name>, <counter-style>)`.
 The generated text is the value of the innermost counter of the given name in scope at the pseudo-element.
 
-The {{cssxref("counters", "counters()")}} function also has two forms: `counters(<counter-name>, <separator>)` and `counters(<counter-name>, <separator>, <counter-style>)`.
+The {{cssxref("counters()")}} function also has two forms: `counters(<counter-name>, <separator>)` and `counters(<counter-name>, <separator>, <counter-style>)`.
 The generated text is the value of all counters with the given name in scope at the given pseudo-element, from outermost to innermost, separated by the specified string (`<separator>`).
 
 The counter is rendered in the specified `<counter-style>` for both methods (`decimal` by default).
@@ -153,7 +153,7 @@ Each element or pseudo-element has a set of counters in the scope of that elemen
 
 When an element declares a counter, the counter is nested inside the counter with the same name received from the parent. If the parent doesn't have a counter with the same name then the counter is added to the element's counters set as it is. A counter with the same name received from the previous sibling is removed from the counters set.
 
-The {{cssxref("counter", "counter()")}} function retrieves the innermost counter with the provided name. And the {{cssxref("counters", "counters()")}} function retrieves the entire counter tree with the given name.
+The {{cssxref("counter()")}} function retrieves the innermost counter with the provided name. And the {{cssxref("counters()")}} function retrieves the entire counter tree with the given name.
 
 In the following example, we are demoing an inherited counter named `primary` and a sibling counter named `secondary`. All the `<div>` elements display their counters using the `counters()` function. Note that all the counters have been created using `counter-reset` property, and none of the counters have been incremented.
 
@@ -408,7 +408,7 @@ a[href]:empty::after {
 ### Example of a nested counter
 
 A CSS counter can be especially useful for making outlined lists, because a new instance of the counter is automatically created in child elements.
-Using the {{cssxref("counters", "counters()")}} function, separating text can be inserted between different levels of nested counters.
+Using the {{cssxref("counters()")}} function, separating text can be inserted between different levels of nested counters.
 
 #### CSS
 

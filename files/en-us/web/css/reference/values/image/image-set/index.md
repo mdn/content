@@ -1,5 +1,6 @@
 ---
-title: image-set()
+title: "`image-set()` CSS function"
+short-title: image-set()
 slug: Web/CSS/Reference/Values/image/image-set
 page-type: css-function
 browser-compat: css.types.image.image-set
@@ -42,11 +43,11 @@ image-set(
 ### Values
 
 - `<image>`
-  - : The [`<image>`](/en-US/docs/Web/CSS/Reference/Values/image) can be any image type except for an image set. The `image-set()` function may not be nested inside another `image-set()` function.
+  - : The {{cssxref("image")}} can be any image type except for an image set. The `image-set()` function may not be nested inside another `image-set()` function.
 - `<string>`
   - : A URL to an image.
 - `<resolution>` {{optional_inline}}
-  - : [`<resolution>`](/en-US/docs/Web/CSS/Reference/Values/resolution) units include `x` or `dppx`, for dots per pixel unit, `dpi`, for dots per inch, and `dpcm` for dots per centimeter. Every image within an `image-set()` must have a unique resolution.
+  - : {{cssxref("resolution")}} units include `x` or `dppx`, for dots per pixel unit, `dpi`, for dots per inch, and `dpcm` for dots per centimeter. Every image within an `image-set()` must have a unique resolution.
 - `type(<string>)` {{optional_inline}}
   - : A valid MIME type string, for example "image/jpeg".
 
@@ -127,7 +128,7 @@ In the next example the `type()` function is used to serve the image in AVIF and
 
 - {{cssxref("image")}}
 - {{cssxref("image/image", "image()")}}
-- {{cssxref("element", "element()")}}
+- {{cssxref("element()")}}
 - {{cssxref("url_value", "&lt;url&gt;")}}
-- {{cssxref("&lt;gradient&gt;")}}
-- {{cssxref("cross-fade", "cross-fade()")}}
+- {{cssxref("gradient")}}
+- {{cssxref("cross-fade()")}}

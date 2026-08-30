@@ -212,29 +212,28 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
         <code>\x<em>hh</em></code>
       </td>
       <td>
+        <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape"><strong>Hex escape:</strong></a>
         Matches the character with the code <code><em>hh</em></code> (two
         hexadecimal digits).
       </td>
     </tr>
     <tr>
       <td>
-        <code>\u<em>hhhh</em></code>
+        <code>\u<em>HHHH</em></code>
       </td>
       <td>
-        Matches a UTF-16 code-unit with the value
-        <code><em>hhhh</em></code> (four hexadecimal digits).
+        <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape"><strong>Unicode escape:</strong></a>
+        Matches a UTF-16 code-unit with the value <code><em>HHHH</em></code> (four hexadecimal digits).
       </td>
     </tr>
     <tr>
       <td>
-        <code>\u<em>{hhhh}</em> or <em>\u{hhhhh}</em></code>
+        <code>\u{<em>H…H</em>}</code>
       </td>
       <td>
-        (Only when the <code>u</code> flag is set.) Matches the character with
-        the Unicode value <code>U+<em>hhhh</em></code> or <code
-          >U+<em>hhhhh</em></code
-        >
-        (hexadecimal digits).
+        <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape"><strong>Unicode code point escape:</strong></a>
+        Matches the character with the Unicode value <code>U+<em>H…H</em></code> (1 to 6 hexadecimal digits).
+        Only valid in <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode">Unicode-aware mode</a>.
       </td>
     </tr>
     <tr>
@@ -248,6 +247,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
           Matches a character based on its Unicode character properties: for example, emoji characters, or Japanese
           <em>katakana</em> characters, or Chinese/Japanese Han/Kanji characters,
           etc.).
+          Only valid in <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode">Unicode-aware mode</a>.
         </p>
       </td>
     </tr>
@@ -351,6 +351,33 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
           matches immediately before a line break character. For example,
           <code>/t$/</code> does not match the "t" in "eater", but does match it
           in "eat".
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>\A</code></td>
+      <td>
+        <p>
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Buffer_boundary_assertion"><strong>Buffer boundary start assertion:</strong></a> Matches the start of the entire string regardless of the presence of the <code>m</code> flag.
+          Only valid in <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode">Unicode-aware mode</a>.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>\z</code></td>
+      <td>
+        <p>
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Buffer_boundary_assertion"><strong>Buffer boundary end assertion:</strong></a> Matches the end of the entire string regardless of the presence of the <code>m</code> flag.
+          Only valid in <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode">Unicode-aware mode</a>.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>\Z</code></td>
+      <td>
+        <p>
+          <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Buffer_boundary_assertion"><strong>Buffer boundary end assertion with optional newline:</strong></a> Matches the end of the entire string, but allows an optional trailing newline character sequence (either a <a href="/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#line_terminators">line terminator</a> or a <code>\r\n</code> sequence).
+          Only valid in <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode">Unicode-aware mode</a>.
         </p>
       </td>
     </tr>
@@ -569,7 +596,7 @@ This page provides an overall cheat sheet of all the capabilities of `RegExp` sy
       </td>
     </tr>
     <tr>
-      <td><code>(?<em>flags</em>:<em>x</em>)</code>, <code>(?:<em>flags</em>-<em>flags</em>:<em>x</em>)</code></td>
+      <td><code>(?<em>flags</em>:<em>x</em>)</code>, <code>(?<em>flags</em>-<em>flags</em>:<em>x</em>)</code></td>
       <td>
         <p>
           <a href="/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Modifier"><strong>Modifier:</strong></a>

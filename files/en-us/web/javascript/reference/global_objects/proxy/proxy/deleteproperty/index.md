@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Proxy.handler.deleteProperty
 sidebar: jsref
 ---
 
-The **`handler.deleteProperty()`** method is a trap for the `[[Delete]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as the {{jsxref("Operators/delete", "delete")}} operator.
+The **`handler.deleteProperty()`** method is a trap for the `[[Delete]]` [object internal method](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy#object_internal_methods), which is used by operations such as the {{jsxref("delete")}} operator.
 
 {{InteractiveExample("JavaScript Demo: handler.deleteProperty()", "taller")}}
 
@@ -58,7 +58,7 @@ The following parameters are passed to the `deleteProperty()` method. `this` is 
 
 The `deleteProperty()` method must return a {{jsxref("Boolean")}} indicating whether or not the property has been successfully deleted. Other values are [coerced to booleans](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean#boolean_coercion).
 
-Many operations, including the {{jsxref("Operators/delete", "delete")}} operator when in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), throw a {{jsxref("TypeError")}} if the `[[Delete]]` internal method returns `false`.
+Many operations, including the {{jsxref("delete")}} operator when in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), throw a {{jsxref("TypeError")}} if the `[[Delete]]` internal method returns `false`.
 
 ## Description
 
@@ -83,7 +83,7 @@ The proxy's `[[Delete]]` internal method throws a {{jsxref("TypeError")}} if the
 
 ### Trapping the delete operator
 
-The following code traps the {{jsxref("Operators/delete", "delete")}} operator.
+The following code traps the {{jsxref("delete")}} operator.
 
 ```js
 const p = new Proxy(
@@ -124,5 +124,5 @@ console.log(result2); // false
 
 - {{jsxref("Proxy")}}
 - [`Proxy()` constructor](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy)
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
 - {{jsxref("Reflect.deleteProperty()")}}

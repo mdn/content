@@ -53,4 +53,4 @@ You could use this location object to return more information about the document
 
 ## See also
 
-{{domxref("WorkerGlobalScope")}}
+- {{domxref("WorkerGlobalScope")}}

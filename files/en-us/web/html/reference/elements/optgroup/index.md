@@ -1,5 +1,6 @@
 ---
-title: "<optgroup>: The Option Group element"
+title: "`<optgroup>` HTML option group element"
+short-title: <optgroup>
 slug: Web/HTML/Reference/Elements/optgroup
 page-type: html-element
 browser-compat: html.elements.optgroup
@@ -43,7 +44,7 @@ label {
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - [`disabled`](/en-US/docs/Web/HTML/Reference/Attributes/disabled)
-  - : If this Boolean attribute is set, none of the items in this option group is selectable. Often browsers grey out such control and it won't receive any browsing events, like mouse clicks or focus-related ones.
+  - : If this Boolean attribute is set, none of the items in this option group is selectable. Often browsers gray out such control and it won't receive any browsing events, like mouse clicks or focus-related ones.
 - `label`
   - : The name of the group of options, which the browser can use when labeling the options in the user interface. This attribute is mandatory if this element is used.
 

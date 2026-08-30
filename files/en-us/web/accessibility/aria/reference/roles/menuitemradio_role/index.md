@@ -39,7 +39,7 @@ The `menuitemradio` element can have phrasing content, but can not have interact
 
 ### All descendants are presentational
 
-There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `menuitemradio`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) to all descendant elements of any `menuitemradio` element as it is a role that does not support semantic children.
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `menuitemradio`. To deal with this limitation, browsers automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) to all descendant elements of any `menuitemradio` element as it is a role that does not support semantic children.
 
 For example, consider the following `menuitemradio` element, which contains a heading.
 
@@ -116,7 +116,7 @@ If the `menuitemradio` is in a submenu in a `menubar` or a menu opened with a me
 
 The [`tabindex="-1"`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) makes the `menuitemradio` focusable but not part of the page tab sequence. Had we included `aria-checked="true"` it would have indicated that the `menuitemradio` was checked, and we would have visually styled the selected state to look checked using the attribute selector `[role='menuitemradio'][aria-checked='true']`. Instead, the presence of `aria-checked="false"` indicates to assistive technologies that the `menuitemradio` is checkable but not currently checked. The accessible name "purple" comes from the contents.
 
-The visual appearance of the selected state is a checked radio button which we can create using [generated content](/en-US/docs/Web/CSS/Guides/Generated_content), making it visible and the same color as the content by synchronizing with the `aria-checked` value using CSS [attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) and changing the [`background-color`](/en-US/docs/Web/CSS/Reference/Properties/background-color).
+The visual appearance of the selected state is a checked radio button which we can create using [generated content](/en-US/docs/Web/CSS/Guides/Generated_content), making it visible and the same color as the content by synchronizing with the `aria-checked` value using CSS [attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) and changing the {{cssxref("background-color")}}.
 
 ```css
 [role="menuitemradio"]::before {
@@ -136,7 +136,7 @@ The visual appearance of the selected state is a checked radio button which we c
 }
 ```
 
-Don't use the [`background`](/en-US/docs/Web/CSS/Reference/Properties/background) shorthand property, as that will override the [`background-clip`](/en-US/docs/Web/CSS/Reference/Properties/background-clip) property we used to create the radio button effect.
+Don't use the {{cssxref("background")}} shorthand property, as that will override the {{cssxref("background-clip")}} property we used to create the radio button effect.
 
 ### Prefer HTML
 

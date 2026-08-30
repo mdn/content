@@ -16,7 +16,7 @@ An integer value which specifies the number of STUN connectivity requests that h
 
 > [!NOTE]
 > The reported number of requests _does not_ include retransmissions.
-> If a request had to be repeated due to network issues, it will be counted multiple times here.
+> If a request had to be repeated due to network issues, it will not be counted multiple times here.
 > This differs from {{domxref("RTCIceCandidatePairStats.requestsReceived", "requestsReceived")}}, which _does_ include retransmissions.
 
 ## Specifications

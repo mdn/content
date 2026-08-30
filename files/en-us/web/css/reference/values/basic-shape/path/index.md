@@ -1,12 +1,13 @@
 ---
-title: path()
+title: "`path()` CSS function"
+short-title: path()
 slug: Web/CSS/Reference/Values/basic-shape/path
 page-type: css-function
 browser-compat: css.types.basic-shape.path
 sidebar: cssref
 ---
 
-The **`path()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) accepts an [SVG path](/en-US/docs/Web/SVG/Reference/Element/path) string, and is used in the [CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes) and [CSS motion path](/en-US/docs/Web/CSS/Guides/Motion_path) modules to enable a shape to be drawn. The `path()` function is a {{cssxref("&lt;basic-shape&gt;")}} data type value. It can be used in the CSS {{cssxref("offset-path")}} and {{cssxref("clip-path")}} properties and in the SVG [`d`](/en-US/docs/Web/SVG/Reference/Attribute/d) attribute.
+The **`path()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) accepts an [SVG path](/en-US/docs/Web/SVG/Reference/Element/path) string, and is used in the [CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes) and [CSS motion path](/en-US/docs/Web/CSS/Guides/Motion_path) modules to enable a shape to be drawn. The `path()` function is a {{cssxref("basic-shape")}} data type value. It can be used in the CSS {{cssxref("offset-path")}} and {{cssxref("clip-path")}} properties and in the SVG [`d`](/en-US/docs/Web/SVG/Reference/Attribute/d) attribute.
 
 There are some limitations to using the `path()` function. The path has to be defined as a single string, so a custom path can't be created using variables ([`var()`](/en-US/docs/Web/CSS/Reference/Values/var) functions). Also, all the lengths in the path are implicitly defined in [pixel](/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types#absolute_length_units) (`px`) units; other units can't be used. The [`shape()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape) function offers more flexibility than the `path()` function.
 
@@ -178,7 +179,7 @@ svg {
 
 ## See also
 
-- {{cssxref("&lt;shape-outside&gt;")}}
+- {{cssxref("border-shape")}}, {{cssxref("shape-outside")}}
 - [CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes) module
 - [Overview of CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes/Overview)
 - [The SVG `path` syntax: an illustrated guide](https://css-tricks.com/svg-path-syntax-illustrated-guide/) via CSS-tricks (2021)

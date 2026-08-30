@@ -1,5 +1,6 @@
 ---
-title: :state()
+title: "`:state()` CSS pseudo-class"
+short-title: :state()
 slug: Web/CSS/Reference/Selectors/:state
 page-type: css-pseudo-class
 browser-compat: css.selectors.state
@@ -24,7 +25,7 @@ The `:state()` pseudo-class takes as its argument a custom identifier that repre
 
 Elements can transition between states due to user interaction and other factors.
 For instance, an element can be in the "hover" state when a user hovers over the element, or a link can be in the "visited" state after a user clicks on it.
-Elements provided by browsers can be styled based on these states using CSS pseudo-classes such as [`:hover`](/en-US/docs/Web/CSS/Reference/Selectors/:hover) and [`:visited`](/en-US/docs/Web/CSS/Reference/Selectors/:visited).
+Elements provided by browsers can be styled based on these states using CSS pseudo-classes such as {{cssxref(":hover")}} and {{cssxref(":visited")}}.
 Similarly, [autonomous custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements#types_of_custom_element) (custom elements that are not derived from built-in elements) can expose their states, allowing pages that use the elements to style them using the CSS `:state()` pseudo-class.
 
 The states of a custom element are represented by string values.
@@ -57,7 +58,7 @@ For a live example of this code in action, see the [Matching the custom state of
 
 This example shows how the `:state()` pseudo-class can be used within the [`:host()`](/en-US/docs/Web/CSS/Reference/Selectors/:host_function) pseudo-class function to match custom states within the implementation of a custom element.
 
-The following CSS injects a grey `[x]` before the element when it is in the "checked" state.
+The following CSS injects a gray `[x]` before the element when it is in the "checked" state.
 
 ```css
 :host(:state(checked))::before {

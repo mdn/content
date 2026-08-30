@@ -1,5 +1,6 @@
 ---
-title: font-variation-settings
+title: "`font-variation-settings` CSS at-rule descriptor"
+short-title: font-variation-settings
 slug: Web/CSS/Reference/At-rules/@font-face/font-variation-settings
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.font-variation-settings

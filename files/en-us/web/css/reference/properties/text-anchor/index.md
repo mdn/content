@@ -1,5 +1,6 @@
 ---
-title: text-anchor
+title: "`text-anchor` CSS property"
+short-title: text-anchor
 slug: Web/CSS/Reference/Properties/text-anchor
 page-type: css-property
 browser-compat: css.properties.text-anchor
@@ -26,6 +27,8 @@ text-anchor: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `start`
   - : Aligns the text such that the inline start of the text string is aligned with the anchor point. This alignment is relative to the writing direction of the text; thus, for example, in right-to-left top-to-bottom writing, the text will be placed to the left of the anchor point. If the text's inline direction is vertical, as with many Asian languages, the top edge of the text is aligned with the anchor point.

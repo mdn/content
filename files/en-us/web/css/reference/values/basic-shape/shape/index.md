@@ -1,12 +1,13 @@
 ---
-title: shape()
+title: "`shape()` CSS function"
+short-title: shape()
 slug: Web/CSS/Reference/Values/basic-shape/shape
 page-type: css-function
 browser-compat: css.types.basic-shape.shape
 sidebar: cssref
 ---
 
-The **`shape()`** [CSS function](/en-US/docs/Web/CSS/Reference/Values/Functions) is used to define a shape for the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties. It combines an initial starting point with a series of shape commands that define the path of the shape. The `shape()` function is a member of the {{cssxref("&lt;basic-shape&gt;")}} data type.
+The **`shape()`** [CSS function](/en-US/docs/Web/CSS/Reference/Values/Functions) is used to define a shape for the {{cssxref("border-shape")}}, {{cssxref("clip-path")}}, and {{cssxref("offset-path")}} properties. It combines an initial starting point with a series of shape commands that define the path of the shape. The `shape()` function is a member of the {{cssxref("basic-shape")}} data type.
 
 ## Syntax
 
@@ -212,11 +213,12 @@ body {
 }
 
 @supports not (offset-path: shape(from 0 0, move to 0 0)) {
-  .container {
-    display: none;
-  }
   body::after {
     content: "Your browser doesn't support the `shape()` function yet.";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
   }
 }
 ```
@@ -298,11 +300,12 @@ body {
 }
 
 @supports not (clip-path: shape(from 0 0, move to 0 0)) {
-  .container {
-    display: none;
-  }
   body::after {
     content: "Your browser doesn't support the `shape()` function yet.";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
   }
 }
 ```
@@ -377,11 +380,12 @@ The first shape (`shape1`) draws two cubic Bézier curves.
       close
     )
 ) {
-  .container {
-    display: none;
-  }
   body::after {
     content: "Your browser doesn't support `shape()` relative control points.";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
   }
 }
 ```
@@ -452,6 +456,7 @@ The third shape (`shape3`) draws one quadratic Bézier curve and one cubic Bézi
 
 ## See also
 
+- {{cssxref("border-shape")}}
 - {{cssxref("clip-path")}}
 - {{cssxref("offset-path")}}
 - [CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes) module

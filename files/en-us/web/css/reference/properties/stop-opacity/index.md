@@ -1,5 +1,6 @@
 ---
-title: stop-opacity
+title: "`stop-opacity` CSS property"
+short-title: stop-opacity
 slug: Web/CSS/Reference/Properties/stop-opacity
 page-type: css-property
 browser-compat: css.properties.stop-opacity
@@ -50,7 +51,7 @@ With `0` or `0%` set, the stop is fully transparent. With `1` or `100%` set, the
 
 ## Examples
 
-### Defining the opacity of a SVG gradient color stop
+### Defining the opacity of an SVG gradient color stop
 
 This example demonstrates the basic use case of `stop-opacity`, and how the CSS `stop-opacity` property takes precedence over the `stop-opacity` attribute.
 
@@ -134,9 +135,9 @@ polygon:nth-of-type(3) {
 
 #### Results
 
-{{EmbedLiveSample("Defining the opacity of a SVG gradient color stop", "300", "200")}}
+{{EmbedLiveSample("Defining the opacity of an SVG gradient color stop", "300", "200")}}
 
-The first star is fully opaque. The fill of the second star is 80% opaque because the color stops are slightly translucent; the `stop-opacity: 0.8;` overrode the `stop-opacity="1"` element attribute value. The fill of the last star is barely noticeable with color stops that are 25% opaque. Note the stroke is the same opaque dark grey in all cases.
+The first star is fully opaque. The fill of the second star is 80% opaque because the color stops are slightly translucent; the `stop-opacity: 0.8;` overrode the `stop-opacity="1"` element attribute value. The fill of the last star is barely noticeable with color stops that are 25% opaque. Note the stroke is the same opaque dark gray in all cases.
 
 > [!NOTE]
 > Because we used the same `stop-opacity` value for all the sibling `<stop>` elements in the linear gradient, we could have instead used a single `<linearGradient>` with fully opaque stops, and set a value for each `<polygon>`s {{cssxref("fill-opacity")}} property instead.

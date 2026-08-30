@@ -1,5 +1,6 @@
 ---
-title: "<summary>: The Disclosure Summary element"
+title: "`<summary>` HTML disclosure summary element"
+short-title: <summary>
 slug: Web/HTML/Reference/Elements/summary
 page-type: html-element
 browser-compat: html.elements.summary
@@ -13,7 +14,7 @@ The **`<summary>`** [HTML](/en-US/docs/Web/HTML) element specifies a summary, ca
 ```html interactive-example
 <details>
   <summary>
-    I have keys but no doors. I have space but no room. You can enter but can’t
+    I have keys but no doors. I have space but no room. You can enter but can't
     leave. What am I?
   </summary>
   A keyboard.

@@ -14,7 +14,7 @@ Edge used EdgeHTML as its {{Glossary("Engine/Rendering", "rendering engine")}} u
 ## See also
 
 - [Microsoft Edge](https://en.wikipedia.org/wiki/Microsoft_Edge) on Wikipedia
-- [Microsoft Edge](https://www.microsoft.com/en-us/edge) on microsoft.com
+- [Microsoft Edge](https://explore.microsoft.com/en-us/edge) on microsoft.com
 - Related glossary terms:
   - {{Glossary("Browser")}}
   - {{Glossary("Engine/Rendering", "Rendering engine")}}

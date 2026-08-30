@@ -49,7 +49,6 @@ sidebar: mdnsidebar
 >
 >     Browser compatibility does not apply for HTTP headers where no specific implementation is provided (such as automatically adding a request header to some requests or changing behavior based on data in a response header).
 >     For these cases, remove the browser-compat key and value.
->
 > - **sidebar**
 >   - : This is always `http`.
 >     See [Page structures: Sidebars](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars) for details.

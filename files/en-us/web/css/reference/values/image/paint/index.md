@@ -1,12 +1,13 @@
 ---
-title: paint()
+title: "`paint()` CSS function"
+short-title: paint()
 slug: Web/CSS/Reference/Values/image/paint
 page-type: css-function
 browser-compat: css.types.image.paint
 sidebar: cssref
 ---
 
-The **`paint()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) defines an {{cssxref("&lt;image&gt;")}} value generated with a PaintWorklet.
+The **`paint()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) defines an {{cssxref("image")}} value generated with a PaintWorklet.
 
 ## Syntax
 
@@ -143,5 +144,5 @@ We've included a custom property in the selector block defining a boxColor. Cust
 - {{domxref('PaintWorkletGlobalScope')}}
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
 - [Using the CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API/Guide)
-- {{cssxref("&lt;image&gt;")}}
+- {{cssxref("image")}}
 - [Canvas API](/en-US/docs/Web/API/Canvas_API)

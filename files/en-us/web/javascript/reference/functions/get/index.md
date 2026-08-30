@@ -103,7 +103,7 @@ Static getters and private getters use similar syntaxes, which are described in 
 
 ### Deleting a getter using the `delete` operator
 
-If you want to remove the getter, you can just {{jsxref("Operators/delete", "delete")}} it:
+If you want to remove the getter, you can just {{jsxref("delete")}} it:
 
 ```js
 delete obj.latest;

@@ -1,5 +1,6 @@
 ---
-title: background-size
+title: "`background-size` CSS property"
+short-title: background-size
 slug: Web/CSS/Reference/Properties/background-size
 page-type: css-property
 browser-compat: css.properties.background-size
@@ -118,8 +119,8 @@ These attributes are as follows:
 - A vector image (such as SVG) does not necessarily have intrinsic dimensions.
   If it has both horizontal and vertical intrinsic dimensions, it also has intrinsic proportions.
   If it has no dimensions or only one dimension, it may or may not have proportions.
-- CSS {{cssxref("&lt;gradient&gt;")}}s have no intrinsic dimensions or intrinsic proportions.
-- Background images created with the {{cssxref("element", "element()")}} function use the intrinsic dimensions and proportions of the generating element.
+- CSS {{cssxref("gradient")}}s have no intrinsic dimensions or intrinsic proportions.
+- Background images created with the {{cssxref("element()")}} function use the intrinsic dimensions and proportions of the generating element.
 
 > [!NOTE]
 > In Gecko, background images created using the [`element()`](/en-US/docs/Web/CSS/Reference/Values/element) function are currently treated as images with the dimensions of the element, or of the background positioning area if the element is SVG, with the corresponding intrinsic proportion. This is non-standard behavior.

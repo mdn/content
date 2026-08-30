@@ -6,16 +6,16 @@ spec-urls: https://drafts.csswg.org/selectors/#specificity-rules
 sidebar: cssref
 ---
 
-**Specificity** is the algorithm used by browsers to determine the [CSS declaration](/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#css_syntax_basics) that is the most relevant to an element, which in turn, determines the property value to apply to the element. The specificity algorithm calculates the weight of a [CSS selector](/en-US/docs/Web/CSS/Reference#selectors) to determine which rule from competing CSS declarations gets applied to an element.
+**Specificity** is the weight that browsers use in the cascade algorithm to determine the [CSS declaration](/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#css_syntax_basics) that is the most relevant to an element, which in turn, determines the property value to apply to the element. The specificity algorithm calculates this weight from a [CSS selector](/en-US/docs/Web/CSS/Reference#selectors), and compares the resulting values to decide which rule, from competing CSS declarations within the same origin and layer, gets applied to an element.
 
 > [!NOTE]
 > Browsers consider specificity **after** determining [cascade origin and importance](/en-US/docs/Web/CSS/Guides/Cascade/Introduction). In other words, for competing property declarations, specificity is relevant and compared only between selectors from the one [cascade origin and layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer) that has precedence for the property. [Scoping proximity](/en-US/docs/Web/CSS/Reference/At-rules/@scope#how_scope_conflicts_are_resolved) and order of appearance become relevant when the selector specificities of the competing declarations in the cascade layer with precedence are equal.
 
 ## How is specificity calculated?
 
-Specificity is an algorithm that calculates the weight that is applied to a given CSS declaration. The weight is determined by the number of [selectors of each weight category](#selector_weight_categories) in the selector matching the element (or pseudo-element). If there are two or more declarations providing different property values for the same element, the declaration value in the style block having the matching selector with the greatest algorithmic weight gets applied.
+Specificity is the weight that is applied to a given CSS declaration. The specificity algorithm calculates that weight based on the number of [selectors of each weight category](#selector_weight_categories) in the selector matching the element (or pseudo-element). If there are two or more declarations providing different property values for the same element, the declaration value in the style block having the matching selector with the greatest weight gets applied.
 
-The specificity algorithm is basically a three-column value of three categories or weights - ID, CLASS, and TYPE - corresponding to the three types of selectors. The value represents the count of selector components in each weight category and is written as _ID - CLASS - TYPE_. The three columns are created by counting the number of selector components for each selector weight category in the selectors that match the element.
+The specificity value is basically a three-column value of three categories or weights - ID, CLASS, and TYPE - corresponding to the three types of selectors. The value represents the count of selector components in each weight category and is written as _ID - CLASS - TYPE_. The three columns are created by counting the number of selector components for each selector weight category in the selectors that match the element.
 
 ### Selector weight categories
 
@@ -28,13 +28,13 @@ The selector weight categories are listed here in the order of decreasing specif
 - TYPE column
   - : Includes [type selectors](/en-US/docs/Web/CSS/Reference/Selectors/Type_selectors), such as `p`, `h1`, and `td`, and pseudo-elements like `::before`, `::placeholder`, and all other selectors with double-colon notation. For each type or pseudo-element in a matching selector, add 0-0-1 to the weight value.
 - No value
-  - : The universal selector ({{CSSxRef("Universal_selectors", "*")}}) and the pseudo-class {{CSSxRef(":where", ":where()")}} and its parameters aren't counted when calculating the weight so their value is 0-0-0, but they do match elements. These selectors do not impact the specificity weight value.
+  - : The universal selector ({{CSSxRef("Universal_selectors", "*")}}) and the pseudo-class {{cssxref(":where()")}} and its parameters aren't counted when calculating the weight so their value is 0-0-0, but they do match elements. These selectors do not impact the specificity weight value.
 
 Combinators, such as {{CSSxRef("Next-sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("Subsequent-sibling_combinator", "~")}}, [" "](/en-US/docs/Web/CSS/Reference/Selectors/Descendant_combinator), and {{CSSxRef("Column_combinator", "||")}}, may make a selector more specific in what is selected but they don't add any value to the specificity weight.
 
-The `&` nesting combinator doesn't add specificity weight, but nested rules do. In terms of specificity, and functionality, nesting is very similar to the {{CSSxRef(":is", ":is()")}} pseudo-class.
+The `&` nesting combinator doesn't add specificity weight, but nested rules do. In terms of specificity, and functionality, nesting is very similar to the {{cssxref(":is()")}} pseudo-class.
 
-Like nesting, the {{CSSxRef(":is", ":is()")}}, {{CSSxRef(":has", ":has()")}}, and negation ({{CSSxRef(":not", ":not()")}}) pseudo-classes themselves add no weight. The parameters in these selectors, however, do. The specificity weight of each comes from the selector parameter in the list of selectors with the highest specificity. Similarly, with nested selectors, the specificity weight added by the nested selector component is the selector in the comma-separated list of nested selectors with the highest specificity.
+Like nesting, the {{cssxref(":is()")}}, {{cssxref(":has()")}}, and negation ({{cssxref(":not()")}}) pseudo-classes themselves add no weight. The parameters in these selectors, however, do. The specificity weight of each comes from the selector parameter in the list of selectors with the highest specificity. Similarly, with nested selectors, the specificity weight added by the nested selector component is the selector in the comma-separated list of nested selectors with the highest specificity.
 
 The [`:not()`, `:is()`, `:has()` and CSS nesting exceptions](#the_is_not_has_and_css_nesting_exceptions) are discussed below.
 
@@ -122,7 +122,7 @@ input.myClass {
 
 ### The `:is()`, `:not()`, `:has()` and CSS nesting exceptions
 
-The matches-any pseudo-class {{CSSxRef(":is", ":is()")}}, the relational pseudo-class {{CSSxRef(":has", ":has()")}}, and the negation pseudo-class {{CSSxRef(":not", ":not()")}} are _not_ considered as pseudo-classes in the specificity weight calculation. They themselves don't add any weight to the specificity equation. However, the selector parameters passed into the pseudo-class parenthesis are part of the specificity algorithm; the weight of the matches-any and negation pseudo-class in the specificity value calculation is the weight of the parameter's [weight](#selector_weight_categories).
+The matches-any pseudo-class {{cssxref(":is()")}}, the relational pseudo-class {{cssxref(":has()")}}, and the negation pseudo-class {{cssxref(":not()")}} are _not_ considered as pseudo-classes in the specificity weight calculation. They themselves don't add any weight to the specificity equation. However, the selector parameters passed into the pseudo-class parenthesis are part of the specificity algorithm; the weight of the matches-any and negation pseudo-class in the specificity value calculation is the weight of the parameter's [weight](#selector_weight_categories).
 
 ```css
 p {
@@ -223,7 +223,7 @@ Instead of using `!important` to override foreign CSS (from external libraries, 
 
 ### The `:where()` exception
 
-The specificity-adjustment pseudo-class {{CSSxRef(":where", ":where()")}} always has its specificity replaced with zero, `0-0-0`. It enables making CSS selectors very specific in what element is targeted without any increase to specificity.
+The specificity-adjustment pseudo-class {{cssxref(":where()")}} always has its specificity replaced with zero, `0-0-0`. It enables making CSS selectors very specific in what element is targeted without any increase to specificity.
 
 In creating third-party CSS to be used by developers who don't have access to edit your CSS, it's considered a good practice to create CSS with the lowest possible specificity. For example, if your theme includes the following CSS:
 

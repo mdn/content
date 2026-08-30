@@ -1,5 +1,6 @@
 ---
-title: anchor-name
+title: "`anchor-name` CSS property"
+short-title: anchor-name
 slug: Web/CSS/Reference/Properties/anchor-name
 page-type: css-property
 browser-compat: css.properties.anchor-name
@@ -28,6 +29,8 @@ anchor-name: unset;
 
 ### Values
 
+This property is specified as a single value from the following list:
+
 - `none`
   - : The default value. Setting `anchor-name: none` on an element means that it is not defined as an anchor element. If the element was previously defined as an anchor and associated with a positioned element, setting `anchor-name: none` disassociates the two.
 
@@ -50,7 +53,7 @@ You cannot associate a positioned element with an anchor element if the anchor i
 
 The `anchor-name` property is supported on all elements that generate a principal box. This means that [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements), including generated content created using {{cssxref("::before")}} and {{cssxref("::after")}}, and UI features like the [`range` input](/en-US/docs/Web/HTML/Reference/Elements/input/range) thumb ({{cssxref("::-webkit-slider-thumb")}}) can be anchor elements. Pseudo elements are implicitly anchored to the same element as the pseudo-element's originating element, unless otherwise specified.
 
-For more information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) guide.
+For more information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) guide.
 
 ## Formal definition
 
@@ -382,6 +385,7 @@ Scroll the page to see how both of the infoboxes are tethered to the anchor.
 ## See also
 
 - {{cssxref("position-anchor")}}
+- {{cssxref("anchor-scope")}}
 - HTML [`anchor`](/en-US/docs/Web/HTML/Reference/Global_attributes/anchor) attribute
 - [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module
 - [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) guide

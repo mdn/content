@@ -162,34 +162,6 @@ function encryptMessage(key) {
 }
 ```
 
-```js
-let iv = window.crypto.getRandomValues(new Uint8Array(16));
-let key = window.crypto.getRandomValues(new Uint8Array(16));
-let data = new Uint8Array(12345);
-// crypto functions are wrapped in promises so we have to use await and make sure the function that
-// contains this code is an async function
-// encrypt function wants a cryptokey object
-const keyEncoded = await window.crypto.subtle.importKey(
-  "raw",
-  key.buffer,
-  "AES-CTR",
-  false,
-  ["encrypt", "decrypt"],
-);
-const encryptedContent = await window.crypto.subtle.encrypt(
-  {
-    name: "AES-CTR",
-    counter: iv,
-    length: 128,
-  },
-  keyEncoded,
-  data,
-);
-
-// Uint8Array
-console.log(encryptedContent);
-```
-
 ### AES-CBC
 
 This code fetches the contents of a text box, encodes it for encryption, and encrypts it using AES in CBC mode.

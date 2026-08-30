@@ -1,5 +1,5 @@
 ---
-title: "HTML attribute: step"
+title: "`step` HTML attribute"
 short-title: step
 slug: Web/HTML/Reference/Attributes/step
 page-type: html-attribute

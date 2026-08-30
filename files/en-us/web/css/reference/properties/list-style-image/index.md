@@ -1,5 +1,6 @@
 ---
-title: list-style-image
+title: "`list-style-image` CSS property"
+short-title: list-style-image
 slug: Web/CSS/Reference/Properties/list-style-image
 page-type: css-property
 browser-compat: css.properties.list-style-image
@@ -96,7 +97,9 @@ list-style-image: unset;
 
 ### Values
 
-- {{cssxref("&lt;image&gt;")}}
+This property is specified as a single value from the following list:
+
+- {{cssxref("image")}}
   - : A valid image to use as the marker.
 - `none`
   - : Specifies that no image is used as the marker. If this value is set, the marker defined in {{ Cssxref("list-style-type") }} will be used instead. This is the default value for {{cssxref("list-style")}}.

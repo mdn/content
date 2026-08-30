@@ -135,4 +135,4 @@ function startLoggingMIDIInput(midiAccess) {
 ## See also
 
 - [Introduction to Web MIDI](https://code.tutsplus.com/introduction-to-web-midi--cms-25220t)
-- [Making Music in the Browser](https://www.keithmcmillen.com/blog/making-music-in-the-browser-web-midi-api/)
+- [Making Music in the Browser](https://keithmcmillen.com/blog/making-music-in-the-browser-web-midi-api/)

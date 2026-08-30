@@ -70,11 +70,11 @@ helps the user to distinguish the selection border from the image background by
 animating the border.
 
 ```html hidden
-<canvas id="canvas"></canvas>
+<canvas id="my-canvas"></canvas>
 ```
 
 ```js
-const canvas = document.getElementById("canvas");
+const canvas = document.getElementById("my-canvas");
 const ctx = canvas.getContext("2d");
 let offset = 0;
 

@@ -10,7 +10,7 @@ spec-urls:
 sidebar: cssref
 ---
 
-The **CSS images** module defines the types of images that can be used (the {{CSSxRef("&lt;image&gt;")}} type, containing URLs, gradients and other types of images), how to resize them and how they, and other replaced content, interact with the different layout models.
+The **CSS images** module defines the types of images that can be used (the {{cssxref("image")}} type, containing URLs, gradients and other types of images), how to resize them and how they, and other replaced content, interact with the different layout models.
 
 ## Reference
 
@@ -32,16 +32,16 @@ The CSS images module also defines the {{CSSxRef("image-resolution")}} property.
 - {{CSSxRef("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
 - {{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}
 - {{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
-- {{CSSxRef("cross-fade", "cross-fade()")}}
-- {{CSSxRef("element", "element()")}}
+- {{cssxref("cross-fade()")}}
+- {{cssxref("element()")}}
 - {{CSSxRef("image/image-set", "image-set()")}}
 
 The CSS images module also defines the {{CSSxRef("image/image", "image()")}} function. Currently, no browsers support this feature.
 
 ### Data types
 
-- {{CSSxRef("&lt;gradient&gt;")}}
-- {{CSSxRef("&lt;image&gt;")}}
+- {{cssxref("gradient")}}
+- {{cssxref("image")}}
 
 ## Guides
 

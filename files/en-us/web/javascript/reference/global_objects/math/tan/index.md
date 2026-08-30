@@ -97,3 +97,4 @@ function getTanDeg(deg) {
 - {{jsxref("Math.atan2()")}}
 - {{jsxref("Math.cos()")}}
 - {{jsxref("Math.sin()")}}
+- CSS {{cssxref("tan()")}} function

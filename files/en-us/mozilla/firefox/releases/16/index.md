@@ -8,7 +8,13 @@ sidebar: firefox
 
 Firefox 16 shipped on October 9, 2012. This article lists key changes that are useful for not only Web developers to know about, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
+
+### Developer tools
+
+- There's now a handy developer toolbar you can access by going to Tools > Web Developer > Developer Toolbar, or by pressing Ctrl-Shift-V (Cmd-Opt-V on Mac OS X). This toolbar offers a command line interface as well as buttons for quickly accessing useful tools. The graphical command line interface _GCLI_ is easy to expand and additional commands are expected in the future. Type "help" to get a list of supported commands.
+- The Web Console now displays an error count so you can quickly see how much work you have ahead of you.
+- The Scratchpad now offers a list of recently opened files.
 
 ### HTML
 
@@ -64,14 +70,6 @@ _No change._
 ### MathML
 
 - The `lspace` and `rspace` attributes of {{MathMLElement("mo")}} now correctly default to `thickmathspace`.
-
-### Network
-
-### Developer tools
-
-- There's now a handy developer toolbar you can access by going to Tools > Web Developer > Developer Toolbar, or by pressing Ctrl-Shift-V (Cmd-Opt-V on Mac OS X). This toolbar offers a command line interface as well as buttons for quickly accessing useful tools. The graphical command line interface _GCLI_ is easy to expand and additional commands are expected in the future. Type "help" to get a list of supported commands.
-- The Web Console now displays an error count so you can quickly see how much work you have ahead of you.
-- The Scratchpad now offers a list of recently opened files.
 
 ## Changes for Open Web App developers
 

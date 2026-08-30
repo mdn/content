@@ -1,5 +1,6 @@
 ---
-title: top
+title: "`top` CSS property"
+short-title: top
 slug: Web/CSS/Reference/Properties/top
 page-type: css-property
 browser-compat: css.properties.top

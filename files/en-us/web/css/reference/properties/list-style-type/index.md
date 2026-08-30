@@ -1,5 +1,6 @@
 ---
-title: list-style-type
+title: "`list-style-type` CSS property"
+short-title: list-style-type
 slug: Web/CSS/Reference/Properties/list-style-type
 page-type: css-property
 browser-compat: css.properties.list-style-type
@@ -136,7 +137,7 @@ Note that:
 
 - {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
   - : An identifier matching the value of a {{cssxref("@counter-style")}} or one of the predefined styles:
-- {{cssxref("symbols", "symbols()")}}
+- {{cssxref("symbols()")}}
   - : Defines an anonymous style of the list.
 - {{cssxref("&lt;string&gt;")}}
   - : The specified string will be used as the item's marker.

@@ -172,6 +172,7 @@ setCornerShape();
 - {{cssxref("border-right-color")}}
 - {{cssxref("border-right-style")}}
 - {{cssxref("border-right-width")}}
+- {{cssxref("border-shape")}}
 - {{cssxref("border-start-end-radius")}}
 - {{cssxref("border-start-start-radius")}}
 - {{cssxref("border-top")}}
@@ -199,7 +200,7 @@ setCornerShape();
 - {{cssxref("corner-top-right-shape")}}
 - {{cssxref("corner-top-shape")}}
 
-The CSS borders and box decorations module level 4 also introduces the `border-shape`, `border-limit`, and `border-clip` properties, along with the `border-clip-bottom`, `border-clip-left`, `border-clip-right`, `border-clip-top` longhand properties. Currently, no browsers support these features. The module also introduces component properties for the well supported {{cssxref("border-radius")}} and {{cssxref("box-shadow")}} properties, including `border-block-end-radius`, `border-block-start-radius`, `border-bottom-radius`, `border-inline-end-radius`, `border-inline-start-radius`, `border-right-radius`, `border-top-radius`, `box-shadow-blur`, `box-shadow-color`, `box-shadow-offset`, `box-shadow-position`, and `box-shadow-spread`. These component properties are also as yet unsupported.
+The CSS borders and box decorations module level 4 also introduces the `border-limit`, and `border-clip` properties, along with the `border-clip-bottom`, `border-clip-left`, `border-clip-right`, `border-clip-top` longhand properties. Currently, no browsers support these features. The module also introduces component properties for the well supported {{cssxref("border-radius")}} and {{cssxref("box-shadow")}} properties, including `border-block-end-radius`, `border-block-start-radius`, `border-bottom-radius`, `border-inline-end-radius`, `border-inline-start-radius`, `border-right-radius`, `border-top-radius`, `box-shadow-blur`, `box-shadow-color`, `box-shadow-offset`, `box-shadow-position`, and `box-shadow-spread`. These component properties are also as yet unsupported.
 
 ### Data types
 
@@ -213,16 +214,18 @@ The CSS borders and box decorations module level 4 also introduces the `border-s
 
 - [Learn CSS: the box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model)
   - : Learn how borders and other box model properties impact the CSS box model.
+- [Creating an irregular nav menu with border-shape](/en-US/docs/Web/CSS/Guides/Borders_and_box_decorations/Border_shape_nav_menu)
+  - : How to use the {{cssxref("border-shape")}} property to create an irregular animated navigation menu.
 
 ## Related concepts
 
 - {{cssxref("box-sizing")}} property
 - {{cssxref("box-decoration-break")}} property
 - {{cssxref("text-shadow")}} property
-- {{cssxref("url_value", "&lt;url&gt;")}} CSS type
-- [`<color>`](/en-US/docs/Web/CSS/Reference/Properties/color) data type
-- [`<image>`](/en-US/docs/Web/CSS/Reference/Values/image) data type
-- [`<position>`](/en-US/docs/Web/CSS/Reference/Properties/position) data type
+- {{cssxref("url_value", "&lt;url&gt;")}} data type
+- {{cssxref("&lt;color&gt;")}} data type
+- {{cssxref("image")}} data type
+- {{cssxref("&lt;position&gt;")}} data type
 - [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword) keyword
 
 [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module

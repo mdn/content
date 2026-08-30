@@ -1,5 +1,6 @@
 ---
-title: grid-row-end
+title: "`grid-row-end` CSS property"
+short-title: grid-row-end
 slug: Web/CSS/Reference/Properties/grid-row-end
 page-type: css-property
 browser-compat: css.properties.grid-row-end

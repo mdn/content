@@ -37,7 +37,7 @@ In all current browsers, `localStorage` seems to return a different object for e
 
 ## Examples
 
-The following snippet accesses the current domain's local {{DOMxRef("Storage")}} object and adds a data item to it using {{DOMxRef("Storage.setItem()")}}.
+The following snippet accesses the current domain's local {{DOMxRef("Storage")}} object and adds a data item to it using {{DOMxRef("Storage.setItem()")}}, or updates the item if one already exists for that key.
 
 ```js
 localStorage.setItem("myCat", "Tom");

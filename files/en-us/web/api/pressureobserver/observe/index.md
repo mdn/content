@@ -32,7 +32,7 @@ observe(source, options)
 
 ### Return value
 
-A {{jsxref("Promise")}} that fulfils with {{jsxref("undefined")}}.
+A {{jsxref("Promise")}} that fulfills with {{jsxref("undefined")}}.
 
 ### Exceptions
 

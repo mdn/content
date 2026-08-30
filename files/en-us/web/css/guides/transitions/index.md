@@ -60,10 +60,10 @@ In certain cases, there is no originating "from" value for a transition. For exa
 - {{cssxref("calc-size()")}} function
 - {{Glossary("Intrinsic size")}} glossary term
 
-- [CSS easing functions](/en-US/docs/Web/CSS/Guides/Easing_functions) module
-  - [`<easing-function>`](/en-US/docs/Web/CSS/Reference/Values/easing-function) data-type
+- [CSS easing functions](/en-US/docs/Web/CSS/Guides/Easing_functions) module:
+  - {{cssxref("easing-function")}} data-type
 
-- [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module.
+- [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module:
   - {{cssxref("animation")}} shorthand
   - {{cssxref("animation-delay")}}
   - {{cssxref("animation-direction")}}
@@ -74,13 +74,13 @@ In certain cases, there is no originating "from" value for a transition. For exa
   - {{cssxref("animation-play-state")}}
   - {{cssxref("animation-timing-function")}}
 
-- [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms) module.
+- [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms) module:
   - {{cssxref("transform")}}
   - {{cssxref("transform-box")}}
   - {{cssxref("transform-origin")}}
   - {{cssxref("transform-style")}}
 
-- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) module
+- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) module:
   - {{cssxref("scroll-snap-type")}}
   - {{cssxref("scroll-padding")}}
   - {{cssxref("scroll-snap-align")}}

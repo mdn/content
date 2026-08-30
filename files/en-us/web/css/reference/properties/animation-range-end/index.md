@@ -1,5 +1,6 @@
 ---
-title: animation-range-end
+title: "`animation-range-end` CSS property"
+short-title: animation-range-end
 slug: Web/CSS/Reference/Properties/animation-range-end
 page-type: css-property
 browser-compat: css.properties.animation-range-end
@@ -36,8 +37,8 @@ animation-range-end: unset;
   - : Represents the end of the timeline. This is the default value.
 - {{cssxref("length-percentage")}}
   - : Specifies a length or percentage value measured from the beginning of the timeline.
-- [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name)
-  - : Specifies a named timeline range within the overall timeline. The range starts at `0%`.
+- {{cssxref("timeline-range-name")}}
+  - : Specifies a named timeline range within the overall timeline. The range ends at `100%`.
 - `<timeline-range-name> <length-percentage>`
   - : Specifies a length or percentage value measured from the beginning of the specified named timeline range.
 
@@ -124,7 +125,7 @@ We've also included a checkbox that will toggle the {{cssxref("animation-fill-mo
 
 #### CSS
 
-We've defined a view progress timeline by setting a [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view) function as the value of the {{cssxref("animation-timeline")}} property. This is declared **after** the {{cssxref("animation")}} shorthand to avoid resetting the longhand property value.
+We've defined a view progress timeline by setting a {{cssxref("animation-timeline/view", "view()")}} function as the value of the {{cssxref("animation-timeline")}} property. This is declared **after** the {{cssxref("animation")}} shorthand to avoid resetting the longhand property value.
 
 We've also set `animation-range-end` to make the animation end earlier than expected.
 
@@ -226,5 +227,6 @@ Scroll to see the element animate. Then toggle the checkbox at the end of the bl
 - {{cssxref("view-timeline-inset")}}
 - {{domxref("Element.animate()")}} `rangeStart` property
 - [Scroll-driven animation timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
+- [Understanding timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module
 - [View progress timeline: Ranges and animation progress visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/)

@@ -1,5 +1,6 @@
 ---
-title: overscroll-behavior-inline
+title: "`overscroll-behavior-inline` CSS property"
+short-title: overscroll-behavior-inline
 slug: Web/CSS/Reference/Properties/overscroll-behavior-inline
 page-type: css-property
 browser-compat: css.properties.overscroll-behavior-inline
@@ -26,9 +27,9 @@ overscroll-behavior-inline: revert-layer;
 overscroll-behavior-inline: unset;
 ```
 
-The `overscroll-behavior-inline` property is specified as a keyword chosen from the list of values below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : The default scroll overflow behavior occurs as normal.

@@ -22,7 +22,7 @@ Then if DIV #4 is also assigned a positive z-index greater than DIV #2's z-index
 
 ![Stacking context example 1](understanding_zindex_05c.png)
 
-In this last example you can see that DIV #2 and DIV #4 are not siblings, because they belong to different parents in the HTML elements' hierarchy. Even so, stacking of DIV #4 with respect of DIV #2 can be controlled through `z-index`. It happens that, since DIV #1 and DIV #3 are not assigned any z-index value, they do not create a stacking context. This means that all their content, including DIV #2 and DIV #4, belongs to the same root stacking context.
+In this last example you can see that DIV #2 and DIV #4 are not siblings, because they belong to different parents in the HTML elements' hierarchy. Even so, stacking of DIV #4 with respect of DIV #2 can be controlled through `z-index`. It happens that, since DIV #1 and DIV #3 are not assigned any `z-index` value, or any other [features that create a stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context#features_creating_stacking_contexts), they do not create a stacking context. This means that all their content, including DIV #2 and DIV #4, belongs to the same root stacking context.
 
 In terms of stacking contexts, DIV #1 and DIV #3 are assimilated into the root element, and the resulting hierarchy is the following:
 
@@ -31,7 +31,7 @@ In terms of stacking contexts, DIV #1 and DIV #3 are assimilated into the root e
   - DIV #4 (`z-index`: 2)
 
 > [!NOTE]
-> DIV #1 and DIV #3 are not translucent. It is important to remember that assigning an opacity less than 1 to a positioned element implicitly creates a stacking context, just like adding a `z-index` value. And this example shows what happens when a parent element does not create a stacking context.
+> DIV #1 and DIV #3 are not translucent. It is important to remember that assigning an opacity value of less than `1` to an element implicitly creates a stacking context, as does adding a `z-index` value to a positioned element. This example also shows what happens when a parent element doesn't create a stacking context.
 
 ## Example
 

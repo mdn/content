@@ -1,5 +1,6 @@
 ---
-title: counter-reset
+title: "`counter-reset` CSS property"
+short-title: counter-reset
 slug: Web/CSS/Reference/Properties/counter-reset
 page-type: css-property
 browser-compat: css.properties.counter-reset
@@ -203,11 +204,12 @@ In the following example, we've declared a reversed counter named 'priority'. Th
 
 ```css hidden
 @supports not (counter-reset: reversed(priority)) {
-  .stack {
-    display: none;
-  }
-  body::after {
-    content: "Your browser doesn't support the reversed counters yet.";
+  body::before {
+    content: "Your browser doesn't support the reversed() function.";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
   }
 }
 ```
@@ -242,7 +244,7 @@ In the output, the items are numbered in reversed order from 5 to 1. Notice in t
 - {{cssxref("counter-increment")}} property
 - {{cssxref("counter-set")}} property
 - {{cssxref("@counter-style")}} at-rule
-- {{cssxref("counter", "counter()")}} and {{cssxref("counters", "counters()")}} functions
+- {{cssxref("counter()")}} and {{cssxref("counters()")}} functions
 - {{cssxref("content")}} property
 - {{cssxref("::marker")}} pseudo-class
 - [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module

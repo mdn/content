@@ -447,7 +447,7 @@ Now let's look at how to draw a circle in canvas. This is accomplished using the
    ctx.fill();
    ```
 
-   `arc()` takes six parameters. The first two specify the position of the arc's center (X and Y, respectively). The third is the circle's radius, the fourth and fifth are the start and end angles at which to draw the circle (so specifying 0 and 360 degrees gives us a full circle), and the sixth parameter defines whether the circle should be drawn counterclockwise (anticlockwise) or clockwise (`false` is clockwise).
+   `arc()` takes six parameters. The first two specify the position of the arc's center (X and Y, respectively). The third is the circle's radius, the fourth and fifth are the start and end angles at which to draw the circle (so specifying 0 and 360 degrees gives us a full circle), and the sixth parameter defines whether the circle should be drawn counterclockwise or clockwise (`false` is clockwise).
 
    > [!NOTE]
    > 0 degrees is horizontally to the right.
@@ -625,7 +625,7 @@ Let's build an example.
    So on each iteration, we:
    - Set the `fillStyle` to be a shade of slightly transparent purple, which changes each time based on the value of `length`. As you'll see later the length gets smaller each time the loop runs, so the effect here is that the color gets brighter with each successive triangle drawn.
    - Begin the path.
-   - Move the pen to a coordinate of `(moveOffset, moveOffset)`; This variable defines how far we want to move each time we draw a new triangle.
+   - Move the pen to a coordinate of `(moveOffset, moveOffset)`. This variable defines how far we want to move each time we draw a new triangle.
    - Draw a line to a coordinate of `(moveOffset+length, moveOffset)`. This draws a line of length `length` parallel to the X axis.
    - Calculate the triangle's height, as before.
    - Draw a line to the downward-pointing corner of the triangle, then draw a line back to the start of the triangle.

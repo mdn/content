@@ -1,5 +1,6 @@
 ---
-title: text-emphasis-style
+title: "`text-emphasis-style` CSS property"
+short-title: text-emphasis-style
 slug: Web/CSS/Reference/Properties/text-emphasis-style
 page-type: css-property
 browser-compat: css.properties.text-emphasis-style
@@ -122,4 +123,4 @@ h2 {
 ## See also
 
 - The related properties {{cssxref('text-emphasis-color')}}, {{cssxref('text-emphasis')}}.
-- The {{cssxref('text-emphasis-position')}} property allowing to define the position of the emphasis marks.
+- The {{cssxref('text-emphasis-position')}} property allowing you to define the position of the emphasis marks.

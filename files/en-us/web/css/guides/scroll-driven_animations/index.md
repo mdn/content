@@ -11,7 +11,7 @@ The **CSS scroll-driven animations** module provides functionality that builds o
 
 ## Scroll-driven animations in action
 
-You can define the scroller that controls the animation either by naming the animation or with the {{cssxref("scroll")}} function.
+You can define the scroller that controls the animation either by naming the animation or with the {{cssxref("animation-timeline/scroll", "scroll()")}} function.
 
 ```html hidden live-sample___scroll_animation
 <main>
@@ -97,6 +97,7 @@ div::after {
       background-color: wheat;
       display: block;
       text-align: center;
+      padding: 1rem 0;
     }
   }
 }
@@ -124,13 +125,13 @@ Scroll the element in the inline direction to see its background color change. S
 
 ### Data types and values
 
-- [`<axis>`](/en-US/docs/Web/CSS/Reference/Values/axis)
-- [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name)
+- {{cssxref("axis")}}
+- {{cssxref("timeline-range-name")}}
 
 ### Functions
 
-- [`scroll()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/scroll)
-- [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view)
+- {{cssxref("animation-timeline/scroll", "scroll()")}}
+- {{cssxref("animation-timeline/view", "view()")}}
 
 ### Interfaces
 
@@ -141,12 +142,17 @@ Scroll the element in the inline direction to see its background color change. S
 
 - [Scroll-driven animation timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
   - : Scroll-driven animation timelines and creating scroll-driven animations.
+- [Timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
+  - : The {{cssxref("timeline-range-name")}} data type: Understanding the various timeline range names.
+- [Insetting view progress timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets)
+  - : Insetting the animation attachment ranges of scroll-driven animations.
 
 ## Related concepts
 
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
   - {{cssxref("animation-timeline")}}
-  - {{cssxref("@keyframes")}}
+  - {{cssxref("@keyframes")}} at-rule
+  - [`<keyframe-selector>`](/en-US/docs/Web/CSS/Reference/Selectors/Keyframe_selectors)
 - [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module
   - {{glossary("Scroll container")}}
   - [Scrollport](/en-US/docs/Glossary/Scroll_container#scrollport)

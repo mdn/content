@@ -1,5 +1,6 @@
 ---
-title: grid-template-rows
+title: "`grid-template-rows` CSS property"
+short-title: grid-template-rows
 slug: Web/CSS/Reference/Properties/grid-template-rows
 page-type: css-property
 browser-compat: css.properties.grid-template-rows
@@ -69,7 +70,6 @@ grid-template-rows: minmax(100px, 1fr);
 grid-template-rows: fit-content(40%);
 grid-template-rows: repeat(3, 200px);
 grid-template-rows: subgrid;
-grid-template-rows: masonry;
 
 /* <auto-track-list> values */
 grid-template-rows: 200px repeat(auto-fill, 100px) 300px;
@@ -103,7 +103,7 @@ This property may be specified as:
 - `none`
   - : A keyword meaning that there is no explicit grid. Any rows will be implicitly generated and their size will be determined by the {{cssxref("grid-auto-rows")}} property.
 - `[line-name]`
-  - : A [`<custom-ident>`](/en-US/docs/Web/CSS/Reference/Values/custom-ident) specifying a name for the line in that location. The ident may be any valid string other than the reserved words `span` and `auto`. Lines may have multiple names separated by a space inside the square brackets, for example `[line-name-a line-name-b]`.
+  - : A {{cssxref("custom-ident")}} specifying a name for the line in that location. The ident may be any valid string other than the reserved words `span` and `auto`. Lines may have multiple names separated by a space inside the square brackets, for example `[line-name-a line-name-b]`.
 - {{cssxref("&lt;length&gt;")}}
   - : A non-negative length.
 - {{cssxref("&lt;percentage&gt;")}}
@@ -121,7 +121,7 @@ This property may be specified as:
 
     As a minimum value, it represents the largest minimum size of items in that track (specified by the {{cssxref("min-width")}}/{{cssxref("min-height")}} properties of the items). This often corresponds to the {{cssxref("min-content")}} size, but not always.
 
-    If used outside of {{cssxref("minmax", "minmax()")}} notation, `auto` represents the range between the minimum and maximum values described above. In most cases, this behaves similarly to `minmax(min-content,max-content)`.
+    If used outside of {{cssxref("minmax()")}} notation, `auto` represents the range between the minimum and maximum values described above. In most cases, this behaves similarly to `minmax(min-content,max-content)`.
 
     > [!NOTE]
     > `auto` track sizes (and only `auto` track sizes) can be stretched by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} properties. Therefore, by default, an `auto`-sized track will take up any remaining space in the grid container.
@@ -130,8 +130,6 @@ This property may be specified as:
   - : Represents the formula `min(max-content, max(auto, argument))`, which is calculated similar to `auto` (i.e., `minmax(auto, max-content)`), except that the track size is clamped at _argument_ if it is greater than the `auto` minimum.
 - {{cssxref("repeat", "repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ] , &lt;track-list&gt; )")}}
   - : Represents a repeated fragment of the track list, allowing a large number of rows that exhibit a recurring pattern to be written in a more compact form.
-- [`masonry`](/en-US/docs/Web/CSS/Guides/Grid_layout/Masonry_layout)
-  - : Indicates that this axis should be laid out according to the masonry algorithm.
 - [`subgrid`](/en-US/docs/Web/CSS/Guides/Grid_layout/Subgrid)
   - : Indicates that the grid will adopt the spanned portion of its parent grid in that axis. Rather than being specified explicitly, the sizes of the grid rows/columns will be taken from the parent grid's definition.
 

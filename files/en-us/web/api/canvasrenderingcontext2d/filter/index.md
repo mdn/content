@@ -18,25 +18,25 @@ It is similar to the CSS {{cssxref("filter")}} property and accepts the same val
 The `filter` property accepts a value of `"none"` or one or more
 of the following filter functions in a string.
 
-- [`url()`](/en-US/docs/Web/CSS/Reference/Values/url_function)
+- {{cssxref("url_function", "url()")}}
   - : A CSS {{cssxref("url_function", "url()")}}. Takes any URL that resolves to SVG filter element.
     This can be the ID of an element, a path to external XML file, or even a data encoded SVG value.
-- [`blur()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/blur)
+- {{cssxref("filter-function/blur", "blur()")}}
   - : A CSS {{cssxref("&lt;length&gt;")}}. Applies a Gaussian blur to the drawing. It
     defines the value of the standard deviation to the Gaussian function, i.e., how many
     pixels on the screen blend into each other; thus, a larger value will create more
     blur. A value of `0` leaves the input unchanged.
-- [`brightness()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/brightness)
+- {{cssxref("filter-function/brightness", "brightness()")}}
   - : A CSS {{cssxref("&lt;percentage&gt;")}}. Applies a linear multiplier to the drawing,
     making it appear brighter or darker. A value under `100%` darkens the
     image, while a value over `100%` brightens it. A value of `0%`
     will create an image that is completely black, while a value of `100%`
     leaves the input unchanged.
-- [`contrast()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/contrast)
+- {{cssxref("filter-function/contrast", "contrast()")}}
   - : A CSS {{cssxref("&lt;percentage&gt;")}}. Adjusts the contrast of the drawing. A
     value of `0%` will create a drawing that is completely black. A value of
     `100%` leaves the drawing unchanged.
-- [`drop-shadow()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/drop-shadow)
+- {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
   - : Applies a drop shadow effect to the drawing. A drop shadow is effectively a blurred,
     offset version of the drawing's alpha mask drawn in a particular color, composited
     below the drawing. This function takes up to five arguments:
@@ -53,26 +53,26 @@ of the following filter functions in a string.
       - : See {{cssxref("&lt;color&gt;")}} values for possible
         keywords and notations.
 
-- [`grayscale()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/grayscale)
+- {{cssxref("filter-function/grayscale", "grayscale()")}}
   - : A CSS {{cssxref("&lt;percentage&gt;")}}. Converts the drawing to grayscale. A value
     of `100%` is completely grayscale. A value of `0%` leaves the
     drawing unchanged.
-- [`hue-rotate()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/hue-rotate)
+- {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
   - : A CSS {{cssxref("&lt;angle&gt;")}}. Applies a hue rotation on the drawing. A value
     of `0deg` leaves the input unchanged.
-- [`invert()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/invert)
+- {{cssxref("filter-function/invert", "invert()")}}
   - : A CSS {{cssxref("&lt;percentage&gt;")}}. Inverts the drawing. A value of
     `100%` means complete inversion. A value of `0%` leaves the
     drawing unchanged.
-- [`opacity()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/opacity)
+- {{cssxref("filter-function/opacity", "opacity()")}}
   - : A CSS {{cssxref("&lt;percentage&gt;")}}. Applies transparency to the drawing. A
     value of `0%` means completely transparent. A value of `100%`
     leaves the drawing unchanged.
-- [`saturate()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/saturate)
+- {{cssxref("filter-function/saturate", "saturate()")}}
   - : A CSS {{cssxref("&lt;percentage&gt;")}}. Saturates the drawing. A value of
     `0%` means completely un-saturated. A value of `100%` leaves the
     drawing unchanged.
-- [`sepia()`](/en-US/docs/Web/CSS/Reference/Values/filter-function/sepia)
+- {{cssxref("filter-function/sepia", "sepia()")}}
   - : A CSS {{cssxref("&lt;percentage&gt;")}}. Converts the drawing to sepia. A value of
     `100%` means completely sepia. A value of `0%` leaves the
     drawing unchanged.

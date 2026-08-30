@@ -18,7 +18,6 @@ Microsoft ended support for IE on June 15, 2022.
 - [Internet Explorer](https://en.wikipedia.org/wiki/Internet_Explorer) on Wikipedia
 - [History of Internet Explorer](https://en.wikipedia.org/wiki/History_of_Internet_Explorer) on Wikipedia
 - [Internet Explorer version history](https://en.wikipedia.org/wiki/Internet_Explorer_versions) on Wikipedia
-- [IE11 end of support countdown](https://death-to-ie11.com/)
 - Related glossary terms:
   - {{glossary("Browser")}}
   - {{glossary("Trident")}} (IE's rendering engine)

@@ -1,5 +1,5 @@
 ---
-title: "HTML attribute: readonly"
+title: "`readonly` HTML attribute"
 short-title: readonly
 slug: Web/HTML/Reference/Attributes/readonly
 page-type: html-attribute

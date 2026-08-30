@@ -14,6 +14,7 @@ alphanumerals
 ambisonic
 amore
 analyzability
+animateable-feature
 ANMF
 anonymization
 antialiasing
@@ -60,7 +61,8 @@ barcodes
 barebones
 bfcache
 BGRA
-Bignums
+bignum
+bignums
 bikeshedding
 bilevel
 bioinformatics
@@ -100,10 +102,12 @@ CCPA
 CCPL
 CELP
 CGATS
+chatbots
 cheatsheet
 checkboard
 checkedness
 checkmarks
+cheesemakers
 childlist
 chipsets
 choosable
@@ -157,11 +161,13 @@ datestamped
 DBFS
 DCDM
 DCSP
+debiased
 decodability
 Deinonychus
 demi
 demultiplexing
 demux
+demuxer
 demuxing
 deoptimize
 deprioritized
@@ -186,6 +192,7 @@ doorhanger
 dotless
 downsampled
 downsampling
+DPIA
 dragonfish
 DSCP
 DTLSL
@@ -204,6 +211,7 @@ equirect
 equirectangular
 ESSL
 ETSI
+exfiltrates
 exfiltrating
 EXIF
 expando
@@ -247,6 +255,7 @@ fragmentainers
 framebuffers
 framebusting
 frontmost
+fuhao
 Fullband
 fullscreened
 fullwidth
@@ -310,6 +319,7 @@ iconset
 idents
 IDOR
 IERS
+immediates
 IMSC
 Indo-Pacific
 inferencing
@@ -393,6 +403,7 @@ maplike
 MBASW
 Mbit
 Mbps
+mediacapabilities
 metalness
 metastring
 microcontrollers
@@ -436,6 +447,8 @@ multivalued
 multiview
 muscaria
 musicogenic
+muxer
+muxing
 MVVM
 namedspace
 narrowband
@@ -570,6 +583,7 @@ QWERTZ
 RAII
 rari
 rasterizes
+raycaster
 RDBMS
 RDBMSes
 readback
@@ -578,8 +592,10 @@ reauthenticated
 reauthentication
 redirections
 redisplaying
+refbox
 regionless
 reimplementation
+relatedly
 remarketing
 remotable
 renderable
@@ -630,6 +646,7 @@ scorpionfish
 screenful
 scriptable
 scriptless
+scroll-snappable
 scrollers
 scrollport
 SECAM
@@ -653,6 +670,7 @@ side-scrollers
 sideload
 sideloaded
 SIDX
+signedness
 significand
 singlecast
 singlecasts
@@ -771,6 +789,8 @@ superpowered
 superscaling
 supersets
 SVCB
+swashy
+swooshy
 syncbase
 tablists
 tabstrip
@@ -778,6 +798,7 @@ Tanuki
 targetable
 taskbars
 taskboard
+tealish
 teleporting
 telepresence
 texels
@@ -833,6 +854,8 @@ tweens
 UAAG
 ufrag
 UMTS
+unblinded
+unblinds
 unbookmark
 unbundling
 uncacheable
@@ -871,6 +894,7 @@ unlayered
 unlocalized
 unmaps
 unminified
+unmutes
 unmuting
 unobserves
 unpartitioned
@@ -878,6 +902,7 @@ unpinch
 unprefix
 unprefixing
 unprioritized
+unpunctuated
 unreadably
 unregisters
 unregistration
@@ -907,6 +932,7 @@ Videobridge
 Viewmodel
 virosa
 virtualizes
+VOPRF
 WAAPI
 wallclock
 WAMP

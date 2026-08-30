@@ -1,5 +1,6 @@
 ---
-title: :has()
+title: "`:has()` CSS pseudo-class"
+short-title: :has()
 slug: Web/CSS/Reference/Selectors/:has
 page-type: css-pseudo-class
 browser-compat: css.selectors.has
@@ -17,7 +18,7 @@ h1:has(+ p) {
 }
 ```
 
-The `:has()` pseudo-class takes on the [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity) of the most specific selector in its arguments the same way as {{CSSxRef(":is", ":is()")}} and {{CSSxRef(":not", ":not()")}} do.
+The `:has()` pseudo-class takes on the [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity) of the most specific selector in its arguments the same way as {{cssxref(":is()")}} and {{cssxref(":not()")}} do.
 
 ## Syntax
 
@@ -127,6 +128,8 @@ h1:has(+ h2) {
 
 This example shows two similar texts side-by-side for comparison – the left one with an `H1` heading followed by a paragraph and the right one with an `H1` heading followed by an `H2` heading and then a paragraph. In the example on the right, `:has()` helps to select the `H1` element that is immediately followed by an `H2` element (indicated by the next-sibling combinator [`+`](/en-US/docs/Web/CSS/Reference/Selectors/Next-sibling_combinator)) and the CSS rule reduces the spacing after such an `H1` element. Without the `:has()` pseudo-class, you cannot use CSS selectors to select a preceding sibling of a different type or a parent element.
 
+This usage of `:has()` is analogous to a [lookahead assertion](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion) in regular expressions because they both allow you to select elements (or strings in regular expressions) based on what _follows_ it, which is only possible if the processor is able to "rewind". In the regular expression `abc(?=xyz)`, the string `abc` is matched only if it is immediately followed by the string `xyz`. As it is a lookahead operation, the `xyz` is not included in the match. The analogous construct in CSS would be `.abc:has(+ .xyz)`: it selects the element `.abc` only if there is a next sibling `.xyz`. The part `:has(+ .xyz)` looks ahead for the next element `.xyz`, but then selects the previous element `.abc` instead. Similarly, you can implement negative lookahead like `abc(?!xyz)` by negating the `:has()`: `.abc:not(:has(+ .xyz))` only matches `.abc` elements that are not followed by `.xyz` (either because the next sibling does not match `.xyz` or because it's the last child node).
+
 ### With the :is() pseudo-class
 
 This example builds on the previous example to show how to select multiple elements with `:has()`.
@@ -226,20 +229,6 @@ body:has(video):has(audio) {
   /* styles to apply if the content contains both audio AND video */
 }
 ```
-
-## Analogy between :has() and regular expressions
-
-Interestingly, we can relate some CSS `:has()` constructs with the [lookahead assertion](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion) in regular expressions because they both allow you to select elements (or strings in regular expressions) based on a condition without actually selecting the condition matching the element (or string) itself.
-
-### Positive lookahead (?=pattern)
-
-In the regular expression `abc(?=xyz)`, the string `abc` is matched only if it is immediately followed by the string `xyz`. As it is a lookahead operation, the `xyz` is not included in the match.
-
-The analogous construct in CSS would be `.abc:has(+ .xyz)`: it selects the element `.abc` only if there is a next sibling `.xyz`. The part `:has(+ .xyz)` acts as a lookahead operation because the element `.abc` is selected and not the element `.xyz`.
-
-### Negative lookahead (?!pattern)
-
-Similarly, for the negative lookahead case, in the regular expression `abc(?!xyz)`, the string `abc` is matched only if it is _not_ followed by `xyz`. The analogous CSS construct `.abc:has(+ :not(.xyz))` doesn't select the element `.abc` if the next element is `.xyz`.
 
 ## Performance considerations
 

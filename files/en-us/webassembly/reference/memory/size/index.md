@@ -1,16 +1,13 @@
 ---
-title: "size: Wasm text instruction"
+title: "size: Wasm memory instruction"
 short-title: size
 slug: WebAssembly/Reference/Memory/size
 page-type: webassembly-instruction
-browser-compat:
-  - webassembly.api.Memory
-  - webassembly.multiMemory
-spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
+browser-compat: webassembly.instructions.memory_size
 sidebar: webassemblysidebar
 ---
 
-The **`size`** [memory instruction](/en-US/docs/WebAssembly/Reference/Memory) is used to get the current number of pages in a memory.
+The **`memory.size`** [memory instruction](/en-US/docs/WebAssembly/Reference/Memory) is used to get the current number of pages in a memory.
 
 The instruction adds the size (in pages) to the top of the stack.
 Currently each page is 64KiB.
@@ -154,6 +151,3 @@ The WAT files could be loaded using the same JavaScript code as the first exampl
 ## Browser compatibility
 
 {{Compat}}
-
-> [!NOTE]
-> The `multiMemory` compatibility table indicates versions in which `size` can be used with a specified memory.

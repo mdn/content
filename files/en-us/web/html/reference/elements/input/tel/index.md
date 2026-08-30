@@ -1,5 +1,6 @@
 ---
-title: <input type="tel">
+title: '`<input type="tel">` HTML attribute value'
+short-title: <input type="tel">
 slug: Web/HTML/Reference/Elements/input/tel
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_tel
@@ -517,18 +518,12 @@ input:valid + span::after {
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
-        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
-      </td>
-    </tr>
-    <tr>
       <td><strong>Implicit ARIA Role</strong></td>
-      <td>with no <code>list</code> attribute:
-                <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a></code></td>
-      <td>with <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role">combobox</a></code></td>
+      <td>
+        with no <code>list</code> attribute:
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a></code><br />
+        with <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role">combobox</a></code>
+      </td>
     </tr>
   </tbody>
 </table>

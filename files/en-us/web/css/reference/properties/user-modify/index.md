@@ -1,5 +1,6 @@
 ---
-title: user-modify
+title: "`user-modify` CSS property"
+short-title: user-modify
 slug: Web/CSS/Reference/Properties/user-modify
 page-type: css-property
 status:
@@ -9,7 +10,7 @@ browser-compat: css.properties.user-modify
 sidebar: cssref
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
 The **`user-modify`** property has no effect in Firefox. It was originally planned to determine whether or not the content of an element can be edited by a user.
 
@@ -31,9 +32,9 @@ user-modify: revert;
 user-modify: unset;
 ```
 
-The `-moz-user-modify` property is specified as one of the keyword values from the list below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `read-only`
   - : Default value. Contents are read-only.

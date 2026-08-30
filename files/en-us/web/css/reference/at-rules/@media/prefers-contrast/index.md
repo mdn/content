@@ -1,5 +1,6 @@
 ---
-title: prefers-contrast
+title: "`prefers-contrast` CSS media feature"
+short-title: prefers-contrast
 slug: Web/CSS/Reference/At-rules/@media/prefers-contrast
 page-type: css-media-feature
 browser-compat: css.at-rules.media.prefers-contrast
@@ -25,7 +26,7 @@ Various operating systems do support such preferences and user agents are likely
 
 ## Examples
 
-This example has an annoying low contrast by default.
+This example includes a box with a dashed {{cssxref("outline")}} set on it by default. When the `prefers-contrast: more` media query matches, the applied outline is given a higher contrast `solid` style instead.
 
 ### HTML
 
@@ -37,6 +38,7 @@ This example has an annoying low contrast by default.
 
 ```css
 .contrast {
+  margin: 5px;
   width: 100px;
   height: 100px;
   outline: 2px dashed black;

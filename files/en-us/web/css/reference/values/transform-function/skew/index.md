@@ -1,5 +1,6 @@
 ---
-title: skew()
+title: "`skew()` CSS function"
+short-title: skew()
 slug: Web/CSS/Reference/Values/transform-function/skew
 page-type: css-function
 browser-compat: css.types.transform-function.skew
@@ -55,9 +56,9 @@ skew(ax, ay)
 ### Values
 
 - `ax`
-  - : Is an {{cssxref("&lt;angle&gt;")}} representing the angle to use to distort the element along the x-axis.
+  - : Is an {{cssxref("angle")}} representing the angle to use to distort the element along the x-axis.
 - `ay` {{optional_inline}}
-  - : Is an {{cssxref("&lt;angle&gt;")}} representing the angle to use to distort the element along the y-axis. If not defined, its default value is `0`, resulting in a purely horizontal skewing.
+  - : Is an {{cssxref("angle")}} representing the angle to use to distort the element along the y-axis. If not defined, its default value is `0`, resulting in a purely horizontal skewing.
 
 <table class="standard-table">
   <thead>

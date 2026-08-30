@@ -1,5 +1,6 @@
 ---
-title: "@import"
+title: "`@import` CSS at-rule"
+short-title: "@import"
 slug: Web/CSS/Reference/At-rules/@import
 page-type: css-at-rule
 browser-compat: css.at-rules.import
@@ -40,7 +41,7 @@ Use `@import` together with the `layer` keyword or `layer()` function to import 
 
 ## Description
 
-Imported rules must come before all other types of rules, except {{CSSxRef("@charset")}} rules and layer creating [`@layer`](/en-US/docs/Web/CSS/Reference/At-rules/@layer) statements.
+Imported rules must come before all other types of rules, except {{CSSxRef("@charset")}} rules and layer creating {{cssxref("@layer")}} statements.
 
 ```css example-bad
 * {
