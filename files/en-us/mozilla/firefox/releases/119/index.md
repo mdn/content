@@ -65,7 +65,7 @@ This article provides information about the changes in Firefox 119 that affect d
 
 - Added the [`script.realmCreated`](https://w3c.github.io/webdriver-bidi/#event-script-realmCreated) and [`script.realmDestroyed`](https://w3c.github.io/webdriver-bidi/#event-script-realmDestroyed) events that allow users to monitor the lifetime of JavaScript Realms of a given browsing context. Such a Realm is basically an isolated execution environment (`sandbox`) with its own unique global object (window) ([Firefox bug 1788657](https://bugzil.la/1788657), [Firefox bug 1788659](https://bugzil.la/1788659)).
 
-- The `browsingContext.userPromptOpened` event was accidentally sent when a HTTP Authentication dialog was opened ([Firefox bug 1853302](https://bugzil.la/1853302)).
+- The `browsingContext.userPromptOpened` event was accidentally sent when an HTTP Authentication dialog was opened ([Firefox bug 1853302](https://bugzil.la/1853302)).
 
 - Unwanted events with the `context` field set to `null` will no longer be emitted. Because the underlying browsing context has been closed such events are no longer valid ([Firefox bug 1847563](https://bugzil.la/1847563)).
 

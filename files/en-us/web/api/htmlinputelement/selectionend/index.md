@@ -71,6 +71,8 @@ console.log(colorEnd.selectionEnd); // Output : null
 
 ## See also
 
+- {{HTMLElement("input")}}
+- {{domxref("HTMLInputElement")}}
 - {{domxref("HTMLTextAreaElement.selectionEnd")}} property
 - {{domxref("HTMLInputElement.selectionStart")}} property
 - {{domxref("HTMLInputElement.setSelectionRange")}} method

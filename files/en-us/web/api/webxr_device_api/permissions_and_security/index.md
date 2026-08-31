@@ -44,5 +44,5 @@ Specifically:
 
 **Implicit user intent** (implicit user consent) is assumed if either of the following scenarios is the case:
 
-- The user has interacted with the document in some way which has in turn caused your request to occur. For example, if you have an "Enter XR mode" button, and the user clicks it, calling `requestSession()` from the button's {{domxref("Element.click_event", "click")}} event handler will permitted.
+- The user has interacted with the document in some way which has in turn caused your request to occur. For example, if you have an "Enter XR mode" button, and the user clicks it, calling `requestSession()` from the button's {{domxref("Element.click_event", "click")}} event handler will be permitted.
 - If your code is executing during the launch of a web application, the runtime may consider the act of launching your web application to qualify as user intent.

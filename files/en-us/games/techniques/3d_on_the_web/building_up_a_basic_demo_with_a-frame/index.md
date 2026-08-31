@@ -111,7 +111,7 @@ A-Frame takes care of setting up everything you need:
 
 - A default light source and camera are included, so the cube is visible.
 - The controls are already working: you can use the mouse for looking around and the keyboard for movement.
-  Try the <kbd>W</kbd>, <kbd>A</kbd>, <kbd>S</kbd>, and <kbd>D</kbd> keys).
+  Try the <kbd>W</kbd>, <kbd>A</kbd>, <kbd>S</kbd>, and <kbd>D</kbd> keys.
 - There's an "Enter VR mode" button in the bottom right corner of the screen, to allow you to shift to full screen, stereoscopic image viewing if you have the necessary VR hardware set up and ready.
 
 ### Specifying a camera

@@ -1,5 +1,6 @@
 ---
-title: :popover-open
+title: "`:popover-open` CSS pseudo-class"
+short-title: :popover-open
 slug: Web/CSS/Reference/Selectors/:popover-open
 page-type: css-pseudo-class
 browser-compat: css.selectors.popover-open

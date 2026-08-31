@@ -1,12 +1,13 @@
 ---
-title: animation-range
+title: "`animation-range` CSS property"
+short-title: animation-range
 slug: Web/CSS/Reference/Properties/animation-range
 page-type: css-shorthand-property
 browser-compat: css.properties.animation-range
 sidebar: cssref
 ---
 
-The **`animation-range`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) is used to set the start and end of an animation's attachment range along its timeline, i.e., where along the timeline an animation will start and end.
+The **`animation-range`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property is used to set the start and end of an animation's attachment range along its timeline, i.e., where along the timeline an animation will start and end.
 
 ## Constituent properties
 
@@ -44,16 +45,16 @@ animation-range: cover 0% cover 200px;
 animation-range: entry 10% exit 100%;
 
 /* Global values */
-animation-timeline: inherit;
-animation-timeline: initial;
-animation-timeline: revert;
-animation-timeline: revert-layer;
-animation-timeline: unset;
+animation-range: inherit;
+animation-range: initial;
+animation-range: revert;
+animation-range: revert-layer;
+animation-range: unset;
 ```
 
-The `animation-range` shorthand property is specified as one or more single animation ranges, separated by commas. Each animation range is specified as one to four space separated values composed of `<timeline-range-name>` values, `<length-percentage>` values, and/or the keyword `normal`.
-
 ### Values
+
+The `animation-range` shorthand property is specified as one or more single animation ranges, separated by commas. Each animation range is specified as one to four space separated values composed of `<timeline-range-name>` values, `<length-percentage>` values, and/or the keyword `normal`.
 
 - `<animation-range-start>`
   - : The keyword `normal`, a `<length-percentage>`, a {{cssxref("timeline-range-name")}}, or a `<timeline-range-name> <length-percentage>` pair, representing the {{cssxref("animation-range-start")}}. If a `<timeline-range-name>` is set without a `<length-percentage>`, the `<length-percentage>` defaults to `0%`.
@@ -62,7 +63,7 @@ The `animation-range` shorthand property is specified as one or more single anim
 
 ## Description
 
-The `animation-range` shorthand property sets the `animation-range-start` and `animation-range-end` values, defining where along the animation timeline the animation will start and end. By default, the styles defined in a keyframe animation are only applied to an element while that element is being animated. When a keyframe animation is applied to an element depends on the animation timeline of that animation. By default, animation are only applied between the timeline's range start and range end. To apply the animation outside of this range, set the {{cssxref("animation-fill-mode")}} to `backwards`, `forwards`, or `both`. These three `animation-fill-mode` values apply the first keyframe styles until range start, the last keyframe styles after the animation ends, or both before and after, respectively.
+The `animation-range` shorthand property sets the `animation-range-start` and `animation-range-end` values, defining where along the animation timeline the animation will start and end. By default, the styles defined in a keyframe animation are only applied to an element while that element is being animated. When a keyframe animation is applied to an element depends on the animation timeline of that animation. By default, animations are only applied between the timeline's range start and range end. To apply the animation outside of this range, set the {{cssxref("animation-fill-mode")}} to `backwards`, `forwards`, or `both`. These three `animation-fill-mode` values apply the first keyframe styles until range start, the last keyframe styles after the animation ends, or both before and after, respectively.
 
 The {{glossary("Scroll container", "scroll port")}} area known as the view progress visibility range is the area inside which the subject element of a [named view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) animation is deemed to be visible. By default, this is the full range of the scrollport, but it can be adjusted using the {{cssxref("view-timeline-inset")}} property.
 
@@ -75,7 +76,7 @@ When you define only the `<animation-range-start>`, either by setting a single {
 If the value is a single `<length-percentage>` or the keyword `normal`, this value defines the `<animation-range-start>` and the `<animation-range-end>` is implicitly set to `normal`. For example:
 
 - `animation-range: 20%;` is the equivalent to `animation-range-start: 20%; animation-range-end: normal;`
-- `animation-range: normal;` is the equivalent to `animation-range-start: 0%; animation-range-end: 100%;`
+- `animation-range: normal;` is the equivalent to `animation-range-start: normal; animation-range-end: normal;`
 
 If the value is a single {{cssxref("timeline-range-name")}} (without a `<length-percentage>` following it), that timeline range name is applied to both the `<animation-range-start>` and `<animation-range-end>` components, and the ranges of `0%` and `100%`, respectively, are implied. For example:
 
@@ -93,14 +94,14 @@ If two or more values are included in your `animation-range` declaration and the
 
 If you include two values and the first value is the keyword `normal` or a `<length-percentage>`, that value defines the `<animation-range-start>`, and the second value defines the `<animation-range-end>`. For example:
 
-- `animation-range: normal 25%;` is equivalent to `animation-range-start: 0%; animation-range-end: 25%;`
+- `animation-range: normal 25%;` is equivalent to `animation-range-start: normal; animation-range-end: 25%;`
 - `animation-range: 25% 50%;` is equivalent to `animation-range-start: 25%; animation-range-end: 50%;`
 - `animation-range: 25% contain;` is equivalent to `animation-range-start: 25%; animation-range-end: contain 100%;`
-- `animation-range: 25% normal;` is equivalent to `animation-range-start: 25%; animation-range-end: 100%;`
+- `animation-range: 25% normal;` is equivalent to `animation-range-start: 25%; animation-range-end: normal;`
 
 ### Multiple animations
 
-When specifying ranges for multiple animations, the `animation-range` shorthand property is specified as one or more single animation ranges, separated by commas. Each animation-range is applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. For situations where the number of animations and the `animation-range` property values do not match, if there are more `animation-range` value than animations, the extra ranges are ignore. If there are more animations than ranges, the list of `animation-range` values are repeated until there is a corresponding range for each animation. For example, if we set `animation-range: 25% 75%, normal;`, the animation range of all the odd numbered animations `25% 75%` and all the even animations will be `0% 100%`.
+When specifying ranges for multiple animations, the `animation-range` shorthand property is specified as one or more single animation ranges, separated by commas. Each animation-range is applied to the animations in the order in which the {{cssxref("animation-name")}}s appear. For situations where the number of animations and the `animation-range` property values do not match, if there are more `animation-range` values than animations, the extra ranges are ignored. If there are more animations than ranges, the list of `animation-range` values are repeated until there is a corresponding range for each animation. For example, if we set `animation-range: 25% 75%, normal;`, the animation range of all the odd numbered animations `25% 75%` and all the even animations will be `0% 100%`.
 
 ## Formal definition
 
@@ -252,7 +253,7 @@ Scroll to see the element being animated.
 
 {{EmbedLiveSample("Examples", "100%", "480px")}}
 
-Note how the `from`, or `0%`, keyframe property values are not applied to the animated element until the top block border edge is `10%` past the container's bottom edge; it is full size, fully opaque, and magenta. At that point, the animation is applied and it is styled with the values defined by the `0%` keyframe selector. When the `animation-range-end` is reached, 25% from the top of the scrollport, it jumps back to its original styling.
+Note how the `from`, or `0%`, keyframe property values are not applied to the animated element until the top block border edge is `10%` past the container's bottom edge; it is full size, fully opaque, and magenta. At that point, the animation is applied and it is styled with the values defined by the `0%` [keyframe selector](/en-US/docs/Web/CSS/Reference/Selectors/Keyframe_selectors). When the `animation-range-end` is reached, 25% from the top of the scrollport, it jumps back to its original styling.
 
 Generally, you will want to set `animation-fill-mode: both` when creating [scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations). The jump to the default state occurs because we did not set the {{cssxref("animation-fill-mode")}} property on the element, which can be used to apply an animation's styles to an element before and after the animation's execution. We initially omitted the property in this example to better enable visualizing the effects of `animation-range`.
 
@@ -275,5 +276,6 @@ Check the checkbox to apply the `animation-fill-mode` property to the animated e
 - {{cssxref("timeline-scope")}}
 - {{cssxref("view-timeline-inset")}}
 - {{cssxref("animation-fill-mode")}}
+- [Understanding timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module
 - [View timeline range visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/)

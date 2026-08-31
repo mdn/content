@@ -1,5 +1,6 @@
 ---
-title: repeating-linear-gradient()
+title: "`repeating-linear-gradient()` CSS function"
+short-title: repeating-linear-gradient()
 slug: Web/CSS/Reference/Values/gradient/repeating-linear-gradient
 page-type: css-function
 browser-compat: css.types.gradient.repeating-linear-gradient

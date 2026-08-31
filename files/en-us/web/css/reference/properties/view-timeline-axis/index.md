@@ -1,5 +1,6 @@
 ---
-title: view-timeline-axis
+title: "`view-timeline-axis` CSS property"
+short-title: view-timeline-axis
 slug: Web/CSS/Reference/Properties/view-timeline-axis
 page-type: css-property
 browser-compat: css.properties.view-timeline-axis
@@ -163,7 +164,7 @@ p {
   body::before {
     display: block;
     text-align: center;
-    padding: 1em;
+    padding: 1rem 0;
   }
   @supports not (view-timeline-axis: inherit) {
     body::before {
@@ -198,7 +199,7 @@ Scroll the horizontal bar at the bottom to see the subject element animate as yo
 
 - {{cssxref("animation-timeline")}}
 - {{cssxref("view-timeline")}}, {{cssxref("view-timeline-inset")}}, {{cssxref("view-timeline-name")}}
-- {{cssxref("view()")}}
+- {{cssxref("animation-timeline/view", "view()")}}
 - [Guide: Scroll-driven animation timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module

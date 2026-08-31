@@ -30,7 +30,7 @@ Alternatively, you may want an animation to move forward in distinct steps, to c
 
 ### Terms and glossary definitions
 
-- {{glossary("Bézier curve")}}
+- {{glossary("Bezier curve", "Bézier curve")}}
 - {{glossary("Interpolation")}}
 
 ## Guides

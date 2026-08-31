@@ -208,6 +208,8 @@ The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/C
   - : Returns a color with maximum color contrast for a given color.
 - {{CSSxRef("color_value/device-cmyk", "device-cmyk()")}}
   - : Defines CMYK colors in a device-dependent way.
+- {{CSSXref("color_value/alpha", "alpha()")}}
+  - : Returns a color with a modified alpha (transparency) channel.
 - {{CSSXref("color_value/light-dark", "light-dark()")}}
   - : Returns one of two provided colors based on the current color scheme.
 - {{cssxref("dynamic-range-limit-mix()")}}
@@ -284,7 +286,7 @@ The {{cssxref("basic-shape")}} CSS [data type](/en-US/docs/Web/CSS/Reference/Val
 - {{cssxref("ray()")}}
   - : Valid with {{cssxref("offset-path")}}; defines the line segment an animated element can follow.
 - {{CSSxRef("superellipse()")}}
-  - : Defines the curvature of an ellipse; can be used to specify a {{cssxref("corner-shape-value")}}, which is used with {{cssxref("corner-shape")}} and its [constituent](/en-US/docs/Web/CSS/Reference/Properties/corner-shape#constituent_properties) and [related](/en-US/docs/Web/CSS/Reference/Properties/corner-shape#properties_that_follow_the_corner_shape) properties.
+  - : Defines the curvature of an ellipse; can be used to specify a {{cssxref("corner-shape-value")}}, which is used with {{cssxref("corner-shape")}} and its [constituent](/en-US/docs/Web/CSS/Reference/Properties/corner-shape#constituent_properties) and [related](/en-US/docs/Web/CSS/Reference/Properties/corner-shape#properties_that_follow_corner-shape) properties.
 
 ## Reference functions
 
@@ -305,7 +307,7 @@ The following functions are used as a value of properties to reference a value d
 
 The following functions are used to define a [CSS grid](/en-US/docs/Web/CSS/Guides/Grid_layout):
 
-- {{cssxref("fit-content_function", "fit-content()")}}
+- {{cssxref("fit-content()")}}
   - : Clamps a given size to an available size according to the formula `min(maximum size, max(minimum size, argument))`.
 - {{cssxref("minmax()")}}
   - : Defines a size range greater-than or equal-to _min_ and less-than or equal-to _max_.
@@ -372,6 +374,7 @@ The following functions return an integer value based on the DOM tree, rather th
 - {{cssxref("-moz-image-rect")}} {{non-standard_inline}} {{deprecated_inline}}
 - {{cssxref("abs")}}
 - {{cssxref("acos")}}
+- {{cssxref("alpha")}}
 - {{cssxref("anchor")}}
 - {{cssxref("anchor-size")}}
 - {{cssxref("asin")}}
@@ -388,7 +391,7 @@ The following functions return an integer value based on the DOM tree, rather th
 - {{cssxref("color_value/color-mix", "color-mix()")}}
 - {{cssxref("gradient/conic-gradient", "conic-gradient()")}}
 - {{cssxref("filter-function/contrast", "contrast()")}}
-- {{cssxref("color_value/contrast-color", "contrast-color()")}} {{experimental_inline}}
+- {{cssxref("color_value/contrast-color", "contrast-color()")}}
 - {{cssxref("cos")}}
 - {{cssxref("counter")}}
 - {{cssxref("counters")}}
@@ -401,7 +404,7 @@ The following functions return an integer value based on the DOM tree, rather th
 - {{cssxref("basic-shape/ellipse", "ellipse()")}}
 - {{cssxref("env")}}
 - {{cssxref("exp")}}
-- {{cssxref("fit-content_function", "fit-content()")}}
+- {{cssxref("fit-content()")}}
 - {{cssxref("filter-function/grayscale", "grayscale()")}}
 - {{cssxref("color_value/hsl", "hsl()")}}
 - {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
@@ -434,8 +437,9 @@ The following functions return an integer value based on the DOM tree, rather th
 - {{cssxref("transform-function/perspective", "perspective()")}}
 - {{cssxref("basic-shape/polygon", "polygon()")}}
 - {{cssxref("pow")}}
-- {{cssxref("progress")}} {{experimental_inline}}
+- {{cssxref("progress")}}
 - {{cssxref("gradient/radial-gradient", "radial-gradient()")}}
+- {{cssxref("random")}}
 - {{cssxref("ray")}}
 - {{cssxref("basic-shape/rect", "rect()")}}
 - {{cssxref("rem")}}
@@ -459,8 +463,8 @@ The following functions return an integer value based on the DOM tree, rather th
 - {{cssxref("animation-timeline/scroll", "scroll()")}}
 - {{cssxref("filter-function/sepia", "sepia()")}}
 - {{cssxref("basic-shape/shape", "shape()")}}
-- {{cssxref("sibling-count")}} {{experimental_inline}}
-- {{cssxref("sibling-index")}} {{experimental_inline}}
+- {{cssxref("sibling-count")}}
+- {{cssxref("sibling-index")}}
 - {{cssxref("sign")}}
 - {{cssxref("sin")}}
 - {{cssxref("transform-function/skew", "skew()")}}

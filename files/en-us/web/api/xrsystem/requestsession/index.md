@@ -11,7 +11,7 @@ browser-compat: api.XRSystem.requestSession
 {{APIRef("WebXR Device API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
 The **{{domxref("XRSystem")}}** interface's
-**`requestSession()`** method returns a {{jsxref("promise")}}
+**`requestSession()`** method returns a {{jsxref("Promise")}}
 which resolves to an {{domxref("XRSession")}} object through which you can manage the
 requested type of WebXR session.
 
@@ -84,7 +84,7 @@ The following session features and reference spaces can be requested, either as 
 - `depth-sensing`
   - : Enable the ability to obtain depth information using {{domxref("XRDepthInformation")}} objects.
 - `dom-overlay`
-  - : Enable allowing to specify a DOM overlay element that will be displayed to the user.
+  - : Enable specifying a DOM overlay element that will be displayed to the user.
 - `hand-tracking`
   - : Enable articulated hand pose information from hand-based input controllers (see {{domxref("XRHand")}} and {{domxref("XRInputSource.hand")}}).
 - `hit-test`

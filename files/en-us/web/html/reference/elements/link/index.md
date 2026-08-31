@@ -1,5 +1,6 @@
 ---
-title: "<link>: The External Resource Link element"
+title: "`<link>` HTML external resource link element"
+short-title: <link>
 slug: Web/HTML/Reference/Elements/link
 page-type: html-element
 browser-compat: html.elements.link
@@ -93,25 +94,20 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     <table class="standard-table">
       <thead>
         <tr>
-          <th scope="col">Value</th>
+          <th scope="col"><code>As</code> value</th>
+          <th scope="col"><code>Rel</code> value</th>
           <th scope="col">Applies To</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>audio</td>
-          <td><code>&#x3C;audio></code> elements</td>
-        </tr>
-        <tr>
-          <td>document</td>
-          <td><code>&#x3C;iframe></code> and <code>&#x3C;frame></code> elements</td>
-        </tr>
-        <tr>
-          <td>embed</td>
-          <td><code>&#x3C;embed></code> elements</td>
+          <td>audioworklet</td>
+          <td>modulepreload</td>
+          <td><a href="/en-US/docs/Web/API/AudioWorklet">AudioWorklet</a> modules</td>
         </tr>
         <tr>
           <td>fetch</td>
+          <td>preload</td>
           <td>
             <p>fetch, XHR</p>
             <div class="notecard note">
@@ -124,6 +120,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
         </tr>
         <tr>
           <td>font</td>
+          <td>preload</td>
           <td>
             <p>CSS @font-face</p>
             <div class="notecard note">
@@ -136,6 +133,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
         </tr>
         <tr>
           <td>image</td>
+          <td>preload</td>
           <td>
             <code>&#x3C;img></code> and <code>&#x3C;picture></code> elements with
             srcset or imageset attributes, SVG <code>&#x3C;image></code> elements,
@@ -143,33 +141,56 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
           </td>
         </tr>
         <tr>
-          <td>object</td>
-          <td><code>&#x3C;object></code> elements</td>
+          <td>json</td>
+          <td>modulepreload</td>
+          <td>
+            Supplementary JSON file
+          </td>
+        </tr>
+        <tr>
+          <td>paintworklet</td>
+          <td>modulepreload</td>
+          <td><a href="/en-US/docs/Web/API/PaintWorkletGlobalScope">PaintWorklet</a> modules</td>
         </tr>
         <tr>
           <td>script</td>
+          <td>preload or modulepreload</td>
           <td>
-            <code>&#x3C;script></code> elements, Worker <code>importScripts</code>
+            <code>&#x3C;script></code> elements, Worker <code>importScripts</code>, and <code>modulepreload</code> destinations.
           </td>
+        </tr>
+        <tr>
+          <td>serviceworker</td>
+          <td>modulepreload</td>
+          <td><a href="/en-US/docs/Web/API/ServiceWorker">ServiceWorker</a> modules</td>
+        </tr>
+        <tr>
+          <td>sharedworker</td>
+          <td>modulepreload</td>
+          <td><a href="/en-US/docs/Web/API/SharedWorker">SharedWorker</a></td>
         </tr>
         <tr>
           <td>style</td>
+          <td>preload or modulepreload</td>
           <td>
             <code>&#x3C;link rel=stylesheet></code> elements, CSS
-            <code>@import</code>
+            <code>@import</code> and <code>modulepreload</code> destinations.
           </td>
         </tr>
         <tr>
-          <td>track</td>
-          <td><code>&#x3C;track></code> elements</td>
+          <td>text</td>
+          <td>modulepreload</td>
+          <td>Supplementary plain text file</td>
         </tr>
         <tr>
-          <td>video</td>
-          <td><code>&#x3C;video></code> elements</td>
+          <td>track</td>
+          <td>preload</td>
+          <td><code>&#x3C;track></code> elements (<a href="/en-US/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format">WebVTT</a>, MIME type <code>text/vtt</code>)</td>
         </tr>
         <tr>
           <td>worker</td>
-          <td>Worker, SharedWorker</td>
+          <td>modulepreload</td>
+          <td><a href="/en-US/docs/Web/API/Worker">Worker</a> modules</td>
         </tr>
       </tbody>
     </table>
@@ -223,22 +244,23 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
   - : For `rel="preload"` and `as="image"` only, the `imagesizes` attribute has similar syntax and semantics as the [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) attribute that indicates to preload the appropriate resource used by an `img` element with corresponding values for its `srcset` and `sizes` attributes.
 - `imagesrcset`
   - : For `rel="preload"` and `as="image"` only, the `imagesrcset` attribute has similar syntax and semantics as the [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) attribute that indicates to preload the appropriate resource used by an `img` element with corresponding values for its `srcset` and `sizes` attributes.
-- `integrity`
-  - : Contains inline metadata — a base64-encoded cryptographic hash of the resource (file) you're telling the browser to fetch.
-    The browser can use this to verify that the fetched resource has been delivered without unexpected manipulation.
-    The attribute must only be specified when the `rel` attribute is specified to `stylesheet`, `preload`, or `modulepreload`.
+- [`integrity`](/en-US/docs/Web/HTML/Reference/Attributes/integrity)
+  - : This attribute contains one or more {{glossary("hash function", "hashes")}} of the resource. It is used to ensure that the content of the resource is what the developer expects it to be, and has not been replaced with a malicious copy in a [supply chain attack](/en-US/docs/Web/Security/Attacks/Supply_chain_attacks). The attribute must only be specified when the `rel` attribute is set to `stylesheet`, `preload`, or `modulepreload`.
     See [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity).
 - `media`
   - : This attribute specifies the media that the linked resource applies to. Its value must be a media type / [media query](/en-US/docs/Web/CSS/Guides/Media_queries).
     This attribute is mainly useful when linking to external stylesheets — it allows the user agent to pick the best adapted one for the device it runs on.
 
 - `referrerpolicy`
-  - : A string indicating which referrer to use when fetching the resource:
+  - : A string indicating which referrer to use when fetching the resource. For detailed explanations and examples of each policy, see the {{HTTPHeader("Referrer-Policy")}} header documentation.
     - `no-referrer` means that the {{HTTPHeader("Referer")}} header will not be sent.
     - `no-referrer-when-downgrade` means that no {{HTTPHeader("Referer")}} header will be sent when navigating to an origin without TLS (HTTPS).
       This is a user agent's default behavior, if no policy is otherwise specified.
     - `origin` means that the referrer will be the origin of the page, which is roughly the scheme, the host, and the port.
     - `origin-when-cross-origin` means that navigating to other origins will be limited to the scheme, the host, and the port, while navigating on the same origin will include the referrer's path.
+    - `same-origin` means that the referrer (origin, path, and query string) is sent for same-origin requests, but no referrer is sent for cross-origin requests.
+    - `strict-origin` means that only the origin is sent when the protocol security level stays the same (HTTPS→HTTPS). No referrer is sent to less secure destinations (HTTPS→HTTP). This is important for HTTPS pages because it prevents leaking referrer information to insecure origins.
+    - `strict-origin-when-cross-origin` means that the full referrer is sent for same-origin requests. For cross-origin requests, only the origin is sent when the protocol stays the same (HTTPS→HTTPS), and no referrer is sent when downgrading to HTTP. This is the default value, which balances functionality with privacy and security for HTTPS sites.
     - `unsafe-url` means that the referrer will include the origin and the path (but not the fragment, password, or username).
       This case is unsafe because it can leak origins and paths from TLS-protected resources to insecure origins.
 
@@ -449,3 +471,4 @@ the rendering of the page will be blocked till the resource and its critical sub
 ## See also
 
 - {{HTTPHeader("Link")}} HTTP header
+- {{HTTPHeader("Referrer-Policy")}} HTTP header

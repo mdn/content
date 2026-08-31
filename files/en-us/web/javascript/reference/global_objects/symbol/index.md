@@ -26,7 +26,7 @@ The above code creates three new Symbols. Note that `Symbol("foo")` does not coe
 Symbol("foo") === Symbol("foo"); // false
 ```
 
-The following syntax with the {{jsxref("Operators/new", "new")}} operator will throw a {{jsxref("TypeError")}}:
+The following syntax with the {{jsxref("new")}} operator will throw a {{jsxref("TypeError")}}:
 
 ```js example-bad
 const sym = new Symbol(); // TypeError
@@ -61,7 +61,7 @@ Because registered symbols can be arbitrarily created anywhere, they behave almo
 
 ### Well-known Symbols
 
-All static properties of the `Symbol` constructor are Symbols themselves, whose values are constant across realms. They are known as _well-known Symbols_, and their purpose is to serve as "protocols" for certain built-in JavaScript operations, allowing users to customize the language's behavior. For example, if a constructor function has a method with {{jsxref("Symbol.hasInstance")}} as its name, this method will encode its behavior with the {{jsxref("Operators/instanceof", "instanceof")}} operator.
+All static properties of the `Symbol` constructor are Symbols themselves, whose values are constant across realms. They are known as _well-known Symbols_, and their purpose is to serve as "protocols" for certain built-in JavaScript operations, allowing users to customize the language's behavior. For example, if a constructor function has a method with {{jsxref("Symbol.hasInstance")}} as its name, this method will encode its behavior with the {{jsxref("instanceof")}} operator.
 
 Prior to well-known Symbols, JavaScript used normal properties to implement certain built-in operations. For example, the [`JSON.stringify`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) function will attempt to call each object's `toJSON()` method, and the [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/String) function will call the object's `toString()` and `valueOf()` methods. However, as more operations are added to the language, designating each operation a "magic property" can break backward compatibility and make the language's behavior harder to reason with. Well-known Symbols allow the customizations to be "invisible" from normal code, which typically only read string properties.
 
@@ -90,7 +90,7 @@ The static properties are all well-known Symbols. In these Symbols' descriptions
 - {{jsxref("Symbol.dispose")}}
   - : A method that disposes resources of the object when the object goes out of scope. Used by the [`using`](/en-US/docs/Web/JavaScript/Reference/Statements/using) declaration.
 - {{jsxref("Symbol.hasInstance")}}
-  - : A method determining if a constructor object recognizes an object as its instance. Used by {{jsxref("Operators/instanceof", "instanceof")}}.
+  - : A method determining if a constructor object recognizes an object as its instance. Used by {{jsxref("instanceof")}}.
 - {{jsxref("Symbol.isConcatSpreadable")}}
   - : A Boolean value indicating if an object should be flattened to its array elements. Used by {{jsxref("Array.prototype.concat()")}}.
 - {{jsxref("Symbol.iterator")}}

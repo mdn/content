@@ -1,5 +1,6 @@
 ---
-title: vector-effect
+title: "`vector-effect` CSS property"
+short-title: vector-effect
 slug: Web/CSS/Reference/Properties/vector-effect
 page-type: css-property
 browser-compat: css.properties.vector-effect
@@ -24,6 +25,8 @@ vector-effect: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `none`
   - : No vector effects are applied to the element, meaning it will be fully affected by transforms as normal.

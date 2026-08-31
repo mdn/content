@@ -23,7 +23,7 @@ Some properties only apply to input element types that support the corresponding
 - {{domxref("HTMLInputElement.alpha", "alpha")}} {{experimental_inline}}
   - : A boolean that represents the element's [`alpha`](/en-US/docs/Web/HTML/Reference/Elements/input/color#alpha) attribute, indicating whether the color's alpha component can be manipulated by the end user and does not have to be fully opaque.
 
-- {{domxref("HTMLInputElement.colorSpace", "colorSpace")}} {{experimental_inline}}
+- {{domxref("HTMLInputElement.colorSpace", "colorSpace")}}
   - : A string that represents the element's [`colorspace`](/en-US/docs/Web/HTML/Reference/Elements/input/color#colorspace) attribute, indicating the {{glossary("color space")}} of the serialized CSS color (sRGB or display-p3).
 
 - {{domxref("HTMLInputElement.defaultValue", "defaultValue")}}
@@ -117,7 +117,7 @@ Some properties only apply to input element types that support the corresponding
   - : A boolean that represents the default state of a radio button or checkbox as originally specified in HTML that created this object.
 
 - {{domxref("HTMLInputElement.indeterminate", "indeterminate")}}
-  - : A boolean that represents whether the checkbox or radio button is in indeterminate state. For checkboxes, the effect is that the appearance of the checkbox is obscured/greyed in some way as to indicate its state is indeterminate (not checked but not unchecked). Does not affect the value of the `checked` attribute, and clicking the checkbox will set the value to false.
+  - : A boolean that represents whether the checkbox or radio button is in indeterminate state. For checkboxes, the effect is that the appearance of the checkbox is obscured/grayed in some way as to indicate its state is indeterminate (not checked but not unchecked). Does not affect the value of the `checked` attribute, and clicking the checkbox will set the value to false.
 
 ### Instance properties that apply only to elements of type image
 

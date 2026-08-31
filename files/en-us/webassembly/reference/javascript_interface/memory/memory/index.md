@@ -22,6 +22,10 @@ new WebAssembly.Memory(memoryDescriptor)
 
 - `memoryDescriptor`
   - : An object that can contain the following members:
+    - `address` {{optional_inline}}
+      - : A string value that specifies the address type of the memory. This can be
+        `"i32"` or `"i64"`. The default is `"i32"`.
+        If `address` is `"i64"`, `initial` and `maximum`, if present, must be {{jsxref("BigInt")}} values.
     - `initial`
       - : The initial size of the WebAssembly Memory, in units of WebAssembly pages.
     - `maximum` {{optional_inline}}
@@ -47,7 +51,7 @@ new WebAssembly.Memory(memoryDescriptor)
 - {{jsxref("RangeError")}}
   - : Thrown if at least one of these conditions is met:
     - `maximum` is specified and is smaller than `initial`.
-    - `initial` exceeds 65,536 (2^16). 2^16 pages is 2^16 \* 64KiB = 4GiB bytes, which is the maximum range that a Wasm module can address, as Wasm currently only allows 32-bit addressing.
+    - `address` is set to `"i32"` or omitted, and `initial` exceeds `65,536` (2^16). 2^16 pages is equivalent to 4GiB (2^16 \* 64KiB), which is the maximum range that a Wasm module can address with 32-bit addressing.
     - Allocation fails. This may occur due to attempting to allocate too much at once, or if the User Agent is otherwise out of memory.
 
 ## Examples
@@ -91,6 +95,19 @@ const memory = new WebAssembly.Memory({
 ```
 
 This memory's `buffer` property will return a {{jsxref("SharedArrayBuffer")}}.
+
+### Using a 64-bit address
+
+To create a memory with a 64-bit address type, pass `address: "i64"`.
+The `initial` and `maximum` values must be {{jsxref("BigInt")}} values:
+
+```js
+const memory = new WebAssembly.Memory({
+  address: "i64",
+  initial: 1n,
+  maximum: 10n,
+});
+```
 
 ## Specifications
 

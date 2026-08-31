@@ -198,24 +198,18 @@ _Modifiers_ are special keys which are used to generate special characters or ca
     <tr>
       <td><code>"Meta"</code> [1]</td>
       <td>
-        The <kbd>Meta</kbd> key. Allows issuing special command inputs. This is
-        the <kbd>Windows</kbd> logo key, or the <kbd>Command</kbd> or
-        <kbd>⌘</kbd> key on Mac keyboards.
+        The <kbd>Meta</kbd> key. Allows issuing special command inputs.
+        This is the <kbd>Windows</kbd> logo key, or the <kbd>Command</kbd> or <kbd>⌘</kbd> key on Mac keyboards.
       </td>
       <td><code>VK_LWIN</code> (0x5B)<br /><code>VK_RWIN</code> (0x5C)</td>
       <td>
-        <code>kVK_Command</code> (0x37)<br /><code>kVK_RightCommand</code>
-        (0x36)
+        <code>kVK_Command</code> (0x37)<br /><code>kVK_RightCommand</code> (0x36)
       </td>
       <td>
-        <code>GDK_KEY_Meta_L</code> (0xFFE7)<br /><code>GDK_KEY_Meta_R</code>
-        (0xFFE8)<br /><code>Qt::Key_Meta</code> (0x01000022)
+        <code>GDK_KEY_Meta_L</code> (0xFFE7)<br /><code>GDK_KEY_Meta_R</code> (0xFFE8)<br /><code>Qt::Key_Meta</code> (0x01000022)
       </td>
       <td>
-        <code>KEYCODE_META_LEFT</code> (117)<br /><code
-          >KEYCODE_META_RIGHT</code
-        >
-        (118)
+        <code>KEYCODE_META_LEFT</code> (117)<br /><code>KEYCODE_META_RIGHT</code> (118)
       </td>
     </tr>
     <tr>
@@ -308,7 +302,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
   </tbody>
 </table>
 
-\[1] In Firefox, the <kbd>Windows</kbd> key is reported as `"OS"` instead of as `"Meta"`. This will be changed in Firefox per [Firefox bug 1232918](https://bugzil.la/1232918). Until that's fixed, these keys are returned as `"OS"` by Firefox: `VK_LWIN` (0x5B) and `VK_RWIN` (0x5C) on Windows, and `GDK_KEY_Super_L` (0xFFEB), `GDK_KEY_Super_R` (0xFFEC), `GDK_KEY_Hyper_L` (0xFFED), and `GDK_KEY_Hyper_R` (0xFFEE) on Linux.
+\[1] Firefox 118 and later correctly report the <kbd>Windows</kbd> key as `"Meta"` (earlier versions reported the key as `"OS"`).
 
 \[2] Firefox did not add support for the <kbd>Symbol</kbd> key until Firefox 37.
 
@@ -730,7 +724,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
         on the right side of the keyboard.
       </td>
       <td><code>VK_APPS</code> (0x5D)</td>
-      <td><code>kVK_PC_ContextMenu</code> (0x6E)</td>
+      <td><code>kVK_ContextualMenu</code> (0x6E)</td>
       <td>
         <code>GDK_KEY_Menu</code> (0xFF67)<br /><code>Qt::Key_Menu</code>
         (0x01000055)
@@ -2417,10 +2411,7 @@ The multimedia keys are extra buttons or keys for controlling media devices, fou
       </td>
       <td><code>APPCOMMAND_MEDIA_FAST_FORWARD</code></td>
       <td></td>
-      <td>
-        <code>GDK_KEY_AudioForward (0x1008FF97)<br />Qt:Key_AudioForward</code>
-        (0x01000102)
-      </td>
+      <td><code>GDK_KEY_AudioForward</code> (0x1008FF97)<br/><code>Qt:Key_AudioForward</code> (0x01000102)</td>
       <td><code>KEYCODE_MEDIA_FAST_FORWARD</code> (90)</td>
     </tr>
     <tr>
@@ -3143,7 +3134,7 @@ The values below are derived in part from a number of consumer electronics techn
     <tr>
       <td><code>"ColorF4Grey"</code></td>
       <td>
-        General-purpose media function key, color-coded grey. This has index
+        General-purpose media function key, color-coded gray. This has index
         <code>4</code> among the colored keys.
       </td>
       <td><code>VK_COLORED_KEY_4</code></td>

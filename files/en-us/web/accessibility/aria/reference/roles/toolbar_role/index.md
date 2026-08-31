@@ -50,10 +50,10 @@ Implement focus management so the keyboard tab sequence includes one stop for th
 
 Elements with the role toolbar have an implicit `aria-orientation` value of horizontal. If the toolbar indeed has this orientation, the following keyboard interactions need to be implemented:
 
-- <kbd>Left Arrow</kbd> (For a horizontal toolbar (the default)
+- <kbd>Left Arrow</kbd>
   - : Moves focus to the previous control. Optionally, focus movement may wrap from the first element to the last element.
 
-- <kbd>Right Arrow</kbd> (For a horizontal toolbar (the default)
+- <kbd>Right Arrow</kbd>
   - : Moves focus to the next control. Optionally, focus movement may wrap from the last element to the first element.
 
 In toolbars with multiple rows of controls, allow the left and right arrows to wraps from row to row, leaving the option of reserving vertical arrow keys for operating controls, such as navigating among radios buttons, or incrementing/decrementing a numeric spinner.
@@ -62,10 +62,10 @@ In toolbars with multiple rows of controls, allow the left and right arrows to w
 
 If the toolbar is vertical, ensure `aria-orientation="vertical"` is set, and the following keyboard interactions are implemented:
 
-- <kbd>Down Arrow</kbd> (For a horizontal toolbar (the default)
+- <kbd>Up Arrow</kbd>
   - : Moves focus to the previous control. Optionally, focus movement may wrap from the first element to the last element.
 
-- <kbd>Up Arrow</kbd> (For a horizontal toolbar (the default)
+- <kbd>Down Arrow</kbd>
   - : Moves focus to the next control. Optionally, focus movement may wrap from the last element to the first element.
 
 ### Required JavaScript features

@@ -39,8 +39,7 @@ Pseudo-elements do not exist independently. The element of which a pseudo-elemen
 
 A pseudo-element can be selected based on the current state of the originating element. For example, `p:hover::first-line` selects the first line (pseudo-element) of a paragraph when the paragraph itself is being hovered (pseudo-class).
 
-> [!NOTE]
-> When a [selector list](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#selector_list) contains an invalid selector, the entire style block is ignored.
+The specifications allow some pseudo-elements to be selected based on the current state of the originating element. In these cases, the pseudo-element is selected only when it is in the same state. For example, `::picker(select):hover` selects the currently hovered descendant of a customizable {{htmlelement("select")}} element, excluding the first {{htmlelement("button")}} child, which is not selected by the {{cssxref("::picker()")}} pseudo-element. Note, however, that when a [selector list](/en-US/docs/Web/CSS/Guides/Selectors/Selector_structure#selector_list) contains an invalid selector, the entire style block is ignored, so make sure the state you're including is supported on the pseudo-element to which it is attached.
 
 ## Typographic pseudo-elements
 
@@ -57,16 +56,18 @@ A pseudo-element can be selected based on the current state of the originating e
 
 Selects document sections based on content and document status, enabling those areas to be styled differently to indicate that status to the user.
 
-- {{CSSxRef("::selection")}}
-  - : The portion of a document that has been selected.
-- {{CSSxRef("::target-text")}}
-  - : The document's target element. The target element is identified using the URL's fragment identifier.
-- {{CSSxRef("::spelling-error")}}
-  - : A portion of text that the browser thinks is misspelled.
 - {{CSSxRef("::grammar-error")}}
   - : A portion of text that the browser thinks is grammatically incorrect.
 - {{CSSxRef("::highlight()")}}
   - : The elements in the [highlight registry](/en-US/docs/Web/API/CSS/highlights_static). It is used to create custom highlights.
+- {{CSSxRef("::search-text")}}
+  - : Search results identified by the user agent's "Find" or "Find in page" text search feature.
+- {{CSSxRef("::selection")}}
+  - : The portion of a document that has been selected.
+- {{CSSxRef("::spelling-error")}}
+  - : A portion of text that the browser thinks is misspelled.
+- {{CSSxRef("::target-text")}}
+  - : The document's target element. The target element is identified using the [URL's fragment](/en-US/docs/Web/URI/Reference/Fragment) identifier.
 
 ## Tree-Abiding pseudo-elements
 

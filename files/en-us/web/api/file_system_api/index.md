@@ -162,7 +162,7 @@ async function returnPathDirectories(directoryHandle) {
   // Get a file handle by showing a file picker:
   const [handle] = await self.showOpenFilePicker();
   if (!handle) {
-    // User cancelled, or otherwise failed to open a file.
+    // User canceled, or otherwise failed to open a file.
     return;
   }
 

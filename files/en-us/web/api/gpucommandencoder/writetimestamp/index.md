@@ -9,7 +9,7 @@ status:
 browser-compat: api.GPUCommandEncoder.writeTimestamp
 ---
 
-{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{deprecated_header}}{{non-standard_header}}{{AvailableInWorkers}}
+{{APIRef("WebGPU API")}}{{SecureContext_Header}}{{non-standard_header}}{{AvailableInWorkers}}
 
 The **`writeTimestamp()`** method of the
 {{domxref("GPUCommandEncoder")}} interface encodes a command that writes a timestamp into a {{domxref("GPUQuerySet")}} once the previous commands recorded into the same queued {{domxref("GPUCommandBuffer")}} have been executed by the GPU.
@@ -32,7 +32,7 @@ writeTimestamp(querySet, queryIndex)
 
 ### Return value
 
-None ({{jsxref("Undefined")}}).
+None ({{jsxref("undefined")}}).
 
 ### Validation
 

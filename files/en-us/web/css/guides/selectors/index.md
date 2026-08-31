@@ -143,6 +143,7 @@ The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":
 ## Related concepts
 
 - {{CSSXref(":state","state()")}} pseudo-class
+- {{CSSXref(":xr-overlay")}} pseudo-class
 - [CSS nesting](/en-US/docs/Web/CSS/Guides/Nesting) module
   - [`&` nesting selector](/en-US/docs/Web/CSS/Reference/Selectors/Nesting_selector)
 - [CSS scoping](/en-US/docs/Web/CSS/Guides/Scoping) module
@@ -188,6 +189,9 @@ The CSS selectors module also introduces the {{CSSXref(":blank")}}, {{CSSXref(":
 
 - Other [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements)
   - {{CSSxRef("::cue")}}
+
+- [CSS animations](/en-US/docs/Web/CSS/Guides/Animations)
+  - [`<keyframe-selector>`](/en-US/docs/Web/CSS/Reference/Selectors/Keyframe_selectors)
 
 - {{CSSXref("@namespace")}} at-rule
 

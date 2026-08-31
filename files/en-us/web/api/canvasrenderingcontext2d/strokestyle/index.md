@@ -62,11 +62,11 @@ each having a different stroke color. To achieve this, we use the two variables
 only modify the green and blue values. (The red channel has a fixed value.)
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="my-canvas" width="150" height="150"></canvas>
 ```
 
 ```js
-const ctx = document.getElementById("canvas").getContext("2d");
+const ctx = document.getElementById("my-canvas").getContext("2d");
 
 for (let i = 0; i < 6; i++) {
   for (let j = 0; j < 6; j++) {

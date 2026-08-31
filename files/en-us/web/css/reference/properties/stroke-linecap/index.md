@@ -1,5 +1,6 @@
 ---
-title: stroke-linecap
+title: "`stroke-linecap` CSS property"
+short-title: stroke-linecap
 slug: Web/CSS/Reference/Properties/stroke-linecap
 page-type: css-property
 browser-compat: css.properties.stroke-linecap
@@ -27,6 +28,8 @@ stroke-linecap: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `butt`
   - : Indicates that the stroke for each subpath does not extend beyond its two endpoints. On a zero-length subpath, the path will not be rendered at all. This is the default value.

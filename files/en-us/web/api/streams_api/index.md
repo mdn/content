@@ -93,10 +93,6 @@ We have created a directory of examples to go along with the Streams API documen
 - [Simple writer](https://mdn.github.io/dom-examples/streams/simple-writer/): This example shows how to write to a writable stream, then decode the stream and write the contents to the UI.
 - [Unpack chunks of a PNG](https://mdn.github.io/dom-examples/streams/png-transform-stream/): This example shows how [`pipeThrough()`](/en-US/docs/Web/API/ReadableStream/pipeThrough) can be used to transform a ReadableStream into a stream of other data types by transforming a data of a PNG file into a stream of PNG chunks.
 
-Examples from other developers:
-
-- [Progress Indicators with Streams, Service Workers, & Fetch](https://fetch-progress.anthum.com/).
-
 ## Specifications
 
 {{Specifications}}

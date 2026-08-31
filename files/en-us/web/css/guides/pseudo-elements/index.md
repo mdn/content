@@ -29,17 +29,20 @@ Pseudo-elements enable targeting entities not included in HTML and sections of c
 - {{CSSXref("::highlight()")}}
 - {{CSSXref("::marker")}}
 - {{CSSXref("::placeholder")}}
+- {{CSSXref("::search-text")}}
 - {{CSSXref("::selection")}}
 - {{CSSXref("::spelling-error")}}
 - {{CSSXref("::target-text")}}
 
-The specification also defines the `::details-content` and `::search-text` pseudo-elements and the `::postfix` and `::prefix` sub-pseudo elements. These are not yet supported by any browser. The {{CSSXref("::highlight()")}} pseudo-element is included within this module, but most details are provided in the [CSS custom highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API).
+The specification also defines the `::details-content` pseudo-element and the `::postfix` and `::prefix` sub-pseudo elements. These are not yet supported by any browser. The {{CSSXref("::highlight()")}} pseudo-element is included within this module, but most details are provided in the [CSS custom highlight API](/en-US/docs/Web/API/CSS_Custom_Highlight_API).
 
 ### Interfaces
 
 - {{DOMxRef("CSSPseudoElement")}} interface
   - {{DOMxRef("CSSPseudoElement.element")}} property
+  - {{DOMxRef("CSSPseudoElement.parent")}} property
   - {{DOMxRef("CSSPseudoElement.type")}} property
+  - {{DOMxRef("CSSPseudoElement.pseudo", "pseudo()")}} method
 
 ### Terms
 

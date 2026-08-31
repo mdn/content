@@ -1,5 +1,6 @@
 ---
-title: table-layout
+title: "`table-layout` CSS property"
+short-title: table-layout
 slug: Web/CSS/Reference/Properties/table-layout
 page-type: css-property
 browser-compat: css.properties.table-layout
@@ -87,6 +88,8 @@ table-layout: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : The automatic table layout algorithm is used. The widths of the table and its cells are adjusted to fit the content. Most browsers use this algorithm by default.

@@ -1,5 +1,6 @@
 ---
-title: contrast()
+title: "`contrast()` CSS function"
+short-title: contrast()
 slug: Web/CSS/Reference/Values/filter-function/contrast
 page-type: css-function
 browser-compat: css.types.filter-function.contrast

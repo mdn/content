@@ -3,12 +3,10 @@ title: "Sanitizer: removeAttribute() method"
 short-title: removeAttribute()
 slug: Web/API/Sanitizer/removeAttribute
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Sanitizer.removeAttribute
 ---
 
-{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
+{{APIRef("HTML Sanitizer API")}}
 
 The **`removeAttribute()`** method of the {{domxref("Sanitizer")}} interface sets an attribute to be removed from all elements when the sanitizer is used.
 
@@ -40,7 +38,7 @@ removeAttribute(attribute)
 Note that `false` might be returned if the internal configuration:
 
 - defines a [`removeAttributes`](/en-US/docs/Web/API/SanitizerConfig#removeattributes) array that already contains the specified attribute (and is hence already filtered)
-- instead defines a [`attributes`](/en-US/docs/Web/API/SanitizerConfig#attributes) array that already omits the attribute (and is hence already disallowed)
+- instead defines an [`attributes`](/en-US/docs/Web/API/SanitizerConfig#attributes) array that already omits the attribute (and is hence already disallowed)
 
 ## Examples
 
@@ -102,7 +100,7 @@ log(JSON.stringify(sanitizerConfig, null, 2));
 #### Results
 
 The final configuration is logged below.
-Note how both attributes are now added to the [`removeAttributes`](/en-US/docs/Web/API/SanitizerConfig#removeattributes_2) list (these attributes will removed if present on elements when the sanitizer is used).
+Note how both attributes are now added to the [`removeAttributes`](/en-US/docs/Web/API/SanitizerConfig#removeattributes_2) list (these attributes will be removed if present on elements when the sanitizer is used).
 
 {{EmbedLiveSample("How to disallow specific attributes","100","360px")}}
 

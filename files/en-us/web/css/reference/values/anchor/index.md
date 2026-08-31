@@ -1,5 +1,6 @@
 ---
-title: anchor()
+title: "`anchor()` CSS function"
+short-title: anchor()
 slug: Web/CSS/Reference/Values/anchor
 page-type: css-function
 browser-compat: css.types.anchor
@@ -85,7 +86,7 @@ It returns a `<length>` value specifying the distance between the anchor-positio
 
 If no anchor with the name specified by the `<anchor-name>` exists, or if the positioned element does not have an anchor associated with it (i.e., via the {{cssxref("position-anchor")}} property), the first parameter is considered invalid and the fallback `<length-percentage>` value is used if one is available. For example, if `top: anchor(bottom, 50px)` were specified on the positioned element but no anchor was associated with it, the fallback value would be used, so `top` would get a computed value of `50px`.
 
-For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module landing page and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) guide.
+For detailed information on anchor features and usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module and the [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) guide.
 
 ### Properties that accept `anchor()` function values
 
@@ -153,7 +154,7 @@ This example positions the right edge of the positioned element flush to the anc
 ```css
 .positionedElement {
   right: anchor(left);
-  margin-left: 10px;
+  margin-right: 10px;
 }
 ```
 

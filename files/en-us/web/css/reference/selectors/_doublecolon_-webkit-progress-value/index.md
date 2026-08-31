@@ -1,5 +1,6 @@
 ---
-title: ::-webkit-progress-value
+title: "`::-webkit-progress-value` CSS pseudo-element"
+short-title: ::-webkit-progress-value
 slug: Web/CSS/Reference/Selectors/::-webkit-progress-value
 page-type: css-pseudo-element
 status:
@@ -53,7 +54,7 @@ progress {
 
 A progress bar using the style above would look like this:
 
-![A long orange and grey box. The left 20% is orange. The right 80% is grey.](progress-value.png)
+![A long orange and gray box. The left 20% is orange. The right 80% is gray.](progress-value.png)
 
 ## Specifications
 

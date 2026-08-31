@@ -1,5 +1,6 @@
 ---
-title: "<iframe>: The Inline Frame element"
+title: "`<iframe>` HTML inline frame element"
+short-title: <iframe>
 slug: Web/HTML/Reference/Elements/iframe
 page-type: html-element
 browser-compat: html.elements.iframe
@@ -48,16 +49,16 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
   - : Set to `true` if the `<iframe>` can activate fullscreen mode by calling the {{domxref("Element.requestFullscreen", "requestFullscreen()")}} method.
 
     > [!NOTE]
-    > This attribute is considered a legacy attribute and redefined as `allow="fullscreen"`.
+    > This attribute is considered a legacy attribute and redefined as `allow="fullscreen *"`.
 
 - `allowpaymentrequest` {{deprecated_inline}} {{non-standard_inline}}
   - : Set to `true` if a cross-origin `<iframe>` should be allowed to invoke the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API).
 
     > [!NOTE]
-    > This attribute is considered a legacy attribute and redefined as `allow="payment"`.
+    > This attribute is considered a legacy attribute and redefined as `allow="payment *"`.
 
 - `browsingtopics` {{non-standard_inline}} {{deprecated_inline}}
-  - : A boolean attribute that, if present, specifies that the selected topics for the current user should be sent with the request for the `<iframe>`'s source. See [Using the Topics API](/en-US/docs/Web/API/Topics_API/Using) for more details.
+  - : A boolean attribute that, if present, specifies that the selected topics for the current user should be sent with the request for the `<iframe>`'s source.
 
 - `credentialless` {{Experimental_Inline}}
   - : Set to `true` to make the `<iframe>` credentialless, meaning that its content will be loaded in a new, ephemeral context. It doesn't have access to the network, cookies, and storage data associated with its origin. It uses a new context local to the top-level document lifetime. In return, the {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) embedding rules can be lifted, so documents with COEP set can embed third-party documents that do not. See [IFrame credentialless](/en-US/docs/Web/HTTP/Guides/IFrame_credentialless) for more details.
@@ -76,9 +77,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
         The intent is to avoid using the network and storage bandwidth required to fetch the frame until the browser is reasonably certain that it will be needed.
         This improves the performance and cost in most typical use cases, in particular by reducing initial page load times.
 
-        > [!NOTE]
-        > Loading is only deferred when JavaScript is enabled.
-        > This is an anti-tracking measure.
+        Loading is only deferred when JavaScript is enabled. This is an anti-tracking measure, because if a user agent supported lazy loading when scripting is disabled, it would still be possible for a site to track a user's approximate scroll position throughout a session, by strategically placing iframes in a page's markup such that a server can track how many iframes are requested and when.
 
 - `name`
   - : A targetable name for the embedded browsing context. This can be used in the `target` attribute of the {{HTMLElement("a")}}, {{HTMLElement("form")}}, or {{HTMLElement("base")}} elements; the `formtarget` attribute of the {{HTMLElement("input")}} or {{HTMLElement("button")}} elements; or the `windowName` parameter in the {{domxref("Window.open()","window.open()")}} method. In addition, the name becomes a property of the {{domxref("Window")}} and {{domxref("Document")}} objects, containing a reference to the embedded window or the element itself.
@@ -125,6 +124,8 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
       - : Allows embedders to have control over whether an iframe can start a [presentation session](/en-US/docs/Web/API/PresentationRequest).
     - `allow-same-origin`
       - : If this token is not used, the resource is treated as being from a special origin that always fails the {{Glossary("same-origin policy")}} (potentially preventing access to [data storage/cookies](/en-US/docs/Web/Security/Defenses/Same-origin_policy#cross-origin_data_storage_access) and some JavaScript APIs).
+        > [!NOTE]
+        > When `allow-same-origin` is present, a same-origin parent document can still access and interact with the iframe's DOM even if `allow-scripts` is not set. The `allow-scripts` token only controls script execution within the embedded browsing context and does not affect DOM access from the parent.
     - `allow-scripts`
       - : Allows the page to run scripts (but not create pop-up windows). If this keyword is not used, this operation is not allowed.
     - `allow-storage-access-by-user-activation` {{experimental_inline}}
@@ -217,6 +218,14 @@ Being a {{ glossary("replaced elements", "replaced element")}}, the `<iframe>` a
 ## `error` and `load` event behavior
 
 The `error` and `load` events fired on `<iframe>`s could be used to probe the URL space of the local network's HTTP servers. Therefore, as a security precaution user agents do not fire the [error](/en-US/docs/Web/API/HTMLElement/error_event) event on `<iframe>`s, and the [load](/en-US/docs/Web/API/HTMLElement/load_event) event is always triggered even if the `<iframe>` content fails to load.
+
+## Responsive `<iframe>` sizing
+
+For security and privacy reasons, `<iframe>` elements do not by default expose any information to the parent document about the size of the content in the document they are embedding.
+
+To enable responsive sizing of `<iframe>` elements based on their content, the [`<meta name="responsive-embedded-sizing">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/responsive-embedded-sizing) tag can be included in an embedded document to opt it in to sharing its size information with the parent document. The {{cssxref("frame-sizing")}} CSS property can then be set on the `<iframe>` to cause it to adopt the same horizontal or vertical size as the embedded document's actual content size. This ensures that `<iframe>` content fits seamlessly into its embedder, avoiding unnecessary scrollbars.
+
+To resize the `<iframe>` dynamically as the embedded document changes layout size, you can call the {{domxref("Window.requestResize()")}} method from the embedded document to make it report an updated size.
 
 ## Accessibility
 
@@ -357,3 +366,4 @@ Here's how to write escape sequences when using `srcdoc`:
 
 - [CSP: frame-ancestors](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors)
 - [Privacy, permissions, and information security](/en-US/docs/Web/Privacy)
+- [Local network access](/en-US/docs/Web/Security/Defenses/Local_network_access)

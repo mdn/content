@@ -3,7 +3,7 @@ title: TRACE request method
 short-title: TRACE
 slug: Web/HTTP/Reference/Methods/TRACE
 page-type: http-method
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#TRACE
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#TRACE
 sidebar: http
 ---
 

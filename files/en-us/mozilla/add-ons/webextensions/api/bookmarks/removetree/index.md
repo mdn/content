@@ -24,7 +24,7 @@ let removingTree = browser.bookmarks.removeTree(
 ### Parameters
 
 - `id`
-  - : A {{jsxref("string")}} specifying the ID of the folder node to be deleted along with its descendants.
+  - : A {{jsxref("String")}} specifying the ID of the folder node to be deleted along with its descendants.
 
 ### Return value
 

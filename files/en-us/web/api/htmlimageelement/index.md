@@ -22,7 +22,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLImageElement.alt")}}
   - : A string that reflects the [`alt`](/en-US/docs/Web/HTML/Reference/Elements/img#alt) HTML attribute, thus indicating the alternate fallback content to be displayed if the image has not been loaded.
-- {{domxref("HTMLImageElement.attributionSrc")}} {{securecontext_inline}} {{deprecated_inline}}
+- {{domxref("HTMLImageElement.attributionSrc")}} {{securecontext_inline}} {{deprecated_inline}} {{non-standard_inline}}
   - : Gets and sets the [`attributionsrc`](/en-US/docs/Web/HTML/Reference/Elements/img#attributionsrc) attribute on an {{htmlelement("img")}} element programmatically, reflecting the value of that attribute. `attributionsrc` specifies that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the image request. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} or {{httpheader("Attribution-Reporting-Register-Trigger")}} header in the response, to register an image-based [attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#html-based_event_sources) or [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers#html-based_attribution_triggers), respectively.
 - {{domxref("HTMLImageElement.complete")}} {{ReadOnlyInline}}
   - : Returns a boolean value that is `true` if the browser has finished fetching the image, whether successful or not. That means this value is also `true` if the image has no {{domxref("HTMLImageElement.src", "src")}} value indicating an image to load.
@@ -39,7 +39,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLImageElement.isMap")}}
   - : A boolean value that reflects the [`ismap`](/en-US/docs/Web/HTML/Reference/Elements/img#ismap) HTML attribute, indicating that the image is part of a server-side image map. This is different from a client-side image map, specified using an `<img>` element and a corresponding {{HTMLElement("map")}} which contains {{HTMLElement("area")}} elements indicating the clickable areas in the image. The image _must_ be contained within an {{HTMLElement("a")}} element; see the `ismap` page for details.
 - {{domxref("HTMLImageElement.loading")}}
-  - : A string providing a hint to the browser used to optimize loading the document by determining whether to load the image immediately (`eager`) or on an as-needed basis (`lazy`).
+  - : A string indicating whether the browser should load the image immediately (`eager`) or when it is needed (`lazy`).
 - {{domxref("HTMLImageElement.naturalHeight")}} {{ReadOnlyInline}}
   - : Returns an integer value representing the intrinsic height of the image in CSS pixels, if it is available; else, it shows `0`. This is the height the image would be if it were rendered at its natural full size.
 - {{domxref("HTMLImageElement.naturalWidth")}} {{ReadOnlyInline}}

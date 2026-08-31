@@ -1,5 +1,6 @@
 ---
-title: device-width
+title: "`device-width` CSS media feature"
+short-title: device-width
 slug: Web/CSS/Reference/At-rules/@media/device-width
 page-type: css-media-feature
 status:
@@ -7,8 +8,6 @@ status:
 browser-compat: css.at-rules.media.device-width
 sidebar: cssref
 ---
-
-{{deprecated_header}}
 
 > [!NOTE]
 > To query for the width of the viewport, developers should use the [`width`](/en-US/docs/Web/CSS/Reference/At-rules/@media/width) media feature instead.

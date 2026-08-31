@@ -2,12 +2,10 @@
 title: DocumentPictureInPicture
 slug: Web/API/DocumentPictureInPicture
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.DocumentPictureInPicture
 ---
 
-{{APIRef("Document Picture-in-Picture API")}}{{SeeCompatTable}}{{securecontext_header}}
+{{APIRef("Document Picture-in-Picture API")}}{{securecontext_header}}
 
 The **`DocumentPictureInPicture`** interface of the {{domxref("Document Picture-in-Picture API", "Document Picture-in-Picture API", "", "nocode")}} is the entry point for creating and handling document picture-in-picture windows.
 
@@ -19,21 +17,21 @@ It is accessed via the {{domxref("Window.documentPictureInPicture")}} property.
 
 _Inherits properties from its parent, {{DOMxRef("EventTarget")}}._
 
-- {{domxref("DocumentPictureInPicture.window", "window")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("DocumentPictureInPicture.window", "window")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("Window")}} instance representing the browsing context inside the Picture-in-Picture window.
 
 ## Instance methods
 
 _Inherits methods from its parent, {{DOMxRef("EventTarget")}}._
 
-- {{domxref("DocumentPictureInPicture.requestWindow", "requestWindow()")}} {{Experimental_Inline}}
+- {{domxref("DocumentPictureInPicture.requestWindow", "requestWindow()")}}
   - : Opens the Picture-in-Picture window for the current main browsing context. Returns a {{jsxref("Promise")}} that fulfills with a {{domxref("Window")}} instance representing the browsing context inside the Picture-in-Picture window.
 
 ## Events
 
 _Inherits events from its parent, {{DOMxRef("EventTarget")}}._
 
-- {{domxref("DocumentPictureInPicture/enter_event", "enter")}} {{Experimental_Inline}}
+- {{domxref("DocumentPictureInPicture/enter_event", "enter")}}
   - : Fired when the Picture-in-Picture window is successfully opened.
 
 ## Examples

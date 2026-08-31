@@ -1,5 +1,6 @@
 ---
-title: <input type="url">
+title: '`<input type="url">` HTML attribute value'
+short-title: <input type="url">
 slug: Web/HTML/Reference/Elements/input/url
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_url
@@ -298,7 +299,7 @@ The [`title`](/en-US/docs/Web/HTML/Reference/Global_attributes/title) attribute 
 
 #### CSS
 
-The CSS gives visual clues to show the user if the content is {{cssxref(":valid")}} or {{cssxref(":invalid")}} by adding an appropriate {{cssxref("content")}} property and includes [alternative text](/en-US/docs/Web/CSS/Reference/Properties/content#alternative_text_string_counter) for users with assistive technologies.
+The CSS gives visual clues to show the user if the content is {{cssxref(":valid")}} or {{cssxref(":invalid")}} by adding an appropriate {{cssxref("content")}} property and includes [alternative text](/en-US/docs/Web/CSS/Reference/Properties/content#alternative_text_string_counter_attr) for users with assistive technologies.
 
 ```css live-sample___url-validation
 input:focus:invalid {
@@ -371,15 +372,6 @@ Check the [Pattern validation](#pattern_validation) and [Using URL inputs](#usin
     <tr>
       <td><strong>DOM interface</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}}
-        and
-        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}.
-      </td>
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
