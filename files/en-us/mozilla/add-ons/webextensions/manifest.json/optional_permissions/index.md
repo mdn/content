@@ -50,7 +50,7 @@ These are specified as [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtension
 > [!NOTE]
 > When using Manifest V3 or higher, optional host permissions should be specified using the [`optional_host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_host_permissions) manifest key.
 >
-> Firefox introduced `optional_host_permissions` in release 128, see [bug 1766026](https://bugzil.la/1766026), and allows the continued use of `optional_permissions` to specify optional hosts. Use of `optional_host_permissions`, however, is recommended.
+> Firefox introduced `optional_host_permissions` in release 128; see [bug 1766026](https://bugzil.la/1766026). Firefox allows the continued use of `optional_permissions` to specify optional hosts, but support is [deprecated](https://bugzil.la/1897580). Therefore, the use of `optional_host_permissions` is recommended.
 >
 > In Chrome (Manifest V3) you can't specify optional hosts in `optional_permissions` and must use `optional_host_permissions`.
 

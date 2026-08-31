@@ -16,7 +16,9 @@ Match patterns are used in several places across the manifest.json keys and Java
 
 - Manifest keys:
   - [`host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) and [`optional_host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_host_permissions), to request access to hosts.
-  - [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) (Manifest V2 only) and [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) (Manifest V2 only, also supported [but deprecated](https://bugzilla.mozilla.org/show_bug.cgi?id=1897580) in MV3 in Firefox only), which can include host permissions alongside named API permissions.
+  - [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions), which can include host permissions alongside named API permissions (Manifest V2).
+    > [!NOTE]
+    > Specifying match patterns in `optional_permissions` is supported [but deprecated](https://bugzil.la/1897580) in Manifest V3 in Firefox only.
   - The `matches` and `exclude_matches` fields of [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) entries.
   - The `matches` field of [`web_accessible_resources`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources#manifest_v3_syntax) entries (Manifest V3 only).
   - The `show_matches` and `hide_matches` fields of [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action).
