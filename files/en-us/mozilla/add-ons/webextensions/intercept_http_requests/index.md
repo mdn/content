@@ -225,7 +225,7 @@ Use `declarativeNetRequest` to redirect HTTP requests. Create a directory called
 }
 ```
 
-The `"declarativeNetRequest"` permission enables the API. The `"host_permissions"` entry is required because the rules redirect requests. The `"declarative_net_request"` manifest key registers the ruleset file, which defines how to handle requests.
+The `"declarativeNetRequest"` permission enables the API. The `"host_permissions"` entry is required because the rules redirect requests. The [`"declarative_net_request"` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request) registers the ruleset file, which defines how to handle requests.
 
 Next, create a file called "rules.json" and add:
 
