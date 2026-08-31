@@ -234,7 +234,7 @@ For example:
 
 In such examples, repeating the namespace and possibly also the type creates wasteful redundancy in the module's binary encoding (and also in the text format).
 
-To cut down on this redundancy and reduce the binary file size, you can use the shorthand compact import syntax. There are two forms, one that deduplicates the namespace, and one that deduplicates both the namespace and the type. Let's consider the following example:
+To cut down on this redundancy and reduce the binary file size, you can use the compact import syntax. There are two forms, one that deduplicates the namespace, and one that deduplicates both the namespace and the type. Let's consider the following example:
 
 ```wat
 (import "importNums" "num1" (func $n1 (result i32)))
