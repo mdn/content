@@ -14,6 +14,18 @@ The **`labels`** read-only property of the {{domxref("ElementInternals")}} inter
 
 A {{domxref("NodeList")}} containing all of the label elements associated with this element.
 
+## Accessibility
+
+Screen reader support for labels associated with a form-associated custom element via `ElementInternals` varies by browser.
+In most browsers, the labels are announced when the custom element receives focus.
+Safari does not narrate labels associated via `ElementInternals` for form-associated custom elements (see [WebKit bug 259124](https://bugs.webkit.org/show_bug.cgi?id=259124)).
+
+For more robust cross-browser support, supplement label association with ARIA in one of two places:
+
+- Consumers of the custom element can add [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) directly to it, the same as they would for a native form control.
+- The custom element itself can set a default accessible name with {{domxref("ElementInternals.ariaLabel")}} or {{domxref("ElementInternals.ariaLabelledByElements")}}.
+  These apply only until a consumer sets `aria-label` or `aria-labelledby` on the element directly, so they act as a fallback rather than overriding a name the consumer chose.
+
 ## Examples
 
 The following example shows a custom checkbox component with a {{HTMLElement("label")}} element linked to it.
@@ -30,12 +42,6 @@ Printing the value of `labels` to the console returns a {{domxref("NodeList")}} 
 let element = document.getElementById("custom-checkbox");
 console.log(element.internals_.label);
 ```
-
-## Accessibility
-
-While the `labels` property returns the label elements associated with a custom element, screen reader support for these labels varies by browser. In most browsers, the label is announced when the custom element receives focus. However, Safari does not reliably narrate labels associated via `ElementInternals` for form-associated custom elements (see [WebKit bug 259124](https://bugs.webkit.org/show_bug.cgi?id=259124)).
-
-For robust screen reader support across browsers, consider supplementing `ElementInternals` label association with ARIA attributes such as [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label).
 
 ## Specifications
 
