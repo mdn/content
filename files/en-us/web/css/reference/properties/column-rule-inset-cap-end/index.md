@@ -363,7 +363,7 @@ This example demonstrates setting `column-rule-inset-cap-end` to inset the end e
 
 #### CSS
 
-We use the {{cssxref("display")}} property to turn the `.flexbox` elements into flex containers. We balance the items into three flex lines using with {{cssxref("flex-wrap")}} and {{cssxref("flex-line-count")}}. We define a light blue {{cssxref("rule")}} to paint both row and column gaps, then overwrite the {{cssxref("column-rule-color")}}, setting darker `blue` vertical gap decorations. Finally, we set the `column-rule-inset-cap-end` to `100%`, meaning the cap endpoints will be inset by the row gap width (which was set to `20px` by the {{cssxref("gap")}} property).
+We use the {{cssxref("display")}} property to turn the `.flexbox` elements into flex containers. We balance the items into three flex lines using with {{cssxref("flex-wrap")}} and {{cssxref("flex-line-count")}}. We define a light blue {{cssxref("rule")}} to paint both row and column gaps, then overwrite the {{cssxref("column-rule-color")}}, setting darker `blue` vertical gap decorations. Finally, we set the `column-rule-inset-cap-end` to `16px`.
 
 ```css
 .flexbox {
@@ -374,7 +374,7 @@ We use the {{cssxref("display")}} property to turn the `.flexbox` elements into 
   rule: 5px solid lightblue;
   column-rule-color: blue;
 
-  column-rule-inset-cap-end: 100%;
+  column-rule-inset-cap-end: 16px;
 }
 ```
 
