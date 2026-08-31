@@ -1,8 +1,8 @@
 ---
-title: Firefox 154 release notes for developers (Stable)
-short-title: Firefox 154 (Stable)
+title: Firefox 154 release notes for developers
+short-title: Firefox 154
 slug: Mozilla/Firefox/Releases/154
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 

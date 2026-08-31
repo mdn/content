@@ -1,18 +1,13 @@
 ---
-title: Firefox 155 release notes for developers (Beta)
-short-title: Firefox 155 (Beta)
+title: Firefox 155 release notes for developers (Stable)
+short-title: Firefox 155 (Stable)
 slug: Mozilla/Firefox/Releases/155
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 155 that affect developers.
-Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [September 1, 2026](https://whattrainisitnow.com/release/?version=155).
-
-> [!NOTE]
-> The release notes for this Firefox version are still a work in progress.
-
-<!-- Authors: Please uncomment any headings you are writing notes for -->
+Firefox 155 was released on [September 1, 2026](https://whattrainisitnow.com/release/?version=155).
 
 ## Changes for web developers
 
@@ -27,19 +22,9 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - Added a keyboard shortcut for disabling breakpoints in the [Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html).
   ([Firefox bug 1642578](https://bugzil.la/1642578)).
 
-<!-- ### HTML -->
+### HTML
 
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### MathML -->
-
-<!-- #### Removals -->
-
-<!-- ### SVG -->
-
-<!-- #### Removals -->
+No notable changes.
 
 ### CSS
 
@@ -61,8 +46,6 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
   Note that computed style enumeration now returns `font-width` rather than `font-stretch`.
   ([Firefox bug 1911075](https://bugzil.la/1911075)).
 
-<!-- #### Removals -->
-
 ### JavaScript
 
 - The {{jsxref("Promise.allKeyed()")}} and {{jsxref("Promise.allSettledKeyed()")}} static methods are now supported, as defined in the [TC39 await dictionary proposal](https://github.com/tc39/proposal-await-dictionary).
@@ -73,8 +56,6 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
   Relatedly, [`<link rel="modulepreload">`](/en-US/docs/Web/HTML/Reference/Attributes/rel/modulepreload) now fires the {{domxref("HTMLElement/load_event", "load")}} event rather than {{domxref("HTMLElement/error_event", "error")}} for modules that are already fetched or still fetching, and a module script now loads even if an earlier `modulepreload` of the same URL failed its [integrity check](/en-US/docs/Web/Security/Defenses/Subresource_Integrity).
   ([Firefox bug 2055211](https://bugzil.la/2055211) and [Firefox bug 2052949](https://bugzil.la/2052949)).
 
-<!-- #### Removals -->
-
 ### HTTP
 
 - Firefox now uses [Happy Eyeballs version 3](https://datatracker.ietf.org/doc/html/draft-ietf-happy-happyeyeballs-v3) when establishing connections, racing IPv6 and IPv4 addresses so that connection setup is not delayed by an unreachable address family.
@@ -82,12 +63,6 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
   ([Firefox bug 2062892](https://bugzil.la/2062892)).
 - {{glossary("QUIC")}} version negotiation is now supported, allowing {{glossary("HTTP_3", "HTTP/3")}} connections to negotiate QUIC version 2.
   ([Firefox bug 2059947](https://bugzil.la/2059947)).
-
-<!-- #### Removals -->
-
-<!-- ### Security -->
-
-<!-- #### Removals -->
 
 ### APIs
 
@@ -137,8 +112,6 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The `transport` statistics returned by {{domxref("RTCPeerConnection.getStats()")}} are now correct before negotiation, in other words after {{domxref("RTCPeerConnection.setLocalDescription()", "setLocalDescription()")}} but before a remote description has been set.
   The {{domxref("RTCTransportStats.dtlsRole", "dtlsRole")}} property is now reported as `unknown` until the DTLS handshake selects a role, where previously it was not reported at all ([Firefox bug 2053296](https://bugzil.la/2053296)), and the {{domxref("RTCTransportStats.iceState", "iceState")}} property now starts as `new` rather than `checking`, which incorrectly indicated that connectivity checks were already underway ([Firefox bug 2053297](https://bugzil.la/2053297)).
 
-<!-- #### Removals -->
-
 ### WebAssembly
 
 - The [compact import section](https://github.com/WebAssembly/compact-import-section) binary format extension is now supported, which reduces the size of modules that have many imports.
@@ -146,8 +119,6 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - The [wide arithmetic](https://github.com/WebAssembly/wide-arithmetic) proposal is now supported, adding the `i64.add128`, `i64.sub128`, `i64.mul_wide_s`, and `i64.mul_wide_u` instructions.
   These produce 128-bit results from 64-bit operands, which previously had to be emulated in code compiled to WebAssembly, such as bignum and cryptography libraries.
   ([Firefox bug 2062374](https://bugzil.la/2062374)).
-
-<!-- #### Removals -->
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -163,10 +134,6 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - Removed support for the `contexts` argument in the `session.unsubscribe` command. From now on, clients can unsubscribe only by event name or subscription ID. ([Firefox bug 1988723](https://bugzil.la/1988723)).
 
 ## Changes for add-on developers
-
-<!-- ### Removals -->
-
-<!-- ### Other -->
 
 ## Experimental web features
 
