@@ -96,6 +96,7 @@ Firefox 155 is the current [Beta version of Firefox](https://www.firefox.com/en-
     You can create one using {{domxref("WebTransport.createSendGroup()")}}. Then pass the returned {{domxref("WebTransportSendGroup")}} in the `sendGroup` option of {{domxref("WebTransport.createBidirectionalStream()")}} or {{domxref("WebTransport.createUnidirectionalStream()")}}.
     ([Firefox bug 2007165](https://bugzil.la/2007165)).
   - The `WebTransport.exportKeyingMaterial()` method derives keying material from the underlying TLS connection for a given label and context, so that both endpoints can obtain the same shared secret.
+    This allows, for example, an application-level handshake to detect MITM attacks in the case where an application connects to a peer that only has a self-signed certificate.
     ([Firefox bug 2007200](https://bugzil.la/2007200)).
   - The {{domxref("WebTransportDatagramDuplexStream.createWritable()")}} method returns a {{domxref("WebTransportDatagramsWritable")}} stream for sending datagrams, with {{domxref("WebTransportDatagramsWritable.sendGroup", "sendGroup")}} and {{domxref("WebTransportDatagramsWritable.sendOrder", "sendOrder")}} properties for prioritizing it against other senders.
     ([Firefox bug 2007174](https://bugzil.la/2007174)).
