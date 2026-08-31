@@ -15,7 +15,7 @@ A good understanding of paths is important when drawing SVGs. While creating com
 
 The shape of a `<path>` element is defined by one parameter: {{ SVGAttr("d") }}. (See more in [basic shapes](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes).) The `d` attribute contains a series of commands and parameters used by those commands.
 
-Each of the commands is instantiated (for example, creating a class, naming and locating it) by a specific letter. For instance, let's move to the x and y coordinates (`10`, `10`). The "Move to" command is called with the letter `M`. When the parser runs into this letter, it knows it needs to move to a point. So, to move to (`10`, `10`) the command to use would be `M 10 10`. After that, the parser begins reading for the next command.
+Each of the commands is instantiated (for example, creating a class, naming and locating it) by a specific letter. For instance, the "Move to" command is called with the letter `M` — to move to (`10`, `10`) you would start your command with `M 10 10`. When the parser runs into this letter, it knows it first needs to move to a point (without drawing a connecting line).
 
 All of the commands also come in two variants. An **uppercase letter** specifies absolute coordinates on the page, and a **lowercase letter** specifies relative coordinates (e.g., _move 10px up and 7px to the left from the last point_).
 
@@ -23,7 +23,7 @@ Coordinates in the `d` parameter are **always unitless** and hence in the user c
 
 ## Line commands
 
-There are five line commands for {{SVGElement("path")}} nodes. The first command is the "Move To" or `M`, which was described above. It takes at least two parameters, a coordinate (`x`) and coordinate (`y`) to move to. If the cursor was already somewhere on the page, no line is drawn to connect the two positions. The "Move To" command appears at the beginning of paths to specify where the drawing should start. For example:
+There are five line commands for {{SVGElement("path")}} nodes. The first command is the "Move To" or `M`, which was described above. It takes at least two parameters, starting with an `x` and `y` coordinate to move to. If the cursor was already somewhere on the page, no line is drawn to connect the two positions. The "Move To" command appears at the beginning of paths to specify where the drawing should start. For example:
 
 ```plain
 M x y
@@ -31,7 +31,17 @@ M x y
 m dx dy
 ```
 
-More than one coordinate pair can follow a "Move To" command. Only the first pair moves the cursor; every pair after it draws a line, exactly as though a "Line To" command had been used. So `M 10 10 90 10 90 90` is equivalent to `M 10 10 L 90 10 L 90 90`, and pairs following a relative `m` draw relative lines in the same way.
+More than one coordinate pair can follow a "Move To" command. Only the first pair moves the cursor; every pair after it draws a line, exactly as though a "Line To" command had been used. So `M 10 10 90 10 90 90` is equivalent to `M 10 10 L 90 10 L 90 90`. Pairs following `m` draw lines relative to the current position, in the same way.
+
+For example, this path uses a single `M` command with three coordinate pairs to draw two connected line segments:
+
+```html live-sample___move-to-multiple
+<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+  <path d="M10 10 90 10 90 90" stroke="black" fill="none" />
+</svg>
+```
+
+{{ EmbedLiveSample('move-to-multiple', 100, 130) }}
 
 In the following example there's only a point at (`10`, `10`). Note, though, that it wouldn't show up if a path was just drawn normally. For example:
 
