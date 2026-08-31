@@ -84,11 +84,11 @@ import namespace
 - `item`
   - : The `item` keyword. Included at the start of each value definition line when using [compact import syntax](#compact_import_sections).
 - `namespace`
-  - : An identifying name for the object that the value is being imported from in the host.
+  - : The name of the object in the host that contains the value being imported.
 - `value`
-  - : An identifying name for the value being imported.
+  - : The name of the value being imported. This is a property within the object identified by the `namespace`.
 - `type`
-  - : The type of the imported value. This can be one of the following external types:
+  - : The type of the imported value, which can optionally include an identifier that can be used to reference the imported value in the rest of the Wasm module. The `type` can be one of the following external types:
     - [`func`](/en-US/docs/WebAssembly/Reference/Definitions/types/func)
       - : Declares a function signature.
     - [`global`](/en-US/docs/WebAssembly/Reference/Definitions/global)
@@ -102,7 +102,23 @@ import namespace
 
 ## Description
 
-When you want to use values defined in the host in a Wasm module, you can make them available via `import` definitions. For example:
+When you want to use values defined in the host in a Wasm module, you can make them available via `import` definitions.
+
+For example, the following snippet shows how we might define a function and a [`WebAssembly.Global`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global) in JavaScript and select them to be imported when a Wasm module is instantiated:
+
+```js
+const importObj = {
+  myFunc: () => {
+    return 42;
+  },
+  myGlobal: new WebAssembly.Global({ value: "i32", mutable: true }, 0),
+};
+
+WebAssembly.instantiateStreaming(fetch("module.wasm"), importObj)
+  .then((obj) => { ... });
+```
+
+In the Wasm module, we would define the imports like this:
 
 ```wat
 (import "importObj" "myFunc" (func (result i32)))
