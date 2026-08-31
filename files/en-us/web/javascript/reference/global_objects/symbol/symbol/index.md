@@ -67,7 +67,7 @@ Symbol("foo") === Symbol("foo"); // false
 
 ### new Symbol()
 
-The following syntax with the {{jsxref("Operators/new", "new")}} operator will throw a
+The following syntax with the {{jsxref("new")}} operator will throw a
 {{jsxref("TypeError")}}:
 
 ```js example-bad

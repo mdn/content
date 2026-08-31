@@ -1,5 +1,6 @@
 ---
-title: position-try-fallbacks
+title: "`position-try-fallbacks` CSS property"
+short-title: position-try-fallbacks
 slug: Web/CSS/Reference/Properties/position-try-fallbacks
 page-type: css-property
 browser-compat: css.properties.position-try-fallbacks

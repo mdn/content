@@ -1,5 +1,6 @@
 ---
-title: <axis>
+title: "`<axis>` CSS type"
+short-title: <axis>
 slug: Web/CSS/Reference/Values/axis
 page-type: css-type
 browser-compat: css.types.axis

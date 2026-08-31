@@ -1,8 +1,11 @@
 ---
-title: <input type="checkbox">
+title: '`<input type="checkbox">` HTML attribute value'
+short-title: <input type="checkbox">
 slug: Web/HTML/Reference/Elements/input/checkbox
 page-type: html-attribute-value
-browser-compat: html.elements.input.type_checkbox
+browser-compat:
+  - html.elements.input.type_checkbox
+  - html.elements.input.switch
 sidebar: htmlsidebar
 ---
 
@@ -405,12 +408,6 @@ otherCheckbox.addEventListener("change", () => {
     <tr>
       <td><strong>DOM interface</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>

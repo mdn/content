@@ -105,6 +105,8 @@ These properties are defined on `SharedArrayBuffer.prototype` and shared by all 
 
 ## Examples
 
+Note that these examples cannot be run directly from the console or and arbitrary web page, because `SharedArrayBuffer` is not defined unless its [security requirements](#security_requirements) are met.
+
 ### Creating a new SharedArrayBuffer
 
 ```js

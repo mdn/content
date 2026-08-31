@@ -64,6 +64,6 @@ Sec-Redemption-Record: "https://redeemer.example";redemption-record="eyJwdWJsaWN
 ## See also
 
 - {{httpheader("Sec-Private-State-Token")}}
-- {{httpheader("Sec-Private-State-Crypto-Version")}}
+- {{httpheader("Sec-Private-State-Token-Crypto-Version")}}
 - {{httpheader("Sec-Private-State-Token-Lifetime")}}
 - [Private State Token API](/en-US/docs/Web/API/Private_State_Token_API)

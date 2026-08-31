@@ -1,5 +1,6 @@
 ---
-title: Invalid cookie domain
+title: "`invalid cookie domain` error code"
+short-title: invalid cookie domain
 slug: Web/WebDriver/Reference/Errors/InvalidCookieDomain
 page-type: webdriver-error
 sidebar: webdriver

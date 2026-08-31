@@ -87,9 +87,6 @@ The previous code snippet, either with the absolute or the relative URL, will gi
 > [!NOTE]
 > Elements like {{htmlelement("img")}} and {{htmlelement("video")}} are sometimes referred to as **replaced elements**. This is because the element's content and size are defined by an external resource (like an image or video file), not by the contents of the element itself. You can read more about them at {{ glossary("replaced elements")}}.
 
-> [!NOTE]
-> You can find the finished example from this section [running on GitHub](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html) (see the [source code](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/images-in-html/index.html) too.)
-
 ### Alternative text
 
 The next attribute we'll look at is `alt`. Its value is supposed to be a textual description of the image, for use in situations where the image cannot be seen/displayed or takes a long time to render because of a slow internet connection. For example, our above code could be modified like so:
@@ -118,7 +115,7 @@ What exactly should you write inside your `alt` attribute? It depends on _why_ t
 - **Decoration.** You should use [CSS background images](#css_background_images) for decorative images, but if you must use HTML, add a blank `alt=""`. If the image isn't part of the content, a screen reader shouldn't waste time reading it.
 - **Content.** If your image provides significant information, provide the same information in a _brief_ `alt` text – or even better, in the main text which everybody can see. Don't write redundant `alt` text. How annoying would it be for a sighted user if all paragraphs were written twice in the main content? If the image is described adequately by the main text body, you can just use `alt=""`.
 - **Link.** If you put an image inside {{htmlelement("a")}} tags, to turn an image into a link, you still must provide [accessible link text](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links#use_clear_link_wording). In such cases you may, either, write it inside the same `<a>` element, or inside the image's `alt` attribute – whichever works best in your case.
-- **Text.** You should not put your text into images. If your main heading needs a drop shadow, for example, [use CSS](/en-US/docs/Web/CSS/Reference/Properties/text-shadow) for that rather than putting the text into an image. However, If you _really can't avoid doing this_, you should supply the text inside the `alt` attribute.
+- **Text.** You should not put your text into images. If your main heading needs a drop shadow, for example, [use CSS](/en-US/docs/Web/CSS/Reference/Properties/text-shadow) for that rather than putting the text into an image. However, if you _really can't avoid doing this_, you should supply the text inside the `alt` attribute.
 
 Essentially, the key is to deliver a usable experience, even when the images can't be seen. This ensures all users are not missing any of the content. Try turning off images in your browser and see how things look. You'll soon realize how helpful alt text is if the image cannot be seen.
 
@@ -222,16 +219,8 @@ It is better to include such supporting information in the main article text, ra
 It is now your turn to play! This task will get you to embed an image.
 
 1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Edit the existing {{htmlelement("img")}} tag so that it embeds the image located at the following URL:
-
-   ```url
-   https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
-   ```
-
-   > [!NOTE]
-   > Earlier we said to never hotlink to images on other servers without permission, but this image is on our GitHub repo, so it is OK.
-
-3. Add an `alt` attribute to the image. You can check that the alt text works by temporarily misspelling the image URL.
+2. Edit the existing {{htmlelement("img")}} element so that it embeds the image `dinosaur_small.jpg`.
+3. Add an `alt` attribute to the image. You can check that the alt text works by temporarily misspelling the image filename.
 4. Set the image's correct `width` and `height` (hint: it is `200px` wide and `171px` high), then experiment with other values to see what the effect is.
 5. Set a `title` on the image.
 
@@ -250,7 +239,7 @@ Your finished HTML should look something like this:
 
 ```html
 <img
-  src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
+  src="dinosaur_small.jpg"
   alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"
   width="200"
   height="171"
@@ -303,7 +292,7 @@ Explore the links provided earlier in this section to read about the different l
 
 Work released into the public domain is sometimes referred to as "no rights reserved" — no copyright applies to it, and it can be used without permission and without having to fulfill any licensing conditions. Work can end up in the public domain by various means such as expiration of copyright, or specific waiving of rights.
 
-One of the most effective ways to place work in the public domain is to license it under [CC0](https://creativecommons.org/public-domain/cc0/), a specific creative commons license that provides a clear and unambiguous legal tool for this purpose.
+One of the most effective ways to place work in the public domain is to license it under [CC0](https://wiki.creativecommons.org/wiki/CC0), a specific creative commons license that provides a clear and unambiguous legal tool for this purpose.
 
 When using public domain images, obtain proof that the image is in the public domain and keep the proof for your records. For example, take a screenshot of the original source with the licensing status clearly displayed, and consider adding a page to your website with a list of the images acquired along with their license requirements.
 
@@ -380,7 +369,7 @@ If you make a mistake, you can clear your work using the _Reset_ button in the M
 
 ```html live-sample___images-2
 <img
-  src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
+  src="dinosaur_small.jpg"
   alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"
   width="200"
   height="171"
@@ -397,7 +386,7 @@ Your finished HTML should look like this:
 ```html
 <figure>
   <img
-    src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
+    src="dinosaur_small.jpg"
     alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"
     width="200"
     height="171" />

@@ -116,15 +116,6 @@ _An {{domxref("XRSessionEvent")}}. Inherits from {{domxref("Event")}}._
 
 {{InheritanceDiagram("XRSessionEvent")}}
 
-## Event properties
-
-If the event is not just a generic {{domxref("Event")}}, list the additional properties the event has.
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref("XRSessionEvent.session", "session")}} {{ReadOnlyInline}}
-  - : The {{domxref("XRSession")}} to which the event refers.
-
 ## Description
 
 If you want to provide additional text (too long for the summary), add a Description section.

@@ -27,7 +27,7 @@ new Event(type, options)
       - : A boolean value indicating whether the event bubbles. The default is
         `false`.
     - `cancelable` {{optional_inline}}
-      - : A boolean value indicating whether the event can be cancelled. The
+      - : A boolean value indicating whether the event can be canceled. The
         default is `false`.
     - `composed` {{optional_inline}}
       - : A boolean value indicating whether the event will trigger listeners

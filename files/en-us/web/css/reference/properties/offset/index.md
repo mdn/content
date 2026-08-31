@@ -1,12 +1,13 @@
 ---
-title: offset
+title: "`offset` CSS property"
+short-title: offset
 slug: Web/CSS/Reference/Properties/offset
 page-type: css-shorthand-property
 browser-compat: css.properties.offset
 sidebar: cssref
 ---
 
-The **`offset`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) sets all the properties required for animating an element along a defined path. The offset properties together help to define an _offset transform_, a [transform](/en-US/docs/Web/CSS/Guides/Transforms/Using) that aligns a point in an element ([offset-anchor](/en-US/docs/Web/CSS/Reference/Properties/offset-anchor)) to an _offset position_ ([offset-position](/en-US/docs/Web/CSS/Reference/Properties/offset-position)) on a path ([offset-path](/en-US/docs/Web/CSS/Reference/Properties/offset-path)) at various points along the path ([offset-distance](/en-US/docs/Web/CSS/Reference/Properties/offset-distance)) and optionally rotates the element ([offset-rotate](/en-US/docs/Web/CSS/Reference/Properties/offset-rotate)) to follow the direction of the path.
+The **`offset`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets all the properties required for animating an element along a defined path. The offset properties together help to define an _offset transform_, a [transform](/en-US/docs/Web/CSS/Guides/Transforms/Using) that aligns a point in an element ([offset-anchor](/en-US/docs/Web/CSS/Reference/Properties/offset-anchor)) to an _offset position_ ([offset-position](/en-US/docs/Web/CSS/Reference/Properties/offset-position)) on a path ([offset-path](/en-US/docs/Web/CSS/Reference/Properties/offset-path)) at various points along the path ([offset-distance](/en-US/docs/Web/CSS/Reference/Properties/offset-distance)) and optionally rotates the element ([offset-rotate](/en-US/docs/Web/CSS/Reference/Properties/offset-rotate)) to follow the direction of the path.
 
 > [!NOTE]
 > Early versions of the spec called this property `motion`.

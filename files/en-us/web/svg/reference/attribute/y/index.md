@@ -3,14 +3,14 @@ title: y
 slug: Web/SVG/Reference/Attribute/y
 page-type: svg-attribute
 spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-y
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fespotlight-y
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fepointlight-y
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-y
-  - https://drafts.fxtf.org/css-masking-1/#element-attrdef-mask-y
-  - https://svgwg.org/svg2-draft/geometry.html#Y
-  - https://svgwg.org/svg2-draft/pservers.html#PatternElementYAttribute
-  - https://svgwg.org/svg2-draft/text.html#TextElementYAttribute
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-filter-y
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fespotlight-y
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fepointlight-y
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-filter-primitive-y
+  - https://drafts.csswg.org/css-masking-1/#element-attrdef-mask-y
+  - https://w3c.github.io/svgwg/svg2-draft/geometry.html#Y
+  - https://w3c.github.io/svgwg/svg2-draft/pservers.html#PatternElementYAttribute
+  - https://w3c.github.io/svgwg/svg2-draft/text.html#TextElementYAttribute
 sidebar: svgref
 ---
 

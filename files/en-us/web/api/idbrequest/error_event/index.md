@@ -10,8 +10,6 @@ browser-compat: api.IDBRequest.error_event
 
 The `error` handler is executed when an error caused a request to fail. In the `error` event handler, you can access the error of the request, as well as place more requests to the same transaction.
 
-This event is not cancelable and does not bubble.
-
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.

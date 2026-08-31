@@ -2,7 +2,7 @@
 title: amplitude
 slug: Web/SVG/Reference/Attribute/amplitude
 page-type: svg-attribute
-spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomponenttransfer-amplitude
+spec-urls: https://drafts.csswg.org/filter-effects-1/#element-attrdef-fecomponenttransfer-amplitude
 sidebar: svgref
 ---
 

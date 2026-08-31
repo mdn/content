@@ -34,7 +34,7 @@ writeBuffer(buffer, bufferOffset, data, dataOffset, size)
 
 ### Return value
 
-None ({{jsxref("Undefined")}}).
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

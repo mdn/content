@@ -33,7 +33,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}_.
   - : A boolean value indicating whether the `<iframe>` is credentialless, meaning that its content is loaded in a new, ephemeral context. This context does not have access to the parent context's shared storage and credentials. In return, the {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) embedding rules can be lifted, so documents with COEP set can embed third-party documents that do not. See [IFrame credentialless](/en-US/docs/Web/HTTP/Guides/IFrame_credentialless) for a deeper explanation.
 - {{domxref("HTMLIFrameElement.csp")}} {{Experimental_Inline}}
   - : Specifies the Content Security Policy that an embedded document must agree to enforce upon itself.
-- {{domxref("HTMLIFrameElement.featurePolicy")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("HTMLIFrameElement.featurePolicy")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{non-standard_inline}}
   - : Returns the {{domxref("FeaturePolicy")}} interface which provides a simple API for introspecting the [Permissions Policies](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) applied to a specific document.
 - {{domxref("HTMLIFrameElement.frameBorder")}} {{Deprecated_Inline}}
   - : A string that indicates whether to create borders between frames.

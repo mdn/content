@@ -39,7 +39,7 @@ There are several layers of abstraction between a device GPU and a web browser r
   > [!NOTE]
   > The above diagram assumes a device with only one GPU.
 
-- A native GPU API, which is part of the OS (e.g., Metal on macOS), is a programming interface allowing native applications to use the capabilities of the GPU. API instructions are sent to the GPU (and responses received) via a driver. It is possible for a system to have multiple native OS APIs and drivers available to communicate with the GPU, although the above diagram assumes a device with only one native API/driver.
+- A native GPU API, which is part of the OS (for example, Metal on macOS), is a programming interface allowing native applications to use the capabilities of the GPU. API instructions are sent to the GPU (and responses received) via a driver. It is possible for a system to have multiple native OS APIs and drivers available to communicate with the GPU, although the above diagram assumes a device with only one native API/driver.
 - A browser's WebGPU implementation handles communicating with the GPU via a native GPU API driver. A WebGPU adapter effectively represents a physical GPU and driver available on the underlying system, in your code.
 - A logical device is an abstraction via which a single web app can access GPU capabilities in a compartmentalized way. Logical devices are required to provide multiplexing capabilities. A physical device's GPU is used by many applications and processes concurrently, including potentially many web apps. Each web app needs to be able to access WebGPU in isolation for security and logic reasons.
 
@@ -48,7 +48,7 @@ There are several layers of abstraction between a device GPU and a web browser r
 A logical device — represented by a {{domxref("GPUDevice")}} object instance — is the basis from which a web app accesses all WebGPU functionality. Accessing a device is done as follows:
 
 1. The {{domxref("Navigator.gpu")}} property (or {{domxref("WorkerNavigator.gpu")}} if you are using WebGPU functionality from inside a worker) returns the {{domxref("GPU")}} object for the current context.
-2. You access an adapter via the {{domxref("GPU.requestAdapter", "GPU.requestAdapter()")}} method. This method accepts an optional settings object allowing you to request for example a high-performance or low-energy adapter. If this is not included, the device will provide access to the default adapter, which is good enough for most purposes.
+2. You access an adapter via the {{domxref("GPU.requestAdapter", "GPU.requestAdapter()")}} method. This method accepts an optional settings object allowing you to request, for example, a [compatibility mode](#webgpu_compatibility_mode), high-performance, or low-energy adapter. If this is not included, the device will provide access to the default adapter, which is good enough for most purposes.
 3. A device can be requested via {{domxref("GPUAdapter.requestDevice()")}}. This method also accepts an options object (referred to as a descriptor), which can be used to specify the exact features and limits you want the logical device to have. If this is not included, the supplied device will have a reasonable general-purpose spec that is good enough for most purposes.
 
 Putting this together with some feature detection checks, the above process could be achieved as follows:
@@ -74,6 +74,29 @@ async function init() {
   // …
 }
 ```
+
+### WebGPU compatibility mode
+
+By default, a `GPUAdapter` supports all core WebGPU features and limits, which allows applications to support devices with modern platform graphics APIs. This is referred to as "core" WebGPU.
+
+It is possible to opt WebGPU into "compatibility mode", which specifies that the `GPUAdapter` will support a restricted subset of the WebGPU API capable of running in older graphics APIs such as OpenGL ES 3.1 and Direct3D 11. This is done by specifying a [`featureLevel`](/en-US/docs/Web/API/GPU/requestAdapter#featurelevel) value of `compatibility` in your {{domxref("GPU.requestAdapter()")}} call:
+
+```js
+const adapter = await navigator.gpu.requestAdapter({
+  featureLevel: "compatibility",
+});
+```
+
+The exact restrictions of compatibility mode are detailed at [WebGPU Compatibility Mode](https://webgpufundamentals.org/webgpu/lessons/webgpu-compatibility-mode.html).
+Restricted applications are still valid WebGPU core applications due to supporting a subset of core WebGPU, and will therefore run on all browsers that support core WebGPU, even if they don't explicitly support compatibility mode.
+
+A `GPUAdapter` or `GPUDevice` that supports core WebGPU will have the `core-features-and-limits` feature available (see {{domxref("GPUSupportedFeatures")}}). To test whether a WebGPU app is in core or compatibility mode, check whether the `core-features-and-limits` feature is supported, for example:
+
+```js
+const isCore = device.features.has("core-features-and-limits");
+```
+
+See also [Using compatibility mode only if necessary](/en-US/docs/Web/API/GPU/requestAdapter#using_compatibility_mode_only_if_necessary).
 
 ## Pipelines and shaders: WebGPU app structure
 

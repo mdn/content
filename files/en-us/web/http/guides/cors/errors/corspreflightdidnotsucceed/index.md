@@ -22,6 +22,8 @@ performed. There are a couple of reasons why preflighting might fail:
 - The preflight request suffered any kind of networking error that might ordinarily
   occur.
 
+If the server is not under your control, see [Client-side considerations](/en-US/docs/Web/HTTP/Guides/CORS/Errors#client-side_considerations) for alternative approaches.
+
 ## See also
 
 - [CORS errors](/en-US/docs/Web/HTTP/Guides/CORS/Errors)

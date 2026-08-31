@@ -17,7 +17,7 @@ browser-compat: api.WorkerGlobalScope.importScripts
 
 The **`importScripts()`** method of the {{domxref("WorkerGlobalScope")}} interface synchronously imports one or more scripts into the scope of a [classic worker](/en-US/docs/Web/API/Worker/Worker#module_and_classic_workers) (a worker constructed from a classic script).
 
-Note that the method cannot be used in [module workers](/en-US/docs/Web/API/Worker/Worker#module_and_classic_workers), which instead load dependenices using [`import` statements](/en-US/docs/Web/JavaScript/Reference/Statements/import).
+Note that the method cannot be used in [module workers](/en-US/docs/Web/API/Worker/Worker#module_and_classic_workers), which instead load dependencies using [`import` statements](/en-US/docs/Web/JavaScript/Reference/Statements/import).
 
 ## Syntax
 

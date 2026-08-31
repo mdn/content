@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.WheelEvent
 ---
 
-{{APIRef("UI Events")}}
+{{APIRef("Pointer Events")}}
 
 The **`WheelEvent`** interface represents events that occur due to the user moving a mouse wheel or similar input device.
 

@@ -1,5 +1,6 @@
 ---
-title: :is()
+title: "`:is()` CSS pseudo-class"
+short-title: :is()
 slug: Web/CSS/Reference/Selectors/:is
 page-type: css-pseudo-class
 browser-compat: css.selectors.is
@@ -105,51 +106,21 @@ The `:is()` pseudo-class can greatly simplify your CSS selectors. For example, t
 ol ol ul,
 ol ul ul,
 ol menu ul,
-ol dir ul,
 ol ol menu,
 ol ul menu,
 ol menu menu,
-ol dir menu,
-ol ol dir,
-ol ul dir,
-ol menu dir,
-ol dir dir,
 ul ol ul,
 ul ul ul,
 ul menu ul,
-ul dir ul,
 ul ol menu,
 ul ul menu,
 ul menu menu,
-ul dir menu,
-ul ol dir,
-ul ul dir,
-ul menu dir,
-ul dir dir,
 menu ol ul,
 menu ul ul,
 menu menu ul,
-menu dir ul,
 menu ol menu,
 menu ul menu,
-menu menu menu,
-menu dir menu,
-menu ol dir,
-menu ul dir,
-menu menu dir,
-menu dir dir,
-dir ol ul,
-dir ul ul,
-dir menu ul,
-dir dir ul,
-dir ol menu,
-dir ul menu,
-dir menu menu,
-dir dir menu,
-dir ol dir,
-dir ul dir,
-dir menu dir,
-dir dir dir {
+menu menu menu {
   list-style-type: square;
 }
 ```
@@ -158,7 +129,7 @@ You can replace it with:
 
 ```css
 /* 3-deep (or more) unordered lists use a square */
-:is(ol, ul, menu, dir) :is(ol, ul, menu, dir) :is(ul, menu, dir) {
+:is(ol, ul, menu) :is(ol, ul, menu) :is(ul, menu) {
   list-style-type: square;
 }
 ```

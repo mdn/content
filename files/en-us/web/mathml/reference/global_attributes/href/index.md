@@ -3,6 +3,7 @@ title: href
 slug: Web/MathML/Reference/Global_attributes/href
 page-type: mathml-attribute
 status:
+  - deprecated
   - non-standard
 browser-compat: mathml.global_attributes.href
 sidebar: mathmlref

@@ -6,11 +6,7 @@ browser-compat: webextensions.api.permissions.contains
 sidebar: addonsidebar
 ---
 
-Check whether the extension has the permissions listed in the given {{WebExtAPIRef("permissions.Permissions")}} object.
-
-The `Permissions` argument may contain either an origins property, which is an array of [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), or a `permissions` property, which is an array of [API permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions), or both.
-
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). The promise resolves to `true` if the extension has all of the specified permissions. For host permissions, if the extension's permissions [pattern-match](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) the permissions listed in `origins`, then they are considered to match.
+Checks whether the extension has specific permissions.
 
 ## Syntax
 
@@ -27,17 +23,18 @@ let getContains = browser.permissions.contains(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with `true` if the extension already has all the permissions listed in the `permissions` argument, or `false` otherwise.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with `true` if the extension has all the permissions listed in the `permissions` argument, or `false` otherwise. For host permissions, if the extension's permissions [pattern-match](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) the permissions listed in `origins`, then they are considered to match.
 
 ## Examples
 
 ```js
 // Extension permissions are:
-// "webRequest", "tabs", "*://*.mozilla.org/*"
+// "webRequest", "tabs", "*://*.mozilla.org/*", and "healthInfo" in "data_collection"
 
 let testPermissions1 = {
   origins: ["*://mozilla.org/"],
   permissions: ["tabs"],
+  data_collection: ["healthInfo"],
 };
 
 const testResult1 = await browser.permissions.contains(testPermissions1);
@@ -65,6 +62,13 @@ let testPermissions4 = {
 
 const testResult4 = await browser.permissions.contains(testPermissions4);
 console.log(testResult4); // false: "https://example.org/", `origins` doesn't match
+
+let testPermissions5 = {
+  data_collection: ["searchTerms"],
+};
+
+const testResult5 = await browser.permissions.contains(testPermissions4);
+console.log(testResult5); // false: "searchTerms" doesn't match data type in `data_collection`
 ```
 
 {{WebExtExamples}}

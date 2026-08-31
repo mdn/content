@@ -14,7 +14,7 @@ The method accepts a single optional `options` argument, which may include:
 
 - A `mediation` property indicating how and whether the user should be asked to participate in the operation.
   This controls, for example, whether the site can silently sign a user in using a stored credential.
-- A `signal` property enabling the operation to be cancelled using an {{domxref("AbortController")}}.
+- A `signal` property enabling the operation to be canceled using an {{domxref("AbortController")}}.
 - One or more properties — `password`, `federated`, `identity`, `otp`, `publicKey` — which indicate the [types of credential](/en-US/docs/Web/API/Credential_Management_API/Credential_types) being requested. If set, the values of these properties include any parameters that the browser needs in order to find an appropriate credential of the requested type.
 
 The API always fulfills with a single credential or `null`. If multiple credentials are available and user mediation is allowed, then the browser will ask the user to select a single credential.
@@ -31,9 +31,9 @@ get(options)
 - `options` {{optional_inline}}
   - : An object that contains options for the request. It can contain the following properties:
     - `mediation` {{optional_inline}}
-      - : A string indicating whether the user will be required to login for every visit to a client app. The value can be one of the following:
+      - : A string indicating how the user is involved in retrieving the credential. The value can be one of the following:
         - `"conditional"`
-          - : Discovered credentials are presented to the user in a non-modal dialog box along with an indication of the origin requesting credentials. In practice, this means autofilling available credentials; see [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) for more details of how this is used; {{domxref("PublicKeyCredential.isConditionalMediationAvailable_static", "PublicKeyCredential.isConditionalMediationAvailable()")}} also provides some useful information.
+          - : Discovered credentials are presented to the user in a non-modal dialog box along with an indication of the origin requesting credentials. In practice, this means autofilling available credentials; see [Autofill UI](/en-US/docs/Web/API/Web_Authentication_API#autofill_ui) for more details of how this is used.
 
         - `"optional"`
           - : If credentials can be handed over for a given operation without user mediation, they will be, enabling automatic reauthentication without user mediation. If user mediation is required, then the user agent will ask the user to authenticate. This value is intended for situations where you have reasonable confidence that a user won't be surprised or confused at seeing a login dialog box — for example on a site that doesn't automatically log users in, when a user has just clicked a "Login/Signup" button.
@@ -138,9 +138,7 @@ async function signIn() {
         {
           configURL: "https://accounts.idp.example/config.json",
           clientId: "********",
-          params: {
-            /* IdP-specific parameters */
-          },
+          params: {/* IdP-specific parameters */},
         },
       ],
     },
@@ -161,9 +159,7 @@ async function signIn() {
         {
           configURL: "https://accounts.idp.example/config.json",
           clientId: "********",
-          params: {
-            /* IdP-specific parameters */
-          },
+          params: {/* IdP-specific parameters */},
           loginHint: "user1@example.com",
         },
       ],
@@ -183,9 +179,7 @@ async function signIn() {
           {
             configURL: "https://accounts.idp.example/config.json",
             clientId: "********",
-            params: {
-              /* IdP-specific parameters */
-            },
+            params: {/* IdP-specific parameters */},
           },
         ],
       },
@@ -289,7 +283,7 @@ async function authenticateUser() {
     if (err.name === "TimeoutError") {
       console.error("The authentication request timed out.");
     } else if (err.name === "AbortError") {
-      console.log("The request was cancelled by the user.");
+      console.log("The request was canceled by the user.");
     } else {
       console.error("An unexpected error occurred:", err);
     }

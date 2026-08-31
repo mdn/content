@@ -1,5 +1,6 @@
 ---
-title: justify-self
+title: "`justify-self` CSS property"
+short-title: justify-self
 slug: Web/CSS/Reference/Properties/justify-self
 page-type: css-property
 browser-compat: css.properties.justify-self

@@ -3,7 +3,7 @@ title: values
 slug: Web/SVG/Reference/Attribute/values
 page-type: svg-attribute
 spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fecolormatrix-values
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fecolormatrix-values
   - https://svgwg.org/specs/animations/#ValuesAttribute
 sidebar: svgref
 ---

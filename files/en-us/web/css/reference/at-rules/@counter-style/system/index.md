@@ -1,5 +1,6 @@
 ---
-title: system
+title: "`system` CSS at-rule descriptor"
+short-title: system
 slug: Web/CSS/Reference/At-rules/@counter-style/system
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.system

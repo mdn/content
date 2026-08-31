@@ -11,7 +11,7 @@ browser-compat: api.Range.commonAncestorContainer
 The **`Range.commonAncestorContainer`** read-only property
 returns the deepest — or furthest down the document tree — {{domxref("Node")}} that
 contains both [boundary points](https://dom.spec.whatwg.org/#introduction-to-dom-ranges) of the {{domxref("Range")}}. This means that if
-{{domxref("Range.startContainer")}} and {{domxref("Range.endContainer")}} both refer to
+{{domxref("AbstractRange.startContainer", "startContainer")}} and {{domxref("AbstractRange.endContainer", "endContainer")}} both refer to
 the same node, this node is the **common ancestor container**.
 
 Since a `Range` need not be continuous, and may also partially select nodes,

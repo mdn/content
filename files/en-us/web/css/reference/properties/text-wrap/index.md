@@ -1,12 +1,13 @@
 ---
-title: text-wrap
+title: "`text-wrap` CSS property"
+short-title: text-wrap
 slug: Web/CSS/Reference/Properties/text-wrap
 page-type: css-shorthand-property
 browser-compat: css.properties.text-wrap
 sidebar: cssref
 ---
 
-The **`text-wrap`** [CSS](/en-US/docs/Web/CSS) shorthand property controls how text inside an element is wrapped. The different values provide:
+The **`text-wrap`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property controls how text inside an element is wrapped. The different values provide:
 
 - Typographic improvements, for example more balanced line lengths across broken headings
 - A way to turn text wrapping off completely.
@@ -86,9 +87,9 @@ text-wrap: revert-layer;
 text-wrap: unset;
 ```
 
-The `text-wrap` property is specified as a single keyword chosen from the list of values below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `wrap`
   - : Text is wrapped across lines at appropriate characters (for example spaces, in languages like English that use space separators) to minimize overflow. This is the default value.

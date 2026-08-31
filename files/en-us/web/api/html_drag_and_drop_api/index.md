@@ -106,7 +106,7 @@ For more information, read [Working with the drag data store](/en-US/docs/Web/AP
 
 ### Drop target
 
-A _drop target_ is an element on which a user can drop a dragged item. By default, most elements are not drop targets, and if you release the drag, a "fly-black" animation displays, indicating that the drag and drop failed. Any element can become a drop target by canceling the {{domxref("HTMLElement.dragover_event","dragover")}} event that fires on it with `preventDefault()`.
+A _drop target_ is an element on which a user can drop a dragged item. By default, most elements are not drop targets, and if you release the drag, a "fly-back" animation displays, indicating that the drag and drop failed. Any element can become a drop target by canceling the {{domxref("HTMLElement.dragover_event","dragover")}} event that fires on it with `preventDefault()`.
 
 The {{domxref("HTMLElement/drop_event", "drop")}} event only fires on drop targets, and it is the only time you can read the drag data store.
 

@@ -3,24 +3,12 @@ title: "SerialPort: disconnect event"
 short-title: disconnect
 slug: Web/API/SerialPort/disconnect_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.SerialPort.disconnect_event
 ---
 
-{{SecureContext_Header}}{{APIRef("Web Serial API")}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
+{{APIRef("Web Serial API")}}{{SecureContext_Header}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`disconnect`** event of the {{domxref("SerialPort")}} interface is fired when the port disconnects from the device.
-
-## Description
-
-More specifically, the `disconnect` event fires when a port that was previously [logically connected](/en-US/docs/Web/API/SerialPort/connect_event#description) after a user granted permission for a site to access it (following a {{domxref("Serial.requestPort()")}} call) is no longer connected.
-
-### Bubbling
-
-This event bubbles to the instance of {{domxref("Serial")}} that returned this interface. The `event.target` property refers to the {{domxref('SerialPort')}} object that bubbles up.
-
-For more information, see [Event bubbling](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling).
 
 ## Syntax
 
@@ -35,6 +23,17 @@ ondisconnect = (event) => { }
 ## Event type
 
 A generic {{domxref("Event")}}.
+
+## Description
+
+The `disconnect` event fires when a port that was previously [logically connected](/en-US/docs/Web/API/SerialPort/connect_event#description) to the device is no longer connected.
+
+### Bubbling
+
+This event bubbles up to the {{domxref("Serial")}} instance that returned this interface.
+The `event.target` property refers to the {{domxref("SerialPort")}} object that bubbles up.
+
+For more information, see [Event bubbling](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling).
 
 ## Examples
 

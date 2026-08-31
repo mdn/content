@@ -42,3 +42,4 @@ console.log(el.edgeMode.baseVal); // output: 2
 ## See also
 
 - {{domxref("SVGAnimatedEnumeration")}}
+- {{domxref("SVGFEGaussianBlurElement.edgeMode")}}

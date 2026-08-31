@@ -29,6 +29,8 @@ browser.alarms.create(
 
     Alarm names are unique within the scope of a single extension. If an alarm with an identical name exists, the existing alarm will be cleared and the alarm being created will replace it.
 
+    From Chrome 150, alarms with names longer than 1024 bytes are rejected. This limit may be implemented on other browsers. See [Proposal: Limits on lengths of strings passed to WebExtension APIs](https://github.com/w3c/webextensions/issues/935) for more information.
+
 - `alarmInfo` {{optional_inline}}
   - : `object`. You can use this to specify when the alarm will initially fire, either as an absolute value (`when`), or as a delay from the time the alarm is set (`delayInMinutes`). To make the alarm recur, specify `periodInMinutes`.
 

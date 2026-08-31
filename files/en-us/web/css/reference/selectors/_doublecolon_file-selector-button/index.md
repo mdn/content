@@ -1,5 +1,6 @@
 ---
-title: ::file-selector-button
+title: "`::file-selector-button` CSS pseudo-element"
+short-title: ::file-selector-button
 slug: Web/CSS/Reference/Selectors/::file-selector-button
 page-type: css-pseudo-element
 browser-compat: css.selectors.file-selector-button

@@ -71,7 +71,7 @@ If you really value the clarity of using `.mjs` for modules versus using `.js` f
 It is also worth noting that:
 
 - Some tools may never support `.mjs`.
-- The `<script type="module">` attribute is used to denote when a module is being pointed to, as you'll see below.
+- The `<script type="module">` attribute is used to denote when a module is being pointed to, as described in [Applying the module to your HTML](#applying_the_module_to_your_html).
 
 ## Exporting module features
 
@@ -283,7 +283,7 @@ This may be reasonable for just one module, but scales poorly if you wish to imp
 
 #### General URL remapping
 
-A module specifier key doesn't have to be path — it can also be an absolute URL (or a URL-like relative path like `./`, `../`, `/`).
+A module specifier key doesn't have to be a path — it can also be an absolute URL (or a URL-like relative path like `./`, `../`, `/`).
 This may be useful if you want to remap a module that has absolute paths to a resource with your own local resources.
 
 ```json

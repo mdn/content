@@ -1,5 +1,6 @@
 ---
-title: sin()
+title: "`sin()` CSS function"
+short-title: sin()
 slug: Web/CSS/Reference/Values/sin
 page-type: css-function
 browser-compat: css.types.sin

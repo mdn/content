@@ -1,5 +1,6 @@
 ---
-title: display-mode
+title: "`display-mode` CSS media feature"
+short-title: display-mode
 slug: Web/CSS/Reference/At-rules/@media/display-mode
 page-type: css-media-feature
 browser-compat: css.at-rules.media.display-mode

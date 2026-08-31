@@ -1,5 +1,6 @@
 ---
-title: video-dynamic-range
+title: "`video-dynamic-range` CSS media feature"
+short-title: video-dynamic-range
 slug: Web/CSS/Reference/At-rules/@media/video-dynamic-range
 page-type: css-media-feature
 browser-compat: css.at-rules.media.video-dynamic-range

@@ -149,7 +149,7 @@ In an expression body, only a single expression is specified, which becomes the 
 
 ```js
 // Expression body
-const add = (a, b) => a + b; // Implicitly returns a
+const add = (a, b) => a + b; // Implicitly returns a + b
 
 // Block body
 const add2 = (a, b) => {

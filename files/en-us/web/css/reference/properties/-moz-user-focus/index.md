@@ -1,5 +1,6 @@
 ---
-title: -moz-user-focus
+title: "`-moz-user-focus` CSS property"
+short-title: -moz-user-focus
 slug: Web/CSS/Reference/Properties/-moz-user-focus
 page-type: css-property
 status:
@@ -9,7 +10,7 @@ browser-compat: css.properties.-moz-user-focus
 sidebar: cssref
 ---
 
-{{deprecated_header}}{{non-standard_header}}
+{{non-standard_header}}
 
 The **`-moz-user-focus`** [CSS](/en-US/docs/Web/CSS) property is used to indicate whether an element can have the focus.
 

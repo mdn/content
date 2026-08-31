@@ -1,5 +1,6 @@
 ---
-title: flex-grow
+title: "`flex-grow` CSS property"
+short-title: flex-grow
 slug: Web/CSS/Reference/Properties/flex-grow
 page-type: css-property
 browser-compat: css.properties.flex-grow
@@ -68,9 +69,9 @@ flex-grow: revert-layer;
 flex-grow: unset;
 ```
 
-The `flex-grow` property is specified as a single `<number>`.
-
 ### Values
+
+This property is specified as the following value:
 
 - `<number>`
   - : See {{cssxref("&lt;number&gt;")}}. Negative values are invalid. Defaults to 0, which prevents the flex item from growing.

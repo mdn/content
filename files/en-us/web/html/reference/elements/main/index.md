@@ -1,5 +1,6 @@
 ---
-title: "<main>: The Main element"
+title: "`<main>` HTML main element"
+short-title: <main>
 slug: Web/HTML/Reference/Elements/main
 page-type: html-element
 browser-compat: html.elements.main

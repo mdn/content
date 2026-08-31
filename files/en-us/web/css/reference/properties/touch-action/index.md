@@ -1,5 +1,6 @@
 ---
-title: touch-action
+title: "`touch-action` CSS property"
+short-title: touch-action
 slug: Web/CSS/Reference/Properties/touch-action
 page-type: css-property
 browser-compat: css.properties.touch-action

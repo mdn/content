@@ -37,7 +37,7 @@ Omitted parts are treated as empty strings.
 
 ### Return value
 
-An {{jsxref("object")}} that defines the matching elements and groups, or `null` if the passed inputs do not match the pattern.
+An {{jsxref("Object")}} that defines the matching elements and groups, or `null` if the passed inputs do not match the pattern.
 
 The object has the following properties:
 

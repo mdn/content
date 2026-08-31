@@ -1,5 +1,5 @@
 ---
-title: "HTML attribute: fetchpriority"
+title: "`fetchpriority` HTML attribute"
 short-title: fetchpriority
 slug: Web/HTML/Reference/Attributes/fetchpriority
 page-type: html-attribute

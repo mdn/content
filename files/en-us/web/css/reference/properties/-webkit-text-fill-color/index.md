@@ -1,5 +1,6 @@
 ---
-title: -webkit-text-fill-color
+title: "`-webkit-text-fill-color` CSS property"
+short-title: -webkit-text-fill-color
 slug: Web/CSS/Reference/Properties/-webkit-text-fill-color
 page-type: css-property
 browser-compat: css.properties.-webkit-text-fill-color
@@ -25,6 +26,8 @@ The **`-webkit-text-fill-color`** [CSS](/en-US/docs/Web/CSS) property specifies 
 ```
 
 ### Values
+
+This property is specified as one `<color>` value:
 
 - `<color>`
   - : The foreground fill color of the element's text content.

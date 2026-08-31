@@ -1,5 +1,6 @@
 ---
-title: calc-size()
+title: "`calc-size()` CSS function"
+short-title: calc-size()
 slug: Web/CSS/Reference/Values/calc-size
 page-type: css-function
 status:

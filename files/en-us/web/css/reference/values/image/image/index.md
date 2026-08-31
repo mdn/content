@@ -1,5 +1,6 @@
 ---
-title: image()
+title: "`image()` CSS function"
+short-title: image()
 slug: Web/CSS/Reference/Values/image/image
 page-type: css-function
 spec-urls: https://drafts.csswg.org/css-images-4/#funcdef-image
@@ -9,7 +10,7 @@ sidebar: cssref
 The **`image()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) defines an {{cssxref("image")}} in a similar fashion to the {{CSSxRef("url_function", "url()")}} function, but with added functionality including specifying the image's directionality, displaying just a part of that image defined by a media fragment, and specifying a solid color as a fallback in case none of the specified images are able to be rendered.
 
 > [!NOTE]
-> The CSS `image()` function should not confused with {{DOMxRef("HTMLImageElement/Image", '<code>Image()</code>, the <code>HTMLImageElement</code> constructor', '', 1)}}.
+> The CSS `image()` function should not be confused with {{DOMxRef("HTMLImageElement/Image", '<code>Image()</code>, the <code>HTMLImageElement</code> constructor', '', 1)}}.
 
 ## Syntax
 

@@ -1,5 +1,6 @@
 ---
-title: <gradient>
+title: "`<gradient>` CSS type"
+short-title: <gradient>
 slug: Web/CSS/Reference/Values/gradient
 page-type: css-type
 browser-compat: css.types.gradient

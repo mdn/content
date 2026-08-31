@@ -1,5 +1,6 @@
 ---
-title: animation-range-start
+title: "`animation-range-start` CSS property"
+short-title: animation-range-start
 slug: Web/CSS/Reference/Properties/animation-range-start
 page-type: css-property
 browser-compat: css.properties.animation-range-start
@@ -61,7 +62,7 @@ The `animation-range-start`, along with the {{cssxref("animation-range-end")}} p
 
 ## Examples
 
-### Creating a scroll view progress timeline with range start
+### Creating a scroll progress timeline with range start
 
 In this example, the `animation-range-start` is applied to an element animated via a scroll progress timeline. This makes the animation start well before the element enters the scrollport.
 
@@ -184,7 +185,7 @@ p {
 
 Scroll to see the element animate. Notice how the element is already scaled and semi-opaque as it enters the viewport. This is because the element started animating well before it entered the viewport.
 
-{{EmbedLiveSample("Creating a named view progress timeline with range start", "100%", "480px")}}
+{{EmbedLiveSample("Creating a scroll progress timeline with range start", "100%", "480px")}}
 
 ## Specifications
 
@@ -202,5 +203,6 @@ Scroll to see the element animate. Notice how the element is already scaled and 
 - {{cssxref("view-timeline-inset")}}
 - {{domxref("Element.animate()")}} `rangeStart` property
 - [Scroll-driven animation timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
+- [Understanding timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module
 - [View progress timeline: Ranges and animation progress visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/)
