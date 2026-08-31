@@ -421,7 +421,7 @@ This example shows a typical {{htmlelement("nav")}} menu that includes a search 
 
 #### HTML
 
-The main nav items are comprised of a list of links. The search {{htmlelement("form")}} is given a [`role="search"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/search_role) attribute, which makes the `<form>` a search landmark, announcing it to AT. We also give the `<input type="search">` element an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) to give it a clear label that is read out by screenreaders.
+The main nav items are comprised of a list of links. The search {{htmlelement("form")}} is given a [`role="search"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/search_role) attribute, which makes the `<form>` a search landmark, announcing it to AT. We also give the `<input type="search">` element an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) to give it a clear label that is read out by screen readers.
 
 ```html live-sample___accessible-search
 <nav>

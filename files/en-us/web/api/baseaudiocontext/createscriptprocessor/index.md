@@ -8,7 +8,7 @@ status:
 browser-compat: api.BaseAudioContext.createScriptProcessor
 ---
 
-{{APIRef("Web Audio API")}}{{deprecated_header}}
+{{APIRef("Web Audio API")}}
 
 The `createScriptProcessor()` method of the {{domxref("BaseAudioContext")}} interface
 creates a {{domxref("ScriptProcessorNode")}} used for direct audio processing.

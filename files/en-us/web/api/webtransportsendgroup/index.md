@@ -2,12 +2,10 @@
 title: WebTransportSendGroup
 slug: Web/API/WebTransportSendGroup
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.WebTransportSendGroup
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}{{SeeCompatTable}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`WebTransportSendGroup`** interface of the {{domxref("WebTransport API", "WebTransport API", "", "nocode")}} represents a group of streams and datagrams, within which relative send priority is determined by the `sendOrder` value of each member.
 
@@ -17,7 +15,7 @@ The **`WebTransportSendGroup`** interface of the {{domxref("WebTransport API", "
 
 ## Instance methods
 
-- {{domxref("WebTransportSendGroup.getStats", "getStats()")}} {{experimental_inline}}
+- {{domxref("WebTransportSendGroup.getStats", "getStats()")}}
   - : Returns a {{jsxref("Promise")}} that resolves with an object containing statistics aggregated across all of the {{domxref("WebTransportSendStream")}} and {{domxref("WebTransportDatagramsWritable")}} objects currently associated with this group.
 
 ## Description

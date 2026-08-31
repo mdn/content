@@ -50,8 +50,6 @@ Note that even though you can put anything inside a `<textarea>` element (includ
 
 Visually, the text entered wraps and the form control is by default resizable. Most browsers provide a drag handle that you can drag to increase/decrease the size of the text area.
 
-You can find an example of text area usage in the [example](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html) we put together in the first article of this.
-
 ### Controlling multi-line rendering
 
 {{htmlelement("textarea")}} accepts three attributes to control its rendering across several lines:
@@ -78,9 +76,6 @@ Play with the interactive example at the top of the {{cssxref("resize")}} refere
 ## Drop-down controls
 
 Drop-down controls are a simple way to let users select from many options without taking up much space in the user interface. HTML has two types of drop-down controls: the **select box** and the **autocomplete box**. The interaction is the same in both the types of drop-down controls — after the control is activated, the browser displays a list of values the user can select from.
-
-> [!NOTE]
-> You can find examples of all the drop-down box types on GitHub at [drop-down-content.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/drop-down-content.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/drop-down-content.html)).
 
 ### Select box
 
@@ -144,7 +139,7 @@ By default, the height of the select box is enough to display a single value. Th
 By default, a select box lets a user select only one value. By adding the [`multiple`](/en-US/docs/Web/HTML/Reference/Elements/select#multiple) attribute to the {{HTMLElement("select")}} element, you can allow users to select several values. Users can select multiple values by using the default mechanism provided by the operating system (e.g., on the desktop, multiple values can be clicked while holding down <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> keys).
 
 ```html
-<select id="multi" name="multi" multiple size="2">
+<select id="multi" name="multi" multiple size="3">
   <optgroup label="fruits">
     <option>Banana</option>
     <option selected>Cherry</option>
@@ -209,12 +204,9 @@ In this case, different browsers behave differently from case to case, so consid
 
 There are a few other form features that are not as obvious as the ones we have already mentioned, but still useful in some situations, so we thought it would be worth giving them a brief mention.
 
-> [!NOTE]
-> You can find the examples from this section on GitHub as [other-examples.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/other-examples.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/other-examples.html)).
-
 ### Meters and progress bars
 
-Meters and progress bars are visual representations of numeric values. Support for {{HTMLElement("progress")}} and {{HTMLElement("meter")}} is available in all modern browsers.
+Meters and progress bars (created using the {{HTMLElement("meter")}} and {{HTMLElement("progress")}} elements) are visual representations of numeric values.
 
 #### Meter
 

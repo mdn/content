@@ -9,7 +9,7 @@ status:
 browser-compat: api.CSSPositionValue.y
 ---
 
-{{deprecated_header}}{{APIRef("CSS Typed Object Model API")}}{{Non-standard_header}}
+{{APIRef("CSS Typed Object Model API")}}{{Non-standard_header}}
 
 The **`y`** property of the {{domxref("CSSPositionValue")}} interface returns the item's position along the vertical axis.
 

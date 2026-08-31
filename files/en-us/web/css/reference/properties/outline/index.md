@@ -7,7 +7,7 @@ browser-compat: css.properties.outline
 sidebar: cssref
 ---
 
-The **`outline`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) sets most of the outline properties in a single declaration.
+The **`outline`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets most of the outline properties in a single declaration.
 
 {{InteractiveExample("CSS Demo: outline")}}
 

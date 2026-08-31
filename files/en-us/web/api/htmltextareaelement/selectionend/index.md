@@ -44,7 +44,7 @@ const end = textarea.selectionEnd;
 - {{domxref("HTMLTextAreaElement.selectionStart")}}
 - {{domxref("HTMLTextAreaElement.selectionDirection")}}
 - {{domxref("HTMLTextAreaElement.textLength")}}
-- {{domxref("HTMLTextAreaElement.selectionChange_event", "selectionChange")}} event
+- {{domxref("HTMLTextAreaElement.selectionchange_event", "selectionchange")}} event
 - {{domxref("HTMLTextAreaElement.select()")}}
 - {{domxref("HTMLTextAreaElement.setSelectionRange()")}}
 - {{domxref("HTMLTextAreaElement.setRangeText()")}}
