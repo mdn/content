@@ -132,7 +132,7 @@ Notice how above we indicate the rounding interval using `var()` and the custom 
 
 The last box is set without specifying a rounding strategy, and hence defaults to `nearest`.
 In this case, the nearest interval to 117 px is 125px, so it will round up.
-Just for contrast, here we specified hard coded values for both the rounding value and interval.
+Just for contrast, here we specified hard-coded values for both the rounding value and interval.
 While this is allowed, you wouldn't do this normally because there is no point rounding a number when you already know what the result must be.
 
 ```css

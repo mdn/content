@@ -27,7 +27,7 @@ Before Adobe acquired Macromedia, it was the most prominent promoter of SVG. Fro
 
 URL: [xmlgraphics.apache.org/batik/](https://xmlgraphics.apache.org/batik/)
 
-Batik is a set of open source tools under the roof of the Apache Software Foundation. The toolkit is written in Java and offers almost complete SVG 1.1 support, as well as some features that were originally planned for SVG 1.2.
+Batik is a set of open-source tools under the roof of the Apache Software Foundation. The toolkit is written in Java and offers almost complete SVG 1.1 support, as well as some features that were originally planned for SVG 1.2.
 
 Batik offers a viewer (Squiggle), a rasterizer for PNG output, and an SVG pretty printer to format SVG files.
 

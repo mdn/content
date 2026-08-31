@@ -13,8 +13,8 @@ The **`fullscreenElement`** read-only property of the
 
 ## Value
 
-The {{domxref('Element')}} which is currently is displayed in full screen mode,
-or `null` if there is no full screen element.
+The {{domxref('Element')}} which is currently is displayed in full-screen mode,
+or `null` if there is no full-screen element.
 
 ## Examples
 

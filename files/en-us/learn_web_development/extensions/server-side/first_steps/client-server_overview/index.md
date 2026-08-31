@@ -192,7 +192,7 @@ Content-Length: 0
 
 ## Static sites
 
-A _static site_ is one that returns the same hard coded content from the server whenever a particular resource is requested. So for example if you have a page about a product at `/static/my-product1.html`, this same page will be returned to every user. If you add another similar product to your site you will need to add another page (e.g., `my-product2.html`) and so on. This can start to get really inefficient — what happens when you get to thousands of product pages? You would repeat a lot of code across each page (the basic page template, structure, etc.), and if you wanted to change anything about the page structure — like add a new "related products" section for example — then you'd have to change every page individually.
+A _static site_ is one that returns the same hard-coded content from the server whenever a particular resource is requested. So for example if you have a page about a product at `/static/my-product1.html`, this same page will be returned to every user. If you add another similar product to your site you will need to add another page (e.g., `my-product2.html`) and so on. This can start to get really inefficient — what happens when you get to thousands of product pages? You would repeat a lot of code across each page (the basic page template, structure, etc.), and if you wanted to change anything about the page structure — like add a new "related products" section for example — then you'd have to change every page individually.
 
 > [!NOTE]
 > Static sites are excellent when you have a small number of pages and you want to send the same content to every user. However they can have a significant cost to maintain as the number of pages becomes larger.
@@ -272,7 +272,7 @@ urlpatterns = [
 ```
 
 > [!NOTE]
-> The first parameters in the `url()` functions may look a bit odd (e.g., `r'^junior/$'`) because they use a pattern matching technique called "regular expressions" (RegEx, or RE). You don't need to know how regular expressions work at this point, other than that they allow us to match patterns in the URL (rather than the hard coded values above) and use them as parameters in our view functions. As an example, a really simple RegEx might say "match a single uppercase letter, followed by between 4 and 7 lower case letters."
+> The first parameters in the `url()` functions may look a bit odd (e.g., `r'^junior/$'`) because they use a pattern matching technique called "regular expressions" (RegEx, or RE). You don't need to know how regular expressions work at this point, other than that they allow us to match patterns in the URL (rather than the hard-coded values above) and use them as parameters in our view functions. As an example, a really simple RegEx might say "match a single uppercase letter, followed by between 4 and 7 lower case letters."
 
 The web framework also makes it easy for a view function to fetch information from the database. The structure of our data is defined in models, which are Python classes that define the fields to be stored in the underlying database. If we have a model named _Team_ with a field of "_team_type_" then we can use a simple query syntax to get back all teams that have a particular type.
 

@@ -47,7 +47,7 @@ Firefox 10 shipped on January 31, 2012. This article provides information about 
 #### Full Screen API
 
 - Support for {{ domxref("Document/fullscreenEnabled", "document.fullscreenEnabled") }} has been added.
-- The new `:-moz-full-screen-ancestor` property has been added. This lets you match against elements that are ancestors of an element in full screen mode.
+- The new `:-moz-full-screen-ancestor` property has been added. This lets you match against elements that are ancestors of an element in full-screen mode.
 
 #### Battery API
 

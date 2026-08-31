@@ -27,7 +27,7 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
 - {{domxref("ShadowRoot.delegatesFocus")}} {{ReadOnlyInline}}
   - : A boolean that indicates whether the shadow root delegates focus if a non-focusable node is selected.
 - {{DOMxRef("ShadowRoot.fullscreenElement")}} {{ReadOnlyInline}}
-  - : The element that's currently in full screen mode for this shadow tree.
+  - : The element that's currently in full-screen mode for this shadow tree.
 - {{domxref("ShadowRoot.host")}} {{ReadOnlyInline}}
   - : Returns a reference to the DOM element the `ShadowRoot` is attached to.
 - {{domxref("ShadowRoot.innerHTML")}}

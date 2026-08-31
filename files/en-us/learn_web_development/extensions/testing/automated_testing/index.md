@@ -592,7 +592,7 @@ When signed in, follow the 'Getting started' guide on the top-left of the page:
 3. When you start testing, a loading screen will appear, and an environment spins up running the device/browser combination you chose.
    You can then start to remotely test the website running in the chosen browser.
 
-You can do quite a lot at this point, like share a test URL so someone else can observe the test remotely, copy text/notes to a remote clipboard, take a screenshot, test in full screen mode, and more.
+You can do quite a lot at this point, like share a test URL so someone else can observe the test remotely, copy text/notes to a remote clipboard, take a screenshot, test in full-screen mode, and more.
 
 Once you stop the session, you'll return to the _Live_ tab, where you'll see an entry for each of the previous manual sessions you started.
 Clicking on one of these entries shows more data for the session.
@@ -674,7 +674,7 @@ The [TestingBot dashboard](https://testingbot.com/members) lists the various opt
    - Change the screen resolution
    - Copy text/notes to a remote clipboard
    - Take, edit, and download screenshots
-   - Test in full screen mode.
+   - Test in full-screen mode.
 
 Once you stop the session, you'll return to the _Live Web Testing_ page, where you'll see an entry for each of the previous manual sessions you started. Clicking on one of these entries shows more data for the session. Here you can download any screenshots you took, watch a video of the test, and view logs for the session.
 

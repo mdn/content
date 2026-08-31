@@ -66,7 +66,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.fragmentDirective")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("FragmentDirective")}} for the current document.
 - {{DOMxRef("Document.fullscreenElement")}} {{ReadOnlyInline}}
-  - : The element that's currently in full screen mode for this document.
+  - : The element that's currently in full-screen mode for this document.
 - {{DOMxRef("Document.head")}} {{ReadOnlyInline}}
   - : Returns the {{HTMLElement("head")}} element of the current document.
 - {{DOMxRef("Document.hidden")}} {{ReadOnlyInline}}
