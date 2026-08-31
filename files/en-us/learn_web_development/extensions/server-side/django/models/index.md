@@ -43,7 +43,7 @@ We know that we need to store information about books (title, summary, author, w
 
 When designing your models, it makes sense to have separate models for every "object" (a group of related information). In this case, the obvious objects are books, book instances, and authors.
 
-You might also want to use models to represent selection-list options (e.g., like a drop down list of choices), rather than hard coding the choices into the website itself — this is recommended when all the options aren't known up front or may change. Obvious candidates for models, in this case, include the book genre (e.g., Science Fiction, French Poetry, etc.) and language (English, French, Japanese).
+You might also want to use models to represent selection-list options (e.g., like a dropdown list of choices), rather than hard coding the choices into the website itself — this is recommended when all the options aren't known up front or may change. Obvious candidates for models, in this case, include the book genre (e.g., Science Fiction, French Poetry, etc.) and language (English, French, Japanese).
 
 Once we've decided on our models and field, we need to think about the relationships. Django allows you to define relationships that are one to one (`OneToOneField`), one to many (`ForeignKey`) and many to many (`ManyToManyField`).
 
