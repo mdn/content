@@ -38,7 +38,9 @@ A {{domxref("WebTransportDatagramsWritable")}} object, which extends {{domxref("
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the transport's state is `"closed"` or `"failed"`, or if `sendGroup` is specified (non-null) and is associated with a different `WebTransport`.
+  - : Thrown if the transport's state is `"closed"` or `"failed"`.
+- {{jsxref("TypeError")}}
+  - : Thrown if `sendGroup` is specified (non-null) and is associated with a different `WebTransport`.
 
 ## Description
 
@@ -99,5 +101,5 @@ await sendDatagrams(url, datagrams, { sendOrder: 1 });
 
 ## See also
 
-- [Using WebTransport](https://developer.chrome.com/docs/capabilities/web-apis/webtransport)
 - {{domxref("Streams API", "Streams API", "", "nocode")}}
+- [Using WebTransport](https://developer.chrome.com/docs/capabilities/web-apis/webtransport)
