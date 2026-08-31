@@ -28,6 +28,9 @@ The **`WebTransport`** interface of the {{domxref("WebTransport API", "WebTransp
   - : Represents one or more bidirectional streams opened by the server. Returns a {{domxref("ReadableStream")}} of {{domxref("WebTransportBidirectionalStream")}} objects. Each one can be used to read data from the server and write data back to it.
 - {{domxref("WebTransport.incomingUnidirectionalStreams", "incomingUnidirectionalStreams")}} {{ReadOnlyInline}}
   - : Represents one or more unidirectional streams opened by the server. Returns a {{domxref("ReadableStream")}} of {{domxref("WebTransportReceiveStream")}} objects. Each one can be used to read data from the server.
+- {{domxref("WebTransport.protocol", "protocol")}} {{ReadOnlyInline}}
+  - : Returns a string representing the application-specific protocol selected by the server, or `""` if none has been selected.
+    Client preferences for the protocol are passed to the constructor in the [`protocols`](/en-US/docs/Web/API/WebTransport/WebTransport#protocols) constructor option.
 - {{domxref("WebTransport.ready", "ready")}} {{ReadOnlyInline}}
   - : Returns a promise that resolves when the transport is ready to use.
 - {{domxref("WebTransport.reliability", "reliability")}} {{ReadOnlyInline}}
