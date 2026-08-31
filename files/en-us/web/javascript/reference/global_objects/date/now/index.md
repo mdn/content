@@ -46,7 +46,7 @@ A number representing the [timestamp](/en-US/docs/Web/JavaScript/Reference/Globa
 
 To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `Date.now()` may be reduced depending on browser settings.
 
-The timestamp is always an integer number of milliseconds, so its resolution is limited to 1 ms in all contexts. This is precision is considered coarse enough for most security and privacy purposes.
+The timestamp is always an integer number of milliseconds, so its resolution is limited to 1 ms in all contexts. This precision is considered coarse enough for most security and privacy purposes.
 
 In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default. With default settings, the timestamp has 1 ms resolution. If `privacy.resistFingerprinting` is enabled, the rounding interval is 16.667 ms or the interval configured by `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger (final output is rounded to an integer).
 

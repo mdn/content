@@ -37,9 +37,9 @@ To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glos
 
 The value of `audioCtx.currentTime` is based on the number of audio sample frames processed. In Chrome and Safari, the browser does not apply additional timer rounding to this value.
 
-In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and uses a rounding interval of 1 ms. However, Firefox skips this rounding when the duration of a 128-frame audio block is greater than the configured interval. At common sample rates such as 44.1 kHz and 48 kHz, the default value therefore follows the audio block timing rather than being rounded at 1 ms intervals.
+In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and uses a rounding interval of 1 ms, or 0.02 ms in cross-origin-isolated contexts. However, Firefox first compares the duration of a 128-frame audio block with the interval configured by `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` (1 ms by default), regardless of cross-origin isolation. If the block duration is greater, Firefox skips timer rounding. At common sample rates such as 44.1 kHz and 48 kHz, the default value therefore follows the audio block timing rather than being rounded.
 
-If `privacy.resistFingerprinting` is enabled, the rounding interval is 16.667 ms or the interval configured by `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger. The same audio block duration check applies.
+If `privacy.resistFingerprinting` is enabled, the rounding interval is 16.667 ms or the interval configured by `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger. In this case, the audio block duration check also uses this larger interval.
 
 For example, these are possible values in Firefox:
 
