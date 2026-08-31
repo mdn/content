@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.StylePropertyMapReadOnly.entries
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`StylePropertyMapReadOnly.entries()`** method returns an array of a given object's own enumerable property `[key, value]` pairs, in the same order as that provided by a {{jsxref("Statements/for...in", "for...in")}} loop (the difference being that a for-in loop enumerates properties in the prototype chain as well).
 

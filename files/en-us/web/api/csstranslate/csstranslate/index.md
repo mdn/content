@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.CSSTranslate.CSSTranslate
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`CSSTranslate()`** constructor creates a new {{domxref("CSSTranslate")}} object representing the {{cssxref("transform-function/translate", "translate()")}} value of the individual {{CSSXref('transform')}} property in CSS.
 

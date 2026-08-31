@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CSSTransformComponent.toString
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`toString()`** method of the {{domxref("CSSTransformComponent")}} interface is a {{Glossary("stringifier")}} returning a [CSS Transforms](/en-US/docs/Web/CSS/Guides/Transforms) function.
 

@@ -13,7 +13,7 @@ The **CSS transforms** module defines how elements styled with CSS can be transf
 
 ## CSS transforms in action
 
-Use the sliders in the example below to modify the translation, rotation, scale, and skew CSS transform properties of the cube in 3D space. As you move the cube through 3D space, notice the way it interacts with the element labelled `z:0px`, which is located at the 3D position `(0, 0, 0)`.
+Use the sliders in the example below to modify the translation, rotation, scale, and skew CSS transform properties of the cube in 3D space. As you move the cube through 3D space, notice the way it interacts with the element labeled `z:0px`, which is located at the 3D position `(0, 0, 0)`.
 
 ```html hidden live-sample___transforms
 <article>

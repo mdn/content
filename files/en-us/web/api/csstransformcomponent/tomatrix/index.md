@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CSSTransformComponent.toMatrix
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`toMatrix()`** method of the {{domxref("CSSTransformComponent")}} interface returns a {{domxref('DOMMatrix')}} object.
 

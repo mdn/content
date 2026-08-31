@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`row-rule`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the width, style, and color of the line drawn between rows in multi-row grid, flex, and multi-col layouts.
+The **`row-rule`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets the width, style, and color of the line drawn between rows in multi-row grid, flex, and multi-col layouts.
 
 {{InteractiveExample("CSS Demo: row-rule")}}
 
@@ -108,7 +108,7 @@ The `row-rule` property accepts a comma-separated list of values, including:
 - `<gap-rule>`
   - : Specified as one, two, or three of the values listed below, in any order.
     - `<'line-width'>`
-      - : A {{cssxref("&lt;line-width&gt;")}}: a positive {{cssxref("&lt;length&gt;")}} or one of the three keywords, `thin`, `medium`, or `thick`. The default value is `medium. See {{cssxref("row-rule-width")}}.
+      - : A {{cssxref("&lt;line-width&gt;")}}: a positive {{cssxref("&lt;length&gt;")}} or one of the three keywords, `thin`, `medium`, or `thick`. The default value is `medium`. See {{cssxref("row-rule-width")}}.
     - `<'line-style'>`
       - : A {{cssxref("&lt;line-style&gt;")}}: one of `none`, `hidden`, `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset`, or `outset`. The default value is `none`. See {{cssxref("row-rule-style")}}.
     - `<'color'>`

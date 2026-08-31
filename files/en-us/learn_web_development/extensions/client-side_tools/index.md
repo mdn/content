@@ -11,7 +11,7 @@ Client-side tooling can be intimidating, but this series of articles aims to ill
 
 ## Prerequisites
 
-Before starting this module, You should have learnt the fundamentals of [HTML](/en-US/docs/Learn_web_development/Core/Structuring_content), [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics), and [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting). You should also be comfortable with using [the terminal/command line](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line).
+Before starting this module, You should have learned the fundamentals of [HTML](/en-US/docs/Learn_web_development/Core/Structuring_content), [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics), and [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting). You should also be comfortable with using [the terminal/command line](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line).
 
 ## Tutorials
 

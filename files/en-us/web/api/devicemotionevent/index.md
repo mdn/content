@@ -21,7 +21,7 @@ The **`DeviceMotionEvent`** interface of the {{domxref("Device Orientation Event
 
 ## Static methods
 
-- {{DOMxRef("DeviceMotionEvent.requestPermission_static", "DeviceMotionEvent.requestPermission()")}} {{experimental_inline}}
+- {{DOMxRef("DeviceMotionEvent.requestPermission_static", "DeviceMotionEvent.requestPermission()")}}
   - : Requests the user's permission to access device motion data from the accelerometer and gyroscope sensors. Returns a {{jsxref("Promise")}} that resolves with a string of `"granted"` or `"denied"`.
 
 ## Instance properties

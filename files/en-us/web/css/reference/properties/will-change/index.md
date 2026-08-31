@@ -34,12 +34,12 @@ will-change: unset;
 
 ### Values
 
-The value is either `auto` or one or more comma separated `<animateable-feature>` values:
+The value is either `auto` or one or more comma separated `<animatable-feature>` values:
 
 - `auto`
   - : Indicates that the browser applies whatever heuristics and optimizations it normally does. This is the default value.
 
-- `<animateable-feature>`
+- `<animatable-feature>`
   - : Represents one of the following:
     - `scroll-position`
       - : Specifies that the scroll position of the element is expected to change in the near future, indicating the browser can optimize the rendering of overflowing content.
@@ -103,7 +103,7 @@ We use CSS to apply the `will-change` property to the `#element`, providing a hi
 
 ```css
 #element {
-  willchange: transform, opacity;
+  will-change: transform, opacity;
 }
 ```
 

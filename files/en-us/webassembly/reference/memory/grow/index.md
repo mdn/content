@@ -21,8 +21,8 @@ Currently each page is 64KiB.
   (func $main
 
     ;; grow memory by 1 page
-    ;; grow returns in 1 for success and -1 for failure
-    ;; will fail if you change to more than 1 page
+    ;; grow returns 1 for success and -1 for failure
+    ;; will fail if you grow to more than 2 pages
     (memory.grow (i32.const 1))
     call $log ;; log the result
 
@@ -38,7 +38,7 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 
 ## Syntax
 
-Grow default memory
+Grow the default (0-index) memory
 
 ```wat
 ;; Grow default memory by a number of pages indicated by the top value on the stack
@@ -50,7 +50,7 @@ memory.grow  ;; Grow the memory (by 3 pages)
 (memory.grow (i32.const 2))
 ```
 
-Grow specified memory (if multi-memory supported)
+Grow a specified memory
 
 ```wat
 ;; Grow memory with index 1
@@ -74,7 +74,7 @@ memory.grow (memory $memory1) ;; Grow $memory1 by 1 page
 
 ## Examples
 
-### Growing default memory
+### Growing the default (0-index) memory
 
 The first memory added to a Wasm module is the default memory and has index 0.
 We can grow this memory by first adding a variable specifying the amount to grow the memory, and then calling `grow`.

@@ -193,7 +193,7 @@ async function init() {
       env: {
         type_error: typeErrorTag,
         range_error: rangeErrorTag,
-        log: (code) => {
+        log(code) {
           output.textContent += `Error code: ${code} | `;
         },
       },

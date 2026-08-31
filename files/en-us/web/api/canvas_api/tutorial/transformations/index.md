@@ -47,7 +47,7 @@ You can call the `save()` method as many times as you like. Each time the `resto
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
 
   ctx.fillRect(0, 0, 150, 150); // Draw a Black rectangle with default settings
   ctx.save(); // Save the original default state
@@ -69,7 +69,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="my-canvas" width="150" height="150"></canvas>
 ```
 
 ```js hidden
@@ -103,7 +103,7 @@ In the `draw()` function, we call the `fillRect()` function nine times using two
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
   for (let i = 0; i < 3; i++) {
     for (let j = 0; j < 3; j++) {
       ctx.save();
@@ -117,7 +117,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="my-canvas" width="150" height="150"></canvas>
 ```
 
 ```js hidden
@@ -146,7 +146,7 @@ In this example, we'll use the `rotate()` method to first rotate a rectangle fro
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
 
   // left rectangles, rotate from canvas origin
   ctx.save();
@@ -179,7 +179,7 @@ function draw() {
 To rotate the rectangle around its own center, we translate the canvas to the center of the rectangle, then rotate the canvas, then translate the canvas back to 0,0, and then draw the rectangle.
 
 ```html hidden
-<canvas id="canvas" width="300" height="200"></canvas>
+<canvas id="my-canvas" width="300" height="200"></canvas>
 ```
 
 ```js hidden
@@ -205,7 +205,7 @@ In this last example, we'll draw shapes with different scaling factors.
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
 
   // draw a simple rectangle, but scale it.
   ctx.save();
@@ -221,7 +221,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="my-canvas" width="150" height="150"></canvas>
 ```
 
 ```js hidden
@@ -269,7 +269,7 @@ The parameters of this function are:
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
 
   const sin = Math.sin(Math.PI / 6);
   const cos = Math.cos(Math.PI / 6);
@@ -289,7 +289,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="200" height="250"></canvas>
+<canvas id="my-canvas" width="200" height="250"></canvas>
 ```
 
 ```js hidden

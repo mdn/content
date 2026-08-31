@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CSSTransformValue.keys
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`CSSTransformValue.keys()`** method returns a new _array iterator_ object that contains the keys for each index in the array.
 

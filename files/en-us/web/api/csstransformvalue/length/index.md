@@ -6,9 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.CSSTransformValue.length
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The read-only **`length`** property of the {{domxref("CSSTransformValue")}} interface returns the number of transform components in the list.
+The **`length`** read-only property of the {{domxref("CSSTransformValue")}} interface returns the number of transform components in the list.
 
 ## Value
 

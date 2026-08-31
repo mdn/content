@@ -154,8 +154,14 @@ sidebar:
         children:
           - link: /WebAssembly/Reference/Definitions/types/func
             title: <code>func</code>
+      - link: /WebAssembly/Reference/Definitions/data
+        title: <code>data</code>
+      - link: /WebAssembly/Reference/Definitions/elem
+        title: <code>elem</code>
       - link: /WebAssembly/Reference/Definitions/global
         title: <code>global</code>
+      - link: /WebAssembly/Reference/Definitions/memory
+        title: <code>memory</code>
       - link: /WebAssembly/Reference/Definitions/table
         title: <code>table</code>
       - link: /WebAssembly/Reference/Definitions/tag
@@ -167,6 +173,16 @@ sidebar:
         path: /WebAssembly/Reference/Control_flow
         link: /WebAssembly/Reference/Control_flow
         title: Control flow
+        details: closed
+      - type: listSubPages
+        path: /WebAssembly/Reference/Data
+        link: /WebAssembly/Reference/Data
+        title: Data
+        details: closed
+      - type: listSubPages
+        path: /WebAssembly/Reference/Elem
+        link: /WebAssembly/Reference/Elem
+        title: Elem
         details: closed
       - link: /WebAssembly/Reference/Exception_handling
         title: Exception handling

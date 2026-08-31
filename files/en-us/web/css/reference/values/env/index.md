@@ -49,7 +49,7 @@ The `env( <environment-variable> | <dashed-ident>, <fallback> | <declaration-val
       - : The dimensions and offset positions of specific viewport segments. The `viewport-segment-*` keyword is followed by two space-separated {{cssxref("&lt;integer>")}} values that indicate the segment's horizontal and vertical position, or indices. The viewport-segment keywords are only defined when the viewport is made up of two or more segments, as with foldable or hinged devices.
 
 - [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident)
-  - A `<dashed-ident>`is a user defined variable that can be used as an identifier in the {{cssxref("param")}} CSS function to update the value.
+  - : A `<dashed-ident>` is a user defined variable that can be used as an identifier in the {{cssxref("param")}} CSS function to update the value.
 
 - `<fallback>` {{optional_inline}}
   - : A fallback value to be inserted if the environment variable referenced in the first argument does not exist. Everything after the first comma is deemed to be the fallback value. This can be a single value, another `env()` function, or a comma-separated list of values.
