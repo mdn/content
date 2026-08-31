@@ -153,7 +153,7 @@ location /status {
 
 ### Access using credentials in the URL
 
-Historically some sites would allow you to login using an encoded URL containing the username and the password as shown:
+Historically some sites would allow you to log in using an encoded URL containing the username and the password as shown:
 
 ```plain example-bad
 https://username:password@www.example.com/
