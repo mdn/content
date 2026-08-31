@@ -34,25 +34,29 @@ animation.currentTime =
 
 ## Reduced time precision
 
-To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `animation.currentTime` might get rounded depending on browser settings. In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 2ms. You can also enable `privacy.resistFingerprinting`, in which case the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` (converted to milliseconds), whichever is larger.
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `animation.currentTime` may be reduced depending on browser settings.
 
-For example, with reduced time precision, the result of `animation.currentTime` will always be a multiple of 2, or a multiple of 100 (or `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` converted to milliseconds) with `privacy.resistFingerprinting` enabled.
+In Chrome and Safari, the browser does not apply timer rounding to a value supplied by script. It also does not apply additional timer rounding to a value calculated from {{domxref("AnimationTimeline.currentTime")}}, {{domxref("Animation.startTime", "startTime")}}, and {{domxref("Animation.playbackRate", "playbackRate")}}. The result need not be a multiple of the timeline's rounding interval. In Firefox, the timer rounding described below applies in both cases.
+
+In Firefox, animation timestamps are rounded to 0.02 ms by default, including in cross-origin-isolated contexts. If `privacy.resistFingerprinting` is enabled, the rounding interval is 16.667 ms or the interval configured by `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
+
+For example, these are possible values in Firefox:
 
 ```js
-// reduced time precision (2ms) in Firefox 60
+// Reduced time precision (0.02 ms) with default settings
 animation.currentTime;
 // Might be:
-// 22
-// 24
-// 26
+// 23.4
+// 24.18
+// 25.5
 // …
 
-// reduced time precision with `privacy.resistFingerprinting` enabled
+// Reduced time precision with `privacy.resistFingerprinting` enabled
 animation.currentTime;
 // Might be:
-// 500
-// 600
-// 700
+// 50.001
+// 66.668
+// 83.335
 // …
 ```
 

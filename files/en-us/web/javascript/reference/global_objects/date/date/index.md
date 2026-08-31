@@ -101,27 +101,11 @@ Calling the `Date()` function (without the `new` keyword) returns a string repre
 
 ### Reduced time precision
 
-To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `new Date()` might get rounded depending on browser settings. In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 2ms. You can also enable `privacy.resistFingerprinting`, in which case the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` (converted to milliseconds), whichever is larger.
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `new Date()` may be reduced depending on browser settings.
 
-For example, with reduced time precision, the result of `new Date().getTime()` will always be a multiple of 2, or a multiple of 100 (or `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` converted to milliseconds) with `privacy.resistFingerprinting` enabled.
+When a timestamp, date string, date object, or date component values are supplied to the constructor, the browser does not apply timer rounding to the supplied time.
 
-```js
-// reduced time precision (2ms) in Firefox 60
-new Date().getTime();
-// Might be:
-// 1519211809934
-// 1519211810362
-// 1519211811670
-// …
-
-// reduced time precision with `privacy.resistFingerprinting` enabled
-new Date().getTime();
-// Might be:
-// 1519129853500
-// 1519129858900
-// 1519129864400
-// …
-```
+When called without arguments, the constructor obtains the current time in the same way as {{jsxref("Date.now()")}}. It inherits the precision of that clock reading without introducing additional inaccuracy.
 
 ## Examples
 

@@ -44,27 +44,22 @@ console.log(video.currentTime);
 
 ## Usage notes
 
-### Reduced time precision
+### Time precision
 
-To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `video.currentTime` might get rounded depending on browser settings. In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 2ms. You can also enable `privacy.resistFingerprinting`, in which case the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` (converted to seconds), whichever is larger.
+The browser does not apply timer rounding to `currentTime`, including values supplied by script. Seeking can still adjust the resulting playback position to a position supported by the media.
 
-For example, with reduced time precision, the result of `video.currentTime` will always be a multiple of 0.002, or a multiple of 0.1 (or `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` converted to seconds) with `privacy.resistFingerprinting` enabled.
+The value of `currentTime` is an approximation of the current playback position. The browser updates this value as playback progresses. The [HTML specification](https://html.spec.whatwg.org/multipage/media.html#official-playback-position) requires the reported playback position to remain stable while scripts are running.
+
+The update frequency depends on the browser and media playback pipeline. As a result, successive reads can return the same `currentTime` even when {{jsxref("Date.now()")}} has advanced. The number of decimal places in the value does not indicate how often it updates or how accurately it matches the audio or video being presented.
+
+For example, successive readings during playback might produce these values:
 
 ```js
-// reduced time precision (2ms) in Firefox 60
 video.currentTime;
 // Might be:
 // 23.404
-// 24.192
-// 25.514
-// …
-
-// reduced time precision with `privacy.resistFingerprinting` enabled
-video.currentTime;
-// Might be:
-// 49.8
-// 50.6
-// 51.7
+// 23.404
+// 23.452
 // …
 ```
 

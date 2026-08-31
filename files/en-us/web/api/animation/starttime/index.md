@@ -14,7 +14,7 @@ An animation's **start time** is the time value of its {{domxref("DocumentTimeli
 
 ## Value
 
-A floating-point number representing the current time in milliseconds, or `null` if no time is set. You can read this value to determine what the start time is currently set at, and you can change this value to make the animation start at a different time.
+A floating-point number representing the start time in milliseconds, or `null` if no time is set. You can read this value to determine what the start time is currently set at, and you can change this value to make the animation start at a different time.
 
 ## Examples
 
@@ -128,25 +128,29 @@ insertWAAPICat.addEventListener("click", () => {
 
 ## Reduced time precision
 
-To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `animation.startTime` might get rounded depending on browser settings. In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 2ms. You can also enable `privacy.resistFingerprinting`, in which case the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` (converted to milliseconds), whichever is larger.
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `animation.startTime` may be reduced depending on browser settings.
 
-For example, with reduced time precision, the result of `animation.startTime` will always be a multiple of 2, or a multiple of 100 (or `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` converted to milliseconds) with `privacy.resistFingerprinting` enabled.
+In Chrome and Safari, the browser does not apply timer rounding to a value supplied by script. It also does not apply additional timer rounding to a value calculated from {{domxref("AnimationTimeline.currentTime")}} when playback starts. The result need not be a multiple of the timeline's rounding interval. In Firefox, the timer rounding described below applies in both cases.
+
+In Firefox, animation timestamps are rounded to 0.02 ms by default, including in cross-origin-isolated contexts. If `privacy.resistFingerprinting` is enabled, the rounding interval is 16.667 ms or the interval configured by `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
+
+For example, these are possible values in Firefox:
 
 ```js
-// reduced time precision (2ms) in Firefox 60
+// Reduced time precision (0.02 ms) with default settings
 animation.startTime;
 // Might be:
-// 22
-// 24
-// 26
+// 23.4
+// 24.18
+// 25.5
 // …
 
-// reduced time precision with `privacy.resistFingerprinting` enabled
+// Reduced time precision with `privacy.resistFingerprinting` enabled
 animation.startTime;
 // Might be:
-// 500
-// 600
-// 700
+// 50.001
+// 66.668
+// 83.335
 // …
 ```
 

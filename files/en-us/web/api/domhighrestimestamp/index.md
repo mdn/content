@@ -11,20 +11,18 @@ The **`DOMHighResTimeStamp`** type is a `double` and is used to store a time val
 
 This type can be used to describe a discrete point in time or a time interval (the difference in time between two discrete points in time). The starting time can be either a specific time determined by the script for a site or app, or the [time origin](/en-US/docs/Web/API/Performance/timeOrigin).
 
-The fractional part of the value represents fractions of a millisecond.
-Its effective resolution depends on hardware and software constraints and on browser security and privacy protections.
-It is not guaranteed to be accurate to a particular resolution.
+The fractional part of the value represents fractions of a millisecond. The type itself does not guarantee a particular resolution or accuracy. The effective resolution depends on the API that produces the value, hardware and software constraints, and browser security and privacy protections.
 
 ## Security requirements
 
-To protect against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), browsers coarsen `DOMHighResTimeStamp` values based on the cross-origin isolation status of the context.
-The [High Resolution Time specification](https://w3c.github.io/hr-time/#dfn-coarsen-time) specifies the following resolutions, or a coarser implementation-defined resolution:
+The `DOMHighResTimeStamp` type does not itself apply timer rounding to values supplied by script. Whether an API rounds these values depends on the API. Values calculated from clock readings also need not be multiples of the clock's rounding interval.
 
-- Cross-origin-isolated contexts: 5 microseconds
-- Non-cross-origin-isolated contexts: 100 microseconds
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), browsers coarsen clock readings based on the cross-origin isolation status of the context. For APIs that use its [coarsen time algorithm](https://w3c.github.io/hr-time/#dfn-coarsen-time), the High Resolution Time specification specifies the following resolutions, or a coarser implementation-defined resolution:
 
-Browsers may also add jitter to the values.
-Therefore, these resolutions are not accuracy guarantees, and code should not rely on timestamps being exact multiples of either interval.
+- Cross-origin-isolated contexts: 0.005 ms
+- Non-cross-origin-isolated contexts: 0.1 ms
+
+Browsers may also add jitter, for example by randomizing when the reported time advances to the next rounding interval. These resolutions are not accuracy guarantees. See the documentation for the API that produces the value for its precision requirements.
 
 Cross-origin isolate your site using the {{HTTPHeader("Cross-Origin-Opener-Policy")}} and
 {{HTTPHeader("Cross-Origin-Embedder-Policy")}} headers:

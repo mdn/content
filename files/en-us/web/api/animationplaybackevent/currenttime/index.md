@@ -14,29 +14,7 @@ The **`currentTime`** read-only property of the {{domxref("AnimationPlaybackEven
 
 A number representing the current time in milliseconds, or `null`.
 
-## Reduced time precision
-
-To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `playbackEvent.currentTime` might get rounded depending on browser settings. In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 2ms. You can also enable `privacy.resistFingerprinting`, in which case the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` (converted to milliseconds), whichever is larger.
-
-For example, with reduced time precision, the result of `playbackEvent.currentTime` will always be a multiple of 2, or a multiple of 100 (or `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` converted to milliseconds) with `privacy.resistFingerprinting` enabled.
-
-```js
-// reduced time precision (2ms) in Firefox 60
-playbackEvent.currentTime;
-// Might be:
-// 22
-// 24
-// 26
-// …
-
-// reduced time precision with `privacy.resistFingerprinting` enabled
-playbackEvent.currentTime;
-// Might be:
-// 500
-// 600
-// 700
-// …
-```
+This property receives its value from either the {{domxref("AnimationPlaybackEvent/AnimationPlaybackEvent", "AnimationPlaybackEvent()")}} constructor or the {{domxref("Animation.currentTime")}} when the event is queued, without introducing additional inaccuracy.
 
 ## Specifications
 

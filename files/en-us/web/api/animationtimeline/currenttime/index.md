@@ -16,25 +16,33 @@ A number representing the timeline's current time in milliseconds, or `null` if 
 
 ## Reduced time precision
 
-To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `animationTimeline.currentTime` might get rounded depending on browser settings. In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 2ms. You can also enable `privacy.resistFingerprinting`, in which case the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` (converted to milliseconds), whichever is larger.
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `animationTimeline.currentTime` may be reduced depending on browser settings.
 
-For example, with reduced time precision, the result of `animationTimeline.currentTime` will always be a multiple of 2, or a multiple of 100 (or `privacy.resistFingerprinting.reduceTimerPrecision.microseconds` converted to milliseconds) with `privacy.resistFingerprinting` enabled.
+The current time normally advances with animation frames. Reading the property repeatedly while a script runs does not provide a continuously updating clock.
+
+For a {{domxref("DocumentTimeline")}}, the current time is based on the browser's animation clock and can include a script-supplied {{domxref("DocumentTimeline.DocumentTimeline", "originTime")}} offset. In Chrome and Safari, the browser does not apply additional timer rounding after applying this offset, so the result need not be a multiple of the clock's rounding interval. In Firefox, the timer rounding described below applies after applying the offset.
+
+In Chrome, the rounding interval for the animation clock during rendering updates is 0.1 ms, or 0.005 ms in cross-origin-isolated contexts. Values read outside rendering updates do not necessarily use the same rounding. In Safari, the rounding interval for the animation clock is 1 ms, or 0.02 ms in cross-origin-isolated contexts.
+
+In Firefox, animation timestamps are rounded to 0.02 ms by default, including in cross-origin-isolated contexts. If `privacy.resistFingerprinting` is enabled, the rounding interval is 16.667 ms or the interval configured by `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
+
+For example, these are possible values in Firefox:
 
 ```js
-// reduced time precision (2ms) in Firefox 60
+// Reduced time precision (0.02 ms) with default settings
 animationTimeline.currentTime;
 // Might be:
-// 22
-// 24
-// 26
+// 23.4
+// 24.18
+// 25.5
 // …
 
-// reduced time precision with `privacy.resistFingerprinting` enabled
+// Reduced time precision with `privacy.resistFingerprinting` enabled
 animationTimeline.currentTime;
 // Might be:
-// 500
-// 600
-// 700
+// 50.001
+// 66.668
+// 83.335
 // …
 ```
 
