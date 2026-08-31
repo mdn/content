@@ -16,8 +16,7 @@ Match patterns are used in several places across the manifest.json keys and Java
 
 - Manifest keys:
   - [`host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) and [`optional_host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_host_permissions), to request access to hosts.
-  - [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) (Manifest V2 only) and [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) (Firefox only for Manifest V3), which can include host permissions alongside named API permissions.
-  - [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) (Manifest V2 only) and [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions), which can include host permissions alongside named API permissions.
+  - [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) (Manifest V2 only) and [`optional_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) (Manifest V2 only, also supported [but deprecated](https://bugzilla.mozilla.org/show_bug.cgi?id=1897580) in MV3 in Firefox only), which can include host permissions alongside named API permissions.
   - The `matches` and `exclude_matches` fields of [`content_scripts`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) entries.
   - The `matches` field of [`web_accessible_resources`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources#manifest_v3_syntax) entries (Manifest V3 only).
   - The `show_matches` and `hide_matches` fields of [`page_action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action).
@@ -61,7 +60,7 @@ The _scheme_ component may take one of two forms:
     <tr>
       <td><code>*</code></td>
       <td>
-        All browsers match "http" and "https". <BR>
+        All browsers match "http" and "https".<br>
         Firefox also matches <a href="/en-US/docs/Web/API/WebSockets_API">"ws" and "wss"</a>.
       </td>
     </tr>
@@ -140,9 +139,9 @@ Neither the [URL fragment identifier](https://en.wikipedia.org/wiki/Fragment_ide
 
 The special value `<all_urls>` matches all URLs under the browser-supported schemas, where:
 
-- **Firefox** supports "http", "https", "ws", "wss", "ftp", "data", and "file". However, while `data:` URLs are matched, they aren't used for content script or stylesheet injection.
-- **Chrome** supports "http", "https", "ftp", "file", and "data".
-- **Safari** only supports "http" and "https".
+- **Firefox** matches "http", "https", "ws", "wss", "ftp", "data", and "file". However, while `data:` URLs are matched, they aren't used for content script or stylesheet injection.
+- **Chrome** matches "http", "https", "ftp", "file", and "data".
+- **Safari** only matches "http" and "https".
 
 > [!NOTE]
 > Access to `file://` URLs requires an user permission grant beyond declaring `<all_urls>` or a `file://` match pattern:
