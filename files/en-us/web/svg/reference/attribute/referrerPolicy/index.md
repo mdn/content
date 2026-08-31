@@ -29,7 +29,7 @@ The **`referrerPolicy`** attribute indicates which referrer information to send 
     </tr>
     <tr>
       <th scope="row">Animatable</th>
-      <td>Yes</td>
+      <td>No</td>
     </tr>
   </tbody>
 </table>
