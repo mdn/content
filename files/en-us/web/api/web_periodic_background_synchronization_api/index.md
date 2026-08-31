@@ -51,8 +51,8 @@ const status = await navigator.permissions.query({
 });
 ```
 
-In Chrome, the permission is granted only to an installed web app that has been launched as a separate application.
-Chrome also uses the site's engagement score to determine whether and how often to fire periodic sync events.
+In Chrome, the permission is granted only to an [installed web app](/en-US/docs/Web/Progressive_web_apps/Guides/Installing) that has been launched as a separate application.
+Chrome also uses the [site's engagement score](https://developer.chrome.com/docs/capabilities/periodic-background-sync#getting_user_engagement_right) to determine whether and how often to fire periodic sync events.
 
 ## Examples
 
