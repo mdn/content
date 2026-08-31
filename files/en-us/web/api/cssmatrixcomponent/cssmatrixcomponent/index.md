@@ -21,6 +21,10 @@ new CSSMatrixComponent(matrix, options)
 
 - {{domxref('CSSMatrixComponent.matrix','matrix')}}
   - : A 2d or 3d matrix.
+- `options` {{optional_inline}}
+  - : An object with the following property:
+    - `is2D`
+      - : A boolean indicating whether the constructed `CSSMatrixComponent` should be treated as a 2D matrix. If omitted, this defaults to the value of `matrix`'s own {{domxref("DOMMatrixReadOnly.is2D", "is2D")}} property.
 
 ## Examples
 

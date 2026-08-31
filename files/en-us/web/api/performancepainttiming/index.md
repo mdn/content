@@ -12,7 +12,7 @@ The **`PerformancePaintTiming`** interface provides timing information about "pa
 There are two key paint moments this API provides:
 
 - {{Glossary("First Paint")}} (FP): Time when anything is rendered. Note that the marking of the first paint is optional, not all user agents report it.
-- {{Glossary("First Contentful Paint")}} (FCP): Time when the first bit of DOM text or image content is rendered.
+- {{Glossary("First Contentful Paint")}} (FCP): Time when the first {{Glossary("Contentful paint", "contentful paint")}} — the first bit of DOM text or image content is rendered.
 
 A third key paint moment is provided by the {{domxref("LargestContentfulPaint")}} API:
 
@@ -47,7 +47,7 @@ It also extends the following {{domxref("PerformanceEntry")}} properties, qualif
 ## Instance methods
 
 - {{domxref("PerformancePaintTiming.toJSON()")}}
-  - : Returns a JSON representation of the `PerformancePaintTiming` object.
+  - : Overrides the {{domxref("PerformanceEntry.toJSON()")}} method to return a JSON representation of the `PerformancePaintTiming` object.
 
 ## Examples
 

@@ -9,31 +9,6 @@ browser-compat: api.LargestContentfulPaint
 
 The `LargestContentfulPaint` interface provides timing information about the largest image or text paint before user input on a web page.
 
-## Description
-
-The key moment this API provides is the {{Glossary("Largest Contentful Paint")}} (LCP) metric. It provides the render time of the largest image or text block visible within the viewport, recorded from when the page first begins to load. The following elements are considered when determining the LCP:
-
-- {{HTMLElement("img")}} elements.
-- [`<image>`](/en-US/docs/Web/SVG/Reference/Element/image) elements inside an SVG.
-- The poster images of {{HTMLElement("video")}} elements.
-- Elements with a {{cssxref("background-image")}}.
-- Groups of text nodes, such as {{HTMLElement("p")}}.
-
-To measure render times of other elements, use the {{domxref("PerformanceElementTiming")}} API.
-
-Additional key paint moments are provided by the {{domxref("PerformancePaintTiming")}} API:
-
-- {{Glossary("First Paint")}} (FP): Time when anything is rendered. Note that the marking of the first paint is optional, not all user agents report it.
-- {{Glossary("First Contentful Paint")}} (FCP): Time when the first bit of DOM text or image content is rendered.
-
-`LargestContentfulPaint` inherits from {{domxref("PerformanceEntry")}}.
-
-{{InheritanceDiagram}}
-
-To get an accurate measurement of render time for cross-origin resources, set the {{httpheader("Timing-Allow-Origin")}} header.
-
-See [Cross-origin image render time](/en-US/docs/Web/API/LargestContentfulPaint/renderTime#cross-origin_image_render_time) and [Use startTime over renderTime](/en-US/docs/Web/API/LargestContentfulPaint/renderTime#use_starttime_over_rendertime) for more details.
-
 ## Instance properties
 
 This interface directly defines the following properties:
@@ -57,21 +32,44 @@ This interface directly defines the following properties:
 
 It also extends the following {{domxref("PerformanceEntry")}} properties, qualifying and constraining them as described:
 
-- {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}}
   - : Returns `"largest-contentful-paint"`.
-- {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
   - : Always returns an empty string.
-- {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
   - : Returns the value of this entry's {{domxref("LargestContentfulPaint.renderTime", "renderTime")}}.
-- {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
   - : Returns `0`, as `duration` is not applicable to this interface.
 
 ## Instance methods
 
-_This interface also inherits methods from {{domxref("PerformanceEntry")}}._
-
 - {{domxref("LargestContentfulPaint.toJSON()")}}
-  - : Returns a JSON representation of the `LargestContentfulPaint` object.
+  - : Overrides the {{domxref("PerformanceEntry.toJSON()")}} method to return a JSON representation of the `LargestContentfulPaint` object.
+
+## Description
+
+The key moment this API provides is the {{Glossary("Largest Contentful Paint")}} (LCP) metric. It provides the render time of the largest image or text block visible within the viewport, recorded from when the page first begins to load. The following elements are considered {{Glossary("Contentful paint", "contentful")}} when determining the LCP:
+
+- {{HTMLElement("img")}} elements.
+- [`<image>`](/en-US/docs/Web/SVG/Reference/Element/image) elements inside an SVG.
+- The poster images of {{HTMLElement("video")}} elements.
+- Elements with a {{cssxref("background-image")}}.
+- Groups of text nodes, such as {{HTMLElement("p")}}.
+
+To measure render times of other elements, use the {{domxref("PerformanceElementTiming")}} API.
+
+Additional key paint moments are provided by the {{domxref("PerformancePaintTiming")}} API:
+
+- {{Glossary("First Paint")}} (FP): Time when anything is rendered. Note that the marking of the first paint is optional, not all user agents report it.
+- {{Glossary("First Contentful Paint")}} (FCP): Time when the first bit of DOM text or image content is rendered.
+
+`LargestContentfulPaint` inherits from {{domxref("PerformanceEntry")}}.
+
+{{InheritanceDiagram}}
+
+To get an accurate measurement of render time for cross-origin resources, set the {{httpheader("Timing-Allow-Origin")}} header.
+
+See [Cross-origin image render time](/en-US/docs/Web/API/LargestContentfulPaint/renderTime#cross-origin_image_render_time) and [Use startTime over renderTime](/en-US/docs/Web/API/LargestContentfulPaint/renderTime#use_starttime_over_rendertime) for more details.
 
 ## Examples
 

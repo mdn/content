@@ -3,12 +3,10 @@ title: "WebTransportDatagramsWritable: sendGroup property"
 short-title: sendGroup
 slug: Web/API/WebTransportDatagramsWritable/sendGroup
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.WebTransportDatagramsWritable.sendGroup
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}{{SeeCompatTable}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`sendGroup`** property of the {{domxref("WebTransportDatagramsWritable")}} interface gets or sets the {{domxref("WebTransportSendGroup")}} that this `WebTransportDatagramsWritable` is grouped under for the purposes of {{domxref("WebTransportDatagramsWritable.sendOrder", "sendOrder")}} prioritization.
 

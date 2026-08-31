@@ -9,7 +9,7 @@ status:
 browser-compat: api.CSSValueList.length
 ---
 
-{{APIRef("CSSOM")}}{{Deprecated_header}}{{non-standard_header}}
+{{APIRef("CSSOM")}}{{non-standard_header}}
 
 The **`length`** read-only property of the
 {{domxref("CSSValueList")}} interface represents the number of {{domxref("CSSValue")}}s

@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Window.unload_event
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 > [!WARNING]
 > Developers should avoid using this event. See "Usage notes" below.
