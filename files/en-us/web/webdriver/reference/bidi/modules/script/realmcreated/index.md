@@ -11,7 +11,7 @@ The `script.realmCreated` [event](/en-US/docs/Web/WebDriver/Reference/BiDi/Modul
 
 ## Event data
 
-The `params` field in the event notification is an object with the following fields, where the value of the `type` field determines the other fields that are present:
+The `params` field in the event notification is a realm object with the following fields, where the value of the `type` field determines the other fields that are present:
 
 - `context` {{optional_inline}}
   - : A string that contains the ID of the context to which the realm belongs.

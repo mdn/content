@@ -63,8 +63,8 @@ Realms differ in their access to the DOM, in their isolation from the page's scr
 | Realm                        | Access to DOM | Isolated from the page's scripts | How you identify it                         |
 | ---------------------------- | ------------- | -------------------------------- | ------------------------------------------- |
 | Realm of the active document | Yes           | No                               | Realm ID or context ID                      |
-| Worker or worklet realm      | No            | Yes                              | Realm ID only                               |
 | Sandbox realm                | Yes           | Yes                              | Realm ID, or context ID with a sandbox name |
+| Worker or worklet realm      | No            | Yes                              | Realm ID only                               |
 
 ## Commands
 
