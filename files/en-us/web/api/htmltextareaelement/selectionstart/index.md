@@ -8,7 +8,15 @@ browser-compat: api.HTMLTextAreaElement.selectionStart
 
 {{APIRef("HTML DOM")}}
 
-The **`selectionStart`** property of the {{domxref("HTMLTextAreaElement")}} interface specifies the start position of the current text selection in a {{HTMLElement("textarea")}} element. It is a number representing the zero-based index of the first selected character. The property can be used to retrieve or set the start position.
+The **`selectionStart`** property of the {{domxref("HTMLTextAreaElement")}} interface specifies the start position of the current text selection in a {{HTMLElement("textarea")}} element.
+
+## Value
+
+A non-negative number.
+
+## Description
+
+The `selectionStart` property is a number representing the zero-based index of the first selected character of a `<textarea>`. The property can be used to retrieve or set the start position.
 
 When nothing is selected, the value of both `selectionStart` and {{domxref("HTMLTextAreaElement.selectionEnd", "selectionEnd")}} is the position of the cursor (caret) inside the `<textarea>` element.
 
@@ -18,11 +26,9 @@ The property value can be retrieved and set without the `<textarea>` having focu
 
 Setting `selectionStart` to a new value fires the {{domxref("HTMLTextAreaElement.selectionchange_event", "selectionchange")}} and {{domxref("HTMLTextAreaElement.select_event", "select")}} events.
 
-## Value
-
-A non-negative number.
-
 ## Examples
+
+### Basic usage
 
 This example reports the selected text and its start and end positions. Select some text in the textarea, and then click the button.
 
