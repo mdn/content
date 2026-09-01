@@ -239,6 +239,8 @@ li {
   font-family: sans-serif;
   background-color: #ededed;
   padding: 1em;
+  width: 100%;
+  box-sizing: border-box;
 }
 ```
 
