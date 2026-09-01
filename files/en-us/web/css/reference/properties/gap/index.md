@@ -7,7 +7,7 @@ browser-compat: css.properties.gap
 sidebar: cssref
 ---
 
-The **`gap`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) sets the gaps (also called {{glossary("gutters")}}) between rows and columns on [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout), [flex](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) containers.
+The **`gap`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets the gaps (also called {{glossary("gutters")}}) between rows and columns on [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout), [flex](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) containers.
 
 {{InteractiveExample("CSS Demo: gap")}}
 
@@ -101,11 +101,11 @@ gap: unset;
 ### Values
 
 - `normal`
-  - A value of `1em` on multi-column containers and `0` in all other contexts.
+  - : A value of `1em` on multi-column containers and `0` in all other contexts.
 - {{CSSxRef("&lt;length&gt;")}}
   - : The size of the gap as a non-negative {{CSSxRef("&lt;length&gt;")}} value.
 - {{CSSxRef("&lt;percentage&gt;")}}
-  - : The size of the gap as a non-negative {{CSSxRef("&lt;percentage&gt;")}} value relative to the the [content box](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#content_area) size of the container element in that dimension.
+  - : The size of the gap as a non-negative {{CSSxRef("&lt;percentage&gt;")}} value relative to the [content box](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#content_area) size of the container element in that dimension.
 
 ## Description
 
@@ -125,7 +125,7 @@ In [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout), the `gap` property
 
 Percentage values are calculated against the [content box](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#content_area) size of the container element. Cyclic percentage sizes resolve against zero for determining {{glossary("intrinsic size")}} contributions but resolve against the grid container's content box when laying out the contents. Two examples below demonstrate percentage gap values with [explicit container size](#percentage_gap_value_and_explicit_container_size) and [implicit container size](#percentage_gap_value_and_implicit_container_size) in the examples section.
 
-The effect of positive `gap` values is as though the grid lines acquired thickness: the grid track between two grid lines is the space between the gutters that represent them. If a grid item spans multiple rows or columns, for the purpose of track sizing, the gutter is treated as an extra, empty, fixed-size track of the specified size, added to the dimension in the spanning direction. For example, if `gap: 10px` is set on a 3x3 grid of 100px by 100px boxes, if a grid item spans two vertical columns, it's width would be `210px`. If it spans all three, it has a width of `320px`.
+The effect of positive `gap` values is as though the grid lines acquired thickness: the grid track between two grid lines is the space between the gutters that represent them. If a grid item spans multiple rows or columns, for the purpose of track sizing, the gutter is treated as an extra, empty, fixed-size track of the specified size, added to the dimension in the spanning direction. For example, if `gap: 10px` is set on a 3x3 grid of 100px by 100px boxes, if a grid item spans two vertical columns, its width would be `210px`. If it spans all three, it has a width of `320px`.
 
 The space between grid rows and columns may be larger than the value of the `gap` property due to space added between tracks by the {{cssxref("justify-content")}} and {{cssxref("align-content")}} properties.
 

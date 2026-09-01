@@ -33,7 +33,7 @@ d: unset;
 
 ### Values
 
-The value is either a {{cssxref("basic-shape/path", "path()")}} function with a single {{cssxref("&lt;string&gt;")}} parameter or the keyword `none`.
+The value is either a {{cssxref("basic-shape/path", "path()")}} function with a single {{cssxref("&lt;string&gt;")}} parameter or the keyword `none`:
 
 - `none`
   - : No path is drawn.

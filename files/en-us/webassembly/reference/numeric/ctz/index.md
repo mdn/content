@@ -1,12 +1,13 @@
 ---
-title: "ctz: Wasm text instruction"
+title: "ctz: Wasm numeric instruction"
 short-title: ctz
 slug: WebAssembly/Reference/Numeric/ctz
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.ctz
 sidebar: webassemblysidebar
 ---
 
-The **`ctz`** instructions, short for _count trailing zeros_, are used to count the amount of zeros at the end of the numbers binary representation.
+The **`ctz`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _count trailing zeros_, is used to count the amount of zeros at the end of the numbers binary representation.
 
 {{InteractiveExample("Wat Demo: ctz", "tabbed-taller")}}
 
@@ -54,3 +55,11 @@ i32.ctz
 | ----------- | ------------- |
 | `i32.ctz`   | `0x68`        |
 | `i64.ctz`   | `0x7a`        |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

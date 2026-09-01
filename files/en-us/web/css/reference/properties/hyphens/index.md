@@ -56,9 +56,9 @@ hyphens: revert-layer;
 hyphens: unset;
 ```
 
-The `hyphens` property is specified as a single keyword value chosen from the list below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `none`
   - : Words are not broken at line breaks, even if characters inside the words suggest line break points. Lines will only wrap at whitespace.

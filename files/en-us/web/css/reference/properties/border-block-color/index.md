@@ -65,6 +65,8 @@ border-block-color: unset;
 
 ### Values
 
+This property is specified as one `<color>` value:
+
 - {{CSSXref("&lt;color&gt;")}}
   - : The color of the border.
 

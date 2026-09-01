@@ -88,9 +88,9 @@ background-attachment: revert-layer;
 background-attachment: unset;
 ```
 
-The `background-attachment` property is specified as one or more of the keyword values, separated by commas.
-
 ### Values
+
+This property is specified as one or more comma-separated keyword values:
 
 - `fixed`
   - : The background is fixed relative to the viewport. Even if an element has a scrolling mechanism, the background doesn't move with the element. If set, the {{cssxref("background-origin")}} property is ignored.

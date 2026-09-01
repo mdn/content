@@ -14,7 +14,7 @@ The **`eye`** read-only property of the {{domxref("XRVisibilityMaskChangeEvent")
 
 ## Value
 
-An emumerated value indicating which eye the mask applies to from the viewer's perspective.
+An enumerated value indicating which eye the mask applies to from the viewer's perspective.
 This can be one of:
 
 - `left`

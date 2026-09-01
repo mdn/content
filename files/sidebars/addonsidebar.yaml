@@ -51,6 +51,7 @@ sidebar:
       - /Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts
       - /Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
       - /Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
+      - /Mozilla/Add-ons/WebExtensions/Work_with_documentId
       - /Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
       - /Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API
       - /Mozilla/Add-ons/WebExtensions/Work_with_the_Cookies_API

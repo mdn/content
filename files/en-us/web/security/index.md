@@ -36,7 +36,7 @@ Web security can be overwhelming: there are a lot of potential threats, defenses
 - **Control cross-origin requests**: consider whether and in which circumstances you want to allow other {{glossary("origin", "origins")}} to make requests to your site, and use [fetch metadata](/en-US/docs/Web/HTTP/Guides/Fetch_metadata) to control this.
 
 - **Limit access to any cookies your site sets**. In particular:
-  - Set the [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesite) attribute to `Strict` if possible, or `Lax` otherwise.
+  - Set the [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) attribute to `Strict` if possible, or `Lax` otherwise.
   - Set the [`Secure`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#secure) and [`HttpOnly`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#httponly) attributes, if possible.
   - Minimize the lifetime of cookies that are used to represent logged-in users.
 
@@ -86,7 +86,7 @@ In this section we document the following defenses:
 - [Transport Layer Security (TLS)](/en-US/docs/Web/Security/Defenses/Transport_Layer_Security)
 - [User activation](/en-US/docs/Web/Security/Defenses/User_activation)
 
-Note that not all defenses are described in this section: some, such as [CSP](2/en-US/docs/Web/HTTP/Guides/CSP) or [trusted types](/en-US/docs/Web/API/Trusted_Types_API), are described inside the technology area of which they are a part.
+Note that not all defenses are described in this section: some, such as [CSP](/en-US/docs/Web/HTTP/Guides/CSP) or [trusted types](/en-US/docs/Web/API/Trusted_Types_API), are described inside the technology area of which they are a part.
 
 ## Threat modeling
 

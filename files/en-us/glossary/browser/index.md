@@ -22,7 +22,7 @@ Common browsers include:
 - Browser download links:
   - [Apple Safari](https://www.apple.com/safari/) (Safari is not a downloadable browser)
   - [Google Chrome](https://www.google.com/chrome/)
-  - [Microsoft Edge](https://www.microsoft.com/en-us/edge)
+  - [Microsoft Edge](https://explore.microsoft.com/en-us/edge)
   - [Mozilla Firefox](https://www.firefox.com/en-US/)
   - [Opera Browser](https://www.opera.com/)
 - Related glossary terms:

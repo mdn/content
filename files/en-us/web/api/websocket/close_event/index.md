@@ -26,17 +26,6 @@ A {{domxref("CloseEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("CloseEvent")}}
 
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref("CloseEvent.code", "code")}} {{ReadOnlyInline}}
-  - : Returns an `unsigned short` containing the close code sent by the server.
-- {{domxref("CloseEvent.reason", "reason")}} {{ReadOnlyInline}}
-  - : Returns a string indicating the reason the server closed the connection. This is specific to the particular server and sub-protocol.
-- {{domxref("CloseEvent.wasClean", "wasClean")}} {{ReadOnlyInline}}
-  - : Returns a boolean value that Indicates whether or not the connection was cleanly closed.
-
 ## Examples
 
 You might want to know when the connection has been closed so that you can update the UI or, perhaps, save data about the closed connection. Given that you have a variable called `exampleSocket` that refers to an opened `WebSocket`, this handler would handle the situation where the socket has been closed.

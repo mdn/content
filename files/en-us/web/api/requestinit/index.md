@@ -41,8 +41,6 @@ You can also construct a `Request` with a `RequestInit`, and pass the `Request` 
 - `browsingTopics` {{optional_inline}} {{deprecated_inline}}
   - : A boolean specifying that the selected topics for the current user should be sent in a {{httpheader("Sec-Browsing-Topics")}} header with the associated request.
 
-    See [Using the Topics API](/en-US/docs/Web/API/Topics_API/Using) for more details.
-
 - `cache` {{optional_inline}}
   - : The [cache mode](/en-US/docs/Web/API/Request/cache) you want to use for the request. This may be any one of the following values:
     - `default`

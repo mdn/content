@@ -86,7 +86,7 @@ _This interface also inherits methods from its parent, {{domxref("SVGGraphicsEle
 - {{domxref("SVGSVGElement.unsuspendRedraw()")}} {{Deprecated_Inline}}
   - : Cancels a specified `suspendRedraw()` by providing a unique suspend handle ID that was returned by a previous `suspendRedraw()` call.
 - {{domxref("SVGSVGElement.unsuspendRedrawAll()")}} {{Deprecated_Inline}}
-  - : Cancels all currently active `suspendRedraw()` method calls. This method is most useful at the very end of a set of SVG DOM calls to ensure that all pending `suspendRedraw()` method calls have been cancelled.
+  - : Cancels all currently active `suspendRedraw()` method calls. This method is most useful at the very end of a set of SVG DOM calls to ensure that all pending `suspendRedraw()` method calls have been canceled.
 - {{domxref("SVGSVGElement.forceRedraw()")}} {{Deprecated_Inline}}
   - : In rendering environments supporting interactivity, forces the user agent to immediately redraw all regions of the viewport that require updating.
 - {{domxref("SVGSVGElement.pauseAnimations()")}}

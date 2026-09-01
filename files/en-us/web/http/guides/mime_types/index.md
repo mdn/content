@@ -154,7 +154,7 @@ Including any parameter in the `type` attribute, such as `charset=utf-8`, is the
 Note that setting `type="text/javascript"` is no longer necessary; this is the default for `<script>` elements, so you may omit the `type` attribute entirely in this case.
 In contrast, when using the HTTP {{httpheader("Content-Type")}} header you may optionally specify the `charset` parameter as usual.
 
-For more information see: [IANA Media Types registry](https://www.iana.org/assignments/media-types/media-types.xhtml#text), [RFC 9239](https://www.rfc-editor.org/rfc/rfc9239.html), and the [HTML specification](https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages:text/javascript).
+For more information see: [IANA Media Types registry](https://www.iana.org/assignments/media-types/media-types.xhtml#text), [RFC 9239](https://www.rfc-editor.org/info/rfc9239/), and the [HTML specification](https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages:text/javascript).
 
 #### Legacy JavaScript MIME types
 

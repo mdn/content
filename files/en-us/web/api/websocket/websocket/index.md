@@ -126,4 +126,4 @@ socket.addEventListener("close", (event) => {
 
 ## See also
 
-- [RFC 6455](https://www.rfc-editor.org/rfc/rfc6455.html) (the WebSocket Protocol specification)
+- [RFC 6455](https://www.rfc-editor.org/info/rfc6455/) (the WebSocket Protocol specification)

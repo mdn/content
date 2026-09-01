@@ -76,9 +76,9 @@ padding-block-end: unset;
 ### Values
 
 - {{cssxref("&lt;length&gt;")}}
-  - : The size of the padding as a fixed value. Must be nonnegative.
+  - : The size of the padding as a fixed value. Must be non-negative.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : The size of the padding as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block). Must be nonnegative.
+  - : The size of the padding as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block). Must be non-negative.
 
 ## Description
 

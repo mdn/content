@@ -33,11 +33,11 @@ Express apps can use many different databases, and there are several approaches 
 
 ### What databases can I use?
 
-_Express_ apps can use any database supported by _Node_ (_Express_ itself doesn't define any specific additional behavior/requirements for database management). There are [many popular options](https://expressjs.com/en/guide/database-integration.html), including PostgreSQL, MySQL, Redis, SQLite, and MongoDB.
+_Express_ apps can use any database supported by _Node_ (_Express_ itself doesn't define any specific additional behavior/requirements for database management). There are [many popular options](https://expressjs.com/en/guide/database-integration/), including PostgreSQL, MySQL, Redis, SQLite, and MongoDB.
 
 When choosing a database, you should consider things like time-to-productivity/learning curve, performance, ease of replication/backup, cost, community support, etc. While there is no single "best" database, almost any of the popular solutions should be more than acceptable for a small-to-medium-sized site like our Local Library.
 
-For more information on the options see [Database integration](https://expressjs.com/en/guide/database-integration.html) (Express docs).
+For more information on the options see [Database integration](https://expressjs.com/en/guide/database-integration/) (Express docs).
 
 ### What is the best way to interact with a database?
 
@@ -64,7 +64,7 @@ A few solutions that were popular at the time of writing are:
 - [Bookshelf](https://www.npmjs.com/package/bookshelf): Features both promise-based and traditional callback interfaces, providing transaction support, eager/nested-eager relation loading, polymorphic associations, and support for one-to-one, one-to-many, and many-to-many relations. Works with PostgreSQL, MySQL, and SQLite3.
 - [Objection](https://www.npmjs.com/package/objection): Makes it as easy as possible to use the full power of SQL and the underlying database engine (supports SQLite3, Postgres, and MySQL).
 - [Sequelize](https://www.npmjs.com/package/sequelize) is a promise-based ORM for Node.js and io.js. It supports the dialects PostgreSQL, MySQL, MariaDB, SQLite, and MSSQL and features solid transaction support, relations, read replication and more.
-- [Node ORM2](https://node-orm.readthedocs.io/en/latest/) is an Object Relationship Manager for NodeJS. It supports MySQL, SQLite, and Postgres, helping to work with the database using an object-oriented approach.
+- [Node ORM2](https://node-orm.readthedocs.io/en/latest/) is an Object Relationship Manager for Node.js. It supports MySQL, SQLite, and Postgres, helping to work with the database using an object-oriented approach.
 - [GraphQL](https://graphql.org/): Primarily a query language for restful APIs, GraphQL is very popular, and has features available for reading data from databases.
 
 As a general rule, you should consider both the features provided and the "community activity" (downloads, contributions, bug reports, quality of documentation, etc.) when selecting a solution. At the time of writing Mongoose is by far the most popular ODM, and is a reasonable choice if you're using MongoDB for your database.
@@ -503,7 +503,7 @@ const bob = new Author({ name: "Bob Smith" });
 
 await bob.save();
 
-// Bob now exists, so lets create a story
+// Bob now exists, so let's create a story
 const story = new Story({
   title: "Bob goes sledding",
   author: bob._id, // assign the _id from our author Bob. This ID is created by default!
@@ -889,7 +889,7 @@ Last of all, we tested our models by creating a number of instances (using a sta
 
 ## See also
 
-- [Database integration](https://expressjs.com/en/guide/database-integration.html) (Express docs)
+- [Database integration](https://expressjs.com/en/guide/database-integration/) (Express docs)
 - [Mongoose website](https://mongoosejs.com/) (Mongoose docs)
 - [Mongoose Guide](https://mongoosejs.com/docs/guide.html) (Mongoose docs)
 - [Validation](https://mongoosejs.com/docs/validation.html) (Mongoose docs)

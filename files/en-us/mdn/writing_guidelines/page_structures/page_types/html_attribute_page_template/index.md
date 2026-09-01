@@ -61,7 +61,6 @@ Only add an article if the attribute has enough nuance to deserve its own exampl
 >     The toolchain automatically uses the key to populate the compatibility and specification sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros).
 >     Note that you may first need to create/update an entry for the attribute in our [Browser compat data repo](https://github.com/mdn/browser-compat-data), and the entry will need to include specification information.
 >     See our [guide on how to do this](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
->
 > - **sidebar**
 >   - : Keep as `htmlsidebar` (all pages under `/web/html/` use this sidebar).
 >     See [Page structures: Sidebars](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars) for details.

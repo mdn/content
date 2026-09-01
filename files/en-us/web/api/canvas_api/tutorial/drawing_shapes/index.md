@@ -36,12 +36,12 @@ Below is the `draw()` function from the previous page, but now it is making use 
 ### Rectangular shape example
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="my-canvas" width="150" height="150"></canvas>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById("canvas");
+  const canvas = document.getElementById("my-canvas");
   const ctx = canvas.getContext("2d");
 
   ctx.fillRect(25, 25, 100, 100);
@@ -253,12 +253,12 @@ The third, and an optional step, is to call `closePath()`. This method tries to 
 For example, the code for drawing a triangle would look something like this:
 
 ```html hidden
-<canvas id="canvas" width="100" height="100"></canvas>
+<canvas id="my-canvas" width="100" height="100"></canvas>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById("canvas");
+  const canvas = document.getElementById("my-canvas");
   const ctx = canvas.getContext("2d");
 
   ctx.beginPath();
@@ -289,12 +289,12 @@ When the canvas is initialized or `beginPath()` is called, you typically will wa
 To try this for yourself, you can use the code snippet below. Just paste it into the `draw()` function we saw earlier.
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="my-canvas" width="150" height="150"></canvas>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById("canvas");
+  const canvas = document.getElementById("my-canvas");
   const ctx = canvas.getContext("2d");
 
   ctx.beginPath();
@@ -334,12 +334,12 @@ This method takes two arguments, `x` and `y`, which are the coordinates of the l
 The example below draws two triangles, one filled and one outlined.
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="my-canvas" width="150" height="150"></canvas>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById("canvas");
+  const canvas = document.getElementById("my-canvas");
   const ctx = canvas.getContext("2d");
 
   // Filled triangle
@@ -395,12 +395,12 @@ The statement for the `clockwise` parameter results in the first and third row b
 > This example requires a slightly larger canvas than the others on this page: 150 x 200 pixels.
 
 ```html hidden
-<canvas id="canvas" width="150" height="200"></canvas>
+<canvas id="my-canvas" width="150" height="200"></canvas>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById("canvas");
+  const canvas = document.getElementById("my-canvas");
   const ctx = canvas.getContext("2d");
 
   for (let i = 0; i < 4; i++) {
@@ -454,12 +454,12 @@ There's nothing very difficult in these examples. In both cases we see a success
 This example uses multiple quadratic Bézier curves to render a speech balloon.
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="my-canvas" width="150" height="150"></canvas>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById("canvas");
+  const canvas = document.getElementById("my-canvas");
   const ctx = canvas.getContext("2d");
 
   // Quadratic curves example
@@ -486,12 +486,12 @@ draw();
 This example draws a heart using cubic Bézier curves.
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="my-canvas" width="150" height="150"></canvas>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById("canvas");
+  const canvas = document.getElementById("my-canvas");
   const ctx = canvas.getContext("2d");
 
   // Cubic curves example
@@ -527,12 +527,12 @@ Before this method is executed, the `moveTo()` method is automatically called wi
 So far, each example on this page has used only one type of path function per shape. However, there's no limitation to the number or types of paths you can use to create a shape. So in this final example, let's combine all of the path functions to make a set of very famous game characters.
 
 ```html hidden
-<canvas id="canvas" width="200" height="185"></canvas>
+<canvas id="my-canvas" width="200" height="185"></canvas>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById("canvas");
+  const canvas = document.getElementById("my-canvas");
   const ctx = canvas.getContext("2d");
 
   roundedRect(ctx, 12, 12, 184, 168, 15);
@@ -624,15 +624,15 @@ We'll take another look at `fillStyle`, in more detail, later in this tutorial. 
 
 ### Shapes with holes
 
-To draw a shape with a hole in it, we need to draw the hole in different clock directions as we draw the outer shape. We either draw the outer shape clockwise and the inner shape anticlockwise or the outer shape anticlockwise and the inner shape clockwise.
+To draw a shape with a hole in it, we need to draw the hole in different clock directions as we draw the outer shape. We either draw the outer shape clockwise and the inner shape counterclockwise or the outer shape counterclockwise and the inner shape clockwise.
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="my-canvas" width="150" height="150"></canvas>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById("canvas");
+  const canvas = document.getElementById("my-canvas");
   const ctx = canvas.getContext("2d");
 
   ctx.beginPath();
@@ -642,7 +642,7 @@ function draw() {
   ctx.lineTo(150, 0);
   ctx.lineTo(75, 129.9);
 
-  // Inner shape anticlockwise ↺
+  // Inner shape counterclockwise ↺
   ctx.moveTo(75, 20);
   ctx.lineTo(50, 60);
   ctx.lineTo(100, 60);
@@ -657,7 +657,7 @@ draw();
 
 {{EmbedLiveSample("Shapes_with_holes", "", "160")}}
 
-In the example above, the outer triangle goes clockwise (move to the top-left corner, then draw a line to the top-right corner, and finish at the bottom) and the inner triangle goes anticlockwise (move to the top, then line to the bottom-left corner, and finish at the bottom-right).
+In the example above, the outer triangle goes clockwise (move to the top-left corner, then draw a line to the top-right corner, and finish at the bottom) and the inner triangle goes counterclockwise (move to the top, then line to the bottom-left corner, and finish at the bottom-right).
 
 ## Path2D objects
 
@@ -685,12 +685,12 @@ The `Path2D` API also adds a way to combine paths using the `addPath` method. Th
 In this example, we are creating a rectangle and a circle. Both are stored as a `Path2D` object, so that they are available for later usage. With the new `Path2D` API, several methods got updated to optionally accept a `Path2D` object to use instead of the current path. Here, `stroke` and `fill` are used with a path argument to draw both objects onto the canvas, for example.
 
 ```html hidden
-<canvas id="canvas" width="130" height="100"></canvas>
+<canvas id="my-canvas" width="130" height="100"></canvas>
 ```
 
 ```js
 function draw() {
-  const canvas = document.getElementById("canvas");
+  const canvas = document.getElementById("my-canvas");
   const ctx = canvas.getContext("2d");
 
   const rectangle = new Path2D();

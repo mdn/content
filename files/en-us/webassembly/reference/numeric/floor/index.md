@@ -1,12 +1,13 @@
 ---
-title: "floor: Wasm text instruction"
+title: "floor: Wasm numeric instruction"
 short-title: floor
 slug: WebAssembly/Reference/Numeric/floor
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.floor
 sidebar: webassemblysidebar
 ---
 
-The **`floor`** instruction is used for getting the value of a number rounded down to the next integer.
+The **`floor`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) is used for getting the value of a number rounded down to the next integer.
 
 `floor` differs from [**`trunc`**](/en-US/docs/WebAssembly/Reference/Numeric/trunc) when used on negative numbers — `floor` will round down in those cases while `trunc` will round up.
 
@@ -128,3 +129,11 @@ The output is as follows:
 {{embedlivesample("simd_floor", "100%", 100)}}
 
 `3` is output because this is the result of rounding down lane 0 of the input value (`3.9`) to the nearest integer.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

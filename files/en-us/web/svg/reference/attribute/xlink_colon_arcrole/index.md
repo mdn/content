@@ -4,11 +4,9 @@ slug: Web/SVG/Reference/Attribute/xlink:arcrole
 page-type: svg-attribute
 status:
   - deprecated
-browser-compat: svg.global_attributes.xlink_arcrole
+spec-urls: https://www.w3.org/TR/SVG11/linking.html#XLinkArcRoleAttribute
 sidebar: svgref
 ---
-
-{{Deprecated_Header}}
 
 The **`xlink:arcrole`** attribute specifies a contextual role for the element and corresponds to the [RDF Primer](https://www.w3.org/TR/rdf-primer/) notion of a property.
 
@@ -61,10 +59,6 @@ You can use this attribute with the following SVG elements:
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 

@@ -1,12 +1,13 @@
 ---
-title: "neg: Wasm text instruction"
+title: "neg: Wasm numeric instruction"
 short-title: neg
 slug: WebAssembly/Reference/Numeric/neg
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.neg
 sidebar: webassemblysidebar
 ---
 
-The **`neg`** instruction, short for _negate_, is used to negate a number. That is, it turns a positive number into a negative number and a negative number into a positive number.
+The **`neg`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _negate_, is used to negate a number. That is, it turns a positive number into a negative number and a negative number into a positive number.
 
 {{InteractiveExample("Wat Demo: neg", "tabbed-standard")}}
 
@@ -134,3 +135,11 @@ The output is as follows:
 {{embedlivesample("simd_neg", "100%", 100)}}
 
 `6` is output because it is the negation of the value in lane `15` of the input value.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

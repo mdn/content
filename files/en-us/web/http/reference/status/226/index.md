@@ -2,7 +2,7 @@
 title: 226 IM Used
 slug: Web/HTTP/Reference/Status/226
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc3229.html#section-10.4.1
+spec-urls: https://www.rfc-editor.org/info/rfc3229/#section-10.4.1
 sidebar: http
 ---
 

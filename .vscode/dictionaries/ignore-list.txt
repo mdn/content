@@ -75,6 +75,7 @@ cbbabbbbcdebc
 cdbBdbsbz
 CHANGEME
 chatserver
+cheesemakers
 Clampin
 clita
 cmFuZG9tQ2hhbGxlbmdl
@@ -276,6 +277,7 @@ sadipscing
 sagnarelli
 samplepay
 Saunterin
+saus
 screenleft-screentop
 Scrupulum
 seakale
@@ -291,6 +293,7 @@ spero
 srcs
 takimata
 tatsoi
+Terydactyl
 testuser
 texmf
 theguardian
@@ -333,6 +336,7 @@ Wookie
 XYZD
 xyzzy
 Y3JlZGVudGlhbElk
+Yarrrr
 YOUREXT
 YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 YSDEgCDwkICAIOaWhyDwn6aE

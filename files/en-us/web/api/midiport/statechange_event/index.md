@@ -26,11 +26,6 @@ A {{domxref("MIDIConnectionEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MIDIConnectionEvent")}}
 
-## Event properties
-
-- {{domxref("MIDIConnectionEvent.port")}} {{ReadOnlyInline}}
-  - : Returns a reference to a {{domxref("MIDIPort")}} instance for a port that has been connected or disconnected.
-
 ## Example
 
 In the following example the current {{domxref("MIDIPort.state")}} is logged each time it changes.

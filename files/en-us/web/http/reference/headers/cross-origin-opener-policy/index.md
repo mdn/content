@@ -162,7 +162,7 @@ The "right way" to isolate these applications would be to host them on different
 
 The `Cross-Origin-Opener-Policy: noopener-allow-popups` header can be used to ensure that a document can't be scripted by a document that opens it.
 
-If `example.com/passwords` is served with `noopener-allow-popups` the `WindowProxy` returned by {{domxref("Window.open()")}} will indicate that the windows is closed ({{domxref("Window.closed")}} is `true`), so the opener can't script the passwords app:
+If `example.com/passwords` is served with `noopener-allow-popups` the `WindowProxy` returned by {{domxref("Window.open()")}} will indicate that the window is closed ({{domxref("Window.closed")}} is `true`), so the opener can't script the passwords app:
 
 ```js
 const handle = window.open("example.com/passwords", "passwordTab");
@@ -177,7 +177,7 @@ The site would also need to do the following:
 - Use Fetch Metadata to block same-origin requests to the more-sensitive app that are not navigation requests.
 - Ensure their authentication cookies are all `HttpOnly`.
 - Ensure root-level Service-Workers are not installed by the less-sensitive app.
-- Ensure that `postMessage` or `BroadcastChannel` on the more-sensitive app don't expose any sensitive information the any other same-origin app.
+- Ensure that `postMessage` or `BroadcastChannel` on the more-sensitive app don't expose any sensitive information to any other same-origin app.
 - Ensure their login page is served on a separate origin, due to password manager autofill being applied based on origin.
 - Understand that the browser may still allocate the more-sensitive app in the same process as the less-sensitive one, making it vulnerable to Spectre-like attacks.
 

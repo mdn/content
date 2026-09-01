@@ -3,7 +3,7 @@ title: "narrow_i32x4_u: Wasm SIMD conversion instruction"
 short-title: narrow_i32x4_u
 slug: WebAssembly/Reference/SIMD/conversion/narrow_i32x4_u
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.narrow_i32x4_u
+browser-compat: webassembly.instructions.narrow_i32x4_u
 sidebar: webassemblysidebar
 ---
 
@@ -65,7 +65,3 @@ i16x8.narrow_i32x4_u
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD conversion instructions](/en-US/docs/WebAssembly/Reference/SIMD/conversion)
