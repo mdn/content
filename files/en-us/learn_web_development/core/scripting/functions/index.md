@@ -366,11 +366,9 @@ You can see this example [running live on GitHub](https://mdn.github.io/learning
 
 Locking parts of your code away in functions avoids such problems and is considered a best practice.
 
-It is a bit like a zoo. The lions, zebras, tigers, and penguins are kept in their own enclosures and only have access to the things inside, similar to function scopes. If they were able to get into other enclosures, problems would occur. At best, different animals would feel really uncomfortable inside unfamiliar habitats — a lion or tiger would feel terrible inside the penguins' watery, icy domain. At worst, the lions and tigers might try to eat the penguins!
+It is a bit like an apartment building. Each apartment is private to the people who live there, similar to function scope — code inside a function can access the variables and functions defined within it, but code outside that function cannot. If everybody had access to everyone else's apartment, problems would occur — people's belongings might get moved, broken, or stolen!
 
-![Four different animals enclosed in their respective habitat in a Zoo](mdn-mozilla-zoo.png)
-
-The zoo keeper is like the global scope — they have the keys to access every enclosure, restock food, tend to sick animals, etc.
+The building also has common areas, though, such as a pool, a gym, or a rec room, which are accessible to everybody living there and shared cooperatively. This is like the global scope — anything declared there is accessible to every function, in the same way that all the residents can use the building's common areas.
 
 ### Playing with scope
 
