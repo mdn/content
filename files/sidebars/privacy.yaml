@@ -20,7 +20,12 @@ sidebar:
     nested: true
     link: /Web/Privacy/Guides/Storage_Access_Policy
     details: closed
-  - link: /Web/Privacy/Guides/Third-party_cookies
+  - type: listSubPages
+    path: /Web/Privacy/Guides/Third-party_cookies
+    depth: 2
+    nested: true
+    link: /Web/Privacy/Guides/Third-party_cookies
+    details: closed
   - link: /Web/Privacy/Threat_modeling
   - type: listSubPages
     path: /Web/Privacy/Regulations
