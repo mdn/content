@@ -16,7 +16,7 @@ Firefox 155 was released on [September 1, 2026](https://whattrainisitnow.com/rel
 - The media feature emulation buttons in the [Rules view](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html) are now collected into a dedicated emulation panel, which is opened using the `@` button.
   The panel also adds emulation of the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} media feature.
   ([Firefox bug 1692434](https://bugzil.la/1692434) and [Firefox bug 1477920](https://bugzil.la/1477920)).
-- The [JSON Viewer](https://firefox-source-docs.mozilla.org/devtools-user/json_viewer/index.html) now opens [JSON Lines](https://jsonlines.org/) (NDJSON) documents, which are served as `application/jsonlines`, `application/x-ndjson`, or `text/jsonl`, or have a `.jsonl` file extension.
+- The [JSON Viewer](https://firefox-source-docs.mozilla.org/devtools-user/json_viewer/index.html) now opens [JSON Lines](https://jsonlines.org/) (NDJSON) documents, which are served as `application/jsonl`, `application/jsonlines`, `application/x-ndjson`, or `text/jsonl`, or have a `.jsonl` file extension.
   Each line is parsed separately into its own collapsible entry, labeled with the line number it came from, and a line that fails to parse is reported inline without affecting the rest of the document.
   ([Firefox bug 2055774](https://bugzil.la/2055774), [Firefox bug 2060972](https://bugzil.la/2060972), and [Firefox bug 2060529](https://bugzil.la/2060529)).
 - Added a keyboard shortcut for disabling breakpoints in the [Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html).
