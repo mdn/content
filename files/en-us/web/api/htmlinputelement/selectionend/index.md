@@ -8,7 +8,7 @@ browser-compat: api.HTMLInputElement.selectionEnd
 
 {{APIRef("HTML DOM")}}
 
-The **`selectionEnd`** property of the {{domxref("HTMLInputElement")}} interface specifies the end position of the current text selection in an {{HTMLElement("input")}} element. 
+The **`selectionEnd`** property of the {{domxref("HTMLInputElement")}} interface specifies the end position of the current text selection in an {{HTMLElement("input")}} element.
 
 ## Value
 
