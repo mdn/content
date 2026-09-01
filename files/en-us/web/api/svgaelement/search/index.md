@@ -3,10 +3,12 @@ title: "SVGAElement: search property"
 short-title: search
 slug: Web/API/SVGAElement/search
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.SVGAElement.search
 ---
 
-{{APIRef("SVG")}}
+{{APIRef("SVG")}}{{SeeCompatTable}}
 
 The **`search`** property of the {{domxref("SVGAElement")}} interface returns a string representing the URL's query string, if any, including the leading question mark (`?`).
 
@@ -26,4 +28,4 @@ A string.
 
 ## See also
 
-- SVG [`<a>`](/en-US/docs/Web/HTML/Reference/Elements/a) element
+- SVG {{SVGElement("a")}} element

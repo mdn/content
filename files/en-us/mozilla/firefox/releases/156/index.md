@@ -1,13 +1,13 @@
 ---
-title: Firefox 156 release notes for developers (Nightly)
-short-title: Firefox 156 (Nightly)
+title: Firefox 156 release notes for developers (Beta)
+short-title: Firefox 156 (Beta)
 slug: Mozilla/Firefox/Releases/156
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 156 that affect developers.
-Firefox 156 is the current [Nightly version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [September 15, 2026](https://whattrainisitnow.com/release/?version=156).
+Firefox 156 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [September 15, 2026](https://whattrainisitnow.com/release/?version=156).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress.

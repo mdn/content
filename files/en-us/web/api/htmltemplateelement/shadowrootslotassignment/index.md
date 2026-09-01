@@ -38,7 +38,7 @@ const isShadowRootSlotAssignmentSupported = Object.hasOwn(
 );
 ```
 
-The value of `isShadowRootSlotAssignmentSupported` could then be used to fallback to attaching the shadow root with {{domxref("Element.attachShadow()")}}, or to inform the user of what browser versions they need to use.
+The value of `isShadowRootSlotAssignmentSupported` could then be used to fall back to attaching the shadow root with {{domxref("Element.attachShadow()")}}, or to inform the user of what browser versions they need to use.
 
 Note that if you're using named slot assignment there is no need to feature check for `shadowrootslotassignment`, because named assignment is supported by default.
 

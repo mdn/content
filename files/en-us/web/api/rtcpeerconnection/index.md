@@ -109,7 +109,7 @@ _Also inherits methods from {{DOMxRef("EventTarget")}}._
     as reported by {{DOMxRef("RTCPeerConnection.getSenders", "getSenders()")}}.
     If the track is already stopped, or is not in the connection's senders list, this method has no effect.
 - {{DOMxRef("RTCPeerConnection.restartIce", "restartIce()")}}
-  - : Allows to easily request that ICE candidate gathering be redone on both ends of the connection.
+  - : Allows you to easily request that ICE candidate gathering be redone on both ends of the connection.
     This simplifies the process by allowing the same method to be used by either the caller or the receiver to trigger an {{Glossary("ICE")}} restart.
 - {{DOMxRef("RTCPeerConnection.setConfiguration", "setConfiguration()")}}
   - : Sets the current configuration of the connection based on the values included in the specified object.

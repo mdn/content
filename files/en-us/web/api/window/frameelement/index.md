@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Window.frameElement
 ---
 
-{{ApiRef}}
+{{ApiRef("HTML DOM")}}
 
 The **`Window.frameElement`** property
 returns the element (such as {{HTMLElement("iframe")}} or {{HTMLElement("object")}})

@@ -285,8 +285,8 @@ blockSpan.addEventListener("change", () => {
 });
 
 columnRuleColor.addEventListener("input", () => {
-  page.style.columnRuleColor = colColor.value;
-  page.style.ruleColor = colColor.value;
+  page.style.columnRuleColor = columnRuleColor.value;
+  page.style.ruleColor = columnRuleColor.value;
 });
 
 function showAndHideMenu() {

@@ -3,10 +3,12 @@ title: "SVGAElement: password property"
 short-title: password
 slug: Web/API/SVGAElement/password
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.SVGAElement.password
 ---
 
-{{APIRef("SVG")}}
+{{APIRef("SVG")}}{{SeeCompatTable}}
 
 The **`password`** property of the {{domxref("SVGAElement")}} interface returns a string containing the password specified before the domain name.
 
@@ -26,4 +28,4 @@ A string.
 
 ## See also
 
-- SVG [`<a>`](/en-US/docs/Web/HTML/Reference/Elements/a) element
+- SVG {{SVGElement("a")}} element
