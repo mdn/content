@@ -16,10 +16,7 @@ required to fill the stream's internal queue.
 
 A number, or `null`.
 
-This can be negative if the queue is over-full, and it is not necessarily an
-integer: when a custom queuing strategy is used, chunk sizes — and therefore
-`desiredSize` — can be non-integer values. The value is `null` if the stream has
-errored, and `0` if it is closed.
+The number can be negative if the queue is over-full. When a custom queuing strategy is used, its chunk sizes can cause the number to have a fractional component. The value is `null` if the stream has errored and `0` if it is closed.
 
 ## Examples
 
