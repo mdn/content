@@ -67,7 +67,7 @@ column-gap: 2.5em;
 column-gap: 3%;
 column-gap: calc(3% - 6px);
 
-/* <line-width> values */
+/* <line-width> keyword value */
 column-gap: thin;
 column-gap: medium;
 column-gap: thick;

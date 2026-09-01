@@ -101,20 +101,20 @@ gap: unset;
 
 ### Values
 
-This property is specified as one or two `<length-percentage>`, `<line-width>`, or `normal` keyword values:
+This property is specified as one or two values from the following list:
 
 - `normal`
-  - : For multi-column layout, resolves to `1em`; otherwise `0`. This is the default value.
+  - : Sets the gap to `1em` in multi-column layouts and to `0` in all other contexts. This is the default value.
 - `<line-width>`
   - : A {{cssxref("&lt;line-width&gt;")}}: one of the keywords `thin`, `medium`, or `thick`, or a positive {{cssxref("length")}} value.
 - {{CSSxRef("length-percentage")}}
-  - : A non-negative {{CSSxRef("&lt;length&gt;")}} or {{CSSxRef("&lt;percentage&gt;")}} value. Percentages are relative to the [content box](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#content_area) size of the container element in that dimension.
+  - : Sets the gap to a non-negative {{CSSxRef("&lt;length&gt;")}} or {{CSSxRef("&lt;percentage&gt;")}} value.
 
 ## Description
 
 The `gap` property defines gaps between columns and rows, with the effect of the definition depending on whether the container is a grid container, a flexbox container, or a multi-column layout container.
 
-The shorthand property is specified as a value for `<'row-gap'>`, followed optionally by a value for `<'column-gap'>`. While the default value is `normal` for both sub-properties, if only one value is declared, that value applies to both. Both `<'row-gap'>` and `<'column-gap'>` can each be specified as a `<length>`, a `<percentage>`, or the keyword `normal`. The specification also allows for any {{cssxref("line-width")}} value, including `thin`, `medium`, or `thick`.
+The shorthand accepts one or two values. A single value sets both the `row-gap` and the `column-gap`. Two values set `row-gap` first, then `column-gap`. The default value is `normal` for both sub-properties; but if you declare only one value, it applies to both.
 
 Percentage gap values are always calculated against the [content box](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#content_area) size of the container element. The behavior is well-defined and consistent across layout modes when the container size is definite.
 
