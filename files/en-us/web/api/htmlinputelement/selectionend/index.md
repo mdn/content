@@ -8,7 +8,15 @@ browser-compat: api.HTMLInputElement.selectionEnd
 
 {{APIRef("HTML DOM")}}
 
-The **`selectionEnd`** property of the {{domxref("HTMLInputElement")}} interface specifies the end position of the current text selection in an {{HTMLElement("input")}} element. It is a number representing the zero-based index of the character immediately following the last selected character. The property can be used to retrieve or set the end position.
+The **`selectionEnd`** property of the {{domxref("HTMLInputElement")}} interface specifies the end position of the current text selection in an {{HTMLElement("input")}} element. 
+
+## Value
+
+A non-negative number.
+
+## Description
+
+The `selectionEnd` property contains a number representing the zero-based index of the character immediately following the last selected character in a text `<input>`. The property can retrieve or set the end position.
 
 When nothing is selected, the value of both {{domxref("HTMLInputElement.selectionStart", "selectionStart")}} and `selectionEnd` is the position of the cursor (caret) inside the `<input>` element.
 
@@ -20,11 +28,9 @@ The property value can be retrieved and set without the `<input>` having focus, 
 
 Setting `selectionEnd` to a new value fires the {{domxref("HTMLInputElement.selectionchange_event", "selectionchange")}} and {{domxref("HTMLInputElement.select_event", "select")}} events.
 
-## Value
-
-A non-negative number.
-
 ## Examples
+
+### Basic usage
 
 This example reports the selected text and its start and end positions. Select some text in the input, and then click the button.
 
