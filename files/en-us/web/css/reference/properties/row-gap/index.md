@@ -84,14 +84,14 @@ row-gap: unset;
 
 ### Values
 
-This property is specified as either a `<length-percentage>`, `<line-width>`, or the keyword `normal`:
+This property is specified as a single value from the following list:
 
 - `normal`
   - : For multi-column layout, resolves to `1em`; otherwise `0`. This is the default value.
 - {{cssxref("&lt;line-width&gt;")}}
   - : Sets the width to one of the keywords `thin`, `medium`, or `thick`, or a positive {{cssxref("length")}} value.
 - {{CSSxRef("length-percentage")}}
-  - : A non-negative {{CSSxRef("&lt;length&gt;")}} or {{CSSxRef("&lt;percentage&gt;")}} value. Percentages are relative to the block-size of the content box.
+  - : A non-negative {{CSSxRef("&lt;length&gt;")}} or {{CSSxRef("&lt;percentage&gt;")}} value. Percentages are relative to the block-size of the content box or `0`.
 
 ## Description
 
