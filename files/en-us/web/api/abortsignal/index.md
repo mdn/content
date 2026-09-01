@@ -174,7 +174,10 @@ try {
 
 ## Removing the `abort` event listener
 
-`AbortSignal` objects cannot be garbage-collected as long as they have uncalled `abort` event listeners attached.
+Signals created by {{domxref("AbortController")}}s are garbage collectible as soon as both the signal and its owning controller become unreachable, even with `abort` event listeners, because it's guaranteed that the event won't fire. However, signals whose abortion is managed by something other than a controller are kept alive by the existence of an `abort` event listener:
+
+- A non-aborted signal returned by {{domxref("AbortSignal/any_static", "AbortSignal.any()")}} is kept alive while it still has source signals and either attached `abort` listeners or internal abort steps registered by an API.
+- A signal returned by {{domxref("AbortSignal/timeout_static", "AbortSignal.timeout()")}} is kept alive while its timeout is pending and it has attached `abort` listeners.
 
 The following function combines application-wide cancellation with a signal supplied by the caller for an individual operation. It adds a listener to log cancellation, but relies on `{ once: true }` to remove it:
 
