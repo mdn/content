@@ -2,9 +2,13 @@
 title: "Buffer boundary assertion: \\A, \\z, \\Z"
 slug: Web/JavaScript/Reference/Regular_expressions/Buffer_boundary_assertion
 page-type: javascript-language-feature
+status:
+  - experimental
 browser-compat: javascript.regular_expressions.buffer_boundary_assertion
 sidebar: jssidebar
 ---
+
+{{SeeCompatTable}}
 
 A **buffer boundary assertion** checks if the current position in the string is strictly at the start or end of the entire string (`\Z` also allows a trailing newline), regardless of the presence of the [`m`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline) flag (which changes the meanings of the `^` and `$` [input boundary assertions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion)). It's only supported in [Unicode-aware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode).
 

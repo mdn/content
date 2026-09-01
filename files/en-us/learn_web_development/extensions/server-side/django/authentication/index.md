@@ -297,7 +297,7 @@ LOGIN_REDIRECT_URL = '/'
 ### Logout template
 
 If you navigate to the logout URL (`http://127.0.0.1:8000/accounts/logout/`) then you'll get an error because Django 5 does not allow logout using `GET`, only `POST`.
-We'll add a form you can use to logout in a minute, but first we'll create the page that users are taken to after logging out.
+We'll add a form you can use to log out in a minute, but first we'll create the page that users are taken to after logging out.
 
 Create and open **/django-locallibrary-tutorial/templates/registration/logged_out.html**. Copy in the text below:
 
@@ -461,7 +461,7 @@ As you can see, we use `if` / `else` / `endif` template tags to conditionally di
 
 We create the login link URL using the `url` template tag and the name of the `login` URL configuration. Note also how we have appended `?next=\{{ request.path }}` to the end of the URL. What this does is add a URL parameter `next` containing the address (URL) of the _current_ page, to the end of the linked URL. After the user has successfully logged in, the view will use this `next` value to redirect the user back to the page where they first clicked the login link.
 
-The logout template code is different, because from Django 5 to logout you must `POST` to the `admin:logout` URL, using a form with a button.
+The logout template code is different, because from Django 5 to log out you must `POST` to the `admin:logout` URL, using a form with a button.
 By default this would render as a button, but you can style the button to display as a link.
 For this example we're using _Bootstrap_, so we make the button look like a link by applying `class="btn btn-link"`.
 You also need to append the following styles to **/django-locallibrary-tutorial/catalog/static/css/styles.css** in order to correctly position the logout link next to all the other sidebar links:
