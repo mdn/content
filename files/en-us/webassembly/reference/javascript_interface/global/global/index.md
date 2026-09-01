@@ -42,7 +42,7 @@ new WebAssembly.Global(descriptor, value)
 
 - {{jsxref("TypeError")}}
   - : Thrown if any of these conditions is met:
-    - `descriptor` is not an object
+    - `descriptor` is not an object.
     - `descriptor.value` is missing or not a valid value type (such as `"v128"`).
     - `value` is specified but cannot be converted to the WebAssembly type named by `descriptor.value`.
 
