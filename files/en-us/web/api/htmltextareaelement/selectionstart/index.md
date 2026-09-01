@@ -16,7 +16,7 @@ A non-negative number.
 
 ## Description
 
-The `selectionStart` property is a number representing the zero-based index of the first selected character of a `<textarea>`. The property can be used to retrieve or set the start position.
+The `selectionStart` property is a number representing the zero-based index of the first selected character in a `<textarea>`. The property can be used to retrieve or set the start position.
 
 When nothing is selected, the value of both `selectionStart` and {{domxref("HTMLTextAreaElement.selectionEnd", "selectionEnd")}} is the position of the cursor (caret) inside the `<textarea>` element.
 
