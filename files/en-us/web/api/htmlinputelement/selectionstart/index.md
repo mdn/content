@@ -8,7 +8,15 @@ browser-compat: api.HTMLInputElement.selectionStart
 
 {{APIRef("HTML DOM")}}
 
-The **`selectionStart`** property of the {{domxref("HTMLInputElement")}} interface specifies the start position of the current text selection in an {{HTMLElement("input")}} element. It is a number representing the zero-based index of the first selected character. The property can be used to retrieve or set the start position.
+The **`selectionStart`** property of the {{domxref("HTMLInputElement")}} interface specifies the start position of the current text selection in an {{HTMLElement("input")}} element.
+
+## Value
+
+A non-negative number.
+
+## Description
+
+The `selectionStart` property is a number representing the zero-based index of the first selected character in a text `<input>`. The property can be used to retrieve or set the start position.
 
 When nothing is selected, the value of both `selectionStart` and {{domxref("HTMLInputElement.selectionEnd", "selectionEnd")}} is the position of the cursor (caret) inside the `<input>` element.
 
@@ -20,11 +28,9 @@ The property value can be retrieved and set without the `<input>` having focus, 
 
 Setting `selectionStart` to a new value fires the {{domxref("HTMLInputElement.selectionchange_event", "selectionchange")}} and {{domxref("HTMLInputElement.select_event", "select")}} events.
 
-## Value
-
-A non-negative number.
-
 ## Examples
+
+### Basic usage
 
 This example reports the selected text and its start and end positions. Select some text in the input, and then click the button.
 
