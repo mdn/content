@@ -41,11 +41,25 @@ Match patterns are used in several places across the manifest.json keys and Java
 > Some browsers don't support certain schemes.
 > Check the [Browser compatibility table](#browser_compatibility) for details.
 
-All match patterns are specified as strings. Apart from the special [`<all_urls>`](#all_urls) pattern, match patterns consist of three parts: _scheme_, _host_, and _path_. The scheme and host are separated by `://`.
+All match patterns are specified as strings. Apart from the special [`<all_urls>`](#all_urls) pattern, match patterns consist of three parts: _scheme_, _host_, and _path_. The scheme and host are usually separated by `://`.
 
 ```plain
 <scheme>://<host><path>
 ```
+
+However, not every scheme has a host. Match patterns for a scheme without a host omit the host and separate the scheme from the path with a colon:
+
+```plain
+<scheme>:<path>
+```
+
+For example, a data URL is matched by `data:text/plain,*` and not by `data://text/plain,*`.
+
+Which form a scheme takes is fixed by the browser, not chosen by the pattern:
+
+- **Firefox** uses `://` for "http", "https", "ws", "wss", "ftp", "file", and "moz-extension", as well as the browser-internal schemes "chrome", "resource", "moz", and "moz-icon". Every other scheme uses a single colon, including "data" and any custom scheme.
+- **Chrome** uses `://` for the schemes it treats as standard, such as "http", "https", "ws", "wss", "ftp", "file", "filesystem", "chrome", and "chrome-extension". Every other scheme uses a single colon, including "data" and any custom scheme.
+- **Safari** uses `://` for every scheme it supports.
 
 ### scheme
 
@@ -79,14 +93,25 @@ The _scheme_ component may take one of two forms:
               <p><strong>Note:</strong>
               Some API support any validly formatted scheme, including:</p>
               <ul>
-                <li><code>targetUrlPatterns</code> in the {{WebExtAPIRef("menus")}} and {{WebExtAPIRef("contextMenus")}} APIs.</li>
+                <li><code>targetUrlPatterns</code> in the {{WebExtAPIRef("menus")}} API.</li>
                 <li>the <code>urls</code> filter in {{WebExtAPIRef("tabs.onUpdated")}}. (Firefox desktop only.)</li>
                 <li><code>url</code> in {{WebExtAPIRef("tabs.query")}}.</li>
               </ul>
             </div>
           </li>
-          <li>Chrome supports "http", "https", "file", "ftp", "chrome-extension", "ws", "wss", "data", "filesystem" (<a href="/en-US/docs/Web/API/File_and_Directory_Entries_API#history">old FileSystem API</a>), "uuid-in-package" (used by Web Bundles), and "chrome" (browser internals).</li>
-          <li>Safari supports "http", "https", "file", "ftp", and "webkit-extension" (internal scheme for extensions).</li>
+          <li>Chrome supports "http", "https", "file", "ftp", "chrome-extension", "ws", "wss", "data", "filesystem" (<a href="/en-US/docs/Web/API/File_and_Directory_Entries_API#history">old FileSystem API</a>), "uuid-in-package" (used by Web Bundles), and "chrome" (browser internals).
+            <div class="notecard note">
+              <p><strong>Note:</strong>
+              Some API and manifest keys accept any validly formatted scheme, including:</p>
+              <ul>
+                <li><code>documentUrlPatterns</code> and <code>targetUrlPatterns</code> in the {{WebExtAPIRef("contextMenus")}} API.</li>
+                <li><code>url</code> in {{WebExtAPIRef("tabs.query")}}.</li>
+                <li><code>matches</code> in <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources"><code>web_accessible_resources</code></a> and <a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/externally_connectable"><code>externally_connectable</code></a> manifest keys.</li>
+              </ul>
+            </div>
+          </li>
+          <li>Safari supports "http", "https", "file", "ftp", and "webkit-extension" (internal scheme for extensions).
+          </li>
         </ul>
       </td>
     </tr>
