@@ -118,6 +118,17 @@ The _scheme_ component may take one of two forms:
   </tbody>
 </table>
 
+#### Accepted schemes compared with effective schemes
+
+The schemes listed above are the ones the match pattern parser accepts. Whether a scheme has any effect depends on the API consuming the pattern, as each API only ever encounters particular kinds of URL. For example, in Firefox:
+
+- Content scripts and stylesheets are injected into documents, so a match pattern can only match "http", "https", and "file". No document has a "ws", "wss", or "ftp" URL.
+- {{WebExtAPIRef("webRequest")}} only sees "http", "https", "ws", and "wss" requests.
+
+So, a scheme can be accepted in a match pattern without doing anything. For example, Firefox accepts "data" wherever match patterns are used, but it never matches. To inject a content script into a `data:`, `about:`, or `blob:` document, use [`match_origin_as_fallback`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#match_origin_as_fallback), which matches the document's origin rather than its URL.
+
+Where a scheme isn't accepted at all, the browser reports it: an unsupported scheme in [`host_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) raises a warning, and one passed to {{WebExtAPIRef("permissions.request()")}} throws an error.
+
 ### host
 
 The _host_ component may take one of these forms:
@@ -166,8 +177,8 @@ Neither the [URL fragment identifier](https://en.wikipedia.org/wiki/Fragment_ide
 
 The special value `<all_urls>` matches all URLs under the browser-supported schemas, where:
 
-- **Firefox** matches "http", "https", "ws", "wss", "ftp", "data", and "file". However, while `data:` URLs are matched, they aren't used for content script or stylesheet injection.
-- **Chrome** matches "http", "https", "ftp", "file", and "data".
+- **Firefox** matches "http", "https", "ws", "wss", "ftp", "data", and "file". As described in [Accepted schemes compared with effective schemes](#accepted_schemes_compared_with_effective_schemes), not all of these schemes have an effect.
+- **Chrome** matches "http", "https", "ftp", "file", "ws", and "wss".
 - **Safari** only matches "http" and "https".
 
 > [!NOTE]
