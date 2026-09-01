@@ -14,7 +14,7 @@ Any codebase past a certain level of complexity needs to have a system of tests 
 
 ## Prerequisites
 
-Before starting this module, You should really have learnt the fundamentals of [HTML](/en-US/docs/Learn_web_development/Core/Structuring_content), [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics), and [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting).
+Before starting this module, You should really have learned the fundamentals of [HTML](/en-US/docs/Learn_web_development/Core/Structuring_content), [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics), and [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting).
 
 ## Tutorials
 

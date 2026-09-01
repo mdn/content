@@ -54,24 +54,25 @@ All basic text controls share some common behaviors:
 - They can benefit from spell-checking (using the [`spellcheck`](/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck) attribute).
 
 > [!NOTE]
-> The {{htmlelement("input")}} element is unique amongst HTML elements because it can take many forms depending on its [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute value. It is used for creating most types of form widgets including single line text fields, time and date controls, controls without text input like checkboxes, radio buttons, and color pickers, and buttons.
+> The {{htmlelement("input")}} element is unique among HTML elements because it can take many forms depending on its [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute value. It is used for creating most types of form widgets including single line text fields, time and date controls, controls without text input like checkboxes, radio buttons, and color pickers, and buttons.
 
 ### Single line text fields
 
-A single line text field is created using an {{HTMLElement("input")}} element whose [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute value is set to `text`, or by omitting the [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute altogether (`text` is the default value). The value `text` for this attribute is also the fallback value if the value you specify for the [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute is unknown by the browser (for example if you specify `type="color"` and the browser doesn't support native color pickers).
-
-> [!NOTE]
-> You can find examples of all the single line text field types on GitHub at [single-line-text-fields.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/single-line-text-fields.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html)).
+A single line text field is created using an {{HTMLElement("input")}} element whose [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute value is set to [`text`](/en-US/docs/Web/HTML/Reference/Elements/input/text), or by omitting the [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute altogether (`text` is the default value). The value `text` for this attribute is also the fallback value if the value you specify for the [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute is unknown by the browser (for example if you specify `type="color"` and the browser doesn't support native color pickers).
 
 Here is a basic single line text field example:
 
-```html
+```html live-sample___single-line
 <input type="text" id="comment" name="comment" value="I'm a text field" />
 ```
 
+It renders like this:
+
+{{embedlivesample("single-line", "100%", "80")}}
+
 Single line text fields have only one true constraint: if you type text with line breaks, the browser removes those line breaks before sending the data to the server.
 
-The screenshot below shows a text input in default, focused, and disabled states. Most browsers indicate the focused state using a focus ring around the control and the disabled state using grey text or a faded/semi-opaque control.
+The screenshot below shows a text input in default, focused, and disabled states. Most browsers indicate the focused state using a focus ring around the control and the disabled state using gray text or a faded/semi-opaque control.
 
 ![Screenshot of the default, focused and disabled states text input in Chrome on macOS](disabled.png)
 
@@ -82,17 +83,19 @@ The screenshots used in this document were taken in the Chrome browser on macOS.
 
 #### Password field
 
-One of the original input types was the `password` text field type:
+One of the original input types was the [`password`](/en-US/docs/Web/HTML/Reference/Elements/input/password) text field type:
 
-```html
+```html live-sample___password
 <input type="password" id="pwd" name="pwd" />
 ```
 
-The following screenshot shows Password input field in which each input character is shown as a dot.
+This renders similarly to the basic single-line text field:
 
-![Password field in chrome 115 on macOS](password.png)
+{{embedlivesample("password", "100%", "80")}}
 
-The `password` value doesn't add any special constraints to the entered text, but it does obscure the value entered into the field (e.g., with dots or asterisks) so it can't be easily read by others.
+However, try typing into the field — each input character will be shown as a dot.
+
+The `password` value doesn't add any special constraints to the entered text, but it does obscure the value entered into the field so it can't be easily read by others.
 
 Keep in mind this is just a user interface feature; unless you submit your form securely, it will get sent in plain text, which is bad for security — a malicious party could intercept your data and steal passwords, credit card details, or whatever else you've submitted. The best way to protect users from this is to host any pages involving forms over a secure connection (i.e., located at an `https://` address), so the data is encrypted before it is sent.
 
@@ -100,7 +103,7 @@ Browsers recognize the security implications of sending form data over an insecu
 
 ### Hidden content
 
-Another original text control is the `hidden` input type. This is used to create a form control that is invisible to the user, but is still sent to the server along with the rest of the form data once submitted — for example you might want to submit a timestamp to the server stating when an order was placed. Because it is hidden, the user can not see nor intentionally edit the value, it will never receive focus, and a screen reader will not notice it either.
+Another original text control is the [`hidden`](/en-US/docs/Web/HTML/Reference/Elements/input/hidden) input type. This is used to create a form control that is invisible to the user, but is still sent to the server along with the rest of the form data once submitted — for example you might want to submit a timestamp to the server stating when an order was placed. Because it is hidden, the user can not see nor intentionally edit the value, it will never receive focus, and a screen reader will not notice it either.
 
 ```html
 <input type="hidden" id="timestamp" name="timestamp" value="1286705410" />
@@ -116,14 +119,11 @@ Checkable items are controls whose state you can change by clicking on them or t
 
 It's worth noting that these widgets do not behave exactly like other form widgets. For most form widgets, once the form is submitted all widgets that have a [`name`](/en-US/docs/Web/HTML/Reference/Elements/input#name) attribute are sent, even if no value has been filled out. In the case of checkable items, their values are sent only if they are checked. If they are not checked, nothing is sent, not even their name. If they are checked but have no value, the name is sent with a value of _on._
 
-> [!NOTE]
-> You can find the examples from this section on GitHub as [checkable-items.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/checkable-items.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html)).
-
-For maximum usability/accessibility, you are advised to surround each list of related items in a {{htmlelement("fieldset")}}, with a {{htmlelement("legend")}} providing an overall description of the list. Each individual pair of {{htmlelement("label")}}/{{htmlelement("input")}} elements should be contained in its own list item (or similar). The associated {{htmlelement('label')}} is generally placed immediately before or after the radio button or checkbox, with the instructions for the group of radio button or checkboxes generally being the content of the {{htmlelement("legend")}}. See the examples linked above for structural examples.
+For maximum usability/accessibility, you are advised to surround each list of related items in a {{htmlelement("fieldset")}}, with a {{htmlelement("legend")}} providing an overall description of the list. Each individual pair of {{htmlelement("label")}}/{{htmlelement("input")}} elements should be contained in its own list item (or similar). The associated {{htmlelement('label')}} is generally placed immediately before or after the radio button or checkbox, with the instructions for the group of radio button or checkboxes generally being the content of the {{htmlelement("legend")}}.
 
 ### Checkbox
 
-A checkbox is created using the {{HTMLElement("input")}} element with a [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute set to the value {{HTMLElement("input/checkbox", "checkbox")}}.
+A checkbox is created using the {{HTMLElement("input")}} element with a [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute set to the value [`checkbox`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox).
 
 ```html
 <input type="checkbox" id="questionOne" name="subscribe" value="yes" checked />
@@ -131,7 +131,7 @@ A checkbox is created using the {{HTMLElement("input")}} element with a [`type`]
 
 Related checkbox items should use the same [`name`](/en-US/docs/Web/HTML/Reference/Elements/input#name) attribute. Including the [`checked`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox#checked) attribute makes the checkbox checked automatically when the page loads. Clicking the checkbox or its associated label toggles the checkbox on and off.
 
-```html
+```html live-sample___checkbox
 <fieldset>
   <legend>Choose all the vegetables you like to eat</legend>
   <ul>
@@ -156,6 +156,10 @@ Related checkbox items should use the same [`name`](/en-US/docs/Web/HTML/Referen
 </fieldset>
 ```
 
+This example renders like so:
+
+{{embedlivesample("checkbox", "100%", "150")}}
+
 The following screenshot shows checkboxes in the default, focused, and disabled states. Checkboxes in the default and disabled states appear checked, whereas in the focused state, the checkbox is unchecked, with focus ring around it.
 
 ![Default, focused and disabled Checkboxes in chrome 115 on macOS](checkboxes.png)
@@ -167,7 +171,7 @@ Due to the on-off nature of checkboxes, the checkbox is considered a toggle butt
 
 ### Radio button
 
-A radio button is created using the {{HTMLElement("input")}} element with its [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute set to the value `radio`:
+A radio button is created using the {{HTMLElement("input")}} element with its [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute set to the value [`radio`](/en-US/docs/Web/HTML/Reference/Elements/input/radio):
 
 ```html
 <input type="radio" id="soup" name="meal" value="soup" checked />
@@ -175,7 +179,7 @@ A radio button is created using the {{HTMLElement("input")}} element with its [`
 
 Several radio buttons can be tied together. If they share the same value for their [`name`](/en-US/docs/Web/HTML/Reference/Elements/input#name) attribute, they will be considered to be in the same group of buttons. Only one button in a given group may be checked at a time; this means that when one of them is checked all the others automatically get unchecked. When the form is sent, only the value of the checked radio button is sent. If none of them are checked, the whole pool of radio buttons is considered to be in an unknown state and no value is sent with the form. Once one of the radio buttons in a same-named group of buttons is checked, it is not possible for the user to uncheck all the buttons without resetting the form.
 
-```html
+```html live-sample___radio
 <fieldset>
   <legend>What is your favorite meal?</legend>
   <ul>
@@ -195,6 +199,10 @@ Several radio buttons can be tied together. If they share the same value for the
 </fieldset>
 ```
 
+This example renders like so:
+
+{{embedlivesample("radio", "100%", "150")}}
+
 The following screenshot shows default and disabled radio buttons in the checked state, along with a focused radio button in the unchecked state.
 
 ![Default, focused and disabled Radio buttons in chrome 115 on macOS](radios.png)
@@ -203,11 +211,11 @@ The following screenshot shows default and disabled radio buttons in the checked
 
 The radio button isn't actually a button, despite its name; let's move on and look at actual buttons! There are three input types that produce buttons:
 
-- `submit`
+- [`submit`](/en-US/docs/Web/HTML/Reference/Elements/input/submit)
   - : Sends the form data to the server. For {{HTMLElement("button")}} elements, omitting the `type` attribute (or an invalid value of `type`) results in a submit button.
-- `reset`
+- [`reset`](/en-US/docs/Web/HTML/Reference/Elements/input/reset)
   - : Resets all form widgets to their default values.
-- `button`
+- [`button`](/en-US/docs/Web/HTML/Reference/Elements/input/button)
   - : Buttons that have no automatic effect but can be customized using JavaScript code.
 
 Then we also have the {{htmlelement("button")}} element itself. This can take a `type` attribute of value `submit`, `reset`, or `button` to mimic the behavior of the three `<input>` types mentioned above. The main difference between the two is that actual `<button>` elements are much easier to style.
@@ -232,38 +240,45 @@ Then we also have the {{htmlelement("button")}} element itself. This can take a 
 > [!NOTE]
 > The `image` input type also renders as a button. We'll cover that later too.
 
-> [!NOTE]
-> You can find the examples from this section on GitHub as [button-examples.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/button-examples.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/button-examples.html)).
+Below you can find examples of each button `<input>` type, along with the equivalent `<button>` type. Each pair has been wrapped in a {{htmlelement("div")}} element to separate it onto a new line.
 
-Below you can find examples of each button `<input>` type, along with the equivalent `<button>` type.
+- Submit button:
 
-### submit
+  ```html live-sample___buttons
+  <div>
+    <button type="submit">This is a <strong>submit button</strong></button>
 
-```html
-<button type="submit">This is a <strong>submit button</strong></button>
+    <input type="submit" value="This is a submit button" />
+  </div>
+  ```
 
-<input type="submit" value="This is a submit button" />
-```
+- Reset button:
 
-### reset
+  ```html live-sample___buttons
+  <div>
+    <button type="reset">This is a <strong>reset button</strong></button>
 
-```html
-<button type="reset">This is a <strong>reset button</strong></button>
+    <input type="reset" value="This is a reset button" />
+  </div>
+  ```
 
-<input type="reset" value="This is a reset button" />
-```
+- Anonymous button:
 
-### anonymous
+  ```html live-sample___buttons
+  <div>
+    <button type="button">This is an <strong>anonymous button</strong></button>
 
-```html
-<button type="button">This is an <strong>anonymous button</strong></button>
+    <input type="button" value="This is an anonymous button" />
+  </div>
+  ```
 
-<input type="button" value="This is an anonymous button" />
-```
+These examples render like so:
+
+{{embedlivesample("buttons", "100%", "150")}}
 
 Buttons always behave the same whether you use a {{HTMLElement("button")}} element or an {{HTMLElement("input")}} element. As you can see from the examples, however, {{HTMLElement("button")}} elements let you use HTML in their content, which is inserted between the opening and closing `<button>` tags. {{HTMLElement("input")}} elements on the other hand are {{glossary("void element", "void elements")}}; their displayed content is inserted inside the `value` attribute, and therefore only accepts plain text as content.
 
-The following screenshot shows a button in the default, focused, and disabled states. In the focused state, there is a focus ring around the button, and in the disabled state, the button is greyed out.
+The following screenshot shows a button in the default, focused, and disabled states. In the focused state, there is a focus ring around the button, and in the disabled state, the button is grayed out.
 
 ![Default, focus, and disabled button states in chrome 115 on macOS](buttons.png)
 
@@ -271,7 +286,7 @@ The following screenshot shows a button in the default, focused, and disabled st
 
 The **image button** control is rendered exactly like an {{HTMLElement("img")}} element, except that when the user clicks on it, it behaves like a submit button.
 
-An image button is created using an {{HTMLElement("input")}} element with its [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute set to the value `image`. This element supports exactly the same set of attributes as the {{HTMLElement("img")}} element, plus all the attributes supported by other form buttons.
+An image button is created using an {{HTMLElement("input")}} element with its [`type`](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute set to the value [`image`](/en-US/docs/Web/HTML/Reference/Elements/input/image). This element supports exactly the same set of attributes as the {{HTMLElement("img")}} element, plus all the attributes supported by other form buttons.
 
 ```html
 <input type="image" alt="Click me!" src="my-img.png" width="80" height="30" />

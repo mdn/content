@@ -36,7 +36,7 @@ Promise.allSettled(iterable)
 ### Parameters
 
 - `iterable`
-  - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) (such as an {{jsxref("Array")}}) of promises.
+  - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) (such as an {{jsxref("Array")}}) of promises. These values are [awaited](/en-US/docs/Web/JavaScript/Reference/Operators/await), so other [thenables](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) are also resolved, while non-thenables are returned as-is.
 
 ### Return value
 
@@ -79,6 +79,20 @@ Promise.allSettled([
 // ]
 ```
 
+You may also destructure the results to have one variable per settling outcome.
+
+```js
+const [status1, status2] = Promise.allSettled([
+  Promise.resolve(33),
+  new Promise((resolve) => setTimeout(() => resolve(66), 0)),
+]);
+
+// status1 = { status: 'fulfilled', value: 33 }
+// status2 = { status: 'fulfilled', value: 66 }
+```
+
+If you destructure the result, you must keep the result variables in the same order as the input promises; a mismatch may cause subtle bugs. The {{jsxref("Promise.allSettledKeyed()")}} method avoids this problem by associating each input and output with a key.
+
 ## Specifications
 
 {{Specifications}}
@@ -95,5 +109,6 @@ Promise.allSettled([
 - [Graceful asynchronous programming with promises](/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises)
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.all()")}}
+- {{jsxref("Promise.allSettledKeyed()")}}
 - {{jsxref("Promise.any()")}}
 - {{jsxref("Promise.race()")}}

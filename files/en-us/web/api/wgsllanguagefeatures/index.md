@@ -20,6 +20,13 @@ The `WGSLLanguageFeatures` object is accessed via the {{domxref("GPU.wgslLanguag
 
 The following WGSL language extensions are defined at [WGSL language extensions](https://gpuweb.github.io/gpuweb/wgsl/#language-extension) in the WGSL specification. Bear in mind that the exact set of features available will vary across implementations and physical devices, and may change over time.
 
+- `linear_indexing`
+  - : Provides the following built-in values to facilitate manual index calculation from 3D coordinates, improving WGSL code readability and eliminating common repetitive calculations in the process.
+    - `global_invocation_index`: The current invocation's linear position within the total compute shader grid. A `u32` input value calculated based on the `global_invocation_id`, `workgroup_size`, and `num_workgroups`.
+    - `workgroup_index`: The linear position of the current workgroup within the overall compute shader grid. A `u32` input value where all invocations within the same workgroup share the same index.
+
+    See [WGSL linear_indexing extension](https://developer.chrome.com/blog/new-in-webgpu-147-148#wgsl_linear_indexing_extension) for further details and an example.
+
 - `packed_4x8_integer_dot_product`
   - : Allows **DP4a** (Dot Product of 4 Elements and Accumulate) GPU instructions to be used via your WGSL code. These efficiently perform 8-bit integer dot products to accelerate computation, saving memory and network bandwidth and improving performance compared with the equivalent `f32` versions. They are commonly used in machine learning models in inferencing, within AI frameworks.
 
