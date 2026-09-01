@@ -319,4 +319,4 @@ The recommended approach to mitigating XSS with a CSP is a [strict CSP](/en-US/d
 
 ## See also
 
-- [Cross Site Scripting Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html) at [owasp.org](https://owasp.org/)
+- [Cross Site Scripting Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prekvention_Cheat_Sheet.html) at [owasp.org](https://owasp.org/)
