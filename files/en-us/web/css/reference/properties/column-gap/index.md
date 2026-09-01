@@ -61,7 +61,7 @@ column-gap: 20px;
 /* Keyword value */
 column-gap: normal;
 
-/* <length-percentage> values */
+/* <length-percentage> value */
 column-gap: 3px;
 column-gap: 2.5em;
 column-gap: 3%;
