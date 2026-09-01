@@ -179,7 +179,9 @@ An API that needs to support aborting can accept an `AbortSignal` object, and us
 A {{jsxref("Promise")}}-based API should respond to the abort signal by rejecting any unsettled promise with the `AbortSignal` abort {{domxref("AbortSignal.reason", "reason")}}.
 For example, consider the following `myCoolPromiseAPI`, which takes a signal and returns a promise.
 The promise is rejected immediately if the signal is already aborted, or if the abort event is detected.
-Otherwise it completes normally and then resolves the promise.
+Otherwise it completes normally after a delay and resolves the promise.
+
+Remove the `abort` listener when the operation completes normally, so a long-lived signal does not retain the listener and the values it references. Passing `{ once: true }` only removes the listener if the signal actually aborts.
 
 ```js
 function myCoolPromiseAPI(/* …, */ { signal }) {
@@ -187,20 +189,19 @@ function myCoolPromiseAPI(/* …, */ { signal }) {
     // If the signal is already aborted, immediately throw in order to reject the promise.
     signal.throwIfAborted();
 
-    // Perform the main purpose of the API
-    // Call resolve(result) when done.
+    // Simulate the main operation completing after a delay.
+    const timeoutId = setTimeout(() => {
+      signal.removeEventListener("abort", onAbort);
+      resolve("Operation completed");
+    }, 1000);
 
-    // Watch for 'abort' signals
-    // Passing `once: true` ensures the Promise can be garbage collected after abort is called
-    signal.addEventListener(
-      "abort",
-      () => {
-        // Stop the main operation
-        // Reject the promise with the abort reason.
-        reject(signal.reason);
-      },
-      { once: true },
-    );
+    function onAbort() {
+      // Stop the main operation and reject with the abort reason.
+      clearTimeout(timeoutId);
+      reject(signal.reason);
+    }
+
+    signal.addEventListener("abort", onAbort, { once: true });
   });
 }
 ```
