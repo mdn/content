@@ -91,7 +91,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **Updating transparency of a color with `alpha()`**: `layout.css.alpha-color-function.enabled`
 
-  The {{cssxref("alpha")}} CSS function is now supported. This allows the user to update the alpha value (or transparency) of a color. ([Firefox bug 2047437](https://bugzil.la/2047437)).
+  The {{cssxref("color_value/alpha", "alpha()")}} CSS function is now supported. It allows you to pass a color and get back the color with a different alpha (transparency) value, leaving other components of the color unchanged. ([Firefox bug 2047437](https://bugzil.la/2047437)).
 
 - **CSS Typed Object Model Level 1** (Nightly): `layout.css.typed-om.enabled`
 
