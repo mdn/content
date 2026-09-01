@@ -25,12 +25,12 @@ This example shows how you might iterate the stats object returned from `RTCRtpS
 const stats = await sender.getStats();
 let videoSourceStats = null;
 
-stats.forEach((report) => {
-  if (report.type === "media-source" && report.kind==="video") {
+for (const report of stats.values()) {
+  if (report.type === "media-source" && report.kind === "video") {
     videoSourceStats = report;
     break;
   }
-});
+}
 
 // Note, test is conditional in case the stats object
 // does not include video source stats

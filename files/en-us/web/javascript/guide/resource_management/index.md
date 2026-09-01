@@ -397,7 +397,7 @@ downloadButton.addEventListener("click", () => {
 });
 ```
 
-### Automatically cancelling in-progress requests
+### Automatically canceling in-progress requests
 
 In the following example, we [fetch](/en-US/docs/Web/API/Window/fetch) a list of resources concurrently using {{jsxref("Promise.all()")}}. `Promise.all()` fails and rejects the resulting promise as soon as one request failed; however, the other pending requests continue to run, despite their results being inaccessible to the program. To avoid these remaining requests needlessly consuming resources, we need to automatically cancel in-progress requests whenever `Promise.all()` settles. We implement cancellation with an {{domxref("AbortController")}}, and pass its {{domxref("AbortController/signal", "signal")}} to every `fetch()` call. If `Promise.all()` fulfills, then the function returns normally and the controller aborts, which is harmless because there's no pending request to cancel; if `Promise.all()` rejects and the function throws, then the controller aborts and cancels all pending requests.
 

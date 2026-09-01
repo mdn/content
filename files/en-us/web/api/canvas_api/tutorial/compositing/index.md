@@ -122,7 +122,7 @@ function draw() {
   // Clipping path
   ctx.beginPath();
   ctx.rect(-75, -75, 150, 150); // Outer rectangle
-  ctx.arc(0, 0, 60, 0, Math.PI * 2, true); // Hole anticlockwise
+  ctx.arc(0, 0, 60, 0, Math.PI * 2, true); // Hole counterclockwise
   ctx.clip();
 
   // Draw background

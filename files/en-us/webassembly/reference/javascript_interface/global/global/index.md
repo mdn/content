@@ -26,14 +26,25 @@ new WebAssembly.Global(descriptor, value)
         - `i64`: A 64-bit integer. (In JavaScript, this is represented as a {{jsxref("BigInt")}})
         - `f32`: A 32-bit floating point number.
         - `f64`: A 64-bit floating point number.
-        - [`funcref`](/en-US/docs/WebAssembly/Reference/Value_types/funcref)
+        - [`anyfunc`](/en-US/docs/WebAssembly/Reference/Value_types/funcref)
         - [`externref`](/en-US/docs/WebAssembly/Reference/Value_types/externref)
     - `mutable`
       - : A boolean value that determines whether the global is mutable or not. By default, this is `false`.
 
 - `value`
   - : The value the variable contains. This can be any value, as long as its type matches the variable's data type.
-    If no value is specified, a typed `0` value is used where the value of `descriptor.value` is one of `i32`, `i64`, `f32`, or `f64`, and `null` is used if `descriptor.value` is `externref` or `anyfunc`.
+    If no value is specified:
+    - a typed `0` value is used if `descriptor.value` is `i32`, `i64`, `f32`, or `f64`
+    - a reference to `undefined` is used if `descriptor.value` is `externref`
+    - `null` is used if `descriptor.value` is `anyfunc`
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if any of these conditions is met:
+    - `descriptor` is not an object.
+    - `descriptor.value` is missing or not a valid value type (such as `"v128"`).
+    - `value` is specified but cannot be converted to the WebAssembly type named by `descriptor.value`.
 
 ## Examples
 

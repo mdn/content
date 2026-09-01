@@ -101,7 +101,7 @@ The following properties and methods provide general information and functionali
 - {{domxref("WebGLRenderingContext.sampleCoverage()")}}
   - : Specifies multi-sample coverage parameters for anti-aliasing effects.
 - {{domxref("WebGLRenderingContext.stencilFunc()")}}
-  - : Sets the both front and back function and reference value for stencil testing.
+  - : Sets both the front and back function and reference value for stencil testing.
 - {{domxref("WebGLRenderingContext.stencilFuncSeparate()")}}
   - : Sets the front and/or back function and reference value for stencil testing.
 - {{domxref("WebGLRenderingContext.stencilMask()")}}

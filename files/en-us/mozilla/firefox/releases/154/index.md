@@ -1,8 +1,8 @@
 ---
-title: Firefox 154 release notes for developers (Stable)
-short-title: Firefox 154 (Stable)
+title: Firefox 154 release notes for developers
+short-title: Firefox 154
 slug: Mozilla/Firefox/Releases/154
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
@@ -36,6 +36,14 @@ No notable changes.
   These both return an [Iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_objects) that can be iterated to yield a number of elements from the original iterator as an array.
   The difference between the methods is that the `chunks()` helper splits the elements from the original iterator into consecutive array chunks, while the `windows()` helper returns an array that is a sliding window over the original iterator (each iteration yields an array that slides forward one element: dropping the first element in the previous iteration and fetching a new element from the original iterator).
   ([Firefox bug 2047997](https://bugzil.la/2047997)).
+
+### HTTP
+
+- The {{httpheader("No-Vary-Search")}} response header is now supported.
+  By default a browser will create a separate HTTP cache entry to store the response for each query string, even if the response does not change for some or all parameters, or depend on their order.
+  This header allows the server to specify whether ordering matters and which query parameters, if any, will change the content of responses.
+  The browser can then avoid having to cache or fetch duplicate resources.
+  ([Firefox bug 2038013](https://bugzil.la/2038013)).
 
 ### APIs
 

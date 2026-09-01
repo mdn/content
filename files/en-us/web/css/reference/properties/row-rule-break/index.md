@@ -477,7 +477,7 @@ const ul = document.getElementById("ul");
 const output = document.getElementById("o");
 
 gap.addEventListener("input", () => {
-  o.innerText = ul.style.columnGap = `${gap.value}px`;
+  output.innerText = ul.style.columnGap = `${gap.value}px`;
 });
 ```
 
