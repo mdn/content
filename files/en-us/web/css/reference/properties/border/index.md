@@ -7,7 +7,7 @@ browser-compat: css.properties.border
 sidebar: cssref
 ---
 
-The **`border`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets an element's border. It sets the values of {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, and {{Cssxref("border-color")}}.
+The **`border`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets an element's border. It sets the values of {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, and {{Cssxref("border-color")}}.
 
 {{InteractiveExample("CSS Demo: border")}}
 

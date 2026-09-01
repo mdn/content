@@ -77,7 +77,7 @@ Some of the things to consider when choosing a host:
 
 - How busy your site is likely to be and the cost of data and computing resources required to meet that demand.
 - Level of support for scaling horizontally (adding more machines) and vertically (upgrading to more powerful machines) and the costs of doing so.
-- Where the supplier has data centres, and hence where access is likely to be fastest.
+- Where the supplier has data centers, and hence where access is likely to be fastest.
 - The host's historical uptime and downtime performance.
 - Tools provided for managing the site — are they easy to use and are they secure (e.g., SFTP vs. FTP).
 - Inbuilt frameworks for monitoring your server.
@@ -169,7 +169,7 @@ export DJANGO_DEBUG=False
 
 A full checklist of settings you might want to change is provided in [Deployment checklist](https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/) (Django docs). You can also list a number of these using the terminal command below:
 
-```python
+```bash
 python3 manage.py check --deploy
 ```
 
@@ -431,7 +431,7 @@ PythonAnywhere provides an entirely web-based interface for uploading, editing, 
 Through the interface you can launch a bash console to a Ubuntu Linux environment in which you can create your application.
 In this demonstration we'll use the console to clone our local library GitHub repository, and create a Python environment in which we can run the web application.
 
-The free plan doesn't provides separate Postgres support.
+The free plan doesn't provide separate Postgres support.
 While we could use some other hosting service for our database, we'll just use the default SQLite database created by Django in the hosted Ubuntu environment (there is more than enough space for demonstrating the library functionality).
 
 Once the application is running, it can be configured for production by setting environment variables through the bash console.
@@ -778,10 +778,10 @@ Run the development web server as usual and then check the site still works as y
 python3 manage.py runserver
 ```
 
-Next, lets `push` the changes to GitHub.
+Next, let's `push` the changes to GitHub.
 In the terminal (after having navigated to our local repository), enter the following commands:
 
-```python
+```bash
 git checkout -b railway_changes
 git add -A
 git commit -m "Added files and changes required for deployment"
@@ -797,7 +797,7 @@ We should now be ready to start deploying LocalLibrary on Railway.
 To start using Railway you will first need to create an account:
 
 - Go to [railway.com](https://railway.com/) and click the **Login** link in the top toolbar.
-- Select GitHub in the popup to login using your GitHub credentials
+- Select GitHub in the popup to log in using your GitHub credentials
 - You may then need to go to your email and verify your account.
 - You'll then be logged in to the Railway.com dashboard: <https://railway.com/dashboard>.
 
@@ -932,7 +932,7 @@ What we can do is call this command locally on our Django project when it is con
 The Railway client makes this easy by providing a mechanism to run commands locally using the same environment variables as the production server, including the database connection string.
 
 First open a terminal or command prompt in a git clone of your locallibrary project.
-Then login to your browser account using the `login` or `login --browserless` command (follow any resulting prompts and instructions from the client or website to complete the login):
+Then log into your browser account using the `login` or `login --browserless` command (follow any resulting prompts and instructions from the client or website to complete the login):
 
 ```bash
 railway login

@@ -426,7 +426,7 @@ for (const button of buttons) {
 
 So there you go, your first step into the world of JavaScript.
 We've begun with just theory, to start getting you used to why you'd use JavaScript and what kind of things you can do with it.
-Along the way, you saw a few code examples and learned how JavaScript fits in with the rest of the code on your website, amongst other things.
+Along the way, you saw a few code examples and learned how JavaScript fits in with the rest of the code on your website, among other things.
 
 JavaScript may seem a bit daunting right now, but don't worry — in this course, we will take you through it in simple steps that will make sense going forward.
 In the next article, we will plunge straight into the practical, getting you to jump straight in and build your own JavaScript examples.

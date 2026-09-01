@@ -8,7 +8,7 @@ status:
 browser-compat: api.MerchantValidationEvent
 ---
 
-{{APIRef("Payment Request API")}}{{Deprecated_Header}}{{SecureContext_Header}}{{non-standard_header}}
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{non-standard_header}}
 
 The **`MerchantValidationEvent`** interface of the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) enables a merchant to verify themselves as allowed to use a particular payment handler.
 

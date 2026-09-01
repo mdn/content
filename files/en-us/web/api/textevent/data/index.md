@@ -8,7 +8,7 @@ status:
 browser-compat: api.TextEvent.data
 ---
 
-{{APIRef("UI Events")}}{{deprecated_header}}
+{{APIRef("UI Events")}}
 
 The **`data`** read-only property of the {{domxref("TextEvent")}} interface returns the last character added to the input element.
 
