@@ -1,5 +1,6 @@
 ---
-title: empty-cells
+title: "`empty-cells` CSS property"
+short-title: empty-cells
 slug: Web/CSS/Reference/Properties/empty-cells
 page-type: css-property
 browser-compat: css.properties.empty-cells
@@ -72,9 +73,9 @@ empty-cells: revert-layer;
 empty-cells: unset;
 ```
 
-The `empty-cells` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `show`
   - : Borders and backgrounds are drawn like in normal cells.

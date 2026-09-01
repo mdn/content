@@ -235,6 +235,8 @@ L: function F() {}
 
 In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) code, however, this will throw a {{jsxref("SyntaxError")}}:
 
+<!-- cSpell:ignore labelled -->
+
 ```js-nolint example-bad
 "use strict";
 L: function F() {}

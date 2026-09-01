@@ -9,7 +9,7 @@ status:
 browser-compat: api.VRPose.orientation
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 The **`orientation`** read-only property of the {{domxref("VRPose")}} interface returns the orientation of the sensor at the current timestamp, as a quaternion value.
 

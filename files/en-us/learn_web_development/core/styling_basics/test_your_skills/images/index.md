@@ -13,15 +13,17 @@ The aim of this skill test is to assess whether you understand how special eleme
 > [!NOTE]
 > To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
-## Task 1
+## Images and forms 1
 
-In this task, you have an image that is overflowing the box. We want the image to scale down to fit inside the box without any extra white space, but we do not mind if some part of the image is cropped. Update the CSS to achieve this.
+In this task, you have an image that is overflowing the box. We want you to scale down the image so that it fits inside the box without any extra white space; we don't mind if some part of the image is cropped. Update the CSS to achieve this.
 
-Your final result should look like the image below:
+The starting point of the task looks like this:
 
-![An image in a box](mdn-images-object-fit.png)
+{{EmbedLiveSample("images-forms1-start", "", "260px")}}
 
-```html live-sample___object-fit
+Here's the underlying code for this starting point:
+
+```html live-sample___images-forms1-start live-sample___images-forms1-finish
 <div class="box">
   <img
     alt="Hot air balloons flying in clear sky, and a crowd of people in the foreground"
@@ -29,7 +31,7 @@ Your final result should look like the image below:
 </div>
 ```
 
-```css live-sample___object-fit
+```css live-sample___images-forms1-start live-sample___images-forms1-finish
 .box {
   border: 5px solid black;
   width: 400px;
@@ -41,7 +43,9 @@ img {
 }
 ```
 
-{{EmbedLiveSample("object-fit", "", "400px")}}
+The updated styling should look like this:
+
+{{EmbedLiveSample("images-forms1-finish", "", "260px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -49,7 +53,7 @@ img {
 It is ok if some parts of the image are cropped.
 Using `object-fit: cover` is the best choice, you also need to set the width and height to `100%`:
 
-```css
+```css live-sample___images-forms1-finish
 img {
   height: 100%;
   width: 100%;
@@ -59,7 +63,7 @@ img {
 
 </details>
 
-## Task 2
+## Images and forms 2
 
 In this task, you have a basic form.
 
@@ -70,11 +74,13 @@ To complete the task:
 3. Give the form field and button `10px` of padding.
 4. Give the button a background of `rebeccapurple`, white foreground, no border and rounded corners of 5px.
 
-Your final result should look like the image below:
+The starting point of the task looks like this:
 
-![A single line form](mdn-images-form.png)
+{{EmbedLiveSample("images-forms2-start", "", "80px")}}
 
-```html live-sample___forms-1
+Here's the underlying code for this starting point:
+
+```html live-sample___images-forms2-start live-sample___images-forms2-finish
 <form action="" class="my-form" method="post">
   <div>
     <label for="fldSearch">Keywords</label>
@@ -84,7 +90,7 @@ Your final result should look like the image below:
 </form>
 ```
 
-```css live-sample___forms-1
+```css live-sample___images-forms2-start live-sample___images-forms2-finish
 body {
   font: 1.2em / 1.5 sans-serif;
 }
@@ -94,14 +100,16 @@ body {
 }
 ```
 
-{{EmbedLiveSample("forms-1")}}
+The updated styling should look like this:
+
+{{EmbedLiveSample("images-forms2-finish", "", "80px")}}
 
 <details>
 <summary>Click here to show the solution</summary>
 
 Here's an example solution for the task:
 
-```css
+```css live-sample___images-forms2-finish
 .my-form {
   border: 2px solid black;
   padding: 5px;
@@ -124,15 +132,21 @@ Here's an example solution for the task:
 
 </details>
 
-## Task 3
+## Images and forms 3
 
-Our second form styling assessment is fairly free-form, and you have a lot of flexibility over what you end up doing here. Your CSS needs to fulfill the requirements described below.
+The solution for this assessment is fairly free-form, and you have a lot of flexibility over what you can do here. So we're not providing an example rendering.
 
-To complete the task:
+Your CSS needs to include the following:
 
-1. Add some kind of lightweight "reset" to make fonts, padding, margin, and sizing more consistent to begin with, as described in [Normalizing form behavior](/en-US/docs/Learn_web_development/Core/Styling_basics/Images_media_forms#normalizing_form_behavior).
-2. On top of that, add in some nice, consistent styling for the inputs and button.
-3. Use some kind of layout technique to make the inputs and labels line up neatly.
+1. A lightweight "reset" to make fonts, padding, margin, and sizing more consistent to begin with, as described in [Normalizing form behavior](/en-US/docs/Learn_web_development/Core/Styling_basics/Images_media_forms#normalizing_form_behavior).
+2. Some nice, consistent styling for the inputs and button.
+3. A layout technique to make the inputs and labels line up neatly.
+
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("forms-2", "100%", 250) }}
+
+Here's the underlying code for this starting point:
 
 ```html hidden live-sample___forms-2
 <form>
@@ -189,7 +203,7 @@ body {
 /* Add your code here */
 ```
 
-{{ EmbedLiveSample("forms-2", "100%", 250) }}
+We've not provided finished content for this task, as many valid solutions are possible.
 
 <details>
 <summary>Click here to show the solution</summary>

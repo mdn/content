@@ -1,5 +1,6 @@
 ---
-title: line-height-step
+title: "`line-height-step` CSS property"
+short-title: line-height-step
 slug: Web/CSS/Reference/Properties/line-height-step
 page-type: css-property
 status:
@@ -26,11 +27,9 @@ line-height-step: revert-layer;
 line-height-step: unset;
 ```
 
-The `line-height-step` property is specified as any one of the following:
-
-- a `<length>`.
-
 ### Values
+
+This property is specified as the following value:
 
 - `<length>`
   - : The specified {{cssxref("&lt;length&gt;")}} is used in the calculation of the line box height step.

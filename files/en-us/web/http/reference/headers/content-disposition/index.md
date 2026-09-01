@@ -57,7 +57,7 @@ Browsers may apply transformations to conform to the file system requirements, s
 
 A `multipart/form-data` body requires a `Content-Disposition` header to provide information about each subpart of the form (e.g., for every form field and any files that are part of field data).
 The first directive is always `form-data`, and the header must also include a `name` parameter to identify the relevant field. Additional directives are case-insensitive.
-The value of any arguments (after the `=` sign) may be a either token or a quoted string.
+The value of any arguments (after the `=` sign) may be either a token or a quoted string.
 Quoted strings are recommended, and many server implementations require the values to be quoted.
 This is because a token must be US-ASCII for MIME type headers like `Content-Disposition`, and US-ASCII does not allow some characters that are common in filenames and other values.
 Multiple parameters are separated by a semicolon (`;`).
@@ -75,7 +75,7 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
     A `name` with a value of `'_charset_'` indicates that the part is not an HTML field, but the default charset to use for parts without explicit charset information.
 
 - `filename`
-  - : Is followed by a string containing the original name of the file transmitted. This parameter provides mostly indicative information. The suggestions in [RFC2183](https://www.rfc-editor.org/rfc/rfc2183#section-2.3) apply:
+  - : Is followed by a string containing the original name of the file transmitted. This parameter provides mostly indicative information. The suggestions in [RFC2183](https://www.rfc-editor.org/info/rfc2183/#section-2.3) apply:
     - Prefer ASCII characters if possible (the client may percent-encode it, as long as the server implementation decodes it).
     - Any path information should be stripped, such as by replacing `/` with `_`.
     - When writing to disk, it should not overwrite an existing file.

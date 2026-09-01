@@ -15,7 +15,7 @@ Like any other front matter key, the `page-type` key is specified in the YAML at
 title: 100 Continue
 slug: Web/HTTP/Reference/Status/100
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.100
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#status.100
 sidebar: http
 ---
 ```
@@ -44,7 +44,7 @@ This section lists `page-type` values for pages under [Learn](/en-US/docs/Learn_
 - `learn-topic`: an overview of a topic, that is, a collection of modules like [_CSS_](/en-US/docs/Learn_web_development/Core/Styling_basics).
 - `learn-module` an overview of a module, that is, an ordered collection of guides, like [_Structuring content with HTML_](/en-US/docs/Learn_web_development/Core/Structuring_content).
 - `learn-module-chapter` a guide that is part of a module, like [_Mobile accessibility_](/en-US/docs/Learn_web_development/Core/Accessibility/Mobile).
-- `learn-module-assessment` a special guide with an activity allowing to assess the comprehension of a module or a part of it, like [_Test your skills: Forms and buttons_](/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons).
+- `learn-module-assessment` a special guide with an activity allowing you to assess the comprehension of a module or a part of it, like [_Test your skills: Forms and buttons_](/en-US/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Forms_and_buttons).
 - `learn-faq`: the answer to a specific question about web development, like [_What is a domain name?_](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name).
 
 ### Accessibility page types
@@ -157,13 +157,13 @@ This section lists `page-type` values for pages under [WebAssembly/](/en-US/docs
 - `webassembly-instance-property`: an instance property, like [`WebAssembly.Instance.exports`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Instance/exports).
 - `webassembly-instance-method`: an instance method, like [`WebAssembly.Exception.getArg()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg).
 - `webassembly-static-method`: a static method, like [`WebAssembly.Module.exports()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module/exports_static).
-- `webassembly-instruction`: an instruction, or a set of instructions, like [`wrap`](/en-US/docs/WebAssembly/Reference/Numeric/wrap).
+- `webassembly-instruction`: an instruction, or a set of instructions, like [`wrap`](/en-US/docs/WebAssembly/Reference/Numeric/wrap_i64).
 
 ### WebDriver page types
 
 This section lists `page-type` values for pages under [Web/WebDriver](/en-US/docs/Web/WebDriver). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `webdriver-command`: a webdriver command, like [`CloseWindow`](/en-US/docs/Web/WebDriver/Reference/Commands/CloseWindow).
+- `webdriver-command`: a webdriver command, like [`CloseWindow`](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/CloseWindow).
 - `webdriver-capability`: a webdriver capability, like [`acceptInsecureCerts`](/en-US/docs/Web/WebDriver/Reference/Capabilities/acceptInsecureCerts).
 - `webdriver-error`: a webdriver error, like [Insecure certificate](/en-US/docs/Web/WebDriver/Reference/Errors/InsecureCertificate).
 
@@ -200,7 +200,7 @@ This section lists `page-type` values for pages under [Web/XSLT](/en-US/docs/Web
 
 This section lists `page-type` values for pages under [Web/EXSLT](/en-US/docs/Web/XML/EXSLT). Every page in that part of the tree must have a `page-type`, and its value must be one of those listed below or one of the [generic page type](#generic_page_types) values.
 
-- `xslt-function`: a function of EXSLT, like [`exsl:node-set()`](/en-US/docs/Web/XML/EXSLT/Reference/exsl/node-set).
+- `exslt-function`: a function of EXSLT, like [`exsl:node-set()`](/en-US/docs/Web/XML/EXSLT/Reference/exsl/node-set).
 
 ### Firefox page types
 

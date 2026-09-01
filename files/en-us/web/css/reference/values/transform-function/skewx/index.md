@@ -1,5 +1,6 @@
 ---
-title: skewX()
+title: "`skewX()` CSS function"
+short-title: skewX()
 slug: Web/CSS/Reference/Values/transform-function/skewX
 page-type: css-function
 browser-compat: css.types.transform-function.skewX

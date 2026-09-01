@@ -24,7 +24,7 @@ A stacking context is formed, anywhere in the document, by any element in the fo
 - Element with a {{cssxref("position")}} value `fixed` or `sticky`.
 - Element with a {{cssxref("container-type")}} value `size` or `inline-size` set (See [container queries](/en-US/docs/Web/CSS/Guides/Containment/Container_queries)).
 - Element that is a [flex item](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) with a {{cssxref("z-index")}} value other than `auto`.
-- Element that is a [grid item]() with {{cssxref("z-index")}} value other than `auto`.
+- Element that is a [grid item](<>) with {{cssxref("z-index")}} value other than `auto`.
 - Element with an {{cssxref("opacity")}} value less than `1`.
 - Element with a {{cssxref("mix-blend-mode")}} value other than `normal`.
 - Element with any of the following properties with a value other than `none`:
@@ -104,7 +104,7 @@ To demonstrate how the stacking order of each element participates in the stacki
 </article>
 ```
 
-Every container element has an {{cssxref("opacity")}} of less than `1` and a {{cssxref("position")}} of either `relative` or `absolute` set. These property-value pairs create a stacking context when the element has `z-index` value other than `auto`.
+Every container element has an {{cssxref("opacity")}} of less than `1` (which creates a stacking context), and a {{cssxref("position")}} of either `relative` or `absolute` (which creates a stacking context when the element also has a `z-index` value other than `auto`).
 
 ```css hidden
 * {
@@ -202,7 +202,6 @@ Root
 └── ARTICLE #3
   │
   ├── SECTION #4
-  ├────  ARTICLE #3 content
   ├── SECTION #5
   └── SECTION #6
 ```

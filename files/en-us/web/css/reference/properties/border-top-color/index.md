@@ -1,5 +1,6 @@
 ---
-title: border-top-color
+title: "`border-top-color` CSS property"
+short-title: border-top-color
 slug: Web/CSS/Reference/Properties/border-top-color
 page-type: css-property
 browser-compat: css.properties.border-top-color
@@ -68,9 +69,9 @@ border-top-color: revert-layer;
 border-top-color: unset;
 ```
 
-The `border-top-color` property is specified as a single value.
-
 ### Values
+
+This property is specified as one `<color>` value:
 
 - {{cssxref("&lt;color&gt;")}}
   - : The color of the top border.

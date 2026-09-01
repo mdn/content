@@ -1,5 +1,6 @@
 ---
-title: :-moz-broken
+title: "`:-moz-broken` CSS pseudo-class"
+short-title: :-moz-broken
 slug: Web/CSS/Reference/Selectors/:-moz-broken
 page-type: css-pseudo-class
 status:
@@ -9,7 +10,7 @@ browser-compat: css.selectors.-moz-broken
 sidebar: cssref
 ---
 
-{{Non-standard_header}}{{deprecated_header}}
+{{Non-standard_header}}
 
 The **`:-moz-broken`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) is a [Mozilla extension](/en-US/docs/Web/CSS/Reference/Mozilla_extensions) that matches elements representing broken image links.
 

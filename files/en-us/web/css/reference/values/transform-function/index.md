@@ -1,5 +1,6 @@
 ---
-title: <transform-function>
+title: "`<transform-function>` CSS type"
+short-title: <transform-function>
 slug: Web/CSS/Reference/Values/transform-function
 page-type: css-type
 browser-compat: css.types.transform-function

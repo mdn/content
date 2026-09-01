@@ -1,5 +1,6 @@
 ---
-title: "<time>: The (Date) Time element"
+title: "`<time>` HTML time (date) element"
+short-title: <time>
 slug: Web/HTML/Reference/Elements/time
 page-type: html-element
 browser-compat: html.elements.time
@@ -273,4 +274,4 @@ The _datetime value_ (the machine-readable value of the datetime) is the value o
 
 ## See also
 
-- The {{HTMLElement("data")}} element, allowing to signal other kind of values.
+- The {{HTMLElement("data")}} element, allowing you to signal other kinds of values.

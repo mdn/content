@@ -1,12 +1,13 @@
 ---
-title: grid-template
+title: "`grid-template` CSS property"
+short-title: grid-template
 slug: Web/CSS/Reference/Properties/grid-template
 page-type: css-shorthand-property
 browser-compat: css.properties.grid-template
 sidebar: cssref
 ---
 
-The **`grid-template`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) for defining {{glossary("grid column", "grid columns")}}, {{glossary("grid_row", "grid rows")}}, and {{glossary("grid areas", "grid areas")}}.
+The **`grid-template`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property specifies the {{glossary("grid column", "grid columns")}}, {{glossary("grid_row", "grid rows")}}, and {{glossary("grid areas", "grid areas")}}.
 
 {{InteractiveExample("CSS Demo: grid-template")}}
 

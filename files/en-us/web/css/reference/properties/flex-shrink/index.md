@@ -1,5 +1,6 @@
 ---
-title: flex-shrink
+title: "`flex-shrink` CSS property"
+short-title: flex-shrink
 slug: Web/CSS/Reference/Properties/flex-shrink
 page-type: css-property
 browser-compat: css.properties.flex-shrink
@@ -66,6 +67,13 @@ flex-shrink: revert-layer;
 flex-shrink: unset;
 ```
 
+## Values
+
+This property is specified as the following value:
+
+- `<number>`
+  - : See {{cssxref("&lt;number&gt;")}}. Negative values are invalid. Defaults to 1.
+
 ## Description
 
 The `flex-shrink` property specifies the flex shrink factor, which determines how much the flex item will shrink relative to the rest of the flex items in the flex container when negative free space is distributed.
@@ -75,13 +83,6 @@ This property deals with situations where the browser calculates the flex-basis 
 The `flex-grow` property deals with distributing available positive free space proportional to each item's flex grow factor, with the value of the `flex-grow` property as the only consideration. The `flex-shrink` property manages removing negative free space to make boxes fit into their container without overflowing. Removing space is a bit more complicated than adding space. The flex shrink factor is multiplied by the flex base size; this distributes negative space in proportion to how much the item can shrink. This prevents smaller items from shrinking to `0px` before a larger item is noticeably reduced.
 
 Generally, `flex-shrink` is used alongside the {{cssxref("flex-grow")}} and {{cssxref("flex-basis")}} properties. Within the `flex` shorthand, the shrink factor is always the second `<number>`. If the shorthand only includes one number value, that value is assumed to be the `flex-grow` value.
-
-## Values
-
-The `flex-shrink` property is specified as a single `<number>`.
-
-- `<number>`
-  - : See {{cssxref("&lt;number&gt;")}}. Negative values are invalid. Defaults to 1.
 
 ## Formal definition
 
@@ -169,7 +170,7 @@ div {
 
 {{EmbedLiveSample('Setting_flex_item_shrink_factor', 500, 100)}}
 
-The flex items don't overflow their container because they are able to shrink: the `500px` of negative free space is distributed among the five items based on their `flex-shrink` values. The first three items have `flex-shrink: 1` set. D has `flex-shrink: 1.5` and E has `flex-shrink: 2` set. The final width of D and E is less than the others, with E smaller than D.
+The flex items don't overflow their container because they can shrink: the `500px` of negative free space is distributed among the five items based on their `flex-shrink` values. The total of all the shrink values for the five items is `1 + 1 + 1 + 1.5 + 2` = `6.5`. As a result, the width of items with `flex-shrink: 1` is reduced by `1/6.5 * 500px` = `76.92px`, the width of items with `flex-shrink: 1.5` is reduced by `1.5/6.5 * 500px` = `115.38px`, and the width of items with `flex-shrink: 2` is reduced by `2/6.5 * 500px` = `153.85px`.
 
 ## Specifications
 

@@ -9,7 +9,7 @@ A **void element** is an {{Glossary("element")}} in HTML that **cannot** have an
 
 In HTML, a void element must not have an end tag. For example, `<input type="text"></input>` is invalid HTML. In contrast, SVG or MathML elements that cannot have any child nodes may use an end tag instead of XML self-closing-tag syntax in their start tag.
 
-The [HTML](https://html.spec.whatwg.org/multipage/), [SVG](https://svgwg.org/svg2-draft/), and [MathML](https://w3c.github.io/mathml/spec.html) specifications define very precisely what each element can contain. So, some combinations of tags have no semantic meaning.
+The [HTML](https://html.spec.whatwg.org/multipage/), [SVG](https://w3c.github.io/svgwg/svg2-draft/), and [MathML](https://w3c.github.io/mathml/spec.html) specifications define very precisely what each element can contain. So, some combinations of tags have no semantic meaning.
 
 Although there is no way to mark up a void element as having any children, child nodes can be added programmatically to the element in the DOM using JavaScript. But that is not a good practice, as the outcome will not be reliable.
 
@@ -40,7 +40,7 @@ However, some code formatters add the trailing slash character to the start tags
 
 Self-closing tags are required in void elements in {{Glossary("XML")}}, {{Glossary("XHTML")}}, and {{Glossary("SVG")}} (e.g., `<circle cx="50" cy="50" r="50" />`).
 
-In SVG and MathML, elements that cannot have any child nodes are allowed to be marked as self-closing. In such cases, if an element's start tag is marked as self-closing, the element must not have an end tag.
+In SVG and MathML, an element without any child nodes can be marked as self-closing by adding a trailing slash to its start tag. If an element's start tag is marked as self-closing, the element must not have an end tag.
 
 > [!NOTE]
 > If a trailing `/` (slash) character in a start tag is directly preceded by an unquoted attribute value — with no space between — the slash becomes a part of the attribute value rather than being discarded by the parser. For example, the markup `<img src=http://www.example.com/logo.svg/>` results in the `src` attribute having the value `http://www.example.com/logo.svg/` — which makes the URL wrong.

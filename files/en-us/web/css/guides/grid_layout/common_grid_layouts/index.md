@@ -608,6 +608,6 @@ CSS grid layout provides so many possibilities. The best way to learn to use gri
 
 - [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout)
 - [CSS Layout: Grids](/en-US/docs/Learn_web_development/Core/CSS_layout/Grids)
-- [CSS grid layout guide](https://css-tricks.com/css-grid-layout-guide/) on CSS-Tricks (2021)
+- [CSS grid layout guide](https://css-tricks.com/complete-guide-css-grid-layout/) on CSS-Tricks (2021)
 - [Grid by example](https://gridbyexample.com/)
 - [CSS grid website layout examples](https://www.quackit.com/css/grid/examples/css_grid_website_layout_examples.cfm) on quackit.com

@@ -1,5 +1,6 @@
 ---
-title: baseline-source
+title: "`baseline-source` CSS property"
+short-title: baseline-source
 slug: Web/CSS/Reference/Properties/baseline-source
 page-type: css-property
 browser-compat: css.properties.baseline-source
@@ -86,7 +87,7 @@ body {
 }
 
 .box {
-  border: 2px solid #888 888;
+  border: 2px solid #888888;
   width: 50px;
 }
 

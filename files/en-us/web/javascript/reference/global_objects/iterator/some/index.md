@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Iterator.some
 sidebar: jsref
 ---
 
-The **`some()`** method of {{jsxref("Iterator")}} instances is similar to {{jsxref("Array.prototype.some()")}}: it tests whether at least one element produced by the iterator passes the test implemented by the provided function. It returns a boolean value.
+The **`some()`** method of {{jsxref("Iterator")}} instances is similar to {{jsxref("Array.prototype.some()")}}: it returns `true` if it finds an element that satisfies the provided testing function. Otherwise, if the iterator is exhausted without finding such an element, it returns `false`.
 
 ## Syntax
 
@@ -34,6 +34,8 @@ some(callbackFn)
 
 The main advantage of iterator helpers over array methods is that they are lazy, meaning that they only produce the next value when requested. This avoids unnecessary computation and also allows them to be used with infinite iterators. With infinite iterators, `some()` returns `true` as soon as the first truthy value is found. If the `callbackFn` always returns a falsy value, the method never returns.
 
+Calling `some()` always closes the underlying iterator, even if the method early-returns. The iterator is never left in a half-way state.
+
 ## Examples
 
 ### Using some()
@@ -56,7 +58,7 @@ console.log(fibonacci().take(10).some(isNegative)); // false
 console.log(fibonacci().some(isNegative)); // Never completes
 ```
 
-Calling `some()` always closes the underlying iterator, even if the method early-returns. The iterator is never left in a half-way state.
+The method closes the iterator after returning.
 
 ```js
 const seq = fibonacci();

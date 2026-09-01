@@ -1,5 +1,6 @@
 ---
-title: height
+title: "`height` CSS property"
+short-title: height
 slug: Web/CSS/Reference/Properties/height
 page-type: css-property
 browser-compat: css.properties.height
@@ -176,12 +177,12 @@ div {
 
 ```css hidden
 @supports not (height: stretch) {
-  .parent {
-    display: none !important;
-  }
-
-  body::after {
+  body::before {
     content: "Your browser doesn't support the `stretch` value yet.";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
   }
 }
 ```

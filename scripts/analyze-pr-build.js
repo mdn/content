@@ -19,20 +19,25 @@ const hiddenCommentRegex =
   /<!-- build_hash: ([a-f0-9]+) date: ([\d:.\-TZ]+) -->/;
 
 /**
+ * @import { Doc } from "@mdn/rari"
+ */
+
+/**
  * Main function to analyze a PR build directory and post (or print) a comment.
  * @param {string} buildDirectory - Path to the build directory.
  * @param {object} config - Configuration object.
  */
 async function analyzePR(buildDirectory, config) {
   const combinedComments = [];
+  const docs = await getBuiltDocs(buildDirectory);
 
   if (config.prefix) {
-    const deploymentComment = await postAboutDeployment(buildDirectory, config);
+    const deploymentComment = postAboutDeployment(docs, config);
     if (deploymentComment) combinedComments.push(deploymentComment);
   }
 
   if (config.analyze_flaws) {
-    const flawsComment = await postAboutFlaws(buildDirectory, config);
+    const flawsComment = postAboutFlaws(docs, config);
     if (flawsComment) combinedComments.push(flawsComment);
   }
 
@@ -47,11 +52,7 @@ async function analyzePR(buildDirectory, config) {
         console.error(`Error reading diff file: ${err}`);
       }
     }
-    const dangerousComment = await postAboutDangerousContent(
-      buildDirectory,
-      patch,
-      config,
-    );
+    const dangerousComment = postAboutDangerousContent(docs, patch, config);
     if (dangerousComment) combinedComments.push(dangerousComment);
   }
 
@@ -138,12 +139,29 @@ function truncateComment(comment) {
 }
 
 /**
+ * Formats a section with a heading, collapsed by default unless expanded is set.
+ * @param {object} options - Formatting options.
+ * @param {string} options.title - The section title (e.g., "Preview URLs", "Flaws").
+ * @param {number} options.count - The count to display in parentheses.
+ * @param {string} [options.countLabel] - Optional label after count (e.g., "pages").
+ * @param {string} options.body - The section content.
+ * @param {boolean} [options.expanded] - If true, show expanded (no details wrapper).
+ */
+function formatSection({ title, count, countLabel, body, expanded }) {
+  const countText = countLabel ? `${count} ${countLabel}` : count;
+  const header = `<b>${title}</b> (${countText})`;
+  if (expanded) {
+    return `${header}\n\n${body}`;
+  }
+  return `<details><summary>${header}</summary>\n\n${body}\n\n</details>`;
+}
+
+/**
  * Constructs a comment about the deployment with preview URLs.
- * @param {string} buildDirectory - Path to the build directory.
+ * @param {Doc[]} docs - Array of built document objects.
  * @param {object} config - Configuration object.
  */
-async function postAboutDeployment(buildDirectory, config) {
-  const docs = await getBuiltDocs(buildDirectory);
+function postAboutDeployment(docs, config) {
   let links = [];
   for (const doc of docs) {
     if (doc.mdn_url) {
@@ -155,13 +173,13 @@ async function postAboutDeployment(buildDirectory, config) {
   links.sort();
 
   if (links.length > 0) {
-    if (links.length > 5) {
-      const heading = `<details><summary><b>Preview URLs</b> (${links.length} pages)</summary>\n\n`;
-      return heading + links.join("\n") + "\n\n</details>";
-    } else {
-      const heading = `<b>Preview URLs</b>\n\n`;
-      return heading + links.join("\n");
-    }
+    return formatSection({
+      title: "Preview URLs",
+      count: links.length,
+      countLabel: links.length == 1 ? "page" : "pages",
+      body: links.join("\n"),
+      expanded: links.length <= 5,
+    });
   }
   return "*seems not a single file was built!* 🙀";
 }
@@ -178,13 +196,12 @@ function mdnUrlToDevUrl(prefix, host, mdnUrl) {
 
 /**
  * Constructs a comment reporting any dangerous external URLs.
- * @param {string} buildDirectory - Path to the build directory.
+ * @param {Doc[]} docs - Array of built document objects.
  * @param {Array} patch - Array of patch objects (from parse-diff).
  * @param {object} config - Configuration object.
  */
-async function postAboutDangerousContent(buildDirectory, patch, config) {
+function postAboutDangerousContent(docs, patch, config) {
   const OK_URL_PREFIXES = ["https://github.com/mdn/"];
-  const docs = await getBuiltDocs(buildDirectory);
   const comments = [];
   let totalUrls = 0;
 
@@ -286,11 +303,10 @@ async function postAboutDangerousContent(buildDirectory, patch, config) {
 
 /**
  * Constructs a comment reporting document flaws.
- * @param {string} buildDirectory - Path to the build directory.
+ * @param {Doc[]} docs  - Array of built document objects.
  * @param {object} config - Configuration object.
  */
-async function postAboutFlaws(buildDirectory, config) {
-  const docs = await getBuiltDocs(buildDirectory);
+function postAboutFlaws(docs, config) {
   const comments = [];
   const MAX_FLAW_EXPLANATION = 5;
   let docsWithZeroFlaws = 0;
@@ -359,17 +375,30 @@ async function postAboutFlaws(buildDirectory, config) {
       lines.push(comment);
       perDocComments.push(lines.join("\n"));
     }
-    let heading = `\n<details><summary><b>Flaws</b> (${totalFlaws})</summary>\n\n`;
-    if (docsWithZeroFlaws) {
-      heading += `Note! *${docsWithZeroFlaws} document${docsWithZeroFlaws === 1 ? "" : "s"} with no flaws that don't need to be listed. 🎉*\n\n`;
-    }
-    return heading + perDocComments.join("\n\n---\n\n") + "\n\n</details>";
+    const zeroFlawsNote = docsWithZeroFlaws
+      ? `Note! *${docsWithZeroFlaws} document${docsWithZeroFlaws === 1 ? "" : "s"} with no flaws that don't need to be listed. 🎉*\n\n`
+      : "";
+
+    const reportIssueNote =
+      "*Found an unexpected or unresolvable flaw? [Please report it here](https://github.com/mdn/rari/issues/new?template=bug.yml).*\n\n";
+
+    return (
+      "\n" +
+      formatSection({
+        title: "Flaws",
+        count: totalFlaws,
+        body:
+          zeroFlawsNote + reportIssueNote + perDocComments.join("\n\n---\n\n"),
+        expanded: docs.length <= 5 || totalFlaws <= 5,
+      })
+    );
   }
 }
 
 /**
  * Recursively finds and returns the parsed JSON document objects from all index.json files.
  * @param {string} buildDirectory - Path to the build directory.
+ * @returns {Doc[]}
  */
 async function getBuiltDocs(buildDirectory) {
   const docs = [];

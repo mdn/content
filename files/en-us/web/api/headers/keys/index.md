@@ -9,7 +9,7 @@ browser-compat: api.Headers.keys
 {{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
 The **`Headers.keys()`** method returns an
-{{jsxref("Iteration_protocols",'iterator')}} allowing to go through all keys contained
+{{jsxref("Iteration_protocols",'iterator')}} allowing you to go through all keys contained
 in this object. The keys are {{jsxref("String")}} objects.
 
 ## Syntax
@@ -46,6 +46,10 @@ The result is:
 content-type
 vary
 ```
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -18,7 +18,7 @@ For example, DTLS represents version 1.2 as `'FEFD'` which numerically is `{254,
 
 ## Value
 
-A string that indicates the negotiated DTS transport.
+A string that indicates the negotiated DTLS transport.
 
 ## Specifications
 

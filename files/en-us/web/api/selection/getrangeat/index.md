@@ -37,7 +37,7 @@ The specified {{domxref("Range")}} object.
 ```js
 let ranges = [];
 
-sel = window.getSelection();
+const sel = window.getSelection();
 
 for (let i = 0; i < sel.rangeCount; i++) {
   ranges[i] = sel.getRangeAt(i);

@@ -30,15 +30,6 @@ A {{domxref("WindowControlsOverlayGeometryChangeEvent")}}. Inherits from {{domxr
 
 {{InheritanceDiagram("WindowControlsOverlayGeometryChangeEvent")}}
 
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- `titlebarAreaRect`
-  - : A {{domxref("DOMRect")}} representing the position and size of the title bar area within the app's content.
-- `visible`
-  - : A {{Glossary("Boolean")}} that indicates whether the window controls overlay is visible or not.
-
 ## Examples
 
 Using `addEventListener()`:

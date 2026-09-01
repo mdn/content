@@ -2,12 +2,10 @@
 title: CloseWatcher
 slug: Web/API/CloseWatcher
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat: api.CloseWatcher
 ---
 
-{{APIRef("HTML DOM")}} {{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
 The `CloseWatcher` interface allows a custom UI component with open and close semantics to respond to device-specific close actions in the same way as a built-in component.
 
@@ -17,25 +15,25 @@ The `CloseWatcher` interface inherits from {{domxref("EventTarget")}}.
 
 ## Constructor
 
-- {{domxref("CloseWatcher.CloseWatcher", "CloseWatcher()")}} {{Experimental_Inline}}
+- {{domxref("CloseWatcher.CloseWatcher", "CloseWatcher()")}}
   - : Creates a new `CloseWatcher` instance.
 
 ## Instance methods
 
 _This interface also inherits methods from its parent, {{domxref("EventTarget")}}._
 
-- {{domxref("CloseWatcher.requestClose()")}} {{Experimental_Inline}}
+- {{domxref("CloseWatcher.requestClose()")}}
   - : Fires a `cancel` event and if that event is not canceled with {{domxref("Event.preventDefault()")}}, proceeds to fire a `close` event, and then finally deactivates the close watcher as if `destroy()` was called.
-- {{domxref("CloseWatcher.close()")}} {{Experimental_Inline}}
+- {{domxref("CloseWatcher.close()")}}
   - : Immediately fires the `close` event, without firing `cancel` first, and deactivates the close watcher as if `destroy()` was called.
-- {{domxref("CloseWatcher.destroy()")}} {{Experimental_Inline}}
+- {{domxref("CloseWatcher.destroy()")}}
   - : Deactivates the close watcher so that it will no longer receive `close` events.
 
 ## Events
 
-- {{domxref("CloseWatcher.cancel_event", "cancel")}} {{Experimental_Inline}}
+- {{domxref("CloseWatcher.cancel_event", "cancel")}}
   - : An event fired before the `close` event, so that `close` can be prevented from firing.
-- {{domxref("CloseWatcher.close_event", "close")}} {{Experimental_Inline}}
+- {{domxref("CloseWatcher.close_event", "close")}}
   - : An event fired when a close request was received.
 
 ## Description

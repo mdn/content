@@ -1,5 +1,6 @@
 ---
-title: color
+title: "`color` CSS property"
+short-title: color
 slug: Web/CSS/Reference/Properties/color
 page-type: css-property
 browser-compat: css.properties.color
@@ -109,11 +110,9 @@ color: revert-layer;
 color: unset;
 ```
 
-The `color` property is specified as a single {{cssxref("&lt;color&gt;")}} value.
-
-Note that the value must be a uniform color. It can't be a {{cssxref("gradient")}}, which is actually a type of {{cssxref("image")}}.
-
 ### Values
+
+This property is specified as a single value from the following list:
 
 - {{cssxref("&lt;color&gt;")}}
   - : Sets the color of the textual and decorative parts of the element.

@@ -31,12 +31,18 @@ Some hints/questions:
 - The last mother cat name should have an "and" before it, and a full stop after it. How do you make sure this can work, no matter how many cats are in the JSON?
 - Why are the `para1.textContent = motherInfo;` and `para2.textContent = kittenInfo;` lines inside the `displayCatInfo()` function, and not at the end of the script? This has something to do with async code.
 
-```html hidden live-sample___json-1
+The starting point of the task looks like this:
+
+{{ EmbedLiveSample("json-1", "100%", 60) }}
+
+Here's the underlying code for this starting point:
+
+```html hidden live-sample___json-1 live-sample___json-1-finish
 <p class="one"></p>
 <p class="two"></p>
 ```
 
-```css hidden live-sample___json-1
+```css hidden live-sample___json-1 live-sample___json-1-finish
 p {
   color: purple;
   margin: 0.5em 0;
@@ -74,7 +80,9 @@ function displayCatInfo(catString) {
 }
 ```
 
-{{ EmbedLiveSample("json-1", "100%", 60) }}
+The updated output should look like this:
+
+{{ EmbedLiveSample("json-1-finish", "100%", 80) }}
 
 <details>
 <summary>Click here to show the solution</summary>
@@ -111,6 +119,48 @@ function displayCatInfo(catString) {
   } females.`;
 
   // Don't edit the code below here!
+
+  para1.textContent = motherInfo;
+  para2.textContent = kittenInfo;
+}
+```
+
+```js hidden live-sample___json-1-finish
+const para1 = document.querySelector(".one");
+const para2 = document.querySelector(".two");
+let motherInfo = "The mother cats are called ";
+let kittenInfo;
+const requestURL =
+  "https://mdn.github.io/learning-area/javascript/oojs/tasks/json/sample.json";
+
+fetch(requestURL)
+  .then((response) => response.text())
+  .then((text) => displayCatInfo(text));
+
+function displayCatInfo(catString) {
+  let total = 0;
+  let male = 0;
+
+  const cats = JSON.parse(catString);
+
+  for (let i = 0; i < cats.length; i++) {
+    for (const kitten of cats[i].kittens) {
+      total++;
+      if (kitten.gender === "m") {
+        male++;
+      }
+    }
+
+    if (i < cats.length - 1) {
+      motherInfo += `${cats[i].name}, `;
+    } else {
+      motherInfo += `and ${cats[i].name}.`;
+    }
+  }
+
+  kittenInfo = `There are ${total} kittens in total, ${male} males and ${
+    total - male
+  } females.`;
 
   para1.textContent = motherInfo;
   para2.textContent = kittenInfo;

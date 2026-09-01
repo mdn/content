@@ -1,5 +1,6 @@
 ---
-title: :volume-locked
+title: "`:volume-locked` CSS pseudo-class"
+short-title: :volume-locked
 slug: Web/CSS/Reference/Selectors/:volume-locked
 page-type: css-pseudo-class
 browser-compat: css.selectors.volume-locked

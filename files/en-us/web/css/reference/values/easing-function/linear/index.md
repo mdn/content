@@ -1,5 +1,6 @@
 ---
-title: linear()
+title: "`linear()` CSS function"
+short-title: linear()
 slug: Web/CSS/Reference/Values/easing-function/linear
 page-type: css-function
 browser-compat: css.types.easing-function.linear-function

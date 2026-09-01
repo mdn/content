@@ -57,13 +57,13 @@ Your own, built around a server product such as Apache, or a service like Netlif
 ```
 
 > [!NOTE]
-> You will often see acronyms that refer to poplar tech stacks, such as [MEAN](https://www.mongodb.com/resources/languages/mean-stack) (MongoDB, Express, Angular, Node) or [LAMP](<https://en.wikipedia.org/wiki/LAMP_(software_bundle)>) (Linux, Apache, MySQL, PHP or Python).
+> You will often see acronyms that refer to popular tech stacks, such as [MEAN](https://www.mongodb.com/resources/languages/mean-stack) (MongoDB, Express, Angular, Node) or [LAMP](<https://en.wikipedia.org/wiki/LAMP_(software_bundle)>) (Linux, Apache, MySQL, PHP or Python).
 
 On MDN, we are mainly concerned with the front-end part, but even that can be broken down into lots of different pieces. Take the front-end for example:
 
 - You will probably use a JavaScript framework (such as [React](/en-US/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)) to define the components that go together to create the user interface.
 - The framework will probably use some kind of templating language (such as [Mustache](https://mustache.github.io/)) to define the HTML structure but also provide functionality to dynamically include variable content.
-- You will include information to style your content via CSS in a way that is compatible with the framework. This might written in pure CSS, or a CSS framework (such as [Tailwind](https://tailwindcss.com/)) or preprocessor (such as [Sass](https://sass-lang.com/)).
+- You will include information to style your content via CSS in a way that is compatible with the framework. This might be written in pure CSS, or a CSS framework (such as [Tailwind](https://tailwindcss.com/)) or preprocessor (such as [Sass](https://sass-lang.com/)).
 - A JavaScript project should include tests, to make sure that any new code additions don't break its functionality. Tests are usually implemented using a testing framework (like [Jest](https://jestjs.io/)).
 - Larger websites will use a packaging/build tool (such as [Parcel](https://parceljs.org/)) to improve performance by keeping file sizes down, removing unused components from the production code, etc.
 - And so on.
@@ -112,7 +112,7 @@ Other less common job roles include:
 - **User researcher**
   - : Larger teams will often have a dedicated researcher to do user research and testing.
 - **Search Engine Optimization (SEO) specialist**
-  - : Analyses the content and structure of the website and makes changes that will cause the website to be more visible in relevant search engine results. See {{glossary("SEO")}} for more information.
+  - : Analyzes the content and structure of the website and makes changes that will cause the website to be more visible in relevant search engine results. See {{glossary("SEO")}} for more information.
 
 ## Technical project phases
 
@@ -157,7 +157,7 @@ There is a specific type of agile methodology called **scrum**, which has a fixe
 - Before each sprint, potential new work items are discussed, and if accepted into the sprint, they are put into a backlog.
 - Work items are taken from the backlog and move through different phases towards completion, such as "in progress" and "in review".
 - The scrum master holds short daily **stand-up meetings** where everyone talks about the progress they've made and any issues they might be having, so problems can be caught early.
-- At end of each sprint, the scrum master holds a retrospective meeting to review what went well, what didn't go so well, and what lessons can be learnt before the next sprint.
+- At end of each sprint, the scrum master holds a retrospective meeting to review what went well, what didn't go so well, and what lessons can be learned before the next sprint.
 
 Another type of agile methodology is called **kanban**, which has less rules than scrum, doesn't use sprints, and tends to focus more on the continuous improvement aspects of agile. Kanban is particularly useful for managing continuous processes that don't have a clear defined end, such as customer support tickets.
 
@@ -184,7 +184,7 @@ Track the progress of a complete project from start to finish — try it with yo
 
 - [What is a Tech Stack and How Do They Work?](https://www.mongodb.com/resources/basics/technology-stack), mongodb.com
 - [Website development team structure: roles and processes](https://www.truemark.dev/blog/web-development-team-structure-role-process/), truemark.dev (2017)
-- [Agile vs. Waterfall](https://www.productplan.com/learn/agile-vs-waterfall/), ProductPlan
+- [Agile vs. Waterfall](https://www.productplan.com/learn/agile-vs-waterfall), ProductPlan
 - [What is Scrum?](https://www.scrum.org/learning-series/what-is-scrum/), scrum.org
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork", "Learn_web_development/Getting_started/Soft_skills/Finding_a_job", "Learn_web_development/Getting_started/Soft_skills")}}

@@ -32,7 +32,7 @@ Promise.any(iterable)
 ### Parameters
 
 - `iterable`
-  - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) (such as an {{jsxref("Array")}}) of promises.
+  - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) (such as an {{jsxref("Array")}}) of promises. These values are [awaited](/en-US/docs/Web/JavaScript/Reference/Operators/await), so other [thenables](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) are also resolved, while non-thenables are returned as-is.
 
 ### Return value
 
@@ -49,6 +49,8 @@ The `Promise.any()` method is one of the [promise concurrency](/en-US/docs/Web/J
 Unlike {{jsxref("Promise.all()")}}, which returns an _array_ of fulfillment values, we only get one fulfillment value (assuming at least one promise fulfills). This can be beneficial if we need only one promise to fulfill but we do not care which one does. Note another difference: this method rejects upon receiving an _empty iterable_, since, truthfully, the iterable contains no items that fulfill. You may compare `Promise.any()` and `Promise.all()` with {{jsxref("Array.prototype.some()")}} and {{jsxref("Array.prototype.every()")}}.
 
 Also, unlike {{jsxref("Promise.race()")}}, which returns the first _settled_ value (either fulfillment or rejection), this method returns the first _fulfilled_ value. This method ignores all rejected promises up until the first promise that fulfills.
+
+Like other promise combinators, `Promise.any()` immediately marks all promises as "handled" when it is called (by calling their `.then()` methods). Subsequent rejections after the first fulfillment will be ignored, and will not trigger any `unhandledrejection` events.
 
 ## Examples
 

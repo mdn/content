@@ -148,7 +148,7 @@ But there are other collections in JavaScript as well, including {{jsxref("Set")
 
 ### The for...of loop
 
-The basic tool for looping through a collection is the {{jsxref("statements/for...of","for...of")}} loop:
+The basic tool for looping through a collection is the {{jsxref("Statements/for...of","for...of")}} loop:
 
 ```js
 const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
@@ -225,7 +225,7 @@ console.log(filtered);
 ## The standard for loop
 
 In the "drawing circles" example above, you don't have a collection of items to loop through: you really just want to run the same code 100 times.
-In a case like that, you can use the {{jsxref("statements/for","for")}} loop.
+In a case like that, you can use the {{jsxref("Statements/for","for")}} loop.
 This has the following syntax:
 
 ```js-nolint
@@ -286,7 +286,7 @@ This code calculates squares for the numbers from 1 to 9, and writes out the res
 
 Let's break down the `for (let i = 1; i < 10; i++)` line into its three pieces:
 
-1. `let i = 1`: the counter variable, `i`, starts at `1`. Note that we have to use `let` for the counter, because we're reassigning it each time we go round the loop.
+1. `let i = 1`: the counter variable, `i`, starts at `1`. Note that we have to use `let` for the counter, because we're incrementing it with `i++` (which is a reassignment) each time we go round the loop.
 2. `i < 10`: keep going round the loop for as long as `i` is smaller than `10`.
 3. `i++`: add one to `i` each time round the loop.
 

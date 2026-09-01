@@ -19,20 +19,27 @@ The **`setAttributeNS()`** method of the {{domxref("Element")}} interface adds a
 
 If you are working with HTML documents and you don't need to specify the requested attribute as being part of a specific namespace, use the {{domxref("Element.setAttribute()", "setAttribute()")}} method instead.
 
-Note that `setAttributeNS()` is the only method for namespaced attributes which expects the fully qualified name, i.e., `"namespace:local-name"`.
-
 ## Syntax
 
 ```js-nolint
-setAttributeNS(namespace, name, value)
+setAttributeNS(namespaceURI, qualifiedName, value)
 ```
 
 ### Parameters
 
-- `namespace`
-  - : A string specifying the namespace of the attribute.
-- `name`
-  - : A string identifying the attribute by its qualified name; that is, a namespace prefix followed by a colon followed by a local name.
+- `namespaceURI`
+  - : A string specifying the namespace of the attribute to set, or the empty string.
+
+- `qualifiedName`
+  - : A string identifying the attribute by its qualified name, which has the format `prefix:localName` or `localName`, where the parts are defined as:
+    - `prefix`
+      - : A "short alias" for the namespace.
+        The prefix is optional, but if it is specified the `namespaceURI` parameter must also be specified.
+        If the prefix is set to `xml` or `xmlns`, the `namespaceURI` must be set to `http://www.w3.org/XML/1998/namespace` or `http://www.w3.org/2000/xmlns/`, respectively.
+
+    - `localName`
+      - : The local name of the attribute.
+
 - `value`
   - : A trusted type or string containing the value to assign to the attribute.
 
@@ -47,6 +54,24 @@ setAttributeNS(namespace, name, value)
 ### Return value
 
 None ({{jsxref("undefined")}}).
+
+### Exceptions
+
+- `NamespaceError` {{domxref("DOMException")}}
+  - : Thrown if the [`namespaceURI`](#namespaceuri) value is:
+    - not a valid namespace URI.
+    - set to the empty string when `prefix` has a value.
+    - not the value `http://www.w3.org/XML/1998/namespace` or `http://www.w3.org/2000/xmlns/` when [`prefix`](#prefix) is set to `xml` or `xmlns`, respectively.
+- `InvalidCharacterError` {{domxref("DOMException")}}
+  - : Thrown if either the [`prefix`](#prefix) or [`localName`](#localname) is not valid:
+    - The `prefix` must have at least one character, and cannot contain ASCII whitespace, `NULL`, `/`, or `>` (U+0000, U+002F, or U+003E, respectively).
+    - The `localName` must have at least one character, and may not contain ASCII whitespace, `NULL`, `/`, `=` or `>` (U+0000, U+002F, U+003D, or U+003E, respectively).
+
+    > [!NOTE]
+    > Earlier versions of the specification were more restrictive, requiring that the `qualifiedName` be a valid [XML name](https://www.w3.org/TR/xml/#dt-name).
+
+- `TypeError`
+  - : Thrown if [`value`](#value) is passed a string instead of a trusted type object (for those attributes that require them) when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
 
 ## Examples
 

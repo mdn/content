@@ -1,5 +1,6 @@
 ---
-title: opacity
+title: "`opacity` CSS property"
+short-title: opacity
 slug: Web/CSS/Reference/Properties/opacity
 page-type: css-property
 browser-compat: css.properties.opacity

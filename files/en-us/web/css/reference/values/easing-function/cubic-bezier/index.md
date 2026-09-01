@@ -1,5 +1,6 @@
 ---
-title: cubic-bezier()
+title: "`cubic-bezier()` CSS function"
+short-title: cubic-bezier()
 slug: Web/CSS/Reference/Values/easing-function/cubic-bezier
 page-type: css-function
 browser-compat: css.types.easing-function.cubic-bezier

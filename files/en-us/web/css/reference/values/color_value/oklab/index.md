@@ -1,5 +1,6 @@
 ---
-title: oklab()
+title: "`oklab()` CSS function"
+short-title: oklab()
 slug: Web/CSS/Reference/Values/color_value/oklab
 page-type: css-function
 browser-compat: css.types.color.oklab
@@ -341,7 +342,7 @@ div {
 
 {{EmbedLiveSample("Adjusting_color_axes", "", "200")}}
 
-The left column is at the yellow end (`-0.4`) of the b-axis and the right column is at the blue end (`0.4`). The top row displays colors at the red end of the a-axis (`-0.4`) and the bottom row is at the green end (`0.4`). The middle column and row are at the midpoints of each axis, with the middle cell being grey; it contains no red, green, yellow, or blue, with a `0` value for both axes.
+The left column is at the yellow end (`-0.4`) of the b-axis and the right column is at the blue end (`0.4`). The top row displays colors at the red end of the a-axis (`-0.4`) and the bottom row is at the green end (`0.4`). The middle column and row are at the midpoints of each axis, with the middle cell being gray; it contains no red, green, yellow, or blue, with a `0` value for both axes.
 
 ### Linear gradients along the a-axis and b-axis
 

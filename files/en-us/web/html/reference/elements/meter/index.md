@@ -1,5 +1,6 @@
 ---
-title: "<meter>: The HTML Meter element"
+title: "`<meter>` HTML meter element"
+short-title: <meter>
 slug: Web/HTML/Reference/Elements/meter
 page-type: html-element
 browser-compat: html.elements.meter
@@ -69,7 +70,7 @@ Note that in this example the [`min`](#min) attribute is omitted. This is allowe
 ```html
 <p>
   Student's exam score:
-  <meter min="0" low="50" high="80" max="100" value="84">84%</meter>
+  <meter low="50" high="80" max="100" value="84">84%</meter>
 </p>
 ```
 
