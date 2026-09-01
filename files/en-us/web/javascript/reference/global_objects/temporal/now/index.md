@@ -24,7 +24,7 @@ To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glos
 
 In Chrome, the rounding interval is 0.1 ms, or 0.005 ms in cross-origin-isolated contexts.
 
-In Firefox, these methods obtain the current time in the same way as {{jsxref("Date.now()")}}. They inherit the precision of that clock reading without introducing additional inaccuracy. Accessing `epochNanoseconds` does not increase the precision of this integer-millisecond clock reading.
+In Firefox, these methods obtain the current time in the same way as {{jsxref("Date.now()")}}. They inherit the precision of that clock reading without introducing additional inaccuracy. The timestamp is always an integer number of milliseconds, so its resolution is limited to 1 ms in all contexts. Accessing `epochNanoseconds` does not increase its precision.
 
 ## Static properties
 

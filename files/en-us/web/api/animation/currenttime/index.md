@@ -38,7 +38,7 @@ To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glos
 
 The value of this property can come from two sources: supplied by script, or calculated from {{domxref("AnimationTimeline.currentTime")}}, {{domxref("Animation.startTime", "startTime")}}, and {{domxref("Animation.playbackRate", "playbackRate")}}. The timeline's underlying clock can already be rounded before calculation; see [the timeline's reduced time precision](/en-US/docs/Web/API/AnimationTimeline/currentTime#reduced_time_precision) for its rounding intervals.
 
-In Chrome, the browser does not apply further rounding. In Safari, the browser rounds the returned value to 0.001 ms.
+In Chrome, the browser does not apply additional timer rounding. In Safari, the browser rounds the returned value to 0.001 ms, the resolution used to represent animation times.
 
 In Firefox, the browser rounds the returned value to 0.02 ms by default, including in cross-origin-isolated contexts. If `privacy.resistFingerprinting` is enabled, the rounding interval is 16.667 ms or the interval configured by `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
 
