@@ -16,7 +16,7 @@ A non-negative number.
 
 ## Description
 
-The `selectionEnd` property contains a number representing the zero-based index of the character immediately following the last selected character in a text `<input>`. The property can retrieve or set the end position.
+The `selectionEnd` property is a number representing the zero-based index of the character immediately following the last selected character in a text `<input>`. The property can be used to retrieve or set the end position.
 
 When nothing is selected, the value of both {{domxref("HTMLInputElement.selectionStart", "selectionStart")}} and `selectionEnd` is the position of the cursor (caret) inside the `<input>` element.
 
