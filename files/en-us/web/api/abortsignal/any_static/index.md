@@ -30,46 +30,11 @@ An {{domxref("AbortSignal")}} that is:
 
 ## Description
 
-`AbortSignal.any()` does not provide a method to unsubscribe the returned signal from its input signals. Aborting the returned signal does not abort the other input signals.
+`AbortSignal.any()` does not provide a method to unsubscribe the returned signal from its input signals. Aborting the returned signal does not abort the other input signals or cancel their timeouts.
 
-Internally, each input signal maintains a link to the combined signal to abort it. This link is a [weak reference](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef), so the combined signal can still be garbage collected if it becomes unreachable, even when the input signals haven't aborted. However, a non-aborted combined signal is kept alive while it still has source signals and either registered `abort` event listeners or internal abort steps registered by an API. Completing an operation does not automatically remove event listeners added by your code. This can lead to retained abort signals.
+Internally, the combined signal and its source signals are linked through weak references. The combined signals aren't inherently blocked from garbage collection while the input signals remain active. However, a non-aborted combined signal is kept alive while it still has source signals and either registered `abort` event listeners or internal abort steps registered by an API.
 
-For example, the following function combines application-wide cancellation with a signal supplied by the caller for an individual operation. It adds a listener to log cancellation, but relies on `{ once: true }` to remove it:
-
-```js
-const globalController = new AbortController();
-
-async function doOperation(url, localSignal) {
-  const signal = AbortSignal.any([globalController.signal, localSignal]);
-  signal.addEventListener("abort", () => console.log(`Aborted: ${url}`), {
-    once: true,
-  });
-
-  const response = await fetch(url, { signal });
-  return response.text();
-}
-```
-
-`{ once: true }` only removes the listener when the event fires. If neither input signal aborts, the listener remains even after the response body has been read. Repeated calls can therefore retain combined signals and their listeners for as long as the global signal remains reachable and the combined signals remain non-aborted. Discarding the combined signal does not remove the listener, and `fetch()` does not clean up listeners added by your code.
-
-Instead, remove the listener when the operation finishes, whether it succeeds or fails. Use a named listener so you can remove it in a {{jsxref("Statements/try...catch", "finally")}} block:
-
-```js
-async function doOperation(url, localSignal) {
-  const signal = AbortSignal.any([globalController.signal, localSignal]);
-  const onAbort = () => console.log(`Aborted: ${url}`);
-  signal.addEventListener("abort", onAbort, { once: true });
-
-  try {
-    const response = await fetch(url, { signal });
-    return await response.text();
-  } finally {
-    signal.removeEventListener("abort", onAbort);
-  }
-}
-```
-
-The `await` on `response.text()` ensures the listener remains registered until the response body has been read. This cleanup is for the listener added by the example, not for `fetch()`'s internal abort handling. If an operation only needs application-wide cancellation, pass `globalController.signal` directly instead of creating a combined signal.
+If your code adds `abort` listeners to the combined signal, [remove them when the operation finishes](/en-US/docs/Web/API/AbortSignal#implementing_an_abortable_api), just as you would for any other `AbortSignal`.
 
 ## Examples
 

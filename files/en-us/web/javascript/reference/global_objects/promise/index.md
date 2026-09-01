@@ -173,7 +173,7 @@ All these methods take an [iterable](/en-US/docs/Web/JavaScript/Reference/Iterat
 
 There are two other convenience static methods: {{jsxref("Promise.allKeyed()")}} and {{jsxref("Promise.allSettledKeyed()")}}, that behave like `Promise.all()` and `Promise.allSettled()`, but take _objects_ of promises and return promises that fulfill with _objects_ of the same shape. By working with objects instead of arrays, you can associate results with semantically meaningful keys, instead of arbitrary array ordering which can be difficult to maintain.
 
-These methods attach handlers to each input promise using {{jsxref("Promise/then", "then()")}}. Even when the resulting promise has settled early (such as when one input in `Promise.race()` fulfills), the other handlers are not removed. Repeatedly passing the same pending promise to concurrency methods can accumulate handlers even when those handlers are never used:
+These methods attach handlers to each input promise using {{jsxref("Promise/then", "then()")}}. Even when the resulting promise has settled early (such as when one input in `Promise.race()` settles), the other handlers are not removed. Repeatedly passing the same pending promise to concurrency methods can accumulate handlers even when those handlers are never used:
 
 ```js
 const pendingPromise = new Promise(() => {});

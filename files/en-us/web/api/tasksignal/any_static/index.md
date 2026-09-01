@@ -44,7 +44,7 @@ A `TaskSignal` instance. It will be aborted when the first signal passed into `s
 
 The abort-signal cleanup considerations described for {{domxref("AbortSignal/any_static", "AbortSignal.any()")}} also apply to `TaskSignal.any()`. There is no method to unsubscribe the returned signal from its input signals, and aborting it does not abort the other input signals or cancel their timeouts.
 
-If `init.priority` is a signal with a changeable priority, the returned signal can also be retained while it has a priority source and either `prioritychange` listeners or internal priority change steps registered by an API. Remove listeners added by your code when they are no longer needed. Aborting the signal does not remove its `prioritychange` listeners or stop it from following priority changes.
+If `init.priority` is a signal with a changeable priority, the returned signal is also kept alive while it has a priority source and either `prioritychange` listeners or internal priority change steps registered by an API. Remove listeners added by your code when they are no longer needed. Aborting the signal does not remove its `prioritychange` listeners or stop it from following priority changes.
 
 ## Examples
 
