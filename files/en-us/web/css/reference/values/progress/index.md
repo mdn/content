@@ -85,26 +85,24 @@ In this case, the computed value of {{cssxref("opacity")}} would be `0.5`, as 5 
 By default, the return value is clamped to the range `0` to `1`, so a progress value outside the progress start and end bounds returns the nearest bound:
 
 ```css
-/* Returns 1, not 1.5 */
-opacity: progress(15, 0, 10);
+/* Computes to 1, not 1.5 */
+scale: progress(15, 0, 10);
 
-/* Returns 0, not -0.5 */
-opacity: progress(-5, 0, 10);
+/* Computes to 0, not -0.5 */
+scale: progress(-5, 0, 10);
 ```
 
-This is what you want when the progress value can stray outside the bounds but the effect should stop at them, such as a progress bar that can't go past `100%`.
-
-Including the `no-clamp` keyword before the progress value removes this restriction, allowing the function to extrapolate beyond the bounds:
+Including the `no-clamp` keyword before the progress value removes this restriction, so the function extrapolates beyond the bounds instead of stopping at them:
 
 ```css
-/* Returns 1.5 */
-opacity: progress(no-clamp 15, 0, 10);
+/* Computes to 1.5 */
+scale: progress(no-clamp 15, 0, 10);
 
-/* Returns -0.5 */
-opacity: progress(no-clamp -5, 0, 10);
+/* Computes to -0.5 */
+scale: progress(no-clamp -5, 0, 10);
 ```
 
-Note that `no-clamp` is a keyword rather than a separate argument, so it is not followed by a comma.
+Note that `no-clamp` is a keyword rather than a separate parameter, so it is not followed by a comma.
 
 ### Permitted unit types
 
