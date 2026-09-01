@@ -34,7 +34,7 @@ An {{domxref("AbortSignal")}} that is:
 
 Internally, the combined signal and its source signals are linked through weak references. The combined signals aren't inherently blocked from garbage collection while the input signals remain active. However, a non-aborted combined signal is kept alive while it still has source signals and either registered `abort` event listeners or internal abort steps registered by an API.
 
-If your code adds `abort` listeners to the combined signal, [remove them when the operation finishes](/en-US/docs/Web/API/AbortSignal#implementing_an_abortable_api), just as you would for any other `AbortSignal`.
+If your code adds `abort` listeners to the combined signal, [remove them when the operation finishes](/en-US/docs/Web/API/AbortSignal#removing_the_abort_event_listener), just as you would for any other `AbortSignal`.
 
 ## Examples
 
