@@ -435,6 +435,20 @@ The {{cssxref("text-decoration-inset")}} CSS property now supports percentages a
 - `layout.css.text-decoration-inset-percentage.enabled`
   - : Set to `true` to enable.
 
+### `view-timeline` includes `view-timeline-inset`
+
+The {{cssxref("view-timeline")}} shorthand property now includes {{cssxref("view-timeline-inset")}} property. This let you specify the start and/or end inset (or outset) values that offset the position of the animations timeline. ([Firefox bug 2046602](https://bugzil.la/2046602)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 155           | Yes                 |
+| Developer Edition | 155           | No                  |
+| Beta              | 155           | No                  |
+| Release           | 155           | No                  |
+
+- `layout.css.scroll-driven-animations.enabled`
+  - : Set to `true` to enable.
+
 ## SVG
 
 **No experimental features in this release cycle.**
