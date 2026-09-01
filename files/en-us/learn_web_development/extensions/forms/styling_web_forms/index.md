@@ -400,7 +400,7 @@ textarea {
 }
 ```
 
-When one of these fields gains focus, we highlight them with a light grey, transparent, background (it is always important to have focus style, for usability and keyboard accessibility):
+When one of these fields gains focus, we highlight them with a light gray, transparent, background (it is always important to have focus style, for usability and keyboard accessibility):
 
 ```css
 input:focus,

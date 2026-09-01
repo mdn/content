@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Window.screenTop
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
 The **`Window.screenTop`** read-only property returns the
 vertical distance, in CSS pixels, from the top border of the user's browser viewport to

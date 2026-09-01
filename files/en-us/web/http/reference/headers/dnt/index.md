@@ -10,7 +10,7 @@ browser-compat: http.headers.DNT
 sidebar: http
 ---
 
-{{Deprecated_header}}{{non-standard_header}}
+{{non-standard_header}}
 
 > [!NOTE]
 > The DNT (Do Not Track) specification has been discontinued. See {{domxref("Navigator.doNotTrack")}} for more information.

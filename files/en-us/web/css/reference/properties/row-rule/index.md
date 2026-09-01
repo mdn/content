@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`row-rule`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the width, style, and color of the line drawn between rows in multi-row grid, flex, and multi-col layouts.
+The **`row-rule`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets the width, style, and color of the line drawn between rows in multi-row grid, flex, and multi-col layouts.
 
 {{InteractiveExample("CSS Demo: row-rule")}}
 

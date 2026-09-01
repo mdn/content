@@ -175,9 +175,9 @@ The new class defines two methods that you can use for pre-test configuration (f
 > [!NOTE]
 > The test classes also have a `tearDown()` method which we haven't used. This method isn't particularly useful for database tests, since the `TestCase` base class takes care of database teardown for you.
 
-Below those we have a number of test methods, which use `Assert` functions to test whether conditions are true, false or equal (`AssertTrue`, `AssertFalse`, `AssertEqual`). If the condition does not evaluate as expected then the test will fail and report the error to your console.
+Below those we have a number of test methods, which use `assert` functions to test whether conditions are true, false or equal (`assertTrue`, `assertFalse`, `assertEqual`). If the condition does not evaluate as expected then the test will fail and report the error to your console.
 
-The `AssertTrue`, `AssertFalse`, `AssertEqual` are standard assertions provided by **unittest**. There are other standard assertions in the framework, and also [Django-specific assertions](https://docs.djangoproject.com/en/5.0/topics/testing/tools/#assertions) to test if a view redirects (`assertRedirects`), to test if a particular template has been used (`assertTemplateUsed`), etc.
+The `assertTrue`, `assertFalse`, `assertEqual` are standard assertions provided by **unittest**. There are other standard assertions in the framework, and also [Django-specific assertions](https://docs.djangoproject.com/en/5.0/topics/testing/tools/#assertions) to test if a view redirects (`assertRedirects`), to test if a particular template has been used (`assertTemplateUsed`), etc.
 
 > [!NOTE]
 > You should **not** normally include **print()** functions in your tests as shown above. We do that here only so that you can see the order that the setup functions are called in the console (in the following section).
