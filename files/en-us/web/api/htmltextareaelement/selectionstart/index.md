@@ -8,15 +8,15 @@ browser-compat: api.HTMLTextAreaElement.selectionStart
 
 {{APIRef("HTML DOM")}}
 
-The **`selectionStart`** property of the {{domxref("HTMLTextAreaElement")}} interface specifies the start position of the current text selection in a {{HTMLElement("textarea")}} element. It is a number representing the beginning index of the selected text. It can be used to both retrieve and set the start of the index of the beginning of a `<textarea>`s selected text.
+The **`selectionStart`** property of the {{domxref("HTMLTextAreaElement")}} interface specifies the start position of the current text selection in a {{HTMLElement("textarea")}} element. It is a number representing the zero-based index of the first selected character. The property can be used to retrieve or set the start position.
 
-When nothing is selected, the value of both the `selectionStart` and {{domxref("HTMLTextAreaElement.selectionEnd", "selectionEnd")}} is the position of the cursor (caret) inside the `<textarea>` element.
+When nothing is selected, the value of both `selectionStart` and {{domxref("HTMLTextAreaElement.selectionEnd", "selectionEnd")}} is the position of the cursor (caret) inside the `<textarea>` element.
 
-Setting `selectionStart` to a value greater than the current value of {{domxref("HTMLTextAreaElement.selectionEnd", "selectionEnd")}} updates both the `selectionStart` and `selectionEnd` properties to that value. If that value is equal to or greater than the {{domxref("HTMLTextAreaElement.textLength", "textLength")}}, both properties are set to the `textLength` property value.
+Setting `selectionStart` to a value greater than the current value of `selectionEnd` updates both properties to the new value. Values greater than the {{domxref("HTMLTextAreaElement.textLength", "textLength")}} are treated as `textLength`.
 
-The property value can be retrieved and set without the `<textarea>` having focus, but the element does need to have focus for the {{cssxref("::selection")}} pseudo-element to match the selected text.
+The property value can be retrieved and set without the `<textarea>` having focus, but the element must have focus for the {{cssxref("::selection")}} pseudo-element to match the selected text.
 
-Setting the `selectionStart` to a new value fires the {{domxref("HTMLTextAreaElement.selectionchange_event", "selectionchange")}} and {{domxref("HTMLTextAreaElement.select_event", "select")}} events.
+Setting `selectionStart` to a new value fires the {{domxref("HTMLTextAreaElement.selectionchange_event", "selectionchange")}} and {{domxref("HTMLTextAreaElement.select_event", "select")}} events.
 
 ## Value
 
@@ -24,10 +24,35 @@ A non-negative number.
 
 ## Examples
 
-```js
-const textarea = document.getElementById("text-box");
-const start = textarea.selectionStart;
+This example reports the selected text and its start and end positions. Select some text in the textarea, and then click the button.
+
+### HTML
+
+```html
+<label for="text-box">Select some text:</label>
+<textarea id="text-box" rows="3">The quick brown fox.</textarea>
+<button id="show-selection" type="button">Show selection</button>
+<p id="output">No selection reported yet.</p>
 ```
+
+### JavaScript
+
+```js
+const textBox = document.querySelector("#text-box");
+const output = document.querySelector("#output");
+
+document.querySelector("#show-selection").addEventListener("click", () => {
+  const start = textBox.selectionStart;
+  const end = textBox.selectionEnd;
+  const selectedText = textBox.value.substring(start, end);
+
+  output.textContent = `You selected "${selectedText}" (start: ${start}, end: ${end}).`;
+});
+```
+
+### Result
+
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 
@@ -44,6 +69,7 @@ const start = textarea.selectionStart;
 - {{domxref("HTMLTextAreaElement.selectionEnd")}}
 - {{domxref("HTMLTextAreaElement.selectionDirection")}}
 - {{domxref("HTMLTextAreaElement.textLength")}}
+- {{domxref("HTMLTextAreaElement.selectionchange_event", "selectionchange")}} event
 - {{domxref("HTMLTextAreaElement.select()")}}
 - {{domxref("HTMLTextAreaElement.setSelectionRange()")}}
 - {{domxref("HTMLTextAreaElement.setRangeText()")}}
