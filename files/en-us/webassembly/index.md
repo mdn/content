@@ -35,3 +35,4 @@ Our reference documentation has several live examples to demonstrate how the dif
 - [webassembly.org](https://webassembly.org/)
 - [WebAssembly browser feature support status](https://webassembly.org/features/?categories=browsers) on webassembly.org (2026)
 - [W3C WebAssembly Community Group](https://www.w3.org/community/webassembly/)
+- [How WebAssembly became our privacy architecture (not just a performance trick)](https://dev.to/iqbalhssn78/how-webassembly-became-our-privacy-architecture-not-just-a-performance-trick-5c00): A production case study documenting how Wasm's sandboxed execution model was used as a structural privacy guarantee across 90+ browser-based file tools.
