@@ -70,7 +70,7 @@ Object.freeze(new Uint8Array(1)); // Has elements
 Object.freeze(new DataView(new ArrayBuffer(32))); // No elements
 // DataView {}
 
-Object.freeze(new Float64Array(new ArrayBuffer(64), 63, 0)); // No elements
+Object.freeze(new Float64Array(new ArrayBuffer(64), 32, 0)); // No elements
 // Float64Array []
 
 Object.freeze(new Float64Array(new ArrayBuffer(64), 32, 2)); // Has elements

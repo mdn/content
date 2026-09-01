@@ -8,7 +8,7 @@ sidebar: jsref
 
 The **`SuppressedError`** object represents an error generated while handing another error. It is generated during resource disposal using {{jsxref("Statements/using", "using")}} or {{jsxref("Statements/await_using", "await using")}}.
 
-Compared to {{jsxref("AggregateError")}}, `SuppressedError` is used to represent a single error that is suppressed by another error, while `AggregateError` represents a list of unrelated errors. It is possible, though, for a `SuppressedError` to contain a chain of suppressed errors (`e.suppressed.suppressed.suppressed...`). It is also semantically different from {{jsxref("Error/cause", "cause")}} because the error is not _caused_ by another error, but _happens when_ handling another error.
+Compared to {{jsxref("AggregateError")}}, `SuppressedError` represents an error that happened during the handling of another error, while `AggregateError` represents a list of unrelated errors. It is possible, though, for a `SuppressedError` to contain a chain of suppressed errors (`e.suppressed.suppressed.suppressed...`). It is also semantically different from {{jsxref("Error/cause", "cause")}} because the error is not _caused_ by another error, but _happens when_ handling another error.
 
 `SuppressedError` is a subclass of {{jsxref("Error")}}.
 
@@ -44,7 +44,7 @@ _Inherits instance methods from its parent {{jsxref("Error")}}_.
 
 ## Examples
 
-### Catching an SuppressedError
+### Catching a SuppressedError
 
 A `SuppressedError` is thrown when an error occurs during [resource disposal](/en-US/docs/Web/JavaScript/Guide/Resource_management). Throwing an error causes scope cleanup, and each disposer during the cleanup can throw its own error. All these errors are collected into a chain of `SuppressedError` instances, with the original error as the `suppressed` property and the new error thrown by the next disposer as the `error` property.
 
@@ -83,7 +83,7 @@ Error while disposing resource1   Error while disposing resource2
     (Disposal happens later)        (Disposal happens earlier)
 ```
 
-### Creating an SuppressedError
+### Creating a SuppressedError
 
 ```js
 try {

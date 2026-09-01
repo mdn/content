@@ -43,15 +43,32 @@ It is the third layer of the layer cake of standard web technologies, two of whi
 
 The three layers build on top of one another nicely. Let's take a button as an example. We can mark it up using HTML to give it structure and purpose:
 
-```html live-sample___string-concat-name
-<button type="button">Player 1: Chris</button>
+```css hidden live-sample___string-concat-name-html live-sample___string-concat-name-css live-sample___string-concat-name-js
+html {
+  height: 100%;
+}
+
+body {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  font-size: 1.4em;
+}
 ```
 
-![Button showing Player 1: Chris with no styling](just-html.png)
+```html live-sample___string-concat-name-html live-sample___string-concat-name-css live-sample___string-concat-name-js
+<button>Player 1: Chris</button>
+```
+
+{{EmbedLiveSample('string-concat-name-html', , '80')}}
 
 Then we can add some CSS into the mix to get it looking nice:
 
-```css live-sample___string-concat-name
+```css live-sample___string-concat-name-css live-sample___string-concat-name-js
 button {
   font-family: "Helvetica Neue", "Helvetica", sans-serif;
   letter-spacing: 1px;
@@ -66,11 +83,11 @@ button {
 }
 ```
 
-![Button showing Player 1: Chris with styling](html-and-css.png)
+{{EmbedLiveSample('string-concat-name-css', , '80')}}
 
 And finally, we can add some JavaScript to implement dynamic behavior:
 
-```js live-sample___string-concat-name
+```js live-sample___string-concat-name-js
 function updateName() {
   const name = prompt("Enter a new name");
   button.textContent = `Player 1: ${name}`;
@@ -81,10 +98,9 @@ const button = document.querySelector("button");
 button.addEventListener("click", updateName);
 ```
 
-You can click "Play" to see and edit the example in the MDN Playground.
-Try clicking on the text label to see what happens.
+Try clicking on the text label, entering a name into the dialog box that opens, and pressing the OK button.
 
-{{EmbedLiveSample('string-concat-name', , '80', , , , , 'allow-modals')}}
+{{EmbedLiveSample('string-concat-name-js', , '80', , , , , 'allow-modals')}}
 
 JavaScript can do a lot more than that — let's explore what in more detail.
 
@@ -97,7 +113,7 @@ The core client-side JavaScript language consists of some common programming fea
 
 - Store useful values inside variables. In the above example for instance, we ask for a new name to be entered then store that name in a variable called `name`.
 - Operations on pieces of text (known as "strings" in programming). In the above example we take the string "Player 1: " and join it to the `name` variable to create the complete text label, e.g., "Player 1: Chris".
-- Running code in response to certain events occurring on a web page. We used a {{domxref("Element/click_event", "click")}} event in our example above to detect when the label is clicked and then run the code that updates the text label.
+- Running code in response to certain events occurring on a web page. We used a {{domxref("Element/click_event", "click")}} event in our example above to detect when the button is clicked and then run the code that updates the text label.
 - And much more!
 
 What is even more exciting however is the functionality built on top of the client-side JavaScript language. So-called **Application Programming Interfaces** (**APIs**) provide you with extra superpowers to use in your JavaScript code.
@@ -121,7 +137,7 @@ They generally fall into two categories.
 
 **Third party APIs** are not built into the browser by default, and you generally have to grab their code and information from somewhere on the Web. For example:
 
-- The [Bluesky API](https://docs.bsky.app/) allows you to do things like displaying your latest posts on your website.
+- The [Bluesky API](https://bsky.network/) allows you to do things like displaying your latest posts on your website.
 - The [Google Maps API](https://developers.google.com/maps/) and [OpenStreetMap API](https://wiki.openstreetmap.org/wiki/API) allows you to embed custom maps into your website, and other such functionality.
 
 > [!NOTE]
@@ -284,7 +300,7 @@ This works great, but what if we wanted to put our JavaScript in an external fil
    }
    ```
 
-4. Save and refresh your browser. You'll discover that clicking the button has no effect, and if you check your browser's console, you'll see an error along the lines of `Cross-origin request blocked`. That's because like many external resources, JavaScript modules need to be loaded from the [same origin](/en-US/docs/Web/Security/Same-origin_policy) as the HTML, and `file://` URLs don't qualify. There are two solutions to fix this problem:
+4. Save and refresh your browser. You'll discover that clicking the button has no effect, and if you check your browser's console, you'll see an error along the lines of `Cross-origin request blocked`. That's because like many external resources, JavaScript modules need to be loaded from the [same origin](/en-US/docs/Web/Security/Defenses/Same-origin_policy) as the HTML, and `file://` URLs don't qualify. There are two solutions to fix this problem:
    - Our recommended solution is to [set up a local testing server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server). With the server program running and serving the `apply-javascript-external.html` and `script.js` files on port `8000`, open your browser and go to `http://localhost:8000`.
    - If you cannot run a local server, you can also use `<script defer src="script.js"></script>` instead of `<script type="module" src="script.js"></script>`. See [Script loading strategies](#script_loading_strategies) below for more information. But note that features we use in other parts of the tutorial may require a local HTTP server anyway.
 5. Now the website works just the same as before, but now we've got our JavaScript in an external file.
@@ -410,7 +426,7 @@ for (const button of buttons) {
 
 So there you go, your first step into the world of JavaScript.
 We've begun with just theory, to start getting you used to why you'd use JavaScript and what kind of things you can do with it.
-Along the way, you saw a few code examples and learned how JavaScript fits in with the rest of the code on your website, amongst other things.
+Along the way, you saw a few code examples and learned how JavaScript fits in with the rest of the code on your website, among other things.
 
 JavaScript may seem a bit daunting right now, but don't worry — in this course, we will take you through it in simple steps that will make sense going forward.
 In the next article, we will plunge straight into the practical, getting you to jump straight in and build your own JavaScript examples.

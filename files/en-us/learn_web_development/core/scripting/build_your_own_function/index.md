@@ -78,9 +78,7 @@ To begin with, let's put together a basic function.
    closeBtn.textContent = "x";
    panel.appendChild(closeBtn);
 
-   closeBtn.addEventListener("click", () =>
-     panel.parentNode.removeChild(panel),
-   );
+   closeBtn.addEventListener("click", () => body.removeChild(panel));
    ```
 
 This is quite a lot of code to go through, so we'll walk you through it bit by bit.
@@ -117,10 +115,10 @@ panel.appendChild(closeBtn);
 
 Finally, we call {{domxref("EventTarget/addEventListener", "addEventListener()")}} to add a function that will be called when the user clicks the "close" button. The code will delete the whole panel from the page — to close the message box.
 
-Briefly, the `addEventListener()` method is provided by the button (or in fact, any element on the page) that can be passed a function and the name of an event. In this case, the name of the event is 'click', meaning that when the user clicks the button, the function will run. You'll learn a lot more about events in our [events article](/en-US/docs/Learn_web_development/Core/Scripting/Events). The line inside the function uses the {{domxref("Node.removeChild()")}} DOM API function to specify that we want to remove a specific child element of the HTML element — in this case, the panel `<div>`.
+Briefly, the `addEventListener()` method can be called on any element on the page, and is usually passed two arguments: the name of an event and a function to run when the event occurs. In this case, the event name is `click`, meaning that when the user clicks the button, the function will run. You'll learn a lot more about events in our [events article](/en-US/docs/Learn_web_development/Core/Scripting/Events). The line inside the function uses the {{domxref("Node.removeChild()", "removeChild()")}} method to specify that we want to remove a specific child element of the `<body>` element: in this case, the panel `<div>`.
 
 ```js
-closeBtn.addEventListener("click", () => panel.parentNode.removeChild(panel));
+closeBtn.addEventListener("click", () => body.removeChild(panel));
 ```
 
 Basically, this whole block of code is generating a block of HTML that looks like so, and inserting it into the page:
@@ -180,6 +178,9 @@ and saving and reloading, you'll see that the message box appears without the bu
 
 If you tried the last experiment, make sure to undo the last change before carrying on.
 
+> [!NOTE]
+> For more practice with functions, check out the Scrimba<sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> challenge [Write your first function](https://scrimba.com/fullstack-path-c0fullstack/~04h?via=mdn).
+
 ## Improving the function with parameters
 
 As it stands, the function is still not very useful — we don't want to just show the same default message every time. Let's improve our function by adding some parameters, allowing us to call it with some different options.
@@ -235,7 +236,7 @@ On to the next parameter. This one is going to involve slightly more work — we
 1. First of all, download the icons needed for this exercise ([warning](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/icons/warning.png) and [chat](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/icons/chat.png)) from GitHub. Save them in a new folder called `icons` in the same location as your HTML file.
 
    > [!NOTE]
-   > The warning and chat icons were originally found on [iconfinder.com](https://www.iconfinder.com/), and designed by [Nazarrudin Ansyari](https://www.iconfinder.com/nazarr) — Thanks! (The actual icon pages were since moved or removed.)
+   > The warning and chat icons were originally found on iconfinder.com, and designed by Nazarrudin Ansyari — Thanks! (The actual icon pages were since moved or removed.)
 
 2. Next, find the CSS inside your HTML file. We'll make a few changes to make way for the icons. First, update the `.msgBox` width from:
 

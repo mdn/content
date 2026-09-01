@@ -1037,7 +1037,7 @@ selectList.forEach((select) => {
     deactivateSelect(select);
   });
 
-  // Loose focus if the user hits `esc`
+  // Lose focus if the user hits `esc`
   select.addEventListener("keyup", (event) => {
     // deactivate on keyup of `esc`
     if (event.key === "Escape") {
@@ -1654,7 +1654,7 @@ To support the [`listbox`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/li
 ```
 
 > [!NOTE]
-> Including both the `role` attribute and a `class` attribute is not necessary. Instead of using `.option` use the `[role="option"]` [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) in your CSS.
+> Including both the `role` attribute and a `class` attribute is not necessary. Instead of using `.option` use the `[role="option"]` [attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) in your CSS.
 
 ### The `aria-selected` attribute
 

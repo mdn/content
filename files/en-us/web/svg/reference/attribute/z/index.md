@@ -3,8 +3,8 @@ title: z
 slug: Web/SVG/Reference/Attribute/z
 page-type: svg-attribute
 spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fepointlight-z
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-fespotlight-z
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fepointlight-z
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fespotlight-z
 sidebar: svgref
 ---
 

@@ -1,7 +1,9 @@
 ---
-title: nop
+title: "nop: Wasm text instruction"
+short-title: nop
 slug: WebAssembly/Reference/Control_flow/nop
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.nop
 sidebar: webassemblysidebar
 ---
 
@@ -33,3 +35,11 @@ nop
 | Instruction | Binary opcode |
 | ----------- | ------------- |
 | `nop`       | `0x01`        |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

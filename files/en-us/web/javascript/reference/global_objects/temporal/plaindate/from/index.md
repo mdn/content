@@ -3,13 +3,9 @@ title: Temporal.PlainDate.from()
 short-title: from()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/from
 page-type: javascript-static-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.PlainDate.from
 sidebar: jsref
 ---
-
-{{SeeCompatTable}}
 
 The **`Temporal.PlainDate.from()`** static method creates a new `Temporal.PlainDate` object from another `Temporal.PlainDate` object, an object with date properties, or an [RFC 9557](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate#rfc_9557_format) string.
 
@@ -89,13 +85,13 @@ const d3 = Temporal.PlainDate.from({
   year: 2021,
   month: 7,
   day: 1,
-  calendar: "chinese",
+  calendar: "hebrew",
 });
 // Note: when you construct a date with an object, the date components
 // are in *that* calendar, not the ISO calendar. However, toString() always
 // outputs the date in the ISO calendar. For example, the year "2021" in
-// the Chinese calendar is actually 616 BC in the ISO calendar.
-console.log(d3.toString()); // "-000616-08-12[u-ca=chinese]"
+// the Hebrew calendar is actually 1740 BCE in the ISO calendar.
+console.log(d3.toString()); // "-001739-03-07[u-ca=hebrew]"
 
 // Era, eraYear, month, and day
 const d4 = Temporal.PlainDate.from({

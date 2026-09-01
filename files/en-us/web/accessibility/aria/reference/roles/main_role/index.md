@@ -79,7 +79,7 @@ It is also helpful to include an accessible name to help orient assistive techno
 
 ### Prefer HTML
 
-Using the {{HTMLElement('main')}} element will automatically communicate a section has a role of `main`. If at all possible, prefer using it instead.
+Using the {{HTMLElement('main')}} element will automatically communicate that the element has a role of `main`. If possible, prefer using the semantic `<main>` element instead of the `main` role.
 
 ### Skip navigation
 
@@ -123,6 +123,5 @@ Which is the equivalent of:
 
 - The {{HTMLElement('main')}} element
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements)
-- [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://www.tpgi.com/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 - [The main element | HTML5 Doctor](https://html5doctor.com/the-main-element/)

@@ -95,7 +95,7 @@ JavaScript engines used in current web browsers include:
 
 - Mozilla's [SpiderMonkey](https://spidermonkey.dev/), used in Firefox, Servo, and Flow. Other non-browser usage includes MongoDB, CouchDB, and more. This was the first _ever_ JavaScript engine, created by Brendan Eich at Netscape.
 - Google's [V8](https://v8.dev/), used in Chrome and Chromium-based browsers such as Opera, Edge, and Brave. Other non-browser usage includes [Node.js](https://nodejs.org/), [Deno](https://deno.com/), [Electron](https://www.electronjs.org/), and more.
-- Apple's [JavaScriptCore](https://docs.webkit.org/Deep%20Dive/JSC/JavaScriptCore.html) (also known as SquirrelFish/Nitro), used in Safari and other WebKit-based browsers. Other non-browser usage includes [Bun](https://bun.sh/).
+- Apple's [JavaScriptCore](https://docs.webkit.org/Deep%20Dive/JSC/JavaScriptCore.html) (also known as SquirrelFish/Nitro), used in Safari and other WebKit-based browsers. Other non-browser usage includes [Bun](https://bun.com/).
 - [LibJS](https://serenityos.github.io/libjs-website/), used in [Ladybird](https://ladybird.org/).
 
 Some JavaScript engines used in earlier browsers include:
@@ -114,7 +114,7 @@ Some JavaScript engines specifically tailored for non-browser purposes include:
 
 JavaScript engines expose a public API which application developers can use to integrate JavaScript into their software. By far, the most common host environment for JavaScript is web browsers. Web browsers typically use the public API to create **host objects** responsible for reflecting the [DOM](https://dom.spec.whatwg.org/) into JavaScript.
 
-Another common application for JavaScript is as a (Web) server-side scripting language. A JavaScript web server exposes host objects representing a HTTP request and response objects, which can then be manipulated by a JavaScript program to dynamically generate web pages. [Node.js](https://nodejs.org/) is a popular example of this.
+Another common application for JavaScript is as a (Web) server-side scripting language. A JavaScript web server exposes host objects representing an HTTP request and response objects, which can then be manipulated by a JavaScript program to dynamically generate web pages. [Node.js](https://nodejs.org/) is a popular example of this.
 
 ## Shells
 

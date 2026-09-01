@@ -2,14 +2,12 @@ name: Markdownlint (All files)
 
 on:
   pull_request:
-    branches:
-      - main
     paths:
       - .markdownlint-cli2.jsonc
       - .nvmrc
       - .prettier*
       - package.json
-      - yarn.lock
+      - package-lock.json
       - .github/workflows/markdown-lint.yml
       - .github/workflows/markdownlint-problem-matcher.json
 
@@ -21,24 +19,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version-file: ".nvmrc"
-          cache: yarn
+          cache: npm
 
-      - name: Install all yarn packages
-        run: yarn --frozen-lockfile
+      - name: Install
+        run: npm ci
         env:
-          # https://github.com/microsoft/vscode-ripgrep#github-api-limit-note
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Lint markdown files
         run: |
           echo "::add-matcher::.github/workflows/markdownlint-problem-matcher.json"
-          yarn lint:md
-          yarn lint:fm
+          npm run lint:md
+          npm run lint:fm

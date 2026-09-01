@@ -18,7 +18,7 @@ Safari additionally requires the **`default`**
 boolean attribute to be set to true when implementing your own video player controls in
 order for the subtitles cues to be shown.
 
-### Value
+## Value
 
 A string which indicates the track's current mode. One of:
 

@@ -140,7 +140,7 @@ The `fragment` object contains an array of objects, each of which can contain th
 - `targets`
   - : an array of objects representing color states that represent configuration details for the colors output by the fragment shader stage. These objects can include the following properties:
     - `blend` {{optional_inline}}
-      - : A object that describes a blend mode to be applied to the output color. `blend` has two properties:
+      - : An object that describes a blend mode to be applied to the output color. `blend` has two properties:
         - `alpha`
           - : Describes the alpha channel value.
         - `color`

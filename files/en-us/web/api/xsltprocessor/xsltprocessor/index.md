@@ -3,10 +3,12 @@ title: "XSLTProcessor: XSLTProcessor() constructor"
 short-title: XSLTProcessor()
 slug: Web/API/XSLTProcessor/XSLTProcessor
 page-type: web-api-constructor
+status:
+  - deprecated
 browser-compat: api.XSLTProcessor.XSLTProcessor
 ---
 
-{{APIRef("XSLT")}}
+{{APIRef("DOM")}}
 
 The **`XSLTProcessor()`** constructor creates a new {{domxref("XSLTProcessor")}} object instance.
 

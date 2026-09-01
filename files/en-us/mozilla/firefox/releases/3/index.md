@@ -1,5 +1,5 @@
 ---
-title: Firefox 3 for developers
+title: Firefox 3 release notes for developers
 short-title: Firefox 3
 slug: Mozilla/Firefox/Releases/3
 page-type: firefox-release-notes

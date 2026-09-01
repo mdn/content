@@ -2,7 +2,7 @@
 title: 406 Not Acceptable
 slug: Web/HTTP/Reference/Status/406
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.406
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#status.406
 sidebar: http
 ---
 

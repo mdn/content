@@ -102,7 +102,7 @@ function displayStatus() {
   while (fragmentViewer.hasChildNodes()) {
     fragmentViewer.removeChild(fragmentViewer.lastChild);
   }
-  for (entry of fragment.children) {
+  for (const entry of fragment.children) {
     fragmentViewer.appendChild(entry.cloneNode(true));
   }
 }

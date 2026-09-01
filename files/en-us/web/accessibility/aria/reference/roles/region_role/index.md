@@ -54,7 +54,7 @@ Only use the `region` role if no other relevant [content sectioning](/en-US/docs
 
 ### Prefer HTML
 
-Using the {{HTMLElement('section')}} element will automatically communicate that a section has a role of `region` if it is given an accessible name. If at all possible, prefer using {{HTMLElement('section')}} instead.
+Using the {{HTMLElement('section')}} element will automatically communicate that the element has a role of `region`. If possible, prefer using the semantic `<section>` element instead of the `region` role.
 
 ### Labeling landmarks
 
@@ -97,5 +97,4 @@ If there is a content area with `tabindex="0"`, add `role="region"` to convey to
 - [ARIA: `complementary` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role)
 - [ARIA: `navigation` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role)
 - [Landmark roles: Using ARIA: Roles, States, and Properties](/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)
-- [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://www.tpgi.com/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)

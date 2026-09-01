@@ -7,7 +7,7 @@ browser-compat: http.headers.Sec-Fetch-Dest
 sidebar: http
 ---
 
-The HTTP **`Sec-Fetch-Dest`** {{Glossary("fetch metadata request header")}} indicates the request's _destination_.
+The HTTP **`Sec-Fetch-Dest`** [fetch metadata request header](/en-US/docs/Web/HTTP/Guides/Fetch_metadata) indicates the request's _destination_.
 That is the initiator of the original fetch request, which is where (and how) the fetched data will be used.
 
 This allows servers to determine whether to service a request based on whether it is appropriate for how it is _expected_ to be used. For example, a request with an `audio` destination should request audio data, not some other type of resource (for example, a document that includes sensitive user information).
@@ -44,6 +44,7 @@ Sec-Fetch-Dest: font
 Sec-Fetch-Dest: frame
 Sec-Fetch-Dest: iframe
 Sec-Fetch-Dest: image
+Sec-Fetch-Dest: json
 Sec-Fetch-Dest: manifest
 Sec-Fetch-Dest: object
 Sec-Fetch-Dest: paintworklet
@@ -86,6 +87,8 @@ Servers should ignore this header if it contains any other value.
   - : The destination is an iframe. This might originate from an HTML {{HTMLElement("iframe")}} tag.
 - `image`
   - : The destination is an image. This might originate from an HTML {{HTMLElement("img")}}, SVG {{SVGElement("image")}}, CSS {{cssxref("background-image")}}, CSS {{cssxref("cursor")}}, CSS {{cssxref("list-style-image")}}, etc.
+- `json`
+  - : The destination is JSON. This might originate from [importing a module from JavaScript with the `type: "json"` attribute](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#importing_json_modules_with_the_type_attribute).
 - `manifest`
   - : The destination is a manifest. This might originate from an HTML [\<link rel=manifest>](/en-US/docs/Web/HTML/Reference/Attributes/rel/manifest).
 - `object`

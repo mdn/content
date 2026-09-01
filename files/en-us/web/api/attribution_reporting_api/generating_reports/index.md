@@ -2,6 +2,8 @@
 title: Generating attribution reports
 slug: Web/API/Attribution_Reporting_API/Generating_reports
 page-type: guide
+status:
+  - deprecated
 ---
 
 {{DefaultAPISidebar("Attribution Reporting API")}}
@@ -76,7 +78,7 @@ An aggregatable report by default is generated and scheduled to be sent after a 
 The expiry time is defined by the `expiry` value set in the associated {{httpheader("Attribution-Reporting-Register-Source")}} header, which defaults to 30 days after registration if not explicitly set. Bear in mind that the length of the report window can be further modified by setting an `aggregatable_report_window` value in the `Attribution-Reporting-Register-Source` header. See [Custom report windows](https://privacysandbox.google.com/private-advertising/attribution-reporting/custom-report-windows) for more details.
 
 > [!NOTE]
-> To further protect user privacy, the summary report values associated with each attribution source have a finite total value — this is called the **contribution budget**. This value may very across different implementations of the API; in Chrome it is 65,536. Any conversions that would generate reports adding values over that limit are not recorded. Make sure you keep track of the budget and share it between the different metrics you are trying to measure.
+> To further protect user privacy, the summary report values associated with each attribution source have a finite total value — this is called the **contribution budget**. This value may vary across different implementations of the API; in Chrome it is 65,536. Any conversions that would generate reports adding values over that limit are not recorded. Make sure you keep track of the budget and share it between the different metrics you are trying to measure.
 
 A typical aggregatable report might look like this:
 
@@ -101,7 +103,7 @@ The properties are as follows:
 - `"shared_info"`
   - : This is a serialized JSON object providing information that an aggregation service will use to put together a summary report. This data is [encrypted](/en-US/docs/Glossary/Encryption) using [AEAD](https://en.wikipedia.org/wiki/Authenticated_encryption) to prevent tampering. The following properties are represented in the serialized string:
     - `"api"`
-      - : A enumerated value representing the API that triggered the report generation. Currently this will always be equal to `"attribution-reporting"`, but it may be extended with additional values to support other APIs in the future.
+      - : An enumerated value representing the API that triggered the report generation. Currently this will always be equal to `"attribution-reporting"`, but it may be extended with additional values to support other APIs in the future.
     - `"attribution_destination"`
       - : A string representing the attribution [`"destination"`](/en-US/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#destination) URL set in the source registration (via the associated {{httpheader("Attribution-Reporting-Register-Source")}} response header).
     - `"report_id"`

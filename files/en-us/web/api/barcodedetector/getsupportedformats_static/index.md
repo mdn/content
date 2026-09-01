@@ -35,7 +35,7 @@ No exceptions are thrown.
 
 ## Examples
 
-The following example calls the `getSupportFormat()` static method and logs
+The following example calls the `getSupportedFormats()` static method and logs
 the results to the console.
 
 ```js

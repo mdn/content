@@ -273,6 +273,14 @@ setTimeout(() => {
 }, 1000);
 ```
 
+### Importing non-JavaScript modules
+
+Non-JavaScript modules can also be imported using the `import` statement, but their types need to be explicitly declared using [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with). For example, to import a JSON module, you need to specify the `type: "json"` attribute.
+
+```js
+import data from "./data.json" with { type: "json" };
+```
+
 ## Specifications
 
 {{Specifications}}

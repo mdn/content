@@ -10,7 +10,7 @@ sidebar: http
 
 An example of a cross-origin request: the front-end JavaScript code served from `https://domain-a.com` uses {{domxref("Window/fetch", "fetch()")}} to make a request for `https://domain-b.com/data.json`.
 
-For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts. For example, `fetch()` and {{domxref("XMLHttpRequest")}} follow the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy). This means that a web application using those APIs can only request resources from the same origin the application was loaded from unless the response from other origins includes the right CORS headers.
+For security reasons, browsers restrict cross-origin HTTP requests initiated from scripts. For example, `fetch()` and {{domxref("XMLHttpRequest")}} follow the [same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy). This means that a web application using those APIs can only request resources from the same origin the application was loaded from unless the response from other origins includes the right CORS headers.
 
 ![Diagrammatic representation of CORS mechanism](https://mdn.github.io/shared-assets/images/diagrams/http/cors/fetching-page-cors.svg)
 
@@ -24,7 +24,7 @@ This [cross-origin sharing standard](https://fetch.spec.whatwg.org/#http-cors-pr
 - Web Fonts (for cross-domain font usage in `@font-face` within CSS), as described in the [font fetching requirements](https://drafts.csswg.org/css-fonts/#font-fetching-requirements), so that servers can deploy TrueType fonts that can only be loaded cross-origin and used by websites that are permitted to do so.
 - [WebGL textures](/en-US/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL).
 - Images/video frames drawn to a canvas using {{domxref("CanvasRenderingContext2D.drawImage()", "drawImage()")}}.
-- [CSS Shapes from images.](/en-US/docs/Web/CSS/CSS_shapes/Shapes_from_images)
+- [CSS Shapes from images.](/en-US/docs/Web/CSS/Guides/Shapes/From_images)
 
 This is a general article about Cross-Origin Resource Sharing and includes a discussion of the necessary HTTP headers.
 
@@ -123,7 +123,7 @@ Content-Type: application/xml
 […XML Data…]
 ```
 
-In response, the server returns a {{HTTPHeader("Access-Control-Allow-Origin")}} header with `Access-Control-Allow-Origin: *`, which means that the resource can be accessed by **any** origin.
+In response, the server returns an {{HTTPHeader("Access-Control-Allow-Origin")}} header with `Access-Control-Allow-Origin: *`, which means that the resource can be accessed by **any** origin.
 
 ```http
 Access-Control-Allow-Origin: *

@@ -1,5 +1,6 @@
 ---
-title: "<input>: The HTML Input element"
+title: "`<input>` HTML input element"
+short-title: <input>
 slug: Web/HTML/Reference/Elements/input
 page-type: html-element
 browser-compat: html.elements.input
@@ -70,7 +71,7 @@ The available types are as follows:
     </tr>
     <tr>
       <td>{{HTMLElement("input/checkbox", "checkbox")}}</td>
-      <td>A check box allowing single values to be selected/deselected.</td>
+      <td>A checkbox allowing single values to be selected/deselected.</td>
       <td id="examplecheckbox">
         <pre class="brush: html hidden">
 &#x3C;input type="checkbox" name="checkbox"/></pre>
@@ -148,7 +149,7 @@ The available types are as follows:
       </td>
       <td id="examplehidden">
         <pre class="brush: html hidden">
-&#x3C;input id="userId" name="userId" type="hidden" value="abc123"></pre
+&#x3C;input id="userId" name="userId" type="hidden" value="abc123" /></pre
         >
         {{EmbedLiveSample("examplehidden",200,55)}}
       </td>
@@ -378,6 +379,7 @@ Attributes for the `<input>` element include the [global HTML attributes](/en-US
 | [`size`](#size)                               | `text`, `search`, `url`, `tel`, `email`, `password`                     | Size of the control                                                                                   |
 | [`src`](#src)                                 | `image`                                                                 | Same as `src` attribute for {{htmlelement('img')}}; address of image resource                         |
 | [`step`](#step)                               | `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`    | Incremental values that are valid                                                                     |
+| [`switch`](#switch)                           | `checkbox`                                                              | Whether the checkbox input should be rendered as a switch                                             |
 | [`type`](#type)                               | all                                                                     | Type of form control                                                                                  |
 | [`value`](#value)                             | all except `image`                                                      | The value of the control. When specified in the HTML, corresponds to the initial value                |
 | [`width`](#width)                             | `image`                                                                 | Same as `width` attribute for {{htmlelement('img')}}                                                  |
@@ -432,7 +434,7 @@ A few additional non-standard attributes are listed following the descriptions o
 
 - `colorspace` {{experimental_inline}}
   - : Valid for the `color` input type only, the `colorspace` attribute specifies the [color space](/en-US/docs/Glossary/Color_space) that is used by the `type="color"` input. Possible {{Glossary("enumerated")}} values are:
-    - `"limited-srgb"`: The color is in the {{glossary("RGB", "sRGB")}} color space. This includes [`rgb()`](/en-US/docs/Web/CSS/color_value/rgb), [`hsl()`](/en-US/docs/Web/CSS/color_value/hsl), [`hwb()`](/en-US/docs/Web/CSS/color_value/hwb), and {{cssxref("hex-color")}} values. The color value is limited to 8-bits per `r`, `g`, and `b` component. This is the default.
+    - `"limited-srgb"`: The color is in the {{glossary("RGB", "sRGB")}} color space. This includes {{cssxref("color_value/rgb", "rgb()")}}, {{cssxref("color_value/hsl", "hsl()")}}, {{cssxref("color_value/hwb", "hwb()")}}, and {{cssxref("hex-color")}} values. The color value is limited to 8-bits per `r`, `g`, and `b` component. This is the default.
     - `"display-p3"`: The [Display P3 color space](/en-US/docs/Glossary/Color_space#display-p3), e.g., `color(display-p3 1.84 -0.19 0.72 / 0.6)`
 
 - [`dirname`](/en-US/docs/Web/HTML/Reference/Attributes/dirname)
@@ -572,7 +574,7 @@ A few additional non-standard attributes are listed following the descriptions o
 - `popovertarget`
   - : Turns an `<input type="button">` element into a popover control button; takes the ID of the popover element to control as its value. See the {{domxref("Popover API", "Popover API", "", "nocode")}} landing page for more details. Establishing a relationship between a popover and its invoker button using the `popovertarget` attribute has two additional useful effects:
     - The browser creates an implicit [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) and [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) relationship between popover and invoker, and places the popover in a logical position in the keyboard focus navigation order when shown. This makes the popover more accessible to keyboard and assistive technology (AT) users (see also [Popover accessibility features](/en-US/docs/Web/API/Popover_API/Using#popover_accessibility_features)).
-    - The browser creates an implicit anchor reference between the two, making it very convenient to position popovers relative to their controls using [CSS anchor positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning). See [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) for more details.
+    - The browser creates an implicit anchor reference between the two, making it very convenient to position popovers relative to their controls using [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning). See [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) for more details.
 
 - `popovertargetaction`
   - : Specifies the action to be performed on a popover element being controlled by a control `<input type="button">`. Possible values are:
@@ -594,7 +596,7 @@ A few additional non-standard attributes are listed following the descriptions o
     See [Client-side validation](#client-side_validation) and the [HTML attribute: `required`](/en-US/docs/Web/HTML/Reference/Attributes/required) for more information.
 
 - [`size`](/en-US/docs/Web/HTML/Reference/Attributes/size)
-  - : Valid for `email`, `password`, `tel`, `url`, and `text`, the `size` attribute specifies how much of the input is shown. Basically creates same result as setting CSS [`width`](/en-US/docs/Web/CSS/width) property with a few specialties. The actual unit of the value depends on the input type. For `password` and `text`, it is a number of characters (or `em` units) with a default value of `20`, and for others, it is pixels (or `px` units). CSS `width` takes precedence over the `size` attribute.
+  - : Valid for `email`, `password`, `tel`, `url`, and `text`, the `size` attribute specifies how much of the input is shown. Basically creates same result as setting CSS {{cssxref("width")}} property with a few specialties. The actual unit of the value depends on the input type. For `password` and `text`, it is a number of characters (or `em` units) with a default value of `20`, and for others, it is pixels (or `px` units). CSS `width` takes precedence over the `size` attribute.
 
 - `src`
   - : Valid for the `image` input button only, the `src` is string specifying the URL of the image file to display to represent the graphical submit button. See the {{HTMLElement("input/image", "image")}} input type.
@@ -614,6 +616,12 @@ A few additional non-standard attributes are listed following the descriptions o
     > When the data entered by the user doesn't adhere to the stepping configuration, the value is considered invalid in constraint validation and will match the `:invalid` pseudoclass.
 
     See [Client-side validation](#client-side_validation) for more information.
+
+- [`switch`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox#switch) {{experimental_inline}} {{non-standard_inline}}
+  - : Valid for `checkbox` input only, `switch` is a Boolean attribute that indicates whether the checkbox input should be rendered as a switch.
+
+    > [!NOTE]
+    > This attribute is still experimental and has limited browser support. The attribute is ignored on unsupported browsers.
 
 - `tabindex`
   - : Global attribute valid for all elements, including all the input types, an integer attribute indicating if the element can take input focus (is focusable), if it should participate to sequential keyboard navigation. As all input types except for input of type hidden are focusable, this attribute should not be used on form controls, because doing so would require the management of the focus order for all elements within the document with the risk of harming usability and accessibility if done incorrectly.
@@ -691,7 +699,7 @@ The following non-standard attributes are also available on some browsers. As a 
     The `search` event is rate-limited so that it is not sent more frequently than an implementation-defined interval.
 
 - `orient` {{non-standard_inline}}
-  - : Similar to the -moz-orient non-standard CSS property impacting the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the `orient` attribute defines the orientation of the range slider. Values include `horizontal`, meaning the range is rendered horizontally, and `vertical`, where the range is rendered vertically. See [Creating vertical form controls](/en-US/docs/Web/CSS/CSS_writing_modes/Vertical_controls) for a modern approach to creating vertical form controls.
+  - : Similar to the -moz-orient non-standard CSS property impacting the {{htmlelement('progress')}} and {{htmlelement('meter')}} elements, the `orient` attribute defines the orientation of the range slider. Values include `horizontal`, meaning the range is rendered horizontally, and `vertical`, where the range is rendered vertically. See [Creating vertical form controls](/en-US/docs/Web/CSS/Guides/Writing_modes/Vertical_controls) for a modern approach to creating vertical form controls.
 
 - `results` {{non-standard_inline}}
   - : The `results` attribute—supported only by Safari—is a numeric value that lets you override the maximum number of entries to be displayed in the `<input>` element's natively-provided drop-down menu of previous search queries.
@@ -967,7 +975,7 @@ In certain cases (typically involving non-textual inputs and specialized interfa
 
 For more information about adding color to elements in HTML, see:
 
-- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/CSS_colors/Applying_color).
+- [Applying color to HTML elements using CSS](/en-US/docs/Web/CSS/Guides/Colors/Applying_color).
 
 Also see:
 
@@ -1132,12 +1140,12 @@ If there is an error, supporting browsers will both alert the user and prevent t
 
 ```js
 function validate(input) {
-  let validityState_object = input.validity;
-  if (validityState_object.valueMissing) {
+  let validityState = input.validity;
+  if (validityState.valueMissing) {
     input.setCustomValidity("A value is required");
-  } else if (validityState_object.rangeUnderflow) {
+  } else if (validityState.rangeUnderflow) {
     input.setCustomValidity("Your value is too low");
-  } else if (validityState_object.rangeOverflow) {
+  } else if (validityState.rangeOverflow) {
     input.setCustomValidity("Your value is too high");
   } else {
     input.setCustomValidity("");
@@ -1191,7 +1199,7 @@ In brief:
 - We check the valid state of the input element every time its value is changed by running the `checkValidity()` method via the `input` event handler.
 - If the value is invalid, an `invalid` event is raised, and the `invalid` event handler function is run. Inside this function we work out whether the value is invalid because it is empty, or because it doesn't match the pattern, using an `if ()` block, and set a custom validity error message.
 - As a result, if the input value is invalid when the submit button is pressed, one of the custom error messages will be shown.
-- If it is valid, it will submit as you'd expect. For this to happen, the custom validity has to be cancelled, by invoking `setCustomValidity()` with an empty string value. We therefore do this every time the `input` event is raised. If you don't do this, and a custom validity was previously set, the input will register as invalid, even if it currently contains a valid value on submission.
+- If it is valid, it will submit as you'd expect. For this to happen, the custom validity has to be canceled, by invoking `setCustomValidity()` with an empty string value. We therefore do this every time the `input` event is raised. If you don't do this, and a custom validity was previously set, the input will register as invalid, even if it currently contains a valid value on submission.
 
 > [!NOTE]
 > Always validate input constraints both client side and server side. Constraint validation doesn't remove the need for validation on the _server side_. Invalid values can still be sent by older browsers or by bad actors.

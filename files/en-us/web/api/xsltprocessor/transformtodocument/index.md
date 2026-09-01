@@ -3,10 +3,12 @@ title: "XSLTProcessor: transformToDocument() method"
 short-title: transformToDocument()
 slug: Web/API/XSLTProcessor/transformToDocument
 page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.XSLTProcessor.transformToDocument
 ---
 
-{{APIRef("XSLT")}}
+{{APIRef("DOM")}}
 
 The `transformToDocument()` method of the {{domxref("XSLTProcessor")}} interface transforms the provided {{DOMxRef("Node")}} source to a {{domxref("Document")}} using the XSLT stylesheet associated with `XSLTProcessor`.
 

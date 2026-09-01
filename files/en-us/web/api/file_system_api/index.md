@@ -150,7 +150,9 @@ The following example returns a directory handle with the specified name. If the
 const dirName = "directoryToGetName";
 
 // assuming we have a directory handle: 'currentDirHandle'
-const subDir = currentDirHandle.getDirectoryHandle(dirName, { create: true });
+const subDir = await currentDirHandle.getDirectoryHandle(dirName, {
+  create: true,
+});
 ```
 
 The following asynchronous function uses `resolve()` to find the path to a chosen file, relative to a specified directory handle.
@@ -160,7 +162,7 @@ async function returnPathDirectories(directoryHandle) {
   // Get a file handle by showing a file picker:
   const [handle] = await self.showOpenFilePicker();
   if (!handle) {
-    // User cancelled, or otherwise failed to open a file.
+    // User canceled, or otherwise failed to open a file.
     return;
   }
 

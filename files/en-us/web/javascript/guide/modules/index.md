@@ -71,7 +71,7 @@ If you really value the clarity of using `.mjs` for modules versus using `.js` f
 It is also worth noting that:
 
 - Some tools may never support `.mjs`.
-- The `<script type="module">` attribute is used to denote when a module is being pointed to, as you'll see below.
+- The `<script type="module">` attribute is used to denote when a module is being pointed to, as described in [Applying the module to your HTML](#applying_the_module_to_your_html).
 
 ## Exporting module features
 
@@ -283,7 +283,7 @@ This may be reasonable for just one module, but scales poorly if you wish to imp
 
 #### General URL remapping
 
-A module specifier key doesn't have to be path — it can also be an absolute URL (or a URL-like relative path like `./`, `../`, `/`).
+A module specifier key doesn't have to be a path — it can also be an absolute URL (or a URL-like relative path like `./`, `../`, `/`).
 This may be useful if you want to remap a module that has absolute paths to a resource with your own local resources.
 
 ```json
@@ -320,7 +320,7 @@ The example below demonstrates this.
 }
 ```
 
-With this mapping, if a script with an URL that contains `/node_modules/dependency/` imports `cool-module`, the version in `/node_modules/some/other/location/cool-module/index.js` will be used.
+With this mapping, if a script with a URL that contains `/node_modules/dependency/` imports `cool-module`, the version in `/node_modules/some/other/location/cool-module/index.js` will be used.
 The map in `imports` is used as a fallback if there is no matching scope in the scoped map, or the matching scopes don't contain a matching specifier. For example, if `cool-module` is imported from a script with a non-matching scope path, then the module specifier map in `imports` will be used instead, mapping to the version in `/node_modules/cool-module/index.js`.
 
 Note that the path used to select a scope does not affect how the address is resolved.
@@ -421,7 +421,7 @@ Module-defined variables are scoped to the module unless explicitly attached to 
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <title></title>
+    <title>Example page</title>
     <link rel="stylesheet" href="" />
   </head>
   <body>

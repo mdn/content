@@ -115,8 +115,8 @@ if ("ariaErrorMessageElements" in Element.prototype) {
   log(`ariaErrorMessageElements: ${propElements}`);
 
   // Accessible text from element inner text
-  const text = propElements.map((e) => e.textContent.trim).join(" ");
-  log(`Error message details: ${text.trim()}`);
+  const text = propElements.map((e) => e.textContent.trim()).join(" ");
+  log(`Error message details: ${text}`);
 } else {
   log("element.ariaErrorMessageElements: not supported by browser");
 }

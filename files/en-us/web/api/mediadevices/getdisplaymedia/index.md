@@ -64,10 +64,14 @@ getDisplayMedia(options)
         - `include`: Hints that the browser should include the control.
         - `exclude`: Hints that the control should not be shown.
     - `systemAudio` {{Experimental_Inline}} {{optional_inline}}
-      - : An enumerated value specifying whether the browser should include the system audio among the possible audio sources offered to the user.
+      - : An enumerated value that hints whether the browser should include system audio among the possible audio sources offered to the user when a monitor is shared.
         Possible values are:
         - `include`: Hints that the browser should include the system audio in the list of choices.
         - `exclude`: Hints that system audio should be excluded from the choices shown.
+
+        Browsers may ignore this hint and determine which audio sources to offer, sometimes based on operating system constraints.
+        For this reaason the returned stream might contain no audio track even when `audio` is `true` and `systemAudio` is `include`.
+        In Chrome ([documentation](https://developer.chrome.com/docs/web-platform/screen-sharing-controls#systemAudio)), `systemAudio: "include"` does not guarantee that system audio will be available, but `systemAudio: "exclude"` prevents system audio from being offered when sharing a screen (audio from a shared browser tab or window may still be available).
     - `windowAudio` {{Experimental_Inline}} {{optional_inline}}
       - : An enumerated value that hints to the browser what audio sharing option the user should be presented with alongside window sharing options. Possible values are:
         - `exclude`: Hints that audio should not be shareable when a window sharing option is chosen.
@@ -117,7 +121,7 @@ For that reason, the specification details measures browsers are required to tak
   Instead, they must be applied after the user chooses a source, in order to generate output that matches the options.
 - The go-ahead permission to use `getDisplayMedia()` cannot be persisted for reuse.
   The user must be prompted for permission every time.
-- [Transient user activation](/en-US/docs/Web/Security/User_activation) is required.
+- [Transient user activation](/en-US/docs/Web/Security/Defenses/User_activation) is required.
   The user has to interact with the page or a UI element in order for this feature to work.
 - Browsers are encouraged to provide a warning to users about sharing displays or windows that contain browsers, and to keep a close eye on what other content might be getting captured and shown to other users.
 

@@ -49,7 +49,7 @@ The CSS properties used to style text generally fall into two categories, which 
 - **Text layout styles**: Properties that affect the spacing and other layout features of the text, allowing manipulation of, for example, the space between lines and letters, and how the text is aligned within the content box.
 
 > [!NOTE]
-> Bear in mind that the text inside an element is all affected as one single entity. You can't select and style subsections of text unless you wrap them in an appropriate element (such as a {{htmlelement("span")}} or {{htmlelement("strong")}}), or use a text-specific pseudo-element like [`::first-letter`](/en-US/docs/Web/CSS/::first-letter) (selects the first letter of an element's text), [`::first-line`](/en-US/docs/Web/CSS/::first-line) (selects the first line of an element's text), or [`::selection`](/en-US/docs/Web/CSS/::selection) (selects the text currently highlighted by the cursor).
+> Bear in mind that the text inside an element is all affected as one single entity. You can't select and style subsections of text unless you wrap them in an appropriate element (such as a {{htmlelement("span")}} or {{htmlelement("strong")}}), or use a text-specific pseudo-element like {{cssxref("::first-letter")}} (selects the first letter of an element's text), {{cssxref("::first-line")}} (selects the first line of an element's text), or {{cssxref("::selection")}} (selects the text currently highlighted by the cursor).
 
 ## Fonts
 
@@ -307,7 +307,7 @@ In our previous module's [CSS values and units](/en-US/docs/Learn_web_developmen
 
 - `px` (pixels): The number of pixels high you want the text to be. This is an absolute unit — it results in the same final computed value for the font on the page in pretty much any situation.
 - `em`s: 1 `em` is equal to the font size set on the parent element of the current element we are styling (more specifically, the width of a capital letter M contained inside the parent element). This can become tricky to work out if you have a lot of nested elements with different font sizes set, but it is doable, as you'll see below. Why bother? It is quite natural once you get used to it, and you can use `em` to size everything, not just text. You can have an entire website sized using `em`, which makes maintenance easy.
-- `rem`s: These work just like `em`, except that 1 `rem` is equal to the font size set on the root element of the document (i.e., {{htmlelement("html")}}), not the parent element. This makes doing the maths to work out your font sizes much easier.
+- `rem`s: These work just like `em`, except that 1 `rem` is equal to the font size set on the root element of the document (i.e., {{htmlelement("html")}}), not the parent element. This makes doing the math to work out your font sizes much easier.
 
 The `font-size` of an element is inherited from that element's parent element. This all starts with the root element of the entire document — {{htmlelement("html")}} — the standard `font-size` of which is set to `16px` across browsers. Any paragraph (or another element that doesn't have a different size set by the browser) inside the root element will have a final size of `16px`. Other elements may have different default sizes. For example, an {{htmlelement("Heading_Elements", "h1")}} element has a size of `2em` set by default, so it will have a final size of `32px`.
 
@@ -322,7 +322,7 @@ Things become more tricky when you start altering the font size of nested elemen
 </article>
 ```
 
-You would need to set its `em` value to 20/24, or 0.83333333 `em`. The maths can be complicated, so you need to be careful about how you style things. It is best to use `rem` where you can to keep things simple, and avoid setting the `font-size` of container elements where possible.
+You would need to set its `em` value to 20/24, or 0.83333333 `em`. The math can be complicated, so you need to be careful about how you style things. It is best to use `rem` where you can to keep things simple, and avoid setting the `font-size` of container elements where possible.
 
 ### Font style, font weight, text transform, and text decoration
 
@@ -393,7 +393,7 @@ The four properties are as follows:
 1. The horizontal offset of the shadow from the original text — this can take most available CSS [length and size units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#lengths), but you'll most commonly use `px`; positive values move the shadow right, and negative values left. This value has to be included.
 2. The vertical offset of the shadow from the original text. This behaves similarly to the horizontal offset, except that it moves the shadow up/down, not left/right. This value has to be included.
 3. The blur radius: a higher value means the shadow is dispersed more widely. If this value is not included, it defaults to 0, which means no blur. This can take most available CSS [length and size units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#lengths).
-4. The base color of the shadow, which can take any [CSS color unit](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#color). If not included, it defaults to [`currentColor`](/en-US/docs/Web/CSS/color_value#currentcolor_keyword), i.e., the shadow's color is taken from the element's [`color`](/en-US/docs/Web/CSS/color) property.
+4. The base color of the shadow, which can take any [CSS color unit](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#color). If not included, it defaults to [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword), i.e., the shadow's color is taken from the element's {{cssxref("color")}} property.
 
 #### Multiple shadows
 

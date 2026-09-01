@@ -2,7 +2,7 @@
 title: 416 Range Not Satisfiable
 slug: Web/HTTP/Reference/Status/416
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.416
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#status.416
 sidebar: http
 ---
 

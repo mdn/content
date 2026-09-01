@@ -25,7 +25,7 @@ transferFromImageBitmap(bitmap)
 ### Parameters
 
 - `bitmap`
-  - : An {{domxref("ImageBitmap")}} object to transfer.
+  - : An {{domxref("ImageBitmap")}} object to transfer, or `null`. If the value is `null`, the canvas is reset to blank.
 
 ### Return value
 

@@ -29,5 +29,5 @@ A CSS property's effects can be either one-dimensional or two-dimensional. For e
 
 ## See also
 
-- [CSS logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values) module
-- [Basic concepts of logical properties and values](/en-US/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values)
+- [CSS logical properties and values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values) module
+- [Basic concepts of logical properties and values](/en-US/docs/Web/CSS/Guides/Logical_properties_and_values/Basic_concepts)

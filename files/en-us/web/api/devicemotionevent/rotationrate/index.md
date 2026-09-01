@@ -21,12 +21,12 @@ The `rotationRate` property is a read only object describing the rotation
 rates of the device around each of its axes:
 
 - `alpha`
+  - : The rate at which the device is rotating about its X axis; that is, front to back.
+- `beta`
+  - : The rate at which the device is rotating about its Y axis; that is, side to side.
+- `gamma`
   - : The rate at which the device is rotating about its Z axis; that is, being twisted
     about a line perpendicular to the screen.
-- `beta`
-  - : The rate at which the device is rotating about its X axis; that is, front to back.
-- `gamma`
-  - : The rate at which the device is rotating about its Y axis; that is, side to side.
 
 ## Specifications
 

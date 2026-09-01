@@ -1,5 +1,6 @@
 ---
-title: <input type="password">
+title: '`<input type="password">` HTML attribute value'
+short-title: <input type="password">
 slug: Web/HTML/Reference/Elements/input/password
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_password
@@ -44,7 +45,7 @@ Both approaches help a user check that they entered the intended password, which
 
 > [!NOTE]
 > Any forms involving sensitive information like passwords (such as login forms) should be served over HTTPS.
-> Many browsers now implement mechanisms to warn against insecure login forms; see [Insecure passwords](/en-US/docs/Web/Security/Insecure_passwords).
+> Many browsers now implement mechanisms to warn against insecure login forms.
 
 ## Value
 
@@ -312,15 +313,6 @@ ssn.oninput = (event) => {
     <tr>
       <td><strong>DOM interface</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
-        and
-        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>

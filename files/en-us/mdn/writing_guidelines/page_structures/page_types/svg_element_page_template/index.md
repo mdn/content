@@ -46,7 +46,6 @@ sidebar: mdnsidebar
 >
 >     Note that you may first need to create/update an entry for the element in our [Browser compat data repo](https://github.com/mdn/browser-compat-data), and the entry will need to include specification information.
 >     See our [guide on how to do this](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
->
 > - **sidebar**
 >   - : This is `svgref` for all SVG guide and reference pages.
 >     See [Page structures: Sidebars](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars) for details.
@@ -86,7 +85,7 @@ _To use this macro, remove the backticks and backslash in the markdown file._
 
 ### Global attributes
 
-- [Generic attributes](/en-US/docs/Web/SVG/Reference/Attribute#generic_attributes)
+- [Core attributes](/en-US/docs/Web/SVG/Reference/Attribute#core_attributes)
 - [Event attributes](/en-US/docs/Web/SVG/Reference/Attribute#event_attributes)
 - [Presentation attributes](/en-US/docs/Web/SVG/Reference/Attribute#presentation_attributes)
 - {{SVGAttr("class")}}

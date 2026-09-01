@@ -37,7 +37,7 @@ browser.action.getBadgeBackgroundColor(
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with the retrieved color as a {{WebExtAPIRef('action.ColorArray')}}.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with the retrieved color as an {{WebExtAPIRef('action.ColorArray')}}.
 
 ## Examples
 

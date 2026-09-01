@@ -55,7 +55,7 @@ In the following code snippet, we open a read/write transaction on our database 
 one specific record from object store using `get()` — a sample record with
 the key "Walk dog". Once this data object is retrieved, you could then update it using
 normal JavaScript, then put it back into the database using a
-{{domxref("IDBObjectStore.put")}} operation. For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app
+{{domxref("IDBObjectStore.put", "put()")}} operation. For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app
 ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js

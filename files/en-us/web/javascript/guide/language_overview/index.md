@@ -35,7 +35,7 @@ Functions aren't special data structures in JavaScript — they are just a speci
 
 JavaScript has two built-in numeric types: Number and BigInt.
 
-The Number type is a [IEEE 754 64-bit double-precision floating point value](https://en.wikipedia.org/wiki/Double_precision_floating-point_format), which means integers can be safely represented between [-(2<sup>53</sup> − 1)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER) and [2<sup>53</sup> − 1](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) without loss of precision, and floating point numbers can be stored all the way up to [1.79 × 10<sup>308</sup>](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE). Within numbers, JavaScript does not distinguish between floating point numbers and integers.
+The Number type is an [IEEE 754 64-bit double-precision floating point value](https://en.wikipedia.org/wiki/Double_precision_floating-point_format), which means integers can be safely represented between [-(2<sup>53</sup> − 1)](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER) and [2<sup>53</sup> − 1](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER) without loss of precision, and floating point numbers can be stored all the way up to [1.79 × 10<sup>308</sup>](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_VALUE). Within numbers, JavaScript does not distinguish between floating point numbers and integers.
 
 ```js
 console.log(3 / 2); // 1.5, not 1

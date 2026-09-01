@@ -110,7 +110,7 @@ Start the development server and navigate to the admin site in your local web br
 
 ![Admin site - add groups or users](admin_authentication_add.png)
 
-First lets create a new group for our library members.
+First let's create a new group for our library members.
 
 1. Click the **Add** button (next to Group) to create a new _Group_; enter the **Name** "Library Members" for the group.
    ![Admin site - add group](admin_authentication_add_group.png)
@@ -140,7 +140,11 @@ That's it! Now you have a "normal library member" account that you will be able 
 
 Django provides almost everything you need to create authentication pages to handle login, log out, and password management "out of the box". This includes a URL mapper, views and forms, but it does not include the templates — we have to create our own!
 
-In this section, we show how to integrate the default system into the _LocalLibrary_ website and create the templates. We'll put them in the main project URLs.
+In this section, we show how to integrate the default system into the _LocalLibrary_ website and create the templates.
+
+> [!NOTE]
+> Django does not include a built-in authentication view for initial user registration ("signup").
+> You can create one yourself if needed, but for this tutorial we assume that only librarians are allowed to register users, and that they would do so using the Django admin interface.
 
 > [!NOTE]
 > You don't have to use any of this code, but it is likely that you'll want to because it makes things a lot easier.
@@ -293,7 +297,7 @@ LOGIN_REDIRECT_URL = '/'
 ### Logout template
 
 If you navigate to the logout URL (`http://127.0.0.1:8000/accounts/logout/`) then you'll get an error because Django 5 does not allow logout using `GET`, only `POST`.
-We'll add a form you can use to logout in a minute, but first we'll create the page that users are taken to after logging out.
+We'll add a form you can use to log out in a minute, but first we'll create the page that users are taken to after logging out.
 
 Create and open **/django-locallibrary-tutorial/templates/registration/logged_out.html**. Copy in the text below:
 
@@ -457,7 +461,7 @@ As you can see, we use `if` / `else` / `endif` template tags to conditionally di
 
 We create the login link URL using the `url` template tag and the name of the `login` URL configuration. Note also how we have appended `?next=\{{ request.path }}` to the end of the URL. What this does is add a URL parameter `next` containing the address (URL) of the _current_ page, to the end of the linked URL. After the user has successfully logged in, the view will use this `next` value to redirect the user back to the page where they first clicked the login link.
 
-The logout template code is different, because from Django 5 to logout you must `POST` to the `admin:logout` URL, using a form with a button.
+The logout template code is different, because from Django 5 to log out you must `POST` to the `admin:logout` URL, using a form with a button.
 By default this would render as a button, but you can style the button to display as a link.
 For this example we're using _Bootstrap_, so we make the button look like a link by applying `class="btn btn-link"`.
 You also need to append the following styles to **/django-locallibrary-tutorial/catalog/static/css/styles.css** in order to correctly position the logout link next to all the other sidebar links:

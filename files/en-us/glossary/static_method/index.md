@@ -29,7 +29,6 @@ myNotification.close();
 
 ## See also
 
-- [Static Method](https://www.techopedia.com/definition/24034/static-method-java) on Techopedia
 - [static](/en-US/docs/Web/JavaScript/Reference/Classes/static)
 - Related glossary terms:
   - {{Glossary("Object")}}

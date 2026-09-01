@@ -30,7 +30,7 @@ The **`LanguageDetector`** interface of the {{domxref("Translator and Language D
 ## Instance methods
 
 - {{domxref("LanguageDetector.destroy", "destroy()")}} {{Experimental_Inline}}
-  - : Destroys the `LanguageDetector` instance it is called on.
+  - : Releases the resources assigned to the `LanguageDetector` instance it is called on and stops any further activity on it.
 - {{domxref("LanguageDetector.detect", "detect()")}} {{Experimental_Inline}}
   - : Detects the closest matching language or languages that a given text string is most likely to be written in.
 - {{domxref("LanguageDetector.measureInputUsage", "measureInputUsage()")}} {{Experimental_Inline}}

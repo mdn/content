@@ -3,12 +3,10 @@ title: "Navigation: activation property"
 short-title: activation
 slug: Web/API/Navigation/activation
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.Navigation.activation
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`activation`** read-only property of the {{domxref("Navigation")}} interface returns a {{domxref("NavigationActivation")}} object containing information about the most recent cross-document navigation, which "activated" this Document. The property will stay constant during same-document navigations.
 

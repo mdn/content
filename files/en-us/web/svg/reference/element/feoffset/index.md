@@ -17,6 +17,7 @@ The **`<feOffset>`** [SVG](/en-US/docs/Web/SVG) filter primitive enables offsett
 - {{SVGAttr("in")}}
 - {{SVGAttr("dx")}}
 - {{SVGAttr("dy")}}
+- [Filter primitive attributes](/en-US/docs/Web/SVG/Reference/Attribute#filter_primitive_attributes_presentation_attributes): {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}, {{SVGAttr("result")}}
 
 ## DOM Interface
 
@@ -29,7 +30,7 @@ This element implements the {{domxref("SVGFEOffsetElement")}} interface.
 ```html
 <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <filter id="offset" width="180" height="180">
+    <filter id="offset" width="180" height="180" filterUnits="userSpaceOnUse">
       <feOffset in="SourceGraphic" dx="60" dy="60" />
     </filter>
   </defs>

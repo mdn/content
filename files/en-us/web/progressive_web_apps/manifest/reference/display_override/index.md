@@ -14,7 +14,7 @@ The [`display`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/display)
 
 The `display_override` member solves this by letting the developer provide a sequence of display modes that the browser will consider before using the `display` member. Its value is an array of display modes that are considered in-order, and the first supported display mode is applied.
 
-### Values
+## Values
 
 Display override objects are display-mode strings, the possible values are:
 

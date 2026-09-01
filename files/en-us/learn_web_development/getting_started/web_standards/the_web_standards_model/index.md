@@ -110,7 +110,7 @@ Open standards enable the web to remain a freely-available public resource, wher
 
 ### Accessible and interoperable
 
-The web and web browsers are fundamentally designed so that web content is **accessible** to people with disabilities. It was originally envisaged as a great leveller, enabling people to access information regardless of circumstance. This means that, for example:
+The web and web browsers are fundamentally designed so that web content is **accessible** to people with disabilities. It was originally envisaged as a great leveler, enabling people to access information regardless of circumstance. This means that, for example:
 
 - People who are unable to use a mouse or pointing device can use the keyboard to navigate the web.
 - People who are visually impaired can magnify content, or use a program called a **screen reader** to read content out to them and describe controls in a way that makes sense.
@@ -148,7 +148,7 @@ There are other technologies used on the web, for example:
 - [SVG](/en-US/docs/Web/SVG) for creating and manipulating vector graphics.
 - [MathML](/en-US/docs/Web/MathML) for describing mathematical formulae.
 
-However, HTML, CSS, and JavaScript by far the most important technologies to learn, so we will focus mainly on those in our learning pathway.
+However, HTML, CSS, and JavaScript are by far the most important technologies to learn, so we will focus mainly on those in our learning pathway.
 
 ## Tools
 
@@ -174,7 +174,7 @@ These technologies are not considered to be "web standards" — they are develop
 Another way that client-side and server-side languages are often described is **static** and **dynamic**:
 
 - A plain HTML file is stored on the server. When requested, it is delivered to the client, unchanged, and rendered by the browser. Because it does not change, it is referred to as "static".
-- When server-side code (for example, a Python script or an ASP.NET page) generates some HTML containing data and returns that HTML to the client, the contents of the HTML change depending on what the server-side code does. It is therefore referred to as "dynamic".
+- Server-side code (such as a Python script or an ASP.NET page) generates HTML content that varies depending on what data is passed to it, and then returns that HTML to the client. It is therefore referred to as "dynamic". For example, the same weather forecast page can show different data depending on whether the weather is sunny or rainy, what location the user is in, and what their preferences are (some users may want to see pollen count and humidity, whereas others might not care about that data and might select preferences to hide it).
 
 There is often a bit of overlap between the concepts of static and dynamic code. Server-side languages usually define HTML structures inside a template file, which tend to be mostly static HTML with some special dynamic sections included that change depending on what data needs to be inserted.
 

@@ -3,10 +3,12 @@ title: "XSLTProcessor: importStylesheet() method"
 short-title: importStylesheet()
 slug: Web/API/XSLTProcessor/importStylesheet
 page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.XSLTProcessor.importStylesheet
 ---
 
-{{APIRef("XSLT")}}
+{{APIRef("DOM")}}
 
 The `importStylesheet()` method of the {{domxref("XSLTProcessor")}} interface imports an XSLT stylesheet for the processor.
 

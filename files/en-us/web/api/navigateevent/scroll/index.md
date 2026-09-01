@@ -3,12 +3,10 @@ title: "NavigateEvent: scroll() method"
 short-title: scroll()
 slug: Web/API/NavigateEvent/scroll
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.NavigateEvent.scroll
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`scroll()`** method of the
 {{domxref("NavigateEvent")}} interface can be called to manually trigger the browser-driven scrolling behavior that occurs in response to the navigation, if you want it to happen before the navigation handling has completed.
@@ -30,7 +28,7 @@ None (`undefined`).
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown if the current {{domxref("Document")}} is not yet active, or if the navigation has been cancelled.
+  - : Thrown if the current {{domxref("Document")}} is not yet active, or if the navigation has been canceled.
 - `SecurityError` {{domxref("DOMException")}}
   - : Thrown if the event was dispatched by a {{domxref("EventTarget.dispatchEvent", "dispatchEvent()")}} call, rather than the user agent.
 

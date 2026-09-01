@@ -101,7 +101,7 @@ Our finished example will look (and function) something like the following:
     <button class="stop" data-icon="S" aria-label="stop"></button>
     <div class="timer">
       <div></div>
-      <span aria-label="timer">00:00</span>
+      <span>00:00</span>
     </div>
     <button class="rwd" data-icon="B" aria-label="rewind"></button>
     <button class="fwd" data-icon="F" aria-label="fast forward"></button>
@@ -399,7 +399,7 @@ To get started with this example, follow these steps:
            <button class="stop" data-icon="S" aria-label="stop"></button>
            <div class="timer">
              <div></div>
-             <span aria-label="timer">00:00</span>
+             <span>00:00</span>
            </div>
            <button class="rwd" data-icon="B" aria-label="rewind"></button>
            <button class="fwd" data-icon="F" aria-label="fast forward"></button>

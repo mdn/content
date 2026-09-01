@@ -21,9 +21,13 @@ The values of CSS are represented untyped, that is using {{JSxRef("String")}} ob
 - {{DOMxRef("CSS")}}
 - {{DOMxRef("CSSConditionRule")}}
 - {{DOMxRef("CSSCounterStyleRule")}}
+- {{DOMxRef("CSSFontFaceDescriptors")}}
 - {{DOMxRef("CSSFontFaceRule")}}
 - {{DOMxRef("CSSFontFeatureValuesMap")}}
 - {{DOMxRef("CSSFontFeatureValuesRule")}}
+- {{DOMxRef("CSSFunctionDeclarations")}}
+- {{DOMxRef("CSSFunctionDescriptors")}}
+- {{DOMxRef("CSSFunctionRule")}}
 - {{DOMxRef("CSSGroupingRule")}}
 - {{DOMxRef("CSSImportRule")}}
 - {{DOMxRef("CSSKeyframeRule")}}
@@ -60,6 +64,7 @@ Several other interfaces are also extended by the CSSOM-related specifications: 
 
 - {{DOMxRef("CSSImageValue")}}
 - {{DOMxRef("CSSKeywordValue")}}
+- {{DOMxRef("CSSMathClamp")}}
 - {{DOMxRef("CSSMathInvert")}}
 - {{DOMxRef("CSSMathMax")}}
 - {{DOMxRef("CSSMathMin")}}

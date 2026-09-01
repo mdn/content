@@ -1,6 +1,9 @@
 # Do not add comments to this file. They will be lost.
 
 sidebar:
+  - type: section
+    link: /Games
+    title: Games
   - title: Introduction
     details: closed
     children:

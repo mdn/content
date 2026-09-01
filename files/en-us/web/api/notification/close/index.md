@@ -38,7 +38,7 @@ None ({{jsxref("undefined")}}).
 
 In the following snippet, we have a function that when called creates an
 `options` object and then a new notification. At the end of the function, it
-also calls `close()` inside a
+also calls `close()` inside an
 {{domxref("EventTarget.addEventListener","addEventListener()")}} function to remove the
 notification when the relevant content has been read on the webpage.
 

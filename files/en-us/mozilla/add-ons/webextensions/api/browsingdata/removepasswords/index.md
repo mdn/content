@@ -10,10 +10,8 @@ Clears saved passwords.
 
 You can use the `removalOptions` parameter, which is a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, to:
 
-- clear only passwords that were saved after a given time
-- control whether to clear passwords that were saved on normal web pages or to clear passwords that were saved on hosted apps and extensions as well.
-
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+- clear passwords that were saved after a given time.
+- control whether to clear passwords that were saved on web pages or web pages and extensions.
 
 ## Syntax
 
@@ -26,11 +24,11 @@ let removing = browser.browsingData.removePasswords(
 ### Parameters
 
 - `removalOptions`
-  - : `object`. A {{WebExtAPIRef("browsingData.RemovalOptions")}} object, which may be used to clear only passwords that were saved after a given time, and whether to clear passwords that were saved on normal web pages or to clear passwords that were saved on hosted apps and extensions as well.
+  - : `object`. A {{WebExtAPIRef("browsingData.RemovalOptions")}} object, which can be used to clear passwords that were saved after a given time, and control whether to clear passwords that were saved on web pages or web pages and extensions.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the removal has finished. If any error occurs, the promise will be rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with no arguments when the removal has finished. If any error occurs, the promise is rejected with an error message.
 
 ## Examples
 

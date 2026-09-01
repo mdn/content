@@ -23,7 +23,7 @@ ImageDecoder.isTypeSupported(type)
 
 ### Return value
 
-A {{jsxref("promise")}} that resolves with a boolean value indicating whether images with a format of `type` can be decoded by the API.
+A {{jsxref("Promise")}} that resolves with a boolean value indicating whether images with a format of `type` can be decoded by the API.
 
 ## Examples
 

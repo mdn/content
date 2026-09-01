@@ -6,21 +6,19 @@ page-type: web-api-instance-property
 browser-compat: api.CSSUnitValue.unit
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`CSSUnitValue.unit`** read-only property
-of the {{domxref("CSSUnitValue")}} interface returns a string
-indicating the type of unit.
+The **`unit`** read-only property of the {{domxref("CSSUnitValue")}} interface returns a string indicating the [unit type](/en-US/docs/Web/CSS/Guides/Values_and_units#units).
 
 ## Value
 
-A string.
+A string indicating the unit type, such as `"em"`, `"px"`, `"%"`, etc.
 
 ## Examples
 
-The following creates a {{domxref('CSSPositionValue')}} from individual
-`CSSUnitValue` constructors, then queries the
-`CSSUnitValue.unit`.
+### Basic usage
+
+The following code creates a {{domxref('CSSPositionValue')}} from individual `CSSUnitValue` constructors, then queries the `CSSUnitValue.unit`.
 
 ```js
 const pos = new CSSPositionValue(
@@ -43,6 +41,7 @@ console.log(pos.y.unit); // "em"
 ## See also
 
 - {{domxref('CSSUnitValue.value')}}
-- [Dimensions in CSS values and units](/en-US/docs/Web/CSS/CSS_values_and_units/Numeric_data_types#dimensions)
+- [CSS numeric data types](/en-US/docs/Web/CSS/Guides/Values_and_units/Numeric_data_types)
+- [CSS values and units](/en-US/docs/Web/CSS/Guides/Values_and_units), a listing of all possible unit types
 - [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
 - [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)

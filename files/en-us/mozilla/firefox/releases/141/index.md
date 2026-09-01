@@ -1,5 +1,5 @@
 ---
-title: Firefox 141 for developers
+title: Firefox 141 release notes for developers
 short-title: Firefox 141
 slug: Mozilla/Firefox/Releases/141
 page-type: firefox-release-notes
@@ -65,7 +65,7 @@ Firefox 141 was released on [July 22, 2025](https://whattrainisitnow.com/release
 
 #### Marionette
 
-- To avoid unnecessary 200ms delays for each call to `WebDriver:ElementClick` - even when no navigation occurs - we lowered the click-and-wait timeout for a potential navigation to 50ms for backward compatibility. The [timeout is now also configurable](https://firefox-source-docs.mozilla.org/testing/marionette/Prefs.html#marionette-navigate-after-click-timeout) and [can be completely disabled](https://firefox-source-docs.mozilla.org/testing/marionette/Prefs.html#marionette-navigate-after-click-enabled) by users through a preference ([Firefox bug 1972271](https://bugzil.la/1972271)).
+- To avoid unnecessary 200ms delays for each call to `WebDriver:ElementClick` - even when no navigation occurs - we lowered the click-and-wait timeout for a potential navigation to 50ms for backward compatibility. The [timeout is now also configurable](https://firefox-source-docs.mozilla.org/remote/marionette/Prefs.html#marionette-navigate-after-click-timeout) and [can be completely disabled](https://firefox-source-docs.mozilla.org/remote/marionette/Prefs.html#marionette-navigate-after-click-enabled) by users through a preference ([Firefox bug 1972271](https://bugzil.la/1972271)).
 - Added support in Marionette for interacting with CHIPS cookies (Cookies Having Independent Partitioned State) ([Firefox bug 1972830](https://bugzil.la/1972830)).
 
 ## Changes for add-on developers

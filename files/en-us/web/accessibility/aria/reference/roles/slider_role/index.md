@@ -70,7 +70,7 @@ It is not a requirement that the thumbs in multi-thumb sliders be dependent on t
 
 ### All descendants are presentational
 
-There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `slider`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) to all descendant elements of any `slider` element as it is a role that does not support semantic children.
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `slider`. To deal with this limitation, browsers automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) to all descendant elements of any `slider` element as it is a role that does not support semantic children.
 
 For example, consider the following `slider` element, which contains a heading.
 
@@ -187,7 +187,7 @@ Using semantic HTML, this could have been written as:
 
 By using {{HTMLElement('input')}}, we get an already-styled range-input widget with keyboard focus, focus styling, keyboard interactions, and `value` updated on user interaction for free. We still need to use JavaScript to change the `aria-valuetext` and the value of the {{HTMLElement('output')}} element.
 
-There are a few ways to make a range input vertical. In this example, we used [CSS transforms](/en-US/docs/Web/CSS/transform).
+There are a few ways to make a range input vertical. In this example, we used [CSS transforms](/en-US/docs/Web/CSS/Reference/Properties/transform).
 
 ## Best practices
 

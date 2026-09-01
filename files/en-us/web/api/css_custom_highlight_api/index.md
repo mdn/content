@@ -97,6 +97,12 @@ The final step is to style the registered highlights. This is done by using the 
 }
 ```
 
+### Accessibility
+
+The custom highlights do not inherently provide semantic meaning in the document structure. The {{domxref("Highlight/type", "type")}} attribute exposes semantics (such as spelling or grammar errors) to assistive technologies, but support may vary across platforms and the type used.
+
+If compatibility with assistive technologies is a concern, consider using semantic HTML elements such as {{HTMLElement("mark")}} or providing additional accessible cues for highlights that communicate important information.
+
 ## Interfaces
 
 - {{domxref("Highlight")}}
@@ -234,7 +240,7 @@ The result is shown below. Type text within the search field to highlight matche
 
 ## See also
 
-- [CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web](https://css-tricks.com/css-custom-highlight-api-early-look/)
 - HTML [`contentEditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute
 - CSS {{cssxref("pseudo-elements")}}
-- [CSS custom highlight API](/en-US/docs/Web/CSS/CSS_custom_highlight_API) module
+- [CSS custom highlight API](/en-US/docs/Web/CSS/Guides/Custom_highlight_API) module
+- [CSS Custom Highlight API: The Future of Highlighting Text Ranges on the Web](https://css-tricks.com/css-custom-highlight-api-early-look/) via CSS-Tricks (2022)

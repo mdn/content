@@ -88,7 +88,8 @@ The `local.get`/`local.set` commands refer to the item to be got/set by its nume
 (func (param i32) (param f32) (local f64)
   local.get 0
   local.get 1
-  local.get 2)
+  local.get 2
+)
 ```
 
 The instruction `local.get 0` would get the i32 parameter, `local.get 1` would get the f32 parameter, and `local.get 2` would get the f64 local.
@@ -116,7 +117,8 @@ When a function is called, it starts with an empty stack, which is gradually fil
   (result i32)
   local.get $p
   local.get $p
-  i32.add)
+  i32.add
+)
 ```
 
 The stack contains exactly one `i32` value — the result of the expression (`$p + $p`), which is handled by `i32.add`. The return value of a function is just the final value left on the stack.
@@ -132,7 +134,9 @@ The function body is a list of instructions that are followed as the function is
   (func (param $lhs i32) (param $rhs i32) (result i32)
     local.get $lhs
     local.get $rhs
-    i32.add))
+    i32.add
+  )
+)
 ```
 
 This function takes two parameters, adds them together, and returns the result.
@@ -164,7 +168,8 @@ So our final module (for now) looks like this:
   (func $add (param $lhs i32) (param $rhs i32) (result i32)
     local.get $lhs
     local.get $rhs
-    i32.add)
+    i32.add
+  )
   (export "add" (func $add))
 )
 ```
@@ -193,11 +198,14 @@ The `call` instruction calls a single function, given its index or name. For exa
 ```wat
 (module
   (func $getAnswer (result i32)
-    i32.const 42)
+    i32.const 42
+  )
   (func (export "getAnswerPlus1") (result i32)
     call $getAnswer
     i32.const 1
-    i32.add))
+    i32.add
+  )
+)
 ```
 
 > [!NOTE]
@@ -228,7 +236,9 @@ We have already seen JavaScript calling WebAssembly functions, but what about We
   (import "console" "log" (func $log (param i32)))
   (func (export "logIt")
     i32.const 13
-    call $log))
+    call $log
+  )
+)
 ```
 
 WebAssembly has a two-level namespace, so the import statement here imports the `log` function from the `console` module. You can also see that the exported `logIt` function calls the imported function using the `call` instruction we introduced above.
@@ -270,10 +280,11 @@ In WebAssembly text format, it looks something like this (see [global.wat](https
 (module
   (global $g (import "js" "global") (mut i32))
   (func (export "getGlobal") (result i32)
-    (global.get $g))
+    (global.get $g)
+  )
   (func (export "incGlobal")
-    (global.set $g
-      (i32.add (global.get $g) (i32.const 1))))
+    (global.set $g (i32.add (global.get $g) (i32.const 1)))
+  )
 )
 ```
 
@@ -291,12 +302,12 @@ The examples above show how to work with numbers in assembly code, adding them t
 
 For working with strings and other more complex data types, we use `memory`, which can be created in either WebAssembly or JavaScript, and shared between environments (more recent versions of WebAssembly can also use [Reference types](#reference_types)).
 
-In WebAssembly, `memory` is just a large contiguous, mutable array of raw bytes that can grow over time (see [linear memory](https://webassembly.github.io/spec/core/intro/overview.html?highlight=linear+memory) in the specification). WebAssembly contains [memory instructions](/en-US/docs/WebAssembly/Reference/Memory) like [`i32.load`](/en-US/docs/WebAssembly/Reference/Memory/Load) and [`i32.store`](/en-US/docs/WebAssembly/Reference/Memory/Store) for reading and writing bytes between the stack and any location in a memory.
+In WebAssembly, `memory` is just a large contiguous, mutable array of raw bytes that can grow over time (see [linear memory](https://webassembly.github.io/spec/core/intro/overview.html?highlight=linear+memory) in the specification). WebAssembly contains [memory instructions](/en-US/docs/WebAssembly/Reference/Memory) like [`i32.load`](/en-US/docs/WebAssembly/Reference/Memory/load) and [`i32.store`](/en-US/docs/WebAssembly/Reference/Memory/store) for reading and writing bytes between the stack and any location in a memory.
 
 From JavaScript's point of view, it's as though memory is all inside one big growable {{jsxref("ArrayBuffer")}}.
 JavaScript can create WebAssembly linear memory instances via the [`WebAssembly.Memory()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory) interface and export them to a memory instance, or access a memory instance created within the WebAssembly code and exported. JavaScript `Memory` instances have a [`buffer`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory/buffer) getter, which returns an `ArrayBuffer` that points at the whole linear memory.
 
-Memory instances can also grow, for example via the [`Memory.grow()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory/grow) method in JavaScript or [`memory.grow`](/en-US/docs/WebAssembly/Reference/Memory/Grow) in the WebAssembly.
+Memory instances can also grow, for example via the [`Memory.grow()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory/grow) method in JavaScript or [`memory.grow`](/en-US/docs/WebAssembly/Reference/Memory/grow) in the WebAssembly.
 Since `ArrayBuffer` objects can't change size, the current `ArrayBuffer` is detached and a new `ArrayBuffer` is created to point to the newer, bigger memory.
 
 Note that when you create the memory, you need to define the initial size, and you can optionally specify the maximum size to which the memory can grow.
@@ -434,7 +445,7 @@ More recent implementations allow you to use multiple memory objects in your Web
 Multiple memories can be useful for separating data that should be treated differently from other application data, such as public vs private data, data that needs to be persisted, and data that needs to be shared between threads.
 It may also be useful for very large applications that need to scale beyond the Wasm 32-bit address space, and for other purposes.
 
-Memories that are made available to the WebAssembly code, either declared directly or imported, are given a zero-indexed, sequentially allocated memory index number. All the [memory instructions](/en-US/docs/WebAssembly/Reference/Memory), such as [`load`](/en-US/docs/WebAssembly/Reference/Memory/Load) or [`store`](/en-US/docs/WebAssembly/Reference/Memory/Store), can reference any particular memory via its index so you can control which memory you're working with.
+Memories that are made available to the WebAssembly code, either declared directly or imported, are given a zero-indexed, sequentially allocated memory index number. All the [memory instructions](/en-US/docs/WebAssembly/Reference/Memory), such as [`load`](/en-US/docs/WebAssembly/Reference/Memory/load) or [`store`](/en-US/docs/WebAssembly/Reference/Memory/store), can reference any particular memory via its index so you can control which memory you're working with.
 
 The memory instructions have a default index of 0, the index of the first memory added to the WebAssembly instance.
 As a result, if you only add one memory, your code doesn't have to specify the index.
@@ -526,7 +537,6 @@ The complete module is shown below:
     i32.const 13  ;; string length 13
     call $logMemory
   )
-
 )
 ```
 
@@ -647,10 +657,12 @@ function module() {
 Moving on, now we've defined the table we need to use it somehow. Let's use this section of code to do so:
 
 ```wat
+...
 (type $return_i32 (func (result i32))) ;; if this was f32, type checking would fail
 (func (export "callByIndex") (param $i i32) (result i32)
   local.get $i
-  call_indirect (type $return_i32))
+  call_indirect (type $return_i32)
+)
 ```
 
 - The `(type $return_i32 (func (result i32)))` block specifies a type, with a reference name. This type is used when performing type checking of the table function reference calls later on. Here we are saying that the references need to be functions that return an `i32` as a result.
@@ -680,14 +692,17 @@ The full module looks like this, and can be found in our [wasm-table.wat](https:
 (module
   (table 2 funcref)
   (func $f1 (result i32)
-    i32.const 42)
+    i32.const 42
+  )
   (func $f2 (result i32)
-    i32.const 13)
+    i32.const 13
+  )
   (elem (i32.const 0) $f1 $f2)
   (type $return_i32 (func (result i32)))
   (func (export "callByIndex") (param $i i32) (result i32)
     local.get $i
-    call_indirect (type $return_i32))
+    call_indirect (type $return_i32)
+  )
 )
 ```
 
@@ -725,8 +740,9 @@ Our `.wat` examples look like so:
   (import "js" "table" (table 1 funcref))
   (elem (i32.const 0) $shared0func)
   (func $shared0func (result i32)
-   i32.const 0
-   i32.load)
+    i32.const 0
+    i32.load
+  )
 )
 ```
 
@@ -742,7 +758,8 @@ Our `.wat` examples look like so:
    i32.const 42
    i32.store  ;; store 42 at address 0
    i32.const 0
-   call_indirect (type $void_to_i32))
+   call_indirect (type $void_to_i32)
+  )
 )
 ```
 

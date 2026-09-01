@@ -16,7 +16,7 @@ The value of {{domxref("RTCInboundRtpStreamStats/fecPacketsReceived","fecPackets
 
 ## Value
 
-An positive integer value.
+A positive integer value.
 
 ## Specifications
 

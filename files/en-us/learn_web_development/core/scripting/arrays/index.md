@@ -193,7 +193,7 @@ console.log(cities); // [ "Manchester", "Carlisle" ]
 
 ## Accessing every item
 
-Very often you will want to access every item in the array. You can do this using the {{jsxref("statements/for...of","for...of")}} statement:
+Very often you will want to access every item in the array. You can do this using the {{jsxref("Statements/for...of","for...of")}} statement:
 
 ```js
 const birds = ["Parrot", "Falcon", "Owl"];

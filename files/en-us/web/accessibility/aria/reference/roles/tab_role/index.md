@@ -27,7 +27,7 @@ When elements with the `tab` role are selected or active they should have their 
 
 ### All descendants are presentational
 
-There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `tab`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) to all descendant elements of any `tab` element as it is a role that does not support semantic children.
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `tab`. To deal with this limitation, browsers automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) to all descendant elements of any `tab` element as it is a role that does not support semantic children.
 
 For example, consider the following `tab` element, which contains a heading.
 
@@ -119,7 +119,7 @@ All of the `tabpanel` elements have `tabindex="0"` to make them tabbable, and al
       role="tabpanel"
       tabindex="0"
       aria-labelledby="tab-2"
-      hidden="hidden">
+      hidden>
       <p>How to run this application on macOS</p>
     </div>
     <div
@@ -127,14 +127,14 @@ All of the `tabpanel` elements have `tabindex="0"` to make them tabbable, and al
       role="tabpanel"
       tabindex="0"
       aria-labelledby="tab-3"
-      hidden="hidden">
+      hidden>
       <p>How to run this application on Linux</p>
     </div>
   </div>
 </div>
 ```
 
-There is some basic styling applied that restyles the buttons and changes the [`z-index`](/en-US/docs/Web/CSS/z-index) of `tab` elements to give the illusion of it connecting to the `tabpanel` for active elements, and the illusion that inactive elements are behind the active `tabpanel`. You need to clearly distinguish the active tab from the inactive tabs, such as thicker borders or larger size.
+There is some basic styling applied that restyles the buttons and changes the {{cssxref("z-index")}} of `tab` elements to give the illusion of it connecting to the `tabpanel` for active elements, and the illusion that inactive elements are behind the active `tabpanel`. You need to clearly distinguish the active tab from the inactive tabs, such as thicker borders or larger size.
 
 ```css hidden
 .tabs {

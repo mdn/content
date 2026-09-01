@@ -10,10 +10,10 @@ browser-compat: api.CSSImportRule.styleSheet
 
 The read-only **`styleSheet`** property of the
 {{domxref("CSSImportRule")}} interface returns the CSS Stylesheet specified by the
-{{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule). This will be
+{{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules). This will be
 in the form of a {{domxref("CSSStyleSheet")}} object.
 
-An {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) always has
+An {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules) always has
 an associated stylesheet.
 
 ## Value

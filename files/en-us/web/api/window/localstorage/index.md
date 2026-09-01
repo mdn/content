@@ -20,7 +20,7 @@ A {{DOMxRef("Storage")}} object which can be used to access the current origin's
 
 - `SecurityError`
   - : Thrown in one of the following cases:
-    - The origin is not [a valid scheme/host/port tuple](/en-US/docs/Web/Security/Same-origin_policy#definition_of_an_origin). This can happen if the origin uses the `file:` or `data:` schemes, for example.
+    - The origin is not [a valid scheme/host/port tuple](/en-US/docs/Web/Security/Defenses/Same-origin_policy#definition_of_an_origin). This can happen if the origin uses the `file:` or `data:` schemes, for example.
     - The request violates a policy decision. For example, the user has configured the browsers to prevent the page from persisting data.
 
     Note that if the user blocks cookies, browsers will probably interpret this as an instruction to prevent the page from persisting data.
@@ -37,7 +37,7 @@ In all current browsers, `localStorage` seems to return a different object for e
 
 ## Examples
 
-The following snippet accesses the current domain's local {{DOMxRef("Storage")}} object and adds a data item to it using {{DOMxRef("Storage.setItem()")}}.
+The following snippet accesses the current domain's local {{DOMxRef("Storage")}} object and adds a data item to it using {{DOMxRef("Storage.setItem()")}}, or updates the item if one already exists for that key.
 
 ```js
 localStorage.setItem("myCat", "Tom");

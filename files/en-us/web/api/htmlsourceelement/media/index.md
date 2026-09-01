@@ -8,7 +8,7 @@ browser-compat: api.HTMLSourceElement.media
 
 {{APIRef("HTML DOM")}}
 
-The **`media`** property of the {{domxref("HTMLSourceElement")}} interface is a string representing the intended destination medium for the resource. The value is a [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), which is a comma separated list of media-types, media-features, and logical operators.
+The **`media`** property of the {{domxref("HTMLSourceElement")}} interface is a string representing the intended destination medium for the resource. The value is a [media query](/en-US/docs/Web/CSS/Guides/Media_queries/Using), which is a comma separated list of media-types, media-features, and logical operators.
 
 It reflects the `media` attribute of the {{HTMLElement("source")}} element.
 
@@ -19,11 +19,13 @@ A string.
 ## Examples
 
 ```html
-<source
-  id="el"
-  src="largeVideo.mov"
-  type="video/quicktime"
-  media="screen and (width >= 600px)" />
+<video>
+  <source
+    id="el"
+    src="largeVideo.mov"
+    type="video/quicktime"
+    media="screen and (width >= 600px)" />
+</video>
 ```
 
 ```js
@@ -50,4 +52,4 @@ el.media = "(width >= 800px)"; // Updates the media value
 - {{htmlelement("picture")}}
 - {{htmlelement("audio")}}
 - {{htmlelement("video")}}
-- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Using media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)

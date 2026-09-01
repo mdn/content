@@ -14,6 +14,14 @@ Like other filter primitives, it handles color components in the `linearRGB` {{g
 
 {{svginfo}}
 
+## Attributes
+
+- [Filter primitive attributes](/en-US/docs/Web/SVG/Reference/Attribute#filter_primitive_attributes_presentation_attributes): {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}, {{SVGAttr("result")}}
+
+## DOM Interface
+
+This element implements the {{domxref("SVGFEMergeElement")}} interface.
+
 ## Example
 
 ### SVG
@@ -43,10 +51,6 @@ Like other filter primitives, it handles color components in the `linearRGB` {{g
 ### Result
 
 {{EmbedLiveSample('Example', 200, 200)}}
-
-## DOM Interface
-
-This element implements the {{domxref("SVGFEMergeElement")}} interface.
 
 ## Specifications
 

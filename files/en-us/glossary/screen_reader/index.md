@@ -13,7 +13,7 @@ In terms of web {{glossary("accessibility")}}, most user agents provide an acces
 
 ### VoiceOver
 
-iOS and macOS comes with VoiceOver, a built-in screen reader. To access VoiceOver on macOS, go to System Settings > Accessibility > VoiceOver. You can also toggle VoiceOver on and off with fn + Command + F5. VoiceOver both reads aloud and displays content. The content read aloud is displayed in a dark grey box.
+iOS and macOS comes with VoiceOver, a built-in screen reader. To access VoiceOver on macOS, go to System Settings > Accessibility > VoiceOver. You can also toggle VoiceOver on and off with fn + Command + F5. VoiceOver both reads aloud and displays content. The content read aloud is displayed in a dark gray box.
 
 VoiceOver can also be used with commands shortcuts. See [VoiceOver general commands on Mac](https://support.apple.com/en-sg/guide/voiceover/cpvokys01/mac) for a complete list.
 
@@ -23,7 +23,7 @@ See [VoiceOver User Guide for Mac](https://support.apple.com/guide/voiceover/wel
 
 Narrator is a screen-reading application that's built into Windows 10 and Windows 11.
 
-See [Complete guide to Narrator](https://support.microsoft.com/en-us/windows/complete-guide-to-narrator-e4397a0d-ef4f-b386-d8ae-c172f109bdb1).
+See [Complete guide to Narrator](https://support.microsoft.com/en-US/accessibility/windows/narrator/complete-guide-to-narrator).
 
 ### ChromeVox
 

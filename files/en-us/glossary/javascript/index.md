@@ -5,7 +5,7 @@ page-type: glossary-definition
 sidebar: glossarysidebar
 ---
 
-JavaScript (or "JS") is a programming language used most often for dynamic client-side scripts on webpages, but it is also often used on the {{Glossary("Server","server")}}-side, using a runtime such as {{Glossary("Node.js")}}, {{Glossary("Deno")}}, and [Bun](https://bun.sh/).
+JavaScript (or "JS") is a programming language used most often for dynamic client-side scripts on webpages, but it is also often used on the {{Glossary("Server","server")}}-side, using a runtime such as {{Glossary("Node.js")}}, {{Glossary("Deno")}}, and [Bun](https://bun.com/).
 
 JavaScript **should not** be confused with the [Java programming language](<https://en.wikipedia.org/wiki/Java_(programming_language)>). Although _"Java"_ and _"JavaScript"_ are trademarks (or registered trademarks) of Oracle in the U.S. and other countries, the two programming languages are significantly different in their syntax, semantics, and use cases.
 
@@ -17,7 +17,7 @@ Conceived as a server-side language by Brendan Eich (then employed by the Netsca
 
 In November 1996, Netscape began working with Ecma International to make JavaScript an industry standard. Since then, the standardized JavaScript is called ECMAScript and specified under ECMA-262. The standard is constantly updated and implemented (a _living standard_).
 
-Recently, JavaScript's popularity has expanded even further through the successful [Node.js](https://nodejs.org/en) platform—the most popular cross-platform JavaScript runtime environment outside the browser. Node.js - built using [Chrome's V8 JavaScript Engine](<https://en.wikipedia.org/wiki/V8_(JavaScript_engine)>) - allows developers to use JavaScript as a scripting language to automate things on a computer and build fully functional {{Glossary("HTTP")}} and {{Glossary("WebSockets")}} servers.
+Recently, JavaScript's popularity has expanded even further through the successful [Node.js](https://nodejs.org/) platform—the most popular cross-platform JavaScript runtime environment outside the browser. Node.js - built using [Chrome's V8 JavaScript Engine](<https://en.wikipedia.org/wiki/V8_(JavaScript_engine)>) - allows developers to use JavaScript as a scripting language to automate things on a computer and build fully functional {{Glossary("HTTP")}} and {{Glossary("WebSockets")}} servers.
 
 ## See also
 

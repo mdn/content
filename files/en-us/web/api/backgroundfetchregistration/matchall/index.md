@@ -32,7 +32,7 @@ matchAll(request,options)
       - : A boolean value that specifies whether to
         ignore the query string in the URL. For example, if set to
         `true` the `?value=bar` part of
-        `http://foo.com/?value=bar` would be ignored when performing a match.
+        `https://example.com/?value=bar` would be ignored when performing a match.
         It defaults to `false`.
     - `ignoreMethod` {{optional_inline}}
       - : A boolean value. When `true`,

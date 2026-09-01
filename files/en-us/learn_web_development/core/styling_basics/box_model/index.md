@@ -54,9 +54,9 @@ Some HTML elements, such as `<h1>` and `<p>`, use `block` as their outer display
 If a box has a display type of `inline`, then:
 
 - The box will not break onto a new line.
-- The {{cssxref("width")}} and {{cssxref("height")}} properties will not apply.
-- Top and bottom padding, margins, and borders will apply but will not cause other inline boxes to move away from the box.
-- Left and right padding, margins, and borders will apply and will cause other inline boxes to move away from the box.
+- The {{cssxref("width")}}, {{cssxref("height")}}, and top and bottom margins will have no effect.
+- **Top and bottom** padding and borders will change the size of the box without affecting the position of surrounding content, which can cause overlapping.
+- **Left and right** padding, margins, and borders will affect the position of surrounding inline content.
 
 Some HTML elements, such as `<a>`, `<span>`, `<em>` and `<strong>` use `inline` as their outer display type by default.
 
@@ -387,7 +387,10 @@ p {
 
 {{EmbedLiveSample("margin-collapse", "", "280px")}}
 
-A number of rules dictate when margins do and do not collapse. For further information see the detailed page on [mastering margin collapsing](/en-US/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing). The main thing to remember is that margin collapsing is a thing that happens if you are creating space with margins and don't get the space you expect.
+A number of rules dictate when margins do and do not collapse. For further information see the detailed page on [mastering margin collapsing](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing). The main thing to remember is that margin collapsing is a thing that happens if you are creating space with margins and don't get the space you expect.
+
+> [!NOTE]
+> [Learn margins via flags](https://scrimba.com/frontend-path-c0j/~01e?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> from Scrimba is an interactive lesson providing some useful practice with margins.
 
 ### Borders
 
@@ -506,7 +509,7 @@ body {
 
 All of the above fully applies to block boxes. Some of the properties can apply to inline boxes too, such as those created by a `<span>` element.
 
-In the example below, we have a `<span>` inside a paragraph. We have applied a `width`, `height`, `margin`, `border`, and `padding` to it. You can see that the width, height, and vertical margins do not affect the `<span>`. The vertical padding and border alter the size of the inline box but don't affect the position of the surrounding content. Instead, the vertical padding and border overlap other words in the paragraph. Only the horizontal padding, margins, and borders affect the position of the text surrounding the `<span>`.
+In the example below, we have a `<span>` inside a paragraph. We have applied a `width`, `height`, `margin`, `border`, and `padding` to it. You can see that the width, height, and top and bottom margins do not affect the `<span>`. The top and bottom padding and borders alter the size of the inline box but don't affect the position of the surrounding content. Instead, the top and bottom padding and borders overlap other words in the paragraph. Only the left and right padding, margins, and borders affect the position of the text surrounding the `<span>`.
 
 ```html live-sample___inline-box-model
 <p>

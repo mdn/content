@@ -31,6 +31,8 @@ A few examples:
 
 - `data:,Hello%2C%20World%21`
   - : The text/plain data `Hello, World!`. Note how the comma is {{Glossary("Percent-encoding", "percent-encoded")}} as `%2C`, and the space character as `%20`.
+- `data:text/plain,Hello%2C%20%57%6F%72%6C%64%21`
+  - : The text/plain data `Hello, World!`, with the `World` characters percent-encoded as well as the comma and space characters: you can percent-encode any characters, if they don't need to be encoded. Note that {{jsxref("decodeURIComponent()")}} can be used to decode all encoded characters.
 - `data:text/plain;base64,SGVsbG8sIFdvcmxkIQ==`
   - : base64-encoded version of the above
 - `data:text/html,%3Ch1%3EHello%2C%20World%21%3C%2Fh1%3E`
@@ -83,14 +85,14 @@ bash$ echo -n hello | base64
 This section describes problems that commonly occur when creating and using `data` URLs.
 
 ```plain
-data:text/html,lots of text…<p><a name%3D"bottom">bottom</a>?arg=val</p>
+data:text/html,lots of text…<p><span class%3D"bottom">bottom</span>?arg=val</p>
 ```
 
 This represents an HTML resource whose contents are:
 
 ```html
 lots of text…
-<p><a name="bottom">bottom</a>?arg=val</p>
+<p><span class="bottom">bottom</span>?arg=val</p>
 ```
 
 - Syntax

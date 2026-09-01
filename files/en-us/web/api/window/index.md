@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.Window
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("HTML DOM")}}
 
 The **`Window`** interface represents a window containing a {{glossary("DOM")}} document; the `document` property points to the [DOM document](/en-US/docs/Web/API/Document) loaded in that window.
 
@@ -33,8 +33,10 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : This property indicates whether the current window is closed or not.
 - {{domxref("Window.cookieStore")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a reference to the {{domxref("CookieStore")}} object for the current document context.
+- {{domxref("Window.crashReport")}} {{ReadOnlyInline}} {{SecureContext_Inline}} {{experimental_inline}}
+  - : Returns a {{domxref("CrashReportContext")}} object that enables arbitrary data to be recorded for the current top-level browsing context, which is then added to a {{domxref("CrashReport")}} and sent to a reporting endpoint when a browser crash occurs.
 - {{domxref("Window.credentialless")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns a boolean that indicates whether the current document was loaded inside a credentialless {{htmlelement("iframe")}}. See [IFrame credentialless](/en-US/docs/Web/Security/IFrame_credentialless) for more details.
+  - : Returns a boolean that indicates whether the current document was loaded inside a credentialless {{htmlelement("iframe")}}. See [IFrame credentialless](/en-US/docs/Web/HTTP/Guides/IFrame_credentialless) for more details.
 - {{domxref("Window.crossOriginIsolated")}} {{ReadOnlyInline}}
   - : Returns a boolean value that indicates whether the website is in a cross-origin isolation state.
 - {{domxref("Window.crypto")}} {{ReadOnlyInline}}
@@ -45,9 +47,9 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns the ratio between physical pixels and device independent pixels in the current display.
 - {{domxref("Window.document")}} {{ReadOnlyInline}}
   - : Returns a reference to the document that the window contains.
-- {{domxref("Window.documentPictureInPicture")}} {{ReadOnlyInline}} {{experimental_inline}} {{SecureContext_Inline}}
+- {{domxref("Window.documentPictureInPicture")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a reference to the [document Picture-in-Picture](/en-US/docs/Web/API/Document_Picture-in-Picture_API) window for the current document context.
-- {{domxref("Window.fence")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref("Window.fence")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns a {{domxref("Fence")}} object instance for the current document context. Available only to documents embedded inside a {{htmlelement("fencedframe")}}.
 - {{domxref("Window.frameElement")}} {{ReadOnlyInline}}
   - : Returns the element in which the window is embedded, or null if the window is not embedded.
@@ -83,7 +85,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns the vertical (Y) coordinate of the top-left corner of the window's viewport, in screen coordinates. This value is reported in CSS pixels. See `mozScreenPixelsPerCSSPixel` for a conversion factor to adapt to screen pixels if needed.
 - {{domxref("Window.name")}}
   - : Gets/sets the name of the window.
-- {{domxref("Window.navigation")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("Window.navigation")}} {{ReadOnlyInline}}
   - : Returns the current `window`'s associated {{domxref("Navigation")}} object. The entry point for the [Navigation API](/en-US/docs/Web/API/Navigation_API).
 - {{domxref("Window.navigator")}} {{ReadOnlyInline}}
   - : Returns a reference to the navigator object.
@@ -129,7 +131,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns an object reference to the window object itself.
 - {{domxref("Window.sessionStorage")}}
   - : Returns a reference to the session storage object used to store data that may only be accessed by the origin that created it.
-- {{domxref("Window.sharedStorage")}} {{ReadOnlyInline}} {{experimental_inline}} {{SecureContext_Inline}}
+- {{domxref("Window.sharedStorage")}} {{ReadOnlyInline}} {{SecureContext_Inline}} {{deprecated_inline}} {{non-standard_inline}}
   - : Returns the {{domxref("WindowSharedStorage")}} object for the current origin. This is the main entry point for writing data to shared storage using the [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API).
 - {{domxref("Window.speechSynthesis")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("SpeechSynthesis")}} object, which is the entry point into using [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) speech synthesis functionality.
@@ -236,6 +238,8 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Tells the browser that an animation is in progress, requesting that the browser schedule a repaint of the window for the next animation frame.
 - {{domxref("Window.requestIdleCallback()")}}
   - : Enables the scheduling of tasks during a browser's idle periods.
+- {{domxref("Window.requestResize()")}} {{experimental_inline}}
+  - : Updates the size information shared by an embedded document with its embedding parent, but only if the embedded document has opted in to sharing its size information.
 - {{domxref("Window.resizeBy()")}}
   - : Resizes the current window by a certain amount.
 - {{domxref("Window.resizeTo()")}}
@@ -350,7 +354,7 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
   - : Fired when the window, the document and its resources are about to be unloaded.
 - {{domxref("Window/load_event", "load")}}
   - : Fired when the whole page has loaded, including all dependent resources such as stylesheets images.
-- {{domxref("Window/unload_event", "unload")}} {{deprecated_inline}}
+- {{domxref("Window/unload_event", "unload")}}
   - : Fired when the document or a child resource is being unloaded.
 
 ### Manifest events

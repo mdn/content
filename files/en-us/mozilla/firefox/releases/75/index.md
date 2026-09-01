@@ -1,5 +1,5 @@
 ---
-title: Firefox 75 for developers
+title: Firefox 75 release notes for developers
 short-title: Firefox 75
 slug: Mozilla/Firefox/Releases/75
 page-type: firefox-release-notes
@@ -77,7 +77,7 @@ _No changes._
 
 ### Security
 
-- [CSP](/en-US/docs/Web/HTTP/Guides/CSP) nonces from non-script sources, such as CSS selectors, and `.getAttribute("nonce")` calls, are now hidden. Instead, check the [`.nonce`](/en-US/docs/Web/API/HTMLElement/nonce) property to access nonces from scripts ([Firefox bug 1374612](https://bugzil.la/1374612)).
+- [CSP](/en-US/docs/Web/HTTP/Guides/CSP) {{Glossary("Nonce", "nonces")}} from non-script sources, such as CSS selectors, and `.getAttribute("nonce")` calls, are now hidden. Instead, check the [`.nonce`](/en-US/docs/Web/API/HTMLElement/nonce) property to access nonces from scripts ([Firefox bug 1374612](https://bugzil.la/1374612)).
 
 ### Plugins
 

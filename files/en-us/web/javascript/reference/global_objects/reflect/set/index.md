@@ -41,7 +41,7 @@ Reflect.set(target, propertyKey, value, receiver)
 - `value`
   - : The value to set.
 - `receiver` {{optional_inline}}
-  - : The value of `this` provided for the call to the setter for `propertyKey` on `target`. If provided and `target` does not have a setter for `propertyKey`, the property will be set on `receiver` instead.
+  - : The value of `this` provided for the call to the setter for `propertyKey` on `target`. If provided and `target` does not have a setter for `propertyKey`, the property will be set on `receiver` instead. Defaults to `target`.
 
 ### Return value
 

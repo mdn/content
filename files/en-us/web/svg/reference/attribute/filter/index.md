@@ -44,7 +44,7 @@ svg {
       <td>
         <code>none</code>
         <a
-          href="/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax#single_bar"
+          href="/en-US/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax#single_bar"
           title="Single bar: exactly one of the entities must be present"
           >|</a
         >

@@ -3,17 +3,13 @@ title: Temporal.Duration.prototype.toLocaleString()
 short-title: toLocaleString()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Duration/toLocaleString
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.Duration.toLocaleString
 sidebar: jsref
 ---
 
-{{SeeCompatTable}}
-
 The **`toLocaleString()`** method of {{jsxref("Temporal.Duration")}} instances returns a string with a language-sensitive representation of this duration. In implementations with [`Intl.DurationFormat` API](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat) support, this method delegates to `Intl.DurationFormat`.
 
-Every time `toLocaleString` is called, it has to perform a search in a big database of localization strings, which is potentially inefficient. When the method is called many times with the same arguments, it is better to create a {{jsxref("Intl.DurationFormat")}} object and use its {{jsxref("Intl/DurationFormat/format", "format()")}} method, because a `DurationFormat` object remembers the arguments passed to it and may decide to cache a slice of the database, so future `format` calls can search for localization strings within a more constrained context.
+Every time `toLocaleString` is called, it has to perform a search in a big database of localization strings, which is potentially inefficient. When the method is called many times with the same arguments, it is better to create an {{jsxref("Intl.DurationFormat")}} object and use its {{jsxref("Intl/DurationFormat/format", "format()")}} method, because a `DurationFormat` object remembers the arguments passed to it and may decide to cache a slice of the database, so future `format` calls can search for localization strings within a more constrained context.
 
 ## Syntax
 

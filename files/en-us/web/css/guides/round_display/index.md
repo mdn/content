@@ -1,0 +1,51 @@
+---
+title: CSS round display
+short-title: Round display
+slug: Web/CSS/Guides/Round_display
+page-type: css-module
+spec-urls: https://drafts.csswg.org/css-round-display/
+sidebar: cssref
+---
+
+The **CSS round display** module defines CSS extensions to support a round display, such as wrist-watches, to help developers build web pages suitable for those devices.
+
+## Reference
+
+### Properties
+
+The CSS round display module introduces the `border-boundary` and `shape-inside` properties. Currently, no browsers support these features.
+
+### At-rules and descriptors
+
+- {{cssxref("@media/shape", "shape")}} ({{cssxref("@media")}} feature)
+
+## Guides
+
+- [Using media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
+  - : Introduces media queries, their syntax, and the operators and media features used to construct media query expressions.
+
+- [Overview of CSS Shapes](/en-US/docs/Web/CSS/Guides/Shapes/Overview)
+  - : Defines basic shapes and how to debug them with developer tools.
+
+- [Using environment variables](/en-US/docs/Web/CSS/Guides/Environment_variables/Using)
+  - : Overview of what environment variables are, browser defined environment variables, and how to use the `env()` function.
+
+## Related concepts
+
+- {{cssxref("@media")}} at-rule
+- {{cssxref("offset-distance")}} property
+- {{cssxref("offset-path")}} property
+- {{cssxref("offset-position")}} property
+- [`viewport-fit`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport#viewport-fit) value for {{htmlelement("meta")}} `content` attribute
+
+## Specifications
+
+{{Specifications}}
+
+## See also
+
+- {{cssxref("basic-shape")}} data-type
+- {{cssxref("shape-outside")}} property
+- [CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes) module
+- [CSS media queries](/en-US/docs/Web/CSS/Guides/Media_queries) module
+- [CSS environment variables](/en-US/docs/Web/CSS/Guides/Environment_variables) module

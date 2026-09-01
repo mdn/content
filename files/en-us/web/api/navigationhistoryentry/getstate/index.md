@@ -3,12 +3,10 @@ title: "NavigationHistoryEntry: getState() method"
 short-title: getState()
 slug: Web/API/NavigationHistoryEntry/getState
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.NavigationHistoryEntry.getState
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`getState()`** method of the {{domxref("NavigationHistoryEntry")}} interface returns a clone of the developer-supplied state associated with this history entry.
 

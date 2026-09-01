@@ -1,5 +1,6 @@
 ---
-title: <input type="radio">
+title: '`<input type="radio">` HTML attribute value'
+short-title: <input type="radio">
 slug: Web/HTML/Reference/Elements/input/radio
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_radio
@@ -346,12 +347,6 @@ Notice that when clicking on a radio button, there's a nice, smooth fade out/in 
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
-      </td>
-    </tr>
-     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
       <td>
         <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role">radio</a></code>

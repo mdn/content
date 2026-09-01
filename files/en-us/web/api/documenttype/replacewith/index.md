@@ -37,13 +37,13 @@ None ({{jsxref("undefined")}}).
 ### Using `replaceWith()`
 
 ```js
-let svg_dt = document.implementation.createDocumentType(
+let svgDt = document.implementation.createDocumentType(
   "svg:svg",
   "-//W3C//DTD SVG 1.1//EN",
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd",
 );
 
-document.doctype.replaceWith(svg_dt);
+document.doctype.replaceWith(svgDt);
 ```
 
 ## Specifications

@@ -32,10 +32,10 @@ The name for the previously defined custom element, or `null` if there is no cus
 ```js
 class MyParagraph extends HTMLElement {
   constructor() {
-    let templateContent = document.getElementById("custom-paragraph").content;
+    const template = document.getElementById("custom-paragraph");
     super() // returns element this scope
       .attachShadow({ mode: "open" }) // sets AND returns this.shadowRoot
-      .append(templateContent.cloneNode(true));
+      .append(document.importNode(template.content, true));
   }
 }
 

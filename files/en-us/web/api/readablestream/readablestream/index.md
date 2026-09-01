@@ -50,11 +50,11 @@ new ReadableStream(underlyingSource, queuingStrategy)
         implementation will not be continually called.
     - `cancel` (reason) {{optional_inline}}
       - : This method, also defined by the developer, will be called if the app signals
-        that the stream is to be cancelled (e.g., if {{domxref("ReadableStream.cancel()")}}
+        that the stream is to be canceled (e.g., if {{domxref("ReadableStream.cancel()")}}
         is called). The contents should do whatever is necessary to release access to the
         stream source. If this process is asynchronous, it can return a promise to signal
         success or failure. The `reason` parameter contains a
-        string describing why the stream was cancelled.
+        string describing why the stream was canceled.
     - `type` {{optional_inline}}
       - : This property controls what type of readable stream is being dealt with. If it
         is included with a value set to `"bytes"`, the passed controller object
@@ -72,7 +72,7 @@ new ReadableStream(underlyingSource, queuingStrategy)
   - : An object that optionally defines a queuing strategy for the stream. This takes two
     parameters:
     - `highWaterMark`
-      - : A non-negative integer — this defines the total number of chunks that can be
+      - : A non-negative integer — this defines the total size of all chunks that can be
         contained in the internal queue before backpressure is applied.
     - `size(chunk)`
       - : A method containing a parameter `chunk` — this indicates the size to

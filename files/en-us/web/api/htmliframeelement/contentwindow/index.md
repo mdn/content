@@ -18,7 +18,7 @@ A [Window](/en-US/docs/Web/API/Window) object.
 
 ## Description
 
-Access to the {{domxref("Window")}} returned by `contentWindow` is subject to the rules defined by the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy), meaning that if the iframe is same-origin with the parent, then the parent can access the iframe's document and its internal DOM, and if they are cross-origin, it gets very limited access to the window's attributes. See ["Cross-origin script API access"](/en-US/docs/Web/Security/Same-origin_policy#cross-origin_script_api_access) for details.
+Access to the {{domxref("Window")}} returned by `contentWindow` is subject to the rules defined by the [same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy), meaning that if the iframe is same-origin with the parent, then the parent can access the iframe's document and its internal DOM, and if they are cross-origin, it gets very limited access to the window's attributes. See ["Cross-origin script API access"](/en-US/docs/Web/Security/Defenses/Same-origin_policy#cross-origin_script_api_access) for details.
 
 Pages can also use this property to find out which iframe sent a message using {{domxref("Window.postMessage()")}}, by comparing it with the message event's {{domxref("MessageEvent.source", "source")}} property.
 

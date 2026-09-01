@@ -7,7 +7,7 @@ browser-compat: api.ScrollTimeline
 
 {{APIRef("Web Animations")}}
 
-The **`ScrollTimeline`** interface of the {{domxref("Web Animations API", "Web Animations API", "", "nocode")}} represents a scroll progress timeline (see [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) for more details).
+The **`ScrollTimeline`** interface of the {{domxref("Web Animations API", "Web Animations API", "", "nocode")}} represents a scroll progress timeline (see [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) for more details).
 
 Pass a `ScrollTimeline` instance to the {{domxref("Animation.Animation", "Animation()")}} constructor or the {{domxref("Element.animate()", "animate()")}} method to specify it as the timeline that will control the progress of the animation.
 
@@ -117,5 +117,5 @@ Scroll to see the box being animated.
 ## See also
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
-- [CSS scroll-driven animations](/en-US/docs/Web/CSS/CSS_scroll-driven_animations)
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations)
 - {{domxref("AnimationTimeline")}}, {{domxref("ViewTimeline")}}

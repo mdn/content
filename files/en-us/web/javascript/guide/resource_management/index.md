@@ -154,7 +154,7 @@ Through the disposable protocol, `using` can dispose all resources in a consiste
 
 Every scope has a list of resources associated with it, in the order they were declared. When the scope exits, the resources are disposed in reverse order, by calling their `[Symbol.dispose]()` method. For example, in the example above, `reader1` is declared before `reader2`, so `reader2` is disposed first, then `reader1`. Errors thrown when attempting to dispose one resource will not prevent disposal of other resources. This is consistent with the `try...finally` pattern, and respects possible dependencies between resources.
 
-`await using` is very similar to `using`. The syntax tells you that an `await` happens somewhere—not when the resource is declared, but actually when it's disposed. `await using` requires the resource to be _async disposable_, which means it has an [`[Symbol.asyncDisposable]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncDispose) method. This method is called with no arguments and returns a promise that resolves when the cleanup is done. This is useful when the cleanup is asynchronous, such as `fileHandle.close()`, in which case the result of the disposal can only be known asynchronously.
+`await using` is very similar to `using`. The syntax tells you that an `await` happens somewhere—not when the resource is declared, but actually when it's disposed. `await using` requires the resource to be _async disposable_, which means it has a [`[Symbol.asyncDisposable]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncDispose) method. This method is called with no arguments and returns a promise that resolves when the cleanup is done. This is useful when the cleanup is asynchronous, such as `fileHandle.close()`, in which case the result of the disposal can only be known asynchronously.
 
 ```js
 {
@@ -293,7 +293,7 @@ async function readUntil(stream, text) {
 }
 ```
 
-Suppose that `chunk` turns out to be `null`. Then `toUpperCase()` will throw a `TypeError`, causing the function to terminate. Before the function exits, `stream[Symbol.dispose]()` is called, which releases the lock on the stream.
+Suppose that `chunk` turns out to be `null`. Then `!chunk.done` will throw a `TypeError`, causing the function to terminate. Before the function exits, `stream[Symbol.dispose]()` is called, which releases the lock on the stream.
 
 ```js
 const stream = new ReadableStream({
@@ -397,7 +397,7 @@ downloadButton.addEventListener("click", () => {
 });
 ```
 
-### Automatically cancelling in-progress requests
+### Automatically canceling in-progress requests
 
 In the following example, we [fetch](/en-US/docs/Web/API/Window/fetch) a list of resources concurrently using {{jsxref("Promise.all()")}}. `Promise.all()` fails and rejects the resulting promise as soon as one request failed; however, the other pending requests continue to run, despite their results being inaccessible to the program. To avoid these remaining requests needlessly consuming resources, we need to automatically cancel in-progress requests whenever `Promise.all()` settles. We implement cancellation with an {{domxref("AbortController")}}, and pass its {{domxref("AbortController/signal", "signal")}} to every `fetch()` call. If `Promise.all()` fulfills, then the function returns normally and the controller aborts, which is harmless because there's no pending request to cancel; if `Promise.all()` rejects and the function throws, then the controller aborts and cancels all pending requests.
 
@@ -430,7 +430,7 @@ async function getAllData(urls) {
 The resource disposal syntax offers a lot of strong error handling guarantees that ensure the resources are always cleaned up no matter what happens, but there are some pitfalls you may still encounter:
 
 - Forgetting to use `using` or `await using`. The resource management syntax is only there to help you when you know you need it, but there's nothing to yell at you if you forget to use it! Unfortunately, there's no good way to prevent this before-the-fact, because there are no syntactic clues that something is a disposable resource, and even for disposable resources, you may want to declare them without automatic disposal. You probably need a type checker combined with a linter to catch these issues, such as [typescript-eslint](https://typescript-eslint.io/) ([which is still planning to work on this feature](https://github.com/typescript-eslint/typescript-eslint/issues/8255)).
-- Use-after-free. Generally, the `using` syntax ensures that a resource is freed when it goes out of scope, but there are many ways to persist a value beyond its binding variable. JavaScript does not have an ownership mechanism like Rust, so you can declare an alias that does't use `using`, or preserve the resource in a [closure](/en-US/docs/Web/JavaScript/Guide/Closures), etc. The {{jsxref("Statements/using", "using")}} reference contains many examples of such pitfalls. Again, there's no good way to properly detect this in a complicated control flow, so you need to be careful.
+- Use-after-free. Generally, the `using` syntax ensures that a resource is freed when it goes out of scope, but there are many ways to persist a value beyond its binding variable. JavaScript does not have an ownership mechanism like Rust, so you can declare an alias that doesn't use `using`, or preserve the resource in a [closure](/en-US/docs/Web/JavaScript/Guide/Closures), etc. The {{jsxref("Statements/using", "using")}} reference contains many examples of such pitfalls. Again, there's no good way to properly detect this in a complicated control flow, so you need to be careful.
 
 The resource management feature is not a silver bullet. It is definitely an improvement over manually invoking the disposal methods, but it is not smart enough to prevent all resource management bugs. You still need to be careful and understand the semantics of the resources you are using.
 

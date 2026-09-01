@@ -17,10 +17,6 @@ HSTS identifies a host by its domain name only.
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
     </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 
@@ -65,7 +61,7 @@ the intention of strict security.
 
 > [!NOTE]
 > The host must send the `Strict-Transport-Security` header over HTTPS only, not insecure HTTP.
-> Browsers ignore the header if sent over HTTP to prevent a [manipulator-in-the-middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM)
+> Browsers ignore the header if sent over HTTP to prevent a [manipulator in the middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM)
 > from altering the header to expire prematurely or adding it for a host that doesn't support HTTPS.
 
 ### Expiration
@@ -156,7 +152,7 @@ This blocks access to pages or subdomains that can only be served over HTTP.
 Strict-Transport-Security: max-age=31536000; includeSubDomains
 ```
 
-Although a `max-age` of 1 year is acceptable for a domain, two years is the recommended value as explained on https://hstspreload.org.
+A `max-age` of 1 year is the minimum value accepted for HSTS preloading. The following example uses 2 years, which is the value shown in the example header on https://hstspreload.org.
 
 In the following example, `max-age` is set to 2 years, and is suffixed with `preload`, which is necessary for inclusion in all major web browsers' HSTS preload lists, like Chromium, Edge, and Firefox.
 
@@ -174,7 +170,7 @@ Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 
 ## See also
 
-- [Features restricted to secure contexts](/en-US/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
+- [Features restricted to secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts/features_restricted_to_secure_contexts)
 - [HTTP Strict Transport Security has landed!](https://blog.sidstamm.com/2010/08/http-strict-transport-security-has.html) on blog.sidstamm.com (2010)
 - [HTTP Strict Transport Security (force HTTPS)](https://hacks.mozilla.org/2010/08/firefox-4-http-strict-transport-security-force-https/) on hacks.mozilla.org (2010)
 - [HTTP Strict Transport Security](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html) cheatsheet on owasp.org

@@ -10,7 +10,7 @@ browser-compat: http.headers.Report-To
 sidebar: http
 ---
 
-{{deprecated_header}}{{non-standard_header}}
+{{non-standard_header}}
 
 > [!WARNING]
 > This header has been replaced by the {{HTTPHeader("Reporting-Endpoints")}} HTTP response header.
@@ -26,10 +26,6 @@ For example, the {{HTTPHeader("Content-Security-Policy")}} header {{CSP("report-
     <tr>
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
     </tr>
     <tr>
       <th scope="row">

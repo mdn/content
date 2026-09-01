@@ -39,7 +39,7 @@ The way the user opens the page is browser-dependent and also depends on the `op
 
 You specify `options_ui` as a path to an HTML file packaged with your extension. The HTML file can include CSS and JavaScript files, just like a normal web page. Unlike a normal page, though, the JavaScript can use all the [WebExtension APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) that the extension has [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) for. However, it runs in a different scope than your background scripts.
 
-If you want to **share** data or functions between the JavaScript on your **options page** and your **background script(s)**, you can do so directly by obtaining a reference to the [Window](/en-US/docs/Web/API/Window) of your background scripts by using {{WebExtAPIRef("extension.getBackgroundPage()")}}, or a reference to the {{domxref("Window")}} of any of the pages running within your extension with {{WebExtAPIRef("extension.getViews()")}}. Alternately, you can communicate between the JavaScript for your options page and your background script(s) using {{WebExtAPIRef("runtime.sendMessage()")}}, {{WebExtAPIRef("runtime.onMessage")}}, or {{WebExtAPIRef("runtime.connect()")}}.
+If you want to **share** data or functions between the JavaScript on your **options page** and your **background script(s)**, you can do so directly by obtaining a reference to the [Window](/en-US/docs/Web/API/Window) of your background scripts by using {{WebExtAPIRef("runtime.getBackgroundPage()")}}, or a reference to the {{domxref("Window")}} of any of the pages running within your extension with {{WebExtAPIRef("extension.getViews()")}}. Alternately, you can communicate between the JavaScript for your options page and your background script(s) using {{WebExtAPIRef("runtime.sendMessage()")}}, {{WebExtAPIRef("runtime.onMessage")}}, or {{WebExtAPIRef("runtime.connect()")}}.
 The latter (or {{WebExtAPIRef("runtime.Port")}} equivalents) can also be used to share options between your [background script(s)](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) and your **[content script(s).](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)**
 
 In general, you want to store options changed on option pages using the {{WebExtAPIRef("storage", "storage API", "", "true")}} to either {{WebExtAPIRef("storage.sync")}} (if you want the settings synchronized across all instances of that browser that the user is logged into), or {{WebExtAPIRef("storage.local")}} (if the settings are local to the current machine/profile). If you do so and your [background script(s)](/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) (or [content script(s)](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)) need to know about the change, your script(s) might choose to add a listener to {{WebExtAPIRef("storage.onChanged")}}.
@@ -85,7 +85,7 @@ The `options_ui` key is an object with the following contents:
           <code>chrome://browser/content/extension-mac.css</code> on macOS. When
           setting dimensions, be aware that this stylesheet sets
           <code>box-sizing: border-box</code> (see
-          <a href="/en-US/docs/Web/CSS/box-sizing">box-sizing</a>).
+          <a href="/en-US/docs/Web/CSS/Reference/Properties/box-sizing">box-sizing</a>).
         </p>
       </td>
     </tr>

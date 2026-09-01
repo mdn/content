@@ -41,7 +41,7 @@ You can also assign to this property a string of the form `"key=value"`, specify
 
   - `;max-age=max-age-in-seconds`: The maximum age of the cookie in seconds (e.g., `60*60*24*365` or 31536000 for a year).
 
-  - `;partitioned`: Indicates that the cookie should be stored using partitioned storage. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies) for more details.
+  - `;partitioned`: Indicates that the cookie should be stored using partitioned storage. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies) for more details.
 
   - `;path=path`: The value of the cookie's `Path` attribute (See [Define where cookies are sent](/en-US/docs/Web/HTTP/Guides/Cookies#define_where_cookies_are_sent) for more information).
 
@@ -283,7 +283,7 @@ clearBtn.addEventListener("click", () => {
 
 It is important to note that the `path` attribute does _not_ protect against unauthorized reading of the cookie from a different path.
 It can be easily bypassed using the DOM, for example by creating a hidden {{HTMLElement("iframe")}} element with the path of the cookie, then accessing this iframe's `contentDocument.cookie` property.
-The only way to protect the cookie is by using a different domain or subdomain, due to the [same origin policy](/en-US/docs/Web/Security/Same-origin_policy).
+The only way to protect the cookie is by using a different domain or subdomain, due to the [same origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy).
 
 Cookies are often used in web applications to identify a user and their authenticated session.
 Stealing a cookie from a web application leads to hijacking the authenticated user's session.

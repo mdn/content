@@ -18,7 +18,7 @@ You'll solve this challenge on your local development environment; ideally, you'
 2. Inside the folder, create an `index.html` file and paste the following content into it:
 
    ```html
-   <!DOCTYPE html>
+   <!doctype html>
    <html lang="en-US">
      <head>
        <meta charset="utf-8" />
@@ -190,19 +190,19 @@ You've been provided with some HTML for the homepage of an imaginary community c
 5. Give your headings and body text some `letter-spacing` to make them not too squashed, and allow the letters to breathe a bit.
 6. Give the first paragraph after each heading in the `<section>` a little bit of text-indentation, say `2rem`.
 
-### Links
+### Link styling
 
 1. Give the link, visited, focus, and hover states some colors that go with the color of the horizontal bars at the top and bottom of the page.
 2. Make it so that links are underlined by default, but when you hover or focus them the underline disappears.
 3. Remove the default focus outline from ALL the links on the page.
 4. Make it so that _external_ links have the external link icon inserted to the right of them, at a suitable size.
 
-### Lists
+### List styling
 
 1. Make sure the spacing of your lists and list items works well with the styling of the overall page. Each list should have the same `line-height` and top and bottom margin as the paragraphs.
 2. Give your list items appropriate bullet styles for the design of the page. It is up to you whether you choose a custom bullet image or something else.
 
-### Navigation menu
+### Navigation menu styling
 
 Style your navigation menu so that it harmonizes with the page. We'll leave this largely up to you, but here are some tips/suggestions:
 
@@ -232,9 +232,18 @@ The following screenshot, on the other hand, shows an example of what the finish
 Our finished CSS looks like so:
 
 ```css
-/* 1. Apply fonts to page */
+/* Solution: Apply fonts to the page */
 
 @import "https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap";
+
+html {
+  font-family: "IBM Plex Serif", serif;
+}
+
+h1,
+h2 {
+  font-family: "Bevan", serif;
+}
 
 /* General setup */
 
@@ -272,16 +281,7 @@ footer p {
   text-align: center;
 }
 
-/* 2. Text styling */
-
-html {
-  font-family: "IBM Plex Serif", serif;
-}
-
-h1,
-h2 {
-  font-family: "Bevan", serif;
-}
+/* Solution: General text styling */
 
 h1 {
   font-size: 3rem;
@@ -305,7 +305,7 @@ li {
   letter-spacing: 0.5px;
 }
 
-/* 3. Link styling */
+/* Solution: Link styling */
 
 a {
   outline: none;
@@ -328,7 +328,7 @@ a:hover {
   color: #773333;
 }
 
-/* 4. List styling */
+/* Solution: List styling */
 
 ul,
 ol {
@@ -343,7 +343,7 @@ ol {
   list-style-type: lower-roman;
 }
 
-/* 5. Navigation menu */
+/* Solution: Navigation menu styling */
 
 nav ul {
   padding-left: 0;

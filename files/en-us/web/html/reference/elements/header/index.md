@@ -1,5 +1,6 @@
 ---
-title: "<header>: The Header element"
+title: "`<header>` HTML header element"
+short-title: <header>
 slug: Web/HTML/Reference/Elements/header
 page-type: html-element
 browser-compat: html.elements.header
@@ -21,7 +22,7 @@ The **`<header>`** [HTML](/en-US/docs/Web/HTML) element represents introductory 
     <time>08.12.2014</time>
   </header>
   <p>
-    I love beagles <em>so</em> much! Like, really, a lot. They’re adorable and
+    I love beagles <em>so</em> much! Like, really, a lot. They're adorable and
     their ears are so, so snugly soft!
   </p>
 </article>
@@ -53,7 +54,7 @@ header > time {
 
 ## Usage notes
 
-When not nested within [sectioning content](/en-US/docs/Web/HTML/Guides/Content_categories#sectioning_content), {{htmlelement("main")}}, or an element with the same ARIA role as these elements' implicit ARIA role, then the `<header>` element has an identical meaning to the site-wide [`banner`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) landmark role. It define a global site header, which usually includes a logo, company name, search feature, and possibly the global navigation or a slogan. It is generally located at the top of the page.
+When not nested within [sectioning content](/en-US/docs/Web/HTML/Guides/Content_categories#sectioning_content), {{htmlelement("main")}}, or an element with the same ARIA role as these elements' implicit ARIA role, then the `<header>` element has an identical meaning to the site-wide [`banner`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role) landmark role. It defines a global site header, which usually includes a logo, company name, search feature, and possibly the global navigation or a slogan. It is generally located at the top of the page.
 
 Otherwise, when nested within said elements, it loses its landmark status and represents a group of introductory or navigational aids for the surrounding section. It usually contains the surrounding section's heading (an `h1` – `h6` element) and optional subheading, but this is **not** required.
 

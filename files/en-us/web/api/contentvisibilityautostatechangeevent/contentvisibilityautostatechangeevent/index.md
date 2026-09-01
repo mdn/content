@@ -23,7 +23,7 @@ new ContentVisibilityAutoStateChangeEvent(type, options)
 - `options` {{optional_inline}}
   - : An object that contains the following properties:
     - `skipped`
-      - : A boolean, which is set to `true` if the user agent [skips the element's contents](/en-US/docs/Web/CSS/CSS_containment/Using_CSS_containment#skips_its_contents), or `false` otherwise.
+      - : A boolean, which is set to `true` if the user agent [skips the element's contents](/en-US/docs/Web/CSS/Guides/Containment/Using#skips_its_contents), or `false` otherwise.
 
 ## Examples
 
@@ -46,6 +46,6 @@ canvasElem.addEventListener("contentvisibilityautostatechange", (event) => {
 ## See also
 
 - The {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} event
-- [CSS Containment](/en-US/docs/Web/CSS/CSS_containment)
+- [CSS Containment](/en-US/docs/Web/CSS/Guides/Containment)
 - The {{cssxref("content-visibility")}} property
 - The {{cssxref("contain")}} property

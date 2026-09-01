@@ -10,11 +10,11 @@ This document describes event handling, interactivity and working with embedded 
 
 One can override default browser behaviors with the `evt.preventDefault()` method, add event listeners to objects with the syntax `element.addEventListener(event, function, useCapture)`, and set element properties with syntax like `svgElement.style.setProperty("fill-opacity", "0.0", "")`. Note the existence of all three arguments setting properties.
 
-### Preventing default behavior in event code
+## Preventing default behavior in event code
 
 When writing drag and drop code, sometimes you'll find that text on the page gets accidentally selected while dragging. Or if you want to use the backspace key in your code, you want to override the browser's default behavior when the backspace key is pressed, which is to go back to the previous page. The `evt.preventDefault()` method lets you do this.
 
-### Using `eventListeners` with objects
+## Using `eventListeners` with objects
 
 The methods `addEventListener()` and `removeEventListener()` are very useful when writing interactive SVG. You can pass an object that implements the `handleEvent` interface as the second parameter to these methods.
 
@@ -41,7 +41,9 @@ function myRect(x, y, w, h, message) {
 }
 ```
 
-### Inter-document scripting: referencing embedded SVG
+## Inter-document scripting
+
+### Referencing embedded SVG
 
 When using SVG within HTML, Adobe's SVG Viewer 3.0 automatically includes a window property called `svgDocument` that points to the SVG document. This is not the case for Mozilla's native SVG implementation; therefore, using `window.svgDocument` does not work in Mozilla. Instead, you can use
 
@@ -64,7 +66,7 @@ You can also use `document.getElementById("svg_elem_name").getSVGDocument()`, wh
 > [!NOTE]
 > You may find documentation referring to an `SVGDocument` interface. Prior to SVG 2, SVG documents were represented using that interface. However, SVG documents are now represented using the {{domxref("XMLDocument")}} interface instead.
 
-### Inter-document scripting: calling JavaScript functions
+### Calling JavaScript functions
 
 When calling a JavaScript function that resides in the HTML file from an SVG file that is embedded in an HTML document, you should use `parent.functionName()` to reference the function. Although the Adobe SVG viewer plugin allows the use of `functionName()`, it's not the preferred way to do things.
 
@@ -73,10 +75,10 @@ When calling a JavaScript function that resides in the HTML file from an SVG fil
 
 More information and some examples can be found on the [SVG wiki inter-document scripting page](https://web.archive.org/web/20100223210744/http://wiki.svg.org/Inter-Document_Communication).
 
-### `setProperty` has three parameters
+## `setProperty` has three parameters
 
 The function `svgElement.style.setProperty("fill-opacity", "0.0")` throws a DOMException - `SYNTAX ERR` in Mozilla. This behavior is specified by the W3C in the DOM Level 2 Style Specification. The function `setProperty` is defined as a function with three parameters. The above can be replaced with `'svgElement.style.setProperty("fill-opacity", "0.0", "")'`, which is standards compliant.
 
-### Links
+## See also
 
-[SVG wiki on Scripting and Programming](https://web.archive.org/web/20100212202713/http://wiki.svg.org/Main_Page#Scripting_and_Programming)
+- [SVG wiki on Scripting and Programming](https://web.archive.org/web/20100212202713/http://wiki.svg.org/Main_Page#Scripting_and_Programming)

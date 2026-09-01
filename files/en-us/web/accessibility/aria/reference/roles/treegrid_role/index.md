@@ -42,7 +42,7 @@ If some rows or columns are not in the DOM and are dynamically loaded when scrol
 
 ### A treegrid's accessible name, description, and focus
 
-The element with the role of `treegrid` must have an accessible name. If an appropriate label is visible in the content, provide the name via [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby). In other words, if there is an element in the user interface that serves as a label for the treegrid, include `aria-labelledby` as an attribute on the element with the role of `treegrid`, and set the value of the attribute to the `id` of the labelling element or elements. If no visible label is present, use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) instead. Not both.
+The element with the role of `treegrid` must have an accessible name. If an appropriate label is visible in the content, provide the name via [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby). In other words, if there is an element in the user interface that serves as a label for the treegrid, include `aria-labelledby` as an attribute on the element with the role of `treegrid`, and set the value of the attribute to the `id` of the labeling element or elements. If no visible label is present, use [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) instead. Not both.
 
 If the content includes a caption or description for the `treegrid`, include [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) on the `treegrid` element with the attribute value being the `id` of the element containing the description.
 
@@ -106,7 +106,7 @@ The following keyboard interactions need to be supported when an element in the 
 - <kbd>Page Down</kbd>
   - : If focus is on a row or cell, moves focus down a predetermined number of rows or cells. Usually, it moves down the equivalent of the height of the treegrid, scrolling so the bottom row in the currently visible set of rows becomes one of the first visible rows. If focus is in the last row, focus does not move.
 - <kbd>Page Up</kbd>
-  - : If focus is on a row or cell, moves focus up an predetermined number of rows. Usually, it moves up the equivalent of the height of the treegrid, scrolling so the top row in the currently visible set of rows becomes one of the last visible rows. If focus is in the first row, focus does not move.
+  - : If focus is on a row or cell, moves focus up a predetermined number of rows. Usually, it moves up the equivalent of the height of the treegrid, scrolling so the top row in the currently visible set of rows becomes one of the last visible rows. If focus is in the first row, focus does not move.
 - <kbd>Home</kbd> <kbd>Control + Home</kbd>
   - : If focus is on a row, moves focus to the first row. If focus is in the first row, focus does not move. If focus is on a cell, moves focus to the first cell in the row. If focus is in the first cell of the row, focus does not move.
 - <kbd>End</kbd> <kbd>Control + End</kbd></td><td>

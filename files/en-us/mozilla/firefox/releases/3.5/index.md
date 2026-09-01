@@ -23,14 +23,14 @@ sidebar: firefox
 
 #### Newly-supported CSS features
 
-- [Downloadable fonts support](/en-US/docs/Web/CSS/@font-face)
+- [Downloadable fonts support](/en-US/docs/Web/CSS/Reference/At-rules/@font-face)
   - : The new {{ cssxref("@font-face") }} @rule lets web pages provide downloadable fonts, so that sites can be rendered exactly as the page author expects.
-- [CSS media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [CSS media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
   - : Firefox 3.5 now supports CSS media queries, which enhance support for media-dependent style sheets.
 - {{ cssxref("::before") }} and {{ cssxref("::after") }} updated to CSS 2.1
   - : The `::before` and `::after` pseudo-elements have been updated to full CSS 2.1 support, adding support for the `position`, `float`, `list-style-*`, and some `display` properties.
 - `ch` units for length
-  - : The `ch` unit can now be used anywhere that accepts a [length](/en-US/docs/Web/CSS/length). `1ch` is the width of the "0" (zero) character.
+  - : The `ch` unit can now be used anywhere that accepts a [length](/en-US/docs/Web/CSS/Reference/Values/length). `1ch` is the width of the "0" (zero) character.
 - {{ cssxref("opacity") }}
   - : The `-moz-opacity` Mozilla extension to CSS has been removed in favor of the standard `opacity` property.
 - {{ cssxref("text-shadow") }}
@@ -47,7 +47,7 @@ sidebar: firefox
   - : These new CSS features were added to facilitate theming.
 - New values for `-moz-appearance`
   - : The `-moz-win-glass` and `-moz-mac-unified-toolbar` values have been added to `-moz-appearance`.
-- [Using CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- [Using CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms/Using)
   - : Firefox 3.5 supports CSS transforms. See {{ cssxref("transform", "-moz-transform") }} and {{ cssxref("transform-origin", "-moz-transform-origin") }} for details.
 - {{ cssxref(":nth-child") }}, {{ cssxref(":nth-last-child") }}, {{ cssxref(":nth-of-type") }}, {{ cssxref(":nth-last-of-type") }}, {{ cssxref(":first-of-type") }}, {{ cssxref(":last-of-type") }}, {{ cssxref(":only-of-type") }}
   - : These selectors are all newly-supported in Firefox 3.5.
@@ -60,7 +60,7 @@ sidebar: firefox
   - : Firefox 3.5 supports web workers to allow easy multi-threading support in web applications.
 - [Using geolocation](/en-US/docs/Web/API/Geolocation_API)
   - : Firefox 3.5 supports the Geolocation API, which allows web applications to obtain information about the user's current location if a provider for that information is installed and enabled.
-- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
+- [Locating DOM elements using selectors](/en-US/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree)
   - : The selectors API allows querying a document to locate the elements that match a given selection rule.
 - [Mouse gesture events](https://web.archive.org/web/20210724051233/https://developer.mozilla.org/en-US/docs/Web/Events/Mouse_gesture_events)
   - : Firefox 3.5 supports mouse gesture events such as trackpad swipes.

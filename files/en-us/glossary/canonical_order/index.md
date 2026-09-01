@@ -22,5 +22,5 @@ Furthermore, its syntax defines, that if a value for the {{cssxref("background-s
 
 ## See also
 
-- [CSS value definition syntax](/en-US/docs/Web/CSS/CSS_values_and_units/Value_definition_syntax)
+- [CSS value definition syntax](/en-US/docs/Web/CSS/Guides/Values_and_units/Value_definition_syntax)
 - [What does "canonical order" mean with respect to CSS properties?](https://stackoverflow.com/questions/28963536/what-does-canonical-order-mean-with-respect-to-css-properties) on Stack Overflow provides useful further discussion.

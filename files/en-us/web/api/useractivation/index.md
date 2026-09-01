@@ -30,7 +30,7 @@ There are two kinds of window user activation states:
 - {{Glossary("Transient activation")}} (user is currently interacting with the page) and
 - {{Glossary("Sticky activation")}} (user has interacted at least once since page load).
 
-See [Features gated by user activation](/en-US/docs/Web/Security/User_activation) for more information and a list of APIs that require either sticky or transient user activation.
+See [Features gated by user activation](/en-US/docs/Web/Security/Defenses/User_activation) for more information and a list of APIs that require either sticky or transient user activation.
 
 ## Examples
 
@@ -65,4 +65,4 @@ if (navigator.userActivation.hasBeenActive) {
 ## See also
 
 - {{domxref("navigator.userActivation")}}
-- [Features gated by user activation](/en-US/docs/Web/Security/User_activation)
+- [Features gated by user activation](/en-US/docs/Web/Security/Defenses/User_activation)

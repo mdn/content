@@ -113,7 +113,7 @@ These methods return an enumerated value indicating whether support is, or will 
 
 If a download is required, it will be started automatically by the browser once a `LanguageDetector` or `Translator` instance is created using the relevant `create()` method. You can track download progress automatically using a [monitor](#monitoring_download_progress).
 
-## Cancelling operations and destroying instances
+## Canceling operations and destroying instances
 
 You can cancel a pending detection or translation operation using an {{domxref("AbortController")}}, with the associated {{domxref("AbortSignal")}} being included inside the method options object as a `signal` property value. For example, aborting a `Translator.create()` operation would look like this:
 
@@ -131,14 +131,14 @@ const translator = await Translator.create({
 controller.abort();
 ```
 
-Once a `Translator` or `LanguageDetector` instance has been created, you can destroy it when it is finished with using the {{domxref("Translator.destroy()")}}/{{domxref("LanguageDetector.destroy()")}} methods:
+After a `LanguageDetector` or `Translator` instance has been created, you can release its assigned resources and stop any further activity by calling its {{domxref("LanguageDetector.destroy()")}}/{{domxref("Translator.destroy()")}} method. You are encouraged to do this after you've finished with the object as it can consume a lot of resources.
 
 ```js
 translator.destroy();
 detector.destroy();
 ```
 
-It makes sense to destroy these objects if they are no longer going to be used, as they tie up significant resources in their handling.
+If a `create()` call has an associated {{domxref("AbortController")}}, and you call its {{domxref("AbortController.abort()")}} method after the `create()` call has succeeded, it will have the same effect as calling `destroy()` on the resulting `LanguageDetector` or `Translator` object.
 
 ## Monitoring download progress
 

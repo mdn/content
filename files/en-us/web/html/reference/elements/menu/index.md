@@ -1,5 +1,6 @@
 ---
-title: "<menu>: The Menu element"
+title: "`<menu>` HTML menu element"
+short-title: <menu>
 slug: Web/HTML/Reference/Elements/menu
 page-type: html-element
 browser-compat: html.elements.menu
@@ -12,7 +13,7 @@ The **`<menu>`** [HTML](/en-US/docs/Web/HTML) element is described in the HTML s
 
 ```html interactive-example
 <div class="news">
-  <a href="#">NASA’s Webb Delivers Deepest Infrared Image of Universe Yet</a>
+  <a href="#">NASA's Webb Delivers Deepest Infrared Image of Universe Yet</a>
   <menu>
     <li><button id="save">Save for later</button></li>
     <li><button id="share">Share this news</button></li>

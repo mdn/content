@@ -34,7 +34,7 @@ createShaderModule(descriptor)
     - `label` {{optional_inline}}
       - : A string providing a label that can be used to identify the object, for example in {{domxref("GPUError")}} messages or console warnings.
     - `sourceMap` {{optional_inline}}
-      - : A source map definition to provide developer tool integration such as source-language debugging. WGSL names (identifiers) in source maps should follow the rules defined in [WGSL identifier comparison](https://gpuweb.github.io/gpuweb/wgsl/#identifier-comparison). If defined, the source map may be interpreted as a [source-map-v3 format](https://sourcemaps.info/spec.html).
+      - : A source map definition to provide developer tool integration such as source-language debugging. WGSL names (identifiers) in source maps should follow the rules defined in [WGSL identifier comparison](https://gpuweb.github.io/gpuweb/wgsl/#identifier-comparison). If defined, the source map may be interpreted as a [source-map-v3 format](https://tc39.es/ecma426/).
 
         > [!NOTE]
         > Different implementations may handle `sourceMap`s in different ways, including possibly ignoring them entirely.

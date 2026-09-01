@@ -33,7 +33,7 @@ A string; one of the following:
   - : Send a full URL when performing a same-origin request, but only send the origin of
     the document for other cases.
 - `same-origin`
-  - : A referrer will be sent for [same-site origins](/en-US/docs/Web/Security/Same-origin_policy), but
+  - : A referrer will be sent for [same-site origins](/en-US/docs/Web/Security/Defenses/Same-origin_policy), but
     cross-origin requests will contain no referrer information.
 - `strict-origin`
   - : Only send the origin of the document as the referrer when the protocol security
@@ -51,8 +51,8 @@ A string; one of the following:
 ## Examples
 
 ```html
-<img usemap="#mapAround" width="100" height="100" src="/img/logo@2x.png" />
-<map id="myMap" name="mapAround"></map>
+<img usemap="#my-map" width="100" height="100" src="/img/logo@2x.png" />
+<map id="my-map" name="my-map"></map>
 ```
 
 ```js
@@ -61,7 +61,7 @@ elt.href = "/img2.png";
 elt.shape = "rect";
 elt.referrerPolicy = "no-referrer";
 elt.coords = "0,0,100,100";
-const map = document.getElementById("myMap");
+const map = document.getElementById("my-map");
 
 map.appendChild(elt);
 // When clicked, the area's link will not send a referrer header.

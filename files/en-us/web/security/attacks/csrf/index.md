@@ -97,7 +97,7 @@ app.post("/transfer", (req, res) => {
 });
 ```
 
-See {{glossary("Fetch metadata request header")}} for the complete list of Fetch metadata headers, and [Protect your resources from web attacks with Fetch Metadata](https://web.dev/articles/fetch-metadata) for a guide to using this feature.
+See {{glossary("Fetch metadata request header")}} for the complete list of Fetch metadata headers, and [Fetch metadata](/en-US/docs/Web/HTTP/Guides/Fetch_metadata) for a guide to using this feature.
 
 ### Avoiding simple requests
 
@@ -173,9 +173,7 @@ Another problem with the `SameSite` attribute is that it protects you from reque
 
 See [Bypassing SameSite cookie restrictions](https://portswigger.net/web-security/csrf/bypassing-samesite-restrictions) for more details on the limitations of `SameSite`.
 
-### Defense summary checklist
-
-We can summarize the defenses above as follows:
+## Defense summary checklist
 
 - Understand where in your website you are implementing state-changing requests that use session cookies to check which user issued the request.
 - Implement at least one of the primary defenses described in this document:
@@ -187,4 +185,5 @@ We can summarize the defenses above as follows:
 
 ## See also
 
+- [Local network access](/en-US/docs/Web/Security/Defenses/Local_network_access)
 - [Cross-Site Request Forgery Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html) at [owasp.org](https://owasp.org/)

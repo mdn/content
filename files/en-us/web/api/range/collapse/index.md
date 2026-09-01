@@ -13,7 +13,7 @@ The **`collapse()`** method of the {{domxref("Range")}} interface collapses the
 
 A collapsed {{domxref("Range")}} is empty, containing no content, specifying a
 single-point in a DOM tree. To determine if a {{domxref("Range")}} is already collapsed,
-see the {{domxref("Range.collapsed")}} property.
+see the {{domxref("AbstractRange.collapsed")}} property.
 
 ## Syntax
 

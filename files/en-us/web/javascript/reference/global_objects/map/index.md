@@ -95,7 +95,7 @@ cases:
           an attacker to override the object's prototype, which can lead to
           <a href="https://github.com/eslint-community/eslint-plugin-security/blob/main/docs/the-dangers-of-square-bracket-notation.md">
             object injection attacks
-          </a>. Like the accidental keys issue, this can also be mitigated by using
+          </a> or <a href="/en-US/docs/Web/Security/Attacks/Prototype_pollution">prototype pollution attacks</a>. Like the accidental keys issue, this can also be mitigated by using
           a <code>null</code>-prototype object.
         </p>
       </td>
@@ -301,7 +301,7 @@ interface RTCStatsReport {
 
 `Map`-like objects are either read-only or read-writable (see the `readonly` keyword in the IDL above).
 
-- Read-only `Map`-like objects have the property {{jsxref("Map/size", "size")}}, and the methods: {{jsxref("Map/entries", "entries()")}}, {{jsxref("Map/forEach", "forEach()")}}, {{jsxref("Map/get", "get()")}}, {{jsxref("Map/has", "has()")}}, {{jsxref("Map/keys", "keys()")}}, {{jsxref("Map/values", "values()")}}, and [`Symbol.iterator()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator).
+- Read-only `Map`-like objects have the property {{jsxref("Map/size", "size")}}, and the methods: {{jsxref("Map/entries", "entries()")}}, {{jsxref("Map/forEach", "forEach()")}}, {{jsxref("Map/get", "get()")}}, {{jsxref("Map/has", "has()")}}, {{jsxref("Map/keys", "keys()")}}, {{jsxref("Map/values", "values()")}}, and [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/Symbol.iterator).
 - Writeable `Map`-like objects additionally have the methods: {{jsxref("Map/clear", "clear()")}}, {{jsxref("Map/delete", "delete()")}}, and {{jsxref("Map/set", "set()")}}.
 
 The methods and properties have the same behavior as the equivalent entities in `Map`, except for the restriction on the types of the keys and values.
@@ -309,11 +309,12 @@ The methods and properties have the same behavior as the equivalent entities in 
 The following are examples of read-only `Map`-like browser objects:
 
 - {{domxref("AudioParamMap")}}
-- {{domxref("RTCStatsReport")}}
+- {{domxref("CSSFontFeatureValuesMap")}}
 - {{domxref("EventCounts")}}
 - {{domxref("KeyboardLayoutMap")}}
 - {{domxref("MIDIInputMap")}}
 - {{domxref("MIDIOutputMap")}}
+- {{domxref("RTCStatsReport")}}
 
 ## Constructor
 
@@ -353,9 +354,9 @@ These properties are defined on `Map.prototype` and shared by all `Map` instance
   - : Calls `callbackFn` once for each key-value pair present in the `Map` object, in insertion order. If a `thisArg` parameter is provided to `forEach`, it will be used as the `this` value for each callback.
 - {{jsxref("Map.prototype.get()")}}
   - : Returns the value corresponding to the key in this `Map`, or `undefined` if there is none.
-- {{jsxref("Map.prototype.getOrInsert()")}} {{experimental_inline}}
+- {{jsxref("Map.prototype.getOrInsert()")}}
   - : Returns the value corresponding to the specified key in this `Map`. If the key is not present, it inserts a new entry with the key and a given default value, and returns the inserted value.
-- {{jsxref("Map.prototype.getOrInsertComputed()")}} {{experimental_inline}}
+- {{jsxref("Map.prototype.getOrInsertComputed()")}}
   - : Returns the value corresponding to the specified key in this `Map`. If the key is not present, it inserts a new entry with the key and a default value computed from a given callback, and returns the inserted value.
 - {{jsxref("Map.prototype.has()")}}
   - : Returns a boolean indicating whether an entry with the specified key exists in this `Map` or not.
