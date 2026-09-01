@@ -48,7 +48,7 @@ Cookie: PHPSESSID=298zf09hf012fh2; csrftoken=u32t4o3tb3gg43; _gat=1
 
 ### Cookies with the same name
 
-Multiple cookies can have the same name if they were set with different `Path` or `Domain` attributes. 
+Multiple cookies can have the same name if they were set with different `Path` or `Domain` attributes.
 This includes the case where one cookie was set with a `Domain` attribute and the other without, even if they apply to the same host. If more than one matches a request, the browser can include all of them in the `Cookie` header.
 
 Partitioned cookies are keyed on the top-level site as well, so cookies can have the same name if set by the same host in two different embedding contexts. See [CHIPS](/en-US/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies).
