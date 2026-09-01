@@ -35,12 +35,12 @@ font-size-adjust: unset;
 
 ### Values
 
-The `font-size-adjust` property takes as its value the keyword `none`, one (`<number>` or `from-font`), or two (`<font-metric>` and either `<number>` or `from-font`) values.
+This property is specified as the keyword `none`, or one (`<number>` or `from-font`) or two (`<font-metric>` and either `<number>` or `from-font`) values.
 
 - `none`
   - : No font size adjustment is applied.
 - `<font-metric>` {{optional_inline}}
-  - : Specifies the font metric to use for adjusting the font size. This parameter accepts one of the keywords listed below. It is an optional parameter, and `ex-height` is used if no `<font-metric>` is specified.
+  - : Defines the font metric to use for adjusting the font size. Defaulting to `ex-height`, this parameter is specified as one of the following keywords:
     - `ex-height`
       - : Uses the ratio of x-height (height of lowercase "x" in a font) to font size (aspect value) to adjust the font size. This keyword value is used to normalize lowercase letters across fonts.
     - `cap-height`
@@ -53,7 +53,7 @@ The `font-size-adjust` property takes as its value the keyword `none`, one (`<nu
       - : Uses the ratio of the advance height (vertical space taken up by a character in a font) of the character "水" (CJK water ideograph, U+6C34) to font size. This keyword value is used to normalize vertical wide pitch of fonts, particularly those that include CJK characters.
 
 - {{cssxref("&lt;number&gt;")}}
-  - : Adjusts the font size used depending on the specified `<font-metric>`. When no `<font-metric>` is specified (in which case the default value `ex-height` is used), the `<number>` value adjusts the size of the selected font so that its x-height is the specified multiple of the font size. This value should generally match the aspect value (ratio of x-height to font size) of the first-choice font. This means that the first-choice font, when available, will display consistently across browsers, regardless of their support for `font-size-adjust`.
+  - : The proportion to adjust the font size used, depending on the specified `<font-metric>`.
 
     When a `<font-metric>` value is specified, the `<number>` value adjusts the font size as per the chosen `<font-metric>` to maintain a consistent appearance for the specified font metric across different fonts.
 
@@ -64,7 +64,11 @@ The `font-size-adjust` property takes as its value the keyword `none`, one (`<nu
 
 ## Description
 
-The adjustment is applied to each font used to render the text, not only to fallback fonts. In typical usage, the specified value matches the chosen metric ratio of the first-choice font, so that font is unchanged and fallback fonts are adjusted to match. Selecting a different value also scales the first-choice font, but in this case you should usually just change the `font-size` instead.
+The `font-size-adjust` property adjusts the size of a font to match a chosen font metric, such as the height of lowercase letters, to a specified proportion of the {{cssxref("font-size")}}. The adjustment is applied to each font used to render text, not only to fallback fonts.
+
+In typical usage, the specified adjustment matches the chosen metric ratio of the first-choice font, so the preferred font is unchanged, and fallback fonts are adjusted to match.
+
+Setting a `<number>` adjusts the font size based on the default or stated `<font-metric>`. For example, when explicitly set or defaulting to `ex-height`, the `<number>` value adjusts the selected font size so its x-height is the specified multiple of the font size. This value should generally match the aspect value (ratio of x-height to font size) of the first-choice font. This means that the first-choice font, when available, will display consistently across browsers. Selecting a different value also scales the first-choice font. For this reason, you should prefer to change the {{cssxref("font-size")}} instead.
 
 > [!NOTE]
 > If the specified `<font-metric>` has been overridden in {{cssxref("@font-face")}}, e.g., by using the [`size-adjust`](/en-US/docs/Web/CSS/Reference/At-rules/@font-face/size-adjust) descriptor, then the overridden metric will be used in the `font-size-adjust` calculation. This means that when `font-size-adjust` and `size-adjust` are applied together, `size-adjust` does not have any effect.
