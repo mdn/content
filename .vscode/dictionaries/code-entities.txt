@@ -169,6 +169,7 @@ ctrz
 Cubehelix
 currententrychange
 currentscreenchange
+customelementregistry
 cwrap
 daala
 dangi

@@ -85,7 +85,7 @@ try {
   // …
 } catch (e) {
   if (e.name === "AbortError") {
-    // Cancelled by the user
+    // Canceled by the user
   } else if (e.name === "TimeoutError") {
     // Show user that download timed out
   } else {

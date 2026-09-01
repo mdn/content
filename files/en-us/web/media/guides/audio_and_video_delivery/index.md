@@ -94,7 +94,7 @@ We set the source of the audio depending on the type of audio file the browser s
 > [!NOTE]
 > Play will be ignored by most browsers unless issued by a user-initiated event.
 
-It's also possible to feed an {{ htmlelement("audio") }} element a base64 encoded WAV file, allowing to generate audio on the fly:
+It's also possible to feed an {{ htmlelement("audio") }} element a base64 encoded WAV file, allowing you to generate audio on the fly:
 
 ```html
 <audio id="player" src="data:audio/x-wav;base64,UklGRvC…"></audio>

@@ -207,7 +207,7 @@ If the filter lists are of different lengths, the missing equivalent filter func
 
 ### Applying filter functions
 
-The `filter` property is applied to the second image, greying and blurring both the image and its border.
+The `filter` property is applied to the second image, graying and blurring both the image and its border.
 
 ```css
 img {

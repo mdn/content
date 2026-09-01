@@ -8,10 +8,11 @@ browser-compat: api.DataTransferItem.type
 
 {{APIRef("HTML Drag and Drop API")}}
 
-The read-only **`DataTransferItem.type`** property returns the type (format) of the {{domxref("DataTransferItem")}} object representing the drag data item.
-The `type` is a Unicode string generally given by a MIME type, although a MIME type is not required.
+The **`type`** read-only property of the {{domxref("DataTransferItem")}} interface returns the type (format) of the object representing the drag data item. The `type` is a Unicode string generally given by a MIME type, although a MIME type is not required.
 
 Some example types are: `text/plain` and `text/html`.
+
+During a drag operation, this property can be read in any drag event handler, even when the drag data store is in [protected mode](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#protected_mode). The item's type remains accessible, but its data can only be read in the handlers for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} and {{domxref("HTMLElement/drop_event", "drop")}} events. See [Reading the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#reading_the_drag_data_store) for details.
 
 ## Value
 

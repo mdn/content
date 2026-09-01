@@ -221,7 +221,7 @@ Let's take this example HTML:
 </form>
 ```
 
-Let's style these with a custom checkbox design. We'll start by removing the original check box styles:
+Let's style these with a custom checkbox design. We'll start by removing the original checkbox styles:
 
 ```css live-sample___checkboxes-styled
 input[type="checkbox"] {

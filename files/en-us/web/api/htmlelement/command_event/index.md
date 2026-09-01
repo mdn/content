@@ -56,7 +56,7 @@ button.addEventListener("click", (event) => {
 
 ```js
 element.addEventListener("command", (event) => {
-  event.preventDefault(); // the `command` event fires but the default behavior is cancelled
+  event.preventDefault(); // the `command` event fires but the default behavior is canceled
 });
 ```
 

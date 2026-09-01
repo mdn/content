@@ -36,7 +36,7 @@ Each fingerprint is represented by an object with the following properties:
 
 ## Description
 
-The {{domxref("RTCCertificate")}} instances used for a particular {{DOMxRef("RTCPeerConnection")}} can created using the {{DOMxRef("RTCPeerConnection.generateCertificate_static", "RTCPeerConnection.generateCertificate()")}} static method or fetched from storage in an [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), and set in the constructor.
+The {{domxref("RTCCertificate")}} instances used for a particular {{DOMxRef("RTCPeerConnection")}} can be created using the {{DOMxRef("RTCPeerConnection.generateCertificate_static", "RTCPeerConnection.generateCertificate()")}} static method or fetched from storage in an [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), and set in the constructor.
 If no certificates are passed in the constructor they will be created automatically, in which case the certificates used can be fetched with {{DOMxRef("RTCPeerConnection.getConfiguration()")}}.
 
 Browsers will automatically exchange certificates and fingerprints associated with each {{DOMxRef("RTCPeerConnection")}} during the SDP offer phase, and these will be used as part of the DTLS handshake to verify that the remote party matches the certificate/endpoint send in the SDP.
