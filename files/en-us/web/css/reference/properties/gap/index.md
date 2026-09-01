@@ -69,10 +69,8 @@ This property is a shorthand for the following CSS properties:
 ## Syntax
 
 ```css
-/* Keyword value */
-gap: normal;
-
 /* One value */
+gap: normal;
 gap: 20px;
 gap: 1em;
 gap: 3vmin;
@@ -89,7 +87,10 @@ gap: 3vmin 2vmax;
 gap: 0.5cm 2mm;
 gap: 16% 100%;
 gap: 21px 82%;
+gap: normal thin;
+gap: thin thick;
 gap: calc(20px + 10%) calc(10% - 5px);
+gap: calc(20px + 10%) medium;
 
 /* Global values */
 gap: inherit;
