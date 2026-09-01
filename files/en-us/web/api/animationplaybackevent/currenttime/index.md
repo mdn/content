@@ -14,7 +14,9 @@ The **`currentTime`** read-only property of the {{domxref("AnimationPlaybackEven
 
 A number representing the current time in milliseconds, or `null`.
 
-When a value is supplied to the {{domxref("AnimationPlaybackEvent/AnimationPlaybackEvent", "AnimationPlaybackEvent()")}} constructor, the browser does not apply timer rounding to the supplied time. For browser-generated `finish` and `remove` events, this property inherits the value and precision of {{domxref("Animation.currentTime")}} when the event is queued, without introducing additional inaccuracy.
+When a value is supplied to the {{domxref("AnimationPlaybackEvent/AnimationPlaybackEvent", "AnimationPlaybackEvent()")}} constructor, Chrome and Firefox do not apply timer rounding to the returned value. In Safari, the browser rounds the returned value to 0.001 ms, the resolution used to represent animation times.
+
+For browser-generated `finish` and `remove` events, this property inherits the value and precision of {{domxref("Animation.currentTime")}} when the event is queued, without introducing additional inaccuracy.
 
 ## Specifications
 

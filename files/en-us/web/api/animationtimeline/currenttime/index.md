@@ -20,11 +20,13 @@ To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glos
 
 The current time normally advances with animation frames. Reading the property repeatedly while a script runs does not provide a continuously updating clock.
 
-For a {{domxref("DocumentTimeline")}}, the current time is based on the browser's animation clock and can include a script-supplied {{domxref("DocumentTimeline.DocumentTimeline", "originTime")}} offset. In Chrome and Safari, the browser does not apply additional timer rounding after applying this offset, so the result need not be a multiple of the clock's rounding interval. In Firefox, the timer rounding described below applies after applying the offset.
+For a {{domxref("DocumentTimeline")}}, the current time is calculated by subtracting the {{domxref("DocumentTimeline.DocumentTimeline", "originTime")}} offset, which can be supplied by script, from the browser's animation clock.
 
-In Chrome, the rounding interval for the animation clock during rendering updates is 0.1 ms, or 0.005 ms in cross-origin-isolated contexts. Values read outside rendering updates do not necessarily use the same rounding. In Safari, the rounding interval for the animation clock is 1 ms, or 0.02 ms in cross-origin-isolated contexts.
+In Chrome, the rounding interval for the animation clock during rendering updates is 0.1 ms, or 0.005 ms in cross-origin-isolated contexts. The browser does not apply additional timer rounding after subtracting `originTime`.
 
-In Firefox, animation timestamps are rounded to 0.02 ms by default, including in cross-origin-isolated contexts. If `privacy.resistFingerprinting` is enabled, the rounding interval is 16.667 ms or the interval configured by `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
+In Safari, the rounding interval for the animation clock is 1 ms, or 0.02 ms in cross-origin-isolated contexts. After subtracting `originTime`, the browser rounds the returned value to 0.001 ms, the resolution used to represent animation times.
+
+In Firefox, after subtracting `originTime`, the browser rounds the returned value to 0.02 ms by default, including in cross-origin-isolated contexts. If `privacy.resistFingerprinting` is enabled, the rounding interval is 16.667 ms or the interval configured by `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
 
 For example, these are possible values in Firefox:
 
