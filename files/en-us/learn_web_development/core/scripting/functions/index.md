@@ -370,7 +370,7 @@ It is a bit like an apartment building:
 
 - Each apartment is private to the people who live there, similar to function scope — code inside a function can access the variables and functions defined within it, but code outside that function cannot. If everyone had access to everyone else's apartment, problems would occur — people's belongings might get moved, broken, or stolen!
 
-The building also has common areas, though, such as a pool, a gym, or a rec room, which are accessible to everybody living there and shared cooperatively. This is like the global scope — anything declared there is accessible to every function, in the same way that all the residents can use the building's common areas.
+- The building also may have common areas, such as a pool, gym, or rec room, which are accessible to everyone. This is like the global scope — anything declared there is accessible to every function. Everyone can use the shared living spaces, which makes sense.
 
 ### Playing with scope
 
