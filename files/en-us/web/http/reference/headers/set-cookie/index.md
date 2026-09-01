@@ -73,7 +73,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
   - : Defines the host to which the cookie will be sent.
 
     The value must be the domain of the server that sends the `Set-Cookie` response header, or a parent domain of that server's domain, unless it is a public suffix.
-    For example, a response from `api.example.com` can set `Domain=api.example.com` or `Domain=example.com`, but not `Domain=beta.api.example.com`, `Domain=other.example.com` or `Domain=com`.
+    For example, a response from `api.example.com` can set `Domain=api.example.com` or `Domain=example.com`, but not `Domain=beta.api.example.com`, `Domain=other.example.com`, or `Domain=com`.
     Setting the domain makes the cookie available to that domain and all its subdomains.
 
     If omitted, the cookie is returned only to the host that sent it (i.e., it becomes a "host-only cookie").
