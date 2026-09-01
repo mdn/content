@@ -288,7 +288,7 @@ const ul = document.getElementById("ul");
 const output = document.getElementById("o");
 
 inset.addEventListener("input", () => {
-  o.innerText =
+  output.innerText =
     ul.style.rowRuleInsetCapEnd = `${inset.value}${inset.dataset["unit"]}`;
 });
 ```
@@ -323,9 +323,9 @@ visibility.addEventListener("change", () => {
 
 Setting `-32px` outsets the end of all the row rules by 32px, with the lines being drawn `32px` past the end edge of the container. As row rules don't impact the box model, these lines have no impact on the layout of the container or the rest of the content. Setting `16px` insets the segments by `16px`. If `0px` is set, the end of the row rules will align with the end of the container. This is the default.
 
-The double line-style row rules, which appear when the `rule-visibility-items` is set to `between` end in a cap endpoint.The `between` value only paints rules in a gap segments between two adjacent areas occupied by an item. Because the row rule segments above items 22 and 24 end at intersections with no other row or column rule segments are present, these are cap endpoints, and therefore affected by the `row-rule-inset-cap-end` property.
+The double line-style row rules, which appear when the `rule-visibility-items` is set to `between` end in a cap endpoint. The `between` value only paints rules in a gap segments between two adjacent areas occupied by an item. Because the row rule segments above items 22 and 24 end at intersections with no other row or column rule segments are present, these are cap endpoints, and therefore affected by the `row-rule-inset-cap-end` property.
 
-The rule segments abutting the right edge of the container (only the segment between 6 and 12 in this case) are alway row-rule cap ends, so are always inset by the value of the `row-rule-inset-cap-end` property.
+The rule segments abutting the right edge of the container (only the segment between 6 and 12 in this case) are always row-rule cap ends, so are always inset by the value of the `row-rule-inset-cap-end` property.
 
 ### Understanding percentage values
 

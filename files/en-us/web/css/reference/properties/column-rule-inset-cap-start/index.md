@@ -273,7 +273,7 @@ const ul = document.getElementById("ul");
 const output = document.getElementById("o");
 
 inset.addEventListener("input", () => {
-  o.innerText =
+  output.innerText =
     ul.style.columnRuleInsetCapStart = `${inset.value}${inset.dataset["unit"]}`;
 });
 ```

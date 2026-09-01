@@ -280,7 +280,7 @@ const ul = document.getElementById("ul");
 const output = document.getElementById("o");
 
 inset.addEventListener("input", () => {
-  o.innerText =
+  output.innerText =
     ul.style.rowRuleInsetCapStart = `${inset.value}${inset.dataset["unit"]}`;
 });
 ```
@@ -298,7 +298,7 @@ visibility.addEventListener("change", () => {
 
 {{EmbedLiveSample("caps", "", "350")}}
 
-Setting `16px` insets the start of all the row rules by `16px`. Setting `0px` align the start of the row rules with the start of the container. This is the default.
+Setting `16px` insets the start of all the row rules by `16px`. Setting `0px` aligns the start of the row rules with the start of the container. This is the default.
 
 Select `between` as the `rule-visibility-items` value. This value paints rules in a gap segments only if the two adjacent areas are occupied by items. In addition to having a cap endpoint at the start edge of the container, like all the other row rules, the third row rule, denoted with a double line style, has an additional cap endpoint segment. There are no other segments at the starting endpoint of the rule segment between `12` and `16` doesn't intersect, so it too is a cap segment endpoint, and is affected by the `row-rule-inset-cap-start` property.
 

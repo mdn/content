@@ -395,7 +395,7 @@ const ul = document.getElementById("ul");
 const output = document.getElementById("o");
 
 inset.addEventListener("input", () => {
-  o.innerText =
+  output.innerText =
     ul.style.ruleInsetCap = `${inset.value}${inset.dataset["unit"]}`;
 });
 
@@ -406,7 +406,7 @@ visibility.addEventListener("change", () => {
 
 #### Result
 
-{{EmbedLiveSample(" Inner cap segments", "", "400")}}
+{{EmbedLiveSample("Inner cap segments", "", "400")}}
 
 Select `between` from the dropdown to only paint rule segments when both adjacent grid areas contain a grid item, then change the value of the inset.
 
@@ -426,8 +426,7 @@ Select `between` from the dropdown to only paint rule segments when both adjacen
 - {{cssxref("row-rule-inset")}} shorthand
 - {{cssxref("rule-inset-start")}} shorthand
 - {{cssxref("rule-inset")}} shorthand
-- {{cssxref("rule-break")}} shorthand
-- {{cssxref("rule-break")}} shorthand
+- {{cssxref("rule-break")}} shorthand\
 - {{cssxref("rule-overlap")}}
 - {{cssxref("rule-visibility-items")}}
 - {{cssxref("rule")}} shorthand
