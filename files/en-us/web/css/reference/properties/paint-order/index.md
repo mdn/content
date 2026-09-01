@@ -1,5 +1,6 @@
 ---
-title: paint-order
+title: "`paint-order` CSS property"
+short-title: paint-order
 slug: Web/CSS/Reference/Properties/paint-order
 page-type: css-property
 browser-compat: css.properties.paint-order

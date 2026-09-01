@@ -3,7 +3,7 @@ title: CSS masking
 short-title: Masking
 slug: Web/CSS/Guides/Masking
 page-type: css-module
-spec-urls: https://drafts.fxtf.org/css-masking/
+spec-urls: https://drafts.csswg.org/css-masking-1/
 sidebar: cssref
 ---
 

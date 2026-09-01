@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.WebTransportSendStream
 ---
 
-{{APIRef("WebTransport API")}}{{securecontext_header}} {{AvailableInWorkers}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The `WebTransportSendStream` interface of the {{domxref("WebTransport API", "WebTransport API", "", "nocode")}} is a specialized {{domxref("WritableStream")}} that is used to send outbound data in both unidirectional or bidirectional {{domxref("WebTransport")}} streams.
 
@@ -25,17 +25,17 @@ When a bidirectional stream is initiated by the remote end, an object of this ty
 
 _Also inherits properties from its parent interface, {{domxref("WritableStream")}}._
 
-- {{domxref("WebTransportSendStream.getStats()")}}
-  - : Returns a {{jsxref("Promise")}} that resolves with statistics related to this stream.
+- {{domxref("WebTransportSendStream.sendOrder")}}
+  - : Indicates the send priority of this stream relative to other streams for which the value has been set.
 
 ## Instance methods
 
 _Also inherits methods from its parent interface, {{domxref("WritableStream")}}._
 
-<!-- WebTransportSendStream.sendGroup not implemented in any browser -->
-
-- {{domxref("WebTransportSendStream.sendOrder")}}
-  - : Indicates the send priority of this stream relative to other streams for which the value has been set.
+- {{domxref("WebTransportSendStream.getStats()")}}
+  - : Returns a {{jsxref("Promise")}} that resolves with statistics related to this stream.
+- {{domxref("WebTransportSendStream.getWriter()")}}
+  - : Returns a new `WebTransportWriter` object and locks the stream to it. While the stream is locked, no other writer can be acquired until this one is released.
 
 ## Examples
 

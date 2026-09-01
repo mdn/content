@@ -3,12 +3,11 @@ title: "get: Wasm table instruction"
 short-title: get
 slug: WebAssembly/Reference/Table/get
 page-type: webassembly-instruction
-browser-compat: webassembly.reference-types
-spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-table
+browser-compat: webassembly.instructions.table_get
 sidebar: webassemblysidebar
 ---
 
-The **`table.get`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) retrieves the reference stored at a particular table index.
+The **`table.get`** [table instruction](/en-US/docs/WebAssembly/Reference/Table) retrieves the reference stored at a particular table index.
 
 {{InteractiveExample("Wat Demo: table.get", "tabbed-taller")}}
 
@@ -64,7 +63,7 @@ table.get identifier
     - `name`
       - : An identifying name [set for the table](/en-US/docs/WebAssembly/Reference/Definitions/table#name) when it was first created. This must begin with a `$` symbol, for example `$my_table`.
     - `index`
-      - : The table's index number, for example `0` for the first table in the wasm script, `1` for the second, etc.
+      - : The table's index number, for example `0` for the first table in the wasm module, `1` for the second, etc.
 
     If the `identifier` is omitted, it will default to `0`.
 
@@ -87,15 +86,15 @@ table.get identifier
 
 ### Opcodes
 
-| Instruction | Binary opcode                                                                                           |
-| ----------- | ------------------------------------------------------------------------------------------------------- |
-| `table.get` | `𝟶𝚡𝟸𝟶` ([variable-width LEB128](https://webassembly.github.io/spec/core/binary/values.html#binary-int)) |
+| Instruction | Binary format      | Example text => binary       |
+| ----------- | ------------------ | ---------------------------- |
+| `table.get` | `0x25 𝑥:table_idx` | `table.get 0` => `0x25 0x01` |
 
 ## Description
 
 The `table.get` instruction retrieves a value stored at a given index of an existing table.
 
-If the table was initialized to store [`funcref`](/en-US/docs/WebAssembly/Reference/Types/funcref)s, the values retrieved will be references to functions defined inside Wasm. If the table was initialized to store [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref)s, the values retrieved can be just about any value type defined in JavaScript.
+If the table was initialized to store [`funcref`](/en-US/docs/WebAssembly/Reference/Value_types/funcref)s, the values retrieved will be references to functions defined inside Wasm. If the table was initialized to store [`externref`](/en-US/docs/WebAssembly/Reference/Value_types/externref)s, the values retrieved can be just about any value type defined in JavaScript.
 
 Wasm table values can be retrieved from JavaScript using the [`table.get()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Table/get) method.
 
@@ -137,7 +136,7 @@ When the result is returned, we invoke the exported Wasm `run()` function availa
 ```js live-sample___basic-usage
 let imports = {
   funcs: {
-    output: function (elem, val) {
+    output(elem, val) {
       elem.textContent += `${val} `;
     },
   },
@@ -157,7 +156,7 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), imports).then(
 
 In our Wasm module, we first import our two imported items:
 
-- The JavaScript `output()` function, which we make sure to declare with two [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref) parameters.
+- The JavaScript `output()` function, which we make sure to declare with two [`externref`](/en-US/docs/WebAssembly/Reference/Value_types/externref) parameters.
 - The table of strings, which we call `$string_table`.
 
 We then export the `run()` function, which takes an `externref` named `$elem` as a parameter. Inside the function body, we run our imported `output()` function twice. We specify the same `$elem` reference for the first parameter in both cases, and then use `table.get` to retrieve a different string from the imported table to use as the second parameter in each case.

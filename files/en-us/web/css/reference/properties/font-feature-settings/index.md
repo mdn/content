@@ -1,5 +1,6 @@
 ---
-title: font-feature-settings
+title: "`font-feature-settings` CSS property"
+short-title: font-feature-settings
 slug: Web/CSS/Reference/Properties/font-feature-settings
 page-type: css-property
 browser-compat: css.properties.font-feature-settings

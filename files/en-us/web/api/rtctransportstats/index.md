@@ -24,26 +24,26 @@ These statistics can be obtained by iterating the {{domxref("RTCStatsReport")}} 
   - : The total number of payload bytes sent on this transport (bytes sent, not including headers, padding or ICE connectivity checks).
 - {{domxref("RTCTransportStats.dtlsCipher", "dtlsCipher")}} {{optional_inline}}
   - : A string indicating the name of the cipher suite used for the DTLS transport, such as `TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256`.
-- {{domxref("RTCTransportStats.dtlsRole", "dtlsRole")}} {{optional_inline}} {{experimental_inline}}
+- {{domxref("RTCTransportStats.dtlsRole", "dtlsRole")}} {{optional_inline}}
   - : A string indicating the DTLS role of the associated {{domxref("RTCPeerConnection")}}.
     This is one of: `client`, `server`, `unknown` (before the DTLS negotiation starts).
 - {{domxref("RTCTransportStats.dtlsState", "dtlsState")}}
   - : A string indicating the current {{domxref("RTCDtlsTransport.state","state")}} of the underlying {{domxref("RTCDtlsTransport")}}.
     This is one of: `new`, `connecting`, `connected`, `closed`, `failed`.
-- {{domxref("RTCTransportStats.iceLocalUsernameFragment", "iceLocalUsernameFragment")}} {{optional_inline}} {{experimental_inline}}
+- {{domxref("RTCTransportStats.iceLocalUsernameFragment", "iceLocalUsernameFragment")}} {{optional_inline}}
   - : A string indicating the local username fragment that uniquely identifies the ICE interaction session managed by this transport.
-- {{domxref("RTCTransportStats.iceRole", "iceRole")}} {{optional_inline}} {{experimental_inline}}
+- {{domxref("RTCTransportStats.iceRole", "iceRole")}} {{optional_inline}}
   - : A string indicating the ICE [`role`](/en-US/docs/Web/API/RTCIceTransport/role) of the underlying {{domxref("RTCIceTransport")}}.
     This is one of: `controlled`, `controlling`, or `unknown`.
-- {{domxref("RTCTransportStats.iceState", "iceState")}} {{optional_inline}} {{experimental_inline}}
+- {{domxref("RTCTransportStats.iceState", "iceState")}} {{optional_inline}}
   - : A string indicating the current {{domxref("RTCIceTransport.state","state")}} of the underlying {{domxref("RTCIceTransport")}}.
     This is one of: `new`, `checking`, `connected`, `completed`, `disconnected`, `failed`, or `closed`.
 - {{domxref("RTCTransportStats.localCertificateId", "localCertificateId")}} {{optional_inline}}
   - : A string containing the id of the local certificate used by this transport.
     Only present for DTLS transports, and after DTLS has been negotiated.
-- {{domxref("RTCTransportStats.packetsReceived", "packetsReceived")}} {{optional_inline}} {{experimental_inline}}
+- {{domxref("RTCTransportStats.packetsReceived", "packetsReceived")}} {{optional_inline}}
   - : The total number of packets received on this transport.
-- {{domxref("RTCTransportStats.packetsSent", "packetsSent")}} {{optional_inline}} {{experimental_inline}}
+- {{domxref("RTCTransportStats.packetsSent", "packetsSent")}} {{optional_inline}}
   - : The total number of packets sent over this transport.
 - {{domxref("RTCTransportStats.remoteCertificateId", "remoteCertificateId")}} {{optional_inline}}
   - : A string containing the id or the remote certificate used by this transport.
@@ -80,18 +80,16 @@ The function waits for the result of a call to {{domxref("RTCPeerConnection.getS
 It then returns the statistics, or `null`, using the data in the report.
 
 ```js
-async function numberOpenConnections (peerConnection) {
+async function getTransportStats(peerConnection) {
   const stats = await peerConnection.getStats();
-  let transportStats = null;
 
-  stats.forEach((report) => {
+  for (const report of stats.values()) {
     if (report.type === "transport") {
-      transportStats = report;
-      break;
+      return report;
     }
-  });
+  }
 
-return transportStats
+  return null;
 }
 ```
 

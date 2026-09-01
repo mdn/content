@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.WorkerGlobalScope.unhandledrejection_event
 ---
 
-{{APIRef("DOM")}}{{AvailableInWorkers("worker")}}
+{{APIRef("HTML DOM")}}{{AvailableInWorkers("worker")}}
 
 The **`unhandledrejection`** event is sent to the global scope (typically {{domxref("WorkerGlobalScope")}}) of a script when a {{jsxref("Promise")}} that has no rejection handler is rejected.
 
@@ -27,13 +27,6 @@ onunhandledrejection = (event) => { }
 A {{domxref("PromiseRejectionEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PromiseRejectionEvent")}}
-
-## Event properties
-
-- {{domxref("PromiseRejectionEvent.promise")}} {{ReadOnlyInline}}
-  - : The JavaScript {{jsxref("Promise")}} that was rejected.
-- {{domxref("PromiseRejectionEvent.reason")}} {{ReadOnlyInline}}
-  - : A value or {{jsxref("Object")}} indicating why the promise was rejected, as passed to {{jsxref("Promise.reject()")}}.
 
 ## Examples
 

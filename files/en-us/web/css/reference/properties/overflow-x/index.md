@@ -1,5 +1,6 @@
 ---
-title: overflow-x
+title: "`overflow-x` CSS property"
+short-title: overflow-x
 slug: Web/CSS/Reference/Properties/overflow-x
 page-type: css-property
 browser-compat: css.properties.overflow-x

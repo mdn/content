@@ -1,5 +1,6 @@
 ---
-title: break-before
+title: "`break-before` CSS property"
+short-title: break-before
 slug: Web/CSS/Reference/Properties/break-before
 page-type: css-property
 browser-compat: css.properties.break-before

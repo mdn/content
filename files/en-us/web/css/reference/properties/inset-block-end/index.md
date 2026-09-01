@@ -1,5 +1,6 @@
 ---
-title: inset-block-end
+title: "`inset-block-end` CSS property"
+short-title: inset-block-end
 slug: Web/CSS/Reference/Properties/inset-block-end
 page-type: css-property
 browser-compat: css.properties.inset-block-end

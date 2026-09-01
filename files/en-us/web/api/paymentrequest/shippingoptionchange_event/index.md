@@ -9,7 +9,7 @@ status:
 browser-compat: api.PaymentRequest.shippingoptionchange_event
 ---
 
-{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Non-standard_Header}}
 
 For payment requests that request shipping information, and for which shipping options are offered, the **`shippingoptionchange`** event is sent to the {{domxref("PaymentRequest")}} whenever the user chooses a shipping option from the list of available options.
 
@@ -32,10 +32,6 @@ onshippingoptionchange = (event) => { }
 A {{domxref("PaymentRequestUpdateEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PaymentRequestUpdateEvent")}}
-
-## Event properties
-
-_Provides only the properties inherited from {{domxref("Event")}}._
 
 ## Examples
 

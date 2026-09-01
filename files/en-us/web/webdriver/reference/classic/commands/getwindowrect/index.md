@@ -8,7 +8,7 @@ sidebar: webdriver
 
 The _Get Window Rect_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns the size and position of the given [`WebElement`](/en-US/docs/Web/WebDriver/Reference/WebElement). Many [WebDriver clients](/en-US/docs/Web/WebDriver/Reference/Clients) present separate API methods for getting an element's location and dimensions, but as an optimization they both use this primitive.
 
-The command operates on the currently selected window, and returns size and position of the operating system window. The returned [`WindowRect`](/en-US/docs/Web/WebDriver/Reference/WindowRect) can be used as input for the [Set Window Rect](/en-US/docs/Web/WebDriver/Reference/SetWindowRect) command, which is for manipulating a window's position and dimensions.
+The command operates on the currently selected window, and returns size and position of the operating system window. The returned [`WindowRect`](/en-US/docs/Web/WebDriver/Reference/WindowRect) can be used as input for the [Set Window Rect](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/SetWindowRect) command, which is for manipulating a window's position and dimensions.
 
 ## Syntax
 
@@ -36,9 +36,9 @@ The response payload is a [`WindowRect`](/en-US/docs/Web/WebDriver/Reference/Web
 
 ### Errors
 
-- [Invalid session ID](/en-US/docs/Web/WebDriver/Reference/Classic/Errors/InvalidSessionID)
+- [`invalid session id`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidSessionID)
   - : Session does not exist.
-- [Unexpected alert open](/en-US/docs/Web/WebDriver/Reference/Errors/UnexpectedAlertOpen)
+- [`unexpected alert open`](/en-US/docs/Web/WebDriver/Reference/Errors/UnexpectedAlertOpen)
   - : A user prompt, such as [`window.alert`](/en-US/docs/Web/API/Window/alert), blocks execution of command until it is dealt with.
 
 ## Specifications

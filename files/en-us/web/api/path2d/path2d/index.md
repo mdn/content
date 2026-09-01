@@ -31,12 +31,12 @@ new Path2D(d)
 
 This example creates and copies a `Path2D` path. First, `path1` is a rectangular path. Then, we copy `path1` into `path2` and add a circle to it. Finally, we stroke `path2`, which contains both the rectangle and the circle. Note that `path1` remains unchanged, although we never draw it to the canvas. Its only purpose is to show how you can build up a complex path by building on existing paths.
 
-```html hidden
-<canvas id="canvas"></canvas>
+```html
+<canvas id="my-canvas"></canvas>
 ```
 
 ```js
-const canvas = document.getElementById("canvas");
+const canvas = document.getElementById("my-canvas");
 const ctx = canvas.getContext("2d");
 
 const path1 = new Path2D();
@@ -55,12 +55,12 @@ ctx.stroke(path2);
 
 This example creates a `Path2D` path using [SVG path data](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths). The path will move to point (`M10 10`) and then move horizontally 80 points to the right (`h 80`), then 80 points down (`v 80`), then 80 points to the left (`h -80`), and then back to the start (`Z`).
 
-```html hidden
-<canvas id="canvas"></canvas>
+```html
+<canvas id="my-canvas"></canvas>
 ```
 
 ```js
-const canvas = document.getElementById("canvas");
+const canvas = document.getElementById("my-canvas");
 const ctx = canvas.getContext("2d");
 
 const p = new Path2D("M10 10 h 80 v 80 h -80 Z");

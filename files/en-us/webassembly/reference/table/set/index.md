@@ -3,12 +3,11 @@ title: "set: Wasm table instruction"
 short-title: set
 slug: WebAssembly/Reference/Table/set
 page-type: webassembly-instruction
-browser-compat: webassembly.reference-types
-spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-table
+browser-compat: webassembly.instructions.table_set
 sidebar: webassemblysidebar
 ---
 
-The **`table.set`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) changes the value stored in a particular table element.
+The **`table.set`** [table instruction](/en-US/docs/WebAssembly/Reference/Table) changes the value stored in a particular table element.
 
 {{InteractiveExample("Wat Demo: table.set", "tabbed-taller")}}
 
@@ -66,7 +65,7 @@ table.set identifier
     - `name`
       - : An identifying name [set for the table](/en-US/docs/WebAssembly/Reference/Definitions/table#name) when it was first created. This must begin with a `$` symbol, for example `$my_table`.
     - `index`
-      - : The table's index number, for example `0` for the first table in the wasm script, `1` for the second, etc.
+      - : The table's index number, for example `0` for the first table in the wasm module, `1` for the second, etc.
 
     If the `identifier` is omitted, it will default to `0`.
 
@@ -89,9 +88,9 @@ table.set identifier
 
 ### Opcodes
 
-| Instruction | Binary opcode                                                                                           |
-| ----------- | ------------------------------------------------------------------------------------------------------- |
-| `table.set` | `𝟶𝚡𝟸𝟼` ([variable-width LEB128](https://webassembly.github.io/spec/core/binary/values.html#binary-int)) |
+| Instruction | Binary format      | Example text => binary       |
+| ----------- | ------------------ | ---------------------------- |
+| `table.set` | `0x26 𝑥:table_idx` | `table.set 0` => `0x26 0x01` |
 
 ## Description
 
@@ -128,7 +127,7 @@ When using instructions like `table.set`, you also need to forward-declare the f
   ...
 ```
 
-Later on, you can then dynamically change the function reference stored in the table element using `table.set`:
+Later on, you can then dynamically change the reference stored in the table element using `table.set`:
 
 ```wat
   ...
@@ -167,7 +166,7 @@ When the result is returned, we invoke the exported Wasm `run()` function availa
 const outputElem = document.querySelector("p");
 
 const obj = {
-  output: function (elem, val) {
+  output(elem, val) {
     elem.textContent += `${val} `;
   },
 };
@@ -181,14 +180,14 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), {
 
 #### Wasm
 
-In our Wasm module, we first import the JavaScript `output()` function, making sure to declare that it has two parameters, an [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref) and an `i32`.
+In our Wasm module, we first import the JavaScript `output()` function, making sure to declare that it has two parameters, an [`externref`](/en-US/docs/WebAssembly/Reference/Value_types/externref) and an `i32`.
 
 Next, we define a function `type` called `$ret_i32`, which returns an `i32` value. We then define two functions based on this type called `$f1` and `$f2`, which return the values defined within, and forward-declare them using `(elem declare func $f1 $f2)` so they can be referenced later on. Next, we define a `table` called `$func_table`, which stores function references (hence `funcref` being specified) and is initially empty.
 
 Finally, we export the `run()` function, which takes an `externref` named `$elem` as a parameter. Inside the function body, we:
 
 - Use `table.grow` to grow the table size by `1`, with an initial `ref.null` value, checking whether the operation result is `-1`, which would indicate failure.
-- Set our table element to contain the `$f1` function using [`table.set`](/en-US/docs/WebAssembly/Reference/Table/set), then call the imported `$output` function, passing it as parameters the `$elem` `externref` passed into the `output()` function, and the value returned by the `$f1` function, which is being referenced from the table using `(call_indirect (type $ret_i32) (i32.const 0))`.
+- Set our table element to contain the `$f1` function using `table.set`, then call the imported `$output` function, passing it as parameters the `$elem` `externref` passed into the `output()` function, and the value returned by the `$f1` function, which is being referenced from the table using `(call_indirect (type $ret_i32) (i32.const 0))`.
 - Set our table element to contain the `$f2` function using `table.set`, then call the `output()` function again.
 
 ```wat live-sample___basic-usage

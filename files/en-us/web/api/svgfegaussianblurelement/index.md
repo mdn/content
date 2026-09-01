@@ -16,15 +16,7 @@ The **`SVGFEGaussianBlurElement`** interface corresponds to the {{SVGElement("fe
 _This interface also inherits properties from its parent interface, {{domxref("SVGElement")}}._
 
 - {{domxref("SVGFEGaussianBlurElement.edgeMode")}} {{ReadOnlyInline}}
-  - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("edgeMode")}} attribute of the given element. Returns two identical values that are one of the following values:
-    - `SVG_EDGEMODE_UNKNOWN` (0)
-      - : The type is not one of predefined types. It is invalid to attempt to define a new value of this type or to attempt to switch an existing value to this type.
-    - `SVG_EDGEMODE_DUPLICATE` (1)
-      - : Corresponds to the `duplicate` value.
-    - `SVG_EDGEMODE_WRAP` (2)
-      - : Corresponds to the `wrap` value.
-    - `SVG_EDGEMODE_NONE` (3)
-      - : Corresponds to `none` value.
+  - : An {{domxref("SVGAnimatedEnumeration")}} that determines what color values to use when the blur needs to sample pixels beyond the edge of the input image. It reflects the {{SVGAttr("edgeMode")}} attribute of the given {{SVGElement("feGaussianBlur")}} element.
 - {{domxref("SVGFEGaussianBlurElement.height")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedLength")}} corresponding to the {{SVGAttr("height")}} attribute of the given element.
 - {{domxref("SVGFEGaussianBlurElement.in1")}} {{ReadOnlyInline}}

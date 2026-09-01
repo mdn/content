@@ -1,5 +1,6 @@
 ---
-title: resolution
+title: "`resolution` CSS media feature"
+short-title: resolution
 slug: Web/CSS/Reference/At-rules/@media/resolution
 page-type: css-media-feature
 browser-compat: css.at-rules.media.resolution

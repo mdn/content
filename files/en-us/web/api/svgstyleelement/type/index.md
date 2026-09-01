@@ -8,7 +8,7 @@ status:
 browser-compat: api.SVGStyleElement.type
 ---
 
-{{APIRef("SVG")}} {{Deprecated_Header}}
+{{APIRef("SVG")}}
 
 The **`SVGStyleElement.type`** property returns the type of the current style.
 The value reflects the associated SVG `<style>` element's [`type`](/en-US/docs/Web/SVG/Reference/Element/style#type) attribute.

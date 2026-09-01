@@ -1,5 +1,6 @@
 ---
-title: border-image-width
+title: "`border-image-width` CSS property"
+short-title: border-image-width
 slug: Web/CSS/Reference/Properties/border-image-width
 page-type: css-property
 browser-compat: css.properties.border-image-width

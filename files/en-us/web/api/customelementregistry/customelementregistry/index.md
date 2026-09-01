@@ -34,7 +34,7 @@ A new {{domxref("CustomElementRegistry")}} object.
 When you construct a `CustomElementRegistry` using `new CustomElementRegistry()`, the resulting registry is considered _scoped_. This means:
 
 - Custom element definitions added to it using {{domxref("CustomElementRegistry.define", "define()")}} are not globally available. They only apply to nodes that have been associated with this registry.
-- It does not support the `extends` option in `define()` (for creating [customized built-in elements](/en-US/docs/Web/API/Web_components/Using_custom_elements#types_of_custom_elements)). Attempting to use `extends` with a scoped registry throws a `NotSupportedError` {{domxref("DOMException")}}.
+- It does not support the `extends` option in `define()` (for creating [customized built-in elements](/en-US/docs/Web/API/Web_components/Using_custom_elements#types_of_custom_element)). Attempting to use `extends` with a scoped registry throws a `NotSupportedError` {{domxref("DOMException")}}.
 
 To associate a scoped registry with a DOM subtree, you can use the {{domxref("CustomElementRegistry.initialize()", "initialize()")}} method, pass it to {{domxref("Element.attachShadow()")}}, or use the {{domxref("Document.createElement()")}} method's `customElementRegistry` option.
 

@@ -1,5 +1,6 @@
 ---
-title: border-top-left-radius
+title: "`border-top-left-radius` CSS property"
+short-title: border-top-left-radius
 slug: Web/CSS/Reference/Properties/border-top-left-radius
 page-type: css-property
 browser-compat: css.properties.border-top-left-radius
@@ -86,7 +87,7 @@ With two values:
 
 ## Description
 
-The rounding can be a circle or an ellipse, or if one of the value is `0`, no rounding is done and the corner is square.
+The rounding can be a circle or an ellipse, or if one of the values is `0`, no rounding is done and the corner is square.
 
 ![border-radius.png](border-radius.png)
 

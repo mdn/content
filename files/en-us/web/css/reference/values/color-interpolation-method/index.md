@@ -1,5 +1,6 @@
 ---
-title: <color-interpolation-method>
+title: "`<color-interpolation-method>` CSS type"
+short-title: <color-interpolation-method>
 slug: Web/CSS/Reference/Values/color-interpolation-method
 page-type: css-type
 browser-compat:

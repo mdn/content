@@ -348,7 +348,7 @@ frankie.introduceSelf();
 // "Hi! I'm Frankie."
 ```
 
-This works fine but is a bit long-winded: we have to create an empty object, initialize it, and return it. A better way is to use a **constructor**. A constructor is just a function called using the {{jsxref("operators/new", "new")}} keyword. When you call a constructor, it will:
+This works fine but is a bit long-winded: we have to create an empty object, initialize it, and return it. A better way is to use a **constructor**. A constructor is just a function called using the {{jsxref("new")}} keyword. When you call a constructor, it will:
 
 - create a new object
 - bind `this` to the new object, so you can refer to `this` in your constructor code

@@ -1,5 +1,6 @@
 ---
-title: "@scope"
+title: "`@scope` CSS at-rule"
+short-title: "@scope"
 slug: Web/CSS/Reference/At-rules/@scope
 page-type: css-at-rule
 browser-compat:

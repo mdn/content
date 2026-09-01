@@ -10,11 +10,11 @@ browser-compat: api.Document.caretRangeFromPoint
 
 {{APIRef("DOM")}}{{Non-standard_header}}
 
-The **`caretRangeFromPoint()`** method of the
-{{domxref("Document")}} interface returns a {{domxref("Range")}} object for the document
-fragment under the specified coordinates.
+The **`caretRangeFromPoint()`** method of the {{domxref("Document")}} interface returns a {{domxref("Range")}} object for the document fragment under the specified coordinates.
 
-This method is the WebKit-proprietary implementation of the {{domxref("Document.caretPositionFromPoint")}} method.
+This method predates the concept of shadow DOM, and will return unpredictable and implementation-specific results in a document that contains {{domxref("ShadowRoot")}} objects.
+
+Use {{domxref("Document/caretPositionFromPoint", "caretPositionFromPoint()")}} instead on supporting browsers because it is a standard method that can return the caret position from within {{domxref("ShadowRoot")}} instances, provided the relevant shadow roots are passed in its `options` parameter.
 
 ## Syntax
 
@@ -34,12 +34,11 @@ caretRangeFromPoint(x, y)
 One of the following:
 
 - A {{domxref("Range")}}.
-- `Null`, if _x_ or _y_ are negative, outside viewport,
-  or there is no text entry node.
+- `null`, if _x_ or _y_ are negative, outside the viewport, or there is no text entry node.
 
 ## Examples
 
-Visit the {{domxref("Document.caretPositionFromPoint#Examples", "Document.caretPositionFromPoint")}} page to view a live sample of this method.
+Visit the {{domxref("Document/caretPositionFromPoint#Examples", "Document.caretPositionFromPoint()")}} page to view a live sample of this method.
 
 ## Specifications
 
@@ -48,3 +47,7 @@ Not part of any specification.
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Document.caretPositionFromPoint()")}}

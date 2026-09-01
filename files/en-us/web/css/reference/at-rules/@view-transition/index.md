@@ -1,5 +1,6 @@
 ---
-title: "@view-transition"
+title: "`@view-transition` CSS at-rule"
+short-title: "@view-transition"
 slug: Web/CSS/Reference/At-rules/@view-transition
 page-type: css-at-rule
 browser-compat: css.at-rules.view-transition
@@ -30,8 +31,8 @@ For a cross-document view transition to work, the current and destination docume
 
 - `types`
   - : Specifies the view transition [types](/en-US/docs/Web/API/View_Transition_API/Using_types) to set on the active view transition for the current and destination documents. Possible values are:
-    - `<custom-ident>#`
-      - : One or more comma-separated {{cssxref("&lt;custom-ident>")}} values representing the types to set.
+    - `<custom-ident>+`
+      - : One or more space-separated {{cssxref("&lt;custom-ident>")}} values representing the types to set.
     - `none`
       - : No types are set.
 

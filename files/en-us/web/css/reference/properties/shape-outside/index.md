@@ -1,5 +1,6 @@
 ---
-title: shape-outside
+title: "`shape-outside` CSS property"
+short-title: shape-outside
 slug: Web/CSS/Reference/Properties/shape-outside
 page-type: css-property
 browser-compat: css.properties.shape-outside

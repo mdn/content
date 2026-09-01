@@ -3,10 +3,12 @@ name: JSON lint
 on:
   pull_request:
     paths:
+      - .github/workflows/pr-check_json.yml
       - .nvmrc
+      - "*.json"
+      - "*.jsonc"
       - "**/*.json"
       - "**/*.jsonc"
-      - .github/workflows/pr-check_json.yml
 
 # No GITHUB_TOKEN permissions, as we only use it to increase API limit.
 permissions: {}
@@ -16,12 +18,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6.2.0
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version-file: ".nvmrc"
           cache: npm

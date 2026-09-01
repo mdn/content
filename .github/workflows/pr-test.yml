@@ -27,7 +27,7 @@ jobs:
       BUILD_OUT_ROOT: build
 
     steps:
-      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
 
@@ -78,7 +78,7 @@ jobs:
 
       - name: Setup Node.js environment
         if: steps.check.outputs.HAS_FILES == 'true'
-        uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6.2.0
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version-file: ".nvmrc"
           cache: npm
@@ -134,12 +134,12 @@ jobs:
             ARGS+=("-f" "$PWD/$file")
           done
 
-          npx rari build --no-basic --json-issues --data-issues "${ARGS[@]}"
+          npx @mdn/rari build --no-basic --json-issues --data-issues "${ARGS[@]}"
 
-          # Workaround, as fred-ssr doesn't copy assets.
+          # Workaround, as `fred ssr` doesn't copy assets.
           cp -vR node_modules/@mdn/fred/out/. "$BUILD_OUT_ROOT"
 
-          npx fred-ssr
+          npx @mdn/fred ssr
 
           echo "Disk usage size of the build"
           du -sh $BUILD_OUT_ROOT
@@ -154,7 +154,7 @@ jobs:
         if: steps.check.outputs.HAS_MD_FILES == 'true'
         run: du -sh $BUILD_OUT_ROOT
 
-      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         if: steps.check.outputs.HAS_MD_FILES == 'true'
         with:
           name: build

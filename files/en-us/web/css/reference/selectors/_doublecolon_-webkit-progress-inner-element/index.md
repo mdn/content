@@ -1,5 +1,6 @@
 ---
-title: ::-webkit-progress-inner-element
+title: "`::-webkit-progress-inner-element` CSS pseudo-element"
+short-title: ::-webkit-progress-inner-element
 slug: Web/CSS/Reference/Selectors/::-webkit-progress-inner-element
 page-type: css-pseudo-element
 status:
@@ -57,7 +58,7 @@ progress {
 
 If you're not using a Blink or WebKit browser, the above code results in a progress bar looking like this:
 
-![Progressbar is a long green and grey box with a black border. The left 20% of the box is green. The right 80% is grey.](-webkit-progress-inner-element_example.png)
+![Progressbar is a long green and gray box with a black border. The left 20% of the box is green. The right 80% is gray.](-webkit-progress-inner-element_example.png)
 
 ## Specifications
 

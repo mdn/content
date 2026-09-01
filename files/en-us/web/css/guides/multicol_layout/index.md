@@ -286,15 +286,12 @@ blockquote p::after {
 ### Properties
 
 - {{cssxref("column-fill")}}
-- {{cssxref("column-gap")}}
 - {{cssxref("column-span")}}
-- {{cssxref("column-rule")}} shorthand
-  - {{cssxref("column-rule-color")}}
-  - {{cssxref("column-rule-style")}}
-  - {{cssxref("column-rule-width")}}
 - {{cssxref("columns")}} shorthand
   - {{cssxref("column-count")}}
+  - {{cssxref("column-height")}}
   - {{cssxref("column-width")}}
+- {{cssxref("column-wrap")}}
 
 > [!NOTE]
 > Bear in mind that setting container height and line length can pose challenges for people with visual or cognitive disabilities. [WCAG Success Criterion 1.4.8](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) states that even when the text size is doubled, content should not need to be scrolled.
@@ -321,6 +318,16 @@ blockquote p::after {
   - : Create pure-CSS carousel UI features using scroll buttons, scroll markers, and generated columns.
 
 ## Related concepts
+
+[CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module
+
+- {{cssxref("column-rule")}} shorthand
+  - {{cssxref("column-rule-color")}}
+  - {{cssxref("column-rule-style")}}
+  - {{cssxref("column-rule-width")}}
+- {{cssxref("column-gap")}}
+- {{cssxref("gap")}}
+- {{cssxref("row-gap")}}
 
 [CSS fragmentation](/en-US/docs/Web/CSS/Guides/Fragmentation) module
 

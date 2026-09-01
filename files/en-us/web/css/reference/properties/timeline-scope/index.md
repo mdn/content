@@ -1,5 +1,6 @@
 ---
-title: timeline-scope
+title: "`timeline-scope` CSS property"
+short-title: timeline-scope
 slug: Web/CSS/Reference/Properties/timeline-scope
 page-type: css-property
 browser-compat: css.properties.timeline-scope

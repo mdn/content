@@ -171,20 +171,20 @@ Your finished HTML should look something like this:
     <ul>
       <li>
         <label for="vegan">Vegan</label>
-        <input type="checkbox" id="vegan" name="hotdog" value="vegan" />
+        <input type="checkbox" id="vegan" name="hotdog_vegan" />
       </li>
       <li>
         <label for="onions">Onions</label>
-        <input type="checkbox" id="onions" name="hotdog" value="onions" />
+        <input type="checkbox" id="onions" name="hotdog_onions" />
       </li>
       <li>
         <label for="mustard">Mustard</label>
-        <input type="checkbox" id="mustard" name="hotdog" value="mustard" />
+        <input type="checkbox" id="mustard" name="hotdog_mustard" />
       </li>
 
       <li>
         <label for="ketchup">Ketchup</label>
-        <input type="checkbox" id="ketchup" name="hotdog" value="ketchup" />
+        <input type="checkbox" id="ketchup" name="hotdog_ketchup" />
       </li>
     </ul>
   </fieldset>
@@ -196,7 +196,7 @@ Your finished HTML should look something like this:
 
 ## Forms and buttons 3
 
-In this task you'll explore some more specific input types. We want you to create appropriate inputs for a user to update their details for:
+In this task, you'll explore some more specific input types. We want you to create appropriate inputs for a user to update their details:
 
 1. Email
 2. Website

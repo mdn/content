@@ -1,5 +1,6 @@
 ---
-title: ::slotted()
+title: "`::slotted()` CSS pseudo-element"
+short-title: ::slotted()
 slug: Web/CSS/Reference/Selectors/::slotted
 page-type: css-pseudo-element
 browser-compat: css.selectors.slotted

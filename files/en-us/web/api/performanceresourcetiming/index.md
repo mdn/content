@@ -103,7 +103,7 @@ The interface supports the following timestamp properties which you can see in t
 
 Additionally, this interface exposes the following properties containing more information about a resource:
 
-- {{domxref("PerformanceResourceTiming.contentType")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref("PerformanceResourceTiming.contentType")}} {{ReadOnlyInline}}
   - : A string representing a minimized and standardized version of the MIME-type of the fetched resource.
 - {{domxref('PerformanceResourceTiming.decodedBodySize')}} {{ReadOnlyInline}}
   - : A number that is the size (in octets) received from the fetch (HTTP or cache) of the message body, after removing any applied content encoding.
@@ -127,7 +127,7 @@ Additionally, this interface exposes the following properties containing more in
 ## Instance methods
 
 - {{domxref("PerformanceResourceTiming.toJSON()")}}
-  - : Returns a JSON representation of the `PerformanceResourceTiming` object.
+  - : Overrides the {{domxref("PerformanceEntry.toJSON()")}} method to return a JSON representation of the `PerformanceResourceTiming` object.
 
 ## Examples
 

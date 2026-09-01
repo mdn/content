@@ -3,12 +3,11 @@ title: "grow: Wasm table instruction"
 short-title: grow
 slug: WebAssembly/Reference/Table/grow
 page-type: webassembly-instruction
-browser-compat: webassembly.reference-types
-spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-table
+browser-compat: webassembly.instructions.table_grow
 sidebar: webassemblysidebar
 ---
 
-The **`table.grow`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) increases the size of a table by a specified number of elements.
+The **`table.grow`** [table instruction](/en-US/docs/WebAssembly/Reference/Table) increases the size of a table by a specified number of elements.
 
 {{InteractiveExample("Wat Demo: table.grow", "tabbed-taller")}}
 
@@ -66,7 +65,7 @@ table.grow identifier
     - `name`
       - : An identifying name [set for the table](/en-US/docs/WebAssembly/Reference/Definitions/table#name) when it was first created. This must begin with a `$` symbol, for example `$my_table`.
     - `index`
-      - : The table's index number, for example `0` for the first table in the wasm script, `1` for the second, etc.
+      - : The table's index number, for example `0` for the first table in the wasm module, `1` for the second, etc.
 
     If the `identifier` is omitted, it will default to `0`.
 
@@ -87,9 +86,9 @@ To retrieve the new table size after the `grow` instruction is applied to it, us
 
 ### Opcodes
 
-| Instruction  | Binary opcode                                                                                                  |
-| ------------ | -------------------------------------------------------------------------------------------------------------- |
-| `table.grow` | `𝟶𝚡𝙵𝙲 15:𝚞𝟹𝟸` ([variable-width LEB128](https://webassembly.github.io/spec/core/binary/values.html#binary-int)) |
+| Instruction  | Binary format             | Example text => binary                                                               |
+| ------------ | ------------------------- | ------------------------------------------------------------------------------------ |
+| `table.grow` | `0xfc 15:u32 𝑥:table_idx` | `(table.grow (i32.const 1) (ref.null func))` => `0xfc 0x0f 0x00 0x41 0x01 0xd0 0x70` |
 
 ## Description
 
@@ -119,7 +118,7 @@ When the result is returned, we invoke the exported Wasm `run()` function availa
 const outputElem = document.querySelector("p");
 
 const obj = {
-  output: function (elem, val) {
+  output(elem, val) {
     elem.textContent += `${val} `;
   },
 };
@@ -133,7 +132,7 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), {
 
 #### Wasm
 
-In our Wasm module, we first import the JavaScript `output()` function, making sure to declare that it has two parameters, an [`externref`](/en-US/docs/WebAssembly/Reference/Types/externref) and an `i32`.
+In our Wasm module, we first import the JavaScript `output()` function, making sure to declare that it has two parameters, an [`externref`](/en-US/docs/WebAssembly/Reference/Value_types/externref) and an `i32`.
 
 Next, we define a function `type` called `$ret_i32`, which returns an `i32` value. We then define two functions based on this type called `$f1` and `$f2`, which return the values defined within, and forward-declare them using `(elem declare func $f1 $f2)` so they can be referenced later on. Next, we define a `table` called `$func_table`, which stores function references (hence `funcref` being specified) and is initially empty.
 

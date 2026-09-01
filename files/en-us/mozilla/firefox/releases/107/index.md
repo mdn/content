@@ -56,7 +56,7 @@ No notable changes
 
 - Updated the command `WebDriver:PerformAction` to no longer accept `undefined` as value for various parameters of the `pointerMove` and `wheel` actions ([Firefox bug 1781066](https://bugzil.la/1781066)).
 
-- Updated the [Selenium Atoms](https://firefox-source-docs.mozilla.org/testing/marionette/SeleniumAtoms.html) to match a recent WebDriver specification change ([Firefox bug 1771942](https://bugzil.la/1771942)).
+- Updated the [Selenium Atoms](https://firefox-source-docs.mozilla.org/remote/marionette/SeleniumAtoms.html) to match a recent WebDriver specification change ([Firefox bug 1771942](https://bugzil.la/1771942)).
 
 ## Changes for add-on developers
 

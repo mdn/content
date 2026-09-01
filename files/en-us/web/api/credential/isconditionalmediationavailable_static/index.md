@@ -3,12 +3,10 @@ title: "Credential: isConditionalMediationAvailable() static method"
 short-title: isConditionalMediationAvailable()
 slug: Web/API/Credential/isConditionalMediationAvailable_static
 page-type: web-api-static-method
-status:
-  - experimental
 browser-compat: api.Credential.isConditionalMediationAvailable_static
 ---
 
-{{APIRef("Web Authentication API")}}{{securecontext_header}}{{SeeCompatTable}}
+{{APIRef("Web Authentication API")}}{{securecontext_header}}
 
 The **`isConditionalMediationAvailable()`** static method of the {{domxref("Credential")}} interface returns a {{jsxref("Promise")}} which resolves to `false`.
 

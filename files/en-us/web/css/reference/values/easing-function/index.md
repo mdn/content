@@ -1,5 +1,6 @@
 ---
-title: <easing-function>
+title: "`<easing-function>` CSS type"
+short-title: <easing-function>
 slug: Web/CSS/Reference/Values/easing-function
 page-type: css-type
 browser-compat: css.types.easing-function

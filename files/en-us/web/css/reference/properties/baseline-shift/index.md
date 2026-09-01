@@ -1,5 +1,6 @@
 ---
-title: baseline-shift
+title: "`baseline-shift` CSS property"
+short-title: baseline-shift
 slug: Web/CSS/Reference/Properties/baseline-shift
 page-type: css-property
 browser-compat: css.properties.baseline-shift
@@ -144,9 +145,8 @@ svg {
     content: "Your browser doesn't support the `baseline-shift` property.";
     background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
-    padding: 0.5em;
+    padding: 1rem 0;
   }
 }
 ```

@@ -1,5 +1,6 @@
 ---
-title: tab-size
+title: "`tab-size` CSS property"
+short-title: tab-size
 slug: Web/CSS/Reference/Properties/tab-size
 page-type: css-property
 browser-compat: css.properties.tab-size

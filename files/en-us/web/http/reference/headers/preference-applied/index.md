@@ -3,7 +3,7 @@ title: Preference-Applied header
 short-title: Preference-Applied
 slug: Web/HTTP/Reference/Headers/Preference-Applied
 page-type: http-header
-spec-urls: https://www.rfc-editor.org/rfc/rfc7240#section-3
+spec-urls: https://www.rfc-editor.org/info/rfc7240/#section-3
 sidebar: http
 ---
 
@@ -20,7 +20,7 @@ The server indicates if a preference is applied to a response if it would otherw
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header")}}</th>
       <td>No</td>
     </tr>
     <tr>

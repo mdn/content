@@ -107,7 +107,7 @@ requestCloseButton.addEventListener("click", () => {
 dialog.addEventListener("cancel", (event) => {
   log("dialog cancel event fired");
   // Uncomment the next two lines to prevent the dialog from closing
-  // log("dialog close cancelled");
+  // log("dialog close canceled");
   // event.preventDefault();
 });
 

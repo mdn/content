@@ -331,14 +331,14 @@ button {
 #### JavaScript
 
 ```js
-const story = document.body.querySelector(".story");
+const story = document.querySelector(".story");
 
-const setText = document.body.querySelector("#set-text");
+const setText = document.querySelector("#set-text");
 setText.addEventListener("click", () => {
   story.textContent = "It was a dark and stormy night...";
 });
 
-const clearText = document.body.querySelector("#clear-text");
+const clearText = document.querySelector("#clear-text");
 clearText.addEventListener("click", () => {
   story.textContent = "";
 });
@@ -401,9 +401,9 @@ div.child {
 #### JavaScript
 
 ```js
-const parent = document.body.querySelector(".parent");
+const parent = document.querySelector(".parent");
 
-const addChild = document.body.querySelector("#add-child");
+const addChild = document.querySelector("#add-child");
 addChild.addEventListener("click", () => {
   // Only add a child if we don't already have one
   // in addition to the text node "parent"
@@ -416,9 +416,9 @@ addChild.addEventListener("click", () => {
   parent.appendChild(child);
 });
 
-const removeChild = document.body.querySelector("#remove-child");
+const removeChild = document.querySelector("#remove-child");
 removeChild.addEventListener("click", () => {
-  const child = document.body.querySelector(".child");
+  const child = document.querySelector(".child");
   parent.removeChild(child);
 });
 ```
@@ -556,7 +556,7 @@ document.getElementById("t-daddy").addEventListener("click", () => {
 
 ### Displaying event object properties
 
-This example uses DOM methods to display all the properties of the {{domxref("Window.load_event", "onload")}} {{domxref("event")}} object and their values in a table. It also shows a useful technique of using a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop to iterate over the properties of an object to get their values.
+This example uses DOM methods to display all the properties of the {{domxref("Element.click_event", "click")}} event object and their values in a table. It also shows a useful technique of using a [`for...in`](/en-US/docs/Web/JavaScript/Reference/Statements/for...in) loop to iterate over the properties of an object to get their values.
 
 The properties of event objects differs greatly between browsers, the [WHATWG DOM Standard](https://dom.spec.whatwg.org/) lists the standard properties, however many browsers have extended these greatly.
 
@@ -569,6 +569,7 @@ Put the following code into a blank text file and load it into a variety of brow
 ```css
 table {
   border-collapse: collapse;
+  margin-top: 2em;
 }
 thead {
   font-weight: bold;
@@ -586,13 +587,12 @@ td {
 ```
 
 ```js
-function showEventProperties(e) {
+function showEventProperties(event) {
   function addCell(row, text) {
     const cell = row.insertCell(-1);
     cell.appendChild(document.createTextNode(text));
   }
 
-  const event = e || window.event;
   document.getElementById("eventType").textContent = event.type;
 
   const table = document.createElement("table");
@@ -619,7 +619,7 @@ function showEventProperties(e) {
   document.body.appendChild(table);
 }
 
-showEventProperties(event);
+window.addEventListener("click", showEventProperties);
 ```
 
 {{EmbedLiveSample("Displaying event object properties", "", "300")}}

@@ -88,7 +88,7 @@ To configure IIS to send the `X-Frame-Options` header, add this to your site's `
 </system.webServer>
 ```
 
-For more information, see the [Microsoft support article on setting this configuration using the IIS Manager](https://support.microsoft.com/en-US/office/mitigating-framesniffing-with-the-x-frame-options-header-1911411b-b51e-49fd-9441-e8301dcdcd79) user interface.
+For more information, see the [Microsoft support article on setting this configuration using the IIS Manager](https://support.microsoft.com/en-US/security/mitigating-framesniffing-with-the-x-frame-options-header) user interface.
 
 ### Configuring HAProxy
 
@@ -106,7 +106,7 @@ http-response set-header X-Frame-Options SAMEORIGIN
 
 ### Configuring Express
 
-To set `X-Frame-Options` to `SAMEORIGIN` using [Helmet](https://helmetjs.github.io/) add the following to your server configuration:
+To set `X-Frame-Options` to `SAMEORIGIN` using [Helmet](https://helmet.js.org/) add the following to your server configuration:
 
 ```js
 import helmet from "helmet";

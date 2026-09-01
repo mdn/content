@@ -89,13 +89,19 @@ In a guide or tutorial, the introductory paragraph(s) should inform the reader a
 
 MDN has a wide and diverse audience.
 We strongly encourage keeping text as inclusive as possible.
-Here are some alternatives to common terms used in documentation:
+Some terms, while not intending to be offensive, may alienate readers of certain backgrounds, such as:
 
 - Avoid using the terms **master** and **slave** and instead use **main** and **replica**.
 - Replace **whitelist** and **blacklist** with **allowlist** and **denylist**.
 - **Sanity** should be replaced with **coherence**.
 - Instead of **dummy**, use **placeholder**.
 - You should not need to use the terms **crazy** and **insane** in documentation; however, if the case arises, consider using **fantastic** instead.
+
+Avoid figurative idioms with depictions of violence or cruelty, which trigger certain audiences and set the wrong tone for documentation. For example:
+
+- Instead of "kill two birds with one stone," use "solve two problems at once."
+- Instead of "beating a dead horse," use "belaboring the point" or "going round in circles."
+- Instead of "more than one way to skin a cat," use "more than one way to do this."
 
 It is best to use gender-neutral language in any writing where gender is irrelevant to the subject matter.
 For example, if you are talking about the actions of a specific man, using "he"/"his" is fine; but if the subject is a person of either gender, "he"/"his" isn't appropriate.
@@ -542,7 +548,7 @@ Keep the following dos and don'ts in mind while creating headings for subsection
 
 If you include images or other media on a page, follow these guidelines:
 
-- Make sure the media license allows you to use them. Try to use media that has a very permissive license such as [CC0](https://creativecommons.org/public-domain/cc0/) or at least one that is compatible with our general content license — [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA).
+- Make sure the media license allows you to use them. Try to use media that has a very permissive license such as [CC0](https://wiki.creativecommons.org/wiki/CC0) or at least one that is compatible with our general content license — [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/) (CC-BY-SA).
 - For images, run them through <https://tinypng.com> or <https://imageoptim.com> to reduce the page weight.
 - For `SVG`, run the code through [SVGOMG](https://jakearchibald.github.io/svgomg/), and ensure that the `SVG` file has an empty line at the end of the file.
 - Every image must [include descriptive `alt` text](/en-US/docs/MDN/Writing_guidelines/Howto/Images_media#adding_alternative_text_to_images).
