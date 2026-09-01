@@ -42,9 +42,9 @@ If the operation is successful, the value of the request's {{domxref("IDBRequest
 
 ## Description
 
-If the database is successfully deleted, then a `success` event is fired on the request object returned from this method, with its `result` set to `undefined`. If an error occurs while the database is being deleted, then an `error` event is fired on the request object that is returned from this method.
+If the database is successfully deleted, then a `success` event is fired on the request object returned from `deleteDatabase()`, with its `result` set to `undefined`. If an error occurs during deletion, an `error` event is fired on the request object returned from this method.
 
-When `deleteDatabase()` is called, any other open connections to this particular database are sent a [`versionchange`](/en-US/docs/Web/API/IDBDatabase/versionchange_event) event, giving them the opportunity to close so that the deletion can proceed.
+When `deleteDatabase()` is called, any other open connections to this particular database are sent a [`versionchange`](/en-US/docs/Web/API/IDBDatabase/versionchange_event) event, allowing them to close so that the deletion can proceed.
 
 If a connection is not closed in response to the `versionchange` event, the deletion is blocked: the request's `success` event does not fire, and a [`blocked`](/en-US/docs/Web/API/IDBOpenDBRequest/blocked_event) event is fired on the request instead. The deletion stays pending until every connection to the database is closed.
 
@@ -58,6 +58,8 @@ db.addEventListener("versionchange", () => {
 ```
 
 ## Examples
+
+### Basic usage
 
 ```js
 const dbDeleteRequest = indexedDB.deleteDatabase("toDoList");
