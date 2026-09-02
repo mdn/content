@@ -140,7 +140,9 @@ _Doesn't inherit any properties._
 
 ## Instance methods
 
-_Doesn't inherit any method._
+_Doesn't inherit any methods._
+
+### Standard methods
 
 - {{domxref("Navigator.canShare()")}} {{SecureContext_Inline}}
   - : Returns `true` if a call to `Navigator.share()` would succeed.
@@ -172,6 +174,11 @@ _Doesn't inherit any method._
   - : Causes vibration on devices with support for it. Does nothing if vibration support isn't available.
 - {{domxref("Navigator.unregisterProtocolHandler()")}} {{SecureContext_Inline}}
   - : Unregister a website that is a handler for a given protocol.
+
+### Non-standard methods
+
+- {{domxref("Navigator.install()")}} {{non-standard_inline}}
+  - : Instructs the browser to install a [progressive web app (PWA)](/en-US/docs/Glossary/Progressive_web_apps).
 
 ### Deprecated methods
 
