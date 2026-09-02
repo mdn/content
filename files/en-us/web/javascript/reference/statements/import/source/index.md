@@ -81,7 +81,7 @@ The modifier applies to an import, not to the module itself. If another part of 
 import x from "foo";
 import source xSource from "foo";
 
-console.log(await import(xSource) === x); // true
+console.log((await import(xSource)) === x); // true
 ```
 
 > [!NOTE]
