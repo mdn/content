@@ -41,7 +41,7 @@ import "module-name";
 
 The `"module-name"` may be followed by a set of [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with), starting with the `with` keyword.
 
-The `import` keyword may be followed by a "phase modifier" that pauses the evaluation of the module at one phase of the module loading process:
+The `import` keyword may be followed by a "phase modifier" that stops the module import process at a particular phase:
 
 - [`defer`](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer)
 - [`source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/source)

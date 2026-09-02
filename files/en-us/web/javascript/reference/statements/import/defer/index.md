@@ -6,7 +6,7 @@ browser-compat: javascript.statements.import.defer
 sidebar: jssidebar
 ---
 
-The **`import defer`** statement behaves like regular [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declarations, but it can only import a module using the namespace import syntax, and results in a [deferred module namespace object](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer#deferred_module_namespace_object). The module and its dependencies are fetched and linked up front, but their synchronous evaluation is deferred until the namespace's properties are accessed. Modules that use [top-level `await`](#top-level_await) are evaluated eagerly.
+The **`import defer`** declaration behaves like regular [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declarations, but it can only import a module using the namespace import syntax, and results in a [deferred module namespace object](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer#deferred_module_namespace_object). The module and its dependencies are fetched and linked up front, but their synchronous evaluation is deferred until the namespace's properties are accessed. Modules that use [top-level `await`](#top-level_await) are evaluated eagerly.
 
 ## Syntax
 
@@ -27,7 +27,7 @@ import defer * as name from "module-name";
 
 By default, the `import` declaration performs many tasks at once: resolving the module specifier, fetching the module source code, parsing (potentially discovering transitive dependencies), linking, and evaluating it. This form of eager evaluation is not always desirable: it may cause slower startup, the environment for its evaluation may not be fully prepared, or the module may not need to be evaluated at all.
 
-The _import phase modifier_ allows the module import process to only be executed until a certain phase. By adding `defer` after `import`, the source code is linked but remains unevaluated, provided that it can be evaluated synchronously (i.e., does not use top-level `await`). Accessing an export through the deferred namespace synchronously evaluates the module and any dependencies that need to be evaluated before it. The access returns the export's value after evaluation finishes. This executes the module's top-level code, not just the code needed to initialize the requested export. Dependencies imported with their own `import defer` declarations can remain deferred.
+The _import phase modifier_ allows the module import process to stop at a particular phase. By adding `defer` after `import`, the source code is linked but remains unevaluated, provided that it can be evaluated synchronously (i.e., does not use top-level `await`). Accessing an export through the deferred namespace synchronously evaluates the module and any dependencies that need to be evaluated before it. The access returns the export's value after evaluation finishes. This executes the module's top-level code, not just the code needed to initialize the requested export. Dependencies imported with their own `import defer` declarations can remain deferred.
 
 By ensuring that the paused subgraph can be evaluated synchronously, `import defer` can be "dropped in" with almost no code changes to the places that use the module:
 
@@ -37,9 +37,11 @@ import * as ts from "typescript";
 // The full typescript module graph evaluates here
 
 function compileFile(path) {
-  ts.compile(path);
+  const program = ts.createProgram([path], {});
 }
+```
 
+```js
 // After:
 import defer * as ts from "typescript";
 // No code is evaluated; potentially faster startup
@@ -49,18 +51,18 @@ function compileFile(path) {
   // is accessed, i.e., when `compileFile` is called.
   // If `compileFile` is never called, then the module graph
   // is never evaluated.
-  const program = ts.createProgram([path]);
+  const program = ts.createProgram([path], {});
 }
 ```
 
 > [!WARNING]
 > Deferring an import changes when its side effects occur. Do not defer modules whose side effects are needed before the rest of your code runs, such as modules that install polyfills.
 
-Unlike [`import source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/source), a deferred module is still linked upfront. Linking is definitely asynchronous because it involves fetching dependencies, so the module source object obtained by `import source` must be evaluated asynchronously.
+Unlike [`import source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/source), a deferred module is still linked up front. Linking up front lets the module loader resolve dependencies, catching missing dependencies or invalid imports before the module is used. Leaving the module unlinked avoids loading dependencies you may not need and allows you to control how it is instantiated.
 
-Unlike [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import), the deferred module is still fetched, parsed, and linked upfront, again avoiding unnecessary async coloring. `import defer` also enjoys most benefits of a static declaration, such as better static analysis.
+Unlike [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import), the deferred module is still fetched, parsed, and linked up front, again avoiding unnecessary async coloring. `import defer` also enjoys most benefits of a static declaration, such as better static analysis.
 
-The modifier applies to an import, not to the module itself. If another part of the application imports the same module without `defer`, the module is evaluated as usual. Both forms share the same module state, and the module's code executes at most once. Changing the import phase does not create a separate module in the cache.
+The modifier applies to an import, not to the module itself. If another part of the application imports the same module without `defer`, the module is evaluated as usual. Both forms share the same module state, and the module's code executes at most once. Changing the import phase does not create a separate module in the cache:
 
 ```js
 import defer * as ts from "typescript";
@@ -71,19 +73,18 @@ import * as ts2 from "typescript";
 function compileFile(path) {
   // Accessing `ts.createProgram` no longer evaluates the subgraph
   // because it's already evaluated.
-  const program = ts.createProgram([path]);
+  const program = ts.createProgram([path], {});
 }
 ```
 
-In contrast, an [import attribute](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) causes the same string specifier to be seen as a new module. For example, if these two statements coexist:
+In contrast, [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) can affect module identity. For example, in a host that supports text modules, these two declarations request different module types:
 
 ```js
-import * as ts from "typescript";
-// A hypothetical host feature
-import * as ts2 from "typescript" with { type: "deferred" };
+import * as mod from "./module.js";
+import text from "./module.js" with { type: "text" };
 ```
 
-The two imports are considered to be from different modules that happen to share the same string specifier (on the web, they will be requested with different HTTP headers). This means that the two modules will be loaded and cached separately, and will not share any state.
+The two imports are considered to be from different modules that happen to share the same string specifier (on the web, they will be requested with different HTTP headers). The supported attributes and their effects on loading and module identity are defined by the host.
 
 ### Deferred module namespace object
 
@@ -111,13 +112,13 @@ In order to implement the behavior of "triggering module evaluation when keys ar
   > [!NOTE]
   > You cannot actually delete any property that the namespace has. Nevertheless, even if the operation fails, evaluation is still triggered.
 
-- [`get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get) and [`getOwnPropertyDescriptor()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor) for any string key other than `then`: for example, `namespace.value`, `namespace["missing"]`, `const { default } = namespace`, `Object.getOwnPropertyDescriptor(namespace, "value")`.
+- [`get()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get) and [`getOwnPropertyDescriptor()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor) for any string key other than `then`: for example, `namespace.value`, `namespace["missing"]`, `const { default: value } = namespace`, `Object.getOwnPropertyDescriptor(namespace, "value")`.
 
   > [!NOTE]
   > Destructuring an export at the top level therefore defeats the deferral of that module.
 
 - [`has()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has) for any string key other than `then`: for example, `"value" in namespace`, `Object.hasOwn(namespace, "missing")`.
-- [`ownKeys()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys): for example, `Object.keys(namespace)`, `for (const key in namespace) {}`.
+- [`ownKeys()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys): for example, `Object.keys(namespace)`, `Object.getOwnPropertySymbols(namespace)`, `for (const key in namespace) {}`. Even enumerating only symbol keys triggers evaluation.
 
 Merely referring to the namespace, assigning it to another variable, comparing its identity, or passing it to a function does not trigger evaluation. Neither does reading `then` or a symbol-keyed property, such as `namespace[Symbol.toStringTag]`. Calling {{jsxref("Object.getPrototypeOf()")}} or {{jsxref("Object.isExtensible()")}} does not trigger evaluation either. However, {{jsxref("Object.isSealed()")}} and {{jsxref("Object.isFrozen()")}} enumerate keys and therefore do trigger evaluation.
 
@@ -133,7 +134,7 @@ Loading, parsing, and linking errors are not deferred. For example, a missing mo
 
 Errors thrown during deferred evaluation are thrown synchronously by the operation that triggers evaluation. You can catch them with [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) around that operation. The error is cached: subsequent operations that trigger evaluation throw the same error instead of retrying the module's code. This also applies if another import previously caused the module's evaluation to fail.
 
-An operation that triggers evaluation throws a {{jsxref("TypeError")}} if the module or its dependencies are not ready for synchronous evaluation. This can happen with [cyclic imports](/en-US/docs/Web/JavaScript/Guide/Modules#cyclic_imports), when an access would require a module that is still being evaluated. An `import defer` declaration does not make every cyclic dependency safe to access during initialization.
+An operation that triggers evaluation throws a {{jsxref("TypeError")}} if the module or its dependencies are not ready for synchronous evaluation. This can happen with [cyclic imports](/en-US/docs/Web/JavaScript/Guide/Modules#cyclic_imports), when an access would require a module that is still being evaluated. An `import defer` declaration does not make every cyclic dependency safe to access during initialization. A readiness failure itself does not mark the requested module as having failed evaluation: a later access can succeed once its dependencies are ready.
 
 ## Examples
 
