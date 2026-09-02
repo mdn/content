@@ -41,7 +41,12 @@ Firefox 156 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 <!-- #### Removals -->
 
-<!-- ### SVG -->
+### SVG
+
+- {{domxref("MouseEvent.offsetX")}} and {{domxref("MouseEvent.offsetY")}} are now measured from the origin of the outermost {{SVGElement("svg")}} element for events targeting a {{SVGElement("tspan")}}, which previously used the wrong origin.
+  ([Firefox bug 2066045](https://bugzil.la/2066045)).
+- The {{domxref("SVGSVGElement.currentScale")}} setter is now a no-op on a nested `<svg>` element, as required by the specification. It continues to work on the outermost `<svg>` element.
+  ([Firefox bug 2063188](https://bugzil.la/2063188)).
 
 <!-- #### Removals -->
 
@@ -86,11 +91,16 @@ Firefox 156 is the current [Nightly version of Firefox](https://www.firefox.com/
 - The `length` parameter of {{domxref("SubtleCrypto.deriveBits()")}} is now declared [`[EnforceRange]`](https://webidl.spec.whatwg.org/#EnforceRange), so a value that is `NaN`, `Infinity`, negative, or greater than 2<sup>32</sup>−1 throws a {{jsxref("TypeError")}}.
   Previously these values were either accepted or rejected the returned promise with an `OperationError`. This affects the `HKDF`, `PBKDF2`, `ECDH`, and `X25519` algorithms.
   ([Firefox bug 2065212](https://bugzil.la/2065212)).
+- {{domxref("Scheduler.yield()")}} now inherits the enclosing task's priority and abort signal across an `await` that settles synchronously, such as an already-resolved promise, a non-promise value, or a `then()` callback on a settled promise.
+  Previously the continuation lost the inherited state in these cases and silently fell back to the default `user-visible` priority.
+- {{domxref("Cache.addAll()")}} now succeeds when the requests it is given differ only by a `Vary` header, instead of rejecting with an `InvalidStateError`.
 
 #### DOM
 
 - {{domxref("Range.deleteContents()")}} and {{domxref("Range.extractContents()")}} now operate on the DOM tree rather than the flat tree.
   As a result, a range that spans a [shadow root](/en-US/docs/Web/API/ShadowRoot) boundary now deletes and extracts the nodes the specification requires, including when the range starts or ends inside a shadow tree.
+  Previously such a range could remove content from inside the shadow tree while leaving unassigned children of the host in place, and {{domxref("Range.extractContents()")}} could throw instead of returning a fragment.
+  The same fix applies to {{domxref("Selection.deleteFromDocument()")}}.
   ([Firefox bug 2053997](https://bugzil.la/2053997)).
 
 #### Media, WebRTC, and Web Audio
@@ -111,6 +121,7 @@ Firefox 156 is the current [Nightly version of Firefox](https://www.firefox.com/
 #### General
 
 - Fixed the Actions API so that `moveOverTime` timer delays no longer cause intermediate pointer move events to be skipped. ([Firefox bug 2054442](https://bugzil.la/2054442)).
+- Releasing a character sequence held with a modifier key now emits the `keyup` events in reverse order, in both the classic and WebDriver BiDi endpoints.
 
 #### WebDriver BiDi
 
