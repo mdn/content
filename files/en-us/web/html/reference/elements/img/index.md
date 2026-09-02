@@ -43,19 +43,28 @@ The HTML standard doesn't list what image formats to support, so {{glossary("use
 > The [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types) provides comprehensive information about image formats and their web browser support.
 > This section is just a summary!
 
-The image file formats that are most commonly used on the web are:
+### Choosing a format
 
-- [APNG (Animated Portable Network Graphics)](/en-US/docs/Web/Media/Guides/Formats/Image_types#apng_animated_portable_network_graphics) — Good choice for lossless animation sequences (GIF is less performant)
-- [AVIF (AV1 Image File Format)](/en-US/docs/Web/Media/Guides/Formats/Image_types#avif_image) — Good choice for both images and animated images due to high performance.
-- [GIF (Graphics Interchange Format)](/en-US/docs/Web/Media/Guides/Formats/Image_types#gif_graphics_interchange_format) — Good choice for _simple_ images and animations.
-- [JPEG (Joint Photographic Expert Group image)](/en-US/docs/Web/Media/Guides/Formats/Image_types#jpeg_joint_photographic_experts_group_image) — Good choice for lossy compression of still images (currently the most popular).
-- [PNG (Portable Network Graphics)](/en-US/docs/Web/Media/Guides/Formats/Image_types#png_portable_network_graphics) — Good choice for lossless compression of still images (slightly better quality than JPEG).
-- [SVG (Scalable Vector Graphics)](/en-US/docs/Web/Media/Guides/Formats/Image_types#svg_scalable_vector_graphics) — Vector image format. Use for images that must be drawn accurately at different sizes.
-- [WebP (Web Picture format)](/en-US/docs/Web/Media/Guides/Formats/Image_types#webp_image) — Excellent choice for both images and animated images
+For most images, prefer [AVIF](/en-US/docs/Web/Media/Guides/Formats/Image_types#avif_image) or [WebP](/en-US/docs/Web/Media/Guides/Formats/Image_types#webp_image). Both compress considerably better than the older formats at comparable quality, and current versions of every major browser support them. To support older browsers as well, offer [JPEG](/en-US/docs/Web/Media/Guides/Formats/Image_types#jpeg_joint_photographic_experts_group_image) or [PNG](/en-US/docs/Web/Media/Guides/Formats/Image_types#png_portable_network_graphics) as a fallback [using the `<picture>` element](/en-US/docs/Web/Media/Guides/Formats/Image_types#providing_image_fallbacks):
 
-Formats like [WebP](/en-US/docs/Web/Media/Guides/Formats/Image_types#webp_image) and [AVIF](/en-US/docs/Web/Media/Guides/Formats/Image_types#avif_image) are recommended as they perform much better than PNG, JPEG, GIF for both still and animated images.
+```html
+<picture>
+  <source srcset="photo.avif" type="image/avif" />
+  <source srcset="photo.webp" type="image/webp" />
+  <img src="photo.jpg" alt="A herd of goats grazing on a hillside" />
+</picture>
+```
 
-SVG remains the recommended format for images that must be drawn accurately at different sizes.
+Which format suits a particular image depends on what the image is:
+
+- Artwork that has to stay sharp at any size, such as logos, icons and diagrams, belongs in [SVG](/en-US/docs/Web/Media/Guides/Formats/Image_types#svg_scalable_vector_graphics). It is a vector format, so it has no resolution of its own and does not blur when scaled up.
+- Photographs and similarly detailed images are what AVIF and WebP are built for, and AVIF usually produces the smaller file of the two.
+- Screenshots, and graphics with flat color and hard edges, compress well losslessly. AVIF, WebP and [PNG](/en-US/docs/Web/Media/Guides/Formats/Image_types#png_portable_network_graphics) all have lossless modes; PNG is the one that older browsers understand.
+- Large images that a reader should see something of before the transfer finishes are the case where [JPEG](/en-US/docs/Web/Media/Guides/Formats/Image_types#jpeg_joint_photographic_experts_group_image) still has an advantage, because it renders progressively. AVIF does not, so an AVIF file has to arrive in full before any of it is drawn.
+- Animations are handled by both AVIF and WebP, at a fraction of the size of the equivalent [GIF](/en-US/docs/Web/Media/Guides/Formats/Image_types#gif_graphics_interchange_format) or [APNG](/en-US/docs/Web/Media/Guides/Formats/Image_types#apng_animated_portable_network_graphics).
+
+> [!NOTE]
+> [JPEG XL](/en-US/docs/Web/Media/Guides/Formats/Image_types#jpeg_xl_image) is designed to cover most of these cases at once: it compresses well, renders progressively, and can losslessly transcode an existing JPEG file. Browser support is not yet broad enough to rely on it. Safari 17 and later enables it, Chrome 145 and later supports it behind the `#enable-jxl-image-format` flag, and Firefox supports it in preview releases, so serve it with a fallback.
 
 ## Image loading errors
 
