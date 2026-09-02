@@ -55,6 +55,11 @@ The empty string (`""`) if the element does not have an active blocker, or one o
 
     Temporary blocker.
 
+- `type_invalid`
+  - : xxx ?
+
+    Temporary blocker.
+
 These invalid reasons are listed in priority order, from highest to lowest.
 If multiple blockers are active, the `invalidReason` value returned will be the value representing the highest-priority active blocker.
 
@@ -159,7 +164,7 @@ Next, we style our `#cover` `<div>` with `position: absolute` and use {{glossary
 ```css live-sample___explore_invalid
 #cover {
   position: absolute;
-  top: 72px;
+  top: 0px;
   left: 250px;
   z-index: 2;
 }
