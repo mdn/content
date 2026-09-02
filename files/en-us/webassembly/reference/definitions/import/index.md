@@ -310,7 +310,7 @@ call 2
 
 ## See also
 
-- [WebAssembly definitions](/en-US/docs/WebAssembly/Reference/Definitions/)
+- [WebAssembly definitions](/en-US/docs/WebAssembly/Reference/Definitions)
 - [`WebAssembly.Global`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global)
 - [`WebAssembly.Memory`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory)
 - [`WebAssembly.Table`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Table)
