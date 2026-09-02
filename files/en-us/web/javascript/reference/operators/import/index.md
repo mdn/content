@@ -30,6 +30,11 @@ The `import()` call is a syntax that closely resembles a function call, but `imp
     - `with`
       - : The [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with).
 
+"Phase modifiers" for `import` statements can also be used with dynamic imports, in the form of "meta properties":
+
+- [`import.defer()`](/en-US/docs/Web/JavaScript/Reference/Operators/import/defer)
+- [`import.source()`](/en-US/docs/Web/JavaScript/Reference/Operators/import/source)
+
 ### Return value
 
 Returns a promise which:
@@ -54,7 +59,7 @@ The import declaration syntax (`import something from "somewhere"`) is static an
 - When the module being imported has side effects, and you do not want those side effects unless some condition is true. (It is recommended not to have any side effects in a module, but you sometimes cannot control this in your module dependencies.)
 - When you are in a non-module environment (for example, `eval` or a script file).
 
-Use dynamic import only when necessary. The static form is preferable for loading initial dependencies, and can benefit more readily from static analysis tools and [tree shaking](/en-US/docs/Glossary/Tree_shaking).
+Use dynamic import only when necessary. The static form is preferable for loading initial dependencies, and can benefit more readily from static analysis tools and [tree shaking](/en-US/docs/Glossary/Tree_shaking). If your only goal is to defer the execution of the loaded code until when it's used, consider using [`import defer`](/en-US/docs/Web/JavaScript/Statements/import/defer).
 
 If your file is not run as a module (if it's referenced in an HTML file, the script tag must have `type="module"`), you will not be able to use static import declarations. On the other hand, the asynchronous dynamic import syntax is always available, allowing you to import modules into non-module environments.
 

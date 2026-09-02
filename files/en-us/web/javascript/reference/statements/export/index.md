@@ -231,6 +231,9 @@ export { default, function2 } from "bar.js";
 export { default } from "./data.json" with { type: "json" };
 ```
 
+> [!NOTE]
+> The [`import defer * as ns`](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer) declaration has no re-exporting counterpart, despite `import * as ns` having one. Deferred re-exports are being developed in a [separate proposal](https://github.com/tc39/proposal-deferred-reexports), because they can also avoid loading unused modules, which requires additional tree-shaking semantics. You can instead [import and export in two separate statements](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer#exporting_a_deferred_namespace), although this immediately loads the module.
+
 ## Examples
 
 ### Using named exports

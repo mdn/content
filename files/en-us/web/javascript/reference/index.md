@@ -184,6 +184,7 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 - {{jsxref("Statements/debugger", "debugger")}}
 - {{jsxref("Statements/export", "export")}}
 - {{jsxref("Statements/import", "import")}}
+- {{jsxref("Statements/import/defer", "import defer")}}
 - {{jsxref("Statements/label", "label", "", 1)}}
 - {{jsxref("Statements/with", "with")}} {{deprecated_inline}}
 
@@ -215,6 +216,7 @@ If you are new to JavaScript, start with the [guide](/en-US/docs/Web/JavaScript/
 - {{jsxref("Operators/import.meta", "import.meta")}}
 - {{jsxref("Operators/super", "super")}}
 - {{jsxref("Operators/import", "import()")}}
+- {{jsxref("Operators/import/defer", "import.defer()")}}
 
 ### Increment and decrement
 

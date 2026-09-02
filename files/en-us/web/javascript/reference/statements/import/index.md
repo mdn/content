@@ -41,6 +41,11 @@ import "module-name";
 
 The `"module-name"` may be followed by a set of [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with), starting with the `with` keyword.
 
+The `import` keyword may be followed by a "phase modifier" that pauses the evaluation of the module at one phase of the module loading process:
+
+- [`defer`](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer)
+- [`source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/source)
+
 ## Description
 
 `import` declarations can only be present in modules, and only at the top-level (i.e., not inside blocks, functions, etc.). If an `import` declaration is encountered in non-module contexts (for example, `<script>` tags without `type="module"`, `eval`, `new Function`, which all have "script" or "function body" as parsing goals), a `SyntaxError` is thrown. To load modules in non-module contexts, use the [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import) syntax instead.
