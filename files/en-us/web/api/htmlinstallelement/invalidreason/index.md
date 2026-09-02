@@ -26,7 +26,7 @@ The empty string (`""`) if the element does not have an active blocker, or one o
     Permanent blocker.
 
 - `unsuccessful_registration`
-  - : More than three `<install>` elements have been inserted into the same document.
+  - : More than 24 `<install>` elements have been inserted into the same document.
 
     Temporary blocker.
 

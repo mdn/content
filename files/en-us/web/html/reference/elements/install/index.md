@@ -74,8 +74,6 @@ There are three distinct usage contexts in which `<install>` is useful:
    </p>
    ```
 
-   In this case, the permission flow is different — in addition to asking the user whether they want to install each specific app, they are also asked to confirm whether they give the current site permission to install apps.
-
 > [!NOTE]
 > The above snippets assume that the referenced manifests specify an [`id`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/id) field. If they don't, then the manifest `id` must be specified in the `<install>` element's [`manifestId`](#manifestid) attribute.
 
@@ -83,7 +81,7 @@ There are three distinct usage contexts in which `<install>` is useful:
 
 For an app to be installed via an `<install>` element, the following criteria must be met:
 
-- The app must meet the basic PWA [installability](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#installability) criteria, namely, it must have a valid manifest and must be served over HTTPS, or from a `localhost` or loopback (`127.0.0.1`) address.
+- The app must meet the basic PWA [installability](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#installability) criteria, namely, it must have a valid manifest and must be served over HTTPS, or from a `localhost` address.
 - The app must have a manifest ID available, either in the manifest file `id` field, or provided in the `<install>` element's `manifestId` attribute.
 
 ### Setting the button language
