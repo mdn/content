@@ -8,9 +8,7 @@ browser-compat: api.InstallResultEvent.result
 
 {{APIRef("HTML DOM")}}
 
-The **`result`** read-only property of the
-{{domxref("HashChangeEvent")}} interface returns the new URL to which the window is
-navigating.
+The **`result`** read-only property of the {{domxref("InstallResultEvent")}} interface represents the status of a [progressive web app (PWA)](/en-US/docs/Glossary/Progressive_web_apps) installation.
 
 ## Value
 

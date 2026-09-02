@@ -10,7 +10,7 @@ browser-compat: api.HTMLInstallElement.manifest
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
 
-The **`manifest`** property of the {{domxref("HTMLInstallElement")}} interface gets and sets the [web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) representing the PWA to be installed.
+The **`manifest`** property of the {{domxref("HTMLInstallElement")}} interface gets and sets the [web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) representing the [progressive web app (PWA)](/en-US/docs/Glossary/Progressive_web_apps) to be installed.
 
 It reflects the value of the `<install>` [`manifest`](/en-US/docs/Web/HTML/Reference/Elements/install#manifest) attribute.
 
