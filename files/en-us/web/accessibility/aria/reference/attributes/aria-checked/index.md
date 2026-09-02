@@ -12,7 +12,7 @@ sidebar: accessibilitysidebar
 The `aria-checked` attribute indicates the current "checked" state of checkboxes, radio buttons, and other widgets.
 
 > [!NOTE]
-> Where possible use an HTML {{htmlelement("input")}} element with `type="checkbox"` and `type="radio"` as these have built in semantics and do not require ARIA attributes.
+> Where possible use an HTML {{htmlelement("input")}} element with `type="checkbox"` and `type="radio"` as these have built-in semantics and do not require ARIA attributes.
 
 ## Description
 

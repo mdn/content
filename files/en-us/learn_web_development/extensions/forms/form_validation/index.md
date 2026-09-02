@@ -546,7 +546,7 @@ form.addEventListener("submit", (e) => {
 #### Extending built-in form validation
 
 The previous example showed how you can add a customized message for a particular type of error (`validity.typeMismatch`).
-It is also possible to use all of the built in form validation, and then add to it using `setCustomValidity()`.
+It is also possible to use all of the built-in form validation, and then add to it using `setCustomValidity()`.
 
 Here we demonstrate how you can extend the built in [`<input type="email">`](/en-US/docs/Web/HTML/Reference/Elements/input/email) validation to only accept addresses with the `@example.com` domain.
 We start with the HTML {{htmlelement("form")}} below.
