@@ -77,11 +77,9 @@ const badLink = encodeURI(`https://example.com/?choice=${name}`); // "https://ex
 console.log([...new URL(badLink).searchParams]); // [['choice', 'Ben '], [" Jerry's", '']]
 
 // Instead:
-const goodLink = encodeURI(
-  `https://example.com/?choice=${encodeURIComponent(name)}`,
-);
-// "https://example.com/?choice=Ben%2520%2526%2520Jerry's"
-console.log([...new URL(goodLink).searchParams]); // [['choice', "Ben%20%26%20Jerry's"]]
+const goodLink = `https://example.com/?choice=${encodeURIComponent(name)}`;
+// "https://example.com/?choice=Ben%20%26%20Jerry's"
+console.log([...new URL(goodLink).searchParams]); // [['choice', "Ben & Jerry's"]]
 ```
 
 ## Examples
