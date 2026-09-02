@@ -23,11 +23,16 @@ None.
 An object with the following properties:
 
 - `element`
-  - : A string representing the type of reference stored in the table. Currently one of `"anyfunc"` (function references) or `"externref"` (host references).
+  - : A string representing the type of reference stored in the table. Currently one of `"funcref"` (function references) or `"externref"` (host references).
 - `minimum`
-  - : The minimum number of elements in the table.
+  - : The current number of elements in the table, including any elements added by [`grow()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Table/grow).
 - `maximum` {{optional_inline}}
   - : The maximum number of elements the table can grow to. Not present if no maximum was specified.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if the table's element type cannot be represented by this API, such as a reference to a Wasm struct or array type.
 
 ## Examples
 
@@ -36,7 +41,7 @@ The following code creates a table with initial size of 1 and no maximum, then i
 ```js
 const table = new WebAssembly.Table({ initial: 1, element: "anyfunc" });
 console.log(table.type());
-// { element: "anyfunc", minimum: 1 }
+// { element: "funcref", minimum: 1 }
 ```
 
 ## Specifications

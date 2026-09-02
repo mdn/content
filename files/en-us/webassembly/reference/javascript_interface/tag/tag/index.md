@@ -17,7 +17,7 @@ new WebAssembly.Tag(type)
 ### Parameters
 
 - `type`
-  - : An object that can contain the following members:
+  - : An object describing the type of the tag. This can be the object returned by [`Tag.prototype.type()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag/type). It can contain the following members:
     - `parameters`
       - : An array of strings representing the exception type's parameters and their types. The strings can be any [Wasm type](/en-US/docs/WebAssembly/Reference/Value_types).
 

@@ -6,7 +6,7 @@ browser-compat: webassembly.api.Tag.type
 sidebar: webassemblysidebar
 ---
 
-The **`type()`** method of the [`Tag`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag) object can be used to get the sequence of data types associated with the tag.
+The **`type()`** prototype method of the [`WebAssembly.Tag`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag) object returns an object describing the type of the tag, including the sequence of data types associated with it.
 
 ## Syntax
 
@@ -16,13 +16,21 @@ type()
 
 ### Parameters
 
-None
+None.
 
 ### Return value
 
-An object with a property named `parameters` that references the array of data types associated with this [`Tag`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag).
+An object with the following properties:
 
-This is a copy of the `type` object that was originally passed into the [`Tag()` constructor](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag/Tag).
+- `parameters`
+  - : An array of strings representing the data types associated with the tag. Each string is one of `"i32"`, `"i64"`, `"f32"`, `"f64"`, `"v128"`, `"funcref"`, or `"externref"`.
+
+The returned object and its `parameters` array are newly created. Function references are represented as `"funcref"`, even if `"anyfunc"` was passed to the [`Tag()` constructor](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag/Tag).
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if a parameter's type cannot be represented by this API, such as a reference to a Wasm struct or array type.
 
 ## Examples
 
@@ -31,14 +39,7 @@ This code snippet creates a tag defining two data types and then retrieves them 
 ```js
 const tag = new WebAssembly.Tag({ parameters: ["i32", "i64"] });
 console.log(tag.type());
-```
-
-The object logged to the console will look like so:
-
-```json
-{
-  "parameters": ["i32", "i64"]
-}
+// { parameters: ["i32", "i64"] }
 ```
 
 ## Specifications

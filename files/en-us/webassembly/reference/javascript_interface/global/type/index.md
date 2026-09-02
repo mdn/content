@@ -23,9 +23,14 @@ None.
 An object with the following properties:
 
 - `value`
-  - : A string representing the data type of the global. One of `"i32"`, `"i64"`, `"f32"`, `"f64"`, `"v128"`, `"anyfunc"`, or `"externref"`.
+  - : A string representing the data type of the global. One of `"i32"`, `"i64"`, `"f32"`, `"f64"`, `"v128"`, `"funcref"`, or `"externref"`.
 - `mutable`
   - : A boolean. `true` if the global is mutable, `false` if it is not.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if the global's type cannot be represented by this API, such as a reference to a Wasm struct or array type.
 
 ## Examples
 
