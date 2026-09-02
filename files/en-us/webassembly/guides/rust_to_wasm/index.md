@@ -407,4 +407,4 @@ wasm-pack publish
 
 This is the end of our tutorial; we hope you've found it useful.
 
-There's lots of exciting work going on in this space; if you'd like to help make it even better, check out the [Rust and WebAssembly Working Group](https://github.com/rustwasm/team/blob/master/README.md#get-involved).
+There's lots of exciting work going on in this space; if you'd like to help make it even better, check out the [wasm-bindgen project](https://github.com/wasm-bindgen/wasm-bindgen).
