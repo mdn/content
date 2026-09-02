@@ -9,11 +9,11 @@ The [color contrast](https://w3c.github.io/wcag/guidelines/22/#dfn-contrast-rati
 
 When designing readable interfaces for different vision capabilities, the WCAG guidelines recommend the following contrast ratios:
 
-| Type of content                                                                 | Minimum ratio (AA rating) | Enhanced ratio (AAA rating) |
-| ------------------------------------------------------------------------------- | ------------------------- | --------------------------- |
-| Body text                                                                       | 4.5 : 1                   | 7 : 1                       |
-| Large-scale text (120-150% larger than body text)                               | 3 : 1                     | 4.5 : 1                     |
-| Active user interface components and graphical objects such as icons and graphs | 3 : 1                     | Not defined                 |
+| Type of content                                                                   | Minimum ratio (AA rating) | Enhanced ratio (AAA rating) |
+| -----------------------------------------------------------------------------==-- | ------------------------- | --------------------------- |
+| Body text                                                                         | 4.5 : 1                   | 7 : 1                       |
+| Large-scale text (120-150% larger than body text)                                 | 3 : 1                     | 4.5 : 1                     |
+| Inactive user interface components and graphical objects such as icons and graphs | 3 : 1                     | Not defined                 |
 
 These ratios do not apply to "incidental" text, such as inactive controls, logotypes, or purely decorative text.
 
