@@ -34,14 +34,17 @@ The language specification requires strings to have a maximum length of 2<sup>53
 - In Firefox, the maximum length is 2<sup>30</sup> - 2 (\~2GiB). Before Firefox 65, the maximum length was 2<sup>28</sup> - 1 (\~512MiB).
 - In Safari, the maximum length is 2<sup>31</sup> - 1 (\~4GiB).
 
-If you are working with large strings in other encodings (such as UTF-8 files or blobs), note that when you load the data into a JS string, the visible encoding always becomes UTF-16. The length of the string may be different from the size of the source file. The actual space used by a string is subject to JavaScript engine optimizations, and most engines will store in a smaller Latin-1 encoding when possible, since it uses half the memory.
+> [!NOTE]
+> All memory sizes above assume strings are stored in UTF-16 encoding in memory, which may be an overestimate. The actual space used by a string is subject to JavaScript engine optimizations, and most engines will store in a smaller Latin-1 encoding when possible, since it uses half the memory.
+
+If you are working with large strings in other encodings (such as UTF-8 files or blobs), note that when you load the data into a JS string, the encoding and thus memory size may also change.
 
 ```js
 const str1 = "a".repeat(2 ** 29 - 24); // Success
 const str2 = "a".repeat(2 ** 29 - 23); // RangeError: Invalid string length
 
 const buffer = new Uint8Array(2 ** 29 - 24).fill("a".codePointAt(0)); // This buffer is 512MiB in size
-const str = new TextDecoder().decode(buffer); // This string is 1GiB in size unless optimized.
+const str = new TextDecoder().decode(buffer); // This string is 1GiB in size unless optimized
 ```
 
 For an empty string, `length` is 0.
