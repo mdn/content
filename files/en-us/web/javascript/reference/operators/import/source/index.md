@@ -20,6 +20,8 @@ import.source(moduleName)
 import.source(moduleName, options)
 ```
 
+`import.source()` is special syntax (a "meta property"), not a method on an `import` object.
+
 ### Parameters
 
 See [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import#parameters).
@@ -32,7 +34,13 @@ If the referenced module is loaded successfully, fulfills with an {{jsxref("Abst
 
 ## Examples
 
-TODO
+### Using import.source()
+
+```js
+const myModuleSource = await import.source("./my-module.wasm");
+
+const namespace = (await WebAssembly.instantiate(myModuleSource)).exports;
+```
 
 ## Specifications
 
@@ -44,6 +52,7 @@ TODO
 
 ## See also
 
+- [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) guide
 - {{jsxref("Operators/import", "import()")}}
 - {{jsxref("Statements/import/source", "import source")}}
 - {{jsxref("AbstractModuleSource")}}
