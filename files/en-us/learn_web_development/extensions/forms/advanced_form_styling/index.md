@@ -186,11 +186,11 @@ input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button {
 }
 ```
 
-### Styling checkboxes and radio buttons using `accent-color`
+### Setting form control color tints using `accent-color`
 
-If the only thing you want to change is the color, {{cssxref("accent-color")}} will do it without taking the control apart. The browser carries on drawing the checkbox or radio button itself, and tints it:
+If you only want to style the primary tint color of checkboxes, radio buttons, or range sliders, the {{cssxref("accent-color")}} will do it without requiring `appearance: none`. This is useful for basic styling cases, as the controls maintain their OS-level styling, but with an altered main color.
 
-```html live-sample___checkboxes-accent-color
+```html live-sample___accent-color
 <form>
   <fieldset>
     <legend>Fruit preferences</legend>
@@ -207,23 +207,29 @@ If the only thing you want to change is the color, {{cssxref("accent-color")}} w
         Banana is my favorite
       </label>
     </p>
+    <p>
+      <label>
+        How much do you like fruit?
+        <input type="range" name="amount" min="0" max="10" value="7" />
+      </label>
+    </p>
   </fieldset>
 </form>
 ```
 
-```css live-sample___checkboxes-accent-color
+```css live-sample___accent-color
 input {
   accent-color: rebeccapurple;
 }
 ```
 
-{{EmbedLiveSample("checkboxes-accent-color", '100%', 160)}}
+{{EmbedLiveSample("accent-color", '100%', 200)}}
 
-Because the control keeps its native appearance, it goes on following platform conventions — including forced-colors modes — with no further work on your part. Reach for the `appearance: none` approach below when you need to change more than the color.
+Because the control keeps its native appearance, it follows platform conventions — including forced-colors modes — with no further work on your part. In addition, the browser automatically chooses a complementary secondary color with enough contrast to the `accent-color` to keep the control accessible. Play with the above live example and set some light and dark `accent-color` values to see the effects.
 
 ### Styling checkboxes and radio buttons using `appearance`
 
-Styling a checkbox or a radio button is tricky by default. The sizes of checkbox and radio button default styles are not meant to be changed, and browsers react very differently when you try. Some increase the size of the control, and some keep the control the same size and add extra space around it.
+Styling more than the color of a checkbox or a radio button requires more effort. The default sizes of checkboxes and radio buttons were not meant to be changed, and browsers react very differently when you try. Some increase the control size, and some keep it the same and add extra space around the control.
 
 A much better approach is to remove the default appearance of checkboxes and radio buttons altogether with {{cssxref("appearance", "appearance: none;")}}, and then add your own styles to their various states.
 
@@ -593,7 +599,7 @@ The date/time input types ([`datetime-local`](/en-US/docs/Web/HTML/Reference/Ele
 However, the internal parts of the control (e.g., the popup calendar that you use to pick a date, the spinner that you can use to increment/decrement values) are not stylable at all, and you can't get rid of them using `appearance: none;`. If you really need full control over the styling, you'll have to either use a library to generate a custom control or build your own.
 
 > [!NOTE]
-> [`<input type="number">`](/en-US/docs/Web/HTML/Reference/Elements/input/number) has a spinner too, and its internal parts are no easier to style. If the spinner is the part you want to be rid of, don't reach for `tel`: that changes what the field means, and the browser will validate it as a telephone number rather than as a number. Use [`<input type="text">`](/en-US/docs/Web/HTML/Reference/Elements/input/text) with [`inputmode="numeric"`](/en-US/docs/Web/HTML/Reference/Global_attributes/inputmode) and a [`pattern`](/en-US/docs/Web/HTML/Reference/Attributes/pattern) attribute instead. You still get the numeric keypad on devices with touch keyboards, without the spinner and without claiming the value is a phone number. See [Accessibility](/en-US/docs/Web/HTML/Reference/Elements/input/number#accessibility) on the `<input type="number">` page.
+> [`<input type="number">`](/en-US/docs/Web/HTML/Reference/Elements/input/number) has a spinner too, and its internal parts are no easier to style. If you want to remove the spinner, use [`<input type="text">`](/en-US/docs/Web/HTML/Reference/Elements/input/text) with [`inputmode="numeric"`](/en-US/docs/Web/HTML/Reference/Global_attributes/inputmode) set to display a numeric keypad on devices with touch keyboards and a [`pattern`](/en-US/docs/Web/HTML/Reference/Attributes/pattern) attribute that limits input values to a number. See also [`<input type="number">` > Accessibility](/en-US/docs/Web/HTML/Reference/Elements/input/number#accessibility).
 
 ### Range input types
 
@@ -628,11 +634,18 @@ However, a custom solution is the only way to get anything significantly differe
 
 ### File input types
 
-Inputs of type file are generally OK — as you saw in our example, it is fairly easy to create something that fits in OK with the rest of the page — the output line that is part of the control will inherit the parent font if you tell the input to do so, and you can style the custom list of file names and sizes in any way you want; we created it after all.
+Inputs of type file are generally OK — it is fairly easy to create something that fits in OK with the rest of the page. The output line that is part of the control will inherit the parent font if you tell the input to do so, and you can style the custom list of file names and sizes in any way you want.
 
 The button you press to open the file picker can be styled with the {{cssxref("::file-selector-button")}} pseudo-element, which accepts the same properties as any other button:
 
-```css
+```html live-sample___file-selector-button
+<form>
+  <label for="avatar">Choose a profile picture</label>
+  <input id="avatar" name="avatar" type="file" />
+</form>
+```
+
+```css live-sample___file-selector-button
 input[type="file"]::file-selector-button {
   border: 1px solid darkgrey;
   border-radius: 5px;
@@ -642,9 +655,11 @@ input[type="file"]::file-selector-button {
 }
 ```
 
-What you can't reach this way is the text beside the button — the "no file chosen" message, and the name of the file once one has been picked. The browser generates that text and doesn't expose it to CSS.
+{{EmbedLiveSample("file-selector-button", '100%', 100)}}
 
-If you need control over that part as well, you can take advantage of the fact that if you have a label associated with a form control, clicking the label will activate the control. So you could hide the actual form input using something like this:
+You can't style the text beside the button — the "no file chosen" message — or the displayed filename once chosen. The browser generates that text and doesn't expose it to CSS. To work around this problem, you can use the control's label and the fact that clicking the label activates the control.
+
+You could hide the actual form input using something like this:
 
 ```css
 input[type="file"] {
