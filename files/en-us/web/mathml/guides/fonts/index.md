@@ -60,6 +60,9 @@ distribution does not provide dedicated packages for these fonts.
 sudo apt-get install fonts-lmodern fonts-stix
 ```
 
+> [!NOTE]
+> Up until Debian 13 and Ubuntu 24, the `fonts-stix` package installs STIX 1.x fonts, not _STIX Two Math_.
+
 #### Fedora-based distributions
 
 ```bash
