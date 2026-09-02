@@ -171,9 +171,23 @@ The `Promise` class offers four main static methods to facilitate async task [co
 
 All these methods take an [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) of promises ([thenables](#thenables), to be exact) and return a new promise. They all support subclassing, which means they can be called on subclasses of `Promise`, and the result will be a promise of the subclass type. To do so, the subclass's constructor must implement the same signature as the [`Promise()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) constructor — accepting a single `executor` function that can be called with the `resolve` and `reject` callbacks as parameters. The subclass must also have a `resolve` static method that can be called like {{jsxref("Promise.resolve()")}} to resolve values to promises.
 
-Note that JavaScript is [single-threaded](/en-US/docs/Glossary/Thread) by nature, so at a given instant, only one task will be executing, although control can shift between different promises, making execution of the promises appear concurrent. [Parallel execution](https://en.wikipedia.org/wiki/Parallel_computing) in JavaScript can only be achieved through [worker threads](/en-US/docs/Web/API/Web_Workers_API).
-
 There are two other convenience static methods: {{jsxref("Promise.allKeyed()")}} and {{jsxref("Promise.allSettledKeyed()")}}, that behave like `Promise.all()` and `Promise.allSettled()`, but take _objects_ of promises and return promises that fulfill with _objects_ of the same shape. By working with objects instead of arrays, you can associate results with semantically meaningful keys, instead of arbitrary array ordering which can be difficult to maintain.
+
+These methods attach handlers to each input promise using {{jsxref("Promise/then", "then()")}}. Even when the resulting promise has settled early (such as when one input in `Promise.race()` settles), the other handlers are not removed. Repeatedly passing the same pending promise to concurrency methods can accumulate handlers even when those handlers are never used:
+
+```js
+const pendingPromise = new Promise(() => {});
+
+for (let i = 0; i < 1000; i++) {
+  await Promise.race([Promise.resolve(0), pendingPromise]);
+}
+// All tasks have completed, but pendingPromise retains the
+// handlers attached by all 1000 races.
+```
+
+Promises do not provide a way to unsubscribe these handlers; they remain attached while the input promise is pending and reachable. Where possible, cancel the underlying operation by using an {{domxref("AbortSignal")}} when the pending promise is no longer useful.
+
+Note that JavaScript is [single-threaded](/en-US/docs/Glossary/Thread) by nature, so at a given instant, only one task will be executing, although control can shift between different promises, making execution of the promises appear concurrent. [Parallel execution](https://en.wikipedia.org/wiki/Parallel_computing) in JavaScript can only be achieved through [worker threads](/en-US/docs/Web/API/Web_Workers_API).
 
 ## Constructor
 

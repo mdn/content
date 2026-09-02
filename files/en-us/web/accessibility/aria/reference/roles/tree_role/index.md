@@ -69,7 +69,7 @@ Elements with the role `tree` have an implicit [`aria-orientation`](/en-US/docs/
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
   - : Defines a string value that labels the `tree` when no visible label is present.
 - [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation)
-  - : indicates whether the tree orientation is horizontal or vertical; defaults to `vertical` if omitted.
+  - : Indicates whether the tree orientation is horizontal or vertical; defaults to `vertical` if omitted.
 - [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable)
   - : When set to true, indicates the user may select more than one tree item from the tree's current selectable descendants.
 
