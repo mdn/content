@@ -24,8 +24,8 @@ In our [screenleft-screentop](https://mdn.github.io/dom-examples/screenleft-scre
 This example compensates for changes in the browser window's position, but not for changes in the viewport's position within the window. Showing or hiding a toolbar or sidebar can therefore shift the circle on the screen.
 
 ```js
-initialLeft = window.screenLeft + canvasElem.offsetLeft;
-initialTop = window.screenTop + canvasElem.offsetTop;
+let initialLeft = window.screenLeft + canvasElem.offsetLeft;
+let initialTop = window.screenTop + canvasElem.offsetTop;
 
 function positionElem() {
   let newLeft = window.screenLeft + canvasElem.offsetLeft;
