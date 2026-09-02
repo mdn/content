@@ -12,6 +12,8 @@ The **`createOffer()`** method of the {{domxref("RTCPeerConnection")}} interface
 
 The SDP offer includes information about any {{domxref("MediaStreamTrack")}} objects already attached to the WebRTC session, codec, and options supported by the browser, and any candidates already gathered by the {{Glossary("ICE")}} agent, for the purpose of being sent over the signaling channel to a potential peer to request a connection or to update the configuration of an existing connection.
 
+Add tracks and create data channels before calling `createOffer()` to include them in the negotiation. Changes made after the returned promise fulfills do not update the offer.
+
 ## Syntax
 
 ```js-nolint
