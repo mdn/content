@@ -125,6 +125,12 @@ In addition, the `<install>` element has a default [`tabindex`](/en-US/docs/Web/
 
 Finally, refer to [`<geolocation>` > Accessibility restrictions](/en-US/docs/Web/HTML/Reference/Elements/geolocation#accessibility_restrictions) for information on styling constraints applied to the `<install>` element to enforce fundamental accessibility requirements.
 
+## Security considerations
+
+The `<install>` element is restricted to [secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts) (HTTPS).
+
+Access to the API is also controlled via the {{httpheader("Permissions-Policy/web-app-installation", "web-app-installation")}} {{httpheader("Permissions-Policy")}} directive.
+
 ## Examples
 
 TBD
@@ -193,3 +199,4 @@ TBD
 
 - {{domxref("HTMLInstallElement")}}
 - {{domxref("Navigator.install()")}}
+- The {{httpheader("Permissions-Policy/web-app-installation", "web-app-installation")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy)

@@ -109,7 +109,14 @@ For an app to be installed via the `install()` method, the following criteria mu
 
 - The app must meet the basic PWA [installability](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#installability) criteria, namely, it must have a valid manifest and must be served over HTTPS, or from a `localhost` or loopback (`127.0.0.1`) address.
 - The app must have a manifest ID available, either in the manifest file `id` field, or provided in the `install()` call's `manifestId` option.
-- The `install()` method must be called via [transient activation](/en-US/docs/Web/Security/Defenses/User_activation).
+
+## Security considerations
+
+The `Navigator.install()` method is restricted to [secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts) (HTTPS), and requires that the user has recently interacted with the page ([transient user activation](/en-US/docs/Web/Security/Defenses/User_activation) is required).
+
+Access to the API is also controlled via the {{httpheader("Permissions-Policy/web-app-installation", "web-app-installation")}} {{httpheader("Permissions-Policy")}} directive.
+
+In addition, when calling `Navigator.install()` with an options object, the user is asked for permission to install apps. The current user permission status can be queried via the [Permissions API](/en-US/docs/Web/API/Permissions_API) (the feature name is `web-app-installation`).
 
 ## Examples
 
@@ -126,3 +133,5 @@ TBD
 ## See also
 
 - {{htmlelement("install")}}
+- The {{httpheader("Permissions-Policy/web-app-installation", "web-app-installation")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy)
+- [Permissions API](/en-US/docs/Web/API/Permissions_API)

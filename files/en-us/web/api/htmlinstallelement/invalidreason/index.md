@@ -1,57 +1,57 @@
 ---
-title: "HTMLGeolocationElement: invalidReason property"
+title: "HTMLInstallElement: invalidReason property"
 short-title: invalidReason
-slug: Web/API/HTMLGeolocationElement/invalidReason
+slug: Web/API/HTMLInstallElement/invalidReason
 page-type: web-api-instance-property
 status:
   - experimental
-browser-compat: api.HTMLGeolocationElement.invalidReason
+browser-compat: api.HTMLInstallElement.invalidReason
 ---
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
 
-The **`invalidReason`** read-only property of the {{domxref("HTMLGeolocationElement")}} interface returns an enumerated value representing the reason why the associated {{htmlelement("geolocation")}} element is invalid (blocked), if that is the case.
+The **`invalidReason`** read-only property of the {{domxref("HTMLInstallElement")}} interface returns an enumerated value representing the reason why the associated {{htmlelement("install")}} element is invalid (blocked), if that is the case.
 
-When a [blocker](/en-US/docs/Web/HTML/Reference/Elements/geolocation#geolocation_blocking) is active on a `<geolocation>` element, it is invalid: This means that it is prevented from functioning, either temporarily or permanently, depending on the reason.
+When a [blocker](/en-US/docs/Web/HTML/Reference/Elements/install#install_blocking) is active on an `<install>` element, it is invalid: This means that it is prevented from functioning, either temporarily or permanently, depending on the reason.
 
-You can query the {{domxref("HTMLGeolocationElement.isValid")}} property to check whether the `<geolocation>` element is valid or not.
+You can query the {{domxref("HTMLInstallElement.isValid")}} property to check whether the `<install>` element is valid or not.
 
 ## Value
 
 The empty string (`""`) if the element does not have an active blocker, or one of the following values (in priority order):
 
 - `illegal_subframe`
-  - : The `<geolocation>` element is nested inside a {{htmlelement("fencedframe")}} element.
+  - : The `<install>` element is nested inside a {{htmlelement("fencedframe")}} element.
 
     Permanent blocker.
 
 - `unsuccessful_registration`
-  - : More than three `<geolocation>` elements have been inserted into the same document.
+  - : More than three `<install>` elements have been inserted into the same document.
 
     Temporary blocker.
 
 - `recently_attached`
-  - : The `<geolocation>` element has only recently been attached to the DOM.
+  - : The `<install>` element has only recently been attached to the DOM.
 
     Expiring blocker.
 
 - `intersection_changed`
-  - : The `<geolocation>` element is being moved.
+  - : The `<install>` element is being moved.
 
     Expiring blocker.
 
 - `intersection_out_of_viewport_or_clipped`
-  - : The `<geolocation>` element is rendered outside or partially inside the viewport.
+  - : The `<install>` element is rendered outside or partially inside the viewport.
 
     Temporary blocker.
 
 - `intersection_occluded_or_distorted`
-  - : The `<geolocation>` element is rendered completely inside the viewport, but it is obscured in some way, for example rendered behind other content.
+  - : The `<install>` element is rendered completely inside the viewport, but it is obscured in some way, for example rendered behind other content.
 
     Temporary blocker.
 
 - `style_invalid`
-  - : The `<geolocation>` element has some restricted styles applied to it (see [Styling restrictions](/en-US/docs/Web/HTML/Reference/Elements/geolocation#styling_restrictions)).
+  - : The `<install>` element has some restricted styles applied to it (see [`<gelocation>` > Styling restrictions](/en-US/docs/Web/HTML/Reference/Elements/geolocation#styling_restrictions)).
 
     Temporary blocker.
 
@@ -61,54 +61,52 @@ If multiple blockers are active, the `invalidReason` value returned will be the 
 Also note that the descriptions above include a "blocker type" for each invalid reason, which is one of the following:
 
 - Permanent
-  - : The `<geolocation>` element is permanently invalid until the developer updates the code to stop the blocker occurring.
+  - : The `<install>` element is permanently invalid until the developer updates the code to stop the blocker occurring.
 - Temporary
-  - : The `<geolocation>` element is invalid until the blocking condition no longer occurs. After that, the temporary blocker will turn into an expiring blocker.
+  - : The `<install>` element is invalid until the blocking condition no longer occurs. After that, the temporary blocker will turn into an expiring blocker.
 - Expiring
-  - : The `<geolocation>` element is invalid for a short period of time, after which it becomes valid again.
+  - : The `<install>` element is invalid for a short period of time, after which it becomes valid again.
 
 ## Examples
 
 ### Basic usage
 
 ```html
-<geolocation></geolocation>
+<install></install>
 ```
 
 ```js
-const geo = document.querySelector("geolocation");
-console.log(geo.invalidReason);
-// "", provided the `<geolocation>` element is not blocked in some way
+const installElem = document.querySelector("install");
+console.log(installElem.invalidReason);
 ```
 
 ### Exploring invalid reasons
 
-In this example, we provide a form control to apply different styles to a `<geolocation>` element that make it invalid. When each set of styles is applied, we report the `invalidReason` provided by the browser.
+In this example, we provide a form control to apply different styles to an `<install>` element that make it invalid. When each set of styles is applied, we report the `invalidReason` provided by the browser.
 
 #### HTML
 
-We start by including a `<geolocation>` element and a {{htmlelement("div")}} element that we will later allow to be rendered on top of the `<geolocation>` element.
+We start by including an `<install>` element and a {{htmlelement("div")}} element that we will later allow to be rendered on top of the `<install>` element.
 
-```html
-<geolocation>
-  Your browser doesn't support the <code>&lt;geolocation&gt;</code> element.
-</geolocation>
+```html live-sample___explore_invalid
+<install>
+  Your browser doesn't support the <code>&lt;install&gt;</code> element.
+</install>
 <div id="cover">Cover element</div>
 ```
 
-Next, we provide a {{htmlelement("p")}} element that we will print the `invalidReason` generated by each set of styles.
+Next, we provide a {{htmlelement("p")}} element in which we will print the `invalidReason` generated by each set of styles.
 
-```html
+```html live-sample___explore_invalid
 <p id="reason"></p>
 ```
 
-Finally, we provide a {{htmlelement("select")}} element to enable the user to choose different styling effects that invalidate the `<geolocation>` element.
+Finally, we provide a {{htmlelement("select")}} element to enable the user to choose different styling effects that invalidate the `<install>` element.
 
-```html
+```html live-sample___explore_invalid
 <form>
   <label for="invalidate"
-    >Choose a way to invalidate the
-    <code>&lt;geolocation&gt;</code> element:</label
+    >Choose a way to invalidate the <code>&lt;install&gt;</code> element:</label
   >
   <select id="invalidate">
     <option value="">None</option>
@@ -121,9 +119,9 @@ Finally, we provide a {{htmlelement("select")}} element to enable the user to ch
 
 #### CSS
 
-In our styles, we start off by giving the `<geolocation>` element a {{cssxref("position")}} value of `relative` so that it can be positioned, and a {{cssxref("z-index")}} value of `1`.
+In our styles, we start off by giving the `<install>` element a {{cssxref("position")}} value of `relative` so that it can be positioned, and a {{cssxref("z-index")}} value of `1`.
 
-```css hidden
+```css hidden live-sample___explore_invalid
 * {
   box-sizing: border-box;
 }
@@ -136,7 +134,7 @@ body {
   margin-left: 50px;
 }
 
-geolocation {
+install {
   font-size: small;
 }
 
@@ -149,16 +147,16 @@ geolocation {
 }
 ```
 
-```css
-geolocation {
+```css live-sample___explore_invalid
+install {
   position: relative;
   z-index: 1;
 }
 ```
 
-Next, we style our `#cover` `<div>` with `position: absolute` and use {{glossary("inset properties")}} to place it to the right of the `<geolocation>` element. We also give it a `z-index` value of `2` so that, if our `<div>` is placed in the same area as the `<geolocation>` element, the `<div>` will be placed on top.
+Next, we style our `#cover` `<div>` with `position: absolute` and use {{glossary("inset properties")}} to place it to the right of the `<install>` element. We also give it a `z-index` value of `2` so that, if our `<div>` is placed in the same area as the `<install>` element, the `<div>` will be placed on top.
 
-```css
+```css live-sample___explore_invalid
 #cover {
   position: absolute;
   top: 72px;
@@ -167,9 +165,9 @@ Next, we style our `#cover` `<div>` with `position: absolute` and use {{glossary
 }
 ```
 
-Now we define three class styles that will be applied to the `<geolocation>` element when the different `<select>` choices are selected by the user. `.move-behind` moves it behind the `#cover` `<div>`, `.move-out` moves it off-screen, and `.bad-contrast` gives it a bad [color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast). All three of these styles cause the `<geolocation>` element to become invalid.
+Now we define three class styles that will be applied to the `<install>` element when the different `<select>` choices are selected by the user. `.move-behind` moves it behind the `#cover` `<div>`, `.move-out` moves it off-screen, and `.bad-contrast` gives it a bad [color contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast). All three of these styles cause the `<install>` element to become invalid.
 
-```css
+```css live-sample___explore_invalid
 .move-behind {
   left: 150px;
 }
@@ -186,43 +184,43 @@ Now we define three class styles that will be applied to the `<geolocation>` ele
 
 #### JavaScript
 
-In our script, we begin by grabbing references to the `<geolocation>`, `<div>`, `<p>`, and `<select>` elements.
+In our script, we begin by grabbing references to the `<install>`, `<div>`, `<p>`, and `<select>` elements.
 
-```js
-const geo = document.querySelector("geolocation");
+```js live-sample___explore_invalid
+const installElem = document.querySelector("install");
 const coverElem = document.querySelector("#cover");
 const reasonElem = document.querySelector("#reason");
 const selectElem = document.querySelector("select");
 ```
 
-Next, we add an `input` event listener to the `<select>` element. When a new select value is chosen, we set a `class` attribute on the `<geolocation>` element equal to the chosen select value, which applies one of the invalidating class styles. After a 4-second timeout, we set the `class` back to `""`, to return the `<geolocation>` element back to its valid state.
+Next, we add an `input` event listener to the `<select>` element. When a new select value is chosen, we set a `class` attribute on the `<install>` element equal to the chosen select value, which applies one of the invalidating class styles. After a 4-second timeout, we set the `class` back to `""`, to return the `<install>` element back to its valid state.
 
-```js
+```js live-sample___explore_invalid
 selectElem.addEventListener("input", () => {
-  geo.className = selectElem.value;
+  installElem.className = selectElem.value;
   setTimeout(() => {
-    geo.className = "";
+    installElem.className = "";
   }, 4000);
 });
 ```
 
-Finally, we include code to report the validation status changes that occur when different select values are chosen. We start by setting the `<p>` text content to include the `invalidReason` active when the page first loads. We then add a {{domxref("HTMLGeolocationElement.validationstatuschange_event", "validationstatuschange")}} event listener to the `<geolocation>` element. Whenever the validation status changes, we check whether the `<geolocation>` element is valid using {{domxref("HTMLGeolocationElement.isValid")}}, and if so, print a message confirming this to the `<p>` element text content. If the `<geolocation>` element is invalid, we print the `invalidReason` to the `<p>` element text content.
+Finally, we include code to report the validation status changes that occur when different select values are chosen. We start by setting the `<p>` text content to include the `invalidReason` active when the page first loads. We then add a {{domxref("HTMLInstallElement.validationstatuschange_event", "validationstatuschange")}} event listener to the `<install>` element. Whenever the validation status changes, we check whether the `<install>` element is valid using {{domxref("HTMLInstallElement.isValid")}}, and if so, print a message confirming this to the `<p>` element text content. If the `<install>` element is invalid, we print the `invalidReason` to the `<p>` element text content.
 
-```js
-reasonElem.textContent = `Invalid reason: ${geo.invalidReason}`;
+```js live-sample___explore_invalid
+reasonElem.textContent = `Invalid reason: ${installElem.invalidReason}`;
 
-geo.addEventListener("validationstatuschange", () => {
-  if (geo.isValid) {
-    reasonElem.textContent = `<geolocation> is valid`;
+installElem.addEventListener("validationstatuschange", () => {
+  if (installElem.isValid) {
+    reasonElem.textContent = `<install> is valid`;
   } else {
-    reasonElem.textContent = `Invalid reason: ${geo.invalidReason}`;
+    reasonElem.textContent = `Invalid reason: ${installElem.invalidReason}`;
   }
 });
 ```
 
 #### Result
 
-See this code [running live](https://mdn.github.io/dom-examples/geolocation-element/exploring-invalid-reasons/) (also see the full [source code](https://github.com/mdn/dom-examples/tree/main/geolocation-element/exploring-invalid-reasons)). Try choosing the different invalidation options to see which invalidation reasons are reported in each case.
+{{embedlivesample("explore_invalid", "100%", "200")}}
 
 ## Specifications
 
@@ -234,4 +232,4 @@ See this code [running live](https://mdn.github.io/dom-examples/geolocation-elem
 
 ## See also
 
-- {{htmlelement("geolocation")}} element
+- {{htmlelement("install")}} element

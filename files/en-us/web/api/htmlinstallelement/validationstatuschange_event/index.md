@@ -1,18 +1,18 @@
 ---
-title: "HTMLGeolocationElement: validationstatuschange event"
+title: "HTMLInstallElement: validationstatuschange event"
 short-title: validationstatuschange
-slug: Web/API/HTMLGeolocationElement/validationstatuschange_event
+slug: Web/API/HTMLInstallElement/validationstatuschange_event
 page-type: web-api-event
 status:
   - experimental
-browser-compat: api.HTMLGeolocationElement.validationstatuschange_event
+browser-compat: api.HTMLInstallElement.validationstatuschange_event
 ---
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-The **`validationstatuschange`** event of the {{domxref("HTMLGeolocationElement")}} interface is fired whenever the {{htmlelement("geolocation")}} element's {{domxref("HTMLGeolocationElement.isValid", "isValid")}} value changes.
+The **`validationstatuschange`** event of the {{domxref("HTMLInstallElement")}} interface is fired whenever the {{htmlelement("install")}} element's {{domxref("HTMLInstallElement.isValid", "isValid")}} value changes.
 
-This occurs as a result of a [blocker](/en-US/docs/Web/HTML/Reference/Elements/geolocation#geolocation_blocking) being added to or removed from a `<geolocation>` element.
+This occurs as a result of a [blocker](/en-US/docs/Web/HTML/Reference/Elements/install#install_blocking) being added to or removed from an `<install>` element.
 
 ## Syntax
 
@@ -32,21 +32,19 @@ An {{domxref("Event")}}.
 
 ### Using `validationstatuschange` to report invalid reasons
 
-In our [Exploring invalid reasons demo](https://mdn.github.io/dom-examples/geolocation-element/exploring-invalid-reasons/) ([source code](https://github.com/mdn/dom-examples/tree/main/geolocation-element/exploring-invalid-reasons)), we use a `validationstatuschange` event handler to report when a `<geolocation>` element becomes valid, and report the invalid reason when it becomes invalid:
+On the {{domxref("HTMLInstallElement.invalidReason")}} page, the [Exploring invalid reasons demo](/en-US/docs/Web/API/HTMLInstallElement/invalidReason#exploring_invalid_reasons) uses a `validationstatuschange` event handler to report when an `<install>` element becomes valid, and report the invalid reason when it becomes invalid:
 
 ```js
-geo.addEventListener("validationstatuschange", () => {
-  if (geo.isValid) {
-    reasonElem.textContent = `<geolocation> is valid`;
+installElem.addEventListener("validationstatuschange", () => {
+  if (installElem.isValid) {
+    reasonElem.textContent = `<install> is valid`;
   } else {
-    reasonElem.textContent = `Invalid reason: ${geo.invalidReason}`;
+    reasonElem.textContent = `Invalid reason: ${installElem.invalidReason}`;
   }
 });
 ```
 
-Whenever the validation status changes, we check whether the `<geolocation>` element is valid using {{domxref("HTMLGeolocationElement.isValid")}}, and if so, print a message confirming this to the `<p>` element text content. If the `<geolocation>` element is invalid, we print the {{domxref("HTMLGeolocationElement.invalidReason")}} to the `<p>` element text content.
-
-See the {{domxref("HTMLGeolocationElement.invalidReason")}} page for a full walkthrough of this example.
+Whenever the validation status changes, we check whether the `<install>` element is valid using {{domxref("HTMLInstallElement.isValid")}}, and if so, print a message confirming this to the `<p>` element text content. If the `<install>` element is invalid, we print the {{domxref("HTMLInstallElement.invalidReason")}} to the `<p>` element text content.
 
 ## Specifications
 
@@ -58,4 +56,4 @@ See the {{domxref("HTMLGeolocationElement.invalidReason")}} page for a full walk
 
 ## See also
 
-- {{htmlelement("geolocation")}} element
+- {{htmlelement("install")}} element

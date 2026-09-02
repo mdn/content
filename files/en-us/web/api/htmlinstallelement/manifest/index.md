@@ -1,44 +1,35 @@
 ---
-title: "HTMLGeolocationElement: autolocate property"
-short-title: autolocate
-slug: Web/API/HTMLGeolocationElement/autolocate
+title: "HTMLInstallElement: manifest property"
+short-title: manifest
+slug: Web/API/HTMLInstallElement/manifest
 page-type: web-api-instance-property
 status:
   - experimental
-browser-compat: api.HTMLGeolocationElement.autolocate
+browser-compat: api.HTMLInstallElement.manifest
 ---
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
 
-The **`autolocate`** property of the {{domxref("HTMLGeolocationElement")}} interface gets and sets a boolean value indicating whether the browser should immediately request location data when the {{htmlelement("geolocation")}} element is rendered, provided permission to use the `geolocation` feature is already granted.
+The **`manifest`** property of the {{domxref("HTMLInstallElement")}} interface gets and sets the [web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) representing the PWA to be installed.
 
-It reflects the value of the `<geolocation>` [`autolocate`](/en-US/docs/Web/HTML/Reference/Elements/geolocation#autolocate) attribute.
+It reflects the value of the `<install>` [`manifest`](/en-US/docs/Web/HTML/Reference/Elements/install#manifest) attribute.
 
 ## Value
 
-A boolean value:
-
-- If `true`, location data is requested as soon as the `<geolocation>` element is rendered, provided permission to use the `geolocation` feature was previously granted.
-- If `false`, location data is only requested when the user presses the `<geolocation>` button.
-
-Defaults to `false`.
-
-If permission to use the `geolocation` feature was not previously granted, the `autolocate` property is ignored.
+A string representing the web app manifest of the PWA to be installed.
 
 ## Examples
 
 ### Basic usage
 
 ```html
-<geolocation autolocate></geolocation>
+<install></install>
 ```
 
 ```js
-const geo = document.querySelector("geolocation");
-console.log(geo.autolocate); // true
+const installElem = document.querySelector("install");
+console.log(installElem.manifest);
 ```
-
-See our [Embedded map example walkthrough](/en-US/docs/Web/API/HTMLGeolocationElement#embedded_map_example) for a real-world example that includes `autolocate`.
 
 ## Specifications
 
@@ -50,4 +41,4 @@ See our [Embedded map example walkthrough](/en-US/docs/Web/API/HTMLGeolocationEl
 
 ## See also
 
-- {{htmlelement("geolocation")}} element
+- {{htmlelement("install")}} element

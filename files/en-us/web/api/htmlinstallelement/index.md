@@ -16,11 +16,6 @@ The **`HTMLInstallElement`** interface of the [HTML DOM API](/en-US/docs/Web/API
 
 {{InheritanceDiagram}}
 
-## Constructor
-
-- {{domxref("HTMLInstallElement.HTMLInstallElement", "HTMLInstallElement()")}} {{experimental_inline}}
-  - : Creates a new `HTMLInstallElement` object instance. Note that this constructor is not normally called directly, but via a DOM method such as {{domxref("Document.createElement()")}}.
-
 ## Instance properties
 
 _Also inherits properties from its parent interface, {{domxref("HTMLElement")}}._
@@ -32,7 +27,7 @@ _Also inherits properties from its parent interface, {{domxref("HTMLElement")}}.
 - {{domxref("HTMLInstallElement.isValid", "isValid")}} {{readonlyinline}} {{experimental_inline}}
   - : A boolean value indicating whether the `<install>` element is valid or invalid (blocked).
 - {{domxref("HTMLInstallElement.manifest", "manifest")}} {{readonlyinline}} {{experimental_inline}}
-  - : A string representing the [web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) of the PWA to be installed. Reflects the value of the associated `<install>` element's [`manifest`](/en-US/docs/Web/HTML/Reference/Elements/install#manifest) attribute.
+  - : A string representing the URL of the [web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) defining the app to be installed. Reflects the value of the associated `<install>` element's [`manifest`](/en-US/docs/Web/HTML/Reference/Elements/install#manifest) attribute.
 - {{domxref("HTMLInstallElement.manifestId", "manifestId")}} {{readonlyinline}} {{experimental_inline}}
   - : A string representing the ID of the PWA to be installed. Reflects the value of the associated `<install>` element's [`manifestId`](/en-US/docs/Web/HTML/Reference/Elements/install#manifestid) attribute.
 - {{domxref("HTMLInstallElement.permissionStatus", "permissionStatus")}} {{readonlyinline}} {{experimental_inline}}
@@ -47,9 +42,9 @@ _Inherits properties from its parent interface, {{domxref("HTMLElement")}}._
 _Also inherits events from its parent interface, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLInstallElement.installresult_event", "installresult")}} {{experimental_inline}}
-  - : Fired when a PWA installation attempt completes; reports whether the installation attempt was successful.
+  - : Fired when a PWA installation attempt completes; it can be used to report whether the installation attempt was successful.
 - {{domxref("HTMLInstallElement.validationstatuschange_event", "validationstatuschange")}} {{experimental_inline}}
-  - : Fired whenever the `<geolocation>` element's {{domxref("HTMLInstallElement.isValid", "isValid")}} value changes.
+  - : Fired whenever the `<install>` element's {{domxref("HTMLInstallElement.isValid", "isValid")}} value changes.
 
 ## Description
 
@@ -70,11 +65,39 @@ When a [blocker](/en-US/docs/Web/HTML/Reference/Elements/install#install_blockin
 
 ### Basic usage
 
-GOT HERE
+If a PWA landing page has an `<install>` element included on it:
 
-For minimal examples that use the `<geolocation>` element and its associated `HTMLGeolocationElement` object to return location data, see our [basic example](https://mdn.github.io/dom-examples/geolocation-element/basic-example/) ([source code](https://github.com/mdn/dom-examples/tree/main/geolocation-element/basic-example)) and [basic watch example](https://mdn.github.io/dom-examples/geolocation-element/basic-watch-example/) ([source code](https://github.com/mdn/dom-examples/tree/main/geolocation-element/basic-watch-example)).
+```html
+<install></install>
+```
 
-See the [`<geolocation>`](/en-US/docs/Web/HTML/Reference/Elements/geolocation#basic_usage_example) reference page for a walkthrough.
+We can grab a reference to it and access its properties:
+
+```js
+const installElem = document.querySelector("install");
+console.log(installElem.manifestId);
+console.log(installElem.manifest);
+console.log(installElem.isValid);
+console.log(installElem.invalidReason);
+console.log(installElem.initialPermissionStatus);
+console.log(installElem.permissionStatus);
+```
+
+If we want to track whether the installation was successful when the install button is pressed, we can add an {{domxref("HTMLInstallElement.installresult_event", "installresult")}} event listener, and query the event object's {{domxref("InstallResultEvent.result", "result")}} property:
+
+```js
+installElem.addEventListener("installresult", (e) => {
+  console.log(`Install result: ${e.result}`);
+});
+```
+
+We can also query changes in the `<install>` element's validation status (see [`<install>` blocking](/en-US/docs/Web/HTML/Reference/Elements/install#install_blocking)) using a {{domxref("HTMLInstallElement.validationstatuschange_event", "validationstatuschange")}} event listener:
+
+```js
+installElem.addEventListener("validationstatuschange", (e) => {
+  console.log(e);
+});
+```
 
 ## Specifications
 
@@ -86,8 +109,6 @@ See the [`<geolocation>`](/en-US/docs/Web/HTML/Reference/Elements/geolocation#ba
 
 ## See also
 
-- {{htmlelement("geolocation")}} element
-- The {{httpheader("Permissions-Policy/geolocation", "geolocation")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy)
-- [Geolocation API](/en-US/docs/Web/API/Geolocation_API)
+- {{htmlelement("install")}} element
+- The {{httpheader("Permissions-Policy/web-app-installation", "web-app-installation")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy)
 - [Permissions API](/en-US/docs/Web/API/Permissions_API)
-- [Introducing the `<geolocation>` HTML element](https://developer.chrome.com/blog/geolocation-html-element) on developer.chrome.com (2026)

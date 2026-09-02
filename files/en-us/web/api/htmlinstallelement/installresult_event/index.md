@@ -1,25 +1,25 @@
 ---
-title: "HTMLGeolocationElement: location event"
-short-title: location
-slug: Web/API/HTMLGeolocationElement/location_event
+title: "HTMLInstallElement: installresult event"
+short-title: installresult
+slug: Web/API/HTMLInstallElement/installresult_event
 page-type: web-api-event
 status:
   - experimental
-browser-compat: api.HTMLGeolocationElement.location_event
+browser-compat: api.HTMLInstallElement.installresult_event
 ---
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-The **`location`** event of the {{domxref("HTMLGeolocationElement")}} interface is fired whenever the browser receives location data, or error information when a location data request was unsuccessful.
+The **`installresult`** event of the {{domxref("HTMLInstallElement")}} interface is fired when a [progressive web app (PWA)](/en-US/docs/Glossary/Progressive_web_apps) installation attempt completes; it can be used to report whether the installation attempt was successful.
 
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
 ```js-nolint
-addEventListener("location", (event) => { })
+addEventListener("installresult", (event) => { })
 
-onlocation = (event) => { }
+oninstallresult = (event) => { }
 ```
 
 ## Event type
@@ -28,26 +28,21 @@ An {{domxref("Event")}}.
 
 ## Examples
 
-### Using `location` to respond to location data and errors
+### Using `installresult` to report installation status
 
-In our [Embedded map demo](https://mdn.github.io/dom-examples/geolocation-element/embedded-map/) ([source code](https://github.com/mdn/dom-examples/tree/main/geolocation-element/embedded-map)), we use a `location` event handler to respond to location data and errors being received:
+If a PWA landing page has an `<install>` element included on it:
 
-```js
-geo.addEventListener("location", () => {
-  if (geo.position) {
-    console.log(
-      `${geo.position.coords.latitude},${geo.position.coords.longitude}`,
-    );
-    drawMap(geo.position.coords.latitude, geo.position.coords.longitude, geo);
-  } else if (geo.error) {
-    console.log(geo.error.message);
-  }
-});
+```html
+<install></install>
 ```
 
-If location data is returned successfully, we access it via the {{domxref("HTMLGeolocationElement.position")}} property, and retrieve the latitude and longitude values. We log those to the console, then plot them on a map by passing them into the `drawMap()` function along with a reference to the `HTMLGeolocationElement` object. If the data request fails, we access the error via the {{domxref("HTMLGeolocationElement.error")}} property and log the error message to the console.
+We can track whether the installation was successful when the install button is pressed using an {{domxref("HTMLInstallElement.installresult_event", "installresult")}} event listener, querying the event object's {{domxref("InstallResultEvent.result", "result")}} property:
 
-See the main {{domxref("HTMLGeolocationElement")}} page for a full walkthrough of this example.
+```js
+installElem.addEventListener("installresult", (e) => {
+  console.log(`Install result: ${e.result}`);
+});
+```
 
 ## Specifications
 
@@ -59,4 +54,4 @@ See the main {{domxref("HTMLGeolocationElement")}} page for a full walkthrough o
 
 ## See also
 
-- {{htmlelement("geolocation")}} element
+- {{htmlelement("install")}} element

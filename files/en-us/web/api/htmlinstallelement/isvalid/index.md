@@ -1,27 +1,27 @@
 ---
-title: "HTMLGeolocationElement: isValid property"
+title: "HTMLInstallElement: isValid property"
 short-title: isValid
-slug: Web/API/HTMLGeolocationElement/isValid
+slug: Web/API/HTMLInstallElement/isValid
 page-type: web-api-instance-property
 status:
   - experimental
-browser-compat: api.HTMLGeolocationElement.isValid
+browser-compat: api.HTMLInstallElement.isValid
 ---
 
 {{APIRef("Navigation API")}}{{SeeCompatTable}}
 
-The **`isValid`** read-only property of the {{domxref("HTMLGeolocationElement")}} interface returns a boolean value indicating whether the associated {{htmlelement("geolocation")}} element is valid or invalid (blocked).
+The **`isValid`** read-only property of the {{domxref("HTMLInstallElement")}} interface returns a boolean value indicating whether the associated {{htmlelement("install")}} element is valid or invalid (blocked).
 
-When a [blocker](/en-US/docs/Web/HTML/Reference/Elements/geolocation#geolocation_blocking) is active on a `<geolocation>` element, it is prevented from functioning (invalid), either temporarily or permanently, depending on the reason.
+When a [blocker](/en-US/docs/Web/HTML/Reference/Elements/install#install_blocking) is active on an `<install>` element, it is prevented from functioning (invalid), either temporarily or permanently, depending on the reason.
 
-You can return the reason why it is invalid via the {{domxref("HTMLGeolocationElement.invalidReason")}} property — see that page for a full list of possible reasons.
+You can return the reason why it is invalid via the {{domxref("HTMLInstallElement.invalidReason")}} property — see that page for a full list of possible reasons.
 
 ## Value
 
 A boolean value:
 
-- If `true`, the `<geolocation>` element is valid and functional, meaning that it can be used to request location data.
-- If `false`, the `<geolocation>` element is invalid and non-functional, meaning that it can't be used to request location data.
+- If `true`, the `<install>` element is valid and functional, meaning that it can be used to install a [progressive web app (PWA)](/en-US/docs/Glossary/Progressive_web_apps).
+- If `false`, the `<install>` element is invalid and non-functional, meaning that it can't be used to install a PWA.
 
 Defaults to `false`.
 
@@ -30,16 +30,15 @@ Defaults to `false`.
 ### Basic usage
 
 ```html
-<geolocation></geolocation>
+<install></install>
 ```
 
 ```js
-const geo = document.querySelector("geolocation");
-console.log(geo.isValid);
-// true, provided the `<geolocation>` element is not blocked in some way
+const installElem = document.querySelector("install");
+console.log(installElem.isValid);
 ```
 
-See the {{domxref("HTMLGeolocationElement.invalidReason")}} page for a more complete example involving `isValid`.
+See the {{domxref("HTMLInstallElement.invalidReason")}} page for a more complete example involving `isValid`.
 
 ## Specifications
 
@@ -51,4 +50,4 @@ See the {{domxref("HTMLGeolocationElement.invalidReason")}} page for a more comp
 
 ## See also
 
-- {{htmlelement("geolocation")}} element
+- {{htmlelement("install")}} element
