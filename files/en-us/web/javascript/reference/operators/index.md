@@ -244,13 +244,13 @@ As the [Statements, declarations, and expressions](/en-US/docs/Web/JavaScript/Re
 
 For example, the syntax for [addition](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) is `expression + expression` (if you read the spec, the operands are called _AdditiveExpression_ and _MultiplicativeExpression_, which are both subsets of _Expression_, but that's the spec's mechanism for defining [precedence and associativity](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) and is irrelevant for our purposes). Apart from the two expression slots, the actual code entity it introduces is just `+`, which is the _addition operator_. Similarly, the syntax for [yield](/en-US/docs/Web/JavaScript/Reference/Operators/yield) is `yield expression`, so `yield` is known as the operator. In other words, each operator corresponds to an expression.
 
-MDN also regards expressions without slots such as [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null), as operators, per the definition above, although we nearly always just refer to them as "syntax" or "expression".
+MDN also regards expressions without slots such as [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) as operators per the definition above, although we nearly always just refer to them as "syntax" or "expression".
 
 An expression does not need to take a fixed number of slots. For example, the array literal syntax, `[expression, expression, expression]`, can take an arbitrary number of expression slots. The `[,,]` part might be called an "operator". MDN avoids this usage, but you may see it in functional programming languages like [Haskell](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html).
 
 The line gets fuzzier with certain other code entities: what if an expression has a slot that's not an expression, or a code entity combined with an expression does not make an expression? Do we still refer to that code entity as an operator?
 
-- In the [optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) expression `foo?.bar`, `foo` is an expression, but `bar` must be an identifier and it is not evaluated to a value. Do we still regard `?.` as an operator?
+- In the [optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) expression `foo?.bar`, `foo` is an expression, but `bar` must be an identifier and is not evaluated to a value. Do we still regard `?.` as an operator?
 - In the [arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) expression `arg => body`, `body` might be an expression (although it can also be a block body), and `arg` is just an argument list. Do we still regard `=>` as an operator?
 - In the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) `...foo`, `foo` is an expression, but the whole thing is not an expression because it does not evaluate to a value—it only makes sense in certain other expressions like function calls, array literals, and object literals. Do we still regard `...` as an operator?
 
