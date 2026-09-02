@@ -60,7 +60,7 @@ Left values are the destination of an assignment.
 - {{jsxref("Operators/import", "import()")}}
   - : The `import()` syntax allows loading a module asynchronously and dynamically into a potentially non-module environment.
 - {{jsxref("Operators/import/source", "import.source()")}}
-  - : The `import.source()` syntax only obtains an object representing the module's unevaluated source code.
+  - : The `import.source()` syntax only obtains an object representing the module's compiled source, without loading its dependencies, linking it, or evaluating it.
 
 ### Increment and decrement
 

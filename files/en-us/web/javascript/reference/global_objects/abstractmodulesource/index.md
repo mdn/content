@@ -6,7 +6,7 @@ browser-compat: javascript.builtins.AbstractModuleSource
 sidebar: jsref
 ---
 
-An **_AbstractModuleSource_** object represents the raw module source code obtained with [`import source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/source) or [`import.source()`](/en-US/docs/Web/JavaScript/Reference/Operators/import/source). There is no directly visible `AbstractModuleSource` constructor.
+An **_AbstractModuleSource_** object represents the compiled source of a module obtained with [`import source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/source) or [`import.source()`](/en-US/docs/Web/JavaScript/Reference/Operators/import/source). There is no directly visible `AbstractModuleSource` constructor.
 
 ## Description
 
@@ -29,7 +29,7 @@ new (Object.getPrototypeOf(modSource.constructor))();
 // TypeError: Abstract class AbstractModuleSource not directly constructable
 ```
 
-You rarely need to construct an `AbstractModuleSource` object directly, since the module source objects are created by the JavaScript engine when you use `import source` or `import.source()`.
+Instead, obtain a module source object using `import source`, `import.source()`, or a concrete module type's API, such as `WebAssembly.Module()`. These concrete constructors do not call the abstract constructor.
 
 ## Instance properties
 
@@ -38,7 +38,7 @@ These properties are defined on `AbstractModuleSource.prototype` and shared by a
 - {{jsxref("Object/constructor", "AbstractModuleSource.prototype.constructor")}}
   - : The constructor function that created the instance object. `AbstractModuleSource.prototype.constructor` is the hidden `AbstractModuleSource` constructor function, but each module source subclass also defines its own `constructor` property.
 - `AbstractModuleSource.prototype[Symbol.toStringTag]`
-  - : The initial value of the [`AbstractModuleSource.prototype[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is a getter that returns the same string as the module source constructor's name. It returns `undefined` if the `this` value is not one of the module source subclasses. This property is used in {{jsxref("Object.prototype.toString()")}}.
+  - : The initial value of the [`AbstractModuleSource.prototype[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is a getter that returns a string based on the constructor's identity, such as `"WebAssembly.Module"` or `"ModuleSource"`. It returns `undefined` if the `this` value is not one of the module source subclasses. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
 ## Specifications
 

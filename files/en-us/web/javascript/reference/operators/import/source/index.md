@@ -3,11 +3,10 @@ title: import.source()
 slug: Web/JavaScript/Reference/Operators/import/source
 page-type: javascript-language-feature
 browser-compat: javascript.operators.import.source
+sidebar: jssidebar
 ---
 
-{{jsSidebar("Statements")}}
-
-The **`import.source()`** syntax behaves like regular [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import) syntax, but only obtains an object representing the module's unevaluated source code. The module can be imperatively evaluated later, such as by using [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import) or [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static).
+The **`import.source()`** syntax behaves like regular [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import) syntax, but only obtains an object representing the module's compiled source code. The module is fetched and compiled, but its dependencies are not loaded and it is not linked or evaluated. It can be imperatively evaluated later, such as by using [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import) or [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static).
 
 To use `import.source()`, the target module must be of a kind that supports source phase imports. Currently, only WebAssembly modules support source phase imports, and result in [`WebAssembly.Module`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module) objects. JavaScript module source objects will be added by the [ECMAScript Module Phase Imports](https://github.com/tc39/proposal-esm-phase-imports) proposal.
 
@@ -28,9 +27,9 @@ See [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import#parameter
 
 ### Return value
 
-Returns a promise. The rejection conditions are largely similar to [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import#return_value), except that `import.source()` does not throw exceptions related to module evaluation, because it does not evaluate the module.
+Returns a promise that fulfills with an {{jsxref("AbstractModuleSource")}} object representing the module's compiled source after the module is loaded and compiled successfully.
 
-If the referenced module is loaded successfully, fulfills with an {{jsxref("AbstractModuleSource")}} object representing the module's unevaluated source code.
+Like regular [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import#return_value), the promise rejects if the module cannot be loaded or parsed. It also rejects with a {{jsxref("SyntaxError")}} if the module type does not support source phase imports. It does not load dependencies, link, or evaluate the module, so errors from those later steps are not reported by this promise.
 
 ## Examples
 
@@ -39,7 +38,10 @@ If the referenced module is loaded successfully, fulfills with an {{jsxref("Abst
 ```js
 const myModuleSource = await import.source("./my-module.wasm");
 
-const namespace = (await WebAssembly.instantiate(myModuleSource)).exports;
+const instance = await WebAssembly.instantiate(myModuleSource, {
+  env: { log: console.log },
+});
+const { exports } = instance;
 ```
 
 ## Specifications
