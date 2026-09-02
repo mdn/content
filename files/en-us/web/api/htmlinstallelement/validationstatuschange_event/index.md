@@ -35,6 +35,8 @@ An {{domxref("Event")}}.
 On the {{domxref("HTMLInstallElement.invalidReason")}} page, the [Exploring invalid reasons demo](/en-US/docs/Web/API/HTMLInstallElement/invalidReason#exploring_invalid_reasons) uses a `validationstatuschange` event handler to report when an `<install>` element becomes valid, and report the invalid reason when it becomes invalid:
 
 ```js
+const installElem = document.querySelector("install");
+
 installElem.addEventListener("validationstatuschange", () => {
   if (installElem.isValid) {
     reasonElem.textContent = `<install> is valid`;

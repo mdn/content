@@ -24,7 +24,7 @@ oninstallresult = (event) => { }
 
 ## Event type
 
-An {{domxref("Event")}}.
+An {{domxref("InstallResultEvent")}}.
 
 ## Examples
 
@@ -36,9 +36,11 @@ If a PWA landing page has an `<install>` element included on it:
 <install></install>
 ```
 
-We can track whether the installation was successful when the install button is pressed using an {{domxref("HTMLInstallElement.installresult_event", "installresult")}} event listener, querying the event object's {{domxref("InstallResultEvent.result", "result")}} property:
+We can track whether the installation was successful when the install button is pressed using an `installresult` event listener, querying the event object's {{domxref("InstallResultEvent.result", "result")}} property:
 
 ```js
+const installElem = document.querySelector("install");
+
 installElem.addEventListener("installresult", (e) => {
   console.log(`Install result: ${e.result}`);
 });
