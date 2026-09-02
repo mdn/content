@@ -20,7 +20,7 @@ Install the _Latin Modern Math_ and _STIX Two Math_ fonts as follows:
 1. Download [latinmodern-math-1959.zip](https://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip).
 2. Open the ZIP archive, move inside the `latinmodern-math-1959` directory and then inside the `otf` directory. You will find a `latinmodern-math` font file.
 3. Open the `latinmodern-math` font file and click the **Install** button.
-4. Download [static_otf.zip](https://raw.githubusercontent.com/stipub/stixfonts/master/zipfiles/static_otf.zip).
+4. Download [static_otf.zip](https://raw.githubusercontent.com/stipub/stixfonts/v2.13b171/zipfiles/static_otf.zip).
 5. Open the `static_otf.zip` ZIP archive, and then move inside the `static_otf` directory. Among the files there, you will find a `STIXTwoMath-Regular` file.
 6. Open the `STIXTwoMath-Regular` file and click the **Install** button. If desired, you may also do the same for the other font files in the directory.
 
@@ -40,7 +40,7 @@ Install the _Latin Modern Math_ font as follows:
 
 Install the _STIX Two Math_ font as follows:
 
-1. Download [static_otf.zip](https://raw.githubusercontent.com/stipub/stixfonts/master/zipfiles/static_otf.zip).
+1. Download [static_otf.zip](https://raw.githubusercontent.com/stipub/stixfonts/v2.13b171/zipfiles/static_otf.zip).
 2. Open the `static_otf.zip` ZIP archive, and then move inside the `static_otf` directory. Among the files there, you will find a `STIXTwoMath-Regular.otf` file.
 3. Open the `STIXTwoMath-Regular.otf` file and click the **Install Font** button from the window that opens. If desired, you may also do the same for the other font files in the directory.
 
@@ -110,7 +110,7 @@ fc-cache -sf
 
 If no packages are available on your Linux distributions, or if you just want to install upstream packages then try this:
 
-1. Download [latinmodern-math-1959.zip](https://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip) and [static_otf.zip](https://raw.githubusercontent.com/stipub/stixfonts/master/zipfiles/static_otf.zip).
+1. Download [latinmodern-math-1959.zip](https://www.gust.org.pl/projects/e-foundry/lm-math/download/latinmodern-math-1959.zip) and [static_otf.zip](https://raw.githubusercontent.com/stipub/stixfonts/v2.13b171/zipfiles/static_otf.zip).
 2. Create a `~/.fonts` if it does not exist already and place `latinmodern-math.otf` and `STIXTwoMath-Regular.otf` in that directory.
 3. Run `fc-cache -f` to regenerate the fontconfig cache.
 

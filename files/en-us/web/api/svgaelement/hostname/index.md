@@ -3,10 +3,12 @@ title: "SVGAElement: hostname property"
 short-title: hostname
 slug: Web/API/SVGAElement/hostname
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.SVGAElement.hostname
 ---
 
-{{APIRef("SVG")}}
+{{APIRef("SVG")}}{{SeeCompatTable}}
 
 The **`hostname`** property of the {{domxref("SVGAElement")}} interface returns a string representing the hostname in the referenced URL.
 
@@ -26,4 +28,4 @@ A string.
 
 ## See also
 
-- SVG [`<a>`](/en-US/docs/Web/HTML/Reference/Elements/a) element
+- SVG {{SVGElement("a")}} element

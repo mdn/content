@@ -7,7 +7,7 @@ browser-compat: webassembly.instructions.any_true
 sidebar: webassemblysidebar
 ---
 
-The **`any_true`** [SIMD bitwise instruction](/en-US/docs/WebAssembly/Reference/SIMD/bitwise) tests whether an `v128` input value contains any non-zero bits.
+The **`any_true`** [SIMD bitwise instruction](/en-US/docs/WebAssembly/Reference/SIMD/bitwise) tests whether a `v128` input value contains any non-zero bits.
 
 {{InteractiveExample("Wat Demo: any_true", "tabbed-taller")}}
 

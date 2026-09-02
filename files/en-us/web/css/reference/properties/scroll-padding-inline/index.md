@@ -7,7 +7,7 @@ browser-compat: css.properties.scroll-padding-inline
 sidebar: cssref
 ---
 
-The `scroll-padding-inline` [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) sets the scroll padding of an element in the inline dimension.
+The **`scroll-padding-inline`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets the scroll padding of an element in the inline dimension.
 
 {{InteractiveExample("CSS Demo: scroll-padding-inline")}}
 

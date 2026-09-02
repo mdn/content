@@ -3134,7 +3134,7 @@ The values below are derived in part from a number of consumer electronics techn
     <tr>
       <td><code>"ColorF4Grey"</code></td>
       <td>
-        General-purpose media function key, color-coded grey. This has index
+        General-purpose media function key, color-coded gray. This has index
         <code>4</code> among the colored keys.
       </td>
       <td><code>VK_COLORED_KEY_4</code></td>

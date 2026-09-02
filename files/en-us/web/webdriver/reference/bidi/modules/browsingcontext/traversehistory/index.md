@@ -15,8 +15,8 @@ The `browsingContext.traverseHistory` [command](/en-US/docs/Web/WebDriver/Refere
 {
   "method": "browsingContext.traverseHistory",
   "params": {
-    "context": "<contextId>",
-    "delta": <integer>
+    "context": "93ee5bd6-d256-4608-a002-9a8995cc0e5f",
+    "delta": -1
   }
 }
 ```
