@@ -8,7 +8,7 @@ browser-compat: api.HTMLImageElement.referrerPolicy
 
 {{APIRef("HTML DOM")}}
 
-The **`referrerPolicy`** property of the {{domxref("HTMLImageElement")}} interface defining which referrer is sent when fetching the resource. It reflects the `<img>` element's [`referrerpolicy`](/en-US/docs/Web/HTML/Reference/Elements/img#referrerpolicy) content attribute.
+The **`referrerPolicy`** property of the {{domxref("HTMLImageElement")}} interface defines which referrer is sent when fetching the resource. It reflects the `<img>` element's [`referrerpolicy`](/en-US/docs/Web/HTML/Reference/Elements/img#referrerpolicy) content attribute.
 
 ## Value
 
