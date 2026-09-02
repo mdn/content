@@ -35,9 +35,9 @@ The language specification requires strings to have a maximum length of 2<sup>53
 - In Safari, the maximum length is 2<sup>31</sup> - 1 (\~4GiB).
 
 > [!NOTE]
-> All memory sizes above assume strings are stored in UTF-16 encoding in memory, which may be an overestimate. The actual space used by a string is subject to JavaScript engine optimizations, and most engines will store in a smaller Latin-1 encoding when possible, since it uses half the memory.
+> All memory sizes above assume strings are stored in UTF-16 encoding in memory, which may be an overestimate. The actual space used by a string is subject to JavaScript engine optimizations, and all major engines use a more compact internal representation, such as one-byte storage, for strings containing only Latin-1 characters.
 
-If you are working with large strings in other encodings (such as UTF-8 files or blobs), note that when you load the data into a JS string, the encoding and thus memory size may also change.
+If you are working with large strings in other encodings (such as UTF-8 files or blobs), note that when you load the data into a JS string, the encoding always becomes UTF-16. The size of the string may be different from the size of the source file.
 
 ```js
 const str1 = "a".repeat(2 ** 29 - 24); // Success
