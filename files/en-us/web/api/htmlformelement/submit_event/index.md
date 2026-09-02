@@ -42,10 +42,11 @@ Trying to submit a form that does not pass [validation](/en-US/docs/Learn_web_de
 
 ### Implicit submission
 
-The [HTML specification](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#implicit-submission) does not formally define what user gestures should trigger implicit submission, because it depends on operating system and device conventions. Usually, pressing <kbd>Enter</kbd> while focusing on a text input is considered an implicit submission. When a user performs such a gesture:
+The [HTML specification](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#implicit-submission) does not formally define what user gestures may trigger implicit submission, because it depends on operating system and device conventions. For example, pressing <kbd>Enter</kbd> while focusing on a text input is a common gesture. However, the browser's reaction to such a gesture is standardized:
 
-- If the form has a non-disabled default submit button, the browser fires a `click` event at that button. The default button is the first submit button in tree order whose [form owner](/en-US/docs/Web/HTML/Reference/Attributes/form) is that form. This then triggers the form submission process (as if the button has been pressed by the user), unless the event is canceled.
+- If the form has a non-disabled default submit button, the browser fires a `click` event at that button. The default button is the first submit button in tree order whose [form owner](/en-US/docs/Web/API/HTMLButtonElement/form) is that form. This then triggers the form submission process (as if the button has been pressed by the user), unless the event is canceled.
 - If the form has no submit button, it is submitted implicitly only when it has at most one {{HTMLElement("input")}} element of type `text`, `search`, `tel`, `url`, `email`, `password`, `date`, `month`, `week`, `time`, `datetime-local`, or `number`. {{HTMLElement("textarea")}} and {{HTMLElement("select")}} elements do not block implicit submission.
+- Otherwise, if the form has a disabled default submit button, or no submit button and more than one input blocking implicit submission, the gesture never triggers implicit submission.
 
 ## Examples
 
