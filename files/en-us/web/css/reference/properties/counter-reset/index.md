@@ -144,11 +144,6 @@ h1 {
 
 Ordered lists ({{HTMLElement("ol")}}) come with built-in `list-item` counters that control their numbering. These counters automatically increase or decrease by one with each list item. The `counter-reset` property can be used to reset the `list-item` counters. Like with other counters, you can override the default increment value for `list-item` counters by using the {{cssxref("counter-increment")}} property.
 
-### Stuff
-
-The property creates a counter with the name provided and initializes the value of the counter. By default, the counter value is set to `0`.
-counter-reset: my-counter;
-
 ## Formal definition
 
 {{cssinfo}}
