@@ -73,7 +73,7 @@ When applied to anchor elements, the truncating can happen in the middle of the 
 
 ### Truncating content with an ellipsis or a custom string
 
-In this example there are 3 _cards_ each with different settings:
+In this example, there are three cards, each with a different `line-clamp` value:
 
 - The first only has an `<integer>` set to restrict the number of lines.
 - The second has an `<integer>` and the `no-ellipsis` value.
