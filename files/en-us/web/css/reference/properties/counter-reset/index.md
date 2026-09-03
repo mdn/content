@@ -184,6 +184,13 @@ Using `counter-reset`, we set the implicit `list-item` counter to start at a val
 ```css
 ol {
   counter-reset: list-item 3;
+  list-style: none;
+}
+li {
+  counter-increment: 1;
+}
+li::before {
+  content: counter(list-item) ": ";
 }
 ```
 
