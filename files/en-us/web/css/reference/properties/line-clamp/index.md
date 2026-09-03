@@ -22,7 +22,7 @@ When applied to anchor elements, the truncating can happen in the middle of the 
 /* Keyword value */
 line-clamp: none;
 
-/* <integer> values */
+/* <integer> value only */
 line-clamp: 3;
 line-clamp: 10;
 
