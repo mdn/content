@@ -637,6 +637,11 @@ A few additional non-standard attributes are listed following the descriptions o
 - `value`
   - : The input control's value. When specified in the HTML, this is the initial value, and from then on it can be altered or retrieved at any time using JavaScript to access the respective {{domxref("HTMLInputElement")}} object's `value` property. The `value` attribute is always optional, though should be considered mandatory for `checkbox`, `radio`, and `hidden`.
 
+- `webkitdirectory`
+  - : The Boolean `webkitdirectory` attribute, if present, indicates that only directories should be available to be selected by the user in the file picker interface. See {{domxref("HTMLInputElement.webkitdirectory")}} for additional details and examples.
+
+    `webkitdirectory` is defined in the [File and Directory Entries API](https://wicg.github.io/entries-api/#dom-htmlinputelement-webkitdirectory), a Web Platform Incubator Community Group (WICG) specification. It's named `webkitdirectory` because of its origins as a Google Chrome-specific API.
+
 - `width`
   - : Valid for the `image` input button only, the `width` is the width of the image file to display to represent the graphical submit button. See the {{HTMLElement("input/image", "image")}} input type.
 
@@ -680,14 +685,6 @@ The following non-standard attributes are also available on some browsers. As a 
         The maximum number of items that should be displayed in the drop-down list of previous search queries. <strong>Safari only.</strong>
       </td>
     </tr>
-    <tr>
-      <td>
-        <a href="#webkitdirectory"><code>webkitdirectory</code></a>
-      </td>
-      <td>
-        A Boolean indicating whether to only allow the user to choose a directory (or directories, if <a href="#multiple"><code>multiple</code></a> is also present)
-      </td>
-    </tr>
   </tbody>
 </table>
 
@@ -705,11 +702,6 @@ The following non-standard attributes are also available on some browsers. As a 
   - : The `results` attribute—supported only by Safari—is a numeric value that lets you override the maximum number of entries to be displayed in the `<input>` element's natively-provided drop-down menu of previous search queries.
 
     The value must be a non-negative decimal number. If not provided, or an invalid value is given, the browser's default maximum number of entries is used.
-
-- `webkitdirectory` {{non-standard_inline}}
-  - : The Boolean `webkitdirectory` attribute, if present, indicates that only directories should be available to be selected by the user in the file picker interface. See {{domxref("HTMLInputElement.webkitdirectory")}} for additional details and examples.
-
-    Though originally implemented only for WebKit-based browsers, `webkitdirectory` is also usable in Microsoft Edge as well as Firefox 50 and later. However, even though it has relatively broad support, it is still not standard and should not be used unless you have no alternative.
 
 ## Methods
 
