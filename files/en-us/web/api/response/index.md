@@ -63,7 +63,7 @@ You can create a new `Response` object using the {{domxref("Response.Response", 
 - {{domxref("Response.text()")}}
   - : Returns a promise that resolves with a text representation of the response body.
 - {{domxref("Response.textStream()")}}
-  - : Returns a {{domxref("ReadableStream")}}. Reading the stream returns UTF-8 text chunks containing the response body.
+  - : Returns a {{domxref("ReadableStream")}} that can be used to read the contents of the response body in chunks of UTF-8.
 
 ## Examples
 

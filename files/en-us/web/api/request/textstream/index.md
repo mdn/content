@@ -8,9 +8,9 @@ browser-compat: api.Request.textStream
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-The **`textStream()`** method of the {{domxref("Request")}} interface returns a {{domxref("ReadableStream")}}. Reading the stream returns UTF-8 text chunks containing the request body.
+The **`textStream()`** method of the {{domxref("Request")}} interface returns a {{domxref("ReadableStream")}} that can be used to read the contents of the request body in chunks of UTF-8.
 
-This provides an easier mechanism for streaming the request body than piping the {{domxref("Request.body")}} bytestream through a {{domxref("TextDecoderStream")}}.
+This provides an easier mechanism for streaming the request body than piping the {{domxref("Request.body")}} byte stream through a {{domxref("TextDecoderStream")}}.
 
 > [!NOTE]
 > If invoked on a `Request` with a null body, for example a {{httpmethod("GET")}} request, `textStream()` will return a valid empty stream.
@@ -36,9 +36,9 @@ A {{domxref("ReadableStream")}}.
 
 ## Examples
 
-## Basic usage
+### Reading request body content as a text stream
 
-This example shows how to read a request body's text stream.
+This example shows how to read a request body as a text stream.
 
 We create a sample `Request`, obtain a `ReadableStream` of its body using `textStream()`, then read the text via a reader created using {{domxref("ReadableStream.getReader()")}}.
 
@@ -79,3 +79,5 @@ streamRequestText(req);
 
 - {{domxref("ReadableStream")}}
 - {{domxref("ReadableStream.getReader()")}}
+- {{domxref("Response.body")}}
+- {{domxref("Response.textStream()")}}

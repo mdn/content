@@ -6,14 +6,14 @@ page-type: web-api-instance-method
 browser-compat: api.Blob.textStream
 ---
 
-{{APIRef("Fetch API")}}{{AvailableInWorkers}}
+{{APIRef("File API")}}{{AvailableInWorkers}}
 
-The **`textStream()`** method of the {{domxref("Blob")}} interface returns a {{domxref("ReadableStream")}}. Reading the stream returns UTF-8 text chunks containing the blob's content.
+The **`textStream()`** method of the {{domxref("Blob")}} interface returns a {{domxref("ReadableStream")}} that can be used to read the contents of the `Blob` in chunks of UTF-8.
 
-This provides an easier mechanism for streaming the content than piping a {{domxref("Blob.stream()")}} bytestream through a {{domxref("TextDecoderStream")}}.
+This provides an easier mechanism for streaming the content than piping a {{domxref("Blob.stream()")}} byte stream through a {{domxref("TextDecoderStream")}}.
 
 > [!NOTE]
-> The `textStream()` method differs from {{domxref("FileReaderSync.readAsText()")}} in that the former always uses UTF-8 encoding, whereas the latter has a parameter that sets the encoding used.
+> The `textStream()` method differs from {{domxref("FileReader.readAsText()")}} in that it always uses UTF-8 encoding, whereas `readAsText()` has a parameter that sets the encoding.
 
 ## Syntax
 
@@ -31,7 +31,7 @@ A {{domxref("ReadableStream")}}.
 
 ## Examples
 
-## Basic usage
+### Reading blob content as a text stream
 
 This example shows how to read blob content as a text stream.
 
@@ -74,3 +74,4 @@ streamBlobText(myBlob);
 
 - {{domxref("ReadableStream")}}
 - {{domxref("ReadableStream.getReader()")}}
+- {{domxref("Blob.stream()")}}

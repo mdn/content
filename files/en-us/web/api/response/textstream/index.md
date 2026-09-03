@@ -8,9 +8,9 @@ browser-compat: api.Response.textStream
 
 {{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-The **`textStream()`** method of the {{domxref("Response")}} interface returns a {{domxref("ReadableStream")}}. Reading the stream returns UTF-8 text chunks containing the response body.
+The **`textStream()`** method of the {{domxref("Response")}} interface returns a {{domxref("ReadableStream")}} that can be used to read the contents of the response body in chunks of UTF-8.
 
-This provides an easier mechanism for streaming the response body than piping the {{domxref("Response.body")}} bytestream through a {{domxref("TextDecoderStream")}}.
+This provides an easier mechanism for streaming the response body than piping the {{domxref("Response.body")}} byte stream through a {{domxref("TextDecoderStream")}}.
 
 > [!NOTE]
 > If invoked on a `Response` with a null body, for example a {{httpstatus(204)}} response, `textStream()` will return a valid empty stream.
@@ -36,11 +36,11 @@ A {{domxref("ReadableStream")}}.
 
 ## Examples
 
-## Basic usage
+### Reading response body content as a text stream
 
-This example shows how to read a response body's text stream.
+This example shows how to read a response body as a text stream.
 
-We {{domxref("fetch()")}} a URL, obtain a `ReadableStream` of its response body using `textStream()`, then read the text via a reader created using {{domxref("ReadableStream.getReader()")}}.
+We {{domxref("fetch()")}} a URL to get a `Response`, obtain a `ReadableStream` of its body using `textStream()`, then read the text via a reader created using {{domxref("ReadableStream.getReader()")}}.
 
 ```js
 const pElem = document.querySelector("p");
@@ -75,3 +75,5 @@ streamResponseText("https://www.example.com");
 
 - {{domxref("ReadableStream")}}
 - {{domxref("ReadableStream.getReader()")}}
+- {{domxref("Request.body")}}
+- {{domxref("Request.textStream()")}}

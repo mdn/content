@@ -38,11 +38,11 @@ The APIs accepting `Blob` objects are also listed in the {{DOMxRef("File")}} doc
 - {{DOMxRef("Blob.slice()")}}
   - : Returns a new `Blob` object containing the data in the specified range of bytes of the blob on which it's called.
 - {{DOMxRef("Blob.stream()")}}
-  - : Returns a {{DOMxRef("ReadableStream")}} that can be used to read the contents of the `Blob`.
+  - : Returns a {{DOMxRef("ReadableStream")}} that can be used to read the contents of the `Blob` as chunks of raw bytes.
 - {{DOMxRef("Blob.text()")}}
   - : Returns a promise that resolves with a string containing the entire contents of the `Blob` interpreted as UTF-8 text.
 - {{domxref("Blob.textStream()")}}
-  - : Returns a {{domxref("ReadableStream")}}. Reading the stream returns UTF-8 text chunks containing the blob's content.
+  - : Returns a {{domxref("ReadableStream")}} that can be used to read the contents of the `Blob` in chunks of UTF-8.
 
 ## Examples
 
