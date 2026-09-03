@@ -155,6 +155,9 @@ em {
 
 This example uses the legacy `-webkit-line-clamp` property with `display` set to `-webkit-box`.
 
+> [!NOTE]
+> When using the legacy `-webkit-line-clamp` property, you will also want to set {{cssxref("overflow")}} to `hidden`, otherwise the content is not clipped, although an ellipsis is still shown after the specified number of lines.
+
 #### HTML
 
 ```html
