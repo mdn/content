@@ -628,7 +628,7 @@ const data = new Float32Array([
 
 ```js hidden live-sample___homogenous_coordinates_ex
 class WebGLBox {
-  canvas = document.getElementById("canvas");
+  canvas = document.getElementById("my-canvas");
   gl = this.canvas.getContext("webgl");
   webglProgram = createWebGLProgramFromIds(
     this.gl,
@@ -817,7 +817,7 @@ gl.uniformMatrix4fv(
 
 ```js hidden live-sample___model_transform_ex live-sample___divide_by_w_ex
 class CubeDemo {
-  canvas = document.getElementById("canvas");
+  canvas = document.getElementById("my-canvas");
   gl = this.canvas.getContext("webgl");
   webglProgram = createWebGLProgramFromIds(
     this.gl,
@@ -1116,7 +1116,7 @@ function computeSimpleProjectionMatrix(scaleFactor) {
 
 ```js hidden live-sample___simple_projection_ex
 class CubeDemo {
-  canvas = document.getElementById("canvas");
+  canvas = document.getElementById("my-canvas");
   gl = this.canvas.getContext("webgl");
   webglProgram = createWebGLProgramFromIds(
     this.gl,
@@ -1344,7 +1344,7 @@ function computePerspectiveMatrix() {
 
 ```js hidden live-sample___projection_matrix_ex
 class CubeDemo {
-  canvas = document.getElementById("canvas");
+  canvas = document.getElementById("my-canvas");
   gl = this.canvas.getContext("webgl");
   webglProgram = createWebGLProgramFromIds(
     this.gl,
@@ -1510,7 +1510,7 @@ function computeViewMatrix(now) {
 
 ```js hidden live-sample___view_matrix_ex
 class CubeDemo {
-  canvas = document.getElementById("canvas");
+  canvas = document.getElementById("my-canvas");
   gl = this.canvas.getContext("webgl");
   webglProgram = createWebGLProgramFromIds(
     this.gl,
