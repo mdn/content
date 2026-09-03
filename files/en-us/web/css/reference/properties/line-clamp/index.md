@@ -71,7 +71,7 @@ When applied to anchor elements, the truncating can happen in the middle of the 
 
 ## Examples
 
-### Truncating content with optional settings
+### Truncating content with an ellipsis or a custom string
 
 In this example there are 3 _cards_ each with different settings:
 
