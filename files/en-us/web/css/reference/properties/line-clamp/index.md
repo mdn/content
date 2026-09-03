@@ -75,9 +75,9 @@ When applied to anchor elements, the truncating can happen in the middle of the 
 
 In this example, there are three cards, each with a different `line-clamp` value:
 
-- The first only has an `<integer>` set to restrict the number of lines.
+- The first has only an `<integer>` to restrict the number of lines.
 - The second has an `<integer>` and the `no-ellipsis` value.
-- The third has an `<integer>` and a custom `<string>` set.
+- The third has an `<integer>` and a custom `<string>`.
 
 #### HTML
 
