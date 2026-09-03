@@ -22,7 +22,7 @@ Iterator.from(object)
 
 ### Return value
 
-If `object` is an iterable, its `[Symbol.iterator]()` method is called to obtain the iterator. Otherwise, `object` is assumed to be an iterator. If the iterator is already {{jsxref("Operators/instanceof", "instanceof")}} {{jsxref("Iterator")}} (which means it has `Iterator.prototype` in its prototype chain), it is returned directly. Otherwise, a new {{jsxref("Iterator")}} object is created that wraps the original iterator.
+If `object` is an iterable, its `[Symbol.iterator]()` method is called to obtain the iterator. Otherwise, `object` is assumed to be an iterator. If the iterator is already {{jsxref("instanceof")}} {{jsxref("Iterator")}} (which means it has `Iterator.prototype` in its prototype chain), it is returned directly. Otherwise, a new {{jsxref("Iterator")}} object is created that wraps the original iterator.
 
 ## Description
 

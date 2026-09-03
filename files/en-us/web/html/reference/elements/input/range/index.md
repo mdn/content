@@ -1,5 +1,6 @@
 ---
-title: <input type="range">
+title: '`<input type="range">` HTML attribute value'
+short-title: <input type="range">
 slug: Web/HTML/Reference/Elements/input/range
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_range
@@ -347,13 +348,6 @@ See [Creating vertical form controls](/en-US/docs/Web/CSS/Guides/Writing_modes/V
     <tr>
       <td><strong>DOM interface</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}}
-        and {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>

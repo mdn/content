@@ -3,10 +3,12 @@ title: "HTMLGeolocationElement: permissionStatus property"
 short-title: permissionStatus
 slug: Web/API/HTMLGeolocationElement/permissionStatus
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.HTMLGeolocationElement.permissionStatus
 ---
 
-{{APIRef("Navigation API")}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`permissionStatus`** read-only property of the {{domxref("HTMLGeolocationElement")}} interface returns an enumerated value representing the current permission status for the `geolocation` feature.
 

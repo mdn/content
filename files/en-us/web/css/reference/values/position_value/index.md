@@ -1,5 +1,6 @@
 ---
-title: <position>
+title: "`<position>` CSS type"
+short-title: <position>
 slug: Web/CSS/Reference/Values/position_value
 page-type: css-type
 browser-compat: css.types.position

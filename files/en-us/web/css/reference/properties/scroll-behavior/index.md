@@ -1,5 +1,6 @@
 ---
-title: scroll-behavior
+title: "`scroll-behavior` CSS property"
+short-title: scroll-behavior
 slug: Web/CSS/Reference/Properties/scroll-behavior
 page-type: css-property
 browser-compat: css.properties.scroll-behavior
@@ -81,9 +82,9 @@ scroll-behavior: revert-layer;
 scroll-behavior: unset;
 ```
 
-The `scroll-behavior` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : The scrolling box scrolls instantly.

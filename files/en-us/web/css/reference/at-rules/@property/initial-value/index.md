@@ -1,5 +1,6 @@
 ---
-title: initial-value
+title: "`initial-value` CSS at-rule descriptor"
+short-title: initial-value
 slug: Web/CSS/Reference/At-rules/@property/initial-value
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.property.initial-value

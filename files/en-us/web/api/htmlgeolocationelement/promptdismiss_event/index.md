@@ -3,10 +3,12 @@ title: "HTMLGeolocationElement: promptdismiss event"
 short-title: promptdismiss
 slug: Web/API/HTMLGeolocationElement/promptdismiss_event
 page-type: web-api-event
+status:
+  - experimental
 browser-compat: api.HTMLGeolocationElement.promptdismiss_event
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 The **`promptdismiss`** event of the {{domxref("HTMLGeolocationElement")}} interface is fired whenever the user activates the `<geolocation>` element and dismisses the resulting dialog, by pressing the "close" button or the <kbd>Esc</kbd> key.
 

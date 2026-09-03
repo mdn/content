@@ -1,5 +1,6 @@
 ---
-title: ::search-text
+title: "`::search-text` CSS pseudo-element"
+short-title: ::search-text
 slug: Web/CSS/Reference/Selectors/::search-text
 page-type: css-pseudo-element
 status:
@@ -39,7 +40,7 @@ p::search-text {
 
 ## Description
 
-Most browsers include some kind of in-page text search functionality, usually labelled "Find" or "Find in page". The `::search-text` pseudo-element, one of the [highlight pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements#highlight_pseudo-elements), allows you to apply a [limited set of styles](#allowable_properties) to the text results highlighted by the browser search functionality.
+Most browsers include some kind of in-page text search functionality, usually labeled "Find" or "Find in page". The `::search-text` pseudo-element, one of the [highlight pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements#highlight_pseudo-elements), allows you to apply a [limited set of styles](#allowable_properties) to the text results highlighted by the browser search functionality.
 
 Not all browsers and browser versions highlight search results using in-page highlights that are stylable with CSS. In such cases, `::search-text` may be unimplemented or just ignored.
 
@@ -117,7 +118,7 @@ In our CSS, we start by styling the `::search-text` pseudo-element. We give it c
 
 ```css hidden live-sample___custom-search-results
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
 }
 
 p {

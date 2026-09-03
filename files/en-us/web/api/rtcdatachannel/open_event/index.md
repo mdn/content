@@ -28,13 +28,6 @@ An {{domxref("RTCDataChannelEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("RTCDataChannelEvent")}}
 
-## Event properties
-
-_Also inherits properties from its parent interface, {{DOMxRef("Event")}}._
-
-- {{DOMxRef("RTCDataChannelEvent.channel", "channel")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("RTCDataChannel")}} associated with the event.
-
 ## Examples
 
 This example adds to the {{domxref("RTCDataChannel")}} `dc` a handler for the `open` event that adjusts the user interface to indicate that a chat window is ready to be used after a connection has been established. It enables the message input box and send button as well as enabling the disconnect button and disabling the connect button. Finally, the message input box is focused so the user can immediately begin to type.

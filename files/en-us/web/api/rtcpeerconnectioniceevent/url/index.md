@@ -3,6 +3,8 @@ title: "RTCPeerConnectionIceEvent: url property"
 short-title: url
 slug: Web/API/RTCPeerConnectionIceEvent/url
 page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.RTCPeerConnectionIceEvent.url
 ---
 

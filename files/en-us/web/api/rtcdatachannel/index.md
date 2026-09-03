@@ -58,7 +58,7 @@ _Also inherits properties from {{DOMxRef("EventTarget")}}._
 - {{DOMxRef("RTCDataChannel.ordered", "ordered")}} {{ReadOnlyInline}}
   - : Indicates whether or not the data channel guarantees in-order delivery of messages;
     the default is `true`, which indicates that the data channel is indeed ordered.
-- {{DOMxRef("RTCDataChannel.priority", "priority")}} {{ReadOnlyInline}}
+- {{DOMxRef("RTCDataChannel.priority", "priority")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns a string indicating the priority of the data channel,
     as set when the data channel was created, or as assigned by the user agent.
     Possible values are `"very-low"`, `"low"`, `"medium"`, or `"high"`.

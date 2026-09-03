@@ -33,7 +33,7 @@ You can also mitigate such risks using:
 - A {{HTMLElement("meta")}} element with a [name](/en-US/docs/Web/HTML/Reference/Elements/meta/name) of `referrer` and the content set to `no-referrer` to disable the Referer header for the whole document. See [Referrer-Policy Integration with HTML](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy#integration_with_html).
 - The [Exit page](https://geekthis.net/post/hide-http-referer-headers/#exit-page-redirect) technique.
 
-Security-conscious server-side frameworks tend to have built in mitigations for such problems, for example:
+Security-conscious server-side frameworks tend to have built-in mitigations for such problems, for example:
 
 - [Security in Django](https://docs.djangoproject.com/en/stable/topics/security/) (especially see [Cross site request forgery (CSRF) protection](https://docs.djangoproject.com/en/stable/topics/security/#cross-site-request-forgery-csrf-protection)).
 - [Helmet referrer-policy](https://github.com/helmetjs/helmet/tree/main/middlewares/referrer-policy) — middleware for setting Referrer-Policy in Node.js/Express apps (see also [Helmet](https://github.com/helmetjs) for more security provisions).

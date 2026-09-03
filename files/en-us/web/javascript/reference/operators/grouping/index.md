@@ -159,5 +159,5 @@ For more advice on working with ASI, see its [reference section](/en-US/docs/Web
 ## See also
 
 - [Operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence)
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
 - {{jsxref("Operators/typeof", "typeof")}}

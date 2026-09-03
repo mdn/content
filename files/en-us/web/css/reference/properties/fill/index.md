@@ -1,5 +1,6 @@
 ---
-title: fill
+title: "`fill` CSS property"
+short-title: fill
 slug: Web/CSS/Reference/Properties/fill
 page-type: css-property
 browser-compat: css.properties.fill
@@ -13,7 +14,7 @@ The areas inside the outline of the SVG shape or text are painted. What is "insi
 If subpaths are open, `fill` closes the path before painting, as if a "closepath" command were included connecting the last point of the subpath with the first point of the subpath. In other words, `fill` applies to open subpaths within `path` elements (i.e., subpaths without a closepath command) and `polyline` elements.
 
 > [!NOTE]
-> The `fill` property only applies to {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, and {{SVGElement('tspan')}} elements nested in an {{SVGElement("svg")}}. It doesn't apply other SVG, HTML, or pseudo-elements.
+> The `fill` property only applies to {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, and {{SVGElement('tspan')}} elements nested in an {{SVGElement("svg")}}. It doesn't apply to other SVG, HTML, or pseudo-elements.
 
 ## Syntax
 
@@ -44,6 +45,8 @@ fill: unset;
 ```
 
 ### Values
+
+This property is specified as a single value from the following list or as two values when using `<url>`:
 
 - `none`
   - : No `fill` is painted; the areas inside the stroke, if any, are transparent.
@@ -76,7 +79,7 @@ This example demonstrates how a `fill` is declared, the effect of the property, 
 
 #### HTML
 
-We have an SVG with two complex shapes defined using the SVG {{SVGElement('polygon')}} and {{SVGElement('path')}} elements. Both have the `fill` attribute set to the default `black`. We add a dark grey stroke of `#666666` using the SVG {{SVGAttr("stroke")}} attribute but could have used the {{CSSXRef("stroke")}} property.
+We have an SVG with two complex shapes defined using the SVG {{SVGElement('polygon')}} and {{SVGElement('path')}} elements. Both have the `fill` attribute set to the default `black`. We add a dark gray stroke of `#666666` using the SVG {{SVGAttr("stroke")}} attribute but could have used the {{CSSXRef("stroke")}} property.
 
 ```html
 <svg viewBox="0 0 220 120" xmlns="http://www.w3.org/2000/svg">
@@ -124,7 +127,7 @@ This example demonstrates using keyword values for `fill`.
 
 #### HTML
 
-We include three {{SVGElement("path")}} elements and a {{SVGElement("marker")}} element that adds a {{SVGElement("circle")}} to every path point. We set the circle marker to be black with a grey fill with the SVG {{SVGAttr("stroke")}} and {{SVGAttr("fill")}} attributes.
+We include three {{SVGElement("path")}} elements and a {{SVGElement("marker")}} element that adds a {{SVGElement("circle")}} to every path point. We set the circle marker to be black with a gray fill with the SVG {{SVGAttr("stroke")}} and {{SVGAttr("fill")}} attributes.
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 90">

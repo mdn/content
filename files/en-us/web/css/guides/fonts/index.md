@@ -28,7 +28,7 @@ The CSS fonts module also supports variable fonts. Unlike regular fonts, where e
 - {{cssxref("font-palette")}}
 - {{cssxref("font-size")}}
 - {{cssxref("font-size-adjust")}}
-- {{cssxref("font-stretch")}}
+- {{cssxref("font-width")}} and its legacy alias {{cssxref("font-stretch")}}
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
 
@@ -48,8 +48,6 @@ The CSS fonts module also supports variable fonts. Unlike regular fonts, where e
 - {{cssxref("font-variant-position")}}
 - {{cssxref("font-variation-settings")}}
 
-The specification also defines the `font-width` property, which is not yet supported by any browser.
-
 ### At-rules and descriptors
 
 - At-rule: {{cssxref("@font-face")}}
@@ -59,7 +57,7 @@ The specification also defines the `font-width` property, which is not yet suppo
     - {{cssxref("@font-face/font-display", "font-display")}}
     - {{cssxref("@font-face/font-family", "font-family")}}
     - {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}}
-    - {{cssxref("@font-face/font-stretch", "font-stretch")}}
+    - {{cssxref("@font-face/font-width", "font-width")}} and its legacy alias {{cssxref("@font-face/font-stretch", "font-stretch")}}
     - {{cssxref("@font-face/font-style", "font-style")}}
     - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
     - {{cssxref("@font-face/font-weight", "font-weight")}}
@@ -68,7 +66,7 @@ The specification also defines the `font-width` property, which is not yet suppo
     - {{cssxref("@font-face/src", "src")}}
     - {{cssxref("@font-face/unicode-range", "unicode-range")}}
 
-The CSS fonts module also defines the `font-language-override`, `font-named-instance`, `font-width`, `font-size`, `subscript-position-override`, `subscript-size-override`, `superscript-position-override`, and `superscript-size-override` descriptors. Currently, no browsers support these features.
+The CSS fonts module also defines the `font-language-override`, `font-named-instance`, `font-size`, `subscript-position-override`, `subscript-size-override`, `superscript-position-override`, and `superscript-size-override` descriptors. Currently, no browsers support these features.
 
 - At-rule: {{cssxref("@font-feature-values")}}
 

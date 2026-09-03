@@ -3,10 +3,12 @@ title: "HTMLGeolocationElement: autolocate property"
 short-title: autolocate
 slug: Web/API/HTMLGeolocationElement/autolocate
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.HTMLGeolocationElement.autolocate
 ---
 
-{{APIRef("Navigation API")}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`autolocate`** property of the {{domxref("HTMLGeolocationElement")}} interface gets and sets a boolean value indicating whether the browser should immediately request location data when the {{htmlelement("geolocation")}} element is rendered, provided permission to use the `geolocation` feature is already granted.
 

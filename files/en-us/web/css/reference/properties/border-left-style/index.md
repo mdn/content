@@ -1,5 +1,6 @@
 ---
-title: border-left-style
+title: "`border-left-style` CSS property"
+short-title: border-left-style
 slug: Web/CSS/Reference/Properties/border-left-style
 page-type: css-property
 browser-compat: css.properties.border-left-style

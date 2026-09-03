@@ -2,7 +2,7 @@
 title: 421 Misdirected Request
 slug: Web/HTTP/Reference/Status/421
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#name-421-misdirected-request
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#name-421-misdirected-request
 sidebar: http
 ---
 
@@ -44,6 +44,6 @@ Server: Apache/2.4.1 (Unix)
 
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Reference/Status)
 - [Multiple hosts and misdirected requests](https://httpd.apache.org/docs/2.4/mod/mod_http2.html#misdirected) Apache Server documentation
-- [TLS 1.3](/en-US/docs/Web/Security/Defenses/Transport_Layer_Security#tls_1.3)
+- [TLS](/en-US/docs/Web/Security/Defenses/Transport_Layer_Security)
 - [Server Name Indication (SNI)](https://en.wikipedia.org/wiki/Server_Name_Indication)
 - [Transport Layer Security (TLS) configuration](/en-US/docs/Web/Security/Practical_implementation_guides/TLS)

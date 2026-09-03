@@ -1,5 +1,6 @@
 ---
-title: system
+title: "`system` CSS at-rule descriptor"
+short-title: system
 slug: Web/CSS/Reference/At-rules/@counter-style/system
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.system
@@ -287,7 +288,7 @@ ul {
 
 ### Additive counter
 
-This example renders a list using Roman numerals. Notice that a `range` is specified. This is because the representation will produce correct Roman numerals only until the counter value of `3999`. Once outside of the range, the rest of the counter representations will be based on the `decimal` style, which is the fall back. If you need to represent counter values as Roman numerals, you could use either one of the predefined counter styles, `upper-roman` or `lower-roman`, rather than recreating the rule yourself.
+This example renders a list using Roman numerals. Notice that a `range` is specified. This is because the representation will produce correct Roman numerals only until the counter value of `3999`. Once outside of the range, the rest of the counter representations will be based on the `decimal` style, which is the fallback. If you need to represent counter values as Roman numerals, you could use either one of the predefined counter styles, `upper-roman` or `lower-roman`, rather than recreating the rule yourself.
 
 #### HTML
 
@@ -382,4 +383,4 @@ ul {
 
 - Other {{cssxref("@counter-style")}} descriptors, including {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/pad", "pad")}}, {{cssxref("@counter-style/speak-as", "speak-as")}}, and {{cssxref("@counter-style/fallback", "fallback")}}
 - {{cssxref("list-style")}}, {{cssxref("list-style-image")}}, {{cssxref("list-style-position")}}
-- {{cssxref("symbols()")}}, the functional notation creating anonymous counter styles.
+- {{cssxref("symbols()")}}, the functional notation for creating anonymous counter styles.

@@ -1,5 +1,6 @@
 ---
-title: <input type="submit">
+title: '`<input type="submit">` HTML attribute value'
+short-title: <input type="submit">
 slug: Web/HTML/Reference/Elements/input/submit
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_submit
@@ -194,10 +195,6 @@ We've included basic examples above. There isn't really anything more to say abo
     <tr>
       <td><strong>DOM interface</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>None</td>
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>

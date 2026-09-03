@@ -1,5 +1,6 @@
 ---
-title: border-bottom-left-radius
+title: "`border-bottom-left-radius` CSS property"
+short-title: border-bottom-left-radius
 slug: Web/CSS/Reference/Properties/border-bottom-left-radius
 page-type: css-property
 browser-compat: css.properties.border-bottom-left-radius
@@ -95,7 +96,7 @@ With two values:
 
 ## Description
 
-The rounding can be a circle or an ellipse, or if one of the value is `0` no rounding is done and the corner is square.
+The rounding can be a circle or an ellipse, or if one of the values is `0` no rounding is done and the corner is square.
 
 ![border-bottom-left-radius.png](border-bottom-left-radius.png)
 

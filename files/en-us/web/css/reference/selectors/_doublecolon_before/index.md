@@ -1,5 +1,6 @@
 ---
-title: ::before
+title: "`::before` CSS pseudo-element"
+short-title: ::before
 slug: Web/CSS/Reference/Selectors/::before
 page-type: css-pseudo-element
 browser-compat: css.selectors.before

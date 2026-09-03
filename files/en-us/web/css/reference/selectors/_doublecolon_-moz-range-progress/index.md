@@ -1,5 +1,6 @@
 ---
-title: ::-moz-range-progress
+title: "`::-moz-range-progress` CSS pseudo-element"
+short-title: ::-moz-range-progress
 slug: Web/CSS/Reference/Selectors/::-moz-range-progress
 page-type: css-pseudo-element
 status:
@@ -46,7 +47,7 @@ input[type="range"]::-moz-range-progress {
 
 A progress bar using this style might look something like this:
 
-![The progress bar is a thick green square to the left of the thumb and a thin grey line to the right. The thumb is a circle with a diameter the height of the green area.](screen_shot_2015-12-04_at_20.14.48.png)
+![The progress bar is a thick green square to the left of the thumb and a thin gray line to the right. The thumb is a circle with a diameter the height of the green area.](screen_shot_2015-12-04_at_20.14.48.png)
 
 ## Specifications
 

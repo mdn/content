@@ -1,5 +1,6 @@
 ---
-title: content
+title: "`content` CSS property"
+short-title: content
 slug: Web/CSS/Reference/Properties/content
 page-type: css-property
 browser-compat: css.properties.content
@@ -110,11 +111,11 @@ The keywords and data types mentioned above are described in more detail below:
   - : An {{cssxref("image")}}, representing an image to display. This can be equal to a {{cssxref("url_value", "&lt;url&gt;")}}, {{cssxref("image/image-set", "image-set()")}}, or {{cssxref("gradient")}} data type, or a part of the webpage itself, defined by the {{cssxref("element()")}} function.
 
 - `<counter>`
-  - : The `<counter>` value is a [CSS counter](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters), generally a number produced by computations defined by {{cssxref("&lt;counter-reset&gt;")}} and {{cssxref("&lt;counter-increment&gt;")}} properties. It can be displayed using either the {{cssxref("counter()")}} or {{cssxref("counters()")}} function.
+  - : The `<counter>` value is a [CSS counter](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters), generally a number produced by computations defined by {{cssxref("counter-reset")}} and {{cssxref("counter-increment")}} properties. It can be displayed using either the {{cssxref("counter()")}} or {{cssxref("counters()")}} function.
     - {{cssxref("counter()")}}
-      - : The {{cssxref("counter()")}} function has two forms: 'counter(_name_)' or 'counter(_name_, style)'. The generated text is the value of the innermost counter of the given name in scope at the given pseudo-element. It is formatted in the specified {{cssxref("&lt;list-style-type&gt;")}} (`decimal` by default).
+      - : The {{cssxref("counter()")}} function has two forms: 'counter(_name_)' or 'counter(_name_, style)'. The generated text is the value of the innermost counter of the given name in scope at the given pseudo-element. It is formatted in the specified {{cssxref("list-style-type")}} (`decimal` by default).
     - {{cssxref("counters()")}}
-      - : The {{cssxref("counters()")}} function also has two forms: 'counters(_name_, _string_)' or 'counters(_name_, _string_, _style_)'. The generated text is the value of all counters with the given name in scope at the given pseudo-element, from outermost to innermost, separated by the specified string. The counters are rendered in the indicated {{cssxref("&lt;list-style-type&gt;")}} (`decimal` by default).
+      - : The {{cssxref("counters()")}} function also has two forms: 'counters(_name_, _string_)' or 'counters(_name_, _string_, _style_)'. The generated text is the value of all counters with the given name in scope at the given pseudo-element, from outermost to innermost, separated by the specified string. The counters are rendered in the indicated {{cssxref("list-style-type")}} (`decimal` by default).
 
 - `<quote>`
   - : The `<quote>` data type includes language- and position-dependent keywords:
@@ -512,4 +513,4 @@ div {
 - {{glossary("Replaced elements")}}
 - [CSS generated content](/en-US/docs/Web/CSS/Guides/Generated_content) module
 - [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module
-- Browser accessibility panels: [Firefox Accessibility inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/), [Chrome Accessibility pane](https://developer.chrome.com/docs/devtools/accessibility/reference#pane), and [Safari Accessibility tree](https://webflow.com/glossary/accessibility-tree#:~:text=To%20view%20a%20website%E2%80%99s%20accessibility%20tree%20in%20Safari)
+- Browser accessibility panels: [Firefox Accessibility inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/), [Chrome Accessibility pane](https://developer.chrome.com/docs/devtools/accessibility/reference#pane), and [Safari Accessibility tree](https://university.webflow.com/glossary/accessibility-tree#:~:text=To%20view%20a%20website%E2%80%99s%20accessibility%20tree%20in%20Safari)

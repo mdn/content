@@ -43,3 +43,7 @@ You can use this attribute with the following SVG elements:
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("SVGTextPathElement.spacing")}}

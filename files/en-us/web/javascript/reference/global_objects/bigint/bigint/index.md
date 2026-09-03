@@ -34,7 +34,7 @@ A {{jsxref("BigInt")}} value. Number values must be integers and are converted t
 - {{jsxref("TypeError")}}
   - : Thrown in one of the following cases:
     - The parameter cannot be converted to a primitive.
-    - After conversion to a primitive, the result is {{jsxref("undefined")}}, {{jsxref("Operators/null", "null")}}, {{jsxref("symbol")}}.
+    - After conversion to a primitive, the result is {{jsxref("undefined")}}, {{jsxref("null")}}, {{jsxref("symbol")}}.
 - {{jsxref("SyntaxError")}}
   - : Thrown if the parameter is a string that cannot be parsed as a `BigInt`.
 

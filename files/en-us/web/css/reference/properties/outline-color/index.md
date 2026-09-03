@@ -1,5 +1,6 @@
 ---
-title: outline-color
+title: "`outline-color` CSS property"
+short-title: outline-color
 slug: Web/CSS/Reference/Properties/outline-color
 page-type: css-property
 browser-compat: css.properties.outline-color

@@ -3,10 +3,12 @@ title: "HTMLGeolocationElement: error property"
 short-title: error
 slug: Web/API/HTMLGeolocationElement/error
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.HTMLGeolocationElement.error
 ---
 
-{{APIRef("Navigation API")}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`error`** read-only property of the {{domxref("HTMLGeolocationElement")}} interface returns a {{domxref("GeolocationPositionError")}} object representing error information, in the event of a failure to retrieve location data.
 

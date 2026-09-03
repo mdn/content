@@ -12,7 +12,7 @@ This is aimed at larger projects. To suggest a new page or article, please refer
 
 ## Web standards technologies
 
-The remit of MDN Web Docs is to document web standards technologies that are in a specification published by a reliable standards body and are supported in at least one stable browser. These criteria signal enough interest, stability, and "intent to implement" by the web industry at large. Therefore, we think those technologies are a safe bet for us to spend our time and effort in documenting them. Any earlier than that, a web technology or a feature might be prone to getting cancelled due to lack of interest or might be so unstable that it might change significantly, which will needlessly involve a lot of rewriting (which we try to avoid where possible).
+The remit of MDN Web Docs is to document web standards technologies that are in a specification published by a reliable standards body and are supported in at least one stable browser. These criteria signal enough interest, stability, and "intent to implement" by the web industry at large. Therefore, we think those technologies are a safe bet for us to spend our time and effort in documenting them. Any earlier than that, a web technology or a feature might be prone to getting canceled due to lack of interest or might be so unstable that it might change significantly, which will needlessly involve a lot of rewriting (which we try to avoid where possible).
 
 ## Non-web standards technologies
 

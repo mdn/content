@@ -56,7 +56,6 @@ sidebar: mdnsidebar
 >
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 >   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
-> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 > - `\{{Non-standard_Header}}` — this generates a **Non-standard** banner that indicates that the feature is not part of any specification.
 >
 > You should update or delete the following macros according to the advice below:
@@ -88,7 +87,7 @@ sidebar: mdnsidebar
 >
 > _Remember to remove this whole explanatory note before publishing._
 
-{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 Begin the content on the page with an introductory paragraph — start by naming the event, saying what interface it is part of, and saying what it does.
 This should ideally be one or two short sentences.
@@ -115,15 +114,6 @@ Or, for example:
 _An {{domxref("XRSessionEvent")}}. Inherits from {{domxref("Event")}}._
 
 {{InheritanceDiagram("XRSessionEvent")}}
-
-## Event properties
-
-If the event is not just a generic {{domxref("Event")}}, list the additional properties the event has.
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref("XRSessionEvent.session", "session")}} {{ReadOnlyInline}}
-  - : The {{domxref("XRSession")}} to which the event refers.
 
 ## Description
 

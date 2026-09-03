@@ -1,5 +1,6 @@
 ---
-title: -webkit-transform-3d
+title: "`-webkit-transform-3d` CSS media feature"
+short-title: -webkit-transform-3d
 slug: Web/CSS/Reference/At-rules/@media/-webkit-transform-3d
 page-type: css-media-feature
 browser-compat: css.at-rules.media.-webkit-transform-3d
@@ -57,7 +58,6 @@ A better method for checking for browser support is using a feature query:
 - {{cssxref("@media/-webkit-transform-2d", "-webkit-transform-2d")}}
 - {{cssxref("@media/-webkit-transition", "-webkit-transition")}}
 - {{cssxref("@media/-webkit-animation", "-webkit-animation")}}
-- [Test page at quirksmode.org](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
 - {{cssxref("transform")}} and [using CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms/Using)
 - {{cssxref("@media")}} and [Using media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
 - {{cssxref("@supports")}} and [using feature queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)

@@ -30,6 +30,8 @@ Events are fired as the result of {{domxref("Element/cut_event", "cut")}}, {{dom
 The events have a default action, for example the `copy` action copies the current selection to the system clipboard by default.
 The default action can be overridden by the event handler — see each of the events for more information.
 
+There is also a {{domxref("Clipboard.clipboardchange_event","clipboardchange")}} event fired directly on the {{domxref("Clipboard")}} object whenever the system clipboard's contents are changed. This is useful for notifying apps of a change to the system clipboard, for example if they have their own clipboard that needs to be kept in sync.
+
 ## Interfaces
 
 - {{domxref("Clipboard")}} {{securecontext_inline}}
@@ -63,6 +65,8 @@ The Clipboard API allows users to programmatically read and write text and other
 When reading from the clipboard, the specification requires that a user has recently interacted with the page ([transient user activation](/en-US/docs/Web/Security/Defenses/User_activation)) and that the call is made as a result of the user interacting with a browser or OS "paste element" (such as choosing "Paste" on a native context menu). In practice, browsers often allow read operations that do not satisfy these requirements, while placing other requirements instead (such as a permission or per-operation prompt).
 For writing to the clipboard the specification expects that the page has been granted the [Permissions API](/en-US/docs/Web/API/Permissions_API) `clipboard-write` permission, and the browser may also require [transient user activation](/en-US/docs/Web/Security/Defenses/User_activation).
 Browsers may place additional restrictions over use of the methods to access the clipboard.
+
+The {{domxref("Clipboard.clipboardchange_event", "clipboardchange")}} event is only fired with [sticky activation](/en-US/docs/Glossary/Sticky_activation) or after the `clipboard-read` permission is granted.
 
 Browser implementations have diverged from the specification.
 The differences are captured in the [Browser compatibility](#browser_compatibility) section and the current state is summarized below:

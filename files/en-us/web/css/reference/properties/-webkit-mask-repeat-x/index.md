@@ -1,5 +1,6 @@
 ---
-title: -webkit-mask-repeat-x
+title: "`-webkit-mask-repeat-x` CSS property"
+short-title: -webkit-mask-repeat-x
 slug: Web/CSS/Reference/Properties/-webkit-mask-repeat-x
 page-type: css-property
 status:
@@ -92,4 +93,5 @@ Not part of any standard.
 
 ## See also
 
-{{cssxref("mask-repeat", "-webkit-mask-repeat")}}, {{cssxref("-webkit-mask-repeat-y")}}
+- {{cssxref("mask-repeat", "-webkit-mask-repeat")}}
+- {{cssxref("-webkit-mask-repeat-y")}}

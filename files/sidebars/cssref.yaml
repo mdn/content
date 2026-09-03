@@ -17,6 +17,7 @@ sidebar:
     children:
       - /Web/CSS/Guides/Anchor_positioning/Using
       - /Web/CSS/Guides/Anchor_positioning/Try_options_hiding
+      - /Web/CSS/Guides/Anchor_positioning/Anchored_container_queries
   - title: Animations
     details: closed
     children:
@@ -28,6 +29,10 @@ sidebar:
       - /Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds
       - /Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images
       - /Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds
+  - title: Borders_and_box_decorations
+    details: closed
+    children:
+      - /Web/CSS/Guides/Borders_and_box_decorations/Border_shape_nav_menu
   - title: Box alignment
     details: closed
     children:
@@ -152,7 +157,7 @@ sidebar:
       - /Web/CSS/Guides/Grid_layout/Accessibility
       - /Web/CSS/Guides/Grid_layout/Common_grid_layouts
       - /Web/CSS/Guides/Grid_layout/Subgrid
-      - /Web/CSS/Guides/Grid_layout/Masonry_layout
+      - /Web/CSS/Guides/Grid_layout/Grid_lanes
   - title: Images
     details: closed
     children:
@@ -207,6 +212,7 @@ sidebar:
     details: closed
     children:
       - /Web/CSS/Guides/Properties_and_values_API/Houdini
+      - /Web/CSS/Guides/Properties_and_values_API/Registering_properties
   - type: listSubPages
     path: /Web/CSS/Guides/Scroll_anchoring
     title: Scroll_anchoring
@@ -311,6 +317,7 @@ sidebar:
     link: /Web/CSS/Reference/Properties
     title: Properties
     details: closed
+    code: true
   - type: listSubPages
     path: /Web/CSS/Reference/Selectors
     tags: css-selector
@@ -329,30 +336,40 @@ sidebar:
     link: /Web/CSS/Reference/Selectors/Pseudo-classes
     title: Pseudo-classes
     details: closed
+    code: true
   - type: listSubPagesGrouped
     path: /Web/CSS/Reference/Selectors
     tags: css-pseudo-element
     link: /Web/CSS/Reference/Selectors/Pseudo-elements
     title: Pseudo-elements
     details: closed
+    code: true
   - type: listSubPages
     path: /Web/CSS/Reference/At-rules
-    tags: css-at-rule
+    tags:
+      - css-at-rule
+      - css-at-rule-descriptor
+      - css-media-feature
+    depth: 2
+    nested: true
     link: /Web/CSS/Reference/At-rules
     title: At-rules
     details: closed
+    code: true
   - type: listSubPages
     path: /Web/CSS/Reference/Values
     tags: css-keyword
     link: /Web/CSS/Reference/Values
     title: Values
     details: closed
+    code: true
   - type: listSubPages
     path: /Web/CSS/Reference/Values
     tags: css-type
     link: /Web/CSS/Reference/Values/Data_types
     title: Types
     details: closed
+    code: true
   - type: listSubPages
     path: /Web/CSS/Reference/Values
     tags: css-function
@@ -360,6 +377,7 @@ sidebar:
     link: /Web/CSS/Reference/Values/Functions
     title: Functions
     details: closed
+    code: true
 l10n:
   de:
     Guides: Leitfäden
@@ -406,6 +424,7 @@ l10n:
     Anchor_positioning: Anchor positioning
     Animations: Animations
     Backgrounds_and_Borders: Backgrounds and borders
+    Borders_and_box_decorations: Borders and box decorations
     Box_model: Box model
     Cascade: Cascade
     Colors: Colors
@@ -441,29 +460,60 @@ l10n:
     Transitions: Transitions
     Tools: Tools
   fr:
+    Accessibility_Understanding_colors_and_luminance: "Accessibilité : Couleurs et luminance"
+    At-rules: Règles @
     Guides: Guides
+    Anchor_positioning: Positionnement par ancre
     Animations: Animations
     Backgrounds_and_Borders: Arrière-plans et bordures
     Box_model: Modèle de boîte
+    Cascade: Cascade
+    Colors: Couleurs
+    Color_contrast: "Accessibilité : Contraste de la couleur"
     Columns: Colonnes
+    Combinators: Combinateurs
     Conditional_rules: Règles conditionnelles
+    Containment: Compartimentation
+    Coordinate_systems: Systèmes de coordonnées (API)
+    Contribute a recipe: Contribuer à une recette
     Counters: Compteurs
     CSSOM_view: Vue CSSOM
+    Custom_functions_and_mixins: Fonctions et mixins personnalisées
+    Display: Mise en page
+    Environment_variables: Variables d'environnement
+    Filter_effects: Effets de filtre
     Flexbox: Boîtes flexibles
-    Display: Mis en page
     Fonts: Polices
+    Functions: Fonctions
     Grid: Grille
     Images: Images
+    Layout cookbook: Recettes de mise en page
     Lists: Listes
     Logical_properties: Propriétés logiques
+    Masking: Masquage
     Media_queries: Requêtes média
+    Nesting: Imbrication
+    Overflow: Débordement
     Positioning: Positionnement
-    Scroll_snap: Ancrage du défilement
+    Properties: Propriétés
+    Properties and Values API: API des propriétés et des valeurs
+    Pseudo-classes: Pseudo-classes
+    Pseudo-elements: Pseudo-éléments
+    Selectors: Sélecteurs
+    Scroll_anchoring: Ancrage de défilement
+    Scroll-driven_animations: Animations pilotées par le défilement
+    Scroll_snap: Accrochage du défilement
     Shapes: Formes
+    Syntax: Syntaxe
     Text: Texte
+    Text decoration: Décoration de texte
     Transforms: Transformations
     Transitions: Transitions
     Tools: Outils
+    Types: Types
+    Values: Valeurs
+    Values and units: Valeurs et unités
+    Writing modes: Modes d'écriture
   ja:
     Accessibility_Understanding_colors_and_luminance: "アクセシビリティ: 色と輝度"
     At-rules: アットルール

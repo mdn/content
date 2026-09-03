@@ -15,7 +15,7 @@ The **`fingerprint`** property of the {{domxref("RTCCertificateStats")}} diction
 A string containing the fingerprint of the associated certificate.
 
 This is a lowercase hex string, calculated using the hash function specified in the {{domxref("RTCCertificateStats.fingerprintAlgorithm","fingerprintAlgorithm")}} property.
-The format is more precisely defined in [RFC4572, Section 5](https://www.rfc-editor.org/rfc/rfc4572#section-5).
+The format is more precisely defined in [RFC4572, Section 5](https://www.rfc-editor.org/info/rfc4572/#section-5).
 
 ## Specifications
 

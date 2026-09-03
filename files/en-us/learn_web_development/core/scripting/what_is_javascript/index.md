@@ -113,7 +113,7 @@ The core client-side JavaScript language consists of some common programming fea
 
 - Store useful values inside variables. In the above example for instance, we ask for a new name to be entered then store that name in a variable called `name`.
 - Operations on pieces of text (known as "strings" in programming). In the above example we take the string "Player 1: " and join it to the `name` variable to create the complete text label, e.g., "Player 1: Chris".
-- Running code in response to certain events occurring on a web page. We used a {{domxref("Element/click_event", "click")}} event in our example above to detect when the label is clicked and then run the code that updates the text label.
+- Running code in response to certain events occurring on a web page. We used a {{domxref("Element/click_event", "click")}} event in our example above to detect when the button is clicked and then run the code that updates the text label.
 - And much more!
 
 What is even more exciting however is the functionality built on top of the client-side JavaScript language. So-called **Application Programming Interfaces** (**APIs**) provide you with extra superpowers to use in your JavaScript code.
@@ -137,7 +137,7 @@ They generally fall into two categories.
 
 **Third party APIs** are not built into the browser by default, and you generally have to grab their code and information from somewhere on the Web. For example:
 
-- The [Bluesky API](https://docs.bsky.app/) allows you to do things like displaying your latest posts on your website.
+- The [Bluesky API](https://bsky.network/) allows you to do things like displaying your latest posts on your website.
 - The [Google Maps API](https://developers.google.com/maps/) and [OpenStreetMap API](https://wiki.openstreetmap.org/wiki/API) allows you to embed custom maps into your website, and other such functionality.
 
 > [!NOTE]
@@ -426,7 +426,7 @@ for (const button of buttons) {
 
 So there you go, your first step into the world of JavaScript.
 We've begun with just theory, to start getting you used to why you'd use JavaScript and what kind of things you can do with it.
-Along the way, you saw a few code examples and learned how JavaScript fits in with the rest of the code on your website, amongst other things.
+Along the way, you saw a few code examples and learned how JavaScript fits in with the rest of the code on your website, among other things.
 
 JavaScript may seem a bit daunting right now, but don't worry — in this course, we will take you through it in simple steps that will make sense going forward.
 In the next article, we will plunge straight into the practical, getting you to jump straight in and build your own JavaScript examples.

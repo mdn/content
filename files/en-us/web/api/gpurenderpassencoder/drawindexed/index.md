@@ -36,7 +36,7 @@ drawIndexed(indexCount, instanceCount, firstIndex, baseVertex, firstInstance)
 
 ### Return value
 
-None ({{jsxref("Undefined")}}).
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -1,12 +1,13 @@
 ---
-title: border-block-start
+title: "`border-block-start` CSS property"
+short-title: border-block-start
 slug: Web/CSS/Reference/Properties/border-block-start
 page-type: css-shorthand-property
 browser-compat: css.properties.border-block-start
 sidebar: cssref
 ---
 
-The **`border-block-start`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) for setting the individual logical block-start border property values in a single place in the style sheet.
+The **`border-block-start`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets the individual logical block-start border property values in a single place in the style sheet.
 
 {{InteractiveExample("CSS Demo: border-block-start")}}
 
@@ -80,9 +81,9 @@ Related properties are {{cssxref("border-block-end")}}, {{cssxref("border-inline
 
 The `border-block-start` is specified with one or more of the following, in any order:
 
-- `<'border-width'>`
+- {{cssxref("&lt;line-width&gt;")}}
   - : The width of the border. See {{cssxref("border-width")}}.
-- `<'border-style'>`
+- {{cssxref("&lt;line-style&gt;")}}
   - : The line style of the border. See {{cssxref("border-style")}}.
 - {{CSSXref("&lt;color&gt;")}}
   - : The color of the border.

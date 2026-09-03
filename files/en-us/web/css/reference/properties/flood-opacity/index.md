@@ -1,5 +1,6 @@
 ---
-title: flood-opacity
+title: "`flood-opacity` CSS property"
+short-title: flood-opacity
 slug: Web/CSS/Reference/Properties/flood-opacity
 page-type: css-property
 browser-compat: css.properties.flood-opacity

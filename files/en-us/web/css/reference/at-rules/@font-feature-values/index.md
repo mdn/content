@@ -1,5 +1,6 @@
 ---
-title: "@font-feature-values"
+title: "`@font-feature-values` CSS at-rule"
+short-title: "@font-feature-values"
 slug: Web/CSS/Reference/At-rules/@font-feature-values
 page-type: css-at-rule
 browser-compat: css.at-rules.font-feature-values

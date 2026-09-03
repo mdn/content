@@ -1,5 +1,6 @@
 ---
-title: :current
+title: "`:current` CSS pseudo-class"
+short-title: :current
 slug: Web/CSS/Reference/Selectors/:current
 page-type: css-pseudo-class
 status:
@@ -79,7 +80,7 @@ In our CSS, we start by styling the `::search-text` pseudo-element. We give it c
 
 ```css hidden live-sample___custom-search-results
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
 }
 
 p {

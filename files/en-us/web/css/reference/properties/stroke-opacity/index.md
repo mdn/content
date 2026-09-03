@@ -1,5 +1,6 @@
 ---
-title: stroke-opacity
+title: "`stroke-opacity` CSS property"
+short-title: stroke-opacity
 slug: Web/CSS/Reference/Properties/stroke-opacity
 page-type: css-property
 browser-compat: css.properties.stroke-opacity

@@ -116,7 +116,7 @@ Each of the pages below contains detailed information about a math function's sy
 - {{cssxref("mod()")}}
   - : Calculates a modulus (with the same sign as the divisor) when dividing one number by another.
 - {{cssxref("progress()")}}
-  - : Calculates the position of a value between two other values — a start value and an end value. The result is expressed as a number between 0 and 1 representing the progress between the start and end values.
+  - : Calculates the position of a value between two other values — a start value and an end value. The result represents the progress between the start and end values, where 0 is the start, and 1 is the end.
 - {{cssxref("rem()")}}
   - : Calculates a remainder (with the same sign as the dividend) when dividing one number by another.
 
@@ -208,6 +208,8 @@ The {{CSSxRef("color_value","&lt;color&gt;")}} CSS [data type](/en-US/docs/Web/C
   - : Returns a color with maximum color contrast for a given color.
 - {{CSSxRef("color_value/device-cmyk", "device-cmyk()")}}
   - : Defines CMYK colors in a device-dependent way.
+- {{CSSXref("color_value/alpha", "alpha()")}}
+  - : Returns a color with a modified alpha (transparency) channel.
 - {{CSSXref("color_value/light-dark", "light-dark()")}}
   - : Returns one of two provided colors based on the current color scheme.
 - {{cssxref("dynamic-range-limit-mix()")}}
@@ -284,7 +286,7 @@ The {{cssxref("basic-shape")}} CSS [data type](/en-US/docs/Web/CSS/Reference/Val
 - {{cssxref("ray()")}}
   - : Valid with {{cssxref("offset-path")}}; defines the line segment an animated element can follow.
 - {{CSSxRef("superellipse()")}}
-  - : Defines the curvature of an ellipse; can be used to specify a {{cssxref("corner-shape-value")}}, which is used with {{cssxref("corner-shape")}} and its [constituent](/en-US/docs/Web/CSS/Reference/Properties/corner-shape#constituent_properties) and [related](/en-US/docs/Web/CSS/Reference/Properties/corner-shape#properties_that_follow_the_corner_shape) properties.
+  - : Defines the curvature of an ellipse; can be used to specify a {{cssxref("corner-shape-value")}}, which is used with {{cssxref("corner-shape")}} and its [constituent](/en-US/docs/Web/CSS/Reference/Properties/corner-shape#constituent_properties) and [related](/en-US/docs/Web/CSS/Reference/Properties/corner-shape#properties_that_follow_corner-shape) properties.
 
 ## Reference functions
 
@@ -372,6 +374,7 @@ The following functions return an integer value based on the DOM tree, rather th
 - {{cssxref("-moz-image-rect")}} {{non-standard_inline}} {{deprecated_inline}}
 - {{cssxref("abs")}}
 - {{cssxref("acos")}}
+- {{cssxref("alpha")}}
 - {{cssxref("anchor")}}
 - {{cssxref("anchor-size")}}
 - {{cssxref("asin")}}
@@ -388,7 +391,7 @@ The following functions return an integer value based on the DOM tree, rather th
 - {{cssxref("color_value/color-mix", "color-mix()")}}
 - {{cssxref("gradient/conic-gradient", "conic-gradient()")}}
 - {{cssxref("filter-function/contrast", "contrast()")}}
-- {{cssxref("color_value/contrast-color", "contrast-color()")}} {{experimental_inline}}
+- {{cssxref("color_value/contrast-color", "contrast-color()")}}
 - {{cssxref("cos")}}
 - {{cssxref("counter")}}
 - {{cssxref("counters")}}
@@ -434,8 +437,9 @@ The following functions return an integer value based on the DOM tree, rather th
 - {{cssxref("transform-function/perspective", "perspective()")}}
 - {{cssxref("basic-shape/polygon", "polygon()")}}
 - {{cssxref("pow")}}
-- {{cssxref("progress")}} {{experimental_inline}}
+- {{cssxref("progress")}}
 - {{cssxref("gradient/radial-gradient", "radial-gradient()")}}
+- {{cssxref("random")}}
 - {{cssxref("ray")}}
 - {{cssxref("basic-shape/rect", "rect()")}}
 - {{cssxref("rem")}}
@@ -459,8 +463,8 @@ The following functions return an integer value based on the DOM tree, rather th
 - {{cssxref("animation-timeline/scroll", "scroll()")}}
 - {{cssxref("filter-function/sepia", "sepia()")}}
 - {{cssxref("basic-shape/shape", "shape()")}}
-- {{cssxref("sibling-count")}} {{experimental_inline}}
-- {{cssxref("sibling-index")}} {{experimental_inline}}
+- {{cssxref("sibling-count")}}
+- {{cssxref("sibling-index")}}
 - {{cssxref("sign")}}
 - {{cssxref("sin")}}
 - {{cssxref("transform-function/skew", "skew()")}}

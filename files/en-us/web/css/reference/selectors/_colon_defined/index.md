@@ -1,5 +1,6 @@
 ---
-title: :defined
+title: "`:defined` CSS pseudo-class"
+short-title: :defined
 slug: Web/CSS/Reference/Selectors/:defined
 page-type: css-pseudo-class
 browser-compat: css.selectors.defined
@@ -73,7 +74,7 @@ code {
 }
 ```
 
-In the following CSS, we use the `custom-element:not(:defined)` selector to select the element and color it grey while it is not defined and the `custom-element:defined` selector to select the element and color it black after it is defined.
+In the following CSS, we use the `custom-element:not(:defined)` selector to select the element and color it gray while it is not defined and the `custom-element:defined` selector to select the element and color it black after it is defined.
 
 ```css
 custom-element:not(:defined) {

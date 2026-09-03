@@ -3,10 +3,12 @@ title: "HTMLGeolocationElement: promptaction event"
 short-title: promptaction
 slug: Web/API/HTMLGeolocationElement/promptaction_event
 page-type: web-api-event
+status:
+  - experimental
 browser-compat: api.HTMLGeolocationElement.promptaction_event
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 The **`promptaction`** event of the {{domxref("HTMLGeolocationElement")}} interface is fired whenever the user activates the `<geolocation>` element and selects an option from the resulting dialog, either to grant or deny `geolocation` permission.
 

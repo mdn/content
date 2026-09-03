@@ -1,5 +1,6 @@
 ---
-title: text-rendering
+title: "`text-rendering` CSS property"
+short-title: text-rendering
 slug: Web/CSS/Reference/Properties/text-rendering
 page-type: css-property
 browser-compat: css.properties.text-rendering

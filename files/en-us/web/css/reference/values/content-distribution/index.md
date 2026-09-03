@@ -1,5 +1,6 @@
 ---
-title: <content-distribution>
+title: "`<content-distribution>` CSS type"
+short-title: <content-distribution>
 slug: Web/CSS/Reference/Values/content-distribution
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-align/#typedef-content-distribution

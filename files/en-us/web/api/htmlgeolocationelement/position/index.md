@@ -3,10 +3,12 @@ title: "HTMLGeolocationElement: position property"
 short-title: position
 slug: Web/API/HTMLGeolocationElement/position
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.HTMLGeolocationElement.position
 ---
 
-{{APIRef("Navigation API")}}
+{{APIRef("Navigation API")}}{{SeeCompatTable}}
 
 The **`position`** read-only property of the {{domxref("HTMLGeolocationElement")}} interface returns a {{domxref("GeolocationPosition")}} object representing the user's position, in the event of successful location data retrieval.
 

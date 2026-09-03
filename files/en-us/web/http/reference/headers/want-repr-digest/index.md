@@ -18,7 +18,7 @@ Some implementations may send unsolicited `Repr-Digest` headers without requirin
   <tbody>
     <tr>
       <th scope="row">Header type</th>
-      <td>{{Glossary("Representation header")}}</td>
+      <td>{{Glossary("Request header")}}, {{Glossary("Response header")}}, {{Glossary("Representation header")}}</td>
     </tr>
     <tr>
       <th scope="row">{{Glossary("Forbidden request header")}}</th>

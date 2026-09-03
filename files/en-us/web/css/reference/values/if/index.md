@@ -1,5 +1,6 @@
 ---
-title: if()
+title: "`if()` CSS function"
+short-title: if()
 slug: Web/CSS/Reference/Values/if
 page-type: css-function
 status:
@@ -429,7 +430,7 @@ Note how the styling is applied. Test out the conditional styling for the first 
 
 ### Controlling a color scheme with `if()`
 
-This demo shows how you can start to have some real fun with CSS `if()` functions. Amongst other things, we use `if()` functions to conditionally set the values of some custom properties, enabling us to control the entire color scheme!
+This demo shows how you can start to have some real fun with CSS `if()` functions. Among other things, we use `if()` functions to conditionally set the values of some custom properties, enabling us to control the entire color scheme!
 
 #### HTML
 

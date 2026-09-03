@@ -1,5 +1,6 @@
 ---
-title: min-inline-size
+title: "`min-inline-size` CSS property"
+short-title: min-inline-size
 slug: Web/CSS/Reference/Properties/min-inline-size
 page-type: css-property
 browser-compat: css.properties.min-inline-size

@@ -3,10 +3,12 @@ title: "HTMLGeolocationElement: location event"
 short-title: location
 slug: Web/API/HTMLGeolocationElement/location_event
 page-type: web-api-event
+status:
+  - experimental
 browser-compat: api.HTMLGeolocationElement.location_event
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 The **`location`** event of the {{domxref("HTMLGeolocationElement")}} interface is fired whenever the browser receives location data, or error information when a location data request was unsuccessful.
 

@@ -1,5 +1,6 @@
 ---
-title: scrollbar-color
+title: "`scrollbar-color` CSS property"
+short-title: scrollbar-color
 slug: Web/CSS/Reference/Properties/scrollbar-color
 page-type: css-property
 browser-compat: css.properties.scrollbar-color
@@ -13,6 +14,12 @@ The **track** refers to the background of the scrollbar, which is generally fixe
 The **thumb** refers to the moving part of the scrollbar, which usually floats on top of the track.
 
 When `scrollbar-color` value is set on the document's root element, the values are applied to the viewport scrollbars.
+
+> [!NOTE]
+> Browsers ignore the non-standard {{cssxref("::-webkit-scrollbar")}} family of pseudo-elements on any element whose _computed_ `scrollbar-color` value is anything other than `auto`.
+> Because `scrollbar-color` is inherited, this includes elements that don't set it themselves but inherit a non-`auto` value from an ancestor.
+> Setting `scrollbar-color: auto` on such an element restores its `::-webkit-scrollbar-*` styling if it was previously removed by a `scrollbar-color` setting on an ancestor.
+> See [Adding a fallback for scrollbar styles](/en-US/docs/Web/CSS/Reference/Selectors/::-webkit-scrollbar#adding_a_fallback_for_scrollbar_styles).
 
 ## Syntax
 

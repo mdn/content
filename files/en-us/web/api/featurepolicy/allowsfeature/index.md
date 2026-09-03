@@ -5,10 +5,11 @@ slug: Web/API/FeaturePolicy/allowsFeature
 page-type: web-api-instance-method
 status:
   - experimental
+  - non-standard
 browser-compat: api.FeaturePolicy.allowsFeature
 ---
 
-{{APIRef("Feature Policy API")}}{{SeeCompatTable}}
+{{APIRef("Feature Policy API")}}{{SeeCompatTable}}{{non-standard_header}}
 
 The **`allowsFeature()`** method of
 the {{DOMxRef("FeaturePolicy")}} interface enables introspection of individual
