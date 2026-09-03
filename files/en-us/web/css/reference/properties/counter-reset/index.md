@@ -130,7 +130,7 @@ h1 {
 }
 ```
 
-Reversed counters created without an `<integer>` start with the value equal to the number of elements in the set, counting down so the last element in the set is `1`.  
+Reversed counters created without an `<integer>` start with the value equal to the number of elements in the set, counting down so the last element in the set is `1`.
 
 This example creates three counters: two reversed counters, `chapter` and `section`, and a regular counter named `pages`. The `chapter` counter is initialized as the number of elements, `section` as `10`, and `pages` as `0`, the initial default value.
 
