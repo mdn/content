@@ -37,12 +37,9 @@ font-variant-alternates: revert-layer;
 font-variant-alternates: unset;
 ```
 
-This property may take one of two forms:
-
-- either the keyword `normal`
-- or one or more of the other keywords and functions listed below, space-separated, in any order.
-
 ### Values
+
+This property is specified as `normal` or as a space-separated list of the following values:
 
 - `normal`
   - : This keyword deactivates alternate glyphs.

@@ -52,7 +52,7 @@ None.
 
 ### Type
 
-Top-level, must be the child `<xsl:stylesheet>` or `<xsl:transform>`.
+Top-level, must be the child of `<xsl:stylesheet>` or `<xsl:transform>`.
 
 ## Specifications
 

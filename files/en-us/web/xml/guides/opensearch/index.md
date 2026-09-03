@@ -101,13 +101,13 @@ If your site offers multiple search engines, you can support autodiscovery for t
   rel="search"
   type="application/opensearchdescription+xml"
   title="MySite: By Author"
-  href="http://example.com/mysiteauthor.xml" />
+  href="https://example.com/mysiteauthor.xml" />
 
 <link
   rel="search"
   type="application/opensearchdescription+xml"
   title="MySite: By Title"
-  href="http://example.com/mysitetitle.xml" />
+  href="https://example.com/mysitetitle.xml" />
 ```
 
 This way, your site can offer two engines to search: one by author and another by title.

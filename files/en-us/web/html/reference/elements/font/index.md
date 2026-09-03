@@ -9,8 +9,6 @@ browser-compat: html.elements.font
 sidebar: htmlsidebar
 ---
 
-{{Deprecated_Header}}
-
 The **`<font>`** [HTML](/en-US/docs/Web/HTML) element defines the font size, color and face for its content.
 
 > [!WARNING]

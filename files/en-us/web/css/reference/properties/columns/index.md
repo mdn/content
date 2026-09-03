@@ -7,7 +7,7 @@ browser-compat: css.properties.columns
 sidebar: cssref
 ---
 
-The **`columns`** [CSS](/en-US/docs/Web/CSS) shorthand property sets the maximum number of columns to use when drawing an element's contents, along with the minimum width and maximum height of the element's columns.
+The **`columns`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets the maximum number of columns to use when drawing an element's contents, along with the minimum width and maximum height of the element's columns.
 
 {{InteractiveExample("CSS Demo: columns")}}
 
@@ -24,7 +24,7 @@ columns: 12em;
 ```
 
 ```css interactive-example-choice
-columns: 3;
+columns: 2 / 5em;
 ```
 
 ```html interactive-example

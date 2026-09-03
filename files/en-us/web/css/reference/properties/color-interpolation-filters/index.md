@@ -32,6 +32,8 @@ color-interpolation-filters: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `linearRGB`
   - : Indicates that color interpolation should occur in the linearized RGB color space as described in [the sRGB specification](https://webstore.iec.ch/en/publication/6169). This is the default property value.
 - `sRGB`

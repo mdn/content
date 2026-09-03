@@ -7,7 +7,11 @@ browser-compat: css.properties.mix-blend-mode
 sidebar: cssref
 ---
 
-The **`mix-blend-mode`** [CSS](/en-US/docs/Web/CSS) property sets how an element's content should blend with the content of the element's parent and the element's background.
+The **`mix-blend-mode`** [CSS](/en-US/docs/Web/CSS) property sets how an element's content should blend with its _backdrop_ — the content rendered behind the element within the same [stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context).
+
+> [!NOTE]
+> This property blends the element with content _behind_ it in the stacking context.
+> To blend an element's own background layers with each other, use {{cssxref("background-blend-mode")}} instead.
 
 {{InteractiveExample("CSS Demo: mix-blend-mode")}}
 

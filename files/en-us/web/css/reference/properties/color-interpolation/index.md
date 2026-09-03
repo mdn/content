@@ -20,6 +20,8 @@ color-interpolation: linearRGB;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `auto`
   - : Indicates that the user agent can choose either the `sRGB` or `linearRGB` spaces for color interpolation. This option indicates that the author doesn't require that color interpolation occur in a particular color space.
 - `sRGB`

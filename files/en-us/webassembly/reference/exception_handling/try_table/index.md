@@ -193,7 +193,7 @@ async function init() {
       env: {
         type_error: typeErrorTag,
         range_error: rangeErrorTag,
-        log: (code) => {
+        log(code) {
           output.textContent += `Error code: ${code} | `;
         },
       },
@@ -274,6 +274,14 @@ The `$might_throw` function itself takes a single parameter, and checks its valu
 {{embedlivesample("multiple-exceptions", "100%", 100)}}
 
 We call the `try_multiple()` function three times. The first time throws a `$type_error`, so error code `10` is logged. The second throws a `$range_error`, so error code `99` is logged. The third does not throw an exception.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

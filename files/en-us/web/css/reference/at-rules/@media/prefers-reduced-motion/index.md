@@ -23,26 +23,27 @@ Such animations can trigger discomfort for those with [vestibular motion disorde
 
 ## User preferences
 
-For Firefox, the `reduce` request is honoured if:
+Use the following settings to honor the `reduce` request:
 
-- In GTK/GNOME: Settings > Accessibility > Seeing > Reduced animation is turned on.
+- In GTK/GNOME: Settings > Accessibility > Seeing > turn on "Reduced animation".
   - In older versions of GNOME, GNOME Tweaks > General tab (or Appearance, depending on version) > Animations is turned off.
   - Alternatively, add `gtk-enable-animations = false` to the `[Settings]` block of [the GTK 3 configuration file](https://wiki.archlinux.org/title/GTK#Configuration).
   - Additionally, try running `gsettings set org.gnome.desktop.interface enable-animations false` to make Firefox (and other programs relying on GTK version 4) respect the `reduce` setting.
 
-- In Plasma/KDE: System Settings > Workspace Behavior -> General Behavior > "Animation speed" is set all the way to right to "Instant".
+- In Plasma/KDE: System Settings > Workspace Behavior > General Behavior > set "Animation speed" to "Instant".
   - Alternatively, add `AnimationDurationFactor=0` to the `[KDE]` block of `~/.config/kdeglobals`.
   - Or just run `kwriteconfig6 --key AnimationDurationFactor 0` in your terminal.
 - In Windows 10: Settings > Ease of Access > Display > Show animations in Windows.
-- In Windows 11: Settings > Accessibility > Visual Effects > Animation Effects
-- In macOS: System Settings > Accessibility > Display > Reduce motion.
+- In Windows 11: Settings > Accessibility > Visual Effects > Animation Effects.
+- In macOS up to 15 (Sequoia): System Settings > Accessibility > Display > Reduce motion.
+- In macOS 25 (Tahoe) onwards: System Settings > Accessibility > Motion > Reduce motion.
 - In iOS: Settings > Accessibility > Motion.
 - In Android 9+: Settings > Accessibility > Remove animations.
 - In Firefox `about:config`: Add a number preference called `ui.prefersReducedMotion` and set its value to either `0` for full animation or to `1` to indicate a preference for reduced motion. Changes to this preference take effect immediately.
 
 ## Examples
 
-This example uses a scaling animation for the purpose of demonstrating `prefers-reduced-motion`. If you enable the setting for reducing motion in the accessibility preferences on your device, the `prefers-reduced-motion` media query will detect your preference and the CSS within the reduced motion rules, with the same [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity) but coming later in the [CSS source order](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#source_order), will take precedence. As a result, the [animation](/en-US/docs/Web/CSS/Guides/Animations/Using) on the box will tone down to the `dissolve` animation, which is a more muted animation that is not a vestibular motion trigger.
+This example uses a scaling animation to demonstrate `prefers-reduced-motion`. If you enable the setting for reducing motion in the accessibility preferences on your device, the `prefers-reduced-motion` media query will detect your preference and the CSS within the reduced motion rules, with the same [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity) but coming later in the [CSS source order](/en-US/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts#source_order), will take precedence. As a result, the [animation](/en-US/docs/Web/CSS/Guides/Animations/Using) on the box will tone down to the `dissolve` animation, which is a more muted animation that is not a vestibular motion trigger.
 
 ### Toning down the animation scaling
 

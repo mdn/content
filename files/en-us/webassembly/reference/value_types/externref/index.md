@@ -3,8 +3,7 @@ title: "externref: Wasm value type"
 short-title: externref
 slug: WebAssembly/Reference/Value_types/externref
 page-type: webassembly-instruction
-browser-compat: webassembly.reference-types
-spec-urls: https://webassembly.github.io/spec/core/syntax/types.html#reference-types
+browser-compat: webassembly.types.externref
 sidebar: webassemblysidebar
 ---
 

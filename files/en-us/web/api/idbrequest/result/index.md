@@ -8,26 +8,26 @@ browser-compat: api.IDBRequest.result
 
 {{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
-The **`result`** read-only property of the
-{{domxref("IDBRequest")}} interface returns the result of the request.
+The **`result`** read-only property of the {{domxref("IDBRequest")}} interface returns the result of the request.
+
+The value depends on the request that was made.
+For example, the {{domxref("IDBObjectStore.getAllRecords()")}} and {{domxref("IDBIndex.getAllRecords()")}} methods populate this property with an array of {{domxref("IDBRecord")}} instances on successful completion of the request.
 
 ## Value
 
-any
+any.
 
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Thrown when attempting to access the property if the request
-    is not completed, and therefore the result is not available.
+  - : Thrown when attempting to access the property if the request is not completed, and therefore, the result is not available.
 
 ## Examples
 
-The following example requests a given record title, `onsuccess` gets the
-associated record from the {{domxref("IDBObjectStore")}} (made available
-as `objectStoreTitleRequest.result`), updates
-one property of the record, and then puts the updated record back into the object
-store. For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
+### Basic usage
+
+The following example requests a given record title. On success, the associated record is retrieved from the {{domxref("IDBObjectStore")}} (made available as `objectStoreTitleRequest.result`), one property of the record is updated, and then the updated record is put back into the object store.
+For a full working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 const title = "Walk dog";
@@ -40,7 +40,7 @@ const objectStore = db
 // Get the to-do list object that has this title as its title
 const objectStoreTitleRequest = objectStore.get(title);
 
-objectStoreTitleRequest.onsuccess = () => {
+objectStoreTitleRequest.addEventListener("success", () => {
   // Grab the data object returned as the result
   const data = objectStoreTitleRequest.result;
 
@@ -53,10 +53,10 @@ objectStoreTitleRequest.onsuccess = () => {
 
   // When this new request succeeds, run the displayData()
   // function again to update the display
-  updateTitleRequest.onsuccess = () => {
+  updateTitleRequest.addEventListener("success", () => {
     displayData();
-  };
-};
+  });
+});
 ```
 
 ## Specifications

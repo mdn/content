@@ -36,7 +36,7 @@ new Exception(tag, payload, options)
 
 ## Description
 
-The [`Exception()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/Exception) constructor accepts a [`WebAssembly.Tag`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag), an array of values, and an `options` object as arguments.
+The `Exception()` constructor accepts a [`WebAssembly.Tag`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag), an array of values, and an `options` object as arguments.
 The tag uniquely defines the _type_ of an exception, including the order of its arguments and their data types.
 The same tag that was used to create the `Exception` is required to access the arguments of a thrown exception (using [`Exception.prototype.getArg()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg)).
 
@@ -44,7 +44,7 @@ The same tag that was used to create the `Exception` is required to access the a
 
 ### Basic usage
 
-You would not normally use this contructor to manually create a Wasm exception. Instead, a `WebAssembly.Exception` object is normally created when handling Wasm exceptions, for example:
+You would not normally use this constructor to manually create a Wasm exception. Instead, a `WebAssembly.Exception` object is normally created when handling Wasm exceptions, for example:
 
 ```js
 WebAssembly.instantiateStreaming(fetch("module.wasm"), { env }).then(
@@ -68,7 +68,7 @@ For a working example, see the [`throw`](/en-US/docs/WebAssembly/Reference/Excep
 
 ### Manual usage
 
-This example shows manual creation of an `WebAssembly.Exception` instance.
+This example shows manual creation of a `WebAssembly.Exception` instance.
 
 ```js
 // Create tag and use it to create an exception

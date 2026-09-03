@@ -86,7 +86,7 @@ Some of the things to consider when choosing a host:
 The good news when you're starting out is that there are quite a few sites that provide "free" computing environments that are intended for evaluation and testing.
 These are usually fairly resource constrained/limited environments, and you do need to be aware that they may expire after some introductory period or have other constraints.
 They are however great for testing low-traffic sites in a hosted environment, and can provide an easy migration to paying for more resources when your site gets busier.
-Popular choices in this category include [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-free-tier.html) and [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/linux/).
+Popular choices in this category include [Amazon Web Services](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/free-tier.html) and [Microsoft Azure](https://azure.microsoft.com/en-us/pricing/details/app-service/linux/).
 
 Most providers also offer a "basic" or "hobby" tier that is intended for small production sites, and which provide more useful levels of computing power and fewer limitations.
 [Railway](https://railway.com/), [Heroku](https://www.heroku.com/), and [DigitalOcean](https://www.digitalocean.com/) are examples of popular hosting providers that have a relatively inexpensive basic computing tier (in the $5 to $10 USD per month range).
@@ -103,7 +103,7 @@ At the bare minimum, you will want to modify the database configuration so that 
 In the following subsections, we outline the most important changes that you should make to your app.
 
 > [!NOTE]
-> There are other useful tips in the Express docs — see [Production best practices: performance and reliability](https://expressjs.com/en/advanced/best-practice-performance.html) and [Production Best Practices: Security](https://expressjs.com/en/advanced/best-practice-security.html).
+> There are other useful tips in the Express docs — see [Production best practices: performance and reliability](https://expressjs.com/en/advanced/best-practice-performance/) and [Production Best Practices: Security](https://expressjs.com/en/advanced/best-practice-security/).
 
 ### Database configuration
 
@@ -184,7 +184,7 @@ export DEBUG="author,book"
 > [!NOTE]
 > Calls to `debug` can replace logging you might previously have done using `console.log()` or `console.error()`. Replace any `console.log()` calls in your code with logging via the [debug](https://www.npmjs.com/package/debug) module. Turn the logging on and off in your development environment by setting the DEBUG variable and observe the impact this has on logging.
 
-If you need to log website activity you can use a logging library like _Winston_ or _Bunyan_. For more information on this topic see: [Production best practices: performance and reliability](https://expressjs.com/en/advanced/best-practice-performance.html).
+If you need to log website activity you can use a logging library like _Winston_ or _Bunyan_. For more information on this topic see: [Production best practices: performance and reliability](https://expressjs.com/en/advanced/best-practice-performance/).
 
 ### Use gzip/deflate compression for responses
 
@@ -223,7 +223,7 @@ app.use("/catalog", catalogRouter); // Add catalog routes to middleware chain.
 
 ### Use Helmet to protect against well known vulnerabilities
 
-[Helmet](https://www.npmjs.com/package/helmet) is a middleware package. It can set appropriate HTTP headers that help protect your app from well-known web vulnerabilities (see the [docs](https://helmetjs.github.io/) for more information on what headers it sets and vulnerabilities it protects against).
+[Helmet](https://www.npmjs.com/package/helmet) is a middleware package. It can set appropriate HTTP headers that help protect your app from well-known web vulnerabilities (see the [docs](https://helmet.js.org/) for more information on what headers it sets and vulnerabilities it protects against).
 
 Install this at the root of your project by running the following command:
 
@@ -503,7 +503,7 @@ Next we will set up a Railway account, install our website and a database, and t
 To start using Railway you will first need to create an account:
 
 - Go to [railway.com](https://railway.com/) and click the **Login** link in the top toolbar.
-- Select GitHub in the popup to login using your GitHub credentials
+- Select GitHub in the popup to log in using your GitHub credentials
 - You may then need to go to your email and verify your account.
 - You'll then be logged in to the Railway.com dashboard: <https://railway.com/dashboard>.
 
@@ -633,8 +633,8 @@ That's the end of this tutorial on setting up Express apps in production, and al
 
 ## See also
 
-- [Production best practices: performance and reliability](https://expressjs.com/en/advanced/best-practice-performance.html) (Express docs)
-- [Production Best Practices: Security](https://expressjs.com/en/advanced/best-practice-security.html) (Express docs)
+- [Production best practices: performance and reliability](https://expressjs.com/en/advanced/best-practice-performance/) (Express docs)
+- [Production Best Practices: Security](https://expressjs.com/en/advanced/best-practice-security/) (Express docs)
 - Railway Docs
   - [CLI](https://docs.railway.com/cli)
 

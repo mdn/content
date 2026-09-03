@@ -73,9 +73,9 @@ resize: revert-layer;
 resize: unset;
 ```
 
-The `resize` property is specified as a single keyword value from the list below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `none`
   - : The element offers no user-controllable method for resizing it.

@@ -49,6 +49,7 @@ clip-path: inset(4rem 20% round 1rem 2rem 3rem 4rem);
 
 ```css
 shape-outside: inset(20px 50px 10px 0 round 50px);
+border-shape: inset(10px 20px 10px 20px round 20px);
 ```
 
 ### Values
@@ -120,6 +121,6 @@ In the example below we have an `inset()` shape used to pull content over the fl
 
 ## See also
 
-- Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
+- Properties that use this data type: {{cssxref("border-shape")}}, {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
 - [CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes) module
 - [Guide to basic shapes](/en-US/docs/Web/CSS/Guides/Shapes/Using_shape-outside)

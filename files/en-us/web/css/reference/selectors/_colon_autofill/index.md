@@ -58,7 +58,7 @@ input:-internal-autofill-selected {
   appearance: menulist-button;
   background-image: none !important;
   background-color:
-    light-dark(rgb(232, 240, 254), rgba(70, 90, 126, 0.4)) !important;
+    light-dark(rgb(232 240 254), rgb(70 90 126 / 0.4)) !important;
   color: fieldtext !important;
 }
 ```

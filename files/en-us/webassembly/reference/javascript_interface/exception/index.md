@@ -45,10 +45,10 @@ const env = {
   my_error: myErrorTag,
 };
 
-WebAssembly.instantiateStreaming(fetch("module.wasm"), { env }).then( ... )
+WebAssembly.instantiateStreaming(fetch("module.wasm"), { env }).then(/* ... */);
 ```
 
-You could then try running an exported Wasm function in a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) statement. If the function throws, the error propagated to the `catch` block will be a [`WebAssembly.Exception`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception) object instance.
+You could then try running an exported Wasm function in a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) statement. If the function throws, the error propagated to the `catch` block will be a `WebAssembly.Exception` object instance.
 
 ```js
 WebAssembly.instantiateStreaming(fetch("module.wasm"), { env }).then(

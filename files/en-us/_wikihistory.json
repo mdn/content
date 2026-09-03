@@ -6185,30 +6185,6 @@
     "modified": "2020-09-25T22:34:22.129Z",
     "contributors": ["chrisdavidmills", "CodeDotJS"]
   },
-  "Learn_web_development/Core/Frameworks_libraries/Ember_conditional_footer": {
-    "modified": "2020-09-03T05:31:37.623Z",
-    "contributors": ["Rafael_Green", "chrisdavidmills"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Ember_getting_started": {
-    "modified": "2020-08-06T07:27:06.082Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Ember_interactivity_events_state": {
-    "modified": "2020-08-06T07:26:59.624Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Ember_resources": {
-    "modified": "2020-08-06T07:26:47.135Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Ember_routing": {
-    "modified": "2020-08-06T07:26:51.530Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Ember_structure_componentization": {
-    "modified": "2020-08-06T07:27:03.636Z",
-    "contributors": ["chrisdavidmills"]
-  },
   "Learn_web_development/Core/Frameworks_libraries/Introduction": {
     "modified": "2020-09-08T07:18:11.161Z",
     "contributors": [
@@ -6279,85 +6255,6 @@
   "Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning": {
     "modified": "2020-09-08T16:44:12.600Z",
     "contributors": ["terrymorse", "chrisdavidmills", "codeability"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning": {
-    "modified": "2020-12-01T21:39:23.352Z",
-    "contributors": ["seneca", "chrisdavidmills"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Svelte_TypeScript": {
-    "modified": "2020-10-29T07:18:00.018Z",
-    "contributors": ["haond10adp", "chrisdavidmills"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Svelte_components": {
-    "modified": "2020-10-07T20:21:51.724Z",
-    "contributors": ["seneca", "Rafael_Green", "chrisdavidmills", "opensas"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Svelte_deployment_next": {
-    "modified": "2020-09-20T04:24:34.950Z",
-    "contributors": ["Rafael_Green", "chrisdavidmills"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started": {
-    "modified": "2020-09-11T14:25:08.477Z",
-    "contributors": ["Rafael_Green", "chrisdavidmills", "opensas"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Svelte_reactivity_lifecycle_accessibility": {
-    "modified": "2020-10-24T06:16:59.643Z",
-    "contributors": [
-      "haond10adp",
-      "SphinxKnight",
-      "Rafael_Green",
-      "chrisdavidmills",
-      "opensas"
-    ]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Svelte_stores": {
-    "modified": "2020-12-11T07:44:13.494Z",
-    "contributors": [
-      "Mishra-Suraj",
-      "haond10adp",
-      "Rafael_Green",
-      "chrisdavidmills"
-    ]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Svelte_variables_props": {
-    "modified": "2020-10-20T01:35:26.842Z",
-    "contributors": ["haond10adp", "Rafael_Green", "chrisdavidmills"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties": {
-    "modified": "2020-09-08T10:27:40.979Z",
-    "contributors": ["Rafael_Green", "chrisdavidmills", "clintbingo"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_conditional_rendering": {
-    "modified": "2020-08-06T07:26:12.722Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_first_component": {
-    "modified": "2020-09-05T08:38:17.788Z",
-    "contributors": ["Rafael_Green", "chrisdavidmills"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_getting_started": {
-    "modified": "2020-08-06T07:26:44.679Z",
-    "contributors": ["chrisdavidmills", "taiwoayanleye"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_methods_events_models": {
-    "modified": "2020-10-05T06:56:15.162Z",
-    "contributors": ["JohnnyMu-Cn", "chrisdavidmills"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_refs_focus_management": {
-    "modified": "2020-08-06T07:26:09.176Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists": {
-    "modified": "2020-09-15T11:22:44.422Z",
-    "contributors": ["chrisdavidmills", "technicalflaw"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_resources": {
-    "modified": "2020-08-06T07:26:03.837Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_styling": {
-    "modified": "2020-08-06T07:26:25.263Z",
-    "contributors": ["chrisdavidmills"]
   },
   "Learn_web_development/Core/Scripting": {
     "modified": "2020-07-16T22:29:47.255Z",
@@ -15507,19 +15404,6 @@
   "Mozilla/Add-ons/WebExtensions/manifest.json/name": {
     "modified": "2020-10-15T21:38:35.254Z",
     "contributors": ["wbamberg", "abbycar", "Makyen"]
-  },
-  "Mozilla/Add-ons/WebExtensions/manifest.json/offline_enabled": {
-    "modified": "2020-11-04T21:11:17.147Z",
-    "contributors": [
-      "sideshowbarker",
-      "room.booking7788",
-      "apselivi",
-      "Alling",
-      "wbamberg",
-      "hellosct1",
-      "ExE-Boss",
-      "vitaly-zdanevich"
-    ]
   },
   "Mozilla/Add-ons/WebExtensions/manifest.json/omnibox": {
     "modified": "2020-10-15T21:52:06.691Z",
@@ -56137,10 +56021,6 @@
       "Sheppy",
       "Jeremie"
     ]
-  },
-  "Web/API/SVGRenderingIntent": {
-    "modified": "2020-10-15T21:53:52.961Z",
-    "contributors": ["fscholz", "Sebastianz"]
   },
   "Web/API/SVGSVGElement": {
     "modified": "2020-10-15T21:05:32.581Z",

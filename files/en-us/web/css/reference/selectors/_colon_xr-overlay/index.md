@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`:xr-overlay`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) matches the DOM overlay element when a web page is being viewed in an immersive AR or VR environment.
+The **`:xr-overlay`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes), defined in the [WebXR DOM overlays](/en-US/docs/Web/CSS/Guides/WebXR_DOM_overlays) module, matches the DOM overlay element when a web page is being viewed in an immersive AR or VR environment.
 
 ## Syntax
 
@@ -25,7 +25,7 @@ The **`:xr-overlay`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/
 
 The `:xr-overlay` pseudo-class matches the overlay element for the duration of an immersive session using a DOM overlay.
 
-The overlay element is a backdrop root. Any {{cssxref("backdrop-filter")}} effects on the DOM overlay element or its descendants do not modify the AR camera image (if applicable) or the rendered content drawn to the immersive session's {{domxref("XRWebGLLayer")}}.
+The overlay element is a [backdrop root](/en-US/docs/Web/CSS/Reference/Properties/backdrop-filter#backdrop_root). Any {{cssxref("backdrop-filter")}} effects on the DOM overlay element or its descendants do not modify the AR camera image (if applicable) or the rendered content drawn to the immersive session's {{domxref("XRWebGLLayer")}}.
 
 The overlay element itself is a [stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context) due to its fixed {{cssxref("position")}}. The stacking contexts for ancestors of the overlay element, if any, do not paint to the immersive session's display.
 
@@ -45,6 +45,17 @@ In this example, we define the overlay to be semi-transparent black, enabling co
 }
 ```
 
+### Targeting an overlay's contents
+
+In this example, we use the `:xr-overlay` selector to style the {{htmlelement("button")}} elements within an XR DOM overlay.
+
+```css
+:xr-overlay button {
+  background-color: white;
+  color: black;
+}
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -59,5 +70,6 @@ In this example, we define the overlay to be semi-transparent black, enabling co
 - {{CSSxRef(":fullscreen")}}
 - {{CSSxRef(":picture-in-picture")}}
 - [CSS pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes)
+- [WebXR DOM overlays](/en-US/docs/Web/CSS/Guides/WebXR_DOM_overlays) module
 - [WebXR device API fundamentals](/en-US/docs/Web/API/WebXR_Device_API/Fundamentals)
 - {{domxref("XRSession.domOverlayState")}}

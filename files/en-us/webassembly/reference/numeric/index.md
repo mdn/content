@@ -10,7 +10,7 @@ WebAssembly numeric instructions.
 ## Constants
 
 - [`const`](/en-US/docs/WebAssembly/Reference/Numeric/const)
-  - : Declare a constant numbers.
+  - : Declare a constant number.
 
 ## Comparison
 
@@ -125,8 +125,17 @@ WebAssembly numeric instructions.
 - [`rotr`](/en-US/docs/WebAssembly/Reference/Numeric/rotr)
   - : Used for performing a bitwise right-rotate.
 - [`clz`](/en-US/docs/WebAssembly/Reference/Numeric/clz)
-  - : Count the amount of leading zeros in a numbers binary representation.
+  - : Count the amount of leading zeros in a number's binary representation.
 - [`ctz`](/en-US/docs/WebAssembly/Reference/Numeric/ctz)
-  - : Count the amount of trailing zeros in a numbers binary representation.
+  - : Count the amount of trailing zeros in a number's binary representation.
 - [`popcnt`](/en-US/docs/WebAssembly/Reference/Numeric/popcnt)
-  - : Count the total amount of 1s in a numbers binary representation.
+  - : Count the total amount of 1s in a number's binary representation.
+
+## Sign extension operations
+
+- [`extend8_s`](/en-US/docs/WebAssembly/Reference/Numeric/extend8_s)
+  - : Sign-extend the low 8 bits of an integer to propagate its sign throughout the entire value.
+- [`extend16_s`](/en-US/docs/WebAssembly/Reference/Numeric/extend16_s)
+  - : Sign-extend the low 16 bits of an integer to propagate its sign throughout the entire value.
+- [`extend32_s`](/en-US/docs/WebAssembly/Reference/Numeric/extend32_s)
+  - : Sign-extend the low 32 bits of a 64-bit integer to propagate its sign throughout the entire value.

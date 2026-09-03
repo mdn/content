@@ -346,7 +346,7 @@ When the numbers of channels of the input and the output don't match, up-mixing,
 
 In general, we get the output over time to produce audio visualizations, usually reading its gain or frequency data. Then, using a graphical tool, we turn the obtained data into a visual representation, such as a graph. The Web Audio API has an {{domxref("AnalyserNode")}} available that doesn't alter the audio signal passing through it. Additionally, it outputs the audio data, allowing us to process it via a technology such as {{htmlelement("canvas")}}.
 
-![Without modifying the audio stream, the node allows to get the frequency and time-domain data associated with it, using an FFT.](fttaudiodata_en.svg)
+![Without modifying the audio stream, the node allows you to get the frequency and time-domain data associated with it, using an FFT.](fttaudiodata_en.svg)
 
 You can grab data using the following methods:
 

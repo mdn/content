@@ -1,12 +1,13 @@
 ---
-title: "gt_u: Wasm text instruction"
+title: "gt_u: Wasm numeric instruction"
 short-title: gt_u
 slug: WebAssembly/Reference/Numeric/gt_u
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.gt_u
 sidebar: webassemblysidebar
 ---
 
-The **`gt_u`** instruction, short for _greater than unsigned_, checks if an unsigned integer is greater than another unsigned integer.
+The **`gt_u`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _greater than unsigned_, checks if an unsigned integer is greater than another unsigned integer.
 
 There are other `gt` instructions available:
 
@@ -147,6 +148,14 @@ The output is as follows:
 {{embedlivesample("simd_gt_u", "100%", 100)}}
 
 The result is `1` because the value stored in lane `3` of the first input value is greater than the value stored in lane `3` of the second input value.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

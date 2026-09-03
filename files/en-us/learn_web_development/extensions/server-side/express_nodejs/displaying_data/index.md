@@ -62,7 +62,7 @@ In our next article, we'll build on our knowledge, creating HTML forms and form 
 
 ## See also
 
-- [Using Template engines with Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs)
+- [Using Template engines with Express](https://expressjs.com/en/guide/using-template-engines/) (Express docs)
 - [Pug](https://pugjs.org/api/getting-started.html) (Pug docs)
 - [Luxon](https://moment.github.io/luxon/#/) (Luxon docs)
 

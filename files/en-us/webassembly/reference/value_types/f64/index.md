@@ -3,7 +3,7 @@ title: "f64: Wasm value type"
 short-title: f64
 slug: WebAssembly/Reference/Value_types/f64
 page-type: webassembly-instruction
-spec-urls: https://webassembly.github.io/spec/core/syntax/types.html#syntax-numtype
+browser-compat: webassembly.types.f64
 sidebar: webassemblysidebar
 ---
 
@@ -40,6 +40,10 @@ Arithmetic instructions ([`f64.add`](/en-US/docs/WebAssembly/Reference/Numeric/a
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

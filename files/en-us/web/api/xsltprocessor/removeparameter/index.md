@@ -3,6 +3,8 @@ title: "XSLTProcessor: removeParameter() method"
 short-title: removeParameter()
 slug: Web/API/XSLTProcessor/removeParameter
 page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.XSLTProcessor.removeParameter
 ---
 

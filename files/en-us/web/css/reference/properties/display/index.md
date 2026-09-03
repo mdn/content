@@ -90,6 +90,8 @@ display: flex;
 display: inline-flex;
 display: grid;
 display: inline-grid;
+display: grid-lanes;
+display: inline-grid-lanes;
 display: table;
 display: inline-table;
 
@@ -164,6 +166,10 @@ The keyword values can be grouped into six value categories.
       - : The element behaves like a block-level element and lays out its content according to the [flexbox model](/en-US/docs/Web/CSS/Guides/Flexible_box_layout).
     - `grid`
       - : The element behaves like a block-level element and lays out its content according to the [grid model](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts).
+    - `grid-lanes`
+      - : The element behaves like a block-level element and lays out its content using grid lanes layout. Columns are defined by {{cssxref("grid-template-columns")}} and behave like a strict grid, while items are packed in the block direction to fill gaps between items of different sizes. See [Grid lanes layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_lanes) for details.
+    - `inline-grid-lanes`
+      - : The element behaves like an inline-level element and lays out its content using grid lanes layout. Rows are defined by {{cssxref("grid-template-rows")}} and behave like a strict grid, while items are packed in the inline direction to fill gaps between items of different sizes. See [Grid lanes layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_lanes) for details.
     - `ruby`
       - : The element behaves like an inline-level element and lays out its content according to the ruby formatting model. It behaves like the corresponding HTML {{HTMLElement("ruby")}} elements.
 
@@ -310,6 +316,7 @@ The individual pages for the different types of value that `display` can have se
 - [Grids, logical values and writing modes](/en-US/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes)
 - [CSS grid layout and accessibility](/en-US/docs/Web/CSS/Guides/Grid_layout/Accessibility)
 - [Realizing common layouts using grids](/en-US/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts)
+- [Grid lanes layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_lanes)
 
 ### Animating display
 
@@ -352,7 +359,7 @@ Current implementations in some browsers will remove from the [accessibility tre
 
 In some browsers, changing the `display` value of a {{HTMLElement("table")}} element to `block`, `grid`, or `flex` will alter its representation in the [accessibility tree](/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis). This will cause the table to no longer be announced properly by screen reading technology.
 
-- [Hidden content for better a11y | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)
+- [Hidden content for better a11y | Go Make Things](https://gomakethings.com/articles/hidden-content-for-better-a11y/)
 - [MDN Understanding WCAG, Guideline 1.3 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.3_%e2%80%94_create_content_that_can_be_presented_in_different_ways)
 - [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
@@ -507,3 +514,4 @@ You can find more examples in the pages for each separate display type under [Gr
 - SVG {{SVGAttr("display")}} attribute
 - [Block and inline layout in normal flow](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout)
 - [Introduction to formatting contexts](/en-US/docs/Web/CSS/Guides/Display/Formatting_contexts)
+- [Grid lanes layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_lanes)
