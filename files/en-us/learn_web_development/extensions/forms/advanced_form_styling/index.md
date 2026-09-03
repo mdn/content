@@ -225,7 +225,7 @@ input {
 
 {{EmbedLiveSample("accent-color", '100%', 200)}}
 
-Because the control keeps its native appearance, it follows platform conventions — including forced-colors modes — with no further work on your part. In addition, the browser automatically chooses a complementary secondary color with enough contrast to the `accent-color` to keep the control accessible. Play with the above live example and set some light and dark `accent-color` values to see the effects.
+Because the controls keep their native appearance, they follow platform conventions — including forced-colors modes — with no further work on your part. In addition, the browser automatically chooses a complementary secondary color with enough contrast to the `accent-color` to keep the control accessible. Play with the above live example and set some light and dark `accent-color` values to see the effects.
 
 ### Styling checkboxes and radio buttons using `appearance`
 
