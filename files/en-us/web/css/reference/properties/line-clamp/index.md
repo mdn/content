@@ -7,7 +7,7 @@ browser-compat: css.properties.line-clamp
 sidebar: cssref
 ---
 
-The **`line-clamp`** [CSS](/en-US/docs/Web/CSS) property allows limiting of the contents of a {{Glossary("block")}} to the specified number of lines. Optionally, it also allows inserting content into the last line box to indicate the continuity of truncated/interrupted content.
+The **`line-clamp`** [CSS](/en-US/docs/Web/CSS) property allows limiting of the contents of a {{Glossary("block")}} to the specified number of lines. Optionally, it also allows inserting content into the last line to indicate that content was truncated.
 
 > [!NOTE]
 > For legacy support, the vendor-prefixed `-webkit-line-clamp` property only works in combination with the {{cssxref("display")}} property set to `-webkit-box` or `-webkit-inline-box` and the {{cssxref("box-orient", "-webkit-box-orient")}} property set to `vertical`. Despite these prefixed properties being deprecated, the co-dependency of these three properties is a fully specified behavior and will continue to be supported.
