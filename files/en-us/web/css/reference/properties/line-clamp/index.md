@@ -30,6 +30,10 @@ line-clamp: 10;
 line-clamp: 3 no-ellipsis;
 line-clamp: 10 "… (there is extra content)";
 
+/* <'block-ellipsis'> values only - for height-based clamping */
+line-clamp: no-ellipsis;
+line-clamp: "… (there is extra content)";
+
 /* Global values */
 line-clamp: inherit;
 line-clamp: initial;
@@ -44,13 +48,16 @@ This property is specified as one or two space-separated values from the followi
 
 - `none`
   - : Specifies that content is not clamped. This keyword cannot be combined with the other values. This is the default.
-- {{cssxref("integer")}}
+- {{cssxref("integer")}} {{optional_inline}}
   - : This value specifies the number of lines after which the content will be clamped. It must be greater than 0.
 - `<’block-ellipsis’>` {{optional_inline}}
   - : The optional values have the following meanings:
     - : `no-ellipsis` No ellipsis (character U+2026) is added if the text is truncated due to the number of line specified.
     - : `auto` An ellipsis character (U+2026) is rendered when the text is truncated due to the number of line specified.
     - : {{cssxref("string")}} A specified string is rendered at the end of the affected line box. The UA may truncate this string if it is absurdly long. When set to the empty string, the behavior is identical to the `no-ellipsis` value.
+
+> [!NOTE]
+> If only the `<’block-ellipsis’>` is declared without an `<integer>` value it will only display when the content is clamped by the height of the container.
 
 ## Formal definition
 
