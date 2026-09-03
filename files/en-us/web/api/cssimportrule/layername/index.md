@@ -8,7 +8,7 @@ browser-compat: api.CSSImportRule.layerName
 
 {{APIRef("CSSOM")}}
 
-The read-only **`layerName`** property of the {{domxref("CSSImportRule")}} interface returns the name of the cascade layer created by the {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule).
+The read-only **`layerName`** property of the {{domxref("CSSImportRule")}} interface returns the name of the cascade layer created by the {{cssxref("@import")}} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
 
 If the created layer is anonymous, the string is empty (`""`), if no layer has been
 created, it is the `null` object.
@@ -25,9 +25,9 @@ The `layerName` property returns the name of the layer associated with the impor
 stylesheet.
 
 ```css
-@import url("style1.css") layer(layer-1);
-@import url("style2.css") layer;
-@import url("style3.css");
+@import "style1.css" layer(layer-1);
+@import "style2.css" layer;
+@import "style3.css";
 ```
 
 ```js

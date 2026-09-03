@@ -1,17 +1,17 @@
 ---
-title: "<marquee>: The Marquee element"
+title: "`<marquee>` HTML marquee element"
+short-title: <marquee>
 slug: Web/HTML/Reference/Elements/marquee
 page-type: html-element
 status:
   - deprecated
 browser-compat: html.elements.marquee
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}{{Deprecated_Header}}
 
 The **`<marquee>`** [HTML](/en-US/docs/Web/HTML) element is used to insert a scrolling area of text. You can control what happens when the text reaches the edges of its content area using its attributes.
 
-The HTML `<marquee>` element is deprecated and its use is strongly discouraged. If you must create the effect of scrolling text or continuous elements, consider using [CSS animations](/en-US/docs/Web/CSS/CSS_animations) with [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) instead of `<marquee>` elements to smoothly animate content. Additionally, include the [`prefers-reduced-motion`](/en-US/docs/Web/CSS/@media/prefers-reduced-motion) CSS {{cssxref("@media")}} query to stop the animation based on user preference, thereby improving user experience and accessibility.
+The HTML `<marquee>` element is deprecated and its use is strongly discouraged. If you must create the effect of scrolling text or continuous elements, consider using [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) with [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms/Using) instead of `<marquee>` elements to smoothly animate content. Additionally, include the {{cssxref("@media/prefers-reduced-motion")}} CSS {{cssxref("@media")}} query to stop the animation based on user preference, thereby improving user experience and accessibility.
 
 ## Attributes
 
@@ -21,21 +21,21 @@ The HTML `<marquee>` element is deprecated and its use is strongly discouraged. 
   - : Sets the background color through color name or hexadecimal value.
 - `direction` {{Deprecated_Inline}}
   - : Sets the direction of the scrolling within the marquee. Possible values are `left`, `right`, `up` and `down`. If no value is specified, the default value is `left`.
-- `height` {{Deprecated_Inline}}
+- `height` {{Deprecated_Inline}} {{non-standard_inline}}
   - : Sets the height in pixels or percentage value.
-- `hspace` {{Deprecated_Inline}}
+- `hspace` {{Deprecated_Inline}} {{non-standard_inline}}
   - : Sets the horizontal margin
 - `loop` {{Deprecated_Inline}}
   - : Sets the number of times the marquee will scroll. If no value is specified, the default value is −1, which means the marquee will scroll continuously.
-- `scrollamount` {{Deprecated_Inline}}
+- `scrollamount` {{Deprecated_Inline}} {{non-standard_inline}}
   - : Sets the amount of scrolling at each interval in pixels. The default value is 6.
-- `scrolldelay` {{Deprecated_Inline}}
+- `scrolldelay` {{Deprecated_Inline}} {{non-standard_inline}}
   - : Sets the interval between each scroll movement in milliseconds. The default value is 85. Note that any value smaller than 60 is ignored and the value 60 is used instead unless `truespeed` is specified.
 - `truespeed` {{Deprecated_Inline}}
   - : By default, `scrolldelay` values lower than 60 are ignored. If `truespeed` is present, those values are not ignored.
-- `vspace` {{Deprecated_Inline}}
+- `vspace` {{Deprecated_Inline}} {{non-standard_inline}}
   - : Sets the vertical margin in pixels or percentage value.
-- `width` {{Deprecated_Inline}}
+- `width` {{Deprecated_Inline}} {{non-standard_inline}}
   - : Sets the width in pixels or percentage value.
 
 ## Examples
@@ -88,6 +88,6 @@ The HTML `<marquee>` element is deprecated and its use is strongly discouraged. 
 
 - CSS {{cssxref("transform")}} property
 - CSS {{cssxref("translate")}} property
-- [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module
-- [CSS animations](/en-US/docs/Web/CSS/CSS_animations) module
+- [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms) module
+- [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
 - {{DOMxRef("HTMLMarqueeElement")}}

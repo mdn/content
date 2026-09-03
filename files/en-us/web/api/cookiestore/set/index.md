@@ -29,17 +29,17 @@ This method requires one of the following:
 Or
 
 - `options` {{optional_inline}}
-
   - : An object containing:
-
     - `domain` {{Optional_Inline}}
       - : A string containing the domain of the cookie. Defaults to `null`.
     - `expires` {{Optional_Inline}}
       - : A timestamp, given as {{glossary("Unix time")}} in milliseconds, containing the expiration date of the cookie. Defaults to `null`.
+    - `maxAge` {{Optional_Inline}}
+      - : A number representing the number of seconds until the cookie expires. A zero or negative number will expire the cookie immediately. If both `expires` and `maxAge` are set, the `set()` call fails with a `TypeError`. Defaults to `null`.
     - `name`
       - : A string with the name of a cookie.
     - `partitioned` {{Optional_Inline}}
-      - : A boolean value that defaults to `false`. If set to `true`, the set cookie will be a partitioned cookie. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies) for more information.
+      - : A boolean value that defaults to `false`. If set to `true`, the set cookie will be a partitioned cookie. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies) for more information.
     - `path` {{Optional_Inline}}
       - : A string containing the path of the cookie. Defaults to `/`.
     - `sameSite` {{Optional_Inline}}
@@ -59,7 +59,9 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when setting 
 - `SecurityError` {{domxref("DOMException")}}
   - : Thrown if the origin can not be {{glossary("Serialization", "serialized")}} to a URL.
 - {{jsxref("TypeError")}}
-  - : Thrown if setting the cookie with the given `name` and `value` or `options` fails.
+  - : Thrown if:
+    - Both the `expires` and `maxAge` properties are set.
+    - Setting the cookie with the given `name` and `value` or `options` fails in any other way.
 
 ## Examples
 
@@ -117,6 +119,17 @@ async function cookieTest() {
   console.log(cookie);
 }
 ```
+
+### Setting cookies with the same name
+
+These calls create two separate cookies because their paths differ:
+
+```js
+await cookieStore.set({ name: "theme", value: "light", path: "/" });
+await cookieStore.set({ name: "theme", value: "dark", path: "/docs" });
+```
+
+On a page under `/docs/`, {{domxref("CookieStore.getAll()", 'cookieStore.getAll("theme")')}} can retrieve both cookies. Calling `cookieStore.set("theme", "blue")` updates the cookie at the default path `/`, leaving the `/docs` cookie unchanged.
 
 ## Specifications
 

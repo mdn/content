@@ -34,7 +34,6 @@ createIndex(indexName, keyPath, options)
 - `keyPath`
   - : The key path for the index to use. Note that it is possible to create an index with an empty `keyPath`, and also to pass in a sequence (array) as a `keyPath`.
 - `options` {{optional_inline}}
-
   - : An object which can include the following
     properties:
     - `unique`
@@ -64,7 +63,7 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
   - : Thrown if the provided key path is a sequence, and `multiEntry` is set to `true` in the `objectParameters` object.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if:
-    - The method was not called from a `versionchange` transaction mode callback, i.e., from inside a {{domxref("IDBOpenDBRequest.upgradeneeded_event", "onupgradeneeded")}} handler.
+    - The method was not called from a `versionchange` transaction mode callback, i.e., from inside an {{domxref("IDBOpenDBRequest.upgradeneeded_event", "onupgradeneeded")}} handler.
     - The object store has been deleted.
 - `SyntaxError` {{domxref("DOMException")}}
   - : Thrown if the provided `keyPath` is not a [valid key path](https://w3c.github.io/IndexedDB/#valid-key-path).

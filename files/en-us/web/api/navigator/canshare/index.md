@@ -30,7 +30,6 @@ canShare(data)
 ### Parameters
 
 - `data` {{optional_inline}}
-
   - : An object defining the share data to test.
     Typically, an object with the same properties is passed to {{domxref("navigator.share()")}} if this call returns `true`.
 
@@ -38,7 +37,6 @@ canShare(data)
     All properties are optional but at least one known data property must be specified or the method will return `false`.
 
     Possible values are:
-
     - `url` {{optional_inline}}
       - : A string representing a URL to be shared.
     - `text` {{optional_inline}}

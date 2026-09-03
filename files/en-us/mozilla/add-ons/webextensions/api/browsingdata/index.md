@@ -3,9 +3,8 @@ title: browsingData
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData
 page-type: webextension-api
 browser-compat: webextensions.api.browsingData
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Enables extensions to clear the data that is accumulated while the user is browsing.
 
@@ -25,7 +24,7 @@ You can use the {{WebExtAPIRef("browsingData.remove()")}} function to remove any
 All the `browsingData.remove[X]()` functions take a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, which you can use to control two further aspects of data removal:
 
 - how far back in time to remove data
-- whether to remove data only from normal web pages, or also from hosted web apps and add-ons. Note that this option is not yet supported in Firefox.
+- whether to remove data only from normal web pages, or also from add-ons. Note that this option is not yet supported in Firefox.
 
 Finally, this API gives you a {{WebExtAPIRef("browsingData.settings()")}} function that gives you the current value of the settings for the browser's built-in "Clear History" feature.
 
@@ -36,7 +35,7 @@ To use this API you must have the "browsingData" [API permission](/en-US/docs/Mo
 - {{WebExtAPIRef("browsingData.DataTypeSet")}}
   - : Object used to specify the type of data to remove: for example, history, downloads, passwords, and so on.
 - {{WebExtAPIRef("browsingData.RemovalOptions")}}
-  - : Object used to specify how far back in time to remove data, and whether to remove data added through normal web browsing, by hosted apps, or by add-ons.
+  - : Object used to specify how far back in time to remove data, and whether to remove data added through normal web browsing or by add-ons.
 
 ## Methods
 
@@ -53,7 +52,7 @@ To use this API you must have the "browsingData" [API permission](/en-US/docs/Mo
 - {{WebExtAPIRef("browsingData.removeHistory()")}}
   - : Clears the browser's history.
 - {{WebExtAPIRef("browsingData.removeLocalStorage()")}}
-  - : Clears any [local storage](/en-US/docs/Web/API/Window/localStorage) created by websites.
+  - : Clears any [local storage](/en-US/docs/Web/API/Window/localStorage) and [session storage](/en-US/docs/Web/API/Window/sessionStorage) created by websites.
 - {{WebExtAPIRef("browsingData.removePasswords()")}}
   - : Clears saved passwords.
 - {{WebExtAPIRef("browsingData.removePluginData()")}}
@@ -61,11 +60,11 @@ To use this API you must have the "browsingData" [API permission](/en-US/docs/Mo
 - {{WebExtAPIRef("browsingData.settings()")}}
   - : Gets the current value of settings in the browser's "Clear History" feature.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData) API.

@@ -3,15 +3,16 @@ title: menus.onShown
 slug: Mozilla/Add-ons/WebExtensions/API/menus/onShown
 page-type: webextension-api-event
 browser-compat: webextensions.api.menus.onShown
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when the browser has shown a menu.
 
 An extension can use this event to update its menu items using information that's only available once the menu is shown. Typically an extension will figure out the update in its `onShown` handler and then call {{WebExtAPIRef("menus.refresh()")}} to update the menu itself.
 
 The handler can add, remove, or update menu items.
+
+<!-- cSpell:ignore labelled -->
 
 For example, the [menu-labelled-open](https://github.com/mdn/webextensions-examples/tree/main/menu-labelled-open) example extension adds a menu item that's shown when the user clicks a link, and that, when clicked, just opens the link. It uses `onShown` and `refresh()` to annotate the menu item with the hostname for the link, so the user can easily see where they will go before they click.
 
@@ -94,13 +95,9 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `info`
-
       - : `Object`. This is just like the {{WebExtAPIRef('menus.OnClickData')}} object, except it contains two extra properties:
-
         - `contexts`: an array of all the {{WebExtAPIRef("menus.ContextType", "contexts")}} that are applicable to this menu.
         - `menuIds`: an array of IDs of all menu items belonging to this extension that are being shown in this menu.
 

@@ -144,7 +144,6 @@ This will either display the Python version number, which indicates that Python 
 You can easily install Python 3 (along with the _pip3_ tool) from [python.org](https://www.python.org/):
 
 1. Download the required installer:
-
    1. Go to <https://www.python.org/downloads/macos/>
    2. Download the stable release of the most recent [supported version](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django) that works with Django 5.0.
       (at time of writing this is Python 3.11.8).
@@ -164,7 +163,6 @@ pip3 list
 Windows doesn't include Python by default, but you can easily install it (along with the _pip3_ tool) from [python.org](https://www.python.org/):
 
 1. Download the required installer:
-
    1. Go to <https://www.python.org/downloads/windows/>
    2. Download the stable release of the most recent [supported version](https://docs.djangoproject.com/en/5.0/faq/install/#what-python-version-can-i-use-with-django) that works with Django 5.0.
       (at time of writing this is Python 3.11.8).
@@ -418,11 +416,11 @@ Git (and GitHub) use repositories ("repos") as the top level "bucket" for storin
 Repositories can be public, in which case the code is visible to everyone on the internet, or private, in which case they are restricted to the owning organization or user account.
 
 All work is done on a particular "branch" of code in your repo.
-When you want to backup some changes to a branch you can create a "commit", which stores all changes since your last commit to the current branch.
+When you want to back up some changes to a branch you can create a "commit", which stores all changes since your last commit to the current branch.
 
 The repo is created with a default branch named "main". You can spawn other branches off this using git, which initially have all the commits of the original branch.
 You can evolve branches separately by adding commits, and then later on use a "Pull Request" (PR) on GitHub to merge changes from one branch to another.
-You can also use git to switch between branches on your local compute, for example to try out different things.
+You can also use git to switch between branches on your local computer, for example to try out different things.
 
 In addition to branches, it is possible to create `tags` on any branch and later recover that branch at that point.
 
@@ -437,7 +435,6 @@ The steps are:
 2. Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
 3. Fill in all the fields on this form.
    While these are not compulsory, they are strongly recommended.
-
    - Enter a repository name: "django_local_library".
    - Enter a new repository description: "Local Library website written in Django".
    - Select "Public" for the repository (the default).
@@ -463,7 +460,7 @@ Now that the repository ("repo") is created on GitHub we are going to want to cl
    In the "Clone" section, select the "HTTPS" tab, and copy the URL.
    If you used the repository name "django_local_library", the URL should be something like: `https://github.com/<your_git_user_id>/django_local_library.git`.
 
-2. Install _git_ for your local computer ([official Git download guide](https://git-scm.com/downloads)).
+2. Install _git_ for your local computer ([official Git download guide](https://git-scm.com/downloads/)).
 3. Open a command prompt/terminal and clone your repo using the URL you copied above:
 
    ```bash
@@ -528,11 +525,13 @@ This is a useful change to make, but mostly we're doing it to show you how to pu
    It should look a bit like the listing below.
 
    ```bash
-   > git status
-   On branch main
-   Your branch is up-to-date with 'origin/update_gitignore'.
+   git status
+   ```
+
+   ```plain
+   On branch update_gitignore
    Changes to be committed:
-     (use "git reset HEAD <file>..." to unstage)
+     (use "git restore --staged <file>..." to unstage)
 
            modified:   .gitignore
    ```

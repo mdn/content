@@ -210,7 +210,7 @@ it might be wise to provide a fallback:
 
 ## HLS Encoding
 
-HTTP Live Streaming (HLS) is an HTTP-based media streaming protocol implemented by Apple. It's incorporated into iOS and OSX platforms and works well on [mobile and desktop Safari and most Android devices](https://caniuse.com/?search=hls).
+HTTP Live Streaming (HLS) is an HTTP-based media streaming protocol implemented by Apple. It's incorporated into iOS and macOS platforms and works well on [mobile and desktop Safari and most Android devices](https://caniuse.com/?search=hls).
 
 Media is usually encoded as MPEG-4 (H.264 video and AAC audio) and packaged into an MPEG-2 Transport Stream, which is then broken into segments and saved as one or more `.ts` media files. Apple provides tools to convert media files to the appropriate format.
 
@@ -265,7 +265,7 @@ Further resources on adaptive streaming.
 
 ### MPEG-DASH overview and references
 
-- [Dynamic Adaptive Streaming over HTTP Dataset](https://www-itec.uni-klu.ac.at/bib/files/p89-lederer.pdf)
+- [Dynamic Adaptive Streaming over HTTP Dataset](https://dl.acm.org/doi/10.1145/2155555.2155570)
 - [DASH Adaptive Streaming for HTML 5 Video](/en-US/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming)
 - [Dynamic Adaptive Streaming over HTTP: From Content Creation to Consumption](https://www.slideshare.net/slideshow/dynamic-adaptive-streaming-over-http-from-content-creation-to-consumption/14933566)
 

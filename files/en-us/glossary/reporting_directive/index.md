@@ -2,9 +2,8 @@
 title: Reporting directive
 slug: Glossary/Reporting_directive
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **{{Glossary("CSP")}} reporting directives** are used in a {{HTTPHeader("Content-Security-Policy")}} header and control the reporting process of CSP violations.
 

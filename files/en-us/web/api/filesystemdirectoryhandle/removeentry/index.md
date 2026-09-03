@@ -25,9 +25,7 @@ removeEntry(name, options)
   - : A string representing the {{domxref('FileSystemHandle.name')}} of
     the entry you wish to remove.
 - `options` {{optional_inline}}
-
   - : An optional object containing options, which are as follows:
-
     - `recursive` {{optional_inline}}
       - : A boolean value, which defaults to `false`. When set to `true` entries will be removed recursively.
 

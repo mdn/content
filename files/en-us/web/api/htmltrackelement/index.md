@@ -26,7 +26,6 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLTrackElement.default")}}
   - : A boolean value reflecting the [`default`](/en-US/docs/Web/HTML/Reference/Elements/track#default) attribute, indicating that the track is to be enabled if the user's preferences do not indicate that another track would be more appropriate.
 - {{domxref("HTMLTrackElement.readyState")}} {{ReadOnlyInline}}
-
   - : Returns an `unsigned short` that show the readiness state of the track:
 
     | Constant  | Value | Description                                                                                                                                                                              |

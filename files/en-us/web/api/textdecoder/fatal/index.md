@@ -12,7 +12,7 @@ The **`fatal`** read-only property of the {{domxref("TextDecoder")}} interface i
 
 If the property is `true`, then a decoder will throw a {{jsxref("TypeError")}} if it encounters malformed data while decoding.
 If `false`, the decoder will substitute the invalid data with the replacement character `U+FFFD` (�).
-The value of the property is set in the [`TextDecoder()` constructor](/en-US/docs/Web/API/TextDecoder/TextDecoder).
+The value of the property is set in the [`fatal`](/en-US/docs/Web/API/TextDecoder/TextDecoder#fatal) argument to the decoder's constructor.
 
 ## Value
 

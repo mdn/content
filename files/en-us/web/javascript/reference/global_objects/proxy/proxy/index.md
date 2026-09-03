@@ -4,9 +4,8 @@ short-title: Proxy()
 slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Proxy.Proxy
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Proxy()`** constructor creates {{jsxref("Proxy")}} objects.
 
@@ -16,7 +15,8 @@ The **`Proxy()`** constructor creates {{jsxref("Proxy")}} objects.
 new Proxy(target, handler)
 ```
 
-> **Note:** `Proxy()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Proxy()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -50,11 +50,11 @@ object.
 - {{jsxref("Proxy/Proxy/apply", "handler.apply()")}}
   - : A trap for a function call.
 - {{jsxref("Proxy/Proxy/construct", "handler.construct()")}}
-  - : A trap for the {{jsxref("Operators/new", "new")}} operator.
+  - : A trap for the {{jsxref("new")}} operator.
 - {{jsxref("Proxy/Proxy/defineProperty", "handler.defineProperty()")}}
   - : A trap for {{jsxref("Object.defineProperty")}}.
 - {{jsxref("Proxy/Proxy/deleteProperty", "handler.deleteProperty()")}}
-  - : A trap for the {{jsxref("Operators/delete", "delete")}} operator.
+  - : A trap for the {{jsxref("delete")}} operator.
 - {{jsxref("Proxy/Proxy/get", "handler.get()")}}
   - : A trap for getting property values.
 - {{jsxref("Proxy/Proxy/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}

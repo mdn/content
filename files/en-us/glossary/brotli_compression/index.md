@@ -2,9 +2,8 @@
 title: Brotli compression
 slug: Glossary/Brotli_compression
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Brotli** is a general-purpose lossless compression algorithm.
 It compresses data using a combination of a modern variant of the [Lempel-Ziv coding](https://en.wikipedia.org/wiki/LZ77_and_LZ78#LZ77) LZ77 algorithm, [Huffman coding](https://rosettacode.org/wiki/Huffman_coding), and second-order context modeling, providing a compression ratio comparable to the best currently available general-purpose compression methods.

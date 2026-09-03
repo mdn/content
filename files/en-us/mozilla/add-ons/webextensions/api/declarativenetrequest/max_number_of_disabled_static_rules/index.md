@@ -3,9 +3,8 @@ title: declarativeNetRequest.MAX_NUMBER_OF_DISABLED_STATIC_RULES
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/MAX_NUMBER_OF_DISABLED_STATIC_RULES
 page-type: webextension-api-property
 browser-compat: webextensions.api.declarativeNetRequest.MAX_NUMBER_OF_DISABLED_STATIC_RULES
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The maximum number of static rules that can be disabled on each static ruleset. See [static ruleset limits](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#static_ruleset_limits) for more information on the static ruleset limits.
 

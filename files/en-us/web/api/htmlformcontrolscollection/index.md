@@ -9,6 +9,8 @@ browser-compat: api.HTMLFormControlsCollection
 
 The **`HTMLFormControlsCollection`** interface represents a _collection_ of HTML _form control elements_, returned by the {{domxref("HTMLFormElement")}} interface's {{domxref("HTMLFormElement.elements", "elements")}} property.
 
+The collection returned by {{domxref("HTMLFormElement.elements")}} includes the form's associated listed form controls. See {{domxref("HTMLFormElement.elements")}} for the list of [listed form controls](/en-US/docs/Web/API/HTMLFormElement/elements#value) and an explanation of [form association](/en-US/docs/Web/API/HTMLFormElement/elements#associated_form_controls).
+
 This interface replaces one method from {{domxref("HTMLCollection")}}, on which it is based.
 
 {{InheritanceDiagram}}

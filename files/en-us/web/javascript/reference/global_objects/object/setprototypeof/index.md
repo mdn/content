@@ -4,9 +4,8 @@ short-title: setPrototypeOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.setPrototypeOf
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.setPrototypeOf()`** static method sets the prototype (i.e., the internal `[[Prototype]]` property) of a specified object to another object or [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null).
 
@@ -61,7 +60,7 @@ The specified object.
 
 If the `obj` parameter is not an object (e.g., number, string, etc.), this method does nothing — without coercing it to an object or attempting to set its prototype — and directly returns `obj` as a primitive value. If `prototype` is the same value as the prototype of `obj`, then `obj` is directly returned, without causing a `TypeError` even when `obj` has immutable prototype.
 
-For security concerns, there are certain built-in objects that are designed to have an _immutable prototype_. This prevents prototype pollution attacks, especially [proxy-related ones](https://github.com/tc39/ecma262/issues/272). The core language only specifies `Object.prototype` as an immutable prototype exotic object, whose prototype is always `null`. In browsers, [`window`](/en-US/docs/Web/API/Window) and [`location`](/en-US/docs/Web/API/Window/location) are two other very common examples.
+For security concerns, there are certain built-in objects that are designed to have an _immutable prototype_. This prevents [prototype pollution attacks](/en-US/docs/Web/Security/Attacks/Prototype_pollution), especially [proxy-related ones](https://github.com/tc39/ecma262/issues/272). The core language only specifies `Object.prototype` as an immutable prototype exotic object, whose prototype is always `null`. In browsers, [`window`](/en-US/docs/Web/API/Window) and [`location`](/en-US/docs/Web/API/Window/location) are two other very common examples.
 
 ```js
 Object.isExtensible(Object.prototype); // true; you can add more properties

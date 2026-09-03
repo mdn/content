@@ -1,11 +1,11 @@
 ---
-title: <input type="file">
+title: '`<input type="file">` HTML attribute value'
+short-title: <input type="file">
 slug: Web/HTML/Reference/Elements/input/file
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_file
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 {{HTMLElement("input")}} elements with **`type="file"`** let the user choose one or more files from their device storage. Once chosen, the files can be uploaded to a server using [form submission](/en-US/docs/Learn_web_development/Extensions/Forms), or manipulated using JavaScript code and [the File API](/en-US/docs/Web/API/File_API/Using_files_from_web_applications).
 
@@ -59,7 +59,8 @@ For instance, there are a number of ways Microsoft Word files can be identified,
 
 The [`capture`](/en-US/docs/Web/HTML/Reference/Attributes/capture) attribute value is a string that specifies which camera to use for capture of image or video data, if the [`accept`](/en-US/docs/Web/HTML/Reference/Attributes/accept) attribute indicates that the input should be of one of those types. A value of `user` indicates that the user-facing camera and/or microphone should be used. A value of `environment` specifies that the outward-facing camera and/or microphone should be used. If this attribute is missing, the {{Glossary("user agent")}} is free to decide on its own what to do. If the requested facing mode isn't available, the user agent may fall back to its preferred default mode.
 
-> **Note:** `capture` was previously a Boolean attribute which, if present, requested that the device's media capture device(s) such as camera or microphone be used instead of requesting a file input.
+> [!NOTE]
+> `capture` was previously a Boolean attribute which, if present, requested that the device's media capture device(s) such as camera or microphone be used instead of requesting a file input.
 
 ### multiple
 
@@ -115,16 +116,13 @@ This produces the following output:
 
 {{EmbedLiveSample('A_basic_example', 650, 90)}}
 
-> [!NOTE]
-> You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
-
 Regardless of the user's device or operating system, the file input provides a button that opens up a file picker dialog that allows the user to choose a file.
 
 Including the [`multiple`](#multiple) attribute, as shown above, specifies that multiple files can be chosen at once. The user can choose multiple files from the file picker in any way that their chosen platform allows (e.g., by holding down <kbd>Shift</kbd> or <kbd>Control</kbd> and then clicking). If you only want the user to choose a single file per `<input>`, omit the `multiple` attribute.
 
 ### Getting information on selected files
 
-The selected files' are returned by the element's `HTMLInputElement.files` property, which is a {{domxref("FileList")}} object containing a list of {{domxref("File")}} objects. The `FileList` behaves like an array, so you can check its `length` property to get the number of selected files.
+The selected files are returned by the element's `HTMLInputElement.files` property, which is a {{domxref("FileList")}} object containing a list of {{domxref("File")}} objects. The `FileList` behaves like an array, so you can check its `length` property to get the number of selected files.
 
 Each `File` object contains the following information:
 
@@ -180,9 +178,6 @@ This produces a similar-looking output to the previous example:
 
 {{EmbedLiveSample('Limiting_accepted_file_types', 650, 90)}}
 
-> [!NOTE]
-> You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-with-accept.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/file-with-accept.html).
-
 It may look similar, but if you try selecting a file with this input, you'll see that the file picker only lets you select the file types specified in the `accept` value (the exact interface differs across browsers and operating systems).
 
 The `accept` attribute doesn't validate the types of the selected files; it provides hints for browsers to guide users towards selecting the correct file types. It is still possible (in most cases) for users to toggle an option in the file chooser that makes it possible to override this and select any file they wish, and then choose incorrect file types.
@@ -199,7 +194,7 @@ For example, the following code will log to the console if the user closes the p
 const elem = document.createElement("input");
 elem.type = "file";
 elem.addEventListener("cancel", () => {
-  console.log("Cancelled.");
+  console.log("Canceled.");
 });
 elem.addEventListener("change", () => {
   if (elem.files.length === 1) {
@@ -222,12 +217,13 @@ elem.click();
 
 ## Examples
 
+### Complete file example
+
 In this example, we'll present a slightly more advanced file chooser that takes advantage of the file information available in the `HTMLInputElement.files` property, as well as showing off a few clever tricks.
 
-> [!NOTE]
-> You can see the complete source code for this example on GitHub — [file-example.html](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/file-example.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/file-examples/file-example.html)). We won't explain the CSS; the JavaScript is the main focus.
+#### HTML
 
-First of all, let's look at the HTML:
+The HTML looks like so:
 
 ```html
 <form method="post" enctype="multipart/form-data">
@@ -255,7 +251,7 @@ html {
 }
 
 form {
-  background: #ccc;
+  background: #cccccc;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid black;
@@ -267,7 +263,7 @@ form ol {
 
 form li,
 div > p {
-  background: #eee;
+  background: #eeeeee;
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
@@ -308,9 +304,9 @@ form button:active {
 }
 ```
 
-This is similar to what we've seen before — nothing special to comment on.
+This is similar to what we've seen earlier, so we won't spend time describing it. Also, we've hidden the CSS applied to the example, as it isn't relevant to understanding the file input or the JavaScript that powers it.
 
-Next, let's walk through the JavaScript.
+#### JavaScript
 
 In the first lines of script, we get references to the form input itself, and the {{htmlelement("div")}} element with the class of `.preview`. Next, we hide the {{htmlelement("input")}} element — we do this because file inputs tend to be ugly, difficult to style, and inconsistent in their design across browsers. You can activate the `input` element by clicking its {{htmlelement("label")}}, so it is better to visually hide the `input` and style the label like a button, so the user will know to interact with it if they want to upload files.
 
@@ -321,7 +317,8 @@ const preview = document.querySelector(".preview");
 input.style.opacity = 0;
 ```
 
-> **Note:** {{cssxref("opacity")}} is used to hide the file input instead of {{cssxref("visibility", "visibility: hidden")}} or {{cssxref("display", "display: none")}}, because assistive technology interprets the latter two styles to mean the file input isn't interactive.
+> [!NOTE]
+> {{cssxref("opacity")}} is used to hide the file input instead of {{cssxref("visibility", "visibility: hidden")}} or {{cssxref("display", "display: none")}}, because assistive technology interprets the latter two styles to mean the file input isn't interactive.
 
 Next, we add an [event listener](/en-US/docs/Web/API/EventTarget/addEventListener) to the input to listen for changes to its selected value (in this case, when files are selected). The event listener invokes our custom `updateImageDisplay()` function.
 
@@ -337,7 +334,6 @@ Whenever the `updateImageDisplay()` function is invoked, we:
 - If files _have_ been selected, we loop through each one, printing information about it into the preview `<div>`. Things to note here:
 - We use the custom `validFileType()` function to check whether the file is of the correct type (e.g., the image types specified in the `accept` attribute).
 - If it is, we:
-
   - Print out its name and file size into a list item inside the previous `<div>` (obtained from `file.name` and `file.size`). The custom `returnFileSize()` function returns a nicely-formatted version of the size in bytes/KB/MB (by default the browser reports the size in absolute bytes).
   - Generate a thumbnail preview of the image by calling {{domxref("URL/createObjectURL_static", "URL.createObjectURL(file)")}}. Then, insert the image into the list item too by creating a new {{htmlelement("img")}} and setting its [`src`](/en-US/docs/Web/HTML/Reference/Elements/img#src) to the thumbnail.
 
@@ -430,7 +426,7 @@ button.addEventListener("click", (e) => {
 });
 ```
 
-The example looks like this; have a play:
+#### Result
 
 {{EmbedLiveSample('Examples', '100%', 200)}}
 
@@ -472,12 +468,6 @@ The example looks like this; have a play:
     <tr>
       <td><strong>DOM interface</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>

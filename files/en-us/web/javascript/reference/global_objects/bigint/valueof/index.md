@@ -4,9 +4,8 @@ short-title: valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/valueOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.BigInt.valueOf
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`valueOf()`** method of {{jsxref("BigInt")}} values returns the wrapped primitive value
 of a {{jsxref("BigInt")}} object.

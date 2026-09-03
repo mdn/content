@@ -3,9 +3,8 @@ title: scripting.getRegisteredContentScripts()
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/getRegisteredContentScripts
 page-type: webextension-api-function
 browser-compat: webextensions.api.scripting.getRegisteredContentScripts
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Returns all the content scripts registered with {{WebExtAPIRef("scripting.registerContentScripts()")}} or a subset of the registered scripts when using a filter.
 

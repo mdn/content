@@ -3,9 +3,8 @@ title: tabs
 slug: Mozilla/Add-ons/WebExtensions/API/tabs
 page-type: webextension-api
 browser-compat: webextensions.api.tabs
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Interact with the browser's tab system.
 
@@ -17,7 +16,6 @@ You can use this API to get a list of opened tabs, filtered by various criteria,
 You can use most of this API without any special permission. However:
 
 - To access `Tab.url`, `Tab.title`, and `Tab.favIconUrl` (or to filter by these properties via {{WebExtAPIRef("tabs.query()")}}), you need to have the `"tabs"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions), or have [host permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) that match `Tab.url`.
-
   - Access to these properties by host permissions is supported since Firefox 86 and Chrome 50. In Firefox 85 and earlier, the "tabs" permission was required instead.
 
 - To use {{WebExtAPIRef("tabs.executeScript()")}} or {{WebExtAPIRef("tabs.insertCSS()")}}, you must have the [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for the tab
@@ -51,6 +49,8 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
 
 - {{WebExtAPIRef("tabs.TAB_ID_NONE")}}
   - : A special ID value given to tabs that are not browser tabs (for example, tabs in devtools windows).
+- {{WebExtAPIRef("tabs.SPLIT_VIEW_ID_NONE")}}
+  - : A special ID value given to tabs that aren't in a [split view](/en-US/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API#working_with_tab_split_views).
 
 ## Functions
 
@@ -160,11 +160,11 @@ Many tab operations use a Tab `id`. Tab `id`s are guaranteed to be unique to a s
 - {{WebExtAPIRef("tabs.onZoomChange")}}
   - : Fired when a tab is zoomed.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.

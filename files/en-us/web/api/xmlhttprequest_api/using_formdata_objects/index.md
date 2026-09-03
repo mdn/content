@@ -46,7 +46,8 @@ This example builds a `FormData` instance containing values for fields named `"u
 
 To construct a `FormData` object that contains the data from an existing {{ HTMLElement("form") }}, specify that form element when creating the `FormData` object:
 
-> **Note:** `FormData` will only use input fields that use the `name` attribute.
+> [!NOTE]
+> `FormData` will only use input fields that use the `name` attribute.
 
 ```js
 const formData = new FormData(someFormElement);

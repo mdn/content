@@ -162,7 +162,8 @@ This is where **state** comes in. If we think of props as a way to communicate b
 
 React provides a special function for introducing state to a component, aptly named `useState()`.
 
-> **Note:** `useState()` is part of a special category of functions called **hooks**, each of which can be used to add new functionality to a component. We'll learn about other hooks later on.
+> [!NOTE]
+> `useState()` is part of a special category of functions called **hooks**, each of which can be used to add new functionality to a component. We'll learn about other hooks later on.
 
 To use `useState()`, we need to import it from the React module. Add the following line to the top of your `Form.jsx` file, above the `Form()` function definition:
 
@@ -596,6 +597,8 @@ import Form from "./components/Form";
 import FilterButton from "./components/FilterButton";
 
 function App(props) {
+  const [tasks, setTasks] = useState(props.tasks);
+
   function addTask(name) {
     const newTask = { id: `todo-${nanoid()}`, name, completed: false };
     setTasks([...tasks, newTask]);
@@ -618,8 +621,6 @@ function App(props) {
     const remainingTasks = tasks.filter((task) => id !== task.id);
     setTasks(remainingTasks);
   }
-
-  const [tasks, setTasks] = useState(props.tasks);
   const taskList = tasks?.map((task) => (
     <Todo
       id={task.id}

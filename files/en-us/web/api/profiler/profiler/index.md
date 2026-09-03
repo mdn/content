@@ -23,9 +23,7 @@ new Profiler(options)
 ### Parameters
 
 - `options`
-
   - : Options for this profiler. This is an object containing the following properties:
-
     - `maxBufferSize`
       - : A number indicating the maximum number of samples to take. Once this number is reached, the browser will fire the {{domxref("Profiler.samplebufferfull_event", "samplebufferfull")}} event at the profiler, and no more samples will be recorded.
     - `sampleInterval`

@@ -40,7 +40,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-gl.vertexAttribI4i(a_foobar, 10);
+gl.vertexAttribI4i(index, 10);
 ```
 
 ## Specifications

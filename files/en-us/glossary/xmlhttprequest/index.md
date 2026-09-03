@@ -2,9 +2,8 @@
 title: XMLHttpRequest (XHR)
 slug: Glossary/XMLHttpRequest
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 {{domxref("XMLHttpRequest")}} (XHR) is a {{Glossary("JavaScript")}} {{Glossary("API")}} to create {{Glossary("HTTP")}} requests. Its methods provide the ability to send network requests between the {{Glossary("browser")}} and a {{Glossary("server")}}.
 

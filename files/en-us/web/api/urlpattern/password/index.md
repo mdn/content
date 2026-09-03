@@ -8,10 +8,9 @@ browser-compat: api.URLPattern.password
 
 {{APIRef("URL Pattern API")}} {{AvailableInWorkers}}
 
-The **`password`** read-only property of the {{domxref("URLPattern")}} interface is a
-string containing the pattern used to match the password part
-of a URL. This value may differ from the input to the constructor due to
-normalization.
+The **`password`** read-only property of the {{domxref("URLPattern")}} interface is a string containing the [pattern](/en-US/docs/Web/API/URL_Pattern_API#pattern_syntax) used to match the password part of a URL.
+
+This is the [normalized value](/en-US/docs/Web/API/URL_Pattern_API#pattern_normalization) of the password pattern passed to the [constructor](/en-US/docs/Web/API/URLPattern/URLPattern) or the default value (`"*"`), which matches any password.
 
 ## Value
 
@@ -19,13 +18,15 @@ A string.
 
 ## Examples
 
-The below example creates a {{domxref("URLPattern")}} object with
-`correct-horse-battery{-staple}?` for the `password` part. This pattern matches
-the passwords `correct-horse-battery` and `correct-horse-battery-staple`.
+### Basic usage
+
+The following example creates a {{domxref("URLPattern")}} object with `correct-horse-battery{-staple}?` for the `password` part and logs the property.
+This pattern matches the passwords `correct-horse-battery` and `correct-horse-battery-staple`.
 
 ```js
 const pattern = new URLPattern({ password: "correct-horse-battery{-staple}?" });
 console.log(pattern.password); // 'correct-horse-battery{-staple}?'
+console.log(pattern.test("https://user:correct-horse-battery@example.com")); // true
 ```
 
 ## Specifications

@@ -3,8 +3,8 @@ title: refY
 slug: Web/SVG/Reference/Attribute/refY
 page-type: svg-attribute
 spec-urls:
-  - https://svgwg.org/svg2-draft/painting.html#MarkerElementRefYAttribute
-  - https://svgwg.org/svg2-draft/struct.html#SymbolElementRefYAttribute
+  - https://w3c.github.io/svgwg/svg2-draft/painting.html#MarkerElementRefYAttribute
+  - https://w3c.github.io/svgwg/svg2-draft/struct.html#SymbolElementRefYAttribute
 sidebar: svgref
 ---
 
@@ -41,7 +41,6 @@ For {{SVGElement("marker")}}, `refY` defines the y coordinate of the marker's re
 </table>
 
 - `<length-percentage>`
-
   - : Lengths are interpreted as being in the coordinate system of the marker contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
 
     Percentage values are interpreted as being a percentage of the {{SVGAttr("viewBox")}} height.
@@ -85,7 +84,6 @@ Unlike other positioning attributes, `refY` is interpreted as being in the coord
 </table>
 
 - `<length-percentage>`
-
   - : Lengths are interpreted as being in the coordinate system of the marker contents, after application of the {{SVGAttr("viewBox")}} and {{SVGAttr("preserveAspectRatio")}} attributes.
 
     Percentage values are interpreted as being a percentage of the {{SVGAttr("viewBox")}} height.

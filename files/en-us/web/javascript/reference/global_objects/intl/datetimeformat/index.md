@@ -3,9 +3,8 @@ title: Intl.DateTimeFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat
 page-type: javascript-class
 browser-compat: javascript.builtins.Intl.DateTimeFormat
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.DateTimeFormat`** object enables language-sensitive date and time formatting.
 

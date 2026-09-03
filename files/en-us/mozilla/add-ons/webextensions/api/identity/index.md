@@ -3,9 +3,8 @@ title: identity
 slug: Mozilla/Add-ons/WebExtensions/API/identity
 page-type: webextension-api
 browser-compat: webextensions.api.identity
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Use the identity API to get an [OAuth2](https://oauth.net/2/) authorization code or access token, which an extension can then use to access user data from a service that supports OAuth2 access (such as Google or Facebook).
 
@@ -57,11 +56,11 @@ This will tend to be specific to the service provider, but in general it means c
 - {{WebExtAPIRef("identity.launchWebAuthFlow()")}}
   - : Launches WAF.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.identity`](https://developer.chrome.com/docs/extensions/reference/api/identity) API.

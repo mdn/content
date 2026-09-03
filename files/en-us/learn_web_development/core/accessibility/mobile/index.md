@@ -104,7 +104,6 @@ For example, with TalkBack turned on:
 1. Open your web browser.
 2. Activate the URL bar.
 3. Enter a web page that has a bunch of headings on it, such as the front page of bbc.co.uk. To enter the text of the URL:
-
    - Select the URL bar by swiping left/right till you get to it, and then double-tapping.
    - Hold your finger down on the virtual keyboard until you get the character you want, and then release your finger to type it. Repeat for each character.
    - Once you've finished, find the Enter key and press it.
@@ -147,7 +146,6 @@ When VoiceOver is turned on, you have a navigation feature called the Rotor avai
 
 1. Twist two fingers around on the screen like you are turning a dial. Each option will be read aloud as you twist further around. You can go back and forth to cycle through the options.
 2. Once you've found the option you want:
-
    - Release your fingers to select it.
    - If it is an option you can iterate the value of (such as Volume or Speaking Rate), you can do a swipe up or down to increase or decrease the value of the selected item.
 
@@ -160,7 +158,6 @@ Let's have a go at web browsing with VoiceOver:
 1. Open your web browser.
 2. Activate the URL bar.
 3. Enter a web page that has a bunch of headings on it, such as the front page of bbc.co.uk. To enter the text of the URL:
-
    - Select the URL bar by swiping left/right until you get to it, and then double-tapping.
    - For each character, hold your finger down on the virtual keyboard until you get the character you want, and then release your finger to select it. Double-tap to type it.
    - Once you've finished, find the Enter key and press it.
@@ -168,7 +165,6 @@ Let's have a go at web browsing with VoiceOver:
 4. Swipe left and right to move between items on the page. You can double-tap an item to select it (e.g., follow a link).
 5. By default, the selected Rotor option will be Speaking Rate; you can currently swipe up and down to increase or decrease the speaking rate.
 6. Now turn two fingers around the screen like a dial to show the rotor and move between its options. Here are a few examples of the options available:
-
    - _Speaking Rate_: Change the speaking rate.
    - _Containers_: Move between different semantic containers on the page.
    - _Headings_: Move between headings on the page.
@@ -185,36 +181,234 @@ Let's have a go at web browsing with VoiceOver:
 
 In our CSS and JavaScript accessibility article, we looked at the idea of events that are specific to a certain type of control mechanism (see [Mouse-specific events](/en-US/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#mouse-specific_events)). To recap, these cause accessibility issues because other control mechanisms can't activate the associated functionality.
 
-As an example, the [click](/en-US/docs/Web/API/Element/click_event) event is good in terms of accessibility — an associated event handler can be invoked by clicking the element the handler is set on, tabbing to it and pressing Enter/Return, or tapping it on a touchscreen device. Try our [simple-button-example.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/simple-button-example.html) example ([see it running live](https://mdn.github.io/learning-area/accessibility/mobile/simple-button-example.html)) to see what we mean.
+As an example, the [click](/en-US/docs/Web/API/Element/click_event) event is good in terms of accessibility — an associated event handler can be invoked by clicking the element the handler is set on, tabbing to it and pressing Enter/Return, or tapping it on a touchscreen device. Try the following basic button example to see what we mean:
 
-Alternatively, mouse-specific events such as [mousedown](/en-US/docs/Web/API/Element/mousedown_event) and [mouseup](/en-US/docs/Web/API/Element/mouseup_event) create problems — their event handlers cannot be invoked using non-mouse controls.
+```html hidden live-sample___basic-button
+<button>Press me!</button>
+```
 
-If you try to control our [simple-box-drag.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/simple-box-drag.html) ([see example live](https://mdn.github.io/learning-area/accessibility/mobile/simple-box-drag.html)) example with a keyboard or touch, you'll see the problem. This occurs because we are using code such as the following:
+```css hidden live-sample___basic-button
+html {
+  height: 100%;
+}
+
+body {
+  height: inherit;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+button {
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+  font-size: 150%;
+  line-height: 1.5;
+}
+```
+
+```js hidden live-sample___basic-button
+const btn = document.querySelector("button");
+
+btn.addEventListener("click", () => {
+  alert("Ouch, that hurt!");
+});
+```
+
+{{embedlivesample("basic-button", "100%", "100")}}
+
+Mouse-specific events, however, such as [mousedown](/en-US/docs/Web/API/Element/mousedown_event) and [mouseup](/en-US/docs/Web/API/Element/mouseup_event), create problems — their event handlers cannot be invoked using non-mouse controls.
+
+The next example uses code like the following to allow you to drag a box around the screen with your mouse:
 
 ```js
-div.onmousedown = () => {
+div.addEventListener("mousedown", () => {
   initialBoxX = div.offsetLeft;
   initialBoxY = div.offsetTop;
   movePanel();
-};
+});
 
-document.onmouseup = stopMove;
+document.addEventListener("mouseup", stopMove);
 ```
 
-To enable other forms of control, you need to use different, yet equivalent events — for example, touch events work on touchscreen devices:
+```html hidden live-sample___mouse-drag live-sample___multi-drag
+<div></div>
+```
+
+```css hidden live-sample___mouse-drag live-sample___multi-drag
+html {
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+body {
+  background: #ffe;
+  margin: 0;
+}
+
+div {
+  background-color: #1fe200;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(0 0 0 / 0),
+    rgb(0 0 0 / 0.4)
+  );
+  width: 200px;
+  height: 150px;
+  border: 1px solid green;
+  position: absolute;
+}
+```
+
+```js hidden live-sample___mouse-drag
+document.body.width = window.innerWidth;
+document.body.height = window.innerHeight;
+
+let mouseX, mouseY;
+
+document.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+const div = document.querySelector("div");
+
+let initialMouseX = null;
+
+let initialMouseY = null;
+
+var initialBoxX, initialBoxY, rAF;
+
+div.addEventListener("mousedown", () => {
+  initialBoxX = div.offsetLeft;
+  initialBoxY = div.offsetTop;
+  movePanel();
+});
+
+document.addEventListener("mouseup", stopMove);
+
+function movePanel() {
+  if (initialMouseX === null) {
+    initialMouseX = mouseX;
+    initialMouseY = mouseY;
+  } else {
+    let mouseMoveX = mouseX - initialMouseX;
+    let mouseMoveY = mouseY - initialMouseY;
+
+    let offsetX = initialBoxX + mouseMoveX;
+    let offsetY = initialBoxY + mouseMoveY;
+    console.log(offsetX + " " + offsetY);
+
+    div.style.left = offsetX + "px";
+    div.style.top = offsetY + "px";
+  }
+
+  rAF = requestAnimationFrame(movePanel);
+}
+
+function stopMove() {
+  cancelAnimationFrame(rAF);
+
+  console.log("mousemove stopped");
+
+  initialMouseX = null;
+  initialMouseY = null;
+}
+```
+
+{{embedlivesample("mouse-drag", "100%", "400")}}
+
+However, if you try to drag it with your finger on a touchscreen device, it won't work. To enable other forms of control, you need to use different, yet equivalent events — for example, touch events work on touchscreen devices:
 
 ```js
-div.ontouchstart = (e) => {
+div.addEventListener("touchstart", (e) => {
   initialBoxX = div.offsetLeft;
   initialBoxY = div.offsetTop;
   positionHandler(e);
   movePanel();
-};
+});
 
-panel.ontouchend = stopMove;
+document.addEventListener("touchend", stopMove);
 ```
 
-We've provided a simple example that shows how to use the mouse and touch events together — see [multi-control-box-drag.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/multi-control-box-drag.html) ([see the example live](https://mdn.github.io/learning-area/accessibility/mobile/multi-control-box-drag.html) also).
+```js hidden live-sample___multi-drag
+document.body.width = window.innerWidth;
+document.body.height = window.innerHeight;
+
+let posX, posY;
+
+document.addEventListener("mousemove", positionHandler);
+document.addEventListener("touchmove", positionHandler);
+
+function positionHandler(e) {
+  if (e.clientX && e.clientY) {
+    posX = e.clientX;
+    posY = e.clientY;
+  } else if (e.targetTouches) {
+    posX = e.targetTouches[0].clientX;
+    posY = e.targetTouches[0].clientY;
+    e.preventDefault();
+  }
+}
+
+const div = document.querySelector("div");
+
+let initialPosX = null;
+
+let initialPosY = null;
+
+let rAF;
+
+div.addEventListener("mousedown", () => {
+  initialBoxX = div.offsetLeft;
+  initialBoxY = div.offsetTop;
+  movePanel();
+});
+
+div.addEventListener("touchstart", (e) => {
+  initialBoxX = div.offsetLeft;
+  initialBoxY = div.offsetTop;
+  positionHandler(e);
+  movePanel();
+});
+
+document.addEventListener("mouseup", stopMove);
+document.addEventListener("touchend", stopMove);
+
+function movePanel() {
+  if (initialPosX === null) {
+    initialPosX = posX;
+    initialPosY = posY;
+  } else {
+    let posMoveX = posX - initialPosX;
+    let posMoveY = posY - initialPosY;
+
+    let offsetX = initialBoxX + posMoveX;
+    let offsetY = initialBoxY + posMoveY;
+
+    div.style.left = offsetX + "px";
+    div.style.top = offsetY + "px";
+  }
+
+  rAF = requestAnimationFrame(movePanel);
+}
+
+function stopMove() {
+  cancelAnimationFrame(rAF);
+
+  initialPosX = null;
+  initialPosY = null;
+}
+```
+
+The updated version will work with both mouse and touch drag:
+
+{{embedlivesample("multi-drag", "100%", "400")}}
 
 > [!NOTE]
 > You can also see fully functional examples showing how to implement different control mechanisms at [Implementing game control mechanisms](/en-US/docs/Games/Techniques/Control_mechanisms).
@@ -225,7 +419,7 @@ We've provided a simple example that shows how to use the mouse and touch events
 
 In particular, the most common problems that need to be addressed for mobile are:
 
-- Suitability of layouts for mobile devices. A multi-column layout won't work as well on a narrow screen, for example, and the text size may need to be increased so it is legible. Such issues can be solved by creating a responsive layout using technologies such as [media queries](/en-US/docs/Web/CSS/CSS_media_queries), [viewport](/en-US/docs/Web/HTML/Guides/Viewport_meta_element), and [flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox).
+- Suitability of layouts for mobile devices. A multi-column layout won't work as well on a narrow screen, for example, and the text size may need to be increased so it is legible. Such issues can be solved by creating a responsive layout using technologies such as [media queries](/en-US/docs/Web/CSS/Guides/Media_queries), [viewport](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport), and [flexbox](/en-US/docs/Learn_web_development/Core/CSS_layout/Flexbox).
 - Conserving image sizes downloaded. In general, small-screen devices won't need images that are as large as their desktop counterparts, and they are more likely to be on slow network connections. Therefore, it is wise to serve smaller images to narrow screen devices as appropriate. You can handle this using [responsive image techniques](/en-US/docs/Web/HTML/Guides/Responsive_images).
 - Thinking about high resolutions. Many mobile devices have high-resolution screens, and therefore need higher-resolution images so that the display can continue to look crisp and sharp. Again, you can serve images as appropriate using responsive image techniques. In addition, many image requirements can be fulfilled using the SVG vector images format, which is well-supported across browsers today. SVG has a small file size and will stay sharp regardless of whatever size is being displayed (see [Including vector graphics in HTML](/en-US/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML) for more details).
 
@@ -238,7 +432,7 @@ There are other important issues to consider when making sites more accessible o
 
 #### Not disabling zoom
 
-Using [viewport](/en-US/docs/Web/HTML/Guides/Viewport_meta_element), it is possible to disable zoom. Always ensure resizing is enabled, and set the width to the device's width in the {{htmlelement("head")}}:
+Using [viewport](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport), it is possible to disable zoom. Always ensure resizing is enabled, and set the width to the device's width in the {{htmlelement("head")}}:
 
 ```html
 <meta name="viewport" content="width=device-width; user-scalable=yes" />
@@ -258,12 +452,62 @@ Click here for a [good hamburger menu example](https://fritz-weisshart.de/meg_me
 
 On mobile devices, inputting data tends to be more annoying for users than the equivalent experience on desktop computers. It is more convenient to type text into form inputs using a desktop or laptop keyboard than a touchscreen virtual keyboard or a tiny mobile physical keyboard.
 
-For this reason, it is worth trying to minimize the amount of typing needed. As an example, instead of getting users to fill out their job title each time using a regular text input, you could instead offer a {{htmlelement("select")}} menu containing the most common options (which also helps with consistency in data entry) and offer an "Other" option that displays a text field to type any outliers into. You can see a simple example of this idea in action in [common-job-types.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/common-job-types.html) (see the [common jobs example live](https://mdn.github.io/learning-area/accessibility/mobile/common-job-types.html)).
+For this reason, it is worth trying to minimize the amount of typing needed. As an example, instead of getting users to fill out their job title each time using a regular text input, you could instead offer a {{htmlelement("select")}} menu containing the most common options (which also helps with consistency in data entry) and offer an "Other" option that displays a text field to type any outliers into. You can see a simple example of this idea in action in the following example:
 
-It is also worth considering the use of HTML form input types such as the date on mobile platforms as they handle them well — both Android and iOS, for example, display usable widgets that fit well with the device experience. See [html5-form-examples.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/html5-form-examples.html) for some examples (see the [HTML5 form examples live](https://mdn.github.io/learning-area/accessibility/mobile/html5-form-examples.html)) — try loading these and manipulating them on mobile devices. For example:
+```html hidden live-sample___select-text-combo
+<form>
+  <div>
+    <label for="job">Job type:</label>
+    <select id="job" name="job">
+      <option value="">-- select job --</option>
+      <option value="butcher">Butcher</option>
+      <option value="baker">Baker</option>
+      <option value="candle">Candlestick maker</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+  <div>
+    <label for="other-job">Other job:</label>
+    <input type="text" name="other-job" id="other-job" />
+  </div>
+</form>
+```
+
+```css hidden live-sample___select-text-combo
+html {
+  font-family: sans-serif;
+}
+
+div {
+  margin-bottom: 10px;
+}
+```
+
+```js hidden live-sample___select-text-combo
+const select = document.querySelector("select");
+const other = document.querySelector("input");
+
+other.parentElement.style.display = "none";
+
+select.onchange = function () {
+  if (select.value === "other") {
+    other.parentElement.style.display = "block";
+  } else {
+    other.parentElement.style.display = "none";
+  }
+};
+```
+
+{{embedlivesample("select-text-combo", "100%", "80")}}
+
+It is also worth considering the use of HTML form input types on mobile platforms as they handle them well — both Android and iOS.
+
+For example:
 
 - Types `number`, `tel`, and `email` display suitable virtual keyboards for entering numbers/telephone numbers.
 - Types `time` and `date` display suitable pickers for selecting times and dates.
+
+To try these out, see the live examples available at [The HTML5 input types](/en-US/docs/Learn_web_development/Extensions/Forms/HTML5_input_types).
 
 If you want to provide a different solution for desktops, you could always serve different markup to your mobile devices using feature detection. Check out our [feature detection article](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection) for more information.
 

@@ -4,9 +4,8 @@ short-title: flags
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/flags
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.flags
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`flags`** accessor property of {{jsxref("RegExp")}} instances returns the [flags](/en-US/docs/Web/JavaScript/Guide/Regular_expressions#advanced_searching_with_flags) of this regular expression.
 

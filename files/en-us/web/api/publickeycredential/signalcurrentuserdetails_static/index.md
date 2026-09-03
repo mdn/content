@@ -46,7 +46,7 @@ The promise rejects with the following exceptions:
 
 ## Description
 
-It is possible for the information stored in a user's authenticator about a [discoverable credential](/en-US/docs/Web/API/Web_Authentication_API#discoverable_credentials_and_conditional_mediation) (for example, [a passkey](https://passkeys.dev/)) to go out sync with the RP server. This can occur when the user updates their user name or display name on the RP web app without updating the authenticator.
+It is possible for the information stored in a user's authenticator about a [discoverable credential](/en-US/docs/Web/API/Web_Authentication_API#discoverable_and_non-discoverable_credentials) (for example, a [passkey](/en-US/docs/Web/Security/Authentication/Passkeys)) to go out sync with the server. This can occur when the user updates their user name or display name on the RP web app without updating the authenticator.
 
 The next time they try to sign in with a discoverable credential, the credential will still be presented to them with the old user name/display name in the relevant UI, which can result in a confusing user experience.
 
@@ -64,14 +64,14 @@ if (PublicKeyCredential.signalCurrentUserDetails) {
     rpId: "example.com",
     userId: "M2YPl-KGnA8", // base64url-encoded user ID
     name: "a.new.email.address@example.com", // username
-    displayName: "John Doe",
+    displayName: "Maria Sanchez",
   });
 } else {
   // Encourage the user to update their details in the authenticator
 }
 ```
 
-For a complete example, see [WebAuthn Signal API Demo](https://signal-api-demo.glitch.me/) (see [the source code](https://glitch.com/edit/#!/signal-api-demo?path=site.js)).
+For further code examples, see [Keep passkeys consistent with credentials on your server with the Signal API](https://developer.chrome.com/docs/identity/webauthn-signal-api) on developer.chrome.com (2024).
 
 ## Specifications
 

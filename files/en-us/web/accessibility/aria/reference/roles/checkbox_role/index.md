@@ -35,7 +35,7 @@ The developer is required to change the value of the `aria-checked` attribute dy
 
 ### All descendants are presentational
 
-There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `checkbox`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) to all descendant elements of any `checkbox` element as it is a role that does not support semantic children.
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `checkbox`. To deal with this limitation, browsers automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) to all descendant elements of any `checkbox` element as it is a role that does not support semantic children.
 
 For example, consider the following `checkbox` element, which contains a heading.
 
@@ -58,9 +58,7 @@ From the assistive technology user's perspective, the heading does not exist sin
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)
-
   - : The value of `aria-checked` defines the state of a checkbox. This attribute has one of three possible values:
-
     - `true`
       - : The checkbox is checked.
     - `false`
@@ -84,7 +82,6 @@ From the assistive technology user's perspective, the heading does not exist sin
 - `onclick`
   - : Handle mouse clicks on both the checkbox and the associated label that will change the state of the checkbox by changing the value of the `aria-checked` attribute and the appearance of the checkbox so it appears checked or unchecked to the sighted user
 - `onKeyDown`
-
   - : Handle the case where the user presses the <kbd>Space</kbd> key to change the state of the checkbox by changing the value of the `aria-checked` attribute and the appearance of the checkbox so it appears checked or unchecked to the sighted user
 
 ## Examples

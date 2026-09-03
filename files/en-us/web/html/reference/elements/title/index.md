@@ -1,11 +1,11 @@
 ---
-title: "<title>: The Document Title element"
+title: "`<title>` HTML document title element"
+short-title: <title>
 slug: Web/HTML/Reference/Elements/title
 page-type: html-element
 browser-compat: html.elements.title
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<title>`** [HTML](/en-US/docs/Web/HTML) element defines the document's title that is shown in a {{glossary("Browser", "browser")}}'s title bar or a page's tab. It only contains text; HTML tags within the element, if any, are also treated as plain text.
 
@@ -132,4 +132,4 @@ This example establishes a page whose title (as displayed at the top of the wind
 
 ## See also
 
-- SVG [`<title>`](/en-US/docs/Web/SVG/Reference/Element/title) element
+- SVG {{svgelement("title")}} element

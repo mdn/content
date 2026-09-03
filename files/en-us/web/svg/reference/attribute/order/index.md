@@ -33,13 +33,8 @@ svg {
     <feConvolveMatrix kernelMatrix="3 0 0 0 0 0 0 0 -4" order="3" />
   </filter>
 
-  <rect x="0" y="0" width="200" height="200" style="filter:url(#emboss1);" />
-  <rect
-    x="0"
-    y="0"
-    width="200"
-    height="200"
-    style="filter:url(#emboss2); transform: translateX(220px);" />
+  <rect x="0" y="0" width="200" height="200" filter="url(#emboss1)" />
+  <rect x="220" y="0" width="200" height="200" filter="url(#emboss2)" />
 </svg>
 ```
 
@@ -71,7 +66,6 @@ svg {
 </table>
 
 - `<number-optional-number>`
-
   - : This value indicates the number of cells in each dimension for the kernel matrix. The values provided must be {{cssxref("integer")}}s greater than zero. Values that are not integers will be truncated, i.e., rounded to the closest integer value towards zero. The first number, indicates the number of columns in the matrix. The second number, indicates the number of rows in the matrix. If no second number is not provided, it defaults to the first number.
 
     It is recommended that only small values (e.g., 3) be used; higher values may result in very high CPU overhead and usually do not produce results that justify the impact on performance.

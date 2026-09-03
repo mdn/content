@@ -2,9 +2,8 @@
 title: Native messaging
 slug: Mozilla/Add-ons/WebExtensions/Native_messaging
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 **Native messaging** enables an extension to exchange messages with a native application, installed on the user's computer. The native messaging serves the extensions without additional accesses over the web.
 
@@ -193,6 +192,9 @@ browser.browserAction.onClicked.addListener(() => {
 });
 ```
 
+> [!CALLOUT]
+> To learn about debugging background scripts and viewing console output, see [Debugging background scripts](https://extensionworkshop.com/documentation/develop/debugging/#debugging-background-scripts) on Extension Workshop.
+
 #### Connectionless messaging
 
 With this pattern you call {{WebExtAPIRef("runtime.sendNativeMessage()")}}, passing it:
@@ -237,7 +239,7 @@ Each message is serialized using JSON, UTF-8 encoded and is preceded with an uns
 
 The maximum size of a single message from the application is 1 MB. The maximum size of a message sent to the application is 4 GB.
 
-You can quickly get started sending and receiving messages with this NodeJS code, `nm_nodejs.mjs`:
+You can quickly get started sending and receiving messages with this Node.js code, `nm_nodejs.mjs`:
 
 ```js
 #!/usr/bin/env -S /full/path/to/node

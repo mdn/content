@@ -35,12 +35,12 @@ Throughout this module we have detailed loads of different ways in which you can
 We agree — testing all the things we've looked at in previous articles manually can be a real pain. Fortunately, there are tools to help us automate some of this pain away. There are two main ways in which we can automate the tests we've been talking about in this module:
 
 1. Use a task runner such as [Grunt](https://gruntjs.com/) or [Gulp](https://gulpjs.com/), or [npm scripts](https://docs.npmjs.com/misc/scripts/) to run tests and clean up code during your build process. This is a great way to perform tasks like linting and minifying code, adding in CSS prefixes or transpiling nascent JavaScript features for maximum cross-browser reach, and so on.
-2. Use a browser automation system like [Selenium](https://www.selenium.dev/) to run specific tests on installed browsers and return results, alerting you to failures in browsers as they crop up. Commercial cross-browser testing apps like [Sauce Labs](https://saucelabs.com/) and [BrowserStack](https://www.browserstack.com/) are based on Selenium, but allow you to access their set up remotely using an interface, saving you the hassle of setting up your own testing system.
+2. Use a browser automation system like [Selenium](https://www.selenium.dev/) to run specific tests on installed browsers and return results, alerting you to failures in browsers as they crop up. Commercial cross-browser testing apps like [Sauce Labs](https://saucelabs.com/) and [BrowserStack](https://www.browserstack.com/) are based on Selenium, but allow you to access their setup remotely using an interface, saving you the hassle of setting up your own testing system.
 
 We will look at how to set up your own Selenium-based testing system in the next article. In this article, we'll look at how to set up a task runner, and use the basic functionality of commercial systems like the ones mentioned above.
 
 > [!NOTE]
-> The above two categories are not mutually exclusive. It is possible to set up a task runner to access a service like Sauce Labs, or LambdaTest via an API, run cross browser tests, and return results. We will look at this below as well.
+> The above two categories are not mutually exclusive. It is possible to set up a task runner to access a service like Sauce Labs via an API, run cross browser tests, and return results. We will look at this below as well.
 
 ## Using a task runner to automate testing tools
 
@@ -51,7 +51,7 @@ As we said above, you can drastically speed up common tasks such as linting and 
 Most tools these days are based on {{Glossary("Node.js")}}, so you'll need to install it along with its counterpart package manager, [`npm`](https://www.npmjs.com/):
 
 1. The easiest way to install and update Node.js and `npm` is via a node version manager: Follow the instructions at [Installing Node](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment#installing_node) to do so.
-2. Make sure to [test that your installation was successful](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment#testing_your_nodejs_and_npm_installation) before continuing.
+2. Make sure to [test that your installation was successful](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment#testing_your_node.js_and_npm_installation) before continuing.
 3. If you previously installed Node.js/`npm`, you should update them to their latest versions. This can be done by using the node version manager to install the latest LTS versions (refer again to the linked instructions above).
 
 To start using Node/npm-based packages on your projects, you need to set up your project directories as npm projects. This is easy to do.
@@ -189,7 +189,8 @@ To use each plugin, you need to first install it via npm, then require any depen
    npm install --save-dev gulp-htmltidy
    ```
 
-   > **Note:** `--save-dev` adds the package as a dependency to your project. If you look in your project's `package.json` file, you'll see an entry for it in the `devDependencies` property.
+   > [!NOTE]
+   > `--save-dev` adds the package as a dependency to your project. If you look in your project's `package.json` file, you'll see an entry for it in the `devDependencies` property.
 
 2. Add the following dependency to `gulpfile.mjs`:
 
@@ -256,9 +257,9 @@ In the input version of the file, you may have noticed that we put an empty {{ht
 4. Add the following property to `package.json`:
 
    ```json
-   "browserslist": [
-     "last 5 versions"
-   ]
+   {
+     "browserslist": ["last 5 versions"]
+   }
    ```
 
 5. Change the default task to:
@@ -368,7 +369,9 @@ To get started:
 
 #### The basics: Manual tests
 
-The BrowserStack Live dashboard allows you to choose what device and browser you want to test on — platforms on the left, devices on the right. Select a device to see the choice of browsers available on that device.
+The BrowserStack Live dashboard allows you to choose the platform, device and browser you want to test on.
+For desktop testing, you select the operating system and browser directly.
+For mobile devices, you choose the mobile operating system, device, and then you can select a browser for your device-browser combination.
 
 ![Test Choices](browserstack-test-choices-sized.png)
 
@@ -376,11 +379,7 @@ Clicking on one of those browser icons will load up your choice of platform, dev
 
 ![Test Devices](browserstack-test-device-sized.png)
 
-You can enter URLs into the address bar, scroll up and down by dragging with the mouse, and use appropriate gestures (for example, pinch/zoom, two fingers to scroll) on the touchpads of supporting devices like MacBooks. Not all features are available on all devices.
-
-You'll also see a menu that allows you to control the session.
-
-![Test Menu](browserstack-test-menu-sized.png)
+You can enter URLs into the address bar, scroll up and down by dragging with the mouse, and use appropriate gestures (for example, pinch/zoom, two fingers to scroll) on the touchpads of supporting devices like MacBooks.
 
 The available features vary depending on what browser is loaded, and can include controls for:
 
@@ -394,6 +393,10 @@ The available features vary depending on what browser is loaded, and can include
 - Changing reported location
 - Throttling the network
 - Accessing screen readers
+
+![Test Menu](browserstack-test-menu-sized.png)
+
+For more information, see the [BrowserStack Live](https://www.browserstack.com/docs/live) documentation.
 
 #### Advanced: The BrowserStack API
 
@@ -577,26 +580,26 @@ Let's get started with a Sauce Labs Trial.
 1. Create a Sauce Labs trial account.
 2. Sign in. This should happen automatically after you verify your email address.
 
-#### The basics: Manual tests
+#### The basics: Manual testing
 
-The [Sauce Labs dashboard](https://app.saucelabs.com/dashboard/manual) has a lot of options available on it. For now, make sure you are on the _Manual Tests_ tab.
+The [Sauce Labs dashboard](https://app.saucelabs.com/dashboard/manual) has a lot of options available on it.
+When signed in, follow the 'Getting started' guide on the top-left of the page:
 
-1. Click _Start a new manual session_.
-2. In the next screen, type in the URL of a page you want to test (use <https://mdn.github.io/learning-area/javascript/building-blocks/events/show-video-box-fixed.html>, for example), then choose a browser/OS combination you want to test by using the different buttons and lists. There is a lot of choice, as you'll see!![select sauce manual session](sauce-manual-session.png)
-3. When you click Start session, a loading screen will then appear, which spins up a virtual machine running the combination you chose.
-4. When loading has finished, you can then start to remotely test the website running in the chosen browser.![Sauce test running](sauce-test-running.png)
-5. From here you can see the layout as it would look in the browser you are testing, move the mouse around and try clicking buttons, etc. The top menu allows you to:
+1. In "Run your first test", click _Desktop browser_.
+2. In the next screen, type in the URL of a page you want to test (like this page, for example), then choose a browser/OS combination you want to test by using the different buttons and lists.
+   There is a lot to choose from, as you'll see!
+   ![select sauce manual session](sauce-manual-session.png)
+3. When you start testing, a loading screen will appear, and an environment spins up running the device/browser combination you chose.
+   You can then start to remotely test the website running in the chosen browser.
 
-   - Stop the session
-   - Give someone else a URL so they can observe the test remotely.
-   - Copy text/notes to a remote clipboard.
-   - Take a screenshot.
-   - Test in full screen mode.
+You can do quite a lot at this point, like share a test URL so someone else can observe the test remotely, copy text/notes to a remote clipboard, take a screenshot, test in full screen mode, and more.
 
-Once you stop the session, you'll return to the Manual Tests tab, where you'll see an entry for each of the previous manual sessions you started. Clicking on one of these entries shows more data for the session. In here you can download any screenshots you took, watch a video of the session, view data logs, and more.
+Once you stop the session, you'll return to the _Live_ tab, where you'll see an entry for each of the previous manual sessions you started.
+Clicking on one of these entries shows more data for the session.
+In here, you can download any screenshots you took, watch a video of the session, view data logs, and more.
+This is already very useful, and a lot more convenient than having to set up multiple emulators and virtual machines by yourself.
 
-> [!NOTE]
-> This is already very useful, and way more convenient than having to set up all these emulators and virtual machines by yourself.
+For more information, see the [Sauce Labs documentation](https://docs.saucelabs.com/).
 
 #### Advanced: The Sauce Labs API
 
@@ -667,7 +670,6 @@ The [TestingBot dashboard](https://testingbot.com/members) lists the various opt
 3. When you click _Start Browser_, a loading screen will then appear, which spins up a virtual machine running the combination you chose.
 4. When loading has finished, you can then start to remotely test the website running in the chosen browser.
 5. From here you can see the layout as it would look in the browser you are testing, move the mouse around and try clicking buttons, etc. The side menu allows you to:
-
    - Stop the session
    - Change the screen resolution
    - Copy text/notes to a remote clipboard
@@ -680,9 +682,9 @@ Once you stop the session, you'll return to the _Live Web Testing_ page, where y
 
 TestingBot has a [restful API](https://testingbot.com/support/api) that allows you to programmatically retrieve details of your account and existing tests, and annotate tests with further details, such as their pass/fail state which isn't recordable by manual testing alone.
 
-TestingBot has several API clients you can use to interact with the API, including clients for NodeJS, Python, Ruby, Java and PHP.
+TestingBot has several API clients you can use to interact with the API, including clients for Node.js, Python, Ruby, Java and PHP.
 
-Below is an example on how to interact with the TestingBot API with the NodeJS client [testingbot-api](https://www.npmjs.com/package/testingbot-api).
+Below is an example on how to interact with the TestingBot API with the Node.js client [testingbot-api](https://www.npmjs.com/package/testingbot-api).
 
 1. First, set up a new npm project to test this out, as detailed in [Setting up Node and npm](#setting_up_node_and_npm). Use a different directory name than before, like `tb-test` for example.
 2. Install the Node TestingBot wrapper using the following command:

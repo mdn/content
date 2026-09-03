@@ -14,13 +14,7 @@ In the challenge for this module, we present to you a simple site with a number 
 
 To start this challenge, you should go and grab the [ZIP containing the files that comprise the example](https://raw.githubusercontent.com/mdn/learning-area/main/accessibility/assessment-start/assessment-files.zip). Decompress the contents into a new directory somewhere on your local computer.
 
-Alternatively, you could use an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
-
-The finished challenge site should look like so:
-
-![Screenshot of the finished challenge site with good color contrast. The search input has placeholder text and a submit button that reads go, but no visible label.](assessment-site-finished.png)
-
-You will see some differences/issues with the display of the starting state of the challenge — this is mainly due to the differences in the markup, which in turn cause some styling issues as the CSS is not applied properly. Don't worry — you'll be fixing these problems in the upcoming sections!
+Alternatively, you could use an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 
 > [!NOTE]
 > If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
@@ -67,5 +61,18 @@ The data table is not currently very accessible — it is hard for screen reader
 ### Other considerations?
 
 Can you list two more ideas for improvements that would make the website more accessible?
+
+## Example
+
+The finished challenge site should look something like this:
+
+![Screenshot of the finished challenge site with good color contrast. The search input has placeholder text and a submit button that reads go, but no visible label.](assessment-site-finished.png)
+
+<details>
+<summary>Click here for the solution</summary>
+
+See our [finished example code](https://github.com/mdn/learning-area/tree/main/accessibility/assessment-finished).
+
+</details>
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/Mobile","Learn_web_development/Core/Design_for_developers", "Learn_web_development/Core/Accessibility")}}

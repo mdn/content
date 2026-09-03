@@ -4,9 +4,8 @@ short-title: for()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/for
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Symbol.for
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Symbol.for()`** static method searches for existing symbols
 in a runtime-wide symbol registry with the given key and returns it if found. Otherwise

@@ -83,7 +83,7 @@ This example shows how to use a paint `Worklet` in a stylesheet, including the s
 
 ```css
 textarea {
-  background-image: url(checkerboard);
+  background-image: url("checkerboard.png"); /* Fallback */
   background-image: paint(checkerboard);
 }
 ```

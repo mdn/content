@@ -3,9 +3,8 @@ title: tabs.onCreated
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onCreated
 page-type: webextension-api-event
 browser-compat: webextensions.api.tabs.onCreated
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a tab is created.
 
@@ -33,9 +32,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. Details of the tab that was created.
 

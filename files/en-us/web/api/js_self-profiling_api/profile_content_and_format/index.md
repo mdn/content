@@ -54,9 +54,7 @@ Although the section above describes the _logical_ structure of a profile, the f
 The profile object contains four properties, all arrays:
 
 - `frames`
-
   - : An array of objects, each containing information about a stack frame:
-
     - `column`: the column number of the function definition.
     - `line`: the line number of the function definition.
     - `name`: the name of the function.

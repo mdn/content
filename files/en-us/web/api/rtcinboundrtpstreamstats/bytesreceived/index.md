@@ -8,22 +8,19 @@ browser-compat: api.RTCStatsReport.type_inbound-rtp.bytesReceived
 
 {{APIRef("WebRTC")}}
 
-The {{domxref("RTCInboundRtpStreamStats")}} dictionary's
-**`bytesReceived`** property is an integer value which
-indicates the total number of bytes received so far from this synchronization source
-(SSRC).
+The **`bytesReceived`** property of the {{domxref("RTCInboundRtpStreamStats")}} dictionary indicates the total number of bytes received so far from this synchronization source (SSRC), not including header and padding bytes.
 
-## Value
-
-An unsigned integer value indicating the total number of bytes received so far on this
-RTP stream, not including header and padding bytes. This value can be used to calculate
-an approximation of the average media data rate:
+The value can be used to calculate an approximation of the average media data rate:
 
 ```js
 avgDataRate = rtcInboundRtpStreamStats.bytesReceived / elapsedTime;
 ```
 
-This value gets reset to zero if the sender's SSRC identifier changes for any reason.
+The property value is reset to zero if the sender's SSRC identifier changes for any reason.
+
+## Value
+
+A positive integer.
 
 ## Specifications
 

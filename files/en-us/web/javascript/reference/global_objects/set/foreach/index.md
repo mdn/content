@@ -4,9 +4,8 @@ short-title: forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Set/forEach
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.forEach
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`forEach()`** method of {{jsxref("Set")}} instances executes a provided function once
 for each value in this set, in insertion order.
@@ -64,7 +63,7 @@ it is executed for values which are present but have the value `undefined`.
 
 There are no keys in `Set` objects, however, so the first two arguments are
 both **values** contained in the {{jsxref("Set")}}. This is to make it
-consistent with other `forEach()` methods for {{jsxref("Map/foreach", "Map")}} and {{jsxref("Array/forEach", "Array")}}.
+consistent with other `forEach()` methods for {{jsxref("Map/forEach", "Map")}} and {{jsxref("Array/forEach", "Array")}}.
 
 If a `thisArg` parameter is provided to `forEach()`,
 it will be passed to `callback` when invoked, for use as its

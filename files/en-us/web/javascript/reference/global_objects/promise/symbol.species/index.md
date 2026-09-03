@@ -4,9 +4,8 @@ short-title: "[Symbol.species]"
 slug: Web/JavaScript/Reference/Global_Objects/Promise/Symbol.species
 page-type: javascript-static-accessor-property
 browser-compat: javascript.builtins.Promise.@@species
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Promise[Symbol.species]`** static accessor property returns the constructor used to construct return values from promise methods.
 

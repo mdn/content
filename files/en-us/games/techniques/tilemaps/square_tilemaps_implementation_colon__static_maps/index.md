@@ -2,14 +2,13 @@
 title: "Square tilemaps implementation: Static maps"
 slug: Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Static_maps
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 This article covers how to implement static square tilemaps using the [Canvas API](/en-US/docs/Web/API/Canvas_API).
 
 > [!NOTE]
-> When writing this article, we assumed previous reader knowledge of canvas basics such as how get a 2D canvas context, load images, etc., which is all explained in the [Canvas API tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial), as well as the basic information included in our [Tilemaps](/en-US/docs/Games/Techniques/Tilemaps) introduction article.
+> When writing this article, we assumed previous reader knowledge of canvas basics such as how to get a 2D canvas context, load images, etc., which is all explained in the [Canvas API tutorial](/en-US/docs/Web/API/Canvas_API/Tutorial), as well as the basic information included in our [Tilemaps](/en-US/docs/Games/Techniques/Tilemaps) introduction article.
 
 ## The tile atlas
 

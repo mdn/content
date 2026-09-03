@@ -2,13 +2,9 @@
 title: method
 slug: Web/SVG/Reference/Attribute/method
 page-type: svg-attribute
-status:
-  - experimental
-spec-urls: https://svgwg.org/svg2-draft/text.html#TextPathElementMethodAttribute
+spec-urls: https://w3c.github.io/svgwg/svg2-draft/text.html#TextPathElementMethodAttribute
 sidebar: svgref
 ---
-
-{{SeeCompatTable}}
 
 The **`method`** attribute indicates the method by which text should be rendered along the path of a {{SVGElement("textPath")}} element.
 
@@ -45,3 +41,7 @@ For {{SVGElement("textPath")}}, `method` indicates the method by which text shou
 ## Specifications
 
 {{Specifications}}
+
+## See also
+
+- {{domxref("SVGTextPathElement.method")}}

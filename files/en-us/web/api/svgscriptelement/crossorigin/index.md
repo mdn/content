@@ -1,0 +1,57 @@
+---
+title: "SVGScriptElement: crossOrigin property"
+short-title: crossOrigin
+slug: Web/API/SVGScriptElement/crossOrigin
+page-type: web-api-instance-property
+browser-compat: api.SVGScriptElement.crossOrigin
+---
+
+{{APIRef("SVG")}}
+
+The **`crossOrigin`** property of the {{domxref("SVGScriptElement")}} interface reflects the {{Glossary("CORS", "Cross-Origin Resource Sharing")}} settings for the `<script>` element. For classic scripts from other [origins](/en-US/docs/Glossary/Origin), this controls whether full error information will be exposed. For module scripts, it controls the script itself and any scripts it imports. See [CORS settings attributes](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) for details.
+
+## Value
+
+A string containing a keyword specifying the CORS mode to use when fetching the resource. Possible values are:
+
+- `anonymous` or an empty string (`""`)
+  - : Requests sent by the {{domxref("SVGScriptElement")}} will use the `cors` {{domxref("Request.mode")}} and the `same-origin` {{domxref("Request.credentials")}} mode. This means that CORS is enabled and credentials are sent _if_ the resource is fetched from the same origin from which the document was loaded.
+- `use-credentials`
+  - : Requests sent by the {{domxref("SVGScriptElement")}} will use the `cors` {{domxref("Request.mode")}} and the `include` {{domxref("Request.credentials")}} mode. All resources requested by the element will use CORS, regardless of which domain the fetch is from.
+
+If the `crossOrigin` property is specified with any other value, it is the same as specifying it as `anonymous`.
+
+If the `crossOrigin` property is not specified, the resource is fetched without CORS (equivalent to using the `no-cors` {{domxref("Request.mode")}} and the `same-origin` {{domxref("Request.credentials")}} mode).
+
+## Examples
+
+### Accessing the `crossOrigin` property
+
+```html
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+  <script
+    id="myScript"
+    href="https://example.com/script.js"
+    crossorigin="anonymous"></script>
+</svg>
+```
+
+```js
+const scriptElement = document.getElementById("myScript");
+console.log(scriptElement.crossOrigin); // Output: "anonymous"
+```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{domxref("HTMLScriptElement.crossOrigin")}}
+- {{domxref("HTMLImageElement.crossOrigin")}}
+- {{domxref("HTMLLinkElement.crossOrigin")}}
+- {{domxref("HTMLMediaElement.crossOrigin")}}

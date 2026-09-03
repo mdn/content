@@ -3,13 +3,11 @@ title: Cross-Origin Resource Policy (CORP)
 slug: Web/HTTP/Guides/Cross-Origin_Resource_Policy
 page-type: guide
 browser-compat: http.headers.Cross-Origin-Resource-Policy
+sidebar: http
 ---
 
-{{HTTPSidebar}}
-
 **Cross-Origin Resource Policy** is a policy set by the [`Cross-Origin-Resource-Policy` HTTP header](/en-US/docs/Web/HTTP/Reference/Headers/Cross-Origin-Resource-Policy) that lets websites and applications opt in to protection against certain requests from other origins (such as those issued with elements like `<script>` and `<img>`), to mitigate speculative side-channel attacks, like [Spectre](<https://en.wikipedia.org/wiki/Spectre_(security_vulnerability)>), as well as Cross-Site Script Inclusion attacks.
-
-CORP is an additional layer of protection beyond the default {{Glossary("same-origin policy")}}. Cross-Origin Resource Policy complements [Cross-Origin Read Blocking](https://fetch.spec.whatwg.org/#corb) (CORB), which is a mechanism to prevent some cross-origin reads by default.
+CORP is an additional layer of protection beyond the default {{Glossary("same-origin policy")}}.
 
 > [!NOTE]
 > The policy is only effective for [`no-cors`](https://fetch.spec.whatwg.org/#concept-request-mode) requests, which are issued by default for CORS-safelisted methods/headers.
@@ -24,7 +22,6 @@ As this policy is expressed via a _[response header](/en-US/docs/Glossary/Respon
 Web applications set a Cross-Origin Resource Policy via the {{HTTPHeader("Cross-Origin-Resource-Policy")}} HTTP response header, which accepts one of three values:
 
 - `same-site`
-
   - : Only requests from the same _{{Glossary("Site")}}_ can read the resource.
 
     > [!WARNING]
@@ -47,13 +44,11 @@ The {{HTTPHeader("Cross-Origin-Embedder-Policy")}} HTTP response header, when us
 
 ## History
 
-The concept was originally proposed in 2012 (as `From-Origin`), but [resurrected](https://github.com/whatwg/fetch/issues/687) in Q2 of 2018 and implemented in Safari and Chromium.
+The concept was originally proposed in 2012 (as a `From-Origin` header), but [resurrected](https://github.com/whatwg/fetch/issues/687) in Q2 of 2018 and implemented in Safari and Chromium.
 
 In early 2018, two side-channel hardware vulnerabilities known as _Meltdown_ and _Spectre_ were disclosed. These vulnerabilities allowed sensitive data disclosure due to a race condition which arose as part of speculative execution functionality, designed to improve performance.
 
-In response, Chromium shipped [Cross-Origin Read Blocking](https://fetch.spec.whatwg.org/#corb), which automatically protects certain resources (of `Content-Type` HTML, JSON and XML) against cross-origin reads. If the application does not serve a [`no-sniff` directive](/en-US/docs/Web/HTTP/Reference/Headers/X-Content-Type-Options), Chromium will attempt to guess the `Content-Type` and apply the protection anyway.
-
-`Cross-Origin-Resource-Policy` is an opt-in response header which can protect _any_ resource; there is no need for browsers to sniff MIME types.
+Cross-Origin Resource Policy was developed as a direct way for sites to block unwanted `no-cors` cross-origin requests. This is an effective defense against Spectre-like attacks, as the browser strips the body from given responses before an attacker can access them.
 
 ## Specifications
 

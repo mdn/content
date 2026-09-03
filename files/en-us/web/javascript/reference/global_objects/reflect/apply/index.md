@@ -4,9 +4,8 @@ short-title: apply()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/apply
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.apply
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Reflect.apply()`** static method calls a target function with arguments as specified.
 

@@ -8,20 +8,13 @@ browser-compat: api.DataTransfer.setDragImage
 
 {{APIRef("HTML Drag and Drop API")}}
 
-When a drag occurs, a translucent image is generated from the drag target (the element
-the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event is fired at), and follows the mouse pointer during the
-drag. This image is created automatically, so you do not need to create it yourself.
-However, if a custom image is desired, the
-**`DataTransfer.setDragImage()`** method can be used to set the
-custom image to be used. The image will typically be an {{HTMLElement("img")}} element
-but it can also be a {{HTMLElement("canvas")}} or any other visible element.
+The **`setDragImage()`** method of the {{domxref("DataTransfer")}} interface sets a custom image to use as drag feedback. The image will typically be an {{HTMLElement("img")}} element but it can also be a {{HTMLElement("canvas")}} or any other visible element.
 
-The method's `x` and `y` coordinates define how the image should
-appear relative to the mouse pointer. These coordinates define the offset into the image
-where the mouse cursor should be. For instance, to display the image so that the pointer
-is at its center, use values that are half the width and height of the image.
+When a drag occurs, a translucent image is generated from the drag target (the element the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event is fired at), and follows the mouse pointer during the drag. This image is created automatically, so you do not need to create it yourself. Use `setDragImage()` to replace it with a custom image.
 
-This method must be called in the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event handler.
+The method's `x` and `y` coordinates define how the image should appear relative to the mouse pointer. These coordinates define the offset into the image where the mouse cursor should be. For instance, to display the image so that the pointer is at its center, use values that are half the width and height of the image.
+
+During a drag operation, this method can only be used in the handler for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event, because that's the only time the drag operation's data store is writable. Calling it from any other drag event does nothing. See [Modifying the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#modifying_the_drag_data_store) for details.
 
 ## Syntax
 
@@ -32,7 +25,6 @@ setDragImage(imgElement, xOffset, yOffset)
 ### Parameters
 
 - `imgElement`
-
   - : An image {{domxref("Element")}} element to use for the drag feedback image.
 
     If {{domxref("Element")}} is an img element, then set the drag data store bitmap to
@@ -53,12 +45,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-This example shows how to use the `setDragImage()` method. Note the example
-refers to an image file named `example.gif`. If that file is present, it will
-be used as the drag image and if that file is not present, the browser will use its
-default drag image.
-
-[demo](https://codepen.io/webgeeker/full/KBzrxE/)
+### Using setDragImage()
 
 ```html
 <div>
@@ -88,31 +75,30 @@ div {
 const source = document.getElementById("source");
 const target = document.getElementById("target");
 
+// Create an image and use it for the drag image
+// Use the image URL that you desire
+const img = new Image();
+img.src = "/shared-assets/images/examples/favicon32.png";
+
 source.addEventListener("dragstart", (ev) => {
-  console.log("dragStart");
   // Set the drag's format and data. Use the event target's id for the data
   ev.dataTransfer.setData("text/plain", ev.target.id);
-  // Create an image and use it for the drag image
-  // NOTE: change "example.gif" to an existing image or the image will not
-  // be created and the default drag image will be used.
-  const img = new Image();
-  img.src = "example.gif";
   ev.dataTransfer.setDragImage(img, 10, 10);
 });
 
 target.addEventListener("dragover", (ev) => {
-  console.log("dragOver");
   ev.preventDefault();
 });
 
 target.addEventListener("drop", (ev) => {
-  console.log("Drop");
   ev.preventDefault();
   // Get the data, which is the id of the drop target
   const data = ev.dataTransfer.getData("text");
   ev.target.appendChild(document.getElementById(data));
 });
 ```
+
+{{EmbedLiveSample("Using setDragImage", "", 300)}}
 
 ## Specifications
 
@@ -126,5 +112,4 @@ target.addEventListener("drop", (ev) => {
 
 - [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)
+- [Working with the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)

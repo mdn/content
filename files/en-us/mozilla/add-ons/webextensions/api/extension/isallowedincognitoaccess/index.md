@@ -3,9 +3,8 @@ title: extension.isAllowedIncognitoAccess()
 slug: Mozilla/Add-ons/WebExtensions/API/extension/isAllowedIncognitoAccess
 page-type: webextension-api-function
 browser-compat: webextensions.api.extension.isAllowedIncognitoAccess
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Check whether the extension is allowed access to tabs opened in "private browsing" mode.
 

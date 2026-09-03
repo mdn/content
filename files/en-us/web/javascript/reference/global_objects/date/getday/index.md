@@ -4,9 +4,8 @@ short-title: getDay()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getDay
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getDay
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`getDay()`** method of {{jsxref("Date")}} instances returns the day of the week for this date according to local time, where 0 represents Sunday. For the day of the month, see {{jsxref("Date.prototype.getDate()")}}.
 

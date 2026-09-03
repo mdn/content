@@ -3,9 +3,8 @@ title: clipboard.setImageData()
 slug: Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData
 page-type: webextension-api-function
 browser-compat: webextensions.api.clipboard.setImageData
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Copies an image to the clipboard. The image is re-encoded before it is written to the clipboard. If the image is invalid, the clipboard is not modified.
 
@@ -37,10 +36,6 @@ browser.clipboard.setImageData(imageData, imageType)
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be resolved with no arguments if the operation succeeded, or rejected if there was an error (for example, because the data did not represent a valid image).
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Copy a remote image:
@@ -66,6 +61,10 @@ fetch(browser.runtime.getURL("image.png"))
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.clipboard`](https://developer.chrome.com/docs/apps/reference/clipboard) API.

@@ -2,9 +2,8 @@
 title: Base64
 slug: Glossary/Base64
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Base64** is a group of similar [binary-to-text encoding](https://en.wikipedia.org/wiki/Binary-to-text_encoding) schemes that represent binary data in an {{glossary("ASCII")}} string format by transforming it into a radix-64 representation. The term _Base64_ originates from a specific [MIME content transfer encoding](https://en.wikipedia.org/wiki/MIME#Content-Transfer-Encoding).
 
@@ -57,7 +56,7 @@ Browsers also natively provide two JavaScript functions for decoding and encodin
 > [!NOTE]
 > Base64 is a binary encoding rather than a text encoding, but `btoa` and `atob` were added to the web platform before it supported binary data types. As a result, the two functions use strings to represent binary data, with the {{glossary("code point")}} of each character representing the value of each byte. This has led to a common misconception that `btoa` can be used to encode arbitrary text data — for example, creating a Base64 `data:` URL of a text or HTML document.
 >
-> However, the byte-to-code-point correspondence only reliably holds true for code points up to `0x7f`. Furthermore, code points over `0xff` will cause `btoa` to throw an error due to exceeding the maximum value for 1 byte. The next section details how to work around this limitation when encoding arbitrary Unicode text.
+> However, the byte-to-code-point correspondence only reliably holds true for code points up to `0x7f`. Furthermore, code points over `0xff` will cause `btoa` to throw an error due to exceeding the maximum value for 1 byte. The {{domxref("Window.btoa()")}} "[Unicode strings](/en-US/docs/Web/API/Window/btoa#unicode_strings)" section details how to work around this limitation when encoding arbitrary Unicode text.
 
 ## See Also
 

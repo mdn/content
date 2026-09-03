@@ -2,9 +2,8 @@
 title: Deprecated and obsolete features
 slug: Web/JavaScript/Reference/Deprecated_and_obsolete_features
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar("More")}}
 
 This page lists features of JavaScript that are deprecated (that is, still available but planned for removal) and obsolete (that is, no longer usable).
 
@@ -147,18 +146,18 @@ The `valueOf()` method is no longer specialized for `RegExp`. It uses {{jsxref("
 
 ### Object
 
-| Property                     | Description                                                                                                | Alternative                                                                                                                                                                          |
-| ---------------------------- | ---------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `__count__`                  | Returns the number of enumerable properties directly on a user-defined object.                             | [`Object.keys()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)                                                                                                   |
-| `__parent__`                 | Points to an object's context.                                                                             | No direct replacement                                                                                                                                                                |
-| `__iterator__`               | Used with [legacy iterators](#legacy_generator_and_iterator).                                              | [`Symbol.iterator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) and the new [iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) |
-| `__noSuchMethod__`           | A method called when a non-existent property is called as method.                                          | {{jsxref("Proxy")}}                                                                                                                                                                  |
-| `Object.prototype.eval()`    | Evaluates a string of JavaScript code in the context of the specified object.                              | No direct replacement                                                                                                                                                                |
-| `Object.observe()`           | Asynchronously observing the changes to an object.                                                         | {{jsxref("Proxy")}}                                                                                                                                                                  |
-| `Object.unobserve()`         | Remove observers.                                                                                          | {{jsxref("Proxy")}}                                                                                                                                                                  |
-| `Object.getNotifier()`       | Create a notifier object that allows to synthetically trigger a change observable with `Object.observe()`. | No direct replacement                                                                                                                                                                |
-| `Object.prototype.watch()`   | Attach a handler callback to a property that gets called when the property is assigned.                    | {{jsxref("Proxy")}}                                                                                                                                                                  |
-| `Object.prototype.unwatch()` | Remove watch handlers on a property.                                                                       | {{jsxref("Proxy")}}                                                                                                                                                                  |
+| Property                     | Description                                                                                                    | Alternative                                                                                                                                                                          |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `__count__`                  | Returns the number of enumerable properties directly available on a user-defined object.                       | [`Object.keys()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)                                                                                                   |
+| `__parent__`                 | Points to an object's context.                                                                                 | No direct replacement                                                                                                                                                                |
+| `__iterator__`               | Used with [legacy iterators](#legacy_generator_and_iterator).                                                  | [`Symbol.iterator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) and the new [iteration protocols](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) |
+| `__noSuchMethod__`           | A method called when a non-existent property is called as method.                                              | {{jsxref("Proxy")}}                                                                                                                                                                  |
+| `Object.prototype.eval()`    | Evaluates a string of JavaScript code in the context of the specified object.                                  | No direct replacement                                                                                                                                                                |
+| `Object.observe()`           | Asynchronously observing the changes to an object.                                                             | {{jsxref("Proxy")}}                                                                                                                                                                  |
+| `Object.unobserve()`         | Remove observers.                                                                                              | {{jsxref("Proxy")}}                                                                                                                                                                  |
+| `Object.getNotifier()`       | Create a notifier object that allows you to synthetically trigger a change observable with `Object.observe()`. | No direct replacement                                                                                                                                                                |
+| `Object.prototype.watch()`   | Attach a handler callback to a property that gets called when the property is assigned.                        | {{jsxref("Proxy")}}                                                                                                                                                                  |
+| `Object.prototype.unwatch()` | Remove watch handlers on a property.                                                                           | {{jsxref("Proxy")}}                                                                                                                                                                  |
 
 ### String
 
@@ -228,7 +227,7 @@ Array comprehensions and generator comprehensions are removed.
 (for (x of iterable) for (y of iterable) x + y)
 ```
 
-Firefox, prior to version 26, implemented another iterator protocol that is similar to the standard [Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). An object is an legacy iterator when it implements a `next()` method, which produces a value on each call and throws a `StopIteration` object at the end of iteration. This legacy iterator protocol differs from the standard iterator protocol:
+Firefox, prior to version 26, implemented another iterator protocol that is similar to the standard [Iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols). An object is a legacy iterator when it implements a `next()` method, which produces a value on each call and throws a `StopIteration` object at the end of iteration. This legacy iterator protocol differs from the standard iterator protocol:
 
 - The value was returned directly as the return value of calls to `next()`, instead of the `value` property of the `IteratorResult` object.
 - Iteration termination was expressed by throwing a `StopIteration` object, instead of through the `done` property of the `IteratorResult` object.

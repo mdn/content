@@ -4,9 +4,8 @@ short-title: f16round()
 slug: Web/JavaScript/Reference/Global_Objects/Math/f16round
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.f16round
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.f16round()`** static method returns the nearest [16-bit half precision](https://en.wikipedia.org/wiki/Half-precision_floating-point_format) float representation of a number.
 

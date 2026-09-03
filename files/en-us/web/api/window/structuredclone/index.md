@@ -8,10 +8,15 @@ browser-compat: api.structuredClone
 
 {{APIRef("HTML DOM")}}
 
-The **`structuredClone()`** method of the {{domxref("Window")}} interface creates a [deep clone](/en-US/docs/Glossary/Deep_copy) of a given value using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+The **`structuredClone()`** method of the {{domxref("Window")}} interface creates a [deep clone](/en-US/docs/Glossary/Deep_copy) of a value using the [structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
 
 The method also allows [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) in the original value to be _transferred_ rather than cloned to the new object.
 Transferred objects are detached from the original object and attached to the new object; they are no longer accessible in the original object.
+
+> [!NOTE]
+> Up to Firefox 148, `structuredClone.call(iframe.contentWindow)` incorrectly created objects in the caller's [realm](/en-US/docs/Web/JavaScript/Reference/Execution_model#realms) instead of the iframe's realm. In Firefox 149, the implementation changed to instantiate objects in the `this` realm, so the method's behavior more closely matches the specification.
+>
+> Across all browsers, a direct call `structuredClone(value)` clones values in the caller's realm. From Firefox 149, [web extension content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) can call `window.structuredClone(value)` to clone values in the page's realm and `globalThis.structuredClone(value)` to clone into the realm of the content script. For more information, see [`structuredClone` in content scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts#structuredclone).
 
 ## Syntax
 
@@ -66,8 +71,8 @@ console.assert(clone.itself === clone); // and the circular reference is preserv
 > To avoid the buffer being modified before the data is saved, you can clone the buffer and validate that data.
 > If you also _transfer_ the data, any attempts to modify the original buffer will fail, preventing its accidental misuse.
 
-The following code shows how to clone an array and transfer its underlying resources to the new object.
-On return, the original `uInt8Array.buffer` will be cleared.
+This code shows how to clone an array and transfer its underlying resources to the new object.
+On return, the original `uInt8Array.buffer` is cleared.
 
 ```js
 // 16MB = 1024 * 1024 * 16
@@ -80,7 +85,7 @@ console.log(uInt8Array.byteLength); // 0
 ```
 
 You can clone any number of objects and transfer any subset of those objects.
-For example, the code below would transfer `arrayBuffer1` from the passed in value, but not `arrayBuffer2`.
+For example, this code transfers `arrayBuffer1` from the passed in value, but not `arrayBuffer2`.
 
 ```js
 const transferred = structuredClone(
@@ -111,18 +116,18 @@ console.log(mushrooms1.amanita); // ["muscaria"]
 
 ### Transferring an object
 
-In this example we create an {{jsxref("ArrayBuffer")}} and then clone the object it is a member of, transferring the buffer. We can use the buffer in the cloned object, but if we try to use the original buffer we will get an exception.
+In this example we create an {{jsxref("ArrayBuffer")}} and then clone the object it is a member of, transferring the buffer. We can use the buffer in the cloned object, but if we try to use the original buffer we get an exception.
 
 ```js
 // Create an ArrayBuffer with a size in bytes
-const buffer1 = new ArrayBuffer(16);
+const buffer = new ArrayBuffer(16);
 
 const object1 = {
-  buffer: buffer1,
+  buffer,
 };
 
 // Clone the object containing the buffer, and transfer it
-const object2 = structuredClone(object1, { transfer: [buffer1] });
+const object2 = structuredClone(object1, { transfer: [buffer] });
 
 // Create an array from the cloned buffer
 const int32View2 = new Int32Array(object2.buffer);

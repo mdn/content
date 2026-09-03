@@ -1,11 +1,11 @@
 ---
-title: "<cite>: The Citation element"
+title: "`<cite>` HTML citation element"
+short-title: <cite>
 slug: Web/HTML/Reference/Elements/cite
 page-type: html-element
 browser-compat: html.elements.cite
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<cite>`** [HTML](/en-US/docs/Web/HTML) element is used to mark up the title of a creative work. The reference may be in an abbreviated form according to context-appropriate conventions related to citation metadata.
 

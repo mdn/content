@@ -3,9 +3,8 @@ title: web_accessible_resources
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.web_accessible_resources
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -69,11 +68,11 @@ In Manifest V3, the `web_accessible_resources` key is an array of objects like t
   "web_accessible_resources": [
     {
       "resources": ["test1.png", "test2.png"],
-      "matches": ["https://web-accessible-resources-1.glitch.me/*"]
+      "matches": ["https://web-accessible-resources-1.example.com/*"]
     },
     {
       "resources": ["test3.png", "test4.png"],
-      "matches": ["https://web-accessible-resources-2.glitch.me/*"],
+      "matches": ["https://web-accessible-resources-2.example.com/*"],
       "use_dynamic_url": true
     }
   ]
@@ -155,10 +154,16 @@ To enable a web page to use an [`<img>`](/en-US/docs/Web/HTML/Reference/Elements
 "web_accessible_resources": ["images/my-image.png"]
 ```
 
-The file is then available using a URL like:
+The file is then available using a URL. This URL uses a browser-specific scheme:
+
+- Chrome and Chromium-based browsers use `chrome-extension://`.
+- Firefox uses `moz-extension://`.
+- Safari uses `safari-web-extension://` (WebKit uses `webkit-extension://`).
+
+For example, the resource URL in Firefox takes this form:
 
 ```plain
-moz-extension://<extension-UUID>/images/my-image.png"
+moz-extension://<extension-UUID>/images/my-image.png
 ```
 
 `<extension-UUID>` is **not** your extension's ID. This ID is randomly generated for every browser instance. This prevents websites from fingerprinting a browser by examining the extensions it has installed.
@@ -175,6 +180,14 @@ browser.runtime.getURL("images/my-image.png");
 ```
 
 This approach gives you the correct URL regardless of the browser your extension is running on.
+
+In Chrome, a static CSS file can use the `@@extension_id` message to construct a URL for an extension resource:
+
+```css
+body {
+  background-image: url("chrome-extension://__MSG_@@extension_id__/images/my-image.png");
+}
+```
 
 ### Wildcards
 

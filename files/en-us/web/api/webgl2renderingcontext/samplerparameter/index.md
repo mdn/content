@@ -24,9 +24,7 @@ samplerParameterf(sampler, pname, param)
 - `sampler`
   - : A {{domxref("WebGLSampler")}} object.
 - `pname`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying which parameter to set. Possible values:
-
     - `gl.TEXTURE_COMPARE_FUNC`
       - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the
         texture comparison function.

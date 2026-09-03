@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.MouseEvent.clientX
 ---
 
-{{APIRef("UI Events")}}
+{{APIRef("Pointer Events")}}
 
 The **`clientX`** read-only property of the {{domxref("MouseEvent")}} interface provides the horizontal coordinate within the application's {{glossary("viewport")}} at which the event occurred (as opposed to the coordinate within the page).
 
@@ -57,4 +57,4 @@ function logKey(e) {
 - {{ domxref("MouseEvent") }}
 - {{domxref("MouseEvent.clientY","clientY")}}
 - {{domxref("MouseEvent.screenX","screenX")}} / {{domxref("MouseEvent.screenY","screenY")}}
-- [Coordinate systems](/en-US/docs/Web/CSS/CSSOM_view/Coordinate_systems)
+- [Coordinate systems](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems)

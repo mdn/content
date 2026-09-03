@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.clearRect
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The
 **`CanvasRenderingContext2D.clearRect()`**
@@ -26,7 +26,7 @@ clearRect(x, y, width, height)
 ```
 
 The `clearRect()` method sets the pixels in a rectangular area to
-transparent black (`rgb(0 0 0 / 0%)`). The rectangle's top-left corner is at
+transparent. The rectangle's top-left corner is at
 `(x, y)`, and its size is specified by `width` and
 `height`.
 
@@ -82,7 +82,7 @@ const ctx = canvas.getContext("2d");
 
 // Draw yellow background
 ctx.beginPath();
-ctx.fillStyle = "#ff6";
+ctx.fillStyle = "#ffff66";
 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 // Draw blue triangle

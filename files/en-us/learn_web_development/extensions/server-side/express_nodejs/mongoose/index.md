@@ -33,11 +33,11 @@ Express apps can use many different databases, and there are several approaches 
 
 ### What databases can I use?
 
-_Express_ apps can use any database supported by _Node_ (_Express_ itself doesn't define any specific additional behavior/requirements for database management). There are [many popular options](https://expressjs.com/en/guide/database-integration.html), including PostgreSQL, MySQL, Redis, SQLite, and MongoDB.
+_Express_ apps can use any database supported by _Node_ (_Express_ itself doesn't define any specific additional behavior/requirements for database management). There are [many popular options](https://expressjs.com/en/guide/database-integration/), including PostgreSQL, MySQL, Redis, SQLite, and MongoDB.
 
 When choosing a database, you should consider things like time-to-productivity/learning curve, performance, ease of replication/backup, cost, community support, etc. While there is no single "best" database, almost any of the popular solutions should be more than acceptable for a small-to-medium-sized site like our Local Library.
 
-For more information on the options see [Database integration](https://expressjs.com/en/guide/database-integration.html) (Express docs).
+For more information on the options see [Database integration](https://expressjs.com/en/guide/database-integration/) (Express docs).
 
 ### What is the best way to interact with a database?
 
@@ -64,7 +64,7 @@ A few solutions that were popular at the time of writing are:
 - [Bookshelf](https://www.npmjs.com/package/bookshelf): Features both promise-based and traditional callback interfaces, providing transaction support, eager/nested-eager relation loading, polymorphic associations, and support for one-to-one, one-to-many, and many-to-many relations. Works with PostgreSQL, MySQL, and SQLite3.
 - [Objection](https://www.npmjs.com/package/objection): Makes it as easy as possible to use the full power of SQL and the underlying database engine (supports SQLite3, Postgres, and MySQL).
 - [Sequelize](https://www.npmjs.com/package/sequelize) is a promise-based ORM for Node.js and io.js. It supports the dialects PostgreSQL, MySQL, MariaDB, SQLite, and MSSQL and features solid transaction support, relations, read replication and more.
-- [Node ORM2](https://node-orm.readthedocs.io/en/latest/) is an Object Relationship Manager for NodeJS. It supports MySQL, SQLite, and Postgres, helping to work with the database using an object-oriented approach.
+- [Node ORM2](https://node-orm.readthedocs.io/en/latest/) is an Object Relationship Manager for Node.js. It supports MySQL, SQLite, and Postgres, helping to work with the database using an object-oriented approach.
 - [GraphQL](https://graphql.org/): Primarily a query language for restful APIs, GraphQL is very popular, and has features available for reading data from databases.
 
 As a general rule, you should consider both the features provided and the "community activity" (downloads, contributions, bug reports, quality of documentation, etc.) when selecting a solution. At the time of writing Mongoose is by far the most popular ODM, and is a reasonable choice if you're using MongoDB for your database.
@@ -127,7 +127,7 @@ The code in the asynchronous function then executes until either another `await`
 
 You can see how this works in the example below.
 `myFunction()` is an asynchronous function that is called within a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block.
-When `myFunction()` is run, code execution is paused at `methodThatReturnsPromise()` until the promise resolves, at which point the code continues to `aFunctionThatReturnsPromise()` and waits again.
+When `myFunction()` is run, code execution is paused at `methodThatReturnsPromise()` until the promise resolves, at which point the code continues to `functionThatReturnsPromise()` and waits again.
 The code in the `catch` block runs if an error is thrown in the asynchronous function, and this will happen if the promise returned by either of the methods is rejected.
 
 ```js
@@ -135,7 +135,7 @@ async function myFunction() {
   // …
   await someObject.methodThatReturnsPromise();
   // …
-  await aFunctionThatReturnsPromise();
+  await functionThatReturnsPromise();
   // …
 }
 
@@ -204,11 +204,6 @@ You can `require()` and connect to a locally hosted database with `mongoose.conn
 ```js
 // Import the mongoose module
 const mongoose = require("mongoose");
-
-// Set `strictQuery: false` to globally opt into filtering by properties that aren't in the schema
-// Included because it removes preparatory warnings for Mongoose 7.
-// See: https://mongoosejs.com/docs/migrating_to_6.html#strictquery-is-removed-and-replaced-by-strict
-mongoose.set("strictQuery", false);
 
 // Define the database URL to connect to.
 const mongoDB = "mongodb://127.0.0.1/my_database";
@@ -309,7 +304,6 @@ The code also shows both ways of declaring a field:
 
 - Field _name_ and _type_ as a key-value pair (i.e., as done with fields `name`, `binary` and `living`).
 - Field _name_ followed by an object defining the `type`, and any other _options_ for the field. Options include things like:
-
   - default values.
   - built-in validators (e.g., max/min values) and custom validation functions.
   - Whether the field is required
@@ -326,7 +320,6 @@ The built-in validators include:
 - All [SchemaTypes](https://mongoosejs.com/docs/schematypes.html) have the built-in [required](https://mongoosejs.com/docs/api.html#schematype_SchemaType-required) validator. This is used to specify whether the field must be supplied in order to save a document.
 - [Numbers](https://mongoosejs.com/docs/api/schemanumber.html) have [min](<https://mongoosejs.com/docs/api/schemanumber.html#SchemaNumber.prototype.min()>) and [max](<https://mongoosejs.com/docs/api/schemanumber.html#SchemaNumber.prototype.max()>) validators.
 - [Strings](https://mongoosejs.com/docs/api/schemastring.html) have:
-
   - [enum](<https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.enum()>): specifies the set of allowed values for the field.
   - [match](<https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.match()>): specifies a regular expression that the string must match.
   - [maxLength](<https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.maxlength()>) and [minLength](<https://mongoosejs.com/docs/api/schemastring.html#SchemaString.prototype.minlength()>) for the string.
@@ -510,7 +503,7 @@ const bob = new Author({ name: "Bob Smith" });
 
 await bob.save();
 
-// Bob now exists, so lets create a story
+// Bob now exists, so let's create a story
 const story = new Story({
   title: "Bob goes sledding",
   author: bob._id, // assign the _id from our author Bob. This ID is created by default!
@@ -580,7 +573,7 @@ const modelInstances = await SomeModel.find().exec();
 
 Now that we understand something of what Mongoose can do and how we want to design our models, it's time to start work on the _LocalLibrary_ website. The very first thing we want to do is set up a MongoDB database that we can use to store our library data.
 
-For this tutorial, we're going to use the [MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database) cloud-hosted sandbox database. This database tier is not considered suitable for production websites because it has no redundancy, but it is great for development and prototyping. We're using it here because it is free and easy to set up, and because MongoDB Atlas is a popular _database as a service_ vendor that you might reasonably choose for your production database (other popular choices at the time of writing include [ScaleGrid](https://scalegrid.io/) and [ObjectRocket](https://www.objectrocket.com/)).
+For this tutorial, we're going to use the [MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database) cloud-hosted sandbox database. This database tier is not considered suitable for production websites because it has no redundancy, but it is great for development and prototyping. We're using it here because it is free and easy to set up, and because MongoDB Atlas is a popular _database as a service_ vendor that you might reasonably choose for your production database (other popular choices at the time of writing include [ScaleGrid](https://scalegrid.io/) and [Rackspace](https://www.rackspace.com/data/rackspace-dbaas)).
 
 > [!NOTE]
 > If you prefer, you can set up a MongoDB database locally by downloading and installing the [appropriate binaries for your system](https://www.mongodb.com/try/download/community-edition/releases). The rest of the instructions in this article would be similar, except for the database URL you would specify when connecting.
@@ -601,7 +594,6 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 
 3. Scroll down the page to see the different options you can choose.
    ![Choose a cloud provider when using MongoDB Atlas.](mongodb_atlas_-_createsharedcluster.jpg)
-
    - You can change the name of your Cluster under _Cluster Name_.
      We are keeping it as `Cluster0` for this tutorial.
    - Deselect the _Preload sample dataset_ checkbox, as we'll import our own sample data later on
@@ -611,7 +603,6 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 
 4. This will open the _Security Quickstart_ section.
    ![Set up the Access Rules on the Security Quickstart screen on MongoDB Atlas.](mongodb_atlas_-_securityquickstart.jpg)
-
    - Enter a username and password for your application to use to access the database (above we have created a new login "cooluser").
      Remember to copy and store the credentials safely as we will need them later on.
      Click the **Create User** button.
@@ -640,14 +631,12 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 8. This will open the _Create Database_ screen.
 
    ![Details during database creation on MongoDB Atlas.](mongodb_atlas_-_databasedetails.jpg)
-
    - Enter the name for the new database as `local_library`.
    - Enter the name of the collection as `Collection0`.
    - Click the **Create** button to create the database.
 
 9. You will return to the _Collections_ screen with your database created.
    ![Database creation confirmation on MongoDB Atlas.](mongodb_atlas_-_databasecreated.jpg)
-
    - Click the _Overview_ tab to return to the cluster overview.
 
 10. From the Cluster0 _Overview_ screen click the **Connect** button.
@@ -657,7 +646,6 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 11. This will open the _Connect to Cluster0_ screen.
 
     ![Choose the Short SRV connection when setting up a connection on MongoDB Atlas.](mongodb_atlas_-_connectforshortsrv.jpg)
-
     - Select your database user.
     - Select the _Drivers_ category, then the _Driver_ **Node.js** and _Version_ as shown.
     - **DO NOT** install the driver as suggested.
@@ -681,23 +669,41 @@ npm install mongoose
 
 ## Connect to MongoDB
 
-Open **/app.js** (in the root of your project) and copy the following text below where you declare the _Express application object_ (after the line `const app = express();`).
+Open **bin/www** (from the root of your project) and copy the following text below where you set the port (after the line `app.set("port", port);`).
 Replace the database URL string ('_insert_your_database_url_here_') with the location URL representing your own database (i.e., using the information from _MongoDB Atlas_).
 
 ```js
 // Set up mongoose connection
 const mongoose = require("mongoose");
 
-mongoose.set("strictQuery", false);
 const mongoDB = "insert_your_database_url_here";
 
-main().catch((err) => console.log(err));
-async function main() {
+async function connectMongoose() {
   await mongoose.connect(mongoDB);
+
+  // Add connection error handlers
+  mongoose.connection.on("error", (err) => {
+    console.error("MongoDB connection error:", err);
+  });
+
+  mongoose.connection.on("disconnected", () => {
+    console.warn("MongoDB disconnected");
+  });
+}
+
+try {
+  connectMongoose();
+} catch (err) {
+  console.error("Failed to connect to MongoDB:", err);
+  process.exit(1);
 }
 ```
 
 As discussed in the [Mongoose primer](#connecting_to_mongodb) above, this code creates the default connection to the database and reports any errors to the console.
+
+> [!NOTE]
+> We could have put the database connection code in our **app.js** code.
+> Putting it in the application entry point decouples the application and database, which makes it easier to use a different database for running test code.
 
 Note that hard-coding database credentials in source code as shown above is not recommended.
 We do it here because it shows the core connection code, and because during development there is no significant risk that leaking these details will expose or corrupt sensitive information.
@@ -883,7 +889,7 @@ Last of all, we tested our models by creating a number of instances (using a sta
 
 ## See also
 
-- [Database integration](https://expressjs.com/en/guide/database-integration.html) (Express docs)
+- [Database integration](https://expressjs.com/en/guide/database-integration/) (Express docs)
 - [Mongoose website](https://mongoosejs.com/) (Mongoose docs)
 - [Mongoose Guide](https://mongoosejs.com/docs/guide.html) (Mongoose docs)
 - [Validation](https://mongoosejs.com/docs/validation.html) (Mongoose docs)

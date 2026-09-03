@@ -1,11 +1,11 @@
 ---
-title: "<link>: The External Resource Link element"
+title: "`<link>` HTML external resource link element"
+short-title: <link>
 slug: Web/HTML/Reference/Elements/link
 page-type: html-element
 browser-compat: html.elements.link
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<link>`** [HTML](/en-US/docs/Web/HTML) element specifies relationships between the current document and an external resource.
 This element is most commonly used to link to {{Glossary("CSS", "stylesheets")}}, but is also used to establish site icons (both "favicon" style icons and icons for the home screen and apps on mobile devices) among other things.
@@ -52,10 +52,7 @@ You can also provide a media type or query inside a `media` attribute; this reso
 
 ```html
 <link href="print.css" rel="stylesheet" media="print" />
-<link
-  href="mobile.css"
-  rel="stylesheet"
-  media="screen and (max-width: 600px)" />
+<link href="mobile.css" rel="stylesheet" media="screen and (width <= 600px)" />
 ```
 
 Some interesting new performance and security features have been added to the `<link>` element too. Take this example:
@@ -88,7 +85,6 @@ Other usage notes:
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `as`
-
   - : This attribute is required when [`rel="preload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload) has been set on the `<link>` element, optional when [`rel="modulepreload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/modulepreload) has been set, and otherwise should not be used.
     It specifies the type of content being loaded by the `<link>`, which is necessary for request matching, application of correct [content security policy](/en-US/docs/Web/HTTP/Guides/CSP), and setting of correct {{HTTPHeader("Accept")}} request header.
 
@@ -98,25 +94,20 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     <table class="standard-table">
       <thead>
         <tr>
-          <th scope="col">Value</th>
+          <th scope="col"><code>As</code> value</th>
+          <th scope="col"><code>Rel</code> value</th>
           <th scope="col">Applies To</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>audio</td>
-          <td><code>&#x3C;audio></code> elements</td>
-        </tr>
-        <tr>
-          <td>document</td>
-          <td><code>&#x3C;iframe></code> and <code>&#x3C;frame></code> elements</td>
-        </tr>
-        <tr>
-          <td>embed</td>
-          <td><code>&#x3C;embed></code> elements</td>
+          <td>audioworklet</td>
+          <td>modulepreload</td>
+          <td><a href="/en-US/docs/Web/API/AudioWorklet">AudioWorklet</a> modules</td>
         </tr>
         <tr>
           <td>fetch</td>
+          <td>preload</td>
           <td>
             <p>fetch, XHR</p>
             <div class="notecard note">
@@ -129,6 +120,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
         </tr>
         <tr>
           <td>font</td>
+          <td>preload</td>
           <td>
             <p>CSS @font-face</p>
             <div class="notecard note">
@@ -141,6 +133,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
         </tr>
         <tr>
           <td>image</td>
+          <td>preload</td>
           <td>
             <code>&#x3C;img></code> and <code>&#x3C;picture></code> elements with
             srcset or imageset attributes, SVG <code>&#x3C;image></code> elements,
@@ -148,48 +141,71 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
           </td>
         </tr>
         <tr>
-          <td>object</td>
-          <td><code>&#x3C;object></code> elements</td>
+          <td>json</td>
+          <td>modulepreload</td>
+          <td>
+            Supplementary JSON file
+          </td>
+        </tr>
+        <tr>
+          <td>paintworklet</td>
+          <td>modulepreload</td>
+          <td><a href="/en-US/docs/Web/API/PaintWorkletGlobalScope">PaintWorklet</a> modules</td>
         </tr>
         <tr>
           <td>script</td>
+          <td>preload or modulepreload</td>
           <td>
-            <code>&#x3C;script></code> elements, Worker <code>importScripts</code>
+            <code>&#x3C;script></code> elements, Worker <code>importScripts</code>, and <code>modulepreload</code> destinations.
           </td>
+        </tr>
+        <tr>
+          <td>serviceworker</td>
+          <td>modulepreload</td>
+          <td><a href="/en-US/docs/Web/API/ServiceWorker">ServiceWorker</a> modules</td>
+        </tr>
+        <tr>
+          <td>sharedworker</td>
+          <td>modulepreload</td>
+          <td><a href="/en-US/docs/Web/API/SharedWorker">SharedWorker</a></td>
         </tr>
         <tr>
           <td>style</td>
+          <td>preload or modulepreload</td>
           <td>
             <code>&#x3C;link rel=stylesheet></code> elements, CSS
-            <code>@import</code>
+            <code>@import</code> and <code>modulepreload</code> destinations.
           </td>
         </tr>
         <tr>
-          <td>track</td>
-          <td><code>&#x3C;track></code> elements</td>
+          <td>text</td>
+          <td>modulepreload</td>
+          <td>Supplementary plain text file</td>
         </tr>
         <tr>
-          <td>video</td>
-          <td><code>&#x3C;video></code> elements</td>
+          <td>track</td>
+          <td>preload</td>
+          <td><code>&#x3C;track></code> elements (<a href="/en-US/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format">WebVTT</a>, MIME type <code>text/vtt</code>)</td>
         </tr>
         <tr>
           <td>worker</td>
-          <td>Worker, SharedWorker</td>
+          <td>modulepreload</td>
+          <td><a href="/en-US/docs/Web/API/Worker">Worker</a> modules</td>
         </tr>
       </tbody>
     </table>
 
 - `blocking`
-
-  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of an external resource. It must only be used when the `rel` attribute contains `expect` or `stylesheet` keywords. The operations that are to be blocked must be a space-separated list of blocking tokens listed below.
+  - : This attribute explicitly indicates that certain operations should be blocked until specific conditions are met. It must only be used when the `rel` attribute contains the `expect` or `stylesheet` keywords. With [`rel="expect"`](/en-US/docs/Web/HTML/Reference/Attributes/rel#expect), it indicates that operations should be blocked until a specific DOM node has been parsed. With [`rel="stylesheet"`](/en-US/docs/Web/HTML/Reference/Attributes/rel#stylesheet), it indicates that operations should be blocked until an external stylesheet and its critical subresources have been fetched and applied to the document. The operations that are to be blocked must be a space-separated list of blocking tokens listed below. Currently there is only one token:
     - `render`: The rendering of content on the screen is blocked.
 
-- [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)
+    > [!NOTE]
+    > Only `link` elements in the document's `<head>` can possibly block rendering. By default, a `link` element with `rel="stylesheet"` in the `<head>` blocks rendering when the browser discovers it during parsing. If such a `link` element is added dynamically via script, you must additionally set `blocking = "render"` for it to block rendering.
 
+- [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin)
   - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute indicates whether {{Glossary("CORS")}} must be used when fetching the resource.
     [CORS-enabled images](/en-US/docs/Web/HTML/How_to/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_.
     The allowed values are:
-
     - `anonymous`
       - : A cross-origin request (i.e., with an {{HTTPHeader("Origin")}} HTTP header) is performed, but no credential is sent (i.e., no cookie, X.509 certificate, or HTTP Basic authentication).
         If the server does not give credentials to the origin site (by not setting the {{HTTPHeader("Access-Control-Allow-Origin")}} HTTP header) the resource will be tainted and its usage restricted.
@@ -201,18 +217,14 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     See [CORS settings attributes](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) for additional information.
 
 - `disabled`
-
   - : For `rel="stylesheet"` only, the `disabled` Boolean attribute indicates whether the described stylesheet should be loaded and applied to the document.
     If `disabled` is specified in the HTML when it is loaded, the stylesheet will not be loaded during page load.
     Instead, the stylesheet will be loaded on-demand, if and when the `disabled` attribute is changed to `false` or removed.
 
     Setting the `disabled` property in the DOM causes the stylesheet to be removed from the document's {{domxref("Document.styleSheets")}} list.
 
-- `fetchpriority`
-
-  - : Provides a hint of the relative priority to use when fetching a resource of a particular type.
-    Allowed values:
-
+- [`fetchpriority`](/en-US/docs/Web/HTML/Reference/Attributes/fetchpriority)
+  - : Provides a hint of the relative priority to use when fetching a resource of a particular type. Allowed values:
     - `high`
       - : Fetch the resource at a high priority relative to other resources of the same type.
     - `low`
@@ -221,50 +233,43 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
       - : Don't set a preference for the fetch priority.
         This is the default.
         It is used if no value or an invalid value is set.
-
-    See {{domxref("HTMLLinkElement.fetchPriority")}} for more information.
-
 - `href`
   - : This attribute specifies the {{glossary("URL")}} of the linked resource. A URL can be absolute or relative.
 - `hreflang`
   - : This attribute indicates the language of the linked resource.
     It is purely advisory.
-    Allowed values are specified by {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
+    Values should be valid {{glossary("BCP 47 language tag", "BCP 47 language tags")}}.
     Use this attribute only if the [`href`](/en-US/docs/Web/HTML/Reference/Elements/a#href) attribute is present.
 - `imagesizes`
   - : For `rel="preload"` and `as="image"` only, the `imagesizes` attribute has similar syntax and semantics as the [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/img#sizes) attribute that indicates to preload the appropriate resource used by an `img` element with corresponding values for its `srcset` and `sizes` attributes.
 - `imagesrcset`
   - : For `rel="preload"` and `as="image"` only, the `imagesrcset` attribute has similar syntax and semantics as the [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) attribute that indicates to preload the appropriate resource used by an `img` element with corresponding values for its `srcset` and `sizes` attributes.
-- `integrity`
-  - : Contains inline metadata — a base64-encoded cryptographic hash of the resource (file) you're telling the browser to fetch.
-    The browser can use this to verify that the fetched resource has been delivered without unexpected manipulation.
-    The attribute must only be specified when the `rel` attribute is specified to `stylesheet`, `preload`, or `modulepreload`.
-    See [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity).
+- [`integrity`](/en-US/docs/Web/HTML/Reference/Attributes/integrity)
+  - : This attribute contains one or more {{glossary("hash function", "hashes")}} of the resource. It is used to ensure that the content of the resource is what the developer expects it to be, and has not been replaced with a malicious copy in a [supply chain attack](/en-US/docs/Web/Security/Attacks/Supply_chain_attacks). The attribute must only be specified when the `rel` attribute is set to `stylesheet`, `preload`, or `modulepreload`.
+    See [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity).
 - `media`
-
-  - : This attribute specifies the media that the linked resource applies to. Its value must be a media type / [media query](/en-US/docs/Web/CSS/CSS_media_queries).
+  - : This attribute specifies the media that the linked resource applies to. Its value must be a media type / [media query](/en-US/docs/Web/CSS/Guides/Media_queries).
     This attribute is mainly useful when linking to external stylesheets — it allows the user agent to pick the best adapted one for the device it runs on.
 
 - `referrerpolicy`
-
-  - : A string indicating which referrer to use when fetching the resource:
-
+  - : A string indicating which referrer to use when fetching the resource. For detailed explanations and examples of each policy, see the {{HTTPHeader("Referrer-Policy")}} header documentation.
     - `no-referrer` means that the {{HTTPHeader("Referer")}} header will not be sent.
     - `no-referrer-when-downgrade` means that no {{HTTPHeader("Referer")}} header will be sent when navigating to an origin without TLS (HTTPS).
       This is a user agent's default behavior, if no policy is otherwise specified.
     - `origin` means that the referrer will be the origin of the page, which is roughly the scheme, the host, and the port.
     - `origin-when-cross-origin` means that navigating to other origins will be limited to the scheme, the host, and the port, while navigating on the same origin will include the referrer's path.
+    - `same-origin` means that the referrer (origin, path, and query string) is sent for same-origin requests, but no referrer is sent for cross-origin requests.
+    - `strict-origin` means that only the origin is sent when the protocol security level stays the same (HTTPS→HTTPS). No referrer is sent to less secure destinations (HTTPS→HTTP). This is important for HTTPS pages because it prevents leaking referrer information to insecure origins.
+    - `strict-origin-when-cross-origin` means that the full referrer is sent for same-origin requests. For cross-origin requests, only the origin is sent when the protocol stays the same (HTTPS→HTTPS), and no referrer is sent when downgrading to HTTP. This is the default value, which balances functionality with privacy and security for HTTPS sites.
     - `unsafe-url` means that the referrer will include the origin and the path (but not the fragment, password, or username).
       This case is unsafe because it can leak origins and paths from TLS-protected resources to insecure origins.
 
 - [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel)
   - : This attribute names a relationship of the linked document to the current document. The attribute must be a space-separated list of [link type values](/en-US/docs/Web/HTML/Reference/Attributes/rel).
 - `sizes`
-
   - : This attribute defines the sizes of the icons for visual media contained in the resource.
     It must be present only if the [`rel`](#rel) contains a value of `icon` or a non-standard type such as Apple's `apple-touch-icon`.
     It may have the following values:
-
     - `any`, meaning that the icon can be scaled to any size as it is in a vector format, like `image/svg+xml`.
     - a white-space separated list of sizes, each in the format `<width in pixels>x<height in pixels>` or `<width in pixels>X<height in pixels>`. Each of these sizes must be contained in the resource.
 
@@ -289,7 +294,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 ### Obsolete attributes
 
 - `charset` {{deprecated_inline}}
-
   - : This attribute defines the character encoding of the linked resource.
     The value is a space- and/or comma-delimited list of character sets as defined in {{rfc(2045)}}.
     The default value is `iso-8859-1`.
@@ -298,7 +302,6 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     > To produce the same effect as this obsolete attribute, use the {{HTTPHeader("Content-Type")}} HTTP header on the linked resource.
 
 - `rev` {{deprecated_inline}}
-
   - : The value of this attribute shows the relationship of the current document to the linked document, as defined by the [`href`](#href) attribute.
     The attribute thus defines the reverse relationship compared to the value of the `rel` attribute.
     [Link type values](/en-US/docs/Web/HTML/Reference/Attributes/rel) for the attribute are similar to the possible values for [`rel`](#rel).
@@ -368,14 +371,11 @@ this resource will then only be loaded if the media condition is true. For examp
 ```html
 <link href="print.css" rel="stylesheet" media="print" />
 <link href="mobile.css" rel="stylesheet" media="all" />
-<link
-  href="desktop.css"
-  rel="stylesheet"
-  media="screen and (min-width: 600px)" />
+<link href="desktop.css" rel="stylesheet" media="screen and (width >= 600px)" />
 <link
   href="highres.css"
   rel="stylesheet"
-  media="screen and (min-resolution: 300dpi)" />
+  media="screen and (resolution >= 300dpi)" />
 ```
 
 ### Stylesheet load events
@@ -408,7 +408,7 @@ You can find a number of `<link rel="preload">` examples in [Preloading content 
 ### Blocking rendering till a resource is fetched
 
 You can include `render` token inside a `blocking` attribute;
-the rendering of the page will be blocked till the resource is fetched. For example:
+the rendering of the page will be blocked till the resource and its critical subresources are fetched and applied to the document. For example:
 
 ```html
 <link blocking="render" rel="stylesheet" href="example.css" crossorigin />
@@ -471,3 +471,4 @@ the rendering of the page will be blocked till the resource is fetched. For exam
 ## See also
 
 - {{HTTPHeader("Link")}} HTTP header
+- {{HTTPHeader("Referrer-Policy")}} HTTP header

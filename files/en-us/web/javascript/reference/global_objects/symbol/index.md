@@ -3,9 +3,8 @@ title: Symbol
 slug: Web/JavaScript/Reference/Global_Objects/Symbol
 page-type: javascript-class
 browser-compat: javascript.builtins.Symbol
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 **`Symbol`** is a built-in object whose constructor returns a `symbol` [primitive](/en-US/docs/Glossary/Primitive) — also called a **Symbol value** or just a **Symbol** — that's guaranteed to be unique. Symbols are often used to add unique property keys to an object that won't collide with keys any other code might add to the object, and which are hidden from any mechanisms other code will typically use to access the object. That enables a form of weak {{Glossary("encapsulation")}}, or a weak form of [information hiding](https://en.wikipedia.org/wiki/Information_hiding).
 
@@ -27,7 +26,7 @@ The above code creates three new Symbols. Note that `Symbol("foo")` does not coe
 Symbol("foo") === Symbol("foo"); // false
 ```
 
-The following syntax with the {{jsxref("Operators/new", "new")}} operator will throw a {{jsxref("TypeError")}}:
+The following syntax with the {{jsxref("new")}} operator will throw a {{jsxref("TypeError")}}:
 
 ```js example-bad
 const sym = new Symbol(); // TypeError
@@ -62,7 +61,7 @@ Because registered symbols can be arbitrarily created anywhere, they behave almo
 
 ### Well-known Symbols
 
-All static properties of the `Symbol` constructor are Symbols themselves, whose values are constant across realms. They are known as _well-known Symbols_, and their purpose is to serve as "protocols" for certain built-in JavaScript operations, allowing users to customize the language's behavior. For example, if a constructor function has a method with {{jsxref("Symbol.hasInstance")}} as its name, this method will encode its behavior with the {{jsxref("Operators/instanceof", "instanceof")}} operator.
+All static properties of the `Symbol` constructor are Symbols themselves, whose values are constant across realms. They are known as _well-known Symbols_, and their purpose is to serve as "protocols" for certain built-in JavaScript operations, allowing users to customize the language's behavior. For example, if a constructor function has a method with {{jsxref("Symbol.hasInstance")}} as its name, this method will encode its behavior with the {{jsxref("instanceof")}} operator.
 
 Prior to well-known Symbols, JavaScript used normal properties to implement certain built-in operations. For example, the [`JSON.stringify`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) function will attempt to call each object's `toJSON()` method, and the [`String`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/String) function will call the object's `toString()` and `valueOf()` methods. However, as more operations are added to the language, designating each operation a "magic property" can break backward compatibility and make the language's behavior harder to reason with. Well-known Symbols allow the customizations to be "invisible" from normal code, which typically only read string properties.
 
@@ -84,10 +83,14 @@ The method {{jsxref("Object.getOwnPropertySymbols()")}} returns an array of Symb
 
 The static properties are all well-known Symbols. In these Symbols' descriptions, we will use language like "`Symbol.hasInstance` is a method determining…", but bear in mind that this is referring to the semantic of an object's method having this Symbol as the method name (because well-known Symbols act as "protocols"), not describing the value of the Symbol itself.
 
+- {{jsxref("Symbol.asyncDispose")}}
+  - : A method that disposes resources of the object asynchronously when the object goes out of scope. Used by the [`await using`](/en-US/docs/Web/JavaScript/Reference/Statements/await_using) declaration.
 - {{jsxref("Symbol.asyncIterator")}}
   - : A method that returns the default AsyncIterator for an object. Used by [`for await...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of).
+- {{jsxref("Symbol.dispose")}}
+  - : A method that disposes resources of the object when the object goes out of scope. Used by the [`using`](/en-US/docs/Web/JavaScript/Reference/Statements/using) declaration.
 - {{jsxref("Symbol.hasInstance")}}
-  - : A method determining if a constructor object recognizes an object as its instance. Used by {{jsxref("Operators/instanceof", "instanceof")}}.
+  - : A method determining if a constructor object recognizes an object as its instance. Used by {{jsxref("instanceof")}}.
 - {{jsxref("Symbol.isConcatSpreadable")}}
   - : A Boolean value indicating if an object should be flattened to its array elements. Used by {{jsxref("Array.prototype.concat()")}}.
 - {{jsxref("Symbol.iterator")}}

@@ -4,9 +4,8 @@ short-title: isConcatSpreadable
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/isConcatSpreadable
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.isConcatSpreadable
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Symbol.isConcatSpreadable`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `Symbol.isConcatSpreadable`. The {{jsxref("Array.prototype.concat()")}} method looks up this symbol on each object being concatenated to determine if it should be treated as an array-like object and flattened to its array elements.
 
@@ -85,7 +84,7 @@ x.concat(fakeArray); // [1, 2, 3, "hello", "world"]
 ```
 
 > [!NOTE]
-> The `length` property is used to control the number of object properties to be added. In the above example, `length:2` indicates two properties has to be added.
+> The `length` property is used to control the number of object properties to be added. In the above example, `length:2` indicates that two properties have to be added.
 
 ## Specifications
 

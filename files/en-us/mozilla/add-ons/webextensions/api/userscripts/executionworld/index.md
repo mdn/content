@@ -3,9 +3,8 @@ title: userScripts.ExecutionWorld
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/ExecutionWorld
 page-type: webextension-api-type
 browser-compat: webextensions.api.userScripts.ExecutionWorld
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The execution environment for a script injected with {{WebExtAPIRef("userScripts.register()")}}
 or {{WebExtAPIRef("userScripts.update()")}}.

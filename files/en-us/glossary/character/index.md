@@ -2,11 +2,10 @@
 title: Character
 slug: Glossary/Character
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
 
-{{GlossarySidebar}}
-
-A **character** is either a symbol (letter, number, punctuation) or a non-printing "control" (e.g., carriage return or soft hyphen). {{glossary("UTF-8")}} is the most common character set and includes the graphemes of the most popular human languages.
+A **character** is either a symbol (letter, number, punctuation) or a non-printing "control" (e.g., carriage return or soft hyphen). {{glossary("Unicode")}} is the most common character set and includes the graphemes of the most popular human languages.
 
 ## See also
 

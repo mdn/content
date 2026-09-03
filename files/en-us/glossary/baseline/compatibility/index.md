@@ -2,9 +2,8 @@
 title: Baseline (compatibility)
 slug: Glossary/Baseline/Compatibility
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Baseline** identifies the availability of web platform features across popular browsers, including APIs, CSS properties, and JavaScript syntax. Baseline describes web features as being either widely available or newly available. Features that do not meet the Baseline criteria are said to have limited availability.
 
@@ -26,17 +25,25 @@ Baseline is a summary of browser support. It is not a substitute for accessibili
 
 ## Baseline badges
 
-![Green widget with the checkmark: Baseline, widely available. Four browsers logos, all with checkmarks.](high.png)
+![Green widget with the checkmark: Baseline, widely available. Four browsers logos, all with checkmarks.](widely.png)
 
 Features listed as **widely available** have a consistent history of support in each of the Baseline browsers for at least 2.5 years.
 
-![Blue widget with the checkmark: Baseline 2022, newly available. Four browsers' logos, all with checkmarks.](limited.png)
+![Blue widget with the checkmark: Baseline 2022, newly available. Four browsers' logos, all with checkmarks.](newly.png)
 
 Features listed as **newly available** work in at least the latest stable version of each of the Baseline browsers, but may not work with older browsers and devices.
 
-![Grey widget with the cross: limited availability. Four browsers' logos, two with checkmarks, two with crosses.](low.png)
+![Gray widget with the cross: Limited availability. Four browsers' logos, two with checkmarks, two with crosses.](limited.png)
 
 Features listed with **limited availability** are _not_ yet available in all browsers.
+
+![Gray widget with a dotted diamond: Deprecated. Four browsers' logos, all with checkmarks.](deprecated.png)
+
+Features listed with **deprecated** may be available in one or more browsers, but should not be used in development.
+
+![Red widget with a cross: Deprecated to be removed. Four browsers' logos, two with checkmarks, two with crosses.](removed.png)
+
+Features listed with **deprecated to be removed** may be available in one or more browsers, but are due to be removed and should not be used in development.
 
 ## See also
 

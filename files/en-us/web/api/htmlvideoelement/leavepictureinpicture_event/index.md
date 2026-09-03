@@ -28,10 +28,6 @@ A {{domxref("PictureInPictureEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PictureInPictureEvent")}}
 
-## Event properties
-
-This interface also inherits properties from its parent {{domxref("Event")}}.
-
 ## Examples
 
 These examples add an event listener for the HTMLVideoElement's `leavepictureinpicture` event, then post a message when that event handler has reacted to the event firing.
@@ -46,7 +42,7 @@ function onExitPip() {
   console.log("Picture-in-Picture mode deactivated!");
 }
 
-video.addEventListener("leavepictureinpicture", onExitPip, false);
+video.addEventListener("leavepictureinpicture", onExitPip);
 
 button.onclick = () => {
   if (document.pictureInPictureElement) {

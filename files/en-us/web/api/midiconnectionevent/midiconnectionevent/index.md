@@ -22,16 +22,14 @@ new MIDIConnectionEvent(type, midiConnectionEventInit)
 - `type`
   - : A string with one of `"connect"` or `"disconnect"`.
 - `midiConnectionEventInit` {{optional_inline}}
-
   - : A dictionary including the following fields:
-
     - `port`
       - : The {{domxref("MIDIPort")}} instance representing the port that has connected or disconnected.
     - `bubbles` {{optional_inline}}
       - : A boolean value indicating whether the event bubbles. The default is
         `false`.
     - `cancelable` {{optional_inline}}
-      - : A boolean value indicating whether the event can be cancelled. The
+      - : A boolean value indicating whether the event can be canceled. The
         default is `false`.
     - `composed` {{optional_inline}}
       - : A boolean value indicating whether the event will trigger listeners

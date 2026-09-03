@@ -35,7 +35,6 @@ Exciting times — now you're going to give your users the ability to create cal
    ```
 
    Let's walk through this code:
-
    - `const call = peer.call(code, window.localStream)`: This will create a call with the `code` and `window.localStream` we've previously assigned. Note that the `localStream` will be the user's `localStream`. So for caller A it'll be their stream & for B, their own stream.
    - `call.on('stream', (stream) => {` : peerJS gives us a `stream` event which you can use on the `call` that you've created. When a call starts streaming, you need to ensure that the remote stream coming from the call is assigned to the correct HTML elements and window, this is where you'll do that.
    - The anonymous function takes a `MediaStream` object as an argument, which you then have to set to your window's HTML like you've done before. Here we get your remote `<audio>` element and assign the stream passed to the function to the `srcObject` property.
@@ -45,7 +44,7 @@ Exciting times — now you're going to give your users the ability to create cal
 
 3. To test this out, open `localhost:8000` in two browser windows and click Call inside one of them. You should see this:
 
-   ![Two screens side by side both A cream background with the words 'phone a friend' in bold, dark green font as the heading. The first screen has 'Your device ID is: 3b77' and the second 'Your device ID is: 2doa', is immediately below the title and 'please use headphones!' below that. Following on, a big dark green button with 'Call' written in the same cream color of the background. The second screen has a browser dialogue that asks for a peer id.](screens_side_by_side.png)
+   ![Two screens side by side both A cream background with the words 'phone a friend' in bold, dark green font as the heading. The first screen has 'Your device ID is: 3b77' and the second 'Your device ID is: 2doa', is immediately below the title and 'please use headphones!' below that. Following on, a big dark green button with 'Call' written in the same cream color of the background. The second screen has a browser dialog that asks for a peer id.](screens_side_by_side.png)
 
    If you submit the other peer's ID, the call will be connected!
 

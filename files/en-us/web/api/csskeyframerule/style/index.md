@@ -8,20 +8,13 @@ browser-compat: api.CSSKeyframeRule.style
 
 {{ APIRef("CSSOM") }}
 
-The read-only **`CSSKeyframeRule.style`** property is the {{ domxref("CSSStyleDeclaration") }} interface for the declaration block of the {{ domxref("CSSKeyframeRule") }}.
+The read-only **`style`** property of the {{domxref("CSSKeyframeRule")}} interface contains a {{domxref("CSSStyleDeclaration")}} object representing the descriptors available in the {{cssxref("@keyframes")}} rule's body.
 
 ## Value
 
-A {{domxref("CSSStyleDeclaration")}} object, with the following properties:
+A {{domxref("CSSStyleDeclaration")}} object.
 
-- computed flag
-  - : Unset.
-- declarations
-  - : The declared declarations in the rule, in the order they were specified, shorthand properties expanded to longhands.
-- parent CSS rule
-  - : The context object, which is an alias for [`this`](https://heycam.github.io/webidl/#this).
-- owner node
-  - : Null.
+Although the `style` property itself is read-only in the sense that you can't replace the `CSSStyleDeclaration` object, you can still assign to the `style` property directly, which is equivalent to assigning to its {{domxref("CSSStyleDeclaration/cssText", "cssText")}} property. You can also modify the `CSSStyleDeclaration` object using the {{domxref("CSSStyleDeclaration/setProperty", "setProperty()")}} and {{domxref("CSSStyleDeclaration/removeProperty", "removeProperty()")}} methods.
 
 ## Examples
 

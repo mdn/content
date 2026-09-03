@@ -72,7 +72,12 @@ let polyfill = null;
 let xrSession = null;
 let xrInputSources = null;
 let xrReferenceSpace = null;
-let xrButton = null;
+const xrButton = document.querySelector("#enter-xr");
+const projectionMatrixOut = document.querySelector("#projection-matrix div");
+const modelMatrixOut = document.querySelector("#model-view-matrix div");
+const cameraMatrixOut = document.querySelector("#camera-matrix div");
+const mouseMatrixOut = document.querySelector("#mouse-matrix div");
+
 let gl = null;
 let animationFrameRequestID = 0;
 let shaderProgram = null;
@@ -125,31 +130,17 @@ Suffice it to say that the vertex shader computes the position of each vertex gi
 
 ## Starting up and shutting down WebXR
 
-Upon initially loading the script, we install a handler for the {{domxref("Window.load_event", "load")}} event, so that we can perform initialization.
-
 ```js
-window.addEventListener("load", onLoad);
+xrButton.addEventListener("click", onXRButtonClick);
 
-function onLoad() {
-  xrButton = document.querySelector("#enter-xr");
-  xrButton.addEventListener("click", onXRButtonClick);
-
-  projectionMatrixOut = document.querySelector("#projection-matrix div");
-  modelMatrixOut = document.querySelector("#model-view-matrix div");
-  cameraMatrixOut = document.querySelector("#camera-matrix div");
-  mouseMatrixOut = document.querySelector("#mouse-matrix div");
-
-  if (!navigator.xr || enableForcePolyfill) {
-    console.log("Using the polyfill");
-    polyfill = new WebXRPolyfill();
-  }
-  setupXRButton();
+if (!navigator.xr || enableForcePolyfill) {
+  console.log("Using the polyfill");
+  polyfill = new WebXRPolyfill();
 }
+setupXRButton();
 ```
 
-The `load` event handler gets a reference to the button that toggles WebXR on and off into `xrButton`, then adds a handler for {{domxref("Element.click_event", "click")}} events. Then references are obtained to the four {{HTMLElement("div")}} blocks into which we'll output the current contents of each of the key matrices for informational purposes while our scene is running.
-
-Then we look to see if {{domxref("navigator.xr")}} is defined. If it isn't—and/or the `enableForcePolyfill` configuration constant is set to `true`—we install the WebXR polyfill by instantiating the `WebXRPolyfill` class.
+We add a handler for {{domxref("Element.click_event", "click")}} events. Then we look to see if {{domxref("navigator.xr")}} is defined. If it isn't—and/or the `enableForcePolyfill` configuration constant is set to `true`—we install the WebXR polyfill by instantiating the `WebXRPolyfill` class.
 
 ### Handling the startup and shutdown UI
 
@@ -247,7 +238,7 @@ function sessionStarted(session) {
   buffers = initBuffers(gl);
   texture = loadTexture(
     gl,
-    "https://cdn.glitch.com/a9381af1-18a9-495e-ad01-afddfd15d000%2Ffirefox-logo-solid.png?v=1575659351244",
+    "https://mdn.github.io/shared-assets/images/examples/fx-nightly-512.png",
   );
 
   xrSession.updateRenderState({
@@ -680,7 +671,8 @@ The rest of the code is identical to that found in the earlier examples:
 
 ### Putting it all together
 
-When you take all of this code and add in the HTML and the other JavaScript code not included above, you get what you see when you [try out this example on Glitch](https://webxr-experiment.glitch.me/). Remember: as you wander around, if you get lost, just hit the <kbd>R</kbd> key to reset yourself to the beginning.
+When you take the code and add in HTML and some additional JavaScript, you'll have something like our [WebXR: Example with rotating object and user movement](https://mdn.github.io/dom-examples/webxr/) demo.
+Remember: as you wander around, if you get lost, just hit the <kbd>R</kbd> key to reset yourself to the beginning.
 
 A tip: if you don't have an XR device, you may be able to get some of the 3D effect if you bring your face very close to the screen, with your nose centered along the border between the left and right eye images in the canvas. By carefully focusing through the screen at the image, and slowly moving forward and backward, you should eventually be able to bring the 3D image into focus. It can take practice, and your nose may literally be touching the screen, depending on how sharp your eyesight is.
 

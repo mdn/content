@@ -25,6 +25,10 @@ after(...nodes)
 - `nodes`
   - : A set of {{domxref("Node")}} objects or strings to insert.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
 - `HierarchyRequestError` {{DOMxRef("DOMException")}}

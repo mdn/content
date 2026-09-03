@@ -25,9 +25,7 @@ createOffer(successCallback, failureCallback, options) // deprecated
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object providing the following options requested for the offer:
-
     - `iceRestart` {{optional_inline}}
       - : To restart ICE on an active connection, set this to `true`.
         This will cause the returned offer to have different credentials than those already in place.

@@ -34,14 +34,6 @@ An {{domxref("RTCPeerConnectionIceEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("RTCPeerConnectionIceEvent")}}
 
-## Event properties
-
-_A {{domxref("RTCPeerConnectionIceEvent")}} being an {{domxref("Event")}}, this event also implements the following property_.
-
-- {{domxref("RTCPeerConnectionIceEvent.candidate")}} {{ReadOnlyInline}}
-  - : Indicates the {{domxref("RTCIceCandidate")}} containing the candidate associated with the event.
-    This will be the empty string if the event indicates that there are no further candidates to come in this **generation**, or `null` if all ICE gathering on all transports is complete.
-
 ## Description
 
 There are three reasons why the `icecandidate` event is fired on an {{domxref("RTCPeerConnection")}}.
@@ -105,18 +97,14 @@ This example creates a simple handler for the `icecandidate` event that uses a f
 First, an example using {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
 
 ```js
-pc.addEventListener(
-  "icecandidate",
-  (ev) => {
-    if (ev.candidate !== null) {
-      sendMessage({
-        type: "new-ice-candidate",
-        candidate: ev.candidate,
-      });
-    }
-  },
-  false,
-);
+pc.addEventListener("icecandidate", (ev) => {
+  if (ev.candidate !== null) {
+    sendMessage({
+      type: "new-ice-candidate",
+      candidate: ev.candidate,
+    });
+  }
+});
 ```
 
 You can also set the `onicecandidate` event handler property directly:

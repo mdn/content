@@ -4,9 +4,8 @@ short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Error/toString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Error.toString
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toString()`** method of {{jsxref("Error")}} instances returns a string representing this error.
 

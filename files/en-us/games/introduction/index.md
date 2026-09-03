@@ -2,9 +2,8 @@
 title: Introduction to game development for the Web
 slug: Games/Introduction
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 The modern web has quickly become a viable platform not only for creating stunning, high quality games, but also for distributing those games. This article introduces you to the advantages of using the Web as a game platform, and the technologies that make it possible.
 

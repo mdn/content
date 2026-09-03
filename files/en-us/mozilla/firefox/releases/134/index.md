@@ -1,10 +1,10 @@
 ---
-title: Firefox 134 for developers
+title: Firefox 134 release notes for developers
+short-title: Firefox 134
 slug: Mozilla/Firefox/Releases/134
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 134 that affect developers. Firefox 134 was released on [January 7, 2025](https://whattrainisitnow.com/release/?version=134).
 
@@ -41,8 +41,8 @@ No notable changes
 
 #### WebDriver BiDi
 
-- Implemented the `browser.getClientWindows` command, which allows to retrieve information about the currently opened browser windows ([Firefox bug 1855025](https://bugzil.la/1855025))
-- Added support for the `initiatorType` and `destination` fields to all network events ([Firefox bug 1904892](https://bugzil.la/1904892) and [Firefox bug 1933331](https://bugzil.la/1933331)). They allow to understand why and how the request was created.
+- Implemented the `browser.getClientWindows` command, which allows you to retrieve information about the currently opened browser windows ([Firefox bug 1855025](https://bugzil.la/1855025))
+- Added support for the `initiatorType` and `destination` fields to all network events ([Firefox bug 1904892](https://bugzil.la/1904892) and [Firefox bug 1933331](https://bugzil.la/1933331)). They allow you to understand why and how the request was created.
 - The `browsingContext.navigationStarted` event is no longer emitted when the initial about:blank page is loaded for a new top-level browsing context ([Firefox bug 1922014](https://bugzil.la/1922014))
 - We fixed a bug where the `requestTime` of network events would sometimes be set to 0 ([Firefox bug 1930849](https://bugzil.la/1930849))
 - The `browsingContext.traverseHistory` command can now only be used with top-level browsing contexts ([Firefox bug 1924859](https://bugzil.la/1924859))
@@ -60,7 +60,3 @@ These features are newly shipped in Firefox 134 but are disabled by default. To 
 - **`Intl.DurationFormat`** (Nightly release): {{jsxref("Intl.DurationFormat")}} enables locale-sensitive formatting of durations. ([Firefox bug 1648139](https://bugzil.la/1648139)).
 - **`autocorrect`**: <code>dom.forms.autocorrect</code>.
   The HTML [`autocorrect`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocorrect) attribute and {{domxref("HTMLElement.autocorrect")}} property allow autocorrection in editable text elements, including: most kinds of text {{htmlelement("input")}} elements, {{htmlelement("textarea")}} elements, and elements that have the [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) attribute set ([Firefox bug 1725806](https://bugzil.la/1725806)).
-
-## Older versions
-
-{{Firefox_for_developers}}

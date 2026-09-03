@@ -11,12 +11,12 @@ sidebar: learnsidebar
 
 ## Prerequisites
 
-Before starting this module, You should really have learnt the fundamentals of [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting), especially [JavaScript object basics](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics) and core API coverage such as [DOM scripting](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting) and [Network requests](/en-US/docs/Learn_web_development/Core/Scripting/Network_requests).
+Before starting this module, You should really have learned the fundamentals of [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting), especially [JavaScript object basics](/en-US/docs/Learn_web_development/Core/Scripting/Object_basics) and core API coverage such as [DOM scripting](/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting) and [Network requests](/en-US/docs/Learn_web_development/Core/Scripting/Network_requests).
 
 It would also be helpful to have some familiarity with [HTML](/en-US/docs/Learn_web_development/Core/Structuring_content) and [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics).
 
 > [!NOTE]
-> If you are working on a device where you don't have the ability to create your own files, you could try out (most of) the code examples in an online coding program such as [JSBin](https://jsbin.com/) or [Glitch](https://glitch.com/).
+> If you are working on a computer, tablet, or another device where you can't create files, you can try running the code in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 
 ## Tutorials
 

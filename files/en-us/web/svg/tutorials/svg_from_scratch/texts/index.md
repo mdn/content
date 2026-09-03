@@ -56,7 +56,6 @@ The `tspan` element has the following custom attributes:
 - `x`
   - : Sets a new absolute `x` coordinate for the containing text. This overwrites the default current text position. The attribute may also contain a list of numbers that are one by one applied to the single characters of the `tspan` element.
 - `dx`
-
   - : Starts drawing the text with a horizontal offset `dx` from the default current position. Here, too, you may provide a list of values that are applied to consecutive characters, hence piling up the offset over time.
 
     Likewise, there are **`y`** and **`dy`** for vertical displacement.
@@ -72,11 +71,9 @@ This element fetches via its `href` attribute an arbitrary path and aligns the c
 
 ```html
 <svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
-  <path id="my_path" d="M 20,20 C 80,60 100,40 120,20" fill="transparent" />
+  <path id="my_path" d="M 20,20 C 80,60 100,40 120,20" fill="none" />
   <text>
-    <textPath xmlns:xlink="http://www.w3.org/1999/xlink" href="#my_path">
-      A curve.
-    </textPath>
+    <textPath href="#my_path">A curve.</textPath>
   </text>
 
   <style>

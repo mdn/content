@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLInputElement.invalid_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`invalid`** event fires when a submittable element has been checked for validity and doesn't satisfy its constraints.
 

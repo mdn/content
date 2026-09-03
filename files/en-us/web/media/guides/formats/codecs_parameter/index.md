@@ -48,6 +48,7 @@ The containers below support extended codec options in their `codecs` parameters
 
 - [3GP](#iso_base_media_file_format_mp4_quicktime_and_3gp)
 - [AV1](#av1)
+- [HEVC](#hevc_mp4_quicktime_matroska)
 - [ISO BMFF](#iso_base_media_file_format_mp4_quicktime_and_3gp)
 - [MPEG-4](#iso_base_media_file_format_mp4_quicktime_and_3gp)
 - [QuickTime](#iso_base_media_file_format_mp4_quicktime_and_3gp)
@@ -474,7 +475,7 @@ The first four components are required; everything from `CC` (chroma subsampling
               </td>
             </tr>
             <tr>
-              <td><code>70</code></td>
+              <td><code>07</code></td>
               <td>
                 {{Glossary("SMPTE")}} 240M (historical).
                 <em>Functionally identical to <code>6</code>.</em>
@@ -577,23 +578,25 @@ All media types based upon the [ISO Base Media File Format](https://en.wikipedia
 
 Each codec described by the `codecs` parameter can be specified either as the container's name (`3gp`, `mp4`, `quicktime`, etc.) or as the container name plus additional parameters to specify the codec and its configuration. Each entry in the codec list may contain some number of components, separated by periods (`.`).
 
-The syntax for the value of `codecs` varies by codec; however, it always starts with the codec's four-character identifier, a period separator (`.`), followed by the Object Type Indication (OTI) value for the specific data format. For most codecs, the OTI is a two-digit hexadecimal number; however, it's six hexadecimal digits for [AVC (H.264)](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#avc_h.264).
+The syntax for the value of `codecs` varies by codec; however, it always starts with the codec's case-sensitive four-character sample entry code. Some codecs append a period separator (`.`) followed by additional parameters, such as an Object Type Indication (OTI) value or details about the codec's profile. For most codecs that use an OTI, the value is a two-digit hexadecimal number; however, AVC (H.264) uses six hexadecimal digits to identify the [profile](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#avc_h.264).
 
 Thus, the syntaxes for each of the supported codecs look like this:
 
 - `cccc[.pp]*` (Generic ISO BMFF)
   - : Where `cccc` is the four-character ID for the codec and `pp` is where zero or more two-character encoded property values go.
 - `mp4a.oo[.A]` (MPEG-4 audio)
-  - : Where `oo` is the Object Type Indication value describing the contents of the media more precisely and `A` is the one-digit _audio_ OTI. The possible values for the OTI can be found on the MP4 Registration Authority website's [Object Types page](https://mp4ra.org/registered-types/object-types). For example, Opus audio in an MP4 file is `mp4a.ad`. For further details, see [MPEG-4 audio](#mpeg-4_audio).
+  - : Where `oo` is the Object Type Indication value describing the contents of the media more precisely and `A` is the one-digit _audio_ OTI. The possible values for the OTI can be found on the MP4 Registration Authority website's [Object Types page](https://mp4ra.org/registered-types/object-types). For example, AAC-LC audio in an MP4 file is `mp4a.40.2`. For further details, see [MPEG-4 audio](#mpeg-4_audio).
 - `mp4v.oo[.V]` (MPEG-4 video)
   - : Here, `oo` is again the OTI describing the contents more precisely, while `V` is the one-digit _video_ OTI.
 - `avc1[.PPCCLL]` (AVC video)
-
   - : `PPCCLL` are six hexadecimal digits specifying the profile number (`PP`), constraint set flags (`CC`), and level (`LL`). See [AVC profiles](#avc_profiles) for the possible values of `PP`.
 
     The constraint set flags byte is comprised of one-bit Boolean flags, with the most significant bit being referred to as flag 0 (or `constraint_set0_flag`, in some resources), and each successive bit being numbered one higher. Currently, only flags 0 through 2 are used; the other five bits _must_ be zero. The meanings of the flags vary depending on the profile being used.
 
     The level is a fixed-point number, so a value of `14` (decimal 20) means level 2.0 while a value of `3D` (decimal 61) means level 6.1. Generally speaking, the higher the level number, the more bandwidth the stream will use and the higher the maximum video dimensions are supported.
+
+- `avc3[.PPCCLL]` (Variable resolution AVC)
+  - : The `avc3` codec parameters have the same syntax as the `avc1` codec parameters.
 
 #### AVC profiles
 
@@ -614,12 +617,12 @@ The following are the AVC profiles and their profile numbers for use in the `cod
 | **High 10 Intra Profile** High 10 constrained to all-intra-frame use. Primarily used for professional apps.                                                                                                                                                                                                                                                                                                                                                                                                                                            | `6E`         | `10`             |
 | **High 4:2:2 Intra Profile** The Hi422 Profile with all-intra-frame use.                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | `7A`         | `10`             |
 | **High 4:4:4 Intra Profile** The High 4:4:4 Profile constrained to use only intra frames.                                                                                                                                                                                                                                                                                                                                                                                                                                                              | `F4`         | `10`             |
-| **CAVLC 4:4:4 Intra Profile** The High 4:4:4 Profile constrained to all-intra use, and to using only CAVLC entropy coding.                                                                                                                                                                                                                                                                                                                                                                                                                             | `44`         | `00`             |
+| **CAVLC 4:4:4 Intra Profile** The High 4:4:4 Profile constrained to all-intra use, and to using only CAVLC entropy coding.                                                                                                                                                                                                                                                                                                                                                                                                                             | `2C`         | `10`             |
 | **Scalable Baseline Profile** Intended for use with video conferencing as well as surveillance and mobile uses, the [SVC](https://en.wikipedia.org/wiki/SVC) Baseline Profile is based on AVC's Constrained Baseline profile. The base layer within the stream is provided at a high quality level, with some number of secondary substreams that offer alternative forms of the same video for use in various constrained environments. These may include any combination of reduced resolution, reduced frame rate, or increased compression levels. | `53`         | `00`             |
 | **Scalable Constrained Baseline Profile** Primarily used for real-time communication applications. Not yet supported by WebRTC, but an extension to the WebRTC API [to allow SVC](https://github.com/w3c/webrtc-svc) is in development.                                                                                                                                                                                                                                                                                                                | `53`         | `04`             |
 | **Scalable High Profile** Meant mostly for use in broadcast and streaming applications. The base (or highest quality) layer must conform to the AVC High Profile.                                                                                                                                                                                                                                                                                                                                                                                      | `56`         | `00`             |
 | **Scalable Constrained High Profile** A subset of the Scalable High Profile designed mainly for real-time communication.                                                                                                                                                                                                                                                                                                                                                                                                                               | `56`         | `04`             |
-| **Scalable High Intra Profile** Primarily useful only for production applications, this profile supports only all-intra usage.                                                                                                                                                                                                                                                                                                                                                                                                                         | `56`         | `20`             |
+| **Scalable High Intra Profile** Primarily useful only for production applications, this profile supports only all-intra usage.                                                                                                                                                                                                                                                                                                                                                                                                                         | `56`         | `10`             |
 | **Stereo High Profile** The Stereo High Profile provides stereoscopic video using two renderings of the scene (left eye and right eye). Otherwise, provides the same features as the High profile.                                                                                                                                                                                                                                                                                                                                                     | `80`         | `00`             |
 | **Multiview High Profile** Supports two or more views using both temporal and MVC inter-view prediction. _Does not support_ field pictures or macroblock-adaptive frame-field coding.                                                                                                                                                                                                                                                                                                                                                                  | `76`         | `00`             |
 | **Multiview Depth High Profile** Based on the High Profile, to which the main substream must adhere. The remaining substreams must match the Stereo High Profile.                                                                                                                                                                                                                                                                                                                                                                                      | `8A`         | `00`             |
@@ -899,6 +902,59 @@ The Audio Object Types are defined in ISO/IEC 14496-3 subpart 1, section 1.5.1. 
   </tbody>
 </table>
 
+#### Opus
+
+Opus audio in an ISO BMFF container uses `Opus` as its sample entry and `codecs` value. The value is case-sensitive. Although the MP4 Registration Authority assigns the Object Type Indication `0xAD` to Opus, the [Opus encapsulation specification](https://opus-codec.org/docs/opus_in_isobmff.html) does not define an `MP4AudioSampleEntry` using that value, so `mp4a.ad` is not used.
+
+```plain
+audio/mp4;codecs=Opus
+video/mp4;codecs=avc1.4D401E,Opus
+```
+
+### HEVC: MP4, Quicktime, Matroska
+
+The [High Efficiency Video Coding](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#hevc_h.265) codec, also known as H.265 and MPEG-H Part 2, can be included in the [MP4](/en-US/docs/Web/Media/Guides/Formats/Containers#mpeg-4_mp4) (`video/mp4`), [Quicktime](/en-US/docs/Web/Media/Guides/Formats/Containers#quicktime) (`video/quicktime`), and [Matroska](https://en.wikipedia.org/wiki/Matroska) (`video/matroska`) containers.
+
+Use of HEVC is generally described using a supporting MIME type with the `codecs` parameter appended; syntax examples are as follows:
+
+```plain
+video/mp4;codecs=hvc1.1.6.L186.B0,mp4a.40.2
+video/mp4;codecs=hvc1.1.6.L186.B0,Opus
+video/mp4;codecs=hev1.1.6.L186.B0,mp4a.40.2
+video/mp4;codecs=hev1.1.6.L186.B0,Opus
+```
+
+The syntaxes for each of the supported codecs look like this:
+
+- `hvc1[.A.B.C.D]` (HEVC video)
+  - : The value starts with the codec's four-character identifier (`hvc1`), followed by four or more values separated by periods (`.`):
+    - `A`
+      - : The **`general_profile_space`**. This is encoded as one or two characters:
+        - The first character is `A`, `B`, or `C`, representing `general_profile_space` `1`, `2`, or `3`, or no character, representing `general_profile_space` `0`.
+        - The second character is a decimal number representing the `general_profile_idc`.
+          > [!NOTE]
+          > In the above examples, the value `1` means `general_profile_space === 0` (no character) and `general_profile_idc === 1`.
+    - `B`
+      - : A 32-bit value representing one or more **general profile compatibility flags** (`general_profile_compatibility_flag`), encoded in hexadecimal (leading zeroes may be omitted), and specified in reverse bit order from most to least significant. The values can range from `31` (most significant) to `0` (least significant), and are specified in [ISO/IEC 23008-2](https://www.iso.org/standard/90502.html).
+
+        > [!NOTE]
+        > In the above examples, the value `6` means `general_profile_compatibility_flag === 6`.
+
+    - `C`
+      - : The **`general_tier_flag`**, encoded as `L` (`general_tier_flag === 0`) or `H` (`general_tier_flag === 1`), followed by the **`general_level_idc`**, encoded as a decimal number.
+
+        > [!NOTE]
+        > In the above examples, the value `L186` means `general_tier_flag === 0` followed by `general_level_idc === 186`.
+
+    - `D`
+      - : One or more 6-byte **constraint flags**. Note that each flag is encoded as a hexadecimal number, and separated by an additional period; trailing bytes that are zero may be omitted.
+
+        > [!NOTE]
+        > In the above examples, there is only one constraint flag present — `B0`.
+
+- `hev1[.A.B.C.D]` (Variable resolution HEVC)
+  - : The `hev1` codec parameters have the same syntax as the `hvc1` codec parameters.
+
 ### WebM
 
 The basic form for a WebM `codecs` parameter is to list one or more of the four WebM codecs by name, separated by commas. The table below shows some examples:
@@ -929,3 +985,4 @@ You can also use the codecs parameter when specifying a MIME media type to the {
 - [Guide to video codecs used on the web](/en-US/docs/Web/Media/Guides/Formats/Video_codecs)
 - [Codecs used by WebRTC](/en-US/docs/Web/Media/Guides/Formats/WebRTC_codecs)
 - [Getting the correct HTML codecs parameter for an AV1 video](https://jakearchibald.com/2022/html-codecs-parameter-for-av1/)
+- [High Efficiency Video Coding](https://en.wikipedia.org/wiki/High_Efficiency_Video_Coding) on Wikipedia

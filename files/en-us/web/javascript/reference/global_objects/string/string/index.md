@@ -4,9 +4,8 @@ short-title: String()
 slug: Web/JavaScript/Reference/Global_Objects/String/String
 page-type: javascript-constructor
 browser-compat: javascript.builtins.String.String
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`String()`** constructor creates {{jsxref("String")}} objects. When called as a function, it returns primitive values of type String.
 
@@ -17,7 +16,8 @@ new String(thing)
 String(thing)
 ```
 
-> **Note:** `String()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), but with different effects. See [Return value](#return_value).
+> [!NOTE]
+> `String()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new), but with different effects. See [Return value](#return_value).
 
 ### Parameters
 

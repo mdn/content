@@ -3,9 +3,8 @@ title: devtools.network.getHAR()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/network/getHAR
 page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.network.getHAR
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Get a [HAR log](http://www.softwareishard.com/blog/har-12-spec/#log) for the page loaded in the current tab.
 
@@ -25,10 +24,6 @@ None.
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an object containing the HAR log for the current tab. For details of what the log object contains, refer to the [HAR specification](http://www.softwareishard.com/blog/har-12-spec/#log).
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Log the URLs of requests contained in the HAR log:
@@ -46,6 +41,10 @@ logRequestsButton.addEventListener("click", logRequests);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.devtools.network`](https://developer.chrome.com/docs/extensions/reference/api/devtools/network) API.

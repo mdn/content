@@ -4,9 +4,8 @@ short-title: setFromBase64()
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array/setFromBase64
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Uint8Array.setFromBase64
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`setFromBase64()`** method of {{jsxref("Uint8Array")}} instances populates this `Uint8Array` object with bytes from a [base64](/en-US/docs/Glossary/Base64)-encoded string, returning an object indicating how many bytes were read and written.
 

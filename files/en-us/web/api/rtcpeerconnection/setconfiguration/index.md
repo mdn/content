@@ -35,6 +35,10 @@ setConfiguration(configuration)
     The changes are not additive; instead, the new values completely replace the existing ones.
     See [`RTCPeerConnection()`](/en-US/docs/Web/API/RTCPeerConnection/RTCPeerConnection#parameters) for more information on what options are allowed.
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ### Exceptions
 
 - `InvalidAccessError` {{domxref("DOMException")}}

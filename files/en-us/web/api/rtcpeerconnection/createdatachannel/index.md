@@ -26,10 +26,8 @@ createDataChannel(label, options)
   - : A human-readable name for the channel.
     This string may not be longer than 65,535 bytes.
 - `options` {{optional_inline}}
-
   - : An object providing configuration options for the data channel.
     It can contain the following fields:
-
     - `ordered` {{optional_inline}}
       - : Indicates whether or not messages sent on the {{domxref("RTCDataChannel")}} are required to arrive at their destination in the same order in which they were sent (`true`), or if they're allowed to arrive out-of-order (`false`).
         **Default: `true`.**

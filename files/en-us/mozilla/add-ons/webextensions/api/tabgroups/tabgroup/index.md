@@ -3,9 +3,8 @@ title: tabGroups.TabGroup
 slug: Mozilla/Add-ons/WebExtensions/API/tabGroups/TabGroup
 page-type: webextension-api-type
 browser-compat: webextensions.api.tabGroups.TabGroup
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The state of a tab group.
 
@@ -15,6 +14,8 @@ Values of this type are strings. Possible values are:
 
 - `collapsed`
   - : `boolean`. Whether the tab group is collapsed or expanded in the tab strip.
+    - In Firefox, a collapsed group can contain the active tab. The inactive tabs are collapsed.
+    - In Chrome, groups are collapsed completely. If the group contains the active tab when it's collapsed, the active tab is moved to the first tab to the right of the group. If there is no tab to the right of the group, it's moved to the tab immediately to the left of the group.
 - `color`
   - : {{WebExtAPIRef("tabGroups.Color")}}. The name of the user-selected color for the tab group's label and icons.
 - `id`

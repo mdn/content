@@ -15,7 +15,7 @@ represents an underlying audio processing mechanism of an
 
 > [!NOTE]
 > The `AudioWorkletProcessor` and classes that derive from it
-> cannot be instantiated directly from a user-supplied code. Instead, they are created
+> cannot be instantiated directly from user-supplied code. Instead, they are created
 > only internally by the creation of an associated {{domxref("AudioWorkletNode")}}.
 
 ## Syntax
@@ -27,14 +27,12 @@ new AudioWorkletProcessor(options)
 ### Parameters
 
 - `options`
-
   - : An object that is passed as _options_ parameter to the
     {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}} constructor and
     passed through [the structured clone algorithm](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
     Available properties are as follows:
 
     <!-- The specification refers to this object as: AudioWorkletNodeOptions -->
-
     - `numberOfInputs` {{optional_inline}}
       - : The value to initialize the {{domxref("AudioNode.numberOfInputs", "numberOfInputs")}} property to. Defaults to 1.
     - `numberOfOutputs` {{optional_inline}}
@@ -46,7 +44,7 @@ new AudioWorkletProcessor(options)
     - `processorOptions` {{optional_inline}}
       - : Any additional data that can be used for custom initialization of the underlying {{domxref("AudioWorkletProcessor")}}.
 
-    Note that there are default values for the first two properties, so even if there are no
+    Note that there are default values for the first two properties, so even if there is no
     _options_ object passed to the {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode()")}} constructor, the _options_ object passed by the node to the `AudioWorkletProcessor` constructor will exist and at minimum have `numberOfInputs` and `numberOfOutputs`.
 
 ### Return value

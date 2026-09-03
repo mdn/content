@@ -3,9 +3,8 @@ title: dictionaries
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/dictionaries
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.dictionaries
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>

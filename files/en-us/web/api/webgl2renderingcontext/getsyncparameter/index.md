@@ -23,9 +23,7 @@ getSyncParameter(sync, pname)
 - `sync`
   - : A {{domxref("WebGLSync")}} object.
 - `pname`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying which information to return. Possible values:
-
     - `gl.OBJECT_TYPE`
       - : Returns a {{domxref("WebGL_API/Types", "GLenum")}} indicating the type
         of the sync object (always `gl.SYNC_FENCE`).

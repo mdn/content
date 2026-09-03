@@ -4,7 +4,7 @@ slug: Web/API/WebXR_Device_API/Startup_and_shutdown
 page-type: guide
 ---
 
-{{DefaultAPISidebar("WebXR Device API")}}{{SecureContext_header}}
+{{DefaultAPISidebar("WebXR Device API")}}
 
 Assuming you're already familiar with 3D graphics in general and WebGL in particular, taking that next bold step into mixed reality—the idea of presenting artificial scenery or objects in addition to or in place of the real world—is not overly complicated. Before you can begin to render your augmented or virtual reality scenario, you need to create and set up the WebXR session, and you should know how to shut it down properly as well. You will learn how to do these things in this article.
 
@@ -268,7 +268,7 @@ Over the course of your WebXR session, you may receive any of a number of events
 
 ### Detecting changes to session's visibility state
 
-When the state of the `XRSession`'s visibility changes—such as when the session is hidden or displayed, or when the user has focused another context—the session receives an {{domxref("XRSession.visibilitychange_event", "visibilitychange")}} event.
+When the state of the `XRSession`'s visibility changes—such as when the session is hidden or displayed, or when the user has focused another context—the session receives a {{domxref("XRSession.visibilitychange_event", "visibilitychange")}} event.
 
 ```js
 session.onvisibilitychange = (event) => {

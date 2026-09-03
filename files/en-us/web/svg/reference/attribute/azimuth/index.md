@@ -35,12 +35,8 @@ svg {
     </feDiffuseLighting>
   </filter>
 
-  <circle cx="100" cy="100" r="80" style="filter: url(#distantLight1);" />
-  <circle
-    cx="100"
-    cy="100"
-    r="80"
-    style="filter: url(#distantLight2); transform: translateX(240px);" />
+  <circle cx="100" cy="100" r="80" filter="url(#distantLight1)" />
+  <circle cx="340" cy="100" r="80" filter="url(#distantLight2)" />
 </svg>
 ```
 

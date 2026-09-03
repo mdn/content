@@ -4,9 +4,8 @@ short-title: "[Symbol.matchAll]()"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.@@matchAll
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`[Symbol.matchAll]()`** method of {{jsxref("RegExp")}} instances specifies how [`String.prototype.matchAll`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) should behave.
 
@@ -45,7 +44,7 @@ An [iterable iterator object](/en-US/docs/Web/JavaScript/Reference/Global_Object
 
 ## Description
 
-This method is called internally in {{jsxref("String.prototype.matchAll()")}}. For example, the following two examples return the same result.
+This method exists for customizing the behavior of `matchAll()` in {{jsxref("RegExp")}} subclasses. It is called internally in {{jsxref("String.prototype.matchAll()")}}. For example, the following two examples return the same result.
 
 ```js
 "abc".matchAll(/a/g);
@@ -53,7 +52,7 @@ This method is called internally in {{jsxref("String.prototype.matchAll()")}}. F
 /a/g[Symbol.matchAll]("abc");
 ```
 
-Like [`[Symbol.split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split), `[Symbol.matchAll]()` starts by using [`[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species) to construct a new regex, thus avoiding mutating the original regexp in any way. [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) starts as the original regex's value.
+Like [`[Symbol.split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split), `[Symbol.matchAll]()` starts by using [`[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species) to construct a new regex, thus avoiding mutating the original regexp in any way. The constructor receives `this` and the original flags. [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) starts as the original regex's value.
 
 ```js
 const regexp = /[a-c]/g;
@@ -63,16 +62,7 @@ Array.from(str.matchAll(regexp), (m) => `${regexp.lastIndex} ${m[0]}`);
 // [ "1 b", "1 c" ]
 ```
 
-The validation that the input is a global regex happens in [`String.prototype.matchAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll). `[Symbol.matchAll]()` does not validate the input. If the regex is not global, the returned iterator yields the [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) result once and then returns `undefined`. If the regexp is global, each time the returned iterator's `next()` method is called, the regex's [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) is called and the result is yielded.
-
-When the regex is sticky and global, it will still perform sticky matches — i.e., it will not match any occurrences beyond the `lastIndex`.
-
-```js
-console.log(Array.from("ab-c".matchAll(/[abc]/gy)));
-// [ [ "a" ], [ "b" ] ]
-```
-
-If the current match is an empty string, the [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) will still be advanced. If the regex has the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) flag, it advances by one Unicode code point; otherwise, it advances by one UTF-16 code point.
+If the regex is global (with the `g` flag), each time the returned iterator's `next()` method is called, the regex's [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) is called and the result is yielded. If the current match is an empty string, the [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) will still be advanced. If the regex has the [`u`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode) flag, it advances by one Unicode code point; otherwise, it advances by one UTF-16 code point.
 
 ```js
 console.log(Array.from("😄".matchAll(/(?:)/g)));
@@ -82,7 +72,14 @@ console.log(Array.from("😄".matchAll(/(?:)/gu)));
 // [ [ "" ], [ "" ] ]
 ```
 
-This method exists for customizing the behavior of `matchAll()` in {{jsxref("RegExp")}} subclasses.
+If the regex is not global, the returned iterator yields the [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) result once and then completes. (The validation that the input is a global regex happens in [`String.prototype.matchAll()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll). `[Symbol.matchAll]()` does not validate the flags of `this`.)
+
+When the regex is sticky and global, it will still perform sticky matches — i.e., it will not match any occurrences beyond the `lastIndex`.
+
+```js
+console.log(Array.from("ab-c".matchAll(/[abc]/gy)));
+// [ [ "a" ], [ "b" ] ]
+```
 
 ## Examples
 

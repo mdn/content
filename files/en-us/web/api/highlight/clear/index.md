@@ -9,7 +9,7 @@ spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-set.prot
 
 {{APIRef("CSS Custom Highlight API")}}
 
-The **`clear()`** method of the {{domxref("Highlight")}} interface removes all the {{domxref("Range")}} objects from a `Highlight` object.
+The **`clear()`** method of the {{domxref("Highlight")}} interface removes all the {{domxref("AbstractRange")}} objects from a `Highlight` object.
 
 `Highlight` is a {{jsxref("Set")}}-like object, so this is similar to using {{jsxref("Set.clear()")}}.
 
@@ -18,6 +18,10 @@ The **`clear()`** method of the {{domxref("Highlight")}} interface removes all t
 ```js-nolint
 clear()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

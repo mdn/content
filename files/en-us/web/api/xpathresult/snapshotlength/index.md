@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.XPathResult.snapshotLength
 ---
 
-{{APIRef("DOM XPath")}} {{AvailableInWorkers}}
+{{APIRef("DOM")}} {{AvailableInWorkers}}
 
 The read-only **`snapshotLength`** property of the
 {{domxref("XPathResult")}} interface represents the number of nodes in the result

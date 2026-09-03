@@ -20,7 +20,6 @@ generateKeyFrame(rid)
 ### Parameters
 
 - `rid` {{optional_inline}}
-
   - : A string containing the "restriction identifier" ("RID") of the stream/encoder that must generate the new key frame.
 
     The value must have between 1 and 255 characters (inclusive), and contain only the alphanumeric characters, underscore, and hyphen (`A-Z`, `a-z`, `0-9`, `-`, `_`).

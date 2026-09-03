@@ -22,10 +22,8 @@ bindBufferBase(target, index, buffer)
 ### Parameters
 
 - `target`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the target for the bind operation. Possible
     values:
-
     - `gl.TRANSFORM_FEEDBACK_BUFFER`
     - `gl.UNIFORM_BUFFER`
 

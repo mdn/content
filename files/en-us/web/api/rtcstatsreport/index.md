@@ -119,7 +119,7 @@ const stats = await sender.getStats();
 for (const stat of stats.values()) {
   if (stat.type !== "outbound-rtp") continue;
   Object.keys(stat).forEach((statName) => {
-    console.log(`${statName}: ${report[statName]}`);
+    console.log(`${statName}: ${stat[statName]}`);
   });
 }
 ```

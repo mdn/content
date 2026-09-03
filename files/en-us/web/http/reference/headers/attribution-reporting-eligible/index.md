@@ -4,11 +4,13 @@ short-title: Attribution-Reporting-Eligible
 slug: Web/HTTP/Reference/Headers/Attribution-Reporting-Eligible
 page-type: http-header
 status:
-  - experimental
+  - deprecated
+  - non-standard
 browser-compat: http.headers.Attribution-Reporting-Eligible
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{non-standard_header}}
 
 The HTTP **`Attribution-Reporting-Eligible`** {{Glossary("request header")}} indicates that the corresponding response is eligible to register an attribution source or trigger.
 

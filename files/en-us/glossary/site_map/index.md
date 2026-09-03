@@ -2,9 +2,8 @@
 title: Site map
 slug: Glossary/Site_map
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **site map** or **sitemap** is a list of pages of a website.
 

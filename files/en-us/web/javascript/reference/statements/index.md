@@ -3,9 +3,8 @@ title: Statements and declarations
 slug: Web/JavaScript/Reference/Statements
 page-type: landing-page
 browser-compat: javascript.statements
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 JavaScript applications consist of statements with an appropriate syntax. A single statement may span multiple lines. Multiple statements may occur on a single line if each statement is separated by a semicolon. This isn't a keyword, but a group of keywords.
 
@@ -38,6 +37,10 @@ For an alphabetical listing see the sidebar on the left.
   - : Declares a block scope local variable, optionally initializing it to a value.
 - {{jsxref("Statements/const", "const")}}
   - : Declares a read-only named constant.
+- {{jsxref("Statements/using", "using")}}
+  - : Declares local variables that are _synchronously disposed_.
+- {{jsxref("Statements/await_using", "await using")}}
+  - : Declares local variables that are _asynchronously disposed_.
 
 ### Functions and classes
 

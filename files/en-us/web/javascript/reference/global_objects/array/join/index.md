@@ -4,14 +4,10 @@ short-title: join()
 slug: Web/JavaScript/Reference/Global_Objects/Array/join
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.join
+sidebar: jsref
 ---
 
-{{JSRef}}
-
-The **`join()`** method of {{jsxref("Array")}} instances creates and
-returns a new string by concatenating all of the elements in this array,
-separated by commas or a specified separator string. If the array has
-only one item, then that item will be returned without using the separator.
+The **`join()`** method of {{jsxref("Array")}} instances returns a new string that is the concatenation of all elements in this array, separated by commas or a specified separator string. If the array has only one item, that item's stringification is returned without using the separator.
 
 {{InteractiveExample("JavaScript Demo: Array.prototype.join()")}}
 

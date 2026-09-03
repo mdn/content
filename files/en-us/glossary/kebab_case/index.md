@@ -2,9 +2,8 @@
 title: Kebab case
 slug: Glossary/Kebab_case
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Kebab case** is a way of writing phrases without spaces, where spaces are replaced with hyphens `-`, and the words are typically all lower case. The name comes from the similarity of the words to meat on a kebab skewer. It's often stylized as "kebab-case" to remind the reader of its appearance.
 

@@ -32,11 +32,11 @@ Each fingerprint is represented by an object with the following properties:
     Allowed values include: `"sha-1"`, `"sha-224"`, `"sha-256"`, `"sha-384"`, `"sha-512"`, `"md5"`, `"md2"`.<!-- from [RFC4572] Section 5. -->
 - `value`
   - : A string containing the certificate fingerprint in lowercase hex string, as calculated with the `algorithm` hash function.
-    The format is more precisely defined in [RFC4572, Section 5](https://www.rfc-editor.org/rfc/rfc4572#section-5).
+    The format is more precisely defined in [RFC4572, Section 5](https://www.rfc-editor.org/info/rfc4572/#section-5).
 
 ## Description
 
-The {{domxref("RTCCertificate")}} instances used for a particular {{DOMxRef("RTCPeerConnection")}} can created using the {{DOMxRef("RTCPeerConnection.generateCertificate_static", "RTCPeerConnection.generateCertificate()")}} static method or fetched from storage in an [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), and set in the constructor.
+The {{domxref("RTCCertificate")}} instances used for a particular {{DOMxRef("RTCPeerConnection")}} can be created using the {{DOMxRef("RTCPeerConnection.generateCertificate_static", "RTCPeerConnection.generateCertificate()")}} static method or fetched from storage in an [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), and set in the constructor.
 If no certificates are passed in the constructor they will be created automatically, in which case the certificates used can be fetched with {{DOMxRef("RTCPeerConnection.getConfiguration()")}}.
 
 Browsers will automatically exchange certificates and fingerprints associated with each {{DOMxRef("RTCPeerConnection")}} during the SDP offer phase, and these will be used as part of the DTLS handshake to verify that the remote party matches the certificate/endpoint send in the SDP.
@@ -46,9 +46,9 @@ In some cases it can be useful for the application layer to share certificate fi
 
 - If a trust relationship has been established between two web-browsers it can be persisted by storing the certificates and reusing them in a later session (up to a year later).
   The trusted certificates are identified by their fingerprints.
-- Peers than want to identify a particular user can send fingerprints and validate the associated user "out of band" (i.e., outside of the browser-mediated WebRTC communications flow).
+- Peers that want to identify a particular user can send fingerprints and validate the associated user "out of band" (i.e., outside of the browser-mediated WebRTC communications flow).
   The application can use the fingerprint to identify later sessions with the specific user.
-- In some conferencing server ("middlebox") implementations, the server may need to known the fingerprints before doing any offer/answer.
+- In some conferencing server ("middlebox") implementations, the server may need to know the fingerprints before doing any offer/answer.
 
 Peers may support different sets of algorithms.
 When comparing certificates, all fingerprint values for the set of algorithms supported by peers should match.
@@ -70,17 +70,15 @@ const certificates = configuration.certificates;
 let fingerprintsFromClient;
 
 if (certificates && certificates.length > 0) {
-  certificates.forEach((cert) => {
+  for (const cert of certificates) {
     // For purpose of demonstration, just get first certificate
     fingerprintsFromClient = cert.getFingerprints();
     break;
-  });
+  }
 }
 
 // Get the certificate fingerprints from the remote peer for particular certificate (pseudo code)
-const fingerprintsFromServer = [
-  /* … */
-];
+const fingerprintsFromServer = [/* … */];
 ```
 
 There are numerous ways to compare the fingerprint arrays for a particular certificate.

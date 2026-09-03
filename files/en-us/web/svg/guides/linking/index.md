@@ -12,7 +12,7 @@ page1.html:
 ```html
 <html lang="en">
   <body>
-    <p>This is a SVG button:</p>
+    <p>This is an SVG button:</p>
     <object
       width="100"
       height="50"

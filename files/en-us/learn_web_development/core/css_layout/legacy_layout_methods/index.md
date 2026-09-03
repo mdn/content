@@ -119,10 +119,7 @@ Putting this all together should give us a result like so:
 
 {{ EmbedLiveSample('A_two_column_layout', '100%', 520) }}
 
-You'll notice here that we are using percentages for all the widths — this is quite a good strategy, as it creates a **liquid layout**, one that adjusts to different screen sizes and keeps the same proportions for the column widths at smaller screen sizes. Try adjusting the width of your browser window to see for yourself. This is a valuable tool for responsive web design.
-
-> [!NOTE]
-> You can see this example running at [0_two-column-layout.html](https://mdn.github.io/learning-area/css/css-layout/floats/0_two-column-layout.html) (see also [the source code](https://github.com/mdn/learning-area/blob/main/css/css-layout/floats/0_two-column-layout.html)).
+You'll notice here that we are using percentages for all the widths — this is quite a good strategy, as it creates a **liquid layout**, one that adjusts to different screen sizes and keeps the same proportions for the column widths at smaller screen sizes. Try adjusting the width of your browser window to see for yourself. This is a valuable tool for [responsive web design](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design).
 
 ## Creating simple legacy grid frameworks
 
@@ -136,9 +133,9 @@ In the next sections we will look at how to create both. We will create a 12 col
 
 Lets first create a grid system that uses fixed width columns.
 
-Start out by making a local copy of our sample [simple-grid.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/simple-grid.html) file, which contains the following markup in its body.
+Start out by creating a new HTML file on your local system, and add the following markup into its `<body>`:
 
-```html
+```html live-sample___basic-grid
 <div class="wrapper">
   <div class="row">
     <div class="col">1</div>
@@ -167,9 +164,11 @@ The aim is to turn this into a demonstration grid of two rows on a twelve column
 
 ![CSS grid with 16 grid items spread across twelve columns and two rows. The top row has 12 equal-width grid items in 12 columns. The second row has different-sized grid items. Item 13 spans 1 column, item 14 spans six columns, 15 spans three, and 16 spans two.](simple-grid-finished.png)
 
-In the {{htmlelement("style")}} element, add the following code, which gives the wrapper container a width of 980 pixels, with padding on the right-hand side of 20 pixels. This leaves us with 960 pixels for our total column/gutter widths — in this case, the padding is subtracted from the total content width because we have set {{cssxref("box-sizing")}} to `border-box` on all elements on the site (see [The alternative CSS box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#the_alternative_css_box_model) for more explanation).
+Next, apply a stylesheet to your HTML, using either a {{htmlelement("style")}} element or an external CSS file referenced in a {{htmlelement("link")}} element.
 
-```css
+Add the following code to the stylesheet, which gives the wrapper container a width of 980 pixels, with padding on the right-hand side of 20 pixels. This leaves us with 960 pixels for our total column/gutter widths — in this case, the padding is subtracted from the total content width because we have set {{cssxref("box-sizing")}} to `border-box` on all elements on the site (see [The alternative CSS box model](/en-US/docs/Learn_web_development/Core/Styling_basics/Box_model#the_alternative_css_box_model) for more explanation).
+
+```css live-sample___basic-grid
 * {
   box-sizing: border-box;
 }
@@ -186,7 +185,7 @@ body {
 
 Now use the row container that is wrapped around each row of the grid to clear one row from another. Add the following rule below your previous one:
 
-```css
+```css live-sample___basic-grid
 .row {
   clear: both;
 }
@@ -200,7 +199,7 @@ We need to subtract that from our total width of 960 pixels, giving us 720 pixel
 
 Our next step is to create a rule for the class `.col`, floating it left, giving it a {{cssxref("margin-left")}} of 20 pixels to form the gutter, and a {{cssxref("width")}} of 60 pixels. Add the following rule to the bottom of your CSS:
 
-```css
+```css live-sample___basic-grid
 .col {
   float: left;
   margin-left: 20px;
@@ -218,7 +217,7 @@ Layout containers that we want to span more than one column need to be given spe
 
 Add the following at the bottom of your CSS:
 
-```css
+```css live-sample___basic-grid
 /* Two column widths (120px) plus one gutter width (20px) */
 .col.span2 {
   width: 140px;
@@ -257,10 +256,9 @@ Add the following at the bottom of your CSS:
 }
 ```
 
-With these classes created we can now lay out different width columns on the grid. Try saving and loading the page in your browser to see the effects.
+With these classes created we can now lay out different width columns on the grid. Try saving and loading the page in your browser to see the effects. It should look like the following live sample:
 
-> [!NOTE]
-> If you are having trouble getting the above example to work, try comparing it against our [finished version](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/simple-grid-finished.html) on GitHub ([see it running live](https://mdn.github.io/learning-area/css/css-layout/grids/simple-grid-finished.html) also).
+{{embedlivesample("basic-grid", "100%", 100)}}
 
 Try modifying the classes on your elements or even adding and removing some containers, to see how you can vary the layout. For example, you could make the second row look like this:
 
@@ -275,7 +273,7 @@ Now you've got a grid system working, you can define the rows and the number of 
 
 ### Creating a fluid grid
 
-Our grid works nicely, but it has a fixed width. We really want a flexible (fluid) grid that will grow and shrink with the available space in the browser {{Glossary("viewport")}}. To achieve this we can turn the reference pixel widths into percentages.
+Our grid works nicely, but it has a fixed width; you will have noticed that the grid overflows the embedded page in the live sample above. We really want a flexible (fluid) grid that will grow and shrink with the available space in the browser {{Glossary("viewport")}}. To achieve this we can turn the reference pixel widths into percentages.
 
 The equation that turns a fixed width into a flexible percentage-based one is as follows.
 
@@ -301,7 +299,7 @@ So we need to replace the 20 pixel {{cssxref("margin-left")}} on our `.col` rule
 
 #### Updating our grid
 
-To get started in this section, make a new copy of your previous example page, or make a local copy of our [simple-grid-finished.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/simple-grid-finished.html) code to use as a starting point.
+To get started in this section, make a new copy of your previous example page, or grab a copy of the code from the previous live example to use as a starting point (click the "Play" button to see the full code in the MDN Playground).
 
 Update the second CSS rule (with the `.wrapper` selector) as follows:
 
@@ -373,10 +371,75 @@ Update the bottom block of CSS rules with the following:
 }
 ```
 
-Now save your code, load it in a browser, and try changing the viewport width — you should see the column widths adjust nicely to suit.
+Now save your code and load it in a browser, or check out the following live example:
 
-> [!NOTE]
-> If you are having trouble getting the above example to work, try comparing it against our [finished version on GitHub](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid.html) ([see it running live](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid.html) also).
+```css hidden live-sample___fluid-grid
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 90%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  padding-right: 2.08333333%;
+}
+
+.row {
+  clear: both;
+}
+
+.col {
+  float: left;
+  margin-left: 2.08333333%;
+  width: 6.25%;
+  background: rgb(255, 150, 150);
+}
+
+/* Two column widths (12.5%) plus one gutter width (2.08333333%) */
+.col.span2 {
+  width: 14.58333333%;
+}
+/* Three column widths (18.75%) plus two gutter widths (4.1666666) */
+.col.span3 {
+  width: 22.91666666%;
+}
+/* And so on... */
+.col.span4 {
+  width: 31.24999999%;
+}
+.col.span5 {
+  width: 39.58333332%;
+}
+.col.span6 {
+  width: 47.91666665%;
+}
+.col.span7 {
+  width: 56.24999998%;
+}
+.col.span8 {
+  width: 64.58333331%;
+}
+.col.span9 {
+  width: 72.91666664%;
+}
+.col.span10 {
+  width: 81.24999997%;
+}
+.col.span11 {
+  width: 89.5833333%;
+}
+.col.span12 {
+  width: 97.91666663%;
+}
+```
+
+{{embedlivesample("fluid-grid", "100%", 100)}}
+
+Try changing the viewport width — you should see the column widths adjust nicely to suit.
 
 ### Easier calculations using the calc() function
 
@@ -428,8 +491,70 @@ Try replacing your bottom block of rules with the following, then reload it in t
 }
 ```
 
-> [!NOTE]
-> You can see our finished version in [fluid-grid-calc.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid-calc.html) (also [see it live](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html)).
+```css hidden live-sample___fluid-grid-calc
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 90%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  padding-right: 2.08333333%;
+}
+
+.row {
+  clear: both;
+}
+
+.col {
+  float: left;
+  margin-left: 2.08333333%;
+  width: 6.25%;
+  background: rgb(255, 150, 150);
+}
+
+.col.span2 {
+  width: calc((6.25% * 2) + 2.08333333%);
+}
+.col.span3 {
+  width: calc((6.25% * 3) + (2.08333333% * 2));
+}
+.col.span4 {
+  width: calc((6.25% * 4) + (2.08333333% * 3));
+}
+.col.span5 {
+  width: calc((6.25% * 5) + (2.08333333% * 4));
+}
+.col.span6 {
+  width: calc((6.25% * 6) + (2.08333333% * 5));
+}
+.col.span7 {
+  width: calc((6.25% * 7) + (2.08333333% * 6));
+}
+.col.span8 {
+  width: calc((6.25% * 8) + (2.08333333% * 7));
+}
+.col.span9 {
+  width: calc((6.25% * 9) + (2.08333333% * 8));
+}
+.col.span10 {
+  width: calc((6.25% * 10) + (2.08333333% * 9));
+}
+.col.span11 {
+  width: calc((6.25% * 11) + (2.08333333% * 10));
+}
+.col.span12 {
+  width: calc((6.25% * 12) + (2.08333333% * 11));
+}
+```
+
+This gives us the following final result:
+
+{{embedlivesample("fluid-grid-calc", "100%", "100")}}
 
 ### Semantic versus "unsemantic" grid systems
 
@@ -452,7 +577,7 @@ The grid we have created works well as long as we want to start all of the conta
 
 Let's try this out.
 
-Start with your previous code, or use our [fluid-grid.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid.html) file as a starting point.
+Start with your existing previous code, or use the code from the previous live sample (press the "Play" button to see the full code in the MDN Playground).
 
 Let's create a class in our CSS that will offset a container element by one column width. Add the following to the bottom of your CSS:
 
@@ -485,9 +610,102 @@ Try replacing it with
 > [!NOTE]
 > Notice that you need to reduce the number of columns spanned, to make room for the offset!
 
-Try loading and refreshing to see the difference, or check out our [fluid-grid-offset.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/fluid-grid-offset.html) example (see it [running live](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-offset.html) also). The finished example should look like this:
+```html hidden live-sample___fluid-grid-offset
+<div class="wrapper">
+  <div class="row">
+    <div class="col">1</div>
+    <div class="col">2</div>
+    <div class="col">3</div>
+    <div class="col">4</div>
+    <div class="col">5</div>
+    <div class="col">6</div>
+    <div class="col">7</div>
+    <div class="col">8</div>
+    <div class="col">9</div>
+    <div class="col">10</div>
+    <div class="col">11</div>
+    <div class="col">12</div>
+  </div>
+  <div class="row">
+    <div class="col span1">13</div>
+    <div class="col span5 offset-by-one">14</div>
+    <div class="col span3">15</div>
+    <div class="col span2">16</div>
+  </div>
+</div>
+```
 
-![The grid has 2 rows. The first row has 12 equal-width grid items and the second row has 4 items of different widths. Item 13 spans 1 column, item 14 spans five columns, 15 spans three, and 16 spans two. Item 14 has the 'offset-by-one' class applied, which means it starts in the 3rd column, rather than the second, leaving a one-column wide empty space in the second-row second-column. ](offset-grid-finished.png)
+```css hidden live-sample___fluid-grid-offset
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 90%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  padding-right: 2.08333333%;
+}
+
+.row {
+  clear: both;
+}
+
+.col {
+  float: left;
+  margin-left: 2.08333333%;
+  width: 6.25%;
+  background: rgb(255, 150, 150);
+}
+
+/* Two column widths (12.5%) plus one gutter width (2.08333333%) */
+.col.span2 {
+  width: 14.58333333%;
+}
+/* Three column widths (18.75%) plus two gutter widths (4.1666666) */
+.col.span3 {
+  width: 22.91666666%;
+}
+/* And so on... */
+.col.span4 {
+  width: 31.24999999%;
+}
+.col.span5 {
+  width: 39.58333332%;
+}
+.col.span6 {
+  width: 47.91666665%;
+}
+.col.span7 {
+  width: 56.24999998%;
+}
+.col.span8 {
+  width: 64.58333331%;
+}
+.col.span9 {
+  width: 72.91666664%;
+}
+.col.span10 {
+  width: 81.24999997%;
+}
+.col.span11 {
+  width: 89.5833333%;
+}
+.col.span12 {
+  width: 97.91666663%;
+}
+
+.offset-by-one {
+  margin-left: 10.41666666%;
+}
+```
+
+Try loading and refreshing to see the difference, or check out our finished live example:
+
+{{embedlivesample("fluid-grid-offset", "100%","100")}}
 
 > [!NOTE]
 > As an extra exercise, can you implement an `offset-by-two` class?
@@ -530,21 +748,104 @@ body {
 }
 ```
 
-You can try making these replacements in your own example, or look at our [flexbox-grid.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/flexbox-grid.html) example code (see it [running live](https://mdn.github.io/learning-area/css/css-layout/grids/flexbox-grid.html) also).
+```html hidden live-sample___fluid-grid live-sample___fluid-grid-calc live-sample___flexbox-grid
+<div class="wrapper">
+  <div class="row">
+    <div class="col">1</div>
+    <div class="col">2</div>
+    <div class="col">3</div>
+    <div class="col">4</div>
+    <div class="col">5</div>
+    <div class="col">6</div>
+    <div class="col">7</div>
+    <div class="col">8</div>
+    <div class="col">9</div>
+    <div class="col">10</div>
+    <div class="col">11</div>
+    <div class="col">12</div>
+  </div>
+  <div class="row">
+    <div class="col span1">13</div>
+    <div class="col span6">14</div>
+    <div class="col span3">15</div>
+    <div class="col span2">16</div>
+  </div>
+</div>
+```
 
-Here we are turning each row into a flex container. With a flexbox-based grid we still need rows in order to allow us to have elements that add up to less than 100%. We set that container to `display: flex`.
+```css hidden live-sample___flexbox-grid
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 90%;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  padding-right: 2.08333333%;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  margin-left: 2.08333333%;
+  margin-bottom: 1em;
+  width: 6.25%;
+  flex: 1 1 auto;
+  background: rgb(255, 150, 150);
+}
+
+.col.span2 {
+  width: calc((6.25% * 2) + 2.08333333%);
+}
+.col.span3 {
+  width: calc((6.25% * 3) + (2.08333333% * 2));
+}
+.col.span4 {
+  width: calc((6.25% * 4) + (2.08333333% * 3));
+}
+.col.span5 {
+  width: calc((6.25% * 5) + (2.08333333% * 4));
+}
+.col.span6 {
+  width: calc((6.25% * 6) + (2.08333333% * 5));
+}
+.col.span7 {
+  width: calc((6.25% * 7) + (2.08333333% * 6));
+}
+.col.span8 {
+  width: calc((6.25% * 8) + (2.08333333% * 7));
+}
+.col.span9 {
+  width: calc((6.25% * 9) + (2.08333333% * 8));
+}
+.col.span10 {
+  width: calc((6.25% * 10) + (2.08333333% * 9));
+}
+.col.span11 {
+  width: calc((6.25% * 11) + (2.08333333% * 10));
+}
+.col.span12 {
+  width: calc((6.25% * 12) + (2.08333333% * 11));
+}
+```
+
+This gives us basically the same result as before:
+
+{{embedlivesample("flexbox-grid", "100%","100")}}
+
+Here we are turning each row into a flex container. With a flexbox-based grid we still need rows in order to allow us to have elements that add up to less than `100%`. We set that container to `display: flex`.
 
 On `.col` we set the {{cssxref("flex")}} property's first value ({{cssxref("flex-grow")}}) to 1 so our items can grow, the second value ({{cssxref("flex-shrink")}}) to 1 so the items can shrink, and the third value ({{cssxref("flex-basis")}}) to `auto`. As our element has a {{cssxref("width")}} set, `auto` will use that width as the `flex-basis` value.
 
-On the top line we get twelve neat boxes on the grid and they grow and shrink equally as we change the viewport width. On the next line, however, we only have four items and these also grow and shrink from that 60px basis. With only four of them they can grow a lot more than the items in the row above, the result being that they all occupy the same width on the second row.
+We still need to include our `span` classes on columns that we want to span specific numbers of rows, providing a width that will replace the value used by `flex-basis` for those elements.
 
-![The grid has two rows. Each row is a flex container. The first row has twelve equal-width flex items. The second row has four equal-width flex items.](flexbox-grid-incomplete.png)
-
-To fix this we still need to include our `span` classes to provide a width that will replace the value used by `flex-basis` for that element.
-
-They also don't respect the grid used by the items above because they don't know anything about it.
-
-Flexbox is **one-dimensional** by design. It deals with a single dimension, that of a row or a column. We can't create a strict grid for columns and rows, meaning that if we are to use flexbox for our grid, we still need to calculate percentages as for the floated layout.
+This system doesn't respect the grid used to contain the elements because it doesn't know anything about it. Flexbox is **one-dimensional** by design. It deals with a single dimension, that of a row or a column. We can't create a strict grid for columns and rows, meaning that if we are to use flexbox for our grid, we still need to calculate percentages as for the floated layout.
 
 In your project you might still choose to use a flexbox 'grid' due to the additional alignment and space distribution capabilities flexbox provides over floats. You should, however, be aware that you are still using a tool for something other than what it was designed for. So you may feel like it is making you jump through additional hoops to get the end result you want.
 
@@ -554,11 +855,11 @@ Now that we understand the math behind our grid calculations, we are in a good p
 
 Let's take a look at one of these standalone systems as it demonstrates common techniques for working with a grid framework. The grid we will be using is part of Skeleton, a simple CSS framework.
 
-To get started visit the [Skeleton website](http://getskeleton.com/), and choose "Download" to download the ZIP file. Unzip this and copy the skeleton.css and normalize.css files into a new directory.
+To get started visit the [Skeleton website](http://getskeleton.com/), and choose "Download" to download the ZIP file. Unzip this and copy the skeleton.css and normalize.css files contained within to a new directory.
 
-Make a copy of our [html-skeleton.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/html-skeleton.html) file and save it in the same directory as the skeleton and normalize CSS.
+Create a new HTML file with an empty `<body>` in the same directory as the skeleton and normalize CSS files.
 
-Include the skeleton and normalize CSS in the HTML page, by adding the following to its head:
+Include the skeleton and normalize CSS in the HTML page by adding the following to its head:
 
 ```html
 <link href="normalize.css" rel="stylesheet" />
@@ -567,7 +868,8 @@ Include the skeleton and normalize CSS in the HTML page, by adding the following
 
 Skeleton includes more than a grid system — it also contains CSS for typography and other page elements that you can use as a starting point. We'll leave these at the defaults for now, however — it's the grid we are really interested in here.
 
-> **Note:** [Normalize](https://necolas.github.io/normalize.css/) is a really useful little CSS library written by Nicolas Gallagher, which automatically does some useful basic layout fixes and makes default element styling more consistent across browsers.
+> [!NOTE]
+> [Normalize](https://necolas.github.io/normalize.css/) is a really useful little CSS library written by Nicolas Gallagher, which automatically does some useful basic layout fixes and makes default element styling more consistent across browsers.
 
 We will use similar HTML to our earlier example. Add the following into your HTML body:
 
@@ -642,7 +944,7 @@ Next, give the containers on the second row classes explaining the number of col
 Try saving your HTML file and loading it in your browser to see the effect.
 
 > [!NOTE]
-> If you are having trouble getting this example to work, try widening the window you're using to view it (the grid won't be displayed as described here if the window is too narrow). If that doesn't work, try comparing it to our [html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/grids/html-skeleton-finished.html) file (see it [running live](https://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html) also).
+> If you are having trouble getting this example to work, try widening the window you're using to view it (the grid won't be displayed as described here if the window is too narrow). If that doesn't work, try comparing it to our [html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/main/css/css-layout/legacy/html-skeleton-finished.html) file (see it [running live](https://mdn.github.io/learning-area/css/css-layout/legacy/html-skeleton-finished.html) also).
 
 If you look in the skeleton.css file you can see how this works. For example, Skeleton has the following defined to style elements with "three columns" classes added to them.
 

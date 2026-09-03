@@ -5,9 +5,8 @@ slug: Web/HTTP/Reference/Headers/X-Forwarded-For
 page-type: http-header
 status:
   - non-standard
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`X-Forwarded-For`** (XFF) {{Glossary("request header")}} is a de-facto standard header for identifying the originating IP address of a client connecting to a web server through a {{Glossary("proxy server")}}.
 

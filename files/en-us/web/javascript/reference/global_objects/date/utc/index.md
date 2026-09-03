@@ -4,9 +4,8 @@ short-title: UTC()
 slug: Web/JavaScript/Reference/Global_Objects/Date/UTC
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Date.UTC
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Date.UTC()`** static method accepts parameters representing the date and time components similar to the {{jsxref("Date")}} constructor, but treats them as UTC. It returns the number of milliseconds since January 1, 1970, 00:00:00 UTC.
 

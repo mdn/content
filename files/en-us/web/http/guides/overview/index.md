@@ -2,9 +2,8 @@
 title: Overview of HTTP
 slug: Web/HTTP/Guides/Overview
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 **HTTP** is a {{Glossary("protocol")}} for fetching resources such as HTML documents.
 It is the foundation of any data exchange on the Web and it is a client-server protocol, which means requests are initiated by the recipient, usually the Web browser.
@@ -30,7 +29,7 @@ Most of the time the user-agent is a Web browser, but it can be anything, for ex
 Each individual request is sent to a server, which handles it and provides an answer called the _response_.
 Between the client and the server there are numerous entities, collectively called {{Glossary("Proxy_server", "proxies")}}, which perform different operations and act as gateways or {{Glossary("Cache", "caches")}}, for example.
 
-![A HTTP request from a client forwarded by several proxies to a server and a response taking the same route back to the client.](https://mdn.github.io/shared-assets/images/diagrams/http/overview/client-server-chain.svg)
+![An HTTP request from a client forwarded by several proxies to a server and a response taking the same route back to the client.](https://mdn.github.io/shared-assets/images/diagrams/http/overview/client-server-chain.svg)
 
 In reality, there are more computers between a browser and the server handling the request: there are routers, modems, and more.
 Thanks to the layered design of the Web, these are hidden in the network and transport layers.
@@ -136,7 +135,7 @@ Here is a list of common features controllable with HTTP:
   HTTP requests then go through proxies to cross this network barrier.
   Not all proxies are HTTP proxies.
   The SOCKS protocol, for example, operates at a lower level.
-  Other protocols, like ftp, can be handled by these proxies.
+  Other protocols, like FTP, can be handled by these proxies.
 - _Sessions_:
   Using HTTP cookies allows you to link requests with the state of the server.
   This creates sessions, despite basic HTTP being a state-less protocol.
@@ -193,7 +192,7 @@ There are two types of HTTP messages, requests and responses, each with its own 
 
 An example HTTP request:
 
-![Overview of a HTTP GET request with headers](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-request.svg)
+![Overview of an HTTP GET request with headers](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-request.svg)
 
 Requests consist of the following elements:
 

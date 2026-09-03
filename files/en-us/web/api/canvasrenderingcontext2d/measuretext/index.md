@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.measureText
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The
 `CanvasRenderingContext2D.measureText()`

@@ -5,9 +5,8 @@ slug: Web/HTTP/Reference/Headers/Sec-WebSocket-Protocol
 page-type: http-header
 browser-compat: http.headers.Sec-WebSocket-Protocol
 spec-urls: https://datatracker.ietf.org/doc/html/rfc6455#section-11.3.4
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Sec-WebSocket-Protocol`** {{glossary("request header", "request")}} and {{glossary("response header")}} is used in the [WebSocket](/en-US/docs/Web/API/WebSockets_API) opening [handshake](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake) to negotiate a [sub-protocol](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#subprotocols) to use in the communication.
 This can be a well understood protocol, such as SOAP or WAMP, or a custom protocol understood by the client and server.
@@ -36,16 +35,8 @@ The sub-protocol selected by the server is made available to the web application
 
 ## Syntax
 
-Request:
-
 ```http
 Sec-WebSocket-Protocol: <sub-protocols>
-```
-
-Response:
-
-```http
-Sec-WebSocket-Protocol: <selected-sub-protocol>
 ```
 
 ## Directives
@@ -53,6 +44,8 @@ Sec-WebSocket-Protocol: <selected-sub-protocol>
 - `<sub-protocols>`
   - : A comma-separated list of sub-protocol names, in the order of preference.
     The sub-protocols may be selected from the [IANA WebSocket Subprotocol Name Registry](https://www.iana.org/assignments/websocket/websocket.xml#subprotocol-name), or may be a custom name jointly understood by the client and the server.
+
+    As a response header, this is a single sub-protocol that the server selected.
 
 ## Examples
 

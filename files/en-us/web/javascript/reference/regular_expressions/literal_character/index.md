@@ -3,9 +3,8 @@ title: "Literal character: a, b"
 slug: Web/JavaScript/Reference/Regular_expressions/Literal_character
 page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.literal_character
+sidebar: jssidebar
 ---
-
-{{jsSidebar}}
 
 A **literal character** specifies exactly itself to be matched in the input text.
 
@@ -64,7 +63,7 @@ Within character classes, more characters can appear literally. For more informa
       <td>✅</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td><td>❌</td>
     </tr>
     <tr>
-      <td><code>!#%&,:;<=>@`~</code></td>
+      <td><code>!#%&,:;&lt;=&gt;@`~</code></td>
       <td>✅</td><td>❌</td><td>✅</td><td>❌</td><td>✅</td><td>✅</td>
     </tr>
     <tr>

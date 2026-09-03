@@ -3,38 +3,46 @@ title: "Navigator: platform property"
 short-title: platform
 slug: Web/API/Navigator/platform
 page-type: web-api-instance-property
-status:
-  - deprecated
 browser-compat: api.Navigator.platform
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 The **`platform`** property read-only property of the {{domxref("Navigator")}} interface returns a string identifying the platform on which the user's browser is running.
 
-> [!NOTE]
-> In general, you should whenever possible avoid writing code that uses methods or properties like this one to try to find out information about the user's environment, and instead write code that does [feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection).
-
 ## Value
 
-A string identifying the platform on which the user's browser is running; for example: `"MacIntel"`, `"Win32"`, `"Linux x86_64"`, `"Linux armv81"`.
+A string indicating a platform, for example:
+
+- `"MacIntel"`
+- `"Win32"`
+- `"Linux x86_64"`
+
+> [!NOTE]
+> On Windows, modern browsers return `"Win32"` even if running on a 64-bit version of Windows.
+
+## Description
+
+The `platform` property indicates the platform/OS the browser is running on.
+
+Theoretically this information is useful for detecting the browser and serving code to work around browser-specific bugs or lack of feature support. However, this is **unreliable** and **is not recommended** for the reasons given in [User-Agent reduction](/en-US/docs/Web/HTTP/Guides/User-agent_reduction) and [Browser detection using the user agent](/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent).
+
+[Feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection) is a much more reliable strategy.
 
 ## Examples
 
-`navigator.platform` should almost always be avoided in favor of [feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection). But there is one case where, among the options you could use, `navigator.platform` may be the least-bad option: When you need to show users advice about whether the modifier key for keyboard shortcuts is the `⌘` command key (found on Apple systems) rather than the `⌃` control key (on non-Apple systems):
+### Determining the modifier key for the user's platform
+
+One case where `navigator.platform` can be useful is when you need to show users advice about whether the modifier key for keyboard shortcuts is the `⌘` command key (found on Apple systems) rather than the `Ctrl` control key (on non-Apple systems):
 
 ```js
 const modifierKeyPrefix =
   navigator.platform.startsWith("Mac") || navigator.platform === "iPhone"
     ? "⌘" // command key
-    : "^"; // control key
+    : "Ctrl"; // control key
 ```
 
-That is, check if `navigator.platform` starts with `"Mac"` or else is an exact match for `"iPhone"`, and then based on whether either of those is true, choose the modifier key your web application's UI will advise users to press in keyboard shortcuts.
-
-## Usage notes
-
-On Windows, modern browsers return `"Win32"` even if running on a 64-bit version of Windows.
+This code checks if `navigator.platform` starts with `"Mac"` or else is an exact match for `"iPhone"`, and then based on whether either of those is `true`, sets a `modifierKeyPrefix` variable to the appropriate modifier key for the user's platform. This could be used in a web UI to tell users which modifier key they need when using keyboard shortcuts.
 
 ## Specifications
 
@@ -46,4 +54,5 @@ On Windows, modern browsers return `"Win32"` even if running on a 64-bit version
 
 ## See also
 
-- [`navigator.userAgentData.platform`](/en-US/docs/Web/API/NavigatorUAData/platform)
+- {{domxref("Navigator.userAgent")}}
+- {{HTTPHeader("User-agent")}} HTTP header

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.XPathResult.invalidIteratorState
 ---
 
-{{APIRef("DOM XPath")}} {{AvailableInWorkers}}
+{{APIRef("DOM")}} {{AvailableInWorkers}}
 
 The read-only **`invalidIteratorState`** property of the
 {{domxref("XPathResult")}} interface signifies that the iterator has become invalid. It

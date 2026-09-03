@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Document.designMode
 ---
 
-{{APIRef}}
+{{APIRef("DOM")}}
 
 **`document.designMode`** controls whether the entire document
 is editable. Valid values are `"on"` and `"off"`. According to the

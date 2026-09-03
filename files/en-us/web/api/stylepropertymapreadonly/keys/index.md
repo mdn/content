@@ -6,11 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.StylePropertyMapReadOnly.keys
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`StylePropertyMapReadOnly.keys()`** method returns a new
-_array iterator_ containing the keys for each item
-in `StylePropertyMapReadOnly`
+The **`StylePropertyMapReadOnly.keys()`** method returns a new _array iterator_ containing the keys for each item in `StylePropertyMapReadOnly`.
 
 ## Syntax
 
@@ -28,8 +26,9 @@ A new {{jsxref("Array")}}.
 
 ## Examples
 
-In this example we use the `keys()` method to be able to access the
-properties within our {{domxref('Element.computedStyleMap()')}}.
+### Basic usage
+
+In this example, we use the `keys()` method to access the properties within the {{domxref('Element.computedStyleMap()')}}.
 
 ```js
 // get a button element

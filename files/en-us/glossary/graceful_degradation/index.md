@@ -2,9 +2,8 @@
 title: Graceful degradation
 slug: Glossary/Graceful_degradation
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Graceful degradation** is a design philosophy that centers around trying to build a modern website/application that will work in the newest browsers, but falls back to an experience that while not as good still delivers essential content and functionality in older browsers.
 

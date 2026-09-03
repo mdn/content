@@ -3,9 +3,8 @@ title: import
 slug: Web/JavaScript/Reference/Statements/import
 page-type: javascript-statement
 browser-compat: javascript.statements.import
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The static **`import`** declaration is used to import read-only live {{Glossary("binding", "bindings")}} which are [exported](/en-US/docs/Web/JavaScript/Reference/Statements/export) by another module. The imported bindings are called _live bindings_ because they are updated by the module that exported the binding, but cannot be re-assigned by the importing module.
 
@@ -32,7 +31,7 @@ import "module-name";
 - `defaultExport`
   - : Name that will refer to the default export from the module. Must be a valid JavaScript identifier.
 - `module-name`
-  - : The module to import from. Only single quoted and double quoted string literals are allowed. The evaluation of the specifier is host-specified. Most hosts align with browsers and resolve the specifiers as URLs relative to the current module URL (see [`import.meta.url`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta)). Node, bundlers, and other non-browser environments often define their own features on top of this, so you should find documentation for them to understand the exact rules. The [module specifier resolution](#module_specifier_resolution) section also has more information.
+  - : The module to import from. Only single- and double-quoted string literals are allowed. The evaluation of the specifier is host-specified. Most hosts align with browsers and resolve the specifiers as URLs relative to the current module URL (see [`import.meta.url`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta)). Node, bundlers, and other non-browser environments often define their own features on top of this, so you should find documentation for them to understand the exact rules. The [module specifier resolution](#module_specifier_resolution) section also has more information.
 - `name`
   - : Name of the module object that will be used as a kind of namespace when referring to the imports. Must be a valid JavaScript identifier.
 - `exportN`
@@ -93,7 +92,8 @@ export { a as "a-b" };
 import { "a-b" as a } from "/modules/my-module.js";
 ```
 
-> **Note:** `import { x, y } from "mod"` is not equivalent to `import defaultExport from "mod"` and then destructuring `x` and `y` from `defaultExport`. Named and default imports are distinct syntaxes in JavaScript modules.
+> [!NOTE]
+> `import { x, y } from "mod"` is not equivalent to `import defaultExport from "mod"` and then destructuring `x` and `y` from `defaultExport`. Named and default imports are distinct syntaxes in JavaScript modules.
 
 #### Default import
 
@@ -138,7 +138,7 @@ Here, `myModule` represents a _namespace_ object which contains all exports as p
 myModule.doAllTheAmazingThings();
 ```
 
-`myModule` is a [sealed](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed) object with [`null` prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects). The default export available as a key called `default`. For more information, see [module namespace object](/en-US/docs/Web/JavaScript/Reference/Operators/import#module_namespace_object).
+`myModule` is a [sealed](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed) object with [`null` prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects). The default export is available as a key called `default`. For more information, see [module namespace object](/en-US/docs/Web/JavaScript/Reference/Operators/import#module_namespace_object).
 
 > [!NOTE]
 > JavaScript does not have wildcard imports like `import * from "module-name"`, because of the high possibility of name conflicts.
@@ -271,6 +271,14 @@ setTimeout(() => {
   myValue = 3; // TypeError: Assignment to constant variable.
   // The importing module can only read the value but can't re-assign it.
 }, 1000);
+```
+
+### Importing non-JavaScript modules
+
+Non-JavaScript modules can also be imported using the `import` statement, but their types need to be explicitly declared using [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with). For example, to import a JSON module, you need to specify the `type: "json"` attribute.
+
+```js
+import data from "./data.json" with { type: "json" };
 ```
 
 ## Specifications

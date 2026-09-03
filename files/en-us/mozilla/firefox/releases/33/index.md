@@ -1,14 +1,14 @@
 ---
-title: Firefox 33 for developers
+title: Firefox 33 release notes for developers
+short-title: Firefox 33
 slug: Mozilla/Firefox/Releases/33
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 33 was released on October 14, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer Tools
 
@@ -35,7 +35,6 @@ For details please [see the hacks post](https://hacks.mozilla.org/2014/07/event-
 - Fixed CSS animations with empty keyframes rule so they also dispatch events ([Firefox bug 1004377](https://bugzil.la/1004377)).
 - Added support for `rebeccapurple`, a new {{cssxref("&lt;color&gt;")}} name defined in CSS Colors level 4 ([Firefox bug 1024642](https://bugzil.la/1024642)).
 - Our experimental implementation of CSS Fonts Level 3 is progressing. Its activation is governed by the `layout.css.font-features.enabled` preference, enabled by default in Nightly. Newly implemented features are:
-
   - The fallback algorithm of {{cssxref("font-variant-caps")}}, creating synthetic alternates for missing glyphs ([Firefox bug 961558](https://bugzil.la/961558)).
   - The {{cssxref("font-synthesis")}} CSS property has been implemented ([Firefox bug 871453](https://bugzil.la/871453)).
 
@@ -65,7 +64,7 @@ For details please [see the hacks post](https://hacks.mozilla.org/2014/07/event-
 - The {{domxref("RadioNodeList")}} API has been implemented and the selected radio button is accessible via {{domxref("RadioNodeList.value")}} ([Firefox bug 779723](https://bugzil.la/779723)).
 - The {{domxref("DOMMatrix")}} has been added ([Firefox bug 1018497](https://bugzil.la/1018497)).
 - A non-standard (but implemented in other browsers) `DOMException.stack` property has been added. It returns a string with a human-friendly formatted stack ([Firefox bug 857648](https://bugzil.la/857648)), in the same format as the existing non-standard {{jsxref("Error.stack")}} property.
-- For {{HTMLElement("canvas")}}, the method {{domxref("CanvasPattern.setTransform()")}}, allowing to modify a pattern using the {{domxref("DOMMatrix")}} representation of a linear transform ([Firefox bug 1019257](https://bugzil.la/1019257)).
+- For {{HTMLElement("canvas")}}, the method {{domxref("CanvasPattern.setTransform()")}}, allowing you to modify a pattern using the {{domxref("DOMMatrix")}} representation of a linear transform ([Firefox bug 1019257](https://bugzil.la/1019257)).
 - Our experimental implementation of Media Source Extensions, behind the `media.mediasource.enabled` preference, enabled by default in Nightly and Aurora only, now supports MP4 ([Firefox bug 1000686](https://bugzil.la/1000686)).
 - The properties {{domxref("HTMLMediaElement.audioTracks")}} and {{domxref("HTMLMediaElement.videoTracks")}} have been experimentally implemented. They are controlled by the `media.track.enabled`, off by default ([Firefox bug 744896](https://bugzil.la/744896)).
 - The non-standard `XMLHttpRequest.mozBackgroundRequest()` is no more accessible from websites. Only Firefox-internal code (Chrome code) can use it ([Firefox bug 1035242](https://bugzil.la/1035242)).
@@ -115,7 +114,3 @@ _No change._
 [GitHub commits made between Firefox 32 and Firefox 33](https://github.com/mozilla/addon-sdk/compare/firefox32...firefox33). This will not include any uplifts made after this release entered Aurora.
 
 [Bugs fixed between Firefox 32 and Firefox 33](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-07-21&chfield=resolution&query_format=advanced&chfieldfrom=2014-06-09&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&product=Add-on%20SDK&list_id=10493962). This will not include any uplifts made after this release entered Aurora.
-
-### Older versions
-
-{{Firefox_for_developers}}

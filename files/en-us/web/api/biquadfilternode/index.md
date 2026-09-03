@@ -57,7 +57,6 @@ _Inherits properties from its parent, {{domxref("AudioNode")}}_.
 - {{domxref("BiquadFilterNode.gain")}} {{ReadOnlyInline}}
   - : An [a-rate](/en-US/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}, a double representing the [gain](https://en.wikipedia.org/wiki/Gain) used in the current filtering algorithm.
 - {{domxref("BiquadFilterNode.type")}}
-
   - : A string value defining the kind of filtering algorithm the node is implementing.
 
     <table class="standard-table">

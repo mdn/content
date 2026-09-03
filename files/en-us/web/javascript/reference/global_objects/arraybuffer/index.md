@@ -3,9 +3,8 @@ title: ArrayBuffer
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 page-type: javascript-class
 browser-compat: javascript.builtins.ArrayBuffer
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`ArrayBuffer`** object is used to represent a generic raw binary data buffer.
 
@@ -81,7 +80,7 @@ These properties are defined on `ArrayBuffer.prototype` and shared by all `Array
 
 ### Creating an ArrayBuffer
 
-In this example, we create a 8-byte buffer with a {{jsxref("Int32Array")}} view referring to the buffer:
+In this example, we create a 8-byte buffer with an {{jsxref("Int32Array")}} view referring to the buffer:
 
 ```js
 const buffer = new ArrayBuffer(8);

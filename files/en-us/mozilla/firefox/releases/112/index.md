@@ -1,10 +1,10 @@
 ---
-title: Firefox 112 for developers
+title: Firefox 112 release notes for developers
+short-title: Firefox 112
 slug: Mozilla/Firefox/Releases/112
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 112 that affect developers. Firefox 112 was released on April 11, 2023.
 
@@ -17,7 +17,7 @@ This article provides information about the changes in Firefox 112 that affect d
 ### CSS
 
 - The `overlay` keyword value for the {{cssxref("overflow")}} property is now supported as a legacy alias of the keyword value `auto` ([Firefox bug 1817189](https://bugzil.la/1817189)).
-- The `linear()` [easing function](/en-US/docs/Web/CSS/easing-function) is now supported.
+- The `linear()` [easing function](/en-US/docs/Web/CSS/Reference/Values/easing-function) is now supported.
   This defines easing functions that interpolate linearly between a set of points and is useful for approximating complex animations ([Firefox bug 1819447](https://bugzil.la/1819447), [Firefox bug 1764126](https://bugzil.la/1764126)).
 
 ### JavaScript
@@ -56,7 +56,3 @@ No notable changes.
 
 - The properties `usedDelegatedCredentials`, `usedEch`, `usedOcsp`, and `usedPrivateDns` have been added to {{WebExtAPIRef("webRequest.SecurityInfo")}}. These properties provide information about the security of the connection used for a web request ([Firefox bug 1804460](https://bugzil.la/1804460)).
 - The property `"type"` is supported in the [`"background"` manifest key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background). Setting this key to `"module"` loads background scripts specified with `"scripts"` as ES modules, avoiding the need to switch to background pages to use ES modules ([Firefox bug 1811443](https://bugzil.la/1811443)).
-
-## Older versions
-
-{{Firefox_for_developers}}

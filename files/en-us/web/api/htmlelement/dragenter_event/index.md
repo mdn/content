@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLElement.dragenter_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML Drag and Drop API")}}
 
 The `dragenter` event is fired when a dragged element or text selection enters a valid drop target. The target object is the _immediate user selection_ (the element directly indicated by the user as the drop target), or the {{HTMLElement("body")}} element.
 
@@ -27,13 +27,6 @@ ondragenter = (event) => { }
 A {{domxref("DragEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("DragEvent")}}
-
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
-  - : The data that is transferred during a drag-and-drop interaction.
 
 ## Examples
 
@@ -114,7 +107,6 @@ target.addEventListener("dragleave", (event) => {
 ## See also
 
 - Other drag and drop events:
-
   - {{domxref("HTMLElement/drag_event", "drag")}}
   - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
   - {{domxref("HTMLElement/dragend_event", "dragend")}}

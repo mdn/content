@@ -3,9 +3,8 @@ title: AsyncGenerator
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGenerator
 page-type: javascript-class
 browser-compat: javascript.builtins.AsyncGenerator
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`AsyncGenerator`** object is returned by an {{jsxref("Statements/async_function*", "async generator function", "", 1)}} and it conforms to both the [async iterable protocol and the async iterator protocol](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols).
 
@@ -36,10 +35,10 @@ There's only a hidden object which is the prototype object shared by all objects
 These properties are defined on `AsyncGenerator.prototype` and shared by all `AsyncGenerator` instances.
 
 - {{jsxref("Object/constructor", "AsyncGenerator.prototype.constructor")}}
-
   - : The constructor function that created the instance object. For `AsyncGenerator` instances, the initial value is [`AsyncGeneratorFunction.prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction).
 
-    > **Note:** `AsyncGenerator` objects do not store a reference to the async generator function that created them.
+    > [!NOTE]
+    > `AsyncGenerator` objects do not store a reference to the async generator function that created them.
 
 - `AsyncGenerator.prototype[Symbol.toStringTag]`
   - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"AsyncGenerator"`. This property is used in {{jsxref("Object.prototype.toString()")}}.

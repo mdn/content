@@ -22,10 +22,8 @@ new ResizeObserver(callback)
 ### Parameters
 
 - `callback`
-
   - : The function called whenever an observed resize occurs. The function is called with
     two parameters:
-
     - `entries`
       - : An array of {{domxref('ResizeObserverEntry')}} objects that can be used to
         access the new dimensions of the element after each change.

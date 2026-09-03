@@ -4,11 +4,10 @@ short-title: join()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/join
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.join
+sidebar: jsref
 ---
 
-{{JSRef}}
-
-The **`join()`** method of {{jsxref("TypedArray")}} instances creates and returns a new string by concatenating all of the elements in this typed array, separated by commas or a specified separator string. If the typed array has only one item, then that item will be returned without using the separator. This method has the same algorithm as {{jsxref("Array.prototype.join()")}}.
+The **`join()`** method of {{jsxref("TypedArray")}} instances returns a new string that is the concatenation of all elements in this typed array, separated by commas or a specified separator string. If the typed array has only one item, that item's stringification is returned without using the separator. This method has the same algorithm as {{jsxref("Array.prototype.join()")}}.
 
 {{InteractiveExample("JavaScript Demo: TypedArray.prototype.join()")}}
 

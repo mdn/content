@@ -2,9 +2,8 @@
 title: "SyntaxError: missing ) after argument list"
 slug: Web/JavaScript/Reference/Errors/Missing_parenthesis_after_argument_list
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "missing ) after argument list" occurs when there is an error
 with how a function is called. This might be a typo, a missing operator, or an unescaped

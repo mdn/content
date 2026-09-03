@@ -15,7 +15,7 @@ Access to web content such as public services, education, e-commerce sites, and 
 You should be familiar with [HTML](/en-US/docs/Learn_web_development/Core/Structuring_content), [CSS](/en-US/docs/Learn_web_development/Core/Styling_basics), and [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting) before starting this module.
 
 > [!NOTE]
-> If you are working on a computer/tablet/other devices where you don't have the ability to create your own files, you can try out most of the code examples in an online coding program such as [JS Bin](https://jsbin.com/) or [Glitch](https://glitch.com/).
+> If you are working on a computer, tablet, or another device where you can't create files, you can try running the code in an online editor such as [CodePen](https://codepen.io/) or [JSFiddle](https://jsfiddle.net/).
 
 ## Tutorials and challenges
 
@@ -35,6 +35,10 @@ You should be familiar with [HTML](/en-US/docs/Learn_web_development/Core/Struct
   - : With web access on mobile devices being so popular, and popular platforms such as iOS and Android having fully-fledged accessibility tools, it is important to consider the accessibility of your web content on these platforms. This article looks at mobile-specific accessibility considerations.
 - [Accessibility troubleshooting](/en-US/docs/Learn_web_development/Core/Accessibility/Accessibility_troubleshooting) <sup>Challenge</sup>
   - : In this challenge, we present to you a simple site with several accessibility issues that you need to diagnose and fix.
+
+## Test your skills
+
+You will find "Test your skills" articles placed between the tutorial articles to check whether you have retained the most important information before you move on. If you want to explore all of these together, you can find them listed at [Test your skills: Accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/Test_your_skills).
 
 ## See also
 

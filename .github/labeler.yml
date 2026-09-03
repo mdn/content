@@ -4,13 +4,12 @@ system:
   - changed-files:
       - any-glob-to-any-file:
           - package.json
-          - yarn.lock
+          - package-lock.json
           - .github/**
           - .vscode/**
           - .*
           - scripts/**
           - tests/**
-          - jest.config.json
           - front-matter-config.json
 
 Content:Accessibility:

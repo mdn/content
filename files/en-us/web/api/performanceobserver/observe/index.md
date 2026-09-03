@@ -23,15 +23,12 @@ observe(options)
 ### Parameters
 
 - `options`
-
   - : An object with the following possible members:
-
     - `buffered`
       - : A boolean flag to indicate whether buffered entries should be queued into the observer's buffer. Must be used only with the `type` option.
     - `durationThreshold`
       - : A {{domxref("DOMHighResTimeStamp")}} defining the threshold for {{domxref("PerformanceEventTiming")}} entries. Defaults to 104ms and is rounded to the nearest of 8ms. Lowest possible threshold is 16ms. May not be used together with the `entryTypes` option.
     - `entryTypes`
-
       - : An array of strings, each specifying one performance entry type to observe. May not be used together with
         the `type`, `buffered`, or `durationThreshold` options.
 

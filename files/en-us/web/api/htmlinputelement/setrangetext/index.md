@@ -33,10 +33,8 @@ setRangeText(replacement, start, end, selectMode)
     Defaults to the current `selectionEnd` value (the end of the user's current
     selection).
 - `selectMode` {{optional_inline}}
-
   - : A string defining how the selection should be set after the text has been replaced.
     Possible values:
-
     - `"select"` selects the newly inserted text.
     - `"start"` moves the selection to just before the inserted text.
     - `"end"` moves the selection to just after the inserted text.

@@ -39,15 +39,11 @@ let iceTransport = pc.getSenders()[0].transport.iceTransport;
 let localProtoElem = document.getElementById("local-protocol");
 let remoteProtoElem = document.getElementById("remote-protocol");
 
-iceTransport.addEventListener(
-  "selectedcandidatepairchange",
-  (ev) => {
-    let pair = iceTransport.getSelectedCandidatePair();
-    localProtoElem.innerText = pair.local.protocol.toUpperCase();
-    remoteProtoElem.innerText = pair.remote.protocol.toUpperCase();
-  },
-  false,
-);
+iceTransport.addEventListener("selectedcandidatepairchange", (ev) => {
+  let pair = iceTransport.getSelectedCandidatePair();
+  localProtoElem.innerText = pair.local.protocol.toUpperCase();
+  remoteProtoElem.innerText = pair.remote.protocol.toUpperCase();
+});
 ```
 
 This can also be done by setting the `onselectedcandidatepairchange` event handler property directly.

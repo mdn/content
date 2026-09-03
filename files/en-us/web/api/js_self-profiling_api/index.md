@@ -49,7 +49,6 @@ If the JavaScript in your site is {{glossary("Minification", "minified")}}, you 
 ## Interfaces
 
 - {{domxref("Profiler")}} {{Experimental_Inline}}
-
   - : The `Profiler` interface is used to create profiles.
 
 ## Security requirements

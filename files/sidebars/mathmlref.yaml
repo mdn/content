@@ -59,7 +59,10 @@ l10n:
   fr:
     Reference: Références
     Elements: Éléments
+    Global attributes: Attributs universels
     Guides: Guides
+    Examples: Exemples
+    Beginners: Pour débutants
   ja:
     Reference: リファレンス
     Elements: 要素
@@ -81,3 +84,4 @@ l10n:
     Global attributes: 全局属性
     Guides: 指南
     Examples: 示例
+    Beginners: 初学者教程

@@ -3,9 +3,8 @@ title: privacy.network
 slug: Mozilla/Add-ons/WebExtensions/API/privacy/network
 page-type: webextension-api-property
 browser-compat: webextensions.api.privacy.network
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The `privacy.network` property contains privacy-related network settings. Each property is a {{WebExtAPIRef("types.BrowserSetting")}} object.
 
@@ -18,9 +17,7 @@ Default values for these properties tend to vary across browsers.
 - `peerConnectionEnabled`
   - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean. If `false`, the [`RTCPeerConnection`](/en-US/docs/Web/API/RTCPeerConnection) interface is disabled. Note that [`getUserMedia()`](/en-US/docs/Web/API/MediaDevices/getUserMedia) is _not_ affected by this setting.
 - `webRTCIPHandlingPolicy`
-
   - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a string. This setting allows users to specify the media performance/privacy tradeoffs which affect how WebRTC traffic will be routed and how much local address information is exposed. It may take any one of the following values, from least private to most private:
-
     - `default`
     - `default_public_and_private_interfaces`
     - `default_public_interface_only`
@@ -28,22 +25,15 @@ Default values for these properties tend to vary across browsers.
     - `proxy_only` (only connections using TURN on a TCP connection through a proxy are allowed)
 
 - `httpsOnlyMode`
-
   - : This setting allows your extension to determine if a user has enabled
     [HTTPS-Only mode](https://support.mozilla.org/en-US/kb/https-only-prefs). This property is read-only on all platforms. Its underlying value is a string that may take one of three values:
-
     - `"always"`: HTTPS-Only mode is on.
     - `"never"`: HTTPS-Only mode is off.
     - `"private_browsing"`: HTTPS-Only mode is on in private browsing windows only.
 
 - `globalPrivacyControl`
-
   - : this setting allows your extension to determine if a user has enabled
     [Global Privacy Control](/en-US/docs/Web/API/Navigator/globalPrivacyControl). This property is read-only on all platforms. Its underlying value is a boolean where `true` indicates that the browser sends Global Privacy Control signals and `false` indicates the browser does not send the signals.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -78,6 +68,10 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/api/privacy) API. This documentation is derived from [`privacy.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/privacy.json) in the Chromium code.

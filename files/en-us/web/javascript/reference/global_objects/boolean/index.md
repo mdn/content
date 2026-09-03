@@ -3,9 +3,8 @@ title: Boolean
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
 page-type: javascript-class
 browser-compat: javascript.builtins.Boolean
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 **`Boolean`** values can be one of two values: `true` or `false`, representing the truth value of a logical proposition.
 

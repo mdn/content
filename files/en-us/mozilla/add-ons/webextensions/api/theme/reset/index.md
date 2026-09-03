@@ -3,15 +3,14 @@ title: theme.reset()
 slug: Mozilla/Add-ons/WebExtensions/API/theme/reset
 page-type: webextension-api-function
 browser-compat: webextensions.api.theme.reset
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Resets any theme applied using the {{WebExtAPIRef("theme.update()")}} method.
 
 To use this method, an extension must request the "theme" [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) in its [manifest.json](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) file.
 
-Note that this always reset the theme back to the original default theme, even if the user selected a different theme before this extension's theme was applied (see [bug 1415267](https://bugzil.la/1415267)).
+Note that this always resets the theme back to the original default theme, even if the user selected a different theme before this extension's theme was applied (see [bug 1415267](https://bugzil.la/1415267)).
 
 ## Syntax
 

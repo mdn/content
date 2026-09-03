@@ -3,9 +3,8 @@ title: Intl.DurationFormat
 slug: Web/JavaScript/Reference/Global_Objects/Intl/DurationFormat
 page-type: javascript-class
 browser-compat: javascript.builtins.Intl.DurationFormat
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Intl.DurationFormat`** object enables language-sensitive duration formatting.
 
@@ -60,7 +59,7 @@ new Intl.DurationFormat("en", { style: "short" }).format(duration);
 
 // With style set to "narrow" and locale "pt"
 new Intl.DurationFormat("pt", { style: "narrow" }).format(duration);
-// "1h 46min 40s"
+// "1 h 46 min 40 s"
 ```
 
 ## Specifications

@@ -30,7 +30,7 @@ atob(encodedData)
 
 ### Return value
 
-A binary string containing raw bytes decoded from `encodedData`. Strings in JavaScript are encoded as UTF-16, so this means each character must have a code point less than 256, representing one byte of data.
+A binary string containing raw bytes decoded from `encodedData`. Strings in JavaScript are encoded as {{glossary("UTF-16")}}, so this means each character must have a code point less than 256, representing one byte of data.
 
 ### Exceptions
 

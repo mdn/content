@@ -4,9 +4,8 @@ short-title: EPSILON
 slug: Web/JavaScript/Reference/Global_Objects/Number/EPSILON
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Number.EPSILON
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Number.EPSILON`** static data property represents the difference between 1 and the smallest floating point number greater than 1.
 

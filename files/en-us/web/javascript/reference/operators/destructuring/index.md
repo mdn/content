@@ -3,9 +3,8 @@ title: Destructuring
 slug: Web/JavaScript/Reference/Operators/Destructuring
 page-type: javascript-language-feature
 browser-compat: javascript.operators.destructuring
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **destructuring** syntax is a JavaScript syntax that makes it possible to unpack values from arrays, or properties from objects, into distinct variables. It can be used in locations that receive data (such as the left-hand side of an assignment or anywhere that creates new identifier bindings).
 
@@ -197,6 +196,8 @@ const [a, ...b,] = [1, 2, 3];
 // SyntaxError: rest element may not have a trailing comma
 // Always consider using rest operator as the last element
 ```
+
+Like any other JavaScript language feature, there is no implicit deep-copying. The rest property creates a new object (or array), but all its member values, if they are object references, remain the same.
 
 ## Examples
 

@@ -23,7 +23,7 @@ The `ReadableStream` interface of the [Streams API](/en-US/docs/Web/API/Streams_
 
 ## Static methods
 
-- {{domxref("ReadableStream/from_static", "ReadableStream.from()")}} {{Experimental_Inline}}
+- {{domxref("ReadableStream/from_static", "ReadableStream.from()")}}
   - : Returns `ReadableStream` from a provided iterable or async iterable object, such as an array, a set, an async generator, and so on.
 
 ## Instance methods
@@ -179,5 +179,4 @@ console.log(total);
 - [Streams API concepts](/en-US/docs/Web/API/Streams_API)
 - [Using readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams)
 - [Using readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)
-- [WHATWG Stream Visualizer](https://whatwg-stream-visualizer.glitch.me/), for a basic visualization of readable, writable, and transform streams.
-- [Web-streams-polyfill](https://github.com/MattiasBuelens/web-streams-polyfill) or [sd-streams](https://github.com/stardazed/sd-streams) - polyfills
+- [Web-streams-polyfill](https://github.com/MattiasBuelens/web-streams-polyfill)

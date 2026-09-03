@@ -4,9 +4,8 @@ short-title: forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.forEach
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`forEach()`** method of {{jsxref("Array")}} instances executes a provided function once
 for each array element.
@@ -14,9 +13,9 @@ for each array element.
 {{InteractiveExample("JavaScript Demo: Array.prototype.forEach()")}}
 
 ```js interactive-example
-const array1 = ["a", "b", "c"];
+const array = ["a", "b", "c"];
 
-array1.forEach((element) => console.log(element));
+array.forEach((element) => console.log(element));
 
 // Expected output: "a"
 // Expected output: "b"
@@ -157,7 +156,7 @@ invoked. The callback uses it as its `this` value.
 > If passing the callback function used an
 > [arrow function expression](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions),
 > the `thisArg` parameter could be omitted,
-> since all arrow functions lexically bind the {{jsxref("Operators/this", "this")}}
+> since all arrow functions lexically bind the {{jsxref("this")}}
 > value.
 
 ### An object copy function

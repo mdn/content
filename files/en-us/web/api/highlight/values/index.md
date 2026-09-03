@@ -9,7 +9,7 @@ spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-set.prot
 
 {{APIRef("CSS Custom Highlight API")}}
 
-The **`values()`** method of the {{domxref("Highlight")}} interface returns a new [Iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) object that contains the values for each `Range` object in the `Highlight` object in insertion order.
+The **`values()`** method of the {{domxref("Highlight")}} interface returns a new [Iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_generators) object that contains the values for each `AbstractRange` object in the `Highlight` object in insertion order.
 
 > [!NOTE]
 > The **`keys()`** method is an alias for this method. It behaves exactly the same and returns **values** of `Highlight` elements.
@@ -22,13 +22,17 @@ The **`values()`** method of the {{domxref("Highlight")}} interface returns a ne
 values()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
-A new iterator object containing each `Range` object in the given `Highlight`, in insertion order.
+A new iterator object containing each `AbstractRange` object in the given `Highlight`, in insertion order.
 
 ## Examples
 
-The following code snippet shows how to create a new `Highlight` object with three `Range` objects, and use the iterator returned by the `values()` method to log the three ranges:
+The following code snippet shows how to create a new `Highlight` object with three `AbstractRange` objects, and use the iterator returned by the `values()` method to log the three ranges:
 
 ```js
 const myHighlight = new Highlight();

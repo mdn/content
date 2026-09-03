@@ -8,7 +8,7 @@ status:
 browser-compat: api.Translator.sourceLanguage
 ---
 
-{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}
+{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`sourceLanguage`** read-only property of the {{domxref("Translator")}} interface returns the expected language of the input text to be translated.
 
@@ -16,7 +16,7 @@ A `Translator` instance's `sourceLanguage` is set when creating it via a {{domxr
 
 ## Value
 
-A string specifying the source language. This will be a valid [BCP 47 language tag](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) (as specified in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)).
+A string specifying the source language. This will be a valid {{glossary("BCP 47 language tag")}}.
 
 ## Examples
 

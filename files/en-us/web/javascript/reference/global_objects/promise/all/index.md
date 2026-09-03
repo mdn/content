@@ -4,9 +4,8 @@ short-title: all()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/all
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Promise.all
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Promise.all()`** static method takes an iterable of promises as input and returns a single {{jsxref("Promise")}}. This returned promise fulfills when all of the input's promises fulfill (including when an empty iterable is passed), with an array of the fulfillment values. It rejects when any of the input's promises rejects, with this first rejection reason.
 
@@ -34,7 +33,7 @@ Promise.all(iterable)
 ### Parameters
 
 - `iterable`
-  - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) (such as an {{jsxref("Array")}}) of promises.
+  - : An [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) (such as an {{jsxref("Array")}}) of promises. These values are [awaited](/en-US/docs/Web/JavaScript/Reference/Operators/await), so other [thenables](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) are also resolved, while non-thenables are returned as-is.
 
 ### Return value
 
@@ -49,6 +48,10 @@ A {{jsxref("Promise")}} that is:
 The `Promise.all()` method is one of the [promise concurrency](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#promise_concurrency) methods. It can be useful for aggregating the results of multiple promises. It is typically used when there are multiple related asynchronous tasks that the overall code relies on to work successfully — all of whom we want to fulfill before the code execution continues.
 
 `Promise.all()` will reject immediately upon **any** of the input promises rejecting. In comparison, the promise returned by {{jsxref("Promise.allSettled()")}} will wait for all input promises to complete, regardless of whether or not one rejects. Use `allSettled()` if you need the final result of every promise in the input iterable.
+
+Like other promise combinators, `Promise.all()` immediately marks all promises as "handled" when it is called (by calling their `.then()` methods). Subsequent rejections after the first rejection will be ignored, and will not trigger any `unhandledrejection` events.
+
+Rejecting the returned promise does not cancel the remaining operations or unsubscribe the handlers attached to their promises. Repeatedly passing a long-lived pending promise to `Promise.all()` can accumulate handlers on that promise even when another input rejects each time.
 
 ## Examples
 
@@ -94,6 +97,22 @@ setTimeout(() => {
 // Promise { <state>: "fulfilled", <value>: Array[4] }
 // Promise { <state>: "rejected", <reason>: Error: bad }
 ```
+
+### Destructuring the result
+
+You will find [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) very useful if you are batching together a known number of tasks.
+
+```js
+// With then()
+Promise.all([p1, p2, p3]).then(([a, b, c]) => {
+  console.log(a, b, c); // 3 1337 "foo"
+});
+
+// With await
+const [a, b, c] = await Promise.all([p1, p2, p3]);
+```
+
+Be careful: if the original promises and the result variables' order don't match, you may run into subtle bugs. The {{jsxref("Promise.allKeyed()")}} method solves exactly this problem.
 
 ### Asynchronicity or synchronicity of Promise.all
 
@@ -185,7 +204,7 @@ function promptForDishChoice() {
       if (dialog.returnValue === "ok") {
         resolve(dialog.querySelector("select").value);
       } else {
-        reject(new Error("User cancelled dialog"));
+        reject(new Error("User canceled dialog"));
       }
     });
     document.body.appendChild(dialog);
@@ -233,6 +252,20 @@ async function getPrice() {
   ]);
   // `choice` and `prices` are still the original async functions;
   // Promise.all() does nothing to non-promises
+}
+```
+
+Note that the following, despite other undesirable aspects (like creating more variables and bug-prone error handling), also achieves concurrency:
+
+```js
+async function getPrice() {
+  // Fire all async operations upfront
+  const choicePromise = promptForDishChoice();
+  const pricesPromise = fetchPrices();
+
+  // Wait for each promise (all in-progress async operations keep running)
+  const choice = await choicePromise;
+  const prices = await pricesPromise;
 }
 ```
 
@@ -300,6 +333,7 @@ Promise.all([p1.catch((error) => error), p2.catch((error) => error)]).then(
 ## See also
 
 - {{jsxref("Promise")}}
+- {{jsxref("Promise.allKeyed()")}}
 - {{jsxref("Promise.allSettled()")}}
 - {{jsxref("Promise.any()")}}
 - {{jsxref("Promise.race()")}}

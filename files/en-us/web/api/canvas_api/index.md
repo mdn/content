@@ -11,6 +11,12 @@ The **Canvas API** provides a means for drawing graphics via [JavaScript](/en-US
 
 The Canvas API largely focuses on 2D graphics. The [WebGL API](/en-US/docs/Web/API/WebGL_API), which also uses the `<canvas>` element, draws hardware-accelerated 2D and 3D graphics.
 
+## Accessibility concerns
+
+The `<canvas>` element is just a bitmap and does not provide information about any drawn objects. Text written on canvas can cause legibility issues with users relying on screen magnification. The pixels within a canvas element do not scale and can become blurry with magnification. This is because they are not a vector but letter-shaped collection of pixels. When zooming in on it, the pixels become bigger.
+
+Canvas content is not exposed to accessibility tools like semantic HTML is. In general, you should use canvases like images and avoid using them to render significant content without accessible backing markup.
+
 ## Basic example
 
 This simple example draws a green rectangle onto a canvas.
@@ -55,7 +61,8 @@ ctx.fillRect(10, 10, 150, 100);
 > [!NOTE]
 > The interfaces related to the `WebGLRenderingContext` are referenced under [WebGL](/en-US/docs/Web/API/WebGL_API).
 
-> **Note:** {{domxref("OffscreenCanvas")}} is also available in web workers.
+> [!NOTE]
+> {{domxref("OffscreenCanvas")}} is also available in web workers.
 
 {{domxref("CanvasCaptureMediaStreamTrack")}} is a related interface.
 
@@ -80,7 +87,6 @@ The Canvas API is extremely powerful, but not always simple to use. The librarie
 - [JavaScript InfoVis Toolkit](https://philogb.github.io/jit/) creates interactive data visualizations.
 - [Konva.js](https://konvajs.org/) is a 2D canvas library for desktop and mobile applications.
 - [p5.js](https://p5js.org/) has a full set of canvas drawing functionality for artists, designers, educators, and beginners.
-- [Paper.js](http://paperjs.org/) is an open-source vector graphics scripting framework that runs on top of the HTML Canvas.
 - [Phaser](https://phaser.io/) is a fast, free and fun open source framework for Canvas and WebGL powered browser games.
 - [Pts.js](https://ptsjs.org/) is a library for creative coding and visualization in canvas and SVG.
 - [Rekapi](https://github.com/jeremyckahn/rekapi) is an animation key-framing API for Canvas.

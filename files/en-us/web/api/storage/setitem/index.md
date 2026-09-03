@@ -32,7 +32,7 @@ None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `QuotaExceededError` {{domxref("DOMException")}}
+- {{domxref("QuotaExceededError")}}
   - : Thrown if the storage run out of disk quota or the user declined to grant you more space.
 
 ## Examples

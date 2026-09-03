@@ -35,11 +35,11 @@ _In addition to the properties listed below, `Accelerometer` inherits properties
 
 ## Instance methods
 
-_`Accelerometer` doesn't have own methods. However, it inherits methods from its parent interfaces, {{domxref("Sensor")}} and {{domxref("EventTarget")}}._
+_`Accelerometer` doesn't have its own methods. However, it inherits methods from its parent interfaces, {{domxref("Sensor")}} and {{domxref("EventTarget")}}._
 
 ## Events
 
-_`Accelerometer` doesn't have own events. However, it inherits events from its parent interface, {{domxref('Sensor')}}._
+_`Accelerometer` doesn't have its own events. However, it inherits events from its parent interface, {{domxref('Sensor')}}._
 
 ## Example
 

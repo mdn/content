@@ -30,9 +30,7 @@ This method requires one of the following:
 Or
 
 - `options` {{optional_inline}}
-
   - : An object containing:
-
     - `name`
       - : A string with the name of a cookie.
     - `domain` {{Optional_Inline}}
@@ -40,7 +38,7 @@ Or
     - `path` {{Optional_Inline}}
       - : A string containing a path. Defaults to `/`.
     - `partitioned` {{Optional_Inline}}
-      - : A boolean value that defaults to `false`. Setting it to `true` specifies that the cookie to delete will be a partitioned cookie. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies) for more information.
+      - : A boolean value that defaults to `false`. Setting it to `true` specifies that the cookie to delete will be a partitioned cookie. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies) for more information.
 
 ### Return value
 

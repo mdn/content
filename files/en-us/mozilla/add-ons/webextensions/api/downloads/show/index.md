@@ -3,9 +3,8 @@ title: downloads.show()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/show
 page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.show
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`show()`** function of the {{WebExtAPIRef("downloads")}} API shows the downloaded file in its containing folder in the underlying platform's file manager.
 
@@ -27,10 +26,6 @@ let showing = browser.downloads.show(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If the request succeeds, the promise will be fulfilled with a boolean about whether the request was successful. If the request fails, the promise will be rejected with an error message.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -62,6 +57,10 @@ searching.then(openDownload, onError);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-show) API.

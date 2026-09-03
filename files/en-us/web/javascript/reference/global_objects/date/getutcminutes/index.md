@@ -4,9 +4,8 @@ short-title: getUTCMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getUTCMinutes
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`getUTCMinutes()`** method of {{jsxref("Date")}} instances returns the minutes for this date according to universal time.
 

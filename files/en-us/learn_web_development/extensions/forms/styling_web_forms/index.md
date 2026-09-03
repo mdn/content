@@ -134,7 +134,92 @@ The {{HTMLElement("legend")}} element is okay to style, but it can be a bit tric
 
 Take the following example:
 
-{{EmbedGHLiveSample("learning-area/html/forms/native-form-widgets/positioned-legend.html", '100%', 400)}}
+```html hidden live-sample___positioned-legend
+<form>
+  <fieldset>
+    <legend>Choose all the vegetables you like to eat</legend>
+    <ul>
+      <li>
+        <label for="carrots">Carrots</label>
+        <input
+          type="checkbox"
+          checked
+          id="carrots"
+          name="carrots"
+          value="carrots" />
+      </li>
+      <li>
+        <label for="peas">Peas</label>
+        <input type="checkbox" id="peas" name="peas" value="peas" />
+      </li>
+      <li>
+        <label for="cabbage">Cabbage</label>
+        <input type="checkbox" id="cabbage" name="cabbage" value="cabbage" />
+      </li>
+      <li>
+        <label for="cauliflower">Cauliflower</label>
+        <input
+          type="checkbox"
+          id="cauliflower"
+          name="cauliflower"
+          value="cauliflower" />
+      </li>
+      <li>
+        <label for="broccoli">Broccoli</label>
+        <input type="checkbox" id="broccoli" name="broccoli" value="broccoli" />
+      </li>
+    </ul>
+  </fieldset>
+  <fieldset>
+    <legend>What is your favorite meal?</legend>
+    <ul>
+      <li>
+        <label for="soup">Soup</label>
+        <input type="radio" checked id="soup" name="meal" value="soup" />
+      </li>
+      <li>
+        <label for="curry">Curry</label>
+        <input type="radio" id="curry" name="meal" value="curry" />
+      </li>
+      <li>
+        <label for="pizza">Pizza</label>
+        <input type="radio" id="pizza" name="meal" value="pizza" />
+      </li>
+      <li>
+        <label for="tacos">Tacos</label>
+        <input type="radio" id="tacos" name="meal" value="tacos" />
+      </li>
+      <li>
+        <label for="bolognese">Bolognese</label>
+        <input type="radio" id="bolognese" name="meal" value="bolognese" />
+      </li>
+    </ul>
+  </fieldset>
+</form>
+```
+
+```css hidden live-sample___positioned-legend
+form {
+  width: 500px;
+  margin: 0 auto;
+}
+
+fieldset {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+legend {
+  position: absolute;
+  color: white;
+  background-color: black;
+  padding: 3px;
+  bottom: 0;
+  right: 0;
+}
+```
+
+{{EmbedLiveSample("positioned-legend", '100%', 400)}}
 
 To position the legend in this manner, we used the following CSS (other declarations removed for brevity):
 
@@ -199,48 +284,54 @@ Add the above code into the body of your HTML.
 This is where the fun begins! Before we start coding, we need three additional assets:
 
 1. [The postcard background](https://github.com/mdn/learning-area/blob/main/html/forms/postcard-example/background.jpg) — download this image and save it in the same directory as your working HTML file.
-2. A typewriter font: [The "Mom's Typewriter" font from dafont.com](https://www.dafont.com/moms-typewriter.font?back=theme) — download the TTF file into the same directory as above.
-3. A hand-drawn font: [The "Journal" font from dafont.com](https://www.dafont.com/journal.font) — download the TTF file into the same directory as above.
+2. A typewriter font: [The "Veteran Typewriter" font from dafont.com](https://www.dafont.com/veteran-typewriter.font) — download the ZIP file, extract it, and copy the TTF file into the same directory as above.
+3. A hand-drawn font: [The "Journal" font from dafont.com](https://www.dafont.com/journal.font) — download the ZIP file, extract it, and copy the TTF file into the same directory as above.
 
 Your fonts need some more processing before you start:
 
-1. Go to the fontsquirrel.com [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator).
-2. Using the form, upload both your font files and generate a webfont kit. Download the kit to your computer.
-3. Unzip the provided zip file.
-4. Inside the unzipped contents you will find some font files (at the time of writing, two `.woff` files and two `.woff2` files; they might vary in the future.) Copy these files into a directory called fonts, in the same directory as before. We are using two different files for each font to maximize browser compatibility; see our [Web fonts](/en-US/docs/Learn_web_development/Core/Text_styling/Web_fonts) article for a lot more information.
+1. Go to the [Transfonter Webfont generator](https://transfonter.org/).
+2. Press the "Add fonts" button and upload both your TTF files.
+3. Once they are uploaded, press the "Convert" button to generate a webfont kit.
+4. Download the kit to your computer using the "Download" link.
+5. Unzip the provided zip file.
+6. Inside the unzipped contents you will find some font files (at the time of writing, two `.woff` files and two `.woff2` files; they might vary in the future.) Copy these files into a directory called `fonts` inside the same directory as before. We are using two different files for each font to maximize browser compatibility; see our [Web fonts](/en-US/docs/Learn_web_development/Core/Text_styling/Web_fonts) article for a lot more information.
 
 ### The CSS
 
-Now we can dig into the CSS for the example. Add all the code blocks shown below inside the {{htmlelement("style")}} element, one after another.
+Now we can dig into the CSS for the example. Add all the code blocks shown below inside the provided {{htmlelement("style")}} element, one after another.
 
 #### Overall layout
 
-First, we prepare by defining our {{cssxref("@font-face")}} rules, and all the basic styles set on the {{HTMLElement("body")}} and {{HTMLElement("form")}} elements. If the fontsquirrel output was different from what we described above, you can find the correct `@font-face` blocks inside your downloaded webfont kit, in the `stylesheet.css` file (you'll need to replace the below `@font-face` blocks with them, and update the paths to the font files):
+First, we prepare by defining our {{cssxref("@font-face")}} rules, and all the basic styles set on the {{HTMLElement("body")}} and {{HTMLElement("form")}} elements.
+
+Find the `@font-face` blocks inside your downloaded webfont kit, in the `stylesheet.css` file and replace the below `@font-face` blocks with them. Update the paths to the font files, and make sure the Journal and Veteran Typewriter `font-family` names are set to `handwriting` and `typewriter`, respectively. Your Transfonter output may be slightly different from ours, but that's OK, as long as you make the requested changes.
 
 ```css
 @font-face {
   font-family: "handwriting";
   src:
-    url("fonts/journal-webfont.woff2") format("woff2"),
-    url("fonts/journal-webfont.woff") format("woff");
+    url("fonts/Journal.woff2") format("woff2"),
+    url("fonts/Journal.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "typewriter";
   src:
-    url("fonts/momot___-webfont.woff2") format("woff2"),
-    url("fonts/momot___-webfont.woff") format("woff");
+    url("fonts/VeteranTypewriter.woff2") format("woff2"),
+    url("fonts/VeteranTypewriter.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 body {
   font: 1.3rem sans-serif;
   padding: 0.5em;
   margin: 0;
-  background: #222;
+  background: #222222;
 }
 
 form {
@@ -250,17 +341,17 @@ form {
   margin: 0 auto;
   padding: 1em;
   box-sizing: border-box;
-  background: #fff url(background.jpg);
+  background: white url("background.jpg");
 
   /* we create our grid */
   display: grid;
-  grid-gap: 20px;
+  gap: 20px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 10em 1em 1em 1em;
 }
 ```
 
-Notice that we've used some [CSS grid](/en-US/docs/Web/CSS/CSS_grid_layout) and [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to lay out the form. Using this we can easily position our elements, including the title and all the form elements:
+Notice that we've used some [CSS grid](/en-US/docs/Web/CSS/Guides/Grid_layout) and [Flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) to lay out the form. Using this we can easily position our elements, including the title and all the form elements:
 
 ```css
 h1 {
@@ -309,7 +400,7 @@ textarea {
 }
 ```
 
-When one of these fields gains focus, we highlight them with a light grey, transparent, background (it is always important to have focus style, for usability and keyboard accessibility):
+When one of these fields gains focus, we highlight them with a light gray, transparent, background (it is always important to have focus style, for usability and keyboard accessibility):
 
 ```css
 input:focus,
@@ -343,42 +434,38 @@ textarea {
 
 #### Styling the submit button
 
-The {{HTMLElement("button")}} element is really convenient to style with CSS; you can do whatever you want, even using [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements):
+The {{HTMLElement("button")}} element is really convenient to style with CSS; you can do whatever you want, even using [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements):
 
 ```css
 button {
   padding: 5px;
   font: bold 0.6em sans-serif;
-  border: 2px solid #333;
+  border: 2px solid #333333;
   border-radius: 5px;
   background: none;
   cursor: pointer;
   transform: rotate(-1.5deg);
 }
 
-button:after {
+button::after {
   content: " >>>";
 }
 
 button:hover,
 button:focus {
-  background: #000;
-  color: #fff;
+  background: black;
+  color: white;
 }
 ```
 
 ### The final result
 
-And voilà! Your form should now look like this:
+And voilà! Your form should now look something like this:
 
 ![The final look and layout of the form after applying all styling and tweaking to it as described above](updated-form-screenshot.jpg)
 
 > [!NOTE]
 > If your example does not work quite as you expected and you want to check it against our version, you can find it on GitHub — see it [running live](https://mdn.github.io/learning-area/html/forms/postcard-example/) (also see [the source code](https://github.com/mdn/learning-area/tree/main/html/forms/postcard-example)).
-
-## Test your skills
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Styling basics](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Styling_basics).
 
 ## Summary
 

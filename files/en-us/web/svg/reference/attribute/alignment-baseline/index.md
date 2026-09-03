@@ -6,7 +6,7 @@ browser-compat: svg.global_attributes.alignment-baseline
 sidebar: svgref
 ---
 
-The **`alignment-baseline`** attribute specifies how an object is aligned with respect to its parent. This property specifies which baseline of this element is to be aligned with the corresponding baseline of the parent. For example, this allows {{glossary("/Baseline/Typography", "alphabetic baselines")}} in Roman text to stay aligned across font size changes. It defaults to the baseline with the same name as the computed value of the `alignment-baseline` property.
+The **`alignment-baseline`** attribute specifies how an object is aligned with respect to its parent. This property specifies which baseline of this element is to be aligned with the corresponding baseline of the parent. For example, this allows {{glossary("Baseline/Typography", "alphabetic baselines")}} in Roman text to stay aligned across font size changes. It defaults to the baseline with the same name as the computed value of the `alignment-baseline` property.
 
 > [!NOTE]
 > As a presentation attribute, `alignment-baseline` also has a CSS property counterpart: {{cssxref("alignment-baseline")}}. When both are specified, the CSS property takes priority.
@@ -53,7 +53,6 @@ You can use this attribute with the following SVG elements:
 - `text-bottom`
   - : Matches the bottom of the box to the top of the parent's content area.
 - `text-before-edge`
-
   - : The alignment-point of the object being aligned is aligned with the "text-before-edge" baseline of the parent text content element.
 
     > [!NOTE]
@@ -68,7 +67,6 @@ You can use this attribute with the following SVG elements:
 - `text-top`
   - : Matches the top of the box to the top of the parent's content area.
 - `text-after-edge`
-
   - : The alignment-point of the object being aligned is aligned with the "text-after-edge" baseline of the parent text content element.
 
     > [!NOTE]
@@ -145,4 +143,4 @@ For object alignment in other elements (such as {{SVGElement("text")}}), see {{S
 ## See also
 
 - CSS {{cssxref("alignment-baseline")}} property
-- [CSS baseline alignment](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment#baseline_alignment)
+- [CSS baseline alignment](/en-US/docs/Web/CSS/Guides/Box_alignment/Overview#baseline_alignment)

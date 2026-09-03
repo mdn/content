@@ -3,9 +3,8 @@ title: switch
 slug: Web/JavaScript/Reference/Statements/switch
 page-type: javascript-statement
 browser-compat: javascript.statements.switch
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`switch`** statement evaluates an [expression](/en-US/docs/Web/JavaScript/Guide/Expressions_and_operators), matching the expression's value against a series of `case` clauses, and executes [statements](/en-US/docs/Web/JavaScript/Reference/Statements) after the first `case` clause with a matching value, until a `break` statement is encountered. The `default` clause of a `switch` statement will be jumped to if no `case` matches the expression's value.
 

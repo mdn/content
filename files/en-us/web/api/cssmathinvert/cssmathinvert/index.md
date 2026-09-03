@@ -6,11 +6,9 @@ page-type: web-api-constructor
 browser-compat: api.CSSMathInvert.CSSMathInvert
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`CSSMathInvert()`** constructor creates a
-new {{domxref("CSSMathInvert")}} object which represents a CSS
-{{CSSXref('calc','calc()')}} used as `calc(1 / value)`
+The **`CSSMathInvert()`** constructor creates a new {{domxref("CSSMathInvert")}} object which represents the inverse (reciprocal) of a {{domxref('CSSNumericValue')}}.
 
 ## Syntax
 
@@ -21,16 +19,33 @@ new CSSMathInvert(arg)
 ### Parameters
 
 - `arg`
-  - : A {{domxref('CSSNumericValue')}}.
+  - : A number or {{domxref('CSSNumericValue')}} that represents the value to invert.
 
 ### Exceptions
 
-- [`RangeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError)
-  - : Raised if the arg is 0 or -0.
+None.
 
 ## Examples
 
-To do
+### Basic usage
+
+The following code creates a `CSSMathInvert` object from a percentage, then logs the constructor name, `value`, and the object's serialization (from {{domxref("CSSStyleValue/toString","toString()")}}).
+
+```js
+const inverted = new CSSMathInvert(CSS.percent(4));
+
+console.log(inverted.constructor.name); // "CSSMathInvert"
+console.log(inverted.value); // CSSUnitValue {value: 4, unit: "percent"}
+console.log(inverted.toString()); // "calc(1 / 4%)"
+```
+
+Note that if a plain number is passed to `arg`, the `value` is rectified to a {{domxref("CSSUnitValue")}} with unit `"number"`:
+
+```js
+const invertedNumber = new CSSMathInvert(4);
+
+console.log(invertedNumber.value); // CSSUnitValue {value: 4, unit: "number"}
+```
 
 ## Specifications
 

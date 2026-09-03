@@ -18,15 +18,11 @@ The `statusMessage` property can contain a platform dependent string with detail
 const canvas = document.getElementById("canvas");
 const gl = canvas.getContext("webgl");
 
-canvas.addEventListener(
-  "webglcontextcreationerror",
-  (e) => {
-    console.log(
-      `WebGL context creation failed: ${e.statusMessage || "Unknown error"}`,
-    );
-  },
-  false,
-);
+canvas.addEventListener("webglcontextcreationerror", (e) => {
+  console.log(
+    `WebGL context creation failed: ${e.statusMessage || "Unknown error"}`,
+  );
+});
 ```
 
 ## Specifications

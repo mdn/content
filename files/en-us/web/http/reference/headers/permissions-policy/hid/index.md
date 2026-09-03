@@ -6,9 +6,10 @@ page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.hid
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `hid` directive controls whether the current document is allowed to use the {{domxref("WebHID API", "WebHID API", "", "nocode")}} to connect to uncommon or exotic human interface devices such as alternative keyboards or gamepads.
 

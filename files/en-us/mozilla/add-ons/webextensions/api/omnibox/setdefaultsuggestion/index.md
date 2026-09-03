@@ -3,9 +3,8 @@ title: omnibox.setDefaultSuggestion()
 slug: Mozilla/Add-ons/WebExtensions/API/omnibox/setDefaultSuggestion
 page-type: webextension-api-function
 browser-compat: webextensions.api.omnibox.setDefaultSuggestion
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Set the default suggestion to appear in the address bar drop-down list when the user starts interacting with your extension.
 
@@ -28,10 +27,6 @@ browser.omnibox.setDefaultSuggestion(
 
 None.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ```js
@@ -41,6 +36,10 @@ browser.omnibox.setDefaultSuggestion({
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [chrome.omnibox](https://developer.chrome.com/docs/extensions/reference/api/omnibox) API.

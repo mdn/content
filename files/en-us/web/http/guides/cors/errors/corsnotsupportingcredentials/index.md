@@ -2,9 +2,8 @@
 title: "Reason: Credential is not supported if the CORS header 'Access-Control-Allow-Origin' is '*'"
 slug: Web/HTTP/Guides/CORS/Errors/CORSNotSupportingCredentials
 page-type: http-cors-error
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 ## Reason
 

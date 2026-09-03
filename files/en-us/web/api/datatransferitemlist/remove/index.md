@@ -8,10 +8,9 @@ browser-compat: api.DataTransferItemList.remove
 
 {{APIRef("HTML Drag and Drop API")}}
 
-The **`DataTransferItemList.remove()`** method removes the
-{{domxref("DataTransferItem")}} at the specified index from the list. If the index is
-less than zero or greater than one less than the length of the list, the list will not
-be changed.
+The **`remove()`** method of the {{domxref("DataTransferItemList")}} interface removes the {{domxref("DataTransferItem")}} at the specified index from the list. If the index is less than zero or greater than one less than the length of the list, the list will not be changed.
+
+During a drag operation, this method can only be used in the handler for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event, because that's the only time the drag operation's data store is writable. Calling it from any other drag event throws an `InvalidStateError` {{domxref("DOMException")}}. See [Modifying the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#modifying_the_drag_data_store) for details.
 
 ## Syntax
 
@@ -74,7 +73,7 @@ div {
 #### JavaScript
 
 ```js
-function dragstart_handler(ev) {
+function dragstartHandler(ev) {
   console.log("dragStart");
   // Add this element's id to the drag payload so the drop handler will
   // know which element to add to its tree
@@ -85,7 +84,7 @@ function dragstart_handler(ev) {
   dataList.add("http://www.example.org", "text/uri-list");
 }
 
-function drop_handler(ev) {
+function dropHandler(ev) {
   console.log("Drop");
   ev.preventDefault();
   const data = event.dataTransfer.items;
@@ -110,14 +109,14 @@ function drop_handler(ev) {
   }
 }
 
-function dragover_handler(ev) {
+function dragoverHandler(ev) {
   console.log("dragOver");
   ev.preventDefault();
   // Set the dropEffect to move
   ev.dataTransfer.dropEffect = "move";
 }
 
-function dragend_handler(ev) {
+function dragendHandler(ev) {
   console.log("dragEnd");
   const dataList = ev.dataTransfer.items;
   // Clear all the files. Iterate in reverse order to safely remove.
@@ -131,12 +130,12 @@ function dragend_handler(ev) {
 }
 
 const source = document.querySelector("#source");
-source.addEventListener("dragstart", dragstart_handler);
-source.addEventListener("dragend", dragend_handler);
+source.addEventListener("dragstart", dragstartHandler);
+source.addEventListener("dragend", dragendHandler);
 
 const target = document.querySelector("#target");
-target.addEventListener("drop", drop_handler);
-target.addEventListener("dragover", dragover_handler);
+target.addEventListener("drop", dropHandler);
+target.addEventListener("dragover", dragoverHandler);
 ```
 
 #### Result

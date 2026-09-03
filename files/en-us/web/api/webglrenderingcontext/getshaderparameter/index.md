@@ -23,9 +23,7 @@ getShaderParameter(shader, pname)
 - `shader`
   - : A {{domxref("WebGLShader")}} to get parameter information from.
 - `pname`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the information to query. Possible values:
-
     - `gl.DELETE_STATUS`
       - : Returns a {{domxref("WebGL_API/Types", "GLboolean")}} indicating
         whether or not the shader is flagged for deletion.

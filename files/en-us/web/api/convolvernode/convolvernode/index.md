@@ -22,9 +22,7 @@ new ConvolverNode(context, options)
 - `context`
   - : A reference to an {{domxref("AudioContext")}}.
 - `options` {{optional_inline}}
-
   - : Options are as follows:
-
     - `buffer`
       - : A mono, stereo, or
         4-channel {{domxref("AudioBuffer")}} containing the

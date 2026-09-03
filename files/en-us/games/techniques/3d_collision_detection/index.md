@@ -2,9 +2,8 @@
 title: 3D collision detection
 slug: Games/Techniques/3D_collision_detection
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 This article provides an introduction to the different bounding volume techniques used to implement collision detection in 3D environments. Followup articles will cover implementations in specific 3D libraries.
 
@@ -108,7 +107,7 @@ function isPointInsideSphere(point, sphere) {
 ```
 
 > [!NOTE]
-> The code above features a square root, which can be expensive to calculate. An easy optimization to avoid it consists of comparing the squared distance with the squared radius, so the optimized equation would instead involve `distanceSqr < sphere.radius * sphere.radius`.
+> The code above features a square root, which can be expensive to calculate. An effective optimization to avoid it consists of comparing the squared distance with the squared radius, so the optimized equation would instead involve `distanceSqr < sphere.radius * sphere.radius`.
 
 ### Sphere vs. sphere
 

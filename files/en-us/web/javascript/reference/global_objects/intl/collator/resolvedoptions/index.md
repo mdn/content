@@ -4,9 +4,8 @@ short-title: resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.Collator.resolvedOptions
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`resolvedOptions()`** method of {{jsxref("Intl.Collator")}} instances returns a new object with properties reflecting the options computed during initialization of this `Collator` object.
 
@@ -38,7 +37,7 @@ None.
 A new object with properties reflecting the options computed during the initialization of this `Collator` object. The object has the following properties, in the order they are listed:
 
 - `locale`
-  - : The BCP 47 language tag for the locale actually used, determined by the [locale negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) process. Only the `co`, `kn`, and `kf` Unicode extension keys, if requested and supported, may be included in the output.
+  - : The {{glossary("BCP 47 language tag")}} for the locale actually used, determined by the [locale negotiation](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_identification_and_negotiation) process. Only the `co`, `kn`, and `kf` Unicode extension keys, if requested and supported, may be included in the output.
 - `usage`
   - : The value provided for this property in the `options` argument, with default filled in as needed. It is either `"sort"` or `"search"`. The default is `"sort"`.
 - `sensitivity`

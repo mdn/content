@@ -22,9 +22,7 @@ scrollIntoViewIfNeeded(centerIfNeeded)
 ### Parameters
 
 - `centerIfNeeded` {{optional_inline}}
-
   - : An optional boolean value with a default of `true`:
-
     - If `true`, the element will be aligned so it is centered within the visible area of the scrollable ancestor.
     - If `false`, the element will be aligned to the nearest edge of the visible area of the scrollable ancestor. Depending on which edge of the visible area is closest to the element, either the top of the element will be aligned to the top edge of the visible area, or the bottom edge of the element will be aligned to the bottom edge of the visible area.
 

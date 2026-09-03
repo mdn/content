@@ -30,13 +30,6 @@ A {{domxref("TimeEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("TimeEvent")}}
 
-## Event properties
-
-- {{domxref("TimeEvent.detail")}} {{ReadOnlyInline}}
-  - : A `long` that specifies some detail information about the Event, depending on the type of the event. For this event type, indicates the repeat number for the animation.
-- {{domxref("TimeEvent.view")}} {{ReadOnlyInline}}
-  - : A {{glossary("WindowProxy")}} that identifies the Window from which the event was generated.
-
 ## Examples
 
 ### Animated circle
@@ -57,7 +50,7 @@ A {{domxref("TimeEvent")}}. Inherits from {{domxref("Event")}}.
 ```css
 ul {
   height: 100px;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   overflow-y: scroll;
   padding: 10px 30px;
 }

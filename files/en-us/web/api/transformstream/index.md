@@ -95,9 +95,7 @@ class AnyToU8Stream extends TransformStream {
 This is a useful one, where multiple streams can be conjoined. Examples include building a PWA with progressive loading and progressive streaming.
 
 ```js
-let responses = [
-  /* conjoined response tree */
-];
+let responses = [/* conjoined response tree */];
 let { readable, writable } = new TransformStream();
 
 responses.reduce(
@@ -119,5 +117,4 @@ Note that this is not resilient to other influences.
 
 ## See also
 
-- [WHATWG Stream Visualizer](https://whatwg-stream-visualizer.glitch.me/), for a basic visualization of readable, writable, and transform streams.
 - [Streams—The Definitive Guide](https://web.dev/articles/streams)

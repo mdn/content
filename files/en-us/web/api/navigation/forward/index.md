@@ -3,12 +3,10 @@ title: "Navigation: forward() method"
 short-title: forward()
 slug: Web/API/Navigation/forward
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Navigation.forward
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`forward()`** method of the
 {{domxref("Navigation")}} interface navigates forwards by one entry in the navigation history.
@@ -78,4 +76,3 @@ async function forwardHandler() {
 
 - [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
 - [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)

@@ -39,7 +39,7 @@ The promise is rejected if the clipboard is unable to write to the clipboard.
 
 ## Security considerations
 
-Writing to the clipboard can only be done in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+Writing to the clipboard can only be done in a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 
 Additional security requirements are covered in the [Security consideration](/en-US/docs/Web/API/Clipboard_API#security_considerations) section of the API overview topic.
 
@@ -142,7 +142,7 @@ async function copyCanvasContentsToClipboard() {
   // Copy canvas to blob
   try {
     const blob = await getBlobFromCanvas(canvas);
-    // Create ClipboardItem with blob and it's type, and add to an array
+    // Create ClipboardItem with blob and its type, and add to an array
     const data = [new ClipboardItem({ [blob.type]: blob })];
     // Write the data to the clipboard
     await navigator.clipboard.write(data);

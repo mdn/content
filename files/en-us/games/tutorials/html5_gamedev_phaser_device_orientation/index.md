@@ -2,9 +2,8 @@
 title: 2D maze game with device orientation
 slug: Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 In this tutorial we'll go through the process of building an HTML mobile game that uses the [Device Orientation](/en-US/docs/Web/API/Device_orientation_events) and [Vibration](/en-US/docs/Web/API/Vibration_API) **APIs** to enhance the gameplay and is built using the [Phaser](https://phaser.io/) framework. Basic JavaScript knowledge is recommended to get the most from this tutorial.
 
@@ -16,7 +15,7 @@ By the end of the tutorial you will have a fully functional demo game: [Cyber Or
 
 ## Phaser framework
 
-[Phaser](https://phaser.io/) is a framework for building desktop and mobile HTML games. It's quite new, but growing rapidly thanks to the passionate community involved in the development process. You can check it out [on GitHub](https://github.com/phaserjs/phaser) where it's open sourced, read the [online documentation](https://phaser.io/docs/) and go through the big collection of [examples](https://labs.phaser.io/). The Phaser framework provides you with a set of tools that will speed up development and help handle generic tasks needed to complete the game, so you can focus on the game idea itself.
+[Phaser](https://phaser.io/) is a framework for building desktop and mobile HTML games. It's quite new, but growing rapidly thanks to the passionate community involved in the development process. You can check it out [on GitHub](https://github.com/phaserjs/phaser) where it's open sourced, read the [online documentation](https://docs.phaser.io/) and go through the big collection of [examples](https://labs.phaser.io/). The Phaser framework provides you with a set of tools that will speed up development and help handle generic tasks needed to complete the game, so you can focus on the game idea itself.
 
 ## Starting with the project
 
@@ -43,7 +42,7 @@ We will be rendering our game on Canvas, but we won't do it manually — this wi
     <style>
       body {
         margin: 0;
-        background: #333;
+        background: #333333;
       }
     </style>
     <script src="src/phaser-arcade-physics.2.2.2.min.js"></script>
@@ -307,7 +306,7 @@ That way we can check which key is pressed at the given frame and apply the defi
 Probably the most interesting part of the game is its usage of the **Device Orientation API** for control on mobile devices. Thanks to this you can play the game by tilting the device in the direction you want the ball to roll. Here's the code from the `create()` function responsible for this:
 
 ```js
-window.addEventListener("deviceorientation", this.handleOrientation, true);
+window.addEventListener("deviceorientation", this.handleOrientation);
 ```
 
 We're adding an event listener to the `"deviceorientation"` event and binding the `handleOrientation` function which looks like this:
@@ -435,7 +434,7 @@ if (this.audioStatus) {
 }
 ```
 
-That's all — loading and playing the sounds is easy with Phaser.
+That's all — loading and playing the sounds is achieved with Phaser.
 
 #### Implementing the Vibration API
 

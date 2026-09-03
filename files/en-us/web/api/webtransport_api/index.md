@@ -58,6 +58,34 @@ async function closeTransport(transport) {
 }
 ```
 
+### Negotiating an application protocol
+
+A WebTransport server can support multiple applications, each using its own "custom" communication protocol.
+To support this, the client can offer a list of candidate protocol names in preference order via the [`protocols`](/en-US/docs/Web/API/WebTransport/WebTransport#protocols) option of the `WebTransport()` constructor.
+The server can then choose to select one of these during connection establishment.
+
+Once the {{domxref("WebTransport.ready")}} promise fulfills, the negotiated protocol (if any) is available via the {{domxref("WebTransport.protocol")}} property.
+This is the empty string if `protocols` was not used, or if the server did not select any of the offered protocols.
+A server that supports none of the offered protocols may instead reject the connection outright, causing `ready` to reject.
+
+```js
+const url = "https://example.com:4999/wt";
+
+async function initTransport(url) {
+  const transport = new WebTransport(url, {
+    protocols: ["chat", "file-transfer"],
+  });
+
+  try {
+    await transport.ready;
+    console.log(transport.protocol); // e.g. "chat", or "" if none was selected
+    return transport;
+  } catch (error) {
+    console.error(`Connection failed: ${error}`);
+  }
+}
+```
+
 ### Unreliable transmission via datagrams
 
 "Unreliable" means that transmission of data is not guaranteed, nor is arrival in a specific order. This is fine in some situations and provides very fast delivery. For example, you might want to transmit regular game state updates where each message supersedes the last one that arrives, and order is not important.
@@ -160,7 +188,8 @@ async function receiveUnidirectional() {
 To open a bidirectional stream from a user agent, you use the {{domxref("WebTransport.createBidirectionalStream()")}} method to get a reference to a {{domxref("WebTransportBidirectionalStream")}}.
 This contains `readable` and `writable` properties returning references to `WebTransportReceiveStream` and `WebTransportSendStream` instances that can be used to read from and write to the server.
 
-> **Note:** `WebTransportBidirectionalStream` is similar to {{domxref("WebTransportDatagramDuplexStream")}}, except that in that interface the `readable` and `writable` properties are `ReadableStream` and `WritableStream` respectively.
+> [!NOTE]
+> `WebTransportBidirectionalStream` is similar to {{domxref("WebTransportDatagramDuplexStream")}}, except that in that interface the `readable` and `writable` properties are `ReadableStream` and `WritableStream` respectively.
 
 ```js
 async function setUpBidirectional() {
@@ -241,7 +270,6 @@ async function receiveBidirectional() {
 For complete examples, see:
 
 - [WebTransport over HTTP/3 client](https://webtransport.day/)
-- [WebTransport (BYOB) Echo with WebCodecs in Worker](https://webrtc.internaut.com/wc/wtSender4/)
 
 ## Specifications
 

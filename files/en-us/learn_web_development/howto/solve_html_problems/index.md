@@ -6,6 +6,8 @@ page-type: landing-page
 sidebar: learn-how-to
 ---
 
+## Common problems and solutions
+
 The following links point to solutions to common everyday problems you'll need to solve with HTML.
 
 ### Basic structure

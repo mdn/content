@@ -4,9 +4,8 @@ short-title: message
 slug: Web/JavaScript/Reference/Global_Objects/Error/message
 page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.Error.message
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`message`** data property of an {{jsxref("Error")}} instance is a human-readable description of the error.
 

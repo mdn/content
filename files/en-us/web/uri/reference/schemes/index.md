@@ -3,7 +3,7 @@ title: URI schemes
 short-title: Scheme
 slug: Web/URI/Reference/Schemes
 page-type: uri-component
-spec-urls: https://www.rfc-editor.org/rfc/rfc3986.html#section-3.1
+spec-urls: https://www.rfc-editor.org/info/rfc3986/#section-3.1
 sidebar: urlsidebar
 ---
 
@@ -21,7 +21,7 @@ protocol:
   - : A sequence of characters that identifies the protocol to use.
     It should consist of only alphanumeric characters and the `+`, `-`, and `.` characters.
     Common schemes are:
-    - [`blob`](/en-US/docs/Web/API/URL/createObjectURL_static)
+    - [`blob`](/en-US/docs/Web/URI/Reference/Schemes/blob)
       - : Binary Large Object; a pointer to a large in-memory object
     - [`data`](/en-US/docs/Web/URI/Reference/Schemes/data)
       - : Data directly embedded in the URL

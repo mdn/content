@@ -4,9 +4,8 @@ short-title: hasIndices
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.hasIndices
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`hasIndices`** accessor property of {{jsxref("RegExp")}} instances returns whether or not the `d` flag is used with this regular expression.
 

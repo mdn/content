@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.lineTo
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The {{domxref("CanvasRenderingContext2D")}} method
 **`lineTo()`**, part of the Canvas 2D API, adds a straight line

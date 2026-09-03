@@ -3,17 +3,16 @@ title: Experimental features in Firefox
 short-title: Experimental features
 slug: Mozilla/Firefox/Experimental_features
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This page lists Firefox's experimental and partially-implemented features, including evolving or proposed web platform standards.
 Each entry below includes information about the builds in which a feature is included (Nightly, Beta, Developer Edition, or Release), whether it is activated by default or not, and the name of the **preference** you can use to activate or configure the feature.
 The description of each feature also includes links to relevant [Bugzilla bugs](https://bugzilla.mozilla.org) that implement or enable the feature.
 This information allows you to try out experimental features and provide feedback before they are officially released.
 
-In terms of lifecycle, new features usually appear first in [Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/#nightly), where they are often enabled by default for early feedback and testing.
-If no major problems are found, they are included in [Beta](https://www.mozilla.org/en-US/firefox/channel/desktop/#beta) and [Developer Edition](https://www.mozilla.org/en-US/firefox/developer/) pre-release builds. Finally, approved features ship in the [stable Release](https://www.mozilla.org/en-US/firefox/new/) channel.
+In terms of lifecycle, new features usually appear first in [Nightly](https://www.firefox.com/en-US/channel/desktop/#nightly), where they are often enabled by default for early feedback and testing.
+If no major problems are found, they are included in [Beta](https://www.firefox.com/en-US/channel/desktop/#beta) and [Developer Edition](https://www.firefox.com/en-US/channel/desktop/developer/) pre-release builds. Finally, approved features ship in the [stable Release](https://www.firefox.com/en-US/) channel.
 When a feature is enabled by default in a release, it is no longer considered experimental and is removed from this page.
 
 To enable these features, enter `about:config` in the Firefox address bar, search for the associated **preference** and change its value, which is usually a toggle between `true` and `false`.
@@ -50,7 +49,64 @@ HTML password input elements ([`<input type="password">`](/en-US/docs/Web/HTML/R
 - `layout.forms.reveal-password-button.enabled`
   - : Set to `true` to enable.
 
+### Time picker in `datetime-local` and `time` input elements
+
+The HTML [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local) and [`<input type="time">`](/en-US/docs/Web/HTML/Reference/Elements/input/time) elements support a time picker. ([Firefox bug 1726108](https://bugzil.la/1726108)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 144           | No                  |
+| Developer Edition | 144           | No                  |
+| Beta              | 144           | No                  |
+| Release           | 144           | No                  |
+
+- `dom.forms.datetime.timepicker`
+  - : Set to `true` to enable.
+
+### `alpha` and `colorspace` attributes in `color` input elements
+
+The HTML [`<input type="color">`](/en-US/docs/Web/HTML/Reference/Elements/input/color) element supports [`alpha`](/en-US/docs/Web/HTML/Reference/Elements/input/color#alpha) & [`colorspace`](/en-US/docs/Web/HTML/Reference/Elements/input/color#colorspace) attributes. ([Firefox bug 1919718](https://bugzil.la/1919718)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 149           | Yes                 |
+| Developer Edition | -             | -                   |
+| Beta              | -             | -                   |
+| Release           | -             | -                   |
+
+- `dom.forms.html_color_picker.enabled`
+  - : Set to `true` to enable.
+
+### `headingoffset` and `headingreset` attributes
+
+The [`headingoffset`](/en-US/docs/Web/HTML/Reference/Global_attributes/headingoffset) global attribute increases the computed heading level of the [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) inside the element it is set on, so that a component can use the same heading markup wherever it appears in a page. The [`headingreset`](/en-US/docs/Web/HTML/Reference/Global_attributes/headingreset) attribute stops the offsets of ancestor elements from applying to the headings inside the element it is set on. ([Firefox bug 1974383](https://bugzil.la/1974383)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 153           | No                  |
+| Developer Edition | 153           | No                  |
+| Beta              | 153           | No                  |
+| Release           | 153           | No                  |
+
+- `dom.headingoffset.enabled`
+  - : Set to `true` to enable.
+
 ## CSS
+
+### `circle()` and `ellipse()` allow `farthest-corner` and `closest-corner` keywords
+
+The `farthest-corner` and `closest-corner` keywords can now be used for specifying the radii values of the [`ellipse()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/ellipse) and [`circle()`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/circle) CSS basic shapes.
+(See [Firefox bug 2037673](https://bugzil.la/2037673) for more details.)
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 153           | Yes                 |
+| Developer Edition | 153           | No                  |
+| Beta              | 153           | No                  |
+| Release           | 153           | No                  |
+
+- `layout.css.ellipse-corners.enabled`
+  - : Set to `true` to enable.
 
 ### Hex boxes to display stray control characters
 
@@ -82,7 +138,7 @@ The {{cssxref("initial-letter")}} CSS property is part of the [CSS Inline Layout
 
 ### fit-content() function
 
-The {{cssxref("fit-content_function", "fit-content()")}} function as it applies to {{cssxref("width")}} and other sizing properties. This function is already well-supported for CSS Grid Layout track sizing. (See [Firefox bug 1312588](https://bugzil.la/1312588) for more details.)
+The [`fit-content()`](/en-US/docs/Web/CSS/Reference/Values/fit-content_function) function as it applies to {{cssxref("width")}} and other sizing properties. This function is already well-supported for CSS Grid Layout track sizing. (See [Firefox bug 1312588](https://bugzil.la/1312588) for more details.)
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -96,13 +152,13 @@ The {{cssxref("fit-content_function", "fit-content()")}} function as it applies 
 
 ### Scroll-driven animations
 
-Previously called "scroll-linked animations", a [scroll-driven animation](/en-US/docs/Web/CSS/CSS_scroll-driven_animations) depends on the scroll position of a scrollbar instead of time or some other dimension.
+Previously called "scroll-linked animations", a [scroll-driven animation](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) depends on the scroll position of a scrollbar instead of time or some other dimension.
 The {{cssxref('scroll-timeline-name')}} and {{cssxref('scroll-timeline-axis')}} properties (and the {{cssxref('scroll-timeline')}} shorthand property) allow you to specify that a particular scrollbar in a particular named container can be used as the source for a scroll-driven animation.
-The scroll timeline can then be associated with an [animation](/en-US/docs/Web/CSS/CSS_animations) by setting the {{cssxref('animation-timeline')}} property to the name value defined using `scroll-timeline-name`.
+The scroll timeline can then be associated with an [animation](/en-US/docs/Web/CSS/Guides/Animations) by setting the {{cssxref('animation-timeline')}} property to the name value defined using `scroll-timeline-name`.
 
 When using the {{cssxref('scroll-timeline')}} shorthand property, the order of the property values must be {{cssxref('scroll-timeline-name')}} followed by {{cssxref('scroll-timeline-axis')}}.
 The longhand and shorthand properties are both available behind the preference.
-You can alternatively use the [`scroll()`](/en-US/docs/Web/CSS/animation-timeline/scroll) functional notation with {{cssxref('animation-timeline')}} to indicate that a scrollbar axis in an ancestor element will be used for the timeline.
+You can alternatively use the {{cssxref("animation-timeline/scroll")}} functional notation with {{cssxref('animation-timeline')}} to indicate that a scrollbar axis in an ancestor element will be used for the timeline.
 
 For more information, see [Firefox bug 1807685](https://bugzil.la/1807685), [Firefox bug 1804573](https://bugzil.la/1804573), [Firefox bug 1809005](https://bugzil.la/1809005), [Firefox bug 1676791](https://bugzil.la/1676791), [Firefox bug 1754897](https://bugzil.la/1754897), [Firefox bug 1817303](https://bugzil.la/1817303), and [Firefox bug 1737918](https://bugzil.la/1737918).
 
@@ -118,38 +174,9 @@ The {{cssxref('timeline-scope')}}, {{cssxref('animation-range-start')}} and {{cs
 - `layout.css.scroll-driven-animations.enabled`
   - : Set to `true` to enable.
 
-### @scope at-rule
-
-The [@scope](/en-US/docs/Web/CSS/@scope) [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule) allows you to select specific child elements without having to overly increase the specificity of CSS selectors ([Firefox bug 1886441](https://bugzil.la/1886441)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 137           | Yes                 |
-| Developer Edition | 128           | No                  |
-| Beta              | 128           | No                  |
-| Release           | 128           | No                  |
-
-- `layout.css.at-scope.enabled`
-  - : Set to `true` to enable.
-
-### font-variant-emoji property
-
-The CSS [`font-variant-emoji`](/en-US/docs/Web/CSS/font-variant-emoji) property allows you to set a default presentation style for displaying emojis.
-See ([Firefox bug 1461589](https://bugzil.la/1461589)) for more details.
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 108           | Yes                 |
-| Developer Edition | 108           | No                  |
-| Beta              | 108           | No                  |
-| Release           | 108           | No                  |
-
-- `layout.css.font-variant-emoji.enabled`
-  - : Set to `true` to enable.
-
 ### prefers-reduced-transparency media feature
 
-The CSS [`prefers-reduced-transparency`](/en-US/docs/Web/CSS/@media/prefers-reduced-transparency) media feature lets you detect if a user has enabled the setting to minimize the amount of transparent or translucent layer effects on their device.
+The CSS {{cssxref("@media/prefers-reduced-transparency")}} media feature lets you detect if a user has enabled the setting to minimize the amount of transparent or translucent layer effects on their device.
 See ([Firefox bug 1736914](https://bugzil.la/1736914)) for more details.
 
 | Release channel   | Version added | Enabled by default? |
@@ -164,7 +191,7 @@ See ([Firefox bug 1736914](https://bugzil.la/1736914)) for more details.
 
 ### inverted-colors media feature
 
-The CSS [`inverted-colors`](/en-US/docs/Web/CSS/@media/inverted-colors) media feature lets you detect if a user agent or the underlying operating system is inverting colors.
+The CSS {{cssxref("@media/inverted-colors")}} media feature lets you detect if a user agent or the underlying operating system is inverting colors.
 See ([Firefox bug 1794628](https://bugzil.la/1794628)) for more details.
 
 | Release channel   | Version added | Enabled by default? |
@@ -179,13 +206,13 @@ See ([Firefox bug 1794628](https://bugzil.la/1794628)) for more details.
 
 ### Named view progress timelines property
 
-The CSS [`view-timeline-name`](/en-US/docs/Web/CSS/view-timeline-name) property lets you give a name to particular element, identifying that its ancestor scroller element is the source of a view progress timeline.
+The CSS {{cssxref("view-timeline-name")}} property lets you give a name to particular element, identifying that its ancestor scroller element is the source of a view progress timeline.
 The name can then be assigned to the `animation-timeline`, which then animates the associated element as it moves through the visible area of its ancestor scroller.
 See ([Firefox bug 1737920](https://bugzil.la/1737920)) for more details.
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 114           | No                  |
+| Nightly           | 136           | Yes                 |
 | Developer Edition | 114           | No                  |
 | Beta              | 114           | No                  |
 | Release           | 114           | No                  |
@@ -195,13 +222,13 @@ See ([Firefox bug 1737920](https://bugzil.la/1737920)) for more details.
 
 ### Anonymous view progress timelines function
 
-The CSS [`view()`](/en-US/docs/Web/CSS/animation-timeline/view) function lets you specify that the `animation-timeline` for an element is a view progress timeline, which will animate the element as it moves through the visible area of its ancestor scroller.
+The CSS {{cssxref("animation-timeline/view")}} function lets you specify that the `animation-timeline` for an element is a view progress timeline, which will animate the element as it moves through the visible area of its ancestor scroller.
 The function defines the axis of the parent element that supplies the timeline, along with the inset within the visible area at which the animation starts and begins.
 See ([Firefox bug 1808410](https://bugzil.la/1808410)) for more details.
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 114           | No                  |
+| Nightly           | 136           | Yes                 |
 | Developer Edition | 114           | No                  |
 | Beta              | 114           | No                  |
 | Release           | 114           | No                  |
@@ -211,7 +238,7 @@ See ([Firefox bug 1808410](https://bugzil.la/1808410)) for more details.
 
 ### Vendor-prefixed transform properties
 
-The `-moz-` prefixed [CSS transform](/en-US/docs/Web/CSS/CSS_transforms) properties can be disabled by setting the `layout.css.prefixes.transforms` preference to `false`. The intent is to disable these once the standard CSS zoom properties are well supported. ([Firefox bug 1886134](https://bugzil.la/1886134), [Firefox bug 1855763](https://bugzil.la/1855763)).
+The `-moz-` prefixed [CSS transform](/en-US/docs/Web/CSS/Guides/Transforms) properties can be disabled by setting the `layout.css.prefixes.transforms` preference to `false`. The intent is to disable these once the standard CSS zoom properties are well supported. ([Firefox bug 1886134](https://bugzil.la/1886134), [Firefox bug 1855763](https://bugzil.la/1855763)).
 
 Specifically, this preference will disable the following prefixed properties:
 
@@ -232,24 +259,10 @@ Specifically, this preference will disable the following prefixed properties:
 - `layout.css.prefixes.transforms`
   - : Set to `true` to enable.
 
-### `shape()` function
-
-The CSS [`shape()`](/en-US/docs/Web/CSS/basic-shape/shape) function is a [`<basic-shape>`](/en-US/docs/Web/CSS/basic-shape) data type that enables you to define a shape in the {{cssxref("clip-path")}} and {{cssxref("offset-path")}} properties using one or more "shape commands". These commands are very similar to the [SVG path commands](/en-US/docs/Web/SVG/Reference/Attribute/d#path_commands). The `shape()` function is similar in some respects to the {{cssxref("basic-shape/path","path()")}} function, but unlike `path()`, which uses the [SVG path](/en-US/docs/Web/SVG/Reference/Element/path) syntax, `shape()` uses standard CSS syntax. This enables you to easily create and edit shapes and also allows the use of CSS math functions.
-For more details, see [Firefox bug 1823463](https://bugzil.la/1823463) for the `shape()` function support in `clip-path`, [Firefox bug 1884424](https://bugzil.la/1884424) for the function's support in `offset-path`, and [Firefox bug 1884425](https://bugzil.la/1884425) for its interpolation support.
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 126           | Yes                 |
-| Developer Edition | 126           | No                  |
-| Beta              | 126           | No                  |
-| Release           | 126           | No                  |
-
-- `layout.css.basic-shape-shape.enabled`
-  - : Set to `true` to enable.
-
 ### Symmetrical `letter-spacing`
 
-The CSS {{cssxref("letter-spacing")}} property now splits the specified letter spacing evenly on both sides of each character. This is unlike the current behavior where spacing is added primarily to one side. This approach can improve text spacing, especially in mixed-directional text [Firefox bug 1891446](https://bugzil.la/1891446).
+The CSS {{cssxref("letter-spacing")}} property now splits the specified letter spacing evenly on both sides of each character. This is unlike the current behavior where spacing is added primarily to one side. This approach can improve text spacing, especially in mixed-directional text.
+([Firefox bug 1891446](https://bugzil.la/1891446)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -261,59 +274,15 @@ The CSS {{cssxref("letter-spacing")}} property now splits the specified letter s
 - `layout.css.letter-spacing.model`
   - : Set to `true` to enable.
 
-### `calc()` color channel support in relative colors
-
-The CSS [`calc()`](/en-US/docs/Web/CSS/calc) function can now parse color channels in [relative colors](/en-US/docs/Web/CSS/CSS_colors/Relative_colors#using_math_functions), allowing you to correctly calculate changes to colors in different color spaces or while using different functional notations [Firefox bug 1889561](https://bugzil.la/1889561).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 127           | Yes                 |
-| Developer Edition | 127           | No                  |
-| Beta              | 127           | No                  |
-| Release           | 127           | No                  |
-
-- `layout.css.relative-color-syntax.enabled`
-  - : Set to `true` to enable.
-
-### CSS Anchor Positioning
-
-The [CSS Anchor Positioning](/en-US/docs/Web/CSS/CSS_anchor_positioning) module defines a number of features that allow elements to be defined as anchor elements, and for other elements to be positioned relative to anchor elements.
-This allows, for example, tooltips to be displayed alongside associated content as it scrolls through the viewport, moving as needed when it would overflow the viewport, and disappearing when the anchor moves offscreen.
-The set of features are being progressively rolled out behind a preference ([Firefox bug 1838746](https://bugzil.la/1838746)).
-
-The parts that have been implemented include [`CSSPositionTryRule`](/en-US/docs/Web/API/CSSPositionTryRule) and [`CSSPositionTryDescriptors`](/en-US/docs/Web/API/CSSPositionTryDescriptors) (Firefox 131).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 131           | No                  |
-| Developer Edition | 131           | No                  |
-| Beta              | 131           | No                  |
-| Release           | 131           | No                  |
-
-- `layout.css.anchor-positioning.enabled`
-  - : Set to `true` to enable.
-
-### `::details-content` pseudo-element
-
-The CSS {{cssxref("::details-content")}} pseudo-element enables you to style the content of the {{htmlElement("details")}} element ([Firefox bug 1901037](https://bugzil.la/1901037)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 138           | No                  |
-| Developer Edition | 138           | No                  |
-| Beta              | 138           | No                  |
-| Release           | 138           | No                  |
-
-- `layout.css.details-content.enabled`
-  - : Set to `true` to enable.
-
 ### Allow pseudo-elements after element-backed pseudo-elements
 
-Work has started on allowing [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements) such as {{cssxref("::first-letter")}} and {{cssxref("::before")}} to be appended to [element-backed pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements#element-backed_pseudo-elements) such as {{cssxref("::details-content")}} and {{cssxref("::file-selector-button")}}.
+Work has started on allowing [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) such as {{cssxref("::first-letter")}} and {{cssxref("::before")}} to be appended to [element-backed pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements#element-backed_pseudo-elements) such as {{cssxref("::details-content")}} and {{cssxref("::file-selector-button")}}.
 
-This will allow users to, for , example, style the first letter of the {{htmlElement("details")}} element by using the CSS selector `::details-content::first-letter` or add content before an {{HTMLElement("input") }} of [`type="file"`](/en-US/docs/Web/HTML/Reference/Elements/input/file) using the CSS selector `::file-selector-button::before`.
+This will allow users to, for example, style the first letter of the {{htmlElement("details")}} element by using the CSS selector `::details-content::first-letter` or add content before an {{HTMLElement("input") }} of [`type="file"`](/en-US/docs/Web/HTML/Reference/Elements/input/file) using the CSS selector `::file-selector-button::before`.
 
-Currently only support for `::details-content::first-letter` can be parsed, using `@supports(::details-content::first-letter)` and the preference for [::details-content pseudo-element](#details-content_pseudo-element) needs enabling for this to be tested. The `::file-selector-button` pseudo-element is not yet marked as an element-based pseudo-element so there is no current way of testing this. ([Firefox bug 1953557](https://bugzil.la/1953557)).
+Currently, only support for `::details-content::first-letter` can be parsed using `@supports(::details-content::first-letter)`.
+The `::file-selector-button` pseudo-element is not yet marked as an element-based pseudo-element, so there is no way to test this.
+([Firefox bug 1953557](https://bugzil.la/1953557), [Firefox bug 1941406](https://bugzil.la/1941406)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -322,150 +291,288 @@ Currently only support for `::details-content::first-letter` can be parsed, usin
 | Beta              | 138           | No                  |
 | Release           | 138           | No                  |
 
-- `layout.css.details-content.enabled`
+### `:heading` and `:heading()` pseudo-classes
+
+The {{cssxref(":heading")}} pseudo-class allows you to style all [heading elements](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements) (`<h1>`-`<h6>`) at once, rather than targeting them individually. The {{cssxref(":heading()")}} functional pseudo-class allows you to style heading elements that match a comma-separated list of integers that match the heading levels. ([Firefox bug 1974386](https://bugzil.la/1974386) & [Firefox bug 1984310](https://bugzil.la/1984310)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 142           | No                  |
+| Developer Edition | 142           | No                  |
+| Beta              | 142           | No                  |
+| Release           | 142           | No                  |
+
+- `layout.css.heading-selector.enabled`
+  - : Set to `true` to enable.
+
+### `@custom-media` at-rule
+
+The {{cssxref("@custom-media")}} CSS at-rule defines aliases for long or complex media queries. Instead of repeating the same hardcoded `<media-query-list>` in multiple `@media` at-rules, it can be defined once in a `@custom-media` at-rule and referenced throughout the stylesheet whenever needed. ([Firefox bug 1744292](https://bugzil.la/1744292)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 148           | No                  |
+| Developer Edition | 148           | No                  |
+| Beta              | 148           | No                  |
+| Release           | 148           | No                  |
+
+- `layout.css.custom-media.enabled`
+  - : Set to `true` to enable.
+
+### `base-select` value for `appearance` CSS property
+
+The [`base-select`](/en-US/docs/Web/CSS/Reference/Properties/appearance#base-select) value for the {{cssxref("appearance")}} CSS property, relevant only to the {{htmlelement("select")}} element and {{cssxref("::picker()", "::picker(select)")}} pseudo-element, allows you to fully style them. Currently only styling of the `<select>` element is supported. Styling of the `::picker(select)` pseudo-element will be added in future versions. This feature is part of the [Customizable Select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) work. Two preferences need be enabled to use it. ([Firefox bug 1974787](https://bugzil.la/1974787)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 149           | No                  |
+| Developer Edition | 149           | No                  |
+| Beta              | 149           | No                  |
+| Release           | 149           | No                  |
+
+- `dom.select.customizable_select.enabled`
+  - : Set to `true` to enable.
+- `layout.css.appearance-base.enabled`
+  - : Set to `true` to enable.
+
+### Absolutely positioned elements in multi-column containers and printing
+
+Absolutely positioned elements inside [multi-column containers](/en-US/docs/Web/CSS/Guides/Multicol_layout) and when printing are now correctly positioned and fragmented.
+This improves interoperability with other browsers and prevents layout issues such as overlapping text or content loss.
+([Firefox bug 2018797](https://bugzil.la/2018797)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 150           | Yes                 |
+| Developer Edition | 150           | No                  |
+| Beta              | 150           | No                  |
+| Release           | 150           | No                  |
+
+- `layout.abspos.fragmentainer-aware-positioning.enabled`
+  - : Set to `true` to enable.
+
+### `@container style()` range syntax queries
+
+The [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) CSS at-rule [`style()`](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries) queries now supports the _range syntax_. This allows you to check if a container has a valid CSS custom property and compare its value with comparison operators like `>`, `<`, `>=`, and `<=` and apply styles to its children accordingly. ([Firefox bug 2024601](https://bugzil.la/2024601)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 151           | No                  |
+| Developer Edition | 151           | No                  |
+| Beta              | 151           | No                  |
+| Release           | 151           | No                  |
+
+- `layout.css.attr.enabled`
+  - : Set to `true` to enable.
+
+### `<timeline-range-name>` values
+
+The {{cssxref("animation-range-start")}}, {{cssxref("animation-range-end")}} CSS properties and {{cssxref("animation-range")}} shorthand property now support [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name) values. These [`<timeline-range-name>`](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names#timeline_range_names) values allow you to precisely state which segment that a scroll driven animation will take place within. ([Firefox bug 1804775](https://bugzil.la/1804775)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 151           | Yes                 |
+| Developer Edition | 151           | No                  |
+| Beta              | 151           | No                  |
+| Release           | 151           | No                  |
+
+- `layout.css.scroll-driven-animations.enabled`
+  - : Set to `true` to enable.
+
+### `<timeline-range-name>` values in `@keyframes` selectors
+
+The {{cssxref("@keyframes")}} at-rule now supports [`<timeline-range-name>`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name) values. These [values](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names#timeline_range_names) let you specify the segment within which a scroll-driven animation takes place. ([Firefox bug 1824875](https://bugzil.la/1824875)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 152           | Yes                 |
+| Developer Edition | 152           | No                  |
+| Beta              | 152           | No                  |
+| Release           | 152           | No                  |
+
+- `layout.css.scroll-driven-animations.enabled`
+  - : Set to `true` to enable.
+
+### Updating attributes of external resources
+
+The {{cssxref("link-parameters")}} CSS property and {{cssxref("param")}} CSS function are now supported. This allows the user to update attributes of external resources, such as SVGs, that have their attributes set with the {{cssxref("env")}} CSS function. This means that a single external resource can be used rather than creating multiple variations that only have different colors or other values. ([Firefox bug 2046153](https://bugzil.la/2046153)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 154           | Yes                 |
+| Developer Edition | 153           | No                  |
+| Beta              | 153           | No                  |
+| Release           | 153           | No                  |
+
+- `layout.css.link-parameters.enabled`
+  - : Set to `true` to enable.
+
+### Truncating content with `line-clamp`
+
+The {{cssxref("line-clamp")}} CSS property now works without the `-webkit-` vendor prefix, though at this stage it does not support the `no-ellipsis` and `<string>` values. ([Firefox bug 2042986](https://bugzil.la/2042986)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 154           | No                  |
+| Developer Edition | 154           | No                  |
+| Beta              | 154           | No                  |
+| Release           | 154           | No                  |
+
+- `layout.css.line-clamp.enabled`
+  - : Set to `true` to enable.
+
+### Percentage values for `text-decoration-inset`
+
+The {{cssxref("text-decoration-inset")}} CSS property now supports percentages as values. The percentage value specifies the size of the inset as a percentage of the {{cssxref("font-size")}}. ([Firefox bug 2044602](https://bugzil.la/2044602)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 154           | No                  |
+| Developer Edition | 154           | No                  |
+| Beta              | 154           | No                  |
+| Release           | 154           | No                  |
+
+- `layout.css.text-decoration-inset-percentage.enabled`
+  - : Set to `true` to enable.
+
+### `view-timeline` includes `view-timeline-inset`
+
+The {{cssxref("view-timeline")}} shorthand property now supports the {{cssxref("view-timeline-inset")}} property. The shorthand lets you specify start and/or end inset (or outset) values to adjust the position of the view progress timeline. ([Firefox bug 2046602](https://bugzil.la/2046602)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 155           | Yes                 |
+| Developer Edition | 155           | No                  |
+| Beta              | 155           | No                  |
+| Release           | 155           | No                  |
+
+- `layout.css.scroll-driven-animations.enabled`
   - : Set to `true` to enable.
 
 ## SVG
 
 **No experimental features in this release cycle.**
 
-## JavaScript
+## MathML
 
-### Atomics.waitAsync()
+### Disable `href` on non-`<a>` MathML elements
 
-The {{jsxref("Atomics.waitAsync()")}} static method waits asynchronously on a shared memory location and returns an object representing the result of the operation.
-It is non-blocking and usable on the main thread. ([Firefox bug 1467846](https://bugzil.la/1467846)).
+When enabled, the [`href`](/en-US/docs/Web/MathML/Reference/Global_attributes/href) global attribute no longer creates a hyperlink on MathML elements other than `<a>`, aligning Firefox with the [MathML Core specification](https://w3c.github.io/mathml-core/#the-a-element), which only defines hyperlinks on the `<a>` element. ([Firefox bug 2026848](https://bugzil.la/2026848)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 140           | No                  |
-| Developer Edition | 140           | No                  |
-| Beta              | 140           | No                  |
-| Release           | 140           | No                  |
+| Nightly           | 151           | Yes                 |
+| Developer Edition | 151           | No                  |
+| Beta              | 151           | No                  |
+| Release           | 151           | No                  |
 
-- `javascript.options.atomics_wait_async`
+- `mathml.href_link_on_non_anchor_element.disabled`
   - : Set to `true` to enable.
+
+## JavaScript
+
+### TC39 Intl.Locale info proposal
+
+The [TC39 Intl.Locale info proposal](https://github.com/tc39/proposal-intl-locale-info) is now supported.
+This includes all the instance methods on `Intl.Locale` that are prefixed with "get" — {{jsxref("Intl/Locale/getCalendars", "Intl.Locale.prototype.getCalendars()")}}, {{jsxref("Intl/Locale/getCollations", "Intl.Locale.prototype.getCollations()")}}, {{jsxref("Intl/Locale/getHourCycles", "Intl.Locale.prototype.getHourCycles()")}}, {{jsxref("Intl/Locale/getNumberingSystems", "Intl.Locale.prototype.getNumberingSystems()")}}, {{jsxref("Intl/Locale/getTextInfo", "Intl.Locale.prototype.getTextInfo()")}}, {{jsxref("Intl/Locale/getTimeZones", "Intl.Locale.prototype.getTimeZones()")}}, {{jsxref("Intl/Locale/getWeekInfo", "Intl.Locale.prototype.getWeekInfo()")}}.
+([Firefox bug 1693576](https://bugzil.la/1693576)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 152           | No                  |
+| Developer Edition | —             | —                   |
+| Beta              | —             | —                   |
+| Release           | —             | —                   |
+
+- `javascript.options.experimental.intl_locale_info`
+  - : Set to `true` to enable on Nightly.
+
+### Multiple import maps
+
+Support for [multiple import maps](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap#merging_multiple_import_maps).
+These give developers more flexibility when structuring and loading JavaScript modules, because they no longer need to know all their module mappings up front, and declare them in a single import map loading any modules.
+([Firefox bug 1916277](https://bugzil.la/1916277)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 150           | No                  |
+| Developer Edition | 150           | No                  |
+| Beta              | 150           | No                  |
+| Release           | 150           | No                  |
+
+- `dom.multiple_import_maps.enabled`
+  - : Set to `true` to enable.
+
+### Buffer boundary assertions in regular expressions
+
+The [`\A`, `\z`, and `\Z` buffer boundary assertions](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Buffer_boundary_assertion) are now supported.
+`\A` and `\z` allow you to match the start or end of the entire input, while `\Z` matches the end of the input, ignoring a line terminator.
+The assertions are unaffected by the [`m`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/multiline) flag (unlike `^` and `$`) and can only be used in [Unicode-aware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode) (with `u` or `v` flag set).
+([Firefox bug 2047706](https://bugzil.la/2047706)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 155           | No                  |
+| Developer Edition | —             | —                   |
+| Beta              | —             | —                   |
+| Release           | —             | —                   |
+
+- `javascript.options.experimental.regexp_buffer_boundaries`
+  - : Set to `true` to enable on Nightly.
 
 ## APIs
 
-### CloseWatcher Interface
+### Crash Reporting
 
-Built-in web components with "open" and "close" semantics, such as modal dialogs and popovers, can be closed using device-native mechanisms.
-For example, on Android you can close a dialog using the back button.
-The {{domxref("CloseWatcher")}} interface allows developers to implement UI components, such as custom sidebars, that can similarly be closed using native mechanisms.
-([Firefox bug 1888729](https://bugzil.la/1888729)).
-
-| Release channel   | Version added | Enabled by default?          |
-| ----------------- | ------------- | ---------------------------- |
-| Nightly           | 140           | Yes (Desktop). No (Android). |
-| Developer Edition | 132           | No                           |
-| Beta              | 132           | No                           |
-| Release           | 132           | No                           |
-
-- `dom.closewatcher.enabled`
-  - : Set to `true` to enable.
-
-### Trusted Types API
-
-The [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) provides mechanisms to ensure that functions that can potentially be used as vectors for XSS attacks are only able to be called with data that has been validated or sanitized.
-
-> [!NOTE]
-> At the time of writing not enough of the API has been implemented for it to be effectively testable.
-> This note will be removed once it is ready.
-
-This subset of the API has been implemented:
-
-- {{domxref("TrustedTypePolicyFactory")}}:
-  - {{domxref("TrustedTypePolicyFactory/getAttributeType", "getAttributeType()")}} and {{domxref("TrustedTypePolicyFactory/getPropertyType", "getPropertyType()")}} ([Firefox bug 1917783](https://bugzil.la/1917783), [Firefox bug 1917784](https://bugzil.la/1917784)).
-- The {{domxref("Document.write()", "write()")}} and {{domxref("Document.writeln()","writeln()")}} methods of the {{domxref("Document")}} interface now accept {{domxref("TrustedHTML")}} objects as parameters, in addition to strings. ([Firefox bug 1906301](https://bugzil.la/1906301)).
-- The {{domxref("HTMLScriptElement.text","text")}}, {{domxref("HTMLElement.innerText","innerText")}}, and {{domxref("Node.textContent","textContent")}} properties of the {{domxref("HTMLScriptElement")}} interface now accept {{domxref("TrustedScript")}} objects a value, while {{domxref("HTMLScriptElement.src", "src")}} accepts {{domxref("TrustedScriptURL")}} values. ([Firefox bug 1905706](https://bugzil.la/1905706)).
-- The {{domxref("Window.setInterval()")}} and {{domxref("Window.setTimeout()")}} methods can be called with a {{domxref("TrustedScript")}}. ([Firefox bug 1931290](https://bugzil.la/1931290)).
-- The global [`trustedTypes`](/en-US/docs/Web/API/Window/trustedTypes) property is available for accessing the Trusted Types API.
-- The properties {{domxref("Element.innerHTML")}} and {{domxref("ShadowRoot.innerHTML")}} can be called with [trusted types](/en-US/docs/Web/API/Trusted_Types_API).
+Crash reports can now be sent through the [Reporting API](/en-US/docs/Web/API/Reporting_API) to the `default` endpoint.
+Note that Firefox does not support providing {{domxref("CrashReportContext")}} in the report body.
+([Firefox bug 2036160](https://bugzil.la/2036160)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 133           | No                  |
-| Developer Edition | 133           | No                  |
-| Beta              | 133           | No                  |
-| Release           | 133           | No                  |
+| Nightly           | 152           | Yes                 |
+| Developer Edition | 152           | No                  |
+| Beta              | 152           | No                  |
+| Release           | 152           | No                  |
 
-- `dom.security.trusted_types.enabled`
-  - : Set to `true` to enable.
+- `dom.reporting.crash.enabled`
+  - : Set to `true` to enable (enabled by default in Nightly).
 
-### HTML Sanitizer API
+### Scoped custom element registries
 
-The [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) allow developers to take untrusted strings of HTML and sanitize them for safe insertion into a document's DOM.
+Support for [scoped custom element registries](/en-US/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries) is being implemented.
+Scoped registries allow a shadow tree to create an independent {{domxref("CustomElementRegistry")}} whose definitions only apply to that specific DOM subtree.
+This can be used to avoid collisions where multiple web components declare elements with the same name.
 
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 138           | No                  |
-| Developer Edition | 138           | No                  |
-| Beta              | 138           | No                  |
-| Release           | 138           | No                  |
+The implementation includes:
 
-- `dom.security.sanitizer.enabled`
-  - : Set to `true` to enable.
-
-### `closedBy` attribute for `<dialog>`
-
-The {{domxref("HTMLDialogElement/closedBy", "closedBy")}} attribute of the {{domxref("HTMLDialogElement")}} interface, and corresponding [`closedby`](/en-US/docs/Web/HTML/Reference/Elements/dialog#closedby) attribute of the {{htmlelement("dialog")}} element, are supported.
-These can be used by developers to specify whether users can close a dialog by clicking outside of the dialog area, or the dialog must be closed programmatically, and so on.
-([Firefox bug 1964077](https://bugzil.la/1964077)).
+- `customElementRegistry` property on {{domxref("Document")}}, {{domxref("Element")}}, and {{domxref("ShadowRoot")}}.
+  ([Firefox bug 2018900](https://bugzil.la/2018900)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 140           | Yes                 |
-| Developer Edition | 140           | No                  |
-| Beta              | 140           | No                  |
-| Release           | 140           | No                  |
+| Nightly           | 150           | No                  |
+| Developer Edition | 150           | No                  |
+| Beta              | 150           | No                  |
+| Release           | 150           | No                  |
 
-- `dom.dialog.light-dismiss.enabled`
+- `dom.scoped-custom-element-registries.enabled`
   - : Set to `true` to enable.
 
-### Removal of `beforescriptexecute` and `afterscriptexecute` events
+### CSS Typed Object Model Level 1
 
-The non-standard events [`beforescriptexecute`](/en-US/docs/Web/API/Document/beforescriptexecute_event) and [`afterscriptexecute`](/en-US/docs/Web/API/Document/afterscriptexecute_event) on the {{domxref("Document")}} interface, and [`afterscriptexecute`](/en-US/docs/Web/API/Element/afterscriptexecute_event) and [`beforescriptexecute`](/en-US/docs/Web/API/Element/beforescriptexecute_event) on the {{domxref("Element")}} interface are on the path to removal. They have been disabled in Nightly.
-([Firefox bug 1954685](https://bugzil.la/1954685)).
+The [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) is implemented in Nightly.
+This simplifies CSS property manipulation by exposing CSS values as typed JavaScript objects rather than strings.
+([Firefox bug 1278697](https://bugzil.la/1278697)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 139           | No                  |
-| Developer Edition | 139           | Yes                 |
-| Beta              | 139           | Yes                 |
-| Release           | 139           | Yes                 |
+| Nightly           | 154           | Yes                 |
+| Developer Edition | 149           | No                  |
+| Beta              | 149           | No                  |
+| Release           | 149           | No                  |
 
-- `dom.events.script_execute.enable`
-  - : Set to `true` to enable.
-
-### PerformanceEventTiming.interactionId
-
-{{domxref("PerformanceEventTiming.interactionId")}} can be used to measure latency timing for events triggered by a particular user interaction. ([Firefox bug 1934683](https://bugzil.la/1934683)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 138           | No                  |
-| Developer Edition | 138           | No                  |
-| Beta              | 138           | No                  |
-| Release           | 138           | No                  |
-
-- `dom.performance.event_timing.enable_interactionid`
-  - : Set to `true` to enable.
-
-### Notification actions and maxActions properties
-
-The {{domxref("Notification/actions","actions")}} read-only property and the [`maxActions`](/en-US/docs/Web/API/Notification/maxActions_static) static read-only property of the {{domxref("Notification")}} interface are supported in Nightly on desktop.
-These contain the notification actions set with {{domxref("ServiceWorkerRegistration.showNotification()")}}, and the maximum number of actions that can be set, respectively.
-([Firefox bug 1225110](https://bugzil.la/1225110), [Firefox bug 1963263](https://bugzil.la/1963263)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 138           | Yes (desktop only)  |
-| Developer Edition | 138           | No                  |
-| Beta              | 138           | No                  |
-| Release           | 138           | No                  |
-
-- `dom.webnotifications.actions.enabled`
+- `layout.css.typed-om.enabled`
   - : Set to `true` to enable.
 
 ### Graphics: Canvas, WebGL, and WebGPU
@@ -476,44 +583,55 @@ When this preference is enabled, any WebGL extensions currently in "draft" statu
 
 #### WebGPU API
 
-The [WebGPU API](/en-US/docs/Web/API/WebGPU_API) provides low-level support for performing computation and graphics rendering using the [Graphics Processing Unit](https://en.wikipedia.org/wiki/Graphics_Processing_Unit) (GPU) of the user's device or computer. See [Firefox bug 1602129](https://bugzil.la/1602129) for our progress on this API.
+The [WebGPU API](/en-US/docs/Web/API/WebGPU_API) provides low-level support for performing computation and graphics rendering using the [Graphics Processing Unit](https://en.wikipedia.org/wiki/Graphics_Processing_Unit) (GPU) of the user's device or computer.
+From version 142 this is enabled in on Windows in all contexts except service workers.
+From version 147 this is enabled in on macOS on Apple Silicon in all browsing contexts except service workers.
+For other platforms such as Linux and macOS on Intel Silicon it is enabled in nightly.
+See [Firefox bug 1602129](https://bugzil.la/1602129) for our progress on this API.
 
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 113           | Yes                 |
-| Developer Edition | 73            | No                  |
-| Beta              | 73            | No                  |
-| Release           | 73            | No                  |
+| Release channel   | Version added | Enabled by default?                                                           |
+| ----------------- | ------------- | ----------------------------------------------------------------------------- |
+| Nightly           | 141           | Yes                                                                           |
+| Developer Edition | 141           | No (Yes on Windows and macOS on Apple silicon, not including service workers) |
+| Beta              | 141           | No (Yes on Windows and macOS on Apple silicon, not including service workers) |
+| Release           | 141           | No (Yes on Windows and macOS on Apple silicon, not including service workers) |
 
 - `dom.webgpu.enabled`
-  - : Set to `true` to enable.
-
-### Reporting API support for CSP Violations
-
-The [Reporting API](/en-US/docs/Web/API/Reporting_API) now has support for reporting [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/Guides/CSP) violations.
-
-{{domxref('Report')}} instances returned by the {{domxref('ReportingObserver')}} interface can now have a `type` value of `"csp-violation"` and a `body` property that contains an instance of the {{domxref('CSPViolationReportBody')}} interface.
-This allows CSP violations to be reported within a web page.
-
-CSP violation reports can also be sent to remote endpoints that are specified by name in the CSP {{CSP("report-to")}} directive — endpoints names and corresponding URLs must first be defined in the {{httpheader('Reporting-Endpoints')}} or {{httpheader('Report-To')}} HTTP response headers.
-The report is a serialization of the {{domxref('Report')}} object described above, with a `body` property that is a serialization of an {{domxref('CSPViolationReportBody')}} instance.
-
-This violation report replaces a similar CSP-specific mechanism for sending violation reports, which uses the CSP {{CSP("report-uri")}} directive to set the URL of the reporting endpoint, and has a [CSP-specific JSON violation report format](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri#violation_report_syntax).
-([Firefox bug 1391243](https://bugzil.la/1391243)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 130           | No                  |
-| Developer Edition | 130           | No                  |
-| Beta              | 130           | No                  |
-| Release           | 130           | No                  |
-
-- `dom.reporting.enabled`
-  - : Set to `true` to enable.
+  - : Set to `true` to enable (enabled in Nightly and on Windows in all releases)
+- `dom.webgpu.service-workers.enabled`
+  - : Set to `true` to enable (enabled in Nightly)
 
 ### WebRTC and media
 
-The following experimental features include those found in the [WebRTC API](/en-US/docs/Web/API/WebRTC_API), the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), the [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API), the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), and the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API).
+The following experimental features include those found in media APIs such as the [WebRTC API](/en-US/docs/Web/API/WebRTC_API), the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API), the [Media Source Extensions API](/en-US/docs/Web/API/Media_Source_Extensions_API), the [Encrypted Media Extensions API](/en-US/docs/Web/API/Encrypted_Media_Extensions_API), and the [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API).
+
+#### Audio Session API
+
+The [Audio Session API](/en-US/docs/Web/API/Audio_Session_API) provides a mechanism for web applications to control how their audio interacts with other audio playing on a device. ([Firefox bug 2055710](https://bugzil.la/2055710)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 155           | Yes                 |
+| Developer Edition | 153           | No                  |
+| Beta              | 153           | No                  |
+| Release           | 153           | No                  |
+
+- `dom.audio_session.enabled`
+  - : Set to `true` to enable.
+
+#### HTMLMediaElement properties: audioTracks and videoTracks
+
+Enabling this feature adds the {{domxref("HTMLMediaElement.audioTracks")}} and {{domxref("HTMLMediaElement.videoTracks")}} properties to all HTML media elements. However, because Firefox doesn't currently support multiple audio and video tracks, the most common use cases for these properties don't work, so they're both disabled by default. See [Firefox bug 1057233](https://bugzil.la/1057233) for more details.
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 33            | No                  |
+| Developer Edition | 33            | No                  |
+| Beta              | 33            | No                  |
+| Release           | 33            | No                  |
+
+- `media.track.enabled`
+  - : Set to `true` to enable.
 
 #### Asynchronous SourceBuffer add and remove
 
@@ -549,24 +667,22 @@ This allows Firefox users to display images that render on some other browsers, 
 
 #### JPEG XL support
 
-Firefox supports [JPEG XL](https://jpeg.org/jpegxl/) images if this feature is enabled.
-See [Firefox bug 1539075](https://bugzil.la/1539075) for more details.
+Firefox supports the [JPEG XL](https://jpeg.org/jpegxl/) image format, a modern successor to JPEG that offers improved compression and image quality, along with new capabilities such as transparency, animation, and HDR support.
+See [Firefox bug 1539075](https://bugzil.la/1539075) and [Firefox bug 2016688](https://bugzil.la/2016688) for more details.
 
-Note that, as shown below, the feature is only available on Nightly builds (irrespective of whether the preference is set).
+In Firefox 149, the previous C++ [JPEG XL](https://jpeg.org/jpegxl/) image decoder was replaced with a new Rust-based implementation that uses the `jxl-rs` library ([Firefox bug 1986393](https://bugzil.la/1986393)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 90            | No                  |
-| Developer Edition | —             | —                   |
-| Beta              | —             | —                   |
-| Release           | —             | —                   |
+| Nightly           | 153           | Yes                 |
+| Developer Edition | 152           | No                  |
+| Beta              | 152           | No                  |
+| Release           | 152           | No                  |
 
 - `image.jxl.enabled`
   - : Set to `true` to enable.
 
-### WebVR API
-
-#### WebVR API (Disabled)
+### WebVR API (Disabled)
 
 The deprecated [WebVR API](/en-US/docs/Web/API/WebVR_API) is on the path for removal.
 It is disabled by default on all builds [Firefox bug 1750902](https://bugzil.la/1750902).
@@ -581,63 +697,27 @@ It is disabled by default on all builds [Firefox bug 1750902](https://bugzil.la/
 - `dom.vr.enabled`
   - : Set to `true` to enable.
 
-### HTML DOM API
-
-#### Selections crossing shadow DOM boundary
-
-The {{domxref("Selection.getComposedRanges()")}} method can be used to get an array of {{domxref("StaticRange")}} objects representing the current selected range or ranges.
-Unlike {{domxref("Selection.getRangeAt()")}}, this method can return ranges with anchor or focus nodes inside a shadow DOM, but only if it is passed the {{domxref("ShadowRoot")}} objects that contain those nodes.
-Otherwise, it will return a range that has been re-scoped to include the host node of the shadow root that contains the node.
-The `Selection` methods {{domxref("Selection.setBaseAndExtent()","setBaseAndExtent()")}}, {{domxref("Selection.collapse()","collapse()")}}, and {{domxref("Selection.extend()","extend()")}} have also been modified to accept nodes inside a shadow root.
-
-User selection via mouse, keyboard, and so on, can start and end anywhere in the document, including inside any open or closed shadow trees.
-([Firefox bug 1867058](https://bugzil.la/1867058)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 126           | Yes                 |
-| Developer Edition | 126           | No                  |
-| Beta              | 126           | No                  |
-| Release           | 126           | No                  |
-
-- `dom.shadowdom.selection_across_boundary.enabled`
-  - : Set to `true` to enable.
-
-#### HTMLMediaElement properties: audioTracks and videoTracks
-
-Enabling this feature adds the {{domxref("HTMLMediaElement.audioTracks")}} and {{domxref("HTMLMediaElement.videoTracks")}} properties to all HTML media elements. However, because Firefox doesn't currently support multiple audio and video tracks, the most common use cases for these properties don't work, so they're both disabled by default. See [Firefox bug 1057233](https://bugzil.la/1057233) for more details.
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 33            | No                  |
-| Developer Edition | 33            | No                  |
-| Beta              | 33            | No                  |
-| Release           | 33            | No                  |
-
-- `media.track.enabled`
-  - : Set to `true` to enable.
-
-#### GeometryUtils methods: convertPointFromNode(), convertRectFromNode(), and convertQuadFromNode()
+### GeometryUtils methods: convertPointFromNode(), convertRectFromNode(), and convertQuadFromNode()
 
 The `GeometryUtils` methods `convertPointFromNode()`, `convertRectFromNode()`, and `convertQuadFromNode()` map the given point, rectangle, or quadruple from the {{domxref("Node")}} on which they're called to another node. (See [Firefox bug 918189](https://bugzil.la/918189) for more details.)
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 31            | Yes                 |
+| Nightly           | 31            | No                  |
 | Developer Edition | 31            | No                  |
 | Beta              | 31            | No                  |
 | Release           | 31            | No                  |
 
-- `layout.css.convertFromNode.enable`
+- `layout.css.convertFromNode.enabled`
   - : Set to `true` to enable.
 
-#### GeometryUtils method: getBoxQuads()
+### GeometryUtils method: getBoxQuads()
 
 The `GeometryUtils` method `getBoxQuads()` returns the CSS boxes for a {{domxref("Node")}} relative to any other node or viewport. (See [Firefox bug 917755](https://bugzil.la/917755) for more details.)
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 31            | Yes                 |
+| Nightly           | 31            | No                  |
 | Developer Edition | 31            | No                  |
 | Beta              | 31            | No                  |
 | Release           | 31            | No                  |
@@ -678,40 +758,6 @@ This feature is enabled on Android in all builds, but behind a preference on Des
 - `dom.webshare.enabled`
   - : Set to `true` to enable.
 
-### Screen Orientation API
-
-#### ScreenOrientation.lock()
-
-The {{domxref("ScreenOrientation.lock()")}} method allows a device to be locked to a particular orientation, if supported by the device and allowed by browser pre-lock requirements.
-Typically locking the orientation is only allowed on mobile devices when the document is being displayed full screen.
-See [Firefox bug 1697647](https://bugzil.la/1697647) for more details.
-
-| Release channel   | Version changed | Enabled by default? |
-| ----------------- | --------------- | ------------------- |
-| Nightly           | 111             | Yes                 |
-| Developer Edition | 97              | No                  |
-| Beta              | 97              | No                  |
-| Release           | 97              | No                  |
-
-- `dom.screenorientation.allow-lock`
-  - : Set to `true` to enable.
-
-### Prioritized Task Scheduling API
-
-The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides a standardized way to prioritize all tasks belonging to an application, whether they are defined in a website developer's code, or in third-party libraries and frameworks.
-From Firefox version 140 the API is both feature complete and enabled in the Nightly release.
-([Firefox bug 1734997](https://bugzil.la/1734997) and [Firefox bug 1920115](https://bugzil.la/1920115)).
-
-| Release channel   | Version changed | Enabled by default? |
-| ----------------- | --------------- | ------------------- |
-| Nightly           | 139             | Yes                 |
-| Developer Edition | 101             | No                  |
-| Beta              | 101             | No                  |
-| Release           | 101             | No                  |
-
-- `dom.enable_web_task_scheduling`
-  - : Set to `true` to enable.
-
 ### Notifications API
 
 Notifications have the [`requireInteraction`](/en-US/docs/Web/API/Notification/requireInteraction) property set to true by default on Windows systems and in the Nightly release ([Firefox bug 1794475](https://bugzil.la/1794475)).
@@ -726,35 +772,7 @@ Notifications have the [`requireInteraction`](/en-US/docs/Web/API/Notification/r
 - `dom.webnotifications.requireinteraction.enabled`
   - : Set to `true` to enable.
 
-### View Transition API
-
-The [View Transition API](/en-US/docs/Web/API/View_Transition_API) provides a mechanism for easily creating animated transitions between different website views. This is especially useful for [SPAs (single-page applications)](/en-US/docs/Glossary/SPA). ([Firefox bug 1950759](https://bugzil.la/1950759)).
-
-| Release channel   | Version changed | Enabled by default? |
-| ----------------- | --------------- | ------------------- |
-| Nightly           | 139             | Yes                 |
-| Developer Edition | —               | No                  |
-| Beta              | —               | No                  |
-| Release           | —               | No                  |
-
-- `dom.viewTransitions.enabled`
-  - : Set to `true` to enable.
-
 ## Security and privacy
-
-### Block plain text requests from Flash on encrypted pages
-
-In order to help mitigate man-in-the-middle (MitM) attacks caused by Flash content on encrypted pages, a preference has been added to treat `OBJECT_SUBREQUEST`s as active content. See [Firefox bug 1190623](https://bugzil.la/1190623) for more details.
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 59            | No                  |
-| Developer Edition | 59            | No                  |
-| Beta              | 59            | No                  |
-| Release           | 59            | No                  |
-
-- `security.mixed_content.block_object_subrequest`
-  - : Set to `true` to enable.
 
 ### Insecure page labeling
 
@@ -773,6 +791,33 @@ The two `security.insecure_connection_text_*` preferences add a "Not secure" tex
   - : Set to `true` to enable the text label for private browsing mode.
 - `browser.urlbar.trimHttps`
   - : Set to `true` to trim the `https:` prefix from address bar URLs.
+
+### Restricting adult content with `<meta name="rating">`
+
+The non-standard [`<meta name="rating">`](/en-US/docs/Web/HTML/Reference/Elements/meta) element can be included on a webpage to denote the page's content as restricted/adult. At the time of writing, there are two possible `content` values, `adult` ([defined by Google](https://developers.google.com/search/docs/specialty/explicit/guidelines#add-metadata)) and `RTA-5042-1996-1400-1577-RTA` ([defined by ASACP](https://www.rtalabel.org/?content=howto#top)), which have the same effect (more options may be added in future).
+
+The following `<meta>` elements are equivalent:
+
+```html
+<meta name="rating" content="adult" />
+<meta name="rating" content="RTA-5042-1996-1400-1577-RTA" />
+```
+
+Browsers that recognize this element can then take steps to restrict users from viewing the content. Firefox's implementation replaces the page with the content found at `about:restricted`, which explains to the user that they are trying to view restricted content, explains why they cannot view it, and gives them a back button to return from whence they came.
+
+See [Firefox bug 1991135](https://bugzil.la/1991135) for more details.
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 146           | No                  |
+| Developer Edition | 146           | No                  |
+| Beta              | 146           | No                  |
+| Release           | 146           | No                  |
+
+- `security.restrict_to_adults.always`
+  - : Set to `true` to restrict access to webpages that self-identify as adult by including a `<meta name="rating">` element.
+- `security.restrict_to_adults.respect_platform`
+  - : Set to `true` to restrict access to webpages that self-identify as adult by including a `<meta name="rating">` element only when appropriate parental controls are set on the underlying operating system (for example, the macOS _Content & Privacy_ settings are set to restrict explicit web content).
 
 ### Permissions Policy / Feature policy
 
@@ -806,6 +851,43 @@ Note that supported policies can be set through the [`allow`](/en-US/docs/Web/HT
   - : Set to `true` to enable.
 
 ## HTTP
+
+### Integrity policy for stylesheet resources
+
+The {{httpheader("Integrity-Policy")}} and {{httpheader("Integrity-Policy-Report-Only")}} HTTP headers are now supported for style resources. These allow websites to either enforce [subresource integrity guarantees](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) for styles or only report violations of the policy, respectively.
+Note that Firefox ignores reporting endpoints, and logs violations to the developer console.
+When `Integrity-Policy` is used, the browser blocks the loading of styles referenced in a {{HTMLElement("link")}} element with [`rel="stylesheet"`](/en-US/docs/Web/HTML/Reference/Attributes/rel#stylesheet) that either lack the [`integrity`](/en-US/docs/Web/HTML/Reference/Elements/script#integrity) attribute or have an integrity hash that doesn't match the resource on the server.
+([Firefox bug 1976656](https://bugzil.la/1976656)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 142           | No                  |
+| Developer Edition | 142           | No                  |
+| Beta              | 142           | No                  |
+| Release           | 142           | No                  |
+
+- `security.integrity_policy.stylesheet.enabled`
+  - : Set to `true` to enable.
+
+### Idempotency-Key
+
+The {{httpheader("Idempotency-Key")}} HTTP request header can be used by website client code to make a {{HTTPMethod("POST")}} or {{HTTPMethod("PATCH")}} requests {{glossary("idempotent")}} when used with a server that supports it.
+The specification indicates that the server should document and advertise which endpoints require this header, the format of the key, and expected error responses.
+
+Firefox _automatically_ adds the header with a unique key for each new `POST` request if it has not already been added by the page client-side code.
+This simplifies the client-side code required to work with servers that support the feature.
+
+([Firefox bug 1830022](https://bugzil.la/1830022)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 135           | No                  |
+| Developer Edition | 135           | No                  |
+| Beta              | 135           | No                  |
+| Release           | 135           | No                  |
+
+- `network.http.idempotencyKey.enabled`
+  - : Set to `true` to enable.
 
 ### Accept header with MIME type image/jxl
 
@@ -865,5 +947,5 @@ Mozilla's developer tools are constantly evolving. We experiment with new ideas,
 ## See also
 
 - [Firefox developer release notes](/en-US/docs/Mozilla/Firefox/Releases)
-- [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/)
-- [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
+- [Firefox Nightly](https://www.firefox.com/en-US/channel/desktop/)
+- [Firefox Developer Edition](https://www.firefox.com/en-US/channel/desktop/developer/)

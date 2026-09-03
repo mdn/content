@@ -25,13 +25,12 @@ postMessage(message, options)
 ### Parameters
 
 - `message`
-
   - : The object to deliver to the worker; this will be in the `data` field in the event delivered to the {{domxref("DedicatedWorkerGlobalScope.message_event", "message")}} event. This may be any value or JavaScript object handled by the [structured clone](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) algorithm, which includes cyclical references.
 
     The `message` parameter is mandatory. If the data to be passed to the worker is unimportant, `null` or `undefined` must be passed explicitly.
 
 - `transfer` {{optional_inline}}
-  - : An optional [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of. The ownership of these objects is given to the destination side and they are no longer usable on the sending side. These transferable objects should be attached to the message; otherwise they would be moved but not actually accessible on the receiving end.
+  - : An optional [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of. The ownership of these objects is given to the destination side and they are no longer usable on the sending side. These transferable objects are not automatically sent; they must either be contained in the message or be accessible to the recipient via other means, such as {{domxref("MessagePort")}} via {{domxref("MessageEvent.ports")}}.
 - `options` {{optional_inline}}
   - : An optional object containing the following properties:
     - `transfer` {{optional_inline}}
@@ -58,7 +57,8 @@ const myWorker = new Worker("worker.js");
 
 For a full example, see our [simple worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) ([run example](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)).
 
-> **Note:** `postMessage()` can only send a single object at once. As seen above, if you want to pass multiple values you can send an array.
+> [!NOTE]
+> `postMessage()` can only send a single object at once. As seen above, if you want to pass multiple values you can send an array.
 
 ### Transfer Example
 

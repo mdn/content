@@ -74,7 +74,7 @@ For a full description of every member, see the [Web app manifest](/en-US/docs/W
 
 For a PWA to be installable it must be served using the `https` protocol, or from a local development environment using `localhost` or `127.0.0.1` — with or without a port number.
 
-This is a more stringent requirement than [secure context](/en-US/docs/Web/Security/Secure_Contexts), which considers resources loaded from `file://` URLs to be secure.
+This is a more stringent requirement than [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts), which considers resources loaded from `file://` URLs to be secure.
 
 ## Installation from an app store
 
@@ -83,7 +83,7 @@ Users expect to find apps in the app store for their platform, like the Google P
 If your app meets the installability prerequisites, you can package it and distribute it through app stores. The process is specific to each app store:
 
 - [How to publish a PWA to the Google Play Store](https://chromeos.dev/en/publish/pwa-in-play)
-- [How to publish a PWA to the Microsoft Store](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/microsoft-store)
+- [How to publish a PWA to the Microsoft Store](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps/how-to/microsoft-store)
 - [How to publish a PWA to the Meta Quest Store](https://developers.meta.com/horizon/resources/publish-submit/)
 
 The [PWABuilder](https://docs.pwabuilder.com/#/builder/quick-start) is a tool to simplify the process of packaging and publishing a PWA for various app stores. It supports the Google Play Store, Microsoft Store, Meta Quest Store, and iOS App Store.

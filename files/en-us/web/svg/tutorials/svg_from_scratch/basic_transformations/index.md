@@ -29,9 +29,15 @@ All following transformations are summed up in an element's `transform` attribut
 It may be necessary to move an element around, even though you can position it with the according attributes. For this purpose, the `translate()` transformation stands ready.
 
 ```html
-<svg width="40" height="50" style="background-color:#bff;">
+<svg width="40" height="50">
   <rect x="0" y="0" width="10" height="10" transform="translate(30,40)" />
 </svg>
+```
+
+```css hidden
+svg {
+  background-color: #bbffff;
+}
 ```
 
 The example will render a rectangle, translated to the point (30,40) instead of (0,0).
@@ -59,7 +65,7 @@ This example shows a square that is rotated by 45 degrees. The value for `rotate
 Transformations can be concatenated easily just by separating them with spaces. For example, `translate()` and `rotate()` are common used transformations.
 
 ```html
-<svg width="40" height="50" style="background-color:#bff;">
+<svg width="40" height="50">
   <rect
     x="0"
     y="0"
@@ -67,6 +73,12 @@ Transformations can be concatenated easily just by separating them with spaces. 
     height="10"
     transform="translate(30,40) rotate(45)" />
 </svg>
+```
+
+```css hidden
+svg {
+  background-color: #bbffff;
+}
 ```
 
 This example shows again the small square shown above that this time is also rotated by 45 degrees.
@@ -90,7 +102,7 @@ All the above transformations can be expressed by a 2x3 transformation matrix. T
 </math>
 <!-- prettier-ignore-end -->
 
-See a [concrete example on the SVG transform documentation](/en-US/docs/Web/SVG/Reference/Attribute/transform#matrix). To read more about transformations, check the [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) guide.
+See a [concrete example on the SVG transform documentation](/en-US/docs/Web/SVG/Reference/Attribute/transform#matrix). To read more about transformations, check the [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms/Using) guide.
 
 ## Effects on Coordinate Systems
 
@@ -113,7 +125,7 @@ The resulting rectangular in the above example will be 100x100px. The more intri
 In contrast to HTML, SVG allows you to embed other `svg` elements seamlessly. This way you can also create new coordinate systems by utilizing the `viewBox`, `width` and `height` of the inner `svg` element.
 
 ```html
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100" height="100">
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100">
   <svg width="100" height="100" viewBox="0 0 50 50">
     <rect width="50" height="50" />
   </svg>

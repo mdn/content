@@ -2,9 +2,8 @@
 title: "SyntaxError: super() is only valid in derived class constructors"
 slug: Web/JavaScript/Reference/Errors/Bad_super_call
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "super() is only valid in derived class constructors" occurs when the {{jsxref("Operators/super", "super()")}} call is used somewhere that's not the body of a [constructor](/en-US/docs/Web/JavaScript/Reference/Classes/constructor) in a class with [`extends`](/en-US/docs/Web/JavaScript/Reference/Classes/extends) keyword.
 
@@ -22,7 +21,7 @@ SyntaxError: super is not valid in this context. (Safari)
 
 ## What went wrong?
 
-The `super()` call is used to invoke the base constructor of a derived class, so the base class can initialize the {{jsxref("Operators/this", "this")}} object. Using it anywhere else doesn't make sense.
+The `super()` call is used to invoke the base constructor of a derived class, so the base class can initialize the {{jsxref("this")}} object. Using it anywhere else doesn't make sense.
 
 `super()` can also be defined in an arrow function that's nested within the constructor. However, it cannot be defined in any other kind of function.
 

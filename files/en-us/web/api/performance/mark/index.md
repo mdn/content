@@ -21,10 +21,22 @@ mark(name, markOptions)
 
 - `name`
   - : A string representing the name of the mark. Must not be the same name as one of the properties of the deprecated {{domxref("PerformanceTiming")}} interface.
+
 - `markOptions` {{optional_inline}}
   - : An object for specifying a timestamp and additional metadata for the mark.
     - `detail` {{optional_inline}}
       - : Arbitrary metadata to include in the mark. Defaults to `null`. Must be [structured-cloneable](/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm).
+        - `devtools` {{optional_inline}} {{experimental_inline}}
+          - : Some browsers have use a structured `devtools` object within the `detail` object as part of an Extensibility API that surfaces these in custom tracks in performance traces. See the [Chrome's Extensibility API documentation](https://developer.chrome.com/docs/devtools/performance/extension#inject_your_data_with_the_user_timings_api) for more information.
+            - `dataType` {{experimental_inline}}
+              - : A string which must be set to `marker`. Identifies as a marker.
+            - `color` {{optional_inline}} {{experimental_inline}}
+              - : Defaults to `"primary"`. Must be one of `"primary"`, `"primary-light"`, `"primary-dark"`, `"secondary"`, `"secondary-light"`, `"secondary-dark"`, `"tertiary"`, `"tertiary-light"`, `"tertiary-dark"`, `"error"`.
+            - `properties` {{optional_inline}} {{experimental_inline}}
+              - : Array of key-value pairs. Values can be any JSON-compatible type.
+            - `tooltipText` {{optional_inline}} {{experimental_inline}}
+              - : Short description for tooltip.
+
     - `startTime` {{optional_inline}}
       - : {{domxref("DOMHighResTimeStamp")}} to use as the mark time. Defaults to {{domxref("performance.now()")}}.
 
@@ -77,6 +89,27 @@ performance.mark("start-checkout", {
 
 performance.mark("login-button-pressed", {
   startTime: myEvent.timeStamp,
+});
+```
+
+### DevTools Extensibility API
+
+For browsers that support the [Extensibility API](https://developer.chrome.com/docs/devtools/performance/extension) you can use the `detail` parameter to provide more details in a `devtools` object that will be used to display this in performance profiles:
+
+```js
+// Marker indicating when the processed image was uploaded
+performance.mark("Image Upload", {
+  detail: {
+    devtools: {
+      dataType: "marker",
+      color: "secondary",
+      properties: [
+        ["Image Size", "2.5MB"],
+        ["Upload Destination", "Cloud Storage"],
+      ],
+      tooltipText: "Processed image uploaded",
+    },
+  },
 });
 ```
 

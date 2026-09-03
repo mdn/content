@@ -38,7 +38,7 @@ br {
   <body onload='update()'>
     <svg:svg id='display' width='400' height='300'>
       <svg:circle id='cursor' cx='200'
-cy='150' r='7' fill='#0000ff' fill-opacity='0.5'/>
+cy='150' r='7' fill='blue' fill-opacity='0.5'/>
     </svg:svg>
 
     <p>A swarm of motes, governed by two basic principles.

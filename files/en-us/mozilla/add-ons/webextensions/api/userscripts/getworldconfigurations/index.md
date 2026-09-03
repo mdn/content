@@ -3,9 +3,8 @@ title: userScripts.getWorldConfigurations()
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/getWorldConfigurations
 page-type: webextension-api-function
 browser-compat: webextensions.api.userScripts.getWorldConfigurations
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Returns all the `USER_SCRIPT` world configurations registered by the extension with {{WebExtAPIRef("userScripts.configureWorld()")}}.
 

@@ -3,9 +3,8 @@ title: Function
 slug: Web/JavaScript/Reference/Global_Objects/Function
 page-type: javascript-class
 browser-compat: javascript.builtins.Function
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Function`** object provides methods for [functions](/en-US/docs/Web/JavaScript/Reference/Functions). In JavaScript, every function is actually a `Function` object.
 

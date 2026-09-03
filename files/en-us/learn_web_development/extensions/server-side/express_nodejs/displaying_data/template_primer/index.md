@@ -9,7 +9,7 @@ A template is a text file defining the _structure_ or layout of an output file, 
 
 ## Express template choices
 
-Express can be used with many different [template rendering engines](https://expressjs.com/en/guide/using-template-engines.html). In this tutorial we use [Pug](https://pugjs.org/api/getting-started.html) (formerly known as _Jade_) for our templates. This is the most popular Node template language, and describes itself as a "clean, whitespace-sensitive syntax for writing HTML, heavily influenced by [Haml](https://haml.info/)".
+Express can be used with many different [template rendering engines](https://expressjs.com/en/guide/using-template-engines/). In this tutorial we use [Pug](https://pugjs.org/api/getting-started.html) (formerly known as _Jade_) for our templates. This is the most popular Node template language, and describes itself as a "clean, whitespace-sensitive syntax for writing HTML, heavily influenced by [Haml](https://haml.info/)".
 
 Different template languages use different approaches for defining layout and marking placeholders for data—some use HTML to define the layout while others use different markup formats that can be transpiled to HTML. Pug is of the second type; it uses a _representation_ of HTML where the first word in any line usually represents an HTML element, and indentation on subsequent lines is used to represent nesting. The result is a page definition that translates directly to HTML, but is more concise and arguably easier to read.
 

@@ -4,9 +4,8 @@ short-title: fromCodePoint()
 slug: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 page-type: javascript-static-method
 browser-compat: javascript.builtins.String.fromCodePoint
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`String.fromCodePoint()`** static method returns a string created from the specified sequence of code points.
 

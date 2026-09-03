@@ -3,9 +3,8 @@ title: cookies.getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/cookies/getAll
 page-type: webextension-api-function
 browser-compat: webextensions.api.cookies.getAll
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`getAll()`** method of the {{WebExtAPIRef("cookies")}} API retrieves all cookies from a cookie store that match the details provided.
 
@@ -24,13 +23,10 @@ let getting = browser.cookies.getAll(
 ### Parameters
 
 - `details`
-
   - : An `object` containing details that are used to match cookies to retrieve. Included properties are as follows (see [Cookie type](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies/Cookie#type) for more information on these):
-
     - `domain` {{optional_inline}}
       - : A `string` representing a domain that cookies must be associated with (they can be associated either with this exact domain or one of its subdomains).
     - `firstPartyDomain` {{optional_inline}}
-
       - : A `string` representing the first-party domain with which the cookie to retrieve is associated.
 
         This property must be supplied if the browser has first-party isolation enabled. If you pass `null`, cookies with any value for `firstPartyDomain` and cookies that do not have `firstPartyDomain` set are included in the results. See [First-party isolation](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation).
@@ -38,15 +34,12 @@ let getting = browser.cookies.getAll(
     - `name` {{optional_inline}}
       - : A `string` representing a name that the cookies must have.
     - `partitionKey` {{optional_inline}}
-
       - : An `object` defining which [storage partitions](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/cookies#storage_partitioning) to return cookies from:
-
         - If omitted, only cookies from unpartitioned storage are returned.
         - If included without `topLevelSite`, all cookies from partitioned and unpartitioned storage are returned.
         - If included with the specified `topLevelSite`, cookies from the specified partition storage are returned.
 
         This object contains:
-
         - `topLevelSite` {{optional_inline}}
           - : A `string` representing the first-party URL of the top-level site storage partition containing the cookies.
 

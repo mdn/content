@@ -4,9 +4,8 @@ short-title: BigInt()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/BigInt
 page-type: javascript-constructor
 browser-compat: javascript.builtins.BigInt.BigInt
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`BigInt()`** function returns primitive values of type BigInt.
 
@@ -16,7 +15,8 @@ The **`BigInt()`** function returns primitive values of type BigInt.
 BigInt(value)
 ```
 
-> **Note:** `BigInt()` can only be called without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to construct it with `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `BigInt()` can only be called without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to construct it with `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -34,7 +34,7 @@ A {{jsxref("BigInt")}} value. Number values must be integers and are converted t
 - {{jsxref("TypeError")}}
   - : Thrown in one of the following cases:
     - The parameter cannot be converted to a primitive.
-    - After conversion to a primitive, the result is {{jsxref("undefined")}}, {{jsxref("Operators/null", "null")}}, {{jsxref("symbol")}}.
+    - After conversion to a primitive, the result is {{jsxref("undefined")}}, {{jsxref("null")}}, {{jsxref("symbol")}}.
 - {{jsxref("SyntaxError")}}
   - : Thrown if the parameter is a string that cannot be parsed as a `BigInt`.
 

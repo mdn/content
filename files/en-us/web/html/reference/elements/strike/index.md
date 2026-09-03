@@ -1,13 +1,13 @@
 ---
-title: <strike>
+title: "`<strike>` HTML strikethrough element"
+short-title: <strike>
 slug: Web/HTML/Reference/Elements/strike
 page-type: html-element
 status:
   - deprecated
 browser-compat: html.elements.strike
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}{{deprecated_header}}
 
 The **`<strike>`** [HTML](/en-US/docs/Web/HTML) element places a strikethrough (horizontal line) over text.
 

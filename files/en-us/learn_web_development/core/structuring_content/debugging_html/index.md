@@ -5,7 +5,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_forms", "Learn_web_development/Core/Styling_basics", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Forms_challenge", "Learn_web_development/Core/Styling_basics", "Learn_web_development/Core/Structuring_content")}}
 
 Writing HTML is fine, but what if something goes wrong, and you can't work out where the error in the code is? This article will introduce you to some tools that can help you find and fix errors in HTML.
 
@@ -41,7 +41,7 @@ Writing HTML is fine, but what if something goes wrong, and you can't work out w
 
 ## Debugging isn't scary
 
-When writing code of some kind, everything is fine, until that dreaded moment when an error occurs — you've done something wrong, so your code doesn't work — either not at all, or not quite how you wanted it to. For example, the following shows an error reported when trying to {{glossary("compile")}} a simple program written in the [Rust](https://www.rust-lang.org/) language.
+When writing code of some kind, everything is fine, until that dreaded moment when an error occurs — you've done something wrong, so your code doesn't work — either not at all, or not quite how you wanted it to. For example, the following shows an error reported when trying to {{glossary("compile")}} a simple program written in the [Rust](https://rust-lang.org/) language.
 
 ![A console window showing the result of trying to compile a rust program with a missing quote around a string in a print statement. The error message reported is error: unterminated double quote string.](error-message.png)
 
@@ -95,7 +95,7 @@ You can open the devtools in a similar way in each browser — see [How to open 
 For this article, the only relevant devtools function is the **DOM inspector**, which shows the currently-rendered HTML DOM and allows you to edit it. Let's look at this now:
 
 1. Open the devtools in your browser.
-2. Open the DOM inspector. It is in the same place in each browser — the first tab in the devtools at the start of the row. In Firefox it is labelled _Inspector_, while in Safari, Edge, and Chrome it is labeled _Elements_. This should be the tab selected by default when you first open the devtools, but select it if it isn't.
+2. Open the DOM inspector. It is in the same place in each browser — the first tab in the devtools at the start of the row. In Firefox it is labeled _Inspector_, while in Safari, Edge, and Chrome it is labeled _Elements_. This should be the tab selected by default when you first open the devtools, but select it if it isn't.
 3. Examine the DOM tree structure shown in the tab, and note how you can click the little expansion arrows at the start of each DOM node to expand and collapse them and reveal their descendant nodes. You can also use the up and down cursor keys to move up and down the nodes, and the right and left cursor keys to expand and collapse the nodes.
 4. Also try hovering over the nodes (or selecting them with the cursor keys) and note how the currently-hovered (or selected) element is highlighted in the viewport.
 5. You can also edit the rendered DOM. We won't use the editing functionality in this article, but take some time to look up how to do this if you are curious.
@@ -107,7 +107,7 @@ In this section, you'll study some code using the DOM inspector and see how the 
 1. First, save the following HTML file listing as `debug-example.html`, somewhere on your local machine. This demo is deliberately written with some built-in errors for us to explore.
 
    ```html-nolint
-   <!DOCTYPE html>
+   <!doctype html>
    <html lang="en-US">
      <head>
        <meta charset="utf-8">
@@ -149,7 +149,6 @@ In this section, you'll study some code using the DOM inspector and see how the 
    ```
 
 4. Let's review the problems:
-
    - The {{htmlelement("p","paragraph")}} and {{htmlelement("li","list item")}} elements have no closing tags. Looking at the image above, this doesn't seem to have affected the markup rendering too badly, as it is easy to infer where one element should end and another should begin.
    - The first {{htmlelement("strong")}} element has no closing tag. This is a bit more problematic, as it isn't easy to tell where the element is supposed to end. In fact, the whole of the rest of the text has been rendered in bold.
    - This section is badly nested: `<strong>strong <em>strong emphasized?</strong> what is this?</em>`. It is not easy to tell how this has been interpreted because of the previous problem.
@@ -157,7 +156,6 @@ In this section, you'll study some code using the DOM inspector and see how the 
 
 5. Now let's examine the rendered DOM, as opposed to the source code. To do this, open your browser's DOM inspector. You will see a representation of the rendered markup: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](html-inspector.png)
 6. Look at how the browser has tried to fix our HTML errors (we did the review in Firefox; other modern browsers _should_ give the same result):
-
    - The paragraphs and list items have been given closing tags.
    - It isn't clear where the first `<strong>` element should be closed, so the browser has wrapped each separate block of text in its own `<strong>` element, right down to the bottom of the document!
    - The incorrect nesting has been fixed by the browser as shown here:
@@ -193,11 +191,11 @@ To specify the HTML to validate, you can provide a web address, upload an HTML f
 
 ## Validating an HTML document
 
-In this task, we'll get you to try out the HTML validator. You will validate our [sample document](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/debugging-html/debug-example.html) and see what results are returned. This example contains the same HTML that you studied with the DOM inspector earlier.
+In this task, we'll get you to try out the HTML validator. You will validate the same HTML that you studied with the DOM inspector earlier.
 
 1. First, load the [Markup Validation Service](https://validator.w3.org/) in a new browser tab, if it isn't already open.
 2. Switch to the [Validate by Direct Input](https://validator.w3.org/#validate_by_input) tab.
-3. Copy all of the sample document's code (not just the body) and paste it into the large text area shown in the Markup Validation Service.
+3. Copy the [sample document](#your_turn_studying_html_using_the_dom_inspector) and paste it into the large text area shown in the Markup Validation Service. Paste the entire document structure, not just the `<body>` contents.
 4. Press the _Check_ button.
 
 This should give you a list of errors and other information.
@@ -231,4 +229,6 @@ You will know when all your errors are fixed when you see a nice little green ba
 
 So there we have it, an introduction to debugging HTML, which should give you some useful skills to count on when debugging HTML, but also CSS and JavaScript code later on in the course. This also marks the end of the _Structuring content with HTML_ module.
 
-{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_forms", "Learn_web_development/Core/Styling_basics", "Learn_web_development/Core/Structuring_content")}}
+Your next step is to start learning about styling the web in our [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics) module.
+
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Forms_challenge", "Learn_web_development/Core/Styling_basics", "Learn_web_development/Core/Structuring_content")}}

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.lineCap
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The
 **`CanvasRenderingContext2D.lineCap`**
@@ -72,15 +72,15 @@ the right uses the `"square"` option. This adds a box with an equal width and
 half the height of the line thickness.
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="my-canvas" width="150" height="150"></canvas>
 ```
 
 ```js
-const canvas = document.getElementById("canvas");
+const canvas = document.getElementById("my-canvas");
 const ctx = canvas.getContext("2d");
 
 // Draw guides
-ctx.strokeStyle = "#09f";
+ctx.strokeStyle = "#0099ff";
 ctx.beginPath();
 ctx.moveTo(10, 10);
 ctx.lineTo(140, 10);

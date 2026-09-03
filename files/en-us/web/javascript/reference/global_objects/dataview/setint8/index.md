@@ -4,9 +4,8 @@ short-title: setInt8()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setInt8
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.setInt8
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`setInt8()`** method of {{jsxref("DataView")}} instances takes a number and stores it as an 8-bit signed integer in the byte at the specified byte offset of this `DataView`.
 

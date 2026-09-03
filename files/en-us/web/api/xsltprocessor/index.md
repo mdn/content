@@ -2,10 +2,12 @@
 title: XSLTProcessor
 slug: Web/API/XSLTProcessor
 page-type: web-api-interface
+status:
+  - deprecated
 browser-compat: api.XSLTProcessor
 ---
 
-{{APIRef("XSLT")}}
+{{APIRef("DOM")}}
 
 An **`XSLTProcessor`** applies an [XSLT](/en-US/docs/Web/XML/XSLT) stylesheet transformation to an XML document to
 produce a new XML document as output. It has methods to load the XSLT stylesheet, to
@@ -14,31 +16,31 @@ transformation to documents.
 
 ## Constructor
 
-- {{domxref("XSLTProcessor.XSLTProcessor", "XSLTProcessor()")}}
+- {{domxref("XSLTProcessor.XSLTProcessor", "XSLTProcessor()")}} {{deprecated_inline}}
   - : Create a new `XSLTProcessor`.
 
 ## Instance methods
 
-- {{domxref("XSLTProcessor.importStylesheet()")}}
+- {{domxref("XSLTProcessor.importStylesheet()")}} {{deprecated_inline}}
   - : Imports the XSLT stylesheet.
     If the given node is a document node, you can pass in a full XSL Transform or a [literal result element transform](https://www.w3.org/TR/xslt-30/#literal-result-element);
     otherwise, it must be an `<xsl:stylesheet>` or `<xsl:transform>` element.
-- {{domxref("XSLTProcessor.transformToFragment()")}}
+- {{domxref("XSLTProcessor.transformToFragment()")}} {{deprecated_inline}}
   - : Transforms the node source by applying the XSLT stylesheet imported using the {{domxref("XSLTProcessor.importStylesheet()")}} function.
     The owner document of the resulting document fragment is the owner node.
-- {{domxref("XSLTProcessor.transformToDocument()")}}
+- {{domxref("XSLTProcessor.transformToDocument()")}} {{deprecated_inline}}
   - : Transforms the node source applying the XSLT stylesheet given importing using the {{domxref("XSLTProcessor.importStylesheet()")}} function.
-- {{domxref("XSLTProcessor.setParameter()")}}
+- {{domxref("XSLTProcessor.setParameter()")}} {{deprecated_inline}}
   - : Sets a parameter (`<xsl:param>`) value in the XSLT stylesheet that was imported.
-- {{domxref("XSLTProcessor.getParameter()")}}
+- {{domxref("XSLTProcessor.getParameter()")}} {{deprecated_inline}}
   - : Gets the value of a parameter from the XSLT stylesheet.
-- {{domxref("XSLTProcessor.removeParameter()")}}
+- {{domxref("XSLTProcessor.removeParameter()")}} {{deprecated_inline}}
   - : Removes the parameter if it was previously set.
     This will make the `XSLTProcessor` use the default value for the parameter as specified in the XSLT stylesheet.
-- {{domxref("XSLTProcessor.clearParameters()")}}
+- {{domxref("XSLTProcessor.clearParameters()")}} {{deprecated_inline}}
   - : Removes all set parameters from the `XSLTProcessor`.
     The `XSLTProcessor` will then use the default values specified in the XSLT stylesheet.
-- {{domxref("XSLTProcessor.reset()")}}
+- {{domxref("XSLTProcessor.reset()")}} {{deprecated_inline}}
   - : Removes all parameters and stylesheets from the `XSLTProcessor`.
 
 ## Instance properties
@@ -92,7 +94,7 @@ You can use the {{domxref("DOMParser")}} to create an XML document from a string
 
 ```js
 const parser = new DOMParser();
-const doc = parser.parseFromString(aStr, "text/xml");
+const doc = parser.parseFromString(str, "text/xml");
 ```
 
 ### Performing the transformation
@@ -103,7 +105,7 @@ const fragment = xsltProcessor.transformToFragment(xmlRef, document);
 
 ### Basic Example
 
-The basic example will load an XML file and apply a XSL transformation on it. These are the same files used in the [Generating HTML](/en-US/docs/Web/API/Document_Object_Model/Transforming_with_XSLT#generating_html) example. The XML file describes an article and the XSL file formats the information for display.
+The basic example will load an XML file and apply a XSL transformation on it. These are the same files used in the [Generating HTML](/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT#generating_html) example. The XML file describes an article and the XSL file formats the information for display.
 
 #### XML
 
@@ -329,7 +331,4 @@ async function sort() {
 ## See also
 
 - [XSLT](/en-US/docs/Web/XML/XSLT)
-- [Transforming with XSLT](/en-US/docs/Web/API/Document_Object_Model/Transforming_with_XSLT)
-- [Chapter 15 of the XML 1.1 Bible: XSL Transformations](https://www.ibiblio.org/xml/books/bible3/chapters/ch15.html)
-- [XSLT Tutorial](https://zvon.org/xxl/XSLTutorial/Books/Book1/index.html) at [zvon.org](https://zvon.org/)
-- [XPath Tutorial](https://zvon.org/xxl/XPathTutorial/General/examples.html) at [zvon.org](https://zvon.org/)
+- [Transforming with XSLT](/en-US/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT)

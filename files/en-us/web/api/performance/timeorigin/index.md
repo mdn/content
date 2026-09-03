@@ -20,7 +20,6 @@ In Window contexts, this value represents the time when navigation has started. 
 A high resolution timestamp which considered to be the beginning of the current document's lifetime. It's calculated like this:
 
 - If the script's {{Glossary("global object")}} is a {{domxref("Window")}}, the time origin is determined as follows:
-
   - If the current {{domxref("Document")}} is the first one loaded in the `Window`, the time origin is the time at which the browser context was created.
   - If during the process of unloading the previous document which was loaded in the window, a confirmation dialog was displayed to let the user confirm whether or not to leave the previous page, the time origin is the time at which the user confirmed that navigating to the new page was acceptable.
   - If neither of the above determines the time origin, then the time origin is the time at which the navigation responsible for creating the window's current `Document` took place.
@@ -34,23 +33,26 @@ A high resolution timestamp which considered to be the beginning of the current 
 
 To account for the different time origins in window and worker contexts, you can translate the timestamps coming from worker scripts with the help of the `timeOrigin` property, so the timings synchronize for the entire application.
 
+> [!WARNING]
+> [The monotonic clock may not tick while the operating system sleeps](/en-US/docs/Web/API/Performance/now#ticking_during_sleep). If a window remains open during system sleep and then spawns a worker, translated timestamps from the two contexts may be offset by the duration of the sleep. There is no way to restore exact synchronization: {{jsxref("Date.now()")}} is subject to clock adjustments, while estimating the offset by exchanging timestamps introduces inaccuracy due to message latency.
+
 In worker.js
 
 ```js
 self.addEventListener("connect", (event) => {
   const port = event.ports[0];
 
-  port.onmessage = (event) => {
+  port.onmessage = () => {
     const workerTaskStart = performance.now();
     // doSomeWork()
     const workerTaskEnd = performance.now();
-  };
 
-  // Convert worker-relative timestamps to absolute timestamps, then send to the window
-  port.postMessage({
-    startTime: workerTaskStart + performance.timeOrigin,
-    endTime: workerTaskEnd + performance.timeOrigin,
-  });
+    // Convert worker-relative timestamps to absolute timestamps, then send to the window
+    port.postMessage({
+      startTime: workerTaskStart + performance.timeOrigin,
+      endTime: workerTaskEnd + performance.timeOrigin,
+    });
+  };
 });
 ```
 
@@ -66,6 +68,8 @@ worker.port.addEventListener("message", (event) => {
   console.log("Worker task start: ", workerTaskStart);
   console.log("Worker task end: ", workerTaskEnd);
 });
+worker.port.start();
+worker.port.postMessage("start");
 ```
 
 ## Specifications

@@ -101,37 +101,29 @@ Now we can add the play and pause functionality.
 // Select our play button
 const playButton = document.querySelector("button");
 
-playButton.addEventListener(
-  "click",
-  () => {
-    // Check if context is in suspended state (autoplay policy)
-    if (audioContext.state === "suspended") {
-      audioContext.resume();
-    }
+playButton.addEventListener("click", () => {
+  // Check if context is in suspended state (autoplay policy)
+  if (audioContext.state === "suspended") {
+    audioContext.resume();
+  }
 
-    // Play or pause track depending on state
-    if (playButton.dataset.playing === "false") {
-      audioElement.play();
-      playButton.dataset.playing = "true";
-    } else if (playButton.dataset.playing === "true") {
-      audioElement.pause();
-      playButton.dataset.playing = "false";
-    }
-  },
-  false,
-);
+  // Play or pause track depending on state
+  if (playButton.dataset.playing === "false") {
+    audioElement.play();
+    playButton.dataset.playing = "true";
+  } else if (playButton.dataset.playing === "true") {
+    audioElement.pause();
+    playButton.dataset.playing = "false";
+  }
+});
 ```
 
 We also need to take into account what to do when the track finishes playing. Our `HTMLMediaElement` fires an `ended` event once it's finished playing, so we can listen for that and run code accordingly:
 
 ```js
-audioElement.addEventListener(
-  "ended",
-  () => {
-    playButton.dataset.playing = "false";
-  },
-  false,
-);
+audioElement.addEventListener("ended", () => {
+  playButton.dataset.playing = "false";
+});
 ```
 
 ## Modifying sound
@@ -170,13 +162,9 @@ So let's grab this input's value and update the gain value when the input node h
 ```js
 const volumeControl = document.querySelector("#volume");
 
-volumeControl.addEventListener(
-  "input",
-  () => {
-    gainNode.gain.value = volumeControl.value;
-  },
-  false,
-);
+volumeControl.addEventListener("input", () => {
+  gainNode.gain.value = volumeControl.value;
+});
 ```
 
 > [!NOTE]
@@ -186,7 +174,7 @@ Great, now the user can update the track's volume! The gain node is the perfect 
 
 ## Adding stereo panning to our app
 
-Let's add another modification node to practice what we've just learnt.
+Let's add another modification node to practice what we've just learned.
 
 There's a {{domxref("StereoPannerNode")}} node, which changes the balance of the sound between the left and right speakers, if the user has stereo capabilities.
 
@@ -220,13 +208,9 @@ We use the values from that input to adjust our panner values in the same way as
 ```js
 const pannerControl = document.querySelector("#panner");
 
-pannerControl.addEventListener(
-  "input",
-  () => {
-    panner.pan.value = pannerControl.value;
-  },
-  false,
-);
+pannerControl.addEventListener("input", () => {
+  panner.pan.value = pannerControl.value;
+});
 ```
 
 Let's adjust our audio graph again, to connect all the nodes together:

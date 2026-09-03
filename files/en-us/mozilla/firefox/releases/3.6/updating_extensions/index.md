@@ -2,9 +2,8 @@
 title: Updating extensions for Firefox 3.6
 slug: Mozilla/Firefox/Releases/3.6/Updating_extensions
 page-type: guide
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides helpful information to extension developers trying to update their extensions to work properly in Firefox 3.6.
 
@@ -20,7 +19,7 @@ In order to allow add-ons' icons to be displayed even when they're disabled, Gec
 
 The DOM Level 2 views to HTML and XHTML documents are now unified per HTML 5.
 
-- The [`localName`](/en-US/docs/Web/API/Element/localName) DOM property now returns the name of HTML element nodes in lower case. Previously, in HTML documents, it returned it in upper case. (DOM Level 1 [`tagName`](/en-US/docs/DOM/node.tagName) continues to return in upper case in HTML documents.)
+- The [`localName`](/en-US/docs/Web/API/Element/localName) DOM property now returns the name of HTML element nodes in lower case. Previously, in HTML documents, it returned it in upper case. (DOM Level 1 [`tagName`](/en-US/docs/Web/API/Element/tagName) continues to return in upper case in HTML documents.)
 - The [`namespaceURI`](/en-US/docs/Web/API/Element/namespaceURI) DOM property now returns `"http://www.w3.org/1999/xhtml"` on HTML element nodes. Previously, in HTML documents, it returned `null`.
 - `document.createElementNS(null, "FOO")` no longer creates an HTML element node in HTML documents. `document.createElement("FOO")`
   or `document.createElementNS("http://www.w3.org/1999/xhtml", "foo")` continue
@@ -47,7 +46,7 @@ The most probable upgrade problem is the pattern `if (elt.localName === "FOO")`.
 
 Support for the obsolete `contents.rdf` method for registering chrome has been removed in Gecko 1.9.2, and is no longer supported by Firefox 3.6. This means that add-ons that use contents.rdf can no longer be installed.
 
-Make sure you include a [chrome.manifest](/en-US/docs/Chrome_Registration) in your XPI.
+Make sure you include a [chrome.manifest](https://web.archive.org/web/20191029205045/https://developer.mozilla.org/en-US/docs/Mozilla/Chrome_Registration) in your XPI.
 
 > [!NOTE]
 > Add-ons that are already installed using the old contents.rdf method for registering chrome will continue to function if already installed. Make sure that you test your add-on by actually removing and reinstalling it to ensure that the install works after updating it to use an install manifest.

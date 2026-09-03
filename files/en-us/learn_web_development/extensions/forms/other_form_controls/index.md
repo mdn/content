@@ -50,8 +50,6 @@ Note that even though you can put anything inside a `<textarea>` element (includ
 
 Visually, the text entered wraps and the form control is by default resizable. Most browsers provide a drag handle that you can drag to increase/decrease the size of the text area.
 
-You can find an example of text area usage in the [example](https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html) we put together in the first article of this.
-
 ### Controlling multi-line rendering
 
 {{htmlelement("textarea")}} accepts three attributes to control its rendering across several lines:
@@ -78,9 +76,6 @@ Play with the interactive example at the top of the {{cssxref("resize")}} refere
 ## Drop-down controls
 
 Drop-down controls are a simple way to let users select from many options without taking up much space in the user interface. HTML has two types of drop-down controls: the **select box** and the **autocomplete box**. The interaction is the same in both the types of drop-down controls — after the control is activated, the browser displays a list of values the user can select from.
-
-> [!NOTE]
-> You can find examples of all the drop-down box types on GitHub at [drop-down-content.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/drop-down-content.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/drop-down-content.html)).
 
 ### Select box
 
@@ -144,7 +139,7 @@ By default, the height of the select box is enough to display a single value. Th
 By default, a select box lets a user select only one value. By adding the [`multiple`](/en-US/docs/Web/HTML/Reference/Elements/select#multiple) attribute to the {{HTMLElement("select")}} element, you can allow users to select several values. Users can select multiple values by using the default mechanism provided by the operating system (e.g., on the desktop, multiple values can be clicked while holding down <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> keys).
 
 ```html
-<select id="multi" name="multi" multiple size="2">
+<select id="multi" name="multi" multiple size="3">
   <optgroup label="fruits">
     <option>Banana</option>
     <option selected>Cherry</option>
@@ -209,25 +204,20 @@ In this case, different browsers behave differently from case to case, so consid
 
 There are a few other form features that are not as obvious as the ones we have already mentioned, but still useful in some situations, so we thought it would be worth giving them a brief mention.
 
-> [!NOTE]
-> You can find the examples from this section on GitHub as [other-examples.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/other-examples.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/native-form-widgets/other-examples.html)).
-
 ### Meters and progress bars
 
-Meters and progress bars are visual representations of numeric values. Support for {{HTMLElement("progress")}} and {{HTMLElement("meter")}} is available in all modern browsers.
+Meters and progress bars (created using the {{HTMLElement("meter")}} and {{HTMLElement("progress")}} elements) are visual representations of numeric values.
 
 #### Meter
 
 A meter bar represents a fixed value in a range delimited by [`max`](/en-US/docs/Web/HTML/Reference/Elements/meter#max) and [`min`](/en-US/docs/Web/HTML/Reference/Elements/meter#min) values. This value is visually rendered as a bar, and to know how this bar looks, we compare the value to some other set values:
 
 - The [`low`](/en-US/docs/Web/HTML/Reference/Elements/meter#low) and [`high`](/en-US/docs/Web/HTML/Reference/Elements/meter#high) values divide the range into the following three parts:
-
   - The lower part of the range is between the [`min`](/en-US/docs/Web/HTML/Reference/Elements/meter#min) and [`low`](/en-US/docs/Web/HTML/Reference/Elements/meter#low) values, inclusive.
   - The medium part of the range is between the [`low`](/en-US/docs/Web/HTML/Reference/Elements/meter#low) and [`high`](/en-US/docs/Web/HTML/Reference/Elements/meter#high) values, exclusive.
   - The higher part of the range is between the [`high`](/en-US/docs/Web/HTML/Reference/Elements/meter#high) and [`max`](/en-US/docs/Web/HTML/Reference/Elements/meter#max) values, inclusive.
 
 - The [`optimum`](/en-US/docs/Web/HTML/Reference/Elements/meter#optimum) value defines the optimum value for the {{HTMLElement("meter")}} element. In conjunction with the [`low`](/en-US/docs/Web/HTML/Reference/Elements/meter#low) and [`high`](/en-US/docs/Web/HTML/Reference/Elements/meter#high) value, it defines which part of the range is preferred:
-
   - If the [`optimum`](/en-US/docs/Web/HTML/Reference/Elements/meter#optimum) value is in the lower part of the range, the lower range is considered to be the preferred part, the medium range is considered to be the average part, and the higher range is considered to be the worst part.
   - If the [`optimum`](/en-US/docs/Web/HTML/Reference/Elements/meter#optimum) value is in the medium part of the range, the lower range is considered to be an average part, the medium range is considered to be the preferred part, and the higher range is considered to be average as well.
   - If the [`optimum`](/en-US/docs/Web/HTML/Reference/Elements/meter#optimum) value is in the higher part of the range, the lower range is considered to be the worst part, the medium range is considered to be the average part and the higher range is considered to be the preferred part.
@@ -261,10 +251,6 @@ A progress bar represents a value that changes over time up to a maximum value s
 This is for implementing anything requiring progress reporting, such as the percentage of total files downloaded, or the number of questions filled in on a questionnaire.
 
 The content inside the {{HTMLElement("progress")}} element is a fallback for browsers that don't support the element and for screen readers to vocalize it.
-
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see [Test your skills: Other controls](/en-US/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls).
 
 ## Summary
 

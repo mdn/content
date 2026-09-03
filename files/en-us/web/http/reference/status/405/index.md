@@ -3,9 +3,8 @@ title: 405 Method Not Allowed
 slug: Web/HTTP/Reference/Status/405
 page-type: http-status-code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.405
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`405 Method Not Allowed`** [client error response](/en-US/docs/Web/HTTP/Reference/Status#client_error_responses) status code indicates that the server knows the request method, but the target resource doesn't support this method.
 The server **must** generate an {{HTTPHeader("Allow")}} header in a 405 response with a list of methods that the target resource currently supports.

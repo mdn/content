@@ -5,10 +5,11 @@ slug: Web/API/HTMLIFrameElement/featurePolicy
 page-type: web-api-instance-property
 status:
   - experimental
+  - non-standard
 browser-compat: api.HTMLIFrameElement.featurePolicy
 ---
 
-{{APIRef("Feature Policy API")}}{{SeeCompatTable}}
+{{APIRef("Feature Policy API")}}{{SeeCompatTable}}{{non-standard_header}}
 
 The **`featurePolicy`** read-only
 property of the {{DOMxRef("HTMLIFrameElement")}} interface returns the

@@ -3,12 +3,10 @@ title: "Navigator: appName property"
 short-title: appName
 slug: Web/API/Navigator/appName
 page-type: web-api-instance-property
-status:
-  - deprecated
 browser-compat: api.Navigator.appName
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 The value of the **`Navigator.appName`** property is always
 `"Netscape"`, in any browser. This property is kept only for compatibility

@@ -31,12 +31,20 @@ Otherwise, the returned value is `null`.
 
 ## Examples
 
-This example activates a commentary track on a video by ducking the audio level of the
-main audio track to 50%, then enabling the commentary track.
+This example activates a commentary track on a video by ducking the audio level of the main audio track to 50%, then enabling the commentary track.
+
+The example assumes that the IDs of the two tracks are known (for example, from a previous call to {{domxref("MediaStreamTrack.id")}}). In a real application, you might store these IDs when you first obtain the stream, because they are randomly generated in the browser.
 
 ```js
-stream.getTrackById("primary-audio-track").applyConstraints({ volume: 0.5 });
-stream.getTrackById("commentary-track").enabled = true;
+const primaryAudioTrack = stream.getTrackById(
+  "69f8520f-d94e-43f0-8a7c-77b1774f3b8f",
+);
+const commentaryTrack = stream.getTrackById(
+  "b5410643-2549-491e-b0f7-f08a4ebe54b8",
+);
+
+primaryAudioTrack.applyConstraints({ volume: 0.5 });
+commentaryTrack.enabled = true;
 ```
 
 ## Specifications

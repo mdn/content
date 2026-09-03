@@ -74,7 +74,7 @@ If a radio button is checked, the radio element has `aria-checked` set to `true`
 
 Each radio button element has role `radio`. The radio role should always be nested with other associated radios in a `radiogroup`. If it is not possible to nest the radio button within a radio group, use the `id` of the non-grouped radio in a space separated list of values as the value of the [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) attribute on the `radiogroup` element to indicate the relationship of the `radiogroup` to its radio members.
 
-Each radio element is labelled by its content, has a visible label referenced by `aria-labelledby`, or has a label specified with `aria-label`. The containing `radiogroup` element should either have a visible label referenced by `aria-labelledby` or a label specified with `aria-label`. If elements providing additional information about either the radio group or each radio button are present, those elements should be referenced by the `radiogroup` element or radio elements with the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) property.
+Each radio element is labeled by its content, has a visible label referenced by `aria-labelledby`, or has a label specified with `aria-label`. The containing `radiogroup` element should either have a visible label referenced by `aria-labelledby` or a label specified with `aria-label`. If elements providing additional information about either the radio group or each radio button are present, those elements should be referenced by the `radiogroup` element or radio elements with the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) property.
 
 As `radio` is an interactive control; it must be focusable and keyboard accessible. If the role is applied to a non-focusable element, use the [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute to change this. The expected keyboard shortcut for activating a radio is the <kbd>Space</kbd> key. Use JavaScript to toggle the `aria-checked` attribute to `true` when a radio becomes checked while ensuing that all the other radio roles in the group are set to `aria-checked="false"`.
 
@@ -82,7 +82,7 @@ To programmatically indicate that a radio button must be chosen from a radio gro
 
 ### All descendants are presentational
 
-There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `radio`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) to all descendant elements of any `radio` element as it is a role that does not support semantic children.
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `radio`. To deal with this limitation, browsers automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) to all descendant elements of any `radio` element as it is a role that does not support semantic children.
 
 For example, consider the following `radio` element, which contains a heading.
 
@@ -105,13 +105,10 @@ From the assistive technology user's perspective, the heading does not exist sin
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`radiogroup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role) role
-
   - : The radio buttons are contained in or owned by an element with role `radiogroup`. If unable to be nested within a `radiogroup` within the markup, the `aria-owns` attribute of the `radiogroup` contains the `id` values of the non-nested radio buttons in the group.
 
 - [`aria-checked`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)
-
   - : The value of `aria-checked` defines the state of a radio. When used with radio elements, the attribute has one of two possible values:
-
     - `true`
       - : The radio is checked.
     - `false`
@@ -123,15 +120,12 @@ From the assistive technology user's perspective, the heading does not exist sin
 ### Keyboard interactions
 
 - <kbd>Tab</kbd> + <kbd>Shift</kbd>
-
   - : Move focus into and out of the radio group. When focus moves into a radio group, and a radio button is already checked, focus is set on the checked button. If none of the radio buttons are checked, focus is set on the first radio button in the group.
 
 - <kbd>Space</kbd>
-
   - : Checks the radio if not already checked. Unchecks a previously checked radio button in the radio group.
 
 - <kbd>Right Arrow</kbd> and <kbd>Down Arrow</kbd>
-
   - : Move focus to and checks the next radio button in the group, unchecking the previously focused radio button. If focus is on the last radio button, focus moves to the first radio button.
 
 - <kbd>Left Arrow</kbd> and <kbd>Up Arrow</kbd>

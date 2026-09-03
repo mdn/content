@@ -1,10 +1,10 @@
 ---
-title: Firefox 74 for developers
+title: Firefox 74 release notes for developers
+short-title: Firefox 74
 slug: Mozilla/Firefox/Releases/74
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 74 that will affect developers. Firefox 74 was released on March 10, 2020.
 
@@ -24,8 +24,8 @@ _No changes._
 
 ### CSS
 
-- [`text-underline-position`](/en-US/docs/Web/CSS/text-underline-position) is now enabled by default ([bug 1606997](https://bugzil.la/1606997)).
-- The [`text-underline-offset`](/en-US/docs/Web/CSS/text-underline-offset) and [`text-decoration-thickness`](/en-US/docs/Web/CSS/text-decoration-thickness) properties now accept percentage values ([bug 1607534](https://bugzil.la/1607534)).
+- [`text-underline-position`](/en-US/docs/Web/CSS/Reference/Properties/text-underline-position) is now enabled by default ([bug 1606997](https://bugzil.la/1606997)).
+- The [`text-underline-offset`](/en-US/docs/Web/CSS/Reference/Properties/text-underline-offset) and [`text-decoration-thickness`](/en-US/docs/Web/CSS/Reference/Properties/text-decoration-thickness) properties now accept percentage values ([bug 1607534](https://bugzil.la/1607534)).
 - The `auto` value of the {{cssxref("outline-style")}} property has been enabled by default ([Firefox bug 1031664](https://bugzil.la/1031664)).
 
 #### Removals
@@ -99,7 +99,3 @@ _No changes._
 ## See also
 
 - Hacks blog post: [Security means more with Firefox 74](https://hacks.mozilla.org/2020/03/security-means-more-with-firefox-74-2/)
-
-## Older versions
-
-{{Firefox_for_developers}}

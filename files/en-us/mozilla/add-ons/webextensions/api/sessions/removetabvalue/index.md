@@ -3,9 +3,8 @@ title: sessions.removeTabValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/removeTabValue
 page-type: webextension-api-function
 browser-compat: webextensions.api.sessions.removeTabValue
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Removes a value previously stored by a call to {{WebExtAPIRef("sessions.setTabValue")}}.
 
@@ -30,10 +29,6 @@ let removing = browser.sessions.removeTabValue(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be resolved no arguments if the item was successfully removed. If the call failed (for example, because the tab ID could not be found) then the promise will be rejected with an error message.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -80,3 +75,7 @@ browser.menus.onClicked.addListener((info) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

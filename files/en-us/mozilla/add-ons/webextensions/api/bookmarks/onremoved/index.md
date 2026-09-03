@@ -3,9 +3,8 @@ title: bookmarks.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onRemoved
 page-type: webextension-api-event
 browser-compat: webextensions.api.bookmarks.onRemoved
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a bookmark or folder is removed. When a folder is removed recursively, a single notification is fired for the folder, and none for its contents.
 
@@ -31,9 +30,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `id`
       - : `string`. ID of the item that was removed.
     - `removeInfo`

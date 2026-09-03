@@ -3,9 +3,8 @@ title: Int16Array
 slug: Web/JavaScript/Reference/Global_Objects/Int16Array
 page-type: javascript-class
 browser-compat: javascript.builtins.Int16Array
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Int16Array`** typed array represents an array of 16-bit signed integers in the platform byte order. If control over byte order is needed, use {{jsxref("DataView")}} instead. The contents are initialized to `0` unless initialization data is explicitly provided. Once established, you can reference elements in the array using the object's methods, or using standard array index syntax (that is, using bracket notation).
 
@@ -34,7 +33,7 @@ _Also inherits instance properties from its parent {{jsxref("TypedArray")}}_.
 These properties are defined on `Int16Array.prototype` and shared by all `Int16Array` instances.
 
 - {{jsxref("TypedArray/BYTES_PER_ELEMENT", "Int16Array.prototype.BYTES_PER_ELEMENT")}}
-  - : Returns a number value of the element size. `2` in the case of a `Int16Array`.
+  - : Returns a number value of the element size. `2` in the case of an `Int16Array`.
 - {{jsxref("Object/constructor", "Int16Array.prototype.constructor")}}
   - : The constructor function that created the instance object. For `Int16Array` instances, the initial value is the {{jsxref("Int16Array/Int16Array", "Int16Array")}} constructor.
 

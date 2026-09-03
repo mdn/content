@@ -8,7 +8,7 @@ status:
 browser-compat: api.BluetoothCharacteristicProperties.notify
 ---
 
-{{securecontext_header}}{{APIRef("")}}{{SeeCompatTable}}
+{{securecontext_header}}{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`notify`** read-only property of the
 {{domxref("BluetoothCharacteristicProperties")}} interface returns a

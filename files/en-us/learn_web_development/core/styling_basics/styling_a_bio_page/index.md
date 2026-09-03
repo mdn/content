@@ -8,47 +8,13 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}
 
-In this challenge you will style a simple bio page, testing you on some of the skills you learned in the last couple of lessons including writing selectors and text styling.
+In this challenge you will style a simple biography page, testing you on some of the skills you learned in the last couple of lessons including writing selectors, coloring backgrounds, and text styling. We will also invite you to look up some basic CSS features that we haven't covered, to test your research skills.
 
-> [!NOTE]
-> You can click "Play" in the live samples below to open the code in the MDN Playground, or you can copy and paste the code into your own IDE or an online editor such as [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
-> If you get stuck, you can reach out to us in one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
+## Starting point
 
-## Project brief
+To begin, click the **Play** button in one of the code panels below to open the provided example in the MDN Playground. You'll then follow the instructions in subsequent sections to style the page appropriately.
 
-The following live sample shows a biography, which has been styled using CSS. The CSS properties that are used are as follows — each one links to its property page on MDN, which will give you more examples of its use.
-
-- {{cssxref("font-family")}}
-- {{cssxref("color")}}
-- {{cssxref("border-bottom")}}
-- {{cssxref("font-weight")}}
-- {{cssxref("font-size")}}
-- {{cssxref("font-style")}}
-- {{cssxref("text-decoration")}}
-
-In the example, there is some CSS already in place which selects parts of the document using element selectors, classes, and pseudo-classes. Make the following changes to this CSS:
-
-1. Make the level one heading pink, using the CSS color keyword `hotpink`.
-2. Give the heading a 10px dotted {{cssxref("border-bottom")}} which uses the CSS color keyword `purple`.
-3. Make the level 2 heading italic.
-4. Give the `ul` used for the contact details a {{cssxref("background-color")}} of `#eeeeee`, and a 5px solid purple {{cssxref("border")}}. Use some {{cssxref("padding")}} to push the content away from the border.
-5. Make the links `green` on hover.
-
-## Hints and tips
-
-- Use the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) to catch unintended mistakes in your CSS — mistakes you might have otherwise missed — so that you can fix them.
-- Afterwards try looking up some properties not mentioned on this page in the [MDN CSS reference](/en-US/docs/Web/CSS/Reference) and get adventurous!
-- Remember that there is no wrong answer here — at this stage in your learning you can afford to have a bit of fun.
-
-## Example
-
-You should end up with something like this image.
-
-![Screenshot of how the example should look after completing the assessment.](learn-css-basics-assessment.png)
-
-Here are HTML and CSS code blocks and the result of combining them:
-
-```html live-sample___biog
+```html live-sample___style-bio-start live-sample___style-bio-finish
 <h1>Jane Doe</h1>
 <div class="job-title">Web Developer</div>
 <p>
@@ -67,41 +33,121 @@ Here are HTML and CSS code blocks and the result of combining them:
 <ul>
   <li>Email: <a href="mailto:jane@example.com">jane@example.com</a></li>
   <li>Web: <a href="http://example.com">http://example.com</a></li>
-  <li>Tel: 123 45678</li>
+  <li>Tel: <a href="tel:12345678">123 45678</a></li>
 </ul>
 ```
 
-```css live-sample___biog
+```css live-sample___style-bio-start
+html {
+  background-color: white;
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font: 1.2em / 1.5 system-ui;
+}
+```
+
+{{EmbedLiveSample("style-bio-start", "100%", "400px")}}
+
+## Project brief
+
+Follow the instructions below to style the bio. Try looking up the CSS features you'll need in the [MDN CSS reference](/en-US/docs/Web/CSS/Reference).
+
+### Box styles
+
+1. Give the `<body>` element a padding of `20px` on all sides and a width of `500px`.
+2. Give the `<body>` element a background color of `#efefef` (a light-gray {{cssxref("&lt;hex-color>")}} value).
+3. Center the `<body>` element inside the viewport by setting top- and bottom-margins of `0`, and left- and right-margins of `auto`.
+4. Give the `<ul>` used for the contact details a background color of `white`, and a 5px solid purple border on all sides. Give the `<ul>` padding of `30px` on all sides to push the content away from the border.
+5. Give the `<ul>` a border radius of `20px`.
+
+### Text styles
+
+1. Make the level one heading dark gray, using the CSS color keyword `darkslategray`, and give the heading a `10px` dotted bottom border, which uses the CSS color keyword `purple`.
+2. Make the level two heading italic.
+3. Give the level one heading a font size of `2rem` and the level two heading a font size of `1.5rem`.
+4. Select the `<div>` using a class selector, and give it a color of `darkslategray` and a bold font weight.
+5. Make the links `green`.
+6. Make the links `darkgreen` while hovered over with the mouse pointer or focused via the keyboard (you'll need to use a couple of {{cssxref("pseudo-classes")}} for this).
+7. Make the links lose their underline while hovered or focused.
+
+## Hints and tips
+
+- Use the [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) to catch unintended mistakes in your CSS — mistakes you might have otherwise missed — so that you can fix them.
+- Try looking up some more advanced CSS features (again, the [MDN CSS reference](/en-US/docs/Web/CSS/Reference) will be useful here) and add some more styles to your solution. Get adventurous!
+- Remember that there is no wrong answer here — at this stage in your learning you can afford to have a bit of fun.
+
+## Example
+
+Your finished example should end up looking something like this:
+
+{{EmbedLiveSample("style-bio-finish", "100%", "400px")}}
+
+<details>
+<summary>Click here to show the solution</summary>
+
+The CSS applied to the finished live sample looks like this:
+
+```css live-sample___style-bio-finish
+html {
+  background-color: white;
+}
+
+body {
+  font: 1.2em / 1.5 system-ui;
+  padding: 20px;
+  width: 500px;
+  background-color: #efefef;
+  margin: 0 auto;
 }
 
 h1 {
-  color: #375e97;
-  font-size: 2em;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  border-bottom: 1px solid #375e97;
+  color: darkslategray;
+  border-bottom: 10px dotted purple;
+  font-size: 2rem;
 }
 
 h2 {
-  font-size: 1.5em;
+  font-style: italic;
+  font-size: 1.5rem;
 }
 
 .job-title {
-  color: #999999;
+  color: darkslategray;
   font-weight: bold;
 }
 
-a:link,
-a:visited {
-  color: #fb6542;
+ul {
+  background-color: white;
+  border: 5px solid purple;
+  padding: 30px;
+  border-radius: 20px;
 }
 
-a:hover {
+a {
+  color: green;
+}
+
+a:hover,
+a:focus {
+  color: darkgreen;
   text-decoration: none;
 }
 ```
 
-{{EmbedLiveSample("biog", "", "400px")}}
+The CSS properties we used to solve the challenge are as follows — each one links to its property page on MDN, which will give you more examples of its use.
+
+- {{cssxref("background-color")}}
+- {{cssxref("border")}} or related longhand properties.
+- {{cssxref("color")}}
+- {{cssxref("font-size")}}
+- {{cssxref("font-style")}}
+- {{cssxref("font-weight")}}
+- {{cssxref("margin")}} or related longhand properties.
+- {{cssxref("padding")}} or related longhand properties.
+- {{cssxref("text-decoration")}}
+- {{cssxref("width")}}
+
+</details>
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics/Basic_selectors", "Learn_web_development/Core/Styling_basics")}}

@@ -4,9 +4,8 @@ short-title: cos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/cos
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.cos
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.cos()`** static method returns the cosine of a number in radians.
 
@@ -76,3 +75,4 @@ Math.cos(Infinity); // NaN
 - {{jsxref("Math.atan2()")}}
 - {{jsxref("Math.sin()")}}
 - {{jsxref("Math.tan()")}}
+- CSS {{cssxref("cos()")}} function

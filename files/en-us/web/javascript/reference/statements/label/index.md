@@ -3,9 +3,8 @@ title: Labeled statement
 slug: Web/JavaScript/Reference/Statements/label
 page-type: javascript-statement
 browser-compat: javascript.statements.label
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 A **labeled statement** is any [statement](/en-US/docs/Web/JavaScript/Reference/Statements) that is prefixed with an identifier. You can jump to this label using a {{jsxref("Statements/break", "break")}} or {{jsxref("Statements/continue", "continue")}} statement nested within the labeled statement.
 
@@ -235,6 +234,8 @@ L: function F() {}
 ```
 
 In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) code, however, this will throw a {{jsxref("SyntaxError")}}:
+
+<!-- cSpell:ignore labelled -->
 
 ```js-nolint example-bad
 "use strict";

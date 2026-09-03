@@ -3,9 +3,8 @@ title: tabs.moveInSuccession()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/moveInSuccession
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.moveInSuccession
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Modifies the succession relationship for a group of tabs.
 
@@ -30,9 +29,7 @@ browser.tabs.moveInSuccession([1, 3, 5, 7, 2, 9], 4, {insert:true})
 - `tabId` {{optional_inline}}
   - : `integer`. The `ID` of the tab that will be the successor of the last tab in the `tabIds` array. If this `ID` is invalid or {{WebExtAPIRef('tabs.TAB_ID_NONE')}}, the last tab will not have a successor. Defaults to {{WebExtAPIRef('tabs.TAB_ID_NONE')}}.
 - `options` {{optional_inline}}
-
   - : `object`.
-
     - `append` {{optional_inline}}
       - : `boolean`. Determines whether to move the tabs in `tabIds` before or after `tabId` in the succession. If `false`, the tabs are moved before `tabId`, if `true`, the tabs are moved after `tabId`. Defaults to `false`.
     - `insert` {{optional_inline}}

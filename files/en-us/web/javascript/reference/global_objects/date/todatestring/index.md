@@ -4,9 +4,8 @@ short-title: toDateString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toDateString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.toDateString
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toDateString()`** method of {{jsxref("Date")}} instances returns a string representing the date portion of this date interpreted in the local timezone.
 

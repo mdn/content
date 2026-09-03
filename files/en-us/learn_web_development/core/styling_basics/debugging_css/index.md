@@ -5,7 +5,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Home_color_scheme_search", "Learn_web_development/Core/Text_styling", "Learn_web_development/Core/Styling_basics")}}
 
 Sometimes when writing CSS you will encounter an issue where your CSS doesn't seem to be doing what you expect. Perhaps you believe that a certain selector should match an element, but nothing happens, or a box is a different size than you expected. This article will give you guidance on how to go about debugging a CSS problem, and show you how the DevTools included in all modern browsers can help you to find out what is going on.
 
@@ -147,7 +147,7 @@ Browsers ignore CSS they don't understand. If the property or value you are usin
 
 ![Image of browser DevTools with the grid-template-columns: subgrid crossed out as the subgrid value is not supported.](no-support.png)
 
-You can also take a look at the Browser compatibility tables at the bottom of each property page on MDN. These show you browser support for that property, often broken down if there is support for some usage of the property and not others. [See the compatibility table for the `grid-template-columns` property](/en-US/docs/Web/CSS/grid-template-columns#browser_compatibility).
+You can also take a look at the Browser compatibility tables at the bottom of each property page on MDN. These show you browser support for that property, often broken down if there is support for some usage of the property and not others. [See the compatibility table for the `grid-template-columns` property](/en-US/docs/Web/CSS/Reference/Properties/grid-template-columns#browser_compatibility).
 
 ### Is something else overriding your CSS?
 
@@ -178,11 +178,11 @@ As you become more experienced with CSS, you will find that you get faster at fi
 
 So there we have it: an introduction to debugging CSS, which should give you some useful skills to count on when you start to debug CSS and other types of code later on in your career.
 
-That's it for all the lessons in this module. To finish it off, we'll test your knowledge of the topics covered with a series of challenges.
+That's it for this module. Once you're ready, you can move on to our [CSS text styling](/en-US/docs/Learn_web_development/Core/Text_styling) module.
 
 ## See also
 
 - [Firefox > Examine and edit CSS](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html), Firefox Source Docs
 - [Chrome > View and change CSS](https://developer.chrome.com/docs/devtools/css/), developer.chrome.com
 
-{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Home_color_scheme_search", "Learn_web_development/Core/Text_styling", "Learn_web_development/Core/Styling_basics")}}

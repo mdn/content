@@ -26,8 +26,6 @@ The following code snippet shows the relationship between the `style` attribute 
 
 ```html
 <svg
-  width="50"
-  height="50"
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 250 250"
   width="250"

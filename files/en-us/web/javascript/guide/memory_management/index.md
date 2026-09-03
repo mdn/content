@@ -2,9 +2,8 @@
 title: Memory management
 slug: Web/JavaScript/Guide/Memory_management
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Advanced")}}
 
 Low-level languages like C, have manual memory management primitives such as [`malloc()`](https://pubs.opengroup.org/onlinepubs/009695399/functions/malloc.html) and [`free()`](https://en.wikipedia.org/wiki/C_dynamic_memory_allocation#Overview_of_functions). In contrast, JavaScript automatically allocates memory when objects are created and frees it when they are not used anymore (_garbage collection_). This automaticity is a potential source of confusion: it can give developers the false impression that they don't need to worry about memory management.
 
@@ -42,13 +41,9 @@ function f(a) {
 } // allocates a function (which is a callable object)
 
 // function expressions also allocate an object
-someElement.addEventListener(
-  "click",
-  () => {
-    someElement.style.backgroundColor = "blue";
-  },
-  false,
-);
+someElement.addEventListener("click", () => {
+  someElement.style.backgroundColor = "blue";
+});
 ```
 
 #### Allocation via function calls
@@ -65,7 +60,7 @@ Some methods allocate new values or objects:
 
 ```js
 const s = "string";
-const s2 = s.substr(0, 3); // s2 is a new string
+const s2 = s.substring(0, 3); // s2 is a new string
 // Since strings are immutable values,
 // JavaScript may decide to not allocate memory,
 // but just store the [0, 3] range.
@@ -180,7 +175,7 @@ The max amount of available heap memory can be increased with a flag:
 node --max-old-space-size=6000 index.js
 ```
 
-We can also expose the garbage collector for debugging memory issues using a flag and the [Chrome Debugger](https://nodejs.org/en/learn/getting-started/debugging):
+We can also expose the garbage collector for debugging memory issues using a flag and the [Chrome Debugger](https://nodejs.org/learn/getting-started/debugging):
 
 ```bash
 node --expose-gc --inspect index.js
@@ -194,9 +189,9 @@ Although JavaScript does not directly expose the garbage collector API, the lang
 
 [`WeakMap`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) and [`WeakSet`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet) are data structures whose APIs closely mirror their non-weak counterparts: [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) and [`Set`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set). `WeakMap` allows you to maintain a collection of key-value pairs, while `WeakSet` allows you to maintain a collection of unique values, both with performant addition, deletion, and querying.
 
-`WeakMap` and `WeakSet` got the name from the concept of _weakly held_ values. If `x` is weakly held by `y`, it means that although you can access the value of `x` via `y`, the mark-and-sweep algorithm won't consider `x` as reachable if nothing else _strongly holds_ to it. Most data structures, except the ones discussed here, strongly holds to the objects passed in so that you can retrieve them at any time. The keys of `WeakMap` and `WeakSet` can be garbage-collected (for `WeakMap` objects, the values would then be eligible for garbage collection as well) as long as nothing else in the program is referencing the key. This is ensured by two characteristics:
+`WeakMap` and `WeakSet` got the name from the concept of _weakly held_ values. If `x` is weakly held by `y`, it means that although you can access the value of `x` via `y`, the mark-and-sweep algorithm won't consider `x` as reachable if nothing else _strongly holds_ to it. Most data structures, except the ones discussed here, strongly hold to the objects passed in so that you can retrieve them at any time. The keys of `WeakMap` and `WeakSet` can be garbage-collected (for `WeakMap` objects, the values would then be eligible for garbage collection as well) as long as nothing else in the program is referencing the key. This is ensured by two characteristics:
 
-- `WeakMap` and `WeakSet` can only store objects or symbols. This is because only objects are garbage collected — primitive values can always be forged (that is, `1 === 1` but `{} !== {}`), making them stay in the collection forever. [Registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry) (like `Symbol.for("key")`) can also be forged and thus not garbage collectable, but symbols created with `Symbol("key")` are garbage collectable. [Well-known symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) like `Symbol.iterator` come in a fixed set and are unique throughout the lifetime of the program, similar to intrinsic objects such as `Array.prototype`, so they are also allowed as keys.
+- `WeakMap` and `WeakSet` can only store objects or symbols. This is because only objects are garbage collected — primitive values can always be forged (that is, `1 === 1` but `{} !== {}`), making them stay in the collection forever. [Registered symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry) (like `Symbol.for("key")`) can also be forged and thus are not garbage collectable, but symbols created with `Symbol("key")` are garbage collectable. [Well-known symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) like `Symbol.iterator` come in a fixed set and are unique throughout the lifetime of the program, similar to intrinsic objects such as `Array.prototype`, so they are also allowed as keys.
 - `WeakMap` and `WeakSet` are not iterable. This prevents you from using `Array.from(map.keys()).length` to observe the liveliness of objects, or get hold of an arbitrary key which should otherwise be eligible for garbage collection. (Garbage collection should be as invisible as possible.)
 
 In typical explanations of `WeakMap` and `WeakSet` (such as the one above), it's often implied that the key is garbage-collected first, freeing the value for garbage collection as well. However, consider the case of the value referencing the key:
@@ -217,7 +212,7 @@ If `key` is stored as an actual reference, it would create a cyclic reference an
 As a rough mental model, think of a `WeakMap` as the following implementation:
 
 > [!WARNING]
-> This is not a polyfill nor is anywhere close to how it's implemented in the engine (which hooks into the garbage collection mechanism).
+> This is not a polyfill, nor is it anywhere close to how it's implemented in the engine (which hooks into the garbage collection mechanism).
 
 ```js
 class MyWeakMap {
@@ -243,7 +238,8 @@ For more information on their APIs, see the [keyed collections](/en-US/docs/Web/
 
 ### WeakRefs and FinalizationRegistry
 
-> **Note:** `WeakRef` and `FinalizationRegistry` offer direct introspection into the garbage collection machinery. [Avoid using them where possible](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#avoid_where_possible) because the runtime semantics are almost completely unguaranteed.
+> [!NOTE]
+> `WeakRef` and `FinalizationRegistry` offer direct introspection into the garbage collection machinery. [Avoid using them where possible](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#avoid_where_possible) because the runtime semantics are almost completely unguaranteed.
 
 All variables with an object as value are references to that object. However, such references are _strong_ — their existence would prevent the garbage collector from marking the object as eligible for collection. A [`WeakRef`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) is a _weak reference_ to an object that allows the object to be garbage collected, while still retaining the ability to read the object's content during its lifetime.
 

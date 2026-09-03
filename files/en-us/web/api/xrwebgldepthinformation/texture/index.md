@@ -24,19 +24,19 @@ Use {{domxref("XRWebGLBinding.getDepthInformation()")}} to obtain GPU depth info
 const depthInfo = glBinding.getDepthInformation(view);
 const uvTransform = depthInfo.normDepthBufferFromNormView.matrix;
 
-const u_DepthTextureLocation = gl.getUniformLocation(program, "u_DepthTexture");
-const u_UVTransformLocation = gl.getUniformLocation(program, "u_UVTransform");
-const u_RawValueToMeters = gl.getUniformLocation(program, "u_RawValueToMeters");
+const uDepthTextureLocation = gl.getUniformLocation(program, "u_DepthTexture");
+const uUVTransformLocation = gl.getUniformLocation(program, "u_UVTransform");
+const uRawValueToMeters = gl.getUniformLocation(program, "u_RawValueToMeters");
 
 gl.bindTexture(gl.TEXTURE_2D, depthInfo.texture);
 gl.activeTexture(gl.TEXTURE0);
-gl.uniform1i(u_DepthTextureLocation, 0);
+gl.uniform1i(uDepthTextureLocation, 0);
 
 // UV transform to correctly index into the depth map
-gl.uniformMatrix4fv(u_UVTransformLocation, false, uvTransform);
+gl.uniformMatrix4fv(uUVTransformLocation, false, uvTransform);
 
 // scaling factor to convert from the raw number to meters
-gl.uniform1f(u_RawValueToMeters, depthInfo.rawValueToMeters);
+gl.uniform1f(uRawValueToMeters, depthInfo.rawValueToMeters);
 ```
 
 ## Specifications

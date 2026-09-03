@@ -4,9 +4,8 @@ short-title: escape()
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/escape
 page-type: javascript-static-method
 browser-compat: javascript.builtins.RegExp.escape
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`RegExp.escape()`** static method [escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions#escape_sequences) any potential regex syntax characters in a string, and returns a new string that can be safely used as a [literal](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Literal_character) pattern for the {{jsxref("RegExp/RegExp", "RegExp()")}} constructor.
 
@@ -106,5 +105,5 @@ Now this function will do exactly what we intend to, and will not transform `dev
 ## See also
 
 - [Polyfill of `RegExp.escape` in `core-js`](https://github.com/zloirock/core-js#regexp-escaping)
-- [es-shims polyfill of `Reflect.escape`](https://www.npmjs.com/package/regexp.escape)
+- [es-shims polyfill of `RegExp.escape`](https://www.npmjs.com/package/regexp.escape)
 - {{jsxref("RegExp")}}

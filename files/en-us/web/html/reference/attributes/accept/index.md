@@ -1,12 +1,11 @@
 ---
-title: "HTML attribute: accept"
+title: "`accept` HTML attribute"
 short-title: accept
 slug: Web/HTML/Reference/Attributes/accept
 page-type: html-attribute
 browser-compat: html.elements.input.accept
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`accept`** attribute takes as its value a comma-separated list of one or more file types, or [unique file type specifiers](#unique_file_type_specifiers), describing which file types to allow.
 
@@ -48,7 +47,7 @@ For instance, there are a number of ways Microsoft Word files can be identified,
   accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
 ```
 
-Whereas if you're accepting a media file, you may want to be include any format of that media type:
+Whereas if you're accepting a media file, you may want to include any format of that media type:
 
 ```html
 <input type="file" id="soundFile" accept="audio/*" />
@@ -123,10 +122,7 @@ div {
 
 This produces the following output:
 
-{{EmbedLiveSample('A_basic_example', 650, 60)}}
-
-> [!NOTE]
-> You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
+{{EmbedLiveSample('A_basic_example', 650, 80)}}
 
 Regardless of the user's device or operating system, the file input provides a button that opens up a file picker dialog that allows the user to choose a file.
 
@@ -167,7 +163,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample('Limiting_accepted_file_types', 650, 60)}}
+{{EmbedLiveSample('Limiting_accepted_file_types', 650, 80)}}
 
 ## Specifications
 

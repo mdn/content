@@ -2,7 +2,7 @@
 title: URIs
 slug: Web/URI
 page-type: landing-page
-spec-urls: https://www.rfc-editor.org/rfc/rfc3986.html
+spec-urls: https://www.rfc-editor.org/info/rfc3986.html
 sidebar: urlsidebar
 ---
 
@@ -24,6 +24,9 @@ The [URI reference](/en-US/docs/Web/URI/Reference) provides details about the co
 - [Path](/en-US/docs/Web/URI/Reference/Path)
   - : The section after the authority.
     Contains data, usually organized in hierarchical form, to identify a resource within the scope of the URI's scheme and authority.
+- [Query](/en-US/docs/Web/URI/Reference/Query)
+  - : The section after the path.
+    Contains non-hierarchical data to identify a resource within the scope of the URI's scheme and naming authority along with data in the path component.
 - [Fragment](/en-US/docs/Web/URI/Reference/Fragment)
   - : An optional part at the end of a URI starting with a `#` character.
     It is used to identify a specific part of the resource, such as a section of a document or a position in a video.

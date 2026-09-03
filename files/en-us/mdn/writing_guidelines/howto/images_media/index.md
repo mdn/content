@@ -41,8 +41,8 @@ Let's walk through an example:
    cd ~/path/to/mdn/content
    git checkout main
    git pull mdn main
-   # Run "yarn" to make sure dependencies are up-to-date
-   yarn
+   # Run "npm install" to make sure dependencies are up-to-date
+   npm install
    git checkout -b my-images
    ```
 
@@ -58,7 +58,7 @@ Let's walk through an example:
    For more details, see the [Compressing images](#compressing_images) section.
 
    ```bash
-   yarn filecheck files/en-us/web/css/my-cool-image.png
+   npm run filecheck files/en-us/web/css/my-cool-image.png
    ```
 
 4. Reference your image in the document using the Markdown syntax for images, providing [descriptive text for the `alt` attribute](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#text_alternatives) between the brackets that describe the image, or include an {{htmlelement("img")}} element with `alt` attribute inside `files/en-us/web/css/index.md`:
@@ -78,7 +78,7 @@ Let's walk through an example:
    ```
 
 6. Now you're ready to create your
-   [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
+   [pull request](https://docs.github.com/en/pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 ## Adding alternative text to images
 
@@ -126,7 +126,7 @@ This option compresses the image as much as possible and replaces the original w
 For example:
 
 ```bash
-yarn filecheck files/en-us/web/css/my-cool-image.png --save-compression
+npm run filecheck files/en-us/web/css/my-cool-image.png --save-compression
 ```
 
 ## Adding videos to MDN pages
@@ -232,7 +232,6 @@ Plan carefully what you are actually going to record, and practice the steps a f
   In a short DevTools video for example, it is a good idea to start by opening the DevTools to allow the viewer to get oriented.
 - Consider what your actions are, slow down, and make them obvious.
   Whenever you have to perform an action (say, click an icon), take it slow and make it obvious. So, for example:
-
   - Move the mouse over the icon.
   - Highlight or zoom (not always, depending on whether it feels needed).
   - Pause for a beat.

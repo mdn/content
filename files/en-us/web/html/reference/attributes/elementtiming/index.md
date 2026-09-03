@@ -1,11 +1,10 @@
 ---
-title: "HTML attribute: elementtiming"
+title: "`elementtiming` HTML attribute"
 short-title: elementtiming
 slug: Web/HTML/Reference/Attributes/elementtiming
 page-type: html-attribute
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`elementtiming`** attribute is used to indicate that an element is flagged for tracking by {{domxref("PerformanceObserver")}} objects using the `"element"` type. For more details, see the {{domxref("PerformanceElementTiming")}} interface.
 

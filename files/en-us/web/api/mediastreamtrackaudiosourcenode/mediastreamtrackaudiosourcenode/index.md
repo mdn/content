@@ -23,9 +23,7 @@ new MediaStreamTrackAudioSourceNode(context, options)
 - `context`
   - : An {{domxref("AudioContext")}} representing the audio context you want the node to be associated with.
 - `options`
-
   - : An object defining the properties you want the `MediaStreamTrackAudioSourceNode` to have:
-
     - `mediaStreamTrack`
       - : The {{domxref("MediaStreamTrack")}} from which to take audio data for this node's output.
 

@@ -8,13 +8,13 @@ browser-compat: api.CSSMediaRule.media
 
 {{ APIRef("CSSOM") }}
 
-The read-only **`media`** property of the
-{{domxref("CSSMediaRule")}} interface returns a {{domxref("MediaList")}} representing the intended
-destination medium for style information.
+The read-only **`media`** property of the {{domxref("CSSMediaRule")}} interface contains a {{domxref("MediaList")}} object representing the media query list of the {{cssxref("@media")}} rule.
 
 ## Value
 
-a {{domxref("MediaList")}}
+A {{domxref("MediaList")}} object.
+
+Although the `media` property itself is read-only in the sense that you can't replace the `MediaList` object, you can still assign to the `media` property directly, which is equivalent to assigning to its {{domxref("MediaList/mediaText", "mediaText")}} property. You can also modify the `MediaList` object using the {{domxref("MediaList/appendMedium", "appendMedium()")}} and {{domxref("MediaList/deleteMedium", "deleteMedium()")}} methods.
 
 ## Examples
 
@@ -24,7 +24,7 @@ Calling `myRules[0].media` therefore returns a {{domxref("MediaList")}}
 object representing the media query.
 
 ```css
-@media (min-width: 500px) {
+@media (width >= 500px) {
   body {
     color: blue;
   }

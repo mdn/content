@@ -3,9 +3,8 @@ title: devtools.panels.create()
 slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/create
 page-type: webextension-api-function
 browser-compat: webextensions.api.devtools.panels.create
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Adds a new panel to the devtools.
 
@@ -34,10 +33,6 @@ let creating = browser.devtools.panels.create(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an [`ExtensionPanel`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel) object representing the new panel.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Create a new panel, and add listeners to its onShown and onHidden events:
@@ -64,6 +59,10 @@ browser.devtools.panels
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.devtools.panels`](https://developer.chrome.com/docs/extensions/reference/api/devtools/panels) API.

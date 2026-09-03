@@ -31,7 +31,7 @@ An {{domxref("SVGAnimatedString")}} object.
     y="20"
     width="100"
     height="100"
-    style="fill:lightblue;"
+    fill="lightblue"
     filter="url(#morphologyFilter)" />
 </svg>
 ```

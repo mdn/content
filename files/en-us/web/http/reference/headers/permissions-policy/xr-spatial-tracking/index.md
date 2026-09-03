@@ -6,9 +6,10 @@ page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.xr-spatial-tracking
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `xr-spatial-tracking` directive controls whether the current document is allowed to use the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API).
 

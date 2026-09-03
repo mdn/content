@@ -3,9 +3,8 @@ title: downloads.pause()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/pause
 page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.pause
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`pause()`** function of the {{WebExtAPIRef("downloads")}} API pauses a download.
 
@@ -28,10 +27,6 @@ let pausing = browser.downloads.pause(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If the call was successful, the download will be put in a paused state, and the promise will be fulfilled with no arguments. If the call fails, the promise will be rejected with an error message. The call will fail if the download is not active: for example, because it has finished downloading.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 ```js
@@ -48,6 +43,10 @@ pausing.then(onPaused, onError);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-pause) API.

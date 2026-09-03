@@ -3,9 +3,8 @@ title: dns
 slug: Mozilla/Add-ons/WebExtensions/API/dns
 page-type: webextension-api
 browser-compat: webextensions.api.dns
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Enables an extension to resolve domain names.
 
@@ -19,8 +18,8 @@ To use this API, an extension must request the "dns" [permission](/en-US/docs/Mo
 - {{WebExtAPIRef("dns.resolve()")}}
   - : Resolves the given hostname to a DNS record.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}

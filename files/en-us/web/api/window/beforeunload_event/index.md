@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Window.beforeunload_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`beforeunload`** event is fired when the current window, contained document, and associated resources are about to be unloaded. The document is still visible and the event is still cancelable at this point.
 
@@ -44,7 +44,6 @@ To trigger the dialog being shown when the user closes or navigates the tab, a `
 The `beforeunload` event suffers from some problems:
 
 - It is not reliably fired, especially on mobile platforms. For example, the `beforeunload` event is not fired at all in the following scenario:
-
   1. A mobile user visits your page.
   2. The user then switches to a different app.
   3. Later, the user closes the browser from the app manager.

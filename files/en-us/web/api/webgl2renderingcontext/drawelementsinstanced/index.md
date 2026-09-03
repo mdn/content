@@ -26,10 +26,8 @@ drawElementsInstanced(mode, count, type, offset, instanceCount)
 ### Parameters
 
 - `mode`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type primitive to render. Possible values
     are:
-
     - `gl.POINTS`: Draws a single dot.
     - `gl.LINE_STRIP`: Draws a straight line to the next vertex.
     - `gl.LINE_LOOP`: Draws a straight line to the next vertex, and
@@ -42,10 +40,8 @@ drawElementsInstanced(mode, count, type, offset, instanceCount)
 - `count`
   - : A {{domxref("WebGL_API/Types", "GLsizei")}} specifying the number of elements to be rendered.
 - `type`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type of the values in the element array
     buffer. Possible values are:
-
     - `gl.UNSIGNED_BYTE`
     - `gl.UNSIGNED_SHORT`
     - `gl.UNSIGNED_INT` When using the {{domxref("OES_element_index_uint")}} extension.

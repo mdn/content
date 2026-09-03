@@ -25,16 +25,14 @@ share(data)
 ### Parameters
 
 - `data` {{optional_inline}}
-
   - : An object containing data to share.
 
     Properties that are unknown to the user agent are ignored; share data is only assessed on properties understood by the user agent.
     All properties are optional but at least one known data property must be specified.
 
     Possible values are:
-
     - `url` {{optional_inline}}
-      - : A string representing a URL to be shared.
+      - : A string representing a URL to be shared. An empty string (`""`) refers to the current page URL.
     - `text` {{optional_inline}}
       - : A string representing text to be shared.
     - `title` {{optional_inline}}
@@ -55,9 +53,7 @@ The {{jsxref("Promise")}} may be rejected with one of the following `DOMExceptio
 - `NotAllowedError` {{domxref("DOMException")}}
   - : A `web-share` [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) has been used to block the use of this feature, the window does not have {{Glossary("transient activation")}}, or a file share is being blocked due to security considerations.
 - {{jsxref("TypeError")}}
-
   - : The specified share data cannot be validated. Possible reasons include:
-
     - The `data` parameter was omitted completely or only contains properties with unknown values. Note that any properties that are not recognized by the user agent are ignored.
     - A URL is badly formatted.
     - Files are specified but the implementation does not support file sharing.
@@ -225,7 +221,7 @@ document.getElementById("share").addEventListener("click", async () => {
 
 #### Result
 
-{{EmbedLiveSample('Sharing files')}}
+{{EmbedLiveSample('Sharing files','','','','','','web-share')}}
 
 ## Specifications
 

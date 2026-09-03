@@ -3,9 +3,8 @@ title: browserAction.ColorArray
 slug: Mozilla/Add-ons/WebExtensions/API/browserAction/ColorArray
 page-type: webextension-api-type
 browser-compat: webextensions.api.browserAction.ColorArray
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 ## Type
 
@@ -18,11 +17,11 @@ An `array` of four integers in the range 0-255, defining an RGBA color. The four
 
 For example, opaque red is `[255, 0, 0, 255]`.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.browserAction`](https://developer.chrome.com/docs/extensions/mv2/reference/browserAction#type-ColorArray) API. This documentation is derived from [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) in the Chromium code.

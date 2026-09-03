@@ -4,9 +4,8 @@ short-title: fromAsync()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fromAsync
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Array.fromAsync
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Array.fromAsync()`** static method creates a new, shallow-copied `Array` instance from an [async iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols), [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol), or [array-like](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects) object.
 
@@ -198,9 +197,9 @@ function* makeIterableOfPromises() {
 })();
 ```
 
-### No error handling for sync iterables
+### Closing sync iterables on rejection
 
-Similar to [`for await...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of#iterating_over_sync_iterables_and_generators), if the object being iterated is a sync iterable, and an error is thrown while iterating, the `return()` method of the underlying iterator will not be called, so the iterator is not closed.
+Similar to [`for await...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of#iterating_over_sync_iterables_and_generators), if the object being iterated is a sync iterable, and a yielded promise rejects, the `return()` method of the underlying iterator will be called, if one exists, to allow the iterator to perform cleanup.
 
 ```js
 function* generatorWithRejectedPromises() {
@@ -219,25 +218,8 @@ function* generatorWithRejectedPromises() {
     console.log("caught", e);
   }
 })();
-// caught Error: error
-// No "called finally" message
-```
-
-If you need to close the iterator, you need to use a {{jsxref("Statements/for...of", "for...of")}} loop instead, and `await` each value yourself.
-
-```js
-(async () => {
-  const arr = [];
-  try {
-    for (const val of generatorWithRejectedPromises()) {
-      arr.push(await val);
-    }
-  } catch (e) {
-    console.log("caught", e);
-  }
-})();
 // called finally
-// caught 3
+// caught Error: error
 ```
 
 ## Specifications

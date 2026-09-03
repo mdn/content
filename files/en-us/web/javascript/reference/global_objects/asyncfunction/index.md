@@ -3,9 +3,8 @@ title: AsyncFunction
 slug: Web/JavaScript/Reference/Global_Objects/AsyncFunction
 page-type: javascript-class
 browser-compat: javascript.builtins.AsyncFunction
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`AsyncFunction`** object provides methods for [async functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function). In JavaScript, every async function is actually an `AsyncFunction` object.
 
@@ -33,7 +32,8 @@ These properties are defined on `AsyncFunction.prototype` and shared by all `Asy
 - `AsyncFunction.prototype[Symbol.toStringTag]`
   - : The initial value of the [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is the string `"AsyncFunction"`. This property is used in {{jsxref("Object.prototype.toString()")}}.
 
-> **Note:** `AsyncFunction` instances do not have the [`prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) property.
+> [!NOTE]
+> `AsyncFunction` instances do not have the [`prototype`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype) property.
 
 ## Instance methods
 

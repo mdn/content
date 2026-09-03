@@ -4,9 +4,8 @@ short-title: is()
 slug: Web/JavaScript/Reference/Global_Objects/Object/is
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Object.is
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Object.is()`** static method determines whether two values are [the same value](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value_equality_using_object.is).
 
@@ -56,7 +55,6 @@ A boolean indicating whether or not the two arguments are the same value.
 - both [BigInts](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt) with the same numeric value
 - both [symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) that reference the same symbol value
 - both numbers and
-
   - both `+0`
   - both `-0`
   - both {{jsxref("NaN")}}

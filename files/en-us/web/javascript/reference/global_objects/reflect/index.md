@@ -3,9 +3,8 @@ title: Reflect
 slug: Web/JavaScript/Reference/Global_Objects/Reflect
 page-type: javascript-namespace
 browser-compat: javascript.builtins.Reflect
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Reflect`** namespace object contains static methods for invoking interceptable JavaScript object internal methods. The methods are the same as those of [proxy handlers](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy).
 

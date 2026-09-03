@@ -3,9 +3,8 @@ title: isFinite()
 slug: Web/JavaScript/Reference/Global_Objects/isFinite
 page-type: javascript-function
 browser-compat: javascript.builtins.isFinite
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Objects")}}
 
 The **`isFinite()`** function determines whether a value is finite, first converting the value to a number if necessary. A finite number is one that's not {{jsxref("NaN")}} or ±{{jsxref("Infinity")}}. Because coercion inside the `isFinite()` function can be [surprising](/en-US/docs/Web/JavaScript/Reference/Global_Objects/isNaN#description), you may prefer to use {{jsxref("Number.isFinite()")}}.
 

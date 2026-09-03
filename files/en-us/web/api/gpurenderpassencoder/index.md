@@ -35,7 +35,6 @@ A `GPURenderPassEncoder` object instance is created via the {{domxref("GPUComman
 - {{domxref("GPURenderPassEncoder.drawIndirect", "drawIndirect()")}}
   - : Draw primitives using parameters read from a {{domxref("GPUBuffer")}}.
 - {{domxref("GPURenderPassEncoder.drawIndexedIndirect", "drawIndexedIndirect()")}}
-
   - : Draw indexed primitives using parameters read from a {{domxref("GPUBuffer")}}.
 
 - {{domxref("GPURenderPassEncoder.end", "end()")}}
@@ -53,11 +52,9 @@ A `GPURenderPassEncoder` object instance is created via the {{domxref("GPUComman
 - {{domxref("GPURenderPassEncoder.setBindGroup", "setBindGroup()")}}
   - : Sets the {{domxref("GPUBindGroup")}} to use for subsequent render commands, for a given index.
 - {{domxref("GPURenderPassEncoder.setBlendConstant", "setBlendConstant()")}}
-
   - : Sets the constant blend color and alpha values used with `"constant"` and `"one-minus-constant"` blend factors (as set in the descriptor of the {{domxref("GPUDevice.createRenderPipeline()")}} method, in the `blend` property).
 
 - {{domxref("GPURenderPassEncoder.setIndexBuffer", "setIndexBuffer()")}}
-
   - : Sets the current {{domxref("GPUBuffer")}} that will provide index data for subsequent drawing commands.
 
 - {{domxref("GPURenderPassEncoder.setPipeline", "setPipeline()")}}
@@ -65,7 +62,6 @@ A `GPURenderPassEncoder` object instance is created via the {{domxref("GPUComman
 - {{domxref("GPURenderPassEncoder.setScissorRect", "setScissorRect()")}}
   - : Sets the scissor rectangle used during the rasterization stage. After transformation into viewport coordinates any fragments that fall outside the scissor rectangle will be discarded.
 - {{domxref("GPURenderPassEncoder.setStencilReference", "setStencilReference()")}}
-
   - : Sets the stencil reference value using during stencil tests with the `"replace"` stencil operation (as set in the descriptor of the {{domxref("GPUDevice.createRenderPipeline()")}} method, in the properties defining the various stencil operations).
 
 - {{domxref("GPURenderPassEncoder.setVertexBuffer", "setVertexBuffer()")}}

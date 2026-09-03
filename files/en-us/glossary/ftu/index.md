@@ -2,9 +2,8 @@
 title: FTU
 slug: Glossary/FTU
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 FTU (First Time Use) is the app that loads when you run a newly-installed version of {{glossary("Gecko")}} on a {{glossary("Firefox OS")}} device.
 

@@ -1,11 +1,11 @@
 ---
-title: "<strong>: The Strong Importance element"
+title: "`<strong>` HTML strong importance element"
+short-title: <strong>
 slug: Web/HTML/Reference/Elements/strong
 page-type: html-element
 browser-compat: html.elements.strong
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<strong>`** [HTML](/en-US/docs/Web/HTML) element indicates that its contents have strong importance, seriousness, or urgency. Browsers typically render the contents in bold type.
 

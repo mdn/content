@@ -4,26 +4,25 @@ short-title: get()
 slug: Web/JavaScript/Reference/Global_Objects/Reflect/get
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Reflect.get
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Reflect.get()`** static method is like the [property accessor](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors) syntax, but as a function.
 
 {{InteractiveExample("JavaScript Demo: Reflect.get()")}}
 
 ```js interactive-example
-const object1 = {
+const object = {
   x: 1,
   y: 2,
 };
 
-console.log(Reflect.get(object1, "x"));
+console.log(Reflect.get(object, "x"));
 // Expected output: 1
 
-const array1 = ["zero", "one"];
+const array = ["zero", "one"];
 
-console.log(Reflect.get(array1, 1));
+console.log(Reflect.get(array, 1));
 // Expected output: "one"
 ```
 
@@ -41,7 +40,7 @@ Reflect.get(target, propertyKey, receiver)
 - `propertyKey`
   - : The name of the property to get.
 - `receiver` {{optional_inline}}
-  - : The value of `this` provided for the call to `target` if a getter is encountered.
+  - : The value of `this` provided for the call to `target` if a getter is encountered. Defaults to `target`.
 
 ### Return value
 

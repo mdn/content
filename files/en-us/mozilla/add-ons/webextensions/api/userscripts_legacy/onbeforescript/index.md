@@ -3,9 +3,8 @@ title: userScripts.onBeforeScript (Legacy)
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/onBeforeScript
 page-type: webextension-api-event
 browser-compat: webextensions.api.userScripts_legacy.onBeforeScript
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 > [!WARNING]
 > This is documentation for the legacy `userScripts` API. It's available in Firefox for Manifest V2. For functionality to work with user scripts in Manifest V3 see the new {{WebExtAPIRef("userScripts")}} API.
@@ -34,13 +33,9 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `script`
-
       - : An `object` that represents the user script that matched a web page. Its properties and methods are as follows:
-
         - `defineGlobals`
           - : A method that exports an object containing properties and methods available globally to the user script sandbox. This method must be called synchronously to guarantee that the user script has not executed.
         - `export`

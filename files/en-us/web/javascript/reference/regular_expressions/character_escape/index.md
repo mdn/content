@@ -3,9 +3,8 @@ title: "Character escape: \\n, \\u{...}"
 slug: Web/JavaScript/Reference/Regular_expressions/Character_escape
 page-type: javascript-language-feature
 browser-compat: javascript.regular_expressions.character_escape
+sidebar: jssidebar
 ---
-
-{{jsSidebar}}
 
 A **character escape** represents a character that may not be able to be conveniently represented in its literal form.
 
@@ -21,15 +20,16 @@ A **character escape** represents a character that may not be able to be conveni
 
 \xHH
 \uHHHH
-\u{HHH}
+\u{H…H}
 ```
 
-> **Note:** `,` is not part of the syntax.
+> [!NOTE]
+> `,` is not part of the syntax.
 
 ### Parameters
 
-- `HHH`
-  - : A hexadecimal number representing the Unicode code point of the character. The `\xHH` form must have two hexadecimal digits; the `\uHHHH` form must have four; the `\u{HHH}` form may have 1 to 6 hexadecimal digits.
+- `H…H`
+  - : A hexadecimal number representing the Unicode code point of the character. The `\xHH` form must have two hexadecimal digits; the `\uHHHH` form must have four; the `\u{H…H}` form may have 1 to 6 hexadecimal digits.
 
 ## Description
 
@@ -47,7 +47,7 @@ The following character escapes are recognized in regular expressions:
   - : Represents the character with the given hexadecimal Unicode code point. The hexadecimal number must be exactly two digits long.
 - `\uHHHH`
   - : Represents the character with the given hexadecimal Unicode code point. The hexadecimal number must be exactly four digits long. Two such escape sequences can be used to represent a surrogate pair in [Unicode-aware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode). (In Unicode-unaware mode, they are always two separate characters.)
-- `\u{HHH}`
+- `\u{H…H}`
   - : ([Unicode-aware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode) only) Represents the character with the given hexadecimal Unicode code point. The hexadecimal number can be from 1 to 6 digits long.
 
 In [Unicode-unaware mode](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), escape sequences that are not one of the above become _identity escapes_: they represent the character that follows the backslash. For example, `\a` represents the character `a`. This behavior limits the ability to introduce new escape sequences without causing backward compatibility issues, and is therefore forbidden in Unicode-aware mode.

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.MediaQueryListEvent.media
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM view API")}}
 
 The **`media`** read-only property of the
 {{DOMxRef("MediaQueryListEvent")}} interface is a string representing
@@ -20,7 +20,7 @@ A string representing a serialized media query.
 
 ```js
 const para = document.querySelector("p"); // This is the UI element where to display the text
-const mql = window.matchMedia("(max-width: 600px)");
+const mql = window.matchMedia("(width <= 600px)");
 
 mql.addEventListener("change", (event) => {
   if (event.matches) {
@@ -47,8 +47,8 @@ mql.addEventListener("change", (event) => {
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [Using media queries from code](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
+- [Using media queries from code](/en-US/docs/Web/CSS/Guides/Media_queries/Testing)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

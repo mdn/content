@@ -3,9 +3,8 @@ title: background
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/background
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.background
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -186,9 +185,17 @@ Support for the `scripts`, `page`, and `service_worker` properties varies betwee
   - `background.service_worker` is not supported (see [Firefox bug 1573659](https://bugzil.la/1573659)).
   - supports `background.scripts` (or `background.page`) if `service_worker` is not specified or the service worker feature is disabled. Before Firefox 120, Firefox did not start the background page if `service_worker` was present (see [Firefox bug 1860304](https://bugzil.la/1860304)). From Firefox 121, the background page starts as expected, regardless of the presence of `service_worker`.
 - Safari:
-  - supports `background.scripts` (or `background.page`) and `background.service_worker`. If both are specified, uses `background.scripts` (or `background.page`), unless `preferred_environment` is set to `service_worker`.
+  - supports `background.scripts` (or `background.page`) and `background.service_worker`.
+  - when both are specified, Safari uses `background.scripts` (or `background.page`) unless `preferred_environment` is set to `service_worker`.
+  - when `preferred_environment` is set to `service_worker` and `background.service_worker` isn't specified, Safari generates a service worker from `background.scripts` if present.
 
-To illustrate, this is an example of a cross-browser extension that supports `scripts` and `service_worker`. The example has this manifest.json file:
+### Cross-browser Manifest V3 background scripts
+
+To support browsers with different Manifest V3 background script implementations, specify both `scripts` and `service_worker` in the `background` key. Browsers that support extension background service workers use `service_worker`, while browsers that use event pages for this case use `scripts`.
+
+You do not need to include `preferred_environment` for this fallback behavior. Use `preferred_environment` only when you want Safari, or another browser that supports more than one background environment, to prefer `service_worker` where available.
+
+This example shows the relevant parts of a manifest that includes both `scripts` and `service_worker`:
 
 ```json
 {
@@ -205,20 +212,16 @@ To illustrate, this is an example of a cross-browser extension that supports `sc
 And, background.js contains:
 
 ```js
-if (typeof browser === "undefined") {
-  // Chrome does not support the browser namespace yet.
-  globalThis.browser = chrome;
-}
 browser.runtime.onInstalled.addListener(() => {
   browser.tabs.create({ url: "http://example.com/first-run.html" });
 });
 ```
 
-When the extension is executed, this happens:
+With this `background` configuration, this happens:
 
-- in Chrome, the `service_worker` property is used, and a service worker starts that opens the tab because, in a Manifest V3 extension, Chrome only supports service workers for background scripts.
-- in Firefox, the `scripts` property is used, and a script starts that opens the tab because Firefox only supports scripts for background scripts.
-- in Safari, the `service_worker` property is used, and a service worker starts that opens the tab because Safari gives priority to using service workers for background scripts.
+- in Chrome, the `service_worker` property is used, and a service worker starts because, in a Manifest V3 extension, Chrome only supports service workers for background scripts.
+- in Firefox, the `scripts` property is used, and an event page starts because Firefox only supports scripts for background scripts.
+- in Safari, the `scripts` property is used by default, and an event page starts.
 
 ## Examples
 

@@ -1,11 +1,11 @@
 ---
-title: "<embed>: The Embed External Content element"
+title: "`<embed>` HTML embed external content element"
+short-title: <embed>
 slug: Web/HTML/Reference/Elements/embed
 page-type: html-element
 browser-compat: html.elements.embed
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<embed>`** [HTML](/en-US/docs/Web/HTML) element embeds external content at the specified point in the document. This content is provided by an external application or other source of interactive content such as a browser plug-in.
 
@@ -13,8 +13,8 @@ The **`<embed>`** [HTML](/en-US/docs/Web/HTML) element embeds external content a
 
 ```html interactive-example
 <embed
-  type="video/mp4"
-  src="/shared-assets/videos/flower.mp4"
+  type="image/jpeg"
+  src="/shared-assets/images/examples/flowers.jpg"
   width="250"
   height="200" />
 ```

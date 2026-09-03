@@ -3,9 +3,8 @@ title: WeakRef
 slug: Web/JavaScript/Reference/Global_Objects/WeakRef
 page-type: javascript-class
 browser-compat: javascript.builtins.WeakRef
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 A **`WeakRef`** object lets you hold a weak reference to another object, without preventing that object from getting garbage-collected.
 
@@ -48,7 +47,6 @@ Here are some specific points included by the authors in the [proposal](https://
 These properties are defined on `WeakRef.prototype` and shared by all `WeakRef` instances.
 
 - {{jsxref("Object/constructor", "WeakRef.prototype.constructor")}} {{optional_inline}}
-
   - : The constructor function that created the instance object. For `WeakRef` instances, the initial value is the {{jsxref("WeakRef/WeakRef", "WeakRef")}} constructor.
 
     > [!NOTE]

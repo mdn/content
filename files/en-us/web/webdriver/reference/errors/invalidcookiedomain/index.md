@@ -1,5 +1,6 @@
 ---
-title: Invalid cookie domain
+title: "`invalid cookie domain` error code"
+short-title: invalid cookie domain
 slug: Web/WebDriver/Reference/Errors/InvalidCookieDomain
 page-type: webdriver-error
 sidebar: webdriver
@@ -65,7 +66,6 @@ InvalidCookieDomainException: Document is cookie-averse
 
 - [List of WebDriver errors](/en-US/docs/Web/WebDriver/Reference/Errors)
 - Relevant WebDriver commands:
-
   - [Add Cookie](/en-US/docs/Web/WebDriver/Reference/Commands/AddCookie)
   - [Delete Cookie](/en-US/docs/Web/WebDriver/Reference/Commands/DeleteCookie)
   - [Delete All Cookies](/en-US/docs/Web/WebDriver/Reference/Commands/DeleteAllCookies)

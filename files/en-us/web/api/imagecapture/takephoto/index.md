@@ -23,9 +23,7 @@ takePhoto(photoSettings)
 ### Parameters
 
 - `photoSettings` {{optional_inline}}
-
   - : An object that sets options for the photo to be taken. The available options are:
-
     - `fillLightMode`
       - : The flash setting of the capture device, one of
         `"auto"`, `"off"`, or `"flash"`.

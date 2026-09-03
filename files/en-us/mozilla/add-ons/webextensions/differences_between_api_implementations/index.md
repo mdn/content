@@ -2,9 +2,8 @@
 title: Differences between API implementations
 slug: Mozilla/Add-ons/WebExtensions/Differences_between_API_implementations
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The browser extensions API is an [emerging standard](https://browserext.github.io/browserext/). As a result, while it is supported by most major browsers – including Firefox, Chrome, Edge, and Opera – there are differences between the various implementations. This means some changes may be necessary to implement your extension for multiple browsers.
 
@@ -18,14 +17,17 @@ You reference all extensions API functions using a namespace. For example, `brow
 
 There are two API namespaces in use:
 
+- `browser` used in Firefox and Safari, and, from Chrome 148, in Chrome, Edge, and Opera (see [Historical differences](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#historical_differences) on the Chrome incompatibilities page for more details).
 - `chrome` used in Chrome, Edge, and Opera.
-- `browser` used in Firefox and Safari.
 
 ## Asynchronous event handling
 
 JavaScript provides several ways to handle asynchronous events. The proposed extensions API standard is to use promises. The promises approach offers significant advantages when dealing with chained asynchronous event calls.
 
-Firefox and Safari implement promises for the extensions API. All other browsers use callbacks. In Manifest V3, Chrome, Edge, and Opera provided for [promises](https://developer.chrome.com/docs/extensions/develop/migrate#promises) on most appropriate methods. (cf. [Chrome bug 328932](https://crbug.com/328932))
+Firefox and Safari implement [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) for the extensions API. With the introduction of Manifest V3, Chrome, Edge, and Opera also began providing promises for asynchronous methods, with full coverage in Chrome 152. See [Historical differences](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#historical_differences) on the Chrome incompatibilities page for more details.
+
+> [!NOTE]
+> All the main browsers support callbacks, too, for compatibility.
 
 If you are unfamiliar with how JavaScript can handle asynchronous events or promises, look at [Getting to know asynchronous JavaScript: Callbacks, Promises and Async/Await](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee) or the MDN [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) page.
 

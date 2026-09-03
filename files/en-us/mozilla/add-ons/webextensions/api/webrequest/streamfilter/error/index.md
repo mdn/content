@@ -3,15 +3,10 @@ title: webRequest.StreamFilter.error
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/error
 page-type: webextension-api-property
 browser-compat: webextensions.api.webRequest.StreamFilter.error
+sidebar: addonsidebar
 ---
 
-{{AddonSidebar}}
-
 A string that will contain an error message after the {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} event has fired.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -36,3 +31,7 @@ browser.webRequest.onBeforeRequest.addListener(
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

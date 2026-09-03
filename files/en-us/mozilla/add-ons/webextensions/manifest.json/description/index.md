@@ -3,9 +3,8 @@ title: description
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/description
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.description
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table">
   <tbody>

@@ -3,11 +3,11 @@ title: height
 slug: Web/SVG/Reference/Attribute/height
 page-type: svg-attribute
 spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-height
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-height
-  - https://drafts.fxtf.org/css-masking-1/#element-attrdef-mask-height
-  - https://svgwg.org/svg2-draft/geometry.html#Sizing
-  - https://svgwg.org/svg2-draft/pservers.html#PatternElementHeightAttribute
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-filter-height
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-filter-primitive-height
+  - https://drafts.csswg.org/css-masking-1/#element-attrdef-mask-height
+  - https://w3c.github.io/svgwg/svg2-draft/geometry.html#Sizing
+  - https://w3c.github.io/svgwg/svg2-draft/pservers.html#PatternElementHeightAttribute
 sidebar: svgref
 ---
 
@@ -851,7 +851,8 @@ For {{SVGElement('use')}}, `height` defines the vertical length for the referenc
   </tbody>
 </table>
 
-> **Note:** `height` has no effect on `use` elements, unless the element referenced has a [viewBox](/en-US/docs/Web/SVG/Reference/Attribute/viewBox) - i.e., they only have an effect when `use` refers to a `svg` or `symbol` element.
+> [!NOTE]
+> `height` has no effect on `use` elements, unless the element referenced has a [viewBox](/en-US/docs/Web/SVG/Reference/Attribute/viewBox) - i.e., they only have an effect when `use` refers to a `svg` or `symbol` element.
 
 > [!NOTE]
 > Starting with SVG2, `height` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for used elements.

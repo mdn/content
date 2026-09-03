@@ -507,7 +507,6 @@ A cognitive function test, like remembering a password, must not be required for
 ## See also
 
 - [WCAG](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG)
-
   1. [Perceivable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)
   2. [Operable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
   3. Understandable

@@ -4,9 +4,8 @@ short-title: setUTCHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCHours
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setUTCHours
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`setUTCHours()`** method of {{jsxref("Date")}} instances changes the hours, minutes, seconds, and/or milliseconds for this date according to universal time.
 

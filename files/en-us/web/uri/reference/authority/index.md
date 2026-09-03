@@ -3,7 +3,7 @@ title: URI authority
 short-title: Authority
 slug: Web/URI/Reference/Authority
 page-type: uri-component
-spec-urls: https://www.rfc-editor.org/rfc/rfc3986.html#section-3.2
+spec-urls: https://www.rfc-editor.org/info/rfc3986/#section-3.2
 sidebar: urlsidebar
 ---
 
@@ -23,7 +23,6 @@ user@host:port
 - `port` {{optional_inline}}
   - : The _port_ is a number that indicates the port on which the server is listening for requests. It is optional and defaults to 80 for HTTP and 443 for HTTPS. Other schemes may define their own defaults or make it mandatory.
 - `user` {{optional_inline}}
-
   - : The _user_ is optional and is used for authentication purposes. It is not commonly used in web URIs.
 
     > [!WARNING]

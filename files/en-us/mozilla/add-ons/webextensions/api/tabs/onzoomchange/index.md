@@ -3,9 +3,8 @@ title: tabs.onZoomChange
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/onZoomChange
 page-type: webextension-api-event
 browser-compat: webextensions.api.tabs.onZoomChange
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a tab is zoomed.
 
@@ -31,9 +30,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `ZoomChangeInfo`
       - : `object`. Information about the zoom event. See the [ZoomChangeInfo](#zoomchangeinfo_2) section for more details.
 

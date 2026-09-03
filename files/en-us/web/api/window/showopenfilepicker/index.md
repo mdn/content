@@ -24,9 +24,7 @@ showOpenFilePicker(options)
 ### Parameters
 
 - `options` {{Optional_Inline}}
-
   - : An object containing options, which are as follows:
-
     - `excludeAcceptAllOption` {{Optional_Inline}}
       - : A boolean value that defaults to
         `false`. By default the picker should include an option to not apply
@@ -43,10 +41,8 @@ showOpenFilePicker(options)
       - : A {{domxref("FileSystemHandle")}} or a well known directory (`"desktop"`, `"documents"`,
         `"downloads"`, `"music"`, `"pictures"`, or `"videos"`) to open the dialog in.
     - `types` {{Optional_Inline}}
-
       - : An {{jsxref('Array')}} of allowed file types to pick. Each
         item is an object with the following options:
-
         - `description` {{Optional_Inline}}
           - : An optional description of the category of files types allowed. Defaults to an empty string.
         - `accept`
@@ -63,7 +59,7 @@ A {{jsxref("Promise")}} whose fulfillment handler receives an {{jsxref('Array')}
   - : Thrown if the user dismisses the prompt without making a selection, or
     if the user agent deems any selected files too sensitive or dangerous.
 - `SecurityError` {{domxref("DOMException")}}
-  - : Thrown if the call was blocked by the [same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) or it was not called via a user interaction such as a button press.
+  - : Thrown if the call was blocked by the [same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy) or it was not called via a user interaction such as a button press.
 - {{jsxref("TypeError")}}
   - : Thrown if accept types can't be processed, which may happen if:
     - Any key string of the `accept` options of any item in `types` options can't parse a valid MIME type.
@@ -72,7 +68,7 @@ A {{jsxref("Promise")}} whose fulfillment handler receives an {{jsxref('Array')}
 
 ## Security
 
-[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
+[Transient user activation](/en-US/docs/Web/Security/Defenses/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Examples
 

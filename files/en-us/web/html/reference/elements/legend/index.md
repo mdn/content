@@ -1,11 +1,11 @@
 ---
-title: "<legend>: The Field Set Legend element"
+title: "`<legend>` HTML field set legend element"
+short-title: <legend>
 slug: Web/HTML/Reference/Elements/legend
 page-type: html-element
 browser-compat: html.elements.legend
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<legend>`** [HTML](/en-US/docs/Web/HTML) element represents a caption for the content of its parent {{HTMLElement("fieldset")}}.
 
@@ -30,8 +30,8 @@ In [customizable `<select>` elements](/en-US/docs/Learn_web_development/Extensio
 
 ```css interactive-example
 legend {
-  background-color: #000;
-  color: #fff;
+  background-color: black;
+  color: white;
   padding: 3px 6px;
 }
 

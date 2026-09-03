@@ -7,6 +7,9 @@ sidebar: privacy
 
 Since version 79, Firefox has protected users against **redirect tracking** by periodically clearing cookies and site data set by known trackers. This data is only cleared from storage if the user is [blocking tracking cookies](/en-US/docs/Web/Privacy/Guides/Storage_Access_Policy) (i.e., the `network.cookie.cookieBehavior` pref is set to `4`).
 
+> [!NOTE]
+> This article refers to Firefox's original redirect/bounce tracking mechanism, which has since been superseded by [bounce tracking mitigations](/en-US/docs/Web/Privacy/Guides/Bounce_tracking_mitigations).
+
 Support for other cookie policies is tracked by [Bug 1643045](https://bugzil.la/1643045).
 
 ## Redirect tracking defined
@@ -23,14 +26,13 @@ An origin will be cleared if it fulfills the following conditions:
 
 1. It has stored cookies or accessed other site storage (e.g., [localStorage](/en-US/docs/Web/API/Web_Storage_API), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), or the [Cache API](/en-US/docs/Web/API/CacheStorage)) within the last 72 hours. Since cookies are per-host, we will clear both the `http` and `https` origin variants of a cookie host.
 2. The origin is [classified as a tracker](/en-US/docs/Web/Privacy/Guides/Storage_Access_Policy#tracking_protection_explained) in our Tracking Protection list.
-3. No origin with the same base domain ({{Glossary("eTLD", "eTLD+1")}}) has a user-interaction permission.
-
+3. No origin with the same {{glossary("registrable domain")}} has a user-interaction permission.
    - This permission is granted to an origin for 45 days once a user interacts with a top-level document from that origin. "Interacting" includes scrolling.
    - Although this permission is stored on a per-origin level, we will check whether any origin with the same base domain has it, to avoid breaking sites with subdomains and a corresponding cookie setup.
 
 ## What data is cleared?
 
-Firefox will clear the [following data](https://searchfox.org/mozilla-central/rev/622dbd3409610ad3f71b56c9a6a92da905dab0aa/toolkit/components/antitracking/PurgeTrackerService.jsm#209-225):
+Firefox will clear the [following data](https://searchfox.org/firefox-main/rev/9767e215f62521af8168bfb6fb4275755868f0db/toolkit/components/antitracking/PurgeTrackerService.jsm#209-225):
 
 - Network cache and image cache
 - Cookies

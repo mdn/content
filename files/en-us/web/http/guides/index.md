@@ -3,7 +3,7 @@ title: HTTP guides
 short-title: Guides
 slug: Web/HTTP/Guides
 page-type: listing-page
-sidebar: httpsidebar
+sidebar: http
 ---
 
 This page lists guides for HTTP.

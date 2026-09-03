@@ -19,10 +19,8 @@ drawElements(mode, count, type, offset)
 ### Parameters
 
 - `mode`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type primitive to render. Possible values
     are:
-
     - `gl.POINTS`: Draws a single dot.
     - `gl.LINE_STRIP`: Draws a straight line to the next vertex.
     - `gl.LINE_LOOP`: Draws a straight line to the next vertex, and
@@ -42,15 +40,12 @@ drawElements(mode, count, type, offset)
     triangle with `gl.LINE_LOOP` the element array buffer does not repeat the
     first/last vertex either so `count` will be three.
 - `type`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the type of the values in the element array
     buffer. Possible values are:
-
     - `gl.UNSIGNED_BYTE`
     - `gl.UNSIGNED_SHORT`
 
     When using the {{domxref("OES_element_index_uint")}} extension:
-
     - `gl.UNSIGNED_INT`
 
 - `offset`

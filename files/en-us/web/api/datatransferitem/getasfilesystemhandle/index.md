@@ -12,6 +12,8 @@ browser-compat: api.DataTransferItem.getAsFileSystemHandle
 
 The **`getAsFileSystemHandle()`** method of the {{domxref("DataTransferItem")}} interface returns a {{jsxref('Promise')}} that fulfills with a {{domxref('FileSystemFileHandle')}} if the dragged item is a file, or fulfills with a {{domxref('FileSystemDirectoryHandle')}} if the dragged item is a directory.
 
+During a drag operation, this method can only read data in the handlers for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} and {{domxref("HTMLElement/drop_event", "drop")}} events, because those are the only times the drag data store is readable. Calling it from any other drag event returns a promise that fulfills with `null`. The method must be called synchronously within the event handler, although its promise can be awaited later. See [Reading the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#reading_the_drag_data_store) for details.
+
 ## Syntax
 
 ```js-nolint
@@ -39,6 +41,9 @@ None.
 This example uses the `getAsFileSystemHandle()` method to return
 {{domxref('FileSystemHandle', 'file handles', '', 'nocode')}} for dropped items.
 
+> [!NOTE]
+> Because `getAsFileSystemHandle()` can only retrieve the entry handle in the same tick as the `drop` event handler, there must be no `await` before it. This is why we synchronously invoke `getAsFileSystemHandle()` for all items first, and then wait for their results concurrently.
+
 ```js
 elem.addEventListener("dragover", (e) => {
   // Prevent navigation.
@@ -47,17 +52,18 @@ elem.addEventListener("dragover", (e) => {
 elem.addEventListener("drop", async (e) => {
   // Prevent navigation.
   e.preventDefault();
+  const handlesPromises = [...e.dataTransfer.items]
+    // kind will be 'file' for file/directory entries.
+    .filter((x) => x.kind === "file")
+    .map((x) => x.getAsFileSystemHandle());
+  const handles = await Promise.all(handlesPromises);
 
   // Process all of the items.
-  for (const item of e.dataTransfer.items) {
-    // kind will be 'file' for file/directory entries.
-    if (item.kind === "file") {
-      const entry = await item.getAsFileSystemHandle();
-      if (entry.kind === "file") {
-        // run code for if entry is a file
-      } else if (entry.kind === "directory") {
-        // run code for is entry is a directory
-      }
+  for (const handle of handles) {
+    if (handle.kind === "file") {
+      // run code for if handle is a file
+    } else if (handle.kind === "directory") {
+      // run code for is handle is a directory
     }
   }
 });

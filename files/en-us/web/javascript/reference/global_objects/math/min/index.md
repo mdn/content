@@ -4,9 +4,8 @@ short-title: min()
 slug: Web/JavaScript/Reference/Global_Objects/Math/min
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.min
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.min()`** static method returns the smallest of the numbers given as input parameters, or {{jsxref("Infinity")}} if there are no parameters.
 
@@ -19,9 +18,9 @@ console.log(Math.min(2, 3, 1));
 console.log(Math.min(-2, -3, -1));
 // Expected output: -3
 
-const array1 = [2, 3, 1];
+const array = [2, 3, 1];
 
-console.log(Math.min(...array1));
+console.log(Math.min(...array));
 // Expected output: 1
 ```
 

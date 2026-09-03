@@ -4,9 +4,8 @@ short-title: from()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/from
 page-type: javascript-static-method
 browser-compat: javascript.builtins.TypedArray.from
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`TypedArray.from()`** static method creates a new
 [typed array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects)

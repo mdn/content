@@ -1,11 +1,11 @@
 ---
-title: "<style>: The Style Information element"
+title: "`<style>` HTML style information element"
+short-title: <style>
 slug: Web/HTML/Reference/Elements/style
 page-type: html-element
 browser-compat: html.elements.style
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<style>`** [HTML](/en-US/docs/Web/HTML) element contains style information for a document, or part of a document. It contains CSS, which is applied to the contents of the document containing the `<style>` element.
 
@@ -33,27 +33,31 @@ The **`<style>`** [HTML](/en-US/docs/Web/HTML) element contains style informatio
 
 ```css interactive-example
 p {
-  color: #f00;
+  color: red;
 }
 ```
 
-The `<style>` element must be included inside the {{htmlelement("head")}} of the document. In general, it is better to put your styles in external stylesheets and apply them using {{htmlelement("link")}} elements.
+The `<style>` element is typically included inside the {{htmlelement("head")}} of the document. It can also be used anywhere metadata content is permitted, such as inside a {{htmlelement("template")}} element.
 
 If you include multiple `<style>` and `<link>` elements in your document, they will be applied to the DOM in the order they are included in the document — make sure you include them in the correct order, to avoid unexpected cascade issues.
 
-In the same manner as `<link>` elements, `<style>` elements can include `media` attributes that contain [media queries](/en-US/docs/Web/CSS/CSS_media_queries), allowing you to selectively apply internal stylesheets to your document depending on media features such as viewport width.
+In the same manner as `<link>` elements, `<style>` elements can include `media` attributes that contain [media queries](/en-US/docs/Web/CSS/Guides/Media_queries), allowing you to selectively apply internal stylesheets to your document depending on media features such as viewport width.
 
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `blocking`
-  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of critical subresources. [`@import`](/en-US/docs/Web/CSS/@import)-ed stylesheets are generally considered as critical subresources, whereas [`background-image`](/en-US/docs/Web/CSS/background-image) and fonts are not. The operations that are to be blocked must be a space-separated list of blocking tokens listed below.
+  - : This attribute explicitly indicates that certain operations should be blocked on the fetching of critical subresources and the application of the stylesheet to the document. {{cssxref("@import")}}-ed stylesheets are generally considered as critical subresources, whereas {{cssxref("background-image")}} and fonts are not. The operations that are to be blocked must be a space-separated list of blocking tokens listed below. Currently there is only one token:
     - `render`: The rendering of content on the screen is blocked.
+
+    > [!NOTE]
+    > Only `style` elements in the document's `<head>` can possibly block rendering. By default, a `style` element in the `<head>` blocks rendering when the browser discovers it during parsing. If such a `style` element is added dynamically via script, you must additionally set `blocking = "render"` for it to block rendering.
+
 - `media`
-  - : This attribute defines which media the style should be applied to. Its value is a [media query](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries), which defaults to `all` if the attribute is missing.
+  - : This attribute defines which media the style should be applied to. Its value is a [media query](/en-US/docs/Web/CSS/Guides/Media_queries/Using), which defaults to `all` if the attribute is missing.
 - `nonce`
-  - : A cryptographic nonce (number used once) used to allow inline styles in a [style-src Content-Security-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.
+  - : A cryptographic {{Glossary("Nonce", "nonce")}} (number used once) used to allow inline styles in a [style-src Content-Security-Policy](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.
 - `title`
   - : This attribute specifies [alternative style sheet](/en-US/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet) sets.
 
@@ -90,9 +94,27 @@ In the following example, we apply a short stylesheet to a document:
 
 {{EmbedLiveSample('A_basic_stylesheet', '100%', '100')}}
 
+### Using `<style>` inside `<template>`
+
+A `<style>` element can also be placed inside a {{HTMLElement("template")}} element. The styles remain inactive until the template content is instantiated and inserted into the document.
+
+```html
+<template id="card-template">
+  <style>
+    .card {
+      border: 1px solid #cccccc;
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+  </style>
+
+  <div class="card">Template content</div>
+</template>
+```
+
 ### Multiple style elements
 
-In this example we've included two `<style>` elements — notice how the conflicting declarations in the later `<style>` element override those in the earlier one, if they have equal [specificity](/en-US/docs/Web/CSS/CSS_cascade/Specificity).
+In this example we've included two `<style>` elements — notice how the conflicting declarations in the later `<style>` element override those in the earlier one, if they have equal [specificity](/en-US/docs/Web/CSS/Guides/Cascade/Specificity).
 
 ```html
 <!doctype html>
@@ -143,7 +165,7 @@ In this example we build on the previous one, including a `media` attribute on t
         border: 1px solid black;
       }
     </style>
-    <style media="all and (max-width: 500px)">
+    <style media="(width < 500px)">
       p {
         color: blue;
         background-color: yellow;

@@ -8,7 +8,9 @@ browser-compat: api.DataTransferItem.kind
 
 {{APIRef("HTML Drag and Drop API")}}
 
-The read-only **`DataTransferItem.kind`** property returns the kind–a string or a file–of the {{domxref("DataTransferItem")}} object representing the _drag data item_.
+The **`kind`** read-only property of the {{domxref("DataTransferItem")}} interface returns the kind–a string or a file–of the object representing the _drag data item_.
+
+During a drag operation, this property can be read in any drag event handler, even when the drag data store is in [protected mode](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#protected_mode). The item's kind remains accessible, but its data can only be read in the handlers for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} and {{domxref("HTMLElement/drop_event", "drop")}} events. See [Reading the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#reading_the_drag_data_store) for details.
 
 ## Value
 
@@ -58,5 +60,4 @@ function dropHandler(ev) {
 
 - [Drag and drop](/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 - [Drag Operations](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
-- [Recommended Drag Types](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Recommended_drag_types)
-- [DataTransfer test - Paste or Drag](https://codepen.io/tech_query/pen/MqGgap)
+- [Working with the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store)

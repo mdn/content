@@ -34,10 +34,10 @@ A `DOMQuad` is a collection of four `DOMPoint`s defining the corners of an arbit
 
 ## Static methods
 
-- {{domxref("DOMQuad.fromRect_static", "DOMQuad.fromRect()")}}
-  - : Returns a new `DOMQuad` object based on the passed set of coordinates.
 - {{domxref("DOMQuad.fromQuad_static", "DOMQuad.fromQuad()")}}
-  - : Returns a new `DOMQuad` object or a set of quadrilateral coordinates based on the provided input.
+  - : Returns a new `DOMQuad` object based on the provided set of coordinates in the shape of another `DOMQuad` object.
+- {{domxref("DOMQuad.fromRect_static", "DOMQuad.fromRect()")}}
+  - : Returns a new `DOMQuad` object based on the provided set of coordinates in the shape of a {{domxref("DOMRect")}} object.
 
 ## Specifications
 

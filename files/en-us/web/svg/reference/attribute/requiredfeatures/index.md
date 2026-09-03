@@ -4,11 +4,9 @@ slug: Web/SVG/Reference/Attribute/requiredFeatures
 page-type: svg-attribute
 status:
   - deprecated
-browser-compat: svg.global_attributes.requiredFeatures
+spec-urls: https://www.w3.org/TR/SVG11/struct.html#RequiredFeaturesAttribute
 sidebar: svgref
 ---
-
-{{Deprecated_Header}}
 
 The **`requiredFeatures`** attribute takes a list of feature strings, with the individual strings separated by white space. It determines whether or not all of the named features are supported by the browser; if all of them are supported, the attribute evaluates to `true` end the element is rendered; otherwise, the attribute evaluates to `false` and the current element and its children are skipped and thus will not be rendered. This provides a way to design SVG that gracefully falls back when features aren't available.
 
@@ -109,26 +107,20 @@ text {
 The following are the feature strings for the `requiredFeatures` attribute. These same feature strings apply to the [`hasFeature`](/en-US/docs/Web/API/DOMImplementation/hasFeature) method call that is part of the SVG DOM's support for the {{domxref("DOMImplementation")}} interface. In some cases the feature strings map directly to a set of attributes, properties or elements, in others they represent some functionality of the browser. Note that the format and naming for feature strings changed from SVG 1.0 to SVG 1.1. The SVG 1.0 feature strings are not listed here; some browser support SVG 1.0 feature strings for compatibility reasons. However, the SVG 1.0 feature strings are considered deprecated.
 
 - `http://www.w3.org/TR/SVG11/feature#SVG`
-
   - : At least one of the following feature is supported:
-
     - `http://www.w3.org/TR/SVG11/feature#SVG-static`
     - `http://www.w3.org/TR/SVG11/feature#SVG-animation`
     - `http://www.w3.org/TR/SVG11/feature#SVG-dynamic`
     - `http://www.w3.org/TR/SVG11/feature#SVGDOM`
 
 - `http://www.w3.org/TR/SVG11/feature#SVGDOM`
-
   - : At least one of the following feature is supported:
-
     - `http://www.w3.org/TR/SVG11/feature#SVGDOM-static`
     - `http://www.w3.org/TR/SVG11/feature#SVGDOM-animation`
     - `http://www.w3.org/TR/SVG11/feature#SVGDOM-dynamic`
 
 - `http://www.w3.org/TR/SVG11/feature#SVG-static`
-
   - : The browser supports all the following features:
-
     - `http://www.w3.org/TR/SVG11/feature#CoreAttribute`
     - `http://www.w3.org/TR/SVG11/feature#Structure`
     - `http://www.w3.org/TR/SVG11/feature#ContainerAttribute`
@@ -159,9 +151,7 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
 - `http://www.w3.org/TR/SVG11/feature#SVGDOM-animation`
   - : The browser supports all DOM interfaces and methods corresponding to the language features for `http://www.w3.org/TR/SVG11/feature#SVG-animation`.
 - `http://www.w3.org/TR/SVG11/feature#SVG-dynamic`
-
   - : The browser supports all of the language features from `http://www.w3.org/TR/SVG11/feature#SVG-animation` plus the following features:
-
     - `http://www.w3.org/TR/SVG11/feature#Hyperlinking`
     - `http://www.w3.org/TR/SVG11/feature#Scripting`
     - `http://www.w3.org/TR/SVG11/feature#View`
@@ -774,20 +764,20 @@ The following are the feature strings for the `requiredFeatures` attribute. Thes
 
 ```css
 .ko {
-  fill: #900;
+  fill: #990000;
 }
 
 .ok {
-  fill: #060;
+  fill: #006600;
 }
 
 rect {
-  stroke: #000;
+  stroke: black;
   stroke-width: 2px;
 }
 
 text {
-  fill: #fff;
+  fill: white;
   font: 12px sans-serif;
 }
 ```
@@ -799,7 +789,3 @@ text {
 ## Specifications
 
 {{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}

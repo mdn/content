@@ -35,7 +35,7 @@ In this example, the {{SVGElement("feDisplacementMap")}} element defined in the 
     y="20"
     width="100"
     height="100"
-    style="fill:red;"
+    fill="red"
     filter="url(#filter1)" />
 </svg>
 ```

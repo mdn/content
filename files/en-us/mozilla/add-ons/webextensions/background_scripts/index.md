@@ -2,9 +2,8 @@
 title: Background scripts
 slug: Mozilla/Add-ons/WebExtensions/Background_scripts
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Background scripts or a background page enable you to monitor and react to events in the browser, such as navigating to a new page, removing a bookmark, or closing a tab.
 
@@ -165,7 +164,9 @@ browser.runtime.onMessage.addListener(
 
 ### Filter events
 
-Use APIs that support event filters to restrict listeners to the cases the extension cares about. If an extension is listening for {{WebExtAPIRef("tabs.onUpdated")}}, use the {{WebExtAPIRef("webNavigation.onCompleted")}} event with filters instead, as the tabs API does not support filters.
+When your extension only needs to act on a subset of events, such as when a web page is opened from a specific domain, use event filters where they are available.
+
+For example, you can add a filter to the {{WebExtAPIRef("webNavigation.onCompleted")}} event to start your background script when certain URLs load, like this:
 
 ```js
 browser.webNavigation.onCompleted.addListener(
@@ -175,6 +176,8 @@ browser.webNavigation.onCompleted.addListener(
   { url: [{ urlMatches: "https://www.mozilla.org/" }] },
 );
 ```
+
+When targeting Firefox desktop only, you can also add filters to {{WebExtAPIRef("tabs.onUpdated")}} to achieve a similar outcome.
 
 ### React to listeners
 
@@ -340,7 +343,7 @@ browser.alarms.onAlarm.addListener(() => {
 
 ### Update calls for background script functions
 
-Extensions commonly host their primary functionality in the background script. Some extensions access functions and variables defined in the background page through the `window` returned by {{WebExtAPIRef("extension.getBackgroundPage")}}.
+Extensions commonly host their primary functionality in the background script. Some extensions access functions and variables defined in the background page through the `window` returned by {{WebExtAPIRef("runtime.getBackgroundPage")}}.
 The method returns `null` when:
 
 - extension pages are isolated, such as extension pages in Private Browsing mode or container tabs.
@@ -351,11 +354,11 @@ The method returns `null` when:
 > The `getBackgroundPage()` methods discussed in this section cannot be used in a cross-browser extension, because Manifest Version 3 extensions in Chrome cannot use background or event pages.
 
 If your extension requires a reference to the `window` of the background page, use {{WebExtAPIRef("runtime.getBackgroundPage")}} to ensure the event page is running.
-If the call is optional (that is, only needed if the event page is alive) then use {{WebExtAPIRef("extension.getBackgroundPage")}}.
+If the call is optional (that is, only needed if the event page is alive) then use {{WebExtAPIRef("runtime.getBackgroundPage")}}.
 
 ```js example-bad
 document.getElementById("target").addEventListener("click", async () => {
-  let backgroundPage = browser.extension.getBackgroundPage();
+  let backgroundPage = browser.runtime.getBackgroundPage();
   // Warning: backgroundPage is likely null.
   backgroundPage.backgroundFunction();
 });

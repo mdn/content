@@ -3,9 +3,8 @@ title: downloads.DangerType
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DangerType
 page-type: webextension-api-type
 browser-compat: webextensions.api.downloads.DangerType
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The `DangerType` type of the {{WebExtAPIRef("downloads")}} API defines a set of possible reasons that a downloadable file might be considered dangerous.
 
@@ -35,11 +34,11 @@ Values of this type are strings. Possible values are:
 - `accepted`
   - : The user has accepted the dangerous download.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#type-DangerType) API.

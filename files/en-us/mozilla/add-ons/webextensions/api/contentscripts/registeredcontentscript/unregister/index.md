@@ -3,9 +3,8 @@ title: contentScripts.RegisteredContentScript.unregister()
 slug: Mozilla/Add-ons/WebExtensions/API/contentScripts/RegisteredContentScript/unregister
 page-type: webextension-api-function
 browser-compat: webextensions.api.contentScripts.RegisteredContentScript.unregister
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Unregisters the content scripts represented by this `RegisteredContentScript` object.
 
@@ -22,10 +21,6 @@ None.
 ### Return value
 
 None.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -59,3 +54,7 @@ browser.browserAction.onClicked.addListener(toggle);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

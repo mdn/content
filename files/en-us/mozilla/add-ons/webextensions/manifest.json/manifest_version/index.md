@@ -3,9 +3,8 @@ title: manifest_version
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.manifest_version
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>

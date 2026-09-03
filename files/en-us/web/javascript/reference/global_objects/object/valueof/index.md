@@ -4,9 +4,8 @@ short-title: valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Object.valueOf
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`valueOf()`** method of {{jsxref("Object")}} instances converts the `this` value [to an object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#object_coercion). This method is meant to be overridden by derived objects for custom [type conversion](/en-US/docs/Web/JavaScript/Guide/Data_structures#type_coercion) logic.
 
@@ -21,9 +20,9 @@ MyNumberType.prototype.valueOf = function () {
   return this.number;
 };
 
-const object1 = new MyNumberType(4);
+const object = new MyNumberType(4);
 
-console.log(object1 + 3);
+console.log(object + 3);
 // Expected output: 7
 ```
 
@@ -42,7 +41,7 @@ None.
 The `this` value, converted to an object.
 
 > [!NOTE]
-> In order for `valueOf` to be useful during type conversion, it must return a primitive. Because all primitive types have their own `valueOf()` methods, calling `aPrimitiveValue.valueOf()` generally does not invoke `Object.prototype.valueOf()`.
+> In order for `valueOf` to be useful during type conversion, it must return a primitive. Because all primitive types have their own `valueOf()` methods, calling `primitiveValue.valueOf()` generally does not invoke `Object.prototype.valueOf()`.
 
 ## Description
 

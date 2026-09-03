@@ -8,7 +8,7 @@ status:
 browser-compat: api.LanguageDetector.availability_static
 ---
 
-{{APIRef("Translator and Language Detector APIs")}}{{securecontext_header}}{{SeeCompatTable}}
+{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`availability()`** static method of the {{domxref("LanguageDetector")}} interface returns an enumerated value that indicates whether the browser AI model supports a given `LanguageDetector` configuration.
 
@@ -21,11 +21,9 @@ LanguageDetector.availability(options)
 ### Parameters
 
 - `options`
-
   - : An object specifying configuration options for the `LanguageDetector`. Possible values include:
-
     - `expectedInputLanguages`
-      - : An array of strings specifying the expected languages of the input text to have its language detected. These should be valid [BCP 47 language tags](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) (as specified in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)). Defaults to `["en"]`
+      - : An array of strings specifying the expected languages of the input text to have its language detected. These should be valid {{glossary("BCP 47 language tag", "BCP 47 language tags")}}. Defaults to `["en"]`
 
 ### Return value
 
@@ -40,7 +38,7 @@ Possible values include:
 - `downloading`
   - : The browser supports the given configuration, but it has to finish an ongoing download before it can proceed.
 - `unavailable`
-  - : The browser does not support the given configuration.
+  - : The browser does not support the given configuration, or the Language Detector API is blocked by a {{httpheader('Permissions-Policy/language-detector','language-detector')}} {{httpheader("Permissions-Policy")}}.
 
 ### Exceptions
 
@@ -50,8 +48,6 @@ Possible values include:
   - : Thrown if initialization of the AI model failed for any reason.
 - `UnknownError` {{domxref("DOMException")}}
   - : Thrown if the `availability()` call failed for any other reason, or a reason the user agent did not wish to disclose.
-
-If usage of the method is blocked by a {{httpheader('Permissions-Policy/language-detector','language-detector')}} {{httpheader("Permissions-Policy")}}, the promise rejects with a value of `unavailable`.
 
 ## Examples
 

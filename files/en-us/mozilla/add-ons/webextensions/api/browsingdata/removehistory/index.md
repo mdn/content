@@ -3,18 +3,15 @@ title: browsingData.removeHistory()
 slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeHistory
 page-type: webextension-api-function
 browser-compat: webextensions.api.browsingData.removeHistory
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Clears the record of web pages that the user has visited (browsing history).
 
 You can use the `removalOptions` parameter, which is a {{WebExtAPIRef("browsingData.RemovalOptions")}} object, to:
 
-- clear only records of web pages visited after a given time
-- control whether to clear only records of normal web pages or to clear records of hosted apps and extensions as well.
-
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+- clear records of web pages visited after a given time.
+- control whether to clear records of web pages, or web pages and extensions.
 
 ## Syntax
 
@@ -27,11 +24,11 @@ let removing = browser.browsingData.removeHistory(
 ### Parameters
 
 - `removalOptions`
-  - : `object`. A {{WebExtAPIRef("browsingData.RemovalOptions")}} object, which may be used to clear only records of web pages visited after a given time, and whether to clear only records of normal web pages or to clear records of hosted apps and extensions as well.
+  - : `object`. A {{WebExtAPIRef("browsingData.RemovalOptions")}} object, which can be used to clear records of web pages visited after a given time, and control whether to clear records of web pages or web pages and extensions.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with no arguments when the removal has finished. If any error occurs, the promise will be rejected with an error message.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that is fulfilled with no arguments when the removal has finished. If any error occurs, the promise is rejected with an error message.
 
 ## Examples
 
@@ -71,11 +68,11 @@ function onError(error) {
 browser.browsingData.removeHistory({}).then(onRemoved, onError);
 ```
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData) API.

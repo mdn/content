@@ -9,10 +9,6 @@ sidebar: learnsidebar
 
 In this first Express article we answer the questions "What is Node?" and "What is Express?", and give you an overview of what makes the Express web framework special. We'll outline the main features, and show you some of the main building blocks of an Express application (although at this point you won't yet have a development environment in which to test it).
 
-> [!WARNING]
-> The Express tutorial is written for Express version 4, while the latest version is Express 5.
-> We plan to update the documentation in the second half of 2025.
-
 <table>
   <tbody>
     <tr>
@@ -106,7 +102,7 @@ Other common web-development tasks are not directly supported by Node itself. If
 - Set common web application settings like the port to use for connecting, and the location of templates that are used for rendering the response.
 - Add additional request processing "middleware" at any point within the request handling pipeline.
 
-While _Express_ itself is fairly minimalist, developers have created compatible middleware packages to address almost any web development problem. There are libraries to work with cookies, sessions, user logins, URL parameters, `POST` data, security headers, and _many_ more. You can find a list of middleware packages maintained by the Express team at [Express Middleware](https://expressjs.com/en/resources/middleware.html) (along with a list of some popular 3rd party packages).
+While _Express_ itself is fairly minimalist, developers have created compatible middleware packages to address almost any web development problem. There are libraries to work with cookies, sessions, user logins, URL parameters, `POST` data, security headers, and _many_ more. You can find a list of middleware packages maintained by the Express team at [Express Middleware](https://expressjs.com/en/resources/middleware/) (along with a list of some popular 3rd party packages).
 
 > [!NOTE]
 > This flexibility is a double edged sword. There are middleware packages to address almost any problem or requirement, but working out the right packages to use can sometimes be a challenge. There is also no "right way" to structure an application, and many examples you might find on the Internet are not optimal, or only show a small part of what you need to do in order to develop a web application.
@@ -145,7 +141,7 @@ The following sections explain some of the common things you'll see when working
 
 ### Helloworld Express
 
-First lets consider the standard Express [Hello World](https://expressjs.com/en/starter/hello-world.html) example (we discuss each part of this below, and in the following sections).
+First let's consider the standard Express [Hello World](https://expressjs.com/en/starter/hello-world/) example (we discuss each part of this below, and in the following sections).
 
 > [!NOTE]
 > If you have Node and Express already installed (or if you install them as shown in the [next article](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment)), you can save this code in a text file called **app.js** and run it in a bash command prompt by calling:
@@ -167,9 +163,9 @@ app.listen(port, () => {
 });
 ```
 
-The first two lines `require()` (import) the express module and create an [Express application](https://expressjs.com/en/4x/api.html#app). This object, which is traditionally named `app`, has methods for routing HTTP requests, configuring middleware, rendering HTML views, registering a template engine, and modifying [application settings](https://expressjs.com/en/4x/api.html#app.settings.table) that control how the application behaves (e.g., the environment mode, whether route definitions are case sensitive, etc.)
+The first two lines `require()` (import) the express module and create an [Express application](https://expressjs.com/en/5x/api/#app). This object, which is traditionally named `app`, has methods for routing HTTP requests, configuring middleware, rendering HTML views, registering a template engine, and modifying [application settings](https://expressjs.com/en/5x/api/#app.settings.table) that control how the application behaves (e.g., the environment mode, whether route definitions are case sensitive, etc.)
 
-The middle part of the code (the three lines starting with `app.get`) shows a _route definition_. The `app.get()` method specifies a callback function that will be invoked whenever there is an HTTP `GET` request with a path (`'/'`) relative to the site root. The callback function takes a request and a response object as arguments, and calls [`send()`](https://expressjs.com/en/4x/api.html#res.send) on the response to return the string "Hello World!"
+The middle part of the code (the three lines starting with `app.get`) shows a _route definition_. The `app.get()` method specifies a callback function that will be invoked whenever there is an HTTP `GET` request with a path (`'/'`) relative to the site root. The callback function takes a request and a response object as arguments, and calls [`send()`](https://expressjs.com/en/5x/api/#res.send) on the response to return the string "Hello World!"
 
 The final block starts up the server on a specified port ('3000') and prints a log comment to the console. With the server running, you could go to `localhost:3000` in your browser to see the example response returned.
 
@@ -177,7 +173,7 @@ The final block starts up the server on a specified port ('3000') and prints a l
 
 A module is a JavaScript library/file that you can import into other code using Node's `require()` function. _Express_ itself is a module, as are the middleware and database libraries that we use in our _Express_ applications.
 
-The code below shows how we import a module by name, using the _Express_ framework as an example. First we invoke the `require()` function, specifying the name of the module as a string (`'express'`), and calling the returned object to create an [Express application](https://expressjs.com/en/4x/api.html#app). We can then access the properties and functions of the application object.
+The code below shows how we import a module by name, using the _Express_ framework as an example. First we invoke the `require()` function, specifying the name of the module as a string (`'express'`), and calling the returned object to create an [Express application](https://expressjs.com/en/5x/api/#app). We can then access the properties and functions of the application object.
 
 ```js
 const express = require("express");
@@ -249,15 +245,18 @@ setTimeout(() => {
 console.log("Second");
 ```
 
-Using non-blocking asynchronous APIs is even more important on Node than in the browser because _Node_ is a single-threaded event-driven execution environment. "Single threaded" means that all requests to the server are run on the same thread (rather than being spawned off into separate processes). This model is extremely efficient in terms of speed and server resources, but it does mean that if any of your functions call synchronous methods that take a long time to complete, they will block not just the current request, but every other request being handled by your web application.
+Using non-blocking asynchronous APIs is even more important on Node than in the browser because _Node_ applications are often written as a single-threaded event-driven execution environment. "Single threaded" means that all requests to the server are run on the same thread (rather than being spawned off into separate processes). This model is extremely efficient in terms of speed and server resources. However, it does mean that if any of your functions call synchronous methods that take a long time to complete, they will block not only the current request, but every other request being handled by your web application.
 
-There are a number of ways for an asynchronous API to notify your application that it has completed. The most common way is to register a callback function when you invoke the asynchronous API, that will be called back when the operation completes. This is the approach used above.
+There are multiple ways for an asynchronous API to notify your application that it has completed. Historically, the approach used was to register a callback function when invoking the asynchronous API, which is then called when the operation completes (this is the approach used above).
 
 > [!NOTE]
-> Using callbacks can be quite "messy" if you have a sequence of dependent asynchronous operations that must be performed in order because this results in multiple levels of nested callbacks. This problem is commonly known as "callback hell". This problem can be reduced by good coding practices (see <http://callbackhell.com/>), using a module like [async](https://www.npmjs.com/package/async), or refactoring the code to native JavaScript features like [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [async/await](/en-US/docs/Web/JavaScript/Reference/Statements/async_function). Node offers the [`utils.promisify`](https://nodejs.org/api/util.html#utilpromisifyoriginal) function to do the callback → Promise conversion ergonomically.
+> Using callbacks can be quite "messy" if you have a sequence of dependent asynchronous operations that must be performed in order, because this results in multiple levels of nested callbacks. This problem is commonly known as "callback hell".
 
 > [!NOTE]
 > A common convention for Node and Express is to use error-first callbacks. In this convention, the first value in your _callback functions_ is an error value, while subsequent arguments contain success data. There is a good explanation of why this approach is useful in this blog: [The Node.js Way - Understanding Error-First Callbacks](https://fredkschott.com/post/2014/03/understanding-error-first-callbacks-in-node-js/) (fredkschott.com).
+
+Modern JavaScript code more commonly uses [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [async/await](/en-US/docs/Web/JavaScript/Reference/Statements/async_function) to manage asynchronous program flow.
+You should use promises where possible. If working with code that uses callbacks, you can use the Node.js [`utils.promisify`](https://nodejs.org/api/util.html#utilpromisifyoriginal) function to handle the callback → Promise conversion ergonomically.
 
 ### Creating route handlers
 
@@ -269,7 +268,7 @@ app.get("/", (req, res) => {
 });
 ```
 
-The callback function takes a request and a response object as arguments. In this case, the method calls [`send()`](https://expressjs.com/en/4x/api.html#res.send) on the response to return the string "Hello World!" There are a [number of other response methods](https://expressjs.com/en/guide/routing.html#response-methods) for ending the request/response cycle, for example, you could call [`res.json()`](https://expressjs.com/en/4x/api.html#res.json) to send a JSON response or [`res.sendFile()`](https://expressjs.com/en/4x/api.html#res.sendFile) to send a file.
+The callback function takes a request and a response object as arguments. In this case, the method calls [`send()`](https://expressjs.com/en/5x/api/#res.send) on the response to return the string "Hello World!" There are a [number of other response methods](https://expressjs.com/en/guide/routing/#response-methods) for ending the request/response cycle, for example, you could call [`res.json()`](https://expressjs.com/en/5x/api/#res.json) to send a JSON response or [`res.sendFile()`](https://expressjs.com/en/5x/api/#res.sendFile) to send a file.
 
 > [!NOTE]
 > You can use any argument names you like in the callback functions; when the callback is invoked the first argument will always be the request and the second will always be the response. It makes sense to name them such that you can identify the object you're working with in the body of the callback.
@@ -289,7 +288,7 @@ app.all("/secret", (req, res, next) => {
 
 Routes allow you to match particular patterns of characters in a URL, and extract some values from the URL and pass them as parameters to the route handler (as attributes of the request object passed as a parameter).
 
-Often it is useful to group route handlers for a particular part of a site together and access them using a common route-prefix (e.g., a site with a Wiki might have all wiki-related routes in one file and have them accessed with a route prefix of _/wiki/_). In _Express_ this is achieved by using the [`express.Router`](https://expressjs.com/en/guide/routing.html#express-router) object. For example, we can create our wiki route in a module named **wiki.js**, and then export the `Router` object, as shown below:
+Often it is useful to group route handlers for a particular part of a site together and access them using a common route-prefix (e.g., a site with a Wiki might have all wiki-related routes in one file and have them accessed with a route prefix of _/wiki/_). In _Express_ this is achieved by using the [`express.Router`](https://expressjs.com/en/guide/routing/#express-router) object. For example, we can create our wiki route in a module named **wiki.js**, and then export the `Router` object, as shown below:
 
 ```js
 // wiki.js - Wiki route module
@@ -332,10 +331,10 @@ Middleware is used extensively in Express apps, for tasks from serving static fi
 > [!NOTE]
 > The middleware can perform any operation, execute any code, make changes to the request and response object, and it can _also end the request-response cycle_. If it does not end the cycle then it must call `next()` to pass control to the next middleware function (or the request will be left hanging).
 
-Most apps will use _third-party_ middleware in order to simplify common web development tasks like working with cookies, sessions, user authentication, accessing request `POST` and JSON data, logging, etc. You can find a [list of middleware packages maintained by the Express team](https://expressjs.com/en/resources/middleware.html) (which also includes other popular 3rd party packages). Other Express packages are available on the npm package manager.
+Most apps will use _third-party_ middleware in order to simplify common web development tasks like working with cookies, sessions, user authentication, accessing request `POST` and JSON data, logging, etc. You can find a [list of middleware packages maintained by the Express team](https://expressjs.com/en/resources/middleware/) (which also includes other popular 3rd party packages). Other Express packages are available on the npm package manager.
 
 To use third party middleware you first need to install it into your app using npm.
-For example, to install the [morgan](https://expressjs.com/en/resources/middleware/morgan.html) HTTP request logger middleware, you'd do this:
+For example, to install the [morgan](https://expressjs.com/en/resources/middleware/morgan/) HTTP request logger middleware, you'd do this:
 
 ```bash
 npm install morgan
@@ -367,19 +366,19 @@ const express = require("express");
 const app = express();
 
 // An example middleware function
-function aMiddlewareFunction(req, res, next) {
+function middlewareFunction(req, res, next) {
   // Perform some operations
   next(); // Call next() so Express will call the next middleware function in the chain.
 }
 
 // Function added with use() for all routes and verbs
-app.use(aMiddlewareFunction);
+app.use(middlewareFunction);
 
 // Function added with use() for a specific route
-app.use("/some-route", aMiddlewareFunction);
+app.use("/some-route", middlewareFunction);
 
 // A middleware function added for a specific HTTP verb and route
-app.get("/", aMiddlewareFunction);
+app.get("/", middlewareFunction);
 
 app.listen(3000);
 ```
@@ -387,11 +386,11 @@ app.listen(3000);
 > [!NOTE]
 > Above we declare the middleware function separately and then set it as the callback. In our previous route handler function we declared the callback function when it was used. In JavaScript, either approach is valid.
 
-The Express documentation has a lot more excellent documentation about [using](https://expressjs.com/en/guide/using-middleware.html) and [writing](https://expressjs.com/en/guide/writing-middleware.html) Express middleware.
+The Express documentation has a lot more excellent documentation about [using](https://expressjs.com/en/guide/using-middleware/) and [writing](https://expressjs.com/en/guide/writing-middleware/) Express middleware.
 
 ### Serving static files
 
-You can use the [express.static](https://expressjs.com/en/4x/api.html#express.static) middleware to serve static files, including your images, CSS and JavaScript (`static()` is the only middleware function that is actually **part** of _Express_). For example, you would use the line below to serve images, CSS files, and JavaScript files from a directory named '**public'** at the same level as where you call node:
+You can use the [express.static](https://expressjs.com/en/5x/api/#express.static) middleware to serve static files, including your images, CSS and JavaScript (`static()` is the only middleware function that is actually **part** of _Express_). For example, you would use the line below to serve images, CSS files, and JavaScript files from a directory named '**public'** at the same level as where you call node:
 
 ```js
 app.use(express.static("public"));
@@ -413,7 +412,7 @@ app.use(express.static("public"));
 app.use(express.static("media"));
 ```
 
-You can also create a virtual prefix for your static URLs, rather than having the files added to the base URL. For example, here we [specify a mount path](https://expressjs.com/en/4x/api.html#app.use) so that the files are loaded with the prefix "/media":
+You can also create a virtual prefix for your static URLs, rather than having the files added to the base URL. For example, here we [specify a mount path](https://expressjs.com/en/5x/api/#app.use) so that the files are loaded with the prefix "/media":
 
 ```js
 app.use("/media", express.static("public"));
@@ -428,7 +427,7 @@ http://localhost:3000/media/cry.mp3
 ```
 
 > [!NOTE]
-> See also [Serving static files in Express](https://expressjs.com/en/starter/static-files.html).
+> See also [Serving static files in Express](https://expressjs.com/en/starter/static-files/).
 
 ### Handling errors
 
@@ -449,9 +448,9 @@ Express comes with a built-in error handler, which takes care of any remaining e
 > The stack trace is not included in the production environment. To run it in production mode you need to set the environment variable `NODE_ENV` to `"production"`.
 
 > [!NOTE]
-> HTTP404 and other "error" status codes are not treated as errors. If you want to handle these, you can add a middleware function to do so. For more information see the [FAQ](https://expressjs.com/en/starter/faq.html#how-do-i-handle-404-responses).
+> HTTP404 and other "error" status codes are not treated as errors. If you want to handle these, you can add a middleware function to do so. For more information see the [FAQ](https://expressjs.com/en/starter/faq/#how-do-i-handle-404-responses).
 
-For more information see [Error handling](https://expressjs.com/en/guide/error-handling.html) (Express docs).
+For more information see [Error handling](https://expressjs.com/en/guide/error-handling/) (Express docs).
 
 ### Using databases
 
@@ -463,48 +462,32 @@ In order to use these you have to first install the database driver using npm. F
 npm install mongodb
 ```
 
-The database itself can be installed locally or on a cloud server. In your Express code you require the driver, connect to the database, and then perform create, read, update, and delete (CRUD) operations. The example below (from the Express documentation) shows how you can find "mammal" records using MongoDB.
-
-This works with older versions of MongoDB version ~ 2.2.33:
-
-```js
-const { MongoClient } = require("mongodb");
-
-MongoClient.connect("mongodb://localhost:27017/animals", (err, db) => {
-  if (err) throw err;
-
-  db.collection("mammals")
-    .find()
-    .toArray((err, result) => {
-      if (err) throw err;
-
-      console.log(result);
-    });
-});
-```
-
-For MongoDB version 3.0 and up:
+The database itself can be installed locally or on a cloud server. In your Express code you import the driver, connect to the database, and then perform create, read, update, and delete (CRUD) operations.
+The example below shows how you can find "mammal" records using MongoDB:
 
 ```js
 const { MongoClient } = require("mongodb");
 
-MongoClient.connect("mongodb://localhost:27017/animals", (err, client) => {
-  if (err) throw err;
+const uri = "mongodb://localhost:27017";
+const client = new MongoClient(uri);
 
-  const db = client.db("animals");
-  db.collection("mammals")
-    .find()
-    .toArray((err, result) => {
-      if (err) throw err;
-      console.log(result);
-      client.close();
-    });
-});
+async function run() {
+  try {
+    await client.connect();
+    const db = client.db("animals");
+    const mammals = await db.collection("mammals").find().toArray();
+    console.log(mammals);
+  } finally {
+    await client.close();
+  }
+}
+
+run().catch(console.error);
 ```
 
 Another popular approach is to access your database indirectly, via an Object Relational Mapper ("ORM"). In this approach you define your data as "objects" or "models" and the ORM maps these through to the underlying database format. This approach has the benefit that as a developer you can continue to think in terms of JavaScript objects rather than database semantics, and that there is an obvious place to perform validation and checking of incoming data. We'll talk more about databases in a later article.
 
-For more information see [Database integration](https://expressjs.com/en/guide/database-integration.html) (Express docs).
+For more information see [Database integration](https://expressjs.com/en/guide/database-integration/) (Express docs).
 
 ### Rendering data (views)
 
@@ -528,7 +511,7 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "some_template_engine_name");
 ```
 
-The appearance of the template will depend on what engine you use. Assuming that you have a template file named "index.\<template_extension>" that contains placeholders for data variables named 'title' and "message", you would call [`Response.render()`](https://expressjs.com/en/4x/api.html#res.render) in a route handler function to create and send the HTML response:
+The appearance of the template will depend on what engine you use. Assuming that you have a template file named "index.\<template_extension>" that contains placeholders for data variables named 'title' and "message", you would call [`Response.render()`](https://expressjs.com/en/5x/api/#res.render) in a route handler function to create and send the HTML response:
 
 ```js
 app.get("/", (req, res) => {
@@ -536,7 +519,7 @@ app.get("/", (req, res) => {
 });
 ```
 
-For more information see [Using template engines with Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs).
+For more information see [Using template engines with Express](https://expressjs.com/en/guide/using-template-engines/) (Express docs).
 
 ### File structure
 
@@ -556,13 +539,13 @@ Of course Express is deliberately a very lightweight web application framework, 
 - [Learn Express.js](https://scrimba.com/learn-expressjs-c062las154?via=mdn) from Scrimba <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> builds on top of the previous link, showing how to start using the Express framework to build server-side websites.
 - [Modules](https://nodejs.org/api/modules.html#modules_modules) (Node API docs)
 - [Express](https://expressjs.com/) (home page)
-- [Basic routing](https://expressjs.com/en/starter/basic-routing.html) (Express docs)
-- [Routing guide](https://expressjs.com/en/guide/routing.html) (Express docs)
-- [Using template engines with Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs)
-- [Using middleware](https://expressjs.com/en/guide/using-middleware.html) (Express docs)
-- [Writing middleware for use in Express apps](https://expressjs.com/en/guide/writing-middleware.html) (Express docs)
-- [Database integration](https://expressjs.com/en/guide/database-integration.html) (Express docs)
-- [Serving static files in Express](https://expressjs.com/en/starter/static-files.html) (Express docs)
-- [Error handling](https://expressjs.com/en/guide/error-handling.html) (Express docs)
+- [Basic routing](https://expressjs.com/en/starter/basic-routing/) (Express docs)
+- [Routing guide](https://expressjs.com/en/guide/routing/) (Express docs)
+- [Using template engines with Express](https://expressjs.com/en/guide/using-template-engines/) (Express docs)
+- [Using middleware](https://expressjs.com/en/guide/using-middleware/) (Express docs)
+- [Writing middleware for use in Express apps](https://expressjs.com/en/guide/writing-middleware/) (Express docs)
+- [Database integration](https://expressjs.com/en/guide/database-integration/) (Express docs)
+- [Serving static files in Express](https://expressjs.com/en/starter/static-files/) (Express docs)
+- [Error handling](https://expressjs.com/en/guide/error-handling/) (Express docs)
 
 {{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

@@ -3,9 +3,8 @@ title: Bitwise AND (&)
 slug: Web/JavaScript/Reference/Operators/Bitwise_AND
 page-type: javascript-operator
 browser-compat: javascript.operators.bitwise_and
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **bitwise AND (`&`)** operator returns a number or BigInt whose binary representation has a `1` in each bit position for which the corresponding bits of both operands are `1`.
 

@@ -47,7 +47,12 @@ getImageData(sx, sy, sw, sh, settings)
     Positive values are down, and negative are up.
 - `settings` {{optional_inline}}
   - : An object with the following properties:
-    - `colorSpace`: Specifies the color space of the image data. Can be set to `"srgb"` for the [sRGB color space](https://en.wikipedia.org/wiki/SRGB) or `"display-p3"` for the [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3).
+    - `colorSpace`
+      - : Specifies the color space of the image data. Can be set to `"srgb"` for the [sRGB color space](https://en.wikipedia.org/wiki/SRGB) or `"display-p3"` for the [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3).
+    - `pixelFormat`
+      - : Specifies the pixel format. Possible values:
+        - `"rgba-unorm8"`, for RGBA with 8 bit per component unsigned normalized format, using a {{jsxref("Uint8ClampedArray")}}.
+        - `"rgba-float16"`, for RGBA with 16 bits per component, using a {{jsxref("Float16Array")}}. Floating-point pixel values allow representing colors in arbitrarily wide gamuts and high dynamic range (HDR).
 
 ### Return value
 
@@ -55,6 +60,9 @@ An {{domxref("ImageData")}} object containing the image data for the rectangle o
 canvas specified. The coordinates of the rectangle's top-left corner are
 `(sx, sy)`, while the coordinates of the bottom corner are
 `(sx + sw - 1, sy + sh - 1)`.
+
+> [!NOTE]
+> With certain privacy settings (such as fingerprinting protection), random subtle noise is introduced to the `getImageData()` result to prevent the website from inferring the user's rendering device. Therefore, `putImageData()` and `getImageData()` may not round-trip.
 
 ### Exceptions
 
@@ -116,6 +124,22 @@ context.fillRect(0, 0, 10, 10);
 // Get ImageData converted to sRGB
 const imageData = context.getImageData(0, 0, 1, 1, { colorSpace: "srgb" });
 console.log(imageData.colorSpace); // "srgb"
+```
+
+### Getting data in different pixel formats
+
+The optional `pixelFormat` setting allows you to get image data in the desired pixel format.
+
+```js
+const context = canvas.getContext("2d");
+
+const defaultImageData = context.getImageData(0, 0, 1, 1);
+console.log(defaultImageData.pixelFormat); // "rgba-unorm8"
+
+const float16ImageData = context.getImageData(0, 0, 1, 1, {
+  pixelFormat: "rgba-float16",
+});
+console.log(float16ImageData.pixelFormat); // "rgba-float16"
 ```
 
 ## Specifications

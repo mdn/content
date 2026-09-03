@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.drawFocusIfNeeded
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The
 **`CanvasRenderingContext2D.drawFocusIfNeeded()`**
@@ -57,7 +57,7 @@ const button2 = document.getElementById("button2");
 
 document.addEventListener("focus", redraw, true);
 document.addEventListener("blur", redraw, true);
-canvas.addEventListener("click", handleClick, false);
+canvas.addEventListener("click", handleClick);
 redraw();
 
 function redraw() {

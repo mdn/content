@@ -3,16 +3,15 @@ title: declarativeNetRequest.getMatchedRules
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/getMatchedRules
 page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.getMatchedRules
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Returns all the rules matched for the extension. Callers can filter the list of matched rules by specifying a `filter`. This method is only available to extensions with the `"declarativeNetRequestFeedback"` permission or that have the `"activeTab"` permission granted for the `tabId` specified in `filter`. Rules not associated with an active document that were matched more than five minutes ago are not returned.
 
 ## Syntax
 
 ```js-nolint
-let gettingMatchedRules = browser.declarativeNetRequest.getMatchedRules(
+let gettingMatchedRules = await browser.declarativeNetRequest.getMatchedRules(
     filter                // object
 );
 ```
@@ -20,7 +19,6 @@ let gettingMatchedRules = browser.declarativeNetRequest.getMatchedRules(
 ### Parameters
 
 - `filter` {{optional_inline}}
-
   - : An object to filter the list of matched rules.
     - `minTimeStamp` {{optional_inline}}
       - : A `number`. If specified, only matches rules after the specified timestamp.

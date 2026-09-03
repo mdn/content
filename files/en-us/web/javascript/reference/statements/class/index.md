@@ -3,9 +3,8 @@ title: class
 slug: Web/JavaScript/Reference/Statements/class
 page-type: javascript-statement
 browser-compat: javascript.statements.class
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`class`** declaration creates a {{Glossary("binding")}} of a new [class](/en-US/docs/Web/JavaScript/Reference/Classes) to a given name.
 

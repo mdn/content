@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Document.hasFocus
 ---
 
-{{APIRef}}
+{{APIRef("DOM")}}
 
 The **`hasFocus()`** method of the {{domxref("Document")}} interface returns a boolean value indicating whether the document or any element inside the document has focus.
 This method can be used to determine whether the active element in a document has focus.

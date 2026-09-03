@@ -1,5 +1,5 @@
 ---
-title: The WebSocket API (WebSockets)
+title: WebSocket API (WebSockets)
 slug: Web/API/WebSockets_API
 page-type: web-api-overview
 browser-compat:
@@ -19,7 +19,7 @@ The WebSocket API provides two alternative mechanisms for creating and using web
 Additionally, the [WebTransport API](/en-US/docs/Web/API/WebTransport_API) is expected to replace the WebSocket API for many applications. WebTransport is a versatile, low-level API that provides backpressure and many other features not supported by either `WebSocket` or `WebSocketStream`, such as unidirectional streams, out-of-order delivery, and unreliable data transmission via datagrams. WebTransport is more complex to use than WebSockets and its cross-browser support is not as wide, but it enables the implementation of sophisticated solutions. If standard WebSocket connections are a good fit for your use case and you need wide browser compatibility, you should employ the WebSockets API to get up and running quickly. However, if your application requires a non-standard custom solution, then you should use the WebTransport API.
 
 > [!NOTE]
-> While a WebSocket connection is functionally somewhat similar to standard Unix-style sockets, they are not related.
+> If a page has an open WebSocket connection, the browser may not add it to the {{glossary("bfcache")}}. It's therefore good practice to close the connection when the user has finished with the page. See [working with the bfcache](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications#working_with_the_bfcache).
 
 ## Interfaces
 
@@ -37,7 +37,7 @@ Additionally, the [WebTransport API](/en-US/docs/Web/API/WebTransport_API) is ex
 The HTTP headers are used in the [WebSocket handshake](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake):
 
 - {{HTTPHeader("Sec-WebSocket-Key")}}
-  - : An HTTP request header that contains a nonce from the client.
+  - : An HTTP request header that contains a {{Glossary("Nonce", "nonce")}} from the client.
     This is used in the [WebSocket opening handshake](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#the_websocket_handshake) to verify that the client explicitly intends to open a WebSocket.
     It is added automatically by the browser.
 - {{HTTPHeader("Sec-WebSocket-Accept")}}
@@ -78,7 +78,7 @@ The HTTP headers are used in the [WebSocket handshake](/en-US/docs/Web/API/WebSo
 - [WebSocket King](https://websocketking.com/): A client tool to help develop, test and work with WebSocket servers.
 - [PHP WebSocket Server](https://github.com/napengam/phpWebSocketServer): Server written in PHP to handle connections via websockets `wss://` or `ws://` and normal sockets over `ssl://`, `tcp://`
 - [Django Channels](https://channels.readthedocs.io/en/stable/index.html): Django library that adds support for WebSockets (and other protocols that require long running asynchronous connections).
-- [(Phoenix) Channels](https://hexdocs.pm/phoenix/channels.html): Scalable real-time communication using WebSocket in Elixir Phoenix framework.
+- [(Phoenix) Channels](https://phoenix.hexdocs.pm/channels.html): Scalable real-time communication using WebSocket in Elixir Phoenix framework.
 - [Phoenix LiveView](https://github.com/phoenixframework/phoenix_live_view): Real-time interactive web experiences through WebSocket in Elixir Phoenix framework.
 - [Flask-SocketIO](https://flask-socketio.readthedocs.io/en/latest/): gives Flask applications access to low latency bi-directional communications between the clients and the server.
 - [Gorilla WebSocket](https://pkg.go.dev/github.com/gorilla/websocket): Gorilla WebSocket is a [Go](https://go.dev/) implementation of the WebSocket protocol.

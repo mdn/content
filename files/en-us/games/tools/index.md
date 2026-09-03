@@ -2,9 +2,8 @@
 title: Tools for game development
 slug: Games/Tools
 page-type: landing-page
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 On this page, you can find links to our game development tools articles, which eventually aim to cover frameworks, compilers, and debugging tools.
 
@@ -15,9 +14,7 @@ On this page, you can find links to our game development tools articles, which e
 - [Firefox Profiler](https://profiler.firefox.com/docs/#/)
   - : The Firefox Profiler lets you profile your code to help figure out where your performance issues are so that you can make your game run at top speed.
 - Toolchain for developing and debugging games
-
   - : How does this differ from normal web app debugging? What specialist tools are available? A lot of this is going to be covered by Will in [tools](https://firefox-source-docs.mozilla.org/devtools-user/index.html), but here we should provide a kind of practical toolchain tutorial for debugging games, with links to Will's stuff:
-
     - Basic tools overview
     - [Shader editor](https://firefox-source-docs.mozilla.org/devtools-user/shader_editor/index.html)
     - Performance tools (still in production, estimated early 2014)
@@ -104,13 +101,13 @@ On this page, you can find links to our game development tools articles, which e
   - : Store user data on their own computer or device.
 - [JavaScript](/en-US/docs/Web/JavaScript)
   - : Fast web programming language to write the code for your game.
-    To easily port your existing games [Emscripten](https://github.com/emscripten-core/emscripten/wiki) or [Asm.js](http://asmjs.org/spec/latest/)
+    To easily port your existing games, use [Emscripten](https://github.com/emscripten-core/emscripten/wiki) or [Asm.js](http://asmjs.org/spec/latest/).
 - [Pointer Lock API](/en-US/docs/Web/API/Pointer_Lock_API)
   - : Lock the mouse or other pointing device within your game's interface.
 - [SVG](/en-US/docs/Web/SVG) (Scalable Vector Graphics)
   - : Build vector graphics that scale smoothly regardless of the size or resolution of the user's display.
 - [Typed Arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays)
-  - : Access raw binary data from within JavaScript; Manipulate GL textures, game data, or anything else.
+  - : Access raw binary data from within JavaScript; manipulate GL textures, game data, or anything else.
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
   - : Control the playback, synthesis, and manipulation of audio in real time.
 - [WebGL](/en-US/docs/Web/API/WebGL_API)

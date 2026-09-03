@@ -1,14 +1,14 @@
 ---
-title: Firefox 29 for developers
+title: Firefox 29 release notes for developers
+short-title: Firefox 29
 slug: Mozilla/Firefox/Releases/29
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 29 was released on April 29, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer Tools
 
@@ -26,7 +26,7 @@ _See the [Mozilla Hacks blog post](https://hacks.mozilla.org/2014/02/css-source-
 
 ### CSS
 
-- [CSS variables](/en-US/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) have been implemented ([Firefox bug 773296](https://bugzil.la/773296)). The [CSS Variables in Firefox Nightly](https://hacks.mozilla.org/2013/12/css-variables-in-firefox-nightly/) on Mozilla Hacks contains more details. They are enabled by default only for non-release builds (on release builds flip the pref `layout.css.variables.enabled` to `true` if you want to play with them).
+- [CSS variables](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties) have been implemented ([Firefox bug 773296](https://bugzil.la/773296)). The [CSS Variables in Firefox Nightly](https://hacks.mozilla.org/2013/12/css-variables-in-firefox-nightly/) on Mozilla Hacks contains more details. They are enabled by default only for non-release builds (on release builds flip the pref `layout.css.variables.enabled` to `true` if you want to play with them).
 - Flexboxes now support {{cssxref("visibility", "visibility: collapse")}} ([Firefox bug 783470](https://bugzil.la/783470)).
 - The {{cssxref("box-sizing")}} property has been unprefixed ([Firefox bug 243412](https://bugzil.la/243412)).
 - The {{cssxref("will-change")}} property, a hint to that something will animate has been added. The preference `layout.css.will-change.enabled` must be switched to `true` to enable it. ([Firefox bug 940842](https://bugzil.la/940842))
@@ -46,15 +46,12 @@ _See the [Mozilla Hacks blog post](https://hacks.mozilla.org/2014/02/css-source-
 
 - New ECMAScript 2015 String methods: {{jsxref("String.prototype.codePointAt()")}} and {{jsxref("String.prototype.fromCodePoint()")}} have been implemented ([Firefox bug 918879](https://bugzil.la/918879)).
 - The [ECMAScript Internationalization API (ECMA-402)](https://402.ecma-international.org/1.0/) has been implemented and is now enabled by default in Firefox Desktop ([Firefox bug 853301](https://bugzil.la/853301)):
-
   - New objects in the new {{jsxref("Intl")}} object namespace:
-
     - {{jsxref("Intl/Collator", "Intl.Collator")}}
     - {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
     - {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
 
   - The following methods of {{jsxref("String")}}, {{jsxref("Number")}} and {{jsxref("Date")}} have been updated to include the `locales` and `options` arguments per ECMA-402:
-
     - {{jsxref("String.prototype.localeCompare()")}}
     - {{jsxref("Number.prototype.toLocaleString()")}}
     - {{jsxref("Date.prototype.toLocaleString()")}}
@@ -70,8 +67,8 @@ _See the [Mozilla Hacks blog post](https://hacks.mozilla.org/2014/02/css-source-
 ### Interfaces/APIs/DOM
 
 - A new type of workers, {{domxref("SharedWorker")}}, is now available by default ([Firefox bug 924089](https://bugzil.la/924089)).
-- The {{domxref("URL")}} interface now supports the {{domxref("URL.searchParams", "searchParams")}} property returning a {{domxref("URLSearchParams")}} object, allowing to modify the search params of a URL ([Firefox bug 887836](https://bugzil.la/887836)). The {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} constructor allows easier parsing of query strings.
-- The {{domxref("WorkerNavigator.onLine", "navigator.onLine")}} property is now supported on {{domxref("WorkerNavigator")}}, allowing to know the online/offline status in workers ([Firefox bug 925437](https://bugzil.la/925437)).
+- The {{domxref("URL")}} interface now supports the {{domxref("URL.searchParams", "searchParams")}} property returning a {{domxref("URLSearchParams")}} object, allowing you to modify the search params of a URL ([Firefox bug 887836](https://bugzil.la/887836)). The {{domxref("URLSearchParams.URLSearchParams", "URLSearchParams()")}} constructor allows easier parsing of query strings.
+- The {{domxref("WorkerNavigator.onLine", "navigator.onLine")}} property is now supported on {{domxref("WorkerNavigator")}}, allowing you to know the online/offline status in workers ([Firefox bug 925437](https://bugzil.la/925437)).
 - As part of the implementation of Web Components, the `HTMLShadowElement` interface has been implemented behind the `dom.webcomponents.enabled`. Flip it to `true` if you want to use it. ([Firefox bug 887538](https://bugzil.la/887538))
 - The read-only property {{domxref("HTMLIFrameElement.sandbox")}} is no longer a string but a {{domxref("DOMTokenList")}} ([Firefox bug 845057](https://bugzil.la/845057)).
 - On {{domxref("HTMLCanvasElement.getContext()")}}, the value `moz-webgl` is no longer supported. Use the standard `webgl` value ([Firefox bug 913597](https://bugzil.la/913597)).
@@ -102,7 +99,3 @@ _No change._
 
 - Major Firefox theme changes affect most extensions that interact with the Firefox user interface.
 - `nsISecurityCheckedComponent` has been removed ([Firefox bug 794943](https://bugzil.la/794943)). Most consumers can remove `nsISecurityCheckedComponent` from their interface definition and they will continue to work.
-
-### Older versions
-
-{{Firefox_for_developers}}

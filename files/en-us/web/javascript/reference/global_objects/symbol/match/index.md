@@ -4,9 +4,8 @@ short-title: match
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/match
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Symbol.match
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Symbol.match`** static data property represents the [well-known symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#well-known_symbols) `Symbol.match`. The {{jsxref("String.prototype.match()")}} method looks up this symbol on its first argument for the method used to match an input string against the current object. This symbol is also used to determine if an object should be [treated as a regex](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes).
 
@@ -15,18 +14,18 @@ For more information, see [`RegExp.prototype[Symbol.match]()`](/en-US/docs/Web/J
 {{InteractiveExample("JavaScript Demo: Symbol.match", "taller")}}
 
 ```js interactive-example
-const regexp1 = /foo/;
-// console.log('/foo/'.startsWith(regexp1));
+const regexp = /foo/;
+// console.log('/foo/'.startsWith(regexp));
 // Expected output (Chrome): Error: First argument to String.prototype.startsWith must not be a regular expression
 // Expected output (Firefox): Error: Invalid type: first can't be a Regular Expression
 // Expected output (Safari): Error: Argument to String.prototype.startsWith cannot be a RegExp
 
-regexp1[Symbol.match] = false;
+regexp[Symbol.match] = false;
 
-console.log("/foo/".startsWith(regexp1));
+console.log("/foo/".startsWith(regexp));
 // Expected output: true
 
-console.log("/baz/".endsWith(regexp1));
+console.log("/baz/".endsWith(regexp));
 // Expected output: false
 ```
 

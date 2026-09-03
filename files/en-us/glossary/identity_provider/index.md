@@ -2,9 +2,8 @@
 title: Identity provider (IdP)
 slug: Glossary/Identity_provider
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 An **identity provider** (IdP) is an entity in a {{glossary("federated identity")}} system that manages a user's {{glossary("credential", "credentials")}} and can {{glossary("authentication", "authenticate")}} users.
 

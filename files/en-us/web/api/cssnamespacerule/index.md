@@ -7,7 +7,7 @@ browser-compat: api.CSSNamespaceRule
 
 {{APIRef("CSSOM")}}
 
-The **`CSSNamespaceRule`** interface describes an object representing a single CSS {{ cssxref("@namespace") }} [at-rule](/en-US/docs/Web/CSS/CSS_syntax/At-rule).
+The **`CSSNamespaceRule`** interface describes an object representing a single CSS {{ cssxref("@namespace") }} [at-rule](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
 
 {{InheritanceDiagram}}
 
@@ -29,7 +29,7 @@ _Inherits methods from its ancestor {{domxref("CSSRule")}}._
 The stylesheet includes a namespace as the only rule. Therefore the first {{domxref("CSSRule")}} returned will be a `CSSNamespaceRule`.
 
 ```css
-@namespace url(http://www.w3.org/1999/xhtml);
+@namespace url("http://www.w3.org/1999/xhtml");
 ```
 
 ```js

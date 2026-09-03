@@ -2,9 +2,8 @@
 title: JavaScript data types and data structures
 slug: Web/JavaScript/Guide/Data_structures
 page-type: guide
+sidebar: jssidebar
 ---
-
-{{jsSidebar("More")}}
 
 Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures.
 

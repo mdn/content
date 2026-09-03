@@ -4,9 +4,8 @@ short-title: "[Symbol.match]()"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.@@match
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`[Symbol.match]()`** method of {{jsxref("RegExp")}} instances specifies how [`String.prototype.match()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match) should behave. In addition, its presence (or absence) can influence whether an object is regarded as a regular expression.
 
@@ -47,9 +46,7 @@ An {{jsxref("Array")}} whose contents depend on the presence or absence of the g
 
 ## Description
 
-This method is called internally in {{jsxref("String.prototype.match()")}}.
-
-For example, the following two examples return same result.
+This method exists for customizing match behavior within `RegExp` subclasses. It is called internally in {{jsxref("String.prototype.match()")}}. For example, the following two examples return the same result.
 
 ```js
 "abc".match(/a/);
@@ -57,9 +54,16 @@ For example, the following two examples return same result.
 /a/[Symbol.match]("abc");
 ```
 
-If the regex is global (with the `g` flag), the regex's [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) method will be repeatedly called until `exec()` returns `null`. Otherwise, `exec()` would only be called once and its result becomes the return value of `[Symbol.match]()`.
+If the regex is global (with the `g` flag), its [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) is first set to 0, so matching always starts from the beginning of the string, and the regex's [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) method is repeatedly called until `exec()` returns `null`. If the current match is an empty string, the `lastIndex` would still be advanced — if the regex is [Unicode-aware](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), it would advance by one Unicode code point; otherwise, it advances by one UTF-16 code unit.
 
-Because `[Symbol.match]()` would keep calling `exec()` until it returns `null`, and `exec()` would automatically reset the regex's [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) to 0 when the last match fails, `[Symbol.match]()` would typically not have side effects when it exits. However, when the regex is [sticky](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) but not global, `lastIndex` would not be reset. In this case, each call to `match()` may return a different result.
+```js
+console.log("😄".match(/(?:)/g)); // [ '', '', '' ]
+console.log("😄".match(/(?:)/gu)); // [ '', '' ]
+```
+
+If the regex is not global, `exec()` would only be called once and its result becomes the return value of `[Symbol.match]()`.
+
+The `exec()` method automatically resets `lastIndex` to 0 when the last match fails, so for global regexes with `lastIndex` starting at 0, `[Symbol.match]()` generally produces no side-effects. However, when the regex is [sticky](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/sticky) but not global, `exec()` is only called once and therefore does not reset `lastIndex` if the match was successful. In this case, each call to `match()` may return a different result.
 
 ```js
 const re = /[abc]/y;
@@ -78,15 +82,6 @@ When the regex is sticky and global, it would still perform sticky matches — i
 ```js
 console.log("ab-c".match(/[abc]/gy)); // [ 'a', 'b' ]
 ```
-
-If the current match is an empty string, the `lastIndex` would still be advanced — if the regex is [Unicode-aware](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), it would advance by one Unicode code point; otherwise, it advances by one UTF-16 code unit.
-
-```js
-console.log("😄".match(/(?:)/g)); // [ '', '', '' ]
-console.log("😄".match(/(?:)/gu)); // [ '', '' ]
-```
-
-This method exists for customizing match behavior within `RegExp` subclasses.
 
 In addition, the `[Symbol.match]` property is used to check [whether an object is a regular expression](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes).
 

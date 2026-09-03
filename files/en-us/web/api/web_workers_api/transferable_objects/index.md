@@ -42,7 +42,8 @@ worker.postMessage(uInt8Array, [uInt8Array.buffer]);
 console.log(uInt8Array.byteLength); // 0
 ```
 
-> **Note:** [Typed arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) like {{jsxref("Int32Array")}} and {{jsxref("Uint8Array")}}, are {{Glossary("serializable object","serializable")}}, but not transferable.
+> [!NOTE]
+> [Typed arrays](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) like {{jsxref("Int32Array")}} and {{jsxref("Uint8Array")}}, are {{Glossary("serializable object","serializable")}}, but not transferable.
 > However their underlying buffer is an {{jsxref("ArrayBuffer")}}, which is a transferable object.
 > We could have sent `uInt8Array.buffer` in the data parameter, but not `uInt8Array` in the transfer array.
 
@@ -78,20 +79,20 @@ Interfaces that can be transferred should include this information in their intr
 Some of the items that various specifications indicate can be _transferred_ are listed below (this list may not be exhaustive!):
 
 - {{jsxref("ArrayBuffer")}}
-- {{domxref("MessagePort")}}
-- {{domxref("ReadableStream")}}
-- {{domxref("WritableStream")}}
-- {{domxref("TransformStream")}}
-- {{domxref("WebTransportReceiveStream")}}
-- {{domxref("WebTransportSendStream")}}
 - {{domxref("AudioData")}}
 - {{domxref("ImageBitmap")}}
-- {{domxref("VideoFrame")}}
-- {{domxref("OffscreenCanvas")}}
-- {{domxref("RTCDataChannel")}}
 - {{domxref("MediaSourceHandle")}}
-- {{domxref("MIDIAccess")}}
 - {{domxref("MediaStreamTrack")}}
+- {{domxref("MessagePort")}}
+- {{domxref("MIDIAccess")}}
+- {{domxref("OffscreenCanvas")}}
+- {{domxref("ReadableStream")}}
+- {{domxref("RTCDataChannel")}}
+- {{domxref("TransformStream")}}
+- {{domxref("VideoFrame")}}
+- {{domxref("WebTransportReceiveStream")}}
+- {{domxref("WebTransportSendStream")}}
+- {{domxref("WritableStream")}}
 
 > [!NOTE]
 > Transferable objects are marked up in [Web IDL files](https://github.com/w3c/webref/tree/main/ed/idl) with the attribute `[Transferable]`.

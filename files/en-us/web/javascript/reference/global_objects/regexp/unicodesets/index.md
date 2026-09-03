@@ -4,9 +4,8 @@ short-title: unicodeSets
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.unicodeSets
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`unicodeSets`** accessor property of {{jsxref("RegExp")}} instances returns whether or not the `v` flag is used with this regular expression.
 

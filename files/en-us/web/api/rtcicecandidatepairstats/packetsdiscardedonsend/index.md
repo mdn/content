@@ -14,7 +14,7 @@ The **`packetsDiscardedOnSend`** property of the {{domxref("RTCIceCandidatePairS
 
 The errors might be caused, for example, by attempting to pass packets to the socket when it is full.
 
-### Value
+## Value
 
 An integer value indicating the total number of packets discarded due to socket errors.
 

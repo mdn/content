@@ -4,9 +4,8 @@ short-title: tan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/tan
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Math.tan
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.tan()`** static method returns the tangent of a number in radians.
 
@@ -98,3 +97,4 @@ function getTanDeg(deg) {
 - {{jsxref("Math.atan2()")}}
 - {{jsxref("Math.cos()")}}
 - {{jsxref("Math.sin()")}}
+- CSS {{cssxref("tan()")}} function

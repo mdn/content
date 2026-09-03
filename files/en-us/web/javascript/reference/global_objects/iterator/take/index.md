@@ -4,9 +4,8 @@ short-title: take()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/take
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.take
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`take()`** method of {{jsxref("Iterator")}} instances returns a new [iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_objects) that yields the given number of elements in this iterator and then terminates.
 

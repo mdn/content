@@ -6,9 +6,10 @@ page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Save-Data
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP **`Save-Data`** {{Glossary("request header")}} is a [network client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#network_client_hints) which indicates the client's preference for reduced data usage.
 This could be for reasons such as high transfer costs, slow connection speeds, etc.
@@ -114,7 +115,7 @@ Content-Type: image/jpeg
 
 ## See also
 
-- CSS `@media` feature [`prefers-reduced-data`](/en-US/docs/Web/CSS/@media/prefers-reduced-data) {{experimental_inline}}
+- CSS `@media` feature {{cssxref("@media/prefers-reduced-data")}} {{experimental_inline}}
 - {{HTTPHeader("Vary")}} header which indicates that the content served varies depending on the value of `Save-Data` (see [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Guides/Caching#vary))
 - {{domxref("NetworkInformation.saveData")}}
 - [Help Your Users `Save-Data`](https://css-tricks.com/help-users-save-data/) on css-tricks.com

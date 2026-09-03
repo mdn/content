@@ -3,9 +3,8 @@ title: webRequest.StreamFilter.status
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/status
 page-type: webextension-api-property
 browser-compat: webextensions.api.webRequest.StreamFilter.status
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A string that describes the current status of the request. It will be one of the following values:
 
@@ -23,10 +22,6 @@ A string that describes the current status of the request. It will be one of the
   - : The extension has disconnected the filter from the request by calling the filter's {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}} function. All further data will be delivered directly, without passing through the filter. The filter will not fire any more events, and the extension may not call any filter functions.
 - `"failed"`
   - : An error has occurred and the filter has been disconnected from the request. The extension can find an error message in {{WebExtAPIRef("webRequest.StreamFilter.error", "error")}}, and may not call any filter functions.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -60,3 +55,7 @@ browser.webRequest.onBeforeRequest.addListener(
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

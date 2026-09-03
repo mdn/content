@@ -3,9 +3,8 @@ title: runtime.sendMessage()
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 page-type: webextension-api-function
 browser-compat: webextensions.api.runtime.sendMessage
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Sends a single message to event listeners within your extension or a different extension.
 
@@ -33,7 +32,6 @@ let sending = browser.runtime.sendMessage(
 ### Parameters
 
 - `extensionId` {{optional_inline}}
-
   - : `string`. The ID of the extension to send the message to. Include this to send the message to a different extension. If the intended recipient has set an ID explicitly using the [browser_specific_settings](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) key in manifest.json, then `extensionId` should have that value. Otherwise it should have the ID that was generated for the intended recipient.
 
     If `extensionId` is omitted, the message is sent to your extension.
@@ -41,11 +39,8 @@ let sending = browser.runtime.sendMessage(
 - `message`
   - : `any`. An object that can be structured clone serialized (see [Data cloning algorithm](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)).
 - `options` {{optional_inline}}
-
   - : `object`.
-
     - `includeTlsChannelId` {{optional_inline}}
-
       - : `boolean`. Whether the TLS channel ID will be passed into {{WebExtAPIRef('runtime.onMessageExternal')}} for processes that are listening for the connection event.
 
         This option is only supported in Chromium-based browsers.
@@ -54,9 +49,7 @@ Depending on the arguments it is given, this API is sometimes ambiguous. The fol
 
 - **if one argument is given**, it is the message to send, and the message will be sent internally.
 - **if two arguments are given:**
-
   - the arguments are interpreted as `(message, options)`, and the message is sent internally, if the second argument is any of the following:
-
     1. a valid `options` object (meaning, it is an object which contains only the properties of `options` that the browser supports)
     2. null
     3. undefined
@@ -70,10 +63,6 @@ Note that before Firefox 55, the rules were different in the 2-argument case. Un
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If the receiver sent a response, this will be fulfilled with the response. Otherwise it will be fulfilled with no arguments. If an error occurs while connecting to the extension, the promise will be rejected with an error message.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -117,6 +106,10 @@ browser.runtime.onMessage.addListener(handleMessage);
 > Examples using a Promise are available in the [examples section](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#examples) of the {{WebExtAPIRef('runtime.onMessage')}} listener.
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#method-sendMessage) API. This documentation is derived from [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) in the Chromium code.

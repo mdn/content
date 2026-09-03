@@ -25,7 +25,7 @@ encode(frame, options)
 - `options` {{optional_inline}}
   - : An object containing the following members:
     - `keyFrame` {{optional_inline}}
-      - : A {{jsxref("boolean")}}, defaulting to `false` giving the user agent flexibility to decide if this frame should be encoded as a key frame. If `true` this indicates that the given frame must be encoded as a key frame.
+      - : A {{jsxref("Boolean")}}, defaulting to `false` giving the user agent flexibility to decide if this frame should be encoded as a key frame. If `true` this indicates that the given frame must be encoded as a key frame.
     - `vp9` {{optional_inline}}
       - : Encode options for the [VP9](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#vp9) codec.
         - `quantizer`
@@ -52,7 +52,7 @@ None ({{jsxref("undefined")}}).
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("VideoEncoder.state","state")}} is not `"configured"`.
 - `DataError` {{domxref("DOMException")}}
-  - : Thrown if the `chunk` cannot be decoded due to relying on other frames for decoding.
+  - : Thrown if the given `frame` object's rotation and flip do not match the rotation and flip of the first {{domxref("VideoFrame")}} passed to `encode()` (the "active orientation").
 
 ## Examples
 

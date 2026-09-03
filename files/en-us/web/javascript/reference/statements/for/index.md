@@ -3,9 +3,8 @@ title: for
 slug: Web/JavaScript/Reference/Statements/for
 page-type: javascript-statement
 browser-compat: javascript.statements.for
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`for`** statement creates a loop that consists of three optional expressions, enclosed in parentheses and separated by semicolons, followed by a statement (usually a [block statement](/en-US/docs/Web/JavaScript/Reference/Statements/block)) to be executed in the loop.
 
@@ -30,13 +29,11 @@ for (initialization; condition; afterthought)
 ```
 
 - `initialization` {{optional_inline}}
-
   - : An expression (including [assignment expressions](/en-US/docs/Web/JavaScript/Reference/Operators/Assignment)) or variable declaration evaluated once before the loop begins. Typically used to initialize a counter variable. This expression may optionally declare new variables with `var` or `let` keywords. Variables declared with `var` are not local to the loop, i.e., they are in the same scope the `for` loop is in. Variables declared with `let` are local to the statement.
 
     The result of this expression is discarded.
 
 - `condition` {{optional_inline}}
-
   - : An expression to be evaluated before each loop iteration. If this expression [evaluates to true](/en-US/docs/Glossary/Truthy), `statement` is executed. If the expression [evaluates to false](/en-US/docs/Glossary/Falsy), execution exits the loop and goes to the first statement after the `for` construct.
 
     This conditional test is optional. If omitted, the condition always evaluates to true.
@@ -178,7 +175,7 @@ The scoping effect of the initialization block can be understood as if the decla
 
 So re-assigning the new variables within `afterthought` does not affect the bindings from the previous iteration.
 
-A new lexical scope is also created after `initialization`, just before `condition` is evaluated for the first time. These details can be observed by creating closures, which allow to get hold of a binding at any particular point. For example, in this code a closure created within the `initialization` section does not get updated by re-assignments of `i` in the `afterthought`:
+A new lexical scope is also created after `initialization`, just before `condition` is evaluated for the first time. These details can be observed by creating closures, which allow you to get hold of a binding at any particular point. For example, in this code a closure created within the `initialization` section does not get updated by re-assignments of `i` in the `afterthought`:
 
 ```js
 for (let i = 0, getI = () => i; i < 3; i++) {
@@ -199,7 +196,7 @@ for (let i = 0, getI = () => i; i < 3; i++, getI = () => i) {
 The `i` variable inside the `initialization` is distinct from the `i` variable inside every iteration, including the first. So, in this example, `getI` returns 0, even though the value of `i` inside the iteration is incremented beforehand:
 
 ```js
-for (let i = 0, getI = () => i; i < 3; ) {
+for (let i = 0, getI = () => i; i < 3;) {
   i++;
   console.log(getI());
 }

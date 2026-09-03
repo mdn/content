@@ -2,9 +2,8 @@
 title: FTP
 slug: Glossary/FTP
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **FTP** (File Transfer Protocol) is an insecure {{glossary("protocol")}} for transferring files from one {{glossary("host")}} to another over the Internet.
 

@@ -39,19 +39,23 @@ For example, look at the [Fetch API](/en-US/docs/Web/API/Fetch_API) page on MDN.
 The corresponding entry in `GroupData.json` looks like this:
 
 ```json
-"Fetch API": {
-    "overview":   [ "Fetch API"],
-    "interfaces": [ "Headers",
-                    "Request",
-                    "Response",
-                    "FetchController",
-                    "FetchObserver",
-                    "FetchSignal",
-                    "ObserverCallback" ],
-    "methods":    [ "fetch()" ],
+{
+  "Fetch API": {
+    "overview": ["Fetch API"],
+    "interfaces": [
+      "Headers",
+      "Request",
+      "Response",
+      "FetchController",
+      "FetchObserver",
+      "FetchSignal",
+      "ObserverCallback"
+    ],
+    "methods": ["fetch()"],
     "properties": [],
-    "events":     []
-},
+    "events": []
+  }
+}
 ```
 
 As you can see, we've used "Fetch API" for the name, and inside the object value we include a number of sub-members.

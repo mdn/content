@@ -6,9 +6,10 @@ page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.cross-origin-isolated
+sidebar: http
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `cross-origin-isolated` directive controls whether the current document is allowed to use APIs that require {{domxref("Window.crossOriginIsolated", "cross-origin isolation", "", "nocode")}}.
 

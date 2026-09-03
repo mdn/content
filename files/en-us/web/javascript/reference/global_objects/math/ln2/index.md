@@ -4,9 +4,8 @@ short-title: LN2
 slug: Web/JavaScript/Reference/Global_Objects/Math/LN2
 page-type: javascript-static-data-property
 browser-compat: javascript.builtins.Math.LN2
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Math.LN2`** static data property represents the natural logarithm of 2, approximately 0.693:
 

@@ -3,9 +3,8 @@ title: tabs.getZoomSettings()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/getZoomSettings
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabs.getZoomSettings
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets the current zoom settings for a specified tab.
 

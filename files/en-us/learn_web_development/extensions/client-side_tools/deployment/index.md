@@ -192,9 +192,11 @@ Let's get started.
 2. In your package.json, find your `scripts` member, and update it so that it contains the following test and build commands:
 
    ```json
-   "scripts": {
-     // …
-     "test": "vitest"
+   {
+     "scripts": {
+       // …
+       "test": "vitest"
+     }
    }
    ```
 
@@ -257,7 +259,7 @@ Let's get started.
    git push origin main
    ```
 
-   In some cases you might want to test the result of the built code (since this isn't quite the original code we wrote), so the test might need to be run after the build command. You'll need to consider all these individual aspects whilst you're working on your own projects.
+   In some cases you might want to test the result of the built code (since this isn't quite the original code we wrote), so the test might need to be run after the build command. You'll need to consider all these individual aspects while you're working on your own projects.
 
 Finally, a minute or so after pushing, GitHub Pages will deploy the project update. But only if it passes the test that was introduced.
 

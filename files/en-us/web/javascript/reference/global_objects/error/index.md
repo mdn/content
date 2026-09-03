@@ -3,9 +3,8 @@ title: Error
 slug: Web/JavaScript/Reference/Global_Objects/Error
 page-type: javascript-class
 browser-compat: javascript.builtins.Error
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 **`Error`** objects are thrown when runtime errors occur. The `Error` object can also be used as a base object for user-defined exceptions. See below for standard built-in error types.
 
@@ -101,7 +100,7 @@ try {
 
 ### Handling a specific error type
 
-You can choose to handle only specific error types by testing the error type with the {{jsxref("Operators/instanceof", "instanceof")}} keyword:
+You can choose to handle only specific error types by testing the error type with the {{jsxref("instanceof")}} keyword:
 
 ```js
 try {

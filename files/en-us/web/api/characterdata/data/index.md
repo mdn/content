@@ -8,7 +8,7 @@ browser-compat: api.CharacterData.data
 
 {{APIRef("DOM")}}
 
-The **`data`** property of the {{domxref("CharacterData")}} interface represent the value of the current object's data.
+The **`data`** property of the {{domxref("CharacterData")}} interface represents the value of the current object's data.
 
 ## Value
 
@@ -18,7 +18,8 @@ When set to the `null` value, that `null` value is converted to the empty string
 
 ## Example
 
-> **Note:** {{domxref("CharacterData")}} is an abstract interface.
+> [!NOTE]
+> {{domxref("CharacterData")}} is an abstract interface.
 > The examples below use two concrete interfaces implementing it, {{domxref("Text")}} and {{domxref("Comment")}}.
 
 ### Reading a comment using data

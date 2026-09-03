@@ -27,7 +27,7 @@ None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves to an {{jsxref("DataView")}}.
+A {{jsxref("Promise")}} that resolves to a {{jsxref("DataView")}}.
 
 ## Specifications
 

@@ -2,9 +2,8 @@
 title: WebVTT
 slug: Glossary/WebVTT
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 WebVTT (Web Video Text Tracks) is a {{Glossary("W3C")}} specification for a file format marking up text track resources in combination with the HTML {{HTMLElement("track")}} element.
 

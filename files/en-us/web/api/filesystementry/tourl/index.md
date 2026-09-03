@@ -9,7 +9,7 @@ status:
 browser-compat: api.FileSystemEntry.toURL
 ---
 
-{{APIRef("File and Directory Entry API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("File and Directory Entry API")}}{{Non-standard_Header}}
 
 The {{domxref("FileSystemEntry")}} interface's method
 **`toURL()`** creates and
@@ -51,9 +51,9 @@ contains an image file named `awesome-sauce.jpg`, the URL returned by
 Code that makes use of this might look like this:
 
 ```js
-let img = document.createElement("img");
-
+const img = document.createElement("img");
 img.src = imageFileEntry.toURL();
+img.alt = "";
 document.body.appendChild(img);
 ```
 
@@ -62,7 +62,8 @@ like this being appended to the end of the document:
 
 ```html
 <img
-  src="filesystem:http://my-awesome-website.woot/temporary/awesome-sauce.jpg" />
+  src="filesystem:http://my-awesome-website.woot/temporary/awesome-sauce.jpg"
+  alt="" />
 ```
 
 ## Browser compatibility

@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Element.cut_event
 ---
 
-{{APIRef}}
+{{APIRef("Clipboard API")}}
 
 The **`cut`** event of the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) is fired when the user has initiated a "cut" action through the browser's user interface.
 
@@ -14,13 +14,13 @@ If the user attempts a cut action on uneditable content, the `cut` event still f
 
 The event's default action is to copy the current selection (if any) to the system clipboard and remove it from the document.
 
-A handler for this event can _modify_ the clipboard contents by calling {{domxref("DataTransfer.setData", "setData(format, data)")}} on the event's {{domxref("ClipboardEvent.clipboardData")}} property, and cancelling the default action using {{domxref("Event/preventDefault", "event.preventDefault()")}}.
+A handler for this event can _modify_ the clipboard contents by calling {{domxref("DataTransfer.setData", "setData(format, data)")}} on the event's {{domxref("ClipboardEvent.clipboardData")}} property, and canceling the default action using {{domxref("Event/preventDefault", "event.preventDefault()")}}.
 
-Note though that cancelling the default action will also prevent the document from being updated. So an event handler which wants to emulate the default action for "cut" while modifying the clipboard must also manually remove the selection from the document.
+Note though that canceling the default action will also prevent the document from being updated. So an event handler which wants to emulate the default action for "cut" while modifying the clipboard must also manually remove the selection from the document.
 
 The handler cannot _read_ the clipboard data.
 
-It's possible to construct and dispatch a [synthetic](/en-US/docs/Web/Events/Creating_and_triggering_events) `cut` event, but this will not affect the system clipboard or the document's contents.
+It's possible to construct and dispatch a [synthetic](/en-US/docs/Web/API/Document_Object_Model/Events#creating_and_dispatching_events) `cut` event, but this will not affect the system clipboard or the document's contents.
 
 This event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling) up the DOM tree, eventually to {{domxref("Document")}} and {{domxref("Window")}}, is [cancelable](/en-US/docs/Web/API/Event/cancelable) and is [composed](/en-US/docs/Web/API/Event/composed).
 

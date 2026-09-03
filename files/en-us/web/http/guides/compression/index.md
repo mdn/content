@@ -2,9 +2,8 @@
 title: Compression in HTTP
 slug: Web/HTTP/Guides/Compression
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 **Compression** is an important way to increase the performance of a website. For some documents, size reduction of up to 70% lowers the bandwidth capacity needs. Over the years, algorithms also got more efficient, and new ones are supported by clients and servers.
 
@@ -139,7 +138,7 @@ sequenceDiagram
 
 ![A client requesting content from a server with no compression-related headers. The server responds with an uncompressed body. The body is compressed and decompressed by nodes on the network before it reaches the client.](httpcomp2.svg)
 
-In practice, hop-by-hop compression is transparent for the server and the client, and is rarely used. {{HTTPHeader("TE")}} and {{HTTPHeader("Transfer-Encoding")}} are mostly used to send a response by chunks, allowing to start transmitting a resource without knowing its length.
+In practice, hop-by-hop compression is transparent for the server and the client, and is rarely used. {{HTTPHeader("TE")}} and {{HTTPHeader("Transfer-Encoding")}} are mostly used to send a response by chunks, allowing you to start transmitting a resource without knowing its length.
 
 Note that using {{HTTPHeader("Transfer-Encoding")}} and compression at the hop level is so rare that most servers, like Apache, Nginx, or IIS, have no easy way to configure it. Such configuration usually happens at the proxy level.
 

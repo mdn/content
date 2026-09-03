@@ -4,9 +4,8 @@ short-title: "[Symbol.split]()"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.@@split
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`[Symbol.split]()`** method of {{jsxref("RegExp")}} instances specifies how [`String.prototype.split`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/split) should behave when the regular expression is passed in as the separator.
 
@@ -47,7 +46,7 @@ An {{jsxref("Array")}} containing substrings as its elements. Capturing groups a
 
 ## Description
 
-This method is called internally in {{jsxref("String.prototype.split()")}} when a `RegExp` is passed as the separator. For example, the following two examples return the same result.
+This method exists for customizing the behavior of `split()` in `RegExp` subclasses. It is called internally in {{jsxref("String.prototype.split()")}} when a `RegExp` is passed as the separator. For example, the following two examples return the same result.
 
 ```js
 "a-b-c".split(/-/);
@@ -55,18 +54,20 @@ This method is called internally in {{jsxref("String.prototype.split()")}} when 
 /-/[Symbol.split]("a-b-c");
 ```
 
-This method exists for customizing the behavior of `split()` in `RegExp` subclasses.
+Like [`[Symbol.matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll), `[Symbol.split]()` starts by using [`[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species) to construct a new regex, thus avoiding mutating the original regexp in any way. The constructor receives `this` and the original flags, plus the `y` ("sticky") flag if it was not originally present. The `g` ("global") flag is irrelevant for the method's behavior. By default, due to the `RegExp()` constructor's behavior, [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) starts as 0.
 
-The `RegExp.prototype[Symbol.split]()` base method exhibits the following behaviors:
+If the target string is empty, and the regexp can match empty strings (for example, `/a?/`), an empty array is returned. Otherwise, if the regexp can't match an empty string, `[""]` is returned.
 
-- It starts by using [`[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.species) to construct a new regexp, thus avoiding mutating the original regexp in any way.
-- The regexp's `g` ("global") flag is ignored, and the `y` ("sticky") flag is always applied even when it was not originally present.
-- If the target string is empty, and the regexp can match empty strings (for example, `/a?/`), an empty array is returned. Otherwise, if the regexp can't match an empty string, `[""]` is returned.
-- The matching proceeds by continuously calling `this.exec()`. Since the regexp is always sticky, this will move along the string, each time yielding a matching string, index, and any capturing groups.
-- For each match, the substring between the last matched string's end and the current matched string's beginning is first appended to the result array. Then, the capturing groups' values are appended one-by-one.
-- If the current match is an empty string, or if the regexp doesn't match at the current position (since it's sticky), the `lastIndex` would still be advanced — if the regex is [Unicode-aware](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), it would advance by one Unicode code point; otherwise, it advances by one UTF-16 code unit.
-- If the regexp doesn't match the target string, the target string is returned as-is, wrapped in an array.
-- The returned array's length will never exceed the `limit` parameter, if provided, while trying to be as close as possible. Therefore, the last match and its capturing groups may not all be present in the returned array if the array is already filled.
+The regex's [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) method is repeatedly called, advancing the `lastIndex` each time, until it is at the end of the string. If the current match is an empty string, or if the regexp doesn't match at the current position (since it's sticky), the `lastIndex` would still be advanced — if the regex is [Unicode-aware](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode), it would advance by one Unicode code point; otherwise, it advances by one UTF-16 code unit.
+
+```js
+console.log("😄".split(/(?:)/g)); // [ '\ud83d', '\ude04' ]
+console.log("😄".split(/(?:)/gu)); // [ '😄' ]
+```
+
+For each match, the substring between the last matched string's end and the current matched string's beginning is first appended to the result array. Then, the capturing groups' values are appended one-by-one. The returned array's length will never exceed the `limit` parameter, if provided, while trying to be as close as possible. Therefore, the last match and its capturing groups may not all be present in the returned array if the array is already filled.
+
+If there was no successful match anywhere in the string, the target string is returned as-is, wrapped in an array.
 
 ## Examples
 

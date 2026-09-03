@@ -10,11 +10,8 @@ browser-compat: api.Element.ariaLabelledByElements
 
 The **`ariaLabelledByElements`** property of the {{domxref("Element")}} interface is an array containing the element (or elements) that provide an accessible name for the element it is applied to.
 
-The property is primarily intended to provide a label for elements that don't have a standard method for defining their accessible name.
-For example, this might be used to name a generic container element, such as a {{htmlelement("div")}} or {{htmlelement("span")}}, or a grouping of elements, such as an image with a slider that can be used to change its opacity.
-The property takes precedence over other mechanisms for providing an accessible name for elements, and may therefore also be used to provide a name for elements that would normally get it from their inner content or from an associated element such as a label.
-
-The [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) topic contains additional information about how the attribute and property should be used.
+The property reflects [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) (in some circumstances) and is similarly intended to provide a label for elements that don't have a standard method for defining their accessible name.
+The main difference is that the property can be used to provide label text from elements that don't have an `id`, and takes precedence over all other methods of setting the ARIA label.
 
 ## Value
 
@@ -29,9 +26,14 @@ When written, the assigned array is copied: subsequent changes to the array do n
 The property is a flexible alternative to using the [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute to set the accessible name.
 Unlike `aria-labelledby`, the elements assigned to this property do not have to have an [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute.
 
+For example, this might be used to label a container element, such as a {{htmlelement("div")}} or {{htmlelement("span")}} (provided it has been given an [appropriate ARIA role](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby#associated_roles)).
+The property takes precedence over other mechanisms for providing an accessible name for elements, and may therefore also be used to provide a name for elements that would normally get it from their inner content or from an associated element such as a label.
+
 The property reflects the element's [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) attribute when it is defined, but only for listed reference `id` values that match valid in-scope elements.
 If the property is set, then the corresponding attribute is cleared.
 For more information about reflected element references and scope see [Reflected element references](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references) in the _Reflected attributes_ guide.
+
+See [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) for additional information about how the attribute and property should be used.
 
 ## Examples
 

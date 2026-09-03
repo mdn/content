@@ -15,6 +15,8 @@ The **`register()`** method of the
 browser with the specified tag and options. It returns a {{jsxref('Promise')}} that
 resolves when the registration completes.
 
+The method requires the `periodic-background-sync` permission; see the API's [security considerations](/en-US/docs/Web/API/Web_Periodic_Background_Synchronization_API#security_considerations) for details.
+
 ## Syntax
 
 ```js-nolint
@@ -26,9 +28,7 @@ register(tag, options)
 - `tag`
   - : A unique {{jsxref('String')}} identifier.
 - `options` {{optional_inline}}
-
   - : An {{jsxref('Object')}} containing the following optional data:
-
     - `minInterval`
       - : The minimum interval time, in milliseconds, at which
         the periodic sync should occur.
@@ -40,11 +40,11 @@ Returns a {{jsxref("Promise")}} that resolves with {{jsxref('undefined')}}.
 ### Exceptions
 
 - `InvalidStateError` {{domxref("DOMException")}}
-  - : Returned if there is no active {{domxref('ServiceWorker')}} present.
+  - : Thrown if there is no active {{domxref('ServiceWorker')}} present.
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Returned if permission for background periodic sync is not granted.
+  - : Thrown if the `periodic-background-sync` permission is not granted.
 - `InvalidAccessError` {{domxref("DOMException")}}
-  - : Returned if the active window is not the main window (not of `auxiliary` or `top-level` type).
+  - : Thrown if the active window is not the main window (not of `auxiliary` or `top-level` type).
 
 ## Examples
 
@@ -75,4 +75,3 @@ async function registerPeriodicNewsCheck() {
 ## See also
 
 - [Richer offline experiences with the Periodic Background Sync API](https://developer.chrome.com/docs/capabilities/periodic-background-sync)
-- [A Periodic Background Sync demo app](https://webplatformapis.com/periodic_sync/periodicSync_improved.html)

@@ -3,9 +3,8 @@ title: 402 Payment Required
 slug: Web/HTTP/Reference/Status/402
 page-type: http-status-code
 spec-urls: https://httpwg.org/specs/rfc9110.html#status.402
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`402 Payment Required`** [client error response](/en-US/docs/Web/HTTP/Reference/Status#client_error_responses) status code is a **nonstandard** response status code reserved for future use.
 
@@ -29,7 +28,7 @@ The following example tries to make a call to a payment API using a POST request
 POST /merchant/transfers/payment HTTP/1.1
 Host: payments.example.com
 Content-Type: application/json
-Content-Length: 402
+Content-Length: 529
 
 {
   "payment_transfer": {
@@ -38,13 +37,13 @@ Content-Length: 402
     "currency": "EUR",
     "sender_account_uri": "pan:5299920000000149;exp=2020-08;cvc=123",
     "sender": {
-      "first_name": "Brian",
-      "middle_name": "Smith",
+      "first_name": "Amelia",
+      "middle_name": "Rosenburg",
       "email": "test123@sender.example.com"
     },
     "recipient": {
-      "first_name": "John",
-      "middle_name": "Tyler",
+      "first_name": "Tyrone",
+      "middle_name": "Johnston",
       "email": "test123@example.com",
       "merchant_id": "123"
     },
@@ -59,7 +58,7 @@ The server responds to the request with a 402 if there is a problem with the tra
 HTTP/1.1 402 Payment Required
 Date: Tue, 02 Jul 2024 12:56:49 GMT
 Content-Type: application/json
-Content-Length: 175
+Content-Length: 194
 
 {
   "error": {

@@ -3,11 +3,11 @@ title: width
 slug: Web/SVG/Reference/Attribute/width
 page-type: svg-attribute
 spec-urls:
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-width
-  - https://drafts.fxtf.org/filter-effects/#element-attrdef-filter-primitive-width
-  - https://drafts.fxtf.org/css-masking-1/#element-attrdef-mask-width
-  - https://svgwg.org/svg2-draft/geometry.html#Sizing
-  - https://svgwg.org/svg2-draft/pservers.html#PatternElementWidthAttribute
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-filter-width
+  - https://drafts.csswg.org/filter-effects-1/#element-attrdef-filter-primitive-width
+  - https://drafts.csswg.org/css-masking-1/#element-attrdef-mask-width
+  - https://w3c.github.io/svgwg/svg2-draft/geometry.html#Sizing
+  - https://w3c.github.io/svgwg/svg2-draft/pservers.html#PatternElementWidthAttribute
 sidebar: svgref
 ---
 
@@ -856,7 +856,8 @@ For {{SVGElement('use')}}, `width` defines the horizontal length for the referen
   </tbody>
 </table>
 
-> **Note:** `width` has no effect on `use` elements, unless the element referenced has a [viewBox](/en-US/docs/Web/SVG/Reference/Attribute/viewBox) - i.e., they only have an effect when `use` refers to a `svg` or `symbol` element.
+> [!NOTE]
+> `width` has no effect on `use` elements, unless the element referenced has a [viewBox](/en-US/docs/Web/SVG/Reference/Attribute/viewBox) - i.e., they only have an effect when `use` refers to a `svg` or `symbol` element.
 
 > [!NOTE]
 > Starting with SVG2, `width` is a _Geometry Property_ meaning this attribute can also be used as a CSS property for used elements.

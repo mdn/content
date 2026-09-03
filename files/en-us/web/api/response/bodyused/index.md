@@ -29,10 +29,8 @@ When the user clicks "Use response", we check whether the response has been used
 #### HTML
 
 ```html
-<button id="use">Use response</button>
-<button id="reset">Reset</button>
-<br />
-<img id="my-image" src="" />
+<p><button id="use">Use response</button> <button id="reset">Reset</button></p>
+<p><img id="my-image" src="" width="150" /></p>
 <pre id="log"></pre>
 ```
 
@@ -45,7 +43,7 @@ const myImage = document.querySelector("#my-image");
 const log = document.querySelector("#log");
 
 const responsePromise = fetch(
-  "https://upload.wikimedia.org/wikipedia/commons/7/77/Delete_key1.jpg",
+  "/shared-assets/images/examples/firefox-logo.svg",
 );
 
 useResponse.addEventListener("click", async () => {

@@ -78,7 +78,7 @@ The CSS styles the menu and submenu, and displays the submenu when the menu is h
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 6px 14px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 6px 14px 0px rgb(0 0 0 / 0.2);
   z-index: 1;
   top: 20px;
   left: 0;

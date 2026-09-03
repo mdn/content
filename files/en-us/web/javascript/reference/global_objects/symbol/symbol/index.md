@@ -4,9 +4,8 @@ short-title: Symbol()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/Symbol
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Symbol.Symbol
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Symbol()`** function returns primitive values of type Symbol.
 
@@ -37,7 +36,8 @@ Symbol()
 Symbol(description)
 ```
 
-> **Note:** `Symbol()` can only be called without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to construct it with `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Symbol()` can only be called without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to construct it with `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 
@@ -67,7 +67,7 @@ Symbol("foo") === Symbol("foo"); // false
 
 ### new Symbol()
 
-The following syntax with the {{jsxref("Operators/new", "new")}} operator will throw a
+The following syntax with the {{jsxref("new")}} operator will throw a
 {{jsxref("TypeError")}}:
 
 ```js example-bad

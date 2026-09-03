@@ -3,9 +3,8 @@ title: DataView
 slug: Web/JavaScript/Reference/Global_Objects/DataView
 page-type: javascript-class
 browser-compat: javascript.builtins.DataView
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`DataView`** view provides a low-level interface for reading and writing multiple number types in a binary {{jsxref("ArrayBuffer")}}, without having to care about the platform's [endianness](/en-US/docs/Glossary/Endianness).
 
@@ -25,7 +24,8 @@ const littleEndian = (() => {
 console.log(littleEndian); // true or false
 ```
 
-> **Note:** `DataView` defaults to big-endian read and write, but most platforms use little-endian.
+> [!NOTE]
+> `DataView` defaults to big-endian read and write, but most platforms use little-endian.
 
 ## Constructor
 
@@ -37,11 +37,11 @@ console.log(littleEndian); // true or false
 These properties are defined on `DataView.prototype` and shared by all `DataView` instances.
 
 - {{jsxref("DataView.prototype.buffer")}}
-  - : The {{jsxref("ArrayBuffer")}} referenced by this view. Fixed at construction time and thus **read only.**
+  - : Returns the {{jsxref("ArrayBuffer")}} referenced by the `DataView`.
 - {{jsxref("DataView.prototype.byteLength")}}
-  - : The length (in bytes) of this view. Fixed at construction time and thus **read only.**
+  - : Returns the length (in bytes) of the `DataView`.
 - {{jsxref("DataView.prototype.byteOffset")}}
-  - : The offset (in bytes) of this view from the start of its {{jsxref("ArrayBuffer")}}. Fixed at construction time and thus **read only.**
+  - : Returns the offset (in bytes) of the `DataView` from the start of its {{jsxref("ArrayBuffer")}}.
 - {{jsxref("Object/constructor", "DataView.prototype.constructor")}}
   - : The constructor function that created the instance object. For `DataView` instances, the initial value is the {{jsxref("DataView/DataView", "DataView")}} constructor.
 - `DataView.prototype[Symbol.toStringTag]`

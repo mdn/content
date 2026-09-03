@@ -2,9 +2,8 @@
 title: 2D collision detection
 slug: Games/Techniques/2D_collision_detection
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 Algorithms to detect collision in 2D games depend on the type of shapes that can collide (e.g., Rectangle to Rectangle, Rectangle to Circle, Circle to Circle). Generally you will have a simple generic shape that covers the entity known as a "hitbox" so even though collision may not be pixel perfect, it will look good enough and be performant across multiple entities. This article provides a review of the most common techniques used to provide collision detection in 2D games.
 
@@ -191,7 +190,7 @@ This is a collision algorithm that can detect a collision between any two _conve
 
 Implementing SAT is out of scope for this page so see the recommended tutorials below:
 
-1. [Separating Axis Theorem (SAT) explanation](https://www.sevenson.com.au/programming/sat/)
+1. [Separating Axis Theorem (SAT) explanation](https://www.sevenson.com.au/blog/sat/)
 2. [Collision detection and response](https://www.metanetsoftware.com/technique/tutorialA.html)
 3. [Collision detection Using the Separating Axis Theorem](https://code.tutsplus.com/collision-detection-using-the-separating-axis-theorem--gamedev-169t)
 4. [SAT (Separating Axis Theorem)](https://dyn4j.org/2010/01/sat/)

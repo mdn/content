@@ -2,9 +2,8 @@
 title: Federated identity
 slug: Glossary/Federated_identity
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **federated identity** system is one in which an {{glossary("identity provider", "identity provider (IdP)")}} acts as an intermediary between users and {{glossary("relying party", "relying parties")}}, enabling a user to use a single set of {{glossary("credential", "credentials")}} to authenticate with a number of different relying parties.
 

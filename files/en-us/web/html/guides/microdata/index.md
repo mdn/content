@@ -3,9 +3,8 @@ title: Using microdata in HTML
 short-title: Microdata
 slug: Web/HTML/Guides/Microdata
 page-type: guide
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 Microdata is part of the {{glossary("WHATWG")}} HTML Standard and is used to nest metadata within existing content on web pages. Search engines and web crawlers can extract and process microdata from a web page and use it to provide a richer browsing experience for users. Search engines benefit greatly from direct access to this structured data because it allows search engines to understand the information on web pages and provide more relevant results to users. Microdata uses a supporting vocabulary to describe an item and name-value pairs to assign values to its properties. Microdata is an attempt to provide a declarative way of annotating HTML elements with machine-readable tags than the similar approaches of using RDFa and classic microformats.
 
@@ -148,7 +147,7 @@ In some cases, search engines covering specific regions may provide locally-spec
 {{ EmbedLiveSample('HTML', '', '100') }}
 
 > [!NOTE]
-> A handy tool for extracting microdata structures from HTML is Google's [Structured Data Testing Tool](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data). Try it on the HTML shown above.
+> A handy tool for extracting and verifying microdata structures from HTML is the [Schema Markup Validator](https://validator.schema.org/). Try it on the HTML shown above.
 
 ## See also
 

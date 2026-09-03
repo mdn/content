@@ -4,9 +4,8 @@ short-title: isLockFree()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/isLockFree
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.isLockFree
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Atomics.isLockFree()`** static method is used to determine whether the `Atomics` methods use locks or atomic hardware operations when applied to typed arrays with the given element byte size. It is intended as an optimization primitive, so that high-performance algorithms can determine whether to use locks or atomic operations in critical sections. If an atomic primitive is not lock-free, it is often more efficient for an algorithm to provide its own locking.
 
@@ -42,7 +41,7 @@ A `true` or `false` value indicating whether the operation is lock free.
 
 ## Examples
 
-### Using isLockFree
+### Using Atomics.isLockFree()
 
 ```js
 Atomics.isLockFree(1); // true (platform-dependent)

@@ -2,9 +2,8 @@
 title: "SyntaxError: arguments is not valid in fields"
 slug: Web/JavaScript/Reference/Errors/Arguments_not_allowed
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "SyntaxError: arguments is not valid in fields" occurs when the [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) identifier is read in a class field initializer or in a static initialization block, outside of a non-[arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 

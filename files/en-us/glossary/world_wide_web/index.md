@@ -2,9 +2,8 @@
 title: World Wide Web
 slug: Glossary/World_Wide_Web
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 The _World Wide Web_—commonly referred to as **WWW**, **W3**, or **the Web**—is a system of interconnected public webpages accessible through the {{Glossary("Internet")}}. The Web is not the same as the Internet: the Web is one of many applications built on top of the Internet.
 

@@ -3,9 +3,8 @@ title: management.install()
 slug: Mozilla/Add-ons/WebExtensions/API/management/install
 page-type: webextension-api-function
 browser-compat: webextensions.api.management.install
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Installs and enables a theme extension from the given URL.
 
@@ -27,10 +26,6 @@ browser.management.install(options)
 ### Return value
 
 A [Promise](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an object, containing the `ExtensionID` defined for the theme in manifest.json.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -73,3 +68,7 @@ for (const url of themes) {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

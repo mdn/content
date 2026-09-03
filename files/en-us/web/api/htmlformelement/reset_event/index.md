@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLFormElement.reset_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`reset`** event fires when a {{HTMLElement("form")}} is reset.
 
@@ -42,12 +42,13 @@ This example uses {{domxref("EventTarget.addEventListener()")}} to listen for fo
 ### JavaScript
 
 ```js
+const form = document.getElementById("form");
+const log = document.getElementById("log");
+
 function logReset(event) {
   log.textContent = `Form reset! Timestamp: ${event.timeStamp}`;
 }
 
-const form = document.getElementById("form");
-const log = document.getElementById("log");
 form.addEventListener("reset", logReset);
 ```
 

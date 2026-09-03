@@ -4,9 +4,8 @@ short-title: flat()
 slug: Web/JavaScript/Reference/Global_Objects/Array/flat
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.flat
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`flat()`** method of {{jsxref("Array")}} instances creates a new array with all sub-array
 elements concatenated into it recursively up to the specified depth.

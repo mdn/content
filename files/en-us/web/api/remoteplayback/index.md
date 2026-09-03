@@ -16,9 +16,7 @@ The **`RemotePlayback`** interface of the {{domxref('Remote Playback API','','',
 _Also inherits properties from its parent interface, {{DOMxRef("EventTarget")}}._
 
 - {{domxref("RemotePlayback.state")}} {{ReadOnlyInline}}
-
   - : Represents the `RemotePlayback` connection's state. One of:
-
     - `"connecting"`
       - : The user agent is attempting to initiate remote playback with the selected device.
     - `"connected"`

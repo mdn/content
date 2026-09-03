@@ -5,9 +5,8 @@ page-type: webextension-api-type
 browser-compat:
   - webextensions.api.declarativeNetRequest.RuleAction.requestHeaders
   - webextensions.api.declarativeNetRequest.RuleAction.responseHeaders
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The request or response header to modify for a request, declared in the `rule.action.requestHeaders` array or `rule.action.responseHeaders` array for rules whose [`rule.action.type`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/RuleAction#type_2) is "modifyHeaders".
 

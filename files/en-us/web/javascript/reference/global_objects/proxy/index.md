@@ -3,9 +3,8 @@ title: Proxy
 slug: Web/JavaScript/Reference/Global_Objects/Proxy
 page-type: javascript-class
 browser-compat: javascript.builtins.Proxy
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Proxy`** object enables you to create a proxy for another object, which can intercept and redefine fundamental operations for that object.
 
@@ -99,7 +98,7 @@ The following terms are used when talking about the functionality of proxies.
   - : The function that defines the behavior for the corresponding [object internal method](#object_internal_methods). (This is analogous to the concept of _traps_ in operating systems.)
 - target
   - : Object which the proxy virtualizes. It is often used as storage backend for the proxy. Invariants (semantics that remain unchanged) regarding object non-extensibility or non-configurable properties are verified against the target.
-- invariants
+- {{Glossary("invariant", "invariants")}}
   - : Semantics that remain unchanged when implementing custom operations. If your trap implementation violates the invariants of a handler, a {{jsxref("TypeError")}} will be thrown.
 
 ### Object internal methods
@@ -191,11 +190,11 @@ p.a = 37; // Operation forwarded to the target
 console.log(target.a); // 37 (The operation has been properly forwarded!)
 ```
 
-Note that while this "no-op" works for plain JavaScript objects, it does not work for native objects, such as DOM elements, [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) objects, or anything that has internal slots. See [no private property forwarding](#no_private_property_forwarding) for more information.
+Note that while this "no-op" works for plain JavaScript objects, it does not work for native objects, such as DOM elements, [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) objects, or anything that has internal slots. See [no private field forwarding](#no_private_field_forwarding) for more information.
 
-### No private property forwarding
+### No private field forwarding
 
-A proxy is still another object with a different identity — it's a _proxy_ that operates between the wrapped object and the outside. As such, the proxy does not have direct access to the original object's [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties).
+A proxy is still another object with a different identity — it's a _proxy_ that operates between the wrapped object and the outside. As such, the proxy does not have direct access to the original object's [private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements).
 
 ```js
 class Secret {
@@ -208,17 +207,17 @@ class Secret {
   }
 }
 
-const aSecret = new Secret("123456");
-console.log(aSecret.secret); // [REDACTED]
+const secret = new Secret("123456");
+console.log(secret.secret); // [REDACTED]
 // Looks like a no-op forwarding...
-const proxy = new Proxy(aSecret, {});
+const proxy = new Proxy(secret, {});
 console.log(proxy.secret); // TypeError: Cannot read private member #secret from an object whose class did not declare it
 ```
 
 This is because when the proxy's `get` trap is invoked, the `this` value is the `proxy` instead of the original `secret`, so `#secret` is not accessible. To fix this, use the original `secret` as `this`:
 
 ```js
-const proxy = new Proxy(aSecret, {
+const proxy = new Proxy(secret, {
   get(target, prop, receiver) {
     // By default, it looks like Reflect.get(target, prop, receiver)
     // which has a different value of `this`
@@ -238,8 +237,8 @@ class Secret {
   }
 }
 
-const aSecret = new Secret();
-const proxy = new Proxy(aSecret, {
+const secret = new Secret();
+const proxy = new Proxy(secret, {
   get(target, prop, receiver) {
     const value = target[prop];
     if (value instanceof Function) {
@@ -404,66 +403,6 @@ console.log(products.browsers);
 
 console.log(products.latestBrowser);
 //  'Edge'
-```
-
-### A complete traps list example
-
-Now in order to create a complete sample `traps` list, for didactic purposes, we will try to proxify a _non-native_ object that is particularly suited to this type of operation: the `docCookies` global object created by [a simple cookie framework](https://reference.codeproject.com/dom/document/cookie/simple_document.cookie_framework).
-
-```js
-/*
-  const docCookies = ... get the "docCookies" object here:
-  https://reference.codeproject.com/dom/document/cookie/simple_document.cookie_framework
-*/
-
-const docCookies = new Proxy(docCookies, {
-  get(target, key) {
-    return target[key] ?? target.getItem(key) ?? undefined;
-  },
-  set(target, key, value) {
-    if (key in target) {
-      return false;
-    }
-    return target.setItem(key, value);
-  },
-  deleteProperty(target, key) {
-    if (!(key in target)) {
-      return false;
-    }
-    return target.removeItem(key);
-  },
-  ownKeys(target) {
-    return target.keys();
-  },
-  has(target, key) {
-    return key in target || target.hasItem(key);
-  },
-  defineProperty(target, key, descriptor) {
-    if (descriptor && "value" in descriptor) {
-      target.setItem(key, descriptor.value);
-    }
-    return target;
-  },
-  getOwnPropertyDescriptor(target, key) {
-    const value = target.getItem(key);
-    return value
-      ? {
-          value,
-          writable: true,
-          enumerable: true,
-          configurable: false,
-        }
-      : undefined;
-  },
-});
-
-/* Cookies test */
-
-console.log((docCookies.myCookie1 = "First value"));
-console.log(docCookies.getItem("myCookie1"));
-
-docCookies.setItem("myCookie1", "Changed value");
-console.log(docCookies.myCookie1);
 ```
 
 ## Specifications
