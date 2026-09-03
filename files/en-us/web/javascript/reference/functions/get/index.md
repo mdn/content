@@ -157,7 +157,7 @@ console.log(MyConstants.foo); // 'foo', a static getter's value cannot be change
 
 Getters give you a way to _define_ a property of an object, but they do not _calculate_ the property's value until it is accessed. A getter defers the cost of calculating the value until the value is needed. If it is never needed, you never pay the cost.
 
-An additional optimization technique to lazify or delay the calculation of a property value and cache it for later access are _smart_ (or _[memoized](https://en.wikipedia.org/wiki/Memoization)_) getters. The value is calculated the first time the getter is called and is then cached so subsequent accesses return the cached value without recalculating it. This is useful in the following situations:
+An additional optimization technique to lazify or delay the calculation of a property value and cache it for later access are _smart_ (or _{{Glossary("Memoization", "memoized")}}_) getters. The value is calculated the first time the getter is called and is then cached so subsequent accesses return the cached value without recalculating it. This is useful in the following situations:
 
 - If the calculation of a property value is expensive (takes much RAM or CPU time, spawns worker threads, retrieves remote file, etc.).
 - If the value isn't needed just now. It will be used later, or in some cases, it's not used at all.
@@ -166,7 +166,7 @@ An additional optimization technique to lazify or delay the calculation of a pro
 > [!NOTE]
 > This means that you shouldn't write a lazy getter for a property whose value you expect to change, because if the getter is lazy, then it will not recalculate the value.
 >
-> Note that getters are not "lazy" or "memoized" by nature; you must implement this technique if you desire this behavior.
+> Note that getters are not "lazy" or "{{Glossary("Memoization", "memoized")}}" by nature; you must implement this technique if you desire this behavior.
 
 In the following example, the object has a getter as its own property. On getting the property, the property is removed from the object and re-added, but implicitly as a data property this time. Finally, the value gets returned.
 

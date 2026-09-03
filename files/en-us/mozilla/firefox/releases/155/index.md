@@ -16,7 +16,7 @@ Firefox 155 was released on [September 1, 2026](https://whattrainisitnow.com/rel
 - The media feature emulation buttons in the [Rules view](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html) are now collected into a dedicated emulation panel, which is opened using the `@` button.
   The panel also adds emulation of the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} media feature.
   ([Firefox bug 1692434](https://bugzil.la/1692434) and [Firefox bug 1477920](https://bugzil.la/1477920)).
-- The [JSON Viewer](https://firefox-source-docs.mozilla.org/devtools-user/json_viewer/index.html) now opens [JSON Lines](https://jsonlines.org/) (NDJSON) documents, which are served as `application/jsonlines`, `application/x-ndjson`, or `text/jsonl`, or have a `.jsonl` file extension.
+- The [JSON Viewer](https://firefox-source-docs.mozilla.org/devtools-user/json_viewer/index.html) now opens [JSON Lines](https://jsonlines.org/) (NDJSON) documents, which are served as `application/jsonl`, `application/jsonlines`, `application/x-ndjson`, or `text/jsonl`, or have a `.jsonl` file extension.
   Each line is parsed separately into its own collapsible entry, labeled with the line number it came from, and a line that fails to parse is reported inline without affecting the rest of the document.
   ([Firefox bug 2055774](https://bugzil.la/2055774), [Firefox bug 2060972](https://bugzil.la/2060972), and [Firefox bug 2060529](https://bugzil.la/2060529)).
 - Added a keyboard shortcut for disabling breakpoints in the [Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html).
@@ -179,3 +179,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **`border-area` value for `background-clip`**: `layout.css.background-clip.border-area.enabled`
 
   The [`border-area`](/en-US/docs/Web/CSS/Reference/Properties/background-clip#border-area) value of the {{cssxref("background-clip")}} CSS property clips the background to the area painted by the element's border, which makes it possible to use a gradient or image as a border. ([Firefox bug 2045230](https://bugzil.la/2045230)).
+
+- **`view-timeline` includes `view-timeline-inset`**: `layout.css.scroll-driven-animations.enabled`
+
+  The {{cssxref("view-timeline")}} shorthand property now supports the {{cssxref("view-timeline-inset")}} property. The shorthand lets you specify start and/or end inset (or outset) values to adjust the position of the view progress timeline. ([Firefox bug 2046602](https://bugzil.la/2046602)).
