@@ -52,11 +52,10 @@ browser-compat: api.feature
 
 ### Feature status page banners
 
-The following macros are used to render the status banners in page headers:
+> [!WARNING]
+> The `\{{Deprecated_Header}}` macro is no longer required to generate a **Deprecated status** banner. The platform now automatically generates the banner using the [`status`](#feature_status_icons_in_sidebars) front matter property or data from [web-features](https://github.com/web-platform-dx/web-features).
 
-- `\{{Deprecated_Header}}`
-  - : For `deprecated` status. It generates a **Deprecated status** banner:
-    {{deprecated_header}}
+The following macros are used to render the status banners in page headers:
 
 - `\{{SeeCompatTable}}`
   - : For `experimental` status. It generates an **Experimental status** banner:
