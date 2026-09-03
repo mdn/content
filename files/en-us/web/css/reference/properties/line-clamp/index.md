@@ -40,7 +40,7 @@ line-clamp: unset;
 
 ### Values
 
-This property is specified as a single value from the following list:
+This property is specified as one or two space-separated values from the following list:
 
 - `none`
   - : This value specifies that the content won't be clamped.
