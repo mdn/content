@@ -146,7 +146,7 @@ Ordered lists ({{HTMLElement("ol")}}) come with built-in `list-item` counters th
 
 ### Stuff
 
-The property creates a counter with the name provided and initializes the value of the counter. By default, the counter value is set to `0`. 
+The property creates a counter with the name provided and initializes the value of the counter. By default, the counter value is set to `0`.
 counter-reset: my-counter;
 
 ## Formal definition
