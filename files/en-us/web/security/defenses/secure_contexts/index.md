@@ -18,7 +18,9 @@ Some APIs on the web are very powerful, giving an attacker the ability to do the
 
 ## When is a context considered secure?
 
-A context is considered secure when it meets certain minimum standards of authentication and confidentiality defined in the [Secure Contexts](https://w3c.github.io/webappsec-secure-contexts/) specification. A particular document is considered to be in a secure context when it is the [active document](https://html.spec.whatwg.org/multipage/browsers.html#active-document) of a [top-level browsing context](https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context) (basically, a containing window or tab) that is a secure context.
+A context is considered secure when it meets certain minimum standards of authentication and confidentiality defined in the [Secure Contexts](https://w3c.github.io/webappsec-secure-contexts/) specification. In plain terms, this means the browser can be confident about which server actually sent the document, and that nobody on the network between the browser and that server could read or tamper with it in transit. Serving a document over `https://` is the usual way to achieve this, because TLS both authenticates the server and encrypts the connection. Without these guarantees, a [manipulator in the middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM) attacker could intercept or alter the document before it reaches the browser, so it isn't safe to expose powerful APIs to it.
+
+A particular document is considered to be in a secure context when it is the [active document](https://html.spec.whatwg.org/multipage/browsers.html#active-document) of a [top-level browsing context](https://html.spec.whatwg.org/multipage/browsers.html#top-level-browsing-context) (basically, a containing window or tab) that is a secure context.
 
 For example, even for a document delivered over TLS within an {{HTMLElement("iframe")}}, its context is **not** considered secure if it has an ancestor that was not also delivered over TLS.
 
@@ -29,9 +31,11 @@ Resources that are not local, to be considered secure, must meet the following c
 - They must be served over `https://` URLs.
 - The security properties of the network channel used to deliver the resource must not be considered deprecated.
 
+Some origins that don't meet these `https://` criteria are still trusted enough to count toward a secure context. These are called **potentially trustworthy origins**, and are described in the next section.
+
 ## Potentially trustworthy origins
 
-A **potentially trustworthy origin** is one that the browser can generally trust to deliver data security, even though strictly speaking it does not meet the criteria of a secure context.
+A document's origin must be a **potentially trustworthy origin** for its context to be secure: one that the browser can generally trust to deliver data securely, even though it does not meet the `https://` criteria described above.
 
 Locally-delivered resources such as those with `http://127.0.0.1`, `http://localhost`, and `http://*.localhost` URLs (for example, `http://dev.whatever.localhost/`) are not delivered using HTTPS, but they can be considered to have been delivered securely because they are on the same device as the browser. They are therefore potentially trustworthy. This is convenient for developers testing applications locally.
 
