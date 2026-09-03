@@ -657,9 +657,9 @@ input[type="file"]::file-selector-button {
 
 {{EmbedLiveSample("file-selector-button", '100%', 100)}}
 
-You can't style the text beside the button — the "no file chosen" message — or the displayed filename once chosen. The browser generates that text and doesn't expose it to CSS. To work around this problem, you can use the control's label and the fact that clicking the label activates the control.
+You can't style the text beside the button — the "no file chosen" message — or the displayed filename once chosen. The browser generates that text and doesn't expose it to CSS. To work around this problem, use the control's label and the fact that clicking the label activates the control.
 
-You could hide the actual form input using something like this:
+You can hide the actual form input using something like this:
 
 ```css
 input[type="file"] {
@@ -792,18 +792,18 @@ function returnFileSize(number) {
 
 {{EmbedLiveSample("styled-file-picker", '100%', 200)}}
 
-You can also press the **Play** button to run the example in MDN Playground and edit the source code.
+You can also press the **Play** button to run the example in MDN Playground and check out the full source code.
 
 ### Meters and progress bars
 
-[`<meter>`](/en-US/docs/Web/HTML/Reference/Elements/meter) and [`<progress>`](/en-US/docs/Web/HTML/Reference/Elements/progress) are possibly the worst of the lot. As you saw in the earlier example, we can set them to the desired width relatively accurately. But beyond that, they are really difficult to style in any way. They don't handle height settings consistently between each other and between browsers, you can color the background but not the foreground bar, and setting `appearance: none` on them makes things worse, not better.
+[`<meter>`](/en-US/docs/Web/HTML/Reference/Elements/meter) and [`<progress>`](/en-US/docs/Web/HTML/Reference/Elements/progress) are possibly the worst of the lot. As you saw in the earlier example, we can set them to the desired width relatively accurately. But beyond that, they are really difficult to style. They don't handle height settings consistently between each other and between browsers, you can color the background but not the foreground bar, and setting `appearance: none` on them makes things worse, not better.
 
-It is easier to create your own custom solution for these features if you want to control the styling, or use a third-party solution such as [progressbar.js](https://kimmobrunfeldt.github.io/progressbar.js/#examples).
+It is easier to create your own custom solution to control the styling for these features, or use a third-party solution such as [progressbar.js](https://kimmobrunfeldt.github.io/progressbar.js/#examples).
 
 ## Summary
 
-While there are still difficulties using CSS with HTML forms, there are ways to get around many of the problems. There are no clean, universal solutions, but modern browsers offer new possibilities. For now, the best solution is to learn more about the way the different browsers support CSS when applied to HTML form controls.
+Styling HTML forms presents some challenges; there are however ways to get around many of them. There are no clean, universal solutions, but modern browsers offer new possibilities. For now, the best solution is to learn more about how different browsers support CSS when applied to HTML form controls.
 
-In the next article of this module, we will explore creating [fully-customized `<select>` elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) using the dedicated, modern HTML and CSS features available for this purpose.
+In the next article, we will explore creating [fully-customized `<select>` elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) using the dedicated, modern HTML and CSS features available for this purpose.
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms/Customizable_select", "Learn_web_development/Extensions/Forms")}}
