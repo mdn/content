@@ -22,7 +22,6 @@ sidebar:
     details: closed
   - type: listSubPages
     path: /Web/Privacy/Guides/Third-party_cookies
-    depth: 2
     nested: true
     link: /Web/Privacy/Guides/Third-party_cookies
     details: closed
