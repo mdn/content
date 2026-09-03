@@ -10,13 +10,13 @@ browser-compat: api.Element.keyup_event
 
 The **`keyup`** event is fired when a key is released.
 
-Because the event fires after the key is released, modifier-key properties such as `ctrlKey` reflect the state after release. For example, `ctrlKey` is `false` on the `keyup` event for the Control key itself.
-
 The [`keydown`](/en-US/docs/Web/API/Element/keydown_event) and `keyup` events provide a code indicating which key is pressed, while `keypress` indicates which character was entered. For example, a lowercase "a" will be reported as 65 by `keydown` and `keyup`, but as 97 by `keypress`. An uppercase "A" is reported as 65 by all events.
 
 The event target of a key event is the currently focused element which is processing the keyboard activity. This includes: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}, anything that is [`contentEditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable), and anything else that can be interacted with the keyboard, such as {{HTMLElement("a")}}, {{HTMLElement("button")}}, and {{HTMLElement("summary")}}. If no suitable element is in focus, the event target will be the {{HTMLElement("body")}} or the root. The event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling). It can reach {{domxref("Document")}} and {{domxref("Window")}}.
 
 The event target might change between different key events. For example, the `keydown` target for pressing the <kbd>Tab</kbd> key would be different from the `keyup` target, because the focus has changed.
+
+Because the event fires after the key is released, modifier-key properties ({{domxref("KeyboardEvent/ctrlKey", "ctrlKey")}}, {{domxref("KeyboardEvent/altKey", "altKey")}}, {{domxref("KeyboardEvent/shiftKey", "shiftKey")}}, and {{domxref("KeyboardEvent/metaKey", "metaKey")}}) reflect the state after release. For example, `ctrlKey` is `false` on the `keyup` event for the <kbd>Control</kbd> key itself. If another key is released while the <kbd>Control</kbd> key remains pressed, `ctrlKey` is `true` on that key's `keyup` event.
 
 ## Syntax
 

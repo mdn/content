@@ -12,6 +12,8 @@ The **`KeyboardEvent.altKey`** read-only property is a
 boolean value that indicates if the <kbd>alt</kbd> key (<kbd>Option</kbd> or <kbd>⌥</kbd> on macOS) was pressed (`true`) or not (`false`) when
 the event occurred.
 
+When the <kbd>Alt</kbd> key itself is pressed or released, this property is `true` for its {{domxref("Element/keydown_event", "keydown")}} event and `false` for its {{domxref("Element/keyup_event", "keyup")}} event, because both events fire _after_ the state change.
+
 ## Value
 
 A boolean value.
