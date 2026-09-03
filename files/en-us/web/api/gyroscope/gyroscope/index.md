@@ -28,7 +28,7 @@ new Gyroscope(options)
         be taken, meaning the number of times per second that the
         {{domxref('sensor.reading_event', 'reading')}} event will be called. A whole number or decimal may be
         used, the latter for frequencies less than a second. The actual reading frequency
-        depends device hardware and consequently may be less than requested.
+        depends on device hardware and consequently may be less than requested.
     - `referenceFrame` {{optional_inline}}
       - : Either `'device'` or
         `'screen'`. The default is `'device'`.
