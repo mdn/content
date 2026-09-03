@@ -128,7 +128,7 @@ The generated text is the value of all counters with the given name in scope at 
 The counter is rendered in the specified `<counter-style>` for both methods (`decimal` by default).
 You can use any of the {{cssxref("list-style-type")}} values or your own [custom styles](/en-US/docs/Web/CSS/Guides/Counter_styles).
 
-Examples showing the use of `counter()` and `counters()` are given below in the [basic example](#basic_example) and [Example of a nested counter](#example_of_a_nested_counter), respectively.
+Examples showing the use of `counter()` and `counters()` are given below in the [basic example](#basic_example) and [Example of a nested counter](#nested_counters), respectively.
 
 ### Reversed counters
 
