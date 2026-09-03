@@ -102,7 +102,10 @@ In this example, there are three cards, each with a different `line-clamp` value
   <div class="card">
     <h2>custom string</h2>
     <p class="string">
-      This card, as well as an <code>&lt;integer&gt;</code>, a <em>String</em>  value is specified  and any content that does not fit in that number of lines is truncated and the custom string is shown instead of an ellipsis.
+      This card, as well as an <code>&lt;integer&gt;</code>, a
+      <em>String</em> value is specified and any content that does not fit in
+      that number of lines is truncated and the custom string is shown instead
+      of an ellipsis.
     </p>
   </div>
 </section>
