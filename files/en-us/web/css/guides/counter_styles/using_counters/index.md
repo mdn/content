@@ -52,7 +52,7 @@ Once initialized, a counter's value can be increased or decreased using {{cssxre
 For example, the following declaration would increment the `section` counter by one on every `h3` tag.
 
 ```css
-h3::before {
+h3 {
   counter-increment: section; /* Increment the value of section counter by 1 */
 }
 ```
@@ -62,7 +62,7 @@ You can specify the increment or decrement amount after the counter name. It can
 Apart from being incremented or decremented, counters can also be explicitly set to a value using the {{cssxref("counter-set")}} property.
 
 ```css
-.done::before {
+.done {
   counter-set: section 20;
 }
 ```
@@ -75,14 +75,19 @@ The value of a counter can be displayed using either the {{cssxref("counter()")}
 
 For example, the following declaration uses `counter()` to prefix each `h3` heading with the text `Section <number>:`, where `<number>` is the value of the count in decimal (the default display style):
 
+This creates a counter on the {{htmlelement("body")}} named 'section', and sets its initial value is 0, increments the value of section counter by 1 on every `<h3>`, printing `Section <n>: ` before the content of each `<h3>`, where `<n>` is the default decimal value of the `section` counter.
+
 ```css
 body {
-  counter-reset: section; /* Set a counter named 'section', and its initial value is 0. */
+  counter-reset: section;
+}
+
+h3 {
+  counter-increment: section; 
 }
 
 h3::before {
-  counter-increment: section; /* Increment the value of section counter by 1 */
-  content: "Section " counter(section) ": "; /* Display counter value in default style (decimal) */
+  content: "Section " counter(section) ": ";
 }
 ```
 
@@ -191,8 +196,9 @@ In the following example, we are demoing an inherited counter named `primary` an
 }
 ```
 
+We create the `primary` counter on divs' parent, then create a new `primary` counter on `D`. We create the `secondary` counter on `F`, then override the sibling `secondary` counter on `I`.
+
 ```css
-/* create 'primary' counter on divs' parent */
 section {
   counter-reset: primary 3;
 }
@@ -203,17 +209,14 @@ div::after {
   color: blue;
 }
 
-/* create new 'primary' counter */
 .same-primary-name {
   counter-reset: primary 6;
 }
 
-/* create 'secondary' counter on div 'F' */
 .new-secondary-name {
   counter-reset: secondary 5;
 }
 
-/* override the sibling 'secondary' counter */
 .same-secondary-name {
   counter-reset: secondary 10;
 }
@@ -262,28 +265,25 @@ ul {
 }
 ```
 
+We create a new counter for the first time on `parent` and increment the counter on each list item, then show numbers on list items using generated content. We change the existing counter value using `counter-set`, then reset it using `counter-reset` on `.sub-list-one` and `.sub-list-two` respectively.
+
 ```css
-/* create a new counter for the first time */
 .parent {
   counter-reset: item 0;
 }
 
-/* increment the counter on each list item */
 li {
   counter-increment: item;
 }
 
-/* show numbers on list items */
 li::before {
   content: counter(item) " ";
 }
 
-/* change the existing counter value */
 .sub-list-one {
   counter-set: item 10;
 }
 
-/* change the counter value */
 .sub-list-two {
   counter-reset: item 0;
 }
@@ -309,75 +309,89 @@ For example, you can change the default initial value, or use {{cssxref("counter
 
 This example adds "Section \[the value of the counter]:" to the beginning of each heading.
 
-#### CSS
-
-```css
-body {
-  counter-reset: section; /* Set a counter named 'section', and its initial value is 0. */
-}
-
-h3::before {
-  counter-increment: section; /* Increment the value of section counter by 1 */
-  content: "Section " counter(section) ": "; /* Display the word 'Section ', the value of
-                                                section counter, and a colon before the content
-                                                of each h3 */
-}
-```
-
 #### HTML
+
+We include three `<h3>` elements.
 
 ```html
 <h3>Introduction</h3>
 <h3>Body</h3>
 <h3>Conclusion</h3>
+```
+
+#### CSS
+
+We create a counter named 'section', letting its initial value default to `0`. We increment the value of section counter by 1 on each `<h3>` and display the word 'Section ', the value of `section` counter, and a colon before the content of each `<h3>.
+
+```css
+body {
+  counter-reset: section;
+}
+
+h3::before {
+  counter-increment: section;
+}
+h3::before {
+  content: "Section " counter(section) ": ";
+}
 ```
 
 #### Result
 
 {{EmbedLiveSample("Basic_example", "100%", 150)}}
 
-### Basic example: reversed counter
+### Reversed counter
 
-This example is the same as the one above but uses a reversed counter.
+This example has the same HTML as the previous example, but uses a reversed counter.
 If your browser supports the `reversed()` function notation, the result will look like this:
 
-![reversed counter](reversed_headings_basic.png)
+![Numeric bullets 3, 2, and 1](reversed_headings_basic.png)
 
-#### CSS
-
-```css
-body {
-  counter-reset: reversed(
-    section
-  ); /* Set a counter named 'section', and its initial value is 0. */
-}
-
-h3::before {
-  counter-increment: section -1; /* Decrement the value of section counter by 1 */
-  content: "Section " counter(section) ": "; /* Display the word 'Section ', the value of
-                                                section counter, and a colon before the content
-                                                of each h3 */
-}
-```
-
-#### HTML
-
-```html
+```html hidden
 <h3>Introduction</h3>
 <h3>Body</h3>
 <h3>Conclusion</h3>
 ```
 
+#### CSS
+
+We use the `reversed()` function to create a counter named 'section', with initial value defaulting to the number of elements counted. We decrement the value of section counter by 1 on each `<h3>`, then display the word 'Section ', the value of section counter, and a colon before the content of each `<h3>`.
+
+```css
+body {
+  counter-reset: reversed(section); 
+}
+
+h3::before {
+  counter-increment: section -1;
+}
+h3::before {
+  content: "Section " counter(section) ": ";
+}
+```
+
 #### Result
 
-{{EmbedLiveSample("Basic example: reversed counter", "100%", 150)}}
+{{EmbedLiveSample("Reversed counter", "100%", 150)}}
 
 ### A more sophisticated example
 
 A counter need not necessarily be shown every time it is incremented.
 This example counts all links with the counter showing only when a link has no text, as a convenient replacement.
 
+#### HTML
+
+We included three paragraphs, each with a link, but the last link contains no text.
+
+```html
+<p>See <a href="https://www.mozilla.org/" aria-label="Mozilla"></a></p>
+<p>Do not forget to <a href="contact-me.html">leave a message</a>!</p>
+<p>See also <a href="https://developer.mozilla.org/" aria-label="MDN"></a></p>
+```
+
 #### CSS
+
+We create and initialize the counter on the `:root`, incrementing it on every link, but only generating content when the link is {{cssxref(":empty")}}.
 
 ```css
 :root {
@@ -393,39 +407,31 @@ a[href]:empty::after {
 }
 ```
 
-#### HTML
-
-```html
-<p>See <a href="https://www.mozilla.org/" aria-label="Mozilla"></a></p>
-<p>Do not forget to <a href="contact-me.html">leave a message</a>!</p>
-<p>See also <a href="https://developer.mozilla.org/" aria-label="MDN"></a></p>
-```
-
 #### Result
 
 {{EmbedLiveSample("A_more_sophisticated_example", "100%", 150)}}
 
-### Example of a nested counter
+### Nested counters
 
 A CSS counter can be especially useful for making outlined lists, because a new instance of the counter is automatically created in child elements.
 Using the {{cssxref("counters()")}} function, separating text can be inserted between different levels of nested counters.
 
 #### CSS
 
+We create a new instance of the section counter with each `<ol>` element, incrementing only the current instance of the section counter on each `<li>`. Using the {{cssxref("counters()")}} function, we combine the values of all instances of the section counter, separated by a period.
+
 ```css
 ol {
-  counter-reset: section; /* Creates a new instance of the
-                             section counter with each ol
-                             element */
+  counter-reset: section;
   list-style-type: none;
 }
 
+li {
+  counter-increment: section;
+}
+
 li::before {
-  counter-increment: section; /* Increments only this instance
-                                            of the section counter */
-  content: counters(section, ".") " "; /* Combines the values of all instances
-                                          of the section counter, separated
-                                          by a period */
+  content: counters(section, ".") " "; 
 }
 ```
 
