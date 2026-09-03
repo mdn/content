@@ -229,7 +229,7 @@ Because the controls keep their native appearance, they follow platform conventi
 
 ### Styling checkboxes and radio buttons using `appearance`
 
-Styling more than the color of a checkbox or a radio button requires more effort. The default sizes of checkboxes and radio buttons were not meant to be changed, and browsers react very differently when you try. Some increase the control size, and some keep it the same and add extra space around the control.
+Further styling of a checkbox or a radio button requires more effort. The default sizes of checkboxes and radio buttons were not meant to be changed, and browsers react very differently when you try. Some increase the control size, and some keep it the same and add extra space around the control.
 
 A much better approach is to remove the default appearance of checkboxes and radio buttons altogether with {{cssxref("appearance", "appearance: none;")}}, and then add your own styles to their various states.
 
