@@ -179,3 +179,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **`border-area` value for `background-clip`**: `layout.css.background-clip.border-area.enabled`
 
   The [`border-area`](/en-US/docs/Web/CSS/Reference/Properties/background-clip#border-area) value of the {{cssxref("background-clip")}} CSS property clips the background to the area painted by the element's border, which makes it possible to use a gradient or image as a border. ([Firefox bug 2045230](https://bugzil.la/2045230)).
+
+- **`view-timeline` includes `view-timeline-inset`**: `layout.css.scroll-driven-animations.enabled`
+
+  The {{cssxref("view-timeline")}} shorthand property now supports the {{cssxref("view-timeline-inset")}} property. The shorthand lets you specify start and/or end inset (or outset) values to adjust the position of the view progress timeline. ([Firefox bug 2046602](https://bugzil.la/2046602)).
