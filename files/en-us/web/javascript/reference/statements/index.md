@@ -91,7 +91,9 @@ For an alphabetical listing see the sidebar on the left.
 
 ## Statements, declarations, and expressions
 
-Take any JavaScript program. You can see that it is composed of a sequence of top-level constructs, using one of the syntaxes listed above. These are known as [_statements_](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-Statement) and [_declarations_](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-Declaration). In MDN docs, we often mix them and colloquially refer to them both as _statements_. But from a technical perspective, they are two disjoint sets of grammars. The following are declarations:
+All JavaScript programs are composed of a sequence of top-level constructs, using one of the syntaxes listed above. These are known as [_statements_](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-Statement) and [_declarations_](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-Declaration). In MDN docs, we often colloquially refer to both as _statements_, but they are technically two disjoint sets of grammars.
+
+The following are declarations:
 
 - {{jsxref("Statements/let", "let")}}
 - {{jsxref("Statements/const", "const")}}
@@ -153,17 +155,17 @@ if (condition) {
 }
 ```
 
-In JavaScript, statements and declarations produce values, but these values are almost never observable (other than {{jsxref("Global_Objects/eval", "eval()")}}). Their duty is to manipulate the surrounding environment and produce side effects, including creating variable bindings, outputting things, modifying variable values, etc. The values they use are obtained by evaluating [_expressions_](https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#prod-Expression).
+In JavaScript, statements and declarations produce values, but these values are almost never observable (other than {{jsxref("Global_Objects/eval", "eval()")}}). Their purpose is to manipulate the surrounding environment and produce side effects—creating variable bindings, outputting things, modifying variable values, etc. The values they use come from evaluating [_expressions_](https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#prod-Expression).
 
 Expressions are not top-level constructs; they can only be used in specific slots inside statements and declarations, such as `if (expression)`, `const x = expression`, etc. The [expression statement](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement) syntax allows most expressions to be used as statements, but that's just a statement with a single expression slot.
 
-Using just statements, declarations, and expressions, you can already understand JavaScript syntax rules to a fairly high level of precision:
+You can map out JavaScript syntax structures using just statements, declarations, and expressions:
 
 - Statements can contain statements, declarations, and expressions (like `if (expression) statement` and block statements `{ statement; declaration }`)
 - Declarations can contain statements, declarations, and expressions (like `function x() { statement; declaration }` and `const x = expression`)
 - Expressions can contain statements, declarations, and expressions (like `() => { statement; declaration }` and `console.log(expression)`)
 
-In the documentation for each individual piece of syntax, we describe all its "slots" and say whether each one is a statement, declaration, or expression.
+In the reference documentation for each piece of syntax, we describe all its "slots" and say whether each one is a statement, declaration, or expression.
 
 _Operators_ is another important concept in JavaScript grammar, but they do not work like building blocks. See [Expressions and operators](/en-US/docs/Web/JavaScript/Reference/Operators#expressions_and_operators) for more information.
 
