@@ -25,7 +25,7 @@ The `params` field in the event notification is a realm object with the followin
   - : A string that contains the ID of the realm.
     Pass this value as the `realm` field of the `target` parameter of commands such as [`script.evaluate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate).
 - `sandbox` {{optional_inline}}
-  - : A string that contains the name of the sandbox realm.
+  - : A string that contains the name of the [sandbox realm](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script#sandbox_realms).
     This field is included only for a sandbox realm, which is of type `"window"`.
 - `type`
   - : A string that indicates the [type of realm](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script#types_of_realms).

@@ -8,7 +8,7 @@ sidebar: webdriver
 ---
 
 The `script.getRealms` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#commands) of the [`script`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script) module returns a list of all [realms](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script#realms).
-You can optionally filter the list by [context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#contexts) or by the type of realm.
+You can optionally filter the list by [context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#contexts) or by the [type of realm](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script#types_of_realms).
 
 ## Syntax
 
@@ -41,7 +41,7 @@ The `params` field can contain:
   - : A string that contains the [type of realm](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script#types_of_realms) you want.
     It can take one of the following values:
     - `"window"`: A realm whose global object is a {{domxref("Window")}}.
-      This includes sandbox realms.
+      This includes [sandbox realms](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script#sandbox_realms).
     - `"worker"`: A realm whose global object is a {{domxref("WorkerGlobalScope")}}, but not one of the more specific dedicated, shared, or service worker global scopes.
     - `"dedicated-worker"`: A realm whose global object is a {{domxref("DedicatedWorkerGlobalScope")}}.
     - `"shared-worker"`: A realm whose global object is a {{domxref("SharedWorkerGlobalScope")}}.
