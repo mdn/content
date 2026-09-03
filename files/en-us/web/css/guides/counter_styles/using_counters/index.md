@@ -321,7 +321,7 @@ We include three `<h3>` elements.
 
 #### CSS
 
-We create a counter named 'section', letting its initial value default to `0`. We increment the value of section counter by 1 on each `<h3>` and display the word 'Section ', the value of `section` counter, and a colon before the content of each `<h3>.
+We create a counter named 'section', letting its initial value default to `0`. We increment the value of `section` counter by 1 at each `<h3>` and display the word "Section", the value of `section` counter, and a colon before the content of each `<h3>`.
 
 ```css
 body {
