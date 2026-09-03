@@ -20,7 +20,7 @@ The `params` field in the event notification is an object with the following fie
 
 Together with [`script.realmCreated`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/realmCreated), use this event to monitor the lifetime of JavaScript realms.
 
-This event fires when a document is unloaded, which happens when its context navigates to a new document or is closed.
+This event fires when a document is unloaded, which happens when its [context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#contexts) navigates to a new document or is closed.
 Unloading a document destroys the realm of the document and the realms of its worklets, so the event fires once for each of them.
 The event also fires when a worker reaches the end of its lifecycle or is terminated.
 

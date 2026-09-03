@@ -28,9 +28,9 @@ All log entry objects include the following fields:
     - `realm`
       - : A string that contains the ID of the realm.
     - `context` {{optional_inline}}
-      - : A string that contains the ID of the context in which the log entry was created.
+      - : A string that contains the ID of the [context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#contexts) in which the log entry was created.
     - `userContext` {{optional_inline}}
-      - : A string that contains the ID of the user context in which the script-related event occurred.
+      - : A string that contains the ID of the [user context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser#user_contexts) in which the script-related event occurred.
 - `stackTrace` {{optional_inline}}
   - : An object with a `callFrames` array that represents the JavaScript stack at the point the entry was created. Each item in the array is a stack frame with the following fields: `columnNumber`, `functionName`, `lineNumber`, and `url`.
 - `text`

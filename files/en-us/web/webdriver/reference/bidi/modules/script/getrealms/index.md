@@ -40,7 +40,6 @@ The `params` field can contain:
 - `type` {{optional_inline}}
   - : A string that contains the [type of realm](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script#types_of_realms) you want.
     It can take one of the following values:
-
     - `"window"`: A realm whose global object is a {{domxref("Window")}}.
       This includes sandbox realms.
     - `"worker"`: A realm whose global object is a {{domxref("WorkerGlobalScope")}}, but not one of the more specific dedicated, shared, or service worker global scopes.
@@ -60,7 +59,6 @@ The `result` object in the response contains the following field:
 - `realms`
   - : An array of realm objects, one for each matching realm, or an empty array if there are no matching realms.
     The value of the `type` field in each object determines the other fields that are present:
-
     - `context` {{optional_inline}}
       - : A string that contains the ID of the context to which the realm belongs.
         This field is included only when the `type` field value is `"window"`.

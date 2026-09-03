@@ -14,7 +14,7 @@ The `script.realmCreated` [event](/en-US/docs/Web/WebDriver/Reference/BiDi/Modul
 The `params` field in the event notification is a realm object with the following fields, where the value of the `type` field determines the other fields that are present:
 
 - `context` {{optional_inline}}
-  - : A string that contains the ID of the context to which the realm belongs.
+  - : A string that contains the ID of the [context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#contexts) to which the realm belongs.
     This field is included only when the `type` field value is `"window"`.
 - `origin`
   - : A string with the [origin](/en-US/docs/Glossary/Origin) of the realm.
@@ -30,7 +30,6 @@ The `params` field in the event notification is a realm object with the followin
 - `type`
   - : A string that indicates the [type of realm](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script#types_of_realms).
     It has one of the following values:
-
     - `"window"`: A realm whose global object is a {{domxref("Window")}}.
       This includes sandbox realms.
     - `"worker"`: A realm whose global object is a {{domxref("WorkerGlobalScope")}}, but not one of the more specific dedicated, shared, or service worker global scopes.
