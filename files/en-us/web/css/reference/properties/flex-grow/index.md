@@ -71,7 +71,7 @@ flex-grow: unset;
 
 ### Values
 
-This property is specified as a `<number>`:
+This property is specified as the following value:
 
 - `<number>`
   - : See {{cssxref("&lt;number&gt;")}}. Negative values are invalid. Defaults to 0, which prevents the flex item from growing.

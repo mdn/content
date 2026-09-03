@@ -118,9 +118,9 @@ for (const itItem of iter) {
 
 console.log(iter[Symbol.iterator]() === iter); // true
 
-// This example show us generator(iterator) is iterable object,
+// This example shows us generator(iterator) is an iterable object,
 // which has the [Symbol.iterator]() method return the `iter` (itself),
-// and consequently, the it object can iterate only _once_.
+// and consequently, the `iter` object can iterate only _once_.
 
 // If we change the [Symbol.iterator]() method of `iter` to a function/generator
 // which returns a new iterator/generator object, `iter`

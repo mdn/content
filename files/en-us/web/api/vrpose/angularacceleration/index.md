@@ -9,7 +9,7 @@ status:
 browser-compat: api.VRPose.angularAcceleration
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 The **`angularAcceleration`** read-only property of the {{domxref("VRPose")}} interface returns an array representing the angular acceleration vector of the {{domxref("VRDisplay")}} at the current timestamp, in meters per second per second.
 

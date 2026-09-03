@@ -183,7 +183,7 @@ The last section is the `[dependencies]` section. Here's where we tell Cargo wha
 
 ### Building the package
 
-Now that we've completed the set up, let's build the package.
+Now that we've completed the setup, let's build the package.
 We'll be using the generated code in a native ES module and Node.js.
 For this purpose, we'll use the [`--target` argument](https://rustwasm.github.io/docs/wasm-pack/commands/build.html#target) in `wasm-pack build` to specify what kind of WebAssembly and JavaScript is generated.
 

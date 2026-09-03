@@ -8,14 +8,11 @@ browser-compat: api.HTMLTableElement.tBodies
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLTableElement.tBodies`** read-only property returns a
-live {{domxref("HTMLCollection")}} of the bodies in a {{htmlElement("table")}}.
+The **`tBodies`** read-only property of the {{domxref("HTMLTableElement")}} interface returns a live {{domxref("HTMLCollection")}} of all {{HTMLElement("tbody")}} element children of the given {{HTMLElement("table")}}.
 
-Although the property is read-only, the returned object is live and allows the
-modification of its content.
+Although the property is read-only, the returned object is live and is automatically updated when the `HTMLTableElement` changes.
 
-The collection returned includes implicit {{HTMLElement("tbody")}} elements. For
-example:
+The collection returned includes implicit {{HTMLElement("tbody")}} elements. For example:
 
 ```html
 <table>
@@ -25,12 +22,11 @@ example:
 </table>
 ```
 
-The HTML DOM generated from the above HTML will have a {{HTMLElement("tbody")}} element
-even though the tags are not included in the source HTML.
+The HTML DOM generated from the above HTML will have a {{HTMLElement("tbody")}} element even though the tags are not included in the source HTML.
 
 ## Value
 
-A live {{domxref("HTMLCollection")}}.
+A live {{domxref("HTMLCollection")}} of {{domxref("HTMLTableSectionElement")}} (which are all `tbody`) objects.
 
 ## Examples
 
@@ -50,5 +46,7 @@ myTable.tBodies.length;
 
 ## See also
 
-- {{domxref("HTMLCollection")}}
-- {{HTMLElement("tbody")}}
+- {{domxref("HTMLTableElement.caption")}}
+- {{domxref("HTMLTableElement.tFoot")}}
+- {{domxref("HTMLTableElement.tHead")}}
+- {{domxref("HTMLTableElement.createTBody()")}}

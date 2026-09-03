@@ -118,7 +118,7 @@ This topic provides an index to the main _sorts_ of events you might be interest
         </p>
         <p>
           Provides notification events when CSS transitions start, stop, are
-          cancelled, etc.
+          canceled, etc.
         </p>
       </td>
       <td>
@@ -957,6 +957,8 @@ textarea.addEventListener("input", function () {
 ## Triggering built-in events
 
 This example demonstrates simulating a click (that is programmatically generating a click event) on a checkbox using DOM methods. [View the example in action.](https://mdn.dev/archives/media/samples/domref/dispatchEvent.html)
+
+<!-- cSpell:ignore cancelled -->
 
 ```js
 function simulateClick() {
