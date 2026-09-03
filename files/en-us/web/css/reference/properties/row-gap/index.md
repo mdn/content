@@ -137,7 +137,7 @@ We include six items in a container element:
 
 #### CSS
 
-We set the {{cssxref("display")}} property to `flex`, limit the {{cssxref("width")}} to `300px`, and set {{cssxref("flex-flow")}} to `row wrap` to create a flex container with rows of flex items that flow onto new lines as needed.
+We set the {{cssxref("display")}} to `flex`, limit the {{cssxref("width")}} to `300px`, and set the {{cssxref("flex-flow")}} to `row wrap` to create a flex container with rows of flex items that flow onto new lines as needed.
 
 The `column-gap` value is set as `20px` on the flex container to create a `20px` gap between the adjacent flex rows. We also add a {{cssxref("row-rule")}}, which will draw a 30px-wide, dashed, semi-opaque magenta line in the middle of the gap. We define the flex items to be lime, with most being semi-opaque, so the rule, drawn behind the flex items.
 
@@ -166,7 +166,7 @@ The `column-gap` value is set as `20px` on the flex container to create a `20px`
 
 {{EmbedLiveSample('Flex_layout', "auto", "400")}}
 
-To set vertical space between flex items, specify a non-zero value for the {{cssxref("column-gap")}} property, optionally setting both the `row-gap` and `column-gap` using the `gap` shorthand.
+To set vertical space between flex items, specify a non-zero value for the {{cssxref("column-gap")}} property, optionally setting both `row-gap` and `column-gap` by using the `gap` shorthand.
 
 ### Grid layout
 
@@ -188,7 +188,7 @@ We include five items in a container element:
 
 #### CSS
 
-We set the {{cssxref("display")}} property to `grid`, the {{cssxref("height")}} to `240px`, the {{cssxref("width")}} to `350px` and {{cssxref("grid-template-rows")}} to `repeat(3, 1fr)`, to create a 400px-wide grid container with three columns and as many rows as needed. Each row is `100px` tall, as defined by the {{cssxref("grid-template-rows")}} property. Every odd grid item is `lime` with the even grid items being semi-opaque.
+We set the {{cssxref("display")}} property to `grid`, the {{cssxref("height")}} to `240px`, the {{cssxref("width")}} to `350px` and {{cssxref("grid-template-rows")}} to `repeat(3, 1fr)` to create a 350px-wide grid container with three columns and as many rows as needed. Each row is `100px` tall, as defined by the {{cssxref("grid-template-rows")}} property. Every odd grid item has a `lime` background color and the even grid items are semi-opaque.
 
 The `row-gap` is set to `5%`, which, given a container height of `240px`, will create a gap that is `12px` across, leaving `216px` for three rows of grid items, meaning the rows are each `72px` tall.
 

@@ -107,7 +107,7 @@ This property is specified as one or two values from the following list:
 - `normal`
   - : Sets the gap to `1em` in multi-column layouts and to `0` in all other contexts. This is the default value.
 - {{cssxref("&lt;line-width&gt;")}}
-  - : The size of the gap as the `thin`, `medium`, or `thick` keywords, or a positive {{cssxref("length")}} value.
+  - : Sets the size of the gap using the keywords `thin`, `medium`, or `thick`, or a positive {{cssxref("length")}} value.
 - {{CSSxRef("length-percentage")}}
   - : Sets the gap to a non-negative {{CSSxRef("&lt;length&gt;")}} or {{CSSxRef("&lt;percentage&gt;")}} value.
 

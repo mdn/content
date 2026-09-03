@@ -87,7 +87,7 @@ This property is specified as a single value from the following list:
 - `normal`
   - : For multi-column layout, sets the gap to `1em`; otherwise `0`. This is the default value.
 - {{cssxref("&lt;line-width&gt;")}}
-  - : Sets the width to `thin`, `medium`, or `thick`, or a positive {{cssxref("length")}} value.
+  - : Sets the size of the gap using the keywords `thin`, `medium`, or `thick`, or a positive {{cssxref("length")}} value.
 - {{CSSxRef("length-percentage")}}
   - : A non-negative {{CSSxRef("&lt;length&gt;")}} or {{CSSxRef("&lt;percentage&gt;")}} value. Percentages are relative to the inline-size of the content box.
 
@@ -97,11 +97,11 @@ The `column-gap` property sets the size of the gap between an element's columns.
 
 Percentages are calculated against the [content box](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#content_area) size of the container element's inline axis when this size is definite, against `0` otherwise, except in grid layout, for which cyclic percentage sizes resolve against zero for determining {{glossary("intrinsic size")}} contributions but resolve against the element's content box when laying out the contents.
 
-The column gap may contain a visible separator as a [gap decoration](/en-US/docs/Web/CSS/Guides/Gaps). If there is a rule between the columns, set with the {{cssxref("column-rule")}} or {{cssxref("rule")}} shorthand properties, it will appear in the middle of the gap, but has no effect on the size of the gaps between the column.
+The column gap may contain a visible separator as a [gap decoration](/en-US/docs/Web/CSS/Guides/Gaps). To draw a rule between the columns, use the {{cssxref("column-rule")}} or the {{cssxref("rule")}} shorthand. The rule appears in the middle of the gap but has no effect on the size of the gap between the columns.
 
-The `column-gap`, along with the {{cssxref("row-gap")}} property, can also be set using the {{cssxref("gap")}} shorthand property which sets both the `row-gap` and `column-gap` in one declaration, in that order.
+The `column-gap` property, along with the {{cssxref("row-gap")}} property, can also be set by using the {{cssxref("gap")}} shorthand, which sets both `row-gap` and `column-gap` in one declaration, in that order.
 
-A legacy `grid-column-gap` is an alias for `column-gap`. It was initially defined in [grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) for creating gaps between grid columns.
+The `column-gap` property replaced the `grid-column-gap` property, which was was initially defined in [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) for creating gaps between grid columns. `grid-column-gap` is now an alias for `column-gap`.
 
 ## Formal definition
 
@@ -134,7 +134,7 @@ We include six items in a container element:
 
 #### CSS
 
-We set the {{cssxref("display")}} property to `flex` and {{cssxref("flex-flow")}} to `row wrap` to create a flex container with rows of flex items, allowing flex items to flow onto new lines if needed. The flex items are each set to be either `200px` or `300px`.
+We set the {{cssxref("display")}} property to `flex` and the {{cssxref("flex-flow")}} property to `row wrap` to create a flex container with rows of items. This allows the items to flow onto new lines if needed. The flex items are each given a flex basis of either `200px` or `300px`.
 
 The `column-gap` value is set as `20px` on the flex container to create a `20px` gap between the adjacent flex items in each row. We also add a {{cssxref("column-rule")}}, which will draw a thin, solid, magenta line in the middle of the gap.
 
@@ -162,11 +162,11 @@ div:nth-of-type(3n) {
 
 {{EmbedLiveSample("Flex_layout", "auto", "220px")}}
 
-To set vertical space between flex rows, specify a non-zero value for the {{cssxref("row-gap")}} property, optionally setting both the `column-gap` and `row-gap` using the `gap` shorthand.
+To set vertical space between flex rows, specify a non-zero value for the {{cssxref("row-gap")}} property, optionally setting both `row-gap` and `column-gap` by using the `gap` shorthand.
 
 ### Grid layout
 
-This example demonstrates using the `column-gap` property with a `<percentage>` value in a grid layout. It also demonstrates how the `column-gap` size is not effected by the size of the column rule.
+This example demonstrates using the `column-gap` property with a `<percentage>` value in a grid layout. It also demonstrates how the `column-gap` size is not affected by the size of the column rule.
 
 #### HTML
 
@@ -186,9 +186,9 @@ We include seven items in a container element:
 
 #### CSS
 
-We set the {{cssxref("display")}} property to `grid`, the {{cssxref("width")}} to `400px` and {{cssxref("grid-template-columns")}} to `repeat(3, 1fr)`, to create a 400px-wide grid container with three columns and as many rows as needed. Each row is `100px` tall, as defined by the {{cssxref("grid-template-rows")}} property. Every odd grid item is `lime` with the even grid items being semi-opaque.
+We set the {{cssxref("display")}} to `grid`, the {{cssxref("width")}} to `400px` and the {{cssxref("grid-template-columns")}} to `repeat(3, 1fr)` to create a 400px-wide grid container with three columns and as many rows as needed. Each row is `100px` tall, as defined by the {{cssxref("grid-auto-rows")}} property. Every odd grid item has a `lime` background color and the even grid items are semi-opaque.
 
-The `column-gap` is set to `5%`, which will create a gap that is `20px` wide. We've also set a very wide, semi-opaque `column-rule` to demonstrate how the rule is painted behind the content, with the width of the rule having no impact on the size of the gap.
+We've also set a very wide, semi-opaque `column-rule` to demonstrate how the rule is painted behind the content, with the width of the rule having no impact on the size of the gap. The `column-gap` is set to `5%`, which creates a gap that is `20px` wide.
 
 ```css
 #grid {
@@ -214,7 +214,7 @@ The `column-gap` is set to `5%`, which will create a gap that is `20px` wide. We
 
 {{EmbedLiveSample("Grid_layout", "auto", "220px")}}
 
-The column rule is wider than the column gap, and is only visible when the items drawn on top are semi-transparent.s
+The column rule is wider than the column gap, and is visible only where the items drawn on top are semi-transparent.
 
 ### Multi-column layout
 
