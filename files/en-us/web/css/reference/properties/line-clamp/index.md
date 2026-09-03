@@ -146,6 +146,8 @@ em {
 
 ### Truncating a paragraph with the legacy property
 
+This example uses the legacy `-webkit-line-clamp` property with `display` set to `-webkit-box`.
+
 #### HTML
 
 ```html
