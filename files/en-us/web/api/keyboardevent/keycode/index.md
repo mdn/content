@@ -3266,7 +3266,7 @@ Gecko defines a lot of `keyCode` values in `KeyboardEvent` for making the mappin
 ```js
 window.addEventListener("keydown", (event) => {
   if (event.defaultPrevented) {
-    return; // Should do nothing if the default action has been cancelled
+    return; // Should do nothing if the default action has been canceled
   }
 
   let handled = false;

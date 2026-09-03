@@ -54,7 +54,7 @@ None ({{jsxref("undefined")}}).
 
 ```js
 const e = document.createEvent("UIEvent");
-// creates a click event that bubbles, can be cancelled,
+// creates a click event that bubbles, can be canceled,
 // and with its view and detail property initialized to window and 1,
 // respectively
 e.initUIEvent("click", true, true, window, 1);

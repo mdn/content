@@ -107,7 +107,7 @@ closeWithValueButton.addEventListener("click", () => {
 // Prevent the dialog from closing by calling event.preventDefault()
 dialog.addEventListener("cancel", (event) => {
   if (preventCloseInput.checked) {
-    log("Dialog close cancelled");
+    log("Dialog close canceled");
     event.preventDefault();
   }
 });

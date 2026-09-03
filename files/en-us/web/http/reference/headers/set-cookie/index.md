@@ -70,12 +70,17 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     > Some cookie names contain prefixes that impose specific restrictions on the cookie's attributes in supporting user-agents. See [Cookie prefixes](#cookie_prefixes) for more information.
 
 - `Domain=<domain-value>` {{optional_inline}}
-  - : Defines the host to which the cookie will be sent.
+  - : Defines which hosts the cookie will be sent to.
 
-    Only the current domain can be set as the value, or a domain of a higher order, unless it is a public suffix. Setting the domain will make the cookie available to it, as well as to all its subdomains.
-
-    If omitted, the cookie is returned only to the host that sent them (i.e., it becomes a "host-only cookie").
+    Setting the domain makes the cookie available to that domain and all its subdomains.
+    If omitted, the cookie is returned only to the host that sent it (i.e., it becomes a "host-only cookie").
     This is more restrictive than setting the host name, as the cookie is not made available to subdomains of the host.
+
+    The value must be the domain of the server that sends the `Set-Cookie` response header, or a parent domain of that server's domain.
+    It cannot be a [public suffix](https://publicsuffix.org/) such as `com`, `co.uk`, or `github.io`.
+    For example, a response from `api.example.com` can set `Domain=api.example.com` or `Domain=example.com`, but not `Domain=beta.api.example.com`, `Domain=other.example.com`, or `Domain=com`.
+    Similarly, a response from `shop.example.co.uk` can set `Domain=shop.example.co.uk` or `Domain=example.co.uk`, but not `Domain=co.uk`, because `co.uk` is a public suffix.
+    Cookies that break these rules are ignored.
 
     Contrary to earlier specifications, leading dots in domain names (`.example.com`) are ignored.
 

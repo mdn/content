@@ -507,7 +507,7 @@ p {
 
 {{EmbedLiveSample('invalid-custom-property', 100, 50)}}
 
-For such cases, the `@property` at-rule can prevent unexpected results by allowing to define the initial value of the property:
+For such cases, the `@property` at-rule can prevent unexpected results by allowing you to define the initial value of the property:
 
 ```html live-sample___invalid-custom-property-fallbacks
 <p>This paragraph is initially black.</p>

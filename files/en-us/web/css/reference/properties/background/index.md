@@ -7,7 +7,7 @@ browser-compat: css.properties.background
 sidebar: cssref
 ---
 
-The **`background`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all background style properties at once, such as color, image, origin, size, and repeat method.
+The **`background`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets all background style properties at once, such as color, image, origin, size, and repeat method.
 
 {{InteractiveExample("CSS Demo: background")}}
 

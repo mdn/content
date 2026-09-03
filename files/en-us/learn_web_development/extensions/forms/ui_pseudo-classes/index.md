@@ -261,7 +261,7 @@ Then we give the generated content the content "required", which is what we want
   <fieldset>
     <legend>Feedback form</legend>
 
-    <p>Required fields are labelled with "required".</p>
+    <p>Required fields are labeled with "required".</p>
     <div>
       <label for="fname">First name: </label>
       <input id="fname" name="fname" type="text" required />
@@ -428,7 +428,7 @@ You can try it below (press the **Play** button to run the example in MDN Playgr
   <fieldset>
     <legend>Feedback form</legend>
 
-    <p>Required fields are labelled with "required".</p>
+    <p>Required fields are labeled with "required".</p>
     <div>
       <label for="fname">First name: </label>
       <input id="fname" name="fname" type="text" required />
@@ -609,7 +609,7 @@ This is a similar story to what we had before in the `:required` example, except
   <fieldset>
     <legend>Feedback form</legend>
 
-    <p>Required fields are labelled with "required".</p>
+    <p>Required fields are labeled with "required".</p>
     <div>
       <label for="name">Name: </label>
       <input id="name" name="name" type="text" required />

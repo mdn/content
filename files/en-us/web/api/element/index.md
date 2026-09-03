@@ -302,7 +302,7 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
 - {{DOMxRef("Element.requestFullscreen()")}}
   - : Asynchronously asks the browser to make the element fullscreen.
 - {{DOMxRef("Element.requestPointerLock()")}}
-  - : Allows to asynchronously ask for the pointer to be locked on the given element.
+  - : Allows you to asynchronously ask for the pointer to be locked on the given element.
 - {{domxref("Element.scroll()")}}
   - : Scrolls to a particular set of coordinates inside a given element.
 - {{domxref("Element.scrollBy()")}}
@@ -510,7 +510,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 ### Transition events
 
 - {{domxref("Element/transitioncancel_event", "transitioncancel")}}
-  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/Guides/Transitions) has been cancelled.
+  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/Guides/Transitions) has been canceled.
 - {{domxref("Element/transitionend_event", "transitionend")}}
   - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/Guides/Transitions) has finished playing.
 - {{domxref("Element/transitionrun_event", "transitionrun")}}
