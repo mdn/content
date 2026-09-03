@@ -47,12 +47,12 @@ None.
 ### Operand stack
 
 ```plain
-[low_input:i64 high_input:i64] -> [low_output:i64 high_output:i64]
+[input1:i64 input2:i64] -> [low_output:i64 high_output:i64]
 ```
 
-- `low_input`
+- `input1`
   - : The first [`i64`](/en-US/docs/WebAssembly/Reference/Value_types/i64) input.
-- `high_input`
+- `input2`
   - : The second `i64` input.
 - `low_output`
   - : An `i64` representing the low 64 bits of the result.
@@ -67,9 +67,11 @@ None.
 
 ## Description
 
-The `mul_wide_s` instruction multiplies two signed `i64` values together to produce a signed 128-bit result represented by a pair of `i64` values. Such operations are termed **wide arithmetic**, which is useful in any situation where larger-than-64-bit numbers are being used in source languages with Wasm as a compile target, for example cryptographic algorithms.
+The `mul_wide_s` instruction multiplies two signed `i64` values together to produce a signed 128-bit result represented by a pair of `i64` values.
 
-More importantly, it also allows engines to generate more efficient machine code for these operations than is possible with `i64` arithmetic operations.
+This is one of the **wide arithmetic** operations, which are useful in situations where larger-than-64-bit numbers are being used in source languages with Wasm as a compile target. One such example is cryptographic algorithms.
+
+These methods allow engines to generate more performant machine code for these operations than is possible with `i64` arithmetic operations.
 
 ## Specifications
 

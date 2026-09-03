@@ -68,7 +68,7 @@ Sign extension is useful because Wasm integers are a fixed width (32- or 64-bit)
 
 The `extend32_s` instruction fixes this by taking the low 32 bits of the value, treating them as a signed 32-bit integer, and copying the sign bit (bit 31) up through all the remaining bits of the `i64`.
 
-This is useful whenever you've loaded or produced an 32-bit value (say, from a four-byte value in memory) and need to use it correctly in arithmetic at the full 64-bit width.
+This is useful whenever you've loaded or produced a 32-bit value (say, from a four-byte value in memory) and need to use it correctly in arithmetic at the full 64-bit width.
 
 ## Specifications
 

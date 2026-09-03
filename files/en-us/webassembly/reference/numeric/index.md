@@ -67,7 +67,7 @@ WebAssembly numeric instructions.
 - [`mul_wide_u`](/en-US/docs/WebAssembly/Reference/Numeric/mul_wide_u)
   - : Multiply two unsigned 64-bit integers to produce an unsigned 128-bit result represented by two 64-bit integers.
 - [`sub128`](/en-US/docs/WebAssembly/Reference/Numeric/sub128)
-  - : Subtract one 128-bit integer — represented by two 64-bit integers — from another, to produce a 128-bit result represented by two 64-bit integers.
+  - : Subtract one 128-bit integer, represented by two 64-bit integers, from another to produce a 128-bit result represented by two 64-bit integers.
 
 ## Conversion
 

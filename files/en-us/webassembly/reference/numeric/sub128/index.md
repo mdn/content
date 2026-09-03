@@ -73,9 +73,11 @@ None.
 
 ## Description
 
-The `sub128` instruction subtracts one 128-bit integer — represented by two `i64` values — from another to produce a 128-bit result represented by two `i64` values. Such operations are termed **wide arithmetic**, which is useful in any situation where larger-than-64-bit numbers are being used in source languages with Wasm as a compile target, for example cryptographic algorithms.
+The `sub128` instruction subtracts one 128-bit integer, represented by two `i64` values, from another to produce a 128-bit result represented by two `i64` values.
 
-More importantly, it also allows engines to generate more efficient machine code for these operations than is possible with `i64` arithmetic operations.
+This is one of the **wide arithmetic** operations, which are useful in situations where larger-than-64-bit numbers are being used in source languages with Wasm as a compile target. One such example is cryptographic algorithms.
+
+These methods allow engines to generate more performant machine code for these operations than is possible with `i64` arithmetic operations.
 
 ## Specifications
 

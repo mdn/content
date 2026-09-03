@@ -74,7 +74,7 @@ Sign extension is useful because Wasm integers are a fixed width (32- or 64-bit)
 
 The `extend16_s` instruction fixes this by taking the low 16 bits of the value, treating them as a signed 16-bit integer, and copying the sign bit (bit 15) up through all the remaining bits of the `i32` or `i64`.
 
-This is useful whenever you've loaded or produced an 16-bit value (say, from a two-byte value in memory) and need to use it correctly in arithmetic at the full 32- or 64-bit width.
+This is useful whenever you've loaded or produced a 16-bit value (say, from a two-byte value in memory) and need to use it correctly in arithmetic at the full 32- or 64-bit width.
 
 ## Specifications
 
