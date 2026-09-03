@@ -142,7 +142,7 @@ em {
 
 #### Result
 
-{{EmbedLiveSample("truncating_content_with_optional_settings", "100%", "150")}}
+{{EmbedLiveSample("truncating_content_with_an_ellipsis_or_a_custom_string", "100%", "150")}}
 
 ### Truncating a paragraph with the legacy property
 
