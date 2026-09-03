@@ -223,7 +223,7 @@ Let's start by creating our own canvas template to create future experiments in.
    <html lang="en-US">
      <head>
        <meta charset="utf-8" />
-       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <meta name="viewport" content="width=device-width" />
        <title>Canvas</title>
        <script src="script.js" defer></script>
        <link href="style.css" rel="stylesheet" />
@@ -998,7 +998,7 @@ Let's look at an example of how to create something with a WebGL library. We'll 
    <html lang="en-US">
      <head>
        <meta charset="utf-8" />
-       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <meta name="viewport" content="width=device-width" />
 
        <title>Three.js basic cube example</title>
 
