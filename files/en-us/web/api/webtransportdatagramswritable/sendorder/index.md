@@ -8,7 +8,7 @@ browser-compat: api.WebTransportDatagramsWritable.sendOrder
 
 {{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
-The **`sendOrder`** property of the {{domxref("WebTransportDatagramsWritable")}} interface gets or sets an integer indicating the priority of this stream's datagrams relative to other streams and datagrams in the same {{domxref("WebTransportDatagramsWritable.sendGroup", "sendGroup")}}.
+The **`sendOrder`** property of the {{domxref("WebTransportDatagramsWritable")}} interface represents the priority of this stream's datagrams relative to other streams and datagrams in the same {{domxref("WebTransportDatagramsWritable.sendGroup", "sendGroup")}}, as an integer.
 
 Within a `sendGroup`, bytes queued for sending on streams and datagrams with a higher `sendOrder` are sent before any bytes from lower-priority ones.
 Different groups are expected to be treated as equals for the purposes of bandwidth allocation — though the precise way bandwidth is divided between groups is implementation-defined.
@@ -51,5 +51,5 @@ console.log(`Send order: ${writable.sendOrder}`); // Send order: 2
 
 ## See also
 
-- [Using WebTransport](https://developer.chrome.com/docs/capabilities/web-apis/webtransport)
 - {{domxref("Streams API", "Streams API", "", "nocode")}}
+- [Using WebTransport](https://developer.chrome.com/docs/capabilities/web-apis/webtransport)

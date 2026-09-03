@@ -99,6 +99,10 @@ Other attributes prefixed with `shadowroot` allow declarative customization of t
 
 ### Out-of-order patching
 
+> [!NOTE]
+> This use case is still experimental and has limited browser support.
+> See the [browser compatibility](#browser_compatibility) table for browser support information.
+
 Traditionally, HTML is delivered in order and read, processed, and displayed from top to bottom. To change that order, you can either hide or rearrange elements with CSS or update the DOM produced by the HTML afterwards with JavaScript. However, many pages are composed of multiple parts that may be ready to render at different times, or that may be more important to deliver to the user earlier.
 
 The `<template>` element allows for delivering HTML {{glossary("Out_of_order_patching", "out-of-order")}}, which involves replacing [processing instruction](/en-US/docs/Web/API/ProcessingInstruction) markers with the contents of the `<template>` element (also referred to as **patching**).

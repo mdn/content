@@ -8,7 +8,7 @@ browser-compat: api.HTMLImageElement.useMap
 
 {{APIRef("HTML DOM")}}
 
-The **`useMap`** property of the {{domxref("HTMLImageElement")}} interface providing the name of the client-side image map to apply to the image. It reflects the `<img>` element's [`usemap`](/en-US/docs/Web/HTML/Reference/Elements/img#usemap) content attribute.
+The **`useMap`** property of the {{domxref("HTMLImageElement")}} interface provides the name of the client-side image map to apply to the image. It reflects the `<img>` element's [`usemap`](/en-US/docs/Web/HTML/Reference/Elements/img#usemap) content attribute.
 
 ## Value
 

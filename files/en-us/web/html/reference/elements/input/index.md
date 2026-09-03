@@ -71,7 +71,7 @@ The available types are as follows:
     </tr>
     <tr>
       <td>{{HTMLElement("input/checkbox", "checkbox")}}</td>
-      <td>A check box allowing single values to be selected/deselected.</td>
+      <td>A checkbox allowing single values to be selected/deselected.</td>
       <td id="examplecheckbox">
         <pre class="brush: html hidden">
 &#x3C;input type="checkbox" name="checkbox"/></pre>

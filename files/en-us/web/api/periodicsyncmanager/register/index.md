@@ -15,6 +15,8 @@ The **`register()`** method of the
 browser with the specified tag and options. It returns a {{jsxref('Promise')}} that
 resolves when the registration completes.
 
+The method requires the `periodic-background-sync` permission; see the API's [security considerations](/en-US/docs/Web/API/Web_Periodic_Background_Synchronization_API#security_considerations) for details.
+
 ## Syntax
 
 ```js-nolint

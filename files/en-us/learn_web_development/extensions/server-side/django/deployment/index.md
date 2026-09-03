@@ -372,7 +372,7 @@ This can make deployment and iterative development much easier.
 You should already be using GitHub to store the local library source code (this was set up in [Source code management with Git and GitHub](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/development_environment#source_code_management_with_git_and_github) as part of setting up your development environment.
 
 This is a good point to make a backup of your "vanilla" project — while some of the changes we're going to be making in the following sections might be useful for deployment on any hosting service (or for development) others might not.
-Assuming you have already backed up all the changes made so far to the `main` branch on GitHub you can create a new branch to backup your changes as shown:
+Assuming you have already backed up all the changes made so far to the `main` branch on GitHub you can create a new branch to back up your changes as shown:
 
 ```bash
 # Fetch the latest main branch
@@ -797,7 +797,7 @@ We should now be ready to start deploying LocalLibrary on Railway.
 To start using Railway you will first need to create an account:
 
 - Go to [railway.com](https://railway.com/) and click the **Login** link in the top toolbar.
-- Select GitHub in the popup to login using your GitHub credentials
+- Select GitHub in the popup to log in using your GitHub credentials
 - You may then need to go to your email and verify your account.
 - You'll then be logged in to the Railway.com dashboard: <https://railway.com/dashboard>.
 
@@ -932,7 +932,7 @@ What we can do is call this command locally on our Django project when it is con
 The Railway client makes this easy by providing a mechanism to run commands locally using the same environment variables as the production server, including the database connection string.
 
 First open a terminal or command prompt in a git clone of your locallibrary project.
-Then login to your browser account using the `login` or `login --browserless` command (follow any resulting prompts and instructions from the client or website to complete the login):
+Then log into your browser account using the `login` or `login --browserless` command (follow any resulting prompts and instructions from the client or website to complete the login):
 
 ```bash
 railway login

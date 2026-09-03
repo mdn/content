@@ -319,20 +319,6 @@ The {{cssxref("@custom-media")}} CSS at-rule defines aliases for long or complex
 - `layout.css.custom-media.enabled`
   - : Set to `true` to enable.
 
-### `<attr-type>` values in `attr()` CSS function
-
-The {{cssxref("attr")}} CSS function now supports [`<attr-type>`](/en-US/docs/Web/CSS/Reference/Values/attr#attr-type) values. This allows you to specify how an attribute value is parsed into a CSS value and take those values directly from [`data-*`](/en-US/docs/Web/HTML/How_to/Use_data_attributes). ([Firefox bug 1986631](https://bugzil.la/1986631), [Firefox bug 1998245](https://bugzil.la/1998245))
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 152           | Yes                 |
-| Developer Edition | 149           | No                  |
-| Beta              | 149           | No                  |
-| Release           | 149           | No                  |
-
-- `layout.css.attr.enabled`
-  - : Set to `true` to enable.
-
 ### `base-select` value for `appearance` CSS property
 
 The [`base-select`](/en-US/docs/Web/CSS/Reference/Properties/appearance#base-select) value for the {{cssxref("appearance")}} CSS property, relevant only to the {{htmlelement("select")}} element and {{cssxref("::picker()", "::picker(select)")}} pseudo-element, allows you to fully style them. Currently only styling of the `<select>` element is supported. Styling of the `::picker(select)` pseudo-element will be added in future versions. This feature is part of the [Customizable Select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) work. Two preferences need be enabled to use it. ([Firefox bug 1974787](https://bugzil.la/1974787)).
@@ -347,20 +333,6 @@ The [`base-select`](/en-US/docs/Web/CSS/Reference/Properties/appearance#base-sel
 - `dom.select.customizable_select.enabled`
   - : Set to `true` to enable.
 - `layout.css.appearance-base.enabled`
-  - : Set to `true` to enable.
-
-### Namespaced attributes in `attr()` CSS function
-
-The {{cssxref("attr")}} CSS function now accepts [namespaced attributes](/en-US/docs/Web/CSS/Reference/Values/attr#namespaces). This allows you to take attributes from elements of [XML](/en-US/docs/Web/XML)-based languages, such as [SVG](/en-US/docs/Web/SVG) and style them accordingly. ([Firefox bug 2014060](https://bugzil.la/2014060).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 150           | No                  |
-| Developer Edition | 150           | No                  |
-| Beta              | 150           | No                  |
-| Release           | 150           | No                  |
-
-- `layout.css.attr.enabled`
   - : Set to `true` to enable.
 
 ### Absolutely positioned elements in multi-column containers and printing
@@ -463,18 +435,18 @@ The {{cssxref("text-decoration-inset")}} CSS property now supports percentages a
 - `layout.css.text-decoration-inset-percentage.enabled`
   - : Set to `true` to enable.
 
-### Calculating a value based upon `progress()`
+### `view-timeline` includes `view-timeline-inset`
 
-The {{cssxref("progress")}} CSS function is now supported. This allows the user calculate a {{cssxref("number")}} based upon a value (or progress) in between a minimum and maximum value. ([Firefox bug 2047015](https://bugzil.la/2047015)).
+The {{cssxref("view-timeline")}} shorthand property now supports the {{cssxref("view-timeline-inset")}} property. The shorthand lets you specify start and/or end inset (or outset) values to adjust the position of the view progress timeline. ([Firefox bug 2046602](https://bugzil.la/2046602)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
 | Nightly           | 155           | Yes                 |
-| Developer Edition | 154           | No                  |
-| Beta              | 154           | No                  |
-| Release           | 154           | No                  |
+| Developer Edition | 155           | No                  |
+| Beta              | 155           | No                  |
+| Release           | 155           | No                  |
 
-- `layout.css.progress-function.enabled`
+- `layout.css.scroll-driven-animations.enabled`
   - : Set to `true` to enable.
 
 ## SVG
