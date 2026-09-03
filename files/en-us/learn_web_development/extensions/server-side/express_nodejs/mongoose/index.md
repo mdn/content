@@ -126,27 +126,29 @@ Later when the promise settles, the `await` method inside the asynchronous funct
 The code in the asynchronous function then executes until either another `await` is encountered, at which point it will pause again, or until all the code in the function has been run.
 
 You can see how this works in the example below.
-`myFunction()` is an asynchronous function that is called within a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block.
+`myFunction()` is an asynchronous function that contains a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block around the `await` expressions.
 When `myFunction()` is run, code execution is paused at `methodThatReturnsPromise()` until the promise resolves, at which point the code continues to `functionThatReturnsPromise()` and waits again.
 The code in the `catch` block runs if an error is thrown in the asynchronous function, and this will happen if the promise returned by either of the methods is rejected.
 
 ```js
 async function myFunction() {
-  // …
-  await someObject.methodThatReturnsPromise();
-  // …
-  await functionThatReturnsPromise();
-  // …
+  try {
+    // …
+    await someObject.methodThatReturnsPromise();
+    // …
+    await functionThatReturnsPromise();
+    // …
+  } catch (e) {
+    // error handling code
+  }
 }
 
-try {
-  // …
-  myFunction();
-  // …
-} catch (e) {
-  // error handling code
-}
+myFunction();
 ```
+
+An asynchronous function returns a promise that rejects if an error is not caught inside the function.
+To catch that error in the calling code, use the returned promise's [`catch()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch) method, or `await` the function call inside a `try...catch` block.
+Calling the function inside a `try...catch` block without `await` will not catch the rejection, because the error is thrown later, after control as already exited the `try...catch`.
 
 The asynchronous methods above are run in sequence.
 If the methods don't depend on each other then you can run them in parallel and finish the whole operation more quickly.
@@ -157,9 +159,8 @@ It rejects when any of the input's promises rejects, with this first rejection r
 The code below shows how this works.
 First, we have two functions that return promises.
 We `await` on both of them to complete using the promise returned by `Promise.all()`.
-Once they both complete `await` returns and the results array is populated,
-the function then continues to the next `await`, and waits until the promise returned by `anotherFunctionThatReturnsPromise()` is settled.
-You would call the `myFunction()` in a `try...catch` block to catch any errors.
+Once they both complete `await` returns and the results array is populated, the function then continues to the next `await`, and waits until the promise returned by `anotherFunctionThatReturnsPromise()` is settled.
+You would attach a `catch()` handler to the promise returned by `myFunction()` to catch any errors.
 
 ```js
 async function myFunction() {
@@ -217,7 +218,7 @@ async function main() {
 
 > [!NOTE]
 > As discussed in the [Database APIs are asynchronous](#database_apis_are_asynchronous) section, here we `await` on the promise returned by the `connect()` method within an `async` function.
-> We use the promise `catch()` handler to handle any errors when trying to connect, but we might also have called `main()` within a `try...catch` block.
+> We use the promise `catch()` handler to handle any errors when trying to connect, but we might also have used `await main()` within a `try...catch` block in another `async` function.
 
 You can get the default `Connection` object with `mongoose.connection`.
 If you need to create additional connections you can use `mongoose.createConnection()`.
@@ -691,12 +692,10 @@ async function connectMongoose() {
   });
 }
 
-try {
-  connectMongoose();
-} catch (err) {
+connectMongoose().catch((err) => {
   console.error("Failed to connect to MongoDB:", err);
   process.exit(1);
-}
+});
 ```
 
 As discussed in the [Mongoose primer](#connecting_to_mongodb) above, this code creates the default connection to the database and reports any errors to the console.
