@@ -86,23 +86,19 @@ In this example there are 3 _cards_ each with different settings:
   <div class="card">
     <h2>number of lines</h2>
     <p class="integer">
-      This example the <em>number of lines</em> is specified and content longer
-      that this will be hidden by the line-clamp property. By default this will
-      show an ellipsis.
+      This example the <em>number of lines</em> is specified by an <code>&lt;integer&gt;</code> and any content that does not fit in that number of lines is truncated and an ellipsis is shown.
     </p>
   </div>
   <div class="card">
     <h2>no ellipsis</h2>
     <p class="no-ellipsis">
-      This example <em>no ellipsis</em> is specified and should not show. If you
-      see this then your browser does not currently support this.
+      This example, as well as an <code>&lt;integer&gt;</code>, a <em>no-ellipsis</em> value is specified  and any content that does not fit in that number of lines is truncated and no ellipsis is shown.
     </p>
   </div>
   <div class="card">
     <h2>custom string</h2>
     <p class="string">
-      This example has a <em>String</em> at the end and this replaces the
-      ellipsis
+      This example, as well as an <code>&lt;integer&gt;</code>, a <em>String</em>  value is specified  and any content that does not fit in that number of lines is truncated and the custom string is shown instead of an ellipsis.
     </p>
   </div>
 </section>
