@@ -74,6 +74,9 @@ In addition to the attributes listed above, the following non-standard attribute
 
 The Boolean `webkitdirectory` attribute, if present, indicates that only directories should be available to be selected by the user in the file picker interface. See {{domxref("HTMLInputElement.webkitdirectory")}} for additional details and examples.
 
+> [!NOTE]
+> `webkitdirectory` is in the process of being standardized as part of the [File and Directory Entries API](https://wicg.github.io/entries-api/#dom-htmlinputelement-webkitdirectory), a Web Platform Incubator Community Group (WICG) draft specification that is not yet a W3C standard.
+
 ## Unique file type specifiers
 
 A **unique file type specifier** is a string that describes a type of file that may be selected by the user in an {{HTMLElement("input")}} element of type `file`. Each unique file type specifier may take one of the following forms:
