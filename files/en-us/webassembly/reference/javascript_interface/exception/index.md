@@ -25,7 +25,7 @@ The **`WebAssembly.Exception`** object represents a runtime exception thrown in 
 
 ## Instance properties
 
-- [`Exception.prototype.stack`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/stack) {{non-standard_inline}}
+- [`Exception.prototype.stack`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/stack)
   - : Returns the stack trace for the exception.
 
 ## Description

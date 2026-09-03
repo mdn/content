@@ -2,13 +2,9 @@
 title: WebAssembly.Exception.prototype.stack
 slug: WebAssembly/Reference/JavaScript_interface/Exception/stack
 page-type: webassembly-instance-property
-status:
-  - non-standard
 browser-compat: webassembly.api.Exception.stack
 sidebar: webassemblysidebar
 ---
-
-{{non-standard_header}}
 
 The **`stack`** read-only property of the [`WebAssembly.Exception`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception) object _may_ contain a stack trace.
 

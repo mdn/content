@@ -37,7 +37,7 @@ It also extends the following {{domxref("PerformanceEntry")}} properties, qualif
 
 ## Instance methods
 
-- {{domxref("InteractionContentfulPaint.toJSON()")}}
+- {{domxref("InteractionContentfulPaint.toJSON()")}} {{experimental_inline}}
   - : Overrides the {{domxref("PerformanceEntry.toJSON()")}} method to return a JSON representation of the `InteractionContentfulPaint` object.
 
 ## Description
