@@ -26,7 +26,7 @@ line-clamp: none;
 line-clamp: 3;
 line-clamp: 10;
 
-/* optional additional values */
+/* <integer> and <'block-ellipsis'> values */
 line-clamp: 3 no-ellipsis;
 line-clamp: 10 "… (there is extra content)";
 
