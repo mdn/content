@@ -43,7 +43,7 @@ line-clamp: unset;
 This property is specified as one or two space-separated values from the following list:
 
 - `none`
-  - : This value specifies that the content won't be clamped.
+  - : Specifies that content is not clamped. This keyword cannot be combined with the other values. This is the default.
 - {{cssxref("integer")}}
   - : This value specifies the number of lines after which the content will be clamped. It must be greater than 0.
 - `<’block-ellipsis’>` {{optional_inline}}
