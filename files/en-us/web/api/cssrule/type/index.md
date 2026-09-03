@@ -8,7 +8,7 @@ status:
 browser-compat: api.CSSRule.type
 ---
 
-{{APIRef("CSSOM")}}{{Deprecated_header}}
+{{APIRef("CSSOM")}}
 
 The read-only **`type`** property of the
 {{domxref("CSSRule")}} interface is a deprecated property that returns an integer

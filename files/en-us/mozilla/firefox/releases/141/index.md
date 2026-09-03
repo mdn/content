@@ -57,7 +57,7 @@ Firefox 141 was released on [July 22, 2025](https://whattrainisitnow.com/release
 
 #### WebDriver BiDi
 
-- Added support for the "proxy" argument of the `browser.createUserContext` command. This allows clients to setup either a "direct" or "manual" proxy when creating a user context (ie Firefox Container). Support for additional proxy types will be added later on ([Firefox bug 1967653](https://bugzil.la/1967653)).
+- Added support for the "proxy" argument of the `browser.createUserContext` command. This allows clients to set up either a "direct" or "manual" proxy when creating a user context (ie Firefox Container). Support for additional proxy types will be added later on ([Firefox bug 1967653](https://bugzil.la/1967653)).
 - Implemented the new `browsingContext.historyUpdated` event which is emitted when `history.pushState()`, `history.replaceState()` or `document.open()` is called within the context of a web page ([Firefox bug 1906051](https://bugzil.la/1906051)).
 - Improved the error message shown when attempting to permanently install an unpacked, unsigned web extension ([Firefox bug 1958723](https://bugzil.la/1958723)).
 - Updated the `browsingContext.navigate` and `browsingContext.reload` commands to wait for the `browsingContext.navigationCommitted` event when using the "wait" condition "none" ([Firefox bug 1967469](https://bugzil.la/1967469)).
@@ -65,7 +65,7 @@ Firefox 141 was released on [July 22, 2025](https://whattrainisitnow.com/release
 
 #### Marionette
 
-- To avoid unnecessary 200ms delays for each call to `WebDriver:ElementClick` - even when no navigation occurs - we lowered the click-and-wait timeout for a potential navigation to 50ms for backward compatibility. The [timeout is now also configurable](https://firefox-source-docs.mozilla.org/testing/marionette/Prefs.html#marionette-navigate-after-click-timeout) and [can be completely disabled](https://firefox-source-docs.mozilla.org/testing/marionette/Prefs.html#marionette-navigate-after-click-enabled) by users through a preference ([Firefox bug 1972271](https://bugzil.la/1972271)).
+- To avoid unnecessary 200ms delays for each call to `WebDriver:ElementClick` - even when no navigation occurs - we lowered the click-and-wait timeout for a potential navigation to 50ms for backward compatibility. The [timeout is now also configurable](https://firefox-source-docs.mozilla.org/remote/marionette/Prefs.html#marionette-navigate-after-click-timeout) and [can be completely disabled](https://firefox-source-docs.mozilla.org/remote/marionette/Prefs.html#marionette-navigate-after-click-enabled) by users through a preference ([Firefox bug 1972271](https://bugzil.la/1972271)).
 - Added support in Marionette for interacting with CHIPS cookies (Cookies Having Independent Partitioned State) ([Firefox bug 1972830](https://bugzil.la/1972830)).
 
 ## Changes for add-on developers

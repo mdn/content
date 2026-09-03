@@ -8,7 +8,7 @@ status:
 browser-compat: api.Document.createNSResolver
 ---
 
-{{ ApiRef("DOM") }}{{deprecated_header}}
+{{ ApiRef("DOM") }}
 
 The **`createNSResolver()`** method of the {{domxref("Document")}} interface used to create a custom `XPathNSResolver` object. It now returns the input as-is and is only kept for compatibility reasons.
 

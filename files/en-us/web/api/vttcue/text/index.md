@@ -16,7 +16,7 @@ A string containing the raw text of the cue.
 
 ## Examples
 
-In the following example a new {{domxref("VTTCue")}} is created, then the value of `size` is set to the string `"new cue value"`. The value is then printed to the console.
+In the following example a new {{domxref("VTTCue")}} is created, then the value of `text` is set to the string `"new cue value"`. The value is then printed to the console.
 
 ```js
 let video = document.querySelector("video");

@@ -8,11 +8,11 @@ browser-compat: api.CSSTransformComponent.is2D
 
 {{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`is2D`** read-only property of the {{domxref("CSSTransformComponent")}} interface indicates whether the transform is 2D or 3D.
+The **`is2D`** property of the {{domxref("CSSTransformComponent")}} interface indicates whether the transform is 2D or 3D.
 
 ## Value
 
-A boolean. True indicating the transform is a 2D transform, false if it is a 3D transform.
+A boolean. True if the transform is a 2D transform, false if it is a 3D transform.
 
 ## Examples
 

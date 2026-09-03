@@ -35,7 +35,7 @@ caret-animation: unset;
 
 ### Values
 
-The `caret-animation` property is specified as one of the keyword values listed below.
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : The caret blinks on and off. This is the default (initial) value.

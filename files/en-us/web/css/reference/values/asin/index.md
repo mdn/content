@@ -43,7 +43,7 @@ The inverse sine of a `number` will always return an {{cssxref("angle")}} betwee
 
 ### Rotate elements
 
-The `asin()` function can be used to {{cssxref("transform-function/rotate", "rotate")}} elements as it return an {{cssxref("angle")}}.
+The `asin()` function can be used to {{cssxref("transform-function/rotate", "rotate")}} elements as it returns an {{cssxref("angle")}}.
 
 #### HTML
 

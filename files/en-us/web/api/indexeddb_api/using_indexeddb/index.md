@@ -491,7 +491,7 @@ index.openKeyCursor().onsuccess = (event) => {
 };
 ```
 
-The index can also be created on multiple properties, allowing to look up records using a combination of values, such as finding a person by both their name and email. To create a compound index, pass an array of property names as the key path when calling `createIndex`. You can then query the index by passing an array of values in the same order.
+The index can also be created on multiple properties, allowing you to look up records using a combination of values, such as finding a person by both their name and email. To create a compound index, pass an array of property names as the key path when calling `createIndex`. You can then query the index by passing an array of values in the same order.
 
 First, make sure you created the index in `request.onupgradeneeded`:
 

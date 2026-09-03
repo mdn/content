@@ -120,6 +120,17 @@ async function cookieTest() {
 }
 ```
 
+### Setting cookies with the same name
+
+These calls create two separate cookies because their paths differ:
+
+```js
+await cookieStore.set({ name: "theme", value: "light", path: "/" });
+await cookieStore.set({ name: "theme", value: "dark", path: "/docs" });
+```
+
+On a page under `/docs/`, {{domxref("CookieStore.getAll()", 'cookieStore.getAll("theme")')}} can retrieve both cookies. Calling `cookieStore.set("theme", "blue")` updates the cookie at the default path `/`, leaving the `/docs` cookie unchanged.
+
 ## Specifications
 
 {{Specifications}}

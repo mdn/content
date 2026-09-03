@@ -163,7 +163,7 @@ The [`PreviousNext`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/t
 
 - [`EmbedLiveSample`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/embed_live_sample.rs) lets you embed the output of a code sample on a page, as described in [Live samples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples).
 - [`LiveSampleLink`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/live_sample_link.rs) creates a link to a page containing the output of a code sample on a page, as described in [Live samples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples).
-- [`EmbedGHLiveSample`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/embed_gh_live_sample.rs) allows to embed live samples from GitHub pages.
+- [`EmbedGHLiveSample`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/embed_gh_live_sample.rs) allows you to embed live samples from GitHub pages.
   You can get more information at [GitHub live samples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples#github_live_samples).
 
 ## Adding general-purpose formatting
@@ -234,7 +234,6 @@ They can also be used to mark up a section on a page.
 - [`SeeCompatTable`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs) used on pages
   that document [experimental features](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
   Example: `\{{SeeCompatTable}}` {{SeeCompatTable}}
-- [`Deprecated_Header`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs): `\{{Deprecated_Header}}` {{Deprecated_Header}}
 - [`SecureContext_Header`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs).
   Should be used on main pages like interface pages, API overview pages, and API entry points (e.g., `navigator.xyz`) but usually not on subpages like method and property pages.
   Example: `\{{SecureContext_Header}}` {{SecureContext_Header}}

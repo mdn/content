@@ -242,11 +242,11 @@ The flex container has six rows, so five gutters. The `repeat()` function repeat
 
 This example demonstrates using `auto`, instead of an integer, within the `repeat()` function.
 
-Using `repeat(auto, <color>)`, we set all the lines to be almost transparent black (`#0003`), except the first and last, which we set to a solid `black`.
+Using `repeat(auto, <color>)`, we set all the lines to be almost transparent black (`#00000033`), except the first and last, which we set to a solid `black`.
 
 ```css live-sample___auto
 ul {
-  row-rule-color: black, repeat(auto, #0003), black;
+  row-rule-color: black, repeat(auto, #00000033), black;
 }
 ```
 

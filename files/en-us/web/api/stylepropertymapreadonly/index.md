@@ -12,8 +12,8 @@ Retrieve an instance of this interface using {{domxref('Element.computedStyleMap
 
 ## Instance properties
 
-- {{domxref('StylePropertyMapReadOnly.size')}}
-  - : Returns an unsigned long integer containing the size of the `StylePropertyMapReadOnly` object.
+- {{domxref('StylePropertyMapReadOnly.size')}} {{ReadOnlyInline}}
+  - : Returns an unsigned integer containing the size of the `StylePropertyMapReadOnly` object.
 
 ## Instance methods
 

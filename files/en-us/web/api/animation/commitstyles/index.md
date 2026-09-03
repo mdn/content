@@ -96,7 +96,7 @@ After the element's styles have been committed they can be modified and replaced
 This example demonstrates how you can use `commitStyles()` to save the computed styles at the end of the animation, both with and without using `fill`.
 It also provides an example of what happens if neither `commitStyles()` or `fill` are used, for comparison.
 
-The example first displays two buttons labelled "commitStyles() only" and "commitStyles() with fill".
+The example first displays two buttons labeled "commitStyles() only" and "commitStyles() with fill".
 Both buttons animate when you click them, and both buttons call `commitStyles()` to persist the final state of the animation.
 The difference is that "commitStyles() only" does not specify `fill: "forwards"` to persist the animation's final state.
 On browsers that don't match the current specification the final state may not be captured.

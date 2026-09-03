@@ -10,7 +10,7 @@ browser-compat: http.headers.Device-Memory
 sidebar: http
 ---
 
-{{Deprecated_Header}}{{SecureContext_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{Non-standard_Header}}
 
 > [!WARNING]
 > The `Device-Memory` header was standardized as {{HTTPHeader("Sec-CH-Device-Memory")}} and the new name is now preferred.
