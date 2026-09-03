@@ -437,7 +437,7 @@ The {{cssxref("text-decoration-inset")}} CSS property now supports percentages a
 
 ### `view-timeline` includes `view-timeline-inset`
 
-The {{cssxref("view-timeline")}} shorthand property now includes {{cssxref("view-timeline-inset")}} property. This let you specify the start and/or end inset (or outset) values that offset the position of the animations timeline. ([Firefox bug 2046602](https://bugzil.la/2046602)).
+The {{cssxref("view-timeline")}} shorthand property now supports the {{cssxref("view-timeline-inset")}} property. The shorthand lets you specify start and/or end inset (or outset) values to adjust the position of the view progress timeline. ([Firefox bug 2046602](https://bugzil.la/2046602)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
