@@ -75,7 +75,7 @@ The value of a counter can be displayed using either the {{cssxref("counter()")}
 
 For example, the following declaration uses `counter()` to prefix each `h3` heading with the text `Section <number>:`, where `<number>` is the value of the count in decimal (the default display style):
 
-This creates a counter on the {{htmlelement("body")}} named 'section', and sets its initial value is 0, increments the value of section counter by 1 on every `<h3>`, printing `Section <n>: ` before the content of each `<h3>`, where `<n>` is the default decimal value of the `section` counter.
+This creates a counter on the {{htmlelement("body")}} named 'section', and sets its initial value is 0, increments the value of section counter by 1 on every `<h3>`, printing `Section <n>:` before the content of each `<h3>`, where `<n>` is the default decimal value of the `section` counter.
 
 ```css
 body {
@@ -83,7 +83,7 @@ body {
 }
 
 h3 {
-  counter-increment: section; 
+  counter-increment: section;
 }
 
 h3::before {
@@ -359,7 +359,7 @@ We use the `reversed()` function to create a counter named 'section', with initi
 
 ```css
 body {
-  counter-reset: reversed(section); 
+  counter-reset: reversed(section);
 }
 
 h3::before {
@@ -431,7 +431,7 @@ li {
 }
 
 li::before {
-  content: counters(section, ".") " "; 
+  content: counters(section, ".") " ";
 }
 ```
 
