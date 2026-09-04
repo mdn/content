@@ -419,13 +419,17 @@ You'll be able to test the password reset functionality from the link in the log
 Note that you won't be able to test account logout yet, because logout requests must be sent as a `POST` rather than a `GET` request.
 
 > [!NOTE]
-> The password reset system requires that your website supports email, which is beyond the scope of this article, so this part **won't work yet**. To allow testing, put the following line at the end of your settings.py file. This logs any emails sent to the console (so you can copy the password reset link from the console).
+> The password reset system requires that your website supports email, which is beyond the scope of this article, so this part **won't work yet**. To allow testing, put the following lines at the end of your settings.py file. This logs any emails sent to the console (so you can copy the password reset link from the console).
 >
 > ```python
-> EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+> MAILERS = {
+>     'default': {
+>         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
+>     },
+> }
 > ```
 >
-> For more information, see [Sending email](https://docs.djangoproject.com/en/5.0/topics/email/) (Django docs).
+> For more information, see [Sending email](https://docs.djangoproject.com/en/6.1/topics/email/) (Django docs).
 
 ## Testing against authenticated users
 
@@ -626,12 +630,12 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
     def get_queryset(self):
         return (
             BookInstance.objects.filter(borrower=self.request.user)
-            .filter(status__exact='o')
+            .filter(status__exact=BookInstance.LoanStatus.ON_LOAN)
             .order_by('due_back')
         )
 ```
 
-In order to restrict our query to just the `BookInstance` objects for the current user, we re-implement `get_queryset()` as shown above. Note that "o" is the stored code for "on loan" and we order by the `due_back` date so that the oldest items are displayed first.
+In order to restrict our query to just the `BookInstance` objects for the current user, we re-implement `get_queryset()` as shown above. Note that `BookInstance.LoanStatus.ON_LOAN` is the stored code for "on loan" and we order by the `due_back` date so that the oldest items are displayed first.
 
 ### URL conf for on loan books
 

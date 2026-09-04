@@ -587,7 +587,7 @@ class LoanedBooksByUserListView(LoginRequiredMixin, generic.ListView):
     paginate_by = 10
 
     def get_queryset(self):
-        return BookInstance.objects.filter(borrower=self.request.user).filter(status__exact='o').order_by('due_back')
+        return BookInstance.objects.filter(borrower=self.request.user).filter(status__exact=BookInstance.LoanStatus.ON_LOAN).order_by('due_back')
 ```
 
 Add the following test code to **/catalog/tests/test_views.py**. Here we first use `SetUp()` to create some user login accounts and `BookInstance` objects (along with their associated books and other records) that we'll use later in the tests. Half of the books are borrowed by each test user, but we've initially set the status of all books to "maintenance". We've used `SetUp()` rather than `setUpTestData()` because we'll be modifying some of these objects later.
@@ -637,7 +637,7 @@ class LoanedBookInstancesByUserListViewTest(TestCase):
         for book_copy in range(number_of_book_copies):
             return_date = timezone.localtime() + datetime.timedelta(days=book_copy%5)
             the_borrower = test_user1 if book_copy % 2 else test_user2
-            status = 'm'
+            status = BookInstance.LoanStatus.MAINTENANCE
             BookInstance.objects.create(
                 book=test_book,
                 imprint='Unlikely Imprint, 2016',
@@ -685,7 +685,7 @@ The rest of the tests verify that our view only returns books that are on loan t
         books = BookInstance.objects.all()[:10]
 
         for book in books:
-            book.status = 'o'
+            book.status = BookInstance.LoanStatus.ON_LOAN
             book.save()
 
         # Check that now we have borrowed books in the list
@@ -700,12 +700,12 @@ The rest of the tests verify that our view only returns books that are on loan t
         # Confirm all books belong to testuser1 and are on loan
         for book_item in response.context['bookinstance_list']:
             self.assertEqual(response.context['user'], book_item.borrower)
-            self.assertEqual(book_item.status, 'o')
+            self.assertEqual(book_item.status, BookInstance.LoanStatus.ON_LOAN)
 
     def test_pages_ordered_by_due_date(self):
         # Change all books to be on loan
         for book in BookInstance.objects.all():
-            book.status='o'
+            book.status = BookInstance.LoanStatus.ON_LOAN
             book.save()
 
         login = self.client.login(username='testuser1', password='1X<ISRUkw+tuK')
@@ -820,7 +820,7 @@ class RenewBookInstancesViewTest(TestCase):
             imprint='Unlikely Imprint, 2016',
             due_back=return_date,
             borrower=test_user1,
-            status='o',
+            status=BookInstance.LoanStatus.ON_LOAN,
         )
 
         # Create a BookInstance object for test_user2
@@ -830,7 +830,7 @@ class RenewBookInstancesViewTest(TestCase):
             imprint='Unlikely Imprint, 2016',
             due_back=return_date,
             borrower=test_user2,
-            status='o',
+            status=BookInstance.LoanStatus.ON_LOAN,
         )
 ```
 

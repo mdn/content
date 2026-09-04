@@ -407,18 +407,17 @@ class BookInstance(models.Model):
     imprint = models.CharField(max_length=200)
     due_back = models.DateField(null=True, blank=True)
 
-    LOAN_STATUS = (
-        ('m', 'Maintenance'),
-        ('o', 'On loan'),
-        ('a', 'Available'),
-        ('r', 'Reserved'),
-    )
+    class LoanStatus(models.TextChoices):
+        MAINTENANCE = 'm', 'Maintenance'
+        ON_LOAN = 'o', 'On loan'
+        AVAILABLE = 'a', 'Available'
+        RESERVED = 'r', 'Reserved'
 
     status = models.CharField(
         max_length=1,
-        choices=LOAN_STATUS,
+        choices=LoanStatus,
         blank=True,
-        default='m',
+        default=LoanStatus.MAINTENANCE,
         help_text='Book availability',
     )
 
@@ -435,7 +434,10 @@ We additionally declare a few new types of field:
 - `UUIDField` is used for the `id` field to set it as the `primary_key` for this model.
   This type of field allocates a globally unique value for each instance (one for every book you can find in the library).
 - `DateField` is used for the `due_back` date (at which the book is expected to become available after being borrowed or in maintenance). This value can be `blank` or `null` (needed for when the book is available). The model metadata (`Class Meta`) uses this field to order records when they are returned in a query.
-- `status` is a `CharField` that defines a choice/selection list. As you can see, we define a tuple containing tuples of key-value pairs and pass it to the choices argument. The value in a key/value pair is a display value that a user can select, while the keys are the values that are actually saved if the option is selected. We've also set a default value of 'm' (maintenance) as books will initially be created unavailable before they are stocked on the shelves.
+- `status` is a `CharField` that defines a choice/selection list.
+  We define the choices using a [`TextChoices`](https://docs.djangoproject.com/en/6.1/ref/models/fields/#enumeration-types) class (`LoanStatus`), where each named member (e.g., `MAINTENANCE`) pairs the value that is actually saved (`'m'`) with the human-readable label a user sees (`'Maintenance'`).
+  This lets the rest of our code refer to `BookInstance.LoanStatus.MAINTENANCE` by name instead of the raw string `'m'`, which is both easier to read and harder to get wrong.
+  We've also set the default status to `LoanStatus.MAINTENANCE`, as books will initially be created as unavailable before they are stocked on the shelves.
 
 The method `__str__()` represents the `BookInstance` object using a combination of its unique id and the associated `Book`'s title.
 
