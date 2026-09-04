@@ -227,7 +227,7 @@ console.log("swap");
 
 ### Labeled function declarations
 
-Labels can only be applied to [statements, not declarations](/en-US/docs/Web/JavaScript/Reference/Statements#statements_declarations_and_expressions). There is a legacy grammar that allows function declarations to be labeled in non-strict code:
+Labels can only be applied to [statements, not declarations](/en-US/docs/Web/JavaScript/Reference/Statements#what_are_statements_declarations_and_expressions). There is a legacy grammar that allows function declarations to be labeled in non-strict code:
 
 ```js
 L: function F() {}

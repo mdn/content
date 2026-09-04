@@ -329,7 +329,7 @@ const func4 = (
 
 ### Precedence of arrow
 
-Although the arrow in an arrow function is [not an operator](/en-US/docs/Web/JavaScript/Reference/Operators#expressions_and_operators), arrow functions have special parsing rules that interact differently with [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) compared to regular functions.
+Although the arrow in an arrow function is [not an operator](/en-US/docs/Web/JavaScript/Reference/Operators#what_are_operators), arrow functions have special parsing rules that interact differently with [operator precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) compared to regular functions.
 
 ```js-nolint example-bad
 let callback;

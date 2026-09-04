@@ -129,7 +129,7 @@ A comparison operator compares its operands and returns a boolean value based on
   - : The `in` operator determines whether an object has a given property.
 
 > [!NOTE]
-> `=>` is [not an operator](#expressions_and_operators), but the notation for [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+> `=>` is [not an operator](#what_are_operators), but the notation for [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ### Equality operators
 
@@ -238,9 +238,9 @@ An assignment operator assigns a value to its left operand based on the value of
 - {{jsxref("Operators/Comma_operator", ",")}}
   - : The comma operator allows multiple expressions to be evaluated in a single statement and returns the result of the last expression.
 
-## Expressions and operators
+## What are operators?
 
-As the [Statements, declarations, and expressions](/en-US/docs/Web/JavaScript/Reference/Statements#statements_declarations_and_expressions) section explains, an expression is a fundamental building block that evaluates to a value. Statements, declarations, and expressions can all define specific slots where expressions are accepted. Where an expression contains slots for further nested expressions, the part(s) that are not slots are known as operators.
+As the [What are statements, declarations, and expressions?](/en-US/docs/Web/JavaScript/Reference/Statements#what_are_statements_declarations_and_expressions) section explains, an expression is a fundamental building block that evaluates to a value. Statements, declarations, and expressions can all define specific slots where expressions are accepted. Where an expression contains slots for further nested expressions, the part(s) that are not slots are known as operators.
 
 For example, the syntax for an [addition](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) expression is `expression + expression` (if you read the spec, the operands are called _AdditiveExpression_ and _MultiplicativeExpression_, which are both subsets of _Expression_, but that's the spec's mechanism for defining [precedence and associativity](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) and is irrelevant for our purposes). Apart from the two expression slots, the code entity it introduces is just `+`: the _addition operator_. Similarly, the syntax for a [yield](/en-US/docs/Web/JavaScript/Reference/Operators/yield) expression is `yield expression`, so `yield` is known as the operator. In other words, each operator corresponds to an expression.
 

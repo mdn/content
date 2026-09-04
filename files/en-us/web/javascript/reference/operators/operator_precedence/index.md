@@ -240,7 +240,7 @@ The following table lists operators in order from highest precedence (18) to low
 
 Several general notes about the table:
 
-1. Not all syntax included here are ["operators" in the strict sense](/en-US/docs/Web/JavaScript/Reference/Operators#expressions_and_operators). For example, spread `...` and arrow `=>` are typically not regarded as operators. However, we still included them to show how tightly they bind compared to other operators/expressions.
+1. Not all syntax included here are ["operators" in the strict sense](/en-US/docs/Web/JavaScript/Reference/Operators#what_are_operators). For example, spread `...` and arrow `=>` are typically not regarded as operators. However, we still included them to show how tightly they bind compared to other operators/expressions.
 2. Some operators have certain operands that require expressions narrower than those produced by higher-precedence operators. For example, the right-hand side of member access `.` (precedence 17) must be an identifier instead of a grouped expression. The left-hand side of arrow `=>` (precedence 2) must be an arguments list or a single identifier instead of some random expression.
 3. Some operators have certain operands that accept expressions wider than those produced by higher-precedence operators. For example, the bracket-enclosed expression of bracket notation `[ … ]` (precedence 17) can be any expression, even comma (precedence 1) joined ones. These operators act as if that operand is "automatically grouped". In this case we will omit the associativity.
 
