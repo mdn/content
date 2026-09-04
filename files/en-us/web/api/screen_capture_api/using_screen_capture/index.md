@@ -65,7 +65,7 @@ function startCapture(displayMediaOptions) {
 
 Either way, the {{Glossary("user agent")}} responds by presenting a user interface that prompts the user to choose the screen area to share. Both of these implementations of `startCapture()` return the {{domxref("MediaStream")}} containing the captured display imagery.
 
-See [Options and constraints](#options_and_constraints), below, for more on both how to specify the type of surface you want as well as other ways to adjust the resulting stream.
+See [Options and constraints](#options_and_constraints), below, for more on both how to specify the type of surface you want and other ways to adjust the resulting stream.
 
 ### Example of a window allowing the user to select a display surface to capture
 
