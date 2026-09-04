@@ -679,6 +679,13 @@ const mongoose = require("mongoose");
 
 const mongoDB = "insert_your_database_url_here";
 
+connectMongoose()
+  .then(startServer)
+  .catch((err) => {
+    console.error("Failed to connect to MongoDB:", err);
+    process.exit(1);
+  });
+
 async function connectMongoose() {
   await mongoose.connect(mongoDB);
 
@@ -691,14 +698,48 @@ async function connectMongoose() {
     console.warn("MongoDB disconnected");
   });
 }
-
-connectMongoose().catch((err) => {
-  console.error("Failed to connect to MongoDB:", err);
-  process.exit(1);
-});
 ```
 
 As discussed in the [Mongoose primer](#connecting_to_mongodb) above, this code creates the default connection to the database and reports any errors to the console.
+It also calls a `startServer()` function once the connection succeeds, which we'll create next.
+
+The generated **bin/www** file creates the HTTP server and starts it listening immediately, regardless of whether the database connection succeeds.
+Find this code, further down in the same file:
+
+```js
+/**
+ * Create HTTP server.
+ */
+
+var server = http.createServer(app);
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+
+server.listen(port);
+server.on("error", onError);
+server.on("listening", onListening);
+```
+
+Replace it with the following, which moves server creation and listening into a `startServer()` function so that it only runs once `connectMongoose()` has resolved:
+
+```js
+/**
+ * Create HTTP server and listen on provided port, on all network
+ * interfaces, once the MongoDB connection is established.
+ */
+
+var server;
+
+function startServer() {
+  server = http.createServer(app);
+
+  server.listen(port);
+  server.on("error", onError);
+  server.on("listening", onListening);
+}
+```
 
 > [!NOTE]
 > We could have put the database connection code in our **app.js** code.
