@@ -72,6 +72,7 @@ The recommended setting is the following, which sets the viewport to match the d
 ```html
 <meta name="viewport" content="width=device-width" />
 ```
+
 > [!NOTE]
 > Including `initial-scale=1.0` was historically necessary to prevent unintended zooming behaviors in older mobile browsers. While modern browsers don't require `initial-scale` to resolve this behavior, `initial-scale` is not entirely redundant and remains useful when defining custom scale defaults or fixed layout widths.
 
