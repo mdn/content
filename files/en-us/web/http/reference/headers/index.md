@@ -176,11 +176,11 @@ For more information, refer to the [CORS documentation](/en-US/docs/Web/HTTP/Gui
 ## Message signatures
 
 - {{HTTPHeader("Accept-Signature")}}
-  - : The [`Accept-Signature`](https://www.rfc-editor.org/rfc/rfc9421.html#section-5.1) header requests a signed response or subsequent request, specifying the components to sign and signature parameters.
+  - : The [`Accept-Signature`](https://www.rfc-editor.org/info/rfc9421/#section-5.1) header requests a signed response or subsequent request, specifying the components to sign and signature parameters.
 - {{HTTPHeader("Signature")}}
-  - : The [`Signature`](https://www.rfc-editor.org/rfc/rfc9421.html#section-4.2) header contains one or more labeled signature values. Each label corresponds to an entry in `Signature-Input`.
+  - : The [`Signature`](https://www.rfc-editor.org/info/rfc9421/#section-4.2) header contains one or more labeled signature values. Each label corresponds to an entry in `Signature-Input`.
 - {{HTTPHeader("Signature-Input")}}
-  - : The [`Signature-Input`](https://www.rfc-editor.org/rfc/rfc9421.html#section-4.1) header identifies the ordered list of message components covered by each signature and its metadata, such as the creation time and key identifier.
+  - : The [`Signature-Input`](https://www.rfc-editor.org/info/rfc9421/#section-4.1) header identifies the ordered list of message components covered by each signature and its metadata, such as the creation time and key identifier.
 
 > [!NOTE]
 > These definitions follow RFC 9421. The [Signed HTTP Exchanges (SXG) draft](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html) also defines `Accept-Signature` and `Signature` with incompatible semantics, plus a distinct `Signed-Headers` header. However, the only browser SXG implementation, Chromium, does not support these as HTTP headers.
