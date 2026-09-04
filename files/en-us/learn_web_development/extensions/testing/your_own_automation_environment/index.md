@@ -19,7 +19,7 @@ In this article, we will teach you how to install your own automation environmen
         <a href="/en-US/docs/Learn_web_development/Core/Styling_basics">CSS</a>, and
         <a href="/en-US/docs/Learn_web_development/Core/Scripting">JavaScript</a> languages; an idea
         of the high-level
-        <a href="/en-US/docs/Learn_web_development/Extensions/Testing/Introduction">principles of cross browser testing</a>, and
+        <a href="/en-US/docs/Learn_web_development/Extensions/Testing/Introduction">principles of cross-browser testing</a>, and
         <a href="/en-US/docs/Learn_web_development/Extensions/Testing/Automated_testing">automated testing</a>.
       </td>
     </tr>
