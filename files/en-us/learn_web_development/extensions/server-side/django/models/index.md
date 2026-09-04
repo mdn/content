@@ -129,15 +129,14 @@ The following common arguments can be used when declaring many/most of the diffe
 - [primary_key](https://docs.djangoproject.com/en/5.0/ref/models/fields/#primary-key):
   If `True`, sets the current field as the primary key for the model (A primary key is a special database column designated to uniquely identify all the different table records).
   If no field is specified as the primary key, Django will automatically add a field for this purpose.
-  The type of auto-created primary key fields can be specified for each app in [`AppConfig.default_auto_field`](https://docs.djangoproject.com/en/5.0/ref/applications/#django.apps.AppConfig.default_auto_field) or globally in the [`DEFAULT_AUTO_FIELD`](https://docs.djangoproject.com/en/5.0/ref/settings/#std:setting-DEFAULT_AUTO_FIELD) setting.
+  The type of auto-created primary key fields can be specified for each app in [`AppConfig.default_auto_field`](https://docs.djangoproject.com/en/6.1/ref/applications/#django.apps.AppConfig.default_auto_field) or globally in the [`DEFAULT_AUTO_FIELD`](https://docs.djangoproject.com/en/6.1/ref/settings/#std:setting-DEFAULT_AUTO_FIELD) setting.
 
   > [!NOTE]
-  > Apps created using **manage.py** set the type of the primary key to a [BigAutoField](https://docs.djangoproject.com/en/5.0/ref/models/fields/#bigautofield).
-  > You can see this in the local library **catalog/apps.py** file:
+  > The type of the primary key defaults to [BigAutoField](https://docs.djangoproject.com/en/6.1/ref/models/fields/#bigautofield) — this has been the default value of the `DEFAULT_AUTO_FIELD` setting since Django 6.0, so you won't see it set explicitly in the local library's **catalog/apps.py** file:
   >
   > ```python
   > class CatalogConfig(AppConfig):
-  >   default_auto_field = 'django.db.models.BigAutoField'
+  >     name = 'catalog'
   > ```
 
 There are many other options — you can view the [full list of field options here](https://docs.djangoproject.com/en/5.0/ref/models/fields/#field-options).
