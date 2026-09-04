@@ -28,6 +28,8 @@ All `Global` instances inherit from the `Global()` constructor's prototype objec
 
 ### Instance methods
 
+- [`Global.prototype.type()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global/type)
+  - : Returns an object describing the type of this global (its value type and mutability).
 - [`Global.prototype.valueOf()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global/valueOf)
   - : Returns the value contained inside the global variable.
 

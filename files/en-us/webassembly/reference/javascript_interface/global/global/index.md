@@ -19,7 +19,7 @@ new WebAssembly.Global(descriptor, value)
 ### Parameters
 
 - `descriptor`
-  - : An object, which contains two properties:
+  - : An object describing the type of the global. This can be the object returned by [`Global.prototype.type()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global/type). It contains two properties:
     - `value`
       - : A string representing the data type of the global. This can be any one of:
         - `i32`: A 32-bit integer.
@@ -92,6 +92,16 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 > [!NOTE]
 > You can see the example [running live on GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html);
 > see also the [source code](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/global.html).
+
+### Creating a global from a type
+
+The following example passes a global's type to the constructor to create another global with the same value type and mutability, but a different initial value:
+
+```js
+const global = new WebAssembly.Global({ value: "i32", mutable: true }, 42);
+const newGlobal = new WebAssembly.Global(global.type(), 0);
+console.log(newGlobal.value); // 0
+```
 
 ## Specifications
 

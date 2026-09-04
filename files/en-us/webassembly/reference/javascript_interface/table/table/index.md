@@ -18,7 +18,7 @@ new WebAssembly.Table(tableDescriptor, value)
 ### Parameters
 
 - `tableDescriptor`
-  - : An object that can contain the following members:
+  - : An object describing the type of the table. This can be the object returned by [`Table.prototype.type()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Table/type). It can contain the following members:
     - `element`
       - : A string representing the type of value to be stored in the table. This can have a value of `"anyfunc"` (functions) or `"externref"` (host references).
     - `initial`
@@ -130,6 +130,16 @@ const table = new WebAssembly.Table(
 );
 
 console.log(myObject === table.get(2)); // true
+```
+
+### Creating a table from a type
+
+The following example uses `minimum` instead of `initial`, then passes the table's type to the constructor to create another table with the same type. The elements of the original table are not copied.
+
+```js
+const table = new WebAssembly.Table({ element: "externref", minimum: 2 });
+const newTable = new WebAssembly.Table(table.type());
+console.log(newTable.length); // 2
 ```
 
 ## Specifications

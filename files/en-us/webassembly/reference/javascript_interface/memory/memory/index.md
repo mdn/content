@@ -21,7 +21,7 @@ new WebAssembly.Memory(memoryDescriptor)
 ### Parameters
 
 - `memoryDescriptor`
-  - : An object that can contain the following members:
+  - : An object describing the type of the memory. This can be the object returned by [`Memory.prototype.type()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory/type). It can contain the following members:
     - `address` {{optional_inline}}
       - : A string value that specifies the address type of the memory. This can be
         `"i32"` or `"i64"`. The default is `"i32"`.
@@ -107,6 +107,16 @@ const memory = new WebAssembly.Memory({
   initial: 1n,
   maximum: 10n,
 });
+```
+
+### Creating a memory from a type
+
+The following example uses `minimum` instead of `initial`, then passes the memory's type to the constructor to create another memory with the same type. The contents of the original memory are not copied.
+
+```js
+const memory = new WebAssembly.Memory({ minimum: 1, maximum: 10 });
+const newMemory = new WebAssembly.Memory(memory.type());
+console.log(newMemory.buffer.byteLength); // 65536
 ```
 
 ## Specifications
