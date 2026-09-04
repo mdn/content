@@ -17,8 +17,8 @@ The possible `oversample` values are:
 | Value    | Effect                                                                 |
 | -------- | ---------------------------------------------------------------------- |
 | `'none'` | Do not perform any oversampling.                                       |
-| `'2x'`   | Double the amount of samples before applying the shaping curve.        |
-| `'4x'`   | Multiply by 4 the amount of samples before applying the shaping curve. |
+| `'2x'`   | Double the number of samples before applying the shaping curve.        |
+| `'4x'`   | Multiply by 4 the number of samples before applying the shaping curve. |
 
 ## Value
 
