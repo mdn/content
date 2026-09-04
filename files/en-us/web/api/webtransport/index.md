@@ -46,7 +46,7 @@ The **`WebTransport`** interface of the {{domxref("WebTransport API", "WebTransp
   - : Returns a {{domxref("WebTransportSendGroup")}} that can be used to group together streams and datagrams so that their relative sending priority can be controlled as a set.
 - {{domxref("WebTransport.createUnidirectionalStream", "createUnidirectionalStream()")}}
   - : Asynchronously opens a unidirectional stream ({{domxref("WritableStream")}}) that can be used to write to the server.
-- {{domxref("WebTransport.exportKeyingMaterial", "exportKeyingMaterial()")}}
+- {{domxref("WebTransport.exportKeyingMaterial", "exportKeyingMaterial()")}} {{experimental_inline}}
   - : Returns a {{jsxref("Promise")}} that fulfills with keying material derived from the TLS session underlying the connection.
 - {{domxref("WebTransport.getStats", "getStats()")}}
   - : Returns a {{jsxref("Promise")}} that fulfills with an object containing HTTP/3 connection statistics.

@@ -8,7 +8,7 @@ status:
 browser-compat: api.PerformanceSoftNavigation.toJSON
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`toJSON()`** method of the {{domxref("PerformanceSoftNavigation")}} interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("PerformanceSoftNavigation")}} object.
 

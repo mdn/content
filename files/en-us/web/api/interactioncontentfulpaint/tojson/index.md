@@ -8,7 +8,7 @@ status:
 browser-compat: api.InteractionContentfulPaint.toJSON
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`toJSON()`** method of the {{domxref("InteractionContentfulPaint")}} interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("InteractionContentfulPaint")}} object.
 
