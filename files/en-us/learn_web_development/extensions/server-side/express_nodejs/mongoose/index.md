@@ -691,12 +691,10 @@ async function connectMongoose() {
   });
 }
 
-try {
-  connectMongoose();
-} catch (err) {
+connectMongoose().catch((err) => {
   console.error("Failed to connect to MongoDB:", err);
   process.exit(1);
-}
+});
 ```
 
 As discussed in the [Mongoose primer](#connecting_to_mongodb) above, this code creates the default connection to the database and reports any errors to the console.
