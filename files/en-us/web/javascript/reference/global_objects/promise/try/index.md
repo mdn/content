@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Promise.try
 sidebar: jsref
 ---
 
-The **`Promise.try()`** static method takes a callback of any kind (returns or throws, synchronously or asynchronously) and wraps its result in a {{jsxref("Promise")}}.
+The **`Promise.try()`** static method takes a callback of any kind (returns or throws, synchronously or asynchronously) and [resolves](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) its result to a {{jsxref("Promise")}}.
 
 ## Syntax
 
@@ -31,25 +31,41 @@ A {{jsxref("Promise")}} that is:
 
 - Already fulfilled, if `func` synchronously returns a value.
 - Already rejected, if `func` synchronously throws an error.
-- Asynchronously fulfilled or rejected, if `func` returns a promise.
+- Asynchronously fulfilled or rejected, if `func` returns a promise. The returned value is [resolved](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) to a promise, which means built-in {{jsxref("Promise")}} objects are returned as-is.
 
 ## Description
 
 You may have an API that takes a callback. The callback may be synchronous or asynchronous. You want to handle everything uniformly by wrapping the result in a promise. The most straightforward way might be {{jsxref("Promise/resolve", "Promise.resolve(func())")}}. The problem is that if `func()` synchronously throws an error, this error would not be caught and turned into a rejected promise.
 
-The common approach (lifting a function call result into a promise, fulfilled or rejected) often looks like this:
+You can wrap this expression in `try...catch`:
+
+```js
+let result;
+try {
+  result = Promise.resolve(func());
+} catch (error) {
+  result = Promise.reject(error);
+}
+```
+
+The problem is that `try...catch` is not an expression, so you can't directly use it in expression positions like passing it to other functions.
+
+Therefore, a more common approach to lift a function call result into a promise, fulfilled or rejected, often looks like this:
 
 ```js
 new Promise((resolve) => resolve(func()));
 ```
 
-But `Promise.try()` is more helpful here:
+For the built-in `Promise()` constructor, errors thrown from the executor are automatically caught and turned into rejections, so this also prevents synchronous errors. The problem is that a new `Promise` object is unconditionally created, which is unnecessary if `func()` already returns a `Promise`. `Promise.resolve()`, on the other hand, is smart enough to prevent that extra promise wrapping.
+
+`Promise.try()` is almost exactly equivalent to the `try...catch` approach, except that it's shorter and can be used as an expression:
 
 ```js
 Promise.try(func);
 ```
 
-For the built-in `Promise()` constructor, errors thrown from the executor are automatically caught and turned into rejections, so these two approaches are mostly equivalent, except that `Promise.try()` is more concise and readable.
+> [!NOTE]
+> For some time since its release, `Promise.try()` was actually specified and implemented to be similar to the `new Promise()` approach, unconditionally creating a new promise. See [browser compatibility](#browser_compatibility).
 
 Note that `Promise.try()` is _not_ equivalent to this, despite being highly similar:
 
@@ -74,6 +90,8 @@ Promise.try(func, arg1, arg2);
 ```
 
 Which are equivalent, but the latter avoids creating an extra closure and is more efficient.
+
+`Promise.try()` is generic and supports subclassing, which means it can be called on subclasses of `Promise`, and the result will contain a promise of the subclass type. To do so, the subclass's constructor must implement the same signature as the [`Promise()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) constructor — accepting a single `executor` function that can be called with the `resolve` and `reject` callbacks as parameters.
 
 ## Examples
 
@@ -124,18 +142,20 @@ async function doSomething(action) {
 The following is a slightly more faithful approximation of the actual `Promise.try()` (although it should still not be used as a polyfill):
 
 ```js
-Promise.try = function (func) {
-  return new this((resolve, reject) => {
-    try {
-      resolve(func());
-    } catch (error) {
-      reject(error);
-    }
-  });
+Promise.try = function (func, ...args) {
+  let result;
+  try {
+    result = func(...args);
+  } catch (error) {
+    return Promise.reject.call(this, error);
+  }
+  return Promise.resolve.call(this, result);
 };
 ```
 
-Because of how `Promise.try()` is implemented (i.e., the `try...catch`), we can safely invoke `Promise.try()` with its `this` set to any custom constructor, and it will never synchronously throw an error.
+`Promise.try()` delegates to {{jsxref("Promise.resolve()")}} and {{jsxref("Promise.reject()")}} to create the return value, and both of these functions are generic.
+
+For example, we can call it on a constructor that passes `console.log` as the `resolve` and `reject` functions to `executor`:
 
 ```js
 class NotPromise {
@@ -147,18 +167,20 @@ class NotPromise {
       (reason) => console.log("Rejected", reason),
     );
   }
+
+  static try = Promise.try;
 }
 
-const p = Promise.try.call(NotPromise, () => "hello");
+const p = NotPromise.try(() => "hello");
 // Logs: Resolved hello
+// p is a NotPromise instance
 
-const p2 = Promise.try.call(NotPromise, () => {
+const p2 = NotPromise.try(() => {
   throw new Error("oops");
 });
 // Logs: Rejected Error: oops
+// p2 is a NotPromise instance
 ```
-
-Unlike `Promise()`, this `NotPromise()` constructor _does not_ gracefully handle exceptions while running the executor. But despite the `throw`, `Promise.try()` still catches the exception, passing it to `reject()` to log out.
 
 ## Specifications
 
