@@ -20,7 +20,7 @@ The `params` field in the event notification is an object with the following fie
 
     The browser can also close the prompt on its own, without an explicit `handleUserPrompt` command, based on the [`unhandledPromptBehavior`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new#unhandledpromptbehavior) capability defined for the session, or overridden per user context with [`browser.createUserContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/createUserContext).
 - `context`
-  - : A string that contains the ID of the context that had the user prompt.
+  - : A string that contains the ID of the [context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#contexts) that had the user prompt.
 - `type`
   - : A string that indicates the kind of user prompt that closed.
     It has one of the following values:

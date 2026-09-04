@@ -14,7 +14,7 @@ The `browsingContext.userPromptOpened` [event](/en-US/docs/Web/WebDriver/Referen
 The `params` field in the event notification is an object with the following fields:
 
 - `context`
-  - : A string that contains the ID of the context that has the user prompt.
+  - : A string that contains the ID of the [context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#contexts) that has the user prompt.
 - `defaultValue` {{optional_inline}}
   - : A string that contains the default value of the {{domxref("Window.prompt", "prompt()")}} dialog.
     This field is included only when the [`type`](#type) field value is `"prompt"` and the page provided a default value that is not an empty string.

@@ -15,7 +15,7 @@ The `params` field in the event notification is an object that includes a `statu
 The value of `status` determines which additional fields are present.
 
 - `context`
-  - : A string that contains the ID of the context in which the download occurred.
+  - : A string that contains the ID of the [context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#contexts) in which the download occurred.
 - `download`
   - : A string that contains the [UUID](/en-US/docs/Glossary/UUID) that uniquely identifies this download.
     The same ID is included in the corresponding [`browsingContext.downloadWillBegin`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/downloadWillBegin) event, so you can correlate the two.

@@ -14,7 +14,7 @@ The `browsingContext.downloadWillBegin` [event](/en-US/docs/Web/WebDriver/Refere
 The `params` field in the event notification is an object with the following fields:
 
 - `context`
-  - : A string that contains the ID of the context in which the download was triggered.
+  - : A string that contains the ID of the [context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#contexts) in which the download was triggered.
 - `download`
   - : A string that contains the [UUID](/en-US/docs/Glossary/UUID) that uniquely identifies this download.
     The same ID is included in the corresponding [`browsingContext.downloadEnd`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/downloadEnd) event, so you can correlate the two.
