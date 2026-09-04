@@ -72,6 +72,8 @@ The recommended setting is the following, which sets the viewport to match the d
 ```html
 <meta name="viewport" content="width=device-width" />
 ```
+> [!NOTE]
+> Including `initial-scale=1.0` was historically necessary to prevent unintended zooming behaviors in older mobile browsers. While modern browsers don't require `initial-scale` to resolve this behavior, `initial-scale` is not entirely redundant and remains useful when defining custom scale defaults or fixed layout widths.
 
 Sites can set their viewport to a specific size. For example, the definition `"width=320, initial-scale=1"` can be used to fit precisely onto a small phone display in portrait mode. This can cause problems when the browser renders a page at a larger size. To fix this, browsers will expand the viewport width if necessary to fill the screen at the requested scale. This is especially useful on large-screen devices.
 
