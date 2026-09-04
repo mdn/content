@@ -35,20 +35,7 @@ There are many other attributes to achieve various purposes:
 - Use both [`width`](#width) and [`height`](#height) to set the intrinsic size of the image, allowing it to take up space before it loads, to mitigate content layout shifts.
 - Responsive image hints with [`sizes`](#sizes) and [`srcset`](#srcset) (see also the {{htmlelement("picture")}} element and our [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images) tutorial).
 
-## Choosing an image format
-
-The HTML standard doesn't list what image formats to support, so {{glossary("user agent","user agents")}} may allow different formats.
-
-Choose an image format based on factors such as compression, quality, browser support, and whether you need features such as transparency or animation.
-The [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types) explains the trade-offs in detail.
-
-For raster images, prefer [WebP](/en-US/docs/Web/Media/Guides/Formats/Image_types#webp_image) or [AVIF](/en-US/docs/Web/Media/Guides/Formats/Image_types#avif_image), which generally provide better compression than PNG, JPEG, and GIF.
-
-You should also consider [JPEG XL](/en-US/docs/Web/Media/Guides/Formats/Image_types#jpeg_xl_image) for large, high-resolution raster images, as it allows progressive rendering on most browsers, which can display an initial version before the full image downloads.
-
-If you need to support browsers without WebP, AVIF, or JPEG XL support, use the {{HTMLElement("picture")}} element to provide a PNG or JPEG fallback.
-
-For images that must be drawn accurately at different sizes, use [SVG](/en-US/docs/Web/Media/Guides/Formats/Image_types#svg_scalable_vector_graphics).
+The [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types) provides information about the supported image formats and broad recommendations about where they should be used.
 
 ## Image loading errors
 
@@ -72,7 +59,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     >
     > - Non-visual browsers (such as those used by people with visual impairments)
     > - The user chooses not to display images (saving bandwidth, privacy reasons)
-    > - The image is invalid or an [unsupported type](#choosing_an_image_format)
+    > - The image is invalid or an [unsupported type](/en-US/docs/Web/Media/Guides/Formats/Image_types)
     >
     > In these cases, the browser may replace the image with the text in the element's `alt` attribute. For these reasons and others, provide a useful value for `alt` whenever possible.
 
