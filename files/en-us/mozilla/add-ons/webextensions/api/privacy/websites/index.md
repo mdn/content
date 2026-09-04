@@ -29,7 +29,7 @@ Default values for these properties tend to vary across browsers.
 - `firstPartyIsolate`
   - : A {{WebExtAPIRef("types.BrowserSetting")}} object whose underlying value is a boolean.
 
-    If `true`, the `firstPartyIsolate` preference makes the browser associate all data (including cookies, HSTS data, cached images, and more) for any third party domains with the domain in the address bar. This prevents third party trackers from using directly stored information to identify the user across different websites, but may break websites where the user logs in with a third party account (such as a Facebook or Google account).
+    If `true`, the `firstPartyIsolate` preference makes the browser associate all data (including cookies, HSTS data, cached images, and more) for any third-party domains with the domain in the address bar. This prevents third-party trackers from using directly stored information to identify the user across different websites, but may break websites where the user logs in with a third-party account (such as a Facebook or Google account).
 
     Defaults to `false`.
 

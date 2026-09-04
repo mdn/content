@@ -982,9 +982,9 @@ WebGL is based on [OpenGL](/en-US/docs/Glossary/OpenGL) (Open Graphics Library),
 
 ### Using a library
 
-Because of its complexity, most people write 3D graphics code using a third party JavaScript library such as [Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js), [PlayCanvas](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas), or [Babylon.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js). Most of these work in a similar way, providing functionality to create primitive and custom shapes, position viewing cameras and lighting, covering surfaces with textures, and more. They handle the WebGL for you, letting you work on a higher level.
+Because of its complexity, most people write 3D graphics code using a third-party JavaScript library such as [Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js), [PlayCanvas](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas), or [Babylon.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js). Most of these work in a similar way, providing functionality to create primitive and custom shapes, position viewing cameras and lighting, covering surfaces with textures, and more. They handle the WebGL for you, letting you work on a higher level.
 
-Yes, using one of these means learning another new API (a third party one, in this case), but they are a lot simpler than coding raw WebGL.
+Yes, using one of these means learning another new API (a third-party one, in this case), but they are a lot simpler than coding raw WebGL.
 
 ### A spinning cube
 

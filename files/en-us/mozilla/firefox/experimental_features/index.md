@@ -906,7 +906,7 @@ The HTTP [`Accept`](/en-US/docs/Web/HTTP/Reference/Headers/Accept) header in [de
 ### SameSite=Lax by default
 
 [`SameSite` cookies](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) have a default value of `Lax`.
-With this setting, cookies are only sent when a user is navigating to the origin site, not for cross-site subrequests to load images or frames into a third party site and so on.
+With this setting, cookies are only sent when a user is navigating to the origin site, not for cross-site subrequests to load images or frames into a third-party site and so on.
 For more details see [Firefox bug 1617609](https://bugzil.la/1617609).
 
 | Release channel   | Version added | Enabled by default? |
