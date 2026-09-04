@@ -60,7 +60,7 @@ The `content` attribute sets the viewport size and is appended to the document `
 ```js
 const meta = document.createElement("meta");
 meta.name = "viewport";
-meta.content = "width=device-width, initial-scale=1";
+meta.content = "width=device-width";
 document.head.appendChild(meta);
 ```
 
