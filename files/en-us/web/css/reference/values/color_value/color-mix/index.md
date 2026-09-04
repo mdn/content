@@ -24,9 +24,10 @@ color-mix(in lab, plum 60%, #123456 50%)
 color-mix(in lch increasing hue, hsl(200deg 50% 80%), coral)
 color-mix(in lch longer hue, hsl(200deg 50% 80%) 44%, coral 16%)
 
-/* With more than two colors (experimental) */
-color-mix(in oklab, teal, olive, blue)
+/* With a color argument list */
+color-mix(in oklab, teal)
 color-mix(in oklab, teal 20%, olive 30%, blue 50%)
+color-mix(in oklab, teal, olive, blue, purple)
 ```
 
 ### Parameters
@@ -163,6 +164,73 @@ li:nth-child(6) {
 {{EmbedLiveSample("mixing_two_colors", "100%", 120)}}
 
 The total value of both colors in a `color-mix()` function is 100%, even if the values set by the developer don't total 100%. In this example, as only one color has a percentage assigned, the other color is implicitly given a percentage value so that the combined total equals 100%. In the last {{htmlelement("li")}}, where neither color is assigned a percentage, both default to 50%.
+
+### Mixing a list of colors
+
+This example demonstrates passing a color argument list to `color-mix()`. The function accepts any number of colors, not just two, and each of them can optionally be given a percentage.
+
+#### HTML
+
+```html
+<ul>
+  <li>1 color</li>
+  <li>3 colors, with percentages</li>
+  <li>4 colors, no percentages</li>
+</ul>
+```
+
+#### CSS
+
+The first {{htmlelement("li")}} mixes a single color, which resolves to that color. The second mixes three colors whose percentages total 100%. The third mixes four colors with no percentage, so each one is given an equal share.
+
+The [`@supports`](/en-US/docs/Web/CSS/Reference/At-rules/@supports) rule displays a warning in browsers that don't support color argument lists yet, where the three list items are rendered without a background color.
+
+```css hidden
+ul {
+  display: flex;
+  list-style-type: none;
+  font-size: 150%;
+  gap: 10px;
+  border: 2px solid;
+  padding: 10px;
+}
+
+li {
+  padding: 10px;
+  flex: 1;
+  box-sizing: border-box;
+  font-family: monospace;
+  text-align: center;
+}
+```
+
+```css
+li:nth-child(1) {
+  background-color: color-mix(in oklab, teal);
+}
+
+li:nth-child(2) {
+  background-color: color-mix(in oklab, teal 20%, olive 30%, blue 50%);
+}
+
+li:nth-child(3) {
+  background-color: color-mix(in oklab, teal, olive, blue, purple);
+}
+
+@supports not (color: color-mix(in oklab, red, white, blue)) {
+  body::before {
+    content: "Your browser doesn't support color lists in the color-mix() function.";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("mixing_a_list_of_colors", "100%", 180)}}
 
 ### Adding transparency
 
