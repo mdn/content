@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Window.open
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`open()`** method of the [`Window`](/en-US/docs/Web/API/Window) interface loads a specified resource into a new or existing browsing context (that is, a tab, a window, or an [iframe](/en-US/docs/Web/HTML/Reference/Elements/iframe)) under a specified name.
 
@@ -31,7 +31,7 @@ open(url, target, windowFeatures)
 
 - `windowFeatures` {{optional_inline}}
   - : A string containing a comma-separated list of window features in the form `name=value`. Boolean values can be set to true using one of: `name`, `name=yes`, `name=true`, or `name=n` where `n` is any non-zero integer. These features include options such as the window's default size and position, whether or not to open a minimal popup window, and so forth. The following options are supported:
-    - `attributionsrc` {{experimental_inline}}
+    - `attributionsrc` {{deprecated_inline}}
       - : Indicates that you want the browser to send an {{httpheader("Attribution-Reporting-Eligible")}} header along with the `open()` call. This call must be made with [transient activation](/en-US/docs/Glossary/Transient_activation) (i.e., inside a user interaction event handle such as `click`), within five seconds of user interaction. On the server-side this is used to trigger sending an {{httpheader("Attribution-Reporting-Register-Source")}} header in the response to complete registration of an attribution source.
 
         In addition, the browser is also triggered to store the associated source data (as provided in the {{httpheader("Attribution-Reporting-Register-Source")}} response header) when the `open()` method completes.
@@ -81,7 +81,7 @@ open(url, target, windowFeatures)
 ### Return value
 
 If the browser successfully opens the new browsing context, a [`WindowProxy`](/en-US/docs/Glossary/WindowProxy) object is returned.
-The returned reference can be used to access properties and methods of the new context as long as it complies with [the same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) security requirements.
+The returned reference can be used to access properties and methods of the new context as long as it complies with [the same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy) security requirements.
 
 If the {{httpheader("Cross-Origin-Opener-Policy")}} HTTP header is being used, and the document policies are such that the document is opened in a new {{glossary("Browsing context","browsing context group")}}, references to the opened window are severed and the returned object will indicate that the opened window is closed ({{domxref("Window.closed","closed")}} is `true`).
 
@@ -89,9 +89,12 @@ If the {{httpheader("Cross-Origin-Opener-Policy")}} HTTP header is being used, a
 
 ## Description
 
-The [`Window`](/en-US/docs/Web/API/Window) interface's `open()` method takes a URL as a parameter, and loads the resource it identifies into a new or existing tab or window. The `target` parameter determines which window or tab to load the resource into, and the `windowFeatures` parameter can be used to control to open a new popup with minimal UI features and control its size and position.
+The [`Window`](/en-US/docs/Web/API/Window) interface's `open()` method takes a URL as a parameter, and loads the resource it identifies into a new or existing browsing context.
+The `target` parameter determines which window, tab, or frame, to load the resource into, and the `windowFeatures` parameter can be used to control the features of the new window, such as whether it is a tab or a popup with minimal UI features, its size and position, and so on.
 
-Remote URLs won't load immediately. When `window.open()` returns, the window always contains `about:blank`. The actual fetching of the URL is deferred and starts after the current script block finishes executing. The window creation and the loading of the referenced resource are done asynchronously.
+When `window.open()` creates a new browsing context (i.e., when no existing window with that name is found), the window initially contains `about:blank`.
+If a different URL was provided, it is loaded asynchronously, and the global object is reused for that navigation if it is same-origin — so any properties set on the window before the load may persist.
+If target refers to an existing navigable (`_self`, `_parent`, `_top`, or a known window name), no `about:blank` phase occurs — the browser navigates the existing context directly.
 
 Modern browsers have strict popup blocker policies. Popup windows must be opened in direct response to user input, and a separate user gesture event is required for each `Window.open()` call. This prevents sites from spamming users with lots of windows. However, this poses an issue for multi-window applications. To work around this limitation, you can design your applications to:
 
@@ -252,7 +255,7 @@ console.log(sameOriginContext.origin);
 // https://example.com
 ```
 
-For more information, refer to the [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy) article.
+For more information, refer to the [Same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy) article.
 
 ## Accessibility concerns
 
@@ -310,4 +313,4 @@ When extreme changes in context are explicitly identified before they occur, the
 - [`window.focus()`](/en-US/docs/Web/API/Window/focus)
 - [`window.opener`](/en-US/docs/Web/API/Window/opener)
 - [`rel="opener"`](/en-US/docs/Web/HTML/Reference/Attributes/rel#opener) and [`rel="noopener"`](/en-US/docs/Web/HTML/Reference/Attributes/rel#noopener)
-- [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
+- [Same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy)

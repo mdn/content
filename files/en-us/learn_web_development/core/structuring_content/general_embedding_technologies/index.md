@@ -20,7 +20,7 @@ Developers commonly think of embedding media such as images, video and audio int
         <a
           href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >working with files</a
-        >, familiarity with <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/"
+        >, familiarity with <a href="/en-US/docs/Learn_web_development/Core/Structuring_content"
           >HTML fundamentals</a>.
       </td>
     </tr>
@@ -79,11 +79,6 @@ If you were to add the code below into one of your pages, you might be surprised
   height="500"
   allowfullscreen
   sandbox>
-  <p>
-    <a href="/en-US/docs/Glossary">
-      Fallback link for browsers that don't support iframes
-    </a>
-  </p>
 </iframe>
 ```
 
@@ -103,7 +98,7 @@ The [Security](#security_concerns) section below goes into more detail about why
 
 The example includes the bare essentials needed to use an `<iframe>`:
 
-- [`border: none`](/en-US/docs/Web/CSS/border)
+- [`border: none`](/en-US/docs/Web/CSS/Reference/Properties/border)
   - : If used, the `<iframe>` is displayed without a surrounding border. Otherwise, by default, browsers display the `<iframe>` with a surrounding border (which is generally undesirable).
 - [`allowfullscreen`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)
   - : If set, the `<iframe>` is able to be placed in fullscreen mode using the [Fullscreen API](/en-US/docs/Web/API/Fullscreen_API) (somewhat beyond the scope of this article).

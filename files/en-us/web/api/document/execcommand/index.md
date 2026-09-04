@@ -5,10 +5,11 @@ slug: Web/API/Document/execCommand
 page-type: web-api-instance-method
 status:
   - deprecated
+  - non-standard
 browser-compat: api.Document.execCommand
 ---
 
-{{ApiRef("DOM")}}{{deprecated_header}}
+{{ApiRef("DOM")}}{{non-standard_header}}
 
 > [!NOTE]
 > Although the `execCommand()` method is deprecated, there are still some valid use cases that do not yet have viable alternatives. For example, unlike direct DOM manipulation, modifications performed by `execCommand()` preserve the undo buffer (edit history). For these use cases, you can still use this method, but test to ensure cross-browser compatibility, such as by using {{domxref("document.queryCommandSupported()")}}.
@@ -41,7 +42,7 @@ execCommand(commandName, showDefaultUI, valueArgument)
     - `copy`
       - : Copies the current selection to the clipboard. Conditions of having this behavior enabled vary from one browser to another, and have evolved over time. Check the compatibility table to determine if you can use it in your case.
     - `createLink`
-      - : Creates an hyperlink from the selection, but only if there is a selection. Requires a {{Glossary("URI")}} string as a value argument for the hyperlink's `href`. The URI must contain at least a single character, which may be whitespace.
+      - : Creates a hyperlink from the selection, but only if there is a selection. Requires a {{Glossary("URI")}} string as a value argument for the hyperlink's `href`. The URI must contain at least a single character, which may be whitespace.
     - `cut`
       - : Removes the current selection and copies it to the clipboard. When this behavior is enabled varies between browsers, and its conditions have evolved over time. Check [the compatibility table](#browser_compatibility) for usage details.
     - `decreaseFontSize`
@@ -68,7 +69,7 @@ execCommand(commandName, showDefaultUI, valueArgument)
       - : Deletes the character ahead of the [cursor](https://en.wikipedia.org/wiki/Cursor_%28computers%29)'s position, identical to hitting the Delete key on a Windows keyboard.
     - `heading`
       - : Adds a heading element around a selection or insertion point line. Requires the tag-name string as a value argument (i.e., `"H1"`, `"H6"`). (Not supported by Safari.)
-    - `highlightColor`
+    - `hiliteColor`
       - : Changes the background color for the selection or at the insertion point. Requires a color value string as a value argument. `useCSS` must be `true` for this to function.
     - `increaseFontSize`
       - : Adds a {{HTMLElement("big")}} tag around the selection or at the insertion point.
@@ -79,9 +80,20 @@ execCommand(commandName, showDefaultUI, valueArgument)
     - `insertHorizontalRule`
       - : Inserts a {{HTMLElement("hr")}} element at the insertion point, or replaces the selection with it.
     - `insertHTML`
-      - : Inserts an HTML string at the insertion point (deletes selection). Requires a valid HTML string as a value argument.
+      - : Inserts a {{domxref("TrustedHTML")}} instance or string of HTML markup at the insertion point (deletes selection).
+        This requires valid HTML markup.
+
+        > [!WARNING]
+        > The input is parsed as HTML and written into the DOM.
+        > APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, if the input originally came from an attacker.
+        >
+        > You can mitigate this risk by always assigning {{domxref("TrustedHTML")}} objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
+        > See the [Trusted Types API](/en-US/docs/Web/API/Trusted_Types_API) for more information.
+
     - `insertImage`
       - : Inserts an image at the insertion point (deletes selection). Requires a URL string for the image's `src` as a value argument. The requirements for this string are the same as `createLink`.
+    - `insertLineBreak`
+      - : Deletes the selection, and replaces it with a [line break element](/en-US/docs/Web/HTML/Reference/Elements/br).
     - `insertOrderedList`
       - : Creates a [numbered ordered list](/en-US/docs/Web/HTML/Reference/Elements/ol) for the selection or at the insertion point.
     - `insertUnorderedList`
@@ -103,7 +115,12 @@ execCommand(commandName, showDefaultUI, valueArgument)
     - `outdent`
       - : Outdents the line containing the selection or insertion point.
     - `paste`
-      - : Pastes the clipboard contents at the insertion point (replaces current selection). Disabled for web content.
+      - : Pastes the clipboard contents at the insertion point (replaces current selection).
+
+        This feature is specified as disabled for _web content_, but has been implemented via the [Clipboard API](/en-US/docs/Web/API/Clipboard_API#security_considerations) on some browsers.
+        On these browsers the feature requires {{glossary("transient activation")}}, and acknowledgement of a popup UI when pasting cross-origin content.
+        See the [Browser compatibility table](#browser_compatibility) for more information.
+
     - `redo`
       - : Redoes the previous undo command.
     - `removeFormat`
@@ -218,6 +235,41 @@ function insertText(newText, selector) {
 #### Result
 
 {{EmbedLiveSample("Using insertText", 100, 300)}}
+
+### Using paste
+
+This example has a {{HTMLElement("textarea")}} element, and a {{HTMLElement("button")}} element that you can use to paste content into it.
+
+#### HTML
+
+```html
+<button id="paste">Paste</button>
+<hr />
+<textarea id="text_box">Some text.</textarea>
+```
+
+#### JavaScript
+
+```js
+const pasteButton = document.querySelector("#paste");
+const textBox = document.querySelector("#text_box");
+
+pasteButton.addEventListener("click", () => {
+  textBox.focus();
+
+  let pasted = document.execCommand("paste", false);
+  if (!pasted) {
+    textBox.textContent = "paste unsuccessful, execCommand not supported";
+  }
+});
+```
+
+#### Result
+
+On browsers that implement this feature using the [Clipboard API](/en-US/docs/Web/API/Clipboard_API#security_considerations) you should be able to copy same-origin content, such as text from the text area, and then paste it to replace any selected content.
+When you try to paste cross-origin content, such as text copied from any other page or location, you will first need to select the "Paste" UI that is displayed.
+
+{{EmbedLiveSample("Using paste", 100, 300)}}
 
 ## Specifications
 

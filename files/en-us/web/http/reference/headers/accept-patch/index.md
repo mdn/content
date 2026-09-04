@@ -3,7 +3,7 @@ title: Accept-Patch header
 short-title: Accept-Patch
 slug: Web/HTTP/Reference/Headers/Accept-Patch
 page-type: http-header
-spec-urls: https://www.rfc-editor.org/rfc/rfc5789#section-3.1
+spec-urls: https://www.rfc-editor.org/info/rfc5789/#section-3.1
 sidebar: http
 ---
 
@@ -22,10 +22,6 @@ An `Accept-Patch` header in a response to any request method implicitly means th
     <tr>
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>Yes</td>
     </tr>
   </tbody>
 </table>

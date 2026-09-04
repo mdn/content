@@ -14,20 +14,20 @@ positioned ancestor element.
 
 A positioned ancestor might be:
 
-- a [containing block](/en-US/docs/Web/CSS/CSS_display/Containing_block#identifying_the_containing_block) for absolutely-positioned elements
-- an element with a different effective [zoom](/en-US/docs/Web/CSS/zoom) value (that is, the product of all zoom scales of its parents) from this element
+- a [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block#identifying_the_containing_block) for absolutely-positioned elements
+- an element with a different effective [zoom](/en-US/docs/Web/CSS/Reference/Properties/zoom) value (that is, the product of all zoom scales of its parents) from this element
 - `td`, `th`, `table` in case the element itself is static positioned.
 
 If there is no positioned ancestor element, the `body` is returned.
 
 > [!NOTE]
-> `offsetParent` returns `null` in the following
-> situations:
+> `offsetParent` returns `null` in the following situations:
 >
 > - The element or any ancestor has the `display` property set to
 >   `none`.
-> - The element has the `position` property set to `fixed`
->   (Firefox returns `<body>`).
+> - The element has the `position` property set to `fixed` and its containing block is the viewport.
+>   If the containing block is not the viewport, `offsetParent` returns the nearest ancestor that forms
+>   a containing block, for example, an ancestor with `transform`, `perspective`, or `filter` styles set.
 > - The element is `<body>` or `<html>`.
 
 `offsetParent` is useful because

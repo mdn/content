@@ -9,6 +9,8 @@ sidebar: learnsidebar
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design", "Learn_web_development/Core/Scripting", "Learn_web_development/Core/CSS_layout")}}
 This challenge rounds off the [CSS layout](/en-US/docs/Learn_web_development/Core/CSS_layout) module by asking you to update an existing mobile layout so that it also works well on desktop browsers. Along the way, you'll also be tested on responsive layout features such as media queries, CSS grid, flexbox, and responsive images.
 
+After you're done with this challenge, you can move on to learning about implementing dynamic behavior with [JavaScript](/en-US/docs/Learn_web_development/Core/Scripting).
+
 ## Starting point
 
 We are going to get you to solve this challenge in your local development environment; ideally, you'll want to view the example in a full browser window to make sure the layout features are working as expected.
@@ -17,7 +19,7 @@ We are going to get you to solve this challenge in your local development enviro
 2. Inside the folder, create an `index.html` file and paste the following content into it:
 
    ```html
-   <!DOCTYPE html>
+   <!doctype html>
    <html lang="en-US">
      <head>
        <meta charset="utf-8" />
@@ -289,7 +291,7 @@ Specifically, we want you to implement two layouts: the first one triggers when 
 First of all, you'll need to solve a couple of problems that we've left in the starting template.
 
 1. At the moment, your layouts won't display properly in mobile browsers. Add a tag to the `<head>` of your `<html>` document to fix this.
-2. With the browser window set to a narrow width, look at the bottom of the page — you'll see that the photo gallery is not displaying properly because the images are breaking out of their containers. Add a declaration to your CSS file to fix this.
+2. With the browser window set to a narrow width, look at the bottom of the page — you'll see that the photo gallery is not displaying properly because the photographs are breaking out of their containers. Add a declaration to your CSS file to fix this.
 
 ### Creating the middle layout
 
@@ -356,7 +358,7 @@ The following screenshot shows what the finished widescreen layout should look l
 To cause the layouts to display properly in mobile browsers, you need to add a viewport `<meta>` tag inside the `<head>` of the HTML document:
 
 ```html
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width" />
 ```
 
 The finished CSS should look something like this:
@@ -379,7 +381,8 @@ body {
 img {
   display: block;
   border: 1px solid black;
-  /* 1. Constrain the photograph images inside their containers */
+  /* Solution: Stop the photographs from breaking out of
+  their containers */
   max-width: 100%;
 }
 
@@ -463,7 +466,7 @@ nav a:focus {
   margin: 8px 30px 20px 0;
 }
 
-/* 2. Middle breakpoint: 800px */
+/* Solution: Creating the middle layout (breakpoint: 800px) */
 
 @media (width > 800px) {
   /* Sort out navigation styling for middle breakpoint */
@@ -511,7 +514,7 @@ nav a:focus {
   }
 }
 
-/* 3. Wide breakpoint: 1300px */
+/* Solution: Creating the widescreen layout (breakpoint: 1300px) */
 
 @media (width > 1300px) {
   .grid {
@@ -528,7 +531,7 @@ nav a:focus {
   }
 }
 
-/* 4. Responsive typography */
+/* 4. Solution: Implementing responsive typography */
 
 h1 {
   font-size: calc(1.3rem + 3vw);
@@ -540,7 +543,7 @@ h2 {
   margin: 0;
 }
 
-/* 5. Remove navigation elements when printing */
+/* 5. Solution: Adjusting the layout for print */
 
 @media print {
   nav,

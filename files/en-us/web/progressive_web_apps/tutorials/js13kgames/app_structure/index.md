@@ -14,7 +14,7 @@ The [js13kPWA](https://mdn.github.io/pwa-examples/js13kpwa/) website structure i
 
 ![Folder structure of js13kPWA.](js13kpwa-directory.png)
 
-### The HTML
+## The HTML
 
 From the HTML point of view, the app shell is everything outside the content section:
 
@@ -29,7 +29,7 @@ From the HTML point of view, the app shell is everything outside the content sec
       content="A list of A-Frame entries submitted to the js13kGames 2017 competition, used as an example for the MDN articles about Progressive Web Apps." />
     <meta name="author" content="end3r" />
     <meta name="theme-color" content="#B12A34" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width" />
     <meta
       property="og:image"
       content="https://js13kgames.com/img/js13kgames-banner.png" />
@@ -77,11 +77,11 @@ The {{htmlelement("head")}} section contains some basic info like title, descrip
 
 The app's only job is to list all the A-Frame entries from the js13kGames 2017 competition. As you can see it is a very ordinary, one page website — the point is to have something simple so we can focus on the implementation of the actual PWA features.
 
-### The CSS
+## The CSS
 
 The CSS is also as plain as possible: it uses {{cssxref("@font-face")}} to load and use a custom font, and it applies some simple styling of the HTML elements. The overall approach is to have the design look good on both mobile (with a responsive web design approach) and desktop devices.
 
-### The main app JavaScript
+## The main app JavaScript
 
 The app.js file does a few things we will look into closely in the next articles. First of all it generates the content based on this template:
 
@@ -156,7 +156,7 @@ function randomNotification() {
 }
 ```
 
-### The service worker
+## The service worker
 
 The last file we will quickly look at is the service worker: sw\.js — it first imports data from the games.js file:
 
@@ -231,7 +231,7 @@ self.addEventListener("fetch", (e) => {
 });
 ```
 
-### The JavaScript data
+## The JavaScript data
 
 The games data is present in the data folder in a form of a JavaScript object ([games.js](https://github.com/mdn/pwa-examples/blob/main/js13kpwa/data/games.js)):
 

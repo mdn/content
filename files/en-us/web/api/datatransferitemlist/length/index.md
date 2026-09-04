@@ -8,9 +8,9 @@ browser-compat: api.DataTransferItemList.length
 
 {{APIRef("HTML Drag and Drop API")}}
 
-The read-only **`length`** property of the
-{{domxref("DataTransferItemList")}} interface returns the number of items currently in
-the drag item list.
+The **`length`** read-only property of the {{domxref("DataTransferItemList")}} interface returns the number of items currently in the drag item list.
+
+During a drag operation, this property can be read in any drag event handler, even when the drag data store is in [protected mode](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#protected_mode). The number of items remains accessible, but their data can only be read in the handlers for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} and {{domxref("HTMLElement/drop_event", "drop")}} events. See [Reading the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#reading_the_drag_data_store) for details.
 
 ## Value
 

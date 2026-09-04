@@ -205,7 +205,7 @@ The example below illustrates how a web app's layout might appear when a mobile 
 
 .label {
   margin-top: 10px;
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 15px;
 }
 ```
@@ -307,5 +307,5 @@ Consider a photo viewing and editing app. In the app's manifest file, as shown b
 
 - [Screen Orientation API](/en-US/docs/Web/API/Screen_Orientation_API)
 - [Managing screen orientation](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
-- [Using media queries for device orientation](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Using media queries for device orientation](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
 - [Learn: Responsive Design](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)

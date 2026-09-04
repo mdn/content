@@ -70,13 +70,13 @@ You can also specify a deep link (e.g., `https://myapp.com/product/whatsnew`) to
 Avoid specifying a generic starting page.
 
 For security reasons, the `start_url` must be same-origin with the manifest URL.
-If a non-same-origin `start_url` is specified, browsers will fallback to using the page that links to the manifest as the default starting page.
+If a non-same-origin `start_url` is specified, browsers will fall back to using the page that links to the manifest as the default starting page.
 
 ## Privacy considerations
 
 - **Fingerprinting**:
 
-  Encoding strings into `start_url` to uniquely identify users (e.g., server-assigned identifiers, such as `?user=123`, `/user/123/`, or `https://user123.foo.bar`) creates a persistent fingerprint.
+  Encoding strings into `start_url` to uniquely identify users (e.g., server-assigned identifiers, such as `?user=123`, `/user/123/`, or `https://user123.example.com`) creates a persistent fingerprint.
   Users may not be aware that their privacy-sensitive information can persist even after they've cleared site data.
   It is bad practice to include any information in `start_url` that could uniquely identify users.
 

@@ -18,7 +18,7 @@ It reflects the `ping` attribute of the {{HTMLElement("area")}} element.
 ## Example
 
 ```html
-<map>
+<map name="example-map" id="example-map">
   <area
     href="https://example.com"
     ping="https://example-tracking.com https://example-analytics.com"
@@ -27,7 +27,7 @@ It reflects the `ping` attribute of the {{HTMLElement("area")}} element.
 ```
 
 ```js
-const areaCollection = document.getElementsByTagName("map")[0].areas;
+const areaCollection = document.getElementById("example-map").areas;
 console.log(areaCollection[0].ping); // Output: "https://example-tracking.com https://example-analytics.com"
 ```
 

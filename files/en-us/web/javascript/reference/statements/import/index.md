@@ -31,7 +31,7 @@ import "module-name";
 - `defaultExport`
   - : Name that will refer to the default export from the module. Must be a valid JavaScript identifier.
 - `module-name`
-  - : The module to import from. Only single quoted and double quoted string literals are allowed. The evaluation of the specifier is host-specified. Most hosts align with browsers and resolve the specifiers as URLs relative to the current module URL (see [`import.meta.url`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta)). Node, bundlers, and other non-browser environments often define their own features on top of this, so you should find documentation for them to understand the exact rules. The [module specifier resolution](#module_specifier_resolution) section also has more information.
+  - : The module to import from. Only single- and double-quoted string literals are allowed. The evaluation of the specifier is host-specified. Most hosts align with browsers and resolve the specifiers as URLs relative to the current module URL (see [`import.meta.url`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta)). Node, bundlers, and other non-browser environments often define their own features on top of this, so you should find documentation for them to understand the exact rules. The [module specifier resolution](#module_specifier_resolution) section also has more information.
 - `name`
   - : Name of the module object that will be used as a kind of namespace when referring to the imports. Must be a valid JavaScript identifier.
 - `exportN`
@@ -271,6 +271,14 @@ setTimeout(() => {
   myValue = 3; // TypeError: Assignment to constant variable.
   // The importing module can only read the value but can't re-assign it.
 }, 1000);
+```
+
+### Importing non-JavaScript modules
+
+Non-JavaScript modules can also be imported using the `import` statement, but their types need to be explicitly declared using [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with). For example, to import a JSON module, you need to specify the `type: "json"` attribute.
+
+```js
+import data from "./data.json" with { type: "json" };
 ```
 
 ## Specifications

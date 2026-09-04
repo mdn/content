@@ -1,5 +1,5 @@
 ---
-title: Firefox 80 for developers
+title: Firefox 80 release notes for developers
 short-title: Firefox 80
 slug: Mozilla/Firefox/Releases/80
 page-type: firefox-release-notes

@@ -3,13 +3,9 @@ title: Temporal.PlainTime.prototype.round()
 short-title: round()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime/round
 page-type: javascript-instance-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.PlainTime.round
 sidebar: jsref
 ---
-
-{{SeeCompatTable}}
 
 The **`round()`** method of {{jsxref("Temporal.PlainTime")}} instances returns a new `Temporal.PlainTime` object representing this time rounded to the given unit.
 

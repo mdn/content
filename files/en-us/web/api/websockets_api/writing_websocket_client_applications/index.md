@@ -148,38 +148,45 @@ window.addEventListener("pagehide", () => {
 });
 ```
 
-Conversely, by listening for the {{domxref("Window.pageshow_event", "pageshow")}} event, you can seamlessly start the connection again when the page is restored from the bfcache. Since the `pageshow` event also fires on page load, it can also be used to start the WebSocket connection when the page is first loaded:
+Conversely, by listening for the {{domxref("Window.pageshow_event", "pageshow")}} event, you can seamlessly start the connection again when the page is restored from the bfcache. In the following example, we start the initial connection when the page is first loaded and only reconnect when the page is restored (checking for `event.persisted`):
 
 ```js
 let websocket = null;
 
-window.addEventListener("pageshow", () => {
-  log("OPENING");
-
-  websocket = new WebSocket(wsUri);
-
-  websocket.addEventListener("open", () => {
+function initializeWebSocketListeners(ws) {
+  ws.addEventListener("open", () => {
     log("CONNECTED");
     pingInterval = setInterval(() => {
       log(`SENT: ping: ${counter}`);
-      websocket.send("ping");
+      ws.send("ping");
     }, 1000);
   });
 
-  websocket.addEventListener("close", () => {
+  ws.addEventListener("close", () => {
     log("DISCONNECTED");
     clearInterval(pingInterval);
   });
 
-  websocket.addEventListener("message", (e) => {
+  ws.addEventListener("message", (e) => {
     log(`RECEIVED: ${e.data}: ${counter}`);
     counter++;
   });
 
-  websocket.addEventListener("error", (e) => {
-    log(`ERROR: ${e.data}`);
+  ws.addEventListener("error", (e) => {
+    log(`ERROR`);
   });
+}
+
+window.addEventListener("pageshow", (event) => {
+  if (event.persisted) {
+    websocket = new WebSocket(wsUri);
+    initializeWebSocketListeners(websocket);
+  }
 });
+
+log("OPENING");
+websocket = new WebSocket(wsUri);
+initializeWebSocketListeners(websocket);
 ```
 
 If you run our example, try navigating to a different page, then back to the example. In Chrome, you should see that the example starts the connection again, and keeps its original context: so, for example, it remembers the count of exchanged messages.

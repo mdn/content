@@ -13,7 +13,7 @@ While not part of any specification, it is a de-facto standard method for commun
 Search-related crawlers use the rules from the `X-Robots-Tag` header to adjust how to present web pages or other resources in search results.
 
 Indexing rules are defined in a `X-Robots-Tag` header or a [`<meta name="robots">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/robots) HTML element (often called a "robots tag") and are discovered when a URL is crawled.
-Specifying indexing rules in a HTTP header is useful for non-HTML documents like images, PDFs, or other media.
+Specifying indexing rules in an HTTP header is useful for non-HTML documents like images, PDFs, or other media.
 
 > [!NOTE]
 > Only cooperative robots follow these rules, and a crawler first needs to access the resource to read headers and meta elements (see [Interaction with robots.txt](#interaction_with_robots.txt)).
@@ -24,10 +24,6 @@ Specifying indexing rules in a HTTP header is useful for non-HTML documents like
     <tr>
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>

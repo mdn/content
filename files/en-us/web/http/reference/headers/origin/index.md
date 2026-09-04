@@ -34,7 +34,7 @@ Origin: <scheme>://<hostname>:<port>
 ## Directives
 
 - `null`
-  - : The origin is "privacy sensitive", or is an _opaque origin_ as defined by the HTML specification (specific cases are listed in the [description](#description) section).
+  - : The origin is "privacy sensitive", or is an [opaque origin](/en-US/docs/Glossary/Origin#opaque_origin) (specific cases are listed in the [description](#description) section).
 - `<scheme>`
   - : The protocol that is used.
     Usually, it is the HTTP protocol or its secured version, HTTPS.
@@ -52,7 +52,7 @@ It is used to provide the security context for the origin request, except in cas
 Broadly speaking, user agents add the `Origin` request header to:
 
 - {{Glossary("CORS", "cross origin")}} requests.
-- [same-origin](/en-US/docs/Web/Security/Same-origin_policy) requests except for {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} requests (i.e., they are added to same-origin {{HTTPMethod("POST")}}, {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("PUT")}}, {{HTTPMethod("PATCH")}}, and {{HTTPMethod("DELETE")}} requests).
+- [same-origin](/en-US/docs/Web/Security/Defenses/Same-origin_policy) requests except for {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} requests (i.e., they are added to same-origin {{HTTPMethod("POST")}}, {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("PUT")}}, {{HTTPMethod("PATCH")}}, and {{HTTPMethod("DELETE")}} requests).
 
 There are some exceptions to the above rules; for example, if a cross-origin {{HTTPMethod("GET")}} or {{HTTPMethod("HEAD")}} request is made in [no-cors mode](/en-US/docs/Web/API/Request/mode#value), the `Origin` header will not be added.
 
@@ -65,7 +65,8 @@ The `Origin` header value may be `null` in a number of cases, including (non-exh
 - Documents served with the {{HTTPHeader("Content-Security-Policy")}} `sandbox` directive whose value doesn't include `allow-same-origin`.
 - {{HTMLElement("iframe", "iframes")}} with a sandbox attribute whose value doesn't include `allow-same-origin`.
 - Responses that are network errors.
-- {{HTTPHeader("Referrer-Policy")}} set to `no-referrer` for non-`cors` request modes (e.g., basic form posts).
+- Certain {{HTTPHeader("Referrer-Policy")}} values, for requests that use neither `GET` nor `HEAD` and aren't made in `cors` mode (e.g., basic form posts).
+  See [Effect on the `Origin` header](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy#effect_on_the_origin_header) for the policy values that trigger this.
 
 > [!NOTE]
 > There is a more detailed listing of cases that may return `null` on Stack Overflow: [When do browsers send the Origin header? When do browsers set the origin to null?](https://stackoverflow.com/questions/42239643/when-do-browsers-send-the-origin-header-when-do-browsers-set-the-origin-to-null/42242802)
@@ -92,5 +93,5 @@ Origin: https://developer.mozilla.org:80
 
 - {{HTTPHeader("Host")}}
 - {{HTTPHeader("Referer")}}
-- [Same-origin policy](/en-US/docs/Web/Security/Same-origin_policy)
+- [Same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy)
 - [When do browsers send the Origin header? When do browsers set the origin to null?](https://stackoverflow.com/questions/42239643/when-do-browsers-send-the-origin-header-when-do-browsers-set-the-origin-to-null/42242802) (Stack Overflow)

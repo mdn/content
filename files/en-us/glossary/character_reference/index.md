@@ -37,16 +37,16 @@ A very small subset of useful named character references along with their unicod
 |           | `&nbsp;`        | U+000A0            |
 | –         | `&ndash;`       | U+02013            |
 | —         | `&mdash;`       | U+02014            |
-| ©        | `&copy;`        | U+000A9            |
-| ®        | `&reg;`         | U+000AE            |
-| ™        | `&trade;`       | U+02122            |
+| ©         | `&copy;`        | U+000A9            |
+| ®         | `&reg;`         | U+000AE            |
+| ™         | `&trade;`       | U+02122            |
 | ≈         | `&asymp;`       | U+02248            |
 | ≠         | `&ne;`          | U+02260            |
 | £         | `&pound;`       | U+000A3            |
 | €         | `&euro;`        | U+020AC            |
 | °         | `&deg;`         | U+000B0            |
 
-The full list of HTML named character references [can found in the HTML specification here](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references).
+The full list of HTML named character references [can be found in the HTML specification here](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references).
 
 ## See also
 

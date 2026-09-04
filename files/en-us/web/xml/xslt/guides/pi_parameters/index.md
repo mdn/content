@@ -5,8 +5,6 @@ page-type: guide
 sidebar: xmlsidebar
 ---
 
-### Overview
-
 XSLT supports the concept of passing parameters to a stylesheet when executing it. This has been possible for a while when using the {{domxref("XSLTProcessor")}} in JavaScript. However when using an `<?xml-stylesheet?>` processing instruction (PI) there used to be no way to provide parameters.
 
 To solve this two new PIs are implemented in [Firefox 2](/en-US/docs/Mozilla/Firefox/Releases/2) (see [Supported versions](#supported_versions) below for details), `<?xslt-param?>` and `<?xslt-param-namespace?>`. Both PIs can contain "pseudo attributes" the same way that the `xml-stylesheet` PI does.
@@ -21,7 +19,7 @@ The following document passes the two parameters "color" and "size" to the style
 
 Note that these PIs have no effect when transformation is done using the `XSLTProcessor` object in JavaScript.
 
-### Processing instructions
+## Processing instructions
 
 The attributes in the `xslt-param` and `xslt-param-namespace` PIs are parsed using the rules defined in [xml-stylesheet](https://www.w3.org/TR/xml-stylesheet/). Any unrecognized attributes must be ignored. Parsing of any attribute must not fail due to the presence of an unrecognized attribute as long as that attribute follows the syntax in `xml-stylesheet`.
 
@@ -29,7 +27,7 @@ Both the `xslt-param` and the `xslt-param-namespace` PIs must appear in the prol
 
 If there are multiple `xml-stylesheet` PIs the parameters apply to all stylesheets as a consequence of that all stylesheets are imported into a single stylesheet per the XSLT spec.reference? Note that multiple `xml-stylesheet` XSLT PIs are not supported in Firefox currently.
 
-#### xslt-param
+### xslt-param
 
 The `xslt-param` PI supports 4 attributes:
 
@@ -52,7 +50,7 @@ If both `value` and `select` are present or if neither `value` nor `select` are 
 
 Note that `value="..."` is not strictly equal to `select="'...'"` since the value can contain both apostrophe and quote characters.
 
-##### Examples
+#### Examples
 
 Set the parameter 'color' to the string 'red':
 
@@ -78,7 +76,7 @@ Set the parameter 'show-toc' to boolean `true`:
 <?xslt-param name="show-toc" select="true()"?>
 ```
 
-##### The select attribute context
+#### The select attribute context
 
 The following context is used to parse and evaluate the expression in the **select** attribute.
 
@@ -91,7 +89,7 @@ The following context is used to parse and evaluate the expression in the **sele
 
 If the **select** attribute fails to parse or execute, the PI is ignored (in particular, it does not fall back to the **value** attribute).
 
-#### xslt-param-namespace
+### xslt-param-namespace
 
 The `xslt-param-namespace` uses two attributes:
 
@@ -108,7 +106,7 @@ If **prefix** is missing, empty, or equals an invalid NCName, the PI is ignored.
 
 If **namespace** is missing, the PI is ignored. If **namespace** is empty, the prefix mapping is removed.
 
-##### Examples
+#### Examples
 
 Set the parameter 'books' to a node set containing all `<book>` elements in the `http://www.example.org/myNamespace` namespace:
 
@@ -117,11 +115,11 @@ Set the parameter 'books' to a node set containing all `<book>` elements in the 
 <?xslt-param name="books" select="//my:book"?>
 ```
 
-### Supported versions
+## Supported versions
 
 Supported as of Firefox 2.0.0.1. The **value** attribute is supported in Firefox 2, but the **select** attribute crashes for some expressions in the 2.0 release.
 
-### Possible future developments
+## Possible future developments
 
 Should we allow any XSLT functions in the expression? `document()` seems useful, but it seems tricky to maintain the invariant that `generate-id()` should produce the same string for the same document.
 

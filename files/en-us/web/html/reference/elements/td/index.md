@@ -1,5 +1,6 @@
 ---
-title: "<td>: The Table Data Cell element"
+title: "`<td>` HTML table data cell element"
+short-title: <td>
 slug: Web/HTML/Reference/Elements/td
 page-type: html-element
 browser-compat: html.elements.td
@@ -15,26 +16,30 @@ The **`<td>`** [HTML](/en-US/docs/Web/HTML) element defines a cell of a table th
   <caption>
     Alien football stars
   </caption>
-  <tr>
-    <th scope="col">Player</th>
-    <th scope="col">Gloobles</th>
-    <th scope="col">Za'taak</th>
-  </tr>
-  <tr>
-    <th scope="row">TR-7</th>
-    <td>7</td>
-    <td>4,569</td>
-  </tr>
-  <tr>
-    <th scope="row">Khiresh Odo</th>
-    <td>7</td>
-    <td>7,223</td>
-  </tr>
-  <tr>
-    <th scope="row">Mia Oolong</th>
-    <td>9</td>
-    <td>6,219</td>
-  </tr>
+  <thead>
+    <tr>
+      <th scope="col">Player</th>
+      <th scope="col">Gloobles</th>
+      <th scope="col">Za'taak</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">TR-7</th>
+      <td>7</td>
+      <td>4,569</td>
+    </tr>
+    <tr>
+      <th scope="row">Khiresh Odo</th>
+      <td>7</td>
+      <td>7,223</td>
+    </tr>
+    <tr>
+      <th scope="row">Mia Oolong</th>
+      <td>9</td>
+      <td>6,219</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
@@ -81,7 +86,7 @@ caption {
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `colspan`
-  - : Contains a non-negative integer value that indicates how many columns the data cell spans or extends. The default value is `1`. User agents dismiss values higher than 1000 as incorrect, setting to the default value (`1`).
+  - : Contains a non-negative integer value that indicates how many columns the data cell spans or extends. The default value is `1`. Values higher than `1000` are clipped to `1000`.
 - `headers`
   - : Contains a list of space-separated strings, each corresponding to the `id` attribute of the {{HTMLElement("th")}} elements that provide headings for this table cell.
 - `rowspan`
@@ -92,7 +97,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 The following attributes are deprecated and should not be used. They are documented below for reference when updating existing code and for historical interest only.
 
 - `abbr` {{deprecated_inline}}
-  - : Contains a short abbreviated description of the data cell's content. Some user-agents, such as speech readers, may present this description before the content itself. Put the abbreviated content inside the cell and place the (longer) description in the [`title`](/en-US/docs/Web/HTML/Reference/Global_attributes/title) attribute, as this attribute is deprecated. Or, preferably, include the content within the data cell, and use CSS to [visually clip overflowing text](/en-US/docs/Web/CSS/text-overflow).
+  - : Contains a short abbreviated description of the data cell's content. Some user-agents, such as speech readers, may present this description before the content itself. Put the abbreviated content inside the cell and place the (longer) description in the [`title`](/en-US/docs/Web/HTML/Reference/Global_attributes/title) attribute, as this attribute is deprecated. Or, preferably, include the content within the data cell, and use CSS to [visually clip overflowing text](/en-US/docs/Web/CSS/Reference/Properties/text-overflow).
 
 - `align` {{deprecated_inline}}
   - : Specifies the horizontal alignment of the data cell. The possible {{Glossary("enumerated")}} values are `left`, `center`, `right`, `justify`, and `char`. When supported, the `char` value aligns the textual content on the character defined in the [`char`](#char) attribute and the offset defined by the [`charoff`](#charoff) attribute. Use the {{cssxref("text-align")}} CSS property instead, as this attribute is deprecated.
@@ -101,7 +106,7 @@ The following attributes are deprecated and should not be used. They are documen
   - : Contains a list of space-separated strings, each corresponding to the `id` attribute of a group of cells that the data cell applies to.
 
 - `bgcolor` {{deprecated_inline}}
-  - : Defines the background color of the data cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt;")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
+  - : Defines the background color of the data cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/Reference/Values/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/Reference/Values/named-color). Other CSS {{cssxref("&lt;color&gt;")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
 
 - `char` {{deprecated_inline}}
   - : Does nothing. It was originally intended to specify the alignment of the content to a character of the data cell. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.
@@ -173,7 +178,7 @@ Some table rows ({{HTMLElement("tr")}} elements) contain both header cells ({{HT
 
 #### CSS
 
-Some basic CSS is used to style the table and its cells. CSS [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) and the {{cssxref(":nth-of-type")}} pseudo-class are used to alternate the appearance of the cells to make the information in the table easier to understand and identify.
+Some basic CSS is used to style the table and its cells. CSS [attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) and the {{cssxref(":nth-of-type")}} pseudo-class are used to alternate the appearance of the cells to make the information in the table easier to understand and identify.
 
 ```css
 td,

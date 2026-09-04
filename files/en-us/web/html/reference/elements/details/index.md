@@ -1,5 +1,6 @@
 ---
-title: "<details>: The Details disclosure element"
+title: "`<details>` HTML details disclosure element"
+short-title: <details>
 slug: Web/HTML/Reference/Elements/details
 page-type: html-element
 browser-compat: html.elements.details
@@ -172,7 +173,7 @@ Now let's apply some CSS to customize the appearance of the disclosure box.
 details {
   font:
     16px "Open Sans",
-    Calibri,
+    "Calibri",
     sans-serif;
   width: 620px;
 }

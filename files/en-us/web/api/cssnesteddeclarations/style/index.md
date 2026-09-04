@@ -12,7 +12,9 @@ The read-only **`style`** property of the {{domxref("CSSNestedDeclarations")}} i
 
 ## Value
 
-An object.
+A {{domxref("CSSStyleProperties")}} object.
+
+Although the `style` property itself is read-only in the sense that you can't replace the `CSSStyleProperties` object, you can still assign to the `style` property directly, which is equivalent to assigning to its {{domxref("CSSStyleDeclaration/cssText", "cssText")}} property. You can also modify the `CSSStyleProperties` object using the {{domxref("CSSStyleDeclaration/setProperty", "setProperty()")}} and {{domxref("CSSStyleDeclaration/removeProperty", "removeProperty()")}} methods.
 
 ## Examples
 
@@ -52,4 +54,4 @@ console.log(myRules[0].cssRules[1].style);
 ## See Also
 
 - {{domxref("CSSNestedDeclarations")}}
-- [The Nested Declarations Rule](/en-US/docs/Web/CSS/CSS_nesting/Using_CSS_nesting#nested_declarations_rule)
+- [The Nested Declarations Rule](/en-US/docs/Web/CSS/Guides/Nesting/Using#nested_declarations_rule)

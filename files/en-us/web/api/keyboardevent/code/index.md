@@ -40,7 +40,7 @@ The code values for Windows, Linux, and macOS are listed on the [KeyboardEvent: 
 
 ```css
 #output {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   border: 1px solid black;
   width: 95%;
   margin: auto;

@@ -47,7 +47,7 @@ To recap what we said in the previous article, we have:
 - [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file)
 - {{HTMLElement("progress")}} and {{HTMLElement("meter")}}
 
-Let's first talk about the [`appearance`](/en-US/docs/Web/CSS/appearance) property, which is useful for making all of the above more stylable.
+Let's first talk about the {{cssxref("appearance")}} property, which is useful for making all of the above more stylable.
 
 ## `appearance`: controlling OS-level styling
 
@@ -186,9 +186,50 @@ input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button {
 }
 ```
 
+### Setting form control color tints using `accent-color`
+
+If you only want to style the primary tint color of checkboxes, radio buttons, or range sliders, the {{cssxref("accent-color")}} will do it without requiring `appearance: none`. This is useful for basic styling cases, as the controls maintain their OS-level styling, but with an altered main color.
+
+```html live-sample___accent-color
+<form>
+  <fieldset>
+    <legend>Fruit preferences</legend>
+
+    <p>
+      <label>
+        <input type="checkbox" name="fruit" value="cherry" checked />
+        I like cherry
+      </label>
+    </p>
+    <p>
+      <label>
+        <input type="radio" name="favorite" value="banana" checked />
+        Banana is my favorite
+      </label>
+    </p>
+    <p>
+      <label>
+        How much do you like fruit?
+        <input type="range" name="amount" min="0" max="10" value="7" />
+      </label>
+    </p>
+  </fieldset>
+</form>
+```
+
+```css live-sample___accent-color
+input {
+  accent-color: rebeccapurple;
+}
+```
+
+{{EmbedLiveSample("accent-color", '100%', 200)}}
+
+Because the controls keep their native appearance, they follow platform conventions — including forced-colors modes — with no further work on your part. In addition, the browser automatically chooses a complementary secondary color with enough contrast to the `accent-color` to keep the control accessible. Play with the above live example and set some light and dark `accent-color` values to see the effects.
+
 ### Styling checkboxes and radio buttons using `appearance`
 
-Styling a checkbox or a radio button is tricky by default. The sizes of checkbox and radio button default styles are not meant to be changed, and browsers react very differently when you try. Some increase the size of the control, and some keep the control the same size and add extra space around it.
+Further styling of a checkbox or a radio button requires more effort. The default sizes of checkboxes and radio buttons were not meant to be changed, and browsers react very differently when you try. Some increase the control size, and some keep it the same and add extra space around the control.
 
 A much better approach is to remove the default appearance of checkboxes and radio buttons altogether with {{cssxref("appearance", "appearance: none;")}}, and then add your own styles to their various states.
 
@@ -221,7 +262,7 @@ Let's take this example HTML:
 </form>
 ```
 
-Let's style these with a custom checkbox design. We'll start by removing the original check box styles:
+Let's style these with a custom checkbox design. We'll start by removing the original checkbox styles:
 
 ```css live-sample___checkboxes-styled
 input[type="checkbox"] {
@@ -275,7 +316,7 @@ You can see the live result:
 
 We've also created a couple of other examples to give you more ideas:
 
-- [Styled radio buttons](https://mdn.github.io/learning-area/html/forms/styling-examples/radios-styled.html): Custom radio button styling.
+- [Styled radio buttons](https://mdn.github.io/learning-area/html/forms/custom-radio-styles/index.html): Custom radio button styling.
 - [Toggle switch example](https://mdn.github.io/learning-area/html/forms/toggle-switch-example/): A checkbox styled to look like a toggle switch.
 
 ## What can be done about the "ugly" elements?
@@ -509,7 +550,7 @@ select {
 }
 ```
 
-We then created our own icon using generated content. We put an extra wrapper around the control, because [`::before`](/en-US/docs/Web/CSS/::before)/[`::after`](/en-US/docs/Web/CSS/::after) don't work on `<select>` elements (their content is fully controlled by the browser):
+We then created our own icon using generated content. We put an extra wrapper around the control, because {{cssxref("::before")}}/{{cssxref("::after")}} don't work on `<select>` elements (their content is fully controlled by the browser):
 
 ```html
 <label for="select">Select a fruit</label>
@@ -558,7 +599,7 @@ The date/time input types ([`datetime-local`](/en-US/docs/Web/HTML/Reference/Ele
 However, the internal parts of the control (e.g., the popup calendar that you use to pick a date, the spinner that you can use to increment/decrement values) are not stylable at all, and you can't get rid of them using `appearance: none;`. If you really need full control over the styling, you'll have to either use a library to generate a custom control or build your own.
 
 > [!NOTE]
-> It is worth mentioning [`<input type="number">`](/en-US/docs/Web/HTML/Reference/Elements/input/number) here too — this also has a spinner that you can use to increment/decrement values, so potentially suffers from the same problem. However, in the case of the `number` type the data being collected is simpler, and it is easy to just use a `tel` input type instead, which has the appearance of `text`, but displays the numeric keypad in devices with touch keyboards.
+> [`<input type="number">`](/en-US/docs/Web/HTML/Reference/Elements/input/number) has a spinner too, and its internal parts are no easier to style. If you want to remove the spinner, use [`<input type="text">`](/en-US/docs/Web/HTML/Reference/Elements/input/text) with [`inputmode="numeric"`](/en-US/docs/Web/HTML/Reference/Global_attributes/inputmode) set to display a numeric keypad on devices with touch keyboards and a [`pattern`](/en-US/docs/Web/HTML/Reference/Attributes/pattern) attribute that limits input values to a number. See also [`<input type="number">` > Accessibility](/en-US/docs/Web/HTML/Reference/Elements/input/number#accessibility).
 
 ### Range input types
 
@@ -593,11 +634,32 @@ However, a custom solution is the only way to get anything significantly differe
 
 ### File input types
 
-Inputs of type file are generally OK — as you saw in our example, it is fairly easy to create something that fits in OK with the rest of the page — the output line that is part of the control will inherit the parent font if you tell the input to do so, and you can style the custom list of file names and sizes in any way you want; we created it after all.
+Inputs of type file are generally OK — it is fairly easy to create something that fits in OK with the rest of the page. The output line that is part of the control will inherit the parent font if you tell the input to do so, and you can style the custom list of file names and sizes in any way you want.
 
-The only problem with file pickers is that the button you press to open the file picker is completely unstylable — it can't be sized or colored, and it won't even accept a different font.
+The button you press to open the file picker can be styled with the {{cssxref("::file-selector-button")}} pseudo-element, which accepts the same properties as any other button:
 
-One way around this is to take advantage of the fact that if you have a label associated with a form control, clicking the label will activate the control. So you could hide the actual form input using something like this:
+```html live-sample___file-selector-button
+<form>
+  <label for="avatar">Choose a profile picture</label>
+  <input id="avatar" name="avatar" type="file" />
+</form>
+```
+
+```css live-sample___file-selector-button
+input[type="file"]::file-selector-button {
+  border: 1px solid darkgrey;
+  border-radius: 5px;
+  background: linear-gradient(to bottom, #eeeeee, #cccccc);
+  padding: 0.25em 0.75em;
+  font: inherit;
+}
+```
+
+{{EmbedLiveSample("file-selector-button", '100%', 100)}}
+
+You can't style the text beside the button — the "no file chosen" message — or the displayed filename once chosen. The browser generates that text and doesn't expose it to CSS. To work around this problem, use the control's label and the fact that clicking the label activates the control.
+
+You can hide the actual form input using something like this:
 
 ```css
 input[type="file"] {
@@ -730,18 +792,18 @@ function returnFileSize(number) {
 
 {{EmbedLiveSample("styled-file-picker", '100%', 200)}}
 
-You can also press the **Play** button to run the example in MDN Playground and edit the source code.
+You can also press the **Play** button to run the example in MDN Playground and check out the full source code.
 
 ### Meters and progress bars
 
-[`<meter>`](/en-US/docs/Web/HTML/Reference/Elements/meter) and [`<progress>`](/en-US/docs/Web/HTML/Reference/Elements/progress) are possibly the worst of the lot. As you saw in the earlier example, we can set them to the desired width relatively accurately. But beyond that, they are really difficult to style in any way. They don't handle height settings consistently between each other and between browsers, you can color the background but not the foreground bar, and setting `appearance: none` on them makes things worse, not better.
+[`<meter>`](/en-US/docs/Web/HTML/Reference/Elements/meter) and [`<progress>`](/en-US/docs/Web/HTML/Reference/Elements/progress) are possibly the worst of the lot. As you saw in the earlier example, we can set them to the desired width relatively accurately. But beyond that, they are really difficult to style. They don't handle height settings consistently between each other and between browsers, you can color the background but not the foreground bar, and setting `appearance: none` on them makes things worse, not better.
 
-It is easier to create your own custom solution for these features if you want to control the styling, or use a third-party solution such as [progressbar.js](https://kimmobrunfeldt.github.io/progressbar.js/#examples).
+It is easier to create your own custom solution to control the styling for these features, or use a third-party solution such as [progressbar.js](https://kimmobrunfeldt.github.io/progressbar.js/#examples).
 
 ## Summary
 
-While there are still difficulties using CSS with HTML forms, there are ways to get around many of the problems. There are no clean, universal solutions, but modern browsers offer new possibilities. For now, the best solution is to learn more about the way the different browsers support CSS when applied to HTML form controls.
+Styling HTML forms presents some challenges; there are however ways to get around many of them. There are no clean, universal solutions, but modern browsers offer new possibilities. For now, the best solution is to learn more about how different browsers support CSS when applied to HTML form controls.
 
-In the next article of this module, we will explore creating [fully-customized `<select>` elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) using the dedicated, modern HTML and CSS features available for this purpose.
+In the next article, we will explore creating [fully-customized `<select>` elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) using the dedicated, modern HTML and CSS features available for this purpose.
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms/Customizable_select", "Learn_web_development/Extensions/Forms")}}

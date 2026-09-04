@@ -48,7 +48,7 @@ XSS is a term used to describe a class of attacks that allow an attacker to inje
 Django's template system protects you against the majority of XSS attacks by [escaping specific characters](https://docs.djangoproject.com/en/5.0/ref/templates/language/#automatic-html-escaping) that are "dangerous" in HTML. We can demonstrate this by attempting to inject some JavaScript into our LocalLibrary website using the Create-author form we set up in [Django Tutorial Part 9: Working with forms](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Forms).
 
 1. Start the website using the development server (`python3 manage.py runserver`).
-2. Open the site in your local browser and login to your superuser account.
+2. Open the site in your local browser and log into your superuser account.
 3. Navigate to the author-creation page (which should be at URL: `http://127.0.0.1:8000/catalog/author/create/`).
 4. Enter names and date details for a new user, and then append the following text to the Last Name field:
    `<script>alert('Test alert');</script>`.
@@ -91,48 +91,30 @@ They would then send the file to all the Librarians and suggest that they open t
       action="http://127.0.0.1:8000/catalog/author/create/"
       method="post"
       name="EvilForm">
-      <table>
-        <tr>
-          <th><label for="id_first_name">First name:</label></th>
-          <td>
-            <input
-              id="id_first_name"
-              maxlength="100"
-              name="first_name"
-              type="text"
-              value="Mad"
-              required />
-          </td>
-        </tr>
-        <tr>
-          <th><label for="id_last_name">Last name:</label></th>
-          <td>
-            <input
-              id="id_last_name"
-              maxlength="100"
-              name="last_name"
-              type="text"
-              value="Man"
-              required />
-          </td>
-        </tr>
-        <tr>
-          <th><label for="id_date_of_birth">Date of birth:</label></th>
-          <td>
-            <input id="id_date_of_birth" name="date_of_birth" type="text" />
-          </td>
-        </tr>
-        <tr>
-          <th><label for="id_date_of_death">Died:</label></th>
-          <td>
-            <input
-              id="id_date_of_death"
-              name="date_of_death"
-              type="text"
-              value="12/10/2016" />
-          </td>
-        </tr>
-      </table>
+      <label for="id_first_name">First name:</label>
+      <input
+        id="id_first_name"
+        maxlength="100"
+        name="first_name"
+        type="text"
+        value="Mad"
+        required />
+      <label for="id_last_name">Last name:</label>
+      <input
+        id="id_last_name"
+        maxlength="100"
+        name="last_name"
+        type="text"
+        value="Man"
+        required />
+      <label for="id_date_of_birth">Date of birth:</label>
+      <input id="id_date_of_birth" name="date_of_birth" type="text" />
+      <label for="id_date_of_death">Died:</label>
+      <input
+        id="id_date_of_death"
+        name="date_of_death"
+        type="text"
+        value="12/10/2016" />
       <input type="submit" value="Submit" />
     </form>
   </body>

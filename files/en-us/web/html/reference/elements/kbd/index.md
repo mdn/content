@@ -1,12 +1,15 @@
 ---
-title: "<kbd>: The Keyboard Input element"
+title: "`<kbd>` HTML keyboard input element"
+short-title: <kbd>
 slug: Web/HTML/Reference/Elements/kbd
 page-type: html-element
 browser-compat: html.elements.kbd
 sidebar: htmlsidebar
 ---
 
-The **`<kbd>`** [HTML](/en-US/docs/Web/HTML) element represents a span of inline text denoting textual user input from a keyboard, voice input, or any other text entry device. By convention, the {{Glossary("user agent")}} defaults to rendering the contents of a `<kbd>` element using its default monospace font, although this is not mandated by the HTML standard.
+The **`<kbd>`** [HTML](/en-US/docs/Web/HTML) element represents user input (typically keyboard input). By default, the content text is displayed using the {{Glossary("user agent", "user agent's")}} default monospace font.
+
+`<kbd>` may be nested in various combinations with the {{HTMLElement("samp")}} (Sample Output) element to represent various forms of input or output based on visual cues.
 
 {{InteractiveExample("HTML Demo: &lt;kbd&gt;", "tabbed-shorter")}}
 
@@ -28,14 +31,12 @@ kbd {
   color: #333333;
   display: inline-block;
   font-size: 0.85em;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1;
   padding: 2px 4px;
   white-space: nowrap;
 }
 ```
-
-`<kbd>` may be nested in various combinations with the {{HTMLElement("samp")}} (Sample Output) element to represent various forms of input or output based on visual cues.
 
 ## Attributes
 

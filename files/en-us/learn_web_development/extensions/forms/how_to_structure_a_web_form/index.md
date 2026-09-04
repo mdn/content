@@ -45,11 +45,11 @@ Let's move forward and cover the structural elements you'll find nested in a for
 
 The {{HTMLElement("fieldset")}} element is a convenient way to create groups of widgets that share the same purpose, for styling and semantic purposes. You can label a {{HTMLElement("fieldset")}} by including a {{HTMLElement("legend")}} element just below the opening {{HTMLElement("fieldset")}} tag. The text content of the {{HTMLElement("legend")}} formally describes the purpose of the {{HTMLElement("fieldset")}} it is included inside.
 
-Many assistive technologies will use the {{HTMLElement("legend")}} element as if it is a part of the label of each control inside the corresponding {{HTMLElement("fieldset")}} element. For example, some screen readers such as [Jaws](https://www.freedomscientific.com/products/software/jaws/) and [NVDA](https://www.nvaccess.org/) will speak the legend's content before speaking the label of each control.
+Many assistive technologies will use the {{HTMLElement("legend")}} element as if it is a part of the label of each control inside the corresponding {{HTMLElement("fieldset")}} element. For example, some screen readers such as [Jaws](https://vispero.com/jaws-screen-reader-software/) and [NVDA](https://www.nvaccess.org/) will speak the legend's content before speaking the label of each control.
 
-Here is a little example:
+Here's an example:
 
-```html
+```html live-sample___fieldset-legend
 <form>
   <fieldset>
     <legend>Fruit juice size</legend>
@@ -69,12 +69,13 @@ Here is a little example:
 </form>
 ```
 
-> [!NOTE]
-> You can find this example in [fieldset-legend.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/fieldset-legend.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)).
+This renders as follows:
 
-When reading the above form, a screen reader will speak "Fruit juice size small" for the first widget, "Fruit juice size medium" for the second, and "Fruit juice size large" for the third.
+{{embedlivesample("fieldset-legend", "100%", 200)}}
 
-The use case in this example is one of the most important. Each time you have a set of radio buttons, you should nest them inside a {{HTMLElement("fieldset")}} element. There are other use cases, and in general the {{HTMLElement("fieldset")}} element can also be used to section a form. Ideally, long forms should be spread across multiple pages, but if a form is getting long and must be on a single page, putting the different related sections inside different fieldsets improves usability.
+When reading the above form, a screen reader will speak "Fruit juice size small" for the first radio button label, "Fruit juice size medium" for the second, and "Fruit juice size large" for the third.
+
+Each time you have a set of radio buttons, you should nest them inside a {{HTMLElement("fieldset")}} element. There are other use cases, and in general the {{HTMLElement("fieldset")}} element can also be used to section a form. Ideally, long forms should be spread across multiple pages, but if a form is getting long and must be on a single page, putting the different related sections inside different fieldsets improves usability.
 
 Because of its influence over assistive technology, the {{HTMLElement("fieldset")}} element is one of the key elements for building accessible forms; however, it is your responsibility not to abuse it. If possible, each time you build a form, try to [listen to how a screen reader](/en-US/docs/Learn_web_development/Core/Accessibility/Tooling#screen_readers) interprets it. If it sounds odd, try to improve the form structure.
 
@@ -106,7 +107,7 @@ Another advantage of properly set up labels is that you can click or tap the lab
 
 For example, clicking on the "I like cherry" label text in the example below will toggle the selected state of the _taste_cherry_ checkbox:
 
-```html
+```html live-sample___checkbox-label
 <form>
   <p>
     <input type="checkbox" id="taste_1" name="taste_cherry" value="cherry" />
@@ -119,8 +120,9 @@ For example, clicking on the "I like cherry" label text in the example below wil
 </form>
 ```
 
-> [!NOTE]
-> You can find this example in [checkbox-label.html](https://github.com/mdn/learning-area/blob/main/html/forms/html-form-structure/checkbox-label.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)).
+Try it out:
+
+{{embedlivesample("checkbox-label", "100%", 100)}}
 
 ### Multiple labels
 

@@ -31,7 +31,7 @@ None.
 
 ### Return value
 
-A promise that resolves with a {{domxref("Blob")}}.
+A promise that resolves with a {{domxref("Blob")}} whose data is the body's bytes and the media type is the response's `Content-Type` header's value.
 
 ### Exceptions
 

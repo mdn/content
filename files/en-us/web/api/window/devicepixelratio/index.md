@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Window.devicePixelRatio
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
 The **`devicePixelRatio`** of {{domxref("Window")}} interface returns the ratio of the resolution in _physical pixels_ to the resolution in _CSS pixels_ for the current display device.
 
@@ -99,7 +99,7 @@ In this example, we'll set up a media query and watch it to see when the device 
 ```css
 body {
   font:
-    22px arial,
+    22px "Arial",
     sans-serif;
 }
 
@@ -154,7 +154,7 @@ To test the example, try zooming the page in and out, and note the difference in
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries)
-- [Using media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [CSS `resolution` media query](/en-US/docs/Web/CSS/@media/resolution)
+- [Media queries](/en-US/docs/Web/CSS/Guides/Media_queries)
+- [Using media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
+- {{cssxref("@media/resolution")}}
 - The {{cssxref("image-resolution")}} property

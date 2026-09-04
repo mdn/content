@@ -3,12 +3,10 @@ title: "NavigationDestination: getState() method"
 short-title: getState()
 slug: Web/API/NavigationDestination/getState
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.NavigationDestination.getState
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`getState()`** method of the
 {{domxref("NavigationDestination")}} interface returns a clone of the developer-supplied state associated with the destination {{domxref("NavigationHistoryEntry")}}, or navigation operation (e.g., {{domxref("Navigation.navigate()", "navigate()")}}) as appropriate.

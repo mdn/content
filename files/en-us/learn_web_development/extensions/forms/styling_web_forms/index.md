@@ -62,6 +62,8 @@ The article [Advanced form styling](/en-US/docs/Learn_web_development/Extensions
 - Date-related controls such as [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local)
 - [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range)
 - [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file)
+  > [!NOTE]
+  > The button that opens the file picker can be styled with {{cssxref("::file-selector-button")}}. The text beside it, which names the selected file, cannot.
 - Elements involved in creating dropdown widgets, including {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} and {{HTMLElement("datalist")}}.
   > [!NOTE]
   > Some browsers now support [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), a set of HTML and CSS features that together enable full customization of `<select>` elements and their contents just like any regular DOM elements.
@@ -284,41 +286,47 @@ Add the above code into the body of your HTML.
 This is where the fun begins! Before we start coding, we need three additional assets:
 
 1. [The postcard background](https://github.com/mdn/learning-area/blob/main/html/forms/postcard-example/background.jpg) — download this image and save it in the same directory as your working HTML file.
-2. A typewriter font: [The "Mom's Typewriter" font from dafont.com](https://www.dafont.com/moms-typewriter.font?back=theme) — download the TTF file into the same directory as above.
-3. A hand-drawn font: [The "Journal" font from dafont.com](https://www.dafont.com/journal.font) — download the TTF file into the same directory as above.
+2. A typewriter font: [The "Veteran Typewriter" font from dafont.com](https://www.dafont.com/veteran-typewriter.font) — download the ZIP file, extract it, and copy the TTF file into the same directory as above.
+3. A hand-drawn font: [The "Journal" font from dafont.com](https://www.dafont.com/journal.font) — download the ZIP file, extract it, and copy the TTF file into the same directory as above.
 
 Your fonts need some more processing before you start:
 
-1. Go to the fontsquirrel.com [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator).
-2. Using the form, upload both your font files and generate a webfont kit. Download the kit to your computer.
-3. Unzip the provided zip file.
-4. Inside the unzipped contents you will find some font files (at the time of writing, two `.woff` files and two `.woff2` files; they might vary in the future.) Copy these files into a directory called fonts, in the same directory as before. We are using two different files for each font to maximize browser compatibility; see our [Web fonts](/en-US/docs/Learn_web_development/Core/Text_styling/Web_fonts) article for a lot more information.
+1. Go to the [Transfonter Webfont generator](https://transfonter.org/).
+2. Press the "Add fonts" button and upload both your TTF files.
+3. Once they are uploaded, press the "Convert" button to generate a webfont kit.
+4. Download the kit to your computer using the "Download" link.
+5. Unzip the provided zip file.
+6. Inside the unzipped contents you will find some font files (at the time of writing, two `.woff` files and two `.woff2` files; they might vary in the future.) Copy these files into a directory called `fonts` inside the same directory as before. We are using two different files for each font to maximize browser compatibility; see our [Web fonts](/en-US/docs/Learn_web_development/Core/Text_styling/Web_fonts) article for a lot more information.
 
 ### The CSS
 
-Now we can dig into the CSS for the example. Add all the code blocks shown below inside the {{htmlelement("style")}} element, one after another.
+Now we can dig into the CSS for the example. Add all the code blocks shown below inside the provided {{htmlelement("style")}} element, one after another.
 
 #### Overall layout
 
-First, we prepare by defining our {{cssxref("@font-face")}} rules, and all the basic styles set on the {{HTMLElement("body")}} and {{HTMLElement("form")}} elements. If the fontsquirrel output was different from what we described above, you can find the correct `@font-face` blocks inside your downloaded webfont kit, in the `stylesheet.css` file (you'll need to replace the below `@font-face` blocks with them, and update the paths to the font files):
+First, we prepare by defining our {{cssxref("@font-face")}} rules, and all the basic styles set on the {{HTMLElement("body")}} and {{HTMLElement("form")}} elements.
+
+Find the `@font-face` blocks inside your downloaded webfont kit, in the `stylesheet.css` file and replace the below `@font-face` blocks with them. Update the paths to the font files, and make sure the Journal and Veteran Typewriter `font-family` names are set to `handwriting` and `typewriter`, respectively. Your Transfonter output may be slightly different from ours, but that's OK, as long as you make the requested changes.
 
 ```css
 @font-face {
   font-family: "handwriting";
   src:
-    url("fonts/journal-webfont.woff2") format("woff2"),
-    url("fonts/journal-webfont.woff") format("woff");
+    url("fonts/Journal.woff2") format("woff2"),
+    url("fonts/Journal.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
   font-family: "typewriter";
   src:
-    url("fonts/momot___-webfont.woff2") format("woff2"),
-    url("fonts/momot___-webfont.woff") format("woff");
+    url("fonts/VeteranTypewriter.woff2") format("woff2"),
+    url("fonts/VeteranTypewriter.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 body {
@@ -339,13 +347,13 @@ form {
 
   /* we create our grid */
   display: grid;
-  grid-gap: 20px;
+  gap: 20px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 10em 1em 1em 1em;
 }
 ```
 
-Notice that we've used some [CSS grid](/en-US/docs/Web/CSS/CSS_grid_layout) and [Flexbox](/en-US/docs/Web/CSS/CSS_flexible_box_layout) to lay out the form. Using this we can easily position our elements, including the title and all the form elements:
+Notice that we've used some [CSS grid](/en-US/docs/Web/CSS/Guides/Grid_layout) and [Flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) to lay out the form. Using this we can easily position our elements, including the title and all the form elements:
 
 ```css
 h1 {
@@ -394,7 +402,7 @@ textarea {
 }
 ```
 
-When one of these fields gains focus, we highlight them with a light grey, transparent, background (it is always important to have focus style, for usability and keyboard accessibility):
+When one of these fields gains focus, we highlight them with a light gray, transparent, background (it is always important to have focus style, for usability and keyboard accessibility):
 
 ```css
 input:focus,
@@ -428,7 +436,7 @@ textarea {
 
 #### Styling the submit button
 
-The {{HTMLElement("button")}} element is really convenient to style with CSS; you can do whatever you want, even using [pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements):
+The {{HTMLElement("button")}} element is really convenient to style with CSS; you can do whatever you want, even using [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements):
 
 ```css
 button {
@@ -454,7 +462,7 @@ button:focus {
 
 ### The final result
 
-And voilà! Your form should now look like this:
+And voilà! Your form should now look something like this:
 
 ![The final look and layout of the form after applying all styling and tweaking to it as described above](updated-form-screenshot.jpg)
 

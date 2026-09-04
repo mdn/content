@@ -109,8 +109,8 @@ In addition to adding the `<track>` elements, we have also added a new button to
 :root {
   color: #333333;
   font-family:
-    "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", "Lucida", "Arial",
-    "Helvetica", sans-serif;
+    "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", "Lucida",
+    "Helvetica", "Arial", sans-serif;
 }
 a {
   color: #0095dd;

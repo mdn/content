@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Gamepad.index
 ---
 
-{{APIRef("Gamepad API")}}{{SecureContext_Header}}
+{{APIRef("Gamepad API")}}
 
 The **`Gamepad.index`** property of the {{domxref("Gamepad") }}
 interface returns an integer that is auto-incremented to be unique for each device
@@ -17,7 +17,7 @@ and reconnected will retain the same index.
 
 ## Value
 
-A {{jsxref("number") }}.
+A {{jsxref("Number")}}.
 
 ## Examples
 

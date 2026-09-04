@@ -36,6 +36,8 @@ A {{domxref("ReadableStream")}} containing the generated summary.
 
 ### Exceptions
 
+- `AbortError` {{domxref("DOMException")}}
+  - : Thrown if the `Summarizer` was previously destroyed (had {{domxref("Summarizer.destroy()")}} called on it, or was aborted via its abort [`signal`](/en-US/docs/Web/API/Summarizer/create_static#signal) after creation).
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the current {{domxref("Document")}} is not active.
 - `NotAllowedError` {{domxref("DOMException")}}

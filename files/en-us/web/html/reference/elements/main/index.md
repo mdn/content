@@ -1,5 +1,6 @@
 ---
-title: "<main>: The Main element"
+title: "`<main>` HTML main element"
+short-title: <main>
 slug: Web/HTML/Reference/Elements/main
 page-type: html-element
 browser-compat: html.elements.main
@@ -29,7 +30,7 @@ The **`<main>`** [HTML](/en-US/docs/Web/HTML) element represents the dominant co
 ```css interactive-example
 header {
   font:
-    bold 7vw Arial,
+    bold 7vw "Arial",
     sans-serif;
 }
 ```

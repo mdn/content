@@ -4,29 +4,26 @@ short-title: Attribution-Reporting-Register-Trigger
 slug: Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Trigger
 page-type: http-header
 status:
-  - experimental
+  - deprecated
+  - non-standard
 browser-compat: http.headers.Attribution-Reporting-Register-Trigger
 sidebar: http
 ---
 
-{{seecompattable}}
+{{non-standard_header}}
 
 The HTTP **`Attribution-Reporting-Register-Trigger`** {{Glossary("response header")}} registers a page feature as an [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers). This header is included as part of a response to a request that contains the {{HTTPHeader("Attribution-Reporting-Eligible")}} header.
 
 See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
 > [!NOTE]
-> If the calling site does not have the Attribution Reporting API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment), the `Attribution-Reporting-Register-Trigger` header is ignored and attribution triggers are not registered.
+> If the calling site does not have the Attribution Reporting API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox#enrollment), the `Attribution-Reporting-Register-Trigger` header is ignored and attribution triggers are not registered.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
     </tr>
     <tr>
       <th scope="row">

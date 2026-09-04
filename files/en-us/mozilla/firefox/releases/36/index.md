@@ -1,5 +1,5 @@
 ---
-title: Firefox 36 for developers
+title: Firefox 36 release notes for developers
 short-title: Firefox 36
 slug: Mozilla/Firefox/Releases/36
 page-type: firefox-release-notes
@@ -8,7 +8,7 @@ sidebar: firefox
 
 Firefox 36 was released on February 24th, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer Tools
 

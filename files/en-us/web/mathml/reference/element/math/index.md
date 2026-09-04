@@ -17,8 +17,8 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 - `display`
   - : This [enumerated](/en-US/docs/Glossary/Enumerated) attribute specifies how the enclosed MathML markup should be rendered. It can have one of the following values:
-    - `block`, which means that this element will be displayed in its own block outside the current span of text and with [`math-style`](/en-US/docs/Web/CSS/math-style) set to `normal`.
-    - `inline`, which means that this element will be displayed inside the current span of text and with [`math-style`](/en-US/docs/Web/CSS/math-style) set to `compact`.
+    - `block`, which means that this element will be displayed in its own block outside the current span of text and with {{cssxref("math-style")}} set to `normal`.
+    - `inline`, which means that this element will be displayed inside the current span of text and with {{cssxref("math-style")}} set to `compact`.
 
     If not present, its default value is `inline`.
 
@@ -41,7 +41,7 @@ body {
 
 For example, screen readers will represent the following quadratic formula similar to:
 
-> x equals fraction start, negative b plus or minus square root of b squared minus 4 a c, end of root, over 2 a, end of fraction, maths
+> x equals fraction start, negative b plus or minus square root of b squared minus 4 a c, end of root, over 2 a, end of fraction, math
 
 <details>
 <summary>Markup for the quadratic formula</summary>

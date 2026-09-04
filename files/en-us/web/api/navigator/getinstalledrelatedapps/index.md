@@ -13,7 +13,7 @@ browser-compat: api.Navigator.getInstalledRelatedApps
 The **`getInstalledRelatedApps()`** method returns a promise that resolves with an array of objects representing any related platform-specific apps or [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) that the user has installed. This could be used for content personalization such as removing "install our app" banners from the web app if the platform-specific app and/or PWA is already installed.
 
 > [!NOTE]
-> This method must be invoked in a top-level [secure context](/en-US/docs/Web/Security/Secure_Contexts), that is, not embedded in an {{htmlelement("iframe")}}.
+> This method must be invoked in a top-level [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts), that is, not embedded in an {{htmlelement("iframe")}}.
 
 ## Description
 
@@ -59,7 +59,7 @@ A {{JSxRef("Promise")}} that fulfills with an array of objects representing any 
     - `"play"`: A [Google Play Store](https://play.google.com/store/games) app.
     - `"chromeos_play"`: A [ChromeOS Play](https://support.google.com/googleplay/answer/7021273) app.
     - `"webapp"`: A [Progressive Web App](/en-US/docs/Web/Progressive_web_apps).
-    - `"windows"`: A [Windows Store](https://apps.microsoft.com/?rtc=1&hl=en-us&gl=us) app.
+    - `"windows"`: A [Windows Store](https://apps.microsoft.com/?rtc=1&hl=en-US&gl=US) app.
     - `"f-droid"`: An [F-Droid](https://f-droid.org/) app.
     - `"amazon"`: An [Amazon App Store](https://www.amazon.com/gp/browse.html?node=2350149011) app.
 - `url` {{optional_inline}}

@@ -40,7 +40,7 @@ If a {{jsxref("Uint32Array")}} value is specified for `dynamicOffsets`, both of 
 
 ### Return value
 
-None ({{jsxref("Undefined")}}).
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -73,7 +73,7 @@ const BUFFER_SIZE = 1000;
 // Create GPUCommandEncoder to encode commands to issue to the GPU
 const commandEncoder = device.createCommandEncoder();
 
-// Initiate render pass
+// Initiate compute pass
 const passEncoder = commandEncoder.beginComputePass();
 
 // Issue commands

@@ -58,9 +58,9 @@ These properties are defined on `WeakMap.prototype` and shared by all `WeakMap` 
   - : Removes the entry specified by the key from this `WeakMap`.
 - {{jsxref("WeakMap.prototype.get()")}}
   - : Returns the value corresponding to the key in this `WeakMap`, or `undefined` if there is none.
-- {{jsxref("WeakMap.prototype.getOrInsert()")}} {{experimental_inline}}
+- {{jsxref("WeakMap.prototype.getOrInsert()")}}
   - : Returns the value corresponding to the specified key in this `WeakMap`. If the key is not present, it inserts a new entry with the key and a given default value, and returns the inserted value.
-- {{jsxref("WeakMap.prototype.getOrInsertComputed()")}} {{experimental_inline}}
+- {{jsxref("WeakMap.prototype.getOrInsertComputed()")}}
   - : Returns the value corresponding to the specified key in this `WeakMap`. If the key is not present, it inserts a new entry with the key and a default value computed from a given callback, and returns the inserted value.
 - {{jsxref("WeakMap.prototype.has()")}}
   - : Returns a boolean indicating whether an entry with the specified key exists in this `WeakMap` or not.
@@ -193,6 +193,8 @@ class Thing {
   }
 }
 
+const thing = new Thing();
+
 console.log(thing);
 // Thing {someProperty: "foo"}
 
@@ -205,7 +207,7 @@ thing.showPrivate();
 
 ### Associating metadata
 
-A `WeakMap` can be used to associate metadata with an object, without affecting the lifetime of the object itself. This is very similar to the private members example, since private members are also modelled as external metadata that doesn't participate in [prototypical inheritance](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
+A `WeakMap` can be used to associate metadata with an object, without affecting the lifetime of the object itself. This is very similar to the private members example, since private members are also modeled as external metadata that doesn't participate in [prototypical inheritance](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 
 This use case can be extended to already-created objects. For example, on the web, we may want to associate extra data with a DOM element, which the DOM element may access later. A common approach is to attach the data as a property:
 

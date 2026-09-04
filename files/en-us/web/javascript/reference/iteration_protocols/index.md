@@ -60,7 +60,7 @@ Optionally, the iterator can also implement the **`return(value)`** and **`throw
 > [!NOTE]
 > It is not possible to know reflectively (i.e., without actually calling `next()` and validating the returned result) whether a particular object implements the iterator protocol.
 
-It is very easy to make an iterator also iterable: just implement an `[Symbol.iterator]()` method that returns `this`.
+It is very easy to make an iterator also iterable: just implement a `[Symbol.iterator]()` method that returns `this`.
 
 ```js
 // Satisfies both the Iterator Protocol and Iterable
@@ -87,7 +87,7 @@ console.log(typeof generatorObject.next);
 // "function" — it has a next method (which returns the right result), so it's an iterator
 
 console.log(typeof generatorObject[Symbol.iterator]);
-// "function" — it has an [Symbol.iterator] method (which returns the right iterator), so it's an iterable
+// "function" — it has a [Symbol.iterator] method (which returns the right iterator), so it's an iterable
 
 console.log(generatorObject[Symbol.iterator]() === generatorObject);
 // true — its [Symbol.iterator] method returns itself (an iterator), so it's an iterable iterator
@@ -121,7 +121,7 @@ The language specifies APIs that either produce or consume iterables and iterato
 
 ### Built-in iterables
 
-{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, and [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) (returned by [`Intl.Segmenter.prototype.segment()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment)) are all built-in iterables, because each of their `prototype` objects implements an `[Symbol.iterator]()` method. In addition, the [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object and some DOM collection types such as {{domxref("NodeList")}} are also iterables.
+{{jsxref("String")}}, {{jsxref("Array")}}, {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, and [`Segments`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Segments) (returned by [`Intl.Segmenter.prototype.segment()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment)) are all built-in iterables, because each of their `prototype` objects implements a `[Symbol.iterator]()` method. In addition, the [`arguments`](/en-US/docs/Web/JavaScript/Reference/Functions/arguments) object and some DOM collection types such as {{domxref("NodeList")}} are also iterables.
 There is no object in the core JavaScript language that is async iterable. Some web APIs, such as {{domxref("ReadableStream")}}, have the `Symbol.asyncIterator` method set by default.
 
 [Generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/function*) return [generator objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator), which are iterable iterators. [Async generator functions](/en-US/docs/Web/JavaScript/Reference/Statements/async_function*) return [async generator objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator), which are async iterable iterators.
@@ -304,7 +304,7 @@ The lack of `catch` here causes errors thrown by `doSomething()` or `doSomething
 
 Some built-in syntaxes wrap an iterator into another iterator. They include the iterator produced by {{jsxref("Iterator.from()")}}, [iterator helper methods](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_methods) (`map()`, `filter()`, `take()`, `drop()`, and `flatMap()`), [`yield*`](/en-US/docs/Web/JavaScript/Reference/Operators/yield*), and a hidden wrapper when you use async iteration (`for await...of`, `Array.fromAsync`) on sync iterators. The wrapped iterator is then responsible for forwarding errors between the inner iterator and the caller.
 
-- All wrapper iterators directly forward the `next()` method of the inner iterator, including its return value and thrown errors.
+- Wrapper iterators generally directly forward the `next()` method of the inner iterator, including its return value and thrown errors. The async wrapper of a sync iterator awaits the returned object's `value` property and converts thrown errors into promise rejections. If a yielded promise rejects, the wrapper calls the inner iterator's `return()` method, if one exists, before rejecting its own promise. If the inner iterator's `next()` method itself throws, the wrapper rejects its promise without calling `return()`.
 - Wrapper iterators generally directly forward the `return()` method of the inner iterator. If the `return()` method doesn't exist on the inner iterator, it returns `{ done: true, value: undefined }` instead. In the case of iterator helpers: if the iterator helper's `next()` method has not been called, after trying to call `return()` on the inner iterator, the current iterator always returns `{ done: true, value: undefined }`. This is consistent with generator functions where execution hasn't entered the `yield*` expression yet.
 - `yield*` is the only built-in syntax that forwards the `throw()` method of the inner iterator. For information on how [`yield*`](/en-US/docs/Web/JavaScript/Reference/Operators/yield*) forwards the `return()` and `throw()` methods, see its own reference.
 

@@ -1,7 +1,9 @@
 ---
-title: br_table
+title: "br_table: Wasm text instruction"
+short-title: br_table
 slug: WebAssembly/Reference/Control_flow/br_table
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.br_table
 sidebar: webassemblysidebar
 ---
 
@@ -82,3 +84,11 @@ i32.const 1
 | Instruction | Binary opcode |
 | ----------- | ------------- |
 | `br_table`  | `0x0e`        |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

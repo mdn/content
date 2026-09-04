@@ -1,5 +1,6 @@
 ---
-title: <input type="search">
+title: '`<input type="search">` HTML attribute value'
+short-title: <input type="search">
 slug: Web/HTML/Reference/Elements/input/search
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_search
@@ -187,27 +188,29 @@ You can see how the placeholder is rendered below:
 
 ### Search form labels and accessibility
 
-One problem with search forms is their accessibility; a common design practice is not to provide a label for the search field (although there might be a magnifying glass icon or similar), as the purpose of a search form is normally fairly obvious for sighted users due to placement ([this example shows a typical pattern](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)).
+One problem with search forms is their accessibility; a common design practice is not to provide a label for the search field (although there might be a magnifying glass icon or similar), as the purpose of a search form is normally fairly obvious for sighted users due to placement ([this example shows a typical visual pattern](#accessible_search_form)).
 
-This could, however, cause confusion for screen reader users, since they will not have any verbal indication of what the search input is. One way around this that won't impact on your visual design is to use [WAI-ARIA](/en-US/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics) features:
+This could, however, cause confusion for screen reader users, as they will not receive any verbal indication of what the search input is. One way around this that won't impact your visual design is to use [landmark elements](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/landmark_role).
 
-- A `role` attribute of value `search` on the `<form>` element will cause screen readers to announce that the form is a search form.
+- Wrap the whole search functionality in a {{HTMLElement("search")}} element, which creates a landmark region that assistive technologies can announce and quickly navigate to. If your `<input>` is already in a `<form>`, you can alternatively add [`role="search"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/search_role) to the `<form>` element, which also makes the `<form>` a search landmark. The `<search>` element uses native HTML semantics, while `role="search"` has more support and may be terser to type if you already have a `<form>` wrapper.
 - If that isn't enough, you can use an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) attribute on the {{HTMLElement("input")}} itself. This should be a descriptive text label that will be read out by the screen reader; it's used as a non-visual equivalent to `<label>`.
 
-Let's have a look at an example:
+Let's have a look at a minimal example:
 
 ```html
-<form role="search">
-  <div>
-    <input
-      type="search"
-      id="mySearch"
-      name="q"
-      placeholder="Search the site…"
-      aria-label="Search through site content" />
-    <button>Search</button>
-  </div>
-</form>
+<search>
+  <form>
+    <div>
+      <input
+        type="search"
+        id="mySearch"
+        name="q"
+        placeholder="Search the site…"
+        aria-label="Search through site content" />
+      <button>Search</button>
+    </div>
+  </form>
+</search>
 ```
 
 You can see how this is rendered below:
@@ -412,7 +415,106 @@ This renders like so:
 
 ## Examples
 
-You can see a good example of a search form used in context at our [website-aria-roles](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-aria-roles) example ([see it live](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)).
+### Accessible search form
+
+This example shows a typical {{htmlelement("nav")}} menu that includes a search form. [WAI-ARIA](/en-US/docs/Web/Accessibility/ARIA) features are used to make the form more accessible to assistive technology (AT) users.
+
+#### HTML
+
+The main nav items are comprised of a list of links. The search {{htmlelement("form")}} is given a [`role="search"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/search_role) attribute, which makes the `<form>` a search landmark, announcing it to AT. We also give the `<input type="search">` element an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) to give it a clear label that is read out by screen readers.
+
+```html live-sample___accessible-search
+<nav>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <form role="search">
+    <input
+      type="search"
+      name="q"
+      placeholder="Search query"
+      aria-label="Search through site content" />
+    <button>Search!</button>
+  </form>
+</nav>
+```
+
+```css hidden live-sample___accessible-search
+html {
+  font-family: sans-serif;
+  font-size: 10px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 10px;
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  flex: 2;
+  display: flex;
+}
+
+nav li {
+  text-align: center;
+  flex: 1;
+}
+
+nav a {
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 1.2;
+}
+
+nav form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+input {
+  font-size: 1.6rem;
+}
+
+input[type="search"] {
+  flex: 3;
+  height: 30px;
+}
+
+button {
+  flex: 1;
+  height: 30px;
+  padding: 0 1em;
+  background: #333;
+  border: 0;
+  color: white;
+}
+```
+
+We have hidden the example's CSS and JavaScript for brevity, as they are not relevant to understanding the HTML. You can check them out by pressing the "Play" button in the live example below.
+
+```js hidden live-sample___accessible-search
+const form = document.querySelector("form");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+```
+
+#### Result
+
+{{embedlivesample("accessible-search", "100%", "70")}}
 
 ## Technical summary
 
@@ -454,17 +556,12 @@ You can see a good example of a search form used in context at our [website-aria
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.setRangeText", "setRangeText()")}},
-        {{domxref("HTMLInputElement.setSelectionRange", "setSelectionRange()")}}.
-      </td>
-    </tr>
-     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
-      <td>with no <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role">searchbox</a></code></td>
-      <td>with <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role">combobox</a></code></td>
+      <td>
+        with no <code>list</code> attribute:
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role">searchbox</a></code><br />
+        with <code>list</code> attribute: <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role">combobox</a></code>
+      </td>
     </tr>
   </tbody>
 </table>

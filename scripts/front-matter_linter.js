@@ -1,19 +1,18 @@
-import fs from "node:fs/promises";
-import os from "node:os";
-import path from "node:path";
+import { lstat, readFile, writeFile } from "node:fs/promises";
+import { cpus } from "node:os";
+import { resolve } from "node:path";
 
 import { eachLimit } from "async";
 import cliProgress from "cli-progress";
+import yargs from "yargs";
+import { hideBin } from "yargs/helpers";
 
 import { fdir } from "fdir";
-
-import caporal from "@caporal/core";
-const { program } = caporal;
 
 import { getAjvValidator, checkFrontMatter } from "./front-matter_utils.js";
 
 async function resolveDirectory(file) {
-  const stats = await fs.lstat(file);
+  const stats = await lstat(file);
   if (stats.isDirectory()) {
     const api = new fdir()
       .withErrors()
@@ -42,7 +41,7 @@ async function lintFrontMatter(filesAndDirectories, options) {
     await Promise.all(filesAndDirectories.map(resolveDirectory))
   ).flat();
 
-  options.config = JSON.parse(await fs.readFile(options.configFile, "utf-8"));
+  options.config = JSON.parse(await readFile(options.configFile, "utf-8"));
 
   options.validator = getAjvValidator(options.config.schema);
 
@@ -51,14 +50,14 @@ async function lintFrontMatter(filesAndDirectories, options) {
 
   const errors = [];
   const fixableErrors = [];
-  await eachLimit(files, os.cpus().length, async (file) => {
+  await eachLimit(files, cpus().length, async (file) => {
     try {
       const [error, fixableError, content] = await checkFrontMatter(
         file,
         options,
       );
       if (content) {
-        fs.writeFile(file, content);
+        await writeFile(file, content);
       }
       error && errors.push(error);
       fixableError && fixableErrors.push(fixableError);
@@ -74,49 +73,52 @@ async function lintFrontMatter(filesAndDirectories, options) {
     let msg = errors.map((error) => `${error}`).join("\n\n");
 
     if (fixableErrors.length) {
-      msg +=
-        "\n\nFollowing fixable errors can be fixed using '--fix true' option\n";
+      msg += "\n\nFollowing fixable errors can be fixed using '--fix' option\n";
       msg += fixableErrors.map((error) => `${error}`).join("\n");
     }
     throw new Error(msg);
   }
 }
 
-function tryOrExit(f) {
-  return async ({ options = {}, ...args }) => {
-    try {
-      await f({ options, ...args });
-    } catch (error) {
-      if (options.verbose || options.v) {
-        console.error(error.stack);
-      }
-      throw error;
-    }
-  };
-}
-
-program
-  .option("--fix", "Save corrected output", {
-    validator: program.BOOLEAN,
-    default: false,
-  })
-  .option("--config-file", "Custom configuration file", {
-    validator: program.STRING,
-    default: "./front-matter-config.json",
-  })
-  .argument("[files...]", "list of files and/or directories to check", {
-    default: ["./files/en-us"],
-  })
-  .action(
-    tryOrExit(({ args, options, logger }) => {
+yargs(hideBin(process.argv))
+  .command(
+    "$0 [files...]",
+    "Lint front matter in markdown files",
+    (yargs) => {
+      return yargs
+        .positional("files", {
+          type: "string",
+          array: true,
+          describe: "List of files and/or directories to check",
+          default: ["./files/en-us"],
+        })
+        .option("fix", {
+          type: "boolean",
+          describe: "Save corrected output",
+          default: false,
+        })
+        .option("config-file", {
+          type: "string",
+          describe: "Custom configuration file",
+          default: "./front-matter-config.json",
+        });
+    },
+    async (argv) => {
       const cwd = process.cwd();
-      const files = (args.files || []).map((f) => path.resolve(cwd, f));
+      const files = (argv.files || []).map((f) => resolve(cwd, f));
+
       if (!files.length) {
-        logger.info("No files to lint.");
+        console.info("No files to lint.");
         return;
       }
-      return lintFrontMatter(files, options);
-    }),
-  );
 
-program.run();
+      // yargs converts dashed flags to camelCase by default.
+      const options = {
+        fix: argv.fix,
+        configFile: argv.configFile,
+      };
+
+      await lintFrontMatter(files, options);
+    },
+  )
+  .help().argv;

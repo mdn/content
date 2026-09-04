@@ -24,6 +24,9 @@ new AnimationEvent(type, options)
     It is case-sensitive and browsers set it to `animationstart`, `animationend`, or `animationiteration`.
 - `options` {{optional_inline}}
   - : An object that, _in addition of the properties defined in {{domxref("Event/Event", "Event()")}}_, has the following properties:
+    - `animation` {{optional_inline}}
+      - : A {{domxref("CSSAnimation")}} containing the animation associated with the event.
+        It defaults to `null`.
     - `animationName` {{optional_inline}}
       - : A string containing the value of the {{cssxref("animation-name")}} CSS property associated with the transition. It defaults to `""`.
     - `elapsedTime` {{optional_inline}}
@@ -31,7 +34,7 @@ new AnimationEvent(type, options)
         For an `animationstart` event, `elapsedTime` is `0.0` unless there was a negative value for {{cssxref("animation-delay")}},
         in which case the event will be fired with `elapsedTime` containing `(-1 * delay)`. It defaults to `0.0`.
     - `pseudoElement` {{optional_inline}}
-      - : A string, starting with `"::"`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Pseudo-elements) the animation runs on. If the animation doesn't run on a pseudo-element but on the element itself, specify an empty string: `""`. It defaults to `""`.
+      - : A string, starting with `"::"`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) the animation runs on. If the animation doesn't run on a pseudo-element but on the element itself, specify an empty string: `""`. It defaults to `""`.
 
 ## Specifications
 
@@ -43,7 +46,7 @@ new AnimationEvent(type, options)
 
 ## See also
 
-- [Using CSS animations](/en-US/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
 - Animation-related CSS properties and at-rules: {{cssxref("animation")}},
   {{cssxref("animation-delay")}}, {{cssxref("animation-direction")}},
   {{cssxref("animation-duration")}}, {{cssxref("animation-fill-mode")}},

@@ -1,5 +1,5 @@
 ---
-title: Firefox 100 for developers
+title: Firefox 100 release notes for developers
 short-title: Firefox 100
 slug: Mozilla/Firefox/Releases/100
 page-type: firefox-release-notes
@@ -16,7 +16,7 @@ No notable changes.
 
 ### CSS
 
-- CSS media features for [`dynamic-range`](/en-US/docs/Web/CSS/@media/dynamic-range) and [`video-dynamic-range`](/en-US/docs/Web/CSS/@media/video-dynamic-range) are now supported. You can now test whether a user agent or an output device supports the combination of brightness, contrast ratio, and color depth by using `dynamic-range` and in the video plane by using `video-dynamic-range` ([Firefox bug 1751217](https://bugzil.la/1751217)).
+- CSS media features for [`dynamic-range`](/en-US/docs/Web/CSS/Reference/At-rules/@media/dynamic-range) and [`video-dynamic-range`](/en-US/docs/Web/CSS/Reference/At-rules/@media/video-dynamic-range) are now supported. You can now test whether a user agent or an output device supports the combination of brightness, contrast ratio, and color depth by using `dynamic-range` and in the video plane by using `video-dynamic-range` ([Firefox bug 1751217](https://bugzil.la/1751217)).
 
 ### JavaScript
 

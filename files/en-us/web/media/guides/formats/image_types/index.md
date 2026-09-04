@@ -79,6 +79,17 @@ The image file formats that are most commonly used on the web are listed below.
       </td>
     </tr>
     <tr>
+      <th scope="row"><a href="#jpeg_xl_image">JPEG XL</a></th>
+      <th scope="row">JPEG XL image</th>
+      <td><code>image/jxl</code></td>
+      <td><code>.jxl</code></td>
+      <td>
+        Supports lossy and lossless compression, progressive decoding, HDR, wide color gamuts, transparency, and animation.
+        Because browser support is not yet universal, provide a fallback using the <code><a href="/en-US/docs/Web/HTML/Reference/Elements/picture">&lt;picture&gt;</a></code> element.<br />
+        <strong>Support:</strong> Safari; Chrome behind a flag; Firefox Nightly.
+      </td>
+    </tr>
+    <tr>
       <th scope="row"><a href="#png_portable_network_graphics">PNG</a></th>
       <th scope="row">Portable Network Graphics</th>
       <td><code>image/png</code></td>
@@ -834,6 +845,60 @@ The JFIF (**J**PEG **F**ile **I**nterchange **F**ormat) specification describes 
   </tbody>
 </table>
 
+### JPEG XL image
+
+JPEG XL (JXL) is a royalty-free raster image format standardized as ISO/IEC 18181.
+It supports lossy and lossless compression, progressive decoding, high bit depths, wide color gamuts, high dynamic range (HDR), transparency, and animation.
+JPEG XL can also losslessly transcode existing JPEG images, allowing the original JPEG file to be reconstructed.
+
+Browser support is not yet universal.
+When using JPEG XL, provide an alternative format such as AVIF, WebP, or JPEG [with the `<picture>` element](#providing_image_fallbacks).
+
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <th scope="row">MIME type</th>
+      <td><code>image/jxl</code></td>
+    </tr>
+    <tr>
+      <th scope="row">File extension(s)</th>
+      <td><code>.jxl</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Specification</th>
+      <td>
+        <a href="https://jpeg.org/jpegxl/workplan.html">ISO/IEC 18181 (JPEG XL)</a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Browser compatibility</th>
+      <td>
+        Safari 17 and later. Chrome 145 and later supports JPEG XL behind the <code>#enable-jxl-image-format</code> flag. Firefox supports it in preview releases. Safari does not support progressive download of JPEG XL files (it can render them after complete download).
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Maximum dimensions</th>
+      <td>1,073,741,823×1,073,741,823 pixels</td>
+    </tr>
+    <tr>
+      <th scope="row">Supported color modes</th>
+      <td>
+        Greyscale and color images, with optional alpha channels, high bit depths, wide color gamuts, and HDR.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Compression</th>
+      <td>Lossy and lossless.</td>
+    </tr>
+    <tr>
+      <th scope="row">Licensing</th>
+      <td>Royalty-free.
+        The format's contributors <a href="https://jpeg.org/items/20190803_press.html">committed to a royalty-free release</a> during standardization, and there are no known royalty-bearing patents.
+        The decoder implementations shipped by browsers are open source with additional patent grants.</td>
+    </tr>
+  </tbody>
+</table>
+
 ### PNG (Portable Network Graphics)
 
 The {{Glossary("PNG")}} (pronounced "**ping**") image format uses lossless compression, while supporting higher color depths than [GIF](#gif_graphics_interchange_format) and being more efficient, as well as featuring full alpha transparency support.
@@ -939,7 +1004,7 @@ SVG files are ideal for diagrams, icons, and other images which can be accuratel
 As such, SVG is popular for user interface elements in modern Web design.
 
 SVG files are text files containing source code that, when interpreted, draws the desired image.
-For instance, this example defines an drawing area with initial size 100 by 100 units, containing a line drawn diagonally through the box:
+For instance, this example defines a drawing area with initial size 100 by 100 units, containing a line drawn diagonally through the box:
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -968,7 +1033,7 @@ It's not generally useful for strictly bitmap or photographic images, although i
     </tr>
     <tr>
       <th scope="row">Specification</th>
-      <td><a href="https://svgwg.org/svg2-draft/">Scalable Vector Graphics (SVG) 2</a></td>
+      <td><a href="https://w3c.github.io/svgwg/svg2-draft/">Scalable Vector Graphics (SVG) 2</a></td>
     </tr>
     <tr>
       <th scope="row">Browser compatibility</th>
@@ -984,7 +1049,7 @@ It's not generally useful for strictly bitmap or photographic images, although i
       <th scope="row">Supported color modes</th>
       <td>
         Colors in SVG are specified using
-        <a href="/en-US/docs/Web/CSS/color_value">CSS color syntax</a>.
+        <a href="/en-US/docs/Web/CSS/Reference/Values/color_value">CSS color syntax</a>.
       </td>
     </tr>
     <tr>
@@ -1383,7 +1448,7 @@ If you do choose a lossy format, such as JPEG or lossy WebP, carefully weigh the
 ## Providing image fallbacks
 
 While the standard HTML {{HTMLElement("img")}} element doesn't support compatibility fallbacks for images, the {{HTMLElement("picture")}} element does.
-`<picture>` is used as a wrapper for a number of {{HTMLElement("source")}} elements, each specifying a version of the image in a different format or under different [media conditions](/en-US/docs/Web/CSS/@media), as well as an `<img>` element which defines where to display the image and the fallback to the default or "most compatible" version.
+`<picture>` is used as a wrapper for a number of {{HTMLElement("source")}} elements, each specifying a version of the image in a different format or under different [media conditions](/en-US/docs/Web/CSS/Reference/At-rules/@media), as well as an `<img>` element which defines where to display the image and the fallback to the default or "most compatible" version.
 
 For example, if you're displaying a diagram best displayed with SVG, but wish to offer a fallback to a PNG or GIF of the diagram, you would do something like this:
 

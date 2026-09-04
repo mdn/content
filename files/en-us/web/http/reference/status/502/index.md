@@ -2,7 +2,7 @@
 title: 502 Bad Gateway
 slug: Web/HTTP/Reference/Status/502
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.502
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#status.502
 sidebar: http
 ---
 

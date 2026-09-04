@@ -58,7 +58,7 @@ The markup for the custom controls now looks as follows:
 ```html hidden live-sample___video-player-styled
   <figcaption>
     &copy; Blender Foundation |
-    <a href="http://mango.blender.org">mango.blender.org</a>
+    <a href="https://mango.blender.org">mango.blender.org</a>
   </figcaption>
 </figure>
 ```
@@ -76,8 +76,8 @@ The resultant video player style used here is rather basic — this is intention
 :root {
   color: #333333;
   font-family:
-    "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", "Lucida", "Arial",
-    "Helvetica", sans-serif;
+    "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", "Lucida",
+    "Helvetica", "Arial", sans-serif;
 }
 a {
   color: #0095dd;

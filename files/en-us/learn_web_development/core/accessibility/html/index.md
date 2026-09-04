@@ -63,7 +63,7 @@ We've already talked about the importance of proper semantics, and why we should
 
 Out there on the web, the truth is that people do some very strange things with HTML markup. Often, misuse of HTML is because of legacy practices that haven't gone away yet, but sometimes it occurs because authors don't know any better. Whatever the case, you should replace bad code with good semantic markup wherever possible, in both static HTML pages and dynamically-generated HTML from [server-side](/en-US/docs/Learn_web_development/Extensions/Server-side) code or [client-side JavaScript frameworks](/en-US/docs/Learn_web_development/Core/Frameworks_libraries) such as React.
 
-Sometimes you are not in a position to get rid of lousy markup — your pages might be dependant on server-side code or web/framework components that you have no control over, or you might have third-party content on your page (such as ad banners).
+Sometimes you are not in a position to get rid of lousy markup — your pages might be dependent on server-side code or web/framework components that you have no control over, or you might have third-party content on your page (such as ad banners).
 
 The goal isn't "all or nothing"; every improvement you can make will help the cause of accessibility.
 
@@ -360,18 +360,18 @@ A basic data table can be written with very simple markup, for example:
     <td>Pronouns</td>
   </tr>
   <tr>
-    <td>Gabriel</td>
-    <td>13</td>
+    <td>Xavier</td>
+    <td>23</td>
     <td>he/him</td>
   </tr>
   <tr>
-    <td>Elva</td>
+    <td>Tina</td>
     <td>8</td>
     <td>she/her</td>
   </tr>
   <tr>
-    <td>Freida</td>
-    <td>5</td>
+    <td>Sam</td>
+    <td>17</td>
     <td>she/her</td>
   </tr>
 </table>
@@ -492,7 +492,7 @@ Links (the [`<a>`](/en-US/docs/Web/HTML/Reference/Elements/a) element with an `h
 
 ### Link styling
 
-By default, links are visually different from other text in both color and [text-decoration](/en-US/docs/Web/CSS/text-decoration), with links being blue and underlined by default, purple and underlined if visited, and with a [focus-ring](/en-US/docs/Web/CSS/:focus) when they receive keyboard focus.
+By default, links are visually different from other text in both color and [text-decoration](/en-US/docs/Web/CSS/Reference/Properties/text-decoration), with links being blue and underlined by default, purple and underlined if visited, and with a [focus-ring](/en-US/docs/Web/CSS/Reference/Selectors/:focus) when they receive keyboard focus.
 
 Color should not be used as the sole method of distinguishing links from non-linking content. Link text color, like all text, has to be significantly different from the background color ([a 4.5:1 contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)). In addition, links should visually be significantly different from non-linking text, with a minimum contrast requirement of 3:1 between link text and surrounding text and between default, visited, and focus/active states and a 4.5:1 contrast between all those state colors and the background color.
 

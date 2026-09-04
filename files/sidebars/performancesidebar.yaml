@@ -44,6 +44,12 @@ l10n:
     Reference: Reference
     PerformanceAPIs: Performance APIs
     RelatedAPIs: Related_APIs
+  fr:
+    Tutorials: Tutoriels
+    Learn_web_performance: Apprendre les performances web
+    Reference: Références
+    PerformanceAPIs: API de performance
+    RelatedAPIs: API associées
   ja:
     Tutorials: チュートリアル
     Learn_web_performance: ウェブパフォーマンスの学習

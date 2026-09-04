@@ -6,55 +6,56 @@ page-type: web-api-instance-property
 browser-compat: api.HTMLInputElement.selectionEnd
 ---
 
-{{ApiRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}
 
-The **`selectionEnd`** property of the {{domxref("HTMLInputElement")}} interface is a number that represents the end index of the selected text. When there is no selection, this returns the offset of the character immediately following the current text input cursor position.
-
-> [!NOTE]
-> According to the [WHATWG forms spec](https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply) `selectionEnd` property applies only to inputs of types text, search, URL, tel, and password. In modern browsers, throws an exception while setting `selectionEnd` property on the rest of input types. Additionally, this property returns `null` while accessing `selectionEnd` property on non-text input elements.
-
-If `selectionEnd` is less than `selectionStart`, then both are
-treated as the value of `selectionEnd`.
+The **`selectionEnd`** property of the {{domxref("HTMLInputElement")}} interface specifies the end position of the current text selection in an {{HTMLElement("input")}} element.
 
 ## Value
 
 A non-negative number.
 
+## Description
+
+The `selectionEnd` property is a number representing the zero-based index of the character immediately following the last selected character in a text `<input>`. The property can be used to retrieve or set the end position.
+
+When nothing is selected, the value of both {{domxref("HTMLInputElement.selectionStart", "selectionStart")}} and `selectionEnd` is the position of the cursor (caret) inside the `<input>` element.
+
+Setting `selectionEnd` to a value less than the current value of `selectionStart` updates both properties to the new value. Values greater than the length of the input's value are treated as the end of the value.
+
+The `selectionEnd` property applies only to inputs of types `text`, `search`, `url`, `tel`, and `password`. On other input types, reading the property returns `null`, and setting it throws an `InvalidStateError` {{domxref("DOMException")}}.
+
+The property value can be retrieved and set without the `<input>` having focus, but the element must have focus for the {{cssxref("::selection")}} pseudo-element to match the selected text.
+
+Setting `selectionEnd` to a new value fires the {{domxref("HTMLInputElement.selectionchange_event", "selectionchange")}} and {{domxref("HTMLInputElement.select_event", "select")}} events.
+
 ## Examples
+
+### Basic usage
+
+This example reports the selected text and its start and end positions. Select some text in the input, and then click the button.
 
 ### HTML
 
 ```html
-<!-- using selectionEnd on non text input element -->
-<label for="color">selectionStart property on type=color</label>
-<input id="color" type="color" />
-
-<!-- using selectionEnd on text input element -->
-<fieldset>
-  <legend>selectionEnd property on type=text</legend>
-  <label for="pin">Input PIN</label>
-  <input type="text" id="pin" value="impossible PIN: 102-12-145" />
-  <button id="pin-btn" type="button">PIN correction</button>
-</fieldset>
+<label for="text-box">Select some text:</label>
+<input id="text-box" type="text" value="The quick brown fox." />
+<button id="show-selection" type="button">Show selection</button>
+<p id="output">No selection reported yet.</p>
 ```
 
 ### JavaScript
 
 ```js
-const colorEnd = document.getElementById("color");
-const text = document.querySelector("#pin");
-const pinBtn = document.querySelector("#pin-btn");
-const validPinChecker = /^\d{3}-\d{2}-\d{3}/g;
-const selectionEnd = text.value.length;
-const selectedText = text.value.substring(text.selectionStart, selectionEnd);
+const textBox = document.querySelector("#text-box");
+const output = document.querySelector("#output");
 
-pinBtn.addEventListener("click", () => {
-  const correctedText = selectedText.replace(validPinChecker, "");
-  text.value = correctedText;
+document.querySelector("#show-selection").addEventListener("click", () => {
+  const start = textBox.selectionStart;
+  const end = textBox.selectionEnd;
+  const selectedText = textBox.value.substring(start, end);
+
+  output.textContent = `You selected "${selectedText}" (start: ${start}, end: ${end}).`;
 });
-
-// open browser console to verify output
-console.log(colorEnd.selectionEnd); // Output : null
 ```
 
 ### Result
@@ -71,6 +72,14 @@ console.log(colorEnd.selectionEnd); // Output : null
 
 ## See also
 
-- {{domxref("HTMLTextAreaElement.selectionEnd")}} property
-- {{domxref("HTMLInputElement.selectionStart")}} property
-- {{domxref("HTMLInputElement.setSelectionRange")}} method
+- {{HTMLElement("input")}}
+- {{domxref("HTMLInputElement")}}
+- {{domxref("HTMLInputElement.selectionStart")}}
+- {{domxref("HTMLInputElement.selectionDirection")}}
+- {{domxref("HTMLInputElement.selectionchange_event", "selectionchange")}} event
+- {{domxref("HTMLInputElement.select()")}}
+- {{domxref("HTMLInputElement.setSelectionRange()")}}
+- {{domxref("HTMLInputElement.setRangeText()")}}
+- {{domxref("HTMLTextAreaElement.selectionEnd")}}
+- {{domxref("Selection")}}
+- {{cssxref("::selection")}} pseudo-element

@@ -9,4 +9,4 @@ In CSS, a **pseudo-element** selector applies styles to parts of your document c
 
 ## See also
 
-- [Pseudo-elements](/en-US/docs/Web/CSS/Pseudo-elements)
+- [Pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements)

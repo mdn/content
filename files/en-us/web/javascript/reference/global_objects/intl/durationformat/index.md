@@ -59,7 +59,7 @@ new Intl.DurationFormat("en", { style: "short" }).format(duration);
 
 // With style set to "narrow" and locale "pt"
 new Intl.DurationFormat("pt", { style: "narrow" }).format(duration);
-// "1h 46min 40s"
+// "1 h 46 min 40 s"
 ```
 
 ## Specifications

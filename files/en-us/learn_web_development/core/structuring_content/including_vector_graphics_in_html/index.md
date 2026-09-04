@@ -38,16 +38,28 @@ On the web, you'll work with two types of images — **raster images**, and **ve
 - **Raster images** are defined using a grid of pixels — a raster image file contains information showing exactly where each pixel is to be placed, and exactly what color it should be. Popular web raster formats include Bitmap (`.bmp`), PNG (`.png`), JPEG (`.jpg`), and GIF (`.gif`).
 - **Vector images** are defined using algorithms — a vector image file contains shape and path definitions that the computer can use to work out what the image should look like when rendered on the screen. The {{glossary("SVG")}} format allows us to create powerful vector graphics for use on the Web.
 
-To give you an idea of the difference between the two, let's look at an example. You can find this example live on our GitHub repo as [vector-versus-raster.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) — it shows two seemingly identical images side by side, of a red star with a black drop shadow. The difference is that the left one is a PNG, and the right one is an SVG image.
+To give you an idea of the difference between the two, let's look at an example:
 
-The difference becomes apparent when you zoom in the page — the PNG image becomes pixelated as you zoom in because it contains information on where each pixel should be (and what color). When it is zoomed, each pixel is increased in size to fill multiple pixels on screen, so the image starts to look blocky. The vector image however continues to look nice and crisp, because no matter what size it is, the algorithms are used to work out the shapes in the image, with the values being scaled as it gets bigger.
+```html live-sample___raster-vector live-sample___raster-vector-zoomed
+<img src="star.png" alt="A raster star" />
+<img src="star.svg" role="img" alt="A vector star" />
+```
 
-![Two star images](raster-vector-default-size.png)
+This shows two seemingly identical red stars with black drop shadows, side by side. The difference is that the left one is a raster (PNG), and the right one is a vector (SVG) image.
 
-![Two star images zoomed in, one crisp and the other blurry](raster-vector-zoomed.png)
+{{embedlivesample("raster-vector", "100%", 120)}}
 
-> [!NOTE]
-> The images above are actually all PNGs — with the left-hand star in each case representing a raster image, and the right-hand star representing a vector image. Again, go to the [vector-versus-raster.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/adding-vector-graphics-to-the-web/vector-versus-raster.html) demo for a real example!
+The difference becomes apparent when you zoom in on the page or increase the size of the images. The following shows how the two stars render at a width of `300px`:
+
+```css hidden live-sample___raster-vector-zoomed
+img {
+  width: 300px;
+}
+```
+
+{{embedlivesample("raster-vector-zoomed", "100%", 350)}}
+
+The PNG image becomes pixelated because it contains information on where each pixel should be (and what color). When it is zoomed, each pixel is increased in size to fill multiple pixels on screen, so the image starts to look blocky. The SVG image however continues to look nice and crisp, because no matter what size it is, the algorithms are used to work out the shapes in the image, with the values being scaled as it gets bigger.
 
 Moreover, vector image files are much lighter than their raster equivalents, because they only need to hold a handful of algorithms, rather than information on every pixel in the image individually.
 
@@ -171,16 +183,14 @@ You can open SVG images in your browser just like webpages. So embedding an SVG 
 Here's a quick review:
 
 ```html
-<iframe src="triangle.svg" width="500" height="500" sandbox>
-  <img src="triangle.png" alt="Triangle with three unequal sides" />
-</iframe>
+<iframe src="triangle.svg" width="500" height="500" sandbox></iframe>
 ```
 
 This is definitely not the best method to choose:
 
 #### Cons
 
-- `iframe`s do have a fallback mechanism, as you can see, but browsers only display the fallback if they lack support for `iframe`s altogether.
+- `<iframe>` elements can include fallback content between their opening and closing tags, but this is only displayed in browsers that don't support `<iframe>`s, not when the image fails to load.
 - Moreover, unless the SVG and your current webpage have the same {{glossary('origin')}}, you cannot use JavaScript on your main webpage to manipulate the SVG.
 
 ## Playing with SVG

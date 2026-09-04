@@ -13,7 +13,7 @@ GitHub is a very important and useful community to get involved in, and Git/GitH
 
 ### Basic GitHub setup
 
-1. First of all, [install Git](https://git-scm.com/downloads) on your machine. This is the underlying version control system software that GitHub works on top of.
+1. First of all, [install Git](https://git-scm.com/downloads/) on your machine. This is the underlying version control system software that GitHub works on top of.
 2. Next, [sign up for a GitHub account](https://github.com/signup). It's simple and easy.
 3. Once you've signed up, log in to [github.com](https://github.com/) with your username and password.
 

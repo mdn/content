@@ -24,8 +24,7 @@ A string representing the rendered text content of an element.
 If the element itself is not [being rendered](https://html.spec.whatwg.org/multipage/rendering.html#being-rendered) (for example, is detached from the document or is hidden from view), the returned value is the same as the {{domxref("Node.textContent")}} property.
 
 > [!WARNING]
-> Setting `innerText` on a node removes _all_ of the node's children
-> and replaces them with a single text node with the given string value.
+> Setting `innerText` on a node removes _all_ of the node's children and replaces them with a single text node with the given string value.
 
 ## Examples
 
@@ -53,9 +52,9 @@ Note how `innerText` is aware of things like {{htmlElement("br")}} elements, and
   <span style="display:none">HIDDEN TEXT</span>
 </p>
 <h3>Result of textContent:</h3>
-<textarea id="textContentOutput" rows="6" cols="30" readonly>…</textarea>
+<textarea id="textContentOutput" rows="18" cols="40" readonly>…</textarea>
 <h3>Result of innerText:</h3>
-<textarea id="innerTextOutput" rows="6" cols="30" readonly>…</textarea>
+<textarea id="innerTextOutput" rows="6" cols="40" readonly>…</textarea>
 ```
 
 ### JavaScript
@@ -71,7 +70,7 @@ innerTextOutput.value = source.innerText;
 
 ### Result
 
-{{EmbedLiveSample("Examples", 700, 450)}}
+{{EmbedLiveSample("Examples", 700, 650)}}
 
 ## Specifications
 
@@ -83,5 +82,6 @@ innerTextOutput.value = source.innerText;
 
 ## See also
 
+- {{domxref("HTMLScriptElement.innerText")}}
 - {{domxref("HTMLElement.outerText")}}
 - {{domxref("Element.innerHTML")}}

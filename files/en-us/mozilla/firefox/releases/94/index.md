@@ -1,5 +1,5 @@
 ---
-title: Firefox 94 for developers
+title: Firefox 94 release notes for developers
 short-title: Firefox 94
 slug: Mozilla/Firefox/Releases/94
 page-type: firefox-release-notes

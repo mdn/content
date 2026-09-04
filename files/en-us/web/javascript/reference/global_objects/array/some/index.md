@@ -7,7 +7,7 @@ browser-compat: javascript.builtins.Array.some
 sidebar: jsref
 ---
 
-The **`some()`** method of {{jsxref("Array")}} instances returns `true` if it finds one element in the array that satisfies the provided testing function. Otherwise, it returns `false`.
+The **`some()`** method of {{jsxref("Array")}} instances returns `true` if it finds an element in the array that satisfies the provided testing function. Otherwise, it returns `false`.
 
 {{InteractiveExample("JavaScript Demo: Array.prototype.some()")}}
 

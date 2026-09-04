@@ -41,7 +41,7 @@ You can also use {{jsxref("Iterator.from()")}} to create an `Iterator` instance 
 
 ### Subclassing Iterator
 
-The following example defines a custom data structure, `Range`, which allows iteration. To make an object iterable, we can provide an [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) method in the form of a generator function:
+The following example defines a custom data structure, `Range`, which allows iteration. To make an object iterable, we can provide a [`[Symbol.iterator]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator) method in the form of a generator function:
 
 ```js
 class Range {

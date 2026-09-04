@@ -42,7 +42,7 @@ In this example, we once again use two `for` loops to draw a grid of rectangles,
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
   for (let i = 0; i < 6; i++) {
     for (let j = 0; j < 6; j++) {
       ctx.fillStyle = `rgb(${Math.floor(255 - 42.5 * i)} ${Math.floor(
@@ -55,7 +55,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"
+<canvas id="my-canvas" width="150" height="150"
   >A 6 by 6 square grid displaying 36 different colors</canvas
 >
 ```
@@ -74,7 +74,7 @@ This example is similar to the one above, but uses the `strokeStyle` property to
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
   for (let i = 0; i < 6; i++) {
     for (let j = 0; j < 6; j++) {
       ctx.strokeStyle = `rgb(0 ${Math.floor(255 - 42.5 * i)} ${Math.floor(
@@ -89,7 +89,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="150" height="150" role="presentation"></canvas>
+<canvas id="my-canvas" width="150" height="150" role="presentation"></canvas>
 ```
 
 ```js hidden
@@ -126,7 +126,7 @@ In this example, we'll draw a background of four different colored squares. On t
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
   // draw background
   ctx.fillStyle = "#ffdd00";
   ctx.fillRect(0, 0, 75, 75);
@@ -151,7 +151,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="150" height="150" role="presentation"></canvas>
+<canvas id="my-canvas" width="150" height="150" role="presentation"></canvas>
 ```
 
 ```js hidden
@@ -166,7 +166,7 @@ In this second example, we do something similar to the one above, but instead of
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
 
   // Draw background
   ctx.fillStyle = "rgb(255 221 0)";
@@ -189,7 +189,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="150" height="150" role="presentation"></canvas>
+<canvas id="my-canvas" width="150" height="150" role="presentation"></canvas>
 ```
 
 ```js hidden
@@ -229,7 +229,7 @@ In the example below, 10 straight lines are drawn with increasing line widths. T
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
   for (let i = 0; i < 10; i++) {
     ctx.lineWidth = 1 + i;
     ctx.beginPath();
@@ -241,7 +241,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="150" height="150" role="presentation"></canvas>
+<canvas id="my-canvas" width="150" height="150" role="presentation"></canvas>
 ```
 
 ```js hidden
@@ -272,7 +272,7 @@ The line on the left uses the default `butt` option. You'll notice that it's dra
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
 
   // Draw guides
   ctx.strokeStyle = "#0099ff";
@@ -297,7 +297,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="150" height="150" role="presentation"></canvas>
+<canvas id="my-canvas" width="150" height="150" role="presentation"></canvas>
 ```
 
 ```js hidden
@@ -323,7 +323,7 @@ The example below draws three different paths, demonstrating each of these three
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
   ctx.lineWidth = 10;
   ["round", "bevel", "miter"].forEach((lineJoin, i) => {
     ctx.lineJoin = lineJoin;
@@ -339,7 +339,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="150" height="150" role="presentation"></canvas>
+<canvas id="my-canvas" width="150" height="150" role="presentation"></canvas>
 ```
 
 ```js hidden
@@ -368,7 +368,7 @@ If you specify a `miterLimit` value below 4.2 in this demo, none of the visible 
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
 
   // Clear canvas
   ctx.clearRect(0, 0, 150, 150);
@@ -400,25 +400,25 @@ function draw() {
 ```
 
 ```html hidden
-<table>
-  <tr>
-    <td>
-      <canvas id="canvas" width="150" height="150" role="presentation"></canvas>
-    </td>
-    <td>
-      Change the <code>miterLimit</code> by entering a new value below and
-      clicking the redraw button.<br /><br />
-      <label for="miterLimit">Miter limit</label>
-      <input type="number" id="miterLimit" size="3" min="1" />
-      <input type="submit" id="redraw" value="Redraw" />
-    </td>
-  </tr>
-</table>
+<canvas id="my-canvas" width="150" height="150" role="presentation"></canvas>
+<div>
+  Change the <code>miterLimit</code> by entering a new value below and clicking
+  the redraw button.<br /><br />
+  <label for="miterLimit">Miter limit</label>
+  <input type="number" id="miterLimit" min="1" />
+  <button id="redraw">Redraw</button>
+</div>
+```
+
+```css hidden
+body {
+  display: flex;
+}
 ```
 
 ```js hidden
 document.getElementById("miterLimit").value = document
-  .getElementById("canvas")
+  .getElementById("my-canvas")
   .getContext("2d").miterLimit;
 draw();
 
@@ -435,11 +435,11 @@ The `setLineDash` method and the `lineDashOffset` property specify the dash patt
 In this example we are creating a marching ants effect. It is an animation technique often found in selection tools of computer graphics programs. It helps the user to distinguish the selection border from the image background by animating the border. In a later part of this tutorial, you can learn how to do this and other [basic animations](/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations).
 
 ```html hidden
-<canvas id="canvas" width="111" height="111" role="presentation"></canvas>
+<canvas id="my-canvas" width="111" height="111" role="presentation"></canvas>
 ```
 
 ```js
-const ctx = document.getElementById("canvas").getContext("2d");
+const ctx = document.getElementById("my-canvas").getContext("2d");
 let offset = 0;
 
 function draw() {
@@ -500,7 +500,7 @@ In this example, we'll create two different gradients. As you can see here, both
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
 
   // Create gradients
   const linGrad = ctx.createLinearGradient(0, 0, 0, 150);
@@ -524,7 +524,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="150" height="150" role="presentation"></canvas>
+<canvas id="my-canvas" width="150" height="150" role="presentation"></canvas>
 ```
 
 ```js hidden
@@ -543,7 +543,7 @@ In this example, we'll define four different radial gradients. Because we have c
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
 
   // Create gradients
   const radGrad = ctx.createRadialGradient(45, 45, 10, 52, 50, 30);
@@ -579,7 +579,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="150" height="150" role="presentation"></canvas>
+<canvas id="my-canvas" width="150" height="150" role="presentation"></canvas>
 ```
 
 ```js hidden
@@ -598,7 +598,7 @@ In this example, we'll define two different conic gradients. A conic gradient di
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
 
   // Create gradients
   const conicGrad1 = ctx.createConicGradient(2, 62, 75);
@@ -625,7 +625,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="250" height="150" role="presentation"
+<canvas id="my-canvas" width="250" height="150" role="presentation"
   >A conic gradient</canvas
 >
 ```
@@ -645,7 +645,7 @@ The second gradient is also positioned at the center of the second rectangle. Th
 In one of the examples on the previous page, we used a series of loops to create a pattern of images. There is, however, a much simpler method: the `createPattern()` method.
 
 - {{domxref("CanvasRenderingContext2D.createPattern", "createPattern(image, type)")}}
-  - : Creates and returns a new canvas pattern object. `image` is the source of the image (that is, an {{domxref("HTMLImageElement")}}, a {{domxref("SVGImageElement")}}, another {{domxref("HTMLCanvasElement")}} or a {{domxref("OffscreenCanvas")}}, an {{domxref("HTMLVideoElement")}} or a {{domxref("VideoFrame")}}, or an {{domxref("ImageBitmap")}}). `type` is a string indicating how to use the image.
+  - : Creates and returns a new canvas pattern object. `image` is the source of the image (that is, an {{domxref("HTMLImageElement")}}, a {{domxref("SVGImageElement")}}, another {{domxref("HTMLCanvasElement")}} or an {{domxref("OffscreenCanvas")}}, an {{domxref("HTMLVideoElement")}} or a {{domxref("VideoFrame")}}, or an {{domxref("ImageBitmap")}}). `type` is a string indicating how to use the image.
 
 The type specifies how to use the image in order to create the pattern, and must be one of the following string values:
 
@@ -675,7 +675,7 @@ In this last example, we'll create a pattern to assign to the `fillStyle` proper
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
 
   // create new image object to use as pattern
   const img = new Image();
@@ -690,7 +690,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="150" height="150" role="presentation"></canvas>
+<canvas id="my-canvas" width="150" height="150" role="presentation"></canvas>
 ```
 
 ```js hidden
@@ -727,7 +727,7 @@ This example draws a text string with a shadowing effect.
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
 
   ctx.shadowOffsetX = 2;
   ctx.shadowOffsetY = 2;
@@ -741,7 +741,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="150" height="80" role="presentation"></canvas>
+<canvas id="my-canvas" width="150" height="80" role="presentation"></canvas>
 ```
 
 ```js hidden
@@ -767,7 +767,7 @@ In this example we are using the `evenodd` rule.
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
   ctx.beginPath();
   ctx.arc(50, 50, 30, 0, Math.PI * 2, true);
   ctx.arc(50, 50, 15, 0, Math.PI * 2, true);
@@ -776,7 +776,7 @@ function draw() {
 ```
 
 ```html hidden
-<canvas id="canvas" width="100" height="100" role="presentation"></canvas>
+<canvas id="my-canvas" width="100" height="100" role="presentation"></canvas>
 ```
 
 ```js hidden

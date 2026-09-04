@@ -272,7 +272,7 @@ For numeric fields, including [`<input type="number">`](/en-US/docs/Web/HTML/Ref
 If the field contains a value outside this range, it will be invalid.
 
 Let's look at another example.
-Create a new copy of the [basic starter file](#basic_starter_file) file (save it in the same directory as `index2.html`).
+Create a new copy of the [basic starter file](#basic_starter_file) and save it in the same directory as `index2.html`.
 
 Now delete the contents of the `<body>` element, and replace it with the following:
 
@@ -546,7 +546,7 @@ form.addEventListener("submit", (e) => {
 #### Extending built-in form validation
 
 The previous example showed how you can add a customized message for a particular type of error (`validity.typeMismatch`).
-It is also possible to use all of the built in form validation, and then add to it using `setCustomValidity()`.
+It is also possible to use all of the built-in form validation, and then add to it using `setCustomValidity()`.
 
 Here we demonstrate how you can extend the built in [`<input type="email">`](/en-US/docs/Web/HTML/Reference/Elements/input/email) validation to only accept addresses with the `@example.com` domain.
 We start with the HTML {{htmlelement("form")}} below.

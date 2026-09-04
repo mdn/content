@@ -32,7 +32,7 @@ The API provides synchronous interfaces for encoding and decoding, and also [str
 - {{DOMxRef("TextEncoder")}}
   - : An encoder to convert a JavaScript string into an array of bytes representing the UTF-8 encoding of the string.
 - {{DOMxRef("TextEncoderStream")}}
-  - : An encoder to convert a stream of JavaScript strings into an stream of bytes representing the UTF-8 encoding of the strings.
+  - : An encoder to convert a stream of JavaScript strings into a stream of bytes representing the UTF-8 encoding of the strings.
 
 ## Specifications
 

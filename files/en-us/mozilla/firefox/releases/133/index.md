@@ -1,5 +1,5 @@
 ---
-title: Firefox 133 for developers
+title: Firefox 133 release notes for developers
 short-title: Firefox 133
 slug: Mozilla/Firefox/Releases/133
 page-type: firefox-release-notes
@@ -12,7 +12,7 @@ This article provides information about the changes in Firefox 133 that affect d
 
 ### HTML
 
-- The [`viewport <meta>` tag](/en-US/docs/Web/HTML/Guides/Viewport_meta_element) now supports the [`interactive-widget`](/en-US/docs/Web/HTML/Guides/Viewport_meta_element#the_effect_of_interactive_ui_widgets) attribute, this influences the size of the viewport when common UI widgets, such as virtual keyboards, are added to the screen. ([Firefox bug 1831649](https://bugzil.la/1831649) and [Firefox bug 1920755](https://bugzil.la/1920755)).
+- The [`viewport <meta>` tag](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport) now supports the [`interactive-widget`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport#the_effect_of_interactive_ui_widgets) attribute, this influences the size of the viewport when common UI widgets, such as virtual keyboards, are added to the screen. ([Firefox bug 1831649](https://bugzil.la/1831649) and [Firefox bug 1920755](https://bugzil.la/1920755)).
 
 ### CSS
 
@@ -79,4 +79,4 @@ These features are newly shipped in Firefox 133 but are disabled by default. To 
 
 - **:has-slotted CSS pseudo-class:** `layout.css.has-slotted-selector.enabled`.
 
-  The {{CSSXRef(":has-slotted")}} [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) is used to style elements in {{HTMLElement("template")}} that have content added to a {{HTMLElement("slot")}} element when rendering a [web component](/en-US/docs/Web/API/Web_components). ([Firefox bug 1921747](https://bugzil.la/1921747).)
+  The {{CSSXRef(":has-slotted")}} [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) is used to style elements in {{HTMLElement("template")}} that have content added to a {{HTMLElement("slot")}} element when rendering a [web component](/en-US/docs/Web/API/Web_components). ([Firefox bug 1921747](https://bugzil.la/1921747).)

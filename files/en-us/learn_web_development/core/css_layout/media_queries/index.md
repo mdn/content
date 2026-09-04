@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_Design", "Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design", "Learn_web_development/Core/CSS_layout")}}
 
 The **CSS Media Query** gives you a way to apply CSS only when the browser and device environment matches a rule that you specify, for example "viewport is wider than 480 pixels". Media queries are a key part of [responsive web design](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design), as they allow you to create different layouts depending on the size of the viewport, but they can also be used to detect other things about the environment your site is running on, for example whether the user is using a touchscreen rather than a mouse.
 
@@ -144,7 +144,7 @@ Try narrowing the window until the above text turns blue.
 
 In practice, using minimum or maximum values is much more useful for responsive design so you will rarely see `width` or `height` used alone.
 
-There are many other media features that you can test for, although some of the newer features introduced in Levels 4 and 5 of the media queries specification have limited browser support. Each feature is documented on MDN along with browser support information, and you can find a complete list at [Using Media Queries: Syntax](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries#syntax).
+There are many other media features that you can test for, although some of the newer features introduced in Levels 4 and 5 of the media queries specification have limited browser support. Each feature is documented on MDN along with browser support information, and you can find a complete list at [Using Media Queries: Syntax](/en-US/docs/Web/CSS/Guides/Media_queries/Using#syntax).
 
 #### Orientation
 
@@ -349,7 +349,7 @@ First of all, copy the HTML code from the block below into a text editor, save i
 ```html live-sample___walkthrough
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width" />
   <title>Media Queries: a simple mobile first design, step 1</title>
   <style>
     /* Add styles here */
@@ -451,8 +451,8 @@ body {
   width: 90%;
   margin: 2em auto;
   font:
-    1em/1.3 Arial,
-    Helvetica,
+    1em/1.3 "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -560,10 +560,10 @@ That's the example finished. If you look at the result at different widths you c
 If you look at the HTML source in the above example, you'll see the following element included in the head of the document:
 
 ```html
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="viewport" content="width=device-width" />
 ```
 
-This is the [`viewport`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport) meta tag — it exists as a way to control how mobile browsers render content, making sure they respect your media queries. The one above tells mobile browsers "don't render the content with a 980-pixel viewport — render it using the real device width instead, and set a default initial scale level for better consistency." The media queries will then kick in as expected.
+This is the [`viewport`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport) meta tag — it exists as a way to control how mobile browsers render content, making sure they respect your media queries. The one above tells mobile browsers "don't render the content with a 980-pixel viewport — render it using the real device width instead." The media queries will then kick in as expected.
 
 For more information on why this is needed, see [The viewport meta tag](/en-US/docs/Learn_web_development/Core/CSS_layout/Responsive_Design#the_viewport_meta_tag) section in the previous article.
 
@@ -631,6 +631,6 @@ You could use the starting point that we have created to test out more media que
 
 You could also experiment with adding different components and seeing whether the addition of a media query, or using a layout method like flexbox or grid is the most appropriate way to make the components responsive. Very often there is no right or wrong way — you should experiment and see which works best for your design and content.
 
-OK, we're nearly at the end of this module. In the next article, we'll give you some tests that you can use to check how well you've understood and retained all the responsive web design and media queries information provided in the previous couple of articles.
+OK, we're nearly at the end of this module. In the [next article](/en-US/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design), we'll give you some tests that you can use to check how well you've understood and retained all the responsive web design and media queries information provided in the previous couple of articles.
 
-{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design", "Learn_web_development/Core/CSS_layout")}}
+{{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Responsive_Design", "Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design", "Learn_web_development/Core/CSS_layout")}}

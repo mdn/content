@@ -1,7 +1,9 @@
 ---
-title: br_if
+title: "br_if: Wasm text instruction"
+short-title: br_if
 slug: WebAssembly/Reference/Control_flow/br_if
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.br_if
 sidebar: webassemblysidebar
 ---
 
@@ -66,3 +68,11 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 | Instruction | Binary opcode |
 | ----------- | ------------- |
 | `br_if`     | `0x0d`        |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

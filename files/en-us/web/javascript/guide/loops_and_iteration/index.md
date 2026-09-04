@@ -74,7 +74,7 @@ element that allows multiple selections).
     >Choose some music types, then click the button below:</label
   >
   <select id="musicTypes" name="musicTypes" multiple>
-    <option selected>R&B</option>
+    <option selected>R&amp;B</option>
     <option>Jazz</option>
     <option>Blues</option>
     <option>New Age</option>
@@ -110,7 +110,7 @@ btn.addEventListener("click", () => {
 
 ## do...while statement
 
-The {{jsxref("statements/do...while", "do...while")}} statement repeats until a
+The {{jsxref("Statements/do...while", "do...while")}} statement repeats until a
 specified condition evaluates to false.
 
 A `do...while` statement looks as follows:

@@ -22,6 +22,8 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
     These may be shared with other DOM subtrees that share the same parent {{domxref("Document")}} node, and the document itself.
 - {{domxref("ShadowRoot.clonable")}} {{ReadOnlyInline}}
   - : A boolean that indicates whether the shadow root is clonable.
+- {{domxref("ShadowRoot.customElementRegistry")}} {{ReadOnlyInline}}
+  - : Returns the {{domxref("CustomElementRegistry")}} object associated with this shadow root, or `null` if one has not been set.
 - {{domxref("ShadowRoot.delegatesFocus")}} {{ReadOnlyInline}}
   - : A boolean that indicates whether the shadow root delegates focus if a non-focusable node is selected.
 - {{DOMxRef("ShadowRoot.fullscreenElement")}} {{ReadOnlyInline}}
@@ -38,6 +40,8 @@ You can retrieve a reference to an element's shadow root using its {{domxref("El
 - {{DOMxRef("ShadowRoot.pointerLockElement")}} {{ReadOnlyInline}}
   - : Returns the {{DOMxRef('Element')}} set as the target for mouse events while the pointer is locked.
     `null` if lock is pending, pointer is unlocked, or if the target is in another tree.
+- `ShadowRoot.referenceTarget` {{Experimental_Inline}} {{non-standard_inline}}
+  - : A nullable string value that indicates the effective target of any element reference made against the shadow host from outside the host element. The value should be the ID of an element inside the shadow DOM. If set, target references to the host element from outside the shadow DOM will cause the referenced target element to become the effective target of the reference to the host element.
 - {{DOMxRef("ShadowRoot.serializable")}} {{ReadOnlyInline}}
   - : A boolean that indicates whether the shadow root is serializable.
     A serializable shadow root inside an element will be serialized by {{DOMxRef('Element.getHTML()')}} or {{DOMxRef('ShadowRoot.getHTML()')}} when its [`options.serializableShadowRoots`](/en-US/docs/Web/API/Element/getHTML#serializableshadowroots) parameter is set `true`.

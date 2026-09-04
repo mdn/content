@@ -9,7 +9,7 @@ browser-compat: api.CSS.registerProperty_static
 {{APIRef("CSSOM")}}
 
 The **`CSS.registerProperty()`** static method registers
-[custom properties](/en-US/docs/Web/CSS/--*), allowing for property type checking, default
+[custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*), allowing for property type checking, default
 values, and properties that do or do not inherit their value.
 
 Registering a custom property allows you to tell the browser how the custom property
@@ -28,10 +28,11 @@ CSS.registerProperty(propertyDefinition)
   - : An object containing the following properties:
     - `name`
       - : A string representing the
-        name of the property being defined.
+        {{cssxref("dashed-ident")}} name of the property being defined.
     - `syntax` {{optional_inline}}
       - : A string representing
         the expected syntax of the defined property. Defaults to `"*"`.
+        See the {{cssxref("@property/syntax", "syntax")}}.
     - `inherits`
       - : A boolean value defining whether the defined property should be inherited
         (`true`), or not (`false`). Defaults to `false`.
@@ -56,7 +57,7 @@ CSS.registerProperty(propertyDefinition)
 
 ## Examples
 
-The following will register a [custom property](/en-US/docs/Web/CSS/--*),
+The following will register a [custom property](/en-US/docs/Web/CSS/Reference/Properties/--*),
 `--my-color`, using `registerProperty()`, as a color, give it a
 default value, and have it not inherit its value:
 
@@ -71,8 +72,8 @@ window.CSS.registerProperty({
 
 In this example, the custom property `--my-color` has been registered using
 the syntax `<color>`. We can now use that property to transition a
-gradient on hover or focus. Notice that with the registered property the transition
-works, but that it doesn't with the unregistered property!
+gradient on hover or focus. Notice that with the registered property, the transition
+works, but it doesn't work with the unregistered property!
 
 ```css
 .registered {

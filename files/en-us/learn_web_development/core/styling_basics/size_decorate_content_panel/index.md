@@ -167,7 +167,7 @@ Follow the steps below to complete the project, sizing the content pane appropri
 2. Center the `pane` `<section>` horizontally on the page using `auto` margins.
 3. Set the `<h1>` and the `<div>` with a class of `controls` to both be `100px` high. Set the `<div>` with a class of `content` to be `100%` of the `<body>` height, minus the height of the `<h1>` and the `<div class="controls">`. This should give you a UI that always stretches to be the height of the viewport, with a flexible content container and a fixed height heading and button bar.
 4. The buttons look a bit thin and hard to read. Give them a height of `100%` of their container, and a font size of `1.2em`.
-5. Give the `pane` `<section>` and the `content` `<div>` vertical padding of `0` on both sides and horizontal padding of `20px` on both sides.
+5. Give the `pane` `<section>` and the `content` `<div>` top/bottom padding of `0` on both sides and left/right padding of `20px` on both sides.
 
 ### Image placement
 
@@ -176,7 +176,7 @@ Follow the steps below to complete the project, sizing the content pane appropri
 
 ### Decoration
 
-1. Apply a color gradient to the `pane` `<section>` that changes smoothly from `#9fb4c7` at the top to `#7f7caf` at the bottom.
+1. Apply a linear gradient to the `pane` `<section>` that changes smoothly from `#9fb4c7` at the top to `#7f7caf` at the bottom.
 2. Give the images a `1px solid` border and the `content` `<div>` a `2px solid` border. Give the borders a color of `#28587b`.
 3. Give the `content` `<div>` a background color of `#eeeeff`, and a background image of `https://mdn.github.io/shared-assets/images/examples/big-star.png`. The background image should not repeat, should be sized at `40px` by `40px`, and should be placed `5px` from the top of the container and `15px` from the right.
 4. Give the buttons a text color of `white` and a background color of `rgb(40 88 123 / 0.8)`. On hover or focus, the buttons should change to have a fully opaque version of the same background color.
@@ -224,11 +224,11 @@ body {
 }
 
 h1 {
-  /* Responsive heading sizing, equal to vw value plus em value */
+  /* Solution: Responsive heading sizing, equal to vw value plus em value */
   font-size: calc(2vw + 1em);
 }
 
-/* Add book emoji as generated content, with spacing between
+/* Solution: Add book emoji as generated content, with 20px spacing between
 it and the heading content */
 h1::before {
   content: "📖";
@@ -236,7 +236,7 @@ h1::before {
 }
 
 h2 {
-  /* Responsive heading sizing, equal to vw value plus em value */
+  /* Solution: Responsive heading sizing, equal to vw value plus em value */
   font-size: calc(1.5vw + 0.75em);
 }
 
@@ -249,29 +249,19 @@ a:focus {
   text-decoration: none;
 }
 
-/* Styling the pane */
-
 .pane {
   height: 100%;
-  /* clamp() function allows you to set a percentage width plus a maximum and minimum absolute width */
+  /* Solution: Set container width percentage and min
+  and max width with one declaration, using the clamp()
+  function  */
   width: clamp(480px, 60%, 1000px);
-  /* Center using auto margins */
+  /* Solution: Center container using auto margins */
   margin: 0 auto;
-  /* Set vertical padding of 0 on both sides and horizontal padding
-  of 20px on both sides */
+  /* Solution: Set container top/bottom padding of 0 on both sides
+  and left/right padding of 20px on both sides */
   padding: 0 20px;
-  /* Apply linear gradient from top to bottom */
+  /* Solution: Apply linear gradient from top to bottom */
   background: linear-gradient(to bottom, #9fb4c7, #7f7caf);
-}
-
-img {
-  /* Set 90% maximum width on the images */
-  max-width: 90%;
-  /* Center using auto margins */
-  margin: 0 auto;
-  display: block;
-  /* Set border on the images */
-  border: 1px solid #28587b;
 }
 
 h1,
@@ -280,24 +270,36 @@ h1,
   display: flex;
   justify-content: center;
   align-items: center;
-  /* Set the h1 and controls div to each be 100px high */
+  /* Solution: Set the h1 and controls div to each be 100px high */
   height: 100px;
 }
 
 .content {
-  /* Set background color and image on the content div, and size the image */
+  /* Solution: Set background color and image on the content div,
+  and size the image */
   background: url("https://mdn.github.io/shared-assets/images/examples/big-star.png")
     no-repeat top 5px right 15px / 40px #eeeeff;
-  /* Set vertical padding of 0 on both sides and horizontal padding
-  of 20px on both sides */
+  /* Solution: Set content top/bottom padding of 0 on both sides and
+  left/right padding of 20px on both sides */
   padding: 0 20px;
-  /* Set the content div to be 100% minus the h1 and
+  /* Solution: Set the content div to be 100% high minus the h1 and
   controls div combined height (200px) */
   height: calc(100% - 200px);
-  /* Set border on the content div */
+  /* Solution: Set border on the content div */
   border: 2px solid #28587b;
-  /* Stop the content from overflowing its container; make it scroll instead */
+  /* Solution: Stop the content from overflowing its container;
+  make it scroll instead */
   overflow: auto;
+}
+
+img {
+  /* Solution: Set 90% maximum width on the images */
+  max-width: 90%;
+  /* Solution: Center using auto margins */
+  margin: 0 auto;
+  display: block;
+  /* Solution: Set border on the images */
+  border: 1px solid #28587b;
 }
 
 .controls {
@@ -308,23 +310,23 @@ h1,
 
 button {
   flex: 1;
-  /* Set button height to 100% and font size to 1.2em */
+  /* Solution: Set button height to 100% and font size to 1.2em */
   height: 100%;
   font-size: 1.2em;
-  /* Set white text color on the buttons */
+  /* Solution: Set white text color on the buttons */
   color: white;
-  /* Set background color on the buttons */
+  /* Solution: Set background color on the buttons */
   background-color: rgb(40 88 123 / 0.8);
 }
 
-/* Set fully-opaque background color on the
+/* Solution: Set fully-opaque background color on the
 buttons on hover and focus */
 button:hover,
 button:focus {
   background-color: rgb(40 88 123 / 1);
 }
 
-/* Set border radius on content div and buttons */
+/* Solution: Set border radius on content div and buttons */
 .content,
 button {
   border-radius: 10px;

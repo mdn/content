@@ -94,4 +94,4 @@ For additional examples see [CSS Font Loading API > Examples](/en-US/docs/Web/AP
 
 ## See also
 
-- [@font-face](/en-US/docs/Web/CSS/@font-face)
+- {{cssxref("@font-face")}}

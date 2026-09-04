@@ -24,15 +24,15 @@ You can check out the [full demo live](https://mdn.github.io/webaudio-examples/i
 
 The Web Audio API now comes with an {{domxref("IIRFilterNode")}} interface. But what is this and how does it differ from the {{domxref("BiquadFilterNode")}} we have already?
 
-An IIR filter is a **infinite impulse response filter**. It's one of two primary types of filters used in audio and digital signal processing. The other type is FIR — **finite impulse response filter**. There's a really good overview to [IIF filters and FIR filters here](https://dspguru.com/dsp/faqs/iir/basics/).
+An IIR filter is an **infinite impulse response filter**. It's one of two primary types of filters used in audio and digital signal processing. The other type is FIR — **finite impulse response filter**. There's a really good overview to [IIF filters and FIR filters here](https://dspguru.com/dsp/faqs/iir/basics/).
 
 A [biquad filter](https://www.mathworks.com/help/dsphdl/ref/biquadfilter.html) is actually a _specific type_ of infinite impulse response filter. It's a commonly-used type and we already have it as a node in the Web Audio API. If you choose this node the hard work is done for you. For instance, if you want to filter lower frequencies from your sound, you can set the [type](/en-US/docs/Web/API/BiquadFilterNode/type) to `highpass` and then set which frequency to filter from (or cut off).
 
 When you are using an {{domxref("IIRFilterNode")}} instead of a {{domxref("BiquadFilterNode")}} you are creating the filter yourself, rather than just choosing a pre-programmed type. So you can create a highpass filter, or a lowpass filter, or a more bespoke one. And this is where the IIR filter node is useful — you can create your own if none of the already available settings is right for what you want. As well as this, if your audio graph needed a highpass and a bandpass filter within it, you could just use one IIR filter node in place of the two biquad filter nodes you would otherwise need for this.
 
-With the IIR filter node it's up to you to set what `feedforward` and `feedback` values the filter needs — this determines the characteristics of the filter. The downside is that this involves some complex maths.
+With the IIR filter node it's up to you to set what `feedforward` and `feedback` values the filter needs — this determines the characteristics of the filter. The downside is that this involves some complex math.
 
-If you are looking to learn more there's some [information about the maths behind IIR filters here](https://www.staff.ncl.ac.uk/oliver.hinton/eee305/Chapter5.pdf). This enters the realms of signal processing theory — don't worry if you look at it and feel like it's not for you.
+If you are looking to learn more there's some [information about the math behind IIR filters here](https://www.staff.ncl.ac.uk/oliver.hinton/eee305/Chapter5.pdf). This enters the realms of signal processing theory — don't worry if you look at it and feel like it's not for you.
 
 If you want to play with the IIR filter node and need some values to help along the way, there's [a table of already calculated values here](https://www.dspguide.com/CH20.PDF); on pages 4 & 5 of the linked PDF the `an` values refer to the `feedForward` values and the `bn` values refer to the `feedback`. [musicdsp.org](https://www.musicdsp.org/en/latest/) is also a great resource if you want to read more about different filters and how they are implemented digitally.
 
@@ -51,7 +51,7 @@ const feedForward = [0.00020298, 0.0004059599, 0.00020298];
 Our `feedback` values cannot start with zero, otherwise on the first pass nothing would be sent back:
 
 ```js
-const feedBackward = [1.0126964558, -1.9991880801, 0.9873035442];
+const feedBack = [1.0126964558, -1.9991880801, 0.9873035442];
 ```
 
 > [!NOTE]
@@ -110,7 +110,7 @@ The toggle that turns the IIR filter on and off is set up in the similar way. Fi
   role="switch"
   data-filteron="false"
   aria-pressed="false"
-  aria-describedby="label"
+  aria-labelledby="label"
   disabled></button>
 ```
 

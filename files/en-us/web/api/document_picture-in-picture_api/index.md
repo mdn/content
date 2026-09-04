@@ -2,12 +2,10 @@
 title: Document Picture-in-Picture API
 slug: Web/API/Document_Picture-in-Picture_API
 page-type: web-api-overview
-status:
-  - experimental
 browser-compat: api.Window.documentPictureInPicture
 ---
 
-{{SeeCompatTable}}{{DefaultAPISidebar("Document Picture-in-Picture API")}}{{securecontext_header}}
+{{DefaultAPISidebar("Document Picture-in-Picture API")}}{{securecontext_header}}
 
 The **Document Picture-in-Picture API** makes it possible to open an always-on-top window that can be populated with arbitrary HTML content — for example a video with custom controls or a set of streams showing the participants of a video conference call. It extends the earlier [Picture-in-Picture API for `<video>`](/en-US/docs/Web/API/Picture-in-Picture_API), which specifically enables an HTML {{htmlelement("video")}} element to be put into an always-on-top window.
 
@@ -25,7 +23,7 @@ However, this API has been found to be somewhat limiting — you can only put a 
 - An always-on-top custom video player showing one or multiple videos with custom controls and styling.
 - A video conferencing system that allows the user to always see the other participant's streams, plus controls for presenting content, muting, ending calls, etc.
 - Always-visible productivity tools such as timers, notes, to-do lists, messenger tools, etc.
-- A separate window in which to keep additional content while the main app window is kept free of clutter. For example, you might have a action or roleplaying game running where you want to show the game controls, instructions, or lore in an additional window, keeping the main window free for displaying the game locations and map.
+- A separate window in which to keep additional content while the main app window is kept free of clutter. For example, you might have an action or roleplaying game running where you want to show the game controls, instructions, or lore in an additional window, keeping the main window free for displaying the game locations and map.
 
 ### How does it work?
 
@@ -43,6 +41,11 @@ Apart from that, you can manipulate the Picture-in-Picture window's `Window` ins
 
 See [Using the Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Picture-in-Picture_API/Using) for a detailed usage guide.
 
+> [!NOTE]
+> You can run code when the always-on-top window is programmatically opened, using the {{domxref("DocumentPictureInPicture.enter_event", "enter")}} event. However, this event isn't fired when the browser itself (rather than your code) triggers moving content into the always-on-top window. This can occur, for example, due to the content being occluded, by the displayed tab being switched, or by the user selecting a "picture-in-picture" option from some relevant content's context menu or the browser chrome.
+>
+> To run code in response to such actions, set up a media session action handler using {{domxref("MediaSession.setActionHandler()")}} with a `type` of `enterpictureinpicture`.
+
 ## Interfaces
 
 - {{domxref("DocumentPictureInPicture")}}
@@ -58,7 +61,7 @@ See [Using the Document Picture-in-Picture API](/en-US/docs/Web/API/Document_Pic
 ## CSS additions
 
 - {{cssxref("@media/display-mode", "display-mode")}}, the `picture-in-picture` value
-  - : A [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/@media#media_features) value that allows developers to apply CSS to a document based on whether it is being displayed in Picture-in-Picture mode.
+  - : A [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features) value that allows developers to apply CSS to a document based on whether it is being displayed in Picture-in-Picture mode.
 
 ## Examples
 
@@ -71,3 +74,7 @@ See [Document Picture-in-Picture API Example](https://mdn.github.io/dom-examples
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Picture-in-Picture API](/en-US/docs/Web/API/Picture-in-Picture_API)

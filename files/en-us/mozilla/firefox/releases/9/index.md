@@ -1,5 +1,5 @@
 ---
-title: Firefox 9 for developers
+title: Firefox 9 release notes for developers
 short-title: Firefox 9
 slug: Mozilla/Firefox/Releases/9
 page-type: firefox-release-notes
@@ -9,6 +9,11 @@ sidebar: firefox
 Firefox 9 was released for Windows on December 20, 2011. Mac and Linux version 9.0.1, which fixed a crashing bug discovered at the last minute, were released on December 21, 2011.
 
 ## Changes for web developers
+
+### Developer tools
+
+- The web console now supports basic [string substitutions](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#string-substitutions) in its logging methods.
+- You can now [create visually nested blocks of output](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#using-groups-in-the-console) in the web console, to help make it easier to read.
 
 ### HTML
 
@@ -75,11 +80,6 @@ _No change._
 - Attempts by a server to use the `301 Moved Permanently` or `307 Temporary Redirect` response codes to redirect the user to a `javascript:` URI now result in a "bad connection" error instead of actually redirecting. This prevents certain types of cross-site scripting attacks.
 - Content served with an empty {{ HTTPHeader("Content-Disposition") }} were previously treated as if the {{ HTTPHeader("Content-Disposition") }} were "attachment"; this didn't always work as expected. These are now handled as if the {{ HTTPHeader("Content-Disposition") }} were "inline".
 - The default maximum size of an item in the disk cache has been increased to 50 MB; previously, only items up to 5 MB were cached.
-
-### Developer tools
-
-- The web console now supports basic [string substitutions](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#string-substitutions) in its logging methods.
-- You can now [create visually nested blocks of output](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#using-groups-in-the-console) in the web console, to help make it easier to read.
 
 ## Changes for Mozilla and add-on developers
 

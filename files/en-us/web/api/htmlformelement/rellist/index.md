@@ -8,15 +8,13 @@ browser-compat: api.HTMLFormElement.relList
 
 {{APIRef("HTML DOM")}}
 
-The **`relList`** read-only property of the {{domxref("HTMLFormElement")}} interface reflects the [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel) attribute. It is a live {{domxref("DOMTokenList")}} containing the set of link types indicating the relationship between the resource represented by the {{HTMLElement("form")}} element and the current document.
-
-The property itself is read-only, meaning you can not reassign the property with another {{domxref("DOMTokenList")}}, but the content of the returned list can be changed.
-
-To retrieve a string containing the values as space-separated tokens, use {{domxref("HTMLFormElement.rel")}}. The `rel` property can also be used to set the `rel` attribute value.
+The read-only **`relList`** property of the {{domxref("HTMLFormElement")}} returns a live {{domxref("DOMTokenList")}} object containing the set of link types indicating the relationship between the resource represented by the {{HTMLElement("form")}} element and the current document. It reflects the {{HTMLElement("form")}} element's [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel) content attribute.
 
 ## Value
 
-A live {{domxref("DOMTokenList")}} of strings.
+A live {{domxref("DOMTokenList")}} object.
+
+Although the `relList` property itself is read-only in the sense that you can't replace the `DOMTokenList` object, you can still assign to the `relList` property directly, which is equivalent to assigning to its {{domxref("DOMTokenList/value", "value")}} property. You can also modify the `DOMTokenList` object using the {{domxref("DOMTokenList/add", "add()")}}, {{domxref("DOMTokenList/remove", "remove()")}}, {{domxref("DOMTokenList/replace", "replace()")}}, and {{domxref("DOMTokenList/toggle", "toggle()")}} methods.
 
 ## Examples
 

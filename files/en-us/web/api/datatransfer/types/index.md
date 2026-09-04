@@ -8,7 +8,9 @@ browser-compat: api.DataTransfer.types
 
 {{APIRef("HTML Drag and Drop API")}}
 
-The **`DataTransfer.types`** read-only property returns the available types that exist in the {{domxref("DataTransfer.items","items")}}.
+The **`types`** read-only property of the {{domxref("DataTransfer")}} interface returns the available types that exist in the {{domxref("DataTransfer.items","items")}}.
+
+During a drag operation, this property can be read in any drag event handler, even when the drag data store is in [protected mode](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#protected_mode). The available formats remain accessible, but the data itself can only be read in the handlers for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} and {{domxref("HTMLElement/drop_event", "drop")}} events. See [Reading the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#reading_the_drag_data_store) for details.
 
 ## Value
 
@@ -48,10 +50,10 @@ function log(msg) {
 }
 
 document.querySelectorAll("li").forEach((item) => {
-  item.addEventListener("dragstart", dragstart_handler);
+  item.addEventListener("dragstart", dragstartHandler);
 });
 
-function dragstart_handler(ev) {
+function dragstartHandler(ev) {
   log(`dragStart: target.id = ${ev.target.id}`);
 
   // Add this element's id to the drag payload so the drop handler will

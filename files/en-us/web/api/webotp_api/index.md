@@ -23,7 +23,7 @@ Phone numbers are often used as a way to identify the user of an app. An SMS is 
 
 OTP use cases include:
 
-- Improving sign-in security by using a phone number as an extra factor (i.e., for two-factor authentication (2FA) or multifactor authentication (MFA)).
+- Improving sign-in security by using a phone number as an extra factor as part of a {{glossary("multi-factor authentication")}} system.
 - Verifying sensitive actions such as payments.
 
 The WebOTP API allows web apps to expedite this validation process by copying the OTP from the SMS and passing it to the app automatically after the user has provided consent (most native platforms have an equivalent API).
@@ -86,7 +86,7 @@ In this case, the last line must consist of:
 
 ## Controlling access to the API
 
-The availability of WebOTP can be controlled using a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) specifying a {{httpheader("Permissions-Policy/otp-credentials", "otp-credentials")}} directive. This directive has a default allowlist value of `"self"`, meaning that by default, these methods can be used in top-level document contexts.
+The availability of WebOTP can be controlled using a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) specifying an {{httpheader("Permissions-Policy/otp-credentials", "otp-credentials")}} directive. This directive has a default allowlist value of `"self"`, meaning that by default, these methods can be used in top-level document contexts.
 
 You could specify a directive allowing the use of WebOTP in a specific cross-origin domain (i.e., inside an {{htmlelement("iframe")}}) like this:
 

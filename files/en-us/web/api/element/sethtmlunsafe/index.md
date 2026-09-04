@@ -10,7 +10,7 @@ browser-compat: api.Element.setHTMLUnsafe
 
 > [!WARNING]
 > This method parses its input as HTML, writing the result into the DOM.
-> APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, if the input originally came from an attacker.
+> APIs like this are known as [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage), and are potentially a vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, if the input originally came from an attacker.
 >
 > You can mitigate this risk by always passing `TrustedHTML` objects instead of strings and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types).
 > See [Security considerations](#security_considerations) for more information.
@@ -35,10 +35,10 @@ setHTMLUnsafe(input, options)
   - : An options object with the following optional parameters:
     - `sanitizer` {{optional_inline}}
       - : A {{domxref("Sanitizer")}} or {{domxref("SanitizerConfig")}} object that defines what elements of the input will be allowed or removed.
-        This can also be a string with the value `"default"`, which applies a `Sanitizer` with the default (XSS-safe) configuration.
+        This can also be a string with the value `"default"`, which applies a `Sanitizer` with the (XSS-safe) [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration).
         If not specified, no sanitizer is used.
 
-        Note that generally a `Sanitizer` is expected to be more efficient than a `SanitizerConfig` if the configuration is to reused.
+        Note that if you're using the same configuration multiple times, it's expected to be more efficient to use a `Sanitizer` and modify it when you need to.
 
 ### Return value
 
@@ -50,9 +50,10 @@ None (`undefined`).
   - : This is thrown if:
     - `input` is passed a string when [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API) are [enforced by a CSP](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) and no default policy is defined.
     - `options.sanitizer` is passed a:
-      - value that is not a {{domxref("Sanitizer")}}, {{domxref("SanitizerConfig")}}, or string.
-      - non-normalized {{domxref("SanitizerConfig")}} (one that includes both "allowed" and "removed" configuration settings).
+      - {{domxref("SanitizerConfig")}} that isn't [valid](/en-US/docs/Web/API/SanitizerConfig#valid_configuration).
+        For example, a configuration that includes both "allowed" and "removed" configuration settings.
       - string that does not have the value `"default"`.
+      - value that is not a {{domxref("Sanitizer")}}, {{domxref("SanitizerConfig")}}, or string.
 
 ## Description
 
@@ -70,7 +71,7 @@ It is therefore potentially even less safe that {{domxref("Element.innerHTML")}}
 
 The suffix "Unsafe" in the method name indicates that it does not enforce removal of all XSS-unsafe HTML entities (unlike {{domxref("Element.setHTML()")}}).
 While it can do so if used with an appropriate sanitizer, it doesn't have to use an effective sanitizer, or any sanitizer at all!
-The method is therefore a possible vector for [Cross-site-scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, where potentially unsafe strings provided by a user are injected into the DOM without first being sanitized.
+The method is therefore a possible vector for [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS) attacks, where potentially unsafe strings provided by a user are injected into the DOM without first being sanitized.
 
 You should mitigate this risk by always passing {{domxref("TrustedHTML")}} objects instead of strings, and [enforcing trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
 This ensures that the input is passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup (such as {{htmlelement("script")}} elements and event handler attributes), before it is injected.
@@ -78,7 +79,7 @@ This ensures that the input is passed through a transformation function, which h
 Using `TrustedHTML` makes it possible to audit and check that sanitization code is effective in just a few places, rather than scattered across all your injection sinks.
 You should not have to pass a sanitizer to the method when using `TrustedHTML`.
 
-If for any reason you can't use `TrustedHTML` (or even better, `setHTML()`) then the next safest option is to use `setHTMLUnsafe()` with the XSS-safe default {{domxref("Sanitizer")}}.
+If for any reason you can't use `TrustedHTML` (or even better, `setHTML()`) then the next safest option is to use `setHTMLUnsafe()` with the [default sanitizer configuration](/en-US/docs/Web/API/HTML_Sanitizer_API/Default_sanitizer_configuration).
 
 ### When should `setHTMLUnsafe()` be used?
 
@@ -129,7 +130,7 @@ target.setHTMLUnsafe(input, { sanitizer: configLessSafe });
 
 To mitigate the risk of XSS, we'll first create a `TrustedHTML` object from the string containing the HTML, and then pass that object to `setHTMLUnsafe()`.
 Since trusted types are not yet supported on all browsers, we define the [trusted types tinyfill](/en-US/docs/Web/API/Trusted_Types_API#trusted_types_tinyfill).
-This acts as a transparent replacement for the trusted types JavaScript API:
+This acts as a transparent replacement for the Trusted Types JavaScript API:
 
 ```js
 if (typeof trustedTypes === "undefined")
@@ -221,7 +222,7 @@ The HTML defines two {{htmlelement("button")}} elements for calling the method w
 
 ```css hidden
 #log {
-  height: 240px;
+  height: 320px;
   overflow: scroll;
   padding: 0.5rem;
   border: 1px solid black;
@@ -250,8 +251,11 @@ We also define the handler for the reload button.
 // Define unsafe string of HTML
 const unsanitizedString = `
   <div>
-    <p>This is a paragraph. <button onclick="alert('You clicked the button!')">Click me</button></p>
-    <script src="path/to/a/module.js" type="module"><script>
+    <p>Paragraph to inject into shadow DOM.
+      <button onclick="alert('You clicked the button!')">Click me</button>
+    </p>
+    <script src="path/to/a/module.js" type="module"><\/script>
+    <p data-id="123">Para with <code>data-</code> attribute</p>
   </div>
 `;
 
@@ -273,7 +277,7 @@ buttonNoSanitizer.addEventListener("click", () => {
   logElement.textContent =
     "No sanitizer: string should be injected without filtering\n\n";
   log(`\nunsanitized: ${unsanitizedString}`);
-  log(`\nsanitized: ${target.innerHTML}`);
+  log(`\n\nsanitized: ${target.innerHTML}`);
 });
 ```
 
@@ -292,7 +296,7 @@ allowScriptButton.addEventListener("click", () => {
   // Log HTML before sanitization and after being injected
   logElement.textContent = "Sanitizer: {elements: ['div', 'p', 'script']}\n";
   log(`\nunsanitized: ${unsanitizedString}`);
-  log(`\nsanitized: ${target.innerHTML}`);
+  log(`\n\nsanitized: ${target.innerHTML}`);
 });
 ```
 
@@ -311,7 +315,7 @@ When you click the "None" button, you should see that the input and output match
 When you click the "allowScript" button the `<script>` element is still present, but the `<button>` element is removed.
 With this approach you can create safe HTML, but you aren't forced to.
 
-{{EmbedLiveSample("setHTMLUnsafe() live example","100","380px")}}
+{{EmbedLiveSample("setHTMLUnsafe() live example","100","450px")}}
 
 ## Specifications
 

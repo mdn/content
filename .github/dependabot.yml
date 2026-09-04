@@ -5,17 +5,27 @@ updates:
     directory: "/"
     schedule:
       interval: daily
+    cooldown:
+      exclude:
+        - "@mdn/*"
     open-pull-requests-limit: 10
     labels:
       - "automated pr"
       - "dependencies"
       - "javascript"
+    commit-message:
+      prefix: chore
+      prefix-development: build
+      include: scope
 
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "daily"
+      interval: weekly
     labels:
       - "automated pr"
       - "dependencies"
       - "github actions"
+    commit-message:
+      prefix: ci
+      include: scope

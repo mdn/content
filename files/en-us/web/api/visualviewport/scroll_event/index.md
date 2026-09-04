@@ -26,7 +26,7 @@ A generic {{domxref("Event")}}.
 
 ## Examples
 
-See the [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API#examples) landing page for a usage demo.
+See the [`VisualViewport`](/en-US/docs/Web/API/VisualViewport#examples) landing page for a usage demo.
 
 ## Specifications
 

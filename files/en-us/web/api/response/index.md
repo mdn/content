@@ -62,6 +62,8 @@ You can create a new `Response` object using the {{domxref("Response.Response", 
   - : Returns a promise that resolves with the result of parsing the response body text as {{jsxref("JSON")}}.
 - {{domxref("Response.text()")}}
   - : Returns a promise that resolves with a text representation of the response body.
+- {{domxref("Response.textStream()")}}
+  - : Returns a {{domxref("ReadableStream")}} that can be used to read the contents of the response body in chunks of UTF-8.
 
 ## Examples
 
@@ -75,10 +77,18 @@ You'll notice that since we are requesting an image, we need to run {{domxref("R
 ```js
 const image = document.querySelector(".my-image");
 fetch("flowers.jpg")
-  .then((response) => response.blob())
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    return response.blob();
+  })
   .then((blob) => {
     const objectURL = URL.createObjectURL(blob);
     image.src = objectURL;
+  })
+  .catch((error) => {
+    console.error("Error fetching the image:", error);
   });
 ```
 

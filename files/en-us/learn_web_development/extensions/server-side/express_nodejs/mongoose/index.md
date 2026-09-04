@@ -33,11 +33,11 @@ Express apps can use many different databases, and there are several approaches 
 
 ### What databases can I use?
 
-_Express_ apps can use any database supported by _Node_ (_Express_ itself doesn't define any specific additional behavior/requirements for database management). There are [many popular options](https://expressjs.com/en/guide/database-integration.html), including PostgreSQL, MySQL, Redis, SQLite, and MongoDB.
+_Express_ apps can use any database supported by _Node_ (_Express_ itself doesn't define any specific additional behavior/requirements for database management). There are [many popular options](https://expressjs.com/en/guide/database-integration/), including PostgreSQL, MySQL, Redis, SQLite, and MongoDB.
 
 When choosing a database, you should consider things like time-to-productivity/learning curve, performance, ease of replication/backup, cost, community support, etc. While there is no single "best" database, almost any of the popular solutions should be more than acceptable for a small-to-medium-sized site like our Local Library.
 
-For more information on the options see [Database integration](https://expressjs.com/en/guide/database-integration.html) (Express docs).
+For more information on the options see [Database integration](https://expressjs.com/en/guide/database-integration/) (Express docs).
 
 ### What is the best way to interact with a database?
 
@@ -64,7 +64,7 @@ A few solutions that were popular at the time of writing are:
 - [Bookshelf](https://www.npmjs.com/package/bookshelf): Features both promise-based and traditional callback interfaces, providing transaction support, eager/nested-eager relation loading, polymorphic associations, and support for one-to-one, one-to-many, and many-to-many relations. Works with PostgreSQL, MySQL, and SQLite3.
 - [Objection](https://www.npmjs.com/package/objection): Makes it as easy as possible to use the full power of SQL and the underlying database engine (supports SQLite3, Postgres, and MySQL).
 - [Sequelize](https://www.npmjs.com/package/sequelize) is a promise-based ORM for Node.js and io.js. It supports the dialects PostgreSQL, MySQL, MariaDB, SQLite, and MSSQL and features solid transaction support, relations, read replication and more.
-- [Node ORM2](https://node-orm.readthedocs.io/en/latest/) is an Object Relationship Manager for NodeJS. It supports MySQL, SQLite, and Postgres, helping to work with the database using an object-oriented approach.
+- [Node ORM2](https://node-orm.readthedocs.io/en/latest/) is an Object Relationship Manager for Node.js. It supports MySQL, SQLite, and Postgres, helping to work with the database using an object-oriented approach.
 - [GraphQL](https://graphql.org/): Primarily a query language for restful APIs, GraphQL is very popular, and has features available for reading data from databases.
 
 As a general rule, you should consider both the features provided and the "community activity" (downloads, contributions, bug reports, quality of documentation, etc.) when selecting a solution. At the time of writing Mongoose is by far the most popular ODM, and is a reasonable choice if you're using MongoDB for your database.
@@ -126,27 +126,29 @@ Later when the promise settles, the `await` method inside the asynchronous funct
 The code in the asynchronous function then executes until either another `await` is encountered, at which point it will pause again, or until all the code in the function has been run.
 
 You can see how this works in the example below.
-`myFunction()` is an asynchronous function that is called within a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block.
+`myFunction()` is an asynchronous function that contains a [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) block around the `await` expressions.
 When `myFunction()` is run, code execution is paused at `methodThatReturnsPromise()` until the promise resolves, at which point the code continues to `functionThatReturnsPromise()` and waits again.
 The code in the `catch` block runs if an error is thrown in the asynchronous function, and this will happen if the promise returned by either of the methods is rejected.
 
 ```js
 async function myFunction() {
-  // …
-  await someObject.methodThatReturnsPromise();
-  // …
-  await functionThatReturnsPromise();
-  // …
+  try {
+    // …
+    await someObject.methodThatReturnsPromise();
+    // …
+    await functionThatReturnsPromise();
+    // …
+  } catch (e) {
+    // error handling code
+  }
 }
 
-try {
-  // …
-  myFunction();
-  // …
-} catch (e) {
-  // error handling code
-}
+myFunction();
 ```
+
+An asynchronous function returns a promise that rejects if an error is not caught inside the function.
+To catch that error in the calling code, use the returned promise's [`catch()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch) method, or `await` the function call inside a `try...catch` block.
+Calling the function inside a `try...catch` block without `await` does not catch the rejection because it is `await` that converts the returned rejected promise into a thrown error.
 
 The asynchronous methods above are run in sequence.
 If the methods don't depend on each other then you can run them in parallel and finish the whole operation more quickly.
@@ -157,9 +159,8 @@ It rejects when any of the input's promises rejects, with this first rejection r
 The code below shows how this works.
 First, we have two functions that return promises.
 We `await` on both of them to complete using the promise returned by `Promise.all()`.
-Once they both complete `await` returns and the results array is populated,
-the function then continues to the next `await`, and waits until the promise returned by `anotherFunctionThatReturnsPromise()` is settled.
-You would call the `myFunction()` in a `try...catch` block to catch any errors.
+Once they both complete `await` returns and the results array is populated, the function then continues to the next `await`, and waits until the promise returned by `anotherFunctionThatReturnsPromise()` is settled.
+You would attach a `catch()` handler to the promise returned by `myFunction()` to catch any errors.
 
 ```js
 async function myFunction() {
@@ -205,11 +206,6 @@ You can `require()` and connect to a locally hosted database with `mongoose.conn
 // Import the mongoose module
 const mongoose = require("mongoose");
 
-// Set `strictQuery: false` to globally opt into filtering by properties that aren't in the schema
-// Included because it removes preparatory warnings for Mongoose 7.
-// See: https://mongoosejs.com/docs/migrating_to_6.html#strictquery-is-removed-and-replaced-by-strict
-mongoose.set("strictQuery", false);
-
 // Define the database URL to connect to.
 const mongoDB = "mongodb://127.0.0.1/my_database";
 
@@ -222,7 +218,7 @@ async function main() {
 
 > [!NOTE]
 > As discussed in the [Database APIs are asynchronous](#database_apis_are_asynchronous) section, here we `await` on the promise returned by the `connect()` method within an `async` function.
-> We use the promise `catch()` handler to handle any errors when trying to connect, but we might also have called `main()` within a `try...catch` block.
+> We use the promise `catch()` handler to handle any errors when trying to connect, but we might also have used `await main()` within a `try...catch` block in another `async` function.
 
 You can get the default `Connection` object with `mongoose.connection`.
 If you need to create additional connections you can use `mongoose.createConnection()`.
@@ -508,7 +504,7 @@ const bob = new Author({ name: "Bob Smith" });
 
 await bob.save();
 
-// Bob now exists, so lets create a story
+// Bob now exists, so let's create a story
 const story = new Story({
   title: "Bob goes sledding",
   author: bob._id, // assign the _id from our author Bob. This ID is created by default!
@@ -578,7 +574,7 @@ const modelInstances = await SomeModel.find().exec();
 
 Now that we understand something of what Mongoose can do and how we want to design our models, it's time to start work on the _LocalLibrary_ website. The very first thing we want to do is set up a MongoDB database that we can use to store our library data.
 
-For this tutorial, we're going to use the [MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database) cloud-hosted sandbox database. This database tier is not considered suitable for production websites because it has no redundancy, but it is great for development and prototyping. We're using it here because it is free and easy to set up, and because MongoDB Atlas is a popular _database as a service_ vendor that you might reasonably choose for your production database (other popular choices at the time of writing include [ScaleGrid](https://scalegrid.io/) and [ObjectRocket](https://www.objectrocket.com/)).
+For this tutorial, we're going to use the [MongoDB Atlas](https://www.mongodb.com/products/platform/atlas-database) cloud-hosted sandbox database. This database tier is not considered suitable for production websites because it has no redundancy, but it is great for development and prototyping. We're using it here because it is free and easy to set up, and because MongoDB Atlas is a popular _database as a service_ vendor that you might reasonably choose for your production database (other popular choices at the time of writing include [ScaleGrid](https://scalegrid.io/) and [Rackspace](https://www.rackspace.com/data/rackspace-dbaas)).
 
 > [!NOTE]
 > If you prefer, you can set up a MongoDB database locally by downloading and installing the [appropriate binaries for your system](https://www.mongodb.com/try/download/community-edition/releases). The rest of the instructions in this article would be similar, except for the database URL you would specify when connecting.
@@ -681,19 +677,25 @@ Replace the database URL string ('_insert_your_database_url_here_') with the loc
 // Set up mongoose connection
 const mongoose = require("mongoose");
 
-mongoose.set("strictQuery", false);
 const mongoDB = "insert_your_database_url_here";
 
 async function connectMongoose() {
   await mongoose.connect(mongoDB);
+
+  // Add connection error handlers
+  mongoose.connection.on("error", (err) => {
+    console.error("MongoDB connection error:", err);
+  });
+
+  mongoose.connection.on("disconnected", () => {
+    console.warn("MongoDB disconnected");
+  });
 }
 
-try {
-  connectMongoose();
-} catch (err) {
+connectMongoose().catch((err) => {
   console.error("Failed to connect to MongoDB:", err);
   process.exit(1);
-}
+});
 ```
 
 As discussed in the [Mongoose primer](#connecting_to_mongodb) above, this code creates the default connection to the database and reports any errors to the console.
@@ -886,7 +888,7 @@ Last of all, we tested our models by creating a number of instances (using a sta
 
 ## See also
 
-- [Database integration](https://expressjs.com/en/guide/database-integration.html) (Express docs)
+- [Database integration](https://expressjs.com/en/guide/database-integration/) (Express docs)
 - [Mongoose website](https://mongoosejs.com/) (Mongoose docs)
 - [Mongoose Guide](https://mongoosejs.com/docs/guide.html) (Mongoose docs)
 - [Validation](https://mongoosejs.com/docs/validation.html) (Mongoose docs)

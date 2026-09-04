@@ -3,13 +3,9 @@ title: No-Vary-Search header
 short-title: No-Vary-Search
 slug: Web/HTTP/Reference/Headers/No-Vary-Search
 page-type: http-header
-status:
-  - experimental
 browser-compat: http.headers.No-Vary-Search
 sidebar: http
 ---
-
-{{SeeCompatTable}}
 
 The HTTP **`No-Vary-Search`** {{Glossary("response header")}} specifies a set of rules that define how a URL's query parameters will affect cache matching.
 These rules dictate whether the same URL with different URL parameters should be saved as separate browser cache entries.
@@ -21,10 +17,6 @@ This allows the browser to reuse existing resources despite mismatching URL para
     <tr>
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -120,7 +112,7 @@ No-Vary-Search: params=("id" "order" "lang")
 ```
 
 > [!NOTE]
-> As a [structured field](https://www.rfc-editor.org/rfc/rfc8941), the parameters should be space-separated, quoted strings — as shown above — and not comma-separated, which developers may be more used to.
+> As a [structured field](https://www.rfc-editor.org/info/rfc8941/), the parameters should be space-separated, quoted strings — as shown above — and not comma-separated, which developers may be more used to.
 
 If you wanted the browser to ignore all of them _and_ any others that might be present when cache matching, you could use the boolean form of `params`:
 

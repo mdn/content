@@ -33,9 +33,11 @@ You can create a new `Request` object using the {{domxref("Request.Request","Req
 - {{domxref("Request.headers")}} {{ReadOnlyInline}}
   - : Contains the associated {{domxref("Headers")}} object of the request.
 - {{domxref("Request.integrity")}} {{ReadOnlyInline}}
-  - : Contains the [subresource integrity](/en-US/docs/Web/Security/Subresource_Integrity) value of the request (e.g., `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
+  - : Contains the [subresource integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) value of the request (e.g., `sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=`).
 - {{domxref("Request.isHistoryNavigation")}} {{ReadOnlyInline}}
   - : A boolean indicating whether the request is a history navigation.
+- {{domxref("Request.isReloadNavigation")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : A boolean indicating whether the request is a user-triggered reload.
 - {{domxref("Request.keepalive")}} {{ReadOnlyInline}}
   - : Contains the request's `keepalive` setting (`true` or `false`), which indicates whether the browser will keep the associated request alive if the page that initiated it is unloaded before the request is complete.
 - {{domxref("Request.method")}} {{ReadOnlyInline}}
@@ -49,7 +51,9 @@ You can create a new `Request` object using the {{domxref("Request.Request","Req
 - {{domxref("Request.referrerPolicy")}} {{ReadOnlyInline}}
   - : Contains the referrer policy of the request (e.g., `no-referrer`).
 - {{domxref("Request.signal")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("AbortSignal")}} associated with the request
+  - : Returns the {{domxref("AbortSignal")}} associated with the request.
+- {{domxref("Request.targetAddressSpace")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : Returns the request's target address space, which indicates whether it is a loopback, local, or public request.
 - {{domxref("Request.url")}} {{ReadOnlyInline}}
   - : Contains the URL of the request.
 
@@ -69,6 +73,8 @@ You can create a new `Request` object using the {{domxref("Request.Request","Req
   - : Returns a promise that resolves with the result of parsing the request body as {{JSxRef("JSON")}}.
 - {{domxref("Request.text()")}}
   - : Returns a promise that resolves with a text representation of the request body.
+- {{domxref("Request.textStream()")}}
+  - : Returns a {{domxref("ReadableStream")}} that can be used to read the contents of the request body in chunks of UTF-8.
 
 > [!NOTE]
 > The request body functions can be run only once; subsequent calls will reject with TypeError showing that the body stream has already used.

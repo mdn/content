@@ -1,5 +1,5 @@
 ---
-title: Firefox 119 for developers
+title: Firefox 119 release notes for developers
 short-title: Firefox 119
 slug: Mozilla/Firefox/Releases/119
 page-type: firefox-release-notes
@@ -28,7 +28,7 @@ This article provides information about the changes in Firefox 119 that affect d
 
 ### SVG
 
-- The [SVG attributes](/en-US/docs/Web/SVG/Reference/Attribute) that accept a [`<length>`](/en-US/docs/Web/SVG/Guides/Content_type#length) value now support [level 3](https://drafts.csswg.org/css-values-3/#lengths) {{cssxref("length")}} [CSS data types](/en-US/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) for all SVG elements. This enables the sizing of SVG elements based on font sizes (`cap`, `rem`, etc.), viewport (`vh`, `vw`, `vmin`, etc.), or absolute lengths (`px`, `cm`, etc.), e.g., `<line x1="10vw" y1="10vh" x2="50vw" y2="50vh"/>`. (See [Firefox bug 1287054](https://bugzil.la/1287054) for more details).
+- The [SVG attributes](/en-US/docs/Web/SVG/Reference/Attribute) that accept a [`<length>`](/en-US/docs/Web/SVG/Guides/Content_type#length) value now support [level 3](https://drafts.csswg.org/css-values-3/#lengths) {{cssxref("length")}} [CSS data types](/en-US/docs/Web/CSS/Reference/Values/Data_types) for all SVG elements. This enables the sizing of SVG elements based on font sizes (`cap`, `rem`, etc.), viewport (`vh`, `vw`, `vmin`, etc.), or absolute lengths (`px`, `cm`, etc.), e.g., `<line x1="10vw" y1="10vh" x2="50vw" y2="50vh"/>`. (See [Firefox bug 1287054](https://bugzil.la/1287054) for more details).
 
 ### HTTP
 
@@ -65,7 +65,7 @@ This article provides information about the changes in Firefox 119 that affect d
 
 - Added the [`script.realmCreated`](https://w3c.github.io/webdriver-bidi/#event-script-realmCreated) and [`script.realmDestroyed`](https://w3c.github.io/webdriver-bidi/#event-script-realmDestroyed) events that allow users to monitor the lifetime of JavaScript Realms of a given browsing context. Such a Realm is basically an isolated execution environment (`sandbox`) with its own unique global object (window) ([Firefox bug 1788657](https://bugzil.la/1788657), [Firefox bug 1788659](https://bugzil.la/1788659)).
 
-- The `browsingContext.userPromptOpened` event was accidentally sent when a HTTP Authentication dialog was opened ([Firefox bug 1853302](https://bugzil.la/1853302)).
+- The `browsingContext.userPromptOpened` event was accidentally sent when an HTTP Authentication dialog was opened ([Firefox bug 1853302](https://bugzil.la/1853302)).
 
 - Unwanted events with the `context` field set to `null` will no longer be emitted. Because the underlying browsing context has been closed such events are no longer valid ([Firefox bug 1847563](https://bugzil.la/1847563)).
 

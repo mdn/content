@@ -18,10 +18,6 @@ It allows web developers to have more control over the data stored by browsers f
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
     </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 

@@ -38,4 +38,4 @@ console.log(verticalSize.baseVal.value); // the `height` value
 - [SVG filter tutorial](/en-US/docs/Web/SVG/Guides/SVG_filters)
 - CSS {{cssxref("blend-mode")}} data type
 - CSS {{cssxref("filter-function/blur", "blur()")}} function
-- [CSS filter effects](/en-US/docs/Web/CSS/CSS_filter_effects) module- CSS {{cssxref("mix-blend-mode")}} property
+- [CSS filter effects](/en-US/docs/Web/CSS/Guides/Filter_effects) module- CSS {{cssxref("mix-blend-mode")}} property

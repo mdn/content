@@ -16,19 +16,20 @@ jobs:
 
     steps:
       - name: Checkout content
-        uses: actions/checkout@v5
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           path: mdn-content
           ref: main
           persist-credentials: false
 
       - name: Setup node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version-file: "mdn-content/.nvmrc"
+          package-manager-cache: false
 
       - name: Checkout webref
-        uses: actions/checkout@v5
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           repository: w3c/webref
           path: webref
@@ -40,7 +41,7 @@ jobs:
         run: node scripts/update-interface-data.js ../webref/
 
       - name: Create pull request
-        uses: peter-evans/create-pull-request@271a8d0340265f705b14b6d32b9829c1cb33d45e # v7.0.8
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
         with:
           path: mdn-content
           token: ${{ secrets.AUTOMERGE_TOKEN }}

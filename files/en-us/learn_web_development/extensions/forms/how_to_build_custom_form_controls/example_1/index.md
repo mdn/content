@@ -59,7 +59,7 @@ This is the first example of code that explains [how to build a custom form widg
 
 .select {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Verdana", "Arial", sans-serif;
 
   box-sizing: border-box;
 
@@ -194,7 +194,7 @@ This is the first example of code that explains [how to build a custom form widg
 
 .select {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Verdana", "Arial", sans-serif;
 
   box-sizing: border-box;
 
@@ -329,7 +329,7 @@ This is the first example of code that explains [how to build a custom form widg
 
 .select {
   font-size: 0.625em; /* 10px */
-  font-family: Verdana, Arial, sans-serif;
+  font-family: "Verdana", "Arial", sans-serif;
 
   box-sizing: border-box;
 

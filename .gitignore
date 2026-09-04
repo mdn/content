@@ -1,8 +1,6 @@
 /node_modules
 /build
 .env
-yarn-debug.log*
-yarn-error.log*
 _githistory.json
 .DS_Store
 .idea

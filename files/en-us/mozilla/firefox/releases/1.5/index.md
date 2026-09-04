@@ -30,7 +30,7 @@ Some of the new features in Firefox 1.5:
   - : SVG can be used in XHTML pages. JavaScript and CSS can be used to manipulate the picture in the same way you would script regular XHTML. See [SVG in Firefox](https://web.archive.org/web/20210413180914/https://developer.mozilla.org/en-US/docs/Web/SVG/SVG_1.1_Support_in_Firefox) to learn about the status and known problems of SVG implementation in Firefox.
 - [Drawing Graphics with Canvas](/en-US/docs/Web/API/Canvas_API/Tutorial)
   - : Learn about the new `<canvas>` tag and how to draw graphs and other objects in Firefox.
-- [CSS3 Columns](/en-US/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
+- [CSS3 Columns](/en-US/docs/Web/CSS/Guides/Multicol_layout/Using)
   - : Learn about the new support for automatic multi-column text layout as proposed for [CSS3](/en-US/docs/Web/CSS).
 - [Using Firefox 1.5 caching](/en-US/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching)
   - : Learn about `bfcache` and how it speeds up back and forward navigation.

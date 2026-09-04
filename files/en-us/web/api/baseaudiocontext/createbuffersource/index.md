@@ -15,7 +15,7 @@ used to play audio data contained within an {{ domxref("AudioBuffer") }} object.
 
 > [!NOTE]
 > The {{domxref("AudioBufferSourceNode.AudioBufferSourceNode", "AudioBufferSourceNode()")}}
-> constructor is the recommended way to create a {{domxref("AudioBufferSourceNode")}}; see
+> constructor is the recommended way to create an {{domxref("AudioBufferSourceNode")}}; see
 > [Creating an AudioNode](/en-US/docs/Web/API/AudioNode#creating_an_audionode).
 
 ## Syntax

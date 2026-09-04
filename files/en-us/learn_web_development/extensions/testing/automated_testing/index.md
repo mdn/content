@@ -35,12 +35,12 @@ Throughout this module we have detailed loads of different ways in which you can
 We agree — testing all the things we've looked at in previous articles manually can be a real pain. Fortunately, there are tools to help us automate some of this pain away. There are two main ways in which we can automate the tests we've been talking about in this module:
 
 1. Use a task runner such as [Grunt](https://gruntjs.com/) or [Gulp](https://gulpjs.com/), or [npm scripts](https://docs.npmjs.com/misc/scripts/) to run tests and clean up code during your build process. This is a great way to perform tasks like linting and minifying code, adding in CSS prefixes or transpiling nascent JavaScript features for maximum cross-browser reach, and so on.
-2. Use a browser automation system like [Selenium](https://www.selenium.dev/) to run specific tests on installed browsers and return results, alerting you to failures in browsers as they crop up. Commercial cross-browser testing apps like [Sauce Labs](https://saucelabs.com/) and [BrowserStack](https://www.browserstack.com/) are based on Selenium, but allow you to access their set up remotely using an interface, saving you the hassle of setting up your own testing system.
+2. Use a browser automation system like [Selenium](https://www.selenium.dev/) to run specific tests on installed browsers and return results, alerting you to failures in browsers as they crop up. Commercial cross-browser testing apps like [Sauce Labs](https://saucelabs.com/) and [BrowserStack](https://www.browserstack.com/) are based on Selenium, but allow you to access their setup remotely using an interface, saving you the hassle of setting up your own testing system.
 
 We will look at how to set up your own Selenium-based testing system in the next article. In this article, we'll look at how to set up a task runner, and use the basic functionality of commercial systems like the ones mentioned above.
 
 > [!NOTE]
-> The above two categories are not mutually exclusive. It is possible to set up a task runner to access a service like Sauce Labs, or LambdaTest via an API, run cross browser tests, and return results. We will look at this below as well.
+> The above two categories are not mutually exclusive. It is possible to set up a task runner to access a service like Sauce Labs via an API, run cross browser tests, and return results. We will look at this below as well.
 
 ## Using a task runner to automate testing tools
 
@@ -51,7 +51,7 @@ As we said above, you can drastically speed up common tasks such as linting and 
 Most tools these days are based on {{Glossary("Node.js")}}, so you'll need to install it along with its counterpart package manager, [`npm`](https://www.npmjs.com/):
 
 1. The easiest way to install and update Node.js and `npm` is via a node version manager: Follow the instructions at [Installing Node](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment#installing_node) to do so.
-2. Make sure to [test that your installation was successful](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment#testing_your_nodejs_and_npm_installation) before continuing.
+2. Make sure to [test that your installation was successful](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment#testing_your_node.js_and_npm_installation) before continuing.
 3. If you previously installed Node.js/`npm`, you should update them to their latest versions. This can be done by using the node version manager to install the latest LTS versions (refer again to the linked instructions above).
 
 To start using Node/npm-based packages on your projects, you need to set up your project directories as npm projects. This is easy to do.
@@ -682,9 +682,9 @@ Once you stop the session, you'll return to the _Live Web Testing_ page, where y
 
 TestingBot has a [restful API](https://testingbot.com/support/api) that allows you to programmatically retrieve details of your account and existing tests, and annotate tests with further details, such as their pass/fail state which isn't recordable by manual testing alone.
 
-TestingBot has several API clients you can use to interact with the API, including clients for NodeJS, Python, Ruby, Java and PHP.
+TestingBot has several API clients you can use to interact with the API, including clients for Node.js, Python, Ruby, Java and PHP.
 
-Below is an example on how to interact with the TestingBot API with the NodeJS client [testingbot-api](https://www.npmjs.com/package/testingbot-api).
+Below is an example on how to interact with the TestingBot API with the Node.js client [testingbot-api](https://www.npmjs.com/package/testingbot-api).
 
 1. First, set up a new npm project to test this out, as detailed in [Setting up Node and npm](#setting_up_node_and_npm). Use a different directory name than before, like `tb-test` for example.
 2. Install the Node TestingBot wrapper using the following command:

@@ -44,7 +44,7 @@ The demo's CSS provides some rudimentary styling, which is not important for und
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
 
 body {

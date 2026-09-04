@@ -1,5 +1,6 @@
 ---
-title: <input type="number">
+title: '`<input type="number">` HTML attribute value'
+short-title: <input type="number">
 slug: Web/HTML/Reference/Elements/input/number
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_number
@@ -129,7 +130,7 @@ A number input is considered valid when empty and when a single number is entere
 
 Sometimes it's helpful to offer an in-context hint as to what form the input data should take. This can be especially important if the page design doesn't offer descriptive labels for each {{HTMLElement("input")}}. This is where **placeholders** come in. A placeholder is a value most commonly used to provide a hint as to the format the input should take `value`. It is displayed inside the edit box when the element's `value` is `""`. Once data is entered into the box, the placeholder disappears; if the box is emptied, the placeholder reappears.
 
-Here, we have an `number` input with the placeholder "Multiple of 10". Note how the placeholder disappears and reappears as you manipulate the contents of the edit field.
+Here, we have a `number` input with the placeholder "Multiple of 10". Note how the placeholder disappears and reappears as you manipulate the contents of the edit field.
 
 ```html
 <input type="number" placeholder="Multiple of 10" />
@@ -464,14 +465,6 @@ After declaring a few variables, an event listener is added to the `button` to c
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.stepUp", "stepUp()")}},
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}}
-      </td>
-    </tr>
-    <tr>
       <td><strong>Implicit ARIA Role</strong></td>
       <td>
         <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role">spinbutton</a></code>
@@ -493,4 +486,3 @@ After declaring a few variables, an event listener is added to the `button` to c
 - [HTML forms guide](/en-US/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}}
 - [`<input type="tel">`](/en-US/docs/Web/HTML/Reference/Elements/input/tel)
-- [Article: Why Gov.UK changed the input type for numbers](https://technology.blog.gov.uk/2020/02/24/why-the-gov-uk-design-system-team-changed-the-input-type-for-numbers/)

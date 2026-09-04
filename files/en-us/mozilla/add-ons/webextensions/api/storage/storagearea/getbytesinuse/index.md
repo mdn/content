@@ -26,9 +26,7 @@ let gettingSpace = browser.storage.<storageType>.getBytesInUse(
 )
 ```
 
-Where `<storageType>` is one of the storage types — {{WebExtAPIRef("storage.sync", "sync")}}, {{WebExtAPIRef("storage.local", "local")}}, {{WebExtAPIRef("storage.session", "session")}}, or {{WebExtAPIRef("storage.managed", "managed")}}.
-
-In Firefox, `<storageType>` can't be {{WebExtAPIRef("storage.local")}}, because of [bug 1385832](https://bugzil.la/1385832).
+Where `<storageType>` is one of the storage types: {{WebExtAPIRef("storage.sync", "sync")}}, {{WebExtAPIRef("storage.local", "local")}}, {{WebExtAPIRef("storage.session", "session")}}, or {{WebExtAPIRef("storage.managed", "managed")}}.
 
 ### Parameters
 

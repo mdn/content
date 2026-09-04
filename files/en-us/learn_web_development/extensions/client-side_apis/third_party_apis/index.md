@@ -153,7 +153,7 @@ L.marker([53.480759, -2.242631], {
 
 As you can see, this at its simplest takes two parameters, an array containing the coordinates at which to display the marker, and an options object containing an `icon` property that defines the icon to display at that point.
 
-The icon is defined using an [`mapquest.icons.marker()`](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-icons/) method, which as you can see contains information such as color and size of marker.
+The icon is defined using a [`mapquest.icons.marker()`](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-icons/) method, which as you can see contains information such as color and size of marker.
 
 Onto the end of the first method call we chain `.bindPopup('This is Manchester!')`, which defines content to display when the marker is clicked.
 

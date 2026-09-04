@@ -111,7 +111,7 @@ A-Frame takes care of setting up everything you need:
 
 - A default light source and camera are included, so the cube is visible.
 - The controls are already working: you can use the mouse for looking around and the keyboard for movement.
-  Try the <kbd>W</kbd>, <kbd>A</kbd>, <kbd>S</kbd>, and <kbd>D</kbd> keys).
+  Try the <kbd>W</kbd>, <kbd>A</kbd>, <kbd>S</kbd>, and <kbd>D</kbd> keys.
 - There's an "Enter VR mode" button in the bottom right corner of the screen, to allow you to shift to full screen, stereoscopic image viewing if you have the necessary VR hardware set up and ready.
 
 ### Specifying a camera
@@ -320,7 +320,7 @@ render();
 
 ## Summary
 
-A-Frame targets web developers by offering easy to use web markup and all the advantages that brings, such as JavaScript manipulation. It is easy to start with, but also provides a powerful API for advanced concepts, as well as dealing with cross browser differences. It's a great time to start experimenting with such frameworks.
+A-Frame targets web developers by offering web markup with advantages such as JavaScript manipulation. It provides a powerful API for advanced concepts, as well as dealing with cross browser differences. It's a great time to start experimenting with such frameworks.
 
 ## See also
 

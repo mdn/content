@@ -23,7 +23,7 @@ closest(selectors)
 
 ### Return value
 
-The closest ancestor {{domxref("Element")}} or itself, which matches the `selectors`. If there are no such element, `null`.
+The closest ancestor {{domxref("Element")}} or itself, which matches the `selectors`. If there is no such element, `null` is returned.
 
 ### Exceptions
 
@@ -81,5 +81,5 @@ console.log(el.closest(":not(div)")); // <article>
 
 ## See also
 
-- [CSS selectors](/en-US/docs/Web/CSS/CSS_selectors) module
+- [CSS selectors](/en-US/docs/Web/CSS/Guides/Selectors) module
 - Other {{domxref("Element")}} methods that take selectors: {{domxref("Element.querySelector()")}}, {{domxref("Element.querySelectorAll()")}}, and {{domxref("Element.matches()")}}.

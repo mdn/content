@@ -43,6 +43,8 @@ The last array element returned will always have a `detectedLanguage` value of `
 
 ### Exceptions
 
+- `AbortError` {{domxref("DOMException")}}
+  - : Thrown if the `LanguageDetector` was previously destroyed (had {{domxref("LanguageDetector.destroy()")}} called on it, or was aborted via its abort [`signal`](/en-US/docs/Web/API/LanguageDetector/create_static#signal) after creation).
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the current {{domxref("Document")}} is not active.
 - {{domxref("QuotaExceededError")}}

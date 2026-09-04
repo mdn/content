@@ -30,7 +30,7 @@ A {{jsxref("Promise")}} which resolves once access to the port has been successf
 
 ### Exceptions
 
-- `InvalidAccessError` {{domxref("DOMException")}}
+- `NotAllowedError` {{domxref("DOMException")}}
   - : The promise is rejected with this error if the port is unavailable and cannot be opened.
 
 ## Examples

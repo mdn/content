@@ -93,7 +93,7 @@ Finally we close off the `<figure>` element with a {{htmlelement("figcaption")}}
 ```html live-sample___video-player
   <figcaption>
     &copy; Blender Foundation |
-    <a href="http://mango.blender.org">mango.blender.org</a>
+    <a href="https://mango.blender.org">mango.blender.org</a>
   </figcaption>
 </figure>
 ```
@@ -270,7 +270,7 @@ fullscreen.addEventListener("click", (e) => {
 });
 ```
 
-If the browser is currently in fullscreen mode, then it must be exited and vice versa. Interestingly `document` must be used for exiting/cancelling fullscreen mode, whereas any HTML element can request fullscreen mode, here the `videoContainer` is used as it also contains the custom controls which should also appear with the video in fullscreen mode.
+If the browser is currently in fullscreen mode, then it must be exited and vice versa. Interestingly `document` must be used for exiting/canceling fullscreen mode, whereas any HTML element can request fullscreen mode, here the `videoContainer` is used as it also contains the custom controls which should also appear with the video in fullscreen mode.
 
 ## Result
 
@@ -280,8 +280,8 @@ The CSS part is hidden for this tutorial, but you can click "Play" to see the fu
 :root {
   color: #333333;
   font-family:
-    "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", "Lucida", "Arial",
-    "Helvetica", sans-serif;
+    "Lucida Grande", "Lucida Sans Unicode", "DejaVu Sans", "Lucida",
+    "Helvetica", "Arial", sans-serif;
 }
 a {
   color: #0095dd;

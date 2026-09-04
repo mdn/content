@@ -8,7 +8,7 @@ status:
 browser-compat: api.CSSStyleSheet.addRule
 ---
 
-{{APIRef("CSSOM")}}{{deprecated_header}}
+{{APIRef("CSSOM")}}
 
 The obsolete {{domxref("CSSStyleSheet")}} interface's
 **`addRule()`** _legacy method_ adds a new rule to the

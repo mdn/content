@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLTableCellElement.align
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 The **`align`** property of the {{domxref("HTMLTableCellElement")}} interface is a string indicating how to horizontally align text in the {{htmlelement("th")}} or {{htmlelement("td")}} table cell.
 
@@ -28,7 +28,7 @@ The possible values are:
 
 ## Examples
 
-Use CSS `text-align` instead. An [example](/en-US/docs/Web/CSS/text-align#table_alignment) is available on the {{cssxref("text-align")}} page.
+Use CSS `text-align` instead. An [example](/en-US/docs/Web/CSS/Reference/Properties/text-align#table_alignment) is available on the {{cssxref("text-align")}} page.
 
 ## Specifications
 

@@ -39,16 +39,13 @@ sidebar: addonsidebar
   </tbody>
 </table>
 
-Use the theme key to define a static theme to apply to Firefox.
+Use the `theme` key to define a static theme to apply to Firefox. When provided alone, this defines the theme used when Firefox is using either the light or dark color schemes. If the [`dark_theme` key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/dark_theme) key is provided, this key provides the theme used when Firefox is using the light color scheme.
 
 > [!NOTE]
 > If you want to include a theme with an extension, please see the {{WebExtAPIRef("theme")}} API.
 
 > [!NOTE]
 > Since May 2019, themes need to be signed to be installed ([Firefox bug 1545109](https://bugzil.la/1545109)). See [Signing and distributing your add-on](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/#distributing-your-addon) for more details.
-
-> [!NOTE]
-> A new version of Firefox for Android, based on GeckoView, is under development. A [pre-release version](https://play.google.com/store/apps/details?id=org.mozilla.fenix) is available. The pre-release version does not support themes.
 
 ## Image formats
 
@@ -90,7 +87,7 @@ The theme key is an object that takes the following properties:
       <td><code>colors</code></td>
       <td><code>Object</code></td>
       <td>
-        <p>Mandatory.</p>
+        <p>Mandatory</p>
         <p>
           A JSON object whose properties represent the colors of various parts
           of the browser. See <code><a href="#colors">colors</a></code> for
@@ -105,7 +102,7 @@ The theme key is an object that takes the following properties:
         <p>Optional</p>
         <p>
           This object has properties that affect how the
-          <code>"additional_backgrounds"</code> images are displayed and color schemes are applied. See
+          <code>"additional_backgrounds"</code> items are displayed and color schemes are applied. See
           <code><a href="#properties">properties</a></code> for details on the properties that this object can contain.
         </p>
       </td>
@@ -130,11 +127,12 @@ Images should be 200 pixels high to ensure they always fill the header space ver
   <tbody>
     <tr>
       <td><code>theme_frame</code></td>
-      <td><code>String</code></td>
+      <td><code>String</code> or <code>Object</code></td>
       <td>
         <p>
-          The URL of a foreground image to be added to the header area and
-          anchored to the upper right corner of the header area.
+          A foreground image (defined by the path to an image asset packaged in the extension) or <a href="#css_gradient_syntax">CSS gradient</a>
+          to be added to the header area and anchored to the upper right corner
+          of the header area. CSS gradients are supported from Firefox 153.
         </p>
         <div class="notecard note">
           <p>
@@ -144,38 +142,56 @@ Images should be 200 pixels high to ensure they always fill the header space ver
           </p>
         </div>
         <p>
-          Optional in desktop Firefox 60 onwards. Required in Firefox for Android.
+          Optional in desktop Firefox 60 onwards.
         </p>
       </td>
     </tr>
     <tr>
       <td><code>additional_backgrounds</code></td>
-      <td><code>Array</code> of <code>String</code></td>
+      <td><code>Array</code> of <code>String</code> or <code>Object</code></td>
       <td>
         <div class="warning">
           <p>
             <strong>Warning:</strong> The
-            <code>additional_backgrounds</code> property is experimental. It is
-            currently accepted in release versions of Firefox, but its behavior
-            is subject to change. It is not supported in Firefox for Android.
+            <code>additional_backgrounds</code> property is experimental. It's
+            accepted in release versions of Firefox, but its behavior
+            is subject to change.
           </p>
         </div>
         <p>
-          An array of URLs for additional background images to be added to the
-          header area and displayed behind the
-          <code>"theme_frame":</code> image. These images layer the first image
-          in the array on top, the last image in the array at the bottom.
+          An array of additional background items, each being either the path to an image asset packaged in the extension or <a href="#css_gradient_syntax">CSS gradient</a>, to be added to
+          the header area and displayed behind the
+          <code>"theme_frame":</code> item. These additional background items layer the first item in
+          the array on top and the last item at the bottom. CSS gradients are
+          supported from Firefox 153.
         </p>
-        <p>Optional.</p>
+        <p>Optional</p>
         <p>
-          By default all images are anchored to the upper right corner of the
-          header area, but their alignment and repeat behavior can be controlled
-          by properties of <code>"properties":</code>.
+          By default, all items are anchored to the upper right corner of the
+          header area, but their alignment, repeat, and size behavior, and the
+          area of the browser window they are drawn in, can be controlled by
+          <a href="#properties"><code>"properties":</code></a>.
+        </p>
+        <p>
+          As additional background items display behind the <code>theme_frame</code> item, if <code>theme_frame</code> is set as a CSS gradient, any additional background items are hidden.
         </p>
       </td>
     </tr>
   </tbody>
 </table>
+
+### CSS gradient syntax
+
+A CSS gradient is specified as an object in the form `{ "GRADIENT_TYPE": "GRADIENT_PARAMS" }`, where:
+
+- `GRADIENT_TYPE` is one of:
+  - `linear-gradient`
+  - `radial-gradient`
+  - `conic-gradient`
+  - `repeating-linear-gradient`
+  - `repeating-radial-gradient`
+  - `repeating-conic-gradient`
+- `GRADIENT_PARAMS` contains the parameters for that CSS gradient function, as described in [CSS gradient values](/en-US/docs/Web/CSS/Reference/Values/gradient).
 
 ### colors
 
@@ -199,17 +215,10 @@ These properties define the colors used for different parts of the browser. They
 > [!NOTE]
 > Where a component is affected by multiple color properties, the properties are listed in order of precedence.
 
-All these properties can be specified as either a string containing any valid [CSS color string](/en-US/docs/Web/CSS/color_value) (including hexadecimal), or an RGB array, such as `"tab_background_text": [ 107 , 99 , 23 ]`.
+All these properties can be specified as either a string containing any valid [CSS color string](/en-US/docs/Web/CSS/Reference/Values/color_value) (including hexadecimal), or an RGB array, such as `"tab_background_text": [ 107 , 99 , 23 ]`.
 
 > [!NOTE]
 > [In Chrome, colors may only be specified as RGB arrays](#chrome_compatibility).
->
-> In Firefox for Android colors can be specified using:
->
-> - full hexadecimal notation, that is #RRGGBB only. _alpha_ and shortened syntax, as in #RGB\[A], are not supported.
-> - [Functional notation](/en-US/docs/Web/CSS/color_value) (RGB arrays) for themes targeting Firefox 68.2 or later.
->
-> Colors for Firefox for Android themes cannot be specified using color names.
 
 <table class="fullwidth-table standard-table">
   <thead>
@@ -279,7 +288,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are grey with white text. The customize toolbar icon in the url bar in white with a red background is pressed and a popup is open displaying a short list of thing to add to the toolbar such as the browser's library and the sidebars." src="theme-button_background_active.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are gray with white text. The customize toolbar icon in the url bar in white with a red background is pressed and a popup is open displaying a short list of thing to add to the toolbar such as the browser's library and the sidebars." src="theme-button_background_active.png" /></p>
       </td>
     </tr>
     <tr>
@@ -298,7 +307,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are grey with white text. The go back one page icon is white with a red circle background." src="theme-button_background_hover.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are gray with white text. The go back one page icon is white with a red circle background." src="theme-button_background_hover.png" /></p>
       </td>
     </tr>
     <tr>
@@ -325,7 +334,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are grey with white text. The URL bar and open a new tab icons are red. The red icons contrast well with the black background color of the header area." src="theme-icons.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are gray with white text. The URL bar and open a new tab icons are red. The red icons contrast well with the black background color of the header area." src="theme-icons.png" /></p>
       </td>
     </tr>
     <tr>
@@ -355,7 +364,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are grey with white text. The bookmark this page icon is red and pressed, an open popup name edit this bookmark is displayed. While in attention state, the toolbar icons contrast well with the black background of the header area." src="theme-icons_attention.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are gray with white text. The bookmark this page icon is red and pressed, an open popup name edit this bookmark is displayed. While in attention state, the toolbar icons contrast well with the black background of the header area." src="theme-icons_attention.png" /></p>
       </td>
     </tr>
     <tr>
@@ -363,7 +372,7 @@ All these properties can be specified as either a string containing any valid [C
       <td>
         <p>
           The color of the header area background, displayed in the part of the
-          header not covered or visible through the images specified in
+          header not covered or visible through the items specified in
           <code>"theme_frame"</code> and <code>"additional_backgrounds"</code>.
         </p>
         <details open>
@@ -386,7 +395,7 @@ All these properties can be specified as either a string containing any valid [C
         <p>
           The color of the header area background when the browser window is
           inactive, displayed in the part of the header not covered or visible
-          through the images specified in <code>"theme_frame"</code> and
+          through the items specified in <code>"theme_frame"</code> and
           <code>"additional_backgrounds"</code>.
         </p>
         <details open>
@@ -403,7 +412,7 @@ All these properties can be specified as either a string containing any valid [C
         </details>
         <p>
           <img
-            alt="Browser firefox is grey. Browser's tabs and URL bar are lighter grey. The tab text is white and the URL bar icon are darker grey."
+            alt="Browser firefox is gray. Browser's tabs and URL bar are lighter gray. The tab text is white and the URL bar icon are darker gray."
             src="theme-frame_inactive.png"
           />
         </p>
@@ -485,7 +494,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter grey with icons and text in white. The bookmark this page icon is blue and pressed, an open popup name 'edit this bookmark' is displayed with a red background. The background color of the popup is red." src="theme-popup.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter gray with icons and text in white. The bookmark this page icon is blue and pressed, an open popup name 'edit this bookmark' is displayed with a red background. The background color of the popup is red." src="theme-popup.png" /></p>
       </td>
     </tr>
     <tr>
@@ -506,7 +515,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter grey with icons and text in white. The bookmark this page icon is blue and pressed, an open popup name 'edit this bookmark' is displayed with a red outline and black background. The popup's border is red." src="theme-popup_border.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter gray with icons and text in white. The bookmark this page icon is blue and pressed, an open popup name 'edit this bookmark' is displayed with a red outline and black background. The popup's border is red." src="theme-popup_border.png" /></p>
       </td>
     </tr>
     <tr>
@@ -536,7 +545,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="screenshot of firefox is black. Browser's tabs and URL bar are lighter grey with icons and text in white. A search results popup is displayed with a highlighted item's background in red. The background color of the highlighted item inside the popup is red." src="theme-popup_highlight.png" /></p>
+        <p><img alt="screenshot of firefox is black. Browser's tabs and URL bar are lighter gray with icons and text in white. A search results popup is displayed with a highlighted item's background in red. The background color of the highlighted item inside the popup is red." src="theme-popup_highlight.png" /></p>
       </td>
     </tr>
     <tr>
@@ -562,7 +571,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter grey with icons and text in white. A search results popup is displayed with a highlighted item's text in red with a black background. The text color of the highlighted item contrasts well with the black background color of this item." src="theme-popup_highlight_text.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter gray with icons and text in white. A search results popup is displayed with a highlighted item's text in red with a black background. The text color of the highlighted item contrasts well with the black background color of this item." src="theme-popup_highlight_text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -588,7 +597,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter grey with icons and text in white. A search results popup is displayed with items texts in red. The text color contrasts well with the black background color of the popup." src="popup_text.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are lighter gray with icons and text in white. A search results popup is displayed with items texts in red. The text color contrasts well with the black background color of the popup." src="popup_text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -774,7 +783,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are darker grey with lighter grey icons and white text. The selected tab has a red outline." src="theme-tab_line.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tabs and URL bar are darker gray with lighter gray icons and white text. The selected tab has a red outline." src="theme-tab_line.png" /></p>
       </td>
     </tr>
     <tr>
@@ -793,7 +802,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tabs and URL bar are darker grey with icons and text in white. Inside the selected tab an animated loading indicator is red." src="theme-tab_loading.gif" /></p>
+        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tabs and URL bar are darker gray with icons and text in white. Inside the selected tab an animated loading indicator is red." src="theme-tab_loading.gif" /></p>
       </td>
     </tr>
     <tr>
@@ -819,7 +828,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tabs and URL bar are darker grey with icons and text in white. The selected tab has red background and white text." src="theme-tab_selected.png" /></p>
+        <p><img alt="A screenshot of a browser window with one open tab. Browser is black. Browser's tabs and URL bar are darker gray with icons and text in white. The selected tab has red background and white text." src="theme-tab_selected.png" /></p>
       </td>
     </tr>
     <tr>
@@ -853,7 +862,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox has a picture of an insect theme. URL bar is lighter grey with white icons. The selected tab text is red with white background." src="theme-tab_text.png" /></p>
+        <p><img alt="Browser firefox has a picture of an insect theme. URL bar is lighter gray with white icons. The selected tab text is red with white background." src="theme-tab_text.png" /></p>
       </td>
     </tr>
     <tr>
@@ -898,7 +907,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is black. Browser's tab and URL bar are lighter grey with white text and icons. A horizontal red line separates the bottom of the toolbar and the beginning of the display of the web page." src="theme-toolbar_bottom_separator.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tab and URL bar are lighter gray with white text and icons. A horizontal red line separates the bottom of the toolbar and the beginning of the display of the web page." src="theme-toolbar_bottom_separator.png" /></p>
       </td>
     </tr>
     <tr>
@@ -923,7 +932,7 @@ All these properties can be specified as either a string containing any valid [C
 }</pre
           >
         </details>
-        <p><img alt="Browser firefox is black. Browser's tab, find in page bar and URL bar are lighter grey with white text and icons. The background color of the URL bar is red. The find in page bar is white with black text. The find in page field is red with black text." src="toolbar-field.png" /></p>
+        <p><img alt="Browser firefox is black. Browser's tab, find in page bar and URL bar are lighter gray with white text and icons. The background color of the URL bar is red. The find in page bar is white with black text. The find in page field is red with black text." src="toolbar-field.png" /></p>
       </td>
     </tr>
     <tr>
@@ -1301,6 +1310,9 @@ Additionally, this key accepts various properties that are aliases for one of th
           <li><code>"right center"</code></li>
           <li><code>"right top"</code>.</li>
         </ul>
+        <p>
+        If the array contains fewer items than the <code>additional_backgrounds</code> array, the array is reused for the missing values. For example, if <code>additional_backgrounds</code> contains 5 values and <code>additional_backgrounds_alignment</code> contains <code>["left", "top"]</code>, the third background item is aligned using <code>"left"</code>, the fourth using <code>"top"</code>, and the fifth <code>"left"</code>.
+        </p>
         <p>If not specified, defaults to <code>"right top"</code>.</p>
       </td>
     </tr>
@@ -1322,7 +1334,66 @@ Additionally, this key accepts various properties that are aliases for one of th
           <li><code>"repeat-x"</code></li>
           <li><code>"repeat-y"</code></li>
         </ul>
+        <p>
+        If the array contains fewer items than the <code>additional_backgrounds</code> array, the array is reused for the missing values. For example, if <code>additional_backgrounds</code> contains 5 values and <code>additional_backgrounds_tiling</code> contains <code>["no-repeat", "repeat-x"]</code>, the third background item is tiled using <code>"no-repeat"</code>, the fourth using <code>"repeat-x"</code>, and the fifth <code>"no-repeat"</code>.
+        </p>
         <p>If not specified, defaults to <code>"no-repeat"</code>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>additional_backgrounds_size</code></td>
+      <td>
+        <p><code>Array</code> of <code>String</code></p>
+      </td>
+      <td>
+        <p>Optional</p>
+        <p>
+          An array of values defining the size of the corresponding
+          <code>"additional_backgrounds":</code> array item. Accepts the same
+          values as the CSS
+          <a href="/en-US/docs/Web/CSS/Reference/Properties/background-size"><code>background-size</code></a>
+          property, such as <code>"auto"</code>, <code>"cover"</code>,
+          <code>"contain"</code>, or explicit width and height values (for
+          example, <code>"100px 200px"</code>).
+        </p>
+        <p>
+        If the array contains fewer items than the <code>additional_backgrounds</code> array, the array is reused for the missing values. For example, if <code>additional_backgrounds</code> contains 5 values and <code>additional_backgrounds_size</code> contains <code>["auto", "100px 100px"]</code>, the third background item is sized using <code>"auto"</code>, the fourth using <code>"100px 100px"</code>, and the fifth <code>"auto"</code>.
+        </p>
+        <p>If not specified, defaults to <code>"auto"</code>.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>backgrounds_area</code></td>
+      <td>
+        <p><code>String</code></p>
+      </td>
+      <td>
+        <p>Optional</p>
+        <p>
+          Determines the area of the browser window where the theme's background
+          images and gradients are drawn. Options include:
+        </p>
+        <ul>
+          <li>
+            <code>"auto"</code> – Firefox chooses the area based on
+            <code>additional_backgrounds_alignment</code>. If any alignment
+            value positions a background at the vertical center or bottom of the
+            header area, the backgrounds are drawn in the top toolbars.
+            Otherwise, they are drawn in the window.
+          </li>
+          <li>
+            <code>"window"</code> – the backgrounds are drawn in the whole
+            browser window, so that they extend behind vertical UI, such as the
+            sidebar and vertical tabs.
+          </li>
+          <li>
+            <code>"top_toolbars"</code> – the backgrounds are drawn only in the
+            horizontal toolbars at the top of the window, that is, the menu bar,
+            tab strip, navigation toolbar, and bookmarks toolbar. Vertical UI,
+            such as the sidebar, uses the <code>frame</code> color instead.
+          </li>
+        </ul>
+        <p>If not specified, defaults to <code>"auto"</code>.</p>
       </td>
     </tr>
     <tr>
@@ -1386,7 +1457,7 @@ A basic theme must define an image to add to the header, the accent color to use
  }
 ```
 
-Multiple images can be used to fill the header. Before Firefox version 60, use a blank or transparent header image to gain control over the placement of each additional image:
+Multiple items can be used to fill the header. Before Firefox version 60, use a blank or transparent header image to gain control over the placement of each additional item:
 
 ```json
  "theme": {
@@ -1446,9 +1517,58 @@ The following example uses most of the different values for `theme.colors`:
 
 It will give you a browser that looks like this:
 
-![A browser window with two open tabs and dark green background color in the header area. The inactive tab has a white text color. The active tab and the toolbar have a blue background color with cyan-colored text. The URL bar has an orange background with white borders, a green text color and a white-colored vertical line separator. A red-colored line is used to separate the tabs on the top and a white line to separate the tabs from the content bellow them.](theme.png)
+![A browser window with two open tabs and dark green background color in the header area. The inactive tab has a white text color. The active tab and the toolbar have a blue background color with cyan-colored text. The URL bar has an orange background with white borders, a green text color and a white-colored vertical line separator. A red-colored line is used to separate the tabs on the top and a white line to separate the tabs from the content below them.](theme.png)
 
 In this screenshot, `"toolbar_vertical_separator"` is the white vertical line in the URL bar dividing the Reader Mode icon from the other icons.
+
+This example (Firefox 153+) mixes image backgrounds with a CSS linear gradient:
+
+```json
+"theme": {
+  "images": {
+    "additional_backgrounds": [
+      "background-image1.svg",
+      "background-image2.svg",
+      { "linear-gradient": "to bottom, #FF6BBA -20%, #FFC999 50%" }
+    ]
+  },
+  "properties": {
+    "additional_backgrounds_alignment": ["right top", "left top", "right top"],
+    "additional_backgrounds_tiling": ["no-repeat", "no-repeat", "repeat-x"],
+    "additional_backgrounds_size": ["auto", "auto", "auto 144px"]
+  }
+}
+```
+
+This results in:
+
+- `background-image1.svg` displaying at the top right, at its natural size.
+- `background-image2.svg` displaying at the top left, at its natural size.
+- The `linear-gradient` displaying from the top right, tiled horizontally across the header (`repeat-x`), and sized to 144px tall (width is automatic). The gradient transitions from pink (`#FF6BBA`) at the top to peach (`#FFC999`) at the bottom.
+
+This example (Firefox 156+) restricts the background gradient to the horizontal toolbars at the top of the window, so that it doesn't extend behind the sidebar or vertical tabs. Without `backgrounds_area`, the `"right top"` alignment causes Firefox to draw the gradient in the whole window:
+
+```json
+"theme": {
+  "images": {
+    "additional_backgrounds": [
+      { "linear-gradient": "to bottom, rgb(255, 0, 128), rgb(0, 128, 255)" }
+    ]
+  },
+  "colors": {
+    "frame": "#000080",
+    "tab_background_text": "#ffffff"
+  },
+  "properties": {
+    "additional_backgrounds_alignment": ["right top"],
+    "additional_backgrounds_tiling": ["no-repeat"],
+    "additional_backgrounds_size": ["100% 100%"],
+    "backgrounds_area": "top_toolbars"
+  }
+}
+```
+
+With `backgrounds_area` set to `"top_toolbars"`, the sidebar uses the `frame` color. Changing `backgrounds_area` to `"window"` draws the gradient across the whole window instead, including behind the sidebar.
 
 ## Browser compatibility
 
@@ -1458,7 +1578,7 @@ In this screenshot, `"toolbar_vertical_separator"` is the white vertical line in
 
 In Chrome:
 
-- `colors/toolbar_text` is not used, use `colors/bookmark_text` instead.
+- `colors/toolbar_text` isn't used, use `colors/bookmark_text` instead.
 - `images/theme_frame` anchors the image to the top left of the header and if the image doesn't fill the header area tile the image.
 - all colors must be specified as an array of RGB values, like this:
 

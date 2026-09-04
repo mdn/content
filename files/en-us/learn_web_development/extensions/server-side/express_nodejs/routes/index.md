@@ -45,13 +45,13 @@ As we've already created the models, the main things we'll need to create are:
 
 Ultimately we might have pages to show lists and detail information for books, genres, authors and bookinstances, along with pages to create, update, and delete records. That's a lot to document in one article. Therefore most of this article will concentrate on setting up our routes and controllers to return "dummy" content. We'll extend the controller methods in our subsequent articles to work with model data.
 
-The first section below provides a brief "primer" on how to use the Express [Router](https://expressjs.com/en/5x/api.html#router) middleware. We'll then use that knowledge in the following sections when we set up the LocalLibrary routes.
+The first section below provides a brief "primer" on how to use the Express [Router](https://expressjs.com/en/5x/api/#router) middleware. We'll then use that knowledge in the following sections when we set up the LocalLibrary routes.
 
 ## Routes primer
 
-A route is a section of Express code that associates an HTTP verb (`GET`, `POST`, `PUT`, `DELETE`, etc.), a URL path/pattern, and a function that is called to handle that pattern.
+A route is a section of Express code that associates an [HTTP verb](/en-US/docs/Web/HTTP/Reference/Methods) (`GET`, `POST`, `PUT`, `DELETE`, etc.), a URL path/pattern, and a function that is called to handle that pattern.
 
-There are several ways to create routes. For this tutorial we're going to use the [`express.Router`](https://expressjs.com/en/guide/routing.html#express-router) middleware as it allows us to group the route handlers for a particular part of a site together and access them using a common route-prefix. We'll keep all our library-related routes in a "catalog" module, and, if we add routes for handling user accounts or other functions, we can keep them grouped separately.
+There are several ways to create routes. For this tutorial we're going to use the [`express.Router`](https://expressjs.com/en/guide/routing/#express-router) middleware as it allows us to group the route handlers for a particular part of a site together and access them using a common route-prefix. We'll keep all our library-related routes in a "catalog" module, and, if we add routes for handling user accounts or other functions, we can keep them grouped separately.
 
 > [!NOTE]
 > We discussed Express application routes briefly in our [Express Introduction > Creating route handlers](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction#creating_route_handlers). Other than providing better support for modularization (as discussed in the first subsection below), using _Router_ is very similar to defining routes directly on the _Express application object_.
@@ -115,13 +115,13 @@ The callback takes three arguments (usually named as shown: `req`, `res`, `next`
 >
 > The router function above takes a single callback, but you can specify as many callback arguments as you want, or an array of callback functions. Each function is part of the middleware chain, and will be called in the order it is added to the chain (unless a preceding function completes the request).
 
-The callback function here calls [`send()`](https://expressjs.com/en/5x/api.html#res.send) on the response to return the string "About this wiki" when we receive a GET request with the path (`/about`). There are a [number of other response methods](https://expressjs.com/en/guide/routing.html#response-methods) for ending the request/response cycle. For example, you could call [`res.json()`](https://expressjs.com/en/5x/api.html#res.json) to send a JSON response or [`res.sendFile()`](https://expressjs.com/en/5x/api.html#res.sendFile) to send a file. The response method that we'll be using most often as we build up the library is [`render()`](https://expressjs.com/en/5x/api.html#res.render), which creates and returns HTML files using templates and data—we'll talk a lot more about that in a later article!
+The callback function here calls [`send()`](https://expressjs.com/en/5x/api/#res.send) on the response to return the string "About this wiki" when we receive a GET request with the path (`/about`). There are a [number of other response methods](https://expressjs.com/en/guide/routing/#response-methods) for ending the request/response cycle. For example, you could call [`res.json()`](https://expressjs.com/en/5x/api/#res.json) to send a JSON response or [`res.sendFile()`](https://expressjs.com/en/5x/api/#res.sendFile) to send a file. The response method that we'll be using most often as we build up the library is [`render()`](https://expressjs.com/en/5x/api/#res.render), which creates and returns HTML files using templates and data—we'll talk a lot more about that in a later article!
 
 ### HTTP verbs
 
-The example routes above use the `Router.get()` method to respond to HTTP GET requests with a certain path.
+The example routes above use the `Router.get()` method to respond to HTTP `GET` requests with a certain path.
 
-The `Router` also provides route methods for all the other HTTP verbs, that are mostly used in exactly the same way: `post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`, `checkout()`, `merge()`, `m-search()`, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, and `connect()`.
+The `Router` also provides route methods for all the other [HTTP verbs](/en-US/docs/Web/HTTP/Reference/Methods), that are mostly used in exactly the same way: `post()`, `put()`, `delete()`, `options()`, `trace()`, `copy()`, `lock()`, `mkcol()`, `move()`, `purge()`, `propfind()`, `proppatch()`, `unlock()`, `report()`, `mkactivity()`, `checkout()`, `merge()`, `m-search()`, `notify()`, `subscribe()`, `unsubscribe()`, `patch()`, `search()`, and `connect()`.
 
 For example, the code below behaves just like the previous `/about` route, but only responds to HTTP POST requests.
 
@@ -130,6 +130,16 @@ router.post("/about", (req, res) => {
   res.send("About this wiki");
 });
 ```
+
+Websites should ideally use the route method (and HTTP method) that best corresponds to the operation being performed.
+For example, a client-rendered application should use `Router.get()` for reading from the database, `Router.post()` for creating new records, `Router.put()` or `Router.patch()` for updating records, and `Router.delete()` for deleting data.
+
+Note, however, that server-rendered applications, such as the one demonstrated by this tutorial, commonly use `Router.post()` for all routes that modify data.
+The reason for this is that, by default, HTML `<form>` elements are only able to send [`GET`](/en-US/docs/Web/HTTP/Reference/Methods/GET) and [`POST`](/en-US/docs/Web/HTTP/Reference/Methods/POST) requests.
+
+There are various workarounds for this limitation, such as encoding the "desired" HTTP verb in a `POST` request and using the [method-override](https://www.npmjs.com/package/method-override) Express middleware to modify the request to the appropriate HTTP verb before it is passed to the router.
+For basic applications, rewriting code just to use the correct HTTP verbs is usually overkill.
+It may be worthwhile to improve server logging, or if the server needs to handle both server and client-side rendered content through the same endpoint.
 
 ### Route paths
 
@@ -204,7 +214,7 @@ If you want to use them, you must escape them with a backslash (`\`).
 You also can't use the pipe character (`|`) in a regular expression.
 
 That's all you need to get started with routes.
-If needed, you can find more information in the Express docs: [Basic routing](https://expressjs.com/en/starter/basic-routing.html) and [Routing guide](https://expressjs.com/en/guide/routing.html). The following sections show how we'll set up our routes and controllers for the LocalLibrary.
+If needed, you can find more information in the Express docs: [Basic routing](https://expressjs.com/en/starter/basic-routing/) and [Routing guide](https://expressjs.com/en/guide/routing/). The following sections show how we'll set up our routes and controllers for the LocalLibrary.
 
 ### Handling errors and exceptions in the route functions
 
@@ -286,7 +296,7 @@ router.get("/about", (req, res, next) => {
 });
 ```
 
-For more information see [Error handling](https://expressjs.com/en/guide/error-handling.html).
+For more information see [Error handling](https://expressjs.com/en/guide/error-handling/).
 
 ## Routes needed for the LocalLibrary
 
@@ -685,7 +695,8 @@ module.exports = router;
 
 The module requires Express and then uses it to create a `Router` object. The routes are all set up on the router, which is then exported.
 
-The routes are defined either using `.get()` or `.post()` methods on the router object. All the paths are defined using strings (we don't use string patterns or regular expressions).
+The routes are defined either using `.get()` or `.post()` methods on the router object.
+All the paths are defined using strings (we don't use string patterns or regular expressions).
 Routes that act on some specific resource (e.g., book) use path parameters to get the object id from the URL.
 
 The handler functions are all imported from the controller modules we created in the previous section.
@@ -704,7 +715,7 @@ router.get("/", (req, res) => {
 ```
 
 > [!NOTE]
-> This is our first use of the [redirect()](https://expressjs.com/en/5x/api.html#res.redirect) response method. This redirects to the specified page, by default sending HTTP status code "302 Found". You can change the status code returned if needed, and supply either absolute or relative paths.
+> This is our first use of the [redirect()](https://expressjs.com/en/5x/api/#res.redirect) response method. This redirects to the specified page, by default sending HTTP status code "302 Found". You can change the status code returned if needed, and supply either absolute or relative paths.
 
 ### Update app.js
 
@@ -771,7 +782,7 @@ In our next article we'll create a proper welcome page for the site, using views
 
 ## See also
 
-- [Basic routing](https://expressjs.com/en/starter/basic-routing.html) (Express docs)
-- [Routing guide](https://expressjs.com/en/guide/routing.html) (Express docs)
+- [Basic routing](https://expressjs.com/en/starter/basic-routing/) (Express docs)
+- [Routing guide](https://expressjs.com/en/guide/routing/) (Express docs)
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

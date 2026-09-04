@@ -120,6 +120,10 @@
       "inh": "",
       "impl": []
     },
+    "AudioPlaybackStats": {
+      "inh": "",
+      "impl": []
+    },
     "AudioProcessingEvent": {
       "inh": "Event",
       "impl": []
@@ -170,6 +174,10 @@
     },
     "AuthenticatorResponse": {
       "inh": "",
+      "impl": []
+    },
+    "AutofillEvent": {
+      "inh": "Event",
       "impl": []
     },
     "BackgroundFetchEvent": {
@@ -408,6 +416,10 @@
       "inh": "EventTarget",
       "impl": []
     },
+    "ClipboardChangeEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "ClipboardEvent": {
       "inh": "Event",
       "impl": []
@@ -484,6 +496,10 @@
       "inh": "",
       "impl": []
     },
+    "CrashReportContext": {
+      "inh": "",
+      "impl": []
+    },
     "CreateMonitor": {
       "inh": "EventTarget",
       "impl": []
@@ -500,6 +516,10 @@
       "inh": "",
       "impl": []
     },
+    "CrossOriginStorageManager": {
+      "inh": "",
+      "impl": []
+    },
     "Crypto": {
       "inh": "",
       "impl": []
@@ -510,6 +530,14 @@
     },
     "CSSAnimation": {
       "inh": "Animation",
+      "impl": []
+    },
+    "CSSApplyBlockRule": {
+      "inh": "CSSGroupingRule",
+      "impl": []
+    },
+    "CSSApplyStatementRule": {
+      "inh": "CSSRule",
       "impl": []
     },
     "CSSColor": {
@@ -530,6 +558,14 @@
     },
     "CSSContainerRule": {
       "inh": "CSSConditionRule",
+      "impl": []
+    },
+    "CSSContentsBlockRule": {
+      "inh": "CSSGroupingRule",
+      "impl": []
+    },
+    "CSSContentsStatementRule": {
+      "inh": "CSSRule",
       "impl": []
     },
     "CSSCounterStyleRule": {
@@ -664,6 +700,10 @@
       "inh": "CSSConditionRule",
       "impl": []
     },
+    "CSSMixinRule": {
+      "inh": "CSSGroupingRule",
+      "impl": []
+    },
     "CSSNamespaceRule": {
       "inh": "CSSRule",
       "impl": []
@@ -741,7 +781,7 @@
       "impl": []
     },
     "CSSPseudoElement": {
-      "inh": "EventTarget",
+      "inh": "",
       "impl": []
     },
     "CSSRGB": {
@@ -802,6 +842,10 @@
     },
     "CSSStyleValue": {
       "inh": "",
+      "impl": []
+    },
+    "CSSSupportsConditionRule": {
+      "inh": "CSSGroupingRule",
       "impl": []
     },
     "CSSSupportsRule": {
@@ -1252,10 +1296,6 @@
       "inh": "",
       "impl": []
     },
-    "ForDebuggingOnly": {
-      "inh": "",
-      "impl": []
-    },
     "FormData": {
       "inh": "",
       "impl": []
@@ -1310,10 +1350,6 @@
     },
     "GeolocationPositionError": {
       "inh": "",
-      "impl": []
-    },
-    "GeolocationSensor": {
-      "inh": "Sensor",
       "impl": []
     },
     "Global": {
@@ -1552,6 +1588,10 @@
       "inh": "HTMLElement",
       "impl": []
     },
+    "HTMLCameraElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
     "HTMLCanvasElement": {
       "inh": "HTMLElement",
       "impl": []
@@ -1624,6 +1664,10 @@
       "inh": "HTMLElement",
       "impl": []
     },
+    "HTMLGeolocationElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
     "HTMLHeadElement": {
       "inh": "HTMLElement",
       "impl": []
@@ -1689,6 +1733,10 @@
       "impl": []
     },
     "HTMLMeterElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
+    "HTMLMicrophoneElement": {
       "inh": "HTMLElement",
       "impl": []
     },
@@ -1832,6 +1880,10 @@
       "inh": "HTMLElement",
       "impl": []
     },
+    "HTMLUserMediaElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
     "HTMLVideoElement": {
       "inh": "HTMLMediaElement",
       "impl": []
@@ -1960,24 +2012,8 @@
       "inh": "",
       "impl": []
     },
-    "InterestGroupBiddingAndScoringScriptRunnerGlobalScope": {
-      "inh": "InterestGroupScriptRunnerGlobalScope",
-      "impl": []
-    },
-    "InterestGroupBiddingScriptRunnerGlobalScope": {
-      "inh": "InterestGroupBiddingAndScoringScriptRunnerGlobalScope",
-      "impl": []
-    },
-    "InterestGroupReportingScriptRunnerGlobalScope": {
-      "inh": "InterestGroupScriptRunnerGlobalScope",
-      "impl": []
-    },
-    "InterestGroupScoringScriptRunnerGlobalScope": {
-      "inh": "InterestGroupBiddingAndScoringScriptRunnerGlobalScope",
-      "impl": []
-    },
-    "InterestGroupScriptRunnerGlobalScope": {
-      "inh": "",
+    "InteractionContentfulPaint": {
+      "inh": "PerformanceEntry",
       "impl": []
     },
     "IntersectionObserver": {
@@ -2025,6 +2061,14 @@
       "impl": []
     },
     "LanguageDetector": {
+      "inh": "",
+      "impl": []
+    },
+    "LanguageModel": {
+      "inh": "EventTarget",
+      "impl": []
+    },
+    "LanguageModelParams": {
       "inh": "",
       "impl": []
     },
@@ -2094,6 +2138,10 @@
     },
     "ManagedSourceBuffer": {
       "inh": "SourceBuffer",
+      "impl": []
+    },
+    "MathMLAnchorElement": {
+      "inh": "MathMLElement",
       "impl": []
     },
     "MathMLElement": {
@@ -2196,11 +2244,23 @@
       "inh": "AudioNode",
       "impl": []
     },
+    "MediaStreamTrackAudioStats": {
+      "inh": "",
+      "impl": []
+    },
     "MediaStreamTrackEvent": {
       "inh": "Event",
       "impl": []
     },
+    "MediaStreamTrackHandle": {
+      "inh": "",
+      "impl": []
+    },
     "MediaStreamTrackProcessor": {
+      "inh": "",
+      "impl": []
+    },
+    "MediaStreamTrackVideoStats": {
       "inh": "",
       "impl": []
     },
@@ -2282,6 +2342,10 @@
     },
     "MLTensor": {
       "inh": "",
+      "impl": []
+    },
+    "ModelContext": {
+      "inh": "EventTarget",
       "impl": []
     },
     "Module": {
@@ -2476,6 +2540,10 @@
       "inh": "Sensor",
       "impl": []
     },
+    "Origin": {
+      "inh": "",
+      "impl": []
+    },
     "OscillatorNode": {
       "inh": "AudioScheduledSourceNode",
       "impl": []
@@ -2556,6 +2624,10 @@
       "inh": "EventTarget",
       "impl": []
     },
+    "PerformanceContainerTiming": {
+      "inh": "PerformanceEntry",
+      "impl": []
+    },
     "PerformanceElementTiming": {
       "inh": "PerformanceEntry",
       "impl": []
@@ -2616,7 +2688,15 @@
       "inh": "",
       "impl": []
     },
+    "PerformanceSoftNavigation": {
+      "inh": "PerformanceEntry",
+      "impl": []
+    },
     "PerformanceTiming": {
+      "inh": "",
+      "impl": []
+    },
+    "PerformanceTimingConfidence": {
       "inh": "",
       "impl": []
     },
@@ -2728,10 +2808,6 @@
       "inh": "",
       "impl": []
     },
-    "PrivateAggregation": {
-      "inh": "",
-      "impl": []
-    },
     "ProcessingInstruction": {
       "inh": "CharacterData",
       "impl": []
@@ -2748,11 +2824,7 @@
       "inh": "Event",
       "impl": []
     },
-    "ProtectedAudience": {
-      "inh": "",
-      "impl": []
-    },
-    "ProtectedAudienceUtilities": {
+    "Proofreader": {
       "inh": "",
       "impl": []
     },
@@ -2837,10 +2909,6 @@
       "impl": []
     },
     "ReadableStreamDefaultReader": {
-      "inh": "",
-      "impl": []
-    },
-    "RealTimeReporting": {
       "inh": "",
       "impl": []
     },
@@ -2980,6 +3048,14 @@
       "inh": "",
       "impl": []
     },
+    "RTCRtpSFrameDecryptor": {
+      "inh": "EventTarget",
+      "impl": []
+    },
+    "RTCRtpSFrameEncryptor": {
+      "inh": "",
+      "impl": []
+    },
     "RTCRtpTransceiver": {
       "inh": "",
       "impl": []
@@ -3084,8 +3160,12 @@
       "inh": "EventTarget",
       "impl": []
     },
-    "SFrameTransform": {
+    "SFrameDecryptorStream": {
       "inh": "EventTarget",
+      "impl": []
+    },
+    "SFrameEncryptorStream": {
+      "inh": "",
       "impl": []
     },
     "SFrameTransformErrorEvent": {
@@ -3098,42 +3178,6 @@
     },
     "ShadowRoot": {
       "inh": "DocumentFragment",
-      "impl": []
-    },
-    "SharedStorage": {
-      "inh": "",
-      "impl": []
-    },
-    "SharedStorageAppendMethod": {
-      "inh": "SharedStorageModifierMethod",
-      "impl": []
-    },
-    "SharedStorageClearMethod": {
-      "inh": "SharedStorageModifierMethod",
-      "impl": []
-    },
-    "SharedStorageDeleteMethod": {
-      "inh": "SharedStorageModifierMethod",
-      "impl": []
-    },
-    "SharedStorageModifierMethod": {
-      "inh": "",
-      "impl": []
-    },
-    "SharedStorageSetMethod": {
-      "inh": "SharedStorageModifierMethod",
-      "impl": []
-    },
-    "SharedStorageWorklet": {
-      "inh": "Worklet",
-      "impl": []
-    },
-    "SharedStorageWorkletGlobalScope": {
-      "inh": "WorkletGlobalScope",
-      "impl": []
-    },
-    "SharedStorageWorkletNavigator": {
-      "inh": "",
       "impl": []
     },
     "SharedWorker": {
@@ -4338,6 +4382,18 @@
     },
     "XRFrame": {
       "inh": "",
+      "impl": []
+    },
+    "XRGPUBinding": {
+      "inh": "",
+      "impl": []
+    },
+    "XRGPUDepthInformation": {
+      "inh": "XRDepthInformation",
+      "impl": []
+    },
+    "XRGPUSubImage": {
+      "inh": "XRSubImage",
       "impl": []
     },
     "XRHand": {

@@ -11,7 +11,7 @@ Fired when the user has selected one of the suggestions your extension has added
 Use this event to handle the user's selection, generally by opening the corresponding page. The event listener is passed:
 
 - the user's selection
-- a {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}}: use this to determine whether to open the new page in the current tab, in a new foreground tab, or in a new background tab.
+- an {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}}: use this to determine whether to open the new page in the current tab, in a new foreground tab, or in a new background tab.
 
 ## Syntax
 
@@ -39,7 +39,7 @@ The listener function will be passed two parameters: a string `text`, and an {{W
 - `text`
   - : `String`. This is the value of the `content` property of the {{WebExtAPIRef("omnibox.SuggestResult")}} object that the user selected.
 - `disposition`
-  - : {{WebExtAPIRef("omnibox.OnInputEnteredDisposition", "OnInputEnteredDisposition")}}. A {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}} enumeration, indicating whether the extension should open the page in the current tab, in a new foreground tab, or in a new background tab.
+  - : {{WebExtAPIRef("omnibox.OnInputEnteredDisposition", "OnInputEnteredDisposition")}}. An {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}} enumeration, indicating whether the extension should open the page in the current tab, in a new foreground tab, or in a new background tab.
 
 ## Examples
 

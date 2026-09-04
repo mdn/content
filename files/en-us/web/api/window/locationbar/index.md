@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Window.locationbar
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 Returns the `locationbar` object.
 

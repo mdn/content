@@ -8,7 +8,7 @@ browser-compat: api.PerformanceResourceTiming.requestStart
 
 {{APIRef("Performance API")}}{{AvailableInWorkers}}
 
-The **`requestStart`** read-only property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} of the time immediately before the browser starts requesting the resource from the server, cache, or local resource. If the transport connection fails and the browser retires the request, the value returned will be the start of the retry request.
+The **`requestStart`** read-only property returns a {{domxref("DOMHighResTimeStamp","timestamp")}} of the time immediately before the browser starts requesting the resource from the server, cache, or local resource. If the transport connection fails and the browser retries the request, the value returned will be the start of the retry request.
 
 There is no _end_ property for `requestStart`. To measure the request time, calculate {{domxref("PerformanceResourceTiming.responseStart", "responseStart")}} - `requestStart` (see the example below).
 
@@ -19,6 +19,7 @@ The `requestStart` property can have the following values:
 - A {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the browser starts requesting the resource from the server.
 - `0` if the resource was instantaneously retrieved from a cache.
 - `0` if the resource is a cross-origin request and no {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header is used.
+- `0` if the resource is a canceled request.
 
 When the {{domxref("PerformanceResourceTiming.firstInterimResponseStart", "firstInterimResponseStart")}} is non-zero, that indicates it should be the same value as `requestStart` for [supporting browsers](#browser_compatibility).
 
