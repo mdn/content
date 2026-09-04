@@ -148,7 +148,7 @@ myFunction();
 
 An asynchronous function returns a promise that rejects if an error is not caught inside the function.
 To catch that error in the calling code, use the returned promise's [`catch()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch) method, or `await` the function call inside a `try...catch` block.
-Calling the function inside a `try...catch` block without `await` will not catch the rejection, because the error is thrown later, after control as already exited the `try...catch`.
+Calling the function inside a `try...catch` block without `await` does not catch the rejection because it is `await` that converts the returned rejected promise into a thrown error.
 
 The asynchronous methods above are run in sequence.
 If the methods don't depend on each other then you can run them in parallel and finish the whole operation more quickly.
