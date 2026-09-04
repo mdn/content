@@ -43,13 +43,12 @@ Choose an image format based on factors such as compression, quality, browser su
 The [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types) explains the trade-offs in detail.
 
 For raster images, prefer [WebP](/en-US/docs/Web/Media/Guides/Formats/Image_types#webp_image) or [AVIF](/en-US/docs/Web/Media/Guides/Formats/Image_types#avif_image), which generally provide better compression than PNG, JPEG, and GIF.
-If you need to support browsers without WebP or AVIF support, use the {{HTMLElement("picture")}} element to provide a PNG or JPEG fallback.
+
+You should also consider [JPEG XL](/en-US/docs/Web/Media/Guides/Formats/Image_types#jpeg_xl_image) for large, high-resolution raster images, as it allows progressive rendering on most browsers, which can display an initial version before the full image downloads.
+
+If you need to support browsers without WebP, AVIF, or JPEG XL support, use the {{HTMLElement("picture")}} element to provide a PNG or JPEG fallback.
 
 For images that must be drawn accurately at different sizes, use [SVG](/en-US/docs/Web/Media/Guides/Formats/Image_types#svg_scalable_vector_graphics).
-
-When browser support allows, consider [JPEG XL](https://jpeg.org/jpegxl/) for large, high-resolution raster images.
-It supports progressive rendering, which can display an initial version before the full image downloads.
-Use the {{HTMLElement("picture")}} element to provide a fallback for browsers that do not support it.
 
 ## Image loading errors
 
