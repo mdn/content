@@ -92,7 +92,7 @@ The `loadTexture()` routine starts by creating a WebGL texture object `texture` 
 
 To load the texture from the image file, it then creates an `Image` object and assigns the `src` to the URL for our image we wish to use as our texture. The function we assign to `image.onload` will be called once the image has finished downloading. At that point we again call {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}} this time using the image as the source for the texture. After that we set up filtering and wrapping for the texture based on whether or not the image we download was a power of 2 in both dimensions or not.
 
-WebGL1 can only use non power of 2 textures with filtering set to `NEAREST` or `LINEAR` and it can not generate a mipmap for them. Their wrapping mode must also be set to `CLAMP_TO_EDGE`. On the other hand if the texture is a power of 2 in both dimensions then WebGL can do higher quality filtering, it can use mipmap, and it can set the wrapping mode to `REPEAT` or `MIRRORED_REPEAT`.
+WebGL1 can only use non power of 2 textures with filtering set to `NEAREST` or `LINEAR` and it cannot generate a mipmap for them. Their wrapping mode must also be set to `CLAMP_TO_EDGE`. On the other hand if the texture is a power of 2 in both dimensions then WebGL can do higher quality filtering, it can use mipmap, and it can set the wrapping mode to `REPEAT` or `MIRRORED_REPEAT`.
 
 An example of a repeated texture is tiling an image of a few bricks to cover a brick wall.
 

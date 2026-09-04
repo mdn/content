@@ -410,7 +410,7 @@ This CSP:
 5. Forces the browser to treat all the resources that are served over HTTP as if they were loaded securely over HTTPS by setting the `upgrade-insecure-requests` directive
    - **`upgrade-insecure-requests` does not ensure HTTPS for the top-level navigation. If you want to force the website itself to be loaded over HTTPS you must include the `Strict-Transport-Security` header**
 
-6. Includes the `Content-Security-Policy` header in all responses that are able to execute scripting. This includes the commonly used file types: HTML, XML and PDF documents. Although JavaScript files can not execute scripts in a "browsing context", they are included to target [web workers](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#csp_in_workers)
+6. Includes the `Content-Security-Policy` header in all responses that are able to execute scripting. This includes the commonly used file types: HTML, XML and PDF documents. Although JavaScript files cannot execute scripts in a "browsing context", they are included to target [web workers](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#csp_in_workers)
 
 ## Directory access
 

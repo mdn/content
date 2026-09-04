@@ -9,7 +9,7 @@ sidebar: cssref
 
 The **`flood-opacity`** [CSS](/en-US/docs/Web/CSS) property defines the opacity of the current filter primitive subregion in {{SVGElement("feFlood")}} and {{SVGElement("feDropShadow")}} elements within a {{SVGElement("filter")}}. If present, it overrides the element's {{SVGAttr("flood-opacity")}} attribute.
 
-The property value impacts the {{cssxref("flood-color")}}'s alpha channel; it can increase the transparency of a `flood-color` but can not make the color defined by the `flood-color` property more opaque.
+The property value impacts the {{cssxref("flood-color")}}'s alpha channel; it can increase the transparency of a `flood-color` but cannot make the color defined by the `flood-color` property more opaque.
 
 > [!NOTE]
 > The `flood-opacity` property only applies to {{SVGElement("feFlood")}} and {{SVGElement("feDropShadow")}} elements nested in an {{SVGElement("svg")}}. It doesn't apply to other SVG, HTML, or pseudo-elements.
