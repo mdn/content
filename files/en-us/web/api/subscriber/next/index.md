@@ -22,7 +22,7 @@ next(value)
 
 ### Parameters
 
-- `value` {{optional_inline}}
+- `value`
   - : The current value being passed through the observable stream.
 
 ### Return value

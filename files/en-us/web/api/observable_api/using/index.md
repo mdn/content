@@ -231,7 +231,7 @@ The `AbortController` method is more flexible where your unsubscribe condition i
 
 ## Creating custom observables
 
-Now we've looked at the _usage_ side of observables, we turn to the _creation_ side. Like Promises, observables are created with a callback. The callback's job is to do work and push data to its subscribers. This callback isn't called immediately: it's called each time it's subscribed to, either by `subscribe()`, by one of the [aggregation methods](#aggregating_values), or by subscribing to a downstream observable created by a [transformation method](#transforming_an_observable). It receives a {{domxref("Subscriber")}} object. You can call methods on this object to dispatch data to all observers subscribed to the observable.
+Now we've looked at the _usage_ side of observables, we turn to the _creation_ side. Like Promises, observables are created with a callback. The callback's job is to do work and push data to its subscribers. This callback isn't called immediately: it's called when the first observer subscribes, either by `subscribe()`, by one of the [aggregation methods](#aggregating_values), or by subscribing to a downstream observable created by a [transformation method](#transforming_an_observable). It receives a {{domxref("Subscriber")}} object. You can call methods on this object to dispatch data to all observers subscribed to the observable. Additional observers share the same underlying subscription until it completes, errors, or all observers unsubscribe. After that, the callback is called again when the next observer subscribes.
 
 - `next()`: Dispatches data to the `next()` method of all observers. This can be called any number of times.
 - `complete()`: Dispatches data to the `complete()` method of all observers. Called when the stream has been successfully completed and no more data will be sent.
@@ -425,7 +425,7 @@ Next, we create an observable on the submit `<button>` by calling {{domxref("Eve
 itemEntryBtn.when("click").subscribe(addItemToList);
 ```
 
-The `addItemToList()` function first checks whether the text `<input>` is empty — if so, we `return` out of the function. We don't want to add empty list items. If it is not empty, we add an {{htmlelement("li")}} element as a child of our `<ul>` element using {{domxref("Element.innerHTML", "innerHTML")}}, which contains the input value plus a "Remove" `<button>`.
+The `addItemToList()` function first checks whether the text `<input>` is empty — if so, we `return` out of the function. We don't want to add empty list items. If it is not empty, we create an {{htmlelement("li")}} element containing the input value plus a "Remove" `<button>`, then add it as a child of our `<ul>` element.
 
 Finally, we empty the input value and {{domxref("HTMLElement.focus", "focus()")}} it, ready to enter the next list item.
 
@@ -435,8 +435,12 @@ function addItemToList() {
     return;
   }
 
-  const listItem = `<li>${itemEntryInput.value} <button>Remove</button></li>`;
-  list.innerHTML += listItem;
+  const listItem = document.createElement("li");
+  listItem.textContent = itemEntryInput.value;
+  const removeBtn = document.createElement("button");
+  removeBtn.textContent = "Remove";
+  listItem.append(removeBtn);
+  list.append(listItem);
 
   itemEntryInput.value = "";
   itemEntryInput.focus();

@@ -22,8 +22,8 @@ error(msg)
 
 ### Parameters
 
-- `msg` {{optional_inline}}
-  - : A string representing the exception that was thrown.
+- `msg`
+  - : A value representing the error. This can be any JavaScript value, but is typically an {{jsxref("Error")}} object.
 
 ### Return value
 

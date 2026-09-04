@@ -21,7 +21,7 @@ flatMap(mapper)
 ### Parameters
 
 - `mapper`
-  - : A callback function that transforms each value passed through the observable into a new value before mapping it to the rest of the stream. The callback is passed two arguments:
+  - : A callback function that transforms each value passed through the observable. It must return an object that can be converted to an observable by {{domxref("Observable.from_static", "Observable.from()")}}: an {{domxref("Observable")}}, a {{jsxref("Promise")}}, an iterable object, or an async iterable object. The callback is passed two arguments:
     - `value`
       - : The current value being mapped.
     - `index`

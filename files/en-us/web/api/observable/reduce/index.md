@@ -17,7 +17,6 @@ The **`reduce()`** method of the {{domxref("Observable")}} interface returns a p
 ```js-nolint
 reduce(reducer)
 reduce(reducer, initialValue)
-reduce(reducer, options)
 reduce(reducer, initialValue, options)
 ```
 
@@ -41,6 +40,11 @@ reduce(reducer, initialValue, options)
 ### Return value
 
 A {{jsxref("Promise")}} that fulfills with the final value of the `accumulator` after the last iteration.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : The returned `Promise` rejects with this error if the observable completes without emitting any values and no `initialValue` was provided. If an `initialValue` was provided, the promise fulfills with that value instead.
 
 ## Examples
 
