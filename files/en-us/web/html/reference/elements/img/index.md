@@ -37,7 +37,7 @@ There are many other attributes to achieve various purposes:
 
 ## Choosing an image format
 
-The HTML standard doesn't list what image formats to support, so {{glossary("user agent","user agents")}} may support different formats.
+The HTML standard doesn't list what image formats to support, so {{glossary("user agent","user agents")}} may allow different formats.
 
 Choose an image format based on factors such as compression, quality, browser support, and whether you need features such as transparency or animation.
 The [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types) explains the trade-offs in detail.
