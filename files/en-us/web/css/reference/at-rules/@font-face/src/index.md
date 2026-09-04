@@ -232,8 +232,8 @@ For example:
 @font-face {
   font-family: "MgOpenModernaBold";
   src:
-    url("MgOpenModernaBoldIncr.woff2") format("woff2")
-    url("MgOpenModernaBold.woff2") format("woff2")
+    url("MgOpenModernaBoldIncr.woff2") format("woff2") tech(incremental),
+    url("MgOpenModernaBold.woff2") format("woff2");
 }
 ```
 
@@ -263,7 +263,7 @@ The block of CSS inside `@supports` will be applied if the user agent supports `
 @supports font-tech(color-COLRv1) {
   @font-face {
     font-family: "Trickster";
-    src: url("trickster-COLRv1.woff2") format(woff2) tech(color-COLRv1);
+    src: url("trickster-COLRv1.woff2") format("woff2") tech(color-COLRv1);
   }
 
   .colored_text {
