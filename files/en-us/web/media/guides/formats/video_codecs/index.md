@@ -1072,7 +1072,28 @@ HEVC is a proprietary format and is covered by a number of patents. Licensing is
         {{Glossary("RTP")}} /
         <a href="/en-US/docs/Web/API/WebRTC_API">WebRTC</a> compatible
       </th>
-      <td>No</td>
+      <td>
+        <table class="standard-table">
+          <tbody>
+            <tr>
+              <th scope="row">Feature</th>
+              <th scope="col">Chrome</th>
+              <th scope="col">Edge</th>
+              <th scope="col">Firefox</th>
+              <th scope="col">Opera</th>
+              <th scope="col">Safari</th>
+            </tr>
+            <tr>
+              <th scope="row">HEVC / H.265 support</th>
+              <td>136</td>
+              <td>136</td>
+              <td>No</td>
+              <td>121</td>
+              <td>No</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
     </tr>
     <tr>
       <th scope="row">Supporting/Maintaining organization</th>
