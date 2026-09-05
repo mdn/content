@@ -95,6 +95,8 @@ However, if you need certain content in the background page, you can specify one
 
 You cannot specify background scripts and a background page.
 
+To support background scripts on browsers that use service workers (such as Chrome) and those that use event pages, specify both `scripts` and `service_worker` in the `background` key. The [script-on-click](https://github.com/mdn/webextensions-examples/tree/main/script-on-click) example demonstrates this cross-browser pattern.
+
 ### Initialize the extension
 
 Listen to {{WebExtAPIRef("runtime.onInstalled")}} to initialize an extension on installation. Use this event to set a state or for one-time initialization.
