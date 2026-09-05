@@ -41,7 +41,7 @@ font-style: oblique 40deg;
 
 ```css interactive-example
 @font-face {
-  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.woff2");
   font-family: "Amstelvar";
   font-style: normal;
 }
@@ -102,7 +102,7 @@ Click "Play" in the code blocks below to edit the example in the MDN Playground.
 
 ```css live-sample___oblique-example
 @font-face {
-  src: url("https://mdn.github.io/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  src: url("https://mdn.github.io/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.woff2");
   font-family: "AmstelvarAlpha";
   font-style: normal;
 }

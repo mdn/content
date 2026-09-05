@@ -122,14 +122,8 @@ body {
 
 @font-face {
   font-family: "HeydingsControlsRegular";
-  src: url("https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/fonts/heydings_controls-webfont.eot");
-  src:
-    url("https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/fonts/heydings_controls-webfont.eot?#iefix")
-      format("embedded-opentype"),
-    url("https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/fonts/heydings_controls-webfont.woff")
-      format("woff"),
-    url("https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/fonts/heydings_controls-webfont.ttf")
-      format("truetype");
+  src: url("https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/fonts/heydings_controls-webfont.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -420,14 +414,8 @@ To get started with this example, follow these steps:
    ```css
    @font-face {
      font-family: "HeydingsControlsRegular";
-     src: url("https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/fonts/heydings_controls-webfont.eot");
-     src:
-       url("https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/fonts/heydings_controls-webfont.eot?#iefix")
-         format("embedded-opentype"),
-       url("https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/fonts/heydings_controls-webfont.woff")
-         format("woff"),
-       url("https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/fonts/heydings_controls-webfont.ttf")
-         format("truetype");
+     src: url("https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/fonts/heydings_controls-webfont.woff")
+       format("woff");
      font-weight: normal;
      font-style: normal;
    }
@@ -596,14 +584,8 @@ Next, let's look at our button icons:
 ```css
 @font-face {
   font-family: "HeydingsControlsRegular";
-  src: url("https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/fonts/heydings_controls-webfont.eot");
-  src:
-    url("https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/fonts/heydings_controls-webfont.eot?#iefix")
-      format("embedded-opentype"),
-    url("https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/fonts/heydings_controls-webfont.woff")
-      format("woff"),
-    url("https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/fonts/heydings_controls-webfont.ttf")
-      format("truetype");
+  src: url("https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/fonts/heydings_controls-webfont.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
