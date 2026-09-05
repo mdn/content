@@ -28,27 +28,39 @@ No-Vary-Search: key-order
 No-Vary-Search: params
 No-Vary-Search: params=("param1" "param2")
 No-Vary-Search: params, except=("param1" "param2")
-No-Vary-Search: key-order, params, except=("param1")
+No-Vary-Search: key-order, params, except=("param1" "param2")
 ```
 
 ## Directives
 
 - `key-order` {{optional_inline}}
-  - : Indicates that URLs will not be cached as separate entries if _the order_ in which parameters appear in the URL is the only difference.
-    The presence of other parameters _will_ cause URLs to be cached separately.
+  - : Indicates that the order of parameters in a URL does not affect the content of the returned response.
 - `params` {{optional_inline}}
   - : Either a boolean or a list of strings:
-    - As a boolean (`params`), it indicates that URLs that differ only by their parameters will not be cached as separate entries.
-    - An inner list of space-separated strings (`params=("param1" "param2")`).
-      Indicates that URLs that differ only by the listed parameters will not be cached as separate entries.
-      The presence of other parameters _will_ cause them to be cached separately.
+    - As a boolean (`params`), it indicates that no parameter affects the content of the returned response.
+      Separate cache entries are therefore not needed for any combination or order of parameters.
+    - As an inner list of space-separated strings (`params=("param1" "param2")`), it indicates the parameters that do not affect the content of the returned response.
+      Responses for URLs that differ only by the listed parameters should not be cached as separate entries.
+      Other parameters may affect the response, so URLs that differ by them should be cached separately.
 - `except` {{optional_inline}}
-  - : An inner list of space-separated strings (`except=("param1" "param2")`).
-    Indicates that URLs that differ only by the listed parameters _will_ be cached as separate entries.
+  - : An inner list of space-separated strings (`except=("param1" "param2")`) that indicates the specific parameters that change the content of the returned response.
+    These are the only parameters for which a different value should result in the response being cached as separate entries.
     A boolean `params` directive has to be included for it to take effect (`params, except=("param1" "param2")`).
     The presence of other parameters that are not in the `except=` list _won't_ cause URLs to be cached as separate entries.
 
 ## Description
+
+By default, a response stored for one URL is only ever reused for a request to that exact same URL.
+Any difference in the query string makes it a different URL: a different parameter value, an extra parameter, or even the same parameters written in a different order.
+
+This is often stricter than necessary.
+Query parameters are frequently used for things that don't change the response the server sends, such as analytics tags and values that only client-side JavaScript acts on.
+A page may also build its query string in an inconsistent parameter order.
+The browser has no way to know what is relevant, so it fetches from the network whenever it sees a query string it hasn't requested before.
+It does this even when the new response duplicates one the browser has already cached.
+
+`No-Vary-Search` gives the server a way to tell the browser whether parameter order matters, and which parameters (if any) affect the returned response.
+Where the rules allow it, the browser can then serve a stored response for a URL it has not fetched before.
 
 ### Relationship with the Speculation Rules API
 
