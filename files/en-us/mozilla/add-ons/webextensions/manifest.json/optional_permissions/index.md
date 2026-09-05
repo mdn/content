@@ -54,7 +54,7 @@ These are the same as the host permissions you can specify in the [`permissions`
 
 The optional API permissions are:
 
-- `activeTab`
+- [`activeTab`](/en-US/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission)
 - `background`
 - `bookmarks`
 - `browserSettings`
