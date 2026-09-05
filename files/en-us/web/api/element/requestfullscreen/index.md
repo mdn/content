@@ -124,7 +124,7 @@ The user has to interact with the page or a UI element in order for this feature
 
 Fullscreen mode is controlled by the [Permissions-Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) directive {{HTTPHeader("Permissions-Policy/fullscreen","fullscreen")}}.
 
-The default allowlist for `screen-wake-lock` is `self`.
+The default allowlist for `fullscreen` is `self`.
 This allows fullscreen usage in same-origin nested frames but prevents them in third-party content.
 Third party usage can be enabled by the server first setting the `Permissions-Policy` header to grant permission a particular third party origin.
 
