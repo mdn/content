@@ -90,13 +90,17 @@ The [PWABuilder](https://docs.pwabuilder.com/#/builder/quick-start) is a tool to
 
 If you have added your app to the app store, users can install it from there, just like a platform-specific app.
 
+It is possible for developers to create their own app catalog that includes install buttons for different apps using the {{domxref("Navigator.install()")}} method and the {{htmlelement("install")}} element (see [Installing PWAs from a web UI](#installing_pwas_from_a_web_ui) for more information).
+
 ## Installation from the web
 
 When a supporting browser determines that a web app meets the installability criteria described earlier, it will promote the app to the user for installation. The user will be offered the chance to install the app. This means you can distribute your PWA as a website, making it discoverable through web search, and also distribute it in app stores, so users can find it there.
 
 This is a great example of the way PWAs can offer you the best of both worlds. It's also a good example of how progressive enhancement works with PWAs: if a user encounters your PWA on the web, using a browser that can't install it, they can use it just like a normal website.
 
-The UI for installing a PWA from the web varies from one browser to another, and from one platform to another. For example, a browser might include an "Install" icon in the URL bar when the user navigates to the page:
+### Browser chrome installation
+
+The browser chrome UI for installing a PWA from the web varies from one browser to another, and from one platform to another. For example, a browser might include an "Install" icon in the URL bar when the user navigates to the page:
 
 ![Chrome URL bar, showing PWA install icon](pwa-install.png)
 
@@ -104,9 +108,9 @@ When the user selects the icon, the browser displays a prompt asking if they wan
 
 The prompt displays the name and icon for the PWA, taken from the [`name`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/name) and [`icons`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/icons) manifest members.
 
-### Browser support
+#### Browser support
 
-Support for PWA installation promotion from the web varies by browser and by platform.
+Support for browser chrome installation varies by browser and by platform.
 
 On desktop:
 
@@ -120,23 +124,27 @@ On mobile:
 - On iOS 16.3 and earlier, PWAs can only be installed with Safari.
 - On iOS 16.4 and later, PWAs can be installed from the Share menu in Safari, Chrome, Edge, Firefox, and Orion.
 
-### Installing sites as apps
+#### Installing _any_ site as an app
 
-Chrome for desktop and Android, Safari for desktop, and Edge for desktop also support users installing any website as an app, whether or not it has a manifest file, and without regard to the installability criteria for the manifest file.
+Chrome for desktop and Android, Safari for desktop, and Edge for desktop also support users installing _any_ website as an app, whether or not it has a manifest file, and without regard to the installability criteria for the manifest file.
 The benefit of using a manifest file is that the browser will actively promote the site for installation when it is visited, and developers can customize installation behavior.
 
-### Triggering the install prompt
+### Installing PWAs from a web UI
 
-A PWA can provide its own in-page UI for the user to open the install prompt, instead of relying on the UI provided by the browser by default. This enables a PWA to provide some context and a reason for the user to install the PWA, and can help make the install user flow easier to discover.
+A PWA can provide its own in-page UI for the user to open the install prompt, instead of relying on the UI provided by the browser by default. This enables a PWA to provide some context and a reason for the user to install the PWA, and can help make the install user flow easier to discover and more consistent across browsers.
 
-This technique relies on the [`beforeinstallprompt`](/en-US/docs/Web/API/Window/beforeinstallprompt_event) event, which is fired on the global [`Window`](/en-US/docs/Web/API/Window) object as soon as the browser has determined that the PWA is installable. This event has a [`prompt()`](/en-US/docs/Web/API/BeforeInstallPromptEvent/prompt) method that shows the install prompt. So a PWA can:
+There are a couple of different ways to achieve this:
 
-- add its own "Install" button
-- listen for the `beforeinstallprompt` event
-- cancel the event's default behavior by calling [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault)
-- in the event handler for its own "Install" button, call [`prompt()`](/en-US/docs/Web/API/BeforeInstallPromptEvent/prompt).
-
-This is not supported on iOS.
+- The [`beforeinstallprompt`](/en-US/docs/Web/API/Window/beforeinstallprompt_event) event is fired on the global [`Window`](/en-US/docs/Web/API/Window) object as soon as the browser has determined that the PWA is installable. This event has a [`prompt()`](/en-US/docs/Web/API/BeforeInstallPromptEvent/prompt) method that shows the install prompt. This allows developers to:
+  - add an "Install" button directly on a website
+  - listen for the `beforeinstallprompt` event
+  - cancel the event's default behavior by calling [`preventDefault()`](/en-US/docs/Web/API/Event/preventDefault)
+  - in the event handler for its own "Install" button, call [`prompt()`](/en-US/docs/Web/API/BeforeInstallPromptEvent/prompt) to trigger installing the site as a PWA
+  > [!NOTE]
+  > This is not supported on iOS or Firefox.
+- The {{domxref("Navigator.install()")}} method and the {{htmlelement("install")}} element provide programmatic and declarative mechanisms for a developer to create their own PWA install buttons, either to directly install the website the user is currently navigated to as a PWA, or to install other PWAs elsewhere (by referencing their manifest URLs) as part of an app suite homepage or homegrown app store.
+  > [!NOTE]
+  > These features are easier to use than the `beforeinstallprompt` technique. They are also not supported on iOS or Firefox.
 
 ### Customizing the installation prompt
 
