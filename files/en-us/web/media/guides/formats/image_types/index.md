@@ -1357,104 +1357,28 @@ static unsigned char square8_bits[] = {
 
 ## Choosing an image format
 
-Picking the best image format for your needs is likely easier than video formats, as there are fewer options with broad support, and each tends to have a specific set of use-cases.
+Image formats are usually selected based on factors such as compression, quality, breadth and depth of browser support, and whether you need features such as transparency or animation.
 
-### Photographs
+For raster images, prefer [WebP](#webp_image) or [AVIF](#avif_image), which generally provide better compression than PNG, JPEG, and GIF.
+You should also consider [JPEG XL](/en-US/docs/Web/Media/Guides/Formats/Image_types#jpeg_xl_image) for large, high-resolution raster images, as it allows progressive rendering on most browsers, which can display an initial version before the full image downloads.
 
-Photographs typically fare well with lossy compression (depending on the encoder's configuration).
-This makes [JPEG](#jpeg_joint_photographic_experts_group_image) and [WebP](#webp_image) good choices for photographs, with JPEG being more compatible but WebP perhaps offering better compression.
-To maximize quality and minimize download time, consider providing both [using a fallback](#providing_image_fallbacks) with WebP as the first choice and JPEG as the second.
-Otherwise, JPEG is the safe choice for compatibility.
+If you need to support browsers that don't allow WebP, AVIF, or JPEG XL, use the {{HTMLElement("picture")}} element to provide a PNG or JPEG fallback.
+This is shown in [Providing image fallbacks](#providing_image_fallbacks) below.
 
-<table class="standard-table" style="max-width: 42rem">
-  <thead>
-    <tr>
-      <th scope="col" style="width: 50%">Best choice</th>
-      <th scope="col">Fallback</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>WebP or JPEG</td>
-      <td>JPEG</td>
-    </tr>
-  </tbody>
-</table>
-
-### Icons
-
-For smaller images such as icons, use a lossless format to avoid loss of detail in a size-constrained image.
-While lossless WebP is ideal for this purpose, support is not widespread yet, so PNG is a better choice unless you offer a [fallback](#providing_image_fallbacks).
-If your image contains fewer than 256 colors, GIF is an option, although PNG often compresses even smaller with its indexed compression option (PNG-8).
-
-If the icon can be represented using vector graphics, consider [SVG](#svg_scalable_vector_graphics), since it scales across various resolutions and sizes, so it's perfect for responsive design.
-Although SVG support is good, it may be worth offering a PNG fallback for older browsers.
-
-<table class="standard-table" style="max-width: 42rem">
-  <thead>
-    <tr>
-      <th scope="col" style="width: 50%">Best choice</th>
-      <th scope="col">Fallback</th>
-    </tr>
-    <tr>
-      <td>SVG, Lossless WebP, or PNG</td>
-      <td>PNG</td>
-    </tr>
-  </thead>
-</table>
-
-### Screenshots
-
-Unless you're willing to compromise on quality, you should use a lossless format for screenshots.
-This is particularly important if there's any text in your screenshot, as text easily becomes fuzzy and unclear under lossy compression.
-
-PNG is probably your best bet, but lossless WebP is arguably going to be better compressed.
-
-<table class="standard-table" style="max-width: 42rem">
-  <thead>
-    <tr>
-      <th scope="col" style="width: 50%">Best choice</th>
-      <th scope="col">Fallback</th>
-    </tr>
-    <tr>
-      <td>
-        Lossless WebP or PNG;<br />JPEG if compression artifacts aren't a
-        concern
-      </td>
-      <td>PNG or JPEG;<br />GIF for screenshots with low color counts</td>
-    </tr>
-  </thead>
-</table>
-
-### Diagrams, drawings, and charts
-
-For any image that can be represented using vector graphics, SVG is the best choice.
-Otherwise, you should use a lossless format like PNG.
-If you do choose a lossy format, such as JPEG or lossy WebP, carefully weigh the compression level to avoid causing text or other shapes to become fuzzy or unclear.
-
-<table class="standard-table" style="max-width: 42rem">
-  <thead>
-    <tr>
-      <th scope="col" style="width: 50%">Best choice</th>
-      <th scope="col">Fallback</th>
-    </tr>
-    <tr>
-      <td><a href="#svg_scalable_vector_graphics">SVG</a></td>
-      <td><a href="#png_portable_network_graphics">PNG</a></td>
-    </tr>
-  </thead>
-</table>
+For diagrams, charts, and other images that must be drawn accurately at different sizes, use [SVG](#svg_scalable_vector_graphics).
+For icons consider [SVG](#svg_scalable_vector_graphics) [WebP](#webp_image)
 
 ## Providing image fallbacks
 
 While the standard HTML {{HTMLElement("img")}} element doesn't support compatibility fallbacks for images, the {{HTMLElement("picture")}} element does.
 `<picture>` is used as a wrapper for a number of {{HTMLElement("source")}} elements, each specifying a version of the image in a different format or under different [media conditions](/en-US/docs/Web/CSS/Reference/At-rules/@media), as well as an `<img>` element which defines where to display the image and the fallback to the default or "most compatible" version.
 
-For example, if you're displaying a diagram best displayed with SVG, but wish to offer a fallback to a PNG or GIF of the diagram, you would do something like this:
+For example, if you're displaying a diagram best displayed with SVG, but wish to offer a fallback to a WebP, PNG or GIF of the diagram, you would do something like this:
 
 ```html
 <picture>
   <source srcset="diagram.svg" type="image/svg+xml" />
+  <source srcset="diagram.webp" type="image/webp" />
   <source srcset="diagram.png" type="image/png" />
   <img
     src="diagram.gif"

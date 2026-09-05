@@ -24,49 +24,6 @@ The **`<img>`** [HTML](/en-US/docs/Web/HTML) element embeds an image into the do
 }
 ```
 
-The above example shows usage of the `<img>` element:
-
-- The `src` attribute holds the path to the image you want to embed. It is not mandatory if the [srcset](/en-US/docs/Web/API/HTMLImageElement/srcset) attribute is available. However, at least one of the `src` or `srcset` attributes must be provided.
-- The `alt` attribute holds a textual replacement for the image, which is mandatory and **incredibly useful** for accessibility — screen readers read the attribute value out to their users so they know what the image means. Alt text is also displayed on the page if the image can't be loaded for some reason: for example, network errors, content blocking, or link rot.
-
-There are many other attributes to achieve various purposes:
-
-- [Referrer](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy)/{{glossary("CORS")}} control for security and privacy: see [`crossorigin`](#crossorigin) and [`referrerpolicy`](#referrerpolicy).
-- Use both [`width`](#width) and [`height`](#height) to set the intrinsic size of the image, allowing it to take up space before it loads, to mitigate content layout shifts.
-- Responsive image hints with [`sizes`](#sizes) and [`srcset`](#srcset) (see also the {{htmlelement("picture")}} element and our [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images) tutorial).
-
-## Supported image formats
-
-The HTML standard doesn't list what image formats to support, so {{glossary("user agent","user agents")}} may support different formats.
-
-> [!NOTE]
-> The [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types) provides comprehensive information about image formats and their web browser support.
-> This section is just a summary!
-
-The image file formats that are most commonly used on the web are:
-
-- [APNG (Animated Portable Network Graphics)](/en-US/docs/Web/Media/Guides/Formats/Image_types#apng_animated_portable_network_graphics) — Good choice for lossless animation sequences (GIF is less performant)
-- [AVIF (AV1 Image File Format)](/en-US/docs/Web/Media/Guides/Formats/Image_types#avif_image) — Good choice for both images and animated images due to high performance.
-- [GIF (Graphics Interchange Format)](/en-US/docs/Web/Media/Guides/Formats/Image_types#gif_graphics_interchange_format) — Good choice for _simple_ images and animations.
-- [JPEG (Joint Photographic Expert Group image)](/en-US/docs/Web/Media/Guides/Formats/Image_types#jpeg_joint_photographic_experts_group_image) — Good choice for lossy compression of still images (currently the most popular).
-- [PNG (Portable Network Graphics)](/en-US/docs/Web/Media/Guides/Formats/Image_types#png_portable_network_graphics) — Good choice for lossless compression of still images (slightly better quality than JPEG).
-- [SVG (Scalable Vector Graphics)](/en-US/docs/Web/Media/Guides/Formats/Image_types#svg_scalable_vector_graphics) — Vector image format. Use for images that must be drawn accurately at different sizes.
-- [WebP (Web Picture format)](/en-US/docs/Web/Media/Guides/Formats/Image_types#webp_image) — Excellent choice for both images and animated images
-
-Formats like [WebP](/en-US/docs/Web/Media/Guides/Formats/Image_types#webp_image) and [AVIF](/en-US/docs/Web/Media/Guides/Formats/Image_types#avif_image) are recommended as they perform much better than PNG, JPEG, GIF for both still and animated images.
-
-SVG remains the recommended format for images that must be drawn accurately at different sizes.
-
-## Image loading errors
-
-If an error occurs while loading or rendering an image, and an `onerror` event handler has been set for the {{domxref("HTMLElement/error_event", "error")}} event, that event handler will get called. This can happen in several situations, including:
-
-- The `src` or `srcset` attributes are empty (`""`) or `null`.
-- The `src` {{glossary("URL")}} is the same as the URL of the page the user is currently on.
-- The image is corrupted in some way that prevents it from being loaded.
-- The image's metadata is corrupted in such a way that it's impossible to retrieve its dimensions, and no dimensions were specified in the `<img>` element's attributes.
-- The image is in a format not supported by the {{Glossary("user agent")}}.
-
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
@@ -79,7 +36,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
     >
     > - Non-visual browsers (such as those used by people with visual impairments)
     > - The user chooses not to display images (saving bandwidth, privacy reasons)
-    > - The image is invalid or an [unsupported type](#supported_image_formats)
+    > - The image is invalid or an [unsupported type](/en-US/docs/Web/Media/Guides/Formats/Image_types)
     >
     > In these cases, the browser may replace the image with the text in the element's `alt` attribute. For these reasons and others, provide a useful value for `alt` whenever possible.
 
@@ -309,7 +266,32 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 - `vspace` {{deprecated_inline}}
   - : The number of pixels of white space above and below the image. Use the {{cssxref('margin')}} CSS property instead.
 
-## Styling with CSS
+## Usage notes
+
+You need at least two attributes for each `<img>` elements. Most commonly, they are `src` and `alt`.
+
+- The `src` attribute holds the path to the image you want to embed. It is not mandatory if the [srcset](/en-US/docs/Web/API/HTMLImageElement/srcset) attribute is available. However, at least one of the `src` or `srcset` attributes must be provided.
+- The `alt` attribute holds a textual replacement for the image, which is mandatory and **incredibly useful** for accessibility — screen readers read the attribute value out to their users so they know what the image means. Alt text is also displayed on the page if the image can't be loaded for some reason: for example, network errors, content blocking, or link rot.
+
+There are many other attributes to achieve various purposes:
+
+- [Referrer](/en-US/docs/Web/HTTP/Reference/Headers/Referrer-Policy)/{{glossary("CORS")}} control for security and privacy: see [`crossorigin`](#crossorigin) and [`referrerpolicy`](#referrerpolicy).
+- Use both [`width`](#width) and [`height`](#height) to set the intrinsic size of the image, allowing it to take up space before it loads, to mitigate content layout shifts.
+- Responsive image hints with [`sizes`](#sizes) and [`srcset`](#srcset) (see also the {{htmlelement("picture")}} element and our [Responsive images](/en-US/docs/Web/HTML/Guides/Responsive_images) tutorial).
+
+The [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types) provides information about the supported image formats and broad recommendations about where they should be used.
+
+### Image loading errors
+
+If an error occurs while loading or rendering an image, and an `onerror` event handler has been set for the {{domxref("HTMLElement/error_event", "error")}} event, that event handler will get called. This can happen in several situations, including:
+
+- The `src` or `srcset` attributes are empty (`""`) or `null`.
+- The `src` {{glossary("URL")}} is the same as the URL of the page the user is currently on.
+- The image is corrupted in some way that prevents it from being loaded.
+- The image's metadata is corrupted in such a way that it's impossible to retrieve its dimensions, and no dimensions were specified in the `<img>` element's attributes.
+- The image is in a format not supported by the {{Glossary("user agent")}}.
+
+### Styling with CSS
 
 `<img>` is a {{ glossary("replaced elements", "replaced element")}}; it has a {{cssxref("display")}} value of `inline` by default, but its default dimensions are defined by the embedded image's intrinsic values, like it were `inline-block`. You can set properties like {{cssxref("border")}}/{{cssxref("border-radius")}}, {{cssxref("padding")}}/{{cssxref("margin")}}, {{cssxref("width")}}, {{cssxref("height")}}, etc. on an image.
 
