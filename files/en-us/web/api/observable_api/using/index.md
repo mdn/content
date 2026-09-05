@@ -91,7 +91,7 @@ The rendered output looks like this:
 Try moving the mouse over the top of the example; the coordinates are printed to the `<p>` only when the `<div>` elements are moved over, not the areas outside the `<div>`s.
 
 > [!NOTE]
-> Observables are "lazy" — events don't start being passed through them, nor do they queue any data, until they have at least one subscriber. For example, in the above example, if you remove the `subscribe()` method call and add logs inside the `filter()` and `map()` methods , you will see that they don't log anything. Once `subscribe()` is called at the end of the pipeline, all previous observables in this chain also become subscribed and start processing data.
+> Observables are "lazy" — events don't start being passed through them, nor do they queue any data, until they have at least one subscriber. For example, in the above example, if you remove the `subscribe()` method call and add logs inside the `filter()` and `map()` methods, you will see that they don't log anything. Once `subscribe()` is called at the end of the pipeline, all previous observables in this chain also become subscribed and start processing data.
 
 ## Aggregating values
 
@@ -307,7 +307,7 @@ Click the button. Every 500 milliseconds, the value of `i` is printed to the pag
 
 ## Teardown
 
-The [previous example](#creating_custom_observables) is not production-ready because every `makeTimer()` call creates a new interval. If the user clicks the `<button>` multiple times, multiple intervals will be created, all trying to update the same `<p>` element. This can lead to unexpected behavior and memory leaks. To fix this, we need to abort the observable when the user clicks the button again, so that only one interval is active at any time. We'll use an `AbortController` for this, although `takeUntil()` could also be used.
+The [previous example](#creating_custom_observables) is not production-ready because every `makeTimer()` call creates a new interval. If the user clicks the `<button>` multiple times, multiple intervals will be created, all trying to update the same `<p>` element. To fix this, we need to abort the observable when the user clicks the button again, so that only one interval is active at any time. We'll use an `AbortController` for this, although `takeUntil()` could also be used.
 
 ```js live-sample___basic-teardown-example
 function init() {
@@ -368,136 +368,63 @@ The example now renders like so:
 
 Press the `<button>` while the count is running; the count will stop immediately and restart from `1`.
 
-## Dynamic list example
+## Observing element size
 
-In this example, we demonstrate both common ways of creating an observable. We will create a dynamic list that allows you to add and remove items, powered by observable events. In addition, we use a custom observable to monitor how many items are in the list, updating a live output that displays the count and enforcing a maximum number of items.
+Custom observables can also wrap APIs that deliver notifications through callbacks. In this example, we wrap a {{domxref("ResizeObserver")}} to create a stream of an element's dimensions. Element size changes do not fire events, so we cannot obtain this stream using `when()`.
 
-### HTML
+### HTML and CSS
 
-The markup includes a {{htmlelement("div")}} containing a text {{htmlelement("input")}} to enter a new item into, and a {{htmlelement("button")}} to add it to the list. We also include a {{htmlelement("ul")}} element to add the items to, and a {{htmlelement("p")}} element to write the number of items into.
+The markup contains a resizable panel and a paragraph to display its dimensions. The {{cssxref("resize")}} property lets the user resize the panel by dragging its corner.
 
-```html live-sample___list-example
-<h1>Custom observable list</h1>
-
-<div id="entry-input">
-  <label for="item-entry">Enter item</label>
-  <input type="text" id="item-entry" />
-  <button id="item-entry-button">Add item to list</button>
-</div>
-<ul id="list"></ul>
-<p id="output-para"></p>
+```html live-sample___resize-example
+<div id="panel">Drag my corner to resize me.</div>
+<p id="dimensions"></p>
 ```
 
-```css hidden live-sample___list-example
-html {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-  width: 600px;
-  margin: 0 auto;
-}
-
-li {
-  margin-bottom: 10px;
-}
-
-li button {
-  font-size: 0.6rem;
-  display: inline-block;
+```css live-sample___resize-example
+#panel {
+  width: 200px;
+  height: 100px;
+  min-width: 100px;
+  max-width: 90%;
+  min-height: 50px;
+  max-height: 200px;
+  overflow: auto;
+  resize: both;
+  border: 1px solid;
 }
 ```
 
 ### JavaScript
 
-In our script, we first grab references to our text `<input>`, submit `<button>`, shopping list `<ul>`, and output `<p>`:
+Inside the custom observable's callback, we create a `ResizeObserver` and start observing the panel. Each notification passes the panel's content rectangle to {{domxref("Subscriber.next()")}}. We also register a teardown callback to disconnect the `ResizeObserver` when the subscription ends.
 
-```js live-sample___list-example
-const itemEntryInput = document.getElementById("item-entry");
-const itemEntryBtn = document.getElementById("item-entry-button");
-const list = document.getElementById("list");
-const outputPara = document.getElementById("output-para");
-```
+```js live-sample___resize-example
+const panel = document.getElementById("panel");
+const dimensions = document.getElementById("dimensions");
 
-Next, we create an observable on the submit `<button>` by calling {{domxref("EventTarget.when", "when()")}} on it, passing `"click"` as an argument. We then {{domxref("Observable.subscribe", "subscribe()")}} to this observable, passing a reference to the `addItemToList()` function. This means that `addItemToList()` is called whenever the submit `<button>` is clicked:
-
-```js live-sample___list-example
-itemEntryBtn.when("click").subscribe(addItemToList);
-```
-
-The `addItemToList()` function first checks whether the text `<input>` is empty — if so, we `return` out of the function. We don't want to add empty list items. If it is not empty, we create an {{htmlelement("li")}} element containing the input value plus a "Remove" `<button>`, then add it as a child of our `<ul>` element.
-
-Finally, we empty the input value and {{domxref("HTMLElement.focus", "focus()")}} it, ready to enter the next list item.
-
-```js live-sample___list-example
-function addItemToList() {
-  if (!itemEntryInput.value) {
-    return;
-  }
-
-  const listItem = document.createElement("li");
-  listItem.textContent = itemEntryInput.value;
-  const removeBtn = document.createElement("button");
-  removeBtn.textContent = "Remove";
-  listItem.append(removeBtn);
-  list.append(listItem);
-
-  itemEntryInput.value = "";
-  itemEntryInput.focus();
-}
-```
-
-Next, we wire up the remove buttons so that they remove the list items when clicked. We do this by creating a `"click"` observable on the list `<ul>` using `when()`. Next, we add a {{domxref("Observable.filter", "filter()")}} for events fired on the `li button` CSS selector, to make sure only `click` events fired on the remove buttons run code in response. In these cases, we run the function defined inside the {{domxref("Observable.subscribe", "subscribe()")}}, which removes the {{domxref("Node.parentNode", "parentNode")}} of the button via the {{domxref("Element.remove", "remove()")}} function.
-
-```js live-sample___list-example
-list
-  .when("click")
-  .filter((e) => e.target.matches("li button"))
-  .subscribe((e) => {
-    e.target.parentNode.remove();
+const sizes = new Observable((subscriber) => {
+  const observer = new ResizeObserver(([entry]) => {
+    subscriber.next(entry.contentRect);
   });
-```
+  observer.observe(panel);
+  subscriber.addTeardown(() => observer.disconnect());
+});
 
-The final functionality we need to implement is the live updating list count. To implement this we'll create a new observable using the {{("Observable.Observable", "Observable()")}} constructor, which constantly polls the number of list items every 500 milliseconds (via a {{domxref("Window.setInterval()")}} call) and calls the {{domxref("Subscriber.next()")}} function, passing it the list length.
-
-```js live-sample___list-example
-const listObservable = new Observable((subscriber) => {
-  const interval = setInterval(() => {
-    const listItems = document.querySelectorAll("li");
-    const listLength = listItems.length;
-    subscriber.next(listLength);
-  }, 500);
-  subscriber.addTeardown(() => clearInterval(interval));
+sizes.subscribe(({ width, height }) => {
+  dimensions.textContent = `Content size: ${Math.round(width)} × ${Math.round(height)} pixels`;
 });
 ```
 
-All that's left to do now is subscribe to the custom observable using {{domxref("Observable.subscribe()")}}. We pass it an object that defines the `next()` function we call in the previous snippet's callback. The `next()` function updates the output `<p>` to state the new number of list items when it changes; if `listLength` is `5` or more (our maximum value), we add a "Maximum length reached!" message and disable the `<input>` field so no more items can be entered. If not, we just state the number of items, and re-enable the `<input>` if it was previously disabled (a user could remove an item to get the length down below the maximum again).
-
-```js live-sample___list-example
-listObservable.subscribe({
-  next: (listLength) => {
-    if (listLength >= 5) {
-      outputPara.textContent = `Number of items: ${listLength}. Maximum length reached!`;
-      itemEntryInput.disabled = true;
-    } else {
-      outputPara.textContent = `Number of items: ${listLength}`;
-      if (itemEntryInput.disabled === true) {
-        itemEntryInput.disabled = false;
-      }
-    }
-  },
-});
-```
+Subscribing starts the `ResizeObserver`, which reports the initial size and subsequent size changes. The subscription callback displays these dimensions outside the panel so updating the output does not affect the observed element's size.
 
 ### Result
 
-The example renders like this:
-
-{{EmbedLiveSample("list-example", "100%", "320px")}}
+{{EmbedLiveSample("resize-example", "100%", "280px")}}
 
 ## Canvas drawing example
 
-In this example we create a basic {{htmlelement("canvas")}}-based drawing app, which demonstrates some of the nice ways observables can be used to work with combinations of events.
+In this example we create a basic {{htmlelement("canvas")}}-based drawing app, which brings together the APIs we have seen so far to demonstrate how observables help you declaratively implement complex event handling logic.
 
 ### HTML
 
@@ -520,7 +447,7 @@ The markup includes a `<canvas>` element to draw onto, and a {{htmlelement("form
 
 ### CSS
 
-In the CSS, we set the `<html>` element's {{cssxref("height")}} to `100%`, and set the `<body>` element's `height` to `inherit`. This ensures that the `<body>` will span the full width and height of the page. We also give the `<form>` element a {{cssxref("position")}} value of `absolute` to make it sit on top of the `<canvas>`, and use {{glossary("inset properties")}} to make it stick to the top, left, and right of the `<body>`.
+In the CSS, we make the `<body>` element span the full width and height of the page. We also make the `<form>` sit on top of the `<canvas>`, and use {{glossary("inset properties")}} to make it stick to the top, left, and right of the `<body>`.
 
 The rest of the CSS isn't important to the understanding of the overall example, so we won't explain it here, but we've included it all below so you can see it.
 
@@ -580,7 +507,7 @@ const sizeOutput = document.querySelector("output");
 const colorInput = document.querySelector("[type='color']");
 ```
 
-Next, we define a function called `sizeCanvas()`, which sets the `<canvas>` {{domxref("HTMLCanvasElement.width","width")}} and {{domxref("HTMLCanvasElement.height","height")}} to equal the {{domxref("Element.clientWidth", "clientWidth")}}/{{domxref("Element.clientHeight", "clientHeight")}} of the `<body>`. We immediately run this function to set the `<canvas>` size when the page first loads, then we call `when("resize")` on the {{domxref("Window")}} object to set up an observable on it. We subscribe to that observable with `subscribe()`, passing it a reference to the `sizeCanvas()` function so that it runs every time the window is resized.
+Next, we synchronize the canvas's {{domxref("HTMLCanvasElement.width","width")}} and {{domxref("HTMLCanvasElement.height","height")}} to the {{domxref("Element.clientWidth", "clientWidth")}}/{{domxref("Element.clientHeight", "clientHeight")}} of the `<body>`. This is implemented in the `sizeCanvas()` function. It is called when the app starts and also whenever the window resizes—using `when("resize").subscribe(sizeCanvas)` which is, again, exactly equivalent to the familiar `addEventListener("resize", sizeCanvas)`.
 
 ```js live-sample___canvas-example
 function sizeCanvas() {
@@ -593,17 +520,13 @@ sizeCanvas();
 window.when("resize").subscribe(sizeCanvas);
 ```
 
-Next, we define the variables and functions we need to draw on our `<canvas>`. First, we grab a reference to the `<canvas>` [2D rendering context](/en-US/docs/Web/API/CanvasRenderingContext2D), and store an initial value for the pen color and pen size in variables called `penSize` and `penColor`, respectively.
+Next, we define the variables and functions we need to draw on our `<canvas>`. First, we grab a reference to the `<canvas>` [2D rendering context](/en-US/docs/Web/API/CanvasRenderingContext2D), and store an initial value for the pen color and pen size in variables called `penSize` and `penColor`, respectively. We also define the logic to update the pen size and pen color when new values are chosen from the `<input>` elements. The `updatePenSize()` function sets the `penSize` variable to the [`value`](/en-US/docs/Web/API/HTMLInputElement/value) of the range slider `<input>`, and also sets that value as the `<output>` element's text content. The `updatePenColor()` function sets the `penColor` variable to the `value` of the color picker `<input>`. These two functions are wired up to the [`input`](/en-US/docs/Web/API/Element/input_event) event on the range slider and [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event on the color picker, respectively.
 
 ```js live-sample___canvas-example
 const ctx = canvas.getContext("2d");
 let penSize = 10;
 let penColor = "black";
-```
 
-Now we define two functions that update the pen size and pen color when new values are chosen from the `<input>` elements. The `updatePenSize()` function sets the `penSize` variable to the [`value`](/en-US/docs/Web/API/HTMLInputElement/value) of the range slider `<input>`, and also sets that value as the `<output>` element's text content. The `updatePenColor()` function sets the `penColor` variable to the `value` of the color picker `<input>`:
-
-```js live-sample___canvas-example
 function updatePenSize() {
   penSize = sizeInput.value;
   sizeOutput.textContent = sizeInput.value;
@@ -612,6 +535,9 @@ function updatePenSize() {
 function updatePenColor() {
   penColor = colorInput.value;
 }
+
+sizeInput.when("input").subscribe(updatePenSize);
+colorInput.when("change").subscribe(updatePenColor);
 ```
 
 Now on to our main `draw()` function. Here, we hide the `<form>` so we can see the whole `<canvas>` when we start to draw. We then set the canvas context's [`fillStyle`](/en-US/docs/Web/API/CanvasRenderingContext2D/fillStyle) to the `penColor`, start drawing a path using [`beginPath()`](/en-US/docs/Web/API/CanvasRenderingContext2D/beginPath), draw a single circle of the specified `penSize` at the event object's `x` and `y` coordinates (more on those later) using [`arc()`](/en-US/docs/Web/API/CanvasRenderingContext2D/arc), and render the drawing on the canvas using [`fill()`](/en-US/docs/Web/API/CanvasRenderingContext2D/fill). This (along with the observable code you'll see later) draws a circle at the current mouse coordinates every time the mouse moves.
@@ -641,16 +567,6 @@ function finishDraw() {
 }
 ```
 
-Finally, we'll create some more observables to control the drawing functionality. The first two are simple, and use the same pattern as the `resize` one we saw earlier. They keep the pen size and color updated to the user's choices by:
-
-- Running the `updatePenSize()` function whenever a [`input`](/en-US/docs/Web/API/Element/input_event) event fires on the range slider.
-- Running the `updatePenColor()` function whenever a [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event fires on the color picker.
-
-```js live-sample___canvas-example
-sizeInput.when("input").subscribe(updatePenSize);
-colorInput.when("change").subscribe(updatePenColor);
-```
-
 Finally, we create an observable on the `<canvas>` element, this time representing a stream of [`mousedown`](/en-US/docs/Web/API/Element/mousedown_event) events that will be fired on the `<canvas>`. We use {{domxref("Observable.map()")}} to map the fired event objects to new objects containing the coordinates of the mouse cursor when the event was fired. We then call `subscribe()` at the end of the chain, passing it a reference to the `draw()` function so that it is called whenever an event fires.
 
 However — and this is where it gets interesting — we don't want to run `draw()` on `mousedown` events. We want to run it on every `mousemove` event that happens after a `mousedown` event, and we want to stop running it when a `mouseup` event fires. We achieve this by inserting an {{domxref("Observable.flatMap()")}} call into the chain.
@@ -666,15 +582,15 @@ canvas
   .subscribe(draw);
 ```
 
-Inside the `flatMap()` callback, we do two things:
+This is a long pipeline. It observes a whole `mousedown -> mousemove... -> mouseup` chain step-by-step.
 
-1. Define a value called `mouseUp` that contains the criteria for stopping subscription to a series of `mousemove` events — namely a `<canvas>` `mouseup` observable — we want to unsubscribe from `mousemove` events when a `mouseup` event is fired on the `<canvas>`. We also chain an {{domxref("Observable.finally()")}} call onto the end containing a reference to the `finishDraw()` function — so that when the subscription ends, this function is called, making the `<form>` appear again at the end of the process.
-2. Return a `<canvas>` `mousemove` observable, with a {{domxref("Observable.takeUntil()")}} call chained on the end that we pass the `mouseUp` value to. Returning this observable out of the `flatMap()` call effectively causes the inner `mousemove` observable pipeline to become part of the outer `mousedown` observable pipeline.
+1. The source observable is `canvas.when("mousedown")`, which fires on every `mousedown` event and triggers the `flatMap()` callback.
+2. The `flatMap()` callback creates two observables: `canvas.when("mousemove")` and `canvas.when("mouseup")`. The first one is directly returned from the callback, so the observable returned by `flatMap()` fires on every `mousemove` event instead.
+3. Because of the {{domxref("Observable.takeUntil()")}} call, the `mousemove` observer only fires until the `mouseUp` observer fires once (we'll talk about this observer right after). Because the `takeUntil()` call is chained to the `canvas.when("mousemove")` observable instead of the main `canvas.when("mousedown")` one, the `mouseUp` observer does not unsubscribe the `mousedown` observer, and future `mousedown` events can still trigger the whole process again.
+4. The observable returned by `flatMap()`, which fires on every `mousemove`, is transformed by a `map()` that turns events into objects with `x` and `y` properties. This final observable is subscribed to by `draw`, allowing `draw` to receive the `x` and `y` coordinates of each `mousemove` events.
+5. As step 3 said: the stream of `mousemove` events ends on every `mouseup` event thanks to the `mouseUp` observable used as the termination criterion in `takeUntil()`. This `mouseUp` observable is just `canvas.when("mouseup")`, but we chain an additional {{domxref("Observable.finally()")}} call, which calls `finishDraw()` whenever this event fires, making the `<form>` appear again at the end of the process.
 
-The result is that we are subscribing to a `mousedown` observable but then responding to `mousemove` events that are made part of the main pipeline via the `flatMap()` call. And we are stopping subscription to the inner `mousemove` observable when a `mouseup` event is fired (after which we run the final `finishDraw()` function).
-
-> [!NOTE]
-> The `takeUntil()` call doesn't unsubscribe from the outer `mousedown` observable, just the inner `mousemove` observable.
+The final effect is that we react to `mousemove` events (just like our first example on this page!) but we only start listening when `mousedown` fires and stop listening when `mouseup` fires. With the help of `Observable`, we have successfully composed three parallel event streams into a single, coherent sequence.
 
 ### Result
 
