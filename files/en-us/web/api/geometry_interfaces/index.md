@@ -18,6 +18,9 @@ browser-compat:
 
 As a web developer, you don't always use the geometry interfaces directly, but instead use other features that rely on them behind the scenes: parts of [CSS Transforms](/en-US/docs/Web/CSS/Guides/Transforms), the [Canvas API](/en-US/docs/Web/API/Canvas_API), the [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API), and (more directly) {{domxref('VideoFrame.visibleRect')}}, {{domxref('Element.getClientRects()')}}, and {{domxref('Element.getBoundingClientRect()')}}.
 
+> [!NOTE]
+> The geometry interfaces are designed for convenience and for integrating with DOM rendering, not as a general-purpose linear algebra library. Because of the overhead of native bindings, methods such as {{domxref('DOMMatrix.transformPoint()')}} can be slower than the equivalent math written directly in JavaScript. If you're doing a large amount of geometry computation on a hot path, consider doing the math manually instead.
+
 ## Interfaces
 
 - {{domxref('DOMMatrix')}}
