@@ -30,6 +30,11 @@ The `import()` call is a syntax that closely resembles a function call, but `imp
     - `with`
       - : The [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with).
 
+"Phase modifiers" for `import` statements can also be used with dynamic imports, in the form of "meta properties":
+
+- [`import.defer()`](/en-US/docs/Web/JavaScript/Reference/Operators/import/defer)
+- [`import.source()`](/en-US/docs/Web/JavaScript/Reference/Operators/import/source)
+
 ### Return value
 
 Returns a promise which:
