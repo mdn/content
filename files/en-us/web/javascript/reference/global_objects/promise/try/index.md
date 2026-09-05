@@ -50,13 +50,13 @@ try {
 
 The problem is that `try...catch` is not an expression, so you can't directly use it in expression positions like passing it to other functions.
 
-Therefore, a more common approach to lift a function call result into a promise, fulfilled or rejected, often looks like this:
+Therefore, when lifting a function call result into a promise, fulfilled or rejected, people more commonly do this:
 
 ```js
 new Promise((resolve) => resolve(func()));
 ```
 
-For the built-in `Promise()` constructor, errors thrown from the executor are automatically caught and turned into rejections, so this also prevents synchronous errors. The problem is that a new `Promise` object is unconditionally created, which is unnecessary if `func()` already returns a `Promise`. `Promise.resolve()`, on the other hand, is smart enough to prevent that extra promise wrapping.
+For the built-in `Promise()` constructor, errors thrown from the executor are automatically caught and turned into rejections, so this also prevents synchronous errors. The problem is that it unconditionally creates a new `Promise` object, which is unnecessary if `func()` already returns a `Promise`. `Promise.resolve()`, on the other hand, is smart enough to prevent that extra promise wrapping.
 
 `Promise.try()` is almost exactly equivalent to the `try...catch` approach, except that it's shorter and can be used as an expression:
 
@@ -65,7 +65,7 @@ Promise.try(func);
 ```
 
 > [!NOTE]
-> For some time since its release, `Promise.try()` was actually specified and implemented to be similar to the `new Promise()` approach, unconditionally creating a new promise. See [browser compatibility](#browser_compatibility).
+> `Promise.try()` was originally specified and implemented to work like the `new Promise()` version, unconditionally creating a new promise, but this is no longer the case. See [browser compatibility](#browser_compatibility).
 
 Note that `Promise.try()` is _not_ equivalent to this, despite being highly similar:
 
