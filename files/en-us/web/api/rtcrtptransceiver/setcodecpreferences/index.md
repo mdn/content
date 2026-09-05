@@ -82,7 +82,7 @@ None ({{jsxref("undefined")}}).
 
 The recommended way to set codec preferences is to first get the array of codecs that are actually supported for decoding received data, then reorder the list in decreasing preference order.
 
-It is important to start with the list of codecs that are supported (and not a hard coded list of your preferred codecs), because you if you include any that aren't supported by the associated {{domxref("RTCRtpReceiver")}} the browser will throw an `InvalidAccessError` exception when you call the `setCodecPreferences()` method.
+It is important to start with the list of codecs that are supported (and not a hard-coded list of your preferred codecs), because you if you include any that aren't supported by the associated {{domxref("RTCRtpReceiver")}} the browser will throw an `InvalidAccessError` exception when you call the `setCodecPreferences()` method.
 In addition, the array has to include appropriate codecs for retransmission, redundancy, and forward error correction, and starting with the list of supported codecs ensures that these are present.
 
 You can get the codecs supported for decoding data using the {{domxref("RTCRtpReceiver.getCapabilities_static", "RTCRtpReceiver.getCapabilities()")}} static method as shown:

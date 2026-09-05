@@ -76,7 +76,7 @@ The **`requestFullscreen()`** method issues an asynchronous request to display t
 
 The method requires permission.
 
-- If permission to enter full screen mode is granted, the returned {{JSxRef("Promise")}} will resolve and the element will receive a {{domxref("Element/fullscreenchange_event", "fullscreenchange")}} event to let it know that it's now in full screen mode.
+- If permission to enter full-screen mode is granted, the returned {{JSxRef("Promise")}} will resolve and the element will receive a {{domxref("Element/fullscreenchange_event", "fullscreenchange")}} event to let it know that it's now in full-screen mode.
 - If permission is denied, the promise is rejected and the element receives a {{domxref("Element/fullscreenerror_event", "fullscreenerror")}} event instead.
 
 If the element has been detached from the original document, then the document receives these events instead.
@@ -283,7 +283,7 @@ kbd {
 #### Results
 
 Select the frame and press <kbd>Shift+F</kbd>.
-When the page displays full frame, note the temporary notification at the top of the page that explains how to exit full screen mode.
+When the page displays full frame, note the temporary notification at the top of the page that explains how to exit full-screen mode.
 
 {{embedlivesample("Using keyboard lock", , "400", "", "", "", "fullscreen")}}
 
