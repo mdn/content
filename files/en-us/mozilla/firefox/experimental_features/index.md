@@ -423,7 +423,7 @@ The {{cssxref("line-clamp")}} CSS property now works without the `-webkit-` vend
 
 ### Percentage values for `text-decoration-inset`
 
-The {{cssxref("text-decoration-inset")}} CSS property now supports percentages as values. The percentage value specifies the size of the inset as a percentage of the {{cssxref("font-size")}}. ([Firefox bug 2044602](https://bugzil.la/2044602)).
+The {{cssxref("text-decoration-inset")}} CSS property now supports percentages as values. The percentage value specifies the size of the inset as a percentage of the inline size of the decorating box or of each individual box fragment, depending on the value of {{cssxref("box-decoration-break")}}. ([Firefox bug 2044602](https://bugzil.la/2044602)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
