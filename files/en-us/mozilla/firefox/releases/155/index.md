@@ -133,8 +133,6 @@ No notable changes.
 - Fixed the `browsingContext.reload` command failing when used for frames. ([Firefox bug 2030909](https://bugzil.la/2030909)).
 - Removed support for the `contexts` argument in the `session.unsubscribe` command. From now on, clients can unsubscribe only by event name or subscription ID. ([Firefox bug 1988723](https://bugzil.la/1988723)).
 
-## Changes for add-on developers
-
 ## Experimental web features
 
 These features are shipping in Firefox 155 but are disabled by default.
