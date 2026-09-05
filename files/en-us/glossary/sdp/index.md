@@ -25,6 +25,8 @@ a=rtpmap:32 MPV/90000
 
 SDP is used together with protocols such as {{Glossary("RTP")}} and {{Glossary("RTSP")}}. It is also used by {{Glossary("WebRTC")}} to describe multimedia sessions.
 
+During WebRTC [session negotiation](/en-US/docs/Web/API/WebRTC_API/Signaling_and_video_calling#session_negotiation), peers exchange offers and answers through a signaling channel. Each offer or answer is a session description containing SDP that describes the proposed connection configuration, as represented by {{domxref("RTCSessionDescription")}}. An application uses {{domxref("RTCPeerConnection.setLocalDescription()")}} to apply its own description and {{domxref("RTCPeerConnection.setRemoteDescription()")}} to apply a description received from the other peer.
+
 ## See also
 
 - {{domxref("RTCSessionDescription")}}
