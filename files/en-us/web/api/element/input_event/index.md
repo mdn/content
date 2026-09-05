@@ -16,7 +16,7 @@ For `<input>` elements with `type=checkbox` or `type=radio`, the `input` event s
 
 For {{htmlelement("textarea")}} and {{htmlelement("input")}} elements that accept text input (`type=text`, `type=tel`, etc.), the interface is {{DOMxRef("InputEvent")}}; for others, the interface is {{DOMxRef("Event")}}.
 
-The `input` event is fired every time the `value` of the element changes. This is unlike the {{domxref("HTMLElement/change_event", "change")}} event, which only fires when the value is committed, such as by pressing the enter key or selecting a value from a list of options. Note that the `input` event is not fired when JavaScript changes an element's `value` programmatically.
+The `input` event is fired every time the `value` of the element changes. This is unlike the {{domxref("HTMLElement/change_event", "change")}} event, which only fires when the value is committed, such as by pressing the enter key or selecting a value from a list of options. Note that the `input` event is not fired when JavaScript changes an element's `value` programmatically, and some user actions can also change a value without firing `input`.
 
 ## Syntax
 
