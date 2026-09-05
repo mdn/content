@@ -85,6 +85,9 @@ This property is specified as one of the following keyword values. The `oblique`
 
     In general, for a requested angle of 14 degrees or greater, larger angles are preferred; otherwise, smaller angles are preferred (see the spec's [font matching section](https://drafts.csswg.org/css-fonts-4/#font-matching-algorithm) for the precise algorithm).
 
+> [!NOTE]
+> The [CSS fonts](/en-US/docs/Web/CSS/Guides/Fonts) module defines `left` and `right` values for the `font-style` property to select an italic or oblique face with a specific slant direction, however, this is not supported in any browsers.
+
 ### Variable fonts
 
 Variable fonts can offer a fine control over the degree to which an oblique face is slanted. You can select this using the `<angle>` modifier for the `oblique` keyword.
