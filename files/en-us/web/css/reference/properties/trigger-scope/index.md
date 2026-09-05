@@ -1,0 +1,384 @@
+---
+title: trigger-scope CSS property
+short-title: trigger-scope
+slug: Web/CSS/Reference/Properties/trigger-scope
+page-type: css-property
+status:
+  - experimental
+browser-compat: css.properties.trigger-scope
+sidebar: cssref
+---
+
+{{SeeCompatTable}}
+
+The **`trigger-scope`** [CSS](/en-US/docs/Web/CSS) property can be used to limit the scope of a [scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) trigger name to a document subtree.
+
+## Syntax
+
+```css
+/* Keywords */
+trigger-scope: none;
+trigger-scope: all;
+
+/* <dashed-ident> */
+trigger-scope: --my-trigger;
+
+/* Multiple values */
+trigger-scope: --my-trigger, --another-trigger;
+
+/* Global values */
+trigger-scope: inherit;
+trigger-scope: initial;
+trigger-scope: revert;
+trigger-scope: revert-layer;
+trigger-scope: unset;
+```
+
+### Values
+
+Specified as `none`, `all`, or a comma-separated list of {{cssxref("dashed-ident")}} values:
+
+- `none`
+  - : Specifies that no trigger scoping is set. This is the default value.
+- `all`
+  - : Sets the scope so that _any_ `timeline-trigger-name` values set in the subtree can only be associated with animated elements in the same subtree.
+- {{cssxref("dashed-ident")}}
+  - : A trigger name. Sets the scope so that the specified `timeline-trigger-name` values, when set in the subtree, can only be associated with animated elements in the same subtree.
+
+## Description
+
+The `trigger-scope` property is used to limit trigger scope to specific element subtrees in [scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations).
+
+Trigger names, defined with the {{cssxref("timeline-trigger-name")}} property, are global by default. When an animated element is associated with a trigger name via its {{cssxref("animation-trigger")}} property, the browser determines what its trigger element is as follows:
+
+1. It walks up the animated element's ancestor tree until it finds an ancestor with a `timeline-trigger-name` set that is the same as the name referenced in its `animation-trigger` property value. If the animated element is also the trigger, it will be found instantly.
+2. If it can't find a suitable ancestor trigger, it will use the _last_ element in the HTML source order with that `timeline-trigger-name` value.
+3. If it can't find an element anywhere in the DOM with that `timeline-trigger-name` value, the animated element won't be scroll-triggered; having no associated timeline, the animation will not happen.
+
+If multiple elements define triggers with the same trigger name, only the last one in the document tree will be used as the trigger for animated elements referencing that trigger name in their `animation-trigger` properties. This is likely not the desired behavior.
+
+The `trigger-scope` property can solve this problem by limiting the scope of a trigger name to a subtree of the document. This means the trigger is visible only to elements within the same subtree and has no effect on elements outside the subtree. When `trigger-scope` is set on an element, and that element or its descendants are defined as triggers, animated elements are associated with those triggers only if they are within the same subtree.
+
+Which trigger names are included in the scope depends on the `trigger-scope` value set:
+
+- `trigger-scope: all` means that all trigger names are included in the scope.
+- `trigger-scope: --my-trigger, --another-trigger` means that only triggers with names of `--my-trigger` and/or `--another-trigger` are included in the scope.
+- `trigger-scope: none` means that no trigger scoping is set on the element.
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
+
+{{csssyntax}}
+
+## Examples
+
+### Basic usage
+
+This example demonstrates using the `trigger-scope` property to limit the scope of an `animation-trigger-name`.
+
+#### HTML
+
+We include three {{htmlelement("section")}} elements, each containing two {{htmlelement("div")}} elements: an `.animated` element and a `.trigger` element.
+
+Most of the HTML, including a [checkbox](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) toggle that enables or disables the `trigger-scope` property, has been hidden for brevity.
+
+```html
+<section id="one">
+  <div class="animated"></div>
+  ...
+  <div class="trigger">Trigger for first animation</div>
+  ...
+</section>
+<section id="two">
+  <div class="animated"></div>
+  ...
+  <div class="trigger">Trigger for second animation</div>
+  ...
+</section>
+<section id="three">
+  <div class="animated"></div>
+  ...
+  <div class="trigger">Trigger for third animation</div>
+  ...
+</section>
+```
+
+```html hidden live-sample___trigger-scope
+<section id="one">
+  <div class="animated"></div>
+
+  <p>
+    Fusce dictum ex quis ipsum consectetur placerat. Cras sed lectus ex. Quisque
+    purus dolor, vulputate ac mi eget, commodo varius odio. Suspendisse faucibus
+    ipsum vel libero finibus, in placerat nibh congue. Sed iaculis, metus et
+    euismod posuere, mi diam vestibulum felis, ac vulputate eros ipsum id justo.
+    Etiam a tincidunt purus. Maecenas semper sed enim at blandit. Aenean ut
+    sagittis lorem, eget gravida purus. Phasellus eleifend, lectus nec pulvinar
+    facilisis, dui dolor feugiat odio, iaculis tempor felis est non tortor. In
+    suscipit lorem efficitur molestie tempus. Integer sit amet neque et risus
+    iaculis sodales sed eget diam. Quisque sodales nunc sapien, vitae lacinia ex
+    luctus quis. Maecenas scelerisque scelerisque elit eu consequat. Etiam ac
+    tristique tellus, sed tincidunt velit.
+  </p>
+
+  <div class="trigger">Trigger for first animation</div>
+
+  <p>
+    Fusce dictum ex quis ipsum consectetur placerat. Cras sed lectus ex. Quisque
+    purus dolor, vulputate ac mi eget, commodo varius odio. Suspendisse faucibus
+    ipsum vel libero finibus, in placerat nibh congue. Sed iaculis, metus et
+    euismod posuere, mi diam vestibulum felis, ac vulputate eros ipsum id justo.
+    Etiam a tincidunt purus. Maecenas semper sed enim at blandit. Aenean ut
+    sagittis lorem, eget gravida purus. Phasellus eleifend, lectus nec pulvinar
+    facilisis, dui dolor feugiat odio, iaculis tempor felis est non tortor. In
+    suscipit lorem efficitur molestie tempus. Integer sit amet neque et risus
+    iaculis sodales sed eget diam. Quisque sodales nunc sapien, vitae lacinia ex
+    luctus quis. Maecenas scelerisque scelerisque elit eu consequat. Etiam ac
+    tristique tellus, sed tincidunt velit.
+  </p>
+</section>
+<section id="two">
+  <div class="animated"></div>
+  <p>
+    Fusce dictum ex quis ipsum consectetur placerat. Cras sed lectus ex. Quisque
+    purus dolor, vulputate ac mi eget, commodo varius odio. Suspendisse faucibus
+    ipsum vel libero finibus, in placerat nibh congue. Sed iaculis, metus et
+    euismod posuere, mi diam vestibulum felis, ac vulputate eros ipsum id justo.
+    Etiam a tincidunt purus. Maecenas semper sed enim at blandit. Aenean ut
+    sagittis lorem, eget gravida purus. Phasellus eleifend, lectus nec pulvinar
+    facilisis, dui dolor feugiat odio, iaculis tempor felis est non tortor. In
+    suscipit lorem efficitur molestie tempus. Integer sit amet neque et risus
+    iaculis sodales sed eget diam. Quisque sodales nunc sapien, vitae lacinia ex
+    luctus quis. Maecenas scelerisque scelerisque elit eu consequat. Etiam ac
+    tristique tellus, sed tincidunt velit.
+  </p>
+
+  <div class="trigger">Trigger for second animation</div>
+
+  <p>
+    Fusce dictum ex quis ipsum consectetur placerat. Cras sed lectus ex. Quisque
+    purus dolor, vulputate ac mi eget, commodo varius odio. Suspendisse faucibus
+    ipsum vel libero finibus, in placerat nibh congue. Sed iaculis, metus et
+    euismod posuere, mi diam vestibulum felis, ac vulputate eros ipsum id justo.
+    Etiam a tincidunt purus. Maecenas semper sed enim at blandit. Aenean ut
+    sagittis lorem, eget gravida purus. Phasellus eleifend, lectus nec pulvinar
+    facilisis, dui dolor feugiat odio, iaculis tempor felis est non tortor. In
+    suscipit lorem efficitur molestie tempus. Integer sit amet neque et risus
+    iaculis sodales sed eget diam. Quisque sodales nunc sapien, vitae lacinia ex
+    luctus quis. Maecenas scelerisque scelerisque elit eu consequat. Etiam ac
+    tristique tellus, sed tincidunt velit.
+  </p>
+</section>
+<section id="three">
+  <div class="animated"></div>
+
+  <p>
+    Fusce dictum ex quis ipsum consectetur placerat. Cras sed lectus ex. Quisque
+    purus dolor, vulputate ac mi eget, commodo varius odio. Suspendisse faucibus
+    ipsum vel libero finibus, in placerat nibh congue. Sed iaculis, metus et
+    euismod posuere, mi diam vestibulum felis, ac vulputate eros ipsum id justo.
+    Etiam a tincidunt purus. Maecenas semper sed enim at blandit. Aenean ut
+    sagittis lorem, eget gravida purus. Phasellus eleifend, lectus nec pulvinar
+    facilisis, dui dolor feugiat odio, iaculis tempor felis est non tortor. In
+    suscipit lorem efficitur molestie tempus. Integer sit amet neque et risus
+    iaculis sodales sed eget diam. Quisque sodales nunc sapien, vitae lacinia ex
+    luctus quis. Maecenas scelerisque scelerisque elit eu consequat. Etiam ac
+    tristique tellus, sed tincidunt velit.
+  </p>
+
+  <div class="trigger">Trigger for third animation</div>
+
+  <p>
+    Fusce dictum ex quis ipsum consectetur placerat. Cras sed lectus ex. Quisque
+    purus dolor, vulputate ac mi eget, commodo varius odio. Suspendisse faucibus
+    ipsum vel libero finibus, in placerat nibh congue. Sed iaculis, metus et
+    euismod posuere, mi diam vestibulum felis, ac vulputate eros ipsum id justo.
+    Etiam a tincidunt purus. Maecenas semper sed enim at blandit. Aenean ut
+    sagittis lorem, eget gravida purus. Phasellus eleifend, lectus nec pulvinar
+    facilisis, dui dolor feugiat odio, iaculis tempor felis est non tortor. In
+    suscipit lorem efficitur molestie tempus. Integer sit amet neque et risus
+    iaculis sodales sed eget diam. Quisque sodales nunc sapien, vitae lacinia ex
+    luctus quis. Maecenas scelerisque scelerisque elit eu consequat. Etiam ac
+    tristique tellus, sed tincidunt velit.
+  </p>
+</section>
+<label for="trigger-scope"
+  >Set <code>trigger-scope</code> to <code>none</code>
+  <input id="trigger-scope" type="checkbox" />
+</label>
+```
+
+#### CSS
+
+We define three {{cssxref("@keyframes")}} animations. Each will be applied to a different `.animated` element.
+
+```css live-sample___trigger-scope
+@keyframes fade-in {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes color-cycle {
+  from {
+    background: red;
+    scale: 1;
+  }
+
+  to {
+    background: blue;
+    scale: 2;
+  }
+}
+
+@keyframes move-up-down {
+  25% {
+    translate: 0 -20px;
+  }
+
+  75% {
+    translate: 0 20px;
+  }
+}
+```
+
+```css hidden live-sample___trigger-scope
+body {
+  width: 60%;
+  margin: 0 auto;
+  font-size: 1.3rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  line-height: 1.5;
+}
+
+section {
+  background: #eee;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
+.animated {
+  width: 50px;
+  height: 50px;
+  background: red;
+  border: 5px solid black;
+}
+
+label {
+  position: fixed;
+  bottom: 2px;
+  right: 2px;
+  padding: 5px;
+  border: 2px solid black;
+  background: white;
+}
+```
+
+The animated elements' {{cssxref("position")}} is set to `fixed`, positioning them near the top of the scrollport to keep them visible at all times.
+
+Each animated element has the same `animation-trigger` value: their animations are triggered by a trigger with a `timeline-trigger-name` of `--t`, and the animations will play when their trigger activates and then reset when their trigger deactivates.
+
+```css live-sample___trigger-scope
+.animated {
+  position: fixed;
+  top: 10px;
+  animation-trigger: --t play reset;
+}
+```
+
+Using the {{cssxref("animation")}} shorthand, each `.animated` element is given a different {{cssxref("animation-name")}}. They each also have a different {{cssxref("left")}} value so that they are not positioned on top of one another.
+
+```css live-sample___trigger-scope
+#one .animated {
+  animation: fade-in 1s infinite alternate ease-in;
+  left: 10px;
+}
+
+#two .animated {
+  animation: color-cycle 1s infinite alternate linear;
+  left: 110px;
+}
+
+#three .animated {
+  animation: move-up-down 2s infinite linear;
+  left: 210px;
+}
+```
+
+The `.trigger` elements are set as triggers for the `.animated` elements by giving them a {{cssxref("timeline-trigger-name")}} value that references the same identifier, `--t`, and a {{cssxref("timeline-trigger-source")}} of `view()`. We set the {{cssxref("timeline-trigger-activation-range")}} to `contain`, so activation and deactivation occur while the trigger is still visible. We also set some rudimentary styles to make them stand out from the rest of the text.
+
+```css live-sample___trigger-scope
+.trigger {
+  timeline-trigger-name: --t;
+  timeline-trigger-source: view();
+  timeline-trigger-activation-range: contain;
+
+  padding: 10px;
+  border: 2px solid black;
+  background: black;
+  color: white;
+}
+```
+
+Finally, we set the `trigger-scope` on the {{htmlelement("section")}} element to `all`. This limits the effect of each trigger named `--t` to their `<section>` ancestor.
+
+```css live-sample___trigger-scope
+section {
+  trigger-scope: all;
+}
+```
+
+```css hidden live-sample___trigger-scope
+:has(:checked) section {
+  trigger-scope: none;
+}
+
+@supports not (trigger-scope: all) {
+  body::before {
+    content: "Your browser does not support the trigger-scope property.";
+    background-color: wheat;
+    text-align: center;
+    padding: 1rem 0;
+
+    z-index: 1;
+    position: fixed;
+    inset: 40% 0 auto;
+  }
+}
+```
+
+#### Result
+
+{{embedlivesample("trigger-scope", "100%", 400)}}
+
+Scroll down the example. One square animates at a time. This is because each square animates only when the trigger element located in the same scope (the same `<section>`) is visible in the scrollport. Even though the three triggers share the same trigger name, each `.animated` element's animation is triggered by a different trigger.
+
+Now check the checkbox to remove `trigger-scope: all` from the `<section>` elements. Scroll through the content again. None of the squares animate until the third `.trigger` is visible in the scrollport, at which point all of the squares start animating at the same time. Because scoping has been removed, each `.animated` element's animation is activated and deactivated by the last element with `--t` as a `timeline-trigger-name`.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
+## See also
+
+- {{cssxref("animation-trigger")}}
+- {{cssxref("timeline-trigger-name")}}, {{cssxref("timeline-trigger-source")}}, {{cssxref("timeline-trigger-activation-range")}}, and {{cssxref("timeline-trigger-active-range")}}
+- {{cssxref("timeline-trigger")}} shorthand property
+- {{cssxref("animation-action")}} type
+- [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
+- [CSS animation triggers](/en-US/docs/Web/CSS/Guides/Animation_triggers/) module
+- [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
