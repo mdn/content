@@ -37,9 +37,36 @@ An object is a collection of related data and/or functionality.
 These usually consist of several variables and functions (which are called properties and methods when they are inside objects).
 Let's work through an example to understand what they look like.
 
-To begin with, make a local copy of our [oojs.html](https://github.com/mdn/learning-area/blob/main/javascript/oojs/introduction/oojs.html) file. This contains very little — a {{HTMLElement("script")}} element for us to write our source code into. We'll use this as a basis for exploring basic object syntax. While working with this example you should have your [developer tools JavaScript console](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools#the_javascript_console) open and ready to type in some commands.
+To begin with, create a new HTML file on your local file system and add the following code to it:
 
-As with many things in JavaScript, creating an object often begins with defining and initializing a variable. Try entering the following line below the JavaScript code that's already in your file, then saving and refreshing:
+```html
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Object-oriented JavaScript example</title>
+  </head>
+
+  <body>
+    <p>
+      This example requires you to enter commands in your browser's JavaScript
+      console (see
+      <a
+        href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools"
+        >What are browser developer tools</a
+      >
+      for more information).
+    </p>
+
+    <script></script>
+  </body>
+</html>
+```
+
+This contains very little — a {{HTMLElement("script")}} element for us to write our source code into. We'll use this as a basis for exploring basic object syntax. While working with this example you should have your [developer tools JavaScript console](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools#the_javascript_console) open and ready to type in some commands.
+
+As with many things in JavaScript, creating an object often begins with defining and initializing a variable. Try entering the following line inside your `<script></script>` tags, then saving and refreshing:
 
 ```js
 const person = {};
