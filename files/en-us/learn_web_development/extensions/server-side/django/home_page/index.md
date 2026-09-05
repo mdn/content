@@ -133,8 +133,8 @@ def index(request):
     num_books = Book.objects.all().count()
     num_instances = BookInstance.objects.all().count()
 
-    # Available books (status = 'a')
-    num_instances_available = BookInstance.objects.filter(status__exact='a').count()
+    # Available books
+    num_instances_available = BookInstance.objects.filter(status__exact=BookInstance.LoanStatus.AVAILABLE).count()
 
     # The 'all()' is implied by default.
     num_authors = Author.objects.count()
@@ -152,7 +152,7 @@ def index(request):
 
 The first line imports the model classes that we'll use to access data in all our views.
 
-The first part of the view function fetches the number of records using the `objects.all()` attribute on the model classes. It also gets a list of `BookInstance` objects that have a value of 'a' (Available) in the status field. You can find more information about how to access model data in our previous tutorial [Django Tutorial Part 3: Using models > Searching for records](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Models#searching_for_records).
+The first part of the view function fetches the number of records using the `objects.all()` attribute on the model classes. It also gets a list of `BookInstance` objects that have a status of `BookInstance.LoanStatus.AVAILABLE` (Available). You can find more information about how to access model data in our previous tutorial [Django Tutorial Part 3: Using models > Searching for records](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Models#searching_for_records).
 
 At the end of the view function we call the `render()` function to create an HTML page and return the page as a response. This shortcut function wraps a number of other functions to simplify a very common use case. The `render()` function accepts the following parameters:
 
