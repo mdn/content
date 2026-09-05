@@ -79,6 +79,17 @@ The image file formats that are most commonly used on the web are listed below.
       </td>
     </tr>
     <tr>
+      <th scope="row"><a href="#jpeg_xl_image">JPEG XL</a></th>
+      <th scope="row">JPEG XL image</th>
+      <td><code>image/jxl</code></td>
+      <td><code>.jxl</code></td>
+      <td>
+        Supports lossy and lossless compression, progressive decoding, HDR, wide color gamuts, transparency, and animation.
+        Because browser support is not yet universal, provide a fallback using the <code><a href="/en-US/docs/Web/HTML/Reference/Elements/picture">&lt;picture&gt;</a></code> element.<br />
+        <strong>Support:</strong> Safari; Chrome behind a flag; Firefox Nightly.
+      </td>
+    </tr>
+    <tr>
       <th scope="row"><a href="#png_portable_network_graphics">PNG</a></th>
       <th scope="row">Portable Network Graphics</th>
       <td><code>image/png</code></td>
@@ -830,6 +841,60 @@ The JFIF (**J**PEG **F**ile **I**nterchange **F**ormat) specification describes 
     <tr>
       <th scope="row">Licensing</th>
       <td>As of October 27, 2006, all United States patents have expired.</td>
+    </tr>
+  </tbody>
+</table>
+
+### JPEG XL image
+
+JPEG XL (JXL) is a royalty-free raster image format standardized as ISO/IEC 18181.
+It supports lossy and lossless compression, progressive decoding, high bit depths, wide color gamuts, high dynamic range (HDR), transparency, and animation.
+JPEG XL can also losslessly transcode existing JPEG images, allowing the original JPEG file to be reconstructed.
+
+Browser support is not yet universal.
+When using JPEG XL, provide an alternative format such as AVIF, WebP, or JPEG [with the `<picture>` element](#providing_image_fallbacks).
+
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <th scope="row">MIME type</th>
+      <td><code>image/jxl</code></td>
+    </tr>
+    <tr>
+      <th scope="row">File extension(s)</th>
+      <td><code>.jxl</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Specification</th>
+      <td>
+        <a href="https://jpeg.org/jpegxl/workplan.html">ISO/IEC 18181 (JPEG XL)</a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Browser compatibility</th>
+      <td>
+        Safari 17 and later. Chrome 145 and later supports JPEG XL behind the <code>#enable-jxl-image-format</code> flag. Firefox supports it in preview releases. Safari does not support progressive download of JPEG XL files (it can render them after complete download).
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Maximum dimensions</th>
+      <td>1,073,741,823×1,073,741,823 pixels</td>
+    </tr>
+    <tr>
+      <th scope="row">Supported color modes</th>
+      <td>
+        Greyscale and color images, with optional alpha channels, high bit depths, wide color gamuts, and HDR.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Compression</th>
+      <td>Lossy and lossless.</td>
+    </tr>
+    <tr>
+      <th scope="row">Licensing</th>
+      <td>Royalty-free.
+        The format's contributors <a href="https://jpeg.org/items/20190803_press.html">committed to a royalty-free release</a> during standardization, and there are no known royalty-bearing patents.
+        The decoder implementations shipped by browsers are open source with additional patent grants.</td>
     </tr>
   </tbody>
 </table>

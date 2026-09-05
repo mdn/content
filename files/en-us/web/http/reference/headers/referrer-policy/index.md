@@ -45,7 +45,7 @@ Referrer-Policy: unsafe-url
   - : Send only the {{glossary("origin")}} in the {{HTTPHeader("Referer")}} header.
     For example, a document at `https://example.com/page.html` will send the referrer `https://example.com/`.
 - `origin-when-cross-origin`
-  - : When performing a {{glossary("Same-origin_policy", "same-origin")}} request, send the {{glossary("origin")}}, path, and query string. Send only the origin for cross origin requests and requests to less secure destinations (HTTPS→HTTP).
+  - : When performing a {{glossary("Same-origin_policy", "same-origin")}} request, send the {{glossary("origin")}}, path, and query string. Send only the origin for cross-origin requests and requests to less secure destinations (HTTPS→HTTP).
 - `same-origin`
   - : Send the {{glossary("origin")}}, path, and query string for {{glossary("Same-origin_policy", "same-origin")}} requests. Don't send the {{HTTPHeader("Referer")}} header for cross-origin requests.
 - `strict-origin`
@@ -61,6 +61,23 @@ Referrer-Policy: unsafe-url
 
     > [!WARNING]
     > This policy will leak potentially-private information from HTTPS resource URLs to insecure origins. Carefully consider the impact of this setting.
+
+## Effect on the `Origin` header
+
+The referrer policy also affects whether the user agent sets the {{HTTPHeader("Origin")}} header with the request's origin or as `null` (as well as the {{HTTPHeader("Referer")}} header).
+
+Requests using `GET` or `HEAD`, or made in `cors`, `websocket`, or `webtransport` [mode](/en-US/docs/Web/API/Request/mode), are never affected: if the user agent sends an `Origin` header for them at all, it sends the request's origin, regardless of the referrer policy.
+
+For other requests — such as HTML form submissions or `fetch()` calls using `mode: "same-origin"` or `"no-cors"` — the user agent sets `Origin` to `null` when the referrer policy is:
+
+- `no-referrer`.
+- `no-referrer-when-downgrade`, `strict-origin`, or `strict-origin-when-cross-origin`, and the request goes from an `https` origin to a URL that isn't `https`.
+- `same-origin`, and the request is cross-origin.
+
+Any other policy value leaves the `Origin` header set to the request's origin.
+
+> [!NOTE]
+> Because `fetch()` defaults to `mode: "cors"`, a same-origin `fetch()` `POST` always sends its real `Origin`, even under `Referrer-Policy: no-referrer`. The null-`Origin` behavior above therefore mainly applies to `navigate`-mode requests, like HTML form submissions, rather than to `fetch()` calls.
 
 ## Integration with HTML
 

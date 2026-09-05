@@ -15,9 +15,11 @@ The `input.setFiles` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#
 {
   "method": "input.setFiles",
   "params": {
-    "context": "<contextId>",
-    "element": "<elementId>",
-    "files": ["<filePath>", ...]
+    "context": "5f07e3ca-ecac-465e-b9ef-49000c196ecf",
+    "element": {
+      "sharedId": "3be28343-afd3-4dea-a2b6-a863fbbb80e1"
+    },
+    "files": ["/home/user/documents/report.pdf"]
   }
 }
 ```

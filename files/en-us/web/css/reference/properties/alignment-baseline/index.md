@@ -49,6 +49,8 @@ alignment-baseline: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `baseline`
   - : Use the {{cssxref("dominant-baseline")}} value of the parent.
 

@@ -3,12 +3,10 @@ title: Iterator.zip()
 short-title: zip()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/zip
 page-type: javascript-static-method
-status:
-  - experimental
 browser-compat: javascript.builtins.Iterator.zip
 ---
 
-{{JSRef}}{{SeeCompatTable}}
+{{JSRef}}
 
 The **`Iterator.zip()`** static method creates a new {{jsxref("Iterator")}} object that aggregates elements from multiple iterable objects by yielding arrays containing elements at the same position. It essentially "zips" the input iterables together, allowing simultaneous iteration over them.
 

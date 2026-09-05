@@ -2,7 +2,7 @@
 title: 102 Processing
 slug: Web/HTTP/Reference/Status/102
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc2518.html#section-10.1
+spec-urls: https://www.rfc-editor.org/info/rfc2518/#section-10.1
 sidebar: http
 ---
 
@@ -33,4 +33,4 @@ This feature is deprecated and browsers will ignore this response status code.
 
 - [HTTP response status codes](/en-US/docs/Web/HTTP/Reference/Status)
 - {{HTTPStatus("100")}}
-- [rfc4918 '102 Processing' removal notes](https://www.rfc-editor.org/rfc/rfc4918#section-21.4)
+- [rfc4918 '102 Processing' removal notes](https://www.rfc-editor.org/info/rfc4918/#section-21.4)

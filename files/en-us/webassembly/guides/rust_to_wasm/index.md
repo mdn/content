@@ -31,7 +31,7 @@ Install Rust by going to the [Install Rust](https://rust-lang.org/tools/install/
 
 ### wasm-pack
 
-To build the package, we need an additional tool, `wasm-pack`. This helps compile the code to WebAssembly and produce the right packaging for use in the browser. To download and install it, enter the following command into your terminal:
+To build the package, we need an additional tool, `wasm-pack`. This compiles the code to WebAssembly and produces the right packaging for use in the browser. To download and install it, enter the following command into your terminal:
 
 ```bash
 cargo install wasm-pack
@@ -53,7 +53,7 @@ This creates a new library in a subdirectory named `hello-wasm` with everything 
     └── lib.rs
 ```
 
-`Cargo.toml` is the file that configures our build. It works similarly to `Gemfile` from Bundler or `package.json` from npm.
+`Cargo.toml` configures our build. It works similarly to `Gemfile` from Bundler or `package.json` from npm.
 
 Cargo has also generated some Rust code for us in `src/lib.rs`:
 
@@ -92,7 +92,7 @@ pub fn greet(name: &str) {
 }
 ```
 
-Our Rust code has three main parts; let's talk about each one in turn. We give a high-level explanation here, and gloss over some details; to learn more about Rust, please check the free online book [The Rust Programming Language](https://doc.rust-lang.org/book/).
+Our Rust code has three main parts. We provide a high-level explanation here, and gloss over some details; to learn more about Rust, please check the free online book [The Rust Programming Language](https://doc.rust-lang.org/book/).
 
 #### Using `wasm-bindgen` to communicate between Rust and JavaScript
 
@@ -110,7 +110,7 @@ The first line contains a `use` command, which imports code from a library into 
 
 Before we move on to the next section, we should talk more about `wasm-bindgen`.
 
-`wasm-pack` uses `wasm-bindgen`, another tool, to provide a bridge between the types of JavaScript and Rust. It allows JavaScript to call a Rust API with a string, or a Rust function to catch a JavaScript exception.
+`wasm-pack` uses `wasm-bindgen` to bridge between JavaScript and Rust types. It allows JavaScript to call a Rust API with a string, or a Rust function to catch a JavaScript exception.
 
 We use `wasm-bindgen`'s functionality in our package. In fact, that's the next section.
 
@@ -127,9 +127,7 @@ extern "C" {
 
 The bit inside the `#[ ]` is called an "attribute", and it modifies the next statement somehow. In this case, that statement is an `extern`, which tells Rust that we want to call some externally defined functions. The attribute says "wasm-bindgen knows how to find these functions".
 
-The third line is a function signature, written in Rust. It says "the `alert` function takes one argument, a string named `s`."
-
-As you might suspect, this is [the `alert` function provided by JavaScript](/en-US/docs/Web/API/Window/alert). We call this function in the next section.
+The third line is a function signature, written in Rust. It says "the `alert` function takes one argument, a string named `s`." As you might suspect, this is [the `alert` function provided by JavaScript](/en-US/docs/Web/API/Window/alert). We call this function in the next section.
 
 Whenever you want to call JavaScript functions, you can add them to this file, and `wasm-bindgen` sets everything up for you. Not everything is supported yet, but we're working on it. Please [file bugs](https://github.com/rustwasm/wasm-bindgen/issues/new) if something is missing.
 
@@ -150,13 +148,13 @@ This function is named `greet`, and takes one argument, a string (written `&str`
 
 The `format!` macro takes two arguments in this case: a format string, and a variable to put in it. The format string is the `"Hello, {}!"` bit. It contains `{}`s, where variables will be interpolated. The variable we're passing is `name`, the argument to the function, so if we call `greet("Steve")` we should see `"Hello, Steve!"`.
 
-This is passed to `alert()`, so when we call this function we will see an alert box with "Hello, Steve!" in it.
+This is passed to `alert()`, so when we call this function, we will see an alert box with "Hello, Steve!" in it.
 
 Now that our library is written, let's build it.
 
 ### Compiling our code to WebAssembly
 
-To compile our code correctly, we first configure it with `Cargo.toml`. Open this file, and change its contents to look like this:
+To compile our code correctly, we first configure it with `Cargo.toml`. Open this file and change its contents to look like this:
 
 ```toml
 [package]
@@ -183,7 +181,7 @@ The last section is the `[dependencies]` section. Here's where we tell Cargo wha
 
 ### Building the package
 
-Now that we've completed the set up, let's build the package.
+Now that we've completed the setup, let's build the package.
 We'll be using the generated code in a native ES module and Node.js.
 For this purpose, we'll use the [`--target` argument](https://rustwasm.github.io/docs/wasm-pack/commands/build.html#target) in `wasm-pack build` to specify what kind of WebAssembly and JavaScript is generated.
 
@@ -201,7 +199,7 @@ This does several things. To learn about them in detail, check out [this blog po
 4. Reads your `Cargo.toml` and produces an equivalent `package.json`.
 5. Copies your `README.md` (if you have one) into the package.
 
-The end result? You have a package inside the `pkg` directory.
+The result is a package inside the `pkg` directory.
 
 ## Using the package on the web
 
@@ -247,9 +245,9 @@ Put the following content in the `index.html` file:
 </html>
 ```
 
-The script in this file will import the JavaScript glue code, initialize the Wasm module, and call the `greet` function we wrote in Rust.
+The script in this file imports the JavaScript glue code, initializes the Wasm module, and calls the `greet` function we wrote in Rust.
 
-Serve the project root with a local web server, (e.g., `python3 -m http.server`). If you're not sure how to do that, refer to [Running a simple local HTTP server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server#running_a_simple_local_http_server).
+Serve the project root with a local web server (e.g., `python3 -m http.server`). If you're not sure how to do that, refer to [Running a simple local HTTP server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server#running_a_simple_local_http_server).
 
 > [!NOTE]
 > Use an up-to-date web server that supports the `application/wasm` MIME type. Older web servers might not support it yet.
@@ -261,16 +259,16 @@ Load `index.html` from the web server (if you used the Python3 example: `http://
 We are building an npm package, so you need to have Node.js and npm installed.
 
 To get Node.js and npm, go to the [Get npm!](https://docs.npmjs.com/getting-started/) page and follow the instructions.
-This tutorial targets node 20. To switch between node versions, you can use [nvm](https://github.com/nvm-sh/nvm).
+This tutorial targets Node.js 20. To switch between Node versions, you can use [nvm](https://github.com/nvm-sh/nvm).
 
 To use the WebAssembly module with npm, we'll need to make a few changes.
-Let's start by recompiling our Rust with `bundler` option as the target:
+Let's start by recompiling our Rust with the `bundler` option as the target:
 
 ```bash
 wasm-pack build --target bundler
 ```
 
-We now have an npm package, written in Rust, but compiled to WebAssembly. It's ready for use from JavaScript, and doesn't require the user to have Rust installed; the code included was the WebAssembly code, not the Rust source.
+We now have an npm package, written in Rust, but compiled to WebAssembly. It's ready to use from JavaScript and doesn't require the user to have Rust installed.
 
 ### Using the npm package on the web
 
@@ -291,7 +289,7 @@ Install the `webpack` dev dependencies:
 npm i -D webpack@5 webpack-cli@5 webpack-dev-server@5 copy-webpack-plugin@12
 ```
 
-Next, we need to configure webpack. Create `webpack.config.js` and put the following in it:
+Next, configure webpack. Create `webpack.config.js` and put the following in it:
 
 ```js
 const CopyPlugin = require("copy-webpack-plugin");
@@ -345,7 +343,7 @@ wasm.greet("WebAssembly with npm");
 
 This imports the module from the `node_modules` folder and calls the `greet` function, passing `"WebAssembly with npm"` as a string. Note how there's nothing special here, yet we're calling into Rust code. As far as the JavaScript code can tell, this is just a normal module.
 
-Finally, we need to add a HTML file to load the JavaScript. Create an `index.html` file and add the following:
+Finally, add an HTML file to load the JavaScript. Create an `index.html` file and add the following:
 
 ```html
 <!doctype html>
@@ -397,14 +395,14 @@ hello-wasm-0.1.0.tgz
 ```
 
 To publish to npm, you will need an [npm account](https://www.npmjs.com/) and authorize your machine using [`npm adduser`](https://docs.npmjs.com/cli/v10/commands/npm-adduser/).
-When you are ready, you can publish using `wasm-pack` which calls `npm publish` under the hood:
+When you are ready, you can publish using `wasm-pack`, which calls `npm publish` under the hood:
 
 ```bash
 wasm-pack publish
 ```
 
-## Conclusion
+## See also
 
-This is the end of our tutorial; we hope you've found it useful.
-
-There's lots of exciting work going on in this space; if you'd like to help make it even better, check out the [Rust and WebAssembly Working Group](https://github.com/rustwasm/team/blob/master/README.md#get-involved).
+- [rust-lang.org](https://rust-lang.org/)
+- [wasm-bindgen](https://github.com/wasm-bindgen/wasm-bindgen)
+- [wasm-pack](https://github.com/wasm-bindgen/wasm-pack)

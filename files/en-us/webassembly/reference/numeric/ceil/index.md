@@ -1,12 +1,13 @@
 ---
-title: "ceil: Wasm text instruction"
+title: "ceil: Wasm numeric instruction"
 short-title: ceil
 slug: WebAssembly/Reference/Numeric/ceil
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.ceil
 sidebar: webassemblysidebar
 ---
 
-The **`ceil`** instruction is used for getting the value of a number rounded up to the next integer.
+The **`ceil`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) is used for getting the value of a number rounded up to the next integer.
 
 {{InteractiveExample("Wat Demo: ceil", "tabbed-standard")}}
 
@@ -126,3 +127,11 @@ The output is as follows:
 {{embedlivesample("simd_ceil", "100%", 100)}}
 
 `2001` is output because this is the result of rounding up lane 1 of the input value (`2000.1`) to the nearest integer.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

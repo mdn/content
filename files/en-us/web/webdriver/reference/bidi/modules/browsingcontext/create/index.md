@@ -12,10 +12,22 @@ The `browsingContext.create` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/
 ## Syntax
 
 ```json-nolint
+/* With required parameters */
 {
   "method": "browsingContext.create",
   "params": {
-    "type": "tab"
+    "type": "window"
+  }
+}
+
+/* With required and optional parameters */
+{
+  "method": "browsingContext.create",
+  "params": {
+    "type": "tab",
+    "background": true,
+    "referenceContext": "93ee5bd6-d256-4608-a002-9a8995cc0e5f",
+    "userContext": "4e4b1f6d-3f1a-4b2e-9f8c-1a2b3c4d5e6f"
   }
 }
 ```
@@ -26,8 +38,7 @@ The `params` field contains:
 
 - `background` {{optional_inline}}
   - : A boolean that indicates whether the context is created in the background or the foreground.
-    The default value is `false`.
-    - `false`: The context is brought to the foreground and receives focus after it is created.
+    - `false`: The context is brought to the foreground and receives focus after it is created. This is the default.
     - `true`: The context is created in the background. See [`browsingContext.activate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/activate) to bring it to the foreground and give it focus.
 - `referenceContext` {{optional_inline}}
   - : A string that contains the ID of an existing [top-level context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#top-level_context) that is used to position the new context.

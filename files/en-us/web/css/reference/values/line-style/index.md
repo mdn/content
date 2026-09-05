@@ -8,7 +8,7 @@ spec-urls: https://drafts.csswg.org/css-backgrounds/#typedef-line-style
 sidebar: cssref
 ---
 
-The **`<line-style>`** {{glossary("enumerated")}} value type represents keyword values that define the style of a line, or the lack of a line. The `<line-style>` keyword values are used in the following longhand and shorthand [border](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) and [column](/en-US/docs/Web/CSS/Guides/Multicol_layout) properties:
+The **`<line-style>`** {{glossary("enumerated")}} value type represents keyword values that define the style of a line, or the lack of a line. The `<line-style>` keyword values are used in the following longhand and shorthand [border](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) and [gap decoration](/en-US/docs/Web/CSS/Guides/Gaps) properties:
 
 - {{cssxref("border")}}, {{cssxref("border-style")}}
 - {{cssxref("border-block")}}, {{cssxref("border-block-style")}}
@@ -22,6 +22,7 @@ The **`<line-style>`** {{glossary("enumerated")}} value type represents keyword 
 - {{cssxref("border-right")}}, {{cssxref("border-right-style")}}
 - {{cssxref("border-top")}}, {{cssxref("border-top-style")}}
 - {{cssxref("column-rule")}}, {{cssxref("column-rule-style")}}
+- {{cssxref("row-rule")}}, {{cssxref("row-rule-style")}}
 
 ## Syntax
 
@@ -30,9 +31,9 @@ The **`<line-style>`** {{glossary("enumerated")}} value type represents keyword 
 The `<line-style>` enumerated type is specified using one of the values listed below:
 
 - `none`
-  - : Displays no line. The computed value of the line width is `0` even if a width value is specified. In the case of table cell and border collapsing, the `none` value has the _lowest_ priority. If any other conflicting border is set, it will be displayed. The `none` value is similar to `hidden`.
+  - : Displays no line. The [used value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value) of the line width is `0` even if a width value is specified. In the case of table cell and border collapsing, the `none` value has the _lowest_ priority. If any other conflicting border is set, it will be displayed. The `none` value is similar to `hidden`.
 - `hidden`
-  - : Displays no line. The computed width of the line is `0` even if a width value is specified. In the case of table cell and border collapsing, the `hidden` value has the _highest_ priority. If any other conflicting border is set, it won't be displayed. The `hidden` value is similar to `none`, but `hidden` is not a valid value for outline styles.
+  - : Displays no line. The [used value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value) of the line width is `0` even if a width value is specified. In the case of table cell and border collapsing, the `hidden` value has the _highest_ priority. If any other conflicting border is set, it won't be displayed. The `hidden` value is similar to `none`, but `hidden` is not a valid value for outline styles.
 - `dotted`
   - : Displays a series of round dots. The radius of the dots is half the computed value of the line's width. The spacing of the dots is not defined by the specification and is implementation-specific.
 - `dashed`
@@ -269,6 +270,8 @@ Notice that the almost-black color of `#000001` may be different from the actual
 
 ## See also
 
+- {{cssxref("line-width")}} data type
 - [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module
 - [CSS basic user interface](/en-US/docs/Web/CSS/Guides/Basic_user_interface) module
+- [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module
 - [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout) module

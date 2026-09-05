@@ -34,8 +34,8 @@ color-mix(in oklab, teal, olive, blue, purple)
 
 The `color-mix( <color-interpolation-method>? , [ <color> && <percentage [0,100]>? ]#)` accepts the following parameters:
 
-- {{CSSXref("&lt;color-interpolation-method&gt;")}}
-  - : Specifies what interpolation method should be used to mix the colors. It consists of the `in` keyword followed by a {{glossary("color space")}} (one of the color spaces listed in the [formal syntax](#formal_syntax)), and, optionally, a {{CSSXref("&lt;hue-interpolation-method&gt;")}}.
+- {{CSSXref("&lt;color-interpolation-method&gt;")}} {{optional_inline}}
+  - : Specifies what interpolation method should be used to mix the colors. It consists of the `in` keyword followed by a {{glossary("color space")}} (one of the color spaces listed in the [formal syntax](#formal_syntax), defaulting to `oklab`), and, optionally, a {{CSSXref("&lt;hue-interpolation-method&gt;")}}, which defaults to `shorter hue`.
 
 - {{CSSXref("&lt;color&gt;")}}
   - : A color to mix; can be any valid `<color>` value.
@@ -72,6 +72,18 @@ The color space must be one of the available color spaces listed in the [formal 
 The [`<rectangular-color-space>`](/en-US/docs/Web/CSS/Reference/Values/color-interpolation-method#rectangular-color-space) category includes [`srgb`](/en-US/docs/Glossary/Color_space#srgb), [`srgb-linear`](/en-US/docs/Glossary/Color_space#srgb-linear), [`display-p3`](/en-US/docs/Glossary/Color_space#display-p3), [`a98-rgb`](/en-US/docs/Glossary/Color_space#a98-rgb), [`prophoto-rgb`](/en-US/docs/Glossary/Color_space#prophoto-rgb), [`rec2020`](/en-US/docs/Glossary/Color_space#rec2020), [`lab`](/en-US/docs/Glossary/Color_space#cielab_color_spaces), [`oklab`](/en-US/docs/Glossary/Color_space#oklab), [`xyz`](/en-US/docs/Glossary/Color_space#xyz_color_spaces), [`xyz-d50`](/en-US/docs/Glossary/Color_space#xyz), and [`xyz-d65`](/en-US/docs/Glossary/Color_space#xyz-d50).
 
 The `<polar-color-space>` category includes [`hsl`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl), [`hwb`](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb), [`lch`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch), and [`oklch`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch). With these you can optionally follow the color space name with a {{CSSXref("&lt;hue-interpolation-method&gt;")}}. This value defaults to `shorter hue`, but can also be set to `longer hue`, `increasing hue`, or `decreasing hue`.
+
+### Default color space and interpolation method
+
+When mixing colors without a color space or hue interpolation method, the `oklab` color space is used, using `shorter` as the hue interpolation method.
+
+The following three declarations are equivalent:
+
+```css
+background-color: color-mix(red, blue);
+background-color: color-mix(in oklab, red, blue);
+background-color: color-mix(in oklab shorter hue, red, blue);
+```
 
 ### Color percentages
 

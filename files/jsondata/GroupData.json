@@ -301,17 +301,43 @@
       "overview": ["CSS Typed OM API"],
       "guides": ["/docs/Web/API/CSS_Typed_OM_API/Guide"],
       "interfaces": [
-        "CSSKeywordValue",
         "CSSImageValue",
+        "CSSKeywordValue",
+        "CSSMathClamp",
+        "CSSMathInvert",
+        "CSSMathMax",
+        "CSSMathMin",
+        "CSSMathNegate",
+        "CSSMathProduct",
+        "CSSMathSum",
+        "CSSMathValue",
+        "CSSMatrixComponent",
+        "CSSNumericArray",
         "CSSNumericValue",
-        "CSSStyleValue",
+        "CSSPerspective",
         "CSSPositionValue",
+        "CSSRotate",
+        "CSSScale",
+        "CSSSkew",
+        "CSSSkewX",
+        "CSSSkewY",
+        "CSSStyleValue",
+        "CSSTransformComponent",
         "CSSTransformValue",
+        "CSSTranslate",
+        "CSSUnitValue",
         "CSSUnparsedValue",
-        "StylePropertyMap"
+        "CSSVariableReferenceValue",
+        "StylePropertyMap",
+        "StylePropertyMapReadOnly"
       ],
-      "methods": [],
-      "properties": [],
+      "methods": ["Element.computedStyleMap", "CSS.factory_functions_static"],
+      "properties": [
+        "HTMLElement.attributeStyleMap",
+        "SVGElement.attributeStyleMap",
+        "MathMLElement.attributeStyleMap",
+        "CSSStyleRule.styleMap"
+      ],
       "events": []
     },
     "CSSOM": {
@@ -737,20 +763,7 @@
         "/docs/Web/API/CSS_Typed_OM_API/Guide",
         "/docs/Web/API/CSS_Painting_API/Guide"
       ],
-      "interfaces": [
-        "CSSImageValue",
-        "CSSKeywordValue",
-        "CSSMathValue",
-        "CSSNumericValue",
-        "CSSPositionValue",
-        "CSSStyleValue",
-        "CSSTransformValue",
-        "CSSUnitValue",
-        "CSSUnparsedValue",
-        "PaintWorkletGlobalScope",
-        "StylePropertyMap",
-        "Worklet"
-      ],
+      "interfaces": ["PaintWorkletGlobalScope", "Worklet"],
       "methods": ["CSS.registerProperty_static", "Worklet.addModule"],
       "properties": [],
       "events": []
@@ -988,6 +1001,7 @@
         "IDBKeyRange",
         "IDBObjectStore",
         "IDBOpenDBRequest",
+        "IDBRecord",
         "IDBRequest",
         "IDBTransaction",
         "IDBVersionChangeEvent"
@@ -1217,6 +1231,7 @@
       ],
       "interfaces": [
         "EventCounts",
+        "InteractionContentfulPaint",
         "LargestContentfulPaint",
         "LayoutShift",
         "LayoutShiftAttribution",
@@ -1238,6 +1253,7 @@
         "PerformanceResourceTiming",
         "PerformanceScriptTiming",
         "PerformanceServerTiming",
+        "PerformanceSoftNavigation",
         "PerformanceTiming",
         "TaskAttributionTiming",
         "VisibilityStateEntry"
@@ -1411,6 +1427,19 @@
         "XMLHttpRequest.setPrivateToken()"
       ],
       "properties": ["HTMLIFrameElement.privateToken"],
+      "events": []
+    },
+    "Prompt API": {
+      "overview": ["Prompt API"],
+      "guides": [
+        "/docs/Web/API/Prompt_API/Using",
+        "/docs/Web/API/Prompt_API/Adding_context",
+        "/docs/Web/API/Prompt_API/Preserving_sessions",
+        "/docs/Web/API/Prompt_API/Multimodal"
+      ],
+      "interfaces": ["CreateMonitor", "LanguageModel"],
+      "methods": [],
+      "properties": [],
       "events": []
     },
     "Push API": {
@@ -1610,10 +1639,7 @@
     },
     "Storage Access API": {
       "overview": ["Storage Access API"],
-      "guides": [
-        "/docs/Web/API/Storage_Access_API/Using",
-        "/docs/Web/API/Storage_Access_API/Related_website_sets"
-      ],
+      "guides": ["/docs/Web/API/Storage_Access_API/Using"],
       "interfaces": ["StorageAccessHandle"],
       "methods": [
         "Document.hasStorageAccess()",
@@ -1778,7 +1804,7 @@
     },
     "Topics API": {
       "overview": ["Topics API"],
-      "guides": ["/docs/Web/API/Topics_API/Using"],
+      "guides": [],
       "interfaces": [],
       "methods": ["Document.browsingTopics()", "Window.fetch()"],
       "properties": ["HTMLIFrameElement.browsingTopics"],
@@ -1915,15 +1941,22 @@
       "overview": ["View Transition API"],
       "guides": [
         "/docs/Web/API/View_Transition_API/Using",
-        "/docs/Web/API/View_Transition_API/Using_types"
+        "/docs/Web/API/View_Transition_API/Using_types",
+        "/docs/Web/API/View_Transition_API/Using_element-scoped"
       ],
       "interfaces": [
         "CSSViewTransitionRule",
         "ViewTransition",
         "ViewTransitionTypeSet"
       ],
-      "methods": ["Document.startViewTransition()"],
-      "properties": [],
+      "methods": [
+        "Document.startViewTransition()",
+        "Element.startViewTransition()"
+      ],
+      "properties": [
+        "Document.activeViewTransition",
+        "Element.activeViewTransition"
+      ],
       "events": ["Window: pagereveal", "Window: pageswap"]
     },
     "VirtualKeyboard API": {
@@ -2478,7 +2511,9 @@
         "WebTransport",
         "WebTransportBidirectionalStream",
         "WebTransportDatagramDuplexStream",
+        "WebTransportDatagramsWritable",
         "WebTransportReceiveStream",
+        "WebTransportSendGroup",
         "WebTransportSendStream",
         "WebTransportError"
       ],

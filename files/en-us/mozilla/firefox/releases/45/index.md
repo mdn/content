@@ -35,7 +35,7 @@ Highlights:
   - The implied minimum size of grid Items, that is the special {{cssxref("min-width")}} and {{cssxref("min-height")}} `auto` behavior has been implemented ([Firefox bug 1176775](https://bugzil.la/1176775)).
   - {{cssxref("align-self")}} and {{cssxref("justify-self")}} are now supported on grid layouts ([Firefox bug 1151213](https://bugzil.la/1151213)).
   - {{cssxref("align-content")}} and {{cssxref("justify-content")}} are now supported on grid layouts ([Firefox bug 1151214](https://bugzil.la/1151214)).
-  - Resolved value of grid-template-columns,grid-template-rows in px units ([Firefox bug 978212](https://bugzil.la/978212)).
+  - Resolved value of grid-template-columns, grid-template-rows in px units ([Firefox bug 978212](https://bugzil.la/978212)).
   - The related feature {{cssxref("display")}}: contents has been supported since [Firefox 37](/en-US/docs/Mozilla/Firefox/Releases/37)
 
 - Implement full support for CSS Box Alignment for CSS Grid, support the missing values: `start`, `end`, `self-start`, `self-end`, `left`, `right`, `last-baseline`, `space-evenly` ([Firefox bug 1176782](https://bugzil.la/1176782)). CSS Box Alignment currently applies only to CSS Flexbox and CSS Grid.

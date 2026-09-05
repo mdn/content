@@ -12,7 +12,7 @@ The read-only **`prefix`** property of the {{domxref("CSSNamespaceRule")}} retur
 
 ## Value
 
-A string containing the prefix associated to this namespace. If there is no prefix an empty string.
+A string containing the prefix associated to this namespace. If there is no prefix, an empty string is returned.
 
 ## Examples
 

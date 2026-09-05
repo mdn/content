@@ -6,7 +6,7 @@ browser-compat: javascript.statements
 sidebar: jssidebar
 ---
 
-JavaScript applications consist of statements with an appropriate syntax. A single statement may span multiple lines. Multiple statements may occur on a single line if each statement is separated by a semicolon. This isn't a keyword, but a group of keywords.
+JavaScript code is built from statements and declarations, which can contain expressions. This reference groups the constructs used to control execution and declare bindings. A statement can span multiple lines, and a line can contain multiple statements.
 
 ## Statements and declarations by category
 
@@ -89,12 +89,16 @@ For an alphabetical listing see the sidebar on the left.
 - {{jsxref("Statements/with", "with")}} {{deprecated_inline}}
   - : Extends the scope chain for a statement.
 
-## Difference between statements and declarations
+## What are statements, declarations, and expressions?
 
-In this section, we will be mixing two kinds of constructs: [_statements_](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-Statement) and [_declarations_](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-Declaration). They are two disjoint sets of grammars. The following are declarations:
+All JavaScript programs are composed of a sequence of top-level constructs, using one of the syntaxes listed above. These are known as [_statements_](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-Statement) and [_declarations_](https://tc39.es/ecma262/multipage/ecmascript-language-statements-and-declarations.html#prod-Declaration). In MDN docs, we often colloquially refer to both as _statements_, but they are technically two disjoint sets of grammars.
+
+The following are declarations:
 
 - {{jsxref("Statements/let", "let")}}
 - {{jsxref("Statements/const", "const")}}
+- {{jsxref("Statements/using", "using")}}
+- {{jsxref("Statements/await_using", "await using")}}
 - {{jsxref("Statements/function", "function")}}
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Statements/async_function", "async function")}}
@@ -150,6 +154,20 @@ if (condition) {
   let i = 0;
 }
 ```
+
+In JavaScript, statements and declarations produce values, but these values are almost never observable (other than {{jsxref("Global_Objects/eval", "eval()")}}). Their purpose is to manipulate the surrounding environment and produce side effects—creating variable bindings, outputting things, modifying variable values, etc. The values they use come from evaluating [_expressions_](https://tc39.es/ecma262/multipage/ecmascript-language-expressions.html#prod-Expression).
+
+Expressions are not top-level constructs; they can only be used in specific slots inside statements and declarations, such as `if (expression)`, `const x = expression`, etc. The [expression statement](/en-US/docs/Web/JavaScript/Reference/Statements/Expression_statement) syntax allows most expressions to be used as statements, but that's just a statement with a single expression slot.
+
+You can map out JavaScript syntax structures using just statements, declarations, and expressions:
+
+- Statements can contain statements, declarations, and expressions (like `if (expression) statement` and block statements `{ statement; declaration }`)
+- Declarations can contain statements, declarations, and expressions (like `function x() { statement; declaration }` and `const x = expression`)
+- Expressions can contain statements, declarations, and expressions (like `() => { statement; declaration }` and `console.log(expression)`)
+
+In the reference documentation for each piece of syntax, we describe all its "slots" and say whether each slot is a statement, declaration, or expression.
+
+_Operators_ is another important concept in JavaScript grammar, but they do not work like building blocks. See [What are operators?](/en-US/docs/Web/JavaScript/Reference/Operators#what_are_operators) for more information.
 
 ## Browser compatibility
 

@@ -94,7 +94,7 @@ To mitigate the possibility of these attacks, you should use the `crossorigin` a
 </IfModule>
 ```
 
-Google Chrome's [Google Fonts troubleshooting guide](https://developers.google.com/fonts/docs/troubleshooting) tells us that, while Google Fonts may send the CORS header with every response, some proxy servers may strip it before the browser can use it to render the font.
+Google Chrome's [Google Fonts troubleshooting guide](https://fonts.google.com/faq#troubleshooting) tells us that, while Google Fonts may send the CORS header with every response, some proxy servers may strip it before the browser can use it to render the font.
 
 ```apacheconf
 <IfModule mod_headers.c>
@@ -288,7 +288,7 @@ The required steps are:
 
 ### Forcing HTTPS
 
-These Rewrite rules will redirect from the `http://` insecure version to the `https://` secure version of the URL as described in the [Apache HTTPD wiki](https://cwiki.apache.org/confluence/display/httpd/RewriteHTTPToHTTPS).
+These Rewrite rules will redirect from the `http://` insecure version to the `https://` secure version of the URL as described in the [Apache HTTPD wiki](https://cwiki.apache.org/confluence/spaces/HTTPD/pages/115522478/RewriteHTTPToHTTPS).
 
 ```apacheconf
 <IfModule mod_rewrite.c>
@@ -396,7 +396,7 @@ To make your CSP implementation easier, you can use an online [CSP header genera
 This CSP:
 
 1. Restricts all fetches by default to the origin of the current website by setting the `default-src` directive to `'self'` - which acts as a fallback to all [Fetch directives](/en-US/docs/Glossary/Fetch_directive).
-   - This is convenient as you do not have to specify all Fetch directives that apply to your site, for example: `connect-src 'self'; font-src 'self'; script-src 'self'; style-src 'self'`, etc
+   - This is convenient as you do not have to specify all Fetch directives that apply to your site, for example: `connect-src 'self'; font-src 'self'; script-src 'self'; style-src 'self'`, etc.
    - This restriction also means that you must explicitly define from which site(s) your website is allowed to load resources from. Otherwise, it will be restricted to the same origin as the page making the request
 
 2. Disallows the `<base>` element on the website. This is to prevent attackers from changing the locations of resources loaded from relative URLs

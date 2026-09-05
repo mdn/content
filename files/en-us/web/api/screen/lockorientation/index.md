@@ -9,7 +9,7 @@ status:
 browser-compat: api.Screen.lockOrientation
 ---
 
-{{APIRef("Screen Orientation API")}}{{Deprecated_Header}}{{non-standard_header}}
+{{APIRef("Screen Orientation API")}}{{non-standard_header}}
 
 The **`lockOrientation()`** method of the {{DOMxRef("Screen")}}
 interface locks the screen into a specified orientation.
@@ -76,7 +76,7 @@ lockOrientation(orientation)
 > It's possible to set several locks at the same time. So, if
 > the lock is set for only one orientation, the screen orientation will never change
 > until the screen orientation is unlocked. Otherwise, the screen orientation will
-> change from an orientation to another as long as the orientations are amongst the
+> change from an orientation to another as long as the orientations are among the
 > orientations the device has been locked to.
 
 ### Return value

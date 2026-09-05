@@ -26,14 +26,16 @@ evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result)
 - `contextNode`
   - : The _context node_ for the query.
     It's common to pass `document` as the context node.
-- `namespaceResolver`
+- `namespaceResolver` {{optional_inline}}
   - : A function that will be passed any namespace prefixes
     and should return a string representing the namespace URI associated with that prefix.
     It will be used to resolve prefixes within the _xpath_ itself,
     so that they can be matched with the document.
     The value `null` is common for HTML documents or when no namespace prefixes are used.
-- `resultType`
-  - : An integer that corresponds to the type of result `XPathResult` to return.
+    If omitted, it defaults to `null`.
+- `resultType` {{optional_inline}}
+  - : An integer that corresponds to the type of `XPathResult` to return.
+    If omitted, it defaults to `ANY_TYPE` (`0`).
     The following values are possible:
     - `ANY_TYPE` (`0`)
       - : Whatever type naturally results from the given expression.
@@ -88,8 +90,8 @@ evaluate(xpathExpression, contextNode, namespaceResolver, resultType, result)
       - : A result set containing the first node in the document that matches the
         expression.
 
-- `result`
-  - : An existing `XPathResult` to use for the results. If set to `null` the method will create and return a new `XPathResult`.
+- `result` {{optional_inline}}
+  - : An existing `XPathResult` to use for the results. If set to `null` or omitted, the method will create and return a new `XPathResult`.
 
 ### Return value
 

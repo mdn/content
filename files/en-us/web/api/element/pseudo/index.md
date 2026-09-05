@@ -3,8 +3,12 @@ title: "Element: pseudo() method"
 short-title: pseudo()
 slug: Web/API/Element/pseudo
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Element.pseudo
 ---
+
+{{SeeCompatTable}}
 
 {{APIRef("DOM")}}.
 

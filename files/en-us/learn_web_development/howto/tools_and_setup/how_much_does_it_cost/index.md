@@ -55,7 +55,7 @@ Price does not reliably reflect a text editor's quality or usefulness. You have 
 
 Your system likely includes an image editor, or viewer: Paint on Windows, Eye of GNOME on Ubuntu, Preview on Mac. Those programs are relatively limited, you'll soon want a more robust editor to add layers, effects, and grouping.
 
-Editors can be free ([GIMP](https://www.gimp.org/), [Paint.NET](https://www.getpaint.net/)), moderately expensive ([PaintShop Pro](https://www.paintshoppro.com/), less than $100), or several hundred dollars ([Adobe Photoshop](https://www.adobe.com/products/photoshop.html)).
+Editors can be free ([GIMP](https://www.gimp.org/), [Paint.NET](https://paint.net/)), moderately expensive ([PaintShop Pro](https://www.paintshoppro.com/), less than $100), or several hundred dollars ([Adobe Photoshop](https://www.adobe.com/products/photoshop.html)).
 
 You can use any of them, as they will have similar functionality, though some are so comprehensive you'll never use every feature. If at some point you need to exchange projects with other designers, you should find out what tools they're using. Editors can all export finished projects to standard file formats, but each editor saves ongoing projects in its own specialized format. Most of the images on the internet are copyrighted, so it is better to check the license of the file before you use it. Sites like [Pixabay](https://pixabay.com/) provide images under CC0 license, so you can use, edit and publish them even with modification for commercial use.
 

@@ -7,13 +7,14 @@ browser-compat: css.types.basic-shape.rect
 sidebar: cssref
 ---
 
-The **`rect()`** [CSS](/en-US/docs/Web/CSS) function creates a rectangle at the specified distance from the top and left edges of the containing block. It is a basic shape function of the {{cssxref("basic-shape")}} [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types). You can use the `rect()` function in CSS properties such as {{cssxref("offset-path")}} to create the rectangular path along which an element moves and in {{cssxref("clip-path")}} to define the shape of the clipping region.
+The **`rect()`** [CSS](/en-US/docs/Web/CSS) function creates a rectangle at the specified distance from the top and left edges of the containing block. It is a basic shape function of the {{cssxref("basic-shape")}} [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types). You can use the `rect()` function in CSS properties such as {{cssxref("offset-path")}} to create the rectangular path along which an element moves, in {{cssxref("clip-path")}} to define the shape of the clipping region, and in {{cssxref("border-shape")}} to define the shape of an element's border.
 
 ## Syntax
 
 ```css
 offset-path: rect(0 1% auto 3% round 0 1px);
 clip-path: rect(50px 70px 80% 20%);
+border-shape: rect(10px 500px 130px 20px round 20px);
 ```
 
 ### Values
@@ -115,6 +116,7 @@ In this example, the {{cssxref("offset-path")}} property uses the `rect()` funct
 
 - {{cssxref("basic-shape/inset","inset()")}} function
 - {{cssxref("basic-shape/xywh","xywh()")}} function
+- {{cssxref("border-shape")}} property
 - {{cssxref("clip-path")}} property
 - {{cssxref("offset-path")}} property
 - {{cssxref("basic-shape")}} data type

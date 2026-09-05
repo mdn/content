@@ -261,7 +261,7 @@ Then we give the generated content the content "required", which is what we want
   <fieldset>
     <legend>Feedback form</legend>
 
-    <p>Required fields are labelled with "required".</p>
+    <p>Required fields are labeled with "required".</p>
     <div>
       <label for="fname">First name: </label>
       <input id="fname" name="fname" type="text" required />
@@ -428,7 +428,7 @@ You can try it below (press the **Play** button to run the example in MDN Playgr
   <fieldset>
     <legend>Feedback form</legend>
 
-    <p>Required fields are labelled with "required".</p>
+    <p>Required fields are labeled with "required".</p>
     <div>
       <label for="fname">First name: </label>
       <input id="fname" name="fname" type="text" required />
@@ -609,7 +609,7 @@ This is a similar story to what we had before in the `:required` example, except
   <fieldset>
     <legend>Feedback form</legend>
 
-    <p>Required fields are labelled with "required".</p>
+    <p>Required fields are labeled with "required".</p>
     <div>
       <label for="name">Name: </label>
       <input id="name" name="name" type="text" required />
@@ -1017,8 +1017,7 @@ The full example looks like this (press the **Play** button to run the example i
 Viscous,
 Bright Ridge,
 CA
-</textarea
-      >
+</textarea>
     </div>
     <div>
       <label for="zip-code">Zip/postal code: </label>
@@ -1232,7 +1231,7 @@ input[type="radio"]:checked::before {
 
 {{EmbedLiveSample("radios-styled", "100%", 200, , , , , "allow-forms")}}
 
-Basically, we build the styling for a radio button's "inner circle" using the `::before` pseudo-element, but set a `scale(0)` {{cssxref("transform")}} on it. We then use a {{cssxref("transition")}} to make the generated content on the label nicely animate into view when the radio is selected/checked. The advantage of using a transform rather than transitioning {{cssxref("width")}}/{{cssxref("height")}} is that you can use {{cssxref("transform-origin")}} to make it grow from the center of the circle, rather than having it appear to grow from the circle's corner, and there is no jumping behavior as no box model property values are updated.
+Basically, we build the styling for a radio button's "inner circle" using the `::before` pseudo-element, but set a `scale(0)` {{cssxref("transform")}} on it. We then use a {{cssxref("transition")}} to make the generated content on the input nicely animate into view when the radio is selected/checked. The advantage of using a transform rather than transitioning {{cssxref("width")}}/{{cssxref("height")}} is that you can use {{cssxref("transform-origin")}} to make it grow from the center of the circle, rather than having it appear to grow from the circle's corner, and there is no jumping behavior as no box model property values are updated.
 
 ### :default and :indeterminate
 

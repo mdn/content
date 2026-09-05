@@ -223,7 +223,7 @@ Let's start by creating our own canvas template to create future experiments in.
    <html lang="en-US">
      <head>
        <meta charset="utf-8" />
-       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <meta name="viewport" content="width=device-width" />
        <title>Canvas</title>
        <script src="script.js" defer></script>
        <link href="style.css" rel="stylesheet" />
@@ -447,7 +447,7 @@ Now let's look at how to draw a circle in canvas. This is accomplished using the
    ctx.fill();
    ```
 
-   `arc()` takes six parameters. The first two specify the position of the arc's center (X and Y, respectively). The third is the circle's radius, the fourth and fifth are the start and end angles at which to draw the circle (so specifying 0 and 360 degrees gives us a full circle), and the sixth parameter defines whether the circle should be drawn counterclockwise (anticlockwise) or clockwise (`false` is clockwise).
+   `arc()` takes six parameters. The first two specify the position of the arc's center (X and Y, respectively). The third is the circle's radius, the fourth and fifth are the start and end angles at which to draw the circle (so specifying 0 and 360 degrees gives us a full circle), and the sixth parameter defines whether the circle should be drawn counterclockwise or clockwise (`false` is clockwise).
 
    > [!NOTE]
    > 0 degrees is horizontally to the right.
@@ -982,9 +982,9 @@ WebGL is based on [OpenGL](/en-US/docs/Glossary/OpenGL) (Open Graphics Library),
 
 ### Using a library
 
-Because of its complexity, most people write 3D graphics code using a third party JavaScript library such as [Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js), [PlayCanvas](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas), or [Babylon.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js). Most of these work in a similar way, providing functionality to create primitive and custom shapes, position viewing cameras and lighting, covering surfaces with textures, and more. They handle the WebGL for you, letting you work on a higher level.
+Because of its complexity, most people write 3D graphics code using a third-party JavaScript library such as [Three.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js), [PlayCanvas](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas), or [Babylon.js](/en-US/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js). Most of these work in a similar way, providing functionality to create primitive and custom shapes, position viewing cameras and lighting, covering surfaces with textures, and more. They handle the WebGL for you, letting you work on a higher level.
 
-Yes, using one of these means learning another new API (a third party one, in this case), but they are a lot simpler than coding raw WebGL.
+Yes, using one of these means learning another new API (a third-party one, in this case), but they are a lot simpler than coding raw WebGL.
 
 ### A spinning cube
 
@@ -998,7 +998,7 @@ Let's look at an example of how to create something with a WebGL library. We'll 
    <html lang="en-US">
      <head>
        <meta charset="utf-8" />
-       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <meta name="viewport" content="width=device-width" />
 
        <title>Three.js basic cube example</title>
 

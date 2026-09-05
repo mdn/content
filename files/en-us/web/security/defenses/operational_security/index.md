@@ -66,7 +66,7 @@ Project maintainers typically need to use credentials, such as passwords or API 
 
 - Secrets should be stored securely.
 - Access to secrets should be controlled and limited to the maintainers who need them.
-- Secrets should never be checked into public repositories. Tools to scan repositories for secrets are available, either as part of source control or hosting systems, or as third party services.
+- Secrets should never be checked into public repositories. Tools to scan repositories for secrets are available, either as part of source control or hosting systems, or as third-party services.
 
 ## Managing third-party dependencies
 
@@ -88,7 +88,7 @@ The [Concise Guide for Evaluating Open Source Software](https://best.openssf.org
 
 ### Updating dependencies
 
-Once you have added a dependency to your project, the dependency's supplier will typically release new versions with new features, bug fixes, and security fixes. You will usually want to take advantage of these updates, by implementing a mechanism to keep the dependency up to date. Tools such as GitHub's [dependabot](https://docs.github.com/en/code-security/tutorials/secure-your-dependencies/dependabot-quickstart-guide) can help with this, by detecting new versions of dependencies and automatically opening pull requests to update your project.
+Once you have added a dependency to your project, the dependency's supplier will typically release new versions with new features, bug fixes, and security fixes. You will usually want to take advantage of these updates, by implementing a mechanism to keep the dependency up to date. Tools such as GitHub's [dependabot](https://docs.github.com/en/code-security/tutorials/secure-your-dependencies/dependabot-quickstart) can help with this, by detecting new versions of dependencies and automatically opening pull requests to update your project.
 
 However, updating dependencies too eagerly comes with its own risks. For example, suppose you add a dependency on a trustworthy third-party package. An attacker then gets control of the package developer's account, and publishes a malicious update. If you immediately accept the update, your project is compromised.
 

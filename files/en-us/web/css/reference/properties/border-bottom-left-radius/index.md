@@ -96,7 +96,7 @@ With two values:
 
 ## Description
 
-The rounding can be a circle or an ellipse, or if one of the value is `0` no rounding is done and the corner is square.
+The rounding can be a circle or an ellipse, or if one of the values is `0` no rounding is done and the corner is square.
 
 ![border-bottom-left-radius.png](border-bottom-left-radius.png)
 

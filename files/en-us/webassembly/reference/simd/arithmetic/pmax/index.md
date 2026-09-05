@@ -3,6 +3,7 @@ title: "pmax: Wasm SIMD arithmetic instruction"
 short-title: pmax
 slug: WebAssembly/Reference/SIMD/arithmetic/pmax
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.pmax
 sidebar: webassemblysidebar
 ---
 
@@ -64,6 +65,14 @@ value_type.pmax
 | ------------ | -------------- | -------------------------------- |
 | `f32x4.pmax` | `0xfd 235:u32` | `f32x4.pmax` => `0xfd 0xeb 0x01` |
 | `f64x2.pmax` | `0xfd 247:u32` | `f64x2.pmax` => `0xfd 0xf7 0x01` |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

@@ -1,12 +1,13 @@
 ---
-title: "lt: Wasm text instruction"
+title: "lt: Wasm numeric instruction"
 short-title: lt
 slug: WebAssembly/Reference/Numeric/lt
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.lt
 sidebar: webassemblysidebar
 ---
 
-The **`lt`** instruction, short for _less than_, checks if a floating point number is less than another floating point number.
+The **`lt`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _less than_, checks if a floating point number is less than another floating point number.
 
 Integer types have separate less than signed ([**`lt_s`**](/en-US/docs/WebAssembly/Reference/Numeric/lt_s)) and unsigned ([**`lt_u`**](/en-US/docs/WebAssembly/Reference/Numeric/lt_u)) instructions.
 
@@ -142,6 +143,14 @@ The output is as follows:
 {{embedlivesample("simd_lt", "100%", 100)}}
 
 The result is `0` because the value stored in lane `3` of the first input value is not less than the value stored in lane `3` of the second input value.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

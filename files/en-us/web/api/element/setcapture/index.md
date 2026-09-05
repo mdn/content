@@ -9,7 +9,7 @@ status:
 browser-compat: api.Element.setCapture
 ---
 
-{{Deprecated_Header}}{{non-standard_header}}{{ APIRef("DOM") }}
+{{non-standard_header}}{{ APIRef("DOM") }}
 
 Call this method during the handling of a mousedown event to retarget all mouse events
 to this element until the mouse button is released or {{domxref("document.releaseCapture()")}} is called.

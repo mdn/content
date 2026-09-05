@@ -11,6 +11,8 @@ As a rule, there's a many-to-many relationship between attacks and defenses. In 
 
 - [Certificate transparency](/en-US/docs/Web/Security/Defenses/Certificate_Transparency)
   - : Provides a publicly visible log of issued {{glossary("TLS")}} certificates, making it easier to detect those which were malicious or incorrectly issued.
+- [Input validation](/en-US/docs/Web/Security/Defenses/Input_validation)
+  - : Checking that input provided by the user is what the site expects.
 - [Mixed content blocking](/en-US/docs/Web/Security/Defenses/Mixed_content)
   - : Prevents a document that was delivered over HTTPS from loading subresources (such as scripts, images, or fonts) over HTTP.
 - [Operational security](/en-US/docs/Web/Security/Defenses/Operational_security)

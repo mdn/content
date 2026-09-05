@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Window.innerWidth
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
 The read-only {{domxref("Window")}} property **`innerWidth`** returns the interior width of the window in pixels (that is, the width of the window's {{Glossary("layout viewport")}}). That includes the width of the vertical scroll bar, if one is present.
 

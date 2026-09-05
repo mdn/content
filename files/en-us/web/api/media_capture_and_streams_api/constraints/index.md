@@ -250,7 +250,7 @@ The HTML and CSS for this example are pretty simple, and aren't shown here. You 
 
   <div class="button" id="applyButton">Apply Constraints</div>
 </div>
-<video id="video" autoplay></video>
+<video id="my-video" autoplay></video>
 
 <div class="button" id="stopButton">Stop Video</div>
 
@@ -344,7 +344,7 @@ let videoTrack = null;
 And we get references to all of the elements we'll need to access.
 
 ```js
-const videoElement = document.getElementById("video");
+const videoElement = document.getElementById("my-video");
 const logElement = document.getElementById("log");
 const supportedConstraintList = document.getElementById("supportedConstraints");
 const videoConstraintEditor = document.getElementById("videoConstraintEditor");
