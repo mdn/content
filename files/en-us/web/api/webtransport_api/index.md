@@ -11,7 +11,8 @@ The **WebTransport API** provides a modern update to {{domxref("WebSockets API",
 
 ## Concepts and usage
 
-[HTTP/3](https://en.wikipedia.org/wiki/HTTP/3) has been in progress since 2018. It is based on Google's QUIC protocol (which is itself based on UDP), and fixes several issues around the classic TCP protocol, on which HTTP and WebSockets are based.
+[HTTP/3](https://en.wikipedia.org/wiki/HTTP/3) was standardized in 2022, after several years of development.
+It is based on the QUIC protocol (itself based on UDP and standardized in 2021), and fixes several issues around the classic TCP protocol, on which HTTP and WebSockets are based.
 
 These include:
 
@@ -30,8 +31,6 @@ The WebTransport API provides low-level access to two-way communication via HTTP
 
 To open a connection to an HTTP/3 server, you pass its URL to the {{domxref("WebTransport.WebTransport", "WebTransport()")}} constructor. Note that the scheme needs to be HTTPS, and the port number needs to be explicitly specified. Once the {{domxref("WebTransport.ready")}} promise fulfills, you can start using the connection.
 
-Also note that you can respond to the connection closing by waiting for the {{domxref("WebTransport.closed")}} promise to fulfill. Errors returned by WebTransport operations are of type {{domxref("WebTransportError")}}, and contain additional data on top of the standard {{domxref("DOMException")}} set.
-
 ```js
 const url = "https://example.com:4999/wt";
 
@@ -44,9 +43,13 @@ async function initTransport(url) {
 
   // …
 }
+```
 
-// …
+### Closing the connection
 
+You can respond to the connection closing by waiting for the {{domxref("WebTransport.closed")}} promise to fulfill. Errors returned by WebTransport operations are of type {{domxref("WebTransportError")}}, and contain additional data on top of the standard {{domxref("DOMException")}} set.
+
+```js
 async function closeTransport(transport) {
   // Respond to connection closing
   try {
@@ -57,6 +60,17 @@ async function closeTransport(transport) {
   }
 }
 ```
+
+The server may also indicate that it wants to drain the connection prior to closing, perhaps due to management of the underlying transport.
+When this happens, the client should start closing streams, and create a new session if it needs to continue its work.
+You can detect this using the {{domxref("WebTransport.draining")}} promise, which fulfills once the server signals that the session is entering the draining state:
+
+````js
+async function watchForDraining(transport) {
+  // Fulfills when the server signals that the session is draining
+  await transport.draining;
+
+  console.log("The session is draining: avoid opening new streams.");
 
 ### Negotiating an application protocol
 
@@ -84,7 +98,7 @@ async function initTransport(url) {
     console.error(`Connection failed: ${error}`);
   }
 }
-```
+````
 
 ### Unreliable transmission via datagrams
 
