@@ -21,6 +21,8 @@ new RTCPeerConnection(configuration)
 
 - `configuration` {{optional_inline}}
   - : An object providing options to configure the new connection:
+    - `alwaysNegotiateDataChannels` {{optional_inline}}
+      - : A boolean value that, if set to `true`, specifies that the application will negotiate data channels in the {{glossary("SDP")}} offer before creating an {{domxref("RTCDataChannel")}}. This also negotiates the data `m=` section before any audio or video `m=` sections. The data `m=` section is also used as the "offerer-tagged" `m=` section for the BUNDLE. Defaults to `false`.
     - `bundlePolicy` {{optional_inline}}
       - : Specifies how to handle negotiation of candidates when the remote peer is not compatible with the [SDP BUNDLE standard](https://datatracker.ietf.org/doc/rfc8843/). If the remote endpoint is BUNDLE-aware, all media tracks and data channels are bundled onto a single transport at the completion of negotiation, regardless of policy used, and any superfluous transports that were created initially are closed at that point.
 
