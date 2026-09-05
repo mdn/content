@@ -93,12 +93,7 @@ To group options under a heading, use an {{HTMLElement("optgroup")}}; an {{HTMLE
 
 On a desktop computer, there are a number of ways to select multiple options in a `<select>` element with a `multiple` attribute and a `size` attribute greater than `1`.
 
-Mouse users can hold the <kbd>Ctrl</kbd>, <kbd>Command</kbd>, or <kbd>Shift</kbd> keys (depending on what makes sense for your operating system) and then click multiple options to select/deselect them.
-
-> [!WARNING]
-> The mechanism for selecting multiple non-contiguous items via the keyboard described below currently only seems to work in Firefox.
->
-> On macOS, the <kbd>Ctrl</kbd> + <kbd>Up</kbd> and <kbd>Ctrl</kbd> + <kbd>Down</kbd> shortcuts conflict with the OS default shortcuts for _Mission Control_ and _Application windows_, so you'll have to turn these off before it will work.
+Mouse users can hold the <kbd>Ctrl</kbd> (<kbd>Command</kbd> on macOS), or <kbd>Shift</kbd> keys (depending on what makes sense for your operating system) and then click multiple options to select/deselect them.
 
 Keyboard users can select multiple contiguous items by:
 
@@ -109,7 +104,7 @@ Keyboard users can select multiple contiguous items by:
 Keyboard users can select multiple non-contiguous items by:
 
 - Focusing on the `<select>` element (e.g., using <kbd>Tab</kbd>).
-- Holding down the <kbd>Ctrl</kbd> key then using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to change the "focused" select option, i.e., the one that will be selected if you choose to do so. The "focused" select option is highlighted with a dotted outline, in the same way as a keyboard-focused link.
+- Holding down the <kbd>Ctrl</kbd> key  (<kbd>Command</kbd> on macOS) then using the <kbd>Up</kbd> and <kbd>Down</kbd> cursor keys to change the "focused" select option, i.e., the one that will be selected if you choose to do so. The "focused" select option is highlighted with a dotted outline, in the same way as a keyboard-focused link.
 - Pressing <kbd>Space</kbd> to select/deselect "focused" select options.
 
 ## Styling with CSS
