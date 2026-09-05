@@ -10,11 +10,9 @@ A {{WebExtAPIRef("storage.StorageArea")}} object that represents the `managed` s
 
 ## Provisioning managed storage
 
-The procedure for provisioning managed storage varies between browsers. For Chrome instructions, see the ["Manifest for storage areas"](https://developer.chrome.com/docs/extensions/reference/manifest/storage) article.
+The procedure for provisioning managed storage varies by browser and is supported only by Firefox and Chrome. See [Enterprise policies and extensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Enterprise_policies) for a comparison and links to each browser's documentation.
 
-For Firefox, you need to create a [JSON manifest (native manifest) file in a specific format and location](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#managed_storage_manifests) or use the [`3rdparty` enterprise policy](https://mozilla.github.io/policy-templates/#3rdparty).
-
-Here's an example native manifest:
+Here's an example using a Firefox native [managed storage manifest](/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#managed_storage_manifests):
 
 <!-- cSpell:ignore colour -->
 
@@ -29,7 +27,7 @@ Here's an example native manifest:
 }
 ```
 
-Given this manifest, the [favourite-colour](https://github.com/mdn/webextensions-examples/tree/main/favourite-colour) extension could access the data using code like this:
+Given this manifest, the [favourite-colour](https://github.com/mdn/webextensions-examples/tree/main/favourite-colour) extension can access the data using code like this:
 
 ```js
 let storageItem = browser.storage.managed.get("colour");
