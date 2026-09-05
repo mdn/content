@@ -56,7 +56,7 @@ Highlights:
   - `Number("0b11")` now returns `3`, not `NaN`.
   - `"0o11" == 9` now returns `true`, not `false`.
 
-- The [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) declaration is now block-scoped and requires an initializer ([Firefox bug 611388](https://bugzil.la/611388)). It also can not be redeclared anymore ([Firefox bug 1095439](https://bugzil.la/1095439)).
+- The [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) declaration is now block-scoped and requires an initializer ([Firefox bug 611388](https://bugzil.la/611388)). It also cannot be redeclared anymore ([Firefox bug 1095439](https://bugzil.la/1095439)).
   - `{const a=1}; a;` now throws a {{jsxref("ReferenceError")}} and does not return `1` anymore due to block-scoping.
   - `const a;` now throws a {{jsxref("SyntaxError")}} ("missing = in const declaration"): An initializer is required.
   - `const a = 1; a = 2;` now also throws a {{jsxref("SyntaxError")}} ("invalid assignment to const a").

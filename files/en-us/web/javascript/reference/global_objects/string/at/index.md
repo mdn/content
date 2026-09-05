@@ -38,7 +38,7 @@ at(index)
 
 ### Return value
 
-A {{jsxref("String")}} consisting of the single UTF-16 code unit located at the specified position. Returns {{jsxref("undefined")}} if the given index can not be found.
+A {{jsxref("String")}} consisting of the single UTF-16 code unit located at the specified position. Returns {{jsxref("undefined")}} if the given index cannot be found.
 
 ## Examples
 

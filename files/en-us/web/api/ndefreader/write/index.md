@@ -76,7 +76,7 @@ following:
     `false` and there are already records on the tag.
 - `NotSupportedError`
   - : There is no NFC adapter compatible with Web NFC, or the available NFC adapter does
-    not support pushing messages, or connection can not be established.
+    not support pushing messages, or connection cannot be established.
 - `NotReadableError`
   - : The UA is not allowed to access underlying NFC adapter (e.g., due to user
     preference).

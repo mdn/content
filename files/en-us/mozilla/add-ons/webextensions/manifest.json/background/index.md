@@ -55,7 +55,7 @@ The `background` key is an object that must have one of these properties (for mo
           file to an HTML document included in your extension bundle.
         </p>
         <p>
-          If you use this property, you can not specify background scripts using
+          If you use this property, you cannot specify background scripts using
           <code>scripts</code>, but you can include scripts from the
           page, just like a normal web page.
         </p>
