@@ -49,6 +49,8 @@ None ({{jsxref("undefined")}}).
 
 The `define()` method adds a definition for a custom element to the custom element registry, mapping its name to the constructor which will be used to create it.
 
+When `define()` is called, any existing elements in the document (including shadow-including descendants) matching the custom element name—and the `is` value if `extends` is specified—are automatically [upgraded](/en-US/docs/Web/API/CustomElementRegistry/upgrade#description). Upgrading an element runs its constructor, associates its custom element prototype, and invokes applicable [lifecycle callbacks](/en-US/docs/Web/API/Web_components/Using_custom_elements#custom_element_lifecycle_callbacks) such as `connectedCallback()` and `attributeChangedCallback()`.
+
 There are two types of custom element you can create:
 
 - _Autonomous custom elements_ are standalone elements, that don't inherit from built-in HTML elements.
@@ -149,3 +151,4 @@ We could then use it in an HTML page like this:
 ## See also
 
 - [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)
+- {{domxref("CustomElementRegistry.upgrade()")}}
