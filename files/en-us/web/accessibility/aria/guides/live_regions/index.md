@@ -256,6 +256,11 @@ Breakdown of ARIA live properties:
 - `aria-atomic` is not set (`false` by default) so that only the added or removed users should be spoken and not the entire roster each time.
 - `aria-relevant="additions removals"` ensures that both users added or removed to the roster will be spoken.
 
+## Accessibility considerations
+
+- Live regions are typically announced as plain text, so links, buttons, and other semantics in the updated content may not be conveyed in the announcement itself.
+- Include the live region in the initial markup. Assistive technologies generally track live regions that are already present in the document, so adding `aria-live` later with JavaScript is not reliable.
+
 ## See also
 
 - [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles)
