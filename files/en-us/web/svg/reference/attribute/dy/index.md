@@ -2,6 +2,11 @@
 title: dy
 slug: Web/SVG/Reference/Attribute/dy
 page-type: svg-attribute
+browser-compat:
+  - svg.elements.feDropShadow.dy
+  - svg.elements.feOffset.dy
+  - svg.elements.text.dy
+  - svg.elements.tspan.dy
 spec-urls:
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fedropshadow-dy
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-feoffset-dy
@@ -216,3 +221,7 @@ If there are multiple values, `dy` defines a shift along the y-axis for each ind
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
