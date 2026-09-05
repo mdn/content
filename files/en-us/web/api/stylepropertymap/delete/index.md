@@ -25,6 +25,11 @@ delete(property)
 
 None ({{jsxref("undefined")}}).
 
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if `property` is not a valid CSS property name.
+
 ## Examples
 
 ### Basic usage
@@ -46,3 +51,11 @@ buttonEl.attributeStyleMap.delete("background-image");
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("StylePropertyMap.set()")}}
+- {{domxref("StylePropertyMap.append()")}}
+- {{domxref("StylePropertyMap.clear()")}}
+- [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)
