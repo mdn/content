@@ -37,7 +37,7 @@ None ({{jsxref("undefined")}}).
 The following example (see table2.html [source code](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table2.html) and [live version](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html)) creates a new WebAssembly Table instance with an initial size of two references. We then print out the table length and contents of the two indexes (retrieved via [`Table.prototype.get()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Table/get)) to show that the length is two, and the indexes currently contain no function references (they currently return [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null)).
 
 ```js
-const tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });
+const tbl = new WebAssembly.Table({ initial: 2, element: "funcref" });
 console.log(tbl.length);
 console.log(tbl.get(0));
 console.log(tbl.get(1));
