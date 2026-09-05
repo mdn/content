@@ -8,7 +8,7 @@ browser-compat: api.HTMLSlotElement.assign
 
 {{APIRef("Shadow DOM API")}}
 
-The **`assign()`** method of the {{domxref("HTMLSlotElement")}} interface sets the slot's _manually assigned nodes_ to an ordered set of slottables. The manually assigned nodes set is initially empty until nodes are assigned using `assign()`.
+The **`assign()`** method of the {{domxref("HTMLSlotElement")}} interface sets the slot's _manually assigned nodes_ to an ordered set of slottables. The manually assigned nodes set is initially empty until nodes are assigned using `assign()`. If no slottables are passed into **`assign()`**, the slot's fallback content is enabled. If there are no manually assigned nodes and **`assign()`** has not been called, the slots default content will not be enabled.
 
 > [!NOTE]
 > You cannot mix manually (imperative) and named (declarative, automatic) slot assignments. Therefore, for this method to work, the shadow tree needs to have been [created](/en-US/docs/Web/API/Element/attachShadow) with the `slotAssignment: "manual"` option.
@@ -16,15 +16,19 @@ The **`assign()`** method of the {{domxref("HTMLSlotElement")}} interface sets t
 ## Syntax
 
 ```js-nolint
-assign(node1)
-assign(node1, node2)
-assign(node1, node2, /* …, */ nodeN)
+slot.assign() // enables fallback content
+slot.assign(node1)
+slot.assign(node1, node2)
+slot.assign(node1, node2, /* …, */ nodeN)
 ```
 
 ### Parameters
 
+- `slot`
+  - : The {{domxref("HTMLSlotElement")}} to assign nodes to.
 - `node1`, …, `nodeN`
   - : A set of {{domxref("Element")}} or {{domxref("Text")}} nodes.
+  - : Passing zero arguments causes the slot's fallback content to be enabled. Failing to call **`assign()`** with zero arguments after all manually assigned nodes are removed from DOM will *not* enable the slot's fallback content.
 
 ### Return value
 
@@ -47,6 +51,8 @@ function UpdateDisplayTab(elem, tabIdx) {
   if (panels.length && tabIdx && tabIdx <= panels.length) {
     slot.assign(panels[tabIdx - 1]);
   } else {
+    // In case there are no nodes to assign, call `assign()` with zero arguments
+    // to enable the slot's fallback content.
     slot.assign();
   }
 }
