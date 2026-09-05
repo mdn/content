@@ -10,7 +10,7 @@ browser-compat: api.EventTarget.when
 
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
-The **`when()`** method of the {{domxref("Observable API", "Observable API", "", "nocode")}} returns an {{domxref("Observable")}} object (**observable**) representing a stream of events fired on the event target it is called on.
+The **`when()`** method of the {{domxref("Observable API", "Observable API", "", "nocode")}} returns an {{domxref("Observable")}} object representing a stream of events fired on the event target it is called on.
 
 To subscribe to the stream of events, you can then call {{domxref("Observable.subscribe", "subscribe()")}} on the resulting observable.
 
@@ -25,11 +25,10 @@ when(type, options)
 
 ### Parameters
 
-- `when`
-  - : A string representing the type of event to include in the stream.
-
+- `type`
+  - : A case-sensitive string representing the [event type](/en-US/docs/Web/API/Document_Object_Model/Events) to listen for.
 - `options` {{optional_inline}}
-  - : An options object containing the following properties:
+  - : An object that specifies characteristics about the event listener. The available options are:
     - `capture` {{optional_inline}}
       - : A boolean value indicating that events of the specified type will be dispatched to the listener registered in the background before being dispatched to any `EventTarget` beneath it in the DOM tree. If not specified, defaults to `false`.
     - `passive` {{optional_inline}}
@@ -41,7 +40,7 @@ An {{domxref("Observable")}}.
 
 ## Examples
 
-### Basic `when()` usage
+### Using when()
 
 This example is a simple click counter app.
 
@@ -54,11 +53,12 @@ The markup contains a {{htmlelement("button")}} element to click, and a {{htmlel
 <p>Click count: 0</p>
 ```
 
-### JavaScript
+#### JavaScript
 
-In our script, we first grab references to the button and the paragraph, then initialize a `countValue` variable with a value of `0`. We then define a function to increment `countValue` before writing the updated value to the paragraph. We then call `when()` on the `btn`, passing it a value of `"click"` so the returned observable represents a stream of click events fired on the `btn`.
+We call `when("click")` on the `btn`, which obtains an observable for the `click` event stream. We then chain a `subscribe()` call onto the observable to subscribe the `increment()` function to the observable, so it is called each time the button is clicked.
 
-Finally, we chain a `subscribe()` call onto the `when()` call to subscribe the observable to the event stream, passing it a reference to the `increment()` function so it is called each time the button is clicked:
+> [!NOTE]
+> For this particular example, `.when("click").subscribe(increment)` and `.addEventListener("click", increment)` are almost exactly equivalent. However, using `when()` allows you to compose event streams using observables. The [Using the Observable API](/en-US/docs/Web/API/Observable_API/Using) has more examples.
 
 ```js live-sample___basic-when
 const btn = document.querySelector("button");
@@ -93,4 +93,5 @@ Try clicking the button to see the click count increment.
 ## See also
 
 - [Using the Observable API](/en-US/docs/Web/API/Observable_API/Using)
+- {{domxref("EventTarget.addEventListener()")}}
 - [Observable explainer](https://github.com/WICG/observable/blob/master/README.md)
