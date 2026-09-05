@@ -7,7 +7,7 @@ browser-compat: api.CSSPageRule
 
 {{APIRef("CSSOM")}}
 
-**`CSSPageRule`** represents a single CSS {{cssxref("@page")}} rule.
+The **`CSSPageRule`** interface of the [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) represents a single CSS {{cssxref("@page")}} rule.
 
 {{InheritanceDiagram}}
 

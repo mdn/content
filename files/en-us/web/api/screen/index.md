@@ -7,7 +7,7 @@ browser-compat: api.Screen
 
 {{APIRef("CSSOM view API")}}
 
-The `Screen` interface represents a screen, usually the one on which the current window is being rendered, and is obtained using {{DOMxRef("window.screen")}}.
+The `Screen` interface of the [CSSOM view API](/en-US/docs/Web/API/CSSOM_view_API) represents a screen, usually the one on which the current window is being rendered, and is obtained using {{DOMxRef("window.screen")}}.
 
 Note that browsers determine which screen to report as current by detecting which screen has the center of the browser window.
 

@@ -7,8 +7,7 @@ browser-compat: api.CSSImageValue
 
 {{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`CSSImageValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) represents values for CSS properties that take an {{cssxref("image")}} value, such as
-{{cssxref("background-image")}}, {{cssxref("list-style-image")}}, or {{cssxref("border-image-source")}}.
+The **`CSSImageValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API) represents values for CSS properties that take an {{cssxref("image")}} value, such as {{cssxref("background-image")}}, {{cssxref("list-style-image")}}, or {{cssxref("border-image-source")}}.
 
 {{InheritanceDiagram}}
 

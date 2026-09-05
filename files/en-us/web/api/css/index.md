@@ -7,7 +7,9 @@ browser-compat: api.CSS
 
 {{APIRef("CSSOM")}}
 
-The **`CSS`** interface holds useful CSS-related methods. No objects with this interface are implemented: it contains only static methods and is therefore a utilitarian interface.
+The **`CSS`** interface of the [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) groups useful CSS-related static methods.
+
+No objects with this interface are implemented: it contains only static methods and is therefore a utilitarian interface.
 
 ## Static properties
 

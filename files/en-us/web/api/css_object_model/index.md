@@ -10,14 +10,24 @@ spec-urls:
 
 {{DefaultAPISidebar("CSSOM")}}
 
-The **CSS Object Model** is a set of APIs allowing the manipulation of CSS from JavaScript. It is much like the DOM, but for the CSS rather than the HTML. It allows users to read and modify CSS style dynamically.
+The **CSS Object Model** is a set of APIs and interfaces allowing the manipulation of CSS from JavaScript. It is much like the DOM, but for the CSS rather than the HTML. It allows users to read and modify CSS style dynamically.
 
-The values of CSS are represented untyped, that is using {{JSxRef("String")}} objects.
+The values of CSS are represented untyped, that is using {{JSxRef("String")}} objects (except when using the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)).
 
-## Reference
+## Guides
+
+- [CSS Declaration](/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration)
+- [CSS Declaration Block](/en-US/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block)
+- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
+- [Managing screen orientation](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
+- [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- [CSS value serialization](/en-US/docs/Web/API/CSS_Object_Model/CSS_value_serialization)
+
+## Interfaces
+
+These interfaces are defined in the CSSOM specification:
 
 - {{DOMxRef("AnimationEvent")}}
-- {{DOMxRef("CaretPosition")}}
 - {{DOMxRef("CSS")}}
 - {{DOMxRef("CSSConditionRule")}}
 - {{DOMxRef("CSSCounterStyleRule")}}
@@ -46,51 +56,12 @@ The values of CSS are represented untyped, that is using {{JSxRef("String")}} ob
 - {{DOMxRef("CSSStyleRule")}}
 - {{DOMxRef("CSSSupportsRule")}}
 - {{DOMXRef("CSSNestedDeclarations")}}
-- {{DOMxRef("FontFace")}}
-- {{DOMxRef("FontFaceSet")}}
-- {{DOMxRef("FontFaceSetLoadEvent")}}
 - {{DOMxRef("MediaList")}}
-- {{DOMxRef("MediaQueryList")}}
-- {{DOMxRef("MediaQueryListEvent")}}
-- {{DOMxRef("Screen")}}
 - {{DOMxRef("StyleSheet")}}
 - {{DOMxRef("StyleSheetList")}}
 - {{DOMxRef("TransitionEvent")}}
-- {{DOMxRef("VisualViewport")}}
 
 Several other interfaces are also extended by the CSSOM-related specifications: {{DOMxRef("Document")}}, {{DOMxRef("Window")}}, {{DOMxRef("Element")}}, {{DOMxRef("HTMLElement")}}, {{DOMxRef("HTMLImageElement")}}, {{DOMxRef("Range")}}, {{DOMxRef("MouseEvent")}}, and {{DOMxRef("SVGElement")}}.
-
-### CSS Typed Object Model
-
-- {{DOMxRef("CSSImageValue")}}
-- {{DOMxRef("CSSKeywordValue")}}
-- {{DOMxRef("CSSMathClamp")}}
-- {{DOMxRef("CSSMathInvert")}}
-- {{DOMxRef("CSSMathMax")}}
-- {{DOMxRef("CSSMathMin")}}
-- {{DOMxRef("CSSMathNegate")}}
-- {{DOMxRef("CSSMathProduct")}}
-- {{DOMxRef("CSSMathSum")}}
-- {{DOMxRef("CSSMathValue")}}
-- {{DOMxRef("CSSMatrixComponent")}}
-- {{DOMxRef("CSSNumericArray")}}
-- {{DOMxRef("CSSNumericValue")}}
-- {{DOMxRef("CSSPerspective")}}
-- {{DOMxRef("CSSPositionValue")}}
-- {{DOMxRef("CSSRotate")}}
-- {{DOMxRef("CSSScale")}}
-- {{DOMxRef("CSSSkew")}}
-- {{DOMxRef("CSSSkewX")}}
-- {{DOMxRef("CSSSkewY")}}
-- {{DOMxRef("CSSStyleValue")}}
-- {{DOMxRef("CSSTransformComponent")}}
-- {{DOMxRef("CSSTransformValue")}}
-- {{DOMxRef("CSSTranslate")}}
-- {{DOMxRef("CSSUnitValue")}}
-- {{DOMxRef("CSSUnparsedValue")}}
-- {{DOMxRef("CSSVariableReferenceValue")}}
-- {{DOMxRef("StylePropertyMap")}}
-- {{DOMxRef("StylePropertyMapReadOnly")}}
 
 ### Obsolete CSSOM interfaces {{deprecated_inline}}
 
@@ -98,10 +69,16 @@ Several other interfaces are also extended by the CSSOM-related specifications: 
 - {{DOMxRef("CSSValue")}} {{deprecated_inline}}
 - {{DOMxRef("CSSValueList")}} {{deprecated_inline}}
 
-## Tutorials
+### CSSOM APIs
 
-- [Determining the dimensions of elements](/en-US/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
-- [Managing screen orientation](/en-US/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
+- [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API)
+  - : Provides mechanisms for dynamically loading font resources.
+
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)
+  - : simplifies CSS property manipulation by exposing CSS values as typed JavaScript objects rather than strings.
+
+- [CSSOM view API](/en-US/docs/Web/API/CSSOM_view_API)
+  - : Enables manipulation of the visual view of a document, including getting the position of element layout boxes, obtaining the width or height of the viewport through script, and also scrolling an element.
 
 ## Specifications
 

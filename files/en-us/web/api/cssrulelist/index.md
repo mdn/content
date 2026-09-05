@@ -7,7 +7,7 @@ browser-compat: api.CSSRuleList
 
 {{ APIRef("CSSOM") }}
 
-A `CSSRuleList` represents an ordered collection of read-only {{domxref("CSSRule")}} objects.
+A `CSSRuleList` of the [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) represents an ordered collection of read-only {{domxref("CSSRule")}} objects.
 
 While the `CSSRuleList` object is read-only, and cannot be directly modified, it is considered a `live` object, as the content can change over time.
 
