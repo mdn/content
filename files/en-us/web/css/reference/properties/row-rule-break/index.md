@@ -108,7 +108,7 @@ Row rules are painted within a row gap as one or more segments, with segments oc
 
 The `row-rule-break` property only determines if the break occurs. By default, the break, or space, between row rule segments is the width of the column gap, as each segments starts and ends at the edge of the gap (or edge of the container). If the gap is `0`, this break may not be visible. The end positions can be controlled with the {{cssxref("row-rule-inset")}} properties.
 
-If `row-rule-break` is set to `none`, there are no breaks, the row rule line is continuous, and any `row-rule-inset` values only affect the row rule on the left and right edge of the container. When there are breaks, the `row-rule-inset` properties affect the start and end of every row rule segment.
+If `row-rule-break` is set to `none`, there are no breaks, the row rule line is continuous, and any `row-rule-inset` values only affect the row rule on the top and bottom edge of the container. When there are breaks, the `row-rule-inset` properties affect the start and end of every row rule segment.
 
 The `row-rule-break` property, along with the {{cssxref("column-rule-break")}} property, can be set using the {{cssxref("rule-break")}} shorthand.
 
@@ -170,7 +170,7 @@ h2 {
 
 {{EmbedLiveSample("grid containers", "", "240")}}
 
-By default, there are no row rule breaks. Check the checkbox to set `ow-rule-break` to `intersection`, which makes the continuous rules break at every "cross" intersection. By default, the break between segments is the width of the {{cssxref("column-gap")}}.
+By default, there are no row rule breaks. Check the checkbox to set `row-rule-break` to `intersection`, which makes the continuous rules break at every "cross" intersection. By default, the break between segments is the width of the {{cssxref("column-gap")}}.
 
 ### Flex containers
 
