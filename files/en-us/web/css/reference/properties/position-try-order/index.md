@@ -39,7 +39,7 @@ The `position-try-order` property may be specified as either the keyword value `
 - `<try-size>`
   - : Defines which criteria will be used to determine what try fallback should be applied to the anchor-positioned element when it initially renders. Available values are:
     - `most-height`
-      - : Applies the position try fallback option that gives the element the most surrounding height.
+      - : Applies the position try fallback option that gives the element the most vertical space.
     - `most-width`
       - : Applies the position try fallback option that gives the element the most surrounding width.
     - `most-block-size`
