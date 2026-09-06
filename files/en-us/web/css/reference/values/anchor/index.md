@@ -82,7 +82,7 @@ Returns a {{cssxref("length")}} value.
 
 The `anchor()` function enables positioning an element relative to the edges of an anchor element. It is only valid within {{glossary("inset properties", "inset property")}} values set on absolute or fixed position elements.
 
-It returns a `<length>` value specifying the distance between the anchor-positioned element side specified by the inset value, and the side of the anchor element specified by the chosen `<anchor-side>` value. As it returns a `<length>`, it can be used within [other CSS functions](/en-US/docs/Web/CSS/Reference/Values/Functions) that accept length values, including {{cssxref("calc()")}}, {{cssxref("clamp()")}}, etc.
+It returns a `<length>` value specifying the distance from the containing block side corresponding to the inset property to the chosen `<anchor-side>` value of the anchor. As it returns a `<length>`, it can be used within [other CSS functions](/en-US/docs/Web/CSS/Reference/Values/Functions) that accept length values, including {{cssxref("calc()")}}, {{cssxref("clamp()")}}, etc.
 
 If no anchor with the name specified by the `<anchor-name>` exists, or if the positioned element does not have an anchor associated with it (i.e., via the {{cssxref("position-anchor")}} property), the first parameter is considered invalid and the fallback `<length-percentage>` value is used if one is available. For example, if `top: anchor(bottom, 50px)` were specified on the positioned element but no anchor was associated with it, the fallback value would be used, so `top` would get a computed value of `50px`.
 
