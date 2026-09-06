@@ -66,7 +66,9 @@ Before shadow DOM was made available to web developers, browsers were already us
 
 ### Attribute inheritance
 
-The shadow tree and {{ HTMLElement("slot") }} elements inherit the [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir) and [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attributes from their shadow host.
+Language and text directionality, set using [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) and [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir), are generally inherited from an element's DOM parent. When that parent is a shadow root, inheritance comes from the shadow host instead. Elements within the shadow tree can specify their own language and direction; see the attribute references for details and exceptions.
+
+Assigning an element to a {{HTMLElement("slot")}} does not change its DOM parent. When an assigned element inherits language and directionality, it inherits them from its light-DOM parent, not from the slot. The slot itself follows the inheritance rules within the shadow tree, as does its fallback content. For example, a slot without its own `lang` or `dir` attributes inside a shadow-tree element with `lang="ar"` and `dir="rtl"` inherits those settings, while an assigned {{HTMLElement("span")}} without these attributes still inherits from its light-DOM parent.
 
 ## Creating a shadow DOM
 
