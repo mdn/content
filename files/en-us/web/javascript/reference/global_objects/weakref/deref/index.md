@@ -41,7 +41,9 @@ const tick = () => {
   if (element?.isConnected) {
     element.textContent = ++this.count;
   } else {
-    // The element no longer exists, or it is still referenced by the WeakRef but has already been removed from the DOM.
+    // The element no longer exists, or is still referenced
+    // by the WeakRef but has already been removed
+    // from the DOM.
     console.log("The element is gone.");
     this.stop();
     this.ref = null;
