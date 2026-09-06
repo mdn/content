@@ -84,10 +84,10 @@ class Counter {
     const tick = () => {
       // Get the element from the weak reference, if it still exists
       const element = this.ref.deref();
-      if (element) {
+      if (element?.isConnected) {
         element.textContent = ++this.count;
       } else {
-        // The element doesn't exist anymore
+        // The element no longer exists, or it is still referenced by the WeakRef but has already been removed from the DOM.
         console.log("The element is gone.");
         this.stop();
         this.ref = null;
