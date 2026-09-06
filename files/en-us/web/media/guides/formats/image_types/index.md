@@ -1366,7 +1366,7 @@ If you need to support browsers that don't allow WebP, AVIF, or JPEG XL, use the
 This is shown in [Providing image fallbacks](#providing_image_fallbacks) below.
 
 For diagrams, charts, and other images that must be drawn accurately at different sizes, use [SVG](#svg_scalable_vector_graphics).
-For icons consider [SVG](#svg_scalable_vector_graphics) [WebP](#webp_image)
+Most icons have vector graphics versions, and you should prioritize the SVG version whenever possible. If only raster versions are available, choose [WebP](#webp_image) but provide fallback like other raster images.
 
 ## Providing image fallbacks
 
