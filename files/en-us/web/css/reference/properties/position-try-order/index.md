@@ -67,9 +67,9 @@ For detailed information on anchor features and position try option usage, see t
 
 ## Examples
 
-### Basic `position-try-order` usage
+### Basic usage
 
-This demo shows the effect of `position-try-order`.
+This example shows the effect of `position-try-order`.
 
 #### HTML
 
@@ -85,7 +85,15 @@ The HTML includes two {{htmlelement("div")}} elements that will become an anchor
 
 #### CSS
 
-In the CSS, the anchor is given an {{cssxref("anchor-name")}} and has a large {{cssxref("margin")}} to position it toward the top center of the viewport:
+In the CSS, we start by setting a `position-try-order` value of `normal` on the anchor-positioned element, so it is easier to find when we ask you to edit it later on:
+
+```css
+.infobox {
+  position-try-order: normal;
+}
+```
+
+The anchor is given an {{cssxref("anchor-name")}} and a large {{cssxref("margin")}} to position it near center of the viewport:
 
 ```css hidden
 .anchor {
@@ -119,7 +127,7 @@ In the CSS, the anchor is given an {{cssxref("anchor-name")}} and has a large {{
 }
 ```
 
-We then include a custom position option named `--custom-bottom` which positions the element below the anchor and gives it an appropriate margin:
+We include a custom position option named `--custom-bottom`, which will positions the anchor-positioned element below the anchor and give it an appropriate margin:
 
 ```css
 @position-try --custom-bottom {
@@ -129,7 +137,7 @@ We then include a custom position option named `--custom-bottom` which positions
 }
 ```
 
-We initially position the element above its anchor, and then give it our custom position option using the `position-try-fallbacks` property. Finally, we set its `position-try-order` property to `normal`:
+We initially position the anchor-positioned element above its anchor, and then give it our custom position option using the `position-try-fallbacks` property.
 
 ```css
 .infobox {
@@ -141,7 +149,6 @@ We initially position the element above its anchor, and then give it our custom 
   justify-self: anchor-center;
 
   position-try-fallbacks: --custom-bottom;
-  position-try-order: normal;
 }
 ```
 
@@ -149,7 +156,9 @@ We initially position the element above its anchor, and then give it our custom 
 
 {{ EmbedLiveSample("Basic `position-try-order` usage", "100%", "310") }}
 
-Initially, the positioned element will be positioned above its anchor, which is the default position we've given it. Now open the example in the MDN Playground by pressing the **Play** button, run the example, then change the `position-try-order` to `most-height` or `most-block-size`. When the example re-renders, the `--custom-bottom` fallback is applied because it gives the positioned element more surrounding height than the default position.
+Initially, the anchor-positioned element is positioned above its anchor, which is the default position we've given it.
+
+Now open the example in the MDN Playground by pressing the **Play** button, run the example, then change the `position-try-order` to `most-height` or `most-block-size`. When the example re-renders, the anchor-positioned element is positioned below its anchor: `--custom-bottom` fallback is applied because it gives the positioned element more surrounding height than the default position.
 
 ## Specifications
 
