@@ -193,9 +193,7 @@ This example demonstrates passing a color argument list to `color-mix()`. The fu
 
 #### CSS
 
-The first {{htmlelement("li")}} mixes a single color, which resolves to that color. The second mixes three colors whose percentages total 100%. The third mixes four colors with no percentage, so each one is given an equal share.
-
-The [`@supports`](/en-US/docs/Web/CSS/Reference/At-rules/@supports) rule displays a warning in browsers that don't support color argument lists yet, where the three list items are rendered without a background color.
+The first {{htmlelement("li")}} mixes a single color, which resolves to that color. The second mixes three colors whose percentages total 100%. The third mixes four colors with no percentage, so each one gets an equal share.
 
 ```css hidden
 ul {
@@ -228,7 +226,9 @@ li:nth-child(2) {
 li:nth-child(3) {
   background-color: color-mix(in oklab, teal, olive, blue, purple);
 }
+```
 
+```css hidden
 @supports not (color: color-mix(in oklab, red, white, blue)) {
   body::before {
     content: "Your browser doesn't support color lists in the color-mix() function.";
