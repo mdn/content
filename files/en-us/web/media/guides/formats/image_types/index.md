@@ -1360,7 +1360,8 @@ static unsigned char square8_bits[] = {
 Image formats are usually selected based on factors such as compression, quality, breadth and depth of browser support, and whether you need features such as transparency or animation.
 
 For raster images, prefer [WebP](#webp_image) or [AVIF](#avif_image), which generally provide better compression than PNG, JPEG, and GIF.
-You should also consider [JPEG XL](/en-US/docs/Web/Media/Guides/Formats/Image_types#jpeg_xl_image) for large, high-resolution raster images. Most browsers can progressively render them by display an initial version before the full image downloads.
+You should also consider [JPEG XL](/en-US/docs/Web/Media/Guides/Formats/Image_types#jpeg_xl_image) for large, high-resolution raster images.
+Most browsers can progressively render them by displaying an initial version before the full image downloads.
 
 If you need to support browsers that don't allow WebP, AVIF, or JPEG XL, use the {{HTMLElement("picture")}} element to provide a PNG or JPEG fallback.
 This is shown in [Providing image fallbacks](#providing_image_fallbacks) below.
