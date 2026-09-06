@@ -41,7 +41,7 @@ The `position-try-order` property may be specified as either the keyword value `
     - `most-height`
       - : Applies the position try fallback option that gives the element the most vertical space.
     - `most-width`
-      - : Applies the position try fallback option that gives the element the most surrounding width.
+      - : Applies the position try fallback option that gives the element the most horizontal space.
     - `most-block-size`
       - : Applies the position try fallback option that gives the element the most surrounding space in the block direction.
     - `most-inline-size`
