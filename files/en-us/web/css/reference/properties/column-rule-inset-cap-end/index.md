@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`column-rule-inset-cap-end`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the end of column rule segment [cap endpoints](#understanding_cap_end) at the container's content end edge and cap endpoints where no rule segments intersect.
+The **`column-rule-inset-cap-end`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the bottom of column rule segment [cap endpoints](#understanding_cap_end) at the container's content end edge, and cap endpoints where no rule segments intersect.
 
 {{InteractiveExample("CSS Demo: rule")}}
 
@@ -120,11 +120,11 @@ This property is specified as a single value from the following list:
 - `overlap-join`
   - : Resolves to `0`.
 - {{cssxref("length-percentage")}}
-  - : Specifies the size of the inset. Percentage values are relative to the cap endpoint, which is either the `row-gap` or `0`.
+  - : Specifies the size of the inset. Percentage values are relative to the cap endpoint, which is either the width of the `row-gap` or `0`.
 
 ## Description
 
-The `column-rule-inset-cap-end` property can be used to inset the end edge of [cap segment endpoints](#understanding_cap_end). The default value is `0`, which is the same as `overlap-join`. Positive values reduce the size of the segment. Negative values extend it.
+The `column-rule-inset-cap-end` property can be used to inset the end edge of [cap segment endpoints](#understanding_cap_end). The default value is `0`, which is the same as `overlap-join`. Positive values reduce the segment size, while negative values increase it.
 
 Column rules are painted within a column gap as one or more segments, with segments occurring between:
 
@@ -134,13 +134,13 @@ Column rules are painted within a column gap as one or more segments, with segme
 
 Whether a column rule spans multiple rows or is broken into multiple segments is defined by the {{cssxref("column-rule-break")}} property, with interior breaks between column rule segments being the size of the {{cssxref("row-gap")}}.
 
-Length `column-rule-inset-cap-end` values are inset by the value specified for both interior and end edge cap segments. Negative length values create an outset, with end edge cap segments extending beyond the container's end edge.
+Length `column-rule-inset-cap-end` values inset segments by the specified value — for both interior and end edge cap segments. Negative length values create an outset, with end edge cap segments extending beyond the container's end edge.
 
-[Percentage values](#understanding_percentage_values) for interior cap segment endpoint insets are relative to the size of the {{cssxref("row-gap")}}. For end edge cap segments, percentage values are relative to `0`, so percentage values never cause cap segment endpoints at the container's end edge to extend beyond the container.
+[Percentage values](#understanding_percentage_values) are relative to the size of the {{cssxref("row-gap")}} for interior segments. For end edge cap segments, percentage values are relative to `0`, so percentage values never cause cap segment endpoints at the container's end edge to extend beyond the container.
 
 The `column-rule-inset-cap-end` property is a constituent property of several [shorthand properties](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties):
 
-- To set the start and ends of caps, the `column-rule-inset-cap-end` property, along with the {{cssxref("column-rule-inset-cap-start")}} property, can be set using the {{cssxref("column-rule-inset-cap")}} shorthand.
+- To set the inset of the start and end caps, the `column-rule-inset-cap-end` property, along with the {{cssxref("column-rule-inset-cap-start")}} property, can be set using the {{cssxref("column-rule-inset-cap")}} shorthand.
 
 - To set the ends of all column segments, the `column-rule-inset-cap-end` property, along with the {{cssxref("column-rule-inset-junction-end")}} property, can be set using the {{cssxref("column-rule-inset-end")}} shorthand.
 
@@ -150,9 +150,13 @@ All of these shorthand properties, along with their `-start`, `-junction`, and `
 
 ### Understanding cap end
 
-A _cap segment endpoint_ is any segment endpoint that is not a junction segment endpoint. This includes endpoints at the container's content edges, as well as endpoints at a gap junction where no other rule or column segments are present. The `column-rule-inset-cap-end` controls the inset of the end edge of column cap segment endpoints. In other words, the property can be used to shrink or extend the bottom edge of column rule segments occurring at interior gaps where no other column or row rule segments are present or at the end edge of the container.
+A _cap segment endpoint_ is any segment endpoint that is not a junction segment endpoint. This includes endpoints at the container's content edges, as well as endpoints at a gap junction where no other rule or column segments are present.
 
-Column cap segment endpoints are not affected by the value of the `column-rule-break` property, which only controls junction breaks. They are, however, affected by the {{cssxref("rule-visibility-items")}} properties, which define whether column- and row-rule segments are painted in gaps adjacent to empty areas. As column cap segment endpoints only exist at the end edge of the container and at interior gaps where no other column or row rule segments area present, whether segments are painted (or would otherwise be painted if the `rule` were set to a visible value), impacts which column segments are end cap segments.
+The `column-rule-inset-cap-end` property controls the inset of the bottom edge of column cap segment endpoints, allowing the segments to be shrunk or extended.
+
+Column cap segment endpoints are not affected by `column-rule-break` property value settings, which only control junction segment breaks. They are, however, affected by the {{cssxref("rule-visibility-items")}} properties, which define whether column- and row-rule segments are painted in gaps adjacent to empty areas.
+
+Column cap segment endpoints only exist at the end edge of the container and at interior gaps where no other column or row rule segments are present. Therefore, whether segments are painted (or would otherwise be painted if the `rule` were set to a visible value) impacts which column segments are end cap segments.
 
 In the following demonstration, the bottom segments of column rules, with a solid line style, end in a cap endpoint. With `column-rule-inset-cap-end: 16px` set and all the cap segment endpoints being against the container edge, the columns are all inset by `16px`. Change the inset `<length>` value to better visualize which segments end in cap segment endpoints.
 
@@ -204,7 +208,7 @@ In the following demonstration, the bottom segments of column rules, with a soli
     >Change the size of the inset.
     <input
       type="range"
-      min="-200"
+      min="-450"
       max="100"
       value="100"
       id="inset"
@@ -295,7 +299,7 @@ Setting `16px` insets the end of all the column rules by 16px. If `0px` is set, 
 
 Select `around` as the `rule-visibility-items` value. This value paints rules in a gap segment if at least one of the two adjacent areas is occupied by an item. The double line-style column rules, which appear when the `rule-visibility-items` is set to `around` (and `between`) do not end in a cap endpoint. The last two column rules end at interior gaps where row rule segments are present, so these column segments are not cap segment endpoints, and are therefore not affected by the `column-rule-inset-cap-end` property.
 
-Select `between` as the `rule-visibility-items` value, which paints rules in gap segments only if both adjacent areas are occupied by an item. The last row rule ends at the third column gap. The third column rule ends at an interior gaps where a row rule segment is present, so this column segment is not a cap segment endpoint and is not affected by the `column-rule-inset-cap-end` property, but the last two columns rules end at interior gaps where no other rule segments are present, so these column segments are cap segment endpoints, affected by the `column-rule-inset-cap-end` property.
+Select `between` as the `rule-visibility-items` value, which paints rules in gap segments only if both adjacent areas are occupied by an item. The last row rule in the second row gutter ends at the third column gap. The third column rule ends at an interior gap where a row rule segment is present, so this column segment is not a cap segment endpoint and is not affected by the `column-rule-inset-cap-end` property. The last two column rules, however, end at interior gaps where no other rule segments are present, so these column segments are cap segment endpoints and therefore are affected by the `column-rule-inset-cap-end` property.
 
 ### Understanding percentage values
 
@@ -305,7 +309,9 @@ What length a percentage value is relative to depends on the endpoint's location
 
 Select `around` as the `rule-visibility-items` value. The first three columns end at the container edge, so any percentage value will resolve to `0`. The last two column rules end at interior gaps where row rule segments are present, so these column segments are not cap segment endpoints.
 
-Select `between` as the `rule-visibility-items` value. The first two columns end at the container edge, so they have a `0` inset. The third column rule ends at an interior gap where a row rule segment is present, so this column segment is not a cap segment endpoint. The last two column rules end at interior gaps where no other rule segments are present, so the percentage offset is relative to the size of the {{cssxref("row-gap")}} width, which in this case is `20px`. Setting `100%` insets the end of the last two column rule segments by `20px`. Setting `-200%` will outset these segments by `40px`, with the lines being drawn through the `20px` gap and `20px` protruding into the last row of items. Negative values larger than the combined height of the last row and row gap will cause the last two column rules to protrude below the container's end edge.
+Select `between` as the `rule-visibility-items` value. The first two columns end at the container edge, so they have a `0` inset. The third column rule ends at an interior gap where a row rule segment is present, so this column segment is not a cap segment endpoint. The last two column rules end at interior gaps where no other rule segments are present, so the percentage offset is relative to the size of the {{cssxref("row-gap")}} width, which in this case is `20px`.
+
+Setting `100%` insets the end of the last two column rule segments by `20px`. Setting `-200%` will outset these segments by `40px`, with the lines being drawn through the `20px` gap and `20px` protruding into the last row of items. Negative percentage values that compute to a length larger than the combined height of the last row and row gap will cause the last two column rules to protrude below the container's end edge.
 
 ## Formal definition
 
@@ -365,7 +371,7 @@ This example demonstrates setting `column-rule-inset-cap-end` to inset the end e
 
 #### CSS
 
-We use the {{cssxref("display")}} property to turn the `.flexbox` elements into flex containers. We balance the items into three flex lines using with {{cssxref("flex-wrap")}} and {{cssxref("flex-line-count")}}. We define a light blue {{cssxref("rule")}} to paint both row and column gaps, then overwrite the {{cssxref("column-rule-color")}}, setting darker `blue` vertical gap decorations. Finally, we set the `column-rule-inset-cap-end` to `16px`.
+We use the {{cssxref("display")}} property to turn the `.flexbox` elements into flex containers. We balance the items into three flex lines using {{cssxref("flex-wrap")}} and {{cssxref("flex-line-count")}}. We define a light blue {{cssxref("rule")}} to paint both row and column gaps, then overwrite the {{cssxref("column-rule-color")}}, setting darker `blue` column gap decorations. Finally, we set the `column-rule-inset-cap-end` to `16px`.
 
 ```css
 .flexbox {
@@ -440,7 +446,7 @@ inset.addEventListener("input", () => {
 
 #### Result
 
-{{EmbedLiveSample("Basic usage", "", "300")}}
+{{EmbedLiveSample("Basic usage", "", "330")}}
 
 Change the size of the inset.
 
