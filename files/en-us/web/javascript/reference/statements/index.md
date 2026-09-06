@@ -36,7 +36,7 @@ For an alphabetical listing see the sidebar on the left.
 - {{jsxref("Statements/let", "let")}}
   - : Declares a block scope local variable, optionally initializing it to a value.
 - {{jsxref("Statements/const", "const")}}
-  - : Declares a read-only named constant.
+  - : Declares a read-only named constant, and must be initialized at declaration.
 - {{jsxref("Statements/using", "using")}}
   - : Declares local variables that are _synchronously disposed_.
 - {{jsxref("Statements/await_using", "await using")}}
