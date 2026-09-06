@@ -7,7 +7,7 @@ browser-compat: css.properties.position-try-order
 sidebar: cssref
 ---
 
-The **`position-try-order`** [CSS](/en-US/docs/Web/CSS) property allows you to prioritize the {{cssxref("position-try-fallbacks")}} option applied to an anchor-positioned element when it first renders by which one results in the most space around the element in a given direction.
+The **`position-try-order`** [CSS](/en-US/docs/Web/CSS) property allows you to prioritize the {{cssxref("position-try-fallbacks")}} option applied to an anchor-positioned element when it first renders, based on which option creates the most space around the element in the given direction.
 
 > [!NOTE]
 > There is also a shorthand property — {{cssxref("position-try")}}, which can be used to specify `position-try-order` and {{cssxref("position-try-fallbacks")}} values in a single declaration.
