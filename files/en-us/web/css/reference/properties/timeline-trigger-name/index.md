@@ -71,7 +71,7 @@ Any animated element with its {{cssxref("animation-trigger")}} property set to `
 
 Each `animation-trigger` value includes two or three components: the `<dashed-ident>` identifying the trigger, and one or two {{cssxref("animation-action")}} keywords specifying what should happen when the trigger is activated and, optionally, when it's deactivated. In this case, the animation will play once when activated.
 
-For the element that creates the trigger and the animated element to be the same element, set the `timeline-trigger-name` and `animation-trigger` properties, using the same `<dash-ident>` on the element. In this case, the animated element creates its own trigger:
+The animated element can create its own trigger: to achieve this, set its `timeline-trigger-name` and `animation-trigger` properties to include the same `<dashed-ident>` value:
 
 ```css
 .animatedAndTrigger {
@@ -114,7 +114,7 @@ If multiple elements define triggers with the same trigger name, the trigger def
 
 ### Basic usage
 
-This example demonstrates using the `timeline-trigger-name` property to name a trigger, and using that name within an animated element's `animation-trigger` property, creating a basic scroll-triggered animation.
+This example shows how to create a basic scroll-triggered animation. We use the `timeline-trigger-name` property to name a trigger and reference that name within an animated element's `animation-trigger` property.
 
 #### HTML
 
@@ -381,7 +381,7 @@ We then specify the following properties on the same `<div>`:
 
 - A `timeline-trigger-name` with value `--t`. This specifies that the `<div>` creates the trigger for its own animation.
 - A `timeline-trigger-source` with value [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view). This sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
-- A {{cssxref("timeline-trigger-activation-range")}} with value [`contain`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#contain). This means that the trigger will activate when the tracked element is fully inside the scrollport, and deactivate when it stops being fully inside the scrollport. This is in contrast to the default activation range, [`cover`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#cover), which would cause the trigger to activate when any part of the element enters the scrollport and deactivate only when it has fully left the scrollport, which would make the reverse animation occur when the element is out of view.
+- A {{cssxref("timeline-trigger-activation-range")}} with value [`contain`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#contain). This means that the trigger will activate when the tracked element is fully inside the scrollport, and deactivate when it stops being fully inside the scrollport. This is in contrast to the default activation range, [`cover`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#cover), which would cause the trigger to activate when any part of the element enters the scrollport and deactivate only when it has fully left the scrollport. This would make the reverse animation occur when the element is out of view.
 
 ```css live-sample___same-element
 div {
