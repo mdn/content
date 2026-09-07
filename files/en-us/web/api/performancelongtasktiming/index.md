@@ -11,25 +11,6 @@ browser-compat: api.PerformanceLongTaskTiming
 
 The **`PerformanceLongTaskTiming`** interface provides information about tasks that occupy the UI thread for 50 milliseconds or more.
 
-## Description
-
-Long tasks that block the main thread for 50ms or more cause, among other issues:
-
-- Delayed {{glossary("Time to interactive")}} (TTI).
-- High/variable input latency.
-- High/variable event handling latency.
-- Janky animations and scrolling.
-
-A long task is any uninterrupted period where the main UI thread is busy for 50ms or longer. Common examples include:
-
-- Long-running event handlers.
-- Expensive reflows and other re-renders.
-- Work the browser does between different turns of the event loop that exceeds 50 ms.
-
-Long tasks refer to "culprit browsing context container", or "the container" for short, which is the top-level page, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}} that the task occurred within.
-
-For tasks that don't occur within the top-level page and for figuring out which container is responsible for the long task, the {{domxref("TaskAttributionTiming")}} interface provides the `containerId`, `containerName` and `containerSrc` properties, which may provide more information about the source of the task.
-
 `PerformanceLongTaskTiming` inherits from {{domxref("PerformanceEntry")}}.
 
 {{InheritanceDiagram}}
@@ -65,6 +46,25 @@ This interface also supports the following properties:
 
 - {{domxref("PerformanceLongTaskTiming.toJSON()")}} {{Experimental_Inline}}
   - : Overrides the {{domxref("PerformanceEntry.toJSON()")}} method to return a JSON representation of the `PerformanceLongTaskTiming` object.
+
+## Description
+
+Long tasks that block the main thread for 50ms or more cause, among other issues:
+
+- Delayed {{glossary("Time to interactive")}} (TTI).
+- High/variable input latency.
+- High/variable event handling latency.
+- Janky animations and scrolling.
+
+A long task is any uninterrupted period where the main UI thread is busy for 50ms or longer. Common examples include:
+
+- Long-running event handlers.
+- Expensive reflows and other re-renders.
+- Work the browser does between different turns of the event loop that exceeds 50 ms.
+
+Long tasks refer to "culprit browsing context container", or "the container" for short, which is the top-level page, {{HTMLElement("iframe")}}, {{HTMLElement("embed")}} or {{HTMLElement("object")}} that the task occurred within.
+
+For tasks that don't occur within the top-level page and for figuring out which container is responsible for the long task, the {{domxref("TaskAttributionTiming")}} interface provides the `containerId`, `containerName` and `containerSrc` properties, which may provide more information about the source of the task.
 
 ## Examples
 

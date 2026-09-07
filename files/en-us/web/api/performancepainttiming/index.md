@@ -112,6 +112,6 @@ entries.forEach((entry) => {
 
 {{Compat}}
 
-### See also
+## See also
 
 - {{domxref("LargestContentfulPaint")}}
