@@ -158,7 +158,7 @@ Column cap segment endpoints are not affected by `column-rule-break` property va
 
 Column cap segment endpoints only exist at the end edge of the container and at interior gaps where no other column or row rule segments are present. Therefore, whether segments are painted (or would otherwise be painted if the `rule` were set to a visible value) impacts which column segments are end cap segments.
 
-In the following demonstration, the bottom segments of column rules, with a solid line style, end in a cap endpoint. With `column-rule-inset-cap-end: 16px` set and all the cap segment endpoints being against the container edge, the columns are all inset by `16px`. Change the inset `<length>` value to better visualize which segments end in cap segment endpoints.
+In the following demonstration, the bottom of column rule segments end in cap endpoints. With `column-rule-inset-cap-end: 16px` set, all the column segments are inset by `16px`. Change the inset `<length>` value to better visualize which segments end in cap segment endpoints.
 
 ```html hidden live-sample___caps live-sample___percents
 <ul id="ul">
