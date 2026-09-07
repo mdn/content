@@ -72,6 +72,8 @@ sidebar: mdnsidebar
 
 The summary paragraph — start by naming the interface, saying what API it is part of, and saying what it does. This should ideally be one or two short sentences. You could copy most of this from the Interface's summary on the corresponding API landing page.
 
+> More than four or five paragraphs should be pushed into a description section before the examples.
+
 `\{{InheritanceDiagram}}`
 
 _To use the [domxref macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_reference_pages) in the sections below, remove the backticks and backslash in the markdown file._
@@ -139,6 +141,11 @@ Listen to these events using {{DOMxRef("EventTarget.addEventListener", "addEvent
   - : Fired when (include the description of when the event fires).
     Also available via the `oneventname2` property.
     If the event is not experimental/deprecated/non-standard, remove the related macro calls.
+
+## Description
+
+> Add a more detailed detailed description of the interface if required.
+> Generally if the introduction at the top of a page is likely to extend more than a rendered page of text, reduce it to a few paragraphs and push the rest to a description.
 
 ## Examples
 
