@@ -224,11 +224,16 @@ MQCHJLS6FJXT2BGQJ6QMG3WCAVUC2HJZ
 MYAGE
 mybooks
 myclass
+myfunc
+myglobal
 myimage
+mymem
 mynamespace
 myns
 mypassword
 mypopover
+mytable
+mytag
 mytestsite
 myusername
 Nada
