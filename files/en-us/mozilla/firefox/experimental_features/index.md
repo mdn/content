@@ -449,6 +449,20 @@ The {{cssxref("view-timeline")}} shorthand property now supports the {{cssxref("
 - `layout.css.scroll-driven-animations.enabled`
   - : Set to `true` to enable.
 
+### `at-rule()` support queries
+
+The [`at-rule()`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#at-rule) function in the {{cssxref("@supports")}} at-rule lets you test whether the browser supports a given CSS at-rule, for example `@supports at-rule(@scope)`. ([Firefox bug 2060754](https://bugzil.la/2060754)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 155           | Yes                 |
+| Developer Edition | 155           | No                  |
+| Beta              | 155           | No                  |
+| Release           | 155           | No                  |
+
+- `layout.css.supports.at-rule.enabled`
+  - : Set to `true` to enable.
+
 ## SVG
 
 **No experimental features in this release cycle.**
