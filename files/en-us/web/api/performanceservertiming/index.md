@@ -25,7 +25,7 @@ This interface is restricted to the same origin, but you can use the {{HTTPHeade
 - {{domxref('PerformanceServerTiming.toJSON()')}}
   - : Returns a JSON representation of the `PerformanceServerTiming` object.
 
-## Example
+## Examples
 
 Given a server that sends the {{HTTPHeader("Server-Timing")}} header, for example a Node.js server like this:
 
