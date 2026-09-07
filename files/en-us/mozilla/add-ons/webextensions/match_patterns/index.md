@@ -25,7 +25,7 @@ Match patterns are used in several places across the manifest.json keys and Java
 - JavaScript APIs:
   - The `origins` property of the {{WebExtAPIRef("permissions.Permissions")}} object passed to {{WebExtAPIRef("permissions.request()")}} and returned by other {{WebExtAPIRef("permissions")}} methods.
   - The `matches` and `excludeMatches` properties of the {{WebExtAPIRef("scripting.RegisteredContentScript")}} object passed to {{WebExtAPIRef("scripting.registerContentScripts()")}} and {{WebExtAPIRef("scripting.updateContentScripts()")}}, and returned by {{WebExtAPIRef("scripting.getRegisteredContentScripts()")}}.
-  - The `matches` and `excludeMatches` properties passed to {{WebExtAPIRef("userScripts.register()")}} and {{WebExtAPIRef("userScripts.update()")}} and returned by {{WebExtAPIRef("userScripts.getScripts()")}}.
+  - The `matches` and `excludeMatches` properties of the {{WebExtAPIRef("userScripts.RegisteredUserScript")}} object passed to {{WebExtAPIRef("userScripts.register()")}} and {{WebExtAPIRef("userScripts.update()")}}, and returned by {{WebExtAPIRef("userScripts.getScripts()")}}.
   - The `matches` and `excludeMatches` properties passed to {{WebExtAPIRef("contentScripts.register()")}}.
   - The `documentUrlPatterns` and `targetUrlPatterns` properties passed to {{WebExtAPIRef("menus.create()")}} and {{WebExtAPIRef("menus.update()")}}.
   - The `urls` property of the {{WebExtAPIRef("webRequest.RequestFilter")}} object, used to filter `webRequest` events and also reused by {{WebExtAPIRef("proxy.onRequest")}}
