@@ -20,8 +20,6 @@ The **`HTMLInstallElement`** interface of the [HTML DOM API](/en-US/docs/Web/API
 
 _Also inherits properties from its parent interface, {{domxref("HTMLElement")}}._
 
-- {{domxref("HTMLInstallElement.initialPermissionStatus", "initialPermissionStatus")}} {{readonlyinline}} {{experimental_inline}}
-  - : An enumerated value representing the permission status for installing PWAs when the page first loads.
 - {{domxref("HTMLInstallElement.invalidReason", "invalidReason")}} {{readonlyinline}} {{experimental_inline}}
   - : An enumerated value representing the reason why the `<install>` element is invalid ([blocked](/en-US/docs/Web/HTML/Reference/Elements/install#install_blocking)), if that is the case.
 - {{domxref("HTMLInstallElement.isValid", "isValid")}} {{readonlyinline}} {{experimental_inline}}
@@ -30,8 +28,13 @@ _Also inherits properties from its parent interface, {{domxref("HTMLElement")}}.
   - : A string representing the URL of the [web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) defining the app to be installed. Reflects the value of the associated `<install>` element's [`manifest`](/en-US/docs/Web/HTML/Reference/Elements/install#manifest) attribute.
 - {{domxref("HTMLInstallElement.manifestId", "manifestId")}} {{readonlyinline}} {{experimental_inline}}
   - : A string representing the ID of the PWA to be installed. Reflects the value of the associated `<install>` element's [`manifestId`](/en-US/docs/Web/HTML/Reference/Elements/install#manifestid) attribute.
-- {{domxref("HTMLInstallElement.permissionStatus", "permissionStatus")}} {{readonlyinline}} {{experimental_inline}}
-  - : A string representing the current permission status for installing PWAs.
+
+The `<install>` element doesn't use the permission system, therefore the following properties are not useful and will be removed in a future update (see [Chrome issue 533049447](https://issues.chromium.org/issues/533049447)):
+
+- `initialPermissionStatus` {{readonlyinline}} {{experimental_inline}}
+  - : An enumerated value representing the permission status for installing PWAs when the page first loads.
+- `permissionStatus` {{readonlyinline}} {{experimental_inline}}
+  - : An enumerated value representing the current permission status for installing PWAs.
 
 ## Instance methods
 
