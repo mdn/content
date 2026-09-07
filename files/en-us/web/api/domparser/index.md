@@ -7,26 +7,16 @@ browser-compat: api.DOMParser
 
 {{APIRef("DOM")}}
 
-The **`DOMParser`** interface provides
-the ability to parse {{Glossary("XML")}} or {{Glossary("HTML")}} source code from a
-string into a DOM {{domxref("Document")}}.
+The **`DOMParser`** interface provides the ability to parse {{Glossary("XML")}} or {{Glossary("HTML")}} source code from a string into a DOM {{domxref("Document")}}.
 
-You can perform the opposite operation—converting a DOM tree into XML or HTML
-source—using the {{domxref("XMLSerializer")}} interface.
+You can perform the opposite operation—converting a DOM tree into XML or HTML source—using the {{domxref("XMLSerializer")}} interface.
 
-In the case of an HTML document, you can also replace portions of the DOM with new DOM
-trees built from HTML by setting the value of the {{domxref("Element.innerHTML")}} and
-{{domxref("Element.outerHTML", "outerHTML")}} properties. These properties can also be
-read to fetch HTML fragments corresponding to the corresponding DOM subtree.
+In the case of an HTML document, you can also replace portions of the DOM with new DOM trees built from HTML by setting the value of the {{domxref("Element.innerHTML")}} and {{domxref("Element.outerHTML", "outerHTML")}} properties. These properties can also be read to fetch HTML fragments corresponding to the corresponding DOM subtree.
 
-Note that {{domxref("XMLHttpRequest")}} can parse XML and HTML directly
-from a URL-addressable resource, returning a `Document` in its
-{{domxref("XMLHttpRequest.response", "response")}} property.
+Note that {{domxref("XMLHttpRequest")}} can parse XML and HTML directly from a URL-addressable resource, returning a `Document` in its {{domxref("XMLHttpRequest.response", "response")}} property.
 
 > [!NOTE]
-> Be aware that [block-level elements](/en-US/docs/Glossary/Block-level_content)
-> like `<p>` will be automatically closed if another
-> block-level element is nested inside and therefore parsed before the closing `</p>` tag.
+> Be aware that [block-level elements](/en-US/docs/Glossary/Block-level_content) like `<p>` will be automatically closed if another block-level element is nested inside and therefore parsed before the closing `</p>` tag.
 
 ## Constructor
 
@@ -36,7 +26,7 @@ from a URL-addressable resource, returning a `Document` in its
 ## Instance methods
 
 - {{domxref("DOMParser.parseFromString()")}}
-  - : Parses a string using either the HTML parser or the XML parser, returning an {{domxref("HTMLDocument")}} or {{domxref("XMLDocument")}}.
+  - : Parses an input {{domxref("TrustedHTML")}} instance or string as HTML or XML and returns a {{domxref("Document")}}.
 
 ## Examples
 

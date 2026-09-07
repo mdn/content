@@ -23,7 +23,6 @@ isEnabled(cap)
 ### Parameters
 
 - `cap`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying which WebGL capability to test. Possible values:
 
     | Constant                      | Description                                                                                                                         |

@@ -13,12 +13,10 @@ browser-compat: api.PerformanceMeasure
 
 ## Instance properties
 
-This interface defines:
-
 - {{domxref("PerformanceMeasure.detail")}}
   - : Contains arbitrary metadata about the measure.
 
-In addition, it extends the following {{domxref("PerformanceEntry")}} properties by qualifying/constraining the properties as follows:
+This interface extends the following {{domxref("PerformanceEntry")}} properties by qualifying/constraining the properties as follows:
 
 - {{domxref("PerformanceEntry.entryType")}}
   - : Returns `"measure"`.
@@ -36,6 +34,8 @@ This interface has no methods.
 ## Example
 
 See the example in [Using the User Timing API](/en-US/docs/Web/API/Performance_API/User_timing).
+
+Chrome DevTools uses `performance.measure()` and in particular a structured `detail` property as part of its extensibility API that surfaces these in custom tracks in performance traces. See the example in [Performance: measure() method](/en-US/docs/Web/API/Performance/measure) page and the [Chrome's extensibility API documentation](https://developer.chrome.com/docs/devtools/performance/extension#inject_your_data_with_the_user_timings_api) for more information and examples.
 
 ## Specifications
 

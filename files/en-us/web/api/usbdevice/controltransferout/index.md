@@ -21,9 +21,7 @@ controlTransferOut(setup, data)
 ### Parameters
 
 - `setup`
-
   - : An object that sets options for. The available options are:
-
     - `requestType`
       - : Must be one of three values specifying whether the transfer is `"standard"` (common to all USB devices) `"class"` (common to an industry-standard class of devices) or `"vendor"`.
     - `recipient`
@@ -42,7 +40,7 @@ controlTransferOut(setup, data)
 
 ### Return value
 
-A {{jsxref("promise")}} that resolves with a {{domxref("USBOutTransferResult")}}.
+A {{jsxref("Promise")}} that resolves with a {{domxref("USBOutTransferResult")}}.
 
 ## Specifications
 

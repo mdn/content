@@ -3,9 +3,8 @@ title: manifest.json
 slug: Mozilla/Add-ons/WebExtensions/manifest.json
 page-type: landing-page
 browser-compat: webextensions.manifest
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 > [!NOTE]
 > This article describes manifest.json for web extensions. If you are looking for information about the manifest.json in PWAs, check out the [Web App Manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) article.
@@ -30,6 +29,7 @@ These are the `manifest.json` keys; these keys are available in Manifest V2 and 
 - [commands](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)
 - [content_scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts)
 - [content_security_policy](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy)
+- [dark_theme](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/dark_theme)
 - [declarative_net_request](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request)
 - [default_locale](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale)
 - [description](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description)
@@ -43,7 +43,6 @@ These are the `manifest.json` keys; these keys are available in Manifest V2 and 
 - [incognito](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/incognito)
 - [manifest_version](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version)
 - [name](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name)
-- [offline_enabled](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/offline_enabled) (Not supported in Firefox)
 - [omnibox](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox)
 - [optional_host_permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_host_permissions) (Manifest V3 and above)
 - [optional_permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions)
@@ -52,6 +51,7 @@ These are the `manifest.json` keys; these keys are available in Manifest V2 and 
 - [page_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) (Manifest V2 only in Chrome)
 - [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)
 - [protocol_handlers](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers) (Firefox only)
+- [sandbox](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sandbox)
 - [short_name](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/short_name)
 - [sidebar_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action)
 - [storage](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/storage) (Not supported in Firefox)
@@ -89,7 +89,7 @@ For complete example extensions, see [Example extensions](/en-US/docs/Mozilla/Ad
 {
   "browser_specific_settings": {
     "gecko": {
-      "id": "addon@example.com",
+      "id": "@addon-example",
       "strict_min_version": "42.0"
     }
   },
@@ -167,4 +167,4 @@ For complete example extensions, see [Example extensions](/en-US/docs/Mozilla/Ad
 
 ## See also
 
-{{WebExtAPIRef("permissions")}} JavaScript API
+- {{WebExtAPIRef("permissions")}} JavaScript API

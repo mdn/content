@@ -4,9 +4,8 @@ short-title: union()
 slug: Web/JavaScript/Reference/Global_Objects/Set/union
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.union
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`union()`** method of {{jsxref("Set")}} instances takes a set and returns a new set containing elements which are in either or both of this set and the given set.
 
@@ -38,9 +37,9 @@ In mathematical notation, _union_ is defined as:
 
 And using Venn diagram:
 
-![A Venn diagram where two circles overlap. The symmetric difference of A and B is the region contained by either or both circles.](diagram.svg)
+![A Venn diagram where two circles overlap. The union of A and B is the region contained by either or both circles.](diagram.svg)
 
-`union()` accepts [set-like](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) objects as the `other` parameter. It requires {{jsxref("Operators/this", "this")}} to be an actual {{jsxref("Set")}} instance, because it directly retrieves the underlying data stored in `this` without invoking any user code. Then, it iterates over `other` by calling its `keys()` method, and constructs a new set with all elements in `this`, followed by all elements in `other` that are not present in `this`.
+`union()` accepts [set-like](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set#set-like_objects) objects as the `other` parameter. It requires {{jsxref("this")}} to be an actual {{jsxref("Set")}} instance, because it directly retrieves the underlying data stored in `this` without invoking any user code. Then, it iterates over `other` by calling its `keys()` method, and constructs a new set with all elements in `this`, followed by all elements in `other` that are not present in `this`.
 
 The order of elements in the returned set is first those in `this` followed by those in `other`.
 

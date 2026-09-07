@@ -10,10 +10,7 @@ browser-compat: api.PasswordCredential.PasswordCredential
 
 {{APIRef("Credential Management API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`PasswordCredential()`**
-constructor creates a new {{domxref("PasswordCredential")}} object. In
-supporting browsers, an instance of this class may be passed the `credential`
-from the `init` object for global {{domxref("Window/fetch", "fetch()")}}.
+The **`PasswordCredential()`** constructor creates a new {{domxref("PasswordCredential")}} object.
 
 ## Syntax
 
@@ -27,24 +24,22 @@ new PasswordCredential(form)
 Either of the following:
 
 - `data`
-
   - : An object with the following properties:
-
     - `iconURL` {{optional_inline}}
       - : A string representing the URL of an icon or avatar to be associated with the credential.
     - `id`
-      - : A string representing a unique ID for the credential.
+      - : A string representing the username portion of the username/password combination.
     - `name` {{optional_inline}}
-      - : A string representing the credential username.
+      - : A string representing a human-understandable name associated with the credential, intended to help the user select this credential in a user interface.
     - `origin`
       - : A string representing the credential's origin. {{domxref("PasswordCredential")}} objects are origin-bound, which means that they will only be usable on the specified origin they were intended to be used on.
     - `password`
       - : A string representing the credential password.
 
 - `form`
-  - : A reference to an {{domxref("HTMLFormElement")}} with appropriate input fields. The
-    form should, at the very least, contain an id and password. It could also require a
-    CSRF token.
+  - : A reference to an {{domxref("HTMLFormElement")}} with appropriate input fields.
+    The form should, at the very least, contain an id and password.
+    It could also require a CSRF token.
 
 ### Exceptions
 
@@ -53,8 +48,7 @@ Either of the following:
 
 ## Examples
 
-This example shows how to set up an {{domxref("HTMLFormElement")}} to capture data
-which we'll use to create a {{domxref("PasswordCredential")}} object.
+This example shows how to set up an {{domxref("HTMLFormElement")}} to capture data which we'll use to create a {{domxref("PasswordCredential")}} object.
 
 Starting with the form element.
 
@@ -68,9 +62,7 @@ Starting with the form element.
 </form>
 ```
 
-Then, a reference to this form element, using it to create
-a {{domxref("PasswordCredential")}} object, and storing it in the browser's password
-system.
+Then, a reference to this form element, using it to create a {{domxref("PasswordCredential")}} object, and storing it in the browser's password system.
 
 ```js
 const form = document.querySelector("#form");

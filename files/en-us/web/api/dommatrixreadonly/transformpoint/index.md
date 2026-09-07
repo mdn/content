@@ -23,9 +23,7 @@ transformPoint(point)
 ### Parameters
 
 - `point`
-
   - : A {{domxref("DOMPoint")}} or {{domxref("DOMPointReadOnly")}} instance, or an object containing up to four of the following properties:
-
     - `x`
       - : The `x`-coordinate of the point in space as a number. The default value is `0`.
     - `y`

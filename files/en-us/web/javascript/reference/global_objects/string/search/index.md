@@ -4,9 +4,8 @@ short-title: search()
 slug: Web/JavaScript/Reference/Global_Objects/String/search
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.search
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`search()`** method of {{jsxref("String")}} values executes a search for a match between a regular expression and this string, returning the index of the first match in the string.
 
@@ -34,7 +33,6 @@ search(regexp)
 ### Parameters
 
 - `regexp`
-
   - : A regular expression object, or any object that has a [`Symbol.search`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/search) method.
 
     If `regexp` is not a `RegExp` object and does not have a `Symbol.search` method, it is implicitly converted to a {{jsxref("RegExp")}} by using `new RegExp(regexp)`.

@@ -415,7 +415,7 @@ function decodeTechnoStuff() {
 
 document
   .getElementById("startButton")
-  .addEventListener("click", decodeTechnoStuff, false);
+  .addEventListener("click", decodeTechnoStuff);
 ```
 
 `decodeTechnoStuff()` starts by zeroing the values of totalTaskCount (the number of tasks added to the queue so far) and currentTaskNumber (the task currently being run), and then calls `updateDisplay()` to reset the display to its "nothing's happened yet" state.

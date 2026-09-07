@@ -19,6 +19,7 @@ Like other filter primitives, it handles color components in the `linearRGB` {{g
 ## Attributes
 
 - {{SVGAttr("in")}}
+- [Filter primitive attributes](/en-US/docs/Web/SVG/Reference/Attribute#filter_primitive_attributes_presentation_attributes): {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}, {{SVGAttr("result")}}
 
 ## DOM Interface
 
@@ -38,12 +39,12 @@ This element implements the {{domxref("SVGFEComponentTransferElement")}} interfa
       y1="0"
       x2="100%"
       y2="0">
-      <stop offset="0" stop-color="#ff0000"></stop>
-      <stop offset="0.2" stop-color="#ffff00"></stop>
-      <stop offset="0.4" stop-color="#00ff00"></stop>
-      <stop offset="0.6" stop-color="#00ffff"></stop>
-      <stop offset="0.8" stop-color="#0000ff"></stop>
-      <stop offset="1" stop-color="#800080"></stop>
+      <stop offset="0" stop-color="red"></stop>
+      <stop offset="0.2" stop-color="yellow"></stop>
+      <stop offset="0.4" stop-color="lime"></stop>
+      <stop offset="0.6" stop-color="cyan"></stop>
+      <stop offset="0.8" stop-color="blue"></stop>
+      <stop offset="1" stop-color="purple"></stop>
     </linearGradient>
     <filter id="identity" x="0" y="0" width="100%" height="100%">
       <feComponentTransfer>
@@ -86,40 +87,15 @@ This element implements the {{domxref("SVGFEComponentTransferElement")}} interfa
     <text x="0" y="20">Default</text>
     <rect x="0" y="30" width="100%" height="20"></rect>
     <text x="0" y="70">Identity</text>
-    <rect
-      x="0"
-      y="80"
-      width="100%"
-      height="20"
-      style="filter:url(#identity)"></rect>
+    <rect x="0" y="80" width="100%" height="20" filter="url(#identity)"></rect>
     <text x="0" y="120">Table lookup</text>
-    <rect
-      x="0"
-      y="130"
-      width="100%"
-      height="20"
-      style="filter:url(#table)"></rect>
+    <rect x="0" y="130" width="100%" height="20" filter="url(#table)"></rect>
     <text x="0" y="170">Discrete table lookup</text>
-    <rect
-      x="0"
-      y="180"
-      width="100%"
-      height="20"
-      style="filter:url(#discrete)"></rect>
+    <rect x="0" y="180" width="100%" height="20" filter="url(#discrete)"></rect>
     <text x="0" y="220">Linear function</text>
-    <rect
-      x="0"
-      y="230"
-      width="100%"
-      height="20"
-      style="filter:url(#linear)"></rect>
+    <rect x="0" y="230" width="100%" height="20" filter="url(#linear)"></rect>
     <text x="0" y="270">Gamma function</text>
-    <rect
-      x="0"
-      y="280"
-      width="100%"
-      height="20"
-      style="filter:url(#gamma)"></rect>
+    <rect x="0" y="280" width="100%" height="20" filter="url(#gamma)"></rect>
   </g>
 </svg>
 ```
@@ -128,7 +104,7 @@ This element implements the {{domxref("SVGFEComponentTransferElement")}} interfa
 
 ```css
 rect {
-  fill: url(#rainbow);
+  fill: url("#rainbow");
 }
 ```
 
@@ -146,7 +122,7 @@ rect {
 
 ## See also
 
-- [SVG filter primitive attributes](/en-US/docs/Web/SVG/Reference/Attribute#filter_primitive_attributes)
+- [SVG filter primitive attributes](/en-US/docs/Web/SVG/Reference/Attribute#filter_primitive_attributes_presentation_attributes)
 - {{SVGElement("filter")}}
 - {{SVGElement("feBlend")}}
 - {{SVGElement("feColorMatrix")}}

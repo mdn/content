@@ -2,9 +2,8 @@
 title: "Reason: CORS request external redirect not allowed"
 slug: Web/HTTP/Guides/CORS/Errors/CORSExternalRedirectNotAllowed
 page-type: http-cors-error
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 ## Reason
 

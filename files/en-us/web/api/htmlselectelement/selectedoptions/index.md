@@ -69,35 +69,31 @@ let orderButton = document.getElementById("order");
 let itemList = document.getElementById("foods");
 let outputBox = document.getElementById("output");
 
-orderButton.addEventListener(
-  "click",
-  () => {
-    let collection = itemList.selectedOptions;
-    let output = "";
+orderButton.addEventListener("click", () => {
+  let collection = itemList.selectedOptions;
+  let output = "";
 
-    for (let i = 0; i < collection.length; i++) {
-      if (output === "") {
-        output = "Your order for the following items has been placed: ";
-      }
-      output += collection[i].label;
-
-      if (i === collection.length - 2 && collection.length < 3) {
-        output += " and ";
-      } else if (i < collection.length - 2) {
-        output += ", ";
-      } else if (i === collection.length - 2) {
-        output += ", and ";
-      }
-    }
-
+  for (let i = 0; i < collection.length; i++) {
     if (output === "") {
-      output = "You didn't order anything!";
+      output = "Your order for the following items has been placed: ";
     }
+    output += collection[i].label;
 
-    outputBox.textContent = output;
-  },
-  false,
-);
+    if (i === collection.length - 2 && collection.length < 3) {
+      output += " and ";
+    } else if (i < collection.length - 2) {
+      output += ", ";
+    } else if (i === collection.length - 2) {
+      output += ", and ";
+    }
+  }
+
+  if (output === "") {
+    output = "You didn't order anything!";
+  }
+
+  outputBox.textContent = output;
+});
 ```
 
 This script sets up a {{domxref("Element/click_event", "click")}} event listener on the "Order Now" button. When

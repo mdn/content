@@ -30,7 +30,6 @@ JavaScript errors contain a "Learn more" link that takes you to the JavaScript e
 
 - Either use a copied structure from one of the existing error documents or start from scratch. Your choice!
 - You should have at least:
-
   - A syntax box containing the message as thrown in different browsers.
   - The error type.
   - A text that explains why this error happened and what its consequences are. Go beyond the thrown message.

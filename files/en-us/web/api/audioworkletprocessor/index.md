@@ -12,7 +12,7 @@ The **`AudioWorkletProcessor`** interface of the [Web Audio API](/en-US/docs/Web
 ## Constructor
 
 > [!NOTE]
-> The `AudioWorkletProcessor` and classes that derive from it cannot be instantiated directly from a user-supplied code. Instead, they are created only internally by the creation of an associated {{domxref("AudioWorkletNode")}}s. The constructor of the deriving class is getting called with an options object, so you can perform a custom initialization procedures — see constructor page for details.
+> The `AudioWorkletProcessor` and classes that derive from it cannot be instantiated directly from user-supplied code. Instead, they are created only internally by the creation of an associated {{domxref("AudioWorkletNode")}}. The constructor of the deriving class is getting called with an options object, so you can perform custom initialization procedures — see constructor page for details.
 
 - {{domxref("AudioWorkletProcessor.AudioWorkletProcessor", "AudioWorkletProcessor()")}}
   - : Creates a new instance of an `AudioWorkletProcessor` object.
@@ -46,7 +46,6 @@ An example algorithm of creating a custom audio processing mechanism is:
 
 1. Create a separate file;
 2. In the file:
-
    1. Extend the `AudioWorkletProcessor` class (see ["Deriving classes" section](#deriving_classes)) and supply your own {{domxref("AudioWorkletProcessor.process", "process()")}} method in it;
    2. Register the processor using {{domxref("AudioWorkletGlobalScope.registerProcessor()")}} method;
 

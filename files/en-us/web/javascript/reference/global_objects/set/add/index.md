@@ -4,22 +4,21 @@ short-title: add()
 slug: Web/JavaScript/Reference/Global_Objects/Set/add
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.add
+sidebar: jsref
 ---
 
-{{JSRef}}
-
-The **`add()`** method of {{jsxref("Set")}} instances inserts a new element with a specified value in to this set, if there isn't an element with the same value already in this set
+The **`add()`** method of {{jsxref("Set")}} instances inserts the specified value into this set, if it is not already present.
 
 {{InteractiveExample("JavaScript Demo: Set.prototype.add()")}}
 
 ```js interactive-example
-const set1 = new Set();
+const set = new Set();
 
-set1.add(42);
-set1.add(42);
-set1.add(13);
+set.add(42);
+set.add(42);
+set.add(13);
 
-for (const item of set1) {
+for (const item of set) {
   console.log(item);
   // Expected output: 42
   // Expected output: 13
@@ -35,15 +34,15 @@ add(value)
 ### Parameters
 
 - `value`
-  - : The value of the element to add to the `Set` object.
+  - : The value to add to the `Set` object. Objects are compared by [reference](/en-US/docs/Glossary/Object_reference), not by value.
 
 ### Return value
 
-The `Set` object with added value.
+The `Set` object.
 
 ## Examples
 
-### Using the add() method
+### Using add()
 
 ```js
 const mySet = new Set();

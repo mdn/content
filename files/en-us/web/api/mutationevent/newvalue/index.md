@@ -9,7 +9,7 @@ status:
 browser-compat: api.MutationEvent.newValue
 ---
 
-{{APIRef("UI Events")}}{{Deprecated_Header}}{{non-standard_header}}
+{{APIRef("UI Events")}}{{non-standard_header}}
 
 The **`newValue`** read-only property of the {{domxref("MutationEvent")}} interface returns a string. In `DOMAttrModified` events, it represents the new value of the {{domxref("Attr")}} node. In `DOMCharacterDataModified` events, it contains the new value of the {{domxref("CharacterData")}} node. In all other cases, returns the empty string (`""`).
 
@@ -20,13 +20,9 @@ A string.
 ## Examples
 
 ```js
-element.addEventListener(
-  "DOMAttrModified",
-  (event) => {
-    console.log(event.newValue);
-  },
-  false,
-);
+element.addEventListener("DOMAttrModified", (event) => {
+  console.log(event.newValue);
+});
 ```
 
 ## Specifications

@@ -16,7 +16,7 @@ Find the exported `bookinstance_detail()` controller method and replace it with 
 
 ```js
 // Display detail page for a specific BookInstance.
-exports.bookinstance_detail = asyncHandler(async (req, res, next) => {
+exports.bookinstance_detail = async (req, res, next) => {
   const bookInstance = await BookInstance.findById(req.params.id)
     .populate("book")
     .exec();
@@ -32,7 +32,7 @@ exports.bookinstance_detail = asyncHandler(async (req, res, next) => {
     title: "Book:",
     bookinstance: bookInstance,
   });
-});
+};
 ```
 
 The implementation is very similar to that used for the other model detail pages.

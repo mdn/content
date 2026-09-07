@@ -8,7 +8,7 @@ status:
 browser-compat: api.LanguageDetector.measureInputUsage
 ---
 
-{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}
+{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`measureInputUsage()`** method of the {{domxref("LanguageDetector")}} interface reports how much input quota would be used by a language detection operation for a given text input.
 
@@ -32,7 +32,7 @@ measureInputUsage(input, options)
 
 A {{jsxref("Promise")}} that fulfills with a number specifying the {{domxref("LanguageDetector.inputQuota", "inputQuota")}} usage of the given input text.
 
-This number is implementation-dependant; if it is less than the {{domxref("LanguageDetector.inputQuota", "inputQuota")}}, the string's language can be detected.
+This number is implementation-dependent; if it is less than the {{domxref("LanguageDetector.inputQuota", "inputQuota")}}, the string's language can be detected.
 
 ### Exceptions
 

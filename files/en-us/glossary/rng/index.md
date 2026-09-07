@@ -2,9 +2,8 @@
 title: Random Number Generator
 slug: Glossary/RNG
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **PRNG** (pseudorandom number generator) is an algorithm that outputs numbers in a complex, seemingly unpredictable pattern. Truly random numbers (say, from a radioactive source) are utterly unpredictable, whereas all algorithms are predictable, and a PRNG returns the same numbers when passed the same starting parameters or _seed_.
 
@@ -19,6 +18,6 @@ Most PRNGs are not cryptographically secure.
 
 ## See also
 
-- [Pseudorandom number generator](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) on Wikipedia
-- {{jsxref("Math.random()")}}, a built-in JavaScript PRNG function. Note that this is not a cryptographically secure PRNG.
+- JavaScript's {{jsxref("Math.random()")}} and CSS's {{cssxref("random()")}} built-in PRNG functions. Note that these are not a cryptographically secure PRNG.
 - {{domxref("Crypto.getRandomValues()")}}: this is intended to provide cryptographically secure numbers.
+- [Pseudorandom number generator](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) on Wikipedia

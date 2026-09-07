@@ -2,9 +2,8 @@
 title: Chrome incompatibilities
 slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The WebExtension APIs aim to provide compatibility across all the main browsers, so extensions should run on any browser with minimal changes.
 
@@ -12,75 +11,12 @@ However, there are significant differences between Chrome (and Chromium-based br
 
 - Support for WebExtension APIs differs across browsers. See [Browser support for JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) for details.
 - Support for `manifest.json` keys differs across browsers. See the ["Browser compatibility" section](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json#browser_compatibility) on the [`manifest.json`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json) page for more details.
-- Extension API namespace:
-
-  - **In Firefox and Safari:** Extension APIs are accessed under the `browser` namespace. The `chrome` namespace is also supported for compatibility with Chrome.
-  - **In Chrome:** Extension APIs are accessed under the `chrome` namespace. (cf. [Chrome bug 798169](https://crbug.com/798169))
-
-- Asynchronous APIs:
-
-  - **In Firefox and Safari:** Asynchronous APIs are implemented using promises.
-  - **In Chrome:** In Manifest V2, asynchronous APIs are implemented using callbacks. In Manifest V3, support is provided for [promises](https://developer.chrome.com/docs/extensions/develop/migrate#promises) on most appropriate methods. (cf. [Chrome bug 328932](https://crbug.com/328932)) Callbacks are supported in Manifest V3 for backward compatibility.
 
 The rest of this page details these and other incompatibilities.
 
+Support for the `browser` namespace and promises are no longer a source of incompatibility. See [Historical differences](#historical_differences).
+
 ## JavaScript APIs
-
-### chrome.\* and browser.\* namespace
-
-- **In Firefox and Safari:** The APIs are accessed using the `browser` namespace.
-
-  ```js
-  browser.browserAction.setIcon({ path: "path/to/icon.png" });
-  ```
-
-- **In Chrome:** The APIs are accessed using the `chrome` namespace.
-
-  ```js
-  chrome.browserAction.setIcon({ path: "path/to/icon.png" });
-  ```
-
-### Callbacks and promises
-
-- **In Firefox and Safari (all versions), and Chrome (starting from Manifest Version 3):** Asynchronous APIs use [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) to return values.
-
-  ```js
-  function logCookie(c) {
-    console.log(c);
-  }
-
-  function logError(e) {
-    console.error(e);
-  }
-
-  let setCookie = browser.cookies.set({
-    url: "https://developer.mozilla.org/",
-  });
-  setCookie.then(logCookie, logError);
-  ```
-
-- **In Chrome:** In Manifest V2, asynchronous APIs use callbacks to return values and {{WebExtAPIRef("runtime.lastError")}} to communicate errors. In Manifest V3, callbacks are supported for backward compatibility, along with support for [promises](https://developer.chrome.com/docs/extensions/develop/migrate#promises) on most appropriate methods.
-
-  ```js
-  function logCookie(c) {
-    if (chrome.runtime.lastError) {
-      console.error(chrome.runtime.lastError);
-    } else {
-      console.log(c);
-    }
-  }
-
-  chrome.cookies.set({ url: "https://developer.mozilla.org/" }, logCookie);
-  ```
-
-### Firefox supports both the chrome and browser namespaces
-
-As a porting aid, the Firefox implementation of WebExtensions supports `chrome` using callbacks and `browser` using promises. This means that many Chrome extensions work in Firefox without changes.
-
-> [!NOTE]
-> The `browser` namespace is supported by Firefox and Safari. Chrome does not offer the `browser` namespace, until [Chrome bug 798169](https://crbug.com/798169) is resolved.
-
-If you choose to write your extension to use `browser` and promises, Firefox provides a polyfill that should enable it to run in Chrome: <https://github.com/mozilla/webextension-polyfill>.
 
 ### Partially supported APIs
 
@@ -143,16 +79,15 @@ When calling `tabs.remove()`:
 #### WebRequest API
 
 - **In Firefox:**
-
   - Requests can be redirected only if their original URL uses the `http:` or `https:` scheme.
   - The `activeTab` permission does not allow for intercepting network requests in the current tab. (See [bug 1617479](https://bugzil.la/1617479))
   - Events are not fired for system requests (for example, extension upgrades or search bar suggestions).
-
     - **From Firefox 57 onwards:** Firefox makes an exception for extensions that need to intercept {{WebExtAPIRef("webRequest.onAuthRequired")}} for proxy authorization. See the documentation for {{WebExtAPIRef("webRequest.onAuthRequired")}}.
 
   - If an extension wants to redirect a public (e.g., HTTPS) URL to an [extension page](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages), the extension's `manifest.json` file must contain a [`web_accessible_resources`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) key with the URL of the extension page.
 
-    > **Note:** _Any_ website may link or redirect to that URL, and extensions should treat any input (POST data, for example) as if it came from an untrusted source, as a normal web page should.
+    > [!NOTE]
+    > _Any_ website may link or redirect to that URL, and extensions should treat any input (POST data, for example) as if it came from an untrusted source, as a normal web page should.
 
   - Some of the `browser.webRequest.*` APIs allow for returning Promises that resolves `webRequest.BlockingResponse` asynchronously.
 
@@ -163,6 +98,10 @@ When calling `tabs.remove()`:
 - **In Firefox:** `onFocusChanged` of the {{WebExtAPIRef("windows")}} API triggers multiple times for a focus change.
 
 ### Unsupported APIs
+
+#### Debugger API
+
+- **In Firefox:** Chrome's [debugger](https://developer.chrome.com/docs/extensions/reference/api/debugger) API [is not implemented](https://bugzil.la/1316741).
 
 #### DeclarativeContent API
 
@@ -198,6 +137,13 @@ When calling `tabs.remove()`:
 
 - **In Firefox:** The global scope of the [content script environment](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#content_script_environment) is not strictly equal to `window` ([Firefox bug 1208775](https://bugzil.la/1208775)). More specifically, the global scope (`globalThis`) is composed of standard JavaScript features as usual, plus `window` as the prototype of the global scope. Most DOM APIs are inherited from the page through `window`, through [Xray vision](/en-US/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts#xray_vision_in_firefox) to shield the content script from modifications by the web page. A content script may encounter JavaScript objects from its global scope or Xray-wrapped versions from the web page.
 - **In Chrome:** The global scope is `window`, and the available DOM APIs are generally independent of the web page (other than sharing the underlying DOM). Content scripts cannot directly access JavaScript objects from the web page.
+
+#### Content script page event handlers
+
+- **In Firefox:** separate event handlers are not maintained per world. This means that the most recent content script to request `element.onclick = xxx` overwrites the page's or other extensions' event handlers.
+- **In Chrome:** separate event handlers are maintained per world, so Chrome maintains event handlers for a page and every requesting extension.
+
+To work around this inconsistency, use {{domxref("EventTarget.addEventListener", "addEventListener()")}} to register event listeners. See [Firefox bug 1965975](https://bugzil.la/1965975#c5) for more information.
 
 #### Executing code in a web page from content script
 
@@ -263,3 +209,15 @@ Some extension APIs allow an extension to send data from one part of the extensi
 The Structured clone algorithm supports more types than the JSON serialization algorithm. A notable exception are (DOM) objects with a `toJSON` method. DOM objects are not cloneable nor JSON-serializable by default, but with a `toJSON()` method, these can be JSON-serialized (but still not cloned with the structured cloning algorithm). Examples of JSON-serializable objects that are not structured cloneable include instances of {{domxref("URL")}} and {{domxref("PerformanceEntry")}}.
 
 Extensions that rely on the `toJSON()` method of the JSON serialization algorithm can use {{jsxref("JSON.stringify()")}} followed by {{jsxref("JSON.parse()")}} to ensure that a message can be exchanged because a parsed JSON value is always structurally cloneable.
+
+## Historical differences
+
+### chrome.\* and browser.\* namespace
+
+Before Chrome 148, Chrome exposed APIs only under the `chrome` namespace rather than `browser`. For example, `browser.browserAction.setIcon({ path: "path/to/icon.png" });` would instead be `chrome.browserAction.setIcon({ path: "path/to/icon.png" });`.
+
+Chrome introduced support for promise-based return values from APIs in Manifest V3, with some APIs supported later. Before the introduction of promises, a call such as `browser.cookies.set({ url: "https://developer.mozilla.org/" }).then(logCookie);` would use a callback like this: `browser.cookies.set({ url: "https://developer.mozilla.org/" }, logCookie);`.
+
+For extensions that use the `devtools_page` manifest key, Chrome support for the `browser` namespace and promises was introduced in Chrome 152.
+
+If you're targeting older Chrome browser versions, Firefox offers a polyfill that provides the `browser` namespace and promise support: <https://github.com/mozilla/webextension-polyfill>.

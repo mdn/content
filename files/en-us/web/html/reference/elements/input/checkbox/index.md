@@ -1,11 +1,13 @@
 ---
-title: <input type="checkbox">
+title: '`<input type="checkbox">` HTML attribute value'
+short-title: <input type="checkbox">
 slug: Web/HTML/Reference/Elements/input/checkbox
 page-type: html-attribute-value
-browser-compat: html.elements.input.type_checkbox
+browser-compat:
+  - html.elements.input.type_checkbox
+  - html.elements.input.switch
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 {{htmlelement("input")}} elements of type **`checkbox`** are rendered by default as boxes that are checked (ticked) when activated, like you might see in an official government paper form. The exact appearance depends upon the operating system configuration under which the browser is running. Generally this is a square but it may have rounded corners. A checkbox allows you to select single values for submission in a form (or not).
 
@@ -40,7 +42,8 @@ input {
 }
 ```
 
-> **Note:** [Radio buttons](/en-US/docs/Web/HTML/Reference/Elements/input/radio) are similar to checkboxes, but with an important distinction — [same-named radio buttons](/en-US/docs/Web/HTML/Reference/Elements/input/radio#defining_a_radio_group) are grouped into a set in which only one radio button can be selected at a time, whereas checkboxes allow you to turn single values on and off. Where multiple same-named controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.
+> [!NOTE]
+> [Radio buttons](/en-US/docs/Web/HTML/Reference/Elements/input/radio) are similar to checkboxes, but with an important distinction — [same-named radio buttons](/en-US/docs/Web/HTML/Reference/Elements/input/radio#defining_a_radio_group) are grouped into a set in which only one radio button can be selected at a time, whereas checkboxes allow you to turn single values on and off. Where multiple same-named controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.
 
 ## Value
 
@@ -74,15 +77,22 @@ If the `value` attribute was omitted, the default value for the checkbox is `on`
 In addition to the [common attributes](/en-US/docs/Web/HTML/Reference/Elements/input#attributes) shared by all {{HTMLElement("input")}} elements, `checkbox` inputs support the following attributes.
 
 - `checked`
-
   - : A [boolean](/en-US/docs/Glossary/Boolean/HTML) attribute indicating whether this checkbox is checked by default (when the page loads). It does _not_ indicate whether this checkbox is currently checked: if the checkbox's state is changed, this content attribute does not reflect the change. (Only the {{domxref("HTMLInputElement")}}'s `checked` IDL attribute is updated.)
     > [!NOTE]
     > Unlike other input controls, a checkbox's value is only included in the submitted data if the checkbox is currently `checked`. If it is, then the value of the checkbox's `value` attribute is reported as the input's value, or `on` if no `value` is set.
     > Unlike other browsers, Firefox by default [persists the dynamic checked state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the [`autocomplete`](/en-US/docs/Web/HTML/Reference/Elements/input#autocomplete) attribute to control this feature.
 
 - `value`
-
   - : The `value` attribute is one which all {{HTMLElement("input")}}s share; however, it serves a special purpose for inputs of type `checkbox`: when a form is submitted, only checkboxes which are currently checked are submitted to the server, and the reported value is the value of the `value` attribute. If the `value` is not otherwise specified, it is the string `on` by default. This is demonstrated in the section [Value](#value) above.
+
+- `switch`
+  - : A [boolean](/en-US/docs/Glossary/Boolean/HTML) attribute that applies only to `checkbox` inputs. When present, it indicates that the `checkbox` represents an on/off `switch` rather than a normal `checkbox`. It alters the appearance of the `checkbox` control, but the underlying behavior remains the same as that of a normal `checkbox`.
+
+    > [!NOTE]
+    > This attribute allows user agents to expose `switch` ARIA semantics to assistive technologies — without requiring documents to explicitly specify `role="switch"`. The markup and API are similar to those of checkboxes, except that the `:indeterminate` pseudo-class never matches.
+
+    > [!WARNING]
+    > This attribute is still experimental and has limited browser support. The attribute is ignored on unsupported browsers.
 
 ## Using checkbox inputs
 
@@ -132,6 +142,32 @@ To make a checkbox checked by default, you give it the `checked` attribute. See 
 
 {{EmbedLiveSample('Checking_boxes_by_default', 600, 100)}}
 
+### Switch as a checkbox
+
+The following example shows how to make a checkbox look and act like an on/off switch.
+
+```html
+<form>
+  <fieldset>
+    <legend>Adjust your setting</legend>
+    <div>
+      <label for="theme">Dark mode</label>
+      <input type="checkbox" name="theme" id="theme" switch checked />
+    </div>
+    <div>
+      <label for="notifications">Notifications</label>
+      <input type="checkbox" name="notifications" id="notifications" switch />
+    </div>
+    <button type="submit">Submit</button>
+  </fieldset>
+</form>
+```
+
+> [!NOTE]
+> While only some browsers render the checkbox as a switch, the behavior is the same across all browsers.
+
+{{EmbedLiveSample('Switch_as_a_checkbox', 600, 100)}}
+
 ### Providing a bigger hit area for your checkboxes
 
 In the above examples, you may have noticed that you can toggle a checkbox by clicking on its associated {{htmlelement("label")}} element as well as on the checkbox itself. This is a really useful feature of HTML form labels that makes it easier to click the option you want, especially on small-screen devices like smartphones.
@@ -161,7 +197,7 @@ This can be seen in the below example (thanks to [CSS Tricks](https://css-tricks
 
 So in this case the `indeterminate` state is used to state that collecting the ingredients has started, but the recipe is not yet complete.
 
-```js
+```js live-sample___indeterminate_state
 const overall = document.querySelector("#enchantment");
 const ingredients = document.querySelectorAll("ul input");
 
@@ -194,7 +230,41 @@ function updateDisplay() {
 }
 ```
 
-{{EmbedGHLiveSample("learning-area/html/forms/indeterminate-example/index.html", '100%', 200)}}
+```html live-sample___indeterminate_state
+<form>
+  <fieldset>
+    <legend>Complete the recipe</legend>
+    <div>
+      <input type="checkbox" id="enchantment" name="enchantment" />
+      <label for="enchantment">Enchantment table</label>
+      <ul>
+        <li>
+          <input type="checkbox" id="book" name="ingredient" value="book" />
+          <label for="book">Book</label>
+        </li>
+        <li>
+          <input
+            type="checkbox"
+            id="diamonds"
+            name="ingredient"
+            value="diamonds" />
+          <label for="diamonds">Diamonds (x2)</label>
+        </li>
+        <li>
+          <input
+            type="checkbox"
+            id="obsidian"
+            name="ingredient"
+            value="obsidian" />
+          <label for="obsidian">Obsidian (x4)</label>
+        </li>
+      </ul>
+    </div>
+  </fieldset>
+</form>
+```
+
+{{EmbedLiveSample("indeterminate_state", "", 200)}}
 
 ## Validation
 
@@ -322,7 +392,10 @@ otherCheckbox.addEventListener("change", () => {
     </tr>
     <tr>
       <td><strong>Supported common attributes</strong></td>
-      <td><code><a href="#checked">checked</a></code></td>
+      <td>
+        <code><a href="#checked">checked</a></code> and
+        <code><a href="#switch">switch</a></code>
+      </td>
     </tr>
     <tr>
       <td><strong>IDL attributes</strong></td>
@@ -335,12 +408,6 @@ otherCheckbox.addEventListener("change", () => {
     <tr>
       <td><strong>DOM interface</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>

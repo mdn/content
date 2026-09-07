@@ -3,9 +3,8 @@ title: debugger
 slug: Web/JavaScript/Reference/Statements/debugger
 page-type: javascript-statement
 browser-compat: javascript.statements.debugger
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`debugger`** statement invokes any available debugging
 functionality, such as setting a breakpoint. If no debugging functionality is available,

@@ -32,7 +32,7 @@ You can use this attribute with the following SVG elements:
 </table>
 
 - `userSpaceOnUse`
-  - : This value specifies that the `markerWidth` and `markerHeight` attributes and the contents of the `<marker>` element represent values in the current user coordinate system in place for the graphic object referencing the marker (i.e., the user coordinate system for the element referencing the `<marker>` element via a {{SVGAttr("marker")}}, `marker-start`, `marker-mid`, or `marker-end` property).
+  - : This value specifies that the `markerWidth` and `markerHeight` attributes and the contents of the `<marker>` element represent values in the current user coordinate system in place for the graphic object referencing the marker (i.e., the user coordinate system for the element referencing the `<marker>` element via a `marker`, `marker-start`, `marker-mid`, or `marker-end` property).
 - `strokeWidth`
   - : This value specifies that the `markerWidth` and `markerHeight` attributes and the contents of the `<marker>` element represent values in a coordinate system which has a single unit equal the size in user units of the current stroke width (see the {{SVGAttr("stroke-width")}} attribute) in place for the graphic object referencing the marker.
 

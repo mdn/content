@@ -4,9 +4,8 @@ short-title: setTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setTime
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.setTime
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`setTime()`** method of {{jsxref("Date")}} instances changes the [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) for this date, which is the number of milliseconds since the [epoch](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date), defined as the midnight at the beginning of January 1, 1970, UTC.
 

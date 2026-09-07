@@ -4,15 +4,14 @@ short-title: byteOffset
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/byteOffset
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.TypedArray.byteOffset
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`byteOffset`** accessor property of {{jsxref("TypedArray")}} instances returns the offset (in bytes) of this typed array from the start of its {{jsxref("ArrayBuffer")}} or {{jsxref("SharedArrayBuffer")}}.
 
 ## Description
 
-The `byteOffset` property is an accessor property whose set accessor function is `undefined`, meaning that you can only read this property. The value is established when a _TypedArray_ is constructed and cannot be changed. _TypedArray_ is one of the [TypedArray objects](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects).
+The `byteOffset` property is an accessor property whose set accessor function is `undefined`, meaning that you can only read this property. The value is established when the typed array is constructed and cannot be changed. However, the `byteOffset` becomes 0 if the underlying buffer is resized such that the viewed range is no longer valid.
 
 ## Examples
 
@@ -26,6 +25,12 @@ uint8array1.byteOffset; // 0 (no offset specified)
 
 const uint8array2 = new Uint8Array(buffer, 3);
 uint8array2.byteOffset; // 3 (as specified when constructing Uint8Array)
+
+const buffer2 = new ArrayBuffer(16, { maxByteLength: 32 });
+const uint8lengthTracking = new Uint8Array(buffer2, 4);
+uint8lengthTracking.byteOffset; // 4
+buffer2.resize(3);
+uint8lengthTracking.byteOffset; // 0 (viewed range is no longer valid)
 ```
 
 ## Specifications

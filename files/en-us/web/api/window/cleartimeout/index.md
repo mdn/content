@@ -39,8 +39,8 @@ one second, the alert only appears once.
 
 ```js
 const alarm = {
-  remind(aMessage) {
-    alert(aMessage);
+  remind(message) {
+    alert(message);
     this.timeoutID = undefined;
   },
 

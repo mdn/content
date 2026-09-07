@@ -9,11 +9,9 @@ status:
 browser-compat: api.CSSPositionValue.x
 ---
 
-{{deprecated_header}}{{APIRef("CSS Typed Object Model API")}}{{Non-standard_header}}
+{{APIRef("CSS Typed Object Model API")}}{{Non-standard_header}}
 
-The **`x`** property of the
-{{domxref("CSSPositionValue")}} interface returns the item's position along the web
-page's horizontal axis.
+The **`x`** property of the {{domxref("CSSPositionValue")}} interface returns the item's position along the web page's horizontal axis.
 
 ## Value
 
@@ -21,8 +19,9 @@ A {{domxref('CSSNumericValue')}}.
 
 ## Examples
 
-The following example positions a container `<div>` 5 pixels from the
-top and 10 pixels from the left of the page.
+### Basic usage
+
+The following example positions a container `<div>` 5 pixels from the top and 10 pixels from the left of the page.
 
 ```js
 let someDiv = document.getElementById("container");

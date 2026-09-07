@@ -58,12 +58,7 @@ The following example presents two circles: the first one has `fr` set to `5%` w
   </defs>
 
   <circle cx="100" cy="100" r="100" fill="url(#gradient1)" />
-  <circle
-    cx="100"
-    cy="100"
-    r="100"
-    fill="url(#gradient2)"
-    style="transform: translateX(240px);" />
+  <circle cx="340" cy="100" r="100" fill="url(#gradient2)" />
 </svg>
 ```
 
@@ -104,13 +99,7 @@ This example has `fr` equal to `5%` and is representing how the attributes `fx` 
     stroke="black"
     stroke-width="2" />
 
-  <circle
-    cx="60"
-    cy="60"
-    r="50"
-    fill="transparent"
-    stroke="white"
-    stroke-width="2" />
+  <circle cx="60" cy="60" r="50" fill="none" stroke="white" stroke-width="2" />
   <circle cx="45" cy="45" r="2" fill="white" stroke="white" />
   <circle cx="60" cy="60" r="2" fill="white" stroke="white" />
   <text x="38" y="40" fill="white" font-family="sans-serif" font-size="10pt">

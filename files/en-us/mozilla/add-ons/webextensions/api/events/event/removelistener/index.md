@@ -3,9 +3,8 @@ title: Event.removeListener()
 slug: Mozilla/Add-ons/WebExtensions/API/events/Event/removeListener
 page-type: webextension-api-event
 browser-compat: webextensions.api.events.Event.removeListener
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Removes an event listener registered with {{WebExtAPIRef("events.Event.addListener()")}} from the event.
 
@@ -18,7 +17,6 @@ events.Event.removeListener(listener)
 ### Parameters
 
 - `listener`
-
   - : `function`. The listener to remove.
 
 ## Browser compatibility

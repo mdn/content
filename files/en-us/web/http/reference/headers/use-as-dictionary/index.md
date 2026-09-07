@@ -6,9 +6,10 @@ page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Use-As-Dictionary
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP **`Use-As-Dictionary`** response header lists the matching criteria that the {{glossary("Compression Dictionary Transport")}} dictionary can be used for, for future requests.
 
@@ -29,7 +30,7 @@ Content-Encoding: match="<url-pattern>", match-dest=("<destination1>")
 ## Directives
 
 - `match`
-  - : A string value containing a [URL Pattern](/en-US/docs/Web/API/URL_Pattern_API): only resources whose URLs match this pattern may use this resource as a dictionary.
+  - : A string value containing a [URL Pattern](/en-US/docs/Web/API/URL_Pattern_API): only resources whose URLs match this pattern may use this resource as a dictionary. Regular expression capturing groups are not allowed, so {{domxref("URLPattern.hasRegExpGroups")}} must be `false`.
 - `match-dest`
   - : A space-separated list of strings, with each string in quotes and the whole value enclosed in parentheses, that provides a list of [Fetch request destinations](/en-US/docs/Web/API/Request/destination) that requests must match if they are to use this dictionary.
 - `id`

@@ -46,7 +46,7 @@ To prove this, we then retrieve these references back from `otherTable` and prin
 
 In the previous example, the return value of each [`Table.prototype.get()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Table/get) call is an exported WebAssembly function — exactly what we have been talking about.
 
-It is worth noting that these are real JavaScript functions, in addition to being wrappers for WebAssembly functions. If you load the above example in a [WebAssembly-supporting browser](/en-US/docs/WebAssembly#browser_compatibility), and run the following lines in your console:
+It is worth noting that these are real JavaScript functions, in addition to being wrappers for WebAssembly functions. If you load the above example in a browser and run the following lines in your console:
 
 ```js
 const testFunc = otherTable.get(0);

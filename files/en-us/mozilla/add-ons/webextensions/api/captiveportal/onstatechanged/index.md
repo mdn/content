@@ -3,9 +3,8 @@ title: onStateChanged
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/onStateChanged
 page-type: webextension-api-event
 browser-compat: webextensions.api.captivePortal.onStateChanged
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fires when the captive portal state changes.
 
@@ -31,9 +30,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `details`
       - : `string` The captive portal state, being one of `unknown`, `not_captive`, `unlocked_portal`, or `locked_portal`.
 

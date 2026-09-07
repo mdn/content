@@ -44,7 +44,7 @@ however, when this method is used, you need to explicitly call `start()` to
 begin the flow of messages to this document:
 
 ```js
-channel.port1.addEventListener("message", handleMessage, false);
+channel.port1.addEventListener("message", handleMessage);
 function handleMessage(e) {
   para.innerHTML = e.data;
   textInput.value = "";

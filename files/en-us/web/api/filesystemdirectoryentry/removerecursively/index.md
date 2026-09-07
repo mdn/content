@@ -9,7 +9,7 @@ status:
 browser-compat: api.FileSystemDirectoryEntry.removeRecursively
 ---
 
-{{APIRef("File and Directory Entries API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}
 
 The {{domxref("FileSystemDirectoryEntry")}} interface's method
 **`removeRecursively()`** removes
@@ -57,9 +57,7 @@ a single parameter: a {{domxref("DOMException")}} object describing the error. T
   - : The directory is not accessible; perhaps it's in use by another application or is
     locked at the operating system level.
 - `DOMException.SECURITY_ERR`
-
   - : The directory could not be removed for security reasons. Possible reasons include:
-
     - The directory and/or its contents may not be safe to access from a Web
       application.
     - Too many file system calls are being made.

@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLTableSectionElement.vAlign
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 The **`vAlign`** property of the {{domxref("HTMLTableSectionElement")}} interface is a string indicating how to vertically align text in a {{htmlelement("thead")}}, {{htmlelement("tbody")}} or {{htmlelement("tfoot")}} table section. Individual rows and cells can override it.
 
@@ -32,7 +32,7 @@ The possible values are: `"top"`, `"middle"`, `"bottom"`, or `"baseline"`
 
 ## Examples
 
-Use CSS {{cssxref("vertical-align")}} instead, which takes precedence, as demonstrated in the [vertical alignment table cells](/en-US/docs/Web/CSS/vertical-align#vertical_alignment_in_a_table_cell) example.
+Use CSS {{cssxref("vertical-align")}} instead, which takes precedence, as demonstrated in the [vertical alignment table cells](/en-US/docs/Web/CSS/Reference/Properties/vertical-align#vertical_alignment_in_a_table_cell) example.
 
 ## Specifications
 

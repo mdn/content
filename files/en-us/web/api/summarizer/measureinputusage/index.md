@@ -8,7 +8,7 @@ status:
 browser-compat: api.Summarizer.measureInputUsage
 ---
 
-{{APIRef("Summarizer API")}}{{SeeCompatTable}}
+{{APIRef("Summarizer API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`measureInputUsage()`** method of the {{domxref("Summarizer")}} interface reports how much {{domxref("Summarizer.inputQuota", "inputQuota")}} would be used by a summarize operation for a given text input.
 

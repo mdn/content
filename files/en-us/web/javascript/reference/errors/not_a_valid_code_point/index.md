@@ -2,9 +2,8 @@
 title: "RangeError: argument is not a valid code point"
 slug: Web/JavaScript/Reference/Errors/Not_a_valid_code_point
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "Invalid code point" occurs when {{jsxref("NaN")}} values,
 negative Integers (-1), non-Integers (5.4), or values larger than 0x10FFFF (1114111) are

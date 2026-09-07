@@ -42,7 +42,7 @@ addEventListener("rtctransform", (event) => {
 The code implements a handler for the {{domxref("DedicatedWorkerGlobalScope.rtctransform_event", "rtctransform")}} event, which is fired at the global worker object on construction of the corresponding {{domxref("RTCRtpScriptTransform")}}, and when new frames are enqueued for processing.
 `event.transformer` is the {{domxref("RTCRtpScriptTransformer")}} that has the `writable` and `readable` properties.
 
-An different {{domxref("TransformStream")}} is created to process outgoing and incoming frames, using `createSenderTransform()` or `createReceiverTransform()`, respectively (implementations not shown).
+A different {{domxref("TransformStream")}} is created to process outgoing and incoming frames, using `createSenderTransform()` or `createReceiverTransform()`, respectively (implementations not shown).
 The event handler chooses the correct transform stream to use based on options passed through from the [`RTCRtpScriptTransform` constructor](/en-US/docs/Web/API/RTCRtpScriptTransform/RTCRtpScriptTransform) and assigns it to `transform`.
 
 The code calls {{domxref("ReadableStream.pipeThrough()")}} on the `readable` to pipe encoded frames through the selected `TransformStream`, and then {{domxref("ReadableStream.pipeTo()")}} to pipe them to the `RTCRtpScriptTransformer.writable`.

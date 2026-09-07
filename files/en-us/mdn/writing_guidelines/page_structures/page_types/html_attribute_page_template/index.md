@@ -10,7 +10,8 @@ HTML attributes fall into two categories: **element-specific attributes**, which
 Note that most element-specific attributes don't need standalone articles if the attribute list in the element reference is sufficient to describe its behavior.
 Only add an article if the attribute has enough nuance to deserve its own examples, or it is a global attribute.
 
-> **Note:** _Remove this whole explanatory note before publishing_
+> [!NOTE]
+> _Remove this whole explanatory note before publishing_
 >
 > ---
 >
@@ -46,7 +47,6 @@ Only add an article if the attribute has enough nuance to deserve its own exampl
 > - **status**
 >   - : Flags describing the status of this feature. An array which may contain one or more of the following: `experimental`, `deprecated`, `non-standard`. This key should not be set manually: it is set automatically based on values in the browser compatibility data for the feature. See ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated).
 > - **browser-compat**
->
 >   - : Replace the placeholder value `html.global_attributes.name-of-the-attribute` with the query string for the global attribute in the [Browser compat data repo](https://github.com/mdn/browser-compat-data).
 >     For element-specific attributes, use the format `html.elements.name-of-the-element.name-of-the-attribute`, with each query string on its own line, preceded by a dash. For example:
 >
@@ -61,7 +61,6 @@ Only add an article if the attribute has enough nuance to deserve its own exampl
 >     The toolchain automatically uses the key to populate the compatibility and specification sections (replacing the `\{{Compat}}` and `\{{Specifications}}` macros).
 >     Note that you may first need to create/update an entry for the attribute in our [Browser compat data repo](https://github.com/mdn/browser-compat-data), and the entry will need to include specification information.
 >     See our [guide on how to do this](/en-US/docs/MDN/Writing_guidelines/Page_structures/Compatibility_tables).
->
 > - **sidebar**
 >   - : Keep as `htmlsidebar` (all pages under `/web/html/` use this sidebar).
 >     See [Page structures: Sidebars](/en-US/docs/MDN/Writing_guidelines/Page_structures/Sidebars) for details.
@@ -75,7 +74,6 @@ Only add an article if the attribute has enough nuance to deserve its own exampl
 >
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental).
 >   If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
-> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates that use of the technology is [discouraged](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 > - `\{{Non-standard_Header}}` — this generates a **Non-standard** banner that indicates that the feature is not part of any specification.
 >
 > Do not provide status header macros manually. Refer to the section ["How feature statuses are added or updated"](/en-US/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_feature_statuses_are_added_or_updated) to add these statuses to the page.
@@ -84,7 +82,7 @@ Only add an article if the attribute has enough nuance to deserve its own exampl
 >
 > _Remember to remove this whole explanatory note before publishing_
 >
-> {{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+> {{SeeCompatTable}}{{Non-standard_Header}}
 >
 > Start by introducing the reader to the attribute, and its usage.
 > For example: The **`name-of-the-attribute`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) describes or manipulates [insert usage description].

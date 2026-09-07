@@ -3,9 +3,8 @@ title: downloads.open()
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/open
 page-type: webextension-api-function
 browser-compat: webextensions.api.downloads.open
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The **`open()`** function of the {{WebExtAPIRef("downloads")}} API opens the downloaded file with its associated application. A {{WebExtAPIRef("downloads.onChanged")}} event fires when the item is opened for the first time.
 
@@ -29,10 +28,6 @@ let opening = browser.downloads.open(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). If the request is successful, the promise is fulfilled with no arguments. If the request failed, the promise is rejected with an error message.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -63,6 +58,10 @@ searching.then(openDownload, onError);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#method-open) API.

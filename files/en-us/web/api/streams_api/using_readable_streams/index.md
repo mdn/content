@@ -125,7 +125,8 @@ if (done) {
 }
 ```
 
-> **Note:** `close()` is part of the new custom stream, not the original stream we are discussing here. We'll explain more about the custom stream in the next section.
+> [!NOTE]
+> `close()` is part of the new custom stream, not the original stream we are discussing here. We'll explain more about the custom stream in the next section.
 
 If `done` is not `true`, we process the new chunk we've read (contained in the `value` property of the results object) and then call the `pump()` function again to read the next chunk.
 
@@ -384,7 +385,7 @@ The code below shows a more complete example.
 Here the fetch stream is consumed using the iterator inside a try/catch block.
 On each iteration of the loop the code simply logs and counts the received bytes.
 If there is an error it logs the issue.
-The `fetch()` operation can be cancelled using an `AbortSignal`, which would also be logged as an error.
+The `fetch()` operation can be canceled using an `AbortSignal`, which would also be logged as an error.
 
 ```js
 let bytes = 0;
@@ -413,7 +414,7 @@ async function logChunks(url, { signal }) {
 ```
 
 The example log below shows the code running or reports that your browser does not support async iteration of `ReadableStream`.
-The right hand side shows the received chunks; you can press the cancel button to stop the fetch.
+The right-hand side shows the received chunks; you can press the cancel button to stop the fetch.
 
 > [!NOTE]
 > This fetch operation is _mocked_ for the purpose of demonstration, and just returns a `ReadableStream` that generates random chunks of text.
@@ -454,7 +455,7 @@ The first object can contain up to five members, only the first of which is requ
 
 1. `start(controller)` — A method that is called once, immediately after the `ReadableStream` is constructed. Inside this method, you should include code that sets up the stream functionality, e.g., beginning generation of data or otherwise getting access to the source.
 2. `pull(controller)` — A method that, when included, is called repeatedly until the stream's internal queue is full. This can be used to control the stream as more chunks are enqueued.
-3. `cancel()` — A method that, when included, will be called if the app signals that the stream is to be cancelled (e.g., if {{domxref("ReadableStream.cancel()")}} is called). The contents should do whatever is necessary to release access to the stream source.
+3. `cancel()` — A method that, when included, will be called if the app signals that the stream is to be canceled (e.g., if {{domxref("ReadableStream.cancel()")}} is called). The contents should do whatever is necessary to release access to the stream source.
 4. `type` and `autoAllocateChunkSize` — These are used — when included — to signify that the stream is to be a bytestream.
    Bytestreams are covered separately in [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams), as they are somewhat different in purpose and use case to regular (default) streams.
 
@@ -512,7 +513,7 @@ But a custom stream is still a `ReadableStream` instance, meaning you can attach
 > [!NOTE]
 > In order to consume a stream using {{domxref("FetchEvent.respondWith()")}}, the enqueued stream contents must be of type {{jsxref("Uint8Array")}}; for example, encoded using {{domxref("TextEncoder")}}.
 
-The custom stream constructor has a `start()` method that uses a {{domxref("Window.setInterval", "setInterval()")}} call to generate a random string every second. {{domxref("ReadableStreamDefaultController.enqueue()")}} is then used to enqueue it into the stream. When the button is pressed, the interval is cancelled, and a function called `readStream()` is invoked to read the data back out of the stream again. We also close the stream, as we've stopped enqueuing chunks to it.
+The custom stream constructor has a `start()` method that uses a {{domxref("Window.setInterval", "setInterval()")}} call to generate a random string every second. {{domxref("ReadableStreamDefaultController.enqueue()")}} is then used to enqueue it into the stream. When the button is pressed, the interval is canceled, and a function called `readStream()` is invoked to read the data back out of the stream again. We also close the stream, as we've stopped enqueuing chunks to it.
 
 ```js
 let interval;
@@ -578,7 +579,7 @@ function readStream() {
 }
 ```
 
-### Closing and cancelling streams
+### Closing and canceling streams
 
 We've already shown examples of using {{domxref("ReadableStreamDefaultController.close()")}} to close a reader. As we said before, any previously enqueued chunks will still be read, but no more can be enqueued because it is closed.
 

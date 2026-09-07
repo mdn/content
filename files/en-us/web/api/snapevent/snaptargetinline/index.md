@@ -28,7 +28,7 @@ If the snapped element was a pseudo-element, the returned `Node` will be the own
 
 ## Examples
 
-See the main {{domxref("SnapEvent")}} page for brief examples, and our [Using scroll snap events](/en-US/docs/Web/CSS/CSS_scroll_snap/Using_scroll_snap_events) guide for full examples and explanation.
+See the main {{domxref("SnapEvent")}} page for brief examples, and our [Using scroll snap events](/en-US/docs/Web/CSS/Guides/Scroll_snap/Using_scroll_snap_events) guide for full examples and explanation.
 
 ## Specifications
 
@@ -42,5 +42,5 @@ See the main {{domxref("SnapEvent")}} page for brief examples, and our [Using sc
 
 - {{domxref("Element/scrollsnapchanging_event", "scrollsnapchanging")}} event
 - {{domxref("Element/scrollsnapchange_event", "scrollsnapchange")}} event
-- [CSS scroll snap module](/en-US/docs/Web/CSS/CSS_scroll_snap)
+- [CSS scroll snap module](/en-US/docs/Web/CSS/Guides/Scroll_snap)
 - [Scroll Snap Events](https://developer.chrome.com/blog/scroll-snap-events) on developer.chrome.com (2024)

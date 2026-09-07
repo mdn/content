@@ -93,7 +93,7 @@ The result is a string, which means you should sometimes cast the value given by
 For example, if their answer should be a Number, you should cast the value to Number.
 
 ```js
-const aNumber = Number(window.prompt("Type a number", ""));
+const number = Number(window.prompt("Type a number", ""));
 ```
 
 ## Specifications

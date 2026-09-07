@@ -2,9 +2,8 @@
 title: "Reason: Multiple CORS header 'Access-Control-Allow-Origin' not allowed"
 slug: Web/HTTP/Guides/CORS/Errors/CORSMultipleAllowOriginNotAllowed
 page-type: http-cors-error
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 ## Reason
 

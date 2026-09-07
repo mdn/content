@@ -22,6 +22,8 @@ page: {{domxref("URL Pattern API", "", "", "nocode")}}.
 - {{domxref("URLPattern.hash", "hash")}} {{ReadOnlyInline}}
   - : A string containing a pattern to match the _hash_ part
     of a URL.
+- {{domxref("URLPattern.hasRegExpGroups", "hasRegExpGroups")}} {{ReadOnlyInline}}
+  - : A boolean indicating whether or not any of the `URLPattern` components contain [regular expression capturing groups](/en-US/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences).
 - {{domxref("URLPattern.hostname", "hostname")}} {{ReadOnlyInline}}
   - : A string containing a pattern to match the _hostname_
     part of a URL.

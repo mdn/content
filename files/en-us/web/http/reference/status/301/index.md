@@ -2,10 +2,9 @@
 title: 301 Moved Permanently
 slug: Web/HTTP/Reference/Status/301
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.301
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#status.301
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`301 Moved Permanently`** [redirection response](/en-US/docs/Web/HTTP/Reference/Status#redirection_messages) status code indicates that the requested resource has been permanently moved to the URL in the {{HTTPHeader("Location")}} header.
 

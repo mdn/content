@@ -3,9 +3,8 @@ title: FinalizationRegistry
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry
 page-type: javascript-class
 browser-compat: javascript.builtins.FinalizationRegistry
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 A **`FinalizationRegistry`** object lets you request a callback when a value is garbage-collected.
 

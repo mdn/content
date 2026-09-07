@@ -57,7 +57,7 @@ This is fairly well documented already, but we thought we'd give a mention to th
 
 ```css
 label {
-  font-family: "NotoColorEmoji";
+  font-family: "Noto Color Emoji", emoji;
   font-size: 3rem;
   position: absolute;
   top: 2px;
@@ -88,10 +88,10 @@ aside {
   height: 100%;
   transform: translateX(100%);
   transition: 0.6s all;
-  background-color: #999;
+  background-color: #999999;
   background-image: linear-gradient(
     to top right,
-    rgb(0 0 0 / 0%),
+    transparent,
     rgb(0 0 0 / 50%)
   );
 }

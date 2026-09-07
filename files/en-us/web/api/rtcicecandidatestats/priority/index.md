@@ -10,7 +10,7 @@ browser-compat: api.RTCStatsReport.type_local-candidate.priority
 
 The **`priority`** property of the {{domxref("RTCIceCandidateStats")}} dictionary is a positive integer value indicating the priority (or desirability) of the described candidate.
 
-### Value
+## Value
 
 A positive integer indicating the priority of the {{domxref("RTCIceCandidate")}} described by the `RTCIceCandidateStats` object.
 The value may be anywhere from 1 to 2,147,483,647.

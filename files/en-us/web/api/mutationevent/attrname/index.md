@@ -9,7 +9,7 @@ status:
 browser-compat: api.MutationEvent.attrName
 ---
 
-{{APIRef("UI Events")}}{{Deprecated_Header}}{{non-standard_header}}
+{{APIRef("UI Events")}}{{non-standard_header}}
 
 The **`attrName`** read-only property of the {{domxref("MutationEvent")}} interface returns a string with the name of the node affected by the `DOMAttrModified` event. It has no meaning for other events and is then set to the empty string (`""`).
 
@@ -20,13 +20,9 @@ A string.
 ## Examples
 
 ```js
-element.addEventListener(
-  "DOMAttrModified",
-  (event) => {
-    console.log(event.attrName);
-  },
-  false,
-);
+element.addEventListener("DOMAttrModified", (event) => {
+  console.log(event.attrName);
+});
 ```
 
 ## Specifications

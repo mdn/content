@@ -8,11 +8,11 @@ browser-compat: api.CSSLayerStatementRule.nameList
 
 {{APIRef("CSSOM")}}
 
-The read-only **`nameList`** property of the {{DOMxRef("CSSLayerStatementRule")}} interface return the list of associated cascade layer names. The names can't be modified.
+The read-only **`nameList`** property of the {{DOMxRef("CSSLayerStatementRule")}} interface returns the list of associated cascade layer names. The names can't be modified.
 
 ## Value
 
-A {{jsxref("Array")}} of strings, each representing a cascade layer represented by the {{cssxref("@layer")}} statement rule.
+An {{jsxref("Array")}} of strings, each representing a cascade layer represented by the {{cssxref("@layer")}} statement rule.
 
 ## Examples
 
@@ -38,14 +38,12 @@ A {{jsxref("Array")}} of strings, each representing a cascade layer represented 
 
 ```js
 const item = document.getElementsByTagName("div")[0];
-const rules = document.styleSheets[1].cssRules;
-// Note that stylesheet #1 is the stylesheet associated with this embedded example,
-// while stylesheet #0 is the stylesheet associated with the whole MDN page
+const rules = document.getElementById("css-output").sheet.cssRules;
 
 const layerStatementRule = rules[0]; // A CSSLayerStatementRule
 const layerBlockRule = rules[1]; // A CSSLayerBlockRule; no nameList property.
 
-item.textContent = `@layer declares the following layers: ${layer.nameList.join(
+item.textContent = `@layer declares the following layers: ${layerStatementRule.nameList.join(
   ", ",
 )}.`;
 ```

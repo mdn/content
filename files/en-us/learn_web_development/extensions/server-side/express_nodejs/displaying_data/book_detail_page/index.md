@@ -13,7 +13,7 @@ Open **/controllers/bookController.js**. Find the exported `book_detail()` contr
 
 ```js
 // Display detail page for a specific book.
-exports.book_detail = asyncHandler(async (req, res, next) => {
+exports.book_detail = async (req, res, next) => {
   // Get details of books, book instances for specific book
   const [book, bookInstances] = await Promise.all([
     Book.findById(req.params.id).populate("author").populate("genre").exec(),
@@ -32,7 +32,7 @@ exports.book_detail = asyncHandler(async (req, res, next) => {
     book,
     book_instances: bookInstances,
   });
-});
+};
 ```
 
 > [!NOTE]
@@ -40,7 +40,7 @@ exports.book_detail = asyncHandler(async (req, res, next) => {
 
 The approach is exactly the same as described for the [Genre detail page](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page).
 The route controller function uses `Promise.all()` to query the specified `Book` and its associated copies (`BookInstance`) in parallel.
-If no matching book is found an Error object is returned with a "404: Not Found" error.
+If no matching book is found, an `Error` object is returned with a "404: Not Found" error.
 If the book is found, then the retrieved database information is rendered using the "book_detail" template.
 Since the key 'title' is used to give name to the webpage (as defined in the header in 'layout.pug'), this time we are passing `results.book.title` while rendering the webpage.
 

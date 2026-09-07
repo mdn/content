@@ -7,7 +7,7 @@ spec-urls:
   - https://w3c.github.io/payment-method-id/
 ---
 
-{{securecontext_header}}{{DefaultAPISidebar("Payment Request API")}}
+{{DefaultAPISidebar("Payment Request API")}}
 
 The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) makes it easy to handle payments in a website or app. In this article, we'll take a look at how the API operates and what each of its components does.
 
@@ -37,7 +37,6 @@ Payment handlers are identified by **payment method identifiers**, which are str
 Standardized payment method identifiers are those listed in the [payment method registry](https://w3c.github.io/payment-method-id/#registry).
 
 - `secure-payment-confirmation`
-
   - : Identifies the [Secure Payment Confirmation](https://w3c.github.io/secure-payment-confirmation/) method. The payment request data for this method is defined by the {{domxref("SecurePaymentConfirmationRequest")}} dictionary. For more information see [Using Secure Payment Confirmation](/en-US/docs/Web/API/Payment_Request_API/Using_secure_payment_confirmation).
 
 - `basic-card`
@@ -45,16 +44,16 @@ Standardized payment method identifiers are those listed in the [payment method 
 
 ### URL-based payment method identifiers
 
-These may vary substantially depending on the specifics of the service, and a given processing service may have multiple URLs used, depending on the version of their API, their communication technology, and so forth.
+These identifiers are typically provided by payment service providers during onboarding or integration and may vary substantially depending on the specifics of the service, API version, and communication technology. Developers will usually obtain these identifiers directly from their chosen payment service provider's documentation rather than discovering them independently.
 
 - `https://apple.com/apple-pay`
-  - : Payments are handled using the [Apple Pay](https://www.apple.com/apple-pay/) service. Currently, Apple Pay is only supported by Safari.
+  - : Payments are handled using the [Apple Pay](https://www.apple.com/apple-pay/) service. This payment method is primarily supported in Safari on compatible Apple devices.
 - `https://google.com/pay`
-  - : Payments are processed by [Google Pay](https://pay.google.com/payments/home). This is currently supported only by Chrome and Chromium-based browsers.
+  - : Payments are processed by [Google Pay](https://pay.google.com/payments/home/). Support depends on browsers that implement the Payment Handler API (currently primarily Chromium-based browsers).
 
 ## Functions of a payment handler
 
-A {{Glossary("user agent")}} may provide built-in support for certain types of payments. In addition, the [Payment Handler API](https://w3c.github.io/payment-handler/) can be used to establish support for additional payment method providers, in browsers that support it. In either case, the payment handler is responsible for:
+A {{Glossary("user agent")}} may provide built-in support for certain types of payments. In addition, the [Payment Handler API](https://w3c.github.io/web-based-payment-handler/) can be used to establish support for additional payment method providers, in browsers that support it. In either case, the payment handler is responsible for:
 
 1. **Making sure a payment can be made.** The conditions that make payment possible vary depending on the payment method and the user's payment request; for example, if the user chooses to pay using a credit card that isn't accepted by the payee, the payment can't be made.
 2. **If merchant validation is supported by the payment handler, respond to merchant validation requests from the user agent.** See [Merchant validation](#merchant_validation) for details.
@@ -88,3 +87,5 @@ Thus, it's important to note that the {{Glossary("user agent")}} never sends a {
 - [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
 - [Introducing the Payment Request API for Apple Pay](https://webkit.org/blog/8182/introducing-the-payment-request-api-for-apple-pay/)
 - [Google Pay API PaymentRequest Tutorial](https://developers.google.com/pay/api/web/guides/paymentrequest/tutorial)
+- [Android Payment Apps Developers Guide](https://web.dev/articles/android-payment-apps-developers-guide)
+- [Samsung Internet Web Payments Integration Guide](https://developer.samsung.com/internet/android/web-payments-integration-guide.html)

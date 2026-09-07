@@ -33,9 +33,7 @@ getComposedRanges(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An object with the following properties, all optional:
-
     - `shadowRoots` {{optional_inline}}
       - : An array of {{domxref("ShadowRoot")}} objects.
         If a selection endpoint is within one of the provided shadow roots, the range will be able to return nodes within its corresponding Shadow DOM tree.

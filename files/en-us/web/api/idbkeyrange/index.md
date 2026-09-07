@@ -26,13 +26,11 @@ A key range can be a single value or a range with upper and lower bounds or endp
 A key is in a key range if the following conditions are true:
 
 - The lower value of the key range is one of the following:
-
   - `undefined`
   - Less than key value
   - Equal to key value if `lowerOpen` is `false`.
 
 - The upper value of the key range is one of the following:
-
   - `undefined`
   - Greater than key value
   - Equal to key value if `upperOpen` is `false`.

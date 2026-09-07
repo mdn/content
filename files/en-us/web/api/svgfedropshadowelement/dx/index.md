@@ -40,7 +40,7 @@ In this example, we retrieve the horizontal shift of the `<feDropShadow>` by usi
     y="20"
     width="100"
     height="100"
-    style="fill:red;"
+    fill="red"
     filter="url(#drop-shadow-filter)" />
 
   <!-- Circle with a red shadow -->
@@ -48,7 +48,7 @@ In this example, we retrieve the horizontal shift of the `<feDropShadow>` by usi
     cx="100"
     cy="100"
     r="50"
-    style="fill:blue;"
+    fill="blue"
     filter="url(#drop-shadow-filter)" />
 </svg>
 ```

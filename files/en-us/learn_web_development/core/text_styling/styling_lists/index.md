@@ -32,13 +32,13 @@ sidebar: learnsidebar
   </tbody>
 </table>
 
-## A simple list example
+## A basic list example
 
-To begin with, let's look at a simple list example. Throughout this article, we'll look at unordered, ordered, and description lists — all have styling features that are similar, as well as some that are particular to themselves. The unstyled example is [available on GitHub](https://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html) (check out the [source code](https://github.com/mdn/learning-area/blob/main/css/styling-text/styling-lists/unstyled-list.html) too.)
+Let's look at a basic list example. Throughout this article, we'll look at unordered, ordered, and description lists — all have styling features that are similar, as well as some that are particular to themselves.
 
 The HTML for our list example looks like so:
 
-```html
+```html live-sample___unstyled live-sample___initial-style live-sample___finished-style
 <h2>Shopping (unordered) list</h2>
 
 <p>
@@ -94,7 +94,11 @@ The HTML for our list example looks like so:
 </dl>
 ```
 
-If you go to the live example now and investigate the list elements using [browser developer tools](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), you'll notice a couple of styling defaults:
+Without any styling, this renders as follows:
+
+{{embedlivesample("unstyled", "100%", 400)}}
+
+Investigate these list elements using your [browser developer tools](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools); you'll notice a couple of styling defaults:
 
 - The {{htmlelement("ul")}} and {{htmlelement("ol")}} elements have a top and bottom {{cssxref("margin")}} of `16px` (`1em`) and a {{cssxref("padding-left")}} of `40px` (`2.5em`). If the directionality attribute [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir) is set to right-to-left (`rtl`) for `ul` and `ol` elements, in that case {{cssxref("padding-right")}} comes into effect and its default value is `40px` (`2.5em`).
 - The list items ({{htmlelement("li")}} elements) have no set defaults for spacing.
@@ -104,15 +108,13 @@ If you go to the live example now and investigate the list elements using [brows
 
 ## Handling list spacing
 
-When styling lists, you need to adjust their styles so they keep the same vertical spacing as their surrounding elements (such as paragraphs and images; sometimes called vertical rhythm), and the same horizontal spacing as each other (you can see the [finished styled example](https://mdn.github.io/learning-area/css/styling-text/styling-lists/) on GitHub, and [find the source code](https://github.com/mdn/learning-area/blob/main/css/styling-text/styling-lists/index.html) too).
+When styling lists, you need to adjust their styles so they keep the same vertical spacing as their surrounding elements (such as paragraphs and images; sometimes called vertical rhythm), and the same horizontal spacing as each other. Some typical CSS styling and spacing text might look like this:
 
-The CSS used for the text styling and spacing is as follows:
-
-```css
+```css live-sample___initial-style live-sample___list-style-type live-sample___list-style-position live-sample___custom-bullets live-sample___finished-style
 /* General styles */
 
 html {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   font-size: 10px;
 }
 
@@ -149,19 +151,34 @@ dt {
 - Rule 4 sets the same {{cssxref("line-height")}} on the paragraphs and list items — so the paragraphs and each individual list item will have the same spacing between lines. This will also help to keep the vertical rhythm consistent.
 - Rules 5 and 6 apply to the description list. We set the same `line-height` on the description list terms and descriptions as we did with the paragraphs and list items. Again, consistency is good! We also make the description terms have bold font, so they visually stand out easier.
 
+When applied to our HTML shown earlier, out code renders like this:
+
+{{embedlivesample("initial-style", "100%", 400)}}
+
 ## List-specific styles
 
 Now that we've looked at general spacing techniques for lists, let's explore some list-specific properties. There are three properties you should know about to start with, which can be set on {{htmlelement("ul")}} or {{htmlelement("ol")}} elements:
 
 - {{cssxref("list-style-type")}}: Sets the type of bullets to use for the list, for example, square or circle bullets for an unordered list, or numbers, letters, or roman numerals for an ordered list.
 - {{cssxref("list-style-position")}}: Sets whether the bullets, at the start of each item, appear inside or outside the lists.
-- {{cssxref("list-style-image")}}: Allows you to use a custom image for the bullet, rather than a simple square or circle.
+- {{cssxref("list-style-image")}}: Allows you to use a custom image for the bullet, rather than a basic square or circle.
 
 ### Bullet styles
 
 As mentioned above, the {{cssxref("list-style-type")}} property allows you to set what type of bullet to use for the bullet points. In our example, we've set the ordered list to use uppercase roman numerals with:
 
-```css
+```html hidden live-sample___list-style-type live-sample___list-style-position
+<ol>
+  <li>Toast pita, leave to cool, then slice down the edge.</li>
+  <li>
+    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
+  </li>
+  <li>Wash and chop the salad.</li>
+  <li>Fill pita with salad, hummus, and fried halloumi.</li>
+</ol>
+```
+
+```css live-sample___list-style-type
 ol {
   list-style-type: upper-roman;
 }
@@ -169,7 +186,7 @@ ol {
 
 This gives us the following look:
 
-![an ordered list with the bullet points set to appear outside the list item text.](outer-bullets.png)
+{{embedlivesample("list-style-type", "100%", 120)}}
 
 You can find a lot more options by checking out the {{cssxref("list-style-type")}} reference page.
 
@@ -179,30 +196,39 @@ The {{cssxref("list-style-position")}} property sets whether the bullets appear 
 
 If you set the value to `inside`, the bullets will sit inside the lines:
 
-```css
+```css live-sample___list-style-position live-sample___finished-style
 ol {
   list-style-type: upper-roman;
   list-style-position: inside;
 }
 ```
 
-![an ordered list with the bullet points set to appear inside the list item text.](inner-bullets.png)
+{{embedlivesample("list-style-position", "100%", 120)}}
 
 ### Using a custom bullet image
 
-The {{cssxref("list-style-image")}} property allows you to use a custom image for your bullet. The syntax is pretty simple:
+The {{cssxref("list-style-image")}} property allows you to use a custom image for your bullet. The syntax looks like so:
 
 ```css
 ul {
-  list-style-image: url(star.svg);
+  list-style-image: url("https://mdn.github.io/shared-assets/images/examples/star-shape.png");
 }
 ```
 
 However, this property is a bit limited in terms of controlling the position, size, etc. of the bullets. You are better off using the {{cssxref("background")}} family of properties, which you learned about in our previous [Backgrounds and borders](/en-US/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders) lesson.
 
-In our finished example, we have styled the unordered list like so (on top of what you've already seen above):
+In our finished example, we have styled the unordered list like so:
 
-```css
+```html hidden live-sample___custom-bullets
+<ul>
+  <li>Hummus</li>
+  <li>Pita</li>
+  <li>Green salad</li>
+  <li>Halloumi</li>
+</ul>
+```
+
+```css live-sample___custom-bullets live-sample___finished-style
 ul {
   padding-left: 2rem;
   list-style-type: none;
@@ -210,7 +236,7 @@ ul {
 
 ul li {
   padding-left: 2rem;
-  background-image: url(star.svg);
+  background-image: url("https://mdn.github.io/shared-assets/images/examples/star-shape.png");
   background-position: 0 0;
   background-size: 1.6rem 1.6rem;
   background-repeat: no-repeat;
@@ -222,7 +248,6 @@ Here we've done the following:
 - Set the {{cssxref("padding-left")}} of the {{htmlelement("ul")}} down from the default `40px` to `20px`, then set the same amount on the list items. This is so that, overall, the list items are still lined up with the ordered list items and the description list descriptions, but the list items have some padding for the background images to sit inside. If we didn't do this, the background images would overlap with the list item text, which would look messy.
 - Set the {{cssxref("list-style-type")}} to `none`, so that no bullet appears by default. We're going to use {{cssxref("background")}} properties to handle the bullets instead.
 - Inserted a bullet onto each unordered list item. The relevant properties are as follows:
-
   - {{cssxref("background-image")}}: This references the path to the image file you want to use as the bullet.
   - {{cssxref("background-position")}}: This defines where in the background of the selected element the image will appear — in this case we are saying `0 0`, which means the bullet will appear in the very top left of each list item.
   - {{cssxref("background-size")}}: This sets the size of the background image. We ideally want the bullets to be the same size as the list items (or very slightly smaller or larger). We are using a size of `1.6rem` (`16px`), which fits very nicely with the `20px` padding we've allowed for the bullet to sit inside — 16px plus 4px of space between the bullet and the list item text works well.
@@ -230,7 +255,7 @@ Here we've done the following:
 
 This gives us the following result:
 
-![an unordered list with the bullet points set as little star images](list_formatting.png)
+{{embedlivesample("custom-bullets", "100%", 120)}}
 
 ### list-style shorthand
 
@@ -239,7 +264,7 @@ The three properties mentioned above can all be set using a single shorthand pro
 ```css
 ul {
   list-style-type: square;
-  list-style-image: url(example.png);
+  list-style-image: url("example.png");
   list-style-position: inside;
 }
 ```
@@ -248,11 +273,17 @@ Could be replaced by this:
 
 ```css
 ul {
-  list-style: square url(example.png) inside;
+  list-style: square url("example.png") inside;
 }
 ```
 
 The values can be listed in any order, and you can use one, two, or all three (the default values used for the properties that are not included are `disc`, `none`, and `outside`). If both a `type` and an `image` are specified, the type is used as a fallback if the image can't be loaded for some reason.
+
+## Complete example
+
+In the last few sections, we showed you the effects of some isolated list features. When we apply them all to our initial HTML listing, the result is as follows:
+
+{{embedlivesample("finished-style", "100%", 400)}}
 
 ## Controlling list counting
 
@@ -262,7 +293,7 @@ Sometimes you might want to count differently on an ordered list — e.g., start
 
 The [`start`](/en-US/docs/Web/HTML/Reference/Elements/ol#start) attribute allows you to start the list counting from a number other than 1. The following example:
 
-```html
+```html live-sample___counting-control
 <ol start="4">
   <li>Toast pita, leave to cool, then slice down the edge.</li>
   <li>
@@ -275,13 +306,13 @@ The [`start`](/en-US/docs/Web/HTML/Reference/Elements/ol#start) attribute allows
 
 Gives you this output:
 
-{{ EmbedLiveSample('start', '100%', 150) }}
+{{ EmbedLiveSample('counting-control', '100%', 150) }}
 
 ### reversed
 
 The [`reversed`](/en-US/docs/Web/HTML/Reference/Elements/ol#reversed) attribute will start the list counting down instead of up. The following example:
 
-```html
+```html live-sample___counting-control-reversed
 <ol start="4" reversed>
   <li>Toast pita, leave to cool, then slice down the edge.</li>
   <li>
@@ -294,7 +325,7 @@ The [`reversed`](/en-US/docs/Web/HTML/Reference/Elements/ol#reversed) attribute 
 
 Gives you this output:
 
-{{ EmbedLiveSample('reversed', '100%', 150) }}
+{{ EmbedLiveSample('counting-control-reversed', '100%', 150) }}
 
 > [!NOTE]
 > If there are more list items in a reversed list than the value of the `start` attribute, the count will continue to zero and then into negative values.
@@ -303,7 +334,7 @@ Gives you this output:
 
 The [`value`](/en-US/docs/Web/HTML/Reference/Elements/li#value) attribute allows you to set your list items to specific numerical values. The following example:
 
-```html
+```html counting-control-values
 <ol>
   <li value="2">Toast pita, leave to cool, then slice down the edge.</li>
   <li value="4">
@@ -316,12 +347,12 @@ The [`value`](/en-US/docs/Web/HTML/Reference/Elements/li#value) attribute allows
 
 Gives you this output:
 
-{{ EmbedLiveSample('value', '100%', 150) }}
+{{ EmbedLiveSample('counting-control-values', '100%', 150) }}
 
 > [!NOTE]
 > Even if you are using a non-number {{cssxref("list-style-type")}}, you still need to use the equivalent numerical values in the `value` attribute.
 
-## Styling a nested list
+## Your turn: Styling a nested list
 
 It is time for you to complete another task. This time we want you to take what you've learned above and have a go at styling a nested list.
 

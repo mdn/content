@@ -30,12 +30,10 @@ with the `<output>` element.
 ### JavaScript
 
 ```js
-window.addEventListener("DOMContentLoaded", () => {
-  const output = document.getElementById("test");
-  for (const label of output.labels) {
-    console.log(label.textContent); // "Label 1" and "Label 2"
-  }
-});
+const output = document.getElementById("test");
+for (const label of output.labels) {
+  console.log(label.textContent); // "Label 1" and "Label 2"
+}
 ```
 
 {{EmbedLiveSample("Examples", "100%", 30)}}

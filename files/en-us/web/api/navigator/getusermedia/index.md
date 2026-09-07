@@ -8,7 +8,7 @@ status:
 browser-compat: api.Navigator.getUserMedia
 ---
 
-{{APIRef("Media Capture and Streams")}}{{deprecated_header}}{{SecureContext_Header}}
+{{APIRef("Media Capture and Streams")}}{{SecureContext_Header}}
 
 The deprecated **`Navigator.getUserMedia()`** method prompts the user for permission to use up to one video input device (such as a camera or shared screen) and up to one audio input device (such as a microphone) as the source for a {{domxref("MediaStream")}}.
 
@@ -35,7 +35,6 @@ getUserMedia(constraints, successCallback, errorCallback)
     section under the modern {{domxref("MediaDevices.getUserMedia()")}} method, as well
     as the article [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints).
 - `successCallback`
-
   - : A function which is invoked when the request for media access is approved. The
     function is called with one parameter: the {{domxref("MediaStream")}} object that
     contains the media stream. Your callback can then assign the stream to the desired

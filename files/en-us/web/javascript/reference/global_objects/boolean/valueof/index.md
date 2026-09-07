@@ -4,9 +4,8 @@ short-title: valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Boolean.valueOf
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`valueOf()`** method of {{jsxref("Boolean")}} values returns the primitive value of a
 {{jsxref("Boolean")}} object.

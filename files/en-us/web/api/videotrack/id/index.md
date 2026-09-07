@@ -22,7 +22,7 @@ The track ID can also be used as the fragment of a URL that loads the specific t
 ## Value
 
 A string which identifies the track, suitable for use when calling
-{{domxref("VideoTrackList.getTrackById", "getTrackById()")}} on an
+{{domxref("VideoTrackList.getTrackById", "getTrackById()")}} on a
 {{domxref("VideoTrackList")}} such as the one specified by a media element's
 {{domxref("HTMLMediaElement.videoTracks", "videoTracks")}} property.
 

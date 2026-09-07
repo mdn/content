@@ -9,7 +9,7 @@ browser-compat: api.NodeList.values
 {{APIRef("DOM")}}
 
 The **`NodeList.values()`** method returns an
-{{jsxref("Iteration_protocols",'iterator')}} allowing to go through all values contained
+{{jsxref("Iteration_protocols",'iterator')}} allowing you to go through all values contained
 in this object. The values are {{domxref("Node")}} objects.
 
 ## Syntax
@@ -17,6 +17,10 @@ in this object. The values are {{domxref("Node")}} objects.
 ```js-nolint
 values()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -49,6 +53,10 @@ The result is:
 #text "hey"
 <span>
 ```
+
+## Specifications
+
+{{Specifications}}
 
 ## Browser compatibility
 

@@ -89,7 +89,7 @@ As with some other programming tools, using the terminal (or command line) on Wi
 
 Windows has traditionally had its own terminal-like program called `cmd` ("the command prompt") for a long time, but this doesn't have parity with Unix commands, and is equivalent to the old-style Windows DOS prompt.
 
-Better programs exist for providing a terminal experience on Windows, such as PowerShell ([see here to find installers](https://github.com/PowerShell/PowerShell)), and Gitbash (which comes as part of the [git for Windows](https://gitforwindows.org/) toolset).
+Better programs exist for providing a terminal experience on Windows, such as PowerShell ([see here to find installers](https://github.com/PowerShell/PowerShell)), and Git Bash (which comes as part of the [git for Windows](https://gitforwindows.org/) toolset).
 
 However, the best option for Windows in the modern day is the Windows Subsystem for Linux (WSL) — a compatibility layer for running Linux operating systems directly from inside Windows 10, allowing you to run a "true terminal" directly on Windows, without needing a virtual machine.
 
@@ -112,7 +112,6 @@ Although there's a great wealth of tools available from the command line, if you
 Enough talk — let's start looking at some terminal commands! Out of the box, here are just a few of the things the command line can do, along with the names of relevant tools in each case:
 
 - Navigate your computer's file system along with base-level tasks such as create, copy, rename, and delete:
-
   - Move around your directory (folder) structure: `cd`
   - Create directories: `mkdir`
   - Create files (and modify their metadata): `touch`
@@ -241,7 +240,7 @@ One good habit to get into is to write your terminal command out inside a text e
 If you're not comfortable trying terminal commands out on your own machine, there are hosted online terminals available that provide safe places to practice entering commands, without risking breaking your own machine:
 
 - Our learning partner, [Scrimba](https://scrimba.com/home?via=mdn), features a terminal for entering commands in their learning environment. A great place to see this in action is their [Command Line Basics](https://scrimba.com/command-line-basics-c08b87ogl0/~05hu?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> course, which also provides a fun interactive introduction to navigating around the file tree and manipulating files and directories via the terminal.
-- [Glitch.com](https://glitch.com/) is a great place to try out web development code, and Glitch projects also include a terminal for running commands.
+- The [Command-line playground](https://sandbox.bio/playgrounds/terminal) on sandbox.bio is a great place to try out terminal commands so you can familiarize yourself with command line interfaces and common shells like Bash.
 
 A great resource for getting a quick overview of specific terminal commands is [tldr.sh](https://tldr.sh/). This is a community-driven documentation service, similar to MDN, but specific to terminal commands.
 
@@ -465,7 +464,7 @@ With Prettier there's a number of ways automation can be achieved and though the
 
 - Before you commit your code into a git repository using [Husky](https://github.com/typicode/husky).
 - Whenever you hit "save" in your code editor, be it [VS Code](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), or [Sublime Text](https://packagecontrol.io/packages/JsPrettier).
-- As part of continuous integration checks using tools like [GitHub Actions](https://github.com/features/actions).
+- As part of {{glossary("continuous integration")}} checks using tools like [GitHub Actions](https://github.com/features/actions).
 
 Our personal preference is the second one — while using say VS Code, Prettier kicks in and cleans up any formatting it needs to do every time we hit save. You can find a lot more information about using Prettier in different ways in the [Prettier docs](https://prettier.io/docs/).
 

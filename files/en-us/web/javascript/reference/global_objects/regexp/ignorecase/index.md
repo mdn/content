@@ -4,9 +4,8 @@ short-title: ignoreCase
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/ignoreCase
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.ignoreCase
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`ignoreCase`** accessor property of {{jsxref("RegExp")}} instances returns whether or not the `i` flag is used with this regular expression.
 

@@ -4,9 +4,8 @@ short-title: slice()
 slug: Web/JavaScript/Reference/Global_Objects/String/slice
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.slice
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`slice()`** method of {{jsxref("String")}} values extracts a section of this string and
 returns it as a new string, without modifying the original string.

@@ -2,9 +2,8 @@
 title: HTTP resources and specifications
 slug: Web/HTTP/Reference/Resources_and_specifications
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 HTTP was first specified in the early 1990s. Designed with extensibility in mind, it has seen numerous additions over the years; this lead to its specification being scattered through numerous specification documents (in the midst of experimental abandoned extensions). This page lists relevant resources about HTTP.
 
@@ -53,6 +52,8 @@ HTTP was first specified in the early 1990s. Designed with extensibility in mind
 | [Reporting API](https://wicg.github.io/reporting/)                                                                                                 | `Report-To` header                                                                                                                                                                                                                                    | Draft                    |
 | [Draft spec](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-expect-ct-01)                                                                | Expect-CT Extension for HTTP                                                                                                                                                                                                                          | IETF Draft               |
 | {{rfc(7486)}}                                                                                                                                      | HTTP Origin-Bound Auth (HOBA)                                                                                                                                                                                                                         | Experimental             |
+| {{rfc(7240)}}                                                                                                                                      | Prefer Header for HTTP                                                                                                                                                                                                                                | Proposed Standard        |
+| {{rfc(3229)}}                                                                                                                                      | Delta encoding in HTTP                                                                                                                                                                                                                                | Proposed Standard        |
 
 ## See also
 

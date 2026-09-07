@@ -113,7 +113,7 @@ document.exitPointerLock();
 When the Pointer lock state changes—for example, when calling {{domxref("Element.requestPointerLock","requestPointerLock()")}} or {{domxref("Document.exitPointerLock","exitPointerLock()")}}, the user pressing the ESC key, etc.—the {{domxref("Document/pointerlockchange_event", "pointerlockchange")}} event is dispatched to the `document`. This is a simple event containing no extra data.
 
 ```js
-document.addEventListener("pointerlockchange", lockChangeAlert, false);
+document.addEventListener("pointerlockchange", lockChangeAlert);
 
 function lockChangeAlert() {
   if (document.pointerLockElement === canvas) {
@@ -131,7 +131,7 @@ function lockChangeAlert() {
 When there is an error caused by calling {{domxref("Element.requestPointerLock","requestPointerLock()")}} or {{domxref("Document.exitPointerLock","exitPointerLock()")}}, the {{domxref("Document/pointerlockerror_event", "pointerlockerror")}} event is dispatched to the `document`. This is a simple event containing no extra data.
 
 ```js
-document.addEventListener("pointerlockerror", lockError, false);
+document.addEventListener("pointerlockerror", lockError);
 
 function lockError(e) {
   alert("Pointer lock failed");
@@ -181,7 +181,7 @@ canvas.addEventListener("click", async () => {
 Now for the dedicated pointer lock event listener: `pointerlockchange`. When this occurs, we run a function called `lockChangeAlert()` to handle the change.
 
 ```js
-document.addEventListener("pointerlockchange", lockChangeAlert, false);
+document.addEventListener("pointerlockchange", lockChangeAlert);
 ```
 
 This function checks the `pointerLockElement` property to see if it is our canvas. If so, it attached an event listener to handle the mouse movements with the `updatePosition()` function. If not, it removes the event listener again.
@@ -190,10 +190,10 @@ This function checks the `pointerLockElement` property to see if it is our canva
 function lockChangeAlert() {
   if (document.pointerLockElement === canvas) {
     console.log("The pointer lock status is now locked");
-    document.addEventListener("mousemove", updatePosition, false);
+    document.addEventListener("mousemove", updatePosition);
   } else {
     console.log("The pointer lock status is now unlocked");
-    document.removeEventListener("mousemove", updatePosition, false);
+    document.removeEventListener("mousemove", updatePosition);
   }
 }
 ```
@@ -234,7 +234,7 @@ The `canvasDraw()` function draws the ball in the current `x` and `y` positions:
 function canvasDraw() {
   ctx.fillStyle = "black";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-  ctx.fillStyle = "#f00";
+  ctx.fillStyle = "red";
   ctx.beginPath();
   ctx.arc(x, y, RADIUS, 0, degToRad(360), true);
   ctx.fill();

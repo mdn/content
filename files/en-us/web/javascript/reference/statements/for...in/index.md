@@ -3,9 +3,8 @@ title: for...in
 slug: Web/JavaScript/Reference/Statements/for...in
 page-type: javascript-statement
 browser-compat: javascript.statements.for_in
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`for...in`** statement iterates over all [enumerable string properties](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) of an object (ignoring properties keyed by [symbols](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)), including inherited enumerable properties.
 
@@ -53,7 +52,7 @@ A `for...in` loop only iterates over enumerable, non-symbol properties. Objects 
 
 The traversal order, as of modern ECMAScript specification, is well-defined and consistent across implementations. Within each component of the prototype chain, all non-negative integer keys (those that can be array indices) will be traversed first in ascending order by value, then other string keys in ascending chronological order of property creation.
 
-The `variable` part of `for...in` accepts anything that can come before the `=` operator. You can use {{jsxref("Statements/const", "const")}} to declare the variable as long as it's not reassigned within the loop body (it can change between iterations, because those are two separate variables). Otherwise, you can use {{jsxref("Statements/let", "let")}}. You can use [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) to assign multiple local variables, or use a property accessor like `for (x.y in iterable)` to assign the value to an object property.
+The `variable` part of `for...in` accepts anything that can come before the `=` operator. You can use {{jsxref("Statements/const", "const")}} to declare the variable as long as it's not reassigned within the loop body (it can change between iterations, because those are two separate variables). Otherwise, you can use {{jsxref("Statements/let", "let")}}. You can use [destructuring](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) to assign multiple local variables, or use a property accessor like `for (x.y in iterable)` to assign the value to an object property. However, {{jsxref("Statements/using", "using")}} and {{jsxref("Statements/await_using", "await using")}} are not allowed, because the variable is always a string or symbol while these declarations require a disposable object.
 
 A [legacy syntax](/en-US/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#statements) allows `var` declarations of the loop variable to have an initializer. This throws a [syntax error](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_for-in_initializer) in strict mode and is ignored in non–strict mode.
 

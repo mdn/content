@@ -33,13 +33,8 @@ svg {
     <feTurbulence baseFrequency="0.05" />
   </filter>
 
-  <rect x="0" y="0" width="200" height="200" style="filter: url(#noise1);" />
-  <rect
-    x="0"
-    y="0"
-    width="200"
-    height="200"
-    style="filter: url(#noise2); transform: translateX(220px);" />
+  <rect x="0" y="0" width="200" height="200" filter="url(#noise1)" />
+  <rect x="220" y="0" width="200" height="200" filter="url(#noise2)" />
 </svg>
 ```
 
@@ -67,7 +62,7 @@ svg {
       yChannelSelector="G" />
   </filter>
 
-  <circle cx="100" cy="100" r="100" style="filter: url(#displacementFilter)" />
+  <circle cx="100" cy="100" r="100" filter="url(#displacementFilter)" />
 </svg>
 ```
 
@@ -97,7 +92,6 @@ svg {
 </table>
 
 - `<number-optional-number>`
-
   - : If two numbers are provided, the first one represents the base frequency in the horizontal direction and the second one the base frequency in the vertical direction. If one number is provided, then that value is used for both x and y.
 
     Negative values are forbidden.

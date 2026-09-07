@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CanvasRenderingContext2D.lineJoin
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The
 **`CanvasRenderingContext2D.lineJoin`**
@@ -80,11 +80,11 @@ The example below draws three different paths, demonstrating each of the three
 `lineJoin` options.
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="my-canvas" width="150" height="150"></canvas>
 ```
 
 ```js
-const ctx = document.getElementById("canvas").getContext("2d");
+const ctx = document.getElementById("my-canvas").getContext("2d");
 ctx.lineWidth = 10;
 
 ["round", "bevel", "miter"].forEach((join, i) => {

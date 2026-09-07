@@ -2,9 +2,8 @@
 title: "SyntaxError: getter functions must have no arguments"
 slug: Web/JavaScript/Reference/Errors/Getter_no_arguments
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "getter functions must have no arguments" occurs when a [getter](/en-US/docs/Web/JavaScript/Reference/Functions/get) is declared and the parameter list is non-empty.
 

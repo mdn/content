@@ -65,10 +65,6 @@ These are just examples and you're quite free to lay things out as you want. You
 
 These are rules of thumb you can draw on. There are complex designs and exceptions, of course. In other articles we'll discuss how to design responsive sites (sites that change depending on the screen size) and sites whose layouts vary between pages. For now, it's best to keep your layout consistent throughout your site.
 
-## Active learning
-
-_There is no active learning available yet. [Please, consider contributing](/en-US/docs/MDN/Community/Getting_started)._
-
 ## Deeper dive
 
 Let's study some more concrete examples taken from well-known websites.

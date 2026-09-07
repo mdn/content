@@ -8,13 +8,13 @@ status:
 browser-compat: api.Summarizer.inputQuota
 ---
 
-{{APIRef("Summarizer API")}}{{SeeCompatTable}}
+{{APIRef("Summarizer API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`inputQuota`** read-only property of the {{domxref("Summarizer")}} interface returns the input quota available to the browser for generating summaries.
 
 ## Value
 
-A number specifying the available input quota. This number is implementation-dependent. For example, it might be {{jsxref("infinity")}} if there are no limits beyond the user's memory and the maximum length of JavaScript strings, or it might be a number of tokens in the case of AI models that use a token/credits scheme.
+A number specifying the available input quota. This number is implementation-dependent. For example, it might be {{jsxref("Infinity")}} if there are no limits beyond the user's memory and the maximum length of JavaScript strings, or it might be a number of tokens in the case of AI models that use a token/credits scheme.
 
 ## Examples
 

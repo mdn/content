@@ -2,12 +2,9 @@
 title: Temporal.PlainTime()
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainTime/PlainTime
 page-type: javascript-constructor
-status:
-  - experimental
 browser-compat: javascript.builtins.Temporal.PlainTime.PlainTime
+sidebar: jsref
 ---
-
-{{JSRef}}{{SeeCompatTable}}
 
 The **`Temporal.PlainTime()`** constructor creates {{jsxref("Temporal.PlainTime")}} objects.
 
@@ -25,7 +22,8 @@ new Temporal.PlainTime(hour, minute, second, millisecond, microsecond)
 new Temporal.PlainTime(hour, minute, second, millisecond, microsecond, nanosecond)
 ```
 
-> **Note:** `Temporal.PlainTime()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Temporal.PlainTime()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

@@ -5,9 +5,8 @@ page-type: webextension-api-event
 status:
   - deprecated
 browser-compat: webextensions.api.tabs.onHighlightChanged
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 > [!WARNING]
 > This event is deprecated. Use {{WebExtAPIRef("tabs.onHighlighted")}} instead.
@@ -36,9 +35,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `selectInfo`
       - : `object`. See the [selectInfo](#selectinfo_2) section for more details.
 

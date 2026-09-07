@@ -4,12 +4,11 @@ short-title: Content-Location
 slug: Web/HTTP/Reference/Headers/Content-Location
 page-type: http-header
 browser-compat: http.headers.Content-Location
+sidebar: http
 ---
 
-{{HTTPSidebar}}
-
 The HTTP **`Content-Location`** {{Glossary("representation header")}} indicates an alternate location for the returned data.
-It's main use is to indicate the URL of a resource transmitted as the result of [content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation).
+Its main use is to indicate the URL of a resource transmitted as the result of [content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation).
 
 The `Content-Location` header is different from the {{HTTPHeader("Location")}} header.
 `Content-Location` indicates the direct URL to access the resource when [content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation) has happened, allowing the client to bypass future content negotiation for this resource.

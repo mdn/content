@@ -10,7 +10,7 @@ browser-compat: api.GamepadPose.orientation
 
 {{APIRef("WebVR API")}}{{SeeCompatTable}}
 
-The **`orientation`** read-only property of the {{domxref("GamepadPose")}} interface returns the orientation of the {{domxref("Gamepad")}}, as a quarternion value.
+The **`orientation`** read-only property of the {{domxref("GamepadPose")}} interface returns the orientation of the {{domxref("Gamepad")}}, as a quaternion value.
 
 The value is a {{jsxref("Float32Array")}}, made up of the following values:
 

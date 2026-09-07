@@ -13,17 +13,17 @@ A request for data will be satisfied from the stream's internal queues if there 
 If the stream queues are empty, the request may be supplied as a zero-copy transfer from the underlying byte source.
 
 The method takes as an argument a view on a buffer that supplied data is to be read into, and returns a {{jsxref("Promise")}}.
-The promise fulfills with an object that has properties `value` and `done` when data comes available, or if the stream is cancelled.
+The promise fulfills with an object that has properties `value` and `done` when data comes available, or if the stream is canceled.
 If the stream is errored, the promise will be rejected with the relevant error object.
 
 When a chunk of data is supplied, the `value` property will contain a new view.
 This will be a view over the same buffer/backing memory (and of the same type) as the original `view` passed to the `read()` method, now populated with the new chunk of data.
 Note that once the promise fulfills, the original `view` passed to the method will be detached and no longer usable.
-The promise will fulfill with a `value: undefined` if the stream has been cancelled.
+The promise will fulfill with a `value: undefined` if the stream has been canceled.
 In this case the backing memory region of `view` is discarded and not returned to the caller (all previously read data in the view's buffer is lost).
 
 The `done` property indicates whether or not more data is expected.
-The value is set `true` if the stream is closed or cancelled, and `false` otherwise.
+The value is set `true` if the stream is closed or canceled, and `false` otherwise.
 
 The method also has an optional `options.min` argument that can be used to specify the minimum number of elements that must be available before the promise will fulfill, while the stream is active.
 The view returned in the `value` property will always have at least this number of elements, except when the stream is closed.
@@ -40,9 +40,7 @@ read(view, options)
 - `view`
   - : The view that data is to be read into.
 - `options` {{optional_inline}}
-
   - : Options are as follows:
-
     - `min`
       - : The minimum number of elements to read before the promise will fulfill while the stream is active.
         If not given, the promise will resolve with at least one element, up to the maximum size of the view.
@@ -60,7 +58,7 @@ The following are possible:
 
 - If the stream is closed, the result's `done` is `true`, and `value` has the same properties as above.
 
-- If the stream is cancelled, the result's `done` is `true`, and `value` is `undefined`.
+- If the stream is canceled, the result's `done` is `true`, and `value` is `undefined`.
   In this case the backing memory is discarded.
 
 - If the stream throws an error, the promise rejects with the relevant error.
@@ -194,13 +192,13 @@ class MockHypotheticalSocket {
   // Return random number bytes in this call of socket
   getNumberRandomBytesSocket() {
     // Capped to remaining data and the max min return-per-read range
-    const remaining_data = this.max_data - this.data_read;
+    const remainingData = this.max_data - this.data_read;
     const numberBytesReceived =
-      remaining_data < this.min_per_read
-        ? remaining_data
+      remainingData < this.min_per_read
+        ? remainingData
         : this.getRandomIntInclusive(
             this.min_per_read,
-            Math.min(this.max_per_read, remaining_data),
+            Math.min(this.max_per_read, remainingData),
           );
     return numberBytesReceived;
   }

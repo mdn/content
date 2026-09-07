@@ -17,7 +17,8 @@ The **`screens`** read-only property of the
 
 An array of {{domxref("ScreenDetailed")}} objects.
 
-> **Note:** `screens` only includes "extended" displays, not those that mirror another display.
+> [!NOTE]
+> `screens` only includes "extended" displays, not those that mirror another display.
 
 ## Examples
 

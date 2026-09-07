@@ -15,9 +15,7 @@ The **`type`** read-only property of the {{domxref("Response")}} interface conta
 A string, which may be any of the following values:
 
 - `basic`
-
   - : This applies in any of the following cases:
-
     - The request is same-origin.
     - The requested URL's scheme is [`data:`](/en-US/docs/Web/URI/Reference/Schemes/data).
     - The request's {{domxref("Request.mode", "mode")}} is `navigate` or `websocket`.
@@ -27,7 +25,6 @@ A string, which may be any of the following values:
 - `cors`
   - : The request was cross-origin and was successfully processed using [CORS](/en-US/docs/Web/HTTP/Guides/CORS). With this type, only {{glossary("CORS-safelisted response header", "CORS-safelisted response headers")}} are exposed.
 - `error`
-
   - : A network error occurred. The {{domxref("Response.status", "status")}} property is set to `0`, {{domxref("Response.body", "body")}} is `null`, headers are empty and immutable.
 
     This is the type of response returned by {{domxref("Response.error_static", "Response.error()")}}. A response of this type is not returned by a call to {{domxref("Window.fetch", "fetch()")}}, because if a network error occurs, the promise is rejected.

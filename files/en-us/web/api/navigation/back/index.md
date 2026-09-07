@@ -3,12 +3,10 @@ title: "Navigation: back() method"
 short-title: back()
 slug: Web/API/Navigation/back
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.Navigation.back
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`back()`** method of the
 {{domxref("Navigation")}} interface navigates backwards by one entry in the navigation history.
@@ -78,4 +76,3 @@ async function forwardHandler() {
 
 - [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
 - [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)

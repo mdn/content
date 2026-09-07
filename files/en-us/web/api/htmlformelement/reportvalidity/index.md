@@ -27,13 +27,9 @@ Returns `true` if the associated controls' values have no validity problems; oth
 ## Example
 
 ```js
-document.forms["my-form"].addEventListener(
-  "submit",
-  () => {
-    document.forms["my-form"].reportValidity();
-  },
-  false,
-);
+document.forms["my-form"].addEventListener("submit", () => {
+  document.forms["my-form"].reportValidity();
+});
 ```
 
 ## Specifications

@@ -1,10 +1,10 @@
 ---
-title: Firefox 92 for developers
+title: Firefox 92 release notes for developers
+short-title: Firefox 92
 slug: Mozilla/Firefox/Releases/92
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 92 that will affect developers. Firefox 92 was released on September 7, 2021.
 
@@ -28,7 +28,7 @@ No changes
 ### JavaScript
 
 - {{jsxref("Object.hasOwn()")}} can be used to test whether a property was defined on an object or inherited ([Firefox bug 1721149](https://bugzil.la/1721149)).
-- The default 5MB storage quota is now available to each origin. The quota previously applied to an entire domain group (also known as {{Glossary("eTLD", "eTLD+1")}} domain; e.g., `*.wikipedia.org`). ([Firefox bug 1064466](https://bugzil.la/1064466)).
+- The default 5MB storage quota is now available to each origin. The quota previously applied to an entire domain group (also known as {{Glossary("registrable domain")}}; e.g., `*.wikipedia.org`). ([Firefox bug 1064466](https://bugzil.la/1064466)).
 - Storage quotas for {{domxref("Window.localStorage")}} are now shared with [IndexedDB API](/en-US/docs/Web/API/IndexedDB_API) and {{domxref("Cache")}} ([Firefox bug 742822](https://bugzil.la/742822)).
 
 ### HTTP
@@ -57,7 +57,3 @@ No changes
 ## Changes for add-on developers
 
 - Support for `cookieStoreId` is added to {{WebExtAPIRef('downloads.download')}}, {{WebExtAPIRef('downloads.DownloadQuery')}}, and {{WebExtAPIRef('downloads.DownloadItem')}}. The addition to the types {{WebExtAPIRef('downloads.DownloadQuery')}} and {{WebExtAPIRef('downloads.DownloadItem')}} provides support in {{WebExtAPIRef('downloads.search')}} and {{WebExtAPIRef('downloads.erase')}}. Web extensions can now associate downloads with specific cookie stores, such as container tabs ([contextual identities](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)). ([Firefox bug 1669566](https://bugzil.la/1669566))
-
-## Older versions
-
-{{Firefox_for_developers}}

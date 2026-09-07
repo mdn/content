@@ -39,6 +39,8 @@ None (`undefined`).
 
 ## Examples
 
+### Basic `setFocusBehavior()` usage
+
 ```js
 // Create a new CaptureController instance
 const controller = new CaptureController();

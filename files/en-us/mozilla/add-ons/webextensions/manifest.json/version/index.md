@@ -3,9 +3,8 @@ title: version
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/version
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.version
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -70,3 +69,8 @@ You see this in the console log:
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- The {{WebExtAPIRef("runtime.getVersion()")}} method
+- The [`version_name`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version_name) manifest key

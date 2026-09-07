@@ -13,9 +13,7 @@ The `records` argument passed into the {{domxref("FileSystemObserver.FileSystemO
 ## Instance properties
 
 - `changedHandle`
-
   - : A reference to the file system handle that the change was observed on.
-
     - For the user-observable file system, this can be a {{domxref("FileSystemFileHandle")}} or a {{domxref("FileSystemDirectoryHandle")}}.
     - For the [Origin Private File System](/en-US/docs/Web/API/File_System_API/Origin_private_file_system) (OPFS), it can be a {{domxref("FileSystemFileHandle")}}, a {{domxref("FileSystemDirectoryHandle")}}, or a {{domxref("FileSystemSyncAccessHandle")}}.
 

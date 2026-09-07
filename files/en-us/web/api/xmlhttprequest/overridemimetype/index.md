@@ -52,7 +52,7 @@ server's stated type for the data being received.
 
 req = new XMLHttpRequest();
 req.overrideMimeType("text/plain");
-req.addEventListener("load", callback, false);
+req.addEventListener("load", callback);
 req.open("get", url);
 req.send();
 ```

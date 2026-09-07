@@ -1,11 +1,11 @@
 ---
-title: "<map>: The Image Map element"
+title: "`<map>` HTML image map element"
+short-title: <map>
 slug: Web/HTML/Reference/Elements/map
 page-type: html-element
 browser-compat: html.elements.map
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<map>`** [HTML](/en-US/docs/Web/HTML) element is used with {{HTMLElement("area")}} elements to define an image map (a clickable link area).
 

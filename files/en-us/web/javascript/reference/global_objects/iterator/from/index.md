@@ -4,16 +4,15 @@ short-title: from()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/from
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Iterator.from
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Iterator.from()`** static method creates a new {{jsxref("Iterator")}} object from an iterator or iterable object.
 
 ## Syntax
 
 ```js-nolint
-from(object)
+Iterator.from(object)
 ```
 
 ### Parameters
@@ -23,7 +22,7 @@ from(object)
 
 ### Return value
 
-If `object` is an iterable, its `[Symbol.iterator]()` method is called to obtain the iterator. Otherwise, `object` is assumed to be an iterator. If the iterator is already {{jsxref("Operators/instanceof", "instanceof")}} {{jsxref("Iterator")}} (which means it has `Iterator.prototype` in its prototype chain), it is returned directly. Otherwise, a new {{jsxref("Iterator")}} object is created that wraps the original iterator.
+If `object` is an iterable, its `[Symbol.iterator]()` method is called to obtain the iterator. Otherwise, `object` is assumed to be an iterator. If the iterator is already {{jsxref("instanceof")}} {{jsxref("Iterator")}} (which means it has `Iterator.prototype` in its prototype chain), it is returned directly. Otherwise, a new {{jsxref("Iterator")}} object is created that wraps the original iterator.
 
 ## Description
 

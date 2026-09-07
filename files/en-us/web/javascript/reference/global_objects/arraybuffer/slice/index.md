@@ -4,9 +4,8 @@ short-title: slice()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.ArrayBuffer.slice
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`slice()`** method of {{jsxref("ArrayBuffer")}} instances returns a new `ArrayBuffer` whose contents are a copy of this `ArrayBuffer`'s bytes from `start`, inclusive, up to `end`, exclusive. If either `start` or `end` is negative, it refers to an index from the end of the array, as opposed to from the beginning.
 

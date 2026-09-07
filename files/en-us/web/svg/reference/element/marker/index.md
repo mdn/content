@@ -177,7 +177,7 @@ The following example shows how to use the `context-fill` and `context-stroke` v
 
   <style>
     path {
-      marker: url(#circle);
+      marker: url("#circle");
     }
   </style>
 

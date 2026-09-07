@@ -28,7 +28,6 @@ The {{domxref("TouchEvent")}} interface represents an event sent when the state 
 - {{domxref("TouchEvent.touches","touches")}} - a list of all of the touch points currently on the screen.
 - {{domxref("TouchEvent.targetTouches","targetTouches")}} - a list of the touch points on the _target_ DOM element.
 - {{domxref("TouchEvent.changedTouches","changedTouches")}} - a list of the touch points whose items depend on the associated event type:
-
   - For the {{domxref("Element/touchstart_event", "touchstart")}} event, it is a list of the touch points that became active with the current event.
   - For the {{domxref("Element/touchmove_event", "touchmove")}} event, it is a list of the touch points that have changed since the last event.
   - For the {{domxref("Element/touchend_event", "touchend")}} event, it is a list of the touch points that have been removed from the surface (that is, the set of touch points corresponding to fingers no longer touching the surface).
@@ -51,30 +50,30 @@ Register an event handler for each touch event type.
 
 ```js
 // Register touch event handlers
-someElement.addEventListener("touchstart", process_touchstart, false);
-someElement.addEventListener("touchmove", process_touchmove, false);
-someElement.addEventListener("touchcancel", process_touchcancel, false);
-someElement.addEventListener("touchend", process_touchend, false);
+someElement.addEventListener("touchstart", processTouchStart);
+someElement.addEventListener("touchmove", processTouchMove);
+someElement.addEventListener("touchcancel", processTouchCancel);
+someElement.addEventListener("touchend", processTouchEnd);
 ```
 
 Process an event in an event handler, implementing the application's gesture semantics.
 
 ```js
 // touchstart handler
-function process_touchstart(ev) {
+function processTouchStart(event) {
   // Use the event's data to call out to the appropriate gesture handlers
-  switch (ev.touches.length) {
+  switch (event.touches.length) {
     case 1:
-      handle_one_touch(ev);
+      handleOneTouch(event);
       break;
     case 2:
-      handle_two_touches(ev);
+      handleTwoTouches(event);
       break;
     case 3:
-      handle_three_touches(ev);
+      handleThreeTouches(event);
       break;
     default:
-      gesture_not_supported(ev);
+      gestureNotSupported(event);
       break;
   }
 }
@@ -84,26 +83,22 @@ Access the attributes of a touch point.
 
 ```js
 // Create touchstart handler
-someElement.addEventListener(
-  "touchstart",
-  (ev) => {
-    // Iterate through the touch points that were activated
-    // for this element and process each event 'target'
-    for (const touch of ev.targetTouches) {
-      process_target(touch.target);
-    }
-  },
-  false,
-);
+someElement.addEventListener("touchstart", (event) => {
+  // Iterate through the touch points that were activated
+  // for this element and process each event 'target'
+  for (const touch of event.targetTouches) {
+    processTarget(touch.target);
+  }
+});
 ```
 
 Prevent the browser from processing _emulated mouse events_.
 
 ```js
 // touchmove handler
-function process_touchmove(ev) {
+function processTouchMove(event) {
   // Set call preventDefault()
-  ev.preventDefault();
+  event.preventDefault();
 }
 ```
 

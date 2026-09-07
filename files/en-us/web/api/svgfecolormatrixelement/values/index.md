@@ -30,7 +30,7 @@ An {{domxref("SVGAnimatedNumberList")}} object.
     y="20"
     width="100"
     height="100"
-    style="fill:red;"
+    fill="red"
     filter="url(#color-matrix-filter)" />
 </svg>
 ```

@@ -3,9 +3,8 @@ title: List of default Accept values
 short-title: Default Accept values
 slug: Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 This article documents the default values for the HTTP [`Accept`](/en-US/docs/Web/HTTP/Reference/Headers/Accept) header for specific inputs and browser versions.
 
@@ -54,7 +53,7 @@ When requesting an image, like through an HTML {{HTMLElement("img")}} element, u
 | Safari (before Mac OS Big Sur) | `image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5`            |
 | Chrome and Edge 121 and later  | `image/avif,image/webp,image/apng,image/*,*/*;q=0.8`                       |
 
-\[1] The value can be set to an arbitrary string using the `image.http.accept` parameter (_[source](https://searchfox.org/mozilla-central/search?q=image.http.accept)_).
+\[1] The value can be set to an arbitrary string using the `image.http.accept` parameter (_[source](https://searchfox.org/firefox-main/search?q=image.http.accept)_).
 
 ## Values for a video
 

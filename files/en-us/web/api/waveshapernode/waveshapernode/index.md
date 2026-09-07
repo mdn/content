@@ -24,9 +24,7 @@ new WaveShaperNode(context, options)
 - `context`
   - : A reference to an {{domxref("AudioContext")}}.
 - `options` {{optional_inline}}
-
   - : Options are as follows:
-
     - `curve`
       - : The shaping curve used for the waveshaping effect. The input
         signal is nominally within the range \[-1;1].

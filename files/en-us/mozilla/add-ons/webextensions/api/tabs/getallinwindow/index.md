@@ -5,9 +5,8 @@ page-type: webextension-api-function
 status:
   - deprecated
 browser-compat: webextensions.api.tabs.getAllInWindow
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 > [!WARNING]
 > This method has been deprecated. Use {{WebExtAPIRef("tabs.query", "tabs.query({currentWindow: true})")}} instead.
@@ -33,11 +32,11 @@ let getting = browser.tabs.getAllInWindow(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an `array` of {{WebExtAPIRef('tabs.Tab')}} objects, containing information about all the tabs in the window. If the window could not be found or some other error occurs, the promise will be rejected with an error message.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-getAllInWindow) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.

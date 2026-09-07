@@ -26,12 +26,10 @@ new MutationObserver(callback)
 ### Parameters
 
 - `callback`
-
   - : A function which will be called on each DOM change that qualifies given the
     observed node or subtree and options.
 
     The `callback` function takes as input two parameters:
-
     1. An array of {{domxref("MutationRecord")}} objects, describing each change that
        occurred.
     2. The {{domxref("MutationObserver")}} which invoked the

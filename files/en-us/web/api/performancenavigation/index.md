@@ -7,7 +7,7 @@ status:
 browser-compat: api.PerformanceNavigation
 ---
 
-{{APIRef("Performance API")}}{{Deprecated_Header}}
+{{APIRef("Performance API")}}
 
 The legacy **`PerformanceNavigation`** interface represents information about how the navigation to the current document was done.
 
@@ -22,9 +22,7 @@ An object of this type can be obtained by calling the {{domxref("Performance.nav
 _The `PerformanceNavigation` interface doesn't inherit any properties._
 
 - {{domxref("PerformanceNavigation.type")}} {{ReadOnlyInline}} {{deprecated_inline}}
-
   - : An `unsigned short` which indicates how the navigation to this page was done. Possible values are:
-
     - `TYPE_NAVIGATE` (0)
       - : The page was accessed by following a link, a bookmark, a form submission, or a script, or by typing the URL in the address bar.
     - `TYPE_RELOAD` (1)
@@ -39,7 +37,7 @@ _The `PerformanceNavigation` interface doesn't inherit any properties._
 
 ## Instance methods
 
-_The `Performance` interface doesn't inherit any methods._
+_The `PerformanceNavigation` interface doesn't inherit any methods._
 
 - {{domxref("PerformanceNavigation.toJSON()")}} {{deprecated_inline}}
   - : A {{Glossary("Serialization","serializer")}} returning a JSON object representing the `PerformanceNavigation` object.

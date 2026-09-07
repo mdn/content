@@ -8,16 +8,9 @@ browser-compat: api.HTMLTableElement.createCaption
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLTableElement.createCaption()`** method returns the
-{{HtmlElement("caption")}} element associated with a given {{HtmlElement("table")}}.
-If no `<caption>` element exists on the table, this method creates
-it, and then returns it.
+The **`createCaption()`** method of the {{domxref("HTMLTableElement")}} interface creates a {{HTMLElement("caption")}} element, inserts it as the first child of the given {{HTMLElement("table")}}, and returns it. If the table already has a `<caption>` element child, this method returns the first such child without creating one.
 
-> [!NOTE]
-> If no caption exists, `createCaption()` inserts a
-> new caption directly into the table. The caption does not need to be added
-> separately as would be the case if {{domxref("Document.createElement()")}} had
-> been used to create the new `<caption>` element.
+When creation is needed, this method creates and inserts the element directly, without requiring separate calls to methods such as {{domxref("Document.createElement()")}} and {{domxref("Node.insertBefore()")}}.
 
 ## Syntax
 
@@ -31,7 +24,7 @@ None.
 
 ### Return value
 
-{{domxref("HTMLTableCaptionElement")}}
+An {{domxref("HTMLTableCaptionElement")}}.
 
 ## Examples
 
@@ -41,24 +34,26 @@ This example uses JavaScript to add a caption to a table that initially lacks on
 
 ```html
 <table>
-  <tr>
-    <td>Cell 1.1</td>
-    <td>Cell 1.2</td>
-    <td>Cell 1.3</td>
-  </tr>
-  <tr>
-    <td>Cell 2.1</td>
-    <td>Cell 2.2</td>
-    <td>Cell 2.3</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td>Cell 1.1</td>
+      <td>Cell 1.2</td>
+      <td>Cell 1.3</td>
+    </tr>
+    <tr>
+      <td>Cell 2.1</td>
+      <td>Cell 2.2</td>
+      <td>Cell 2.3</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
 ### JavaScript
 
 ```js
-let table = document.querySelector("table");
-let caption = table.createCaption();
+const table = document.querySelector("table");
+const caption = table.createCaption();
 caption.textContent = "This caption was created by JavaScript!";
 ```
 
@@ -73,3 +68,10 @@ caption.textContent = "This caption was created by JavaScript!";
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("HTMLTableElement.createTBody()")}}
+- {{domxref("HTMLTableElement.createTFoot()")}}
+- {{domxref("HTMLTableElement.createTHead()")}}
+- {{domxref("HTMLTableElement.deleteCaption()")}}

@@ -31,9 +31,7 @@ None.
 - `count`
   - : Specifies what in the source tree should be numbered sequentially. It uses an XPath expression.
 - `level`
-
   - : Defines how levels of the source tree should be considered in generating sequential numbers. It has three valid values: `single`, `multiple`, and `any`. The default value is `single`:
-
     - `single`
       - : Numbers sibling nodes sequentially, as in the items in a list. The processor goes to the first node in the [`ancestor-or-self`](/en-US/docs/Web/XML/XPath/Reference/Axes#ancestor-or-self) axis that matches the `count` attribute and then counts that node plus all its preceding siblings (stopping when it reaches a match to the `from` attribute, if there is one) that also match the `count` attribute. If no match is found, the sequence will be an empty list.
     - `multiple`
@@ -46,9 +44,7 @@ None.
 - `value`
   - : Applies a given format to a number. This is a quick way to format a user-supplied number (as opposed to a node sequence number) in any of the standard `<xsl:number>` formats.
 - `format`
-
   - : Defines the format of the generated number:
-
     - `format="1"`
       - : `1 2 3 . . .` (This is the only format supported at this time)
     - `format="01"`

@@ -3,9 +3,8 @@ title: void operator
 slug: Web/JavaScript/Reference/Operators/void
 page-type: javascript-operator
 browser-compat: javascript.operators.void
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`void`** operator evaluates the given
 `expression` and then returns {{jsxref("undefined")}}.
@@ -119,7 +118,8 @@ value is {{jsxref("undefined")}}. The `void` operator can be used to return
 </a>
 ```
 
-> **Note:** `javascript:` pseudo protocol is discouraged over
+> [!NOTE]
+> `javascript:` pseudo protocol is discouraged over
 > other alternatives, such as unobtrusive event handlers.
 
 ### Non-leaking Arrow Functions

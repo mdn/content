@@ -37,7 +37,11 @@ The HTML code example below uses the `group` role with a `tree` view:
     role="presentation"
     aria-owns="animalGroup"
     aria-expanded="true">
-    <img role="presentation" tabindex="-1" src="images/treeExpanded.gif" />
+    <img
+      role="presentation"
+      tabindex="-1"
+      src="images/treeExpanded.gif"
+      alt="" />
     <span role="treeitem" tabindex="0">Animals</span>
   </div>
   <div id="animalGroup" role="group">
@@ -50,7 +54,11 @@ The HTML code example below uses the `group` role with a `tree` view:
       role="presentation"
       aria-owns="catGroup"
       aria-expanded="false">
-      <img role="presentation" tabindex="-1" src="images/treeContracted.gif" />
+      <img
+        role="presentation"
+        tabindex="-1"
+        src="images/treeContracted.gif"
+        alt="" />
       <span role="treeitem" tabindex="0">Cats</span>
     </div>
     <div id="catGroup" role="group">

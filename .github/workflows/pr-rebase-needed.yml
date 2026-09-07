@@ -3,6 +3,8 @@ name: "PR conflicts"
 on:
   push:
   pull_request_target:
+    branches:
+      - main
     types: [synchronize]
 
 permissions:
@@ -10,7 +12,7 @@ permissions:
   pull-requests: write
 
 concurrency:
-  group: pr-rebase-needed-${{ github.event.pull_request.number }}
+  group: pr-rebase-needed-${{ github.event.pull_request.number || github.ref_name }}
   cancel-in-progress: true
 
 jobs:

@@ -107,8 +107,8 @@ reader.closed
 ```
 
 To cancel the stream call {{domxref("ReadableStreamBYOBReader.cancel()")}}, optionally specifying a _reason_.
-This returns a promise that will resolve when the stream has been cancelled.
-When the stream is cancelled the controller will in turn call `cancel()` on the underlying source, passing in the optional reason.
+This returns a promise that will resolve when the stream has been canceled.
+When the stream is canceled the controller will in turn call `cancel()` on the underlying source, passing in the optional reason.
 
 The example code in [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams#examples) calls the cancel method when a button is pressed, as shown:
 
@@ -137,5 +137,4 @@ reader.releaseLock();
 - [Streams API concepts](/en-US/docs/Web/API/Streams_API)
 - [Using readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)
 - {{domxref("ReadableStream")}}
-- [WHATWG Stream Visualizer](https://whatwg-stream-visualizer.glitch.me/), for a basic visualization of readable, writable, and transform streams.
-- [Web-streams-polyfill](https://github.com/MattiasBuelens/web-streams-polyfill) or [sd-streams](https://github.com/stardazed/sd-streams) - polyfills
+- [Web-streams-polyfill](https://github.com/MattiasBuelens/web-streams-polyfill)

@@ -38,9 +38,10 @@ function importSecretKey(rawKey) {
   ]);
 }
 
-const key = importSecretKey(rawKey);
-console.log(
-  `The following usages are reported for this key: ${key.usages.toString()}`,
+importSecretKey(rawKey).then((key) =>
+  console.log(
+    `The following usages are reported for this key: ${key.usages.toString()}`,
+  ),
 );
 ```
 

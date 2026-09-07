@@ -3,9 +3,8 @@ title: sessions.getWindowValue()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/getWindowValue
 page-type: webextension-api-function
 browser-compat: webextensions.api.sessions.getWindowValue
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Retrieves a value previously stored by a call to {{WebExtAPIRef("sessions.setWindowValue")}}.
 
@@ -33,10 +32,6 @@ let retrieving = browser.sessions.getWindowValue(
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be resolved with the value if it exists, or `undefined` if it does not exist. If the call failed (for example, because the window ID could not be found) then the promise will be rejected with an error message.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Log the value of "my-key" for all newly created windows (this will include any windows that have been restored):
@@ -58,3 +53,7 @@ browser.windows.onCreated.addListener((window) => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

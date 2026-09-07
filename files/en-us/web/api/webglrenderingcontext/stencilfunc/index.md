@@ -23,10 +23,8 @@ stencilFunc(func, ref, mask)
 ### Parameters
 
 - `func`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the test function. The default function is
     `gl.ALWAYS`. The possible values are:
-
     - `gl.NEVER`: Never pass.
     - `gl.LESS`: Pass if
       `(ref & mask) < (stencil & mask)`.

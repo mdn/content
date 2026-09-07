@@ -4,9 +4,8 @@ short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Function/toString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Function.toString
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toString()`** method of {{jsxref("Function")}} instances returns a string representing the source code of this function.
 

@@ -6,9 +6,11 @@ page-type: web-api-event
 browser-compat: api.HTMLElement.dragover_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML Drag and Drop API")}}
 
-The `dragover` event is fired when an element or text selection is being dragged over a valid drop target (every few hundred milliseconds).
+The `dragover` event is fired repeatedly when an element or text selection is being dragged over a potential drop target.
+
+The firing frequency depends on the browser, operating system, and pointer movement. The `dragover` event can continue to fire while the pointer is stationary, and can fire more frequently while it is moving. Do not rely on a fixed interval or expect an event for every pointer movement. The [HTML specification](https://html.spec.whatwg.org/multipage/dnd.html#drag-and-drop-processing-model) uses a firing frequency of roughly 350 ms (±200 ms). In practice, browsers use native drag updates and platform-specific timers to dispatch these events, so this interval does not describe all browser behavior.
 
 This event is cancelable and may bubble up to the {{domxref("Document")}} and {{domxref("Window")}} objects.
 
@@ -27,13 +29,6 @@ ondragover = (event) => { }
 A {{domxref("DragEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("DragEvent")}}
-
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref('DragEvent.dataTransfer')}} {{ReadOnlyInline}}
-  - : The data that is transferred during a drag-and-drop interaction.
 
 ## Examples
 
@@ -123,7 +118,6 @@ target.addEventListener("drop", (event) => {
 ## See also
 
 - Other drag and drop events:
-
   - {{domxref("HTMLElement/drag_event", "drag")}}
   - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
   - {{domxref("HTMLElement/dragend_event", "dragend")}}

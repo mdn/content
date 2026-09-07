@@ -22,9 +22,7 @@ forEach(callback, thisArg)
 ### Parameters
 
 - `callback`
-
   - : Function to execute on each element, which is passed the following arguments:
-
     - `value`
       - : The value of the current entry being processed in the `URLSearchParams` object.
     - `key`

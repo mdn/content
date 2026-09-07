@@ -3,12 +3,10 @@ title: "Navigator: product property"
 short-title: product
 slug: Web/API/Navigator/product
 page-type: web-api-instance-property
-status:
-  - deprecated
 browser-compat: api.Navigator.product
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 The value of the **`Navigator.product`** property is always
 `"Gecko"`, in any browser. This property is kept only for compatibility

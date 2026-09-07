@@ -33,11 +33,9 @@ The {{HTMLElement('main')}} element has a role of `main`. Developers should use 
 ### Associated ARIA roles, states, and properties
 
 - [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns)
-
   - : The `aria-owns` attribute establishes relationships in the accessibility layer that aren't present in the DOM. Documents and applications can be nested in the DOM, which may lead to having more than one main element as DOM descendants. If this is the case, include `aria-owns` to identify the relationship of the main to its document or application ancestor.
 
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) or `aria-labelledby`
-
   - : Identify the accessible name with [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) if a visible header is present. Otherwise, including an [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) can be helpful for orienting assistive technology users, especially in single-page applications where main content changes happen without generating a page load event.
 
 ## Example
@@ -81,7 +79,7 @@ It is also helpful to include an accessible name to help orient assistive techno
 
 ### Prefer HTML
 
-Using the {{HTMLElement('main')}} element will automatically communicate a section has a role of `main`. If at all possible, prefer using it instead.
+Using the {{HTMLElement('main')}} element will automatically communicate that the element has a role of `main`. If possible, prefer using the semantic `<main>` element instead of the `main` role.
 
 ### Skip navigation
 
@@ -125,6 +123,5 @@ Which is the equivalent of:
 
 - The {{HTMLElement('main')}} element
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements)
-- [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://www.tpgi.com/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 - [The main element | HTML5 Doctor](https://html5doctor.com/the-main-element/)

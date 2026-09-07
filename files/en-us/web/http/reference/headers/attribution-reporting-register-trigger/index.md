@@ -4,28 +4,26 @@ short-title: Attribution-Reporting-Register-Trigger
 slug: Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Trigger
 page-type: http-header
 status:
-  - experimental
+  - deprecated
+  - non-standard
 browser-compat: http.headers.Attribution-Reporting-Register-Trigger
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{seecompattable}}
+{{non-standard_header}}
 
 The HTTP **`Attribution-Reporting-Register-Trigger`** {{Glossary("response header")}} registers a page feature as an [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers). This header is included as part of a response to a request that contains the {{HTTPHeader("Attribution-Reporting-Eligible")}} header.
 
 See the [Attribution Reporting API](/en-US/docs/Web/API/Attribution_Reporting_API) for more details.
 
 > [!NOTE]
-> If the calling site does not have the Attribution Reporting API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Enrollment), the `Attribution-Reporting-Register-Trigger` header is ignored and attribution triggers are not registered.
+> If the calling site does not have the Attribution Reporting API included in a successful [privacy sandbox enrollment process](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox#enrollment), the `Attribution-Reporting-Register-Trigger` header is ignored and attribution triggers are not registered.
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
     </tr>
     <tr>
       <th scope="row">
@@ -45,9 +43,7 @@ Attribution-Reporting-Register-Trigger: <json-string>
 ## Directives
 
 - `<json-string>`
-
   - : A JSON string providing data that can be included in generated reports, such as the ID of the trigger, and priority and deduplication values. Available fields are as follows:
-
     - `"aggregatable_trigger_data"`
       - : An array of objects, each one defining an aggregation key to apply to different source keys. Each object contains the following properties:
         - `"key_piece"`
@@ -63,11 +59,8 @@ Attribution-Reporting-Register-Trigger: <json-string>
     - `"filters"` {{optional_inline}}
       - : An object containing custom data that can be used to filter which triggers generate reports. See [Filters](/en-US/docs/Web/API/Attribution_Reporting_API/Generating_reports#filters) for more details.
     - `"event_trigger_data"`
-
       - : An object representing data about the trigger. Available sub-fields are as follows:
-
         - `"trigger_data"`
-
           - : A string representing data that describes the trigger, which is typically used to indicate events such as "user added item to shopping cart" or "user signed up to mailing list". This value will be included in the generated event-level report, if any, although it will be subject to modification based on the attributed source's [`"trigger_data_matching"`](/en-US/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#trigger_data_matching) field.
 
             > [!NOTE]

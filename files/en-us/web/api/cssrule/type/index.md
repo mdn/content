@@ -8,7 +8,7 @@ status:
 browser-compat: api.CSSRule.type
 ---
 
-{{APIRef("CSSOM")}}{{Deprecated_header}}
+{{APIRef("CSSOM")}}
 
 The read-only **`type`** property of the
 {{domxref("CSSRule")}} interface is a deprecated property that returns an integer
@@ -41,6 +41,8 @@ for (const rule of rules) {
   - : The rule is a {{domxref("CSSKeyframesRule")}}.
 - `CSSRule.KEYFRAME_RULE` (`8`)
   - : The rule is a {{domxref("CSSKeyframeRule")}}.
+- `CSSRule.MARGIN_RULE` (`9`)
+  - : The rule is a {{domxref("CSSMarginRule")}}.
 - `CSSRule.NAMESPACE_RULE` (`10`)
   - : The rule is a {{domxref("CSSNamespaceRule")}}.
 - `CSSRule.COUNTER_STYLE_RULE` (`11`)

@@ -2,9 +2,8 @@
 title: 'SyntaxError: "use strict" not allowed in function with non-simple parameters'
 slug: Web/JavaScript/Reference/Errors/Strict_non_simple_params
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "`"use strict"` not allowed in function" occurs
 when a `"use strict"` directive is used at the top of a function with

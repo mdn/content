@@ -2,10 +2,9 @@
 title: 503 Service Unavailable
 slug: Web/HTTP/Reference/Status/503
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.503
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#status.503
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`503 Service Unavailable`** [server error response](/en-US/docs/Web/HTTP/Reference/Status#server_error_responses) status code indicates that the server is not ready to handle the request.
 

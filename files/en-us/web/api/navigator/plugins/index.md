@@ -3,12 +3,10 @@ title: "Navigator: plugins property"
 short-title: plugins
 slug: Web/API/Navigator/plugins
 page-type: web-api-instance-property
-status:
-  - deprecated
 browser-compat: api.Navigator.plugins
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 Returns a {{DOMxRef("PluginArray")}} object, listing the {{DOMxRef("Plugin")}} objects describing the plugins installed in the application.
 Named properties of the returned object are not enumerable (except in very old browser versions).

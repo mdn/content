@@ -4,13 +4,14 @@ short-title: requestStorageAccessFor()
 slug: Web/API/Document/requestStorageAccessFor
 page-type: web-api-instance-method
 status:
-  - experimental
+  - deprecated
+  - non-standard
 browser-compat: api.Document.requestStorageAccessFor
 ---
 
-{{APIRef("Storage Access API")}}{{SeeCompatTable}}
+{{APIRef("Storage Access API")}}{{non-standard_header}}
 
-The **`requestStorageAccessFor()`** method of the {{domxref("Document")}} interface allows top-level sites to request third-party cookie access on behalf of embedded content originating from another site in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets). It returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
+The **`requestStorageAccessFor()`** method of the {{domxref("Document")}} interface allows top-level sites to request third-party cookie access on behalf of embedded content originating from another site in the same [related website set](https://privacysandbox.google.com/cookies/related-website-sets-integration). It returns a {{jsxref("Promise")}} that resolves if the access was granted, and rejects if access was denied.
 
 ## Syntax
 
@@ -38,11 +39,11 @@ A {{jsxref("Promise")}} that fulfills with `undefined` if the access to third-pa
   - : Thrown if the current {{domxref("Document")}} is not yet active.
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if:
-    - The document's window is not a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+    - The document's window is not a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
     - The document is not the top-level document.
     - The document has a `null` origin.
     - The supplied `requestedOrigin` is [opaque](https://html.spec.whatwg.org/multipage/browsers.html#concept-origin-opaque).
-    - The top-level and embedded sites are not in the same [related website set](/en-US/docs/Web/API/Storage_Access_API/Related_website_sets).
+    - The top-level and embedded sites are not in the same [related website set](https://privacysandbox.google.com/cookies/related-website-sets-integration).
     - The embedding {{htmlelement("iframe")}} is sandboxed, and the `allow-storage-access-by-user-activation` token is not set.
     - Usage is blocked by a {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
     - Usage is denied by the user agent's permission request to use the API.

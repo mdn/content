@@ -4,9 +4,8 @@ short-title: transferToFixedLength()
 slug: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/transferToFixedLength
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.ArrayBuffer.transferToFixedLength
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`transferToFixedLength()`** method of {{jsxref("ArrayBuffer")}} instances creates a new non-resizable `ArrayBuffer` with the same byte content as this buffer, then detaches this buffer.
 
@@ -31,7 +30,7 @@ A new {{jsxref("ArrayBuffer")}} object. Its contents are initialized to the cont
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if this `ArrayBuffer` is already detached.
+  - : Thrown if this `ArrayBuffer` is already detached, or if it can only be detached by designated operations. Currently, only certain web APIs are capable of creating `ArrayBuffer` objects with designated detaching methods, such as {{domxref("GPUBuffer.getMappedRange()")}} and [`WebAssembly.Memory.buffer`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory/buffer).
 
 ## Description
 

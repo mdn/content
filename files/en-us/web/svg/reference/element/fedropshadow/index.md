@@ -19,15 +19,14 @@ Like other filter primitives, it handles color components in the `linearRGB` {{g
 
 ## Attributes
 
-- {{SVGAttr("dx")}}
-  - : This attribute defines the x offset of the drop shadow.
-    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number); _Default value_: `2`; _Animatable_: **yes**
-- {{SVGAttr("dy")}}
-  - : This attribute defines the y offset of the drop shadow.
-    _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number); _Default value_: `2`; _Animatable_: **yes**
-- {{SVGAttr("stdDeviation")}}
-  - : This attribute defines the standard deviation for the blur operation in the drop shadow.
-    _Value type_: [**\<number-optional-number>**](/en-US/docs/Web/SVG/Guides/Content_type#number-optional-number); _Default value_: `2`; _Animatable_: **yes**
+- {{SVGAttr("dx")}}: This attribute defines the x offset of the drop shadow.
+  _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number); _Default value_: `2`; _Animatable_: **yes**
+- {{SVGAttr("dy")}}: This attribute defines the y offset of the drop shadow.
+  _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number); _Default value_: `2`; _Animatable_: **yes**
+- {{SVGAttr("in")}}
+- {{SVGAttr("stdDeviation")}}: This attribute defines the standard deviation for the blur operation in the drop shadow.
+  _Value type_: [**\<number-optional-number>**](/en-US/docs/Web/SVG/Guides/Content_type#number-optional-number); _Default value_: `2`; _Animatable_: **yes**
+- [Filter primitive attributes](/en-US/docs/Web/SVG/Reference/Attribute#filter_primitive_attributes_presentation_attributes): {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}, {{SVGAttr("result")}}
 
 ## DOM Interface
 
@@ -62,11 +61,9 @@ svg {
     </filter>
   </defs>
 
-  <circle cx="5" cy="50%" r="4" style="fill:pink; filter:url(#shadow);" />
-
-  <circle cx="15" cy="50%" r="4" style="fill:pink; filter:url(#shadow2);" />
-
-  <circle cx="25" cy="50%" r="4" style="fill:pink; filter:url(#shadow3);" />
+  <circle cx="5" cy="50%" r="4" fill="pink" filter="url(#shadow)" />
+  <circle cx="15" cy="50%" r="4" fill="pink" filter="url(#shadow2)" />
+  <circle cx="25" cy="50%" r="4" fill="pink" filter="url(#shadow3)" />
 </svg>
 ```
 

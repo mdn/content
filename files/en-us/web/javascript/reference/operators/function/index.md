@@ -3,9 +3,8 @@ title: function expression
 slug: Web/JavaScript/Reference/Operators/function
 page-type: javascript-operator
 browser-compat: javascript.operators.function
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`function`** keyword can be used to define a function inside an expression.
 
@@ -163,7 +162,7 @@ Here, we introduce several use cases with examples.
 
 ### Avoid polluting the global namespace in script code
 
-The top-level scope of all scripts are shared, which could include many functions and global variables from different files, so to avoid name conflicts, it's important to limit the number of globally declared names (this is greatly mitigated in [modules](/en-US/docs/Web/JavaScript/Guide/Modules#other_differences_between_modules_and_classic_scripts), but sometimes limiting the scope of temporary variables is still useful, especially when the file is very long). If we have some initialization code that we don't need to use again, we could use the IIFE pattern, which is better than using a function declaration or a function expression because it ensures that the code is only run here and once.
+The top-level scope of all scripts is shared, which could include many functions and global variables from different files, so to avoid name conflicts, it's important to limit the number of globally declared names (this is greatly mitigated in [modules](/en-US/docs/Web/JavaScript/Guide/Modules#other_differences_between_modules_and_classic_scripts), but sometimes limiting the scope of temporary variables is still useful, especially when the file is very long). If we have some initialization code that we don't need to use again, we could use the IIFE pattern, which is better than using a function declaration or a function expression because it ensures that the code is only run here and once.
 
 ```js
 // top-level of a script (not a module)

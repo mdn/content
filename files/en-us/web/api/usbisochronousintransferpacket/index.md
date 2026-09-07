@@ -21,9 +21,7 @@ The `USBIsochronousInTransferPacket` interface of the [WebUSB API](/en-US/docs/W
 - {{domxref("USBIsochronousInTransferPacket.data")}} {{ReadOnlyInline}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a `DataView` object containing the data received from the USB device in this packet, if any.
 - {{domxref("USBIsochronousInTransferPacket.status")}} {{ReadOnlyInline}} {{ReadOnlyInline}} {{Experimental_Inline}}
-
   - : Returns the status of the transfer request, one of:
-
     - `"ok"` - The transfer was successful.
     - `"stall"` - The device indicated an error by generating a stall condition on the endpoint. A stall on an isochronous endpoint does not need to be cleared.
     - `"babble"` - The device responded with more data than was expected.

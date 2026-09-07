@@ -1,12 +1,11 @@
 ---
-title: HTML hidden global attribute
+title: "`hidden` HTML global attribute"
 short-title: hidden
 slug: Web/HTML/Reference/Global_attributes/hidden
 page-type: html-attribute
 browser-compat: html.global_attributes.hidden
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 The **`hidden`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) is an {{Glossary("enumerated")}} attribute indicating that the browser should not render the contents of the element. For example, it can be used to hide elements of the page that can't be used until the login process has been completed.
 
@@ -82,7 +81,7 @@ This means that, unlike elements in the _hidden_ state, elements in the _hidden 
 - they participate in page layout
 - their margin, borders, padding, and background are rendered
 
-Also, the element needs to be affected by [layout containment](/en-US/docs/Web/CSS/CSS_containment) in order to be revealed.
+Also, the element needs to be affected by [layout containment](/en-US/docs/Web/CSS/Guides/Containment) in order to be revealed.
 If the element in the _hidden until found_ state has a `display` value of `none`, `contents`, or `inline`, then the element will not be revealed by "Find in page" or fragment navigation.
 
 ## Usage notes
@@ -150,7 +149,7 @@ The event handler changes the text content of the box to illustrate an action th
 
 <div>I'm not hidden</div>
 <div id="until-found-box" hidden="until-found">Hidden until found</div>
-<div>I'm hidden</div>
+<div>I'm not hidden, either</div>
 ```
 
 ```html hidden

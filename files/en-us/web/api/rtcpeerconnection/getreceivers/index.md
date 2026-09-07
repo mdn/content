@@ -17,6 +17,10 @@ Each RTP receiver manages the reception and decoding of data for a {{domxref("Me
 getReceivers()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An array of {{domxref("RTCRtpReceiver")}} objects, one for each track on the connection.

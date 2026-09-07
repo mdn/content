@@ -4,9 +4,8 @@ short-title: sandbox
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/sandbox
 page-type: http-csp-directive
 browser-compat: http.headers.Content-Security-Policy.sandbox
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`sandbox`** directive enables a sandbox for the requested resource similar to the {{HTMLElement("iframe")}} [`sandbox`](/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox) attribute.
 It applies restrictions to a page's actions including preventing popups, preventing the execution of plugins and scripts, and enforcing a same-origin policy.
@@ -57,7 +56,9 @@ where `<value>` can optionally be one of the following values:
 - `allow-presentation`
   - : Allows embedders to have control over whether an iframe can start a [presentation session](/en-US/docs/Web/API/PresentationRequest).
 - `allow-same-origin`
-  - : If this token is not used, the resource is treated as being from a special origin that always fails the {{Glossary("same-origin policy")}} (potentially preventing access to [data storage/cookies](/en-US/docs/Web/Security/Same-origin_policy#cross-origin_data_storage_access) and some JavaScript APIs).
+  - : Allows a sandboxed resource to retain its {{Glossary("origin")}}.
+    A sandboxed resource is otherwise treated as being from an [opaque origin](/en-US/docs/Glossary/Origin#opaque_origin), which ensures that it will always fail {{Glossary("same-origin policy")}} checks, and hence cannot access [`localstorage` and `document.cookie`](/en-US/docs/Web/Security/Defenses/Same-origin_policy#cross-origin_data_storage_access) and some JavaScript APIs.
+    The {{httpheader("Origin")}} of sandboxed resources without the `allow-same-origin` keyword is `null`.
 - `allow-scripts`
   - : Allows the page to run scripts (but not create pop-up windows). If this keyword is not used, this operation is not allowed.
 - `allow-storage-access-by-user-activation` {{experimental_inline}}

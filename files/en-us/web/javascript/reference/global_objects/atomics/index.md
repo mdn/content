@@ -3,9 +3,8 @@ title: Atomics
 slug: Web/JavaScript/Reference/Global_Objects/Atomics
 page-type: javascript-namespace
 browser-compat: javascript.builtins.Atomics
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Atomics`** namespace object contains static methods for carrying out atomic operations. They are used with {{jsxref("SharedArrayBuffer")}} and {{jsxref("ArrayBuffer")}} objects.
 
@@ -58,6 +57,8 @@ The `wait()` and `notify()` methods are modeled on Linux futexes ("fast user-spa
   - : Computes a bitwise XOR on the value at the specified index of the array with the provided value. Returns the old value at that index.
 
 ## Examples
+
+Note that these examples cannot be run directly from the console or an arbitrary web page, because `SharedArrayBuffer` is not defined unless its [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
 
 ### Using Atomics
 

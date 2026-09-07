@@ -3,9 +3,8 @@ title: getLastChecked
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/getLastChecked
 page-type: webextension-api-function
 browser-compat: webextensions.api.captivePortal.getLastChecked
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Returns the time since the last request was completed.
 

@@ -71,4 +71,4 @@ if (!gl.getProgramParameter(program, gl.LINK_STATUS) && !gl.isContextLost()) {
 ## See also
 
 - The {{domxref("WebGLContextEvent")}} signals changes in the context state.
-- [Handling lost context in WebGL](https://www.khronos.org/webgl/wiki/HandlingContextLost): Khronos WebGL wiki
+- [Handling lost context in WebGL](https://wikis.khronos.org/webgl/HandlingContextLost): Khronos WebGL wiki

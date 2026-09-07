@@ -1,11 +1,11 @@
 ---
-title: <input type="radio">
+title: '`<input type="radio">` HTML attribute value'
+short-title: <input type="radio">
 slug: Web/HTML/Reference/Elements/input/radio
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_radio
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 {{htmlelement("input")}} elements of type **`radio`** are generally used in **radio groups**—collections of radio buttons describing a set of related options.
 
@@ -51,7 +51,8 @@ They are called radio buttons because they look and operate in a similar manner 
 
 ![Shows what radio buttons looked like in the olden days.](old-radio.jpg)
 
-> **Note:** [Checkboxes](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) are similar to radio buttons, but with an important distinction: radio buttons are designed for selecting one value out of a set, whereas checkboxes let you turn individual values on and off. Where multiple controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.
+> [!NOTE]
+> [Checkboxes](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) are similar to radio buttons, but with an important distinction: radio buttons are designed for selecting one value out of a set, whereas checkboxes let you turn individual values on and off. Where multiple controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.
 
 ## Value
 
@@ -133,19 +134,15 @@ Then we add some [JavaScript](/en-US/docs/Web/JavaScript) to set up an event lis
 const form = document.querySelector("form");
 const log = document.querySelector("#log");
 
-form.addEventListener(
-  "submit",
-  (event) => {
-    const data = new FormData(form);
-    let output = "";
-    for (const entry of data) {
-      output = `${output}${entry[0]}=${entry[1]}\r`;
-    }
-    log.innerText = output;
-    event.preventDefault();
-  },
-  false,
-);
+form.addEventListener("submit", (event) => {
+  const data = new FormData(form);
+  let output = "";
+  for (const entry of data) {
+    output = `${output}${entry[0]}=${entry[1]}\r`;
+  }
+  log.innerText = output;
+  event.preventDefault();
+});
 ```
 
 Try this example out and see how there's never more than one result for the `contact` group.
@@ -157,13 +154,11 @@ Try this example out and see how there's never more than one result for the `con
 In addition to the common attributes shared by all {{HTMLElement("input")}} elements, `radio` inputs support the following attributes.
 
 - `checked`
-
   - : A Boolean attribute which, if present, indicates that this radio button is the default selected one in the group.
 
     Unlike other browsers, Firefox by default [persists the dynamic checked state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the [`autocomplete`](/en-US/docs/Web/HTML/Reference/Elements/input#autocomplete) attribute to control this feature.
 
 - `value`
-
   - : The `value` attribute is one which all {{HTMLElement("input")}}s share; however, it serves a special purpose for inputs of type `radio`: when a form is submitted, only radio buttons which are currently checked are submitted to the server, and the reported value is the value of the `value` attribute. If the `value` is not otherwise specified, it is the string `on` by default. This is demonstrated in the section [Value](#value) above.
 
 - [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required)
@@ -275,7 +270,7 @@ input {
   width: 16px;
   height: 16px;
 
-  border: 2px solid #999;
+  border: 2px solid #999999;
   transition: 0.2s all linear;
   margin-right: 5px;
 
@@ -299,7 +294,7 @@ legend {
 
 button:hover,
 button:focus {
-  color: #999;
+  color: #999999;
 }
 
 button:active {
@@ -352,12 +347,6 @@ Notice that when clicking on a radio button, there's a nice, smooth fade out/in 
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}}
-      </td>
-    </tr>
-     <tr>
       <td><strong>Implicit ARIA Role</strong></td>
       <td>
         <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role">radio</a></code>

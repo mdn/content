@@ -3,12 +3,10 @@ title: "DocumentPictureInPicture: requestWindow() method"
 short-title: requestWindow()
 slug: Web/API/DocumentPictureInPicture/requestWindow
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.DocumentPictureInPicture.requestWindow
 ---
 
-{{APIRef("Document Picture-in-Picture API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("Document Picture-in-Picture API")}}{{SecureContext_Header}}
 
 The **`requestWindow()`** method of the
 {{domxref("DocumentPictureInPicture")}} interface opens the Picture-in-Picture window for the current main browsing context. It returns a {{jsxref("Promise")}} that fulfills with a {{domxref("Window")}} instance representing the browsing context inside the Picture-in-Picture window.
@@ -25,11 +23,8 @@ requestWindow(options)
 ### Parameters
 
 - `options` {{optional_inline}}
-
   - : An options object containing the following properties:
-
     - `disallowReturnToOpener` {{optional_inline}}
-
       - : A boolean value. When set to `true`, this option hints to the browser that it should not display a UI control that enables the user to return to the originating tab and close the Picture-in-Picture window. Defaults to `false`.
 
         For example, in Chrome's implementation of this feature, the provided UI control is a "back to tab" button in the Picture-in-Picture window's top bar:
@@ -39,7 +34,6 @@ requestWindow(options)
     - `height` {{optional_inline}}
       - : A non-negative number representing the height to set for the Picture-in-Picture window's viewport, in pixels. Defaults to `0`.
     - `preferInitialWindowPlacement` {{optional_inline}}
-
       - : A boolean value, which defaults to `false`. When set to `true`, it causes the Picture-in-Picture window to always appear back at the position and size it initially opened at, when it is closed and then reopened. By contrast, if `preferInitialWindowPlacement` is `false` the Picture-in-Picture window's size and position will be remembered when closed and reopened — it will reopen at its previous position and size, for example as set by the user.
 
     - `width` {{optional_inline}}

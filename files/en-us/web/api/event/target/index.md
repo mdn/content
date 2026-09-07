@@ -40,7 +40,7 @@ function hide(evt) {
 
 // Attach the listener to the list
 // It will fire when each <li> is clicked
-ul.addEventListener("click", hide, false);
+ul.addEventListener("click", hide);
 ```
 
 ## Specifications

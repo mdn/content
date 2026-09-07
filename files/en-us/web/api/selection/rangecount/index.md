@@ -19,7 +19,7 @@ A user can normally only select one range at a time, so the `rangeCount`
 will usually be `1`. Scripting can be used to make the selection contain more
 than one range.
 
-Gecko browsers allow multiple selections across table cells. Firefox allows to select
+Gecko browsers allow multiple selections across table cells. Firefox allows you to select
 multiple ranges in the document by using Ctrl+click (unless the click occurs within an
 element that has the `display: table-cell` CSS property assigned).
 
@@ -36,18 +36,20 @@ in the browser to see it change.
 
 ```html
 <table>
-  <tr>
-    <td>a.1</td>
-    <td>a.2</td>
-  </tr>
-  <tr>
-    <td>b.1</td>
-    <td>b.2</td>
-  </tr>
-  <tr>
-    <td>c.1</td>
-    <td>c.2</td>
-  </tr>
+  <tbody>
+    <tr>
+      <td>a.1</td>
+      <td>a.2</td>
+    </tr>
+    <tr>
+      <td>b.1</td>
+      <td>b.2</td>
+    </tr>
+    <tr>
+      <td>c.1</td>
+      <td>c.2</td>
+    </tr>
+  </tbody>
 </table>
 ```
 

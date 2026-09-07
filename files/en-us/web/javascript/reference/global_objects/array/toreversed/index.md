@@ -4,9 +4,8 @@ short-title: toReversed()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toReversed
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.toReversed
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toReversed()`** method of {{jsxref("Array")}} instances is the [copying](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) counterpart of the {{jsxref("Array/reverse", "reverse()")}} method. It returns a new array with the elements in reversed order.
 

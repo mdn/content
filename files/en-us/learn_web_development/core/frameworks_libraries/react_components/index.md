@@ -265,7 +265,8 @@ Next, we'll pass `DATA` to `<App />` as a prop, called `tasks`. Update your `<Ap
 
 The `DATA` array is now available inside the App component as `props.tasks`. You can `console.log()` it to check, if you'd like.
 
-> **Note:** `ALL_CAPS` constant names have no special meaning in JavaScript; they're a convention that tells other developers "this data will never change after being defined here".
+> [!NOTE]
+> `ALL_CAPS` constant names have no special meaning in JavaScript; they're a convention that tells other developers "this data will never change after being defined here".
 
 ## Rendering with iteration
 

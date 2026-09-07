@@ -64,7 +64,7 @@ An accessible name, with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Refer
 
 ### All descendants are presentational
 
-There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `separator`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) to all descendant elements of any `separator` element as it is a role that does not support semantic children.
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `separator`. To deal with this limitation, browsers automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) to all descendant elements of any `separator` element as it is a role that does not support semantic children.
 
 For example, consider the following `separator` element, which contains a heading.
 
@@ -87,19 +87,15 @@ From the assistive technology user's perspective, the heading does not exist sin
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`aria-orientation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation) (default is horizontal for separator)
-
   - : By default, the divider for `separator` roles is assumed to be horizontal. The value can be included and set to horizontal, undefined (the default for other roles unless otherwise specified), or vertical.
 
 - [`aria-valuenow`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow)
-
   - : If the separator is focusable and has a known value, the `aria-valuenow` defines the current value. If not focusable or the value is unknown, do not include this attribute.
 
 - [`aria-valuemin`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin) (default is 0)
-
   - : If the separator is focusable, and the minimum value is not 0, include the minimum value with `aria-valuemin`. If the
 
 - [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax) (default is 100)
-
   - : If the separator is focusable, and the maximum value is not 100, include `aria-valuemax` with a value equal to or larger than `aria-valuemin`.
 
 - [`aria-valuetext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext)

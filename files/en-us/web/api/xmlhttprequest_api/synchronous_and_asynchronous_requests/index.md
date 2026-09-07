@@ -196,7 +196,7 @@ There are some cases in which the synchronous usage of {{domxref('XMLHttpRequest
 The following example shows theoretical analytics code that attempts to submit data to a server by using a synchronous {{domxref('XMLHttpRequest')}} in an unload handler. This results in the unloading of the page to be delayed.
 
 ```js
-window.addEventListener("unload", logData, false);
+window.addEventListener("unload", logData);
 
 function logData() {
   const client = new XMLHttpRequest();
@@ -211,7 +211,7 @@ Using the **`sendBeacon()`** method, the data will be transmitted asynchronously
 The following example shows a theoretical analytics code pattern that submits data to a server by using the **`sendBeacon()`** method.
 
 ```js
-window.addEventListener("unload", logData, false);
+window.addEventListener("unload", logData);
 
 function logData() {
   navigator.sendBeacon("/log", analyticsData);

@@ -4,9 +4,8 @@ short-title: includes()
 slug: Web/JavaScript/Reference/Global_Objects/Array/includes
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.includes
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`includes()`** method of {{jsxref("Array")}} instances determines whether an array
 includes a certain value among its entries, returning `true` or
@@ -15,9 +14,9 @@ includes a certain value among its entries, returning `true` or
 {{InteractiveExample("JavaScript Demo: Array.prototype.includes()")}}
 
 ```js interactive-example
-const array1 = [1, 2, 3];
+const array = [1, 2, 3];
 
-console.log(array1.includes(2));
+console.log(array.includes(2));
 // Expected output: true
 
 const pets = ["cat", "dog", "bat"];
@@ -52,7 +51,7 @@ A boolean value which is `true` if the value `searchElement` is found within the
 
 ## Description
 
-The `includes()` method compares `searchElement` to elements of the array using the [SameValueZero](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality) algorithm. Values of zero are all considered to be equal, regardless of sign. (That is, `-0` is equal to `0`), but `false` is _not_ considered to be the same as `0`. [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN) can be correctly searched for.
+The `includes()` method compares `searchElement` to elements of the array using the [SameValueZero algorithm](/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality). This algorithm works like strict equality `===` (where `-0` and `+0` are considered equal), with the exception that {{jsxref("NaN")}} is considered equal to itself.
 
 When used on [sparse arrays](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), the `includes()` method iterates empty slots as if they have the value `undefined`.
 

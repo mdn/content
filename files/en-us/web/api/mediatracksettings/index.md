@@ -35,7 +35,9 @@ Some or all of the following will be included in the object, either because it's
 - {{domxref("MediaTrackSettings.latency", "latency")}}
   - : A double-precision floating point value indicating the current value of the {{domxref("MediaTrackConstraints.latency", "latency")}} property, specifying the audio latency, in seconds. Latency is the amount of time which elapses between the start of processing the audio and the data being available to the next stop in the audio utilization process. This value is a target value; actual latency may vary to some extent for various reasons.
 - {{domxref("MediaTrackSettings.noiseSuppression", "noiseSuppression")}}
-  - : A Boolean which indicates the current value of the {{domxref("MediaTrackConstraints.noiseSuppression", "noiseSuppression")}} property, which is `true` if noise suppression is enabled and is `false` otherwise.
+  - : A Boolean indicating the current value of the {{domxref("MediaTrackConstraints.noiseSuppression", "noiseSuppression")}} property: `true` if noise suppression is enabled, and is `false` otherwise.
+- {{domxref("MediaTrackSettings.restrictOwnAudio", "restrictOwnAudio")}}
+  - : A Boolean indicating the current value of the {{domxref("MediaTrackConstraints.restrictOwnAudio", "restrictOwnAudio")}} property: `true` if the browser will attempt to filter out system audio originating from the capturing tab during screen capture, and `false` otherwise.
 - {{domxref("MediaTrackSettings.sampleRate", "sampleRate")}}
   - : A long integer value indicating the current value of the {{domxref("MediaTrackConstraints.sampleRate", "sampleRate")}} property, specifying the sample rate in samples per second of the audio data. Standard CD-quality audio, for example, has a sample rate of 41,000 samples per second.
 - {{domxref("MediaTrackSettings.sampleSize", "sampleSize")}}
@@ -50,9 +52,7 @@ Some or all of the following will be included in the object, either because it's
 - {{domxref("MediaTrackSettings.aspectRatio", "aspectRatio")}}
   - : A double-precision floating point value indicating the current value of the {{domxref("MediaTrackConstraints.aspectRatio", "aspectRatio")}} property, specified precisely to 10 decimal places. This is the width of the image in pixels divided by its height in pixels. Common values include 1.3333333333 (for the classic television 4:3 "standard" {{glossary("aspect ratio")}}, also used on tablets such as Apple's iPad), 1.7777777778 (for the 16:9 high-definition widescreen aspect ratio), and 1.6 (for the 16:10 aspect ratio common among widescreen computers and tablets).
 - {{domxref("MediaTrackSettings.facingMode", "facingMode")}}
-
   - : A string indicating the current value of the {{domxref("MediaTrackConstraints.facingMode", "facingMode")}} property, specifying the direction the camera is facing. The value will be one of:
-
     - `"user"`
       - : A camera facing the user (commonly known as a "selfie cam"), used for self-portraiture and video calling.
     - `"environment"`
@@ -69,9 +69,7 @@ Some or all of the following will be included in the object, either because it's
 - {{domxref("MediaTrackSettings.width", "width")}}
   - : A long integer value indicating the current value of the {{domxref("MediaTrackSettings.width", "width")}} property, specifying the width of the track's video data in pixels.
 - {{domxref("MediaTrackSettings.resizeMode", "resizeMode")}}
-
   - : A string indicating the current value of the {{domxref("MediaTrackConstraints.resizeMode", "resizeMode")}} property, specifying the mode used by the user agent to derive the resolution of the track. The value will be one of:
-
     - `"none"`
       - : The track has the resolution offered by the camera, its driver or the OS.
     - `"crop-and-scale"`
@@ -82,9 +80,7 @@ Some or all of the following will be included in the object, either because it's
 Tracks containing video shared from a user's screen (regardless of whether the screen data comes from the entire screen or a portion of a screen, like a window or tab) are generally treated like video tracks, with the exception that they also support the following added settings:
 
 - {{domxref("MediaTrackSettings.cursor", "cursor")}}
-
   - : A string which indicates whether or not the mouse cursor is being included in the generated stream and under what conditions. Possible values are:
-
     - `always`
       - : The mouse is always visible in the video content of the {domxref("MediaStream"), unless the mouse has moved outside the area of the content.
     - `motion`
@@ -93,9 +89,7 @@ Tracks containing video shared from a user's screen (regardless of whether the s
       - : The mouse cursor is never included in the shared video.
 
 - {{domxref("MediaTrackSettings.displaySurface", "displaySurface")}}
-
   - : A string which specifies the type of source the track contains; one of:
-
     - `browser`
       - : The stream contains the contents of a single browser tab selected by the user.
     - `monitor`
@@ -105,6 +99,9 @@ Tracks containing video shared from a user's screen (regardless of whether the s
 
 - {{domxref("MediaTrackSettings.logicalSurface", "logicalSurface")}}
   - : A Boolean value which, if `true`, indicates that the video contained in the stream's video track contains a background rendering context, rather than a user-visible one. This is `false` if the video being captured is coming from a foreground (user-visible) source.
+
+- {{domxref("MediaTrackSettings.screenPixelRatio", "screenPixelRatio")}}
+  - : A number representing the ratio of the physical size of a pixel on the captured display surface (displayed at its physical resolution) to the logical size of a CSS pixel on the capturing screen (displayed at its logical resolution). It cannot be used as a constraint or capability.
 
 ## Specifications
 

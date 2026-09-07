@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLSlotElement.slotchange_event
 ---
 
-{{APIRef}}
+{{APIRef("Web Components")}}
 
 The **`slotchange`** event is fired on an {{DOMxRef("HTMLSlotElement")}} instance ({{HTMLElement("slot")}} element) when the node(s) contained in that slot change.
 
@@ -66,4 +66,4 @@ Every time the element inserted in the slot changes, we log a report to the cons
 
 ## See also
 
-{{domxref("HTMLSlotElement")}}
+- {{domxref("HTMLSlotElement")}}

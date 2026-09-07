@@ -18,9 +18,7 @@ The following properties and methods all return, or act on the attributes of the
 _This interface also inherits properties from its parent, {{domxref("SVGElement")}}._
 
 - {{domxref("SVGMarkerElement.markerUnits")}} {{ReadOnlyInline}}
-
   - : Returns an {{domxref("SVGAnimatedEnumeration")}} object, with one of the following values:
-
     - 0
       - : `SVG_MARKERUNITS_UNKNOWN` which means that the {{SVGattr("markerUnits")}} attribute has a value other than the two predefined keywords.
     - 1
@@ -33,16 +31,16 @@ _This interface also inherits properties from its parent, {{domxref("SVGElement"
 - {{domxref("SVGMarkerElement.markerHeight")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("SVGAnimatedLength")}} object containing the height of the {{SVGElement("marker")}} viewport.
 - {{domxref("SVGMarkerElement.orientType")}} {{ReadOnlyInline}}
-
   - : Returns an {{domxref("SVGAnimatedEnumeration")}} object, with one of the following values:
-
     - 0
       - : `SVG_MARKER_ORIENT_UNKNOWN` which means that the {{SVGattr("orient")}} attribute has a value other than the two predefined keywords.
     - 1
       - : `SVG_MARKERUNITS_ORIENT_AUTO` which means that the {{SVGattr("orient")}} attribute has the keyword value `auto`.
     - 2
-      - : `SVG_MARKERUNITS_ORIENT_ANGLE` which means that the {{SVGattr("orient")}} attribute has an {{cssxref("angle")}} or {{cssxref("number")}} value indicating the angle.
+      - : `SVG_MARKERUNITS_ORIENT_ANGLE` which means that the {{SVGattr("orient")}} attribute has an [`<angle>`](/en-US/docs/Web/SVG/Guides/Content_type#angle) or [`<number>`](/en-US/docs/Web/SVG/Guides/Content_type#number) value indicating the angle.
 
+- {{domxref("SVGMarkerElement.orient")}}
+  - : A string defining how the marker is rotated when it is placed at its position on the shape. It reflects the {{SVGAttr("orient")}} attribute of the {{SVGElement("marker")}} element.
 - {{domxref("SVGMarkerElement.orientAngle")}} {{ReadOnlyInline}}
   - : Returns an {{domxref("SVGAnimatedAngle")}} object containing the angle of the {{SVGattr("orient")}} attribute.
 - {{domxref("SVGMarkerElement.refX")}} {{ReadOnlyInline}}
@@ -95,7 +93,7 @@ console.log(marker.markerWidth.baseVal.value); // 6
 
 ### Updating the Orientation Angle
 
-In the following example the value of the `orient` attribute is updated using `setOrientToAngle()` using an {{domxref("SVGAngle")}} created using {{domxref("SVGElement.createSVGAngle()")}}.
+In the following example the value of the `orient` attribute is updated using `setOrientToAngle()` using an {{domxref("SVGAngle")}} created using {{domxref("SVGSVGElement.createSVGAngle()")}}.
 
 ```js
 let svg = document.getElementById("svg");

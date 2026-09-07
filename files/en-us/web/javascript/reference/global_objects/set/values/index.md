@@ -4,25 +4,24 @@ short-title: values()
 slug: Web/JavaScript/Reference/Global_Objects/Set/values
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Set.values
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`values()`** method of {{jsxref("Set")}} instances returns a new _[set iterator](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator)_ object that contains the values for each element in this set in insertion order.
 
 {{InteractiveExample("JavaScript Demo: Set.prototype.values()")}}
 
 ```js interactive-example
-const set1 = new Set();
-set1.add(42);
-set1.add("forty two");
+const set = new Set();
+set.add(42);
+set.add("forty two");
 
-const iterator1 = set1.values();
+const iterator = set.values();
 
-console.log(iterator1.next().value);
+console.log(iterator.next().value);
 // Expected output: 42
 
-console.log(iterator1.next().value);
+console.log(iterator.next().value);
 // Expected output: "forty two"
 ```
 

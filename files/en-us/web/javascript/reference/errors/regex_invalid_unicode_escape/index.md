@@ -2,9 +2,8 @@
 title: "SyntaxError: invalid unicode escape in regular expression"
 slug: Web/JavaScript/Reference/Errors/Regex_invalid_unicode_escape
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "invalid unicode escape in regular expression" occurs when the `\c` and `\u` [character escapes](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape) are not followed by valid characters.
 

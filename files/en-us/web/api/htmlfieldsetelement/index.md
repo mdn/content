@@ -26,11 +26,11 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
   - : A string reflecting the [`name`](/en-US/docs/Web/HTML/Reference/Elements/fieldset#name) HTML attribute, containing the name of the field set. This can be used when accessing the field set in JavaScript. It is _not_ part of the data which is sent to the server.
 - {{domxref("HTMLFieldSetElement.type")}} {{ReadOnlyInline}}
   - : The string `"fieldset"`.
-- {{domxref("HTMLFieldSetElement.validationMessage")}}
+- {{domxref("HTMLFieldSetElement.validationMessage")}} {{ReadOnlyInline}}
   - : A string representing a localized message that describes the validation constraints that the element does not satisfy (if any). This is the empty string if the element is not a candidate for constraint validation (`willValidate` is `false`), or it satisfies its constraints.
-- {{domxref("HTMLFieldSetElement.validity")}}
+- {{domxref("HTMLFieldSetElement.validity")}} {{ReadOnlyInline}}
   - : A {{domxref("ValidityState")}} representing the validity states that this element is in.
-- {{domxref("HTMLFieldSetElement.willValidate")}}
+- {{domxref("HTMLFieldSetElement.willValidate")}} {{ReadOnlyInline}}
   - : A boolean value `false`, because {{HTMLElement("fieldset")}} objects are never candidates for constraint validation.
 
 ## Instance methods

@@ -4,9 +4,8 @@ short-title: Cross-Origin-Opener-Policy
 slug: Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy
 page-type: http-header
 browser-compat: http.headers.Cross-Origin-Opener-Policy
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Cross-Origin-Opener-Policy`** (COOP) {{glossary("response header")}} allows a website to control whether a new top-level document, opened using {{domxref("Window.open()")}} or by navigating to a new page, is opened in the same {{glossary("Browsing context","browsing context group")}} (BCG) or in a new browsing context group.
 
@@ -24,10 +23,6 @@ The behavior depends on the policies of both the new document and its opener, an
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
     </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
-    </tr>
   </tbody>
 </table>
 
@@ -43,7 +38,6 @@ Cross-Origin-Opener-Policy: noopener-allow-popups
 ### Directives
 
 - `unsafe-none`
-
   - : The document permits sharing its browsing context group with any other document, and may therefore be unsafe.
     It is used to opt-out a document from using COOP for process isolation.
     This is the default value.
@@ -55,14 +49,12 @@ Cross-Origin-Opener-Policy: noopener-allow-popups
     A document with `same-origin` will always open a document with `unsafe-none` in a new BCG.
 
 - `same-origin`
-
   - : The document permits loading into BCGs that use COOP and contain only same-origin documents.
     This is used to provide [cross-origin isolation](/en-US/docs/Web/API/Window/crossOriginIsolated) for a BCG.
 
     Documents with `same-origin` will only open and be opened in the same BCG if both documents are same-origin and have the `same-origin` directive.
 
 - `same-origin-allow-popups`
-
   - : This is similar to [`same-origin`](#same-origin) directive, except that it allows the opening of documents using {{domxref("Window.open()")}} in the same BCG if they have a COOP value of `unsafe-none`.
 
     The directive is used to relax the `same-origin` restriction for integrations where a document needs the benefits of cross-origin isolation but also needs to open and retain a reference to trusted cross-origin documents.
@@ -74,7 +66,6 @@ Cross-Origin-Opener-Policy: noopener-allow-popups
     Otherwise documents with `same-origin-allow-popups` will only open and be opened in the same BCG if both documents are same-origin and have the `same-origin-allow-popups` directive.
 
 - `noopener-allow-popups`
-
   - : Documents with this directive are always opened into a new BCG, except when opened by navigating from a document that also has `noopener-allow-popups`.
     It is used to support cases where there is a need to process-isolate _same-origin_ documents.
 
@@ -171,7 +162,7 @@ The "right way" to isolate these applications would be to host them on different
 
 The `Cross-Origin-Opener-Policy: noopener-allow-popups` header can be used to ensure that a document can't be scripted by a document that opens it.
 
-If `example.com/passwords` is served with `noopener-allow-popups` the `WindowProxy` returned by {{domxref("Window.open()")}} will indicate that the windows is closed ({{domxref("Window.closed")}} is `true`), so the opener can't script the passwords app:
+If `example.com/passwords` is served with `noopener-allow-popups` the `WindowProxy` returned by {{domxref("Window.open()")}} will indicate that the window is closed ({{domxref("Window.closed")}} is `true`), so the opener can't script the passwords app:
 
 ```js
 const handle = window.open("example.com/passwords", "passwordTab");
@@ -186,7 +177,7 @@ The site would also need to do the following:
 - Use Fetch Metadata to block same-origin requests to the more-sensitive app that are not navigation requests.
 - Ensure their authentication cookies are all `HttpOnly`.
 - Ensure root-level Service-Workers are not installed by the less-sensitive app.
-- Ensure that `postMessage` or `BroadcastChannel` on the more-sensitive app don't expose any sensitive information the any other same-origin app.
+- Ensure that `postMessage` or `BroadcastChannel` on the more-sensitive app don't expose any sensitive information to any other same-origin app.
 - Ensure their login page is served on a separate origin, due to password manager autofill being applied based on origin.
 - Understand that the browser may still allocate the more-sensitive app in the same process as the less-sensitive one, making it vulnerable to Spectre-like attacks.
 

@@ -147,7 +147,7 @@ Web frameworks often provide a mechanism to make it easy to generate other forma
 For example, the Django template system allows you to specify variables using a "double-handlebars" syntax (e.g., `\{{ variable_name }}`), which will be replaced by values passed in from the view function when a page is rendered. The template system also provides support for expressions (with syntax: `{% expression %}`), which allow templates to perform simple operations like iterating list values passed into the template.
 
 > [!NOTE]
-> Many other templating systems use a similar syntax, e.g.: Jinja2 (Python), handlebars (JavaScript), moustache (JavaScript), etc.
+> Many other templating systems use a similar syntax, e.g.: Jinja2 (Python), Handlebars (JavaScript), Mustache (JavaScript), etc.
 
 The code snippet below shows how this works. Continuing the "youngest team" example from the previous section, the HTML template is passed a list variable called `youngest_teams` by the view. Inside the HTML skeleton we have an expression that first checks if the `youngest_teams` variable exists, and then iterates it in a `for` loop. On each iteration the template displays the team's `team_name` value in a list item.
 
@@ -178,7 +178,6 @@ Some of the factors that may affect your decision are:
 
 - **Effort to learn:** The effort to learn a web framework depends on how familiar you are with the underlying programming language, the consistency of its API, the quality of its documentation, and the size and activity of its community. If you're starting from absolutely no programming experience then consider Django (it is one of the easiest to learn based on the above criteria). If you are part of a development team that already has significant experience with a particular web framework or programming language, then it makes sense to stick with that.
 - **Productivity:** Productivity is a measure of how quickly you can create new features once you are familiar with the framework, and includes both the effort to write and maintain code (since you can't write new features while old ones are broken). Many of the factors affecting productivity are similar to those for "Effort to learn" — e.g., documentation, community, programming experience, etc. — other factors include:
-
   - _Framework purpose/origin_: Some web frameworks were initially created to solve certain types of problems, and remain _better_ at creating web apps with similar constraints. For example, Django was created to support development of a newspaper website, so it's good for blogs and other sites that involve publishing things. By contrast, Flask is a much lighter-weight framework and is great for creating web apps running on embedded devices.
   - _Opinionated vs. unopinionated_: An opinionated framework is one in which there are recommended "best" ways to solve a particular problem. Opinionated frameworks tend to be more productive when you're trying to solve common problems, because they lead you in the right direction, however they are sometimes less flexible.
   - _Batteries included vs. get it yourself_: Some web frameworks include tools/libraries that address every problem their developers can think "by default", while more lightweight frameworks expect web developers to pick and choose solution to problems from separate libraries (Django is an example of the former, while Flask is an example of a very light-weight framework). Frameworks that include everything are often easier to get started with because you already have everything you need, and the chances are that it is well integrated and well documented. However if a smaller framework has everything you (will ever) need then it can run in more constrained environments and will have a smaller and easier subset of things to learn.
@@ -197,13 +196,10 @@ If you're an absolute beginner at programming then you'll probably choose your f
 > Let's go to the main websites for [Django](https://www.djangoproject.com/) (Python) and [Express](https://expressjs.com/) (Node/JavaScript) and check out their documentation and community.
 >
 > 1. Navigate to the main sites (linked above)
->
 >    - Click on the Documentation menu links (named things like "Documentation, Guide, API Reference, Getting Started", etc.).
 >    - Can you see topics showing how to set up URL routing, templates, and databases/models?
 >    - Are the documents clear?
->
 > 2. Navigate to mailing lists for each site (accessible from Community links).
->
 >    - How many questions have been posted in the last few days
 >    - How many have responses?
 >    - Do they have an active community?
@@ -247,7 +243,7 @@ A lot of high profile companies use Express, including: Uber, Accenture, IBM, et
 
 ### Deno (JavaScript)
 
-[Deno](https://deno.com/) is a simple, modern, and secure [JavaScript](/en-US/docs/Web/JavaScript)/TypeScript runtime and framework built on top of Chrome V8 and [Rust](https://www.rust-lang.org/).
+[Deno](https://deno.com/) is a simple, modern, and secure [JavaScript](/en-US/docs/Web/JavaScript)/TypeScript runtime and framework built on top of Chrome V8 and [Rust](https://rust-lang.org/).
 
 Deno is powered by [Tokio](https://tokio.rs/) — a Rust-based asynchronous runtime which lets it serve web pages faster. It also has internal support for [WebAssembly](/en-US/docs/WebAssembly), which enables the compilation of binary code for use on the client-side. Deno aims to fill in some of the loop-holes in [Node.js](/en-US/docs/Learn_web_development/Extensions/Server-side/Node_server_without_framework) by providing a mechanism that naturally maintains better security.
 
@@ -270,7 +266,7 @@ Rails follows a very similar design philosophy to Django. Like Django it provide
 
 There are of course many differences due to specific design decisions and the nature of the languages.
 
-Rails has been used for high profile sites, including: [Basecamp](https://basecamp.com/), [GitHub](https://github.com/), [Shopify](https://www.shopify.com/), [Airbnb](https://www.airbnb.com/), [Twitch](https://www.twitch.tv/), [SoundCloud](https://soundcloud.com/), [Hulu](https://www.hulu.com/welcome), [Zendesk](https://www.zendesk.com/), [Square](https://squareup.com/us/en), [Highrise](https://highrisehq.com/).
+Rails has been used for high profile sites, including: [Basecamp](https://basecamp.com/), [GitHub](https://github.com/), [Shopify](https://www.shopify.com/), [Airbnb](https://www.airbnb.com/), [Twitch](https://www.twitch.tv/), [SoundCloud](https://soundcloud.com/), [Hulu](https://www.hulu.com/welcome), [Zendesk](https://www.zendesk.com/), [Square](https://squareup.com/us/en).
 
 ### Laravel (PHP)
 
@@ -313,7 +309,7 @@ Some of the features provided by Mojolicious are:
 
 [Spring Boot](https://spring.io/projects/spring-boot/) is one of a number of projects provided by [Spring](https://spring.io/). It is a good starting point for doing server-side web development using [Java](https://www.java.com/).
 
-Although definitely not the only framework based on [Java](https://www.java.com/) it is easy to use to create stand-alone, production-grade Spring-based Applications that you can "just run". It is an opinionated view of the Spring platform and third-party libraries but allows to start with minimum fuss and configuration.
+Although definitely not the only framework based on [Java](https://www.java.com/) it is easy to use to create stand-alone, production-grade Spring-based Applications that you can "just run". It is an opinionated view of the Spring platform and third-party libraries but allows you to start with minimum fuss and configuration.
 
 It can be used for small problems but its strength is building larger scale applications that use a cloud approach. Usually multiple applications run in parallel talking to each other, with some providing user interaction and others doing back end work (e.g., accessing databases or other services). Load balancers help to ensure redundancy and reliability or allow geolocated handling of user requests to ensure responsiveness.
 

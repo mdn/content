@@ -3,9 +3,8 @@ title: Block statement
 slug: Web/JavaScript/Reference/Statements/block
 page-type: javascript-statement
 browser-compat: javascript.statements.block
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 A **block statement** is used to group zero or more statements. The block is delimited by a pair of braces ("curly braces") and contains a list of zero or more statements and declarations.
 
@@ -146,6 +145,21 @@ console.log(sector);
 //   perimeter: 30.471975511965976
 // }
 console.log(typeof radius); // "undefined"
+```
+
+### `using` declarations in a block
+
+You can declare variables with {{jsxref("Statements/using", "using")}} or {{jsxref("Statements/await_using", "await using")}} in a block, which causes the object stored in the variable to be disposed when control exits the block. For more information, see [resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management).
+
+```js
+{
+  using reader1 = stream1.getReader();
+  using reader2 = stream2.getReader();
+
+  // do something with reader1 and reader2
+
+  // Before we exit the block, reader1 and reader2 are automatically released
+}
 ```
 
 ## Specifications

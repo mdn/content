@@ -1,15 +1,14 @@
 ---
-title: <meta> name attribute
-short-title: <meta> name
+title: "`<meta name>` HTML attribute"
+short-title: <meta name>
 slug: Web/HTML/Reference/Elements/meta/name
 page-type: html-attribute
 browser-compat: html.elements.meta.name
+sidebar: htmlsidebar
 ---
 
-{{HTMLSidebar}}
-
 The **`name`** attribute of the {{htmlelement("meta")}} element provides metadata in name-value pairs.
-When a `<meta>` element has a `name` attribute, a [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute defines the corresponding value.
+When a `<meta>` element has a `name` attribute, a [`content`](/en-US/docs/Web/HTML/Reference/Attributes/content) attribute defines the corresponding value.
 The metadata is _document-level metadata_ that applies to the whole page.
 
 For example, the following `<meta>` tag provides a `description` as metadata for a document:
@@ -27,7 +26,6 @@ For example, the following `<meta>` tag provides a `description` as metadata for
 The HTML specification defines the following set of standard metadata names:
 
 - `application-name`
-
   - : Browsers may use this to identify the application running in the web page.
     It is different from the {{HTMLElement("title")}} element, which may contain an application (or website) name, but a `<title>` may add contextual information like a document name or a status.
     Individual pages shouldn't define their own, unique `application-name`.
@@ -60,10 +58,12 @@ The HTML specification defines the following set of standard metadata names:
 
 ### Meta names defined in other specifications
 
-The CSS Device Adaptation specification defines the following metadata name:
-
+- [`responsive-embedded-sizing`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/responsive-embedded-sizing) {{experimental_inline}}
+  - : Opts in an embedded document to sharing its size information with the parent page. Defined in the [CSS box sizing module](/en-US/docs/Web/CSS/Guides/Box_sizing).
+- [`text-scale`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/text-scale) {{experimental_inline}}
+  - : Enables opting the page in to having the {{htmlelement("html")}} root element's {{cssxref("font-size")}} scale in proportion to OS and browser-level text scale settings. Defined in the [CSS fonts module](/en-US/docs/Web/CSS/Guides/Fonts).
 - [`viewport`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport)
-  - : Gives hints about the size of the initial size of the {{glossary("viewport")}}.
+  - : Gives hints about the initial size of the {{glossary("viewport")}}. Defined in the [CSS viewport module](/en-US/docs/Web/CSS/Guides/Viewport).
 
 ### Meta names defined in the WHATWG MetaExtensions wiki
 
@@ -90,5 +90,4 @@ Some of the names included are used quite commonly in practice, notably the foll
 
 ## See also
 
-- [Viewport `<meta>` tag](/en-US/docs/Web/HTML/Guides/Viewport_meta_element)
 - [Metadata: the `<meta>` element](/en-US/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#metadata_the_meta_element)

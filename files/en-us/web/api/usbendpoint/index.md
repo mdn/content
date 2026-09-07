@@ -21,16 +21,12 @@ The `USBEndpoint` interface of the [WebUSB API](/en-US/docs/Web/API/WebUSB_API) 
 - {{domxref("USBEndpoint.endpointNumber")}} {{Experimental_Inline}}
   - : Returns this endpoint's "endpoint number" which is a value from 1 to 15 extracted from the `bEndpointAddress` field of the endpoint descriptor defining this endpoint. This value is used to identify the endpoint when calling methods on `USBDevice`.
 - {{domxref("USBEndpoint.direction")}} {{Experimental_Inline}}
-
   - : Returns the direction in which this endpoint transfers data, one of:
-
     - `"in"` - Data is transferred from device to host.
     - `"out"` - Data is transferred from host to device.
 
 - {{domxref("USBEndpoint.type")}} {{Experimental_Inline}}
-
   - : Returns the type of this endpoint, one of:
-
     - `"bulk"` - Provides reliable data transfer for large payloads. Data sent through a bulk endpoint is guaranteed to be delivered or generate an error but may be preempted by other data traffic.
     - `"interrupt"` - Provides reliable data transfer for small payloads. Data sent through an interrupt endpoint is guaranteed to be delivered or generate an error and is also given dedicated bus time for transmission.
     - `"isochronous"` - Provides unreliable data transfer for payloads that must be delivered periodically. They are given dedicated bus time but if a deadline is missed the data is dropped.

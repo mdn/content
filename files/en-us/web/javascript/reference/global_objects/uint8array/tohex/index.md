@@ -4,9 +4,8 @@ short-title: toHex()
 slug: Web/JavaScript/Reference/Global_Objects/Uint8Array/toHex
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Uint8Array.toHex
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toHex()`** method of {{jsxref("Uint8Array")}} instances returns a hex-encoded string based on the data in this `Uint8Array` object.
 
@@ -42,7 +41,7 @@ for (let i = 0; i < data.length; i += 3) {
 }
 // "ff0000"
 // "00ff00"
-// "00ff00"
+// "0000ff"
 ```
 
 ## Specifications

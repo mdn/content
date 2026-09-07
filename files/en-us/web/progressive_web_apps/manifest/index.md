@@ -43,8 +43,8 @@ All members are optional in the specification, but some applications require som
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "black",
+  "background_color": "white"
 }
 ```
 

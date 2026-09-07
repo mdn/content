@@ -92,7 +92,7 @@ The `loadTexture()` routine starts by creating a WebGL texture object `texture` 
 
 To load the texture from the image file, it then creates an `Image` object and assigns the `src` to the URL for our image we wish to use as our texture. The function we assign to `image.onload` will be called once the image has finished downloading. At that point we again call {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}} this time using the image as the source for the texture. After that we set up filtering and wrapping for the texture based on whether or not the image we download was a power of 2 in both dimensions or not.
 
-WebGL1 can only use non power of 2 textures with filtering set to `NEAREST` or `LINEAR` and it can not generate a mipmap for them. Their wrapping mode must also be set to `CLAMP_TO_EDGE`. On the other hand if the texture is a power of 2 in both dimensions then WebGL can do higher quality filtering, it can use mipmap, and it can set the wrapping mode to `REPEAT` or `MIRRORED_REPEAT`.
+WebGL1 can only use non power of 2 textures with filtering set to `NEAREST` or `LINEAR` and it cannot generate a mipmap for them. Their wrapping mode must also be set to `CLAMP_TO_EDGE`. On the other hand if the texture is a power of 2 in both dimensions then WebGL can do higher quality filtering, it can use mipmap, and it can set the wrapping mode to `REPEAT` or `MIRRORED_REPEAT`.
 
 An example of a repeated texture is tiling an image of a few bricks to cover a brick wall.
 
@@ -345,7 +345,7 @@ At this point, the rotating cube should be good to go.
 
 Loading of WebGL textures is subject to cross-domain access controls. In order for your content to load a texture from another domain, CORS approval needs to be obtained. See [HTTP access control](/en-US/docs/Web/HTTP/Guides/CORS) for details on CORS.
 
-Because WebGL now requires textures to be loaded from secure contexts, you can't use textures loaded from `file:///` URLs in WebGL. That means that you'll need a secure web server to test and deploy your code. For local testing, see our guide [How do you set up a local testing server?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server) for help.
+Modern browsers usually treat the origin of files loaded using the file:/// scheme as _opaque origins_. Even when a file includes other files from the same folder, they are not assumed to come from the same origin, and may trigger CORS errors (see [Same-origin policy#File origins](/en-US/docs/Web/Security/Defenses/Same-origin_policy#file_origins)). That means that you can't use textures loaded from `file:///` URLs in WebGL and need a web server to test and deploy your code. For local testing, see our guide [How do you set up a local testing server?](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server) for help.
 
 See this [hacks.mozilla.org article](https://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) for an explanation of how to use CORS-approved images as WebGL textures.
 

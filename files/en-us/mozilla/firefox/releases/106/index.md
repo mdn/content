@@ -1,10 +1,10 @@
 ---
-title: Firefox 106 for developers
+title: Firefox 106 release notes for developers
+short-title: Firefox 106
 slug: Mozilla/Firefox/Releases/106
 page-type: firefox-release-notes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 This article provides information about the changes in Firefox 106 that will affect developers. Firefox 106 was released on October 18, 2022.
 
@@ -21,7 +21,7 @@ This article provides information about the changes in Firefox 106 that will aff
 
 ### CSS
 
-- The [@supports](/en-US/docs/Web/CSS/@supports) at-rule now supports the `font-tech()` and `font-format()` functions.
+- The [@supports](/en-US/docs/Web/CSS/Reference/At-rules/@supports) at-rule now supports the `font-tech()` and `font-format()` functions.
   These functions can be used to test whether a browser supports a given font technology or format and CSS styles can be applied based on the result ([Firefox bug 1786493](https://bugzil.la/1786493)).
 
 ### JavaScript
@@ -59,7 +59,3 @@ No notable changes.
 
 - The ability to set the [`"background"`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) manifest key property `"persistent"` to `false` for Manifest V2 (to make a background page non-persistent) is now available by default.
 - The `object-src` directive in the `"content_security_policy"` manifest key is now optional ([Firefox bug 1766881](https://bugzil.la/1766881)). See [object-src directive](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy#object-src_directive) on the `"content_security_policy"` manifest key page for more details.
-
-## Older versions
-
-{{Firefox_for_developers}}

@@ -3,9 +3,8 @@ title: contextualIdentities.onRemoved
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onRemoved
 page-type: webextension-api-event
 browser-compat: webextensions.api.contextualIdentities.onRemoved
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a new contextual identity is removed. Contextual identities may be removed by extensions using the `contextualIdentities` API, or directly by the user, using the browser's user interface.
 
@@ -31,15 +30,9 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `changeInfo`
       - : `object`. An object that contains a single property, `contextualIdentity`, which is a {{WebExtAPIRef("contextualIdentities.ContextualIdentity")}} object representing the identity that was removed.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -52,6 +45,10 @@ browser.contextualIdentities.onRemoved.addListener(handleRemoved);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

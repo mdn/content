@@ -3,9 +3,8 @@ title: Implementing controls using the Gamepad API
 short-title: Using the Gamepad API
 slug: Games/Techniques/Controls_Gamepad_API
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 This article looks at implementing an effective, cross-browser control system for web games using the Gamepad API, allowing you to control your web games using console game controllers. It features a case study game — Hungry Fridge, created by [Enclave Games](https://enclavegames.com/).
 
@@ -248,4 +247,4 @@ There were more events available in the spec than just `gamepadconnected` and `g
 
 ## Summary
 
-The Gamepad API is very easy to develop with. Now it's easier than ever to deliver a console-like experience to the browser without the need for any plugins. You can play the full version of the [Hungry Fridge](https://enclavegames.com/games/hungry-fridge/) game directly in your browser. Check the other resources on the [Gamepad API Content Kit](https://end3r.github.io/Gamepad-API-Content-Kit/).
+The Gamepad API enables delivering a console-like experience to the browser without the need for any plugins. You can play the full version of the [Hungry Fridge](https://enclavegames.com/games/hungry-fridge/) game directly in your browser. Check the other resources on the [Gamepad API Content Kit](https://end3r.github.io/Gamepad-API-Content-Kit/).

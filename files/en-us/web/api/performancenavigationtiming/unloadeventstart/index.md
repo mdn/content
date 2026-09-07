@@ -8,13 +8,13 @@ browser-compat: api.PerformanceNavigationTiming.unloadEventStart
 
 {{APIRef("Performance API")}}
 
-The **`unloadEventStart`** read-only property returns a {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the current document's [`unload`](/en-US/docs/Web/API/Window/unload_event) event handler starts.
+The **`unloadEventStart`** read-only property returns a {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the previous document's [`unload`](/en-US/docs/Web/API/Window/unload_event) event handler starts.
 
 ## Value
 
 The `unloadEventStart` property can have the following values:
 
-- A {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the current document's [`unload`](/en-US/docs/Web/API/Window/unload_event) event handler starts.
+- A {{domxref("DOMHighResTimeStamp")}} representing the time immediately before the previous document's [`unload`](/en-US/docs/Web/API/Window/unload_event) event handler starts.
 - `0` if there is no previous document.
 - `0` if the previous page was on another origin.
 
@@ -54,7 +54,7 @@ Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `n
 ```js
 const entries = performance.getEntriesByType("navigation");
 entries.forEach((entry) => {
-  const loadEventTime = entry.unloadEventEnd - entry.unloadEventStart;
+  const unloadEventTime = entry.unloadEventEnd - entry.unloadEventStart;
   if (unloadEventTime > 0) {
     console.log(`${entry.name}:
       load event handler time: ${unloadEventTime}ms`);

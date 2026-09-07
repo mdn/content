@@ -8,7 +8,7 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django")}}
 
-Now that we've created models for the [LocalLibrary](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) website, we'll use the Django Admin site to add some "real" book data. First we'll show you how to register the models with the admin site, then we'll show you how to login and create some data. At the end of the article we will show some of the ways you can further improve the presentation of the Admin site.
+Now that we've created models for the [LocalLibrary](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) website, we'll use the Django Admin site to add some "real" book data. First we'll show you how to register the models with the admin site, then we'll show you how to log in and create some data. At the end of the article we will show some of the ways you can further improve the presentation of the Admin site.
 
 <table>
   <tbody>
@@ -82,7 +82,7 @@ python3 manage.py runserver
 
 ## Logging in and using the site
 
-To login to the site, open the _/admin_ URL (e.g., `http://127.0.0.1:8000/admin`) and enter your new superuser userid and password credentials (you'll be redirected to the _login_ page, and then back to the _/admin_ URL after you've entered your details).
+To log into the site, open the _/admin_ URL (e.g., `http://127.0.0.1:8000/admin`) and enter your new superuser userid and password credentials (you'll be redirected to the _login_ page, and then back to the _/admin_ URL after you've entered your details).
 
 This part of the site displays all our models, grouped by installed application. You can click on a model name to go to a screen that lists all its associated records, and you can further click on those records to edit them. You can also directly click the **Add** link next to each model to start creating a record of that type.
 
@@ -131,13 +131,11 @@ Django does a pretty good job of creating a basic admin site using the informati
 You can further customize the interface to make it even easier to use. Some of the things you can do are:
 
 - List views:
-
   - Add additional fields/information displayed for each record.
   - Add filters to select which records are listed, based on date or some other selection value (e.g., Book loan status).
   - Add additional options to the actions menu in list views and choose where this menu is displayed on the form.
 
 - Detail views
-
   - Choose which fields to display (or exclude), along with their order, grouping, whether they are editable, the widget used, orientation etc.
   - Add related fields to a record to allow inline editing (e.g., add the ability to add and edit book records while you're creating their author record).
 

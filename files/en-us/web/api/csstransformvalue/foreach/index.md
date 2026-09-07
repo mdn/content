@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CSSTransformValue.forEach
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`CSSTransformValue.forEach()`** method executes a provided function once for each element of the `CSSTransformValue`.
 
@@ -20,9 +20,7 @@ forEach(callbackFn, thisArg)
 ### Parameters
 
 - `callbackFn`
-
   - : The function to execute for each element, taking three arguments:
-
     - `currentValue`
       - : The value of the current element being processed.
     - `index` {{optional_inline}}

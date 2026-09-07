@@ -3,9 +3,8 @@ title: bookmarks.onChanged
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChanged
 page-type: webextension-api-event
 browser-compat: webextensions.api.bookmarks.onChanged
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when there is a change to:
 
@@ -34,9 +33,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `id`
       - : `string`. ID of the item that changed.
     - `changeInfo`

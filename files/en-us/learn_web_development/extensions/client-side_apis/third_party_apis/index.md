@@ -31,9 +31,9 @@ The APIs we've covered so far are built into the browser, but not all APIs are. 
   </tbody>
 </table>
 
-## What are third party APIs?
+## What are third-party APIs?
 
-Third party APIs are APIs provided by third parties — generally companies such as Facebook, Twitter, or Google — to allow you to access their functionality via JavaScript and use it on your site. One of the most obvious examples is using mapping APIs to display custom maps on your pages.
+Third-party APIs are APIs provided by third parties — generally companies such as Facebook, Twitter, or Google — to allow you to access their functionality via JavaScript and use it on your site. One of the most obvious examples is using mapping APIs to display custom maps on your pages.
 
 Let's look at a [Simple Mapquest API example](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/mapquest), and use it to illustrate how third-party APIs differ from browser APIs.
 
@@ -50,7 +50,7 @@ const audioSource = audioCtx.createMediaElementSource(audioElement);
 // etc.
 ```
 
-Third party APIs, on the other hand, are located on third party servers. To access them from JavaScript you first need to connect to the API functionality and make it available on your page. This typically involves first linking to a JavaScript library available on the server via a {{htmlelement("script")}} element, as seen in our Mapquest example:
+Third-party APIs, on the other hand, are located on third-party servers. To access them from JavaScript you first need to connect to the API functionality and make it available on your page. This typically involves first linking to a JavaScript library available on the server via a {{htmlelement("script")}} element, as seen in our Mapquest example:
 
 ```html
 <script
@@ -82,7 +82,7 @@ This is all the information the Mapquest API needs to plot a simple map. The ser
 
 Security for browser APIs tends to be handled by permission prompts, as [discussed in our first article](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction#they_have_additional_security_mechanisms_where_appropriate). The purpose of these is so that the user knows what is going on in the websites they visit and is less likely to fall victim to someone using an API in a malicious way.
 
-Third party APIs have a slightly different permissions system — they tend to use developer keys to allow developers access to the API functionality, which is more to protect the API vendor than the user.
+Third-party APIs have a slightly different permissions system — they tend to use developer keys to allow developers access to the API functionality, which is more to protect the API vendor than the user.
 
 You'll find a line similar to the following in the Mapquest API example:
 
@@ -153,7 +153,7 @@ L.marker([53.480759, -2.242631], {
 
 As you can see, this at its simplest takes two parameters, an array containing the coordinates at which to display the marker, and an options object containing an `icon` property that defines the icon to display at that point.
 
-The icon is defined using an [`mapquest.icons.marker()`](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-icons/) method, which as you can see contains information such as color and size of marker.
+The icon is defined using a [`mapquest.icons.marker()`](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-icons/) method, which as you can see contains information such as color and size of marker.
 
 Onto the end of the first method call we chain `.bindPopup('This is Manchester!')`, which defines content to display when the marker is clicked.
 
@@ -172,7 +172,7 @@ Below we'll take you through an exercise to show you how to use the NYTimes API,
 
 ### Find the documentation
 
-When you want to use a third party API, it is essential to find out where the documentation is, so you can find out what features the API has, how you use them, etc. The New York Times API documentation is at <https://developer.nytimes.com/>.
+When you want to use a third-party API, it is essential to find out where the documentation is, so you can find out what features the API has, how you use them, etc. The New York Times API documentation is at <https://developer.nytimes.com/>.
 
 ### Get a developer key
 
@@ -291,7 +291,7 @@ function displayResults(json) {
       const heading = document.createElement("h2");
       const link = document.createElement("a");
       const img = document.createElement("img");
-      const para1 = document.createElement("p");
+      const para = document.createElement("p");
       const keywordPara = document.createElement("p");
       keywordPara.classList.add("keywords");
 
@@ -299,7 +299,7 @@ function displayResults(json) {
 
       link.href = current.web_url;
       link.textContent = current.headline.main;
-      para1.textContent = current.snippet;
+      para.textContent = current.snippet;
       keywordPara.textContent = "Keywords: ";
       for (const keyword of current.keywords) {
         const span = document.createElement("span");
@@ -315,7 +315,7 @@ function displayResults(json) {
       article.appendChild(heading);
       heading.appendChild(link);
       article.appendChild(img);
-      article.appendChild(para1);
+      article.appendChild(para);
       article.appendChild(keywordPara);
       section.appendChild(article);
     }
@@ -330,7 +330,6 @@ There's a lot of code here; let's explain it step by step:
 - The first [`if ()`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else) block checks to see if 10 articles are returned (the API returns up to 10 articles at a time.) If so, we display the {{htmlelement("nav")}} that contains the _Previous 10_/_Next 10_ pagination buttons. If fewer than 10 articles are returned, they will all fit on one page, so we don't need to show the pagination buttons. We will wire up the pagination functionality in the next section.
 - The next `if ()` block checks to see if no articles are returned. If so, we don't try to display any — we create a {{htmlelement("p")}} containing the text "No results returned." and insert it into the `<section>`.
 - If some articles are returned, we, first of all, create all the elements that we want to use to display each news story, insert the right contents into each one, and then insert them into the DOM at the appropriate places. To work out which properties in the article objects contained the right data to show, we consulted the Article Search API reference (see [NYTimes APIs](https://developer.nytimes.com/apis)). Most of these operations are fairly obvious, but a few are worth calling out:
-
   - We used a [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop to go through all the keywords associated with each article, and insert each one inside its own {{htmlelement("span")}}, inside a `<p>`. This was done to make it easy to style each one.
   - We used an `if ()` block (`if (current.multimedia.length > 0) { }`) to check whether each article has any images associated with it, as some stories don't. We display the first image only if it exists; otherwise, an error would be thrown.
 

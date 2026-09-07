@@ -4,9 +4,8 @@ short-title: Access-Control-Allow-Headers
 slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Headers
 page-type: http-header
 browser-compat: http.headers.Access-Control-Allow-Headers
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Access-Control-Allow-Headers`** {{Glossary("response header")}} is used in response to a {{Glossary("preflight request")}} to indicate the HTTP headers that can be used during the actual request.
 This header is required if the preflight request contains {{HTTPHeader("Access-Control-Request-Headers")}}.
@@ -19,10 +18,6 @@ This header is required if the preflight request contains {{HTTPHeader("Access-C
     <tr>
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>
@@ -86,7 +81,7 @@ The preflight request below tells the server that we want to send a CORS `GET` r
 OPTIONS /resource/foo
 Access-Control-Request-Method: GET
 Access-Control-Request-Headers: content-type,x-requested-with
-Origin: https://foo.bar.org
+Origin: https://www.example.com
 ```
 
 #### Response
@@ -97,7 +92,7 @@ If the CORS request indicated by the preflight request is authorized, the server
 HTTP/1.1 200 OK
 Content-Length: 0
 Connection: keep-alive
-Access-Control-Allow-Origin: https://foo.bar.org
+Access-Control-Allow-Origin: https://www.example.com
 Access-Control-Allow-Methods: POST, GET, OPTIONS, DELETE
 Access-Control-Allow-Headers: Content-Type, x-requested-with
 Access-Control-Max-Age: 86400

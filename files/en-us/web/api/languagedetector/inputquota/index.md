@@ -8,7 +8,7 @@ status:
 browser-compat: api.LanguageDetector.inputQuota
 ---
 
-{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}
+{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`inputQuota`** read-only property of the {{domxref("LanguageDetector")}} interface returns the input quota available to the browser for detecting languages.
 
@@ -16,7 +16,7 @@ The **`inputQuota`** read-only property of the {{domxref("LanguageDetector")}} i
 
 A number specifying the available input quota.
 
-This number is implementation-dependant. For example, it might be {{jsxref("Infinity")}} if there are no limits beyond the user's memory and the maximum length of JavaScript strings, or it might be a number of tokens in the case of AI models that use a token/credits scheme.
+This number is implementation-dependent. For example, it might be {{jsxref("Infinity")}} if there are no limits beyond the user's memory and the maximum length of JavaScript strings, or it might be a number of tokens in the case of AI models that use a token/credits scheme.
 
 The only guarantee is that `inputQuota` - {{domxref("LanguageDetector.measureInputUsage", "measureInputUsage()")}} will be non-negative if there is sufficient quota to detect the text's language.
 

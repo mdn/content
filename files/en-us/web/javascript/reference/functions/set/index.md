@@ -3,9 +3,8 @@ title: set
 slug: Web/JavaScript/Reference/Functions/set
 page-type: javascript-language-feature
 browser-compat: javascript.functions.set
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Functions")}}
 
 The **`set`** syntax binds an object property to a function to be called when there is an attempt to set that property. It can also be used in [classes](/en-US/docs/Web/JavaScript/Reference/Classes).
 
@@ -55,10 +54,10 @@ An object property is either a data property or an accessor property, but it can
 
 ```js
 const obj = {
-  set prop() {
+  set prop(val) {
     // setter, the code executed when setting obj.prop
   },
-}
+};
 ```
 
 Properties defined using this syntax are own properties of the created object, and they are configurable and enumerable.
@@ -113,11 +112,11 @@ console.log(instance.msg); // "hello cake"
 
 Setter properties are defined on the `prototype` property of the class and are thus shared by all instances of the class. Unlike setter properties in object literals, setter properties in classes are not enumerable.
 
-Static setters and private setters use similar syntaxes, which are described in the [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) and [private properties](/en-US/docs/Web/JavaScript/Reference/Classes/Private_properties) pages.
+Static setters and private setters use similar syntaxes, which are described in the [`static`](/en-US/docs/Web/JavaScript/Reference/Classes/static) and [private elements](/en-US/docs/Web/JavaScript/Reference/Classes/Private_elements) pages.
 
 ### Removing a setter with the `delete` operator
 
-If you want to remove the setter, you can just {{jsxref("Operators/delete", "delete")}}
+If you want to remove the setter, you can just {{jsxref("delete")}}
 it:
 
 ```js

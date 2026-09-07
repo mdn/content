@@ -27,11 +27,11 @@ An accessible name is required. Ideally, the accessible name should come from an
 
 If all elements in the set are not present in the DOM include the [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize) and [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset) properties. When specifying `aria-setsize` and `aria-posinset` on a `menuitemcheckbox`, set the value with respect to the total number of items in the menu, excluding any separators.
 
-The `menuitemcheckbox` element can have phrasing content, but can not have interactive content as descendants and no descendants with a `tabindex` attribute specified.
+The `menuitemcheckbox` element can have phrasing content, but cannot have interactive content as descendants and no descendants with a `tabindex` attribute specified.
 
 ### All descendants are presentational
 
-There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `menuitemcheckbox`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) to all descendant elements of any `menuitemcheckbox` element as it is a role that does not support semantic children.
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in a `menuitemcheckbox`. To deal with this limitation, browsers automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) to all descendant elements of any `menuitemcheckbox` element as it is a role that does not support semantic children.
 
 For example, consider the following `menuitemcheckbox` element, which contains a heading.
 
@@ -108,7 +108,7 @@ If the `menuitemcheckbox` is in a submenu in a `menubar` or a menu opened with a
 
 The [`tabindex="-1"`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) makes the `menuitemcheckbox` focusable but not part of the page tab sequence. Had we included `aria-checked="true"` it would have indicated that the `menuitemcheckbox` was checked, and we would have visually styled the selected state to look checked using the attribute selector `[role='menuitemcheckbox'][aria-checked='true']`. Instead, the presence of `aria-checked="false"` indicates to assistive technologies that the `menuitemcheckbox` is checkable but not currently checked. The accessible name "purple" comes from the contents.
 
-The visual appearance of the selected state is a checked checkbox which we can create using [generated content](/en-US/docs/Web/CSS/CSS_generated_content), making it visible and the same color as the content by synchronizing with the `aria-checked` value using CSS [attribute selectors](/en-US/docs/Web/CSS/Attribute_selectors) and [inheriting](/en-US/docs/Web/CSS/inherit) the color.
+The visual appearance of the selected state is a checked checkbox which we can create using [generated content](/en-US/docs/Web/CSS/Guides/Generated_content), making it visible and the same color as the content by synchronizing with the `aria-checked` value using CSS [attribute selectors](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) and [inheriting](/en-US/docs/Web/CSS/Reference/Values/inherit) the color.
 
 ```css
 [role="menuitemcheckbox"]::before {

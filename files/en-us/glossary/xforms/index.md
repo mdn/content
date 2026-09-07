@@ -4,9 +4,8 @@ slug: Glossary/XForms
 page-type: glossary-definition
 status:
   - deprecated
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **XForms** is a convention for building Web forms and processing form data in the {{glossary("XML")}} format.
 

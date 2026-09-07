@@ -72,11 +72,11 @@ svg {
     stroke="pink" />
 
   <!-- All instances of our symbol -->
-  <use href="#myDot" x="5" y="5" style="opacity:1.0" />
-  <use href="#myDot" x="20" y="5" style="opacity:0.8" />
-  <use href="#myDot" x="35" y="5" style="opacity:0.6" />
-  <use href="#myDot" x="50" y="5" style="opacity:0.4" />
-  <use href="#myDot" x="65" y="5" style="opacity:0.2" />
+  <use href="#myDot" x="5" y="5" opacity="1.0" />
+  <use href="#myDot" x="20" y="5" opacity="0.8" />
+  <use href="#myDot" x="35" y="5" opacity="0.6" />
+  <use href="#myDot" x="50" y="5" opacity="0.4" />
+  <use href="#myDot" x="65" y="5" opacity="0.2" />
 </svg>
 ```
 

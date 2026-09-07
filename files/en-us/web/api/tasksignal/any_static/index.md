@@ -3,12 +3,10 @@ title: "TaskSignal: any() static method"
 short-title: any()
 slug: Web/API/TaskSignal/any_static
 page-type: web-api-static-method
-status:
-  - experimental
 browser-compat: api.TaskSignal.any_static
 ---
 
-{{APIRef("Prioritized Task Scheduling API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
+{{APIRef("Prioritized Task Scheduling API")}}{{AvailableInWorkers}}
 
 The **`TaskSignal.any()`** static method takes an iterable of {{domxref("AbortSignal")}} objects and returns a {{domxref("TaskSignal")}}. The returned task signal is aborted when any of the abort signals is aborted.
 
@@ -39,9 +37,14 @@ A `TaskSignal` instance. It will be aborted when the first signal passed into `s
 - Its {{domxref("AbortSignal.reason", "reason")}} property will be set to the reason of the signal that caused this signal to abort.
 
 - Its {{domxref("TaskSignal.priority", "priority")}} property will be determined by the `priority` parameter:
-
   - If the `priority` parameter was a string, it will be the value of the string.
   - If the `priority` parameter was a `TaskSignal`, it will be the value of that signal's {{domxref("TaskSignal/priority","priority")}}.
+
+## Description
+
+The abort-signal cleanup considerations described for {{domxref("AbortSignal/any_static", "AbortSignal.any()")}} also apply to `TaskSignal.any()`. There is no method to unsubscribe the returned signal from its input signals, and aborting it does not abort the other input signals or cancel their timeouts.
+
+If `init.priority` is a signal with a changeable priority, the returned signal is also kept alive while it has a priority source and either `prioritychange` listeners or internal priority change steps registered by an API. Remove listeners added by your code when they are no longer needed. Aborting the signal does not remove its `prioritychange` listeners or stop it from following priority changes.
 
 ## Examples
 
@@ -79,7 +82,7 @@ try {
   // …
 } catch (e) {
   if (e.name === "AbortError") {
-    // Cancelled by the user
+    // Canceled by the user
   } else if (e.name === "TimeoutError") {
     // Show user that download timed out
   } else {

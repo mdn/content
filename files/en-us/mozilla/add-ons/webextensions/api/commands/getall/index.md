@@ -3,9 +3,8 @@ title: getAll()
 slug: Mozilla/Add-ons/WebExtensions/API/commands/getAll
 page-type: webextension-api-function
 browser-compat: webextensions.api.commands.getAll
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets all commands for the extension that you have registered using the [`commands` manifest.json key](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
 
@@ -40,9 +39,9 @@ getCommands.then(logCommands);
 
 {{WebExtExamples}}
 
-> [!NOTE]
-> This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/api/commands) API.
-
 ## Browser compatibility
 
 {{Compat}}
+
+> [!NOTE]
+> This API is based on Chromium's [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/api/commands) API.

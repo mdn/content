@@ -15,7 +15,6 @@ The **`cache`** read-only property of the {{domxref("Request")}} interface conta
 A `RequestCache` value. The available values are:
 
 - `default` — The browser looks for a matching request in its HTTP cache.
-
   - If there is a match and it is [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age), it will be returned from the cache.
   - If there is a match but it is [stale](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age), the browser will make a [conditional request](/en-US/docs/Web/HTTP/Guides/Conditional_requests) to the remote server. If the server indicates that the resource has not changed, it will be returned from the cache. Otherwise the resource will be downloaded from the server and the cache will be updated.
   - If there is no match, the browser will make a normal request, and will update the cache with the downloaded resource.
@@ -23,17 +22,14 @@ A `RequestCache` value. The available values are:
 - `no-store` — The browser fetches the resource from the remote server without first looking in the cache, _and will not_ update the cache with the downloaded resource.
 - `reload` — The browser fetches the resource from the remote server without first looking in the cache, _but then will_ update the cache with the downloaded resource.
 - `no-cache` — The browser looks for a matching request in its HTTP cache.
-
   - If there is a match, _fresh or stale,_ the browser will make a [conditional request](/en-US/docs/Web/HTTP/Guides/Conditional_requests) to the remote server. If the server indicates that the resource has not changed, it will be returned from the cache. Otherwise the resource will be downloaded from the server and the cache will be updated.
   - If there is no match, the browser will make a normal request, and will update the cache with the downloaded resource.
 
 - `force-cache` — The browser looks for a matching request in its HTTP cache.
-
   - If there is a match, _fresh or stale_, it will be returned from the cache.
   - If there is no match, the browser will make a normal request, and will update the cache with the downloaded resource.
 
 - `only-if-cached` — The browser looks for a matching request in its HTTP cache. {{experimental_inline}}
-
   - If there is a match, _fresh or stale_, it will be returned from the cache.
   - If there is no match, the browser will respond with a [504 Gateway timeout](/en-US/docs/Web/HTTP/Reference/Status/504) status.
 

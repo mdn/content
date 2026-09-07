@@ -3,12 +3,10 @@ title: "Navigation: navigatesuccess event"
 short-title: navigatesuccess
 slug: Web/API/Navigation/navigatesuccess_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.Navigation.navigatesuccess_event
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`navigatesuccess`** event of the {{domxref("Navigation")}} interface is fired when a successful navigation has finished.
 
@@ -59,4 +57,3 @@ navigation.addEventListener("navigateerror", (event) => {
 
 - [Modern client-side routing: the Navigation API](https://developer.chrome.com/docs/web-platform/navigation-api/)
 - [Navigation API explainer](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola's [Navigation API live demo](https://gigantic-honored-octagon.glitch.me/)

@@ -2,9 +2,8 @@
 title: A typical HTTP session
 slug: Web/HTTP/Guides/Session
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 In client-server protocols, like HTTP, sessions consist of three phases:
 
@@ -18,7 +17,7 @@ As of HTTP/1.1, the connection is no longer closed after completing the third ph
 
 In client-server protocols, it is the client which establishes the connection. Opening a connection in HTTP means initiating a connection in the underlying transport layer, usually this is TCP.
 
-With TCP the default port, for an HTTP server on a computer, is port 80. Other ports can also be used, like 8000 or 8080. The URL of a page to fetch contains both the domain name, and the port number, though the latter can be omitted if it is 80. See [the URL reference](/en-US/docs/Web/URI) for more details.
+With TCP, the default port for an HTTP server on a computer is port 80. Other ports can also be used, like 8000 or 8080. The URL of a page to fetch contains both the domain name, and the port number, though the latter can be omitted if it is 80. See [the URL reference](/en-US/docs/Web/URI) for more details.
 
 > [!NOTE]
 > The client-server model does not allow the server to send data to the client without an explicit request for it. However, various Web APIs enable this use case, including the [Push API](/en-US/docs/Web/API/Push_API), [Server-sent events](/en-US/docs/Web/API/Server-sent_events), and the [WebSockets API](/en-US/docs/Web/API/WebSockets_API).
@@ -28,7 +27,6 @@ With TCP the default port, for an HTTP server on a computer, is port 80. Other p
 Once the connection is established, the user-agent can send the request (a user-agent is typically a web browser, but can be anything else, a crawler, for example). A client request consists of text directives, separated by CRLF (carriage return, followed by line feed), divided into three blocks:
 
 1. The first line contains a request method followed by its parameters:
-
    - the path of the document, as an absolute URL without the protocol or domain name
    - the HTTP protocol version
 
@@ -43,6 +41,7 @@ Fetching the root page of developer.mozilla.org, (`https://developer.mozilla.org
 GET / HTTP/1.1
 Host: developer.mozilla.org
 Accept-Language: fr
+
 ```
 
 Observe that final empty line, this separates the data block from the header block. As there is no `Content-Length` provided in an HTTP header, this data block is presented empty, marking the end of the headers, allowing the server to process the request the moment it receives this empty line.

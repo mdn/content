@@ -4,9 +4,8 @@ short-title: slice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/slice
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.slice
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`slice()`** method of {{jsxref("Array")}} instances returns a [shallow copy](/en-US/docs/Glossary/Shallow_copy) of a portion of
 an array into a new array object selected from `start` to `end`
@@ -215,7 +214,7 @@ function list() {
   return slice(arguments);
 }
 
-const list1 = list(1, 2, 3); // [1, 2, 3]
+const listResult = list(1, 2, 3); // [1, 2, 3]
 ```
 
 ### Using slice() on sparse arrays

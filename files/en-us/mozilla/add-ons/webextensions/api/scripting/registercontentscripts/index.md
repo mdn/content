@@ -3,18 +3,15 @@ title: scripting.registerContentScripts()
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/registerContentScripts
 page-type: webextension-api-function
 browser-compat: webextensions.api.scripting.registerContentScripts
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Registers one or more content scripts.
 
 > [!NOTE]
 > This method is available in Manifest V3 or higher in Chrome and Firefox 101. In Firefox 102+, this method is also available in Manifest V2.
 
-To use this API you must have the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) and permission for the page's URL, either explicitly as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
-
-This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+To call this API, you must have the `"scripting"` [permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). To run the injected script, the extension must have permission for the page's URL, either explicitly as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
 
 ## Syntax
 
@@ -38,14 +35,14 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfi
 This example registers a content script that injects the file `"script.js"`:
 
 ```js
-const aScript = {
+const script = {
   id: "a-script",
   js: ["script.js"],
   matches: ["https://example.com/*"],
 };
 
 try {
-  await browser.scripting.registerContentScripts([aScript]);
+  await browser.scripting.registerContentScripts([script]);
 } catch (err) {
   console.error(`failed to register content scripts: ${err}`);
 }

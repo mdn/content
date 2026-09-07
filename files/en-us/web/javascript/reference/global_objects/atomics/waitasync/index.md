@@ -4,9 +4,8 @@ short-title: waitAsync()
 slug: Web/JavaScript/Reference/Global_Objects/Atomics/waitAsync
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Atomics.waitAsync
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Atomics.waitAsync()`** static method verifies that a shared memory location contains a given value, immediately returning an object with the `value` property containing the string `"not-equal"` if the memory location does not match the given value, or `"timed-out"` if the timeout was set to zero. Otherwise the method returns an object where the `value` property is a {{jsxref("Promise")}} that fulfills with either `"ok"` when {{jsxref("Atomics.notify()")}} is called, or `"timed-out"` if the timeout expires.
 
@@ -50,11 +49,14 @@ An {{jsxref("Object")}} with the following properties:
 
 ## Examples
 
-### Using waitAsync()
+Note that these examples cannot be run directly from the console or an arbitrary web page, because `SharedArrayBuffer` is not defined unless its [security requirements](/en-US/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer#security_requirements) are met.
 
-Given a shared `Int32Array`.
+### Using Atomics.waitAsync()
+
+Given a shared `Int32Array`:
 
 ```js
+// Create a SharedArrayBuffer with a size in bytes
 const sab = new SharedArrayBuffer(1024);
 const int32 = new Int32Array(sab);
 ```

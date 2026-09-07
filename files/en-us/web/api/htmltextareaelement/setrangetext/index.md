@@ -15,7 +15,7 @@ Additional optional parameters include the start of the section of text to chang
 
 The final argument determines how the selection will be set after the text has been replaced. The possible values are `"select"`, which selects the newly inserted text, `"start"`, which moves the selection to just before the inserted text, `"end"`, which moves the selection to just after the inserted text, or the default, `"preserve"`, which tries to preserve the selection.
 
-In addition, the {{domxref("HTMLTextAreaElement.select_event", "select")}} and {{domxref("HTMLTextAreaElement.selectionchange_event", "selectchange")}} events are fired.
+In addition, the {{domxref("HTMLTextAreaElement.select_event", "select")}} and {{domxref("HTMLTextAreaElement.selectionchange_event", "selectionchange")}} events are fired.
 
 ## Syntax
 

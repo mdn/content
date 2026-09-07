@@ -3,9 +3,8 @@ title: runtime.OnPerformanceWarningCategory
 slug: Mozilla/Add-ons/WebExtensions/API/runtime/OnPerformanceWarningCategory
 page-type: webextension-api-type
 browser-compat: webextensions.api.runtime.OnPerformanceWarningCategory
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The category of warning that dispatched the {{WebExtAPIRef("runtime.onPerformanceWarning")}} event.
 

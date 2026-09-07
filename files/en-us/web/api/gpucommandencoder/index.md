@@ -7,7 +7,7 @@ browser-compat: api.GPUCommandEncoder
 
 {{APIRef("WebGPU API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
-The **`GPUCommandEncoder`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents a command encoder, used to encode commands to be issued to the GPU.
+The **`GPUCommandEncoder`** interface of the {{domxref("WebGPU API", "WebGPU API", "", "nocode")}} represents an encoder that collects a sequence of GPU commands to be issued to the GPU.
 
 A `GPUCommandEncoder` object instance is created via the {{domxref("GPUDevice.createCommandEncoder()")}} property.
 
@@ -35,7 +35,6 @@ A `GPUCommandEncoder` object instance is created via the {{domxref("GPUDevice.cr
 - {{domxref("GPUCommandEncoder.copyTextureToTexture", "copyTextureToTexture()")}}
   - : Encodes a command that copies data from one {{domxref("GPUTexture")}} to another.
 - {{domxref("GPUCommandEncoder.finish", "finish()")}}
-
   - : Completes recording of the command sequence encoded on this `GPUCommandEncoder`, returning a corresponding {{domxref("GPUCommandBuffer")}}.
 
 - {{domxref("GPUCommandEncoder.insertDebugMarker", "insertDebugMarker()")}}
@@ -43,7 +42,6 @@ A `GPUCommandEncoder` object instance is created via the {{domxref("GPUDevice.cr
 - {{domxref("GPUCommandEncoder.popDebugGroup", "popDebugGroup()")}}
   - : Ends a debug group, which is begun with a {{domxref("GPUCommandEncoder.pushDebugGroup", "pushDebugGroup()")}} call.
 - {{domxref("GPUCommandEncoder.pushDebugGroup", "pushDebugGroup()")}}
-
   - : Begins a debug group, which is marked with a specified label, and will contain all subsequent encoded commands up until a {{domxref("GPUCommandEncoder.popDebugGroup", "popDebugGroup()")}} method is invoked.
 
 - {{domxref("GPUCommandEncoder.resolveQuerySet", "resolveQuerySet()")}}
@@ -89,7 +87,7 @@ passEncoder.end();
 // …
 ```
 
-The commands encoded by the `GPUCommandEncoder` are recoded into a {{domxref("GPUCommandBuffer")}} using the {{domxref("GPUCommandEncoder.finish()")}} method. The command buffer is then passed into the queue via a {{domxref("GPUQueue.submit", "submit()")}} call, ready to be processed by the GPU.
+The commands encoded by the `GPUCommandEncoder` are recorded into a {{domxref("GPUCommandBuffer")}} using the {{domxref("GPUCommandEncoder.finish()")}} method. The command buffer is then passed into the queue via a {{domxref("GPUQueue.submit", "submit()")}} call, ready to be processed by the GPU.
 
 ```js
 device.queue.submit([commandEncoder.finish()]);

@@ -3,9 +3,8 @@ title: Labeled statement
 slug: Web/JavaScript/Reference/Statements/label
 page-type: javascript-statement
 browser-compat: javascript.statements.label
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 A **labeled statement** is any [statement](/en-US/docs/Web/JavaScript/Reference/Statements) that is prefixed with an identifier. You can jump to this label using a {{jsxref("Statements/break", "break")}} or {{jsxref("Statements/continue", "continue")}} statement nested within the labeled statement.
 
@@ -228,13 +227,15 @@ console.log("swap");
 
 ### Labeled function declarations
 
-Labels can only be applied to [statements, not declarations](/en-US/docs/Web/JavaScript/Reference/Statements#difference_between_statements_and_declarations). There is a legacy grammar that allows function declarations to be labeled in non-strict code:
+Labels can only be applied to [statements, not declarations](/en-US/docs/Web/JavaScript/Reference/Statements#what_are_statements_declarations_and_expressions). There is a legacy grammar that allows function declarations to be labeled in non-strict code:
 
 ```js
 L: function F() {}
 ```
 
 In [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode) code, however, this will throw a {{jsxref("SyntaxError")}}:
+
+<!-- cSpell:ignore labelled -->
 
 ```js-nolint example-bad
 "use strict";

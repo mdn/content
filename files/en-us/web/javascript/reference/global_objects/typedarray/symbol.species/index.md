@@ -4,9 +4,8 @@ short-title: "[Symbol.species]"
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.species
 page-type: javascript-static-accessor-property
 browser-compat: javascript.builtins.TypedArray.@@species
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`TypedArray[Symbol.species]`** static accessor property returns the constructor used to construct return values from typed array methods.
 

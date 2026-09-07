@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Document.securitypolicyviolation_event
 ---
 
-{{APIRef}}
+{{APIRef("Reporting API")}}
 
 The **`securitypolicyviolation`** event is fired when a [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) is violated.
 

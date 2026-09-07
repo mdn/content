@@ -20,9 +20,9 @@ removeNamedItemNS(namespace, localName)
 ### Parameters
 
 - `namespace`
-
   - : The namespace of the attribute to remove from the map
-    > **Warning:** `namespace` is the URI of the namespace, not the prefix.
+    > [!WARNING]
+    > `namespace` is the URI of the namespace, not the prefix.
 
 - `localName`
   - : The local name of the attribute to remove from the map.

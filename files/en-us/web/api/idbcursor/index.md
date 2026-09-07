@@ -18,7 +18,8 @@ You can have an unlimited number of cursors at the same time. You always get the
 
 ## Instance properties
 
-> **Note:** {{domxref("IDBCursorWithValue")}} is an **`IDBCursor`** interface with an additional **`value`** property.
+> [!NOTE]
+> {{domxref("IDBCursorWithValue")}} is an **`IDBCursor`** interface with an additional **`value`** property.
 
 - {{domxref("IDBCursor.source")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("IDBObjectStore")}} or {{domxref("IDBIndex")}} that the cursor is iterating. This function never returns null or throws an exception, even if the cursor is currently being iterated, has iterated past its end, or its transaction is not active.
@@ -45,8 +46,6 @@ You can have an unlimited number of cursors at the same time. You always get the
   - : Returns an {{domxref("IDBRequest")}} object, and, in a separate thread, updates the value at the current position of the cursor in the object store. This can be used to update specific records.
 
 ## Constants
-
-{{Deprecated_Header}}
 
 > [!WARNING]
 > These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ([Firefox bug 891944](https://bugzil.la/891944))

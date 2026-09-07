@@ -4,9 +4,8 @@ short-title: Proxy-Authorization
 slug: Web/HTTP/Reference/Headers/Proxy-Authorization
 page-type: http-header
 spec-urls: https://httpwg.org/specs/rfc9110.html#field.proxy-authorization
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Proxy-Authorization`** {{Glossary("request header")}} contains the credentials to authenticate a client with a proxy server, typically after the server has responded with a {{HTTPStatus("407", "407 Proxy Authentication Required")}} status with the {{HTTPHeader("Proxy-Authenticate")}} header.
 

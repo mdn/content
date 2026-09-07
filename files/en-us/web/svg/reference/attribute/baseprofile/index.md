@@ -4,13 +4,11 @@ slug: Web/SVG/Reference/Attribute/baseProfile
 page-type: svg-attribute
 status:
   - deprecated
-spec-urls: https://www.w3.org/TR/SVG11/struct.html#SVGElementBaseProfileAttribute
+browser-compat: svg.elements.svg.baseProfile
 sidebar: svgref
 ---
 
-{{Deprecated_Header}}
-
-The **`baseProfile`** attribute describes the minimum SVG language profile that the author believes is necessary to correctly render the content. The attribute does not specify any processing restrictions; It can be considered metadata.
+The **`baseProfile`** attribute describes the minimum SVG language profile that the author believes is necessary to correctly render the content. The attribute does not specify any processing restrictions; it can be considered metadata.
 
 For example, the value of the attribute could be used by an authoring tool to warn the user when they are modifying the document beyond the scope of the specified base profile.
 
@@ -53,3 +51,7 @@ You can use this attribute with the following SVG elements:
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

@@ -88,7 +88,7 @@ peerConnection.ontrack = (event) => {
   event.receiver.transform = new RTCRtpScriptTransform(worker, {
     name: "receiverTransform",
   });
-  received_video.srcObject = event.streams[0];
+  receivedVideo.srcObject = event.streams[0];
 };
 ```
 

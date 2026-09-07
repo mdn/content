@@ -19,7 +19,7 @@ or `null` if the specified node is the first in that list.
 > or `Node.previousSibling`
 > may refer to a whitespace text node rather than the actual element the author intended to get.
 >
-> See [Whitespace in the DOM](/en-US/docs/Web/API/Document_Object_Model/Whitespace) for more information.
+> See [Working with whitespace in the DOM](/en-US/docs/Web/CSS/Guides/Text/Whitespace#working_with_whitespace_in_the_dom) for more information.
 >
 > You can use [`previousElementSibling`](/en-US/docs/Web/API/Element/previousElementSibling)
 > to get the previous element node (skipping text nodes and any other non-element nodes).
@@ -37,31 +37,31 @@ The following examples demonstrate how `previousSibling` works with and without 
 
 ### First example
 
-In this example, we have a series of `img` elements directly adjacent to each other, with no whitespace between them.
+In this example, we have a series of {{HTMLElement("span")}} elements directly adjacent to each other, with no whitespace between them.
 
 ```html
-<img id="b0" /><img id="b1" /><img id="b2" />
+<span id="b0"></span><span id="b1"></span><span id="b2"></span>
 ```
 
 ```js
-document.getElementById("b1").previousSibling; // <img id="b0">
+document.getElementById("b1").previousSibling; // <span id="b0">
 document.getElementById("b2").previousSibling.id; // "b1"
 ```
 
 ### Second example
 
-In this example, there are whitespace text nodes (line breaks) between the `img` elements.
+In this example, there are whitespace text nodes (line breaks) between the {{htmlelement("span")}} elements.
 
 ```html
-<img id="b0" />
-<img id="b1" />
-<img id="b2" />
+<span id="b0"></span>
+<span id="b1"></span>
+<span id="b2"></span>
 ```
 
 ```js
 document.getElementById("b1").previousSibling; // #text
-document.getElementById("b1").previousSibling.previousSibling; // <img id="b0">
-document.getElementById("b2").previousSibling.previousSibling; // <img id="b1">
+document.getElementById("b1").previousSibling.previousSibling; // <span id="b0">
+document.getElementById("b2").previousSibling.previousSibling; // <span id="b1">
 document.getElementById("b2").previousSibling; // #text
 document.getElementById("b2").previousSibling.id; // undefined
 ```

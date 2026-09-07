@@ -36,6 +36,11 @@ Some more general guidelines include:
 - Don't use deprecated features for brevity (such as presentation elements like {{HTMLElement("big")}} or {{domxref("Document.write", "document.write()")}}); do it correctly.
 - In the case of API demos, if you are using multiple APIs together, point out which APIs are included and which features come from where.
 
+### Browser support
+
+When creating code examples for a technology that's not yet available in all major browsers, consider using [feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection) to fall back to a simpler behavior or inform the user that their browser is not yet supported.
+Do not specify supported browsers and their versions in code comments or prose, as this information quickly becomes outdated.
+
 ## MDN code style and formatting
 
 Opinions on correct indentation, whitespace, and line lengths have always been controversial. Discussions on these topics are a distraction from creating and maintaining content.
@@ -111,39 +116,6 @@ These guidelines should be followed to ensure that the code examples you write d
 
 - **Set the width to 100%**: The main content pane on MDN Web Docs is about 700px wide on desktop, so the embedded code examples must look OK at that width.
 - **Set height below 700px**: We recommend keeping this height for the rendered code example width for maximum onscreen legibility.
-
-### Color in the rendered code example
-
-Use keywords for primary and other "basic" colors, for example:
-
-```css example-good
-color: black;
-color: white;
-color: red;
-```
-
-Use `rgb()` for more complex colors (including semi-transparent ones):
-
-```css example-good
-color: rgb(0 0 0 / 50%);
-color: rgb(248 242 230);
-```
-
-For hex colors, use the short form where relevant:
-
-```css example-good
-color: #058ed9;
-color: #a39a92c1;
-color: #ff0;
-color: #fbfa;
-```
-
-As opposed to:
-
-```css-nolint example-bad
-color: #ffff00;
-color: #ffbbffaa;
-```
 
 ### Highlight examples as good or bad
 

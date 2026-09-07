@@ -27,9 +27,7 @@ getActiveUniformBlockParameter(program, uniformBlockIndex, pname)
   - : A {{domxref("WebGL_API/Types", "GLuint")}} specifying the index of the active uniform block within the
     program.
 - `pname`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying which information to query. Possible values:
-
     - `gl.UNIFORM_BLOCK_BINDING`
       - : Returns a {{domxref("WebGL_API/Types", "GLuint")}}
         indicating the uniform buffer binding point.

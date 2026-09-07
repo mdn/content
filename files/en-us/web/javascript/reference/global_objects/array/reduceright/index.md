@@ -4,9 +4,8 @@ short-title: reduceRight()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.reduceRight
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`reduceRight()`** method of {{jsxref("Array")}} instances applies a function against an accumulator and each value of the array (from right-to-left) to reduce it to a single value.
 
@@ -15,13 +14,13 @@ See also {{jsxref("Array.prototype.reduce()")}} for left-to-right.
 {{InteractiveExample("JavaScript Demo: Array.prototype.reduceRight()")}}
 
 ```js interactive-example
-const array1 = [
+const array = [
   [0, 1],
   [2, 3],
   [4, 5],
 ];
 
-const result = array1.reduceRight((accumulator, currentValue) =>
+const result = array.reduceRight((accumulator, currentValue) =>
   accumulator.concat(currentValue),
 );
 

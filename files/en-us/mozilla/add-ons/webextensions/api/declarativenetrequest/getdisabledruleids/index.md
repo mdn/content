@@ -3,9 +3,8 @@ title: declarativeNetRequest.getDisabledRuleIds
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/getDisabledRuleIds
 page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.getDisabledRuleIds
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Returns the IDs of the disabled rules in a static ruleset. The number of disabled rules in a ruleset is limited to the value of {{WebExtAPIRef("declarativeNetRequest.MAX_NUMBER_OF_DISABLED_STATIC_RULES","MAX_NUMBER_OF_DISABLED_STATIC_RULES")}}.
 
@@ -20,7 +19,6 @@ let ruleIds = await browser.declarativeNetRequest.getDisabledRuleIds(
 ### Parameters
 
 - `options`
-
   - : An object containing details of the ruleset to return disabled rules for.
     - `rulesetId`
       - : `string` The ID of the static ruleset to query.

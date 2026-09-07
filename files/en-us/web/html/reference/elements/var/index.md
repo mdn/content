@@ -1,11 +1,11 @@
 ---
-title: "<var>: The Variable element"
+title: "`<var>` HTML variable element"
+short-title: <var>
 slug: Web/HTML/Reference/Elements/var
 page-type: html-element
 browser-compat: html.elements.var
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<var>`** [HTML](/en-US/docs/Web/HTML) element represents the name of a variable in a mathematical expression or a programming context. It's typically presented using an italicized version of the current typeface, although that behavior is browser-dependent.
 

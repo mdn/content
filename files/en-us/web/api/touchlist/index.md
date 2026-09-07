@@ -25,7 +25,7 @@ These historical reasons do not mean that you as a developer should avoid `Touch
 
 ## Example
 
-See the [example on the main Touch events article](/en-US/docs/Web/API/Touch_events#example).
+See the [example on the main Touch events article](/en-US/docs/Web/API/Touch_events#examples).
 
 ## Specifications
 

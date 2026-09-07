@@ -64,7 +64,7 @@ None.
 
 ### Prefer HTML
 
-Using the {{HTMLElement('nav')}} element will automatically communicate a section has a role of `navigation`. If at all possible, prefer using it instead.
+Using the {{HTMLElement('nav')}} element will automatically communicate that the element has a role of `navigation`. If possible, prefer using the semantic `<nav>` element instead of the `navigation` role.
 
 ### Labeling landmarks
 
@@ -116,6 +116,5 @@ Screen readers will announce the type of role the landmark is. Because of this, 
 
 - The {{HTMLElement('nav')}} element
 - [Using HTML sections and outlines](/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements)
-- [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://www.tpgi.com/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 - [Semantic navigation with the nav element | HTML5 Doctor](https://html5doctor.com/nav-element/)

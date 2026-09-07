@@ -6,9 +6,10 @@ page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Sec-CH-UA
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{SeeCompatTable}}{{SecureContext_Header}}
 
 The HTTP **`Sec-CH-UA`** {{Glossary("request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints) which provides the user-agent's branding and significant version information.
 
@@ -42,12 +43,11 @@ This is a feature designed to prevent servers from rejecting unknown user agents
 
 ## Syntax
 
-A comma separated list of brands in the user agent brand list, and their associated significant version number.
-The syntax for a single entry has the following format:
-
 ```http
 Sec-CH-UA: "<brand>";v="<significant version>", …
 ```
+
+The value is a comma separated list of brands in the user agent brand list, and their associated significant version number.
 
 ### Directives
 

@@ -160,7 +160,9 @@ The values listed in [the specification](https://html.spec.whatwg.org/multipage/
 - `"parser-aborted"`
   - : The current document never finished its initial HTML parsing, and storing the unfinished document in the bfcache was prevented.
 - `"websocket"`
-  - : While unloading, an open [WebSocket](/en-US/docs/Web/API/WebSockets_API) connect was shut down, so the page was not in a stable state that could be stored in the bfcache.
+  - : While unloading, an open [WebSocket](/en-US/docs/Web/API/WebSockets_API) connection was shut down, so the page was not in a stable state that could be stored in the bfcache.
+
+    In [some browsers](#browser_compatibility), active WebSockets do not block pages from entering the bfcache. In such cases, the WebSocket connections are disconnected upon entry, and can be reconnected when the page is restored. In Chrome, for example, when a page is restored from the bfcache, the browser fires the [`error`](/en-US/docs/Web/API/WebSocket/error_event) and [`close`](/en-US/docs/Web/API/WebSocket/close_event) events, enabling an application to trigger its existing logic to reconnect to the WebSocket.
 
 ### User-agent specific blocking reasons
 
@@ -171,7 +173,7 @@ Additional blocking reasons that may be used by some browsers are also specified
 - `"background-work"`
   - : The Document requested background work by calling [`SyncManager`](/en-US/docs/Web/API/SyncManager)'s [`register()`](/en-US/docs/Web/API/SyncManager/register) method, [`PeriodicSyncManager`](/en-US/docs/Web/API/PeriodicSyncManager)'s [`register()`](/en-US/docs/Web/API/PeriodicSyncManager/register) method, or [`BackgroundFetchManager`](/en-US/docs/Web/API/BackgroundFetchManager)'s [`fetch()`](/en-US/docs/Web/API/BackgroundFetchManager/fetch) method.
 - `"broadcastchannel-message"`
-  - : While the page was stored in back/forward cache, a [`BroadcastChannel`](/en-US/docs/Web/API/BroadcastChannel) connection on the page received a message and message event was fired.
+  - : While the page was stored in back/forward cache, a [`BroadcastChannel`](/en-US/docs/Web/API/BroadcastChannel) connection on the page received a message to trigger a [`message`](/en-US/docs/Web/API/MessageEvent) event.
 - `"idbversionchangeevent"`
   - : The Document had a pending [`IDBVersionChangeEvent`](/en-US/docs/Web/API/IDBVersionChangeEvent) while unloading.
 - `"idledetector"`

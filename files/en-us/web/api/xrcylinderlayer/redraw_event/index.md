@@ -28,13 +28,6 @@ onredraw = (event) => { }
 
 An {{domxref("XRLayerEvent")}}. Inherits from {{domxref("Event")}}.
 
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref("XRLayerEvent.layer", "layer")}} {{ReadOnlyInline}}
-  - : The {{domxref("XRLayer")}} which generated the event.
-
 ## Examples
 
 ### Using the `redraw` event

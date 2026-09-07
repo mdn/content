@@ -23,9 +23,7 @@ send(data)
 ### Parameters
 
 - `data`
-
   - : The data to send to the presentation context. It will be one of the following:
-
     - {{jsxref("String")}}
     - {{domxref("Blob")}}
     - {{jsxref("Array")}}

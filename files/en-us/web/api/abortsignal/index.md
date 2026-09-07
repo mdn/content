@@ -54,10 +54,14 @@ Listen to this event using {{domxref("EventTarget.addEventListener", "addEventLi
 
 The following snippet shows how we might use a signal to abort downloading a video using the [Fetch API](/en-US/docs/Web/API/Fetch_API).
 
-We first create an abort controller using the {{domxref("AbortController.AbortController","AbortController()")}} constructor, then grab a reference to its associated `AbortSignal` object using the {{domxref("AbortController.signal")}} property.
+We first define a variable for our `AbortController`.
 
-When the [fetch request](/en-US/docs/Web/API/Window/fetch) is initiated, we pass in the `AbortSignal` as an option inside the request's options object (the `{signal}` below). This associates the signal and controller with the fetch request, and allows us to abort it by calling {{domxref("AbortController.abort()")}}.
-Below you can see that the fetch operation is aborted in the second event listener, which triggered when the abort button (`abortBtn`) is clicked.
+Before each [fetch request](/en-US/docs/Web/API/Window/fetch) we create a new controller using the {{domxref("AbortController.AbortController","AbortController()")}} constructor, then grab a reference to its associated `AbortSignal` object using the {{domxref("AbortController.signal")}} property.
+
+> [!NOTE]
+> An `AbortSignal` can only be used once. After it is aborted, any fetch call using the same signal will be immediately rejected.
+
+When the [fetch request](/en-US/docs/Web/API/Window/fetch) is initiated, we pass in the `AbortSignal` as an option inside the request's options object (the `{ signal }` below). This associates the signal and controller with the fetch request and allows us to abort it by calling {{domxref("AbortController.abort()")}}, as seen below in the second event listener.
 
 When `abort()` is called, the `fetch()` promise rejects with a `DOMException` named `AbortError`.
 
@@ -131,7 +135,7 @@ try {
     console.error("Timeout: It took more than 5 seconds to get the result!");
   } else if (err.name === "AbortError") {
     console.error(
-      "Fetch aborted by user action (browser stop button, closing tab, etc.",
+      "Fetch aborted by user action (browser stop button, closing tab, etc.)",
     );
   } else {
     // A network error, or some other problem.
@@ -168,6 +172,50 @@ try {
 > [!NOTE]
 > Unlike when using {{domxref("AbortSignal/timeout_static", "AbortSignal.timeout()")}}, there is no way to tell whether the final abort was caused by a timeout.
 
+## Removing the `abort` event listener
+
+Signals created by {{domxref("AbortController")}}s are garbage collectible as soon as both the signal and its owning controller become unreachable, even with `abort` event listeners, because it's guaranteed that the event won't fire. However, signals whose abortion is managed by something other than a controller are kept alive by the existence of an `abort` event listener:
+
+- A non-aborted signal returned by {{domxref("AbortSignal/any_static", "AbortSignal.any()")}} is kept alive while it still has source signals and either attached `abort` listeners or internal abort steps registered by an API.
+- A signal returned by {{domxref("AbortSignal/timeout_static", "AbortSignal.timeout()")}} is kept alive while its timeout is pending and it has attached `abort` listeners.
+
+The following function combines application-wide cancellation with a signal supplied by the caller for an individual operation. It adds a listener to log cancellation, but relies on `{ once: true }` to remove it:
+
+```js example-bad
+const globalController = new AbortController();
+
+async function doOperation(url, localSignal) {
+  const signal = AbortSignal.any([globalController.signal, localSignal]);
+  signal.addEventListener("abort", () => console.log(`Aborted: ${url}`), {
+    once: true,
+  });
+
+  const response = await fetch(url, { signal });
+  return response.text();
+}
+```
+
+`{ once: true }` only removes the listener when the event fires. If neither input signal aborts, the listener remains even after the response body has been read. Repeated calls can therefore retain combined signals and their listeners for as long as the global signal remains reachable and the combined signals remain non-aborted. Discarding the combined signal does not remove the listener, and `fetch()` does not clean up listeners added by your code.
+
+Instead, remove the listener when the operation finishes, whether it succeeds or fails. Use a named listener so you can remove it in a {{jsxref("Statements/try...catch", "finally")}} block:
+
+```js
+async function doOperation(url, localSignal) {
+  const signal = AbortSignal.any([globalController.signal, localSignal]);
+  const onAbort = () => console.log(`Aborted: ${url}`);
+  signal.addEventListener("abort", onAbort, { once: true });
+
+  try {
+    const response = await fetch(url, { signal });
+    return await response.text();
+  } finally {
+    signal.removeEventListener("abort", onAbort);
+  }
+}
+```
+
+The `await` on `response.text()` ensures the listener remains registered until the response body has been read. This cleanup is for the listener added by the example, not for `fetch()`'s internal abort handling. If an operation only needs application-wide cancellation, pass `globalController.signal` directly instead of creating a combined signal.
+
 ### Implementing an abortable API
 
 An API that needs to support aborting can accept an `AbortSignal` object, and use its state to trigger abort signal handling when needed.
@@ -175,26 +223,29 @@ An API that needs to support aborting can accept an `AbortSignal` object, and us
 A {{jsxref("Promise")}}-based API should respond to the abort signal by rejecting any unsettled promise with the `AbortSignal` abort {{domxref("AbortSignal.reason", "reason")}}.
 For example, consider the following `myCoolPromiseAPI`, which takes a signal and returns a promise.
 The promise is rejected immediately if the signal is already aborted, or if the abort event is detected.
-Otherwise it completes normally and then resolves the promise.
+Otherwise it completes normally after a delay and resolves the promise.
+
+Remove the `abort` listener when the operation completes normally, so a long-lived signal does not retain the listener and the values it references. Again, `{ once: true }` only removes the listener if the signal actually aborts.
 
 ```js
 function myCoolPromiseAPI(/* …, */ { signal }) {
   return new Promise((resolve, reject) => {
     // If the signal is already aborted, immediately throw in order to reject the promise.
-    if (signal.aborted) {
+    signal.throwIfAborted();
+
+    // Simulate the main operation completing after a delay.
+    const timeoutId = setTimeout(() => {
+      signal.removeEventListener("abort", onAbort);
+      resolve("Operation completed");
+    }, 1000);
+
+    function onAbort() {
+      // Stop the main operation and reject with the abort reason.
+      clearTimeout(timeoutId);
       reject(signal.reason);
-      return;
     }
 
-    // Perform the main purpose of the API
-    // Call resolve(result) when done.
-
-    // Watch for 'abort' signals
-    signal.addEventListener("abort", () => {
-      // Stop the main operation
-      // Reject the promise with the abort reason.
-      reject(signal.reason);
-    });
+    signal.addEventListener("abort", onAbort, { once: true });
   });
 }
 ```

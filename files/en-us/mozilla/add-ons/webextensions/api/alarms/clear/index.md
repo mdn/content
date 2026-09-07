@@ -3,9 +3,8 @@ title: alarms.clear()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/clear
 page-type: webextension-api-function
 browser-compat: webextensions.api.alarms.clear
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Cancels an alarm, given its name.
 

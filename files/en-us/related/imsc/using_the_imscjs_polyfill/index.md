@@ -2,6 +2,7 @@
 title: Using the imscJS polyfill
 slug: Related/IMSC/Using_the_imscJS_polyfill
 page-type: guide
+sidebar: related
 ---
 
 You currently need a polyfill to render IMSC on the web. imscJS is a good choice as it is actively maintained and has almost complete coverage of the IMSC features. This article shows you how to make use of imscJS and how to integrate it on your own website.
@@ -55,7 +56,7 @@ imsc.renderHTML(isd, renderDiv);
 
 ## Building an IMSC player
 
-Lets look at a more expanded example and show you how can render subtitles with imscJS on an embedded HTML video. As an example we use the below video with subtitles.
+Let's look at a more expanded example and show you how you can render subtitles with imscJS on an embedded HTML video. As an example we use the below video with subtitles.
 
 {{EmbedGHLiveSample("imsc-examples/imscjs-demo/imscjs-demo.html", '100%', 320)}}
 
@@ -63,7 +64,7 @@ You can find the [HTML markup](https://github.com/mdn/imsc-examples/blob/main/im
 
 ## Accessing the DOM
 
-An IMSC subtitle is rendered by HTML markup with inline CSS. It represents the IMSC subtitles during a specific period on the timeline of the associated media element. As we saw in the [Rendering an IMSC snapshot](#rendering_an_imsc_snapshot) section above, the markup is inserted into a `<div>` element using the `renderHtml()` method. We can think of this `<div>` element as a container for the HTML that was generated from IMSC code. Later we pass the corresponding DOM element as a parameter to `renderHtml()` method.
+An IMSC subtitle is rendered by HTML markup with inline CSS. It represents the IMSC subtitles during a specific period on the timeline of the associated media element. As we saw in the [Rendering an IMSC snapshot](#rendering_an_imsc_snapshot) section above, the markup is inserted into a `<div>` element using the `renderHTML()` method. We can think of this `<div>` element as a container for the HTML that was generated from IMSC code. Later we pass the corresponding DOM element as a parameter to the `renderHTML()` method.
 
 For convenience we assign this DOM element to a variable.
 
@@ -165,7 +166,6 @@ With two methods we can now generate all necessary states of the IMSC rendering 
 
 - Iterate over the array we get back from `getMediaEvents()`
 - For each time event:
-
   - Create a corresponding cue.
   - Use an `onenter` event to render the ISD.
   - Use an `onexit` event to remove the rendering layer again.
@@ -258,8 +258,8 @@ Native video player controls are part of the browser and not the HTML markup. Al
 
 This causes two problems when using imscJS:
 
-1. The IMSC HTML overlay covers the complete video. It sits on top of the `<video>` element. Although you can see the player controls (because most of the overlay has a transparent background), pointer events like mouse clicks are not coming through to the controls. Because they can't be accessed by standard CSS you can also not change the z-index of the controls to solve this problem. So, if you always have a subtitle overlay, you will not able be able to stop the video once it has started. This would be a very bad user experience.
-2. Usually the native video player controls have a caption user interface. You can select a text track or to switch off the rendering of subtitles. Unfortunately, the caption interface only controls the rendering of WebVTT subtitles. The browser does not know that we are rendering subtitles with imscJS, so these controls will have no effect.
+1. The IMSC HTML overlay covers the complete video. It sits on top of the `<video>` element. Although you can see the player controls (because most of the overlay has a transparent background), pointer events like mouse clicks are not coming through to the controls. Because they can't be accessed by standard CSS you can also not change the z-index of the controls to solve this problem. So, if you always have a subtitle overlay, you will not be able to stop the video once it has started. This would be a very bad user experience.
+2. Usually the native video player controls have a caption user interface. You can select a text track or switch off the rendering of subtitles. Unfortunately, the caption interface only controls the rendering of WebVTT subtitles. The browser does not know that we are rendering subtitles with imscJS, so these controls will have no effect.
 
 For the first problem there is a straightforward CSS solution. We need to set the CSS property `pointer-events` to `none` (see the [sample code](https://github.com/mdn/imsc-examples/blob/main/imscjs-demo/css/style.css) on GitHub for the complete CSS).
 
@@ -269,30 +269,8 @@ For the first problem there is a straightforward CSS solution. We need to set th
 }
 ```
 
-This has the effect that pointer events are going "through" the overlay (see [reference documentation for point events](/en-US/docs/Web/CSS/pointer-events) for more details).
+This has the effect that pointer events are going "through" the overlay (see [reference documentation for pointer events](/en-US/docs/Web/CSS/Reference/Properties/pointer-events) for more details).
 
-The caption user interface problem is a bit harder to solve. Although we can listen to events, activating a track using the caption user interface will also activate the rendering of corresponding WebVTT. As we are using VTTCues for IMSC rendering, this can course undesired presentation behavior. The text property of the VTTCue has always the empty string as value but in some browser this may lead nonetheless to the rendering of artifacts.
+The caption user interface problem is a bit harder to solve. Although we can listen to events, activating a track using the caption user interface will also activate the rendering of corresponding WebVTT. As we are using VTTCues for IMSC rendering, this can cause undesired presentation behavior. The text property of the VTTCue has always the empty string as value but in some browsers this may lead nonetheless to the rendering of artifacts.
 
-the best solution is to building your own custom controls. Find out how in our [Creating a cross-browser video player](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player) tutorial.
-
-<section id="Quick_links">
-  <ol>
-    <li><a href="/en-US/docs/Related/IMSC/"><strong>IMSC</strong></a></li>
-    <li class="toggle">
-      <details open>
-        <summary>IMSC guides</summary>
-        <ol>
-          <li><a href="/en-US/docs/Related/IMSC/Basics">IMSC basics</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Using_the_imscJS_polyfill">Using the imscJS polyfill</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Styling">Styling IMSC documents</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Subtitle_placement">Subtitle placement in IMSC</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Namespaces">Namespaces in IMSC</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Timing_in_IMSC">Timing in IMSC</a></li>
-          <li><a href="/en-US/docs/Related/IMSC/Mapping_video_time_codes_to_IMSC">Mapping video time codes to IMSC</a>
-          </li>
-          <li><a href="/en-US/docs/Related/IMSC/IMSC_and_other_standards">IMSC and other standards</a></li>
-        </ol>
-      </details>
-    </li>
-  </ol>
-</section>
+The best solution is to build your own custom controls. Find out how in our [Creating a cross-browser video player](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player) tutorial.

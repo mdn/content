@@ -14,7 +14,7 @@ The **Screen Wake Lock API** provides a way to prevent devices from dimming or l
 
 ## Concepts and usage
 
-Most devices by default turn off their screen after a specified amount of time to prolong the life of the hardware. Modern devices do this to save on battery power. Whilst this is a useful feature, some applications need the screen to stay awake to be their most useful.
+Most devices by default turn off their screen after a specified amount of time to prolong the life of the hardware. Modern devices do this to save on battery power. While this is a useful feature, some applications need the screen to stay awake to be their most useful.
 
 The Screen Wake Lock API prevents the screen from turning off, dimming or locking. It allows for a simple platform-based solution for visible (active) documents to acquire the platform screen wake lock.
 
@@ -38,7 +38,6 @@ The Screen Wake Lock API should be used to keep the screen on to benefit usabili
 ### Extensions to other interfaces
 
 - {{domxref("Navigator.wakeLock")}} {{ReadOnlyInline}}
-
   - : Returns a {{domxref("WakeLock")}} object instance, from which all other functionality can be accessed.
 
 - [`Permissions-Policy: screen-wake-lock`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/screen-wake-lock)
@@ -156,5 +155,4 @@ The [Permissions API](/en-US/docs/Web/API/Permissions_API) `screen-wake-lock` pe
 
 ## See also
 
-- [Stay awake with the Screen Wake Lock API](https://developer.chrome.com/docs/capabilities/web-apis/wake-lock/)
-- [A Screen Wake Lock API demo on glitch](https://wake-lock-demo.glitch.me/)
+- [Stay awake with the Screen Wake Lock API](https://developer.chrome.com/docs/capabilities/web-apis/wake-lock/) on developer.chrome.com

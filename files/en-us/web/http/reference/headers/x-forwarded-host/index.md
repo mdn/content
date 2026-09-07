@@ -5,9 +5,8 @@ slug: Web/HTTP/Reference/Headers/X-Forwarded-Host
 page-type: http-header
 status:
   - non-standard
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`X-Forwarded-Host`** (XFH) {{Glossary("request header")}} is a de-facto standard header for identifying the original host requested by the client in the {{HTTPHeader("Host")}} HTTP request header.
 

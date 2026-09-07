@@ -19,6 +19,7 @@ Like other filter primitives, it handles color components in the `linearRGB` {{g
 - {{SVGAttr("in")}}
 - {{SVGAttr("operator")}}
 - {{SVGAttr("radius")}}
+- [Filter primitive attributes](/en-US/docs/Web/SVG/Reference/Attribute#filter_primitive_attributes_presentation_attributes): {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}, {{SVGAttr("result")}}
 
 ## DOM Interface
 
@@ -48,16 +49,16 @@ This element implements the {{domxref("SVGFEMorphologyElement")}} interface.
 
 ```css
 text {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   font-size: 3em;
 }
 
 #thin {
-  filter: url(#erode);
+  filter: url("#erode");
 }
 
 #thick {
-  filter: url(#dilate);
+  filter: url("#dilate");
 }
 ```
 
@@ -87,16 +88,16 @@ text {
 ```css
 p {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   font-size: 3em;
 }
 
 #thin {
-  filter: url(#erode);
+  filter: url("#erode");
 }
 
 #thick {
-  filter: url(#dilate);
+  filter: url("#dilate");
 }
 ```
 

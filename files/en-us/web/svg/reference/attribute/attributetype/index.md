@@ -2,13 +2,9 @@
 title: attributeType
 slug: Web/SVG/Reference/Attribute/attributeType
 page-type: svg-attribute
-status:
-  - deprecated
-spec-urls: https://www.w3.org/TR/SVG11/animate.html#AttributeTypeAttribute
+browser-compat: svg.elements.animate.attributeType
 sidebar: svgref
 ---
-
-{{Deprecated_Header}}
 
 The **`attributeType`** attribute specifies the namespace in which the target attribute and its associated values are defined.
 
@@ -73,6 +69,10 @@ svg {
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

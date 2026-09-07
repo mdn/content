@@ -21,7 +21,7 @@ myCanvas.offscreenCanvas = document.createElement("canvas");
 myCanvas.offscreenCanvas.width = myCanvas.width;
 myCanvas.offscreenCanvas.height = myCanvas.height;
 
-myCanvas.getContext("2d").drawImage(myCanvas.offScreenCanvas, 0, 0);
+myCanvas.getContext("2d").drawImage(myCanvas.offscreenCanvas, 0, 0);
 ```
 
 ### Avoid floating-point coordinates and use integers instead
@@ -80,7 +80,7 @@ If you have a static background image, you can draw it onto a plain {{HTMLElemen
 
 ### Scaling canvas using CSS transforms
 
-[CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) are faster since they use the GPU. The best case is to not scale the canvas, or have a smaller canvas and scale up rather than a bigger canvas and scale down.
+[CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms/Using) are faster since they use the GPU. The best case is to not scale the canvas, or have a smaller canvas and scale up rather than a bigger canvas and scale down.
 
 ```js
 const scaleX = window.innerWidth / canvas.width;

@@ -14,12 +14,11 @@ The `protocol_handlers` member specifies an array of objects that are protocols 
 
 After registering a web app as a protocol handler, when a user clicks on a hyperlink with a specific scheme such as `mailto://` or `web+music://` from a browser or native app, the registered PWA would open and receive the URL.
 
-### Values
+## Values
 
 Protocol handlers objects may contain the following values:
 
 - `protocol` {{experimental_inline}}
-
   - : A required string containing the protocol to be handled; e.g.: `mailto`, `ms-word`, `web+jngl`.
 
 - `url` {{experimental_inline}}
@@ -33,16 +32,18 @@ Protocol handlers objects may contain the following values:
 In this example, a web app manifest declares that the app should be registered to handle the protocols `web+jngl` and `web+jnglstore`.
 
 ```json
-"protocol_handlers": [
-  {
-    "protocol": "web+jngl",
-    "url": "/lookup?type=%s"
-  },
-  {
-    "protocol": "web+jnglstore",
-    "url": "/shop?for=%s"
-  }
-]
+{
+  "protocol_handlers": [
+    {
+      "protocol": "web+jngl",
+      "url": "/lookup?type=%s"
+    },
+    {
+      "protocol": "web+jnglstore",
+      "url": "/shop?for=%s"
+    }
+  ]
+}
 ```
 
 A developer can add a field in the manifest.json to declare which protocols the web app can handle. As seen in the example above, the key is named `protocol_handlers` and it contains an array of protocol handler declaration objects.

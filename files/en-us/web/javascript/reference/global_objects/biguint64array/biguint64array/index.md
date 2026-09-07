@@ -4,9 +4,8 @@ short-title: BigUint64Array()
 slug: Web/JavaScript/Reference/Global_Objects/BigUint64Array/BigUint64Array
 page-type: javascript-constructor
 browser-compat: javascript.builtins.BigUint64Array.BigUint64Array
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`BigUint64Array()`** constructor creates {{jsxref("BigUint64Array")}} objects. The contents are initialized to `0n` unless initialization data is explicitly provided.
 
@@ -23,7 +22,8 @@ new BigUint64Array(buffer, byteOffset)
 new BigUint64Array(buffer, byteOffset, length)
 ```
 
-> **Note:** `BigUint64Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
+> [!NOTE]
+> `BigUint64Array()` can only be constructed with [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Attempting to call it without `new` throws a {{jsxref("TypeError")}}.
 
 ### Parameters
 

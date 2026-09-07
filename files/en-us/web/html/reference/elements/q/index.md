@@ -1,11 +1,11 @@
 ---
-title: "<q>: The Inline Quotation element"
+title: "`<q>` HTML inline quotation element"
+short-title: <q>
 slug: Web/HTML/Reference/Elements/q
 page-type: html-element
 browser-compat: html.elements.q
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<q>`** [HTML](/en-US/docs/Web/HTML) element indicates that the enclosed text is a short inline quotation. Most modern browsers implement this by surrounding the text in quotation marks. This element is intended for short quotations that don't require paragraph breaks; for long quotations use the {{HTMLElement("blockquote")}} element.
 
@@ -39,9 +39,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 ```html
 <p>
   According to Mozilla's website,
-  <q cite="https://www.mozilla.org/en-US/about/history/details/">
-    Firefox 1.0 was released in 2004 and became a big success.
-  </q>
+  <q cite="https://www.mozilla.org/en-US/about/history/details/"
+    >Firefox 1.0 was released in 2004 and became a big success.</q
+  >
 </p>
 ```
 

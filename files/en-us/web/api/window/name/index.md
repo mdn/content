@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Window.name
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The `Window.name` property
 gets/sets the name of the window's browsing context.
@@ -36,7 +36,8 @@ between windows.
 [`Window.postMessage()`](/en-US/docs/Web/API/Window/postMessage)
 is the recommended mechanism.
 
-> **Note:** `window.name` converts all stored values to their
+> [!NOTE]
+> `window.name` converts all stored values to their
 > string representations using the `toString` method.
 
 ## Examples

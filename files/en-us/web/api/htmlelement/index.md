@@ -126,7 +126,7 @@ _Also, inherits events from its parent, {{DOMxRef("Element")}}._
 ### Drag & drop events
 
 - {{DOMxRef("HTMLElement/drag_event", "drag")}}
-  - : This event is fired when an element or text selection is being dragged.
+  - : This event is fired repeatedly when an element or text selection is being dragged. The firing frequency depends on the browser, operating system, and pointer movement; do not rely on a fixed interval.
 - {{DOMxRef("HTMLElement/dragend_event", "dragend")}}
   - : This event is fired when a drag operation is being ended (by releasing a mouse button or hitting the escape key).
 - {{DOMxRef("HTMLElement/dragenter_event", "dragenter")}}
@@ -134,11 +134,18 @@ _Also, inherits events from its parent, {{DOMxRef("Element")}}._
 - {{DOMxRef("HTMLElement/dragleave_event", "dragleave")}}
   - : This event is fired when a dragged element or text selection leaves a valid drop target.
 - {{DOMxRef("HTMLElement/dragover_event", "dragover")}}
-  - : This event is fired continuously when an element or text selection is being dragged and the mouse pointer is over a valid drop target (every 50 ms WHEN mouse is not moving ELSE much faster between 5 ms (slow movement) and 1ms (fast movement) approximately. This firing pattern is different than {{domxref("Element/mouseover_event", "mouseover")}} ).
+  - : This event is fired repeatedly while an element or text selection is being dragged over a potential drop target. The firing frequency depends on the browser, operating system, and pointer movement; do not rely on a fixed interval.
 - {{DOMxRef("HTMLElement/dragstart_event", "dragstart")}}
   - : This event is fired when the user starts dragging an element or text selection.
 - {{DOMxRef("HTMLElement/drop_event", "drop")}}
   - : This event is fired when an element or text selection is dropped on a valid drop target.
+
+### Interest invoker events
+
+- {{domxref("HTMLElement.interest_event", "interest")}} {{experimental_inline}} {{non-standard_inline}}
+  - : Fired on the target element of an [interest invoker](/en-US/docs/Web/API/Popover_API/Using_interest_invokers) when interest is shown, allowing code to be run in response.
+- {{domxref("HTMLElement.loseinterest_event", "loseinterest")}} {{experimental_inline}} {{non-standard_inline}}
+  - : Fired on the target element of an interest invoker when interest is lost, allowing code to be run in response.
 
 ### Toggle events
 

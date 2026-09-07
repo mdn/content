@@ -1,11 +1,11 @@
 ---
-title: "<option>: The HTML Option element"
+title: "`<option>` HTML option element"
+short-title: <option>
 slug: Web/HTML/Reference/Elements/option
 page-type: html-element
 browser-compat: html.elements.option
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<option>`** [HTML](/en-US/docs/Web/HTML) element is used to define an item contained in a {{HTMLElement("select")}}, an {{HTMLElement("optgroup")}}, or a {{HTMLElement("datalist")}} element. As such, `<option>` can represent menu items in popups and other lists of items in an HTML document.
 
@@ -43,7 +43,7 @@ select {
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - [`disabled`](/en-US/docs/Web/HTML/Reference/Attributes/disabled)
-  - : If this Boolean attribute is set, this option is not checkable. Often browsers grey out such control and it won't receive any browsing event, like mouse clicks or focus-related ones. If this attribute is not set, the element can still be disabled if one of its ancestors is a disabled {{HTMLElement("optgroup")}} element.
+  - : If this Boolean attribute is set, this option is not checkable. Often browsers gray out such control and it won't receive any browsing event, like mouse clicks or focus-related ones. If this attribute is not set, the element can still be disabled if one of its ancestors is a disabled {{HTMLElement("optgroup")}} element.
 - `label`
   - : This attribute is text for the label indicating the meaning of the option. If the `label` attribute isn't defined, its value is that of the element text content.
 - `selected`
@@ -57,7 +57,7 @@ Styling `<option>` elements has historically been highly limited. [Customizable 
 
 ### Legacy option styling
 
-In browsers that don't support the modern customization features (or legacy codebases where they can't be used), the styling available on `<option>` elements depends on the browser and operating system. Depending on the operating system, the [`font-size`](/en-US/docs/Web/CSS/font-size) of the owning `<select>` is respected in Firefox and Chromium. Chromium may additionally allow [`color`](/en-US/docs/Web/CSS/color), [`background-color`](/en-US/docs/Web/CSS/background-color), [`font-family`](/en-US/docs/Web/CSS/font-family), [`font-variant`](/en-US/docs/Web/CSS/font-variant), and [`text-align`](/en-US/docs/Web/CSS/text-align) to be set.
+In browsers that don't support the modern customization features (or legacy codebases where they can't be used), the styling available on `<option>` elements depends on the browser and operating system. Depending on the operating system, the {{cssxref("font-size")}} of the owning `<select>` is respected in Firefox and Chromium. Chromium may additionally allow {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("font-family")}}, {{cssxref("font-variant")}}, and {{cssxref("text-align")}} to be set.
 
 You can find more details about legacy `<option>` styling in [our guide to advanced form styling](/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling).
 

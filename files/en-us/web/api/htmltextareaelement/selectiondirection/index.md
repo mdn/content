@@ -12,7 +12,7 @@ browser-compat: api.HTMLTextAreaElement.selectionDirection
 
 The **`selectionDirection`** property of the {{domxref("HTMLTextAreaElement")}} interface specifies the current direction of the selection. The possible values are `"forward"`, `"backward"`, and `"none"`. The `forward` value indicates the selection was performed in the start-to-end direction of the current locale, with `backward` indicating the opposite direction. The `none` value occurs if the direction is unknown. It can be used to both retrieve and change the direction of the `<textarea>`s selected text.
 
-Setting the `selectionDirection` to a new value fires the {{domxref("HTMLTextAreaElement.selectionchange_event", "selectchange")}} and {{domxref("HTMLTextAreaElement.select_event", "select")}} events.
+Setting the `selectionDirection` to a new value fires the {{domxref("HTMLTextAreaElement.selectionchange_event", "selectionchange")}} and {{domxref("HTMLTextAreaElement.select_event", "select")}} events.
 
 ## Value
 

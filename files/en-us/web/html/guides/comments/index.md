@@ -4,9 +4,8 @@ short-title: Comments
 slug: Web/HTML/Guides/Comments
 page-type: guide
 spec-urls: https://html.spec.whatwg.org/multipage/syntax.html#comments
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 An HTML **comment** is used to add explanatory notes to the markup or to prevent the browser from interpreting specific parts of the document.
 
@@ -67,5 +66,5 @@ While comments do start with a `<` and end in a `>`, a comment is not an HTML el
 ## See also
 
 - [Comments in JavaScript](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#comments)
-- [Comments in CSS](/en-US/docs/Web/CSS/CSS_syntax/Comments)
+- [Comments in CSS](/en-US/docs/Web/CSS/Guides/Syntax/Comments)
 - {{domxref("Comment")}} API (`Comment` inherits from {{domxref("Node")}})

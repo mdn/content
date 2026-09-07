@@ -3,9 +3,8 @@ title: HTTP response status codes
 slug: Web/HTTP/Reference/Status
 page-type: landing-page
 browser-compat: http.status
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 HTTP response status codes indicate whether a specific [HTTP](/en-US/docs/Web/HTTP) request has been successfully completed.
 Responses are grouped in five classes:
@@ -27,8 +26,10 @@ The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs
   - : This interim response indicates that the client should continue the request or ignore the response if the request is already finished.
 - {{HTTPStatus(101, "101 Switching Protocols")}}
   - : This code is sent in response to an {{HTTPHeader("Upgrade")}} request header from the client and indicates the protocol the server is switching to.
-- {{HTTPStatus(102, "102 Processing")}} {{deprecated_inline}}
-  - : This code was used in {{Glossary("WebDAV")}} contexts to indicate that a request has been received by the server, but no status was available at the time of the response.
+- `102 Processing` {{deprecated_inline}}
+  - : This code was used in {{Glossary("WebDAV", "Web Distributed Authoring (WebDAV")}} contexts to indicate that a request had been received by the server, but no status was available at the time of the response.
+    The status code was first introduced in {{RFC("2518")}}, but it was removed from WebDAV in {{RFC("4918")}}.
+    The response code has been deprecated and it is no longer used.
 - {{HTTPStatus(103, "103 Early Hints")}}
   - : This status code is primarily intended to be used with the {{HTTPHeader("Link")}} header, letting the user agent start [preloading](/en-US/docs/Web/HTML/Reference/Attributes/rel/preload) resources while the server prepares a response or [preconnect](/en-US/docs/Web/HTML/Reference/Attributes/rel/preconnect) to an origin from which the page will need resources.
 
@@ -135,7 +136,7 @@ The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs
   - : In [conditional requests](/en-US/docs/Web/HTTP/Guides/Conditional_requests), the client has indicated preconditions in its headers which the server does not meet.
 - {{HTTPStatus(413, "413 Content Too Large")}}
   - : The request body is larger than limits defined by server.
-    The server might close the connection or return an {{HTTPHeader("Retry-After")}} header field.
+    The server might close the connection or return a {{HTTPHeader("Retry-After")}} header field.
 - {{HTTPStatus(414, "414 URI Too Long")}}
   - : The URI requested by the client is longer than the server is willing to interpret.
 - {{HTTPStatus(415, "415 Unsupported Media Type")}}
@@ -178,7 +179,7 @@ The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs
   - : The server has encountered a situation it does not know how to handle.
     This error is generic, indicating that the server cannot find a more appropriate `5XX` status code to respond with.
 - {{HTTPStatus(501, "501 Not Implemented")}}
-  - : The request method is not supported by the server and cannot be handled. The only methods that servers are required to support (and therefore that must not return this code) are {{HTTPMethod("GET")}} and {{HTTPMethod("HEAD")}}.
+  - : The request method is not supported by the server and cannot be handled. The only methods that servers are required to support (and therefore must not return this code) are {{HTTPMethod("GET")}} and {{HTTPMethod("HEAD")}}.
 - {{HTTPStatus(502, "502 Bad Gateway")}}
   - : This error response means that the server, while working as a gateway to get a response needed to handle the request, got an invalid response.
 - {{HTTPStatus(503, "503 Service Unavailable")}}
@@ -210,3 +211,4 @@ The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs
 
 - [List of HTTP status codes on Wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 - [IANA official registry of HTTP status codes](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)
+- [rfc4918 '102 Processing' removal notes](https://www.rfc-editor.org/info/rfc4918/#section-21.4)

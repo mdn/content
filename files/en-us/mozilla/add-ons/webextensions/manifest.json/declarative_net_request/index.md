@@ -3,9 +3,8 @@ title: declarative_net_request
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/declarative_net_request
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.declarative_net_request
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>

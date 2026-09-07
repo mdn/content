@@ -3,9 +3,8 @@ title: events.Rule
 slug: Mozilla/Add-ons/WebExtensions/API/events/Rule
 page-type: webextension-api-type
 browser-compat: webextensions.api.events.Rule
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Description of a declarative rule for handling events.
 
@@ -24,11 +23,11 @@ Values of this type are objects. They contain the following properties:
 - `priority` {{optional_inline}}
   - : `integer`. Optional priority of this rule. Defaults to 100.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.events`](https://developer.chrome.com/docs/extensions/reference/api/events#type-Rule) API. This documentation is derived from [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json) in the Chromium code.

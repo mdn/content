@@ -3,9 +3,8 @@ title: contextualIdentities
 slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities
 page-type: webextension-api
 browser-compat: webextensions.api.contextualIdentities
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Work with contextual identities: list, create, remove, and update contextual identities.
 
@@ -38,6 +37,10 @@ To use this API you need to include the "contextualIdentities" and "cookies" [pe
   - : Creates a new contextual identity.
 - {{WebExtAPIRef("contextualIdentities.get()")}}
   - : Retrieves a contextual identity, given its cookie store ID.
+- {{WebExtAPIRef("contextualIdentities.getSupportedColors()")}}
+  - : Returns the colors supported for contextual identities.
+- {{WebExtAPIRef("contextualIdentities.getSupportedIcons()")}}
+  - : Returns the icons supported for contextual identities.
 - {{WebExtAPIRef("contextualIdentities.move()")}}
   - : Moves one or more contextual identities within the list of contextual identities.
 - {{WebExtAPIRef("contextualIdentities.query()")}}
@@ -56,8 +59,8 @@ To use this API you need to include the "contextualIdentities" and "cookies" [pe
 - {{WebExtAPIRef("contextualIdentities.onUpdated")}}
   - : Fired when one or more properties of a contextual identity is updated.
 
+{{WebExtExamples("h2")}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples("h2")}}

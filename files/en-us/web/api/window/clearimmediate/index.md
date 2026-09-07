@@ -9,7 +9,7 @@ status:
 browser-compat: api.Window.clearImmediate
 ---
 
-{{APIRef("HTML DOM")}} {{deprecated_header}}{{non-standard_header}}
+{{APIRef("HTML DOM")}} {{non-standard_header}}
 
 This method clears the action specified by {{DOMxRef("window.setImmediate")}}.
 
@@ -22,7 +22,6 @@ clearImmediate(immediateID)
 ### Parameters
 
 - `immediateID`
-
   - : The ID returned by {{DOMxRef("window.setImmediate")}}.
 
 ### Return value

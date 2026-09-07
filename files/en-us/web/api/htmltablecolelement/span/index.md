@@ -8,7 +8,7 @@ browser-compat: api.HTMLTableColElement.span
 
 {{ APIRef("HTML DOM") }}
 
-The **`span`** read-only property of the {{domxref("HTMLTableColElement")}} interface represents the number of columns this {{htmlelement("col")}} or {{htmlelement("colgroup")}} must span; this lets the column occupy space across multiple columns of the table. It reflects the [`span`](/en-US/docs/Web/HTML/Reference/Elements/col#span) attribute.
+The **`span`** property of the {{domxref("HTMLTableColElement")}} interface represents the number of columns this {{htmlelement("col")}} or {{htmlelement("colgroup")}} must span; this lets the column occupy space across multiple columns of the table. It reflects the [`span`](/en-US/docs/Web/HTML/Reference/Elements/col#span) attribute.
 
 ## Value
 
@@ -30,11 +30,13 @@ This example provides two buttons to modify the column span of the first cell of
     <col span="2" class="multiColumn" />
   </colgroup>
   <thead>
-    <th></th>
-    <th scope="col">C1</th>
-    <th scope="col">C2</th>
-    <th scope="col">C3</th>
-    <th scope="col">C4</th>
+    <tr>
+      <th></th>
+      <th scope="col">C1</th>
+      <th scope="col">C2</th>
+      <th scope="col">C3</th>
+      <th scope="col">C4</th>
+    </tr>
   </thead>
   <tbody>
     <tr>

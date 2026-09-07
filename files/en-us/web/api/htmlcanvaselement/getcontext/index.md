@@ -22,9 +22,7 @@ getContext(contextType, contextAttributes)
 ### Parameters
 
 - `contextType`
-
   - : A string containing the context identifier defining the drawing context associated to the canvas. Possible values are:
-
     - `"2d"`
       - : Creates a {{domxref("CanvasRenderingContext2D")}} object representing a two-dimensional rendering context.
     - `"webgl"` (or `"experimental-webgl"`)
@@ -44,7 +42,6 @@ getContext(contextType, contextAttributes)
     > implementations under certain [conformance rules](https://registry.khronos.org/webgl/sdk/tests/CONFORMANCE_RULES.txt).
 
 - `contextAttributes` {{optional_inline}}
-
   - : You can use several context attributes when creating your rendering context, for example:
 
     ```js
@@ -55,20 +52,22 @@ getContext(contextType, contextAttributes)
     ```
 
     2d context attributes:
-
     - `alpha`
       - : A boolean value that indicates if the canvas contains an alpha channel. If set to `false`, the browser now knows that the backdrop is always opaque, which can speed up drawing of transparent content and images.
     - `colorSpace` {{optional_inline}}
       - : Specifies the color space of the rendering context. Possible values are:
         - `"srgb"` selects the [sRGB color space](https://en.wikipedia.org/wiki/SRGB). This is the default value.
         - `"display-p3"` selects the [display-p3 color space](https://en.wikipedia.org/wiki/DCI-P3).
+    - `colorType` {{optional_inline}}
+      - : Specifies the color type of the rendering context. Possible values are:
+        - `"unorm8"` sets the color channels to 8 bit unsigned values. This is the default value.
+        - `"float16"` sets the color channels to 16-bit floating-point values.
     - `desynchronized`
       - : A boolean value that hints the user agent to reduce the latency by desynchronizing the canvas paint cycle from the event loop.
     - `willReadFrequently`
       - : A boolean value that indicates whether or not a lot of read-back operations are planned. This will force the use of a software (instead of hardware accelerated) 2D canvas and can save memory when calling {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}} frequently.
 
     WebGL context attributes:
-
     - `alpha`
       - : A boolean value that indicates if the canvas contains an alpha buffer.
     - `depth`
@@ -82,9 +81,7 @@ getContext(contextType, contextAttributes)
     - `failIfMajorPerformanceCaveat`
       - : A boolean value that indicates if a context will be created if the system performance is low or if no hardware GPU is available.
     - `powerPreference`
-
       - : A hint to the user agent indicating what configuration of GPU is suitable for the WebGL context. Possible values are:
-
         - `"default"`
           - : Let the user agent decide which GPU configuration is most suitable. This is the default value.
         - `"high-performance"`

@@ -2,9 +2,8 @@
 title: UAAG
 slug: Glossary/UAAG
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 _User Agent {{glossary("Accessibility")}} Guidelines_ (**UAAG**) is a recommendation published by the {{Glossary("WAI","Web Accessibility Initiative")}} group at the {{Glossary("W3C")}}, explaining how to make user agents accessible to people with disabilities. User agents include browsers, browser extensions, media players, readers and other applications that render web content. Some accessibility needs are better met in the browser than in the web content, such as text customization, preferences, and user interface accessibility.
 

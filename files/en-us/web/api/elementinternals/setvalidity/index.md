@@ -21,9 +21,7 @@ setValidity(flags, message, anchor)
 ### Parameters
 
 - `flags` {{Optional_Inline}}
-
   - : A dictionary object containing one or more flags indicating the validity state of the element:
-
     - `valueMissing`
       - : A boolean value that is `true` if the element has a [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) attribute, but no value, or `false` otherwise. If `true`, the element matches the {{cssxref(":invalid")}} CSS pseudo-class.
     - `typeMismatch`

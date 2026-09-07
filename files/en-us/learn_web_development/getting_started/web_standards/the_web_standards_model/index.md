@@ -73,8 +73,7 @@ For now, we'll give you a general, high-level understanding of how standards pro
 1. Someone notices the need for a new web standard feature that will make developers' lives easier. For example, maybe there is a common pattern that is commonly used in web user interfaces, but it is a pain to implement. A dedicated CSS feature would make it much easier. The someone could be anyone — an individual developer, or an engineer working for a big tech company.
 2. The person discusses this feature with other developers, browser engineers, etc., and starts to create interest in implementing the feature. Usually they write an explainer document that explains the need for the feature and how it will work, and a code demo that shows what the feature would look like in action.
 3. If there is enough interest in the feature, it is formally discussed inside the relevant standards body working group. For example, CSS features are usually discussed by the [CSS Working Group](https://www.w3.org/groups/wg/css/) (WG) (see also the [CSS Working Group Wikipedia page](https://en.wikipedia.org/wiki/CSS_Working_Group) for a bit more description and history). Before a new web technology is accepted, it must be rigorously evaluated to make sure it is good for the web — for example, it doesn't introduce any security problems, it is [accessible and compatible](#accessible_and_interoperable) with other web technologies, and it doesn't rely on patents.
-4. To prove out the feature, several things happen. These points can all happen around the same time as Point 3., or even before (browser vendors sometimes implement proprietary/non-standard features and then attempt to standardize them afterwards):
-
+4. To prove out the feature, several things happen. These points can all happen around the same time as Point 3, or even before (browser vendors sometimes implement proprietary/non-standard features and then attempt to standardize them afterwards):
    1. One or more browser vendors will implement an experimental version of the new feature, often disabled by default, but which can be enabled by people who want to test it and provide feedback.
    2. A working group member will also add it to a technology specification so that browser vendors are able to implement it consistently.
    3. They will also seek out feedback from other browser vendors to see what issues they have with the proposal, and how likely they are to implement it. These are called Standards positions. See for example [Mozilla Standards Positions](https://mozilla.github.io/standards-positions/).
@@ -111,7 +110,7 @@ Open standards enable the web to remain a freely-available public resource, wher
 
 ### Accessible and interoperable
 
-The web and web browsers are fundamentally designed so that web content is **accessible** to people with disabilities. It was originally envisaged as a great leveller, enabling people to access information regardless of circumstance. This means that, for example:
+The web and web browsers are fundamentally designed so that web content is **accessible** to people with disabilities. It was originally envisaged as a great leveler, enabling people to access information regardless of circumstance. This means that, for example:
 
 - People who are unable to use a mouse or pointing device can use the keyboard to navigate the web.
 - People who are visually impaired can magnify content, or use a program called a **screen reader** to read content out to them and describe controls in a way that makes sense.
@@ -149,7 +148,7 @@ There are other technologies used on the web, for example:
 - [SVG](/en-US/docs/Web/SVG) for creating and manipulating vector graphics.
 - [MathML](/en-US/docs/Web/MathML) for describing mathematical formulae.
 
-However, HTML, CSS, and JavaScript by far the most important technologies to learn, so we will focus mainly on those in our learning pathway.
+However, HTML, CSS, and JavaScript are by far the most important technologies to learn, so we will focus mainly on those in our learning pathway.
 
 ## Tools
 
@@ -175,7 +174,7 @@ These technologies are not considered to be "web standards" — they are develop
 Another way that client-side and server-side languages are often described is **static** and **dynamic**:
 
 - A plain HTML file is stored on the server. When requested, it is delivered to the client, unchanged, and rendered by the browser. Because it does not change, it is referred to as "static".
-- When server-side code (for example, a Python script or an ASP.NET page) generates some HTML containing data and returns that HTML to the client, the contents of the HTML change depending on what the server-side code does. It is therefore referred to as "dynamic".
+- Server-side code (such as a Python script or an ASP.NET page) generates HTML content that varies depending on what data is passed to it, and then returns that HTML to the client. It is therefore referred to as "dynamic". For example, the same weather forecast page can show different data depending on whether the weather is sunny or rainy, what location the user is in, and what their preferences are (some users may want to see pollen count and humidity, whereas others might not care about that data and might select preferences to hide it).
 
 There is often a bit of overlap between the concepts of static and dynamic code. Server-side languages usually define HTML structures inside a template file, which tend to be mostly static HTML with some special dynamic sections included that change depending on what data needs to be inserted.
 

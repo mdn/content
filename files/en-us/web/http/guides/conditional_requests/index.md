@@ -3,9 +3,8 @@ title: HTTP conditional requests
 short-title: Conditional requests
 slug: Web/HTTP/Guides/Conditional_requests
 page-type: guide
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 HTTP has a concept of _conditional requests_, where the result, and even the success of a request, can be controlled by comparing the affected resources with a _validator_.
 These requests are useful for validating cached content, ensuring that it is only fetched if it differs from the copy that is already available to the browser.
@@ -110,7 +109,7 @@ This solution is more efficient, but slightly less flexible, as only one ETag ca
 
 ### Avoiding the lost update problem with optimistic locking
 
-A common operation in Web applications is to _update_ a remote document. This is very common in any file system or source control applications, but any application that allows to store remote resources needs such a mechanism. Common websites, like wikis and other CMS, have such a need.
+A common operation in Web applications is to _update_ a remote document. This is very common in any file system or source control applications, but any application that allows you to store remote resources needs such a mechanism. Common websites, like wikis and other CMS, have such a need.
 
 With the {{HTTPMethod("PUT")}} method you are able to implement this. The client first reads the original files, modifies them, and finally pushes them to the server:
 
@@ -124,7 +123,7 @@ There is no way to deal with this problem without annoying one of the two client
 
 Conditional requests allow implementing the _optimistic locking algorithm_ (used by most wikis or source control systems). The concept is to allow all clients to get copies of the resource, then let them modify it locally, controlling concurrency by successfully allowing the first client to submit an update. All subsequent updates, based on the now obsolete version of the resource, are rejected:
 
-![Conditional requests allow to implement optimistic locking: now the quickest wins, and the others get an error.](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/optimistic-locking-3.svg)
+![Conditional requests allow you to implement optimistic locking: now the quickest wins, and the others get an error.](https://mdn.github.io/shared-assets/images/diagrams/http/conditional-requests/optimistic-locking-3.svg)
 
 This is implemented using the {{HTTPHeader("If-Match")}} or {{HTTPHeader("If-Unmodified-Since")}} headers. If the ETag doesn't match the original file, or if the file has been modified since it has been obtained, the change is rejected with a {{HTTPStatus("412", "412 Precondition Failed")}} error. It is then up to the client to deal with the error: either by notifying the user to start again (this time on the newest version), or by showing the user a _diff_ of both versions, helping them decide which changes they wish to keep.
 

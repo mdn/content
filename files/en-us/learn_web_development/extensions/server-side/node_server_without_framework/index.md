@@ -1,5 +1,6 @@
 ---
 title: Node.js server without a framework
+short-title: Plain Node.js server
 slug: Learn_web_development/Extensions/Server-side/Node_server_without_framework
 page-type: guide
 sidebar: learnsidebar
@@ -36,7 +37,8 @@ const STATIC_PATH = path.join(process.cwd(), "./static");
 const toBool = [() => true, () => false];
 
 const prepareFile = async (url) => {
-  const paths = [STATIC_PATH, url];
+  const urlAsPath = decodeURI(url);
+  const paths = [STATIC_PATH, urlAsPath];
   if (url.endsWith("/")) paths.push("index.html");
   const filePath = path.join(...paths);
   const pathTraversal = !filePath.startsWith(STATIC_PATH);

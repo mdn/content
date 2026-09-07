@@ -4,24 +4,23 @@ short-title: add()
 slug: Web/JavaScript/Reference/Global_Objects/WeakSet/add
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.WeakSet.add
+sidebar: jsref
 ---
 
-{{JSRef}}
+The **`add()`** method of {{jsxref("WeakSet")}} instances inserts the specified value into this set, if it is not already present.
 
-The **`add()`** method of {{jsxref("WeakSet")}} instances appends a new object to the end of this `WeakSet`.
-
-{{InteractiveExample("JavaScript Demo: WeakSet.Prototype.add()", "taller")}}
+{{InteractiveExample("JavaScript Demo: WeakSet.prototype.add()", "taller")}}
 
 ```js interactive-example
-const weakset1 = new WeakSet();
-const object1 = {};
+const weakset = new WeakSet();
+const object = {};
 
-weakset1.add(object1);
-console.log(weakset1.has(object1));
+weakset.add(object);
+console.log(weakset.has(object));
 // Expected output: true
 
 try {
-  weakset1.add(1);
+  weakset.add(1);
 } catch (error) {
   console.log(error);
   // Expected output (Chrome): TypeError: Invalid value used in weak set
@@ -39,7 +38,7 @@ add(value)
 ### Parameters
 
 - `value`
-  - : Must be either an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry). The value to add to the `WeakSet` collection.
+  - : The value to add to the `WeakSet` object. Must be either an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry). Objects are compared by [reference](/en-US/docs/Glossary/Object_reference), not by value.
 
 ### Return value
 
@@ -52,7 +51,7 @@ The `WeakSet` object.
 
 ## Examples
 
-### Using add
+### Using add()
 
 ```js
 const ws = new WeakSet();

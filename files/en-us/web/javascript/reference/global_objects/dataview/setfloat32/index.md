@@ -4,9 +4,8 @@ short-title: setFloat32()
 slug: Web/JavaScript/Reference/Global_Objects/DataView/setFloat32
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.DataView.setFloat32
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`setFloat32()`** method of {{jsxref("DataView")}} instances takes a number and stores it as a 32-bit floating point number in the 4 bytes starting at the specified byte offset of this `DataView`. There is no alignment constraint; multi-byte values may be stored at any offset within bounds.
 

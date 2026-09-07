@@ -1,12 +1,11 @@
 ---
-title: <meta name="color-scheme">
+title: '`<meta name="color-scheme">` HTML attribute value'
 short-title: color-scheme
 slug: Web/HTML/Reference/Elements/meta/name/color-scheme
 page-type: html-attribute-value
 browser-compat: html.elements.meta.name.color-scheme
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`color-scheme`** value for the [`name`](/en-US/docs/Web/HTML/Reference/Elements/meta/name) attribute of the {{htmlelement("meta")}} element indicates a suggested color scheme that user agents should use for a page.
 If specified, you define the color scheme using a [`content`](/en-US/docs/Web/HTML/Reference/Elements/meta#content) attribute in the `<meta>` element with a valid CSS {{cssxref("color-scheme")}} value.
@@ -37,10 +36,6 @@ A `<meta name="color-scheme">` element has the following additional attributes:
     - `only light`
       - : Indicates that the document _only_ supports light mode, with a light background and dark foreground colors.
         `only dark` _is invalid_, because forcing a document to render in dark mode when it isn't compatible can result in unreadable content and all major browsers default to light mode if not otherwise configured.
-- `media` {{optional_inline}}
-  - : Any valid media type or query.
-    If provided, the options for the document's color scheme defined in the `content` attribute are suggested to the browser when the media query matches.
-    This is mostly useful for the {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} CSS media feature.
 
 ## Examples
 
@@ -64,4 +59,4 @@ Whether the light or dark color scheme is used depends on user preferences such 
 ## See also
 
 - {{cssxref("color-scheme")}} CSS property
-- [`prefers-color-scheme`](/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query
+- {{cssxref("@media/prefers-color-scheme")}} media query

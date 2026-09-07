@@ -14,7 +14,7 @@ or `null` if there is none.
 
 ## Value
 
-A {{domxref("Element")}} object, or `null` if no sibling has been found.
+An {{domxref("Element")}} object, or `null` if no sibling has been found.
 
 ## Example
 

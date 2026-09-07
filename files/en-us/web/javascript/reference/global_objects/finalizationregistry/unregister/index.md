@@ -4,9 +4,8 @@ short-title: unregister()
 slug: Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/unregister
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.FinalizationRegistry.unregister
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`unregister()`** method of {{jsxref("FinalizationRegistry")}} instances unregisters a target value from this `FinalizationRegistry`.
 

@@ -6,9 +6,10 @@ page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.ambient-light-sensor
+sidebar: http
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader('Permissions-Policy')}} header `ambient-light-sensor` directive controls whether the current document is allowed to gather information about the amount of light in the environment around the device through the {{domxref('AmbientLightSensor')}} interface.
 

@@ -2,9 +2,8 @@
 title: "SyntaxError: return not in function"
 slug: Web/JavaScript/Reference/Errors/Bad_return
 page-type: javascript-error
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Errors")}}
 
 The JavaScript exception "return not in function" occurs when a [`return`](/en-US/docs/Web/JavaScript/Reference/Statements/return) statement is called outside of a [function](/en-US/docs/Web/JavaScript/Guide/Functions).
 

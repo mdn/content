@@ -4,9 +4,8 @@ short-title: at()
 slug: Web/JavaScript/Reference/Global_Objects/TypedArray/at
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.TypedArray.at
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`at()`** method of {{jsxref("TypedArray")}} instances takes an integer value and returns the item at that index, allowing for positive and negative integers. Negative integers count back from the last item in the typed array. This method has the same algorithm as {{jsxref("Array.prototype.at()")}}.
 
@@ -65,7 +64,7 @@ console.log(lastItem); // 18
 
 ### Comparing methods
 
-Here we compare different ways to select the penultimate (last but one) item of a {{jsxref("TypedArray")}}. Whilst all below methods are valid, it highlights the succinctness and readability of the `at()` method.
+Here we compare different ways to select the penultimate (last but one) item of a {{jsxref("TypedArray")}}. While all below methods are valid, it highlights the succinctness and readability of the `at()` method.
 
 ```js
 // Our typed array with values

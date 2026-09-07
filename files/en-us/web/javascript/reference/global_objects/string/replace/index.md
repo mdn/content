@@ -4,23 +4,24 @@ short-title: replace()
 slug: Web/JavaScript/Reference/Global_Objects/String/replace
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.replace
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`replace()`** method of {{jsxref("String")}} values returns a new string with one, some, or all matches of a `pattern` replaced by a `replacement`. The `pattern` can be a string or a {{jsxref("RegExp")}}, and the `replacement` can be a string or a function called for each match. If `pattern` is a string, only the first occurrence will be replaced. The original string is left unchanged.
 
 {{InteractiveExample("JavaScript Demo: String.prototype.replace()")}}
 
 ```js interactive-example
-const paragraph = "I think Ruth's dog is cuter than your dog!";
+const paragraph = "This dog's name is just Dog! Yes, that is the name.";
 
-console.log(paragraph.replace("Ruth's", "my"));
-// Expected output: "I think my dog is cuter than your dog!"
+console.log(paragraph.replace("name", "nickname"));
+// Expected output: "This dog's nickname is just Dog! Yes, that is the name."
 
-const regex = /dog/i;
-console.log(paragraph.replace(regex, "ferret"));
-// Expected output: "I think Ruth's ferret is cuter than your dog!"
+console.log(paragraph.replace(/\bis\b/, "was"));
+// Expected output: "This dog's name was just Dog! Yes, that is the name."
+
+console.log(paragraph.replace(/\bis\b/g, "was"));
+// Expected output: "This dog's name was just Dog! Yes, that was the name."
 ```
 
 ## Syntax

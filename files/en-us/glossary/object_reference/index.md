@@ -2,9 +2,8 @@
 title: Object reference
 slug: Glossary/Object_reference
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 An **object reference** is a link to an _{{glossary("object")}}_. Object references can be used exactly like the linked objects.
 

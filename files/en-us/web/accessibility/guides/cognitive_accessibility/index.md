@@ -121,7 +121,7 @@ The order of focus for interactive elements should make sense. To achieve this, 
 
 ### Focused elements should be visibly focused
 
-When a user navigates using a keyboard, the UI should make it obvious which element currently has focus. Don't alter or remove the browser's default [`:focus`](/en-US/docs/Web/CSS/:focus) styling, unless you're making focus even more obvious.
+When a user navigates using a keyboard, the UI should make it obvious which element currently has focus. Don't alter or remove the browser's default {{cssxref(":focus")}} styling, unless you're making focus even more obvious.
 
 ### Link text conveys meaning
 
@@ -224,7 +224,7 @@ Input Assistance guidelines aim to reduce the likelihood that users, especially 
 
 ### Convey automated error detection
 
-Users need to be alerted to the error and informed of what is wrong. If there is client side error detection, observe the following guidelines to make the error as effective as possible when conveyed to the user:
+Users need to be alerted to the error and informed of what is wrong. If there is client-side error detection, observe the following guidelines to make the error as effective as possible when conveyed to the user:
 
 - The error must be described in the text.
 - Ensure that the error message is as specific as possible.

@@ -4,9 +4,8 @@ short-title: global
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/global
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.RegExp.global
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`global`** accessor property of {{jsxref("RegExp")}} instances returns whether or not the `g` flag is used with this regular expression.
 
@@ -37,16 +36,13 @@ The set accessor of `global` is `undefined`. You cannot change this property dir
 ### Using global
 
 ```js
-const regex = /foo/g;
-console.log(regex.global); // true
+const globalRegex = /foo/g;
 
 const str = "fooexamplefoo";
-const str1 = str.replace(regex, "");
-console.log(str1); // example
+console.log(str.replace(globalRegex, "")); // example
 
-const regex1 = /foo/;
-const str2 = str.replace(regex1, "");
-console.log(str2); // examplefoo
+const nonGlobalRegex = /foo/;
+console.log(str.replace(nonGlobalRegex, "")); // examplefoo
 ```
 
 ## Specifications

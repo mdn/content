@@ -23,7 +23,14 @@ None.
 
 ### Return value
 
-A promise that resolves with a {{domxref("Blob")}}.
+A promise that resolves with a {{domxref("Blob")}} whose data is the body's bytes and the media type is the request's `Content-Type` header's value.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown for one of the following reasons:
+    - The request body is [disturbed or locked](/en-US/docs/Web/API/Fetch_API/Using_Fetch#locked_and_disturbed_streams).
+    - There was an error decoding the body content (for example, because the {{httpheader("Content-Encoding")}} header is incorrect).
 
 ## Examples
 

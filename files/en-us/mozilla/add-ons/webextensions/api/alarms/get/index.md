@@ -3,9 +3,8 @@ title: alarms.get()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/get
 page-type: webextension-api-function
 browser-compat: webextensions.api.alarms.get
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Gets an alarm, given its name.
 

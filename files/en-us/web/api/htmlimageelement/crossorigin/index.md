@@ -8,44 +8,21 @@ browser-compat: api.HTMLImageElement.crossOrigin
 
 {{APIRef("HTML DOM")}}
 
-The {{domxref("HTMLImageElement")}}
-interface's **`crossOrigin`** attribute is a string which
-specifies the Cross-Origin Resource Sharing ({{Glossary("CORS")}}) setting to use when
-retrieving the image.
+The **`crossOrigin`** property of the {{domxref("HTMLImageElement")}} interface is a string which specifies the Cross-Origin Resource Sharing ({{Glossary("CORS")}}) setting to use when retrieving the image. It reflects the `<img>` element's [`crossorigin`](/en-US/docs/Web/HTML/Reference/Elements/img#crossorigin) content attribute.
 
 ## Value
 
-A string of a keyword specifying the CORS mode to use when fetching
-the image resource. If you don't specify `crossOrigin`, the image is fetched
-without CORS (the fetch `no-cors` mode).
-
-Permitted values are:
-
-- `anonymous`
-  - : Requests by the {{HTMLElement("img")}} element have their
-    {{domxref("Request.mode", "mode")}} set to `cors` and their {{domxref("Request.credentials", "credentials")}}
-    mode set to `same-origin`. This means that CORS is enabled
-    and credentials are sent _if_ the image is fetched from the same origin from
-    which the document was loaded.
-- `use-credentials`
-  - : Requests by the {{domxref("HTMLImageElement")}} will use the `cors` mode
-    and the `include` credentials mode; all image requests by the element will
-    use CORS, regardless of what domain the fetch is from.
-
-If `crossOrigin` is an empty string (`""`),
-the `anonymous` mode is selected.
+A string whose value is one of `anonymous` or `use-credentials`. For their meanings, see the HTML [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute reference.
 
 ## Examples
 
-In this example, a new {{HTMLElement("img")}} element is created and added to the
-document, loading the image with the Anonymous state; the image will be loaded using
-CORS and credentials will be used for all cross-origin loads.
+### Setting the crossorigin attribute
 
-### JavaScript
+In this example, a new {{HTMLElement("img")}} element is created and added to the document, loading the image with the Anonymous state; the image will be loaded using CORS and credentials will be used for all cross-origin loads.
 
-The code below demonstrates setting the `crossOrigin` property on an
-`<img>` element to configure CORS access for the fetch of a
-newly-created image.
+#### JavaScript
+
+The code below demonstrates setting the `crossOrigin` property on an `<img>` element to configure CORS access for the fetch of a newly-created image.
 
 ```js
 const container = document.querySelector(".container");
@@ -65,7 +42,7 @@ function loadImage(url) {
   image.src = url;
 }
 
-loadImage("clock-demo-400px.png");
+loadImage("/shared-assets/images/examples/balloon.jpg");
 ```
 
 ### HTML
@@ -85,7 +62,8 @@ loadImage("clock-demo-400px.png");
 ```css
 body {
   font:
-    1.125rem/1.5 Helvetica,
+    1.125rem/1.5 "Helvetica",
+    "Arial",
     sans-serif;
 }
 
@@ -102,14 +80,14 @@ img {
 
 output {
   background: rgb(100 100 100 / 100%);
-  font-family: Courier, monospace;
+  font-family: "Courier New", monospace;
   width: 95%;
 }
 ```
 
 ### Result
 
-{{EmbedLiveSample("Examples", 600, 260)}}
+{{EmbedLiveSample("Setting the crossorigin attribute", 600, 260)}}
 
 ## Specifications
 

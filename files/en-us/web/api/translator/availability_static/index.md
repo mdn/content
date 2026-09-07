@@ -8,7 +8,7 @@ status:
 browser-compat: api.Translator.availability_static
 ---
 
-{{APIRef("Translator and Language Detector APIs")}}{{securecontext_header}}{{SeeCompatTable}}
+{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`availability()`** static method of the {{domxref("Translator")}} interface returns an enumerated value that indicates the availability of the AI model for the given `Translator` configuration.
 
@@ -21,11 +21,9 @@ Translator.availability(options)
 ### Parameters
 
 - `options`
-
   - : An object specifying configuration options for the `Translator`. Possible values include:
-
     - `sourceLanguage`
-      - : A string specifying the language of the input text to be translated, which should be a valid [BCP 47 language tag](https://en.wikipedia.org/wiki/IETF_language_tag#List_of_common_primary_language_subtags) (as specified in [RFC 5646](https://datatracker.ietf.org/doc/html/rfc5646)).
+      - : A string specifying the language of the input text to be translated, which should be a valid {{glossary("BCP 47 language tag")}}.
     - `targetLanguage`
       - : A string specifying the language that the input text will be translated into, which should be valid BCP 47 language tag.
 
@@ -42,7 +40,7 @@ Possible values include:
 - `downloading`
   - : The browser supports the given configuration, but it has to finish an ongoing download before it can proceed.
 - `unavailable`
-  - : The browser does not support the given configuration. This value is also returned if the specified `sourceLanguage` and `targetLanguage` are the same.
+  - : The browser does not support the given configuration. This value is also returned if the specified `sourceLanguage` and `targetLanguage` are the same, or if the Translator API is blocked by a {{httpheader('Permissions-Policy/translator','translator')}} {{httpheader("Permissions-Policy")}}.
 
 ### Exceptions
 
@@ -52,8 +50,6 @@ Possible values include:
   - : Thrown if initialization of the AI model failed for any reason.
 - `UnknownError` {{domxref("DOMException")}}
   - : Thrown if the `availability()` call failed for any other reason, or a reason the user agent did not wish to disclose.
-
-If usage of the method is blocked by a {{httpheader('Permissions-Policy/translator','translator')}} {{httpheader("Permissions-Policy")}}, the promise rejects with a value of `unavailable`.
 
 ## Examples
 

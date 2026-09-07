@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.putImageData
 ---
 
-{{APIRef}}
+{{APIRef("Canvas API")}}
 
 The **`CanvasRenderingContext2D.putImageData()`**
 method of the Canvas 2D API paints data from the given {{domxref("ImageData")}} object

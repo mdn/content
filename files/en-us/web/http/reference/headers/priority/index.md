@@ -4,13 +4,12 @@ short-title: Priority
 slug: Web/HTTP/Reference/Headers/Priority
 page-type: http-header
 browser-compat: http.headers.Priority
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Priority`** header indicates a client's preference for the priority order at which the response containing the requested resource should be sent, relative to other resource requests on the same connection.
 If the header is not specified in the request, a default priority is assumed.
-The server may also include this header in responses in order to indicate it has an interest in changing the prioritization preferences the client advertized.
+The server may also include this header in responses in order to indicate it has an interest in changing the prioritization preferences the client advertised.
 In responses, this information can be used as an input to the prioritization process for caching servers and other servers that are forwarding the response.
 
 The server is not bound by client prioritization and might only use client priorities as hints for its own prioritization process.
@@ -51,7 +50,6 @@ Priority: u=<priority>, i
 ## Directives
 
 - `u=<priority>`
-
   - : The "urgency" (`u`) parameter specifies a priority value `<priority>` for the resource.
     The value is an integer between 0 and 7 inclusive, in descending order of priority (0 is the highest urgency).
     The default priority value for requests is 3.
@@ -66,7 +64,6 @@ Priority: u=<priority>, i
     The absence of the `Priority` header in the response indicates that the server chosen not to modify the client priority.
 
 - `i`
-
   - : The incremental (`i`) directive, if present, indicates than an HTTP response can be processed incrementally.
 
     Resources that can be processed incrementally are those where the recipient can potentially do something useful as soon as a chunk arrives, rather than waiting for the complete resource to be available.

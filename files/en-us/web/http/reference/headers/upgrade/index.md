@@ -4,9 +4,8 @@ short-title: Upgrade
 slug: Web/HTTP/Reference/Headers/Upgrade
 page-type: http-header
 browser-compat: http.headers.Upgrade
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP `Upgrade` {{glossary("request header", "request")}} and {{glossary("response header")}} can be used to upgrade an already-established client/server connection to a different protocol (over the same transport protocol).
 For example, it can be used by a client to upgrade a connection from HTTP/1.1 to HTTP/2, or an HTTP(S) connection to a WebSocket connection.
@@ -31,8 +30,6 @@ For example, it can be used by a client to upgrade a connection from HTTP/1.1 to
 </table>
 
 ## Syntax
-
-A comma-separated list of one or more protocols:
 
 ```http
 Upgrade: <protocol>[/<protocol_version>]
@@ -91,7 +88,7 @@ Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11
 
 ### Upgrading to WebSocket
 
-This is a common combination of headers to use to begin upgrading a HTTP connection to WebSockets.
+This is a common combination of headers to use to begin upgrading an HTTP connection to WebSockets.
 See [Upgrading to a WebSocket connection](/en-US/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism#upgrading_to_a_websocket_connection) for more information.
 
 ```http

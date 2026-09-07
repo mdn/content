@@ -4,9 +4,8 @@ short-title: reject()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/reject
 page-type: javascript-static-method
 browser-compat: javascript.builtins.Promise.reject
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Promise.reject()`** static method returns a `Promise` object that is rejected with a given reason.
 

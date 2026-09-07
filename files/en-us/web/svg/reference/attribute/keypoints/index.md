@@ -6,7 +6,7 @@ browser-compat: svg.elements.animateMotion.keyPoints
 sidebar: svgref
 ---
 
-The **`keyPoints`** attribute indicates the simple duration of an animation.
+The **`keyPoints`** attribute indicates, in the range [0,1], how far the object is along the path for each associated value in {{SVGAttr("keyTimes")}}.
 
 You can use this attribute with the following SVG elements:
 
@@ -74,7 +74,6 @@ svg {
 </table>
 
 - `<number> [; <number>] ;?`
-
   - : This value defines a semicolon-separated list of floating point values between 0 and 1 and indicates how far along the motion path the object shall move at the moment in time specified by corresponding {{SVGAttr("keyTimes")}} value. The distance is calculated along the path specified by the {{SVGAttr("path")}} attribute. Each progress value in the list corresponds to a value in the `keyTimes` attribute list.
 
     If a list of key points is specified, there must be exactly as many values in the `keyPoints` list as in the `keyTimes` list.

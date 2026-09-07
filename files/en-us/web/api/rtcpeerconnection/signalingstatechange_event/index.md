@@ -31,17 +31,13 @@ A generic {{domxref("Event")}}.
 Given an {{domxref("RTCPeerConnection")}}, `pc`, and an `updateStatus()` function that presents status information to the user, this code sets up an event handler to let the user know when the ICE negotiation process finishes up.
 
 ```js
-pc.addEventListener(
-  "signalingstatechange",
-  (ev) => {
-    switch (pc.signalingState) {
-      case "stable":
-        updateStatus("ICE negotiation complete");
-        break;
-    }
-  },
-  false,
-);
+pc.addEventListener("signalingstatechange", (ev) => {
+  switch (pc.signalingState) {
+    case "stable":
+      updateStatus("ICE negotiation complete");
+      break;
+  }
+});
 ```
 
 Using `onsignalingstatechange`, it looks like this:

@@ -3,9 +3,8 @@ title: async function*
 slug: Web/JavaScript/Reference/Statements/async_function*
 page-type: javascript-statement
 browser-compat: javascript.statements.async_generator_function
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Statements")}}
 
 The **`async function*`** declaration creates a {{Glossary("binding")}} of a new async generator function to a given name.
 
@@ -50,7 +49,8 @@ async function* name(param0, param1, /* …, */ paramN) {
 > [!NOTE]
 > Async generator functions do not have arrow function counterparts.
 
-> **Note:** `function` and `*` are separate tokens, so they can be separated by [whitespace or line terminators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#white_space). However, there cannot be a line terminator between `async` and `function`, otherwise a semicolon is [automatically inserted](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion), causing `async` to become an identifier and the rest to become a `function*` declaration.
+> [!NOTE]
+> `function` and `*` are separate tokens, so they can be separated by [whitespace or line terminators](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#white_space). However, there cannot be a line terminator between `async` and `function`, otherwise a semicolon is [automatically inserted](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion), causing `async` to become an identifier and the rest to become a `function*` declaration.
 
 ### Parameters
 

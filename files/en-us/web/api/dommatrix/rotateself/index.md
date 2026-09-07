@@ -65,7 +65,7 @@ console.log(matrix); // output: "matrix(0.866, 0.5, -0.5, 0.866, 0, 0)"
   - {{cssxref("transform-function/rotateX", "rotateX()")}}
   - {{cssxref("transform-function/rotateY", "rotateY()")}}
   - {{cssxref("transform-function/rotateZ", "rotateZ()")}}
-- [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms) module
+- [CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms) module
 - SVG [`transform`](/en-US/docs/Web/SVG/Reference/Attribute/transform) attribute
 - {{domxref("CanvasRenderingContext2D")}} interface methods
   - {{domxref("CanvasRenderingContext2D.rotate()")}}

@@ -33,15 +33,11 @@ Given an {{domxref("RTCPeerConnection")}}, `pc`, the following code creates an e
 ```js
 let iceTransport = pc.getSenders()[0].transport.iceTransport;
 
-iceTransport.addEventListener(
-  "statechange",
-  (ev) => {
-    if (iceTransport.state === "failed") {
-      handleFailure(pc);
-    }
-  },
-  false,
-);
+iceTransport.addEventListener("statechange", (ev) => {
+  if (iceTransport.state === "failed") {
+    handleFailure(pc);
+  }
+});
 ```
 
 The same code, using the `onstatechange` event handler property, looks like this:

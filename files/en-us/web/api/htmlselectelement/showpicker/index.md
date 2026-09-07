@@ -39,7 +39,7 @@ None ({{jsxref("undefined")}}).
 
 ## Security considerations
 
-[Transient user activation](/en-US/docs/Web/Security/User_activation) is required.
+[Transient user activation](/en-US/docs/Web/Security/Defenses/User_activation) is required.
 The user has to interact with the page or a UI element in order for this feature to work.
 
 The method is only allowed to be called in same-origin iframes; an exception is thrown if this is called in a cross-origin iframe.

@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLFormElement.formdata_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`formdata`** event fires after the entry list representing the form's data is constructed. This happens when the form is submitted, but can also be triggered by the invocation of a {{domxref("FormData.FormData", "FormData()")}} constructor.
 
@@ -27,13 +27,6 @@ onformdata = (event) => { }
 A {{domxref("FormDataEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("FormDataEvent")}}
-
-## Event properties
-
-_Inherits properties from its parent interface, {{domxref("Event")}}._
-
-- {{domxref("FormDataEvent.formData")}}
-  - : Contains the {{domxref("FormData")}} object representing the data contained in the form when the event was fired.
 
 ## Examples
 

@@ -4,11 +4,10 @@ short-title: length
 slug: Web/JavaScript/Reference/Global_Objects/Array/length
 page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.Array.length
+sidebar: jsref
 ---
 
-{{JSRef}}
-
-The **`length`** data property of an {{jsxref("Array")}} instance represents the number of elements in that array. The value is an unsigned, 32-bit integer that is always numerically greater than the highest index in the array.
+The **`length`** data property of an {{jsxref("Array")}} instance represents the number of slots in that array. The value is an unsigned, 32-bit integer that is always numerically greater than the highest index in the array. It may be greater than the number of elements if the array is [sparse](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#array_methods_and_empty_slots).
 
 {{InteractiveExample("JavaScript Demo: Array: length", "shorter")}}
 

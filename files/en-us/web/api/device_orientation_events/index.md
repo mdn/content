@@ -31,6 +31,8 @@ Some typical features for which you might want to use the device orientation eve
 
 - for gesture recognition — for example, recognizing a "shake" gesture and using it to perform some action such as clearing an input area when the user shakes the device
 
+Some user agents require explicit permission before providing access to sensor data. In those environments, {{domxref("DeviceMotionEvent.requestPermission_static", "DeviceMotionEvent.requestPermission()")}} and {{domxref("DeviceOrientationEvent.requestPermission_static", "DeviceOrientationEvent.requestPermission()")}} can be used to request this permission from a {{Glossary("transient activation", "transient user activation")}} such as a button click. See [Requesting permission](/en-US/docs/Web/API/Device_orientation_events/Detecting_device_orientation#requesting_permission) for more details.
+
 > [!NOTE]
 > This API is widely supported on mobile browsers. While some desktop-only browsers may have limitations due to hardware differences, these constraints are rarely significant given the API's primary usage on sensor-equipped devices.
 

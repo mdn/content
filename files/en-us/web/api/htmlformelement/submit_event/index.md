@@ -6,22 +6,9 @@ page-type: web-api-event
 browser-compat: api.HTMLFormElement.submit_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`submit`** event fires when a {{HtmlElement("form")}} is submitted.
-
-Note that the `submit` event fires on the `<form>` element itself, and not on any {{HtmlElement("button")}} or `{{HtmlElement('input/submit', '&lt;input type="submit"&gt;')}}` inside it. However, the {{domxref("SubmitEvent")}} which is sent to indicate the form's submit action has been triggered includes a {{domxref("SubmitEvent.submitter", "submitter")}} property, which is the button that was invoked to trigger the submit request.
-
-The `submit` event fires when:
-
-- the user clicks a {{Glossary("submit button")}},
-- the user presses <kbd>Enter</kbd> while editing a field (e.g., {{HtmlElement('input/text', '&lt;input type="text"&gt;')}}) in a form,
-- a script calls the {{domxref("HTMLFormElement.requestSubmit()", "form.requestSubmit()")}} method
-
-However, the event is _not_ sent to the form when a script calls the {{domxref("HTMLFormElement.submit()", "form.submit()")}} method directly.
-
-> [!NOTE]
-> Trying to submit a form that does not pass [validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation) triggers an {{domxref("HTMLInputElement/invalid_event", "invalid")}} event. In this case, the validation prevents form submission, and thus there is no `submit` event.
 
 ## Syntax
 
@@ -39,12 +26,27 @@ A {{domxref("SubmitEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("SubmitEvent")}}
 
-## Event properties
+## Description
 
-_In addition to the properties listed below, this interface inherits the properties of its parent interface, {{domxref("Event")}}._
+The `submit` event fires on the `<form>` element itself, and not on any {{HtmlElement("button")}} or `{{HtmlElement('input/submit', '&lt;input type="submit"&gt;')}}` inside it. However, the {{domxref("SubmitEvent")}} which is sent to indicate the form's submit action has been triggered includes a {{domxref("SubmitEvent.submitter", "submitter")}} property, which is the button that was invoked to trigger the submit request.
 
-- {{domxref("SubmitEvent.submitter", "submitter")}} {{ReadOnlyInline}}
-  - : An {{domxref("HTMLElement")}} object which identifies the button or other element which was invoked to trigger the form being submitted.
+The `submit` event fires when:
+
+- the user clicks a {{Glossary("submit button")}},
+- the user submits the form [implicitly](#implicit_submission),
+- a script calls the {{domxref("HTMLFormElement.requestSubmit()", "form.requestSubmit()")}} method
+
+However, the event is _not_ sent to the form when a script calls the {{domxref("HTMLFormElement.submit()", "form.submit()")}} method directly.
+
+Trying to submit a form that does not pass [validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation) triggers an {{domxref("HTMLInputElement/invalid_event", "invalid")}} event. In this case, the validation prevents form submission, and thus there is no `submit` event.
+
+### Implicit submission
+
+The [HTML specification](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#implicit-submission) does not formally define what user gestures may trigger implicit submission, because it depends on operating system and device conventions. For example, pressing <kbd>Enter</kbd> while focusing on a text input is a common gesture. However, the browser's reaction to such a gesture is standardized:
+
+- If the form has a non-disabled default submit button, the browser fires a `click` event at that button. The default button is the first submit button in tree order whose [form owner](/en-US/docs/Web/API/HTMLButtonElement/form) is that form. This then triggers the form submission process (as if the button has been pressed by the user), unless the event is canceled.
+- If the form has no submit button, it is submitted implicitly only when it has at most one {{HTMLElement("input")}} element of type `text`, `search`, `tel`, `url`, `email`, `password`, `date`, `month`, `week`, `time`, `datetime-local`, or `number`. {{HTMLElement("textarea")}} and {{HTMLElement("select")}} elements do not block implicit submission.
+- Otherwise, if the form has a disabled default submit button, or no submit button and more than one input blocking implicit submission, the gesture never triggers implicit submission.
 
 ## Examples
 
@@ -64,13 +66,14 @@ This example uses {{domxref("EventTarget.addEventListener()")}} to listen for fo
 ### JavaScript
 
 ```js
+const form = document.getElementById("form");
+const log = document.getElementById("log");
+
 function logSubmit(event) {
   log.textContent = `Form Submitted! Timestamp: ${event.timeStamp}`;
   event.preventDefault();
 }
 
-const form = document.getElementById("form");
-const log = document.getElementById("log");
 form.addEventListener("submit", logSubmit);
 ```
 

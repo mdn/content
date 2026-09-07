@@ -3,9 +3,8 @@ title: bookmarks.onMoved
 slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onMoved
 page-type: webextension-api-event
 browser-compat: webextensions.api.bookmarks.onMoved
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fired when a bookmark or folder is moved to a different parent folder or position within a folder.
 
@@ -34,9 +33,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed these arguments:
-
     - `id`
       - : `string`. ID of the item that was moved.
     - `moveInfo`
@@ -54,10 +51,6 @@ Events have three functions:
   - : `string`. The old parent folder.
 - `oldIndex`
   - : `integer`. The old index of the item in its parent.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -78,6 +71,10 @@ browser.browserAction.onClicked.addListener(handleClick);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#event-onMoved) API. This documentation is derived from [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) in the Chromium code.

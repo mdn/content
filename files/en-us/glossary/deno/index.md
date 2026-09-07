@@ -2,9 +2,8 @@
 title: Deno
 slug: Glossary/Deno
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 **Deno** is a runtime environment for {{Glossary("JavaScript")}}, {{Glossary("TypeScript")}}, and {{glossary("WebAssembly")}}.
 

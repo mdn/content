@@ -4,9 +4,8 @@ short-title: toString()
 slug: Web/JavaScript/Reference/Global_Objects/Array/toString
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.toString
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`toString()`** method of {{jsxref("Array")}} instances returns a string representing the
 specified array and its elements.
@@ -14,9 +13,9 @@ specified array and its elements.
 {{InteractiveExample("JavaScript Demo: Array.prototype.toString()", "shorter")}}
 
 ```js interactive-example
-const array1 = [1, 2, "a", "1a"];
+const array = [1, 2, "a", "1a"];
 
-console.log(array1.toString());
+console.log(array.toString());
 // Expected output: "1,2,a,1a"
 ```
 
@@ -73,9 +72,9 @@ console.log(arr.toString()); // 1,3,,4,2
 ### Using toString()
 
 ```js
-const array1 = [1, 2, "a", "1a"];
+const array = [1, 2, "a", "1a"];
 
-console.log(array1.toString()); // "1,2,a,1a"
+console.log(array.toString()); // "1,2,a,1a"
 ```
 
 ### Using toString() on sparse arrays

@@ -9,12 +9,12 @@ status:
 browser-compat: api.Element.beforescriptexecute_event
 ---
 
-{{APIRef}}{{Non-standard_header}}{{deprecated_header}}
+{{APIRef("DOM")}}{{Non-standard_header}}
 
 > [!WARNING]
 > This event was a proposal in an early version of the specification. Do not rely on it.
 
-The **`beforescriptexecute`** event is fired when a script is about to be executed. Cancelling the event prevents the script from executing.
+The **`beforescriptexecute`** event is fired when a script is about to be executed. Canceling the event prevents the script from executing.
 
 It is a proprietary event specific to Gecko (Firefox).
 

@@ -3,9 +3,8 @@ title: tabGroups.onMoved
 slug: Mozilla/Add-ons/WebExtensions/API/tabGroups/onMoved
 page-type: webextension-api-event
 browser-compat: webextensions.api.tabGroups.onMoved
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Fires when a tab group is moved within a window or to another window. {{WebExtAPIRef("tabs.onMoved")}} also fire for the tabs within the group.
 
@@ -35,9 +34,7 @@ Events have three functions:
 ### Parameters
 
 - `listener`
-
   - : The function called when this event occurs. The function is passed this argument:
-
     - `group`
       - : {{WebExtAPIRef("tabGroups.TabGroup")}}. Details of the moved tab group's state.
 
@@ -58,11 +55,13 @@ browser.tabGroups.onMoved.addListener(tabGroupMoved);
 Locate a tab group moved to another window.
 
 ```js
-browser.tabGroups.onMoved.addListener(group => {
+browser.tabGroups.onMoved.addListener(async (group) => {
   let tabs = await browser.tabs.query({
     groupId: group.id,
   });
-  console.log(`Moved tab group to ${tabs[0].index} in window ${group.windowId}`);
+  console.log(
+    `Moved tab group to ${tabs[0].index} in window ${group.windowId}`,
+  );
 });
 ```
 

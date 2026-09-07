@@ -32,7 +32,7 @@ _Doesn't implement any specific properties, but inherits properties from its par
 _Inherits methods from its parent, {{domxref("Event")}}_.
 
 - {{domxref("ExtendableEvent.waitUntil", "ExtendableEvent.waitUntil()")}}
-  - : Extends the lifetime of the event. It is intended to be called in the [`install`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event) [event handler](/en-US/docs/Web/Events/Event_handlers) for the {{domxref("ServiceWorkerRegistration.installing", "installing")}} worker and on the [`activate`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate_event) [event handler](/en-US/docs/Web/Events/Event_handlers) for the {{domxref("ServiceWorkerRegistration.active", "active")}} worker.
+  - : Extends the lifetime of the event. It is intended to be called in the [`install`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event) [event handler](/en-US/docs/Web/API/Document_Object_Model/Events#registering_event_handlers) for the {{domxref("ServiceWorkerRegistration.installing", "installing")}} worker and on the [`activate`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/activate_event) [event handler](/en-US/docs/Web/API/Document_Object_Model/Events#registering_event_handlers) for the {{domxref("ServiceWorkerRegistration.active", "active")}} worker.
 
 ## Examples
 

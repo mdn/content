@@ -4,9 +4,8 @@ short-title: Last-Modified
 slug: Web/HTTP/Reference/Headers/Last-Modified
 page-type: http-header
 browser-compat: http.headers.Last-Modified
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Last-Modified`** {{glossary("response header")}} contains a date and time when the origin server believes the resource was last modified.
 It is used as a validator in [conditional requests](/en-US/docs/Web/HTTP/Guides/Conditional_requests) ({{HTTPHeader("If-Modified-Since")}} or {{HTTPHeader("If-Unmodified-Since")}}) to determine if a requested resource is the same as one already stored by the client.

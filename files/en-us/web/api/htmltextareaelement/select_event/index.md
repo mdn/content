@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.HTMLTextAreaElement.select_event
 ---
 
-{{APIRef}}
+{{APIRef("Selection API")}}
 
 The **`select`** event fires when some text has been selected.
 

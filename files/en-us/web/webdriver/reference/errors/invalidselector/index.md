@@ -1,5 +1,6 @@
 ---
-title: Invalid selector
+title: "`invalid selector` error code"
+short-title: invalid selector
 slug: Web/WebDriver/Reference/Errors/InvalidSelector
 page-type: webdriver-error
 sidebar: webdriver
@@ -14,7 +15,6 @@ The available selector strategies are [CSS](/en-US/docs/Web/WebDriver/Reference/
 - [List of WebDriver errors](/en-US/docs/Web/WebDriver/Reference/Errors)
 - [WebElement](/en-US/docs/Web/WebDriver/Reference/WebElement)
 - Element retrieval commands:
-
   - [Find Element](/en-US/docs/Web/WebDriver/Reference/Commands/FindElement)
   - [Find Elements](/en-US/docs/Web/WebDriver/Reference/Commands/FindElements)
   - [Find Element From Element](/en-US/docs/Web/WebDriver/Reference/Commands/FindElementFromElement)

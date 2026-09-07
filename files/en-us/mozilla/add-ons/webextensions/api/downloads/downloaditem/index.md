@@ -3,9 +3,8 @@ title: downloads.DownloadItem
 slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem
 page-type: webextension-api-type
 browser-compat: webextensions.api.downloads.DownloadItem
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The `DownloadItem` type of the {{WebExtAPIRef("downloads")}} API represents a downloaded file.
 
@@ -56,11 +55,11 @@ Values of this type are objects. They contain the following properties:
 - `url`
   - : A `string` representing the absolute URL from which the file was downloaded.
 
+{{WebExtExamples}}
+
 ## Browser compatibility
 
 {{Compat}}
-
-{{WebExtExamples}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#type-DownloadItem) API.

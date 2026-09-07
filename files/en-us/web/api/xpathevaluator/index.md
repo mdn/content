@@ -5,9 +5,9 @@ page-type: web-api-interface
 browser-compat: api.XPathEvaluator
 ---
 
-{{APIRef("DOM XPath")}}
+{{APIRef("DOM")}}
 
-The `XPathEvaluator` interface allows to compile and evaluate {{Glossary("XPath")}} expressions.
+The `XPathEvaluator` interface allows you to compile and evaluate {{Glossary("XPath")}} expressions.
 
 ## Constructor
 

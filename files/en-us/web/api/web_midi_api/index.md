@@ -39,7 +39,7 @@ Therefore, the API can be used for musical and non-musical uses, with any MIDI d
 
 Access to the API is requested using the {{domxref("navigator.requestMIDIAccess()")}} method.
 
-- The method must be called in a [secure context](/en-US/docs/Web/Security/Secure_Contexts).
+- The method must be called in a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 - Access may be gated by the [`midi`](/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/midi) HTTP [Permission Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy).
 - The user must explicitly grant permission to use the API through a user-agent specific mechanism, or have previously granted permission.
   Note that if access is denied by a permission policy it cannot be granted by a user permission.
@@ -135,4 +135,4 @@ function startLoggingMIDIInput(midiAccess) {
 ## See also
 
 - [Introduction to Web MIDI](https://code.tutsplus.com/introduction-to-web-midi--cms-25220t)
-- [Making Music in the Browser](https://www.keithmcmillen.com/blog/making-music-in-the-browser-web-midi-api/)
+- [Making Music in the Browser](https://keithmcmillen.com/blog/making-music-in-the-browser-web-midi-api/)

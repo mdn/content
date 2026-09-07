@@ -72,7 +72,7 @@ An attacker may even be able to discover a user's ID, by iteratively trying to l
 
 ### Frame counting using window references
 
-In a frame counting attack, the attacker finds out the number of frames currently loaded in the target page. In turn, that leaks information about the state of the target site, which may enable to attacker to learn, for example, whether the user is currently logged into the site.
+In a frame counting attack, the attacker finds out the number of frames currently loaded in the target page. In turn, that leaks information about the state of the target site, which may enable an attacker to learn, for example, whether the user is currently logged into the site.
 
 If an attacker site gets a reference to a {{domxref("Window")}} object containing the target site, the attacker can count the number of frames in the target site by reading the {{domxref("Window.length", "window.length")}} property.
 
@@ -108,8 +108,8 @@ In the attack described here, the attacker uses the [Content Security Policy (CS
 - Finally, they create an {{htmlelement("iframe")}} element and set its `src` attribute to `https://admin.example.org/`.
 
 ```html
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en-US">
   <head>
     <meta
       http-equiv="Content-Security-Policy"
@@ -141,7 +141,7 @@ Since cross-site leaks can work in many different ways, there isn't a single def
 
 ### Fetch metadata
 
-{{glossary("Fetch metadata request header", "Fetch metadata")}} is the term used for a collection of HTTP request headers which provide information about the context of an HTTP request, including:
+[Fetch metadata](/en-US/docs/Web/HTTP/Guides/Fetch_metadata) is the term used for a collection of HTTP request headers which provide information about the context of an HTTP request, including:
 
 - {{httpheader("Sec-Fetch-Site")}}: Whether the request is same-origin, same-site, or cross-site.
 - {{httpheader("Sec-Fetch-Mode")}}: The request's {{domxref("Request.mode", "mode")}}.
@@ -237,9 +237,9 @@ The {{httpheader("Cross-Origin-Opener-Policy")}} response header determines whet
 
 If your server sends this header and sets it to any value except the default of `"unsafe-none"`, then if a document from a different origin tries to open your page using `window.open()`, your page will be loaded into a different browsing context group. Among other things, this means that the opener will not get a reference to the `window` object for your page, and will therefore not be able to use it in a frame counting attack.
 
-### Defense summary checklist
+## Defense summary checklist
 
-As we've seen, cross-site leaks include a range of attacks targeting different parts of the web platform: a single defense doesn't work against any of them. Indeed, some leaks, such as the one that exploits CSP to leak redirects, don't have any defenses yet.
+Cross-site leaks include a range of attacks targeting different parts of the web platform. A single defense doesn't work against any of them and some leaks, such as the one that exploits CSP to leak redirects, don't have any defenses yet.
 
 In this guide we've outlined a few defenses that help to isolate your site from potential attackers, and we recommend implementing all of them:
 

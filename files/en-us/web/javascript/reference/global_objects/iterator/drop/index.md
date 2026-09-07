@@ -4,9 +4,8 @@ short-title: drop()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/drop
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.drop
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`drop()`** method of {{jsxref("Iterator")}} instances returns a new [iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_objects) that skips the given number of elements at the start of this iterator.
 

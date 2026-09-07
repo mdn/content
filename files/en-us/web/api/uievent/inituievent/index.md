@@ -8,7 +8,7 @@ status:
 browser-compat: api.UIEvent.initUIEvent
 ---
 
-{{APIRef("UI Events")}} {{deprecated_header}}
+{{APIRef("UI Events")}}
 
 The **`UIEvent.initUIEvent()`** method initializes a UI event
 once it's been created.
@@ -20,7 +20,7 @@ dispatched, it doesn't do anything anymore.
 > [!WARNING]
 > Do not use this method anymore as it is deprecated.
 >
-> Instead use specific event constructors, like {{domxref("UIEvent.UIEvent", "UIEvent()")}}. The page on [Creating and triggering events](/en-US/docs/Web/Events/Creating_and_triggering_events) gives more information about the way to use these.
+> Instead use specific event constructors, like {{domxref("UIEvent.UIEvent", "UIEvent()")}}. The page on [Creating and dispatching events](/en-US/docs/Web/API/Document_Object_Model/Events#creating_and_dispatching_events) gives more information about the way to use these.
 
 ## Syntax
 
@@ -54,7 +54,7 @@ None ({{jsxref("undefined")}}).
 
 ```js
 const e = document.createEvent("UIEvent");
-// creates a click event that bubbles, can be cancelled,
+// creates a click event that bubbles, can be canceled,
 // and with its view and detail property initialized to window and 1,
 // respectively
 e.initUIEvent("click", true, true, window, 1);

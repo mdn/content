@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Gamepad.timestamp
 ---
 
-{{APIRef("Gamepad API")}}{{SecureContext_Header}}
+{{APIRef("Gamepad API")}}
 
 The **`Gamepad.timestamp`** property of the
 {{domxref("Gamepad")}} interface returns a {{domxref("DOMHighResTimeStamp")}}

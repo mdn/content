@@ -3,9 +3,8 @@ title: tabGroups.get
 slug: Mozilla/Add-ons/WebExtensions/API/tabGroups/get
 page-type: webextension-api-function
 browser-compat: webextensions.api.tabGroups.get
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Returns details about a tab group.
 

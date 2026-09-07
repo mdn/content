@@ -19,9 +19,7 @@ Although `NodeList` is not an `Array`, it is possible to iterate over it with `f
 
 Although they are both considered `NodeList` objects, there are 2 varieties of NodeList: _live_ and _static_.
 
-### Live NodeLists
-
-In some cases, the `NodeList` is _live_, which means that changes in the DOM automatically update the collection.
+In most cases, the `NodeList` is _live_, which means that changes in the DOM automatically update the collection.
 
 For example, {{domxref("Node.childNodes")}} is live:
 
@@ -33,9 +31,7 @@ parent.appendChild(document.createElement("div"));
 console.log(childNodes.length); // outputs "3"
 ```
 
-### Static NodeLists
-
-In other cases, the `NodeList` is _static,_ where any changes in the DOM do not affect the content of the collection. The ubiquitous {{domxref("document.querySelectorAll()")}} method returns a _static_ `NodeList`.
+In other cases, the `NodeList` is _static,_ where any changes in the DOM do not affect the content of the collection. The ubiquitous {{domxref("document.querySelectorAll()")}} method is the only API that returns a _static_ `NodeList`.
 
 It's good to keep this distinction in mind when you choose how to iterate over the items in the `NodeList`, and whether you should cache the list's `length`.
 
@@ -47,7 +43,6 @@ It's good to keep this distinction in mind when you choose how to iterate over t
 ## Instance methods
 
 - {{domxref("NodeList.item()")}}
-
   - : Returns an item in the list by its index, or `null` if the index is out-of-bounds.
 
     An alternative to accessing `nodeList[i]` (which instead returns `undefined` when `i` is out-of-bounds). This is mostly useful for non-JavaScript DOM implementations.

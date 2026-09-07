@@ -26,15 +26,13 @@ matchAll(request,options)
   - : The {{domxref("Request")}} for which you are attempting to find records.
     This can be a {{domxref("Request")}} object or a URL. If this parameter is omitted, all records are included in the result.
 - `options` {{optional_inline}}
-
   - : An object that sets options for the `match` operation. The available
     options are:
-
     - `ignoreSearch` {{optional_inline}}
       - : A boolean value that specifies whether to
         ignore the query string in the URL. For example, if set to
         `true` the `?value=bar` part of
-        `http://foo.com/?value=bar` would be ignored when performing a match.
+        `https://example.com/?value=bar` would be ignored when performing a match.
         It defaults to `false`.
     - `ignoreMethod` {{optional_inline}}
       - : A boolean value. When `true`,

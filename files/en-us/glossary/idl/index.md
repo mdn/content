@@ -2,9 +2,8 @@
 title: IDL
 slug: Glossary/IDL
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 An **IDL** (_Interface Description Language_) is a generic language, used to specify object interfaces independent of any particular programming language.
 

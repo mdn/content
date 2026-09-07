@@ -16,6 +16,10 @@ The **`getSVGDocument()`** method of the {{domxref("HTMLIFrameElement")}} interf
 getSVGDocument()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 A {{domxref("Document")}}.

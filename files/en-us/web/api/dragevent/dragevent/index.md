@@ -28,15 +28,11 @@ new DragEvent(type, dragEventInit)
 ### Parameters
 
 - `type`
-
   - : A string representing the name of the event (see [DragEvent event types](/en-US/docs/Web/API/DragEvent#event_types)).
 
 - `eventInitDict` {{optional_inline}}
-
   - : An object containing the following properties:
-
     - `dataTransfer` {{optional_inline}}
-
       - : A {{domxref("DataTransfer")}}. Defaults to `null`.
 
 ## Specifications

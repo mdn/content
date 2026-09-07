@@ -4,9 +4,8 @@ short-title: apply()
 slug: Web/JavaScript/Reference/Global_Objects/Function/apply
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Function.apply
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`apply()`** method of {{jsxref("Function")}} instances calls this function with a given `this` value, and `arguments` provided as an array (or an [array-like object](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)).
 

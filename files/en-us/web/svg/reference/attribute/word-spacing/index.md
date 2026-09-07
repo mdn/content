@@ -42,7 +42,7 @@ You can use this attribute with the following SVG elements:
   </tbody>
 </table>
 
-For a description of the values, please refer to the [CSS `letter-spacing`](/en-US/docs/Web/CSS/letter-spacing#values) property.
+For a description of the values, please refer to the [CSS `letter-spacing`](/en-US/docs/Web/CSS/Reference/Properties/letter-spacing#values) property.
 
 ## Examples
 

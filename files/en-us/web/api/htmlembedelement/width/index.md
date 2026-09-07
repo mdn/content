@@ -17,7 +17,7 @@ A string indicating the displayed width of the resource in CSS pixels.
 ## Examples
 
 ```html
-<embed id="el" width="800" height="600" />
+<embed id="el" width="800" height="600" src="https://example.com" />
 ```
 
 ```js

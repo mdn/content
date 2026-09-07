@@ -4,9 +4,8 @@ short-title: length
 slug: Web/JavaScript/Reference/Global_Objects/String/length
 page-type: javascript-instance-data-property
 browser-compat: javascript.builtins.String.length
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`length`** data property of a {{jsxref("String")}} value contains the length of the string in UTF-16 code units.
 
@@ -35,6 +34,9 @@ The language specification requires strings to have a maximum length of 2<sup>53
 - In Firefox, the maximum length is 2<sup>30</sup> - 2 (\~2GiB). Before Firefox 65, the maximum length was 2<sup>28</sup> - 1 (\~512MiB).
 - In Safari, the maximum length is 2<sup>31</sup> - 1 (\~4GiB).
 
+> [!NOTE]
+> All memory sizes above assume strings are stored in UTF-16 encoding in memory, which may be an overestimate. The actual space used by a string is subject to JavaScript engine optimizations, and all major engines use a more compact internal representation, such as one-byte storage, for strings containing only Latin-1 characters.
+
 If you are working with large strings in other encodings (such as UTF-8 files or blobs), note that when you load the data into a JS string, the encoding always becomes UTF-16. The size of the string may be different from the size of the source file.
 
 ```js
@@ -42,7 +44,7 @@ const str1 = "a".repeat(2 ** 29 - 24); // Success
 const str2 = "a".repeat(2 ** 29 - 23); // RangeError: Invalid string length
 
 const buffer = new Uint8Array(2 ** 29 - 24).fill("a".codePointAt(0)); // This buffer is 512MiB in size
-const str = new TextDecoder().decode(buffer); // This string is 1GiB in size
+const str = new TextDecoder().decode(buffer); // This string is 1GiB in size unless optimized
 ```
 
 For an empty string, `length` is 0.

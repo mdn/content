@@ -27,7 +27,7 @@ The {{domxref("SVGNumber")}} at the specified index in the list.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `IndexSizeError`
+- `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown when the index is out of bounds for the list.
 
 ## Specifications

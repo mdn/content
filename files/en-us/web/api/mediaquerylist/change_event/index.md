@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.MediaQueryList.change_event
 ---
 
-{{APIRef("CSSOM")}}
+{{APIRef("CSSOM view API")}}
 
 The **`change`** event of the {{DOMxRef("MediaQueryList")}} interface fires when the status of media query support changes.
 
@@ -26,19 +26,10 @@ A {{domxref("MediaQueryListEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MediaQueryListEvent")}}
 
-## Event properties
-
-_The `MediaQueryListEvent` interface inherits properties from its parent interface, {{DOMxRef("Event")}}._
-
-- {{DOMxRef("MediaQueryListEvent.matches")}} {{ReadOnlyInline}}
-  - : A boolean value that is `true` if the {{DOMxRef("document")}} currently matches the media query list, or `false` if not.
-- {{DOMxRef("MediaQueryListEvent.media")}} {{ReadOnlyInline}}
-  - : A string representing a serialized media query.
-
 ## Example
 
 ```js
-const mql = window.matchMedia("(max-width: 600px)");
+const mql = window.matchMedia("(width <= 600px)");
 
 mql.onchange = (e) => {
   if (e.matches) {
@@ -61,8 +52,8 @@ mql.onchange = (e) => {
 
 ## See also
 
-- [Media queries](/en-US/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- [Using media queries from code](/en-US/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
+- [Media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
+- [Using media queries from code](/en-US/docs/Web/CSS/Guides/Media_queries/Testing)
 - {{DOMxRef("window.matchMedia()")}}
 - {{DOMxRef("MediaQueryList")}}
 - {{DOMxRef("MediaQueryListEvent")}}

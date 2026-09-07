@@ -4,9 +4,8 @@ short-title: getUTCFullYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCFullYear
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Date.getUTCFullYear
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`getUTCFullYear()`** method of {{jsxref("Date")}} instances returns the year for this date according to universal time.
 

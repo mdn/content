@@ -4,9 +4,8 @@ short-title: format()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.NumberFormat.format
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`format()`** method of {{jsxref("Intl.NumberFormat")}} instances formats a number according to the [locale and formatting options](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#parameters) of this `Intl.NumberFormat` object.
 
@@ -84,7 +83,7 @@ console.log(numberFormat.format(654321.987));
 
 Use the `format` getter function for formatting all numbers in an array.
 Note that the function is bound to the {{jsxref("Intl.NumberFormat")}} from which it was obtained, so it can be passed directly to {{jsxref("Array.prototype.map")}}.
-This is considered a historical artefact, as part of a convention which is no longer followed for new features, but is preserved to maintain compatibility with existing programs.
+This is considered a historical artifact, as part of a convention which is no longer followed for new features, but is preserved to maintain compatibility with existing programs.
 
 ```js
 const a = [123456.789, 987654.321, 456789.123];

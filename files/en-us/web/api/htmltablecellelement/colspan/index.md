@@ -8,7 +8,7 @@ browser-compat: api.HTMLTableCellElement.colSpan
 
 {{ APIRef("HTML DOM") }}
 
-The **`colSpan`** read-only property of the {{domxref("HTMLTableCellElement")}} interface represents the number of columns this cell must span; this lets the cell occupy space across multiple columns of the table. It reflects the [`colspan`](/en-US/docs/Web/HTML/Reference/Elements/td#colspan) attribute.
+The **`colSpan`** property of the {{domxref("HTMLTableCellElement")}} interface represents the number of columns this cell must span; this lets the cell occupy space across multiple columns of the table. It reflects the [`colspan`](/en-US/docs/Web/HTML/Reference/Elements/td#colspan) attribute.
 
 ## Value
 

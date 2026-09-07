@@ -26,9 +26,7 @@ getFileHandle(name, options)
   - : A string representing the {{domxref('FileSystemHandle.name')}} of
     the file you wish to retrieve.
 - `options` {{optional_inline}}
-
   - : An object with the following properties:
-
     - `create` {{optional_inline}}
       - : A {{jsxref('Boolean')}}. Default `false`. When
         set to `true` if the file is not found, one with the specified name
@@ -60,7 +58,9 @@ not exist it is created.
 const fileName = "fileToGetName";
 
 // assuming we have a directory handle: 'currentDirHandle'
-const fileHandle = currentDirHandle.getFileHandle(fileName, { create: true });
+const fileHandle = await currentDirHandle.getFileHandle(fileName, {
+  create: true,
+});
 ```
 
 ## Specifications

@@ -4,9 +4,8 @@ short-title: Accept-Language
 slug: Web/HTTP/Reference/Headers/Accept-Language
 page-type: http-header
 browser-compat: http.headers.Accept-Language
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The HTTP **`Accept-Language`** {{Glossary("request header")}} indicates the natural language and locale that the client prefers.
 The server uses [content negotiation](/en-US/docs/Web/HTTP/Guides/Content_negotiation) to select one of the proposals and informs the client of the choice with the {{HTTPHeader("Content-Language")}} response header.

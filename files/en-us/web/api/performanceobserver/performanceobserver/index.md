@@ -19,19 +19,14 @@ new PerformanceObserver(callback)
 ### Parameters
 
 - `callback`
-
   - : A `PerformanceObserverCallback` callback that will be invoked when observed performance events are recorded. When the callback is invoked, the following parameters are available:
-
     - `entries`
       - : The {{domxref("PerformanceObserverEntryList","list of performance observer entries", '', 'true')}}.
     - `observer`
       - : The {{domxref("PerformanceObserver","observer")}} object that is receiving the above entries.
     - `options`
-
       - : An object with the following properties:
-
         - `droppedEntriesCount`
-
           - : The number of entries which could not be recorded because the {{domxref("Performance")}} object's internal buffer was full.
 
             Note that this is only provided the first time the observer calls the callback, when the buffered entries are replayed. Once the observer starts making future observations, it no longer needs to use the buffer. After the first time, `options` will be an empty object (`{}`).

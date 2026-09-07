@@ -6,9 +6,10 @@ page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Supports-Loading-Mode
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
+{{securecontext_header}}{{SeeCompatTable}}
 
 The HTTP **`Supports-Loading-Mode`** {{Glossary("response header")}} allows a response to opt-in to being loaded in a novel, higher-risk context that it would otherwise fail to be loaded in.
 
@@ -17,10 +18,6 @@ The HTTP **`Supports-Loading-Mode`** {{Glossary("response header")}} allows a re
     <tr>
       <th scope="row">Header type</th>
       <td>{{Glossary("Response header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden request header")}}</th>
-      <td>No</td>
     </tr>
     <tr>
       <th scope="row">
@@ -43,8 +40,8 @@ The `Supports-Loading-Mode` header value is a list of one or more tokens, which 
 
 - `credentialed-prerender` {{experimental_inline}}
   - : Indicates that a destination origin opts in to loading documents via cross-origin, same-site [prerendering](/en-US/docs/Web/API/Speculation_Rules_API#using_prerendering).
-- `fenced-frame`
-  - : The response can loaded inside a [fenced frame](/en-US/docs/Web/API/Fenced_frame_API). Without this explicit opt-in, all navigations inside of a fenced frame will fail.
+- `fenced-frame` {{experimental_inline}}
+  - : The response can be loaded inside a [fenced frame](/en-US/docs/Web/API/Fenced_frame_API). Without this explicit opt-in, all navigations inside of a fenced frame will fail.
 
 ## Examples
 

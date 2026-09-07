@@ -4,9 +4,8 @@ short-title: reduce()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/reduce
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Iterator.reduce
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`reduce()`** method of {{jsxref("Iterator")}} instances is similar to {{jsxref("Array.prototype.reduce")}}: it executes a user-supplied "reducer" callback function on each element produced by the iterator, passing in the return value from the calculation on the preceding element. The final result of running the reducer across all elements is a single value.
 

@@ -101,11 +101,9 @@ Here is a minimalistic template, which we'll be using as a starting point for la
     <script>
       function draw() {
         const canvas = document.getElementById("canvas");
-        if (canvas.getContext) {
-          const ctx = canvas.getContext("2d");
-        }
+        const ctx = canvas.getContext("2d");
       }
-      window.addEventListener("load", draw);
+      draw();
     </script>
   </body>
 </html>
@@ -120,7 +118,7 @@ At this point, this document should be rendered blank.
 To begin, let's take a look at an example that draws two intersecting rectangles, one of which has alpha transparency. We'll explore how this works in more detail in later examples. Update your `script` element content to this:
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="my-canvas" width="150" height="150"></canvas>
 ```
 
 ```css hidden
@@ -131,16 +129,14 @@ canvas {
 
 ```js
 function draw() {
-  const canvas = document.getElementById("canvas");
-  if (canvas.getContext) {
-    const ctx = canvas.getContext("2d");
+  const canvas = document.getElementById("my-canvas");
+  const ctx = canvas.getContext("2d");
 
-    ctx.fillStyle = "rgb(200 0 0)";
-    ctx.fillRect(10, 10, 50, 50);
+  ctx.fillStyle = "rgb(200 0 0)";
+  ctx.fillRect(10, 10, 50, 50);
 
-    ctx.fillStyle = "rgb(0 0 200 / 50%)";
-    ctx.fillRect(30, 30, 50, 50);
-  }
+  ctx.fillStyle = "rgb(0 0 200 / 50%)";
+  ctx.fillRect(30, 30, 50, 50);
 }
 draw();
 ```

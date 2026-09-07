@@ -22,9 +22,7 @@ add(contentDescription)
 ### Parameters
 
 - `contentDescription`
-
   - : An {{jsxref('Object')}} containing the following data:
-
     - `id`
       - : A unique {{jsxref('String')}} identifier.
     - `title`
@@ -38,10 +36,8 @@ add(contentDescription)
         HTML document. Needs to be under the scope of the current
         [service worker](/en-US/docs/Web/API/ServiceWorker).
     - `category` {{Optional_Inline}}
-
       - : A {{jsxref('String')}} defining the
         category of content. Can be:
-
         - `''` An empty {{jsxref('String')}}, this is the default.
         - `homepage`
         - `article`
@@ -49,10 +45,8 @@ add(contentDescription)
         - `audio`
 
     - `icons` {{Optional_Inline}}
-
       - : An {{jsxref('Array')}} of image
         resources, defined as an {{jsxref('Object')}} with the following data:
-
         - `src`
           - : A URL {{jsxref('String')}} of the source image.
         - `sizes` {{Optional_Inline}}
@@ -69,9 +63,7 @@ Returns a {{jsxref("Promise")}} that resolves with `undefined`.
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-
   - : This exception is thrown in the following conditions:
-
     - The service worker's registration is not present or the service worker does not contain a {{domxref('FetchEvent')}}.
     - One of `id`, `title`, `description` or `url` parameter are missing, not of type {{jsxref('String')}}, or an empty {{jsxref('String')}}.
     - The `url` parameter is not {{glossary("same-origin policy")}} with the {{domxref("ServiceWorker", "service worker", "", "nocode")}}.

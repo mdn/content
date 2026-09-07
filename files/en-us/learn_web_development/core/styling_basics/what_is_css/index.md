@@ -7,7 +7,7 @@ sidebar: learnsidebar
 
 {{NextMenu("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics")}}
 
-**{{Glossary("CSS")}}** (Cascading Style Sheets) allows you to create great-looking web pages, but how does it work under the hood? This article explains what CSS, what the basic syntax looks like, and how your browser applies CSS to HTML to style it.
+**{{Glossary("CSS")}}** (Cascading Style Sheets) allows you to create great-looking web pages, but how does it work under the hood? This article explains what CSS is, what the basic syntax looks like, and how your browser applies CSS to HTML to style it.
 
 <table>
   <tbody>
@@ -64,15 +64,15 @@ Using CSS, you can control exactly how HTML elements look in the browser, presen
 
 CSS can be used for many purposes related to the look and feel of your web page, for example:
 
-- Text styling, including changing the [color](/en-US/docs/Web/CSS/color_value) and [size](/en-US/docs/Web/CSS/font-size) of headings and links.
-- Creating layouts, such as [grid layouts](/en-US/docs/Learn_web_development/Core/CSS_layout/Grids) or [multiple-column layouts](/en-US/docs/Web/CSS/Layout_cookbook/Column_layouts).
-- Special effects such as [animation](/en-US/docs/Web/CSS/CSS_animations).
+- Text styling, including changing the [color](/en-US/docs/Web/CSS/Reference/Values/color_value) and [size](/en-US/docs/Web/CSS/Reference/Properties/font-size) of headings and links.
+- Creating layouts, such as [grid layouts](/en-US/docs/Learn_web_development/Core/CSS_layout/Grids) or [multiple-column layouts](/en-US/docs/Web/CSS/How_to/Layout_cookbook/Column_layouts).
+- Special effects such as [animation](/en-US/docs/Web/CSS/Guides/Animations).
 
-The CSS language is organized into _modules_ that contain related functionality. For example, take a look at the MDN reference pages for the [Backgrounds and Borders](/en-US/docs/Web/CSS/CSS_backgrounds_and_borders) module to find out what its purpose is and the properties and features it contains. In our module pages, you will also find links to _Specifications_ that define the technologies.
+The CSS language is organized into _modules_ that contain related functionality. For example, take a look at the MDN reference pages for the [Backgrounds and Borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module to find out what its purpose is and the properties and features it contains. In our module pages, you will also find links to _Specifications_ that define the technologies.
 
 ## CSS syntax basics
 
-CSS is a rule-based language — you define rules by specifying groups of styles that should be applied to particular element or groups of elements on your web page.
+CSS is a rule-based language — you define rules by specifying groups of styles that should be applied to a particular element or groups of elements on your web page.
 
 For example, you might decide to style the main heading on your page as large red text. The following code shows a very simple CSS rule that would achieve this:
 
@@ -84,8 +84,8 @@ h1 {
 ```
 
 - In the above example, the CSS rule opens with a {{Glossary("CSS Selector", "selector")}}. This _selects_ the HTML elements that we are going to style. In this case, we are styling level one headings (`{{htmlelement("Heading_Elements", "&lt;h1>")}}`).
-- We then include a set of curly braces — `{ }`.
-- The braces contain one or more **declarations**, which take the form of **property** and **value** pairs. We specify the property (for example, `color` in the above example) before the colon, and we specify the value of the property after the colon (`red` is the value being set for the `color` property).
+- We then include a set of curly braces (`{ }`) to create a **declaration block**.
+- The declaration block contains one or more **declarations**, which take the form of **property** and **value** pairs. We specify the property (for example, `color` in the above example) before the colon, and we specify the value of the property after the colon (`red` is the value being set for the `color` property).
 - This example contains two declarations, one for `color` and another for `font-size`.
 
 Different CSS {{Glossary("property/CSS","properties")}} have different allowable values. In our example, we have the `color` property, which can take various [color values](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#color). We also have the `font-size` property. This property can take various [size units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#numbers_lengths_and_percentages) as a value.

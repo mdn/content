@@ -2,9 +2,10 @@
 title: Grammar and types
 slug: Web/JavaScript/Guide/Grammar_and_types
 page-type: guide
+sidebar: jssidebar
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
+{{PreviousNext("Web/JavaScript/Guide/Introduction", "Web/JavaScript/Guide/Control_flow_and_error_handling")}}
 
 This chapter discusses JavaScript's basic grammar, variable declarations, data types and literals.
 
@@ -64,14 +65,20 @@ Comments behave like whitespace, and are discarded during script execution.
 
 ## Declarations
 
-JavaScript has three kinds of variable declarations.
+JavaScript has five kinds of variable declarations.
 
 - {{jsxref("Statements/var", "var")}}
   - : Declares a variable, optionally initializing it to a value.
 - {{jsxref("Statements/let", "let")}}
-  - : Declares a block-scoped, local variable, optionally initializing it to a value.
+  - : Declares a block-scoped variable, optionally initializing it to a value.
 - {{jsxref("Statements/const", "const")}}
-  - : Declares a block-scoped, read-only named constant.
+  - : Declares a block-scoped variable that cannot be re-assigned, which must be initialized at declaration.
+- {{jsxref("Statements/using", "using")}}
+  - : Declares a variable like `const` that is _synchronously disposed_.
+- {{jsxref("Statements/await_using", "await using")}}
+  - : Declares a variable like `const` that is _asynchronously disposed_.
+
+We will only talk about the first three: `var`, `let`, and `const`, in this article. The `using` and `await using` declarations will be introduced in [Resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management).
 
 ### Variables
 
@@ -241,7 +248,6 @@ console.log(MY_ARRAY); // ['HTML', 'CSS', 'JAVASCRIPT'];
 The latest ECMAScript standard defines eight data types:
 
 - Seven data types that are {{Glossary("Primitive", "primitives")}}:
-
   1. {{Glossary("Boolean")}}. `true` and `false`.
   2. {{Glossary("null")}}. A special keyword denoting a null value. (Because JavaScript is case-sensitive, `null` is not the same as `Null`, `NULL`, or any other variant.)
   3. {{Glossary("undefined")}}. A top-level property whose value is not defined.
@@ -377,7 +383,8 @@ In the following example, the `length` of the array is four, and `myList[1]` and
 const myList = ["home", , "school", ,];
 ```
 
-> **Note:** [Trailing commas](/en-US/docs/Web/JavaScript/Reference/Trailing_commas) help keep git diffs clean when you have a multi-line array, because appending an item to the end only adds one line, but does not modify the previous line.
+> [!NOTE]
+> [Trailing commas](/en-US/docs/Web/JavaScript/Reference/Trailing_commas) help keep git diffs clean when you have a multi-line array, because appending an item to the end only adds one line, but does not modify the previous line.
 >
 > ```diff
 > const myList = [
@@ -516,6 +523,8 @@ Object literals support a range of shorthand syntaxes that include setting the p
 Together, these also bring object literals and class declarations closer together, and allow object-based design to benefit from some of the same conveniences.
 
 ```js
+const theProtoObj = {};
+const handler = {};
 const obj = {
   // __proto__
   __proto__: theProtoObj,

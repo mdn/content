@@ -1,11 +1,11 @@
 ---
-title: "<abbr>: The Abbreviation element"
+title: "`<abbr>` HTML abbreviation element"
+short-title: <abbr>
 slug: Web/HTML/Reference/Elements/abbr
 page-type: html-element
 browser-compat: html.elements.abbr
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<abbr>`** [HTML](/en-US/docs/Web/HTML) element represents an abbreviation or acronym.
 

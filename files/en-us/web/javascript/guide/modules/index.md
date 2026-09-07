@@ -2,9 +2,10 @@
 title: JavaScript modules
 slug: Web/JavaScript/Guide/Modules
 page-type: guide
+sidebar: jssidebar
 ---
 
-{{jsSidebar("JavaScript Guide")}}{{Previous("Web/JavaScript/Guide/Internationalization")}}
+{{Previous("Web/JavaScript/Guide/Internationalization")}}
 
 This guide gives you all you need to get started with JavaScript module syntax.
 
@@ -43,12 +44,10 @@ modules/
 The modules directory's two modules are described below:
 
 - `canvas.js` — contains functions related to setting up the canvas:
-
   - `create()` — creates a canvas with a specified `width` and `height` inside a wrapper [`<div>`](/en-US/docs/Web/HTML/Reference/Elements/div) with a specified ID, which is itself appended inside a specified parent element. Returns an object containing the canvas's 2D context and the wrapper's ID.
   - `createReportList()` — creates an unordered list appended inside a specified wrapper element, which can be used to output report data into. Returns the list's ID.
 
 - `square.js` — contains:
-
   - `name` — a constant containing the string 'square'.
   - `draw()` — draws a square on a specified canvas, with a specified size, position, and color. Returns an object containing the square's size, position, and color.
   - `reportArea()` — writes a square's area to a specific report list, given its length.
@@ -72,7 +71,7 @@ If you really value the clarity of using `.mjs` for modules versus using `.js` f
 It is also worth noting that:
 
 - Some tools may never support `.mjs`.
-- The `<script type="module">` attribute is used to denote when a module is being pointed to, as you'll see below.
+- The `<script type="module">` attribute is used to denote when a module is being pointed to, as described in [Applying the module to your HTML](#applying_the_module_to_your_html).
 
 ## Exporting module features
 
@@ -137,9 +136,9 @@ Once you've imported the features into your script, you can use them just like t
 const myCanvas = create("myCanvas", document.body, 480, 320);
 const reportList = createReportList(myCanvas.id);
 
-const square1 = draw(myCanvas.ctx, 50, 50, 100, "blue");
-reportArea(square1.length, reportList);
-reportPerimeter(square1.length, reportList);
+const square = draw(myCanvas.ctx, 50, 50, 100, "blue");
+reportArea(square.length, reportList);
+reportPerimeter(square.length, reportList);
 ```
 
 > [!NOTE]
@@ -284,7 +283,7 @@ This may be reasonable for just one module, but scales poorly if you wish to imp
 
 #### General URL remapping
 
-A module specifier key doesn't have to be path — it can also be an absolute URL (or a URL-like relative path like `./`, `../`, `/`).
+A module specifier key doesn't have to be a path — it can also be an absolute URL (or a URL-like relative path like `./`, `../`, `/`).
 This may be useful if you want to remap a module that has absolute paths to a resource with your own local resources.
 
 ```json
@@ -321,7 +320,7 @@ The example below demonstrates this.
 }
 ```
 
-With this mapping, if a script with an URL that contains `/node_modules/dependency/` imports `cool-module`, the version in `/node_modules/some/other/location/cool-module/index.js` will be used.
+With this mapping, if a script with a URL that contains `/node_modules/dependency/` imports `cool-module`, the version in `/node_modules/some/other/location/cool-module/index.js` will be used.
 The map in `imports` is used as a fallback if there is no matching scope in the scoped map, or the matching scopes don't contain a matching specifier. For example, if `cool-module` is imported from a script with a non-matching scope path, then the module specifier map in `imports` will be used instead, mapping to the version in `/node_modules/cool-module/index.js`.
 
 Note that the path used to select a scope does not affect how the address is resolved.
@@ -422,7 +421,7 @@ Module-defined variables are scoped to the module unless explicitly attached to 
 <html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <title></title>
+    <title>Example page</title>
     <link rel="stylesheet" href="" />
   </head>
   <body>
@@ -612,9 +611,9 @@ import * as Triangle from "./modules/triangle.js";
 In each case, you can now access the module's imports underneath the specified object name, for example:
 
 ```js
-const square1 = Square.draw(myCanvas.ctx, 50, 50, 100, "blue");
-Square.reportArea(square1.length, reportList);
-Square.reportPerimeter(square1.length, reportList);
+const square = Square.draw(myCanvas.ctx, 50, 50, 100, "blue");
+Square.reportArea(square.length, reportList);
+Square.reportPerimeter(square.length, reportList);
 ```
 
 So you can now write the code just the same as before (as long as you include the object names where needed), and the imports are much neater.
@@ -654,10 +653,10 @@ import { Square } from "./modules/square.js";
 And then use the class to draw our square:
 
 ```js
-const square1 = new Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, "blue");
-square1.draw();
-square1.reportArea();
-square1.reportPerimeter();
+const square = new Square(myCanvas.ctx, myCanvas.listId, 50, 50, 100, "blue");
+square.draw();
+square.reportArea();
+square.reportPerimeter();
 ```
 
 ## Aggregating modules
@@ -747,7 +746,7 @@ We then attach an event listener to each button so that when pressed, the releva
 ```js
 squareBtn.addEventListener("click", () => {
   import("./modules/square.js").then((Module) => {
-    const square1 = new Module.Square(
+    const square = new Module.Square(
       myCanvas.ctx,
       myCanvas.listId,
       50,
@@ -755,9 +754,9 @@ squareBtn.addEventListener("click", () => {
       100,
       "blue",
     );
-    square1.draw();
-    square1.reportArea();
-    square1.reportPerimeter();
+    square.draw();
+    square.reportArea();
+    square.reportPerimeter();
   });
 });
 ```
@@ -822,7 +821,7 @@ const circleBtn = document.querySelector(".circle");
 We'll use `colors` instead of the previously used strings when calling our shape functions:
 
 ```js
-const square1 = new Module.Square(
+const square = new Module.Square(
   myCanvas.ctx,
   myCanvas.listId,
   50,
@@ -831,7 +830,7 @@ const square1 = new Module.Square(
   colors.blue,
 );
 
-const circle1 = new Module.Circle(
+const circle = new Module.Circle(
   myCanvas.ctx,
   myCanvas.listId,
   75,
@@ -840,7 +839,7 @@ const circle1 = new Module.Circle(
   colors.green,
 );
 
-const triangle1 = new Module.Triangle(
+const triangle = new Module.Triangle(
   myCanvas.ctx,
   myCanvas.listId,
   100,

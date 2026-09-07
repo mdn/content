@@ -2,9 +2,8 @@
 title: Caret
 slug: Glossary/Caret
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 A **caret** (sometimes called a "text cursor") is an indicator displayed on the screen to indicate where text input will be inserted.
 

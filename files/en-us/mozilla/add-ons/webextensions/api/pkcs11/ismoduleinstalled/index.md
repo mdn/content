@@ -3,9 +3,8 @@ title: pkcs11.isModuleInstalled()
 slug: Mozilla/Add-ons/WebExtensions/API/pkcs11/isModuleInstalled
 page-type: webextension-api-function
 browser-compat: webextensions.api.pkcs11.isModuleInstalled
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Checks whether the named PKCS #11 module is currently installed in Firefox.
 
@@ -30,10 +29,6 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 
 If the module an error occurs, the promise will be rejected with an error message.
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Examples
 
 Checks whether the module named "pkcs11_module" is installed:
@@ -47,3 +42,7 @@ browser.pkcs11.isModuleInstalled("pkcs11_module").then(logIsInstalled);
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}

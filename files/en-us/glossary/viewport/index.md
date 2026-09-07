@@ -2,9 +2,8 @@
 title: Viewport
 slug: Glossary/Viewport
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 In computer graphics, a **viewport** represents a polygonal (normally rectangular) area that is currently being viewed.
 
@@ -18,8 +17,8 @@ The visual viewport of an {{htmlelement("iframe")}}, {{svgelement("svg")}}, or {
 
 - {{Glossary("Visual viewport")}}
 - {{Glossary("Layout viewport")}}
-- [Viewport concepts](/en-US/docs/Web/CSS/CSSOM_view/Viewport_concepts)
-- [CSSOM view](/en-US/docs/Web/CSS/CSSOM_view) module
-- [Visual Viewport API](/en-US/docs/Web/API/Visual_Viewport_API)
+- [Viewport concepts](/en-US/docs/Web/CSS/Guides/CSSOM_view/Viewport_concepts)
+- [CSSOM view](/en-US/docs/Web/CSS/Guides/CSSOM_view) module
+- [CSSOM view API](/en-US/docs/Web/API/CSSOM_view_API)
 - [Viewport](https://en.wikipedia.org/wiki/Viewport) on Wikipedia
 - [A tale of two viewports](https://www.quirksmode.org/mobile/viewports.html) (Quirksmode)

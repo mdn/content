@@ -4,9 +4,8 @@ short-title: "[Symbol.search]()"
 slug: Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.search
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.RegExp.@@search
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`[Symbol.search]()`** method of {{jsxref("RegExp")}} instances specifies how [`String.prototype.search`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/search) should behave.
 
@@ -44,7 +43,7 @@ The index of the first match between the regular expression and the given string
 
 ## Description
 
-This method is called internally in {{jsxref("String.prototype.search()")}}. For example, the following two examples return the same result.
+This method exists for customizing the search behavior in `RegExp` subclasses. It is called internally in {{jsxref("String.prototype.search()")}}. For example, the following two examples return the same result.
 
 ```js
 "abc".search(/a/);
@@ -52,7 +51,9 @@ This method is called internally in {{jsxref("String.prototype.search()")}}. For
 /a/[Symbol.search]("abc");
 ```
 
-This method does not copy the regular expression, unlike [`[Symbol.split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split) or [`[Symbol.matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll). However, unlike [`[Symbol.match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match) or [`[Symbol.replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace), it will set [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) to 0 when execution starts and restore it to the previous value when it exits, therefore generally avoiding side effects. This means that the `g` flag has no effect with this method, and it always returns the first match in the string even when `lastIndex` is non-zero. This also means sticky regexps will always search strictly at the beginning of the string.
+`[Symbol.search]()` always calls the regex's [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) method exactly once, and returns the `index` property of the result, or `-1` if the result is `null`. The `g` flag has no effect with this method.
+
+This method does not copy the regular expression, unlike [`[Symbol.split]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.split) or [`[Symbol.matchAll]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.matchAll). However, unlike [`[Symbol.match]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.match) or [`[Symbol.replace]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace), it will always set [`lastIndex`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/lastIndex) to 0 when execution starts and restore it to the previous value when it exits, therefore generally avoiding side effects. This means that it always returns the first match in the string even when `lastIndex` is non-zero, and sticky regexes always search strictly at the beginning of the string.
 
 ```js
 const re = /[abc]/g;
@@ -64,10 +65,6 @@ re2.lastIndex = 1;
 console.log("abc".search(re2)); // -1
 console.log("abc".match(re2)); // [ 'b' ]
 ```
-
-`[Symbol.search]()` always calls the regex's [`exec()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec) method exactly once, and returns the `index` property of the result, or `-1` if the result is `null`.
-
-This method exists for customizing the search behavior in `RegExp` subclasses.
 
 ## Examples
 

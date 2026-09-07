@@ -9,7 +9,7 @@ status:
 browser-compat: api.Element.setCapture
 ---
 
-{{Deprecated_Header}}{{non-standard_header}}{{ APIRef("DOM") }}
+{{non-standard_header}}{{ APIRef("DOM") }}
 
 Call this method during the handling of a mousedown event to retarget all mouse events
 to this element until the mouse button is released or {{domxref("document.releaseCapture()")}} is called.
@@ -58,11 +58,11 @@ clicking and holding down on an element.
 ```js
 function mouseDown(e) {
   e.target.setCapture();
-  e.target.addEventListener("mousemove", mouseMoved, false);
+  e.target.addEventListener("mousemove", mouseMoved);
 }
 
 function mouseUp(e) {
-  e.target.removeEventListener("mousemove", mouseMoved, false);
+  e.target.removeEventListener("mousemove", mouseMoved);
 }
 
 function mouseMoved(e) {
@@ -72,8 +72,8 @@ function mouseMoved(e) {
 
 const btn = document.getElementById("myButton");
 if (btn.setCapture) {
-  btn.addEventListener("mousedown", mouseDown, false);
-  btn.addEventListener("mouseup", mouseUp, false);
+  btn.addEventListener("mousedown", mouseDown);
+  btn.addEventListener("mouseup", mouseUp);
 } else {
   document.getElementById("output").textContent =
     "Sorry, there appears to be no setCapture support on this browser";

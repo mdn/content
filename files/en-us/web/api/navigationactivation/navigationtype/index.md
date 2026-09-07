@@ -3,12 +3,10 @@ title: "NavigationActivation: navigationType property"
 short-title: navigationType
 slug: Web/API/NavigationActivation/navigationType
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.NavigationActivation.navigationType
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`navigationType`** read-only property of the {{domxref("NavigationActivation")}} interface contains a string indicating the type of navigation.
 

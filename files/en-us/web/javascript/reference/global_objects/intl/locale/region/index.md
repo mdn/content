@@ -4,15 +4,16 @@ short-title: region
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/region
 page-type: javascript-instance-accessor-property
 browser-compat: javascript.builtins.Intl.Locale.region
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`region`** accessor property of {{jsxref("Intl.Locale")}} instances returns the region of the world (usually a country) associated with this locale.
 
 ## Description
 
-Region is one of the core attributes of a locale. It allows selection for differences between the same language in, say, different countries. For example, English is spoken in the United Kingdom and the United States of America, but there are differences in spelling and other language conventions between those two countries. Knowing the locale's region helps JavaScript programmers make sure that the content from their sites and applications is correctly displayed when viewed from different areas of the world. The `region` property's value is set at construction time, either through the `region` subtag (third part if `script` is present, second part otherwise) of the locale identifier or through the `region` option of the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. The latter takes priority if they are both present; and if neither is present, the property has value `undefined`.
+Region is one of the core attributes of a locale. It allows selection for differences between the same language in, say, different countries. For example, English is spoken in the United Kingdom and the United States of America, but there are differences in spelling and other language conventions between those two countries. Knowing the locale's region helps JavaScript programmers make sure that the content from their sites and applications is correctly displayed when viewed from different areas of the world.
+
+The `region` property's value is set at construction time, either through the part of the locale identifier after `script` or through the `region` option of the {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor. The latter takes priority if they are both present; and if neither is present, the property has value `undefined`.
 
 The set accessor of `region` is `undefined`. You cannot change this property directly.
 
@@ -26,7 +27,7 @@ The region, if present, is the third part (if `script` is present, second part o
 
 ```js
 const locale = new Intl.Locale("en-Latn-US");
-console.log(locale.region); // Prints "US"
+console.log(locale.region); // "US"
 ```
 
 ### Adding a region via the configuration object argument
@@ -35,7 +36,7 @@ The {{jsxref("Intl/Locale/Locale", "Intl.Locale()")}} constructor has an optiona
 
 ```js
 const locale = new Intl.Locale("fr-Latn", { region: "FR" });
-console.log(locale.region); // Prints "FR"
+console.log(locale.region); // "FR"
 ```
 
 ## Specifications
@@ -49,4 +50,4 @@ console.log(locale.region); // Prints "FR"
 ## See also
 
 - {{jsxref("Intl.Locale")}}
-- [Unicode region chart](https://unicode-org.github.io/cldr-staging/charts/latest/supplemental/territory_containment_un_m_49.html)
+- [Unicode region chart](https://www.unicode.org/cldr/charts/47/supplemental/territory_containment_un_m_49.html)

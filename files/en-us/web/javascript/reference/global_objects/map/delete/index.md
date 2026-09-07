@@ -4,24 +4,22 @@ short-title: delete()
 slug: Web/JavaScript/Reference/Global_Objects/Map/delete
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Map.delete
+sidebar: jsref
 ---
 
-{{JSRef}}
-
-The **`delete()`** method of {{jsxref("Map")}} instances removes the specified element from this map by
-key.
+The **`delete()`** method of {{jsxref("Map")}} instances removes the entry specified by the key from this `Map`.
 
 {{InteractiveExample("JavaScript Demo: Map.prototype.delete()")}}
 
 ```js interactive-example
-const map1 = new Map();
-map1.set("bar", "foo");
+const map = new Map();
+map.set("bar", "foo");
 
-console.log(map1.delete("bar"));
+console.log(map.delete("bar"));
 // Expected result: true
 // True indicates successful removal
 
-console.log(map1.has("bar"));
+console.log(map.has("bar"));
 // Expected result: false
 ```
 
@@ -34,12 +32,11 @@ mapInstance.delete(key)
 ### Parameters
 
 - `key`
-  - : The key of the element to remove from the `Map` object.
+  - : The key of the entry to remove from the `Map` object. Object keys are compared by [reference](/en-US/docs/Glossary/Object_reference), not by value.
 
 ### Return value
 
-`true` if an element in the `Map` object existed and has been removed, or
-`false` if the element does not exist.
+`true` if an entry in the `Map` object has been removed successfully. `false` if the key is not found in the `Map`.
 
 ## Examples
 
@@ -64,3 +61,7 @@ console.log(myMap.has("bar")); // Returns false. The "bar" element is no longer 
 ## See also
 
 - {{jsxref("Map")}}
+- {{jsxref("Map.prototype.clear()")}}
+- {{jsxref("Map.prototype.get()")}}
+- {{jsxref("Map.prototype.set()")}}
+- {{jsxref("Map.prototype.has()")}}

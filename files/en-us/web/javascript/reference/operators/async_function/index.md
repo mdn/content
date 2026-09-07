@@ -3,9 +3,8 @@ title: async function expression
 slug: Web/JavaScript/Reference/Operators/async_function
 page-type: javascript-operator
 browser-compat: javascript.operators.async_function
+sidebar: jssidebar
 ---
-
-{{jsSidebar("Operators")}}
 
 The **`async function`** keywords can be used to define an async function inside an expression.
 

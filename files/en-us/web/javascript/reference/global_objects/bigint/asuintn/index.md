@@ -4,9 +4,8 @@ short-title: asUintN()
 slug: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
 page-type: javascript-static-method
 browser-compat: javascript.builtins.BigInt.asUintN
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`BigInt.asUintN()`** static method truncates a `BigInt` value to the given number of least significant bits and returns that value as an unsigned integer.
 
@@ -36,13 +35,13 @@ BigInt.asUintN(bits, bigint)
 ### Parameters
 
 - `bits`
-  - : The amount of bits available for the returned BigInt. Should be an integer between 0 and 2<sup>53</sup> - 1, inclusive.
+  - : The number of bits available for the returned BigInt. Should be an integer between 0 and 2<sup>53</sup> - 1, inclusive.
 - `bigint`
   - : The BigInt value to truncate to fit into the supplied bits.
 
 ### Return value
 
-The value of `bigint` modulo `2 ** bits`, as an unsigned integer.
+A BigInt containing the bit representation of `bigint` truncated to `bits` bits, interpreted as an unsigned integer.
 
 ### Exceptions
 
@@ -59,7 +58,8 @@ The `BigInt.asUintN` method truncates a `BigInt` value to the given number of bi
 ===>      1001 (base 2) = 9n
 ```
 
-> **Note:** `BigInt` values are always encoded as two's complement in binary.
+> [!NOTE]
+> `BigInt` values are always encoded as two's complement in binary.
 
 Unlike similar language APIs such as {{jsxref("Number.prototype.toExponential()")}}, `asUintN` is a static property of {{jsxref("BigInt")}}, so you always use it as `BigInt.asUintN()`, rather than as a method of a BigInt value. Exposing `asUintN()` as a "standard library function" allows [interop with asm.js](https://github.com/tc39/proposal-bigint/blob/master/ADVANCED.md#dont-break-asmjs).
 

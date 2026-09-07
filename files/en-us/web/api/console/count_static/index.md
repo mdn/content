@@ -88,6 +88,6 @@ We're now maintaining separate counts based only on the value of `label`.
 
 ## See also
 
-- [Microsoft Edge's documentation for `console.count()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#count)
+- [Microsoft Edge's documentation for `console.count()`](https://learn.microsoft.com/en-us/microsoft-edge/devtools/console/api#count)
 - [Node.js documentation for `console.count()`](https://nodejs.org/docs/latest/api/console.html#consolecountlabel)
 - [Google Chrome's documentation for `console.count()`](https://developer.chrome.com/docs/devtools/console/api/#count)

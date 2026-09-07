@@ -1,10 +1,9 @@
 ---
-title: SQL Injection
+title: SQL injection
 slug: Glossary/SQL_Injection
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 SQL injection takes advantage of Web apps that fail to validate user input. Hackers can maliciously pass SQL commands through the Web app for execution by a backend database.
 
@@ -24,7 +23,7 @@ After entering username and password, behind the GUI the SQL queries work as fol
 "SELECT Count(*) FROM Users WHERE Username=' " + txt.User.Text+" ' AND Password=' "+ txt.Password.Text+" ' ";
 ```
 
-Now suppose User enters the Username: admin and Password: passwd123, so after clicking on the Log in button, SQL query will run as follows:
+Now suppose User enters the Username: admin and Password: passwd123, so after clicking on the Login button, SQL query will run as follows:
 
 ```sql
 "SELECT Count(*) FROM Users WHERE Username=' admin ' AND Password=' passwd123 ' ";

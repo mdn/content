@@ -8,13 +8,9 @@ browser-compat: api.DOMQuad.DOMQuad
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-The **`DOMQuad()`** constructor
-creates and returns a new {{domxref("DOMQuad")}} object, given the values for some or
-all of its properties.
+The **`DOMQuad()`** constructor creates and returns a new {{domxref("DOMQuad")}} object, given the values for some or all of its properties.
 
-You can also create a `DOMQuad` by calling the
-{{domxref("DOMQuad.fromRect_static", "DOMQuad.fromRect()")}} or {{domxref("DOMQuad.fromQuad_static", "DOMQuad.fromQuad()")}} static function. That function accepts any object with the required parameters, including a `DOMQuad`, {{domxref("DOMPoint")}} or
-{{domxref("DOMPointReadOnly")}}.
+You can also create a `DOMQuad` by calling the {{domxref("DOMQuad.fromRect_static", "DOMQuad.fromRect()")}} or {{domxref("DOMQuad.fromQuad_static", "DOMQuad.fromQuad()")}} static function. These functions accept any object with the required parameters, including a {{domxref("DOMRect")}}, {{domxref("DOMRectReadOnly")}}, or another `DOMQuad`.
 
 ## Syntax
 
@@ -28,14 +24,8 @@ new DOMQuad(p1, p2, p3, p4)
 
 ### Parameters
 
-- `p1` {{optional_inline}}
-  - : The `p1` {{domxref("DOMPoint")}} for the new `DOMQuad`.
-- `p2` {{optional_inline}}
-  - : The `p2` {{domxref("DOMPoint")}} for the new `DOMQuad`.
-- `p3` {{optional_inline}}
-  - : The `p3` {{domxref("DOMPoint")}} for the new `DOMQuad`.
-- `p4` {{optional_inline}}
-  - : The `p4` {{domxref("DOMPoint")}} for the new `DOMQuad`.
+- {{domxref("DOMQuad/p1", "p1")}} {{optional_inline}}, {{domxref("DOMQuad/p2", "p2")}} {{optional_inline}}, {{domxref("DOMQuad/p3", "p3")}} {{optional_inline}}, {{domxref("DOMQuad/p4", "p4")}} {{optional_inline}}
+  - : Each a {{domxref("DOMPoint")}} or an object with the same properties representing one corner of the quad.
 
 ## Examples
 

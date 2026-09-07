@@ -22,7 +22,6 @@ A string.
 <script
   id="el"
   src="https://example.com/example-framework.js"
-  type="text/javascript"
   integrity="sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
   crossorigin="anonymous"></script>
 ```
@@ -43,4 +42,4 @@ console.log(el.integrity); // Output: "sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/u
 ## See also
 
 - {{domxref("HTMLLinkElement.integrity")}}
-- [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity)
+- [Subresource Integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity)

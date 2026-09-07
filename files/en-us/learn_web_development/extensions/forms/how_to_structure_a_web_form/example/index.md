@@ -14,10 +14,7 @@ This the example for a basic payment form for the article [How to structure an H
 ```html-nolint
 <form method="post">
   <h1>Payment form</h1>
-  <p>
-    Required fields are followed by
-    <strong><span aria-label="required">*</span></strong>.
-  </p>
+  <p>Please complete all required (*) fields.</p>
   <section>
     <h2>Contact information</h2>
     <fieldset>
@@ -44,24 +41,15 @@ This the example for a basic payment form for the article [How to structure an H
       </ul>
     </fieldset>
     <p>
-      <label for="name">
-        <span>Name: </span>
-        <strong><span aria-label="required">*</span></strong>
-      </label>
+      <label for="name">Name *:</label>
       <input type="text" id="name" name="username" required />
     </p>
     <p>
-      <label for="mail">
-        <span>Email: </span>
-        <strong><span aria-label="required">*</span></strong>
-      </label>
+      <label for="mail"><span>Email *:</span></label>
       <input type="email" id="mail" name="user-mail" required />
     </p>
     <p>
-      <label for="pwd">
-        <span>Password: </span>
-        <strong><span aria-label="required">*</span></strong>
-      </label>
+      <label for="pwd">Password *:</label>
       <input type="password" id="pwd" name="password" required />
     </p>
   </section>
@@ -78,21 +66,15 @@ This the example for a basic payment form for the article [How to structure an H
       </select>
     </p>
     <p>
-      <label for="number">
-        <span>Card number:</span>
-        <strong><span aria-label="required">*</span></strong>
-      </label>
+      <label for="number">Card number *:</label>
       <input type="tel" id="number" name="card-number" />
     </p>
     <p>
-      <label for="expiration">
-        <span>Expiration date:</span>
-        <strong><span aria-label="required">*</span></strong>
-      </label>
+      <label for="expiration">Expiration date *:</label>
       <input
         type="text"
         id="expiration"
-        required="true"
+        required
         placeholder="MM/YY"
         pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$" />
     </p>
@@ -120,7 +102,7 @@ form {
   margin: 0 auto;
   width: 400px;
   padding: 1em;
-  border: 1px solid #ccc;
+  border: 1px solid #cccccc;
   border-radius: 1em;
 }
 
@@ -134,7 +116,7 @@ fieldset {
   font: 1em sans-serif;
   width: 250px;
   box-sizing: border-box;
-  border: 1px solid #999;
+  border: 1px solid #999999;
 }
 
 input[type="checkbox"],
@@ -148,7 +130,7 @@ input:focus {
 }
 
 button {
-  margin: 20px 0 0 0;
+  margin-top: 20px;
 }
 
 label {

@@ -127,7 +127,7 @@ This guideline covers situations in which functionality may have a time limit. F
         </p>
         <p>
           Exceptions to this are activities with time limits longer than 20
-          hours, real time events (e.g., live multiplayer games), and any other
+          hours, real-time events (e.g., live multiplayer games), and any other
           activity that requires a time limit and would be invalidated if it
           were turned off.
         </p>
@@ -320,7 +320,7 @@ The conformance criteria under this guideline relate to ways in which users can 
         >. Also note that you should minimize instances where multiple copies of
         the same text are linked to different places. This can cause problems
         for screen reader users, who will often bring up a list of the links out
-        of context — several links all labelled "click here", "click here",
+        of context — several links all labeled "click here", "click here",
         "click here" would be confusing.
       </td>
     </tr>
@@ -426,7 +426,7 @@ The conformance criteria under this guideline relate to ways in which users can 
         >. Also note that you should minimize instances where multiple copies of
         the same text are linked to different places. This can cause problems
         for screen reader users, who will often bring up a list of the links out
-        of context — several links all labelled "click here", "click here",
+        of context — several links all labeled "click here", "click here",
         "click here" would be confusing.
       </td>
     </tr>
@@ -561,7 +561,6 @@ The conformance criteria under this guideline ensures that users are able to int
 ## See also
 
 - [WCAG](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG)
-
   1. [Perceivable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)
   2. Operable
   3. [Understandable](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)

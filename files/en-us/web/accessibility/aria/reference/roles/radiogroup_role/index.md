@@ -55,13 +55,13 @@ Arrow keys are used to navigate among elements of a toolbar. When a `radiogroup`
 
 ### Required JavaScript features
 
-User interactions for `radiogroup`s must replicate the user interaction of a user entering into a group of same-named HTML radio buttons. Keyboard events for tabs, space, and arrow keys must be captured. Click events on both the radio elements and their associated labels must also be captured. Additionally, [focus must be managed](https://usability.yale.edu/web-accessibility/articles/focus-keyboard-operability).
+User interactions for `radiogroup`s must replicate the user interaction of a user entering into a group of same-named HTML radio buttons. Keyboard events for tabs, space, and arrow keys must be captured. Click events on both the radio elements and their associated labels must also be captured. Additionally, [focus must be managed](https://primer.style/accessibility/design-guidance/focus-management/).
 
 While generally moving off an a focused element brings you to the next focusable element in the DOM order, using the arrow keys to navigate through a group of radio button keeps you in the group, moving focus to the first radio button when the <kbd>Right Arrow</kbd> or <kbd>Down Arrow</kbd> is released when focus was on the last radio in the group, and moving to the last radio if the <kbd>Left Arrow</kbd> or <kbd>Up Arrow</kbd> is released if focus was on the first radio. Managing roving [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) is one method to manage arrow key events.
 
 ### Required CSS features
 
-Use the `[aria-checked="true"]` [attribute selector](/en-US/docs/Web/CSS/Attribute_selectors) to style the checked state of checked radio buttons.
+Use the `[aria-checked="true"]` [attribute selector](/en-US/docs/Web/CSS/Reference/Selectors/Attribute_selectors) to style the checked state of checked radio buttons.
 
 Use CSS {{CSSXRef(':hover')}} and {{CSSXRef(':focus')}} pseudo-classes for styling visual keyboard focus and hover. The focus and hover effect should encompass both the radio button and label to make it easier to perceive which option is being chosen and to indicate that clicking either the label or button will activate the radio button.
 

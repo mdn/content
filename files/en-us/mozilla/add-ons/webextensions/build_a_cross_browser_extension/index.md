@@ -2,20 +2,19 @@
 title: Build a cross-browser extension
 slug: Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 The introduction of the browser extensions API created a uniform landscape for the development of browser extensions. However, there are differences in the API implementations and the scope of coverage among the browsers that use the extensions API (the major ones being Chrome, Edge, Firefox, Opera, and Safari).
 
 Maximizing the reach of your browser extension means developing it for at least two browsers, possibly more. This article looks at the main challenges faced when creating a cross-browser extension and suggests how to address these challenges.
 
 > [!NOTE]
-> The main browsers have adopted Manifest V3. This manifest version provides better compatibility between the browser extension environments, such as promises for handling asynchronous events. In addition to the information in this guide, refer to the Manifest V3 migration guides for [Firefox](https://extensionworkshop.com/documentation/develop/manifest-v3-migration-guide/) and [Chrome](https://developer.chrome.com/docs/extensions/develop/migrate).
+> The main browsers have adopted Manifest V3. This manifest version provides better compatibility between the browser extension environments, such as use of the `browser.*` namespace and promises for handling asynchronous events. In addition to the information in this guide, refer to the Manifest V3 migration guides for [Firefox](https://extensionworkshop.com/documentation/develop/manifest-v3-migration-guide/) and [Chrome](https://developer.chrome.com/docs/extensions/develop/migrate).
 
 ## Cross-platform extension coding hurdles
 
-You need to address the following areas when tackling a cross-platform extension:
+You need to address these areas when tackling a cross-platform extension:
 
 - [API namespace](#api_namespace)
 - [API asynchronous event handling](#api_asynchronous_event_handling)
@@ -30,31 +29,32 @@ You need to address the following areas when tackling a cross-platform extension
 
 There are two API namespaces in use among the main browsers:
 
-- `browser.*`, the proposed standard for the extensions API used by Firefox and Safari.
+- `browser.*`, the standard for the extensions API. Originally used by Firefox and Safari, supported by Chrome [in mid 2026](https://developer.chrome.com/docs/extensions/develop/concepts/browser-namespace) (i.e., Chrome 148, Opera 121, and Edge 136, and 4 versions later for extensions using [`devtools_page`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page)).
 - `chrome.*` used by Chrome, Opera, and Edge.
 
 Firefox also supports the `chrome.*` namespace for APIs that are compatible with Chrome, primarily to assist with [porting](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). However, using the `browser.*` namespace is preferred. In addition to being the proposed standard, `browser.*` uses promises—a modern and convenient mechanism for handling asynchronous events.
 
-Only in the most trivial extensions is namespace likely to be the only cross-platform issue to be addressed. Therefore, it's rarely, if ever, helpful to address this issue alone. The best approach is to address this with asynchronous event handling.
-
 ### API asynchronous event handling
 
-With the introduction of Manifest V3, all the main browsers adopted the standard of returning _Promises_ from asynchronous methods. Firefox and Safari have full support for Promises on all asynchronous APIs. Starting from Chrome 121, all asynchronous extension APIs support promises unless documented otherwise. The `devtools` API is the only API namespace without Promise support ([Chromium bug 1510416](https://crbug.com/1510416)).
+With the introduction of Manifest V3, all the main browsers adopted the standard of returning _[promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)_ from asynchronous methods. Firefox and Safari support promises on all asynchronous APIs. Starting from Chrome 121, all asynchronous extension APIs support promises unless documented otherwise. For extensions that use the `devtools_page` manifest key, Chrome provided promise support in Chrome 152 (see [Chrome bug 500769389](https://crbug.com/500769389)).
 
-In Manifest V2, Firefox and Safari support Promises for asynchronous methods. At the same time, Chrome methods invoke _callbacks_. For compatibility, all the main browsers support callbacks across all manifest versions. See [Callbacks and Promises](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#callbacks_and_promises) for details.
+In Manifest V2, Firefox and Safari support promises for asynchronous methods. At the same time, Chrome methods invoke _callbacks_. For compatibility, all the main browsers support callbacks across all manifest versions. See the [Historical differences](/en-US/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#historical_differences) section of the Chrome incompatibilities page for details.
 
 Some handlers of extension API events are expected to respond asynchronously through a `Promise` or callback function. For example, a handler of the `runtime.onMessage` event can [send an asynchronous response using a `Promise`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_a_promise) or using [a callback](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_sendresponse). A `Promise` as the return value from an event handler is supported in Firefox and Safari, but not yet in Chrome.
 
-Firefox also supports callbacks for the APIs that support the `chrome.*` namespace. However, using promises is recommended. Promises greatly simplifies asynchronous event handling, particularly where you need to chain events together. This means using a polyfill or similar so your extension uses the `browser.*` namespace in Firefox and Safari and `chrome.*` in Chrome, Opera, and Edge.
+Firefox also supports callbacks for the APIs that support the `chrome.*` namespace. However, using promises is recommended. Promises greatly simplify asynchronous event handling, particularly when you need to chain events. If you want to use the `browser.*` namespace with promises and target Chrome 147 or earlier, you need to use a polyfill or similar.
 
 > [!NOTE]
 > If you're unfamiliar with the differences between these two methods, look at [Getting to know asynchronous JavaScript: Callbacks, Promises and Async/Await](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee) or the MDN [Using promises](/en-US/docs/Web/JavaScript/Guide/Using_promises) page.
 
 #### The WebExtension browser API Polyfill
 
-So, how do you take advantage of promises easily? The solution is to code for Firefox using promises and use the [WebExtension browser API Polyfill](https://github.com/mozilla/webextension-polyfill/) to address Chrome, Opera, and Edge.
+Starting with Chrome 148, Chrome supports the `browser` namespace, except in extensions that include a DevTools page. This limitation was removed in Chrome 152 (see [Chrome bug 500769389](https://crbug.com/500769389)), and the `browser` namespace became available to all Chrome extensions.
 
-This polyfill addresses the API namespace and asynchronous event handling across Firefox, Chrome, Opera, and Edge.
+To take advantage of the `browser.*` namespace and promises in earlier versions, use the [WebExtension browser API Polyfill](https://github.com/mozilla/webextension-polyfill/). This polyfill addresses the API namespace and asynchronous event handling across Firefox, Chrome, Opera, and Edge.
+
+> [!NOTE]
+> In Chrome 152 or later, the polyfill is no-op.
 
 To use the polyfill, install it into your development environment using npm or download it directly from [GitHub releases](https://github.com/mozilla/webextension-polyfill/releases).
 
@@ -227,7 +227,7 @@ The Firefox, Chrome, and Edge stores require that each uploaded version has a di
 
 ## Conclusion
 
-When approaching a cross-platform extension development, the differences between extension API implementations can be addressed by targeting Firefox and using the [WebExtension browser API Polyfill](https://github.com/mozilla/webextension-polyfill/).
+When approaching a cross-platform extension development, you can use the `browser.*` namespace and promises in a Firefox implementation. You can do this knowing that these features are supported from Chrome 148. If you want to target earlier versions of Chrome, you can then use the [WebExtension browser API Polyfill](https://github.com/mozilla/webextension-polyfill/).
 
 The bulk of your cross-platform work is likely to focus on handling variations among the API features supported by the main browsers. You may also need to account for differences between the content script and background script implementations. Creating your `manifest.json` files should be relatively straightforward and something you can do manually. You then need to account for the variations in the processes for submitting to each extension store.
 

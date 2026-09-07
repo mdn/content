@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.XPathResult.singleNodeValue
 ---
 
-{{APIRef("DOM XPath")}}
+{{APIRef("DOM")}}
 
 The read-only **`singleNodeValue`** property of the
 {{domxref("XPathResult")}} interface returns a {{domxref("Node")}} value or

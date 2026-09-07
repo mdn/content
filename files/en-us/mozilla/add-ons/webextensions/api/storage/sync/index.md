@@ -3,9 +3,8 @@ title: storage.sync
 slug: Mozilla/Add-ons/WebExtensions/API/storage/sync
 page-type: webextension-api-property
 browser-compat: webextensions.api.storage.sync
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Represents the `sync` storage area. Items in `sync` storage are synced by the browser. The data is then available on all instances of the browser the user is logged into (for example, when using a Mozilla account on desktop versions of Firefox or a Google account on Chrome) across different devices.
 
@@ -80,6 +79,8 @@ The `sync` object implements the methods defined on the {{WebExtAPIRef("storage.
   - : Retrieves one or more items from the storage area.
 - {{WebExtAPIRef("storage.StorageArea.getBytesInUse()", "storage.sync.getBytesInUse()")}}
   - : Gets the amount of storage space (in bytes) used for one or more items in the storage area.
+- {{WebExtAPIRef("storage.StorageArea.getKeys()", "storage.sync.getKeys()")}}
+  - : Retrieves the keys of all items in the storage area.
 - {{WebExtAPIRef("storage.StorageArea.set()", "storage.sync.set()")}}
   - : Stores one or more items in the storage area. If the item exists, its value is updated.
 - {{WebExtAPIRef("storage.StorageArea.remove()", "storage.sync.remove()")}}

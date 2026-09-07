@@ -2,9 +2,8 @@
 title: Asynchronous
 slug: Glossary/Asynchronous
 page-type: glossary-definition
+sidebar: glossarysidebar
 ---
-
-{{GlossarySidebar}}
 
 The term **asynchronous** refers to two or more objects or events that do not exist or happen at the same time, that is, they are **not** {{glossary("synchronous")}}. When multiple related things happen without any being dependent on the completion of previous happenings, they are asynchronous.
 

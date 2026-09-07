@@ -2,9 +2,8 @@
 title: Game distribution
 slug: Games/Publishing_games/Game_distribution
 page-type: guide
+sidebar: games
 ---
-
-{{GamesSidebar}}
 
 You've followed a [tutorial](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) or [two](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser) and created an HTML game — that's great! This article covers all you need to know about the ways in which you can distribute your newly created game into the wild. This includes hosting it yourself online, submitting it to open marketplaces, and submitting it to closed ones like Google Play or the iOS App Store.
 
@@ -24,7 +23,7 @@ You don't have to wait several days to have your game's code updated. If your us
 
 ### Direct link distribution and instant play
 
-You don't have to tell people to search for your game in an app store with HTML games. You can just send them a direct URL to access the game, which they can then click to play the game right away without the need to use third party plugins or download and install a large package. Bear in mind that downloading the game might still take a bit of time depending on the size of the game and your network speed. In any case, it's a lot easier to promote the game if you can drive traffic directly where you want it and don't have to jump through lots of hoops to play.
+You don't have to tell people to search for your game in an app store with HTML games. You can just send them a direct URL to access the game, which they can then click to play the game right away without the need to use third-party plugins or download and install a large package. Bear in mind that downloading the game might still take a bit of time depending on the size of the game and your network speed. In any case, it's a lot easier to promote the game if you can drive traffic directly where you want it and don't have to jump through lots of hoops to play.
 
 ## Desktop vs. mobile
 
@@ -106,7 +105,7 @@ Other alternative tools are:
 
 - [Intel XDK](https://www.intel.com/content/www/us/en/developer/tools/overview.html) — an exciting alternative, similar to CocoonIO.
 - [Electron](https://www.electronjs.org/) — known as Atom Shell — is an open-sourced and cross-platform tool from GitHub.
-- [Manifold.js](https://manifoldjs.com/) — this tool from the Microsoft team can create native distributions of HTML games from iOS, Android, and Windows.
+- [Manifold.js](https://www.manifoldjs.com/) — this tool from the Microsoft team can create native distributions of HTML games from iOS, Android, and Windows.
 
 ## Summary
 

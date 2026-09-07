@@ -3,9 +3,8 @@ title: sessions.restore()
 slug: Mozilla/Add-ons/WebExtensions/API/sessions/restore
 page-type: webextension-api-function
 browser-compat: webextensions.api.sessions.restore
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Restores a closed tab or window. Restoring doesn't just reopen the tab or window: it also restores the tab's navigation history so the back/forward buttons will work. Restoring a window will restore all the tabs that the window contained when it was closed.
 
@@ -27,10 +26,6 @@ let restoringSession = browser.sessions.restore(
 ### Return value
 
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise). This will be fulfilled with a {{WebExtAPIRef("sessions.Session", "Session")}} object representing the session that was restored.
-
-## Browser compatibility
-
-{{Compat}}
 
 ## Examples
 
@@ -63,6 +58,10 @@ browser.browserAction.onClicked.addListener(() => {
 ```
 
 {{WebExtExamples}}
+
+## Browser compatibility
+
+{{Compat}}
 
 > [!NOTE]
 > This API is based on Chromium's [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/api/sessions) API.

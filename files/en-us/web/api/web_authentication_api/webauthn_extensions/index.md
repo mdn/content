@@ -77,7 +77,6 @@ As demonstrated by the above code snippet, there are two different places to fin
 1. You can find the results of client (user agent) extension processing by calling the {{domxref("PublicKeyCredential.getClientExtensionResults()")}} method. This returns a {{jsxref("Map", "map")}}, with each entry being an extensions' identifier string as the key, and the output from the processing of the extension by the client as the value. In the example above, if the browser supported the `credProps` extension and it was processed correctly, the `myClientExtResults` map object would contain one entry, `"credProps"`, with a value of `{ rk: true }`. This would verify that the created credential is indeed discoverable.
 
 2. You can find the results of authenticator extension processing in the authenticator data for the operation:
-
    - In the case of `PublicKeyCredential`s returned from successful `create()` calls, this can be returned via a call to {{domxref("AuthenticatorAttestationResponse.getAuthenticatorData", "publicKeyCredential.response.getAuthenticatorData()")}}.
    - In the case of `PublicKeyCredential`s returned from successful `get()` calls, this can be found in the {{domxref("AuthenticatorAssertionResponse.authenticatorData", "publicKeyCredential.response.authenticatorData")}} property.
 

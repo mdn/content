@@ -1,11 +1,11 @@
 ---
-title: "<noscript>: The Noscript element"
+title: "`<noscript>` HTML noscript element"
+short-title: <noscript>
 slug: Web/HTML/Reference/Elements/noscript
 page-type: html-element
 browser-compat: html.elements.noscript
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`<noscript>`** [HTML](/en-US/docs/Web/HTML) element defines a section of HTML to be inserted if a script type on the page is unsupported or if scripting is currently turned off in the browser.
 

@@ -32,7 +32,7 @@ The HTML markup defines a toggle button and an {{htmlelement("input")}} element 
 Note that if auto-correction is supported, it will be enabled by default.
 
 ```html
-<button id="toggleAutocorrect"></button>
+<button id="toggleAutocorrect">Unknown</button>
 <input type="search" id="searchinput" />
 ```
 

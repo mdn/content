@@ -9,7 +9,7 @@ status:
 browser-compat: api.PaymentRequest.shippingaddresschange_event
 ---
 
-{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Non-standard_Header}}
 
 The **`shippingaddresschange`** event is sent to the {{domxref("PaymentRequest")}} object when the user selects a shipping address or changes details of their shipping address.
 
@@ -31,10 +31,6 @@ A {{domxref("PaymentRequestUpdateEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PaymentRequestUpdateEvent")}}
 
-## Event properties
-
-_Provides only the properties inherited from {{domxref("Event")}}._
-
 ## Usage notes
 
 Depending on the browser, the shipping address information may be redacted for privacy reasons. That is, the {{domxref("PaymentAddress")}} which contains the shipping address may have some portions of its content altered, obscured, or left out entirely in order to prevent identifying the user without their consent (since if they choose to have you ship products to them, you'll need their address).
@@ -46,29 +42,25 @@ In this example, a handler for the `shippingaddresschange` event is set up to va
 ```js
 const paymentRequest = new PaymentRequest(methodData, details, options);
 
-paymentRequest.addEventListener(
-  "shippingaddresschange",
-  (event) => {
-    let detailsUpdate = checkAddress(paymentRequest.shippingAddress);
-    event.updateWith(detailsUpdate);
-  },
-  false,
-);
+paymentRequest.addEventListener("shippingaddresschange", (event) => {
+  const detailsUpdate = checkAddress(paymentRequest.shippingAddress);
+  event.updateWith(detailsUpdate);
+});
 
-const checkAddress = (theAddress) => {
-  let detailsUpdate = {};
+function checkAddress(theAddress) {
+  const detailsUpdate = {};
 
   // Check the address, return an object with any changes or errors.
 
   return detailsUpdate;
-};
+}
 ```
 
 You can also establish a handler for `shippingaddresschange` using the `onshippingaddresschange` event handler property:
 
 ```js
 paymentRequest.onshippingaddresschange = (event) => {
-  let detailsUpdate = checkAddress(paymentRequest.shippingAddress);
+  const detailsUpdate = checkAddress(paymentRequest.shippingAddress);
   event.updateWith(detailsUpdate);
 };
 ```

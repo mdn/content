@@ -29,7 +29,7 @@ _`WindowClient` inherits properties from its parent interface, {{domxref("Client
 - {{domxref("WindowClient.focused")}} {{ReadOnlyInline}}
   - : A boolean that indicates whether the current client has focus.
 - {{domxref("WindowClient.visibilityState")}} {{ReadOnlyInline}}
-  - : Indicates the visibility of the current client. This value can be one of `"hidden"`, `"visible"`, or `"prerender"`.
+  - : Indicates the visibility of the current client. This value can be one of `"hidden"` or `"visible"`.
 
 ## Example
 

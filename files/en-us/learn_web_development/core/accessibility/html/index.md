@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Tooling","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Tooling","Learn_web_development/Core/Accessibility/Test_your_skills/HTML", "Learn_web_development/Core/Accessibility")}}
 
 A great deal of web content can be made accessible just by making sure the correct Hypertext Markup Language elements are used for the correct purpose at all times. This article looks in detail at how HTML can be used to ensure maximum accessibility.
 
@@ -21,7 +21,7 @@ A great deal of web content can be made accessible just by making sure the corre
       <td>
         <ul>
           <li>Use semantic HTML, aka "The right element for the right job", because the browser provides so many built-in accessibility hooks.</li>
-          <li>Accessible best practices such as alt text, good link best, form labels, and table row and column headings and scoping.</li>
+          <li>Accessible best practices such as alt text, good link text, form labels, and table row and column headings and scoping.</li>
           <li>Using simple plain language, steering clear of slang and abbreviations where possible, and providing definitions where it is not possible.</li>
           <li>The concept and practice of keyboard accessibility.</li>
           <li>The importance of source order.</li>
@@ -63,7 +63,7 @@ We've already talked about the importance of proper semantics, and why we should
 
 Out there on the web, the truth is that people do some very strange things with HTML markup. Often, misuse of HTML is because of legacy practices that haven't gone away yet, but sometimes it occurs because authors don't know any better. Whatever the case, you should replace bad code with good semantic markup wherever possible, in both static HTML pages and dynamically-generated HTML from [server-side](/en-US/docs/Learn_web_development/Extensions/Server-side) code or [client-side JavaScript frameworks](/en-US/docs/Learn_web_development/Core/Frameworks_libraries) such as React.
 
-Sometimes you are not in a position to get rid of lousy markup — your pages might be dependant on server-side code or web/framework components that you have no control over, or you might have third-party content on your page (such as ad banners).
+Sometimes you are not in a position to get rid of lousy markup — your pages might be dependent on server-side code or web/framework components that you have no control over, or you might have third-party content on your page (such as ad banners).
 
 The goal isn't "all or nothing"; every improvement you can make will help the cause of accessibility.
 
@@ -360,18 +360,18 @@ A basic data table can be written with very simple markup, for example:
     <td>Pronouns</td>
   </tr>
   <tr>
-    <td>Gabriel</td>
-    <td>13</td>
+    <td>Xavier</td>
+    <td>23</td>
     <td>he/him</td>
   </tr>
   <tr>
-    <td>Elva</td>
+    <td>Tina</td>
     <td>8</td>
     <td>she/her</td>
   </tr>
   <tr>
-    <td>Freida</td>
-    <td>5</td>
+    <td>Sam</td>
+    <td>17</td>
     <td>she/her</td>
   </tr>
 </table>
@@ -382,7 +382,7 @@ But this has problems — there is no way for a screen reader user to associate 
 Now have a look at our [punk bands table example](https://github.com/mdn/learning-area/blob/main/css/styling-boxes/styling-tables/punk-bands-complete.html) — you can see a few accessibility aids at work here:
 
 - Table headers are defined using {{htmlelement("th")}} elements — you can also specify if they are headers for rows or columns using the `scope` attribute. This gives you complete groups of data that can be consumed by screen readers as single units.
-- The {{htmlelement("caption")}} element and the `<table>` element's `summary` attribute both do similar jobs — they act as alt text for a table, giving a screen reader user a useful quick summary of the table's contents. The `<caption>` element is generally preferred as it makes it's content accessible to sighted users too, who might also find it useful. You don't really need both.
+- The {{htmlelement("caption")}} element and the `<table>` element's `summary` attribute both do similar jobs — they act as alt text for a table, giving a screen reader user a useful quick summary of the table's contents. The `<caption>` element is generally preferred as it makes its content accessible to sighted users too, who might also find it useful. You don't really need both.
 
 > [!NOTE]
 > See our [HTML table accessibility](/en-US/docs/Learn_web_development/Core/Structuring_content/Table_accessibility) article for more details about accessible data tables.
@@ -448,7 +448,8 @@ Let's have another quick look at the fourth method:
 
 In this case, we are not using the `alt` attribute at all — instead, we have presented our description of the image as a regular text paragraph, given it an `id`, and then used the `aria-labelledby` attribute to refer to that `id`, which causes screen readers to use that paragraph as the alt text/label for that image. This is especially useful if you want to use the same text as a label for multiple images — something that isn't possible with `alt`.
 
-> **Note:** [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) is part of the [WAI-ARIA](https://w3c.github.io/aria/) spec, which allows developers to add in extra semantics to their markup to improve screen reader accessibility where needed.
+> [!NOTE]
+> [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) is part of the [WAI-ARIA](https://w3c.github.io/aria/) spec, which allows developers to add in extra semantics to their markup to improve screen reader accessibility where needed.
 
 ### Figures and figure captions
 
@@ -491,7 +492,7 @@ Links (the [`<a>`](/en-US/docs/Web/HTML/Reference/Elements/a) element with an `h
 
 ### Link styling
 
-By default, links are visually different from other text in both color and [text-decoration](/en-US/docs/Web/CSS/text-decoration), with links being blue and underlined by default, purple and underlined if visited, and with a [focus-ring](/en-US/docs/Web/CSS/:focus) when they receive keyboard focus.
+By default, links are visually different from other text in both color and [text-decoration](/en-US/docs/Web/CSS/Reference/Properties/text-decoration), with links being blue and underlined by default, purple and underlined if visited, and with a [focus-ring](/en-US/docs/Web/CSS/Reference/Selectors/:focus) when they receive keyboard focus.
 
 Color should not be used as the sole method of distinguishing links from non-linking content. Link text color, like all text, has to be significantly different from the background color ([a 4.5:1 contrast](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)). In addition, links should visually be significantly different from non-linking text, with a minimum contrast requirement of 3:1 between link text and surrounding text and between default, visited, and focus/active states and a 4.5:1 contrast between all those state colors and the background color.
 
@@ -549,12 +550,8 @@ Spacing may be created using CSS properties such as {{CSSxRef("margin")}}.
 
 - [Hand tremors and the giant-button-problem - Axess Lab](https://axesslab.com/hand-tremors/)
 
-## Test your skills
-
-You've reached the end of this article, but can you remember the most important information? See [Test your skills: HTML Accessibility](/en-US/docs/Learn_web_development/Core/Accessibility/Test_your_skills/HTML) to verify that you've retained this information before you move on.
-
 ## Summary
 
-You should now be well-versed in writing accessible HTML for most occasions. Our WAI-ARIA basics article will help to fill gaps in this knowledge, but this article has taken care of the basics. Next up we'll explore CSS and JavaScript, and how accessibility is affected by their good or bad use.
+You should now be well-versed in writing accessible HTML for most occasions. In the next article, we'll give you some tests that you can use to check how well you've understood and retained all this information.
 
-{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Tooling","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/Tooling","Learn_web_development/Core/Accessibility/Test_your_skills/HTML", "Learn_web_development/Core/Accessibility")}}

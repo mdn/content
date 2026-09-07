@@ -1,12 +1,11 @@
 ---
-title: <script type="importmap">
+title: '`<script type="importmap">` HTML attribute value'
 short-title: importmap
 slug: Web/HTML/Reference/Elements/script/type/importmap
 page-type: html-attribute-value
 browser-compat: html.elements.script.type.importmap
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The **`importmap`** value of the [`type`](/en-US/docs/Web/HTML/Reference/Elements/script/type) attribute of the [`<script>` element](/en-US/docs/Web/HTML/Reference/Elements/script) indicates that the body of the element contains an import map.
 
@@ -143,7 +142,7 @@ The browser falls back to the next most specific scoped path if there is no matc
 
 ### Integrity metadata map
 
-You can use the `integrity` key to provide mapping for module [integrity metadata](/en-US/docs/Web/Security/Subresource_Integrity#using_subresource_integrity).
+You can use the `integrity` key to provide mapping for module [integrity metadata](/en-US/docs/Web/Security/Defenses/Subresource_Integrity#using_subresource_integrity).
 This enables you to ensure the integrity of dynamically or statically imported modules.
 `integrity` also enables you to provide a fallback for top-level or preloaded modules, in case they don't already include an `integrity` attribute.
 
@@ -166,6 +165,8 @@ For example, the map below defines integrity metadata for the `square.js` module
 ```
 
 ### Merging multiple import maps
+
+Supporting browsers can declare one or more import maps anywhere in the document, provided they are defined before any module that depends on them is loaded (some [browser versions](#browser_compatibility) allow only a single import map declaration, which must appear before any module is loaded).
 
 Internally, browsers maintain a single global import map representation. When multiple import maps are included in a document, their contents are merged into the global import map when they are registered.
 
@@ -293,17 +294,13 @@ The following is a "formal" definition of the import map JSON representation.
 The import map must be a valid JSON object that can define any of the optional keys `imports`, `scopes` and `integrity`. Each key's value must be an object, which may be empty.
 
 - `imports` {{optional_inline}}
-
   - : The value is a [module specifier map](#module_specifier_map), which provides the mappings between module specifier text that might appear in an `import` statement or `import()` operator, and the text that will replace it when the specifier is resolved.
 
     This is the fallback map that is searched for matching module specifiers if no `scopes` path URLs match, or if module specifier maps in matching `scopes` paths do not contain a key that matches the module specifier.
-
     - `<module specifier map>`
-
       - : A "module specifier map" is a valid JSON object where the _keys_ are text that may be present in the module specifier when importing a module, and the corresponding _values_ are the URLs or paths that will replace this text when the module specifier is resolved to an address.
 
         The module specifier map JSON object has the following requirements:
-
         - None of the keys may be empty.
         - All of the values must be strings, defining either a valid absolute URL or a valid URL string that starts with `/`, `./`, or `../`.
         - If a key ends with `/`, then the corresponding value must also end with `/`.
@@ -311,18 +308,16 @@ The import map must be a valid JSON object that can define any of the optional k
         - The object properties' ordering is irrelevant: if multiple keys can match the module specifier, the most specific key is used (in other words, a specifier "olive/branch/" would match before "olive/").
 
 - `integrity` {{optional_inline}}
-
   - : Defines a valid JSON object where the _keys_ are strings containing valid absolute or relative URLs (starting with `/`, `./`, or `../`),
-    and the corresponding _values_ are valid [integrity metadata](/en-US/docs/Web/Security/Subresource_Integrity#using_subresource_integrity).
+    and the corresponding _values_ are valid [integrity metadata](/en-US/docs/Web/Security/Defenses/Subresource_Integrity#using_subresource_integrity).
 
     If the URL of a script importing or preloading a module matches a key in the `integrity` object, the corresponding integrity metadata is applied to the script's fetch options,
     unless they already have integrity metadata attached to them.
 
 - `scopes` {{optional_inline}}
-
   - : Scopes define path-specific [module specifier maps](#module_specifier_map), allowing the choice of map to depend on the path of the code importing the module.
 
-    The scopes object is a valid JSON object where each property is a `<scope key>`, which is an URL path, with a corresponding value that is a `<module specifier map>`.
+    The scopes object is a valid JSON object where each property is a `<scope key>`, which is a URL path, with a corresponding value that is a `<module specifier map>`.
 
     If the URL of a script importing a module matches a `<scope key>` path, then the `<module specifier map>` value associated with the key is checked for matching specifiers first.
     If there are multiple matching scope keys, then the value associated with the most specific/nested scope paths are checked for matching module specifiers first.

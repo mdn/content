@@ -27,7 +27,7 @@ getKey(key)
 - `key`
   - : The key or key range that identifies the record to be retrieved.
 
-### Return Value
+### Return value
 
 An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.
 

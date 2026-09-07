@@ -6,9 +6,10 @@ page-type: http-header
 status:
   - experimental
 browser-compat: http.headers.Sec-CH-UA-Form-Factors
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{SecureContext_Header}}{{SeeCompatTable}}
 
 The HTTP **`Sec-CH-UA-Form-Factors`** {{Glossary("Request header", "request header")}} is a [user agent client hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints) which provides information on the user-agent's device form factor.
 

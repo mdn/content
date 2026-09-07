@@ -40,6 +40,8 @@ The interface also supports the following properties:
 
 - {{domxref('PerformanceNavigationTiming.activationStart')}} {{ReadOnlyInline}} {{experimental_inline}}
   - : A {{domxref("DOMHighResTimeStamp")}} representing the time between when a document starts prerendering and when it is activated.
+- {{domxref('PerformanceNavigationTiming.confidence')}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : A {{domxref("PerformanceTimingConfidence")}} object containing information that indicates whether a performance record reflects typical application performance, or is likely affected by external factors.
 - {{domxref('PerformanceNavigationTiming.criticalCHRestart')}} {{ReadOnlyInline}} {{experimental_inline}}
   - : A {{domxref("DOMHighResTimeStamp")}} representing the time at which the connection restart occurred due to {{HTTPHeader("Critical-CH")}} HTTP response header mismatch.
 - {{domxref('PerformanceNavigationTiming.domComplete')}} {{ReadOnlyInline}}
@@ -59,7 +61,7 @@ The interface also supports the following properties:
 - {{domxref('PerformanceNavigationTiming.redirectCount')}} {{ReadOnlyInline}}
   - : A number representing the number of redirects since the last non-redirect navigation in the current browsing context.
 - {{domxref('PerformanceNavigationTiming.type')}} {{ReadOnlyInline}}
-  - : A string representing the navigation type. Either `"navigate"`, `"reload"`, `"back_forward"` or `"prerender"`.
+  - : A string representing the navigation type. Either `"navigate"`, `"reload"`, or `"back_forward"`.
 - {{domxref('PerformanceNavigationTiming.unloadEventEnd')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} representing the time immediately after the current document's [`unload`](/en-US/docs/Web/API/Window/unload_event) event handler completes.
 - {{domxref('PerformanceNavigationTiming.unloadEventStart')}} {{ReadOnlyInline}}
@@ -68,7 +70,7 @@ The interface also supports the following properties:
 ## Instance methods
 
 - {{domxref("PerformanceNavigationTiming.toJSON()")}}
-  - : Returns a JSON representation of the `PerformanceNavigationTiming` object.
+  - : Overrides the {{domxref("PerformanceEntry.toJSON()")}} method to return a JSON representation of the `PerformanceNavigationTiming` object.
 
 ## Specifications
 

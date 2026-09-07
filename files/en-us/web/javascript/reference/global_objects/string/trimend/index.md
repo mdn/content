@@ -4,9 +4,8 @@ short-title: trimEnd()
 slug: Web/JavaScript/Reference/Global_Objects/String/trimEnd
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.String.trimEnd
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`trimEnd()`** method of {{jsxref("String")}} values removes whitespace from the end of this string and returns a new string, without modifying the original string. `trimRight()` is an alias of this method.
 

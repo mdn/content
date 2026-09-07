@@ -8,26 +8,17 @@ browser-compat: api.Document.location
 
 {{APIRef("DOM")}}
 
-The **`Document.location`** read-only property returns a
-{{domxref("Location")}} object, which contains information about the URL of the document
-and provides methods for changing that URL and loading another URL.
-
-Though `Document.location` is a _read-only_ `Location`
-object, you can also assign a string to it. This means that you can
-work with document.location as if it were a string in most cases:
-`document.location = 'http://www.example.com'` is a synonym of
-`document.location.href = 'http://www.example.com'`. If you assign another
-string to it, browser will load the website you assigned.
+The read-only **`location`** property of the {{domxref("Document")}} interface returns a {{domxref("Location")}} object, which contains information about the URL of the document and provides methods for changing that URL and loading another URL.
 
 To retrieve just the URL as a string, the read-only {{domxref("document.URL")}}
 property can also be used.
 
-If the current document is not in a browsing context, the returned value is
-`null`.
-
 ## Value
 
-A {{domxref("Location")}} object.
+A {{domxref("Location")}} object. If the current document is not in a browsing context, the returned value is
+`null`.
+
+Although the `location` property itself is read-only in the sense that you can't replace the `Location` object, you can still assign to the `location` property directly, which is equivalent to assigning to its {{domxref("Location/href", "href")}} property. You can also modify the `Location` object using the {{domxref("Location/assign", "assign()")}} and {{domxref("Location/replace", "replace()")}} methods.
 
 ## Examples
 

@@ -4,9 +4,8 @@ short-title: GET
 slug: Web/HTTP/Reference/Methods/GET
 page-type: http-method
 browser-compat: http.methods.GET
+sidebar: http
 ---
-
-{{HTTPSidebar}}
 
 The **`GET`** HTTP method requests a representation of the specified resource.
 Requests using `GET` should only be used to request data and shouldn't contain a body.

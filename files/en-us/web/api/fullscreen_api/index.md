@@ -7,7 +7,6 @@ browser-compat:
   - api.Document.fullscreenEnabled
   - api.Document.exitFullscreen
   - api.Element.requestFullscreen
-  - api.Document.fullscreen
 ---
 
 {{DefaultAPISidebar("Fullscreen API")}}
@@ -44,7 +43,6 @@ The Fullscreen API adds methods to the {{DOMxRef("Document")}} and {{DOMxRef("El
 ### Obsolete properties
 
 - {{DOMxRef("Document.fullscreen")}} {{Deprecated_Inline}}
-
   - : A Boolean value which is `true` if the document has an element currently being displayed in fullscreen mode; otherwise, this returns `false`.
 
     > [!NOTE]

@@ -30,9 +30,7 @@ clearBufferfi(buffer, drawbuffer, depth, stencil)
 ### Parameters
 
 - `buffer`
-
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the buffer to clear. Possible values are:
-
     - `gl.COLOR`: Color buffer.
     - `gl.DEPTH`: Depth buffer.
     - `gl.STENCIL`: Stencil buffer.

@@ -2,9 +2,8 @@
 title: Define terms with HTML
 slug: Web/HTML/How_to/Define_terms_with_HTML
 page-type: how-to
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 HTML provides several ways to convey description semantics, whether inline or as structured glossaries. In this article, we'll cover how to properly mark up keywords when you're defining them.
 

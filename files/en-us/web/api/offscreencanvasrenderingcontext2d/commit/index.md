@@ -9,7 +9,7 @@ status:
 browser-compat: api.OffscreenCanvasRenderingContext2D.commit
 ---
 
-{{APIRef("Canvas API")}}{{AvailableInWorkers}}{{deprecated_header}}{{non-standard_header}}
+{{APIRef("Canvas API")}}{{AvailableInWorkers}}{{non-standard_header}}
 
 The
 **`OffscreenCanvasRenderingContext2D.commit()`**
@@ -21,6 +21,14 @@ The copy operation is synchronous. Calling this method is not needed for the tra
 ```js-nolint
 commit()
 ```
+
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

@@ -3,9 +3,8 @@ title: openShortcutSettings()
 slug: Mozilla/Add-ons/WebExtensions/API/commands/openShortcutSettings
 page-type: webextension-api-function
 browser-compat: webextensions.api.commands.openShortcutSettings
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Opens the browser UI that enables users to configure an extension's keyboard shortcuts.
 

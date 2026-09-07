@@ -6,13 +6,14 @@ page-type: http-permissions-policy-directive
 status:
   - experimental
 browser-compat: http.headers.Permissions-Policy.summarizer
+sidebar: http
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The HTTP {{HTTPHeader("Permissions-Policy")}} header `summarizer` directive controls access to the [Summarizer API](/en-US/docs/Web/API/Summarizer_API).
 
-Specifically, where a defined policy blocks Summarizer API usage, any attempts to call the API's methods will fail with a `NotAllowedError` {{domxref("DOMException")}}.
+Specifically, where a defined policy blocks Summarizer API usage, the {{domxref("Summarizer.availability_static", "Summarizer.availability()")}} static method will return `unavailable`, and any attempts to call the API's other methods will fail with a `NotAllowedError` {{domxref("DOMException")}}.
 
 ## Syntax
 

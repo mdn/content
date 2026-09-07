@@ -2,9 +2,8 @@
 title: Popups
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Popups
 page-type: guide
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 A popup is a dialog that's associated with a [toolbar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) or [address bar button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions). This page describes popups in general, specifying them, debugging, resizing, and designing them, as well as examples of use.
 

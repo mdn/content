@@ -8,7 +8,7 @@ status:
 browser-compat: api.MutationEvent
 ---
 
-{{APIRef("UI Events")}}{{Deprecated_Header}}{{non-standard_header}}
+{{APIRef("UI Events")}}{{non-standard_header}}
 
 The **`MutationEvent`** interface provides event properties that are specific to modifications to the Document Object Model (DOM) hierarchy and nodes.
 
@@ -62,13 +62,9 @@ The following is a list of all mutation events:
 You can register a listener for mutation events using {{DOMxRef("EventTarget.addEventListener()")}} as follows:
 
 ```js
-element.addEventListener(
-  "DOMNodeInserted",
-  (event) => {
-    // …
-  },
-  false,
-);
+element.addEventListener("DOMNodeInserted", (event) => {
+  // …
+});
 ```
 
 ## Specifications

@@ -9,7 +9,7 @@ status:
 browser-compat: api.Document.createTouchList
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}{{Non-standard_header}}
+{{APIRef("DOM")}}{{Non-standard_header}}
 
 The **`Document.createTouchList()`** method creates and returns a new {{DOMxRef("TouchList")}} object.
 
@@ -24,15 +24,13 @@ createTouchList(touch1, touch2, /* …, */ touchN)
 ### Parameters
 
 - `touch1`, …, `touchN`
-  - : Zero or more {{DOMxRef("Touch")}} objects. **Note:** Firefox also
+  - : Zero or more {{DOMxRef("Touch")}} objects. Firefox also
     accepts an [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of
     {{DOMxRef("Touch")}} objects.
 
 ### Return value
 
-- `list`
-  - : A {{DOMxRef("TouchList")}} object containing the {{DOMxRef("Touch")}} objects
-    specified by the `touches` parameter.
+A {{DOMxRef("TouchList")}} object containing the {{DOMxRef("Touch")}} objects specified by the `touches` parameter.
 
 ## Examples
 

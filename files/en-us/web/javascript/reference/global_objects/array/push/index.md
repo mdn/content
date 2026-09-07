@@ -4,9 +4,8 @@ short-title: push()
 slug: Web/JavaScript/Reference/Global_Objects/Array/push
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.Array.push
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`push()`** method of {{jsxref("Array")}} instances adds the specified elements to the end of
 an array and returns the new length of the array.
@@ -86,7 +85,7 @@ vegetables.push(...moreVegs);
 console.log(vegetables); // ['parsnip', 'potato', 'celery', 'beetroot']
 ```
 
-Merging two arrays can also be done with the {{jsxref("Array/concat", "concat()")}} method.
+Merging two arrays can also be done with the {{jsxref("Array/concat", "concat()")}} method, which will make a new combined array instead of adding to the original. The spread syntax only works if the number of elements in the array is less than the maximum number of function arguments allowed by the engine. For longer arrays, use `concat()` or call `push()` multiple times in a loop.
 
 ### Calling push() on non-array objects
 

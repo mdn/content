@@ -25,13 +25,13 @@ replaceItem(newItem, index)
 
 ### Return value
 
-The {{domxref("SVGNumber")}} that was added the list.
+The {{domxref("SVGNumber")}} that was added to the list.
 
 ### Exceptions
 
-- {{domxref("DOMException")}} `NoModificationAllowedError`
+- `NoModificationAllowedError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("SVGNumberList")}} corresponds to a read-only attribute or when the object itself is read-only.
-- {{domxref("DOMException")}} `IndexSizeError`
+- `IndexSizeError` {{domxref("DOMException")}}
   - : Thrown when the index is out of bounds for the list.
 
 ## Specifications

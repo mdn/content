@@ -35,7 +35,7 @@ A {{domxref("GPUExternalTexture")}} object instance.
 Note that the moment when the {{domxref("GPUExternalTexture")}} object expires (is destroyed) depends on what its source is:
 
 - {{domxref("GPUExternalTexture")}} objects with an {{domxref("HTMLVideoElement")}} source expire as soon as they are used (for example in a bind group).
-- {{domxref("GPUExternalTexture")}} objects with an {{domxref("VideoFrame")}} source expire only when the `VideoFrame` is closed, for example via a {{domxref("VideoFrame.close()")}} call.
+- {{domxref("GPUExternalTexture")}} objects with a {{domxref("VideoFrame")}} source expire only when the `VideoFrame` is closed, for example via a {{domxref("VideoFrame.close()")}} call.
 
 ### Validation
 

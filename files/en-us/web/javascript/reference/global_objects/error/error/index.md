@@ -4,9 +4,8 @@ short-title: Error()
 slug: Web/JavaScript/Reference/Global_Objects/Error/Error
 page-type: javascript-constructor
 browser-compat: javascript.builtins.Error.Error
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`Error()`** constructor creates {{jsxref("Error")}} objects.
 
@@ -26,7 +25,8 @@ Error(message, fileName)
 Error(message, fileName, lineNumber)
 ```
 
-> **Note:** `Error()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Error` instance.
+> [!NOTE]
+> `Error()` can be called with or without [`new`](/en-US/docs/Web/JavaScript/Reference/Operators/new). Both create a new `Error` instance.
 
 ### Parameters
 
@@ -45,7 +45,7 @@ Error(message, fileName, lineNumber)
 
 ### Function call or new construction
 
-When `Error` is used like a function, that is without {{jsxref("Operators/new", "new")}}, it will return an `Error` object.
+When `Error` is used like a function, that is without {{jsxref("new")}}, it will return an `Error` object.
 Therefore, a mere call to `Error` will produce the same output that constructing an `Error` object via the `new` keyword would.
 
 ```js

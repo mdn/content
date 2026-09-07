@@ -12,7 +12,7 @@ Deno is a JavaScript runtime which supports TypeScript compiling and caching on 
 
 The [Deno website](https://deno.com/) provides instructions for installing Deno.
 
-Deno version at the time of writing: `1.36`.
+Deno version at the time of writing: `2.6`.
 
 ## Code
 
@@ -24,7 +24,7 @@ Create a `main.js` file. This file will contain the code for a simple HTTP serve
 
 ```js
 Deno.serve({
-  port: 80,
+  port: 8080,
   async handler(request) {
     if (request.headers.get("upgrade") !== "websocket") {
       // If the request is a normal HTTP request,
@@ -53,16 +53,6 @@ Deno.serve({
 
 `Deno.upgradeWebSocket()` upgrades the connection to a WebSocket connection, which is explained further in [Protocol upgrade mechanism](/en-US/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism).
 
-[`Deno.serve()`](https://docs.deno.com/api/deno/~/Deno.serve) uses `Deno.listen()` and `Deno.serveHttp()` under the hood, and is a higher-level interface to easily set up a HTTP server. Without it, the code would look something like this.
-
-```js
-for await (const conn of Deno.listen({ port: 80 })) {
-  for await (const { request, respondWith } of Deno.serveHttp(conn)) {
-    respondWith(handler(request));
-  }
-}
-```
-
 ### Client
 
 Create an `index.html` file. This file will invoke a script that will ping the server every five seconds after a connection has been made. It should also contain the following markup:
@@ -74,7 +64,7 @@ Create an `index.html` file. This file will invoke a script that will ping the s
 ```
 
 ```js
-const wsUri = "ws://127.0.0.1/";
+const wsUri = "ws://127.0.0.1:8080/";
 const output = document.querySelector("#output");
 const websocket = new WebSocket(wsUri);
 let pingInterval;
@@ -115,12 +105,12 @@ websocket.onerror = (e) => {
 With the two files, run the app using Deno.
 
 ```sh
-deno run --allow-net=0.0.0.0:80 --allow-read=./index.html main.js
+deno run --allow-net=0.0.0.0:8080 --allow-read=./index.html main.js
 ```
 
 Deno requires us to give explicit permissions for what we can access on the host machine.
 
-- `--allow-net=0.0.0.0:80` allows the app to attach to localhost on port 80
+- `--allow-net=0.0.0.0:8080` allows the app to attach to localhost on port 8080
 - `--allow-read=./index.html` allows access to the HTML file for the client
 
 ## See also

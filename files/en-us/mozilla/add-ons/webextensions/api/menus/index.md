@@ -3,9 +3,8 @@ title: menus
 slug: Mozilla/Add-ons/WebExtensions/API/menus
 page-type: webextension-api
 browser-compat: webextensions.api.menus
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 Add items to the browser's menu system.
 
@@ -166,9 +165,9 @@ browser.menus.create(
 - {{WebExtAPIRef("menus.onShown")}}
   - : Fired when the browser shows a menu.
 
-## Browser compatibility
-
 {{WebExtExamples("h2")}}
+
+## Browser compatibility
 
 {{Compat}}
 

@@ -7,7 +7,7 @@ status:
 browser-compat: api.Translator
 ---
 
-{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}
+{{APIRef("Translator and Language Detector APIs")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`Translator`** interface of the {{domxref("Translator and Language Detector APIs", "Translator and Language Detector APIs", "", "nocode")}} contains all the associated translation functionality, including checking AI model availability, creating a new `Translator` instance, using it to create a translation, and more.
 
@@ -32,7 +32,7 @@ The **`Translator`** interface of the {{domxref("Translator and Language Detecto
 ## Instance methods
 
 - {{domxref("Translator.destroy", "destroy()")}} {{Experimental_Inline}}
-  - : Destroys the `Translator` instance it is called on.
+  - : Releases the resources assigned to the `Translator` instance it is called on and stops any further activity on it.
 - {{domxref("Translator.measureInputUsage", "measureInputUsage()")}} {{Experimental_Inline}}
   - : Reports how much input quota would be used by a translation operation for a given text input.
 - {{domxref("Translator.translate", "translate()")}} {{Experimental_Inline}}

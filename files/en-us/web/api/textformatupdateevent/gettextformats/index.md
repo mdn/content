@@ -18,6 +18,10 @@ The **`getTextFormats()`** method of the {{domxref("TextFormatUpdateEvent")}} in
 getTextFormats()
 ```
 
+### Parameters
+
+None.
+
 ### Return value
 
 An {{jsxref("Array")}} containing {{domxref("TextFormat")}} objects.

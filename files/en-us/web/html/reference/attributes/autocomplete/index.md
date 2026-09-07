@@ -1,5 +1,5 @@
 ---
-title: "HTML attribute: autocomplete"
+title: "`autocomplete` HTML attribute"
 short-title: autocomplete
 slug: Web/HTML/Reference/Attributes/autocomplete
 page-type: html-attribute
@@ -8,9 +8,8 @@ browser-compat:
   - html.elements.input.autocomplete
   - html.elements.select.autocomplete
   - html.elements.textarea.autocomplete
+sidebar: htmlsidebar
 ---
-
-{{HTMLSidebar}}
 
 The HTML `autocomplete` attribute lets web developers specify what if any permission the {{Glossary("user agent")}} has to provide automated assistance in filling out form field values, as well as guidance to the browser as to the type of information expected in the field.
 
@@ -43,11 +42,11 @@ The `autocomplete` attribute provides a hint to the user agent specifying how to
 ```html
 <input autocomplete="off" />
 <input autocomplete="on" />
-<input autocomplete="shipping street-address" />
+<textarea autocomplete="shipping street-address"></textarea>
 <input autocomplete="section-user1 billing postal-code" />
 ```
 
-If an {{HTMLElement("input")}}, {{HTMLElement("select")}} or {{HTMLElement("textarea")}} element has no `autocomplete` attribute, the browser will use the [`autocomplete` attribute of the element's **owning form**](/en-US/docs/Web/HTML/Reference/Elements/form#autocomplete). The owning form is either the {{HTMLElement("form")}} matching the `id` specified by the [`form`](/en-US/docs/Web/HTML/Reference/Elements/input#form) attribute of the element (if present) or, more commonly, the `<form>` the element is nested in.
+If an {{HTMLElement("input")}}, {{HTMLElement("select")}} or {{HTMLElement("textarea")}} element has no `autocomplete` attribute, the browser will use the [`autocomplete` attribute of the element's **owning form**](/en-US/docs/Web/HTML/Reference/Elements/form#autocomplete). The owning form is either the {{HTMLElement("form")}} matching the `id` specified by the [`form`](/en-US/docs/Web/HTML/Reference/Attributes/form) attribute of the element (if present) or, more commonly, the `<form>` the element is nested in.
 
 > [!NOTE]
 > In order to provide autocompletion, user-agents might require `<input>`/`<select>`/`<textarea>` elements to:
@@ -58,9 +57,9 @@ If an {{HTMLElement("input")}}, {{HTMLElement("select")}} or {{HTMLElement("text
 
 If the same list of tokens is used in more than one form control, the user-agent will autocomplete all occurrences of the same `autocomplete` value with the same data value.
 
-Some tokens may be used more than once with potentially different expected values, such as the `zip-code` token in a form that contains both shipping and billing addresses. Including multiple different tokens in a space-separated list causes the associated form controls to be given unique autocomplete values: in this case, `autocomplete="shipping zip-code"` and `autocomplete="billing zip-code"`.
+Some tokens may be used more than once with potentially different expected values, such as the `postal-code` token in a form that contains both shipping and billing addresses. Including multiple different tokens in a space-separated list causes the associated form controls to be given unique autocomplete values: in this case, `autocomplete="shipping postal-code"` and `autocomplete="billing postal-code"`.
 
-Some autocomplete values may need to be re-used multiple times. For example, a form may contain multiple shipping addresses and therefore multiple occurrences of `"shipping zip-code"` while still expecting different values. To make the autocomplete value unique in these cases, the first token in the space-separated list of tokens can be a `section-*` token, where the token's first eight characters are always the string "section-", followed by an alphanumeric string. All form fields given the `section-*` token with the same alphanumeric string belong to the same **named group**.
+Some autocomplete values may need to be re-used multiple times. For example, a form may contain multiple shipping addresses and therefore multiple occurrences of `"shipping postal-code"` while still expecting different values. To make the autocomplete value unique in these cases, the first token in the space-separated list of tokens can be a `section-*` token, where the token's first eight characters are always the string "section-", followed by an alphanumeric string. All form fields given the `section-*` token with the same alphanumeric string belong to the same **named group**.
 
 If including the `autocomplete` attribute on {{HTMLElement("input/hidden", "hidden")}} input elements (`<input type="hidden">`), its value must be an ordered list of space-separated tokens; the `on` and `off` keywords are not allowed.
 
@@ -74,18 +73,15 @@ The source of the suggested values is generally up to the browser; typically val
 The attribute value is either the keyword `off` or `on`, or a space-separated `<token-list>` that describes the meaning of the autocompletion value.
 
 - `off`
-
   - : The browser is not permitted to automatically enter or select a value for this field. It is possible that the document or application provides its own autocomplete feature, or that security concerns require that the field's value not be automatically entered.
 
     > [!NOTE]
     > In most modern browsers, setting `autocomplete` to `"off"` will not prevent a password manager from asking the user if they would like to save username and password information, or from automatically filling in those values in a site's login form. See [Managing autofill for login fields](/en-US/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#managing_autofill_for_login_fields).
 
 - `on`
-
-  - : The browser is allowed to automatically complete the input. No guidance is provided as to the type of data expected in the field, so the browser may use its own judgement.
+  - : The browser is allowed to automatically complete the input. No guidance is provided as to the type of data expected in the field, so the browser may use its own judgment.
 
 - `<token-list>`
-
   - : An ordered set of [space-separated tokens](#token_list_tokens) consisting of autofill detail tokens preceded by optional sectioning and either billing or shipping grouping tokens. Phone numbers, email addresses, and messaging protocol tokens are preceded by a token identifying the type of recipient.
 
 See the [WHATWG Standard](https://html.spec.whatwg.org/multipage/forms.html#autofill) for more detailed information.
@@ -131,7 +127,7 @@ The tokens that identify the type of recipient include:
   - : The contact type identified by subsequent tokens is for contacting the recipient regardless of location.
 - `fax`
   - : The recipient identified by subsequent tokens is for a fax machine.
-- `page`
+- `pager`
   - : The recipient identified by subsequent tokens is for a pager or beeper.
 
 ##### Digital contact tokens
@@ -139,7 +135,6 @@ The tokens that identify the type of recipient include:
 The token or group of tokens for telephone numbers or a number's component parts, phone extensions, email addresses, or instant messaging protocols.
 
 - `tel`
-
   - : A full telephone number, including the country code. If you need to break the phone number up into its components, you can use these values for those fields:
     - `tel-country-code`
       - : The country code, such as "1" for the United States, Canada, and other areas in North America and parts of the Caribbean.
@@ -162,9 +157,7 @@ The token or group of tokens for telephone numbers or a number's component parts
 When the form field is not a phone number, email address, or instant messaging protocol, the space-separated list of tokens is not preceded by a contact type:
 
 - `name`
-
   - : The field expects the value to be a person's full name. Using `name` rather than breaking the name down into its components is generally preferred because it avoids dealing with the wide diversity of human names and how they are structured; however, you can use the following `autocomplete` values if you do need to break the name down into its components:
-
     - `honorific-prefix`
       - : The prefix or title, such as "Mrs.", "Mr.", "Miss", "Ms.", "Dr.", or "Mlle.".
     - `given-name`
@@ -208,7 +201,6 @@ When the form field is not a phone number, email address, or instant messaging p
 - `country-name`
   - : A country or territory name.
 - `postal-code`
-
   - : A postal code (in the United States, this is the ZIP code).
 
 - `cc-name`
@@ -236,7 +228,7 @@ When the form field is not a phone number, email address, or instant messaging p
 - `transaction-amount`
   - : The amount, given in the currency specified by `transaction-currency`, of the transaction, for a payment form.
 - `language`
-  - : A preferred language, given as a valid [BCP 47 language tag](https://en.wikipedia.org/wiki/IETF_language_tag).
+  - : A preferred language, given as a valid {{glossary("BCP 47 language tag")}}.
 - `bday`
   - : A birth date, as a full date.
     - `bday-day`
@@ -258,6 +250,20 @@ With {{htmlelement("input")}} and {{htmlelement("textarea")}}, the `webauthn` to
 
 - `webauthn`
   - : Passkeys generated by the [Web Authentication API](/en-US/docs/Web/API/Web_Authentication_API), as requested by a conditional {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} call (i.e., one that includes `mediation: 'conditional'`). If included, this is the last token in the space-separated token list. See [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) for more details.
+
+## Accessibility
+
+Using appropriate `autocomplete` values helps users with cognitive disabilities, motor impairments, and other conditions fill out forms more quickly and accurately by reducing the need to type and remember information. When the browser can identify the purpose of a form field through its `autocomplete` value, it can offer stored data such as names, addresses, and payment details, which benefits all users but is especially important for those who find manual data entry difficult.
+
+Providing valid autocomplete tokens also satisfies [WCAG 2.2 Success Criterion 1.3.5: Identify Input Purpose](https://www.w3.org/WAI/WCAG22/Understanding/identify-input-purpose) (Level AA), which requires that the purpose of input fields collecting user information can be programmatically determined. This enables user agents and assistive technologies to apply personalized presentations, such as displaying familiar icons next to fields, to help users understand and complete forms.
+
+### Avoid disabling autocomplete
+
+Setting `autocomplete="off"` prevents the browser from offering stored data for a field. While developers sometimes use this to prevent autofill for security reasons (such as one-time codes), it removes a feature that many users depend on. Users with cognitive disabilities may rely on autocomplete to recall personal information, and users with motor impairments benefit from reduced typing. Browsers may also ignore `autocomplete="off"` on login fields to support password managers.
+
+### Avoid invalid autocomplete values
+
+Using invalid or non-standard values (such as made-up strings to circumvent autofill) has a similar effect: the browser cannot match the field to any known purpose, so it cannot offer relevant suggestions. This also fails the WCAG requirement above, since the input purpose is no longer programmatically determinable. If you need to disable autofill for a specific field, consider using `autocomplete="off"` only where genuinely necessary (such as for CAPTCHA or one-time token fields) rather than applying it broadly across a form.
 
 ## Examples
 

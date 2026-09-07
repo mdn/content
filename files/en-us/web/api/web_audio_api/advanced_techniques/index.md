@@ -150,23 +150,15 @@ Now we can create some variables over in JavaScript and have them change when th
 ```js
 let attackTime = 0.2;
 const attackControl = document.querySelector("#attack");
-attackControl.addEventListener(
-  "input",
-  (ev) => {
-    attackTime = parseInt(ev.target.value, 10);
-  },
-  false,
-);
+attackControl.addEventListener("input", (ev) => {
+  attackTime = parseInt(ev.target.value, 10);
+});
 
 let releaseTime = 0.5;
 const releaseControl = document.querySelector("#release");
-releaseControl.addEventListener(
-  "input",
-  (ev) => {
-    releaseTime = parseInt(ev.target.value, 10);
-  },
-  false,
-);
+releaseControl.addEventListener("input", (ev) => {
+  releaseTime = parseInt(ev.target.value, 10);
+});
 ```
 
 ### The final playSweep() function
@@ -270,23 +262,15 @@ As before, we'll vary the parameters when the user changes the ranges values.
 ```js
 let pulseHz = 880;
 const hzControl = document.querySelector("#hz");
-hzControl.addEventListener(
-  "input",
-  (ev) => {
-    pulseHz = parseInt(ev.target.value, 10);
-  },
-  false,
-);
+hzControl.addEventListener("input", (ev) => {
+  pulseHz = parseInt(ev.target.value, 10);
+});
 
 let lfoHz = 30;
 const lfoControl = document.querySelector("#lfo");
-lfoControl.addEventListener(
-  "input",
-  (ev) => {
-    lfoHz = parseInt(ev.target.value, 10);
-  },
-  false,
-);
+lfoControl.addEventListener("input", (ev) => {
+  lfoHz = parseInt(ev.target.value, 10);
+});
 ```
 
 ### The final playPulse() function
@@ -419,23 +403,15 @@ On the UI, we'll expose the noise duration and the frequency we want to band, al
 ```js
 let noiseDuration = 1;
 const durControl = document.querySelector("#duration");
-durControl.addEventListener(
-  "input",
-  (ev) => {
-    noiseDuration = parseFloat(ev.target.value);
-  },
-  false,
-);
+durControl.addEventListener("input", (ev) => {
+  noiseDuration = parseFloat(ev.target.value);
+});
 
 let bandHz = 1000;
 const bandControl = document.querySelector("#band");
-bandControl.addEventListener(
-  "input",
-  (ev) => {
-    bandHz = parseInt(ev.target.value, 10);
-  },
-  false,
-);
+bandControl.addEventListener("input", (ev) => {
+  bandHz = parseInt(ev.target.value, 10);
+});
 ```
 
 ### The final playNoise() function
@@ -556,13 +532,9 @@ The {{domxref("AudioBufferSourceNode")}} comes with a [`playbackRate`](/en-US/do
 ```js
 let playbackRate = 1;
 const rateControl = document.querySelector("#rate");
-rateControl.addEventListener(
-  "input",
-  (ev) => {
-    playbackRate = parseInt(ev.target.value, 10);
-  },
-  false,
-);
+rateControl.addEventListener("input", (ev) => {
+  playbackRate = parseInt(ev.target.value, 10);
+});
 ```
 
 ### The final playSample() function
@@ -599,13 +571,9 @@ Let's start by setting up our default BPM (beats per minute), which will also be
 let tempo = 60.0;
 const bpmControl = document.querySelector("#bpm");
 
-bpmControl.addEventListener(
-  "input",
-  (ev) => {
-    tempo = parseInt(ev.target.value, 10);
-  },
-  false,
-);
+bpmControl.addEventListener("input", (ev) => {
+  tempo = parseInt(ev.target.value, 10);
+});
 ```
 
 Then we'll create variables to define how far ahead we want to look and how far ahead we want to schedule:

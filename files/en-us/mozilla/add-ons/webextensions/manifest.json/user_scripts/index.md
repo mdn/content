@@ -3,9 +3,8 @@ title: user_scripts
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts
 page-type: webextension-manifest-key
 browser-compat: webextensions.manifest.user_scripts
+sidebar: addonsidebar
 ---
-
-{{AddonSidebar}}
 
 > [!WARNING]
 > This key is used by the legacy {{WebExtAPIRef("userScripts_legacy","userScripts")}} API, which is available to extensions using Manifest V2. This key is not required for the version of the {{WebExtAPIRef("userScripts","userScripts")}} API available for use with Manifest V3.

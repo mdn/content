@@ -3,12 +3,10 @@ title: "WebTransport: reliability property"
 short-title: reliability
 slug: Web/API/WebTransport/reliability
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.WebTransport.reliability
 ---
 
-{{APIRef("WebTransport API")}}{{SeeCompatTable}}{{SecureContext_Header}} {{AvailableInWorkers}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
 The **`reliability`** read-only property of the {{domxref("WebTransport")}} interface indicates whether the connection supports reliable transports only, or whether it also supports unreliable transports (such as UDP).
 
@@ -33,7 +31,7 @@ async function initTransport(url) {
   // Initialize transport connection
   const transport = new WebTransport(url);
 
-  // Once ready fulfils the connection can be used
+  // Once ready fulfills the connection can be used
   // Prior to this the reliability is "pending"
   await transport.ready;
 

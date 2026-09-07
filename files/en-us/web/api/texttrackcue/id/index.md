@@ -23,9 +23,9 @@ let video = document.querySelector("video");
 let track = video.addTextTrack("captions", "Captions", "en");
 track.mode = "showing";
 
-let cue1 = new VTTCue(0, 0.9, "Hildy!");
-cue1.id = "first";
-track.addCue(cue1);
+let cue = new VTTCue(0, 0.9, "Hildy!");
+cue.id = "first";
+track.addCue(cue);
 ```
 
 ## Specifications

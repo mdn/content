@@ -17,11 +17,9 @@ The **`PublicKeyCredential`** interface provides information about a public key 
 ## Instance properties
 
 - {{domxref("PublicKeyCredential.authenticatorAttachment")}} {{ReadOnlyInline}}
-
   - : A string that indicates the mechanism by which the WebAuthn implementation is attached to the authenticator at the time the associated {{domxref("CredentialsContainer.create()","navigator.credentials.create()")}} or {{domxref("CredentialsContainer.get()","navigator.credentials.get()")}} call completes.
 
 - {{domxref("PublicKeyCredential.id")}} {{ReadOnlyInline}}
-
   - : Inherited from {{domxref("Credential")}} and overridden to be the [base64url encoding](/en-US/docs/Glossary/Base64) of {{domxref("PublicKeyCredential.rawId")}}.
 
 - {{domxref("PublicKeyCredential.rawId")}} {{ReadOnlyInline}}
@@ -106,9 +104,7 @@ Here, we fetch an existing credential from an authenticator, using {{domxref("Cr
 ```js
 const requestCredentialOptions = {
   publicKey: {
-    challenge: new Uint8Array([
-      /* bytes sent from the server */
-    ]),
+    challenge: new Uint8Array([/* bytes sent from the server */]),
   },
 };
 

@@ -14,21 +14,22 @@ browser-compat: api.StorageAccessHandle.SharedWorker
 ## Syntax
 
 ```js-nolint
-SharedWorker(aURL)
-SharedWorker(aURL, name)
-SharedWorker(aURL, options)
+SharedWorker(url)
+SharedWorker(url, name)
+SharedWorker(url, options)
 ```
 
 ### Parameters
 
-- `aURL`
+- `url`
   - : See {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}.
 - `name` {{optional_inline}}
   - : See {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}.
 - `options` {{optional_inline}}
   - : See {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}.
 
-> **Note:** `options.sameSiteCookies` only supports the value "none", which is the default.
+> [!NOTE]
+> `options.sameSiteCookies` only supports the value "none", which is the default.
 
 ### Return value
 

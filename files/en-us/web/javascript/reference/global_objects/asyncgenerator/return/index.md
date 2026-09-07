@@ -4,9 +4,8 @@ short-title: return()
 slug: Web/JavaScript/Reference/Global_Objects/AsyncGenerator/return
 page-type: javascript-instance-method
 browser-compat: javascript.builtins.AsyncGenerator.return
+sidebar: jsref
 ---
-
-{{JSRef}}
 
 The **`return()`** method of {{jsxref("AsyncGenerator")}} instances acts as if a `return` statement is inserted in the generator's body at the current suspended position, which finishes the generator and allows the generator to perform any cleanup tasks when combined with a [`try...finally`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#the_finally_block) block.
 
