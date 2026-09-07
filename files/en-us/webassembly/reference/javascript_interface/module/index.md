@@ -66,7 +66,7 @@ onmessage = (e) => {
 
 ### Obtaining the module using `import source`
 
-In environments that support source phase imports, you can obtain a `WebAssembly.Module` object using the [`import source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/source) statement or the [`import.source()`](/en-US/docs/Web/JavaScript/Reference/Operators/import/source) operator, which avoids the need to call `fetch()` or `WebAssembly.compileStreaming()`, instead relying on the default module loader machinery.
+In environments that support source phase imports, you can obtain a `WebAssembly.Module` object using the [`import source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/source) statement or the [`import.source()`](/en-US/docs/Web/JavaScript/Reference/Operators/import/source) operator. Both avoid the need to call `fetch()` or `WebAssembly.compileStreaming()`, relying instead on the default module loader machinery.
 
 ```js
 import source modSource from "./simple.wasm";

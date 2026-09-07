@@ -29,7 +29,7 @@ See [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import#parameter
 
 Returns a promise that fulfills with an {{jsxref("AbstractModuleSource")}} object representing the module's compiled source after the module is loaded and compiled successfully.
 
-Like regular [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import#return_value), the promise rejects if the module cannot be loaded or parsed. It also rejects with a {{jsxref("SyntaxError")}} if the module type does not support source phase imports. It does not load dependencies, link, or evaluate the module, so errors from those later steps are not reported by this promise.
+Like regular [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import#return_value), the promise rejects if the module cannot be loaded or parsed. It also rejects with a {{jsxref("SyntaxError")}} if the module type does not support source phase imports. The import does not load dependencies, link, or evaluate the module, so errors from those later steps are not reported.
 
 ## Examples
 

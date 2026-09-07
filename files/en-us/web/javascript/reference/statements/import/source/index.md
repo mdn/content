@@ -2,11 +2,11 @@
 title: import source
 slug: Web/JavaScript/Reference/Statements/import/source
 page-type: javascript-language-feature
-browser-compat: javascript.statements.import.source
+browser-compat: javascript.statements.import.import_source
 sidebar: jssidebar
 ---
 
-The **`import source`** declaration behaves like regular [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declarations, but it can only import a module using the default import syntax, and results in an object representing the module's compiled source code. The module is fetched and compiled, but its dependencies are not loaded and it is not linked or evaluated. It can be imperatively evaluated later, such as by using [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import) or [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static).
+The **`import source`** declaration behaves like regular [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declarations, but it can only import a module using the default import syntax. It results in an object representing the module's compiled source code. The module is fetched and compiled, but its dependencies are not loaded and it is not linked or evaluated. It can be imperatively evaluated later, such as by using [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import) or [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static).
 
 To use `import source`, the target module must be of a kind that supports source phase imports. Currently, only WebAssembly modules support source phase imports, and result in [`WebAssembly.Module`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module) objects. JavaScript module source objects will be added by the [ECMAScript Module Phase Imports](https://github.com/tc39/proposal-esm-phase-imports) proposal.
 
@@ -20,6 +20,11 @@ import source x from "module-name";
   - : Name that will refer to the module source object. Must be a valid JavaScript identifier.
 - `module-name`
   - : The module to import from. Handled the same way as the [`module-name`](/en-US/docs/Web/JavaScript/Reference/Statements/import#module-name) in regular `import` declarations.
+
+### Exceptions
+
+- {{jsxref("ReferenceError")}}
+  - : Thrown when the module is linked, if the target module does not support source phase imports.
 
 [Import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) are also supported, using a `with` clause after the module specifier.
 
