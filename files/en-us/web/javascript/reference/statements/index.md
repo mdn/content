@@ -34,13 +34,13 @@ For an alphabetical listing see the sidebar on the left.
 - {{jsxref("Statements/var", "var")}}
   - : Declares a variable, optionally initializing it to a value.
 - {{jsxref("Statements/let", "let")}}
-  - : Declares a block scope local variable, optionally initializing it to a value.
+  - : Declares a block-scoped variable, optionally initializing it to a value.
 - {{jsxref("Statements/const", "const")}}
-  - : Declares a read-only named constant.
+  - : Declares a block-scoped variable that cannot be re-assigned, which must be initialized at declaration.
 - {{jsxref("Statements/using", "using")}}
-  - : Declares local variables that are _synchronously disposed_.
+  - : Declares a variable like `const` that is _synchronously disposed_.
 - {{jsxref("Statements/await_using", "await using")}}
-  - : Declares local variables that are _asynchronously disposed_.
+  - : Declares a variable like `const` that is _asynchronously disposed_.
 
 ### Functions and classes
 
