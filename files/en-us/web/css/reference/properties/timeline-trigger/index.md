@@ -55,7 +55,7 @@ timeline-trigger: unset;
 
 ### Values
 
-Specified as the keyword `none` or a comma-separated list of `<timeline-trigger>` values:
+This property is specified as the keyword `none` or a comma-separated list of `<timeline-trigger>` values:
 
 - `none`
   - : Specifies that the element does not create a trigger, resetting all four longhand properties to their default values.
@@ -72,9 +72,7 @@ Specified as the keyword `none` or a comma-separated list of `<timeline-trigger>
 
 ## Description
 
-The `timeline-trigger` property can be used to define all the longhand properties used to create a [CSS scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) trigger in a single declaration.
-
-Component properties not set in the `timeline-trigger` shorthand property value declaration are set to their default values.
+The `timeline-trigger` property can be used to set all the longhand properties used to create a [CSS scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) trigger in a single declaration. Component properties not specified within any `timeline-trigger` value within the comma-separated list of `timeline-trigger` values, are set to their default values.
 
 ### Shorthand property order
 
