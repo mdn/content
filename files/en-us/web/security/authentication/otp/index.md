@@ -34,7 +34,7 @@ There are two common approaches to delivering the code:
 
 1. The website sends a personalized one-time link to the user's email address. When the user clicks the link, the website authenticates the user. The link is only valid for a few minutes and expires immediately after the user clicks it. This option can be highly convenient for the user. However, it requires the user to complete the process on the same device and in the same browser, which can be an issue when logging in from an in-app browser or a different device. Asking users to click links in emails also makes them more vulnerable to [phishing](/en-US/docs/Web/Security/Attacks/Phishing) attacks.
 
-2. The website sends a personalized one-time code to the user's email address. The user is then asked to type the code into the website on their desired device and in their desired browser. This process can be slower and less convenient for the user but it offers greater flexibility as where to login and is considered more secure than using links in emails.
+2. The website sends a personalized one-time code to the user's email address. The user is then asked to type the code into the website on their desired device and in their desired browser. This process can be slower and less convenient for the user but it offers greater flexibility as where to log in and is considered more secure than using links in emails.
 
 For a good user experience with all email-based OTP methods, it is important that users receive the OTP emails reasonably quickly.
 

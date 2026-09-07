@@ -11,6 +11,7 @@
 !centring
 !colour
 !coloured
+!credentialled
 !fibre
 !fulfil
 !fulfils
@@ -38,7 +39,9 @@
 !signalled
 !signalling
 !spelt
+!stencilling
 !tonne
 !totalled
 !totalling
+!unlabelled
 !whilst

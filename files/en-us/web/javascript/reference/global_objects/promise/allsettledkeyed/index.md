@@ -3,9 +3,13 @@ title: Promise.allSettledKeyed()
 short-title: allSettledKeyed()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/allSettledKeyed
 page-type: javascript-static-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Promise.allSettledKeyed
 sidebar: jsref
 ---
+
+{{SeeCompatTable}}
 
 The **`Promise.allSettledKeyed()`** static method is like {{jsxref("Promise.allSettled()")}}, except that instead of using arrays/iterables as input/output, it uses objects. It takes an object where each own key is associated with a promise, and returns a single {{jsxref("Promise")}}. This returned promise fulfills when all of the input's promises settle, with an object of the same keys mapped to objects that describe the outcome of the corresponding promise.
 
