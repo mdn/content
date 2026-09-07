@@ -477,13 +477,13 @@ Or you could use a {{cssxref("position-area")}} property:
 
 ```css
 .my-popover {
-  margin: 0;
-  inset: auto;
   position-area: top;
 }
 ```
 
-When using {{cssxref("position-area")}} or {{cssxref("anchor()")}} to position popovers, be aware that [the default styles for popovers](https://html.spec.whatwg.org/multipage/rendering.html#flow-content-3:~:text=%5Bpopover%5D%20%7B) may conflict with the position you're trying to achieve. The usual culprits are the default styles for `margin` and `inset`, so it's advisable to reset those, as in the examples above. The CSS working group is [looking at ways to avoid requiring this workaround](https://github.com/w3c/csswg-drafts/issues/10258).
+When using {{cssxref("anchor()")}} to position popovers, be aware that [the default styles for popovers](https://html.spec.whatwg.org/multipage/rendering.html#flow-content-3:~:text=%5Bpopover%5D%20%7B) may conflict with the position you're trying to achieve. The usual culprits are the default styles for `margin` and `inset`, so it's advisable to reset those, as shown in the first example in this section.
+
+This is not an issue with popovers positioned with {{cssxref("position-area")}} because the used value of `auto` [inset](/en-US/docs/Glossary/Inset_properties) and {{cssxref("margin")}} properties resolves to `0` on any element that has a `position-area` value set other than `none`. This is also the case with boxes positioned with `anchor-center`, provided the box is absolutely-positioned. However, because `anchor-center` values are often used along with `anchor()` values, you'll probably still need the resets in these situations.
 
 See [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#positioning_elements_relative_to_their_anchor) for more details on associating anchor and positioned elements, and positioning elements relative to their anchor.
 
