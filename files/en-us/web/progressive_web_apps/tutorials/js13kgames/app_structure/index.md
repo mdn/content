@@ -29,7 +29,7 @@ From the HTML point of view, the app shell is everything outside the content sec
       content="A list of A-Frame entries submitted to the js13kGames 2017 competition, used as an example for the MDN articles about Progressive Web Apps." />
     <meta name="author" content="end3r" />
     <meta name="theme-color" content="#B12A34" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width" />
     <meta
       property="og:image"
       content="https://js13kgames.com/img/js13kgames-banner.png" />

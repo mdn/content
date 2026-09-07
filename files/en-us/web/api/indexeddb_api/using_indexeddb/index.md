@@ -623,7 +623,7 @@ You should also listen for `VersionError` errors to handle the situation where a
 
 IndexedDB uses the same-origin principle, which means that it ties the store to the origin of the site that creates it (typically, this is the site domain or subdomain), so it cannot be accessed by any other origin.
 
-Third party window content (e.g., {{htmlelement("iframe")}} content) cannot access IndexedDB if the browser is set to [never accept third party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection) (see [Firefox bug 1147821](https://bugzil.la/1147821)).
+Third party window content (e.g., {{htmlelement("iframe")}} content) cannot access IndexedDB if the browser is set to [never accept third-party cookies](https://support.mozilla.org/en-US/kb/third-party-cookies-firefox-tracking-protection) (see [Firefox bug 1147821](https://bugzil.la/1147821)).
 
 ## Warning about browser shutdown
 
