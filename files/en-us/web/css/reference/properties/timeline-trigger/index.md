@@ -28,17 +28,17 @@ This property is a shorthand for the following CSS properties:
 /* Keyword */
 timeline-trigger: none;
 
-/* name | source */
+/* Name | source */
 timeline-trigger: --t view();
 timeline-trigger: --t --my-timeline;
 
-/* name | source | activation range */
+/* Name | source | activation range */
 timeline-trigger: --t view() contain;
-timeline-trigger: --t view() entry exit 50%;
+timeline-trigger: --t --my-timeline entry exit 50%;
 
-/* name | source | activation range | active range */
+/* Name | source | activation range | active range */
 timeline-trigger: --t view() contain / cover;
-timeline-trigger: --t view() entry / entry exit 50%;
+timeline-trigger: --t --my-timeline entry / entry exit 50%;
 
 /* Multiple triggers */
 timeline-trigger:
@@ -55,24 +55,39 @@ timeline-trigger: unset;
 
 ### Values
 
-Specified as a space-separated list of the constituent timeline trigger property values, or the keyword `none`.
+Specified as the keyword `none` or a comma-separated list of `<timeline-trigger>` values:
 
 - `none`
   - : Specifies that the element does not create a trigger, resetting all four longhand properties to their default values.
-- `<'timeline-trigger-name'>`
-  - : A {{cssxref("timeline-trigger-name")}} value representing the trigger's identifying name. Defaults to `none`.
-- `<'timeline-trigger-source'>`
-  - : A {{cssxref("timeline-trigger-source")}} value representing the trigger's timeline. Defaults to `auto`.
-- `<'timeline-trigger-activation-range'>` {{optional_inline}}
-  - : A {{cssxref("timeline-trigger-activation-range")}} value representing the trigger's activation range. Defaults to `normal`, which is equivalent to `cover 0% cover 100%` for a [view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) {{cssxref("timeline-trigger-source")}}, and `0% 100%` for a [scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#scroll_progress_timelines) `timeline-trigger-source`.
-- `<'timeline-trigger-active-range'>` {{optional_inline}}
-  - : A {{cssxref("timeline-trigger-active-range")}} value representing the trigger's activation range. Defaults to `auto`, which sets the `<'timeline-trigger-active-range'>` to the same value as the `<'timeline-trigger-activation-range'>`.
+- `<timeline-trigger>`
+  - : Specified as a space-separated list of the following values:
+  - `<'timeline-trigger-name'>`
+    - : Specifies the {{cssxref("timeline-trigger-name")}} value representing the trigger's identifying name. Defaults to `none`.
+  - `<'timeline-trigger-source'>`
+    - : Specifies the {{cssxref("timeline-trigger-source")}} value representing the trigger's timeline. Defaults to `auto`.
+  - `<'timeline-trigger-activation-range'>` {{optional_inline}}
+    - : Specifies the {{cssxref("timeline-trigger-activation-range")}} value representing the trigger's activation range. Defaults to `normal`, which is equivalent to `cover 0% cover 100%` for a [view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) {{cssxref("timeline-trigger-source")}}, and `0% 100%` for a [scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#scroll_progress_timelines) `timeline-trigger-source`.
+  - `<'timeline-trigger-active-range'>` {{optional_inline}}
+    - : Preceded by a slash (`/`), specifies the {{cssxref("timeline-trigger-active-range")}} value representing the trigger's activation range. Defaults to `auto`, which sets the `<'timeline-trigger-active-range'>` to the same value as the `<'timeline-trigger-activation-range'>`.
 
 ## Description
 
-The `timeline-trigger` property can be used to define all the longhand properties used to create a [CSS scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) trigger in a single declaration, resetting those not explicitly set.
+The `timeline-trigger` property can be used to define all the longhand properties used to create a [CSS scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) trigger in a single declaration.
 
-A typical example looks like so:
+Component properties not set in the `timeline-trigger` shorthand property value declaration are set to their default values.
+
+### Shorthand property order
+
+Because some of the component properties share value types, the order of those component properties within the shorthand is important. The values must be given in the specified order.
+
+- {{cssxref("timeline-trigger-name")}}
+- {{cssxref("timeline-trigger-source")}}
+- {{cssxref("timeline-trigger-activation-range")}}
+- {{cssxref("timeline-trigger-active-range")}}, preceded by a forward slash.
+
+The `timeline-trigger-active-range` value can only be included if the {{cssxref("timeline-trigger-activation-range")}} value is included, and must be included immediately after the `<'timeline-trigger-activation-range'>`, with the two separated by a slash (`/`).
+
+For example:
 
 ```css
 .trigger {
@@ -87,22 +102,11 @@ An element with this declaration set will have:
 - An activation range of `entry`, meaning that the trigger will activate when its tracked element moves into the [`entry`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#entry) range. This is the range between the element's start edge crossing the scrollport's end edge, and the element's end edge crossing the scrollport's end edge.
 - An active range of `contain` meaning that once activated, the trigger will stay active until its tracked element leaves the [`contain`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#entry) range: the range in which any part of the tracked element is visible in the scrollport.
 
-An animated element can be triggered by the previously-described trigger by referencing its identifying name in its {{cssxref("animation-trigger")}} property. It is possible for the animated element and the element that creates the trigger to be the same element; that is, if a single element has both the `timeline-trigger`and `animation-trigger` properties set on it.
+An animated element can be triggered by the previously-described trigger by referencing its identifying name in its {{cssxref("animation-trigger")}} property. For the animated element to create the trigger for itself, the `timeline-trigger-name` component of a `timeline-trigger` should be included as the trigger name component of the `animation-trigger` property set on it.
 
 ### The `none` value
 
-The `none` keyword specifies that the element does not create a scroll-triggered animation trigger. `none` is equivalent to setting `none auto normal / normal`, which effectively resets all four equivalent longhand properties to their default values.
-
-### Shorthand property order
-
-Due to the potential for ambiguities in the syntax, this shorthand's values must be given in the specified order.
-
-- {{cssxref("timeline-trigger-name")}}
-- {{cssxref("timeline-trigger-source")}}
-- Optionally, a {{cssxref("timeline-trigger-activation-range")}}
-- A {{cssxref("timeline-trigger-active-range")}} value, preceded by a forward slash.
-
-The `timeline-trigger-active-range` value can only be included if the {{cssxref("timeline-trigger-activation-range")}} value is included.
+The `none` keyword specifies that the element does not create a scroll-triggered animation trigger. Setting `none` is equivalent to setting `none auto normal / normal`, which effectively resets all four equivalent longhand properties to their default values.
 
 ## Formal definition
 
@@ -116,13 +120,11 @@ The `timeline-trigger-active-range` value can only be included if the {{cssxref(
 
 ### Basic usage
 
-In this example, we show how to set up a basic scroll-triggered animation, including defining the trigger using a `timeline-trigger` shorthand property.
+This example demonstrates using the `timeline-trigger` shorthand property to create a scroll-triggered animation.
 
 #### HTML
 
-Our markup contains two {{htmlelement("div")}} elements, one to animate and one on which to create a trigger, and some basic text content to cause the page to scroll.
-
-We have hidden the text content for brevity.
+We include two {{htmlelement("div")}} elements, one to animate and one on which to create a trigger. The basic text content that causes the page to scroll has been hidden for brevity.
 
 ```html
 <div class="animated">I am animated</div>
@@ -198,7 +200,7 @@ We have hidden the text content for brevity.
 
 #### CSS
 
-The animated `<div>` element's {{cssxref("position")}} is set to `fixed`, positioning it near the top-left of the scrollport to enable us to see when its animation starts and stops.
+The `.animated` element's {{cssxref("position")}} is set to `fixed`, positioning it near the top-left of the scrollport to enable us to see when its animation starts and stops.
 
 ```css hidden live-sample___basic-example
 body {
@@ -231,7 +233,7 @@ div {
 }
 ```
 
-Next, we define the {{cssxref("@keyframes")}} for the `rotate` animation we will use later:
+Next, we define the {{cssxref("@keyframes")}} creating a `rotate` animation:
 
 ```css live-sample___basic-example
 @keyframes rotate {
@@ -245,7 +247,7 @@ Next, we define the {{cssxref("@keyframes")}} for the `rotate` animation we will
 }
 ```
 
-Using the `animation` shorthand, the `.animated` element has the `rotate` animation applied. Without an associated trigger, the element would start animating when the page loads. The `animation-trigger` property makes it a triggered animation. The value references a `timeline-trigger-name` of `--t` and specifies two `<animation-action>` values — `play` and `pause` — which specify that the animation will play on activation, and pause on deactivation.
+Using the {{cssxref("animation")}} shorthand, we apply the `rotate` animation to the `.animated` element. Without a trigger, animations start on page load. We include the {{cssxrf("animation-trigger")}} property, referencing a `timeline-trigger-name` of `--t` and specifies two `<animation-action>` values — `play` and `pause`, making it a triggered animation that will play on activation and pause on deactivation.
 
 ```css live-sample___basic-example
 .animated {
@@ -254,12 +256,12 @@ Using the `animation` shorthand, the `.animated` element has the `rotate` animat
 }
 ```
 
-The `.trigger` `<div>` element creates the animated `<div>`'s trigger using a `timeline-trigger` value of `--t view() entry / cover`. This specifies the following, all in a single declaration:
+The `.trigger` element creates the `.animated` element's trigger using a `timeline-trigger` value of `--t view() entry / cover`. This specifies the following, all in a single declaration:
 
-- A {{cssxref("timeline-trigger-name")}} value of `--t`, which is equal to the identifier referenced in the animated `<div>`'s `animation-trigger` property value, associating the two together.
+- A {{cssxref("timeline-trigger-name")}} value of `--t`, which is equal to the identifier referenced in the `.animated` selector's `animation-trigger` property value, associating the two together.
 - A {{cssxref("timeline-trigger-source")}} value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
-- A {{cssxref("timeline-trigger-activation-range")}} of `entry`, which means that the trigger will activate in the [`entry`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#entry) range (from the point where the tracked element's block start edge enters the scrollport, to the point where its block end edge enters the scrollport).
-- A {{cssxref("timeline-trigger-active-range")}} of `cover`, which means that, once activated, the trigger will stay active until the tracked element leaves the [`cover`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#entry) range (in other words, until it completely leaves the scrollport).
+- A {{cssxref("timeline-trigger-activation-range")}} of [`entry`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#entry), which means that the trigger will activate when the tracked element's block start edge enters the scrollport, to the point where its block end edge enters the scrollport.
+- A {{cssxref("timeline-trigger-active-range")}} of [`cover`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#entry), which means that, once activated, the trigger will stay active until the tracked element completely leaves the scrollport.
 
 ```css live-sample___basic-example
 .trigger {
@@ -271,15 +273,15 @@ The `.trigger` `<div>` element creates the animated `<div>`'s trigger using a `t
 
 {{EmbedLiveSample("basic-example", "100%", "240")}}
 
-Try scrolling the content. The rotation will start when the tracked element enters the `entry` range down the bottom of the scrollport, but won't stop again until it has completely exited the scrollport.
+Try scrolling the content. The rotation will start when the tracked element enters the `entry` range, when the `.trigger` first enters into view at the bottom of the scrollport, and the animation won't stop until the `.trigger` has completely exited the scrollport.
 
 ### Multiple timeline-trigger values
 
-In this example, we build on the previous example to demonstrate how multiple `timeline-trigger` values can be set on the same element, creating multiple triggers that can be used to trigger multiple animations.
+This example builds on the previous example, demonstrating how multiple `timeline-trigger` values can be set on the same element, creating multiple triggers that can be used to trigger multiple animations.
 
 #### HTML
 
-The markup for this example is exactly the same as the previous example markup except that we have included one extra animated `<div>` element with a class of `animated2`. This example has a total of two animated elements and one element to create triggers on.
+The markup is the same as the previous example, with the addition of an extra animated `<div>` element with a class of `animated2`. This example has two animated elements and one element to create triggers on.
 
 ```html hidden live-sample___basic-example live-sample___multiple-values
 <div class="animated2">I am animated as well</div>
@@ -287,7 +289,7 @@ The markup for this example is exactly the same as the previous example markup e
 
 #### CSS
 
-We give the animated elements `fixed` positioning like in the previous example, but we give them different `left` values so that they don't sit on top of one another.
+The animated elements are `fixed` in `position`, as in the previous example, with different `left` values so they don't overlap.
 
 ```css hidden live-sample___multiple-values
 body {
@@ -329,7 +331,7 @@ div {
 }
 ```
 
-Next, we define the `@keyframes` for the two animations we'll apply to the `<div>`s:
+We define two `@keyframes` animations:
 
 ```css live-sample___multiple-values
 @keyframes rotate {
@@ -365,7 +367,7 @@ Next, we define the `@keyframes` for the two animations we'll apply to the `<div
 }
 ```
 
-The scroll trigger CSS is very similar to the previous example, except that in this case we have separate `animation` and `animation-trigger` properties applied to the two animated `<div>` elements. Each one has a different animation that is triggered by a separate timeline trigger, and different `<animation-action>` values applied. The first animation plays on activation and plays in reverse on deactivation, whereas the second one plays on activation and pauses on deactivation.
+Each one has a different animation that is triggered by a separate timeline trigger, and different `<animation-action>` values applied. We apply the same `animation` to the `.animated` element as in the previous example, and a different `animation` to the `.animated2` element. Both have the `animation-trigger` property applied, but with different values. The first animation plays on activation and plays in reverse on deactivation, whereas the second one plays on activation and pauses on deactivation.
 
 ```css live-sample___multiple-values
 .animated {
@@ -379,7 +381,7 @@ The scroll trigger CSS is very similar to the previous example, except that in t
 }
 ```
 
-We then set a `timeline-trigger` value on the `.trigger` `<div>` that contains two separate values. Each one has a separate `timeline-trigger-name` and different `timeline-trigger-activation-range` and `timeline-trigger-active-range` values so that the two animated elements start and stop their animations at different offsets.
+We set a `timeline-trigger` value on `.trigger` that contains two values. Each value has a different `timeline-trigger-name`. They also have different `timeline-trigger-activation-range` and `timeline-trigger-active-range` values, so the animated elements start and stop their animations at different offsets.
 
 ```css live-sample___multiple-values
 .trigger {
@@ -408,7 +410,7 @@ We then set a `timeline-trigger` value on the `.trigger` `<div>` that contains t
 
 {{EmbedLiveSample("multiple-values", "100%", "240")}}
 
-Try scrolling the content. The first animated element will start to rotate when the tracked element enters the `entry` range down at the bottom of the scrollport, and will start to rotate in reverse when the tracked element has completely exited the scrollport. The second animated element will start to move up and down when the tracked element has completely entered the scrollport, and stop when it starts to exit again.
+Try scrolling the content. The first animated element starts to rotate when the tracked element enters the `entry` range down at the bottom of the scrollport, then rotates in reverse when the tracked element has completely exited the scrollport. The second animated element starts moving up and down when the tracked element has completely entered the scrollport, and stops when it the tracked elements begins exiting the scrollport.
 
 ## Specifications
 
