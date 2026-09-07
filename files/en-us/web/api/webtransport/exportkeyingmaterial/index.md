@@ -3,6 +3,8 @@ title: "WebTransport: exportKeyingMaterial() method"
 short-title: exportKeyingMaterial()
 slug: Web/API/WebTransport/exportKeyingMaterial
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.WebTransport.exportKeyingMaterial
 ---
 

@@ -172,7 +172,7 @@ _Modifiers_ are special keys which are used to generate special characters or ca
     <tr>
       <td><code>"FnLock"</code></td>
       <td>
-        The <kbd>FnLock</kbd> or <kbd>F-Lock</kbd> (Function Lock) key.Toggles
+        The <kbd>FnLock</kbd> or <kbd>F-Lock</kbd> (Function Lock) key. Toggles
         the function key mode described by <code>"Fn"</code> on and off. Often
         handled in hardware so that events aren't generated for this key.
       </td>

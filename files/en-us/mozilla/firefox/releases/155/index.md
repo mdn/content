@@ -114,9 +114,9 @@ No notable changes.
 
 ### WebAssembly
 
-- The [compact import section](https://github.com/WebAssembly/compact-import-section) binary format extension is now supported, which reduces the size of modules that have many imports.
+- The [compact import section](https://github.com/WebAssembly/compact-import-section) binary format extension is now supported, which reduces the size of modules that have many [`import`](/en-US/docs/WebAssembly/Reference/Definitions/import) statements.
   ([Firefox bug 2062344](https://bugzil.la/2062344)).
-- The [wide arithmetic](https://github.com/WebAssembly/wide-arithmetic) proposal is now supported, adding the `i64.add128`, `i64.sub128`, `i64.mul_wide_s`, and `i64.mul_wide_u` instructions.
+- The [wide arithmetic](https://github.com/WebAssembly/wide-arithmetic) proposal is now supported, adding the [`i64.add128`](/en-US/docs/WebAssembly/Reference/Numeric/add128), [`i64.sub128`](/en-US/docs/WebAssembly/Reference/Numeric/sub128), [`i64.mul_wide_s`](/en-US/docs/WebAssembly/Reference/Numeric/mul_wide_s), and [`i64.mul_wide_u`](/en-US/docs/WebAssembly/Reference/Numeric/mul_wide_u) instructions.
   These produce 128-bit results from 64-bit operands, which previously had to be emulated in code compiled to WebAssembly, such as bignum and cryptography libraries.
   ([Firefox bug 2062374](https://bugzil.la/2062374)).
 
@@ -132,8 +132,6 @@ No notable changes.
 - Updated the Mozilla-specific `moz:debugging` module to no longer rely on the same nested event loop API as DevTools, which prevents conflicts when WebDriver BiDi and DevTools are used in parallel. ([Firefox bug 2041335](https://bugzil.la/2041335)).
 - Fixed the `browsingContext.reload` command failing when used for frames. ([Firefox bug 2030909](https://bugzil.la/2030909)).
 - Removed support for the `contexts` argument in the `session.unsubscribe` command. From now on, clients can unsubscribe only by event name or subscription ID. ([Firefox bug 1988723](https://bugzil.la/1988723)).
-
-## Changes for add-on developers
 
 ## Experimental web features
 

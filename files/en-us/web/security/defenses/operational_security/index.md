@@ -66,7 +66,7 @@ Project maintainers typically need to use credentials, such as passwords or API 
 
 - Secrets should be stored securely.
 - Access to secrets should be controlled and limited to the maintainers who need them.
-- Secrets should never be checked into public repositories. Tools to scan repositories for secrets are available, either as part of source control or hosting systems, or as third party services.
+- Secrets should never be checked into public repositories. Tools to scan repositories for secrets are available, either as part of source control or hosting systems, or as third-party services.
 
 ## Managing third-party dependencies
 
