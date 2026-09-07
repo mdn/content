@@ -41,7 +41,7 @@ Specified as one or more {{cssxref("dashed-ident")}} values separated by commas,
 - `none`
   - : Specifies that the element does not define any scroll-triggered animation triggers.
 - {{cssxref("dashed-ident")}}
-  - : An identifier to name the trigger.
+  - : Specifies the name of the timeline trigger.
 
 ## Description
 
@@ -56,9 +56,9 @@ For example:
 }
 ```
 
-An element with these declarations set will create a trigger with an identifying {{cssxref("timeline-trigger-name")}} of `--my-trigger`. The `timeline-trigger-source` declaration is needed to create a timeline to control triggering animations; in this case, the value of `view()` creates an [anonymous view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_view_progress_timeline_the_view_function).
+An element with these declarations set will create a trigger with the name `--my-trigger`. The `timeline-trigger-source` declaration is needed to create a timeline to control triggering animations; in this case, the value of `view()` creates an [anonymous view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#anonymous_view_progress_timeline_the_view_function).
 
-The resulting {{domxref("ViewTimeline")}} tracks the position of the `.trigger` element across the block-axis of the nearest ancestor scroller. The trigger is activated and deactivated when the tracked element is scrolled to specific positions inside the scrollport. By default, activation occurs when the tracked element starts to enter the scrollport, and deactivation occurs when the tracked element completely exits the scrollport.
+The resulting {{domxref("ViewTimeline")}} tracks the position of the `.trigger` element across the block-axis of the nearest ancestor scroller. The trigger is activated and deactivated when the tracked element is scrolled to specific positions inside the scrollport.
 
 Any animated element with its {{cssxref("animation-trigger")}} property set to `--my-trigger` will have its animation controlled by the `--my-trigger` trigger:
 
@@ -71,7 +71,7 @@ Any animated element with its {{cssxref("animation-trigger")}} property set to `
 
 Each `animation-trigger` value includes two or three components: the `<dashed-ident>` identifying the trigger, and one or two {{cssxref("animation-action")}} keywords specifying what should happen when the trigger is activated and, optionally, when it's deactivated. In this case, the animation will play once when activated.
 
-It is possible for the animated element and the element that creates the trigger to be the same element. In this case, the animated element creates its own trigger:
+The animated element can create its own trigger: to achieve this, set its `timeline-trigger-name` and `animation-trigger` properties to include the same `<dashed-ident>` value:
 
 ```css
 .animatedAndTrigger {
@@ -114,7 +114,7 @@ If multiple elements define triggers with the same trigger name, the trigger def
 
 ### Basic usage
 
-In this example, we create a basic scroll-triggered animation.
+This example shows how to create a basic scroll-triggered animation. We use the `timeline-trigger-name` property to name a trigger and reference that name within an animated element's `animation-trigger` property.
 
 #### HTML
 
@@ -241,7 +241,7 @@ Next, we define the {{cssxref("@keyframes")}} for the `rotate` animation we will
 }
 ```
 
-Using the `animation` shorthand, the `.animated` element has the `rotate` animation applied. Without an associated trigger, the element would start animating when the page loads. The `animation-trigger` property makes it a triggered animation. The value references a `timeline-trigger-name` of `--t` and specifies two `<animation-action>` values — `play` and `pause` — which specify that the animation will play on activation, and pause on deactivation.
+Using the `animation` shorthand, we apply the `rotate` animation to the `.animated` element. Without an associated trigger, the element would start animating when the page loads. The `animation-trigger` property makes it a triggered animation. The value references a `timeline-trigger-name` of `--t` and specifies two `<animation-action>` values — `play` and `pause` — which specify that the animation will play on activation, and pause on deactivation.
 
 ```css live-sample___basic-example
 .animated {
@@ -250,7 +250,7 @@ Using the `animation` shorthand, the `.animated` element has the `rotate` animat
 }
 ```
 
-The `.trigger` `<div>` element creates the animated `<div>`'s trigger via the following properties:
+The `.trigger` element creates the `.animated` element's trigger via the following properties:
 
 - A `timeline-trigger-name` with value `--t`, which is equal to the identifier referenced in the animated element's `animation-trigger` property value, associating the two together.
 - A {{cssxref("timeline-trigger-source")}} with value [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
@@ -274,7 +274,13 @@ This example demonstrates how an animated element can create its own trigger.
 
 #### HTML
 
-This time, our markup contains a single {{htmlelement("div")}} element, plus basic text content to cause the page to scroll. We have hidden all the markup for brevity.
+This time, our markup contains a single {{htmlelement("div")}} element.
+
+```html
+<div>I create my own trigger</div>
+```
+
+The text content that causes the page to scroll has been hidden for brevity.
 
 ```html hidden live-sample___same-element
 <p>
@@ -338,7 +344,7 @@ This time, our markup contains a single {{htmlelement("div")}} element, plus bas
 
 #### CSS
 
-We first define a keyframe animation that inverts the foreground and background colors:
+We define an `invert-colors` keyframe animation that inverts the foreground and background colors:
 
 ```css hidden live-sample___same-element
 body {
