@@ -136,7 +136,7 @@ We include six items in a container element:
 
 We set the {{cssxref("display")}} property to `flex` and the {{cssxref("flex-flow")}} property to `row wrap` to create a flex container with rows of items. This allows the items to flow onto new lines if needed. The flex items are each given a flex basis of either `200px` or `300px`.
 
-The `column-gap` value is set as `20px` on the flex container to create a `20px` gap between the adjacent flex items in each row. We also add a {{cssxref("column-rule")}}, which will draw a thin, solid, magenta line in the middle of the gap.
+We define a column rule with the {{cssxref("column-rule")}} property. The `column-gap` value is set to `20px` on the flex container, creating a `20px` gap between the adjacent flex items in each row. The column rule is drawn in the middle of the gap.
 
 ```css
 .flexbox {
