@@ -46,7 +46,7 @@ An {{jsxref("Array")}} whose contents depend on the presence or absence of the g
 
 ## Description
 
-This method exists for customizing match behavior within `RegExp` subclasses. It is called internally in {{jsxref("String.prototype.match()")}}. For example, the following two examples return same result.
+This method exists for customizing match behavior within `RegExp` subclasses. It is called internally in {{jsxref("String.prototype.match()")}}. For example, the following two examples return the same result.
 
 ```js
 "abc".match(/a/);

@@ -414,7 +414,7 @@ async function logChunks(url, { signal }) {
 ```
 
 The example log below shows the code running or reports that your browser does not support async iteration of `ReadableStream`.
-The right hand side shows the received chunks; you can press the cancel button to stop the fetch.
+The right-hand side shows the received chunks; you can press the cancel button to stop the fetch.
 
 > [!NOTE]
 > This fetch operation is _mocked_ for the purpose of demonstration, and just returns a `ReadableStream` that generates random chunks of text.

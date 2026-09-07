@@ -127,7 +127,7 @@ This guideline covers situations in which functionality may have a time limit. F
         </p>
         <p>
           Exceptions to this are activities with time limits longer than 20
-          hours, real time events (e.g., live multiplayer games), and any other
+          hours, real-time events (e.g., live multiplayer games), and any other
           activity that requires a time limit and would be invalidated if it
           were turned off.
         </p>

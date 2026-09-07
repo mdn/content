@@ -12,7 +12,7 @@ The **WebTransport API** provides a modern update to {{domxref("WebSockets API",
 ## Concepts and usage
 
 [HTTP/3](https://en.wikipedia.org/wiki/HTTP/3) was standardized in 2022, after several years of development.
-It is based on the QUIC protocol (itself based on UDP and standardized in 2021), and fixes several issues around the classic TCP protocol, on which HTTP and WebSockets are based.
+It is based on the {{glossary("QUIC", "QUIC")}} protocol (itself based on UDP and standardized in 2021), and fixes several issues around the classic TCP protocol, on which HTTP and WebSockets are based.
 
 These include:
 

@@ -37,6 +37,14 @@ No notable changes.
   The difference between the methods is that the `chunks()` helper splits the elements from the original iterator into consecutive array chunks, while the `windows()` helper returns an array that is a sliding window over the original iterator (each iteration yields an array that slides forward one element: dropping the first element in the previous iteration and fetching a new element from the original iterator).
   ([Firefox bug 2047997](https://bugzil.la/2047997)).
 
+### HTTP
+
+- The {{httpheader("No-Vary-Search")}} response header is now supported.
+  By default a browser will create a separate HTTP cache entry to store the response for each query string, even if the response does not change for some or all parameters, or depend on their order.
+  This header allows the server to specify whether ordering matters and which query parameters, if any, will change the content of responses.
+  The browser can then avoid having to cache or fetch duplicate resources.
+  ([Firefox bug 2038013](https://bugzil.la/2038013)).
+
 ### APIs
 
 #### Media, WebRTC, and Web Audio
@@ -88,6 +96,10 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **Calculating a value based upon `progress()`**: `layout.css.progress-function.enabled`
 
   The {{cssxref("progress")}} CSS function is now supported. This allows the user calculate a {{cssxref("number")}} based upon a value (or progress) in between a minimum and maximum value. ([Firefox bug 2047015](https://bugzil.la/2047015)).
+
+- **Updating transparency of a color with `alpha()`**: `layout.css.alpha-color-function.enabled`
+
+  The {{cssxref("color_value/alpha", "alpha()")}} CSS function is now supported. It allows you to pass a color and get back the color with a different alpha (transparency) value, leaving other components of the color unchanged. ([Firefox bug 2047437](https://bugzil.la/2047437)).
 
 - **CSS Typed Object Model Level 1** (Nightly): `layout.css.typed-om.enabled`
 

@@ -71,7 +71,7 @@ _No changes._
 - The [Fetch API](/en-US/docs/Web/API/Fetch_API)'s {{domxref("Request.credentials")}} property now defaults to `"same-origin"` per the latest revision of the specification ([Firefox bug 1394399](https://bugzil.la/1394399)).
 - The {{domxref("Request.destination")}} property has been implemented ([Firefox bug 1402892](https://bugzil.la/1402892)).
 - The {{domxref("MutationObserver")}} option dictionary, `MutationObserverInit`, no longer has `false` as the default value of all of its Boolean properties. Now, only `childList` and `subtree` have default values (of `false` still). The other properties have no default values ([Firefox bug 973638](https://bugzil.la/973638)).
-- The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) method {{domxref("PaymentRequest.show()")}} now supports using a {{jsxref("Promise")}} to let the client side code provide updated payment details prior to activating the payment interface ([Firefox bug 1441709](https://bugzil.la/1441709)).
+- The [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) method {{domxref("PaymentRequest.show()")}} now supports using a {{jsxref("Promise")}} to let the client-side code provide updated payment details prior to activating the payment interface ([Firefox bug 1441709](https://bugzil.la/1441709)).
 
 #### DOM events
 
