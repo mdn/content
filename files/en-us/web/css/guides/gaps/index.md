@@ -316,8 +316,8 @@ function setColSpan(control, element) {
 article {
   column-count: 5;
   gap: 1em;
-  column-rule: 0.3em double #ff0000;
-  rule: 0.3em double #ff0000;
+  column-rule: 0.3em double red;
+  rule: 0.3em double red;
   column-height: 20vh;
 }
 .title {

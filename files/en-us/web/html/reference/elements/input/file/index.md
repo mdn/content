@@ -194,7 +194,7 @@ For example, the following code will log to the console if the user closes the p
 const elem = document.createElement("input");
 elem.type = "file";
 elem.addEventListener("cancel", () => {
-  console.log("Cancelled.");
+  console.log("Canceled.");
 });
 elem.addEventListener("change", () => {
   if (elem.files.length === 1) {

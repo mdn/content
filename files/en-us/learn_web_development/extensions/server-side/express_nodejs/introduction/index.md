@@ -38,7 +38,7 @@ From a web server development perspective Node has a number of benefits:
 - JavaScript is a relatively new programming language and benefits from improvements in language design when compared to other traditional web-server languages (e.g., Python, PHP, etc.) Many other new and popular languages compile/convert into JavaScript so you can also use TypeScript, CoffeeScript, ClojureScript, Scala, LiveScript, etc.
 - The node package manager (npm) provides access to hundreds of thousands of reusable packages. It also has best-in-class dependency resolution and can also be used to automate most of the build toolchain.
 - Node.js is portable. It is available on Microsoft Windows, macOS, Linux, Solaris, FreeBSD, OpenBSD, WebOS, and NonStop OS. Furthermore, it is well-supported by many web hosting providers, that often provide specific infrastructure and documentation for hosting Node sites.
-- It has a very active third party ecosystem and developer community, with lots of people who are willing to help.
+- It has a very active third-party ecosystem and developer community, with lots of people who are willing to help.
 
 You can use Node.js to create a simple web server using the Node HTTP package.
 
@@ -333,7 +333,7 @@ Middleware is used extensively in Express apps, for tasks from serving static fi
 
 Most apps will use _third-party_ middleware in order to simplify common web development tasks like working with cookies, sessions, user authentication, accessing request `POST` and JSON data, logging, etc. You can find a [list of middleware packages maintained by the Express team](https://expressjs.com/en/resources/middleware/) (which also includes other popular 3rd party packages). Other Express packages are available on the npm package manager.
 
-To use third party middleware you first need to install it into your app using npm.
+To use third-party middleware you first need to install it into your app using npm.
 For example, to install the [morgan](https://expressjs.com/en/resources/middleware/morgan/) HTTP request logger middleware, you'd do this:
 
 ```bash
@@ -531,7 +531,7 @@ In a later topic we'll use the _Express Application Generator_, which creates a 
 
 Congratulations, you've completed the first step in your Express/Node journey! You should now understand Express and Node's main benefits, and roughly what the main parts of an Express app might look like (routes, middleware, error handling, and template code). You should also understand that with Express being an unopinionated framework, the way you pull these parts together and the libraries that you use are largely up to you!
 
-Of course Express is deliberately a very lightweight web application framework, so much of its benefit and potential comes from third party libraries and features. We'll look at those in more detail in the following articles. In our next article we're going to look at setting up a Node development environment, so that you can start seeing some Express code in action.
+Of course Express is deliberately a very lightweight web application framework, so much of its benefit and potential comes from third-party libraries and features. We'll look at those in more detail in the following articles. In our next article we're going to look at setting up a Node development environment, so that you can start seeing some Express code in action.
 
 ## See also
 

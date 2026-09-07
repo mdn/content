@@ -47,7 +47,7 @@ It also extends the following {{domxref("PerformanceEntry")}} properties, qualif
 ## Instance methods
 
 - {{domxref("PerformancePaintTiming.toJSON()")}}
-  - : Returns a JSON representation of the `PerformancePaintTiming` object.
+  - : Overrides the {{domxref("PerformanceEntry.toJSON()")}} method to return a JSON representation of the `PerformancePaintTiming` object.
 
 ## Examples
 

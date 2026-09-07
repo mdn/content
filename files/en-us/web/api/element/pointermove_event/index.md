@@ -8,9 +8,17 @@ browser-compat: api.Element.pointermove_event
 
 {{APIRef("Pointer Events")}}
 
-The `pointermove` event is fired when a pointer changes coordinates, and the pointer has not been [canceled](/en-US/docs/Web/API/Element/pointercancel_event) by a browser [touch-action](/en-US/docs/Web/CSS/Reference/Properties/touch-action). It's very similar to the {{domxref("Element/mousemove_event", "mousemove")}} event, but with more features.
+The `pointermove` event is fired when a pointer changes coordinates, and the pointer has not been [canceled](/en-US/docs/Web/API/Element/pointercancel_event) by a browser [touch-action](/en-US/docs/Web/CSS/Reference/Properties/touch-action). The event is also fired when a pointer changes any of its other properties, provided the change doesn't produce some other pointer event. This includes any change to pressure, tangential pressure, tilt, twist, contact geometry (width and height), or [chorded buttons](https://w3c.github.io/pointerevents/#dfn-chorded-buttons).
 
-These events happen whether or not any pointer buttons are pressed. They can fire at a very high rate, depends on how fast the user moves the pointer, how fast the machine is, what other tasks and processes are happening, etc.
+The `pointermove` event may have coalesced events if there is already another `pointermove` event with the same pointer ID that hasn't been dispatched in the event loop.
+If events are coalesced, the `target` of the dispatched event is the same as the last coalesced one.
+For information on coalesced events, see the {{domxref("PointerEvent.getCoalescedEvents()")}} documentation.
+
+This event is very similar to the {{domxref("Element/mousemove_event", "mousemove")}} event, but with more features. These events happen whether or not any pointer buttons are pressed. They can fire at a very high rate, depends on how fast the user moves the pointer, how fast the machine is, what other tasks and processes are happening, etc.
+
+The difference between {{domxref("Element/pointerrawupdate_event", "pointerrawupdate")}} and `pointermove` is in their firing frequency.
+A browser may delay `pointermove` events to improve performance, while `pointerrawupdate` events are dispatched as soon and as frequently as the browser can produce them.
+For most use cases, you should prefer `pointermove` to avoid performance issues.
 
 ## Syntax
 

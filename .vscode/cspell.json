@@ -11,6 +11,7 @@
     "non-english",
     "code-entities",
     "ignore-list",
+    "forbidden-spelling",
     "bash",
     "css",
     "fonts",
@@ -142,6 +143,16 @@
       "name": "ignore-list",
       "path": "./dictionaries/ignore-list.txt",
       "description": "Other gibberish words that are used for specific purposes. For example, placeholder identifiers, random strings, URLs (all lowercase), hashes, filler texts, etc. For purposefully misspelled words and/or words that are likely typos in other contexts, consider using cSpell:ignore instead.",
+      "addWords": false,
+      "noSuggest": true
+    },
+    // TODO: cSpell seems to match forbidden entries case-sensitively.
+    // For now we just report all-lowercase instances.
+    // https://github.com/streetsidesoftware/cspell/issues/9085
+    {
+      "name": "forbidden-spelling",
+      "path": "./dictionaries/forbidden-spelling.txt",
+      "description": "MDN uses American English, but some British English spellings are included by cSpell's built-in dictionaries. Put the British spellings here so they get reported.",
       "addWords": false,
       "noSuggest": true
     }

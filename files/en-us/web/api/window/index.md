@@ -114,9 +114,9 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 - {{domxref("Window.screen")}} {{ReadOnlyInline}}
   - : Returns a reference to the screen object associated with the window.
 - {{domxref("Window.screenX")}} and {{domxref("Window.screenLeft")}} {{ReadOnlyInline}}
-  - : Both properties return the horizontal distance from the left border of the user's browser viewport to the left side of the screen.
+  - : Both properties return the horizontal distance from the left border of the user's browser window to the left side of the screen.
 - {{domxref("Window.screenY")}} and {{domxref("Window.screenTop")}} {{ReadOnlyInline}}
-  - : Both properties return the vertical distance from the top border of the user's browser viewport to the top side of the screen.
+  - : Both properties return the vertical distance from the top border of the user's browser window to the top side of the screen.
 - {{domxref("Window.scrollbars")}} {{ReadOnlyInline}}
   - : Returns the scrollbars object.
 - {{domxref("Window.scrollMaxX")}} {{Non-standard_Inline}} {{ReadOnlyInline}}

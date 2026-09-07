@@ -69,7 +69,7 @@ table name index_type initial_size max_size type
 - `max_size` {{optional_inline}}
   - : An integer representing the maximum size the table is allowed to grow to. If this is not included, the table has no maximum size, and its growth is limited only by system constraints such as available memory.
 - `type`
-  - : The name of the function type to store. See [`elem` > `value_type`](/en-US/docs/WebAssembly/Reference/Definitions/elem#value_type).
+  - : The name of the value type to store. See [`elem` > `value_type`](/en-US/docs/WebAssembly/Reference/Definitions/elem#value_type).
 
 ## Description
 
@@ -77,7 +77,7 @@ WebAssembly tables allow storage of reference values separate from byte-oriented
 
 The `table` definition creates a new table.
 
-A table has to be given an initial size and storage type. This example creates a table wth two storage slots, which will only store references to functions created inside Wasm (signified by [`funcref`](/en-US/docs/WebAssembly/Reference/Value_types/funcref)):
+A table has to be given an initial size and storage type. This example creates a table with two storage slots, which will only store references to functions created inside Wasm (signified by [`funcref`](/en-US/docs/WebAssembly/Reference/Value_types/funcref)):
 
 ```wat
 (table 2 funcref)

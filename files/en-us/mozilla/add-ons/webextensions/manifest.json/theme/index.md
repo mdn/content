@@ -168,8 +168,9 @@ Images should be 200 pixels high to ensure they always fill the header space ver
         <p>Optional</p>
         <p>
           By default, all items are anchored to the upper right corner of the
-          header area, but their alignment, repeat, and size behavior can be
-          controlled by <a href="#properties"><code>"properties":</code></a>.
+          header area, but their alignment, repeat, and size behavior, and the
+          area of the browser window they are drawn in, can be controlled by
+          <a href="#properties"><code>"properties":</code></a>.
         </p>
         <p>
           As additional background items display behind the <code>theme_frame</code> item, if <code>theme_frame</code> is set as a CSS gradient, any additional background items are hidden.
@@ -1362,6 +1363,40 @@ Additionally, this key accepts various properties that are aliases for one of th
       </td>
     </tr>
     <tr>
+      <td><code>backgrounds_area</code></td>
+      <td>
+        <p><code>String</code></p>
+      </td>
+      <td>
+        <p>Optional</p>
+        <p>
+          Determines the area of the browser window where the theme's background
+          images and gradients are drawn. Options include:
+        </p>
+        <ul>
+          <li>
+            <code>"auto"</code> – Firefox chooses the area based on
+            <code>additional_backgrounds_alignment</code>. If any alignment
+            value positions a background at the vertical center or bottom of the
+            header area, the backgrounds are drawn in the top toolbars.
+            Otherwise, they are drawn in the window.
+          </li>
+          <li>
+            <code>"window"</code> – the backgrounds are drawn in the whole
+            browser window, so that they extend behind vertical UI, such as the
+            sidebar and vertical tabs.
+          </li>
+          <li>
+            <code>"top_toolbars"</code> – the backgrounds are drawn only in the
+            horizontal toolbars at the top of the window, that is, the menu bar,
+            tab strip, navigation toolbar, and bookmarks toolbar. Vertical UI,
+            such as the sidebar, uses the <code>frame</code> color instead.
+          </li>
+        </ul>
+        <p>If not specified, defaults to <code>"auto"</code>.</p>
+      </td>
+    </tr>
+    <tr>
       <td><code>color_scheme</code></td>
       <td>
         <p><code>String</code></p>
@@ -1510,6 +1545,30 @@ This results in:
 - `background-image1.svg` displaying at the top right, at its natural size.
 - `background-image2.svg` displaying at the top left, at its natural size.
 - The `linear-gradient` displaying from the top right, tiled horizontally across the header (`repeat-x`), and sized to 144px tall (width is automatic). The gradient transitions from pink (`#FF6BBA`) at the top to peach (`#FFC999`) at the bottom.
+
+This example (Firefox 156+) restricts the background gradient to the horizontal toolbars at the top of the window, so that it doesn't extend behind the sidebar or vertical tabs. Without `backgrounds_area`, the `"right top"` alignment causes Firefox to draw the gradient in the whole window:
+
+```json
+"theme": {
+  "images": {
+    "additional_backgrounds": [
+      { "linear-gradient": "to bottom, rgb(255, 0, 128), rgb(0, 128, 255)" }
+    ]
+  },
+  "colors": {
+    "frame": "#000080",
+    "tab_background_text": "#ffffff"
+  },
+  "properties": {
+    "additional_backgrounds_alignment": ["right top"],
+    "additional_backgrounds_tiling": ["no-repeat"],
+    "additional_backgrounds_size": ["100% 100%"],
+    "backgrounds_area": "top_toolbars"
+  }
+}
+```
+
+With `backgrounds_area` set to `"top_toolbars"`, the sidebar uses the `frame` color. Changing `backgrounds_area` to `"window"` draws the gradient across the whole window instead, including behind the sidebar.
 
 ## Browser compatibility
 

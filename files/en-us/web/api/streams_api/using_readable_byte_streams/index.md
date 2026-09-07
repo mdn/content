@@ -602,7 +602,7 @@ function makeReadableByteFileStream(filename) {
       }
     },
     cancel(reason) {
-      // This is called if the stream is cancelled (via reader or controller).
+      // This is called if the stream is canceled (via reader or controller).
       // Clean up any resources
       fileHandle.close();
       logSource(`cancel() with reason: ${reason}`);
@@ -851,7 +851,7 @@ function makeReadableByteFileStream(filename) {
       }
     },
     cancel(reason) {
-      // This is called if the stream is cancelled (via reader or controller).
+      // This is called if the stream is canceled (via reader or controller).
       // Clean up any resources
       fileHandle.close();
       logSource(`cancel() with reason: ${reason}`);
@@ -1113,7 +1113,7 @@ function makeReadableByteFileStream(filename) {
       }
     },
     cancel(reason) {
-      // This is called if the stream is cancelled (via reader or controller).
+      // This is called if the stream is canceled (via reader or controller).
       // Clean up any resources
       fileHandle.close();
       logSource(`cancel() with reason: ${reason}`);

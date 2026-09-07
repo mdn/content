@@ -103,7 +103,7 @@ Browsers recognize the security implications of sending form data over an insecu
 
 ### Hidden content
 
-Another original text control is the [`hidden`](/en-US/docs/Web/HTML/Reference/Elements/input/hidden) input type. This is used to create a form control that is invisible to the user, but is still sent to the server along with the rest of the form data once submitted — for example you might want to submit a timestamp to the server stating when an order was placed. Because it is hidden, the user can not see nor intentionally edit the value, it will never receive focus, and a screen reader will not notice it either.
+Another original text control is the [`hidden`](/en-US/docs/Web/HTML/Reference/Elements/input/hidden) input type. This is used to create a form control that is invisible to the user, but is still sent to the server along with the rest of the form data once submitted — for example you might want to submit a timestamp to the server stating when an order was placed. Because it is hidden, the user cannot see nor intentionally edit the value, it will never receive focus, and a screen reader will not notice it either.
 
 ```html
 <input type="hidden" id="timestamp" name="timestamp" value="1286705410" />
