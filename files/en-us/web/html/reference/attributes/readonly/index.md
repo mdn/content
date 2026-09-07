@@ -9,7 +9,7 @@ browser-compat:
 sidebar: htmlsidebar
 ---
 
-The Boolean **`readonly`** attribute, when present, makes the element not mutable, meaning the user can not edit the control.
+The Boolean **`readonly`** attribute, when present, makes the element not mutable, meaning the user cannot edit the control.
 
 {{InteractiveExample("HTML Demo: readonly", "tabbed-shorter")}}
 
@@ -38,7 +38,7 @@ textarea:read-only {
 
 ## Overview
 
-If the `readonly` attribute is specified on an input element, because the user can not edit the input, the element does not participate in constraint validation.
+If the `readonly` attribute is specified on an input element, because the user cannot edit the input, the element does not participate in constraint validation.
 
 The `readonly` attribute is supported by textual form controls, including:
 
@@ -74,7 +74,7 @@ Inputs that support the `readonly` attribute but don't have the attribute set ma
 
 ### Attribute interactions
 
-The difference between [`disabled`](/en-US/docs/Web/HTML/Reference/Attributes/disabled) and `readonly` is that read-only controls can still function and are still focusable, whereas disabled controls can not receive focus and are not submitted with the form and generally do not function as controls until they are enabled.
+The difference between [`disabled`](/en-US/docs/Web/HTML/Reference/Attributes/disabled) and `readonly` is that read-only controls can still function and are still focusable, whereas disabled controls cannot receive focus and are not submitted with the form and generally do not function as controls until they are enabled.
 
 Because a read-only field cannot have its value changed by a user interaction, [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required) does not have any effect on inputs with the `readonly` attribute also specified.
 
@@ -89,7 +89,7 @@ Browsers display the `readonly` attribute.
 
 ### Constraint validation
 
-If the element is read-only, then the element's value can not be updated by the user, and does not participate in constraint validation.
+If the element is read-only, then the element's value cannot be updated by the user, and does not participate in constraint validation.
 
 ## Example
 

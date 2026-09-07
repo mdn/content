@@ -557,7 +557,7 @@ Select the **New** button, which is used to add services to the current project.
 
 Select **Database** when prompted about the type of service to add:
 
-![Railway popup showing options for a new service, such as database, GitHub repo, empty service etc](railway_database_add.png)
+![Railway popup showing options for a new service, such as database, GitHub repo, empty service, etc.](railway_database_add.png)
 
 Then select **Add MongoDB** to start adding the database
 

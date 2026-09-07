@@ -11,7 +11,7 @@ The **WebTransport API** provides a modern update to {{domxref("WebSockets API",
 
 ## Concepts and usage
 
-[HTTP/3](https://en.wikipedia.org/wiki/HTTP/3) has been in progress since 2018. It is based on Google's QUIC protocol (which is itself based on UDP), and fixes several issues around the classic TCP protocol, on which HTTP and WebSockets are based.
+[HTTP/3](https://en.wikipedia.org/wiki/HTTP/3) has been in progress since 2018. It is based on Google's {{glossary("QUIC", "QUIC")}} protocol (which is itself based on UDP), and fixes several issues around the classic TCP protocol, on which HTTP and WebSockets are based.
 
 These include:
 

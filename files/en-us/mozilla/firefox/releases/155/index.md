@@ -16,7 +16,7 @@ Firefox 155 was released on [September 1, 2026](https://whattrainisitnow.com/rel
 - The media feature emulation buttons in the [Rules view](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html) are now collected into a dedicated emulation panel, which is opened using the `@` button.
   The panel also adds emulation of the {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}} media feature.
   ([Firefox bug 1692434](https://bugzil.la/1692434) and [Firefox bug 1477920](https://bugzil.la/1477920)).
-- The [JSON Viewer](https://firefox-source-docs.mozilla.org/devtools-user/json_viewer/index.html) now opens [JSON Lines](https://jsonlines.org/) (NDJSON) documents, which are served as `application/jsonlines`, `application/x-ndjson`, or `text/jsonl`, or have a `.jsonl` file extension.
+- The [JSON Viewer](https://firefox-source-docs.mozilla.org/devtools-user/json_viewer/index.html) now opens [JSON Lines](https://jsonlines.org/) (NDJSON) documents, which are served as `application/jsonl`, `application/jsonlines`, `application/x-ndjson`, or `text/jsonl`, or have a `.jsonl` file extension.
   Each line is parsed separately into its own collapsible entry, labeled with the line number it came from, and a line that fails to parse is reported inline without affecting the rest of the document.
   ([Firefox bug 2055774](https://bugzil.la/2055774), [Firefox bug 2060972](https://bugzil.la/2060972), and [Firefox bug 2060529](https://bugzil.la/2060529)).
 - Added a keyboard shortcut for disabling breakpoints in the [Debugger](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html).
@@ -114,9 +114,9 @@ No notable changes.
 
 ### WebAssembly
 
-- The [compact import section](https://github.com/WebAssembly/compact-import-section) binary format extension is now supported, which reduces the size of modules that have many imports.
+- The [compact import section](https://github.com/WebAssembly/compact-import-section) binary format extension is now supported, which reduces the size of modules that have many [`import`](/en-US/docs/WebAssembly/Reference/Definitions/import) statements.
   ([Firefox bug 2062344](https://bugzil.la/2062344)).
-- The [wide arithmetic](https://github.com/WebAssembly/wide-arithmetic) proposal is now supported, adding the `i64.add128`, `i64.sub128`, `i64.mul_wide_s`, and `i64.mul_wide_u` instructions.
+- The [wide arithmetic](https://github.com/WebAssembly/wide-arithmetic) proposal is now supported, adding the [`i64.add128`](/en-US/docs/WebAssembly/Reference/Numeric/add128), [`i64.sub128`](/en-US/docs/WebAssembly/Reference/Numeric/sub128), [`i64.mul_wide_s`](/en-US/docs/WebAssembly/Reference/Numeric/mul_wide_s), and [`i64.mul_wide_u`](/en-US/docs/WebAssembly/Reference/Numeric/mul_wide_u) instructions.
   These produce 128-bit results from 64-bit operands, which previously had to be emulated in code compiled to WebAssembly, such as bignum and cryptography libraries.
   ([Firefox bug 2062374](https://bugzil.la/2062374)).
 
@@ -132,8 +132,6 @@ No notable changes.
 - Updated the Mozilla-specific `moz:debugging` module to no longer rely on the same nested event loop API as DevTools, which prevents conflicts when WebDriver BiDi and DevTools are used in parallel. ([Firefox bug 2041335](https://bugzil.la/2041335)).
 - Fixed the `browsingContext.reload` command failing when used for frames. ([Firefox bug 2030909](https://bugzil.la/2030909)).
 - Removed support for the `contexts` argument in the `session.unsubscribe` command. From now on, clients can unsubscribe only by event name or subscription ID. ([Firefox bug 1988723](https://bugzil.la/1988723)).
-
-## Changes for add-on developers
 
 ## Experimental web features
 
@@ -179,3 +177,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **`border-area` value for `background-clip`**: `layout.css.background-clip.border-area.enabled`
 
   The [`border-area`](/en-US/docs/Web/CSS/Reference/Properties/background-clip#border-area) value of the {{cssxref("background-clip")}} CSS property clips the background to the area painted by the element's border, which makes it possible to use a gradient or image as a border. ([Firefox bug 2045230](https://bugzil.la/2045230)).
+
+- **`view-timeline` includes `view-timeline-inset`**: `layout.css.scroll-driven-animations.enabled`
+
+  The {{cssxref("view-timeline")}} shorthand property now supports the {{cssxref("view-timeline-inset")}} property. The shorthand lets you specify start and/or end inset (or outset) values to adjust the position of the view progress timeline. ([Firefox bug 2046602](https://bugzil.la/2046602)).

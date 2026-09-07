@@ -41,7 +41,7 @@ The good news for Django users is that many of the more common threats are handl
 
 Rather than duplicate the Django documentation here, in this article we'll demonstrate just a few of the security features in the context of our Django [LocalLibrary](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) tutorial.
 
-### Cross site scripting (XSS)
+### Cross-site scripting (XSS)
 
 XSS is a term used to describe a class of attacks that allow an attacker to inject client-side scripts _through_ the website into the browsers of other users. This is usually achieved by storing malicious scripts in the database where they can be retrieved and displayed to other users, or by getting users to click a link that will cause the attacker's JavaScript to be executed by the user's browser.
 
@@ -74,7 +74,7 @@ Using Django templates protects you against the majority of XSS attacks. However
 
 It is also possible for XSS attacks to originate from other untrusted source of data, such as cookies, Web services or uploaded files (whenever the data is not sufficiently sanitized before including in a page). If you're displaying data from these sources, then you may need to add your own sanitization code.
 
-### Cross site request forgery (CSRF) protection
+### Cross-site request forgery (CSRF) protection
 
 CSRF attacks allow a malicious user to execute actions using the credentials of another user without that user's knowledge or consent. For example consider the case where we have a hacker who wants to create additional authors for our LocalLibrary.
 
