@@ -3,10 +3,12 @@ title: "SVGAElement: pathname property"
 short-title: pathname
 slug: Web/API/SVGAElement/pathname
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.SVGAElement.pathname
 ---
 
-{{APIRef("SVG")}}
+{{APIRef("SVG")}}{{SeeCompatTable}}
 
 The **`pathname`** property of the {{domxref("SVGAElement")}} interface returns a string containing an initial `/` followed by the path of the URL, not including the query string or fragment.
 

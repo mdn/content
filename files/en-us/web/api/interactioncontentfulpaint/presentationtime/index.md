@@ -3,10 +3,12 @@ title: "InteractionContentfulPaint: presentationTime property"
 short-title: presentationTime
 slug: Web/API/InteractionContentfulPaint/presentationTime
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.InteractionContentfulPaint.presentationTime
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`presentationTime`** read-only property of the {{domxref("InteractionContentfulPaint")}} interface returns the {{domxref("DOMHighResTimeStamp","timestamp")}} of when the painted pixels were actually drawn on the screen.
 
@@ -14,7 +16,7 @@ The `presentationTime` is optional — some browsers may always return `0` or no
 
 ## Value
 
-A {{domxref("DOMHighResTimeStamp")}} or {{jsxref("operators/null", "null")}} if the value is not exposed.
+A {{domxref("DOMHighResTimeStamp")}} or {{jsxref("Operators/null", "null")}} if the value is not exposed.
 
 ## Examples
 

@@ -95,9 +95,7 @@ This example shows a processing instruction with a target of `xml-stylesheet` an
 
 This example uses the `<?start>` and `<?end>` processing instructions as placeholders and later on fills in the contents using `<template for>`. Both exclude the optional trailing `?`.
 
-<!-- Have prettier ignore this, as indentation is important and discussed next -->
-<!-- prettier-ignore-start -->
-```html
+```html-nolint
 <body>
   <div>
     <?start name="placeholder">
@@ -111,7 +109,6 @@ This example uses the `<?start>` and `<?end>` processing instructions as placeho
   ...
 </body>
 ```
-<!-- prettier-ignore-end -->
 
 This example also demonstrates the lack of processing instruction children and nesting. The `<?start>` and `<?end>` processing instructions, although linked in terms of `<template for>`, are not linked in terms of the DOM and do not cause the `Loading...` content in between to be a child (as demonstrated by the lack of indentation).
 

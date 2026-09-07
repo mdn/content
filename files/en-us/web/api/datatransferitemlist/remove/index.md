@@ -8,10 +8,9 @@ browser-compat: api.DataTransferItemList.remove
 
 {{APIRef("HTML Drag and Drop API")}}
 
-The **`DataTransferItemList.remove()`** method removes the
-{{domxref("DataTransferItem")}} at the specified index from the list. If the index is
-less than zero or greater than one less than the length of the list, the list will not
-be changed.
+The **`remove()`** method of the {{domxref("DataTransferItemList")}} interface removes the {{domxref("DataTransferItem")}} at the specified index from the list. If the index is less than zero or greater than one less than the length of the list, the list will not be changed.
+
+During a drag operation, this method can only be used in the handler for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event, because that's the only time the drag operation's data store is writable. Calling it from any other drag event throws an `InvalidStateError` {{domxref("DOMException")}}. See [Modifying the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#modifying_the_drag_data_store) for details.
 
 ## Syntax
 

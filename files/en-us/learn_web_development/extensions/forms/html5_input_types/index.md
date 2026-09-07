@@ -60,14 +60,11 @@ On some devices — notably, touch devices with dynamic keyboards like smartphon
 
 ![Firefox for Android email keyboard, with the at sign displayed by default.](fx-android-email-type-keyboard.jpg)
 
-> [!NOTE]
-> You can find examples of the basic text input types at [basic input examples](https://mdn.github.io/learning-area/html/forms/basic-input-examples/) (see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/basic-input-examples/index.html) also).
-
 This is another good reason for using these newer input types, improving the user experience for users of these devices.
 
 ### Client-side validation
 
-As you can see above, `email` — along with other newer `input` types — provides built-in _client-side_ error validation, performed by the browser before the data gets sent to the server. It _is_ a helpful aid to guide users to fill out a form accurately, and it can save time: it is useful to know that your data is not correct immediately, rather than having to wait for a round trip to the server.
+`email` — along with other newer `input` types — provides built-in _client-side_ error validation, performed by the browser before the data gets sent to the server. It _is_ a helpful aid to guide users to fill out a form accurately, and it can save time: it is useful to know that your data is not correct immediately, rather than having to wait for a round trip to the server.
 
 But it _should not be considered_ an exhaustive security measure! Your apps should always perform security checks on any form-submitted data on the _server-side_ as well as the client-side, because client-side validation is too easy to turn off, so malicious users can still easily send bad data through to your server. Read [Website security](/en-US/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security) for an idea of what _could_ happen; implementing server-side validation is somewhat beyond the scope of this module, but you should bear it in mind.
 
@@ -185,7 +182,7 @@ The `number` input type makes sense when the range of valid values is limited, s
 
 Another way to pick a number is to use a **slider**. You see these quite often on sites like shopping sites where you want to set a maximum property price to filter by. Let's look at a live example to illustrate this:
 
-{{EmbedLiveSample('Slider controls','100%','50')}}
+{{EmbedLiveSample('Slider controls','100%','80')}}
 
 Usage-wise, sliders are less accurate than text fields. Therefore, they are used to pick a number whose _precise_ value is not necessarily important.
 

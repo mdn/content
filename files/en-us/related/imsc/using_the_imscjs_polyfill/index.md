@@ -56,7 +56,7 @@ imsc.renderHTML(isd, renderDiv);
 
 ## Building an IMSC player
 
-Lets look at a more expanded example and show you how can render subtitles with imscJS on an embedded HTML video. As an example we use the below video with subtitles.
+Let's look at a more expanded example and show you how you can render subtitles with imscJS on an embedded HTML video. As an example we use the below video with subtitles.
 
 {{EmbedGHLiveSample("imsc-examples/imscjs-demo/imscjs-demo.html", '100%', 320)}}
 
@@ -64,7 +64,7 @@ You can find the [HTML markup](https://github.com/mdn/imsc-examples/blob/main/im
 
 ## Accessing the DOM
 
-An IMSC subtitle is rendered by HTML markup with inline CSS. It represents the IMSC subtitles during a specific period on the timeline of the associated media element. As we saw in the [Rendering an IMSC snapshot](#rendering_an_imsc_snapshot) section above, the markup is inserted into a `<div>` element using the `renderHtml()` method. We can think of this `<div>` element as a container for the HTML that was generated from IMSC code. Later we pass the corresponding DOM element as a parameter to `renderHtml()` method.
+An IMSC subtitle is rendered by HTML markup with inline CSS. It represents the IMSC subtitles during a specific period on the timeline of the associated media element. As we saw in the [Rendering an IMSC snapshot](#rendering_an_imsc_snapshot) section above, the markup is inserted into a `<div>` element using the `renderHTML()` method. We can think of this `<div>` element as a container for the HTML that was generated from IMSC code. Later we pass the corresponding DOM element as a parameter to the `renderHTML()` method.
 
 For convenience we assign this DOM element to a variable.
 

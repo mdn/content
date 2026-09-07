@@ -3,10 +3,12 @@ title: "ProcessingInstruction: removeAttribute() method"
 short-title: removeAttribute()
 slug: Web/API/ProcessingInstruction/removeAttribute
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.ProcessingInstruction.removeAttribute
 ---
 
-{{ APIRef("DOM") }}
+{{ APIRef("DOM") }}{{SeeCompatTable}}
 
 The **`removeAttribute()`** method of the {{domxref("ProcessingInstruction")}} removes the attribute with the specified name from the processing instruction.
 

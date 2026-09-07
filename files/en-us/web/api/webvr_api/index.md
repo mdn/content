@@ -19,7 +19,7 @@ WebVR provides support for exposing virtual reality devices — for example, hea
 
 Any VR devices attached to your computer will be returned by the {{DOMxRef("Navigator.getVRDisplays()")}} method; each one will be represented by a {{DOMxRef("VRDisplay")}} object.
 
-![Sketch of a person in a chair with wearing goggles labelled "Head mounted display (HMD)" facing a monitor with a webcam labelled "Position sensor"](hw-setup.png)
+![Sketch of a person in a chair with wearing goggles labeled "Head mounted display (HMD)" facing a monitor with a webcam labeled "Position sensor"](hw-setup.png)
 
 {{DOMxRef("VRDisplay")}} is the central interface in the WebVR API — via its properties and methods you can access functionality to:
 

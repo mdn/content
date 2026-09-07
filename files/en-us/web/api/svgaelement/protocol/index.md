@@ -3,10 +3,12 @@ title: "SVGAElement: protocol property"
 short-title: protocol
 slug: Web/API/SVGAElement/protocol
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.SVGAElement.protocol
 ---
 
-{{APIRef("SVG")}}
+{{APIRef("SVG")}}{{SeeCompatTable}}
 
 The **`protocol`** property of the {{domxref("SVGAElement")}} interface returns a string representing the protocol component, including trailing colon (`:`), of the referenced URL.
 

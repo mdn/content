@@ -73,6 +73,8 @@ You can create a new `Request` object using the {{domxref("Request.Request","Req
   - : Returns a promise that resolves with the result of parsing the request body as {{JSxRef("JSON")}}.
 - {{domxref("Request.text()")}}
   - : Returns a promise that resolves with a text representation of the request body.
+- {{domxref("Request.textStream()")}}
+  - : Returns a {{domxref("ReadableStream")}} that can be used to read the contents of the request body in chunks of UTF-8.
 
 > [!NOTE]
 > The request body functions can be run only once; subsequent calls will reject with TypeError showing that the body stream has already used.

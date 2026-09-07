@@ -41,7 +41,7 @@ Most importantly, it exposes the {{domxref("ServiceWorkerContainer.register()")}
 - {{domxref("ServiceWorkerContainer/message_event", "message")}}
   - : Fired when incoming messages are received by the `ServiceWorkerContainer` object (e.g., via a {{domxref("MessagePort.postMessage()")}} call).
 - {{domxref("ServiceWorkerContainer/messageerror_event", "messageerror")}}
-  - : Fired when incoming messages can not deserialized by the `ServiceWorkerContainer` object (e.g., via a {{domxref("MessagePort.postMessage()")}} call).
+  - : Fired when incoming messages cannot be deserialized by the `ServiceWorkerContainer` object (e.g., via a {{domxref("MessagePort.postMessage()")}} call).
 
 ## Examples
 

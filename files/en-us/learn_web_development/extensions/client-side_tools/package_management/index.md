@@ -193,7 +193,7 @@ In Vite, the `index.html` file is front and central. It defines the starting poi
   <head>
     <meta charset="UTF-8" />
     <title>My test page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width" />
   </head>
   <body>
     <div id="root"></div>
@@ -421,7 +421,7 @@ You can add all kinds of things to the `scripts` property that help you do your 
 
 ## Summary
 
-This brings us to the end of our tour of package managers. Our next move is to build up a sample toolchain, putting all that we've learnt so far into practice.
+This brings us to the end of our tour of package managers. Our next move is to build up a sample toolchain, putting all that we've learned so far into practice.
 
 ## See also
 

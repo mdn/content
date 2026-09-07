@@ -35,7 +35,7 @@ An accessible name is required. Ideally, the accessible name should come from an
 
 If all elements in the set are not present in the DOM include the [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize) and [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset) properties. When specifying `aria-setsize` and `aria-posinset` on a `menuitemradio`, set the value with respect to the total number of items in the menu, excluding any separators.
 
-The `menuitemradio` element can have phrasing content, but can not have interactive content as descendants and no descendants with a `tabindex` attribute specified.
+The `menuitemradio` element can have phrasing content, but cannot have interactive content as descendants and no descendants with a `tabindex` attribute specified.
 
 ### All descendants are presentational
 

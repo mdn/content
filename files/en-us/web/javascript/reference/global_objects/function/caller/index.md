@@ -53,7 +53,7 @@ Note that the only behavior specified by the ECMAScript specification is that `F
 
 This property replaces the obsolete `arguments.caller` property of the {{jsxref("Functions/arguments", "arguments")}} object.
 
-The special property `__caller__`, which returned the activation object of the caller thus allowing to reconstruct the stack, was removed for security reasons.
+The special property `__caller__`, which returned the activation object of the caller thus allowing you to reconstruct the stack, was removed for security reasons.
 
 ## Examples
 

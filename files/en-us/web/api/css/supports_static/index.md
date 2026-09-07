@@ -20,7 +20,7 @@ CSS.supports(supportCondition)
 
 ### Parameters
 
-There are two distinct sets of parameters. The first one allows to test the support of
+There are two distinct sets of parameters. The first one allows you to test the support of
 a pair _property-value_:
 
 - `propertyName`

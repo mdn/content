@@ -98,7 +98,7 @@ el.addEventListener("transitionend", () => {
 
 {{ EmbedLiveSample('Live_example', '100%', '150px') }}
 
-The `transitioncancel` event is fired if the transition is cancelled in either direction after the `transitionrun` event occurs and before the `transitionend` is fired.
+The `transitioncancel` event is fired if the transition is canceled in either direction after the `transitionrun` event occurs and before the `transitionend` is fired.
 
 If there is no transition delay or duration, if both are 0s or neither is declared, there is no transition, and none of the transition events are fired.
 
