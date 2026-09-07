@@ -93,7 +93,7 @@ This property is specified as a single value from the following list:
 
 ## Description
 
-The `column-gap` property sets the size of the gap between an element's columns. The property specifies a fixed-length gutter between items in a container, separating boxes in the container's inline axis. Negative values are invalid. The default value `normal` resolves to `1em` on multi-column containers, and `0` everywhere else.
+The `column-gap` property sets the size of the gap between an element's columns. The property specifies a fixed-length gutter between items in a container, separating boxes in the container's inline axis. Negative values are invalid. Column gaps in multi-col containers are `1em` wide by default, while no gap is added between grid columns or flex items or rows.
 
 Percentages are calculated against the [content box](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#content_area) size of the container element's inline axis when this size is definite, against `0` otherwise, except in grid layout, for which cyclic percentage sizes resolve against zero for determining {{glossary("intrinsic size")}} contributions but resolve against the element's content box when laying out the contents.
 
