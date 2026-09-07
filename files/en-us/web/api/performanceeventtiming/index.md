@@ -9,6 +9,45 @@ browser-compat: api.PerformanceEventTiming
 
 The `PerformanceEventTiming` interface of the Event Timing API provides insights into the latency of certain event types triggered by user interaction.
 
+This interface inherits methods and properties from its parent, {{domxref("PerformanceEntry")}}:
+
+{{InheritanceDiagram}}
+
+## Constructor
+
+This interface has no constructor on its own. See the [example below](#getting_event_timing_information) for how to typically get the information the `PerformanceEventTiming` interface holds.
+
+## Instance properties
+
+This interface extends the following {{domxref("PerformanceEntry")}} properties for event timing performance entry types by qualifying them as follows:
+
+- {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the time from `startTime` to the next rendering paint (rounded to the nearest 8ms).
+- {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}}
+  - : Returns `"event"` (for long events) or `"first-input"` (for the first user interaction).
+- {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
+  - : Returns the associated event's type.
+- {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the associated event's [`timestamp`](/en-US/docs/Web/API/Event/timeStamp) property. This is the time the event was created and can be considered as a proxy for the time the user interaction occurred.
+
+This interface also supports the following properties:
+
+- {{domxref("PerformanceEventTiming.cancelable")}} {{ReadOnlyInline}}
+  - : Returns the associated event's [`cancelable`](/en-US/docs/Web/API/Event/cancelable) property.
+- {{domxref("PerformanceEventTiming.interactionId")}} {{ReadOnlyInline}}
+  - : Returns the ID that uniquely identifies the user interaction which triggered the associated event.
+- {{domxref("PerformanceEventTiming.processingStart")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the time at which event dispatch started. To measure the time between a user action and the time the event handler starts to run, calculate `processingStart-startTime`.
+- {{domxref("PerformanceEventTiming.processingEnd")}} {{ReadOnlyInline}}
+  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the time at which the event dispatch ended. To measure the time the event handler took to run, calculate `processingEnd-processingStart`.
+- {{domxref("PerformanceEventTiming.target")}} {{ReadOnlyInline}}
+  - : Returns the associated event's last target, if it is not removed.
+
+## Instance methods
+
+- {{domxref("PerformanceEventTiming.toJSON()")}}
+  - : Overrides the {{domxref("PerformanceEntry.toJSON()")}} method to return a JSON representation of the `PerformanceEventTiming` object.
+
 ## Description
 
 This API enables visibility into slow events by providing event timestamps and duration for certain event types ([see below](#events_exposed)). For example, you can monitor the time between a user action and the start of its event handler, or the time an event handler takes to run.
@@ -19,10 +58,6 @@ You typically work with `PerformanceEventTiming` objects by creating a {{domxref
 
 By default, `PerformanceEventTiming` entries are exposed when their `duration` is 104ms or greater. Research suggests that user input that is not handled within 100ms is considered slow and 104ms is the first multiple of 8 greater than 100ms (for security reasons, this API is rounded to the nearest multiple of 8ms).
 However, you can set the {{domxref("PerformanceObserver")}} to a different threshold using the `durationThreshold` option in the [`observe()`](/en-US/docs/Web/API/PerformanceObserver/observe) method.
-
-This interface inherits methods and properties from its parent, {{domxref("PerformanceEntry")}}:
-
-{{InheritanceDiagram}}
 
 ### Events exposed
 
@@ -117,41 +152,6 @@ To get a list of all exposed events, you can also look up keys in the {{domxref(
 ```js
 const exposedEventsList = [...performance.eventCounts.keys()];
 ```
-
-## Constructor
-
-This interface has no constructor on its own. See the [example below](#getting_event_timing_information) for how to typically get the information the `PerformanceEventTiming` interface holds.
-
-## Instance properties
-
-This interface extends the following {{domxref("PerformanceEntry")}} properties for event timing performance entry types by qualifying them as follows:
-
-- {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the time from `startTime` to the next rendering paint (rounded to the nearest 8ms).
-- {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}}
-  - : Returns `"event"` (for long events) or `"first-input"` (for the first user interaction).
-- {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
-  - : Returns the associated event's type.
-- {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the associated event's [`timestamp`](/en-US/docs/Web/API/Event/timeStamp) property. This is the time the event was created and can be considered as a proxy for the time the user interaction occurred.
-
-This interface also supports the following properties:
-
-- {{domxref("PerformanceEventTiming.cancelable")}} {{ReadOnlyInline}}
-  - : Returns the associated event's [`cancelable`](/en-US/docs/Web/API/Event/cancelable) property.
-- {{domxref("PerformanceEventTiming.interactionId")}} {{ReadOnlyInline}}
-  - : Returns the ID that uniquely identifies the user interaction which triggered the associated event.
-- {{domxref("PerformanceEventTiming.processingStart")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the time at which event dispatch started. To measure the time between a user action and the time the event handler starts to run, calculate `processingStart-startTime`.
-- {{domxref("PerformanceEventTiming.processingEnd")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("DOMHighResTimeStamp")}} representing the time at which the event dispatch ended. To measure the time the event handler took to run, calculate `processingEnd-processingStart`.
-- {{domxref("PerformanceEventTiming.target")}} {{ReadOnlyInline}}
-  - : Returns the associated event's last target, if it is not removed.
-
-## Instance methods
-
-- {{domxref("PerformanceEventTiming.toJSON()")}}
-  - : Overrides the {{domxref("PerformanceEntry.toJSON()")}} method to return a JSON representation of the `PerformanceEventTiming` object.
 
 ## Examples
 
