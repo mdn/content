@@ -142,7 +142,6 @@ We define a column rule with the {{cssxref("column-rule")}} property. The `colum
 .flexbox {
   display: flex;
   flex-flow: row wrap;
-  height: 100px;
   column-rule: 1px solid magenta;
 
   column-gap: 20px;
@@ -151,6 +150,7 @@ We define a column rule with the {{cssxref("column-rule")}} property. The `colum
 .flexbox > div {
   border: 1px solid green;
   background-color: lime;
+  height: 35px;
   flex: 200px;
 }
 div:nth-of-type(3n) {
@@ -160,7 +160,7 @@ div:nth-of-type(3n) {
 
 #### Result
 
-{{EmbedLiveSample("Flex_layout", "auto", "220px")}}
+{{EmbedLiveSample("Flex_layout", "auto", "170")}}
 
 To set vertical space between flex rows, specify a non-zero value for the {{cssxref("row-gap")}} property, optionally setting both `row-gap` and `column-gap` by using the `gap` shorthand.
 
@@ -210,9 +210,23 @@ We've also set a very wide, semi-opaque `column-rule` to demonstrate how the rul
 }
 ```
 
+```css hidden
+@layer no-support {
+  @supports not (column-gap: 5%) {
+    body::before {
+      content: "Your browser doesn't support percent values";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
+```
+
 #### Result
 
-{{EmbedLiveSample("Grid_layout", "auto", "220px")}}
+{{EmbedLiveSample("Grid_layout", "auto", "330")}}
 
 The column rule is wider than the column gap, and is visible only where the items drawn on top are semi-transparent.
 

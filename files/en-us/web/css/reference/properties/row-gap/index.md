@@ -91,7 +91,7 @@ This property is specified as a single value from the following list:
 - {{cssxref("&lt;line-width&gt;")}}
   - : Sets the width to one of the keywords `thin`, `medium`, or `thick`, or a positive {{cssxref("length")}} value.
 - {{CSSxRef("length-percentage")}}
-  - : A non-negative {{CSSxRef("&lt;length&gt;")}} or {{CSSxRef("&lt;percentage&gt;")}} value. Percentages are relative to the block-size of the content box or `0`.
+  - : Sets a non-negative {{CSSxRef("&lt;length&gt;")}} or {{CSSxRef("&lt;percentage&gt;")}} value. Percentages are relative to the block-size of the content box or `0`.
 
 ## Description
 
@@ -118,7 +118,7 @@ In grid layouts, the effect of the gap is as though the grid lines between grid 
 
 ### Flex layout
 
-This example demonstrates using the `row-gap` property to create horizontal space between adjacent rows of flex items. It also demonstrates how the `row-gap` size is not effected by the size of the row rule.
+This example demonstrates using the `row-gap` property to create horizontal space between adjacent rows of flex items. It also demonstrates how the `row-gap` size is not affected by the size of the row rule.
 
 #### HTML
 
@@ -137,16 +137,18 @@ We include six items in a container element:
 
 #### CSS
 
-We set the {{cssxref("display")}} to `flex`, limit the {{cssxref("width")}} to `300px`, and set the {{cssxref("flex-flow")}} to `row wrap` to create a flex container with rows of flex items that flow onto new lines as needed.
+We set the {{cssxref("display")}} to `flex`, set the {{cssxref("flex-flow")}} to `row wrap` to create a flex container with rows of flex items that flow onto new lines as needed, and limit the {{cssxref("width")}} to `300px`. We also add a {{cssxref("row-rule")}}, which will draw a 30px-wide, dashed, magenta line in the middle of the gap.
 
-The `column-gap` value is set as `20px` on the flex container to create a `20px` gap between the adjacent flex rows. We also add a {{cssxref("row-rule")}}, which will draw a 30px-wide, dashed, semi-opaque magenta line in the middle of the gap. We define the flex items to be lime, with most being semi-opaque, so the rule, drawn behind the flex items.
+The `row-gap` value is set as `20px` on the flex container to create a `20px` gap between the adjacent flex rows.
+
+We also set a background color on the flex items, with most being semi-opaque, to demonstrate how, with the gap being narrower than the rule, the rule is visible under the flex items.
 
 ```css
 #flexbox {
   display: flex;
   flex-flow: row wrap;
   width: 300px;
-  row-rule: 30px dashed #ff00ff33;
+  row-rule: 30px dashed magenta;
 
   row-gap: 20px;
 }
@@ -188,9 +190,9 @@ We include five items in a container element:
 
 #### CSS
 
-We set the {{cssxref("display")}} property to `grid`, the {{cssxref("height")}} to `240px`, the {{cssxref("width")}} to `350px` and {{cssxref("grid-template-rows")}} to `repeat(3, 1fr)` to create a 350px-wide grid container with three columns and as many rows as needed. Each row is `100px` tall, as defined by the {{cssxref("grid-template-rows")}} property. Every odd grid item has a `lime` background color and the even grid items are semi-opaque.
+We set the {{cssxref("display")}} property to `grid`, the {{cssxref("height")}} to `240px`, the {{cssxref("width")}} to `350px` and {{cssxref("grid-template-rows")}} to `repeat(3, 1fr)` to create a 350px-wide grid container with three columns and as many rows as needed. Each row is `100px` tall, as defined by the {{cssxref("grid-template-rows")}} property.
 
-The `row-gap` is set to `5%`, which, given a container height of `240px`, will create a gap that is `12px` across, leaving `216px` for three rows of grid items, meaning the rows are each `72px` tall.
+The `row-gap` is set to `5%`. The container height is `240px`. The `5%` value creates a row gap that is `12px` tall, leaving `216px` for three rows of grid items, meaning each row is `72px` tall.
 
 ```css
 #grid {
@@ -199,12 +201,30 @@ The `row-gap` is set to `5%`, which, given a container height of `240px`, will c
   width: 350px;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: 150px 1fr;
+
   row-gap: 5%;
+}
+```
+
+```css hidden
+body {
+  padding: 1em;
 }
 
 #grid > div {
   outline: 1px solid green;
   background-color: lime;
+}
+@layer no-support {
+  @supports not (row-gap: 5%) {
+    body::before {
+      content: "Your browser doesn't support percent values";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
 }
 ```
 
