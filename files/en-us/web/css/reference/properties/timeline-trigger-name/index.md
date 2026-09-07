@@ -41,7 +41,7 @@ Specified as one or more {{cssxref("dashed-ident")}} values separated by commas,
 - `none`
   - : Specifies that the element does not define any scroll-triggered animation triggers.
 - {{cssxref("dashed-ident")}}
-  - : Specifies the name if the timeline trigger.
+  - : Specifies the name of the timeline trigger.
 
 ## Description
 
