@@ -17,9 +17,9 @@ The `desiredSize` is used to apply [backpressure](/en-US/docs/Web/API/Streams_AP
 
 ## Value
 
-An integer. Note that this can be negative if the queue is over-full.
+A number, or `null`.
 
-The value will be `null` if the stream has errored and `0` if it is closed.
+The number can be negative if the queue is over-full. Although the queue size is measured in bytes, a fractional [high water mark](/en-US/docs/Web/API/Streams_API/Concepts#internal_queues_and_queuing_strategies) can cause the number to have a fractional component. The value is `null` if the stream has errored and `0` if it is closed.
 
 ## Examples
 

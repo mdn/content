@@ -122,4 +122,4 @@ For example, `\{{CSSxRef("background-color")}}` creates the "{{CSSxRef("backgrou
 
 - [Using macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros)
 - [Commonly used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros), including BCD macros (`\{{Compat}}`) and specification macros (`\{{Specifications}}`).
-- [Banners and notices guide](/en-US/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices) including the `\{{SeeCompatTable}}`, `\{{Deprecated_Header}}`, and `\{{SecureContext_Header}}` macros.
+- [Banners and notices guide](/en-US/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices) including the `\{{SeeCompatTable}}` and `\{{SecureContext_Header}}` macros.
