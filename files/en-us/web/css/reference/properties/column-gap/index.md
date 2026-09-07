@@ -89,7 +89,7 @@ This property is specified as a single value from the following list:
 - {{cssxref("&lt;line-width&gt;")}}
   - : Sets the size of the gap using the keywords `thin`, `medium`, or `thick`, or a positive {{cssxref("length")}} value.
 - {{CSSxRef("length-percentage")}}
-  - : A non-negative {{CSSxRef("&lt;length&gt;")}} or {{CSSxRef("&lt;percentage&gt;")}} value. Percentages are relative to the inline-size of the content box.
+  - : Sets a non-negative {{CSSxRef("&lt;length&gt;")}} or {{CSSxRef("&lt;percentage&gt;")}} value. Percentages are relative to the inline-size of the content box.
 
 ## Description
 
