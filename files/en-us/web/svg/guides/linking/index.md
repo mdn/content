@@ -5,7 +5,13 @@ page-type: guide
 sidebar: svgref
 ---
 
-SVG takes part in linking in three ways: a graphic can be a link to another resource, a link can point at a particular view of an SVG document, and elements inside an SVG document can reference each other. This guide covers all three.
+SVG allows for three kinds of linking:
+
+- Linking from within an SVG to navigate to a new resource.
+- Referencing an SVG resource, or a named view within it, for display in an `<img>`, another element, or via CSS.
+- Referencing an SVG element for reuse within the current SVG. The element can be defined in the same SVG or an external SVG.
+
+This guide covers all three.
 
 ## Linking out of an SVG document
 
@@ -36,6 +42,7 @@ This example links a circle and a text label, and uses CSS to give both a hover 
   height="100"
   xmlns="http://www.w3.org/2000/svg">
   <a href="https://example.com/">
+    <title>A circle element</title>
     <circle cx="50" cy="50" r="40" />
   </a>
 
@@ -44,6 +51,10 @@ This example links a circle and a text label, and uses CSS to give both a hover 
   </a>
 </svg>
 ```
+
+Since a shape doesn't have any text for use by assistive technologies, we give the circle link an accessible name with a {{svgelement("title")}} element inside the `<a>`.
+
+The CSS below gives both links a default fill color and changes that color on hover and on keyboard focus. The {{cssxref("outline")}} gives focus a second, non-color indicator, and the {{cssxref("fill")}} change keeps the focus state visible even where `outline` is not rendered on SVG elements.
 
 ```css
 a circle,
@@ -68,24 +79,15 @@ a:focus-visible {
 }
 ```
 
+Hover over either link, or press <kbd>Tab</kbd> to give it keyboard focus:
+
 {{EmbedLiveSample("Linked_shape_and_text", "100%", 130)}}
 
-Both links change color on hover and on keyboard focus. The {{cssxref("outline")}} gives focus a second, non-color indicator, and the {{cssxref("fill")}} change keeps the focus state visible even where `outline` is not rendered on SVG elements.
-
-A shape carries no text for assistive technology to announce, so give shape-only links an accessible name with a {{svgelement("title")}} element inside the `<a>`:
-
-```html
-<a href="https://example.com/">
-  <title>The circle element</title>
-  <circle cx="50" cy="50" r="40" />
-</a>
-```
-
-### Choosing where the link opens
+### Setting the link `target` window
 
 The {{svgattr("target")}} attribute names the browsing context the linked document should open in: `_self` (the default), `_blank`, `_parent`, or `_top`.
 
-This matters most when the SVG is embedded in an HTML page with {{htmlelement("object")}}, {{htmlelement("iframe")}}, or {{htmlelement("embed")}}. Such an SVG is a separate document in its own browsing context, so by default the linked page loads _inside_ that embedded frame — which is often only a few pixels wide. Add `target="_top"` to replace the whole page instead.
+This matters most when the SVG is embedded in an HTML page with {{htmlelement("object")}}, {{htmlelement("iframe")}}, or {{htmlelement("embed")}}. Such an SVG is a separate document in its own browsing context, so by default the linked page loads _inside_ that embedded frame. Since the frame is usually sized to the graphic, and may be only a few pixels wide, the new page is left scrolled and clipped to the point of being unusable. Add `target="_top"` to replace the whole page instead.
 
 In `page1.html`:
 
@@ -117,7 +119,7 @@ Appending a fragment identifier to an SVG URL lets a link, or an embedding eleme
 
 ### Named views with `<view>`
 
-The {{svgelement("view")}} element defines a named view: a {{svgattr("viewBox")}}, and optionally a {{svgattr("preserveAspectRatio")}}, that override the ones on the root {{svgelement("svg")}} element when the view's {{svgattr("id")}} is used as the URL fragment.
+The {{svgelement("view")}} element defines a "named view": a part of an SVG that can be referenced by its `id` attribute. The element takes a {{svgattr("viewBox")}} attribute, and optionally a {{svgattr("preserveAspectRatio")}}, which override the ones on the root {{svgelement("svg")}} element when the view's {{svgattr("id")}} is used as the URL fragment.
 
 In `shapes.svg`:
 
@@ -129,7 +131,10 @@ In `shapes.svg`:
   <view id="second" viewBox="100 0 100 100" />
   <circle cx="150" cy="50" r="40" fill="green" />
 
-  <view id="third" viewBox="200 0 100 100" />
+  <view
+    id="third"
+    viewBox="200 0 100 100"
+    preserveAspectRatio="xMidYMid meet" />
   <circle cx="250" cy="50" r="40" fill="blue" />
 </svg>
 ```
@@ -145,21 +150,41 @@ The same fragment works anywhere the file's URL appears, including an `<a href>`
 
 ### Views defined in the URL with `svgView()`
 
-If you can't edit the SVG file to add a `<view>` element, you can spell the view out in the fragment itself with the `svgView()` syntax, passing `viewBox()` and, optionally, `preserveAspectRatio()`:
+If you can't edit the SVG file to add a `<view>` element, you can directly specify the view in the fragment itself using the `svgView()` syntax, passing `viewBox()` and, optionally, `preserveAspectRatio()`:
 
 ```plain
 shapes.svg#svgView(viewBox(200,0,100,100))
 shapes.svg#svgView(viewBox(200,0,100,100);preserveAspectRatio(xMidYMid))
 ```
 
-Prefer a named `<view>` when you control the file: it keeps the view definition with the graphic, and it can be changed without updating every URL that points at it.
+Such a fragment goes wherever the file's URL goes. Both of these crop the same `shapes.svg` to its blue circle, without the file declaring a `<view>` for it:
+
+```html
+<img
+  src="shapes.svg#svgView(viewBox(200,0,100,100))"
+  width="100"
+  height="100"
+  alt="A blue circle" />
+```
+
+```css
+.blue-circle {
+  width: 100px;
+  height: 100px;
+  background-image: url("shapes.svg#svgView(viewBox(200,0,100,100))");
+}
+```
+
+Quote the URL in CSS: an unquoted {{cssxref("url_function", "url()")}} can't contain the parentheses that `svgView()` needs.
+
+Prefer a named `<view>` when you control the file: it keeps the view definition with the graphic, and it can be changed without updating every URL that points to it.
 
 ## Referencing content within a document
 
 The third kind of link is internal: SVG elements point at other elements by ID, in the same document or in an external one.
 
-- {{svgelement("use")}} draws another element again somewhere else: `<use href="#icon" />`. The reference can be external too, which is the basis of the SVG sprite pattern: `<use href="icons.svg#search" />`.
-- Gradients, patterns, filters, masks, and clip paths are referenced with a `url()` value, either from a presentation attribute or from CSS: `fill="url(#gradient)"`, `filter="url(#blur)"`, `clip-path: url(#clip-shape)`.
+- {{svgelement("use")}} draws an element defined elsewhere: `<use href="#icon" />`. The reference can be external too, which is the basis of the SVG sprite pattern: `<use href="icons.svg#search" />`.
+- Gradients, patterns, filters, masks, and clip paths are referenced with the CSS {{cssxref("url_function", "url()")}} function, either from a presentation attribute or from CSS: `fill="url(#gradient)"`, `filter="url(#blur)"`, `clip-path: url(#clip-shape)`.
 - {{svgelement("textPath")}} lays text along a path referenced with `href`, and {{svgelement("mpath")}} takes its motion path the same way.
 
 A few restrictions apply to references that leave the document:
