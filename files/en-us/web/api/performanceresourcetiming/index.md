@@ -62,7 +62,7 @@ This interface extends the following {{domxref("PerformanceEntry")}} properties 
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
   - : Returns the resource's URL.
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} for the time a resource fetch started. This value is equivalent to {{domxref("PerformanceResourceTiming.fetchStart")}}.
+  - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} for the time a resource fetch started. If there are no HTTP redirects, this value is equivalent to {{domxref("PerformanceResourceTiming.fetchStart")}}. If there are HTTP redirects, this value is the time the first fetch in the redirection started, whereas `fetchStart` returns the time immediately before the user agent starts to fetch the final resource in the redirection.
 
 ### Timestamps
 
