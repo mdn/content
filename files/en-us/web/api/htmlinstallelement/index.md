@@ -82,8 +82,6 @@ console.log(installElem.manifestId);
 console.log(installElem.manifest);
 console.log(installElem.isValid);
 console.log(installElem.invalidReason);
-console.log(installElem.initialPermissionStatus);
-console.log(installElem.permissionStatus);
 ```
 
 If we want to track whether the installation was successful when the install button is pressed, we can add an {{domxref("HTMLInstallElement.installresult_event", "installresult")}} event listener, and query the event object's {{domxref("InstallResultEvent.result", "result")}} property:
@@ -114,4 +112,3 @@ installElem.addEventListener("validationstatuschange", (e) => {
 
 - {{htmlelement("install")}} element
 - The {{httpheader("Permissions-Policy/web-app-installation", "web-app-installation")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy)
-- [Permissions API](/en-US/docs/Web/API/Permissions_API)
