@@ -10,9 +10,7 @@ browser-compat: api.DataTransferItem.type
 
 The **`type`** read-only property of the {{domxref("DataTransferItem")}} interface returns the type (format) of the object representing the drag data item. The `type` is a Unicode string generally given by a MIME type, although a MIME type is not required.
 
-Some example types are: `text/plain` and `text/html`.
-
-When the drag data item is a file — that is, when its {{domxref("DataTransferItem.kind", "kind")}} is `"file"` — `type` is the file's MIME type. Browsers generally derive this type from the file's extension rather than by inspecting its contents (see the [list of common MIME types](/en-US/docs/Web/HTTP/Guides/MIME_types/Common_types) for the usual mappings), so a file whose extension is unknown or missing may report an empty string. For this reason, don't rely on `type` alone to determine a file's actual format.
+The type is a _protocol_ that is expected to be understood by both the origin of the drag and the target of the drag, which may be the operating system, external applications, other webpages, or a webpage under your control. Some commonly used types and their semantics are introduced in [Working with the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#common_drag_data_types). When dragging files from the operating system, the MIME type may be determined by the OS's own heuristics, which may be purely extension-based without inspecting the file's contents.
 
 During a drag operation, this property can be read in any drag event handler, even when the drag data store is in [protected mode](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#protected_mode). The item's type remains accessible, but its data can only be read in the handlers for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} and {{domxref("HTMLElement/drop_event", "drop")}} events. See [Reading the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#reading_the_drag_data_store) for details.
 
