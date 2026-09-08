@@ -116,6 +116,8 @@ For trackers, the advantage of bounce tracking is that it works even if the brow
 
 ## Legitimate uses for tracking
 
+One problem browsers face in implementing defenses against tracking is that there are legitimate uses of tracking, and it can be hard to determine whether
+
 ## Anti-tracking techniques
 
 ## Anti-tracking policies in browsers
