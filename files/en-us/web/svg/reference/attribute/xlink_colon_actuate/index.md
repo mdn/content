@@ -16,7 +16,19 @@ The **`xlink:actuate`** attribute defines the timing of traversal from the sourc
 > SVG 2 removed the need for the `xlink` namespace. The `xlink:actuate` attribute is obsolete and should not be used in modern SVG content.
 
 > [!NOTE]
-> While the XLink specification defines multiple values for `xlink:actuate` attribute, its value for the SVG {{SVGElement("a")}} is fixed to `onRequest`.
+> While the XLink specification defines multiple values for the `xlink:actuate` attribute, its value for the SVG {{SVGElement("a")}} element is fixed to `onRequest`.
+
+## Example
+
+```html
+<svg viewBox="0 0 160 20" xmlns="http://www.w3.org/2000/svg">
+  <a xlink:actuate="onRequest" xlink:href="https://example.com/">
+    <text x="10" y="15">MDN Web Docs</text>
+  </a>
+</svg>
+```
+
+{{EmbedLiveSample("Example", "300", "100")}}
 
 ## Usage notes
 
