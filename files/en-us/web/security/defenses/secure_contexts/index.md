@@ -29,10 +29,12 @@ Top-level documents provide a secure context when their URL is a [potentially tr
 
 For example:
 
-- `https://example.com` : ✅ Secure (`https` URL)
-- `http://localhost`:✅ Secure (`localhost` URL)
-- `file:///path/to/resource.html``:✅ Secure (`file` URL)
-- `https://example.com`: ❌ Not secure (`http` URL)
+| URL                             | Secure                      |
+| ------------------------------- | --------------------------- |
+| `https://example.com`           | ✅ Secure (`https` URL)     |
+| `http://localhost`              | ✅ Secure (`localhost` URL) |
+| `file:///path/to/resource.html` | ✅ Secure (`file` URL)      |
+| `https://example.com`           | ❌ Not secure (`http` URL)  |
 
 ### Framed documents
 
@@ -42,9 +44,9 @@ The means that if a top-level document from `http://example.com` embeds an `<ifr
 
 | iframe URL            | Parent document URL   | Secure context |
 | --------------------- | --------------------- | -------------- |
-| `https://example.com` | `https://example.com` | Secure         |
-| `http://example.com`  | `https://example.com` | Not secure     |
-| `https://example.com` | `http://example.com`  | Not secure     |
+| `https://example.com` | `https://example.com` | ✅ Secure      |
+| `http://example.com`  | `https://example.com` | ❌ Not secure  |
+| `https://example.com` | `http://example.com`  | ❌ Not secure  |
 
 ### Workers
 
@@ -71,19 +73,14 @@ A URL is potentially trustworthy if any of the following apply:
 
 - Its value is `about:blank` or `about:srcdoc`
 - Its scheme is `data`
-- Its {{glossary("origin")}} is a [potentially trustworthy origin](#potentially_trustworthy_origins).
+- Its {{glossary("origin")}} has any of the following:
+  - A scheme of `https`, `wss`, or `file`.
+  - A host value of `127.0.0.0/8` or `::1/128`
+  - A host value of `localhost` or `localhost.`
+  - A host value ending with `.localhost` or `.localhost.`
+  - A scheme that the browser considers to be authenticated
 
-## Potentially trustworthy origins
-
-An origin is potentially trustworthy if has:
-
-- A scheme of `https`, `wss`, or `file`.
-- A host value of `127.0.0.0/8` or `::1/128`
-- A host value of `localhost` or `localhost.`
-- A host value ending with `.localhost` or `.localhost.`
-- A scheme that the browser considers to be authenticated
-
-This is essentially intended to capture origins that:
+This is essentially intended to capture URLs for which one of the following apply:
 
 - Use a secure transport across the network
 - Are local
