@@ -9,8 +9,6 @@ sidebar: webassemblysidebar
 
 The **`swizzle`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) returns a new [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value with its lane values selected from an input `v128` value, determined by indices provided in a second input `v128`.
 
-In the above example, we extract and log the value at index position 6 of the `swizzle` instruction output value. This will be `4`, because the swizzle instruction has selected the value at index position 9 of the input value to be put at index position 6 of the output value.
-
 {{InteractiveExample("Wat Demo: swizzle", "tabbed-taller")}}
 
 ```wat interactive-example
@@ -31,6 +29,8 @@ In the above example, we extract and log the value at index position 6 of the `s
 ```js interactive-example
 WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), { console });
 ```
+
+In the above example, we extract and log the value at index position 6 of the `swizzle` instruction output value. This will be `4`, because the swizzle instruction has selected the value at index position 9 of the input value to be put at index position 6 of the output value.
 
 ## Syntax
 

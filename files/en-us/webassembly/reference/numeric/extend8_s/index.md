@@ -9,8 +9,6 @@ sidebar: webassemblysidebar
 
 The **`extend8_s`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) [sign-extends](#description) the low 8 bits of an integer to propagate its sign throughout the entire value.
 
-In this example, `i32.const 0xff` pushes the value `0xff` (`255`) onto the stack. This value represents `-1` when read as a signed 8-bit number; `i32.extend8_s` sign-extends it to `0xffffffff` — which is `-1` represented as a full 32-bit signed integer.
-
 {{InteractiveExample("Wat Demo: extend8_s", "tabbed-taller")}}
 
 ```wat interactive-example
@@ -31,6 +29,8 @@ In this example, `i32.const 0xff` pushes the value `0xff` (`255`) onto the stack
 const url = "{%wasm-url%}";
 await WebAssembly.instantiateStreaming(fetch(url), { console });
 ```
+
+In this example, `i32.const 0xff` pushes the value `0xff` (`255`) onto the stack. This value represents `-1` when read as a signed 8-bit number; `i32.extend8_s` sign-extends it to `0xffffffff` — which is `-1` represented as a full 32-bit signed integer.
 
 ## WAT syntax
 

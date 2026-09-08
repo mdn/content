@@ -9,8 +9,6 @@ sidebar: webassemblysidebar
 
 The **`shuffle`** [SIMD conversion instruction](/en-US/docs/WebAssembly/Reference/SIMD/conversion) returns a new [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) value with its lane values selected from two input `v128` values, determined by provided index values.
 
-In the above example, we extract and log the value at index position 14 of the `shuffle` instruction output value. This will be `5`, because the shuffle instruction has selected the value at index position 3 of the second `v128` input (represented by the index value `18`) to be put at index position 14 of the `output`.
-
 {{InteractiveExample("Wat Demo: shuffle", "tabbed-taller")}}
 
 ```wat interactive-example
@@ -31,6 +29,8 @@ In the above example, we extract and log the value at index position 14 of the `
 ```js interactive-example
 WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), { console });
 ```
+
+In the above example, we extract and log the value at index position 14 of the `shuffle` instruction output value. This will be `5`, because the shuffle instruction has selected the value at index position 3 of the second `v128` input (represented by the index value `18`) to be put at index position 14 of the `output`.
 
 ## Syntax
 

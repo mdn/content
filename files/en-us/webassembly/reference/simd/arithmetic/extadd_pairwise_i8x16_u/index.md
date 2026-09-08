@@ -9,8 +9,6 @@ sidebar: webassemblysidebar
 
 The **`extadd_pairwise_i8x16_u`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic) adds each adjacent pair of lanes of an unsigned [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) `i8x16` value interpretation, outputting the results into an `i16x8` value interpretation.
 
-In the above example, each adjacent pair of lanes contains the values `2` and `4`. The `extadd_pairwise_i8x16_u` instruction adds each pair together, resulting in the 8 lanes of the output `i16x8` value all containing the value `6`.
-
 {{InteractiveExample("Wat Demo: extadd_pairwise_i8x16_u", "tabbed-taller")}}
 
 ```wat interactive-example
@@ -30,6 +28,8 @@ In the above example, each adjacent pair of lanes contains the values `2` and `4
 ```js interactive-example
 WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), { console });
 ```
+
+In the above example, each adjacent pair of lanes contains the values `2` and `4`. The `extadd_pairwise_i8x16_u` instruction adds each pair together, resulting in the 8 lanes of the output `i16x8` value all containing the value `6`.
 
 ## Syntax
 

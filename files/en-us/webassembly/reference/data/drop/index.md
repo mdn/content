@@ -12,8 +12,6 @@ The **`data.drop`** [data instruction](/en-US/docs/WebAssembly/Reference/Data) d
 > [!NOTE]
 > [Active](/en-US/docs/WebAssembly/Reference/Definitions/data#active_form) data segments are dropped automatically during module instantiation, and therefore are not available to drop via `data.drop`.
 
-In the above example, we define a `memory` and a `data` called `$greeting` that contains the string `Hello`. We then invoke `memory.init` to copy the string over to the `memory`. With this done, the `data` is no longer needed, so we call `data.drop` to free up the memory it was using.
-
 {{InteractiveExample("Wat Demo: data.drop", "tabbed-taller")}}
 
 ```wat interactive-example
@@ -39,6 +37,8 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}")).then((result) => {
   console.log(new TextDecoder().decode(memArray));
 });
 ```
+
+In the above example, we define a `memory` and a `data` called `$greeting` that contains the string `Hello`. We then invoke `memory.init` to copy the string over to the `memory`. With this done, the `data` is no longer needed, so we call `data.drop` to free up the memory it was using.
 
 ## Syntax
 

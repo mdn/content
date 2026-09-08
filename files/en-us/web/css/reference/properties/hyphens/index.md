@@ -9,8 +9,6 @@ sidebar: cssref
 
 The **`hyphens`** [CSS](/en-US/docs/Web/CSS) property specifies how words should be hyphenated when text wraps across multiple lines.
 
-The example text "An extraordinarily long English word!" contains the hidden `&shy;` (soft hyphen) character: `An extra&shy;ordinarily long English word!`. This character is used to indicate a potential place to insert a hyphen when `hyphens: manual;` is specified.
-
 {{InteractiveExample("CSS Demo: hyphens")}}
 
 ```css interactive-example-choice
@@ -39,6 +37,8 @@ hyphens: auto;
   width: 7rem;
 }
 ```
+
+The example text "An extraordinarily long English word!" contains the hidden `&shy;` (soft hyphen) character: `An extra&shy;ordinarily long English word!`. This character is used to indicate a potential place to insert a hyphen when `hyphens: manual;` is specified.
 
 ## Syntax
 
