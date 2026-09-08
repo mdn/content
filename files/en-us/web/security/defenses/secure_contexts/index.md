@@ -29,12 +29,10 @@ Top-level documents provide a secure context when their URL is a [potentially tr
 
 For example:
 
-| URL                             | Secure context |
-| ------------------------------- | -------------- |
-| `https://example.com`           | Secure         |
-| `http://localhost`              | Secure         |
-| `file:///path/to/resource.html` | Secure         |
-| `https://example.com`           | Not secure     |
+- `https://example.com` :  ✅ Secure (`https` URL)
+-  `http://localhost`:✅ Secure (`localhost` URL)
+- `file:///path/to/resource.html``:✅ Secure (`file` URL)
+- `https://example.com`: ❌ Not secure (`http` URL)
 
 ### Framed documents
 
