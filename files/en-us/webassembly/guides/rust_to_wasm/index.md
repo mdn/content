@@ -394,7 +394,7 @@ hello-wasm-0.1.0.tgz
 [INFO]: 🎒  packed up your package!
 ```
 
-To publish to npm, you will need an [npm account](https://www.npmjs.com/) and authorize your machine using [`npm adduser`](https://docs.npmjs.com/cli/v10/commands/npm-adduser/).
+To publish to npm, you will need an [npm account](https://www.npmjs.com/) and authorize your machine using [`npm login`](https://docs.npmjs.com/cli/v11/commands/npm-login/).
 When you are ready, you can publish using `wasm-pack`, which calls `npm publish` under the hood:
 
 ```bash
