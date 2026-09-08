@@ -10,6 +10,8 @@ browser-compat: api.SVGPointList.replaceItem
 
 The **`replaceItem()`** method of the {{domxref("SVGPointList")}} interface replaces a {{domxref("DOMPoint")}} in the list.
 
+Assigning to an index of the list has the same effect as calling this method, except that there is no return value.
+
 ## Syntax
 
 ```js-nolint
