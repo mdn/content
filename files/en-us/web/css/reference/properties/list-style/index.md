@@ -86,11 +86,6 @@ hr {
 }
 ```
 
-The values of this property are applied to list items, including {{HTMLElement("li")}} elements and elements with `{{cssxref("display")}}: list-item;`. Because this property is inherited, it can be set on a parent element (normally {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make the same list styling apply to all the nested items.
-
-> [!NOTE]
-> HTML list elements ({{HTMLElement("ul")}}, {{HTMLElement("ol")}}, {{HTMLElement("menu")}}) reset the `list-style` property to its initial value in their user-agent stylesheet. This means these elements interrupt inheritance of `list-style` from ancestor elements. To apply inherited list styles, you must explicitly set the property on these list elements.
-
 ## Constituent properties
 
 This property is a shorthand for the following CSS properties:
@@ -142,13 +137,11 @@ The `list-style` property is specified as one, two, or three values in any order
 - `none`
   - : No list style is used.
 
-## Formal definition
+## Description
 
-{{cssinfo}}
+The `list-style` property allows you to customize the list items' appearance. The values of this property are applied to list items, including {{HTMLElement("li")}} elements and elements with `{{cssxref("display")}}: list-item;`.
 
-## Formal syntax
-
-{{csssyntax}}
+Because this property is inherited, it can be set on a parent element (normally {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make the same list styling apply to its list items. However, user-agent stylesheets set {{cssxref("list-style-type")}} on `<ul>`, `<ol>`, and {{HTMLElement("menu")}} elements, so nested lists use these default values instead of inheriting the ancestor list's `list-style-type`. The {{cssxref("list-style-position")}} and {{cssxref("list-style-image")}} values normally inherit into nested lists. To make nested lists inherit the marker type as well, set `list-style-type: inherit` on the nested list elements.
 
 ## Accessibility
 
@@ -183,6 +176,14 @@ These CSS workarounds should only be used when an HTML solution is unavailable, 
 - [VoiceOver and list-style-type: none](https://gerardkcohen.me/writing/2017/voiceover-list-style-type.html) (2017)
 - [Understanding WCAG: Create content that can be presented in different ways](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
 - [Understanding success criterion 1.3.1: Info and relationships | WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
+
+{{csssyntax}}
 
 ## Examples
 

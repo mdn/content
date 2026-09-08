@@ -88,10 +88,6 @@ hr {
 }
 ```
 
-The marker will be [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword), the same as the computed [color](/en-US/docs/Web/CSS/Reference/Values/color_value) of the element it applies to.
-
-Only a few elements ({{HTMLElement("li")}} and {{HTMLElement("summary")}}) have a default value of `display: list-item`. However, the `list-style-type` property may be applied to any element whose {{cssxref("display")}} value is set to `list-item`. Moreover, because this property is inherited, it can be set on a parent element (commonly {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make it apply to all list items.
-
 ## Syntax
 
 ```css
@@ -264,6 +260,14 @@ A few predefined types are supported by Mozilla (Firefox) with a `-moz-` prefix.
 - `urdu`: `-moz-urdu`
 
 See the [compatibility table](#browser_compatibility) to check which browsers support which extension.
+
+## Description
+
+The `list-style-type` property sets the marker (such as a disc, character, or custom counter style) of a list item element. The marker will be [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword), the same as the computed [color](/en-US/docs/Web/CSS/Reference/Values/color_value) of the element it applies to.
+
+Only a few elements ({{HTMLElement("li")}} and {{HTMLElement("summary")}}) have a default value of `display: list-item`. However, the `list-style-type` property may be applied to any element whose {{cssxref("display")}} value is set to `list-item`.
+
+Because this property is inherited, it can be set on a parent element (commonly {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make it apply to its list items. However, user-agent stylesheets set `list-style-type` on `<ul>`, `<ol>`, and {{HTMLElement("menu")}} elements, so nested lists use these default values instead of inheriting the ancestor list's value. To make nested lists inherit this value, set `list-style-type: inherit` on the nested list elements.
 
 ## Accessibility
 
