@@ -8,7 +8,8 @@ browser-compat: api.SVGAElement.host
 
 {{APIRef("SVG")}}
 
-The **`host`** property of the {{domxref("SVGAElement")}} interface is a string containing the {{domxref("SVGAElement.hostname", "hostname")}} of the SVG {{SVGElement("a")}} element's {{SVGAttr("href")}}, followed by a `":"` and the {{domxref("SVGAElement.port", "port")}} if the URL has one. If the URL does not have a hostname, this property contains an empty string, `""`.
+The **`host`** property of the {{domxref("SVGAElement")}} interface represents the element's host.
+It is the {{domxref("SVGAElement.hostname", "hostname")}} of the SVG {{SVGElement("a")}} element's {{SVGAttr("href")}}, followed by a `":"` and the {{domxref("SVGAElement.port", "port")}} if the URL has one. If the URL does not have a hostname, this property contains an empty string, `""`.
 
 This property can be set to change the host of the URL. Setting it also rewrites the element's {{SVGAttr("href")}} attribute as a complete, absolute URL.
 
@@ -22,7 +23,9 @@ A string.
 
 ### Getting the host from an SVG link
 
-```html
+Given the following SVG:
+
+```html live-sample___svgaelement-host
 <svg viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg">
   <a id="link" href="https://example.com/">
     <text x="0" y="20">Example</text>
@@ -30,17 +33,47 @@ A string.
 </svg>
 ```
 
-```js
+```html hidden live-sample___svgaelement-host
+<pre id="log"></pre>
+```
+
+```css hidden live-sample___svgaelement-host
+svg {
+  width: 200px;
+  height: 30px;
+}
+svg a text {
+  fill: blue;
+  text-decoration: underline;
+}
+#log {
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden live-sample___svgaelement-host
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+}
+```
+
+We can read the host of the link, and see how the port is included only when it's not the default one for the scheme:
+
+```js live-sample___svgaelement-host
 const link = document.getElementById("link");
-console.log(link.host); // "example.com"
+
+log(`host: "${link.host}"`); // host: "example.com"
 
 link.setAttribute("href", "https://example.com:443/");
-console.log(link.host); // "example.com"
-// The port number is not included because 443 is the scheme's default port
+log(`host: "${link.host}"`); // host: "example.com"
 
 link.setAttribute("href", "https://example.com:4097/");
-console.log(link.host); // "example.com:4097"
+log(`host: "${link.host}"`); // host: "example.com:4097"
 ```
+
+{{EmbedLiveSample("svgaelement-host", "100%", "160")}}
 
 ## Specifications
 
@@ -53,5 +86,4 @@ console.log(link.host); // "example.com:4097"
 ## See also
 
 - SVG {{SVGElement("a")}} element
-- The {{domxref("SVGAElement")}} interface it belongs to
 - {{domxref("HTMLAnchorElement.host")}}

@@ -8,7 +8,8 @@ browser-compat: api.SVGAElement.username
 
 {{APIRef("SVG")}}
 
-The **`username`** property of the {{domxref("SVGAElement")}} interface is a string containing the username component of the SVG {{SVGElement("a")}} element's {{SVGAttr("href")}}. If the URL does not have a username, this property contains an empty string, `""`.
+The **`username`** property of the {{domxref("SVGAElement")}} interface represents the username component of the SVG {{SVGElement("a")}} element's {{SVGAttr("href")}}.
+If the URL does not have a username, this property contains an empty string, `""`.
 
 This property can be set to change the username of the URL. If the URL has no {{domxref("SVGAElement.host", "host")}} or its scheme is `file:`, then setting this property has no effect. Setting it also rewrites the element's {{SVGAttr("href")}} attribute as a complete, absolute URL.
 
@@ -24,7 +25,9 @@ A string.
 
 ### Getting the username from an SVG link
 
-```html
+Given the following SVG:
+
+```html live-sample___svgaelement-username
 <svg viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg">
   <a id="link" href="https://anonymous:flabada@example.com/">
     <text x="0" y="20">Example</text>
@@ -32,10 +35,41 @@ A string.
 </svg>
 ```
 
-```js
-const link = document.getElementById("link");
-console.log(link.username); // "anonymous"
+```html hidden live-sample___svgaelement-username
+<pre id="log"></pre>
 ```
+
+```css hidden live-sample___svgaelement-username
+svg {
+  width: 200px;
+  height: 30px;
+}
+svg a text {
+  fill: blue;
+  text-decoration: underline;
+}
+#log {
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden live-sample___svgaelement-username
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+}
+```
+
+We can read the username of the link:
+
+```js live-sample___svgaelement-username
+const link = document.getElementById("link");
+
+log(`username: "${link.username}"`); // username: "anonymous"
+```
+
+{{EmbedLiveSample("svgaelement-username", "100%", "120")}}
 
 ## Specifications
 
@@ -48,5 +82,4 @@ console.log(link.username); // "anonymous"
 ## See also
 
 - SVG {{SVGElement("a")}} element
-- The {{domxref("SVGAElement")}} interface it belongs to
 - {{domxref("HTMLAnchorElement.username")}}

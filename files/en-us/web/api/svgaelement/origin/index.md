@@ -8,7 +8,7 @@ browser-compat: api.SVGAElement.origin
 
 {{APIRef("SVG")}}
 
-The **`origin`** read-only property of the {{domxref("SVGAElement")}} interface returns a string containing the {{glossary("origin")}} of the SVG {{SVGElement("a")}} element's {{SVGAttr("href")}}: usually its scheme, domain, and port.
+The **`origin`** read-only property of the {{domxref("SVGAElement")}} interface represents the {{glossary("origin")}} of the SVG {{SVGElement("a")}} element's {{SVGAttr("href")}}: usually its scheme, domain, and port.
 
 The exact structure varies depending on the type of URL:
 
@@ -28,7 +28,9 @@ A string.
 
 ### Getting the origin of an SVG link
 
-```html
+Given the following SVG:
+
+```html live-sample___svgaelement-origin
 <svg viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg">
   <a id="link" href="https://example.com/">
     <text x="0" y="20">Example</text>
@@ -36,10 +38,41 @@ A string.
 </svg>
 ```
 
-```js
-const link = document.getElementById("link");
-console.log(link.origin); // "https://example.com"
+```html hidden live-sample___svgaelement-origin
+<pre id="log"></pre>
 ```
+
+```css hidden live-sample___svgaelement-origin
+svg {
+  width: 200px;
+  height: 30px;
+}
+svg a text {
+  fill: blue;
+  text-decoration: underline;
+}
+#log {
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden live-sample___svgaelement-origin
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+}
+```
+
+We can read the origin of the link:
+
+```js live-sample___svgaelement-origin
+const link = document.getElementById("link");
+
+log(`origin: "${link.origin}"`); // origin: "https://example.com"
+```
+
+{{EmbedLiveSample("svgaelement-origin", "100%", "120")}}
 
 ## Specifications
 
@@ -52,5 +85,4 @@ console.log(link.origin); // "https://example.com"
 ## See also
 
 - SVG {{SVGElement("a")}} element
-- The {{domxref("SVGAElement")}} interface it belongs to
 - {{domxref("HTMLAnchorElement.origin")}}
