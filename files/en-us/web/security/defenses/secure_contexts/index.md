@@ -38,7 +38,7 @@ For example:
 
 ### Framed documents
 
-Documents in an {{htmlelement("iframe")}} provide a secure context when they are delivered from a [potentially trustworthy origin](#potentially_trustworthy_origins), and are themselves embedded in a secure context.
+Documents in an {{htmlelement("iframe")}} provide a secure context when they are delivered from a [potentially trustworthy URL](#potentially_trustworthy_urls), and are themselves embedded in a secure context.
 
 The means that if a top-level document from `http://example.com` embeds an `<iframe>` whose document is `https://example.com`, then the embedded document is _not_ a secure context.
 
