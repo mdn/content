@@ -29,8 +29,8 @@ Top-level documents provide a secure context when their URL is a [potentially tr
 
 For example:
 
-- `https://example.com` :  ✅ Secure (`https` URL)
--  `http://localhost`:✅ Secure (`localhost` URL)
+- `https://example.com` : ✅ Secure (`https` URL)
+- `http://localhost`:✅ Secure (`localhost` URL)
 - `file:///path/to/resource.html``:✅ Secure (`file` URL)
 - `https://example.com`: ❌ Not secure (`http` URL)
 
