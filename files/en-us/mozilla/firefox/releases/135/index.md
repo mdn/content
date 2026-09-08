@@ -77,6 +77,6 @@ These features are newly shipped in Firefox 135 but are disabled by default. To 
 
 - **Temporal API** (Nightly release): <code>javascript.options.experimental.temporal</code>. The [Temporal object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal) aims to simplify working with dates and times in various scenarios, with built-in time zone and calendar representations. ([Firefox bug 1912511](https://bugzil.la/1912511)).
 - **Prioritized Task Scheduling API**: <code>dom.enable_web_task_scheduling</code>.
-  The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides a standardized way to prioritize all tasks belonging to an application, whether they are defined in a website developer's code, or in third party libraries and frameworks.
+  The [Prioritized Task Scheduling API](/en-US/docs/Web/API/Prioritized_Task_Scheduling_API) provides a standardized way to prioritize all tasks belonging to an application, whether they are defined in a website developer's code, or in third-party libraries and frameworks.
   This has temporarily been disabled in Nightly builds in order to avoid [breakage in-the-wild](https://bugzil.la/1937232).
   ([Firefox bug 1938242](https://bugzil.la/1938242)).
