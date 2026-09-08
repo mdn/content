@@ -30,7 +30,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-See the main {{domxref("Subscriber")}} reference page for a basic example, and [Using the Observable API](/en-US/docs/Web/API/Observable_API/Using) for additional examples.
+See the main {{domxref("Subscriber")}} reference page for a basic example, and [Creating custom observables](/en-US/docs/Web/API/Observable_API/Creating_observables) for additional examples.
 
 ## Specifications
 
@@ -42,5 +42,5 @@ See the main {{domxref("Subscriber")}} reference page for a basic example, and [
 
 ## See also
 
-- [Using the Observable API](/en-US/docs/Web/API/Observable_API/Using)
+- [Creating custom observables](/en-US/docs/Web/API/Observable_API/Creating_observables)
 - [Observable explainer](https://github.com/WICG/observable/blob/master/README.md)

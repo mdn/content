@@ -84,7 +84,7 @@ The two main ways to create an observable are as follows:
 
 ## Examples
 
-For complete working examples, see [Using the Observable API](/en-US/docs/Web/API/Observable_API/Using).
+For complete working examples, see [Using observables](/en-US/docs/Web/API/Observable_API/Using_observables) and [Creating custom observables](/en-US/docs/Web/API/Observable_API/Creating_observables).
 
 ### Creating an observable using `when()`
 
@@ -150,5 +150,6 @@ observable.subscribe({
 
 ## See also
 
-- [Using the Observable API](/en-US/docs/Web/API/Observable_API/Using)
+- [Using observables](/en-US/docs/Web/API/Observable_API/Using_observables)
+- [Creating custom observables](/en-US/docs/Web/API/Observable_API/Creating_observables)
 - [Observable explainer](https://github.com/WICG/observable/blob/master/README.md)

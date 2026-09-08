@@ -1192,7 +1192,10 @@
     },
     "Observable API": {
       "overview": ["Observable API"],
-      "guides": ["/docs/Web/API/Observable_API/Using"],
+      "guides": [
+        "/docs/Web/API/Observable_API/Using_observables",
+        "/docs/Web/API/Observable_API/Creating_observables"
+      ],
       "interfaces": ["Observable", "Subscriber"],
       "methods": ["EventTarget.when()"],
       "properties": [],

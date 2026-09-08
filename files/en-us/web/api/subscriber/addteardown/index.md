@@ -10,7 +10,7 @@ browser-compat: api.Subscriber.addTeardown
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`addTeardown()`** method of the {{domxref("Subscriber")}} interface runs automatically after the subscription completes or is [unsubscribed](/en-US/docs/Web/API/Observable_API/Using#unsubscribing_from_an_observable).
+The **`addTeardown()`** method of the {{domxref("Subscriber")}} interface runs automatically after the subscription completes or is [unsubscribed](/en-US/docs/Web/API/Observable_API/Using_observables#unsubscribing_from_an_observable).
 
 The functionality of the `addTeardown()` method is is defined inside the subscriber callback, unlike the other subscriber lifecycle callbacks, which are defined in the {{domxref("Observable.subscribe()")}} method that was called to subscribe to the observable stream.
 
@@ -31,7 +31,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-See the main {{domxref("Subscriber")}} reference page for a basic example, and [Using the Observable API](/en-US/docs/Web/API/Observable_API/Using) for additional examples.
+See the main {{domxref("Subscriber")}} reference page for a basic example, and [Creating custom observables](/en-US/docs/Web/API/Observable_API/Creating_observables) for additional examples.
 
 ## Specifications
 
@@ -43,5 +43,5 @@ See the main {{domxref("Subscriber")}} reference page for a basic example, and [
 
 ## See also
 
-- [Using the Observable API](/en-US/docs/Web/API/Observable_API/Using)
+- [Creating custom observables](/en-US/docs/Web/API/Observable_API/Creating_observables)
 - [Observable explainer](https://github.com/WICG/observable/blob/master/README.md)

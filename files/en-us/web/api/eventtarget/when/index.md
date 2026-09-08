@@ -58,7 +58,7 @@ The markup contains a {{htmlelement("button")}} element to click, and a {{htmlel
 We call `when("click")` on the `btn`, which obtains an observable for the `click` event stream. We then chain a `subscribe()` call onto the observable to subscribe the `increment()` function to the observable, so it is called each time the button is clicked.
 
 > [!NOTE]
-> For this particular example, `.when("click").subscribe(increment)` and `.addEventListener("click", increment)` are almost exactly equivalent. However, using `when()` allows you to compose event streams using observables. The [Using the Observable API](/en-US/docs/Web/API/Observable_API/Using) has more examples.
+> For this particular example, `.when("click").subscribe(increment)` and `.addEventListener("click", increment)` are almost exactly equivalent. However, using `when()` allows you to compose event streams using observables. The [Using observables](/en-US/docs/Web/API/Observable_API/Using_observables) guide has more examples.
 
 ```js live-sample___basic-when
 const btn = document.querySelector("button");
@@ -92,6 +92,6 @@ Try clicking the button to see the click count increment.
 
 ## See also
 
-- [Using the Observable API](/en-US/docs/Web/API/Observable_API/Using)
+- [Using observables](/en-US/docs/Web/API/Observable_API/Using_observables)
 - {{domxref("EventTarget.addEventListener()")}}
 - [Observable explainer](https://github.com/WICG/observable/blob/master/README.md)

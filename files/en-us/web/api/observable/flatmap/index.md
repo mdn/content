@@ -33,7 +33,7 @@ An {{domxref("Observable")}}.
 
 ## Examples
 
-For a `flatMap()` example, see our [Canvas drawing example](/en-US/docs/Web/API/Observable_API/Using#canvas_drawing_example).
+For a `flatMap()` example, see our [Canvas drawing example](/en-US/docs/Web/API/Observable_API/Using_observables#canvas_drawing_example).
 
 ## Specifications
 
@@ -45,5 +45,5 @@ For a `flatMap()` example, see our [Canvas drawing example](/en-US/docs/Web/API/
 
 ## See also
 
-- [Using the Observable API](/en-US/docs/Web/API/Observable_API/Using)
+- [Using observables](/en-US/docs/Web/API/Observable_API/Using_observables)
 - [Observable explainer](https://github.com/WICG/observable/blob/master/README.md)

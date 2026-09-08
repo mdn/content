@@ -125,5 +125,5 @@ Try pressing the start button to begin a count. After a count of 5, the count is
 
 ## See also
 
-- [Using the Observable API](/en-US/docs/Web/API/Observable_API/Using)
+- [Creating custom observables](/en-US/docs/Web/API/Observable_API/Creating_observables)
 - [Observable explainer](https://github.com/WICG/observable/blob/master/README.md)

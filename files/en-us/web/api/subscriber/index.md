@@ -9,7 +9,7 @@ browser-compat: api.Subscriber
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`Subscriber`** interface of the {{domxref("Observable API", "Observable API", "", "nocode")}} represents a subscription to a stream of observable values, and contains methods to manage the [lifecycle](/en-US/docs/Web/API/Observable_API/Using#creating_custom_observables) of that subscription.
+The **`Subscriber`** interface of the {{domxref("Observable API", "Observable API", "", "nocode")}} represents a subscription to a stream of observable values, and contains methods to manage the [lifecycle](/en-US/docs/Web/API/Observable_API/Creating_observables#creating_an_observable) of that subscription.
 
 An observable's `Subscriber` object is passed in as an argument to the callback function specified as the argument of an observable's constructor when it is first created. Observables created using {{domxref("EventTarget.when()")}} have their subscriber callbacks created implicitly by the browser, whereas custom observables created directly using the {{domxref("Observable.Observable", "Observable()")}} constructor have their subscriber callbacks defined explicitly by the developer.
 
@@ -37,7 +37,7 @@ The subscriber callback defines _when_ the `Subscriber` lifecycle callbacks are 
 
 ## Examples
 
-For additional examples, see [Using the Observable API](/en-US/docs/Web/API/Observable_API/Using).
+For additional examples, see [Creating custom observables](/en-US/docs/Web/API/Observable_API/Creating_observables).
 
 ### Basic `Observable()` example
 
@@ -117,5 +117,5 @@ The `<button>`s text then changes to "Restart count" once the count is finished,
 
 ## See also
 
-- [Using the Observable API](/en-US/docs/Web/API/Observable_API/Using)
+- [Creating custom observables](/en-US/docs/Web/API/Observable_API/Creating_observables)
 - [Observable explainer](https://github.com/WICG/observable/blob/master/README.md)

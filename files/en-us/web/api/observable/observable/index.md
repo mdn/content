@@ -21,7 +21,7 @@ new Observable(callback)
 ### Parameters
 
 - `callback`
-  - : A callback function that defines the [lifecycle of the observable stream](/en-US/docs/Web/API/Observable_API/Using#creating_custom_observables), including what values are passed through it and when, when the stream is completed, etc. The callback function has a {{domxref("Subscriber")}} object as an argument on which the lifecycle functionality is defined.
+  - : A callback function that defines the [lifecycle of the observable stream](/en-US/docs/Web/API/Observable_API/Creating_observables#creating_an_observable), including what values are passed through it and when, when the stream is completed, etc. The callback function has a {{domxref("Subscriber")}} object as an argument on which the lifecycle functionality is defined.
 
     For developer-created custom observables created using the `Observable()` constructor, you pass this callback in manually, whereas for platform-returned ones (created using {{domxref("EventTarget.when()")}}), the platform constructs the observable with an internal callback that runs when you subscribe the observable to the event stream using {{domxref("Observable.subscribe()")}}.
 
@@ -73,5 +73,5 @@ observable.subscribe({
 
 ## See also
 
-- [Using the Observable API](/en-US/docs/Web/API/Observable_API/Using)
+- [Creating custom observables](/en-US/docs/Web/API/Observable_API/Creating_observables)
 - [Observable explainer](https://github.com/WICG/observable/blob/master/README.md)

@@ -17,7 +17,7 @@ The **`active`** read-only property of the
 
 A boolean value that returns `true` if the subscription is active, and `false` if not.
 
-A subscription is active once {{domxref("Observable.subscribe", "subscribe()")}} has been called on the associated observable, and is no longer active once the subscription has completed ({{domxref("Subscriber.complete", "complete()")}} is called) or errored ({{domxref("Subscriber.error", "error()")}} is called) or the observable has been [unsubscribed](/en-US/docs/Web/API/Observable_API/Using#unsubscribing_from_an_observable).
+A subscription is active once {{domxref("Observable.subscribe", "subscribe()")}} has been called on the associated observable, and is no longer active once the subscription has completed ({{domxref("Subscriber.complete", "complete()")}} is called) or errored ({{domxref("Subscriber.error", "error()")}} is called) or the observable has been [unsubscribed](/en-US/docs/Web/API/Observable_API/Using_observables#unsubscribing_from_an_observable).
 
 ## Examples
 
@@ -141,5 +141,5 @@ Try pressing the start button to begin a count. You can then press the abort but
 
 ## See also
 
-- [Using the Observable API](/en-US/docs/Web/API/Observable_API/Using)
+- [Creating custom observables](/en-US/docs/Web/API/Observable_API/Creating_observables)
 - [Observable explainer](https://github.com/WICG/observable/blob/master/README.md)

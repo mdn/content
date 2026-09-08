@@ -68,7 +68,7 @@ Finally, {{domxref("Observable.subscribe()")}} subscribes to the observable, cal
 
 You may notice that this paradigm is very similar to [iterators](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols), where we can also transform with [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/map) and [`filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/filter) and consume with `next()` and [`toArray()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/toArray). Indeed, both observables and iterators represent streams of data; the key difference, as previously stated, is that iterators are pull-based (the consumer decides when to receive values), while observables are push-based (the producer decides when to send values).
 
-See [Using the Observable API](/en-US/docs/Web/API/Observable_API/Using) for more information on the above concepts.
+See [Using observables](/en-US/docs/Web/API/Observable_API/Using_observables) and [Creating custom observables](/en-US/docs/Web/API/Observable_API/Creating_observables) for more information on the above concepts.
 
 ## Interfaces
 
@@ -84,7 +84,7 @@ See [Using the Observable API](/en-US/docs/Web/API/Observable_API/Using) for mor
 
 ## Examples
 
-See [Using the Observable API](/en-US/docs/Web/API/Observable_API/Using) for complete examples.
+See [Using observables](/en-US/docs/Web/API/Observable_API/Using_observables) and [Creating custom observables](/en-US/docs/Web/API/Observable_API/Creating_observables) for complete examples.
 
 ## Specifications
 
