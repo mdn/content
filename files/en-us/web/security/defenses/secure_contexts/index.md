@@ -52,7 +52,7 @@ The means that if a top-level document from `http://example.com` embeds an `<ifr
 
 #### Dedicated workers
 
-Dedicated workers provide a secure context when they are delivered from a [potentially trustworthy origin](#potentially_trustworthy_origins), and when their owner is a secure context.
+Dedicated workers provide a secure context when their owner is a secure context.
 
 #### Shared workers
 
