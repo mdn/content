@@ -276,7 +276,7 @@ When not explicitly set, the {{cssxref("timeline-trigger-activation-range-end")}
 
 {{EmbedLiveSample("basic-example", "100%", "240")}}
 
-Try scrolling the content up. The animation starts playing when `50%` of the tracked `.trigger` element has entered the scrollport end edge and pauses when it has completely exited the scrollport at the opposite edge. When you scroll down, the effect happens in reverse — the animation plays when it starts to enter the top of the scrollport, and pauses when `50%` of it has exited the bottom.
+Try scrolling the content up. The animation starts playing when `50%` of the tracked `.trigger` element has entered the scrollport end edge and pauses when it has completely exited the scrollport at the opposite edge. When you scroll down, the effect happens in reverse — the animation restarts playing when the trigger element starts to enter the top of the scrollport, and pauses again when `50%` of the trigger has exited the bottom.
 
 ## Specifications
 
