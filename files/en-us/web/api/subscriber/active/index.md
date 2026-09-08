@@ -10,126 +10,92 @@ browser-compat: api.Subscriber.active
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`active`** read-only property of the
-{{domxref("Subscriber")}} interface is a boolean value that indicates whether the subscription is active or not.
+The **`active`** read-only property of the {{domxref("Subscriber")}} interface indicates whether the subscription can still send values to observers.
 
 ## Value
 
-A boolean value that returns `true` if the subscription is active, and `false` if not.
+A boolean that is `true` while the subscription is active and `false` after it ends.
 
-A subscription is active once {{domxref("Observable.subscribe", "subscribe()")}} has been called on the associated observable, and is no longer active once the subscription has completed ({{domxref("Subscriber.complete", "complete()")}} is called) or errored ({{domxref("Subscriber.error", "error()")}} is called) or the observable has been [unsubscribed](/en-US/docs/Web/API/Observable_API/Using_observables#unsubscribing_from_an_observable).
+A subscriber becomes inactive when {{domxref("Subscriber.complete()")}} or {{domxref("Subscriber.error()")}} is called, or when all observers [unsubscribe](/en-US/docs/Web/API/Observable_API/Using_observables#unsubscribing_from_an_observable). Unsubscribing one observer does not make the subscriber inactive if other observers remain. The value is already `false` when teardown callbacks and the observers' `complete` or `error` callbacks run.
+
+If an already aborted signal is passed to {{domxref("Observable.subscribe()")}} when starting a new subscription, the producer callback receives an inactive `Subscriber`.
 
 ## Examples
 
 ### Demonstrating the value of `active` throughout the lifecycle
 
-This example is a simple app that uses an observable to count from 1 to 10. It includes a start button to start the count, and an abort button that allows the user to abort the count at any point. It also outputs the count and the active state of the observable subscription to the screen.
-
-#### HTML
-
-The markup includes two {{htmlelement("button")}} elements to represent the start and abort buttons, and two {{htmlelement("p")}} elements to output the count and active values to:
+This example counts from 1 to 10 and displays whether the subscription is active. The start button is disabled while the count runs. The abort button lets the user stop the count early.
 
 ```html live-sample___basic-active
 <button class="count">Start count</button>
-<button class="abort">Abort count</button>
+<button class="abort" disabled>Abort count</button>
 <p class="countOutput">Count not started</p>
-<p class="active">Observable subscription active:</p>
+<p class="active">Observable subscription active: false</p>
 ```
 
-#### JavaScript
-
-In our script, we first grab references to our two buttons and two paragraphs:
+In the producer callback, we display the initial `active` value and start an interval. After sending the numbers 1 to 10, we call `complete()`. The teardown callback clears the interval and displays the updated `active` value. It runs both when the count completes and when the user aborts it.
 
 ```js live-sample___basic-active
 const outputElem = document.querySelector(".countOutput");
 const activeStatus = document.querySelector(".active");
 const countBtn = document.querySelector(".count");
 const abortBtn = document.querySelector(".abort");
-```
-
-Next, we create a `controller` variable that will later contain our {{domxref("AbortController")}}:
-
-```js live-sample___basic-active
 let controller;
-```
 
-Now we define an `init()` function, which will be called when our count is started and control the whole process:
-
-```js live-sample___basic-active
 function init() {
+  controller = new AbortController();
+
   const observable = new Observable((subscriber) => {
     countBtn.textContent = "Counting...";
     countBtn.disabled = true;
+    abortBtn.disabled = false;
+    activeStatus.textContent = `Observable subscription active: ${subscriber.active}`;
+
     let i = 1;
     const interval = setInterval(() => {
-      subscriber.next(i);
-      i++;
-
-      activeStatus.textContent = `Observable subscription active: ${subscriber.active}`;
+      if (i > 10) {
+        subscriber.complete();
+      } else {
+        subscriber.next(i++);
+      }
     }, 500);
+
     subscriber.addTeardown(() => {
       clearInterval(interval);
+      activeStatus.textContent = `Observable subscription active: ${subscriber.active}`;
       countBtn.textContent = "Restart count";
       countBtn.disabled = false;
+      abortBtn.disabled = true;
     });
   });
-
-  controller = new AbortController();
 
   observable.subscribe(
     {
       next: (value) => {
-        if (value > 10) {
-          controller.abort();
-          outputElem.textContent = "Count complete";
-        } else {
-          outputElem.textContent = value;
-        }
+        outputElem.textContent = value;
+      },
+      complete: () => {
+        outputElem.textContent = "Count complete";
       },
     },
-    {
-      signal: controller.signal,
-    },
+    { signal: controller.signal },
   );
 }
-```
 
-In this function, we first create a new observable using the {{domxref("Observable.Observable", "Observable()")}} constructor, so that a new observable is created every time the count is started. In here, we:
-
-- Set the start button's text content to "Counting..." and disable it so that multiple observables can't be created at once.
-- Initialize an `i` variable to the value `1` then start a {{domxref("Window.setInterval", "setInterval()")}} running every 500 milliseconds. Inside the interval, we call {{domxref("Subscriber.next()")}}, passing it the current value of `i`, then iterate `i` by `1`.
-- Inside the interval, we also print the `Subscriber.active` value to the active output paragraph.
-- Finally, we define a {{domxref("Subscriber.addTeardown()")}} function that:
-  - Clears the interval using {{domxref("Window.clearInterval", "clearInterval()")}} to make sure this interval doesn't interfere with the activity of future intervals or cause memory leaks.
-  - Sets the start button's text content to "Restart count" and reenables it after the subscription has been completed or aborted, ready for the count to be run again.
-
-Next, we create a new `AbortController` using the {{domxref("AbortController.AbortController", "AbortController()")}} constructor and assign it to the `controller` variable.
-
-In the `Observable.subscribe()` call, we include a `next()` method definition that checks whether the passed `value` is higher than `10`. If so, we update the count output to "Count complete" and abort the subscription via {{domxref("AbortController.abort()")}}; if not, we update the count output to the current `value` and carry on to the next iteration.
-
-We also include a second `subscribe()` argument — an options object containing a `signal` property equal to the {{domxref("AbortController.signal")}} property. This is required to associate the controller with the observable, enabling us to unsubscribe via the `abort()` call.
-
-The last chunk of JavaScript defines two event handler functions:
-
-```js live-sample___basic-active
 countBtn.addEventListener("click", init);
-
 abortBtn.addEventListener("click", () => {
   controller.abort();
   outputElem.textContent = "Count aborted";
 });
 ```
 
-- When the start button is clicked, we run the `init()` function to start the count process off.
-- When the abort button is clicked, we run `AbortController.abort()` to abort the subscription and update the count output text to explicitly report that the count was aborted manually.
+The signal passed to `subscribe()` lets the abort button unsubscribe the observer. Aborting does not invoke the observer's `complete` callback, so the abort button's handler sets the output to "Count aborted" itself.
 
 #### Result
 
-The rendered output looks like this:
-
 {{EmbedLiveSample("basic-active", "100%", "120px")}}
 
-Try pressing the start button to begin a count. You can then press the abort button at any time to unsubscribe and stop the count, or wait for the count to finish. Note how the `active` value is `true` while the count is ongoing, but it becomes `false` when the count completes or is aborted.
+Press the start button to begin a count. The `active` value becomes `true` when the subscription starts and `false` when it completes or is aborted.
 
 ## Specifications
 

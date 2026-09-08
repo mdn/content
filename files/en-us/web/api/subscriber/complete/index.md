@@ -10,9 +10,11 @@ browser-compat: api.Subscriber.complete
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`complete()`** method of the {{domxref("Subscriber")}} interface runs to complete the subscription.
+The **`complete()`** method of the {{domxref("Subscriber")}} interface closes the subscription and notifies observers that the stream has completed successfully.
 
-Specifically, the functionality of the called `complete()` method is defined in the {{domxref("Observable.subscribe()")}} method that was called to subscribe to the observable stream.
+Calling this method sets {{domxref("Subscriber.active", "active")}} to `false`, aborts {{domxref("Subscriber.signal", "signal")}}, and runs the registered [teardown callbacks](/en-US/docs/Web/API/Subscriber/addTeardown). It then synchronously invokes each observer's `complete` callback supplied to {{domxref("Observable.subscribe()")}}. If the subscriber is already inactive, this method does nothing. Calling `complete()` does not stop execution of the producer's code; subsequent calls to {{domxref("Subscriber.next()")}} on this subscriber have no effect.
+
+[Unsubscribing](/en-US/docs/Web/API/Observable_API/Using_observables#unsubscribing_from_an_observable) does not invoke an observer's `complete` callback. Use `addTeardown()` for cleanup that must also run when observers unsubscribe or the stream errors.
 
 ## Syntax
 

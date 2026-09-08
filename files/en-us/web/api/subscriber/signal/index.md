@@ -10,110 +10,58 @@ browser-compat: api.Subscriber.signal
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`signal`** read-only property of the
-{{domxref("Subscriber")}} interface is a reference to the {{domxref("AbortSignal")}} object instance set in the subscribing {{domxref("Observable.subscribe()")}} call.
-
-This is useful when you want to handle an aborted subscription from inside the subscribe callback function defined when the observer is created (via the {{domxref("Observable.Observable", "Observable()")}} constructor).
+The **`signal`** read-only property of the {{domxref("Subscriber")}} interface provides an {{domxref("AbortSignal")}} that is aborted when the subscription ends. A producer can pass this signal to APIs such as {{domxref("Window.fetch", "fetch()")}} to cancel work when it is no longer needed.
 
 ## Value
 
-An {{domxref("AbortSignal")}}.
+An internally created {{domxref("AbortSignal")}}. It is aborted when {{domxref("Subscriber.complete()")}} or {{domxref("Subscriber.error()")}} is called, or when all observers unsubscribe.
+
+This is a different object from any signal passed to {{domxref("Observable.subscribe()")}}. A signal passed to `subscribe()` controls an individual observer's subscription; `subscriber.signal` tracks the shared subscription. When one observer unsubscribes, `subscriber.signal` remains active if other observers are still subscribed.
+
+For cleanup that does not use an API accepting an `AbortSignal`, use {{domxref("Subscriber.addTeardown()")}}. Unlike registering an `abort` event listener, `addTeardown()` also runs the callback immediately if the subscriber is already inactive.
 
 ## Examples
 
-### Handling an aborted subscription
+### Canceling a fetch request
 
-This example is a simple app that uses an observable to count from 1 to 5, and aborts the subscription when 5 is reached. It includes a start button to start the count, and outputs the count value to the screen.
+This example wraps a request for `/data.json` in an observable. Passing `subscriber.signal` to `fetch()` associates the request with the subscription's lifetime.
 
-#### HTML
-
-The markup includes a {{htmlelement("button")}} element to represent the start button, and a {{htmlelement("p")}} element to output the count values to:
-
-```html live-sample___basic-active
-<button class="count">Start count</button>
-<p class="countOutput">Count not started</p>
-```
-
-#### JavaScript
-
-In our script, we first grab references to our button and paragraph:
-
-```js live-sample___basic-active
-const outputElem = document.querySelector(".countOutput");
-const countBtn = document.querySelector(".count");
-```
-
-Next, we create a `controller` variable that will later contain an {{domxref("AbortController")}}:
-
-```js live-sample___basic-active
-let controller;
-```
-
-Now we define an `init()` function, which will be called when our count is started and control the whole process:
-
-```js live-sample___basic-active
-function init() {
-  const observable = new Observable((subscriber) => {
-    countBtn.textContent = "Counting...";
-    countBtn.disabled = true;
-    let i = 1;
-    const interval = setInterval(() => {
-      subscriber.next(i);
-      i++;
-    }, 500);
-
-    subscriber.addTeardown(() => {
-      countBtn.textContent = "Restart count";
-      outputElem.textContent = "Count complete";
-      countBtn.disabled = false;
-      clearInterval(interval);
+```js
+const observable = new Observable((subscriber) => {
+  fetch("/data.json", { signal: subscriber.signal })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Request failed: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      subscriber.next(data);
+      subscriber.complete();
+    })
+    .catch((error) => {
+      if (subscriber.active) {
+        subscriber.error(error);
+      }
     });
-  });
+});
 
-  controller = new AbortController();
+const controller = new AbortController();
+observable.subscribe(
+  {
+    next: (data) => console.log(data),
+    error: (error) => console.error(error),
+  },
+  { signal: controller.signal },
+);
 
-  observable.subscribe(
-    {
-      next: (value) => {
-        if (value > 5) {
-          controller.abort();
-        } else {
-          outputElem.textContent = value;
-        }
-      },
-    },
-    {
-      signal: controller.signal,
-    },
-  );
-}
+// To cancel the subscription and any pending request:
+// controller.abort();
 ```
 
-In this function, we first create a new observable using the {{domxref("Observable.Observable", "Observable()")}} constructor, so that a new observable is created every time the count is started. In here, we:
+If `controller.abort()` is called while the request is pending, the only observer unsubscribes, which aborts `subscriber.signal` and cancels the request. The promise rejection handler checks `subscriber.active` so that cancellation does not cause a call to `error()` on an inactive subscriber, which would report an error to the global object.
 
-- Set the start button's text content to "Counting..." and disable it so that multiple observables can't be created at once.
-- Initialize an `i` variable to the value `1` then start a {{domxref("Window.setInterval", "setInterval()")}} running every 500 milliseconds. Inside the interval, we call {{domxref("Subscriber.next()")}}, passing it the current value of `i`, then iterate `i` by `1`.
-- Finally, we specify an {{domxref("Subscriber.addTeardown()")}} function that cleans up the app ready for the next count when the subscription is aborted. We set the start button's text to "Restart count", the output text to "Restart count", and re-enable the start button. We also we clear the current interval using {{domxref("Window.clearInterval", "clearInterval()")}} to make sure it doesn't interfere with the activity of future intervals or cause memory leaks.
-
-Next, we create a new `AbortController` using the {{domxref("AbortController.AbortController", "AbortController()")}} constructor and assign it to the `controller` variable.
-
-In the `Observable.subscribe()` call, we include a `next()` method definition that checks whether the passed `value` is higher than `5`. If so, we abort the subscription via {{domxref("AbortController.abort()")}}; if not, we update the count output to the current `value` and carry on to the next iteration.
-
-We also include a second `subscribe()` argument — an options object containing a `signal` property equal to the {{domxref("AbortController.signal")}} property. This is required to associate the controller with the observable, enabling us to unsubscribe via the `abort()` call.
-
-The last line of JavaScript defines an event handler function on the start button so that, when it is clicked, we run the `init()` function to start the count process off:
-
-```js live-sample___basic-active
-countBtn.addEventListener("click", init);
-```
-
-#### Result
-
-The rendered output looks like this:
-
-{{EmbedLiveSample("basic-active", "100%", "90px")}}
-
-Try pressing the start button to begin a count. After a count of 5, the count is completed via an `abort()` call, and the app is reset via the abort event handler in the subscriber callback.
+On success, the producer sends the parsed data and completes the subscription. Request failures are forwarded to the observer's `error` callback while the subscription is active.
 
 ## Specifications
 

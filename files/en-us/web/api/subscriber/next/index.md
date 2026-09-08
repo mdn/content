@@ -10,9 +10,9 @@ browser-compat: api.Subscriber.next
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`next()`** method of the {{domxref("Subscriber")}} interface runs whenever a value is sent through the subscribed observable stream, to handle it.
+The **`next()`** method of the {{domxref("Subscriber")}} interface sends a value to each observer of the subscription, invoking its `next` callback synchronously. These callbacks are supplied to {{domxref("Observable.subscribe()")}}.
 
-Specifically, the functionality of the called `next()` method is defined in the {{domxref("Observable.subscribe()")}} method that was called to subscribe to the observable stream.
+If the subscriber is no longer {{domxref("Subscriber.active", "active")}}, this method does nothing. An exception thrown by an observer's `next` callback is reported to the global object; it does not call that observer's `error` callback or stop delivery to other observers.
 
 ## Syntax
 
@@ -23,7 +23,7 @@ next(value)
 ### Parameters
 
 - `value`
-  - : The current value being passed through the observable stream.
+  - : The value to send to observers. This can be any JavaScript value.
 
 ### Return value
 

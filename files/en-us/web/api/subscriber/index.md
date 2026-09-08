@@ -9,11 +9,11 @@ browser-compat: api.Subscriber
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`Subscriber`** interface of the {{domxref("Observable API", "Observable API", "", "nocode")}} represents a subscription to a stream of observable values, and contains methods to manage the [lifecycle](/en-US/docs/Web/API/Observable_API/Creating_observables#creating_an_observable) of that subscription.
+The **`Subscriber`** interface of the [Observable API](/en-US/docs/Web/API/Observable_API) represents a subscription to a stream of observable values, and contains methods to manage the [lifecycle](/en-US/docs/Web/API/Observable_API/Creating_observables#creating_an_observable) of that subscription.
 
-An observable's `Subscriber` object is passed in as an argument to the callback function specified as the argument of an observable's constructor when it is first created. Observables created using {{domxref("EventTarget.when()")}} have their subscriber callbacks created implicitly by the browser, whereas custom observables created directly using the {{domxref("Observable.Observable", "Observable()")}} constructor have their subscriber callbacks defined explicitly by the developer.
+A `Subscriber` object is passed to the callback supplied to the {{domxref("Observable.Observable", "Observable()")}} constructor when the first observer subscribes. Additional observers share this `Subscriber` while it is active. After the subscription completes, errors, or all observers unsubscribe, the next subscription invokes the callback with a new `Subscriber`. You cannot construct a `Subscriber` directly.
 
-The subscriber callback defines _when_ the `Subscriber` lifecycle callbacks are invoked, or to put it another way, the conditions under which stages of the lifecycle occur. The actual functionality of the `Subscriber` lifecycle callbacks is defined when {{domxref("Observable.subscribe", "subscribe()")}} is invoked on the observable, with the exception of {{domxref("Subscriber.addTeardown", "addTeardown()")}}, which is defined inside the subscriber callback itself.
+The producer calls `Subscriber.next()`, `Subscriber.error()`, and `Subscriber.complete()` to send values and notifications to observers. The observers define how to handle these notifications through the corresponding callbacks passed to {{domxref("Observable.subscribe()")}}. The producer can also register cleanup callbacks with {{domxref("Subscriber.addTeardown()")}}.
 
 {{InheritanceDiagram}}
 
@@ -22,18 +22,18 @@ The subscriber callback defines _when_ the `Subscriber` lifecycle callbacks are 
 - {{domxref("Subscriber.active", "active")}} {{Experimental_Inline}}
   - : A boolean value that indicates whether the subscription is active or not.
 - {{domxref("Subscriber.signal", "signal")}} {{Experimental_Inline}}
-  - : A reference to the {{domxref("AbortSignal")}} object instance set in the subscribing {{domxref("Observable.subscribe()")}} call.
+  - : An internally created {{domxref("AbortSignal")}} that is aborted when the subscription completes, errors, or all observers unsubscribe.
 
 ## Instance methods
 
 - {{domxref("Subscriber.addTeardown", "addTeardown()")}} {{Experimental_Inline}}
-  - : Runs automatically after the subscription completes or is unsubscribed.
+  - : Registers a callback to clean up resources when the subscription ends.
 - {{domxref("Subscriber.complete", "complete()")}} {{Experimental_Inline}}
-  - : Runs to complete the subscription.
+  - : Closes the subscription and notifies observers that the stream has completed successfully.
 - {{domxref("Subscriber.error", "error()")}} {{Experimental_Inline}}
-  - : Runs when an exception is thrown somewhere in the observable pipeline.
+  - : Closes the subscription and notifies observers of an error.
 - {{domxref("Subscriber.next", "next()")}} {{Experimental_Inline}}
-  - : Runs whenever a value is sent through the stream, to handle it.
+  - : Sends a value to the observers of the subscription.
 
 ## Examples
 
@@ -41,7 +41,7 @@ For additional examples, see [Creating custom observables](/en-US/docs/Web/API/O
 
 ### Basic `Observable()` example
 
-In this example, we will print the numbers 1 to 10 to the page, then print a message to say that the count is complete and run teardown code.
+In this example, we print the numbers 1 to 10 to the page. When the producer completes the subscription, the teardown callback clears the interval, and then the observer's `complete` callback displays a completion message.
 
 #### HTML
 
@@ -61,6 +61,7 @@ const outputElem = document.querySelector("p");
 const btn = document.querySelector("button");
 
 btn.addEventListener("click", () => {
+  btn.disabled = true;
   const observable = new Observable((subscriber) => {
     let i = 1;
     const interval = setInterval(() => {
@@ -76,6 +77,7 @@ btn.addEventListener("click", () => {
         btn.textContent = "Restart count";
       }
       clearInterval(interval);
+      btn.disabled = false;
     });
   });
 
@@ -92,10 +94,10 @@ btn.addEventListener("click", () => {
 
 Inside the `click` event handler function:
 
-- We use the {{domxref("Observable.Observable", "Observable()")}} constructor to create a new observable. Inside its callback function, we declare a variable `i` with a value of `1`. We then use a {{domxref("Window.setInterval()")}} call to check the value of `i` every 500 milliseconds. If the value has reached `11`, we call the {{domxref("Subscriber.complete", "complete()")}} method to complete the subscription. If not, we call {{domxref("Subscriber.next", "next()")}} to move to the next iteration of the pipeline.
+- We disable the button so that another click cannot start an overlapping count. We then use the {{domxref("Observable.Observable", "Observable()")}} constructor to create a new observable. Inside its callback function, we declare a variable `i` with a value of `1`. We then use a {{domxref("Window.setInterval()")}} call to check the value of `i` every 500 milliseconds. If the value has reached `11`, we call the {{domxref("Subscriber.complete", "complete()")}} method to complete the subscription. If not, we call {{domxref("Subscriber.next", "next()")}} to send the current count to the observer.
 - At the end of the interval, `i` is incremented by 1.
-- We also register a teardown callback using {{domxref("Subscriber.addTeardown", "addTeardown()")}}. Inside it, we change the text on the `<button>` to "Restart count" if it doesn't already say that — this is more suitable if the count has already been run. And more importantly, we clear the interval (via {{domxref("Window.clearInterval()")}}) once the subscription is completed. This is important to avoid errors and memory leaks.
-- Finally, we subscribe to the observable by calling {{domxref("Observable.subscribe()")}}. Inside the `subscribe()` method's argument, we define the functionality of the `Subscriber` object's `next()` and `complete()` methods referenced inside the constructor in the previous block — the `next()` method prints the value passed to it to the `<p>` element (`i`, in the code above that calls it), and the `complete()` method prints "Count complete" to the `<p>` element.
+- We also register a teardown callback using {{domxref("Subscriber.addTeardown", "addTeardown()")}}. Inside it, we change the text on the `<button>` to "Restart count" if it doesn't already say that — this is more suitable if the count has already been run. And more importantly, we clear the interval (via {{domxref("Window.clearInterval()")}}) when the subscription ends and re-enable the button for the next count.
+- Finally, we subscribe to the observable by calling {{domxref("Observable.subscribe()")}}. Inside the `subscribe()` method's argument, we define the observer callbacks invoked by the `Subscriber` methods in the previous block — the `next()` callback prints the value passed to it to the `<p>` element (`i`, in the code above that calls it), and the `complete()` callback prints "Count complete" to the `<p>` element.
 
 #### Result
 
@@ -103,9 +105,9 @@ The example renders like so:
 
 {{EmbedLiveSample("basic-observer", "100%", "80px")}}
 
-Press the `<button>`. Every 500 milliseconds, the value of `i` is printed to the page and then incremented by 1, until the value reaches `11`. At that point, "Count complete" is printed to the page and subscription stops.
+Press the button. Every 500 milliseconds, the current count is printed to the page. After displaying `10`, the next interval callback completes the subscription and displays "Count complete".
 
-The `<button>`s text then changes to "Restart count" once the count is finished, because of the `addTeardown()` code running after the subscription completes.
+The teardown callback changes the button text to "Restart count" and re-enables it before the observer's `complete()` callback runs.
 
 ## Specifications
 
