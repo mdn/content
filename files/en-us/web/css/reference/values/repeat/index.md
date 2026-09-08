@@ -156,7 +156,7 @@ The `repeat()` function takes two arguments: The first argument specifies [**rep
   - : A positive integer greater than or equal to `1` specifying the number of times the feature list in the second parameter will be repeated.
 
 - `auto-fill`
-  - : Specifies an auto repeater that repeats to fill a space. Resolves to the largest number of repetitions that does not cause overflow of a constrained (has a maximum size) content box. Otherwise, if the content box has a minimum size, the fewest number of repetitions that meets the minimum size. If there is neither a minimum or maximum size, resolves to `1`. When used with subgrid, the second parameter must be a list of line names.
+  - : Specifies an auto repeater that repeats to fill a space. Resolves to the largest number of repetitions that does not cause overflow of a constrained (has a maximum size) content box. Otherwise, if the content box has a minimum size, the fewest number of repetitions that meets the minimum size. If there is neither a minimum nor a maximum size, resolves to `1`. When used with subgrid, the second parameter must be a list of line names.
 
 - `auto-fit`
   - : Behaves as `auto-fill`, except that after placing grid items, any empty repeated tracks are collapsed.
