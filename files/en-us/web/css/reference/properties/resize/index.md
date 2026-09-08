@@ -9,6 +9,11 @@ sidebar: cssref
 
 The **`resize`** [CSS](/en-US/docs/Web/CSS) property sets whether an element is resizable, and if so, in which directions.
 
+`resize` does not apply to the following:
+
+- Inline elements
+- Block elements for which the {{cssxref("overflow")}} property is set to `visible` or `clip`
+
 {{InteractiveExample("CSS Demo: resize")}}
 
 ```css interactive-example-choice
@@ -48,11 +53,6 @@ resize: none;
   padding: 10px;
 }
 ```
-
-`resize` does not apply to the following:
-
-- Inline elements
-- Block elements for which the {{cssxref("overflow")}} property is set to `visible` or `clip`
 
 ## Syntax
 

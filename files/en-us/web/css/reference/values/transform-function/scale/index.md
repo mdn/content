@@ -11,6 +11,18 @@ The **`scale()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Refe
 plane. Because the amount of scaling is defined by a vector [sx, sy], it can resize the horizontal and vertical dimensions at
 different scales. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
+This scaling transformation is characterized by a two-dimensional vector. Its coordinates define how much scaling is
+done in each direction. If both coordinates are equal, the scaling is uniform (_isotropic_) and the aspect
+ratio of the element is preserved (this is a [homothetic transformation](https://en.wikipedia.org/wiki/Homothetic_transformation)).
+
+When a coordinate value is outside the \[-1, 1] range, the element grows along that dimension; when inside, it
+shrinks. A negative value results in a [point reflection](https://en.wikipedia.org/wiki/Point_reflection)
+in that dimension. The value `1` has no effect.
+
+> [!NOTE]
+> The `scale()` function only scales in 2D. To scale in 3D, use
+> [`scale3d()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/scale3d) instead.
+
 {{InteractiveExample("CSS Demo: scale()")}}
 
 ```css interactive-example-choice
@@ -38,18 +50,6 @@ transform: scale(-0.5, 1);
     width="200" />
 </section>
 ```
-
-This scaling transformation is characterized by a two-dimensional vector. Its coordinates define how much scaling is
-done in each direction. If both coordinates are equal, the scaling is uniform (_isotropic_) and the aspect
-ratio of the element is preserved (this is a [homothetic transformation](https://en.wikipedia.org/wiki/Homothetic_transformation)).
-
-When a coordinate value is outside the \[-1, 1] range, the element grows along that dimension; when inside, it
-shrinks. A negative value results in a [point reflection](https://en.wikipedia.org/wiki/Point_reflection)
-in that dimension. The value `1` has no effect.
-
-> [!NOTE]
-> The `scale()` function only scales in 2D. To scale in 3D, use
-> [`scale3d()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/scale3d) instead.
 
 ## Syntax
 

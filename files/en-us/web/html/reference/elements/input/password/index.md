@@ -12,6 +12,14 @@ sidebar: htmlsidebar
 The element is presented as a one-line plain text editor control in which the text is obscured so that it cannot be read, usually by replacing each character with a symbol such as the asterisk ("\*") or a dot ("•").
 This character will vary depending on the {{Glossary("user agent")}} and operating system.
 
+The precise behavior of the entry process may vary from browser to browser.
+Some browsers display the typed character for a moment before obscuring it, while others allow the user to toggle the display of plain-text on and off.
+Both approaches help a user check that they entered the intended password, which can be particularly difficult on mobile devices.
+
+> [!NOTE]
+> Any forms involving sensitive information like passwords (such as login forms) should be served over HTTPS.
+> Many browsers now implement mechanisms to warn against insecure login forms.
+
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;password&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
@@ -38,14 +46,6 @@ label {
   margin-top: 1rem;
 }
 ```
-
-The precise behavior of the entry process may vary from browser to browser.
-Some browsers display the typed character for a moment before obscuring it, while others allow the user to toggle the display of plain-text on and off.
-Both approaches help a user check that they entered the intended password, which can be particularly difficult on mobile devices.
-
-> [!NOTE]
-> Any forms involving sensitive information like passwords (such as login forms) should be served over HTTPS.
-> Many browsers now implement mechanisms to warn against insecure login forms.
 
 ## Value
 

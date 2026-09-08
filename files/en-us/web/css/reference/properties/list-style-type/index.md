@@ -9,6 +9,10 @@ sidebar: cssref
 
 The **`list-style-type`** [CSS](/en-US/docs/Web/CSS) property sets the marker (such as a disc, character, or custom counter style) of a list item element.
 
+The marker will be [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword), the same as the computed [color](/en-US/docs/Web/CSS/Reference/Values/color_value) of the element it applies to.
+
+Only a few elements ({{HTMLElement("li")}} and {{HTMLElement("summary")}}) have a default value of `display: list-item`. However, the `list-style-type` property may be applied to any element whose {{cssxref("display")}} value is set to `list-item`. Moreover, because this property is inherited, it can be set on a parent element (commonly {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make it apply to all list items.
+
 {{InteractiveExample("CSS Demo: list-style-type")}}
 
 ```css interactive-example-choice
@@ -87,10 +91,6 @@ hr {
   suffix: " ";
 }
 ```
-
-The marker will be [`currentColor`](/en-US/docs/Web/CSS/Reference/Values/color_value#currentcolor_keyword), the same as the computed [color](/en-US/docs/Web/CSS/Reference/Values/color_value) of the element it applies to.
-
-Only a few elements ({{HTMLElement("li")}} and {{HTMLElement("summary")}}) have a default value of `display: list-item`. However, the `list-style-type` property may be applied to any element whose {{cssxref("display")}} value is set to `list-item`. Moreover, because this property is inherited, it can be set on a parent element (commonly {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make it apply to all list items.
 
 ## Syntax
 

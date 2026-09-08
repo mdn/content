@@ -9,6 +9,14 @@ sidebar: cssref
 
 The [CSS](/en-US/docs/Web/CSS) **`justify-self`** property sets the way a box is justified inside its alignment container along the appropriate axis.
 
+The effect of this property is dependent of the layout mode we are in:
+
+- In block-level layouts, it aligns an item inside its containing block on the inline axis.
+- For absolutely-positioned elements, it aligns an item inside its containing block on the inline axis, accounting for the offset values of top, left, bottom, and right.
+- In table cell layouts, this property is _ignored_. Read more about [alignment in block, absolute positioned and table layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables).
+- In flexbox layouts, this property is _ignored_. Read more about [alignment in flexbox](/en-US/docs/Web/CSS/Guides/Box_alignment/In_flexbox).
+- In grid layouts, it aligns an item inside its grid area on the inline axis. Read more about [alignment in grid layouts](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout).
+
 {{InteractiveExample("CSS Demo: justify-self")}}
 
 ```css interactive-example-choice
@@ -52,14 +60,6 @@ justify-self: end;
   border: 3px solid blue;
 }
 ```
-
-The effect of this property is dependent of the layout mode we are in:
-
-- In block-level layouts, it aligns an item inside its containing block on the inline axis.
-- For absolutely-positioned elements, it aligns an item inside its containing block on the inline axis, accounting for the offset values of top, left, bottom, and right.
-- In table cell layouts, this property is _ignored_. Read more about [alignment in block, absolute positioned and table layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables).
-- In flexbox layouts, this property is _ignored_. Read more about [alignment in flexbox](/en-US/docs/Web/CSS/Guides/Box_alignment/In_flexbox).
-- In grid layouts, it aligns an item inside its grid area on the inline axis. Read more about [alignment in grid layouts](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout).
 
 ## Syntax
 

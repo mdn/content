@@ -11,19 +11,6 @@ The **`<picture>`** [HTML](/en-US/docs/Web/HTML) element contains zero or more {
 
 The browser will consider each child `<source>` element and choose the best match among them. If no matches are found—or the browser doesn't support the `<picture>` element—the URL of the `<img>` element's [`src`](/en-US/docs/Web/HTML/Reference/Elements/img#src) attribute is selected. The selected image is then presented in the space occupied by the `<img>` element.
 
-{{InteractiveExample("HTML Demo: &lt;picture&gt;", "tabbed-standard")}}
-
-```html interactive-example
-<!--Change the browser window width to see the image change.-->
-
-<picture>
-  <source
-    srcset="/shared-assets/images/examples/surfer.jpg"
-    media="(orientation: portrait)" />
-  <img src="/shared-assets/images/examples/painted-hand.jpg" alt="" />
-</picture>
-```
-
 To decide which URL to load, the {{Glossary("user agent")}} examines each `<source>`'s [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/source#srcset), [`media`](/en-US/docs/Web/HTML/Reference/Elements/source#media), and [`type`](/en-US/docs/Web/HTML/Reference/Elements/source#type) attributes to select a compatible image that best matches the current layout and capabilities of the display device.
 
 The `<img>` element serves two purposes:
@@ -42,6 +29,19 @@ Common use cases for `<picture>`:
 - **Saving bandwidth and speeding page load times** by loading the most appropriate image for the viewer's display.
 
 If providing higher-density versions of an image for high-DPI (Retina) display, use [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) on the `<img>` element instead. This lets browsers opt for lower-density versions in data-saving modes, and you don't have to write explicit `media` conditions.
+
+{{InteractiveExample("HTML Demo: &lt;picture&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<!--Change the browser window width to see the image change.-->
+
+<picture>
+  <source
+    srcset="/shared-assets/images/examples/surfer.jpg"
+    media="(orientation: portrait)" />
+  <img src="/shared-assets/images/examples/painted-hand.jpg" alt="" />
+</picture>
+```
 
 ## Attributes
 

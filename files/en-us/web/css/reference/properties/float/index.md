@@ -9,6 +9,30 @@ sidebar: cssref
 
 The **`float`** [CSS](/en-US/docs/Web/CSS) property places an element on the left or right side of its container, allowing text and inline elements to wrap around it. The element is removed from the normal flow of the page, though still remaining a part of the flow (in contrast to [absolute positioning](/en-US/docs/Web/CSS/Reference/Properties/position#absolute_positioning)).
 
+A _floating element_ is one where the computed value of `float` is not `none`.
+
+As `float` implies the use of the block layout, it modifies the computed value of the {{cssxref("display")}} values, in some cases:
+
+| Specified value      | Computed value |
+| -------------------- | -------------- |
+| `inline`             | `block`        |
+| `inline-block`       | `block`        |
+| `inline-table`       | `table`        |
+| `table-row`          | `block`        |
+| `table-row-group`    | `block`        |
+| `table-column`       | `block`        |
+| `table-column-group` | `block`        |
+| `table-cell`         | `block`        |
+| `table-caption`      | `block`        |
+| `table-header-group` | `block`        |
+| `table-footer-group` | `block`        |
+| `inline-flex`        | `flex`         |
+| `inline-grid`        | `grid`         |
+| _other_              | _unchanged_    |
+
+> [!NOTE]
+> When accessing a CSS property in JavaScript through the {{domxref("HTMLElement.style")}} object, single-word property names are used as is. Although `float` is a reserved keyword in JavaScript, the CSS `float` property is accessed as `float` in modern browsers. In older browsers, you must use `cssFloat` to access the `float` property. (This is similar to how the "class" attribute is accessed as "className" and the "for" attribute of a `<label>` element is accessed as "htmlFor".)
+
 {{InteractiveExample("CSS Demo: float")}}
 
 ```css interactive-example-choice
@@ -59,30 +83,6 @@ float: inline-end;
   width: 40%;
 }
 ```
-
-A _floating element_ is one where the computed value of `float` is not `none`.
-
-As `float` implies the use of the block layout, it modifies the computed value of the {{cssxref("display")}} values, in some cases:
-
-| Specified value      | Computed value |
-| -------------------- | -------------- |
-| `inline`             | `block`        |
-| `inline-block`       | `block`        |
-| `inline-table`       | `table`        |
-| `table-row`          | `block`        |
-| `table-row-group`    | `block`        |
-| `table-column`       | `block`        |
-| `table-column-group` | `block`        |
-| `table-cell`         | `block`        |
-| `table-caption`      | `block`        |
-| `table-header-group` | `block`        |
-| `table-footer-group` | `block`        |
-| `inline-flex`        | `flex`         |
-| `inline-grid`        | `grid`         |
-| _other_              | _unchanged_    |
-
-> [!NOTE]
-> When accessing a CSS property in JavaScript through the {{domxref("HTMLElement.style")}} object, single-word property names are used as is. Although `float` is a reserved keyword in JavaScript, the CSS `float` property is accessed as `float` in modern browsers. In older browsers, you must use `cssFloat` to access the `float` property. (This is similar to how the "class" attribute is accessed as "className" and the "for" attribute of a `<label>` element is accessed as "htmlFor".)
 
 ## Syntax
 

@@ -10,6 +10,17 @@ sidebar: cssref
 The **`rotateZ()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) defines a transformation that rotates an element around the
 z-axis without deforming it. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
+The axis of rotation passes through an origin, defined by the {{ cssxref("transform-origin") }} CSS property.
+
+> [!NOTE]
+> `rotateZ(a)` is equivalent to
+> `rotate(a)` or
+> `rotate3d(0, 0, 1, a)`.
+
+> [!NOTE]
+> Unlike rotations in the 2D plane, the composition of 3D rotations is usually
+> not commutative. In other words, the order in which the rotations are applied impacts the result.
+
 {{InteractiveExample("CSS Demo: rotateZ()")}}
 
 ```css interactive-example-choice
@@ -37,17 +48,6 @@ transform: rotateZ(3.142rad);
     width="200" />
 </section>
 ```
-
-The axis of rotation passes through an origin, defined by the {{ cssxref("transform-origin") }} CSS property.
-
-> [!NOTE]
-> `rotateZ(a)` is equivalent to
-> `rotate(a)` or
-> `rotate3d(0, 0, 1, a)`.
-
-> [!NOTE]
-> Unlike rotations in the 2D plane, the composition of 3D rotations is usually
-> not commutative. In other words, the order in which the rotations are applied impacts the result.
 
 ## Syntax
 

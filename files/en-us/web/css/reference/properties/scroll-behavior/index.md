@@ -9,6 +9,10 @@ sidebar: cssref
 
 The **`scroll-behavior`** [CSS](/en-US/docs/Web/CSS) property sets the behavior for a scrolling box when scrolling is triggered by the navigation or CSSOM scrolling APIs.
 
+Note that any other scrolls, such as those performed by the user, are not affected by this property. When this property is specified on the root element, it applies to the viewport instead. This property specified on the `body` element will _not_ propagate to the viewport.
+
+User agents are allowed to ignore this property.
+
 {{InteractiveExample("CSS Demo: scroll-behavior")}}
 
 ```css interactive-example-choice
@@ -62,10 +66,6 @@ scroll-page {
   justify-content: center;
 }
 ```
-
-Note that any other scrolls, such as those performed by the user, are not affected by this property. When this property is specified on the root element, it applies to the viewport instead. This property specified on the `body` element will _not_ propagate to the viewport.
-
-User agents are allowed to ignore this property.
 
 ## Syntax
 

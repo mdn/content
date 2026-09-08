@@ -9,6 +9,19 @@ sidebar: cssref
 
 The **`top`** [CSS](/en-US/docs/Web/CSS) property sets the vertical position of a [positioned element](/en-US/docs/Web/CSS/Reference/Properties/position). This {{glossary("inset properties", "inset property")}} has no effect on non-positioned elements.
 
+The effect of `top` depends on how the element is positioned (i.e., the value of the {{cssxref("position")}} property):
+
+- When `position` is set to `absolute` or `fixed`, the `top` property specifies the distance between the element's outer margin of the top edge and the inner border of the top edge of its containing block, or, in the case of [anchor positioned elements](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) when the {{cssxref("anchor()")}} function is used within the value, relative to the specified [`<anchor-side>`](/en-US/docs/Web/CSS/Reference/Values/anchor#anchor-side) edge. The `top` property is [compatible](/en-US/docs/Web/CSS/Reference/Values/anchor#compatibility_of_inset_properties_and_anchor-side_values) with the `top`, `bottom`, `start`, `end`, `self-start`, `self-end`, `center`, and `<percentage>` values.
+- When `position` is set to `relative`, the `top` property specifies the distance the element's top edge is moved below its normal position.
+- When `position` is set to `sticky`, the `top` property is used to compute the sticky-constraint rectangle.
+- When `position` is set to `static`, the `top` property has _no effect_.
+
+When both `top` and {{cssxref("bottom")}} values are specified, there are three different cases:
+
+- If `position` is set to `absolute` or `fixed` and {{cssxref("height")}} is unspecified (either `auto` or `100%`), both the `top` and `bottom` values are respected.
+- If `position` is set to `relative` or `height` is constrained, the `top` property takes precedence and the `bottom` property is ignored.
+- If `position` is set to `sticky`, both `top` and `bottom` values are considered. This means that a sticky element can potentially move up and down within its containing block based on the values of these two properties as long as the element's position box remains contained within its containing block.
+
 {{InteractiveExample("CSS Demo: top")}}
 
 ```css interactive-example-choice
@@ -60,19 +73,6 @@ top: 20px;
   height: 60px;
 }
 ```
-
-The effect of `top` depends on how the element is positioned (i.e., the value of the {{cssxref("position")}} property):
-
-- When `position` is set to `absolute` or `fixed`, the `top` property specifies the distance between the element's outer margin of the top edge and the inner border of the top edge of its containing block, or, in the case of [anchor positioned elements](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using) when the {{cssxref("anchor()")}} function is used within the value, relative to the specified [`<anchor-side>`](/en-US/docs/Web/CSS/Reference/Values/anchor#anchor-side) edge. The `top` property is [compatible](/en-US/docs/Web/CSS/Reference/Values/anchor#compatibility_of_inset_properties_and_anchor-side_values) with the `top`, `bottom`, `start`, `end`, `self-start`, `self-end`, `center`, and `<percentage>` values.
-- When `position` is set to `relative`, the `top` property specifies the distance the element's top edge is moved below its normal position.
-- When `position` is set to `sticky`, the `top` property is used to compute the sticky-constraint rectangle.
-- When `position` is set to `static`, the `top` property has _no effect_.
-
-When both `top` and {{cssxref("bottom")}} values are specified, there are three different cases:
-
-- If `position` is set to `absolute` or `fixed` and {{cssxref("height")}} is unspecified (either `auto` or `100%`), both the `top` and `bottom` values are respected.
-- If `position` is set to `relative` or `height` is constrained, the `top` property takes precedence and the `bottom` property is ignored.
-- If `position` is set to `sticky`, both `top` and `bottom` values are considered. This means that a sticky element can potentially move up and down within its containing block based on the values of these two properties as long as the element's position box remains contained within its containing block.
 
 ## Syntax
 

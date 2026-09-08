@@ -9,6 +9,9 @@ sidebar: cssref
 
 The **`:focus`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents an element (such as a form input) that has received focus. It is generally triggered when the user clicks or taps on an element or selects it with the keyboard's <kbd>Tab</kbd> key.
 
+> [!NOTE]
+> This pseudo-class applies only to the focused element itself. Use {{CSSxRef(":focus-within")}} if you want to select an element that _contains_ a focused element.
+
 {{InteractiveExample("CSS Demo: :focus", "tabbed-shorter")}}
 
 ```css interactive-example
@@ -41,9 +44,6 @@ select:focus {
   </label>
 </form>
 ```
-
-> [!NOTE]
-> This pseudo-class applies only to the focused element itself. Use {{CSSxRef(":focus-within")}} if you want to select an element that _contains_ a focused element.
 
 ## Syntax
 

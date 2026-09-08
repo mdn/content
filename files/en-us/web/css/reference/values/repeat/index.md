@@ -11,6 +11,28 @@ sidebar: cssref
 
 The **`repeat()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) represents a repeated fragment of the [track list](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts) or [rule-line list](/en-US/docs/Web/CSS/Guides/Gaps). It allows repeated patterns of columns, rows, and their gap decorations, to be written in a compact form.
 
+This function can be used with the following features:
+
+CSS grid properties:
+
+- {{cssxref("grid-template-columns")}}
+- {{cssxref("grid-template-rows")}}
+
+CSS gap properties:
+
+- {{cssxref("column-rule-color")}}
+- {{cssxref("row-rule-color")}}
+- {{cssxref("rule-color")}} shorthand
+- {{cssxref("column-rule-style")}}
+- {{cssxref("row-rule-style")}}
+- {{cssxref("rule-style")}} shorthand
+- {{cssxref("column-rule-width")}}
+- {{cssxref("row-rule-width")}}
+- {{cssxref("rule-width")}} shorthand
+- {{cssxref("column-rule")}} shorthand
+- {{cssxref("row-rule")}} shorthand
+- {{cssxref("rule")}} shorthand
+
 {{InteractiveExample("CSS Demo: repeat()")}}
 
 ```css interactive-example-choice
@@ -71,28 +93,6 @@ rule-color: repeat(2, orange, yellow), repeat(auto, green);
   border: 3px solid blue;
 }
 ```
-
-This function can be used with the following features:
-
-CSS grid properties:
-
-- {{cssxref("grid-template-columns")}}
-- {{cssxref("grid-template-rows")}}
-
-CSS gap properties:
-
-- {{cssxref("column-rule-color")}}
-- {{cssxref("row-rule-color")}}
-- {{cssxref("rule-color")}} shorthand
-- {{cssxref("column-rule-style")}}
-- {{cssxref("row-rule-style")}}
-- {{cssxref("rule-style")}} shorthand
-- {{cssxref("column-rule-width")}}
-- {{cssxref("row-rule-width")}}
-- {{cssxref("rule-width")}} shorthand
-- {{cssxref("column-rule")}} shorthand
-- {{cssxref("row-rule")}} shorthand
-- {{cssxref("rule")}} shorthand
 
 ## Syntax
 

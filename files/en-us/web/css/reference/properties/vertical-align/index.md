@@ -17,6 +17,15 @@ This property is a shorthand for the following CSS properties:
 - {{cssxref("baseline-source")}}
 - {{cssxref("baseline-shift")}}
 
+The `vertical-align` property can be used in two contexts:
+
+- To vertically align an inline-level element's box inside its containing line box. For example, it could be used to [vertically position an image in a line of text](#vertical_alignment_in_a_line_box).
+- To vertically align [the content of a cell in a table](#vertical_alignment_in_a_table_cell).
+
+Use this shorthand (`vertical-align`) instead of its corresponding longhand properties, unless you need to cascade them independently or (on SVG elements) to support legacy SVG implementations.
+
+Note that `vertical-align` only applies to inline, inline-block and table-cell elements: you can't use it to vertically align [block-level elements](/en-US/docs/Glossary/Block-level_content).
+
 {{InteractiveExample("CSS Demo: vertical-align")}}
 
 ```css interactive-example-choice
@@ -60,15 +69,6 @@ vertical-align: text-top;
   text-decoration: underline overline;
 }
 ```
-
-The `vertical-align` property can be used in two contexts:
-
-- To vertically align an inline-level element's box inside its containing line box. For example, it could be used to [vertically position an image in a line of text](#vertical_alignment_in_a_line_box).
-- To vertically align [the content of a cell in a table](#vertical_alignment_in_a_table_cell).
-
-Use this shorthand (`vertical-align`) instead of its corresponding longhand properties, unless you need to cascade them independently or (on SVG elements) to support legacy SVG implementations.
-
-Note that `vertical-align` only applies to inline, inline-block and table-cell elements: you can't use it to vertically align [block-level elements](/en-US/docs/Glossary/Block-level_content).
 
 ## Syntax
 

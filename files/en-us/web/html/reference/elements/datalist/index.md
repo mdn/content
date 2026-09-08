@@ -9,6 +9,14 @@ sidebar: htmlsidebar
 
 The **`<datalist>`** [HTML](/en-US/docs/Web/HTML) element contains a set of {{HTMLElement("option")}} elements that represent the permissible or recommended options available to choose from within other controls.
 
+To bind the `<datalist>` element to the control, we give it a unique identifier in the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute, and then add the [`list`](/en-US/docs/Web/HTML/Reference/Elements/input#list) attribute to the {{HTMLElement("input")}} element with the same identifier as value.
+Only certain types of {{HTMLElement("input")}} support this behavior, and it can also vary from browser to browser.
+
+Each `<option>` element should have a `value` attribute, which represents a suggestion to be entered into the input. It can also have a `label` attribute, or, missing that, some text content, which may be displayed by the browser instead of `value` (Firefox), or in addition to `value` (Chrome and Safari, as supplemental text). The exact content of the drop-down menu depends on the browser, but when clicked, content entered into control field will always come from the `value` attribute.
+
+> [!NOTE]
+> `<datalist>` is not a replacement for {{HTMLElement("select")}}. A `<datalist>` does not represent an input itself; it is a list of suggested values for an associated control. The control can still accept any value that passes validation, even if it is not in this suggestion list.
+
 {{InteractiveExample("HTML Demo: &lt;datalist&gt;", "tabbed-standard")}}
 
 ```html interactive-example
@@ -30,14 +38,6 @@ label {
   margin-bottom: 10px;
 }
 ```
-
-To bind the `<datalist>` element to the control, we give it a unique identifier in the [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute, and then add the [`list`](/en-US/docs/Web/HTML/Reference/Elements/input#list) attribute to the {{HTMLElement("input")}} element with the same identifier as value.
-Only certain types of {{HTMLElement("input")}} support this behavior, and it can also vary from browser to browser.
-
-Each `<option>` element should have a `value` attribute, which represents a suggestion to be entered into the input. It can also have a `label` attribute, or, missing that, some text content, which may be displayed by the browser instead of `value` (Firefox), or in addition to `value` (Chrome and Safari, as supplemental text). The exact content of the drop-down menu depends on the browser, but when clicked, content entered into control field will always come from the `value` attribute.
-
-> [!NOTE]
-> `<datalist>` is not a replacement for {{HTMLElement("select")}}. A `<datalist>` does not represent an input itself; it is a list of suggested values for an associated control. The control can still accept any value that passes validation, even if it is not in this suggestion list.
 
 ## Attributes
 

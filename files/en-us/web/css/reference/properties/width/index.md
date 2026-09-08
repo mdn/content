@@ -9,6 +9,14 @@ sidebar: cssref
 
 The **`width`** [CSS](/en-US/docs/Web/CSS) property sets an element's width. By default, it sets the width of the [content area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#content_area), but if {{cssxref("box-sizing")}} is set to `border-box`, it sets the width of the [border area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#border_area).
 
+The specified value of `width` applies to the content area so long as its value remains within the values defined by {{cssxref("min-width")}} and {{cssxref("max-width")}}.
+
+- If the value for `width` is less than the value for `min-width`, then `min-width` overrides `width`.
+- If the value for `width` is greater than the value for `max-width`, then `max-width` overrides `width`.
+
+> [!NOTE]
+> As a geometric property, `width` also applies to the {{SVGElement("svg")}}, {{SVGElement("rect")}}, {{SVGElement("image")}}, and {{SVGElement("foreignObject")}} SVG elements, with `auto` resolving to `100%` for `<svg>` and `0` for other elements, and percent values being relative to the SVG viewport width for `<rect>`. The CSS `width` property value overrides any SVG {{SVGAttr("width")}} attribute value set on the SVG element.
+
 {{InteractiveExample("CSS Demo: width")}}
 
 ```css interactive-example-choice
@@ -45,14 +53,6 @@ width: auto;
   color: white;
 }
 ```
-
-The specified value of `width` applies to the content area so long as its value remains within the values defined by {{cssxref("min-width")}} and {{cssxref("max-width")}}.
-
-- If the value for `width` is less than the value for `min-width`, then `min-width` overrides `width`.
-- If the value for `width` is greater than the value for `max-width`, then `max-width` overrides `width`.
-
-> [!NOTE]
-> As a geometric property, `width` also applies to the {{SVGElement("svg")}}, {{SVGElement("rect")}}, {{SVGElement("image")}}, and {{SVGElement("foreignObject")}} SVG elements, with `auto` resolving to `100%` for `<svg>` and `0` for other elements, and percent values being relative to the SVG viewport width for `<rect>`. The CSS `width` property value overrides any SVG {{SVGAttr("width")}} attribute value set on the SVG element.
 
 ## Syntax
 

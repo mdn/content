@@ -14,6 +14,12 @@ The **`fit-content()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CS
 It is distinct from the {{cssxref("fit-content")}} keyword, which takes no argument and sizes a box based on its content within the available space.
 Only `fit-content()` is valid in grid track sizing properties such as {{cssxref("grid-template-columns")}}.
 
+The function can be used as a track size in [CSS grid](/en-US/docs/Web/CSS/Guides/Grid_layout) properties, where the maximum size is defined by `max-content` and the minimum size by `auto`, which is calculated similar to `auto` (i.e., [`minmax(auto, max-content)`](/en-US/docs/Web/CSS/Reference/Values/minmax)), except that the track size is clamped at _argument_ if it is greater than the `auto` minimum.
+
+See the {{cssxref("grid-template-columns")}} page for more information on the `max-content` and `auto` keywords.
+
+The `fit-content()` function can also be used as laid out box size for {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} and {{cssxref("max-height")}}, where the maximum and minimum sizes refer to the content size.
+
 {{InteractiveExample("CSS Demo: fit-content()")}}
 
 ```css interactive-example-choice
@@ -56,12 +62,6 @@ grid-template-columns: fit-content(40%) fit-content(40%) 1fr;
   text-align: left;
 }
 ```
-
-The function can be used as a track size in [CSS grid](/en-US/docs/Web/CSS/Guides/Grid_layout) properties, where the maximum size is defined by `max-content` and the minimum size by `auto`, which is calculated similar to `auto` (i.e., [`minmax(auto, max-content)`](/en-US/docs/Web/CSS/Reference/Values/minmax)), except that the track size is clamped at _argument_ if it is greater than the `auto` minimum.
-
-See the {{cssxref("grid-template-columns")}} page for more information on the `max-content` and `auto` keywords.
-
-The `fit-content()` function can also be used as laid out box size for {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} and {{cssxref("max-height")}}, where the maximum and minimum sizes refer to the content size.
 
 ## Syntax
 

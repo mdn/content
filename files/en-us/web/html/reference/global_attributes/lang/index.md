@@ -12,6 +12,12 @@ The **`lang`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attribut
 > [!NOTE]
 > If the value of `lang` is set to an empty string, the language is explicitly unknown. Therefore, it is recommended to always specify an appropriate value for this attribute.
 
+If the attribute value is the _empty string_ (`lang=""`), the language is set to _unknown_; if the language tag is not valid according to BCP47, it is set to _invalid_.
+
+Even if the `lang` attribute is set, it may not be taken into account, as the `xml:lang` attribute has priority.
+
+For the CSS pseudo-class {{cssxref(":lang")}}, two invalid language names are different if their names are different. So while `:lang(es)` matches both `lang="es-ES"` and `lang="es-419"`, `:lang(xyzzy)` would _not_ match `lang="xyzzy-Zorp!"`.
+
 {{InteractiveExample("HTML Demo: lang", "tabbed-shorter")}}
 
 ```html interactive-example
@@ -35,12 +41,6 @@ p::before {
   content: "(In French) ";
 }
 ```
-
-If the attribute value is the _empty string_ (`lang=""`), the language is set to _unknown_; if the language tag is not valid according to BCP47, it is set to _invalid_.
-
-Even if the `lang` attribute is set, it may not be taken into account, as the `xml:lang` attribute has priority.
-
-For the CSS pseudo-class {{cssxref(":lang")}}, two invalid language names are different if their names are different. So while `:lang(es)` matches both `lang="es-ES"` and `lang="es-419"`, `:lang(xyzzy)` would _not_ match `lang="xyzzy-Zorp!"`.
 
 ## Accessibility concerns
 

@@ -10,6 +10,16 @@ sidebar: cssref
 The **`rotateY()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) defines a transformation that rotates an element around the
 y-axis (vertical) without deforming it. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
+The axis of rotation passes through an origin, defined by the {{ cssxref("transform-origin") }} CSS property.
+
+> [!NOTE]
+> `rotateY(a)` is equivalent to
+> `rotate3d(0, 1, 0, a)`.
+
+> [!NOTE]
+> Unlike rotations in the 2D plane, the composition of 3D rotations is usually
+> not commutative. In other words, the order in which the rotations are applied impacts the result.
+
 {{InteractiveExample("CSS Demo: rotateY()")}}
 
 ```css interactive-example-choice
@@ -37,16 +47,6 @@ transform: rotateY(3.142rad);
     width="200" />
 </section>
 ```
-
-The axis of rotation passes through an origin, defined by the {{ cssxref("transform-origin") }} CSS property.
-
-> [!NOTE]
-> `rotateY(a)` is equivalent to
-> `rotate3d(0, 1, 0, a)`.
-
-> [!NOTE]
-> Unlike rotations in the 2D plane, the composition of 3D rotations is usually
-> not commutative. In other words, the order in which the rotations are applied impacts the result.
 
 ## Syntax
 

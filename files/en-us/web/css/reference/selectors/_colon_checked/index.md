@@ -9,6 +9,11 @@ sidebar: cssref
 
 The **`:checked`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) selector represents any **radio** ([`<input type="radio">`](/en-US/docs/Web/HTML/Reference/Elements/input/radio)), **checkbox** ([`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox)), or **option** ({{HTMLElement("option")}} in a {{HTMLElement("select")}} element) that is checked or toggled to an `on` state.
 
+The user can engage this state by checking/selecting an element, or disengage it by unchecking/deselecting the element.
+
+> [!NOTE]
+> Because browsers often treat `<option>`s as {{ glossary("replaced elements")}}, the extent to which they can be styled with the `:checked` pseudo-class varies from browser to browser. [Customizable select element](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) functionality can be used to enable full customization of `<option>` elements just like any regular DOM element, in supporting browsers.
+
 {{InteractiveExample("CSS Demo: :checked", "tabbed-shorter")}}
 
 ```css interactive-example
@@ -46,11 +51,6 @@ input:checked {
   <input type="submit" value="Submit form" />
 </form>
 ```
-
-The user can engage this state by checking/selecting an element, or disengage it by unchecking/deselecting the element.
-
-> [!NOTE]
-> Because browsers often treat `<option>`s as {{ glossary("replaced elements")}}, the extent to which they can be styled with the `:checked` pseudo-class varies from browser to browser. [Customizable select element](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) functionality can be used to enable full customization of `<option>` elements just like any regular DOM element, in supporting browsers.
 
 ## Syntax
 

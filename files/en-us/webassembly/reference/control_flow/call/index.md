@@ -13,6 +13,10 @@ sidebar: webassemblysidebar
 
 Calling the `greet` function imported from JavaScript using `call`:
 
+Calculating factorial for a number using `return_call` and logging the result using the exported `fac` function:
+
+{{InteractiveExample("Wat Demo: return_call", "tabbed-standard")}}
+
 {{InteractiveExample("Wat Demo: call", "tabbed-standard")}}
 
 ```wat interactive-example
@@ -41,10 +45,6 @@ await WebAssembly.instantiateStreaming(fetch(url), {
   },
 });
 ```
-
-Calculating factorial for a number using `return_call` and logging the result using the exported `fac` function:
-
-{{InteractiveExample("Wat Demo: return_call", "tabbed-standard")}}
 
 ```wat interactive-example
 (module

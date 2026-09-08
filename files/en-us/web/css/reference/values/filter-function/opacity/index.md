@@ -9,6 +9,9 @@ sidebar: cssref
 
 The **`opacity()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) applies transparency to the samples in the input image. Its result is a {{cssxref("filter-function")}}.
 
+> [!NOTE]
+> This function is similar to the more established {{Cssxref("opacity")}} property. The difference is that with filters, some browsers provide hardware acceleration for better performance.
+
 {{InteractiveExample("CSS Demo: opacity()")}}
 
 ```css interactive-example-choice
@@ -40,9 +43,6 @@ filter: opacity(0);
     width="200" />
 </section>
 ```
-
-> [!NOTE]
-> This function is similar to the more established {{Cssxref("opacity")}} property. The difference is that with filters, some browsers provide hardware acceleration for better performance.
 
 ## Syntax
 

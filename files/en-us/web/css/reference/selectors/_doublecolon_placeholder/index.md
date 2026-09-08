@@ -9,6 +9,11 @@ sidebar: cssref
 
 The **`::placeholder`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) represents the [placeholder text](/en-US/docs/Web/HTML/Reference/Elements/input#placeholder) in an {{HTMLElement("input")}} or {{HTMLElement("textarea")}} element.
 
+Only the subset of CSS properties that apply to the {{cssxref("::first-line")}} pseudo-element can be used in a rule using `::placeholder` in its selector.
+
+> [!NOTE]
+> In most browsers, the appearance of placeholder text is a translucent or light gray color by default.
+
 {{InteractiveExample("CSS Demo: ::placeholder", "tabbed-shorter")}}
 
 ```css interactive-example
@@ -34,11 +39,6 @@ input::placeholder {
   maxlength="9"
   placeholder="It must be 9 digits" />
 ```
-
-Only the subset of CSS properties that apply to the {{cssxref("::first-line")}} pseudo-element can be used in a rule using `::placeholder` in its selector.
-
-> [!NOTE]
-> In most browsers, the appearance of placeholder text is a translucent or light gray color by default.
 
 ## Syntax
 

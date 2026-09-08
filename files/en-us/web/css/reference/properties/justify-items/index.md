@@ -9,6 +9,14 @@ sidebar: cssref
 
 The [CSS](/en-US/docs/Web/CSS) **`justify-items`** property defines the default {{CSSxRef("justify-self")}} for all items of the box, giving them all a default way of justifying each box along the appropriate axis.
 
+The effect of this property is dependent of the layout mode we are in:
+
+- In block-level layouts, it aligns the items inside their containing block on the inline axis.
+- For absolutely-positioned elements, it aligns the items inside their containing block on the inline axis, accounting for the offset values of top, left, bottom, and right.
+- In table cell layouts, this property is _ignored_ (see [Box alignment for block, absolutely positioned, and table layouts](/en-US/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables))
+- In flexbox layouts, this property is _ignored_ (see [Box alignment in flexbox](/en-US/docs/Web/CSS/Guides/Box_alignment/In_flexbox))
+- In grid layouts, it aligns the items inside their grid areas on the inline axis (see [Box alignment in grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout))
+
 {{InteractiveExample("CSS Demo: justify-items")}}
 
 ```css interactive-example-choice
@@ -54,14 +62,6 @@ justify-items: end;
   border: 3px solid blue;
 }
 ```
-
-The effect of this property is dependent of the layout mode we are in:
-
-- In block-level layouts, it aligns the items inside their containing block on the inline axis.
-- For absolutely-positioned elements, it aligns the items inside their containing block on the inline axis, accounting for the offset values of top, left, bottom, and right.
-- In table cell layouts, this property is _ignored_ (see [Box alignment for block, absolutely positioned, and table layouts](/en-US/docs/Web/CSS/Guides/Box_alignment/In_block_abspos_tables))
-- In flexbox layouts, this property is _ignored_ (see [Box alignment in flexbox](/en-US/docs/Web/CSS/Guides/Box_alignment/In_flexbox))
-- In grid layouts, it aligns the items inside their grid areas on the inline axis (see [Box alignment in grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout))
 
 ## Syntax
 

@@ -9,6 +9,13 @@ sidebar: cssref
 
 The **`padding-top`** [CSS](/en-US/docs/Web/CSS) property sets the height of the [padding area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#padding_area) on the top of an element.
 
+An element's padding area is the space between its content and its border.
+
+![The effect of the CSS padding-top property on the element box](padding-top.svg)
+
+> [!NOTE]
+> The {{cssxref("padding")}} property can be used to set paddings on all four sides of an element with a single declaration.
+
 {{InteractiveExample("CSS Demo: padding-top")}}
 
 ```css interactive-example-choice
@@ -53,13 +60,6 @@ padding-top: 0;
   border: dashed 1px;
 }
 ```
-
-An element's padding area is the space between its content and its border.
-
-![The effect of the CSS padding-top property on the element box](padding-top.svg)
-
-> [!NOTE]
-> The {{cssxref("padding")}} property can be used to set paddings on all four sides of an element with a single declaration.
 
 ## Syntax
 

@@ -9,6 +9,10 @@ sidebar: cssref
 
 The **`margin-left`** [CSS](/en-US/docs/Web/CSS) property sets the [margin area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#margin_area) on the left side of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
 
+The vertical margins of two adjacent boxes may fuse. This is called [_margin collapsing_](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing).
+
+In the rare cases where width is overconstrained (i.e., when all of `width`, `margin-left`, `border`, `padding`, the content area, and `margin-right` are defined), `margin-left` is ignored, and will have the same calculated value as if the `auto` value was specified.
+
 {{InteractiveExample("CSS Demo: margin-left")}}
 
 ```css interactive-example-choice
@@ -58,10 +62,6 @@ margin-left: 0;
   background-color: rgb(255 244 219 / 0.6);
 }
 ```
-
-The vertical margins of two adjacent boxes may fuse. This is called [_margin collapsing_](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing).
-
-In the rare cases where width is overconstrained (i.e., when all of `width`, `margin-left`, `border`, `padding`, the content area, and `margin-right` are defined), `margin-left` is ignored, and will have the same calculated value as if the `auto` value was specified.
 
 ## Syntax
 

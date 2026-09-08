@@ -9,6 +9,9 @@ sidebar: cssref
 
 The **`:lang()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) matches elements based on the language they are determined to be in.
 
+> [!NOTE]
+> In HTML, the language is determined by a combination of the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute, the {{HTMLElement("meta")}} element, and possibly by information from the protocol (such as HTTP headers). For other document types there may be other document methods for determining the language.
+
 {{InteractiveExample("CSS Demo: :lang()", "tabbed-shorter")}}
 
 ```css interactive-example
@@ -28,9 +31,6 @@ The **`:lang()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/
   <strong lang="en-US">DANGER</strong> to lepiej nie wchodzić do środka.
 </p>
 ```
-
-> [!NOTE]
-> In HTML, the language is determined by a combination of the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute, the {{HTMLElement("meta")}} element, and possibly by information from the protocol (such as HTTP headers). For other document types there may be other document methods for determining the language.
 
 ## Syntax
 

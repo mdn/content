@@ -9,6 +9,11 @@ sidebar: cssref
 
 The **`z-index`** [CSS](/en-US/docs/Web/CSS) property sets the z-order of a [positioned](/en-US/docs/Web/CSS/Reference/Properties/position) element and its descendants or flex and grid items. Overlapping elements with a larger z-index cover those with a smaller one.
 
+For a positioned box (that is, one with any `position` other than `static`), the `z-index` property specifies:
+
+1. The stack level of the box in the current [stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context).
+2. Whether the box establishes a local stacking context.
+
 {{InteractiveExample("CSS Demo: z-index")}}
 
 ```css interactive-example-choice
@@ -121,11 +126,6 @@ z-index: 7;
   z-index: auto;
 }
 ```
-
-For a positioned box (that is, one with any `position` other than `static`), the `z-index` property specifies:
-
-1. The stack level of the box in the current [stacking context](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context).
-2. Whether the box establishes a local stacking context.
 
 ## Syntax
 

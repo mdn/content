@@ -9,6 +9,14 @@ sidebar: cssref
 
 The **`transition-delay`** [CSS](/en-US/docs/Web/CSS) property specifies the duration to wait before starting a property's [transition effect](/en-US/docs/Web/CSS/Guides/Transitions/Using) when its value changes.
 
+The delay may be zero, positive, or negative:
+
+- A value of `0s` (or `0ms`) will begin the transition effect immediately.
+- A positive value will delay the start of the transition effect for the given length of time.
+- A negative value will begin the transition effect immediately, and partway through the effect. In other words, the effect will be animated as if it had already been running for the given length of time.
+
+You may specify multiple delays, which is useful when transitioning multiple properties. Each delay will be applied to the corresponding property as specified by the {{cssxref("transition-property")}} property, which acts as a master list. If there are fewer delays specified than in the master list, the list of delay values will be repeated until there are enough. If there are more delays, the list of delay values will be truncated to match the number of properties. In both cases, the CSS declaration remains valid.
+
 {{InteractiveExample("CSS Demo: transition-delay")}}
 
 ```css interactive-example-choice
@@ -54,14 +62,6 @@ transition-property: margin-right, color;
   margin-right: 40%;
 }
 ```
-
-The delay may be zero, positive, or negative:
-
-- A value of `0s` (or `0ms`) will begin the transition effect immediately.
-- A positive value will delay the start of the transition effect for the given length of time.
-- A negative value will begin the transition effect immediately, and partway through the effect. In other words, the effect will be animated as if it had already been running for the given length of time.
-
-You may specify multiple delays, which is useful when transitioning multiple properties. Each delay will be applied to the corresponding property as specified by the {{cssxref("transition-property")}} property, which acts as a master list. If there are fewer delays specified than in the master list, the list of delay values will be repeated until there are enough. If there are more delays, the list of delay values will be truncated to match the number of properties. In both cases, the CSS declaration remains valid.
 
 ## Syntax
 

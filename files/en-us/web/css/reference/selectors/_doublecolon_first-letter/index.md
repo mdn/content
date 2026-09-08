@@ -9,6 +9,17 @@ sidebar: cssref
 
 The **`::first-letter`** [CSS](/en-US/docs/Web/CSS) [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) applies styles to the first letter of the first line of a [block container](/en-US/docs/Web/CSS/Guides/Display/Visual_formatting_model#block_containers), but only when not preceded by other content (such as images or inline tables).
 
+The first letter of an element is not always trivial to identify:
+
+- Punctuation that precedes or immediately follows the first letter is included in the match. Punctuation includes any Unicode character defined in the _open_ (Ps), _close_ (Pe), _initial quote_ (Pi), _final quote_ (Pf), and _other punctuation_ (Po) classes.
+- Some languages have digraphs that are always capitalized together, like the `IJ` in Dutch. In these cases, both letters of the digraph should be matched by the `::first-letter` pseudo-element.
+- A combination of the {{ cssxref("::before") }} pseudo-element and the {{ cssxref("content") }} property may inject some text at the beginning of the element. In that case, `::first-letter` will match the first letter of this generated content.
+
+> [!NOTE]
+> CSS introduced the `::first-letter` notation (with two colons) to distinguish [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) from [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements). For backward compatibility, browsers also accept `:first-letter`, introduced earlier.
+>
+> Browser support for digraphs such as `IJ` in Dutch is poor. Check the compatibility table below to see the current state of support.
+
 {{InteractiveExample("CSS Demo: ::first-letter", "tabbed-shorter")}}
 
 ```css interactive-example
@@ -31,17 +42,6 @@ p::first-letter {
   a week-long expedition.
 </p>
 ```
-
-The first letter of an element is not always trivial to identify:
-
-- Punctuation that precedes or immediately follows the first letter is included in the match. Punctuation includes any Unicode character defined in the _open_ (Ps), _close_ (Pe), _initial quote_ (Pi), _final quote_ (Pf), and _other punctuation_ (Po) classes.
-- Some languages have digraphs that are always capitalized together, like the `IJ` in Dutch. In these cases, both letters of the digraph should be matched by the `::first-letter` pseudo-element.
-- A combination of the {{ cssxref("::before") }} pseudo-element and the {{ cssxref("content") }} property may inject some text at the beginning of the element. In that case, `::first-letter` will match the first letter of this generated content.
-
-> [!NOTE]
-> CSS introduced the `::first-letter` notation (with two colons) to distinguish [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) from [pseudo-elements](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements). For backward compatibility, browsers also accept `:first-letter`, introduced earlier.
->
-> Browser support for digraphs such as `IJ` in Dutch is poor. Check the compatibility table below to see the current state of support.
 
 ## Allowable properties
 

@@ -9,6 +9,11 @@ sidebar: cssref
 
 The **`height`** [CSS](/en-US/docs/Web/CSS) property specifies the height of an element. By default, the property defines the height of the [content area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#content_area). If {{cssxref("box-sizing")}} is set to `border-box`, however, it instead determines the height of the [border area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#border_area).
 
+The {{cssxref("min-height")}} and {{cssxref("max-height")}} properties override `height`.
+
+> [!NOTE]
+> As a geometric property, `height` also applies to the {{SVGElement("svg")}}, {{SVGElement("rect")}}, {{SVGElement("image")}}, and {{SVGElement("foreignObject")}} SVG elements, with `auto` resolving to `0` and percent values being relative to the SVG viewport height for `<rect>`. The CSS `height` property value overrides any SVG {{SVGAttr("height")}} attribute value set on the SVG element.
+
 {{InteractiveExample("CSS Demo: height")}}
 
 ```css interactive-example-choice
@@ -44,11 +49,6 @@ height: auto;
   color: white;
 }
 ```
-
-The {{cssxref("min-height")}} and {{cssxref("max-height")}} properties override `height`.
-
-> [!NOTE]
-> As a geometric property, `height` also applies to the {{SVGElement("svg")}}, {{SVGElement("rect")}}, {{SVGElement("image")}}, and {{SVGElement("foreignObject")}} SVG elements, with `auto` resolving to `0` and percent values being relative to the SVG viewport height for `<rect>`. The CSS `height` property value overrides any SVG {{SVGAttr("height")}} attribute value set on the SVG element.
 
 ## Syntax
 

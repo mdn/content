@@ -11,6 +11,14 @@ The **`scale3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Re
 Because the amount of scaling is defined by a vector [sx, sy, sz], it can resize different dimensions at different scales. Its
 result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
+This scaling transformation is characterized by a three-dimensional vector. Its coordinates define how much scaling
+is done in each direction. If all three coordinates are equal, the scaling is uniform (_isotropic_) and the
+{{glossary("aspect ratio")}} of the element is preserved (this is a [homothetic transformation](https://en.wikipedia.org/wiki/Homothetic_transformation)).
+
+When a coordinate value is outside the \[-1, 1] range, the element grows along that dimension; when inside, it
+shrinks. If it is negative, the result is a [point reflection](https://en.wikipedia.org/wiki/Point_reflection)
+in that dimension. A value of 1 has no effect.
+
 {{InteractiveExample("CSS Demo: scale3d()")}}
 
 ```css interactive-example-choice
@@ -98,14 +106,6 @@ transform: scale3d(-1.4, 0.4, 0.7);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
-
-This scaling transformation is characterized by a three-dimensional vector. Its coordinates define how much scaling
-is done in each direction. If all three coordinates are equal, the scaling is uniform (_isotropic_) and the
-{{glossary("aspect ratio")}} of the element is preserved (this is a [homothetic transformation](https://en.wikipedia.org/wiki/Homothetic_transformation)).
-
-When a coordinate value is outside the \[-1, 1] range, the element grows along that dimension; when inside, it
-shrinks. If it is negative, the result is a [point reflection](https://en.wikipedia.org/wiki/Point_reflection)
-in that dimension. A value of 1 has no effect.
 
 ## Syntax
 

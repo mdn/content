@@ -9,6 +9,12 @@ sidebar: cssref
 
 The **`scroll-snap-type`** [CSS](/en-US/docs/Web/CSS) property is set on a {{glossary("scroll container")}}, opting it into scroll snapping by setting the direction and strictness of snap point enforcement within the [snap port](/en-US/docs/Glossary/Scroll_snap#snapport).
 
+If the content in the scroll port changes — for example, if content is added, moved, deleted, or resized — the scroll container will re-snap to the previously snapped content if that content is still present.
+
+If the value of a scroll snap-related property, such as `scroll-snap-type` or {{cssxref("scroll-margin")}}, is changed, the scroll container will re-snap based on the current value of `scroll-snap-type`.
+
+Specifying any precise animations or physics used to enforce those snap points is not covered by this property but instead left up to the user agent.
+
 {{InteractiveExample("CSS Demo: scroll-snap-type")}}
 
 ```css interactive-example-choice
@@ -72,12 +78,6 @@ scroll-snap-type: x proximity;
   color: rebeccapurple;
 }
 ```
-
-If the content in the scroll port changes — for example, if content is added, moved, deleted, or resized — the scroll container will re-snap to the previously snapped content if that content is still present.
-
-If the value of a scroll snap-related property, such as `scroll-snap-type` or {{cssxref("scroll-margin")}}, is changed, the scroll container will re-snap based on the current value of `scroll-snap-type`.
-
-Specifying any precise animations or physics used to enforce those snap points is not covered by this property but instead left up to the user agent.
 
 ## Syntax
 

@@ -9,6 +9,13 @@ sidebar: cssref
 
 The **`text-emphasis`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property applies emphasis marks to text (except spaces and control characters).
 
+The `text-emphasis` property is quite different from {{cssxref("text-decoration")}}. The `text-decoration` property does not inherit, and the decoration specified is applied across the whole element. However, text-emphasis does inherit, which means it is possible to change emphasis marks for descendants.
+
+The size of the emphasis symbol, like ruby symbols, is about 50% of the size of the font, and `text-emphasis` may affect line height when the current leading is not enough for the marks.
+
+> [!NOTE]
+> `text-emphasis` doesn't reset the value of {{cssxref("text-emphasis-position")}}. This is because if the style and the color of emphasis marks may vary in a text, it is extremely unlikely that their position will. In the very rare cases when this is needed, use the property {{cssxref("text-emphasis-position")}}.
+
 {{InteractiveExample("CSS Demo: text-emphasis")}}
 
 ```css interactive-example-choice
@@ -42,13 +49,6 @@ p {
   font: 1.5em sans-serif;
 }
 ```
-
-The `text-emphasis` property is quite different from {{cssxref("text-decoration")}}. The `text-decoration` property does not inherit, and the decoration specified is applied across the whole element. However, text-emphasis does inherit, which means it is possible to change emphasis marks for descendants.
-
-The size of the emphasis symbol, like ruby symbols, is about 50% of the size of the font, and `text-emphasis` may affect line height when the current leading is not enough for the marks.
-
-> [!NOTE]
-> `text-emphasis` doesn't reset the value of {{cssxref("text-emphasis-position")}}. This is because if the style and the color of emphasis marks may vary in a text, it is extremely unlikely that their position will. In the very rare cases when this is needed, use the property {{cssxref("text-emphasis-position")}}.
 
 ## Constituent properties
 

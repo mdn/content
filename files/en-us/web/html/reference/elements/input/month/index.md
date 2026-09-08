@@ -10,6 +10,18 @@ sidebar: htmlsidebar
 {{HTMLElement("input")}} elements of type **`month`** create input fields that let the user enter a month and year allowing a month and year to be easily entered.
 The value is a string whose value is in the format `YYYY-MM`, where `YYYY` is the four-digit year and `MM` is the month number.
 
+The control's UI varies in general from browser to browser; at the moment support is patchy, with only Chrome/Opera and Edge on desktop — and most modern mobile browser versions — having usable implementations.
+In browsers that don't support `month` inputs, the control degrades gracefully to [`<input type="text">`](/en-US/docs/Web/HTML/Reference/Elements/input/text), although there may be automatic validation of the entered text to ensure it's formatted as expected.
+
+For those of you using a browser that doesn't support `month`, the screenshot below shows what it looks like in Chrome and Opera.
+Clicking the down arrow on the right-hand side brings up a date picker that lets you select the month and year.
+
+![Month control on Chrome browser](month-control-chrome.png)
+
+The Microsoft Edge `month` control looks like this:
+
+![Month control on Edge browser](month-control-edge.png)
+
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;month&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
@@ -31,18 +43,6 @@ label {
   margin: 0.4rem 0;
 }
 ```
-
-The control's UI varies in general from browser to browser; at the moment support is patchy, with only Chrome/Opera and Edge on desktop — and most modern mobile browser versions — having usable implementations.
-In browsers that don't support `month` inputs, the control degrades gracefully to [`<input type="text">`](/en-US/docs/Web/HTML/Reference/Elements/input/text), although there may be automatic validation of the entered text to ensure it's formatted as expected.
-
-For those of you using a browser that doesn't support `month`, the screenshot below shows what it looks like in Chrome and Opera.
-Clicking the down arrow on the right-hand side brings up a date picker that lets you select the month and year.
-
-![Month control on Chrome browser](month-control-chrome.png)
-
-The Microsoft Edge `month` control looks like this:
-
-![Month control on Edge browser](month-control-edge.png)
 
 ## Value
 

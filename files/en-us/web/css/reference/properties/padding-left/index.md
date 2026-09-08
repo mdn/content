@@ -9,6 +9,11 @@ sidebar: cssref
 
 The **`padding-left`** [CSS](/en-US/docs/Web/CSS) property sets the width of the [padding area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#padding_area) to the left of an element.
 
+An element's padding area is the space between its content and its border.
+
+> [!NOTE]
+> The {{cssxref("padding")}} property can be used to set paddings on all four sides of an element with a single declaration.
+
 {{InteractiveExample("CSS Demo: padding-left")}}
 
 ```css interactive-example-choice
@@ -53,11 +58,6 @@ padding-left: 0;
   border: dashed 1px;
 }
 ```
-
-An element's padding area is the space between its content and its border.
-
-> [!NOTE]
-> The {{cssxref("padding")}} property can be used to set paddings on all four sides of an element with a single declaration.
 
 ## Syntax
 
