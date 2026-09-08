@@ -38,7 +38,7 @@ Highlights:
 - Added support for [`@media (-webkit-transform-3d)`](/en-US/docs/Web/CSS/Reference/At-rules/@media/-webkit-transform-3d) as a media query for 3D transform support, if about:config pref `layout.css.prefixes.webkit` is set to `true` ([Firefox bug 1239799](https://bugzil.la/1239799)).
 - {{cssxref("gradient/linear-gradient", "linear-gradient()")}} support for the omission of `0deg` units ([Firefox bug 1239153](https://bugzil.la/1239153)).
 - Added `-webkit-filter` for web compatibility, behind the preference `layout.css.prefixes.webkit`, defaulting to `false` ([Firefox bug 1236506](https://bugzil.la/1236506)).
-- \[css-align] "unsafe start" (formerly "true start") should serialize to "start" etc ([Firefox bug 1230398](https://bugzil.la/1230398)).
+- \[css-align] "unsafe start" (formerly "true start") should serialize to "start", etc. ([Firefox bug 1230398](https://bugzil.la/1230398)).
 
 ### JavaScript
 

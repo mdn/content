@@ -6,8 +6,6 @@ browser-compat: svg.elements.animate.attributeType
 sidebar: svgref
 ---
 
-{{Deprecated_Header}}
-
 The **`attributeType`** attribute specifies the namespace in which the target attribute and its associated values are defined.
 
 You can use this attribute with the following SVG elements:
