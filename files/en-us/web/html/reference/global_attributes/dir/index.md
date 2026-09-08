@@ -42,7 +42,7 @@ If unspecified or invalid, the direction is generally [inherited](#inheritance) 
 
 ### Inheritance
 
-If an element has no `dir` attribute, it generally inherits the direction of its [parent element](/en-US/docs/Web/API/Node/parentElement). If no ancestor sets a direction, the default is left-to-right.
+If an element has no `dir` attribute, it generally inherits the direction of its [parent element](/en-US/docs/Web/API/Node/parentElement), or the {{domxref("ShadowRoot/host", "host")}} if the parent node is a {{domxref("ShadowRoot")}}. If no ancestor sets a direction, the default is left-to-right.
 
 There are exceptions:
 
