@@ -9,6 +9,8 @@ sidebar: webassemblysidebar
 
 The **`table.init`** [table instruction](/en-US/docs/WebAssembly/Reference/Table) manually copies the references from a [passive](/en-US/docs/WebAssembly/Reference/Definitions/elem#passive_form) [`elem`](/en-US/docs/WebAssembly/Reference/Definitions/elem) definition into a [`table`](/en-US/docs/WebAssembly/Reference/Definitions/table).
 
+In the above example, we define a `table`, two functions, and an `elem` segment called `$funcs` that references the two functions. We then invoke `table.init` to copy the references from the `$funcs` `elem` over to the `table`, and drop the `elem` segment using [`elem.drop`](/en-US/docs/WebAssembly/Reference/Elem/drop) when it is no longer needed.
+
 {{InteractiveExample("Wat Demo: table.init", "tabbed-taller")}}
 
 ```wat interactive-example
@@ -46,8 +48,6 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}")).then((result) => {
   console.log(value);
 });
 ```
-
-In the above example, we define a `table`, two functions, and an `elem` segment called `$funcs` that references the two functions. We then invoke `table.init` to copy the references from the `$funcs` `elem` over to the `table`, and drop the `elem` segment using [`elem.drop`](/en-US/docs/WebAssembly/Reference/Elem/drop) when it is no longer needed.
 
 ## Syntax
 

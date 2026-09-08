@@ -9,6 +9,8 @@ sidebar: htmlsidebar
 
 The **`<div>`** [HTML](/en-US/docs/Web/HTML) element is the generic container for flow content. It has no effect on the content or layout until styled in some way using {{glossary("CSS")}} (e.g., styling is directly applied to it, or some kind of layout model like [Flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) is applied to its parent element).
 
+As a "pure" container, the `<div>` element does not inherently represent anything. Instead, it's used to group content so it can be easily styled using the [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) or [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attributes, marking a section of a document as being written in a different language (using the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute), and so on.
+
 {{InteractiveExample("HTML Demo: &lt;div&gt;", "tabbed-standard")}}
 
 ```html interactive-example
@@ -38,8 +40,6 @@ The **`<div>`** [HTML](/en-US/docs/Web/HTML) element is the generic container fo
   text-align: center;
 }
 ```
-
-As a "pure" container, the `<div>` element does not inherently represent anything. Instead, it's used to group content so it can be easily styled using the [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) or [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attributes, marking a section of a document as being written in a different language (using the [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) attribute), and so on.
 
 ## Attributes
 

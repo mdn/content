@@ -9,6 +9,8 @@ sidebar: webassemblysidebar
 
 The **`elem`** [definition](/en-US/docs/WebAssembly/Reference/Definitions) declares an **element segment**, which is a series of references that can be copied into a Wasm [`table`](/en-US/docs/WebAssembly/Reference/Definitions/table). They provide a way to initialize a table on instantiation, analogous to [data segments](/en-US/docs/WebAssembly/Reference/Definitions/data) for Wasm [memories](/en-US/docs/WebAssembly/Reference/Definitions/memory).
 
+In the above example, we define a table with two slots, define two functions, then initialize the table immediately using an `elem` definition written in the active form, specifying the index value of the `table`. We then declare and export a function called `accessTable()`, which calls one of the functions referenced in our table, specifying the element number to call as its parameter. We invoke that function in JavaScript, then log the returned value to the console.
+
 {{InteractiveExample("Wat Demo: elem", "tabbed-taller")}}
 
 ```wat interactive-example
@@ -40,8 +42,6 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}")).then((result) => {
   console.log(value);
 });
 ```
-
-In the above example, we define a table with two slots, define two functions, then initialize the table immediately using an `elem` definition written in the active form, specifying the index value of the `table`. We then declare and export a function called `accessTable()`, which calls one of the functions referenced in our table, specifying the element number to call as its parameter. We invoke that function in JavaScript, then log the returned value to the console.
 
 ## Syntax
 

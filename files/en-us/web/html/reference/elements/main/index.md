@@ -9,6 +9,8 @@ sidebar: htmlsidebar
 
 The **`<main>`** [HTML](/en-US/docs/Web/HTML) element represents the dominant content of the {{HTMLElement("body")}} of a document. The main content area consists of content that is directly related to or expands upon the central topic of a document, or the central functionality of an application.
 
+A document mustn't have more than one `<main>` element that doesn't have the [`hidden`](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden) attribute specified.
+
 {{InteractiveExample("HTML Demo: &lt;main&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
@@ -34,8 +36,6 @@ header {
     sans-serif;
 }
 ```
-
-A document mustn't have more than one `<main>` element that doesn't have the [`hidden`](/en-US/docs/Web/HTML/Reference/Global_attributes/hidden) attribute specified.
 
 ## Attributes
 

@@ -9,6 +9,8 @@ sidebar: htmlsidebar
 
 The **`<article>`** [HTML](/en-US/docs/Web/HTML) element represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication). Examples include: a forum post, a magazine or newspaper article, or a blog entry, a product card, a user-submitted comment, an interactive widget or gadget, or any other independent item of content.
 
+A given document can have multiple articles in it; for example, on a blog that shows the text of each article one after another as the reader scrolls, each post would be contained in an `<article>` element, possibly with one or more `<section>`s within.
+
 {{InteractiveExample("HTML Demo: &lt;article&gt;", "tabbed-standard")}}
 
 ```html interactive-example
@@ -54,8 +56,6 @@ The **`<article>`** [HTML](/en-US/docs/Web/HTML) element represents a self-conta
   font-size: 1rem;
 }
 ```
-
-A given document can have multiple articles in it; for example, on a blog that shows the text of each article one after another as the reader scrolls, each post would be contained in an `<article>` element, possibly with one or more `<section>`s within.
 
 ## Attributes
 

@@ -9,6 +9,8 @@ sidebar: htmlsidebar
 
 The **`<rt>`** [HTML](/en-US/docs/Web/HTML) element specifies the ruby text component of a ruby annotation, which is used to provide pronunciation, translation, or transliteration information for East Asian typography. The `<rt>` element must always be contained within a {{HTMLElement("ruby")}} element.
 
+See the article about the {{HTMLElement("ruby")}} element for more examples.
+
 {{InteractiveExample("HTML Demo: &lt;rt&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
@@ -22,8 +24,6 @@ ruby {
   font-size: 2em;
 }
 ```
-
-See the article about the {{HTMLElement("ruby")}} element for more examples.
 
 ## Attributes
 

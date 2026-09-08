@@ -9,6 +9,8 @@ sidebar: cssref
 
 The **`:valid`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents any {{HTMLElement("input")}} or other {{HTMLElement("form")}} element whose contents [validate](/en-US/docs/Web/HTML/Guides/Constraint_validation) successfully. This allows you to easily make valid fields adopt an appearance that helps the user confirm that their data is formatted properly.
 
+This pseudo-class is useful for highlighting correct fields for the user.
+
 {{InteractiveExample("CSS Demo: :valid", "tabbed-shorter")}}
 
 ```css interactive-example
@@ -43,8 +45,6 @@ input:valid {
   >
 </form>
 ```
-
-This pseudo-class is useful for highlighting correct fields for the user.
 
 ## Syntax
 

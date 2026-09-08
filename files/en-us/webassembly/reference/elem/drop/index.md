@@ -12,6 +12,8 @@ The **`elem.drop`** [elem instruction](/en-US/docs/WebAssembly/Reference/Elem) d
 > [!NOTE]
 > [Active](/en-US/docs/WebAssembly/Reference/Definitions/elem#active_form) `elem` segments are dropped automatically during module instantiation, and therefore are not available to drop via `elem.drop`.
 
+In the above example, we define a `table`, two functions, and an `elem` called `$funcs` that references the two functions. We then invoke `table.init` to copy the references from the `$funcs` `elem` over to the `table`. With this done, the `elem` is no longer needed, so we call `elem.drop` to free up the memory it was using.
+
 {{InteractiveExample("Wat Demo: elem.drop", "tabbed-taller")}}
 
 ```wat interactive-example
@@ -50,8 +52,6 @@ WebAssembly.instantiateStreaming(fetch("{%wasm-url%}")).then((result) => {
   console.log(value);
 });
 ```
-
-In the above example, we define a `table`, two functions, and an `elem` called `$funcs` that references the two functions. We then invoke `table.init` to copy the references from the `$funcs` `elem` over to the `table`. With this done, the `elem` is no longer needed, so we call `elem.drop` to free up the memory it was using.
 
 ## Syntax
 

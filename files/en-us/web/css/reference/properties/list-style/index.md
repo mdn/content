@@ -9,6 +9,8 @@ sidebar: cssref
 
 The **`list-style`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property allows you to set all the list style properties at once.
 
+The values of this property are applied to list items, including {{HTMLElement("li")}} elements and elements with `{{cssxref("display")}}: list-item;`. Because this property is inherited, it can be set on a parent element (normally {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make the same list styling apply to all the nested items.
+
 {{InteractiveExample("CSS Demo: list-style")}}
 
 ```css interactive-example-choice
@@ -85,8 +87,6 @@ hr {
   suffix: " ";
 }
 ```
-
-The values of this property are applied to list items, including {{HTMLElement("li")}} elements and elements with `{{cssxref("display")}}: list-item;`. Because this property is inherited, it can be set on a parent element (normally {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make the same list styling apply to all the nested items.
 
 ## Constituent properties
 
