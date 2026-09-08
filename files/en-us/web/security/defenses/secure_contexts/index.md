@@ -21,7 +21,11 @@ If these APIs were available to content that was not delivered over a secure con
 
 ## When is a context considered secure?
 
-To a first approximation, a window context is secure when its document was delivered over an [HTTPS](/en-US/docs/Web/Security/Defenses/Transport_Layer_Security) connection, or it is delivered from a loopback (local) address. A worker context is secure when it was created by a secure context.
+To a first approximation:
+
+- Documents are secure contexts when their resources are delivered over an [HTTPS](/en-US/docs/Web/Security/Defenses/Transport_Layer_Security) connection, or are delivered from a loopback (local) address. Framed documents must also be embedded in a document which is itself a secure context.
+
+- Workers are secure contexts when they are created by a secure context.
 
 ### Top-level documents
 
