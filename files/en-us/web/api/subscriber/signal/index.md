@@ -16,7 +16,7 @@ The **`signal`** read-only property of the {{domxref("Subscriber")}} interface p
 
 An internally created {{domxref("AbortSignal")}}. It is aborted when {{domxref("Subscriber.complete()")}} or {{domxref("Subscriber.error()")}} is called, or when all observers unsubscribe.
 
-This is a different object from any signal passed to {{domxref("Observable.subscribe()")}}. A signal passed to `subscribe()` controls an individual observer's subscription; `subscriber.signal` tracks the shared subscription. When one observer unsubscribes, `subscriber.signal` remains active if other observers are still subscribed.
+This is a different object from any signal passed to {{domxref("Observable.subscribe()")}}. A signal passed to `subscribe()` controls the observers subscribed with that signal; `subscriber.signal` tracks the shared subscription. When one observer unsubscribes, `subscriber.signal` is not aborted if other observers are still subscribed.
 
 For cleanup that does not use an API accepting an `AbortSignal`, use {{domxref("Subscriber.addTeardown()")}}. Unlike registering an `abort` event listener, `addTeardown()` also runs the callback immediately if the subscriber is already inactive.
 

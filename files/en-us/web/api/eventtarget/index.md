@@ -8,7 +8,7 @@ browser-compat: api.EventTarget
 {{APIRef("DOM")}}{{AvailableInWorkers}}
 
 The **`EventTarget`** interface is implemented by objects that can receive events and may have listeners for them.
-In other words, any target of events implements the three methods associated with this interface.
+In other words, any target of events implements the methods associated with this interface.
 
 {{domxref("Element")}}, and its children, as well as {{domxref("Document")}} and {{domxref("Window")}}, are the most common event targets,
 but other objects can be event targets, too.
@@ -31,7 +31,7 @@ Many event targets (including elements, documents, and windows) also support [re
   - : Removes an event listener from the `EventTarget`.
 - {{domxref("EventTarget.dispatchEvent()")}}
   - : Dispatches an event to this `EventTarget`.
-- {{domxref("EventTarget.when()")}}
+- {{domxref("EventTarget.when()")}} {{experimental_inline}}
   - : Returns an {{domxref("Observable")}} object representing a stream of events fired on the event target it is called on.
 
 ## Specifications

@@ -35,12 +35,12 @@ None ({{jsxref("undefined")}}).
 
 ### An observable value checker
 
-This example uses a custom observable to check that each string in an array contains only ASCII digits (`0`–`9`).
+This example uses a custom observable to check that each string in an array is nonempty and contains only ASCII digits (`0`–`9`).
 
 We first define a custom observable using the {{domxref("Observable.Observable", "Observable()")}} constructor. This defines a [regular expression](/en-US/docs/Web/JavaScript/Reference/Regular_expressions) that matches a string containing only ASCII digits, then uses a {{jsxref("Statements/for...of", "for...of")}} loop to process each value in a `values` array. Each value is tested against the regex:
 
-- If the value contains only ASCII digits, it is passed into a {{domxref("Subscriber.next()")}} call.
-- If the value contains non-digit characters, it is inserted into an error message and passed into an `error()` call. We then return from the producer callback to stop processing further values.
+- If the value is nonempty and contains only ASCII digits, it is passed into a {{domxref("Subscriber.next()")}} call.
+- If the value is empty or contains non-digit characters, it is inserted into an error message and passed into an `error()` call. We then return from the producer callback to stop processing further values.
 
 Finally, after all the values are processed, {{domxref("Subscriber.complete()")}} is called to complete the stream of values.
 
@@ -54,7 +54,9 @@ const observable = new Observable((subscriber) => {
     if (regex.test(value)) {
       subscriber.next(value);
     } else {
-      subscriber.error(`Error: ${value} contains non-digit characters`);
+      subscriber.error(
+        `Error: "${value}" must contain one or more ASCII digits only`,
+      );
       return;
     }
   }
@@ -117,7 +119,7 @@ The final console output will look something like this:
 1234
 354567
 87654
-Error: gg567 contains non-digit characters
+Error: "gg567" must contain one or more ASCII digits only
 ```
 
 ## Specifications

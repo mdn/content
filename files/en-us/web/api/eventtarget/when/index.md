@@ -10,11 +10,11 @@ browser-compat: api.EventTarget.when
 
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
-The **`when()`** method of the {{domxref("Observable API", "Observable API", "", "nocode")}} returns an {{domxref("Observable")}} object representing a stream of events fired on the event target it is called on.
+The **`when()`** method of the {{domxref("EventTarget")}} interface returns an {{domxref("Observable")}} object representing a stream of events fired on the event target it is called on.
 
 To subscribe to the stream of events, you can then call {{domxref("Observable.subscribe", "subscribe()")}} on the resulting observable.
 
-In the background, an event listener is registered to capture the events as they are fired, in the same way as when you call {{domxref("EventTarget.addEventListener()")}}. However, only one listener is added for multiple subscriptions on the same `EventTarget` resulting from a `when()` call, whereas a separate listener is added for each `addEventListener()` call.
+The returned observable uses an event listener in the background, as with {{domxref("EventTarget.addEventListener()")}}. This listener's creation, sharing among observers, and removal follow the same lifecycle as the {{domxref("Subscriber")}} object for a custom observable.
 
 ## Syntax
 
@@ -32,7 +32,9 @@ when(type, options)
     - `capture` {{optional_inline}}
       - : A boolean value indicating that events of the specified type will be dispatched to the listener registered in the background before being dispatched to any `EventTarget` beneath it in the DOM tree. If not specified, defaults to `false`.
     - `passive` {{optional_inline}}
-      - : A boolean value that, if `true`, indicates that the observer subscription's [`next`](/en-US/docs/Web/API/Observable/subscribe#next) function will never call {{domxref("Event.preventDefault()")}}. If a passive listener calls `preventDefault()`, nothing will happen and a console warning may be generated. If not specified, defaults to `false`. See [Using passive listeners](/en-US/docs/Web/API/EventTarget/addEventListener#using_passive_listeners) for more information on why this is useful.
+      - : A boolean value that, if `true`, indicates that callbacks processing the events will never call {{domxref("Event.preventDefault", "preventDefault()")}}. If a passive listener calls `preventDefault()`, nothing will happen and a console warning may be generated.
+
+        If this option is not specified, it defaults to the same value as for `addEventListener()`. See [Using passive listeners](/en-US/docs/Web/API/EventTarget/addEventListener#using_passive_listeners) to learn more.
 
 ### Return value
 

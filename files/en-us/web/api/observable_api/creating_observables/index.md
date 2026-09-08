@@ -14,11 +14,11 @@ Before proceeding, read [Using observables](/en-US/docs/Web/API/Observable_API/U
 
 Like Promises, observables are created with a callback. The callback's job is to do work and push data to its subscribers. This callback isn't called immediately: it's called when the first observer subscribes, either by `subscribe()`, by one of the [aggregation methods](/en-US/docs/Web/API/Observable_API/Using_observables#aggregating_values), or by subscribing to a downstream observable created by a [transformation method](/en-US/docs/Web/API/Observable_API/Using_observables#transforming_an_observable). It receives a {{domxref("Subscriber")}} object. You can call methods on this object to dispatch data to all observers subscribed to the observable. Additional observers share the same underlying subscription until it completes, errors, or all observers unsubscribe. After that, the callback is called again when the next observer subscribes.
 
-- `next()`: Dispatches data to the `next()` method of all observers. This can be called any number of times.
-- `complete()`: Dispatches data to the `complete()` method of all observers. Called when the stream has been successfully completed and no more data will be sent.
-- `error()`: Dispatches data to the `error()` method of all observers. Called when the stream has been completed with an error.
+- `next(value)`: Sends a value to each observer's `next` callback. This can be called any number of times while the subscription is active.
+- `complete()`: Ends the subscription successfully and calls each observer's `complete` callback without arguments.
+- `error(error)`: Ends the subscription with an error and passes the error to each observer's `error` callback. If an observer has no `error` callback, the error is reported to the global object.
 
-With a subscription set up, the observable can signal any number of events to the `Subscriber` via the `next()` callback, optionally followed by a single call to the `complete()` or `error()` callback, signaling that the stream of data is finished.
+With a subscription set up, the producer can send any number of values by calling `subscriber.next()`, optionally followed by a call to `subscriber.complete()` or `subscriber.error()` to signal that the stream of data is finished.
 
 There's another `addTeardown()` method; we'll look at that in the [Teardown](#teardown) section.
 
@@ -29,7 +29,7 @@ In this example, we will print the numbers 1 to 10 to the page, then print a mes
 <p></p>
 ```
 
-In the JavaScript, we use the {{domxref("Observable.Observable", "Observable()")}} constructor to create a new observable. Inside its callback function, we declare a variable `i` with a value of `1`. We then use a {{domxref("Window.setInterval()")}} call to check the value of `i` every `timerInterval` milliseconds. If the value has reached the specified number of iterations, we call the `Subscriber.complete()` method to complete the subscription. If not, we call `Subscriber.next()` to move to the next iteration of the pipeline. At the end of the interval, `i` is incremented by 1.
+In the JavaScript, we use the {{domxref("Observable.Observable", "Observable()")}} constructor to create a new observable. Inside its callback function, we declare a variable `i` with a value of `1`. We then use a {{domxref("Window.setInterval()")}} call to check the value of `i` every `timerInterval` milliseconds. If the value has exceeded the specified number of iterations, we call the `Subscriber.complete()` method to complete the subscription. If not, we call `Subscriber.next()` to send the current value of `i` to the observers. At the end of the interval callback, `i` is incremented by 1.
 
 ```js live-sample___basic-constructor-example
 function makeTimer(timerInterval, iterations = Infinity) {
@@ -51,7 +51,7 @@ function makeTimer(timerInterval, iterations = Infinity) {
 > [!NOTE]
 > This function is not production-ready at this point! Read on to [Teardown](#teardown) to see why.
 
-Next, we define an `init()` function inside which we subscribe to the observable by calling `Observable.subscribe()`. Inside the `subscribe()` method's argument, we define the {{domxref("Subscriber")}} object's methods referenced inside the constructor in the previous block — the `next()` method prints the value passed to it to the `<p>` element (`i`, in the code above that calls it), and the `complete()` method prints "Count complete" to the `<p>`.
+Next, we define an `init()` function inside which we subscribe to the observable by calling `Observable.subscribe()`. The object passed to `subscribe()` defines the observer's callbacks: `next` prints the value received from the producer to the `<p>` element, and `complete` displays a completion message.
 
 ```js hidden live-sample___basic-constructor-example live-sample___basic-teardown-example
 const outputElem = document.querySelector("p");
@@ -71,7 +71,7 @@ function init() {
 }
 ```
 
-Finally, the `init` function is called in response to the [`click`](/en-US/docs/Web/API/Element/click_event) event on the `<button>`. This can be done with `addEventListener()`, but here we use `when()` just to drive the point home.
+Finally, the `init()` function is called in response to the [`click`](/en-US/docs/Web/API/Element/click_event) event on the `<button>`, using `when()` and `subscribe()`.
 
 ```js live-sample___basic-constructor-example
 btn.when("click").subscribe(init);
@@ -81,18 +81,21 @@ The rendered output looks like this:
 
 {{EmbedLiveSample("basic-constructor-example", "100%", "80px")}}
 
-Click the button. Every 500 milliseconds, the value of `i` is printed to the page and then incremented by 1, until the value reaches `11`. At that point, "Count complete" is logged to the console and subscription stops.
+Click the button. Every 500 milliseconds, the value of `i` is printed to the page and then incremented by 1. On the next interval after printing `10`, the subscription completes and the paragraph displays "Count complete; click to restart."
 
 > [!NOTE]
-> The first three lifecycle methods can be specified inside the object passed into the `subscribe()` method during subscription. However, as you'll see in the next section, `addTeardown()` is called directly on the `Subscriber` object inside the constructor callback.
+> The producer calls methods on the `Subscriber` object to send notifications; the consumer defines the corresponding callbacks in the object passed to `subscribe()`. As you'll see in the next section, cleanup is also registered by the producer, using `Subscriber.addTeardown()` inside the constructor callback.
 
 ## Teardown
 
-The [previous example](#creating_an_observable) is not production-ready because every `makeTimer()` call creates a new interval. If the user clicks the `<button>` multiple times, multiple intervals will be created, all trying to update the same `<p>` element. To fix this, we need to abort the observable when the user clicks the button again, so that only one interval is active at any time. We'll use an `AbortController` for this, although `takeUntil()` could also be used.
+The [previous example](#creating_an_observable) is not production-ready because subscribing to each new `makeTimer()` observable creates a new interval. If the user clicks the `<button>` multiple times, multiple intervals will be created, all trying to update the same `<p>` element. To fix this, we need to unsubscribe from the previous observable and clear its interval before starting a new count. First, we'll use an `AbortController` to unsubscribe when the user clicks the button again.
 
 ```js live-sample___basic-teardown-example
+let controller;
+
 function init() {
-  const controller = new AbortController();
+  controller?.abort();
+  controller = new AbortController();
   makeTimer(500, 10).subscribe(
     {
       next(value) {
@@ -104,19 +107,10 @@ function init() {
     },
     { signal: controller.signal },
   );
-  btn
-    .when("click")
-    .take(1) // Only take the next click
-    .subscribe(() => {
-      controller.abort();
-    });
 }
 
 btn.when("click").subscribe(init);
 ```
-
-> [!NOTE]
-> This example also demonstrates how you can use `take(1)` to emulate the `{ once: true }` behavior from `addEventListener()`.
 
 The problem with this is that while the `makeTimer()` observable is stopped, the interval created inside it is not cleared until it reaches `11`. This is fine for our example because the interval will eventually clear itself, but in a real-world scenario this could lead to memory leaks and unexpected behavior. To fix this, we need to make sure that `clearInterval` is deterministically called when the observable becomes inactive, not just when it reaches the termination point. We do this by adding a _teardown_ to the observable. The teardown logic is passed as a callback to {{domxref("Subscriber.addTeardown()")}}.
 
@@ -139,9 +133,9 @@ function makeTimer(timerInterval, iterations = Infinity) {
 }
 ```
 
-The `addTeardown()` function is invoked immediately after the `Subscriber.complete()` or `Subscriber.error()` function is invoked to signal the completion of the subscription. It is also invoked when the subscriber is aborted.
+The callback registered with `addTeardown()` runs when `Subscriber.complete()` or `Subscriber.error()` closes the subscription, before the observers' completion or error callbacks. It also runs when all observers unsubscribe.
 
-In this case, we use it check whether the `<button>` text is "Start count"; if so, we change it to "Restart count" so that it makes more sense after the count has already run. More importantly, however, we use the teardown function to clear the interval (via {{domxref("Window.clearInterval()")}}) once the subscription is completed. This is important to avoid errors and memory leaks.
+In this case, the teardown callback clears the interval via {{domxref("Window.clearInterval()")}}, so it stops running as soon as the subscription ends.
 
 The example now renders like so:
 
@@ -151,7 +145,7 @@ Press the `<button>` while the count is running; the count will stop immediately
 
 ## Observing element size
 
-Custom observables can also wrap APIs that deliver notifications through callbacks. In this example, we wrap a {{domxref("ResizeObserver")}} to create a stream of an element's dimensions. Element size changes do not fire events, so we cannot obtain this stream using `when()`.
+Custom observables can also wrap APIs that deliver notifications through callbacks. In this example, we wrap a {{domxref("ResizeObserver")}} to create a stream of an element's dimensions. Resizing an element does not fire a `resize` event on that element, so we cannot obtain this stream using `when()`.
 
 ### HTML and CSS
 

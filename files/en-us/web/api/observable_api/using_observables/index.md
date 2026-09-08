@@ -6,17 +6,17 @@ page-type: guide
 
 {{DefaultAPISidebar("Observable API")}}
 
-The [Observable API](/en-US/docs/Web/API/Observable_API) provides a mechanism for handling an asynchronous stream of events in an efficient, ergonomic fashion. This guide explains how to transform, subscribe to, and unsubscribe from existing observables, using browser event streams as examples.
+The [Observable API](/en-US/docs/Web/API/Observable_API) provides a mechanism for handling streams of values, including asynchronous events. This guide explains how to transform, subscribe to, and unsubscribe from existing observables, using browser event streams as examples.
 
 Before proceeding, you may wish to read the [Observable API overview](/en-US/docs/Web/API/Observable_API) to familiarize yourself with the core concepts.
 
 ## Obtaining an observable
 
-{{domxref("Observable")}} objects (commonly called **observables**) represent a stream of events that can be observed and manipulated. There are three main ways to obtain observables:
+{{domxref("Observable")}} objects (commonly called **observables**) represent a stream of values that can be observed and transformed. There are three main ways to obtain observables:
 
-- {{domxref("EventTarget")}} objects are observable: the {{domxref("EventTarget.when()")}} method returns an {{domxref("Observable")}} representing a stream of events fired on the `EventTarget`. You may also have libraries that return observables.
+- The {{domxref("EventTarget.when()")}} method returns an {{domxref("Observable")}} representing a stream of events fired on the `EventTarget`. You may also have libraries that return observables.
 - You can create your own custom observables using the {{domxref("Observable.Observable", "Observable()")}} constructor.
-- You can convert objects such as [Promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [Iterables](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) into observables using the static {{domxref("Observable.from_static", "Observable.from()")}} method.
+- You can convert objects such as [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [iterables](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) into observables using the static {{domxref("Observable.from_static", "Observable.from()")}} method.
 
 On the web, `EventTarget` objects are perhaps the most common use case of observables. The basic idea is this: wherever you have been writing `addEventListener(eventType, handler)`, you can now write `when(eventType).subscribe(handler)` to achieve the same effect. For example, here is how you can listen for `click` events on the document body using `when()`:
 
@@ -39,7 +39,7 @@ An observable is a stream of values. Naturally, you can transform this stream in
 | {{domxref("Observable.flatMap()")}}   | {{jsxref("Iterator.flatMap()")}}  | Maps each value to an observable, then flattens the resulting observables into a single observable. |
 | {{domxref("Observable.inspect()")}}   | N/A                               | Like `subscribe()`, but only "taps into" the stream and allows further chaining.                    |
 | {{domxref("Observable.map()")}}       | {{jsxref("Iterator.map()")}}      | Maps each value to a new value using a mapping function.                                            |
-| {{domxref("Observable.switchMap()")}} | N/A                               | Maps each value to an observable and cancels the previous observable if it hasn't finished.         |
+| {{domxref("Observable.switchMap()")}} | N/A                               | Maps each value to an observable and unsubscribes from the previous inner observable.               |
 | {{domxref("Observable.take()")}}      | {{jsxref("Iterator.take()")}}     | Takes only the first `n` values from the source observable.                                         |
 | {{domxref("Observable.takeUntil()")}} | N/A                               | Like `take()`, but stops when a second observable emits a value.                                    |
 
@@ -75,14 +75,14 @@ document.body
   });
 ```
 
-In this snippet, the page's {{htmlelement("body")}} element is an {{domxref("EventTarget")}}. We subscribe to the stream of [`mousemove`](/en-US/docs/Web/API/Element/mousemove_event) events fired on it using the `when()` method.
+In this snippet, the page's {{htmlelement("body")}} element is an {{domxref("EventTarget")}}. We obtain a stream of [`mousemove`](/en-US/docs/Web/API/Element/mousemove_event) events fired on it using the `when()` method.
 
 We then specify a pipeline:
 
 - {{domxref("Observable.filter()")}} filters the events passed through the pipeline to only events fired on the {{htmlelement("div")}} element (tested using the {{domxref("Element.matches()")}} method) and not other `body` descendants.
 - {{domxref("Observable.map()")}} maps the fired `mousemove` event objects to new objects containing the coordinates of the mouse cursor when the event was fired.
 
-Finally, {{domxref("Observable.subscribe()")}} subscribes to the observable, passing a handler function called each time a `mousemove` event fires on the `<body>`.
+Finally, {{domxref("Observable.subscribe()")}} subscribes to the observable, passing a handler function called each time a `mousemove` event passes the filter.
 
 The rendered output looks like this:
 
@@ -110,7 +110,7 @@ But you don't always want to process each value individually. Sometimes you are 
 | {{domxref("Observable.some()")}}    | {{jsxref("Iterator.some()")}}     | Returns `true` when the predicate returns `true` for any value; `false` otherwise.  |
 | {{domxref("Observable.toArray()")}} | {{jsxref("Iterator.toArray()")}}  | Collects all values into an array.                                                  |
 
-All these methods return promises. The promise either resolves when the return value is determined, or when the observable completes (we'll see later what it means for an observable to complete).
+All these methods return promises for the results described above. Depending on the method, the promise fulfills as soon as the result is determined or when the observable completes (we'll see later what it means for an observable to complete). It can also reject, for example if the observable errors or the subscription is aborted.
 
 Unlike the transformation methods, these aggregation methods implicitly subscribe: the pipeline starts receiving values as soon as one of these methods is called.
 
@@ -141,7 +141,7 @@ We already showed basic `subscribe()` usage in the previous sections, but let's 
 Just like a promise can send notifications either as "fulfilled" or "rejected", an observable can also send multiple types of notifications to its subscribers, each one corresponding to a different method you can pass into `subscribe()`.
 
 - `next(value)`: Called whenever a new value is available from the observable. In the examples above, we passed a single function into `subscribe()`, which is shorthand for passing an object with just a `next` method.
-- `error(err)`: Called when an error occurs inside the observable.
+- `error(err)`: Called when the observable signals an error. Exceptions thrown by the observer's own callbacks are reported to the global object instead.
 - `complete()`: Called when the observable has finished sending values. We'll discuss this more in the [Creating custom observables](/en-US/docs/Web/API/Observable_API/Creating_observables) guide. Event streams are infinite, but can become finite by calling `take()` or `takeUntil()`.
 
 For example, here's how you could modify the previous example to also log when the observable completes (although this observable doesn't actually "complete"):
@@ -161,7 +161,7 @@ document.body
   });
 ```
 
-Internally, each observable has a list of _observers_ — objects containing these three methods (similar to how promises have a list of fulfill and reject handlers that can be registered via `then()` and friends). You can call `subscribe()` multiple times on the same observable to register multiple observers, and each observer will receive the same values from the observable. This is again similar to promises, but different from iterators, where you cannot have multiple consumers of the same iterator.
+Internally, each active observable subscription has a list of _observers_ — objects containing any of these three callbacks. You can call `subscribe()` multiple times on the same observable to register multiple observers. Concurrent observers share the subscription, and each receives values emitted while it is subscribed; previously emitted values are not replayed to new observers. This differs from sharing an iterator, where each consumer's `next()` call advances the same iterator rather than broadcasting a value to all consumers.
 
 ```js
 const clickObservable = document.body.when("click");
@@ -178,7 +178,7 @@ clickObservable.subscribe((e) => {
 
 ## Unsubscribing from an observable
 
-An observer can also be unsubscribed from the observable, which means the callback methods will no longer be called. If an observable has no more observers, it will stop producing values.
+An observer can also be unsubscribed from the observable, which means its callbacks will no longer be called. If an observable has no more observers, its shared subscription becomes inactive and its teardown callbacks run. These callbacks release resources, such as the event listener registered by `when()`. Custom observables must implement this cleanup themselves, as described in [Creating custom observables](/en-US/docs/Web/API/Observable_API/Creating_observables#teardown).
 
 The canonical way to unsubscribe from an observable is to use an {{domxref("AbortController")}}. With this method, you can unsubscribe mid-way through observable data processing, at any point you like. To do this, you create an `AbortController` and pass its {{domxref("AbortController.signal", "signal")}} when you call `subscribe()`. You can then call {{domxref("AbortController.abort()")}} on the controller, which unsubscribes all observers associated with that signal.
 
@@ -201,15 +201,20 @@ document.body
     { signal: controller.signal },
   );
 
-document.body.when("click").subscribe(() => {
-  // Unsubscribe on click
-  controller.abort();
-});
+document.body
+  .when("click")
+  .take(1)
+  .subscribe(() => {
+    // Unsubscribe on click
+    controller.abort();
+  });
 ```
 
 {{EmbedLiveSample("abort-example", "100%", "380px")}}
 
-In this example, the abort condition is triggered by another observable emitting a value: `document.body.when("click")`. In this case, you can use the `takeUntil()` method to achieve the same effect in a more declarative way. The `takeUntil()` method returns an observable (it's one of the [transformation methods](#transforming_an_observable)), so can be inserted in the pipeline to specify a condition under which you would like the unsubscribe action to occur. The following code achieves the same effect as the previous example:
+The `take(1)` call completes the click stream after the first click, removing its event listener. This is similar to using `{ once: true }` with `addEventListener()`.
+
+In this example, the abort condition is triggered by another observable emitting a value: `document.body.when("click")`. In this case, you can use the `takeUntil()` method to achieve the same effect in a more declarative way. The `takeUntil()` method returns an observable (it's one of the [transformation methods](#transforming_an_observable)), so it can be inserted in the pipeline to specify a condition under which you would like the unsubscribe action to occur. The following code achieves the same effect as the previous example:
 
 ```js
 const outputElem = document.querySelector("p");
@@ -225,9 +230,9 @@ document.body
   });
 ```
 
-The `takeUntil()` method [converts](/en-US/docs/Web/API/Observable/from_static) the input to an observable, so you can even pass a promise to unsubscribe when the promise resolves.
+The `takeUntil()` method [converts](/en-US/docs/Web/API/Observable/from_static) the input to an observable, so you can even pass a promise to unsubscribe when the promise fulfills.
 
-The `AbortController` method is more flexible where your unsubscribe condition is not easily represented as a single control flow object. It also allows you to unsubscribe observers independently if the observable has multiple observers. The `takeUntil()` method, on the other hand, essentially converts the observable pipeline into one that completes, and when an observable completes, all observers are unsubscribed.
+An `AbortController` lets you unsubscribe at any point in your code. Separate controllers let you unsubscribe observers independently. Aborting does not call the observer's `complete` callback. In contrast, `takeUntil()` completes the observable it returns and notifies that observable's observers through their `complete` callbacks. Other observers subscribed directly to the source observable remain subscribed.
 
 ## Canvas drawing example
 
@@ -242,12 +247,12 @@ The markup includes a `<canvas>` element to draw onto, and a {{htmlelement("form
 <form>
   <div>
     <label for="size">Choose pen size:</label>
-    <input type="range" min="1" max="40" value="10" />
-    <output>10</output>
+    <input id="size" type="range" min="1" max="40" value="10" />
+    <output for="size">10</output>
   </div>
   <div>
-    <label for="size">Choose pen color:</label>
-    <input type="color" />
+    <label for="color">Choose pen color:</label>
+    <input id="color" type="color" />
   </div>
 </form>
 ```
@@ -314,7 +319,7 @@ const sizeOutput = document.querySelector("output");
 const colorInput = document.querySelector("[type='color']");
 ```
 
-Next, we synchronize the canvas's {{domxref("HTMLCanvasElement.width","width")}} and {{domxref("HTMLCanvasElement.height","height")}} to the {{domxref("Element.clientWidth", "clientWidth")}}/{{domxref("Element.clientHeight", "clientHeight")}} of the `<body>`. This is implemented in the `sizeCanvas()` function. It is called when the app starts and also whenever the window resizes—using `when("resize").subscribe(sizeCanvas)` which is, again, exactly equivalent to the familiar `addEventListener("resize", sizeCanvas)`.
+Next, we synchronize the canvas's {{domxref("HTMLCanvasElement.width","width")}} and {{domxref("HTMLCanvasElement.height","height")}} to the {{domxref("Element.clientWidth", "clientWidth")}}/{{domxref("Element.clientHeight", "clientHeight")}} of the `<body>`. This is implemented in the `sizeCanvas()` function. It is called when the app starts and whenever the window resizes, using `when("resize").subscribe(sizeCanvas)`. For this event handler, this has the same effect as `addEventListener("resize", sizeCanvas)`. Setting the canvas dimensions also clears the drawing.
 
 ```js live-sample___canvas-example
 function sizeCanvas() {
@@ -327,7 +332,7 @@ sizeCanvas();
 window.when("resize").subscribe(sizeCanvas);
 ```
 
-Next, we define the variables and functions we need to draw on our `<canvas>`. First, we grab a reference to the `<canvas>` [2D rendering context](/en-US/docs/Web/API/CanvasRenderingContext2D), and store an initial value for the pen color and pen size in variables called `penSize` and `penColor`, respectively. We also define the logic to update the pen size and pen color when new values are chosen from the `<input>` elements. The `updatePenSize()` function sets the `penSize` variable to the [`value`](/en-US/docs/Web/API/HTMLInputElement/value) of the range slider `<input>`, and also sets that value as the `<output>` element's text content. The `updatePenColor()` function sets the `penColor` variable to the `value` of the color picker `<input>`. These two functions are wired up to the [`input`](/en-US/docs/Web/API/Element/input_event) event on the range slider and [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event on the color picker, respectively.
+Next, we define the variables and functions we need to draw on our `<canvas>`. First, we grab a reference to the `<canvas>` [2D rendering context](/en-US/docs/Web/API/CanvasRenderingContext2D), and store initial values for the pen size and color in `penSize` and `penColor`, respectively. The `updatePenSize()` function sets `penSize` to the range slider's [`valueAsNumber`](/en-US/docs/Web/API/HTMLInputElement/valueAsNumber) and displays its value in the `<output>` element. The `updatePenColor()` function sets `penColor` to the color picker's [`value`](/en-US/docs/Web/API/HTMLInputElement/value). These functions handle the [`input`](/en-US/docs/Web/API/Element/input_event) event on the range slider and the [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event on the color picker, respectively.
 
 ```js live-sample___canvas-example
 const ctx = canvas.getContext("2d");
@@ -335,7 +340,7 @@ let penSize = 10;
 let penColor = "black";
 
 function updatePenSize() {
-  penSize = sizeInput.value;
+  penSize = sizeInput.valueAsNumber;
   sizeOutput.textContent = sizeInput.value;
 }
 
@@ -374,28 +379,30 @@ function finishDraw() {
 }
 ```
 
-Finally, we create an observable on the `<canvas>` element, this time representing a stream of [`mousedown`](/en-US/docs/Web/API/Element/mousedown_event) events that will be fired on the `<canvas>`. We use {{domxref("Observable.map()")}} to map the fired event objects to new objects containing the coordinates of the mouse cursor when the event was fired. We then call `subscribe()` at the end of the chain, passing it a reference to the `draw()` function so that it is called whenever an event fires.
-
-However — and this is where it gets interesting — we don't want to run `draw()` on `mousedown` events. We want to run it on every `mousemove` event that happens after a `mousedown` event, and we want to stop running it when a `mouseup` event fires. We achieve this by inserting an {{domxref("Observable.flatMap()")}} call into the chain.
+Finally, we create an observable for [`mousedown`](/en-US/docs/Web/API/Element/mousedown_event) events on the `<canvas>`. For each press of the primary mouse button, {{domxref("Observable.flatMap()")}} subscribes to a stream of `mousemove` events that ends when the button is released. We listen for `mouseup` on the document so drawing also stops if the mouse is released outside the canvas. We then use {{domxref("Observable.map()")}} to extract the mouse coordinates and `subscribe()` to pass them to `draw()`.
 
 ```js live-sample___canvas-example
 canvas
   .when("mousedown")
+  .filter((e) => e.button === 0)
   .flatMap(() => {
-    const mouseUp = canvas.when("mouseup").finally(finishDraw);
+    const mouseUp = document
+      .when("mouseup")
+      .filter((e) => e.button === 0)
+      .finally(finishDraw);
     return canvas.when("mousemove").takeUntil(mouseUp);
   })
   .map((e) => ({ x: e.clientX, y: e.clientY }))
   .subscribe(draw);
 ```
 
-This is a long pipeline. It observes a whole `mousedown -> mousemove... -> mouseup` chain step-by-step.
+The pipeline processes a `mousedown → mousemove… → mouseup` sequence:
 
-1. The source observable is `canvas.when("mousedown")`, which fires on every `mousedown` event and triggers the `flatMap()` callback.
-2. The `flatMap()` callback creates two observables: `canvas.when("mousemove")` and `canvas.when("mouseup")`. The first one is directly returned from the callback, so the observable returned by `flatMap()` fires on every `mousemove` event instead.
-3. Because of the {{domxref("Observable.takeUntil()")}} call, the `mousemove` observer only fires until the `mouseUp` observer fires once (we'll talk about this observer right after). Because the `takeUntil()` call is chained to the `canvas.when("mousemove")` observable instead of the main `canvas.when("mousedown")` one, the `mouseUp` observer does not unsubscribe the `mousedown` observer, and future `mousedown` events can still trigger the whole process again.
-4. The observable returned by `flatMap()`, which fires on every `mousemove`, is transformed by a `map()` that turns events into objects with `x` and `y` properties. This final observable is subscribed to by `draw`, allowing `draw` to receive the `x` and `y` coordinates of each `mousemove` events.
-5. As step 3 said: the stream of `mousemove` events ends on every `mouseup` event thanks to the `mouseUp` observable used as the termination criterion in `takeUntil()`. This `mouseUp` observable is just `canvas.when("mouseup")`, but we chain an additional {{domxref("Observable.finally()")}} call, which calls `finishDraw()` whenever this event fires, making the `<form>` appear again at the end of the process.
+1. Each primary-button `mousedown` event passes the filter and triggers the `flatMap()` callback.
+2. The callback returns `canvas.when("mousemove").takeUntil(mouseUp)`. Subscribing to this inner observable starts listening for mouse movements and for the button release.
+3. Each mouse movement on the canvas passes through `flatMap()` to `map()`, which extracts its coordinates, and then to `draw()`.
+4. When the primary button is released, {{domxref("Observable.takeUntil()")}} completes the inner observable and unsubscribes from both event streams. The {{domxref("Observable.finally()")}} callback runs during cleanup and calls `finishDraw()` to show the form again.
+5. The outer `mousedown` subscription remains active, so the next press starts a new drawing sequence.
 
 The final effect is that we react to `mousemove` events (just like our first example on this page!) but we only start listening when `mousedown` fires and stop listening when `mouseup` fires. With the help of `Observable`, we have successfully composed three parallel event streams into a single, coherent sequence.
 
