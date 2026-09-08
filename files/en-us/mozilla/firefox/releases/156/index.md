@@ -83,3 +83,9 @@ Firefox 156 is the current [Beta version of Firefox](https://www.firefox.com/en-
 These features are shipping in Firefox 156 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **Container Timing API**: `dom.enable_container_timing`
+
+  The [Container Timing API](https://wicg.github.io/container-timing/) extends the [Element Timing](/en-US/docs/Web/API/PerformanceElementTiming) concept to whole containers of content, such as a card, widget, or section, rather than individual elements.
+  An element is marked as a container root using the `containertiming` attribute, and rendering timestamps for it are then reported as {{domxref("PerformanceContainerTiming")}} entries through the {{domxref("PerformanceObserver")}} interface.
+  ([Firefox bug 1940240](https://bugzil.la/1940240)).
