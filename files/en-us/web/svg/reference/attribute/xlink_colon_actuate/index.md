@@ -8,10 +8,15 @@ browser-compat: svg.elements.a.xlink_actuate
 sidebar: svgref
 ---
 
-The **`xlink:actuate`** attribute defines the timing of traversal from the source resource to the destination resource.
+The **`xlink:actuate`** attribute defines the timing of traversal from the source resource to the destination resource. You can use this attribute with the following SVG elements:
+
+- {{SVGElement("a")}}
 
 > [!NOTE]
 > SVG 2 removed the need for the `xlink` namespace. The `xlink:actuate` attribute is obsolete and should not be used in modern SVG content.
+
+> [!NOTE]
+> While the XLink specification defines multiple values for `xlink:actuate` attribute, its value for the SVG {{SVGElement("a")}} is fixed to `onRequest`.
 
 ## Usage notes
 
@@ -32,12 +37,12 @@ The **`xlink:actuate`** attribute defines the timing of traversal from the sourc
   </tbody>
 </table>
 
-- `onLoad`
-  - : Will traverse to the destination resource immediately on the source resource load.
 - `onRequest`
-  - : Will traverse from the source resource to the destination resource when the user triggers an event after the source resource has loaded.
+  - : Traverses from the source resource to the destination resource when the user triggers an event after the source resource has loaded.
+- `onLoad`
+  - : Traverses to the destination resource immediately on the source resource load.
 - `other`
-  - : Behavior other than `onLoad` or `onRequest`.
+  - : Uses behavior other than `onLoad` or `onRequest`.
 - `none`
   - : Does not traverse to the destination resource.
 
