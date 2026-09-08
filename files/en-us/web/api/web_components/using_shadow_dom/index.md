@@ -66,9 +66,22 @@ Before shadow DOM was made available to web developers, browsers were already us
 
 ### Attribute inheritance
 
-Language and text directionality, set using [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) and [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir), are generally inherited from an element's DOM parent. When that parent is a shadow root, inheritance comes from the shadow host instead. Elements within the shadow tree can specify their own language and direction; see the attribute references for details and exceptions.
+Language and text directionality, set using [`lang`](/en-US/docs/Web/HTML/Reference/Global_attributes/lang) and [`dir`](/en-US/docs/Web/HTML/Reference/Global_attributes/dir), are generally inherited from an element's parent node. When that parent is a shadow root, they are inherited from the shadow host instead.
 
-Assigning an element to a {{HTMLElement("slot")}} does not change its DOM parent. When an assigned element inherits language and directionality, it inherits them from its light-DOM parent, not from the slot. The slot itself follows the inheritance rules within the shadow tree, as does its fallback content. For example, a slot without its own `lang` or `dir` attributes inside a shadow-tree element with `lang="ar"` and `dir="rtl"` inherits those settings, while an assigned {{HTMLElement("span")}} without these attributes still inherits from its light-DOM parent.
+Assigning an element to a {{HTMLElement("slot")}} does not change its parent node, so an assigned element inherits from its parent outside the shadow tree, not from the slot. The slot and its fallback content inherit within the shadow tree, like any other element there:
+
+```html
+<div dir="rtl" lang="ar">
+  <!-- my-element's shadow tree:
+    <div dir="ltr" lang="en"><slot></slot></div> -->
+  <my-element><span>Assigned content</span></my-element>
+</div>
+```
+
+The `<span>` matches `:dir(rtl)` and `:lang(ar)`, inherited from the `<div>` containing `<my-element>`. The `<slot>` matches `:dir(ltr)` and `:lang(en)`, inherited from its parent in the shadow tree.
+
+> [!NOTE]
+> CSS inherits the {{cssxref("direction")}} property through the flattened tree, so an assigned element with no `dir` attribute of its own is _rendered_ using the direction in effect at the slot, even though {{cssxref(":dir")}} reports the direction inherited from its parent node.
 
 ## Creating a shadow DOM
 
