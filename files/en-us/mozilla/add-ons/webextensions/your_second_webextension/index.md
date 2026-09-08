@@ -99,8 +99,9 @@ Now create a file called "manifest.json", and give it this content:
   - [`id`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#id) defines a unique identifier for the extension. This ID is needed before an extension can be published on addons.mozilla.org (AMO).
   - [`data_collection_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#data_collection_permissions) provides information on whether the extension collects and transmits personally identifiable information. This example doesn't collect or transmit any data.
 - [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) lists permissions the extension needs. In this example, the extension asks for the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
-- [`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) specifies the toolbar button. You supply three pieces of information here, all of which are optional:
+- [`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) specifies the toolbar button. You supply four pieces of information here, all of which are optional:
   - `default_icon` points to the button's icon.
+  - `theme_icons` points to icons to use instead of `default_icon` when a theme with light or dark text is active. If you don't supply `theme_icons`, the browser uses `default_icon` for every theme.
   - `default_title` provides text for a tooltip displayed for the action button.
   - `default_popup` points to an HTML file included with the extension that defines the popups content.
 - [`web_accessible_resources`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) lists files that you want to make accessible to web pages. As the extension replaces the page's content with images packaged in the extension, you need to make those images accessible to the page.
@@ -127,6 +128,8 @@ If you choose to supply an icon, it should be 48x48 pixels. You can supply a 96x
 The toolbar button also needs an icon, and manifest.json specifies that it is at "icons/beasts-32.png".
 
 Save an icon named "beasts-32.png" in the "icons" directory. You could use [the one from the example](https://raw.githubusercontent.com/mdn/webextensions-examples/main/beastify/icons/beasts-32.png), which is taken from the [IconBeast Lite icon set](https://www.iconbeast.com/free/) and used under its [license](https://www.iconbeast.com/faq/).
+
+The manifest.json also specifies a `theme_icons` icon, "icons/beasts-32-light.png", for use when a theme with light text is active. Save [this icon from the example](https://raw.githubusercontent.com/mdn/webextensions-examples/main/beastify/icons/beasts-32-light.png) in the "icons" directory too. This icon is optional: if you omit it, the extension still loads and falls back to "beasts-32.png" for every theme.
 
 ### The popup
 
