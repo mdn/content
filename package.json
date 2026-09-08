@@ -79,5 +79,12 @@
     "tempy": "^3.2.0",
     "yaml": "^2.9.0",
     "yargs": "^18.1.0"
+  },
+  "allowScripts": {
+    "@mdn/rari": true,
+    "gifsicle": true,
+    "lefthook": true,
+    "mozjpeg": true,
+    "pngquant-bin": true
   }
 }
