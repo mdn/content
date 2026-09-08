@@ -88,8 +88,8 @@ Firefox 156 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 ### APIs
 
-- The `length` parameter of {{domxref("SubtleCrypto.deriveBits()")}} is now declared [`[EnforceRange]`](https://webidl.spec.whatwg.org/#EnforceRange), so a value that is `NaN`, `Infinity`, negative, or greater than 2<sup>32</sup>−1 throws a {{jsxref("TypeError")}}.
-  Previously these values were either accepted or rejected the returned promise with an `OperationError`. This affects the `HKDF`, `PBKDF2`, `ECDH`, and `X25519` algorithms.
+- {{domxref("SubtleCrypto.deriveBits()")}} now throws a {{jsxref("TypeError")}} if the passed `length` parameter is `NaN`, `Infinity`, negative, or greater than 2<sup>32</sup>−1.
+  Previously these values were either accepted or rejected the returned promise with an `OperationError`.
   ([Firefox bug 2065212](https://bugzil.la/2065212)).
 - {{domxref("Scheduler.yield()")}} now inherits the enclosing task's priority and abort signal across an `await` that settles synchronously, such as an already-resolved promise, a non-promise value, or a `then()` callback on a settled promise.
   Previously the continuation lost the inherited state in these cases and silently fell back to the default `user-visible` priority.
