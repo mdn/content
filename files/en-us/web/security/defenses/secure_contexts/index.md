@@ -63,7 +63,7 @@ In addition:
 - If a shared worker is a secure context, then only other secure contexts may attach to it.
 - If a shared worker is a non-secure context, then only other non-secure contexts may attach to it.
 
-#### Service workers
+#### Service workers and worklets
 
 Only secure contexts are allowed to register service workers, so service workers are always secure contexts.
 
