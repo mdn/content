@@ -10,11 +10,12 @@ browser-compat: api.Observable.toArray
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`toArray()`** method of the {{domxref("Observable")}} interface returns a promise that fulfills with an array containing every value passed through the observable stream.
+The **`toArray()`** method of the {{domxref("Observable")}} interface returns a promise that fulfills with a new array containing the source observable's values in the order they were emitted.
 
 ## Syntax
 
 ```js-nolint
+toArray()
 toArray(options)
 ```
 
@@ -23,53 +24,48 @@ toArray(options)
 - `options` {{optional_inline}}
   - : An options object containing the following properties:
     - `signal` {{optional_inline}}
-      - : An {{domxref("AbortSignal")}} object instance, which allows the operation to be aborted via the associated {{domxref("AbortController")}}.
+      - : An {{domxref("AbortSignal")}} that can be used to cancel the operation. Aborting the signal unsubscribes from the source and rejects the promise with the signal's {{domxref("AbortSignal.reason", "reason")}}. If the signal is already aborted, the promise rejects without subscribing to the source.
 
 ### Return value
 
-A {{jsxref("Promise")}} that fulfills with an array containing every value passed through the stream.
+A {{jsxref("Promise")}} that fulfills with a new {{jsxref("Array")}} containing all source values in emission order when the source completes. If the source completes without emitting any values, the promise fulfills with an empty array.
 
-If no values are passed through the stream before it completes, an empty array is returned.
+If the source errors, the promise rejects with that error. If the operation is aborted, the promise rejects with the abort reason.
+
+## Description
+
+Like other promise-returning operators, this method subscribes to the source immediately when called. It does not require a separate call to {{domxref("Observable.subscribe", "subscribe()")}}.
+
+`toArray()` stores each source value until the source completes. If the source never completes, the promise remains pending unless the operation errors or is aborted, and the array continues to grow as values arrive. Use {{domxref("Observable.take", "take()")}} or {{domxref("Observable.takeUntil", "takeUntil()")}} to limit the stream when necessary.
+
+Source values are stored as-is. If a value is a promise, the array contains that promise object rather than its fulfillment value.
 
 ## Examples
 
-### Basic `toArray()` usage
+### Using toArray()
 
-This example returns all the values passing through an observable pipeline in a single array using a `toArray()` call.
+This example collects the coordinates of the first three button clicks and displays them as an array in click order.
 
 ```html hidden live-sample___basic-toArray
-<p></p>
+<button>Click me</button>
+<p>Waiting for clicks</p>
 ```
 
-```js hidden live-sample___basic-toArray
+```js live-sample___basic-toArray
+const btn = document.querySelector("button");
 const output = document.querySelector("p");
+
+btn
+  .when("click")
+  .take(3)
+  .map((event) => ({ x: event.clientX, y: event.clientY }))
+  .toArray()
+  .then((result) => {
+    output.textContent = JSON.stringify(result);
+  });
 ```
 
-First, we create a new observable using the {{domxref("Observable.Observable", "Observable()")}} constructor. Inside the subscriber callback, we pass in four numbers to the value stream via {{domxref("Subscriber.next()")}} calls, before completing the subscription via {{domxref("Subscriber.complete()")}}.
-
-```js live-sample___basic-toArray
-const observable = new Observable((subscriber) => {
-  subscriber.next(2);
-  subscriber.next(2);
-  subscriber.next(1);
-  subscriber.next(4);
-  subscriber.complete();
-});
-```
-
-Next, we call `toArray()` on the observable and print the result to the screen:
-
-```js live-sample___basic-toArray
-observable.toArray().then((result) => {
-  output.textContent = result;
-});
-```
-
-#### Result
-
-The rendered result is as follows:
-
-{{EmbedLiveSample("basic-toArray", "100%", "60px")}}
+{{EmbedLiveSample("basic-toArray", "100%", "100px")}}
 
 ## Specifications
 

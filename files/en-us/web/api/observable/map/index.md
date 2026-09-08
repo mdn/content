@@ -10,7 +10,7 @@ browser-compat: api.Observable.map
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`map()`** method of the {{domxref("Observable")}} interface maps each value passed through the observable stream to a new structure.
+The **`map()`** method of the {{domxref("Observable")}} interface returns a new observable that emits the values of the source observable, each transformed by a mapping function.
 
 ## Syntax
 
@@ -21,47 +21,43 @@ map(mapper)
 ### Parameters
 
 - `mapper`
-  - : A callback function that transforms each value passed through the observable into a new value before passing it through to the rest of the stream. The callback is passed two arguments:
+  - : A function to execute for each value emitted by the source observable. Its return value is emitted by the returned observable. The function is called with the following arguments:
     - `value`
-      - : The current value being mapped.
+      - : The current value being processed.
     - `index`
-      - : A number representing the value's position in the stream. The first position has a value of `0`, in the same manner as an array.
+      - : The index of the current value being processed, starting from `0`.
 
 ### Return value
 
-An {{domxref("Observable")}}.
+A new {{domxref("Observable")}}. When subscribed to, it calls `mapper` for each value emitted by the source observable and emits the return value. When the source completes, the returned observable also completes.
+
+## Description
+
+Like other observable-returning operators, this method is lazy: calling it creates a new observable without subscribing to the source. Processing starts when the returned observable is subscribed to.
+
+If `mapper` throws an exception, the returned observable errors and unsubscribes from the source. Errors from the source are also forwarded.
+
+The return value of `mapper` is emitted as-is. In particular, a returned promise is emitted as a promise object; it is not awaited. To emit values from a returned promise or another observable, use {{domxref("Observable.flatMap", "flatMap()")}} or {{domxref("Observable.switchMap", "switchMap()")}}.
 
 ## Examples
 
-### Basic `map()` example
+### Using map()
 
-In this example, we'll print the updated mouse coordinates to the screen whenever the mouse is moved over the top of a couple of {{htmlelement("div")}} elements.
+This example displays the mouse coordinates when the pointer moves over either of two `<div>` elements. The mapping function extracts the coordinates from each mouse event into an object with `x` and `y` properties.
 
-#### HTML
-
-The markup includes two `<div>` elements plus a single {{htmlelement("p")}} element to display the returned coordinate data.
-
-```html live-sample___basic-map
+```html hidden live-sample___basic-map
 <div></div>
 <div></div>
 <p></p>
 ```
 
-#### CSS
-
-We style the `<div>` elements with a {{cssxref("height")}}, {{cssxref("background-color")}}, and {{cssxref("margin-bottom")}}:
-
-```css live-sample___basic-map
+```css hidden live-sample___basic-map
 div {
   height: 120px;
   background-color: purple;
   margin-bottom: 40px;
 }
 ```
-
-#### JavaScript
-
-The first chunk of JavaScript looks like this:
 
 ```js live-sample___basic-map
 const outputElem = document.querySelector("p");
@@ -71,29 +67,13 @@ document.body
   .filter((e) => e.target.matches("div"))
   .map((e) => ({ x: e.clientX, y: e.clientY }))
   .subscribe({ next: reportCoords });
-```
 
-In this snippet we first grab a reference to the `<p>` element, then specify the [`mousemove`](/en-US/docs/Web/API/Element/mousemove_event) event inside the `when()` method on the page's {{htmlelement("body")}} element, which returns a observable representing a stream of `mousedown` events fired on the `<body>` element.
-
-We then specify a pipeline:
-
-- {{domxref("Observable.filter()")}} is used to filter the events passed through the pipeline to only events fired on `EventTarget`s that match the `div` CSS selector (tested using the {{domxref("Element.matches()")}} method). This means that only `mousemove` events directly fired on the `<div>` elements will pass through the pipeline.
-- `map()` is used to map the fired `mousemove` {{domxref("Event")}} objects to new objects containing the coordinates of the mouse cursor when the event was fired.
-- {{domxref("Observable.subscribe()")}} is used to subscribe the observable to the event stream, calling the `reportCoords()` function each time a `mousemove` event fires on the `<div>`s.
-
-Finally, we define the `reportCoords()` function, which prints the mouse coordinates to the `<p>` element:
-
-```js live-sample___basic-map
 function reportCoords(e) {
   outputElem.textContent = `${e.x},${e.y}`;
 }
 ```
 
-The rendered output looks like this:
-
 {{EmbedLiveSample("basic-map", "100%", "360px")}}
-
-Try moving the mouse over the top of the example; the coordinates are printed to the `<p>` only when the `<div>` elements are moved over, not the areas outside the `<div>`s.
 
 ## Specifications
 
@@ -105,5 +85,6 @@ Try moving the mouse over the top of the example; the coordinates are printed to
 
 ## See also
 
+- {{domxref("Observable.flatMap()")}}
 - [Using observables](/en-US/docs/Web/API/Observable_API/Using_observables)
 - [Observable explainer](https://github.com/WICG/observable/blob/master/README.md)

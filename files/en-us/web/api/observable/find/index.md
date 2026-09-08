@@ -10,7 +10,7 @@ browser-compat: api.Observable.find
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`find()`** method of the {{domxref("Observable")}} interface returns a promise that fulfills with the first value passed through the observable stream that passes a specified test, or {{jsxref("undefined")}} if no values pass.
+The **`find()`** method of the {{domxref("Observable")}} interface returns a promise that fulfills with the first value emitted by the source observable that satisfies the provided testing function, or {{jsxref("undefined")}} if the source completes without a match.
 
 ## Syntax
 
@@ -22,66 +22,61 @@ find(predicate, options)
 ### Parameters
 
 - `predicate`
-  - : A callback function that contains a test. Each value passed through the observable stream is evaluated to see if it passes the test. The callback is passed two arguments:
+  - : A function to execute for each value emitted by the source observable. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate the value passes the test, and a [falsy](/en-US/docs/Glossary/Falsy) value otherwise. The function is called with the following arguments:
     - `value`
-      - : The current value being tested.
+      - : The current value being processed.
     - `index`
-      - : A number representing the value's position in the stream. The first position has a value of `0`, in the same manner as an array.
+      - : The index of the current value being processed, starting from `0`.
 - `options` {{optional_inline}}
   - : An options object containing the following properties:
     - `signal` {{optional_inline}}
-      - : An {{domxref("AbortSignal")}} object instance, which allows the operation to be aborted via the associated {{domxref("AbortController")}}.
+      - : An {{domxref("AbortSignal")}} that can be used to cancel the operation. Aborting the signal unsubscribes from the source and rejects the promise with the signal's {{domxref("AbortSignal.reason", "reason")}}. If the signal is already aborted, the promise rejects without subscribing to the source.
 
 ### Return value
 
-A {{jsxref("Promise")}}:
+A {{jsxref("Promise")}} that resolves to the first value for which `predicate` returns a truthy value. If the source completes without a matching value, the promise fulfills with {{jsxref("undefined")}}.
 
-- As soon as a value is found that passes the test, the promise fulfills with the value.
-- If no value is found that passes the test, the promise fulfills with `undefined`.
+If the source errors or `predicate` throws an exception, the promise rejects with that error. If the operation is aborted, the promise rejects with the abort reason.
+
+## Description
+
+Like other promise-returning operators, this method subscribes to the source immediately when called. It does not require a separate call to {{domxref("Observable.subscribe", "subscribe()")}}.
+
+When `predicate` returns a truthy value, `find()` unsubscribes from the source without waiting for it to complete. If the source never completes and no value passes the test, the promise remains pending unless the operation errors or is aborted.
+
+The return value of `predicate` is converted to a boolean without awaiting it. An async function returns a truthy promise object regardless of its eventual result, so it cannot be used as an asynchronous test.
+
+If `predicate` throws an exception, the operation unsubscribes from the source.
+
+If the selected value is a promise, the returned promise adopts its eventual state rather than fulfilling with the promise object itself.
 
 ## Examples
 
-### Basic `find()` usage
+### Using find()
 
-This example tests several values passing through an observable pipeline using a `find()` call.
+This example finds the first Shift-click among up to three button clicks and displays its coordinates. If no click matches, it displays a message instead.
 
 ```html hidden live-sample___basic-find
-<p></p>
+<button>Click me</button>
+<p>Waiting for clicks</p>
 ```
 
-```js hidden live-sample___basic-find
+```js live-sample___basic-find
+const btn = document.querySelector("button");
 const output = document.querySelector("p");
-```
 
-First, we create a new observable using the {{domxref("Observable.Observable", "Observable()")}} constructor. Inside the subscriber callback, we pass in four numbers to the value stream via {{domxref("Subscriber.next()")}} calls, before completing the subscription via {{domxref("Subscriber.complete()")}}.
-
-```js live-sample___basic-find
-const observable = new Observable((subscriber) => {
-  subscriber.next(0);
-  subscriber.next(1);
-  subscriber.next(2);
-  subscriber.next(3);
-  subscriber.complete();
-});
-```
-
-Next, we call `find()` on the observable; the specified predicate tests whether each value is greater than `2`. We then print the promise fulfillment value to the screen.
-
-```js live-sample___basic-find
-observable
-  .find((value) => value > 2)
+btn
+  .when("click")
+  .take(3)
+  .find((event) => event.shiftKey)
   .then((result) => {
-    output.textContent = result;
+    output.textContent = result
+      ? `${result.clientX},${result.clientY}`
+      : "No Shift-click found.";
   });
 ```
 
-#### Result
-
-The rendered result is as follows:
-
-{{EmbedLiveSample("basic-find", "100%", "60px")}}
-
-The reported fulfillment value is `3`, because the fourth value is greater than `2`.
+{{EmbedLiveSample("basic-find", "100%", "100px")}}
 
 ## Specifications
 
@@ -93,5 +88,7 @@ The reported fulfillment value is `3`, because the fourth value is greater than 
 
 ## See also
 
+- {{domxref("Observable.every()")}}
+- {{domxref("Observable.some()")}}
 - [Using observables](/en-US/docs/Web/API/Observable_API/Using_observables)
 - [Observable explainer](https://github.com/WICG/observable/blob/master/README.md)

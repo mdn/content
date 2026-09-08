@@ -10,7 +10,7 @@ browser-compat: api.Observable.some
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`some()`** method of the {{domxref("Observable")}} interface returns a promise that fulfills with a boolean indicating whether any value passed through the observable stream passed a specified test.
+The **`some()`** method of the {{domxref("Observable")}} interface returns a promise that fulfills with a boolean indicating whether any value emitted by the source observable satisfies the provided testing function.
 
 ## Syntax
 
@@ -22,66 +22,57 @@ some(predicate, options)
 ### Parameters
 
 - `predicate`
-  - : A callback function that contains a test. Each value passed through the observable stream is evaluated to see if it passes the test. The callback is passed two arguments:
+  - : A function to execute for each value emitted by the source observable. It should return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate the value passes the test, and a [falsy](/en-US/docs/Glossary/Falsy) value otherwise. The function is called with the following arguments:
     - `value`
-      - : The current value being tested.
+      - : The current value being processed.
     - `index`
-      - : A number representing the value's position in the stream. The first position has a value of `0`, in the same manner as an array.
+      - : The index of the current value being processed, starting from `0`.
 - `options` {{optional_inline}}
   - : An options object containing the following properties:
     - `signal` {{optional_inline}}
-      - : An {{domxref("AbortSignal")}} object instance, which allows the operation to be aborted via the associated {{domxref("AbortController")}}.
+      - : An {{domxref("AbortSignal")}} that can be used to cancel the operation. Aborting the signal unsubscribes from the source and rejects the promise with the signal's {{domxref("AbortSignal.reason", "reason")}}. If the signal is already aborted, the promise rejects without subscribing to the source.
 
 ### Return value
 
-A {{jsxref("Promise")}} that fulfills with a boolean value:
+A {{jsxref("Promise")}} that fulfills with `true` as soon as `predicate` returns a truthy value, or `false` when the source completes without any value passing the test. If the source completes without emitting any values, the promise fulfills with `false`.
 
-- If any of the values pass the test, the promise fulfills with `true`, and the operation immediately completes.
-- The promise fulfills with `false` only when the operation completes without any values passing the test.
+If the source errors or `predicate` throws an exception, the promise rejects with that error. If the operation is aborted, the promise rejects with the abort reason.
+
+## Description
+
+Like other promise-returning operators, this method subscribes to the source immediately when called. It does not require a separate call to {{domxref("Observable.subscribe", "subscribe()")}}.
+
+When `predicate` returns a truthy value, `some()` unsubscribes from the source without waiting for it to complete. If the source never completes and no value passes the test, the promise remains pending unless the operation errors or is aborted.
+
+The return value of `predicate` is converted to a boolean without awaiting it. An async function returns a truthy promise object regardless of its eventual result, so it cannot be used as an asynchronous test.
+
+If `predicate` throws an exception, the operation unsubscribes from the source.
 
 ## Examples
 
-### Basic `some()` usage
+### Using some()
 
-This example tests several values passing through an observable pipeline using a `some()` call.
+This example checks whether Shift is held for any of the first three button clicks. It reports `true` as soon as a click passes the test, or `false` after all three fail.
 
 ```html hidden live-sample___basic-some
-<p></p>
+<button>Click me</button>
+<p>Waiting for clicks</p>
 ```
 
-```js hidden live-sample___basic-some
+```js live-sample___basic-some
+const btn = document.querySelector("button");
 const output = document.querySelector("p");
-```
 
-First, we create a new observable using the {{domxref("Observable.Observable", "Observable()")}} constructor. Inside the subscriber callback, we pass in four numbers to the value stream via {{domxref("Subscriber.next()")}} calls, before completing the subscription via {{domxref("Subscriber.complete()")}}.
-
-```js live-sample___basic-some
-const observable = new Observable((subscriber) => {
-  subscriber.next(1);
-  subscriber.next(2);
-  subscriber.next(1);
-  subscriber.next(1);
-  subscriber.complete();
-});
-```
-
-Next, we call `some()` on the observable; the specified predicate tests whether each value is greater than `1`. We then print the promise fulfillment value to the screen.
-
-```js live-sample___basic-some
-observable
-  .some((value) => value > 1)
+btn
+  .when("click")
+  .take(3)
+  .some((event) => event.shiftKey)
   .then((result) => {
     output.textContent = result;
   });
 ```
 
-#### Result
-
-The rendered result is as follows:
-
-{{EmbedLiveSample("basic-some", "100%", "60px")}}
-
-The reported fulfillment value is `true`, because the second value is greater than `1`.
+{{EmbedLiveSample("basic-some", "100%", "100px")}}
 
 ## Specifications
 
@@ -93,5 +84,7 @@ The reported fulfillment value is `true`, because the second value is greater th
 
 ## See also
 
+- {{domxref("Observable.every()")}}
+- {{domxref("Observable.find()")}}
 - [Using observables](/en-US/docs/Web/API/Observable_API/Using_observables)
 - [Observable explainer](https://github.com/WICG/observable/blob/master/README.md)

@@ -10,11 +10,12 @@ browser-compat: api.Observable.first
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`first()`** method of the {{domxref("Observable")}} interface returns a promise that fulfills with the first value passed through the observable stream.
+The **`first()`** method of the {{domxref("Observable")}} interface returns a promise that fulfills with the first value emitted by the source observable.
 
 ## Syntax
 
 ```js-nolint
+first()
 first(options)
 ```
 
@@ -23,55 +24,46 @@ first(options)
 - `options` {{optional_inline}}
   - : An options object containing the following properties:
     - `signal` {{optional_inline}}
-      - : An {{domxref("AbortSignal")}} object instance, which allows the operation to be aborted via the associated {{domxref("AbortController")}}.
+      - : An {{domxref("AbortSignal")}} that can be used to cancel the operation. Aborting the signal unsubscribes from the source and rejects the promise with the signal's {{domxref("AbortSignal.reason", "reason")}}. If the signal is already aborted, the promise rejects without subscribing to the source.
 
 ### Return value
 
-A {{jsxref("Promise")}} that fulfills with the first value passed through the stream.
+A {{jsxref("Promise")}} that resolves to the first value emitted by the source observable. If the source completes without emitting any values, the promise rejects with a {{jsxref("RangeError")}}.
 
-If the observable stream is empty, the promise rejects with a `RangeError`.
+If the source errors, the promise rejects with that error. If the operation is aborted, the promise rejects with the abort reason.
+
+## Description
+
+Like other promise-returning operators, this method subscribes to the source immediately when called. It does not require a separate call to {{domxref("Observable.subscribe", "subscribe()")}}.
+
+As soon as the source emits a value, `first()` unsubscribes from it without waiting for it to complete. If the source never emits a value or completes, the promise remains pending unless the operation errors or is aborted.
+
+If the selected value is a promise, the returned promise adopts its eventual state rather than fulfilling with the promise object itself.
 
 ## Examples
 
-### Basic `first()` usage
+### Using first()
 
-This example passes observable pipeline values through a `first()` call.
+This example displays the coordinates of the first button click, then stops listening.
 
 ```html hidden live-sample___basic-first
-<p></p>
+<button>Click me</button>
+<p>Waiting for clicks</p>
 ```
 
-```js hidden live-sample___basic-first
+```js live-sample___basic-first
+const btn = document.querySelector("button");
 const output = document.querySelector("p");
+
+btn
+  .when("click")
+  .first()
+  .then((result) => {
+    output.textContent = `${result.clientX},${result.clientY}`;
+  });
 ```
 
-First, we create a new observable using the {{domxref("Observable.Observable", "Observable()")}} constructor. Inside the subscriber callback, we pass in four numbers to the value stream via {{domxref("Subscriber.next()")}} calls, before completing the subscription via {{domxref("Subscriber.complete()")}}.
-
-```js live-sample___basic-first
-const observable = new Observable((subscriber) => {
-  subscriber.next(2);
-  subscriber.next(4);
-  subscriber.next(6);
-  subscriber.next(8);
-  subscriber.complete();
-});
-```
-
-Next, we call `first()` on the observable. We then print the promise fulfillment value to the screen.
-
-```js live-sample___basic-first
-observable.first().then((result) => {
-  output.textContent = result;
-});
-```
-
-#### Result
-
-The rendered result is as follows:
-
-{{EmbedLiveSample("basic-first", "100%", "60px")}}
-
-The reported fulfillment value is `2`, because it is the first value passed through the stream.
+{{EmbedLiveSample("basic-first", "100%", "100px")}}
 
 ## Specifications
 
@@ -83,5 +75,7 @@ The reported fulfillment value is `2`, because it is the first value passed thro
 
 ## See also
 
+- {{domxref("Observable.last()")}}
+- {{domxref("Observable.find()")}}
 - [Using observables](/en-US/docs/Web/API/Observable_API/Using_observables)
 - [Observable explainer](https://github.com/WICG/observable/blob/master/README.md)

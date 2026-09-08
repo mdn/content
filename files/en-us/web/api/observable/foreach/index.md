@@ -10,7 +10,7 @@ browser-compat: api.Observable.forEach
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`forEach()`** method of the {{domxref("Observable")}} interface returns a promise that fulfills with `undefined` after performing a specified operation on every value passed through the observable stream.
+The **`forEach()`** method of the {{domxref("Observable")}} interface returns a promise that fulfills with {{jsxref("undefined")}} when the source observable completes, after executing a callback for each emitted value.
 
 ## Syntax
 
@@ -22,60 +22,59 @@ forEach(callback, options)
 ### Parameters
 
 - `callback`
-  - : A callback function that run on every value that passes through the stream. The callback takes two parameters:
+  - : A function to execute for each value emitted by the source observable. Its return value is ignored. The function is called with the following arguments:
     - `value`
-      - : The current value.
+      - : The current value being processed.
     - `index`
-      - : A number representing the value's position in the stream. The first position has a value of `0`, in the same manner as an array.
+      - : The index of the current value being processed, starting from `0`.
 - `options` {{optional_inline}}
   - : An options object containing the following properties:
     - `signal` {{optional_inline}}
-      - : An {{domxref("AbortSignal")}} object instance, which allows the operation to be aborted via the associated {{domxref("AbortController")}}.
+      - : An {{domxref("AbortSignal")}} that can be used to cancel the operation. Aborting the signal unsubscribes from the source and rejects the promise with the signal's {{domxref("AbortSignal.reason", "reason")}}. If the signal is already aborted, the promise rejects without subscribing to the source.
 
 ### Return value
 
-A {{jsxref("Promise")}} that fulfills with {{jsxref("undefined")}}.
+A {{jsxref("Promise")}} that fulfills with {{jsxref("undefined")}} when the source observable completes.
+
+If the source errors or `callback` throws an exception, the promise rejects with that error. If the operation is aborted, the promise rejects with the abort reason.
+
+## Description
+
+Like other promise-returning operators, this method subscribes to the source immediately when called. It does not require a separate call to {{domxref("Observable.subscribe", "subscribe()")}}.
+
+`forEach()` calls `callback` once for each source value. If the source never completes, the promise remains pending unless the operation errors or is aborted.
+
+The return value of `callback` is ignored. Returned promises are not awaited, and their rejections are not handled by `forEach()`. To wait for asynchronous work for each value, use {{domxref("Observable.flatMap", "flatMap()")}} to return a promise from the mapper.
+
+If `callback` throws an exception, the operation unsubscribes from the source.
 
 ## Examples
 
-### Basic `forEach()` usage
+### Using forEach()
 
-This example performs the same operation on all the values passing through an observable pipeline using a `forEach()` call.
+This example displays the coordinates of each of the first three button clicks, then adds a completion message.
 
 ```html hidden live-sample___basic-forEach
-<p></p>
+<button>Click me</button>
+<p>Waiting for clicks</p>
 ```
 
-```js hidden live-sample___basic-forEach
+```js live-sample___basic-forEach
+const btn = document.querySelector("button");
 const output = document.querySelector("p");
+
+btn
+  .when("click")
+  .take(3)
+  .forEach((event, index) => {
+    output.textContent = `Click ${index + 1}: ${event.clientX},${event.clientY}`;
+  })
+  .then(() => {
+    output.textContent += " — Count complete.";
+  });
 ```
 
-First, we create a new observable using the {{domxref("Observable.Observable", "Observable()")}} constructor. Inside the subscriber callback, we pass in four numbers to the value stream via {{domxref("Subscriber.next()")}} calls, before completing the subscription via {{domxref("Subscriber.complete()")}}.
-
-```js live-sample___basic-forEach
-const observable = new Observable((subscriber) => {
-  subscriber.next(2);
-  subscriber.next(2);
-  subscriber.next(1);
-  subscriber.next(4);
-  subscriber.complete();
-});
-```
-
-Next, we call `forEach()` on the observable; each value is multiplied by 2 and then printed to the screen, preceded by its index value and a colon character:
-
-```js live-sample___basic-forEach
-observable.forEach((value, index) => {
-  const result = value * 2;
-  output.textContent += `${index}:${result} `;
-});
-```
-
-#### Result
-
-The rendered result is as follows:
-
-{{EmbedLiveSample("basic-forEach", "100%", "60px")}}
+{{EmbedLiveSample("basic-forEach", "100%", "100px")}}
 
 ## Specifications
 
@@ -87,5 +86,10 @@ The rendered result is as follows:
 
 ## See also
 
+- {{domxref("Observable.find()")}}
+- {{domxref("Observable.map()")}}
+- {{domxref("Observable.filter()")}}
+- {{domxref("Observable.every()")}}
+- {{domxref("Observable.some()")}}
 - [Using observables](/en-US/docs/Web/API/Observable_API/Using_observables)
 - [Observable explainer](https://github.com/WICG/observable/blob/master/README.md)

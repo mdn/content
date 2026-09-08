@@ -10,53 +10,54 @@ browser-compat: api.Observable.inspect
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`inspect()`** method of the {{domxref("Observable")}} interface enables the different [lifecycle stages](/en-US/docs/Web/API/Observable_API/Creating_observables#creating_an_observable) of the observable stream to be inspected, to test that it is working as it should, and get diagnostic data.
+The **`inspect()`** method of the {{domxref("Observable")}} interface returns a new observable that mirrors the source observable and calls callbacks to inspect its values and subscription lifecycle.
 
 ## Syntax
 
 ```js-nolint
+inspect()
 inspect(inspector)
 ```
 
 ### Parameters
 
 - `inspector` {{optional_inline}}
-  - : An object or a callback function. If the provided `inspector` is an object, it can contain the following properties:
+  - : An object containing any of the following callback functions:
     - `next` {{optional_inline}}
-      - : A function that is called whenever the [`Observable.subscribe()` `next()`](/en-US/docs/Web/API/Observable/subscribe#next) function is run, in other words, when a value is sent through the stream.
+      - : A function called with each source value before it is forwarded to observers.
     - `error` {{optional_inline}}
-      - : A function that is called whenever the [`Observable.subscribe()` `error()`](/en-US/docs/Web/API/Observable/subscribe#error) function is run, in other words, when an exception is thrown somewhere in the observable pipeline.
+      - : A function called with the source's error before it is forwarded to observers.
     - `complete` {{optional_inline}}
-      - : A function that is called whenever the [`Observable.subscribe()` `complete()`](/en-US/docs/Web/API/Observable/subscribe#complete) function is run, in other words, when the stream has been successfully completed and no more data will be sent.
+      - : A function called without arguments when the source completes, before completion is forwarded to observers.
     - `subscribe` {{optional_inline}}
-      - : A function that is called when the observable subscribes to the pipeline, in other words, when the `Observable.subscribe()` call successfully runs.
+      - : A function called without arguments when the returned observable's subscription starts, before it subscribes to the source.
     - `abort` {{optional_inline}}
-      - : A function that is called when the observable subscription is [aborted](/en-US/docs/Web/API/Observable_API/Using_observables#unsubscribing_from_an_observable).
+      - : A function called with the abort reason when all observers unsubscribe from the returned observable. It is not called when the source completes or errors.
 
-    If the provided `inspector` is a callback function, it is equivalent to the `next` callback in the object version. This is a shortcut for the common case where you just want to provide a `next` function to inspect each value coming through the stream.
+    Alternatively, `inspector` can be a function, which is equivalent to passing an object with that function as its `next` callback. All callback return values are ignored.
 
 ### Return value
 
-An {{domxref("Observable")}}.
+A new {{domxref("Observable")}}. When subscribed to, it emits the source observable's values and forwards its completion or error, calling the corresponding inspector callbacks before forwarding each notification.
+
+## Description
+
+Like other observable-returning operators, this method is lazy: calling it creates a new observable without subscribing to the source. Processing starts when the returned observable is subscribed to.
+
+If a `subscribe`, `next`, `error`, or `complete` callback throws an exception, the returned observable errors with that exception. A thrown exception from `subscribe` prevents subscription to the source. An exception thrown by `abort` is reported to the global object.
+
+The callbacks run synchronously. Returned promises are not awaited, and their rejections are not handled by `inspect()`.
 
 ## Examples
 
-### Basic `inspect()` example
+### Using inspect()
 
-In this example, we'll show how to use an `inspect()` observable to log data about the subscription to a simple pipeline, illustrating how data can be collected in the background as the pipeline runs. The example itself allows a button to be clicked three times before the subscription completes.
+This example counts the first three button clicks. The `inspect()` callbacks log the subscription's start, each event before the count is updated, and the final count when the subscription completes.
 
-#### HTML
-
-The markup includes a {{htmlelement("button")}} element to be clicked, plus a {{htmlelement("p")}} element to display the number of clicks.
-
-```html live-sample___basic-inspect
+```html hidden live-sample___basic-inspect
 <button>Click me</button>
 <p>Click count: 0</p>
 ```
-
-#### JavaScript
-
-In our script, we start off by grabbing references to the button and the paragraph, initializing a `countValue` variable to `0` (which we will use to keep track of the number of clicks), and defining an `increment()` function, which will increment `countValue` and print its current value to the paragraph:
 
 ```js live-sample___basic-inspect
 const btn = document.querySelector("button");
@@ -68,17 +69,13 @@ function increment() {
   countValue++;
   para.textContent = `Click count: ${countValue}`;
 }
-```
 
-Now onto the observable pipeline:
-
-```js live-sample___basic-inspect
 btn
   .when("click")
   .take(3)
   .inspect({
     subscribe: () => {
-      console.log(`Subscription successful`);
+      console.log(`Subscription started`);
     },
     next: (e) => {
       console.log(`Count value before click: ${countValue}`);
@@ -96,31 +93,9 @@ btn
   });
 ```
 
-In the pipeline:
-
-- {{domxref("EventTarget.when()")}} is run on the button to return an observable representing a stream of click events fired on it.
-- {{domxref("Observable.take()")}} is run to limit the number of events passing through the pipeline to `3` before the subscription completes.
-- `inspect()` is used to log values to the console to output data about the subscription. Inside it, we define callbacks to report when the subscription is successful, the values being passed through the stream and their event types, and when the subscription completes.
-- {{domxref("Observable.subscribe()")}} is used to subscribe the observable to the event stream, calling the `increment()` function each time a `click` event fires on the `<button>`, and printing a message to the paragraph saying "No more clicks!" when the subscription completes.
-
-#### Result
-
-The rendered output looks like this:
+Open the browser's console and click the button three times to see the logged notifications.
 
 {{EmbedLiveSample("basic-inspect", "100%", "80px")}}
-
-Open your browser's JavaScript console, and try clicking the button three times. Note how, as well as the clicks and the completion being printed to the paragraph, the `inspect()` observable logs data to the console. The total console output should look like this:
-
-```plain
-Subscription successful
-Count value before click: 0
-Event type: click
-Count value before click: 1
-Event type: click
-Count value before click: 2
-Event type: click
-Final count value: 3
-```
 
 ## Specifications
 

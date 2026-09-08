@@ -10,7 +10,7 @@ browser-compat: api.Observable.reduce
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`reduce()`** method of the {{domxref("Observable")}} interface returns a promise that fulfills with an accumulated value calculated by running a reducer function on every value passed through the observable stream.
+The **`reduce()`** method of the {{domxref("Observable")}} interface returns a promise that fulfills with a single value obtained by combining the source observable's values using a reducer function.
 
 ## Syntax
 
@@ -23,74 +23,61 @@ reduce(reducer, initialValue, options)
 ### Parameters
 
 - `reducer`
-  - : A function that runs on every value that passes through the stream; the result of each iteration is passed to the next iteration via the accumulator. The callback takes three parameters:
+  - : A function that combines source values into an accumulator. Its return value becomes the `accumulator` argument on the next call. The function is called with the following arguments:
     - `accumulator`
-      - : On each iteration, the value of the `accumulator` is the return value of the previous reducer function's iteration, except for the first iteration, in which case it is the `initialValue`. If no `initialValue` is set, the `accumulator` equals the first value passed through the stream.
+      - : The value returned by the previous call to `reducer`. On the first call, it is `initialValue` if supplied, or the first source value otherwise.
     - `value`
-      - : The current value.
+      - : The current value being processed. On the first call, it is the first source value if `initialValue` is supplied, or the second source value otherwise.
     - `index`
-      - : The value's position in the stream. The first position has a value of `0`, in the same manner as an array.
+      - : The index of the current value being processed. On the first call, it is `0` if `initialValue` is supplied, or `1` otherwise.
 - `initialValue` {{optional_inline}}
-  - : Sets an initial value for the `accumulator`.
+  - : The initial value of the accumulator. If omitted, the first source value is used, and the reducer starts with the second source value. Supplying `undefined` explicitly counts as providing an initial value.
 - `options` {{optional_inline}}
   - : An options object containing the following properties:
     - `signal` {{optional_inline}}
-      - : An {{domxref("AbortSignal")}} object instance, which allows the operation to be aborted via the associated {{domxref("AbortController")}}.
+      - : An {{domxref("AbortSignal")}} that can be used to cancel the operation. Aborting the signal unsubscribes from the source and rejects the promise with the signal's {{domxref("AbortSignal.reason", "reason")}}. If the signal is already aborted, the promise rejects without subscribing to the source.
 
 ### Return value
 
-A {{jsxref("Promise")}} that fulfills with the final value of the `accumulator` after the last iteration.
+A {{jsxref("Promise")}} that resolves to the final accumulator when the source completes. If the source completes without emitting any values, the promise resolves to `initialValue` if supplied, or rejects with a {{jsxref("TypeError")}} otherwise.
 
-### Exceptions
+If the source errors or `reducer` throws an exception, the promise rejects with that error. If the operation is aborted, the promise rejects with the abort reason.
 
-- {{jsxref("TypeError")}}
-  - : The returned `Promise` rejects with this error if the observable completes without emitting any values and no `initialValue` was provided. If an `initialValue` was provided, the promise fulfills with that value instead.
+## Description
+
+Like other promise-returning operators, this method subscribes to the source immediately when called. It does not require a separate call to {{domxref("Observable.subscribe", "subscribe()")}}.
+
+If `initialValue` is supplied, `reducer` is called for each source value, starting at index `0`. Otherwise, the first source value initializes the accumulator, and `reducer` starts with the second value at index `1`. If the source emits only one value and no initial value is supplied, the promise resolves to that value without calling `reducer`.
+
+The return value of `reducer` is passed to the next call as-is, without awaiting it. If the final accumulator is a promise, the returned promise adopts its eventual state. If the source never completes, the promise remains pending unless the operation errors or is aborted.
+
+If `reducer` throws an exception, the operation unsubscribes from the source.
 
 ## Examples
 
-### Basic `reduce()` usage
+### Using reduce()
 
-This example uses a `reduce()` call to add all the values passing through an observable pipeline together.
+This example counts the first five button clicks with an accumulator, then displays the total when the stream completes.
 
 ```html hidden live-sample___basic-reduce
-<p></p>
+<button>Click me</button>
+<p>Waiting for clicks</p>
 ```
 
-```js hidden live-sample___basic-reduce
+```js live-sample___basic-reduce
+const btn = document.querySelector("button");
 const output = document.querySelector("p");
-```
 
-First, we create a new observable using the {{domxref("Observable.Observable", "Observable()")}} constructor. Inside the subscriber callback, we pass in four numbers to the value stream via {{domxref("Subscriber.next()")}} calls, before completing the subscription via {{domxref("Subscriber.complete()")}}.
-
-```js live-sample___basic-reduce
-const observable = new Observable((subscriber) => {
-  subscriber.next(3);
-  subscriber.next(2);
-  subscriber.next(11);
-  subscriber.next(4);
-  subscriber.complete();
-});
-```
-
-Next, we call `reduce()` on the observable. In the reducer function, we add the current value to the accumulator on each iteration. We also set an initial value of `0`. We then output the sum of all the values to the screen.
-
-```js live-sample___basic-reduce
-observable
-  .reduce((acc, value) => {
-    return (acc += value);
-  }, 0)
+btn
+  .when("click")
+  .take(5)
+  .reduce((count) => count + 1, 0)
   .then((result) => {
-    output.textContent = result;
+    output.textContent = `Total clicks: ${result}`;
   });
 ```
 
-#### Result
-
-The rendered result is as follows:
-
-{{EmbedLiveSample("basic-reduce", "100%", "60px")}}
-
-The result is `20`, which is the sum of all the values passed through the stream.
+{{EmbedLiveSample("basic-reduce", "100%", "100px")}}
 
 ## Specifications
 
@@ -102,5 +89,7 @@ The result is `20`, which is the sum of all the values passed through the stream
 
 ## See also
 
+- {{domxref("Observable.map()")}}
+- {{domxref("Observable.flatMap()")}}
 - [Using observables](/en-US/docs/Web/API/Observable_API/Using_observables)
 - [Observable explainer](https://github.com/WICG/observable/blob/master/README.md)

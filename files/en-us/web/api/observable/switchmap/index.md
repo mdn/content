@@ -10,7 +10,7 @@ browser-compat: api.Observable.switchMap
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`switchMap()`** method of the {{domxref("Observable")}} interface allows you to execute an action represented by an inner observable whenever a source emits and, if the previous inner subscription has not completed, unsubscribes from it.
+The **`switchMap()`** method of the {{domxref("Observable")}} interface returns a new observable that maps each value of the source observable to an inner observable and emits values from only the latest inner observable.
 
 ## Syntax
 
@@ -21,15 +21,25 @@ switchMap(mapper)
 ### Parameters
 
 - `mapper`
-  - : A callback function that transforms each value passed through the observable. It must return an object that can be converted to an observable by {{domxref("Observable.from_static", "Observable.from()")}}: an {{domxref("Observable")}}, a {{jsxref("Promise")}}, an iterable object, or an async iterable object. The callback is passed two arguments:
+  - : A function to execute for each value emitted by the source observable. It must return a value that can be converted to an observable by {{domxref("Observable.from_static", "Observable.from()")}}: an {{domxref("Observable")}}, a {{jsxref("Promise")}}, an iterable object, or an async iterable object. The function is called with the following arguments:
     - `value`
-      - : The current value being mapped.
+      - : The current value being processed.
     - `index`
-      - : A number representing the value's position in the stream. The first position has a value of `0`, in the same manner as an array.
+      - : The index of the current value being processed, starting from `0`.
 
 ### Return value
 
-An {{domxref("Observable")}}.
+A new {{domxref("Observable")}}. When subscribed to, it calls `mapper` for each source value, converts the return value to an observable, and emits that inner observable's values. It unsubscribes from the current inner observable before calling `mapper` for a new source value. The returned observable completes after the source and the last inner observable have completed.
+
+## Description
+
+Like other observable-returning operators, this method is lazy: calling it creates a new observable without subscribing to the source. Processing starts when the returned observable is subscribed to.
+
+Only values from the latest inner observable are forwarded. To process all source values sequentially, waiting for each inner observable to complete, use {{domxref("Observable.flatMap", "flatMap()")}} instead.
+
+If `mapper` throws an exception or its return value cannot be converted to an observable, the returned observable errors. Errors from the source or the active inner observable are also forwarded. In each case, the returned observable unsubscribes from its source and any active inner observable.
+
+Unsubscribing from an inner observable does not necessarily cancel its underlying work. For example, when the mapper returns a promise from `fetch()`, switching to a new inner observable does not abort the request. See [Canceling asynchronous work](/en-US/docs/Web/API/Observable_API/Creating_observables#canceling_asynchronous_work) for a custom observable that supports cancellation.
 
 ## Examples
 
@@ -37,7 +47,7 @@ An {{domxref("Observable")}}.
 
 In this example, each button click starts or stops a counter. The custom observable emits a value every 500 milliseconds and registers a teardown callback to clear the interval when its subscription ends.
 
-```html live-sample___toggle-stream
+```html hidden live-sample___toggle-stream
 <button>Start count</button>
 <p>Count not started</p>
 ```
@@ -64,7 +74,7 @@ btn
   });
 ```
 
-The mapper alternates between returning `counter` and an empty array. `switchMap()` converts the empty array to an observable that completes without emitting any values. Switching to it unsubscribes from `counter`, running its teardown callback and stopping the interval. The outer click subscription remains active, so the next click starts a new count from `1`.
+Switching to an empty array unsubscribes from the counter and clears its interval. The button's click subscription stays active, so the next click starts a new count from `1`.
 
 {{EmbedLiveSample("toggle-stream", "100%", "100px")}}
 

@@ -10,7 +10,7 @@ browser-compat: api.Observable.drop
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`drop()`** method of the {{domxref("Observable")}} interface specifies a number of values that will be dropped when the resulting observable is reached in the pipeline, after which subsequent values will flow through to rest of the pipeline.
+The **`drop()`** method of the {{domxref("Observable")}} interface returns a new observable that skips the given number of values at the start of the source observable.
 
 ## Syntax
 
@@ -21,35 +21,28 @@ drop(amount)
 ### Parameters
 
 - `amount`
-  - : A number representing the number of values to be dropped from the pipeline.
+  - : The number of values to drop from the start of the source observable. It should be an unsigned integer.
 
 ### Return value
 
-An {{domxref("Observable")}}.
+A new {{domxref("Observable")}}. When subscribed to, it skips the first `amount` values emitted by the source observable, then emits the remaining values. If the source completes before emitting `amount` values, the returned observable completes without emitting any values.
+
+## Description
+
+Like other observable-returning operators, this method is lazy: calling it creates a new observable without subscribing to the source. Processing starts when the returned observable is subscribed to.
+
+If `amount` is `0`, all source values are forwarded. Errors from the source are forwarded even while values are being skipped.
 
 ## Examples
 
-### Basic `drop()` usage
+### Using drop()
 
-This example is a simple click counter app, which ignores some of the registered clicks due to the usage of a `drop()` observable.
+This example ignores the first three button clicks, then displays a count of subsequent clicks.
 
-#### HTML
-
-The markup contains a {{htmlelement("button")}} element to click, and a {{htmlelement("p")}} element to display the number of clicks.
-
-```html live-sample___basic-drop
+```html hidden live-sample___basic-drop
 <button>Click me</button>
 <p>Click count: 0</p>
 ```
-
-### JavaScript
-
-In our script, we first grab references to the button and the paragraph, then initialize a `countValue` variable with a value of `0`. We then define a function to increment `countValue` before writing the updated value to the paragraph. We then call `when()` on the `btn`, passing it a value of `"click"` so the returned observable represents a stream of click events fired on the `btn`.
-
-Finally, we chain two more calls onto the `when()` call:
-
-- A `drop()` call, which is passed the value `3` as an argument. When the fired events reach this point in the pipeline, three of them are dropped, after which the others flow through normally.
-- A `subscribe()` call to subscribe the observable to the event stream. We pass it a reference to the `increment()` function so it is called each time the button is clicked.
 
 ```js live-sample___basic-drop
 const btn = document.querySelector("button");
@@ -65,13 +58,7 @@ function increment() {
 btn.when("click").drop(3).subscribe(increment);
 ```
 
-#### Result
-
-The rendered result is as follows:
-
 {{EmbedLiveSample("basic-drop", "100%", "80px")}}
-
-Try clicking the button — you should see that the first three clicks are ignored, after which the click count increments as expected.
 
 ## Specifications
 
@@ -83,5 +70,6 @@ Try clicking the button — you should see that the first three clicks are ignor
 
 ## See also
 
+- {{domxref("Observable.take()")}}
 - [Using observables](/en-US/docs/Web/API/Observable_API/Using_observables)
 - [Observable explainer](https://github.com/WICG/observable/blob/master/README.md)
