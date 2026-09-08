@@ -1,12 +1,12 @@
 ---
-title: referrerPolicy
-slug: Web/SVG/Reference/Attribute/referrerPolicy
+title: referrerpolicy
+slug: Web/SVG/Reference/Attribute/referrerpolicy
 page-type: svg-attribute
 browser-compat: svg.elements.a.referrerpolicy
 sidebar: svgref
 ---
 
-The **`referrerPolicy`** attribute indicates which referrer information to send when fetching resources or navigating using an SVG element. You can use this attribute with the following SVG elements:
+The **`referrerpolicy`** attribute indicates which referrer information to send when fetching resources or navigating using an SVG element. You can use this attribute with the following SVG elements:
 
 - {{SVGElement("a")}}
 
