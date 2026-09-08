@@ -50,7 +50,7 @@ The meaning of this property depends on the value of this performance entry's {{
 
 The following example shows the use of the `startTime` property which you can log during performance observation.
 
-Note: The {{domxref("performance.mark()")}} method allows you to set your own `startTime`, and the {{domxref("performance.measure()")}} method allows to set the start of the measure.
+Note: The {{domxref("performance.mark()")}} method allows you to set your own `startTime`, and the {{domxref("performance.measure()")}} method allows you to set the start of the measure.
 
 ```js
 performance.mark("my-mark");

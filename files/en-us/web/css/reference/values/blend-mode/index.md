@@ -1,5 +1,6 @@
 ---
-title: <blend-mode>
+title: "`<blend-mode>` CSS type"
+short-title: <blend-mode>
 slug: Web/CSS/Reference/Values/blend-mode
 page-type: css-type
 browser-compat: css.types.blend-mode
@@ -81,11 +82,11 @@ Changes between blend modes are not interpolated. Any change occurs immediately.
 ### Example using "normal"
 
 ```html hidden
-<div id="div"></div>
+<div class="container"></div>
 ```
 
 ```css
-#div {
+.container {
   width: 150px;
   height: 150px;
   background: url("br.png"), url("tr.png");

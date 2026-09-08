@@ -23,7 +23,7 @@ scan(options)
 - `options` {{optional_inline}}
   - : An object with the following properties:
     - `signal`
-      - : An {{DOMxRef("AbortSignal")}} that allows cancelling this `scan()` operation.
+      - : An {{DOMxRef("AbortSignal")}} that allows canceling this `scan()` operation.
 
 ### Return value
 

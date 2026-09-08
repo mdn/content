@@ -3,12 +3,10 @@ title: "WorkerNavigator: platform property"
 short-title: platform
 slug: Web/API/WorkerNavigator/platform
 page-type: web-api-instance-property
-status:
-  - deprecated
 browser-compat: api.WorkerNavigator.platform
 ---
 
-{{ APIRef("HTML DOM") }} {{Deprecated_Header}}{{AvailableInWorkers("worker")}}
+{{ APIRef("HTML DOM") }}{{AvailableInWorkers("worker")}}
 
 Returns a string representing the platform of the browser. The specification allows
 browsers to always return the empty string, so don't rely on this property to get a

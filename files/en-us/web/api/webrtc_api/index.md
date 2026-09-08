@@ -49,7 +49,7 @@ These interfaces, dictionaries, and types are used to set up, open, and manage W
 - {{DOMxRef("RTCStatsReport")}}
   - : Provides information detailing statistics for a connection or for an individual track on the connection; the report can be obtained by calling {{DOMxRef("RTCPeerConnection.getStats()")}}.
 - {{DOMxRef("RTCIceCandidate")}}
-  - : Represents a candidate Interactive Connectivity Establishment ({{Glossary("ICE")}}) server for establishing an {{DOMxRef("RTCPeerConnection")}}.
+  - : Represents a candidate Interactive Connectivity Establishment ({{Glossary("ICE")}}) configuration for establishing an {{DOMxRef("RTCPeerConnection")}}.
 - {{DOMxRef("RTCIceTransport")}}
   - : Represents information about an {{Glossary("ICE")}} transport.
 - {{DOMxRef("RTCPeerConnectionIceEvent")}}

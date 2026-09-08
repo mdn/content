@@ -48,7 +48,7 @@ To only provide an `endMark`, you need to provide an empty `measureOptions` obje
             - `track` {{optional_inline}} {{experimental_inline}}
               - : String of the name of the custom track (required for `track-entry`)
             - `trackGroup` {{optional_inline}} {{experimental_inline}}
-              - : String of the name of the grouping withing a custom track (required for `track-entry`)
+              - : String of the name of the grouping within a custom track (required for `track-entry`)
             - `properties` {{optional_inline}} {{experimental_inline}}
               - : Array of key-value pairs. Values can be any JSON-compatible type.
             - `tooltipText` {{optional_inline}} {{experimental_inline}}
@@ -109,9 +109,9 @@ The returned _measure_ will have the following property values:
 - `SyntaxError` {{domxref("DOMException")}}
   - : The named mark does not exist.
     - An end mark is specified using either `endMark` or `measureOptions.end`, but there is no {{domxref('PerformanceMark')}} in the performance buffer with the matching name.
-    - An end mark is specified using either `endMark` or `measureOptions.end`, but it cannot be converted to match that of a read only attribute in the {{domxref("PerformanceTiming")}} interface.
+    - An end mark is specified using either `endMark` or `measureOptions.end`, but it cannot be converted to match that of a read-only attribute in the {{domxref("PerformanceTiming")}} interface.
     - A start mark is specified using either `startMark` or `measureOptions.start`, but there is no {{domxref('PerformanceMark')}} in the performance buffer with the matching name.
-    - A start mark is specified using either `startMark` or `measureOptions.start`, but it cannot be converted to match that of a read only attribute in the {{domxref("PerformanceTiming")}} interface.
+    - A start mark is specified using either `startMark` or `measureOptions.start`, but it cannot be converted to match that of a read-only attribute in the {{domxref("PerformanceTiming")}} interface.
 
 - `DataCloneError` {{domxref("DOMException")}}
   - : The `measureOptions.detail` value is non-`null` and cannot be serialized using the HTML "StructuredSerialize" algorithm.

@@ -6,11 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.CSSRotate.x
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`x`** property of the
-{{domxref("CSSRotate")}} interface gets and sets the abscissa or x-axis of the
-translating vector.
+The **`x`** property of the {{domxref("CSSRotate")}} interface gets and sets the abscissa or x-axis of the translating vector.
 
 ## Value
 

@@ -1,5 +1,6 @@
 ---
-title: offset-anchor
+title: "`offset-anchor` CSS property"
+short-title: offset-anchor
 slug: Web/CSS/Reference/Properties/offset-anchor
 page-type: css-property
 browser-compat: css.properties.offset-anchor

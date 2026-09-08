@@ -9,7 +9,7 @@ status:
 browser-compat: api.VRStageParameters.sittingToStandingTransform
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 The **`sittingToStandingTransform`** read-only property of the {{domxref("VRStageParameters")}} interface contains a matrix that transforms the sitting-space view matrices of {{domxref("VRFrameData")}} to standing-space.
 

@@ -1,5 +1,6 @@
 ---
-title: flex-basis
+title: "`flex-basis` CSS property"
+short-title: flex-basis
 slug: Web/CSS/Reference/Properties/flex-basis
 page-type: css-property
 browser-compat: css.properties.flex-basis

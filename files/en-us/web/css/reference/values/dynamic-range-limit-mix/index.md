@@ -1,5 +1,6 @@
 ---
-title: dynamic-range-limit-mix()
+title: "`dynamic-range-limit-mix()` CSS function"
+short-title: dynamic-range-limit-mix()
 slug: Web/CSS/Reference/Values/dynamic-range-limit-mix
 page-type: css-function
 status:

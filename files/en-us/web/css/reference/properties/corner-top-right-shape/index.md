@@ -1,5 +1,6 @@
 ---
-title: corner-top-right-shape
+title: "`corner-top-right-shape` CSS property"
+short-title: corner-top-right-shape
 slug: Web/CSS/Reference/Properties/corner-top-right-shape
 page-type: css-property
 status:

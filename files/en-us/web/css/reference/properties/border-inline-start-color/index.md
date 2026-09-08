@@ -1,5 +1,6 @@
 ---
-title: border-inline-start-color
+title: "`border-inline-start-color` CSS property"
+short-title: border-inline-start-color
 slug: Web/CSS/Reference/Properties/border-inline-start-color
 page-type: css-property
 browser-compat: css.properties.border-inline-start-color

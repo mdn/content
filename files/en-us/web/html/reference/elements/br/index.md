@@ -1,5 +1,6 @@
 ---
-title: "<br>: The Line Break element"
+title: "`<br>` HTML line break element"
+short-title: <br>
 slug: Web/HTML/Reference/Elements/br
 page-type: html-element
 browser-compat: html.elements.br
@@ -12,7 +13,7 @@ The **`<br>`** [HTML](/en-US/docs/Web/HTML) element produces a line break in tex
 
 ```html interactive-example
 <p>
-  O’er all the hilltops<br />
+  O'er all the hilltops<br />
   Is quiet now,<br />
   In all the treetops<br />
   Hearest thou<br />

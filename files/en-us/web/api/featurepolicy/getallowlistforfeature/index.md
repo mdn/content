@@ -5,10 +5,11 @@ slug: Web/API/FeaturePolicy/getAllowlistForFeature
 page-type: web-api-instance-method
 status:
   - experimental
+  - non-standard
 browser-compat: api.FeaturePolicy.getAllowlistForFeature
 ---
 
-{{APIRef("Feature Policy API")}}{{SeeCompatTable}}
+{{APIRef("Feature Policy API")}}{{SeeCompatTable}}{{non-standard_header}}
 
 The **`getAllowlistForFeature()`**
 method of the {{DOMxRef("FeaturePolicy")}} interface enables querying of the allowlist for a specific feature for the current Permissions Policy.

@@ -2,7 +2,7 @@
 title: 501 Not Implemented
 slug: Web/HTTP/Reference/Status/501
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.501
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#status.501
 sidebar: http
 ---
 

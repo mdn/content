@@ -1,5 +1,6 @@
 ---
-title: -webkit-tap-highlight-color
+title: "`-webkit-tap-highlight-color` CSS property"
+short-title: -webkit-tap-highlight-color
 slug: Web/CSS/Reference/Properties/-webkit-tap-highlight-color
 page-type: css-property
 status:

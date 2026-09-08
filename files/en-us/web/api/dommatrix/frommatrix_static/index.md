@@ -20,7 +20,7 @@ DOMMatrix.fromMatrix(other)
 ### Parameters
 
 - `other` {{optional_inline}}
-  - : A {{domxref("DOMMatrix")}}, {{domxref("DOMMatrix")}}, or an object with the same properties. All properties default to `0`. The properties are:
+  - : A {{domxref("DOMMatrix")}}, {{domxref("DOMMatrixReadOnly")}}, or an object with the same properties. All properties default to `0`. The properties are:
     - `is2D`
       - : A boolean. `true` if the matrix should be created as a 2D matrix. Defaults to `false` if at least one of `m13`, `m14`, `m23`, `m24`, `m31`, `m32`, `m34`, or `m43` is non-zero, or at least one of `m33` or `m44` is not 1; otherwise, defaults to `true`.
     - `m11`, `m12`, `m13`, `m14`, `m21`, `m22`, `m23`, `m24`, `m31`, `m32`, `m33`, `m34`, `m41`, `m42`, `m43`, `m44`

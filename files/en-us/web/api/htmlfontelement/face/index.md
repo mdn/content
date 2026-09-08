@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLFontElement.face
 ---
 
-{{deprecated_header}}{{ APIRef("HTML DOM") }}
+{{ APIRef("HTML DOM") }}
 
 The obsolete
 **`HTMLFontElement.face`**

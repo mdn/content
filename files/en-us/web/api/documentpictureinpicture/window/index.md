@@ -3,12 +3,10 @@ title: "DocumentPictureInPicture: window property"
 short-title: window
 slug: Web/API/DocumentPictureInPicture/window
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.DocumentPictureInPicture.window
 ---
 
-{{APIRef("Document Picture-in-Picture API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("Document Picture-in-Picture API")}}{{SecureContext_Header}}
 
 The **`window`** read-only property of the
 {{domxref("DocumentPictureInPicture")}} interface returns a {{domxref("Window")}} instance representing the browsing context inside the Picture-in-Picture window.

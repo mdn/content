@@ -6,7 +6,7 @@ browser-compat: svg.global_attributes.unicode-bidi
 sidebar: svgref
 ---
 
-The **`unicode-bidi`** attribute specifies how the accumulation of the background image is managed.
+The **`unicode-bidi`** attribute, together with the {{SVGAttr("direction")}} attribute, determines how bidirectional text in a document is handled. For example, if a block of content contains both left-to-right and right-to-left text, the browser uses the Unicode bidirectional algorithm to decide how to display the text. The `unicode-bidi` attribute allows the developer to override this algorithm and control the text embedding.
 
 > [!NOTE]
 > As a presentation attribute, `unicode-bidi` also has a CSS property counterpart: {{cssxref("unicode-bidi")}}. When both are specified, the CSS property takes priority.

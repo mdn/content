@@ -1,5 +1,6 @@
 ---
-title: mask-position
+title: "`mask-position` CSS property"
+short-title: mask-position
 slug: Web/CSS/Reference/Properties/mask-position
 page-type: css-property
 browser-compat: css.properties.mask-position

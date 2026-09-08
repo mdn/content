@@ -5,7 +5,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Customizable_select", "Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Customizable_select_listboxes", "Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
 
 In the previous articles, we covered the styling of various form controls in a general manner. This included some usage of pseudo-classes, for example, using `:checked` to target a checkbox only when it is selected. In this article, we explore the different UI pseudo-classes available for styling forms in different states.
 
@@ -47,7 +47,7 @@ You may already be familiar with the following pseudo-classes:
 - {{cssxref(':required')}} and {{cssxref(':optional')}}: Target elements that can be required (e.g., elements that support the [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required) HTML attribute)), based on whether they are required or optional.
 - {{cssxref(":valid")}} and {{cssxref(":invalid")}}, and {{cssxref(":in-range")}} and {{cssxref(":out-of-range")}}: Target form controls that are valid/invalid according to form validation constraints set on them, or in-range/out-of-range.
 - {{cssxref(":enabled")}} and {{cssxref(":disabled")}}, and {{cssxref(":read-only")}} and {{cssxref(":read-write")}}: Target elements that can be disabled (e.g., elements that support the [`disabled`](/en-US/docs/Web/HTML/Reference/Attributes/disabled) HTML attribute), based on whether they are currently enabled or disabled, and read-write or read-only form controls (e.g., elements with the [`readonly`](/en-US/docs/Web/HTML/Reference/Attributes/readonly) HTML attribute set).
-- {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}, and {{cssxref(":default")}}: Respectively target checkboxes and radio buttons that are checked, in an indeterminate state (neither checked or not checked), and the default selected option when the page loads (e.g., an [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) with the [`checked`](/en-US/docs/Web/HTML/Reference/Elements/input#checked) attribute set, or an [`<option>`](/en-US/docs/Web/HTML/Reference/Elements/option) element with the [`selected`](/en-US/docs/Web/HTML/Reference/Elements/option#selected) attribute set).
+- {{cssxref(":checked")}}, {{cssxref(":indeterminate")}}, and {{cssxref(":default")}}: Respectively target checkboxes and radio buttons that are checked, in an indeterminate state (neither checked nor unchecked), and the default selected option when the page loads (e.g., an [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) with the [`checked`](/en-US/docs/Web/HTML/Reference/Elements/input#checked) attribute set, or an [`<option>`](/en-US/docs/Web/HTML/Reference/Elements/option) element with the [`selected`](/en-US/docs/Web/HTML/Reference/Elements/option#selected) attribute set).
 
 There are many others, but the ones listed above are the most obviously useful. Some of them are aimed at solving very specific niche problems. The UI pseudo-classes listed above have excellent browser support, but of course, you should test your form implementations carefully to ensure they work for your target audience.
 
@@ -261,7 +261,7 @@ Then we give the generated content the content "required", which is what we want
   <fieldset>
     <legend>Feedback form</legend>
 
-    <p>Required fields are labelled with "required".</p>
+    <p>Required fields are labeled with "required".</p>
     <div>
       <label for="fname">First name: </label>
       <input id="fname" name="fname" type="text" required />
@@ -428,7 +428,7 @@ You can try it below (press the **Play** button to run the example in MDN Playgr
   <fieldset>
     <legend>Feedback form</legend>
 
-    <p>Required fields are labelled with "required".</p>
+    <p>Required fields are labeled with "required".</p>
     <div>
       <label for="fname">First name: </label>
       <input id="fname" name="fname" type="text" required />
@@ -609,7 +609,7 @@ This is a similar story to what we had before in the `:required` example, except
   <fieldset>
     <legend>Feedback form</legend>
 
-    <p>Required fields are labelled with "required".</p>
+    <p>Required fields are labeled with "required".</p>
     <div>
       <label for="name">Name: </label>
       <input id="name" name="name" type="text" required />
@@ -1017,8 +1017,7 @@ The full example looks like this (press the **Play** button to run the example i
 Viscous,
 Bright Ridge,
 CA
-</textarea
-      >
+</textarea>
     </div>
     <div>
       <label for="zip-code">Zip/postal code: </label>
@@ -1232,7 +1231,7 @@ input[type="radio"]:checked::before {
 
 {{EmbedLiveSample("radios-styled", "100%", 200, , , , , "allow-forms")}}
 
-Basically, we build the styling for a radio button's "inner circle" using the `::before` pseudo-element, but set a `scale(0)` {{cssxref("transform")}} on it. We then use a {{cssxref("transition")}} to make the generated content on the label nicely animate into view when the radio is selected/checked. The advantage of using a transform rather than transitioning {{cssxref("width")}}/{{cssxref("height")}} is that you can use {{cssxref("transform-origin")}} to make it grow from the center of the circle, rather than having it appear to grow from the circle's corner, and there is no jumping behavior as no box model property values are updated.
+Basically, we build the styling for a radio button's "inner circle" using the `::before` pseudo-element, but set a `scale(0)` {{cssxref("transform")}} on it. We then use a {{cssxref("transition")}} to make the generated content on the input nicely animate into view when the radio is selected/checked. The advantage of using a transform rather than transitioning {{cssxref("width")}}/{{cssxref("height")}} is that you can use {{cssxref("transform-origin")}} to make it grow from the center of the circle, rather than having it appear to grow from the circle's corner, and there is no jumping behavior as no box model property values are updated.
 
 ### :default and :indeterminate
 
@@ -1484,4 +1483,4 @@ The following are also interesting, but as yet not well-supported in browsers:
 
 This completes our look at UI pseudo-classes that relate to form inputs. Keep playing with them, and create some fun form styles! Next up, we'll move on to something different — [client-side form validation](/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation).
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Customizable_select", "Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Customizable_select_listboxes", "Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}

@@ -71,15 +71,15 @@ console.log(end3.toString()); // 2022-01
 
 ```js
 const start = Temporal.PlainYearMonth.from("2021-02-01[u-ca=chinese]");
-console.log(start.toLocaleString("en-US", { calendar: "chinese" })); // 11/2020
+console.log(start.toLocaleString("en-US", { calendar: "chinese" })); // 12/2020
 console.log(start.toString()); // 2021-01-13[u-ca=chinese]
 const end = start.add({ months: 1 });
-console.log(end.toLocaleString("en-US", { calendar: "chinese" })); // 12/2020
+console.log(end.toLocaleString("en-US", { calendar: "chinese" })); // 1/2021
 console.log(end.toString()); // 2021-02-12[u-ca=chinese]
 
 // Adding an extra day has no effect at all
 const end2 = start.add({ months: 1, days: 1 });
-console.log(end2.toLocaleString("en-US", { calendar: "chinese" })); // 12/2020
+console.log(end2.toLocaleString("en-US", { calendar: "chinese" })); // 1/2021
 // The reference day doesn't change, because it's always the first day of the Chinese month
 console.log(end2.toString()); // 2021-02-12[u-ca=chinese]
 

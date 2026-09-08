@@ -1,5 +1,6 @@
 ---
-title: text-decoration-style
+title: "`text-decoration-style` CSS property"
+short-title: text-decoration-style
 slug: Web/CSS/Reference/Properties/text-decoration-style
 page-type: css-property
 browser-compat: css.properties.text-decoration-style

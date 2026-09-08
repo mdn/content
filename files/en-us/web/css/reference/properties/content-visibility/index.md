@@ -1,5 +1,6 @@
 ---
-title: content-visibility
+title: "`content-visibility` CSS property"
+short-title: content-visibility
 slug: Web/CSS/Reference/Properties/content-visibility
 page-type: css-property
 browser-compat: css.properties.content-visibility
@@ -71,6 +72,8 @@ content-visibility: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `visible`
   - : No effect. The element's contents are laid out and rendered as normal. This is the default value.

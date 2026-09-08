@@ -1,5 +1,6 @@
 ---
-title: :heading()
+title: "`:heading()` CSS pseudo-class"
+short-title: :heading()
 slug: Web/CSS/Reference/Selectors/:heading_function
 page-type: css-pseudo-class
 status:

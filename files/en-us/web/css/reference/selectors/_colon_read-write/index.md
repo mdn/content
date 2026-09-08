@@ -1,5 +1,6 @@
 ---
-title: :read-write
+title: "`:read-write` CSS pseudo-class"
+short-title: :read-write
 slug: Web/CSS/Reference/Selectors/:read-write
 page-type: css-pseudo-class
 browser-compat: css.selectors.read-write
@@ -120,8 +121,7 @@ textarea:read-write {
       <textarea id="address" name="address" readonly>
 123 Choco Mountain,
 Awesome Ridge,
-CA</textarea
-      >
+CA</textarea>
     </div>
     <div>
       <label for="instructions">Delivery instructions</label>

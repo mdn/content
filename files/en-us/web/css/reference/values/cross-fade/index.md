@@ -1,5 +1,6 @@
 ---
-title: cross-fade()
+title: "`cross-fade()` CSS function"
+short-title: cross-fade()
 slug: Web/CSS/Reference/Values/cross-fade
 page-type: css-function
 browser-compat: css.types.image.cross-fade

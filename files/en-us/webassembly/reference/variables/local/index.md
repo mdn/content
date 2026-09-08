@@ -1,12 +1,13 @@
 ---
-title: "local: Wasm text instruction"
+title: "local: Wasm variable instruction"
 short-title: local
 slug: WebAssembly/Reference/Variables/local
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.local
 sidebar: webassemblysidebar
 ---
 
-The **`local`** instruction declares a new local variable.
+The **`local`** [variable instruction](/en-US/docs/WebAssembly/Reference/Variables) declares a new local variable.
 
 {{InteractiveExample("Wat Demo: local", "tabbed-taller")}}
 
@@ -36,3 +37,11 @@ await WebAssembly.instantiateStreaming(fetch(url), { console });
 ;; declare new variable named $val of type i32
 (local $val i32)
 ```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

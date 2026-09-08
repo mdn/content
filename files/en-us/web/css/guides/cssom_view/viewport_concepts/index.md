@@ -53,7 +53,7 @@ There are several DOM properties that can help you query viewport size, and othe
 - The {{DOMxRef("Window.innerWidth")}} is the width, in CSS pixels, of the browser window viewport including, if rendered, the vertical scrollbar.
 - The {{DOMxRef("Window.outerWidth")}} is the width of the outside of the browser window including all the window {{glossary("chrome")}}.
 
-In an experiment with these, the `innerWidth` and `outerWidth` was seen to be the same, but the `outerHeight` was 100px taller than the `innerHeight`. This is because the `outerHeight` includes the browser chrome: measurements were taken on a browser with an address bar and bookmarks bar totalling 100px in height, but no chrome on the left or right of the window.
+In an experiment with these, the `innerWidth` and `outerWidth` was seen to be the same, but the `outerHeight` was 100px taller than the `innerHeight`. This is because the `outerHeight` includes the browser chrome: measurements were taken on a browser with an address bar and bookmarks bar totaling 100px in height, but no chrome on the left or right of the window.
 
 The area within the `innerHeight` and `innerWidth` is generally considered the **{{glossary("layout viewport")}}**. The browser chrome is not considered part of the viewport.
 
@@ -119,7 +119,7 @@ If the iframe is set to 50vw, it will be 50% of the width of the `1200px` parent
 A width-based media query within the iframe document is relative to the iframe's viewport.
 
 ```css
-@media screen and (width >= 500px) {
+@media screen and (width <= 500px) {
   p {
     color: red;
   }

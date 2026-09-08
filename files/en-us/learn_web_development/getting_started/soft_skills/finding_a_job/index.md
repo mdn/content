@@ -26,7 +26,7 @@ Technical job interviews can be very demanding, and some have quite specific req
         <ul>
           <li>Deciding what kind of job you want.</li>
           <li>Searching for jobs.</li>
-          <li>Developing qualities for that employers look for.</li>
+          <li>Developing qualities that employers look for.</li>
           <li>Selling yourself to would-be employers.</li>
           <li>Applying for jobs.</li>
           <li>Preparing yourself for job interviews.</li>
@@ -73,7 +73,7 @@ If you are not sure of the answers to these questions, that's okay. Ask your pee
 
 To get a job, you have to learn how to **sell yourself**, which means making yourself look like a great candidate for the jobs you want. This involves a few different steps, which are described in the sections below.
 
-### Develop qualities for that employers look for
+### Develop qualities that employers look for
 
 As a general point, you should be aware of the attributes that hiring managers look for in a candidate and prepare accordingly. Obviously, you'll need technical skills and other abilities that help you to directly do the task at hand. However, companies also look for "soft skills" that indirectly help you do the job; they also make their employees' lives easier and happier while they are at work. We already touched on some of these in our [Collaboration and teamwork](/en-US/docs/Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork) article.
 
@@ -92,8 +92,8 @@ Think about whether these statements describe you or not. This could be a useful
 
 You should create a CV/résumé, which communicates your worth to an employer. There are lots of guides on the web that will teach you how to write one, but in brief, they should generally contain the following:
 
-- Your contact details: Include your name, postal address, phone number, email, and any maybe one more contact method that is important to you and suitable for professional communication. A [LinkedIn profile](#create_a_linkedin_profile) is recommended.
-- A summary/personal statement, which describes you in a single sentence. This can be really hard to write — it needs to sound confident but not arrogant, positive but realistic. A good strategy here is to keep it really short and focus on some facts, what you believe in, and what kind of level you are at. For example, a good personal statement for a junior web developer might read some something like this: "Bob Smith is a web developer with 2 years' experience and a great passion for semantics, accessibility, and inclusive design".
+- Your contact details: Include your name, postal address, phone number, email, and maybe one more contact method that is important to you and suitable for professional communication. A [LinkedIn profile](#create_a_linkedin_profile) is recommended.
+- A summary/personal statement, which describes you in a single sentence. This can be really hard to write — it needs to sound confident but not arrogant, positive but realistic. A good strategy here is to keep it really short and focus on some facts, what you believe in, and what kind of level you are at. For example, a good personal statement for a junior web developer might read something like this: "Bob Smith is a web developer with 2 years' experience and a great passion for semantics, accessibility, and inclusive design".
 - A list of work experiences, each including:
   - A date range specifying when you worked there — for example 06/2023–10/2024, or 06/2023–present if you still work there.
   - Company and job title.
@@ -110,7 +110,7 @@ Here are some general tips for CV/résumé writing:
 - Use professional language: Don't use conversational language or slang terms — you need to sound like you are serious about your application.
 - Check your writing carefully for spelling and grammatical mistakes: Run it through a service such as [Grammarly](https://www.grammarly.com/) to make sure you don't miss any mistakes and get hints for further improvements. Hiring managers will often discard a CV/résumé that contains a typo — it shows a lack of professionalism and attention to detail.
 - Don't necessarily include all of your work experience on your CV/résumé: If you have a lot of experience, just include the most important or significant recent entries. You want to keep it short, but you also don't want to make it look like there are any suspicious gaps in your work history, which hiring managers might question you about. Put your full experience listing on your LinkedIn profile and only include a summary on your CV/résumé.
-- Include soft skills: As mentioned in the [Develop qualities for that employers look for](#develop_qualities_for_that_employers_look_for) section, soft skills are important, and they are worth including on your CV/résumé. You should think about which ones are relevant — employers won't be interested in pages of description of how nice you are, but they will be interested to know that you are a good team player, calm under pressure, and have problem solving skills.
+- Include soft skills: As mentioned in the [Develop qualities that employers look for](#develop_qualities_that_employers_look_for) section, soft skills are important, and they are worth including on your CV/résumé. You should think about which ones are relevant — employers won't be interested in pages of description of how nice you are, but they will be interested to know that you are a good team player, calm under pressure, and have problem solving skills.
 - References on request: Employers always require references so they can get a second opinion of you and your skills from someone else. This should ideally be someone you worked with and have a good relationship with, like a previous manager or teacher. If you are not sure who your references are right now, just write "References available on request." at the bottom of your CV/résumé.
 - Keep your CV/résumé up-to-date: Check it every year to see if anything new needs to be added, or if you want to remove anything.
 
@@ -322,6 +322,6 @@ Be patient. Even the best candidates will get rejections from multiple job appli
 - [Getting hired](https://scrimba.com/the-frontend-developer-career-path-c0j/~0156?via=mdn), Scrimba <sup>Course Partner</sup>
 - [Technical Interviewing 101: Ultimate Guide to Acing Your Tech Interview](https://learntocodewith.me/posts/technical-interview/), learntocodewith.me (2022)
 - [30 Technical Interview Questions and Tips for Answering](https://www.coursera.org/articles/technical-interview-questions), Coursera (2023)
-- [How to land your first developer job](/en-US/blog/how-to-land-your-first-developer-job), MDN Blog, 2024
+- [How to land your first developer job](/en-US/blog/how-to-land-your-first-developer-job/), MDN Blog, 2024
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Soft_skills/Workflows_and_processes", "Learn_web_development/Core", "Learn_web_development/Getting_started/Soft_skills")}}

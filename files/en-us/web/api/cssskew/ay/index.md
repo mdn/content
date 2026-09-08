@@ -6,11 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.CSSSkew.ay
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`ay`** property of the
-{{domxref("CSSSkew")}} interface gets and sets the angle used to distort the element
-along the y-axis (or ordinate).
+The **`ay`** property of the {{domxref("CSSSkew")}} interface gets and sets the angle used to distort the element along the y-axis (or ordinate).
 
 ## Value
 

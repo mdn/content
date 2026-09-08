@@ -8,13 +8,7 @@ browser-compat: api.Document.pictureInPictureElement
 
 {{APIRef("Picture-in-Picture API")}}
 
-The read-only **`pictureInPictureElement`** property of the {{domxref("Document")}}
-interface returns the {{ domxref("Element") }} that is currently being
-presented in picture-in-picture mode in this document, or `null` if
-picture-in-picture mode is not currently in use.
-
-Although this property is read-only, it will not throw if it is modified (even in
-strict mode); the setter is a no-operation and will be ignored.
+The **`pictureInPictureElement`** read-only property of the {{domxref("Document")}} interface returns the {{ domxref("Element") }} that is currently being presented in picture-in-picture mode in this document, or `null` if picture-in-picture mode is not currently in use.
 
 ## Value
 
@@ -22,13 +16,14 @@ A reference to the {{domxref("Element")}} object that's currently in picture-in-
 
 Returns `null` if the document has no associated element in picture-in-picture mode. For example, there's no picture-in-picture element, or the element is from an iframe.
 
+Although this property is read-only, it will not throw if it is modified (even in strict mode); the setter is a no-operation and will be ignored.
+
 ## Examples
 
-This example presents a function, `exitPictureInPicture()`,
-which tests the value returned by `pictureInPictureElement`. If the document
-is in picture-in-picture mode (`pictureInPictureElement` isn't
-`null`), [`Document.exitPictureInPicture()`](/en-US/docs/Web/API/Document/exitPictureInPicture) is run to exit
-picture-in-picture mode.
+### Basic usage
+
+This example presents a function, `exitPictureInPicture()`, which tests the value returned by `pictureInPictureElement`.
+If the document is in picture-in-picture mode (`pictureInPictureElement` isn't `null`), [`Document.exitPictureInPicture()`](/en-US/docs/Web/API/Document/exitPictureInPicture) is run to exit picture-in-picture mode.
 
 ```js
 function exitPictureInPicture() {

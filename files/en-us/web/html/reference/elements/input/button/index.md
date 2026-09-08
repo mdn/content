@@ -1,5 +1,6 @@
 ---
-title: <input type="button">
+title: '`<input type="button">` HTML attribute value'
+short-title: <input type="button">
 slug: Web/HTML/Reference/Elements/input/button
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_button
@@ -364,10 +365,6 @@ draw();
     <tr>
       <td><strong>DOM interface</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>None</td>
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>

@@ -1,5 +1,6 @@
 ---
-title: transform
+title: "`transform` CSS property"
+short-title: transform
 slug: Web/CSS/Reference/Properties/transform
 page-type: css-property
 browser-compat: css.properties.transform
@@ -95,13 +96,13 @@ transform: revert-layer;
 transform: unset;
 ```
 
-The `transform` property may be specified as either the keyword value `none` or as one or more `<transform-function>` values.
-
 ### Values
+
+This property is specified as either the keyword value `none` or as a space-separated list of `<transform-function>` values:
 
 - {{cssxref("&lt;transform-function&gt;")}}
   - : One or more of the [CSS transform functions](/en-US/docs/Web/CSS/Reference/Values/transform-function) to be applied.
-    The transform functions are multiplied in order from left to right, meaning that composite transforms are effectively [applied in order from right to left](#transform_order).
+    The transform functions are combined from left to right – each function establishes a new coordinate space for the next function and so on – so the visual result matches the written order of the functions. Alternatively, keeping the parent coordinate space fixed, the same transformation can be described as applying the functions in reverse order (right to left).
 - `none`
   - : Specifies that no transform should be applied.
 
@@ -150,9 +151,11 @@ div {
 
 {{EmbedLiveSample("Translating_and_rotating_an_element", "400", "160")}}
 
-### Transform order
+### Comparing the order of transform functions
 
-The order of transform functions matters. In this example, two boxes are rotated and translated by the same values; only the transform function order is different.
+The order of transform functions matters.
+
+In this example, two boxes are rotated and translated by the same values, but the functions are in the opposite order. The dotted lines mark the X-axis before and after rotation.
 
 #### HTML
 
@@ -212,11 +215,9 @@ div {
 
 {{EmbedLiveSample("Transform_order", "400", "460")}}
 
-When an element is rotated before being translated, the translate direction is on the rotated axis. The axis as indicated with the dotted lines.
-
-### More examples
-
-Please see [Using CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms/Using) and {{cssxref("&lt;transform-function&gt;")}} for more examples.
+- Box 1 (first `translateX()`, then `rotate()`): The coordinate space first shifts `200px` along the X axis, then rotates `135deg` within that shifted space, so the element ends up to the right of its original position, rotated.
+- Box 2 (first `rotate()`, then `translateX()`): The coordinate space first rotates `135deg`, so the element then moves `200px` along the rotated axis, in the direction shown by the dotted lines.
+  Please see [Using CSS transforms](/en-US/docs/Web/CSS/Guides/Transforms/Using) and {{cssxref("&lt;transform-function&gt;")}} for more examples.
 
 ## Specifications
 

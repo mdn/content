@@ -2,7 +2,7 @@
 title: exponent
 slug: Web/SVG/Reference/Attribute/exponent
 page-type: svg-attribute
-spec-urls: https://drafts.fxtf.org/filter-effects/#element-attrdef-fecomponenttransfer-exponent
+spec-urls: https://drafts.csswg.org/filter-effects-1/#element-attrdef-fecomponenttransfer-exponent
 sidebar: svgref
 ---
 

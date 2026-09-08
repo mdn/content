@@ -1,13 +1,15 @@
 ---
-title: object-view-box
+title: "`object-view-box` CSS property"
+short-title: object-view-box
 slug: Web/CSS/Reference/Properties/object-view-box
 page-type: css-property
 status:
   - experimental
 browser-compat: css.properties.object-view-box
+sidebar: cssref
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 The **`object-view-box`** [CSS](/en-US/docs/Web/CSS) property defines a rectangle as a viewable area (viewbox) within a {{glossary("replaced elements", "replaced element")}}, enabling the content of the replaced element to be zoomed or panned. It works similarly to the SVG {{SVGAttr("viewBox")}} attribute.
 

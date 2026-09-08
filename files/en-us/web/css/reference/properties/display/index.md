@@ -1,5 +1,6 @@
 ---
-title: display
+title: "`display` CSS property"
+short-title: display
 slug: Web/CSS/Reference/Properties/display
 page-type: css-property
 browser-compat: css.properties.display
@@ -17,7 +18,7 @@ display: block;
 ```
 
 ```css interactive-example-choice
-display: inline-block;
+display: inline flow-root;
 ```
 
 ```css interactive-example-choice
@@ -76,36 +77,39 @@ code {
 ## Syntax
 
 ```css
-/* precomposed values */
+/* short display */
+display: none;
+display: contents;
 display: block;
+display: flow-root;
 display: inline;
 display: inline-block;
+display: list-item;
+display: inline list-item;
 display: flex;
 display: inline-flex;
 display: grid;
 display: inline-grid;
-display: flow-root;
+display: grid-lanes;
+display: inline-grid-lanes;
+display: table;
+display: inline-table;
 
-/* Box suppression */
-display: none;
-display: contents;
-
-/* multi-keyword syntax */
-display: block flex;
+/* full display */
 display: block flow;
 display: block flow-root;
-display: block grid;
-display: inline flex;
 display: inline flow;
 display: inline flow-root;
+display: block flow list-item;
+display: inline flow list-item;
+display: block flex;
+display: inline flex;
+display: block grid;
 display: inline grid;
+display: block table;
+display: inline table;
 
-/* other values */
-display: table;
-display: table-row; /* all table elements have an equivalent CSS display value */
-display: list-item;
-
-/* Global values */
+/* global values */
 display: inherit;
 display: initial;
 display: revert;
@@ -129,10 +133,10 @@ The keyword values can be grouped into six value categories.
       - : The element generates one or more inline boxes that do not generate line breaks before or after themselves. In normal flow, the next element will be on the same line if there is space.
 
 > [!NOTE]
-> When browsers that support multi-keyword syntax encounter a display property that only has an **outer** value (e.g., `display: block` or `display: inline`), the inner value is set to `flow` (e.g., `display: block flow` and `display: inline flow`).
+> When a display property is specified with only an **outer** value (e.g., `display: block` or `display: inline`), the inner value defaults to `flow` (e.g., `display: block flow` and `display: inline flow`).
 
 > [!NOTE]
-> To be sure layouts work on older browsers, you may use single-value syntax, for example `display: inline flex` could have the following fallback
+> You may use the single-value syntax as a fallback for multi-keyword syntax, for example `display: inline flex` could have the following fallback
 >
 > ```css
 > .container {
@@ -162,11 +166,15 @@ The keyword values can be grouped into six value categories.
       - : The element behaves like a block-level element and lays out its content according to the [flexbox model](/en-US/docs/Web/CSS/Guides/Flexible_box_layout).
     - `grid`
       - : The element behaves like a block-level element and lays out its content according to the [grid model](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts).
+    - `grid-lanes`
+      - : The element behaves like a block-level element and lays out its content using grid lanes layout. Columns are defined by {{cssxref("grid-template-columns")}} and behave like a strict grid, while items are packed in the block direction to fill gaps between items of different sizes. See [Grid lanes layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_lanes) for details.
+    - `inline-grid-lanes`
+      - : The element behaves like an inline-level element and lays out its content using grid lanes layout. Rows are defined by {{cssxref("grid-template-rows")}} and behave like a strict grid, while items are packed in the inline direction to fill gaps between items of different sizes. See [Grid lanes layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_lanes) for details.
     - `ruby`
       - : The element behaves like an inline-level element and lays out its content according to the ruby formatting model. It behaves like the corresponding HTML {{HTMLElement("ruby")}} elements.
 
 > [!NOTE]
-> When browsers that support multi-keyword syntax encounter a display property that only has an **inner** value (e.g., `display: flex` or `display: grid`), the outer value is set to `block` (e.g., `display: block flex` and `display: block grid`).
+> When a display property is specified with only an **inner** value (e.g., `display: flex` or `display: grid`), the outer value defaults to `block` (e.g., `display: block flex` and `display: block grid`).
 
 ### List Item
 
@@ -179,7 +187,7 @@ This can be used together with {{CSSxRef("list-style-type")}} and {{CSSxRef("lis
 `list-item` can also be combined with any {{CSSxRef("&lt;display-outside&gt;")}} keyword and the `flow` or `flow-root` {{CSSxRef("&lt;display-inside&gt;")}} keyword.
 
 > [!NOTE]
-> In browsers that support the multi-keyword syntax, if no inner value is specified, it will default to `flow`.
+> If no inner value is specified, it will default to `flow`.
 > If no outer value is specified, the principal box will have an outer display type of `block`.
 
 ### Internal
@@ -308,6 +316,7 @@ The individual pages for the different types of value that `display` can have se
 - [Grids, logical values and writing modes](/en-US/docs/Web/CSS/Guides/Grid_layout/Logical_values_and_writing_modes)
 - [CSS grid layout and accessibility](/en-US/docs/Web/CSS/Guides/Grid_layout/Accessibility)
 - [Realizing common layouts using grids](/en-US/docs/Web/CSS/Guides/Grid_layout/Common_grid_layouts)
+- [Grid lanes layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_lanes)
 
 ### Animating display
 
@@ -350,8 +359,7 @@ Current implementations in some browsers will remove from the [accessibility tre
 
 In some browsers, changing the `display` value of a {{HTMLElement("table")}} element to `block`, `grid`, or `flex` will alter its representation in the [accessibility tree](/en-US/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis). This will cause the table to no longer be announced properly by screen reading technology.
 
-- [Short note on what CSS display properties do to table semantics — The Paciello Group](https://www.tpgi.com/short-note-on-what-css-display-properties-do-to-table-semantics/)
-- [Hidden content for better a11y | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)
+- [Hidden content for better a11y | Go Make Things](https://gomakethings.com/articles/hidden-content-for-better-a11y/)
 - [MDN Understanding WCAG, Guideline 1.3 explanations](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.3_%e2%80%94_create_content_that_can_be_presented_in_different_ways)
 - [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
@@ -502,6 +510,8 @@ You can find more examples in the pages for each separate display type under [Gr
 
 - {{CSSxRef("visibility")}}, {{CSSxRef("float")}}, {{CSSxRef("position")}}
 - {{CSSxRef("grid")}}, {{CSSxRef("flex")}}
+- [CSS ruby layout](/en-US/docs/Web/CSS/Guides/Ruby_layout) module
 - SVG {{SVGAttr("display")}} attribute
 - [Block and inline layout in normal flow](/en-US/docs/Web/CSS/Guides/Display/Block_and_inline_layout)
 - [Introduction to formatting contexts](/en-US/docs/Web/CSS/Guides/Display/Formatting_contexts)
+- [Grid lanes layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_lanes)

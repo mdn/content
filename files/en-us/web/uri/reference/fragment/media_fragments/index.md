@@ -79,9 +79,9 @@ The key parts of the syntax are:
   - : The start of the spatial dimension syntax. This must always be included after the hash/pound symbol.
 - `unit:` {{optional_inline}}
   - : The units to specify for the `xCoord`, `yCoord`, `width`, and `height`. Defaults to `pixel:` if omitted. Possible values are:
-    - `percent:`
-      - : Values signify an absolute number of pixels.
     - `pixel:`
+      - : Values signify an absolute number of pixels.
+    - `percent:`
       - : Values signify a percentage of the media's intrinsic width or height.
 - `xCoord`
   - : The horizontal distance of the displayed box's top-left corner from the top-left corner of the media.

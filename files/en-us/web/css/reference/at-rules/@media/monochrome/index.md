@@ -1,5 +1,6 @@
 ---
-title: monochrome
+title: "`monochrome` CSS media feature"
+short-title: monochrome
 slug: Web/CSS/Reference/At-rules/@media/monochrome
 page-type: css-media-feature
 browser-compat: css.at-rules.media.monochrome

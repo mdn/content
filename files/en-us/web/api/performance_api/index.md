@@ -14,6 +14,7 @@ spec-urls:
   - https://w3c.github.io/performance-timeline/
   - https://w3c.github.io/resource-timing/
   - https://w3c.github.io/server-timing/
+  - https://wicg.github.io/soft-navigations/
   - https://w3c.github.io/user-timing/
   - https://w3c.github.io/long-animation-frames/
   - https://wicg.github.io/performance-measure-memory/
@@ -47,27 +48,31 @@ The following interfaces are present in the Performance API:
 
 - {{domxref("EventCounts")}}
   - : A read-only map returned by {{domxref("performance.eventCounts")}} containing the number of events which have been dispatched per event type.
+- {{domxref("InteractionContentfulPaint")}} {{Experimental_Inline}}
+  - : Measures the render time of {{glossary("contentful paint", "contentful paints")}} attributed to an interaction.
 - {{domxref("LargestContentfulPaint")}}
   - : Measures the render time of the largest image or text block visible within the viewport, recorded from when the page first begins to load.
-- {{domxref("LayoutShift")}}
+- {{domxref("LayoutShift")}} {{Experimental_Inline}}
   - : Provides insights into the layout stability of web pages based on movements of the elements on the page.
-- {{domxref("LayoutShiftAttribution")}}
-  - : Provides debugging information about elements which have shifted.
-- {{domxref("NotRestoredReasonDetails")}}
-  - : Represents a single reason why a navigated page was blocked from using the back/forward cache ({{Glossary("bfcache")}}).
-- {{domxref("NotRestoredReasons")}}
-  - : Provides report data containing reasons why the current document was blocked from using the back/forward cache ({{Glossary("bfcache")}}) on navigation.
+- {{domxref("LayoutShiftAttribution")}} {{Experimental_Inline}}
+  - : Provides debugging information about elements which have shifted. This is available through {{domxref("LayoutShift")}} entries.
+- {{domxref("NotRestoredReasonDetails")}} {{Experimental_Inline}}
+  - : Represents a single reason why a navigated page was blocked from using the back/forward cache ({{Glossary("bfcache")}}). This is available through {{domxref("NotRestoredReasons")}} entries.
+- {{domxref("NotRestoredReasons")}} {{Experimental_Inline}}
+  - : Provides report data containing reasons why the current document was blocked from using the back/forward cache ({{Glossary("bfcache")}}) on navigation. This is available through {{domxref("PerformanceNavigationTiming")}} entries.
 - {{domxref("Performance")}}
   - : Main interface to access performance measurements. Available to window and worker contexts using {{domxref("Window.performance")}} or {{domxref("WorkerGlobalScope.performance")}}.
-- {{domxref("PerformanceElementTiming")}}
+- `PerformanceContainerTiming` {{ experimental_inline }}
+  - : Measures rendering timestamps of specific containers of multiple elements.
+- {{domxref("PerformanceElementTiming")}} {{Experimental_Inline}}
   - : Measures rendering timestamps of specific elements.
 - {{domxref("PerformanceEntry")}}
   - : An entry on the performance timeline encapsulating a single performance metric. All performance metrics inherit from this interface.
 - {{domxref("PerformanceEventTiming")}}
   - : Measures latency of events and {{Glossary("Interaction to Next Paint")}} (INP).
-- {{domxref("PerformanceLongAnimationFrameTiming")}}
+- {{domxref("PerformanceLongAnimationFrameTiming")}} {{Experimental_Inline}}
   - : Provides metrics on [long animation frames (LoAFs)](/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing#what_is_a_long_animation_frame) that occupy rendering and block other tasks from being executed.
-- {{domxref("PerformanceLongTaskTiming")}}
+- {{domxref("PerformanceLongTaskTiming")}} {{Experimental_Inline}}
   - : Provides metrics on [long tasks](/en-US/docs/Glossary/Long_task) that occupy rendering and block other tasks from being executed.
 - {{domxref("PerformanceMark")}}
   - : Custom marker for your own entry on the performance timeline.
@@ -83,12 +88,14 @@ The following interfaces are present in the Performance API:
   - : Measures render operations during web page construction.
 - {{domxref("PerformanceResourceTiming")}}
   - : Measures network loading metrics such as redirect start and end times, fetch start, DNS lookup start and end times, response start and end times for resources such as images, scripts, fetch calls, etc.
-- {{domxref("PerformanceScriptTiming")}}
+- {{domxref("PerformanceScriptTiming")}} {{Experimental_Inline}}
   - : Provides metrics on individual scripts causing [long animation frames (LoAFs)](/en-US/docs/Web/API/Performance_API/Long_animation_frame_timing#what_is_a_long_animation_frame).
 - {{domxref("PerformanceServerTiming")}}
-  - : Surfaces server metrics that are sent with the response in the {{HTTPHeader("Server-Timing")}} HTTP header.
-- {{domxref("TaskAttributionTiming")}}
-  - : Identifies the type of task and the container that is responsible for the long task.
+  - : Surfaces server metrics sent with the response in the {{HTTPHeader("Server-Timing")}} HTTP header. This is available through {{domxref("PerformanceNavigationTiming")}} and {{domxref("PerformanceResourceTiming")}} entries.
+- {{domxref("PerformanceSoftNavigation")}} {{Experimental_Inline}}
+  - : Measures when {{glossary("Soft Navigation", "Soft Navigations")}} occur.
+- {{domxref("TaskAttributionTiming")}} {{Experimental_Inline}}
+  - : Identifies the type of task and the container that is responsible for a {{glossary("long task")}}. This is available through {{domxref("PerformanceLongTaskTiming")}} entries.
 - {{domxref("VisibilityStateEntry")}}
   - : Measures the timing of page visibility state changes, i.e., when a tab changes from the foreground to the background or vice versa.
 

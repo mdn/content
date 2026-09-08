@@ -38,7 +38,7 @@ We also recommend reading the following learning material:
 
 - [Basic etiquette for open source projects](/en-US/docs/MDN/Community/Open_source_etiquette): If you've never contributed to an open source project before, we encourage you to read this document.
 - [Learn web development](/en-US/docs/Learn_web_development): If you are new to HTML, CSS, JavaScript, we have some great content to help you get started.
-- [Deep dive into collaborating with pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests)
+- [Deep dive into collaborating with pull requests](https://docs.github.com/en/pull-requests)
 
 Some writing-specific contribution opportunities will require a reasonable understanding of the English language.
 That said, don't worry if your grammar isn't perfect: we have a team of people who will review your writing and help improve it.
@@ -51,6 +51,8 @@ Someone from the team will respond with some comments, hints, or guidance.
 
 Make sure you're not working on something that's already in-progress - it can be frustrating to duplicate or lose work.
 If in doubt, ask questions on the issue.
+
+MDN Web Docs is a complex project with lots of moving parts. It's a good idea to get familiar with the [different code repositories](/en-US/docs/MDN/Community/Our_repositories).
 
 ## Ways to contribute
 
@@ -66,6 +68,6 @@ Here's a list of ways you can contribute to MDN Web Docs:
 ## Contributions
 
 When contributing, you agree to make your contributions available under the [Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/4.0/) (or an alternative license already specified by the page you are editing).
-In addition, code samples are available under [Creative Commons CC-0](https://creativecommons.org/public-domain/cc0/) (a Public Domain dedication).
+In addition, code samples are available under [Creative Commons CC-0](https://wiki.creativecommons.org/wiki/CC0) (a Public Domain dedication).
 
 If you have any questions or concerns about anything discussed here, please [contact us](/en-US/docs/MDN/Community/Communication_channels).

@@ -40,7 +40,7 @@ controlTransferOut(setup, data)
 
 ### Return value
 
-A {{jsxref("promise")}} that resolves with a {{domxref("USBOutTransferResult")}}.
+A {{jsxref("Promise")}} that resolves with a {{domxref("USBOutTransferResult")}}.
 
 ## Specifications
 

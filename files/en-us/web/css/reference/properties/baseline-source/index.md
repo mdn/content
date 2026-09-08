@@ -1,5 +1,6 @@
 ---
-title: baseline-source
+title: "`baseline-source` CSS property"
+short-title: baseline-source
 slug: Web/CSS/Reference/Properties/baseline-source
 page-type: css-property
 browser-compat: css.properties.baseline-source

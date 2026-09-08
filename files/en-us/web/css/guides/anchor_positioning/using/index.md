@@ -131,7 +131,7 @@ The {{cssxref("anchor-scope")}} property can fix this problem by limiting the vi
 - `anchor-scope: --my-anchor, --my-anchor2` sets the scope so that the specified `anchor-name` values, when set in the subtree, can only be bound to by positioned elements in the same subtree.
 - `anchor-scope: none` is the default value; it specifies that no anchor scoping is set.
 
-For example, let's say you have an multiple anchor and anchor-positioned {{htmlelement("div")}} elements inside {{htmlelement("section")}} containers:
+For example, let's say you have multiple anchors and anchor-positioned {{htmlelement("div")}} elements inside {{htmlelement("section")}} containers:
 
 ```html live-sample___anchor-scope
 <section class="scoped">
@@ -374,7 +374,7 @@ The grid tiles are broken up into rows and columns:
 
 The dimensions of the center tile are defined by the [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block) of the anchor element, while the distance between the center tile and the grid's outer edge is defined by the positioned element's containing block.
 
-`position-area` property values are composed of one or two values based on the row and column values described above, with spanning options available to define the region of the grid where the element should positioned.
+`position-area` property values are composed of one or two values based on the row and column values described above, with spanning options available to define the region of the grid where the element should be positioned.
 
 For example:
 

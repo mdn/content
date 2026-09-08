@@ -44,3 +44,4 @@ someElement.addEventListener("pointerdown", (event) => {
 - {{ domxref("PointerEvent.altitudeAngle") }}
 - {{ domxref("PointerEvent.tiltX") }}
 - {{ domxref("PointerEvent.tiltY") }}
+- {{ domxref("Touch.azimuthAngle") }}

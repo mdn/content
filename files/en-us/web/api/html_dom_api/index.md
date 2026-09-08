@@ -1,5 +1,5 @@
 ---
-title: The HTML DOM API
+title: HTML DOM API
 slug: Web/API/HTML_DOM_API
 page-type: web-api-overview
 browser-compat: api.HTMLElement
@@ -164,10 +164,6 @@ These interfaces offer access to the browser window and document that contain th
 - {{DOMxRef("BarProp")}}
 - {{DOMxRef("Navigator")}}
 - {{DOMxRef("Window")}}
-
-#### Deprecated web app and browser integration interfaces
-
-- {{DOMxRef("External")}} {{deprecated_inline}}
 
 #### Obsolete web app and browser integration interfaces
 

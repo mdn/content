@@ -1,5 +1,6 @@
 ---
-title: position
+title: "`position` CSS property"
+short-title: position
 slug: Web/CSS/Reference/Properties/position
 page-type: css-property
 browser-compat: css.properties.position
@@ -120,6 +121,8 @@ position: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `static`
   - : The element is positioned according to the [Normal Flow](/en-US/docs/Learn_web_development/Core/CSS_layout/Introduction#normal_layout_flow) of the document. The {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, and {{cssxref("z-index")}} properties have _no effect_. This is the default value.
@@ -464,7 +467,7 @@ dd + dd {
 
 #### Sticky position with all the inset boundaries set
 
-The following example demonstrates an element's behavior when all inset boundaries are set. Here, we have two light bulb emojis in a paragraph. The light bulbs use sticky positioning, and the inset boundaries are specified as 50px from the top, 100px from the right, 50px from the bottom, and 50px from the left. A gray background on the parent div element marks the inset area.
+The following example demonstrates an element's behavior when all inset boundaries are set. Here, we have two light bulb emojis in a paragraph. The light bulbs use sticky positioning, and the inset boundaries are specified as 50px from the top and bottom, and 100px from the left and right. A gray background on the parent div element marks the inset area.
 
 ##### HTML
 

@@ -56,7 +56,7 @@ In our [basic compute demo](https://mdn.github.io/dom-examples/webgpu-compute-de
 // Create GPUCommandEncoder to encode commands to issue to the GPU
 const commandEncoder = device.createCommandEncoder();
 
-// Initiate render pass
+// Initiate compute pass
 const passEncoder = commandEncoder.beginComputePass();
 
 // Issue commands

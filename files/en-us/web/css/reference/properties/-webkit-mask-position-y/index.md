@@ -1,5 +1,6 @@
 ---
-title: -webkit-mask-position-y
+title: "`-webkit-mask-position-y` CSS property"
+short-title: -webkit-mask-position-y
 slug: Web/CSS/Reference/Properties/-webkit-mask-position-y
 page-type: css-property
 status:
@@ -87,4 +88,6 @@ Not part of any standard.
 
 ## See also
 
-{{cssxref("mask-position", "-webkit-mask-position")}}, {{cssxref("-webkit-mask-position-x")}}, {{cssxref("mask-origin", "-webkit-mask-origin")}}
+- {{cssxref("mask-position", "-webkit-mask-position")}}
+- {{cssxref("-webkit-mask-position-x")}}
+- {{cssxref("mask-origin", "-webkit-mask-origin")}}

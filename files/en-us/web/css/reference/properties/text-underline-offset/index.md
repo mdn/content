@@ -1,5 +1,6 @@
 ---
-title: text-underline-offset
+title: "`text-underline-offset` CSS property"
+short-title: text-underline-offset
 slug: Web/CSS/Reference/Properties/text-underline-offset
 page-type: css-property
 browser-compat: css.properties.text-underline-offset
@@ -59,9 +60,9 @@ text-underline-offset: revert-layer;
 text-underline-offset: unset;
 ```
 
-The `text-underline-offset` property is specified as a single value from the list below.
-
 ### Values
+
+This property is specified as one of the following values:
 
 - `auto`
   - : The browser chooses the appropriate offset for underlines.

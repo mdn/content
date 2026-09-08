@@ -5,10 +5,11 @@ slug: Web/API/WebSocketStream/WebSocketStream
 page-type: web-api-constructor
 status:
   - experimental
+  - non-standard
 browser-compat: api.WebSocketStream.WebSocketStream
 ---
 
-{{APIRef("WebSockets API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
+{{APIRef("WebSockets API")}}{{SeeCompatTable}}{{AvailableInWorkers}}{{non-standard_header}}
 
 The **`WebSocketStream()`** constructor creates a new
 {{domxref("WebSocketStream")}} object instance.

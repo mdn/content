@@ -1,5 +1,6 @@
 ---
-title: font-language-override
+title: "`font-language-override` CSS property"
+short-title: font-language-override
 slug: Web/CSS/Reference/Properties/font-language-override
 page-type: css-property
 browser-compat: css.properties.font-language-override
@@ -30,9 +31,9 @@ font-language-override: revert-layer;
 font-language-override: unset;
 ```
 
-The `font-language-override` property is specified as the keyword `normal` or a `<string>`.
-
 ### Values
+
+This property is specified as a single value from the following list:
 
 - `normal`
   - : Tells the browser to use font glyphs that are appropriate for the language specified by the `lang` attribute. This is the default value.

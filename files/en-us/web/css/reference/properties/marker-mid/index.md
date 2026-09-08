@@ -1,5 +1,6 @@
 ---
-title: marker-mid
+title: "`marker-mid` CSS property"
+short-title: marker-mid
 slug: Web/CSS/Reference/Properties/marker-mid
 page-type: css-property
 browser-compat: css.properties.marker-mid

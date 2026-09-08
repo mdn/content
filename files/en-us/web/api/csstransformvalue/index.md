@@ -5,24 +5,11 @@ page-type: web-api-interface
 browser-compat: api.CSSTransformValue
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`CSSTransformValue`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) represents `transform-list` values as used by the CSS {{CSSxref('transform')}} property.
 
 {{InheritanceDiagram}}
-
-## Interfaces based on CSSTransformValue
-
-Below is a list of interfaces based on the `CSSTransformValue` interface.
-
-- {{domxref('CSSTranslate')}}
-- {{domxref('CSSRotate')}}
-- {{domxref('CSSScale')}}
-- {{domxref('CSSSkew')}}
-- {{domxref('CSSSkewX')}}
-- {{domxref('CSSSkewY')}}
-- {{domxref('CSSPerspective')}}
-- {{domxref('CSSMatrixComponent')}}
 
 ## Constructor
 
@@ -38,7 +25,7 @@ Below is a list of interfaces based on the `CSSTransformValue` interface.
 
 ## Instance methods
 
-_Inherits methods from its ancestor {{domxref('CSSStyleValue')}}._
+_Also inherits methods from its parent interface, {{DOMxRef("CSSStyleValue")}}._
 
 - {{domxref("CSSTransformValue.toMatrix()")}}
   - : Returns a new {{domxref('DOMMatrix')}} object.
@@ -50,6 +37,17 @@ _Inherits methods from its ancestor {{domxref('CSSStyleValue')}}._
   - : Returns a new _array iterator_ object that contains the keys for each index in the `CSSTransformValue` object.
 - {{domxref('CSSTransformValue.values()')}}
   - : Returns a new _array iterator_ object that contains the values for each index in the `CSSTransformValue` object.
+
+## Interfaces based on CSSTransformValue
+
+- {{domxref('CSSTranslate')}}
+- {{domxref('CSSRotate')}}
+- {{domxref('CSSScale')}}
+- {{domxref('CSSSkew')}}
+- {{domxref('CSSSkewX')}}
+- {{domxref('CSSSkewY')}}
+- {{domxref('CSSPerspective')}}
+- {{domxref('CSSMatrixComponent')}}
 
 ## Examples
 

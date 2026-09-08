@@ -26,11 +26,6 @@ A {{domxref("MIDIConnectionEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MIDIConnectionEvent")}}
 
-## Event properties
-
-- {{domxref("MIDIConnectionEvent.port")}} {{ReadOnlyInline}}
-  - : Returns a reference to a {{domxref("MIDIPort")}} instance for a port that has been connected or disconnected.
-
 ## Example
 
 The {{domxref("Navigator.requestMIDIAccess()")}} method returns a promise that resolves with a {{domxref("MIDIAccess")}} object. When a port changes state, information about that port is printed to the console.

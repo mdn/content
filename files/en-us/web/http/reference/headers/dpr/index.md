@@ -10,7 +10,7 @@ browser-compat: http.headers.DPR
 sidebar: http
 ---
 
-{{Deprecated_Header}}{{SecureContext_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{Non-standard_Header}}
 
 > [!WARNING]
 > The `DPR` header was standardized as {{HTTPHeader("Sec-CH-DPR")}} and the new name is now preferred.

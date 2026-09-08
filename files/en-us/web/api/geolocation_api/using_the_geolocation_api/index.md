@@ -173,3 +173,7 @@ document.querySelector("#find-me").addEventListener("click", geoFindMe);
 ### Result
 
 {{EmbedLiveSample('Examples', 350, 150, "", "", "", "geolocation")}}
+
+## See also
+
+- {{htmlelement("geolocation")}} element

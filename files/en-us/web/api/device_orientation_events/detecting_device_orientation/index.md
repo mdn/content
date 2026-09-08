@@ -15,6 +15,36 @@ There are two JavaScript events that handle orientation information. The first o
 
 The second event is the {{domxref("DeviceMotionEvent")}}, which is sent when a change in acceleration was added. It is different from the {{domxref("DeviceOrientationEvent")}} because it is listening for changes in acceleration as opposed to orientation. Sensors that are commonly capable of detecting {{domxref("DeviceMotionEvent")}} include sensors in laptops to protect moving storage devices. {{domxref("DeviceOrientationEvent")}} is more commonly found in mobile devices.
 
+## Requesting permission
+
+Some {{Glossary("user agent", "user agents")}} require explicit permission from the user before accessing device orientation and motion data. In environments where this is needed, the {{domxref("DeviceOrientationEvent.requestPermission_static", "DeviceOrientationEvent.requestPermission()")}} and {{domxref("DeviceMotionEvent.requestPermission_static", "DeviceMotionEvent.requestPermission()")}} static methods can be used to request this permission. Both methods return a {{jsxref("Promise")}} that resolves with `"granted"` or `"denied"`, and both must be called from within a user gesture (such as a `click` event handler).
+
+Because not all user agents implement these methods, you should feature-detect them before calling. The following example shows how to request both permissions from a button click handler:
+
+```js
+function handleClick() {
+  if (typeof DeviceMotionEvent.requestPermission === "function") {
+    // The API requires permission — request it
+    Promise.all([
+      DeviceMotionEvent.requestPermission(),
+      DeviceOrientationEvent.requestPermission(),
+    ]).then(([motionPermission, orientationPermission]) => {
+      if (
+        motionPermission === "granted" &&
+        orientationPermission === "granted"
+      ) {
+        window.addEventListener("devicemotion", handleMotion);
+        window.addEventListener("deviceorientation", handleOrientation);
+      }
+    });
+  } else {
+    // No permission needed, add event listeners directly
+    window.addEventListener("devicemotion", handleMotion);
+    window.addEventListener("deviceorientation", handleOrientation);
+  }
+}
+```
+
 ## Processing orientation events
 
 All you need to do in order to begin receiving orientation change is to listen to the {{domxref("Window.deviceorientation_event", "deviceorientation")}} event:
