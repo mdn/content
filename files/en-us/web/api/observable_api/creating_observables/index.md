@@ -143,9 +143,98 @@ The example now renders like so:
 
 Press the `<button>` while the count is running; the count will stop immediately and restart from `1`.
 
-## Observing element size
+## Producing values synchronously
 
-Custom observables can also wrap APIs that deliver notifications through callbacks. In this example, we wrap a {{domxref("ResizeObserver")}} to create a stream of an element's dimensions. Resizing an element does not fire a `resize` event on that element, so we cannot obtain this stream using `when()`.
+An observable does not have to wait for an event or asynchronous operation. The constructor callback runs synchronously when a subscription starts, and `subscriber.next()` invokes observers' callbacks synchronously. A subscription can therefore receive values and complete before `subscribe()` returns:
+
+```js
+const numbers = new Observable((subscriber) => {
+  for (let value = 1; value <= 10; value++) {
+    if (!subscriber.active) {
+      return;
+    }
+    subscriber.next(value);
+  }
+  subscriber.complete();
+});
+
+console.log("Before subscribing");
+numbers.take(3).subscribe({
+  next: (value) => console.log(value),
+  complete: () => console.log("Complete"),
+});
+console.log("After subscribing");
+
+// Before subscribing
+// 1
+// 2
+// 3
+// Complete
+// After subscribing
+```
+
+After receiving three values, `take(3)` completes its output and unsubscribes from `numbers`. With no observers remaining, the producer's {{domxref("Subscriber.active", "active")}} property becomes `false`. Checking it before each iteration stops the producer from doing unnecessary work. This check also handles a subscription started with an already aborted signal.
+
+Calling `subscriber.complete()` or `subscriber.error()` does not stop the producer's JavaScript execution. Use `return`, `break`, or an `active` check to stop producing values when appropriate. Likewise, cancellation that must interrupt synchronous production needs to be available before `subscribe()` is called, for example through an `AbortSignal` supplied in its options.
+
+## Canceling asynchronous work
+
+When a consumer unsubscribes, the producer is responsible for stopping work that is no longer needed. For APIs that accept an {{domxref("AbortSignal")}}, such as {{domxref("Window.fetch", "fetch()")}}, you can pass {{domxref("Subscriber.signal", "subscriber.signal")}} directly. This signal is aborted when the shared subscription ends, including when all observers unsubscribe.
+
+The following function creates an observable that fetches JSON, emits the parsed data, and completes. The request starts when the observable is subscribed to:
+
+```js
+function fetchJSON(url) {
+  return new Observable((subscriber) => {
+    fetch(url, { signal: subscriber.signal })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Request failed: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        subscriber.next(data);
+        subscriber.complete();
+      })
+      .catch((error) => {
+        if (subscriber.active) {
+          subscriber.error(error);
+        }
+      });
+  });
+}
+```
+
+If the subscription ends while the request or response body is pending, aborting `subscriber.signal` cancels that work and causes the fetch or body-reading promise to reject. The rejection handler checks `subscriber.active` before forwarding the error: calling `subscriber.error()` after cancellation would report the error to the global object. While the subscription is active, request and JSON-parsing failures are forwarded to its observers.
+
+The constructor callback itself is not `async`. Its return value is ignored, so returning a promise would not make the observable wait for it or automatically forward its rejection. Instead, this example explicitly calls `next()`, `complete()`, and `error()` from the promise handlers.
+
+We can use `fetchJSON()` in a search pipeline like the one in [Using observables](/en-US/docs/Web/API/Observable_API/Using_observables#working_with_inner_observables). Suppose the page contains a search input and a results element:
+
+```js
+const searchInput = document.querySelector("input[type='search']");
+const results = document.querySelector("#results");
+
+searchInput
+  .when("input")
+  .map(() => searchInput.value)
+  .switchMap((query) =>
+    fetchJSON(`/search?q=${encodeURIComponent(query)}`).catch((error) => {
+      results.textContent = error.message;
+      return [];
+    }),
+  )
+  .subscribe((data) => {
+    results.textContent = JSON.stringify(data);
+  });
+```
+
+Each new input event makes `switchMap()` unsubscribe from the previous inner observable. Because that request has no other observers, its `subscriber.signal` is aborted, canceling the pending request. This both prevents obsolete results from being displayed and stops the underlying work. The inner `catch()` handles request failures without ending the input subscription, so the user can try another search.
+
+## Example: observing element size
+
+Custom observables can wrap APIs that deliver notifications through callbacks. In this example, we wrap a {{domxref("ResizeObserver")}} to create a stream of an element's dimensions. Resizing an element does not fire a `resize` event on that element, so we cannot obtain this stream using `when()`.
 
 ### HTML and CSS
 

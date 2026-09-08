@@ -33,7 +33,7 @@ An {{domxref("Observable")}}.
 
 ## Examples
 
-For a `flatMap()` example, see our [Canvas drawing example](/en-US/docs/Web/API/Observable_API/Using_observables#canvas_drawing_example).
+For a `flatMap()` example, see our [Canvas drawing example](/en-US/docs/Web/API/Observable_API/Using_observables#example_canvas_drawing).
 
 ## Specifications
 

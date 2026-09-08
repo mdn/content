@@ -93,6 +93,57 @@ Try moving the mouse over the top of the example; the coordinates are printed to
 > [!NOTE]
 > Observables are "lazy" — events don't start being passed through them, nor do they queue any data, until they have at least one subscriber. For example, in the above example, if you remove the `subscribe()` method call and add logs inside the `filter()` and `map()` methods, you will see that they don't log anything. Once `subscribe()` is called at the end of the pipeline, all previous observables in this chain also become subscribed and start processing data.
 
+### Working with inner observables
+
+Some operations produce another stream for each source value: a click might start an upload, or a change to a search field might start a request. These are called _inner observables_. Using `map()` alone would send the inner observable objects to your observer. {{domxref("Observable.flatMap()")}} and {{domxref("Observable.switchMap()")}} instead subscribe to them and forward their values.
+
+- `flatMap()` processes source values sequentially. It waits for the current inner observable to complete before calling the mapper for the next queued source value. Use this when every operation should finish in order. If an inner observable never completes, later source values remain queued.
+- `switchMap()` unsubscribes from the current inner observable when a new source value arrives, then calls the mapper and subscribes to its result. Use this when only the latest operation's results are relevant.
+
+Both methods convert the mapper's result using {{domxref("Observable.from_static", "Observable.from()")}}, so the mapper can also return a promise, iterable, or async iterable. A promise contributes its fulfillment value and then completes; a rejection becomes an error in the inner observable. In contrast, `map()` forwards a returned promise as a value without awaiting it.
+
+For example, suppose a page has a search input and a results element, and `/search` returns JSON. An async mapper lets us fetch and parse each response as one operation:
+
+```js
+const searchInput = document.querySelector("input[type='search']");
+const results = document.querySelector("#results");
+
+async function search(query) {
+  const response = await fetch(`/search?q=${encodeURIComponent(query)}`);
+  if (!response.ok) {
+    throw new Error(`Search failed: ${response.status}`);
+  }
+  return response.json();
+}
+
+const queries = searchInput.when("input").map(() => searchInput.value);
+
+queries.switchMap(search).subscribe({
+  next(data) {
+    results.textContent = JSON.stringify(data);
+  },
+  error(error) {
+    results.textContent = error.message;
+  },
+});
+```
+
+If another input event arrives before the previous search finishes, the previous result is no longer forwarded. However, unsubscribing from an observable created from a promise does not cancel the work behind that promise: the previous request can still finish. To cancel the request itself, return a custom observable that passes `subscriber.signal` to `fetch()`, as shown in [Canceling asynchronous work](/en-US/docs/Web/API/Observable_API/Creating_observables#canceling_asynchronous_work).
+
+### Inspecting a pipeline
+
+{{domxref("Observable.inspect()")}} lets you run a side effect, such as logging, while forwarding values unchanged. Unlike `subscribe()`, it returns an observable and does not start the pipeline by itself:
+
+```js
+document.body
+  .when("click")
+  .inspect((event) => console.log("Click:", event.target))
+  .map((event) => ({ x: event.clientX, y: event.clientY }))
+  .subscribe((point) => console.log("Coordinates:", point));
+```
+
+You can also pass an object with `subscribe`, `next`, `error`, `complete`, and `abort` callbacks to inspect the subscription's lifecycle. An `inspect()` callback can affect the pipeline if it throws; for example, an exception in its `next` callback becomes an error in the returned observable.
+
 ## Aggregating values
 
 The previously introduced group of methods return another observable, allowing you to chain multiple transformations together. You can then subscribe to the final observable to receive the transformed values.
@@ -234,7 +285,48 @@ The `takeUntil()` method [converts](/en-US/docs/Web/API/Observable/from_static) 
 
 An `AbortController` lets you unsubscribe at any point in your code. Separate controllers let you unsubscribe observers independently. Aborting does not call the observer's `complete` callback. In contrast, `takeUntil()` completes the observable it returns and notifies that observable's observers through their `complete` callbacks. Other observers subscribed directly to the source observable remain subscribed.
 
-## Canvas drawing example
+## Handling errors
+
+An error ends the affected subscription. Errors from a source propagate through the pipeline, and exceptions thrown by transformation callbacks, such as a `map()` mapper or `filter()` predicate, become errors in the returned observable. An observer's `error` callback reports or handles the failure, but does not resume that subscription. If it has no `error` callback, the error is reported to the global object.
+
+{{domxref("Observable.catch()")}} lets a pipeline recover by subscribing to a replacement stream. Its callback receives the error and returns an observable, or any value convertible by `Observable.from()`. For example, returning `[]` completes the replacement without emitting a value. It does not retry the failed source.
+
+Placement matters for inner observables. In the [search example](#working_with_inner_observables), a failure in the current request ends the search subscription, so subsequent input events no longer start searches. We can replace that subscription code with the following to recover from failures while the inner subscription is active:
+
+```js
+queries
+  .switchMap((query) =>
+    Observable.from(search(query)).catch((error) => {
+      results.textContent = error.message;
+      return [];
+    }),
+  )
+  .subscribe((data) => {
+    results.textContent = JSON.stringify(data);
+  });
+```
+
+Here, `catch()` handles only the inner request's failure. Its empty replacement completes, while the outer subscription continues listening for input. Placing `catch()` after `switchMap()` would instead replace the entire search pipeline: returning `[]` there would complete it and stop listening for input. The same distinction applies to `flatMap()`.
+
+This does not handle failures from requests that `switchMap()` has already unsubscribed from. If such a request's promise later rejects, `Observable.from()` reports the error to the global object because its subscriber is inactive; the `catch()` callback is no longer subscribed. To cancel obsolete requests and avoid reporting their cancellation as an error, use the custom `fetchJSON()` producer in [Canceling asynchronous work](/en-US/docs/Web/API/Observable_API/Creating_observables#canceling_asynchronous_work), which checks `subscriber.active` before forwarding a rejection.
+
+Exceptions thrown by callbacks passed to `subscribe()` are different: they are reported to the global object, rather than becoming errors that a pipeline's `catch()` can recover from. Similarly, an async `next` callback's returned promise is not awaited; handle its rejections yourself, or use `flatMap()` or `switchMap()` to incorporate the asynchronous work into the pipeline.
+
+### Running cleanup
+
+{{domxref("Observable.finally()")}} returns an observable that forwards the source's values and notifications, and runs a callback when its subscription ends through completion, error, or unsubscribing. This makes it useful for cleanup that a `complete` callback alone would miss:
+
+```js
+document.body
+  .when("click")
+  .take(3)
+  .finally(() => console.log("Stopped observing clicks"))
+  .subscribe((event) => console.log(event.target));
+```
+
+The callback runs after the third click ends the subscription. It would also run if the subscription were aborted early. Like `Subscriber.addTeardown()`, it does not await a returned promise. Use `finally()` to attach cleanup when composing a pipeline; use `addTeardown()` when implementing the producer's own resource cleanup, as described in [Creating custom observables](/en-US/docs/Web/API/Observable_API/Creating_observables#teardown).
+
+## Example: canvas drawing
 
 In this example we create a basic {{htmlelement("canvas")}}-based drawing app, which brings together the APIs we have seen so far to demonstrate how observables help you declaratively implement complex event handling logic.
 
