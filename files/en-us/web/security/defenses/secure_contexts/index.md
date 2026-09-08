@@ -73,18 +73,23 @@ A URL is potentially trustworthy if any of the following apply:
 
 - Its value is `about:blank` or `about:srcdoc`
 - Its scheme is `data`
-- Its {{glossary("origin")}} has any of the following:
-  - A scheme of `https`, `wss`, or `file`.
-  - A host value of `127.0.0.0/8` or `::1/128`
-  - A host value of `localhost` or `localhost.`
-  - A host value ending with `.localhost` or `.localhost.`
-  - A scheme that the browser considers to be authenticated
+- Its {{glossary("origin")}} is a [potentially trustworthy origin](#potentially_trustworthy_origins).
 
-This is essentially intended to capture URLs for which one of the following apply:
+## Potentially trustworthy origins
 
-- Use a secure transport across the network
-- Are local
-- The browser considers authenticated for some other reason (for example, those used by browser extensions).
+An origin is potentially trustworthy if has:
+
+- A scheme of `https`, `wss`, or `file`.
+- A host value of `127.0.0.0/8` or `::1/128`
+- A host value of `localhost` or `localhost.`
+- A host value ending with `.localhost` or `.localhost.`
+- A scheme that the browser considers to be authenticated
+
+This is essentially intended to capture:
+
+- Origins that use a secure transport across the network
+- Origins that are local
+- Origins that the browser considers authenticated for some other reason (for example, those used by browser extensions).
 
 ## Feature detection
 
