@@ -1,5 +1,6 @@
 ---
-title: animation-duration
+title: "`animation-duration` CSS property"
+short-title: animation-duration
 slug: Web/CSS/Reference/Properties/animation-duration
 page-type: css-property
 browser-compat: css.properties.animation-duration

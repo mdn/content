@@ -17,6 +17,8 @@ The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)'s **`XRView`** inte
   - : Which of the two eyes (`left`) or (`right`) for which this `XRView` represents the perspective. This value is used to ensure that any content which is pre-rendered for presenting to a specific eye is distributed or positioned correctly. The value can also be `none` if the `XRView` is presenting monoscopic data (such as a 2D image, a fullscreen view of text, or a close-up view of something that doesn't need to appear in 3D).
 - {{domxref("XRView.isFirstPersonObserver", "isFirstPersonObserver")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns a boolean indicating if the `XRView` is a first-person observer view.
+- {{domxref("XRView.index", "index")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : Returns a number specifying the index of the current `XRView` in the {{domxref("XRViewerPose.views")}} array.
 - {{domxref("XRView.projectionMatrix", "projectionMatrix")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The projection matrix that will transform the scene to appear correctly given the point-of-view indicated by `eye`. This matrix should be used directly in order to avoid presentation distortions that may lead to potentially serious user discomfort.
 - {{domxref("XRView.recommendedViewportScale", "recommendedViewportScale")}} {{ReadOnlyInline}} {{Experimental_Inline}}

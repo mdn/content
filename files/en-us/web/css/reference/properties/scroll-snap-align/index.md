@@ -1,5 +1,6 @@
 ---
-title: scroll-snap-align
+title: "`scroll-snap-align` CSS property"
+short-title: scroll-snap-align
 slug: Web/CSS/Reference/Properties/scroll-snap-align
 page-type: css-property
 browser-compat: css.properties.scroll-snap-align

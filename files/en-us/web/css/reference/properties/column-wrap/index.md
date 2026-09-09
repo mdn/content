@@ -1,5 +1,6 @@
 ---
-title: column-wrap
+title: "`column-wrap` CSS property"
+short-title: column-wrap
 slug: Web/CSS/Reference/Properties/column-wrap
 page-type: css-property
 status:
@@ -29,6 +30,8 @@ column-wrap: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : The initial value. If the content container's {{cssxref("column-height")}} is set to a {{cssxref("&lt;length>")}}, `auto` resolves to `wrap`, otherwise it resolves to `nowrap`.
@@ -442,7 +445,7 @@ p:first-of-type {
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 p {

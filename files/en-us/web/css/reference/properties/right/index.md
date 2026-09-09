@@ -1,5 +1,6 @@
 ---
-title: right
+title: "`right` CSS property"
+short-title: right
 slug: Web/CSS/Reference/Properties/right
 page-type: css-property
 browser-compat: css.properties.right

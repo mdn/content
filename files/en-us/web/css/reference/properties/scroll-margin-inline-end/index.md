@@ -1,5 +1,6 @@
 ---
-title: scroll-margin-inline-end
+title: "`scroll-margin-inline-end` CSS property"
+short-title: scroll-margin-inline-end
 slug: Web/CSS/Reference/Properties/scroll-margin-inline-end
 page-type: css-property
 browser-compat: css.properties.scroll-margin-inline-end

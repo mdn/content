@@ -1,5 +1,6 @@
 ---
-title: shape-margin
+title: "`shape-margin` CSS property"
+short-title: shape-margin
 slug: Web/CSS/Reference/Properties/shape-margin
 page-type: css-property
 browser-compat: css.properties.shape-margin

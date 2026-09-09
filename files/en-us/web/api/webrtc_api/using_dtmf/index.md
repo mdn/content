@@ -303,7 +303,7 @@ async function handleCallerNegotiationNeeded() {
 }
 ```
 
-Since the various methods involved in negotiating the connection return {{jsxref("promise")}}s, we can chain them together like this:
+Since the various methods involved in negotiating the connection return {{jsxref("Promise")}}s, we can chain them together like this:
 
 1. Call {{domxref("RTCPeerConnection.createOffer", "callerPC.createOffer()")}} to get an offer.
 2. Then take that offer and set the caller's local description to match by calling {{domxref("RTCPeerConnection.setLocalDescription", "callerPC.setLocalDescription()")}}.

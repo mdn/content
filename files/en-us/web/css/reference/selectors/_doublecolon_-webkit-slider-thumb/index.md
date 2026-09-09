@@ -1,5 +1,6 @@
 ---
-title: ::-webkit-slider-thumb
+title: "`::-webkit-slider-thumb` CSS pseudo-element"
+short-title: ::-webkit-slider-thumb
 slug: Web/CSS/Reference/Selectors/::-webkit-slider-thumb
 page-type: css-pseudo-element
 status:

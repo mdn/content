@@ -1,5 +1,6 @@
 ---
-title: hsl()
+title: "`hsl()` CSS function"
+short-title: hsl()
 slug: Web/CSS/Reference/Values/color_value/hsl
 page-type: css-function
 browser-compat: css.types.color.hsl

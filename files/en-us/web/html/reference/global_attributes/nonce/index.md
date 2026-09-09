@@ -1,5 +1,5 @@
 ---
-title: HTML nonce global attribute
+title: "`nonce` HTML global attribute"
 short-title: nonce
 slug: Web/HTML/Reference/Global_attributes/nonce
 page-type: html-attribute

@@ -1,5 +1,6 @@
 ---
-title: column-count
+title: "`column-count` CSS property"
+short-title: column-count
 slug: Web/CSS/Reference/Properties/column-count
 page-type: css-property
 browser-compat: css.properties.column-count
@@ -66,6 +67,8 @@ column-count: unset;
 ```
 
 ### Values
+
+This property is specified as a single value from the following list:
 
 - `auto`
   - : The number of columns is determined by other CSS properties, such as {{cssxref("column-width")}}.

@@ -1,5 +1,6 @@
 ---
-title: <input type="month">
+title: '`<input type="month">` HTML attribute value'
+short-title: <input type="month">
 slug: Web/HTML/Reference/Elements/input/month
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_month
@@ -515,14 +516,6 @@ function populateYears() {
     <tr>
       <td><strong>DOM interface</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.select", "select()")}},
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}},
-        {{domxref("HTMLInputElement.stepUp", "stepUp()")}}.
-      </td>
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>

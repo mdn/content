@@ -48,8 +48,8 @@ This page is based largely on [https://www.squarefree.com/burningedg...eases/](h
   - : Text written in new documents created with document.open("text/plain") is now treated as text rather than HTML, so line breaks will remain intact and tags will not be parsed.
 - XML Events
   - : "XML Events" is a W3C specification to provide XML languages with the ability to integrate declarative event listeners and event handlers.
-- Cancelling keydown
-  - : Cancelling the keydown event now properly cancels any corresponding keyup/keypress events, per the DOM specification.
+- Canceling keydown
+  - : Canceling the keydown event now properly cancels any corresponding keyup/keypress events, per the DOM specification.
 - Accessibility APIs for DHTML
   - : Mozilla now allows DHTML authors to add role and state semantics to custom elements, and exposes that information via MSAA and ATK.
 - DHTML Performance Fixes

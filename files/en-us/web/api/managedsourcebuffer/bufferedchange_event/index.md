@@ -3,10 +3,12 @@ title: "ManagedSourceBuffer: bufferedchange event"
 short-title: bufferedchange
 slug: Web/API/ManagedSourceBuffer/bufferedchange_event
 page-type: web-api-event
+status:
+  - experimental
 browser-compat: api.ManagedSourceBuffer.bufferedchange_event
 ---
 
-{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}
+{{APIRef("Media Source Extensions")}}{{AvailableInWorkers("window_and_dedicated")}}{{SeeCompatTable}}
 
 The **`bufferedchange`** event of the {{domxref("ManagedSourceBuffer")}} interface is fired when the `ManagedSourceBuffer`'s buffered range changes. This can occur following a call to {{domxref("SourceBuffer.appendBuffer", "appendBuffer()")}}, {{domxref("SourceBuffer.remove", "remove()")}}, {{domxref("MediaSource.endOfStream", "endOfStream()")}}, or as a consequence of the user agent running the memory cleanup algorithm.
 
@@ -27,15 +29,6 @@ onbufferedchange = (event) => {};
 A {{domxref("BufferedChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("BufferedChangeEvent")}}
-
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref("BufferedChangeEvent.addedRanges", "addedRanges")}} {{ReadOnlyInline}}
-  - : A {{domxref("TimeRanges")}} object representing the time ranges that were added to the buffer.
-- {{domxref("BufferedChangeEvent.removedRanges", "removedRanges")}} {{ReadOnlyInline}}
-  - : A {{domxref("TimeRanges")}} object representing the time ranges that were removed from the buffer.
 
 ## Examples
 

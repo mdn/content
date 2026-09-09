@@ -26,21 +26,6 @@ A {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MessageEvent")}}
 
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref("MessageEvent.data", "data")}} {{ReadOnlyInline}}
-  - : The data sent by the message emitter.
-- {{domxref("MessageEvent.origin", "origin")}} {{ReadOnlyInline}}
-  - : A string representing the origin of the message emitter.
-- {{domxref("MessageEvent.lastEventId", "lastEventId")}} {{ReadOnlyInline}}
-  - : A string representing a unique ID for the event.
-- {{domxref("MessageEvent.source", "source")}} {{ReadOnlyInline}}
-  - : A _message event source_, which is either a {{glossary("WindowProxy")}}, a {{domxref("MessagePort")}}, or a {{domxref("ServiceWorker")}} object representing the message emitter.
-- {{domxref("MessageEvent.ports", "ports")}} {{ReadOnlyInline}}
-  - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g., in channel messaging or when sending a message to a shared worker).
-
 ## Examples
 
 In this example there's a "sender" {{HTMLElement("iframe")}} that broadcasts the contents of a {{HTMLElement("textarea")}} when the user clicks a button. There are two "receiver" iframes that listen to the broadcast message and write the result into a {{HTMLElement("div")}} element.

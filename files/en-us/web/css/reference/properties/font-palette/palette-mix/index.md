@@ -1,5 +1,6 @@
 ---
-title: palette-mix()
+title: "`palette-mix()` CSS function"
+short-title: palette-mix()
 slug: Web/CSS/Reference/Properties/font-palette/palette-mix
 page-type: css-function
 status:

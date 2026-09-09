@@ -75,6 +75,7 @@ The {{domxref('CSSKeywordValue')}} interface of the CSS Typed Object Model API c
   - : A tree of subclasses representing numeric values that are more complicated than a single value and unit, including:
     - {{domxref('CSSMathMax')}} - represents the CSS {{cssxref("max","max()")}} function.
     - {{domxref('CSSMathMin')}} - represents the CSS {{cssxref("min","min()")}} function.
+    - {{domxref('CSSMathClamp')}} - represents the CSS {{cssxref("clamp","clamp()")}} function.
     - {{domxref('CSSMathNegate')}} - negates the value passed into it.
     - {{domxref('CSSMathInvert')}} - represents a CSS {{cssxref("calc","calc()")}} value used as `calc(1 / <value>)`. This type is used internally by {{domxref('CSSNumericValue.div','div()')}}, to create an appropriate {{domxref('CSSMathProduct')}}.
     - {{domxref('CSSMathProduct')}} - represents the result obtained by calling {{domxref('CSSNumericValue.mul','mul()')}} or {{domxref('CSSNumericValue.div','div()')}} on {{domxref('CSSNumericValue')}}.

@@ -21,9 +21,9 @@ It implements the same shape as a {{domxref("TransformStream")}}, allowing it to
 - {{DOMxRef("TextDecoderStream.encoding")}} {{ReadOnlyInline}}
   - : An encoding.
 - {{DOMxRef("TextDecoderStream.fatal")}} {{ReadOnlyInline}}
-  - : A {{jsxref("boolean")}} indicating if the error mode is fatal.
+  - : A {{jsxref("Boolean")}} indicating if the error mode is fatal.
 - {{DOMxRef("TextDecoderStream.ignoreBOM")}} {{ReadOnlyInline}}
-  - : A {{jsxref("boolean")}} indicating whether the byte order mark is ignored.
+  - : A {{jsxref("Boolean")}} indicating whether the byte order mark is ignored.
 - {{DOMxRef("TextDecoderStream.readable")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("ReadableStream")}} instance controlled by this object.
 - {{DOMxRef("TextDecoderStream.writable")}} {{ReadOnlyInline}}

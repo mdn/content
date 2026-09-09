@@ -26,11 +26,11 @@ The _Refresh_ [command](/en-US/docs/Web/WebDriver/Reference/Classic/Commands) of
 
 ### Errors
 
-- [Invalid session id](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidSessionID)
+- [`invalid session id`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidSessionID)
   - : Session does not exist.
-- No such window
+- `no such window`
   - : The [`window`](/en-US/docs/Web/API/Window) object has been discarded, indicating that the tab or window has been closed.
-- Unexpected alert open
+- `unexpected alert open`
   - : A modal dialog was open, blocking this operation.
 
 ## Examples

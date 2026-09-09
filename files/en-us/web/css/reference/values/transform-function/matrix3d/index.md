@@ -1,5 +1,6 @@
 ---
-title: matrix3d()
+title: "`matrix3d()` CSS function"
+short-title: matrix3d()
 slug: Web/CSS/Reference/Values/transform-function/matrix3d
 page-type: css-function
 browser-compat: css.types.transform-function.matrix3d

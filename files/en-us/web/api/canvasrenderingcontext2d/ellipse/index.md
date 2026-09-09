@@ -44,7 +44,7 @@ the direction given by `counterclockwise` (defaulting to clockwise).
     expressed in radians.
 - `counterclockwise` {{optional_inline}}
   - : An optional boolean value which, if `true`, draws the ellipse
-    counterclockwise (anticlockwise). The default value is `false`
+    counterclockwise. The default value is `false`
     (clockwise).
 
 ### Return value

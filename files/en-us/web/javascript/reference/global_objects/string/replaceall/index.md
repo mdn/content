@@ -12,15 +12,13 @@ The **`replaceAll()`** method of {{jsxref("String")}} values returns a new strin
 {{InteractiveExample("JavaScript Demo: String.prototype.replaceAll()")}}
 
 ```js interactive-example
-const paragraph = "I think Ruth's dog is cuter than your dog!";
+const paragraph = "This dog's name is just Dog! Yes, that is the name.";
 
-console.log(paragraph.replaceAll("dog", "monkey"));
-// Expected output: "I think Ruth's monkey is cuter than your monkey!"
+console.log(paragraph.replaceAll("name", "nickname"));
+// Expected output: "This dog's nickname is just Dog! Yes, that is the nickname."
 
-// Global flag required when calling replaceAll with regex
-const regex = /dog/gi;
-console.log(paragraph.replaceAll(regex, "ferret"));
-// Expected output: "I think Ruth's ferret is cuter than your ferret!"
+console.log(paragraph.replaceAll(/\bis\b/g, "was"));
+// Expected output: "This dog's name was just Dog! Yes, that was the name."
 ```
 
 ## Syntax

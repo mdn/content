@@ -1,5 +1,6 @@
 ---
-title: :current
+title: "`:current` CSS pseudo-class"
+short-title: :current
 slug: Web/CSS/Reference/Selectors/:current
 page-type: css-pseudo-class
 status:

@@ -1,5 +1,6 @@
 ---
-title: ::picker()
+title: "`::picker()` CSS pseudo-element"
+short-title: ::picker()
 slug: Web/CSS/Reference/Selectors/::picker
 page-type: css-pseudo-element
 browser-compat: css.selectors.picker

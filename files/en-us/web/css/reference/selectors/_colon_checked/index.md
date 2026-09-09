@@ -1,5 +1,6 @@
 ---
-title: :checked
+title: "`:checked` CSS pseudo-class"
+short-title: :checked
 slug: Web/CSS/Reference/Selectors/:checked
 page-type: css-pseudo-class
 browser-compat: css.selectors.checked

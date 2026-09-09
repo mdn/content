@@ -1,5 +1,6 @@
 ---
-title: <named-color>
+title: "`<named-color>` CSS type"
+short-title: <named-color>
 slug: Web/CSS/Reference/Values/named-color
 page-type: css-type
 browser-compat: css.types.color.named-color

@@ -1,5 +1,6 @@
 ---
-title: letter-spacing
+title: "`letter-spacing` CSS property"
+short-title: letter-spacing
 slug: Web/CSS/Reference/Properties/letter-spacing
 page-type: css-property
 browser-compat: css.properties.letter-spacing
@@ -75,12 +76,18 @@ letter-spacing: unset;
 
 ### Values
 
+This property is specified as a single value from the following list:
+
 - `normal`
   - : The normal letter spacing for the current font. Unlike a value of `0`, this keyword allows the {{glossary("user agent")}} to alter the space between characters in order to justify text.
 - {{cssxref("&lt;length-percentage&gt;")}}
   - : Specifies extra inter-character space _in addition to_ the default space between characters. While values can be negative, these may be constrained to implementation-specific limits. User agents may not further increase or decrease the inter-character space in order to justify text.
 
     Percentage values are calculated relative to the width of the space character of the font applied to the text.
+
+    > [!NOTE]
+    > When `letter-spacing` is non-zero, user agents do not apply optional ligatures, such as the `liga` (standard ligatures) and `clig` (contextual ligatures) OpenType features normally controlled by {{cssxref("font-variant-ligatures")}}.
+    > These features can be explicitly re-enabled with {{cssxref("font-feature-settings")}}.
 
 ## Accessibility
 
@@ -194,7 +201,7 @@ Our CSS starts by applying increasing {{cssxref("font-size")}} values to each su
 
 ```css hidden live-sample___percentage-versus-length
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", sans-serif;
 }
 ```
 

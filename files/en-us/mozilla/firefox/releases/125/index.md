@@ -55,7 +55,7 @@ No notable changes.
 - Added support to allow web applications to gracefully recover if a canvas temporarily loses its 2D context, which might happen if the canvas is running hardware-accelerated on a GPU, and its driver crashes ([Firefox bug 1887729](https://bugzil.la/1887729)).
   Here are some additional details on the events for lost and restored canvas contexts:
   - Applications can monitor for [`contextlost`](/en-US/docs/Web/API/HTMLCanvasElement/contextlost_event) and [`contextrestored`](/en-US/docs/Web/API/HTMLCanvasElement/contextrestored_event) events, which are fired on at [`HTMLCanvasElement`](/en-US/docs/Web/API/HTMLCanvasElement) when the context is lost and recovered, respectively, and can also check the context using [`CanvasRenderingContext2D.isContextLost()`](/en-US/docs/Web/API/CanvasRenderingContext2D/isContextLost).
-  - After emitting `contextlost`, a browser will try and restart the lost context, by default, but code can prevent this by cancelling the event.
+  - After emitting `contextlost`, a browser will try and restart the lost context, by default, but code can prevent this by canceling the event.
   - Offscreen canvases can be monitored in the same way, but using [`OffScreenCanvas`](/en-US/docs/Web/API/OffscreenCanvas) events [`contextlost`](/en-US/docs/Web/API/OffscreenCanvas/contextlost_event) and [`contextrestored`](/en-US/docs/Web/API/OffscreenCanvas/contextrestored_event), along with [`OffscreenCanvasRenderingContext2D.isContextLost()`](/en-US/docs/Web/API/OffscreenCanvasRenderingContext2D#context).
 
 - Added support for the [`shadowrootclonable`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootclonable) attribute of the `<template>` element, and the [`shadowRootClonable`](/en-US/docs/Web/API/HTMLTemplateElement/shadowRootClonable) property of the `HTMLTemplateElement` interface that reflects it.
@@ -71,7 +71,7 @@ No notable changes.
 
 #### Removals
 
-- The [`SVGAElement.text`](/en-US/docs/Web/API/SVGAElement/text) property has been removed. The {{domxref("Node.textContent", "textContent")}} property (inherited from `Node`) is broadly supported and should be used instead. ([Firefox bug 1880689](https://bugzil.la/1880689)).
+- The `SVGAElement.text` property has been removed. The {{domxref("Node.textContent", "textContent")}} property (inherited from `Node`) is broadly supported and should be used instead. ([Firefox bug 1880689](https://bugzil.la/1880689)).
 
 ### WebAssembly
 
@@ -91,7 +91,7 @@ No notable changes.
 
 #### WebDriver BiDi
 
-- Added support for the [input.setFiles](https://w3c.github.io/webdriver-bidi/#command-input-setFiles) command which allows to set or update the files for `<input>` elements with `type="file"` ([Firefox bug 1855040](https://bugzil.la/1855040)).
+- Added support for the [input.setFiles](https://w3c.github.io/webdriver-bidi/#command-input-setFiles) command which allows you to set or update the files for `<input>` elements with `type="file"` ([Firefox bug 1855040](https://bugzil.la/1855040)).
 - Added support for the [storage.deleteCookies](https://w3c.github.io/webdriver-bidi/#command-storage-deleteCookies) command to delete cookies ([Firefox bug 1854581](https://bugzil.la/1854581)).
 - Added support for "userContext" as a field of the "partition" argument for cookie commands ([Firefox bug 1875255](https://bugzil.la/1875255)).
 - Fixed an issue where [storage.getCookies](https://w3c.github.io/webdriver-bidi/#command-storage-getCookies) would not retrieve all expected cookies for a given "sourceOrigin" ([Firefox bug 1884647](https://bugzil.la/1884647)).

@@ -42,7 +42,9 @@ watcher.onclose = () => {
   picker.remove();
 };
 
-picker.querySelector(".close-button").onclick = () => watcher.requestClose();
+picker.querySelector(".close-button").onclick = () => {
+  watcher.requestClose();
+};
 ```
 
 ## Specifications

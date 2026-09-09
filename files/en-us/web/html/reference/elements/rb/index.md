@@ -1,5 +1,6 @@
 ---
-title: "<rb>: The Ruby Base element"
+title: "`<rb>` HTML ruby base element"
+short-title: <rb>
 slug: Web/HTML/Reference/Elements/rb
 page-type: html-element
 status:
@@ -7,8 +8,6 @@ status:
 browser-compat: html.elements.rb
 sidebar: htmlsidebar
 ---
-
-{{deprecated_header}}
 
 The **`<rb>`** [HTML](/en-US/docs/Web/HTML) element is used to delimit the base text component of a {{HTMLElement("ruby") }} annotation, i.e., the text that is being annotated. One `<rb>` element should wrap each separate atomic segment of the base text.
 

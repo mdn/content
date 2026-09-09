@@ -23,8 +23,7 @@ Make a new SVG document as a plain text file, `doc8.svg`. Copy and paste the con
   width="600px"
   height="600px"
   viewBox="-300 -300 600 600"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  xmlns="http://www.w3.org/2000/svg">
   <link
     xmlns="http://www.w3.org/1999/xhtml"
     rel="stylesheet"
@@ -433,7 +432,7 @@ Move the position of the `:hover` pseudo-class from a specific petal to all peta
 
 ## Simplified structure
 
-The SVG structure shown above could be written much more concise by referencing the individual parts of the flower via {{SVGElement("use")}} elements. This [behavior is standardized](https://svgwg.org/svg2-draft/struct.html#UseStyleInheritance), though only a few browsers support the {{cssxref(":hover")}} pseudo-class and other more complex CSS selectors on elements referenced via `<use>` elements, at the moment. There is [some discussion about what rules apply to such referenced elements](https://github.com/w3c/svgwg/issues/504).
+The SVG structure shown above could be written much more concise by referencing the individual parts of the flower via {{SVGElement("use")}} elements. This [behavior is standardized](https://w3c.github.io/svgwg/svg2-draft/struct.html#UseStyleInheritance), though only a few browsers support the {{cssxref(":hover")}} pseudo-class and other more complex CSS selectors on elements referenced via `<use>` elements, at the moment. There is [some discussion about what rules apply to such referenced elements](https://github.com/w3c/svgwg/issues/504).
 
 See below how the structure then looks like.
 
@@ -442,8 +441,7 @@ See below how the structure then looks like.
   width="600px"
   height="600px"
   viewBox="-300 -300 600 600"
-  xmlns="http://www.w3.org/2000/svg"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
+  xmlns="http://www.w3.org/2000/svg">
   <link
     xmlns="http://www.w3.org/1999/xhtml"
     rel="stylesheet"

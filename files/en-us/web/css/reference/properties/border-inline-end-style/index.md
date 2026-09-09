@@ -1,5 +1,6 @@
 ---
-title: border-inline-end-style
+title: "`border-inline-end-style` CSS property"
+short-title: border-inline-end-style
 slug: Web/CSS/Reference/Properties/border-inline-end-style
 page-type: css-property
 browser-compat: css.properties.border-inline-end-style
@@ -49,7 +50,7 @@ direction: rtl;
 ## Syntax
 
 ```css
-/* <'border-style'> values */
+/* Keyword values */
 border-inline-end-style: dashed;
 border-inline-end-style: dotted;
 border-inline-end-style: groove;
@@ -66,7 +67,7 @@ Related properties are {{cssxref("border-block-start-style")}}, {{cssxref("borde
 
 ### Values
 
-- `<'border-style'>`
+- {{cssxref("&lt;line-style&gt;")}}
   - : The line style of the border. See {{ cssxref("border-style") }}.
 
 ## Formal definition

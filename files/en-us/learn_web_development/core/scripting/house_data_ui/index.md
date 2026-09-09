@@ -186,7 +186,7 @@ Next, you need to complete the `renderHouses()` function body. This will filter 
 3. Empty the "output" `<section>` element, so it doesn't have any child HTML elements. If you don't do this, each time a search is performed the results will be added to the end of the previous results rather than replacing them.
 4. Create a new function inside `renderHouses()` called `renderHouse()`. This function needs to take a house object as an argument, and do two things:
    1. Calculate the total area of the rooms contained inside the house's `room_sizes` object. This isn't as straightforward as looping through an array of numbers and summing them, but it isn't too tricky.
-   2. Add an `<article>` element inside the "output" `<section>` element containing the house's number, street name, bedroom and bathroom count, total room area, and price. you can vary the structure if you like, we we'd like it to be similar to this HTML snippet:
+   2. Add an `<article>` element inside the "output" `<section>` element containing the house's number, street name, bedroom and bathroom count, total room area, and price. you can vary the structure if you like, we'd like it to be similar to this HTML snippet:
    ```html
    <article>
      <h2>number street name</h2>

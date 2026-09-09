@@ -1,5 +1,6 @@
 ---
-title: widows
+title: "`widows` CSS property"
+short-title: widows
 slug: Web/CSS/Reference/Properties/widows
 page-type: css-property
 browser-compat: css.properties.widows
@@ -26,6 +27,8 @@ widows: unset;
 ```
 
 ### Values
+
+This property is specified as one `<integer>`:
 
 - {{cssxref("&lt;integer&gt;")}}
   - : The minimum number of lines that can stay by themselves at the top of a new fragment after a fragmentation break. The value must be positive.

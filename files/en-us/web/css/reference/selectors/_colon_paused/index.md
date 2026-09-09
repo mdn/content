@@ -1,5 +1,6 @@
 ---
-title: :paused
+title: "`:paused` CSS pseudo-class"
+short-title: :paused
 slug: Web/CSS/Reference/Selectors/:paused
 page-type: css-pseudo-class
 browser-compat: css.selectors.paused

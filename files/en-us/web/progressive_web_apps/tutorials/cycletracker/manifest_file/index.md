@@ -17,7 +17,7 @@ A minimalist manifest file for our menstrual cycle tracking app could look like 
 ```json
 {
   "short_name": "CT",
-  "start_url": "/",
+  "start_url": "./",
   "icons": [
     {
       "src": "icon-512.png",
@@ -83,7 +83,7 @@ Add presentation definitions to the manifest file you began creating in the prev
 
 ### Example solution
 
-As the example application is a single page, we can use `"/"` as the `start_url`, or omit the member altogether. For that same reason, we can display the app without the browser UI by setting the `display` to `standalone`.
+As the example application is a single page in a subdirectory, we can use `"./"` as the `start_url`, or omit the member altogether. For that same reason, we can display the app without the browser UI by setting the `display` to `standalone`.
 
 In [our CSS](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS#css_content), the `background-color: #eeffee;` is set on the `body` element selector. We use `#eeffee` to ensure a smooth transition from placeholder appearance to app load.
 
@@ -92,7 +92,7 @@ In [our CSS](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_an
   "name": "...",
   "short_name": "...",
   "description": "...",
-  "start_url": "/",
+  "start_url": "./",
   "theme_color": "#eeffee",
   "background_color": "#eeffee",
   "display": "standalone"

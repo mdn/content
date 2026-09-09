@@ -37,6 +37,6 @@ In this set of guides we'll describe the following authentication systems. Each 
 
 ## Session management
 
-After a website has authenticated a user, the website will typically want to keep this user signed in without the need to reauthenticate, either for a limited time or even indefinitely until the user signs out. Websites typically accomplish this by setting a cookie that contains a secret session identifier, or using a {{glossary("digital signature", "cryptographically signed")}} object such as a {{glossary("JWT", JSON Web Token(JWT)"")}}.
+After a website has authenticated a user, the website will typically want to keep this user signed in without the need to reauthenticate, either for a limited time or even indefinitely until the user signs out. Websites typically accomplish this by setting a cookie that contains a secret session identifier, or using a {{glossary("digital signature", "cryptographically signed")}} object such as a JSON Web Token(JWT).
 
 In our [session management](/en-US/docs/Web/Security/Authentication/Session_management) guide, we outline session management best practices.

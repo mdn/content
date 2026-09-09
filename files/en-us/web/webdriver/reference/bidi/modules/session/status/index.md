@@ -1,6 +1,6 @@
 ---
-title: session.status command
-short-title: session.status
+title: "`session.status` command"
+short-title: status
 slug: Web/WebDriver/Reference/BiDi/Modules/session/status
 page-type: webdriver-command
 browser-compat: webdriver.bidi.session.status
@@ -26,22 +26,20 @@ None. However, you must include the `params` field and set it to an empty object
 
 ### Return value
 
-The `result` object in the response with the following fields:
+The following fields in the `result` object of the response describe the current status of the browser:
 
-- `ready`
-  - : A boolean that indicates whether the browser is ready to create new sessions.
-    - `true`
-      - : The browser is ready to create a new session.
-    - `false`
-      - : The browser cannot accept new sessions because it already has an active session or is otherwise in a state where creating a session would fail.
 - `message`
   - : A string with information about the browser's current status.
+- `ready`
+  - : A boolean that indicates whether the browser is ready to create new sessions.
+    - `true`: The browser is ready to create a new session.
+    - `false`: The browser cannot accept new sessions because it already has an active session or is otherwise in a state where creating a session would fail.
 
 ## Examples
 
 ### Checking browser status before creating a session
 
-With a WebDriver BiDi connection established, send the following message to check whether the browser is ready to create a new session:
+With a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection) established, send the following message to check whether the browser is ready to create a new session:
 
 ```json
 {

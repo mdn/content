@@ -1,5 +1,6 @@
 ---
-title: <relative-size>
+title: "`<relative-size>` CSS type"
+short-title: <relative-size>
 slug: Web/CSS/Reference/Values/relative-size
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-fonts/#valdef-font-size-relative-size

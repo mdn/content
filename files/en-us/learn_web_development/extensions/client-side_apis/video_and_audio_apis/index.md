@@ -377,7 +377,7 @@ To get started with this example, follow these steps:
    <html lang="en-gb">
      <head>
        <meta charset="utf-8" />
-       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <meta name="viewport" content="width=device-width" />
        <title>Video player example</title>
        <link rel="stylesheet" type="text/css" href="style.css" />
      </head>

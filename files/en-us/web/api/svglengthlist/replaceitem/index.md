@@ -25,7 +25,7 @@ replaceItem(newItem, index)
 
 ### Return value
 
-The {{domxref("SVGLength")}} that was added the list.
+The {{domxref("SVGLength")}} that was added to the list.
 
 ### Exceptions
 

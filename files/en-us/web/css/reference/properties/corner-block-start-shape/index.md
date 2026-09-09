@@ -1,5 +1,6 @@
 ---
-title: corner-block-start-shape
+title: "`corner-block-start-shape` CSS property"
+short-title: corner-block-start-shape
 slug: Web/CSS/Reference/Properties/corner-block-start-shape
 page-type: css-property
 status:
@@ -16,7 +17,7 @@ For a full description of corner shape behavior and multiple examples, see the {
 
 ## Constituent properties
 
-The `corner-block-start-shape` property is a shorthand for the following logical properties:
+This property is a shorthand for the following logical properties:
 
 - {{cssxref("corner-start-start-shape")}}
 - {{cssxref("corner-start-end-shape")}}

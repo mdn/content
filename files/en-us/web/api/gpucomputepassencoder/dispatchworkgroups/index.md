@@ -33,7 +33,7 @@ dispatchWorkgroups(workgroupCountX, workgroupCountY, workgroupCountZ)
 
 ### Return value
 
-None ({{jsxref("Undefined")}}).
+None ({{jsxref("undefined")}}).
 
 ### Validation
 

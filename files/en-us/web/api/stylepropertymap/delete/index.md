@@ -8,9 +8,7 @@ browser-compat: api.StylePropertyMap.delete
 
 {{APIRef("CSS Typed Object Model API")}}
 
-The **`delete()`** method of the
-{{domxref("StylePropertyMap")}} interface removes the CSS declaration with the given
-property.
+The **`delete()`** method of the {{domxref("StylePropertyMap")}} interface removes the CSS declaration using the given property.
 
 ## Syntax
 
@@ -21,8 +19,7 @@ delete(property)
 ### Parameters
 
 - `property`
-  - : An identifier indicating the stylistic feature (e.g., font, width, background
-    color) to remove.
+  - : An identifier indicating the stylistic feature (e.g., font, width, background color) to remove.
 
 ### Return value
 
@@ -30,8 +27,9 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-The following example removes the {{cssxref('background-image')}} property from the
-element's [style attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/style).
+### Basic usage
+
+The following example removes the {{cssxref('background-image')}} property from the element's [style attribute](/en-US/docs/Web/HTML/Reference/Global_attributes/style).
 
 ```js
 // get the button element

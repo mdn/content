@@ -1,5 +1,6 @@
 ---
-title: device-posture
+title: "`device-posture` CSS media feature"
+short-title: device-posture
 slug: Web/CSS/Reference/At-rules/@media/device-posture
 page-type: css-media-feature
 status:

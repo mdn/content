@@ -10,30 +10,30 @@ An object of type `bookmarks.BookmarkTreeNode` represents a node in the bookmark
 
 ## Type
 
-An {{jsxref("object")}} with the following properties:
+An {{jsxref("Object")}} with the following properties:
 
 - `children` {{optional_inline}}
-  - : An {{jsxref("array")}} of `bookmarks.BookmarkTreeNode` objects which represent the node's children. The list is ordered in the list in which the children appear in the user interface. This field is omitted if the node isn't a folder.
+  - : An {{jsxref("Array")}} of `bookmarks.BookmarkTreeNode` objects which represent the node's children. The list is ordered in the list in which the children appear in the user interface. This field is omitted if the node isn't a folder.
 - `dateAdded` {{optional_inline}}
   - : A number representing the creation date of the node in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
 - `dateGroupModified` {{optional_inline}}
   - : A number representing the date and time the contents of this folder last changed, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
 - `id`
-  - : A {{jsxref("string")}} which uniquely identifies the node. Each ID is unique within the user's profile and remains unchanged across browser restarts.
+  - : A {{jsxref("String")}} which uniquely identifies the node. Each ID is unique within the user's profile and remains unchanged across browser restarts.
 - `index` {{optional_inline}}
   - : A number which represents the zero-based position of this node within its parent folder, where zero represents the first entry.
     > [!NOTE]
     > If you create or move multiple bookmarks, because the {{WebExtAPIRef("bookmarks.create()")}} and {{WebExtAPIRef("bookmarks.move()")}} methods are asynchronous, the requests may get processed in any order. Consequently, the value of each bookmark's index may change or be unknown until all the requests are completed. If the index associated with a bookmark matters to your extension, then – when creating or moving multiple bookmarks – the extension should wait for each `bookmarks.create` or `bookmarks.move` call to complete before creating or moving the next bookmark. Waiting ensures that the index associated with each bookmark is not affected by a create or move call executing concurrently while the original call is in progress.
 - `parentId` {{optional_inline}}
-  - : A {{jsxref("string")}} which specifies the ID of the parent folder. This property is not present in the root node.
+  - : A {{jsxref("String")}} which specifies the ID of the parent folder. This property is not present in the root node.
 - `title`
-  - : A {{jsxref("string")}} which contains the text displayed for the node in menus and lists of bookmarks.
+  - : A {{jsxref("String")}} which contains the text displayed for the node in menus and lists of bookmarks.
 - `type` {{optional_inline}}
   - : A {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}} object indicating whether this is a bookmark, a folder, or a separator. Defaults to `"bookmark"` unless `url` is omitted, in which case it defaults to `"folder"`.
 - `unmodifiable` {{optional_inline}}
-  - : A {{jsxref("string")}} as described by the type {{WebExtAPIRef('bookmarks.BookmarkTreeNodeUnmodifiable')}}. Represents the reason that the node can't be changed. If the node can be changed, this is omitted.
+  - : A {{jsxref("String")}} as described by the type {{WebExtAPIRef('bookmarks.BookmarkTreeNodeUnmodifiable')}}. Represents the reason that the node can't be changed. If the node can be changed, this is omitted.
 - `url` {{optional_inline}}
-  - : A {{jsxref("string")}} which represents the URL for the bookmark. If the node represents a folder, this property is omitted.
+  - : A {{jsxref("String")}} which represents the URL for the bookmark. If the node represents a folder, this property is omitted.
 
 {{WebExtExamples}}
 

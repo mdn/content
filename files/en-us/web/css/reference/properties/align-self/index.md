@@ -1,5 +1,6 @@
 ---
-title: align-self
+title: "`align-self` CSS property"
+short-title: align-self
 slug: Web/CSS/Reference/Properties/align-self
 page-type: css-property
 browser-compat: css.properties.align-self
@@ -91,6 +92,8 @@ align-self: unset;
 ```
 
 ### Values
+
+This property is specified as one or two of the following keyword values:
 
 - `auto`
   - : Computes to the parent's {{cssxref("align-items")}} value.

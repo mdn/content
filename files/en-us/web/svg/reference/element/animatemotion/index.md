@@ -18,7 +18,7 @@ The **`<animateMotion>`** [SVG](/en-US/docs/Web/SVG) element provides a way to d
 ## Attributes
 
 - {{SVGAttr("keyPoints")}}
-  - : This attribute indicate, in the range \[0,1], how far is the object along the path for each {{SVGAttr("keyTimes")}} associated values.
+  - : This attribute indicates, in the range \[0,1], how far the object is along the path for each associated value in {{SVGAttr("keyTimes")}}.
     _Value type_: [**\<number>**](/en-US/docs/Web/SVG/Guides/Content_type#number)\*; _Default value_: none; _Animatable_: **no**
 - {{SVGAttr("path")}}
   - : This attribute defines the path of the motion, using the same syntax as the {{SVGAttr('d')}} attribute.

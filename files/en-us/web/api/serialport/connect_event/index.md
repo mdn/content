@@ -3,27 +3,12 @@ title: "SerialPort: connect event"
 short-title: connect
 slug: Web/API/SerialPort/connect_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.SerialPort.connect_event
 ---
 
-{{APIRef("Web Serial API")}}{{SecureContext_Header}}{{SeeCompatTable}}{{AvailableInWorkers("window_and_dedicated")}}
+{{APIRef("Web Serial API")}}{{SecureContext_Header}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`connect`** event of the {{domxref("SerialPort")}} interface is fired when the port connects to the device.
-
-## Description
-
-More specifically, the `connect` event fires when the port becomes **logically connected** to the device after a user grants permission for a site to access the port following a {{domxref("Serial.requestPort()")}} call:
-
-- In the case of a wired serial port, this occurs when the port is physically connected to the device, for example via USB.
-- In the case of a wireless serial port (for example, Bluetooth RFCOMM), this occurs when the port makes one or more active connections to the device (for example via Bluetooth L2CAP channels).
-
-### Bubbling
-
-This event bubbles to the instance of {{domxref("Serial")}} that returned this interface. The `event.target` property refers to the {{domxref('SerialPort')}} object that bubbles up.
-
-For more information, see [Event bubbling](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling).
 
 ## Syntax
 
@@ -38,6 +23,21 @@ onconnect = (event) => { }
 ## Event type
 
 A generic {{domxref("Event")}}.
+
+## Description
+
+More specifically, the `connect` event fires when the port becomes **logically connected** to the device.
+This happens after a user grants permission for a site to access the port that the device is attached to, following a {{domxref("Serial.requestPort()")}} call:
+
+- In the case of a wired serial port, this occurs when the port is physically connected to the device, for example via USB.
+- In the case of a wireless serial port (for example, Bluetooth RFCOMM), this occurs when the port makes one or more active connections to the device (for example via Bluetooth L2CAP channels).
+
+### Bubbling
+
+This event bubbles up to the {{domxref("Serial")}} instance that returned this interface.
+The `event.target` property refers to the {{domxref("SerialPort")}} object that bubbles up.
+
+For more information, see [Event bubbling](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling).
 
 ## Examples
 

@@ -11,13 +11,13 @@ spec-urls: https://drafts.csswg.org/mediaqueries-5/#reduced-data-attribute
 
 {{APIRef("User Preferences API")}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-The **`reducedData`** read-only property of the {{domxref("PreferenceManager")}} interface returns a {{domxref("PreferenceObject")}} used to override the user's preference for the [reduced data](/en-US/docs/Web/CSS/Reference/Reference/At-rules/@media/prefers-reduced-data) of the site.
+The **`reducedData`** read-only property of the {{domxref("PreferenceManager")}} interface returns a {{domxref("PreferenceObject")}} used to override the user's preference for the [reduced data](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-data) of the site.
 
 Valid `reducedData` {{domxref("PreferenceObject.value")}} settings are `reduce` and `no-preference`.
 
 ## Value
 
-A {{domxref("PreferenceObject")}} used to override the user's preference for the [reduced data](/en-US/docs/Web/CSS/Reference/Reference/At-rules/@media/prefers-reduced-data) of the site.
+A {{domxref("PreferenceObject")}} used to override the user's preference for the [reduced data](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-data) of the site.
 
 ## Examples
 
