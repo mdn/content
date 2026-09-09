@@ -144,11 +144,11 @@ Avoid using [`command`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/comma
 
 ### 7. Graphics roles
 
-Graphics roles are used to define the structure and semantical meaning of graphical content:
+Graphics roles are defined in the [WAI-ARIA Graphics Module](https://w3c.github.io/graphics-aria/) and are used to define the structure and semantic meaning of graphical content:
 
-- [graphics-document](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-document_role)
-- [graphics-object](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-object_role)
-- [graphics-symbol](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-symbol_role)
+- [`graphics-document`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-document_role)
+- [`graphics-object`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-object_role)
+- [`graphics-symbol`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/graphics-symbol_role)
 
 ## Roles defined on MDN
 
