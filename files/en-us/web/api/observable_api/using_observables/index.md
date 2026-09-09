@@ -214,6 +214,9 @@ document.body
 
 Internally, each active observable subscription has a list of _observers_ — objects containing any of these three callbacks. You can call `subscribe()` multiple times on the same observable to register multiple observers. Concurrent observers share the subscription, and each receives values emitted while it is subscribed; previously emitted values are not replayed to new observers. This differs from sharing an iterator, where each consumer's `next()` call advances the same iterator rather than broadcasting a value to all consumers.
 
+> [!NOTE]
+> This shared-subscription behavior may change. A [proposal to give each observer its own `Subscriber`](https://github.com/WICG/observable/issues/217) would make each subscription start a separate execution instead of reusing an active subscription.
+
 ```js
 const clickObservable = document.body.when("click");
 

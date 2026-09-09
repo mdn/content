@@ -18,6 +18,9 @@ A boolean that is `true` while the subscription is active and `false` after it e
 
 A subscriber becomes inactive when {{domxref("Subscriber.complete()")}} or {{domxref("Subscriber.error()")}} is called, or when all observers [unsubscribe](/en-US/docs/Web/API/Observable_API/Using_observables#unsubscribing_from_an_observable). Unsubscribing one observer does not make the subscriber inactive if other observers remain. The value is already `false` when teardown callbacks and the observers' `complete` or `error` callbacks run.
 
+> [!NOTE]
+> This shared-subscription behavior may change. A [proposal to give each observer its own `Subscriber`](https://github.com/WICG/observable/issues/217) would make each subscription start a separate execution instead of reusing an active subscription.
+
 If an already aborted signal is passed to {{domxref("Observable.subscribe()")}} when starting a new subscription, the producer callback receives an inactive `Subscriber`.
 
 ## Examples

@@ -46,6 +46,9 @@ None ({{jsxref("undefined")}}).
 
 Calling `subscribe()` starts a subscription immediately. Values may be delivered synchronously, before `subscribe()` returns. Multiple observers share the observable's active {{domxref("Subscriber")}}; unsubscribing one observer does not unsubscribe the others.
 
+> [!NOTE]
+> This shared-subscription behavior may change. A [proposal to give each observer its own `Subscriber`](https://github.com/WICG/observable/issues/217) would make each subscription start a separate execution instead of reusing an active subscription.
+
 The observer's callbacks receive notifications from the producer. They do not define or replace the producer's `Subscriber` methods. An error or completion ends the subscription, so the observer receives no subsequent values.
 
 If an observer callback throws an exception, it is reported to the global object without ending the subscription or calling the observer's `error` callback. Returned promises are not awaited, and their rejections are not handled by `subscribe()`.

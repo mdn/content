@@ -33,6 +33,9 @@ Like other observable-returning operators, this method is lazy: calling it creat
 
 The callback is registered as a teardown on the returned observable's {{domxref("Subscriber")}}. It runs synchronously before the observers' completion or error callbacks, and also runs if all observers unsubscribe. For details on teardown behavior, see {{domxref("Subscriber.addTeardown()")}}.
 
+> [!NOTE]
+> This shared-subscription behavior may change. A [proposal to give each observer its own `Subscriber`](https://github.com/WICG/observable/issues/217) would make each subscription start a separate execution instead of reusing an active subscription.
+
 If `callback` throws an exception, it is reported to the global object without changing the stream's completion or error. A returned promise is not awaited, and its rejection is not handled by `finally()`.
 
 ## Examples

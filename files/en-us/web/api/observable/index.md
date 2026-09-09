@@ -104,6 +104,9 @@ For more working examples, see [Using observables](/en-US/docs/Web/API/Observabl
 
 This function creates an observable that emits an increasing count at a specified interval. It completes on the interval after the requested number of values has been emitted. The teardown callback clears the interval when the subscription ends, including when all observers unsubscribe. For a button-driven counter using this producer, see [Teardown](/en-US/docs/Web/API/Observable_API/Creating_observables#teardown).
 
+> [!NOTE]
+> This shared-subscription behavior may change. A [proposal to give each observer its own `Subscriber`](https://github.com/WICG/observable/issues/217) would make each subscription start a separate execution instead of reusing an active subscription.
+
 ```js
 function makeTimer(timerInterval, iterations = Infinity) {
   return new Observable((subscriber) => {

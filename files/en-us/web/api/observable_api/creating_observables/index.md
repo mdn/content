@@ -14,6 +14,9 @@ Before proceeding, read [Using observables](/en-US/docs/Web/API/Observable_API/U
 
 Like Promises, observables are created with a callback. The callback's job is to do work and push data to its subscribers. This callback isn't called immediately: it's called when the first observer subscribes, either by `subscribe()`, by one of the [aggregation methods](/en-US/docs/Web/API/Observable_API/Using_observables#aggregating_values), or by subscribing to a downstream observable created by a [transformation method](/en-US/docs/Web/API/Observable_API/Using_observables#transforming_an_observable). It receives a {{domxref("Subscriber")}} object. You can call methods on this object to dispatch data to all observers subscribed to the observable. Additional observers share the same underlying subscription until it completes, errors, or all observers unsubscribe. After that, the callback is called again when the next observer subscribes.
 
+> [!NOTE]
+> This shared-subscription behavior may change. A [proposal to give each observer its own `Subscriber`](https://github.com/WICG/observable/issues/217) would make each subscription start a separate execution instead of reusing an active subscription.
+
 - `next(value)`: Sends a value to each observer's `next` callback. This can be called any number of times while the subscription is active.
 - `complete()`: Ends the subscription successfully and calls each observer's `complete` callback without arguments.
 - `error(error)`: Ends the subscription with an error and passes the error to each observer's `error` callback. If an observer has no `error` callback, the error is reported to the global object.

@@ -13,6 +13,9 @@ The **`Subscriber`** interface of the [Observable API](/en-US/docs/Web/API/Obser
 
 A `Subscriber` object is passed to the callback supplied to the {{domxref("Observable.Observable", "Observable()")}} constructor when the first observer subscribes. Additional observers share this `Subscriber` while it is active. After the subscription completes, errors, or all observers unsubscribe, the next subscription invokes the callback with a new `Subscriber`. You cannot construct a `Subscriber` directly.
 
+> [!NOTE]
+> This shared-subscription behavior may change. A [proposal to give each observer its own `Subscriber`](https://github.com/WICG/observable/issues/217) would make each subscription start a separate execution instead of reusing an active subscription.
+
 The producer calls `Subscriber.next()`, `Subscriber.error()`, and `Subscriber.complete()` to send values and notifications to observers. The observers define how to handle these notifications through the corresponding callbacks passed to {{domxref("Observable.subscribe()")}}. The producer can also register cleanup callbacks with {{domxref("Subscriber.addTeardown()")}}.
 
 {{InheritanceDiagram}}

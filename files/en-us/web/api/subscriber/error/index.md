@@ -14,6 +14,9 @@ The **`error()`** method of the {{domxref("Subscriber")}} interface closes the s
 
 Calling this method sets {{domxref("Subscriber.active", "active")}} to `false`, aborts {{domxref("Subscriber.signal", "signal")}}, and runs the registered [teardown callbacks](/en-US/docs/Web/API/Subscriber/addTeardown). It then synchronously invokes each observer's `error` callback supplied to {{domxref("Observable.subscribe()")}}, passing the error value. The observers' `complete` callbacks are not invoked.
 
+> [!NOTE]
+> This shared-subscription behavior may change. A [proposal to give each observer its own `Subscriber`](https://github.com/WICG/observable/issues/217) would make each subscription start a separate execution instead of reusing an active subscription.
+
 If an observer has no `error` callback, the error is reported to the global object. Calling `error()` on an already inactive subscriber also reports the error to the global object. Calling this method does not throw the error back to the caller or stop execution of the producer's code.
 
 ## Syntax

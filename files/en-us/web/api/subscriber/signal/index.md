@@ -18,6 +18,9 @@ An internally created {{domxref("AbortSignal")}}. It is aborted when {{domxref("
 
 This is a different object from any signal passed to {{domxref("Observable.subscribe()")}}. A signal passed to `subscribe()` controls the observers subscribed with that signal; `subscriber.signal` tracks the shared subscription. When one observer unsubscribes, `subscriber.signal` is not aborted if other observers are still subscribed.
 
+> [!NOTE]
+> This shared-subscription behavior may change. A [proposal to give each observer its own `Subscriber`](https://github.com/WICG/observable/issues/217) would make each subscription start a separate execution instead of reusing an active subscription.
+
 For cleanup that does not use an API accepting an `AbortSignal`, use {{domxref("Subscriber.addTeardown()")}}. Unlike registering an `abort` event listener, `addTeardown()` also runs the callback immediately if the subscriber is already inactive.
 
 ## Examples

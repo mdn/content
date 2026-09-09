@@ -33,6 +33,9 @@ A new {{domxref("Observable")}} object.
 
 The constructor does not call `callback` immediately. It runs synchronously when the first observer subscribes. Additional observers share the same {{domxref("Subscriber")}} until it becomes inactive. A later subscription starts the callback again with a new subscriber. See [Creating an observable](/en-US/docs/Web/API/Observable_API/Creating_observables#creating_an_observable) for the subscription lifecycle.
 
+> [!NOTE]
+> This shared-subscription behavior may change. A [proposal to give each observer its own `Subscriber`](https://github.com/WICG/observable/issues/217) would make each subscription start a separate execution instead of reusing an active subscription.
+
 If `callback` throws an exception, it is passed to `subscriber.error()`. An async callback's returned promise is ignored, so its rejection is not handled automatically. Handle asynchronous errors explicitly and forward them with `subscriber.error()` while the subscriber is active.
 
 ## Examples

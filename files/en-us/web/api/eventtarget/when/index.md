@@ -16,6 +16,9 @@ To subscribe to the stream of events, you can then call {{domxref("Observable.su
 
 The returned observable uses an event listener in the background, as with {{domxref("EventTarget.addEventListener()")}}. This listener's creation, sharing among observers, and removal follow the same lifecycle as the {{domxref("Subscriber")}} object for a custom observable.
 
+> [!NOTE]
+> This shared-subscription behavior may change. A [proposal to give each observer its own `Subscriber`](https://github.com/WICG/observable/issues/217) would make each subscription start a separate execution instead of reusing an active subscription.
+
 ## Syntax
 
 ```js-nolint
