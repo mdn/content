@@ -210,7 +210,7 @@ main {
 
 #### Result
 
-Click the links in the header to jump between sections. Each section appears below the header, keeping its heading visible. Try setting `scroll-padding` to `0` in the live editor and clicking the links again to see the header obscure the headings.
+Click the links in the header to jump between sections. Each section appears below the header, keeping its heading visible. Open this example in the playground, remove the `scroll-padding` line, and click the links again to see the header obscure the headings.
 
 {{EmbedLiveSample("Preventing content from being hidden by a fixed header", "100%", 300)}}
 
