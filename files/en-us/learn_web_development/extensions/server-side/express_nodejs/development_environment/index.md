@@ -130,49 +130,7 @@ The _Node.js_ package manager _npm_ should also have been installed, and can be 
 10.9.2
 ```
 
-As a slightly more exciting test let's create a very basic "pure node" server that prints out "Hello World" in the browser when you visit the correct URL in your browser:
-
-1. Copy the following text into a file named **hellonode.mjs**. This uses pure Node features (nothing from Express):
-
-   ```js
-   // Load HTTP module
-   import http from "node:http";
-
-   const hostname = "127.0.0.1";
-   const port = 3000;
-
-   // Create HTTP server and listen on port 3000 for requests
-   const server = http.createServer((req, res) => {
-     // Set the response HTTP header with HTTP status and Content type
-     res.statusCode = 200;
-     res.setHeader("Content-Type", "text/plain");
-     res.end("Hello World\n");
-   });
-
-   // Listen for request on port 3000, and as a callback function have the port listened on logged
-   server.listen(port, hostname, () => {
-     console.log(`Server running at http://${hostname}:${port}/`);
-   });
-   ```
-
-   The code imports the "http" module and uses it to create a server (`createServer()`) that listens for HTTP requests on port 3000. The script then prints a message to the console about what browser URL you can use to test the server. The `createServer()` function takes as an argument a callback function that will be invoked when an HTTP request is received — this returns a response with an HTTP status code of 200 ("OK") and the plain text "Hello World".
-
-   > [!NOTE]
-   > Don't worry if you don't understand exactly what this code is doing yet! We'll explain our code in greater detail once we start using Express!
-
-2. Start the server by navigating into the same directory as your `hellonode.mjs` file in your command prompt, and calling `node` along with the script name, like so:
-
-   ```bash
-   node hellonode.mjs
-   ```
-
-   Once the server starts, you will see console output indicating the IP address the server is running on:
-
-   ```plain
-   Server running at http://127.0.0.1:3000/
-   ```
-
-3. Navigate to the URL `http://127.0.0.1:3000`. If everything is working, the browser should display the string "Hello World".
+The version numbers may differ from those shown above. With both commands working, you can configure the Local Library project.
 
 ## Using npm
 
@@ -184,165 +142,170 @@ Next to _Node_ itself, [npm](https://docs.npmjs.com/) is the most important tool
 
 You can manually use npm to separately fetch each needed package. Typically we instead manage dependencies using a plain-text definition file named [package.json](https://docs.npmjs.com/files/package.json/). This file lists all the dependencies for a specific JavaScript "package", including the package's name, version, description, initial file to execute, production dependencies, development dependencies, versions of _Node_ it can work with, etc. The **package.json** file should contain everything npm needs to fetch and run your application (if you were writing a reusable library you could use this definition to upload your package to the npm repository and make it available for other users).
 
+### Creating the project
+
+We'll prepare the configuration for the Local Library [starter project](https://github.com/mdn/express-locallibrary-tutorial). By the end of this article, you'll have its package configuration and dependencies ready. We'll add the application code in [Creating a skeleton website](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website).
+
+1. Create a directory for the application and navigate into it:
+
+   ```bash
+   mkdir express-locallibrary-tutorial
+   cd express-locallibrary-tutorial
+   ```
+
+2. Use the npm `init` command to create a **package.json** file with default values:
+
+   ```bash
+   npm init --yes
+   ```
+
+3. Open **package.json** in your text editor and replace its contents with the following configuration:
+
+   ```json
+   {
+     "name": "express-locallibrary-tutorial",
+     "version": "0.0.1",
+     "private": true,
+     "engines": {
+       "node": ">=24.0.0"
+     },
+     "type": "module",
+     "scripts": {}
+   }
+   ```
+
+   The `name` and `version` identify the project. Setting `private` to `true` prevents accidental publication to the npm registry. The `engines` field declares the minimum supported Node.js version, and `"type": "module"` tells Node to treat the project's **.js** files as ES modules. We'll add commands to `scripts` below.
+
 ### Adding dependencies
 
-The following steps show how you can use npm to download a package, save it into the project dependencies, and then import it in a Node application.
-
-> [!NOTE]
-> Here we show the instructions to fetch and install the _Express_ package. Later on we'll show how this package, and others, are already specified for us in the starter project. This section is provided because it is useful to understand how npm works and how to add dependencies to a project.
-
-1. First create a directory for your new application and navigate into it:
-
-   ```bash
-   mkdir myapp
-   cd myapp
-   ```
-
-2. Use the npm `init` command to create a **package.json** file for your application. This command prompts you for a number of things, including the name and version of your application and the name of the initial entry point file (by default this is **index.js**). For now, just accept the defaults:
-
-   ```bash
-   npm init
-   npm pkg set type=module
-   ```
-
-   If you display the **package.json** file (`cat package.json`), you will see the defaults that you accepted. The second command adds `"type": "module"` so that Node treats the project's JavaScript files as ES modules.
-
-   ```json
-   {
-     "name": "myapp",
-     "type": "module",
-     "version": "1.0.0",
-     "main": "index.js",
-     "scripts": {
-       "test": "echo \"Error: no test specified\" && exit 1"
-     },
-     "author": "",
-     "license": "ISC",
-     "description": ""
-   }
-   ```
-
-3. Now install Express in the `myapp` directory and save it in the dependencies list of your **package.json** file:
-
-   ```bash
-   npm install express
-   ```
-
-   The dependencies section of your **package.json** will now appear at the end of the **package.json** file and will include _Express_.
-
-   ```json
-   {
-     "name": "myapp",
-     "type": "module",
-     "version": "1.0.0",
-     "description": "",
-     "main": "index.js",
-     "scripts": {
-       "test": "echo \"Error: no test specified\" && exit 1"
-     },
-     "author": "",
-     "license": "ISC",
-     "dependencies": {
-       "express": "^5.1.0"
-     }
-   }
-   ```
-
-4. To use the Express library, import it in your **index.js** file.
-   Create this file now, in the root of the "myapp" application directory, and give it the following contents:
-
-   ```js
-   import express from "express";
-
-   const app = express();
-   const port = 3000;
-
-   app.get("/", (req, res) => {
-     res.send("Hello World!");
-   });
-
-   app.listen(port, () => {
-     console.log(`Example app listening on port ${port}!`);
-   });
-   ```
-
-   This code shows a minimal "HelloWorld" Express web application.
-   This imports the "express" module using `import` and uses it to create a server (`app`) that listens for HTTP requests on port 3000 and prints a message to the console explaining what browser URL you can use to test the server.
-   The `app.get()` function only responds to HTTP `GET` requests with the specified URL path ('/'), in this case by calling a function to send our _Hello World!_ message.
-
-   > [!NOTE]
-   > The backticks in the `` `Example app listening on port ${port}!` `` let us interpolate the value of `$port` into the string.
-
-5. You can start the server by calling node with the script in your command prompt:
-
-   ```bash
-   node index.js
-   ```
-
-   You will see the following console output:
-
-   ```plain
-   Example app listening on port 3000
-   ```
-
-6. Navigate to the URL `http://localhost:3000/`.
-   If everything is working, the browser should display the string "Hello World!".
-
-### Development dependencies
-
-If a dependency is only used during development, you should instead save it as a "development dependency" (so that your package users don't have to install it in production). For example, to use the popular JavaScript Linting tool [ESLint](https://eslint.org/) you would call npm as shown:
+Install the packages used by the starter from inside the **express-locallibrary-tutorial** directory:
 
 ```bash
-npm install eslint --save-dev
+npm install debug express http-errors morgan pug
 ```
 
-The following entry would then be added to your application's **package.json**:
+These packages each have a role in the application:
 
-```json
-{
-  "devDependencies": {
-    "eslint": "^9.30.1"
-  }
-}
-```
+- `debug` displays diagnostic messages when enabled through the `DEBUG` environment variable.
+- `express` provides the web framework.
+- `http-errors` creates HTTP errors, such as a 404 for an unknown route.
+- `morgan` logs HTTP requests.
+- `pug` renders HTML from templates.
 
-> [!NOTE]
-> "[Linters](<https://en.wikipedia.org/wiki/Lint_(software)>)" are tools that perform static analysis on software in order to recognize and report adherence/non-adherence to some set of coding best practice.
+The [`npm install`](https://docs.npmjs.com/cli/commands/npm-install/) command downloads these packages and their dependencies into **node_modules**, adds them to `dependencies` in **package.json**, and creates **package-lock.json** to record the resolved versions. Keep both package files in version control so other developers can install the project's dependencies. When a lockfile is already available, `npm ci` installs its recorded versions.
+
+We'll install additional packages, such as the database driver, when we need them later in the tutorial. For a broader introduction to development tools and their configuration, see [Introducing a complete toolchain](/en-US/docs/Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain).
 
 ### Running tasks
 
-In addition to defining and fetching dependencies you can also define _named_ scripts in your **package.json** files and call npm to execute them with the [run-script](https://docs.npmjs.com/cli/commands/npm-run/) command. This approach is commonly used to automate running tests and parts of the development or build toolchain (e.g., running tools to minify JavaScript, shrink images, LINT/analyze your code, etc.).
-
-> [!NOTE]
-> Task runners like [Gulp](https://gulpjs.com/) and [Grunt](https://gruntjs.com/) can also be used to run tests and other external tools.
-
-For example, to define a script to run the _eslint_ development dependency that we specified in the previous section we might add the following script block to our **package.json** file (assuming that our application source is in a folder `/src/js`):
+In addition to defining dependencies, you can define named scripts in **package.json** and use npm to execute them. Replace the empty `scripts` object with these commands:
 
 ```json
 {
   "scripts": {
-    // …
-    "lint": "eslint src/js"
-    // …
+    "start": "node server.js",
+    "devstart": "node --watch server.js"
   }
 }
 ```
 
-To explain a little further, `eslint src/js` is a command that we could enter in our terminal/command line to run `eslint` on JavaScript files contained in the `src/js` directory inside our app directory. Including the above inside our app's package.json file provides a shortcut for this command — `lint`.
+The `start` script runs the application's entry point, **server.js**. The `devstart` script uses Node's watch mode to restart the server when an imported JavaScript file changes. We'll try both commands with a minimal server below.
 
-We would then be able to run _eslint_ using npm by calling:
+Your **package.json** should now look like this. The dependency version numbers may be newer, depending on when you install the packages.
 
-```bash
-npm run-script lint
-# OR (using the alias)
-npm run lint
+```json
+{
+  "name": "express-locallibrary-tutorial",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "devstart": "node --watch server.js"
+  },
+  "dependencies": {
+    "debug": "^4.4.3",
+    "express": "^5.2.1",
+    "http-errors": "^2.0.1",
+    "morgan": "^1.12.0",
+    "pug": "^3.0.4"
+  },
+  "type": "module"
+}
 ```
 
-This example may not look any shorter than the original command, but you can include much bigger commands inside your npm scripts, including chains of multiple commands. You could identify a single npm script that runs all your tests at once.
+### Trying a minimal server
+
+To check that your environment and npm scripts work, create a file named **server.js** alongside **package.json** with the following contents:
+
+```js
+import express from "express";
+
+const app = express();
+const port = 3000;
+
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}/`);
+});
+```
+
+This imports Express and creates an application. The `app.get()` method responds to requests for `/` with the text "Hello World!", and `app.listen()` starts the server on port 3000. Node treats **server.js** as an ES module because we set `"type": "module"` in **package.json**.
+
+1. In your project directory, start the server using the npm script:
+
+   ```bash
+   npm start
+   ```
+
+   You should see the following message in the terminal:
+
+   ```plain
+   Server running at http://localhost:3000/
+   ```
+
+2. Open `http://localhost:3000/` in your browser. You should see "Hello World!".
+3. Stop the server with **Ctrl+C**, then start it in watch mode:
+
+   ```bash
+   npm run devstart
+   ```
+
+4. Change the message in `res.send()` to "Hello again!" and save **server.js**. Node restarts the server automatically. Reload the page to see the updated message.
+5. Stop the server with **Ctrl+C** and delete this temporary **server.js** file. We'll add the starter's server and application files in the skeleton website chapter. Keep the npm scripts; they will run that server too.
+
+### Ignoring generated and local files
+
+Create a file named **.gitignore** alongside **package.json** with the following contents:
+
+```plain
+node_modules/
+*.log
+.env
+```
+
+This keeps installed dependencies, log files, and local environment settings out of version control. The dependencies can be installed again from the package files.
+
+Your project directory should now contain:
+
+```plain
+express-locallibrary-tutorial/
+  .gitignore
+  node_modules/
+  package-lock.json
+  package.json
+```
+
+This is the starter's project configuration, ready for its JavaScript files, templates, and stylesheet. Keep this directory for the tutorial; when you reach the skeleton website chapter, copy the starter's application files into it.
 
 ## Summary
 
-You now have a Node development environment up and running on your computer that can be used for creating Express web applications. You've also seen how npm can be used to import Express into an application and run a simple Express application.
+You now have a Node development environment and the Local Library project's package configuration, dependencies, and npm scripts. You've checked the setup with a minimal Express server, and the project is ready for the application files we'll add in the tutorial.
 
 In the next article we start working through a tutorial to build a complete web application using this environment and associated tools.
 
