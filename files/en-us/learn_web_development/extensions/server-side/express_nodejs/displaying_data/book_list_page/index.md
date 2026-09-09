@@ -5,17 +5,19 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Home_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}
+
 Next we'll implement our book list page. This page needs to display a list of all books in the database along with their author, with each book title being a hyperlink to its associated book detail page.
 
 ## Controller
 
 The book list controller function needs to get a list of all `Book` objects in the database, sort them, and then pass these to the template for rendering.
 
-Open **/controllers/bookController.js**. Find the exported `book_list()` controller method and replace it with the following code.
+Open **controllers/bookController.js**. Find the exported `bookList()` controller method and replace it with the following code.
 
 ```js
 // Display list of all books.
-exports.book_list = async (req, res, next) => {
+export const bookList = async (req, res, next) => {
   const allBooks = await Book.find({}, "title author")
     .sort({ title: 1 })
     .populate("author")
@@ -36,7 +38,7 @@ The final part of the route handler calls `render()`, specifying the **book_list
 
 ## View
 
-Create **/views/book_list.pug** and copy in the text below.
+Create **views/book_list.pug** and paste in the text below.
 
 ```pug
 extends layout
@@ -68,7 +70,4 @@ Run the application (see [Testing the routes](/en-US/docs/Learn_web_development/
 
 ![Book List Page - Express Local Library site](new_book_list.png)
 
-## Next steps
-
-- Return to [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data).
-- Proceed to the next subarticle of part 5: [BookInstance list page](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page).
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Home_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_list_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}

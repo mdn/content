@@ -5,15 +5,17 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-The _Book detail page_ needs to display the information for a specific `Book` (identified using its automatically generated `_id` field value), along with information about each associated copy in the library (`BookInstance`). Wherever we display an author, genre, or book instance, these should be linked to the associated detail page for that item.
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_detail_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}
+
+The _Book detail page_ needs to display the information for a specific `Book` (identified using its automatically generated `_id` field value), along with information about each associated paste in the library (`BookInstance`). Wherever we display an author, genre, or book instance, these should be linked to the associated detail page for that item.
 
 ## Controller
 
-Open **/controllers/bookController.js**. Find the exported `book_detail()` controller method and replace it with the following code.
+Open **controllers/bookController.js**. Find the exported `bookDetail()` controller method and replace it with the following code.
 
 ```js
 // Display detail page for a specific book.
-exports.book_detail = async (req, res, next) => {
+export const bookDetail = async (req, res, next) => {
   // Get details of books, book instances for specific book
   const [book, bookInstances] = await Promise.all([
     Book.findById(req.params.id).populate("author").populate("genre").exec(),
@@ -36,7 +38,7 @@ exports.book_detail = async (req, res, next) => {
 ```
 
 > [!NOTE]
-> We don't need to require any additional modules in this step, as we already imported the dependencies when we implemented the home page controller.
+> We don't need to import any additional modules in this step, as we already imported the dependencies when we implemented the home page controller.
 
 The approach is exactly the same as described for the [Genre detail page](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page).
 The route controller function uses `Promise.all()` to query the specified `Book` and its associated copies (`BookInstance`) in parallel.
@@ -46,7 +48,7 @@ Since the key 'title' is used to give name to the webpage (as defined in the hea
 
 ## View
 
-Create **/views/book_detail.pug** and add the text below.
+Create **views/book_detail.pug** and add the text below.
 
 ```pug
 extends layout
@@ -108,7 +110,4 @@ Run the application and open your browser to `http://localhost:3000/`. Select th
 
 ![Book Detail Page - Express Local Library site](locallibary_express_book_detail.png)
 
-## Next steps
-
-- Return to [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data).
-- Proceed to the next subarticle of part 5: [Author detail page](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_detail_page).
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Genre_detail_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_detail_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}

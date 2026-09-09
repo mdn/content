@@ -5,6 +5,8 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_list_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_detail_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}
+
 The genre _detail_ page needs to display the information for a particular genre instance, using its automatically generated `_id` field value as the identifier.
 The ID of the required genre record is encoded at the end of the URL and extracted automatically based on the route definition (**/genre/:id**).
 It is then accessed within the controller via the request parameters: `req.params.id`.
@@ -13,17 +15,17 @@ The page should display the genre name and a list of all books in the genre with
 
 ## Controller
 
-Open **/controllers/genreController.js** and require the `Book` module at the top of the file (the file should already `require()` the `Genre` module).
+Open **controllers/genreController.js** and import the `Book` module at the top of the file (the file should already import the `Genre` module).
 
 ```js
-const Book = require("../models/book");
+import Book from "../models/book.js";
 ```
 
-Find the exported `genre_detail()` controller method and replace it with the following code.
+Find the exported `genreDetail()` controller method and replace it with the following code.
 
 ```js
 // Display detail page for a specific Genre.
-exports.genre_detail = async (req, res, next) => {
+export const genreDetail = async (req, res, next) => {
   // Get details of genre and all associated books (in parallel)
   const [genre, booksInGenre] = await Promise.all([
     Genre.findById(req.params.id).exec(),
@@ -52,7 +54,7 @@ If the genre does not exist in the database (i.e., it may have been deleted) the
 In this case we want to display a "not found" page, so we create an `Error` object and pass it to the `next` middleware function in the chain.
 
 > [!NOTE]
-> Errors passed to the `next` middleware function propagate through to our error handling code (this was set up when we [generated the app skeleton](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website#app.js). For more information, see [Handling Errors](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction#handling_errors) and [Handling errors and exceptions in the route functions](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes#handling_errors_and_exceptions_in_the_route_functions)).
+> Errors passed to the `next` middleware function propagate through to our error handling code (this was set up when we [created the app skeleton](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website#app.js). For more information, see [Handling Errors](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction#handling_errors) and [Handling errors and exceptions in the route functions](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes#handling_errors_and_exceptions_in_the_route_functions)).
 
 If the `genre` is found, then we call `render()` to display the view.
 The view template is **genre_detail** (.pug).
@@ -60,7 +62,7 @@ The values for the title, `genre` and `booksInGenre` are passed into the templat
 
 ## View
 
-Create **/views/genre_detail.pug** and fill it with the text below:
+Create **views/genre_detail.pug** and fill it with the text below:
 
 ```pug
 extends layout
@@ -100,7 +102,4 @@ Run the application and open your browser to `http://localhost:3000/`. Select th
 > The most likely cause is that the ID being passed into the mongoose methods is not actually an ID.
 > [`Mongoose.prototype.isValidObjectId()`](<https://mongoosejs.com/docs/api/mongoose.html#Mongoose.prototype.isValidObjectId()>) can be used to check whether a particular ID is valid.
 
-## Next steps
-
-- Return to [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data).
-- Proceed to the next subarticle of part 5: [Book detail page](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_detail_page).
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_list_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_detail_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}
