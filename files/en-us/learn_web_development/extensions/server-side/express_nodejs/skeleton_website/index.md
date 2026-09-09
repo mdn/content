@@ -391,7 +391,7 @@ Reload the browser to see your changes. During development, changes to views and
 
 ## Challenge yourself
 
-Create a new route in **/routes/users.js** that will display the text "_You're so cool_" at URL `/users/cool/`. Test it by running the server and visiting `http://localhost:3000/users/cool/` in your browser.
+Create a new route in **routes/users.js** that will display the text "_You're so cool_" at URL `/users/cool/`. Test it by running the server and visiting `http://localhost:3000/users/cool/` in your browser.
 
 ## Summary
 

@@ -174,6 +174,9 @@ The middle part of the code (the three lines starting with `app.get`) shows a _r
 
 The final block starts up the server on a specified port ('3000') and prints a log comment to the console. With the server running, you could go to `localhost:3000` in your browser to see the example response returned.
 
+> [!NOTE]
+> [The Express documentation](https://expressjs.com/en/starter/hello-world/), consistent with the Node documentation, offers instructions for both the standard ECMAScript modules (using `import`/`export` declarations) and CommonJS modules (using `require()` and `module.exports`). The latter is considered legacy. When reading the official documentation, always select the "ESM" tab for the code blocks.
+
 ### Importing and creating modules
 
 A module is a JavaScript library/file that you can import into other code using an [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declaration. _Express_ itself is a module, as are the middleware and database libraries that we use in our _Express_ applications.
