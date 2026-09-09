@@ -169,7 +169,7 @@ Add the `due_back_yyyy_mm_dd()` virtual function shown below (after the `due_bac
 
 ```js
 BookInstanceSchema.virtual("due_back_yyyy_mm_dd").get(function () {
-  return DateTime.fromJSDate(this.due_back).toISODate(); // format 'YYYY-MM-DD'
+  return this.due_back ? this.due_back.toISOString().slice(0, 10) : "";
 });
 ```
 
