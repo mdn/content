@@ -10,63 +10,85 @@ browser-compat: api.Observable.from_static
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`from()`** method of the {{domxref("Observable")}} interface returns a new observable constructed from the value passed into the method as an argument.
+The **`from()`** static method of the {{domxref("Observable")}} interface returns an observable converted from a promise, iterable, or async iterable, or returns an existing observable unchanged.
 
 ## Syntax
 
 ```js-nolint
-from(value)
+Observable.from(value)
 ```
 
 ### Parameters
 
 - `value`
-  - : A value to convert to an observable, which can be a {{jsxref("Promise")}}, an {{jsxref("AsyncIterator")}}, an {{jsxref("Iterator")}}, or an existing {{domxref("Observable")}}. If `value` is an observable, the same given object is returned.
+  - : An object to convert to an observable: an {{domxref("Observable")}}, a {{jsxref("Promise")}}, an [iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol), or an [async iterable object](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_async_iterator_and_async_iterable_protocols).
 
 ### Return value
 
-An {{domxref("Observable")}}.
+An {{domxref("Observable")}}. If `value` is already an observable, it is returned unchanged. Otherwise, a new observable is returned that emits values from `value` when subscribed to.
 
 ### Exceptions
 
-- `TypeError` {{domxref("DOMException")}}
-  - : Thrown if `value` is not one of the convertible object types listed in the [Parameters](#parameters) section.
+- {{jsxref("TypeError")}}
+  - : Thrown if `value` cannot be converted to an observable. Primitive values, including strings, are not accepted.
+
+## Description
+
+The conversion checks for an existing observable first, then an async iterable, then an iterable, and finally a promise.
+
+- A promise contributes its fulfillment value, followed by completion. A rejection becomes an error.
+- An iterable contributes its values synchronously, followed by completion when the iterator is exhausted.
+- An async iterable contributes its values as they become available, followed by completion when the iterator is exhausted.
+
+Errors while iterating become errors in the observable.
+
+Calling `from()` does not subscribe to the returned observable. However, converting an existing promise does not defer the work that created it. Unsubscribing also does not cancel that work. If the promise rejects after the subscriber becomes inactive, the error is reported to the global object.
 
 ## Examples
 
-### Basic `from()` example
+### Converting a promise
 
-In this example, we will convert a basic {{jsxref("Promise")}} to an observable using the `from()` method.
+This example converts a promise for the first button click into an observable. It displays the click's coordinates, then a completion message.
 
-First, we create a promise using the {{jsxref("Promise.Promise", "Promise()")}} constructor. The promise resolves with a string value.
-
-```js
-const promise = new Promise((resolve) => {
-  resolve("Promise resolve value");
-});
+```html hidden live-sample___from-promise
+<button>Click me</button>
+<p>Waiting for a click</p>
 ```
 
-Next, we pass the promise into a `from()` call to convert it to an observable. To show that this is an observable, we then call {{domxref("Observable.subscribe()")}} on the return value, passing in an object containing:
+```js live-sample___from-promise
+const btn = document.querySelector("button");
+const output = document.querySelector("p");
+const firstClick = btn.when("click").first();
 
-- A `next()` definition that logs the value passing through the stream to the console.
-- A `complete()` definition that logs "Subscription complete" to the console.
-
-```js
-const observable = Observable.from(promise).subscribe({
-  next: (value) => {
-    console.log(value);
+Observable.from(firstClick).subscribe({
+  next: (event) => {
+    output.textContent = `${event.clientX},${event.clientY}`;
   },
   complete: () => {
-    console.log(`Subscription complete`);
+    output.textContent += " — Complete.";
   },
 });
 ```
 
-When the above code is run, we get the following values logged to the console:
+{{EmbedLiveSample("from-promise", "100%", "100px")}}
 
-```plain
-Promise resolve value
-Subscription complete
+### Converting an async iterable
+
+This example logs chunks of text from a fetched file. The decoded {{domxref("ReadableStream")}} is an async iterable; each chunk may contain part of a line or several lines.
+
+```js
+const response = await fetch("/data.txt");
+if (!response.ok) {
+  throw new Error(`Request failed: ${response.status}`);
+}
+
+const textStream = response.body.pipeThrough(new TextDecoderStream());
+
+Observable.from(textStream).subscribe({
+  next: (chunk) => console.log(chunk),
+  error: (error) => console.error("Reading failed:", error),
+  complete: () => console.log("Stream complete"),
+});
 ```
 
 ## Specifications

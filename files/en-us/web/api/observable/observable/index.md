@@ -10,7 +10,7 @@ browser-compat: api.Observable.Observable
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`Observable()`** constructor creates a new {{domxref("Observable")}} object instance.
+The **`Observable()`** constructor creates a new {{domxref("Observable")}} object whose values and lifecycle are controlled by a callback.
 
 ## Syntax
 
@@ -21,47 +21,61 @@ new Observable(callback)
 ### Parameters
 
 - `callback`
-  - : A callback function that defines the [lifecycle of the observable stream](/en-US/docs/Web/API/Observable_API/Creating_observables#creating_an_observable), including what values are passed through it and when, when the stream is completed, etc. The callback function has a {{domxref("Subscriber")}} object as an argument on which the lifecycle functionality is defined.
-
-    For developer-created custom observables created using the `Observable()` constructor, you pass this callback in manually, whereas for platform-returned ones (created using {{domxref("EventTarget.when()")}}), the platform constructs the observable with an internal callback that runs when you subscribe the observable to the event stream using {{domxref("Observable.subscribe()")}}.
+  - : A function that starts producing values when a subscription starts. Its return value is ignored. The function is called with the following argument:
+    - `subscriber`
+      - : A {{domxref("Subscriber")}} used to send values with {{domxref("Subscriber.next", "next()")}}, signal completion or an error with {{domxref("Subscriber.complete", "complete()")}} or {{domxref("Subscriber.error", "error()")}}, and register cleanup with {{domxref("Subscriber.addTeardown", "addTeardown()")}}.
 
 ### Return value
 
 A new {{domxref("Observable")}} object.
 
+## Description
+
+The constructor does not call `callback` immediately. It runs synchronously when the first observer subscribes. Additional observers share the same {{domxref("Subscriber")}} until it becomes inactive. A later subscription starts the callback again with a new subscriber. See [Creating an observable](/en-US/docs/Web/API/Observable_API/Creating_observables#creating_an_observable) for the subscription lifecycle.
+
+If `callback` throws an exception, it is passed to `subscriber.error()`. An async callback's returned promise is ignored, so its rejection is not handled automatically. Handle asynchronous errors explicitly and forward them with `subscriber.error()` while the subscriber is active.
+
 ## Examples
 
-### Creating an observable using `new Observable()`
+### Observing element size
 
-In the below snippet, we first use the `Observable()` constructor to create a new observable. Inside its callback function, we declare a variable `i` with a value of `1`. We then use a {{domxref("Window.setInterval()")}} call to check the value of `i` every 500 milliseconds. If the value has reached `11`, we call the {{domxref("Subscriber.complete()")}} method to complete the subscription. If not, we call {{domxref("Subscriber.next()")}} to move to the next iteration of the pipeline. At the end of the interval, `i` is incremented by 1.
+This example reports a resizable panel's dimensions using a custom observable backed by {{domxref("ResizeObserver")}}. Clicking Stop unsubscribes and disconnects the observer. See [Observing element size](/en-US/docs/Web/API/Observable_API/Creating_observables#example_observing_element_size) for the guide example.
 
-We also define a {{domxref("Subscriber.addTeardown()")}} callback to clear the interval (via {{domxref("Window.clearInterval()")}}) once the subscription is completed. This is important to avoid errors and memory leaks.
+```html hidden live-sample___constructor-resize
+<div id="panel">Drag the corner to resize.</div>
+<p></p>
+<button>Stop</button>
+```
 
-We then subscribe to the observable by calling {{domxref("Observable.subscribe()")}}. Inside the `subscribe()` method's argument, we define the {{domxref("Subscriber")}} object's methods referenced inside the constructor in the previous block — the `next()` method prints the value passed to it to the console (`i`, in the code above that calls it), and the `complete()` method prints "Count complete" to the console.
+```css hidden live-sample___constructor-resize
+#panel {
+  width: 200px;
+  height: 100px;
+  resize: both;
+  overflow: auto;
+  border: 1px solid;
+}
+```
 
-```js
-const observable = new Observable((subscriber) => {
-  let i = 1;
-  const interval = setInterval(() => {
-    if (i === 11) {
-      subscriber.complete();
-    } else {
-      subscriber.next(i);
-    }
-    i++;
-  }, 500);
-  subscriber.addTeardown(() => clearInterval(interval));
+```js live-sample___constructor-resize
+const panel = document.querySelector("#panel");
+const output = document.querySelector("p");
+const btn = document.querySelector("button");
+
+const sizes = new Observable((subscriber) => {
+  const observer = new ResizeObserver(([entry]) => {
+    subscriber.next(entry.contentRect);
+  });
+  observer.observe(panel);
+  subscriber.addTeardown(() => observer.disconnect());
 });
 
-observable.subscribe({
-  next: (value) => {
-    console.log(value);
-  },
-  complete: () => {
-    console.log("Count complete");
-  },
+sizes.takeUntil(btn.when("click")).subscribe(({ width, height }) => {
+  output.textContent = `${Math.round(width)} × ${Math.round(height)} pixels`;
 });
 ```
+
+{{EmbedLiveSample("constructor-resize", "100%", "250px")}}
 
 ## Specifications
 

@@ -31,7 +31,7 @@ There are three main ways to obtain observables:
 ## Static methods
 
 - {{domxref("Observable.from_static", "from()")}} {{Experimental_Inline}}
-  - : Converts a promise, iterable, or async iterable into an observable, or returns an existing observable unchanged.
+  - : Returns an observable converted from a promise, iterable, or async iterable, or returns an existing observable unchanged.
 
 ## Instance methods
 
