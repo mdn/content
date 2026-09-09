@@ -36,6 +36,8 @@ This API is also available as `chrome.action.setBadgeText()`.
 
         If a `windowId` is specified, `null` removes the window-specific badge text so that the tab inherits the global badge text. Otherwise it reverts the global badge text to `""`.
 
+        Since Chrome 152, badge texts longer than 100 bytes are rejected. This limit may be implemented on other browsers. See [Proposal: limit byte length of extension action badge text](https://github.com/w3c/webextensions/issues/960) for more information.
+
     - `tabId` {{optional_inline}}
       - : `integer`. Set the badge text only for the given tab. The text is reset when the user navigates this tab to a new page.
     - `windowId` {{optional_inline}}
