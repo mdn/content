@@ -7,7 +7,7 @@ browser-compat: css.properties.place-items
 sidebar: cssref
 ---
 
-The **`place-items`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property aligns items along both the block and inline directions at once. It sets the values of the {{CSSxRef("align-items")}} and {{CSSxRef("justify-items")}} properties. If the second value is not set, the first value is also used for it.
+The **`place-items`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property aligns items along both the block and inline directions at once.
 
 {{InteractiveExample("CSS Demo: place-items")}}
 
@@ -93,10 +93,18 @@ place-items: unset;
 
 ### Values
 
-One of the following forms:
+This property is specified as one or both of the following properties, space-separated:
 
-- A single {{cssxref("align-items")}} value, which is used to set alignment in both block and inline directions.
-- An {{cssxref("align-items")}} value, which sets alignment in the block direction, followed by a {{cssxref("justify-items")}} value, which sets alignment in the inline direction.
+- {{cssxref("align-items")}}
+  - : Specifies the alignment in the block direction.
+- {{cssxref("justify-items")}} {{optional_inline}}
+  - : Specifies the alignment in the inline direction. If omitted, the `align-items` value is used.
+
+## Description
+
+The `place-items` shorthand property sets the values of the {{CSSxRef("align-items")}} and {{CSSxRef("justify-items")}} properties, aligning items along both the block and inline directions.
+
+If only one value is set, the value is used to set alignment in both block and inline directions. If two values are set, the first value is the {{cssxref("align-items")}} value, setting the alignment in the block direction and the second value is the {{cssxref("justify-items")}} value, setting alignment in the inline direction.
 
 ## Formal definition
 

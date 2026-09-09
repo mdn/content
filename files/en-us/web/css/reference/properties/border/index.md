@@ -80,12 +80,9 @@ border: revert-layer;
 border: unset;
 ```
 
-The `border` property may be specified using one, two, or three of the values listed below. The order of the values does not matter.
-
-> [!NOTE]
-> The border will be invisible if its style is not defined. This is because the style defaults to `none`.
-
 ### Values
+
+This property is specified as a space-separated list of one to three of the following values:
 
 - `<line-width>`
   - : Sets the thickness of the border. Defaults to `medium` if absent. See {{Cssxref("border-width")}}.
@@ -96,7 +93,11 @@ The `border` property may be specified using one, two, or three of the values li
 
 ## Description
 
-As with all shorthand properties, any omitted sub-values will be set to their [initial value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value). Importantly, `border` cannot be used to specify a custom value for {{cssxref("border-image")}}, but instead sets it to its initial value, i.e., `none`.
+The `border` shorthand property sets the width, style, and color of all four sides of an element's border. It is specified using one, two, or all three of the component property values, in any order.
+
+As with all shorthand properties, any omitted sub-values will be set to their [initial value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value). For a border to be displayed, the `<line-style>` component must be set, as the style defaults to `none`.
+
+Importantly, `border` cannot be used to specify a custom value for {{cssxref("border-image")}}, but instead sets it to its initial value, i.e., `none`.
 
 The `border` shorthand is especially useful when you want all four borders to be the same. To make them different from each other, however, you can use the longhand {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, and {{Cssxref("border-color")}} properties, which accept different values for each side. Alternatively, you can target one border at a time with the physical (e.g., {{Cssxref("border-top")}} ) and logical (e.g., {{Cssxref("border-block-start")}}) border properties.
 

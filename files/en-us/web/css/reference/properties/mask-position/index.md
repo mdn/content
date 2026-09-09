@@ -59,7 +59,7 @@ mask-position: unset;
 
 ### Values
 
-One or more `<position>` values, separated by commas.
+This property is specified as a comma-separated list of values, each of the following type:
 
 - {{cssxref("&lt;position&gt;")}}
   - : One, two, or four values representing a 2D position specifying the edges of the element's box. Relative or absolute offsets can be given.

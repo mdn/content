@@ -51,9 +51,20 @@ position-try: unset;
 
 ### Values
 
-See {{cssxref("position-try-order")}} and {{cssxref("position-try-fallbacks")}} for value descriptions.
+This property is specified as one or both of the following properties:
 
-The `position-try` shorthand can specify values for `position-try-fallbacks`, or `position-try-order` and `position-try-fallbacks`, in that order. If `position-try-order` is omitted, it is set to the property's initial value, which is `normal`, meaning the position-try fallback options are tried in the order they appear in the property.
+- {{cssxref("position-try-order")}} {{optional_inline}}
+  - : A keyword specifying the priority order of the position-try fallback options. If omitted, defaults to `normal`.
+- {{cssxref("position-try-fallbacks")}}
+  - : The keyword `none`, or a comma-separated list of `<position-area>` values,`<try-tactic>` options, and custom positions.
+
+## Description
+
+The `position-try` shorthand property can be used to specify the {{cssxref("position-try-order")}} and {{cssxref("position-try-fallbacks")}} properties in a single declaration. It specifies the `position-try-order` and `position-try-fallbacks`, in that order. If the `position-try-order` component is omitted, it defaults to `normal`.
+
+The `position-try-fallbacks` is a comma-separated list of one or more alternative position try fallback options for anchor-positioned elements to be placed relative to their associated anchor elements. When the element would otherwise overflow its inset-modified containing block, the browser will try placing the positioned element in these different fallback positions, in the order provided, until it finds a value that stops it from overflowing its container or the viewport.
+
+The `position-try-order` prioritizes the `position-try-fallbacks` option applied to an anchor-positioned element when it first renders, based on which option creates the most space around the element in the given direction. If omitted, it is set to the property's initial value, which is `normal`, meaning the position-try fallback options are tried in the order they appear in the property.
 
 ## Formal definition
 
