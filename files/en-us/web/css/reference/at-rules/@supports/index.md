@@ -151,6 +151,31 @@ The following table describes the available formats (`<font-format>` values) tha
 | `woff`              | WOFF 1.0 (Web Open Font Format) | `.woff`         |
 | `woff2`             | WOFF 2.0 (Web Open Font Format) | `.woff2`        |
 
+### `named-features()`
+
+This function takes one predefined keyword and evaluates if a browser supports the specified named feature. This is to allow for feature support that cannot be tested for using the other `@support` functions.
+
+> [!NOTE]
+> More features will be added rarely and only when there is real demand for feature testing something specific that would not be covered by more general testing methods.
+
+#### `anchor-position-follows-transforms`
+
+This named-feature checks if the browser supports transform-aware anchor-positioning.
+
+```css
+@supports named-feature(anchor-position-follows-transforms) {
+}
+```
+
+#### `single-axis-scroll-container`
+
+This named-feature checks if the browser supports the ability to have single-axis scroll containers, where one axis is [`scroll`](/en-US/docs/Web/CSS/Reference/Properties/overflow#scroll) and the other is [`clip`](/en-US/docs/Web/CSS/Reference/Properties/overflow#clip).
+
+```css
+@supports named-feature(single-axis-scroll-container) {
+}
+```
+
 ### The not operator
 
 The `not` operator precedes an expression resulting in the negation of the expression.
