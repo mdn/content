@@ -7,7 +7,7 @@ browser-compat: css.properties.flex-flow
 sidebar: cssref
 ---
 
-The **`flex-flow`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) specifies the direction of a flex container, as well as its wrapping behavior.
+The **`flex-flow`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property specifies the direction of a flex container, as well as its wrapping behavior.
 
 {{InteractiveExample("CSS Demo: flex-flow")}}
 

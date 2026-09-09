@@ -3,6 +3,8 @@ title: "XSLTProcessor: XSLTProcessor() constructor"
 short-title: XSLTProcessor()
 slug: Web/API/XSLTProcessor/XSLTProcessor
 page-type: web-api-constructor
+status:
+  - deprecated
 browser-compat: api.XSLTProcessor.XSLTProcessor
 ---
 

@@ -11,7 +11,7 @@ The **WebTransport API** provides a modern update to {{domxref("WebSockets API",
 
 ## Concepts and usage
 
-[HTTP/3](https://en.wikipedia.org/wiki/HTTP/3) has been in progress since 2018. It is based on Google's QUIC protocol (which is itself based on UDP), and fixes several issues around the classic TCP protocol, on which HTTP and WebSockets are based.
+[HTTP/3](https://en.wikipedia.org/wiki/HTTP/3) has been in progress since 2018. It is based on Google's {{glossary("QUIC", "QUIC")}} protocol (which is itself based on UDP), and fixes several issues around the classic TCP protocol, on which HTTP and WebSockets are based.
 
 These include:
 
@@ -54,6 +54,34 @@ async function closeTransport(transport) {
     console.log(`The HTTP/3 connection to ${url} closed gracefully.`);
   } catch (error) {
     console.error(`The HTTP/3 connection to ${url} closed due to ${error}.`);
+  }
+}
+```
+
+### Negotiating an application protocol
+
+A WebTransport server can support multiple applications, each using its own "custom" communication protocol.
+To support this, the client can offer a list of candidate protocol names in preference order via the [`protocols`](/en-US/docs/Web/API/WebTransport/WebTransport#protocols) option of the `WebTransport()` constructor.
+The server can then choose to select one of these during connection establishment.
+
+Once the {{domxref("WebTransport.ready")}} promise fulfills, the negotiated protocol (if any) is available via the {{domxref("WebTransport.protocol")}} property.
+This is the empty string if `protocols` was not used, or if the server did not select any of the offered protocols.
+A server that supports none of the offered protocols may instead reject the connection outright, causing `ready` to reject.
+
+```js
+const url = "https://example.com:4999/wt";
+
+async function initTransport(url) {
+  const transport = new WebTransport(url, {
+    protocols: ["chat", "file-transfer"],
+  });
+
+  try {
+    await transport.ready;
+    console.log(transport.protocol); // e.g. "chat", or "" if none was selected
+    return transport;
+  } catch (error) {
+    console.error(`Connection failed: ${error}`);
   }
 }
 ```

@@ -69,7 +69,7 @@ Firefox will, unlike other browsers, persist the dynamic disabled state of a {{h
 
 ### Attribute interactions
 
-The difference between `disabled` and [`readonly`](/en-US/docs/Web/HTML/Reference/Attributes/readonly) is that read-only controls can still function and are still focusable, whereas disabled controls can not receive focus and are not submitted with the form and generally do not function as controls until they are enabled.
+The difference between `disabled` and [`readonly`](/en-US/docs/Web/HTML/Reference/Attributes/readonly) is that read-only controls can still function and are still focusable, whereas disabled controls cannot receive focus and are not submitted with the form and generally do not function as controls until they are enabled.
 
 Because a disabled field cannot have its value changed, [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required) does not have any effect on inputs with the `disabled` attribute also specified. Additionally, since the elements become immutable, most other attributes, such as [`pattern`](/en-US/docs/Web/HTML/Reference/Attributes/pattern), have no effect, until the control is enabled.
 
@@ -78,17 +78,17 @@ Because a disabled field cannot have its value changed, [`required`](/en-US/docs
 
 ### Usability
 
-Browsers display disabled form controls greyed as disabled form controls are immutable, won't receive focus or any browsing events, like mouse clicks or focus-related ones, and aren't submitted with the form.
+Browsers display disabled form controls grayed as disabled form controls are immutable, won't receive focus or any browsing events, like mouse clicks or focus-related ones, and aren't submitted with the form.
 
 If present on a supporting elements, the {{cssxref(':disabled')}} pseudo class will match. If the attribute is not included, the {{cssxref(':enabled')}} pseudo class will match. If the element doesn't support the disabled attribute, the attribute will have no effect, including not leading to being matched by the `:disabled` and `:enabled` pseudo classes.
 
 ### Constraint validation
 
-If the element is `disabled`, then the element's value can not receive focus and cannot be updated by the user, and does not participate in constraint validation.
+If the element is `disabled`, then the element's value cannot receive focus and cannot be updated by the user, and does not participate in constraint validation.
 
 ## Examples
 
-When form controls are disabled, many browsers will display them in a lighter, greyed-out color by default. Here are examples of a disabled checkbox, radio button, {{ HTMLElement("option") }} and {{ HTMLElement("optgroup") }}, as well as some form controls that are disabled via the disabled attribute set on the ancestor `{{ HTMLElement("fieldset")}}` element. The {{ HTMLElement("option") }}s are disabled, but the {{ HTMLElement("select") }} itself is not. We could have disable the entire {{ HTMLElement("select") }} by adding the attribute to that element rather than its descendants.
+When form controls are disabled, many browsers will display them in a lighter, grayed-out color by default. Here are examples of a disabled checkbox, radio button, {{ HTMLElement("option") }} and {{ HTMLElement("optgroup") }}, as well as some form controls that are disabled via the disabled attribute set on the ancestor `{{ HTMLElement("fieldset")}}` element. The {{ HTMLElement("option") }}s are disabled, but the {{ HTMLElement("select") }} itself is not. We could have disable the entire {{ HTMLElement("select") }} by adding the attribute to that element rather than its descendants.
 
 ```html
 <fieldset>

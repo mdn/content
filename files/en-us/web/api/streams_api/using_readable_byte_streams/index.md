@@ -368,7 +368,7 @@ function readStream(reader) {
 }
 ```
 
-#### Cancelling the stream using the reader
+#### Canceling the stream using the reader
 
 We can use {{domxref("ReadableStreamBYOBReader.cancel()")}} to cancel the stream.
 For this example we call the method if a button is clicked with a reason "user choice" (other HTML and code for the button not shown).
@@ -602,7 +602,7 @@ function makeReadableByteFileStream(filename) {
       }
     },
     cancel(reason) {
-      // This is called if the stream is cancelled (via reader or controller).
+      // This is called if the stream is canceled (via reader or controller).
       // Clean up any resources
       fileHandle.close();
       logSource(`cancel() with reason: ${reason}`);
@@ -851,7 +851,7 @@ function makeReadableByteFileStream(filename) {
       }
     },
     cancel(reason) {
-      // This is called if the stream is cancelled (via reader or controller).
+      // This is called if the stream is canceled (via reader or controller).
       // Clean up any resources
       fileHandle.close();
       logSource(`cancel() with reason: ${reason}`);
@@ -1113,7 +1113,7 @@ function makeReadableByteFileStream(filename) {
       }
     },
     cancel(reason) {
-      // This is called if the stream is cancelled (via reader or controller).
+      // This is called if the stream is canceled (via reader or controller).
       // Clean up any resources
       fileHandle.close();
       logSource(`cancel() with reason: ${reason}`);

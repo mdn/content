@@ -958,6 +958,8 @@ textarea.addEventListener("input", function () {
 
 This example demonstrates simulating a click (that is programmatically generating a click event) on a checkbox using DOM methods. [View the example in action.](https://mdn.dev/archives/media/samples/domref/dispatchEvent.html)
 
+<!-- cSpell:ignore cancelled -->
+
 ```js
 function simulateClick() {
   const event = new MouseEvent("click", {

@@ -28,7 +28,7 @@ replaceItem(newItem, index)
 
 ### Return value
 
-The string that was added the list.
+The string that was added to the list.
 
 ### Exceptions
 

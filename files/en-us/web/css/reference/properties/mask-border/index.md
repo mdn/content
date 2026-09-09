@@ -7,7 +7,7 @@ browser-compat: css.properties.mask-border
 sidebar: cssref
 ---
 
-The **`mask-border`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) lets you create a mask along the edge of an element's border.
+The **`mask-border`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property lets you create a mask along the edge of an element's border.
 
 ## Constituent properties
 

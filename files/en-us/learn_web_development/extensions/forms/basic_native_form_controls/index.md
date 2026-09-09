@@ -103,7 +103,7 @@ Browsers recognize the security implications of sending form data over an insecu
 
 ### Hidden content
 
-Another original text control is the [`hidden`](/en-US/docs/Web/HTML/Reference/Elements/input/hidden) input type. This is used to create a form control that is invisible to the user, but is still sent to the server along with the rest of the form data once submitted — for example you might want to submit a timestamp to the server stating when an order was placed. Because it is hidden, the user can not see nor intentionally edit the value, it will never receive focus, and a screen reader will not notice it either.
+Another original text control is the [`hidden`](/en-US/docs/Web/HTML/Reference/Elements/input/hidden) input type. This is used to create a form control that is invisible to the user, but is still sent to the server along with the rest of the form data once submitted — for example you might want to submit a timestamp to the server stating when an order was placed. Because it is hidden, the user cannot see nor intentionally edit the value, it will never receive focus, and a screen reader will not notice it either.
 
 ```html
 <input type="hidden" id="timestamp" name="timestamp" value="1286705410" />
@@ -278,7 +278,7 @@ These examples render like so:
 
 Buttons always behave the same whether you use a {{HTMLElement("button")}} element or an {{HTMLElement("input")}} element. As you can see from the examples, however, {{HTMLElement("button")}} elements let you use HTML in their content, which is inserted between the opening and closing `<button>` tags. {{HTMLElement("input")}} elements on the other hand are {{glossary("void element", "void elements")}}; their displayed content is inserted inside the `value` attribute, and therefore only accepts plain text as content.
 
-The following screenshot shows a button in the default, focused, and disabled states. In the focused state, there is a focus ring around the button, and in the disabled state, the button is greyed out.
+The following screenshot shows a button in the default, focused, and disabled states. In the focused state, there is a focus ring around the button, and in the disabled state, the button is grayed out.
 
 ![Default, focus, and disabled button states in chrome 115 on macOS](buttons.png)
 

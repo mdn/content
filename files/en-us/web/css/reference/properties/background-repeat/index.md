@@ -7,7 +7,7 @@ browser-compat: css.properties.background-repeat
 sidebar: cssref
 ---
 
-The **`background-repeat`** [CSS](/en-US/docs/Web/CSS) property sets how background images are repeated. A background image can be repeated along the horizontal and vertical axes, or not repeated at all.
+The **`background-repeat`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets how background images are repeated. A background image can be repeated along the horizontal and vertical axes, or not repeated at all.
 
 {{InteractiveExample("CSS Demo: background-repeat")}}
 

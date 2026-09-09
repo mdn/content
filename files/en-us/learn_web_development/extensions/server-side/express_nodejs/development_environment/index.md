@@ -116,7 +116,7 @@ nvm use 22.17.0
 Use the command `nvm --help` to find out other command line options.
 These are often similar to, or the same as, those offered by `nvm-windows`.
 
-### Testing your Nodejs and npm installation
+### Testing your Node.js and npm installation
 
 Once you have set `nvm` to use a particular node version, you can test the installation.
 A good way to do this is to use the "version" command in your terminal/command prompt and check that the expected version string is returned:
