@@ -5,23 +5,25 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_detail_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}
+
 The author detail page needs to display the information about the specified `Author`, identified using their (automatically generated) `_id` field value, along with a list of all the `Book` objects associated with that `Author`.
 
 ## Controller
 
-Open **/controllers/authorController.js**.
+Open **controllers/authorController.js**.
 
-Add the following lines to the top of the file to `require()` the `Book` module needed by the author detail page.
+Add the following lines to the top of the file to import the `Book` module needed by the author detail page.
 
 ```js
-const Book = require("../models/book");
+import Book from "../models/book.js";
 ```
 
-Find the exported `author_detail()` controller method and replace it with the following code.
+Find the exported `authorDetail()` controller method and replace it with the following code.
 
 ```js
 // Display detail page for a specific Author.
-exports.author_detail = async (req, res, next) => {
+export const authorDetail = async (req, res, next) => {
   // Get details of author and all their books (in parallel)
   const [author, allBooksByAuthor] = await Promise.all([
     Author.findById(req.params.id).exec(),
@@ -50,7 +52,7 @@ If the author is found then the retrieved database information is rendered using
 
 ## View
 
-Create **/views/author_detail.pug** and copy in the following text.
+Create **views/author_detail.pug** and paste in the following text.
 
 ```pug
 extends layout
@@ -84,7 +86,4 @@ Run the application and open your browser to `http://localhost:3000/`. Select th
 > [!NOTE]
 > The appearance of the author _lifespan_ dates is ugly! We'll address that in the final challenge in this article.
 
-## Next steps
-
-- Return to [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data).
-- Proceed to final subarticle of part 5 : [BookInstance detail page and challenge](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge).
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_detail_page", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/BookInstance_detail_page_and_challenge", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}
