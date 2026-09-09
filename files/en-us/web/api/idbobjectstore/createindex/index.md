@@ -58,7 +58,7 @@ An {{domxref("IDBIndex")}} object: the newly created index.
 This method may raise a {{domxref("DOMException")}} of one of the following types:
 
 - `ConstraintError` {{domxref("DOMException")}}
-  - : Thrown if an index with the same name already exists in the database. Index names are case-sensitive.
+  - : Thrown if an index with the same name already exists in the object store. Index names are case-sensitive.
 - `InvalidAccessError` {{domxref("DOMException")}}
   - : Thrown if the provided key path is a sequence, and `multiEntry` is set to `true` in the `objectParameters` object.
 - `InvalidStateError` {{domxref("DOMException")}}
