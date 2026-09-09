@@ -9,7 +9,7 @@ browser-compat: api.Headers.entries
 {{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
 The **`Headers.entries()`** method returns an
-{{jsxref("Iteration_protocols",'iterator')}} allowing to go through all key/value pairs
+{{jsxref("Iteration_protocols",'iterator')}} allowing you to go through all key/value pairs
 contained in this object. Both the key and value of each pair are
 {{jsxref("String")}} objects.
 

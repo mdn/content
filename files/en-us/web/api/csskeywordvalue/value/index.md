@@ -6,11 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.CSSKeywordValue.value
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`value`** property of the
-{{domxref("CSSKeywordValue")}} interface returns or sets the value of the
-`CSSKeywordValue`.
+The **`value`** property of the {{domxref("CSSKeywordValue")}} interface represents the keyword as a string.
 
 ## Value
 
@@ -19,9 +17,11 @@ A string.
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the `value` property is an empty {{jsxref('String')}} when being set.
+  - : Thrown if the `value` property is set to an empty {{jsxref('String')}}.
 
 ## Examples
+
+### Basic usage
 
 The following example resets the CSS {{cssxref('display')}} property to its defaults.
 

@@ -95,6 +95,17 @@ Elements in HTML have **attributes**; these are additional values that configure
     </tr>
     <tr>
       <td>
+        <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes">aria-*</a></code>
+      </td>
+      <td>
+        All elements
+      </td>
+      <td>
+        Modifies an element's state or properties in the accessibility tree. Applicability depends on the specific <a href="/en-US/docs/Web/Accessibility/ARIA">ARIA</a> attribute.
+      </td>
+    </tr>
+    <tr>
+      <td>
         <code><a href="/en-US/docs/Web/HTML/Reference/Elements/link#as">as</a></code>
       </td>
       <td>

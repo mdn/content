@@ -3,10 +3,12 @@ title: "XRVisibilityMaskChangeEvent: index property"
 short-title: index
 slug: Web/API/XRVisibilityMaskChangeEvent/index
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRVisibilityMaskChangeEvent.index
 ---
 
-{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`index`** read-only property of the {{domxref("XRVisibilityMaskChangeEvent")}} interface indicates the index of the current {{domxref("XRView")}} in the {{domxref("XRViewerPose.views")}} array.
 

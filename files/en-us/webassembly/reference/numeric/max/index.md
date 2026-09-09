@@ -1,12 +1,13 @@
 ---
-title: "max: Wasm text instruction"
+title: "max: Wasm numeric instruction"
 short-title: max
 slug: WebAssembly/Reference/Numeric/max
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.max
 sidebar: webassemblysidebar
 ---
 
-The **`max`** instruction is used for getting the higher of two floating point numbers.
+The **`max`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) is used for getting the higher of two floating point numbers.
 
 {{InteractiveExample("Wat Demo: max", "tabbed-taller")}}
 
@@ -132,6 +133,14 @@ The output is as follows:
 {{embedlivesample("simd_max", "100%", 100)}}
 
 The result is `1000`. This is because the value stored in lane `3` of the first input value is `1000`, and the value stored in lane `3` of the second input value is `108`. Since `1000` is greater than `108`, the new `f32x4` value outputted by the `f32x4.max` instruction has `1000` set in lane `3`, which we then extract and output to the DOM.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

@@ -165,7 +165,7 @@ If you know in advance how you want to handle offset ambiguity, consider using t
 
 In some cases, you may not know which `offset` option is the correct one without getting input from the user. In these cases, you may want to catch the `RangeError` and then ask your user which local time is the correct one, and then retry parsing using a different `offset` option corresponding to the user's choice.
 
-Note that the `Z` offset is not equivalent to `+00:00`. The `Z` offset means "the time in UTC is known, but the offset to local time is unknown", as per [RFC 9557](https://www.rfc-editor.org/rfc/rfc9557.html#name-update-to-rfc-3339). When the time string uses the `Z` offset, the `offset` option is ignored, and the offset is derived from the time zone ID. On the other hand, the `+00:00` offset is interpreted as a local time offset that happens to match UTC and is validated against the time zone ID.
+Note that the `Z` offset is not equivalent to `+00:00`. The `Z` offset means "the time in UTC is known, but the offset to local time is unknown", as per [RFC 9557](https://www.rfc-editor.org/info/rfc9557/#name-update-to-rfc-3339). When the time string uses the `Z` offset, the `offset` option is ignored, and the offset is derived from the time zone ID. On the other hand, the `+00:00` offset is interpreted as a local time offset that happens to match UTC and is validated against the time zone ID.
 
 > [!NOTE]
 > Although {{jsxref("Temporal/Instant/from", "Temporal.Instant.from()")}} also takes an [RFC 9557](#rfc_9557_format) string in the same form, there is no ambiguity because it always ignores the time zone identifier and reads the offset only.

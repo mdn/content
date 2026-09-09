@@ -172,7 +172,7 @@ const 你好 = "Hello";
 console.log(\u4f60\u597d); // Hello
 ```
 
-Not all places accept the full range of identifiers. Certain syntaxes, such as function declarations, function expressions, and variable declarations require using identifiers names that are not [reserved words](#reserved_words).
+Not all places accept the full range of identifiers. Certain syntaxes, such as function declarations, function expressions, and variable declarations require using identifier names that are not [reserved words](#reserved_words).
 
 ```js-nolint example-bad
 function import() {} // Illegal: import is a reserved word.
@@ -604,7 +604,7 @@ for (
 ) {}
 ```
 
-Semicolons are also never inserted as [empty statements](/en-US/docs/Web/JavaScript/Reference/Statements/Empty). For example, in the code below, if a semicolon is inserted after ")", then the code would be valid, with an empty statement as the `if` body and the `const` declaration being a separate statement. However, because automatically inserted semicolons cannot become empty statements, this causes a [declaration](/en-US/docs/Web/JavaScript/Reference/Statements#difference_between_statements_and_declarations) to become the body of the `if` statement, which is not valid.
+Semicolons are also never inserted as [empty statements](/en-US/docs/Web/JavaScript/Reference/Statements/Empty). For example, in the code below, if a semicolon is inserted after ")", then the code would be valid, with an empty statement as the `if` body and the `const` declaration being a separate statement. However, because automatically inserted semicolons cannot become empty statements, this causes a [declaration](/en-US/docs/Web/JavaScript/Reference/Statements#what_are_statements_declarations_and_expressions) to become the body of the `if` statement, which is not valid.
 
 ```js-nolint example-bad
 if (Math.random() > 0.5)

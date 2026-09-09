@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.Window
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("HTML DOM")}}
 
 The **`Window`** interface represents a window containing a {{glossary("DOM")}} document; the `document` property points to the [DOM document](/en-US/docs/Web/API/Document) loaded in that window.
 
@@ -49,7 +49,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns a reference to the document that the window contains.
 - {{domxref("Window.documentPictureInPicture")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : Returns a reference to the [document Picture-in-Picture](/en-US/docs/Web/API/Document_Picture-in-Picture_API) window for the current document context.
-- {{domxref("Window.fence")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref("Window.fence")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns a {{domxref("Fence")}} object instance for the current document context. Available only to documents embedded inside a {{htmlelement("fencedframe")}}.
 - {{domxref("Window.frameElement")}} {{ReadOnlyInline}}
   - : Returns the element in which the window is embedded, or null if the window is not embedded.
@@ -114,9 +114,9 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
 - {{domxref("Window.screen")}} {{ReadOnlyInline}}
   - : Returns a reference to the screen object associated with the window.
 - {{domxref("Window.screenX")}} and {{domxref("Window.screenLeft")}} {{ReadOnlyInline}}
-  - : Both properties return the horizontal distance from the left border of the user's browser viewport to the left side of the screen.
+  - : Both properties return the horizontal distance from the left border of the user's browser window to the left side of the screen.
 - {{domxref("Window.screenY")}} and {{domxref("Window.screenTop")}} {{ReadOnlyInline}}
-  - : Both properties return the vertical distance from the top border of the user's browser viewport to the top side of the screen.
+  - : Both properties return the vertical distance from the top border of the user's browser window to the top side of the screen.
 - {{domxref("Window.scrollbars")}} {{ReadOnlyInline}}
   - : Returns the scrollbars object.
 - {{domxref("Window.scrollMaxX")}} {{Non-standard_Inline}} {{ReadOnlyInline}}
@@ -238,6 +238,8 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface._
   - : Tells the browser that an animation is in progress, requesting that the browser schedule a repaint of the window for the next animation frame.
 - {{domxref("Window.requestIdleCallback()")}}
   - : Enables the scheduling of tasks during a browser's idle periods.
+- {{domxref("Window.requestResize()")}} {{experimental_inline}}
+  - : Updates the size information shared by an embedded document with its embedding parent, but only if the embedded document has opted in to sharing its size information.
 - {{domxref("Window.resizeBy()")}}
   - : Resizes the current window by a certain amount.
 - {{domxref("Window.resizeTo()")}}

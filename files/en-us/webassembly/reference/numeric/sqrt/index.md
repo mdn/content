@@ -1,12 +1,13 @@
 ---
-title: "sqrt: Wasm text instruction"
+title: "sqrt: Wasm numeric instruction"
 short-title: sqrt
 slug: WebAssembly/Reference/Numeric/sqrt
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.sqrt
 sidebar: webassemblysidebar
 ---
 
-The **`sqrt`** instruction, short for _square root_, is used to get the square root of a number.
+The **`sqrt`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _square root_, is used to get the square root of a number.
 
 {{InteractiveExample("Wat Demo: sqrt", "tabbed-standard")}}
 
@@ -126,3 +127,11 @@ The output is as follows:
 {{embedlivesample("simd_sqrt", "100%", 100)}}
 
 `28.48683906648823` is output because this is the square root of the value in lane 1 of the input value (`811.5`).
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

@@ -9,7 +9,7 @@ status:
 browser-compat: api.VRDisplay.capabilities
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 The **`capabilities`** read-only property of the {{domxref("VRDisplay")}} interface returns a {{domxref("VRDisplayCapabilities")}} object that indicates the various capabilities of the `VRDisplay`.
 

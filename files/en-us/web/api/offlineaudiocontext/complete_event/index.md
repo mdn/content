@@ -28,13 +28,6 @@ An {{domxref("OfflineAudioCompletionEvent")}}. Inherits from {{domxref("Event")}
 
 {{InheritanceDiagram("OfflineAudioCompletionEvent")}}
 
-## Event properties
-
-_Also inherits properties from its parent, {{domxref("Event")}}_.
-
-- {{domxref("OfflineAudioCompletionEvent.renderedBuffer")}} {{ReadOnlyInline}}
-  - : An {{domxref("AudioBuffer")}} containing the result of processing an {{domxref("OfflineAudioContext")}}.
-
 ## Examples
 
 When processing is complete, you might want to use the `complete` event handler to prompt the user that the audio can now be played, and enable the play button:

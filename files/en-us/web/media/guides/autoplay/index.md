@@ -92,7 +92,7 @@ if (navigator.getAutoplayPolicy("mediaelement") === "allowed") {
   video.muted = true;
 } else if (navigator.getAutoplayPolicy("mediaelement") === "disallowed") {
   // Set a default placeholder image.
-  video.poster = "http://example.com/poster_image_url";
+  video.poster = "https://example.com/poster_image_url";
 }
 ```
 
@@ -107,7 +107,7 @@ if (navigator.getAutoplayPolicy(video) === "allowed") {
   video.muted = true;
 } else if (navigator.getAutoplayPolicy(video) === "disallowed") {
   // Set a default placeholder image.
-  video.poster = "http://example.com/poster_image_url";
+  video.poster = "https://example.com/poster_image_url";
 }
 ```
 

@@ -28,13 +28,6 @@ A {{domxref("FormDataEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("FormDataEvent")}}
 
-## Event properties
-
-_Inherits properties from its parent interface, {{domxref("Event")}}._
-
-- {{domxref("FormDataEvent.formData")}}
-  - : Contains the {{domxref("FormData")}} object representing the data contained in the form when the event was fired.
-
 ## Examples
 
 ```js

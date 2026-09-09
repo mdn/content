@@ -10,7 +10,7 @@ browser-compat: api.Client.url
 
 The **`url`** read-only property of the {{domxref("Client")}} interface returns the URL of the current service worker client.
 
-Note that the {{domxref("Client.url")}} property is not updated unless a new page is actually loaded. This means that it will not be updated if the user navigates within the same page using a URL fragment, or if a {{glossary("SPA", "single-page app (SPA)")}} intercepts a navigation event (for example, using the [Navigation API](/en-US/docs/Web/API/Navigation_API)) and updates the page content using client-side code.
+Note that the `url` property is not updated unless a new page is actually loaded. This means that it will not be updated if the user navigates within the same page using a URL fragment, or if a {{glossary("SPA", "single-page app (SPA)")}} intercepts a navigation event (for example, using the [Navigation API](/en-US/docs/Web/API/Navigation_API)) and updates the page content using client-side code.
 
 ## Value
 

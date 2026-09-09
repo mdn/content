@@ -374,7 +374,7 @@ The grid tiles are broken up into rows and columns:
 
 The dimensions of the center tile are defined by the [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block) of the anchor element, while the distance between the center tile and the grid's outer edge is defined by the positioned element's containing block.
 
-`position-area` property values are composed of one or two values based on the row and column values described above, with spanning options available to define the region of the grid where the element should positioned.
+`position-area` property values are composed of one or two values based on the row and column values described above, with spanning options available to define the region of the grid where the element should be positioned.
 
 For example:
 

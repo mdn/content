@@ -7,13 +7,7 @@ browser-compat: css.properties.text-wrap-mode
 sidebar: cssref
 ---
 
-The **`text-wrap-mode`** [CSS](/en-US/docs/Web/CSS) property controls whether the text inside an element is wrapped. The different values provide alternate ways of wrapping the content of a block element. It can also be set, and reset, using the {{CSSXRef("text-wrap")}} shorthand or the {{CSSXRef("white-space")}} shorthand.
-
-> [!NOTE]
-> The {{CSSxRef("white-space-collapse")}} and `text-wrap-mode` properties can be declared together using the {{CSSxRef("white-space")}} shorthand property.
-
-> [!NOTE]
-> The name of this property is a placeholder, pending the CSSWG finding a better name.
+The **`text-wrap-mode`** [CSS](/en-US/docs/Web/CSS) property controls whether the text inside an element is wrapped.
 
 {{InteractiveExample("CSS Demo: text-wrap-mode")}}
 
@@ -31,8 +25,8 @@ text-wrap-mode: nowrap;
     <p>Edit the text in the box:</p>
     <div class="transition-all" id="example-element">
       <p contenteditable>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut
-        cum eum id quos est.
+        You can edit this lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Voluptatem aut cum eum id quos est text.
       </p>
     </div>
   </div>
@@ -70,12 +64,22 @@ text-wrap-mode: unset;
 
 ## Values
 
-This property specifies whether lines may wrap at unforced soft wrap opportunities. Possible values:
+The `text-wrap-mode` property is specified as one of the following keyword values:
 
 - `wrap`
   - : Text is wrapped across lines at appropriate characters (for example spaces, in languages like English that use space separators) to minimize overflow. This is the default value.
 - `nowrap`
   - : Text does not wrap across lines. It will overflow its containing element rather than breaking onto a new line.
+
+## Description
+
+The `text-wrap-mode` property can be used to control text wrapping inside an element. The different values provide alternate ways of wrapping the content of a block element, specifying whether lines may wrap at unforced soft wrap opportunities (`wrap`), or not (`nowrap`).
+
+When set to `nowrap`, text will overflow rather than break onto multiple lines. As the {{cssxref("overflow")}} property defaults to `visible`, when content is larger than the container's inline-size, it will overflow in the inline direction. To enable scrolling in the inline direction, instead of overflow, set the {{cssxref("overflow-inline")}} property to `auto` or `scroll`. To ensure the container at least as wide as the longest word, set the {{cssxref("min-inline-size")}} to {{cssxref("min-content")}}.
+
+When set to `wrap`, content flows onto new lines as necessary, wrapping at word break opportunities, such as {{htmlelement("wbr")}} and hyphens, and other language-specific soft-wrap opportunities. The property does not prevent non-breakable pieces of content from overflowing in the inline direction if larger than the container's inline-size.
+
+The `text-wrap-mode` is part of two shorthand properties. The `text-wrap-mode`, along with the {{CSSxRef("white-space-collapse")}} property, can be declared using the {{CSSxRef("white-space")}} shorthand. It can also be set and reset, along with the {{CSSXRef("text-wrap-style")}} property, using the {{CSSXRef("text-wrap")}} shorthand.
 
 ## Formal definition
 
@@ -87,63 +91,54 @@ This property specifies whether lines may wrap at unforced soft wrap opportuniti
 
 ## Examples
 
-### Wrapping content
+### Basic usage
 
-The default setting is to wrap the content so the `text-wrap-mode` property is not necessary. In this example the content will flow over to the next line so that it fits in the box, the last line is longer that the containing box so overflows.
+In this example, we compare the effect of the `text-wrap-mode` property's two values.
 
 #### HTML
 
+We include two {{htmlelement("div")}} elements that are the same except for their class names.
+
 ```html
-<div class="box">CSS IS AWESOME</div>
+<div class="wrap">CSS IS AWESOME</div>
+<div class="nowrap">CSS IS AWESOME</div>
 ```
 
 #### CSS
 
+We apply the same styles to both containers, limiting their width.
+
 ```css
-.box {
+div {
   font-family: "Arial", sans-serif;
   font-weight: bold;
-  font-size: 64px;
+  font-size: 4rem;
   box-sizing: border-box;
-  border: 4px solid black;
-  padding: 0px 3px;
-  width: 223px;
-  text-wrap-mode: wrap;
+  border: 0.25rem solid black;
+  padding: 0 4px;
+  width: 14rem;
+  margin: 1rem;
 }
 ```
 
-#### Result
-
-{{EmbedLiveSample("wrapping_content", "100%", 250)}}
-
-### Not wrapping content
-
-In this example the content will **not** flow over to the next line so that it fits in the box as the content has been specifically told not to wrap with `text-wrap-mode: nowrap;`, the content is longer that the containing box so overflows.
-
-#### HTML
-
-```html
-<div class="box">CSS IS AWESOME</div>
-```
-
-#### CSS
+We give the examples different `text-wrap-mode` values:
 
 ```css
-.box {
-  font-family: "Arial", sans-serif;
-  font-weight: bold;
-  font-size: 64px;
-  box-sizing: border-box;
-  border: 4px solid black;
-  padding: 0px 3px;
-  width: 223px;
+.wrap {
+  text-wrap-mode: wrap;
+}
+.nowrap {
   text-wrap-mode: nowrap;
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample("not_wrapping_content", "100%",100)}}
+{{EmbedLiveSample("basic usage", "100%", 360)}}
+
+In the `wrap` example, the content flows over to the next line so that it fits in the box. "Awesome" is wider than the containing box, and contains no soft break opportunities, so it overflows.
+
+In the `nowrap` example, the content does **not** flow to the next line as the content has been specifically set to not wrap, so it is all on one line, overflowing the container.
 
 ## Specifications
 
@@ -157,3 +152,8 @@ In this example the content will **not** flow over to the next line so that it f
 
 - {{CSSxRef("text-wrap")}}
 - {{CSSxRef("text-wrap-style")}}
+- {{CSSxRef("hyphens")}}
+- {{CSSxRef("white-space")}}
+- {{CSSxRef("overflow")}}
+- [CSS text](/en-US/docs/Web/CSS/Guides/Text) module
+- [CSS overflow](/en-US/docs/Web/CSS/Guides/Overflow) module

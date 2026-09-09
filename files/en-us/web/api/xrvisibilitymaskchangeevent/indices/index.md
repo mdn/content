@@ -3,10 +3,12 @@ title: "XRVisibilityMaskChangeEvent: indices property"
 short-title: indices
 slug: Web/API/XRVisibilityMaskChangeEvent/indices
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRVisibilityMaskChangeEvent.indices
 ---
 
-{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`indices`** read-only property of the {{domxref("XRVisibilityMaskChangeEvent")}} interface specifies the index position of each coordinate pair (not individual array index) inside the {{domxref("XRVisibilityMaskChangeEvent.vertices", "vertices")}} array that define the triangles used to draw the currently visible part of the scene displayed in the {{domxref("XRView")}}. If this array is empty, the whole region of the `XRView` will be drawn.
 

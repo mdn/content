@@ -1,12 +1,13 @@
 ---
-title: "div: Wasm text instruction"
+title: "div: Wasm numeric instruction"
 short-title: div
 slug: WebAssembly/Reference/Numeric/div
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.div
 sidebar: webassemblysidebar
 ---
 
-The **`div`** instruction, short for _division_, is used for dividing one number by another, similar to the **`/`** operator in other languages.
+The **`div`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _division_, is used for dividing one number by another, similar to the **`/`** operator in other languages.
 
 {{InteractiveExample("Wat Demo: div", "tabbed-taller")}}
 
@@ -131,3 +132,11 @@ The output is as follows:
 {{embedlivesample("simd_div", "100%", 100)}}
 
 The result is `33.3...`, because the value stored in lane `3` of output value is the result of `100 / 3`.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

@@ -24,13 +24,13 @@ To understand what a text node is, consider the following document:
 </html>
 ```
 
-In that document, there are five text nodes, with the following contents:
+In that document, there are five text nodes, with the following contents (all spaces are shown as `◦` and all newlines as `⏎`):
 
-- `"\n    "` (after the `<head>` start tag, a newline followed by four spaces)
-- `"Aliens?"` (the contents of the `title` element)
-- `"\n  "` (after the `</head>` end tag, a newline followed by two spaces)
-- `"\n  "` (after the `<body>` start tag, a newline followed by two spaces)
-- `"\n Why yes.\n \n\n"` (the contents of the `body` element)
+- `"⏎◦◦◦◦"` (after the `<head>` start tag, a newline followed by four spaces)
+- `"Aliens?"` (the contents of the `<title>` element)
+- `"⏎◦◦"` (after the `</title>` end tag, a newline followed by two spaces)
+- `"⏎◦◦"` (after the `</head>` end tag, a newline followed by two spaces)
+- `"⏎◦◦◦◦Why◦yes.⏎◦◦⏎"` (the contents of the `<body>` element)
 
 Each of those text nodes is an object that has the properties and methods documented in this article.
 

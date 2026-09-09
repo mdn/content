@@ -7,7 +7,7 @@ browser-compat: css.selectors.valid
 sidebar: cssref
 ---
 
-The **`:valid`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents any {{HTMLElement("input")}} or other {{HTMLElement("form")}} element whose contents [validate](/en-US/docs/Web/HTML/Guides/Constraint_validation) successfully. This allows to easily make valid fields adopt an appearance that helps the user confirm that their data is formatted properly.
+The **`:valid`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents any {{HTMLElement("input")}} or other {{HTMLElement("form")}} element whose contents [validate](/en-US/docs/Web/HTML/Guides/Constraint_validation) successfully. This allows you to easily make valid fields adopt an appearance that helps the user confirm that their data is formatted properly.
 
 {{InteractiveExample("CSS Demo: :valid", "tabbed-shorter")}}
 
@@ -71,7 +71,7 @@ In this example, we include extra `<span>` elements to generate content that ind
 <form>
   <fieldset>
     <legend>Feedback form</legend>
-    <p>Required fields are labelled with "required".</p>
+    <p>Required fields are labeled with "required".</p>
     <div>
       <label for="fname">First name: </label>
       <input id="fname" name="fname" type="text" required />

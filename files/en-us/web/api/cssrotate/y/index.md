@@ -6,11 +6,9 @@ page-type: web-api-instance-property
 browser-compat: api.CSSRotate.y
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`y`** property of the
-{{domxref("CSSRotate")}} interface gets and sets the ordinate or y-axis of the
-translating vector.
+The **`y`** property of the {{domxref("CSSRotate")}} interface gets and sets the ordinate or y-axis of the translating vector.
 
 ## Value
 

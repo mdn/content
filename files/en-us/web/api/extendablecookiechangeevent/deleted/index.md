@@ -29,14 +29,14 @@ An array of objects containing the deleted cookie(s). Each object contains the f
 - `sameSite`
   - : One of the following [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) values:
     - `"strict"`
-      - : Cookies will only be sent in a first-party context and not be sent with requests initiated by third party websites.
+      - : Cookies will only be sent in a first-party context and not be sent with requests initiated by third-party websites.
     - `"lax"`
-      - : Cookies are not sent on normal cross-site subrequests (for example to load images or frames into a third party site), but are sent when a user is navigating within the origin site (i.e., when following a link).
+      - : Cookies are not sent on normal cross-site subrequests (for example to load images or frames into a third-party site), but are sent when a user is navigating within the origin site (i.e., when following a link).
     - `"none"`
       - : Cookies will be sent in all contexts.
 
 - `partitioned`
-  - : A boolean indicating whether the cookie is a partitioned cookie (`true`) or not (`false`). See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies) for more information.
+  - : A boolean indicating whether the cookie is a partitioned cookie (`true`) or not (`false`). See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies) for more information.
 
 ## Examples
 

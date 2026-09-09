@@ -17,12 +17,12 @@ It is one of the following:
 > Do not manually update the feature statuses in the `mdn/content` repository.
 > The documentation source is [automatically updated](#how_feature_statuses_are_added_or_updated) from information in the GitHub `mdn/browser-compat-data` repository.
 
-If none of the above statuses apply, the feature is considered _stable and standard feature_.
+If none of the above statuses apply, the feature is considered a _stable and standard feature_.
 For more information on these terms, see the ["Experimental, deprecated, and obsolete"](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete) page.
 
 For information on how the status for a feature is determined, see the [choosing status properties](https://github.com/mdn/browser-compat-data/tree/main/docs/data-guidelines#choosing-status-properties) section in the `@mdn/browser-compat-data` (BCD) repository.
 
-## How feature statuses are added or updated?
+## How feature statuses are added or updated
 
 The feature statuses of all the features documented on MDN are tracked in its accompanying [@mdn/browser-compat-data](https://github.com/mdn/browser-compat-data) (BCD) repository. An automation _automatically_ updates the statuses in the `mdn/content` repository whenever a new [version of BCD is released](https://github.com/mdn/browser-compat-data/releases).
 
@@ -52,11 +52,10 @@ browser-compat: api.feature
 
 ### Feature status page banners
 
-The following macros are used to render the status banners in page headers:
+> [!WARNING]
+> The `\{{Deprecated_Header}}` macro is no longer required to generate a **Deprecated status** banner. The platform now automatically generates the banner using the [`status`](#feature_status_icons_in_sidebars) front matter property or data from [web-features](https://github.com/web-platform-dx/web-features).
 
-- `\{{Deprecated_Header}}`
-  - : For `deprecated` status. It generates a **Deprecated status** banner:
-    {{deprecated_header}}
+The following macros are used to render the status banners in page headers:
 
 - `\{{SeeCompatTable}}`
   - : For `experimental` status. It generates an **Experimental status** banner:

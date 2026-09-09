@@ -397,7 +397,7 @@ downloadButton.addEventListener("click", () => {
 });
 ```
 
-### Automatically cancelling in-progress requests
+### Automatically canceling in-progress requests
 
 In the following example, we [fetch](/en-US/docs/Web/API/Window/fetch) a list of resources concurrently using {{jsxref("Promise.all()")}}. `Promise.all()` fails and rejects the resulting promise as soon as one request failed; however, the other pending requests continue to run, despite their results being inaccessible to the program. To avoid these remaining requests needlessly consuming resources, we need to automatically cancel in-progress requests whenever `Promise.all()` settles. We implement cancellation with an {{domxref("AbortController")}}, and pass its {{domxref("AbortController/signal", "signal")}} to every `fetch()` call. If `Promise.all()` fulfills, then the function returns normally and the controller aborts, which is harmless because there's no pending request to cancel; if `Promise.all()` rejects and the function throws, then the controller aborts and cancels all pending requests.
 
@@ -430,7 +430,7 @@ async function getAllData(urls) {
 The resource disposal syntax offers a lot of strong error handling guarantees that ensure the resources are always cleaned up no matter what happens, but there are some pitfalls you may still encounter:
 
 - Forgetting to use `using` or `await using`. The resource management syntax is only there to help you when you know you need it, but there's nothing to yell at you if you forget to use it! Unfortunately, there's no good way to prevent this before-the-fact, because there are no syntactic clues that something is a disposable resource, and even for disposable resources, you may want to declare them without automatic disposal. You probably need a type checker combined with a linter to catch these issues, such as [typescript-eslint](https://typescript-eslint.io/) ([which is still planning to work on this feature](https://github.com/typescript-eslint/typescript-eslint/issues/8255)).
-- Use-after-free. Generally, the `using` syntax ensures that a resource is freed when it goes out of scope, but there are many ways to persist a value beyond its binding variable. JavaScript does not have an ownership mechanism like Rust, so you can declare an alias that does't use `using`, or preserve the resource in a [closure](/en-US/docs/Web/JavaScript/Guide/Closures), etc. The {{jsxref("Statements/using", "using")}} reference contains many examples of such pitfalls. Again, there's no good way to properly detect this in a complicated control flow, so you need to be careful.
+- Use-after-free. Generally, the `using` syntax ensures that a resource is freed when it goes out of scope, but there are many ways to persist a value beyond its binding variable. JavaScript does not have an ownership mechanism like Rust, so you can declare an alias that doesn't use `using`, or preserve the resource in a [closure](/en-US/docs/Web/JavaScript/Guide/Closures), etc. The {{jsxref("Statements/using", "using")}} reference contains many examples of such pitfalls. Again, there's no good way to properly detect this in a complicated control flow, so you need to be careful.
 
 The resource management feature is not a silver bullet. It is definitely an improvement over manually invoking the disposal methods, but it is not smart enough to prevent all resource management bugs. You still need to be careful and understand the semantics of the resources you are using.
 

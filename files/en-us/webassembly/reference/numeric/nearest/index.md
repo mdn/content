@@ -1,12 +1,13 @@
 ---
-title: "nearest: Wasm text instruction"
+title: "nearest: Wasm numeric instruction"
 short-title: nearest
 slug: WebAssembly/Reference/Numeric/nearest
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.nearest
 sidebar: webassemblysidebar
 ---
 
-The **`nearest`** instruction is used for rounding the value of a floating point number to the nearest whole number.
+The **`nearest`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) is used for rounding the value of a floating point number to the nearest whole number.
 
 {{InteractiveExample("Wat Demo: nearest", "tabbed-standard")}}
 
@@ -126,3 +127,11 @@ The output is as follows:
 {{embedlivesample("simd_nearest", "100%", 100)}}
 
 `80` is output because it is the nearest whole number to the value in lane `3` of the input value (`80.1`).
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

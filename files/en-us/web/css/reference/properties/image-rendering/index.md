@@ -64,6 +64,8 @@ image-rendering: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `auto`
   - : The scaling algorithm is UA dependent. Since version 1.9 (Firefox 3.0), Gecko uses _bilinear_ resampling (high quality).
 - `smooth`
@@ -91,7 +93,7 @@ image-rendering: unset;
 
 ### Setting image scaling algorithms
 
-In this example, an image is repeated three times, with each having a different `image-rendering` value applied.
+In this example, an image is repeated four times, with each having a different `image-rendering` value applied.
 
 ```html hidden
 <div>

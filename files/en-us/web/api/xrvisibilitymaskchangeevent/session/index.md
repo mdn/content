@@ -3,10 +3,12 @@ title: "XRVisibilityMaskChangeEvent: session property"
 short-title: session
 slug: Web/API/XRVisibilityMaskChangeEvent/session
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRVisibilityMaskChangeEvent.session
 ---
 
-{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`session`** read-only property of the {{domxref("XRVisibilityMaskChangeEvent")}} interface indicates the {{domxref("XRSession")}} to which the event belongs.
 
