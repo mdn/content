@@ -10,6 +10,8 @@ browser-compat: api.FormData.values
 
 The **`FormData.values()`** method returns an [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) which iterates through all values contained in the {{domxref("FormData")}}. The values are strings or {{domxref("Blob")}} objects.
 
+> **Note:** `FormData` keys are not necessarily unique. A form can contain multiple elements with the same name, so values sharing one key each appear while iterating. To retrieve all values associated with a single key, use the {{domxref("FormData.getAll()", "getAll()")}} method (or {{domxref("FormData.get()", "get()")}} for only the first value).
+
 ## Syntax
 
 ```js-nolint

@@ -10,6 +10,8 @@ browser-compat: api.FormData.entries
 
 The **`FormData.entries()`** method returns an [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) which iterates through all key/value pairs contained in the {{domxref("FormData")}}. The key of each pair is a string, and the value is either a string or a {{domxref("Blob")}}.
 
+> **Note:** Unlike [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) entries, `FormData` entries are not necessarily unique by key. A form can contain multiple elements with the same name, so the same key may appear in more than one pair while iterating. To retrieve all values associated with a single key, use the {{domxref("FormData.getAll()", "getAll()")}} method (or {{domxref("FormData.get()", "get()")}} for only the first value).
+
 ## Syntax
 
 ```js-nolint
