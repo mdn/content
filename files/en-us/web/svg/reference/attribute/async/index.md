@@ -6,29 +6,14 @@ browser-compat: svg.elements.script.async
 sidebar: svgref
 ---
 
-The **`async`** attribute accepts a boolean value that controls how the script is parsed and executed. If present it will execute differently depending on the script type:
+The **`async`** attribute accepts a boolean value that controls how the script is parsed and executed. You can use this attribute with the following SVG elements:
 
-- For classic script, the script will be fetched in parallel to parsing and evaluated as soon as it is available.
-- For [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules), the script will be fetched with all its dependencies in parallel to parsing and evaluated as soon as they are available.
+- {{SVGElement("script")}}
 
-## Usage notes
+If present, it will execute differently depending on the script type:
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">Value</th>
-      <td>Boolean</td>
-    </tr>
-    <tr>
-      <th scope="row">Default value</th>
-      <td>None</td>
-    </tr>
-    <tr>
-      <th scope="row">Animatable</th>
-      <td>No</td>
-    </tr>
-  </tbody>
-</table>
+- For a classic script, the script will be fetched in parallel with parsing and evaluated as soon as it is available.
+- For [module scripts](/en-US/docs/Web/JavaScript/Guide/Modules), the script will be fetched with all its dependencies in parallel with parsing and evaluated as soon as they are available.
 
 ## Example
 
@@ -37,6 +22,25 @@ The **`async`** attribute accepts a boolean value that controls how the script i
   <script href="example.js" async></script>
 </svg>
 ```
+
+## Usage notes
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>{{glossary("Boolean")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>false</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>No</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 
