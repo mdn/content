@@ -32,7 +32,7 @@ This second article in our [Express Tutorial](/en-US/docs/Learn_web_development/
 
 This article builds on the project configuration from [Setting up a Node development environment](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment). We'll add the server, routes, and templates to create the framework for our [Local Library website](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website), to which we'll later add all the other code needed by the site.
 
-The following sections explain the choice of view/CSS options, provide the code to copy into each project file, and show how to run the website to verify that it works.
+The following sections explain the choice of view/CSS options, provide the code to paste into each project file, and show how to run the website to verify that it works.
 
 ## Choosing the project components
 
@@ -195,7 +195,7 @@ app.set("view engine", "pug");
 
 The next set of functions call `app.use()` to add the _middleware_ libraries that we imported above into the request handling chain.
 For example, `express.json()` and `express.urlencoded()` are needed to populate [`req.body`](https://expressjs.com/en/api/#req.body) with the form fields.
-After these libraries we also use the `express.static` middleware, which makes _Express_ serve all the static files in the **/public** directory in the project root.
+After these libraries we also use the `express.static` middleware, which makes _Express_ serve all the static files in the **public/** directory in the project root.
 
 ```js
 app.use(logger("dev"));

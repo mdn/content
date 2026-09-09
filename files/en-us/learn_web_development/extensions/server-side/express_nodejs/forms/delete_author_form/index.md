@@ -5,6 +5,8 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_BookInstance_form", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Update_Book_form", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms")}}
+
 This subarticle shows how to define a page to delete `Author` objects.
 
 As discussed in the [form design](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms#form_design) section, our strategy will be to only allow deletion of objects that are not referenced by other objects (in this case that means we won't allow an `Author` to be deleted if it is referenced by a `Book`).
@@ -13,11 +15,11 @@ If there are associated books, it should display them, and state that they must 
 
 ## Controller—get route
 
-Open **/controllers/authorController.js**. Find the exported `author_delete_get()` controller method and replace it with the following code.
+Open **controllers/authorController.js**. Find the exported `authorDeleteGet()` controller method and replace it with the following code.
 
 ```js
 // Display Author delete form on GET.
-exports.author_delete_get = async (req, res, next) => {
+export const authorDeleteGet = async (req, res, next) => {
   // Get details of author and all their books (in parallel)
   const [author, allBooksByAuthor] = await Promise.all([
     Author.findById(req.params.id).exec(),
@@ -56,11 +58,11 @@ When both operations have completed it renders the **author_delete.pug** view, p
 
 ## Controller—post route
 
-Find the exported `author_delete_post()` controller method, and replace it with the following code.
+Find the exported `authorDeletePost()` controller method, and replace it with the following code.
 
 ```js
 // Handle Author delete on POST.
-exports.author_delete_post = async (req, res, next) => {
+export const authorDeletePost = async (req, res, next) => {
   // Get details of author and all their books (in parallel)
   const [author, allBooksByAuthor] = await Promise.all([
     Author.findById(req.params.id).exec(),
@@ -93,7 +95,7 @@ If there are still books then we just re-render the form, passing in the author 
 
 ## View
 
-Create **/views/author_delete.pug** and copy in the text below.
+Create **views/author_delete.pug** and paste in the text below.
 
 ```pug
 extends layout
@@ -170,7 +172,4 @@ You can then delete the books from their detail pages (once that code is impleme
 > The other pages for deleting objects can be implemented in much the same way.
 > We've left that as a challenge.
 
-## Next steps
-
-- Return to [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms).
-- Proceed to the final subarticle of part 6: [Update Book form](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Update_Book_form).
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_BookInstance_form", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Update_Book_form", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms")}}

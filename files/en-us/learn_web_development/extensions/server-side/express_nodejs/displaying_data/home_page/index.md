@@ -25,7 +25,7 @@ As a reminder, all the route functions are defined in **routes/catalog.js**:
 router.get("/", bookController.index); // This actually maps to /catalog/ because we import the route with a /catalog prefix
 ```
 
-The book controller index function passed as a parameter (`bookController.index`) has a "placeholder" implementation defined in **/controllers/bookController.js**:
+The book controller index function passed as a parameter (`bookController.index`) has a "placeholder" implementation defined in **controllers/bookController.js**:
 
 ```js
 export const index = async (req, res, next) => {
