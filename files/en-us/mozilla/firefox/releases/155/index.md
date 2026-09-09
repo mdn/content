@@ -45,6 +45,7 @@ No notable changes.
   This is the new name for the {{cssxref("font-stretch")}} property, which continues to work as a legacy alias.
   Note that computed style enumeration now returns `font-width` rather than `font-stretch`.
   ([Firefox bug 1911075](https://bugzil.la/1911075)).
+- Support for the non-standard {{cssxref("::-webkit-scrollbar")}} pseudo-element, added in Firefox 153, is now limited to a small list of sites rather than applying to the whole web. The list is set in the `layout.css.fake-webkit-scrollbar.enabled-domains` preference and is matched against the domain of the document, so `@supports selector(::-webkit-scrollbar)` returns `false` on any site that isn't listed. This partially reverses the Firefox 153 change, which left sites with broken scrollbars because Firefox implements only `::-webkit-scrollbar` itself and none of the other `::-webkit-scrollbar-*` pseudo-elements. Use the standard {{cssxref("scrollbar-color")}} and {{cssxref("scrollbar-width")}} properties to style scrollbars in Firefox. ([Firefox bug 2061547](https://bugzil.la/2061547)).
 
 ### JavaScript
 

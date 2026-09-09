@@ -32,7 +32,9 @@ Firefox 156 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### CSS -->
+### CSS
+
+- The non-standard {{cssxref("::-webkit-scrollbar")}} pseudo-element is now reported as unsupported in {{cssxref("@supports")}} conditions on every site, so `@supports selector(::-webkit-scrollbar)` returns `false` and `@supports not (selector(::-webkit-scrollbar))` returns `true`. This includes the sites listed in the `layout.css.fake-webkit-scrollbar.enabled-domains` preference, which [Firefox 155](/en-US/docs/Mozilla/Firefox/Releases/155#css) limited the pseudo-element to, and where Firefox does still apply it. Sites use this check as a signal for the whole `::-webkit-scrollbar-*` family, of which Firefox implements only `::-webkit-scrollbar` itself, so those that guard their standard scrollbar styles behind `@supports not (selector(::-webkit-scrollbar))` now get those styles applied. ([Firefox bug 2062782](https://bugzil.la/2062782)).
 
 <!-- #### Removals -->
 
