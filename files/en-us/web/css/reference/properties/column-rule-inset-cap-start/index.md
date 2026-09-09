@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`column-rule-inset-cap-start`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the start of column rule segment [cap endpoints](#understanding_cap_end) at the container's content start edge and cap endpoints where no rule segments intersect.
+The **`column-rule-inset-cap-start`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the top of column rule segment [cap endpoints](#understanding_cap_end) at the container's content start edge, and cap endpoints where no rule segments intersect.
 
 {{InteractiveExample("CSS Demo: rule")}}
 
@@ -122,7 +122,7 @@ This property is specified as a single value from the following list:
 - `overlap-join`
   - : Resolves to `0`.
 - {{cssxref("length-percentage")}}
-  - : Specifies the size of the inset. Percentage values are relative to the cap endpoint, which is either the `row-gap` or `0`.
+  - : Specifies the size of the inset. Percentage values are relative to the cap endpoint, which is either the width of the `row-gap` or `0`.
 
 ## Description
 
@@ -132,15 +132,15 @@ Column rules are painted within a column gap as one or more segments, with segme
 - Flex items or flex lines in flex layouts, depending on the `flex-direction`.
 - Columns in multi-col layouts.
 
-The `column-rule-inset-cap-start` property can be used to inset the start edge of [cap segment endpoints](#understanding_cap_end). The default value is `0`, which is the same as `overlap-join`. Positive values reduce the size of the segment. Negative values extend it.
+The `column-rule-inset-cap-start` property can be used to inset the start edge of [cap segment endpoints](#understanding_cap_end). The default value is `0`, which is the same as `overlap-join`. Positive values reduce the segment size, while negative values increase it.
 
-Length `column-rule-inset-cap-start` values are inset by the value specified for both interior and start edge cap segment endpoints. Negative length values create an outset, with start edge cap segments extending beyond the container's start edge.
+Length `column-rule-inset-cap-start` values inset segments by the specified value — for both interior and end edge cap segments. Negative length values create an outset, with end edge cap segments extending beyond the container's start edge.
 
-[Percentage values](#understanding_percentage_values) for interior cap segment endpoint insets are relative to the size of the {{cssxref("row-gap")}}. For start edge cap segments, percentage values are relative to `0`, so percentage values never cause cap segment endpoints at the container's start edge to extend above the container.
+[Percentage values](#understanding_percentage_values) for interior segments are relative to the size of the {{cssxref("row-gap")}}. For start edge cap segments, percentage values are relative to `0`, so percentage values never cause cap segment endpoints at the container's start edge to extend above the container.
 
 The `column-rule-inset-cap-start` property is a constituent property of several [shorthand properties](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties):
 
-- To set the starts and ends of cap segment endpoints, the `column-rule-inset-cap-start` property, along with the {{cssxref("column-rule-inset-cap-end")}} property, can be set using the {{cssxref("column-rule-inset-cap")}} shorthand.
+- To set the inset of both start and end caps, the `column-rule-inset-cap-start` property, along with the {{cssxref("column-rule-inset-cap-end")}} property, can be set using the {{cssxref("column-rule-inset-cap")}} shorthand.
 
 - To set the ends of all column segment endpoints, the `column-rule-inset-cap-start` property, along with the {{cssxref("column-rule-inset-junction-end")}} property, can be set using the {{cssxref("column-rule-inset-end")}} shorthand.
 
@@ -154,9 +154,11 @@ A _cap segment endpoint_ is any segment endpoint that is not a junction segment 
 
 The `column-rule-inset-cap-start` controls the inset of the start edge of column cap segment endpoints. In other words, the property can be used to shrink or extend the top edge of column rule segments occurring at interior gaps where no other column or row rule segments are present or at the start edge of the container.
 
-Column cap segment endpoints are not affected by the value of the `column-rule-break` property, which only controls junction breaks. They are, however, affected by the {{cssxref("rule-visibility-items")}} properties, which defines whether column- and row-rule segments are painted in gaps adjacent to empty areas. As column cap segment endpoints only exist at the edge of the container and at interior gaps where no other column or row rule segments are present, whether segments are painted (or would otherwise be painted if the `rule` were set to a visible value), impacts which column segments are cap start segments.
+Column cap segment endpoints are not affected by the value of the `column-rule-break` property value settings, which only control junction segment breaks. They are, however, affected by the {{cssxref("rule-visibility-items")}} properties, which defines whether column- and row-rule segments are painted in gaps adjacent to empty areas.
 
-In the following demonstration, the top segments of the column rules with a solid line style start in a cap endpoint. With `column-rule-inset-cap-start: 16px` set and the start of all the cap segment being against the top edge of the container, the columns are all inset by `16px`. Change the inset `<length>` value to better visualize which segments start in cap segment endpoints.
+Column cap segment endpoints only exist at the edge of the container and at interior gaps where no other column or row rule segments are present, whether segments are painted (or would otherwise be painted if the `rule` were set to a visible value), impacts which column segments are cap start segments.
+
+In the following demonstration, the top of the column rule segments with a solid line style start in a cap endpoint. With `column-rule-inset-cap-start: 16px` set, all the column cap segments at the top edge of the container are all inset by `16px`. Change the inset `<length>` value to better visualize which segments start in cap segment endpoints.
 
 ```html hidden live-sample___caps live-sample___percents
 <ul id="ul">
@@ -293,7 +295,7 @@ visibility.addEventListener("change", () => {
 
 Setting `16px` insets the start of all the column rules by `16px`. If `0px` is set, the start of the column rules will align with the start of the container. This is the default. Setting `-32px` outsets the segments by `32px`, with the lines being drawn `32px` past the start edge of the container. As column rules don't impact the box model, these lines have no impact on the layout of the container or the rest of the content.
 
-Select `between` as the `rule-visibility-items` value. This value paints rules in a gap segments only if the two adjacent areas are occupied by items. Change the value of the inset while observing there three column rules with a double line style. In addition to having a cap endpoint at the start edge of the container, like all the other column rules, these rules have an additional cap endpoint. They each have column rule segments that start at interior gaps where row rule segments are present, so these column segments are also cap segment endpoints, and are affected by the `column-rule-inset-cap-start` property.
+Select `between` as the `rule-visibility-items` value. This value paints rules in a gap segments only if the two adjacent areas are occupied by items. Change the value of the inset while observing the three column rules with a double line style: in addition to having a cap endpoint at the start edge of the container, like all the other column rules, these rules have an additional cap endpoint. They each have column rule segments that start at interior gaps where no row rule segments are present, so these column segments are also cap segment endpoints, and are affected by the `column-rule-inset-cap-start` property.
 
 When selecting `around` as the `rule-visibility-items` value, which paints rules in a gap segment as long as one adjacent area is occupied by an item. In each case, there a row rule segment at the top end of the endpoint segments of the interior gaps. The start of these segments are junction, not cap, segment endpoints and are not affected by the `column-rule-inset-cap-start` property. The inset of these column segments that start at an interior gap junction can be controlled by the {{cssxref("column-rule-inset-junction-start")}} property.
 
@@ -307,7 +309,9 @@ This example isn't broken; all the cap segments start at the container's edge, s
 
 If you select `around` as the `rule-visibility-items` value, again, none of the segments will be inset. Percentage inset values for the column segments that start at container edge all resolve to `0`. The start edge of column segments that start at interior gaps don't and have a segment drawn above start at intersections where row rule segments are present; they don't start with a cap segment endpoint, so their insets are defined by the `column-rule-inset-junction-start` property instead.
 
-Select `between` as the `rule-visibility-items` value. The column rules that have two cap start segments have their line-style set to `double`. As before, each has a column rule segment that starts at interior gaps where no other rule segments are present. For these, the percentage offset is relative to the size of the {{cssxref("row-gap")}} width, which in this case is `20px`. Setting `100%` insets the start of the cap segments by `20px`. Setting `-200%` will outset these segments by `40px`, with the lines being drawn through the `20px` gap, with `20px` protruding into the row above the items. If the negative value was larger than the combined heights of the first row and the row gap, the rule would protrude above the container's start edge.
+Select `between` as the `rule-visibility-items` value. The column rules that have two cap start segments have their line-style set to `double`. As before, each has a column rule segment that starts at interior gaps where no other rule segments are present. For these, the percentage offset is relative to the size of the {{cssxref("row-gap")}} width, which in this case is `20px`.
+
+Setting `100%` insets the start of the cap segments by `20px`. Setting `-200%` will outset these segments by `40px`, with the lines being drawn through the `20px` gap, with `20px` protruding into the row above the items. If the negative value was larger than the combined heights of the first row and the row gap, the rule would protrude above the container's start edge.
 
 ## Formal definition
 
@@ -367,7 +371,7 @@ This example demonstrates setting `column-rule-inset-cap-start` to inset the sta
 
 #### CSS
 
-We use the {{cssxref("display")}} property to turn the `.flexbox` elements into flex containers. We balance the items into three flex lines using with {{cssxref("flex-wrap")}} and {{cssxref("flex-line-count")}}. We define a light blue {{cssxref("rule")}} to be painted in both row and column gaps, then overwrite the {{cssxref("column-rule-color")}}, setting darker `blue` vertical gap decorations. Finally, we set the `column-rule-inset-cap-start` to `16px`.
+We use the {{cssxref("display")}} property to turn the `.flexbox` elements into flex containers. We balance the items into three flex lines using {{cssxref("flex-wrap")}} and {{cssxref("flex-line-count")}}. We define a light blue {{cssxref("rule")}} to be painted in both row and column gaps, then overwrite the {{cssxref("column-rule-color")}}, setting darker `blue` column gap decorations. Finally, we set the `column-rule-inset-cap-start` to `16px`.
 
 ```css
 .flexbox {
@@ -442,7 +446,7 @@ inset.addEventListener("input", () => {
 
 #### Result
 
-{{EmbedLiveSample("Basic usage", "", "300")}}
+{{EmbedLiveSample("Basic usage", "", "330")}}
 
 Change the size of the inset.
 

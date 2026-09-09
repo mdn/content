@@ -129,11 +129,11 @@ This property is specified as a single value from the following list:
 - `overlap-join`
   - : Resolves to `0`.
 - {{cssxref("length-percentage")}}
-  - : Specifies the size of the inset. Percentage values are relative to the cap endpoint, which is either `row-gap` or `0` for column segments, and either `column-gap` or `0` for row segments.
+  - : Specifies the size of the inset. Percentage values are relative to the cap endpoint, which resolves to `0` at the container's edge, is relative to the height of the `row-gap` interior column segment caps, or relative to the height of the `column-gap` for interious row segment cap ends.
 
 ## Description
 
-The `rule-inset-cap` shorthand property sets the {{cssxref("column-rule-inset-cap")}} and {{cssxref("row-rule-inset-cap")}} properties to the same value, insetting [cap segment endpoints](#understanding_cap_end) by the specified value. Positive values reduce the size of the cap segments. Negative values extend them.
+The `rule-inset-cap` shorthand property sets the {{cssxref("column-rule-inset-cap")}} and {{cssxref("row-rule-inset-cap")}} properties to the same value, insetting [cap segment endpoints](#understanding_cap_end) by the specified value. Positive values reduce the segment size, while negative values increase them.
 
 The `rule-inset-cap` property, along with the {{cssxref("rule-inset-junction")}} property, can be set using the {{cssxref("rule-inset")}} shorthand.
 
@@ -210,15 +210,13 @@ We use the {{cssxref("display")}} property to turn the `.flexbox` elements into 
 }
 ```
 
-We also set the {{cssxref("flex-direction")}} on the `.column` container to make its items flow in columns rather than rows.
+We also set the {{cssxref("flex-direction")}} on the `.column` container to make its items flow in columns rather than rows. The rest of the CSS is hidden for brevity.
 
 ```css
 .column {
   flex-direction: column;
 }
 ```
-
-The rest of the CSS is hidden for brevity.
 
 ```css hidden
 body {

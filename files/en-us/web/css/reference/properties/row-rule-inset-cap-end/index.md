@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`row-rule-inset-cap-end`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the end of row rule segment [cap endpoints](#understanding_cap_end) at the container's content end edge and cap endpoints where no rule segments intersect.
+The **`row-rule-inset-cap-end`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the end of row rule segment [cap endpoints](#understanding_cap_end).
 
 {{InteractiveExample("CSS Demo: rule")}}
 
@@ -126,11 +126,11 @@ This property is specified as a single value from the following list:
 - `overlap-join`
   - : Resolves to `0`.
 - {{cssxref("length-percentage")}}
-  - : Specifies the size of the inset. Percentage values are relative to the cap endpoint, which is either the `column-gap` width or `0`.
+  - : Specifies the size of the inset. Percentage values are relative to the cap endpoint, which is either the height of the `column-gap` width or `0`.
 
 ## Description
 
-The `row-rule-inset-cap-end` property can be used to inset the end edge of [cap segment endpoints](#understanding_cap_end). The default value is `0`, which is the same as `overlap-join`. Positive values reduce the size of the segment. Negative values extend it.
+The `row-rule-inset-cap-end` property can be used to inset the end edge of [cap segment endpoints](#understanding_cap_end) at the container's content end edge and cap endpoints where no rule segments intersect. The default value is `0`, which is the same as `overlap-join`. Positive values reduce the segment size, while negative values increase it.
 
 Row rules are painted within a row gap as one or more segments, with segments occurring between:
 
@@ -146,7 +146,7 @@ Length `row-rule-inset-cap-end` values are inset by the value specified for both
 
 The `row-rule-inset-cap-end` property is a constituent property of several [shorthand properties](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties):
 
-- To inset the start and ends of row rule caps, the `row-rule-inset-cap-end` property, along with the {{cssxref("row-rule-inset-cap-start")}} property, can be set using the {{cssxref("row-rule-inset-cap")}} shorthand.
+- To inset both the start and ends of row rule caps, the `row-rule-inset-cap-end` property, along with the {{cssxref("row-rule-inset-cap-start")}} property, can be set using the {{cssxref("row-rule-inset-cap")}} shorthand.
 
 - To inset the ends of all row segments, the `row-rule-inset-cap-end` property, along with the {{cssxref("row-rule-inset-junction-end")}} property, can be set using the {{cssxref("row-rule-inset-end")}} shorthand.
 
@@ -160,9 +160,9 @@ A _cap segment endpoint_ is any segment endpoint that is not a junction segment 
 
 The `row-rule-inset-cap-end` controls the inset of the end edge of row cap segment endpoints. Depending on writing mode, the property can be used to shrink or extend the right or left edge of row rule segments occurring at interior gaps where no other row or column rule segments are present or at the end edge of the container.
 
-Row cap segment endpoints are not affected by the value of the `row-rule-break` property, which only controls junction breaks. They are, however, affected by the {{cssxref("rule-visibility-items")}} properties, which defines whether row- and column-rule segments are painted in gaps adjacent to empty areas. As row cap segment endpoints only exist at the end edge of the container and at interior gaps where no other row or column rule segments area present, whether segments are painted (or would otherwise be painted if the `rule` were set to a visible value), impacts which row segments are end cap segments.
+This property is affected by the {{cssxref("rule-visibility-items")}} properties, which defines whether row- and column-rule segments are painted in gaps adjacent to empty areas. As row cap segment endpoints only exist at the end edge of the container and at interior gaps where no other row or column rule segments area present, whether segments are painted (or would otherwise be painted if the `rule` were set to a visible value), impacts which row segments are end cap segments.
 
-In the following demonstration, the right segments of row rules with a solid line styles end in a cap endpoint. With `row-rule-inset-cap-end: 16px` set and all the cap segment endpoints being against the container edge, the rows are all inset by `16px`. Change the inset `<length>` value to better visualize which segments end in cap segment endpoints.
+In the following demonstration, in left-to-right writing modes, the right segments of row rules with a solid line styles end in a cap endpoint. With `row-rule-inset-cap-end: 16px` set and all the cap segment endpoints being against the right edge of the container, the end of each row rule is inset by `16px`. Change the inset `<length>` value to better visualize which segments end in cap segment endpoints.
 
 ```html hidden live-sample___caps live-sample___percents
 <ul id="ul">
@@ -321,21 +321,21 @@ visibility.addEventListener("change", () => {
 
 {{EmbedLiveSample("caps", "", "400")}}
 
-Setting `-32px` outsets the end of all the row rules by 32px, with the lines being drawn `32px` past the end edge of the container. As row rules don't impact the box model, these lines have no impact on the layout of the container or the rest of the content. Setting `16px` insets the segments by `16px`. If `0px` is set, the end of the row rules will align with the end of the container. This is the default.
+Setting `-32px` outsets the end of all the row rules by 32px, with the lines being drawn `32px` past the right edge of the container. As row rules don't impact the box model, these lines have no impact on the layout of the container or the rest of the content. Setting `16px` insets the segments by `16px`. If `0px` is set, the end of the row rules will align with the edge of the container. This is the default.
 
-The double line-style row rules, which appear when the `rule-visibility-items` is set to `between` end in a cap endpoint. The `between` value only paints rules in a gap segments between two adjacent areas occupied by an item. Because the row rule segments above items 22 and 24 end at intersections with no other row or column rule segments are present, these are cap endpoints, and therefore affected by the `row-rule-inset-cap-end` property.
+The double line-style row rules, which appear when the `rule-visibility-items` is set to `between`, end in cap endpoints. The `between` value only paints rules in a gap segments between two adjacent areas occupied by an item. Because the row rule segments above items `22` and `24` end at intersections with no other row or column rule segments present, these are cap endpoints, and therefore affected by the `row-rule-inset-cap-end` property.
 
-The rule segments abutting the right edge of the container (only the segment between 6 and 12 in this case) are always row-rule cap ends, so are always inset by the value of the `row-rule-inset-cap-end` property.
+The rule segments abutting the right edge of the container (only the segment between `6` and `12`, in this case) are always row-rule cap ends, so are always inset by the value of the `row-rule-inset-cap-end` property.
 
 ### Understanding percentage values
 
-What length a percentage value is relative to depends on the location of the endpoint. Interior endpoint percentage values are relative to the gap width at the cap endpoint, so relative to the {{cssxref("column-gap")}} if abutting a gap. In this demonstration, these endpoints are denoted by the inset, dark and light line style. If the cap segment endpoint is at the container's edge, the percentage is relative to `0`, so always computes to `0` (which is only the `between` value has an effect).
+What length a percentage value is relative to depends on the location of the endpoint. Interior endpoint percentage values are relative to the width of the gap at the cap endpoint, so relative to the {{cssxref("column-gap")}} if abutting a gap or `0` if abutting the edge of the container. In this demonstration, these endpoints are denoted by the inset, dark and light lines.
 
 {{EmbedLiveSample("percents", "", "400")}}
 
-Select `around` as the `rule-visibility-items` value. The first two rows end at the container edge, so they row-rule cap end (the segment between 6 and 12) has `0` inset. The row-rule segments that don't have a segment to the right end at interior gaps where column rule segments are present, so these row segments are not cap segment endpoints and are not affected by the property.
+Select `around` as the `rule-visibility-items` value. The first two rows end at the container edge, so the row rule cap end, the row rule segment between items `6` and `12`, has is not inset, as any percent value at the container edge resolves to `0` inset. The row-rule segments that don't have a segment to the right end at interior gaps where column rule segments are present, so these row segments are not cap segment endpoints and are not affected by the property.
 
-Select `between` as the `rule-visibility-items` value. There are now three row-rule cap segments: the row rule between the first two grid rows ends at the container edge and the two row rule segments drawn between grid items in the third and fourth rows. The first row-rule cap segment ends at the container's edge, so its percent inset value is relative to `0`. The end of the two other segments occur at interior gaps where no other rule segments are present, so the percentage offset is relative to the size of the {{cssxref("column-gap")}} width, which in this case is `20px`. Setting `100%` insets the end of these two segments by `20px`. Setting `-200%` will outset these segments by `40px`, with the lines being drawn through the `20px` gap, with `20px` protruding into the the next column.
+Select `between` as the `rule-visibility-items` value. There are now two row-rule cap segments: the row rule between the first two grid rows ends at the container edge and the row rule segments between grid items `18` and `24`. The first row-rule cap segment ends at the container's edge, so its percent inset value is relative to `0`. The other cap segment end at an interior gap where no other rule segments are present, so the percentage offset is relative to the size of the {{cssxref("column-gap")}} width, which in this case is `20px`. Setting `100%` insets the end by `20px`. Setting `-200%` will outset the segment by `40px`, with the lines being drawn through the `20px` gap, with `20px` protruding into the the next column.
 
 ## Formal definition
 
@@ -410,15 +410,13 @@ We use the {{cssxref("display")}} property to turn the `.flexbox` elements into 
 }
 ```
 
-We also set the {{cssxref("flex-direction")}} on the `.column` container, to change the main axis of the flex container, and make the items flow in columns rather than rows.
+We also set the {{cssxref("flex-direction")}} on the `.column` container, to change the main axis of the flex container, and make the items flow in columns rather than rows. The rest of the CSS is hidden for brevity.
 
 ```css
 .column {
   flex-direction: column;
 }
 ```
-
-The rest of the CSS is hidden for brevity.
 
 ```css hidden
 body {
@@ -470,7 +468,7 @@ inset.addEventListener("input", () => {
 
 #### Result
 
-{{EmbedLiveSample("Basic usage", "", "300")}}
+{{EmbedLiveSample("Basic usage", "", "320")}}
 
 Change the size of the inset.
 
