@@ -41,7 +41,38 @@ If `mapper` throws an exception or its return value cannot be converted to an ob
 
 ## Examples
 
-For a `flatMap()` example, see our [Canvas drawing example](/en-US/docs/Web/API/Observable_API/Using_observables#example_canvas_drawing).
+### Using flatMap()
+
+This example displays mouse coordinates while dragging from a `<div>` element. Each mouse press starts an inner stream of mouse movements that ends when the mouse button is released. `flatMap()` forwards those movements and waits for the current inner stream to complete before processing another mouse press.
+
+```html hidden live-sample___basic-flatMap
+<div>Press here and drag.</div>
+<p>Waiting for a drag</p>
+```
+
+```css hidden live-sample___basic-flatMap
+div {
+  height: 120px;
+  background-color: lavender;
+  user-select: none;
+}
+```
+
+```js live-sample___basic-flatMap
+const target = document.querySelector("div");
+const output = document.querySelector("p");
+
+target
+  .when("mousedown")
+  .flatMap(() => document.when("mousemove").takeUntil(document.when("mouseup")))
+  .subscribe((event) => {
+    output.textContent = `${event.clientX},${event.clientY}`;
+  });
+```
+
+{{EmbedLiveSample("basic-flatMap", "100%", "200px")}}
+
+For a more complete example, see [Canvas drawing](/en-US/docs/Web/API/Observable_API/Using_observables#example_canvas_drawing).
 
 ## Specifications
 
