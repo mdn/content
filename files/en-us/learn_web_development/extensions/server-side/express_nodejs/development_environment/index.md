@@ -153,28 +153,46 @@ We'll prepare the configuration for the Local Library [starter project](https://
    cd express-locallibrary-tutorial
    ```
 
-2. Use the npm `init` command to create a **package.json** file with default values:
+2. Use the npm `init` command to create a **package.json** file configured for ES modules:
 
    ```bash
-   npm init --yes
+   npm init --yes --init-type=module
    ```
 
-3. Open **package.json** in your text editor and replace its contents with the following configuration:
+   The [`--init-type=module`](https://docs.npmjs.com/cli/commands/npm-init/#init-type) option sets `"type": "module"` instead of the default `"type": "commonjs"`.
+
+3. Open **package.json** in your text editor. npm creates a file like the following, using the directory name as the package name:
 
    ```json
    {
      "name": "express-locallibrary-tutorial",
-     "version": "0.0.1",
-     "private": true,
-     "engines": {
-       "node": ">=24.0.0"
+     "version": "1.0.0",
+     "description": "",
+     "main": "index.js",
+     "scripts": {
+       "test": "echo \"Error: no test specified\" && exit 1"
      },
-     "type": "module",
-     "scripts": {}
+     "keywords": [],
+     "author": "",
+     "license": "ISC",
+     "type": "module"
    }
    ```
 
-   The `name` and `version` identify the project. Setting `private` to `true` prevents accidental publication to the npm registry. The `engines` field declares the minimum supported Node.js version, and `"type": "module"` tells Node to treat the project's **.js** files as ES modules. We'll add commands to `scripts` below.
+4. Add `"private": true` and an `engines` field at the top level of **package.json**, alongside `name` and `version`:
+
+   ```json
+   {
+     "private": true,
+     "engines": {
+       "node": ">=24.0.0"
+     }
+   }
+   ```
+
+   Setting `private` to `true` prevents accidental publication to the npm registry. The `engines` field declares the minimum supported Node.js version. Keep the generated fields for now; we'll replace `scripts` below.
+
+5. Delete the following fields, which are only useful if you are publishing to the npm registry: `description`, `main`, `keywords`, `author`, `license`.
 
 ### Adding dependencies
 
@@ -194,11 +212,24 @@ These packages each have a role in the application:
 
 The [`npm install`](https://docs.npmjs.com/cli/commands/npm-install/) command downloads these packages and their dependencies into **node_modules**, adds them to `dependencies` in **package.json**, and creates **package-lock.json** to record the resolved versions. Keep both package files in version control so other developers can install the project's dependencies. When a lockfile is already available, `npm ci` installs its recorded versions.
 
+> [!NOTE]
+> It is a good idea to regularly update to the latest compatible versions of your dependency libraries — this may even be done automatically or semi-automatically as part of a {{glossary("continuous integration")}} setup.
+>
+> Usually library updates to the minor and patch version remain compatible.
+> We've prefixed each version with `^` above so that we can automatically update to the latest `minor.patch` version by running:
+>
+> ```bash
+> npm update --save
+> ```
+>
+> Major versions change the compatibility.
+> For those updates we'll need to manually update the `package.json` and code that uses the library, and extensively re-test the project.
+
 We'll install additional packages, such as the database driver, when we need them later in the tutorial. For a broader introduction to development tools and their configuration, see [Introducing a complete toolchain](/en-US/docs/Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain).
 
 ### Running tasks
 
-In addition to defining dependencies, you can define named scripts in **package.json** and use npm to execute them. Replace the empty `scripts` object with these commands:
+In addition to defining dependencies, you can define named scripts in **package.json** and use npm to execute them. Replace the generated `scripts` object, including its placeholder `test` command, with these commands:
 
 ```json
 {
@@ -216,14 +247,15 @@ Your **package.json** should now look like this. The dependency version numbers 
 ```json
 {
   "name": "express-locallibrary-tutorial",
-  "version": "0.0.1",
-  "private": true,
-  "engines": {
-    "node": ">=24.0.0"
-  },
+  "version": "1.0.0",
   "scripts": {
     "start": "node server.js",
     "devstart": "node --watch server.js"
+  },
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=24.0.0"
   },
   "dependencies": {
     "debug": "^4.4.3",
@@ -231,8 +263,7 @@ Your **package.json** should now look like this. The dependency version numbers 
     "http-errors": "^2.0.1",
     "morgan": "^1.12.0",
     "pug": "^3.0.4"
-  },
-  "type": "module"
+  }
 }
 ```
 
@@ -294,14 +325,15 @@ This keeps installed dependencies, log files, and local environment settings out
 Your project directory should now contain:
 
 ```plain
-express-locallibrary-tutorial/
-  .gitignore
-  node_modules/
-  package-lock.json
-  package.json
+express-locallibrary-tutorial
+├── .gitignore
+├── node_modules
+│   └── [A lot of installed dependency files]
+├── package-lock.json
+└── package.json
 ```
 
-This is the starter's project configuration, ready for its JavaScript files, templates, and stylesheet. Keep this directory for the tutorial; when you reach the skeleton website chapter, copy the starter's application files into it.
+This is a good starting point for our tutorial. We'll add actual application files like JavaScript files, templates, and stylesheet when we get to the [Skeleton website](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website) chapter.
 
 ## Summary
 
