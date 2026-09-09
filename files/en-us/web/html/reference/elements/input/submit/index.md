@@ -197,10 +197,6 @@ We've included basic examples above. There isn't really anything more to say abo
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
     </tr>
     <tr>
-      <td><strong>Methods</strong></td>
-      <td>None</td>
-    </tr>
-    <tr>
       <td><strong>Implicit ARIA Role</strong></td>
       <td><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role"><code>button</code></a></td>
     </tr>

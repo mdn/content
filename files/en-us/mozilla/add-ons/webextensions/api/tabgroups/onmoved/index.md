@@ -55,11 +55,13 @@ browser.tabGroups.onMoved.addListener(tabGroupMoved);
 Locate a tab group moved to another window.
 
 ```js
-browser.tabGroups.onMoved.addListener(group => {
+browser.tabGroups.onMoved.addListener(async (group) => {
   let tabs = await browser.tabs.query({
     groupId: group.id,
   });
-  console.log(`Moved tab group to ${tabs[0].index} in window ${group.windowId}`);
+  console.log(
+    `Moved tab group to ${tabs[0].index} in window ${group.windowId}`,
+  );
 });
 ```
 

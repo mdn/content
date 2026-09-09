@@ -154,7 +154,7 @@ No — this feature only restricts access to cookies and site data that can be u
 
 ### I use a third-party analytics service that is classified as a tracker. Will I still receive analytics data?
 
-This depends on how the third-party analytics service is implemented. Third-party analytics providers will no longer be able to user their third-party storage to collect data. This means that providers using cookies which are scoped to their third-party domain, or local storage and other site data stored under their origin, will no longer have access to those identifiers across other websites.
+This depends on how the third-party analytics service is implemented. Third-party analytics providers will no longer be able to use their third-party storage to collect data. This means that providers using cookies which are scoped to their third-party domain, or local storage and other site data stored under their origin, will no longer have access to those identifiers across other websites.
 
 If these services are embedded into the main context of the page, they can continue to use first-party cookies and site storage to track users across page visits on that specific first-party domain.
 

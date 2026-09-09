@@ -88,7 +88,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 - `abbr`
   - : A short, abbreviated description of the header cell's content provided as an alternative label to use for the header cell when referencing the cell in other contexts. Some user-agents, such as screen readers, may present this description before the content itself.
 - `colspan`
-  - : A non-negative integer value indicating how many columns the header cell spans or extends. The default value is `1`. User agents dismiss values higher than 1000 as incorrect, defaulting such values to `1`.
+  - : A non-negative integer value indicating how many columns the header cell spans or extends. The default value is `1`. Values higher than `1000` are clipped to `1000`.
 - `headers`
   - : A list of space-separated strings corresponding to the `id` attributes of the `<th>` elements that provide the headers for this header cell.
 - `rowspan`

@@ -6,11 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.StylePropertyMapReadOnly.has
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`has()`** method of the
-{{domxref("StylePropertyMapReadOnly")}} interface indicates whether the specified
-property is in the `StylePropertyMapReadOnly` object.
+The **`has()`** method of the {{domxref("StylePropertyMapReadOnly")}} interface indicates whether the specified property is in the `StylePropertyMapReadOnly` object.
 
 ## Syntax
 
@@ -29,8 +27,9 @@ A boolean value.
 
 ## Examples
 
-Here we use the `has()` method to see if the `padding-top` property is present
-within the button elements style attribute.
+### Basic usage
+
+Here we use the `has()` method to see if the `padding-top` property is present within the button elements style attribute.
 
 ```js
 // get the button element

@@ -64,9 +64,9 @@ isolation: revert-layer;
 isolation: unset;
 ```
 
-The `isolation` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : A new stacking context is created only if one of the properties applied to the element requires it.

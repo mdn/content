@@ -287,7 +287,7 @@ const game = new Phaser.Game(config);
 
 ## Summary
 
-You've finished all the lessons—congratulations! By this point you would have learnt the basics of Phaser and the logic behind simple 2D games.
+You've finished all the lessons—congratulations! By this point you would have learned the basics of Phaser and the logic behind simple 2D games.
 
 ### Exercises to follow
 

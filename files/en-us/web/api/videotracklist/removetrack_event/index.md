@@ -26,13 +26,6 @@ A {{domxref("TrackEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("TrackEvent")}}
 
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref("TrackEvent.track", "track")}} {{ReadOnlyInline}}
-  - : The newly-removed {{domxref("VideoTrack")}} the event is in reference to.
-
 ## Examples
 
 Using `addEventListener()`:

@@ -8,16 +8,11 @@ browser-compat: api.RTCRtpTransceiver.mid
 
 {{APIRef("WebRTC")}}
 
-The read-only {{domxref("RTCRtpTransceiver")}} interface's
-**`mid`** property specifies the negotiated media ID
-(`mid`) which the local and remote peers have agreed upon to uniquely
-identify the stream's pairing of sender and receiver.
+The read-only {{domxref("RTCRtpTransceiver")}} interface's **`mid`** property specifies the media ID (`mid`) which uniquely identifies the stream's pairing of sender and receiver.
 
 ## Value
 
-A string which uniquely identifies the pairing of source and
-destination of the transceiver's stream. Its value is taken from the media ID of the SDP
-m-line. This value is `null` if negotiation has not completed.
+A string which uniquely identifies the pairing of source and destination of the transceiver's stream. Its value is taken from the media ID of the SDP m-line. This value is `null` before a local or remote description containing the corresponding m-line is applied, or if a rollback undoes that association.
 
 ## Specifications
 

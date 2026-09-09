@@ -60,6 +60,8 @@ h4 {
 
 These elements only include the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
+The [`headingoffset`](/en-US/docs/Web/HTML/Reference/Global_attributes/headingoffset) and [`headingreset`](/en-US/docs/Web/HTML/Reference/Global_attributes/headingreset) global attributes can be used to adjust the computed heading level of these elements.
+
 ## Usage notes
 
 - Heading information can be used by user agents to construct a table of contents for a document automatically.

@@ -14,6 +14,7 @@ The **`<mpath>`** [SVG](/en-US/docs/Web/SVG) sub-element for the {{SVGElement("a
 
 ## Attributes
 
+- {{SVGAttr("href")}}
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 
 ## DOM Interface

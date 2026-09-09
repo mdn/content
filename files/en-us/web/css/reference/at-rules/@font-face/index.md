@@ -42,6 +42,8 @@ The **`@font-face`** [CSS](/en-US/docs/Web/CSS) [at-rule](/en-US/docs/Web/CSS/Gu
   - : Allows control over advanced typographic features in OpenType fonts.
 - {{cssxref("@font-face/font-variation-settings", "font-variation-settings")}}
   - : Allows low-level control over OpenType or TrueType font variations, by specifying the four-letter axis names of the features to vary, along with their variation values.
+- {{cssxref("@font-face/font-width", "font-width")}}
+  - : Allows authors to specify a normal, condensed, or expanded face for the specified fonts.
 - {{cssxref("@font-face/line-gap-override", "line-gap-override")}}
   - : Defines the line gap metric for the font.
 - {{cssxref("@font-face/size-adjust", "size-adjust")}}
@@ -149,6 +151,6 @@ In this example, the user's local copy of "Helvetica Neue Bold" is used; if the 
 ## See also
 
 - [About WOFF](/en-US/docs/Web/CSS/Guides/Fonts/WOFF)
-- [FontSquirrel @font-face generator](https://www.fontsquirrel.com/tools/webfont-generator)
+- [Transfonter webfont generator](https://transfonter.org/)
 - [Beautiful fonts with @font-face](https://hacks.mozilla.org/2009/06/beautiful-fonts-with-font-face/)
 - [Font Library](https://fontlibrary.org/)

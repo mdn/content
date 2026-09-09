@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.RTCErrorEvent
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`RTCErrorEvent`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) represents an error event sent to a WebRTC object.
 It inherits from the standard {{domxref("Event")}} interface, adding RTC-specific information describing the error.

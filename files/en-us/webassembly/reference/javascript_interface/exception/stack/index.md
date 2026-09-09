@@ -2,13 +2,9 @@
 title: WebAssembly.Exception.prototype.stack
 slug: WebAssembly/Reference/JavaScript_interface/Exception/stack
 page-type: webassembly-instance-property
-status:
-  - non-standard
 browser-compat: webassembly.api.Exception.stack
 sidebar: webassemblysidebar
 ---
-
-{{non-standard_header}}
 
 The **`stack`** read-only property of the [`WebAssembly.Exception`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception) object _may_ contain a stack trace.
 
@@ -103,6 +99,10 @@ new WebAssembly.Exception(tag, [param], { traceStack: true });
 
 Passing in `{traceStack: true}` tells the WebAssembly virtual machine that it should attach a stack trace to the returned `WebAssembly.Exception`.
 Without this, the stack would be `undefined`.
+
+## Specifications
+
+This feature is not part of any current specification.
 
 ## Browser compatibility
 

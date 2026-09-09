@@ -516,6 +516,10 @@
       "inh": "",
       "impl": []
     },
+    "CrossOriginStorageManager": {
+      "inh": "",
+      "impl": []
+    },
     "Crypto": {
       "inh": "",
       "impl": []
@@ -1584,6 +1588,10 @@
       "inh": "HTMLElement",
       "impl": []
     },
+    "HTMLCameraElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
     "HTMLCanvasElement": {
       "inh": "HTMLElement",
       "impl": []
@@ -1728,6 +1736,10 @@
       "inh": "HTMLElement",
       "impl": []
     },
+    "HTMLMicrophoneElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
     "HTMLModelElement": {
       "inh": "HTMLElement",
       "impl": []
@@ -1868,6 +1880,10 @@
       "inh": "HTMLElement",
       "impl": []
     },
+    "HTMLUserMediaElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
     "HTMLVideoElement": {
       "inh": "HTMLMediaElement",
       "impl": []
@@ -1994,6 +2010,10 @@
     },
     "Instance": {
       "inh": "",
+      "impl": []
+    },
+    "InteractionContentfulPaint": {
+      "inh": "PerformanceEntry",
       "impl": []
     },
     "IntersectionObserver": {
@@ -2224,6 +2244,10 @@
       "inh": "AudioNode",
       "impl": []
     },
+    "MediaStreamTrackAudioStats": {
+      "inh": "",
+      "impl": []
+    },
     "MediaStreamTrackEvent": {
       "inh": "Event",
       "impl": []
@@ -2233,6 +2257,10 @@
       "impl": []
     },
     "MediaStreamTrackProcessor": {
+      "inh": "",
+      "impl": []
+    },
+    "MediaStreamTrackVideoStats": {
       "inh": "",
       "impl": []
     },
@@ -2318,10 +2346,6 @@
     },
     "ModelContext": {
       "inh": "EventTarget",
-      "impl": []
-    },
-    "ModelContextClient": {
-      "inh": "",
       "impl": []
     },
     "Module": {
@@ -2664,6 +2688,10 @@
       "inh": "",
       "impl": []
     },
+    "PerformanceSoftNavigation": {
+      "inh": "PerformanceEntry",
+      "impl": []
+    },
     "PerformanceTiming": {
       "inh": "",
       "impl": []
@@ -2794,6 +2822,10 @@
     },
     "PromiseRejectionEvent": {
       "inh": "Event",
+      "impl": []
+    },
+    "Proofreader": {
+      "inh": "",
       "impl": []
     },
     "ProximitySensor": {
@@ -3016,11 +3048,11 @@
       "inh": "",
       "impl": []
     },
-    "RTCRtpSFrameDecrypter": {
+    "RTCRtpSFrameDecryptor": {
       "inh": "EventTarget",
       "impl": []
     },
-    "RTCRtpSFrameEncrypter": {
+    "RTCRtpSFrameEncryptor": {
       "inh": "",
       "impl": []
     },
@@ -3128,11 +3160,11 @@
       "inh": "EventTarget",
       "impl": []
     },
-    "SFrameDecrypterStream": {
+    "SFrameDecryptorStream": {
       "inh": "EventTarget",
       "impl": []
     },
-    "SFrameEncrypterStream": {
+    "SFrameEncryptorStream": {
       "inh": "",
       "impl": []
     },
@@ -4350,6 +4382,18 @@
     },
     "XRFrame": {
       "inh": "",
+      "impl": []
+    },
+    "XRGPUBinding": {
+      "inh": "",
+      "impl": []
+    },
+    "XRGPUDepthInformation": {
+      "inh": "XRDepthInformation",
+      "impl": []
+    },
+    "XRGPUSubImage": {
+      "inh": "XRSubImage",
       "impl": []
     },
     "XRHand": {

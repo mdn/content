@@ -22,36 +22,38 @@ setActionHandler(type, callback)
 - `type`
   - : A string representing an action type to listen for. It will be one
     of the following:
+    - `enterpictureinpicture`
+      - : Open the media in a [Picture-in-picture](/en-US/docs/Web/API/Picture-in-Picture_API) or [Document Picture-in-picture](/en-US/docs/Web/API/Document_Picture-in-Picture_API) window.
     - `hangup`
       - : End a call.
     - `nextslide`
-      - : Moves to the next slide, when presenting a slide deck.
+      - : Move to the next slide, when presenting a slide deck.
     - `nexttrack`
-      - : Advances playback to the next track.
+      - : Advance playback to the next track.
     - `pause`
-      - : Pauses playback of the media.
+      - : Pause playback of the media.
     - `play`
-      - : Begins (or resumes) playback of the media.
+      - : Begin (or resume) playback of the media.
     - `previousslide`
-      - : Moves to the previous slide, when presenting a slide deck.
+      - : Move to the previous slide, when presenting a slide deck.
     - `previoustrack`
-      - : Moves back to the previous track.
+      - : Move back to the previous track.
     - `seekbackward`
-      - : Seeks backward through the media from the current position.
+      - : Seek backward through the media from the current position.
         The `seekOffset` property passed to the callback specifies the amount of time to seek backward.
     - `seekforward`
-      - : Seeks forward from the current position through the media.
+      - : Seek forward from the current position through the media.
         The `seekOffset` property passed to the callback specifies the amount of time to seek forward.
     - `seekto`
-      - : Moves the playback position to the specified time within the media.
-        The time to which to seek is specified in the `seekTime` property passed to the callback.
+      - : Move the playback position to the specified time within the media.
+        The time to move to is specified in the `seekTime` property passed to the callback.
         If you intend to perform multiple `seekto` operations in rapid succession, you can also specify the `fastSeek` property passed to the callback with a value of `true`.
         This lets the browser know it can take steps to optimize repeated operations, and is likely to result in improved performance.
     - `skipad`
-      - : Skips past the currently playing advertisement or commercial.
+      - : Skip past the currently playing advertisement or commercial.
         This action may or may not be available, depending on the platform and {{Glossary("user agent")}}, or may be disabled due to subscription level or other circumstances.
     - `stop`
-      - : Halts playback entirely.
+      - : Halt playback entirely.
     - `togglecamera`
       - : Turn the user's active camera on or off.
     - `togglemicrophone`
@@ -62,6 +64,15 @@ setActionHandler(type, callback)
   - : A function to call when the specified action type is invoked. The callback should not return a value. The callback receives a dictionary containing the following properties:
     - `action`
       - : A string representing the action type. This property allows a single callback to handle multiple action types.
+    - `enterPictureInPictureReason` {{optional_inline}}
+      - : This property will be available if the action is [`enterpictureinpicture`](#enterpictureinpicture).
+        It is an enumerated value that indicates the reason why the browser triggered this action. Possible values are:
+        - `contentoccluded`
+          - : The page displaying the media has become occluded, for example, due to tab switching or minimization.
+        - `useraction`
+          - : The user has taken an explicit action to trigger picture-in-picture mode, such as selecting a "picture-in-picture" option from a context menu or the browser chrome.
+        - `other`
+          - : The reason for entering picture-in-picture mode is something not covered by the other values.
     - `fastSeek` {{optional_inline}}
       - : A [`seekto`](#seekto) action may _optionally_ include this property, which is a Boolean value indicating whether or not to perform a "fast" seek.
         A "fast" seek is a seek being performed in a rapid sequence, such as when fast-forwarding or reversing through the media, rapidly skipping through it.

@@ -77,7 +77,7 @@ The HTML features a {{htmlelement("select")}} element that allows you to choose 
 
 #### JavaScript
 
-In the JavaScript, we first grab references to the `<canvas>` element, its `CanvasRenderingContext2D`, and the `<select>` element, then load the language-dependant font using the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API). Once the font is loaded, we run an `init()` function. This function defines another function — `drawText()`, which draws some text to the canvas context that uses the loaded font, adds a [`change`](/en-US/docs/Web/API/HTMLElement/change_event) [event listener](/en-US/docs/Web/API/EventTarget/addEventListener) to the `<select>` element, then calls `drawText()` so that the text is immediately drawn to the canvas when the page first loads.
+In the JavaScript, we first grab references to the `<canvas>` element, its `CanvasRenderingContext2D`, and the `<select>` element, then load the language-dependent font using the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API). Once the font is loaded, we run an `init()` function. This function defines another function — `drawText()`, which draws some text to the canvas context that uses the loaded font, adds a [`change`](/en-US/docs/Web/API/HTMLElement/change_event) [event listener](/en-US/docs/Web/API/EventTarget/addEventListener) to the `<select>` element, then calls `drawText()` so that the text is immediately drawn to the canvas when the page first loads.
 
 ```js live-example___canvas-l10n
 const canvasElem = document.querySelector("canvas");

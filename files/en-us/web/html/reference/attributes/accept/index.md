@@ -122,10 +122,7 @@ div {
 
 This produces the following output:
 
-{{EmbedLiveSample('A_basic_example', 650, 60)}}
-
-> [!NOTE]
-> You can find this example on GitHub too — see the [source code](https://github.com/mdn/learning-area/blob/main/html/forms/file-examples/simple-file.html), and also [see it running live](https://mdn.github.io/learning-area/html/forms/file-examples/simple-file.html).
+{{EmbedLiveSample('A_basic_example', 650, 80)}}
 
 Regardless of the user's device or operating system, the file input provides a button that opens up a file picker dialog that allows the user to choose a file.
 
@@ -166,7 +163,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample('Limiting_accepted_file_types', 650, 60)}}
+{{EmbedLiveSample('Limiting_accepted_file_types', 650, 80)}}
 
 ## Specifications
 

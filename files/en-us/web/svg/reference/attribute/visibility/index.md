@@ -87,7 +87,7 @@ svg {
     height="100"
     stroke="black"
     stroke-width="5"
-    fill="transparent" />
+    fill="none" />
   <g stroke="seagreen" stroke-width="5" fill="skyblue">
     <rect x="20" y="20" width="80" height="80" visibility="visible" />
     <rect x="120" y="20" width="80" height="80" visibility="hidden" />

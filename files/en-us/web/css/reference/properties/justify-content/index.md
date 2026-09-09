@@ -96,6 +96,8 @@ justify-content: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `start`
   - : The items are packed flush to each other toward the start edge of the alignment container in the main axis.
 

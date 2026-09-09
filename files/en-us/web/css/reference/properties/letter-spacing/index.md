@@ -76,6 +76,8 @@ letter-spacing: unset;
 
 ### Values
 
+This property is specified as a single value from the following list:
+
 - `normal`
   - : The normal letter spacing for the current font. Unlike a value of `0`, this keyword allows the {{glossary("user agent")}} to alter the space between characters in order to justify text.
 - {{cssxref("&lt;length-percentage&gt;")}}

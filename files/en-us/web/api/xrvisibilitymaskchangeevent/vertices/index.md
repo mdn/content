@@ -3,10 +3,12 @@ title: "XRVisibilityMaskChangeEvent: vertices property"
 short-title: vertices
 slug: Web/API/XRVisibilityMaskChangeEvent/vertices
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.XRVisibilityMaskChangeEvent.vertices
 ---
 
-{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The read-only **`vertices`** property of the {{domxref("XRVisibilityMaskChangeEvent")}} interface is an array representing all the coordinate values that may be used in the visibility mask. If this array is empty, the whole region of the `XRView` will be drawn.
 

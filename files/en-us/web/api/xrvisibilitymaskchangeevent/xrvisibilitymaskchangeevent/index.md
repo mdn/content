@@ -3,10 +3,12 @@ title: "XRVisibilityMaskChangeEvent: XRVisibilityMaskChangeEvent() constructor"
 short-title: XRVisibilityMaskChangeEvent()
 slug: Web/API/XRVisibilityMaskChangeEvent/XRVisibilityMaskChangeEvent
 page-type: web-api-constructor
+status:
+  - experimental
 browser-compat: api.XRVisibilityMaskChangeEvent.XRVisibilityMaskChangeEvent
 ---
 
-{{APIRef("WebXR Device API")}}{{SecureContext_Header}}
+{{APIRef("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
 
 The **`XRVisibilityMaskChangeEvent()`** constructor creates and returns a new {{domxref("XRVisibilityMaskChangeEvent")}} object.
 

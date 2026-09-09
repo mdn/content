@@ -51,7 +51,7 @@ If you want to animate more attributes inside the same element, you can add more
 
 ## Animating the transform attributes
 
-The {{ SVGElement("animateTransform") }} element let you animate [transform](/en-US/docs/Web/SVG/Reference/Attribute/transform) attributes. This element is necessary because we are not animating a single attribute like [x](/en-US/docs/Web/SVG/Reference/Attribute/x) which is a number. Rotation attributes look like this: `rotation(theta, x, y)`, where `theta` is the angle in degrees, and `x` and `y` are absolute positions. In the example below, we animate the center of the rotation and the angle.
+The {{ SVGElement("animateTransform") }} element let you animate [transform](/en-US/docs/Web/SVG/Reference/Attribute/transform) attributes. This element is necessary because we are not animating a single attribute like [x](/en-US/docs/Web/SVG/Reference/Attribute/x) which is a number. Rotation attributes look like this: `rotate(theta, x, y)`, where `theta` is the angle in degrees, and `x` and `y` are absolute positions. In the example below, we animate the center of the rotation and the angle.
 
 ```html
 <svg width="300" height="100">

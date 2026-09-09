@@ -38,7 +38,7 @@ at(index)
 
 ### Return value
 
-A {{jsxref("String")}} consisting of the single UTF-16 code unit located at the specified position. Returns {{jsxref("undefined")}} if the given index can not be found.
+A {{jsxref("String")}} consisting of the single UTF-16 code unit located at the specified position. Returns {{jsxref("undefined")}} if the given index cannot be found.
 
 ## Examples
 
@@ -63,7 +63,7 @@ console.log(returnLast(invoiceRef)); // '2'
 
 ### Comparing methods
 
-Here we compare different ways to select the penultimate (last but one) character of a {{jsxref("String")}}. Whilst all below methods are valid, it highlights the succinctness and readability of the `at()` method.
+Here we compare different ways to select the penultimate (last but one) character of a {{jsxref("String")}}. While all below methods are valid, it highlights the succinctness and readability of the `at()` method.
 
 ```js
 const myString = "Every green bus drives fast.";

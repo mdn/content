@@ -8,7 +8,7 @@ status:
 browser-compat: api.FileSystemSync
 ---
 
-{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}{{Deprecated_Header}}
+{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}
 
 In the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API), a `FileSystemSync` object represents a file system. It has two properties.
 
