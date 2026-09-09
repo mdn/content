@@ -32,6 +32,8 @@ This property is a shorthand for the following CSS properties:
 
 ### Values
 
+This property is specified as two space-separated values:
+
 - {{cssxref("&lt;length&gt;")}}
   - : The width of the stroke.
 - {{cssxref("&lt;color&gt;")}}

@@ -23,6 +23,11 @@ animation-range-end: contain;
 animation-range-end: cover 80%;
 animation-range-end: contain 700px;
 
+/* Multiple values */
+animation-range-end:
+  cover 80%,
+  contain 700px;
+
 /* Global values */
 animation-range-end: inherit;
 animation-range-end: initial;
@@ -32,6 +37,8 @@ animation-range-end: unset;
 ```
 
 ### Values
+
+This property is specified as a comma-separated list of values. Each value can be one of the following:
 
 - `normal`
   - : Represents the end of the timeline. This is the default value.
@@ -47,6 +54,8 @@ animation-range-end: unset;
 The `animation-range-end` property specifies the end of the animation's attachment range. Changing the end of the attachment range can potentially shift the end of the animation, that is, the point where keyframes mapped to `100%` progress land when the iteration count is `1`, and can also reduce the effective duration of the animation.
 
 The property value can be `normal`, a `<length-percentage>`, or a {{cssxref("timeline-range-name")}} with an optional `<length-percentage>`. If the `<timeline-range-name>` value does not include a `<length-percentage>`, the percentage defaults to `100%`.
+
+When specifying multiple comma-separated values, they are applied to the animations in the order in which the {{cssxref("animation-name")}}values appear. See [Setting multiple animation property values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values).
 
 The `animation-range-end` property is included in the {{cssxref("animation")}} shorthand as a reset-only value. This means that using the `animation` shorthand resets any previously declared `animation-range-end` value to `normal`; the shorthand cannot be used to set a new `animation-range-end` value. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), you should declare `animation-range-end` _after_ declaring any `animation` shorthand to avoid resetting the value to `normal`.
 

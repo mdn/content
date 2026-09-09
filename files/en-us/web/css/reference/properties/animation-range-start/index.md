@@ -23,6 +23,11 @@ animation-range-start: contain;
 animation-range-start: cover 20%;
 animation-range-start: contain 100px;
 
+/* Multiple values */
+animation-range-start:
+  cover 20%,
+  contain 100px;
+
 /* Global values */
 animation-range-start: inherit;
 animation-range-start: initial;
@@ -32,6 +37,8 @@ animation-range-start: unset;
 ```
 
 ### Values
+
+This property is specified as a comma-separated list of values. Each value can be one of the following:
 
 - `normal`
   - : Represents the start of the timeline. This is the default value.
@@ -45,8 +52,10 @@ animation-range-start: unset;
 ## Description
 
 Allowed values for the `animation-range-start` property are `normal`, a {{cssxref("length-percentage")}}, a `<timeline-range-name>`, or a `<timeline-range-name>` followed by a `<length-percentage>`. If the {{cssxref("timeline-range-name")}} value does not include a `<length-percentage>`, the percentage defaults to `0%`.
+
 See {{cssxref("animation-range")}} for a detailed description of the available values.
-Also check out the [View progress timeline visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/), which shows what the different values mean in an easy-to-follow visual format.
+
+When specifying multiple comma-separated values, they are applied to the animations in the order in which the {{cssxref("animation-name")}}values appear. See [Setting multiple animation property values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values).
 
 The `animation-range-start` is included in the {{cssxref("animation")}} shorthand as a reset-only value. This means that using the `animation` shorthand resets any previously declared `animation-range-start` value of equal or lower specificity to `normal`; the shorthand cannot be used to set a new `animation-range-start` value. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), you should declare `animation-range-start` _after_ declaring any `animation` shorthand to avoid resetting the value to `normal`.
 
