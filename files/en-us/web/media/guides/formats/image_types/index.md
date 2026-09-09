@@ -1366,6 +1366,13 @@ Most browsers can progressively render them by displaying an initial version bef
 If you need to support browsers that don't allow WebP, AVIF, or JPEG XL, use the {{HTMLElement("picture")}} element to provide a PNG or JPEG fallback.
 This is shown in [Providing image fallbacks](#providing_image_fallbacks) below.
 
+Compression can be lossy, discarding image data to get much smaller files, or lossless, reproducing the original exactly.
+For screenshots, diagrams, logos, and line art, prefer lossless encoding, as blurring and colored fringes around text and sharp edges are very visible.
+Photographs and other continuous-tone images can usually tolerate lossy compression, because the discarded detail is harder to see.
+WebP and AVIF support both lossy and lossless compression as a setting you choose when encoding.
+JPEG is lossy, so it is often a good fallback format for photographs, while PNG is lossless, making it better for screenshots, diagrams, and line art.
+PNG is also the fallback for any image needing transparency, as JPEG has no alpha channel.
+
 For diagrams, charts, and other images that must be drawn accurately at different sizes, use [SVG](#svg_scalable_vector_graphics).
 Most icons have vector graphics versions, and you should prioritize the SVG version whenever possible. If only raster versions are available, choose [WebP](#webp_image) but provide fallback like other raster images.
 
