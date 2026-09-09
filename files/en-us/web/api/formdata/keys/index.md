@@ -10,7 +10,8 @@ browser-compat: api.FormData.keys
 
 The **`FormData.keys()`** method returns an [iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) which iterates through all keys contained in the {{domxref("FormData")}}. The keys are strings.
 
-> **Note:** Unlike [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) keys, `FormData` keys are not necessarily unique. A form can contain multiple elements with the same name, so the same key may appear more than once while iterating. To retrieve all values associated with a single key, use the {{domxref("FormData.getAll()", "getAll()")}} method (or {{domxref("FormData.get()", "get()")}} for only the first value).
+> [!NOTE]
+> Unlike [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) keys, `FormData` keys are not necessarily unique. A form can contain multiple elements with the same name, so the same key may appear more than once while iterating. To retrieve all values associated with a single key, use the {{domxref("FormData.getAll()", "getAll()")}} method (or {{domxref("FormData.get()", "get()")}} for only the first value).
 
 ## Syntax
 
