@@ -98,6 +98,8 @@ If a form is used to search, you should use the more specialized [`role="search"
 
 ### Labeling landmarks
 
+An accessible name is strongly recommended for the `form` role, although not required by ARIA.
+
 Each {{HTMLElement('form')}} element and form `role` that needs to be exposed as a landmark must be given an accessible name. This name will allow an assistive technology user to be able to quickly understand the purpose of the form landmark.
 
 Use an `aria-labelledby`, `aria-label` or `title` on the same element that was given the `role="form"` to provide it an accessible name.
