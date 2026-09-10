@@ -17,7 +17,7 @@ and reconnected will retain the same index.
 
 ## Value
 
-A {{jsxref("number") }}.
+A {{jsxref("Number")}}.
 
 ## Examples
 

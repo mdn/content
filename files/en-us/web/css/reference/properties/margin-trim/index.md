@@ -34,6 +34,8 @@ margin-trim: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `none`
   - : Margins are not trimmed by the container.
 

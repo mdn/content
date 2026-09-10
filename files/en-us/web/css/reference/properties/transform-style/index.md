@@ -67,6 +67,8 @@ transform-style: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `flat`
   - : Indicates that the children of the element are lying in the plane of the element itself.
 - `preserve-3d`

@@ -16,7 +16,7 @@ SVG's `<a>` element is a container, which means you can create a link around tex
 
 ## Attributes
 
-- [`download`](/en-US/docs/Web/HTML/Reference/Elements/a#download)
+- {{SVGAttr("download")}}
   - : Instructs browsers to download a {{Glossary("URL")}} instead of navigating to it, so the user will be prompted to save it as a local file.
     _Value type_: **\<string>**; _Default value_: _none_; _Animatable_: **no**
 - {{SVGAttr("href")}}

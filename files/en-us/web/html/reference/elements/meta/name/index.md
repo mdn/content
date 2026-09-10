@@ -58,10 +58,12 @@ The HTML specification defines the following set of standard metadata names:
 
 ### Meta names defined in other specifications
 
-- [`viewport`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport)
-  - : Gives hints about the initial size of the {{glossary("viewport")}}. Defined in the [CSS viewport module](/en-US/docs/Web/CSS/Guides/Viewport).
+- [`responsive-embedded-sizing`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/responsive-embedded-sizing) {{experimental_inline}}
+  - : Opts in an embedded document to sharing its size information with the parent page. Defined in the [CSS box sizing module](/en-US/docs/Web/CSS/Guides/Box_sizing).
 - [`text-scale`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/text-scale) {{experimental_inline}}
   - : Enables opting the page in to having the {{htmlelement("html")}} root element's {{cssxref("font-size")}} scale in proportion to OS and browser-level text scale settings. Defined in the [CSS fonts module](/en-US/docs/Web/CSS/Guides/Fonts).
+- [`viewport`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/viewport)
+  - : Gives hints about the initial size of the {{glossary("viewport")}}. Defined in the [CSS viewport module](/en-US/docs/Web/CSS/Guides/Viewport).
 
 ### Meta names defined in the WHATWG MetaExtensions wiki
 

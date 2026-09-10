@@ -127,7 +127,7 @@ Additionally, this interface exposes the following properties containing more in
 ## Instance methods
 
 - {{domxref("PerformanceResourceTiming.toJSON()")}}
-  - : Returns a JSON representation of the `PerformanceResourceTiming` object.
+  - : Overrides the {{domxref("PerformanceEntry.toJSON()")}} method to return a JSON representation of the `PerformanceResourceTiming` object.
 
 ## Examples
 

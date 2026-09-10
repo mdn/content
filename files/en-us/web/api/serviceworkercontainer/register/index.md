@@ -72,7 +72,7 @@ A {{jsxref("Promise")}} that resolves with a {{domxref("ServiceWorkerRegistratio
     This can happen if the URL can't be resolved to a valid URL or uses a scheme that is not `http:` or `https`.
     It may also happen if `scriptURL` is not a {{domxref("TrustedScriptURL")}}, and this is a requirement of the site's [Trusted Types Policy](/en-US/docs/Web/API/Trusted_Types_API).
 
-    The exception is also raised if the `scriptURL` or `scope URL` path contains the case-insensitive ASCII "%2f" (`*`) or "%5c" (`=`)
+    The exception is also raised if the `scriptURL` or `scope URL` path contains the case-insensitive ASCII "%2F" (`/`) or "%5C" (`\`)
 
 - `SecurityError` {{domxref("DOMException")}}
   - : The `scriptURL` is not a potentially trustworthy origin, such as `localhost` or an `https` URL.

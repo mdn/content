@@ -41,9 +41,10 @@ l10n:
     Firefox_documentation: Documentación de Firefox
   fr:
     Add-ons: Modules complémentaires
-    Browser_extensions: WebExtensions
+    Browser_extensions: Extensions de navigateur
     Themes: Thèmes
     Firefox_documentation: Documentation de Firefox
+    Release notes archive: Archive des notes de version
   ja:
     Add-ons: アドオン
     Browser_extensions: ブラウザー拡張機能

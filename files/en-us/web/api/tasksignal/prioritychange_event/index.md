@@ -26,12 +26,6 @@ A {{domxref("TaskPriorityChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("TaskPriorityChangeEvent")}}
 
-## Event properties
-
-- {{domxref('TaskPriorityChangeEvent.previousPriority')}}
-  - : Indicates the previous priority of the task (before it was changed).
-    The new/updated priority is read from `event.target.priority` ([`TaskSignal.priority`](/en-US/docs/Web/API/TaskSignal/priority)).
-
 ## Examples
 
 The example below shows how to listen for the `prioritychange` event on a {{domxref("TaskSignal")}}.

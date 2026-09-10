@@ -52,6 +52,8 @@ The promise is rejected if the injection fails, such as when the injection targe
 
 Each `InjectionResult` object has these properties:
 
+- `documentId`
+  - : `string`. The document associated with the injection. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
 - `frameId`
   - : `number`. The frame ID associated with the injection.
 - `result` {{optional_inline}}

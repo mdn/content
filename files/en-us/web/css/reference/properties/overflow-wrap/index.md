@@ -68,9 +68,9 @@ overflow-wrap: revert-layer;
 overflow-wrap: unset;
 ```
 
-The `overflow-wrap` property is specified as a single keyword chosen from the list of values below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `normal`
   - : Lines may only break at normal word break points (such as a space between two words).

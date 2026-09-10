@@ -9,9 +9,6 @@ A content script is a part of your extension that runs in the context of a web p
 
 Content scripts can access [a small subset of the WebExtension APIs](#webextension_apis), but they can [communicate with background scripts](#communicating_with_background_scripts) using a messaging system and thereby indirectly access the WebExtension APIs. [Background scripts](/en-US/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) can access all the [WebExtension JavaScript APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) but can't directly access the content of web pages.
 
-> [!NOTE]
-> Some Web APIs are restricted to [secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts), which also applies to content scripts running in these contexts. Except for {{domxref("PointerEvent.getCoalescedEvents()")}}, which can be called from content scripts in insecure contexts in Firefox.
-
 ## Loading content scripts
 
 You can load a content script into a web page:
@@ -184,6 +181,8 @@ In addition to the standard DOM APIs, content scripts can use these WebExtension
 **From [`runtime`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime):**
 
 - [`connect()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect)
+- {{WebExtAPIRef("runtime.getDocumentId()","getDocumentId()")}}
+- {{WebExtAPIRef("runtime.getFrameId()","getFrameId()")}}
 - [`getManifest()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getManifest)
 - [`getURL()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL)
 - [`onConnect`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect)
@@ -230,6 +229,15 @@ This is accomplished by exposing more privileged XHR and fetch instances in the 
 
 > [!NOTE]
 > In Chrome, starting with version 73, and Firefox, starting with version 101 when using Manifest V3, content scripts are subject to the same [CORS](/en-US/docs/Web/HTTP/Guides/CORS) policy as the page they are running within. Only backend scripts have elevated cross-domain privileges. See [Changes to Cross-Origin Requests in Chrome Extension Content Scripts](https://www.chromium.org/Home/chromium-security/extension-content-script-fetches/).
+
+### Secure contexts
+
+Pages loaded using HTTPS or from another trustworthy source, such as `localhost`, provide a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts). Some Web APIs, such as {{domxref("crypto.subtle")}} and {{domxref("navigator.geolocation")}}, are only available in secure contexts. The restricted APIs expose information or capabilities that would be risky on a page that an attacker could tamper with.
+
+Content scripts run in the context of the page they're injected into. Therefore, the restriction on these APIs also applies to content scripts: a content script running in an insecure context can't use a Web API that requires a secure context, even though the rest of the extension may still have access to it.
+
+> [!NOTE]
+> In Firefox, the secure context restricted API {{domxref("PointerEvent.getCoalescedEvents()")}} can be called from content scripts in insecure contexts.
 
 ## Communicating with background scripts
 

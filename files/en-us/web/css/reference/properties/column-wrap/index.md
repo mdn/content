@@ -31,6 +31,8 @@ column-wrap: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `auto`
   - : The initial value. If the content container's {{cssxref("column-height")}} is set to a {{cssxref("&lt;length>")}}, `auto` resolves to `wrap`, otherwise it resolves to `nowrap`.
 - `nowrap`

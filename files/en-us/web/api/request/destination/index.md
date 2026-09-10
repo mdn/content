@@ -68,7 +68,7 @@ Possible values are:
   - : The target is a [speculation rules](/en-US/docs/Web/API/Speculation_Rules_API) JSON document.
 - `"style"`
   - : The target is a style
-- `"text"`
+- `"text"` {{experimental_inline}}
   - : The target is a text file.
 - `"track"`
   - : The target is an HTML {{HTMLElement("track")}}.

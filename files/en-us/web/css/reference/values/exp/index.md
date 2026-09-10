@@ -46,7 +46,7 @@ Returns a non-negative {{CSSxRef("number")}} representing e<sup>number</sup>, wh
 
 ### Rotate elements
 
-The `exp()` function can be used to {{CSSxRef("transform-function/rotate", "rotate")}} elements as it return a {{CSSxRef("number")}}.
+The `exp()` function can be used to {{CSSxRef("transform-function/rotate", "rotate")}} elements as it returns a {{CSSxRef("number")}}.
 
 #### HTML
 

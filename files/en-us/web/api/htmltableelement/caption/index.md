@@ -8,13 +8,13 @@ browser-compat: api.HTMLTableElement.caption
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLTableElement.caption`** property represents the
-table caption. If no caption element is associated with the table, this property is
-`null`.
+The **`caption`** property of the {{domxref("HTMLTableElement")}} interface represents the first {{HTMLElement("caption")}} element child of the given {{HTMLElement("table")}}, or `null` if no such element exists.
 
 ## Value
 
-A string.
+An {{domxref("HTMLTableCaptionElement")}} or `null`.
+
+This property can be assigned, which causes the existing first {{HTMLElement("caption")}} element child, if any, to be removed, and the given value, if it is not `null`, to be inserted as the first child. Therefore, setting `null` has the same effect as calling {{domxref("HTMLTableElement.deleteCaption", "deleteCaption()")}}. If the assigned value is not an {{domxref("HTMLTableCaptionElement")}} or `null`, a {{jsxref("TypeError")}} is thrown.
 
 ## Examples
 
@@ -34,4 +34,8 @@ if (table.caption) {
 
 ## See also
 
-- The interface implementing this property: {{domxref("HTMLTableElement")}}.
+- {{domxref("HTMLTableElement.tBodies")}}
+- {{domxref("HTMLTableElement.tFoot")}}
+- {{domxref("HTMLTableElement.tHead")}}
+- {{domxref("HTMLTableElement.createCaption()")}}
+- {{domxref("HTMLTableElement.deleteCaption()")}}
