@@ -3,9 +3,13 @@ title: "sub128: Wasm numeric instruction"
 short-title: sub128
 slug: WebAssembly/Reference/Numeric/sub128
 page-type: webassembly-instruction
+status:
+  - experimental
 browser-compat: webassembly.instructions.sub128
 sidebar: webassemblysidebar
 ---
+
+{{SeeCompatTable}}
 
 The **`sub128`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) subtracts one 128-bit integer — represented by two 64-bit integers — from another to produce a 128-bit result represented by two 64-bit integers.
 
