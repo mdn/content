@@ -23,7 +23,9 @@ None.
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with `undefined`.
 
 > [!NOTE]
-> Before Firefox 157, the promise was fulfilled with a boolean: `true` if any alarms were cleared and `false` otherwise. Chrome fulfills the promise with `true` and Safari with `undefined`. Don't rely on the fulfillment value. To check whether any alarms remain, call {{WebExtAPIRef("alarms.getAll()")}}.
+> Before Firefox 157, the promise was fulfilled with a boolean: `true` if any alarms were cleared and `false` otherwise. Chrome fulfills the promise with `true` and Safari with `undefined`. Don't rely on the fulfillment value. See [w3c/webextensions#1055](https://github.com/w3c/webextensions/issues/1055) for details.
+>
+> To check whether any alarms remain, call {{WebExtAPIRef("alarms.getAll()")}}.
 
 ## Examples
 
