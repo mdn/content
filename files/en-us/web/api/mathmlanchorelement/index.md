@@ -48,11 +48,11 @@ _Inherits properties from its parent, {{domxref("MathMLElement")}}._
 
 ### Basic usage
 
-This example marks up the [Gamma function](https://en.wikipedia.org/wiki/Gamma_function) in MathML. It includes several nested MathML `<a>` elements and demonstrates how to access their properties in JavaScript via the `MathMLAnchorElement` interface.
+This example marks up the [Gamma function](https://en.wikipedia.org/wiki/Gamma_function) in MathML. It demonstrates how to access MathML `<a>` properties in JavaScript via the `MathMLAnchorElement` interface.
 
 #### MathML
 
-The example includes several `<a>` elements that point to various parts of the [Gamma function](https://en.wikipedia.org/wiki/Gamma_function) Wikipedia page. We've updated the first one to an `example.com` link that includes several link and URL features that we can target with JavaScript. We also include a {{htmlelement("ul")}} element to output property values to.
+The example includes several `<a>` elements. The first one is an `example.com` link that includes several link and URL features that we can target with JavaScript. We also include a {{htmlelement("ul")}} element to output property values to.
 
 ```html live-sample___mathmlanchorelement
 <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"
