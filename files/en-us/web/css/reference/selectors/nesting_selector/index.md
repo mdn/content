@@ -15,7 +15,7 @@ If not used in nested style rule, the `&` nesting selector represents the [scopi
 
 ## Syntax
 
-```plain
+```css-nolint
 /* Nested directly — adds whitespace (descendant) */
 parentRule {
   & childRule { }
