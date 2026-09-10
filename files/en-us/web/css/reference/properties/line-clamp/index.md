@@ -89,6 +89,8 @@ In this example, there are three cards, each with a different `line-clamp` value
       This card the <em>number of lines</em> is specified by an
       <code>&lt;integer&gt;</code> and any content that does not fit in that
       number of lines is truncated and an ellipsis is shown.
+    </p>
+
     <p class="integer">
       In this card, the <em>number of lines</em> is specified by an
       <code>&lt;integer&gt;</code>. Any content that does not fit is truncated
