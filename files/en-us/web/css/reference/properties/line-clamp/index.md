@@ -50,7 +50,7 @@ This property is specified as one or two space-separated values from the followi
     - {{cssxref("string")}}: Renders the specified string at the end of the affected line. Browsers may truncate this string if it is very long. An empty string behaves like the `no-ellipsis` value.
 
 > [!NOTE]
-> If only the `<’block-ellipsis’>` is declared without an `<integer>` value it will only display when the content is clamped by the height of the container.
+> If `<’block-ellipsis’>` is specified without an `<integer>`, it applies only when content is clamped by the height of the container.
 
 ## Description
 
