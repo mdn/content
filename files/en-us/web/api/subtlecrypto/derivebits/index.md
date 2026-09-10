@@ -8,23 +8,16 @@ browser-compat: api.SubtleCrypto.deriveBits
 
 {{APIRef("Web Crypto API")}}{{SecureContext_header}}{{AvailableInWorkers}}
 
-The **`deriveBits()`** method of the
-{{domxref("SubtleCrypto")}} interface can be used to derive an array of bits from a base
-key.
+The **`deriveBits()`** method of the {{domxref("SubtleCrypto")}} interface can be used to derive an array of bits from a base key.
 
-It takes as its arguments the base key, the derivation algorithm to use, and the length
-of the bits to derive. It returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+It takes as its arguments the base key, the derivation algorithm to use, and the length of the bits to derive.
+It returns a [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 which will be fulfilled with an
 [`ArrayBuffer`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
 containing the derived bits.
 
-This method is very similar to
-[`SubtleCrypto.deriveKey()`](/en-US/docs/Web/API/SubtleCrypto/deriveKey),
-except that `deriveKey()` returns a
-[`CryptoKey`](/en-US/docs/Web/API/CryptoKey) object rather than an
-`ArrayBuffer`. Essentially `deriveKey()` is composed of
-`deriveBits()` followed by
-[`importKey()`](/en-US/docs/Web/API/SubtleCrypto/importKey).
+This method is very similar to [`SubtleCrypto.deriveKey()`](/en-US/docs/Web/API/SubtleCrypto/deriveKey), except that `deriveKey()` returns a [`CryptoKey`](/en-US/docs/Web/API/CryptoKey) object rather than an `ArrayBuffer`.
+Essentially `deriveKey()` is composed of `deriveBits()` followed by [`importKey()`](/en-US/docs/Web/API/SubtleCrypto/importKey).
 
 This function supports the same derivation algorithms as `deriveKey()`: ECDH, HKDF, PBKDF2, and X25519.
 See [Supported algorithms](/en-US/docs/Web/API/SubtleCrypto/deriveKey#supported_algorithms) for some more detail on these algorithms.
@@ -44,13 +37,12 @@ deriveBits(algorithm, baseKey, length)
     - To use [PBKDF2](/en-US/docs/Web/API/SubtleCrypto/deriveKey#pbkdf2), pass a [`Pbkdf2Params`](/en-US/docs/Web/API/Pbkdf2Params) object.
     - To use [X25519](/en-US/docs/Web/API/SubtleCrypto/deriveKey#x25519), pass an [`EcdhKeyDeriveParams`](/en-US/docs/Web/API/EcdhKeyDeriveParams) object, specifying the string `X25519` as the `name` property.
 - `baseKey`
-  - : A {{domxref("CryptoKey")}} representing the input
-    to the derivation algorithm. If `algorithm` is ECDH, this will be the ECDH
-    private key. Otherwise it will be the initial key material for the derivation
-    function: for example, for PBKDF2 it might be a password, imported as a
-    `CryptoKey` using [`SubtleCrypto.importKey()`](/en-US/docs/Web/API/SubtleCrypto/importKey).
+  - : A {{domxref("CryptoKey")}} representing the input to the derivation algorithm.
+    If `algorithm` is ECDH or X25519, this will be the private key.
+    Otherwise it will be the initial key material for the derivation function: for example, for PBKDF2 it might be a password, imported as a `CryptoKey` using [`SubtleCrypto.importKey()`](/en-US/docs/Web/API/SubtleCrypto/importKey).
 - `length`
-  - : A number representing the number of bits to derive. To be compatible with all browsers, the number should be a multiple of 8.
+  - : A number representing the number of bits to derive.
+    To be compatible with all browsers, the number should be a multiple of 8.
 
 ### Return value
 
@@ -62,15 +54,19 @@ containing the derived bits.
 
 The promise is rejected when one of the following exceptions are encountered:
 
+- `TypeError`
+  - : Raised if the _length_ parameter of the `deriveBits()` call is negative, non-finite (`NaN` or `Infinity`), or greater than 4294967295 (`2^32 - 1`).
 - `OperationError` {{domxref("DOMException")}}
-  - : Raised if the _length_ parameter of the `deriveBits()` call is null, and also in some cases if the _length_ parameter is not a multiple of 8.
+  - : Raised for reasons specific to the requested derivation algorithm.
+    - For HKDF and PBKDF2, raised if the [`length`](#length) parameter is `null` or is not a multiple of 8.
+    - For PBKDF2, also raised if the `iterations` parameter is zero.
+    - For ECDH and X25519, raised if the requested `length` is greater than the number of bits the algorithm can derive (256 bits for X25519; the field size of the curve for ECDH).
+      For X25519 only, if the derived secret is all zero.
 - `InvalidAccessError` {{domxref("DOMException")}}
-  - : Raised when the base key is not a key for the requested derivation algorithm or if
-    the [`CryptoKey.usages`](/en-US/docs/Web/API/CryptoKey) value of that key doesn't contain
-    `deriveBits`.
-- `NotSupported` {{domxref("DOMException")}}
-  - : Raised when trying to use an algorithm that is either unknown or isn't suitable for
-    derivation.
+  - : Raised when the base key is not a key for the requested derivation algorithm or if the [`CryptoKey.usages`](/en-US/docs/Web/API/CryptoKey) value of that key doesn't contain `deriveBits`.
+    For ECDH and X25519, also raised when the public key passed in `algorithm` is not a public key, the base key is not a private key, or the two keys don't share the same algorithm (and, for ECDH, the same curve).
+- `NotSupportedError` {{domxref("DOMException")}}
+  - : Raised when trying to use an algorithm that is either unknown or isn't suitable for derivation.
 
 ## Supported algorithms
 
@@ -85,7 +81,8 @@ See the [Supported algorithms section of the `deriveKey()` documentation](/en-US
 
 In this example Alice and Bob each generate an ECDH key pair.
 
-We then use Alice's private key and Bob's public key to derive a shared secret. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/derive-bits/ecdh.js)
+We then use Alice's private key and Bob's public key to derive a shared secret.
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/derive-bits/ecdh.js)
 
 ```js
 async function deriveSharedSecret(privateKey, publicKey) {
@@ -282,8 +279,8 @@ Press the "Change keys" button to change the X25519 keys used by both parties.
 
 ### PBKDF2
 
-In this example we ask the user for a password, then use it to derive some bits using
-PBKDF2. [See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/derive-bits/pbkdf2.js)
+In this example we ask the user for a password, then use it to derive some bits using PBKDF2.
+[See the complete code on GitHub.](https://github.com/mdn/dom-examples/blob/main/web-crypto/derive-bits/pbkdf2.js)
 
 ```js
 let salt;
