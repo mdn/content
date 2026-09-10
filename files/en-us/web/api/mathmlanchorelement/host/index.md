@@ -20,8 +20,16 @@ A string.
 
 ### Basic usage
 
+Given this MathML:
+
+```html
+<math>
+  <a href="https://example.com#examples">...</a>
+</math>
+```
+
 ```js
-const mathAnchor = document.querySelector("a");
+const mathAnchor = document.querySelector("math a");
 
 mathAnchor.href = "https://example.com/subsection";
 mathAnchor.host === "example.com";
