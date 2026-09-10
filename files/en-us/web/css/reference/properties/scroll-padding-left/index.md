@@ -1,5 +1,6 @@
 ---
-title: scroll-padding-left
+title: "`scroll-padding-left` CSS property"
+short-title: scroll-padding-left
 slug: Web/CSS/Reference/Properties/scroll-padding-left
 page-type: css-property
 browser-compat: css.properties.scroll-padding-left
@@ -117,5 +118,5 @@ scroll-padding-left: unset;
 
 ## See also
 
-- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap)
-- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)
+- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) module
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap) on web.dev (2018)

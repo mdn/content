@@ -1,5 +1,6 @@
 ---
-title: box-flex-group
+title: "`box-flex-group` CSS property"
+short-title: box-flex-group
 slug: Web/CSS/Reference/Properties/box-flex-group
 page-type: css-property
 status:
@@ -9,7 +10,7 @@ browser-compat: css.properties.box-flex-group
 sidebar: cssref
 ---
 
-{{Non-standard_Header}}{{Deprecated_Header}}
+{{Non-standard_Header}}
 
 > [!WARNING]
 > This is a property of the original CSS flexible box layout Module draft. It has been replaced in the specification. See [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout/Basic_concepts) for information about the current standard.

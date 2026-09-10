@@ -36,7 +36,7 @@ See {{domxref("StorageManager.estimate()")}}
 
 ```js
 document.requestStorageAccess({ estimate: true }).then(
-  (handle) => {
+  async (handle) => {
     console.log("estimate access granted");
     await handle.estimate();
   },

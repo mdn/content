@@ -54,7 +54,7 @@ Example using {{domxref("Performance.getEntriesByType()")}}, which only shows `n
 ```js
 const entries = performance.getEntriesByType("navigation");
 entries.forEach((entry) => {
-  const loadEventTime = entry.unloadEventEnd - entry.unloadEventStart;
+  const unloadEventTime = entry.unloadEventEnd - entry.unloadEventStart;
   if (unloadEventTime > 0) {
     console.log(`${entry.name}:
       load event handler time: ${unloadEventTime}ms`);

@@ -20,6 +20,9 @@ targetWindow.foo = clonedObject;
 
 This enables privileged code, such as an extension, to share an object with less-privileged code, such as a web page script.
 
+> [!NOTE]
+> You can also use {{domxref("structuredClone")}} to create structured clones. From Firefox 149, `targetWindow.structuredClone(value)` clones the value into the [realm](/en-US/docs/Web/JavaScript/Reference/Execution_model#realms) of the target window.
+
 ## Syntax
 
 ```js-nolint
@@ -39,7 +42,7 @@ let clonedObject = cloneInto(
 - `options` {{optional_inline}}
   - : `object`. Options for the function.
     - `cloneFunctions` {{optional_inline}}
-      - : `boolean`. Whether the object's functions should be cloned. Default to `false`. Cloned functions have the same semantics as functions exported using [`exportFunction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts/exportFunction). See [Cloning objects that have functions](#cloning_objects_that_have_functions). {{optional_inline}}
+      - : `boolean`. Whether the object's functions should be cloned. Defaults to `false`. Cloned functions have the same semantics as functions exported using [`exportFunction`](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts/exportFunction). See [Cloning objects that have functions](#cloning_objects_that_have_functions). {{optional_inline}}
     - `wrapReflectors` {{optional_inline}}
       - : `boolean`. Whether DOM objects should be passed by reference instead of cloned. DOM objects are usually not clonable. Defaults to `false`. See [Cloning objects that contain DOM elements](#cloning_objects_that_contain_dom_elements).
 

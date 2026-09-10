@@ -65,14 +65,20 @@ Comments behave like whitespace, and are discarded during script execution.
 
 ## Declarations
 
-JavaScript has three kinds of variable declarations.
+JavaScript has five kinds of variable declarations.
 
 - {{jsxref("Statements/var", "var")}}
   - : Declares a variable, optionally initializing it to a value.
 - {{jsxref("Statements/let", "let")}}
-  - : Declares a block-scoped, local variable, optionally initializing it to a value.
+  - : Declares a block-scoped variable, optionally initializing it to a value.
 - {{jsxref("Statements/const", "const")}}
-  - : Declares a block-scoped, read-only named constant.
+  - : Declares a block-scoped variable that cannot be re-assigned, which must be initialized at declaration.
+- {{jsxref("Statements/using", "using")}}
+  - : Declares a variable like `const` that is _synchronously disposed_.
+- {{jsxref("Statements/await_using", "await using")}}
+  - : Declares a variable like `const` that is _asynchronously disposed_.
+
+We will only talk about the first three: `var`, `let`, and `const`, in this article. The `using` and `await using` declarations will be introduced in [Resource management](/en-US/docs/Web/JavaScript/Guide/Resource_management).
 
 ### Variables
 
@@ -517,6 +523,8 @@ Object literals support a range of shorthand syntaxes that include setting the p
 Together, these also bring object literals and class declarations closer together, and allow object-based design to benefit from some of the same conveniences.
 
 ```js
+const theProtoObj = {};
+const handler = {};
 const obj = {
   // __proto__
   __proto__: theProtoObj,

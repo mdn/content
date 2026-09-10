@@ -1,5 +1,6 @@
 ---
-title: symbols
+title: "`symbols` CSS at-rule descriptor"
+short-title: symbols
 slug: Web/CSS/Reference/At-rules/@counter-style/symbols
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.symbols

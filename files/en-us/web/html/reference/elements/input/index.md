@@ -1,5 +1,6 @@
 ---
-title: "<input>: The HTML Input element"
+title: "`<input>` HTML input element"
+short-title: <input>
 slug: Web/HTML/Reference/Elements/input
 page-type: html-element
 browser-compat: html.elements.input
@@ -70,7 +71,7 @@ The available types are as follows:
     </tr>
     <tr>
       <td>{{HTMLElement("input/checkbox", "checkbox")}}</td>
-      <td>A check box allowing single values to be selected/deselected.</td>
+      <td>A checkbox allowing single values to be selected/deselected.</td>
       <td id="examplecheckbox">
         <pre class="brush: html hidden">
 &#x3C;input type="checkbox" name="checkbox"/></pre>
@@ -378,6 +379,7 @@ Attributes for the `<input>` element include the [global HTML attributes](/en-US
 | [`size`](#size)                               | `text`, `search`, `url`, `tel`, `email`, `password`                     | Size of the control                                                                                   |
 | [`src`](#src)                                 | `image`                                                                 | Same as `src` attribute for {{htmlelement('img')}}; address of image resource                         |
 | [`step`](#step)                               | `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`    | Incremental values that are valid                                                                     |
+| [`switch`](#switch)                           | `checkbox`                                                              | Whether the checkbox input should be rendered as a switch                                             |
 | [`type`](#type)                               | all                                                                     | Type of form control                                                                                  |
 | [`value`](#value)                             | all except `image`                                                      | The value of the control. When specified in the HTML, corresponds to the initial value                |
 | [`width`](#width)                             | `image`                                                                 | Same as `width` attribute for {{htmlelement('img')}}                                                  |
@@ -614,6 +616,12 @@ A few additional non-standard attributes are listed following the descriptions o
     > When the data entered by the user doesn't adhere to the stepping configuration, the value is considered invalid in constraint validation and will match the `:invalid` pseudoclass.
 
     See [Client-side validation](#client-side_validation) for more information.
+
+- [`switch`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox#switch) {{experimental_inline}} {{non-standard_inline}}
+  - : Valid for `checkbox` input only, `switch` is a Boolean attribute that indicates whether the checkbox input should be rendered as a switch.
+
+    > [!NOTE]
+    > This attribute is still experimental and has limited browser support. The attribute is ignored on unsupported browsers.
 
 - `tabindex`
   - : Global attribute valid for all elements, including all the input types, an integer attribute indicating if the element can take input focus (is focusable), if it should participate to sequential keyboard navigation. As all input types except for input of type hidden are focusable, this attribute should not be used on form controls, because doing so would require the management of the focus order for all elements within the document with the risk of harming usability and accessibility if done incorrectly.
@@ -1191,7 +1199,7 @@ In brief:
 - We check the valid state of the input element every time its value is changed by running the `checkValidity()` method via the `input` event handler.
 - If the value is invalid, an `invalid` event is raised, and the `invalid` event handler function is run. Inside this function we work out whether the value is invalid because it is empty, or because it doesn't match the pattern, using an `if ()` block, and set a custom validity error message.
 - As a result, if the input value is invalid when the submit button is pressed, one of the custom error messages will be shown.
-- If it is valid, it will submit as you'd expect. For this to happen, the custom validity has to be cancelled, by invoking `setCustomValidity()` with an empty string value. We therefore do this every time the `input` event is raised. If you don't do this, and a custom validity was previously set, the input will register as invalid, even if it currently contains a valid value on submission.
+- If it is valid, it will submit as you'd expect. For this to happen, the custom validity has to be canceled, by invoking `setCustomValidity()` with an empty string value. We therefore do this every time the `input` event is raised. If you don't do this, and a custom validity was previously set, the input will register as invalid, even if it currently contains a valid value on submission.
 
 > [!NOTE]
 > Always validate input constraints both client side and server side. Constraint validation doesn't remove the need for validation on the _server side_. Invalid values can still be sent by older browsers or by bad actors.

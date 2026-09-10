@@ -1,5 +1,6 @@
 ---
-title: font-display
+title: "`font-display` CSS at-rule descriptor"
+short-title: font-display
 slug: Web/CSS/Reference/At-rules/@font-face/font-display
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.font-display
@@ -60,9 +61,7 @@ The font display timeline is based on a timer that begins the moment the user ag
 ```css
 @font-face {
   font-family: "ExampleFont";
-  src:
-    url("/path/to/fonts/example-font.woff") format("woff"),
-    url("/path/to/fonts/example-font.eot") format("embedded-opentype");
+  src: url("/path/to/fonts/example-font.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: fallback;

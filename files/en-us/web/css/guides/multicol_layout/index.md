@@ -29,8 +29,8 @@ In this example, the 1967 speech from Canada's centennial, _A Lament for Confede
   <p>
     For I have known you when your forests were mine; when they gave me my meat
     and my clothing. I have known you in your fruits and rivers where your fish
-    flashed and danced in the sun, where the waters said ‘come and eat of my
-    abundance.’ I have known you in the freedom of your winds. And my spirit,
+    flashed and danced in the sun, where the waters said 'come and eat of my
+    abundance.' I have known you in the freedom of your winds. And my spirit,
     like your winds, once roamed this good lands.
   </p>
   <blockquote>
@@ -40,7 +40,7 @@ In this example, the 1967 speech from Canada's centennial, _A Lament for Confede
     </p>
   </blockquote>
   <p>
-    The white man’s strange customs I could not understand, pressed down upon me
+    The white man's strange customs I could not understand, pressed down upon me
     until I could no longer breathe.
   </p>
   <p>
@@ -69,7 +69,7 @@ In this example, the 1967 speech from Canada's centennial, _A Lament for Confede
   </p>
   <p>
     Oh god, like the thunderbird of old, I shall rise again out of the sea. I
-    shall grab the instruments of the white man’s success – his education, his
+    shall grab the instruments of the white man's success – his education, his
     skills, and with these new tools I shall build my race into the proudest
     segment of your society. And, before I follow the great chiefs who have gone
     before us, I shall see these things come to pass.
@@ -286,15 +286,12 @@ blockquote p::after {
 ### Properties
 
 - {{cssxref("column-fill")}}
-- {{cssxref("column-gap")}}
 - {{cssxref("column-span")}}
-- {{cssxref("column-rule")}} shorthand
-  - {{cssxref("column-rule-color")}}
-  - {{cssxref("column-rule-style")}}
-  - {{cssxref("column-rule-width")}}
 - {{cssxref("columns")}} shorthand
   - {{cssxref("column-count")}}
+  - {{cssxref("column-height")}}
   - {{cssxref("column-width")}}
+- {{cssxref("column-wrap")}}
 
 > [!NOTE]
 > Bear in mind that setting container height and line length can pose challenges for people with visual or cognitive disabilities. [WCAG Success Criterion 1.4.8](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) states that even when the text size is doubled, content should not need to be scrolled.
@@ -321,6 +318,16 @@ blockquote p::after {
   - : Create pure-CSS carousel UI features using scroll buttons, scroll markers, and generated columns.
 
 ## Related concepts
+
+[CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module
+
+- {{cssxref("column-rule")}} shorthand
+  - {{cssxref("column-rule-color")}}
+  - {{cssxref("column-rule-style")}}
+  - {{cssxref("column-rule-width")}}
+- {{cssxref("column-gap")}}
+- {{cssxref("gap")}}
+- {{cssxref("row-gap")}}
 
 [CSS fragmentation](/en-US/docs/Web/CSS/Guides/Fragmentation) module
 

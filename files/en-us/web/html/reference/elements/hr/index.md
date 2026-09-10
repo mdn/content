@@ -1,12 +1,13 @@
 ---
-title: "<hr>: The Thematic Break (Horizontal Rule) element"
+title: "`<hr>` HTML thematic break (horizontal rule) element"
+short-title: <hr>
 slug: Web/HTML/Reference/Elements/hr
 page-type: html-element
 browser-compat: html.elements.hr
 sidebar: htmlsidebar
 ---
 
-The **`<hr>`** [HTML](/en-US/docs/Web/HTML) element represents a thematic break between paragraph-level elements: for example, a change of scene in a story, or a shift of topic within a section.
+The **`<hr>`** [HTML](/en-US/docs/Web/HTML) element represents a thematic break between elements: for example, a change of scene in a story, or a shift of topic within a section.
 
 {{InteractiveExample("HTML Demo: &lt;hr&gt;", "tabbed-shorter")}}
 
@@ -37,7 +38,9 @@ hr::after {
 }
 ```
 
-Historically, this has been presented as a horizontal rule or line. While it may still be displayed as a horizontal rule in visual browsers, this element is now defined in semantic terms, rather than presentational terms, so if you wish to draw a horizontal line, you should do so using appropriate CSS.
+Historically, the `<hr>` element has always been presented as a horizontal rule or line. While it may still be displayed as a horizontal rule in visual browsers, this element is now defined in semantic terms, rather than presentational terms. Therefore, if you wish to draw a horizontal line, you should do so by adding a border to an existing element using CSS.
+
+The `border-*` properties (for example, {{cssxref("border-style")}} and {{cssxref("border-color")}}) allow you to significantly customize a line's appearance, whether you are customizing an `<hr>` element or a border drawn on a different element.
 
 ## Attributes
 
@@ -56,25 +59,88 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
 
 ## Example
 
-### HTML
+### Thematic break between paragraphs
+
+The following example adds a thematic break between paragraph-level elements.
+
+#### HTML
 
 ```html
-<p>
-  This is the first paragraph of text. This is the first paragraph of text. This
-  is the first paragraph of text. This is the first paragraph of text.
-</p>
-
-<hr />
-
-<p>
-  This is the second paragraph of text. This is the second paragraph of text.
-  This is the second paragraph of text. This is the second paragraph of text.
-</p>
+<article>
+  <p>
+    This is the first paragraph of text. This is the first paragraph of text.
+    This is the first paragraph of text. This is the first paragraph of text.
+  </p>
+  <hr />
+  <p>
+    This is the second paragraph of text. This is the second paragraph of text.
+    This is the second paragraph of text. This is the second paragraph of text.
+  </p>
+</article>
 ```
 
-### Result
+#### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Thematic break between paragraphs")}}
+
+### Thematic break between list items
+
+The `<hr>` tag can be placed within a list item for visual separation, to create a separator between sections of a list.
+
+#### HTML
+
+```html
+<ul>
+  <li>Cut</li>
+  <li>Copy</li>
+  <li>Paste</li>
+  <li role="presentation"><hr /></li>
+  <li>Delete</li>
+</ul>
+```
+
+```css hidden
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 100px;
+  margin: 0.75rem;
+  padding: 0.75rem;
+  border: 1px solid lightgrey;
+}
+hr {
+  margin-block: 0.2rem;
+  color: lightgrey;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("Thematic break between list items")}}
+
+### Thematic break between select options
+
+The `<hr>` element is allowed inside a `<select>` element to create a visual separator between `<option>` elements.
+
+#### HTML
+
+```html
+<select>
+  <option value="">--Choose an option--</option>
+  <hr />
+  <option value="option1">Option 1</option>
+  <option value="option2">Option 2</option>
+  <hr />
+  <option value="option3">Option 3</option>
+  <option value="option4">Option 4</option>
+</select>
+```
+
+#### Result
+
+{{EmbedLiveSample("Thematic break between select options")}}
 
 ## Technical summary
 

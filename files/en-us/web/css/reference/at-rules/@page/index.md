@@ -1,5 +1,6 @@
 ---
-title: "@page"
+title: "`@page` CSS at-rule"
+short-title: "@page"
 slug: Web/CSS/Reference/At-rules/@page
 page-type: css-at-rule
 browser-compat: css.at-rules.page

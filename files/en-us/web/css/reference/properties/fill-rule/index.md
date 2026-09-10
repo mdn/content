@@ -1,5 +1,6 @@
 ---
-title: fill-rule
+title: "`fill-rule` CSS property"
+short-title: fill-rule
 slug: Web/CSS/Reference/Properties/fill-rule
 page-type: css-property
 browser-compat: css.properties.fill-rule
@@ -29,6 +30,8 @@ fill-rule: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `nonzero`
   - : For every point in the shape, a ray is drawn in a random direction to beyond the shape's outer edges. Each ray is examined to determine the places where the ray crosses the shape. Starting with a count of zero, add one each time a path segment crosses the ray from left to right and subtract one each time a path segment crosses the ray from right to left. After counting the crossings, if the result is zero then the point is outside the path. Otherwise, it is inside.

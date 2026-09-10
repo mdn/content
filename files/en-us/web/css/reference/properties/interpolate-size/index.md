@@ -1,5 +1,6 @@
 ---
-title: interpolate-size
+title: "`interpolate-size` CSS property"
+short-title: interpolate-size
 slug: Web/CSS/Reference/Properties/interpolate-size
 page-type: css-property
 status:
@@ -33,6 +34,8 @@ interpolate-size: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `allow-keywords`
   - : Enables [interpolation](/en-US/docs/Glossary/Interpolation) between a {{cssxref("length-percentage")}} value and an intrinsic size value, to allow animation between the two.

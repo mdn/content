@@ -1,5 +1,6 @@
 ---
-title: text-align
+title: "`text-align` CSS property"
+short-title: text-align
 slug: Web/CSS/Reference/Properties/text-align
 page-type: css-property
 browser-compat: css.properties.text-align
@@ -76,9 +77,9 @@ text-align: revert-layer;
 text-align: unset;
 ```
 
-The `text-align` property is specified as a single keyword from the list below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `start`
   - : The same as `left` if direction is left-to-right and `right` if direction is right-to-left.

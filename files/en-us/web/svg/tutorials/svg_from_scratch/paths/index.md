@@ -11,11 +11,11 @@ The {{SVGElement('path')}} element is the most powerful element in the SVG libra
 
 Paths create complex shapes by combining multiple straight lines or curved lines. Complex shapes composed only of straight lines can be created as [`<polyline>`](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes#polyline) elements. While `<polyline>` and `<path>` elements can create similar-looking shapes, `<polyline>` elements require a lot of small straight lines to simulate curves and don't scale well to larger sizes.
 
-A good understanding of paths is important when drawing SVGs. While creating complex paths using an XML editor or text editor is not recommended, understanding how they work will allow to identify and repair display issues in SVGs.
+A good understanding of paths is important when drawing SVGs. While creating complex paths using an XML editor or text editor is not recommended, understanding how they work will allow you to identify and repair display issues in SVGs.
 
 The shape of a `<path>` element is defined by one parameter: {{ SVGAttr("d") }}. (See more in [basic shapes](/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes).) The `d` attribute contains a series of commands and parameters used by those commands.
 
-Each of the commands is instantiated (for example, creating a class, naming and locating it) by a specific letter. For instance, let's move to the x and y coordinates (`10`, `10`). The "Move to" command is called with the letter `M`. When the parser runs into this letter, it knows it needs to move to a point. So, to move to (`10`, `10`) the command to use would be `M 10 10`. After that, the parser begins reading for the next command.
+Each of the commands is instantiated (for example, creating a class, naming and locating it) by a specific letter. For instance, the "Move to" command is called with the letter `M` — to move to (`10`, `10`) you would start your command with `M 10 10`. When the parser runs into this letter, it knows it first needs to move to a point (without drawing a connecting line).
 
 All of the commands also come in two variants. An **uppercase letter** specifies absolute coordinates on the page, and a **lowercase letter** specifies relative coordinates (e.g., _move 10px up and 7px to the left from the last point_).
 
@@ -23,13 +23,25 @@ Coordinates in the `d` parameter are **always unitless** and hence in the user c
 
 ## Line commands
 
-There are five line commands for {{SVGElement("path")}} nodes. The first command is the "Move To" or `M`, which was described above. It takes two parameters, a coordinate (`x`) and coordinate (`y`) to move to. If the cursor was already somewhere on the page, no line is drawn to connect the two positions. The "Move To" command appears at the beginning of paths to specify where the drawing should start. For example:
+There are five line commands for {{SVGElement("path")}} nodes. The first command is the "Move To" or `M`, which was described above. It takes at least two parameters, starting with an `x` and `y` coordinate to move to. If the cursor was already somewhere on the page, no line is drawn to connect the two positions. The "Move To" command appears at the beginning of paths to specify where the drawing should start. For example:
 
 ```plain
 M x y
 (or)
 m dx dy
 ```
+
+More than one coordinate pair can follow a "Move To" command. Only the first pair moves the cursor; every pair after it draws a line, exactly as though a "Line To" command had been used. So `M 10 10 90 10 90 90` is equivalent to `M 10 10 L 90 10 L 90 90`. Pairs following `m` draw lines relative to the current position, in the same way.
+
+For example, this path uses a single `M` command with three coordinate pairs to draw two connected line segments:
+
+```html live-sample___move-to-multiple
+<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+  <path d="M10 10 90 10 90 90" stroke="black" fill="none" />
+</svg>
+```
+
+{{ EmbedLiveSample('move-to-multiple', 100, 130) }}
 
 In the following example there's only a point at (`10`, `10`). Note, though, that it wouldn't show up if a path was just drawn normally. For example:
 
@@ -133,13 +145,13 @@ z
 So our path above could be shortened to:
 
 ```xml
-<path d="M 10 10 H 90 V 90 H 10 Z" fill="transparent" stroke="black" />
+<path d="M 10 10 H 90 V 90 H 10 Z" fill="none" stroke="black" />
 ```
 
 The relative forms of these commands can also be used to draw the same picture. Relative commands are called by using lowercase letters, and rather than moving the cursor to an exact coordinate, they move it relative to its last position. For instance, since our rectangle is 80×80, the `<path>` element could have been written as:
 
 ```xml
-<path d="M 10 10 h 80 v 80 h -80 Z" fill="transparent" stroke="black" />
+<path d="M 10 10 h 80 v 80 h -80 Z" fill="none" stroke="black" />
 ```
 
 The path will move to point (`10`, `10`) and then move horizontally 80 points to the right, then 80 points down, then 80 points to the left, and then back to the start.
@@ -164,30 +176,15 @@ The last set of coordinates here (`x`, `y`) specify where the line should end. T
 
 ```html live-sample___cubic_bezier_curves
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
-  <path d="M 10 10 C 20 20, 40 20, 50 10" stroke="black" fill="transparent" />
-  <path d="M 70 10 C 70 20, 110 20, 110 10" stroke="black" fill="transparent" />
-  <path
-    d="M 130 10 C 120 20, 180 20, 170 10"
-    stroke="black"
-    fill="transparent" />
-  <path d="M 10 60 C 20 80, 40 80, 50 60" stroke="black" fill="transparent" />
-  <path d="M 70 60 C 70 80, 110 80, 110 60" stroke="black" fill="transparent" />
-  <path
-    d="M 130 60 C 120 80, 180 80, 170 60"
-    stroke="black"
-    fill="transparent" />
-  <path
-    d="M 10 110 C 20 140, 40 140, 50 110"
-    stroke="black"
-    fill="transparent" />
-  <path
-    d="M 70 110 C 70 140, 110 140, 110 110"
-    stroke="black"
-    fill="transparent" />
-  <path
-    d="M 130 110 C 120 140, 180 140, 170 110"
-    stroke="black"
-    fill="transparent" />
+  <path d="M 10 10 C 20 20, 40 20, 50 10" stroke="black" fill="none" />
+  <path d="M 70 10 C 70 20, 110 20, 110 10" stroke="black" fill="none" />
+  <path d="M 130 10 C 120 20, 180 20, 170 10" stroke="black" fill="none" />
+  <path d="M 10 60 C 20 80, 40 80, 50 60" stroke="black" fill="none" />
+  <path d="M 70 60 C 70 80, 110 80, 110 60" stroke="black" fill="none" />
+  <path d="M 130 60 C 120 80, 180 80, 170 60" stroke="black" fill="none" />
+  <path d="M 10 110 C 20 140, 40 140, 50 110" stroke="black" fill="none" />
+  <path d="M 70 110 C 70 140, 110 140, 110 110" stroke="black" fill="none" />
+  <path d="M 130 110 C 120 140, 180 140, 170 110" stroke="black" fill="none" />
 </svg>
 ```
 
@@ -276,7 +273,7 @@ An example of this syntax is shown below, and in the figure to the left the spec
   <path
     d="M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80"
     stroke="black"
-    fill="transparent" />
+    fill="none" />
 </svg>
 ```
 
@@ -329,7 +326,7 @@ q dx1 dy1, dx dy
 
 ```html live-sample___quadratic_bezier
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
-  <path d="M 10 80 Q 95 10 180 80" stroke="black" fill="transparent" />
+  <path d="M 10 80 Q 95 10 180 80" stroke="black" fill="none" />
 </svg>
 ```
 
@@ -377,10 +374,7 @@ This only works if the previous command was a `Q` or a `T` command. If not, then
 
 ```html live-sample___shortcut_quadratic_bezier
 <svg width="190" height="160" xmlns="http://www.w3.org/2000/svg">
-  <path
-    d="M 10 80 Q 52.5 10, 95 80 T 180 80"
-    stroke="black"
-    fill="transparent" />
+  <path d="M 10 80 Q 52.5 10, 95 80 T 180 80" stroke="black" fill="none" />
 </svg>
 ```
 
@@ -524,14 +518,14 @@ For the unrotated ellipse in the image above, there are only two different arcs 
       cy="229.512"
       rx="36"
       ry="60"
-      fill="transparent"
+      fill="none"
       stroke="red" />
     <ellipse
       cx="115.779"
       cy="155.778"
       rx="36"
       ry="60"
-      fill="transparent"
+      fill="none"
       stroke="red" />
   </g>
 </svg>

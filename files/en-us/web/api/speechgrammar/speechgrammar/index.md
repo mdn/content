@@ -9,7 +9,7 @@ status:
 browser-compat: api.SpeechGrammar.SpeechGrammar
 ---
 
-{{APIRef("Web Speech API")}}{{Non-standard_Header}}{{deprecated_header}}
+{{APIRef("Web Speech API")}}{{Non-standard_Header}}
 
 The **`SpeechGrammar()`** constructor of the
 {{domxref("SpeechGrammar")}} interface creates a new `SpeechGrammar` object

@@ -25,7 +25,7 @@ WebIDL is defined in [its specification](https://webidl.spec.whatwg.org/). But i
 
 - For Gecko, Mozilla created the [documentation](https://firefox-source-docs.mozilla.org/dom/webIdlBindings/index.html) of its dialectal WebIDL.
 - For Chromium, Google also created a [document](https://www.chromium.org/blink/webidl/) to describe its extensions.
-- For WebCore, Apple also made available a [page](https://trac.webkit.org/wiki/WebKitIDL) for its dialect.
+- For WebCore, Apple also made available a [page](https://docs.webkit.org/Deep%20Dive/Architecture/JSWrappers.html) for its dialect.
 
 > [!NOTE]
 > We describe here only the subset of WebIDL which is most useful when writing documentation. There are many more annotations useful for implementers; refer to the four documents linked above to have a complete overview.
@@ -468,7 +468,7 @@ The iterator will iterate over values of type _valueType_. The generated methods
 - `keys()`, which returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the keys, that are its indexes (that are `unsigned long`). In the case of value iterators, `keys()` and `entries()` are identical.
 - `forEach()`, which executes a given callback function once for each entry in the list.
 
-Such an iterator allows to use the syntax `for (const p in object)` as a shorthand of `for (const p in object.entries())`. We add a sentence about it in the interface description.
+Such an iterator allows you to use the syntax `for (const p in object)` as a shorthand of `for (const p in object.entries())`. We add a sentence about it in the interface description.
 
 The values to iterate over can be defined in one of the following ways:
 
@@ -489,7 +489,7 @@ The iterator will iterate over values of type _valueType_ with keys of type _key
 - `keys()`, which returns an [`iterator`](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) on the keys. For example, see {{domxref('FormData.keys()')}}.
 - `forEach()`, which executes a given callback function once for each entry in the list. For example, see {{domxref('Headers.forEach()')}}.
 
-Such an iterator allows to use the syntax `for (const p in object)` as a shorthand of `for (const p in object.entries())`. We add a sentence about it in the interface description. E.g. {{domxref('FormData')}}.
+Such an iterator allows you to use the syntax `for (const p in object)` as a shorthand of `for (const p in object.entries())`. We add a sentence about it in the interface description. E.g. {{domxref('FormData')}}.
 
 The value pairs to iterate over can be defined in one of the following ways:
 
@@ -517,7 +517,7 @@ In cases where the set-like declaration is not prefixed by read-only, the follow
 - `clear()` that empties the set-like structure. E.g. the `.clear()` method of {{domxref('FontFaceSet')}}.
 - `delete()` that removes an entry. E.g. the `.delete()` method of {{domxref('FontFaceSet')}}.
 
-Such a set interface also allows to use the syntax `for (const p in object)` as a shorthand of `for (const p in object.entries())`.
+Such a set interface also allows you to use the syntax `for (const p in object)` as a shorthand of `for (const p in object.entries())`.
 
 ## Special Behaviors
 

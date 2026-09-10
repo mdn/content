@@ -1,5 +1,6 @@
 ---
-title: <input type="range">
+title: '`<input type="range">` HTML attribute value'
+short-title: <input type="range">
 slug: Web/HTML/Reference/Elements/input/range
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_range
@@ -142,7 +143,7 @@ For example, to ask the user for a value between -10 and 10, you can use:
 
 ### Setting the value's granularity
 
-By default, the granularity is 1, meaning the value is always an integer. To control the granularity, you can change the [`step`](/en-US/docs/Web/HTML/Reference/Elements/input#step) attribute. For example, If you need a value to be halfway between 5 and 10, you should set the value of `step` to 0.5:
+By default, the granularity is 1, meaning the value is always an integer. To control the granularity, you can change the [`step`](/en-US/docs/Web/HTML/Reference/Elements/input#step) attribute. For example, if you need a value to be halfway between 5 and 10, you should set the value of `step` to 0.5:
 
 #### Setting the step attribute
 
@@ -347,13 +348,6 @@ See [Creating vertical form controls](/en-US/docs/Web/CSS/Guides/Writing_modes/V
     <tr>
       <td><strong>DOM interface</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}}
-        and {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>

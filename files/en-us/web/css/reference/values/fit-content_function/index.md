@@ -1,5 +1,6 @@
 ---
-title: fit-content()
+title: "`fit-content()` CSS function"
+short-title: fit-content()
 slug: Web/CSS/Reference/Values/fit-content_function
 page-type: css-function
 browser-compat:
@@ -9,6 +10,9 @@ sidebar: cssref
 ---
 
 The **`fit-content()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) clamps a given size to an available size according to the formula `min(maximum size, max(minimum size, argument))`.
+
+It is distinct from the {{cssxref("fit-content")}} keyword, which takes no argument and sizes a box based on its content within the available space.
+Only `fit-content()` is valid in grid track sizing properties such as {{cssxref("grid-template-columns")}}.
 
 {{InteractiveExample("CSS Demo: fit-content()")}}
 
@@ -146,5 +150,6 @@ fit-content(40%)
 - {{cssxref("grid-auto-columns")}}
 - {{cssxref("grid-auto-rows")}}
 - {{cssxref("grid-auto-flow")}}
+- {{cssxref("fit-content")}} keyterm
 - [Line-based placement with CSS grid](/en-US/docs/Web/CSS/Guides/Grid_layout/Line-based_placement)
 - [Grid template areas: grid definition shorthands](/en-US/docs/Web/CSS/Guides/Grid_layout/Grid_template_areas#grid_definition_shorthands)

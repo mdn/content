@@ -1,5 +1,6 @@
 ---
-title: reading-order
+title: "`reading-order` CSS property"
+short-title: reading-order
 slug: Web/CSS/Reference/Properties/reading-order
 page-type: css-property
 status:

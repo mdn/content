@@ -52,7 +52,6 @@ sidebar: mdnsidebar
 > These macros are automatically added by the toolchain (there is no need to add/remove):
 >
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental). If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
-> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates the technology is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 > - `\{{Non-standard_Header}}` — this generates a **Non-standard** banner that indicates that the feature is not part of any specification.
 >
 > You should update or delete the following macros according to the advice below:
@@ -69,13 +68,13 @@ sidebar: mdnsidebar
 >
 > _Remember to remove this whole explanatory note before publishing._
 
-{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 The summary paragraph — start by naming the interface, saying what API it is part of, and saying what it does. This should ideally be one or two short sentences. You could copy most of this from the Interface's summary on the corresponding API landing page.
 
 `\{{InheritanceDiagram}}`
 
-_To use the [domxref macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_pages_in_references) in the sections below, remove the backticks and backslash in the markdown file._
+_To use the [domxref macro](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#linking_to_reference_pages) in the sections below, remove the backticks and backslash in the markdown file._
 
 ## Constructor
 

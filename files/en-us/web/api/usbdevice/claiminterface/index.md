@@ -11,7 +11,7 @@ browser-compat: api.USBDevice.claimInterface
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
 The **`claimInterface()`** method of the
-{{domxref("USBDevice")}} interface returns a {{jsxref("promise")}} that resolves when
+{{domxref("USBDevice")}} interface returns a {{jsxref("Promise")}} that resolves when
 the requested interface is claimed for exclusive access.
 
 ## Syntax
@@ -28,7 +28,7 @@ claimInterface(interfaceNumber)
 
 ### Return value
 
-A {{jsxref("promise")}}.
+A {{jsxref("Promise")}}.
 
 ## Examples
 

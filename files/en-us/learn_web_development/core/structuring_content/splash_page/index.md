@@ -41,8 +41,8 @@ To solve this challenge we are expecting you to create a simple website project,
            <h1>Creepy-crawlies splash page!</h1>
 
            <p>
-             In casual language, people use “bugs” to mean all sorts of small
-             creepy-crawlies: insects, spiders, etc. However, “Bugs” (true bugs)
+             In casual language, people use "bugs" to mean all sorts of small
+             creepy-crawlies: insects, spiders, etc. However, "Bugs" (true bugs)
              are actually just one order of insects (Hemiptera). This page
              provides a summary of the main classes or groups of
              creepy-crawlies.
@@ -89,7 +89,7 @@ To solve this challenge we are expecting you to create a simple website project,
              possess distinctive piercing-sucking mouthparts. These mouthparts
              are adapted for feeding on plant sap, blood, or other insects. Many
              true bugs have scent glands that produce strong odors as a defense
-             mechanism, which is why some are called “stink bugs.”
+             mechanism, which is why some are called "stink bugs."
            </p>
 
            <p>
@@ -153,8 +153,8 @@ To solve this challenge we are expecting you to create a simple website project,
            <h2>Flies & Mosquitoes (Diptera)</h2>
 
            <p>
-             Flies and mosquitoes belong to the order Diptera, meaning “two
-             wings.” Unlike most other insects, they have only one functional
+             Flies and mosquitoes belong to the order Diptera, meaning "two
+             wings." Unlike most other insects, they have only one functional
              pair of wings; the hind pair has evolved into tiny balancing organs
              called halteres. This adaptation gives them incredible agility in
              flight. Their mouthparts vary widely: some species have sponging
@@ -233,7 +233,7 @@ To solve this challenge we are expecting you to create a simple website project,
              a danger to humans. In fact, spiders are highly beneficial because
              they help control insect populations, including pests. They play a
              crucial role in balancing ecosystems, making them one of the most
-             important non-insect “bugs” people commonly encounter.
+             important non-insect "bugs" people commonly encounter.
            </p>
 
            <p class="copyright">
@@ -349,7 +349,7 @@ Later on, you will need to include the following URLs in your page.
 - `bee.jpg`: [Image for the "Bees, Wasps, Ants (Hymenoptera)" section](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/bee.jpg).
 - `beetle.png`: [Image for the "Beetles (Coleoptera)" section](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/beetle.png).
 - `butterfly.jpg`: [Image for the "Butterflies & Moths (Lepidoptera)" section](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/butterfly.jpg).
-- `mosquito.jpg`: [Image for the "Flies & Mosquitoes (Diptera)" section](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/mosquito.jpg).
+- `fly.jpg`: [Image for the "Flies & Mosquitoes (Diptera)" section](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/fly.jpg).
 - `spider.jpg`: [Image for the "Spiders (Araneae)" section](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/spider.jpg).
 - `true_bug.jpg`: [Image for the "True Bugs (Hemiptera)" section](https://mdn.github.io/shared-assets/images/examples/learn/crawlies/true_bug.jpg).
 - `bug_video_640.mp4`: [header video](https://mdn.github.io/shared-assets/videos/learn/bug_video_640.mp4).
@@ -424,8 +424,8 @@ Your finished HTML should look something like this:
           preload="auto"></video>
 
         <p>
-          In casual language, people use “bugs” to mean all sorts of small
-          creepy-crawlies: insects, spiders, etc. However, “Bugs” (true bugs)
+          In casual language, people use "bugs" to mean all sorts of small
+          creepy-crawlies: insects, spiders, etc. However, "Bugs" (true bugs)
           are actually just one order of insects (Hemiptera). This page provides
           a summary of the main classes or groups of creepy-crawlies.
         </p>
@@ -488,7 +488,7 @@ Your finished HTML should look something like this:
           piercing-sucking mouthparts. These mouthparts are adapted for feeding
           on plant sap, blood, or other insects. Many true bugs have scent
           glands that produce strong odors as a defense mechanism, which is why
-          some are called “stink bugs.”
+          some are called "stink bugs."
         </p>
 
         <p>
@@ -561,15 +561,15 @@ Your finished HTML should look something like this:
 
         <figure>
           <img
-            src="https://mdn.github.io/shared-assets/images/examples/learn/crawlies/mosquito.jpg"
+            src="https://mdn.github.io/shared-assets/images/examples/learn/crawlies/fly.jpg"
             alt="A hairy flying insect with long legs"
             width="250"
             height="180" />
-          <figcaption>A mosquito.</figcaption>
+          <figcaption>A fly.</figcaption>
         </figure>
 
         <p>
-          Flies and mosquitoes belong to the order Diptera, meaning “two wings.”
+          Flies and mosquitoes belong to the order Diptera, meaning "two wings."
           Unlike most other insects, they have only one functional pair of
           wings; the hind pair has evolved into tiny balancing organs called
           halteres. This adaptation gives them incredible agility in flight.
@@ -663,7 +663,7 @@ Your finished HTML should look something like this:
           danger to humans. In fact, spiders are highly beneficial because they
           help control insect populations, including pests. They play a crucial
           role in balancing ecosystems, making them one of the most important
-          non-insect “bugs” people commonly encounter.
+          non-insect "bugs" people commonly encounter.
         </p>
 
         <p class="copyright">

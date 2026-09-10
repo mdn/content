@@ -56,6 +56,7 @@ APIs that require transient activation (list is not exhaustive):
 - {{domxref("HTMLVideoElement.requestPictureInPicture()")}}
 - {{domxref("IdleDetector/requestPermission_static", "IdleDetector.requestPermission()")}}
 - {{domxref("Keyboard.lock()")}}
+- {{domxref("LanguageModel.create_static", "LanguageModel.create()")}}
 - {{domxref("MediaDevices.getDisplayMedia()")}}
 - `MediaDevices.getViewportMedia()`
 - {{domxref("MediaDevices.selectAudioOutput()")}}
@@ -86,6 +87,7 @@ APIs that require sticky activation (not exhaustive):
 - {{domxref("Navigator.vibrate()")}}
 - {{domxref("VirtualKeyboard.show()")}}
 - Autoplay of [Media and Web Audio APIs](/en-US/docs/Web/Media/Guides/Autoplay) (in particular for [`AudioContexts`](/en-US/docs/Web/API/AudioContext)).
+- {{domxref("Clipboard.clipboardchange_event", "clipboardchange")}} events (these can also be enabled by the user granting the `clipboard-read` permission).
 
 ## UserActivation API
 

@@ -1,12 +1,13 @@
 ---
-title: grid
+title: "`grid` CSS property"
+short-title: grid
 slug: Web/CSS/Reference/Properties/grid
 page-type: css-shorthand-property
 browser-compat: css.properties.grid
 sidebar: cssref
 ---
 
-The **`grid`** [CSS](/en-US/docs/Web/CSS) property is a [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) that sets all of the explicit and implicit grid properties in a single declaration.
+The **`grid`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets all of the explicit and implicit grid properties in a single declaration.
 
 Using `grid` you specify one axis using {{cssxref("grid-template-rows")}} or {{cssxref("grid-template-columns")}}, you then specify how content should auto-repeat in the other axis using the implicit grid properties: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, and {{cssxref("grid-auto-flow")}}.
 
@@ -93,14 +94,14 @@ grid: minmax(400px, min-content) / repeat(auto-fill, 50px);
    [ auto-flow && dense? ] <'grid-auto-columns'>? values */
 grid: 200px / auto-flow;
 grid: 30% / auto-flow dense;
-grid: repeat(3, [line1 line2 line3] 200px) / auto-flow 300px;
+grid: repeat(3, 200px) / auto-flow 300px;
 grid: [line1] minmax(20em, max-content) / auto-flow dense 40%;
 
 /* [ auto-flow && dense? ] <'grid-auto-rows'>? /
    <'grid-template-columns'> values */
 grid: auto-flow / 200px;
 grid: auto-flow dense / 30%;
-grid: auto-flow 300px / repeat(3, [line1 line2 line3] 200px);
+grid: auto-flow 300px / repeat(3, 200px);
 grid: auto-flow dense 40% / [line1] minmax(20em, max-content);
 
 /* Global values */

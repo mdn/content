@@ -3,12 +3,10 @@ title: "DocumentPictureInPicture: enter event"
 short-title: enter
 slug: Web/API/DocumentPictureInPicture/enter_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.DocumentPictureInPicture.enter_event
 ---
 
-{{APIRef("Document Picture-in-Picture API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{APIRef("Document Picture-in-Picture API")}}{{SecureContext_Header}}
 
 The **`enter`** event of the {{domxref("DocumentPictureInPicture")}} interface is fired when the Picture-in-Picture window is successfully opened.
 

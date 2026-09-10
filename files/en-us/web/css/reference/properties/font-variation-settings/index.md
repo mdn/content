@@ -1,5 +1,6 @@
 ---
-title: font-variation-settings
+title: "`font-variation-settings` CSS property"
+short-title: font-variation-settings
 slug: Web/CSS/Reference/Properties/font-variation-settings
 page-type: css-property
 browser-compat: css.properties.font-variation-settings
@@ -37,7 +38,7 @@ font-variation-settings: "wdth" 75;
 
 ```css interactive-example
 @font-face {
-  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.woff2");
   font-family: "Amstelvar";
   font-style: normal;
 }
@@ -67,7 +68,7 @@ font-variation-settings: unset;
 
 ### Values
 
-This property's value can take one of two forms:
+This property is specified as `normal` or a comma-separated list of string-number value pairs:
 
 - `normal`
   - : Text is laid out using default settings.
@@ -140,7 +141,7 @@ You can find a number of other variable font examples in our [Variable fonts](/e
 
 ### Controlling variable font weight (wght)
 
-Click "Play" in the code blocks below to edit the example in the MDN Playground.Edit the CSS to play with different font weight values. See what happens when you specify a value outside the weight range.
+Click "Play" in the code blocks below to edit the example in the MDN Playground. Edit the CSS to play with different font weight values. See what happens when you specify a value outside the weight range.
 
 ```html hidden live-sample___variable-fonts-weight-example
 <div>
@@ -225,7 +226,7 @@ angle.addEventListener("input", (e) => {
 
 ### Controlling variable font slant (slnt)
 
-Click "Play" in the code blocks below to edit the example in the MDN Playground.Edit the CSS to play with different font slant/oblique values.
+Click "Play" in the code blocks below to edit the example in the MDN Playground. Edit the CSS to play with different font slant/oblique values.
 
 ```html hidden live-sample___variable-fonts-slant-example
 <div>

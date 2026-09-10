@@ -1,5 +1,6 @@
 ---
-title: offset-position
+title: "`offset-position` CSS property"
+short-title: offset-position
 slug: Web/CSS/Reference/Properties/offset-position
 page-type: css-property
 browser-compat: css.properties.offset-position

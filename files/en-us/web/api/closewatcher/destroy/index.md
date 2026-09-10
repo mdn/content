@@ -3,12 +3,10 @@ title: "CloseWatcher: destroy() method"
 short-title: destroy()
 slug: Web/API/CloseWatcher/destroy
 page-type: web-api-instance-method
-status:
-  - experimental
 browser-compat: api.CloseWatcher.destroy
 ---
 
-{{APIRef("HTML DOM")}} {{SeeCompatTable}}
+{{APIRef("HTML DOM")}}
 
 The **`destroy()`** method of the {{domxref("CloseWatcher")}} interface deactivates the close watcher. This is intended to be called if the relevant UI element is torn down in some other way than being closed.
 

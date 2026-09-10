@@ -65,4 +65,4 @@ Alt-Svc: h3-25=":443"; ma=3600, h2=":443"; ma=3600
 
 ## See also
 
-- [Alternative Services](https://www.mnot.net/blog/2016/03/09/alt-svc) by HTTP Working Group chair, Mark Nottingham (2016)
+- [Alternative Services](https://mnot.net/blog/2016/alt-svc) by HTTP Working Group chair, Mark Nottingham (2016)

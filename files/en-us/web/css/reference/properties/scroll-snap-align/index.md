@@ -1,5 +1,6 @@
 ---
-title: scroll-snap-align
+title: "`scroll-snap-align` CSS property"
+short-title: scroll-snap-align
 slug: Web/CSS/Reference/Properties/scroll-snap-align
 page-type: css-property
 browser-compat: css.properties.scroll-snap-align
@@ -125,5 +126,7 @@ One or two values can be specified for the `scroll-snap-align` property. If one 
 
 ## See also
 
-- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap)
-- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)
+- {{cssxref("scroll-snap-stop")}}
+- {{cssxref("scroll-initial-target")}}
+- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) module
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap) on web.dev (2018)

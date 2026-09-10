@@ -1,5 +1,6 @@
 ---
-title: line-clamp
+title: "`line-clamp` CSS property"
+short-title: line-clamp
 slug: Web/CSS/Reference/Properties/line-clamp
 page-type: css-property
 browser-compat: css.properties.line-clamp
@@ -34,6 +35,8 @@ line-clamp: unset;
 ```
 
 ### Values
+
+This property is specified as a single value from the following list:
 
 - `none`
   - : This value specifies that the content won't be clamped.

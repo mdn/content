@@ -243,5 +243,5 @@ For checking potentially non-existent variables that would otherwise throw a {{j
 
 ## See also
 
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
 - [`document.all` willful violation of the standard](https://github.com/tc39/ecma262/issues/668)

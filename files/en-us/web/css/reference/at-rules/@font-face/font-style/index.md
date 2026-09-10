@@ -1,5 +1,6 @@
 ---
-title: font-style
+title: "`font-style` CSS at-rule descriptor"
+short-title: font-style
 slug: Web/CSS/Reference/At-rules/@font-face/font-style
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-face.font-style
@@ -50,7 +51,7 @@ As an example, consider the garamond font family, in its normal form, we get the
 ```css
 @font-face {
   font-family: "garamond";
-  src: url("garamond.ttf");
+  src: url("garamond.woff2");
 }
 ```
 
@@ -65,7 +66,7 @@ On the other hand, if a true italicized version of the font family exists, we ca
 ```css
 @font-face {
   font-family: "garamond";
-  src: url("garamond-italic.ttf");
+  src: url("garamond-italic.woff2");
   font-style: italic;
 }
 ```

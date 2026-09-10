@@ -8,12 +8,12 @@ status:
 browser-compat: api.HTMLTableCellElement.vAlign
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 The **`vAlign`** property of the {{domxref("HTMLTableCellElement")}} interface is a string indicating how to vertically align text in a {{htmlelement("th")}} or {{htmlelement("td")}} table cell.
 
 > [!NOTE]
-> This property is deprecated. Use the CSS {{cssxref("vertical-align")}} property to horizontally align text in a cell instead.
+> This property is deprecated. Use the CSS {{cssxref("vertical-align")}} property to vertically align text in a cell instead.
 
 ## Value
 

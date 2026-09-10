@@ -1,5 +1,6 @@
 ---
-title: marker-end
+title: "`marker-end` CSS property"
+short-title: marker-end
 slug: Web/CSS/Reference/Properties/marker-end
 page-type: css-property
 browser-compat: css.properties.marker-end

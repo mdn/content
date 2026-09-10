@@ -1,5 +1,6 @@
 ---
-title: overscroll-behavior-block
+title: "`overscroll-behavior-block` CSS property"
+short-title: overscroll-behavior-block
 slug: Web/CSS/Reference/Properties/overscroll-behavior-block
 page-type: css-property
 browser-compat: css.properties.overscroll-behavior-block
@@ -26,9 +27,9 @@ overscroll-behavior-block: revert-layer;
 overscroll-behavior-block: unset;
 ```
 
-The `overscroll-behavior-block` property is specified as a keyword chosen from the list of values below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : The default scroll overflow behavior occurs as normal.

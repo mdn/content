@@ -1,5 +1,6 @@
 ---
-title: scroll-snap-type
+title: "`scroll-snap-type` CSS property"
+short-title: scroll-snap-type
 slug: Web/CSS/Reference/Properties/scroll-snap-type
 page-type: css-property
 browser-compat: css.properties.scroll-snap-type
@@ -106,6 +107,8 @@ scroll-snap-type: unset;
 ```
 
 ### Values
+
+This property is specified as one or two of the following keyword values:
 
 - `none`
   - : When the visual {{Glossary("viewport")}} of this scroll container is scrolled, it must ignore snap points.
@@ -299,5 +302,5 @@ div:nth-child(odd) {
 - Scroll-child properties: {{cssxref("scroll-snap-align")}}, {{cssxref("scroll-margin")}}, {{cssxref("scroll-snap-stop")}}
 - [Basic concepts of CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap/Basic_concepts)
 - [Using scroll snap events](/en-US/docs/Web/CSS/Guides/Scroll_snap/Using_scroll_snap_events)
-- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap)
-- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)
+- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) module
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap) on web.dev (2018)

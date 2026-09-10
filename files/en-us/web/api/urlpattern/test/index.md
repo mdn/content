@@ -37,7 +37,7 @@ Omitted parts are treated as empty strings.
 
 ### Return value
 
-A {{jsxref("boolean")}}.
+A {{jsxref("Boolean")}}.
 
 ### Exceptions
 

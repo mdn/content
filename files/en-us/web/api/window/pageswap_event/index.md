@@ -30,13 +30,6 @@ A {{domxref("PageSwapEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PageSwapEvent")}}
 
-## Event properties
-
-- {{domxref("PageSwapEvent.activation")}} {{ReadOnlyInline}}
-  - : Returns a {{domxref("NavigationActivation")}} object containing the navigation type and current and destination document history entries for a same-origin navigation. If the navigation has a cross-origin URL anywhere in the redirect chain, it returns `null`.
-- {{domxref("PageSwapEvent.viewTransition")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("ViewTransition")}} object representing the inbound cross-document view transition, if one is active when the event is fired. If this is not the case, it returns `null`.
-
 ## Examples
 
 ```js

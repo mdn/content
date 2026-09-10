@@ -1,5 +1,6 @@
 ---
-title: :placeholder-shown
+title: "`:placeholder-shown` CSS pseudo-class"
+short-title: :placeholder-shown
 slug: Web/CSS/Reference/Selectors/:placeholder-shown
 page-type: css-pseudo-class
 browser-compat: css.selectors.placeholder-shown

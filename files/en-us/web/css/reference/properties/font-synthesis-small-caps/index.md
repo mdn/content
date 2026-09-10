@@ -1,5 +1,6 @@
 ---
-title: font-synthesis-small-caps
+title: "`font-synthesis-small-caps` CSS property"
+short-title: font-synthesis-small-caps
 slug: Web/CSS/Reference/Properties/font-synthesis-small-caps
 page-type: css-property
 browser-compat: css.properties.font-synthesis-small-caps
@@ -26,6 +27,8 @@ font-synthesis-small-caps: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : Indicates that the missing small-caps typeface may be synthesized by the browser if needed.

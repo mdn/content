@@ -1,5 +1,6 @@
 ---
-title: :state()
+title: "`:state()` CSS pseudo-class"
+short-title: :state()
 slug: Web/CSS/Reference/Selectors/:state
 page-type: css-pseudo-class
 browser-compat: css.selectors.state
@@ -57,7 +58,7 @@ For a live example of this code in action, see the [Matching the custom state of
 
 This example shows how the `:state()` pseudo-class can be used within the [`:host()`](/en-US/docs/Web/CSS/Reference/Selectors/:host_function) pseudo-class function to match custom states within the implementation of a custom element.
 
-The following CSS injects a grey `[x]` before the element when it is in the "checked" state.
+The following CSS injects a gray `[x]` before the element when it is in the "checked" state.
 
 ```css
 :host(:state(checked))::before {

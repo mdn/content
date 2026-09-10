@@ -49,12 +49,10 @@ Possible values include:
 - `downloading`
   - : The browser supports the given configuration, but it needs to finish an ongoing download before it can proceed.
 - `unavailable`
-  - : The browser does not support the given configuration.
+  - : The browser does not support the given configuration, or the Summarizer API is blocked by a {{httpheader('Permissions-Policy/summarizer','summarizer')}} {{httpheader("Permissions-Policy")}}.
 
 ### Exceptions
 
-- `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if usage of the Summarizer API is blocked by a {{httpheader('Permissions-Policy/summarizer','summarizer')}} {{httpheader("Permissions-Policy")}}.
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the provided `context` is not in language the `Summarizer` supports.
 - `UnknownError` {{domxref("DOMException")}}

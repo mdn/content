@@ -1,5 +1,6 @@
 ---
-title: matrix()
+title: "`matrix()` CSS function"
+short-title: matrix()
 slug: Web/CSS/Reference/Values/transform-function/matrix
 page-type: css-function
 browser-compat: css.types.transform-function.matrix

@@ -3,7 +3,7 @@ title: URI schemes
 short-title: Scheme
 slug: Web/URI/Reference/Schemes
 page-type: uri-component
-spec-urls: https://www.rfc-editor.org/rfc/rfc3986.html#section-3.1
+spec-urls: https://www.rfc-editor.org/info/rfc3986/#section-3.1
 sidebar: urlsidebar
 ---
 

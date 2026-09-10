@@ -1,5 +1,6 @@
 ---
-title: -webkit-mask-box-image
+title: "`-webkit-mask-box-image` CSS property"
+short-title: -webkit-mask-box-image
 slug: Web/CSS/Reference/Properties/-webkit-mask-box-image
 page-type: css-shorthand-property
 status:
@@ -10,7 +11,7 @@ sidebar: cssref
 
 {{ Non-standard_header() }}
 
-The non-standard prefixed **`-webkit-mask-box-image`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets the mask image for an element's border box.
+The non-standard prefixed **`-webkit-mask-box-image`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets the mask image for an element's border box.
 
 > [!NOTE]
 > This property is not standard and is not on any standards track. Consider using the {{CSSXref("mask-border")}} property instead.

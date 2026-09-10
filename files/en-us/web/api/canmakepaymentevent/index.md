@@ -7,9 +7,9 @@ status:
 browser-compat: api.CanMakePaymentEvent
 ---
 
-{{APIRef("Payment Handler API")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
+{{APIRef("Web-Based Payment Handler API")}}{{SeeCompatTable}}{{AvailableInWorkers("service")}}
 
-The **`CanMakePaymentEvent`** interface of the {{domxref("Payment Handler API", "", "", "nocode")}} is the event object for the {{domxref("ServiceWorkerGlobalScope.canmakepayment_event", "canmakepayment")}} event, fired on a payment app's service worker to check whether it is ready to handle a payment. Specifically, it is fired when the merchant website calls the {{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}} constructor.
+The **`CanMakePaymentEvent`** interface of the {{domxref("Web-based Payment Handler API", "", "", "nocode")}} is the event object for the {{domxref("ServiceWorkerGlobalScope.canmakepayment_event", "canmakepayment")}} event, fired on a payment app's service worker to check whether it is ready to handle a payment. Specifically, it is fired when the merchant website calls the {{domxref("PaymentRequest.PaymentRequest", "PaymentRequest()")}} constructor.
 
 {{InheritanceDiagram}}
 
@@ -51,7 +51,7 @@ self.addEventListener("canmakepayment", (e) => {
 
 ## See also
 
-- {{domxref("Payment Handler API", "Payment Handler API", "", "nocode")}}
+- {{domxref("Web-based Payment Handler API", "", "", "nocode")}}
 - [Web-based payment apps overview](https://web.dev/articles/web-based-payment-apps-overview)
 - [Setting up a payment method](https://web.dev/articles/setting-up-a-payment-method)
 - [Life of a payment transaction](https://web.dev/articles/life-of-a-payment-transaction)

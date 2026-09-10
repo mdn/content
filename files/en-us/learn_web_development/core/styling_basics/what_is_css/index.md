@@ -84,8 +84,8 @@ h1 {
 ```
 
 - In the above example, the CSS rule opens with a {{Glossary("CSS Selector", "selector")}}. This _selects_ the HTML elements that we are going to style. In this case, we are styling level one headings (`{{htmlelement("Heading_Elements", "&lt;h1>")}}`).
-- We then include a set of curly braces — `{ }`.
-- The braces contain one or more **declarations**, which take the form of **property** and **value** pairs. We specify the property (for example, `color` in the above example) before the colon, and we specify the value of the property after the colon (`red` is the value being set for the `color` property).
+- We then include a set of curly braces (`{ }`) to create a **declaration block**.
+- The declaration block contains one or more **declarations**, which take the form of **property** and **value** pairs. We specify the property (for example, `color` in the above example) before the colon, and we specify the value of the property after the colon (`red` is the value being set for the `color` property).
 - This example contains two declarations, one for `color` and another for `font-size`.
 
 Different CSS {{Glossary("property/CSS","properties")}} have different allowable values. In our example, we have the `color` property, which can take various [color values](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#color). We also have the `font-size` property. This property can take various [size units](/en-US/docs/Learn_web_development/Core/Styling_basics/Values_and_units#numbers_lengths_and_percentages) as a value.

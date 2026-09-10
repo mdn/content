@@ -8,13 +8,15 @@ browser-compat: api.HTMLImageElement.loading
 
 {{APIRef("HTML DOM")}}
 
-The **`loading`** property of the {{domxref("HTMLImageElement")}} interface provides a hint to the {{Glossary("user agent")}} on how to handle the loading of the image which is currently outside the window's {{Glossary("visual viewport")}}. This helps to optimize the loading of the document's contents by postponing loading the image until it's expected to be needed, rather than immediately during the initial page load. It reflects the `<img>` element's [`loading`](/en-US/docs/Web/HTML/Reference/Elements/img#loading) content attribute.
+The **`loading`** property of the {{domxref("HTMLImageElement")}} interface provides a hint to the browser on how to handle the loading of the image which is currently outside the window's {{Glossary("visual viewport")}}. This helps to optimize the loading of the document's contents by postponing loading the image until it's expected to be needed, rather than immediately during the initial page load. It reflects the `<img>` element's [`loading`](/en-US/docs/Web/HTML/Reference/Elements/img#loading) content attribute.
 
 ## Value
 
 A string whose value is one of `eager` or `lazy`. For their meanings, see the HTML [`<img>`](/en-US/docs/Web/HTML/Reference/Elements/img#loading) reference.
 
 ## Examples
+
+### Basic usage
 
 The `addImageToList()` function shown below adds a photo thumbnail to a list of items, using lazy-loading to avoid loading the image from the network until it's actually needed.
 

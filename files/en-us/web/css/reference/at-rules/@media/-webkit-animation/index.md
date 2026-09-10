@@ -1,5 +1,6 @@
 ---
-title: -webkit-animation
+title: "`-webkit-animation` CSS media feature"
+short-title: -webkit-animation
 slug: Web/CSS/Reference/At-rules/@media/-webkit-animation
 page-type: css-media-feature
 status:
@@ -9,7 +10,7 @@ browser-compat: css.at-rules.media.-webkit-animation
 sidebar: cssref
 ---
 
-{{Non-standard_header}}{{Deprecated_Header}}
+{{Non-standard_header}}
 
 > [!NOTE]
 > All browsers support the [`animation`](/en-US/docs/Web/CSS/Reference/Properties/animation#browser_compatibility) property without vendor prefixes. Only WebKit (Safari), and not Chromium, based browsers supports the `-webkit-animation` media feature. No browsers support `animation`, without the prefix, as a media query. Use the [`@supports (animation)`](/en-US/docs/Web/CSS/Reference/At-rules/@supports) feature query instead.
@@ -55,7 +56,6 @@ Not part of any standard.
 - [`-webkit-transform-3d`](/en-US/docs/Web/CSS/Reference/At-rules/@media/-webkit-transform-3d)
 - [`-webkit-transform-2d`](/en-US/docs/Web/CSS/Reference/At-rules/@media/-webkit-transform-2d)
 - [`-webkit-transition`](/en-US/docs/Web/CSS/Reference/At-rules/@media/-webkit-transition)
-- [Test page at quirksmode.org](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
 - {{cssxref("animation")}} and [using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
 - {{cssxref("@media")}} and [Using media queries](/en-US/docs/Web/CSS/Guides/Media_queries/Using)
 - {{cssxref("@supports")}} and [using feature queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)
