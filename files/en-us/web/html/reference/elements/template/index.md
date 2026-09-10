@@ -13,7 +13,7 @@ The **`<template>`** [HTML](/en-US/docs/Web/HTML) element serves as a mechanism 
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
-- `for`
+- `for` {{experimental_inline}}
   - : The `for` attribute is used for out-of-order patching with `<template for="...">`, matching an equivalent `<?start id="...">` or `<?marker "...">` marker. See the [out-of-order patching section](#out-of-order_patching) and [examples section](#examples).
 
 - `shadowrootmode`
@@ -98,6 +98,10 @@ Similarly, if there are multiple declarative shadow roots, only the first one is
 Other attributes prefixed with `shadowroot` allow declarative customization of the `ShadowRoot`, such as controlling how slots are assigned.
 
 ### Out-of-order patching
+
+> [!NOTE]
+> This use case is still experimental and has limited browser support.
+> See the [browser compatibility](#browser_compatibility) table for browser support information.
 
 Traditionally, HTML is delivered in order and read, processed, and displayed from top to bottom. To change that order, you can either hide or rearrange elements with CSS or update the DOM produced by the HTML afterwards with JavaScript. However, many pages are composed of multiple parts that may be ready to render at different times, or that may be more important to deliver to the user earlier.
 

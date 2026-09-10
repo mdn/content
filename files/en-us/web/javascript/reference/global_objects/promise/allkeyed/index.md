@@ -3,9 +3,13 @@ title: Promise.allKeyed()
 short-title: allKeyed()
 slug: Web/JavaScript/Reference/Global_Objects/Promise/allKeyed
 page-type: javascript-static-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Promise.allKeyed
 sidebar: jsref
 ---
+
+{{SeeCompatTable}}
 
 The **`Promise.allKeyed()`** static method is like {{jsxref("Promise.all()")}}, except that instead of using arrays/iterables as input/output, it uses objects. It takes an object where each own key is associated with a promise, and returns a single {{jsxref("Promise")}}. This returned promise fulfills when all of the input's promises fulfill, with an object of the same keys mapped to the corresponding fulfillment values. It rejects when any of the input's promises rejects, with this first rejection reason.
 

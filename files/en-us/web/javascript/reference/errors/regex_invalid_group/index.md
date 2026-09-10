@@ -48,7 +48,7 @@ SyntaxError: Invalid regular expression: unrecognized character after (? (Safari
 ```js example-good
 /Hello(\?|!)/;
 // This is JavaScript syntax for character set operations
-/[\p{Thai}&&\p{Digit}]/v;
+/[\p{Script=Thai}&&\p{Nd}]/v;
 ```
 
 ## See also

@@ -8,7 +8,7 @@ status:
 browser-compat: api.InteractionContentfulPaint.largestContentfulPaint
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`largestContentfulPaint`** read-only property of the {{domxref("PerformanceSoftNavigation")}} interface returns the current largest {{domxref("LargestContentfulPaint")}} relevant to this soft navigation.
 

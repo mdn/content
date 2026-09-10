@@ -7,7 +7,7 @@ status:
 browser-compat: api.InteractionContentfulPaint
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The `InteractionContentfulPaint` interface provides timing information about {{Glossary("Contentful paint", "contentful paints")}} attributable to an interaction.
 
@@ -37,7 +37,7 @@ It also extends the following {{domxref("PerformanceEntry")}} properties, qualif
 
 ## Instance methods
 
-- {{domxref("InteractionContentfulPaint.toJSON()")}}
+- {{domxref("InteractionContentfulPaint.toJSON()")}} {{experimental_inline}}
   - : Overrides the {{domxref("PerformanceEntry.toJSON()")}} method to return a JSON representation of the `InteractionContentfulPaint` object.
 
 ## Description

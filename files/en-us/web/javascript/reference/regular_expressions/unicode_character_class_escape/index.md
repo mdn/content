@@ -171,7 +171,8 @@ With the `v` flag, `\p{…}` can match strings that are potentially longer than 
 
 ```js
 const flag = "🇺🇳";
-console.log(flag.length); // 2
+console.log(flag.length); // 4 (two code points, each a surrogate pair)
+console.log([...flag].length); // 2
 console.log(/\p{RGI_Emoji_Flag_Sequence}/v.exec(flag)); // [ '🇺🇳' ]
 ```
 
