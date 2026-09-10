@@ -40,7 +40,7 @@ We've split the methods into two categories:
 
 ### Stateful tracking using storage APIs
 
-In this technique, the tracker stores an identifier for the user in the client, and sends the identifier to the tracker's server whenever the user visits a page that embeds the tracker. This enables the tracker to maintain a list of pages that the user visits.
+In this technique, the tracker stores an identifier for the user in the browser, and sends the identifier to the tracker's server whenever the user visits a page that embeds the tracker. This enables the tracker to maintain a list of pages that the user visits.
 
 Trackers can use various different client-side storage APIs to store identifiers, such as [local storage](/en-US/docs/Web/API/Web_Storage_API) or [IndexedDB](/en-US/docs/Web/API/IndexedDB_API). Most often, though, trackers use [cookies](/en-US/docs/Web/HTTP/Guides/Cookies).
 
@@ -114,11 +114,67 @@ Bounce tracking, also known as redirect tracking, is a variant of navigational t
 
 For trackers, the advantage of bounce tracking is that it works even if the browser has blocked or restricted third-party cookies. Because the browser has navigated to the tracker, the tracker is (temporarily) considered to be a first party, so is allowed to set and receive cookies even if third-party cookies are blocked.
 
-## Legitimate uses for tracking
+## Anti-tracking
 
-One problem browsers face in implementing defenses against tracking is that there are legitimate uses of tracking, and it can be hard to determine whether
+Because tracking represents such a significant privacy violation, browsers and browser extensions have designed and implemented a number of techniques to prevent websites from tracking users. In this section we'll outline the general techniques, and in the next section we'll look at the specific policies implemented by browsers.
 
-## Anti-tracking techniques
+First, though, we'll explore some of the reasons that browsers can't just disable the techniques used by trackers.
+
+> [!NOTE]
+> In this section we'll refer to anti-tracking measures taken by _browsers_, but browser extensions are an important part of the anti-tracking landscape, and they also use many of the techniques described here.
+>
+> In fact, especially in mainstream browsers, extensions can be more effective at blocking trackers, because they are able to make more aggressive decisions about what to block.
+
+### Challenges of anti-tracking
+
+In this section we'll describe two considerations that make it impractical for browsers to just disable the techniques used by trackers. First, there are legitimate uses for these techniques, and second, disabling tracking can easily break websites.
+
+#### Legitimate uses for tracking techniques
+
+There are legitimate uses for the techniques that are used in tracking, and it can be hard for the browser to determine whether a particular usage is legitimate or not.
+
+For example, when we talk about cross-site tracking, we use a {{glossary("site", "specific definition of \"site\"")}}. But there are situations in which users might consider two servers to represent the same entity, when they are technically different sites. This could be the case when a single organization has different sites in different countries, such as `example.co.uk` and `example.ca`. In a situation like this the user might expect that their login status or preferences would persist across both sites, and to do that, the sites have to implement cross-site tracking.
+
+Another situation in which sites have to exchange state is [federated login](/en-US/docs/Web/Security/Authentication/Federated_identity), in which the website that the user is trying to sign into needs to coordinate with the identity provider, and [implementations of this often rely on third-party cookies](/en-US/docs/Web/Security/Authentication/Federated_identity#third-party_cookies).
+
+#### Anti-tracking and site reliability
+
+Even if a site is tracking users, using the techniques described above, the proper functioning of the site may depend on the tracker being allowed to work. For example, the site's main may assume that the tracker is present, and break if it isn't. If the tracker is just blocked, then the site won't work properly.
+
+In cases like this, browsers sometimes have to decide sometimes whether the harm caused by allowing the tracker is greater than the benefit that the website provides. This is part of the reason that browsers provide user-configurable levels of anti-tracking, so users can choose a trade-off based on their own values.
+
+### Anti-tracking techniques
+
+In this section we'll give an overview of the main defenses that browsers deploy against tracking. Browsers typically use some combination of these techniques, and will apply different techniques in different situations and configurations (for example, if the user has private browsing enabled or has opted into).
+
+#### Tracker lists
+
+A tracker list is a list of domains that are known to host trackers. Trackers may be classified according to the purpose of the tracking and/or the techniques they use. When processing requests for resources, browsers consult the list and decide whether to block the resource load entirely or to limit its capabilities.
+
+The advantages of using tracker lists are that:
+
+- They enable a browser to discriminate between trackers and websites that use tracking techniques for legitimate purposes. This allows the browser to use more aggressive measures against the tracker.
+- They enable a browser to restrict trackers without needing to identify specific techniques.
+
+The main disadvantage is that they need constant maintenance. Several major browsers use the lists maintained by [Disconnect](https://disconnect.me/trackerprotection).
+
+#### Blocking known trackers
+
+Once a browser has identified a resource as a tracker, it may choose to block the load entirely. This is the safest option from the point of view of privacy, but increases the chance that the embedding website will break, either because the tracker's content is an important part of the website or because the website's own code assumes that the tracker will be present.
+
+For this reason, completely blocking trackers is often not the default behavior, but may be a response that the user can configure.
+
+#### Blocking storage APIs
+
+As a less drastic measure, browsers may allow the resource to load but prevent it from reading or writing any storage on the device, including cookies, local storage, IndexedDB, or any caches. This should be effective against any tracking that depends on [storing identifiers using web storage APIs](#stateful_tracking_using_storage_apis).
+
+#### Partitioned storage
+
+#### Storage Access API
+
+#### Bounce tracking defenses
+
+#### Anti-fingerprinting
 
 ## Anti-tracking policies in browsers
 
