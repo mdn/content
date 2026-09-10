@@ -11,6 +11,8 @@ The **`<picture>`** [HTML](/en-US/docs/Web/HTML) element contains zero or more {
 
 The browser will consider each child `<source>` element and choose the best match among them. If no matches are found—or the browser doesn't support the `<picture>` element—the URL of the `<img>` element's [`src`](/en-US/docs/Web/HTML/Reference/Elements/img#src) attribute is selected. The selected image is then presented in the space occupied by the `<img>` element.
 
+To decide which URL to load, the {{Glossary("user agent")}} examines each `<source>`'s [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/source#srcset), [`media`](/en-US/docs/Web/HTML/Reference/Elements/source#media), and [`type`](/en-US/docs/Web/HTML/Reference/Elements/source#type) attributes to select a compatible image that best matches the current layout and capabilities of the display device.
+
 {{InteractiveExample("HTML Demo: &lt;picture&gt;", "tabbed-standard")}}
 
 ```html interactive-example
@@ -23,8 +25,6 @@ The browser will consider each child `<source>` element and choose the best matc
   <img src="/shared-assets/images/examples/painted-hand.jpg" alt="" />
 </picture>
 ```
-
-To decide which URL to load, the {{Glossary("user agent")}} examines each `<source>`'s [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/source#srcset), [`media`](/en-US/docs/Web/HTML/Reference/Elements/source#media), and [`type`](/en-US/docs/Web/HTML/Reference/Elements/source#type) attributes to select a compatible image that best matches the current layout and capabilities of the display device.
 
 The `<img>` element serves two purposes:
 

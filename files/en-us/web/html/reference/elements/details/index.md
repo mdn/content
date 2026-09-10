@@ -11,6 +11,8 @@ The **`<details>`** [HTML](/en-US/docs/Web/HTML) element creates a disclosure wi
 
 A disclosure widget is typically presented onscreen using a small triangle that rotates (or twists) to indicate open/closed state, with a label next to the triangle. The contents of the `<summary>` element are used as the label for the disclosure widget. The contents of the `<details>` provide the {{glossary("accessible description")}} for the `<summary>`.
 
+A `<details>` widget can be in one of two states. The default _closed_ state displays only the triangle and the label inside `<summary>` (or a {{Glossary("user agent")}}-defined default string if no `<summary>`).
+
 {{InteractiveExample("HTML Demo: &lt;details&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
@@ -42,8 +44,6 @@ details[open] summary {
   margin-bottom: 0.5em;
 }
 ```
-
-A `<details>` widget can be in one of two states. The default _closed_ state displays only the triangle and the label inside `<summary>` (or a {{Glossary("user agent")}}-defined default string if no `<summary>`).
 
 When the user clicks on the widget or focuses it then presses the space bar, it "twists" open, revealing its contents. The common use of a triangle which rotates or twists around to represent opening or closing the widget is why these are sometimes called "twisty".
 

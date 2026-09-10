@@ -11,6 +11,8 @@ sidebar: htmlsidebar
 
 Only one radio button in a given group can be selected at the same time. Radio buttons are typically rendered as small circles, which are filled or highlighted when selected.
 
+They are called radio buttons because they look and operate in a similar manner to the push buttons on old-fashioned radios, such as the one shown below.
+
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;radio&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
@@ -46,8 +48,6 @@ input {
   margin: 0.4rem;
 }
 ```
-
-They are called radio buttons because they look and operate in a similar manner to the push buttons on old-fashioned radios, such as the one shown below.
 
 ![Shows what radio buttons looked like in the olden days.](old-radio.jpg)
 

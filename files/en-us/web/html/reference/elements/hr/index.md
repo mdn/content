@@ -9,6 +9,8 @@ sidebar: htmlsidebar
 
 The **`<hr>`** [HTML](/en-US/docs/Web/HTML) element represents a thematic break between elements: for example, a change of scene in a story, or a shift of topic within a section.
 
+Historically, the `<hr>` element has always been presented as a horizontal rule or line. While it may still be displayed as a horizontal rule in visual browsers, this element is now defined in semantic terms, rather than presentational terms. Therefore, if you wish to draw a horizontal line, you should do so by adding a border to an existing element using CSS.
+
 {{InteractiveExample("HTML Demo: &lt;hr&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
@@ -37,8 +39,6 @@ hr::after {
   top: -13px;
 }
 ```
-
-Historically, the `<hr>` element has always been presented as a horizontal rule or line. While it may still be displayed as a horizontal rule in visual browsers, this element is now defined in semantic terms, rather than presentational terms. Therefore, if you wish to draw a horizontal line, you should do so by adding a border to an existing element using CSS.
 
 The `border-*` properties (for example, {{cssxref("border-style")}} and {{cssxref("border-color")}}) allow you to significantly customize a line's appearance, whether you are customizing an `<hr>` element or a border drawn on a different element.
 

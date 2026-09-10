@@ -9,6 +9,8 @@ sidebar: webassemblysidebar
 
 The **`q15mulr_sat_s`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic) performs a lane-wise [saturating](https://en.wikipedia.org/wiki/Saturation_arithmetic) rounding multiplication in Q15 format on two signed [`v128`](/en-US/docs/WebAssembly/Reference/Value_types/v128) `i16x8` value interpretations — clamping the output to the range allowed by the value type (a single `i16x8` value interpretation).
 
+The `q15mulr_sat_s` instruction performs a fixed-point multiplication on 8 pairs of Q15-encoded 16-bit signed integers, simultaneously, with rounding and saturation. Such operations are common in audio processing and machine learning, for example FIR/IIR audio filters and neural network inference.
+
 {{InteractiveExample("Wat Demo: q15mulr_sat_s", "tabbed-taller")}}
 
 ```wat interactive-example
@@ -29,8 +31,6 @@ The **`q15mulr_sat_s`** [SIMD arithmetic instruction](/en-US/docs/WebAssembly/Re
 ```js interactive-example
 WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), { console });
 ```
-
-The `q15mulr_sat_s` instruction performs a fixed-point multiplication on 8 pairs of Q15-encoded 16-bit signed integers, simultaneously, with rounding and saturation. Such operations are common in audio processing and machine learning, for example FIR/IIR audio filters and neural network inference.
 
 Q15 is a fixed-point number format where a signed 16-bit integer represents a real number in the range −1.0 to 1.0. The value `32767` (`0x7FFF`) is equivalent to `1.0`, and `−32768` (`0x8000`) is equivalent to `−1.0`. Multiplying two Q15 numbers produces a Q30 result stored as a 32-bit integer. To get back to Q15 (16-bit), you shift right by 15.
 

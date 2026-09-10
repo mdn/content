@@ -9,6 +9,9 @@ sidebar: htmlsidebar
 
 The **`<embed>`** [HTML](/en-US/docs/Web/HTML) element embeds external content at the specified point in the document. This content is provided by an external application or other source of interactive content such as a browser plug-in.
 
+> [!NOTE]
+> This topic documents only the element that is defined as part of the [HTML Living Standard](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-embed-element). It does not address earlier, non-standardized implementation of the element.
+
 {{InteractiveExample("HTML Demo: &lt;embed&gt;", "tabbed-standard")}}
 
 ```html interactive-example
@@ -18,9 +21,6 @@ The **`<embed>`** [HTML](/en-US/docs/Web/HTML) element embeds external content a
   width="250"
   height="200" />
 ```
-
-> [!NOTE]
-> This topic documents only the element that is defined as part of the [HTML Living Standard](https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-embed-element). It does not address earlier, non-standardized implementation of the element.
 
 Keep in mind that most modern browsers have deprecated and removed support for browser plug-ins, so relying upon `<embed>` is generally not wise if you want your site to be operable on the average user's browser.
 

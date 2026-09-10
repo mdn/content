@@ -9,6 +9,8 @@ sidebar: htmlsidebar
 
 The **`title`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) contains text representing advisory information related to the element it belongs to.
 
+The main use of the `title` attribute is to label {{HTMLElement("iframe")}} elements for assistive technology.
+
 {{InteractiveExample("HTML Demo: title", "tabbed-shorter")}}
 
 ```html interactive-example
@@ -32,8 +34,6 @@ iframe {
   width: 100%;
 }
 ```
-
-The main use of the `title` attribute is to label {{HTMLElement("iframe")}} elements for assistive technology.
 
 The `title` attribute may also be used to label controls in [data tables](/en-US/docs/Web/HTML/Reference/Elements/table).
 

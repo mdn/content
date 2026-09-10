@@ -9,6 +9,8 @@ sidebar: htmlsidebar
 
 The **`<style>`** [HTML](/en-US/docs/Web/HTML) element contains style information for a document, or part of a document. It contains CSS, which is applied to the contents of the document containing the `<style>` element.
 
+The `<style>` element is typically included inside the {{htmlelement("head")}} of the document. It can also be used anywhere metadata content is permitted, such as inside a {{htmlelement("template")}} element.
+
 {{InteractiveExample("HTML Demo: &lt;style&gt;", "tabbed-standard")}}
 
 ```html interactive-example
@@ -36,8 +38,6 @@ p {
   color: red;
 }
 ```
-
-The `<style>` element is typically included inside the {{htmlelement("head")}} of the document. It can also be used anywhere metadata content is permitted, such as inside a {{htmlelement("template")}} element.
 
 If you include multiple `<style>` and `<link>` elements in your document, they will be applied to the DOM in the order they are included in the document — make sure you include them in the correct order, to avoid unexpected cascade issues.
 
