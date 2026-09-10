@@ -46,6 +46,10 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
     - `ltr`: Indicates that the text should go in a left-to-right direction.
     - `rtl`: Indicates that the text should go in a right-to-left direction.
 
+## Usage notes
+
+The text's characters are drawn from the starting point in the given direction; the individual characters' orientation is not affected (so characters don't get drawn backward, for example).
+
 ## Examples
 
 ```html
@@ -57,12 +61,6 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
 ### Result
 
 {{EmbedLiveSample('Examples')}}
-
-## Notes
-
-The text's characters are drawn from the starting point in the given direction; the individual characters' orientation is not affected (so characters don't get drawn backward, for example).
-
-The HTML 4 specification did not specify events for this element; they were added in XHTML. This is most likely an oversight.
 
 ## Technical summary
 
