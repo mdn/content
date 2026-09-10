@@ -7,7 +7,7 @@ browser-compat: html.elements.iframe
 sidebar: htmlsidebar
 ---
 
-The **`<iframe>`** [HTML](/en-US/docs/Web/HTML) element represents a nested {{Glossary("browsing context")}}, embedding another HTML page into the current one.
+The **`<iframe>`** [HTML](/en-US/docs/Web/HTML) element represents a nested {{Glossary("browsing context")}}, embedding another document into the current one.
 
 {{InteractiveExample("HTML Demo: &lt;iframe&gt;", "tabbed-standard")}}
 
@@ -139,6 +139,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
     > [!NOTE]
     >
+    > - The `sandbox` attribute can block the browser's built-in PDF viewer. See [Embedding PDFs](#embedding_pdfs).
     > - When the embedded document has the same origin as the embedding page, it is **strongly discouraged** to use both `allow-scripts` and `allow-same-origin`, as that lets the embedded document remove the `sandbox` attribute — making it no more secure than not using the `sandbox` attribute at all.
     > - Sandboxing is useless if the attacker can display content outside a sandboxed `iframe` — such as if the viewer opens the frame in a new tab. Such content should be also served from a _separate origin_ to limit potential damage.
 
@@ -183,7 +184,15 @@ These attributes are deprecated and may no longer be supported by all user agent
     - `no`
       - : Never show a scrollbar.
 
-## Scripting
+## Usage notes
+
+### Embedding PDFs
+
+An `<iframe>` can display a PDF using the browser's built-in PDF viewer. Unlike {{HTMLElement("object")}}, it does not support child content as a fallback if the PDF cannot be displayed. Provide a link outside the `<iframe>` so users can open the PDF separately.
+
+The [`sandbox`](#sandbox) attribute can prevent the built-in PDF viewer from loading, even with `allow-scripts` or `allow-downloads`. It is not a portable way to add restrictions to a native PDF preview. The browser's PDF viewer already sandboxes all executable content.
+
+### Scripting
 
 Inline frames, like {{HTMLElement("frame")}} elements, are included in the {{domxref("window.frames")}} pseudo-array.
 
@@ -195,7 +204,7 @@ Script access to a frame's content is subject to the [same-origin policy](/en-US
 Scripts cannot access most properties in other `window` objects if the script was loaded from a different origin, including scripts inside a frame accessing the frame's parent.
 Cross-origin communication can be achieved using {{domxref("Window.postMessage()")}}.
 
-### Top navigation in cross-origin frames
+#### Top navigation in cross-origin frames
 
 Scripts running in a same-origin frame can access the {{domxref("Window.top")}} property and set {{domxref("Window.location","window.top.location")}} to redirect the top-level page to a new location.
 This behavior is referred to as "top navigation".
@@ -208,18 +217,18 @@ What this means is that a cross-origin frame can't immediately redirect the top-
 A sandboxed frame blocks all top navigation unless the `sandbox` attribute values are set to [`allow-top-navigation`](#allow-top-navigation) or [`allow-top-navigation-by-user-activation`](#allow-top-navigation-by-user-activation).
 Note that top-navigation permissions are inherited, so a nested frame can perform a top navigation only if its parent frames are also allowed to.
 
-## Positioning and scaling
+### Positioning and scaling
 
 Being a {{ glossary("replaced elements", "replaced element")}}, the `<iframe>` allows the position of the embedded document within its box to be adjusted using the {{cssxref("object-position")}} property.
 
 > [!NOTE]
 > The {{cssxref("object-fit")}} property has no effect on `<iframe>` elements.
 
-## `error` and `load` event behavior
+### `error` and `load` event behavior
 
 The `error` and `load` events fired on `<iframe>`s could be used to probe the URL space of the local network's HTTP servers. Therefore, as a security precaution user agents do not fire the [error](/en-US/docs/Web/API/HTMLElement/error_event) event on `<iframe>`s, and the [load](/en-US/docs/Web/API/HTMLElement/load_event) event is always triggered even if the `<iframe>` content fails to load.
 
-## Responsive `<iframe>` sizing
+### Responsive `<iframe>` sizing
 
 For security and privacy reasons, `<iframe>` elements do not by default expose any information to the parent document about the size of the content in the document they are embedding.
 

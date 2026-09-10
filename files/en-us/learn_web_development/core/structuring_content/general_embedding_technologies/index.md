@@ -6,7 +6,7 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
-Developers commonly think of embedding media such as images, video and audio into web pages. In this article we take somewhat of a sideways step, looking at some elements that allow you to embed a wide variety of content types into your webpages: the {{htmlelement("iframe")}}, {{htmlelement("embed")}} and {{htmlelement("object")}} elements. `<iframe>`s are for embedding other web pages, and the other two allow you to embed external resources such as PDF files.
+Developers commonly think of embedding media such as images, video and audio into web pages. In this article we take somewhat of a sideways step, looking at some elements that allow you to embed a wide variety of content types into your webpages: the {{htmlelement("iframe")}}, {{htmlelement("embed")}} and {{htmlelement("object")}} elements. These elements allow you to embed external resources such as other web pages and PDF files.
 
 <table>
   <tbody>
@@ -144,13 +144,15 @@ HTTPS-enabling your site requires a special security certificate to be installed
 > [GitHub pages](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) allow content to be served via HTTPS by default.
 > If you are using a different hosting provider you should check what support they provide for serving content with HTTPS.
 
-#### Always use the `sandbox` attribute
+#### Use the `sandbox` attribute
 
 You want to give attackers as little power as you can to do bad things on your website, therefore you should give embedded content _only the permissions needed for doing its job._ Of course, this applies to your own content, too. A container for code where it can be used appropriately — or for testing — but can't cause any harm to the rest of the codebase (either accidental or malicious) is called a [sandbox](<https://en.wikipedia.org/wiki/Sandbox_(computer_security)>).
 
 Content that's not sandboxed may be able to execute JavaScript, submit forms, trigger popup windows, etc. By default, you should impose all available restrictions by using the `sandbox` attribute with no parameters, as shown in our previous example.
 
-If absolutely required, you can add permissions back one by one (inside the `sandbox=""` attribute value) — see the [`sandbox`](/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox) reference entry for all the available options. One important note is that you should _never_ add both `allow-scripts` and `allow-same-origin` to your `sandbox` attribute — in that case, the embedded content could bypass the [Same-origin policy](/en-US/docs/Glossary/Same-origin_policy) that stops sites from executing scripts, and use JavaScript to turn off sandboxing altogether.
+If absolutely required, you can add permissions back one by one (inside the `sandbox=""` attribute value) — see the [`sandbox`](/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox) reference entry for all the available options. One important note is that you should _never_ add both `allow-scripts` and `allow-same-origin` to your `sandbox` attribute when the embedded content has the same origin as the embedding page — in that case, the embedded content could use JavaScript to remove the attribute and reload itself to turn off sandboxing altogether.
+
+This advice applies to embedded HTML and SVG documents, where the embedded script might access the outside. For PDF documents, the browser's built-in PDF viewer already sandboxes any executable content. In fact, adding `sandbox` may prevent the PDF viewer from working.
 
 > [!NOTE]
 > Sandboxing provides no protection if attackers can fool people into visiting malicious content directly (outside an `iframe`). If there's any chance that certain content may be malicious (e.g., user-generated content), please serve it from a different {{glossary("domain")}} to your main site.
@@ -164,13 +166,11 @@ If absolutely required, you can add permissions back one by one (inside the `san
 
 ## The \<embed> and \<object> elements
 
-The {{htmlelement("embed")}} and {{htmlelement("object")}} elements serve a different function to {{htmlelement("iframe")}} — these elements are general purpose embedding tools for embedding external content, such as PDFs.
+Just like {{htmlelement("iframe")}}, the {{htmlelement("embed")}} and {{htmlelement("object")}} elements can also embed external content, but potentially in a more lightweight container (not mimicking a full browser tab), if the embedded content supports it (such as raster images).
 
-However, you are unlikely to use these elements very much. If you need to display PDFs, it's usually better to link to them, rather than embedding them in the page.
+Historically, these elements have also been used for embedding content handled by browser {{Glossary("Plugin", "plugins")}} such as {{Glossary("Adobe Flash")}}, but this technology is now obsolete and is not supported by modern browsers. Today, almost all of their use cases can be covered by `<iframe>`, which provides more security features.
 
-Historically these elements have also been used for embedding content handled by browser {{Glossary("Plugin", "plugins")}} such as {{Glossary("Adobe Flash")}}, but this technology is now obsolete and is not supported by modern browsers.
-
-If you find yourself needing to embed plugin content, this is the kind of information you'll need, at a minimum:
+If you find yourself needing to embed external content with these elements, this is the kind of information you'll need, at a minimum:
 
 <table class="standard-table no-markdown">
   <thead>
@@ -196,7 +196,7 @@ If you find yourself needing to embed plugin content, this is the kind of inform
     </tr>
     <tr>
       <td>
-        Height and width (in CSS pixels) of the box controlled by the plugin
+        Height and width (in CSS pixels) of the embedded content's box
       </td>
       <td>
          <a href="/en-US/docs/Web/HTML/Reference/Elements/embed#height"><code>height</code></a><br /><a href="/en-US/docs/Web/HTML/Reference/Elements/embed#width"><code>width</code></a>
@@ -216,13 +216,21 @@ If you find yourself needing to embed plugin content, this is the kind of inform
   </tbody>
 </table>
 
-Let's look at an `<object>` example that embeds a PDF into a page (see the [live example](https://mdn.github.io/learning-area/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html) and the [source code](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/other-embedding-technologies/object-pdf.html)):
+If your page needs a PDF preview, choose an element based on the features you need:
+
+- The {{htmlelement("iframe")}} element should be the top choice: it offers controls such as [`loading="lazy"`](/en-US/docs/Web/HTML/Reference/Elements/iframe#loading) and [`referrerpolicy`](/en-US/docs/Web/HTML/Reference/Elements/iframe#referrerpolicy).
+- Use {{htmlelement("object")}} only if the resource may not render and fallback content is needed.
+- The {{htmlelement("embed")}} element offers no advantage for a PDF preview.
+
+Because the browser's PDF viewer already provides its own sandboxing, no sandboxing is necessary on the element. In fact, adding `sandbox` may prevent the PDF viewer from working. If you use [Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP), the `<iframe>` sources are controlled through {{CSP("frame-src")}}, and `<object>` and `<embed>` sources through {{CSP("object-src")}}. As the `object-src` reference page says, you should generally keep `object-src 'none'`, in which case `<iframe>` is the only viable option.
+
+Let's look at an `<object>` example that embeds a PDF into a page:
 
 ```html
 <object data="my-pdf.pdf" type="application/pdf" width="800" height="1200">
   <p>
-    You don't have a PDF plugin, but you can
-    <a href="my-pdf.pdf">download the PDF file. </a>
+    The PDF preview is unavailable.
+    <a href="my-pdf.pdf">Open the PDF file.</a>
   </p>
 </object>
 ```
