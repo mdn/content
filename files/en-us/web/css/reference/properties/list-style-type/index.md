@@ -248,7 +248,7 @@ Refer to the [All list style types](#all_list_style_types) example to see the ab
 
 ### Non-standard extensions
 
-A few predefined types are supported by Mozilla (Firefox) with a `-moz-` prefix.
+Mozilla (Firefox) supports a few predefined types with a `-moz-` prefix.
 
 - `ethiopic-halehame`: `-moz-ethiopic-halehame`
 - `ethiopic-halehame-am`: `-moz-ethiopic-halehame-am`
@@ -267,7 +267,41 @@ The `list-style-type` property sets the marker (such as a disc, character, or cu
 
 Only a few elements ({{HTMLElement("li")}} and {{HTMLElement("summary")}}) have a default value of `display: list-item`. However, the `list-style-type` property may be applied to any element whose {{cssxref("display")}} value is set to `list-item`.
 
-Because this property is inherited, it can be set on a parent element (commonly {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make it apply to its list items. However, user-agent stylesheets set `list-style-type` on `<ul>`, `<ol>`, and {{HTMLElement("menu")}} elements, so nested lists use these default values instead of inheriting the ancestor list's value. To make nested lists inherit this value, set `list-style-type: inherit` on the nested list elements.
+Because `list-style-type` is inherited, it can be set on a parent element (commonly {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make it apply to its list items. However, user-agent stylesheets set `list-style-type` on `<ul>`, `<ol>`, and {{HTMLElement("menu")}} elements, so nested lists use these default values instead of inheriting the ancestor list's value. To make nested lists inherit this value, set `list-style-type: inherit` on the nested list elements.
+
+For example, in cases like this:
+
+```html live-sample___list-style-inherit
+<ul>
+  <li>One</li>
+  <li>Two</li>
+  <li>Three
+    <ul>
+      <li>Four</li>
+      <li>Five</li>
+      <li>Six</li>
+    </ul>
+  </li>
+</ul>
+```
+
+Where a custom style is set on the outer list:
+
+```css live-sample___list-style-inherit
+body > ul {
+  list-style-type: square;
+}
+```
+
+The inner list won't inherit the custom style unless you set it to inherit:
+
+```css live-sample___list-style-inherit
+ul ul {
+  list-style-type: inherit;
+}
+```
+
+{{embedlivesample("list-style-inherit", "100%", "200")}}
 
 ## Accessibility
 
