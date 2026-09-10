@@ -105,10 +105,7 @@ Firefox 156 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 #### Media, WebRTC, and Web Audio
 
-- The `alwaysNegotiateDataChannels` member of the configuration object passed to {{domxref("RTCPeerConnection.RTCPeerConnection", "RTCPeerConnection()")}} is now supported.
-  When set to `true`, the SDP produced by the connection always includes a data channel m-line, so {{domxref("RTCPeerConnection.createDataChannel()")}} can be called later without requiring a new round of negotiation.
-  The member defaults to `false`, is returned by {{domxref("RTCPeerConnection.getConfiguration()")}}, and cannot be changed by {{domxref("RTCPeerConnection.setConfiguration()")}}.
-  ([Firefox bug 2062561](https://bugzil.la/2062561)).
+- The `alwaysNegotiateDataChannels` member of the configuration object passed to the {{domxref("RTCPeerConnection.RTCPeerConnection", "RTCPeerConnection()")}} constructor is now supported. When set to `true`, the SDP produced by the connection always includes a data channel m-line, so {{domxref("RTCPeerConnection.createDataChannel()")}} can be called later without requiring a new round of negotiation. The member defaults to `false`, is returned by {{domxref("RTCPeerConnection.getConfiguration()")}}, and cannot be changed by {{domxref("RTCPeerConnection.setConfiguration()")}}. ([Firefox bug 2062561](https://bugzil.la/2062561)).
 
 <!-- #### Removals -->
 
