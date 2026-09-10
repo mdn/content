@@ -129,19 +129,55 @@ The `list-style` property is specified as one, two, or three values in any order
 ### Values
 
 - {{cssxref("list-style-type")}}
-  - : A `<counter-style>`, {{cssxref("string")}}, or `none`. If omitted in the shorthand, the default `disc` value is used. See {{cssxref("list-style-type")}}.
+  - : A `<counter-style>`, {{cssxref("string")}}, or `none`. If omitted in the shorthand, it defaults to `disc`. See {{cssxref("list-style-type")}}.
 - {{cssxref("list-style-image")}}
-  - : An {{cssxref("image")}} or `none`. If omitted, the default `none` value is used. See {{cssxref("list-style-image")}}.
+  - : An {{cssxref("image")}} or `none`. If omitted, it defaults to `none`. See {{cssxref("list-style-image")}}.
 - {{cssxref("list-style-position")}}
-  - : Either `inside` or `outside`. If omitted, the default `outside` value is used. See {{cssxref("list-style-position")}}.
+  - : Either `inside` or `outside`. If omitted, it defaults to `outside`. See {{cssxref("list-style-position")}}.
 - `none`
   - : No list style is used.
 
 ## Description
 
-The `list-style` property allows you to customize the list items' appearance. The values of this property are applied to list items, including {{HTMLElement("li")}} elements and elements with `{{cssxref("display")}}: list-item;`.
+The `list-style` property lets you customize the appearance of list items. The values of this property are applied to list items, including {{HTMLElement("li")}} elements and elements with `{{cssxref("display")}}: list-item;`.
 
-Because this property is inherited, it can be set on a parent element (normally {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make the same list styling apply to its list items. However, user-agent stylesheets set {{cssxref("list-style-type")}} on `<ul>`, `<ol>`, and {{HTMLElement("menu")}} elements, so nested lists use these default values instead of inheriting the ancestor list's `list-style-type`. The {{cssxref("list-style-position")}} and {{cssxref("list-style-image")}} values normally inherit into nested lists. To make nested lists inherit the marker type as well, set `list-style-type: inherit` on the nested list elements.
+### List style inheritance
+
+Because the {{cssxref("list-style-type")}} longhand property is inherited, `list-style` can be set on a parent element (normally {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make the same list styling apply to its list items. However, user-agent stylesheets set `list-style-type` on `<ul>`, `<ol>`, and {{HTMLElement("menu")}} elements, so nested lists use these default values instead of inheriting the ancestor list's `list-style`. The {{cssxref("list-style-position")}} and {{cssxref("list-style-image")}} values normally inherit into nested lists. To make nested lists inherit the marker type as well, set `list-style` or `list-style-type` to `inherit` on the nested list elements.
+
+For example, in cases like this:
+
+```html live-sample___list-style-inherit
+<ul>
+  <li>One</li>
+  <li>Two</li>
+  <li>Three
+    <ul>
+      <li>Four</li>
+      <li>Five</li>
+      <li>Six</li>
+    </ul>
+  </li>
+</ul>
+```
+
+Where a custom style is set on the outer list:
+
+```css live-sample___list-style-inherit
+body > ul {
+  list-style: square;
+}
+```
+
+The inner list won't inherit the custom style unless you set it to inherit:
+
+```css live-sample___list-style-inherit
+ul ul {
+  list-style: inherit;
+}
+```
+
+{{embedlivesample("list-style-inherit", "100%", "200")}}
 
 ## Accessibility
 
