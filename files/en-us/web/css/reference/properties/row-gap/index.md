@@ -141,7 +141,7 @@ We set the {{cssxref("display")}} to `flex`, set the {{cssxref("flex-flow")}} to
 
 The `row-gap` value is set as `20px` on the flex container to create a `20px` gap between the adjacent flex rows.
 
-We also set a background color on the flex items, with most being semi-opaque, to demonstrate how, with the gap being narrower than the rule, the rule is visible under the flex items.
+We also set a background color on the flex items, with most being semi-opaque, to demonstrate how the rule is visible under the flex items when it is wider than the gap.
 
 ```css
 #flexbox {
