@@ -55,7 +55,7 @@ Allowed values for the `animation-range-start` property are `normal`, a {{cssxre
 
 See {{cssxref("animation-range")}} for a detailed description of the available values.
 
-When specifying multiple comma-separated values, they are applied to the animations in the order in which the {{cssxref("animation-name")}}values appear. See [Setting multiple animation property values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values).
+When specifying multiple comma-separated values, they apply to the animations in the order in which the {{cssxref("animation-name")}} values appear. See [Setting multiple animation property values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values).
 
 The `animation-range-start` is included in the {{cssxref("animation")}} shorthand as a reset-only value. This means that using the `animation` shorthand resets any previously declared `animation-range-start` value of equal or lower specificity to `normal`; the shorthand cannot be used to set a new `animation-range-start` value. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), you should declare `animation-range-start` _after_ declaring any `animation` shorthand to avoid resetting the value to `normal`.
 
