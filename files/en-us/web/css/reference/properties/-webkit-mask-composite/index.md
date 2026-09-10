@@ -42,6 +42,8 @@ The **`-webkit-mask-composite`** property specifies the manner in which multiple
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `clear`
   - : Overlapping pixels in the source mask image and the destination mask image are cleared.
 - `copy`

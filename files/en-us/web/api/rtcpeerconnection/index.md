@@ -156,7 +156,7 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
     This indicates whether ICE negotiation has not yet begun (`new`), has begun gathering candidates (`gathering`), or has completed (`complete`).
 - {{domxref("RTCPeerConnection.negotiationneeded_event", "negotiationneeded")}}
   - : Sent when negotiation or renegotiation of the {{Glossary("ICE")}} connection needs to be performed;
-    this can happen both when first opening a connection as well as when it is necessary to adapt to changing network conditions.
+    this can happen both when first opening a connection and when it is necessary to adapt to changing network conditions.
     The receiver should respond by creating an offer and sending it to the other peer.
 - {{domxref("RTCPeerConnection.signalingstatechange_event", "signalingstatechange")}}
   - : Sent when the connection's {{Glossary("ICE")}} signaling state changes.
