@@ -37,7 +37,7 @@ Allowed values for `timeline-scope` are:
 - `all`
   - : The names of all timelines defined by descendants are in scope for this element and its descendants.
 - `<dashed-ident>`
-  - : One or more comma-separated [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident)s representing timeline names (i.e., declared using {{cssxref("scroll-timeline-name")}} or {{cssxref("view-timeline-name")}}). Sets the scope so that the specified `*-timeline-name` values, when set in the subtree, can only be bound to by positioned elements in the same subtree.
+  - : Specifies the name of an existing named timeline (i.e., declared using {{cssxref("scroll-timeline-name")}} or {{cssxref("view-timeline-name")}}) defined on a descendant element. This increases the timeline scope to the current element and to any of its descendants.
 
 ## Description
 
