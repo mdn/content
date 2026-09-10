@@ -55,7 +55,7 @@ The `animation-range-end` property specifies the end of the animation's attachme
 
 The property value can be `normal`, a `<length-percentage>`, or a {{cssxref("timeline-range-name")}} with an optional `<length-percentage>`. If the `<timeline-range-name>` value does not include a `<length-percentage>`, the percentage defaults to `100%`.
 
-When specifying multiple comma-separated values, they are applied to the animations in the order in which the {{cssxref("animation-name")}}values appear. See [Setting multiple animation property values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values).
+When specifying multiple comma-separated values, they apply to the animations in the order in which the {{cssxref("animation-name")}} values appear. See [Setting multiple animation property values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values).
 
 The `animation-range-end` property is included in the {{cssxref("animation")}} shorthand as a reset-only value. This means that using the `animation` shorthand resets any previously declared `animation-range-end` value to `normal`; the shorthand cannot be used to set a new `animation-range-end` value. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), you should declare `animation-range-end` _after_ declaring any `animation` shorthand to avoid resetting the value to `normal`.
 
