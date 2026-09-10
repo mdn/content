@@ -6,7 +6,7 @@ browser-compat: javascript.statements.import.defer
 sidebar: jssidebar
 ---
 
-The **`import defer`** declaration behaves like regular [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declarations, but it can only import a module using the namespace import syntax, and results in a [deferred module namespace object](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer#deferred_module_namespace_object). The module and its dependencies are fetched and linked up front, but their synchronous evaluation is deferred until the namespace's properties are accessed. Modules that use [top-level `await`](#top-level_await) are evaluated eagerly.
+The **`import defer`** declaration behaves like regular [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declarations, except that it results in a [deferred module namespace object](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer#deferred_module_namespace_object). The module and its dependencies are fetched and linked up front, but their synchronous evaluation is deferred until the namespace's properties are accessed. Modules that use [top-level `await`](#top-level_await) are evaluated eagerly.
 
 ## Syntax
 
@@ -61,6 +61,10 @@ function compileFile(path) {
 Unlike [`import source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/source), a deferred module is still linked up front. Linking up front lets the module loader resolve dependencies, catching missing dependencies or invalid imports before the module is used. Leaving the module unlinked avoids loading dependencies you may not need and allows you to control how it is instantiated.
 
 Unlike [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import), the deferred module is still fetched, parsed, and linked up front, again avoiding unnecessary async coloring. `import defer` also enjoys most benefits of a static declaration, such as better static analysis.
+
+Note that only the "namespace import" syntax is supported. You cannot use `import defer { property } from "./my-module.js"`, etc. (which, even if valid, would not be able to defer any execution).
+
+### Caching semantics
 
 The modifier applies to an import, not to the module itself. If another part of the application imports the same module without `defer`, the module is evaluated as usual. Both forms share the same module state, and the module's code executes at most once. Changing the import phase does not create a separate module in the cache:
 

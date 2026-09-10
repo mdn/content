@@ -6,7 +6,7 @@ browser-compat: javascript.operators.import.defer
 sidebar: jssidebar
 ---
 
-The **`import.defer()`** syntax behaves like regular [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import) syntax, but only obtains a [deferred module namespace object](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer#deferred_module_namespace_object). The module and its dependencies are fetched and linked up front, but their synchronous evaluation is deferred until the namespace's properties are accessed.
+The **`import.defer()`** syntax behaves like regular [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import) syntax, except that it results in a [deferred module namespace object](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer#deferred_module_namespace_object). The module and its dependencies are fetched and linked up front, but their synchronous evaluation is deferred until the namespace's properties are accessed.
 
 For more information about deferred evaluation, including its interaction with top-level `await`, see the [`import defer`](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer) declaration form.
 

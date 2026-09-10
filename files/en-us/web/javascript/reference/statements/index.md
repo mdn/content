@@ -84,6 +84,8 @@ For an alphabetical listing see the sidebar on the left.
   - : Used to export functions to make them available for imports in external modules, and other scripts.
 - {{jsxref("Statements/import", "import")}}
   - : Used to import functions exported from an external module, another script.
+- {{jsxref("Statements/import/defer", "import defer")}}
+  - : Loads a module as a namespace, deferring synchronous evaluation until the returned namespace's properties are accessed.
 - {{jsxref("Statements/label", "label", "", 1)}}
   - : Provides a statement with an identifier that you can refer to using a `break` or `continue` statement.
 - {{jsxref("Statements/with", "with")}} {{deprecated_inline}}
