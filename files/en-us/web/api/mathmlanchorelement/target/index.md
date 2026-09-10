@@ -23,10 +23,12 @@ A string representing the target. Its value can be:
 
 ### Basic usage
 
-Given this HTML:
+Given this MathML:
 
 ```html
-<a id="myAnchor" href="https://example.com" target="_blank"> ... </a>
+<math>
+  <a id="myAnchor" href="https://example.com" target="_blank"> ... </a>
+</math>
 ```
 
 you can get the `target` of the anchor like this:

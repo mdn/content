@@ -20,10 +20,12 @@ A string.
 
 ### Basic usage
 
-Given this HTML:
+Given this MathML:
 
 ```html
-<a id="myAnchor" href="https://example.com" type="text/html"> ... </a>
+<math>
+  <a id="myAnchor" href="https://example.com" type="text/html"> ... </a>
+</math>
 ```
 
 you can get the `type` of the anchor like this:

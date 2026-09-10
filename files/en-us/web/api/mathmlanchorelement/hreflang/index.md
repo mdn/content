@@ -24,10 +24,14 @@ A string that contains a language tag, or the empty string (`""`) if there is no
 
 ### Basic usage
 
-Given this HTML:
+Given this MathML:
 
 ```html
-<a id="myAnchor" href="https://example.com#examples" hreflang="en-CA"> ... </a>
+<math>
+  <a id="myAnchor" href="https://example.com#examples" hreflang="en-CA">
+    ...
+  </a>
+</math>
 ```
 
 you can get the `hreflang` of the anchor like this:

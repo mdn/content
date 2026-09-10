@@ -24,10 +24,12 @@ A string.
 
 ### Basic usage
 
-Given this HTML:
+Given this MathML:
 
 ```html
-<a id="myAnchor" href="https://foo:bar@example.com#examples"> ... </a>
+<math>
+  <a id="myAnchor" href="https://foo:bar@example.com#examples"> ... </a>
+</math>
 ```
 
 you can get the `password` of the anchor like this:

@@ -30,10 +30,12 @@ A string.
 
 ### Basic usage
 
-Given this HTML:
+Given this MathML:
 
 ```html
-<a id="myAnchor" href="https://example.com/subsection?q=123"> ... </a>
+<math>
+  <a id="myAnchor" href="https://example.com/subsection?q=123"> ... </a>
+</math>
 ```
 
 you can get the `search` string of the anchor like this:

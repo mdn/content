@@ -28,10 +28,12 @@ A string.
 
 ### Basic usage
 
-Given this HTML:
+Given this MathML:
 
 ```html
-<a id="myAnchor" href="https://example.com/subsection#examples"> ... </a>
+<math>
+  <a id="myAnchor" href="https://example.com/subsection#examples"> ... </a>
+</math>
 ```
 
 you can get the `origin` of the anchor like this:
