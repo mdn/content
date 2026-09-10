@@ -44,7 +44,7 @@ This property is specified as one or two space-separated values from the followi
 - {{cssxref("integer")}} {{optional_inline}}
   - : Specifies the number of lines after which content is clamped. It must be greater than 0.
 - `<’block-ellipsis’>` {{optional_inline}}
-  - : The optional values have the following meanings:
+  - : Specifies the content inserted into the last line. It can take one of the following values:
     - `no-ellipsis`: No ellipsis (character U+2026) is added if the text is truncated due to the number of line specified.
     - `auto`: Renders an ellipsis character (U+2026) if the text is truncated.
     - {{cssxref("string")}}: Renders the specified string at the end of the affected line. Browsers may truncate this string if it is very long. An empty string behaves like the `no-ellipsis` value.
