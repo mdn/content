@@ -277,7 +277,8 @@ For example, in cases like this:
 <ul>
   <li>One</li>
   <li>Two</li>
-  <li>Three
+  <li>
+    Three
     <ul>
       <li>Four</li>
       <li>Five</li>
