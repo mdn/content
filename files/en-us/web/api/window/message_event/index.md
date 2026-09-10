@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Window.message_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The `message` event is fired on a {{domxref('Window')}} object when the window receives a message, for example from a call to [`Window.postMessage()`](/en-US/docs/Web/API/Window/postMessage) from another browsing context.
 

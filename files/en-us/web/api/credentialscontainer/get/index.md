@@ -14,7 +14,7 @@ The method accepts a single optional `options` argument, which may include:
 
 - A `mediation` property indicating how and whether the user should be asked to participate in the operation.
   This controls, for example, whether the site can silently sign a user in using a stored credential.
-- A `signal` property enabling the operation to be cancelled using an {{domxref("AbortController")}}.
+- A `signal` property enabling the operation to be canceled using an {{domxref("AbortController")}}.
 - One or more properties — `password`, `federated`, `identity`, `otp`, `publicKey` — which indicate the [types of credential](/en-US/docs/Web/API/Credential_Management_API/Credential_types) being requested. If set, the values of these properties include any parameters that the browser needs in order to find an appropriate credential of the requested type.
 
 The API always fulfills with a single credential or `null`. If multiple credentials are available and user mediation is allowed, then the browser will ask the user to select a single credential.
@@ -283,7 +283,7 @@ async function authenticateUser() {
     if (err.name === "TimeoutError") {
       console.error("The authentication request timed out.");
     } else if (err.name === "AbortError") {
-      console.log("The request was cancelled by the user.");
+      console.log("The request was canceled by the user.");
     } else {
       console.error("An unexpected error occurred:", err);
     }

@@ -35,7 +35,7 @@ A {{domxref("SensorErrorEvent")}}. Inherits from {{domxref("Event")}}.
 
 ### Log accelerometer exceptions
 
-This example adds an event listener to log errors occurred on an {{domxref("Accelerometer")}}.
+This example adds an event listener to log errors that occurred on an {{domxref("Accelerometer")}}.
 
 ```js
 const acl = new Accelerometer({ frequency: 60 });

@@ -40,7 +40,7 @@ LanguageModel.availability(options)
             - `tool-response`
               - : The result of a tool invocation.
         - `languages` {{optional_inline}}
-          - : An array of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `en`, `fr`, `ja`) representing languages that the session is expected to handle. The user agent uses this list to determine whether the model supports the specified languages.
+          - : An array of strings containing [BCP 47](https://www.rfc-editor.org/info/rfc5646/) language tags (for example, `en`, `fr`, `ja`) representing languages that the session is expected to handle. The user agent uses this list to determine whether the model supports the specified languages.
     - `expectedOutputs`
       - : An array of objects representing the required output modalities and languages.
         Each object can include the following properties:
@@ -57,7 +57,7 @@ LanguageModel.availability(options)
             - `tool-response`
               - : The result of a tool invocation.
         - `languages` {{optional_inline}}
-          - : An array of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `en`, `fr`, `ja`) that the session is expected to output.
+          - : An array of strings containing [BCP 47](https://www.rfc-editor.org/info/rfc5646/) language tags (for example, `en`, `fr`, `ja`) that the session is expected to output.
     - `tools`
       - : An array of objects representing tools available to the AI.
         Each object can include the following properties:

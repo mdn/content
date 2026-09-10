@@ -21,7 +21,7 @@ The CSS images module defines two properties which can be used to specify how th
 
 ### The `object-fit` property
 
-The `object-fit` property specifies how the replaced element's content object should be fitted to the containing element's box. The property defines how images, videos and other embeddable media formats respond to the height and width of the replaced element's content box. If the height, width, or aspect-ratio of an element differ from the resource that will be occupying space reserved for the element, the `fill`, `contain`, `cover`, `scale-down`, and `none` values define whether the browser should scale the resource, cover the allocated space, contain the asset withing the space, or allow the resource to be distorted.
+The `object-fit` property specifies how the replaced element's content object should be fitted to the containing element's box. The property defines how images, videos and other embeddable media formats respond to the height and width of the replaced element's content box. If the height, width, or aspect-ratio of an element differ from the resource that will be occupying space reserved for the element, the `fill`, `contain`, `cover`, `scale-down`, and `none` values define whether the browser should scale the resource, cover the allocated space, contain the asset within the space, or allow the resource to be distorted.
 
 When contained or scaled down, any areas of the box not covered by the replaced element will show the element's background.
 
@@ -105,7 +105,7 @@ Check the box to set the height and width values. Note that only the `fill` valu
 
 The `object-position` property specifies the alignment of the replaced element's content object within the element's box.
 
-Often used in conjunction with the {{cssxref("object-fit")}} property, it takes as it's value a {{cssxref("position_value", "&lt;position&gt;")}} value, the same value type at used in for {{cssxref("background-position")}}.
+Often used in conjunction with the {{cssxref("object-fit")}} property, it takes as its value a {{cssxref("position_value", "&lt;position&gt;")}} value, the same value type as used for {{cssxref("background-position")}}.
 
 ```css live-sample___example2
 img {

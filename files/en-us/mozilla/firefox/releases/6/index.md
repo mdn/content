@@ -18,7 +18,7 @@ Firefox 6, based on Gecko 6.0, was released on August 16, 2011. This article pro
 - {{ HTMLElement("form") }} elements' text {{ HTMLElement("input") }} fields no longer support the XUL [`maxwidth`](https://web.archive.org/web/20190117013205/https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Property/maxWidth) property; this was never intentional, and is in violation of the HTML specification. You should instead use the [`size`](/en-US/docs/Web/HTML/Reference/Elements/input#size) attribute to set the maximum width of input fields.
 - The {{ HTMLElement("canvas") }} {{ domxref("CanvasRenderingContext2d") }} properties `fillStyle` and `strokeStyle` used to ignore garbage included after a valid color definition; now this is correctly treated as an error. For example, "red blue" as a color used to be treated as "red", when it should have been ignored.
 - The width and height of {{ HTMLElement("canvas") }} elements can now properly be set to 0px; previously, these were getting arbitrarily set to 300px when you tried to do that.
-- Support for the HTML [custom data attributes](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) (`data-*`) has been added. The DOM {{ domxref("HTMLElement/dataset", "dataset") }} property allows to access them.
+- Support for the HTML [custom data attributes](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) (`data-*`) has been added. The DOM {{ domxref("HTMLElement/dataset", "dataset") }} property allows you to access them.
 - When a {{ HTMLElement("textarea") }} element receives focus, the text insertion point is now placed, by default, at the beginning of the text rather than at the end. This makes Firefox's behavior consistent with other browsers.
 
 ### CSS

@@ -8,7 +8,7 @@ status:
 browser-compat: api.VRDisplayCapabilities
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 The **`VRDisplayCapabilities`** interface of the [WebVR API](/en-US/docs/Web/API/WebVR_API) describes the capabilities of a {{domxref("VRDisplay")}} — its features can be used to perform VR device capability tests, for example can it return position information.
 

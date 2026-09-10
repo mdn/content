@@ -1231,6 +1231,7 @@
       ],
       "interfaces": [
         "EventCounts",
+        "InteractionContentfulPaint",
         "LargestContentfulPaint",
         "LayoutShift",
         "LayoutShiftAttribution",
@@ -1252,6 +1253,7 @@
         "PerformanceResourceTiming",
         "PerformanceScriptTiming",
         "PerformanceServerTiming",
+        "PerformanceSoftNavigation",
         "PerformanceTiming",
         "TaskAttributionTiming",
         "VisibilityStateEntry"

@@ -169,6 +169,7 @@ ctrz
 Cubehelix
 currententrychange
 currentscreenchange
+customelementregistry
 cwrap
 daala
 dangi
@@ -192,6 +193,7 @@ dom.abortablepromise
 dom.closewatcher
 dom.documentpip
 dom.element.customstateset
+dom.headingoffset
 dom.input.dirpicker
 dom.media.webcodecs
 dom.performance.event_timing.enable_interactionid
@@ -293,6 +295,8 @@ hanidays
 hanidec
 hansfin
 hantfin
+headingoffset
+headingreset
 hebr
 highp
 hiliteColor
@@ -649,6 +653,7 @@ preg_replace
 premkproject
 prerenderingchange
 presentationml
+pressuresource
 prettyping
 previousslide
 previoustrack

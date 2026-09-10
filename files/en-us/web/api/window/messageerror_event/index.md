@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Window.messageerror_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The `messageerror` event is fired on a {{domxref('Window')}} object when it receives a message that can't be deserialized.
 

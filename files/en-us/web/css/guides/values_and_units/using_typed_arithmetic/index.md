@@ -291,7 +291,7 @@ body {
 
 We now come to styling the `story-circle` `<div>`. We set its `width` and `height` to `1px`: it will act as a reference point with its child paragraphs positioned in a circle around it. (We don't even need to set positioning on it, as it is fine for the paragraphs to be positioned relative to the `<body>`).
 
-We then create a custom property called `--width-percentage` that contains the result of `100cqw` (100% of the width of the element's parent query container, which is the `<body>` element) divided by `1200px`, minus `0.33333`. This is the key value that wll control the amount the circle rotates by as the viewport width is changed.
+We then create a custom property called `--width-percentage` that contains the result of `100cqw` (100% of the width of the element's parent query container, which is the `<body>` element) divided by `1200px`, minus `0.33333`. This is the key value that will control the amount the circle rotates by as the viewport width is changed.
 
 ```css
 .story-circle {

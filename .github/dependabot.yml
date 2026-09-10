@@ -5,6 +5,9 @@ updates:
     directory: "/"
     schedule:
       interval: daily
+    cooldown:
+      exclude:
+        - "@mdn/*"
     open-pull-requests-limit: 10
     labels:
       - "automated pr"

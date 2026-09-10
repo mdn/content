@@ -33,7 +33,7 @@ frame-sizing: unset;
 
 ### Values
 
-The `frame-sizing` property value is equal to one of the following keywords:
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : The initial value. The `<iframe>` element's size is not affected by the layout size of its embedded document.

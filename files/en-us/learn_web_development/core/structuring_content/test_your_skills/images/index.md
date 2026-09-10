@@ -19,7 +19,7 @@ In this task, we want you to embed an image of some Blueberries into the page.
 
 To complete the task:
 
-1. Add the path to the image to an appropriate attribute to embed it on the page. The image is called `blueberries.jpg`, and it is available at a path of `https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/images/images/blueberries.jpg?raw=true`.
+1. Add the path to the image to an appropriate attribute to embed it on the page. The image is called `blueberries.jpg`, and it is available at a path of `https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/images/blueberries.jpg?raw=true`.
 2. Add some alternative text to an appropriate attribute to describe the image, for people that cannot see it.
 3. Give the `<img>` element a `width` attribute of `400` and an appropriate `height` attribute so that it displays at the correct {{glossary("aspect ratio")}}, and doesn't cause a re-render when it loads. The image's {{glossary("intrinsic size")}} is 615 x 419 pixels.
 
@@ -73,7 +73,7 @@ Your finished HTML should look like this:
 ```html-nolint live-sample___images-1-finished
 <h1>Basic image embed</h1>
 
-<img src="https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/images/images/blueberries.jpg?raw=true"
+<img src="https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/tasks/images/blueberries.jpg?raw=true"
      alt="blueberries" width="400" height="273" />
 
 <p>You should see a picture of some blueberries above.</p>

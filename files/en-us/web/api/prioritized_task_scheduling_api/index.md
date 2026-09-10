@@ -109,7 +109,7 @@ There are just three priorities, which are listed below (ordered from highest to
 
 - `background`
   - : Tasks that are not time-critical.
-    This might include log processing or initializing third party libraries that aren't required for rendering.
+    This might include log processing or initializing third-party libraries that aren't required for rendering.
 
 ### Mutable and immutable task priority
 

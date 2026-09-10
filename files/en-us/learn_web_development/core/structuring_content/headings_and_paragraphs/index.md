@@ -94,7 +94,7 @@ It's really up to you what the elements involved represent, as long as the hiera
 
 To answer this question, let's take a look at [text-start.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/html-text-formatting/text-start.html)—a nice hummus recipe. This document's body currently contains multiple pieces of content. They aren't marked up in any way, but they are separated with line breaks (Enter/Return pressed to go onto the next line).
 
-However, when you open the document in your browser, you'll see that the text appears as a big chunk!
+However, when you [open the document in your browser](https://mdn.github.io/learning-area/html/introduction-to-html/html-text-formatting/text-start.html), you'll see that the text appears as a big chunk!
 
 ![A webpage that shows a wall of unformatted text, because there are no elements on the page to structure it.](screen_shot_2017-03-29_at_09.20.35.png)
 

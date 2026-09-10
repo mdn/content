@@ -26,7 +26,7 @@ The **`LanguageModel`** interface of the [Prompt API](/en-US/docs/Web/API/Prompt
   - : Returns a {{jsxref("Promise")}} that resolves when the given input has been added to the session's context window, without generating a response.
 - {{domxref("LanguageModel.clone()")}}
   - : Returns a {{jsxref("Promise")}} that resolves with a new `LanguageModel` session that is a copy of the session it is called on, including all context.
-- {{domxref("LanguageModel.destroy()")}}
+- {{domxref("LanguageModel.destroy()")}} {{experimental_inline}}
   - : Releases the resources assigned to the `LanguageModel` instance it is called on and stops any further activity on it.
 - {{domxref("LanguageModel.measureContextUsage()")}}
   - : Returns a {{jsxref("Promise")}} that resolves with the number of context window tokens that the given input would consume if it were used in an operation such as `prompt()` or `append()`.

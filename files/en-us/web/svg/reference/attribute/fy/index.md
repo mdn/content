@@ -91,13 +91,7 @@ svg {
     stroke="black"
     stroke-width="2" />
 
-  <circle
-    cx="60"
-    cy="60"
-    r="50"
-    fill="transparent"
-    stroke="white"
-    stroke-width="2" />
+  <circle cx="60" cy="60" r="50" fill="none" stroke="white" stroke-width="2" />
   <circle cx="35" cy="35" r="2" fill="white" stroke="white" />
   <circle cx="60" cy="60" r="2" fill="white" stroke="white" />
   <text x="38" y="40" fill="white" font-family="sans-serif" font-size="10pt">

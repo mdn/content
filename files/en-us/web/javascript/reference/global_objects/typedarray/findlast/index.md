@@ -18,7 +18,7 @@ function isNegative(element /*, index, array */) {
 
 const int8 = new Int8Array([10, 0, -10, 20, -30, 40, 50]);
 
-console.log(int8.find(isNegative));
+console.log(int8.findLast(isNegative));
 // Expected output: -30
 ```
 
@@ -79,7 +79,7 @@ console.log(uint8.findLast(isPrime)); // 11
 ```
 
 > [!NOTE]
-> The `isPrime()` implementation is for demonstration only. For a real-world application, you would want to use a heavily memoized algorithm such as the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) to avoid repeated calculations.
+> The `isPrime()` implementation is for demonstration only. For a real-world application, you would want to use a heavily {{Glossary("Memoization", "memoized")}} algorithm such as the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) to avoid repeated calculations.
 
 ## Specifications
 
