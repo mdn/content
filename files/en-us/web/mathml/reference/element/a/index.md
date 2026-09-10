@@ -8,6 +8,8 @@ sidebar: mathmlref
 
 The **`<a>`** [MathML](/en-US/docs/Web/MathML) element enables hyperlinks to be created inside MathML formulae, linking different parts to different locations.
 
+MathML's `<a>` element is a container, which means you can create a link around any MathML content. For layout purposes, it behaves like an {{MathMLElement("mrow")}} element.
+
 If the `href` attribute is present, pressing the enter key while focused on the `<a>` element will activate it.
 
 ## Attributes

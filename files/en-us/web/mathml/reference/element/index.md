@@ -13,13 +13,9 @@ This is an alphabetical list of MathML elements. All of them implement the {{dom
 
 ## MathML elements A to Z
 
-### math
-
-- {{MathMLElement("math")}} (Top-level element)
-
 ### A
 
-- {{MathMLElement("maction")}} {{deprecated_inline}} (Bound actions to sub-expressions)
+- {{MathMLElement("a")}} (Hyperlink)
 - {{MathMLElement("annotation")}} (Data annotations)
 - {{MathMLElement("annotation-xml")}} (XML annotations)
 
@@ -39,6 +35,8 @@ This is an alphabetical list of MathML elements. All of them implement the {{dom
 
 ### M
 
+- {{MathMLElement("maction")}} {{deprecated_inline}} (Bound actions to sub-expressions)
+- {{MathMLElement("math")}} (Top-level element)
 - {{MathMLElement("mmultiscripts")}} (Prescripts and tensor indices)
 
 ### N
@@ -101,6 +99,7 @@ This is an alphabetical list of MathML elements. All of them implement the {{dom
 
 ### General layout
 
+- {{MathMLElement("a")}} (Hyperlink)
 - {{MathMLElement("menclose")}} {{non-standard_inline}} (Enclosed contents)
 - {{MathMLElement("merror")}} (Enclosed syntax error messages)
 - {{MathMLElement("mfenced")}} {{non-standard_inline}} {{deprecated_inline}} (Parentheses)
