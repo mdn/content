@@ -303,7 +303,7 @@ xrSession.addEventListener("select", (event) => {
 });
 ```
 
-Some actions may send these events very quickly, one after the other. The time that elapses between these events depends on both the hardware apparatus that causes the action as well as the software drivers that interpret the hardware action and turn it into a series of events. Do not presume these events will happen with any particular amount of time between them.
+Some actions may send these events very quickly, one after the other. The time that elapses between these events depends on both the hardware apparatus that causes the action and the software drivers that interpret the hardware action and turn it into a series of events. Do not presume these events will happen with any particular amount of time between them.
 
 For example, if the hardware that causes the primary action to occur is a button, you would receive `selectstart` when the user presses the button, then `select` and `selectend` when the user releases it.
 

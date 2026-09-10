@@ -9,6 +9,8 @@ sidebar: cssref
 
 The **`margin-top`** [CSS](/en-US/docs/Web/CSS) property sets the [margin area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#margin_area) on the top of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
 
+This property has no effect on _non-[replaced](/en-US/docs/Glossary/Replaced_elements)_ inline elements, such as {{HTMLElement("span")}} or {{HTMLElement("code")}}.
+
 {{InteractiveExample("CSS Demo: margin-top")}}
 
 ```css interactive-example-choice
@@ -60,8 +62,6 @@ margin-top: 0;
   background-color: #2b3a55;
 }
 ```
-
-This property has no effect on _non-[replaced](/en-US/docs/Glossary/Replaced_elements)_ inline elements, such as {{HTMLElement("span")}} or {{HTMLElement("code")}}.
 
 ## Syntax
 
