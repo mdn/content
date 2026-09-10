@@ -77,6 +77,7 @@ let remoteConnection = null; // RTCPeerConnection for the "remote"
 
 let sendChannel = null; // RTCDataChannel for the local (sender)
 let receiveChannel = null; // RTCDataChannel for the remote (receiver)
+let disconnecting = false;
 
 function startup() {
   connectButton = document.getElementById("connectButton");
@@ -223,42 +224,35 @@ When the local peer experiences an open or close event, the `handleSendChannelSt
 
 ```js
 function handleSendChannelStatusChange(event) {
-  if (sendChannel) {
-    const state = sendChannel.readyState;
+  const state = event.currentTarget.readyState;
+  console.log(`Send channel's status has changed to ${state}`);
 
-    if (state === "open") {
-      messageInputBox.disabled = false;
-      messageInputBox.focus();
-      sendButton.disabled = false;
-      disconnectButton.disabled = false;
-      connectButton.disabled = true;
-    } else {
-      messageInputBox.disabled = true;
-      sendButton.disabled = true;
-      connectButton.disabled = false;
-      disconnectButton.disabled = true;
-    }
+  const open = state === "open" && !disconnecting;
+  messageInputBox.disabled = !open;
+  sendButton.disabled = !open;
+  disconnectButton.disabled = !open;
+  connectButton.disabled = open || disconnecting;
+  if (open) {
+    messageInputBox.focus();
   }
 }
 ```
 
-If the channel's state has changed to "open", that indicates that we have finished establishing the link between the two peers. The user interface is updated correspondingly by enabling the text input box for the message to send, focusing the input box so that the user can immediately begin to type, enabling the "Send" and "Disconnect" buttons, now that they're usable, and disabling the "Connect" button, since it is not needed when the connection is open.
+If the channel's state has changed to "open", that indicates that we have finished establishing the link between the two peers. If `disconnecting` is `true`, we keep everything disabled. Otherwise, the user interface is updated correspondingly by enabling the text input box for the message to send, focusing the input box so that the user can immediately begin to type, enabling the "Send" and "Disconnect" buttons, now that they're usable, and disabling the "Connect" button, since it is not needed when the connection is open.
 
-If the state has changed to "closed", the opposite set of actions occurs: the input box and "Send" button are disabled, the "Connect" button is enabled so that the user can open a new connection if they wish to do so, and the "Disconnect" button is disabled, since it's not useful when no connection exists.
+If the state has changed to "closed", the opposite set of actions occurs: the input box and "Send" button are disabled, the "Connect" button is enabled so that the user can open a new connection if they wish to do so, and the "Disconnect" button is disabled, since it's not useful when no connection exists. Again, the `disconnecting` status overrides this and keeps everything disabled. During an explicit disconnect, `disconnectPeers()` enables the "Connect" button after both channels have closed and cleanup is complete.
 
 Our example's remote peer, on the other hand, ignores the status change events, except for logging the event to the console:
 
 ```js
 function handleReceiveChannelStatusChange(event) {
-  if (receiveChannel) {
-    console.log(
-      `Receive channel's status has changed to ${receiveChannel.readyState}`,
-    );
-  }
+  console.log(
+    `Receive channel's status has changed to ${event.currentTarget.readyState}`,
+  );
 }
 ```
 
-The `handleReceiveChannelStatusChange()` method receives as an input parameter the event which occurred; this will be an {{domxref("RTCDataChannelEvent")}}.
+The `handleReceiveChannelStatusChange()` method receives as an input parameter the event which occurred; this is an {{domxref("Event")}}, whose `currentTarget` is the channel.
 
 ### Sending messages
 
@@ -297,17 +291,39 @@ This method performs some basic {{Glossary("DOM")}} injection; it creates a new 
 When the user clicks the "Disconnect" button, the `disconnectPeers()` method previously set as that button's handler is called.
 
 ```js
-function disconnectPeers() {
-  // Close the RTCDataChannels if they're open.
+async function disconnectPeers() {
+  if (disconnecting) {
+    return;
+  }
+  disconnecting = true;
+  connectButton.disabled = true;
+  disconnectButton.disabled = true;
+  sendButton.disabled = true;
+  messageInputBox.disabled = true;
 
-  sendChannel.close();
-  receiveChannel.close();
+  function waitForClose(channel) {
+    if (!channel || channel.readyState === "closed") {
+      return Promise.resolve();
+    }
+    return new Promise((resolve) => {
+      channel.addEventListener("close", resolve, { once: true });
+    });
+  }
 
-  // Close the RTCPeerConnections
+  const closed = Promise.all([
+    waitForClose(sendChannel),
+    waitForClose(receiveChannel),
+  ]);
+  sendChannel?.close();
+  receiveChannel?.close();
+  // This sample has no timeout: if a close event never arrives,
+  // cleanup remains pending and the controls stay disabled.
+  // This shouldn't happen in practice.
+  await closed;
 
-  localConnection.close();
-  remoteConnection.close();
-
+  // Keep the peer connections alive until both channel close events have fired.
+  localConnection?.close();
+  remoteConnection?.close();
   sendChannel = null;
   receiveChannel = null;
   localConnection = null;
@@ -315,16 +331,13 @@ function disconnectPeers() {
 
   // Update user interface elements
 
+  disconnecting = false;
   connectButton.disabled = false;
-  disconnectButton.disabled = true;
-  sendButton.disabled = true;
-
   messageInputBox.value = "";
-  messageInputBox.disabled = true;
 }
 ```
 
-This starts by closing each peer's {{domxref("RTCDataChannel")}}, then, similarly, each {{domxref("RTCPeerConnection")}}. Then all the saved references to these objects are set to `null` to avoid accidental reuse, and the user interface is updated to reflect the fact that the connection has been closed.
+Calling {{domxref("RTCDataChannel.close", "close()")}} starts an asynchronous shutdown. The method waits for both channels' `close` events before closing the underlying peer connections and clearing the references. Closing the peer connections immediately can interrupt this process and prevent the channel status handlers from running. Controls remain disabled during shutdown, so a new connection cannot replace these references before cleanup finishes.
 
 ## Next steps
 
