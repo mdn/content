@@ -37,8 +37,6 @@ bdo {
 }
 ```
 
-The text's characters are drawn from the starting point in the given direction; the individual characters' orientation is not affected (so characters don't get drawn backward, for example).
-
 ## Attributes
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
@@ -61,6 +59,8 @@ This element's attributes include the [global attributes](/en-US/docs/Web/HTML/R
 {{EmbedLiveSample('Examples')}}
 
 ## Notes
+
+The text's characters are drawn from the starting point in the given direction; the individual characters' orientation is not affected (so characters don't get drawn backward, for example).
 
 The HTML 4 specification did not specify events for this element; they were added in XHTML. This is most likely an oversight.
 
