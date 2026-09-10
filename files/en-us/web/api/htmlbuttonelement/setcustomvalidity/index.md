@@ -10,7 +10,7 @@ browser-compat: api.HTMLButtonElement.setCustomValidity
 
 The **`setCustomValidity()`** method of the {{DOMxRef("HTMLButtonElement")}} interface sets the custom validity message for the {{htmlelement("button")}} element. Use the empty string to indicate that the element does _not_ have a custom validity error.
 
-This method only affects the validation UI for buttons with `type="submit"` (the default). Buttons with `type="reset"` or `type="button"` are [barred from constraint validation](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#barred-from-constraint-validation), so calling `setCustomValidity()` on them sets the internal validity state but the error message is never shown to the user and form submission is never blocked. Use {{domxref("HTMLButtonElement.willValidate")}} to check whether a button participates in constraint validation.
+Some {{HTMLElement("button")}} elements are not candidates for constraint validation (see {{domxref("HTMLButtonElement.willValidate")}}). For these buttons, the {{DOMxRef("HTMLButtonElement.reportValidity()", "reportValidity()")}} method will not cause the custom error message to be displayed to the user, but does set the {{DOMxRef("ValidityState.customError", "customError")}} property of the element's {{DOMxRef("ValidityState")}} object to `true` and the {{DOMxRef("ValidityState.valid", "valid")}} property to `false`. Use {{domxref("HTMLButtonElement.willValidate")}} to check whether a button participates in constraint validation.
 
 ## Syntax
 
