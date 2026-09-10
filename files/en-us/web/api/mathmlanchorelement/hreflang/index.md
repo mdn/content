@@ -18,7 +18,7 @@ Web browsers do not rely solely on the `hreflang` attribute after fetching the l
 
 ## Value
 
-A string that contains a language tag, or the empty string (`""`) if there is no `hreflang` element.
+A string that contains a language tag, or the empty string (`""`) if there is no `hreflang` attribute.
 
 ## Examples
 
