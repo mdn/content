@@ -156,6 +156,25 @@ self.addEventListener("notificationclick", (event) => {
 
 You can also retrieve details of the {{domxref("Notification")}}s that have been fired from the current service worker using {{domxref("ServiceWorkerRegistration.getNotifications()")}}.
 
+### Notifications with different images
+
+This example sets different placeholder images for the `badge`, `icon`, and `image` options: an app symbol, a sender's portrait, and a landscape photo, respectively. Replace the URLs with paths to your own images. It assumes that a service worker is already registered and notification permission has been granted.
+
+```js
+const registration = await navigator.serviceWorker.ready;
+
+await registration.showNotification("New photo from Alex", {
+  body: "Alex shared a photo from today's hike.",
+  badge: "/images/app-badge.png",
+  icon: "/images/alex-avatar.png",
+  image: "/images/hiking-photo.png",
+});
+```
+
+The following schematic shows how these images might appear on a desktop, a mobile home screen, and a mobile banner: the `badge` in a status bar, the `icon` alongside the title and body, and the `image` inside the expanded notification. The actual layout and which images are displayed depend on the browser and operating system.
+
+![Three device frames showing a desktop notification with a portrait icon and landscape image, a mobile home screen with a monochrome app badge in the status bar, and an expanded mobile banner with the portrait icon and landscape image.](notification-images.svg)
+
 ### Notifications with actions and action handlers
 
 This example shows how you might display a persistent notification, which might be triggered by a push message when an email is received, for example.
