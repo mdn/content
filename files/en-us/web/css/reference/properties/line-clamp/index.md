@@ -99,8 +99,8 @@ In this example, there are three cards, each with a different `line-clamp` value
     <h2>no ellipsis</h2>
     <p class="no-ellipsis">
       In this card, an <code>&lt;integer&gt;</code> and a
-      <em>no-ellipsis</em> value are specified. Any content that does not fit
-      is truncated and no ellipsis is shown.
+      <em>no-ellipsis</em> value are specified. Any content that does not fit is
+      truncated and no ellipsis is shown.
     </p>
   </div>
   <div class="card">
