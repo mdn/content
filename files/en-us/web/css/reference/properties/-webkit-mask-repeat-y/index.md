@@ -40,7 +40,7 @@ This property is specified as one or more comma-separated values:
 - `repeat`
   - : The mask image is repeated vertically.
 - `no-repeat`
-  - : The mask image is not repeated vertically; only one copy of the mask image is drawn in vertical direction. The vertical remainder of the masked element's content is not displayed.
+  - : The mask image is not repeated vertically; only one copy of the mask image is drawn in that direction. The vertical remainder of the masked element's content is not displayed.
 - `repeat`
   - : The mask image is repeated vertically.
 - `space`
