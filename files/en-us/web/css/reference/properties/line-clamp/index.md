@@ -23,7 +23,7 @@ line-clamp: 10;
 line-clamp: 3 no-ellipsis;
 line-clamp: 10 "… (there is extra content)";
 
-/* <'block-ellipsis'> values only - for height-based clamping */
+/* <'block-ellipsis'> value only */
 line-clamp: no-ellipsis;
 line-clamp: "… (there is extra content)";
 
