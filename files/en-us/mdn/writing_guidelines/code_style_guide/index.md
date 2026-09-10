@@ -42,6 +42,20 @@ When creating code examples for a technology that's not yet available in all maj
 
 When possible, keep examples visible even if they can't run in the reader's browser. For interactive examples, prefer showing a "No support" banner instead of hiding or removing them so readers can still inspect the code and learn how the feature works.
 
+For example, a CSS example can use `@supports not` to display a "No support" banner when the feature isn't supported:
+
+```css
+@supports not (animation-timeline: scroll()) {
+  body::before {
+    content: "Your browser doesn't support this feature.";
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    background-color: wheat;
+  }
+}
+```
+
 Do not specify supported browsers and their versions in code comments or prose, as this information quickly becomes outdated.
 
 ## MDN code style and formatting
