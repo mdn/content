@@ -169,7 +169,7 @@ outputValue("type");
 
 #### Result
 
-{{EmbedLiveSample("mathml-a", "100%", "460")}}
+{{EmbedLiveSample("mathmlanchorelement", "100%", "460")}}
 
 ## Specifications
 
