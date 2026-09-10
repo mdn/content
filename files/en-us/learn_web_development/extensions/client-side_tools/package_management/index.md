@@ -425,7 +425,7 @@ This brings us to the end of our tour of package managers. Our next move is to b
 
 ## See also
 
-- [npm scripts reference](https://docs.npmjs.com/cli/v8/using-npm/scripts/)
-- [package.json reference](https://docs.npmjs.com/cli/v8/configuring-npm/package-json/)
+- [npm scripts reference](https://docs.npmjs.com/cli/using-npm/scripts/)
+- [package.json reference](https://docs.npmjs.com/cli/configuring-npm/package-json/)
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Client-side_tools/Overview","Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain", "Learn_web_development/Extensions/Client-side_tools")}}

@@ -74,9 +74,7 @@ console.log(result);
 // {
 //   a: { status: "fulfilled", value: "a" },
 //   [sym]: { status: "fulfilled", value: "symbol" },
-//   nested: {
-//     b: <Promise>,
-//   },
+//   nested: { status: "fulfilled", value: { b: <Promise> } },
 // }
 ```
 

@@ -7,7 +7,7 @@ status:
 browser-compat: api.HTMLAllCollection
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 The **`HTMLAllCollection`** interface represents a collection of _all_ of the document's elements, accessible by index (like an array) and by the element's [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id). It is returned by the {{domxref("document.all")}} property.
 
