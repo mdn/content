@@ -41,11 +41,6 @@ import "module-name";
 
 The `"module-name"` may be followed by a set of [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with), starting with the `with` keyword.
 
-The `import` keyword may be followed by a "phase modifier" that stops the module import process at a particular phase:
-
-- [`defer`](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer)
-- [`source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/source)
-
 ## Description
 
 `import` declarations can only be present in modules, and only at the top-level (i.e., not inside blocks, functions, etc.). If an `import` declaration is encountered in non-module contexts (for example, `<script>` tags without `type="module"`, `eval`, `new Function`, which all have "script" or "function body" as parsing goals), a `SyntaxError` is thrown. To load modules in non-module contexts, use the [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import) syntax instead.
@@ -53,6 +48,13 @@ The `import` keyword may be followed by a "phase modifier" that stops the module
 All imported bindings cannot be in the same scope as any other declaration, including {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/class", "class")}}, {{jsxref("Statements/function", "function")}}, {{jsxref("Statements/var", "var")}}, and `import` declaration.
 
 `import` declarations are designed to be syntactically rigid (for example, only string literal specifiers, only permitted at the top-level, all bindings must be identifiers), which allows modules to be statically analyzed and linked before getting evaluated. This is the key to making modules asynchronous by nature, powering features like [top-level await](/en-US/docs/Web/JavaScript/Guide/Modules#top_level_await).
+
+The `import` keyword may be followed by a "phase modifier" that stops the module import process at a particular phase:
+
+- [`import defer`](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer)
+- [`import source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/source)
+
+Each of these syntaxes is considered a distinct type of declaration.
 
 ### Forms of import declarations
 

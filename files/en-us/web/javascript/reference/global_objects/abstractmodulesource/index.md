@@ -3,6 +3,7 @@ title: AbstractModuleSource
 slug: Web/JavaScript/Reference/Global_Objects/AbstractModuleSource
 page-type: javascript-class
 browser-compat: javascript.builtins.AbstractModuleSource
+spec-urls: https://tc39.es/proposal-source-phase-imports/#sec-module-source-objects
 sidebar: jsref
 ---
 

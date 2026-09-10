@@ -71,6 +71,7 @@ In environments that support source phase imports, you can obtain a `WebAssembly
 ```js
 import source modSource from "./simple.wasm";
 
+const worker = new Worker("wasm_worker.js")
 worker.postMessage(modSource);
 ```
 

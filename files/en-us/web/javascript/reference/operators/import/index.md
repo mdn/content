@@ -30,11 +30,6 @@ The `import()` call is a syntax that closely resembles a function call, but `imp
     - `with`
       - : The [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with).
 
-"Phase modifiers" for `import` statements can also be used with dynamic imports, in the form of "meta properties":
-
-- [`import.defer()`](/en-US/docs/Web/JavaScript/Reference/Operators/import/defer)
-- [`import.source()`](/en-US/docs/Web/JavaScript/Reference/Operators/import/source)
-
 ### Return value
 
 Returns a promise which:
@@ -71,6 +66,13 @@ import("./data.json", { with: { type: "json" } });
 
 Dynamic module import is not permitted in all execution contexts.
 For example, `import()` can be used in the main thread, a shared worker, or a dedicated worker, but will throw if called within a [service worker](/en-US/docs/Web/API/Service_Worker_API) or a [worklet](/en-US/docs/Web/API/Worklet).
+
+"Phase modifiers" for `import` statements can also be used with dynamic imports:
+
+- [`import.defer()`](/en-US/docs/Web/JavaScript/Reference/Operators/import/defer)
+- [`import.source()`](/en-US/docs/Web/JavaScript/Reference/Operators/import/source)
+
+Each of these syntaxes is considered a distinct type of expression.
 
 ### Module namespace object
 

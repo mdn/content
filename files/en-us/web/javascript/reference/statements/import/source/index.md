@@ -6,7 +6,7 @@ browser-compat: javascript.statements.import.import_source
 sidebar: jssidebar
 ---
 
-The **`import source`** declaration behaves like regular [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declarations, but it can only import a module using the default import syntax. It results in an object representing the module's compiled source code. The module is fetched and compiled, but its dependencies are not loaded and it is not linked or evaluated. It can be imperatively evaluated later, such as by using [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import) or [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static).
+The **`import source`** declaration is similar to the regular [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declaration, except that it results in an object that represents the module's compiled source code. The module is fetched and compiled, but its dependencies are not loaded and it is not linked or evaluated. It can be imperatively evaluated later, such as by using [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import) or [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static).
 
 To use `import source`, the target module must be of a kind that supports source phase imports. Currently, only WebAssembly modules support source phase imports, and result in [`WebAssembly.Module`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module) objects. JavaScript module source objects will be added by the [ECMAScript Module Phase Imports](https://github.com/tc39/proposal-esm-phase-imports) proposal.
 
@@ -21,48 +21,20 @@ import source x from "module-name";
 - `module-name`
   - : The module to import from. Handled the same way as the [`module-name`](/en-US/docs/Web/JavaScript/Reference/Statements/import#module-name) in regular `import` declarations.
 
-### Exceptions
-
-- {{jsxref("ReferenceError")}}
-  - : Thrown when the module is linked, if the target module does not support source phase imports.
-
 [Import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) are also supported, using a `with` clause after the module specifier.
 
 `source` is not a reserved word. For example, `import source from "./module.js"` is still a regular default import whose local binding is named `source`.
+
+### Exceptions
+
+- {{jsxref("SyntaxError")}}
+  - : Thrown if the target module does not support source phase imports.
 
 ## Description
 
 By default, the `import` declaration performs many tasks at once: resolving the module specifier, fetching the module source code, parsing (potentially discovering transitive dependencies), linking, and evaluating it. This form of eager evaluation is not always desirable, especially when the module source code is intended to be evaluated in some other context, such as a worker thread.
 
-The _import phase modifier_ allows the module import process to stop at a particular phase. By adding `source` after `import`, the source code is parsed and compiled but remains unlinked and unevaluated. The source import does not load the module's transitive dependencies. For WebAssembly, you supply the imported values when instantiating the module:
-
-```js
-import source myModuleSource from "./my-module.wasm";
-
-const instance = await WebAssembly.instantiate(myModuleSource, {
-  env: { log: console.log },
-});
-const exports = instance.exports;
-```
-
-Unlike an ordinary WebAssembly module import, this creates a new instance with the imports you provide, rather than using the cached instance linked by the module loader. Its `exports` object is not a JavaScript module namespace object. For example, WebAssembly globals are exposed as `WebAssembly.Global` objects through `instance.exports`, whereas the ESM integration exposes their values to JavaScript importers.
-
-> [!NOTE]
-> Support for source phase imports of WebAssembly does not imply support for ordinary WebAssembly module imports. A host may support `import source mod from "./mod.wasm"` while rejecting `import * as ns from "./mod.wasm"`.
-
-For JavaScript (assuming the proposed `import(moduleSource)` support, also in [ECMAScript Module Phase Imports](https://github.com/tc39/proposal-esm-phase-imports)):
-
-```js
-import * as namespace from "./my-module.js";
-
-// Is equivalent to:
-
-import source myModuleSource from "./my-module.js";
-
-const namespace = await import(myModuleSource);
-```
-
-The object obtained from this import is an instance of a subclass of {{jsxref("AbstractModuleSource")}}. Each module type that supports source phase imports defines its own subclass. For WebAssembly, the subclass is [`WebAssembly.Module`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module). This object is cached for the specific module so that later source imports of the same specifier return the exact same object.
+The _import phase modifier_ allows the module import process to stop at a particular phase. By adding `source` after `import`, the source code is parsed and compiled but remains unlinked and unevaluated. The source import does not load the module's transitive dependencies.
 
 Traditionally, the only way to run a part of the pipeline was to manually implement the entirety of it. For example, with WebAssembly, you first use [`fetch()`](/en-US/docs/Web/API/Fetch_API) to retrieve the module's binary bytes, and later compile them using [`WebAssembly.compile()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/compile_static), or compile the response stream using [`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming_static), into a `WebAssembly.Module` object.
 
@@ -80,9 +52,53 @@ This kind of manual workflow is problematic for several reasons:
 
 Using source phase imports avoids these problems.
 
+```js
+import source myModuleSource from "./my-module.wasm";
+```
+
+The object obtained from this import is an instance of a subclass of {{jsxref("AbstractModuleSource")}}. Each module type that supports source phase imports defines its own subclass. For WebAssembly, the subclass is [`WebAssembly.Module`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module). This object is cached for the specific module so that later source imports of the same specifier return the exact same object.
+
 Unlike [`import defer`](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer), using source import also defers linking. Linking up front lets the module loader resolve dependencies, catching missing dependencies or invalid imports before the module is used. Leaving the module unlinked avoids loading dependencies you may not need and allows you to control how it is instantiated. For example, you can instantiate a source-imported WebAssembly module multiple times with different imports, or send it to a worker for instantiation there.
 
 Unlike [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import), the source-imported module is fetched and compiled up front without evaluating it. `import source` also enjoys most benefits of a static declaration, such as better static analysis.
+
+Note that only the "default import" syntax is supported. You cannot use `import source { property } from "./my-module.wasm"`, etc.
+
+### Importing WebAssembly source
+
+For WebAssembly, you supply the imported values when instantiating the module:
+
+```js
+import source myModuleSource from "./my-module.wasm";
+
+const instance = await WebAssembly.instantiate(myModuleSource, {
+  env: { log: console.log },
+});
+const { exports } = instance;
+```
+
+Unlike an ordinary WebAssembly module import, this creates a new instance with the imports you provide, rather than using the cached instance linked by the module loader. Its `exports` object is not a JavaScript module namespace object. For example, WebAssembly globals are exposed as `WebAssembly.Global` objects through `instance.exports`, whereas the ESM integration exposes their values to JavaScript importers.
+
+> [!NOTE]
+> Support for source phase imports of WebAssembly does not imply support for ordinary WebAssembly module imports. A host may support `import source mod from "./mod.wasm"` while rejecting `import * as ns from "./mod.wasm"`.
+
+Source imports use the host's module loader, including its compilation settings. They are not necessarily equivalent to calling `WebAssembly.compileStreaming()` with default options. For example, [Node.js enables JavaScript string builtins for Wasm imports](https://nodejs.org/api/esm.html#javascript-string-builtins) and rejects reserved import and export names. Use the direct WebAssembly compilation APIs when you need custom compilation options.
+
+### Importing JavaScript source
+
+For JavaScript (assuming the proposed `import(moduleSource)` support, also in [ECMAScript Module Phase Imports](https://github.com/tc39/proposal-esm-phase-imports)):
+
+```js
+import * as namespace from "./my-module.js";
+
+// Is equivalent to:
+
+import source myModuleSource from "./my-module.js";
+
+const namespace = await import(myModuleSource);
+```
+
+### Caching semantics
 
 The modifier applies to an import, not to the module itself. If another part of the application imports the same module without `source`, the module is evaluated as usual. Both forms share the same module state, and the module's code executes at most once. Changing the import phase does not create a separate module in the cache:
 
@@ -104,8 +120,6 @@ import text from "./module.js" with { type: "text" };
 ```
 
 The two imports are considered to be from different modules that happen to share the same string specifier (on the web, they will be requested with different HTTP headers). The supported attributes and their effects on loading and module identity are defined by the host.
-
-Source imports use the host's module loader, including its compilation settings. They are not necessarily equivalent to calling `WebAssembly.compileStreaming()` with default options. For example, [Node.js enables JavaScript string builtins for Wasm imports](https://nodejs.org/api/esm.html#javascript-string-builtins) and rejects reserved import and export names. Use the direct WebAssembly compilation APIs when you need custom compilation options.
 
 ## Examples
 
