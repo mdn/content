@@ -9,6 +9,8 @@ sidebar: cssref
 
 The **`padding-bottom`** [CSS](/en-US/docs/Web/CSS) property sets the height of the [padding area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#padding_area) on the bottom of an element.
 
+An element's padding area is the space between its content and its border.
+
 {{InteractiveExample("CSS Demo: padding-bottom")}}
 
 ```css interactive-example-choice
@@ -53,8 +55,6 @@ padding-bottom: 0;
   border: dashed 1px;
 }
 ```
-
-An element's padding area is the space between its content and its border.
 
 ![The effect of the CSS padding-bottom property on the element box](padding-bottom.svg)
 

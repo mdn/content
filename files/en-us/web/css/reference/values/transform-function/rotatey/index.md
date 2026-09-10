@@ -10,6 +10,8 @@ sidebar: cssref
 The **`rotateY()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) defines a transformation that rotates an element around the
 y-axis (vertical) without deforming it. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
+The axis of rotation passes through an origin, defined by the {{ cssxref("transform-origin") }} CSS property.
+
 {{InteractiveExample("CSS Demo: rotateY()")}}
 
 ```css interactive-example-choice
@@ -37,8 +39,6 @@ transform: rotateY(3.142rad);
     width="200" />
 </section>
 ```
-
-The axis of rotation passes through an origin, defined by the {{ cssxref("transform-origin") }} CSS property.
 
 > [!NOTE]
 > `rotateY(a)` is equivalent to

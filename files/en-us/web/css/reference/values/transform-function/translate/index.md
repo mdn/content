@@ -10,6 +10,9 @@ sidebar: cssref
 The **`translate()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) repositions an element in the horizontal and/or vertical
 directions. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
+This transformation is characterized by a two-dimensional vector [tx, ty]. Its coordinates define how much the element moves
+in each direction.
+
 {{InteractiveExample("CSS Demo: translate()")}}
 
 ```css interactive-example-choice
@@ -53,9 +56,6 @@ transform: translate(3ch, 3mm);
   position: absolute;
 }
 ```
-
-This transformation is characterized by a two-dimensional vector [tx, ty]. Its coordinates define how much the element moves
-in each direction.
 
 ## Syntax
 

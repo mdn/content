@@ -10,6 +10,8 @@ sidebar: cssref
 The **`rotateZ()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) defines a transformation that rotates an element around the
 z-axis without deforming it. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
+The axis of rotation passes through an origin, defined by the {{ cssxref("transform-origin") }} CSS property.
+
 {{InteractiveExample("CSS Demo: rotateZ()")}}
 
 ```css interactive-example-choice
@@ -37,8 +39,6 @@ transform: rotateZ(3.142rad);
     width="200" />
 </section>
 ```
-
-The axis of rotation passes through an origin, defined by the {{ cssxref("transform-origin") }} CSS property.
 
 > [!NOTE]
 > `rotateZ(a)` is equivalent to

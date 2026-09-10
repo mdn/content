@@ -11,6 +11,9 @@ The **`grid`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides
 
 Using `grid` you specify one axis using {{cssxref("grid-template-rows")}} or {{cssxref("grid-template-columns")}}, you then specify how content should auto-repeat in the other axis using the implicit grid properties: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, and {{cssxref("grid-auto-flow")}}.
 
+> [!NOTE]
+> The sub-properties you don't specify are set to their initial value, as normal for shorthands. Also, the gutter properties are NOT reset by this shorthand.
+
 {{InteractiveExample("CSS Demo: grid")}}
 
 ```css interactive-example-choice
@@ -63,9 +66,6 @@ grid: repeat(3, 80px) / auto-flow;
   grid-column: auto / span 2;
 }
 ```
-
-> [!NOTE]
-> The sub-properties you don't specify are set to their initial value, as normal for shorthands. Also, the gutter properties are NOT reset by this shorthand.
 
 ## Constituent properties
 

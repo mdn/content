@@ -10,6 +10,11 @@ sidebar: cssref
 The **`skewY()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) defines a transformation that skews an element in the vertical
 direction on the 2D plane. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
+This transformation is a shear mapping ([transvection](https://en.wikipedia.org/wiki/Shear_mapping)) that distorts
+each point within an element by a certain angle in the vertical direction. The ordinate (vertical, y-coordinate) of each point is
+modified by a value proportionate to the specified angle and the distance to the origin; thus, the farther from the
+origin a point is, the greater will be the value added it.
+
 {{InteractiveExample("CSS Demo: skewY()")}}
 
 ```css interactive-example-choice
@@ -37,11 +42,6 @@ transform: skewY(0.352rad);
     width="200" />
 </section>
 ```
-
-This transformation is a shear mapping ([transvection](https://en.wikipedia.org/wiki/Shear_mapping)) that distorts
-each point within an element by a certain angle in the vertical direction. The ordinate (vertical, y-coordinate) of each point is
-modified by a value proportionate to the specified angle and the distance to the origin; thus, the farther from the
-origin a point is, the greater will be the value added it.
 
 ## Syntax
 

@@ -9,6 +9,8 @@ sidebar: cssref
 
 The **`transition-timing-function`** [CSS](/en-US/docs/Web/CSS) property sets how intermediate values are calculated for CSS properties being affected by a [transition effect](/en-US/docs/Web/CSS/Guides/Transitions/Using).
 
+This, in essence, lets you establish an acceleration curve so that the speed of the transition can vary over its duration.
+
 {{InteractiveExample("CSS Demo: transition-timing-function")}}
 
 ```css interactive-example-choice
@@ -50,8 +52,6 @@ transition-timing-function: cubic-bezier(0.29, 1.01, 1, -0.68);
   margin-right: 40%;
 }
 ```
-
-This, in essence, lets you establish an acceleration curve so that the speed of the transition can vary over its duration.
 
 This acceleration curve is defined using one {{cssxref("easing-function")}} for each property to be transitioned.
 

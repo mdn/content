@@ -11,6 +11,10 @@ The **`perspective()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CS
 user and the z=0 plane, the perspective from which the viewer would be if the 2-dimensional interface were
 3-dimensional. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
+The `perspective()` transform function is part of the {{cssxref('transform')}} value applied on the
+element being transformed. This differs from the {{cssxref('perspective')}} and {{cssxref('perspective-origin')}}
+properties which are attached to the parent of a child transformed in 3-dimensional space.
+
 {{InteractiveExample("CSS Demo: perspective()")}}
 
 ```css interactive-example-choice
@@ -102,10 +106,6 @@ transform: perspective(6.5cm);
   transform: rotateX(-90deg) translateZ(50px);
 }
 ```
-
-The `perspective()` transform function is part of the {{cssxref('transform')}} value applied on the
-element being transformed. This differs from the {{cssxref('perspective')}} and {{cssxref('perspective-origin')}}
-properties which are attached to the parent of a child transformed in 3-dimensional space.
 
 ## Syntax
 

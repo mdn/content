@@ -9,6 +9,8 @@ sidebar: cssref
 
 The **`margin-bottom`** [CSS](/en-US/docs/Web/CSS) property sets the [margin area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#margin_area) on the bottom of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
 
+![The effect of the CSS margin-bottom property on the element box](margin-bottom.svg)
+
 {{InteractiveExample("CSS Demo: margin-bottom")}}
 
 ```css interactive-example-choice
@@ -60,8 +62,6 @@ margin-bottom: 0;
   background-color: #2b3a55;
 }
 ```
-
-![The effect of the CSS margin-bottom property on the element box](margin-bottom.svg)
 
 This property has no effect on _non-[replaced](/en-US/docs/Glossary/Replaced_elements)_ inline elements, such as {{HTMLElement("span")}} or {{HTMLElement("code")}}.
 

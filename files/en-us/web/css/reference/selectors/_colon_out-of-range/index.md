@@ -9,6 +9,8 @@ sidebar: cssref
 
 The **`:out-of-range`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents an {{htmlelement("input")}} element whose current value is outside the range limits specified by the [`min`](/en-US/docs/Web/HTML/Reference/Elements/input#min) and [`max`](/en-US/docs/Web/HTML/Reference/Elements/input#max) attributes.
 
+This pseudo-class is useful for giving the user a visual indication that a field's current value is outside the permitted limits.
+
 {{InteractiveExample("CSS Demo: :out-of-range", "tabbed-shorter")}}
 
 ```css interactive-example
@@ -40,8 +42,6 @@ input:out-of-range {
   <input id="ret" name="ret" type="date" min="2022-01-01" max="2022-12-31" />
 </form>
 ```
-
-This pseudo-class is useful for giving the user a visual indication that a field's current value is outside the permitted limits.
 
 > [!NOTE]
 > This pseudo-class only applies to elements that have (and can take) a range limitation. In the absence of such a limitation, the element can neither be "in-range" nor "out-of-range."
