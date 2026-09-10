@@ -40,7 +40,7 @@ This property is specified as one or more comma-separated values:
 - `repeat`
   - : The mask image is repeated both horizontally and vertically.
 - `no-repeat`
-  - : The mask image is not repeated; only one copy of the mask image is drawn. The remainder of the masked element's content is not displayed.
+  - : The mask image is not repeated horizontally; only one copy of the mask image is drawn in that direction. The remainder of the masked element's content is not displayed.
 - `space`
   - : The image is repeated as much as possible without clipping. The first and last images are pinned to either side of the element, and whitespace is distributed evenly between the images. The {{cssxref("mask-position")}} property is ignored unless only one image can be displayed without clipping. The only case where clipping happens using space is when there isn't enough room to display one image.
 - `round`
