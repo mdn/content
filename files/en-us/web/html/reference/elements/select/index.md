@@ -98,7 +98,7 @@ Mouse users can hold the <kbd>Ctrl</kbd> (<kbd>Command</kbd> on macOS) or <kbd>S
 > [!NOTE]
 > The keyboard mechanisms described below are not standardized and depend on the browser and operating system.
 >
-> For example, Firefox additionally supports using <kbd>Ctrl</kbd> on macOS, while Safari does not support using <kbd>Space</kbd> for non-contiguous selection.
+> For example, Firefox on macOS additionally supports using <kbd>Ctrl</kbd>, while Safari on macOS does not support using <kbd>Space</kbd> for non-contiguous selection.
 
 Keyboard users can select multiple contiguous items by:
 
