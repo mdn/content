@@ -28,6 +28,8 @@ font-synthesis-small-caps: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `auto`
   - : Indicates that the missing small-caps typeface may be synthesized by the browser if needed.
 - `none`

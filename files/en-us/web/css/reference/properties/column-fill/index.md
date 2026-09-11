@@ -52,14 +52,14 @@ column-fill: revert-layer;
 column-fill: unset;
 ```
 
-The `column-fill` property is specified as one of the keyword values listed below. The initial value is `balance` so the content will be balanced across the columns.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : Columns are filled sequentially. Content takes up only the room it needs, possibly resulting in some columns remaining empty.
 - `balance`
-  - : Content is equally divided between columns. In fragmented contexts, such as [paged media](/en-US/docs/Web/CSS/Guides/Paged_media), only the last fragment is balanced. Therefore in paged media, only the last page would be balanced.
+  - : Content is equally divided between columns. In fragmented contexts, such as [paged media](/en-US/docs/Web/CSS/Guides/Paged_media), only the last fragment is balanced. Therefore in paged media, only the last page would be balanced. This is the default value.
 
 The specification defines a `balance-all` value, in which content is equally divided between columns in fragmented contexts, such as [paged media](/en-US/docs/Web/CSS/Guides/Paged_media). This value is not yet supported in any browser.
 

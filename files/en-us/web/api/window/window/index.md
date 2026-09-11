@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Window.window
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`window`** property of a {{domxref("Window")}} object points to the window object itself.
 

@@ -391,12 +391,12 @@ x *= y; // x now contains the value 12
 In this exercise, you will manipulate some numbers and operators to change the size of a box. The box is drawn using a browser API called the {{domxref("Canvas API", "", "", "true")}}. There is no need to worry about how this works — just concentrate on the math for now. The width and height of the box (in pixels) are defined by the variables `x` and `y`, which are initially both given a value of 50.
 
 ```html hidden live-sample___canvas-exercise
-<canvas id="canvas" width="400" height="200"></canvas>
+<canvas id="my-canvas" width="400" height="200"></canvas>
 <p></p>
 ```
 
 ```js live-sample___canvas-exercise
-const canvas = document.getElementById("canvas");
+const canvas = document.getElementById("my-canvas");
 const para = document.querySelector("p");
 const ctx = canvas.getContext("2d");
 

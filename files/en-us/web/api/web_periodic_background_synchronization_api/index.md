@@ -16,7 +16,7 @@ The **Web Periodic Background Synchronization API** provides a way to register t
 
 ## Concepts and Usage
 
-The Periodic Background Sync API allows web applications to alert their service worker to make any updates, at a periodic time interval. Uses may include fetching latest content whilst a device is connected to Wi-Fi, or allowing background updates to an application.
+The Periodic Background Sync API allows web applications to alert their service worker to make any updates, at a periodic time interval. Uses may include fetching latest content while a device is connected to Wi-Fi, or allowing background updates to an application.
 
 The minimum time interval is set when the API is invoked; however the user agent might also take into account other factors which affect when the service worker receives the event. For instance previous website engagement, or connection to a known network.
 
@@ -39,6 +39,20 @@ The following additions to the {{domxref("Service Worker API", "", "", "nocode")
   - : Returns a reference to the {{domxref("PeriodicSyncManager")}} interface for registering tasks to run at specific intervals.
 - {{domxref("ServiceWorkerGlobalScope/periodicsync_event", "periodicsync")}} event {{Experimental_Inline}}
   - : Occurs at periodic intervals, which were specified when registering a {{domxref("PeriodicSyncManager")}}.
+
+## Security considerations
+
+Access to periodic background sync is controlled by the `periodic-background-sync` permission.
+You can use the [Permissions API](/en-US/docs/Web/API/Permissions_API) to check whether this permission is granted:
+
+```js
+const status = await navigator.permissions.query({
+  name: "periodic-background-sync",
+});
+```
+
+In Chrome, the permission is granted only to an [installed web app](/en-US/docs/Web/Progressive_web_apps/Guides/Installing) that has been launched as a separate application.
+Chrome also uses the [site's engagement score](https://developer.chrome.com/docs/capabilities/periodic-background-sync#getting_user_engagement_right) to determine whether and how often to fire periodic sync events.
 
 ## Examples
 

@@ -59,7 +59,7 @@ Because a `@custom-media` value is just a normal `<media-query-list>`, you can c
 The `not` operator negates an entire media condition. This is useful when you want a rule to apply only when a specific condition is `false`.
 
 ```css
-@custom-media --no-script not (script);
+@custom-media --no-script not (scripting);
 
 @media (--no-script) {
 }
@@ -80,20 +80,20 @@ This alias only matches when the viewport is within the specified width range.
 
 #### Using the `or` operator
 
-The logical `or` operator (or its comma alias) creates a media query that matches if any of the listed conditions are `true`.
+The logical `or` operator (or its comma alias, when combining media types) creates a media query that matches if any of the listed conditions are `true`.
 
 ```css
-@custom-media --screen-or-print-1 screen, print;
-@custom-media --screen-or-print-2 screen or print;
+@custom-media --screen-or-print screen, print;
+@custom-media --narrow-or-tall (width < 600px) or (height > 800px);
 
-@media (--screen-or-print-1) {
+@media (--screen-or-print) {
 }
 
-@media (--screen-or-print-2) {
+@media (--narrow-or-tall) {
 }
 ```
 
-The two aliases are identical. They are activated for both screen and print environments.
+The `--screen-or-print` alias uses a comma to match either the `screen` or `print` media type. The `--narrow-or-tall` alias uses the `or` keyword to combine two media features, matching when the viewport is narrower than 600px, taller than 800px, or both.
 
 ## Formal syntax
 

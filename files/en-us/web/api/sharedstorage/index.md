@@ -8,7 +8,7 @@ status:
 browser-compat: api.SharedStorage
 ---
 
-{{APIRef("Shared Storage API")}}{{deprecated_header}}{{non-standard_header}}
+{{APIRef("Shared Storage API")}}{{non-standard_header}}
 
 The **`SharedStorage`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents the shared storage for a particular origin, defining methods to write data to the shared storage.
 

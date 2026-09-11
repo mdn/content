@@ -76,7 +76,7 @@ If your website or application contains sound, you should allow the user control
 
 Some controls you may find useful are: {{HTMLElement("button")}} elements for play/pause, {{HTMLElement("select")}} elements for selecting options like playback speed, [`<input type="checkbox">`](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) elements for toggling mute, and [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range) elements for volume control and inputting other number values.
 
-All the common considerations about form accessibility apply. When using {{HTMLElement("button")}} elements, you should ensure that they have a clear [label](/en-US/docs/Web/HTML/Reference/Elements/label). This will help screen readers and other assistive technologies to understand the purpose of the button. If you have buttons that switch audio on and off, using the ARIA [`role="switch"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role) attribute on them is a good option for signalling to assistive technology what the button's exact purpose is, and therefore making the app more accessible.
+All the common considerations about form accessibility apply. When using {{HTMLElement("button")}} elements, you should ensure that they have a clear [label](/en-US/docs/Web/HTML/Reference/Elements/label). This will help screen readers and other assistive technologies to understand the purpose of the button. If you have buttons that switch audio on and off, using the ARIA [`role="switch"`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role) attribute on them is a good option for signaling to assistive technology what the button's exact purpose is, and therefore making the app more accessible.
 
 ## Setting AudioParam values
 

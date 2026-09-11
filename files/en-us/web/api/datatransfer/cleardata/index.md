@@ -8,20 +8,13 @@ browser-compat: api.DataTransfer.clearData
 
 {{APIRef("HTML Drag and Drop API")}}
 
-The **`DataTransfer.clearData()`** method removes the drag
-operation's [drag data](/en-US/docs/Web/API/DataTransfer) for the given type. If data for the
-given type does not exist, this method does nothing.
+The **`clearData()`** method of the {{domxref("DataTransfer")}} interface removes the drag operation's [drag data](/en-US/docs/Web/API/DataTransfer) for the given type. If data for the given type does not exist, this method does nothing.
 
-If this method is called with no arguments or the format is an empty
-string, the data of all types will be removed.
+If this method is called with no arguments or the format is an empty string, the data of all types will be removed.
 
-This method does _not_ remove files from the drag operation, so it's possible
-for there still to be an entry with the type `"Files"` left in the object's
-{{domxref("DataTransfer.types")}} list if there are any files included in the drag.
+This method does _not_ remove files from the drag operation, so it's possible for there still to be an entry with the type `"Files"` left in the object's {{domxref("DataTransfer.types")}} list if there are any files included in the drag.
 
-> [!NOTE]
-> This method can only be used in the handler for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event,
-> because that's the only time the drag operation's data store is writable.
+During a drag operation, this method can only be used in the handler for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event, because that's the only time the drag operation's data store is writable. Calling it from any other drag event does nothing. See [Modifying the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#modifying_the_drag_data_store) for details.
 
 ## Syntax
 

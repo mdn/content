@@ -16,7 +16,7 @@ This is useful when calculating {{Glossary("Interaction_to_next_paint", "Interac
 
 ## Value
 
-A number, which is initially `0`, and increments by `1` with each discrete interaction as measured by {{domxref("PerformanceEventTiming")}}, where an {{domxref("PerformanceEventTiming.interactionId")}} is assigned.
+A number, which is initially `0`, and increments by `1` with each discrete interaction as measured by {{domxref("PerformanceEventTiming")}}, where an {{domxref("PerformanceEventTiming.interactionId", "interactionId")}} is assigned.
 
 ## Examples
 

@@ -32,6 +32,15 @@ new WebTransport(url, options)
       - : A string indicating the application's preference that the congestion control algorithm used when sending data over this connection be tuned for either throughput or low-latency.
         This is a hint to the user agent.
         The allowed values are: `default` (default), `throughput`, and `low-latency`.
+    - `protocols` {{optional_inline}}
+      - : An array of strings, each indicating an application-specific protocol name, listed in order of preference.
+        By default, the value is an empty array.
+
+        The server may select and return one of the protocols.
+        In this case, the selected value becomes available in the {{domxref("WebTransport/protocol", "protocol")}} property once the {{domxref("WebTransport/ready", "ready")}} promise fulfills.
+        The server may also choose not to select any of the offered protocols, in which case `protocol` will return an empty string (`""`).
+        The server may also reject the connection if it doesn't support any of the protocols, in which case {{domxref("WebTransport/ready","ready")}} will reject with an error.
+
     - `requireUnreliable` {{optional_inline}}
       - : A boolean value.
         If `true`, the connection cannot be established over HTTP/2 if an HTTP/3 connection is not possible.
@@ -72,6 +81,7 @@ new WebTransport(url, options)
   - : Thrown if `serverCertificateHashes` is specified but the transport protocol does not support this feature.
 - `SyntaxError`
   - : Thrown if the specified `url` is invalid, if the scheme is not HTTPS, or if the URL includes a fragment.
+    Also thrown if `protocols` contains a duplicate value, a value with characters not allowed in a protocol token, or a value whose encoded length is `0` or greater than `512` bytes.
 - `TypeError`
   - : Thrown if a `serverCertificateHashes` is set for a non-dedicated connection (in other words, if `allowPooling` is `true`).
 

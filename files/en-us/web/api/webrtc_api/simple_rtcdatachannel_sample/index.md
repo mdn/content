@@ -12,9 +12,9 @@ In this example, we will open an {{domxref("RTCDataChannel")}} connection linkin
 
 ## The HTML
 
-First, let's take a quick look at the [HTML that's needed](https://github.com/mdn/samples-server/blob/master/s/webrtc-simple-datachannel/index.html). There's nothing incredibly complicated here. First, we have a couple of buttons for establishing and closing the connection:
+First, let's take a quick look at the HTML that's needed. There's nothing incredibly complicated here. First, we have a couple of buttons for establishing and closing the connection:
 
-```html
+```html live-sample___simple-data-channel
 <button id="connectButton" name="connectButton" class="buttonleft">
   Connect
 </button>
@@ -29,7 +29,7 @@ First, let's take a quick look at the [HTML that's needed](https://github.com/md
 
 Then there's a box which contains the text input box into which the user can type a message to transmit, with a button to send the entered text. This {{HTMLElement("div")}} will be the first peer in the channel.
 
-```html
+```html live-sample___simple-data-channel
 <div class="messagebox">
   <label for="message"
     >Enter a message:
@@ -51,21 +51,44 @@ Then there's a box which contains the text input box into which the user can typ
 
 Finally, there's the little box into which we'll insert the messages. This {{HTMLElement("div")}} block will be the second peer.
 
-```html
+```html live-sample___simple-data-channel
 <div class="messagebox" id="receive-box">
   <p>Messages received:</p>
 </div>
 ```
 
+```css hidden live-sample___simple-data-channel
+body {
+  font-family: sans-serif;
+}
+
+.messagebox {
+  margin-block: 1rem;
+}
+
+input {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+#receive-box {
+  border: 1px solid gray;
+  padding: 0.5rem;
+  height: 8rem;
+  overflow: auto;
+  overflow-wrap: anywhere;
+}
+```
+
 ## The JavaScript code
 
-While you can just [look at the code itself on GitHub](https://github.com/mdn/samples-server/blob/master/s/webrtc-simple-datachannel/main.js), below we'll review the parts of the code that do the heavy lifting.
+Below we'll review the parts of the code that do the heavy lifting.
 
 ### Starting up
 
 When the script is run, we set up a {{domxref("Window/load_event", "load")}} event listener, so that once the page is fully loaded, our `startup()` function is called.
 
-```js
+```js live-sample___simple-data-channel
 let connectButton = null;
 let disconnectButton = null;
 let sendButton = null;
@@ -77,6 +100,9 @@ let remoteConnection = null; // RTCPeerConnection for the "remote"
 
 let sendChannel = null; // RTCDataChannel for the local (sender)
 let receiveChannel = null; // RTCDataChannel for the remote (receiver)
+let disconnecting = false;
+
+window.addEventListener("load", startup);
 
 function startup() {
   connectButton = document.getElementById("connectButton");
@@ -97,14 +123,19 @@ This is quite straightforward. We declare variables and grab references to all t
 
 ### Establishing a connection
 
-When the user clicks the "Connect" button, the `connectPeers()` method is called. We're going to break this up and look at it a bit at a time, for clarity.
+When the user clicks the "Connect" button, the `connectPeers()` function is called. It disables the button while connecting to prevent another connection attempt. We're going to break this up and look at it a bit at a time, for clarity.
 
 > [!NOTE]
 > Even though both ends of our connection will be on the same page, we're going to refer to the one that starts the connection as the "local" one, and to the other as the "remote" end.
 
+```js live-sample___simple-data-channel
+async function connectPeers() {
+  connectButton.disabled = true;
+```
+
 #### Set up the local peer
 
-```js
+```js live-sample___simple-data-channel
 localConnection = new RTCPeerConnection();
 
 sendChannel = localConnection.createDataChannel("sendChannel");
@@ -118,7 +149,7 @@ It's important to keep in mind that each end of the channel has its own {{domxre
 
 #### Set up the remote peer
 
-```js
+```js live-sample___simple-data-channel
 remoteConnection = new RTCPeerConnection();
 remoteConnection.ondatachannel = receiveChannelCallback;
 ```
@@ -132,7 +163,7 @@ The next step is to set up each connection with ICE candidate listeners; these w
 > [!NOTE]
 > In a real-world scenario in which the two peers aren't running in the same context, the process is a bit more involved; each side provides, one at a time, a suggested way to connect (for example, UDP, UDP with a relay, TCP, etc.) by calling {{domxref("RTCPeerConnection.addIceCandidate()")}}, and they go back and forth until agreement is reached. But here, we just accept the first offer on each side, since there's no actual networking involved.
 
-```js
+```js live-sample___simple-data-channel
 localConnection.onicecandidate = (e) =>
   !e.candidate ||
   remoteConnection.addIceCandidate(e.candidate).catch(handleAddCandidateError);
@@ -148,49 +179,50 @@ We configure each {{domxref("RTCPeerConnection")}} to have an event handler for 
 
 The last thing we need to do in order to begin connecting our peers is to create a connection offer.
 
-```js
-localConnection
-  .createOffer()
-  .then((offer) => localConnection.setLocalDescription(offer))
-  .then(() =>
-    remoteConnection.setRemoteDescription(localConnection.localDescription),
-  )
-  .then(() => remoteConnection.createAnswer())
-  .then((answer) => remoteConnection.setLocalDescription(answer))
-  .then(() =>
-    localConnection.setRemoteDescription(remoteConnection.localDescription),
-  )
-  .catch(handleCreateDescriptionError);
+```js live-sample___simple-data-channel
+try {
+  const offer = await localConnection.createOffer();
+  await localConnection.setLocalDescription(offer);
+  await remoteConnection.setRemoteDescription(localConnection.localDescription);
+  const answer = await remoteConnection.createAnswer();
+  await remoteConnection.setLocalDescription(answer);
+  await localConnection.setRemoteDescription(remoteConnection.localDescription);
+} catch (error) {
+  handleCreateDescriptionError(error);
+}
 ```
 
-Let's go through this line by line and decipher what it means.
+```js hidden live-sample___simple-data-channel
+}
+```
+
+Each `await` waits for the operation to complete before proceeding to the next step. Let's go through this line by line and decipher what it means.
 
 1. First, we call {{domxref("RTCPeerConnection.createOffer()")}} method to create an {{Glossary("SDP")}} (Session Description Protocol) blob describing the connection we want to make. This method accepts, optionally, an object with constraints to be met for the connection to meet your needs, such as whether the connection should support audio, video, or both. In our simple example, we don't have any constraints.
 2. If the offer is created successfully, we pass the blob along to the local connection's {{domxref("RTCPeerConnection.setLocalDescription()")}} method. This configures the local end of the connection.
 3. The next step is to connect the local peer to the remote by telling the remote peer about it. This is done by calling {{domxref("RTCPeerConnection.setRemoteDescription()", "remoteConnection.setRemoteDescription()")}}. Now the `remoteConnection` knows about the connection that's being built. In a real application, this would require a signaling server to exchange the description object.
 4. That means it's time for the remote peer to reply. It does so by calling its {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}} method. This generates a blob of SDP which describes the connection the remote peer is willing and able to establish. This configuration lies somewhere in the union of options that both peers can support.
-5. Once the answer has been created, it's passed into the remoteConnection by calling {{domxref("RTCPeerConnection.setLocalDescription()")}}. That establishes the remote's end of the connection (which, to the remote peer, is its local end. This stuff can be confusing, but you get used to it). Again, this would normally be exchanged through a signalling server.
+5. Once the answer has been created, it's passed into the remoteConnection by calling {{domxref("RTCPeerConnection.setLocalDescription()")}}. That establishes the remote's end of the connection (which, to the remote peer, is its local end. This stuff can be confusing, but you get used to it). Again, this would normally be exchanged through a signaling server.
 6. Finally, the local connection's remote description is set to refer to the remote peer by calling localConnection's {{domxref("RTCPeerConnection.setRemoteDescription()")}}.
-7. The `catch()` calls a routine that handles any errors that occur.
+7. The `catch` block calls a routine that handles any errors that occur in the `try` block.
 
 > [!NOTE]
-> Once again, this process is not a real-world implementation; in normal usage, there's two chunks of code running on two machines, interacting and negotiating the connection. A side channel, commonly called a "signalling server," is usually used to exchange the description (which is in **application/sdp** form) between the two peers.
+> Once again, this process is not a real-world implementation; in normal usage, there's two chunks of code running on two machines, interacting and negotiating the connection. A side channel, commonly called a "signaling server," is usually used to exchange the description (which is in **application/sdp** form) between the two peers.
 
-#### Handling successful peer connection
+#### Handling connection errors
 
-As each side of the peer-to-peer connection is successfully linked up, the corresponding {{domxref("RTCPeerConnection")}}'s {{domxref("RTCPeerConnection.icecandidate_event", "icecandidate")}} event is fired. These handlers can do whatever's needed, but in this example, all we need to do is update the user interface:
+If creating or applying a description fails, we log the error, close the peer connections, and enable the "Connect" button so the user can try again. Errors when adding ICE candidates are also logged:
 
-```js
+```js live-sample___simple-data-channel
 function handleCreateDescriptionError(error) {
-  console.log(`Unable to create an offer: ${error.toString()}`);
-}
-
-function handleLocalAddCandidateSuccess() {
-  connectButton.disabled = true;
-}
-
-function handleRemoteAddCandidateSuccess() {
-  disconnectButton.disabled = false;
+  console.log(`Unable to establish a connection: ${error.toString()}`);
+  localConnection?.close();
+  remoteConnection?.close();
+  sendChannel = null;
+  receiveChannel = null;
+  localConnection = null;
+  remoteConnection = null;
+  connectButton.disabled = false;
 }
 
 function handleAddCandidateError() {
@@ -198,13 +230,13 @@ function handleAddCandidateError() {
 }
 ```
 
-The only thing we do here is disable the "Connect" button when the local peer is connected and enable the "Disconnect" button when the remote peer connects.
+The channel's `open` event enables the "Send" and "Disconnect" buttons, as described below in [Handling channel status changes](#handling_channel_status_changes).
 
 #### Connecting the data channel
 
 Once the {{domxref("RTCPeerConnection")}} is open, the {{domxref("RTCPeerConnection.datachannel_event", "datachannel")}} event is sent to the remote to complete the process of opening the data channel; this invokes our `receiveChannelCallback()` method, which looks like this:
 
-```js
+```js live-sample___simple-data-channel
 function receiveChannelCallback(event) {
   receiveChannel = event.channel;
   receiveChannel.onmessage = handleReceiveMessage;
@@ -221,50 +253,43 @@ Both our local and remote peers use a single method to handle events indicating 
 
 When the local peer experiences an open or close event, the `handleSendChannelStatusChange()` method is called:
 
-```js
+```js live-sample___simple-data-channel
 function handleSendChannelStatusChange(event) {
-  if (sendChannel) {
-    const state = sendChannel.readyState;
+  const state = event.currentTarget.readyState;
+  console.log(`Send channel's status has changed to ${state}`);
 
-    if (state === "open") {
-      messageInputBox.disabled = false;
-      messageInputBox.focus();
-      sendButton.disabled = false;
-      disconnectButton.disabled = false;
-      connectButton.disabled = true;
-    } else {
-      messageInputBox.disabled = true;
-      sendButton.disabled = true;
-      connectButton.disabled = false;
-      disconnectButton.disabled = true;
-    }
+  const open = state === "open" && !disconnecting;
+  messageInputBox.disabled = !open;
+  sendButton.disabled = !open;
+  disconnectButton.disabled = !open;
+  connectButton.disabled = open || disconnecting;
+  if (open) {
+    messageInputBox.focus();
   }
 }
 ```
 
-If the channel's state has changed to "open", that indicates that we have finished establishing the link between the two peers. The user interface is updated correspondingly by enabling the text input box for the message to send, focusing the input box so that the user can immediately begin to type, enabling the "Send" and "Disconnect" buttons, now that they're usable, and disabling the "Connect" button, since it is not needed when the connection is open.
+If the channel's state has changed to "open", that indicates that we have finished establishing the link between the two peers. If `disconnecting` is `true`, we keep everything disabled. Otherwise, the user interface is updated correspondingly by enabling the text input box for the message to send, focusing the input box so that the user can immediately begin to type, enabling the "Send" and "Disconnect" buttons, now that they're usable, and disabling the "Connect" button, since it is not needed when the connection is open.
 
-If the state has changed to "closed", the opposite set of actions occurs: the input box and "Send" button are disabled, the "Connect" button is enabled so that the user can open a new connection if they wish to do so, and the "Disconnect" button is disabled, since it's not useful when no connection exists.
+If the state has changed to "closed", the opposite set of actions occurs: the input box and "Send" button are disabled, the "Connect" button is enabled so that the user can open a new connection if they wish to do so, and the "Disconnect" button is disabled, since it's not useful when no connection exists. Again, the `disconnecting` flag overrides this and keeps everything disabled. During an explicit disconnect, `disconnectPeers()` enables the "Connect" button after both channels have closed and cleanup is complete.
 
 Our example's remote peer, on the other hand, ignores the status change events, except for logging the event to the console:
 
-```js
+```js live-sample___simple-data-channel
 function handleReceiveChannelStatusChange(event) {
-  if (receiveChannel) {
-    console.log(
-      `Receive channel's status has changed to ${receiveChannel.readyState}`,
-    );
-  }
+  console.log(
+    `Receive channel's status has changed to ${event.currentTarget.readyState}`,
+  );
 }
 ```
 
-The `handleReceiveChannelStatusChange()` method receives as an input parameter the event which occurred; this will be an {{domxref("RTCDataChannelEvent")}}.
+The `handleReceiveChannelStatusChange()` method receives as an input parameter the event which occurred; this is an {{domxref("Event")}}, whose `currentTarget` is the channel.
 
 ### Sending messages
 
 When the user presses the "Send" button, the sendMessage() method we've established as the handler for the button's {{domxref("Element/click_event", "click")}} event is called. That method is simple enough:
 
-```js
+```js live-sample___simple-data-channel
 function sendMessage() {
   const message = messageInputBox.value;
   sendChannel.send(message);
@@ -280,7 +305,7 @@ First, the text of the message is fetched from the input box's [`value`](/en-US/
 
 When a "message" event occurs on the remote channel, our `handleReceiveMessage()` method is called as the event handler.
 
-```js
+```js live-sample___simple-data-channel
 function handleReceiveMessage(event) {
   const el = document.createElement("p");
   const textNode = document.createTextNode(event.data);
@@ -296,18 +321,40 @@ This method performs some basic {{Glossary("DOM")}} injection; it creates a new 
 
 When the user clicks the "Disconnect" button, the `disconnectPeers()` method previously set as that button's handler is called.
 
-```js
-function disconnectPeers() {
-  // Close the RTCDataChannels if they're open.
+```js live-sample___simple-data-channel
+async function disconnectPeers() {
+  if (disconnecting) {
+    return;
+  }
+  disconnecting = true;
+  connectButton.disabled = true;
+  disconnectButton.disabled = true;
+  sendButton.disabled = true;
+  messageInputBox.disabled = true;
 
-  sendChannel.close();
-  receiveChannel.close();
+  function waitForClose(channel) {
+    if (!channel || channel.readyState === "closed") {
+      return Promise.resolve();
+    }
+    return new Promise((resolve) => {
+      channel.addEventListener("close", resolve, { once: true });
+    });
+  }
 
-  // Close the RTCPeerConnections
+  const closed = Promise.all([
+    waitForClose(sendChannel),
+    waitForClose(receiveChannel),
+  ]);
+  sendChannel?.close();
+  receiveChannel?.close();
+  // This sample has no timeout: if a close event never arrives,
+  // cleanup remains pending and the controls stay disabled.
+  // This shouldn't happen in practice.
+  await closed;
 
-  localConnection.close();
-  remoteConnection.close();
-
+  // Keep the peer connections alive until both channel close events have fired.
+  localConnection?.close();
+  remoteConnection?.close();
   sendChannel = null;
   receiveChannel = null;
   localConnection = null;
@@ -315,20 +362,19 @@ function disconnectPeers() {
 
   // Update user interface elements
 
+  disconnecting = false;
   connectButton.disabled = false;
-  disconnectButton.disabled = true;
-  sendButton.disabled = true;
-
   messageInputBox.value = "";
-  messageInputBox.disabled = true;
 }
 ```
 
-This starts by closing each peer's {{domxref("RTCDataChannel")}}, then, similarly, each {{domxref("RTCPeerConnection")}}. Then all the saved references to these objects are set to `null` to avoid accidental reuse, and the user interface is updated to reflect the fact that the connection has been closed.
+Calling {{domxref("RTCDataChannel.close", "close()")}} starts an asynchronous shutdown. The `disconnectPeers()` function waits for both channels' `close` events before closing the underlying peer connections and clearing the references. Closing the peer connections immediately can interrupt this process and prevent the channel status handlers from running. Controls remain disabled during shutdown, so the user can't start a new connection that would overwrite these variables before cleanup finishes.
 
-## Next steps
+## Result
 
-Take a look at the [webrtc-simple-datachannel](https://github.com/mdn/samples-server/tree/master/s/webrtc-simple-datachannel) source code, available on GitHub.
+Click "Connect", enter a message, and click "Send" to display it in the receiving box. Click "Disconnect" to close the connection. You can then connect again to send more messages.
+
+{{EmbedLiveSample("simple-data-channel", "100%", 360)}}
 
 ## See also
 
