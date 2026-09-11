@@ -95,7 +95,7 @@ In the token request:
 
 ### Security features
 
-In this section we will summarize the main security features of the OIDC authentication flow we've just described. For the full details, see [Best Current Practice for OAuth 2.0 Security](https://www.rfc-editor.org/rfc/rfc9700.html).
+In this section we will summarize the main security features of the OIDC authentication flow we've just described. For the full details, see [Best Current Practice for OAuth 2.0 Security](https://www.rfc-editor.org/info/rfc9700/).
 
 #### Authorization code flow
 
@@ -113,7 +113,7 @@ The specification considers that clients running on the user's browser are publi
 
 In OIDC, only confidential clients may use client authentication, because only confidential clients can be trusted to maintain the security of the client's credentials.
 
-The RP can authenticate itself to the IdP using a shared secret, but [it is better to use a method based on public-key cryptography](https://www.rfc-editor.org/rfc/rfc9700.html#name-client-authentication), such as {{glossary("TLS")}} client authentication.
+The RP can authenticate itself to the IdP using a shared secret, but [it is better to use a method based on public-key cryptography](https://www.rfc-editor.org/info/rfc9700/#name-client-authentication), such as {{glossary("TLS")}} client authentication.
 
 #### Proof Key for Code Exchange (PKCE)
 

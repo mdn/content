@@ -147,7 +147,7 @@ SVG makes use of a number of data types. This article lists these types along wi
     SVG makes extensive use of _IRI_ references, both absolute and relative, to other objects. For example, to fill a rectangle with a linear gradient, you first define a {{SVGElement("linearGradient")}} element and give it an ID, as in:
 
     ```html
-    <linearGradient xml:id="MyGradient">...</linearGradient>
+    <linearGradient id="MyGradient">...</linearGradient>
     ```
 
     You then reference the linear gradient as the value of the {{SVGAttr("fill")}} attribute for the rectangle, as in the following example:

@@ -213,6 +213,9 @@ The following is syntactically invalid despite its import equivalent:
 export DefaultExport from "bar.js"; // Invalid
 ```
 
+> [!NOTE]
+> Due to the lack of this syntax, [`import source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/source) also has no re-exporting counterpart.
+
 The correct way of doing this is to rename the export:
 
 ```js
@@ -358,4 +361,3 @@ import { myFunction, myVariable, MyClass } from "parentModule.js";
 - [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) guide
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) on hacks.mozilla.org (2015)
 - [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) on hacks.mozilla.org (2018)
-- [Exploring JS, Ch.16: Modules](https://exploringjs.com/es6/ch_modules.html) by Dr. Axel Rauschmayer

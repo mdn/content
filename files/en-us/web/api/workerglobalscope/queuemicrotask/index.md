@@ -36,7 +36,7 @@ queueMicrotask(callback)
 ### Parameters
 
 - `callback`
-  - : A {{jsxref("function")}} to be executed when the browser engine determines it is
+  - : A {{jsxref("Function")}} to be executed when the browser engine determines it is
     safe to call your code. Enqueued microtasks are executed after all pending tasks have
     completed but before yielding control to the browser's event loop.
 

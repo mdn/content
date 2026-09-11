@@ -23,6 +23,12 @@ Depending on the nature of your extension, you may want to manage contextual ide
 
 To manage contextual identities, you use the {{WebExtAPIRef("contextualIdentities")}} API. This API enables you to add, query, update, and delete contextual identities. When you create a contextual identity, it is given a unique `cookieStoreId`. You use this ID to work with entities related to the contextual identity.
 
+### Supported colors and icons
+
+When creating or updating a contextual identity, you must supply valid `color` and `icon` values. For Firefox 153 and later, use {{WebExtAPIRef("contextualIdentities.getSupportedColors()")}} and {{WebExtAPIRef("contextualIdentities.getSupportedIcons()")}} to retrieve the list of supported values rather than hardcoding them. Firefox 153 renamed two colors and added one, and future versions may introduce further changes. Querying these methods keeps your extension compatible without requiring updates each time the supported values change.
+
+For extensions that support Firefox versions earlier than 153, full lists of supported values, including what changed in Firefox 153, are on the {{WebExtAPIRef("contextualIdentities.getSupportedColors()")}} and {{WebExtAPIRef("contextualIdentities.getSupportedIcons()")}} reference pages.
+
 ### Using `cookieStoreId`
 
 Several extension APIs include the `cookieStoreId` in objects to enable extensions to associate these objects with specific contextual identities.

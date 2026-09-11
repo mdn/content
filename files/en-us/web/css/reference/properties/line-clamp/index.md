@@ -36,6 +36,8 @@ line-clamp: unset;
 
 ### Values
 
+This property is specified as a single value from the following list:
+
 - `none`
   - : This value specifies that the content won't be clamped.
 - {{cssxref("integer")}}

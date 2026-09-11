@@ -35,9 +35,9 @@ text-size-adjust: revert-layer;
 text-size-adjust: unset;
 ```
 
-The `text-size-adjust` property is specified as `none`, `auto`, or a `<percentage>`.
-
 ### Values
+
+This property is specified as one of the following values:
 
 - `none`
   - : Disables the browser's inflation algorithm.

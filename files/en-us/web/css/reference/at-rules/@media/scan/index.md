@@ -57,7 +57,7 @@ p {
     border-style: dashed;
   }
 }
-@media not screen and (scan: interlaced) {
+@media not screen and (scan: interlace) {
   p {
     color: purple;
   }

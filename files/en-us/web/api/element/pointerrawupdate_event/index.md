@@ -12,10 +12,18 @@ The **`pointerrawupdate`** event is fired when a pointer changes any properties 
 See {{domxref('Element/pointermove_event', 'pointermove')}} for a list of these properties.
 
 The `pointerrawupdate` event may have coalesced events if there is already another `pointerrawupdate` event with the same pointer ID that hasn't been dispatched in the event loop.
+If events are coalesced, the `target` of the dispatched event is the same as the last coalesced one.
 For information on coalesced events, see the {{domxref("PointerEvent.getCoalescedEvents()")}} documentation.
 
-`pointerrawupdate` is intended for applications that require high-precision input handling and cannot achieve smooth interaction using coalesced [`pointermove`](/en-US/docs/Web/API/Element/pointermove_event) events alone.
+The difference between `pointerrawupdate` and {{domxref("Element/pointermove_event", "pointermove")}} is in their firing frequency.
+A browser may delay `pointermove` events to improve performance, while `pointerrawupdate` events are dispatched as soon and as frequently as the browser can produce them.
+Both event types coalesce, but `pointerrawupdate` coalesces less, so its listeners run more often.
+Any single event carries the same property values either way, so `pointerrawupdate` is not more precise in space or time than the `pointermove` event covering the same movement.
+
+`pointerrawupdate` is therefore intended for applications that need lower-latency input handling than `pointermove` offers, such as drawing or dragging that would otherwise visibly lag behind the pointer.
+Because the events arrive more often, an application that keeps up with them can also feel smoother.
 However, because listening to `pointerrawupdate` events can affect performance, you should add these listeners only if your JavaScript needs high-frequency events and can handle them as quickly as they are dispatched.
+An application that cannot keep up will feel less responsive rather than more, so heavy optimization inside the event listener is needed.
 For most use cases, other pointer event types should suffice.
 
 This event [bubbles](/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling) and is [composed](/en-US/docs/Web/API/Event/composed), but is not [cancelable](/en-US/docs/Web/API/Event/cancelable) and has no default action.
@@ -36,44 +44,14 @@ A {{domxref("PointerEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("PointerEvent")}}
 
-## Event properties
-
-_This interface inherits properties from {{domxref("MouseEvent")}} and {{domxref("Event")}}._
-
-- {{domxref('PointerEvent.altitudeAngle')}} {{ReadOnlyInline}} {{experimental_inline}}
-  - : Represents the angle between a transducer (a pointer or stylus) axis and the X-Y plane of a device screen.
-- {{domxref('PointerEvent.azimuthAngle')}} {{ReadOnlyInline}} {{experimental_inline}}
-  - : Represents the angle between the Y-Z plane and the plane containing both the transducer (a pointer or stylus) axis and the Y axis.
-- {{domxref('PointerEvent.persistentDeviceId')}} {{ReadOnlyInline}} {{experimental_inline}}
-  - : A unique identifier for the pointing device generating the `PointerEvent`.
-- {{domxref('PointerEvent.pointerId')}} {{ReadOnlyInline}}
-  - : A unique identifier for the pointer causing the event.
-- {{domxref('PointerEvent.width')}} {{ReadOnlyInline}}
-  - : The width (magnitude on the X axis), in CSS pixels, of the contact geometry of the pointer.
-- {{domxref('PointerEvent.height')}} {{ReadOnlyInline}}
-  - : The height (magnitude on the Y axis), in CSS pixels, of the contact geometry of the pointer.
-- {{domxref('PointerEvent.pressure')}} {{ReadOnlyInline}}
-  - : The normalized pressure of the pointer input in the range `0` to `1`, where `0` and `1` represent the minimum and maximum pressure the hardware is capable of detecting, respectively.
-- {{domxref('PointerEvent.tangentialPressure')}} {{ReadOnlyInline}}
-  - : The normalized tangential pressure of the pointer input (also known as barrel pressure or [cylinder stress](https://en.wikipedia.org/wiki/Cylinder_stress)) in the range `-1` to `1`, where `0` is the neutral position of the control.
-- {{domxref('PointerEvent.tiltX')}} {{ReadOnlyInline}}
-  - : The plane angle (in degrees, in the range of `-90` to `90`) between the Y–Z plane and the plane containing both the pointer (e.g., pen stylus) axis and the Y axis.
-- {{domxref('PointerEvent.tiltY')}} {{ReadOnlyInline}}
-  - : The plane angle (in degrees, in the range of `-90` to `90`) between the X–Z plane and the plane containing both the pointer (e.g., pen stylus) axis and the X axis.
-- {{domxref('PointerEvent.twist')}} {{ReadOnlyInline}}
-  - : The clockwise rotation of the pointer (e.g., pen stylus) around its major axis in degrees, with a value in the range `0` to `359`.
-- {{domxref('PointerEvent.pointerType')}} {{ReadOnlyInline}}
-  - : Indicates the device type that caused the event (mouse, pen, touch, etc.).
-- {{domxref('PointerEvent.isPrimary')}} {{ReadOnlyInline}}
-  - : Indicates if the pointer represents the primary pointer of this pointer type.
-
 ## Example
 
 ```js
-addEventListener("pointerrawupdate", (event) => {
-  if (event.getCoalescedEvents && event.getCoalescedEvents().length > 1) {
-    console.log("Coalesced events:", event.getCoalescedEvents().length);
-    for (let coalescedEvent of event.getCoalescedEvents()) {
+canvas.addEventListener("pointerrawupdate", (event) => {
+  const events = event.getCoalescedEvents();
+  if (events.length > 1) {
+    console.log("Coalesced events:", events.length);
+    for (const coalescedEvent of events) {
       // Do something with the coalesced events.
     }
   } else {

@@ -30,13 +30,6 @@ A {{domxref("RTCTransformEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("RTCTransformEvent")}}
 
-## Event properties
-
-_This interface also inherits properties from its parent, {{domxref("Event")}}._
-
-- {{domxref("RTCTransformEvent.transformer")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("RTCRtpScriptTransformer")}} associated with the event.
-
 ## Example
 
 The following code snippet shows a handler for the `rtctransform` event in the worker, added to the global scope using `addEventListener()`.

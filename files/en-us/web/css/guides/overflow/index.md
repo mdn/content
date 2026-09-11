@@ -182,7 +182,7 @@ val.addEventListener("change", () => {
   clipMargin();
 });
 
-wide.addEventListener("change", () => {
+check.addEventListener("change", () => {
   pre.classList.toggle("wide");
   scrollExample();
 });

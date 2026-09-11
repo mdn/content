@@ -70,9 +70,9 @@ column-width: revert-layer;
 column-width: unset;
 ```
 
-The `column-width` property is specified as one of the values listed below.
-
 ### Values
+
+This property is specified as one of the following values:
 
 - {{cssxref("&lt;length&gt;")}}
   - : Indicates the optimal column width. The actual column width may differ from the specified value: it may be wider when necessary to fill available space, and narrower when the available space is too small. The value must be strictly positive or the declaration is invalid. Percentage values are also invalid.

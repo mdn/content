@@ -105,7 +105,7 @@ Fortunately, the HTML {{HTMLElement('input')}} with `type="checkbox"` works with
 
 ## Associated roles
 
-Used in almost all roles **except** roles that can not be provided an accessible name by the author.
+Used in almost all roles **except** roles that cannot be provided an accessible name by the author.
 
 The `aria-labelledby` attribute is **NOT** supported in:
 

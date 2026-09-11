@@ -1,12 +1,13 @@
 ---
-title: "gt_s: Wasm text instruction"
+title: "gt_s: Wasm numeric instruction"
 short-title: gt_s
 slug: WebAssembly/Reference/Numeric/gt_s
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.gt_s
 sidebar: webassemblysidebar
 ---
 
-The **`gt_s`** instruction, short for _greater than signed_, checks if a signed integer is greater than another signed integer.
+The **`gt_s`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _greater than signed_, checks if a signed integer is greater than another signed integer.
 
 There are other `gt` instructions available:
 
@@ -149,6 +150,14 @@ The output is as follows:
 {{embedlivesample("simd_gt_s", "100%", 100)}}
 
 The result is `1` because the value stored in lane `3` of the first input value is greater than the value stored in lane `3` of the second input value.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

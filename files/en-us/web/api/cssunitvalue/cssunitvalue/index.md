@@ -6,12 +6,10 @@ page-type: web-api-constructor
 browser-compat: api.CSSUnitValue.CSSUnitValue
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`CSSUnitValue()`** constructor creates a
-new {{domxref("CSSUnitValue")}} object which returns a new {{domxref('CSSUnitValue')}}
-object which represents values that contain a single unit type. For example, "42px"
-would be represented by a `CSSNumericValue`.
+The **`CSSUnitValue()`** constructor creates a new {{domxref("CSSUnitValue")}} object which returns a new {{domxref('CSSUnitValue')}} object which represents values that contain a single unit type.
+For example, "42px" would be represented by a `CSSNumericValue`.
 
 ## Syntax
 
@@ -22,14 +20,15 @@ new CSSUnitValue(value, unit)
 ### Parameters
 
 - `value`
-  - : A double indicating the number of units.
+  - : A number indicating the number of units.
 - `unit`
   - : A string indicating the type of unit.
 
 ## Examples
 
-The following shows a method of creating a {{domxref('CSSPositionValue')}} from
-individual `CSSUnitValue` constructors.
+### Basic usage
+
+The following shows a method of creating a {{domxref('CSSPositionValue')}} from individual `CSSUnitValue` constructors.
 
 ```js
 let pos = new CSSPositionValue(

@@ -19,7 +19,7 @@ Transformations applied to the `<g>` element are performed on its child elements
 This element only includes global attributes.
 
 Most of the [presentation attributes](/en-US/docs/Web/SVG/Reference/Attribute#presentation_attributes) applied to the element are inherited by its children.
-However, geometric attributes are only valid as presentation attributes on their designated elements — they have no effect on a `<g>` element and are not passed to its children.
+However, [geometry properties](/en-US/docs/Web/SVG/Reference/Attribute#geometry_properties) are only valid as presentation attributes on their designated elements — they have no effect on a `<g>` element and are not passed to its children.
 
 These non-inherited attributes include:
 

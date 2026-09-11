@@ -3,6 +3,8 @@ title: "XSLTProcessor: reset() method"
 short-title: reset()
 slug: Web/API/XSLTProcessor/reset
 page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.XSLTProcessor.reset
 ---
 

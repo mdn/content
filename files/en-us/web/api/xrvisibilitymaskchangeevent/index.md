@@ -29,7 +29,7 @@ _In addition to properties inherited from its parent interface, {{domxref("Event
 - {{domxref("XRVisibilityMaskChangeEvent.index", "index")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : The index of the current {{domxref("XRView")}} in the {{domxref("XRViewerPose.views")}} array.
 - {{domxref("XRVisibilityMaskChangeEvent.indices", "indices")}} {{ReadOnlyInline}} {{experimental_inline}}
-  - : Specifies the index position of each coordinate pair (not individual array index) inside the [`vertices`](#vertices) array that define the triangles used to draw the currently visible part of the scene displayed in the {{domxref("XRView")}}.
+  - : Specifies the index position of each coordinate pair (not individual array index) inside the [`vertices`](/en-US/docs/Web/API/XRVisibilityMaskChangeEvent/vertices) array that define the triangles used to draw the currently visible part of the scene displayed in the {{domxref("XRView")}}.
 - {{domxref("XRVisibilityMaskChangeEvent.session", "session")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : The {{domxref("XRSession")}} to which the event belongs.
 - {{domxref("XRVisibilityMaskChangeEvent.vertices", "vertices")}} {{ReadOnlyInline}} {{experimental_inline}}

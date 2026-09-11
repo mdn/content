@@ -28,15 +28,6 @@ An {{domxref("IDBVersionChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("IDBVersionChangeEvent")}}
 
-## Event properties
-
-_Also inherits properties from its parent, {{domxref("Event")}} interface._
-
-- {{ domxref("IDBVersionChangeEvent.oldVersion") }} {{ReadOnlyInline}}
-  - : Returns the old version of the database.
-- {{ domxref("IDBVersionChangeEvent.newVersion") }} {{ReadOnlyInline}}
-  - : Returns the new version of the database.
-
 ## Examples
 
 This example opens a database and handles the `upgradeneeded` event by making any necessary updates to the object store.
