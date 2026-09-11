@@ -27,7 +27,7 @@ import defer * as name from "module-name";
 
 By default, the `import` declaration performs many tasks at once: resolving the module specifier, fetching the module source code, parsing (potentially discovering transitive dependencies), linking, and evaluating it. This form of eager evaluation is not always desirable: it may cause slower startup, the environment for its evaluation may not be fully prepared, or the module may not need to be evaluated at all.
 
-The _import phase modifier_ allows the module import process to stop at a particular phase. By adding `defer` after `import`, the source code is linked but remains unevaluated, provided that it can be evaluated synchronously (i.e., does not use top-level `await`). Accessing an export through the deferred namespace synchronously evaluates the module and any dependencies that need to be evaluated before it. The access returns the export's value after evaluation finishes. This executes the module's top-level code, not just the code needed to initialize the requested export. Dependencies imported with their own `import defer` declarations can remain deferred.
+The _import phase modifier_ allows the module import process to stop at a particular phase. By adding `defer` after `import`, the source code is linked but remains unevaluated, provided that it can be evaluated synchronously (i.e., does not use top-level `await`). Accessing an export through the deferred namespace synchronously evaluates the module and any dependencies that need to be evaluated before it. The access returns the export's value after evaluation finishes. This executes the module's top-level code, not just the code needed to initialize the requested export. Transitive dependencies imported with their own `import defer` declarations can remain deferred.
 
 By ensuring that the paused subgraph can be evaluated synchronously, `import defer` can be "dropped in" with almost no code changes to the places that use the module:
 
@@ -62,7 +62,7 @@ Unlike [`import source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/
 
 Unlike [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import), the deferred module is still fetched, parsed, and linked up front, again avoiding unnecessary async coloring. `import defer` also enjoys most benefits of a static declaration, such as better static analysis.
 
-Note that only the "namespace import" syntax is supported. You cannot use `import defer { property } from "./my-module.js"`, etc. (which, even if valid, would not be able to defer any execution).
+Note that only the "namespace import" syntax is supported. You cannot use `import defer { property } from "./my-module.js"`, etc., because the execution is triggered by property access on the namespace object.
 
 ### Caching semantics
 
@@ -98,7 +98,7 @@ There are three differences from a regular namespace:
 
 - Operations that inspect exports can trigger evaluation and throw evaluation errors, as described below.
 - Its [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property is `"Deferred Module"` instead of `"Module"`. This remains the case after evaluation.
-- It does not expose an export named `then`, even after evaluation. Reading `namespace.then` always returns `undefined`. This prevents promise resolution from treating the namespace as a [thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) and triggering evaluation. To access such an export, use a regular import.
+- It does not expose an export named `then`, even after evaluation. Reading `namespace.then` always returns `undefined`. This prevents promise resolution from treating the namespace as a [thenable](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise#thenables) and triggering evaluation. To access such an export, use a regular import, or introduce an intermediate module that re-exports `then` under a different name.
 
 The deferred and regular namespaces for the same module are distinct objects, even after evaluation. Repeated deferred imports of the same module, whether static or dynamic, share the same deferred namespace object.
 
