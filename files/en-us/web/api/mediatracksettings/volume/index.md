@@ -9,7 +9,7 @@ status:
 browser-compat: api.MediaStreamTrack.applyConstraints.volume_constraint
 ---
 
-{{APIRef("Media Capture and Streams")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("Media Capture and Streams")}}{{Non-standard_Header}}
 
 The {{domxref("MediaTrackSettings")}} dictionary's **`volume`**
 property is a double-precision floating-point number indicating the volume of the

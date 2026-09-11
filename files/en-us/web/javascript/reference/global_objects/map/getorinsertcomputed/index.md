@@ -43,6 +43,11 @@ getOrInsertComputed(key, callback)
 
 The value associated with the specified key in the `Map` object. If the key can't be found, the result of `callback(key)` is inserted and returned.
 
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if `callback` isn't callable.
+
 ## Examples
 
 ### Avoiding unnecessary default computation

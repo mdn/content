@@ -1,12 +1,13 @@
 ---
-title: margin-block
+title: "`margin-block` CSS property"
+short-title: margin-block
 slug: Web/CSS/Reference/Properties/margin-block
 page-type: css-shorthand-property
 browser-compat: css.properties.margin-block
 sidebar: cssref
 ---
 
-The **`margin-block`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) defines the logical block start and end margins of an element, which maps to physical margins depending on the element's writing mode, directionality, and text orientation.
+The **`margin-block`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property defines the logical block start and end margins of an element, which maps to physical margins depending on the element's writing mode, directionality, and text orientation.
 
 {{InteractiveExample("CSS Demo: margin-block")}}
 
@@ -103,7 +104,7 @@ The `margin-block` property may be specified using one or two values.
 
 ### Values
 
-The `margin-block` property takes the same values as the {{CSSxRef("margin", "", "#values")}} property.
+The `margin-block` property takes the same values as the {{CSSxRef("margin-top", "", "#values")}} property.
 
 ## Formal definition
 

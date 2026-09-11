@@ -1,5 +1,6 @@
 ---
-title: border-image-source
+title: "`border-image-source` CSS property"
+short-title: border-image-source
 slug: Web/CSS/Reference/Properties/border-image-source
 page-type: css-property
 browser-compat: css.properties.border-image-source
@@ -77,7 +78,7 @@ border-image-source: unset;
 
 - `none`
   - : No border image is used. The appearance defined by {{cssxref("border-style")}} is displayed instead.
-- {{cssxref("&lt;image&gt;")}}
+- {{cssxref("image")}}
   - : Image reference to use for the border.
 
 ## Formal definition

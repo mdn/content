@@ -8,7 +8,14 @@ sidebar: firefox
 
 Firefox 24 was released on September 17, 2013. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
+
+### Developer Tools
+
+- The Network inspector now lets you filter by content type (CSS/image/font etc.) and see the relevant size and load times.
+- The DevTools options panel to the left lets you disable/enable JavaScript temporarily.
+- Extension developers may use the new [Browser Console](https://mihai.sucan.ro/mihai/blog/the-browser-console-is-replacing-the-error-console/) for Chrome-level scripts (Replaces Error Console).
+- The source map syntax has been changed to use `//#` instead of `//@` ([Firefox bug 870361](https://bugzil.la/870361)).
 
 ### CSS
 
@@ -37,13 +44,6 @@ Firefox 24 was released on September 17, 2013. This article lists key changes th
 - The {{domxref("Gamepad")}} interface, and {{domxref("Navigator.getGamepads")}} have been implemented behind the `dom.gamepad.enabled` property, defaulting to `false` ([Firefox bug 690935](https://bugzil.la/690935)).
 - On desktop Firefox only, `HTMLCanvasElement.getContext()` can now take the `webgl` value, in addition to `experimental-webgl` ([Firefox bug 870232](https://bugzil.la/870232)).
 - The non-standard method `mozLoadFrom()` of {{domxref("HTMLMediaElement")}} has been removed ([Firefox bug 877135](https://bugzil.la/877135)).
-
-### Developer Tools
-
-- The Network inspector now lets you filter by content type (CSS/image/font etc.) and see the relevant size and load times.
-- The DevTools options panel to the left lets you disable/enable JavaScript temporarily.
-- Extension developers may use the new [Browser Console](https://mihai.sucan.ro/mihai/blog/the-browser-console-is-replacing-the-error-console/) for Chrome-level scripts (Replaces Error Console).
-- The source map syntax has been changed to use `//#` instead of `//@` ([Firefox bug 870361](https://bugzil.la/870361)).
 
 ### MathML
 

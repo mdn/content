@@ -1,5 +1,6 @@
 ---
-title: "<ins>: The Inserted Text element"
+title: "`<ins>` HTML inserted text element"
+short-title: <ins>
 slug: Web/HTML/Reference/Elements/ins
 page-type: html-element
 browser-compat: html.elements.ins
@@ -94,7 +95,7 @@ ins::after {
 
 Some people who use screen readers deliberately disable announcing content that creates extra verbosity. Because of this, it is important to not abuse this technique and only apply it in situations where not knowing content has been inserted would adversely affect understanding.
 
-- [Short note on making your mark (more accessible) | The Paciello Group](https://www.tpgi.com/short-note-on-making-your-mark-more-accessible/)
+- [Short note on making your mark (more accessible) | Vispero](https://vispero.com/resources/short-note-on-making-your-mark-more-accessible/)
 - [Tweaking Text Level Styles | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
 
 ## Examples

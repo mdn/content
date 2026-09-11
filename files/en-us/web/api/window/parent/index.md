@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Window.parent
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`Window.parent`** property is a reference to the parent
 of the current window or subframe.

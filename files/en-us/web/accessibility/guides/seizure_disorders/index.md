@@ -18,7 +18,7 @@ The fact that static images may cause seizures and other disorders is documented
 
 Although static images are possible as triggers, they are less consistent. The trigger that is well established and strong is flashing/strobe lights. Dr. Selim Benbadis of USF's Comprehensive Epilepsy Program notes, _"The only thing that is really documented is flashing lights, which can trigger seizures in patients with photosensitive epilepsy. Only a few types of epilepsies are photosensitive though, and the vast majority of epilepsies are not."_ In addition to seizures brought about by photosensitivity, listening to certain pieces of music can also trigger what are called musicogenic seizures, although these types of seizures seem to be much more rare. For a great introduction on the topic of musicogenic seizures, visit Epilepsy Ontario's web page on [Musicogenic Seizures](https://epilepsyontario.org/musicogenic-seizures/).
 
-Seizures and epilepsy are not the same. In its article ["A Revised Definition of Epilepsy"](https://www.epilepsy.com/stories/revised-definition-epilepsy), the Epilepsy Foundation notes that "_a seizure is an event and epilepsy is the disease involving recurrent unprovoked seizures_." According to the Epilepsy Foundation's page ["How Serious Are Seizures?"](https://www.epilepsy.com/what-is-epilepsy/understanding-seizures/how-serious-are-seizures), _"Sudden unexpected death in epilepsy (SUDEP) is likely the most common disease-related cause of death in with epilepsy. It is not frequent but it is a very real problem and people need to be aware of its risk"_.
+Seizures and epilepsy are not the same. In its article ["A Revised Definition of Epilepsy"](https://www.epilepsy.com/stories/revised-definition-epilepsy), the Epilepsy Foundation notes that "_a seizure is an event and epilepsy is the disease involving recurrent unprovoked seizures_." According to the Epilepsy Foundation's page ["How Serious Are Seizures?"](https://www.epilepsy.com/what-is-epilepsy/understanding-seizures/how-serious-are-seizures), _"Sudden unexpected death in epilepsy (SUDEP) is likely the most common disease-related cause of death in people with epilepsy. It is not frequent but it is a very real problem and people need to be aware of its risk"_.
 
 The point is, seizures most definitely can be and are fatal, and developers and designers are incredibly important for making the web a safer place for those with sensitivities to photosensitive or musicogenic triggers.
 
@@ -215,7 +215,7 @@ With animated GIFs, ensure animation is inactive until the user chooses to activ
 
 As in the case of animated GIFs, the user must push a button or check a box in order to start the animation. There are many ways to do this, such as NOT adding the [`autoplay`](/en-US/docs/Web/API/HTMLMediaElement/autoplay) attribute to `<video controls>`, or setting {{CSSxRef('animation-play-state')}} to `paused` as an initial state. To see a powerful example of how this can actually work see the article by Kirupa, ["Toggling Animations On and Off"](https://www.kirupa.com/html5/toggling_animations_on_off.htm). Kirupa uses the `animation-play-state` in concert with {{CSSxRef('transition')}}, {{CSSxRef('transform')}}, and [`prefers-reduced-motion`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) to create a very accessible experience under the user's control.
 
-[`animation-play-state`](/en-US/docs/Web/CSS/Reference/Properties/animation-play-state) is a CSS property that sets whether an animation is running or paused.
+{{cssxref("animation-play-state")}} is a CSS property that sets whether an animation is running or paused.
 
 ```css
 div {
@@ -304,7 +304,7 @@ The methods for sniffing them out is not a casual exercise. You may be intereste
 - **JPG (Raster)**
 - **MNG (Raster)**: Multiple-image Network Graphics is a graphics file format for animated images. Also considered by some to be a video format.
 - **PNG, APNG (Raster)**: Portable Network Graphics and Animated Portable Network Graphics may both be animated.
-- **SVGs (Vector)**: The MDN document, ["SVG: Scalable Vector Graphics"](/en-US/docs/Web/SVG), notes that _"SVG is a text-based open Web standard. It is explicitly designed to work with other web standards such as [CSS](/en-US/docs/Web/CSS), [DOM](/en-US/docs/Web/API/Document_Object_Model), and [SMIL](/en-US/docs/Web/SVG/Guides/SVG_animation_with_SMIL)."_ SVGs can be used as an image like in this example: `<img src="example.svg" alt="This is an image using a svg as a source">`. This means that SVG appearance and animation can be controlled through CSS keyframes and animations. For interaction with JavaScript, see the MDN documents on [SVG Interfaces](/en-US/docs/Web/API/Document_Object_Model#svg_dom) and [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content).
+- **SVGs (Vector)**: The MDN document, ["SVG: Scalable Vector Graphics"](/en-US/docs/Web/SVG), notes that _"SVG is a text-based open Web standard. It is explicitly designed to work with other web standards such as [CSS](/en-US/docs/Web/CSS), [DOM](/en-US/docs/Web/API/Document_Object_Model), and [SMIL](/en-US/docs/Web/SVG/Guides/SVG_animation_with_SMIL)."_ SVGs can be used as an image like in this example: `<img src="example.svg" alt="This is an image using an svg as a source">`. This means that SVG appearance and animation can be controlled through CSS keyframes and animations. For interaction with JavaScript, see the MDN documents on [SVG Interfaces](/en-US/docs/Web/API/Document_Object_Model#svg_dom) and [Applying SVG effects to HTML content](/en-US/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content).
 - **Voxel (Raster)**: Three-dimensional [voxel](https://en.wikipedia.org/wiki/Voxel) raster graphics are employed in video games, as well as in medical imaging.
 
 #### Text can also be animated
@@ -563,7 +563,7 @@ The requirement for the `literal` property is taken from [WAI-Adapt: Help and Su
 - [Basic Animations](/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations) (Canvas Tutorial)
 - [Canvas API](/en-US/docs/Web/API/Canvas_API)
 - [CanvasRenderingContext2D.drawImage()](/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage)
-- [\<color>](/en-US/docs/Web/CSS/Reference/Values/color_value)
+- {{cssxref("&lt;color&gt;")}}
 - [Document Object Model](/en-US/docs/Web/API/Document_Object_Model)
 - [MediaQueryList](/en-US/docs/Web/API/MediaQueryList)
 - [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

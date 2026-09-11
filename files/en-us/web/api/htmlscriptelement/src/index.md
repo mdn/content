@@ -97,15 +97,15 @@ Next we'll create the script element to which we will assign the value and get a
 const el = document.getElementById("el");
 ```
 
-Then we use the `policy` object to create a `trustedScript` object from the potentially unsafe input string, and assign the result to the element:
+Then we use the `policy` object to create a `trustedScriptURL` instance from the potentially unsafe input string, and assign the result to the element:
 
 ```js
 // The potentially malicious string
-// We won't be including untrustedScript in our scriptAllowList array
-const untrustedScript = "https://evil.example.com/naughty.js";
+// We won't be including untrustedScriptURL in our scriptAllowList array
+const untrustedScriptURL = "https://evil.example.com/naughty.js";
 
 // Create a TrustedScriptURL instance using the policy
-const trustedScriptURL = policy.createScriptURL(untrustedScript);
+const trustedScriptURL = policy.createScriptURL(untrustedScriptURL);
 
 // Inject the TrustedScriptURL (which contains a trusted URL)
 el.src = trustedScriptURL;

@@ -1,5 +1,6 @@
 ---
-title: :interest-source
+title: "`:interest-source` CSS pseudo-class"
+short-title: :interest-source
 slug: Web/CSS/Reference/Selectors/:interest-source
 page-type: css-pseudo-class
 status:
@@ -43,10 +44,10 @@ In the CSS, we specify a rule with an `:interest-source` selector to apply a spe
 button {
   margin: 10px;
   padding: 5px 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   border-radius: 5px;
   font-size: 1.5em;
-  background-color: #eee;
+  background-color: #eeeeee;
 
   cursor: pointer;
 }

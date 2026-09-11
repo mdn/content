@@ -25,7 +25,7 @@ currently matches the media query list; otherwise, it's `false`.
 ## Examples
 
 This example detects viewport orientation changes by creating a media query using the
-[`orientation`](/en-US/docs/Web/CSS/Reference/At-rules/@media/orientation) media
+{{cssxref("@media/orientation")}} media
 feature:
 
 ```js

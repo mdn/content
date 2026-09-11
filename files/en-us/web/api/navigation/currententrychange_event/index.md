@@ -3,12 +3,10 @@ title: "Navigation: currententrychange event"
 short-title: currententrychange
 slug: Web/API/Navigation/currententrychange_event
 page-type: web-api-event
-status:
-  - experimental
 browser-compat: api.Navigation.currententrychange_event
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{APIRef("Navigation API")}}
 
 The **`currententrychange`** event of the {{domxref("Navigation")}} interface is fired when the {{domxref("Navigation.currentEntry")}} has changed.
 

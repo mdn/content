@@ -62,7 +62,7 @@ The CSS shapes module also introduces the `shape-inside` and `shape-padding` pro
 
 ### Data types
 
-- {{cssxref("&lt;basic-shape&gt;")}}
+- {{cssxref("basic-shape")}}
 
 ### Functions
 
@@ -118,6 +118,10 @@ The CSS shapes module also introduces the `shape-inside` and `shape-padding` pro
 [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module
 
 - {{cssxref("border-radius")}} shorthand
+
+[CSS borders and box decorations](/en-US/docs/Web/CSS/Guides/Borders_and_box_decorations) module
+
+- {{cssxref("border-shape")}}
 
 [CSS box model](/en-US/docs/Web/CSS/Guides/Box_model) module
 

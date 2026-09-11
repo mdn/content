@@ -1,12 +1,15 @@
 ---
-title: scroll-padding-inline
+title: "`scroll-padding-inline` CSS property"
+short-title: scroll-padding-inline
 slug: Web/CSS/Reference/Properties/scroll-padding-inline
 page-type: css-shorthand-property
 browser-compat: css.properties.scroll-padding-inline
 sidebar: cssref
 ---
 
-The `scroll-padding-inline` [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) sets the scroll padding of an element in the inline dimension.
+The **`scroll-padding-inline`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets the scroll padding of an element in the inline dimension.
+
+The scroll-padding properties define offsets for the _optimal viewing region_ of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars) or to put more breathing room between a targeted element and the edges of the scrollport.
 
 {{InteractiveExample("CSS Demo: scroll-padding-inline")}}
 
@@ -73,8 +76,6 @@ scroll-padding-inline: 2em;
 }
 ```
 
-The scroll-padding properties define offsets for the _optimal viewing region_ of the scrollport: the region used as the target region for placing things in view of the user. This allows the author to exclude regions of the scrollport that are obscured by other content (such as fixed-positioned toolbars or sidebars) or to put more breathing room between a targeted element and the edges of the scrollport.
-
 ## Constituent properties
 
 This property is a shorthand for the following CSS properties:
@@ -126,5 +127,5 @@ scroll-padding-inline: unset;
 
 ## See also
 
-- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap)
-- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)
+- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) module
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap) on web.dev (2018)

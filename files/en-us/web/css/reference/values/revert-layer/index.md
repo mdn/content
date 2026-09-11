@@ -1,5 +1,6 @@
 ---
-title: revert-layer
+title: "`revert-layer` CSS keyword"
+short-title: revert-layer
 slug: Web/CSS/Reference/Values/revert-layer
 page-type: css-keyword
 browser-compat: css.types.global_keywords.revert-layer
@@ -154,6 +155,7 @@ The style for all `<li>` elements rolls back to the defaults in the user-agent o
 - {{cssxref("initial")}}
 - {{cssxref("inherit")}}
 - {{cssxref("revert")}}
+- {{cssxref("revert-rule")}}
 - {{cssxref("unset")}}
 - {{cssxref("all")}}
 - [CSS cascading and inheritance](/en-US/docs/Web/CSS/Guides/Cascade) module

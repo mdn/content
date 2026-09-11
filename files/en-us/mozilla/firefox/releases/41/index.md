@@ -8,7 +8,7 @@ sidebar: firefox
 
 [To test the latest developer features of Firefox, install Firefox Developer Edition](https://www.firefox.com/en-US/channel/desktop/developer/) Firefox 41 was released on September 22, 2015. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer Tools
 
@@ -41,7 +41,7 @@ Highlights:
 
 ### HTML
 
-- {{HTMLElement("a")}} without an `href` attribute is no longer classified as interactive content. Clicking it inside {{HTMLElement("label")}} will activate labelled content ([Firefox bug 1167816](https://bugzil.la/1167816)).
+- {{HTMLElement("a")}} without an `href` attribute is no longer classified as interactive content. Clicking it inside {{HTMLElement("label")}} will activate labeled content ([Firefox bug 1167816](https://bugzil.la/1167816)).
 - SVG icons are now supported for site icons, that is favicons and shortcut icons ([Firefox bug 366324](https://bugzil.la/366324)).
 - The [`crossorigin`](/en-US/docs/Web/HTML/Reference/Elements/link#crossorigin) attribute is now supported for [\<link rel='preconnect'>](/en-US/docs/Web/HTML/Reference/Elements/link) ([Firefox bug 1174152](https://bugzil.la/1174152)).
 - The picture element does not react to resize/viewport changes ([Firefox bug 1135812](https://bugzil.la/1135812)).
@@ -81,7 +81,7 @@ Highlights:
 
 #### Canvas API
 
-- {{domxref("HTMLCanvasElement.captureStream()")}} and `CanvasCaptureMediaStream` have been added and allow to stream the display of a {{HTMLElement("canvas")}} in real-time ([Firefox bug 1032848](https://bugzil.la/1032848)).
+- {{domxref("HTMLCanvasElement.captureStream()")}} and `CanvasCaptureMediaStream` have been added and allow you to stream the display of a {{HTMLElement("canvas")}} in real-time ([Firefox bug 1032848](https://bugzil.la/1032848)).
 - {{domxref("MediaStream.id")}} now returns the unique id of a stream ([Firefox bug 1089798](https://bugzil.la/1089798)).
 - The initial value of {{domxref("CanvasRenderingContext2D.filter")}} is now correctly set to `none` ([Firefox bug 1163124](https://bugzil.la/1163124)).
 

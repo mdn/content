@@ -10,7 +10,7 @@ browser-compat: api.SVGTextContentElement.getSubStringLength
 
 The `getSubStringLength()` method of the {{domxref("SVGTextContentElement")}} interface represents the computed length of the formatted text advance distance for a substring of text within the element.
 
-Note that this method only accounts for the widths of the glyphs in the substring and any extra spacing inserted by the CSS [`letter-spacing`](/en-US/docs/Web/CSS/Reference/Properties/letter-spacing) and [`word-spacing`](/en-US/docs/Web/CSS/Reference/Properties/word-spacing) properties. Visual spacing adjustments made by the [`x`](/en-US/docs/Web/CSS/Reference/Properties/x) attribute are ignored.
+Note that this method only accounts for the widths of the glyphs in the substring and any extra spacing inserted by the CSS {{cssxref("letter-spacing")}} and {{cssxref("word-spacing")}} properties. Visual spacing adjustments made by the {{cssxref("x")}} attribute are ignored.
 
 ## Syntax
 

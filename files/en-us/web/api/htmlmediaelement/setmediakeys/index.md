@@ -10,7 +10,7 @@ browser-compat: api.HTMLMediaElement.setMediaKeys
 
 The **`setMediaKeys()`** method of the {{domxref("HTMLMediaElement")}} interface sets the {{domxref("MediaKeys")}} that will be used to decrypt media during playback.
 
-It returns a {{jsxref("Promise")}} that fulfils if the new keys are successfully set, or rejects if keys cannot be set.
+It returns a {{jsxref("Promise")}} that fulfills if the new keys are successfully set, or rejects if keys cannot be set.
 
 ## Syntax
 

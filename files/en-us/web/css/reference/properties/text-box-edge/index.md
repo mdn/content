@@ -1,5 +1,6 @@
 ---
-title: text-box-edge
+title: "`text-box-edge` CSS property"
+short-title: text-box-edge
 slug: Web/CSS/Reference/Properties/text-box-edge
 page-type: css-property
 browser-compat: css.properties.text-box-edge

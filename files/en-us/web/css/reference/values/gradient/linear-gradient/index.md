@@ -1,12 +1,13 @@
 ---
-title: linear-gradient()
+title: "`linear-gradient()` CSS function"
+short-title: linear-gradient()
 slug: Web/CSS/Reference/Values/gradient/linear-gradient
 page-type: css-function
 browser-compat: css.types.gradient.linear-gradient
 sidebar: cssref
 ---
 
-The **`linear-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) creates an image consisting of a progressive transition between two or more colors along a straight line. Its result is an object of the {{CSSxRef("&lt;gradient&gt;")}} data type, which is a special kind of {{CSSxRef("&lt;image&gt;")}}.
+The **`linear-gradient()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) creates an image consisting of a progressive transition between two or more colors along a straight line. Its result is an object of the {{cssxref("gradient")}} data type, which is a special kind of {{cssxref("image")}}.
 
 {{InteractiveExample("CSS Demo: linear-gradient()")}}
 
@@ -95,7 +96,7 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%)
 
     The values `to top`, `to bottom`, `to left`, and `to right` are equivalent to the angles `0deg`, `180deg`, `270deg`, and `90deg`, respectively. The other values are translated into an angle.
 
-- {{CSSxRef("&lt;angle&gt;")}}
+- {{cssxref("angle")}}
   - : The gradient line's angle of direction. A value of `0deg` is equivalent to `to top`; increasing values rotate clockwise from there.
 - `<linear-color-stop>`
   - : A color-stop's {{CSSxRef("&lt;color&gt;")}} value, followed by one or two optional stop positions, (each being either a {{CSSxRef("&lt;percentage&gt;")}} or a {{CSSxRef("&lt;length&gt;")}} along the gradient's axis).
@@ -111,7 +112,7 @@ As with any gradient, a linear gradient has [no intrinsic dimensions](/en-US/doc
 
 To create a linear gradient that repeats to fill its container, use the {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} function instead.
 
-Because `<gradient>`s belong to the `<image>` data type, they can only be used where [`<image>`](/en-US/docs/Web/CSS/Reference/Values/image)s can be used. For this reason, `linear-gradient()` won't work on {{CSSxRef("background-color")}} and other properties that use the {{CSSxRef("&lt;color&gt;")}} data type.
+Because `<gradient>`s belong to the `<image>` data type, they can only be used where {{cssxref("image")}}s can be used. For this reason, `linear-gradient()` won't work on {{CSSxRef("background-color")}} and other properties that use the {{CSSxRef("&lt;color&gt;")}} data type.
 
 ### Composition of a linear gradient
 
@@ -132,7 +133,7 @@ linear-gradient(red, orange, yellow, green, blue);
 linear-gradient(red 0%, orange 25%, yellow 50%, green 75%, blue 100%);
 ```
 
-By default, colors transition smoothly from the color at one color-stop to the color at the subsequent color-stop, with the midpoint between the colors being the halfway point between the color transition. You can move this midpoint to any position between two color-stops by adding an unlabelled % color hint between the two colors to indicate where the middle of the color transition should be. The following example is solid red from the start to the 10% mark and solid blue from 90% to the end. Between 10% and 90% the color transitions from red to blue, however, the midpoint of the transition is at the 30% mark rather than 50% as would have happened without the 30% color hint.
+By default, colors transition smoothly from the color at one color-stop to the color at the subsequent color-stop, with the midpoint between the colors being the halfway point between the color transition. You can move this midpoint to any position between two color-stops by adding an unlabeled % color hint between the two colors to indicate where the middle of the color transition should be. The following example is solid red from the start to the 10% mark and solid blue from 90% to the end. Between 10% and 90% the color transitions from red to blue, however, the midpoint of the transition is at the 30% mark rather than 50% as would have happened without the 30% color hint.
 
 ```css
 linear-gradient(red 10%, 30%, blue 90%);
@@ -286,7 +287,7 @@ Please see [using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_gradien
 
 - [Using CSS gradients](/en-US/docs/Web/CSS/Guides/Images/Using_gradients)
 - Other gradient functions: {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
-- [`<hue-interpolation-method>`](/en-US/docs/Web/CSS/Reference/Values/hue-interpolation-method)
-- [`<color-interpolation-method>`](/en-US/docs/Web/CSS/Reference/Values/color-interpolation-method)
-- {{CSSxRef("&lt;image&gt;")}}
+- {{cssxref("hue-interpolation-method")}}
+- {{cssxref("color-interpolation-method")}}
+- {{cssxref("image")}}
 - [CSS images module](/en-US/docs/Web/CSS/Guides/Images)

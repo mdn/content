@@ -5,7 +5,7 @@ page-type: guide
 sidebar: cssref
 ---
 
-The [CSS colors module](/en-US/docs/Web/CSS/Guides/Colors) defines **relative color syntax**, which allows a CSS {{cssxref("&lt;color&gt;")}} value to be defined relative to another color. This is a powerful feature that enables easy creation of complements to existing colors — such as lighter, darker, saturated, semi-transparent, or inverted variants — enabling more effective color palette creation.
+The [CSS colors module](/en-US/docs/Web/CSS/Guides/Colors) defines **relative color syntax**, which allows a CSS {{cssxref("&lt;color&gt;")}} value to be defined relative to another color. This is a powerful feature that enables the programmatic creation of complements to existing colors — such as lighter, darker, saturated, semi-transparent, or inverted variants — enabling more effective color palette creation.
 
 This article explains relative color syntax, shows what the different options are, and looks at some illustrative examples.
 
@@ -339,7 +339,7 @@ The output is as follows:
 To make channel value calculations work in relative colors, all origin color channel values resolve to appropriate {{cssxref("&lt;number&gt;")}} values. For example, in the `lch()` examples above, we are calculating new lightness values by adding or subtracting numbers from the origin color's `l` channel value. If we tried to do `calc(l + 20%)`, that would result in an invalid color — `l` is a `<number>` and cannot have a {{cssxref("&lt;percentage&gt;")}} added to it.
 
 - Channel values originally specified as a `<percentage>` resolve to a `<number>` appropriate for the output color function.
-- Channel values originally specified as a {{cssxref("&lt;hue&gt;")}} angle resolve to a number of degrees in a range of `0` to `360`, inclusive.
+- Channel values originally specified as a {{cssxref("hue")}} angle resolve to a number of degrees in a range of `0` to `360`, inclusive.
 
 Check the different [color function pages](/en-US/docs/Web/CSS/Guides/Colors#functions) for the specifics of what their origin channel values resolve to.
 
@@ -364,7 +364,7 @@ For example:
 
 This example allows you to choose a base color and a color palette type. The browser will then show an appropriate palette of colors based on the chosen base color. The color palette choices are as follows:
 
-- **Complementary**: Includes two colors that are at opposite sides of a color wheel, or to put it another way, _opposite hues_ (see the {{cssxref("&lt;hue&gt;")}} data type for more information on hues and color wheels). The two colors are defined as a base color, and the base color with hue channel +180 degrees.
+- **Complementary**: Includes two colors that are at opposite sides of a color wheel, or to put it another way, _opposite hues_ (see the {{cssxref("hue")}} data type for more information on hues and color wheels). The two colors are defined as a base color, and the base color with hue channel +180 degrees.
 - **Triadic**: Includes three colors equal distances apart around the color wheel. The three colors are defined as a base color, base color with hue channel -120 degrees, and base color with hue channel +120 degrees.
 - **Tetradic**: Includes four colors equal distances apart around the color wheel. The four colors are defined as a base color, and base color with hue channel +90, +180, and +270 degrees.
 - **Monochrome**: Includes multiple colors with the same hue but varying lightness values. In our example we've defined five colors in a monochrome palette — base color, and base color with lightness channel -20, -10, +10, and +20.
@@ -373,7 +373,7 @@ This example allows you to choose a base color and a color palette type. The bro
 
 The full HTML is included below for reference. The most interesting parts are as follows:
 
-- The `--base-color` custom property is stored as an inline [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) on the {{htmlelement("div")}} element with the ID of `container`. We've placed it there so it is easy to update the value using JavaScript. We've provided an initial value of `#ff0000` (`red`) to show a color palette based on that value when the example loads. Note that normally we'd probably set this on the {{htmlelement("html")}} element, but the MDN live sample was removing it when rendering.
+- The `--base-color` custom property is stored as an inline [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) on the {{htmlelement("div")}} element with the ID of `container`. We've placed it there so we can update the value using JavaScript. We've provided an initial value of `#ff0000` (`red`) to show a color palette based on that value when the example loads. Note that normally we'd probably set this on the {{htmlelement("html")}} element, but the MDN live sample was removing it when rendering.
 - The base color picker is created using an [`<input type="color">`](/en-US/docs/Web/HTML/Reference/Elements/input/color) control. When a new value is set in this control, the `--base-color` custom property is set to this value using JavaScript, which in turn generates a new color palette. All the displayed colors are relative colors based on `--base-color`.
 - The set of [`<input type="radio">`](/en-US/docs/Web/HTML/Reference/Elements/input/radio) controls enables choosing a color palette type to generate. When a new value is chosen here, JavaScript is used to set a new class on the `container` `<div>` to represent the chosen palette. In the CSS, descendant selectors are used to target the child `<div>`s (e.g., `.comp :nth-child(1)`) so they can have the correct colors applied to them and hide the unused `<div>` nodes.
 - The `container` `<div>` containing the child `<div>`s that display the colors of the generated palette. Note that an initial class of `comp` is set on it, so that the page will display a complementary color scheme when first loaded.

@@ -21,7 +21,7 @@ A `Promise` is in one of these states:
 - _rejected_: meaning that the operation failed.
 
 The _eventual state_ of a pending promise can either be _fulfilled_ with a value or _rejected_ with a reason (error).
-When either of these options occur, the associated handlers queued up by a promise's `then` method are called. If the promise has already been fulfilled or rejected when a corresponding handler is attached, the handler will be called, so there is no race condition between an asynchronous operation completing and its handlers being attached.
+When either of these options occurs, the associated handlers queued up by a promise's `then` method are called. If the promise has already been fulfilled or rejected when a corresponding handler is attached, the handler will be called, so there is no race condition between an asynchronous operation completing and its handlers being attached.
 
 A promise is said to be _settled_ if it is either fulfilled or rejected, but not pending.
 
@@ -138,6 +138,8 @@ The JavaScript ecosystem had made multiple Promise implementations long before i
 To interoperate with the existing Promise implementations, the language allows using thenables in place of promises. For example, [`Promise.resolve`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/resolve) will not only resolve promises, but also trace thenables.
 
 ```js
+// This is not a Promises/A+ compliant thenable! It calls onFulfilled
+// synchronously. For demonstration only.
 const thenable = {
   then(onFulfilled, onRejected) {
     onFulfilled({
@@ -152,9 +154,11 @@ const thenable = {
 Promise.resolve(thenable); // A promise fulfilled with 42
 ```
 
+The `then()` method is responsible for scheduling the execution of the provided `onFulfilled` and `onRejected` callbacks. Its semantics, including error handling and asynchronicity, are precisely defined in the [Promises/A+ specification](https://promisesaplus.com/), and we shall not repeat them here. It's very rare that you need to implement a thenable yourself; even if you are not using native promises, you would probably be using a Promise library such as [Bluebird](https://www.npmjs.com/package/bluebird).
+
 ### Promise concurrency
 
-The `Promise` class offers four static methods to facilitate async task [concurrency](https://en.wikipedia.org/wiki/Concurrent_computing):
+The `Promise` class offers four main static methods to facilitate async task [concurrency](https://en.wikipedia.org/wiki/Concurrent_computing):
 
 - {{jsxref("Promise.all()")}}
   - : Fulfills when **all** of the promises fulfill; rejects when **any** of the promises rejects.
@@ -166,6 +170,22 @@ The `Promise` class offers four static methods to facilitate async task [concurr
   - : Settles when **any** of the promises settles. In other words, fulfills when any of the promises fulfills; rejects when any of the promises rejects.
 
 All these methods take an [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol) of promises ([thenables](#thenables), to be exact) and return a new promise. They all support subclassing, which means they can be called on subclasses of `Promise`, and the result will be a promise of the subclass type. To do so, the subclass's constructor must implement the same signature as the [`Promise()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) constructor — accepting a single `executor` function that can be called with the `resolve` and `reject` callbacks as parameters. The subclass must also have a `resolve` static method that can be called like {{jsxref("Promise.resolve()")}} to resolve values to promises.
+
+There are two other convenience static methods: {{jsxref("Promise.allKeyed()")}} and {{jsxref("Promise.allSettledKeyed()")}}, that behave like `Promise.all()` and `Promise.allSettled()`, but take _objects_ of promises and return promises that fulfill with _objects_ of the same shape. By working with objects instead of arrays, you can associate results with semantically meaningful keys, instead of arbitrary array ordering which can be difficult to maintain.
+
+These methods attach handlers to each input promise using {{jsxref("Promise/then", "then()")}}. Even when the resulting promise has settled early (such as when one input in `Promise.race()` settles), the other handlers are not removed. Repeatedly passing the same pending promise to concurrency methods can accumulate handlers even when those handlers are never used:
+
+```js
+const pendingPromise = new Promise(() => {});
+
+for (let i = 0; i < 1000; i++) {
+  await Promise.race([Promise.resolve(0), pendingPromise]);
+}
+// All tasks have completed, but pendingPromise retains the
+// handlers attached by all 1000 races.
+```
+
+Promises do not provide a way to unsubscribe these handlers; they remain attached while the input promise is pending and reachable. Where possible, cancel the underlying operation by using an {{domxref("AbortSignal")}} when the pending promise is no longer useful.
 
 Note that JavaScript is [single-threaded](/en-US/docs/Glossary/Thread) by nature, so at a given instant, only one task will be executing, although control can shift between different promises, making execution of the promises appear concurrent. [Parallel execution](https://en.wikipedia.org/wiki/Parallel_computing) in JavaScript can only be achieved through [worker threads](/en-US/docs/Web/API/Web_Workers_API).
 
@@ -183,8 +203,12 @@ Note that JavaScript is [single-threaded](/en-US/docs/Glossary/Thread) by nature
 
 - {{jsxref("Promise.all()")}}
   - : Takes an iterable of promises as input and returns a single `Promise`. This returned promise fulfills when all of the input's promises fulfill (including when an empty iterable is passed), with an array of the fulfillment values. It rejects when any of the input's promises reject, with this first rejection reason.
+- {{jsxref("Promise.allKeyed()")}} {{experimental_inline}}
+  - : Like `Promise.all()`, except that it takes an object of promises and returns a promise that fulfills with an object of the same shape, allowing you to associate results with semantically meaningful keys.
 - {{jsxref("Promise.allSettled()")}}
   - : Takes an iterable of promises as input and returns a single `Promise`. This returned promise fulfills when all of the input's promises settle (including when an empty iterable is passed), with an array of objects that describe the outcome of each promise.
+- {{jsxref("Promise.allSettledKeyed()")}} {{experimental_inline}}
+  - : Like `Promise.allSettled()`, except that it takes an object of promises and returns a promise that fulfills with an object of the same shape, allowing you to associate results with semantically meaningful keys.
 - {{jsxref("Promise.any()")}}
   - : Takes an iterable of promises as input and returns a single `Promise`. This returned promise fulfills when any of the input's promises fulfill, with this first fulfillment value. It rejects when all of the input's promises reject (including when an empty iterable is passed), with an {{jsxref("AggregateError")}} containing an array of rejection reasons.
 - {{jsxref("Promise.race()")}}
@@ -247,7 +271,7 @@ The example function `tetheredGetNumber()` shows that a promise generator will u
 
 Note that the function `troubleWithGetNumber()` ends with a `throw`. That is forced because a promise chain goes through all the `.then()` promises, even after an error, and without the `throw`, the error would seem "fixed". This is a hassle, and for this reason, it is common to omit `onRejected` throughout the chain of `.then()` promises, and just have a single `onRejected` in the final `catch()`.
 
-This code can be run under NodeJS. Comprehension is enhanced by seeing the errors actually occur. To force more errors, change the `threshold` values.
+This code can be run under Node.js. Comprehension is enhanced by seeing the errors actually occur. To force more errors, change the `threshold` values.
 
 ```js
 // To experiment with error handling, "threshold" values cause errors randomly

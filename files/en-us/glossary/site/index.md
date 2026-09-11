@@ -5,7 +5,7 @@ page-type: glossary-definition
 sidebar: glossarysidebar
 ---
 
-Informally, a _site_ is a website, which is a collection of web pages, served from the same domain and maintained by a single organization, defined by {{Glossary("eTLD#etld1", "eTLD+1")}}.
+Informally, a _site_ is a website, which is a collection of web pages, served from the same domain and maintained by a single organization, defined by its {{Glossary("registrable domain")}}.
 
 Browsers sometimes need to distinguish precisely between different sites. For example, the browser must only send [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) cookies to the same site that set them.
 
@@ -45,4 +45,5 @@ These are the same site, or different sites if the scheme is considered:
 - [What is a URL](/en-US/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
 - Related glossary terms:
   - {{Glossary("Origin")}}
+  - {{Glossary("Registrable domain")}}
 - [Same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy)

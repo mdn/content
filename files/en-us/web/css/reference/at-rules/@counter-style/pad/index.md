@@ -1,5 +1,6 @@
 ---
-title: pad
+title: "`pad` CSS at-rule descriptor"
+short-title: pad
 slug: Web/CSS/Reference/At-rules/@counter-style/pad
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.counter-style.pad
@@ -90,6 +91,6 @@ ul {
 
 - {{cssxref("@counter-style")}} descriptors: {{cssxref("@counter-style/system","system")}}, {{cssxref("@counter-style/symbols", "symbols")}}, {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}, {{cssxref("@counter-style/negative", "negative")}}, {{cssxref("@counter-style/prefix", "prefix")}}, {{cssxref("@counter-style/suffix", "suffix")}}, {{cssxref("@counter-style/range", "range")}}, {{cssxref("@counter-style/speak-as", "speak-as")}}, {{cssxref("@counter-style/fallback", "fallback")}}
 - List style properties: {{Cssxref("list-style")}}, {{Cssxref("list-style-image")}}, {{Cssxref("list-style-position")}}
-- {{cssxref("symbols", "symbols()")}} function to create anonymous counter styles
+- {{cssxref("symbols()")}} function to create anonymous counter styles
 - [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module
 - [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module

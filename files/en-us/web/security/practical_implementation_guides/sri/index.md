@@ -58,4 +58,4 @@ r1y8TJcloKTvouxnYsi4PJAx+nHNr90ibsEn3zznzDzWBN9X3o3kbHLSgcIPtzAp
 
 - {{htmlelement("link")}}
 - {{htmlelement("script")}}
-- [SRI Hash Generator](https://www.srihash.org/) on `srihash.org`: Generates the required {{htmlelement("script")}} elements for you, and informs you if the CDN lacks CORS support.
+- [SRI Hash Generator](https://srihash.org/) on `srihash.org`: Generates the required {{htmlelement("script")}} elements for you, and informs you if the CDN lacks CORS support.

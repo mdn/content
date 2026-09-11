@@ -1,5 +1,6 @@
 ---
-title: scroll-timeline-name
+title: "`scroll-timeline-name` CSS property"
+short-title: scroll-timeline-name
 slug: Web/CSS/Reference/Properties/scroll-timeline-name
 page-type: css-property
 browser-compat: css.properties.scroll-timeline-name
@@ -32,7 +33,7 @@ Allowed values for `scroll-timeline-name` are:
   - : An arbitrary custom identifier defining a name for a scroll progress timeline, which can then be referenced in an {{cssxref("animation-timeline")}} property.
 
     > [!NOTE]
-    > [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident) values must start with `--`, which helps avoid name clashes with standard CSS keywords.
+    > {{cssxref("dashed-ident")}} values must start with `--`, which helps avoid name clashes with standard CSS keywords.
 
 ## Formal definition
 

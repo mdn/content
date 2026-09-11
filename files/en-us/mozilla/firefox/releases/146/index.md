@@ -1,8 +1,8 @@
 ---
-title: Firefox 146 release notes for developers (Stable)
-short-title: Firefox 146 (Stable)
+title: Firefox 146 release notes for developers
+short-title: Firefox 146
 slug: Mozilla/Firefox/Releases/146
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
@@ -58,9 +58,9 @@ No notable changes.
 
 - Updated the `emulation.setLocaleOverride` command to override the return value of `navigator.language` and `navigator.languages` alongside JS APIs. ([Firefox bug 1994396](https://bugzil.la/1994396)).
 - Updated the `emulation.setLocaleOverride` and `emulation.setTimezoneOverride` commands reset behavior to match recent specification changes. When calling this command to reset the override for a specific browsing context, overrides configured for a user context owning this browsing context will still apply. ([Firefox bug 1988725](https://bugzil.la/1988725)).
-- Added support for the `context` locator to the `browsingContext.locateNodes` command, which allows to retrieve the container of non-top-level browsing contexts, such as iframe elements. ([Firefox bug 1941270](https://bugzil.la/1941270)).
+- Added support for the `context` locator to the `browsingContext.locateNodes` command, which allows you to retrieve the container of non-top-level browsing contexts, such as iframe elements. ([Firefox bug 1941270](https://bugzil.la/1941270)).
 - Implemented the `network.setExtraHeaders` command, which can be used to specify request headers which will be automatically added to requests triggered in the provided browsing contexts or user contexts. ([Firefox bug 1979731](https://bugzil.la/1979731)).
-- Updated all our network data collection commands (`network.addDataCollector`, `network.getData` and `network.disownData`) to support the `request` data type, which allows to collect and retrieve request post data. ([Firefox bug 1988955](https://bugzil.la/1988955)).
+- Updated all our network data collection commands (`network.addDataCollector`, `network.getData` and `network.disownData`) to support the `request` data type, which allows you to collect and retrieve request post data. ([Firefox bug 1988955](https://bugzil.la/1988955)).
 - Improved our implementation for `network.getData` to also support requests using the `data:` scheme. ([Firefox bug 1992210](https://bugzil.la/1992210)).
 - Fixed a bug for `network.getData` which was not throwing the expected `no such network data` error for unsupported requests. ([Firefox bug 1992214](https://bugzil.la/1992214)).
 - Fixed a bug in our `network` events where different requests were reusing the same id, mostly impacting data URLs or cached requests. ([Firefox bug 1992348](https://bugzil.la/1992348)).
@@ -74,6 +74,7 @@ No notable changes.
 ## Changes for add-on developers
 
 - {{WebExtAPIRef("browsingData.removeLocalStorage")}} and {{WebExtAPIRef("browsingData.remove")}} (when `localStorage` is set in {{WebExtAPIRef("browsingData.DataTypeSet")}}) now delete objects from [`sessionStorage`](/en-US/docs/Web/API/Window/sessionStorage). ([Firefox bug 1886894](https://bugzil.la/1886894))
+- The {{WebExtAPIRef("proxy.onRequest")}} API adds support for MASQUE proxies (proxy tunnel over QUIC) in the {{WebExtAPIRef("proxy.ProxyInfo")}} return type. ([Firefox bug 1988988](https://bugzil.la/1988988) and [Firefox bug 1998894](https://bugzil.la/1998894))
 
 ## Experimental web features
 
@@ -83,18 +84,14 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **`<meta name="rating">`** (Nightly): `security.restrict_to_adults.always` and `security.restrict_to_adults.respect_platform`
 
-  The `<meta name="rating">` element allows websites to self-identify as restricted/adult content. Browsers that recognise this element can then take steps to restrict users from viewing the content. See [Restricting adult content with `<meta name="rating">`](/en-US/docs/Mozilla/Firefox/Experimental_features#restricting_adult_content_with_meta_namerating) for more details.
+  The `<meta name="rating">` element allows websites to self-identify as restricted/adult content. Browsers that recognize this element can then take steps to restrict users from viewing the content. See [Restricting adult content with `<meta name="rating">`](/en-US/docs/Mozilla/Firefox/Experimental_features#restricting_adult_content_with_meta_namerating) for more details.
   ([Firefox bug 1991135](https://bugzil.la/1991135)).
 
 - **Navigation API** (Nightly): `dom.navigation.webidl.enabled`
 
-  Nightly builds now support the Navigation API, which provides the ability to initiate, intercept, and manage browser navigation actions. It can also examine an application's history entries. This is a successor to previous web platform features such as the {{domxref("History API", "", "", "nocode")}} and {{domxref("window.location")}}, which solves their shortcomings and is specifically aimed at the needs of {{glossary("SPA", "single-page applications (SPAs)")}}.
+  Nightly builds now support the [Navigation API](/en-US/docs/Web/API/Navigation_API), which provides the ability to initiate, intercept, and manage browser navigation actions. It can also examine an application's history entries. This is a successor to previous web platform features such as the {{domxref("History API", "", "", "nocode")}} and {{domxref("window.location")}}, which solves their shortcomings and is specifically aimed at the needs of {{glossary("SPA", "single-page applications (SPAs)")}}.
   ([Firefox bug 1979288](https://bugzil.la/1979288)).
 
 - **Relative control points in CSS `shape()` curve commands**: `layout.css.basic-shape-shape.enabled`
 
   You can use [`<relative-control-point>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#relative-control-point) values when specifying a [`<curve-command>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#curve-command) or [`<smooth-command>`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/shape#smooth-command) in a CSS `shape()` function. These values let you specify control points that are positioned relative to the start or end point of the current command, or relative to the origin (top-left) of the container the shape is being drawn inside.
-
-- **Custom media queries**: `layout.css.custom-media.enabled`
-
-  The [`@custom-media`](/en-US/docs/Web/CSS/Reference/At-rules/@custom-media) CSS at-rule defines aliases for long or complex media queries. Instead of repeating the same hardcoded `<media-query-list>` in multiple `@media` at-rules, it can be defined once in a `@custom-media` at-rule and referenced throughout the stylesheet whenever needed. ([Firefox bug 1744292](https://bugzil.la/1744292)).

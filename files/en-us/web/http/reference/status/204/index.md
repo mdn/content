@@ -2,7 +2,7 @@
 title: 204 No Content
 slug: Web/HTTP/Reference/Status/204
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.204
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#status.204
 sidebar: http
 ---
 
@@ -43,6 +43,33 @@ After successfully deleting the image, the server responds with a `204` response
 ```http
 HTTP/1.1 204 No Content
 Date: Wed, 26 Jun 2024 12:00:00 GMT
+Server: Apache/2.4.1 (Unix)
+```
+
+### Receiving a response after updating with PUT
+
+In this example, the client sends a `PUT` request to update a user's profile information.
+The request includes an {{HTTPHeader("Authorization")}} header with a token to authenticate the request:
+
+```http
+PUT /users/123 HTTP/1.1
+Host: example.com
+Content-Type: application/json
+Authorization: Bearer 1234abcd
+
+{
+  "name": "Jane Doe",
+  "email": "jane@example.com"
+}
+```
+
+After successfully updating the user profile, the server responds with a `204` response.
+The {{HTTPHeader("ETag")}} header contains the entity tag for the updated resource:
+
+```http
+HTTP/1.1 204 No Content
+Date: Wed, 26 Jun 2024 12:00:00 GMT
+ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 Server: Apache/2.4.1 (Unix)
 ```
 

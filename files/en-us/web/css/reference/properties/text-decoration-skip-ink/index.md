@@ -1,5 +1,6 @@
 ---
-title: text-decoration-skip-ink
+title: "`text-decoration-skip-ink` CSS property"
+short-title: text-decoration-skip-ink
 slug: Web/CSS/Reference/Properties/text-decoration-skip-ink
 page-type: css-property
 browser-compat: css.properties.text-decoration-skip-ink
@@ -7,6 +8,8 @@ sidebar: cssref
 ---
 
 The **`text-decoration-skip-ink`** [CSS](/en-US/docs/Web/CSS) property specifies how overlines and underlines are drawn when they pass over glyph ascenders and descenders.
+
+`text-decoration-skip-ink` is not part of the {{cssxref("text-decoration")}} shorthand.
 
 {{InteractiveExample("CSS Demo: text-decoration-skip-ink")}}
 
@@ -35,8 +38,6 @@ p {
 }
 ```
 
-`text-decoration-skip-ink` is not part of the {{cssxref("text-decoration")}} shorthand.
-
 ## Syntax
 
 ```css
@@ -54,6 +55,8 @@ text-decoration-skip-ink: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `none`
   - : Underlines and overlines are drawn across the full length of the text content, including parts that cross over glyph descenders and ascenders.

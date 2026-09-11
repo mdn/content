@@ -1,5 +1,6 @@
 ---
-title: direction
+title: "`direction` CSS property"
+short-title: direction
 slug: Web/CSS/Reference/Properties/direction
 page-type: css-property
 browser-compat: css.properties.direction
@@ -67,6 +68,8 @@ direction: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `ltr`
   - : Text and other elements go from left to right. This is the default value.

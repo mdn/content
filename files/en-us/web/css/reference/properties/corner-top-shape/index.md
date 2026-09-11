@@ -1,5 +1,6 @@
 ---
-title: corner-top-shape
+title: "`corner-top-shape` CSS property"
+short-title: corner-top-shape
 slug: Web/CSS/Reference/Properties/corner-top-shape
 page-type: css-property
 status:
@@ -16,7 +17,7 @@ For a full description of corner shape behavior and multiple examples, see the {
 
 ## Constituent properties
 
-The `corner-top-shape` property is a shorthand for the following physical properties:
+This property is a shorthand for the following physical properties:
 
 - {{cssxref("corner-top-left-shape")}}
 - {{cssxref("corner-top-right-shape")}}

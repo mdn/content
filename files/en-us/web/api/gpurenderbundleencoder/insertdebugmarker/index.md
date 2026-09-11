@@ -29,7 +29,7 @@ insertDebugMarker(markerLabel)
 
 ### Return value
 
-None ({{jsxref("Undefined")}}).
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

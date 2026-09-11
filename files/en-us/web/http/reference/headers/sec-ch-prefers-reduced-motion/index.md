@@ -91,6 +91,6 @@ The client will include the header in subsequent requests in the current session
 - [Client hints](/en-US/docs/Web/HTTP/Guides/Client_hints)
 - [User-Agent Client Hints API](/en-US/docs/Web/API/User-Agent_Client_Hints_API)
 - {{HTTPHeader("Accept-CH")}}
-- [`prefers-reduced-motion` CSS Media Query](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion)
+- {{cssxref("@media/prefers-reduced-motion")}} CSS media query
 - [HTTP Caching: Vary](/en-US/docs/Web/HTTP/Guides/Caching#vary) and {{HTTPHeader("Vary")}} header
 - [Improving user privacy and developer experience with User-Agent Client Hints](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)

@@ -49,6 +49,8 @@ These pseudo-classes enable the selection of elements based on their display sta
   - : Matches an element that is currently in fullscreen mode.
 - {{CSSxRef(":picture-in-picture")}}
   - : Matches an element that is currently in picture-in-picture mode.
+- {{CSSXref(":xr-overlay")}}
+  - : Matches the DOM overlay element during an immersive AR or VR session.
 
 ## Input pseudo-classes
 
@@ -95,9 +97,9 @@ These pseudo-classes relate to form elements, and enable selecting elements base
 
 These pseudo-classes reflect the document language and enable the selection of elements based on language or script direction.
 
-- {{CSSxRef(":dir", ":dir()")}}
+- {{cssxref(":dir()")}}
   - : The directionality pseudo-class selects an element based on its directionality as determined by the document language.
-- {{CSSxRef(":lang", ":lang()")}}
+- {{cssxref(":lang()")}}
   - : Select an element based on its content language.
 
 ## Location pseudo-classes
@@ -158,9 +160,9 @@ These pseudo-classes relate to the location of an element within the document tr
   - : Represents an element that is the root of the document. In HTML this is usually the `<html>` element.
 - {{CSSxRef(":empty")}}
   - : Represents an element with no children other than white-space characters.
-- {{CSSxRef(":nth-child", ":nth-child()")}}
+- {{cssxref(":nth-child()")}}
   - : Uses `An+B` notation to select elements from a list of sibling elements.
-- {{CSSxRef(":nth-last-child", ":nth-last-child()")}}
+- {{cssxref(":nth-last-child()")}}
   - : Uses `An+B` notation to select elements from a list of sibling elements, counting backwards from the end of the list.
 - {{CSSxRef(":first-child")}}
   - : Matches an element that is the first of its siblings.
@@ -170,9 +172,9 @@ These pseudo-classes relate to the location of an element within the document tr
   - : Matches an element that has no siblings. For example, a list item with no other list items in that list.
 - {{CSSXRef(":heading_function", ":heading()")}}
   - : Uses `An+B` notation to select heading elements (`<h1>`-`<h6>`).
-- {{CSSxRef(":nth-of-type", ":nth-of-type()")}}
+- {{cssxref(":nth-of-type()")}}
   - : Uses `An+B` notation to select elements from a list of sibling elements that match a certain type from a list of sibling elements.
-- {{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}}
+- {{cssxref(":nth-last-of-type()")}}
   - : Uses `An+B` notation to select elements from a list of sibling elements that match a certain type from a list of sibling elements counting backwards from the end of the list.
 - {{CSSxRef(":first-of-type")}}
   - : Matches an element that is the first of its siblings, and also matches a certain type selector.
@@ -187,9 +189,9 @@ These pseudo-classes relate to the shadow DOM.
 
 - {{CSSxRef(":host")}}
   - : Matches the shadow tree's shadow host.
-- {{CSSxRef(":host_function", ":host()")}}
+- {{cssxref(":host()")}}
   - : Matches an element that matches {{CSSxRef(":host")}} and matches any of the selectors in the list provided.
-- {{CSSxRef(":host-context", ":host-context()")}}
+- {{cssxref(":host-context()")}}
   - : Selects elements outside of the shadow tree in the context of the shadow host.
 - {{CSSxRef(":has-slotted")}}
   - : Matches slot elements that have been assigned content.
@@ -211,24 +213,71 @@ These pseudo-classes require some interaction by the user in order for them to a
 - {{CSSxRef(":target-current")}}
   - : Matches the {{cssxref("::scroll-marker")}} pseudo-element of a {{cssxref("scroll-marker-group")}} that is currently scrolled to, in other words, the **active** scroll marker.
 
+### Top-layer ancestor matching boundary
+
+When setting styles using a `:hover`, `:active`, or `:focus-within` pseudo-class selector, the selector matches a nested set of elements up the DOM tree. If the hierarchy includes an element in the {{glossary("top layer")}} (for example, a [popover](/en-US/docs/Web/API/Popover_API) or [customizable `<select>`](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) picker), the matching stops at that top-layer element.
+
+For example, the following code features a customizable `<select>` element and a popover. We've set every element in the page to have a thick blue dashed {{cssxref("border")}} on hover.
+
+```html live-sample___matching-boundary
+<main>
+  <select>
+    <option>One</option>
+    <option>Two</option>
+    <option>Three</option>
+  </select>
+
+  <div>
+    <button popovertarget="mypopover">Toggle popover</button>
+    <section id="mypopover" popover>
+      <p>I am a popover</p>
+      <button>I am a popover button</button>
+    </section>
+  </div>
+</main>
+```
+
+```css hidden live-sample___matching-boundary
+* {
+  padding: 5px;
+}
+```
+
+```css live-sample___matching-boundary
+select,
+::picker(select) {
+  appearance: base-select;
+}
+
+:hover {
+  border: 5px dashed blue;
+}
+```
+
+{{EmbedLiveSample("matching-boundary", "100%", 200)}}
+
+Note that when you hover over the `<select>` element or the popover toggle button, all ancestors of those elements get the border. However, once the select picker or the popover is open, hovering over one of its descendants applies the border only up to the top-layer element itself (the select picker or the popover), that is, the matching stops at this element.
+
+This behavior stops the pseudo-class matching from spilling out of a top-layer component into the surrounding page, which can otherwise cause a user interface to look broken.
+
 ## Functional pseudo-classes
 
 These pseudo-classes accept a [selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list) or [forgiving selector list](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list#forgiving_selector_list) as a parameter.
 
-- {{CSSxRef(":is", ":is()")}}
+- {{cssxref(":is()")}}
   - : The matches-any pseudo-class matches any element that matches any of the selectors in the list provided. The list is forgiving.
-- {{CSSxRef(":not", ":not()")}}
+- {{cssxref(":not()")}}
   - : The negation, or matches-none, pseudo-class represents any element that is not represented by its argument.
-- {{CSSxRef(":where", ":where()")}}
+- {{cssxref(":where()")}}
   - : The specificity-adjustment pseudo-class matches any element that matches any of the selectors in the list provided without adding any specificity weight. The list is forgiving.
-- {{CSSxRef(":has", ":has()")}}
+- {{cssxref(":has()")}}
   - : The relational pseudo-class represents an element if any of the relative selectors match when anchored against the attached element.
 
 ## Custom state pseudo-classes
 
 These pseudo-classes apply to custom elements.
 
-- {{CSSxRef(":state", ":state()")}}
+- {{cssxref(":state()")}}
   - : Matches custom elements that have the specified custom state.
 
 ## Page pseudo-classes
@@ -250,7 +299,7 @@ These pseudo-classes relate to elements involved in a [view transition](/en-US/d
 
 - {{cssxref(":active-view-transition")}}
   - : Matches the root element of a document when a [view transition](/en-US/docs/Web/API/View_Transition_API#concepts_and_usage) is in progress (_active_) and stops matching once the transition has completed.
-- {{cssxref(":active-view-transition-type", ":active-view-transition-type()")}}
+- {{cssxref(":active-view-transition-type()")}}
   - : Matches the root element of a document when a specified [view transition](/en-US/docs/Web/API/View_Transition_API#concepts_and_usage) is in progress (_active_) and stops matching once the transition has completed.
 
 ## Syntax
@@ -271,7 +320,7 @@ A
 
 - {{CSSxRef(":active")}}
 - {{CSSxRef(":active-view-transition")}}
-- {{cssxref(":active-view-transition-type", ":active-view-transition-type()")}}
+- {{cssxref(":active-view-transition-type()")}}
 - {{CSSxRef(":any-link")}}
 - {{CSSxRef(":autofill")}}
 
@@ -290,7 +339,7 @@ D
 
 - {{CSSxRef(":default")}}
 - {{CSSxRef(":defined")}}
-- {{CSSxRef(":dir", ":dir()")}}
+- {{cssxref(":dir()")}}
 - {{CSSxRef(":disabled")}}
 
 E
@@ -312,24 +361,26 @@ F
 H
 
 - {{CSSxRef(":has-slotted")}}
-- {{CSSxRef(":has", ":has()")}}
+- {{cssxref(":has()")}}
 - {{CSSXRef(":heading")}}
 - {{CSSXRef(":heading_function", ":heading()")}}
 - {{CSSxRef(":host")}}
-- {{CSSxRef(":host_function", ":host()")}}
-- {{CSSxRef(":host-context", ":host-context()")}}
+- {{cssxref(":host()")}}
+- {{cssxref(":host-context()")}}
 - {{CSSxRef(":hover")}}
 
 I
 
 - {{CSSxRef(":in-range")}}
 - {{CSSxRef(":indeterminate")}}
+- {{CSSxRef(":interest-source")}}
+- {{CSSxRef(":interest-target")}}
 - {{CSSxRef(":invalid")}}
-- {{CSSxRef(":is", ":is()")}}
+- {{cssxref(":is()")}}
 
 L
 
-- {{CSSxRef(":lang", ":lang()")}}
+- {{cssxref(":lang()")}}
 - {{CSSxRef(":last-child")}}
 - {{CSSxRef(":last-of-type")}}
 - {{CSSxRef(":left")}}
@@ -343,11 +394,11 @@ M
 
 N
 
-- {{CSSxRef(":not", ":not()")}}
-- {{CSSxRef(":nth-child", ":nth-child()")}}
-- {{CSSxRef(":nth-last-child", ":nth-last-child()")}}
-- {{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}}
-- {{CSSxRef(":nth-of-type", ":nth-of-type()")}}
+- {{cssxref(":not()")}}
+- {{cssxref(":nth-child()")}}
+- {{cssxref(":nth-last-child()")}}
+- {{cssxref(":nth-last-of-type()")}}
+- {{cssxref(":nth-of-type()")}}
 
 O
 
@@ -379,12 +430,14 @@ S
 - {{CSSxRef(":scope")}}
 - {{CSSxRef(":seeking")}}
 - {{CSSxRef(":stalled")}}
-- {{CSSxRef(":state", ":state()")}}
+- {{cssxref(":state()")}}
 
 T
 
 - {{CSSxRef(":target")}}
+- {{CSSxRef(":target-after")}}
 - {{CSSxRef(":target-current")}}
+- {{CSSxRef(":target-before")}}
 
 U
 
@@ -399,7 +452,11 @@ V
 
 W
 
-- {{CSSxRef(":where", ":where()")}}
+- {{cssxref(":where()")}}
+
+X
+
+- {{CSSXref(":xr-overlay")}} {{Experimental_Inline}}
 
 ### Non-standard pseudo-classes
 

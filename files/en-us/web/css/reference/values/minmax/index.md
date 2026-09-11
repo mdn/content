@@ -1,5 +1,6 @@
 ---
-title: minmax()
+title: "`minmax()` CSS function"
+short-title: minmax()
 slug: Web/CSS/Reference/Values/minmax
 page-type: css-function
 browser-compat: css.properties.grid-template-columns.minmax

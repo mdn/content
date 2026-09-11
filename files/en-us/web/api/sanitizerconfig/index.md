@@ -2,14 +2,12 @@
 title: SanitizerConfig
 slug: Web/API/SanitizerConfig
 page-type: web-api-interface
-status:
-  - experimental
 browser-compat:
   - api.Sanitizer.get
   - api.Sanitizer.Sanitizer
 ---
 
-{{APIRef("HTML Sanitizer API")}}{{SeeCompatTable}}
+{{APIRef("HTML Sanitizer API")}}
 
 The **`SanitizerConfig`** dictionary of the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API) specifies what elements, attributes and comments are allowed or should be removed when inserting strings of HTML into an {{domxref("Element")}} or {{domxref("ShadowRoot")}}, or when parsing an HTML string into a {{domxref("Document")}}.
 
@@ -129,7 +127,7 @@ The empty object `{}` is a valid configuration.
 
 > [!NOTE]
 > The conditions above are from the perspective of a web developer.
-> The [validity check defined in the specification](https://wicg.github.io/sanitizer-api/#sanitizerconfig-valid) is slightly different because it is executed after canonicalization of the configuration, such as adding `removeElements` when both are missing, and adding default namespaces.
+> The [validity check defined in the specification](https://html.spec.whatwg.org/multipage/dynamic-markup-insertion.html#dom-sanitizerconfig-valid) is slightly different because it is executed after canonicalization of the configuration, such as adding `removeElements` when both are missing, and adding default namespaces.
 
 ### Allow and remove configurations
 

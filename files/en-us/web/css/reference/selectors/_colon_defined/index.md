@@ -1,5 +1,6 @@
 ---
-title: :defined
+title: "`:defined` CSS pseudo-class"
+short-title: :defined
 slug: Web/CSS/Reference/Selectors/:defined
 page-type: css-pseudo-class
 browser-compat: css.selectors.defined
@@ -73,7 +74,7 @@ code {
 }
 ```
 
-In the following CSS, we use the `custom-element:not(:defined)` selector to select the element and color it grey while it is not defined and the `custom-element:defined` selector to select the element and color it black after it is defined.
+In the following CSS, we use the `custom-element:not(:defined)` selector to select the element and color it gray while it is not defined and the `custom-element:defined` selector to select the element and color it black after it is defined.
 
 ```css
 custom-element:not(:defined) {
@@ -105,7 +106,7 @@ custom-element:defined::before {
 }
 ```
 
-We have also used the [`::before`](/en-US/docs/Web/CSS/Reference/Selectors/::before) pseudo-element to show a "Loading..." overlay message until the element is defined. After definition, it is removed by setting the {{cssxref("content")}} to an empty string.
+We have also used the {{cssxref("::before")}} pseudo-element to show a "Loading..." overlay message until the element is defined. After definition, it is removed by setting the {{cssxref("content")}} to an empty string.
 
 The following JavaScript has been used to define the custom element. To allow you to see the state of the custom element before and after definition we run the {{domxref("CustomElementRegistry.define", "define()")}} method when the button is clicked.
 

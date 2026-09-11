@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.MouseEvent.MouseEvent
 ---
 
-{{APIRef("UI Events")}}
+{{APIRef("Pointer Events")}}
 
 The **`MouseEvent()`** constructor creates a new {{domxref("MouseEvent")}} object.
 

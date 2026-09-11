@@ -1,5 +1,6 @@
 ---
-title: counter-increment
+title: "`counter-increment` CSS property"
+short-title: counter-increment
 slug: Web/CSS/Reference/Properties/counter-increment
 page-type: css-property
 browser-compat: css.properties.counter-increment
@@ -15,35 +16,51 @@ The counter's value can be reset to any integer value with the {{cssxref("counte
 {{InteractiveExample("CSS Demo: counter-increment")}}
 
 ```css interactive-example-choice
-counter-increment: example-counter;
+counter-increment: chapter-count;
 ```
 
 ```css interactive-example-choice
-counter-increment: example-counter 0;
+counter-increment: chapter-count 0;
 ```
 
 ```css interactive-example-choice
-counter-increment: example-counter 5;
+counter-increment: chapter-count 5;
 ```
 
 ```css interactive-example-choice
-counter-increment: example-counter -5;
+counter-increment: chapter-count -5;
 ```
 
 ```html interactive-example
 <section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">Counter value:</div>
+  <div class="transition-all" id="chapters">
+    <h1>Alice's Adventures in Wonderland</h1>
+    <h2>Down the Rabbit-Hole</h2>
+    <h2 id="example-element">The Pool of Tears</h2>
+    <h2>A Caucus-Race and a Long Tale</h2>
+    <h2>The Rabbit Sends in a Little Bill</h2>
+  </div>
 </section>
 ```
 
 ```css interactive-example
 #default-example {
   text-align: left;
-  counter-reset: example-counter;
+  counter-reset: chapter-count;
 }
 
-#example-element::after {
-  content: counter(example-counter);
+#example-element {
+  background-color: lightblue;
+  color: black;
+}
+
+h2 {
+  counter-increment: chapter-count;
+  font-size: 1em;
+}
+
+h2::before {
+  content: "Chapter " counter(chapter-count) ": ";
 }
 ```
 
@@ -75,7 +92,7 @@ counter-increment: unset;
 
 ### Values
 
-The `counter-increment` property takes as its value either a list of space-separated counter names specified as `<custom-ident>` with an optional `<integer>` value or the keyword `none`. You may specify as many counters to increment as you want, with each name or name-number pair separated by a space.
+This property is specified as a space-separated list of `<custom-ident>` values, each optionally followed by an `<integer>`, or the keyword `none`:
 
 - {{cssxref("&lt;custom-ident&gt;")}}
   - : Specifies the name of the counter to increase or decrease.
@@ -163,7 +180,7 @@ Had we not used `counter-reset` (or {{cssxref("counter-set")}}) to create the co
 
 - Counter properties: {{cssxref("counter-set")}}, {{cssxref("counter-reset")}}
 - Counter at-rule: {{cssxref("@counter-style")}}
-- Counter functions: {{cssxref("counter", "counter()")}}, {{cssxref("counters", "counters()")}}
+- Counter functions: {{cssxref("counter()")}}, {{cssxref("counters()")}}
 - [Using CSS counters](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters) guide
 - [CSS lists and counters](/en-US/docs/Web/CSS/Guides/Lists) module
 - [CSS counter styles](/en-US/docs/Web/CSS/Guides/Counter_styles) module

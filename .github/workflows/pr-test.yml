@@ -27,7 +27,7 @@ jobs:
       BUILD_OUT_ROOT: build
 
     steps:
-      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
 
@@ -78,7 +78,7 @@ jobs:
 
       - name: Setup Node.js environment
         if: steps.check.outputs.HAS_FILES == 'true'
-        uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f # v6.1.0
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version-file: ".nvmrc"
           cache: npm
@@ -134,18 +134,15 @@ jobs:
             ARGS+=("-f" "$PWD/$file")
           done
 
-          npx rari build --no-basic --json-issues --data-issues "${ARGS[@]}"
+          npx @mdn/rari build --no-basic --json-issues --data-issues "${ARGS[@]}"
 
-          # Workaround, as fred-ssr doesn't copy assets.
+          # Workaround, as `fred ssr` doesn't copy assets.
           cp -vR node_modules/@mdn/fred/out/. "$BUILD_OUT_ROOT"
 
-          npx fred-ssr
+          npx @mdn/fred ssr
 
           echo "Disk usage size of the build"
           du -sh $BUILD_OUT_ROOT
-
-          # Save the PR number into the build
-          echo ${{ github.event.number }} > ${BUILD_OUT_ROOT}/NR
 
           # Download the raw diff blob and store that inside the build
           # directory.
@@ -157,7 +154,7 @@ jobs:
         if: steps.check.outputs.HAS_MD_FILES == 'true'
         run: du -sh $BUILD_OUT_ROOT
 
-      - uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         if: steps.check.outputs.HAS_MD_FILES == 'true'
         with:
           name: build

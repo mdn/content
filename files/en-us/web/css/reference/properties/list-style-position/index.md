@@ -1,5 +1,6 @@
 ---
-title: list-style-position
+title: "`list-style-position` CSS property"
+short-title: list-style-position
 slug: Web/CSS/Reference/Properties/list-style-position
 page-type: css-property
 browser-compat: css.properties.list-style-position
@@ -83,9 +84,9 @@ list-style-position: revert-layer;
 list-style-position: unset;
 ```
 
-The `list-style-position` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `inside`
   - : The {{cssxref("::marker")}} is the first element among the list item's contents.

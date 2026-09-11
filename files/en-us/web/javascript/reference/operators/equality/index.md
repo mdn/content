@@ -58,7 +58,7 @@ Loose equality is _symmetric_: `A == B` always has identical semantics to `B == 
 
 The most notable difference between this operator and the [strict equality](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) (`===`) operator is that the strict equality operator does not attempt type conversion. Instead, the strict equality operator always considers operands of different types to be different. The strict equality operator essentially carries out only step 1, and then returns `false` for all other cases.
 
-There's a "willful violation" of the above algorithm: if one of the operands is [`document.all`](/en-US/docs/Web/API/Document/all), it is treated as if it's `undefined`. This means that `document.all == null` is `true`, but `document.all === undefined && document.all === null` is `false`.
+There's a "willful violation" of the above algorithm: if one of the operands is [`document.all`](/en-US/docs/Web/API/Document/all), it is treated as if it's `undefined`. This means that `document.all == null` is `true`, but `document.all === undefined || document.all === null` is `false`.
 
 ## Examples
 

@@ -31,15 +31,15 @@ setInterval(code, delay)
 
 setInterval(func)
 setInterval(func, delay)
-setInterval(func, delay, arg1)
-setInterval(func, delay, arg1, arg2)
-setInterval(func, delay, arg1, arg2, /* …, */ argN)
+setInterval(func, delay, param1)
+setInterval(func, delay, param1, param2)
+setInterval(func, delay, param1, param3, /* …, */ paramN)
 ```
 
 ### Parameters
 
 - `func`
-  - : A {{jsxref("function")}} to be executed every `delay` milliseconds.
+  - : A {{jsxref("Function")}} to be executed every `delay` milliseconds.
     The first execution happens after `delay` milliseconds.
 - `code`
   - : A {{domxref("TrustedScript")}} or a string of arbitrary code that is compiled and executed every `delay` milliseconds.
@@ -48,7 +48,7 @@ setInterval(func, delay, arg1, arg2, /* …, */ argN)
   - : The delay time between executions of the specified function or code, in milliseconds.
     Defaults to 0 if not specified.
     See [Delay restrictions](/en-US/docs/Web/API/Window/setInterval#delay_restrictions) in `Window.setInterval` for details on the permitted range of `delay` values.
-- `arg1`, …, `argN` {{optional_inline}}
+- `param1`, …, `paramN` {{optional_inline}}
   - : Additional arguments which are passed through to the function specified by _func_ once the timer expires.
 
 ### Return value

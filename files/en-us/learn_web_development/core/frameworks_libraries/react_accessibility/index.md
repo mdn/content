@@ -51,9 +51,9 @@ To improve the experience for keyboard and assistive technology users, we should
 
 If you click the "All", "Active", or "Completed" filter buttons with your mouse, you _won't_ see a visible focus indicator, but you will do if you move between them with the <kbd>Tab</kbd> key on your keyboard. Don't worry — your code isn't broken!
 
-Our CSS file uses the [`:focus-visible`](/en-US/docs/Web/CSS/Reference/Selectors/:focus-visible) pseudo-class to provide custom styling for the focus indicator, and the browser uses a set of internal rules to determine when to show it to the user. Generally, the browser _will_ show a focus indicator in response to keyboard input, and _might_ show it in response to mouse input. `<button>` elements _don't_ show a focus indicator in response to mouse input, while `<input>` elements _do_.
+Our CSS file uses the {{cssxref(":focus-visible")}} pseudo-class to provide custom styling for the focus indicator, and the browser uses a set of internal rules to determine when to show it to the user. Generally, the browser _will_ show a focus indicator in response to keyboard input, and _might_ show it in response to mouse input. `<button>` elements _don't_ show a focus indicator in response to mouse input, while `<input>` elements _do_.
 
-The behavior of `:focus-visible` is more selective than the older [`:focus`](/en-US/docs/Web/CSS/Reference/Selectors/:focus) pseudo-class, with which you might be more familiar. `:focus` shows a focus indicator in many more situations, and you can use it instead of or in combination with `:focus-visible` if you prefer.
+The behavior of `:focus-visible` is more selective than the older {{cssxref(":focus")}} pseudo-class, with which you might be more familiar. `:focus` shows a focus indicator in many more situations, and you can use it instead of or in combination with `:focus-visible` if you prefer.
 
 ## Focusing between templates
 
@@ -173,7 +173,7 @@ Try it now: use the <kbd>Tab</kbd> key to navigate to one of the "Edit" buttons,
 
 ### Moving focus back to the edit button
 
-At first glance, getting React to move focus back to our "Edit" button when the edit is saved or cancelled appears deceptively easy. Surely we could add a condition to our `useEffect` to focus on the edit button if `isEditing` is `false`? Let's try it now — update your `useEffect()` call like so:
+At first glance, getting React to move focus back to our "Edit" button when the edit is saved or canceled appears deceptively easy. Surely we could add a condition to our `useEffect` to focus on the edit button if `isEditing` is `false`? Let's try it now — update your `useEffect()` call like so:
 
 ```jsx
 useEffect(() => {

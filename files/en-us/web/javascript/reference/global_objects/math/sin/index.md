@@ -74,3 +74,4 @@ Math.sin(Infinity); // NaN
 - {{jsxref("Math.atan2()")}}
 - {{jsxref("Math.cos()")}}
 - {{jsxref("Math.tan()")}}
+- CSS {{cssxref("sin()")}} function

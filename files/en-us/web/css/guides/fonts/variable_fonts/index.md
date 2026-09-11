@@ -167,7 +167,7 @@ font-stretch: 115%;
 font-variation-settings: "wdth" 115;
 ```
 
-Click "Play" in the code blocks below to edit the example in the MDN Playground. Edit the CSS code to play with font-width values.
+Click "Play" in the code blocks below to edit the example in the MDN Playground. Edit the CSS code to play with font width values.
 
 ```html hidden live-sample___variable-fonts-width-example
 <div>
@@ -739,7 +739,7 @@ The following example pages show two different ways to structure your CSS. The f
     before coffin warehouses, and bringing up the rear of every funeral I meet;
     and especially whenever my hypos get such an upper hand of me, that it
     requires a strong moral principle to prevent me from deliberately stepping
-    into the street, and methodically knocking people’s hats off then, I account
+    into the street, and methodically knocking people's hats off then, I account
     it high time to get to sea as soon as I can.
   </p>
 </div>
@@ -757,7 +757,7 @@ The following example pages show two different ways to structure your CSS. The f
     before coffin warehouses, and bringing up the rear of every funeral I meet;
     and especially whenever my hypos get such an upper hand of me, that it
     requires a strong moral principle to prevent me from deliberately stepping
-    into the street, and methodically knocking people’s hats off then, I account
+    into the street, and methodically knocking people's hats off then, I account
     it high time to get to sea as soon as I can.
   </p>
 </div>

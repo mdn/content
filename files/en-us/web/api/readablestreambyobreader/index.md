@@ -107,8 +107,8 @@ reader.closed
 ```
 
 To cancel the stream call {{domxref("ReadableStreamBYOBReader.cancel()")}}, optionally specifying a _reason_.
-This returns a promise that will resolve when the stream has been cancelled.
-When the stream is cancelled the controller will in turn call `cancel()` on the underlying source, passing in the optional reason.
+This returns a promise that will resolve when the stream has been canceled.
+When the stream is canceled the controller will in turn call `cancel()` on the underlying source, passing in the optional reason.
 
 The example code in [Using readable byte streams](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams#examples) calls the cancel method when a button is pressed, as shown:
 

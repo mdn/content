@@ -1,5 +1,6 @@
 ---
-title: <dimension>
+title: "`<dimension>` CSS type"
+short-title: <dimension>
 slug: Web/CSS/Reference/Values/dimension
 page-type: css-type
 browser-compat: css.types.dimension
@@ -8,7 +9,7 @@ sidebar: cssref
 
 The **`<dimension>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types) represents a {{CSSxRef("&lt;number&gt;")}} with a unit attached to it, for example `10px`.
 
-CSS uses dimensions to specify distances ({{CSSxRef("&lt;length&gt;")}}), durations ({{CSSxRef("&lt;time&gt;")}}), frequencies ({{CSSxRef("&lt;frequency&gt;")}}), resolutions ({{CSSxRef("&lt;resolution&gt;")}}), and other quantities.
+CSS uses dimensions to specify distances ({{CSSxRef("&lt;length&gt;")}}), durations ({{CSSxRef("&lt;time&gt;")}}), frequencies ({{CSSxRef("&lt;frequency&gt;")}}), resolutions ({{cssxref("resolution")}}), and other quantities.
 
 ## Syntax
 
@@ -48,4 +49,4 @@ The syntax of `<dimension>` is a {{CSSxRef("&lt;number&gt;")}} immediately follo
 
 - [CSS data types](/en-US/docs/Web/CSS/Reference/Values/Data_types)
 - [Learn to style HTML using CSS](/en-US/docs/Learn_web_development/Core/Styling_basics)
-- CSS distances ({{CSSxRef("&lt;length&gt;")}}), durations ({{CSSxRef("&lt;time&gt;")}}), frequencies ({{CSSxRef("&lt;frequency&gt;")}}), and resolutions ({{CSSxRef("&lt;resolution&gt;")}})
+- CSS distances ({{CSSxRef("&lt;length&gt;")}}), durations ({{CSSxRef("&lt;time&gt;")}}), frequencies ({{CSSxRef("&lt;frequency&gt;")}}), and resolutions ({{cssxref("resolution")}})

@@ -24,7 +24,7 @@ In total, developers can use a combination of [nearly two dozen CSS math functio
 
 ## `calc()`: Basic math operations
 
-In the first two of our three examples above, we want to set the style of an element according to the result of an addition or subtraction operation. This is exactly one of the use cases for {{CSSxRef("calc", "calc()")}}.
+In the first two of our three examples above, we want to set the style of an element according to the result of an addition or subtraction operation. This is exactly one of the use cases for {{cssxref("calc()")}}.
 
 The **`calc()`** function lets you specify CSS property values using **addition, subtraction, multiplication, and division**. It is often used to combine two CSS values that have different units, such as `%` and `px`.
 
@@ -93,7 +93,7 @@ div > code {
 
 ## `min()`: Finding the minimum value in a set
 
-There are cases where we don't want the value of a CSS property to exceed a certain number. Say, for example, we want the width of our content container to be the smaller of "the full width of our screen" and "500 pixels." In those cases, we can use the CSS math function {{CSSxRef("min", "min()")}}.
+There are cases where we don't want the value of a CSS property to exceed a certain number. Say, for example, we want the width of our content container to be the smaller of "the full width of our screen" and "500 pixels." In those cases, we can use the CSS math function {{cssxref("min()")}}.
 
 The `min()` math function takes a set of comma-separated values as arguments and returns the smallest of those values, e.g.:
 
@@ -165,7 +165,7 @@ div > code {
 
 ## `max()`: Finding the maximum value in a set
 
-Similar to `min()`, sometimes we don't want the value of a CSS property to go below a certain number. For example, we might want the width of our content container to be the _larger_ of "the full width of our screen" and "500 pixels." In those cases, we can use the CSS math function {{CSSxRef("max", "max()")}}.
+Similar to `min()`, sometimes we don't want the value of a CSS property to go below a certain number. For example, we might want the width of our content container to be the _larger_ of "the full width of our screen" and "500 pixels." In those cases, we can use the CSS math function {{cssxref("max()")}}.
 
 The `max()` math function takes a set of comma-separated values as arguments and returns the largest of those values, e.g.:
 
@@ -240,7 +240,7 @@ div > code {
 
 ## `clamp()`: Constraining a value between two values
 
-We can combine the functions of `min()` and `max()` by using {{CSSxRef("clamp", "clamp()")}}. The `clamp()` math function takes a minimum value, the value to be clamped, and the maximum value as arguments, e.g.:
+We can combine the functions of `min()` and `max()` by using {{cssxref("clamp()")}}. The `clamp()` math function takes a minimum value, the value to be clamped, and the maximum value as arguments, e.g.:
 
 ```css
 /* clamped value: 50%, minimum: 100px, maximum: 300px */
@@ -314,29 +314,29 @@ div > code {
 
 ## Advanced CSS Math Functions
 
-When laying out and styling DOM elements, the four basic math functions {{CSSxRef("calc", "calc()")}}, {{CSSxRef("min", "min()")}}, {{CSSxRef("max", "max()")}}, and {{CSSxRef("clamp", "clamp()")}} are often sufficient. However, for advanced uses like mathematics learning materials, 3D visualizations, or CSS animations, you may consider using:
+When laying out and styling DOM elements, the four basic math functions {{cssxref("calc()")}}, {{cssxref("min()")}}, {{cssxref("max()")}}, and {{cssxref("clamp()")}} are often sufficient. However, for advanced uses like mathematics learning materials, 3D visualizations, or CSS animations, you may consider using:
 
 - [Stepped value functions](/en-US/docs/Web/CSS/Reference/Values/Functions#stepped_value_functions)
-  - {{CSSxRef("round", "round()")}}: calculates a **value given a rounding strategy**
-  - {{CSSxRef("mod", "mod()")}}: calculates the **remainder** of a division operation with the **same sign as the divisor**
-  - {{CSSxRef("rem", "rem()")}}: calculates the **remainder** of a division operation with the **same sign as the dividend**
+  - {{cssxref("round()")}}: calculates a **value given a rounding strategy**
+  - {{cssxref("mod()")}}: calculates the **remainder** of a division operation with the **same sign as the divisor**
+  - {{cssxref("rem()")}}: calculates the **remainder** of a division operation with the **same sign as the dividend**
 - [Trigonometric functions](/en-US/docs/Web/CSS/Reference/Values/Functions#trigonometric_functions)
-  - {{CSSxRef("sin", "sin()")}}: calculates the **trigonometric sine** of a number
-  - {{CSSxRef("cos", "cos()")}}: calculates the **trigonometric cosine** of a number
-  - {{CSSxRef("tan", "tan()")}}: calculates the **trigonometric tangent** of a number
-  - {{CSSxRef("asin", "asin()")}}: calculates the **trigonometric inverse** sine of a number
-  - {{CSSxRef("acos", "acos()")}}: calculates the **trigonometric inverse** cosine of a number
-  - {{CSSxRef("atan", "atan()")}}: calculates the **trigonometric inverse** tangent of a number
-  - {{CSSxRef("atan2", "atan2()")}}: calculates the **trigonometric inverse** tangent given two numbers
+  - {{cssxref("sin()")}}: calculates the **trigonometric sine** of a number
+  - {{cssxref("cos()")}}: calculates the **trigonometric cosine** of a number
+  - {{cssxref("tan()")}}: calculates the **trigonometric tangent** of a number
+  - {{cssxref("asin()")}}: calculates the **trigonometric inverse** sine of a number
+  - {{cssxref("acos()")}}: calculates the **trigonometric inverse** cosine of a number
+  - {{cssxref("atan()")}}: calculates the **trigonometric inverse** tangent of a number
+  - {{cssxref("atan2()")}}: calculates the **trigonometric inverse** tangent given two numbers
 - [Exponential functions](/en-US/docs/Web/CSS/Reference/Values/Functions#exponential_functions)
-  - {{CSSxRef("pow", "pow()")}}: calculates a number **raised to the power** of another number
-  - {{CSSxRef("sqrt", "sqrt()")}}: calculates the **square root** of a number
-  - {{CSSxRef("hypot", "hypot()")}}: calculates the **square root of the sum of the squares** of the given numbers
-  - {{CSSxRef("log", "log()")}}: calculates the **logarithm** of a number (with `e` as the default base)
-  - {{CSSxRef("exp", "exp()")}}: calculates **`e` raised to the power** of another number
+  - {{cssxref("pow()")}}: calculates a number **raised to the power** of another number
+  - {{cssxref("sqrt()")}}: calculates the **square root** of a number
+  - {{cssxref("hypot()")}}: calculates the **square root of the sum of the squares** of the given numbers
+  - {{cssxref("log()")}}: calculates the **logarithm** of a number (with `e` as the default base)
+  - {{cssxref("exp()")}}: calculates **`e` raised to the power** of another number
 - [Sign functions](/en-US/docs/Web/CSS/Reference/Values/Functions#sign-related_functions)
-  - {{CSSxRef("abs", "abs()")}}: calculates the **absolute value** of a number
-  - {{CSSxRef("sign", "sign()")}}: calculates the **sign (positive, negative, or zero)** of a number
+  - {{cssxref("abs()")}}: calculates the **absolute value** of a number
+  - {{cssxref("sign()")}}: calculates the **sign (positive, negative, or zero)** of a number
 
 ## Final thoughts
 

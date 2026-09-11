@@ -31,13 +31,6 @@ An {{domxref("RTCDataChannelEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("RTCDataChannelEvent")}}
 
-## Event properties
-
-_Also inherits properties from {{DOMxRef("Event")}}._
-
-- {{DOMxRef("RTCDataChannelEvent.channel", "channel")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("RTCDataChannel")}} associated with the event.
-
 ## Examples
 
 This example sets up a function that handles `datachannel` events by gathering the information needed to communicate with the newly added {{domxref("RTCDataChannel")}} and by adding event handlers for the events that occur on that channel.

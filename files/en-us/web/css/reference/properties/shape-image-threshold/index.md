@@ -1,5 +1,6 @@
 ---
-title: shape-image-threshold
+title: "`shape-image-threshold` CSS property"
+short-title: shape-image-threshold
 slug: Web/CSS/Reference/Properties/shape-image-threshold
 page-type: css-property
 browser-compat: css.properties.shape-image-threshold
@@ -7,6 +8,8 @@ sidebar: cssref
 ---
 
 The **`shape-image-threshold`** [CSS](/en-US/docs/Web/CSS) property sets the alpha channel threshold used to extract the shape using an image as the value for {{cssxref("shape-outside")}}.
+
+Any pixels whose alpha component's value is greater than the threshold are considered to be part of the shape for the purposes of determining its boundaries. For example, a value of `0.5` means that the shape will enclose all the pixels that are more than 50% opaque.
 
 {{InteractiveExample("CSS Demo: shape-image-threshold")}}
 
@@ -45,11 +48,11 @@ shape-image-threshold: 0.6;
   <div class="example-container">
     <div class="transition-all" id="example-element"></div>
     We had agreed, my companion and I, that I should call for him at his house,
-    after dinner, not later than eleven o’clock. This athletic young Frenchman
-    belongs to a small set of Parisian sportsmen, who have taken up “ballooning”
+    after dinner, not later than eleven o'clock. This athletic young Frenchman
+    belongs to a small set of Parisian sportsmen, who have taken up "ballooning"
     as a pastime. After having exhausted all the sensations that are to be found
-    in ordinary sports, even those of “automobiling” at a breakneck speed, the
-    members of the “Aéro Club” now seek in the air, where they indulge in all
+    in ordinary sports, even those of "automobiling" at a breakneck speed, the
+    members of the "Aéro Club" now seek in the air, where they indulge in all
     kinds of daring feats, the nerve-racking excitement that they have ceased to
     find on earth.
   </div>
@@ -75,8 +78,6 @@ shape-image-threshold: 0.6;
   );
 }
 ```
-
-Any pixels whose alpha component's value is greater than the threshold are considered to be part of the shape for the purposes of determining its boundaries. For example, a value of `0.5` means that the shape will enclose all the pixels that are more than 50% opaque.
 
 ## Syntax
 
@@ -163,6 +164,6 @@ The 20% opacity threshold for treating gradient pixels as part of the shape is t
 
 - [CSS Shapes](/en-US/docs/Web/CSS/Guides/Shapes)
 - [Overview of CSS Shapes](/en-US/docs/Web/CSS/Guides/Shapes/Overview)
-- {{cssxref("&lt;basic-shape&gt;")}}
+- {{cssxref("basic-shape")}}
 - {{cssxref("shape-outside")}}
 - {{cssxref("shape-margin")}}

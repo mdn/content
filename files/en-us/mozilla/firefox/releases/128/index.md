@@ -17,7 +17,7 @@ This article provides information about the changes in Firefox 128 that affect d
 ### CSS
 
 - [Relative color syntax](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors) is now enabled by default. Relative color syntax allows you to create a color value relative to an origin color, and can allow you to change a color in a different [color space](/en-US/docs/Glossary/Color_space) using [color functions](/en-US/docs/Web/CSS/Guides/Colors#functions) ([Firefox bug 1900251](https://bugzil.la/1900251)).
-- The [`content`](/en-US/docs/Web/CSS/Reference/Properties/content) property now supports [alternative text](/en-US/docs/Web/CSS/Reference/Properties/content#alternative_text_string_counter) for content that includes an image. The alternative text is then exposed to the browsers accessibility tree. (See [Firefox bug 1281158](https://bugzil.la/1281158) and [Firefox bug 1896047](https://bugzil.la/1896047)).
+- The [`content`](/en-US/docs/Web/CSS/Reference/Properties/content) property now supports [alternative text](/en-US/docs/Web/CSS/Reference/Properties/content#alternative_text_string_counter_attr) for content that includes an image. The alternative text is then exposed to the browsers accessibility tree. (See [Firefox bug 1281158](https://bugzil.la/1281158) and [Firefox bug 1896047](https://bugzil.la/1896047)).
 - The [`syntax`](/en-US/docs/Web/CSS/Reference/At-rules/@property/syntax) descriptor of the {{cssxref("@property")}} at-rule now supports the `<string>` syntax component name. (See [Firefox bug 1846635](https://bugzil.la/1846635)).
 
 #### Removals
@@ -67,9 +67,9 @@ This article provides information about the changes in Firefox 128 that affect d
 
 #### WebDriver BiDi
 
-- Added support for the "BiDi flag" of a WebDriver Session to align with the WebDriver BiDi specification. This allows to identify sessions created for or upgraded to WebDriver BiDi. ([Firefox bug 1898719](https://bugzil.la/1898719))
-- Added support for several arguments for the `network.continueRequest` command, which now allows to modify headers, cookies, method and body of a request before it is sent over the network. ([Firefox bug 1850680](https://bugzil.la/1850680))
-- Added support for the `userContext` argument in the `permissions.setPermission` command, which allows to isolate a permission to a specific user context (implemented as containers in Firefox). ([Firefox bug 1894217](https://bugzil.la/1894217))
+- Added support for the "BiDi flag" of a WebDriver Session to align with the WebDriver BiDi specification. This allows you to identify sessions created for or upgraded to WebDriver BiDi. ([Firefox bug 1898719](https://bugzil.la/1898719))
+- Added support for several arguments for the `network.continueRequest` command, which now allows you to modify headers, cookies, method and body of a request before it is sent over the network. ([Firefox bug 1850680](https://bugzil.la/1850680))
+- Added support for the `userContext` argument in the `permissions.setPermission` command, which allows you to isolate a permission to a specific user context (implemented as containers in Firefox). ([Firefox bug 1894217](https://bugzil.la/1894217))
 - Fixed a bug in `browsingContext.navigate` where a navigation error would load an error page and cause subsequent commands to fail. ([Firefox bug 1878690](https://bugzil.la/1878690))
 - We fixed the order in which `network.responseCompleted` events are emitted for redirects. The original request's `responseCompleted` is now always emitted before the events for the redirect. ([Firefox bug 1879580](https://bugzil.la/1879580))
 - To align with the current Firefox behavior, we introduced the workaround to not partition cookies which are added with the "storage.setCookie" command for the same domain as the page loaded in the targeted context. ([Firefox bug 1898222](https://bugzil.la/1898222))
@@ -77,7 +77,7 @@ This article provides information about the changes in Firefox 128 that affect d
 
 #### Marionette
 
-- Added support for the "HTTP flag" of a WebDriver Session to align with the WebDriver classic specification. This allows to identify sessions created for WebDriver classic. ([Firefox bug 1884090](https://bugzil.la/1884090))
+- Added support for the "HTTP flag" of a WebDriver Session to align with the WebDriver classic specification. This allows you to identify sessions created for WebDriver classic. ([Firefox bug 1884090](https://bugzil.la/1884090))
 - Added support for the Permissions API in WebDriver Classic. ([Firefox bug 1524074](https://bugzil.la/1524074))
 
 ## Changes for add-on developers
@@ -107,7 +107,7 @@ These features are newly shipped in Firefox 128 but are disabled by default. To 
 
 - **Cookies Having Independent Partitioned State (CHIPS):** `network.cookie.CHIPS.enabled`.
 
-  [CHIPS](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies), or "partitioned cookies", allow developers to opt a cookie into partitioned storage using the [`partitioned`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#partitioned) directive of the `Set-Cookie` HTTP header. When set, cookies have separate storage for each top-level site, and can only be read within the same top-level site they were set on and its subdomains. This blocks cross-site tracking, while still enabling legitimate uses of third-party cookies such as persisting state of embedded maps or chat widgets across different subdomains of a site. ([Firefox bug 1898253](https://bugzil.la/1898253)).
+  [CHIPS](/en-US/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies), or "partitioned cookies", allow developers to opt a cookie into partitioned storage using the [`partitioned`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#partitioned) directive of the `Set-Cookie` HTTP header. When set, cookies have separate storage for each top-level site, and can only be read within the same top-level site they were set on and its subdomains. This blocks cross-site tracking, while still enabling legitimate uses of third-party cookies such as persisting state of embedded maps or chat widgets across different subdomains of a site. ([Firefox bug 1898253](https://bugzil.la/1898253)).
 
 - **Privacy Preserving Attribution API (PPA):** `dom.origin-trials.private-attribution.state`.
 

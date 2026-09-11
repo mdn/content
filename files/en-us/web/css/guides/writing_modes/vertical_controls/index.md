@@ -184,7 +184,7 @@ Again, it is possible to use a {{cssxref("direction")}} property value of `rtl` 
 
 It is also worth noting that in the above example, the inline direction for the select options goes from right to left because we used `writing-mode: vertical-rl`. If we use `writing-mode: vertical-lr` instead, the `<option>` text will appear from left to right.
 
-We'll explore these two use cases using three listbox (`multiple`) `<select>` elements, to make it easy to compare the effects side-by-side.
+We'll explore these two use cases using three listbox (`multiple`) `<select>` elements, to enable comparing the effects side-by-side.
 
 ```html
 <form>

@@ -16,7 +16,7 @@ SVG's `<a>` element is a container, which means you can create a link around tex
 
 ## Attributes
 
-- [`download`](/en-US/docs/Web/HTML/Reference/Elements/a#download)
+- {{SVGAttr("download")}}
   - : Instructs browsers to download a {{Glossary("URL")}} instead of navigating to it, so the user will be prompted to save it as a local file.
     _Value type_: **\<string>**; _Default value_: _none_; _Animatable_: **no**
 - {{SVGAttr("href")}}
@@ -104,7 +104,7 @@ svg|a:active {
 {{EmbedLiveSample('Example', 100, 100)}}
 
 > [!WARNING]
-> Since this element shares its tag name with [HTML's `<a>` element](/en-US/docs/Web/HTML/Reference/Elements/a), selecting `a` with CSS or {{domxref("Document.querySelector", "querySelector")}} may apply to the wrong kind of element. Try [the `@namespace` rule](/en-US/docs/Web/CSS/Reference/At-rules/@namespace) to distinguish the two.
+> Since this element shares its tag name with [HTML's `<a>` element](/en-US/docs/Web/HTML/Reference/Elements/a), selecting `a` with CSS or {{domxref("Document.querySelector", "querySelector")}} may apply to the wrong kind of element. Try the {{cssxref("@namespace")}} rule to distinguish the two.
 
 ## Specifications
 

@@ -1,5 +1,6 @@
 ---
-title: contain-intrinsic-block-size
+title: "`contain-intrinsic-block-size` CSS property"
+short-title: contain-intrinsic-block-size
 slug: Web/CSS/Reference/Properties/contain-intrinsic-block-size
 page-type: css-property
 browser-compat: css.properties.contain-intrinsic-block-size

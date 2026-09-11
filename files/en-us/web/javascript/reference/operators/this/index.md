@@ -178,7 +178,7 @@ console.log(boundFoo() === globalObject); // true
 
 #### Constructors
 
-When a function is used as a constructor (with the {{jsxref("Operators/new", "new")}} keyword), its `this` is bound to the new object being constructed, no matter which object the constructor function is accessed on. The value of `this` becomes the value of the `new` expression unless the constructor returns another non–primitive value.
+When a function is used as a constructor (with the {{jsxref("new")}} keyword), its `this` is bound to the new object being constructed, no matter which object the constructor function is accessed on. The value of `this` becomes the value of the `new` expression unless the constructor returns another non–primitive value.
 
 ```js
 function C() {

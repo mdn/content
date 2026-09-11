@@ -8,7 +8,7 @@ sidebar: firefox
 
 Firefox 34 was released on December 1st, 2014. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
-## Changes for Web developers
+## Changes for web developers
 
 ### Developer Tools
 
@@ -72,7 +72,7 @@ _No change._
 - Our experimental implementation of EME continues. The `MediaKeySession.getUsableKeyIds()` method has been added ([Firefox bug 1057171](https://bugzil.la/1057171)).
 - Regarding [WebRTC](/en-US/docs/Web/API/WebRTC_API):
   - an experiment implementation of `RTPSender` and `RTPReceiver` working with {{domxref("RTCPeerConnection")}} has landed ([Firefox bug 1032835](https://bugzil.la/1032835)).
-  - application window sharing has been added to {{domxref("Navigator.getUserMedia()")}} ([Firefox bug 1036653](https://bugzil.la/1036653)) and `MediaTrackConstraintSet` now supports `browserWindow` and `scrollWithPage` allowing to chose the tab of a window that has to be shared without showing the tab chooser dialog ([Firefox bug 1041700](https://bugzil.la/1041700)).
+  - application window sharing has been added to {{domxref("Navigator.getUserMedia()")}} ([Firefox bug 1036653](https://bugzil.la/1036653)) and `MediaTrackConstraintSet` now supports `browserWindow` and `scrollWithPage` allowing you to chose the tab of a window that has to be shared without showing the tab chooser dialog ([Firefox bug 1041700](https://bugzil.la/1041700)).
   - `"browser"` is now an accepted value of MediaSourceEnum, used to define constraints ([Firefox bug 1041493](https://bugzil.la/1041493)).
 
 - For Web Components, event retargeting is now implemented ([Firefox bug 887541](https://bugzil.la/887541)).

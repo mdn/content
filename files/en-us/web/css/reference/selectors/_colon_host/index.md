@@ -1,5 +1,6 @@
 ---
-title: :host
+title: "`:host` CSS pseudo-class"
+short-title: :host
 slug: Web/CSS/Reference/Selectors/:host
 page-type: css-pseudo-class
 browser-compat: css.selectors.host
@@ -112,8 +113,8 @@ The `:host { background: rgb(0 0 0 / 10%); padding: 2px 5px; }` rule styles all 
 ## See also
 
 - [Web components](/en-US/docs/Web/API/Web_components)
-- {{cssxref(":host_function", ":host()")}}
-- {{cssxref(":host-context", ":host-context()")}}
+- {{cssxref(":host()")}}
+- {{cssxref(":host-context()")}}
 - {{CSSxref("::slotted")}}
 - {{CSSxRef(":state",":state()")}}
 - [CSS scoping](/en-US/docs/Web/CSS/Guides/Scoping) module

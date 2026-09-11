@@ -27,6 +27,7 @@ The **`CSSRule`** interface represents a single CSS rule. There are several type
 - {{DOMXRef("CSSLayerStatementRule")}}
 - {{DOMXRef("CSSPropertyRule")}}
 - {{DOMXRef("CSSNestedDeclarations")}}
+- {{DOMXRef("CSSViewTransitionRule")}}
 
 ## Instance properties
 

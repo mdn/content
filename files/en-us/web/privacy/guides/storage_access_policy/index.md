@@ -82,7 +82,7 @@ HTTP Referrers
 1. This policy does not currently restrict third-party storage access for resources that are not classified as tracking resources. We may choose to apply additional restrictions to third-party storage access in the future.
 2. The restrictions applied by the policy will not prevent third-party scripts classified as tracking resources from accessing storage in the main context of the page. These scripts can continue to use storage scoped to the top-level origin.
 3. Origins classified as trackers will have access to their own storage when they are loaded in a first-party context.
-4. Cross-origin resources loaded from the same {{Glossary("eTLD", "eTLD+1")}} as the top-level context will still have access to their storage.
+4. Cross-origin resources loaded from the same {{glossary("registrable domain")}} as the top-level context will still have access to their storage.
 5. Origins normally classified as trackers will [not be blocked if the top-level page origin is determined to be from the same organization as them](https://github.com/mozilla-services/shavar-prod-lists#entity-list).
 
 ## Storage access grants
@@ -154,7 +154,7 @@ No — this feature only restricts access to cookies and site data that can be u
 
 ### I use a third-party analytics service that is classified as a tracker. Will I still receive analytics data?
 
-This depends on how the third-party analytics service is implemented. Third-party analytics providers will no longer be able to user their third-party storage to collect data. This means that providers using cookies which are scoped to their third-party domain, or local storage and other site data stored under their origin, will no longer have access to those identifiers across other websites.
+This depends on how the third-party analytics service is implemented. Third-party analytics providers will no longer be able to use their third-party storage to collect data. This means that providers using cookies which are scoped to their third-party domain, or local storage and other site data stored under their origin, will no longer have access to those identifiers across other websites.
 
 If these services are embedded into the main context of the page, they can continue to use first-party cookies and site storage to track users across page visits on that specific first-party domain.
 

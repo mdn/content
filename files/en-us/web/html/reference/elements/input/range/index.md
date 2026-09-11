@@ -1,5 +1,6 @@
 ---
-title: <input type="range">
+title: '`<input type="range">` HTML attribute value'
+short-title: <input type="range">
 slug: Web/HTML/Reference/Elements/input/range
 page-type: html-attribute-value
 browser-compat: html.elements.input.type_range
@@ -9,6 +10,8 @@ sidebar: htmlsidebar
 {{HTMLElement("input")}} elements of type **`range`** let the user specify a numeric value which must be no less than a given value, and no more than another given value. The precise value, however, is not considered important. This is typically represented using a slider or dial control rather than a text entry box like the {{HTMLElement('input/number', 'number')}} input type.
 
 Because this kind of widget is imprecise, it should only be used if the control's exact value isn't important.
+
+If the user's browser doesn't support type `range`, it will fall back and treat it as a `{{HTMLElement('input/text', 'text')}}` input.
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;range&quot;&gt;", "tabbed-standard")}}
 
@@ -45,8 +48,6 @@ input {
   margin: 0.4rem;
 }
 ```
-
-If the user's browser doesn't support type `range`, it will fall back and treat it as a `{{HTMLElement('input/text', 'text')}}` input.
 
 ## Value
 
@@ -142,7 +143,7 @@ For example, to ask the user for a value between -10 and 10, you can use:
 
 ### Setting the value's granularity
 
-By default, the granularity is 1, meaning the value is always an integer. To control the granularity, you can change the [`step`](/en-US/docs/Web/HTML/Reference/Elements/input#step) attribute. For example, If you need a value to be halfway between 5 and 10, you should set the value of `step` to 0.5:
+By default, the granularity is 1, meaning the value is always an integer. To control the granularity, you can change the [`step`](/en-US/docs/Web/HTML/Reference/Elements/input#step) attribute. For example, if you need a value to be halfway between 5 and 10, you should set the value of `step` to 0.5:
 
 #### Setting the step attribute
 
@@ -347,13 +348,6 @@ See [Creating vertical form controls](/en-US/docs/Web/CSS/Guides/Writing_modes/V
     <tr>
       <td><strong>DOM interface</strong></td>
       <td><p>{{domxref("HTMLInputElement")}}</p></td>
-    </tr>
-    <tr>
-      <td><strong>Methods</strong></td>
-      <td>
-        {{domxref("HTMLInputElement.stepDown", "stepDown()")}}
-        and {{domxref("HTMLInputElement.stepUp", "stepUp()")}}
-      </td>
     </tr>
     <tr>
       <td><strong>Implicit ARIA Role</strong></td>

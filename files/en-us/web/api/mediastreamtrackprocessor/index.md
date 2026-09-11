@@ -21,8 +21,12 @@ The **`MediaStreamTrackProcessor`** interface of the [Insertable Streams for Med
 
 ## Instance properties
 
+- {{domxref("MediaStreamTrackProcessor.discardedFrames")}} {{experimental_inline}}
+  - : A number indicating how many frames have been dropped by the processor.
 - {{domxref("MediaStreamTrackProcessor.readable")}}
   - : Returns a {{domxref("ReadableStream")}}.
+- {{domxref("MediaStreamTrackProcessor.totalFrames")}} {{experimental_inline}}
+  - : A number indicating how many frames have been received by the processor in total.
 
 ## Examples
 

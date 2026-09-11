@@ -111,7 +111,7 @@ async function* foo() {
 
 Because [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) has higher precedence than [`yield`](/en-US/docs/Web/JavaScript/Reference/Operators/yield), this would become `(await yield) 1`, which is awaiting an identifier called `yield`, and a syntax error. Similarly, if you have `new !A;`, because `!` has lower precedence than `new`, this would become `(new !) A`, which is obviously invalid. (This code looks nonsensical to write anyway, since `!A` always produces a boolean, not a constructor function.)
 
-For postfix unary operators (namely, `++` and `--`), the same rules apply. Luckily, both operators have higher precedence than any binary operator, so the grouping is always what you would expect. Moreover, because `++` evaluates to a _value_, not a _reference_, you can't chain multiple increments together either, as you may do in C.
+For postfix unary operators (namely, `++` and `--`), the same rules apply. Luckily, both operators have higher precedence than any binary operator, so the grouping is always what you would expect. Moreover, because `++` evaluates to a _value_, not a _reference_, you can't chain multiple increments together either.
 
 ```js-nolint example-bad
 let a = 1;
@@ -240,7 +240,7 @@ The following table lists operators in order from highest precedence (18) to low
 
 Several general notes about the table:
 
-1. Not all syntax included here are "operators" in the strict sense. For example, spread `...` and arrow `=>` are typically not regarded as operators. However, we still included them to show how tightly they bind compared to other operators/expressions.
+1. Not all syntax included here are ["operators" in the strict sense](/en-US/docs/Web/JavaScript/Reference/Operators#what_are_operators). For example, spread `...` and arrow `=>` are typically not regarded as operators. However, we still included them to show how tightly they bind compared to other operators/expressions.
 2. Some operators have certain operands that require expressions narrower than those produced by higher-precedence operators. For example, the right-hand side of member access `.` (precedence 17) must be an identifier instead of a grouped expression. The left-hand side of arrow `=>` (precedence 2) must be an arguments list or a single identifier instead of some random expression.
 3. Some operators have certain operands that accept expressions wider than those produced by higher-precedence operators. For example, the bracket-enclosed expression of bracket notation `[ … ]` (precedence 17) can be any expression, even comma (precedence 1) joined ones. These operators act as if that operand is "automatically grouped". In this case we will omit the associativity.
 
@@ -277,7 +277,7 @@ Several general notes about the table:
       <td>[3]</td>
     </tr>
     <tr>
-      <td>{{jsxref("Operators/new", "new")}} with argument list<br><code>new x(y)</code></td>
+      <td>{{jsxref("new")}} with argument list<br><code>new x(y)</code></td>
       <td rowspan="3">[4]</td>
     </tr>
     <tr>
@@ -291,7 +291,7 @@ Several general notes about the table:
     <tr>
       <td>16: new</td>
       <td>n/a</td>
-      <td>{{jsxref("Operators/new", "new")}} without argument list<br><code>new x</code></td>
+      <td>{{jsxref("new")}} without argument list<br><code>new x</code></td>
     </tr>
     <tr>
       <td rowspan="2">15: postfix operators</td>
@@ -611,7 +611,7 @@ Several general notes about the table:
       <td>1: comma</td>
       <td>left-to-right</td>
       <td>
-        {{jsxref("Operators/Comma_Operator", "Comma operator", "", 1)}}<br><code>x, y</code>
+        {{jsxref("Operators/Comma_operator", "Comma operator", "", 1)}}<br><code>x, y</code>
       </td>
     </tr>
   </tbody>

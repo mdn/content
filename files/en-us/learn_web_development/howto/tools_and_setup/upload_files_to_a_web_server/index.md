@@ -134,7 +134,7 @@ It is seen as a more advanced tool than SFTP, because by default it is used on t
 rsync [-options] SOURCE user@x.x.x.x:DESTINATION
 ```
 
-- `-options` is a dash followed by a one or more letters, for example `-v` for verbose error messages, and `-b` to make backups. You can see the full list at the [rsync man page](https://linux.die.net/man/1/rsync) (search for "Options summary").
+- `-options` is a dash followed by one or more letters, for example `-v` for verbose error messages, and `-b` to make backups. You can see the full list at the [rsync man page](https://linux.die.net/man/1/rsync) (search for "Options summary").
 - `SOURCE` is the path to the local file or directory that you want to copy files over from.
 - `user@` is the credentials of the user on the remote server you want to copy files over to.
 - `x.x.x.x` is the IP address of the remote server.

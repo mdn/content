@@ -6,11 +6,9 @@ page-type: web-api-constructor
 browser-compat: api.CSSTranslate.CSSTranslate
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`CSSTranslate()`** constructor creates a
-new {{domxref("CSSTranslate")}} object representing the [translate()](/en-US/docs/Web/CSS/Reference/Values/transform-function/translate) value of the
-individual {{CSSXref('transform')}} property in CSS.
+The **`CSSTranslate()`** constructor creates a new {{domxref("CSSTranslate")}} object representing the {{cssxref("transform-function/translate", "translate()")}} value of the individual {{CSSXref('transform')}} property in CSS.
 
 ## Syntax
 
@@ -31,17 +29,15 @@ new CSSTranslate(x, y, z)
   - : A value for the z-axis of the {{domxref('CSSTranslate')}} object to be constructed.
     This must be a {{cssxref('length')}}.
 
-    If a value is passed for the `z-axis` this is a 3d transform. The value of
-    `is2D` will be set to false.
+    If a value is passed for the `z-axis` this is a 3D transform.
+    The value of `is2D` will be set to false.
 
 ### Exceptions
 
 - [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError)
-  - : Raised if the value of `CSSTranslate.x` or `CSSTranslate.y` is
-    not a {{cssxref('length-percentage')}}.
+  - : Raised if the value of `CSSTranslate.x` or `CSSTranslate.y` is not a {{cssxref('length-percentage')}}.
 - [`TypeError`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError)
-  - : Raised if the value of `CSSTranslate.z` exists but is not a
-    {{cssxref('length')}}.
+  - : Raised if the value of `CSSTranslate.z` exists but is not a {{cssxref('length')}}.
 
 ## Examples
 

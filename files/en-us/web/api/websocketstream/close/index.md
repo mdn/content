@@ -5,10 +5,11 @@ slug: Web/API/WebSocketStream/close
 page-type: web-api-instance-method
 status:
   - experimental
+  - non-standard
 browser-compat: api.WebSocketStream.close
 ---
 
-{{APIRef("WebSockets API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
+{{APIRef("WebSockets API")}}{{SeeCompatTable}}{{AvailableInWorkers}}{{non-standard_header}}
 
 The **`close()`** method of the
 {{domxref("WebSocketStream")}} interface closes the WebSocket connection. The method optionally accepts an object containing a custom code and/or reason indicating why the connection was closed.

@@ -49,4 +49,4 @@ You could use this navigator object to return more information about the runtime
 
 ## See also
 
-{{domxref("WorkerNavigator")}}
+- {{domxref("WorkerNavigator")}}

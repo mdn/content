@@ -1,5 +1,6 @@
 ---
-title: "<section>: The Generic Section element"
+title: "`<section>` HTML generic section element"
+short-title: <section>
 slug: Web/HTML/Reference/Elements/section
 page-type: html-element
 browser-compat: html.elements.section

@@ -59,7 +59,7 @@ You may also notice some subtle change in the appearance: the text and vertical 
 > This corresponds to the LaTeX's concept of _inline_ formulas (delimited by dollar signs `$...$`) and _display_ formulas (delimited by `\[...\]`).
 
 > [!NOTE]
-> The appearance change mentioned above is actually controlled by the [`math-style`](/en-US/docs/Web/CSS/Reference/Properties/math-style) property which is initially `normal` for `<math display="block">` and `compact` otherwise. In some MathML subtrees, this property can then automatically become `compact` but we will ignore this subtlety for this introductory tutorial. Again, this is similar to LaTeX.
+> The appearance change mentioned above is actually controlled by the {{cssxref("math-style")}} property which is initially `normal` for `<math display="block">` and `compact` otherwise. In some MathML subtrees, this property can then automatically become `compact` but we will ignore this subtlety for this introductory tutorial. Again, this is similar to LaTeX.
 
 ## Grouping with the \<mrow> element
 
@@ -153,7 +153,7 @@ As an exercise, figure out how to write the following expressions using only the
 
 ## Summary
 
-In this article, we have taken a look at how to use the `<math>` element to insert a mathematical formula inside a HTML document. We have learned about rendering differences between `<math>` elements that use `display="block"` or not. In addition, we stumbled upon a couple of other MathML elements: `<mfrac>` for fractions, `<mrow>` for grouping and finally a few text elements. We will analyze these [text containers](/en-US/docs/Web/MathML/Tutorials/For_beginners/Text_containers) further in the next article.
+In this article, we have taken a look at how to use the `<math>` element to insert a mathematical formula inside an HTML document. We have learned about rendering differences between `<math>` elements that use `display="block"` or not. In addition, we stumbled upon a couple of other MathML elements: `<mfrac>` for fractions, `<mrow>` for grouping and finally a few text elements. We will analyze these [text containers](/en-US/docs/Web/MathML/Tutorials/For_beginners/Text_containers) further in the next article.
 
 ## See also
 
@@ -161,7 +161,7 @@ In this article, we have taken a look at how to use the `<math>` element to inse
 - [The `<math>` element](/en-US/docs/Web/MathML/Reference/Element/math)
 - [The `<mfrac>` element](/en-US/docs/Web/MathML/Reference/Element/mfrac)
 - [The `<mrow>` element](/en-US/docs/Web/MathML/Reference/Element/mrow)
-- [The `math-style` property](/en-US/docs/Web/CSS/Reference/Properties/math-style)
-- [The `math-depth` property](/en-US/docs/Web/CSS/Reference/Properties/math-depth)
+- {{cssxref("math-style")}} property
+- {{cssxref("math-depth")}} property
 
 {{NextMenu("Web/MathML/Tutorials/For_beginners/Text_containers", "Web/MathML/Tutorials/For_beginners")}}

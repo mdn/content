@@ -1,12 +1,13 @@
 ---
-title: scroll-margin
+title: "`scroll-margin` CSS property"
+short-title: scroll-margin
 slug: Web/CSS/Reference/Properties/scroll-margin
 page-type: css-shorthand-property
 browser-compat: css.properties.scroll-margin
 sidebar: cssref
 ---
 
-The **`scroll-margin`** [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) sets all of the scroll margins of an element at once, assigning values much like the {{cssxref("margin")}} property does for margins of an element.
+The **`scroll-margin`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets all of the scroll margins of an element at once, assigning values much like the {{cssxref("margin")}} property does for margins of an element.
 
 {{InteractiveExample("CSS Demo: scroll-margin")}}
 
@@ -209,5 +210,5 @@ Try it for yourself:
 
 ## See also
 
-- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap)
-- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)
+- [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) module
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap) on web.dev (2018)

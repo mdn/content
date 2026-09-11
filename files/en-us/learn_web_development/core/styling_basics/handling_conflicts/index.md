@@ -247,7 +247,7 @@ body {
 
 ### Resetting all property values
 
-The CSS shorthand property [`all`](/en-US/docs/Web/CSS/Reference/Properties/all) can be used to apply one of these inheritance values to (almost) all properties at once. Its value can be any one of the inheritance values (`inherit`, `initial`, `revert`, `revert-layer`, or `unset`). It's a convenient way to undo changes made to styles so that you can get back to a known starting point before beginning new changes.
+The CSS shorthand property {{cssxref("all")}} can be used to apply one of these inheritance values to (almost) all properties at once. Its value can be any one of the inheritance values (`inherit`, `initial`, `revert`, `revert-layer`, or `unset`). It's a convenient way to undo changes made to styles so that you can get back to a known starting point before beginning new changes.
 
 In the below example, we have two blockquotes. The first has styling applied to the blockquote element itself. The second has a class applied to the blockquote, which sets the value of `all` to `unset`.
 
@@ -337,7 +337,7 @@ The amount of specificity a selector has is measured using three different value
 - **Elements**: Score one in this column (1 point) for each element selector or pseudo-element contained inside the overall selector.
 
 > [!NOTE]
-> The universal selector ([`*`](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors)), [combinators](/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators) (`+`, `>`, `~`, ' '), and specificity adjustment selector ([`:where()`](/en-US/docs/Web/CSS/Reference/Selectors/:where)) along with its parameters, have no effect on specificity.
+> The universal selector ([`*`](/en-US/docs/Web/CSS/Reference/Selectors/Universal_selectors)), [combinators](/en-US/docs/Learn_web_development/Core/Styling_basics/Combinators) (`+`, `>`, `~`, ' '), and specificity adjustment selector ({{cssxref(":where()")}}) along with its parameters, have no effect on specificity.
 
 The following table shows a few isolated examples to get you in the mood. Try going through these, and make sure you understand why they have the specificity that we have given them. You can find details of each selector in the MDN [selectors reference](/en-US/docs/Web/CSS/Guides/Selectors/Selectors_and_combinators).
 
@@ -423,8 +423,8 @@ li {
 So what's going on here? First of all, we are only interested in the first seven rules of this example, and as you'll notice, we have included their specificity values in a comment before each one.
 
 - The first two selectors are competing over the styling of the link's `background-color`. The second one wins and makes the background color `blue` because it has an extra ID selector in the chain: its specificity is 2-0-1 vs. 1-0-1.
-- Selectors 3 and 4 are competing over the styling of the link's text `color`. The second one wins and makes the text `white` because although it has one less element selector, the missing selector is swapped out for a class selector, which has more weight than an element selectors. The winning specificity is 1-1-3 vs. 1-0-4.
-- Selectors 5–7 are competing over the styling of the link's `border` when hovered. Selector 6 clearly loses to selector 5 with a specificity of 0-2-3 vs. 0-2-4; it has one fewer element selectors in the chain. Selector 7, however, beats both selectors 5 and 6 because it has the same number of sub-selectors in the chain as selector 5, but an element has been swapped out for a class selector. So the winning specificity is 0-3-3 vs. 0-2-3 and 0-2-4.
+- Selectors 3 and 4 are competing over the styling of the link's text `color`. The second one wins and makes the text `white` because although it has one less element selector, the missing selector is swapped out for a class selector, which has more weight than an element selector. The winning specificity is 1-1-3 vs. 1-0-4.
+- Selectors 5–7 are competing over the styling of the link's `border` when hovered. Selector 6 clearly loses to selector 5 with a specificity of 0-2-3 vs. 0-2-4; it has one fewer element selector in the chain. Selector 7, however, beats both selectors 5 and 6 because it has the same number of sub-selectors in the chain as selector 5, but an element has been swapped out for a class selector. So the winning specificity is 0-3-3 vs. 0-2-3 and 0-2-4.
 
 > [!NOTE]
 > Each selector type has its own level of specificity that cannot be overwritten by selectors with a lower specificity level. For example, a _million_ **class** selectors combined would not be able to overwrite the specificity of _one_ **id** selector.

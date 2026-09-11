@@ -42,7 +42,7 @@ You should also consider the type of devices and the way people use your site. F
 
 The above table is included at the bottom of every feature page under the section "Browser compatibility". After identifying the browsers your site visitors use, you can assess any technology that you want to use against how well it is supported across browsers and how easily you can provide an alternative for visitors who do not have that technology available.
 
-On MDN, we provide browser compatibility information on every CSS property page. This compatibility information, presented in a table, includes a list of major browsers along with the versions that started supporting the property. The browser names take up the column headers. For example, take a look at the above table or the page for {{cssxref("grid-template-columns")}}, with special attention to the `subgrid` (most recently supported) and `masonry` (experimental and not supported) values.
+On MDN, we provide browser compatibility information on every CSS property page. This compatibility information, presented in a table, includes a list of major browsers along with the versions that started supporting the property. See the [`flex-flow`](/en-US/docs/Web/CSS/Reference/Properties/flex-flow#browser_compatibility) and [`background-color`](/en-US/docs/Web/CSS/Reference/Properties/background-color#browser_compatibility) pages for examples.
 
 These browser compatibility tables provide information on which browsers are compatible with the technology that you are looking for and the version from which the browser started supporting that functionality. Browser and mobile phone browser compatibility information are displayed separately.
 
@@ -156,7 +156,7 @@ Now that you have worked through our articles on CSS layout, it's time to test y
 
 ## See also
 
-- [`@supports`](/en-US/docs/Web/CSS/Reference/At-rules/@supports) at-rule
+- {{cssxref("@supports")}} at-rule
 - [CSS at-rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules)
 - [Using feature queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries)
 - [CSS conditional rules](/en-US/docs/Web/CSS/Guides/Conditional_rules) module

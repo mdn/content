@@ -120,7 +120,7 @@ The code disables the button and starts the animation. The button is re-enabled 
 
 ## Stacking context in animations
 
-The properties that are animated during a CSS animation behave as if they were included in the [`will-change`](/en-US/docs/Web/CSS/Reference/Properties/will-change) property declaration. Any property that would create a stacking context, if marked as `will-change`, makes the element receive a new stacking context.
+The properties that are animated during a CSS animation behave as if they were included in the {{cssxref("will-change")}} property declaration. Any property that would create a stacking context, if marked as `will-change`, makes the element receive a new stacking context.
 
 In the case of [`animation-fill-mode: forwards`](/en-US/docs/Web/CSS/Reference/Properties/animation-fill-mode#forwards) (and `both`), the animated properties remain at their final keyframe state after the animation is finished. The properties keep the `will-change` status, so if a new stacking context is created during the animation and is still present at the end of the animation, the target element retains the stacking context after the animation has finished.
 

@@ -1,5 +1,6 @@
 ---
-title: :active-view-transition
+title: "`:active-view-transition` CSS pseudo-class"
+short-title: :active-view-transition
 slug: Web/CSS/Reference/Selectors/:active-view-transition
 page-type: css-pseudo-class
 browser-compat: css.selectors.active-view-transition
@@ -103,7 +104,7 @@ changeColorButton.addEventListener("keypress", changeColor);
 
 ## See also
 
-- {{CSSXRef(":active-view-transition-type", ":active-view-transition-type()")}} pseudo-class
+- {{cssxref(":active-view-transition-type()")}} pseudo-class
 - [`startViewTransition()`](/en-US/docs/Web/API/Document/startViewTransition) method
 - {{domxref("Document.activeViewTransition")}}
 - [View Transition API](/en-US/docs/Web/API/View_Transition_API)

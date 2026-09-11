@@ -94,7 +94,7 @@ if ("virtualKeyboard" in navigator) {
 }
 ```
 
-For styles, you can also do feature detection in CSS using the [`@supports`](/en-US/docs/Web/CSS/Reference/At-rules/@supports) at-rule, combined with the `not` keyword if you want to check for the absence of a feature.
+For styles, you can also do feature detection in CSS using the {{cssxref("@supports")}} at-rule, combined with the `not` keyword if you want to check for the absence of a feature.
 See [Using feature queries](/en-US/docs/Web/CSS/Guides/Conditional_rules/Using_feature_queries) for information on using this in CSS.
 
 ```css
@@ -203,7 +203,7 @@ Unfortunately, there is no uniformity of the different part of the user agent st
 
 ### Rendering engine
 
-Browsers sharing a common {{glossary("rendering engine")}} will display a page in the same way: it's often a fair assumption that what will work in one browser will work in the other.
+Browsers sharing a common {{glossary("engine/rendering", "rendering engine")}} will display a page in the same way: it's often a fair assumption that what will work in one browser will work in the other.
 There are three active major rendering engines: {{glossary("Blink")}}, {{glossary("Gecko")}}, and {{glossary("WebKit")}}.
 
 The rendering engine is the string `Gecko/20100101` in the following example, indicating the rendering engine is `Gecko`, and the "gecko-Trail" is the fixed string `20100101`, which means "desktop":

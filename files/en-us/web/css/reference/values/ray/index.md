@@ -1,5 +1,6 @@
 ---
-title: ray()
+title: "`ray()` CSS function"
+short-title: ray()
 slug: Web/CSS/Reference/Values/ray
 page-type: css-function
 browser-compat: css.types.ray
@@ -25,7 +26,7 @@ offset-path: ray(45deg);
 
 The parameters can be specified in any order.
 
-- [`<angle>`](/en-US/docs/Web/CSS/Reference/Values/angle)
+- {{cssxref("angle")}}
   - : Specifies the direction in which the line segment extends from the offset starting position. The angle `0deg` lies on the y-axis pointing up, and positive angles increase in the clockwise direction.
 
 - `<size>`

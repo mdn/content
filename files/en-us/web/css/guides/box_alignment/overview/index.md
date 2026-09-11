@@ -36,7 +36,7 @@ When aligning items on the block axis you will use the properties that begin wit
 - {{cssxref("align-self")}}
 - {{cssxref("align-content")}}
 
-Flexbox adds an additional complication in that the above is true when {{cssxref("flex-direction")}} is set to `row`. The properties are swapped when flexbox is set to `column`. Therefore, when working with flexbox it is easier to think about the main and cross axis rather than inline and block. The `justify-` properties are always used to align on the main axis, the `align-` properties on the cross axis.
+Flexbox adds an additional complication in that the above is true when {{cssxref("flex-direction")}} is set to `row`. The properties are swapped when flexbox is set to `column`. Therefore, when working with flexbox it is generally easier to think about the main and cross axis rather than inline and block. The `justify-` properties are always used to align on the main axis, the `align-` properties on the cross axis.
 
 ### The alignment subject
 
@@ -209,7 +209,7 @@ body {
 
 The {{cssxref("overflow-position")}} keywords `safe` and `unsafe` help define behavior when an alignment subject is larger than the alignment container. The `safe` keyword will align to `start` in the case of a specified alignment causing an overflow, the aim being to avoid "data loss" where part of the item is outside the boundaries of the alignment container and can't be scrolled to.
 
-If you specify `unsafe` then the alignment will be honoured even if it would cause such data loss.
+If you specify `unsafe` then the alignment will be honored even if it would cause such data loss.
 
 ## Gaps between boxes
 

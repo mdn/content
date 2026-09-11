@@ -1,5 +1,6 @@
 ---
-title: box-shadow
+title: "`box-shadow` CSS property"
+short-title: box-shadow
 slug: Web/CSS/Reference/Properties/box-shadow
 page-type: css-property
 browser-compat: css.properties.box-shadow
@@ -57,22 +58,18 @@ box-shadow:
 box-shadow: none;
 
 /* A color and two length values */
-/* <color> | <length> | <length> */
 box-shadow: red 60px -16px;
 
 /* Three length values and a color */
-/* <length> | <length> | <length> | <color> */
 box-shadow: 10px 5px 5px black;
 
 /* Four length values and a color */
-/* <length> | <length> | <length> | <length> | <color> */
 box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
 
 /* inset, length values, and a color */
-/* <inset> | <length> | <length> | <color> */
 box-shadow: inset 5em 1em gold;
 
-/* Any number of shadows, separated by commas */
+/* Multiple shadows, separated by commas */
 box-shadow:
   3px 3px red inset,
   -1em 0 0.4em olive;
@@ -114,11 +111,11 @@ To specify multiple shadows, provide a comma-separated list of shadows.
     - If four values are specified, the fourth value is interpreted as `<spread-radius>`. Positive values will cause the shadow to expand and grow bigger, negative values will cause the shadow to shrink. If not specified, it will be set to `0` (that is, the shadow will be the same size as the element).
 
 - `inset` {{optional_inline}}
-  - : Changes the shadow from an outer box-shadow to an inner box-shadow (as if the content is pressed into the box). Inset shadows are drawn inside the box's border (even if the border is transparent), and they appear above the background but below the content. By default, the shadow behaves like a drop shadow, giving the appearance that the box is elevated above its content. This is the default behavior when `inset` is not specified.
+  - : Changes the shadow from an outer box-shadow to an inner box-shadow (as if the content is pressed into the box). Inset shadows are clipped to the element's padding box and appear above the background but below the content. By default, the shadow behaves like a drop shadow, giving the appearance that the box is elevated above its content. This is the default behavior when `inset` is not specified.
 
 ### Interpolation
 
-When animating shadows, such as when multiple shadow values on a box transition to new values on hover, the values are interpolated. {{Glossary("Interpolation")}} determines intermediate values of properties, such as the blur radius, spread radius, and color, as shadows transition. For each shadow in a list of shadows, the color, x, y, blur, and spread transition; the color as [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value), and the other values as {{cssxref("length")}}s.
+When animating shadows, such as when multiple shadow values on a box transition to new values on hover, the values are interpolated. {{Glossary("Interpolation")}} determines intermediate values of properties, such as the blur radius, spread radius, and color, as shadows transition. For each shadow in a list of shadows, the color, x, y, blur, and spread transition; the color as {{cssxref("&lt;color&gt;")}}, and the other values as {{cssxref("length")}}s.
 
 In interpolating multiple shadows between two comma-separated lists of multiple box shadows, the shadows are paired, in order, with interpolation occurring between paired shadows. If the lists of shadows have different lengths, then the shorter list is padded at the end with shadows whose color is `transparent`, and X, Y, and blur are `0`, with the inset, or lack of inset, being set to match. If in any pair of shadows, one has `inset` set and the other does not, the entire shadow list is uninterpolated; the shadows will change to the new values without an animating effect.
 

@@ -28,7 +28,7 @@ querySelectorAll(selectors)
 
     Note that the HTML specification does not require attribute values to be valid CSS identifiers. If a [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) or [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) attribute value is not a valid CSS identifier, then you must escape it before using it in a selector, either by calling {{domxref("CSS.escape_static", "CSS.escape()")}} on the value, or using one of the techniques described in [Escaping characters](/en-US/docs/Web/CSS/Reference/Values/ident#escaping_characters). See [Escaping attribute values](#escaping_attribute_values) for an example.
 
-    The selectors are applied to the entire document, not just the particular element on which `querySelectorAll()` is called. To restrict the selector to the element on which `querySelectorAll()` is called, include the [`:scope`](/en-US/docs/Web/CSS/Reference/Selectors/:scope) pseudo-class at the start of the selector. See the [selector scope](#selector_scope) example.
+    The selectors are applied to the entire document, not just the particular element on which `querySelectorAll()` is called. To restrict the selector to the element on which `querySelectorAll()` is called, include the {{cssxref(":scope")}} pseudo-class at the start of the selector. See the [selector scope](#selector_scope) example.
 
 ### Return value
 
@@ -129,7 +129,7 @@ highlightedItems.forEach((userItem) => {
 
 ### Selector scope
 
-The `querySelectorAll()` method applies its selectors to the whole document: they are not scoped to the element on which the method is called. To scope the selectors, include the [`:scope`](/en-US/docs/Web/CSS/Reference/Selectors/:scope) pseudo-class at the start of the selector string.
+The `querySelectorAll()` method applies its selectors to the whole document: they are not scoped to the element on which the method is called. To scope the selectors, include the {{cssxref(":scope")}} pseudo-class at the start of the selector string.
 
 #### HTML
 

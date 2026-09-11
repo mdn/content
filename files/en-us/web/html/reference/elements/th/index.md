@@ -1,5 +1,6 @@
 ---
-title: "<th>: The Table Header element"
+title: "`<th>` HTML table header element"
+short-title: <th>
 slug: Web/HTML/Reference/Elements/th
 page-type: html-element
 browser-compat: html.elements.th
@@ -87,7 +88,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 - `abbr`
   - : A short, abbreviated description of the header cell's content provided as an alternative label to use for the header cell when referencing the cell in other contexts. Some user-agents, such as screen readers, may present this description before the content itself.
 - `colspan`
-  - : A non-negative integer value indicating how many columns the header cell spans or extends. The default value is `1`. User agents dismiss values higher than 1000 as incorrect, defaulting such values to `1`.
+  - : A non-negative integer value indicating how many columns the header cell spans or extends. The default value is `1`. Values higher than `1000` are clipped to `1000`.
 - `headers`
   - : A list of space-separated strings corresponding to the `id` attributes of the `<th>` elements that provide the headers for this header cell.
 - `rowspan`
@@ -112,7 +113,7 @@ The following attributes are deprecated and should not be used. They are documen
   - : Contains a list of space-separated strings, each corresponding to the `id` attribute of a group of cells that the header cell applies to. Use the [`scope`](#scope) attribute instead, as this attribute is deprecated.
 
 - `bgcolor` {{deprecated_inline}}
-  - : Defines the background color of the header cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/Reference/Values/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/Reference/Values/named-color). Other CSS {{cssxref("color_value", "&lt;color&gt;")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
+  - : Defines the background color of the header cell. The value is an HTML color; either a [6-digit hexadecimal RGB code](/en-US/docs/Web/CSS/Reference/Values/hex-color), prefixed by a `#`, or a [color keyword](/en-US/docs/Web/CSS/Reference/Values/named-color). Other CSS {{cssxref("&lt;color&gt;")}} values are not supported. Use the {{cssxref("background-color")}} CSS property instead, as this attribute is deprecated.
 
 - `char` {{deprecated_inline}}
   - : Does nothing. It was originally intended to specify the alignment of the content to a character of the header cell. Typical values for this include a period (`.`) when attempting to align numbers or monetary values. If [`align`](#align) is not set to `char`, this attribute is ignored.

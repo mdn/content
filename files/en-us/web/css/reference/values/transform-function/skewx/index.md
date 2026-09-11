@@ -1,5 +1,6 @@
 ---
-title: skewX()
+title: "`skewX()` CSS function"
+short-title: skewX()
 slug: Web/CSS/Reference/Values/transform-function/skewX
 page-type: css-function
 browser-compat: css.types.transform-function.skewX
@@ -55,7 +56,7 @@ skewX(a)
 ### Values
 
 - `a`
-  - : Is an {{cssxref("&lt;angle&gt;")}} representing the angle to use to distort the element along the abscissa (horizontal, x-coordinate).
+  - : Is an {{cssxref("angle")}} representing the angle to use to distort the element along the abscissa (horizontal, x-coordinate).
 
 <table class="standard-table">
   <thead>

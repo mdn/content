@@ -1,5 +1,6 @@
 ---
-title: font-optical-sizing
+title: "`font-optical-sizing` CSS property"
+short-title: font-optical-sizing
 slug: Web/CSS/Reference/Properties/font-optical-sizing
 page-type: css-property
 browser-compat: css.properties.font-optical-sizing
@@ -34,7 +35,7 @@ font-optical-sizing: none;
 
 ```css interactive-example
 @font-face {
-  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.woff2");
   font-family: "Amstelvar";
   font-style: normal;
 }
@@ -70,9 +71,11 @@ font-optical-sizing: unset;
 
 ### Values
 
-- none
+This property is specified as one of the following keyword values:
+
+- `none`
   - : The browser will not modify the shape of glyphs for optimal viewing.
-- auto
+- `auto`
   - : The browser will modify the shape of glyphs for optimal viewing.
 
 ## Description
@@ -106,7 +109,7 @@ When optical sizing is used, small text sizes are often rendered with thicker st
 
 ```css
 @font-face {
-  src: url("AmstelvarAlpha-VF.ttf");
+  src: url("AmstelvarAlpha-VF.woff2");
   font-family: "Amstelvar";
   font-style: normal;
 }

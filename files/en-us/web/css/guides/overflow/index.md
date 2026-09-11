@@ -182,7 +182,7 @@ val.addEventListener("change", () => {
   clipMargin();
 });
 
-wide.addEventListener("change", () => {
+check.addEventListener("change", () => {
   pre.classList.toggle("wide");
   scrollExample();
 });
@@ -234,7 +234,7 @@ A link is included in the content box above to demonstrate the effects of keyboa
 
 The CSS overflow level 4 module also introduces the `block-ellipsis`, `continue`, `max-lines`, `overflow-clip-margin-block`, `overflow-clip-margin-block-end`, `overflow-clip-margin-block-start`, `overflow-clip-margin-bottom`, `overflow-clip-margin-inline`, `overflow-clip-margin-inline-end`, `overflow-clip-margin-inline-start`, `overflow-clip-margin-left`, `overflow-clip-margin-right`, and `overflow-clip-margin-top` properties. Currently, no browsers support these features.
 
-### Selectors and pseudo-elements
+### Selectors
 
 - {{cssxref("::scroll-button()")}}
 - {{cssxref("::scroll-marker")}}
@@ -245,7 +245,7 @@ The CSS overflow level 4 module also introduces the `block-ellipsis`, `continue`
 
 ### Data types
 
-- [`<overflow>`](/en-US/docs/Web/CSS/Reference/Values/overflow_value) enumerated values
+- {{cssxref("&lt;overflow&gt;")}} enumerated values
 
 ### Glossary terms and definitions
 

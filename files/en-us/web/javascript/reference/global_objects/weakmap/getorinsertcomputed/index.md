@@ -45,6 +45,13 @@ getOrInsertComputed(key, callback)
 
 The value associated with the specified key in the `WeakMap` object. If the key can't be found, the result of `callback(key)` is inserted and returned.
 
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown in one of the following cases:
+    - `key` is not an object or a [non-registered symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol#shared_symbols_in_the_global_symbol_registry).
+    - `callback` isn't callable.
+
 ## Examples
 
 ### Caching

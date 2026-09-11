@@ -5,10 +5,11 @@ slug: Web/API/PaymentRequest/merchantvalidation_event
 page-type: web-api-event
 status:
   - deprecated
+  - non-standard
 browser-compat: api.PaymentRequest.merchantvalidation_event
 ---
 
-{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{Deprecated_Header}}
+{{APIRef("Payment Request API")}}{{SecureContext_Header}}{{non-standard_header}}
 
 **`merchantvalidation`** events are delivered by the [Payment Request API](/en-US/docs/Web/API/Payment_Request_API) to a {{domxref("PaymentRequest")}} object when a payment handler requires that the merchant requesting the purchase validate itself as permitted to use the payment handler.
 
@@ -31,13 +32,6 @@ onmerchantvalidation = (event) => { }
 A {{domxref("MerchantValidationEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MerchantValidationEvent")}}
-
-## Event properties
-
-- {{domxref("MerchantValidationEvent.methodName")}}
-  - : A string providing a unique payment method identifier for the payment handler that's requiring validation. This may be either one of the standard payment method identifier strings or a URL that both identifies and handles requests for the payment handler, such as `https://apple.com/apple-pay`.
-- {{domxref("MerchantValidationEvent.validationURL")}}
-  - : A string specifying a URL from which the site or app can fetch payment handler specific validation information. Once this data is retrieved, the data (or a promise resolving to the validation data) should be passed into {{domxref("MerchantValidationEvent.complete", "complete()")}} to validate that the payment request is coming from an authorized merchant.
 
 ## Examples
 

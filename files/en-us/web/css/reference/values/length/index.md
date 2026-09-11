@@ -1,5 +1,6 @@
 ---
-title: <length>
+title: "`<length>` CSS type"
+short-title: <length>
 slug: Web/CSS/Reference/Values/length
 page-type: css-type
 browser-compat: css.types.length
@@ -18,7 +19,18 @@ The `<length>` data type consists of a {{cssxref("&lt;number&gt;")}} followed by
 > [!NOTE]
 > Some properties allow negative `<length>` values, while others do not.
 
+### Specified vs. computed values
+
 The [specified value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#specified_value) of a length (_specified length_) is represented by its quantity and unit. The [computed value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#computed_value) of a length (_computed length_) is the specified length resolved to an absolute length, and its unit is not distinguished.
+
+For some properties, such as `border-width`, `outline-width`, `column-rule-width`, and `outline-offset`, the computed `<length>` values are rounded to an integer number of {{glossary("device pixel", "device pixels")}} to ensure reasonable visual display:
+
+- A non-zero value less than 1 device pixel is rounded up.
+- A value greater than 1 device pixel is rounded down to the nearest whole device pixel.
+
+For example, on a screen with a {{domxref("Window.devicePixelRatio", "devicePixelRatio")}} of 3, `border-width: 1.5px` computes to approximately `1.33px` (rounded down from 4.5 to 4 device pixels), and `outline-width: 0.2px` computes to approximately `0.33px` (rounded up from 0.6 to 1 device pixel).
+
+### Relative vs. absolute lengths
 
 The `<length>` units can be relative or absolute. Relative lengths represent a measurement in terms of some other distance. Depending on the unit, this distance can be the size of a specific character, the [line height](/en-US/docs/Web/CSS/Reference/Properties/line-height), or the size of the {{Glossary("viewport")}}. Style sheets that use relative length units can more easily scale from one output environment to another.
 
@@ -37,16 +49,16 @@ Font lengths define the `<length>` value in terms of the size of a particular ch
 > These units, especially `em` and the root relative `rem`, are often used to create scalable layouts, which maintain the vertical rhythm of the page even when the user changes the font size.
 
 - `cap`
-  - : Represents the "cap height" (nominal height of capital letters) of the element's {{Cssxref("font")}}.
+  - : Equal to the "cap height" (nominal height of capital letters) of the element's {{Cssxref("font")}}.
 - `ch`
   - : Represents the width or, more precisely, the {{Glossary("advance measure")}} of the glyph `0` (zero, the Unicode character U+0030) in the element's {{Cssxref("font")}}.
     In cases where determining the measure of the `0` glyph is impossible or impractical, it must be assumed to be `0.5em` wide by `1em` tall.
 - `em`
   - : Represents the calculated {{Cssxref("font-size")}} of the element. If used on the {{Cssxref("font-size")}} property itself, it represents the _inherited_ font-size of the element.
 - `ex`
-  - : Represents the [x-height](https://en.wikipedia.org/wiki/X-height) of the element's {{Cssxref("font")}}. In fonts with the `x` letter, this is generally the height of lowercase letters in the font; `1ex ≈ 0.5em` in many fonts.
+  - : Equal to the [x-height](https://en.wikipedia.org/wiki/X-height) of the element's {{Cssxref("font")}}. In fonts with the `x` letter, this is generally the height of lowercase letters in the font; `1ex ≈ 0.5em` in many fonts.
 - `ic`
-  - : Equal to the used {{Glossary("advance measure")}} of the "水" glyph (CJK water ideograph, U+6C34), found in the font used to render it.
+  - : Represents the used {{Glossary("advance measure")}} of the "水" glyph (CJK water ideograph, U+6C34), found in the font used to render it.
 - `lh`
   - : Equal to the computed value of the {{Cssxref("line-height")}} property of the element on which it is used, converted to an absolute length. This unit enables length calculations based on the theoretical size of an ideal empty line. However, the size of actual line boxes may differ based on their content.
 
@@ -61,7 +73,7 @@ Root element font relative length units define the `<length>` value in terms of 
 - `rem`
   - : Represents the {{Cssxref("font-size")}} of the root element (typically {{HTMLElement("html")}}). When used within the root element {{Cssxref("font-size")}}, it represents its initial value. A common browser default is `16px`, but user-defined preferences may modify this.
 - `rex`
-  - : Represents the x-height of the root element's {{Cssxref("font")}}.
+  - : Equal to the x-height of the root element's {{Cssxref("font")}}.
 - `ric`
   - : Equal to the value of [`ic`](#ic) unit on the root element's font.
 - `rlh`

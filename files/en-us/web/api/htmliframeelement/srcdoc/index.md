@@ -25,7 +25,7 @@ Getting the property returns a string containing the HTML serialization of the f
 This is `undefined` if the value is not set.
 
 Setting the property accepts either a {{domxref("TrustedHTML")}} object or a string.
-It parses this input as a HTML document and replaces the content of the frame with the result.
+It parses this input as an HTML document and replaces the content of the frame with the result.
 
 ### Exceptions
 

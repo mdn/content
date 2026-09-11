@@ -1,5 +1,6 @@
 ---
-title: image-resolution
+title: "`image-resolution` CSS property"
+short-title: image-resolution
 slug: Web/CSS/Reference/Properties/image-resolution
 page-type: css-property
 status:
@@ -32,7 +33,9 @@ image-resolution: unset;
 
 ### Values
 
-- {{cssxref("&lt;resolution&gt;")}}
+This property is specified as one or more space-separated values from the following list:
+
+- {{cssxref("resolution")}}
   - : Specifies the intrinsic resolution explicitly.
 - `from-image`
   - : Uses the intrinsic resolution as specified by the image format. If the image does not specify its own resolution, the explicitly specified resolution is used (if given), else it defaults to `1dppx` (1 image pixel per CSS px unit).

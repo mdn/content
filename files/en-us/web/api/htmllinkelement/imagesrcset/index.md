@@ -8,7 +8,7 @@ browser-compat: api.HTMLLinkElement.imageSrcset
 
 {{APIRef("HTML DOM")}}
 
-The **`imageSrcset`** property of the {{domxref("HTMLLinkElement")}} interface is a string which identifies one or more comma-separated **image candidate strings**. This property reflects the value of the {{htmlelement("link")}} element's [`imagesrcset`](/en-US/docs/Web/HTML/Reference/Elements/link#imagesrcset) attribute. This property can retrieved or set the `imagesrcset` attribute value.
+The **`imageSrcset`** property of the {{domxref("HTMLLinkElement")}} interface is a string which identifies one or more comma-separated **image candidate strings**. This property reflects the value of the {{htmlelement("link")}} element's [`imagesrcset`](/en-US/docs/Web/HTML/Reference/Elements/link#imagesrcset) attribute. This property can retrieve or set the `imagesrcset` attribute value.
 
 Each image candidate string contains an image URL and an optional width and/or pixel density descriptor indicating the conditions under which that candidate image should be used.
 

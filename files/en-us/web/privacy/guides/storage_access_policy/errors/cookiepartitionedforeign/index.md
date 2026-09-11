@@ -5,7 +5,7 @@ page-type: guide
 sidebar: privacy
 ---
 
-A request to access cookies or storage was _partitioned_ because it came from a third-party (a different origin) and [dynamic state partitioning](/en-US/docs/Web/Privacy/Guides/State_Partitioning#dynamic_partitioning) is enabled.
+A request to access cookies or storage was _partitioned_ because it came from a third party (a different origin) and [dynamic state partitioning](/en-US/docs/Web/Privacy/Guides/State_Partitioning#dynamic_partitioning) is enabled.
 
 ## Message
 

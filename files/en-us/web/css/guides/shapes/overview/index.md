@@ -22,7 +22,7 @@ The specification defines a few properties, including:
 
 ## Defining basic shapes
 
-The `shape-outside` property allows us to define a shape. It takes a variety of values that define different shapes specified in the {{cssxref("&lt;basic-shape&gt;")}} data type.
+The `shape-outside` property allows us to define a shape. It takes a variety of values that define different shapes specified in the {{cssxref("basic-shape")}} data type.
 
 In the following example, an image is floated to the left. We apply the `shape-outside` property with a `circle(50%)` value. The result is that the content now curves around the circular shape rather than following the rectangle created by the box of the image.
 

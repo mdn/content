@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.MouseEvent.screenY
 ---
 
-{{APIRef("UI Events")}}
+{{APIRef("Pointer Events")}}
 
 The **`screenY`** read-only property of the {{domxref("MouseEvent")}} interface provides the vertical coordinate (offset) of the mouse pointer in [screen coordinates](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems#screen).
 

@@ -1,5 +1,6 @@
 ---
-title: <image>
+title: "`<image>` CSS type"
+short-title: <image>
 slug: Web/CSS/Reference/Values/image
 page-type: css-type
 browser-compat: css.types.image
@@ -13,7 +14,7 @@ The **`<image>`** [CSS](/en-US/docs/Web/CSS) [data type](/en-US/docs/Web/CSS/Ref
 The `<image>` data type can be represented with any of the following:
 
 - An image denoted by the {{cssxref("url_value", "&lt;url&gt;")}} data type
-- A {{CSSxRef("&lt;gradient&gt;")}} data type
+- A {{cssxref("gradient")}} data type
 - A part of the webpage, defined by the {{CSSxRef("element","element()")}} function
 - An image, image fragment or solid patch of color, defined by the {{CSSxRef("image/image","image()")}} function
 - A blending of two or more images defined by the {{CSSxRef("cross-fade","cross-fade()")}} function.
@@ -29,6 +30,8 @@ CSS can handle the following kinds of images:
 - Images with no intrinsic dimensions but with _an intrinsic aspect ratio_ between its width and height, like an SVG or other [vector format](https://en.wikipedia.org/wiki/Vector_graphics).
 - Images with _neither intrinsic dimensions, nor an intrinsic aspect ratio_, like a CSS gradient.
 
+### Concrete size
+
 CSS determines an object's _concrete size_ using (1) its _intrinsic dimensions_; (2) its _specified size_, defined by CSS properties like {{CSSxRef("width")}}, {{CSSxRef("height")}}, or {{CSSxRef("background-size")}}; and (3) its _default size_, determined by the kind of property the image is used with:
 
 | Kind of Object (CSS Property)                                                                | Default object size                                                                                           |
@@ -40,7 +43,7 @@ CSS determines an object's _concrete size_ using (1) its _intrinsic dimensions_;
 | {{CSSxRef("mask-image")}}                                                                    | ?                                                                                                             |
 | {{CSSxRef("shape-outside")}}                                                                 | ?                                                                                                             |
 | {{CSSxRef("mask-border-source")}}                                                            | ?                                                                                                             |
-| {{CSSxRef("symbols", "symbols()")}} for @counter-style                                       | At risk feature. If supported, the browser-defined size matching the usual cursor size on the client's system |
+| {{cssxref("symbols()")}} for @counter-style                                                  | At risk feature. If supported, the browser-defined size matching the usual cursor size on the client's system |
 | {{CSSxRef("content")}} for a pseudo-element ({{CSSxRef("::after")}}/{{CSSxRef("::before")}}) | A 300px × 150px rectangle                                                                                     |
 
 The concrete object size is calculated using the following algorithm:
@@ -103,7 +106,7 @@ image-set("cat.jpg" 1x, "dog.jpg" 1x) /* every image in an image set must have a
 
 ## See also
 
-- {{CSSxRef("&lt;gradient&gt;")}}
+- {{cssxref("gradient")}}
 - {{CSSxRef("element","element()")}}
 - {{CSSxRef("image/image", "image()")}}
 - {{CSSxRef("image/image-set","image-set()")}}

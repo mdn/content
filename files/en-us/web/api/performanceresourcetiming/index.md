@@ -62,7 +62,7 @@ This interface extends the following {{domxref("PerformanceEntry")}} properties 
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
   - : Returns the resource's URL.
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} for the time a resource fetch started. This value is equivalent to {{domxref("PerformanceResourceTiming.fetchStart")}}.
+  - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} for the time a resource fetch started. If there are no HTTP redirects or their timing information is not exposed, this value is equivalent to {{domxref("PerformanceResourceTiming.fetchStart")}}. Otherwise, this value can be earlier than `fetchStart`.
 
 ### Timestamps
 
@@ -77,7 +77,7 @@ The interface supports the following timestamp properties which you can see in t
 - {{domxref('PerformanceResourceTiming.workerStart')}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMHighResTimeStamp")}} immediately before dispatching the {{domxref("FetchEvent")}} if a Service Worker thread is already running, or immediately before starting the Service Worker thread if it is not already running. If the resource is not intercepted by a Service Worker the property will always return 0.
 - {{domxref('PerformanceResourceTiming.fetchStart')}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts to fetch the resource.
+  - : A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts to fetch the resource. If there are no HTTP redirects or their timing information is not exposed, this value is equivalent to {{domxref("PerformanceEntry.startTime")}}. Otherwise, this value can be later than `startTime`.
 - {{domxref('PerformanceResourceTiming.domainLookupStart')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts the domain name lookup for the resource.
 - {{domxref('PerformanceResourceTiming.domainLookupEnd')}} {{ReadOnlyInline}}
@@ -90,11 +90,11 @@ The interface supports the following timestamp properties which you can see in t
   - : A {{domxref("DOMHighResTimeStamp")}} immediately after the browser finishes establishing the connection to the server to retrieve the resource.
 - {{domxref('PerformanceResourceTiming.requestStart')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts requesting the resource from the server.
-- {{domxref('PerformanceResourceTiming.firstInterimResponseStart')}} {{experimental_inline}} {{ReadOnlyInline}}
+- {{domxref('PerformanceResourceTiming.firstInterimResponseStart')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} that represents the interim response time (for example, 100 Continue or 103 Early Hints).
 - {{domxref('PerformanceResourceTiming.responseStart')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} immediately after the browser receives the first byte of the response from the server (which may be an interim response).
-- {{domxref('PerformanceResourceTiming.finalResponseHeadersStart')}} {{experimental_inline}} {{ReadOnlyInline}}
+- {{domxref('PerformanceResourceTiming.finalResponseHeadersStart')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} that represents the final headers response time (for example, 200 Success), after any interim response time.
 - {{domxref('PerformanceResourceTiming.responseEnd')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} immediately after the browser receives the last byte of the resource or immediately before the transport connection is closed, whichever comes first.
@@ -103,11 +103,11 @@ The interface supports the following timestamp properties which you can see in t
 
 Additionally, this interface exposes the following properties containing more information about a resource:
 
-- {{domxref("PerformanceResourceTiming.contentType")}} {{ReadOnlyInline}} {{experimental_inline}}
+- {{domxref("PerformanceResourceTiming.contentType")}} {{ReadOnlyInline}}
   - : A string representing a minimized and standardized version of the MIME-type of the fetched resource.
 - {{domxref('PerformanceResourceTiming.decodedBodySize')}} {{ReadOnlyInline}}
   - : A number that is the size (in octets) received from the fetch (HTTP or cache) of the message body, after removing any applied content encoding.
-- {{domxref("PerformanceResourceTiming.deliveryType")}} {{experimental_inline}} {{ReadOnlyInline}}
+- {{domxref("PerformanceResourceTiming.deliveryType")}} {{ReadOnlyInline}}
   - : Indicates how the resource was delivered — for example from the cache or from a navigational prefetch.
 - {{domxref('PerformanceResourceTiming.encodedBodySize')}} {{ReadOnlyInline}}
   - : A number representing the size (in octets) received from the fetch (HTTP or cache), of the payload body, before removing any applied content encodings.
@@ -127,7 +127,7 @@ Additionally, this interface exposes the following properties containing more in
 ## Instance methods
 
 - {{domxref("PerformanceResourceTiming.toJSON()")}}
-  - : Returns a JSON representation of the `PerformanceResourceTiming` object.
+  - : Overrides the {{domxref("PerformanceEntry.toJSON()")}} method to return a JSON representation of the `PerformanceResourceTiming` object.
 
 ## Examples
 

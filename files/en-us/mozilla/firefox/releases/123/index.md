@@ -10,8 +10,6 @@ This article provides information about the changes in Firefox 123 that affect d
 
 ## Changes for web developers
 
-### Developer Tools
-
 ### HTML
 
 - The {{htmlelement("template")}} element now supports a `shadowrootmode` attribute that allows declarative creation of a shadow DOM subtree. The attribute can be set to either `open` or `closed`, which expose or hide JavaScript in the shadow DOM from external code, respectively. These are the same values as the `mode` option of the {{domxref("Element.attachShadow()", "attachShadow()")}} method. ([Firefox bug 1870052](https://bugzil.la/1870052))

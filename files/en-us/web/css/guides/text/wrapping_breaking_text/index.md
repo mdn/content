@@ -28,7 +28,7 @@ In CSS, if you have an unbreakable string such as a very long word, by default i
 
 {{EmbedLiveSample("inline-overflow")}}
 
-CSS will display overflow in this way, because doing something else could cause data loss. In CSS data loss means that some of your content vanishes. So the initial value of {{cssxref("overflow")}} is `visible`, and we can see the overflowing text. It is generally better to be able to see overflow, even if it is messy. If things were to disappear or be cropped as would happen if `overflow` was set to `hidden` you might not spot it when previewing your site. Messy overflow is at least easy to spot, and in the worst case, your visitor will be able to see and read the content even if it looks a bit strange.
+CSS will display overflow in this way, because doing something else could cause data loss. In CSS data loss means that some of your content vanishes. So the initial value of {{cssxref("overflow")}} is `visible`, and we can see the overflowing text. It is generally better to be able to see overflow, even if it is messy. If things were to disappear or be cropped as would happen if `overflow` was set to `hidden` you might not spot it when previewing your site. Messy overflow is at least noticeable, and in the worst case, your visitor will be able to see and read the content even if it looks a bit strange.
 
 In this next example, you can see what happens if `overflow` is set to `hidden`.
 
@@ -189,9 +189,9 @@ CSS provides additional hyphenation control: the {{cssxref("hyphenate-limit-char
 
 ## The `<wbr>` element
 
-If you know where you want a long string to break, then it is also possible to insert the HTML {{HTMLElement("wbr")}} element. This can be useful in cases such as displaying a long URL on a page. You can then add the property in order to break the string in sensible places that will make it easier to read.
+If you know where you want a long string to be allowed to break, you can also use the HTML {{HTMLElement("wbr")}} element. The `<wbr>` element introduces a line break opportunity—if the word overflows, it will wrap at this position. This allows you to preserve meaningful segments in the string, such as long URLs.
 
-In the below example the text breaks in the location of the {{HTMLElement("wbr")}}.
+In the example below, the browser may break the text at the location of the {{HTMLElement("wbr")}}.
 
 ```html live-sample___wbr
 <div class="box">

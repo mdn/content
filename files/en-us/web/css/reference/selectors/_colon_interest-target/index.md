@@ -1,5 +1,6 @@
 ---
-title: :interest-target
+title: "`:interest-target` CSS pseudo-class"
+short-title: :interest-target
 slug: Web/CSS/Reference/Selectors/:interest-target
 page-type: css-pseudo-class
 status:
@@ -46,9 +47,9 @@ body {
 
 button {
   padding: 5px 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   border-radius: 5px;
-  background-color: #eee;
+  background-color: #eeeeee;
 
   cursor: pointer;
 }

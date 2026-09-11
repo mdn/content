@@ -44,7 +44,7 @@ To do this, you need to [measure the performance](/en-US/docs/Learn_web_developm
 
 HTML is simple in terms of performance — it is mostly text, which is small in size, and therefore, mostly quick to download and render. The key issues that can impact the performance of a web page include:
 
-- Size of the image and video files: It is important to consider how to handle the content of replaced elements such as {{htmlelement("img")}} and {{htmlelement("video")}}. Image and video files are large and can add significantly to the weight of the page. Therefore, it is important to minimize the amount of bytes that get downloaded on a user's device (for example, serve smaller images for mobile). You also need to consider improving the perceived performance by loading images and videos on a page only when they are needed.
+- Size of the image and video files: It is important to consider how to handle the content of replaced elements such as {{htmlelement("img")}} and {{htmlelement("video")}}. Image and video files are large and can add significantly to the weight of the page. Therefore, it is important to minimize the number of bytes that get downloaded on a user's device (for example, serve smaller images for mobile). You also need to consider improving the perceived performance by loading images and videos on a page only when they are needed.
 - Delivery of embedded content: This is usually the content embedded in {{htmlelement("iframe")}} elements. Loading content into `<iframe>`s can impact performance significantly, so it should be considered carefully.
 - Order of resource loading: To maximize the perceived and actual performance, the HTML should be loaded first, in the order in which it appears on the page. You can then use various features to influence the order of resource loading for better performance. For example, you can preload critical CSS and fonts early, but defer non-critical JavaScript until later on.
 
@@ -141,7 +141,9 @@ Lazy loading has historically been handled using JavaScript, but browsers now ha
 
 See [Browser-level image lazy loading for the web](https://web.dev/articles/browser-level-image-lazy-loading) on web.dev for detailed information.
 
-You can also lazy load video content by using the `preload` attribute. For example:
+### Lazy loading video and audio
+
+You can also lazy load video content until the video is played, by using the `preload` attribute. For example:
 
 ```html
 <video controls preload="none" poster="poster.jpg">
@@ -151,6 +153,26 @@ You can also lazy load video content by using the `preload` attribute. For examp
 ```
 
 Giving `preload` a value of `none` tells the browser to not preload any of the video data before the user decides to play it, which is obviously good for performance. Instead, it will just show the image indicated by the `poster` attribute. Different browsers have different default video loading behavior, so it is good to be explicit.
+
+Giving `preload` a value of `metadata` asks the browser to download the minimal data needed to display the video before playing (for example the length, dimensions, and maybe initial frame).
+
+The `loading` attribute can further enhance lazy loading for videos by deferring loading of any video data, regardless of the `preload` value, as well as deferring loading of the `poster` image, until the video is near the viewport (at which point the `preload` value is used as per usual).
+
+```html
+<video controls preload="none" poster="poster.jpg" loading="lazy">
+  <source src="video.webm" type="video/webm" />
+  <source src="video.mp4" type="video/mp4" />
+</video>
+```
+
+This also can be used with audio content:
+
+```html
+<audio
+  controls
+  src="/shared-assets/audio/t-rex-roar.mp3"
+  loading="lazy"></audio>
+```
 
 See [Fast playback with audio and video preload](https://web.dev/articles/fast-playback-with-preload) on web.dev for detailed information.
 

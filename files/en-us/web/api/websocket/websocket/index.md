@@ -85,6 +85,37 @@ relativeWebSocket = new WebSocket("/local/url");
 relativeWebSocket.close();
 ```
 
+The previous examples show how to _construct_ a `WebSocket`, but the connection is established asynchronously. Calling {{domxref("WebSocket/send", "send()")}} before the {{domxref("WebSocket/open_event", "open")}} event fires throws an `InvalidStateError` exception, because {{domxref("WebSocket/readyState", "readyState")}} is still `CONNECTING`. If the connection cannot be established (for example, the server is unreachable or the handshake fails), an {{domxref("WebSocket/error_event", "error")}} event fires and is followed by a {{domxref("WebSocket/close_event", "close")}} event whose `wasClean` property is `false` — so every connection attempt ultimately ends with either an `open` event or a `close` event. The example below shows how to wait for the connection before sending, and how to handle the `error` and `close` events:
+
+```js
+// Create WebSocket connection.
+const socket = new WebSocket("wss://websocket.example.org");
+
+// Connection opened
+socket.addEventListener("open", (event) => {
+  socket.send("Hello Server!");
+});
+
+// Listen for messages
+socket.addEventListener("message", (event) => {
+  console.log("Message from server:", event.data);
+});
+
+// Handle errors
+socket.addEventListener("error", (event) => {
+  console.error("WebSocket error:", event);
+});
+
+// Handle disconnection
+socket.addEventListener("close", (event) => {
+  if (event.wasClean) {
+    console.log(`Closed cleanly, code=${event.code}, reason=${event.reason}`);
+  } else {
+    console.log("Connection died");
+  }
+});
+```
+
 ## Specifications
 
 {{Specifications}}
@@ -95,4 +126,4 @@ relativeWebSocket.close();
 
 ## See also
 
-- [RFC 6455](https://www.rfc-editor.org/rfc/rfc6455.html) (the WebSocket Protocol specification)
+- [RFC 6455](https://www.rfc-editor.org/info/rfc6455/) (the WebSocket Protocol specification)

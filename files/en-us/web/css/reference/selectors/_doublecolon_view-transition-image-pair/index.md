@@ -1,5 +1,6 @@
 ---
-title: ::view-transition-image-pair()
+title: "`::view-transition-image-pair()` CSS pseudo-element"
+short-title: ::view-transition-image-pair()
 slug: Web/CSS/Reference/Selectors/::view-transition-image-pair
 page-type: css-pseudo-element
 browser-compat: css.selectors.view-transition-image-pair

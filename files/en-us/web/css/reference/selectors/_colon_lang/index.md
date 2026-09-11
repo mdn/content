@@ -1,5 +1,6 @@
 ---
-title: :lang()
+title: "`:lang()` CSS pseudo-class"
+short-title: :lang()
 slug: Web/CSS/Reference/Selectors/:lang
 page-type: css-pseudo-class
 browser-compat: css.selectors.lang
@@ -18,8 +19,8 @@ The **`:lang()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/
 
 ```html interactive-example
 <p lang="en-US">
-  Music during road trips and long commutes aren’t a problem, but using
-  headphones isn’t the best thing to do while driving in your car.
+  Music during road trips and long commutes aren't a problem, but using
+  headphones isn't the best thing to do while driving in your car.
 </p>
 
 <p lang="pl-PL">

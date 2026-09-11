@@ -1,5 +1,6 @@
 ---
-title: -webkit-touch-callout
+title: "`-webkit-touch-callout` CSS property"
+short-title: -webkit-touch-callout
 slug: Web/CSS/Reference/Properties/-webkit-touch-callout
 page-type: css-property
 status:
@@ -30,6 +31,8 @@ When a target is touched and held on iOS, Safari displays a callout information 
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `default`
   - : The default callout is displayed.

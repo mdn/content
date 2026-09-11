@@ -1,5 +1,6 @@
 ---
-title: :any-link
+title: "`:any-link` CSS pseudo-class"
+short-title: :any-link
 slug: Web/CSS/Reference/Selectors/:any-link
 page-type: css-pseudo-class
 browser-compat: css.selectors.any-link
@@ -92,5 +93,5 @@ a:-webkit-any-link {
 - [Creating links](/en-US/docs/Learn_web_development/Core/Structuring_content/Creating_links)
 - Matches HTML elements: [`<a>`](/en-US/docs/Web/HTML/Reference/Elements/a) and [`<area>`](/en-US/docs/Web/HTML/Reference/Elements/area) with an [`href`](/en-US/docs/Web/HTML/Reference/Elements/a#href) attribute
 - Related CSS selectors:
-  - [`:visited`](/en-US/docs/Web/CSS/Reference/Selectors/:visited)
-  - [`:link`](/en-US/docs/Web/CSS/Reference/Selectors/:link)
+  - {{cssxref(":visited")}}
+  - {{cssxref(":link")}}

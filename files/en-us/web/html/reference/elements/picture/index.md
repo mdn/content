@@ -1,5 +1,6 @@
 ---
-title: "<picture>: The Picture element"
+title: "`<picture>` HTML picture element"
+short-title: <picture>
 slug: Web/HTML/Reference/Elements/picture
 page-type: html-element
 browser-compat: html.elements.picture
@@ -70,7 +71,7 @@ If the {{HTMLElement("source")}}'s media condition evaluates to `false`, the bro
 </picture>
 ```
 
-You can swap image assets for light and dark themes using the [`prefers-color-scheme`](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme) media feature:
+You can swap image assets for light and dark themes using the {{cssxref("@media/prefers-color-scheme")}} media feature:
 
 ```html
 <picture>
@@ -221,4 +222,4 @@ The `type` attribute specifies a [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_ty
 - {{HTMLElement("source")}} element
 - Positioning and sizing the picture within its frame: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
 - [Image file type and format guide](/en-US/docs/Web/Media/Guides/Formats/Image_types)
-- [CSS `prefers-color-scheme` media feature](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-color-scheme)
+- {{cssxref("@media/prefers-color-scheme")}} media feature

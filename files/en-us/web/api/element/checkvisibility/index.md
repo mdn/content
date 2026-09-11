@@ -8,7 +8,7 @@ browser-compat: api.Element.checkVisibility
 
 {{APIRef("DOM")}}
 
-The **`checkVisibility()`** method of the {{domxref("Element")}} interface checks whether the element is visible.
+The **`checkVisibility()`** method of the {{domxref("Element")}} interface checks whether the element is potentially visible.
 
 The method returns `false` in either of the following situations:
 
@@ -16,7 +16,10 @@ The method returns `false` in either of the following situations:
 - The element is not being rendered because the element or an ancestor element sets the {{cssxref("content-visibility")}} property to [`hidden`](/en-US/docs/Web/CSS/Reference/Properties/content-visibility#hidden).
 
 The optional parameter enables additional checks to test for other interpretations of what "visible" means.
-For example, you can further check whether an element has an opacity of `0`, if the value of the element [`visibility`](/en-US/docs/Web/CSS/Reference/Properties/visibility) property makes it invisible, or if the element {{cssxref("content-visibility")}} property has a value of [`auto`](/en-US/docs/Web/CSS/Reference/Properties/content-visibility#auto) and its rendering is currently being skipped.
+For example, you can further check whether an element has an opacity of `0`, if the value of the element {{cssxref("visibility")}} property makes it invisible, or if the element {{cssxref("content-visibility")}} property has a value of [`auto`](/en-US/docs/Web/CSS/Reference/Properties/content-visibility#auto) and its rendering is currently being skipped.
+
+Note that a return value of `true` does not guarantee the element is visible to the user, just that it may be visible.
+Elements outside the viewport or occluded by other content may still return `true`.
 
 ## Syntax
 

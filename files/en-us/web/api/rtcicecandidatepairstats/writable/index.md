@@ -9,7 +9,7 @@ status:
 browser-compat: api.RTCStatsReport.type_candidate-pair.writable
 ---
 
-{{APIRef("WebRTC")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebRTC")}}{{Non-standard_Header}}
 
 The **`writable`** property of the {{domxref("RTCIceCandidatePairStats")}} dictionary indicates whether or not the connection described by the candidate pair is writable.
 

@@ -2,6 +2,8 @@
 title: Registering attribution triggers
 slug: Web/API/Attribution_Reporting_API/Registering_triggers
 page-type: guide
+status:
+  - deprecated
 ---
 
 {{DefaultAPISidebar("Attribution Reporting API")}}
@@ -84,7 +86,7 @@ However, what happens behind the scenes to register triggers, look for matches, 
 
    Again, see {{httpheader("Attribution-Reporting-Register-Trigger")}} for a detailed description of all the available fields.
 
-3. When the user interacts with the attribution trigger, the browser attempts to match the trigger against any attribution source entries stored in the browser's private local cache. For a successful match, the `Attribution-Reporting-Register-Trigger`'s [`"trigger_data"`](/en-US/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Trigger#trigger_data) must match one of the values provided in the {{httpheader("Attribution-Reporting-Register-Source")}}'s [`"trigger_data"`](/en-US/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#trigger_data), and the site (scheme + [eTLD+1](/en-US/docs/Glossary/eTLD)) of the top-level page on which the trigger is being registered must:
+3. When the user interacts with the attribution trigger, the browser attempts to match the trigger against any attribution source entries stored in the browser's private local cache. For a successful match, the `Attribution-Reporting-Register-Trigger`'s [`"trigger_data"`](/en-US/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Trigger#trigger_data) must match one of the values provided in the {{httpheader("Attribution-Reporting-Register-Source")}}'s [`"trigger_data"`](/en-US/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Source#trigger_data), and the site (scheme + {{glossary("registrable domain")}}) of the top-level page on which the trigger is being registered must:
    - match the site of at least one of the `destination`s specified in the source's associated data.
    - be same-origin with the request that specified the source registration.
 
@@ -104,7 +106,7 @@ However, what happens behind the scenes to register triggers, look for matches, 
 
 ## HTML-based attribution triggers
 
-HTML-based attribution triggers can be used for detecting conversions on a page when it first loads — or more precisely when an `<img>` or `<script>` loads. For example, if a user has clicked an attribution source link on a publisher's page and navigated to the advertiser's page, you can to register the attribution trigger and get the browser to attempt a match with stored source entries as soon as the advertiser's page loads.
+HTML-based attribution triggers can be used for detecting conversions on a page when it first loads — or more precisely when an `<img>` or `<script>` loads. For example, if a user has clicked an attribution source link on a publisher's page and navigated to the advertiser's page, you can register the attribution trigger and get the browser to attempt a match with stored source entries as soon as the advertiser's page loads.
 
 You can register an attribution trigger by adding the `attributionsrc` attribute to an appropriate element. This can be done on {{htmlelement("img")}} and {{htmlelement("script")}} elements.
 

@@ -80,7 +80,7 @@ You can use the {{cssxref("border")}} shorthand property, which lets you configu
 
 ## Specifying colors as values in stylesheets
 
-Now that you know which [CSS properties let you apply color to elements](#properties_that_can_have_color), you can start adding colors to your websites. Let's look at some examples of using color within a {{Glossary("stylesheet")}}. In this example, we use several previously mentioned properties, with the concept of applying colors in CSS being the same no matter the property.
+Now that you know which [CSS properties let you apply color to elements](#properties_that_can_have_color), you can start adding colors to your websites. Let's look at some examples of using color within a {{Glossary("style sheet")}}. In this example, we use several previously mentioned properties, with the concept of applying colors in CSS being the same no matter the property.
 
 Let's look at the result first, before going on to look at the code we need to create it:
 
@@ -190,7 +190,7 @@ CSS isn't the only web technology that supports color. Other examples include:
 
 ## See also
 
-- [`<color>`](/en-US/docs/Web/CSS/Reference/Values/color_value) data type
+- {{cssxref("&lt;color&gt;")}} data type
 - [CSS color values](/en-US/docs/Web/CSS/Guides/Colors/Color_values) guide
 - [Using color wisely](/en-US/docs/Web/CSS/Guides/Colors/Using_color_wisely)
 - [CSS color module](/en-US/docs/Web/CSS/Guides/Colors)
