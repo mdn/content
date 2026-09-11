@@ -46,7 +46,7 @@ const myModuleSource = await WebAssembly.compileStreaming(
 
 This kind of manual workflow is problematic for several reasons:
 
-- It involves too much low-level manipulation which may be inconsistent with the default module loader's behavior, such as caching, HTTP header settings, and module specifier resolution.
+- It involves too much low-level manipulation, which may be inconsistent with the default module loader's behavior, such as caching, HTTP header settings, and module specifier resolution.
 - It is imperative, making it difficult to reason about the module's dependencies and their evaluation order, especially for bundlers or other analysis tools.
 - Userland evaluation of the raw source code is incompatible with strict [CSP](/en-US/docs/Web/HTTP/Guides/CSP) settings.
 
