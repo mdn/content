@@ -204,9 +204,9 @@ CSS provides five special universal property values for controlling inheritance.
 
 ### Playing with inheritance control values
 
-In this section, you will play with the universal property values to get a better idea of their effects. Playing with code really is the best way to gain a deeper understanding of HTML and CSS:
+In this section, you will play with the universal property values to get a better idea of their effects. Playing with code really is the best way to gain a deeper understanding of HTML and CSS.
 
-The follow HTML defines a list of links:
+The following HTML defines a list of links:
 
 ```html live-sample___keywords
 <ul>
@@ -253,7 +253,7 @@ Click on the "Play" button to open the example in the MDN Playground, then follo
 
 2. Do you understand why the third and fourth links are the color that they are? Read the earlier explanations of the `initial` and `unset` values and think about it before reading the explanations below.
 
-   The third `<a>` element's `color` is set to `initial`, which means it uses the initial value of the `color` property, which is `black`, and not the browser's default `blue` link color.
+   The third `<a>` element's `color` is set to `initial`, which means it uses the initial value of the property (in this case black) and not the browser default for links, which is blue.
 
    The fourth `<a>` element's `color` is set to `unset`, which unsets any `color` value applied to the `<a>` element, in the browser's stylesheet or elsewhere. This means that the `<a>` element adopts the `color` of its parent `<li>` element: `green`.
 
@@ -267,9 +267,9 @@ Click on the "Play" button to open the example in the MDN Playground, then follo
 
    To give you some hints, it has inherited:
 
-   - A {{cssxref("display")}} value of `block` to cause it to sit on a new line.
+   - A {{cssxref("display")}} value of `list-item` to cause it to sit on a new line and generate a bullet.
    - A {{cssxref("text-decoration")}} value of `none` to remove its underline.
-   - A {{cssxref("list-style-type")}} value of `disc` to give it a filled circle bullet.
+   - A {{cssxref("list-style-type")}} value of `disc` to give its bullet a filled circle shape.
    - A {{cssxref("color")}} value of `green`, like it did in the first place.
 
 ### Resetting all property values
