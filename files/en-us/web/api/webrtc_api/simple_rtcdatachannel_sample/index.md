@@ -98,10 +98,16 @@ This is quite straightforward. We declare variables and grab references to all t
 
 ### Establishing a connection
 
-When the user clicks the "Connect" button, the `connectPeers()` method is called. We're going to break this up and look at it a bit at a time, for clarity.
+When the user clicks the "Connect" button, the `connectPeers()` function is called. We're going to break this up and look at it a bit at a time, for clarity.
 
 > [!NOTE]
 > Even though both ends of our connection will be on the same page, we're going to refer to the one that starts the connection as the "local" one, and to the other as the "remote" end.
+
+```js
+async function connectPeers() {
+  // To be written...
+}
+```
 
 #### Set up the local peer
 
@@ -150,21 +156,19 @@ We configure each {{domxref("RTCPeerConnection")}} to have an event handler for 
 The last thing we need to do in order to begin connecting our peers is to create a connection offer.
 
 ```js
-localConnection
-  .createOffer()
-  .then((offer) => localConnection.setLocalDescription(offer))
-  .then(() =>
-    remoteConnection.setRemoteDescription(localConnection.localDescription),
-  )
-  .then(() => remoteConnection.createAnswer())
-  .then((answer) => remoteConnection.setLocalDescription(answer))
-  .then(() =>
-    localConnection.setRemoteDescription(remoteConnection.localDescription),
-  )
-  .catch(handleCreateDescriptionError);
+try {
+  const offer = await localConnection.createOffer();
+  await localConnection.setLocalDescription(offer);
+  await remoteConnection.setRemoteDescription(localConnection.localDescription);
+  const answer = await remoteConnection.createAnswer();
+  await remoteConnection.setLocalDescription(answer);
+  await localConnection.setRemoteDescription(remoteConnection.localDescription);
+} catch (error) {
+  handleCreateDescriptionError(error);
+}
 ```
 
-Let's go through this line by line and decipher what it means.
+Each `await` waits for the operation to complete before proceeding to the next step. Let's go through this line by line and decipher what it means.
 
 1. First, we call {{domxref("RTCPeerConnection.createOffer()")}} method to create an {{Glossary("SDP")}} (Session Description Protocol) blob describing the connection we want to make. This method accepts, optionally, an object with constraints to be met for the connection to meet your needs, such as whether the connection should support audio, video, or both. In our simple example, we don't have any constraints.
 2. If the offer is created successfully, we pass the blob along to the local connection's {{domxref("RTCPeerConnection.setLocalDescription()")}} method. This configures the local end of the connection.
@@ -172,7 +176,7 @@ Let's go through this line by line and decipher what it means.
 4. That means it's time for the remote peer to reply. It does so by calling its {{domxref("RTCPeerConnection.createAnswer", "createAnswer()")}} method. This generates a blob of SDP which describes the connection the remote peer is willing and able to establish. This configuration lies somewhere in the union of options that both peers can support.
 5. Once the answer has been created, it's passed into the remoteConnection by calling {{domxref("RTCPeerConnection.setLocalDescription()")}}. That establishes the remote's end of the connection (which, to the remote peer, is its local end. This stuff can be confusing, but you get used to it). Again, this would normally be exchanged through a signaling server.
 6. Finally, the local connection's remote description is set to refer to the remote peer by calling localConnection's {{domxref("RTCPeerConnection.setRemoteDescription()")}}.
-7. The `catch()` calls a routine that handles any errors that occur.
+7. The `catch` block calls a routine that handles any errors that occur in the `try` block.
 
 > [!NOTE]
 > Once again, this process is not a real-world implementation; in normal usage, there's two chunks of code running on two machines, interacting and negotiating the connection. A side channel, commonly called a "signaling server," is usually used to exchange the description (which is in **application/sdp** form) between the two peers.
