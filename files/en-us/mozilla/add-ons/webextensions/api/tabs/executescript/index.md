@@ -13,7 +13,7 @@ Injects JavaScript code into a page.
 
 You can inject code into pages whose URL you can express using a [match pattern](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). To do so, its scheme must be one of: `http`, `https`, or `file`.
 
-You must have the permission for the page's URL either explicitly, as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), or using the [activeTab permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission). Note that some special pages do not allow this permission, including reader view, view-source, PDF viewer, and other built-in browser UI pages.
+You must have permission for the page's URL either explicitly, as a [host permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), or using the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission). Note that some special pages do not allow this permission, including reader view, view-source, PDF viewer, and other built-in browser UI pages.
 
 Extensions cannot run content scripts in [extension pages](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages). If an extension wants to run code in an extension page dynamically, it can include a script in the document. This script contains the code to run and registers a {{WebExtAPIRef("runtime.onMessage")}} listener that implements a way to execute the code. The extension can then send a message to the listener to trigger the code's execution.
 

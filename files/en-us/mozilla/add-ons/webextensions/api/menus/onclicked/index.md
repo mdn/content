@@ -10,6 +10,8 @@ Fired when a menu item is clicked.
 
 For compatibility with other browsers, Firefox makes this event available via the `contextMenus` namespace as well as the `menus` namespace.
 
+If the extension has the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/activeTab_permission), selecting a menu item is a user action that grants it temporary access to the tab where the click occurred.
+
 ## Syntax
 
 ```js-nolint
