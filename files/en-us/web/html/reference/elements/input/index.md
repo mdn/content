@@ -640,7 +640,8 @@ A few additional non-standard attributes are listed following the descriptions o
 - `webkitdirectory`
   - : The Boolean `webkitdirectory` attribute, if present, indicates that only directories should be available to be selected by the user in the file picker interface. See {{domxref("HTMLInputElement.webkitdirectory")}} for additional details and examples.
 
-    `webkitdirectory` is defined in the [File and Directory Entries API](https://wicg.github.io/entries-api/#dom-htmlinputelement-webkitdirectory), a Web Platform Incubator Community Group (WICG) specification. It's named `webkitdirectory` because of its origins as a Google Chrome-specific API.
+    > [!NOTE]
+    > `webkitdirectory` is defined in the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API). It's named `webkitdirectory` because of its origins as a Chrome-specific API. It is now available in all browsers.
 
 - `width`
   - : Valid for the `image` input button only, the `width` is the width of the image file to display to represent the graphical submit button. See the {{HTMLElement("input/image", "image")}} input type.
