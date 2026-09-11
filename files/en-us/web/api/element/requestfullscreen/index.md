@@ -126,7 +126,7 @@ Fullscreen mode is controlled by the [Permissions-Policy](/en-US/docs/Web/HTTP/G
 
 The default allowlist for `screen-wake-lock` is `self`.
 This allows fullscreen usage in same-origin nested frames but prevents them in third-party content.
-Third-party usage can be enabled by the server first setting the `Permissions-Policy` header to grant permission a particular third-party origin.
+Third-party usage can be enabled by the server first setting the `Permissions-Policy` header to grant permission to a particular third-party origin.
 
 ```http
 Permissions-Policy: fullscreen=(self b.example.com)
