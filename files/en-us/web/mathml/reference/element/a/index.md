@@ -46,7 +46,7 @@ This element's attributes include the [global MathML attributes](/en-US/docs/Web
 
 ### Basic usage
 
-This example marks up the [Gamma function](https://en.wikipedia.org/wiki/Gamma_function) in MathML. It includes several nested MathML `<a>` elements to link individual parts of the formula to their respective sections on the Wiki page.
+This example marks up the [Gamma function](https://en.wikipedia.org/wiki/Gamma_function) in MathML. It includes several MathML `<a>` elements to link individual parts of the formula to their respective sections on the Wiki page.
 
 #### MathML
 

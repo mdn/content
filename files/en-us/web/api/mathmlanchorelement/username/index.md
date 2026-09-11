@@ -8,7 +8,7 @@ browser-compat: api.MathMLAnchorElement.username
 
 {{APIRef("MathML")}}
 
-The **`username`** property of the {{domxref("MathMLAnchorElement")}} interface is a string containing the username component of the `<a>` element's `href`. If the URL does not have a username, this property contains an empty string, `""`.
+The **`username`** property of the {{domxref("MathMLAnchorElement")}} interface is a string containing the username component of the [`<a>`](/en-US/docs/Web/MathML/Reference/Element/a) element's `href`. If the URL does not have a username, this property contains an empty string, `""`.
 
 This property can be set to change the username of the URL. If the URL has no {{domxref("MathMLAnchorElement.host", "host")}} or its scheme is `file:`, then setting this property has no effect.
 
