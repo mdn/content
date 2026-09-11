@@ -59,7 +59,7 @@ If you want to become an issuer, and have your website issue private state token
 
 ### Creating an issuer server
 
-To implement the token issuer server you will need to build your own server side application exposing HTTP endpoints. The issuer component is composed of two main modules:
+To implement the token issuer server you will need to build your own server-side application exposing HTTP endpoints. The issuer component is composed of two main modules:
 
 1. The issuer app
 2. The token issuer
