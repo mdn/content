@@ -57,7 +57,7 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when setting 
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : Thrown if the origin can not be {{glossary("Serialization", "serialized")}} to a URL.
+  - : Thrown if the origin cannot be {{glossary("Serialization", "serialized")}} to a URL.
 - {{jsxref("TypeError")}}
   - : Thrown if:
     - Both the `expires` and `maxAge` properties are set.

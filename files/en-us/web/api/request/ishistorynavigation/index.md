@@ -21,25 +21,27 @@ A boolean value.
 This example executes in a service worker. It listens for the {{domxref("ServiceWorkerGlobalScope/fetch_event", "fetch")}} event. In the event handler, the service worker checks the `isHistoryNavigation` property to know whether the request happened because of a history navigation. If so, it attempts to respond with a cached response. If the cache does not contain a response for this request, the service worker fetches a response from the network, caches a clone of it, and responds with the network response.
 
 ```js
-self.addEventListener("request", (event) => {
+self.addEventListener("fetch", (event) => {
   // …
 
   if (event.request.isHistoryNavigation) {
     event.respondWith(
-      caches.match(event.request).then((response) => {
+      (async () => {
+        let response = await caches.match(event.request);
         if (response !== undefined) {
           return response;
         }
-        return fetch(event.request).then((response) => {
-          const responseClone = response.clone();
+        response = await fetch(event.request);
+        const responseClone = response.clone();
 
+        event.waitUntil(
           caches
             .open("v1")
-            .then((cache) => cache.put(event.request, responseClone));
+            .then((cache) => cache.put(event.request, responseClone)),
+        );
 
-          return response;
-        });
-      }),
+        return response;
+      })(),
     );
   }
 

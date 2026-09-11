@@ -435,6 +435,20 @@ The {{cssxref("text-decoration-inset")}} CSS property now supports percentages a
 - `layout.css.text-decoration-inset-percentage.enabled`
   - : Set to `true` to enable.
 
+### `view-timeline` includes `view-timeline-inset`
+
+The {{cssxref("view-timeline")}} shorthand property now supports the {{cssxref("view-timeline-inset")}} property. The shorthand lets you specify start and/or end inset (or outset) values to adjust the position of the view progress timeline. ([Firefox bug 2046602](https://bugzil.la/2046602)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 155           | Yes                 |
+| Developer Edition | 155           | No                  |
+| Beta              | 155           | No                  |
+| Release           | 155           | No                  |
+
+- `layout.css.scroll-driven-animations.enabled`
+  - : Set to `true` to enable.
+
 ## SVG
 
 **No experimental features in this release cycle.**
@@ -892,7 +906,7 @@ The HTTP [`Accept`](/en-US/docs/Web/HTTP/Reference/Headers/Accept) header in [de
 ### SameSite=Lax by default
 
 [`SameSite` cookies](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) have a default value of `Lax`.
-With this setting, cookies are only sent when a user is navigating to the origin site, not for cross-site subrequests to load images or frames into a third party site and so on.
+With this setting, cookies are only sent when a user is navigating to the origin site, not for cross-site subrequests to load images or frames into a third-party site and so on.
 For more details see [Firefox bug 1617609](https://bugzil.la/1617609).
 
 | Release channel   | Version added | Enabled by default? |

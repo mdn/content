@@ -10,7 +10,7 @@ browser-compat: api.PerformanceResourceTiming.fetchStart
 
 The **`fetchStart`** read-only property represents a {{domxref("DOMHighResTimeStamp","timestamp")}} immediately before the browser starts to fetch the resource.
 
-If there are HTTP redirects, the property returns the time immediately before the user agent starts to fetch the final resource in the redirection.
+If there are no HTTP redirects or their timing information is not exposed, this value is equivalent to {{domxref("PerformanceEntry.startTime")}}. Otherwise, this value can be later than `startTime`.
 
 Unlike many other `PerformanceResourceTiming` properties, the `fetchStart` property is available for cross-origin requests without the need of the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header.
 

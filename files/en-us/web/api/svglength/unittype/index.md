@@ -8,7 +8,7 @@ browser-compat: api.SVGLength.unitType
 
 {{APIRef("SVG")}}
 
-The **`unitType`** property of the {{domxref("SVGLength")}} interface that represents type of the value as specified by one of the `SVG_LENGTHTYPE_*` constants defined on this interface.
+The **`unitType`** property of the {{domxref("SVGLength")}} interface represents the type of the value as specified by one of the `SVG_LENGTHTYPE_*` constants defined on this interface.
 
 ## Value
 
