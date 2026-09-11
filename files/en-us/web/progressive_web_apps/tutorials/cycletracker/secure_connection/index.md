@@ -48,7 +48,7 @@ You can run a local HTTP server using a [VS Code plugin](/en-US/docs/Learn_web_d
 > [!NOTE]
 > The Preview on Web Server extension uses Browsersync. When your development environment is started by this extension, `localhost:3001` provides a user interface for Browsersync, providing an overview of the current server environment.
 
-Learn how to [set up a local testing server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server) using [Python](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server#using_python) or [local server side language](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server#running_server-side_languages_locally) like PHP.
+Learn how to [set up a local testing server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server) using [Python](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server#using_python) or [local server-side language](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server#running_server-side_languages_locally) like PHP.
 
 ## Localhost with npx
 
