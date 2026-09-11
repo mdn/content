@@ -244,7 +244,7 @@ function handleSendChannelStatusChange(event) {
 
 If the channel's state has changed to "open", that indicates that we have finished establishing the link between the two peers. If `disconnecting` is `true`, we keep everything disabled. Otherwise, the user interface is updated correspondingly by enabling the text input box for the message to send, focusing the input box so that the user can immediately begin to type, enabling the "Send" and "Disconnect" buttons, now that they're usable, and disabling the "Connect" button, since it is not needed when the connection is open.
 
-If the state has changed to "closed", the opposite set of actions occurs: the input box and "Send" button are disabled, the "Connect" button is enabled so that the user can open a new connection if they wish to do so, and the "Disconnect" button is disabled, since it's not useful when no connection exists. Again, the `disconnecting` status overrides this and keeps everything disabled. During an explicit disconnect, `disconnectPeers()` enables the "Connect" button after both channels have closed and cleanup is complete.
+If the state has changed to "closed", the opposite set of actions occurs: the input box and "Send" button are disabled, the "Connect" button is enabled so that the user can open a new connection if they wish to do so, and the "Disconnect" button is disabled, since it's not useful when no connection exists. Again, the `disconnecting` flag overrides this and keeps everything disabled. During an explicit disconnect, `disconnectPeers()` enables the "Connect" button after both channels have closed and cleanup is complete.
 
 Our example's remote peer, on the other hand, ignores the status change events, except for logging the event to the console:
 
@@ -341,7 +341,7 @@ async function disconnectPeers() {
 }
 ```
 
-Calling {{domxref("RTCDataChannel.close", "close()")}} starts an asynchronous shutdown. The method waits for both channels' `close` events before closing the underlying peer connections and clearing the references. Closing the peer connections immediately can interrupt this process and prevent the channel status handlers from running. Controls remain disabled during shutdown, so a new connection cannot replace these references before cleanup finishes.
+Calling {{domxref("RTCDataChannel.close", "close()")}} starts an asynchronous shutdown. The `disconnectPeers()` function waits for both channels' `close` events before closing the underlying peer connections and clearing the references. Closing the peer connections immediately can interrupt this process and prevent the channel status handlers from running. Controls remain disabled during shutdown, so the user can't start a new connection that would overwrite these variables before cleanup finishes.
 
 ## Next steps
 
