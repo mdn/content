@@ -46,7 +46,7 @@ timeline-trigger-activation-range-start: unset;
 
 ### Values
 
-This property is specified either as `normal` or a comma-separated list of values:
+This property is specified as a comma-separated list of the following values:
 
 - `normal`
   - : The default value. Equivalent to `cover 0%` for a [view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) {{cssxref("timeline-trigger-source")}}, and `scroll 0%` for a [scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#scroll_progress_timelines) `timeline-trigger-source`.
