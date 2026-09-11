@@ -69,16 +69,20 @@ In such cases, `moveBefore()` will fail with a `HierarchyRequestError` exception
 
 ### Preserving focus inside a shadow root
 
-Focus the input and press <kbd>Enter</kbd> to move it before or after the paragraph. The input remains focused because `shadow.moveBefore()` moves it without removing it first.
+This example demonstrates how `moveBefore()` preserves an input's focus when moving it inside a shadow root.
 
 #### HTML
 
+The HTML contains a {{htmlelement("div")}} to host the shadow root and an {{htmlelement("output")}} to display whether the input remains focused after each move.
+
 ```html live-sample___movebefore-shadow
 <div id="host"></div>
-<p id="status" role="status"></p>
+<output id="status"></output>
 ```
 
 #### JavaScript
+
+The script attaches a shadow root to the `<div>` and adds an input and a paragraph to it. The input's `keydown` event listener uses `moveBefore()` to move the input after the paragraph by passing `null`, or before it by passing the paragraph as the reference node. After each move, it updates the status output with whether the input is focused.
 
 ```js live-sample___movebefore-shadow
 const shadow = document.getElementById("host").attachShadow({ mode: "open" });
@@ -105,7 +109,9 @@ input.addEventListener("keydown", (event) => {
 
 {{EmbedLiveSample("movebefore-shadow", "100%", "180")}}
 
-Using `shadow.insertBefore(input, reference)` instead would remove and reinsert the input, losing its focus. The input's text value alone is not evidence of a state-preserving move, because ordinary removal and reinsertion preserve that value too.
+Focus the input and press <kbd>Enter</kbd> to move it before or after the paragraph. The input remains focused.
+
+Using {{domxref("Node.insertBefore()", "shadow.insertBefore(input, reference)")}} instead would remove and reinsert the input, losing its focus. Ordinary reinsertion preserves the text inside the input box, but not the other states listed above.
 
 ## Specifications
 
