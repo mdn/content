@@ -11,7 +11,7 @@ The **`SVGTransformList`** interface defines a list of {{ domxref("SVGTransform"
 
 An `SVGTransformList` object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 
-An `SVGTransformList` is indexable and can be accessed like an array.
+An `SVGTransformList` is indexable and can be accessed like an array using [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation). Reading an index is equivalent to calling {{domxref("SVGTransformList.getItem", "getItem()")}}. Assigning to an index is equivalent to calling {{domxref("SVGTransformList.replaceItem", "replaceItem()")}}, including the exceptions it throws.
 
 ## Instance properties
 
@@ -102,6 +102,43 @@ document.querySelector("rect").addEventListener("click", transformMe);
 ```
 
 {{EmbedLiveSample("Using_multiple_SVGTransform_objects",300,280)}}
+
+### Replacing a transform using bracket notation
+
+In this example, an item in the list is replaced using bracket notation instead of {{domxref("SVGTransformList.replaceItem", "replaceItem()")}}. Each time the button is pressed, the code reads the current angle from `transformList[0]`, creates a {{domxref("SVGTransform")}} rotated a further 15 degrees, and assigns it back to `transformList[0]`.
+
+```html
+<svg
+  id="my-svg"
+  viewBox="0 0 100 100"
+  width="150"
+  height="150"
+  xmlns="http://www.w3.org/2000/svg">
+  <rect
+    x="30"
+    y="30"
+    width="40"
+    height="40"
+    fill="blue"
+    transform="rotate(0, 50, 50)" />
+</svg>
+<button id="rotate">Rotate by 15 degrees</button>
+```
+
+```js
+const svg = document.getElementById("my-svg");
+const rect = svg.querySelector("rect");
+const transformList = rect.transform.baseVal;
+
+document.getElementById("rotate").addEventListener("click", () => {
+  const rotate = svg.createSVGTransform();
+  rotate.setRotate(transformList[0].angle + 15, 50, 50);
+  // Equivalent to transformList.replaceItem(rotate, 0)
+  transformList[0] = rotate;
+});
+```
+
+{{EmbedLiveSample("Replacing_a_transform_using_bracket_notation", "", "220")}}
 
 ## Specifications
 
