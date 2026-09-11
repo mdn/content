@@ -81,8 +81,6 @@ If you don't specify a `value`, you get a button with the default label (typical
 > [!NOTE]
 > You should usually avoid including reset buttons in your forms. They're rarely useful, and are instead more likely to frustrate users who click them by mistake (often while trying to click the [submit button](/en-US/docs/Web/HTML/Reference/Elements/input/submit)).
 
-## Using reset buttons
-
 `<input type="reset">` buttons are used to reset forms. If you want to create a custom button and then customize the behavior using JavaScript, you need to use [`<input type="button">`](/en-US/docs/Web/HTML/Reference/Elements/input/button), or better still, a {{htmlelement("button")}} element.
 
 ### A basic reset button
