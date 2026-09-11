@@ -93,7 +93,7 @@ To group options under a heading, use an {{HTMLElement("optgroup")}}; an {{HTMLE
 
 On a desktop computer, there are a number of ways to select multiple options in a `<select>` element with a `multiple` attribute and a `size` attribute greater than `1`.
 
-Mouse users can hold the <kbd>Ctrl</kbd> (<kbd>Command</kbd> on macOS), or <kbd>Shift</kbd> keys (depending on what makes sense for your operating system) and then click multiple options to select/deselect them.
+Mouse users can hold the <kbd>Ctrl</kbd> (<kbd>Command</kbd> on macOS) or <kbd>Shift</kbd> key (depending on what makes sense for your operating system) and then click multiple options to select/deselect them.
 
 > [!NOTE]
 > The keyboard mechanisms described below are not standardized and depend on the browser and operating system.
