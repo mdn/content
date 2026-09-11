@@ -259,7 +259,7 @@ Breakdown of ARIA live properties:
 ## Accessibility considerations
 
 - Live regions are typically announced as plain text, so links, buttons, and other semantics in the updated content may not be conveyed in the announcement itself.
-- Include the live region in the initial markup. Assistive technologies generally track live regions that are already present in the document, so adding `aria-live` later with JavaScript is not reliable.
+- Establish the live region before updating its content. Start with an empty live region, then allow time for it to be exposed to assistive technologies before updating its content. If you establish the region with JavaScript (either inserting a new element or adding `aria-live` to an existing element), defer the content update to a later event-loop task, for example using `setTimeout()`. Behavior can vary across browser and assistive technology combinations. The most reliable way to ensure that live regions are registered is to include them in the initial markup.
 
 ## See also
 
