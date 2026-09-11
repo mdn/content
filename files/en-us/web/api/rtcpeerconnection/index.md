@@ -175,7 +175,7 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
 
 ## Examples
 
-See [WebRTC samples > `RTCPeerConnection`](https://webrtc.github.io/samples/#peerconnection)
+See [WebRTC samples > `RTCPeerConnection`](https://webrtc.github.io/samples/#peerconnection) for example code.
 
 ## Specifications
 
