@@ -25,7 +25,7 @@ This is a sidebar containing links to project sponsors.
 The `complementary` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles) role. Landmarks can be used by assistive technology to quickly identify and navigate to large sections of the document. Content listed within a container with the `complementary` landmark role should make sense if separated from the main content of the document.
 
 > [!NOTE]
-> Using the {{HTMLElement('aside')}} element will automatically communicate a section has a role of `complementary`. Developers should always prefer using the correct semantic HTML element over using ARIA.
+> The {{HTMLElement('aside')}} element has an implicit role of `complementary`, unless it has no {{glossary("accessible name")}} and is nested in [sectioning content](/en-US/docs/Web/HTML/Guides/Content_categories#sectioning_content). Developers should always prefer using the correct semantic HTML element over using ARIA.
 
 ## Examples
 
@@ -54,7 +54,7 @@ The `complementary` role is [a landmark](/en-US/docs/Web/Accessibility/ARIA/Guid
 
 ### Prefer HTML
 
-Using the {{HTMLElement('aside')}} element will automatically communicate that the element has a role of `complementary`. If possible, prefer using the semantic `<aside>` element instead of the `complementary` role.
+The {{HTMLElement('aside')}} element has an implicit role of `complementary`, unless it has no {{glossary("accessible name")}} and is nested in [sectioning content](/en-US/docs/Web/HTML/Guides/Content_categories#sectioning_content). If possible, prefer using the semantic `<aside>` element instead of the `complementary` role.
 
 ### Labeling landmarks
 
