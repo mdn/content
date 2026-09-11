@@ -89,11 +89,7 @@ An origin is potentially trustworthy if has:
 - A host value ending with `.localhost` or `.localhost.`
 - A scheme that the browser considers to be authenticated
 
-This is essentially intended to capture:
-
-- Origins that use a secure transport across the network
-- Origins that are local
-- Origins that the browser considers authenticated for some other reason (for example, those used by browser extensions).
+This is essentially intended to capture: origins that use a secure transport across the network, local origins, and origins that the browser considers authenticated for some other reason (for example, those used by browser extensions).
 
 ## Feature detection
 
