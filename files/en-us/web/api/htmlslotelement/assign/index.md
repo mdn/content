@@ -44,7 +44,7 @@ None ({{jsxref("undefined")}}).
 
 In this example, the `assign()` method is used to display one of two panels. Click a panel button to assign that panel to the slot, or click "Show fallback" to clear the assignment and display the slot's fallback content. Switching panels or clearing the assignment does not remove the panels from the shadow host.
 
-To compare clearing an assignment with removing a node, first display a panel, then click "Remove assigned panel". This removes the panel from the shadow host without calling `assign()`. The fallback content should appear automatically. If the output is blank instead, click "Show fallback" to see whether explicitly clearing the assignment restores it. Clicking any other button first restores any removed panels to the shadow host, then updates the slot assignment.
+To compare clearing an assignment with removing a node, first display a panel, then click "Remove assigned panel". This removes the panel from the shadow host without calling `assign()`. The fallback content should appear automatically. Clicking any other button first restores any removed panels to the shadow host.
 
 #### HTML
 
