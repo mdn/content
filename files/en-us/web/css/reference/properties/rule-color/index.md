@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`rule-color`** [CSS](/en-US/docs/Web/CSS) property defines the colors of the lines drawn between columns and rows in multi-column grid, flex, and multi-col layouts, setting the colors of the column and row rules to the same value.
+The **`rule-color`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property defines the colors of the lines drawn between columns and rows in multi-column grid, flex, and multi-col layouts, setting the colors of the column and row rules to the same value.
 
 {{InteractiveExample("CSS Demo: rule-color")}}
 
@@ -389,11 +389,11 @@ The grid has 10 columns and 7 rows, creating 9 column and 6 row gutters. The `re
 
 This example demonstrates using `auto`, instead of an integer, within the `repeat()` function.
 
-We use the same HTML and CSS as in the previous examples, but override the `rule-color` value. Here, we use `repeat(auto, <color>)` to set all the lines to be almost transparent black (`#0003`), except the first and last, which we set to a solid `black`.
+We use the same HTML and CSS as in the previous examples, but override the `rule-color` value. Here, we use `repeat(auto, <color>)` to set all the lines to be almost transparent black (`#00000033`), except the first and last, which we set to a solid `black`.
 
 ```css live-sample___auto
 ul {
-  rule-color: black, repeat(auto, #0003), black;
+  rule-color: black, repeat(auto, #00000033), black;
 }
 ```
 

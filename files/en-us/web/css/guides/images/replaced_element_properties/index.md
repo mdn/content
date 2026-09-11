@@ -105,7 +105,7 @@ Check the box to set the height and width values. Note that only the `fill` valu
 
 The `object-position` property specifies the alignment of the replaced element's content object within the element's box.
 
-Often used in conjunction with the {{cssxref("object-fit")}} property, it takes as it's value a {{cssxref("position_value", "&lt;position&gt;")}} value, the same value type at used in for {{cssxref("background-position")}}.
+Often used in conjunction with the {{cssxref("object-fit")}} property, it takes as its value a {{cssxref("position_value", "&lt;position&gt;")}} value, the same value type as used for {{cssxref("background-position")}}.
 
 ```css live-sample___example2
 img {

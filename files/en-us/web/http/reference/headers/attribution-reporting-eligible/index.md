@@ -10,7 +10,7 @@ browser-compat: http.headers.Attribution-Reporting-Eligible
 sidebar: http
 ---
 
-{{deprecated_header}}{{non-standard_header}}
+{{non-standard_header}}
 
 The HTTP **`Attribution-Reporting-Eligible`** {{Glossary("request header")}} indicates that the corresponding response is eligible to register an attribution source or trigger.
 

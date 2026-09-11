@@ -14,9 +14,9 @@ If the user attempts a cut action on uneditable content, the `cut` event still f
 
 The event's default action is to copy the current selection (if any) to the system clipboard and remove it from the document.
 
-A handler for this event can _modify_ the clipboard contents by calling {{domxref("DataTransfer.setData", "setData(format, data)")}} on the event's {{domxref("ClipboardEvent.clipboardData")}} property, and cancelling the default action using {{domxref("Event/preventDefault", "event.preventDefault()")}}.
+A handler for this event can _modify_ the clipboard contents by calling {{domxref("DataTransfer.setData", "setData(format, data)")}} on the event's {{domxref("ClipboardEvent.clipboardData")}} property, and canceling the default action using {{domxref("Event/preventDefault", "event.preventDefault()")}}.
 
-Note though that cancelling the default action will also prevent the document from being updated. So an event handler which wants to emulate the default action for "cut" while modifying the clipboard must also manually remove the selection from the document.
+Note though that canceling the default action will also prevent the document from being updated. So an event handler which wants to emulate the default action for "cut" while modifying the clipboard must also manually remove the selection from the document.
 
 The handler cannot _read_ the clipboard data.
 

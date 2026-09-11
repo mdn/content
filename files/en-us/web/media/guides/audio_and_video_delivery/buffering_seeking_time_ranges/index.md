@@ -211,7 +211,7 @@ The progress event is fired as data is downloaded, this is a good event to react
 
 The timeupdate event is fired 4 times a second as the media plays and that's where we increment our playing progress bar.
 
-This time, you should see two kinds of segments. The light grey bar represents the buffered progress and green bar shows the played progress.
+This time, you should see two kinds of segments. The light gray bar represents the buffered progress and green bar shows the played progress.
 
 {{EmbedLiveSample("buffered-progress", "", 200)}}
 

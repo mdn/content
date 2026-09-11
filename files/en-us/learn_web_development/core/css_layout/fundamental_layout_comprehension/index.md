@@ -22,7 +22,7 @@ We are going to get you to solve this challenge in your local development enviro
    <html lang="en-US">
      <head>
        <meta charset="utf-8" />
-       <meta name="viewport" content="width=device-width, initial-scale=1" />
+       <meta name="viewport" content="width=device-width" />
        <title>Layout Task</title>
        <link href="style.css" rel="stylesheet" type="text/css" />
      </head>

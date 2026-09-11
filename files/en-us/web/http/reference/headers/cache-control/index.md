@@ -47,24 +47,24 @@ Cache directives follow these rules:
 
 The following table lists the standard `Cache-Control` directives:
 
-| Request          | Response                 |
-| ---------------- | ------------------------ |
-| `max-age`        | `max-age`                |
-| `max-stale`      | -                        |
-| `min-fresh`      | -                        |
-| -                | `s-maxage`               |
-| `no-cache`       | `no-cache`               |
-| `no-store`       | `no-store`               |
-| `no-transform`   | `no-transform`           |
-| `only-if-cached` | -                        |
-| -                | `must-revalidate`        |
-| -                | `proxy-revalidate`       |
-| -                | `must-understand`        |
-| -                | `private`                |
-| -                | `public`                 |
-| -                | `immutable`              |
-| -                | `stale-while-revalidate` |
-| `stale-if-error` | `stale-if-error`         |
+| Request                             | Response                                            |
+| ----------------------------------- | --------------------------------------------------- |
+| [`max-age`](#max-age)               | [`max-age`](#max-age)                               |
+| [`max-stale`](#max-stale)           | -                                                   |
+| [`min-fresh`](#min-fresh)           | -                                                   |
+| -                                   | [`s-maxage`](#s-maxage)                             |
+| [`no-cache`](#no-cache)             | [`no-cache`](#no-cache)                             |
+| [`no-store`](#no-store)             | [`no-store`](#no-store)                             |
+| [`no-transform`](#no-transform)     | [`no-transform`](#no-transform)                     |
+| [`only-if-cached`](#only-if-cached) | -                                                   |
+| -                                   | [`must-revalidate`](#must-revalidate)               |
+| -                                   | [`proxy-revalidate`](#proxy-revalidate)             |
+| -                                   | [`must-understand`](#must-understand)               |
+| -                                   | [`private`](#private)                               |
+| -                                   | [`public`](#public)                                 |
+| -                                   | [`immutable`](#immutable)                           |
+| -                                   | [`stale-while-revalidate`](#stale-while-revalidate) |
+| [`stale-if-error`](#stale-if-error) | [`stale-if-error`](#stale-if-error)                 |
 
 Note: Check the [compatibility table](#browser_compatibility) for their support; user agents that don't recognize them should ignore them.
 
@@ -143,6 +143,8 @@ Note that `no-cache` does not mean "don't cache". `no-cache` allows caches to st
 > If the back/forward cache ({{Glossary('bfcache')}}) is used, the browser restores a snapshot of the page without revalidating.
 > Even when bfcache is not used, the browser may still serve the cached response without revalidating.
 > This is [allowed by the specification](https://httpwg.org/specs/rfc7234.html#history.lists) because history navigations are usually treated as restoring a snapshot of a historical session and not a new request for a previously visited page.
+
+#### `must-revalidate`
 
 The `must-revalidate` response directive indicates that the response can be stored in caches and can be reused while [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age). If the response becomes [stale](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age), it must be validated with the origin server before reuse.
 

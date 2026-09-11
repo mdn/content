@@ -9,8 +9,6 @@ browser-compat: html.elements.noframes
 sidebar: htmlsidebar
 ---
 
-{{deprecated_header}}
-
 The **`<noframes>`** [HTML](/en-US/docs/Web/HTML) element provides content to be presented in browsers that don't support (or have disabled support for) the {{HTMLElement("frame")}} element. Although most commonly-used browsers support frames, there are exceptions, including certain special-use browsers including some mobile browsers, as well as text-mode browsers.
 
 A `<noframes>` element can contain any HTML elements that are allowed within the body of an HTML document, except for the {{HTMLElement("frameset")}} and {{HTMLElement("frame")}} elements, since using frames when they aren't supported doesn't make sense.

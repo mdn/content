@@ -7,7 +7,7 @@ browser-compat: css.properties.position-try-order
 sidebar: cssref
 ---
 
-The **`position-try-order`** [CSS](/en-US/docs/Web/CSS) property allows you to specify various fallback options that result in an available position-try fallback being used to set an anchor-positioned element's position, instead of its initial position settings.
+The **`position-try-order`** [CSS](/en-US/docs/Web/CSS) property allows you to prioritize the {{cssxref("position-try-fallbacks")}} option applied to an anchor-positioned element when it first renders, based on which option creates the most space around the element in the given direction.
 
 > [!NOTE]
 > There is also a shorthand property — {{cssxref("position-try")}}, which can be used to specify `position-try-order` and {{cssxref("position-try-fallbacks")}} values in a single declaration.
@@ -35,25 +35,25 @@ position-try-order: unset;
 The `position-try-order` property may be specified as either the keyword value `normal` or a `<try-size>`.
 
 - `normal`
-  - : The default. No position-try fallback options will be tried when the element is first displayed.
+  - : The default. No position-try fallback options will be tried when the element is first rendered.
 - `<try-size>`
-  - : Defines the different try size fallback options, which specify criteria that determine what try fallback should be applied to the anchor-positioned element when it initially renders. Available values are:
+  - : Defines which criteria will be used to determine what try fallback should be applied to the anchor-positioned element when it initially renders. Available values are:
     - `most-height`
-      - : The position try fallback option will be applied that gives the element's containing block the most height.
+      - : Applies the position try fallback option that gives the element the most vertical space.
     - `most-width`
-      - : The position try fallback option will be applied that gives the element's containing block the most width.
+      - : Applies the position try fallback option that gives the element the most horizontal space.
     - `most-block-size`
-      - : The position try fallback option will be applied that gives the element's containing block the largest size in the block direction.
+      - : Applies the position try fallback option that gives the element the most space in the block direction.
     - `most-inline-size`
-      - : The position try fallback option will be applied that gives the element's containing block the largest size in the inline direction.
+      - : Applies the position try fallback option that gives the element the most space in the inline direction.
 
 ## Description
 
-The `position-try-order` property has a slightly different focus from the rest of the position-try functionality features, in that it makes use of position-try fallback options when the positioned element is first displayed, rather than when it is being scrolled. For example, you might want to initially display the element in a space that has more available height or width than the default initial position.
+The `position-try-order` property has a slightly different focus from the rest of the position-try features, in that it influences which position-try fallback option is applied when the positioned element is first displayed, rather than when it is being scrolled. For example, you might want to initially display the element in a space that has more available height or width than the default initial position.
 
-The browser will test the available position-try fallback options to find which one gives the anchor-positioned element the most space in the specified dimension. It will then apply that option, overriding the element's initial styling.
+The browser tests the available `position-try-fallbacks` to find which one gives the anchor-positioned element the most space in the specified direction. It will then apply that option, overriding the element's initial styling when the page first renders.
 
-If no position try fallback option is available that provides more width/height than the initial positioning assigned to the element, no position try option will be applied. In effect, the behavior is as if `position-try-order` was set to `normal`.
+If no position try fallback option is available that provides more width/height than the initial positioning assigned to the element, no position try option will be applied, the same as if `position-try-order` were set to `normal`.
 
 For detailed information on anchor features and position try option usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module and the [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) guide.
 
@@ -67,13 +67,13 @@ For detailed information on anchor features and position try option usage, see t
 
 ## Examples
 
-### Basic `position-try-order` usage
+### Basic usage
 
-This demo shows the effect of `position-try-order`.
+This example shows the effect of `position-try-order`.
 
 #### HTML
 
-The HTML includes two {{htmlelement("div")}} elements that will become an anchor and an anchor-positioned element, and a `<form>` containing radio buttons allowing you to select different values of `position-try-order`.
+The HTML includes two {{htmlelement("div")}} elements that will become an anchor and an anchor-positioned element.
 
 ```html
 <div class="anchor">⚓︎</div>
@@ -81,34 +81,19 @@ The HTML includes two {{htmlelement("div")}} elements that will become an anchor
 <div class="infobox">
   <p>This is an information box.</p>
 </div>
-
-<form>
-  <fieldset>
-    <legend>Choose a try order</legend>
-    <div>
-      <label for="radio-normal">normal</label>
-      <input
-        type="radio"
-        id="radio-normal"
-        name="position-try-order"
-        value="normal"
-        checked />
-    </div>
-    <div>
-      <label for="radio-most-height">most-height</label>
-      <input
-        type="radio"
-        id="radio-most-height"
-        name="position-try-order"
-        value="most-height" />
-    </div>
-  </fieldset>
-</form>
 ```
 
 #### CSS
 
-In the CSS, the anchor is given an {{cssxref("anchor-name")}} and has a large {{cssxref("margin")}} to position it toward the top center of the viewport:
+In the CSS, we start by setting a `position-try-order` value of `normal` on the anchor-positioned element, so it is easier to find when we ask you to edit it later on:
+
+```css
+.infobox {
+  position-try-order: normal;
+}
+```
+
+The anchor is given an {{cssxref("anchor-name")}} and a large {{cssxref("margin")}} to position it near center of the viewport:
 
 ```css hidden
 .anchor {
@@ -140,15 +125,9 @@ In the CSS, the anchor is given an {{cssxref("anchor-name")}} and has a large {{
   font-size: 1rem;
   text-align: center;
 }
-
-form {
-  position: fixed;
-  bottom: 2px;
-  right: 2px;
-}
 ```
 
-We then include a custom position option named `--custom-bottom` which positions the element below the anchor and gives it an appropriate margin:
+We include a custom position option named `--custom-bottom`, which will positions the anchor-positioned element below the anchor and give it an appropriate margin:
 
 ```css
 @position-try --custom-bottom {
@@ -158,7 +137,7 @@ We then include a custom position option named `--custom-bottom` which positions
 }
 ```
 
-We initially position the element above its anchor, and then give it our custom position option using the `position-try` shorthand, which also sets the `position-try-order` property to `normal`:
+We initially position the anchor-positioned element above its anchor, and then give it our custom position option using the `position-try-fallbacks` property.
 
 ```css
 .infobox {
@@ -169,26 +148,7 @@ We initially position the element above its anchor, and then give it our custom 
   margin-bottom: 10px;
   justify-self: anchor-center;
 
-  position-try: normal --custom-bottom;
-}
-```
-
-#### JavaScript
-
-Finally, we include some JavaScript. This sets a [`change`](/en-US/docs/Web/API/HTMLElement/change_event) event handler on the radio buttons so that, when a new value is selected, that value is applied to the infobox's `position-try-order` property.
-
-```js
-const infobox = document.querySelector(".infobox");
-const form = document.forms[0];
-const radios = form.elements["position-try-order"];
-
-for (const radio of radios) {
-  radio.addEventListener("change", setTryOrder);
-}
-
-function setTryOrder(e) {
-  const tryOrder = e.target.value;
-  infobox.style.positionTryOrder = tryOrder;
+  position-try-fallbacks: --custom-bottom;
 }
 ```
 
@@ -196,7 +156,9 @@ function setTryOrder(e) {
 
 {{ EmbedLiveSample("Basic `position-try-order` usage", "100%", "310") }}
 
-Try selecting the `most-height` order option. This has the effect of applying `--custom-bottom` as a position try fallback option, which positions the element below the anchor. This occurs because there is more vertical space below the anchor than there is above it.
+Initially, the anchor-positioned element is positioned above its anchor, which is the default position we've given it.
+
+Now open the example in the MDN Playground by pressing the **Play** button, run the example, then change the `position-try-order` to `most-height` or `most-block-size`. When the example re-renders, the anchor-positioned element is positioned below its anchor: `--custom-bottom` fallback is applied because it gives the positioned element more surrounding height than the default position.
 
 ## Specifications
 

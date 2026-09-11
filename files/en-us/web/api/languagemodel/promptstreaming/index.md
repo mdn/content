@@ -70,7 +70,7 @@ A {{domxref("ReadableStream")}} of {{jsxref("String")}} chunks. Each chunk repre
 Errors are surfaced as stream errors rather than as rejected promises. Consumers should handle errors using a stream's standard error-handling mechanisms.
 
 - `AbortError` {{domxref("DOMException")}}
-  - : Thrown if the operation was cancelled via the `signal` option.
+  - : Thrown if the operation was canceled via the `signal` option.
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if usage of the method is blocked by a {{httpheader("Permissions-Policy/language-model", "language-model")}} {{httpheader("Permissions-Policy")}}.
 - `NotSupportedError` {{domxref("DOMException")}}
