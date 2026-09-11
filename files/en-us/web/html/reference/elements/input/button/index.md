@@ -75,8 +75,6 @@ If you don't specify a `value`, you get an empty button:
 > [!NOTE]
 > While `<input>` elements of type `button` are still perfectly valid HTML, the newer {{HTMLElement("button")}} element is now the favored way to create buttons. Given that a {{HTMLElement("button")}}'s label text is inserted between the opening and closing tags, you can include HTML in the label, even images.
 
-## Using buttons
-
 `<input type="button">` elements have no default behavior (their cousins, `<input type="submit">` and [`<input type="reset">`](/en-US/docs/Web/HTML/Reference/Elements/input/reset) are used to submit and reset forms, respectively). To make buttons do anything, you have to write JavaScript code to do the work.
 
 ### A basic button
