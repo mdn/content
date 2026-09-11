@@ -14,7 +14,7 @@ The higher the number of redirects on a page, the longer the page load time. To 
 
 The {{domxref("PerformanceResourceTiming.redirectStart", "redirectStart")}} and {{domxref("PerformanceResourceTiming.redirectEnd", "redirectEnd")}} properties can be used to measure redirection time. Note that they will return `0` for cross-origin redirects.
 
-Note that client side redirects, such as `<meta http-equiv="refresh" content="0; url=https://example.com/">` are not considered here.
+Note that client-side redirects, such as `<meta http-equiv="refresh" content="0; url=https://example.com/">` are not considered here.
 
 ## Value
 
