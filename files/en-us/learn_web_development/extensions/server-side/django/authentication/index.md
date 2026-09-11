@@ -106,7 +106,7 @@ Our superuser is already authenticated and has all permissions, so we'll need to
 
 Below we'll first create a group and then a user. Even though we don't have any permissions to add for our library members yet, if we need to later, it will be much easier to add them once to the group than individually to each member.
 
-Start the development server and navigate to the admin site in your local web browser (`http://127.0.0.1:8000/admin/`). Login to the site using the credentials for your superuser account. The top level of the Admin site displays all of your models, sorted by "Django application". From the **Authentication and Authorization** section, you can click the **Users** or **Groups** links to see their existing records.
+Start the development server and navigate to the admin site in your local web browser (`http://127.0.0.1:8000/admin/`). Log in to the site using the credentials for your superuser account. The top level of the Admin site displays all of your models, sorted by "Django application". From the **Authentication and Authorization** section, you can click the **Users** or **Groups** links to see their existing records.
 
 ![Admin site - add groups or users](admin_authentication_add.png)
 
@@ -251,9 +251,9 @@ Create a new HTML file called /**django-locallibrary-tutorial/templates/registra
   {% if next %}
     {% if user.is_authenticated %}
       <p>Your account doesn't have access to this page. To proceed,
-      please login with an account that has access.</p>
+      please log in with an account that has access.</p>
     {% else %}
-      <p>Please login to see this page.</p>
+      <p>Please log in to see this page.</p>
     {% endif %}
   {% endif %}
 
@@ -306,7 +306,7 @@ Create and open **/django-locallibrary-tutorial/templates/registration/logged_ou
 
 {% block content %}
   <p>Logged out!</p>
-  <a href="{% url 'login'%}">Click here to login again.</a>
+  <a href="{% url 'login'%}">Click here to log in again.</a>
 {% endblock %}
 ```
 
