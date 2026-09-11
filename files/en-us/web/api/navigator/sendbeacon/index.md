@@ -100,11 +100,6 @@ thus hurting performance. Others, such as Safari and Chrome on Android, handle i
 
 Firefox will also exclude pages from the bfcache if they contain `beforeunload` handlers.
 
-#### Use pagehide as a fallback
-
-To support browsers which don't implement `visibilitychange`, use the [`pagehide`](/en-US/docs/Web/API/Window/pagehide_event) event.
-Like `beforeunload` and `unload`, this event is not reliably fired, especially on mobile. However, it is compatible with the bfcache.
-
 ## Examples
 
 The following example specifies a handler for the {{domxref("document.visibilitychange_event", "visibilitychange")}} event. The handler calls `sendBeacon()` to send analytics.
