@@ -21,7 +21,7 @@ To implement this, you:
 
 - **Define an `action`, which is a [button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) attached to the Firefox toolbar**.
   For the button you supply:
-  - An icon, called "beasts-32.png", and an alternative icon, called "beasts-32-light.png", for use with themes that use light text.
+  - A default icon, and icons to use when Firefox displays light and dark text.
   - A tooltip.
   - A popup to open when the user presses the button. The popup includes HTML, CSS, and JavaScript.
 
@@ -122,25 +122,30 @@ If you choose to supply an icon, it should be 48x48 pixels. You can supply a 96x
 
 ### The toolbar button
 
-The [`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) key defines the extension's toolbar button, which is the extension's main user interface. All the key's properties are optional. This example uses four of them:
+You add and customize a toolbar button using the [`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) key. The key and all its properties are optional. However, when using a toolbar button, you specify properties to customize the button and, when needed, add a popup that appears when the button is clicked. This example uses:
 
-- `default_icon` points to the button's icon, "icons/beasts-32.png".
-- `theme_icons` provides alternative icons for themes that use light or dark text. Firefox displays the icon in the `light` property, "icons/beasts-32-light.png", when a theme that uses light text is active, such as the Firefox Dark theme. It displays the icon in the `dark` property, "icons/beasts-32.png", when a theme that uses dark text is active, such as the Firefox Light theme. The `size` property defines the icon size in pixels.
+- `default_icon` that points to the button's default icon.
+- `theme_icons` that provides alternative icons for themes:
+  - `light` specifies the icon (`icons/beasts-32-light.png`) used when light text is displayed (usually when a dark theme is active).
+  - `dark` specifies the icon (`icons/beasts-32.png`) used when dark text is displayed (usually when a light theme is active).
+  - `size` specifies the icon's size, in pixels.
 - `default_title` provides the text of the tooltip Firefox displays when the user hovers over the button.
-- `default_popup` points to an HTML file, included with the extension, that defines the popup's content. If you don't supply this property, Firefox dispatches a click event to your extension when the user clicks the button.
+- `default_popup` points to the popup's HTML file. See [The popup](#the_popup) for details.
 
-Save the two icons in the "icons" directory. You could use the ones from the example:
+Save your icons in the "icons" directory or use those from the example source code on GitHub:
 
 - [beasts-32.png](https://raw.githubusercontent.com/mdn/webextensions-examples/main/beastify/icons/beasts-32.png)
 - [beasts-32-light.png](https://raw.githubusercontent.com/mdn/webextensions-examples/main/beastify/icons/beasts-32-light.png)
 
-Both icons are taken from the [IconBeast Lite icon set](https://www.iconbeast.com/free/) and used under its [license](https://www.iconbeast.com/faq/).
+Both icons are based on one from the [IconBeast Lite icon set](https://www.iconbeast.com/free/) and used under its [license](https://www.iconbeast.com/faq/).
 
 ### The popup
 
-If you don't supply a popup, when the user clicks the toolbar button, Firefox dispatches a click event to your extension. If you supply a popup, when the user clicks the toolbar button the popup opens, and Firefox doesn't dispatch a click event.
+Toolbar buttons let you add a popup that opens when the user clicks the toolbar button.
 
-For this example, you want a popup. The function of the popup is to enable the user to choose one of three beasts.
+If you don't supply a popup, clicking the button dispatches a {{WebExtAPIRef("action.onClicked")}} event to your extension. Your extension uses this event to trigger the functionality associated with the button.
+
+For this example, you want a popup. The popup lets the user choose one of three beasts.
 
 Create a directory called "popup" under the extension root. This directory is where you create the popup's code. The popup consists of three files:
 
