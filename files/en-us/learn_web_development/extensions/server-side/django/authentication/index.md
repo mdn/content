@@ -8,7 +8,7 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django")}}
 
-In this tutorial, we'll show you how to allow users to log in to your site with their own accounts, and how to control what they can do and see based on whether or not they are logged in and their _permissions_. As part of this demonstration, we'll extend the [LocalLibrary](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) website, adding login and logout pages, and user- and staff-specific pages for viewing books that have been borrowed.
+In this tutorial, we'll show you how to allow users to log into your site with their own accounts, and how to control what they can do and see based on whether or not they are logged in and their _permissions_. As part of this demonstration, we'll extend the [LocalLibrary](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) website, adding login and logout pages, and user- and staff-specific pages for viewing books that have been borrowed.
 
 <table>
   <tbody>
@@ -106,7 +106,7 @@ Our superuser is already authenticated and has all permissions, so we'll need to
 
 Below we'll first create a group and then a user. Even though we don't have any permissions to add for our library members yet, if we need to later, it will be much easier to add them once to the group than individually to each member.
 
-Start the development server and navigate to the admin site in your local web browser (`http://127.0.0.1:8000/admin/`). Log in to the site using the credentials for your superuser account. The top level of the Admin site displays all of your models, sorted by "Django application". From the **Authentication and Authorization** section, you can click the **Users** or **Groups** links to see their existing records.
+Start the development server and navigate to the admin site in your local web browser (`http://127.0.0.1:8000/admin/`). Log into the site using the credentials for your superuser account. The top level of the Admin site displays all of your models, sorted by "Django application". From the **Authentication and Authorization** section, you can click the **Users** or **Groups** links to see their existing records.
 
 ![Admin site - add groups or users](admin_authentication_add.png)
 
@@ -413,7 +413,7 @@ This is the last password-reset template, which is displayed to notify you when 
 
 Now that you've added the URL configuration and created all these templates, the authentication pages (other than logout) should now just work!
 
-You can test the new authentication pages by first attempting to log in to your superuser account using the URL `http://127.0.0.1:8000/accounts/login/`.
+You can test the new authentication pages by first attempting to log into your superuser account using the URL `http://127.0.0.1:8000/accounts/login/`.
 You'll be able to test the password reset functionality from the link in the login page. **Be aware that Django will only send reset emails to addresses (users) that are already stored in its database!**
 
 Note that you won't be able to test account logout yet, because logout requests must be sent as a `POST` rather than a `GET` request.

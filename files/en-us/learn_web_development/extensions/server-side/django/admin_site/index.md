@@ -35,7 +35,7 @@ The Django admin _application_ can use your models to automatically build a site
 
 All the configuration required to include the admin application in your website was done automatically when you [created the skeleton project](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website) (for information about actual dependencies needed, see the [Django docs here](https://docs.djangoproject.com/en/5.0/ref/contrib/admin/)). As a result, all you **must** do to add your models to the admin application is to _register_ them. At the end of this article we'll provide a brief demonstration of how you might further configure the admin area to better display our model data.
 
-After registering the models we'll show how to create a new "superuser", log in to the site, and create some books, authors, book instances, and genres. These will be useful for testing the views and templates we'll start creating in the next tutorial.
+After registering the models we'll show how to create a new "superuser", log into the site, and create some books, authors, book instances, and genres. These will be useful for testing the views and templates we'll start creating in the next tutorial.
 
 ## Registering models
 
