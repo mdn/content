@@ -67,6 +67,13 @@ import("./data.json", { with: { type: "json" } });
 Dynamic module import is not permitted in all execution contexts.
 For example, `import()` can be used in the main thread, a shared worker, or a dedicated worker, but will throw if called within a [service worker](/en-US/docs/Web/API/Service_Worker_API) or a [worklet](/en-US/docs/Web/API/Worklet).
 
+"Phase modifiers" for `import` statements can also be used with dynamic imports:
+
+- [`import.defer()`](/en-US/docs/Web/JavaScript/Reference/Operators/import/defer)
+- [`import.source()`](/en-US/docs/Web/JavaScript/Reference/Operators/import/source)
+
+Each of these syntaxes is considered a distinct type of expression.
+
 ### Module namespace object
 
 A _module namespace object_ is an object that describes all exports from a module. It is a static object that is created when the module is evaluated. There are two ways to access the module namespace object of a module: through a [namespace import](/en-US/docs/Web/JavaScript/Reference/Statements/import#namespace_import) (`import * as name from moduleName`), or through the fulfillment value of a dynamic import.

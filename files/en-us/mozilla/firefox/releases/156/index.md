@@ -116,17 +116,17 @@ Firefox 156 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 #### General
 
-- Fixed the Actions API so that `moveOverTime` timer delays no longer cause intermediate pointer move events to be skipped. ([Firefox bug 2054442](https://bugzil.la/2054442)).
+- Marionette and RemoteAgent now both use a custom exit code (69) when their server fails to start. ([Firefox bug 2040974](https://bugzil.la/2040974)).
+- Improved the timing of intermediary events for actions with a duration greater than 0, to be closer to a 16ms interval and avoid inflating the overall duration even if the content process is overloaded. ([Firefox bug 2054442](https://bugzil.la/2054442)).
 
 #### WebDriver BiDi
 
-- Fixed the `browsingContext.startScreencast` command failing with `NS_ERROR_FAILURE`. ([Firefox bug 2066782](https://bugzil.la/2066782)).
+- `browsingContext.startScreencast` will now safely pick a valid download folder and should no longer throw if the default download folder (`DfltDwnld`) is not available. ([Firefox bug 2066782](https://bugzil.la/2066782)).
 - Fixed the Mozilla-specific `moz:debugging` module to correctly handle nested pauses. ([Firefox bug 2060460](https://bugzil.la/2060460)).
-- User context state is now cleaned up when a user context is removed without WebDriver BiDi being involved. ([Firefox bug 1969880](https://bugzil.la/1969880)).
 
 #### Marionette
 
-- The `WebDriver:GetElementTagName` command no longer capitalizes the returned tag name, so SVG elements, elements created with a namespace prefix, and custom elements now report their correct case. ([Firefox bug 2026697](https://bugzil.la/2026697)).
+- The `WebDriver:GetElementTagName` command was updated to match the [latest specification changes](https://github.com/w3c/webdriver/pull/1968) and now returns the DOM element's [qualified name](https://dom.spec.whatwg.org/#concept-element-qualified-name). This command used to always lowercase the return value. In practice, this change is backward compatible for HTML elements, but it is a non-backward-compatible change for elements with a case-sensitive qualified name, such as SVG elements.([Firefox bug 2026697](https://bugzil.la/2026697)).
 
 ## Changes for add-on developers
 

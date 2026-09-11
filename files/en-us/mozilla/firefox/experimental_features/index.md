@@ -469,6 +469,20 @@ When enabled, the [`href`](/en-US/docs/Web/MathML/Reference/Global_attributes/hr
 - `mathml.href_link_on_non_anchor_element.disabled`
   - : Set to `true` to enable.
 
+### Implement the `MathMLAnchorElement` interface
+
+When enabled, the MathML [`<a>`](/en-US/docs/Web/MathML/Reference/Element/a) element is correctly represented in the DOM by the [`MathMLAnchorElement`](/en-US/docs/Web/API/MathMLAnchorElement) interface rather than the generic [`MathMLElement`](/en-US/docs/Web/API/MathMLElement) interface. ([Firefox bug 2059312](https://bugzil.la/2059312)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 155           | Yes                 |
+| Developer Edition | 155           | No                  |
+| Beta              | 155           | No                  |
+| Release           | 155           | No                  |
+
+- `mathml.a.element.enabled`
+  - : Set to `true` to enable.
+
 ## JavaScript
 
 ### TC39 Intl.Locale info proposal
