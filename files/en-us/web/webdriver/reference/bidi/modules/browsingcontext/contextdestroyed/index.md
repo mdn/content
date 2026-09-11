@@ -11,7 +11,7 @@ The `browsingContext.contextDestroyed` [event](/en-US/docs/Web/WebDriver/Referen
 
 ## Event data
 
-The `params` field in the event notification is a [context object](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree#contexts) with the following properties, describing the discarded context and its subtree:
+The `params` field in the event notification is a [context object](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree#contexts) with the following fields, describing the discarded context and its subtree:
 
 - `children`
   - : An array of [context objects](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree#contexts) that represents child contexts.

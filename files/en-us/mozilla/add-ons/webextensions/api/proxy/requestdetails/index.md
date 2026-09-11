@@ -39,7 +39,7 @@ Values of this type are objects. They contain the following properties:
 - `tabId`
   - : `integer`. ID of the tab in which the request takes place. Set to -1 if the request is not related to a tab.
 - `thirdParty`
-  - : `boolean`. Indicates whether the request and its content window hierarchy is third party.
+  - : `boolean`. Indicates whether the request and its content window hierarchy are third party.
 - `timeStamp`
   - : `number`. The time when this event fired, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
 - `type`

@@ -9,7 +9,7 @@ status:
 browser-compat: api.VREyeParameters.renderHeight
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 The **`renderHeight`** read-only property of the {{domxref("VREyeParameters")}} interface describes the recommended render target height of each eye viewport, in pixels.
 

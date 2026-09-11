@@ -12,7 +12,7 @@ The **`CanvasRenderingContext2D.isContextLost()`** method of the Canvas 2D API r
 This might occur due to driver crashes, running out of memory, and so on.
 
 If the user agent detects that the canvas backing storage is lost it will fire the [`contextlost` event](/en-US/docs/Web/API/HTMLCanvasElement/contextlost_event) at the associated [`HTMLCanvasElement`](/en-US/docs/Web/API/HTMLCanvasElement).
-If this event is not cancelled it will attempt to reset the backing storage to the default state (this is equivalent to calling {{domxref("CanvasRenderingContext2D.reset()")}}).
+If this event is not canceled it will attempt to reset the backing storage to the default state (this is equivalent to calling {{domxref("CanvasRenderingContext2D.reset()")}}).
 On success it will fire the [`contextrestored` event](/en-US/docs/Web/API/HTMLCanvasElement/contextrestored_event), indicating that the context is ready to reinitialize and redraw.
 
 ## Syntax

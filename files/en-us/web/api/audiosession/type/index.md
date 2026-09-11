@@ -10,7 +10,7 @@ browser-compat: api.AudioSession.type
 
 {{APIRef("Audio Session API")}}{{SeeCompatTable}}
 
-The **`type`** property of the {{domxref("AudioSession")}} interface returns or sets the type of the audio session.
+The **`type`** property of the {{domxref("AudioSession")}} interface represents the type of the audio session.
 
 The audio session type describes the general nature of a web page's audio output, allowing the platform to determine how web-based audio should interact with other audio playing on the device.
 
@@ -19,7 +19,7 @@ The audio session type describes the general nature of a web page's audio output
 A string representing the audio session type. Possible values are:
 
 - `"auto"`
-  - : The default value. The user agent automatically chooses the best audio session type based on the audio APIs used by the page.
+  - : The default value. The user agent automatically chooses the audio session type based on the audio APIs used by the page, following a fixed priority order — see [`auto` type selection](/en-US/docs/Web/API/Audio_Session_API#auto_type_selection) for details.
 - `"playback"`
   - : Audio for media playback, such as video or music playback, podcasts, etc. This is an exclusive type that will pause other playback audio on the device, but may allow non-playback audio (such as notification sounds) to continue.
 - `"transient"`

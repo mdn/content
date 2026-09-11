@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Window.blur_event
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 The **`blur`** event fires when an element has lost focus.
 

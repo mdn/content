@@ -8,7 +8,7 @@ status:
 browser-compat: api.Document.xmlVersion
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}
+{{APIRef("DOM")}}
 
 Returns the version number as specified in the XML declaration (e.g., `<?xml version="1.0"?>`) or "1.0" if the declaration is absent.
 

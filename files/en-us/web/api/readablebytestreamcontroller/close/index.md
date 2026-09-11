@@ -49,7 +49,7 @@ if (bytesRead === 0) {
 }
 ```
 
-After calling close, the stream will be closed, and any consumers signalled.
+After calling close, the stream will be closed, and any consumers signaled.
 For example if using a {{domxref("ReadableStreamBYOBReader")}} any {{domxref("ReadableStreamBYOBReader.read()","read()")}} requests would resolve with `done: true` and the promise from {{domxref("ReadableStreamBYOBReader.closed")}} would also be resolved.
 
 ## Specifications

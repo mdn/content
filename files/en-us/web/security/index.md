@@ -36,7 +36,7 @@ Web security can be overwhelming: there are a lot of potential threats, defenses
 - **Control cross-origin requests**: consider whether and in which circumstances you want to allow other {{glossary("origin", "origins")}} to make requests to your site, and use [fetch metadata](/en-US/docs/Web/HTTP/Guides/Fetch_metadata) to control this.
 
 - **Limit access to any cookies your site sets**. In particular:
-  - Set the [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesite) attribute to `Strict` if possible, or `Lax` otherwise.
+  - Set the [`SameSite`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) attribute to `Strict` if possible, or `Lax` otherwise.
   - Set the [`Secure`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#secure) and [`HttpOnly`](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#httponly) attributes, if possible.
   - Minimize the lifetime of cookies that are used to represent logged-in users.
 

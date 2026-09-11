@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Window.focus_event
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
 The **`focus`** event fires when an element has received focus.
 

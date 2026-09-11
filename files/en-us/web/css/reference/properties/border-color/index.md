@@ -7,7 +7,7 @@ browser-compat: css.properties.border-color
 sidebar: cssref
 ---
 
-The **`border-color`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the color of an element's border.
+The **`border-color`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets the color of an element's border.
 
 {{InteractiveExample("CSS Demo: border-color")}}
 
