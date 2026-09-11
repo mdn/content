@@ -128,7 +128,7 @@ Access to the Screen Wake Lock API is controlled by the [Permissions Policy](/en
 
 When using the [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy), the default allowlist for `screen-wake-lock` is `self`.
 This allows lock wake usage in same-origin nested frames but prevents third-party content from using locks.
-Third party usage can be enabled by the server first setting the `Permissions-Policy` header to grant permission a particular third party origin.
+Third-party usage can be enabled by the server first setting the `Permissions-Policy` header to grant permission a particular third-party origin.
 
 ```http
 Permissions-Policy: screen-wake-lock=(self b.example.com)
