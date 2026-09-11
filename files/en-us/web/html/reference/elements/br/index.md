@@ -1,5 +1,6 @@
 ---
-title: "<br>: The Line Break element"
+title: "`<br>` HTML line break element"
+short-title: <br>
 slug: Web/HTML/Reference/Elements/br
 page-type: html-element
 browser-compat: html.elements.br

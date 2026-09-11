@@ -1,5 +1,6 @@
 ---
-title: :autofill
+title: "`:autofill` CSS pseudo-class"
+short-title: :autofill
 slug: Web/CSS/Reference/Selectors/:autofill
 page-type: css-pseudo-class
 browser-compat: css.selectors.autofill
@@ -57,7 +58,7 @@ input:-internal-autofill-selected {
   appearance: menulist-button;
   background-image: none !important;
   background-color:
-    light-dark(rgb(232, 240, 254), rgba(70, 90, 126, 0.4)) !important;
+    light-dark(rgb(232 240 254), rgb(70 90 126 / 0.4)) !important;
   color: fieldtext !important;
 }
 ```
@@ -119,9 +120,8 @@ input:autofill {
     content: "Your browser doesn't support the :autofill selector.";
     background-color: wheat;
     display: block;
-    width: 100%;
     text-align: center;
-    padding: 5px;
+    padding: 1rem 0;
   }
 }
 ```

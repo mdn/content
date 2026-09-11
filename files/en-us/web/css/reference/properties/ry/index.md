@@ -1,5 +1,6 @@
 ---
-title: ry
+title: "`ry` CSS property"
+short-title: ry
 slug: Web/CSS/Reference/Properties/ry
 page-type: css-property
 browser-compat: css.properties.ry

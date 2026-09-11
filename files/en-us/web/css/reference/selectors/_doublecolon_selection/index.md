@@ -1,5 +1,6 @@
 ---
-title: ::selection
+title: "`::selection` CSS pseudo-element"
+short-title: ::selection
 slug: Web/CSS/Reference/Selectors/::selection
 page-type: css-pseudo-element
 browser-compat: css.selectors.selection

@@ -20,7 +20,7 @@ Developers commonly think of embedding media such as images, video and audio int
         <a
           href="/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files"
           >working with files</a
-        >, familiarity with <a href="/en-US/docs/Learn_web_development/Core/Structuring_content/"
+        >, familiarity with <a href="/en-US/docs/Learn_web_development/Core/Structuring_content"
           >HTML fundamentals</a>.
       </td>
     </tr>

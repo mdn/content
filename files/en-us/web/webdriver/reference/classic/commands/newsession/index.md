@@ -33,7 +33,7 @@ The response payload is a JSON object with:
 
 ### Errors
 
-- Session not created
+- `session not created`
   - : A new session could not be created.
 
 ## Examples

@@ -1,5 +1,6 @@
 ---
-title: text-orientation
+title: "`text-orientation` CSS property"
+short-title: text-orientation
 slug: Web/CSS/Reference/Properties/text-orientation
 page-type: css-property
 browser-compat: css.properties.text-orientation
@@ -49,9 +50,9 @@ text-orientation: revert-layer;
 text-orientation: unset;
 ```
 
-The `text-orientation` property is specified as a single keyword from the list below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `mixed`
   - : Rotates the characters of horizontal scripts 90° clockwise. Lays out the characters of vertical scripts naturally. Default value.

@@ -1,5 +1,6 @@
 ---
-title: overflow-block
+title: "`overflow-block` CSS property"
+short-title: overflow-block
 slug: Web/CSS/Reference/Properties/overflow-block
 page-type: css-property
 browser-compat: css.properties.overflow-block

@@ -1,5 +1,6 @@
 ---
-title: initial-letter
+title: "`initial-letter` CSS property"
+short-title: initial-letter
 slug: Web/CSS/Reference/Properties/initial-letter
 page-type: css-property
 browser-compat: css.properties.initial-letter
@@ -32,7 +33,7 @@ initial-letter: unset;
 
 ### Values
 
-The keyword value `normal`, or a `<number>` optionally followed by an `<integer>`.
+This property is specified as `normal` or a `<number>` optionally followed by an `<integer>`:
 
 - `normal`
   - : No special initial-letter effect. Text behaves as normal.

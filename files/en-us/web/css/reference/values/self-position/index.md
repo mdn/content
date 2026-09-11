@@ -1,5 +1,6 @@
 ---
-title: <self-position>
+title: "`<self-position>` CSS type"
+short-title: <self-position>
 slug: Web/CSS/Reference/Values/self-position
 page-type: css-type
 spec-urls: https://drafts.csswg.org/css-align/#typedef-self-position

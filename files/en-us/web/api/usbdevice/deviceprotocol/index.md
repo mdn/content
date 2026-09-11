@@ -10,7 +10,7 @@ browser-compat: api.USBDevice.deviceProtocol
 
 {{APIRef("WebUSB API")}}{{SeeCompatTable}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
-The **`deviceProtocol`** read only property of the
+The **`deviceProtocol`** read-only property of the
 {{domxref("USBDevice")}} interface one of three properties that identify USB devices for
 the purpose of loading a USB driver that will work with that device. The other two
 properties are `USBDevice.deviceClass`

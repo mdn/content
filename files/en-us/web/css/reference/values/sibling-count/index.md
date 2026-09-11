@@ -1,5 +1,6 @@
 ---
-title: sibling-count()
+title: "`sibling-count()` CSS function"
+short-title: sibling-count()
 slug: Web/CSS/Reference/Values/sibling-count
 page-type: css-function
 browser-compat: css.types.sibling-count

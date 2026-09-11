@@ -16,7 +16,7 @@ For an alphabetical listing see the sidebar on the left.
 
 Basic keywords and general expressions in JavaScript. These expressions have the highest precedence (higher than [operators](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence)).
 
-- {{jsxref("Operators/this", "this")}}
+- {{jsxref("this")}}
   - : The `this` keyword refers to a special property of an execution context.
 - [Literals](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#literals)
   - : Basic `null`, boolean, number, and string literals.
@@ -49,16 +49,18 @@ Left values are the destination of an assignment.
   - : Member operators provide access to a property or method of an object (`object.property` and `object["property"]`).
 - {{jsxref("Operators/Optional_chaining", "?.")}}
   - : The optional chaining operator returns `undefined` instead of causing an error if a reference is [nullish](/en-US/docs/Glossary/Nullish) ([`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) or [`undefined`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)).
-- {{jsxref("Operators/new", "new")}}
+- {{jsxref("new")}}
   - : The `new` operator creates an instance of a constructor.
 - {{jsxref("Operators/new.target", "new.target")}}
-  - : In constructors, `new.target` refers to the constructor that was invoked by {{jsxref("Operators/new", "new")}}.
+  - : In constructors, `new.target` refers to the constructor that was invoked by {{jsxref("new")}}.
 - {{jsxref("Operators/import.meta", "import.meta")}}
   - : An object exposing context-specific metadata to a JavaScript module.
 - {{jsxref("Operators/super", "super")}}
   - : The `super` keyword calls the parent constructor or allows accessing properties of the parent object.
 - {{jsxref("Operators/import", "import()")}}
   - : The `import()` syntax allows loading a module asynchronously and dynamically into a potentially non-module environment.
+- {{jsxref("Operators/import/source", "import.source()")}}
+  - : The `import.source()` syntax results in an object representing the module's compiled source, without loading its dependencies, linking it, or evaluating it.
 
 ### Increment and decrement
 
@@ -77,7 +79,7 @@ Postfix/prefix increment and postfix/prefix decrement operators.
 
 A unary operation is an operation with only one operand.
 
-- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("delete")}}
   - : The `delete` operator deletes a property from an object.
 - {{jsxref("Operators/void", "void")}}
   - : The `void` operator evaluates an expression and discards its return value.
@@ -123,13 +125,13 @@ A comparison operator compares its operands and returns a boolean value based on
   - : Less than or equal operator.
 - {{jsxref("Operators/Greater_than_or_equal", "&gt;=")}}
   - : Greater than or equal operator.
-- {{jsxref("Operators/instanceof", "instanceof")}}
+- {{jsxref("instanceof")}}
   - : The `instanceof` operator determines whether an object is an instance of another object.
 - {{jsxref("Operators/in", "in")}}
   - : The `in` operator determines whether an object has a given property.
 
 > [!NOTE]
-> `=>` is not an operator, but the notation for [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
+> `=>` is [not an operator](#what_are_operators), but the notation for [Arrow functions](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions).
 
 ### Equality operators
 
@@ -237,6 +239,24 @@ An assignment operator assigns a value to its left operand based on the value of
 
 - {{jsxref("Operators/Comma_operator", ",")}}
   - : The comma operator allows multiple expressions to be evaluated in a single statement and returns the result of the last expression.
+
+## What are operators?
+
+As the [What are statements, declarations, and expressions?](/en-US/docs/Web/JavaScript/Reference/Statements#what_are_statements_declarations_and_expressions) section explains, an expression is a fundamental building block that evaluates to a value. Statements, declarations, and expressions can all define specific slots where expressions are accepted. Where an expression contains slots for further nested expressions, the part(s) that are not slots are known as operators.
+
+For example, the syntax for an [addition](/en-US/docs/Web/JavaScript/Reference/Operators/Addition) expression is `expression + expression` (if you read the spec, the operands are called _AdditiveExpression_ and _MultiplicativeExpression_, which are both subsets of _Expression_, but that's the spec's mechanism for defining [precedence and associativity](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence) and is irrelevant for our purposes). Apart from the two expression slots, the code entity it introduces is just `+`: the _addition operator_. Similarly, the syntax for a [yield](/en-US/docs/Web/JavaScript/Reference/Operators/yield) expression is `yield expression`, so `yield` is known as the operator. In other words, each operator corresponds to an expression.
+
+MDN also regards expressions without slots such as [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) as operators per the definition above, although we nearly always just refer to them as "syntax" or "expression".
+
+An expression does not need to take a fixed number of slots. For example, the array literal expression, `[expression, expression, expression]`, can take an arbitrary number of expression slots. The `[,,]` part might be called an "operator". MDN avoids this usage, but you may see it in functional programming languages like [Haskell](https://www.haskell.org/onlinereport/haskell2010/haskellch3.html).
+
+The definition of operators gets fuzzier with certain other code entities: what if an expression has a slot that's not an expression, or a code entity combined with an expression does not make an expression? Do we still refer to that code entity as an operator?
+
+- In the [optional chaining](/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining) expression `foo?.bar`, `foo` is an expression, but `bar` must be an identifier and is not evaluated to a value. Do we still regard `?.` as an operator?
+- In the [arrow function](/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions) expression `arg => body`, `body` might be an expression (although it can also be a block body), and `arg` is just an argument list. Do we still regard `=>` as an operator?
+- In the [spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) `...foo`, `foo` is an expression, but the whole thing is not an expression because it does not evaluate to a value—it only makes sense in certain other expressions like function calls, array literals, and object literals. Do we still regard `...` as an operator?
+
+The term "operator" is not precisely defined in JavaScript, so MDN does not give a definitive answer. Our approach is to group all these constructs under "Operators" but avoid formally referring to them as operators. Many useful concepts about operators, such as [precedence](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence), still apply to them regardless of their exact nature.
 
 ## Specifications
 

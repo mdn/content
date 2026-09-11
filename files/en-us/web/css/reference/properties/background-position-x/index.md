@@ -1,5 +1,6 @@
 ---
-title: background-position-x
+title: "`background-position-x` CSS property"
+short-title: background-position-x
 slug: Web/CSS/Reference/Properties/background-position-x
 page-type: css-property
 browser-compat: css.properties.background-position-x
@@ -78,9 +79,9 @@ background-position-x: revert-layer;
 background-position-x: unset;
 ```
 
-The `background-position-x` property is specified as one or more values, separated by commas.
-
 ### Values
+
+This property is specified as one or more comma-separated values:
 
 - `left`
   - : Aligns the left edge of the background image with the left edge of the background position layer.

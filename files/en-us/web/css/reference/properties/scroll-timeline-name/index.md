@@ -1,5 +1,6 @@
 ---
-title: scroll-timeline-name
+title: "`scroll-timeline-name` CSS property"
+short-title: scroll-timeline-name
 slug: Web/CSS/Reference/Properties/scroll-timeline-name
 page-type: css-property
 browser-compat: css.properties.scroll-timeline-name

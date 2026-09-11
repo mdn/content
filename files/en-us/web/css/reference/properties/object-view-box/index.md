@@ -1,5 +1,6 @@
 ---
-title: object-view-box
+title: "`object-view-box` CSS property"
+short-title: object-view-box
 slug: Web/CSS/Reference/Properties/object-view-box
 page-type: css-property
 status:

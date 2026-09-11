@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Window.afterprint_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`afterprint`** event is fired after the associated document has started printing or the print preview has been closed.
 

@@ -49,7 +49,7 @@ let rightPressed = false;
 let leftPressed = false;
 ```
 
-The default value for both is `false` because at the beginning the control buttons are not pressed. To listen for key presses, we will set up two event listeners. Add the following lines just above the `setInterval()` line at the bottom of your JavaScript:
+The default value for both is `false` because at the beginning the control buttons are not pressed. To listen for key presses, we will set up two event listeners. Add the following lines just above the `drawBall` function definition:
 
 ```js
 document.addEventListener("keydown", keyDownHandler);

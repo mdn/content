@@ -1,5 +1,6 @@
 ---
-title: "<output>: The Output element"
+title: "`<output>` HTML output element"
+short-title: <output>
 slug: Web/HTML/Reference/Elements/output
 page-type: html-element
 browser-compat: html.elements.output
@@ -27,6 +28,8 @@ The `<output>` value, name, and contents are NOT submitted during form submissio
 ## Accessibility
 
 Many browsers implement this element as an [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions) region. Assistive technology will thereby announce the results of UI interactions posted inside it without requiring that focus is switched away from the controls that produce those results.
+
+Live-region updates are generally announced as plain text, so links, buttons, and other semantics nested inside `<output>` may not be conveyed in the announcement.
 
 ## Examples
 

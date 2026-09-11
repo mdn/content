@@ -1,5 +1,6 @@
 ---
-title: mask-mode
+title: "`mask-mode` CSS property"
+short-title: mask-mode
 slug: Web/CSS/Reference/Properties/mask-mode
 page-type: css-property
 browser-compat: css.properties.mask-mode
@@ -39,7 +40,7 @@ The `mask-mode` property can take multiple comma-separated `<masking-mode>` keyw
 
 - `match-source`
   - : Indicates that the type of mask is determined by the source. This is the default property value.
-    - If the {{cssxref("mask-image")}} references an SVG {{svgelement("mask")}}, its {{cssxref("mask-type")}} property value is used, or it's {{SVGAttr("mask-type")}} attribute, if present. If neither is explicitly set, this value defaults to `luminance`.
+    - If the {{cssxref("mask-image")}} references an SVG {{svgelement("mask")}}, its {{cssxref("mask-type")}} property value is used, or its {{SVGAttr("mask-type")}} attribute, if present. If neither is explicitly set, this value defaults to `luminance`.
     - If the mask image source is an {{cssxref("image")}} or a {{cssxref("gradient")}}, the `alpha` values of the mask image are used.
 
 ## Description

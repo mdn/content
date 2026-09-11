@@ -1,5 +1,6 @@
 ---
-title: :host-context()
+title: "`:host-context()` CSS pseudo-class"
+short-title: :host-context()
 slug: Web/CSS/Reference/Selectors/:host-context
 page-type: css-pseudo-class
 status:
@@ -7,8 +8,6 @@ status:
 browser-compat: css.selectors.host-context
 sidebar: cssref
 ---
-
-{{deprecated_header}}
 
 The **`:host-context()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) allows you to style elements within a [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) differently based on the selector of the shadow host (the element that has the shadow root) and its DOM ancestors.
 

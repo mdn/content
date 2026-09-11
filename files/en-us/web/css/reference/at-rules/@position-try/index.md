@@ -1,5 +1,6 @@
 ---
-title: "@position-try"
+title: "`@position-try` CSS at-rule"
+short-title: "@position-try"
 slug: Web/CSS/Reference/At-rules/@position-try
 page-type: css-at-rule
 browser-compat: css.at-rules.position-try

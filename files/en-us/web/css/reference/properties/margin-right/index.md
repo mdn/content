@@ -1,5 +1,6 @@
 ---
-title: margin-right
+title: "`margin-right` CSS property"
+short-title: margin-right
 slug: Web/CSS/Reference/Properties/margin-right
 page-type: css-property
 browser-compat: css.properties.margin-right
@@ -7,6 +8,8 @@ sidebar: cssref
 ---
 
 The **`margin-right`** [CSS](/en-US/docs/Web/CSS) property sets the [margin area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#margin_area) on the right side of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
+
+The vertical margins of two adjacent boxes may fuse. This is called [_margin collapsing_](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing).
 
 {{InteractiveExample("CSS Demo: margin-right")}}
 
@@ -57,8 +60,6 @@ margin-right: 0;
   background-color: rgb(255 244 219 / 0.6);
 }
 ```
-
-The vertical margins of two adjacent boxes may fuse. This is called [_margin collapsing_](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing).
 
 ## Syntax
 

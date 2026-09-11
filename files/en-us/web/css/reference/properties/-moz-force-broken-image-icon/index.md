@@ -1,5 +1,6 @@
 ---
-title: -moz-force-broken-image-icon
+title: "`-moz-force-broken-image-icon` CSS property"
+short-title: -moz-force-broken-image-icon
 slug: Web/CSS/Reference/Properties/-moz-force-broken-image-icon
 page-type: css-property
 status:
@@ -9,7 +10,7 @@ browser-compat: css.properties.-moz-force-broken-image-icon
 sidebar: cssref
 ---
 
-{{Non-standard_header}}{{Deprecated_Header}}
+{{Non-standard_header}}
 
 The **`-moz-force-broken-image-icon`** extended CSS property can be used to force the broken image icon to be shown even when a broken image has an `alt` attribute.
 
@@ -28,6 +29,8 @@ The **`-moz-force-broken-image-icon`** extended CSS property can be used to forc
 ```
 
 ### Values
+
+This property is specified as the following value:
 
 - {{cssxref("&lt;integer&gt;")}}
   - : A value of `1` means that the broken image icon is shown even if the image has an [`alt`](/en-US/docs/Web/HTML/Reference/Elements/img#alt) attribute. When the value `0` is used, the image will act as usual and only display the `alt` attribute.

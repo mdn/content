@@ -1,5 +1,6 @@
 ---
-title: polygon()
+title: "`polygon()` CSS function"
+short-title: polygon()
 slug: Web/CSS/Reference/Values/basic-shape/polygon
 page-type: css-function
 browser-compat: css.types.basic-shape.polygon
@@ -47,56 +48,139 @@ clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 ## Syntax
 
 ```css-nolint
-/* Specified as coordinate list */
-/* polygon(<length-percentage> <length-percentage>, ... )*/
+/* Coordinate list */
 polygon(50% 2.4%, 34.5% 33.8%, 0% 38.8%, 25% 63.1%, 19.1% 97.6%)
 polygon(0px 0px, 200px 100px, 0px 200px)
 polygon(0% 0px, 100% 100px, 0px 100%)
 polygon(0 0, 50% 1rem, 100% 2vw, calc(100% - 20px) 100%, 0 100%)
 
-/* Specified as coordinate list and fill rule*/
-/* polygon(<fill-rule> <length-percentage> <length-percentage>, ... )*/
+/* Coordinate list with fill-rule and/or round value */
 polygon(nonzero, 0% 0%, 50% 50%, 0% 100%)
-polygon(evenodd, 0% 0%, 50% 50%, 0% 100%)
+polygon(round 20px, 0% 0%, 50% 50%, 0% 100%)
+polygon(evenodd round 2em, 0% 0%, 50% 50%, 0% 100%)
 ```
-
-The `polygon()` parameters are separated by a comma and optional whitespace. The first parameter is an optional [`<fill-rule>`](/en-US/docs/Web/SVG/Reference/Attribute/fill-rule) value. Additional parameters are points that define the polygon. Each point is a pair of x/y coordinate {{cssxref("length-percentage")}} values separated by a space, e.g., "0 0" and "100% 100%" for the left/top and bottom right corners, respectively.
-
-Note: The SVG [`<polygon>`](/en-US/docs/Web/SVG/Reference/Element/polygon) element has separate attributes for [`fill-rule`](/en-US/docs/Web/SVG/Reference/Attribute/fill-rule) and [`points`](/en-US/docs/Web/SVG/Reference/Attribute/points), and `points` is flexible about the use of space and comma separators. CSS `polygon()` rules for separators are strictly enforced.
 
 ### Parameters
 
+The `polygon()` function accepts an optional first parameter containing values that modify the polygon's appearance — a {{SVGAttr("fill-rule")}} keyword, the `round` keyword followed by a {{cssxref("length")}} value, or both. The first parameter's components are separated by spaces. The other parameters are space-separated x/y coordinate pairs of {{cssxref("length-percentage")}} values.
+
 - [`<fill-rule>`](/en-US/docs/Web/SVG/Reference/Attribute/fill-rule) {{optional_inline}}
-  - : An optional value of `nonzero` (the default when omitted) or `evenodd`, which specifies the filling rule.
+  - : A keyword equal to `nonzero` (the default) or `evenodd`, which specifies the algorithm used to fill the polygon shape.
+- `round <length>` {{optional_inline}}
+  - : The `round` keyword specifies that the polygon should have rounded corners, and the accompanying {{cssxref("length")}} value specifies the radius of those corners.
 - {{cssxref("length-percentage")}}
-  - : Each vertex of the polygon is represented by a pair of `<length-percentage>` values, which give the x/y coordinates of the vertex relative to the shape's [reference box](/en-US/docs/Web/CSS/Guides/Shapes/Using_shape-outside#the_reference_box).
+  - : Each vertex, or point, of the polygon is represented by a space-separated pair of `<length-percentage>` values defining the x/y coordinates of the vertex relative to the shape's [reference box](/en-US/docs/Web/CSS/Guides/Shapes/Using_shape-outside#the_reference_box).
 
 ### Return value
 
-Returns a {{cssxref("basic-shape")}} value.
+A {{cssxref("basic-shape")}} value.
 
 ## Description
 
-You can create almost any shape with the `polygon()` function by specifying the coordinates of its points. The order in which you define the points matters and can result in different shapes. The `polygon()` function requires at least 3 points, which creates a triangle, but there's no upper limit.
-
-The `polygon()` function accepts comma-separated coordinates or points as its values. Each point is represented by a pair of space-separated `x` and `y` values, which indicate the points' coordinates within the polygon.
+You can create almost any shape with the `polygon()` function by specifying the x/y coordinates of its vertices, or points, as comma-separated pairs of {{cssxref("length-percentage")}} values:
 
 <code>polygon(x<sub>1</sub> y<sub>1</sub>, x<sub>2</sub> y<sub>2</sub>, x<sub>3</sub> y<sub>3</sub>, x<sub>4</sub> y<sub>4</sub>, x<sub>n</sub> y<sub>n</sub>)</code>
 
-Given the above, mapping the coordinates of the container can be visualized as:
+Although only a single point is required to create a valid `polygon()` function value, at least 3 points are required to create a shape (a triangle). There is no upper limit on the number of points that can be specified. The shape is drawn through the specified points in the order they appear in the function, with a final line automatically being drawn between the last and first points to close the shape.
 
-| axis | point 1 | point 2 | point 3 | point 4 | point n       |
-| ---- | ------- | ------- | ------- | ------- | ------------- |
-| x    | 0%      | 100%    | 100%    | 0%      | x<sub>n</sub> |
-| y    | 0%      | 0%      | 100%    | 100%    | y<sub>n</sub> |
+We could define the coordinates of a triangle shape like this:
 
-Applying those coordinates to the CSS {{cssxref("clip-path")}} property using the `polygon()` function:
+| axis | point 1 | point 2 | point 3 |
+| ---- | ------- | ------- | ------- |
+| x    | 0%      | 100%    | 100%    |
+| y    | 0%      | 0%      | 100%    |
+
+We can apply those coordinates to the CSS {{cssxref("clip-path")}} property in a `polygon()` function as follows:
+
+```css
+clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+```
+
+This creates a triangle shape that covers half the area of its parent container by specifying the coordinates of three of its four corners: top-left (`0% 0%`), top-right (`100% 0%`), and bottom-right (`100% 100%`). If we assume a 200x200px container with a green background:
+
+```html hidden live-sample___basic
+<div class="box"></div>
+```
+
+```css hidden live-sample___basic
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+}
+```
+
+{{EmbedLiveSample("basic", '100%', 200)}}
+
+### The effect of point order
+
+The order in which you define the points can result in different shapes. For example, the following two `clip-path` declarations both use a `polygon()` function with X/Y coordinate pairs for the container's four corners, but in a different order.
 
 ```css
 clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+clip-path: polygon(0% 0%, 100% 0%, 0% 100%, 100% 100%);
 ```
 
-This would create a rectangle shape the size of its parent content by specifying the coordinates of its four corners: top-left (`0% 0%`), top-right (`100% 0%`), bottom-right (`100% 100%`), and bottom-left (`0% 100%`).
+```html hidden live-sample___different-order
+<div class="box"></div>
+<div class="box box2"></div>
+```
+
+```css hidden live-sample___different-order
+body {
+  display: flex;
+  gap: 20px;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: purple;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.box2 {
+  clip-path: polygon(0% 0%, 100% 0%, 0% 100%, 100% 100%);
+}
+```
+
+The first function draws a square, while the second draws an hourglass shape.
+
+{{EmbedLiveSample("different-order", '100%', 200)}}
+
+### Specifying polygon modifiers
+
+The `polygon()` function accepts an optional first parameter modifying the rendering of the resulting shape. The parameter value can include either or both of the following, separated by spaces:
+
+- A [`<fill-rule>`](/en-US/docs/Web/SVG/Reference/Attribute/fill-rule) keyword equal to `nonzero` (the default) or `evenodd`, which specifies the algorithm used to fill the polygon shape. This only has an effect when the lines drawn between coordinate values overlap.
+- The `round` keyword followed by a {{cssxref("length")}} value. This specifies that the polygon should have rounded corners, with the `<length>` value specifying the radius of those corners.
+
+For example, we could expand upon the previous triangle example and add rounded corners:
+
+```css
+clip-path: polygon(round 20px, 0% 0%, 100% 0%, 100% 100%);
+```
+
+```html hidden live-sample___basic-rounded
+<div class="box"></div>
+```
+
+```css hidden live-sample___basic-rounded
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+  clip-path: polygon(round 20px, 0% 0%, 100% 0%, 100% 100%);
+}
+```
+
+This results in the same triangle shape, but with `20px` radius rounded corners:
+
+{{EmbedLiveSample("basic-rounded", '100%', 200)}}
+
+> [!NOTE]
+> In each case, the corner radius is clamped to ensure it is never larger than half of any line segment length. The maximum corner radius is clamped to the smaller of `tan(corner-angle/2) * (segment-length / 2)` evaluated against both line segments forming the corner. [The specification](https://drafts.csswg.org/css-shapes-1/#funcdef-basic-shape-polygon) contains further details for those interested.
 
 ## Formal syntax
 
@@ -110,13 +194,13 @@ In this example, a triangle is formed by defining the coordinates of its three p
 
 #### HTML
 
-```html
+```html live-sample___triangle
 <div class="triangle"></div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___triangle
 .triangle {
   width: 400px;
   height: 400px;
@@ -127,15 +211,72 @@ In this example, a triangle is formed by defining the coordinates of its three p
 
 #### Result
 
-{{EmbedLiveSample("Create a triangle", '100%', 400)}}
+{{EmbedLiveSample("triangle", '100%', 400)}}
 
 The coordinates for the triangle are the top-right corner (`100% 0%`), the center point (`50% 50%`), and the bottom-right corner (`100% 100%`) of the container.
+
+### Create a rounded star
+
+In this example, we create a star shape and use the `round` keyword to round its corners.
+
+#### HTML
+
+```html live-sample___star
+<div class="star"></div>
+```
+
+#### CSS
+
+```css live-sample___star
+.star {
+  width: 400px;
+  height: 400px;
+  background-color: hotpink;
+  clip-path: polygon(
+    round 20px,
+    50% 5%,
+    60.85% 27.48%,
+    85.22% 21.99%,
+    74.38% 44.44%,
+    93.88% 60.01%,
+    69.57% 65.56%,
+    69.53% 90.55%,
+    50% 75%,
+    30.47% 90.55%,
+    30.43% 65.56%,
+    6.12% 60.01%,
+    25.62% 44.44%,
+    14.78% 21.99%,
+    39.15% 27.48%
+  );
+}
+```
+
+```css hidden live-sample___basic-rounded live-sample___star
+@supports not (clip-path: polygon(round 20px, 0% 0%, 100% 0%, 100% 100%)) {
+  body::before {
+    font-family: sans-serif;
+    content: "Your browser does not support the polygon() function's round keyword.";
+    background-color: wheat;
+    padding: 1rem 0;
+    text-align: center;
+
+    z-index: 1;
+    position: fixed;
+    inset: 40% 0 auto;
+  }
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("star", '100%', 400)}}
 
 ### Setting a polygon for shape-outside
 
 In this example a shape is created for text to follow using the {{cssxref("shape-outside")}} property.
 
-```html
+```html live-sample___shape-outside
 <div class="box">
   <div class="shape"></div>
   <p>
@@ -152,7 +293,7 @@ In this example a shape is created for text to follow using the {{cssxref("shape
 </div>
 ```
 
-```css
+```css live-sample___shape-outside
 .box {
   width: 250px;
 }
@@ -181,7 +322,7 @@ p {
 }
 ```
 
-{{EmbedLiveSample("Setting a polygon for shape-outside", '100%', 400)}}
+{{EmbedLiveSample("shape-outside", '100%', 400)}}
 
 ## Specifications
 
@@ -193,5 +334,5 @@ p {
 
 ## See also
 
-- Properties that use this data type: {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
+- Properties that use this data type: {{cssxref("border-shape")}}, {{cssxref("clip-path")}}, {{cssxref("shape-outside")}}
 - [Guide to Basic Shapes](/en-US/docs/Web/CSS/Guides/Shapes/Using_shape-outside)

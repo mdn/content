@@ -1,5 +1,6 @@
 ---
-title: column-wrap
+title: "`column-wrap` CSS property"
+short-title: column-wrap
 slug: Web/CSS/Reference/Properties/column-wrap
 page-type: css-property
 status:
@@ -29,6 +30,8 @@ column-wrap: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `auto`
   - : The initial value. If the content container's {{cssxref("column-height")}} is set to a {{cssxref("&lt;length>")}}, `auto` resolves to `wrap`, otherwise it resolves to `nowrap`.
@@ -149,10 +152,11 @@ The markup for this example contains multiple paragraphs of content, taken from 
   appearance (CSS) or behavior (JavaScript).
 </p>
 <p>
-  "Hypertext" refers to links that connect web pages to one another, either
-  within a single website or between websites. Links are a fundamental aspect of
-  the Web. By uploading content to the Internet and linking it to pages created
-  by other people, you become an active participant in the World Wide Web.
+  "Hypertext" refers to text containing links that connect web pages to one
+  another, either within a single website or between websites. Links are a
+  fundamental aspect of the Web. By uploading content to the Internet and
+  linking it to pages created by other people, you become an active participant
+  in the World Wide Web.
 </p>
 <p>
   HTML uses "markup" to annotate text, images, and other content for display in
@@ -442,7 +446,7 @@ p:first-of-type {
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 p {

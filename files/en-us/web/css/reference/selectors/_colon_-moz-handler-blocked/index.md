@@ -1,5 +1,6 @@
 ---
-title: :-moz-handler-blocked
+title: "`:-moz-handler-blocked` CSS pseudo-class"
+short-title: :-moz-handler-blocked
 slug: Web/CSS/Reference/Selectors/:-moz-handler-blocked
 page-type: css-pseudo-class
 status:

@@ -340,6 +340,6 @@ Before moving on, [comment](/en-US/docs/Learn_web_development/Core/Structuring_c
 
 Before adding the [JavaScript functionality](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality) to convert this static content into a web app and then enhancing it into a progressive web app with a [manifest file](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file) and [service worker](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Service_workers), we'll [create a local development environment](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection) to view our progress.
 
-Until then, you can view the [static CycleTracker shell](https://mdn.github.io/pwa-examples/cycletracker/html_and_css/) and download the [CycleTracker HTML and CSS source code](https://github.com/mdn/pwa-examples/tree/main/cycletracker/html_and_css) from GitHub.
+Until then, you can view the [static CycleTracker shell](https://mdn.github.io/pwa-examples/cycletracker/html_and_css/). You can also download the [CycleTracker HTML and CSS source code](https://github.com/mdn/pwa-examples/tree/main/cycletracker/html_and_css) in it's current, non-functional state from GitHub, before moving on to the next steps.
 
 {{PreviousMenuNext("Web/Progressive_web_apps/Tutorials/CycleTracker", "Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection", "Web/Progressive_web_apps/Tutorials/CycleTracker")}}

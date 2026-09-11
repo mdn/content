@@ -1,5 +1,6 @@
 ---
-title: animation-range-end
+title: "`animation-range-end` CSS property"
+short-title: animation-range-end
 slug: Web/CSS/Reference/Properties/animation-range-end
 page-type: css-property
 browser-compat: css.properties.animation-range-end
@@ -22,6 +23,11 @@ animation-range-end: contain;
 animation-range-end: cover 80%;
 animation-range-end: contain 700px;
 
+/* Multiple values */
+animation-range-end:
+  cover 80%,
+  contain 700px;
+
 /* Global values */
 animation-range-end: inherit;
 animation-range-end: initial;
@@ -32,12 +38,14 @@ animation-range-end: unset;
 
 ### Values
 
+This property is specified as a comma-separated list of values. Each value can be one of the following:
+
 - `normal`
   - : Represents the end of the timeline. This is the default value.
 - {{cssxref("length-percentage")}}
   - : Specifies a length or percentage value measured from the beginning of the timeline.
 - {{cssxref("timeline-range-name")}}
-  - : Specifies a named timeline range within the overall timeline. The range starts at `0%`.
+  - : Specifies a named timeline range within the overall timeline. The range ends at `100%`.
 - `<timeline-range-name> <length-percentage>`
   - : Specifies a length or percentage value measured from the beginning of the specified named timeline range.
 
@@ -46,6 +54,8 @@ animation-range-end: unset;
 The `animation-range-end` property specifies the end of the animation's attachment range. Changing the end of the attachment range can potentially shift the end of the animation, that is, the point where keyframes mapped to `100%` progress land when the iteration count is `1`, and can also reduce the effective duration of the animation.
 
 The property value can be `normal`, a `<length-percentage>`, or a {{cssxref("timeline-range-name")}} with an optional `<length-percentage>`. If the `<timeline-range-name>` value does not include a `<length-percentage>`, the percentage defaults to `100%`.
+
+When specifying multiple comma-separated values, they apply to the animations in the order in which the {{cssxref("animation-name")}} values appear. See [Setting multiple animation property values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values).
 
 The `animation-range-end` property is included in the {{cssxref("animation")}} shorthand as a reset-only value. This means that using the `animation` shorthand resets any previously declared `animation-range-end` value to `normal`; the shorthand cannot be used to set a new `animation-range-end` value. When creating [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations), you should declare `animation-range-end` _after_ declaring any `animation` shorthand to avoid resetting the value to `normal`.
 
@@ -226,5 +236,6 @@ Scroll to see the element animate. Then toggle the checkbox at the end of the bl
 - {{cssxref("view-timeline-inset")}}
 - {{domxref("Element.animate()")}} `rangeStart` property
 - [Scroll-driven animation timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
+- [Understanding timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names)
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module
 - [View progress timeline: Ranges and animation progress visualizer](https://scroll-driven-animations.style/tools/view-timeline/ranges/)

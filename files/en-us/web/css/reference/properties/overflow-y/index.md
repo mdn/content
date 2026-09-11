@@ -1,5 +1,6 @@
 ---
-title: overflow-y
+title: "`overflow-y` CSS property"
+short-title: overflow-y
 slug: Web/CSS/Reference/Properties/overflow-y
 page-type: css-property
 browser-compat: css.properties.overflow-y

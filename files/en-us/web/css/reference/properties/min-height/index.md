@@ -1,5 +1,6 @@
 ---
-title: min-height
+title: "`min-height` CSS property"
+short-title: min-height
 slug: Web/CSS/Reference/Properties/min-height
 page-type: css-property
 browser-compat: css.properties.min-height
@@ -7,6 +8,8 @@ sidebar: cssref
 ---
 
 The **`min-height`** [CSS](/en-US/docs/Web/CSS) property sets the minimum height of an element. It prevents the [used value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value) of the {{cssxref("height")}} property from becoming smaller than the value specified for `min-height`.
+
+The element's height is set to the value of `min-height` whenever `min-height` is larger than {{cssxref("max-height")}} or {{cssxref("height")}}.
 
 {{InteractiveExample("CSS Demo: min-height")}}
 
@@ -45,8 +48,6 @@ min-height: 10px;
   color: white;
 }
 ```
-
-The element's height is set to the value of `min-height` whenever `min-height` is larger than {{cssxref("max-height")}} or {{cssxref("height")}}.
 
 ## Syntax
 

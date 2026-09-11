@@ -1,5 +1,6 @@
 ---
-title: base-palette
+title: "`base-palette` CSS at-rule descriptor"
+short-title: base-palette
 slug: Web/CSS/Reference/At-rules/@font-palette-values/base-palette
 page-type: css-at-rule-descriptor
 browser-compat: css.at-rules.font-palette-values.base-palette

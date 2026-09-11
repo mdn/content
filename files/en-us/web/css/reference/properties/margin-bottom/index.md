@@ -1,5 +1,6 @@
 ---
-title: margin-bottom
+title: "`margin-bottom` CSS property"
+short-title: margin-bottom
 slug: Web/CSS/Reference/Properties/margin-bottom
 page-type: css-property
 browser-compat: css.properties.margin-bottom

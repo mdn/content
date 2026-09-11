@@ -1,5 +1,6 @@
 ---
-title: word-spacing
+title: "`word-spacing` CSS property"
+short-title: word-spacing
 slug: Web/CSS/Reference/Properties/word-spacing
 page-type: css-property
 browser-compat: css.properties.word-spacing
@@ -42,7 +43,7 @@ word-spacing: -0.4ch;
 
 ```css interactive-example
 @font-face {
-  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.woff2");
   font-family: "Amstelvar";
   font-style: normal;
 }
@@ -74,6 +75,8 @@ word-spacing: unset;
 ```
 
 ### Values
+
+This property is specified as the keyword `normal` or a `<length-percentage>`:
 
 - `normal`
   - : The normal inter-word spacing, as defined by the current font and/or the browser.
@@ -156,7 +159,7 @@ Our CSS starts by applying increasing {{cssxref("font-size")}} values to each su
 
 ```css hidden live-sample___percentage-versus-length
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Arial", sans-serif;
 }
 ```
 

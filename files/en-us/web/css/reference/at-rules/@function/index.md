@@ -1,5 +1,6 @@
 ---
-title: "@function"
+title: "`@function` CSS at-rule"
+short-title: "@function"
 slug: Web/CSS/Reference/At-rules/@function
 page-type: css-at-rule
 status:

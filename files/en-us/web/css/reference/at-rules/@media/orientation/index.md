@@ -1,5 +1,6 @@
 ---
-title: orientation
+title: "`orientation` CSS media feature"
+short-title: orientation
 slug: Web/CSS/Reference/At-rules/@media/orientation
 page-type: css-media-feature
 browser-compat: css.at-rules.media.orientation

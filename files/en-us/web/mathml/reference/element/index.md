@@ -6,20 +6,16 @@ page-type: landing-page
 sidebar: mathmlref
 ---
 
-This is an alphabetical list of MathML elements. All of them implement the {{domxref("MathMLElement")}} class.
+This page provides a list of all MathML elements. All of them implement the {{domxref("MathMLElement")}} class, except where otherwise noted.
 
 > [!NOTE]
 > As explained on the main [MathML](/en-US/docs/Web/MathML) page, MDN uses [MathML Core](https://w3c.github.io/mathml-core/) as a reference specification. However, legacy features that are still implemented by some browsers are also documented. You can find further details for these and other features in [MathML 4](https://w3c.github.io/mathml/).
 
 ## MathML elements A to Z
 
-### math
-
-- {{MathMLElement("math")}} (Top-level element)
-
 ### A
 
-- {{MathMLElement("maction")}} {{deprecated_inline}} (Bound actions to sub-expressions)
+- {{MathMLElement("a")}} (Hyperlink, implements {{domxref("MathMLAnchorElement")}})
 - {{MathMLElement("annotation")}} (Data annotations)
 - {{MathMLElement("annotation-xml")}} (XML annotations)
 
@@ -39,6 +35,8 @@ This is an alphabetical list of MathML elements. All of them implement the {{dom
 
 ### M
 
+- {{MathMLElement("maction")}} {{deprecated_inline}} (Bound actions to sub-expressions)
+- {{MathMLElement("math")}} (Top-level element)
 - {{MathMLElement("mmultiscripts")}} (Prescripts and tensor indices)
 
 ### N
@@ -101,6 +99,7 @@ This is an alphabetical list of MathML elements. All of them implement the {{dom
 
 ### General layout
 
+- {{MathMLElement("a")}} (Hyperlink, implements {{domxref("MathMLAnchorElement")}})
 - {{MathMLElement("menclose")}} {{non-standard_inline}} (Enclosed contents)
 - {{MathMLElement("merror")}} (Enclosed syntax error messages)
 - {{MathMLElement("mfenced")}} {{non-standard_inline}} {{deprecated_inline}} (Parentheses)

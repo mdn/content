@@ -1,5 +1,6 @@
 ---
-title: scaleX()
+title: "`scaleX()` CSS function"
+short-title: scaleX()
 slug: Web/CSS/Reference/Values/transform-function/scaleX
 page-type: css-function
 browser-compat: css.types.transform-function.scaleX

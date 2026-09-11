@@ -2,7 +2,7 @@
 title: 205 Reset Content
 slug: Web/HTTP/Reference/Status/205
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.205
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#status.205
 sidebar: http
 ---
 

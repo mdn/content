@@ -1,5 +1,6 @@
 ---
-title: type()
+title: "`type()` CSS function"
+short-title: type()
 slug: Web/CSS/Reference/Values/type
 page-type: css-function
 status:

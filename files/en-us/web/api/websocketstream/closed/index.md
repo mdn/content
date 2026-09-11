@@ -5,10 +5,11 @@ slug: Web/API/WebSocketStream/closed
 page-type: web-api-instance-property
 status:
   - experimental
+  - non-standard
 browser-compat: api.WebSocketStream.closed
 ---
 
-{{APIRef("WebSockets API")}}{{SeeCompatTable}}{{AvailableInWorkers}}
+{{APIRef("WebSockets API")}}{{SeeCompatTable}}{{AvailableInWorkers}}{{non-standard_header}}
 
 The **`closed`** read-only property of the
 {{domxref("WebSocketStream")}} interface returns a {{jsxref("Promise")}} that fulfills with an object once the socket connection is closed. The object contains the closing code and reason.

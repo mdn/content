@@ -1,5 +1,6 @@
 ---
-title: hypot()
+title: "`hypot()` CSS function"
+short-title: hypot()
 slug: Web/CSS/Reference/Values/hypot
 page-type: css-function
 browser-compat: css.types.hypot

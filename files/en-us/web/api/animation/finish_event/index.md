@@ -35,15 +35,6 @@ An {{domxref("AnimationPlaybackEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("AnimationPlaybackEvent")}}
 
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref("AnimationPlaybackEvent.currentTime")}} {{ReadOnlyInline}}
-  - : The current time of the animation that generated the event.
-- {{domxref("AnimationPlaybackEvent.timelineTime")}} {{ReadOnlyInline}}
-  - : The time value of the timeline of the animation that generated the event.
-
 ## Examples
 
 `Animation.onfinish` is used several times in the Alice in Web Animations API Land

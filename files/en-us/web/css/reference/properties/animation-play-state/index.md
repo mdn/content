@@ -1,5 +1,6 @@
 ---
-title: animation-play-state
+title: "`animation-play-state` CSS property"
+short-title: animation-play-state
 slug: Web/CSS/Reference/Properties/animation-play-state
 page-type: css-property
 browser-compat: css.properties.animation-play-state
@@ -79,6 +80,8 @@ animation-play-state: unset;
 ```
 
 ### Values
+
+This property is specified as a comma-separated list of the following keyword values:
 
 - `running`
   - : The **animation** is currently **playing**.

@@ -79,6 +79,17 @@ The image file formats that are most commonly used on the web are listed below.
       </td>
     </tr>
     <tr>
+      <th scope="row"><a href="#jpeg_xl_image">JPEG XL</a></th>
+      <th scope="row">JPEG XL image</th>
+      <td><code>image/jxl</code></td>
+      <td><code>.jxl</code></td>
+      <td>
+        Supports lossy and lossless compression, progressive decoding, HDR, wide color gamuts, transparency, and animation.
+        Because browser support is not yet universal, provide a fallback using the <code><a href="/en-US/docs/Web/HTML/Reference/Elements/picture">&lt;picture&gt;</a></code> element.<br />
+        <strong>Support:</strong> Safari; Chrome behind a flag; Firefox Nightly.
+      </td>
+    </tr>
+    <tr>
       <th scope="row"><a href="#png_portable_network_graphics">PNG</a></th>
       <th scope="row">Portable Network Graphics</th>
       <td><code>image/png</code></td>
@@ -834,6 +845,60 @@ The JFIF (**J**PEG **F**ile **I**nterchange **F**ormat) specification describes 
   </tbody>
 </table>
 
+### JPEG XL image
+
+JPEG XL (JXL) is a royalty-free raster image format standardized as ISO/IEC 18181.
+It supports lossy and lossless compression, progressive decoding, high bit depths, wide color gamuts, high dynamic range (HDR), transparency, and animation.
+JPEG XL can also losslessly transcode existing JPEG images, allowing the original JPEG file to be reconstructed.
+
+Browser support is not yet universal.
+When using JPEG XL, provide an alternative format such as AVIF, WebP, or JPEG [with the `<picture>` element](#providing_image_fallbacks).
+
+<table class="standard-table">
+  <tbody>
+    <tr>
+      <th scope="row">MIME type</th>
+      <td><code>image/jxl</code></td>
+    </tr>
+    <tr>
+      <th scope="row">File extension(s)</th>
+      <td><code>.jxl</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Specification</th>
+      <td>
+        <a href="https://jpeg.org/jpegxl/workplan.html">ISO/IEC 18181 (JPEG XL)</a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Browser compatibility</th>
+      <td>
+        Safari 17 and later. Chrome 145 and later supports JPEG XL behind the <code>#enable-jxl-image-format</code> flag. Firefox supports it in preview releases. Safari does not support progressive download of JPEG XL files (it can render them after complete download).
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Maximum dimensions</th>
+      <td>1,073,741,823×1,073,741,823 pixels</td>
+    </tr>
+    <tr>
+      <th scope="row">Supported color modes</th>
+      <td>
+        Greyscale and color images, with optional alpha channels, high bit depths, wide color gamuts, and HDR.
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Compression</th>
+      <td>Lossy and lossless.</td>
+    </tr>
+    <tr>
+      <th scope="row">Licensing</th>
+      <td>Royalty-free.
+        The format's contributors <a href="https://jpeg.org/items/20190803_press.html">committed to a royalty-free release</a> during standardization, and there are no known royalty-bearing patents.
+        The decoder implementations shipped by browsers are open source with additional patent grants.</td>
+    </tr>
+  </tbody>
+</table>
+
 ### PNG (Portable Network Graphics)
 
 The {{Glossary("PNG")}} (pronounced "**ping**") image format uses lossless compression, while supporting higher color depths than [GIF](#gif_graphics_interchange_format) and being more efficient, as well as featuring full alpha transparency support.
@@ -968,7 +1033,7 @@ It's not generally useful for strictly bitmap or photographic images, although i
     </tr>
     <tr>
       <th scope="row">Specification</th>
-      <td><a href="https://svgwg.org/svg2-draft/">Scalable Vector Graphics (SVG) 2</a></td>
+      <td><a href="https://w3c.github.io/svgwg/svg2-draft/">Scalable Vector Graphics (SVG) 2</a></td>
     </tr>
     <tr>
       <th scope="row">Browser compatibility</th>
@@ -1292,93 +1357,24 @@ static unsigned char square8_bits[] = {
 
 ## Choosing an image format
 
-Picking the best image format for your needs is likely easier than video formats, as there are fewer options with broad support, and each tends to have a specific set of use-cases.
+Image formats are usually selected based on factors such as compression, quality, breadth and depth of browser support, and whether you need features such as transparency or animation.
 
-### Photographs
+For raster images, prefer [WebP](#webp_image) or [AVIF](#avif_image), which generally provide better compression than PNG, JPEG, and GIF.
+You should also consider [JPEG XL](/en-US/docs/Web/Media/Guides/Formats/Image_types#jpeg_xl_image) for large, high-resolution raster images.
+Most browsers can progressively render them by displaying an initial version before the full image downloads.
 
-Photographs typically fare well with lossy compression (depending on the encoder's configuration).
-This makes [JPEG](#jpeg_joint_photographic_experts_group_image) and [WebP](#webp_image) good choices for photographs, with JPEG being more compatible but WebP perhaps offering better compression.
-To maximize quality and minimize download time, consider providing both [using a fallback](#providing_image_fallbacks) with WebP as the first choice and JPEG as the second.
-Otherwise, JPEG is the safe choice for compatibility.
+If you need to support browsers that don't allow WebP, AVIF, or JPEG XL, use the {{HTMLElement("picture")}} element to provide a PNG or JPEG fallback.
+This is shown in [Providing image fallbacks](#providing_image_fallbacks) below.
 
-<table class="standard-table" style="max-width: 42rem">
-  <thead>
-    <tr>
-      <th scope="col" style="width: 50%">Best choice</th>
-      <th scope="col">Fallback</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>WebP or JPEG</td>
-      <td>JPEG</td>
-    </tr>
-  </tbody>
-</table>
+Compression can be lossy, discarding image data to get much smaller files, or lossless, reproducing the original exactly.
+For screenshots, diagrams, logos, and line art, prefer lossless encoding, as blurring and colored fringes around text and sharp edges are very visible.
+Photographs and other continuous-tone images can usually tolerate lossy compression, because the discarded detail is harder to see.
+WebP and AVIF support both lossy and lossless compression as a setting you choose when encoding.
+JPEG is lossy, so it is often a good fallback format for photographs, while PNG is lossless, making it better for screenshots, diagrams, and line art.
+PNG is also the fallback for any image needing transparency, as JPEG has no alpha channel.
 
-### Icons
-
-For smaller images such as icons, use a lossless format to avoid loss of detail in a size-constrained image.
-While lossless WebP is ideal for this purpose, support is not widespread yet, so PNG is a better choice unless you offer a [fallback](#providing_image_fallbacks).
-If your image contains fewer than 256 colors, GIF is an option, although PNG often compresses even smaller with its indexed compression option (PNG-8).
-
-If the icon can be represented using vector graphics, consider [SVG](#svg_scalable_vector_graphics), since it scales across various resolutions and sizes, so it's perfect for responsive design.
-Although SVG support is good, it may be worth offering a PNG fallback for older browsers.
-
-<table class="standard-table" style="max-width: 42rem">
-  <thead>
-    <tr>
-      <th scope="col" style="width: 50%">Best choice</th>
-      <th scope="col">Fallback</th>
-    </tr>
-    <tr>
-      <td>SVG, Lossless WebP, or PNG</td>
-      <td>PNG</td>
-    </tr>
-  </thead>
-</table>
-
-### Screenshots
-
-Unless you're willing to compromise on quality, you should use a lossless format for screenshots.
-This is particularly important if there's any text in your screenshot, as text easily becomes fuzzy and unclear under lossy compression.
-
-PNG is probably your best bet, but lossless WebP is arguably going to be better compressed.
-
-<table class="standard-table" style="max-width: 42rem">
-  <thead>
-    <tr>
-      <th scope="col" style="width: 50%">Best choice</th>
-      <th scope="col">Fallback</th>
-    </tr>
-    <tr>
-      <td>
-        Lossless WebP or PNG;<br />JPEG if compression artifacts aren't a
-        concern
-      </td>
-      <td>PNG or JPEG;<br />GIF for screenshots with low color counts</td>
-    </tr>
-  </thead>
-</table>
-
-### Diagrams, drawings, and charts
-
-For any image that can be represented using vector graphics, SVG is the best choice.
-Otherwise, you should use a lossless format like PNG.
-If you do choose a lossy format, such as JPEG or lossy WebP, carefully weigh the compression level to avoid causing text or other shapes to become fuzzy or unclear.
-
-<table class="standard-table" style="max-width: 42rem">
-  <thead>
-    <tr>
-      <th scope="col" style="width: 50%">Best choice</th>
-      <th scope="col">Fallback</th>
-    </tr>
-    <tr>
-      <td><a href="#svg_scalable_vector_graphics">SVG</a></td>
-      <td><a href="#png_portable_network_graphics">PNG</a></td>
-    </tr>
-  </thead>
-</table>
+For diagrams, charts, and other images that must be drawn accurately at different sizes, use [SVG](#svg_scalable_vector_graphics).
+Most icons have vector graphics versions, and you should prioritize the SVG version whenever possible. If only raster versions are available, choose [WebP](#webp_image) but provide fallback like other raster images.
 
 ## Providing image fallbacks
 
@@ -1390,6 +1386,7 @@ For example, if you're displaying a diagram best displayed with SVG, but wish to
 ```html
 <picture>
   <source srcset="diagram.svg" type="image/svg+xml" />
+  <source srcset="diagram.webp" type="image/webp" />
   <source srcset="diagram.png" type="image/png" />
   <img
     src="diagram.gif"

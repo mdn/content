@@ -2,7 +2,7 @@
 title: 207 Multi-Status
 slug: Web/HTTP/Reference/Status/207
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc4918#section-11.1
+spec-urls: https://www.rfc-editor.org/info/rfc4918/#section-11.1
 sidebar: http
 ---
 

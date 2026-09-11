@@ -7,7 +7,7 @@ status:
 browser-compat: api.SpeechGrammar
 ---
 
-{{APIRef("Web Speech API")}}{{deprecated_header}}
+{{APIRef("Web Speech API")}}
 
 The **`SpeechGrammar`** interface of the [Web Speech API](/en-US/docs/Web/API/Web_Speech_API) represents a set of words or patterns of words for the recognition service to recognize.
 

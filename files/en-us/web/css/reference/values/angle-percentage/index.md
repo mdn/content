@@ -1,5 +1,6 @@
 ---
-title: <angle-percentage>
+title: "`<angle-percentage>` CSS type"
+short-title: <angle-percentage>
 slug: Web/CSS/Reference/Values/angle-percentage
 page-type: css-type
 browser-compat: css.types.angle-percentage

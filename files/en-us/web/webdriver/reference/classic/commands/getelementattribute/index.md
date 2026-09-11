@@ -6,7 +6,7 @@ browser-compat: webdriver.classic.GetElementAttribute
 sidebar: webdriver
 ---
 
-The _Get Element Attribute_ [command](/en-US/docs/Web/WebDriver/Reference/Command) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns the attribute of the referenced [web element](/en-US/docs/Web/WebDriver/Reference/WebElement). If for example the element is an {{HTMLElement("img")}}, the returned attribute is `"//TODO"`, which is equivalent to calling {{domxref("Element.getAttribute")}} on the element. For XML/XHTML documents it may be cased differently.
+The _Get Element Attribute_ [command](/en-US/docs/Web/WebDriver/Reference/Command) of the [WebDriver](/en-US/docs/Web/WebDriver) API returns the value associated with the attribute of the given name of the referenced [web element](/en-US/docs/Web/WebDriver/Reference/WebElement). For boolean attributes, the associated value is `"true"` if present. Absent attributes return `null`. It is equivalent to calling {{domxref("Element.getAttribute()")}} on the element in JavaScript.
 
 ## Syntax
 
@@ -25,11 +25,11 @@ The _Get Element Attribute_ [command](/en-US/docs/Web/WebDriver/Reference/Comman
 
 ### Errors
 
-- [Session not created](/en-US/docs/Web/WebDriver/Reference/Errors/SessionNotCreated)
+- [`session not created`](/en-US/docs/Web/WebDriver/Reference/Errors/SessionNotCreated)
   - : Session does not exist.
-- [No such window](/en-US/docs/Web/WebDriver/Reference/Errors/NoSuchWindow)
+- [`no such window`](/en-US/docs/Web/WebDriver/Reference/Errors/NoSuchWindow)
   - : The [`window`](/en-US/docs/Web/API/Window) object has been discarded, indicating that the tab or window has been closed.
-- [Unexpected alert open](/en-US/docs/Web/WebDriver/Reference/Errors/UnexpectedAlertOpen)
+- [`unexpected alert open`](/en-US/docs/Web/WebDriver/Reference/Errors/UnexpectedAlertOpen)
   - : A user prompt, such as [`window.alert`](/en-US/docs/Web/API/Window/alert), blocks execution of command until it is dealt with.
 
 ## Examples
