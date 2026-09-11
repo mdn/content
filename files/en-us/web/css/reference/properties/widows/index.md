@@ -45,13 +45,7 @@ This property is specified as one `<integer>`:
 
 ### Controlling column widows
 
-This example shows three columns with a widows value of `2`.
-So supporting browsers will avoid wrapping if not enough space is left for 2 lines:
-
-![3 paragraphs rendered side-by-side in 3 columns. Each column has space for 4 rendered lines of text. The first paragraph requires 2 lines. Despite having space for 1 line left in the first column, the second paragraph does not start until the second column. The third paragraph exclusively occupies the third column.](with.png)
-
-This prevents breaking off a small number of lines like here:
-![Similar image with 3 paragraphs. This time the second paragraph starts at the end of the first column. The first column contains 1 line of text of the second paragraph while the second column contains the remainder of the text.](without.png)
+This example uses a checkbox to switch `widows` between `2` and `1`. With `widows: 2`, at least two lines of a paragraph must appear at the top of a column. With `widows: 1`, the paragraph can be broken anywhere.
 
 #### HTML
 
@@ -67,6 +61,10 @@ This prevents breaking off a small number of lines like here:
     one.
   </p>
 </div>
+<form>
+  <input type="checkbox" id="widows" checked />
+  <label for="widows">Apply widows: 2</label>
+</form>
 ```
 
 #### CSS
@@ -74,7 +72,15 @@ This prevents breaking off a small number of lines like here:
 ```css
 div {
   background-color: #8cffa0;
+  width: 400px;
+  height: 160px;
   columns: 3;
+  column-fill: auto;
+  orphans: 1;
+  widows: 1;
+}
+
+div:has(~ form input:checked) {
   widows: 2;
 }
 
@@ -89,7 +95,11 @@ p:first-child {
 
 #### Result
 
-{{EmbedLiveSample("Controlling_column_widows", 400, 160)}}
+{{EmbedLiveSample("Controlling_column_widows", "", 280)}}
+
+In Firefox, which does not support `widows`, the behavior in this example is essentially equivalent to `widows: 1`, regardless of the checkbox state. The following screenshot shows the result with `widows: 2` in a supporting browser:
+
+![Three paragraphs in three columns. The second paragraph spans the first and second columns. The third paragraph has two lines at the bottom of the second column and two lines at the top of the third column.](with-widows.png)
 
 ## Specifications
 
