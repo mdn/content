@@ -93,7 +93,6 @@ Firefox 156 is the current [Beta version of Firefox](https://www.firefox.com/en-
   ([Firefox bug 2065212](https://bugzil.la/2065212)).
 - {{domxref("Scheduler.yield()")}} now inherits the enclosing task's priority and abort signal across an `await` that settles synchronously, such as an already-resolved promise, a non-promise value, or a `then()` callback on a settled promise.
   Previously the continuation lost the inherited state in these cases and silently fell back to the default `user-visible` priority.
-- {{domxref("Cache.addAll()")}} now succeeds when the requests it is given differ only by a `Vary` header, instead of rejecting with an `InvalidStateError`.
 
 #### DOM
 
@@ -118,7 +117,6 @@ Firefox 156 is the current [Beta version of Firefox](https://www.firefox.com/en-
 #### General
 
 - Fixed the Actions API so that `moveOverTime` timer delays no longer cause intermediate pointer move events to be skipped. ([Firefox bug 2054442](https://bugzil.la/2054442)).
-- Releasing a character sequence held with a modifier key now emits the `keyup` events in reverse order, in both the classic and WebDriver BiDi endpoints.
 
 #### WebDriver BiDi
 
