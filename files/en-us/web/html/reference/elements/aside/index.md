@@ -52,6 +52,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Referenc
 ## Usage notes
 
 - Do not use the `<aside>` element to tag parenthesized text, as this kind of text is considered part of the main flow.
+- The `<aside>` element has an implicit role of [`complementary`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role), unless it has no {{glossary("accessible name")}} and is nested in [sectioning content](/en-US/docs/Web/HTML/Guides/Content_categories#sectioning_content), in which case it has the [`generic`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role) role.
 
 ## Examples
 
@@ -128,7 +129,7 @@ This example uses `<aside>` to mark up a paragraph in an article. The paragraph 
           ><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role"
             >complementary</a
           ></code
-        >
+        >, or <code><a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role">generic</a></code> when it has no {{glossary("accessible name")}} and is nested in <a href="/en-US/docs/Web/HTML/Guides/Content_categories#sectioning_content">sectioning content</a>
       </td>
     </tr>
     <tr>

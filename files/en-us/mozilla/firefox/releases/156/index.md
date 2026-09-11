@@ -62,13 +62,20 @@ Firefox 156 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### WebDriver conformance (WebDriver BiDi, Marionette) -->
+### WebDriver conformance (WebDriver BiDi, Marionette)
 
-<!-- #### General -->
+#### General
 
-<!-- #### WebDriver BiDi -->
+- Marionette and RemoteAgent now both use a custom exit code (69) when their server fails to start. ([Firefox bug 2040974](https://bugzil.la/2040974)).
+- Improved the timing of intermediary events for actions with a duration greater than 0, to be closer to a 16ms interval and avoid inflating the overall duration even if the content process is overloaded. ([Firefox bug 2054442](https://bugzil.la/2054442)).
 
-<!-- #### Marionette -->
+#### WebDriver BiDi
+
+- `browsingContext.startScreencast` will now safely pick a valid download folder and should no longer throw if the default download folder (`DfltDwnld`) is not available. ([Firefox bug 2066782](https://bugzil.la/2066782)).
+
+#### Marionette
+
+- The `WebDriver:GetElementTagName` command was updated to match the [latest specification changes](https://github.com/w3c/webdriver/pull/1968) and now returns the DOM element's [qualified name](https://dom.spec.whatwg.org/#concept-element-qualified-name). This command used to always lowercase the return value. In practice, this change is backward compatible for HTML elements, but it is a non-backward-compatible change for elements with a case-sensitive qualified name, such as SVG elements.([Firefox bug 2026697](https://bugzil.la/2026697)).
 
 ## Changes for add-on developers
 

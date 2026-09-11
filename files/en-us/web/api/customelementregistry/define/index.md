@@ -22,7 +22,26 @@ define(name, constructor, options)
 - `name`
   - : Name for the new custom element. Must be a [valid custom element name](#valid_custom_element_names).
 - `constructor`
-  - : Constructor for the new custom element.
+  - : Constructor for the new custom element. It can have the following instance methods (defined on `constructor.prototype`):
+    - `connectedCallback`
+    - `disconnectedCallback`
+    - `connectedMoveCallback`
+    - `adoptedCallback`
+    - `attributeChangedCallback`
+
+    It can have the following static properties:
+    - `observedAttributes`: an array of strings. Only read if `attributeChangedCallback` is defined.
+    - `disabledFeatures`: an array containing the values `"internals"` and/or `"shadow"`.
+    - `formAssociated`: a boolean.
+
+    If `formAssociated` is `true`, it can additionally have the following instance methods:
+    - `formAssociatedCallback`
+    - `formResetCallback`
+    - `formDisabledCallback`
+    - `formStateRestoreCallback`
+
+    All of these methods and properties are only retrieved once when `define()` is called. For their behavior, see [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements).
+
 - `options` {{optional_inline}}
   - : Object that controls how the element is defined. One option is currently supported:
     - `extends`

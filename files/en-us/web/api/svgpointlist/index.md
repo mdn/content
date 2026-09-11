@@ -11,6 +11,8 @@ The **`SVGPointList`** interface represents a list of {{domxref("DOMPoint")}} ob
 
 An `SVGPointList` can be designated as read-only, which means that attempts to modify the object will result in an exception being thrown.
 
+An `SVGPointList` object is indexable and can be accessed like an array using [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation). Reading an index is equivalent to calling {{domxref("SVGPointList.getItem", "getItem()")}}. Assigning to an index is equivalent to calling {{domxref("SVGPointList.replaceItem", "replaceItem()")}}, including the exceptions it throws.
+
 ## Instance properties
 
 - {{domxref("SVGPointList.length")}} {{ReadOnlyInline}}

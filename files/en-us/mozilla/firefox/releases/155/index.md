@@ -182,6 +182,10 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   The {{cssxref("view-timeline")}} shorthand property now supports the {{cssxref("view-timeline-inset")}} property. The shorthand lets you specify start and/or end inset (or outset) values to adjust the position of the view progress timeline. ([Firefox bug 2046602](https://bugzil.la/2046602)).
 
+- **The `MathMLAnchorElement` interface**: `mathml.a.element.enabled`
+
+  The MathML [`<a>`](/en-US/docs/Web/MathML/Reference/Element/a) element is now correctly represented in the DOM by the [`MathMLAnchorElement`](/en-US/docs/Web/API/MathMLAnchorElement) interface rather than the generic [`MathMLElement`](/en-US/docs/Web/API/MathMLElement) interface. ([Firefox bug 2059312](https://bugzil.la/2059312)).
+
 - **`timeline-scope` is now global by default**: `layout.css.scroll-driven-animations.enabled`
 
   The default behavior of named timeline scoping has been updated to be global. This can be scoped to elements, and their subtree, using the {{cssxref("timeline-scope")}} CSS property and the value of either the {{cssxref("scroll-timeline-name")}} or {{cssxref("view-timeline-name")}} ([Firefox bug 2024012](https://bugzil.la/2024012)).
