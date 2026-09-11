@@ -624,7 +624,7 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
    ![Go to Databases after setting up Access Rules on MongoDB Atlas](mongodb_atlas_-_accessrules.jpg)
 
 6. You will return to the _Overview_ screen. Click on the _Database_ section under the _Deployment_ menu on the left. Click the **Browse Collections** button.
-   ![Setup a collection on MongoDB Atlas.](mongodb_atlas_-_createcollection.jpg)
+   ![Set up a collection on MongoDB Atlas.](mongodb_atlas_-_createcollection.jpg)
 
 7. This will open the _Collections_ section. Click the **Add My Own Data** button.
    ![Create a database on MongoDB Atlas.](mongodb_atlas_-_adddata.jpg)
