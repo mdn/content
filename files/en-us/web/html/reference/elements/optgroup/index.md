@@ -11,9 +11,6 @@ The **`<optgroup>`** [HTML](/en-US/docs/Web/HTML) element creates a grouping of 
 
 In [customizable `<select>` elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), the {{htmlelement("legend")}} element is allowed as a child of `<optgroup>`, to provide a label that is easy to target and style. This replaces any text set in the `<optgroup>` element's `label` attribute, and it has the same semantics.
 
-> [!NOTE]
-> Optgroup elements may not be nested.
-
 {{InteractiveExample("HTML Demo: &lt;optgroup&gt;", "tabbed-standard")}}
 
 ```html interactive-example
@@ -47,6 +44,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
   - : If this Boolean attribute is set, none of the items in this option group is selectable. Often browsers gray out such control and it won't receive any browsing events, like mouse clicks or focus-related ones.
 - `label`
   - : The name of the group of options, which the browser can use when labeling the options in the user interface. This attribute is mandatory if this element is used.
+
+## Usage notes
+
+> [!NOTE]
+> Optgroup elements may not be nested.
 
 ## Examples
 

@@ -9,8 +9,6 @@ sidebar: htmlsidebar
 
 The **`<style>`** [HTML](/en-US/docs/Web/HTML) element contains style information for a document, or part of a document. It contains CSS, which is applied to the contents of the document containing the `<style>` element.
 
-The `<style>` element is typically included inside the {{htmlelement("head")}} of the document. It can also be used anywhere metadata content is permitted, such as inside a {{htmlelement("template")}} element.
-
 {{InteractiveExample("HTML Demo: &lt;style&gt;", "tabbed-standard")}}
 
 ```html interactive-example
@@ -39,10 +37,6 @@ p {
 }
 ```
 
-If you include multiple `<style>` and `<link>` elements in your document, they will be applied to the DOM in the order they are included in the document — make sure you include them in the correct order, to avoid unexpected cascade issues.
-
-In the same manner as `<link>` elements, `<style>` elements can include `media` attributes that contain [media queries](/en-US/docs/Web/CSS/Guides/Media_queries), allowing you to selectively apply internal stylesheets to your document depending on media features such as viewport width.
-
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
@@ -65,6 +59,14 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 - `type` {{deprecated_inline}}
   - : This attribute should not be provided: if it is, the only permitted values are the empty string or a case-insensitive match for `text/css`.
+
+## Usage notes
+
+The `<style>` element is typically included inside the {{htmlelement("head")}} of the document. It can also be used anywhere metadata content is permitted, such as inside a {{htmlelement("template")}} element.
+
+If you include multiple `<style>` and `<link>` elements in your document, they will be applied to the DOM in the order they are included in the document — make sure you include them in the correct order, to avoid unexpected cascade issues.
+
+In the same manner as `<link>` elements, `<style>` elements can include `media` attributes that contain [media queries](/en-US/docs/Web/CSS/Guides/Media_queries), allowing you to selectively apply internal stylesheets to your document depending on media features such as viewport width.
 
 ## Examples
 

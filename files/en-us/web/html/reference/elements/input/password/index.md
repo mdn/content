@@ -12,10 +12,6 @@ sidebar: htmlsidebar
 The element is presented as a one-line plain text editor control in which the text is obscured so that it cannot be read, usually by replacing each character with a symbol such as the asterisk ("\*") or a dot ("•").
 This character will vary depending on the {{Glossary("user agent")}} and operating system.
 
-The precise behavior of the entry process may vary from browser to browser.
-Some browsers display the typed character for a moment before obscuring it, while others allow the user to toggle the display of plain-text on and off.
-Both approaches help a user check that they entered the intended password, which can be particularly difficult on mobile devices.
-
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;password&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
@@ -43,10 +39,6 @@ label {
 }
 ```
 
-> [!NOTE]
-> Any forms involving sensitive information like passwords (such as login forms) should be served over HTTPS.
-> Many browsers now implement mechanisms to warn against insecure login forms.
-
 ## Value
 
 The [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) attribute contains a string whose value is the current contents of the text editing control being used to enter the password. If the user hasn't entered anything yet, this value is an empty string (`""`). If the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) property is specified, then the password edit box must contain a value other than an empty string to be valid.
@@ -55,6 +47,16 @@ If the [`pattern`](/en-US/docs/Web/HTML/Reference/Elements/input#pattern) attrib
 
 > [!NOTE]
 > The line feed (U+000A) and carriage return (U+000D) characters are not permitted in a `password` value. When setting the value of a password control, line feed and carriage return characters are stripped out of the value.
+
+## Usage notes
+
+The precise behavior of the entry process may vary from browser to browser.
+Some browsers display the typed character for a moment before obscuring it, while others allow the user to toggle the display of plain-text on and off.
+Both approaches help a user check that they entered the intended password, which can be particularly difficult on mobile devices.
+
+> [!NOTE]
+> Any forms involving sensitive information like passwords (such as login forms) should be served over HTTPS.
+> Many browsers now implement mechanisms to warn against insecure login forms.
 
 ## Additional attributes
 

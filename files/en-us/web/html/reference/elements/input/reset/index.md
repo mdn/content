@@ -9,9 +9,6 @@ sidebar: htmlsidebar
 
 {{HTMLElement("input")}} elements of type **`reset`** are rendered as buttons, with a default {{domxref("Element/click_event", "click")}} event handler that resets all inputs in the form to their initial values.
 
-> [!NOTE]
-> You should usually avoid including reset buttons in your forms. They're rarely useful, and are instead more likely to frustrate users who click them by mistake (often while trying to click the [submit button](/en-US/docs/Web/HTML/Reference/Elements/input/submit)).
-
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;reset&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
@@ -78,6 +75,11 @@ If you don't specify a `value`, you get a button with the default label (typical
 ```
 
 {{EmbedLiveSample("Omitting_the_value_attribute", 650, 30)}}
+
+## Usage notes
+
+> [!NOTE]
+> You should usually avoid including reset buttons in your forms. They're rarely useful, and are instead more likely to frustrate users who click them by mistake (often while trying to click the [submit button](/en-US/docs/Web/HTML/Reference/Elements/input/submit)).
 
 ## Using reset buttons
 

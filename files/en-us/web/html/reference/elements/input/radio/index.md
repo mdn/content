@@ -11,8 +11,6 @@ sidebar: htmlsidebar
 
 Only one radio button in a given group can be selected at the same time. Radio buttons are typically rendered as small circles, which are filled or highlighted when selected.
 
-They are called radio buttons because they look and operate in a similar manner to the push buttons on old-fashioned radios, such as the one shown below.
-
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;radio&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
@@ -48,11 +46,6 @@ input {
   margin: 0.4rem;
 }
 ```
-
-![Shows what radio buttons looked like in the olden days.](old-radio.jpg)
-
-> [!NOTE]
-> [Checkboxes](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) are similar to radio buttons, but with an important distinction: radio buttons are designed for selecting one value out of a set, whereas checkboxes let you turn individual values on and off. Where multiple controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.
 
 ## Value
 
@@ -148,6 +141,15 @@ form.addEventListener("submit", (event) => {
 Try this example out and see how there's never more than one result for the `contact` group.
 
 {{EmbedLiveSample("Data_representation_of_a_radio_group", 600, 130)}}
+
+## Usage notes
+
+Radio buttons look and operate in a similar manner to the push buttons on old-fashioned radios, such as the one shown below.
+
+![Shows what radio buttons looked like in the olden days.](old-radio.jpg)
+
+> [!NOTE]
+> [Checkboxes](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) are similar to radio buttons, but with an important distinction: radio buttons are designed for selecting one value out of a set, whereas checkboxes let you turn individual values on and off. Where multiple controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.
 
 ## Additional attributes
 
