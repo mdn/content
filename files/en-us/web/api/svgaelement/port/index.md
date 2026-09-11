@@ -3,10 +3,12 @@ title: "SVGAElement: port property"
 short-title: port
 slug: Web/API/SVGAElement/port
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.SVGAElement.port
 ---
 
-{{APIRef("SVG")}}
+{{APIRef("SVG")}}{{SeeCompatTable}}
 
 The **`port`** property of the {{domxref("SVGAElement")}} interface represents the port number of the SVG {{SVGElement("a")}} element's {{SVGAttr("href")}}.
 If the port is the default for the protocol (`80` for `ws:` and `http:`, `443` for `wss:` and `https:`, and `21` for `ftp:`), this property contains an empty string, `""`.

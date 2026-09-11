@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Window.stop
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`window.stop()`** stops further resource loading in the current
 browsing context, equivalent to the stop button in the browser.

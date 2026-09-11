@@ -3,9 +3,13 @@ title: "`flex-line-count` CSS property"
 short-title: flex-line-count
 slug: Web/CSS/Reference/Properties/flex-line-count
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.flex-line-count
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`flex-line-count`** [CSS](/en-US/docs/Web/CSS) property sets the minimum number of flex lines that flex items will be balanced over in cases where a flex container's {{cssxref("flex-wrap")}} or {{cssxref("flex-flow")}} property includes the `balance` keyword.
 
@@ -324,7 +328,7 @@ We include an {{htmlelement("ol")}} element containing ten {{htmlelement("li")}}
 
 #### CSS
 
-We set the list's {{cssxref("display")}} to `flex`. We set a {{cssxref("flex-direction")}} value of `column`and a {{cssxref("flex-wrap")}} value of `balance` using the {{cssxref("flex-flow")}} shorthand so that the flex lines are arranged in columns and will balance when wrapped. The {{cssxref("gap")}} value `10px 40px` specifies a gap of `10px` between flex items within each column and `40px` between flex lines.
+We set the list's {{cssxref("display")}} to `flex`. We set a {{cssxref("flex-direction")}} value of `column` and a {{cssxref("flex-wrap")}} value of `balance` using the {{cssxref("flex-flow")}} shorthand so that the flex lines are arranged in columns and will balance when wrapped. The {{cssxref("gap")}} value `10px 40px` specifies a gap of `10px` between flex items within each column and `40px` between flex lines.
 
 Finally, we set a `flex-line-count` value of `2`, meaning that, even though no fixed height is set on the list, its content will always be wrapped over two balanced columns, regardless of how much content is included.
 

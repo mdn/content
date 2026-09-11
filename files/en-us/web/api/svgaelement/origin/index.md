@@ -3,10 +3,12 @@ title: "SVGAElement: origin property"
 short-title: origin
 slug: Web/API/SVGAElement/origin
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.SVGAElement.origin
 ---
 
-{{APIRef("SVG")}}
+{{APIRef("SVG")}}{{SeeCompatTable}}
 
 The **`origin`** read-only property of the {{domxref("SVGAElement")}} interface represents the {{glossary("origin")}} of the SVG {{SVGElement("a")}} element's {{SVGAttr("href")}}: usually its scheme, domain, and port.
 

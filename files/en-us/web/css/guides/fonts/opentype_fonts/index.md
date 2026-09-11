@@ -529,7 +529,7 @@ checkBox2.addEventListener("change", () => {
 
 Associated CSS property: {{cssxref("font-variant-caps")}}
 
-One of the more common use cases for OpenType features is proper small caps. These are capital letters sized to fit better amongst lower case letters and are generally used for acronyms and abbreviations. Click "Play" in the code blocks below to edit the example in the MDN Playground:
+One of the more common use cases for OpenType features is proper small caps. These are capital letters sized to fit better among lower case letters and are generally used for acronyms and abbreviations. Click "Play" in the code blocks below to edit the example in the MDN Playground:
 
 ```html hidden live-sample___font-variant-caps-example
 <fieldset>

@@ -24,9 +24,10 @@ color-mix(in lab, plum 60%, #123456 50%)
 color-mix(in lch increasing hue, hsl(200deg 50% 80%), coral)
 color-mix(in lch longer hue, hsl(200deg 50% 80%) 44%, coral 16%)
 
-/* with more than two colors */
-color-mix(in oklab, teal, olive, blue)
+/* With a color argument list */
+color-mix(in oklab, teal)
 color-mix(in oklab, teal 20%, olive 30%, blue 50%)
+color-mix(in oklab, teal, olive, blue, purple)
 ```
 
 ### Parameters
@@ -71,6 +72,18 @@ The color space must be one of the available color spaces listed in the [formal 
 The [`<rectangular-color-space>`](/en-US/docs/Web/CSS/Reference/Values/color-interpolation-method#rectangular-color-space) category includes [`srgb`](/en-US/docs/Glossary/Color_space#srgb), [`srgb-linear`](/en-US/docs/Glossary/Color_space#srgb-linear), [`display-p3`](/en-US/docs/Glossary/Color_space#display-p3), [`a98-rgb`](/en-US/docs/Glossary/Color_space#a98-rgb), [`prophoto-rgb`](/en-US/docs/Glossary/Color_space#prophoto-rgb), [`rec2020`](/en-US/docs/Glossary/Color_space#rec2020), [`lab`](/en-US/docs/Glossary/Color_space#cielab_color_spaces), [`oklab`](/en-US/docs/Glossary/Color_space#oklab), [`xyz`](/en-US/docs/Glossary/Color_space#xyz_color_spaces), [`xyz-d50`](/en-US/docs/Glossary/Color_space#xyz), and [`xyz-d65`](/en-US/docs/Glossary/Color_space#xyz-d50).
 
 The `<polar-color-space>` category includes [`hsl`](/en-US/docs/Web/CSS/Reference/Values/color_value/hsl), [`hwb`](/en-US/docs/Web/CSS/Reference/Values/color_value/hwb), [`lch`](/en-US/docs/Web/CSS/Reference/Values/color_value/lch), and [`oklch`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch). With these you can optionally follow the color space name with a {{CSSXref("&lt;hue-interpolation-method&gt;")}}. This value defaults to `shorter hue`, but can also be set to `longer hue`, `increasing hue`, or `decreasing hue`.
+
+### Default color space and interpolation method
+
+When mixing colors without a color space or hue interpolation method, the `oklab` color space is used, using `shorter` as the hue interpolation method.
+
+The following three declarations are equivalent:
+
+```css
+background-color: color-mix(red, blue);
+background-color: color-mix(in oklab, red, blue);
+background-color: color-mix(in oklab shorter hue, red, blue);
+```
 
 ### Color percentages
 
@@ -164,13 +177,72 @@ li:nth-child(6) {
 
 The total value of both colors in a `color-mix()` function is 100%, even if the values set by the developer don't total 100%. In this example, as only one color has a percentage assigned, the other color is implicitly given a percentage value so that the combined total equals 100%. In the last {{htmlelement("li")}}, where neither color is assigned a percentage, both default to 50%.
 
-When mixing colors without a color space or hue interpolation method, the `oklab` color space is used, using `shorter` as the hue interpolation method. The three following declarations are equivalent:
+### Mixing a list of colors
+
+This example demonstrates passing a color argument list to `color-mix()`. The function accepts any number of colors, not just two, and each of them can optionally be given a percentage.
+
+#### HTML
+
+```html
+<ul>
+  <li>1 color</li>
+  <li>3 colors, with percentages</li>
+  <li>4 colors, no percentages</li>
+</ul>
+```
+
+#### CSS
+
+The first {{htmlelement("li")}} mixes a single color, which resolves to that color. The second mixes three colors whose percentages total 100%. The third mixes four colors with no percentage, so each one gets an equal share.
+
+```css hidden
+ul {
+  display: flex;
+  list-style-type: none;
+  font-size: 150%;
+  gap: 10px;
+  border: 2px solid;
+  padding: 10px;
+}
+
+li {
+  padding: 10px;
+  flex: 1;
+  box-sizing: border-box;
+  font-family: monospace;
+  text-align: center;
+}
+```
 
 ```css
-background-color: color-mix(red, blue);
-background-color: color-mix(in oklab, red, blue);
-background-color: color-mix(in oklab shorter hue, red, blue);
+li:nth-child(1) {
+  background-color: color-mix(in oklab, teal);
+}
+
+li:nth-child(2) {
+  background-color: color-mix(in oklab, teal 20%, olive 30%, blue 50%);
+}
+
+li:nth-child(3) {
+  background-color: color-mix(in oklab, teal, olive, blue, purple);
+}
 ```
+
+```css hidden
+@supports not (color: color-mix(in oklab, red, white, blue)) {
+  body::before {
+    content: "Your browser doesn't support color lists in the color-mix() function.";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("mixing_a_list_of_colors", "100%", 180)}}
 
 ### Adding transparency
 

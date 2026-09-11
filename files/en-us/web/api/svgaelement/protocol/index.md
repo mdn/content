@@ -3,10 +3,12 @@ title: "SVGAElement: protocol property"
 short-title: protocol
 slug: Web/API/SVGAElement/protocol
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.SVGAElement.protocol
 ---
 
-{{APIRef("SVG")}}
+{{APIRef("SVG")}}{{SeeCompatTable}}
 
 The **`protocol`** property of the {{domxref("SVGAElement")}} interface represents the protocol or scheme of the SVG {{SVGElement("a")}} element's {{SVGAttr("href")}}, including the final `":"`.
 

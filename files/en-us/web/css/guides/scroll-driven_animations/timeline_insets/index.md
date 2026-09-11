@@ -71,7 +71,7 @@ The following diagram illustrates the position of the subject at the `0%` and `1
 
 {{EmbedLiveSample("svg_view", "100%", "720")}}
 
-The yellow subject elements represents the position of the element when the `from` keyframe is applied, which is the animation range's `0%` progress mark. The red represents the location of the animated element relative to the scrollport when the `to` keyframe is applied, which is the end of the animation, or the `100%` progress mark. The grey represents the scrollport.
+The yellow subject elements represents the position of the element when the `from` keyframe is applied, which is the animation range's `0%` progress mark. The red represents the location of the animated element relative to the scrollport when the `to` keyframe is applied, which is the end of the animation, or the `100%` progress mark. The gray represents the scrollport.
 
 By default, the element animates while it is "in view", but this default definition of "in view" may not fit your needs. Fortunately, we can control which edges define the edges of the animation attachment range and then offset the start and end of that range with the animation range properties.
 
@@ -402,7 +402,7 @@ Only when the element is `50px` tall is the top of the subject still in the scro
 
 Based on the height of our subjects, the `20%` mark is either `60px`, `100px`, or `150px` from the end edge of the scrollport (marked by the green line, which is always in the scrollport), and the `60%` mark is `180px`, `300px`, or `450px` from the same point (marked with a red line, but only visible for the `50px` subject).
 
-For illustrative purposes, there are two light grey lines crossing the container `20%` and `60%` of the way through the scrollport, which are `50px` and `150px` from the bottom of the scrollport, respectively. As the `animation-range-*` percentages are relative to the timeline range, not the scrollport, these lines only show how the percentages **don't** align. We've also included two horizontal light grey lines going across each subject at their own `20%` and `60%` marks. These lines align with the scrollport's light grey lines when each subjects animation starts and ends.
+For illustrative purposes, there are two light gray lines crossing the container `20%` and `60%` of the way through the scrollport, which are `50px` and `150px` from the bottom of the scrollport, respectively. As the `animation-range-*` percentages are relative to the timeline range, not the scrollport, these lines only show how the percentages **don't** align. We've also included two horizontal light gray lines going across each subject at their own `20%` and `60%` marks. These lines align with the scrollport's light gray lines when each subjects animation starts and ends.
 
 The following image demonstrates where the subject elements are located when the animation starts (the `0%` keyframe) and ends (the `100% keyframe`).
 This image includes the insets from the animation timeline in the previous demonstration and the timeline without insets for comparison.
@@ -444,13 +444,13 @@ This image includes the insets from the animation timeline in the previous demon
 
 {{EmbedLiveSample("svg_insets2", "100%", "710")}}
 
-As before, the yellow represents the position of the element when the `from` keyframe is applied, the red represents the location when the `to` keyframe is applied, and the grey represents the scrollport. The striped areas are where the red and yellow element representations overlap. For illustrative purposes, we've added dashed black horizontal lines `20%` and `60%` way through the scrollport, starting from the bottom.
+As before, the yellow represents the position of the element when the `from` keyframe is applied, the red represents the location when the `to` keyframe is applied, and the gray represents the scrollport. The striped areas are where the red and yellow element representations overlap. For illustrative purposes, we've added dashed black horizontal lines `20%` and `60%` way through the scrollport, starting from the bottom.
 
 The animation only begins when the element reaches the `20%` mark along the animation attachment range. This point is `60px`, `100px`, or `150px` from the bottom edge of the scroll port, depending on the size of the element. The location of the subject element at this point, representing the position of the element when the `from` or `0%` keyframe is applied, is shown in yellow.
 
 The red represents the location of the animated element relative to the scrollport when the `to` or `100%` keyframe is applied, which is the end of the animation. This point is either `180px`, `300px`, or `450px` from the bottom edge of the scrollport, depending on the subject size. The animation occurs when the element is between the `to` and the `from` positions.
 
-You may have noticed something interesting about the dashed horizontal lines: when the animation starts, the line that is `20%` from the end edge of the viewport is `20%` from the _top_ of the subject element and the line that is `60%` from the end edge of the viewport is `60%` from the _top_ of the subject element when the animation ends. This is what was illustrated by the very light grey lines in the live demo for this example.
+You may have noticed something interesting about the dashed horizontal lines: when the animation starts, the line that is `20%` from the end edge of the viewport is `20%` from the _top_ of the subject element and the line that is `60%` from the end edge of the viewport is `60%` from the _top_ of the subject element when the animation ends. This is what was illustrated by the very light gray lines in the live demo for this example.
 
 ### Subject size matters
 

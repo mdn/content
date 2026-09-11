@@ -54,7 +54,7 @@ The primary use case is to load non-JS modules, such as JSON modules and CSS mod
 import data from "https://example.com/data.json";
 ```
 
-On the web, each import statement results in a HTTP request. The response is then prepared into a JavaScript value and made available to the program by the runtime. For example, the response may look like this:
+On the web, each import statement results in an HTTP request. The response is then prepared into a JavaScript value and made available to the program by the runtime. For example, the response may look like this:
 
 ```http
 HTTP/1.1 200 OK
@@ -137,6 +137,8 @@ import text from "https://example.com/file.txt" with { type: "text" };
 ```
 
 The file will be requested with an `{{HTTPHeader("Accept")}}: text/plain` header, but the value of the response's `{{HTTPHeader("Content-Type")}}` header is ignored, and all files are parsed as UTF-8. It can contain any textual data, even JavaScript code (which is treated as plain text).
+
+If possible, prefer [`import source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/source) to obtain a compiled module for later instantiation, or [`import defer`](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer) to defer the synchronous evaluation of a module. Using `with { type: "text" }` means the module cannot reuse the cache if it was imported somewhere else, and userland evaluation of string sources may be incompatible with strict [CSP](/en-US/docs/Web/HTTP/Guides/CSP) settings.
 
 ### Intended semantics for import attributes
 

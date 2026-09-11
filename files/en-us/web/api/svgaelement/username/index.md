@@ -3,10 +3,12 @@ title: "SVGAElement: username property"
 short-title: username
 slug: Web/API/SVGAElement/username
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.SVGAElement.username
 ---
 
-{{APIRef("SVG")}}
+{{APIRef("SVG")}}{{SeeCompatTable}}
 
 The **`username`** property of the {{domxref("SVGAElement")}} interface represents the username component of the SVG {{SVGElement("a")}} element's {{SVGAttr("href")}}.
 If the URL does not have a username, this property contains an empty string, `""`.

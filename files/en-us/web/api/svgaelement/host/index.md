@@ -3,10 +3,12 @@ title: "SVGAElement: host property"
 short-title: host
 slug: Web/API/SVGAElement/host
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.SVGAElement.host
 ---
 
-{{APIRef("SVG")}}
+{{APIRef("SVG")}}{{SeeCompatTable}}
 
 The **`host`** property of the {{domxref("SVGAElement")}} interface represents the element's host.
 It is the {{domxref("SVGAElement.hostname", "hostname")}} of the SVG {{SVGElement("a")}} element's {{SVGAttr("href")}}, followed by a `":"` and the {{domxref("SVGAElement.port", "port")}} if the URL has one. If the URL does not have a hostname, this property contains an empty string, `""`.

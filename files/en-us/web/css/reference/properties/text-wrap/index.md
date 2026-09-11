@@ -7,7 +7,7 @@ browser-compat: css.properties.text-wrap
 sidebar: cssref
 ---
 
-The **`text-wrap`** [CSS](/en-US/docs/Web/CSS) shorthand property controls how text inside an element is wrapped. The different values provide:
+The **`text-wrap`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property controls how text inside an element is wrapped. The different values provide:
 
 - Typographic improvements, for example more balanced line lengths across broken headings
 - A way to turn text wrapping off completely.

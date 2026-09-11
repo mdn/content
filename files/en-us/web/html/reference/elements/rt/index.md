@@ -23,8 +23,6 @@ ruby {
 }
 ```
 
-See the article about the {{HTMLElement("ruby")}} element for more examples.
-
 ## Attributes
 
 This element only includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
@@ -48,6 +46,8 @@ body {
 #### Result
 
 {{EmbedLiveSample("Using_ruby_annotations", 600, 60)}}
+
+See the {{HTMLElement("ruby")}} element for more examples.
 
 ## Technical summary
 

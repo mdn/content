@@ -3,10 +3,12 @@ title: "SVGAElement: hash property"
 short-title: hash
 slug: Web/API/SVGAElement/hash
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.SVGAElement.hash
 ---
 
-{{APIRef("SVG")}}
+{{APIRef("SVG")}}{{SeeCompatTable}}
 
 The **`hash`** property of the {{domxref("SVGAElement")}} interface represents the element's fragment identifier.
 It is the string `"#"`, followed by the fragment identifier of the SVG {{SVGElement("a")}} element's {{SVGAttr("href")}}. If the URL does not have a fragment identifier, this property contains an empty string, `""`.

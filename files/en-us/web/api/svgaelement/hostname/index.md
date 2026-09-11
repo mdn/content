@@ -3,10 +3,12 @@ title: "SVGAElement: hostname property"
 short-title: hostname
 slug: Web/API/SVGAElement/hostname
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.SVGAElement.hostname
 ---
 
-{{APIRef("SVG")}}
+{{APIRef("SVG")}}{{SeeCompatTable}}
 
 The **`hostname`** property of the {{domxref("SVGAElement")}} interface represents the element's hostname.
 It is either the {{glossary("domain name")}} or {{glossary("IP address")}} of the SVG {{SVGElement("a")}} element's {{SVGAttr("href")}}. Unlike {{domxref("SVGAElement.host", "host")}}, it never includes the port. If the URL does not have a hostname, this property contains an empty string, `""`. IP addresses are normalized, such as stripping leading zeros, and domain names are converted to [IDN](https://en.wikipedia.org/wiki/Internationalized_domain_name).

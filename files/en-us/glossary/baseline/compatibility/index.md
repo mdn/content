@@ -33,11 +33,11 @@ Features listed as **widely available** have a consistent history of support in 
 
 Features listed as **newly available** work in at least the latest stable version of each of the Baseline browsers, but may not work with older browsers and devices.
 
-![Grey widget with the cross: Limited availability. Four browsers' logos, two with checkmarks, two with crosses.](limited.png)
+![Gray widget with the cross: Limited availability. Four browsers' logos, two with checkmarks, two with crosses.](limited.png)
 
 Features listed with **limited availability** are _not_ yet available in all browsers.
 
-![Grey widget with a dotted diamond: Deprecated. Four browsers' logos, all with checkmarks.](deprecated.png)
+![Gray widget with a dotted diamond: Deprecated. Four browsers' logos, all with checkmarks.](deprecated.png)
 
 Features listed with **deprecated** may be available in one or more browsers, but should not be used in development.
 

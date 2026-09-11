@@ -51,7 +51,7 @@ Values of this type are objects. They contain the following properties:
 - `startTime` {{optional_inline}}
   - : A `string` representing an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format time. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this `startTime` value.
 - `endTime` {{optional_inline}}
-  - : A `string` representing an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format time. Include only will limited to {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this `endTime` value.
+  - : A `string` representing an [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) format time. Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this `endTime` value.
 - `state` {{optional_inline}}
   - : A `string` representing a download {{WebExtAPIRef('downloads.State')}} (`in_progress`, `interrupted`, or `complete`). Include only {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} with this `state` value.
 - `paused` {{optional_inline}}
