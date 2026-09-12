@@ -39,11 +39,17 @@ Include [`tabindex="-1"`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabin
 
 Make sure to define styles for a `tabpanel` for when it receives focus, optimally using the CSS {{CSSXref(':focus')}} pseudo-class, so keyboard users know there was a change in focus and are aware of what content currently has focus.
 
-If a `tabpanel` has no content to show — for example because its data is still loading or the underlying record is empty — avoid leaving it as an empty container that can still receive focus, as keyboard and assistive technology users would land on it with nothing to read. Either remove the `tab` and its `tabpanel` from the interface when there is genuinely nothing to show, or keep the `tabpanel` and give it a short placeholder message such as "No data" so that focusing it exposes meaningful content.
-
 Carousels can be created using this tab pattern: A slide picker controls can be marked up as `tabs` in a `tablist` with the slide represented by a `tabpanel` element.
 
-### Associated Roles and Attributes
+If a tab panel is empty (for example, because its data is still loading or the record is empty), there are three options:
+
+- Keep the empty panel accessible and focusable with `tabindex="0"` and preserve its accessible name
+- Render some content explaining the state, such as "Loading..." or "No results"
+- Remove the tab and panel from the DOM
+
+There is no empty-panel-specific ARIA requirement. Choosing between these approaches is primarily a product-design decision. Generally, avoid empty panels because they are confusing to both sighted users and screen reader users (screen readers may announce the panel's name followed by nothing). Removing the tab and panel avoids an additional item to navigate past, but may be confusing if users expect that tab to exist (e.g., because the same set of tabs has appeared multiple times) or the panel will appear later (e.g., because it's still loading).
+
+### Associated roles and attributes
 
 - [`tab` role](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role)
   - : Controls the visibility of the associated `tabpanel`
