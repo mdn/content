@@ -36,7 +36,7 @@ If you are new to GitHub, we encourage you to take the following free, self-pace
 
 We also recommend reading the following learning material:
 
-- [Basic etiquette for open source projects](/en-US/docs/MDN/Community/Open_source_etiquette): If you've never contributed to an open source project before, we encourage you to read this document.
+- [Basic etiquette for open source projects](/en-US/docs/MDN/Community/Open_source_etiquette): If you've never contributed to an open-source project before, we encourage you to read this document.
 - [Learn web development](/en-US/docs/Learn_web_development): If you are new to HTML, CSS, JavaScript, we have some great content to help you get started.
 - [Deep dive into collaborating with pull requests](https://docs.github.com/en/pull-requests)
 

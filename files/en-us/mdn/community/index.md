@@ -20,7 +20,7 @@ We also provide extensive [learning resources](/en-US/docs/Learn_web_development
 - [Translated content](/en-US/docs/MDN/Community/Translated_content)
   - : MDN Web Docs Localization information, with details about teams, communication channels, and how to get involved.
 - [Open source etiquette](/en-US/docs/MDN/Community/Open_source_etiquette)
-  - : This article gives guidance on how to behave when contributing to MDN and other open source projects, including hints for collaboration and how to handle conflicts.
+  - : This article gives guidance on how to behave when contributing to MDN and other open-source projects, including hints for collaboration and how to handle conflicts.
 - [GitHub Issues](/en-US/docs/MDN/Community/Issues)
   - : Issues are used to track all bugs and work that has a clear actionable outcome.
     This article contains guidelines on opening and working on issues and also covers issue triage and content suggestions.
