@@ -173,6 +173,10 @@ Listen to these events using {{domxref("EventTarget.addEventListener", "addEvent
   - : Sent when a {{domxref("MediaStream")}} is removed from the connection.
     Instead of listening for this obsolete event, you should listen for {{domxref("MediaStream.removetrack_event", "removetrack")}} events on each stream.
 
+## Examples
+
+See [WebRTC samples > `RTCPeerConnection`](https://webrtc.github.io/samples/#peerconnection) for example code.
+
 ## Specifications
 
 {{Specifications}}
