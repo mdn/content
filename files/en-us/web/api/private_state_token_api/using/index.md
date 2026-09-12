@@ -122,7 +122,7 @@ If the token request is successful, the response will include a {{httpheader("Se
 
 ### Token issue limitations
 
-Each device can store up to 500 tokens per top-level website and issuer. The maximum number of issuers per top level origin is two.
+Each device can store up to 500 tokens per top-level website and issuer. The maximum number of issuers per top-level origin is two.
 
 Each token has metadata indicating which key the issuer used to issue it. That information can be used to decide to redeem tokens (or not) during the redeeming process. Each token can be issued using one and only one cryptographic key and each issuer can have a maximum of 6 keys. One potential way to use this variable is to define a range of trust to your tokens based on your cryptographic keys (for example, key 1: high trust; key 6: no trust).
 
