@@ -21,7 +21,7 @@ Values of this type are objects. They contain the following properties:
 - `editable`
   - : `boolean`. A flag indicating whether the element is editable: for example, if it is a [textarea](/en-US/docs/Web/HTML/Reference/Elements/textarea).
 - `frameId` {{optional_inline}}
-  - : `integer`. The ID of the frame in which the item was clicked. The frame ID can be used in other APIs that accept frame IDs, such as {{WebExtAPIRef("tabs.sendMessage()")}}. If the item was clicked in the top level document, `frameId` is zero. If the item was clicked outside the page entirely (for example, in the `tools_menu` or `tab` context), then `frameId` is `undefined`.
+  - : `integer`. The ID of the frame in which the item was clicked. The frame ID can be used in other APIs that accept frame IDs, such as {{WebExtAPIRef("tabs.sendMessage()")}}. If the item was clicked in the top-level document, `frameId` is zero. If the item was clicked outside the page entirely (for example, in the `tools_menu` or `tab` context), then `frameId` is `undefined`.
 - `frameUrl` {{optional_inline}}
   - : `string`. The URL of the frame of the element where the context menu was clicked, if it was in a frame.
 - `linkText` {{optional_inline}}
