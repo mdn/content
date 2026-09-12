@@ -102,7 +102,7 @@ Other common web-development tasks are not directly supported by Node itself. If
 - Set common web application settings like the port to use for connecting, and the location of templates that are used for rendering the response.
 - Add additional request processing "middleware" at any point within the request handling pipeline.
 
-While _Express_ itself is fairly minimalist, developers have created compatible middleware packages to address almost any web development problem. There are libraries to work with cookies, sessions, user logins, URL parameters, `POST` data, security headers, and _many_ more. You can find a list of middleware packages maintained by the Express team at [Express Middleware](https://expressjs.com/en/resources/middleware/) (along with a list of some popular 3rd party packages).
+While _Express_ itself is fairly minimalist, developers have created compatible middleware packages to address almost any web development problem. There are libraries to work with cookies, sessions, user logins, URL parameters, `POST` data, security headers, and _many_ more. You can find a list of middleware packages maintained by the Express team at [Express Middleware](https://expressjs.com/en/resources/middleware/) (along with a list of some popular third-party packages).
 
 > [!NOTE]
 > This flexibility is a double edged sword. There are middleware packages to address almost any problem or requirement, but working out the right packages to use can sometimes be a challenge. There is also no "right way" to structure an application, and many examples you might find on the Internet are not optimal, or only show a small part of what you need to do in order to develop a web application.
@@ -331,7 +331,7 @@ Middleware is used extensively in Express apps, for tasks from serving static fi
 > [!NOTE]
 > The middleware can perform any operation, execute any code, make changes to the request and response object, and it can _also end the request-response cycle_. If it does not end the cycle then it must call `next()` to pass control to the next middleware function (or the request will be left hanging).
 
-Most apps will use _third-party_ middleware in order to simplify common web development tasks like working with cookies, sessions, user authentication, accessing request `POST` and JSON data, logging, etc. You can find a [list of middleware packages maintained by the Express team](https://expressjs.com/en/resources/middleware/) (which also includes other popular 3rd party packages). Other Express packages are available on the npm package manager.
+Most apps will use _third-party_ middleware in order to simplify common web development tasks like working with cookies, sessions, user authentication, accessing request `POST` and JSON data, logging, etc. You can find a [list of middleware packages maintained by the Express team](https://expressjs.com/en/resources/middleware/) (which also includes other popular third-party packages). Other Express packages are available on the npm package manager.
 
 To use third-party middleware you first need to install it into your app using npm.
 For example, to install the [morgan](https://expressjs.com/en/resources/middleware/morgan/) HTTP request logger middleware, you'd do this:
