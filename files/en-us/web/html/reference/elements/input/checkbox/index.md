@@ -74,30 +74,6 @@ If the `value` attribute was omitted, the default value for the checkbox is `on`
 > [!NOTE]
 > [Radio buttons](/en-US/docs/Web/HTML/Reference/Elements/input/radio) are similar to checkboxes, but with an important distinction — [same-named radio buttons](/en-US/docs/Web/HTML/Reference/Elements/input/radio#defining_a_radio_group) are grouped into a set in which only one radio button can be selected at a time, whereas checkboxes allow you to turn single values on and off. Where multiple same-named controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.
 
-## Additional attributes
-
-In addition to the [common attributes](/en-US/docs/Web/HTML/Reference/Elements/input#attributes) shared by all {{HTMLElement("input")}} elements, `checkbox` inputs support the following attributes.
-
-- `checked`
-  - : A [boolean](/en-US/docs/Glossary/Boolean/HTML) attribute indicating whether this checkbox is checked by default (when the page loads). It does _not_ indicate whether this checkbox is currently checked: if the checkbox's state is changed, this content attribute does not reflect the change. (Only the {{domxref("HTMLInputElement")}}'s `checked` IDL attribute is updated.)
-    > [!NOTE]
-    > Unlike other input controls, a checkbox's value is only included in the submitted data if the checkbox is currently `checked`. If it is, then the value of the checkbox's `value` attribute is reported as the input's value, or `on` if no `value` is set.
-    > Unlike other browsers, Firefox by default [persists the dynamic checked state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the [`autocomplete`](/en-US/docs/Web/HTML/Reference/Elements/input#autocomplete) attribute to control this feature.
-
-- `value`
-  - : The `value` attribute is one which all {{HTMLElement("input")}}s share; however, it serves a special purpose for inputs of type `checkbox`: when a form is submitted, only checkboxes which are currently checked are submitted to the server, and the reported value is the value of the `value` attribute. If the `value` is not otherwise specified, it is the string `on` by default. This is demonstrated in the section [Value](#value) above.
-
-- `switch`
-  - : A [boolean](/en-US/docs/Glossary/Boolean/HTML) attribute that applies only to `checkbox` inputs. When present, it indicates that the `checkbox` represents an on/off `switch` rather than a normal `checkbox`. It alters the appearance of the `checkbox` control, but the underlying behavior remains the same as that of a normal `checkbox`.
-
-    > [!NOTE]
-    > This attribute allows user agents to expose `switch` ARIA semantics to assistive technologies — without requiring documents to explicitly specify `role="switch"`. The markup and API are similar to those of checkboxes, except that the `:indeterminate` pseudo-class never matches.
-
-    > [!WARNING]
-    > This attribute is still experimental and has limited browser support. The attribute is ignored on unsupported browsers.
-
-## Using checkbox inputs
-
 We already covered the most basic use of checkboxes above. Let's now look at the other common checkbox-related features and techniques you'll need.
 
 ### Handling multiple checkboxes
@@ -267,6 +243,28 @@ function updateDisplay() {
 ```
 
 {{EmbedLiveSample("indeterminate_state", "", 200)}}
+
+## Additional attributes
+
+In addition to the [common attributes](/en-US/docs/Web/HTML/Reference/Elements/input#attributes) shared by all {{HTMLElement("input")}} elements, `checkbox` inputs support the following attributes.
+
+- `checked`
+  - : A [boolean](/en-US/docs/Glossary/Boolean/HTML) attribute indicating whether this checkbox is checked by default (when the page loads). It does _not_ indicate whether this checkbox is currently checked: if the checkbox's state is changed, this content attribute does not reflect the change. (Only the {{domxref("HTMLInputElement")}}'s `checked` IDL attribute is updated.)
+    > [!NOTE]
+    > Unlike other input controls, a checkbox's value is only included in the submitted data if the checkbox is currently `checked`. If it is, then the value of the checkbox's `value` attribute is reported as the input's value, or `on` if no `value` is set.
+    > Unlike other browsers, Firefox by default [persists the dynamic checked state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the [`autocomplete`](/en-US/docs/Web/HTML/Reference/Elements/input#autocomplete) attribute to control this feature.
+
+- `value`
+  - : The `value` attribute is one which all {{HTMLElement("input")}}s share; however, it serves a special purpose for inputs of type `checkbox`: when a form is submitted, only checkboxes which are currently checked are submitted to the server, and the reported value is the value of the `value` attribute. If the `value` is not otherwise specified, it is the string `on` by default. This is demonstrated in the section [Value](#value) above.
+
+- `switch`
+  - : A [boolean](/en-US/docs/Glossary/Boolean/HTML) attribute that applies only to `checkbox` inputs. When present, it indicates that the `checkbox` represents an on/off `switch` rather than a normal `checkbox`. It alters the appearance of the `checkbox` control, but the underlying behavior remains the same as that of a normal `checkbox`.
+
+    > [!NOTE]
+    > This attribute allows user agents to expose `switch` ARIA semantics to assistive technologies — without requiring documents to explicitly specify `role="switch"`. The markup and API are similar to those of checkboxes, except that the `:indeterminate` pseudo-class never matches.
+
+    > [!WARNING]
+    > This attribute is still experimental and has limited browser support. The attribute is ignored on unsupported browsers.
 
 ## Validation
 
