@@ -38,7 +38,7 @@ Some more general guidelines include:
 
 ### Browser support
 
-When creating code examples for a technology that's not yet available in all major browsers, consider using [feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection) to fall back to a simpler behavior or inform the user that their browser is not yet supported.
+When creating code examples for a technology that's not yet available in all major browsers, consider using [feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection) to provide a fallback behavior or display a message indicating that the reader's browser doesn't support the demonstrated feature.
 
 Keep the rendered output of code examples visible even when the reader's browser doesn't support the demonstrated feature. This lets readers compare the code with its result and see how the example behaves without the feature. Display a browser-support message alongside the rendered output instead of hiding or removing it to explain why the result may appear different from the intended demonstration.
 
