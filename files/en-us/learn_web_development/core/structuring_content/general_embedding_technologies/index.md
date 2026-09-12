@@ -64,7 +64,7 @@ In this article we are going to jump straight into an exercise, to immediately g
 
 If you make a mistake, you can always reset it using the _Reset_ button in the Playground.
 
-## iframes in detail
+## Using iframes to embed webpages
 
 So, that was easy and fun, right? {{htmlelement("iframe")}} elements are designed to allow you to embed other web documents into the current document. This is great for incorporating third-party content into your website that you might not have direct control over and don't want to have to implement your own version of — such as video from online video providers, commenting systems like [Disqus](https://disqus.com/), maps from online map providers, advertising banners, etc. Even the live editable examples you've been using through this course are implemented using `<iframe>`s.
 
@@ -144,15 +144,13 @@ HTTPS-enabling your site requires a special security certificate to be installed
 > [GitHub pages](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) allow content to be served via HTTPS by default.
 > If you are using a different hosting provider you should check what support they provide for serving content with HTTPS.
 
-#### Use the `sandbox` attribute
+#### Always use the `sandbox` attribute
 
 You want to give attackers as little power as you can to do bad things on your website, therefore you should give embedded content _only the permissions needed for doing its job._ Of course, this applies to your own content, too. A container for code where it can be used appropriately — or for testing — but can't cause any harm to the rest of the codebase (either accidental or malicious) is called a [sandbox](<https://en.wikipedia.org/wiki/Sandbox_(computer_security)>).
 
 Content that's not sandboxed may be able to execute JavaScript, submit forms, trigger popup windows, etc. By default, you should impose all available restrictions by using the `sandbox` attribute with no parameters, as shown in our previous example.
 
 If absolutely required, you can add permissions back one by one (inside the `sandbox=""` attribute value) — see the [`sandbox`](/en-US/docs/Web/HTML/Reference/Elements/iframe#sandbox) reference entry for all the available options. One important note is that you should _never_ add both `allow-scripts` and `allow-same-origin` to your `sandbox` attribute when the embedded content has the same origin as the embedding page — in that case, the embedded content could use JavaScript to remove the attribute and reload itself to turn off sandboxing altogether.
-
-This advice applies to embedded HTML and SVG documents, where the embedded script might access the outside. For PDF documents, the browser's built-in PDF viewer already sandboxes any executable content. In fact, adding `sandbox` may prevent the PDF viewer from working.
 
 > [!NOTE]
 > Sandboxing provides no protection if attackers can fool people into visiting malicious content directly (outside an `iframe`). If there's any chance that certain content may be malicious (e.g., user-generated content), please serve it from a different {{glossary("domain")}} to your main site.
@@ -215,6 +213,12 @@ If you find yourself needing to embed external content with these elements, this
     </tr>
   </tbody>
 </table>
+
+## Embedding PDFs
+
+On the web, most media already have dedicated elements: {{HTMLElement("audio")}}, {{HTMLElement("img")}}, {{HTMLElement("video")}}, {{SVGElement("svg")}}, etc. Apart from webpages, the other major use case of `<iframe>`, `<object>`, and `<embed>` elements is to embed PDF documents.
+
+All browsers today natively provide PDF renderers. These renderers already sandbox any executable content, so embedding PDFs is generally safe by default. If you use `<iframe>`, there's no need to provide the `sandbox` attribute; in fact, adding `sandbox` may prevent the PDF viewer from working.
 
 If your page needs a PDF preview, choose an element based on the features you need:
 
