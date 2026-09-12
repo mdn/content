@@ -35,12 +35,12 @@ Throughout this module we have detailed loads of different ways in which you can
 We agree — testing all the things we've looked at in previous articles manually can be a real pain. Fortunately, there are tools to help us automate some of this pain away. There are two main ways in which we can automate the tests we've been talking about in this module:
 
 1. Use a task runner such as [Grunt](https://gruntjs.com/) or [Gulp](https://gulpjs.com/), or [npm scripts](https://docs.npmjs.com/misc/scripts/) to run tests and clean up code during your build process. This is a great way to perform tasks like linting and minifying code, adding in CSS prefixes or transpiling nascent JavaScript features for maximum cross-browser reach, and so on.
-2. Use a browser automation system like [Selenium](https://www.selenium.dev/) to run specific tests on installed browsers and return results, alerting you to failures in browsers as they crop up. Commercial cross-browser testing apps like [Sauce Labs](https://saucelabs.com/) and [BrowserStack](https://www.browserstack.com/) are based on Selenium, but allow you to access their set up remotely using an interface, saving you the hassle of setting up your own testing system.
+2. Use a browser automation system like [Selenium](https://www.selenium.dev/) to run specific tests on installed browsers and return results, alerting you to failures in browsers as they crop up. Commercial cross-browser testing apps like [Sauce Labs](https://saucelabs.com/) and [BrowserStack](https://www.browserstack.com/) are based on Selenium, but allow you to access their setup remotely using an interface, saving you the hassle of setting up your own testing system.
 
 We will look at how to set up your own Selenium-based testing system in the next article. In this article, we'll look at how to set up a task runner, and use the basic functionality of commercial systems like the ones mentioned above.
 
 > [!NOTE]
-> The above two categories are not mutually exclusive. It is possible to set up a task runner to access a service like Sauce Labs via an API, run cross browser tests, and return results. We will look at this below as well.
+> The above two categories are not mutually exclusive. It is possible to set up a task runner to access a service like Sauce Labs via an API, run cross-browser tests, and return results. We will look at this below as well.
 
 ## Using a task runner to automate testing tools
 
@@ -592,7 +592,7 @@ When signed in, follow the 'Getting started' guide on the top-left of the page:
 3. When you start testing, a loading screen will appear, and an environment spins up running the device/browser combination you chose.
    You can then start to remotely test the website running in the chosen browser.
 
-You can do quite a lot at this point, like share a test URL so someone else can observe the test remotely, copy text/notes to a remote clipboard, take a screenshot, test in full screen mode, and more.
+You can do quite a lot at this point, like share a test URL so someone else can observe the test remotely, copy text/notes to a remote clipboard, take a screenshot, test in fullscreen mode, and more.
 
 Once you stop the session, you'll return to the _Live_ tab, where you'll see an entry for each of the previous manual sessions you started.
 Clicking on one of these entries shows more data for the session.
@@ -674,7 +674,7 @@ The [TestingBot dashboard](https://testingbot.com/members) lists the various opt
    - Change the screen resolution
    - Copy text/notes to a remote clipboard
    - Take, edit, and download screenshots
-   - Test in full screen mode.
+   - Test in fullscreen mode.
 
 Once you stop the session, you'll return to the _Live Web Testing_ page, where you'll see an entry for each of the previous manual sessions you started. Clicking on one of these entries shows more data for the session. Here you can download any screenshots you took, watch a video of the test, and view logs for the session.
 

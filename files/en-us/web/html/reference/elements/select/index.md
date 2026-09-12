@@ -271,7 +271,7 @@ The following example is more complex, showing off more features you can use on 
       <th scope="row">Permitted content</th>
       <td>
         <ul>
-          <li>{{HTMLElement("option")}}, {{HTMLElement("optgroup")}}, or {{HTMLElement("hr")}} elements, optionally preceded by a {{htmlelement("button")}} element with a nested {{htmlelement("selectedcontent")}} element if a drop down box.</li>
+          <li>{{HTMLElement("option")}}, {{HTMLElement("optgroup")}}, or {{HTMLElement("hr")}} elements, optionally preceded by a {{htmlelement("button")}} element with a nested {{htmlelement("selectedcontent")}} element if a dropdown box.</li>
           <li>{{htmlelement("div")}}, {{htmlelement("script")}}, {{htmlelement("template")}}, and {{htmlelement("noscript")}} elements.</li>
         </ul>
       </td>

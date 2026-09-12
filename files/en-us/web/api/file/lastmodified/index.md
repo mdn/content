@@ -15,7 +15,7 @@ current date.
 
 ## Value
 
-A number that represents the number of milliseconds since the Unix epoch.
+An integer that represents the number of milliseconds since the Unix epoch.
 
 ## Examples
 
@@ -65,8 +65,9 @@ filePicker.addEventListener("change", (event) => {
 
 If a File is created dynamically, the last modified time can be supplied in the
 {{domxref("File.File()", "File()")}} constructor function. If it is missing,
-`lastModified` inherits the current time from {{jsxref("Date.now()")}} at the
-moment the `File` object gets created.
+`lastModified` is normally set to the current time at the moment the `File` object gets created.
+
+In Firefox, if the file parts include a file read from disk, the new file can inherit that file's modification time instead.
 
 ```js
 const fileWithDate = new File([], "file.bin", {
@@ -80,27 +81,11 @@ console.log(fileWithoutDate.lastModified); // returns current time
 
 ## Reduced time precision
 
-To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `someFile.lastModified` might get rounded depending on browser settings. In Firefox, the `privacy.reduceTimerPrecision` preference is enabled by default and defaults to 2ms. You can also enable `privacy.resistFingerprinting`, in which case the precision will be 100ms or the value of `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`, whichever is larger.
+To offer protection against timing attacks and [fingerprinting](/en-US/docs/Glossary/Fingerprinting), the precision of `lastModified` may be reduced depending on browser settings.
 
-For example, with reduced time precision, the result of `someFile.lastModified` will always be a multiple of 2, or a multiple of 100 (or `privacy.resistFingerprinting.reduceTimerPrecision.microseconds`) with `privacy.resistFingerprinting` enabled.
+When a `lastModified` value is supplied to the {{domxref("File.File", "File()")}} constructor, the browser does not apply timer rounding to the supplied time. The same applies to modification times read from disk, whose precision depends on the file system, including those inherited from file parts in Firefox.
 
-```js
-// reduced time precision (2ms) in Firefox 60
-someFile.lastModified;
-// Might be:
-// 1519211809934
-// 1519211810362
-// 1519211811670
-// …
-
-// reduced time precision with `privacy.resistFingerprinting` enabled
-someFile.lastModified;
-// Might be:
-// 1519129853500
-// 1519129858900
-// 1519129864400
-// …
-```
+When the constructor uses the current time as the default `lastModified`, it obtains the current time in the same way as {{jsxref("Date.now()")}}. It inherits the precision of that clock reading without introducing additional inaccuracy.
 
 ## Specifications
 

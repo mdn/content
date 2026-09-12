@@ -69,7 +69,7 @@ Firefox will, unlike other browsers, persist the dynamic disabled state of a {{h
 
 ### Attribute interactions
 
-The difference between `disabled` and [`readonly`](/en-US/docs/Web/HTML/Reference/Attributes/readonly) is that read-only controls can still function and are still focusable, whereas disabled controls can not receive focus and are not submitted with the form and generally do not function as controls until they are enabled.
+The difference between `disabled` and [`readonly`](/en-US/docs/Web/HTML/Reference/Attributes/readonly) is that read-only controls can still function and are still focusable, whereas disabled controls cannot receive focus and are not submitted with the form and generally do not function as controls until they are enabled.
 
 Because a disabled field cannot have its value changed, [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required) does not have any effect on inputs with the `disabled` attribute also specified. Additionally, since the elements become immutable, most other attributes, such as [`pattern`](/en-US/docs/Web/HTML/Reference/Attributes/pattern), have no effect, until the control is enabled.
 
@@ -84,7 +84,7 @@ If present on a supporting elements, the {{cssxref(':disabled')}} pseudo class w
 
 ### Constraint validation
 
-If the element is `disabled`, then the element's value can not receive focus and cannot be updated by the user, and does not participate in constraint validation.
+If the element is `disabled`, then the element's value cannot receive focus and cannot be updated by the user, and does not participate in constraint validation.
 
 ## Examples
 

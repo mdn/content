@@ -8,7 +8,7 @@ status:
 browser-compat: api.PerformanceSoftNavigation.navigationType
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`navigationType`** read-only property of the {{domxref("PerformanceSoftNavigation")}} interface returns the type of the soft navigation — `push`, `reload`, `replace`, or `traverse`.
 

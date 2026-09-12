@@ -1588,6 +1588,10 @@
       "inh": "HTMLElement",
       "impl": []
     },
+    "HTMLCameraElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
     "HTMLCanvasElement": {
       "inh": "HTMLElement",
       "impl": []
@@ -1732,6 +1736,10 @@
       "inh": "HTMLElement",
       "impl": []
     },
+    "HTMLMicrophoneElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
     "HTMLModelElement": {
       "inh": "HTMLElement",
       "impl": []
@@ -1872,6 +1880,10 @@
       "inh": "HTMLElement",
       "impl": []
     },
+    "HTMLUserMediaElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
     "HTMLVideoElement": {
       "inh": "HTMLMediaElement",
       "impl": []
@@ -2000,6 +2012,10 @@
       "inh": "",
       "impl": []
     },
+    "InteractionContentfulPaint": {
+      "inh": "PerformanceEntry",
+      "impl": []
+    },
     "IntersectionObserver": {
       "inh": "",
       "impl": []
@@ -2054,10 +2070,6 @@
     },
     "LanguageModelParams": {
       "inh": "",
-      "impl": []
-    },
-    "InteractionContentfulPaint": {
-      "inh": "PerformanceEntry",
       "impl": []
     },
     "LargestContentfulPaint": {
@@ -2232,6 +2244,10 @@
       "inh": "AudioNode",
       "impl": []
     },
+    "MediaStreamTrackAudioStats": {
+      "inh": "",
+      "impl": []
+    },
     "MediaStreamTrackEvent": {
       "inh": "Event",
       "impl": []
@@ -2241,6 +2257,10 @@
       "impl": []
     },
     "MediaStreamTrackProcessor": {
+      "inh": "",
+      "impl": []
+    },
+    "MediaStreamTrackVideoStats": {
       "inh": "",
       "impl": []
     },
@@ -4366,6 +4386,10 @@
     },
     "XRGPUBinding": {
       "inh": "",
+      "impl": []
+    },
+    "XRGPUDepthInformation": {
+      "inh": "XRDepthInformation",
       "impl": []
     },
     "XRGPUSubImage": {

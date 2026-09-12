@@ -108,9 +108,9 @@ If the method is not supported it logs this information.
 ```js
 if ("bytes" in Response.prototype) {
   const selectFileElement = document.getElementById("file-select");
-  selectFileElement.addEventListener("change", (event) => {
+  selectFileElement.addEventListener("change", async (event) => {
     try {
-      checkSignature(event.target.value);
+      await checkSignature(event.target.value);
     } catch (e) {
       log(e);
     }

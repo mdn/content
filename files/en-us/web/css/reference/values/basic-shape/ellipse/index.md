@@ -81,7 +81,7 @@ An ellipse is essentially a squashed circle and so `ellipse()` acts in a very si
       - : The radius is the length from the center of the ellipse to the farthest corner of the reference box in the given radius direction.
 
 - `<position>`
-  - : Moves the center of the ellipse. May be a {{cssxref("length")}}, or a {{cssxref("percentage")}}, or a values such as `left`. The `<position>` value defaults to center if omitted.
+  - : Moves the center of the ellipse. May be a {{cssxref("length")}}, or a {{cssxref("percentage")}}, or a value such as `left`. The `<position>` value defaults to center if omitted.
 
 ## Formal syntax
 

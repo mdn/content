@@ -22,7 +22,7 @@ _This interface inherits the properties of {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLTemplateElement.content", "content")}} {{ReadOnlyInline}}
   - : A read-only {{domxref("DocumentFragment")}} which contains the DOM subtree representing the {{HTMLElement("template")}} element's template contents.
-- {{domxref("HTMLTemplateElement.htmlFor", "htmlFor")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("HTMLTemplateElement.htmlFor", "htmlFor")}} {{Experimental_Inline}}
   - : A string reflecting the [`for`](/en-US/docs/Web/HTML/Reference/Elements/template#for) HTML attribute, containing the ID of the Processing Instruction marker to replace with the contents of this `<template>` element.
 - {{domxref("HTMLTemplateElement.shadowRootMode", "shadowRootMode")}}
   - : A string that reflects the value of the [`shadowrootmode`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootmode) attribute of the associated `<template>` element.
