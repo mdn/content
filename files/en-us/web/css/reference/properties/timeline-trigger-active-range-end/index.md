@@ -64,9 +64,9 @@ The `timeline-trigger-active-range-end` property can be used to explicitly speci
 
 The _active range_ is the range within which a trigger remains activated once activation occurs. By default, the active range ends where the activation range ends, with deactivation occurring when the tracked element leaves the activation range. This property creates a buffer zone and is used to prevent premature resetting when a user scrolls back and forth across the activation's endpoint. Only when a tracked element moves out of the active range does the trigger become inactive.
 
-The default value is `auto`, which sets the value to the same named range and offset as the {{cssxref("timeline-trigger-activation-range-end")}}. When specified as a timeline range, offset, or both, this property sets the end of the active range to a point that is independent from the `timeline-trigger-activation-range-end` value.
+The default value of `timeline-trigger-active-range-end` is `auto`, which sets the value to the same named range and offset as the {{cssxref("timeline-trigger-activation-range-end")}}. When specified as a timeline range, offset, or both, this property sets the end of the active range to a point that is independent from the `timeline-trigger-activation-range-end` value.
 
-The value of `normal` sets the end of the active range to the end of the default named range, resolving to either `cover 0%` or `scroll 0%`.
+The value of `normal` sets the end of the active range to the end of the default named range, resolving to either `cover 100%` or `scroll 100%`.
 
 Other values of the `timeline-trigger-active-range-end` property can be used to set:
 
@@ -108,7 +108,7 @@ In this case, `--my-trigger` will use the `contain` range end and `--my-other-tr
 
 ### Basic usage
 
-In this example, we demonstrate the effect of extending a trigger's active range by creating two identical triggered animations, and insetting the end of one of the scroll-triggered animation trigger's active range with the `timeline-trigger-active-range-end` property.
+In this example, we demonstrate the effect of extending a trigger's active range by creating two identical triggered animations, and outsetting the end of one of the scroll-triggered animation trigger's active range with the `timeline-trigger-active-range-end` property.
 
 #### HTML
 
@@ -317,6 +317,7 @@ When you scroll downward again, after both animations have paused, the animation
 
 - {{cssxref("timeline-trigger-active-range-start")}}
 - {{cssxref("timeline-trigger-active-range")}} shorthand property
+- {{cssxref("timeline-trigger-activation-range-start")}}
 - {{cssxref("timeline-trigger-name")}}, {{cssxref("timeline-trigger-source")}}, and {{cssxref("timeline-trigger-activation-range")}}
 - {{cssxref("timeline-trigger")}} shorthand property
 - [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
