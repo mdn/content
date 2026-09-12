@@ -186,12 +186,6 @@ These attributes are deprecated and may no longer be supported by all user agent
 
 ## Usage notes
 
-### Embedding PDFs
-
-An `<iframe>` can display a PDF using the browser's built-in PDF viewer. Unlike {{HTMLElement("object")}}, it does not support child content as a fallback if the PDF cannot be displayed. Provide a link outside the `<iframe>` so users can open the PDF separately.
-
-The [`sandbox`](#sandbox) attribute can prevent the built-in PDF viewer from loading, even with `allow-scripts` or `allow-downloads`. It is not a portable way to add restrictions to a native PDF preview. The browser's PDF viewer already sandboxes all executable content.
-
 ### Scripting
 
 Inline frames, like {{HTMLElement("frame")}} elements, are included in the {{domxref("window.frames")}} pseudo-array.
@@ -216,6 +210,12 @@ What this means is that a cross-origin frame can't immediately redirect the top-
 
 A sandboxed frame blocks all top navigation unless the `sandbox` attribute values are set to [`allow-top-navigation`](#allow-top-navigation) or [`allow-top-navigation-by-user-activation`](#allow-top-navigation-by-user-activation).
 Note that top-navigation permissions are inherited, so a nested frame can perform a top navigation only if its parent frames are also allowed to.
+
+### Embedding PDFs
+
+An `<iframe>` can display a PDF using the browser's built-in PDF viewer. Unlike {{HTMLElement("object")}}, it does not support child content as a fallback if the PDF cannot be displayed. Provide a link outside the `<iframe>` so users can open the PDF separately.
+
+The [`sandbox`](#sandbox) attribute can prevent the built-in PDF viewer from loading, even with `allow-scripts` or `allow-downloads`. It is not a portable way to add restrictions to a native PDF preview. The browser's PDF viewer already sandboxes all executable content.
 
 ### Positioning and scaling
 
