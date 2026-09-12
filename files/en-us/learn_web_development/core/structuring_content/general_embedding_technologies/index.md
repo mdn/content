@@ -166,7 +166,7 @@ This advice applies to embedded HTML and SVG documents, where the embedded scrip
 
 ## The \<embed> and \<object> elements
 
-Just like {{htmlelement("iframe")}}, the {{htmlelement("embed")}} and {{htmlelement("object")}} elements can also embed external content, but potentially in a more lightweight container (not mimicking a full browser tab), if the embedded content supports it (such as raster images).
+Just like {{htmlelement("iframe")}}, the {{htmlelement("embed")}} and {{htmlelement("object")}} elements can also embed external content. Depending on the content being embedded, this can be a more lightweight option, since the browser doesn't have to create a full browsing context for the embedded content.
 
 Historically, these elements have also been used for embedding content handled by browser {{Glossary("Plugin", "plugins")}} such as {{Glossary("Adobe Flash")}}, but this technology is now obsolete and is not supported by modern browsers. Today, almost all of their use cases can be covered by `<iframe>`, which provides more security features.
 
