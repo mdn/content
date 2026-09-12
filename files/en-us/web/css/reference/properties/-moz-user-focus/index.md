@@ -10,7 +10,7 @@ browser-compat: css.properties.-moz-user-focus
 sidebar: cssref
 ---
 
-{{deprecated_header}}{{non-standard_header}}
+{{non-standard_header}}
 
 The **`-moz-user-focus`** [CSS](/en-US/docs/Web/CSS) property is used to indicate whether an element can have the focus.
 
@@ -32,6 +32,8 @@ The default is `none`, which disables focussing on the element and removes focus
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `ignore`
   - : The element does not accept keyboard focus and will be skipped in the tab order.

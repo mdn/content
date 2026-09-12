@@ -1,12 +1,9 @@
 ---
-title: "load: Wasm text instruction"
+title: "load: Wasm memory instruction"
 short-title: load
 slug: WebAssembly/Reference/Memory/load
 page-type: webassembly-instruction
-browser-compat:
-  - webassembly.api.Memory
-  - webassembly.multiMemory
-spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-memory
+browser-compat: webassembly.instructions.memory_load
 sidebar: webassemblysidebar
 ---
 
@@ -200,6 +197,3 @@ The WAT files could be loaded using the same JavaScript code as the first exampl
 ## Browser compatibility
 
 {{Compat}}
-
-> [!NOTE]
-> The `multiMemory` compatibility table indicates versions in which `load` can be used with a specified memory.

@@ -72,9 +72,10 @@ The parameters common across the syntax of some basic shape functions include:
   - : Defines rounded corners for [rectangles by container insets](#syntax_for_rectangles_by_container_insets), [rectangles by distance](#syntax_for_rectangles_by_distance), and [rectangles with dimensions](#syntax_for_rectangles_with_dimensions) using the same syntax as the CSS {{cssxref("border-radius")}} shorthand property.
 
 - `<shape-radius>`
-  - : Defines the radius for a [circle](#syntax_for_circles) or an [ellipse](#syntax_for_ellipses). Valid values include {{cssxref("length")}}, {{cssxref("percentage")}}, `closest-side` (the default), and `farthest-side`. Negative values are invalid.
+  - : Defines the radius for a [circle](#syntax_for_circles) or an [ellipse](#syntax_for_ellipses). Valid values include {{cssxref("length")}}, {{cssxref("percentage")}}, `closest-side` (the default), `farthest-side`, `closest-corner`, and `farthest-corner`. Negative values are invalid.
 
     The `closest-side` keyword value uses the length from the center of the shape to the closest side of the reference box to create the radius length. The `farthest-side` keyword value uses the length from the center of the shape to the farthest side of the reference box.
+    Similarly, the `closest-corner` and `farthest-corner` use the length from the center of the shape to the closest and farthest corners, respectively.
 
 - `<position>`
   - : Defines the center {{cssxref("&lt;position&gt;")}} of a [circle](#syntax_for_circles) or an [ellipse](#syntax_for_ellipses). It defaults to `center` if omitted.
@@ -143,13 +144,18 @@ The `<shape-radius>` arguments represent _rx_ and _ry_, the x-axis and y-axis ra
 
 ### Syntax for polygons
 
-The {{cssxref("basic-shape/polygon","polygon()")}} function defines a polygon using an SVG {{SVGAttr("fill-rule")}} and a set of coordinates.
+The {{cssxref("basic-shape/polygon","polygon()")}} function defines a polygon using a set of comma-separated coordinate pairs, optionally preceded by an SVG {{SVGAttr("fill-rule")}}, a corner-rounding parameter, or both.
 
 ```plain
-polygon( <'fill-rule'>? , [ <length-percentage> <length-percentage> ]# )
+polygon( <'fill-rule'>? [ round <length> ]? , [ <length-percentage> <length-percentage> ]# )
 ```
 
-The function takes a list of comma-separated coordinate pairs, each consisting of two space-separated `<length-percentage>` values as the _xi_ and _yi_ pair. These values represent the x and y axis coordinates of the polygon at position _i_ (the vertex point where two lines meet).
+The optional first parameter can contain one or both of the following, separated by a space:
+
+- An SVG {{SVGAttr("fill-rule")}} value, either `nonzero` or `evenodd`, specifying the algorithm used to fill the polygon shape.
+- The keyword [`round`](/en-US/docs/Web/CSS/Reference/Values/basic-shape/polygon#round) followed by a {{cssxref("length")}} value, separated by a space. This specifies that the polygon should have rounded corners, with the `<length>` specifying the corner radius.
+
+Each coordinate pair consists of two space-separated `<length-percentage>` values. These values represent the x- and y-axis coordinates of a polygon vertex.
 
 ### Syntax for paths
 

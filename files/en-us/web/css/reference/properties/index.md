@@ -447,6 +447,7 @@ Standard properties defined by CSS specifications include the following:
 - {{CSSxRef("page-break-inside")}}
 - {{CSSxRef("page")}}
 - {{CSSxRef("paint-order")}}
+- {{CSSxRef("path-length")}}
 - {{CSSxRef("perspective-origin")}}
 - {{CSSxRef("perspective")}}
 - {{CSSxRef("place-content")}} (shorthand)

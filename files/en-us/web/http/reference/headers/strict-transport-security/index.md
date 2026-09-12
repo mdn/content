@@ -50,7 +50,7 @@ The host is identified only by its domain name. An IP address cannot be an HSTS 
 HSTS applies to all ports of the host, regardless of what port was used for the request.
 
 Before loading an `http` URL, the browser checks the domain name against its HSTS hosts list.
-If the domain name is a case insensitive match for an HSTS host or is a subdomain of one that specified `includeSubDomains`,
+If the domain name is a case-insensitive match for an HSTS host or is a subdomain of one that specified `includeSubDomains`,
 then the browser replaces the URL scheme with `https`.
 If the URL specifies port 80, the browser changes it to 443.
 Any other explicit port number remains unchanged, and the browser connects to that port using HTTPS.
@@ -61,7 +61,7 @@ the intention of strict security.
 
 > [!NOTE]
 > The host must send the `Strict-Transport-Security` header over HTTPS only, not insecure HTTP.
-> Browsers ignore the header if sent over HTTP to prevent a [manipulator-in-the-middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM)
+> Browsers ignore the header if sent over HTTP to prevent a [manipulator in the middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM)
 > from altering the header to expire prematurely or adding it for a host that doesn't support HTTPS.
 
 ### Expiration

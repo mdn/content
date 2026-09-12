@@ -9,7 +9,7 @@ browser-compat: api.NavigationPrecommitController
 
 The **`NavigationPrecommitController`** interface of the {{domxref("Navigation API", "Navigation API", "", "nocode")}} is passed as an argument to a navigation [precommit handler](/en-US/docs/Web/API/NavigateEvent/intercept#precommithandler) callback.
 
-The callback is used to handle any modifications to the navigation that are required before it is committed (and the destination URL is actually displayed in the browser), such as cancelling or redirecting it somewhere else as required.
+The callback is used to handle any modifications to the navigation that are required before it is committed (and the destination URL is actually displayed in the browser), such as canceling or redirecting it somewhere else as required.
 This interface provides methods to redirect to a new URL and update history and state, and to dynamically configure post-commit navigation behavior.
 
 {{InheritanceDiagram}}

@@ -14,7 +14,7 @@ The **Screen Wake Lock API** provides a way to prevent devices from dimming or l
 
 ## Concepts and usage
 
-Most devices by default turn off their screen after a specified amount of time to prolong the life of the hardware. Modern devices do this to save on battery power. Whilst this is a useful feature, some applications need the screen to stay awake to be their most useful.
+Most devices by default turn off their screen after a specified amount of time to prolong the life of the hardware. Modern devices do this to save on battery power. While this is a useful feature, some applications need the screen to stay awake to be their most useful.
 
 The Screen Wake Lock API prevents the screen from turning off, dimming or locking. It allows for a simple platform-based solution for visible (active) documents to acquire the platform screen wake lock.
 
@@ -128,7 +128,7 @@ Access to the Screen Wake Lock API is controlled by the [Permissions Policy](/en
 
 When using the [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy), the default allowlist for `screen-wake-lock` is `self`.
 This allows lock wake usage in same-origin nested frames but prevents third-party content from using locks.
-Third party usage can be enabled by the server first setting the `Permissions-Policy` header to grant permission a particular third party origin.
+Third-party usage can be enabled by the server first setting the `Permissions-Policy` header to grant permission to a particular third-party origin.
 
 ```http
 Permissions-Policy: screen-wake-lock=(self b.example.com)

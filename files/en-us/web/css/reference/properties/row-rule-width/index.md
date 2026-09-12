@@ -3,9 +3,13 @@ title: "`row-rule-width` CSS property"
 short-title: row-rule-width
 slug: Web/CSS/Reference/Properties/row-rule-width
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.row-rule-width
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`row-rule-width`** [CSS](/en-US/docs/Web/CSS) property defines the widths of the lines drawn between rows in multi-row grid, flex, and multi-col layouts.
 

@@ -28,6 +28,8 @@ position-visibility: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `always`
   - : The positioned element is always displayed.
 - `anchors-valid`

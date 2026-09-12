@@ -47,7 +47,7 @@ Firefox 149 was released on [March 24, 2026](https://whattrainisitnow.com/releas
   A serialized version of the report objects can also be sent to a reporting server specified in the corresponding HTTP header — endpoint names and corresponding URLs must first be defined in the {{httpheader('Reporting-Endpoints')}} or {{httpheader('Report-To')}} HTTP response headers.
   ([Firefox bug 1976074](https://bugzil.la/1976074), [Firefox bug 2008916](https://bugzil.la/2008916)).
 
-- Up to Firefox 148, `structuredClone.call(iframe.contentWindow)` incorrectly created objects in the caller's [realm](/en-US/docs/Web/JavaScript/Reference/Execution_model#realms) instead of the iframe's realm. The implementation now instantiates objects in the `this` realm, so the method's behavior more closely matched the specification ([Firefox bug 2017797](https://bugzil.la/2017797)).
+- Up to Firefox 148, `structuredClone.call(iframe.contentWindow)` incorrectly created objects in the caller's [realm](/en-US/docs/Web/JavaScript/Reference/Execution_model#realms) instead of the iframe's realm. The implementation now instantiates objects in the `this` realm, so the method's behavior more closely matches the specification ([Firefox bug 2017797](https://bugzil.la/2017797)).
 
 #### DOM
 

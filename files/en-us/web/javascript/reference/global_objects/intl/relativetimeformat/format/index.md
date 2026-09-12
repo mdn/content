@@ -68,7 +68,7 @@ rtf.format(1, "day"); // "in 1 day"
 
 ### Using the auto option
 
-If `numeric:auto` option is passed, it will produce the string `yesterday`, `today`, or `tomorrow` instead of `1 day ago`, `in 0 days`, or `in 1 day`. This allows to not always have to use numeric values in the output.
+If the `numeric: "auto"` option is passed, it will produce the string `yesterday`, `today`, or `tomorrow` instead of `1 day ago`, `in 0 days`, or `in 1 day`. This allows you to avoid using numeric values in the output.
 
 ```js
 // Create a relative time formatter in your locale

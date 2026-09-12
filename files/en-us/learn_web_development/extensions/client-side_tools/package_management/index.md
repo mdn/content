@@ -193,7 +193,7 @@ In Vite, the `index.html` file is front and central. It defines the starting poi
   <head>
     <meta charset="UTF-8" />
     <title>My test page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width" />
   </head>
   <body>
     <div id="root"></div>
@@ -421,11 +421,11 @@ You can add all kinds of things to the `scripts` property that help you do your 
 
 ## Summary
 
-This brings us to the end of our tour of package managers. Our next move is to build up a sample toolchain, putting all that we've learnt so far into practice.
+This brings us to the end of our tour of package managers. Our next move is to build up a sample toolchain, putting all that we've learned so far into practice.
 
 ## See also
 
-- [npm scripts reference](https://docs.npmjs.com/cli/v8/using-npm/scripts/)
-- [package.json reference](https://docs.npmjs.com/cli/v8/configuring-npm/package-json/)
+- [npm scripts reference](https://docs.npmjs.com/cli/using-npm/scripts/)
+- [package.json reference](https://docs.npmjs.com/cli/configuring-npm/package-json/)
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Client-side_tools/Overview","Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain", "Learn_web_development/Extensions/Client-side_tools")}}

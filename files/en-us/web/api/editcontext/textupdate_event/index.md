@@ -28,21 +28,6 @@ ontextupdate = (event) => { }
 
 A {{domxref("TextUpdateEvent")}}. Inherits from {{domxref("Event")}}.
 
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref('TextUpdateEvent.updateRangeStart')}} {{readonlyinline}}
-  - : Returns the index of the first character in the range of text that was updated.
-- {{domxref('TextUpdateEvent.updateRangeEnd')}} {{readonlyinline}}
-  - : Returns the index of the last character in the range of text that was updated.
-- {{domxref('TextUpdateEvent.text')}} {{readonlyinline}}
-  - : Returns the text that was inserted in the updated range.
-- {{domxref('TextUpdateEvent.selectionStart')}} {{readonlyinline}}
-  - : Returns the index of the first character in the new selection range, after the update.
-- {{domxref('TextUpdateEvent.selectionEnd')}} {{readonlyinline}}
-  - : Returns the index of the last character in the new selection range, after the update.
-
 ## Examples
 
 ### Rendering the updated text on `textupdate`

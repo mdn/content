@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="280" viewBox="0 0 760 280">
+  <title>A favicon in a browser tab</title>
+  <desc>Arrows labeled Favicon point to the blue MDN logo to the left of the MDN Web Docs title in the active browser tab and to the purple book icon beside Another page in the other tab.</desc>
+  <rect width="760" height="280" fill="#fff"/>
+  <g stroke="#858585" stroke-width="2" stroke-linejoin="round">
+    <rect x="24" y="80" width="712" height="176" rx="12" fill="#f2f2f2"/>
+    <path d="M44 138V106a10 10 0 0 1 10-10h270a10 10 0 0 1 10 10v32" fill="#fff"/>
+    <path d="M354 138v-28a10 10 0 0 1 10-10h234a10 10 0 0 1 10 10v28" fill="#e5e5e5"/>
+    <path d="M24 138h712M24 192h712" fill="none"/>
+    <rect x="136" y="150" width="580" height="30" rx="6" fill="#fff"/>
+  </g>
+  <g fill="none" stroke="#858585" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m55 158-8 8 8 8m-8-8h20m28-8 8 8-8 8m8-8H83"/>
+    <path d="m306 111 10 10m0-10-10 10m264-8 10 10m0-10-10 10m48-1h16m-8-8v16"/>
+  </g>
+  <path transform="translate(63.53 104.235) scale(.276)" fill="#0069c2" d="M42 .2 13.4 92.3H1.7L30.2.2H42zM52.4.2v92.1H42V.2h10.4zm40.3 0L64.2 92.3H52.5L81 .2h11.7zM103.1.2v92.1H92.7V.2h10.4z"/>
+  <rect x="370" y="105" width="28" height="28" rx="6" fill="#6f42a1"/>
+  <path d="M384 113q-5-3-9-1v14q4-2 9 1 5-3 9-1v-14q-4-2-9 1v14" fill="none" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>
+  <g font-family="Arial, sans-serif" font-size="18" fill="#333">
+    <text x="108" y="123">MDN Web Docs</text>
+    <text x="410" y="124" fill="#595959">Another page</text>
+    <text x="152" y="171" font-size="16">developer.mozilla.org</text>
+  </g>
+  <g stroke="#dbdbdb" stroke-width="8" stroke-linecap="round">
+    <path d="M52 216h180m-180 20h320"/>
+  </g>
+  <text x="231" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#0069c2">Favicon</text>
+  <path d="M176 33H90a12 12 0 0 0-12 12v45m-6-7 6 7 6-7" fill="none" stroke="#0069c2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M286 33h86a12 12 0 0 1 12 12v49m-6-7 6 7 6-7" fill="none" stroke="#0069c2" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

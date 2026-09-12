@@ -7,7 +7,7 @@ browser-compat: css.properties.vertical-align
 sidebar: cssref
 ---
 
-The **`vertical-align`** [CSS](/en-US/docs/Web/CSS) shorthand property sets the vertical alignment of an inline, inline-block, or table-cell box.
+The **`vertical-align`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets the vertical alignment of an inline, inline-block, or table-cell box.
 
 ## Constituent properties
 

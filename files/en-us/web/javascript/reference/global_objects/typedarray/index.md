@@ -252,7 +252,7 @@ These methods are defined on the `TypedArray` prototype object and are thus shar
 - {{jsxref("TypedArray.prototype.indexOf()")}}
   - : Returns the first (least) index of an element within the array equal to the specified value, or `-1` if none is found. See also {{jsxref("Array.prototype.indexOf()")}}.
 - {{jsxref("TypedArray.prototype.join()")}}
-  - : Joins all elements of an array into a string. See also {{jsxref("Array.prototype.join()")}}.
+  - : Returns a new string that is the concatenation of all elements in this typed array, separated by commas or a specified separator string. See also {{jsxref("Array.prototype.join()")}}.
 - {{jsxref("TypedArray.prototype.keys()")}}
   - : Returns a new array iterator that contains the keys for each index in the array. See also {{jsxref("Array.prototype.keys()")}}.
 - {{jsxref("TypedArray.prototype.lastIndexOf()")}}

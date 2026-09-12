@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Window.scrollBy
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
 The **`scrollBy()`** method of the {{domxref("Window")}} interface scrolls the document in the window by the given amount.
 

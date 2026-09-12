@@ -7,7 +7,7 @@ browser-compat: css.properties.border-left
 sidebar: cssref
 ---
 
-The **`border-left`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets all the properties of an element's left [border](/en-US/docs/Web/CSS/Reference/Properties/border).
+The **`border-left`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets all the properties of an element's left [border](/en-US/docs/Web/CSS/Reference/Properties/border).
 
 {{InteractiveExample("CSS Demo: border-left")}}
 

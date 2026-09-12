@@ -45,7 +45,7 @@ To enable responsive sizing of `<iframe>` elements based on their content, the [
 
 The embedded document's layout size is automatically reported once when its {{domxref("Document.DOMContentLoaded_event", "DOMContentLoaded")}} event fires, and again when the {{domxref("Window")}} object's {{domxref("Window.load_event", "load")}} event fires.
 
-In other circumstances, you can call the {{domxref("Window.requestResize()")}} method from the embedded document to make it report an updated layout size; this is typically done from within the event handler that caused the embedded content to change size. If the `<iframe>` is sized using `frame-sizing`, it will then update its size automatically so that it still neatly contains the embedded content.
+In other circumstances, you can call the `requestResize()` method from the embedded document to make it report an updated layout size; this is typically done from within the event handler that caused the embedded content to change size. If the `<iframe>` is sized using `frame-sizing`, it will then update its size automatically so that it still neatly contains the embedded content.
 
 ## Examples
 
@@ -80,11 +80,11 @@ The `frame.html` document includes a {{htmlelement("div")}} element with a [`tab
 
 ```html
 <head>
-  ...
+  <!-- ... -->
 
   <meta name="responsive-embedded-sizing" />
 
-  ...
+  <!-- ... -->
 </head>
 <body>
   <div tabindex="0">
@@ -93,7 +93,7 @@ The `frame.html` document includes a {{htmlelement("div")}} element with a [`tab
     <p>This is some more content.</p>
   </div>
   <script>
-    ...
+    /* ... */
   </script>
 </body>
 ```

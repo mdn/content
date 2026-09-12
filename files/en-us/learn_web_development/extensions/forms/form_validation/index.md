@@ -75,7 +75,7 @@ There are two different types of client-side validation that you'll encounter on
 - **JavaScript form validation**
   JavaScript is generally included to enhance or customize HTML form validation.
 
-Client side validation can be accomplished with little to no JavaScript. HTML validation is faster than JavaScript, but is less customizable than JavaScript validation. It is generally recommended to begin your forms using robust HTML features, then enhance the user experience with JavaScript as needed.
+Client-side validation can be accomplished with little to no JavaScript. HTML validation is faster than JavaScript, but is less customizable than JavaScript validation. It is generally recommended to begin your forms using robust HTML features, then enhance the user experience with JavaScript as needed.
 
 ## Using built-in form validation
 
@@ -546,7 +546,7 @@ form.addEventListener("submit", (e) => {
 #### Extending built-in form validation
 
 The previous example showed how you can add a customized message for a particular type of error (`validity.typeMismatch`).
-It is also possible to use all of the built in form validation, and then add to it using `setCustomValidity()`.
+It is also possible to use all of the built-in form validation, and then add to it using `setCustomValidity()`.
 
 Here we demonstrate how you can extend the built in [`<input type="email">`](/en-US/docs/Web/HTML/Reference/Elements/input/email) validation to only accept addresses with the `@example.com` domain.
 We start with the HTML {{htmlelement("form")}} below.

@@ -34,7 +34,7 @@ The basic page setup styles are as follows. We apply some rudimentary font style
 
 html {
   height: 100%;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
   font-size: 1.2rem;
 }
 

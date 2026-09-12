@@ -99,7 +99,7 @@ Some addresses, such as private IP literals (for example, `192.168.0.1`) and `.l
 
 You can control access to local and loopback addresses at the document level using the {{httpheader('Permissions-Policy/local-network','local-network')}} and {{httpheader('Permissions-Policy/loopback-network','loopback-network')}} {{httpheader('Permissions-Policy')}} directives.
 
-The default allowlist for these directives is `self`, which means that requests will be allowed in the current document and embedded browsing contexts in the same origin only. To allow local or loopback requests at the document level for a particular origin, use these directives in an `Permissions-Policy` HTTP header:
+The default allowlist for these directives is `self`, which means that requests will be allowed in the current document and embedded browsing contexts in the same origin only. To allow local or loopback requests at the document level for a particular origin, use these directives in a `Permissions-Policy` HTTP header:
 
 ```http
 Permissions-Policy: local-network=("https://example.com")
