@@ -45,27 +45,30 @@ timeline-trigger-active-range-end: unset;
 
 ### Values
 
-This property is specified either as `auto`, `normal`, or a comma-separated list of values:
+This property is specified as a comma-separated list of the following values:
 
 - `auto`
-  - : The `timeline-trigger-active-range-end` property is set to the same value as the {{cssxref("timeline-trigger-activation-range-end")}} property. This is the default value.
+  - : Specifies the value of the {{cssxref("timeline-trigger-activation-range-end")}} property. This is the default value.
 - `normal`
-  - : Equivalent to `cover 100%` for a [view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) {{cssxref("timeline-trigger-source")}}, and `scroll 100%` for a [scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#scroll_progress_timelines) `timeline-trigger-source`.
-  - : Specifies a length or percentage value measured from the beginning of the `normal` timeline. Percentages are relative to the length of the `normal` timeline range.
+  - : Specifies the end, or `100%`, of the `normal` range. Equivalent to `cover 100%` for a [view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) {{cssxref("timeline-trigger-source")}}, and `scroll 100%` for a [scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#scroll_progress_timelines) `timeline-trigger-source`.
+- {{cssxref("length-percentage")}}
+  - : Specifies a length or percentage value measured from the beginning of the `normal` timeline. Percentages are relative to the length of the [`normal`](#normal) timeline range.
 - {{cssxref("timeline-range-name")}}
-  - : Specifies the end (`100%`) of the `cover`, `contain`, `entry`, `exit`, `entry-crossing`, `exit-crossing`, or `scroll` timeline range.
+  - : Specifies the end, or `100%`, of the `cover`, `contain`, `entry`, `exit`, `entry-crossing`, `exit-crossing`, or `scroll` timeline range.
 - `<timeline-range-name>` `<length-percentage>`
-  - : Specifies a length or percentage value measured from the beginning of the specified named timeline range. Percentages are relative to the named timeline range length.
+  - : Specifies a length or percentage value measured from the beginning of the specified named timeline range. Percentages are relative to the length of the named range.
 
 ## Description
 
-The `timeline-trigger-active-range-end` property can be used to explicitly specify the end of a trigger's [active range](/en-US/docs/Web/CSS/Reference/Properties/timeline-trigger-active-range#description) as a timeline range, offset, or both, when creating [CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations).
+The `timeline-trigger-active-range-end` property can be used to explicitly specify the end of a trigger's [active range](/en-US/docs/Web/CSS/Reference/Properties/timeline-trigger-active-range#description) that is equal to or further along the timeline than the end of the trigger's activation range.
 
-The default value is `auto`, which sets the `timeline-trigger-active-range-end` value to the same as the {{cssxref("timeline-trigger-activation-range-end")}}.
+The _active range_ is the range within which a trigger remains activated once activation occurs. By default, the active range ends where the activation range ends, with deactivation occurring when the tracked element leaves the activation range. This property creates a buffer zone and is used to prevent premature resetting when a user scrolls back and forth across the activation's endpoint. Only when a tracked element moves out of the active range does the trigger become inactive.
 
-A value of `normal` sets the end of the active range to the end of the default named range. The default named range depends on the {{cssxref("timeline-trigger-source")}}: it is equivalent to `cover` for a [view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) and `scroll` for a [scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#scroll_progress_timelines). The default offset is `0%`. Therefore, `normal` resolves to either `cover 0%` or `scroll 0%`.
+The default value is `auto`, which sets the value to the same named range and offset as the {{cssxref("timeline-trigger-activation-range-end")}}. When specified as a timeline range, offset, or both, this property sets the end of the active range to a point that is independent from the `timeline-trigger-activation-range-end` value.
 
-The `timeline-trigger-active-range-end` property can be used to set:
+The value of `normal` sets the end of the active range to the end of the default named range, resolving to either `cover 0%` or `scroll 0%`.
+
+Other values of the `timeline-trigger-active-range-end` property can be used to set:
 
 - An offset from the `normal` range
   - : A `<length>` or `<percentage>` value specifies an offset from the beginning of the `normal` timeline, which again defaults to [`cover`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#cover) for a view progress timeline source, and [`scroll`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#scroll) for a scroll progress timeline source. Negative values outset the end, resulting in a longer active range. Positive values inset the end of the active range, making it shorter.
@@ -73,6 +76,8 @@ The `timeline-trigger-active-range-end` property can be used to set:
   - : A `<timeline-range-name>` value specifies a `100%` offset along the named timeline range, which is `cover`, `contain`, `entry`, `exit`, `entry-crossing`, `exit-crossing`, or `scroll`. See [Understanding timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names).
 - An offset from a specific named range
   - : When both a `<timeline-range-name>` and `<length>` or `<percentage>` value are specified, the end is offset by the distance specified from the start of the named range. Percentage values are relative to the range specified. See [Setting insets using percentages](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets#setting_insets_using_percentages)
+
+If the value is set to a point prior to the end of the activation range, the value of the `timeline-trigger-activation-range-end` is used, as if the value were set to `auto`.
 
 The `timeline-trigger-active-range-end` property, along with the {{cssxref("timeline-trigger-active-range-start")}} property, can also be set using the {{cssxref("timeline-trigger-active-range")}} shorthand, which in turn can be set using the {{cssxref("timeline-trigger")}} shorthand.
 
@@ -103,25 +108,27 @@ In this case, `--my-trigger` will use the `contain` range end and `--my-other-tr
 
 ### Basic usage
 
-In this example, we inset the end of a scroll-triggered animation trigger's active range by setting a custom `timeline-trigger-active-range-end` value.
+In this example, we demonstrate the effect of extending a trigger's active range by creating two identical triggered animations, and insetting the end of one of the scroll-triggered animation trigger's active range with the `timeline-trigger-active-range-end` property.
 
 #### HTML
 
-Our markup contains two {{htmlelement("div")}} elements — one to animate and one to create a trigger on — plus some basic text content to cause the page to scroll. We have hidden the text content for brevity.
+Our markup contains four {{htmlelement("div")}} elements — two to animate and two to create a trigger on — plus some basic text content to cause the page to scroll. We have hidden the text content for brevity.
 
 ```html
 <div class="animated">I am animated</div>
+<div class="animated longer">I am animated longer</div>
 
 ...
-
-<div class="trigger">I create the trigger</div>
-
+<section>
+  <div class="trigger">I create the trigger</div>
+  <div class="trigger longer">I create a longer trigger</div>
+</section>
 ...
 ```
 
 ```html hidden live-sample___basic-example
 <div class="animated">I am animated</div>
-
+<div class="animated longer">I am animated longer</div>
 <p>
   Fusce dictum ex quis ipsum consectetur placerat. Cras sed lectus ex. Quisque
   purus dolor, vulputate ac mi eget, commodo varius odio. Suspendisse faucibus
@@ -150,8 +157,10 @@ Our markup contains two {{htmlelement("div")}} elements — one to animate and o
   tristique tellus, sed tincidunt velit.
 </p>
 
-<div class="trigger">I create the trigger</div>
-
+<section>
+  <div class="trigger">I create the trigger</div>
+  <div class="trigger longer">I create a longer trigger</div>
+</section>
 <p>
   Fusce dictum ex quis ipsum consectetur placerat. Cras sed lectus ex. Quisque
   purus dolor, vulputate ac mi eget, commodo varius odio. Suspendisse faucibus
@@ -183,7 +192,7 @@ Our markup contains two {{htmlelement("div")}} elements — one to animate and o
 
 #### CSS
 
-The `.animated` element's {{cssxref("position")}} is set to `fixed`, positioning it near the top-left of the scrollport to enable us to see when its animation starts and stops.
+The `.animated` elements' {{cssxref("position")}} is set to `fixed`, positioning them near the top-left of the scrollport to enable us to see when their animations start and stop.
 
 ```css hidden live-sample___basic-example
 body {
@@ -214,6 +223,13 @@ div {
   top: 25px;
   left: 25px;
 }
+.animated.longer {
+  left: 150px;
+}
+section {
+  display: flex;
+  gap: 20px;
+}
 ```
 
 Next, we define the {{cssxref("@keyframes")}} for a `rotate` animation:
@@ -230,27 +246,38 @@ Next, we define the {{cssxref("@keyframes")}} for a `rotate` animation:
 }
 ```
 
-Using the {{cssxref("animation")}} shorthand, the `rotate` animation is applied to the `.animated` element. Without an associated trigger, the element would start animating when the page loads. The `animation-trigger` property makes it a triggered animation. The value references a `timeline-trigger-name` of `--t` and specifies two `<animation-action>` values — `play` and `pause` — which specify that the animation will play on activation, and pause on deactivation.
+Using the {{cssxref("animation")}} shorthand, the `rotate` animation is applied to the `.animated` elements. Without an associated trigger, the elements would start animating when the page loads. The `animation-trigger` property makes it a triggered animation. The values reference a `timeline-trigger-name` of `--t` and `--longerT`, respectively, and define two `<animation-action>` values — `play` and `pause` — which specify that the animation will play on activation and pause on deactivation.
 
 ```css live-sample___basic-example
 .animated {
   animation: rotate 3s infinite linear;
   animation-trigger: --t play pause;
 }
+.animated.longer {
+  animation-trigger: --longerT play pause;
+}
 ```
 
 The `.trigger` element creates the `.animated` element's trigger via the following properties:
 
-- A {{cssxref("timeline-trigger-name")}} with value `--t`, which is equal to the identifier referenced in the animated `<div>`'s `animation-trigger` property value, associating the two together.
+- A {{cssxref("timeline-trigger-name")}} with value `--t`, which is equal to the identifier referenced in the `.animated` element's `animation-trigger` property value, associating the two together.
 - A {{cssxref("timeline-trigger-source")}} with value [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
-- A {{cssxref("timeline-trigger-activation-range")}} of `contain 30% contain 60%`The `contain` range spans from when the trigger element has completely entered the viewport to when it starts to leave. This value sets the trigger's activation range to start at `30%` through the `contain` range and end `60%` through it, which is a narrow range.
-- A `timeline-trigger-active-range-end` of `cover 100%`. The `cover` range spans from when the trigger element first starts to enter the viewport to when it has completely left it. When not explicitly set, the {{cssxref("timeline-trigger-active-range-start")}} value defaults to the {{cssxref("timeline-trigger-activation-range-start")}} value — `contain 30%` — so we end up with an overall {{cssxref("timeline-trigger-active-range")}} of `contain 30% cover 100%`.
+- A {{cssxref("timeline-trigger-activation-range-end")}} of `contain 50%`. The `contain` range spans from when the trigger element has completely entered the viewport to when it starts to leave. This value sets the trigger's activation range to end `50%` through it.
+
+The `.trigger.longer` element creates the `.animated.longer` element's trigger via the following properties:
+
+- A {{cssxref("timeline-trigger-name")}} with value `--longerT` (overriding the `--t`), which is equal to the identifier referenced in the `.animated.longer` element's `animation-trigger` property value, associating the two together.
+
+- A `timeline-trigger-active-range-end` of `cover 100%`. The `cover` range spans from when the trigger element first starts to enter the viewport to when it has completely left it.
 
 ```css live-sample___basic-example
 .trigger {
   timeline-trigger-name: --t;
   timeline-trigger-source: view();
-  timeline-trigger-activation-range: contain 30% contain 60%;
+  timeline-trigger-activation-range-end: contain 50%;
+}
+.trigger.longer {
+  timeline-trigger-name: --longerT;
   timeline-trigger-active-range-end: cover 100%;
 }
 ```
@@ -274,9 +301,9 @@ The `.trigger` element creates the `.animated` element's trigger via the followi
 
 {{EmbedLiveSample("basic-example", "100%", "240")}}
 
-Try scrolling the content up. The animation starts playing when the tracked `.trigger` element moves into the narrow activation range between `30%` and `60%` of the way through the timeline range. At this point, you can scroll the trigger element completely off the top of the scrollport before the animation will pause again.
+Try scrolling the content up. Both animations start playing when the tracked `.trigger` elements first enter into view. The animation of one element pauses when the trigger is at 50% of the `contain` timeline, which occurs when the triggers are vertically centered in the scrollport. The other element pauses only when the trigger has fully exited the viewport.
 
-When you scroll downwards again, the animation will start playing when the trigger element reaches the `60%` point, but pause as soon as the `30%` point is reached. This is because we extended the end of the active range, but not the start.
+When you scroll downward again, after both animations have paused, the animations will both restart playing when the trigger elements reach the `50%` point. This is because the active range extends how long the trigger remains active, but does not change where activation and deactivation occur.
 
 ## Specifications
 

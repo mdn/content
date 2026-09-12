@@ -46,7 +46,7 @@ timeline-trigger-activation-range-end: unset;
 
 ### Values
 
-This property is specified either as `normal` or a comma-separated list of values:
+This property is specified as a comma-separated list of the following values:
 
 - `normal`
   - : The default value. Equivalent to `cover 100%` for a [view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) {{cssxref("timeline-trigger-source")}}, and `scroll 100%` for a [scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#scroll_progress_timelines) `timeline-trigger-source`.
@@ -243,7 +243,7 @@ Using the {{cssxref("animation")}} shorthand, the `rotate` animation is applied 
 
 The `.trigger` element creates the `.animated` element's trigger via the following properties:
 
-- A {{cssxref("timeline-trigger-name")}} with value `--t`, which is equal to the identifier referenced in the animated `<div>`'s `animation-trigger` property value, associating the two together.
+- A {{cssxref("timeline-trigger-name")}} with value `--t`, which is equal to the identifier referenced in the `.animated` element's `animation-trigger` property value, associating the two together.
 - A {{cssxref("timeline-trigger-source")}} with value [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
 - A `timeline-trigger-activation-range-end` of `contain 60%`. The `contain` range spans from when the trigger element has fully entered the scrollport to when it starts to leave. This value sets the trigger's activation range's start to `60%` through the `contain` range.
 

@@ -46,7 +46,7 @@ timeline-trigger-source: unset;
 
 ### Values
 
-Specified as a comma-separated list of values. Each value can be one of the following types:
+This property is specified as a comma-separated list of the following values:
 
 - `none`
   - : The element's trigger does not have a source: it is not associated with any timeline and the animation does not happen.
@@ -302,7 +302,7 @@ Using the `animation` shorthand, the `.animated` element has the `rotate` animat
 
 The `.trigger` `<div>` element creates the animated `<div>`'s trigger via the following properties:
 
-- A {{cssxref("timeline-trigger-name")}} with value `--t`, which is equal to the identifier referenced in the animated `<div>`'s `animation-trigger` property value, associating the two together.
+- A {{cssxref("timeline-trigger-name")}} with value `--t`, which is equal to the identifier referenced in the `.animated` element's `animation-trigger` property value, associating the two together.
 - A `timeline-trigger-source` with value [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
 
 ```css live-sample___basic-view-progress-example
