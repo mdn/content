@@ -183,7 +183,7 @@ For authors unfamiliar with LaTeX, alternative input methods are available such 
 
 ### Command-line programs
 
-Instead of generating MathML expression at page load, you can instead rely on command line tools. This will result in pages with static MathML content that will load faster. Let's consider again a page `input.html` with content from [client-side conversion](#client-side_conversion):
+Instead of generating MathML expression at page load, you can instead rely on command-line tools. This will result in pages with static MathML content that will load faster. Let's consider again a page `input.html` with content from [client-side conversion](#client-side_conversion):
 
 ```html
 <!doctype html>

@@ -46,7 +46,7 @@ You can use Node.js to create a simple web server using the Node HTTP package.
 
 The following example creates a web server that listens for any kind of HTTP request on the URL `http://127.0.0.1:8000/` — when a request is received, the script will respond with the string: "Hello World". If you have already installed node, you can follow these steps to try out the example:
 
-1. Open Terminal (on Windows, open the command line utility)
+1. Open Terminal (on Windows, open the command-line utility)
 2. Create the folder where you want to save the program, for example, `test-node` and then enter it by entering the following command into your terminal:
 
    ```bash
