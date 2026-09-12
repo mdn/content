@@ -29,14 +29,14 @@ None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `HierarchyRequestError` {{jsxref("TypeError")}}
+- `HierarchyRequestError` {{domxref("DOMException")}}
   - : Thrown in any of the following situations:
-    - The specified `movedNode` is already added to the DOM, and you are trying to move it inside a `DocumentFragment`.
-    - You are trying to move `movedNode` between two different document fragments.
+    - The fragment and `movedNode` have different shadow-including roots (the roots returned by {{domxref("Node.getRootNode()", "getRootNode({ composed: true })")}}).
+    - The move would place a node inside itself or one of its descendants, including through a shadow tree.
     - The specified `movedNode` is not an {{domxref("Element")}} or {{domxref("CharacterData")}} node.
-- `NotFoundError` {{jsxref("TypeError")}}
+- `NotFoundError` {{domxref("DOMException")}}
   - : The specified `referenceNode` is not a child of the `DocumentFragment` you are calling `moveBefore()` on, that is, the fragment you are trying to move `movedNode` inside.
-- `TypeError` {{jsxref("TypeError")}}
+- {{jsxref("TypeError")}}
   - : The second argument was not supplied.
 
 ## Description
@@ -52,117 +52,66 @@ The `moveBefore()` method moves a given node to a new place in the `DocumentFrag
 
 The play state of {{htmlelement("video")}} and {{htmlelement("audio")}} elements is not included in the above list, as these elements retain their state when removed and reinserted, regardless of the mechanism used.
 
+An ordinary `DocumentFragment` is detached. Appending it to the document transfers its children and leaves the fragment empty; it does not connect the fragment itself. The state-preserving behavior is therefore most useful on a connected {{domxref("ShadowRoot")}}, which inherits from `DocumentFragment`.
+
 When observing changes to the DOM using a {{domxref("MutationObserver")}}, nodes moved with `moveBefore()` will be recorded with a [removed node](/en-US/docs/Web/API/MutationRecord/removedNodes) and an [added node](/en-US/docs/Web/API/MutationRecord/addedNodes).
 
 ### `moveBefore()` constraints
 
 There are some constraints to be aware of when using `moveBefore()`:
 
-- It can only work when moving a node within the same document fragment.
-- It won't work if you try to move a node that is already added to the DOM inside a `DocumentFragment`.
+- It can only work when moving a node within the same shadow-including root. For an ordinary detached fragment, this means moving nodes already within that fragment. For a connected shadow root, nodes connected to the same document meet this requirement.
+- It won't work if you try to move a node that is not connected to the DOM to an already connected parent, or vice versa.
 
 In such cases, `moveBefore()` will fail with a `HierarchyRequestError` exception. If the above constraints are requirements for your particular use case, you should use {{domxref("Node.insertBefore()")}} instead, or use [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) to handle the errors that arise from such cases.
 
 ## Examples
 
-### Basic `moveBefore()` usage
+### Preserving focus inside a shadow root
 
-In this demo we illustrate basic usage of `moveBefore()`.
+This example demonstrates how `moveBefore()` preserves an input's focus when moving it inside a shadow root.
 
 #### HTML
 
-The HTML features three {{htmlelement("button")}} elements, and an {{htmlelement("article")}} element. We will use the buttons to control inserting `DocumentFragment` instances into the `<article>` and emptying it.
+The HTML contains a {{htmlelement("div")}} to host the shadow root and an {{htmlelement("output")}} to display whether the input remains focused after each move.
 
-```html live-sample___movebefore-basic
-<button id="insert1">Insert fragment</button>
-<button id="insert2">Insert modified fragment</button>
-<button id="clear">Clear</button>
-<article id="wrapper"></article>
-```
-
-#### CSS
-
-We provide some rudimentary styling for the look and feel and spacing of elements that will later be inserted into the page as children of JavaScript-generated `DocumentFragment`s.
-
-```css live-sample___movebefore-basic
-#section1,
-#section2,
-#mover {
-  display: inline-block;
-  width: 200px;
-  height: 30px;
-  border: 5px solid rgb(0 0 0 / 0.25);
-  margin-top: 10px;
-}
-
-#section1,
-#section2 {
-  background-color: hotpink;
-}
-
-#mover {
-  background-color: orange;
-}
+```html live-sample___movebefore-shadow
+<div id="host"></div>
+<output id="status"></output>
 ```
 
 #### JavaScript
 
-In our script, we define a function, `createFragment()`, which creates a `DocumentFragment` containing a {{htmlelement("div")}} element and two {{htmlelement("section")}} elements as immediate children.
+The script attaches a shadow root to the `<div>` and adds an input and a paragraph to it. The input's `keydown` event listener uses `moveBefore()` to move the input after the paragraph by passing `null`, or before it by passing the paragraph as the reference node. After each move, it updates the status output with whether the input is focused.
 
-We then attach a click event listener to each `<button>` via {{domxref("EventTarget.addEventListener", "addEventListener()")}}:
+```js live-sample___movebefore-shadow
+const shadow = document.getElementById("host").attachShadow({ mode: "open" });
+const status = document.getElementById("status");
+const input = document.createElement("input");
+input.setAttribute("aria-label", "Type here, then press Enter to move");
+input.placeholder = "Press Enter to move";
+const paragraph = document.createElement("p");
+paragraph.textContent = "The input can move before or after this paragraph.";
+shadow.append(input, paragraph);
 
-- The first button appends the `DocumentFragment` to the `#wrapper` `<article>` element, unmodified.
-- The second button appends the `DocumentFragment` to the `#wrapper` `<article>` element, but first uses `moveBefore()` to move the `<div>` to be the second child of the `DocumentFragment` rather than the first.
-- The third button empties the `#wrapper` `<article>` element using {{domxref("Element.innerHTML", "innerHTML")}}.
-
-```js live-sample___movebefore-basic
-const wrapper = document.getElementById("wrapper");
-const insertBtn1 = document.getElementById("insert1");
-const insertBtn2 = document.getElementById("insert2");
-const clearBtn = document.getElementById("clear");
-
-function createFragment() {
-  const fragment = new DocumentFragment();
-  const divElem = document.createElement("div");
-  const section1 = document.createElement("section");
-  const section2 = document.createElement("section");
-  divElem.id = "mover";
-  section1.id = "section1";
-  section2.id = "section2";
-  fragment.appendChild(divElem);
-  fragment.appendChild(section1);
-  fragment.appendChild(section2);
-
-  return fragment;
-}
-
-insertBtn1.addEventListener("click", () => {
-  const fragment = createFragment();
-  wrapper.appendChild(fragment);
-});
-
-insertBtn2.addEventListener("click", () => {
-  const fragment = createFragment();
-  fragment.moveBefore(
-    fragment.querySelector("#mover"),
-    fragment.querySelector("#section2"),
-  );
-
-  wrapper.appendChild(fragment);
-});
-
-clearBtn.addEventListener("click", () => {
-  wrapper.innerHTML = "";
+input.addEventListener("keydown", (event) => {
+  if (event.key !== "Enter" || event.isComposing) {
+    return;
+  }
+  event.preventDefault();
+  const reference = input.nextSibling === paragraph ? null : paragraph;
+  shadow.moveBefore(input, reference);
+  status.textContent = `Input still focused: ${shadow.activeElement === input}`;
 });
 ```
 
 #### Result
 
-The rendered example looks like this:
+{{EmbedLiveSample("movebefore-shadow", "100%", "180")}}
 
-{{EmbedLiveSample("movebefore-basic", "100%", "300px")}}
+Focus the input and press <kbd>Enter</kbd> to move it before or after the paragraph. The input remains focused.
 
-Try clicking the first two buttons a few times and note how the `DocumentFragment` structure is modified by the second button.
+Using {{domxref("Node.insertBefore()", "shadow.insertBefore(input, reference)")}} instead would remove and reinsert the input, losing its focus. Ordinary reinsertion preserves the text inside the input box, but not the other states listed above.
 
 ## Specifications
 
