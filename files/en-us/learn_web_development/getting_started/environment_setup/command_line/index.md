@@ -8,7 +8,7 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Your_first_website", "Learn_web_development/Getting_started/Environment_setup")}}
 
-In your development process, you'll undoubtedly be required to run some commands in the terminal (or on the "command line" — these are effectively the same thing). This article provides an introduction to the terminal, the essential commands you'll need to enter into it, how to chain commands together, and how to add your own command line interface (CLI) tools.
+In your development process, you'll undoubtedly be required to run some commands in the terminal (or on the "command line" — these are effectively the same thing). This article provides an introduction to the terminal, the essential commands you'll need to enter into it, how to chain commands together, and how to add your own command-line interface (CLI) tools.
 
 <table>
   <tbody>
@@ -35,7 +35,7 @@ In your development process, you'll undoubtedly be required to run some commands
 
 ## Welcome to the terminal
 
-The terminal is a text interface for executing text-based programs. If you're running any tooling for web development there's a near-guaranteed chance that you'll have to pop open the command line and run some commands to use your chosen tools (you'll often see such tools referred to as **CLI tools** — command line interface tools).
+The terminal is a text interface for executing text-based programs. If you're running any tooling for web development there's a near-guaranteed chance that you'll have to pop open the command line and run some commands to use your chosen tools (you'll often see such tools referred to as **CLI tools** — command-line interface tools).
 
 A large number of tools can be used by typing commands into the command line; many come pre-installed on your system, and a huge number of others are installable from package registries.
 Package registries are like app stores, but (mostly) for command line based tools and software.
@@ -240,7 +240,7 @@ One good habit to get into is to write your terminal command out inside a text e
 If you're not comfortable trying terminal commands out on your own machine, there are hosted online terminals available that provide safe places to practice entering commands, without risking breaking your own machine:
 
 - Our learning partner, [Scrimba](https://scrimba.com/home?via=mdn), features a terminal for entering commands in their learning environment. A great place to see this in action is their [Command Line Basics](https://scrimba.com/command-line-basics-c08b87ogl0/~05hu?via=mdn) <sup>[_MDN learning partner_](/en-US/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> course, which also provides a fun interactive introduction to navigating around the file tree and manipulating files and directories via the terminal.
-- The [Command-line playground](https://sandbox.bio/playgrounds/terminal) on sandbox.bio is a great place to try out terminal commands so you can familiarize yourself with command line interfaces and common shells like Bash.
+- The [Command-line playground](https://sandbox.bio/playgrounds/terminal) on sandbox.bio is a great place to try out terminal commands so you can familiarize yourself with command-line interfaces and common shells like Bash.
 
 A great resource for getting a quick overview of specific terminal commands is [tldr.sh](https://tldr.sh/). This is a community-driven documentation service, similar to MDN, but specific to terminal commands.
 
@@ -272,7 +272,7 @@ ls | wc -l
 
 Since `ls` prints each file or directory on its own line, that effectively gives us a directory and file count.
 
-So what is going on here? A general philosophy of (unix) command line tools is that they print text to the terminal (also referred to "printing to standard output" or `STDOUT`). A good deal of commands can also read content from streamed input (known as "standard input" or `STDIN`).
+So what is going on here? A general philosophy of (unix) command-line tools is that they print text to the terminal (also referred to "printing to standard output" or `STDOUT`). A good deal of commands can also read content from streamed input (known as "standard input" or `STDIN`).
 
 The pipe operator can _connect_ these inputs and outputs together, allowing us to build up increasingly more complex operations to suit our needs — the output from one command can become the input to the next command. In this case, `ls` would normally print its output to `STDOUT`, but instead `ls`'s output is being piped into `wc`, which takes that output as an input, counting the number of lines it contains, and prints that count to `STDOUT` instead.
 
@@ -322,13 +322,13 @@ Now we've had a look at some of the built-in commands your system comes equipped
 The vast ecosystem of installable tools for front-end web development currently exists mostly inside [npm](https://www.npmjs.com/), a privately owned, package hosting service that works closely together with Node.js.
 This is slowly expanding — you can expect to see more package providers as time goes on.
 
-[Installing Node.js](https://nodejs.org/en/) also installs the npm command line tool (and a supplementary npm-centric tool called npx), which offers a gateway to installing additional command line tools. Node.js and npm work the same across all systems: macOS, Windows, and Linux.
+[Installing Node.js](https://nodejs.org/en/) also installs the npm command-line tool (and a supplementary npm-centric tool called npx), which offers a gateway to installing additional command-line tools. Node.js and npm work the same across all systems: macOS, Windows, and Linux.
 
 Install npm on your system now, by going to the URL above and downloading and running a Node.js installer appropriate to your operating system. If prompted, make sure to include npm as part of the installation.
 
 ![the Node.js installer on windows, showing the option to include npm](npm-install-option.png)
 
-We'll again use [Prettier](https://prettier.io/) as an example here. We showed how to install it as a VS Code extension in our [Code editors](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors#enhancing_your_code_editor_with_extensions) article. Here we'll show you how to install it as a command line tool.
+We'll again use [Prettier](https://prettier.io/) as an example here. We showed how to install it as a VS Code extension in our [Code editors](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors#enhancing_your_code_editor_with_extensions) article. Here we'll show you how to install it as a command-line tool.
 
 > [!NOTE]
 > Prettier is an opinionated code formatter that only has a "few options". Fewer options tends to mean simpler. Given how tooling can sometimes get out of hand in terms of complexity, "few options" can be very appealing.
@@ -475,7 +475,7 @@ If you want to play with a few more tools, here's a brief list that are fun to t
 - [`bat`](https://github.com/sharkdp/bat) — A "nicer" `cat` (`cat` is used to print the contents of files).
 - [`prettyping`](https://denilson.sa.nom.br/prettyping/) — `ping` on the command line, but visualized (`ping` is a useful tool to check if a server is responding).
 - [`htop`](https://htop.dev/) — A process viewer, useful for when something is making your CPU fan behave like a jet engine and you want to identify the offending program.
-- [`tldr`](https://tldr.sh/#installation) — mentioned earlier in this chapter, but available as a command line tool.
+- [`tldr`](https://tldr.sh/#installation) — mentioned earlier in this chapter, but available as a command-line tool.
 
 Note that some of the above suggestions may need installing using npm, like we did with Prettier.
 
