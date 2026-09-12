@@ -62,11 +62,11 @@ texImage2D(target, level, internalformat, width, height, border, format, type, o
     | `LUMINANCE`       | `LUMINANCE`       | `UNSIGNED_BYTE`          | 1                     | (L) = (8)                             |
     | `ALPHA`           | `ALPHA`           | `UNSIGNED_BYTE`          | 1                     | (A) = (8)                             |
 
-    When the {{domxref("OES_texture_float")}} extension is enabled, `type` can additionally be `FLOAT`. When the {{domxref("OES_texture_half_float")}} extension is enabled, `type` can additionally be `ext.HALF_FLOAT_OES` (constant provided by the extension).
+    In WebGL 1, when the {{domxref("OES_texture_float")}} extension is enabled, `type` can additionally be `FLOAT`. When the {{domxref("OES_texture_half_float")}} extension is enabled, `type` can additionally be `ext.HALF_FLOAT_OES` (constant provided by the extension).
 
     When the {{domxref("EXT_sRGB")}} extension is enabled, `internalformat` can additionally be `ext.SRGB_EXT` or `ext.SRGB_ALPHA_EXT`.
 
-    In WebGL 2, when specifying the source as `srcData` or `offset`, the following combinations are additionally available (these internal formats are _sized_ because the internal pixel layout is exactly specified; we omit the input layout here because it works similarly to the one above):
+    In WebGL 2, when specifying the source as `srcData` or `offset`, the following combinations are additionally available (these internal formats are _sized_ because the internal pixel layout is exactly specified; we omit the input layout here because it works similarly to the one above). The **Color renderable** column describes formats that are color-renderable in WebGL 2 without additional extensions.
 
     | `internalformat` | `format`       | `type`                                                                   | Internal pixel layout                   | Color renderable | Texture filterable |
     | ---------------- | -------------- | ------------------------------------------------------------------------ | --------------------------------------- | ---------------- | ------------------ |
@@ -119,6 +119,9 @@ texImage2D(target, level, internalformat, width, height, border, format, type, o
     | `RGBA16I`        | `RGBA_INTEGER` | `SHORT`                                                                  | (R, G, B, A) = (i16, i16, i16, i16)     | Y                |                    |
     | `RGBA32UI`       | `RGBA_INTEGER` | `UNSIGNED_INT`                                                           | (R, G, B, A) = (ui32, ui32, ui32, ui32) | Y                |                    |
     | `RGBA32I`        | `RGBA_INTEGER` | `INT`                                                                    | (R, G, B, A) = (i32, i32, i32, i32)     | Y                |                    |
+
+    > [!NOTE]
+    > Some floating-point formats that are not color-renderable in WebGL 2 by default can become color-renderable when the appropriate extension is enabled. The {{domxref("EXT_color_buffer_float")}} extension makes `R16F`, `RG16F`, `RGBA16F`, `R32F`, `RG32F`, `RGBA32F`, and `R11F_G11F_B10F` color-renderable. In WebGL 2, {{domxref("EXT_color_buffer_half_float")}} can additionally make `RGBA16F` color-renderable on platforms that support 16-bit floating-point render targets but not 32-bit floating-point render targets.
 
     In WebGL 2, when specifying the source as `srcData` or `offset`, the following combinations are additionally available, and they can be enabled in WebGL 1 via the {{domxref("WEBGL_depth_texture")}} extension:
 
