@@ -62,7 +62,7 @@ This property is specified as a comma-separated list of the following values:
 
 The `timeline-trigger-active-range-end` property can be used to explicitly specify the end of a trigger's [active range](/en-US/docs/Web/CSS/Reference/Properties/timeline-trigger-active-range#description) that is equal to or further along the timeline than the end of the trigger's activation range.
 
-The _active range_ is the range within which a trigger will remain activated once activation has occurred. By default, the active range ends where there activation range ends; with deactivation occurring when the tracked element leaves the activation range. This property creates a buffer zone, and is used to prevent premature resetting when a user scrolls back and forth across the activation's endpoint. Only when a tracked element moves out of the active range does the trigger become inactive.
+The _active range_ is the range within which a trigger remains activated once activation occurs. By default, the active range ends where the activation range ends, with deactivation occurring when the tracked element leaves the activation range. This property creates a buffer zone and is used to prevent premature resetting when a user scrolls back and forth across the activation's endpoint. Only when a tracked element moves out of the active range does the trigger become inactive.
 
 The default value is `auto`, which sets the value to the same named range and offset as the {{cssxref("timeline-trigger-activation-range-end")}}. When specified as a timeline range, offset, or both, this property sets the end of the active range to a point that is independent from the `timeline-trigger-activation-range-end` value.
 
@@ -77,7 +77,7 @@ Other values of the `timeline-trigger-active-range-end` property can be used to 
 - An offset from a specific named range
   - : When both a `<timeline-range-name>` and `<length>` or `<percentage>` value are specified, the end is offset by the distance specified from the start of the named range. Percentage values are relative to the range specified. See [Setting insets using percentages](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets#setting_insets_using_percentages)
 
-If the value is set to a point prior the the end of the activation range, the value of the `timeline-trigger-activation-range-end` is used, as if the value were set to `auto`.
+If the value is set to a point prior to the end of the activation range, the value of the `timeline-trigger-activation-range-end` is used, as if the value were set to `auto`.
 
 The `timeline-trigger-active-range-end` property, along with the {{cssxref("timeline-trigger-active-range-start")}} property, can also be set using the {{cssxref("timeline-trigger-active-range")}} shorthand, which in turn can be set using the {{cssxref("timeline-trigger")}} shorthand.
 
@@ -108,7 +108,7 @@ In this case, `--my-trigger` will use the `contain` range end and `--my-other-tr
 
 ### Basic usage
 
-In this example, we demonstrate the effect of extending a trigger's active range by creating two identical triggered animations, and insetting the end of one of the scroll-triggered animation trigger's active range with the with the `timeline-trigger-active-range-end` property.
+In this example, we demonstrate the effect of extending a trigger's active range by creating two identical triggered animations, and insetting the end of one of the scroll-triggered animation trigger's active range with the `timeline-trigger-active-range-end` property.
 
 #### HTML
 
@@ -246,7 +246,7 @@ Next, we define the {{cssxref("@keyframes")}} for a `rotate` animation:
 }
 ```
 
-Using the {{cssxref("animation")}} shorthand, the `rotate` animation is applied to the `.animated` elements. Without an associated trigger, the elements would start animating when the page loads. The `animation-trigger` property makes it a triggered animation. The values references a `timeline-trigger-name` of `--t` and `--longerT`, respectively, and define two `<animation-action>` values — `play` and `pause` — which specify that the animation will play on activation, and pause on deactivation.
+Using the {{cssxref("animation")}} shorthand, the `rotate` animation is applied to the `.animated` elements. Without an associated trigger, the elements would start animating when the page loads. The `animation-trigger` property makes it a triggered animation. The values reference a `timeline-trigger-name` of `--t` and `--longerT`, respectively, and define two `<animation-action>` values — `play` and `pause` — which specify that the animation will play on activation and pause on deactivation.
 
 ```css live-sample___basic-example
 .animated {
@@ -301,9 +301,9 @@ The `.trigger.longer` element creates the `.animated.longer` element's trigger v
 
 {{EmbedLiveSample("basic-example", "100%", "240")}}
 
-Try scrolling the content up. Both animations start playing when the tracked `.trigger` elements first enter into. The animation of one element pauses when the trigger is at 50% of the `contain` timeline, which occurs when the triggers are vertically centered in the scrollport. The other element pauses only when the trigger has fully exited the viewport.
+Try scrolling the content up. Both animations start playing when the tracked `.trigger` elements first enter into view. The animation of one element pauses when the trigger is at 50% of the `contain` timeline, which occurs when the triggers are vertically centered in the scrollport. The other element pauses only when the trigger has fully exited the viewport.
 
-When you scroll downward again, after both animations have paused, the animations will both restart playing when the trigger elements reaches the `50%` point. This is because the active range extends how long the trigger remains active, but does not change where activation and deactivation occur.
+When you scroll downward again, after both animations have paused, the animations will both restart playing when the trigger elements reach the `50%` point. This is because the active range extends how long the trigger remains active, but does not change where activation and deactivation occur.
 
 ## Specifications
 
