@@ -116,7 +116,7 @@ In modern JavaScript callbacks have largely been replaced by [Promises](/en-US/d
 Promises are objects that are (immediately) returned by an asynchronous method that represent its future state.
 When the operation completes, the promise object is "settled", and resolves an object that represents the result of the operation or an error.
 
-There are two main ways you can use promises to run code when a promise is settled, and we highly recommend that you read [How to use promises](/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises) for a high level overview of both approaches.
+There are two main ways you can use promises to run code when a promise is settled, and we highly recommend that you read [How to use promises](/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises) for a high-level overview of both approaches.
 In this tutorial, we'll primarily be using [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await) to wait on promise completion within an [`async function`](/en-US/docs/Web/JavaScript/Reference/Statements/async_function), because this leads to more readable and understandable asynchronous code.
 
 The way this approach works is that you use the `async function` keyword to mark a function as asynchronous, and then inside that function apply `await` to any method that returns a promise.
