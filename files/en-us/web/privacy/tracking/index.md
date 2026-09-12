@@ -94,7 +94,7 @@ Fingerprinting is like stateful tracking, except that the identifier — the fin
 - The fonts installed on the system
 - The computer's display size and resolution
 
-A website can retrieve information like this by executing JavaScript and CSS on the device, and by combining this data can often derive a unique fingerprint for a browser.
+The tracker can retrieve these elements by executing JavaScript and CSS on the device. It can then combine the elements to create a fingerprint, which is often enough to uniquely identify a single browser.
 
 #### Navigational tracking
 
@@ -145,7 +145,7 @@ In cases like this, browsers sometimes have to decide sometimes whether the harm
 
 ### Anti-tracking techniques
 
-In this section we'll give an overview of the main defenses that browsers deploy against tracking. Browsers typically use some combination of these techniques, and will apply different techniques in different situations and configurations (for example, if the user has private browsing enabled or has opted into).
+In this section we'll give an overview of the main defenses that browsers deploy against tracking. Browsers typically use some combination of these techniques, and will apply different techniques in different situations and configurations (for example, if the user has private browsing enabled).
 
 #### Tracker lists
 
@@ -170,11 +170,33 @@ As a less drastic measure, browsers may allow the resource to load but prevent i
 
 #### Partitioned storage
 
-#### Storage Access API
+A less aggressive alternative to blocking storage API access is _partitioned storage_.
+
+Recall that an embedded third-party tracker can store and retrieve the user's identifier when it is embedded in different websites, because access to its storage area is determined only by its own {{glossary("origin")}}. That is, a tracker from `tracker.com` can access the same storage whether it is embedded in `example.co.uk` or `example.ca`.
+
+![Diagram showing how a tracker can correlate data scross sites using unpartitioned storage.](unpartitioned-storage.svg)
+
+Partitioned storage makes access to a particular storage area dependent not only on the embedded resource's origin, but also on the origin of the top-level document. That means that a tracker from `tracker.com` will access a different storage area, depending on the page in which it is embedded. This in turn means that the tracker can't correlate these two instances.
+
+![Diagram showing how a tracker can't correlate data scross sites when it is using partitioned storage.](partitioned-storage.svg)
+
+This is also referred to as _double-keying_: the storage for the embedded content is keyed (accessed) on the combination of the embedded content's origin and that of the top-level document.
+
+Partitioned storage can include not only general-purpose client-side storage APIs such as {{domxref("Window.localStorage", "local storage")}} or [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), but any other method that a tracker could use to persist state, including those that we classified as [covert stateful tracking](#covert_stateful_tracking), such as HSTS status. This would mean that, for example, a tracker embedded one page would not see the same set of HSTS statuses as the same tracker embedded in another page.
+
+See [Client-Side Storage Partitioning](https://privacycg.github.io/storage-partitioning/) for more details.
 
 #### Bounce tracking defenses
 
+We've seen that [Bounce tracking](#bounce_tracking), or redirect tracking, enables a tracker to act as a first party when writing to or reading from storage. In this was the tracker can evade restrictions on embedded content.
+
 #### Anti-fingerprinting
+
+### Relaxing restrictions
+
+#### Heuristic approaches
+
+#### Storage Access API
 
 ## Anti-tracking policies in browsers
 
