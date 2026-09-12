@@ -186,7 +186,7 @@ In `index.html`:
 </html>
 ```
 
-Start a local HTTP server (see [troubleshooting](/en-US/docs/Web/JavaScript/Guide/Modules#troubleshooting)) and go to the `index.html` page. You should see `Shilpa` on the page.
+Start a local HTTP server (see [using modules on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web)) and go to the `index.html` page. You should see `Shilpa` on the page.
 
 > [!NOTE]
 > JSON modules only have one default export. You cannot do named imports from them (like `import { name } from "data.json"`).
