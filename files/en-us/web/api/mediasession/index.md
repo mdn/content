@@ -119,6 +119,8 @@ if ("mediaSession" in navigator) {
 The following example sets up two functions for playing and pausing, then uses them as callbacks with the relevant action handlers.
 
 ```js
+const audioEl = document.querySelector("audio");
+
 const actionHandlers = [
   // play
   [
@@ -128,19 +130,15 @@ const actionHandlers = [
       await audioEl.play();
       // set playback state
       navigator.mediaSession.playbackState = "playing";
-      // update our status element
-      updateStatus(allMeta[index], "Action: play  |  Track is playing…");
     },
   ],
   [
     "pause",
     () => {
-      // pause out audio
+      // pause our audio
       audioEl.pause();
       // set playback state
       navigator.mediaSession.playbackState = "paused";
-      // update our status element
-      updateStatus(allMeta[index], "Action: pause  |  Track has been paused…");
     },
   ],
 ];
