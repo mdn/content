@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.2.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 600 400" style="enable-background:new 0 0 600 400;" xml:space="preserve">
+<style type="text/css">
+	text{fill:#6b7280;}
+	.st0{font-family:'Menlo-Regular';}
+	.st1{font-size:9px;}
+	.st2{fill:none;stroke:#808080;stroke-miterlimit:10;}
+	.st3{font-family:'Menlo-Bold';fill:#08827e;}
+</style>
+<text transform="matrix(1 0 0 1 16.3797 156.332)"><tspan x="0" y="10.8" class="st0 st1">&lt;head&gt;</tspan><tspan x="0" y="21.6" class="st0 st1">  &lt;script type=&quot;module&quot; src=&quot;external-script-2.js&quot;&gt;&lt;/script&gt;</tspan><tspan x="0" y="32.4" class="st0 st1">  &lt;script type=&quot;module&quot;&gt;</tspan><tspan x="0" y="43.2" class="st0 st1">    ...</tspan><tspan x="0" y="54" class="st0 st1">  &lt;/script&gt;</tspan><tspan x="0" y="64.8" class="st0 st1">&lt;/head&gt;</tspan><tspan x="0" y="75.6" class="st0 st1">&lt;body&gt;</tspan><tspan x="0" y="86.4" class="st0 st1">  &lt;!-- page content --&gt;</tspan><tspan x="0" y="97.2" class="st0 st1">&lt;/body&gt;</tspan></text>
+<polyline class="st2" points="244.57,167.13 244.57,130.57 353.35,130.57 "/>
+<rect x="353.35" y="87.82" class="st2" width="236.61" height="86.55"/>
+<rect x="443.4" y="225.09" class="st2" width="125.73" height="86.55"/>
+<text transform="matrix(1 0 0 1 359.1934 103.8247)"><tspan x="0" y="0" class="st0 st1">import { </tspan><tspan x="48.77" y="0" class="st3 st1">$</tspan><tspan x="54.18" y="0" class="st0 st1"> } from &quot;./external-script.js&quot;;</tspan><tspan x="0" y="21.6" class="st3 st1">$</tspan><tspan x="5.42" y="21.6" class="st0 st1">.ajax(...);</tspan><tspan x="0" y="32.4" class="st0 st1">// ...</tspan></text>
+<rect x="181.7" y="225.09" class="st2" width="236.61" height="86.55"/>
+<text transform="matrix(1 0 0 1 189.0176 239.3447)"><tspan x="0" y="0" class="st0 st1">import { </tspan><tspan x="48.77" y="0" class="st3 st1">$</tspan><tspan x="54.18" y="0" class="st0 st1"> } from &quot;./external-script.js&quot;;</tspan><tspan x="0" y="21.6" class="st0 st1">var hiddenBox = </tspan><tspan x="86.7" y="21.6" class="st3 st1">$</tspan><tspan x="92.11" y="21.6" class="st0 st1">(&quot;#banner-message&quot;);</tspan><tspan x="0" y="32.4" class="st3 st1">$</tspan><tspan x="5.42" y="32.4" class="st0 st1">(&quot;#button-container button&quot;)</tspan><tspan x="0" y="43.2" class="st0 st1">&#160;&#160;.on(&quot;click&quot;, function (event) {</tspan><tspan x="0" y="54" class="st0 st1">&#160;&#160;&#160;&#160;hiddenBox.show();</tspan><tspan x="0" y="64.8" class="st0 st1">&#160;&#160;});</tspan></text>
+<polyline class="st2" points="82,197.76 288.43,197.76 288.43,225.09 "/>
+<line class="st2" x1="413.58" y1="237.76" x2="443.4" y2="237.76"/>
+<line class="st2" x1="515.81" y1="103.82" x2="515.81" y2="225.09"/>
+<text transform="matrix(1 0 0 1 449.667 239.8359)"><tspan x="0" y="0" class="st0 st1">function </tspan><tspan x="48.77" y="0" class="st3 st1">$</tspan><tspan x="54.18" y="0" class="st0 st1">() {</tspan><tspan x="0" y="10.8" class="st0 st1">  // ...</tspan><tspan x="0" y="21.6" class="st0 st1">}</tspan><tspan x="0" y="43.2" class="st0 st1">// ...</tspan><tspan x="0" y="54" class="st0 st1">export { </tspan><tspan x="48.77" y="54" class="st3 st1">$</tspan><tspan x="54.18" y="54" class="st0 st1"> };</tspan></text>
+</svg>

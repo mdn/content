@@ -118,7 +118,7 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
         JavaScript MIME types are [listed in the IANA media types specification](/en-US/docs/Web/HTTP/Guides/MIME_types#textjavascript).
     - [`importmap`](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap)
       - : This value indicates that the body of the element contains an import map.
-        The import map is a JSON object that developers can use to control how the browser resolves module specifiers when importing [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps).
+        The import map is a JSON object that developers can use to control how the browser resolves module specifiers when importing [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#importing_modules_using_import_maps).
     - `module`
       - : This value causes the code to be treated as a JavaScript module.
         The processing of the script contents is deferred.
@@ -255,7 +255,7 @@ import { name as circleName } from "circle";
 import { name as squareName, draw } from "square";
 ```
 
-For more examples of what you can do with import maps, see the [Importing modules using import maps](/en-US/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps) section in the JavaScript modules guide.
+For more examples of what you can do with import maps, see the [Importing modules using import maps](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#importing_modules_using_import_maps)) section in the JavaScript modules guide.
 
 ### Embedding data in HTML
 

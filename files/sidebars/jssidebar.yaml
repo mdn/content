@@ -48,6 +48,11 @@ sidebar:
         title: Guide_Internationalization
       - link: /Web/JavaScript/Guide/Modules
         title: Guide_Modules
+        details: open
+        children:
+          - /Web/JavaScript/Guide/Modules/Modules_on_the_web
+          - /Web/JavaScript/Guide/Modules/Module_graph
+          - /Web/JavaScript/Guide/Modules/Cross-platform_modules
   - title: Intermediate
     details: closed
     children:

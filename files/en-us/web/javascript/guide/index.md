@@ -173,7 +173,7 @@ Overview: [Internationalization](/en-US/docs/Web/JavaScript/Guide/Internationali
 Overview: [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules)
 
 - [Exporting](/en-US/docs/Web/JavaScript/Guide/Modules#exporting_module_features)
-- [Importing](/en-US/docs/Web/JavaScript/Guide/Modules#importing_features_into_your_script)
+- [Importing](/en-US/docs/Web/JavaScript/Guide/Modules#importing_features)
 - [Default exports](/en-US/docs/Web/JavaScript/Guide/Modules#default_exports_versus_named_exports)
 - [Renaming features](/en-US/docs/Web/JavaScript/Guide/Modules#renaming_imports_and_exports)
 - [Aggregating modules](/en-US/docs/Web/JavaScript/Guide/Modules#aggregating_modules)
