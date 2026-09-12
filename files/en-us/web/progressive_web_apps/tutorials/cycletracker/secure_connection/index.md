@@ -77,7 +77,7 @@ The previous options are fine, and necessary, for testing your application as yo
 
 To get the added features of PWAs, including single click installation, a standalone UI, admission to app stores, and optionally offline functionality through service workers, we will need a secure connection. To distribute your app, enabling others to view, use, and install your PWA, you'll want to have your content hosted and available on a secure _remote_ server.
 
-When officially publishing a PWA, you will likely want to invest in a [domain name and web hosting](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#hosting). For open source projects, where developers can learn from the codebase and even contribute back to the project, you can host your progress on [GitHub Pages](https://pages.github.com/).
+When officially publishing a PWA, you will likely want to invest in a [domain name and web hosting](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#hosting). For open-source projects, where developers can learn from the codebase and even contribute back to the project, you can host your progress on [GitHub Pages](https://pages.github.com/).
 
 ## GitHub Pages
 
