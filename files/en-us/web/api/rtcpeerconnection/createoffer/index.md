@@ -14,6 +14,8 @@ The SDP offer includes information about any {{domxref("MediaStreamTrack")}} obj
 
 Add tracks and create data channels before calling `createOffer()`. The offer describes the connection as it is when `createOffer()` is called, so any changes made afterwards are not included in the negotation (the {{domxref("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event is fired if you make changes that requires a new offer).
 
+You can avoid this renegotiation by setting `alwaysNegotiateDataChannels` to `true` in the {{domxref("RTCPeerConnection.RTCPeerConnection", "RTCPeerConnection()")}} constructor. This specifies that the application will negotiate data channels in the {{glossary("SDP")}} offer before creating an {{domxref("RTCDataChannel")}}, meaning that you don't need to create a data channel before your first {{domxref("RTCPeerConnection.createOffer()")}} call, or accept a second renegotiation.
+
 ## Syntax
 
 ```js-nolint
