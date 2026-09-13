@@ -62,7 +62,11 @@ This property is a shorthand for the following CSS properties:
 - {{cssxref("background-repeat")}}
 - {{cssxref("background-size")}}
 
-## Syntax
+### Reset-only sub-properties
+
+This property resets the following CSS properties to their initial values:
+
+- {{cssxref("background-blend-mode")}}
 
 ```css
 /* Using a <background-color> */
