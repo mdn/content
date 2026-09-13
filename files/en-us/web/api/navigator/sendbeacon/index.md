@@ -83,6 +83,9 @@ document.addEventListener("visibilitychange", () => {
 });
 ```
 
+The `visibilitychange` event also fires when the user switches to another browser tab, not only when they leave or close the page.
+Code that treats a transition to `hidden` as the end of a session should account for this behavior.
+
 #### Avoid unload and beforeunload
 
 In the past, many websites have used the [`unload`](/en-US/docs/Web/API/Window/unload_event)
@@ -100,10 +103,8 @@ thus hurting performance. Others, such as Safari and Chrome on Android, handle i
 
 Firefox will also exclude pages from the bfcache if they contain `beforeunload` handlers.
 
-#### Use pagehide as a fallback
-
-To support browsers which don't implement `visibilitychange`, use the [`pagehide`](/en-US/docs/Web/API/Window/pagehide_event) event.
-Like `beforeunload` and `unload`, this event is not reliably fired, especially on mobile. However, it is compatible with the bfcache.
+The `pagehide` event is not as problematic as `unload` or `beforeunload`, because it is compatible with the bfcache.
+However, it suffers from the same reliability problems as the other two events, so we recommend that developers avoid it as well, and use `visibilitychange`.
 
 ## Examples
 
