@@ -5,6 +5,8 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
+{{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}
+
 A template is a text file defining the _structure_ or layout of an output file, with placeholders used to represent where data will be inserted when the template is rendered (in _Express_, templates are referred to as _views_).
 
 ## Express template choices
@@ -18,11 +20,11 @@ Different template languages use different approaches for defining layout and ma
 
 ## Template configuration
 
-The _LocalLibrary_ was configured to use [Pug](https://pugjs.org/api/getting-started.html) when we [created the skeleton website](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website). You should see the pug module included as a dependency in the website's **package.json** file, and the following configuration settings in the **app.js** file. The settings tell us that we're using pug as the view engine, and that _Express_ should search for templates in the **/views** subdirectory.
+The _LocalLibrary_ was configured to use [Pug](https://pugjs.org/api/getting-started.html) when we [created the skeleton website](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website). You should see the pug module included as a dependency in the website's **package.json** file, and the following configuration settings in the **app.js** file. The settings tell us that we're using pug as the view engine, and that _Express_ should search for templates in the **views/** subdirectory.
 
 ```js
 // View engine setup
-app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(import.meta.dirname, "views"));
 app.set("view engine", "pug");
 ```
 
@@ -30,11 +32,12 @@ If you look in the views directory you will see the .pug files for the project's
 These include the view for the home page (**index.pug**) and base template (**layout.pug**) that we will need to replace with our own content.
 
 ```plain
-/express-locallibrary-tutorial  # the project root
-  /views
-    error.pug
-    index.pug
-    layout.pug
+express-locallibrary-tutorial
+├── views
+│   ├── error.pug
+│   ├── index.pug
+│   └── layout.pug
+...
 ```
 
 ## Template syntax
@@ -165,7 +168,4 @@ block content
   p Welcome to #{title}
 ```
 
-## Next steps
-
-- Return to [Express Tutorial Part 5: Displaying library data](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data).
-- Proceed to the next subarticle of part 5: [The LocalLibrary base template](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template).
+{{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/LocalLibrary_base_template", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data")}}

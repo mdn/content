@@ -1,43 +1,45 @@
 ---
-title: Create genre form
+title: Create Genre form
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_genre_form
 page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
+{{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_author_form", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms")}}
+
 This sub article shows how we define our page to create `Genre` objects (this is a good place to start because the `Genre` has only one field, its `name`, and no dependencies). Like any other pages, we need to set up routes, controllers, and views.
 
 ## Import validation and sanitization methods
 
-To use the _express-validator_ in our controllers we have to _require_ the functions we want to use from the `'express-validator'` module.
+To use the _express-validator_ in our controllers we have to _import_ the functions we want to use from the `'express-validator'` module.
 
-Open **/controllers/genreController.js**, and add the following line at the top of the file, before any route handler functions:
+Open **controllers/genreController.js**, and add the following line at the top of the file, before any route handler functions:
 
 ```js
-const { body, validationResult } = require("express-validator");
+import { body, validationResult } from "express-validator";
 ```
 
-Note that `require("express-validator")` is just a function call that returns an object, and we [destructure](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring) the two properties, `body` and `validationResult`, from the object, so we can use them as variables directly.
+This declaration imports the two named exports, `body` and `validationResult`, so we can use them directly.
 
 ## Controller—get route
 
-Find the exported `genre_create_get()` controller method and replace it with the following code.
+Find the exported `genreCreateGet()` controller method and replace it with the following code.
 This renders the **genre_form.pug** view, passing a title variable.
 
 ```js
 // Display Genre create form on GET.
-exports.genre_create_get = (req, res, next) => {
+export const genreCreateGet = (req, res, next) => {
   res.render("genre_form", { title: "Create Genre" });
 };
 ```
 
 ## Controller—post route
 
-Find the exported `genre_create_post()` controller method and replace it with the following code.
+Find the exported `genreCreatePost()` controller method and replace it with the following code.
 
 ```js
 // Handle Genre create on POST.
-exports.genre_create_post = [
+export const genreCreatePost = [
   // Validate and sanitize the name field.
   body("name", "Genre name must contain at least 3 characters")
     .trim()
@@ -165,7 +167,7 @@ res.render("genre_form", {
 });
 ```
 
-Create **/views/genre_form.pug** and copy in the text below.
+Create **views/genre_form.pug** and paste in the text below.
 
 ```pug
 extends layout
@@ -214,7 +216,4 @@ The only error we validate against server-side is that the genre field must have
 > input#name.form-control(type='text', placeholder='Fantasy, Poetry etc.' name='name' required value=(undefined===genre ? '' : genre.name) )
 > ```
 
-## Next steps
-
-1. Return to [Express Tutorial Part 6: Working with forms.](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms)
-2. Proceed to the next sub article of part 6: [Create Author form](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_author_form).
+{{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_author_form", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms")}}
