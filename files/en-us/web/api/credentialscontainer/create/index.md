@@ -29,6 +29,8 @@ create(options)
 
 - `options` {{optional_inline}}
   - : An object that contains options for the requested new `Credentials` object. It can contain the following properties:
+    - `mediation` {{optional_inline}}
+      - : A string that specifies how the user agent should mediate credential creation. The default is `"optional"`. When set to `"conditional"`, the user agent may create the credential without additional prominent modal interaction if the user has previously consented to credential creation and the user agent recently mediated an authentication. Otherwise, the promise rejects with `NotAllowedError`. See [Automatic passkey creation](/en-US/docs/Web/API/Web_Authentication_API#automatic_passkey_creation).
     - `signal` {{optional_inline}}
       - : An {{domxref("AbortSignal")}} object instance that allows an ongoing `create()` operation to be aborted. An aborted operation may complete normally (generally if the abort was received after the operation finished) or reject with an `AbortError` {{domxref("DOMException")}}.
 
@@ -63,6 +65,7 @@ If no credential object can be created, the promise resolves with `null`.
     - The function is called cross-origin but the iframe's [`allow`](/en-US/docs/Web/HTML/Reference/Elements/iframe#allow) attribute does not set an appropriate {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} policy.
     - The function is called cross-origin and the `<iframe>` does not have {{glossary("transient activation")}}.
     - The function tried to create a [discoverable credential](/en-US/docs/Web/API/Web_Authentication_API#discoverable_and_non-discoverable_credentials) ([`residentKey`](/en-US/docs/Web/API/PublicKeyCredentialCreationOptions#residentkey) is set to `required` in the `create()` call's {{domxref("PublicKeyCredentialCreationOptions")}} option), but the user does not have an authenticator that supports discoverable credentials.
+    - `mediation` is `"conditional"`, but the user agent did not recently mediate an authentication or does not have consent to create the credential.
 - `AbortError` {{domxref("DOMException")}}
   - : The operation was aborted.
 
@@ -168,6 +171,34 @@ Some of this data will need to be stored on the server for future authentication
 
 > [!NOTE]
 > See [Creating a key pair and registering a user](/en-US/docs/Web/API/Web_Authentication_API#creating_a_key_pair_and_registering_a_user) for more information about how the overall flow works.
+
+### Creating a public key credential conditionally
+
+Conditional creation lets a user agent create a passkey without additional prominent modal interaction after the user signs in, provided the user has previously consented to credential creation. First use {{domxref("PublicKeyCredential.getClientCapabilities_static", "PublicKeyCredential.getClientCapabilities()")}} to check whether the client supports conditional creation.
+
+```js
+const capabilities = await PublicKeyCredential.getClientCapabilities();
+
+if (capabilities.conditionalCreate) {
+  try {
+    const credential = await navigator.credentials.create({
+      publicKey,
+      mediation: "conditional",
+    });
+
+    if (credential) {
+      await registerCredentialWithServer(credential);
+    }
+  } catch (error) {
+    if (error.name !== "NotAllowedError") {
+      throw error;
+    }
+    // The conditions for creating the credential were not met.
+  }
+}
+```
+
+Client support does not guarantee that conditional creation succeeds. The user agent rejects the promise with `NotAllowedError` if it did not recently mediate an authentication or does not have consent to create the credential. For the full flow and its requirements, see [Automatic passkey creation](/en-US/docs/Web/API/Web_Authentication_API#automatic_passkey_creation).
 
 ## Specifications
 
