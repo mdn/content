@@ -27,6 +27,8 @@ sidebar:
     details: closed
   - link: /Web/Privacy/Threat_modeling
   - type: listSubPages
+  - link: /Web/Privacy/Tracking
+  - type: listSubPages
     path: /Web/Privacy/Regulations
     depth: 2
     nested: true
