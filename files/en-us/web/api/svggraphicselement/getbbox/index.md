@@ -34,13 +34,16 @@ getBBox(options)
     - `stroke` {{optional_inline}}
       - : A boolean value indicating whether the stroke of the element is included in the bounding box, together with its line caps and line joins. Defaults to `false`. It has no effect when the {{cssxref("stroke")}} property is `none`.
     - `markers` {{optional_inline}}
-      - : A boolean value indicating whether the markers of the element are included in the bounding box. Defaults to `false`. Each marker contributes the whole area it takes up, set by its {{SVGAttr("markerWidth")}} and {{SVGAttr("markerHeight")}} attributes, rather than only the shape drawn inside it.
+      - : A boolean value indicating whether the markers of the element are included in the bounding box. Defaults to `false`. Each marker contributes the shapes drawn inside it, rather than the whole area it takes up, set by its {{SVGAttr("markerWidth")}} and {{SVGAttr("markerHeight")}} attributes.
     - `clipped` {{optional_inline}}
       - : A boolean value indicating whether the bounding box is limited to the part of the element that its {{cssxref("clip-path")}} leaves visible. Defaults to `false`.
 
 ### Return value
 
 A {{domxref("DOMRect")}} object describing the bounding box in the user coordinate system of the element, regardless of any transformation applied to the element or its parents.
+
+> [!NOTE]
+> Firefox returns a legacy {{domxref("SVGRect")}} object, which has the same `x`, `y`, `width`, and `height` properties, but isn't a `DOMRect` instance.
 
 ## Examples
 
