@@ -1,5 +1,5 @@
 ---
-title: Temporal.Instant()
+title: Temporal.Instant() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/Instant/Instant
 page-type: javascript-constructor
 status:

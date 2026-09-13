@@ -1,5 +1,5 @@
 ---
-title: Temporal.PlainDate()
+title: Temporal.PlainDate() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/PlainDate
 page-type: javascript-constructor
 status:
