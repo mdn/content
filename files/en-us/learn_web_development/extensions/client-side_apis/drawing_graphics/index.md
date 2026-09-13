@@ -1130,7 +1130,7 @@ The finished product should look like:
 {{EmbedLiveSample("9-webgl-cube", "100%", 500)}}
 
 > [!NOTE]
-> In our GitHub repo you can also find another interesting 3D cube example — [Three.js Video Cube](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-video-cube) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/drawing-graphics/threejs-video-cube/)). This uses {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to take a video stream from a computer web cam and project it onto the side of the cube as a texture!
+> In our GitHub repo you can also find another interesting 3D cube example — [Three.js Video Cube](https://github.com/mdn/learning-area/tree/main/javascript/apis/threejs-video-cube) ([see it live also](https://mdn.github.io/learning-area/javascript/apis/threejs-video-cube/)). This uses {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} to take a video stream from a computer web cam and project it onto the side of the cube as a texture!
 
 ## Summary
 

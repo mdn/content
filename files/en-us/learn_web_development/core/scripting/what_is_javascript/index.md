@@ -234,7 +234,20 @@ Whereas CSS uses {{htmlelement("link")}} elements to apply external stylesheets 
 
 ### Internal JavaScript
 
-1. First of all, make a local copy of our example file [apply-javascript.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript.html). Save it in a directory somewhere sensible.
+1. First of all, create a new HTML file on your local file system and add the following content to it:
+   ```html
+   <!DOCTYPE html>
+   <html lang="en-US">
+     <head>
+       <meta charset="utf-8" />
+       <meta name="viewport" content="width=device-width" />
+       <title>Apply JavaScript example</title>
+     </head>
+     <body>
+       <button>Click me</button>
+     </body>
+   </html>
+   ```
 2. Open the file in your web browser and in your text editor. You'll see that the HTML creates a simple web page containing a clickable button.
 3. Next, go to your text editor and add the following at the bottom of your body — just before your closing `</body>` tag:
 
@@ -264,29 +277,58 @@ Whereas CSS uses {{htmlelement("link")}} elements to apply external stylesheets 
 
 5. Save your file and refresh the browser — now you should see that when you click the button, a new paragraph is generated and placed below.
 
-> [!NOTE]
-> If your example doesn't seem to work, go through the steps again and check that you did everything right.
-> Did you save your local copy of the starting code as a `.html` file?
-> Did you add your {{htmlelement("script")}} element just before the `</body>` tag?
-> Did you enter the JavaScript exactly as shown? **JavaScript is case sensitive, and very fussy, so you need to enter the syntax exactly as shown, otherwise it may not work.**
+The example should render like so:
 
-> [!NOTE]
-> You can see this version on GitHub as [apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html) ([see it live too](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)).
+```html hidden live-sample___apply-javascript-internal
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Internal JavaScript example</title>
+  </head>
+  <body>
+    <button>Click me</button>
+
+    <script>
+      function createParagraph() {
+        const para = document.createElement("p");
+        para.textContent = "You clicked the button!";
+        document.body.appendChild(para);
+      }
+
+      const buttons = document.querySelectorAll("button");
+
+      for (const button of buttons) {
+        button.addEventListener("click", createParagraph);
+      }
+    </script>
+  </body>
+</html>
+```
+
+{{embedlivesample("apply-javascript-internal", "100%", "200")}}
+
+If your example doesn't seem to work, go through the steps again and check that you did everything right.
+
+- Did you save your local file as a `.html` file?
+- Did you add your {{htmlelement("script")}} element just before the `</body>` tag?
+- Did you enter the JavaScript exactly as shown? **JavaScript is case sensitive, and very fussy, so you need to enter the syntax exactly as shown, otherwise it may not work.**
 
 ### External JavaScript
 
 This works great, but what if we wanted to put our JavaScript in an external file? Let's explore this now.
 
-1. First, create a new file in the same directory as your sample HTML file. Call it `script.js` — make sure it has that .js filename extension, as that's how it is recognized as JavaScript.
-2. Remove your current {{htmlelement("script")}} element at the bottom of the `</body>` and add the following just before the closing `</head>` tag (that way the browser can start loading the file sooner than when it's at the bottom):
+1. First, create a new file in the same directory as your HTML file. Call it `script.js` — make sure it has that `.js` filename extension, as that's how it is recognized as JavaScript.
+2. Remove your {{htmlelement("script")}} element from the HTML file, then add the following just before the closing `</head>` tag (that way the browser can start loading the file sooner than when it's at the bottom):
 
    ```html
    <script type="module" src="script.js"></script>
    ```
 
-3. Inside `script.js`, add the following script:
+3. Inside `script.js`, add the following JavaScript:
 
-   ```js
+   ```js live-sample___apply-javascript-external
    function createParagraph() {
      const para = document.createElement("p");
      para.textContent = "You clicked the button!";
@@ -303,12 +345,28 @@ This works great, but what if we wanted to put our JavaScript in an external fil
 4. Save and refresh your browser. You'll discover that clicking the button has no effect, and if you check your browser's console, you'll see an error along the lines of `Cross-origin request blocked`. That's because like many external resources, JavaScript modules need to be loaded from the [same origin](/en-US/docs/Web/Security/Defenses/Same-origin_policy) as the HTML, and `file://` URLs don't qualify. There are two solutions to fix this problem:
    - Our recommended solution is to [set up a local testing server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server). With the server program running and serving the `apply-javascript-external.html` and `script.js` files on port `8000`, open your browser and go to `http://localhost:8000`.
    - If you cannot run a local server, you can also use `<script defer src="script.js"></script>` instead of `<script type="module" src="script.js"></script>`. See [Script loading strategies](#script_loading_strategies) below for more information. But note that features we use in other parts of the tutorial may require a local HTTP server anyway.
-5. Now the website works just the same as before, but now we've got our JavaScript in an external file.
-   This is generally a good thing in terms of organizing your code and making it reusable across multiple HTML files.
-   Plus, the HTML is easier to read without huge chunks of script dumped in it.
 
-> [!NOTE]
-> You can see this version on GitHub as [apply-javascript-external.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) and [script.js](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/script.js) ([see it live too](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)).
+The webpage works just the same as before, but now we've got our JavaScript in an external file:
+
+```html hidden live-sample___apply-javascript-external
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>External JavaScript example</title>
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <button>Click me</button>
+  </body>
+</html>
+```
+
+{{embedlivesample("apply-javascript-external", "100%", "200")}}
+
+External JavaScript is generally a good thing in terms of organizing your code and making it reusable across multiple HTML files.
+Plus, the HTML is easier to read without huge chunks of script dumped in it.
 
 ### Inline JavaScript handlers
 
@@ -327,11 +385,7 @@ function createParagraph() {
 <button onclick="createParagraph()">Click me!</button>
 ```
 
-You can try this version of our demo below.
-
-{{ EmbedLiveSample('Inline_JavaScript_handlers', '100%', 150) }}
-
-This demo has exactly the same functionality as in the previous two sections, except that the {{htmlelement("button")}} element includes an inline `onclick` handler to make the function run when the button is pressed.
+This code has exactly the same functionality as the versions shown in the previous two sections, except that the {{htmlelement("button")}} element includes an inline `onclick` handler to make the function run when the button is pressed.
 
 **Please don't do this, however.** It is bad practice to pollute your HTML with JavaScript, and it is inefficient — you'd have to include the `onclick="createParagraph()"` attribute on every button you want the JavaScript to apply to.
 

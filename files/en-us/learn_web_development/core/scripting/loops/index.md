@@ -162,7 +162,7 @@ In this example, `for (const cat of cats)` says:
 
 1. Given the collection `cats`, get the first item in the collection.
 2. Assign it to the variable `cat` and then run the code between the curly braces `{}`.
-3. Get the next item, and repeat (2) until you've reached the end of the collection.
+3. Get the next item, and repeat Step 2 until you've reached the end of the collection.
 
 ### map() and filter()
 
@@ -333,38 +333,42 @@ However, it offers more chances to introduce bugs into your code. For example:
 For reasons like this, it's usually best to use `for...of` if you can.
 
 Sometimes you still need to use a `for` loop to iterate through an array.
-For example, in the code below we want to log a message listing our cats:
+For example, in the code below we want to print a message listing our cats to a {{htmlelement("p")}} element:
 
-```js
-const cats = ["Pete", "Biggles", "Jasmine"];
+```html hidden live-sample___for-of-loop-cats live-sample___for-loop-cats live-sample___while-loop-cats live-sample___do-while-loop-cats
+<p></p>
+```
 
-let myFavoriteCats = "My cats are called ";
+```js live-sample___for-of-loop-cats
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+const pElem = document.querySelector("p");
+
+let myFavoriteCats = "My favorite big cats are ";
 
 for (const cat of cats) {
   myFavoriteCats += `${cat}, `;
 }
 
-console.log(myFavoriteCats); // "My cats are called Pete, Biggles, Jasmine, "
+pElem.textContent = myFavoriteCats;
 ```
 
 The final output sentence isn't very well-formed:
 
-```plain
-My cats are called Pete, Biggles, Jasmine,
-```
+{{embedlivesample("for-of-loop-cats", "100%", "60")}}
 
-We'd prefer it to handle the last cat differently, like this:
+We'd prefer a grammatically-correct sentence, which means handling the last cat differently:
 
 ```plain
-My cats are called Pete, Biggles, and Jasmine.
+My favorite big cats are Leopard, Serval, Jaguar, Tiger, Caracal, and Lion.
 ```
 
-But to do this we need to know when we are on the final loop iteration, and to do that we can use a `for` loop and examine the value of `i`:
+To do this we need to know when we are on the final loop iteration, and to do that we can use a `for` loop and examine the value of `i`:
 
-```js
-const cats = ["Pete", "Biggles", "Jasmine"];
+```js live-sample___for-loop-cats
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+const pElem = document.querySelector("p");
 
-let myFavoriteCats = "My cats are called ";
+let myFavoriteCats = "My favorite big cats are ";
 
 for (let i = 0; i < cats.length; i++) {
   if (i === cats.length - 1) {
@@ -375,8 +379,12 @@ for (let i = 0; i < cats.length; i++) {
   }
 }
 
-console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
+pElem.textContent = myFavoriteCats;
 ```
+
+This gives us the output we want:
+
+{{embedlivesample("for-loop-cats", "100%", "60")}}
 
 ## Exiting loops with break
 
@@ -441,9 +449,6 @@ btn.addEventListener("click", () => {
 
 5. After the loop, we check whether we set a contact, and if not we set the paragraph text to "Contact not found.".
 
-> [!NOTE]
-> You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/contact-search.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)).
-
 ## Skipping iterations with continue
 
 The [continue](/en-US/docs/Web/JavaScript/Reference/Statements/continue) statement works similarly to `break`, but instead of breaking out of the loop entirely, it skips to the next iteration of the loop.
@@ -490,9 +495,6 @@ Here's the output:
 3. If the square root and the rounded down square root do not equal one another (`!==`), it means that the square root is not an integer, so we are not interested in it. In such a case, we use the `continue` statement to skip on to the next loop iteration without recording the number anywhere.
 4. If the square root is an integer, we skip past the `if` block entirely, so the `continue` statement is not executed; instead, we concatenate the current `i` value plus a space at the end of the paragraph content.
 
-> [!NOTE]
-> You can view the [full source code on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/integer-squares.html) too (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
-
 ## while and do...while
 
 `for` is not the only type of general loop available in JavaScript. There are actually many others and, while you don't need to understand all of these now, it is worth having a look at the structure of a couple of others so that you can recognize the same features at work in a slightly different way.
@@ -517,10 +519,11 @@ The final-expression is then run after the code inside the loop has run (an iter
 
 Let's have a look again at our cats list example, but rewritten to use a while loop:
 
-```js
-const cats = ["Pete", "Biggles", "Jasmine"];
+```js live-sample___while-loop-cats
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+const pElem = document.querySelector("p");
 
-let myFavoriteCats = "My cats are called ";
+let myFavoriteCats = "My favorite big cats are ";
 
 let i = 0;
 
@@ -534,11 +537,12 @@ while (i < cats.length) {
   i++;
 }
 
-console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
+pElem.textContent = myFavoriteCats;
 ```
 
-> [!NOTE]
-> This still works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/while.html)).
+This still works just the same as expected:
+
+{{embedlivesample("while-loop-cats", "100%", "60")}}
 
 The [`do...while`](/en-US/docs/Web/JavaScript/Reference/Statements/do...while) loop is very similar, but provides a variation on the while structure:
 
@@ -557,10 +561,11 @@ The main difference between a `do...while` loop and a `while` loop is that _the 
 
 Let's rewrite our cat listing example again to use a `do...while` loop:
 
-```js
-const cats = ["Pete", "Biggles", "Jasmine"];
+```js live-sample___do-while-loop-cats
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+const pElem = document.querySelector("p");
 
-let myFavoriteCats = "My cats are called ";
+let myFavoriteCats = "My favorite big cats are ";
 
 let i = 0;
 
@@ -574,11 +579,12 @@ do {
   i++;
 } while (i < cats.length);
 
-console.log(myFavoriteCats); // "My cats are called Pete, Biggles, and Jasmine."
+pElem.textContent = myFavoriteCats;
 ```
 
-> [!NOTE]
-> Again, this works just the same as expected — have a look at it [running live on GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) (also view the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/do-while.html)).
+Again, this works just the same as expected:
+
+{{embedlivesample("do-while-loop-cats", "100%", "60")}}
 
 > [!WARNING]
 > With any kind of loop, you must make sure that the initializer is incremented or, depending on the case, decremented, so the condition eventually becomes false.

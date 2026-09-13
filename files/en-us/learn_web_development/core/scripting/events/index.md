@@ -128,10 +128,44 @@ btn.addEventListener("click", changeBackground);
 
 ### Listening for other events
 
-There are many different events that can be fired by a button element. Let's experiment.
+There are many different events that can be fired by a `<button>` element. Let's experiment.
 
-First, make a local copy of [random-color-addeventlistener.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/random-color-addeventlistener.html), and open it in your browser.
-It's just a copy of the simple random color example we've played with already. Now try changing `click` to the following different values in turn, and observing the results in the example:
+First, create a new HTML file on your local file system, and add the following code to it:
+
+```html
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Random color example — event handler attribute</title>
+    <style>
+      button {
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Change color</button>
+    <script>
+      const btn = document.querySelector("button");
+
+      function random(number) {
+        return Math.floor(Math.random() * (number + 1));
+      }
+
+      btn.addEventListener("click", () => {
+        const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+        document.body.style.backgroundColor = rndCol;
+      });
+    </script>
+  </body>
+</html>
+```
+
+Open it in your browser and play around with it. It's just a copy of the simple random color example you've played with already.
+
+Now try changing `click` to the following different values in turn, and observing the results in the browser:
 
 - [`focus`](/en-US/docs/Web/API/Element/focus_event) and [`blur`](/en-US/docs/Web/API/Element/blur_event) — The color changes when the button is focused and unfocused; try pressing the tab to focus on the button and press the tab again to focus away from the button.
   These are often used to display information about filling in form fields when they are focused, or to display an error message if a form field is filled with an incorrect value.
@@ -261,7 +295,19 @@ Sometimes, inside an event handler function, you'll see a parameter specified wi
 This is called the **event object**, and it is automatically passed to event handlers to provide extra features and information.
 For example, let's rewrite our random color example to include an event object:
 
-```js
+```html hidden live-sample___event-object
+<button>Change color</button>
+```
+
+```css hidden live-sample___event-object
+button {
+  margin: 10px;
+  font-size: 300%;
+  padding: 30px;
+}
+```
+
+```js live-sample___event-object
 const btn = document.querySelector("button");
 
 function random(number) {
@@ -277,10 +323,11 @@ function bgChange(e) {
 btn.addEventListener("click", bgChange);
 ```
 
-> [!NOTE]
-> You can find the [full source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/random-color-eventobject.html) for this example on GitHub (also [see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/random-color-eventobject.html)).
+Check out this example running live below. Yes, we've made the `<button>` really big!
 
-Here you can see we are including an event object, **e**, in the function, and in the function setting a background color style on `e.target` — which is the button itself.
+{{embedlivesample("event-object", "100%", 150)}}
+
+We include an event object, **e**, in the function, and set a background color style on `e.target` — which is the button itself.
 The `target` property of the event object is always a reference to the element the event occurred upon.
 So, in this example, we are setting a random background color on the button, not the page.
 
@@ -372,7 +419,7 @@ form.addEventListener("submit", (e) => {
 
 Obviously, this is pretty weak form validation — it wouldn't stop the user from validating the form with spaces or numbers entered into the fields, for example — but it is OK for example purposes.
 
-You can see the full example [running live](https://mdn.github.io/learning-area/javascript/building-blocks/events/preventdefault-validation.html) — try it out there. For the full source code, see [preventdefault-validation.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/events/preventdefault-validation.html).
+You can see the full example [running live](https://mdn.github.io/learning-area/javascript/building-blocks/preventdefault/) — try it out there. See the [source code](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/preventdefault/) also.
 
 ## It's not just web pages
 
