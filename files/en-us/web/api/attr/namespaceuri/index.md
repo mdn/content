@@ -8,66 +8,57 @@ browser-compat: api.Attr.namespaceURI
 
 {{APIRef("DOM")}}
 
-The read-only **`namespaceURI`** property of the {{domxref("Attr")}} interface returns the namespace URI of the attribute,
-or `null` if the element is not in a namespace.
+The **`namespaceURI`** read-only property of the {{domxref("Attr")}} interface returns the [namespace URI](/en-US/docs/Web/API/Document_Object_Model/XML_namespaces#element_and_attribute_names_in_the_dom) of an attribute, or `null` if the attribute is not in a namespace.
 
-The namespace URI is set at the {{domxref("Attr")}} creation and cannot be changed.
-An attribute with a namespace can be created using {{domxref("Element.setAttributeNS()")}}.
+The namespace URI of an attribute is frozen at the attribute's creation time, either set by the parser or by the [`document.createAttributeNS()`](/en-US/docs/Web/API/Document/createAttributeNS) or {{domxref("Element.setAttributeNS()")}} method. Reading this property does not involve dynamic lookup in the document tree.
 
 > [!NOTE]
 > An attribute does not inherit its namespace from the element it is attached to.
 > If an attribute is not explicitly given a namespace, it has no namespace.
 
-The browser does not handle or enforce namespace validation per se. It is up to the JavaScript
-application to do any necessary validation. Note, too, that the namespace prefix, once it
-is associated with a particular attribute node, cannot be changed.
-
 ## Value
 
-A string containing the URI of the namespace, or `null` if the attribute is not in a namespace.
+A string or `null`.
 
-## Example
+## Examples
 
-The following example shows the result for a prefixed attribute on an HTML element and on an SVG element.
-As HTML doesn't handle namespaces, it will always return `null` in that case.
-In the case of the SVG element, it will return the URI of the XML namespace, `http://www.w3.org/XML/1998/namespace`.
+### Reading the namespaceURI
 
-### HTML
-
-```html
-<svg xml:lang="en-US" class="struct" height="1" width="1">Click me</svg>
-<label xml:lang="en-US" class="struct"></label>
-
-<p>
-  <button>Show value for &lt;svg&gt;</button>
-  <button>Show value for &lt;label&gt;</button>
-</p>
-
-<p>
-  Namespace URI of the attribute <code>xml:lang</code>:
-  <output id="result">None.</output>
-</p>
-```
-
-### JavaScript
+We use {{domxref("DOMParser")}} to create an XML document.
 
 ```js
-const elements = document.querySelectorAll(".struct");
-const buttons = document.querySelectorAll("button");
-const outputEl = document.querySelector("#result");
-
-let i = 0;
-for (const button of buttons) {
-  const element = elements[i];
-  button.addEventListener("click", () => {
-    const attribute = element.attributes[0];
-    outputEl.value = attribute.namespaceURI;
-  });
-  i++;
-}
+const doc = new DOMParser().parseFromString(
+  `<parent xmlns:mdn="https://developer.mozilla.org/" mdn:status="ready" />`,
+  "application/xml",
+);
+const status = doc.querySelector("parent").getAttributeNode("mdn:status");
+console.log(status.namespaceURI); // https://developer.mozilla.org/
 ```
 
-{{ EmbedLiveSample('Example','100%',100) }}
+### Namespace URIs in HTML documents
+
+[The HTML syntax supports namespaces only for a fixed set of attributes on SVG and MathML elements](/en-US/docs/Web/API/Document_Object_Model/XML_namespaces#namespace_syntax_in_html). For other attributes, a colon is part of the local name rather than a namespace separator.
+
+```html
+<svg xml:lang="en-US" mdn:status="ready"></svg>
+```
+
+```js
+const svg = document.querySelector("svg");
+
+console.log(svg.getAttributeNode("xml:lang").namespaceURI);
+// http://www.w3.org/XML/1998/namespace
+console.log(svg.getAttributeNode("mdn:status").namespaceURI); // null
+```
+
+However, this is only a parser restriction; you can create arbitrarily namespaced attributes using [`document.createAttributeNS()`](/en-US/docs/Web/API/Document/createAttributeNS) and attach them to the HTML DOM without problems.
+
+```js
+const attr = document.createAttributeNS("https://example.com/", "mdn:status");
+document.body.setAttributeNode(attr);
+
+console.log(attr.namespaceURI); // https://example.com/
+```
 
 ## Specifications
 
@@ -79,6 +70,7 @@ for (const button of buttons) {
 
 ## See also
 
-- The properties {{domxref("Attr.name")}}, returning the qualified name of the attribute, {{domxref("Attr.localName")}}, the local part of the name, and {{domxref("Attr.prefix")}}, the namespace prefix.
-- The {{domxref("Element.namespaceURI")}} property, equivalent to this one but for an {{domxref("Element")}}.
-- The {{domxref("Element.setAttributeNS()")}} method, creating an attribute with a given namespace.
+- [XML namespaces](/en-US/docs/Web/API/Document_Object_Model/XML_namespaces)
+- {{domxref("Attr.localName")}}
+- {{domxref("Attr.prefix")}}
+- {{domxref("Element.namespaceURI")}}
