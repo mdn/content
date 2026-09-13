@@ -786,6 +786,22 @@ Notifications have the [`requireInteraction`](/en-US/docs/Web/API/Notification/r
 - `dom.webnotifications.requireinteraction.enabled`
   - : Set to `true` to enable.
 
+### Container Timing API
+
+The [Container Timing API](https://wicg.github.io/container-timing/) extends the [Element Timing](/en-US/docs/Web/API/PerformanceElementTiming) concept to whole containers of content, such as a card, widget, or section, rather than individual elements.
+An element is marked as a container root using the `containertiming` attribute, and rendering timestamps for it are then reported as {{domxref("PerformanceContainerTiming")}} entries through the {{domxref("PerformanceObserver")}} interface.
+([Firefox bug 1940240](https://bugzil.la/1940240)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 156           | No                  |
+| Developer Edition | 156           | No                  |
+| Beta              | 156           | No                  |
+| Release           | —             | —                   |
+
+- `dom.enable_container_timing`
+  - : Set to `true` to enable.
+
 ## Security and privacy
 
 ### Insecure page labeling
