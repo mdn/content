@@ -72,6 +72,20 @@ Below are examples of the various pages you'll find on MDN along with templates 
 - [ARIA reference page](#aria_reference_page)
 - [Conceptual page](#conceptual_page)
 - [Glossary page](#glossary_page)
+- [JavaScript class](#javascript_class_page)
+- [JavaScript constructor](#javascript_constructor_page)
+- [JavaScript error](#javascript_error_page)
+- [JavaScript function](#javascript_function_page)
+- [JavaScript global property](#javascript_global_property_page)
+- [JavaScript instance accessor property](#javascript_instance_accessor_property_page)
+- [JavaScript instance data property](#javascript_instance_data_property_page)
+- [JavaScript instance method](#javascript_instance_method_page)
+- [JavaScript namespace](#javascript_namespace_page)
+- [JavaScript operator](#javascript_operator_page)
+- [JavaScript statement](#javascript_statement_page)
+- [JavaScript static accessor property](#javascript_static_accessor_property_page)
+- [JavaScript static data property](#javascript_static_data_property_page)
+- [JavaScript static method](#javascript_static_method_page)
 - [Landing page](#landing_page)
 - [Learn web development pages](#learn_web_development_pages)
 
@@ -233,6 +247,214 @@ An **ARIA reference page** describes a [role](/en-US/docs/Web/Accessibility/ARIA
 #### Templates
 
 - [ARIA page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/ARIA_Page_Template)
+
+### JavaScript class page
+
+A **JavaScript class page** provides an overview of a JavaScript class, including its purpose and usage, and lists all the methods and properties, static or instance, of the class. A JavaScript class is defined as an intrinsic function object with a `prototype` property that gets shared by all instances of the class. By this definition, `BigInt` is a class too, despite it not being callable with `new`.
+
+#### Examples
+
+- [`Array`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+- [`BigInt`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
+- [`Map`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)
+- [`Intl.Collator`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator)
+- [`Temporal.ZonedDateTime`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime)
+
+#### Templates
+
+- [JavaScript class page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_class_page_template)
+
+### JavaScript constructor page
+
+A **JavaScript constructor page** provides information about the constructor of a JavaScript class. It provides information about how it should be called. The constructor of a class is just defined as the function object itself: for example `BigInt()` is a constructor, despite it not being callable with `new`. Not every class has a constructor worth documenting: the {{jsxref("TypedArray")}} class, for example, is an abstract class that always throws when called, and therefore does not have its own page.
+
+#### Examples
+
+- [`Array()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array)
+- [`BigInt()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt/BigInt)
+- [`Map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/Map)
+- [`Intl.Collator()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator)
+- [`Temporal.ZonedDateTime()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/ZonedDateTime)
+
+#### Templates
+
+- [JavaScript constructor page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_constructor_page_template)
+
+### JavaScript error page
+
+A **JavaScript error page** provides information about when a JavaScript error occurs and how to fix it. It is primarily intended to be used by dev tools as a reference. These error references are primarily keyed by Firefox's error messages — one error message per page. See also the [how to document errors](/en-US/docs/MDN/Writing_guidelines/Howto/Document_web_errors) guide.
+
+#### Examples
+
+- [ReferenceError: "x" is not defined](/en-US/docs/Web/JavaScript/Reference/Errors/Not_defined)
+
+#### Templates
+
+- [JavaScript error page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_error_page_template)
+
+### JavaScript function page
+
+A **JavaScript function page** provides information about a JavaScript function that's not attached to any class or namespace. It provides information about the function's purpose, parameters, and return value.
+
+If the function is statically available on a class or namespace, use the [JavaScript static method page](#javascript_static_method_page) template instead. If the function can be regarded as a class (because it has a `prototype` property), use the [JavaScript class page](#javascript_class_page) template instead. The main clue to use the global function page template is that the property has a function value and starts with a lowercase letter.
+
+#### Examples
+
+- [`eval()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)
+- [`encodeURIComponent()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)
+
+#### Templates
+
+- [JavaScript function page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_function_page_template)
+
+### JavaScript global property page
+
+A **JavaScript global property page** provides information about a JavaScript global property that's not attached to any class or namespace. It provides information about the property's purpose and usage.
+
+If the property is statically available on a class or namespace, use the [JavaScript static data property page](#javascript_static_data_property_page) template instead. If the property is a function, use the [JavaScript function page](#javascript_function_page) template instead. If the property is a plain object whose main goal is to host other properties, use the [JavaScript namespace page](#javascript_namespace_page) template instead. The main clue to use the global property page template is that the property either has a primitive value or starts with a lowercase letter and is not a function.
+
+#### Examples
+
+- [`Infinity`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity)
+- [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis)
+
+#### Templates
+
+- [JavaScript global property page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_global_property_page_template)
+
+### JavaScript instance accessor property page
+
+A **JavaScript instance accessor property page** provides information about an accessor property of a JavaScript class instance. An accessor property comprises of a getter and sometimes a setter, and is nearly always defined on the instance's prototype. The spec uses the syntax `get Constructor.prototype.propertyName` to define an accessor property. Nearly all non-legacy instance accessor properties in the core JavaScript language are getter-only, which makes them read-only.
+
+If the property has a function value, use the [JavaScript instance method page](#javascript_instance_method_page) template instead.
+
+#### Examples
+
+- [`Map.prototype.size`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/size)
+
+#### Templates
+
+- [JavaScript instance accessor property page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_instance_accessor_property_page_template)
+
+### JavaScript instance data property page
+
+A **JavaScript instance data property page** provides information about a data property of a JavaScript class instance. A data property comprises of a value and a writable flag, and may be either defined on the instance's prototype or directly on the instance itself.
+
+Every instance has a data property called [`constructor`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) that points to the constructor function that created the instance. This data property is mentioned in the class's main page, but not documented in a separate page for each class.
+
+If the property has a function value, use the [JavaScript instance method page](#javascript_instance_method_page) template instead.
+
+#### Examples
+
+- [`Array`: `length`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length)
+- [`Error.prototype.name`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/name)
+
+#### Templates
+
+- [JavaScript instance data property page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_instance_data_property_page_template)
+
+### JavaScript instance method page
+
+A **JavaScript instance method page** provides information about a method of a JavaScript class instance. A method is a function property of the instance. Generally, a method is a data property defined on the instance's prototype, but there are some legacy exceptions, such as [`Intl.DateTimeFormat.prototype.format()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format), which is an accessor property that returns a bound function. For the sake of reader familiarity, we treat them as normal methods.
+
+#### Examples
+
+- [`Array.prototype.push()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
+- [`Intl.DateTimeFormat.prototype.resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOptions)
+
+#### Templates
+
+- [JavaScript instance method page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_instance_method_page_template)
+
+### JavaScript namespace page
+
+A **JavaScript namespace page** provides an overview of a JavaScript namespace, including its purpose and usage, and lists all the methods and properties of the namespace. A JavaScript namespace is defined as a plain object that hosts other properties.
+
+#### Examples
+
+- [`Intl`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl)
+- [`Math`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
+- [`Temporal`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal)
+- [`Temporal.Now`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Now)
+
+#### Templates
+
+- [JavaScript namespace page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_namespace_page_template)
+
+### JavaScript operator page
+
+A **JavaScript operator page** provides information about a JavaScript operator, including its purpose and usage. An _operator_ is not a universally agreed-upon term. For the purpose of MDN, we define it as a syntax parameterized by one or more operands, usually in the form of expressions or expression-like constructs.
+
+#### Examples
+
+- [Addition (`+`)](/en-US/docs/Web/JavaScript/Reference/Operators/Addition)
+- [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await)
+- [`class`](/en-US/docs/Web/JavaScript/Reference/Operators/class)
+
+#### Templates
+
+- [JavaScript operator page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_operator_page_template)
+
+### JavaScript statement page
+
+A **JavaScript statement page** provides information about a JavaScript statement or declaration, including its purpose, syntax, and usage. It describes the statement's syntax components and how it affects program execution or introduces bindings.
+
+For expression forms, such as a function expression or class expression, use the [JavaScript operator page](#javascript_operator_page) template instead.
+
+#### Examples
+
+- [`if...else`](/en-US/docs/Web/JavaScript/Reference/Statements/if...else)
+- [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of)
+- [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const)
+
+#### Templates
+
+- [JavaScript statement page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_statement_page_template)
+
+### JavaScript static accessor property page
+
+A **JavaScript static accessor property page** provides information about an accessor property accessed directly on a JavaScript class or namespace. It describes the value returned by the getter and, when a setter is present, the values it accepts and the effect of assignment.
+
+For an accessor property of an instance, use the [JavaScript instance accessor property page](#javascript_instance_accessor_property_page) template instead.
+
+#### Examples
+
+- [`Array[Symbol.species]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species)
+- [`RegExp.input`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/input)
+
+#### Templates
+
+- [JavaScript static accessor property page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_static_accessor_property_page_template)
+
+### JavaScript static data property page
+
+A **JavaScript static data property page** provides information about a data property accessed directly on a JavaScript class or namespace. It describes the property's value, attributes, purpose, and usage.
+
+If the property is an accessor property, use the [JavaScript static accessor property page](#javascript_static_accessor_property_page) template instead. If the property has a function value, use the [JavaScript static method page](#javascript_static_method_page) template instead. Classes and namespaces exposed as properties have their own [class pages](#javascript_class_page) or [namespace pages](#javascript_namespace_page).
+
+#### Examples
+
+- [`Math.PI`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI)
+- [`Number.MAX_SAFE_INTEGER`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)
+
+#### Templates
+
+- [JavaScript static data property page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_static_data_property_page_template)
+
+### JavaScript static method page
+
+A **JavaScript static method page** provides information about a method called directly on a JavaScript class or namespace. It describes the method's purpose, syntax, parameters, return value, and exceptions.
+
+For a method of an instance, use the [JavaScript instance method page](#javascript_instance_method_page) template instead. For a global function, use the [JavaScript function page](#javascript_function_page) template instead.
+
+#### Examples
+
+- [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from)
+- [`Temporal.Now.instant()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/Now/instant)
+
+#### Templates
+
+- [JavaScript static method page template](/en-US/docs/MDN/Writing_guidelines/Page_structures/Page_types/JavaScript_static_method_page_template)
 
 ### Conceptual page
 
