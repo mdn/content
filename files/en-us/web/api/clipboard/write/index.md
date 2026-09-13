@@ -207,6 +207,7 @@ First click on the blue square, and then select the text "Paste here" and use yo
 
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
 - [Image support for Async Clipboard article](https://web.dev/articles/async-clipboard)
+- {{httpheader("Permissions-Policy/clipboard-write")}}
 - {{domxref("Clipboard.writeText()")}}
 - {{domxref("Clipboard.read()")}}
 - {{domxref("Clipboard.readText()")}}
