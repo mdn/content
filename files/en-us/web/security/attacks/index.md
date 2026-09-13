@@ -17,6 +17,8 @@ This page links to pages explaining how some common attacks work, and how they c
   - : Cross-site leaks (XS-Leaks) are a class of attack in which an attacker's site can derive information about the target site, or about the user's relationship with the target site, by using web platform APIs that enable sites to interact with one another.
 - [Cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS)
   - : In a cross-site scripting (XSS) attack, a website accepts some input crafted by the attacker and mistakenly includes this input in the site's own pages in a way that makes the browser execute it as code. The malicious code can then do anything that the site's own front-end code could do.
+- Dangling markup injection
+  - : In a dangling markup injection attack, an attacker injects an unclosed HTML tag or attribute into a page. The browser then treats subsequent page content as part of the injected markup, which can expose sensitive data when the page is submitted to an attacker-controlled destination. This attack can be mitigated by properly encoding and sanitizing untrusted input.
 - [Insecure Direct Object Reference (IDOR)](/en-US/docs/Web/Security/Attacks/IDOR)
   - : In an Insecure Direct Object Reference (IDOR) attack, the attacker takes advantage of insufficient access control and insecure exposure of object identifiers, such as database keys or file paths.
 - [Manipulator in the Middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM)
