@@ -47,13 +47,6 @@ input {
 }
 ```
 
-They are called radio buttons because they look and operate in a similar manner to the push buttons on old-fashioned radios, such as the one shown below.
-
-![Shows what radio buttons looked like in the olden days.](old-radio.jpg)
-
-> [!NOTE]
-> [Checkboxes](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) are similar to radio buttons, but with an important distinction: radio buttons are designed for selecting one value out of a set, whereas checkboxes let you turn individual values on and off. Where multiple controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.
-
 ## Value
 
 The `value` attribute is a string containing the radio button's value. The value is never shown to the user by their {{Glossary("user agent")}}. Instead, it's used to identify which radio button in a group is selected.
@@ -149,22 +142,14 @@ Try this example out and see how there's never more than one result for the `con
 
 {{EmbedLiveSample("Data_representation_of_a_radio_group", 600, 130)}}
 
-## Additional attributes
+## Usage notes
 
-In addition to the common attributes shared by all {{HTMLElement("input")}} elements, `radio` inputs support the following attributes.
+Radio buttons look and operate in a similar manner to the push buttons on old-fashioned radios, such as the one shown below.
 
-- `checked`
-  - : A Boolean attribute which, if present, indicates that this radio button is the default selected one in the group.
+![Shows what radio buttons looked like in the olden days.](old-radio.jpg)
 
-    Unlike other browsers, Firefox by default [persists the dynamic checked state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the [`autocomplete`](/en-US/docs/Web/HTML/Reference/Elements/input#autocomplete) attribute to control this feature.
-
-- `value`
-  - : The `value` attribute is one which all {{HTMLElement("input")}}s share; however, it serves a special purpose for inputs of type `radio`: when a form is submitted, only radio buttons which are currently checked are submitted to the server, and the reported value is the value of the `value` attribute. If the `value` is not otherwise specified, it is the string `on` by default. This is demonstrated in the section [Value](#value) above.
-
-- [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required)
-  - : The `required` attribute is one which most {{HTMLElement("input")}}s share. If any radio button in a same-named group of radio buttons has the `required` attribute, a radio button in that group must be checked, although it doesn't have to be the one with the attribute applied.
-
-## Using radio inputs
+> [!NOTE]
+> [Checkboxes](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) are similar to radio buttons, but with an important distinction: radio buttons are designed for selecting one value out of a set, whereas checkboxes let you turn individual values on and off. Where multiple controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.
 
 We already covered the fundamentals of radio buttons above. Let's now look at the other common radio-button-related features and techniques you may need to know about.
 
@@ -210,6 +195,21 @@ In this case, the first radio button is now selected by default.
 In the above examples, you may have noticed that you can select a radio button by clicking on its associated {{htmlelement("label")}} element, as well as on the radio button itself. This is a really useful feature of HTML form labels that makes it easier for users to click the option they want, especially on small-screen devices like smartphones.
 
 Beyond accessibility, this is another good reason to properly set up `<label>` elements on your forms.
+
+## Additional attributes
+
+In addition to the common attributes shared by all {{HTMLElement("input")}} elements, `radio` inputs support the following attributes.
+
+- `checked`
+  - : A Boolean attribute which, if present, indicates that this radio button is the default selected one in the group.
+
+    Unlike other browsers, Firefox by default [persists the dynamic checked state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of an `<input>` across page loads. Use the [`autocomplete`](/en-US/docs/Web/HTML/Reference/Elements/input#autocomplete) attribute to control this feature.
+
+- `value`
+  - : The `value` attribute is one which all {{HTMLElement("input")}}s share; however, it serves a special purpose for inputs of type `radio`: when a form is submitted, only radio buttons which are currently checked are submitted to the server, and the reported value is the value of the `value` attribute. If the `value` is not otherwise specified, it is the string `on` by default. This is demonstrated in the section [Value](#value) above.
+
+- [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required)
+  - : The `required` attribute is one which most {{HTMLElement("input")}}s share. If any radio button in a same-named group of radio buttons has the `required` attribute, a radio button in that group must be checked, although it doesn't have to be the one with the attribute applied.
 
 ## Validation
 
