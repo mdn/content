@@ -88,7 +88,7 @@ Both `<td>` elements and elements with a role of `gridcell` applied to them can 
 
 #### Expandable cells
 
-In a [treegrid](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role), gridcells may be made expandable by toggling the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) attribute. Note that if this attribute is provided, it applies only to the individual gridcell.
+In a [treegrid](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role), gridcells may indicate expansion and collapse by toggling the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) attribute. Note that if this attribute is provided, it applies only to the individual gridcell, not the container row. The main use case is pivot table behavior.
 
 ### Associated WAI-ARIA roles, states, and properties
 
