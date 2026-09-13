@@ -311,6 +311,146 @@ browser.webRequest.onBeforeRequest.addListener(
 );
 ```
 
+This example demonstrates, how to search for multi-byte pattern in an array:
+
+```js
+// JavaScript program to search the pattern in given array
+// using KMP Algorithm
+
+function constructLps(pat, lps) {
+  // len stores the length of longest prefix which
+  // is also a suffix for the previous index
+  let len = 0;
+
+  // lps[0] is always 0
+  lps[0] = 0;
+
+  let i = 1;
+  while (i < pat.length) {
+    // If characters match, increment the size of lps
+    if (pat[i] === pat[len]) {
+      lps[i++] = ++len;
+    }
+    // If there is a mismatch
+    else {
+      if (len !== 0) {
+        // Update len to the previous lps value
+        // to avoid redundant comparisons
+        len = lps[len - 1];
+      } else {
+        // If no matching prefix found, set lps[i] to 0
+        lps[i++] = 0;
+      }
+    }
+  }
+}
+
+function search(pat, arr) {
+  const n = arr.length;
+  const m = pat.length;
+
+  const lps = new Array(m);
+  const res = [];
+
+  constructLps(pat, lps);
+
+  // Pointers i and j, for traversing
+  // the array and pattern
+  let i = 0;
+  let j = 0;
+
+  while (i < n) {
+    // If characters match, move both pointers forward
+    if (arr[i] === pat[j]) {
+      i++;
+      j++;
+
+      // If the entire pattern is matched
+      // store the start index in result
+      if (j === m) {
+        res.push(i - j);
+        // Use LPS of previous index to
+        // skip unnecessary comparisons
+        j = lps[j - 1];
+      }
+    }
+    // If there is a mismatch
+    else {
+      // Use lps value of previous index
+      // to avoid redundant comparisons
+      if (j !== 0) {
+        j = lps[j - 1];
+      } else {
+        i++;
+      }
+    }
+  }
+  return res;
+}
+
+const encoder = new TextEncoder();
+
+const elements = encoder.encode("WebExtension ");
+const bytes = encoder.encode("Example");
+
+function listener(details) {
+  const filter = browser.webRequest.filterResponseData(details.requestId);
+
+  const oldData = [];
+  filter.ondata = (event) => {
+    let data = event.data;
+    data = new Uint8Array(data);
+    data = Array.from(data);
+
+    if (oldData.length) {
+      data = oldData.concat(data);
+      oldData.length = 0;
+    }
+
+    let len = 0;
+    const res = search(bytes, data);
+    for (const i of res) {
+      // Insert "WebExtension " at the given index
+      data.splice(i + len, 0, ...elements);
+      len += elements.length;
+    }
+
+    // Check if the word "Example" is cropped at the end, e.g. "<h1>Exampl"
+    const n = data.length;
+    const m = bytes.length;
+
+    let i = n - 1;
+    let j = 1;
+
+    mainLoop: while (i > n - m) {
+      if (bytes[0] === data[i]) {
+        const initial = i;
+        while (j < n - initial) {
+          if (data[++i] !== bytes[j++]) {
+            break mainLoop;
+          }
+        }
+        oldData.push(...data.slice(initial));
+        data = data.slice(0, initial);
+        break;
+      }
+      i--;
+    }
+    filter.write(new Uint8Array(data));
+  };
+
+  filter.onstop = () => {
+    filter.close();
+  };
+}
+
+browser.webRequest.onBeforeRequest.addListener(
+  listener,
+  { urls: ["https://example.com/"], types: ["main_frame"] },
+  ["blocking"],
+);
+```
+
 {{WebExtExamples}}
 
 ## Browser compatibility
