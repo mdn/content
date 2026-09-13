@@ -460,7 +460,7 @@ There is another useful positioning option that the Popover API provides. If you
 
 [Associating any kind of popover with its invoker](#other_ways_to_set_up_a_popover-invoker_relationship) creates an implicit anchor reference between the two. This causes the invoker to become the popover's **anchor element**, meaning that you can position the popover relative to it using [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning).
 
-Because the association between the popover and the invoker is implicit, an explicit association does not need to be made using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties. However, you still need to specify the positioning CSS.
+Because the association between the popover and the invoker is implicit, you do not need to name the anchor using {{cssxref("anchor-name")}}. The implicit anchor is adopted automatically when you position with {{cssxref("position-area")}}. If you position using {{cssxref("anchor()")}} or `anchor-center` instead, set `position-anchor: auto` to opt in. The initial value of {{cssxref("position-anchor")}} is `normal`, which behaves as `none` while {{cssxref("position-area")}} is `none`. However, you still need to specify the positioning CSS.
 
 For example, you could use a combination of {{cssxref("anchor()")}} function values set on {{glossary("inset properties")}}, and `anchor-center` values set on alignment properties:
 
@@ -468,6 +468,7 @@ For example, you could use a combination of {{cssxref("anchor()")}} function val
 .my-popover {
   margin: 0;
   inset: auto;
+  position-anchor: auto;
   bottom: calc(anchor(top) + 20px);
   justify-self: anchor-center;
 }
