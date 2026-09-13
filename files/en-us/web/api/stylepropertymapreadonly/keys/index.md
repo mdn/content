@@ -8,7 +8,7 @@ browser-compat: api.StylePropertyMapReadOnly.keys
 
 {{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`StylePropertyMapReadOnly.keys()`** method returns a new _array iterator_ containing the keys for each item in `StylePropertyMapReadOnly`.
+The **`keys()`** method of the {{domxref("StylePropertyMapReadOnly")}} interface returns a new iterator that yields the CSS property name of each declaration in the object.
 
 ## Syntax
 
@@ -22,7 +22,7 @@ None.
 
 ### Return value
 
-A new {{jsxref("Array")}}.
+A new [iterable iterator](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
 
 ## Examples
 
@@ -37,7 +37,7 @@ const buttonEl = document.querySelector("button");
 // we can retrieve all computed styles with `computedStyleMap`
 const allComputedStyles = buttonEl.computedStyleMap();
 
-// keys returns an iterable list of properties
+// keys returns an iterator of property names
 const props = allComputedStyles.keys();
 console.log(props.next().value); // returns align-content
 ```
@@ -49,3 +49,15 @@ console.log(props.next().value); // returns align-content
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("StylePropertyMapReadOnly.entries()")}}
+- {{domxref("StylePropertyMapReadOnly.forEach()")}}
+- {{domxref("StylePropertyMapReadOnly.get()")}}
+- {{domxref("StylePropertyMapReadOnly.getAll()")}}
+- {{domxref("StylePropertyMapReadOnly.has()")}}
+- {{domxref("StylePropertyMapReadOnly.size")}}
+- {{domxref("StylePropertyMapReadOnly.values()")}}
+- [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)

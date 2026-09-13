@@ -45,3 +45,11 @@ buttonEl.attributeStyleMap.clear();
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("StylePropertyMap.set()")}}
+- {{domxref("StylePropertyMap.append()")}}
+- {{domxref("StylePropertyMap.delete()")}}
+- [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)
