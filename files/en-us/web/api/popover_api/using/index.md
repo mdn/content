@@ -460,14 +460,15 @@ There is another useful positioning option that the Popover API provides. If you
 
 [Associating any kind of popover with its invoker](#other_ways_to_set_up_a_popover-invoker_relationship) creates an implicit anchor reference between the two. This causes the invoker to become the popover's **anchor element**, meaning that you can position the popover relative to it using [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning).
 
-Because the association between the popover and the invoker is implicit, an explicit association does not need to be made using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties. However, you still need to specify the positioning CSS.
+Because the association between the popover and the invoker is implicit, you do not need to name the anchor using {{cssxref("anchor-name")}}. The implicit anchor is adopted automatically when you position the popover with {{cssxref("position-area")}}. However, if you position it using {{cssxref("anchor()")}} or `anchor-center`, `position-anchor: auto` is required to opt in. The initial value of {{cssxref("position-anchor")}} is `normal`, which behaves as `none` while `position-area` is `none`.
 
-For example, you could use a combination of {{cssxref("anchor()")}} function values set on {{glossary("inset properties")}}, and `anchor-center` values set on alignment properties:
+For example, you could use a combination of an `anchor()` function value set on an {{glossary("inset properties","inset property")}}, and an `anchor-center` value set on an alignment property:
 
 ```css
 .my-popover {
   margin: 0;
   inset: auto;
+  position-anchor: auto;
   bottom: calc(anchor(top) + 20px);
   justify-self: anchor-center;
 }
@@ -477,21 +478,21 @@ Or you could use a {{cssxref("position-area")}} property:
 
 ```css
 .my-popover {
-  margin: 0;
-  inset: auto;
   position-area: top;
 }
 ```
 
-When using {{cssxref("position-area")}} or {{cssxref("anchor()")}} to position popovers, be aware that [the default styles for popovers](https://html.spec.whatwg.org/multipage/rendering.html#flow-content-3:~:text=%5Bpopover%5D%20%7B) may conflict with the position you're trying to achieve. The usual culprits are the default styles for `margin` and `inset`, so it's advisable to reset those, as in the examples above. The CSS working group is [looking at ways to avoid requiring this workaround](https://github.com/w3c/csswg-drafts/issues/10258).
+When using {{cssxref("anchor()")}} to position popovers, be aware that [the default styles for popovers](https://html.spec.whatwg.org/multipage/rendering.html#flow-content-3:~:text=%5Bpopover%5D%20%7B) may conflict with the position you're trying to achieve. The usual culprits are the default styles for `margin` and `inset`, so it's advisable to reset those, as shown in the first example in this section.
+
+This is not an issue with popovers positioned with {{cssxref("position-area")}} because the used value of `auto` [inset](/en-US/docs/Glossary/Inset_properties) and {{cssxref("margin")}} properties resolves to `0` on any element that has a `position-area` value set other than `none`. This is also the case with boxes positioned with `anchor-center`, provided the box is absolutely-positioned. However, because `anchor-center` values are often used along with `anchor()` values, you'll probably still need the resets in these situations.
 
 See [Using CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#positioning_elements_relative_to_their_anchor) for more details on associating anchor and positioned elements, and positioning elements relative to their anchor.
 
 > [!NOTE]
-> For an example that uses this implicit association, see our [popover hint demo](https://mdn.github.io/dom-examples/popover-api/popover-hint/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/popover-hint)). If you check out the CSS code, you'll see that no explicit anchor associations are made using the {{cssxref("anchor-name")}} and {{cssxref("position-anchor")}} properties.
+> For an example that uses this implicit association, see our [popover hint demo](https://mdn.github.io/dom-examples/popover-api/popover-hint/) ([source](https://github.com/mdn/dom-examples/tree/main/popover-api/popover-hint)). If you check out the CSS code, you'll see implicit association examples using both `position-area` and `anchor()`/`anchor-center`.
 
 > [!NOTE]
-> If you want to remove the implicit anchor reference to stop the popover from being anchored to its invoker, you can do so by setting the `position-anchor` property of the popover to an anchor name that doesn't exist in the current document, such as `--not-an-anchor-name`. See also [removing an anchor association](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#removing_an_anchor_association).
+> If you want to remove the implicit anchor reference to stop the popover from being anchored to its invoker, you can do so by setting the `position-anchor` property of the popover to `none`, or to an anchor name that doesn't exist in the current document, such as `--not-an-anchor-name`. See also [removing an anchor association](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Using#removing_an_anchor_association).
 
 ## Animating popovers
 
