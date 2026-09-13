@@ -8,14 +8,47 @@ sidebar: cssref
 ---
 
 The **`zoom`** [CSS](/en-US/docs/Web/CSS) property can be used to control the magnification level of an element.
-{{cssxref("transform-function/scale", "transform: scale()")}} can be used as an alternative to this property.
 
-The `zoom` CSS property scales the targeted element, which can affect the page layout.
-When scaling, the zoomed element scales from `top` and `center` when using the default {{CSSXRef("writing-mode")}}.
+{{InteractiveExample("CSS Demo: zoom")}}
 
-In contrast, an element scaled using {{cssxref("transform-function/scale", "scale()")}} will not cause layout recalculation or move other elements on the page.
-If using `scale()` makes the contents larger than the containing element, then {{CSSXRef("overflow")}} comes into effect.
-Additionally, elements adjusted using `scale()` transform from the `center` by default; this can be changed with the {{CSSXRef("transform-origin")}} CSS property.
+```css interactive-example-choice
+zoom: 1;
+```
+
+```css interactive-example-choice
+zoom: 1.3;
+```
+
+```css interactive-example-choice
+zoom: 200%;
+```
+
+```css interactive-example-choice
+zoom: 0.7;
+```
+
+```css interactive-example-choice
+zoom: 50%;
+```
+
+```html interactive-example
+<p id="example-element">I'm getting zoomed</p>
+<p>I'm not zoomed</p>
+```
+
+```css interactive-example
+p {
+  font-family: sans-serif;
+  background: orange;
+  padding: 10px;
+  color: black;
+  width: fit-content;
+}
+
+#example-element {
+  background: lime;
+}
+```
 
 ## Syntax
 
@@ -42,17 +75,41 @@ zoom: unset;
 
 ### Values
 
+This property is specified as one of the following values:
+
 - {{cssxref("&lt;percentage&gt;")}}
-  - : Zoom factor. `100%` is equivalent to `normal`. Values larger than `100%` zoom in. Values smaller than `100%` zoom out.
+  - : A positive `<percentage>` value specifies a percentage zoom factor, with `100%` being equivalent to original size. Values larger than `100%` zoom in, while values smaller than `100%` zoom out. `0%` behaves as `100%`.
 - {{cssxref("&lt;number&gt;")}}
-  - : Zoom factor. Equivalent to the corresponding percentage (`1.0` = `100%` = `normal`). Values larger than `1.0` zoom in. Values smaller than `1.0` zoom out.
+  - : A positive `<number>` value specifies a numeric zoom factor, with `1` being equivalent to original size. Values larger than `1` zoom in, while values smaller than `1` zoom out. `0` behaves as `1`.
+- `normal` {{non-standard_inline}}
+  - : Renders the element at its original size; equivalent to `1`.
+- `reset` {{non-standard_inline}} {{deprecated_inline}}
+  - : Resets the value to `1` and prevents the element from being zoomed if the user applies non-pinch-based zooming (for example, using the <kbd>Ctrl</kbd> - <kbd>-</kbd> or <kbd>Ctrl</kbd> + <kbd>+</kbd> keyboard shortcuts).
 
-Two non-standard keyword values are not recommended. Check [browser compatibility](#browser_compatibility) data:
+## Description
 
-- `normal`
-  - : Render the element at its normal size; equal to `zoom: 1`. Use the global {{cssxref("unset")}} keyword value instead.
-- `reset`
-  - : Resets the value to `zoom: 1` and prevents the element from being (de)magnified if the user applies non-pinch-based zooming (e.g., by pressing <kbd>Ctrl</kbd> \- <kbd>-</kbd> or <kbd>Ctrl</kbd> \+ <kbd>+</kbd> keyboard shortcuts) to the document.
+The `zoom` property can be used to scale the targeted element up and down in size, using a {{cssxref("&lt;percentage&gt;")}} or {{cssxref("&lt;number&gt;")}} scaling factor. A scaling factor of `1` or `100%` is equivalent to the element's original size. Smaller scaling factors will shrink the element, whereas larger scaling factors will grow the element.
+
+For example:
+
+- `zoom: 0.25` and `zoom: 25%` are equivalent, and will result in the element shrinking to a quarter of its original size.
+- `zoom: 2` and `zoom: 200%` are equivalent, and will result in the element growing to double its original size.
+
+Note that values of `0` and `0%` are equivalent to `1`/`100%` — they result in the element being rendered at its original size. Values smaller than `0`/`0%` are invalid.
+
+> [!NOTE]
+> The non-standard `normal` and `reset` values are not recommended. Use the standard global {{cssxref("unset")}} keyword value instead.
+
+### Comparison with scale transforms
+
+The {{cssxref("transform-function/scale", "transform: scale()")}} and {{cssxref("scale")}} transform features can be used as an alternative to the `zoom` property. They both scale elements up and down in size, but their effects differ slightly:
+
+- Scale transforms are applied after the page rendering has completed, therefore they do not affect the position and layout of surrounding elements. The `zoom` property on the other hand is applied during the rendering process, therefore it does affect surrounding elements.
+- As a result, changes to the `zoom` property will cause {{cssxref("overflow")}} if the content gets bigger than its container.
+- The `zoom` property has no effect on {{cssxref("length")}} property values with computed values that are `auto` or a `<percentage>`.
+- Scale transforms cause elements to scale from their center by default (this behavior can be changed using the {{CSSXRef("transform-origin")}} property). The `zoom` property always causes elements to scale for their top-left corner.
+
+It is also worth noting that the two can be used together — an element with `zoom` applied can have a scale transform applied.
 
 ## Formal definition
 
@@ -66,17 +123,21 @@ Two non-standard keyword values are not recommended. Check [browser compatibilit
 
 ### Resizing paragraphs
 
-In this example the paragraph elements are zoomed, on hovering a paragraph the `zoom` value is `unset`.
+This example shows the effect of `zoom` on some paragraphs.
 
 #### HTML
 
+We include three {{htmlelement("p")}} elements, each with a different `class` set. We set a [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) on each one so that they can be focused via the keyboard:
+
 ```html
-<p class="small">Small</p>
-<p class="normal">Normal</p>
-<p class="big">Big</p>
+<p class="small" tabindex="0">Small</p>
+<p class="normal" tabindex="0">Normal</p>
+<p class="big" tabindex="0">Big</p>
 ```
 
 #### CSS
+
+We set a {{cssxref("border")}} on the paragraphs so it is easy to see where their boundaries are, then set a successively larger `zoom` scaling factor on each paragraph. Finally, we set paragraph {{cssxref(":hover")}} and {{cssxref(":focus")}} styles so that hovering/focusing a paragraph will `unset` the applied `zoom` value:
 
 ```css hidden
 body {
@@ -88,16 +149,20 @@ body {
 ```
 
 ```css
+p {
+  border: 1px dashed;
+}
 .small {
   zoom: 75%;
 }
 .normal {
-  zoom: normal;
+  zoom: 1;
 }
 .big {
   zoom: 2.5;
 }
-p:hover {
+p:hover,
+p:focus {
   zoom: unset;
 }
 ```
@@ -106,53 +171,13 @@ p:hover {
 
 {{EmbedLiveSample('resizing_paragraphs')}}
 
-### Resizing elements
-
-In this example the `div` elements are zoomed using the `normal`, `<percentage>`, and `<number>` values.
-
-#### HTML
-
-```html
-<div id="a" class="circle"></div>
-<div id="b" class="circle"></div>
-<div id="c" class="circle"></div>
-```
-
-#### CSS
-
-```css
-div.circle {
-  width: 25px;
-  height: 25px;
-  border-radius: 100%;
-  vertical-align: middle;
-  display: inline-block;
-}
-div#a {
-  background-color: gold;
-  zoom: normal; /* circle is 25px diameter */
-}
-div#b {
-  background-color: green;
-  zoom: 200%; /* circle is 50px diameter */
-}
-div#c {
-  background-color: blue;
-  zoom: 2.9; /* circle is 72.5px diameter */
-}
-```
-
-#### Result
-
-{{EmbedLiveSample('resizing_elements')}}
-
 ### Creating a zoom control
 
-In this example a `select` field is used to change the zoom level of the element.
+In this example we create a drop-down menu to allow the zoom level of some content to be changed.
 
 #### HTML
 
-In this first block, of HTML, a `select` field is defined with the different `zoom` values to be used.
+A {{htmlelement("select")}} element is used to create the drop-down menu. Its values are set to several different `zoom` values:
 
 ```html
 <section class="controls">
@@ -161,7 +186,7 @@ In this first block, of HTML, a `select` field is defined with the different `zo
     <select name="zoom" id="zoom">
       <option value="0.5">Extra Small</option>
       <option value="0.75">Small</option>
-      <option value="normal" selected>Normal</option>
+      <option value="1" selected>Normal</option>
       <option value="1.5">Large</option>
       <option value="2">Extra Large</option>
     </select>
@@ -169,13 +194,7 @@ In this first block, of HTML, a `select` field is defined with the different `zo
 </section>
 ```
 
-In this second block a **not supported** message is added that will be hidden if the browser supports `zoom`.
-
-```html
-<p class="zoom-notice">CSS zoom is not supported</p>
-```
-
-The final block just defines the content that will be zoomed.
+We then define the content to be zoomed:
 
 ```html
 <section class="content">
@@ -197,11 +216,11 @@ The final block just defines the content that will be zoomed.
 
 #### CSS
 
-In this first block, of CSS, we are setting the starting value for the `--zoom-level` using [custom properties](/en-US/docs/Web/CSS/Reference/Properties/--*) and then using that as the value for `zoom` on the content block.
+We set the starting `zoom` value for the `.content` section to a `--zoom-level` [custom property](/en-US/docs/Web/CSS/Reference/Properties/--*) that conatins the value `1`:
 
 ```css
-html {
-  --zoom-level: normal;
+:root {
+  --zoom-level: 1;
 }
 .content {
   max-width: 60ch;
@@ -211,42 +230,63 @@ html {
 ```
 
 ```css hidden
-.controls,
-.zoom-notice {
+.controls {
   display: flex;
   justify-content: space-around;
-}
-.zoom-notice {
-  color: red;
-}
-```
-
-In this final CSS block we are checking to see if the browser supports `zoom` and if so setting the **not supported** message to `display: none;`.
-
-```css
-@supports (zoom: 1) {
-  .zoom-notice {
-    display: none;
-  }
 }
 ```
 
 #### JavaScript
 
-This JavaScript watches for a change in the select field and sets the new value for `--zoom-level` on the content `section`, e.g., `style="--zoom-level: 1.5;"`.
+The JavaScript watches for a `change` event on the `<select>` element. When this occurs, we set the `--zoom-level` custom property to equal the selected value:
 
 ```js
 const zoomControl = document.querySelector("#zoom");
-const content = document.querySelector(".content");
 const updateZoom = () => {
-  content.style = `--zoom-level: ${zoomControl.value}`;
+  document.documentElement.style = `--zoom-level: ${zoomControl.value}`;
 };
 zoomControl.addEventListener("change", updateZoom);
 ```
 
+### Animating zoom
+
+This example demonstrates how an element can be smoothly zoomed by combining `zoom` with a transition.
+
+#### HTML
+
+We include a single paragraph:
+
+```html live-sample___zoom-transition
+<p tabindex="0">Zoom transition</p>
+```
+
+#### CSS
+
+We set a {{cssxref("transition")}} on the paragraph so that when its state changes, changes to its `zoom` property value will be smoothly animated over 1 second. We then change its `zoom` value to `1.5` on hover and focus:
+
+```css hidden live-sample___zoom-transition
+p {
+  font-family: sans-serif;
+  background: orange;
+  padding: 10px;
+  width: fit-content;
+}
+```
+
+```css live-sample___zoom-transition
+p {
+  transition: zoom 1s;
+}
+
+p:hover,
+p:focus {
+  zoom: 1.5;
+}
+```
+
 #### Result
 
-{{EmbedLiveSample('creating_a_zoom_control', '550', '280')}}
+{{EmbedLiveSample('zoom-transition', '100%', '120')}}
 
 ## Specifications
 
