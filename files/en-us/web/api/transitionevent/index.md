@@ -7,7 +7,7 @@ browser-compat: api.TransitionEvent
 
 {{APIRef("CSSOM")}}
 
-The **`TransitionEvent`** interface represents events providing information related to [transitions](/en-US/docs/Web/CSS/Guides/Transitions/Using).
+The **`TransitionEvent`** interface of the [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) represents events providing information related to [transitions](/en-US/docs/Web/CSS/Guides/Transitions/Using).
 
 {{InheritanceDiagram}}
 

@@ -7,7 +7,9 @@ browser-compat: api.StyleSheet
 
 {{APIRef("CSSOM")}}
 
-An object implementing the `StyleSheet` interface represents a single style sheet. CSS style sheets will further implement the more specialized {{domxref("CSSStyleSheet")}} interface.
+The **`StyleSheet`** interface of the [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) represents a single style sheet.
+
+CSS style sheets will further implement the more specialized {{domxref("CSSStyleSheet")}} interface.
 
 ## Instance properties
 

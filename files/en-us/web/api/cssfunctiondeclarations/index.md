@@ -9,7 +9,7 @@ browser-compat: api.CSSFunctionDeclarations
 
 {{ APIRef("CSSOM") }}{{SeeCompatTable}}
 
-The **`CSSFunctionDeclarations`** interface of the [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model) represents a consecutive run of CSS declarations included within a {{cssxref("@function")}} body.
+The **`CSSFunctionDeclarations`** interface of the of the [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) represents a consecutive run of CSS declarations included within a {{cssxref("@function")}} body.
 
 This can include [CSS custom properties](/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties), and the value of the `results` descriptor inside the `@function` body, but it doesn't include blocks such as {{cssxref("@media")}} at-rules that may be included. Such a block, included in the middle of a set of declarations, would cause the body contents to be broken up into separate `CSSFunctionDeclarations` objects, as seen in our [Multiple `CSSFunctionDeclarations`](#multiple_cssfunctiondeclarations) demo.
 
