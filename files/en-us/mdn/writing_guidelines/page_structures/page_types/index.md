@@ -99,7 +99,7 @@ It is primarily a _navigation_ page, but also functions as an at-a-glance _refer
 
 There are some instances where multiple APIs exist that are distinct, and are defined in their own specifications, but they closely related and therefore would make sense to cover with a single API landing page.
 For example, the [Generic Sensor API](https://w3c.github.io/sensors/) cover general sensor concerns, but more specific concerns are covered in other APIs such as [Ambient Light Sensor](https://w3c.github.io/ambient-light/), [Motion Sensor](https://w3c.github.io/motion-sensors/), etc.
-In such cases, many of the high level concepts are the same, so it makes no sense to repeat those over multiple landing pages.
+In such cases, many of the high-level concepts are the same, so it makes no sense to repeat those over multiple landing pages.
 In such a case, it would make more sense in terms of repetition and findability to cover them all under a single "Web sensors" landing page.
 
 #### Example
