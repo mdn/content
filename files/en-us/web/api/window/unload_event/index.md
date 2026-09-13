@@ -59,11 +59,42 @@ Especially on mobile, the `unload` event is not reliably fired. For example, the
 2. The user then switches to a different app.
 3. Later, the user closes the browser from the app manager.
 
-Also, the `unload` event is not compatible with the [back/forward cache](https://web.dev/articles/bfcache) (bfcache), because many pages using this event assume that the page will not continue to exist after the event is fired. To combat this, some browsers (such as Firefox) will not place pages in the bfcache if they have unload listeners, and this is bad for performance. Others, such as Chrome, will not fire the `unload` when a user navigates away.
+Also, the `unload` event is not compatible with the [back/forward cache](https://web.dev/articles/bfcache) (bfcache), because many pages using this event assume that the page will not continue to exist after the event is fired. To combat this, some browsers (such as Firefox) will not place pages in the bfcache if they have unload listeners, and this is bad for performance.
 
-The best event to use to signal the end of a user's session is the [`visibilitychange`](/en-US/docs/Web/API/Document/visibilitychange_event) event. In browsers that don't support `visibilitychange` the next-best alternative is the [`pagehide`](/en-US/docs/Web/API/Window/pagehide_event) event, which is also not fired reliably, but which is bfcache-compatible.
+For these reasons, Chrome is [gradually changing its default behavior](https://developer.chrome.com/docs/web-platform/deprecating-unload) so that `unload` listeners are not run at all. A page that still depends on `unload` can opt back in using the `unload` directive of the {{HTTPHeader("Permissions-Policy")}} header:
 
-If you're specifically trying to detect page unload events, it's best to listen for the `pagehide` event.
+```http
+Permissions-Policy: unload=*
+```
+
+Conversely, a page can stop `unload` listeners from running, including those added by third-party scripts, so that it remains eligible for the bfcache:
+
+```http
+Permissions-Policy: unload=()
+```
+
+Instead of `unload`, use the following events, both of which are compatible with the bfcache:
+
+- The [`visibilitychange`](/en-US/docs/Web/API/Document/visibilitychange_event) event, when {{domxref("Document.visibilityState")}} becomes `"hidden"`. This is the last event that is reliably fired, so it is the best place to save application state or send analytics data. Note that it also fires when the user switches to another tab, not only when they leave or close the page.
+- The [`pagehide`](/en-US/docs/Web/API/Window/pagehide_event) event, if you're specifically trying to detect that the user is navigating away from the page. However, like `unload`, it is not reliably fired, especially on mobile, so prefer `visibilitychange` where possible.
+
+For example, instead of sending data in an `unload` listener:
+
+```js example-bad
+window.addEventListener("unload", () => {
+  navigator.sendBeacon("/log", analyticsData);
+});
+```
+
+Send it when the page becomes hidden:
+
+```js example-good
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "hidden") {
+    navigator.sendBeacon("/log", analyticsData);
+  }
+});
+```
 
 See the [Page Lifecycle API](https://developer.chrome.com/docs/web-platform/page-lifecycle-api#the-unload-event) guide for more information about the problems associated with the `unload` event.
 
