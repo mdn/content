@@ -9,9 +9,6 @@ sidebar: cssref
 
 The **`position-try-order`** [CSS](/en-US/docs/Web/CSS) property allows you to prioritize the {{cssxref("position-try-fallbacks")}} option applied to an anchor-positioned element when it first renders, based on which option creates the most space around the element in the given direction.
 
-> [!NOTE]
-> There is also a shorthand property — {{cssxref("position-try")}}, which can be used to specify `position-try-order` and {{cssxref("position-try-fallbacks")}} values in a single declaration.
-
 ## Syntax
 
 ```css
@@ -56,6 +53,8 @@ The browser tests the available `position-try-fallbacks` to find which one gives
 If no position try fallback option is available that provides more width/height than the initial positioning assigned to the element, no position try option will be applied, the same as if `position-try-order` were set to `normal`.
 
 For detailed information on anchor features and position try option usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module and the [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) guide.
+
+The `position-try-order` property, along with the {{cssxref("position-try-fallbacks")}} property, can also be set by using the {{cssxref("position-try")}} shorthand.
 
 ## Formal definition
 

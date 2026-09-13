@@ -13,8 +13,6 @@ sidebar: cssref
 
 The **`column-height`** [CSS](/en-US/docs/Web/CSS) property specifies the height of the columns in a [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout).
 
-The {{cssxref("columns")}} shorthand property can be used to set the `column-height`, {{cssxref("column-count")}}, and {{cssxref("column-width")}} property values in a single declaration.
-
 ## Syntax
 
 ```css
@@ -52,6 +50,8 @@ Without `column-height`, if the height of the multi-col content exceeds the view
 The `column-height` property, along with {{cssxref("column-wrap")}}, allows you to set a specific height for the columns and wrap them onto a new row of columns when the container edge is reached.
 
 The default value of `column-wrap` is `auto`, which resolves to `wrap` when `column-height` is set to a `<length>` value; `wrap` allows the fixed-height columns to wrap onto multiple rows. When `column-height` is equal to `auto`, `column-wrap: auto` resolves to `nowrap`, allowing the columns to overflow horizontally if a fixed container height is set. As a result of this default behavior, generally you don't need to explicitly set the `column-wrap` property.
+
+The `column-height` property, along with the {{cssxref("column-count")}}, and {{cssxref("column-width")}} properties, can also be set by using the {{cssxref("columns")}} shorthand.
 
 ## Formal definition
 

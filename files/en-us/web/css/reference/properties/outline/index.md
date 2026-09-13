@@ -7,7 +7,7 @@ browser-compat: css.properties.outline
 sidebar: cssref
 ---
 
-The **`outline`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets most of the outline properties in a single declaration.
+The **`outline`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets the style, color, and width of an element's outline.
 
 {{InteractiveExample("CSS Demo: outline")}}
 
@@ -79,12 +79,9 @@ outline: revert-layer;
 outline: unset;
 ```
 
-The `outline` property may be specified using one, two, or three of the values listed below. The order of the values does not matter. As with all shorthand properties, any omitted sub-values will be set to their [initial value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value).
-
-> [!NOTE]
-> The outline will be invisible for many elements if its style is not defined. This is because the style defaults to `none`. A notable exception is `input` elements, which are given default styling by browsers.
-
 ### Values
+
+This property is specified as one, two, or three values from the following list:
 
 - `<'outline-width'>`
   - : A {{cssxref("line-width")}} value setting the thickness of the outline. Defaults to `medium` if absent. See {{cssxref("outline-width")}}.
@@ -94,6 +91,12 @@ The `outline` property may be specified using one, two, or three of the values l
   - : Sets the color of the outline. Defaults to `invert` for browsers supporting it, `currentColor` for the others. See {{cssxref("outline-color")}}.
 
 ## Description
+
+The `outline` shorthand property sets the style, color, and width of an element's outline. It may be specified using one, two, or three of the values listed below.
+
+The order of the values does not matter. As with all shorthand properties, any omitted sub-values will be set to their [initial value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value).
+
+The outline will be invisible for many elements if its style is not defined. This is because the style defaults to `none`. A notable exception is `input` elements, which are given default styling by browsers.
 
 Outline is a line outside of the element's [border](/en-US/docs/Web/CSS/Reference/Properties/border). Unlike other areas of the box, outlines don't take up space, so they don't affect the layout of the document in any way.
 
