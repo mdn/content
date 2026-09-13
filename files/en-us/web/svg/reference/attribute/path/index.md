@@ -2,6 +2,9 @@
 title: path
 slug: Web/SVG/Reference/Attribute/path
 page-type: svg-attribute
+browser-compat:
+  - svg.elements.animateMotion.path
+  - svg.elements.textPath.path
 spec-urls:
   - https://w3c.github.io/svgwg/svg2-draft/text.html#TextPathElementPathAttribute
   - https://svgwg.org/specs/animations/#AnimateMotionElementPathAttribute
@@ -95,3 +98,7 @@ For {{SVGElement("textPath")}}, `path` defines the path onto which the {{Glossar
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
