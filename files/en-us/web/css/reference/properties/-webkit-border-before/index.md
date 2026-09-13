@@ -39,7 +39,7 @@ This property is a shorthand for the following CSS properties:
 
 ### Values
 
-One or more of the following, in any order:
+This property is specified as a space-separated list of one to three of the following values:
 
 - `<'border-width'>`
   - : See {{cssxref("border-width")}}

@@ -7,33 +7,43 @@ browser-compat: css.properties.scroll-timeline-name
 sidebar: cssref
 ---
 
-The **`scroll-timeline-name`** [CSS](/en-US/docs/Web/CSS) property is used to define the name of a _named scroll progress timeline_, which is progressed through by scrolling a scrollable element (_scroller_) between top and bottom (or left and right). `scroll-timeline-name` is set on the scroller that will provide the timeline.
-
-The name is then referenced in an {{cssxref("animation-timeline")}} declaration to indicate the container's element that is used to drive the progress of the animation through the scrolling action.
-
-> [!NOTE]
-> If the element does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no timeline will be created.
-
-The {{cssxref("scroll-timeline-axis")}} and `scroll-timeline-name` properties can also be set using the {{cssxref("scroll-timeline")}} shorthand property.
+The **`scroll-timeline-name`** [CSS](/en-US/docs/Web/CSS) property is used to define the name of a [named scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#named_scroll_progress_timelines).
 
 ## Syntax
 
 ```css
+/* Keywords */
 scroll-timeline-name: none;
+
+/* Named timeline */
 scroll-timeline-name: --custom_name_for_timeline;
+
+/* Global values */
+scroll-timeline-name: inherit;
+scroll-timeline-name: initial;
+scroll-timeline-name: revert;
+scroll-timeline-name: revert-layer;
+scroll-timeline-name: unset;
 ```
 
 ### Values
 
-Allowed values for `scroll-timeline-name` are:
+This property is specified as one of the following values:
 
 - `none`
   - : The timeline has no name.
 - `<dashed-ident>`
   - : An arbitrary custom identifier defining a name for a scroll progress timeline, which can then be referenced in an {{cssxref("animation-timeline")}} property.
 
-    > [!NOTE]
-    > {{cssxref("dashed-ident")}} values must start with `--`, which helps avoid name clashes with standard CSS keywords.
+## Description
+
+The `scroll-timeline-name` property is used to define the name of a _named scroll progress timeline_, which is progressed through by scrolling a scrollable element (_scroller_) between top and bottom (or left and right).
+
+The `scroll-timeline-name` property is set on the scroller that will provide the timeline. The name is then referenced in an {{cssxref("animation-timeline")}} declaration to indicate the container's element that is used to drive the progress of the animation through the scrolling action.
+
+If the element does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no timeline will be created.
+
+The `scroll-timeline-name`, along with the {{cssxref("scroll-timeline-axis")}} property, can also be set using the {{cssxref("scroll-timeline")}} shorthand.
 
 ## Formal definition
 
@@ -129,4 +139,5 @@ Scroll the vertical bar to see the square animate as you scroll.
 - {{cssxref("animation-timeline")}}
 - {{cssxref("scroll-timeline")}}, {{cssxref("scroll-timeline-axis")}}
 - {{cssxref("timeline-scope")}}
+- [Scroll-driven animation timelines](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines)
 - [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations)

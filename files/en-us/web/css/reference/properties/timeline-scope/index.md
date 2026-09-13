@@ -30,7 +30,7 @@ timeline-scope: unset;
 
 ### Values
 
-Allowed values for `timeline-scope` are:
+This property is specified either as `none` or `all` or as a comma-separated list of custom name values:
 
 - `none`
   - : There is no change in timeline scope. This is the default.
