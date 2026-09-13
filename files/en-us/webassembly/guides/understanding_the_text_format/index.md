@@ -607,9 +607,9 @@ To see why tables are needed, we need to observe that the `call` instruction we 
 
 WebAssembly needed a type of call instruction to achieve this, so we gave it `call_indirect`, which takes a dynamic function operand. The problem is that the only types we can give operands in WebAssembly are (currently) `i32`/`i64`/`f32`/`f64`.
 
-WebAssembly could add an `anyfunc` type ("any" because the type could hold functions of any signature), but unfortunately, this `anyfunc` type couldn't be stored in linear memory for security reasons. Linear memory exposes the raw contents of stored values as bytes, therefore, Wasm content could arbitrarily observe and corrupt raw function addresses, which is something that cannot be allowed on the web.
+WebAssembly has a [`funcref`](/en-US/docs/WebAssembly/Reference/Value_types/funcref) type (which can hold functions of any signature), but unfortunately, `funcref` types cann't be stored in linear memory for security reasons. Linear memory exposes the raw contents of stored values as bytes, therefore, Wasm content could arbitrarily observe and corrupt raw function addresses, which is something that cannot be allowed on the web.
 
-The solution was to store function references in a table and pass around table indices instead, which are just i32 values. `call_indirect`'s operand can therefore be an i32 index value.
+The solution is to store function references in a table and pass around table indices instead, which are just `i32` values. `call_indirect`'s operand can therefore be an `i32` index value.
 
 #### Defining a table in Wasm
 
@@ -640,7 +640,7 @@ In JavaScript, the equivalent calls to create such a table instance would look s
 ```js
 function module() {
   // table section
-  const tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });
+  const tbl = new WebAssembly.Table({ initial: 2, element: "funcref" });
 
   // function sections:
   const f1 = () => 42; /* some imported WebAssembly function */
@@ -785,7 +785,7 @@ After converting to a WebAssembly binary (Wasm), we then use `shared0.wasm` and 
 const importObj = {
   js: {
     memory: new WebAssembly.Memory({ initial: 1 }),
-    table: new WebAssembly.Table({ initial: 1, element: "anyfunc" }),
+    table: new WebAssembly.Table({ initial: 1, element: "funcref" }),
   },
 };
 
