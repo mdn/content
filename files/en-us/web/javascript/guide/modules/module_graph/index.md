@@ -5,6 +5,24 @@ page-type: guide
 sidebar: jssidebar
 ---
 
+## What is the module graph?
+
+Define modules as nodes and dependencies as directed edges. Include named imports, side-effect imports, and re-exports. Introduce entry modules and shared dependencies. Use one small diamond-shaped graph throughout: main imports a and b, which both import shared.
+
+## The module loading process
+
+### Loading the graph
+
+Walk through resolving a specifier, obtaining and parsing the source, discovering its static dependencies, and recursively loading them. Explain how the host identifies an already-loaded module. Distinguish loading order from execution order; leave URL and package resolution details to the other subpages.
+
+### Linking modules
+
+Explain how imports connect to exported bindings before module bodies execute. Cover missing exports, ambiguous star exports, and why imports are live bindings rather than copied values. Distinguish creating a binding from initializing its value.
+
+### Evaluating modules
+
+Trace the diamond example with logging statements. Explain dependency traversal, side effects, and why the shared dependency runs once. Connect this to import hoisting: moving an import declaration down the file does not postpone its dependency's execution. Loading, linking, and evaluation are distinct operations in the ECMAScript module model.
+
 ## Cyclic imports
 
 Modules can import other modules, and those modules can import other modules, and so on. This forms a [directed graph](https://en.wikipedia.org/wiki/Directed_graph) called the "dependency graph". In an ideal world, this graph is [acyclic](https://en.wikipedia.org/wiki/Directed_acyclic_graph). In this case, the graph can be evaluated using a depth-first traversal.
@@ -92,3 +110,19 @@ You should usually avoid cyclic imports in your project, because they make your 
 - Move some code from one module to the other.
 
 However, cyclic imports can also occur if the libraries depend on each other, which is harder to fix.
+
+## Asynchronous evaluation with top-level await
+
+Extend the running example with one asynchronous dependency. Show which importers wait and which independent branches can proceed. Cover rejected initialization and, briefly, circular waiting involving await import(). The main guide can retain its introductory syntax example.
+
+## Dynamic imports and the graph
+
+Explain when import() starts loading, what must finish before its promise fulfills, and how it can reach an existing module or load additional modules. Contrast conditional loading with static dependencies. Include repeated and concurrent imports.
+
+## Module identity, caching, and failures
+
+Consolidate what "the same module" means: resolved identity, relevant attributes, and separate environments. Distinguish module caching from HTTP caching. Organize errors by phase—resolution/loading, parsing, linking, evaluation—and explain propagation and retry behavior with host-specific qualifications.
+
+## Controlling import phases
+
+Finish with source imports and deferred evaluation as applications of the lifecycle already explained. A comparison table should show what each form loads, links, evaluates, and returns. Link to the detailed references and distinguish implementation availability from the source-import and deferred-evaluation proposals.

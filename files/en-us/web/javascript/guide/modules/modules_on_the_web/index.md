@@ -17,6 +17,47 @@ The server must send JavaScript modules with a JavaScript [MIME type](/en-US/doc
 
 Module requests use [CORS](/en-US/docs/Web/HTTP/Guides/CORS). When importing from another origin, that server must allow your page's origin through its CORS response headers, such as {{HTTPHeader("Access-Control-Allow-Origin")}}.
 
+- Within the same environment, a module is only executed once, even if it has been imported multiple times or referenced in multiple `<script>` tags.
+- There is no need to use the `defer` attribute (see [`<script>` attributes](/en-US/docs/Web/HTML/Reference/Elements/script#attributes)) when loading a module script; module scripts declared in the document without `async` are deferred automatically.
+- You need to pay attention to local testing — if you try to load the HTML file locally (i.e., with a `file://` URL), you'll run into CORS errors due to JavaScript module security requirements. You need to do your testing through a server.
+
+## Applying modules to your HTML
+
+First of all, you need to include `type="module"` in the [`<script>`](/en-US/docs/Web/HTML/Reference/Elements/script) element, to declare this script as a module. To import the `main.js` script, we use this:
+
+```html
+<script type="module" src="main.js"></script>
+```
+
+You can also embed the module's script directly into the HTML file by placing the JavaScript code within the body of the `<script>` element:
+
+```html
+<script type="module">
+  /* JavaScript module code here */
+</script>
+```
+
+You can only use `import` and `export` statements inside modules, not regular scripts. An error will be thrown if your `<script>` element doesn't have the `type="module"` attribute and attempts to import other modules. For example:
+
+```html example-bad
+<script>
+  import _ from "lodash"; // SyntaxError: import declarations may only appear at top level of a module
+  // ...
+</script>
+<script src="a-module-using-import-statements.js"></script>
+<!-- SyntaxError: import declarations may only appear at top level of a module -->
+```
+
+You should generally define all your modules in separate files. Modules declared inline in HTML can only import other modules, but anything they export will not be accessible by other modules (because they don't have a URL).
+
+> [!NOTE]
+> Modules and their dependencies can be preloaded by specifying them in [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link) elements with [`rel="modulepreload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/modulepreload).
+> This can significantly reduce load time when the modules are used.
+
+> [!NOTE]
+> In some module systems, you can use a module specifier like `modules/square` that isn't a relative or absolute path, and that doesn't have a file extension.
+> This kind of specifier can be used in a browser environment if you first define an [import map](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#importing_modules_using_import_maps).
+
 ## Importing modules using import maps
 
 A browser can import a module using a module specifier that is either an absolute URL, or a relative URL that is resolved using the importing module's base URL. For an inline module, this is the document's base URL:
