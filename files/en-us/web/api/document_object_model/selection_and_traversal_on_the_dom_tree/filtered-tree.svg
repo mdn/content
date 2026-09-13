@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="330" viewBox="0 0 880 330">
+  <title>DOM tree and filtered view</title>
+  <desc>Left: a binary tree numbered 1 through 7 in breadth-first order, with nodes 2 and 6 grayed out. Right: the filtered view, with dashed connections from node 1 to nodes 4, 5, and 3, and from node 3 to node 7.</desc>
+  <rect width="880" height="330" fill="#fff" />
+  <path d="M440 30V300" stroke="#d8dee5" stroke-width="1" />
+  <g fill="none" stroke="#687582" stroke-width="2.5">
+    <path d="M230 65 130 165M230 65 330 165M130 165 80 265M130 165 180 265M330 165 280 265M330 165 380 265" />
+    <path d="M650 65 540 165M650 65V165M650 65 760 165M760 165V265" stroke-dasharray="7 6" />
+  </g>
+  <defs>
+  <g id="highlighted-nodes">
+    <circle cx="230" cy="65" r="25" />
+    <circle cx="330" cy="165" r="25" />
+    <circle cx="80" cy="265" r="25" />
+    <circle cx="180" cy="265" r="25" />
+    <circle cx="380" cy="265" r="25" />
+    <circle cx="650" cy="65" r="25" />
+    <circle cx="540" cy="165" r="25" />
+    <circle cx="650" cy="165" r="25" />
+    <circle cx="760" cy="165" r="25" />
+    <circle cx="760" cy="265" r="25" />
+  </g>
+  </defs>
+  <use href="#highlighted-nodes" fill="#fff" />
+  <use href="#highlighted-nodes" fill="#39CAC4" fill-opacity="0.12" stroke="#39CAC4" stroke-width="2.5" />
+  <g fill="#f1f3f5" stroke="#a6afb8" stroke-width="2.5">
+    <circle cx="130" cy="165" r="25" />
+    <circle cx="280" cy="265" r="25" />
+  </g>
+  <g fill="#165d5a" font-family="Arial, Helvetica, sans-serif" font-size="22" text-anchor="middle">
+    <text x="230" y="73">1</text>
+    <text x="130" y="173" fill="#687582">2</text>
+    <text x="330" y="173">3</text>
+    <text x="80" y="273">4</text>
+    <text x="180" y="273">5</text>
+    <text x="280" y="273" fill="#687582">6</text>
+    <text x="380" y="273">7</text>
+    <text x="650" y="73">1</text>
+    <text x="540" y="173">4</text>
+    <text x="650" y="173">5</text>
+    <text x="760" y="173">3</text>
+    <text x="760" y="273">7</text>
+  </g>
+</svg>
