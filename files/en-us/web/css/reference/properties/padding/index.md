@@ -9,8 +9,6 @@ sidebar: cssref
 
 The **`padding`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets the [padding area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#padding_area) on all four sides of an element at once.
 
-An element's padding area is the space between its content and its border.
-
 {{InteractiveExample("CSS Demo: padding")}}
 
 ```css interactive-example-choice
@@ -55,9 +53,6 @@ padding: 0;
   border: dashed 1px;
 }
 ```
-
-> [!NOTE]
-> Padding creates extra space within an element. In contrast, {{cssxref("margin")}} creates extra space _around_ an element.
 
 ## Constituent properties
 
@@ -104,6 +99,13 @@ The `padding` property may be specified using one, two, three, or four values. E
   - : The size of the padding as a fixed value.
 - {{cssxref("&lt;percentage&gt;")}}
   - : The size of the padding as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block).
+
+## Description
+
+An element's padding area is the space between its content and its border.
+
+> [!NOTE]
+> Padding creates extra space within an element. In contrast, {{cssxref("margin")}} creates extra space _around_ an element.
 
 ## Formal definition
 

@@ -11,11 +11,6 @@ sidebar: cssref
 
 The **`fit-content()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) clamps a given size to an available size according to the formula `min(maximum size, max(minimum size, argument))`.
 
-It is distinct from the {{cssxref("fit-content")}} keyword, which takes no argument and sizes a box based on its content within the available space.
-Only `fit-content()` is valid in grid track sizing properties such as {{cssxref("grid-template-columns")}}.
-
-The function can be used as a track size in [CSS grid](/en-US/docs/Web/CSS/Guides/Grid_layout) properties, where the maximum size is defined by `max-content` and the minimum size by `auto`, which is calculated similar to `auto` (i.e., [`minmax(auto, max-content)`](/en-US/docs/Web/CSS/Reference/Values/minmax)), except that the track size is clamped at _argument_ if it is greater than the `auto` minimum.
-
 {{InteractiveExample("CSS Demo: fit-content()")}}
 
 ```css interactive-example-choice
@@ -59,10 +54,6 @@ grid-template-columns: fit-content(40%) fit-content(40%) 1fr;
 }
 ```
 
-See the {{cssxref("grid-template-columns")}} page for more information on the `max-content` and `auto` keywords.
-
-The `fit-content()` function can also be used as laid out box size for {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} and {{cssxref("max-height")}}, where the maximum and minimum sizes refer to the content size.
-
 ## Syntax
 
 ```css
@@ -84,6 +75,17 @@ fit-content(40%)
   - : A percentage relative to the available space in the given axis.
 
     In grid properties it is relative to the inline size of the grid container in column tracks and to the block size of the grid container for row tracks. Otherwise it is relative to the available inline size or block size of the laid out box depending on the writing mode.
+
+## Description
+
+It is distinct from the {{cssxref("fit-content")}} keyword, which takes no argument and sizes a box based on its content within the available space.
+Only `fit-content()` is valid in grid track sizing properties such as {{cssxref("grid-template-columns")}}.
+
+The function can be used as a track size in [CSS grid](/en-US/docs/Web/CSS/Guides/Grid_layout) properties, where the maximum size is defined by `max-content` and the minimum size by `auto`, which is calculated similar to `auto` (i.e., [`minmax(auto, max-content)`](/en-US/docs/Web/CSS/Reference/Values/minmax)), except that the track size is clamped at _argument_ if it is greater than the `auto` minimum.
+
+See the {{cssxref("grid-template-columns")}} page for more information on the `max-content` and `auto` keywords.
+
+The `fit-content()` function can also be used as laid out box size for {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} and {{cssxref("max-height")}}, where the maximum and minimum sizes refer to the content size.
 
 ## Formal syntax
 

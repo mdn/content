@@ -9,8 +9,6 @@ sidebar: cssref
 
 The **`font-family`** [CSS](/en-US/docs/Web/CSS) property specifies a prioritized list of one or more font family names and/or generic family names for the selected element.
 
-Values are separated by commas to indicate that they are alternatives. The browser will select the first font in the list that is installed or that can be downloaded using a {{CSSxRef("@font-face")}} at-rule.
-
 {{InteractiveExample("CSS Demo: font-family")}}
 
 ```css interactive-example-choice
@@ -54,12 +52,6 @@ section {
   font-size: 1.2em;
 }
 ```
-
-It is often convenient to use the shorthand property {{CSSxRef("font")}} to set `font-size` and other font related properties all at once.
-
-You should always include at least one generic family name in a `font-family` list, since there's no guarantee that any given font is available. This lets the browser select an acceptable fallback font when necessary.
-
-The `font-family` property specifies a list of fonts, from highest priority to lowest. Font selection _does not_ stop at the first font in the list that is on the user's system. Rather, font selection is done _one character at a time_, so that if an available font does not have a glyph for a needed character, the latter fonts are tried. When a font is only available in some [styles](/en-US/docs/Web/CSS/Reference/Properties/font-style), [variants](/en-US/docs/Web/CSS/Reference/Properties/font-variant), or [sizes](/en-US/docs/Web/CSS/Reference/Properties/font-size), those properties may also influence which font family is chosen.
 
 ## Syntax
 
@@ -154,6 +146,16 @@ font-family: "Gill Sans Extrabold", sans-serif;
         UA stylesheets may set `math { font-family: math }` so that the {{MathMLElement("math")}} element uses appropriate fonts by default.
     - `fangsong`
       - : A particular style of Chinese characters that are between serif-style Song and cursive-style Kai forms. This style is often used for government documents.
+
+## Description
+
+Values are separated by commas to indicate that they are alternatives. The browser will select the first font in the list that is installed or that can be downloaded using a {{CSSxRef("@font-face")}} at-rule.
+
+It is often convenient to use the shorthand property {{CSSxRef("font")}} to set `font-size` and other font related properties all at once.
+
+You should always include at least one generic family name in a `font-family` list, since there's no guarantee that any given font is available. This lets the browser select an acceptable fallback font when necessary.
+
+The `font-family` property specifies a list of fonts, from highest priority to lowest. Font selection _does not_ stop at the first font in the list that is on the user's system. Rather, font selection is done _one character at a time_, so that if an available font does not have a glyph for a needed character, the latter fonts are tried. When a font is only available in some [styles](/en-US/docs/Web/CSS/Reference/Properties/font-style), [variants](/en-US/docs/Web/CSS/Reference/Properties/font-variant), or [sizes](/en-US/docs/Web/CSS/Reference/Properties/font-size), those properties may also influence which font family is chosen.
 
 ## Formal definition
 

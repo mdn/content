@@ -10,12 +10,6 @@ sidebar: cssref
 The **`rotate3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) defines a transformation that rotates an element around a
 fixed axis in 3D space, without deforming it. Its result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-In 3D space, rotations have three degrees of freedom, which together describe a single axis of rotation. The axis of
-rotation is defined by an \[x, y, z] vector and pass by the origin (as defined by the {{ cssxref("transform-origin") }}
-property). If, as specified, the vector is not _normalized_ (i.e., if the sum of the square of its three
-coordinates is not 1), the {{glossary("user agent")}} will normalize it internally. A non-normalizable vector, such as
-the null vector, \[0, 0, 0], will cause the rotation to be ignored, but without invalidating the whole CSS property.
-
 {{InteractiveExample("CSS Demo: rotate3d()")}}
 
 ```css interactive-example-choice
@@ -102,10 +96,6 @@ transform: rotate3d(0, 1, 0.5, 3.142rad);
 }
 ```
 
-> [!NOTE]
-> Unlike rotations in the 2D plane, the composition of 3D rotations is usually
-> not commutative. In other words, the order in which the rotations are applied impacts the result.
-
 ## Syntax
 
 ```css
@@ -156,6 +146,18 @@ rotate3d(x, y, z, a)
     </tr>
   </tbody>
 </table>
+
+## Description
+
+In 3D space, rotations have three degrees of freedom, which together describe a single axis of rotation. The axis of
+rotation is defined by an \[x, y, z] vector and pass by the origin (as defined by the {{ cssxref("transform-origin") }}
+property). If, as specified, the vector is not _normalized_ (i.e., if the sum of the square of its three
+coordinates is not 1), the {{glossary("user agent")}} will normalize it internally. A non-normalizable vector, such as
+the null vector, \[0, 0, 0], will cause the rotation to be ignored, but without invalidating the whole CSS property.
+
+> [!NOTE]
+> Unlike rotations in the 2D plane, the composition of 3D rotations is usually
+> not commutative. In other words, the order in which the rotations are applied impacts the result.
 
 ## Formal syntax
 

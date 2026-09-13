@@ -9,9 +9,6 @@ sidebar: cssref
 
 The **`:nth-child()`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) matches elements based on the indexes of the elements in the child list of their parents. In other words, the `:nth-child()` selector selects child elements according to their position among all the sibling elements within a parent element.
 
-> [!NOTE]
-> In the `element:nth-child()` syntax, the child count includes sibling children of any element type; but it is considered a match only if the element _at that child position_ matches the other components of the selector.
-
 {{InteractiveExample("CSS Demo: :nth-child", "tabbed-shorter")}}
 
 ```css interactive-example
@@ -99,6 +96,11 @@ li.important:nth-child(-n + 3) {
 ```
 
 This selector selects list items if they are among the first three children and match the selector `li.important`.
+
+## Description
+
+> [!NOTE]
+> In the `element:nth-child()` syntax, the child count includes sibling children of any element type; but it is considered a match only if the element _at that child position_ matches the other components of the selector.
 
 ## Examples
 

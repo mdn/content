@@ -9,7 +9,8 @@ sidebar: cssref
 
 The **`unicode-bidi`** [CSS](/en-US/docs/Web/CSS) property, together with the {{cssxref("direction")}} property, determines how bidirectional text in a document is handled. For example, if a block of content contains both left-to-right and right-to-left text, the user-agent uses a complex Unicode algorithm to decide how to display the text. The `unicode-bidi` property overrides this algorithm and allows the developer to control the text embedding.
 
-The `unicode-bidi` and {{cssxref("direction")}} properties are the only properties that are not affected by the {{cssxref("all")}} shorthand.
+> [!WARNING]
+> This property is intended for Document Type Definition (DTD) designers. Web designers and similar authors **should not** override it.
 
 {{InteractiveExample("CSS Demo: unicode-bidi")}}
 
@@ -36,9 +37,6 @@ unicode-bidi: isolate-override;
   </p>
 </section>
 ```
-
-> [!WARNING]
-> This property is intended for Document Type Definition (DTD) designers. Web designers and similar authors **should not** override it.
 
 ## Syntax
 
@@ -74,6 +72,10 @@ unicode-bidi: unset;
 - `plaintext`
   - : This keyword makes the elements directionality calculated without considering its parent bidirectional state or the value of the {{cssxref("direction")}} property. The directionality is calculated using the P2 and P3 rules of the Unicode Bidirectional Algorithm.
     This value allows the display of data that is already formatted using a tool following the Unicode Bidirectional Algorithm.
+
+## Description
+
+The `unicode-bidi` and {{cssxref("direction")}} properties are the only properties that are not affected by the {{cssxref("all")}} shorthand.
 
 ## Formal definition
 

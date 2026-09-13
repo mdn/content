@@ -10,11 +10,6 @@ sidebar: cssref
 The **`translateY()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) repositions an element vertically on the 2D plane. Its result
 is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-> [!NOTE]
-> `translateY(ty)` is equivalent to
-> `translate(0, ty)` or
-> `translate3d(0, ty, 0)`.
-
 {{InteractiveExample("CSS Demo: translateY()")}}
 
 ```css interactive-example-choice
@@ -111,6 +106,13 @@ transform: translateY(50%);
     </tr>
   </tbody>
 </table>
+
+## Description
+
+> [!NOTE]
+> `translateY(ty)` is equivalent to
+> `translate(0, ty)` or
+> `translate3d(0, ty, 0)`.
 
 ## Formal syntax
 

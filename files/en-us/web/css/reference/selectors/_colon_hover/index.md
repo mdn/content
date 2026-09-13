@@ -9,8 +9,6 @@ sidebar: cssref
 
 The **`:hover`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) matches an element when a user interacts with it using a pointing device. The pseudo-class is generally triggered when the user moves the cursor (mouse pointer) over an element without pressing the mouse button.
 
-Styles defined by the `:hover` pseudo-class will be overridden by any subsequent link-related pseudo-class ({{ cssxref(":link") }}, {{ cssxref(":visited") }}, or {{ cssxref(":active") }}) that has at least equal specificity. To style links appropriately, put the `:hover` rule after the `:link` and `:visited` rules but before the `:active` one, as defined by the _LVHA-order_: `:link` — `:visited` — `:hover` — `:active`.
-
 {{InteractiveExample("CSS Demo: :hover", "tabbed-shorter")}}
 
 ```css interactive-example
@@ -35,9 +33,6 @@ Styles defined by the `:hover` pseudo-class will be overridden by any subsequent
 <button class="joinBtn">Confirm</button>
 ```
 
-> [!NOTE]
-> The `:hover` pseudo-class is problematic on touchscreens. Depending on the browser, the `:hover` pseudo-class might never match, match only for a moment after touching an element, or continue to match even after the user has stopped touching and until the user touches another element. Web developers should make sure that content is accessible on devices with limited or non-existent hovering capabilities.
-
 ## Syntax
 
 ```css
@@ -45,6 +40,13 @@ Styles defined by the `:hover` pseudo-class will be overridden by any subsequent
   /* ... */
 }
 ```
+
+## Description
+
+Styles defined by the `:hover` pseudo-class will be overridden by any subsequent link-related pseudo-class ({{ cssxref(":link") }}, {{ cssxref(":visited") }}, or {{ cssxref(":active") }}) that has at least equal specificity. To style links appropriately, put the `:hover` rule after the `:link` and `:visited` rules but before the `:active` one, as defined by the _LVHA-order_: `:link` — `:visited` — `:hover` — `:active`.
+
+> [!NOTE]
+> The `:hover` pseudo-class is problematic on touchscreens. Depending on the browser, the `:hover` pseudo-class might never match, match only for a moment after touching an element, or continue to match even after the user has stopped touching and until the user touches another element. Web developers should make sure that content is accessible on devices with limited or non-existent hovering capabilities.
 
 ## Examples
 

@@ -10,11 +10,6 @@ sidebar: cssref
 The **`translateX()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) repositions an element horizontally on the 2D plane. Its
 result is a {{cssxref("&lt;transform-function&gt;")}} data type.
 
-> [!NOTE]
-> `translateX(tx)` is equivalent to
-> `translate(tx, 0)` or
-> `translate3d(tx, 0, 0)`.
-
 {{InteractiveExample("CSS Demo: translateX()")}}
 
 ```css interactive-example-choice
@@ -111,6 +106,13 @@ transform: translateX(50%);
     </tr>
   </tbody>
 </table>
+
+## Description
+
+> [!NOTE]
+> `translateX(tx)` is equivalent to
+> `translate(tx, 0)` or
+> `translate3d(tx, 0, 0)`.
 
 ## Formal syntax
 

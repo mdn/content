@@ -9,11 +9,6 @@ sidebar: cssref
 
 The **`grid`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets all of the explicit and implicit grid properties in a single declaration.
 
-Using `grid` you specify one axis using {{cssxref("grid-template-rows")}} or {{cssxref("grid-template-columns")}}, you then specify how content should auto-repeat in the other axis using the implicit grid properties: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, and {{cssxref("grid-auto-flow")}}.
-
-> [!NOTE]
-> The sub-properties you don't specify are set to their initial value, as normal for shorthands. Also, the gutter properties are NOT reset by this shorthand.
-
 {{InteractiveExample("CSS Demo: grid")}}
 
 ```css interactive-example-choice
@@ -125,6 +120,13 @@ grid: unset;
   - : Sets up an auto-flow by setting the column tracks explicitly via the {{cssxref("grid-template-columns")}} property (and the {{cssxref("grid-template-rows")}} property to `none`) and specifying how to auto-repeat the row tracks via {{cssxref("grid-auto-rows")}} (and setting {{cssxref("grid-auto-columns")}} to `auto`). {{cssxref("grid-auto-flow")}} is also set to `row` accordingly, with `dense` if it's specified.
 
     All other `grid` sub-properties are reset to their initial values.
+
+## Description
+
+Using `grid` you specify one axis using {{cssxref("grid-template-rows")}} or {{cssxref("grid-template-columns")}}, you then specify how content should auto-repeat in the other axis using the implicit grid properties: {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, and {{cssxref("grid-auto-flow")}}.
+
+> [!NOTE]
+> The sub-properties you don't specify are set to their initial value, as normal for shorthands. Also, the gutter properties are NOT reset by this shorthand.
 
 ## Formal definition
 

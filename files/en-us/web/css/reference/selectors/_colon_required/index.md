@@ -9,8 +9,6 @@ sidebar: cssref
 
 The **`:required`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents any {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element that has the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#required) attribute set on it.
 
-This pseudo-class is useful for highlighting fields that must have valid data before a form can be submitted.
-
 {{InteractiveExample("CSS Demo: :required", "tabbed-standard")}}
 
 ```css interactive-example
@@ -48,9 +46,6 @@ label {
 </form>
 ```
 
-> [!NOTE]
-> The {{cssxref(":optional")}} pseudo-class selects _optional_ form fields.
-
 ## Syntax
 
 ```css
@@ -58,6 +53,13 @@ label {
   /* ... */
 }
 ```
+
+## Description
+
+This pseudo-class is useful for highlighting fields that must have valid data before a form can be submitted.
+
+> [!NOTE]
+> The {{cssxref(":optional")}} pseudo-class selects _optional_ form fields.
 
 ## Accessibility
 

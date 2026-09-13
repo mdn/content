@@ -10,9 +10,6 @@ sidebar: cssref
 The **`translate3d()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Reference/Values/Functions) repositions an element in 3D space. Its result is a
 {{cssxref("&lt;transform-function&gt;")}} data type.
 
-This transformation is characterized by a three-dimensional vector [tx, ty, tz]. Its coordinates define how much the element moves
-in each direction.
-
 {{InteractiveExample("CSS Demo: translate3d()")}}
 
 ```css interactive-example-choice
@@ -146,6 +143,11 @@ translate3d(tx, ty, tz)
     </tr>
   </tbody>
 </table>
+
+## Description
+
+This transformation is characterized by a three-dimensional vector [tx, ty, tz]. Its coordinates define how much the element moves
+in each direction.
 
 ## Formal syntax
 
