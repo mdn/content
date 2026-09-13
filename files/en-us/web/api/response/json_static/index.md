@@ -39,7 +39,8 @@ Response.json(data, options)
 
 ### Return value
 
-A {{domxref("Response")}} object.
+A {{domxref("Response")}} object whose {{domxref("Response.headers", "headers")}} are mutable.
+This differs from responses returned by {{domxref("Window.fetch", "fetch()")}}, whose headers are immutable.
 
 ### Exceptions
 
@@ -81,11 +82,12 @@ The code below creates a `Response` object with JSON body `{ my: "data" }` and h
 
 ```js
 const jsonResponse = Response.json({ my: "data" });
+jsonResponse.headers.set("Cache-Control", "no-cache");
 logResponse(jsonResponse);
 ```
 
 The object has the following properties.
-Note the body and header are set as expected, and that the default status is set to `200`.
+Note that the body and headers are set as expected, including the added `Cache-Control` header, and that the default status is set to `200`.
 
 {{EmbedLiveSample('Response with JSON data','100%', '170')}}
 
