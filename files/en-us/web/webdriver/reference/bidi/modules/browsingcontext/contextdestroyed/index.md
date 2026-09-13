@@ -7,11 +7,11 @@ browser-compat: webdriver.bidi.browsingContext.contextDestroyed_event
 sidebar: webdriver
 ---
 
-The `browsingContext.contextDestroyed` [event](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#events) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module fires when a context is discarded from the browser, such as when a tab is closed or when an `<iframe>` is removed from the DOM.
+The `browsingContext.contextDestroyed` [event](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#events) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module fires when a [context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#contexts) is discarded from the browser, such as when a tab is closed or when an `<iframe>` is removed from the DOM.
 
 ## Event data
 
-The `params` field in the event notification is a [context object](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree#contexts) with the following fields, describing the discarded context and its subtree:
+The `params` field in the event notification is a context object with the following fields, describing the discarded context and its subtree:
 
 - `children`
   - : An array of [context objects](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree#contexts) that represents child contexts.

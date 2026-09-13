@@ -7,11 +7,11 @@ browser-compat: webdriver.bidi.browsingContext.contextCreated_event
 sidebar: webdriver
 ---
 
-The `browsingContext.contextCreated` [event](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#events) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module fires when a new context is created in the browser.
+The `browsingContext.contextCreated` [event](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules#events) of the [`browsingContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext) module fires when a new [context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#contexts) is created in the browser.
 
 ## Event data
 
-The `params` field in the event notification is a [context object](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree#contexts) with the following fields:
+The `params` field in the event notification is a context object with the following fields:
 
 - `children`
   - : An array of [context objects](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree#contexts) that represents child contexts.
