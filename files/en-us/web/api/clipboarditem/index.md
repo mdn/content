@@ -7,9 +7,13 @@ browser-compat: api.ClipboardItem
 
 {{APIRef("Clipboard API")}}{{SecureContext_Header}}
 
-The **`ClipboardItem`** interface of the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) represents a single item format, used when reading or writing clipboard data using {{domxref("Clipboard.read()")}} and {{domxref("Clipboard.write()")}} respectively.
+The **`ClipboardItem`** interface of the [Clipboard API](/en-US/docs/Web/API/Clipboard_API) represents a single item of data copied to, or read from, the clipboard, used with {{domxref("Clipboard.read()")}} and {{domxref("Clipboard.write()")}} respectively.
 
-The **`ClipboardItem`** interface enables developers to use a single type to represent a range of different data formats.
+A single `ClipboardItem` can hold several representations of that data at once, each identified by a different {{Glossary("MIME type")}} — for example, some copied rich text might be stored as both `text/html` and `text/plain`.
+
+When constructing a `ClipboardItem`, these representations are provided as MIME-type-keyed properties of a single object; see {{domxref("ClipboardItem.ClipboardItem", "ClipboardItem()")}} for details.
+
+When reading a `ClipboardItem`, its available formats are listed in {{domxref("ClipboardItem.types", "types")}}, and each one is retrieved individually with {{domxref("ClipboardItem.getType", "getType()")}}.
 
 > [!NOTE]
 > The `read()` and `write()` methods can be used to work with text strings and arbitrary data items represented by {{domxref("Blob")}} instances. However, if you are solely working with text, it is more convenient to use the {{domxref("Clipboard.readText()")}} and {{domxref("Clipboard.writeText()")}} methods.
@@ -22,7 +26,7 @@ The **`ClipboardItem`** interface enables developers to use a single type to rep
 ## Instance properties
 
 - {{domxref("ClipboardItem.types", "types")}} {{ReadOnlyInline}}
-  - : Returns an {{jsxref("Array")}} of MIME types available within the **`ClipboardItem`**.
+  - : Returns an {{jsxref("Array")}} of {{Glossary("MIME type", "MIME types")}}, one for each representation of the data in the `ClipboardItem`.
 - {{domxref("ClipboardItem.presentationStyle", "presentationStyle")}} {{ReadOnlyInline}}
   - : Returns one of the following: `"unspecified"`, `"inline"` or `"attachment"`.
 
@@ -94,7 +98,9 @@ async function writeClipImg() {
 ### Reading from the clipboard
 
 Here we're returning all items on the clipboard via the {{domxref("clipboard.read()")}} method.
-Then utilizing the {{domxref("ClipboardItem.types")}} property to set the {{domxref("ClipboardItem.getType", "getType()")}} argument and return the corresponding blob object.
+Then using the {{domxref("ClipboardItem.types")}} property to set the {{domxref("ClipboardItem.getType", "getType()")}} argument and return the corresponding blob object.
+
+Each `clipboardItem` here may itself list several MIME types in `types`, since a single clipboard entry can carry multiple format representations at once.
 
 ```js
 async function getClipboardContents() {
@@ -102,10 +108,11 @@ async function getClipboardContents() {
     const clipboardItems = await navigator.clipboard.read();
 
     for (const clipboardItem of clipboardItems) {
+      const formats = {};
       for (const type of clipboardItem.types) {
-        const blob = await clipboardItem.getType(type);
-        // we can now use blob here
+        formats[type] = await clipboardItem.getType(type);
       }
+      console.log(formats); // e.g. { "text/html": Blob, "text/plain": Blob }
     }
   } catch (err) {
     console.error(err.name, err.message);
@@ -123,6 +130,8 @@ async function getClipboardContents() {
 
 ## See also
 
+- {{domxref("Clipboard.read()")}}
+- {{domxref("Clipboard.write()")}}
 - {{domxref("ClipboardChangeEvent")}}
 - [Clipboard API](/en-US/docs/Web/API/Clipboard_API)
 - [Image support for Async Clipboard article](https://web.dev/articles/async-clipboard)

@@ -26,8 +26,10 @@ new ClipboardItem(data, options)
 ### Parameters
 
 - `data`
-  - : An {{jsxref("Object")}} with the {{Glossary("MIME type")}} as the key and data as the value.
-    The data can be represented as one of the following:
+  - : An {{jsxref("Object")}} with one or more properties, each representing a different format of the same clipboard entry.
+    The key of each property is a {{Glossary("MIME type")}}, such as `"text/plain"` or `"text/html"`, and its value is the data for that format.
+
+    Each value can be represented as one of the following:
     - a {{domxref("Blob")}}
     - a string
     - a {{jsxref("Promise")}} that resolves to either a `Blob` or string.
@@ -41,11 +43,14 @@ new ClipboardItem(data, options)
 
 ## Examples
 
-The below example requests a PNG image using {{domxref("Window/fetch", "fetch()")}}, and in turn, the {{domxref("Response.blob()")}} method, to create a new {{domxref("ClipboardItem")}}.
+The following example requests a PNG image using {{domxref("Window/fetch", "fetch()")}} uses it, via the {{domxref("Response.blob()")}} method, to create a new {{domxref("ClipboardItem")}}.
 This item is then written to the clipboard, using the {{domxref("Clipboard.write()")}} method.
 
+For an example that writes and reads back several MIME-type representations in one `ClipboardItem`, see [Reading multiple formats from the clipboard](/en-US/docs/Web/API/Clipboard/read#reading_multiple_formats_from_the_clipboard).
+
 > [!NOTE]
-> You can only pass in one clipboard item at a time.
+> {{domxref("Clipboard.write()")}} takes an array of `ClipboardItem` objects, but only the first item in the array is guaranteed to be used.
+> To give a single clipboard entry multiple formats, add more MIME-type keys to the `data` object passed into one `ClipboardItem()` call, rather than adding more items to the array.
 
 ```js
 async function writeClipImg() {

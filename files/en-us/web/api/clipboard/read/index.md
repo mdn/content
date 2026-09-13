@@ -8,10 +8,10 @@ browser-compat: api.Clipboard.read
 
 {{APIRef("Clipboard API")}} {{securecontext_header}}
 
-The **`read()`** method of the {{domxref("Clipboard")}} interface requests a copy of the clipboard's contents, fulfilling the returned {{jsxref("Promise")}} with the data.
+The **`read()`** method of the {{domxref("Clipboard")}} interface returns a {{jsxref("Promise")}} that fulfills with a copy of the clipboard's contents.
 
-The method can in theory return arbitrary data (unlike {{domxref("Clipboard.readText", "readText()")}}, which can only return text).
-Browsers commonly support reading text, HTML, and PNG image data.
+Each item from the clipboard can provide different representations of the copied object, allowing apps to handle the types they understand, and gracefully fallback for types they don't.
+This is more flexible than {{domxref("Clipboard.readText", "readText()")}}, which can only return text.
 
 ## Syntax
 
@@ -38,6 +38,16 @@ A {{jsxref("Promise")}} that resolves with an array of {{domxref("ClipboardItem"
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if the reading from the clipboard is not allowed.
 
+## Description
+
+The resolved promise is an array of {{domxref("ClipboardItem")}} instances representing the different items read from the clipboard.
+Each `ClipboardItem` can contain one or more representations of the copied object, keyed by [media type](/en-US/docs/Web/HTTP/Guides/MIME_types).
+A web app reads the formats in an item and selects the best representation that it understands.
+For example, an item for a custom data type on the clipboard might include the custom representation, a version in HTML, and a plain text version.
+An app that understands the format can fully comprehend it, while one that doesn't might still be able to use the text or HTML version.
+
+Browsers commonly support reading text, HTML, and PNG image data, and may support web custom formats (see [browser compatibility](#browser_compatibility) below).
+
 ## Security considerations
 
 Reading from the clipboard can only be done in a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
@@ -45,6 +55,110 @@ Reading from the clipboard can only be done in a [secure context](/en-US/docs/We
 Additional security requirements are covered in the [Security consideration](/en-US/docs/Web/API/Clipboard_API#security_considerations) section of the API overview topic.
 
 ## Examples
+
+### Reading multiple formats from the clipboard
+
+This example copies text to the clipboard as a single {{domxref("ClipboardItem")}} with two format representations: `text/html` and `text/plain`, and then reads them back.
+It then reads the clipboard back with `read()` and lists the returned formats.
+
+#### HTML
+
+First we define the `source` element which contains the HTML that we'll copy.
+Below that are the buttons that will be used to copy the HTML and to read (and log) the returned clipboard items.
+
+```html
+<div id="source">
+  <p><strong>Bold</strong> and <em>italic</em> text.</p>
+</div>
+<button id="copy" type="button">Copy (HTML + plain text)</button>
+<button id="inspect" type="button">Read clipboard item</button>
+```
+
+Note that there is also hidden code for a logging panel below the buttons, which is not relevant to the example.
+
+```html hidden
+<pre id="log"></pre>
+```
+
+```css hidden
+#source {
+  border: 1px solid black;
+  padding: 0.5rem;
+  width: fit-content;
+}
+
+#log {
+  height: 100px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+  white-space: pre-wrap;
+}
+```
+
+#### JavaScript
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${logElement.innerText}${text}\n`;
+  logElement.scrollTop = logElement.scrollHeight;
+}
+```
+
+The "Copy" button constructs one `ClipboardItem` with two MIME-type keys, `text/html` and `text/plain`, and writes it as a single clipboard entry.
+
+```js
+const sourceElement = document.querySelector("#source");
+const copyButton = document.querySelector("#copy");
+
+copyButton.addEventListener("click", async () => {
+  const html = sourceElement.innerHTML;
+  const text = sourceElement.innerText;
+  try {
+    const clipboardItem = new ClipboardItem({
+      "text/html": new Blob([html], { type: "text/html" }),
+      "text/plain": new Blob([text], { type: "text/plain" }),
+    });
+    await navigator.clipboard.write([clipboardItem]);
+    log("Copied one ClipboardItem with two formats: text/html and text/plain.");
+  } catch (error) {
+    log(`Copy failed: ${error.message}`);
+  }
+});
+```
+
+The "Read" button calls `read()`, then logs every MIME type each returned `ClipboardItem` carries, fetching each format's data with `getType()`.
+
+```js
+const inspectButton = document.querySelector("#inspect");
+
+inspectButton.addEventListener("click", async () => {
+  try {
+    const clipboardItems = await navigator.clipboard.read();
+    for (const clipboardItem of clipboardItems) {
+      log(`ClipboardItem contains: ${clipboardItem.types.join(", ")}`);
+      for (const type of clipboardItem.types) {
+        const blob = await clipboardItem.getType(type);
+        const text = await blob.text();
+        log(`  ${type} → ${text}`);
+      }
+    }
+  } catch (error) {
+    log(`Read failed: ${error.message}`);
+  }
+});
+```
+
+#### Result
+
+First click the Copy button to copy the element as both text and HTML.
+Then click "Read clipboard item" to read it back and list the formats in the item.
+
+{{EmbedLiveSample("Reading multiple formats from the clipboard", "100%", "320", "", "", "", "clipboard-read; clipboard-write")}}
+
+> [!NOTE]
+> If prompted, grant permission in order to copy and paste.
 
 ### Reading image data from clipboard
 
@@ -54,7 +168,10 @@ This example uses the `read()` method to read image data from the clipboard and 
 
 ```html
 <img id="source" src="butterfly.jpg" alt="A butterfly" />
-<img id="destination" src="" alt="Pasted image" />
+<img
+  id="destination"
+  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+  alt="Pasted image" />
 <button id="reload" type="button">Reload</button>
 <p id="log"></p>
 ```
