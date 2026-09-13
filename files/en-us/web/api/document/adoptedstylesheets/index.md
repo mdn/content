@@ -11,7 +11,7 @@ browser-compat: api.Document.adoptedStyleSheets
 The **`adoptedStyleSheets`** property of the {{domxref("Document")}} interface is used for setting an array of constructed stylesheets to be used by the document.
 
 > [!NOTE]
-> A constructed stylesheet is a stylesheet created programmatically using the [`CSSStyleSheet()` constructor](/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet) (as compared to one created by a user-agent when importing a stylesheet from a script, imported using {{HTMLElement('style')}} and {{CSSXref('@import')}}, or linked to via {{HTMLElement('link')}}).
+> A constructed stylesheet is a stylesheet created for adoption (as compared to one associated with the document via {{HTMLElement('link')}}, {{HTMLElement('style')}}, or {{CSSXref('@import')}}). You can create one using the [`CSSStyleSheet()` constructor](/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet) or by [importing a CSS module](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#css_modules_type_css).
 
 The same constructed stylesheets can also be shared with one or more {{domxref("ShadowRoot")}} instances using the [`ShadowRoot.adoptedStyleSheets`](/en-US/docs/Web/API/ShadowRoot/adoptedStyleSheets) property.
 Changing an adopted stylesheet will affect all the objects that adopt it.
@@ -19,11 +19,11 @@ Changing an adopted stylesheet will affect all the objects that adopt it.
 Stylesheets in the property are evaluated along with the document's other stylesheets using the [CSS cascade algorithm](/en-US/docs/Web/CSS/Guides/Cascade/Introduction).
 Where the resolution of rules considers stylesheet order, `adoptedStyleSheets` are assumed to be ordered after those in [`Document.styleSheets`](/en-US/docs/Web/API/Document/styleSheets).
 
-Only stylesheets created using the [`CSSStyleSheet()` constructor](/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet) within the context of the current {{domxref("Document")}} may be adopted.
+Only constructed stylesheets within the context of the current {{domxref("Document")}} may be adopted. You may create constructed stylesheets using the {{domxref("CSSStyleSheet.CSSStyleSheet()", "CSSStyleSheet()")}} constructor or by [importing them as CSS modules](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#css_modules_type_css).
 
 ## Value
 
-The value is an array of {{domxref("CSSStyleSheet")}} instances that must have been created using the {{domxref("CSSStyleSheet.CSSStyleSheet()", "CSSStyleSheet()")}} constructor within the context of the same {{domxref("Document")}}.
+The value is an array of {{domxref("CSSStyleSheet")}} instances that must be constructed stylesheets from within the context of the same {{domxref("Document")}}.
 
 If the array needs to be modified, use in-place mutations like `push()`. The {{domxref("CSSStyleSheet")}} instances themselves can also be modified, and these changes will apply wherever the stylesheet is adopted.
 
@@ -32,7 +32,7 @@ In an earlier version of the specification, the array was not modifiable, so the
 ### Exceptions
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : One of the {{domxref("CSSStyleSheet")}} instances in the array was not created using the [`CSSStyleSheet()` constructor](/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet) or was constructed in a different document than the current document, such as one in a frame.
+  - : One of the {{domxref("CSSStyleSheet")}} instances in the array was not a constructed stylesheet or was created in a different document than the current document, such as one in a frame.
 
 ## Examples
 
