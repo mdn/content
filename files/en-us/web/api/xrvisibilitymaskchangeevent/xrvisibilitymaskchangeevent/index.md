@@ -29,11 +29,11 @@ new XRVisibilityMaskChangeEvent(type, options)
     - `index`
       - : The index of the current {{domxref("XRView")}} in the {{domxref("XRViewerPose.views")}} array.
     - `indices`
-      - : A {{domxref("Uint32Array")}} of values specifying the index position of each coordinate pair (not individual array index) inside the [`vertices`](#vertices) array that define the triangles used to draw the currently visible part of the scene displayed in the {{domxref("XRView")}}.
+      - : A {{jsxref("Uint32Array")}} of values specifying the index position of each coordinate pair (not individual array index) inside the [`vertices`](#vertices) array that define the triangles used to draw the currently visible part of the scene displayed in the {{domxref("XRView")}}.
     - `session`
       - : The {{domxref("XRSession")}} to which the event belongs.
     - `vertices`
-      - : A {{domxref("Float32Array")}} of coordinates representing the set of possible coordinate values that may be used in a visibility mask. If this array is empty, the whole region of the `XRView` will be drawn.
+      - : A {{jsxref("Float32Array")}} of coordinates representing the set of possible coordinate values that may be used in a visibility mask. If this array is empty, the whole region of the `XRView` will be drawn.
 
 ### Return value
 
