@@ -19,7 +19,7 @@ Changing an adopted stylesheet will affect all the objects that adopt it.
 Stylesheets in the property are evaluated along with the document's other stylesheets using the [CSS cascade algorithm](/en-US/docs/Web/CSS/Guides/Cascade/Introduction).
 Where the resolution of rules considers stylesheet order, `adoptedStyleSheets` are assumed to be ordered after those in [`Document.styleSheets`](/en-US/docs/Web/API/Document/styleSheets).
 
-Only stylesheets created using the [`CSSStyleSheet()` constructor](/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet) within the context of the current {{domxref("Document")}} may be adopted.
+Only _constructed stylesheets_ within the context of the current {{domxref("Document")}} may be adopted. You may create constructed stylesheets using the [`CSSStyleSheet()` constructor](/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet) or import them as CSS modules.
 
 ## Value
 
