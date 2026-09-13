@@ -9,6 +9,8 @@ sidebar: cssref
 
 The **`font-family`** [CSS](/en-US/docs/Web/CSS) property specifies a prioritized list of one or more font family names and/or generic family names for the selected element.
 
+Values are separated by commas to indicate that they are alternatives. The browser will select the first font in the list that is installed or that can be downloaded using a {{CSSxRef("@font-face")}} at-rule.
+
 {{InteractiveExample("CSS Demo: font-family")}}
 
 ```css interactive-example-choice
@@ -52,8 +54,6 @@ section {
   font-size: 1.2em;
 }
 ```
-
-Values are separated by commas to indicate that they are alternatives. The browser will select the first font in the list that is installed or that can be downloaded using a {{CSSxRef("@font-face")}} at-rule.
 
 It is often convenient to use the shorthand property {{CSSxRef("font")}} to set `font-size` and other font related properties all at once.
 

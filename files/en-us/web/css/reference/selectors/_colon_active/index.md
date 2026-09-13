@@ -9,6 +9,8 @@ sidebar: cssref
 
 The **`:active`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents an element (such as a button) that is being activated by the user. When using a mouse, "activation" typically starts when the user presses down the primary mouse button.
 
+The `:active` pseudo-class is commonly used on {{HTMLElement("a")}} and {{HTMLElement("button")}} elements. Other common targets of this pseudo-class include elements that are _contained in_ an activated element, and form elements that are being activated through their associated {{HTMLElement("label")}}.
+
 {{InteractiveExample("CSS Demo: :active", "tabbed-shorter")}}
 
 ```css interactive-example
@@ -32,8 +34,6 @@ The **`:active`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/
 <p>Would you like to subscribe to our channel?</p>
 <button class="joinBtn">Subscribe</button>
 ```
-
-The `:active` pseudo-class is commonly used on {{HTMLElement("a")}} and {{HTMLElement("button")}} elements. Other common targets of this pseudo-class include elements that are _contained in_ an activated element, and form elements that are being activated through their associated {{HTMLElement("label")}}.
 
 Styles defined by the `:active` pseudo-class will be overridden by any subsequent link-related pseudo-class ({{cssxref(":link")}}, {{cssxref(":hover")}}, or {{cssxref(":visited")}}) that has at least equal specificity. To style links appropriately, put the `:active` rule after all other link-related rules, as defined by the _LVHA-order_: `:link` — `:visited` — `:hover` — `:active`.
 
