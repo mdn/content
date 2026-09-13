@@ -238,6 +238,9 @@ You can specify:
 - {{httpheader('Permissions-Policy/usb', 'usb')}} {{Experimental_Inline}}
   - : Controls whether the current document is allowed to use the [WebUSB API](/en-US/docs/Web/API/WebUSB_API).
 
+- {{httpheader("Permissions-Policy/web-app-installation", "web-app-installation")}} {{experimental_inline}} {{non-standard_inline}}
+  - : Controls whether or not the current document is allowed to install a [progressive web app (PWA)](/en-US/docs/Glossary/Progressive_web_apps) via the {{domxref("Navigator.install()")}} method or the {{htmlelement("install")}} element.
+
 - {{httpheader("Permissions-Policy/web-share", "web-share")}} {{experimental_inline}}
   - : Controls whether or not the current document is allowed to use the {{domxref("Navigator.share","Navigator.share()")}} of [Web Share API](/en-US/docs/Web/API/Web_Share_API) to share text, links, images, and other content to arbitrary destinations of user's choice, e.g., mobile apps.
 
