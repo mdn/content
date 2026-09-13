@@ -38,7 +38,7 @@ For example:
 | `https://example.com`           | ✅ Secure (`https` URL)     |
 | `http://localhost`              | ✅ Secure (`localhost` URL) |
 | `file:///path/to/resource.html` | ✅ Secure (`file` URL)      |
-| `https://example.com`           | ❌ Not secure (`http` URL)  |
+| `http://example.com`           | ❌ Not secure (`http` URL)  |
 
 ### Framed documents
 
