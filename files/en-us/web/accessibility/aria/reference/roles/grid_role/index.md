@@ -54,6 +54,8 @@ Cell elements have the role [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Refe
 
 If the grid is used as an interactive widget, [keyboard interactions](#keyboard_interactions) need to be implemented.
 
+An accessible name is strongly recommended for the `grid` role, although not required by ARIA. Use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) to reference a visible label, or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) if no visible label is present.
+
 ### Associated ARIA roles, states, and properties
 
 #### Roles
