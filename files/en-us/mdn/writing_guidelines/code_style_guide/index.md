@@ -38,7 +38,66 @@ Some more general guidelines include:
 
 ### Browser support
 
-When creating code examples for a technology that's not yet available in all major browsers, consider using [feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection) to fall back to a simpler behavior or inform the user that their browser is not yet supported.
+When creating code examples for a technology that's not yet available in all major browsers, consider using [feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection) to provide a fallback behavior or display a message indicating that the reader's browser doesn't support the demonstrated feature.
+
+Keep the rendered output of code examples visible even when the reader's browser doesn't support the demonstrated feature. This lets readers compare the code with its result and see how the example behaves without the feature. Display a browser-support message alongside the rendered output instead of hiding or removing it to explain why the result may appear different from the intended demonstration.
+
+For example, in CSS code examples, use the [`@supports` at-rule with the `not` operator](/en-US/docs/Web/CSS/Reference/At-rules/@supports#the_not_operator) to display a browser-support message when the reader's browser doesn't support the feature being demonstrated.
+
+#### HTML
+
+```html live-sample___corner-shape-support
+<div>Nice scooped corners</div>
+```
+
+#### CSS
+
+```css hidden live-sample___corner-shape-support
+body {
+  font-family: "Helvetica", "Arial", sans-serif;
+  width: 240px;
+  margin: 20px auto;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  background-color: cyan;
+  border-radius: 30px;
+  box-shadow: 1px 1px 3px gray;
+}
+
+@supports not (corner-shape: scoop) {
+  body {
+    all: unset !important;
+  }
+
+  body::before {
+    content: "Your browser does not support the 'corner-shape' property.";
+    color: black;
+    background-color: wheat;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+```
+
+```css live-sample___corner-shape-support
+div {
+  corner-shape: scoop;
+}
+```
+
+#### Result
+
+{{EmbedLiveSample("corner-shape-support", "100%", "240")}}
+
+Compare the rendered output in different browsers to see how the example behaves when `corner-shape` is supported and when it isn't.
+
 Do not specify supported browsers and their versions in code comments or prose, as this information quickly becomes outdated.
 
 ## MDN code style and formatting
