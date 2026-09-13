@@ -9,6 +9,8 @@ sidebar: webassemblysidebar
 
 The **`trunc_sat_f64_s`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) performs a [saturating](https://en.wikipedia.org/wiki/Saturation_arithmetic) conversion of an [`f64`](/en-US/docs/WebAssembly/Reference/Value_types/f64) value into a signed integer, clamping the output to the range allowed by the value type.
 
+Unlike [`trunc_f64_s`](/en-US/docs/WebAssembly/Reference/Numeric/trunc_f64_s), this instruction will not trap on [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN), [`infinity`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity), or `input` values outside the `output` value's range.
+
 {{InteractiveExample("Wat Demo: trunc_sat_f64_s", "tabbed-taller")}}
 
 ```wat interactive-example
@@ -28,14 +30,14 @@ The **`trunc_sat_f64_s`** [numeric instruction](/en-US/docs/WebAssembly/Referenc
 WebAssembly.instantiateStreaming(fetch("{%wasm-url%}"), { console });
 ```
 
-Saturation means that the output values are clamped to the upper and lower values allowed by the value interpretation. Allowed output values are:
+Saturation means that the `output` values are clamped to the upper and lower values allowed by the `output` type. Allowed output values are:
 
-- `−2,147,483,648` to `2,147,483,647` for an `i32` output (the full range of a signed 32-bit integer).
+- `−2,147,483,648` to `2,147,483,647`, or `-2³¹` to `2³¹ - 1`, for an `i32` output (the full range of a signed 32-bit integer).
 - `-9,223,372,036,854,775,808` to `9,223,372,036,854,775,807`, or `-2⁶³` to `2⁶³ - 1`, for an `i64` output (the full range of a signed 64-bit integer).
 
-{{jsxref("NaN")}} values are converted to `0`.
+`NaN` values are converted to `0`; `+` and `-infinity` are clamped to the above values.
 
-## Syntax
+## WAT syntax
 
 ```plain
 value_type.trunc_sat_f64_s
@@ -48,16 +50,21 @@ value_type.trunc_sat_f64_s
 - `trunc_sat_f64_s`
   - : The `trunc_sat_f64_s` instruction. Must always be included after the `value_type` and a period (`.`).
 
-### Type
+### Immediates
+
+None.
+
+### Operand stack
 
 ```plain
-[input] -> [output]
+[input:f64] -> [output:i32]
+[input:f64] -> [output:i64]
 ```
 
 - `input`
-  - : The input `f64` value.
+  - : The input floating point number.
 - `output`
-  - : The output value.
+  - : The output integer.
 
 ### Binary encoding
 
