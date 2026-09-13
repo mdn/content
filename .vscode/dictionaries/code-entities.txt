@@ -177,6 +177,7 @@ dataidx
 deviceproximity
 devtools.aboutdebugging
 devtools.errorconsole
+DfltDwnld
 diak
 dialogtext
 diffe
@@ -566,6 +567,7 @@ ondownloadprogress
 onefive
 onendstreaming
 ongesturestart
+onInputCancelled
 oninterest
 onlocation
 onloseinterest

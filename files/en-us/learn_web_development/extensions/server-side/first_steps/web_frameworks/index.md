@@ -315,7 +315,7 @@ It can be used for small problems but its strength is building larger scale appl
 
 ## Summary
 
-This article has shown that web frameworks can make it easier to develop and maintain server-side code. It has also provided a high level overview of a few popular frameworks, and discussed criteria for choosing a web application framework. You should now have at least an idea of how to choose a web framework for your own server-side development. If not, then don't worry — later on in the course we'll give you detailed tutorials on Django and Express to give you some experience of actually working with a web framework.
+This article has shown that web frameworks can make it easier to develop and maintain server-side code. It has also provided a high-level overview of a few popular frameworks, and discussed criteria for choosing a web application framework. You should now have at least an idea of how to choose a web framework for your own server-side development. If not, then don't worry — later on in the course we'll give you detailed tutorials on Django and Express to give you some experience of actually working with a web framework.
 
 For the next article in this module we'll change direction slightly and consider web security.
 
