@@ -42,11 +42,11 @@ Attribution-Reporting-Eligible: <allowed-registrations>
 - `<allowed-registrations>`
   - : A structured-header dictionary representing the registrations allowed in the corresponding response. Possible keys are:
     - `event-source`
-      - : An [event-based attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#event-based_attribution_sources) can be registered.
+      - : An event-based attribution source can be registered.
     - `navigation-source`
-      - : A [navigation-based attribution source](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources) can be registered.
+      - : A navigation-based attribution source can be registered.
     - `trigger`
-      - : An [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers) can be registered.
+      - : An attribution trigger can be registered.
 
 Every response in a redirect chain can register at most one source or one trigger.
 
