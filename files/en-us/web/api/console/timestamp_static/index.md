@@ -10,11 +10,7 @@ browser-compat: api.console.timeStamp_static
 
 {{APIRef("Console API")}}{{Non-standard_header}} {{AvailableInWorkers}}
 
-The **`console.timeStamp()`** static method adds a single marker to the browser's Performance tool ([Firefox bug 1387528](https://bugzil.la/1387528), [Chrome](https://developer.chrome.com/docs/devtools/performance/reference)). This lets you correlate a point in your code with the other events recorded in the timeline, such as layout and paint events.
-
-You can optionally supply an argument to label the timestamp, and this label will then be shown alongside the marker.
-
-Some browsers have further extended this `console.timeStamp()` method to allow additional, optional parameters to be provided as part of its extensibility API that surfaces these in performances traces. See the [Chrome's extensibility API documentation](https://developer.chrome.com/docs/devtools/performance/extension#inject_your_data_with_consoletimestamp) for more information.
+The **`console.timeStamp()`** static method adds a marker to a performance recording in developer tools that support it, such as the [Chrome Performance panel](https://developer.chrome.com/docs/devtools/performance/reference) and [Firefox Profiler](https://profiler.firefox.com/). This lets you correlate a point in your code with recorded events such as layout and painting.
 
 ## Syntax
 
@@ -52,6 +48,16 @@ console.timeStamp(label, start, end, trackName, trackGroup, color, data);
 ### Return value
 
 None ({{jsxref("undefined")}}).
+
+## Description
+
+To see the marker, start a performance recording before the call occurs. Marker recording and display depend on the browser and its profiling tool; the presence of `console.timeStamp()` does not by itself guarantee a visible marker.
+
+This method does not log elapsed time to the console or create a {{domxref("PerformanceEntry")}}. Use {{domxref("console/time_static", "console.time()")}} and {{domxref("console/timeEnd_static", "console.timeEnd()")}} for console timers, or {{domxref("Performance.mark", "performance.mark()")}} and {{domxref("Performance.measure", "performance.measure()")}} for standard entries that your application can observe and read.
+
+You can optionally supply an argument to label the timestamp, and this label will then be shown alongside the marker.
+
+Some browsers have further extended this `console.timeStamp()` method to allow additional, optional parameters to be provided as part of its extensibility API that surfaces these in performance traces. See the [Chrome's extensibility API documentation](https://developer.chrome.com/docs/devtools/performance/extension#inject_your_data_with_consoletimestamp) for more information.
 
 ## Examples
 
@@ -116,5 +122,4 @@ console.timeStamp(
 - {{domxref("console/timeEnd_static", "console.timeEnd()")}}
 - {{domxref("performance/mark", "performance.mark()")}}
 - {{domxref("performance/measure", "performance.measure()")}}
-- [Adding markers with the console API](https://web.archive.org/web/20211207010020/https://firefox-source-docs.mozilla.org/devtools-user/performance/waterfall/index.html#adding-markers-with-the-console-api)
 - [Chrome DevTools extensibility API](https://developer.chrome.com/docs/devtools/performance/extension#inject_your_data_with_consoletimestamp)
