@@ -72,6 +72,8 @@ Firefox 157 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 ## Changes for add-on developers
 
+- [`alarms.clearAll()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/alarms/clearAll) now fulfills its promise with `undefined` instead of a boolean. ([Firefox bug 2067229](https://bugzil.la/2067229))
+
 <!-- ### Removals -->
 
 <!-- ### Other -->
