@@ -42,7 +42,7 @@ This may be one of the following values:
 
 ### Filtering resources
 
-The `contentEncoding` property can be used to get specific resource timing entries only; for example, only those related to [Compression Dictionary Transport](/en-US/docs/Web/HTTP/Guides/Compression_Dictionary_Transport).
+The `contentEncoding` property can be used to get specific resource timing entries only; for example, only those related to [Compression Dictionary Transport](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport).
 
 The following example uses a {{domxref("PerformanceObserver")}} to notify of new `resource` performance entries as they are recorded in the browser's performance timeline.
 The `buffered` option is used for accessing entries from before the observer creation.
