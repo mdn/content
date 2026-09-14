@@ -96,7 +96,8 @@ div {
 
 {{EmbedLiveSample("corner-shape-support", "100%", "240")}}
 
-Compare the rendered output in different browsers to see how the example behaves when `corner-shape` is supported and when it isn't.
+The following example uses the {{cssxref("corner-shape")}} property to show how this works. See the rendered output in different browsers to compare how the example appears when `corner-shape` is supported and when it isn't. Notice that the browser-support message appears and the example remains visible in browsers that don't support `corner-shape`.
+In your own examples, you can mark the browser-support CSS block as [`hidden`](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples#hiding_code) so its styles apply to the live sample without displaying the code block in the article.
 
 Do not specify supported browsers and their versions in code comments or prose, as this information quickly becomes outdated.
 
