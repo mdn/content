@@ -49,8 +49,8 @@ This item is then written to the clipboard, using the {{domxref("Clipboard.write
 For an example that writes and reads back several MIME-type representations in one `ClipboardItem`, see [Reading multiple formats from the clipboard](/en-US/docs/Web/API/Clipboard/read#reading_multiple_formats_from_the_clipboard).
 
 > [!NOTE]
-> {{domxref("Clipboard.write()")}} takes an array of `ClipboardItem` objects, but only the first item in the array is guaranteed to be used.
-> To give a single clipboard entry multiple formats, add more MIME-type keys to the `data` object passed into one `ClipboardItem()` call, rather than adding more items to the array.
+> {{domxref("Clipboard.write()")}} takes an array of `ClipboardItem` objects, but if the underlying OS doesn't support writing multiple items, only the first item will be written 
+> Note that some browser versions throw an exception if more than one item is passed in the array (check the [Browser compatibility](#browser_compatibility) table below).
 
 ```js
 async function writeClipImg() {
