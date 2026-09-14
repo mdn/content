@@ -37,7 +37,7 @@ This property is specified as a keyword or a comma-separated list of custom time
 - `all`
   - : The names of all timelines defined by descendants are in scope for this element and its descendants.
 - `<dashed-ident>`
-  - : One or more comma-separated [`<dashed-ident>`](/en-US/docs/Web/CSS/Reference/Values/dashed-ident)s representing timeline names (i.e., declared using {{cssxref("scroll-timeline-name")}} or {{cssxref("view-timeline-name")}}). Sets the scope so that the specified `scroll-timeline-name` or `view-timeline-name` values, when set in the subtree, can only be bound to by positioned elements in the same subtree.
+  - : Specifies one or more comma-separated timeline names that are declared using {{cssxref("scroll-timeline-name")}} or {{cssxref("view-timeline-name")}}. Sets the scope so that when the specified `scroll-timeline-name` or `view-timeline-name` values are set on the element or in its subtree, they are matched only by elements within the same subtree.
 
 ## Description
 
