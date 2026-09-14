@@ -12,7 +12,7 @@ Where {{HTTPMethod("GET")}} asks for a representation of the resource identified
 The request content and its {{HTTPHeader("Content-Type")}} define the query; the target resource determines what the query is run against.
 
 Because the query travels in the request content rather than the URI, it is not constrained by the length and encoding limits that apply to a URI query component.
-This makes `QUERY` a good fit for queries that are too large or too structured to express there, such as a SQL statement or a JSON filter document.
+This makes `QUERY` a good fit for queries that are too large or too structured to express there, such as a SQL statement or a JSONPath expression.
 
 In carrying content, `QUERY` resembles {{HTTPMethod("POST")}}, but unlike `POST` it is explicitly {{Glossary("Safe/HTTP", "safe")}} and {{Glossary("Idempotent", "idempotent")}}.
 A client neither requests nor expects any change to the target resource, so a `QUERY` request can be retried or repeated after a connection failure without concern that it will have an additional effect.
@@ -143,7 +143,7 @@ Where a response supplies a `Location` header identifying an equivalent resource
 ### Security considerations
 
 `QUERY` carries its input in the request content rather than in the URI.
-URIs are far more likely to be logged, retained in history, or inspected and processed by intermediaries than request content is, so moving a query out of the URI reduces how widely it is exposed.
+A URI is more likely to be logged, or otherwise processed by intermediaries, than the request content is, so moving a query out of the URI reduces how widely it is exposed.
 Where the query itself is confidential, this is a reason to prefer `QUERY` over `GET`.
 
 The benefit only holds if the rest of the exchange preserves it, so note the constraints on equivalent resource URIs and on cache normalization described above.
