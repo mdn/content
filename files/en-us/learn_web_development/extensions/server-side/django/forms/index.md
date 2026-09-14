@@ -790,7 +790,7 @@ The pages are now ready to test!
 
 ### Testing the page
 
-First, log in to the site with an account that has author add, change and delete permissions.
+First, log into the site with an account that has author add, change and delete permissions.
 
 Navigate to any page, and select "Create author" in the sidebar (with URL `http://127.0.0.1:8000/catalog/author/create/`).
 The page should look like the screenshot below.

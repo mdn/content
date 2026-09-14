@@ -144,7 +144,7 @@ In the case of the `animation-fill-mode` [forwards](/en-US/docs/Web/CSS/Referenc
 
 Blinking and flashing animation can be problematic for people with cognitive concerns such as Attention Deficit Hyperactivity Disorder (ADHD). Additionally, certain kinds of motion can be a trigger for vestibular disorders, epilepsy, and migraine and scotopic sensitivity.
 
-Consider providing a mechanism for pausing or disabling animation as well as using the [reduced motion `@media` query](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) to create a complimentary experience for users who have expressed a preference for reduced animated experiences.
+Consider providing a mechanism for pausing or disabling animation as well as using the [reduced motion `@media` query](/en-US/docs/Web/CSS/Reference/At-rules/@media/prefers-reduced-motion) to create a complementary experience for users who have expressed a preference for reduced animated experiences.
 
 - [Designing Safer Web Animation For Motion Sensitivity](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/) via A List Apart (2015)
 - [An Introduction to the Reduced Motion Media Query](https://css-tricks.com/introduction-reduced-motion-media-query/) via CSS-Tricks (2017)

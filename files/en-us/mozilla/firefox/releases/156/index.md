@@ -52,6 +52,7 @@ Firefox 156 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### CSS
 
+- The non-standard {{cssxref("::-webkit-scrollbar")}} pseudo-element is now reported as unsupported in {{cssxref("@supports")}} conditions on every site, so `@supports selector(::-webkit-scrollbar)` returns `false` and `@supports not (selector(::-webkit-scrollbar))` returns `true`. This includes the sites listed in the `layout.css.fake-webkit-scrollbar.enabled-domains` preference introduced in [Firefox 155](/en-US/docs/Mozilla/Firefox/Releases/155#css). Firefox still acts on `::-webkit-scrollbar` rules on those sites, but it no longer reports the pseudo-element as supported. Sites use this check as a signal that the whole `::-webkit-scrollbar-*` family is supported, but Firefox doesn't doesn't support the other pseudo-elements in this family. Sites that guard their standard scrollbar styles behind `@supports not (selector(::-webkit-scrollbar))` now get those styles applied in Firefox. ([Firefox bug 2062782](https://bugzil.la/2062782)).
 - The {{cssxref("text-box-trim")}} and {{cssxref("text-box-edge")}} properties now trim correctly in several cases that previously produced the wrong result:
   trimming uses the font metrics of the {{cssxref("::first-line")}} pseudo-element when one applies ([Firefox bug 2063835](https://bugzil.la/2063835)),
   the correct line is trimmed when an inline box on the last line is fragmented ([Firefox bug 2063909](https://bugzil.la/2063909)),
