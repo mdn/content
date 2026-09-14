@@ -51,12 +51,12 @@ position-try: unset;
 
 ### Values
 
-This property is specified as one or both of the following properties:
+This property is specified as one or both of the following values:
 
 - {{cssxref("position-try-order")}} {{optional_inline}}
   - : A keyword specifying the priority order of the position-try fallback options. If omitted, defaults to `normal`.
 - {{cssxref("position-try-fallbacks")}}
-  - : The keyword `none`, or a comma-separated list of `<position-area>` values,`<try-tactic>` options, and custom positions.
+  - : The keyword `none`, or a comma-separated list of `<position-area>` values, `<try-tactic>` options, and custom positions.
 
 ## Description
 

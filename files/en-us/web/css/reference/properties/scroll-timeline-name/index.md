@@ -39,7 +39,7 @@ This property is specified as one of the following values:
 
 The `scroll-timeline-name` property is used to define the name of a _named scroll progress timeline_, which is progressed through by scrolling a scrollable element (_scroller_) between top and bottom (or left and right).
 
-The `scroll-timeline-name` property is set on the scroller that will provide the timeline. The name is then referenced in an {{cssxref("animation-timeline")}} declaration to indicate the container's element that is used to drive the progress of the animation through the scrolling action.
+Set the `scroll-timeline-name` property on the scroller that provides the timeline. The name is then referenced in an {{cssxref("animation-timeline")}} declaration to indicate the container's element that is used to drive the progress of the animation through the scrolling action.
 
 If the element does not overflow its container in the axis dimension or if the overflow is hidden or clipped, no timeline will be created.
 

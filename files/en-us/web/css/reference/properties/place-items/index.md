@@ -7,7 +7,7 @@ browser-compat: css.properties.place-items
 sidebar: cssref
 ---
 
-The **`place-items`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property aligns items along both the block and inline directions at once.
+The **`place-items`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property aligns items along both block and inline directions at the same time.
 
 {{InteractiveExample("CSS Demo: place-items")}}
 
@@ -93,7 +93,7 @@ place-items: unset;
 
 ### Values
 
-This property is specified as one or both of the following properties, space-separated:
+This property is specified as one or two space-separated values of the following types, in the order listed:
 
 - {{cssxref("align-items")}}
   - : Specifies the alignment in the block direction.
@@ -102,9 +102,9 @@ This property is specified as one or both of the following properties, space-sep
 
 ## Description
 
-The `place-items` shorthand property sets the values of the {{CSSxRef("align-items")}} and {{CSSxRef("justify-items")}} properties, aligning items along both the block and inline directions.
+The `place-items` shorthand property sets {{CSSxRef("align-items")}} and {{CSSxRef("justify-items")}} in a single declaration, aligning items along both the block and inline directions.
 
-If only one value is set, the value is used to set alignment in both block and inline directions. If two values are set, the first value is the {{cssxref("align-items")}} value, setting the alignment in the block direction and the second value is the {{cssxref("justify-items")}} value, setting alignment in the inline direction.
+If only one value is provided, the value is used to set alignment in both block and inline directions. If two values are provided, the first value is the {{cssxref("align-items")}} value, setting the alignment in the block direction, and the second value is the {{cssxref("justify-items")}} value, setting alignment in the inline direction.
 
 ## Formal definition
 
