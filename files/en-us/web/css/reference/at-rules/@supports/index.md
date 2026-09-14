@@ -160,7 +160,7 @@ This function takes one predefined keyword and evaluates if a browser supports t
 
 ##### `anchor-position-follows-transforms`
 
-This named-feature checks if the browser supports transform-aware anchor-positioning.
+This `named-feature()` checks if the browser supports transform-aware [anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning).
 
 ```css
 @supports named-feature(anchor-position-follows-transforms) {
