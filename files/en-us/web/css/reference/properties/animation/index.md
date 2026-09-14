@@ -360,4 +360,6 @@ is overridden by the bounce animation.
 ## See also
 
 - [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
+- [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module
 - JavaScript {{domxref("AnimationEvent")}} API
