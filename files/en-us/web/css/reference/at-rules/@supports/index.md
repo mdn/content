@@ -153,7 +153,7 @@ The following table describes the available formats (`<font-format>` values) tha
 
 ### `named-features()`
 
-This function takes one predefined keyword and evaluates if a browser supports the specified named feature. This is to allow for feature support that cannot be tested for using the other `@support` functions.
+This function takes one predefined keyword and evaluates if a browser supports the specified named feature. This is to allow for feature support that cannot be tested for using the other `@supports` functions.
 
 > [!NOTE]
 > More features will be added rarely and only when there is real demand for feature testing something specific that would not be covered by more general testing methods.
