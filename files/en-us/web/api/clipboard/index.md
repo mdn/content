@@ -25,8 +25,8 @@ Additional requirements for using the API are discussed in the [Security conside
 _`Clipboard` is based on the {{domxref("EventTarget")}} interface, and includes its methods._
 
 - {{domxref("Clipboard.read()","read()")}}
-  - : Reads or more items from the system clipboard: returning a {{jsxref("Promise")}} that if fulfilled when the operation completes.
-    Each item is a {{domxref("ClipboardItem)}} that can contain several representations of the object, such as versions in HTML and text.
+  - : Reads one or more items from the system clipboard, returning a {{jsxref("Promise")}} that is fulfilled when the operation completes.
+    Each item is a {{domxref("ClipboardItem")}} that can contain several representations of the object, such as versions in HTML and text.
 - {{domxref("Clipboard.readText()","readText()")}}
   - : Requests text from the system clipboard, returning a {{jsxref("Promise")}} that is fulfilled with a string containing the clipboard's text once it's available.
 - {{domxref("Clipboard.write()","write()")}}

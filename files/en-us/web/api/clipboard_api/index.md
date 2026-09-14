@@ -43,7 +43,7 @@ There is also a {{domxref("Clipboard.clipboardchange_event","clipboardchange")}}
   - : Represents events providing information related to modification of the clipboard, that is {{domxref("Element/cut_event", "cut")}}, {{domxref("Element/copy_event", "copy")}}, and {{domxref("Element/paste_event", "paste")}} events.
     The specification refers to this as the 'Clipboard Event API'.
 - {{domxref("ClipboardItem")}} {{securecontext_inline}}
-  - : Represents a single item format, used when reading or writing data.
+  - : Represents a single clipboard entry that can hold one or more media-type representations of the same data (such as versions in HTML and text).
 
 ### Extensions to other interfaces
 
