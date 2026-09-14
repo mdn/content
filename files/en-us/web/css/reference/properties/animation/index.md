@@ -98,7 +98,7 @@ animation:
 
 ### Values
 
-This property is specified as a comma-separated list of `<animation>` declarations. Each `<animation>` is specified as a space-separated list of the following values:
+This property is specified as a comma-separated list of `<animation>` values, with each value being a space-separated list of the following values:
 
 - `<keyframes-name>` or `none`
   - : The name of a {{cssxref("@keyframes")}} at-rules that specifies the animation to apply to an element. The initial value for {{cssxref("animation-name")}} is `none`.

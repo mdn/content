@@ -351,6 +351,7 @@ jpanyear
 jsapi.h
 jscript
 jsdouble
+JSMSG_INCOMPATIBLE_PROTO
 jspubtd.h
 jsref
 jssidebar
