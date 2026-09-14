@@ -43,7 +43,7 @@ new ClipboardItem(data, options)
 
 ## Examples
 
-The following example requests a PNG image using {{domxref("Window/fetch", "fetch()")}} uses it, via the {{domxref("Response.blob()")}} method, to create a new {{domxref("ClipboardItem")}}.
+The following example requests a PNG image using {{domxref("Window/fetch", "fetch()")}} and uses it, via the {{domxref("Response.blob()")}} method, to create a new {{domxref("ClipboardItem")}}.
 This item is then written to the clipboard, using the {{domxref("Clipboard.write()")}} method.
 
 For an example that writes and reads back several MIME-type representations in one `ClipboardItem`, see [Reading multiple formats from the clipboard](/en-US/docs/Web/API/Clipboard/read#reading_multiple_formats_from_the_clipboard).
