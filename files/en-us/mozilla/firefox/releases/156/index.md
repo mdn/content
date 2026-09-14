@@ -157,8 +157,3 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   The Container Timing API reports when the contents of a container element are painted, letting you measure the render time of a region of the page rather than of the whole viewport.
   ([Firefox bug 1940240](https://bugzil.la/1940240)).
-
-- **MathML `<a>` elements**: `mathml.a.element.enabled`
-
-  The MathML `<a>` element creates a hyperlink from MathML content, exposing the `MathMLAnchorElement` interface with the same URL component properties as HTML {{HTMLElement("a")}} elements.
-  This release adds support for the `rel` and `relList` IDL attributes. ([Firefox bug 2063819](https://bugzil.la/2063819)).

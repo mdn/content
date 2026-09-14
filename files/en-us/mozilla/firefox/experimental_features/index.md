@@ -512,22 +512,6 @@ When enabled, the MathML [`<a>`](/en-US/docs/Web/MathML/Reference/Element/a) ele
 - `mathml.a.element.enabled`
   - : Set to `true` to enable.
 
-### MathML `<a>` elements
-
-The MathML `<a>` element creates a hyperlink from MathML content, exposing the `MathMLAnchorElement` interface with the same URL component properties as HTML {{HTMLElement("a")}} elements.
-
-This release adds support for the `rel` and `relList` IDL attributes. ([Firefox bug 2063819](https://bugzil.la/2063819)).
-
-| Release channel   | Version added | Enabled by default? |
-| ----------------- | ------------- | ------------------- |
-| Nightly           | 156           | Yes                 |
-| Developer Edition | 156           | No                  |
-| Beta              | 156           | No                  |
-| Release           | 156           | No                  |
-
-- `mathml.a.element.enabled`
-  - : Set to `true` to enable.
-
 ## JavaScript
 
 ### TC39 Intl.Locale info proposal
