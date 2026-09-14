@@ -151,7 +151,7 @@ The following table describes the available formats (`<font-format>` values) tha
 | `woff`              | WOFF 1.0 (Web Open Font Format) | `.woff`         |
 | `woff2`             | WOFF 2.0 (Web Open Font Format) | `.woff2`        |
 
-### `named-features()`
+#### `named-feature()`
 
 This function takes one predefined keyword and evaluates if a browser supports the specified named feature. This is to allow for feature support that cannot be tested for using the other `@supports` functions.
 
