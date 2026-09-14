@@ -104,7 +104,7 @@ Browser compatibility is not relevant for this method.
 Browsers have no specific integration support for `QUERY`: it isn't sent for user-initiated actions like HTML form submissions, and browsers don't send it automatically in response to other headers or mechanisms.
 
 Developers can issue a `QUERY` request using [`fetch()`](/en-US/docs/Web/API/Window/fetch).
-NOte that because `QUERY` isn't one of the CORS-safelisted methods, cross-origin requests trigger a [CORS](/en-US/docs/Web/HTTP/Guides/CORS) preflight {{HTTPMethod("OPTIONS")}} request, the same as for other non-simple methods.
+Note that because `QUERY` isn't one of the CORS-safelisted methods, cross-origin requests trigger a [CORS](/en-US/docs/Web/HTTP/Guides/CORS) preflight {{HTTPMethod("OPTIONS")}} request, the same as for other non-simple methods.
 
 ## See also
 
