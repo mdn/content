@@ -15,7 +15,7 @@ In the [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) guide, we 
 
 In this module graph, the nodes are the HTML file plus the different modules being imported (all modules here are JavaScript, but JSON, CSS, WebAssembly, etc. would all be valid). Each time you write `import ... from "module B"` (or `export ... from "module B"`) in `module A`, you create a directed edge from `module A` to `module B`. This can be any _graph_, not just a tree or a DAG (directed acyclic graph), because [cycles](#cyclic_imports) and diamond structures (where both modules import the same module, like above) are allowed.
 
-Each module graph needs a single entry point, from which the runtime starts discovering dependencies. In the example above, this entry point is the HTML file. In [Node.js](/en-US/docs/Web/JavaScript/Guide/Modules/Cross-platform_modules) (or other server-side runtimes), this entry point is the file you invoked `node` with. In workers, this is the file you passed to the {{domxref("Worker/Worker", "Worker()")}} constructor.
+Each module graph needs a single entry point, from which the runtime starts discovering dependencies. In the example above, this entry point is the HTML file. In [Node.js](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms) (or other server-side runtimes), this entry point is the file you invoked `node` with. In workers, this is the file you passed to the {{domxref("Worker/Worker", "Worker()")}} constructor.
 
 ## The module loading process
 

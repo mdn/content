@@ -52,7 +52,7 @@ sidebar:
         children:
           - /Web/JavaScript/Guide/Modules/Modules_on_the_web
           - /Web/JavaScript/Guide/Modules/Module_graph
-          - /Web/JavaScript/Guide/Modules/Cross-platform_modules
+          - /Web/JavaScript/Guide/Modules/Modules_across_platforms
   - title: Intermediate
     details: closed
     children:

@@ -108,7 +108,7 @@ Whereas the script version formed a _linear_ order of dependencies where each pi
 As we said, modules are parsed differently from scripts—this means that the JavaScript engine needs to know whether to apply the module or script parsing rules. Hosts commonly specify this using an [_out-of-band signaling mechanism_](https://github.com/tc39/how-we-work/blob/main/terminology.md#out-of-band), where the behavior of the code is configured by information outside of the code itself. (This is different from [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), where the interpretation mode is declared inside the script with `"use strict"`.) There are many ways to give such information:
 
 - If this module is referenced from a `<script>` tag, you can use the `type="module"` attribute. Also see [Using modules on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web).
-- If you are using Node.js, you can use the `.mjs` file extension, or add `"type": "module"` to the closest `package.json` file. Also see [Authoring modules cross-platform](/en-US/docs/Web/JavaScript/Guide/Modules/Cross-platform_modules).
+- If you are using Node.js, you can use the `.mjs` file extension, or add `"type": "module"` to the closest `package.json` file. Also see [Modules across platforms](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms).
 - If this module is to be used as a worker, you can pass `type: "module"` when calling the {{domxref("Worker/Worker", "Worker()")}} constructor.
 
 > [!NOTE]
@@ -204,7 +204,7 @@ You can see such lines in action in [`main.js`](https://github.com/mdn/js-exampl
 > "./modules/square.js"
 > ```
 >
-> Different runtimes (browsers, Node, bundler, etc.) have different rules for the specifier format. You can read more about these differences in [Understanding the module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph) and [Authoring modules cross-platform](/en-US/docs/Web/JavaScript/Guide/Modules/Cross-platform_modules).
+> Different runtimes (browsers, Node, bundler, etc.) have different rules for the specifier format. You can read more about these differences in [Using modules on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#module_specifiers_on_the_web) and [Modules across platforms](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms).
 
 Once you've imported the features into your script, you can use them just like they were defined inside the same file. The following is found in `main.js`, below the import lines:
 
@@ -222,7 +222,7 @@ reportPerimeter(square.length, reportList);
 
 ## Default exports and imports
 
-The above export and import variables by their names. The names for each variable have to match between the exporter and the importer. You can definitely write functional module code using just named imports and exports. However, if you want to import from non-ECMAScript modules, such as CommonJS and AMD (we'll talk about how that works in [Cross-platform modules](/en-US/docs/Web/JavaScript/Guide/Modules/Cross-platform_modules)), these systems do not use named exports. In these systems, each module correspond to exactly one JavaScript value. To represent these types of modules, JavaScript provides a _default export_.
+The above export and import variables by their names. The names for each variable have to match between the exporter and the importer. You can definitely write functional module code using just named imports and exports. However, if you want to import from [non-ECMAScript modules](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms), these systems do not use named exports. In these systems, each module correspond to exactly one JavaScript value. To represent these types of modules, JavaScript provides a _default export_.
 
 Unlike named exports, default exports have no names associated with them. Each module can have up to one default export. To create a default export, instead of exporting a _declaration_ like `const` or `function`, you export an _expression_ instead, by prepending `export default` to it. For example, all of the following would work:
 
@@ -484,14 +484,15 @@ export * from "./shapes/triangle.js";
 export * from "./shapes/circle.js";
 ```
 
-This re-exports _all_ exports from the target module as named exports of the current module, so if you export something else from `square.js`, you don't have to modify `shapes.js` as well. Only do this if you actually want `shapes.js` to re-export everything from `square.js`, to prevent things from being accidentally exposed.
+This re-exports _all_ exports from the target module as named exports of the current module, so if you export something else from `square.js`, you don't have to modify `shapes.js` as well. Only do this if you actually want `shapes.js` to re-export everything from `square.js`, or you may accidentally expose things.
 
-Almost all `import` syntaxes we've introduced have `export ... from` equivalents.
+Almost all `import` syntaxes we've introduced have `export ... from` equivalents. The only exception is the default import `import x from "mod"`, for which `export x from "mod"` does not exist, and you must use the special `export { default } from` syntax.
 
 ```js
 export { x } from "mod";
 export { x as v } from "mod";
 export * as ns from "mod";
+export { default } from "mod";
 ```
 
 ## Importing a module for its side effects
@@ -671,11 +672,11 @@ const triangle = new Module.Triangle(
 
 This is useful because the code within [`main.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/main.js) won't execute until the code in [`getColors.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/modules/getColors.js) has run. However it won't block other modules being loaded. For instance our [`canvas.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/modules/canvas.js) module will continue to load while `colors` is being fetched.
 
-Top-level `await` is not free; it has deep implications because it means a part of the [module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph) can only be loaded asynchronously. We'll talk more about what that implies in the [module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph) and [cross-platform modules](/en-US/docs/Web/JavaScript/Guide/Modules/Cross-platform_modules) guides.
+Top-level `await` is not free; it has deep implications because it means a part of the [module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph) can only be loaded asynchronously. We'll talk more about what that implies in the [module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph) and [cross-platform modules](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms) guides.
 
 ## Module metadata
 
-Scripts are executed in the global context, so it can get information about its environment with global variables, such as {{domxref("Window.document")}} or {{domxref("Window.location")}}. Modules get their own execution context, so how can each module retrieve information about itself? This information is provided by the [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta) object, which is unique to each module. Its properties are defined by the host environment; the core language spec does not define any properties. See [Using modules on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#the_import.meta_object) for information about browsers, and [Authoring modules cross-platform](/en-US/docs/Web/JavaScript/Guide/Modules/Cross-platform_modules) for information about Node.js, bundlers, and more.
+Scripts are executed in the global context, so it can get information about its environment with global variables, such as {{domxref("Window.document")}} or {{domxref("Window.location")}}. Modules get their own execution context, so how can each module retrieve information about itself? This information is provided by the [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta) object, which is unique to each module. Its properties are defined by the host environment; the core language spec does not define any properties. See [Using modules on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#the_import.meta_object) for information about browsers, and [Modules across platforms](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms) for information about Node.js, bundlers, and more.
 
 Just as an example, in most web-like environments (browsers, Node.js, bundlers, etc.), `import.meta.url` provides the module's URL, which you can use to locate a resource relative to the module:
 
@@ -701,13 +702,13 @@ The core language does _not_ care about the following:
 - The properties of `import.meta`. All properties, including `import.meta.url`, are host-defined.
 - The module loading process. The host environment is responsible for fetching modules, including applying any [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with), subject to the language's requirements, such as those for JSON modules.
 
-In reality, runtime environments like browsers, Node.js, and Deno often end up implementing the same set of features, so that code is more likely to work across platforms. This guide walks through an example that's run in the browser, but we focus on core concepts that are applicable to all environments. In the [using modules on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web) guide, we'll cover the specifics of module loading in browsers, especially import specifiers. Then, in the [authoring modules cross-platform](/en-US/docs/Web/JavaScript/Guide/Modules/Cross-platform_modules) guide, we will go further and discuss how the module system is integrated with other environments.
+In reality, runtime environments like browsers, Node.js, and Deno often end up implementing the same set of features, so that code is more likely to work across platforms. This guide walks through an example that's run in the browser, but we focus on core concepts that are applicable to all environments. In the [using modules on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web) guide, we'll cover the specifics of module loading in browsers, especially import specifiers. Then, in the [Modules across platforms](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms) guide, we will go further and discuss how the module system is integrated with other environments.
 
 ## See also
 
 - [Using modules on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web)
 - [Understanding the module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph)
-- [Authoring modules cross-platform](/en-US/docs/Web/JavaScript/Guide/Modules/Cross-platform_modules)
+- [Modules across platforms](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms)
 - [JavaScript modules](https://v8.dev/features/modules) on v8.dev (2018)
 - [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) on hacks.mozilla.org (2018)
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) on hacks.mozilla.org (2015)

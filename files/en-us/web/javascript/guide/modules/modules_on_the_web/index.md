@@ -5,7 +5,7 @@ page-type: guide
 sidebar: jssidebar
 ---
 
-This page discusses how JavaScript modules are integrated with the web platform. Features discussed here are defined in the HTML spec and other web specifications, instead of by the core language, and they are generally only relevant to webpages. If you are writing modules for other environments, you may want to read the [Using modules](/en-US/docs/Web/JavaScript/Guide/Modules) and [Authoring cross-platform modules](/en-US/docs/Web/JavaScript/Guide/Modules/Cross-platform_modules) guides instead.
+This page discusses how JavaScript modules are integrated with the web platform. Features discussed here are defined in the HTML spec and other web specifications, instead of by the core language, and they are generally only relevant to webpages. If you are writing modules for other environments, you may want to read the [Using modules](/en-US/docs/Web/JavaScript/Guide/Modules) and [Authoring cross-platform modules](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms) guides instead.
 
 ## Server configuration
 
