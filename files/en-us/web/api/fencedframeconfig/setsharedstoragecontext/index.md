@@ -4,11 +4,11 @@ short-title: setSharedStorageContext()
 slug: Web/API/FencedFrameConfig/setSharedStorageContext
 page-type: web-api-instance-method
 status:
-  - experimental
+  - deprecated
 browser-compat: api.FencedFrameConfig.setSharedStorageContext
 ---
 
-{{APIRef("Fenced Frame API")}}{{SeeCompatTable}}
+{{APIRef("Fenced Frame API")}}
 
 The **`setSharedStorageContext()`** method of the
 {{domxref("FencedFrameConfig")}} interface passes in contextual data from the embedding document to the `<fencedframe>`'s [shared storage](https://privacysandbox.google.com/private-advertising/shared-storage).

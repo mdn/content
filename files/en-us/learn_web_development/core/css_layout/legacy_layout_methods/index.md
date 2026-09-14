@@ -849,9 +849,9 @@ This system doesn't respect the grid used to contain the elements because it doe
 
 In your project you might still choose to use a flexbox 'grid' due to the additional alignment and space distribution capabilities flexbox provides over floats. You should, however, be aware that you are still using a tool for something other than what it was designed for. So you may feel like it is making you jump through additional hoops to get the end result you want.
 
-## Third party grid systems
+## Third-party grid systems
 
-Now that we understand the math behind our grid calculations, we are in a good place to look at some of the third party grid systems in common use. If you search for "CSS grid framework" on the Web, you will find a huge list of options to choose from. Popular frameworks such as [Bootstrap](https://getbootstrap.com/) and [Foundation](https://get.foundation/) include a grid system. There are also standalone grid systems, either developed using CSS or using preprocessors.
+Now that we understand the math behind our grid calculations, we are in a good place to look at some of the third-party grid systems in common use. If you search for "CSS grid framework" on the Web, you will find a huge list of options to choose from. Popular frameworks such as [Bootstrap](https://getbootstrap.com/) and [Foundation](https://get.foundation/) include a grid system. There are also standalone grid systems, either developed using CSS or using preprocessors.
 
 Let's take a look at one of these standalone systems as it demonstrates common techniques for working with a grid framework. The grid we will be using is part of Skeleton, a simple CSS framework.
 

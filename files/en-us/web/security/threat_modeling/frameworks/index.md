@@ -51,7 +51,7 @@ The [STRIDE](https://en.wikipedia.org/wiki/STRIDE_model) framework is a widely r
 
 ### LINDDUN
 
-The [LINDDUN](https://linddun.org) framework is a widely recognized threat modeling framework, inspired by STRIDE, that focuses on data privacy threats. Each letter in the LINDDUN acronym represents one of the seven categories of privacy threats. Within each threat model category, we've included questions you can include in your threat model relevant to the listed category.
+The [LINDDUN](https://linddun.org) framework is a widely recognized threat modeling framework, inspired by STRIDE, that focuses on data privacy threats. Each letter in the LINDDUN acronym represents one of the seven categories of privacy threats. Within each threat model category, we've included questions you can include in your threat model relevant to the listed category. For a more in-depth discussion, consult the [privacy threat modeling](/en-US/docs/Web/Privacy/Threat_modeling) article.
 
 - **Linking**
   - : The ability to associate data or actions to an individual or group.

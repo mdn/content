@@ -46,7 +46,7 @@ These macros are:
 
 For the first required parameter, you derive the feature name from the last section of the slug of the document you want to link to.
 For example, to link to the `<select>` element page with the slug `Web/HTML/Reference/Elements/select`, you will write the macro as `\{{HTMLElement("select")}}`.
-This will produce the link "{{HTMLElement("select")}}", which is both code formatted as well as includes the angular brackets.
+This will produce the link "{{HTMLElement("select")}}", which is both code formatted and includes the angular brackets.
 This is because macros add additional feature-specific formatting to the link text.
 So you never have to worry about anything more than the feature name itself when using a macro.
 This is why using macros to add links is quick and easy.
@@ -122,4 +122,4 @@ For example, `\{{CSSxRef("background-color")}}` creates the "{{CSSxRef("backgrou
 
 - [Using macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros)
 - [Commonly used macros](/en-US/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros), including BCD macros (`\{{Compat}}`) and specification macros (`\{{Specifications}}`).
-- [Banners and notices guide](/en-US/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices) including the `\{{SeeCompatTable}}`, `\{{Deprecated_Header}}`, and `\{{SecureContext_Header}}` macros.
+- [Banners and notices guide](/en-US/docs/MDN/Writing_guidelines/Page_structures/Banners_and_notices) including the `\{{SeeCompatTable}}` and `\{{SecureContext_Header}}` macros.

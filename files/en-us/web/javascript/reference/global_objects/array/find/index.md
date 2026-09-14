@@ -120,7 +120,7 @@ console.log([4, 5, 8, 12].find(isPrime)); // 5
 ```
 
 > [!NOTE]
-> The `isPrime()` implementation is for demonstration only. For a real-world application, you would want to use a heavily memoized algorithm such as the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) to avoid repeated calculations.
+> The `isPrime()` implementation is for demonstration only. For a real-world application, you would want to use a heavily {{Glossary("Memoization", "memoized")}} algorithm such as the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) to avoid repeated calculations.
 
 ### Using the third argument of callbackFn
 

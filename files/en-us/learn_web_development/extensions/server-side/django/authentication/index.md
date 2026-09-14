@@ -8,7 +8,7 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django/Forms", "Learn_web_development/Extensions/Server-side/Django")}}
 
-In this tutorial, we'll show you how to allow users to log in to your site with their own accounts, and how to control what they can do and see based on whether or not they are logged in and their _permissions_. As part of this demonstration, we'll extend the [LocalLibrary](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) website, adding login and logout pages, and user- and staff-specific pages for viewing books that have been borrowed.
+In this tutorial, we'll show you how to allow users to log into your site with their own accounts, and how to control what they can do and see based on whether or not they are logged in and their _permissions_. As part of this demonstration, we'll extend the [LocalLibrary](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) website, adding login and logout pages, and user- and staff-specific pages for viewing books that have been borrowed.
 
 <table>
   <tbody>
@@ -106,11 +106,11 @@ Our superuser is already authenticated and has all permissions, so we'll need to
 
 Below we'll first create a group and then a user. Even though we don't have any permissions to add for our library members yet, if we need to later, it will be much easier to add them once to the group than individually to each member.
 
-Start the development server and navigate to the admin site in your local web browser (`http://127.0.0.1:8000/admin/`). Login to the site using the credentials for your superuser account. The top level of the Admin site displays all of your models, sorted by "Django application". From the **Authentication and Authorization** section, you can click the **Users** or **Groups** links to see their existing records.
+Start the development server and navigate to the admin site in your local web browser (`http://127.0.0.1:8000/admin/`). Log into the site using the credentials for your superuser account. The top level of the Admin site displays all of your models, sorted by "Django application". From the **Authentication and Authorization** section, you can click the **Users** or **Groups** links to see their existing records.
 
 ![Admin site - add groups or users](admin_authentication_add.png)
 
-First lets create a new group for our library members.
+First let's create a new group for our library members.
 
 1. Click the **Add** button (next to Group) to create a new _Group_; enter the **Name** "Library Members" for the group.
    ![Admin site - add group](admin_authentication_add_group.png)
@@ -251,9 +251,9 @@ Create a new HTML file called /**django-locallibrary-tutorial/templates/registra
   {% if next %}
     {% if user.is_authenticated %}
       <p>Your account doesn't have access to this page. To proceed,
-      please login with an account that has access.</p>
+      please log in with an account that has access.</p>
     {% else %}
-      <p>Please login to see this page.</p>
+      <p>Please log in to see this page.</p>
     {% endif %}
   {% endif %}
 
@@ -297,7 +297,7 @@ LOGIN_REDIRECT_URL = '/'
 ### Logout template
 
 If you navigate to the logout URL (`http://127.0.0.1:8000/accounts/logout/`) then you'll get an error because Django 5 does not allow logout using `GET`, only `POST`.
-We'll add a form you can use to logout in a minute, but first we'll create the page that users are taken to after logging out.
+We'll add a form you can use to log out in a minute, but first we'll create the page that users are taken to after logging out.
 
 Create and open **/django-locallibrary-tutorial/templates/registration/logged_out.html**. Copy in the text below:
 
@@ -306,7 +306,7 @@ Create and open **/django-locallibrary-tutorial/templates/registration/logged_ou
 
 {% block content %}
   <p>Logged out!</p>
-  <a href="{% url 'login'%}">Click here to login again.</a>
+  <a href="{% url 'login'%}">Click here to log in again.</a>
 {% endblock %}
 ```
 
@@ -413,7 +413,7 @@ This is the last password-reset template, which is displayed to notify you when 
 
 Now that you've added the URL configuration and created all these templates, the authentication pages (other than logout) should now just work!
 
-You can test the new authentication pages by first attempting to log in to your superuser account using the URL `http://127.0.0.1:8000/accounts/login/`.
+You can test the new authentication pages by first attempting to log into your superuser account using the URL `http://127.0.0.1:8000/accounts/login/`.
 You'll be able to test the password reset functionality from the link in the login page. **Be aware that Django will only send reset emails to addresses (users) that are already stored in its database!**
 
 Note that you won't be able to test account logout yet, because logout requests must be sent as a `POST` rather than a `GET` request.
@@ -461,7 +461,7 @@ As you can see, we use `if` / `else` / `endif` template tags to conditionally di
 
 We create the login link URL using the `url` template tag and the name of the `login` URL configuration. Note also how we have appended `?next=\{{ request.path }}` to the end of the URL. What this does is add a URL parameter `next` containing the address (URL) of the _current_ page, to the end of the linked URL. After the user has successfully logged in, the view will use this `next` value to redirect the user back to the page where they first clicked the login link.
 
-The logout template code is different, because from Django 5 to logout you must `POST` to the `admin:logout` URL, using a form with a button.
+The logout template code is different, because from Django 5 to log out you must `POST` to the `admin:logout` URL, using a form with a button.
 By default this would render as a button, but you can style the button to display as a link.
 For this example we're using _Bootstrap_, so we make the button look like a link by applying `class="btn btn-link"`.
 You also need to append the following styles to **/django-locallibrary-tutorial/catalog/static/css/styles.css** in order to correctly position the logout link next to all the other sidebar links:
@@ -481,7 +481,7 @@ You should be taken to the logout/login pages that you defined in the [Template 
 
 ### Testing in views
 
-If you're using function-based views, the easiest way to restrict access to your functions is to apply the `login_required` decorator to your view function, as shown below. If the user is logged in then your view code will execute as normal. If the user is not logged in, this will redirect to the login URL defined in the project settings (`settings.LOGIN_URL`), passing the current absolute path as the `next` URL parameter. If the user succeeds in logging in then they will be returned back to this page, but this time authenticated.
+If you're using function-based views, the easiest way to restrict access to your functions is to apply the `login_required` decorator to your view function, as shown below. If the user is logged in then your view code will execute as normal. If the user is not logged in, this will redirect to the login URL defined in the project settings (`settings.LOGIN_URL`), passing the current absolute path as the `next` URL parameter. If the user succeeds in logging in then they will be returned to this page, but this time authenticated.
 
 ```python
 from django.contrib.auth.decorators import login_required

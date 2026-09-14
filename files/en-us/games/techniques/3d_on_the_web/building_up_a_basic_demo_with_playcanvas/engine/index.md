@@ -112,7 +112,7 @@ Try saving the file and loading it in your browser. You should now see a gray wi
 
 ## Geometry
 
-Now the scene is properly rendering we can start adding 3D shapes to it. To speed up development PlayCanvas provides a bunch of predefined primitives that you can use to create shapes instantly in a single line of code. There are cubes, spheres, cylinders and more complicated shapes available. Drawing everything for given shape is taken care of by the engine, so we can focus on the high level coding. Let's start by defining the geometry for a cube shape — add the following new code below your previous additions:
+Now the scene is properly rendering we can start adding 3D shapes to it. To speed up development PlayCanvas provides a bunch of predefined primitives that you can use to create shapes instantly in a single line of code. There are cubes, spheres, cylinders and more complicated shapes available. Drawing everything for given shape is taken care of by the engine, so we can focus on the high-level coding. Let's start by defining the geometry for a cube shape — add the following new code below your previous additions:
 
 ```js
 const box = new pc.Entity();
@@ -143,7 +143,7 @@ It will create a light `Entity` component and add it to the scene. We can rotate
 app.scene.ambientLight = new pc.Color(0.2, 0.2, 0.2);
 ```
 
-The code above assign a dark grey ambient light for the whole scene. The box looks better now, but it could get some colors to look even better - for that we need to create material for it.
+The code above assign a dark gray ambient light for the whole scene. The box looks better now, but it could get some colors to look even better - for that we need to create material for it.
 
 ## Material
 

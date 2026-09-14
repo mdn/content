@@ -53,7 +53,7 @@ The [PWA how-tos](/en-US/docs/Web/Progressive_web_apps/How_to) provide detailed 
 Build a PWA from scratch using these [PWA Tutorials](/en-US/docs/Web/Progressive_web_apps/Tutorials), which walk through the steps from start to finish, explaining how the different features of the app are implemented along the way.
 
 - [Creating your first PWA](/en-US/docs/Web/Progressive_web_apps/Tutorials/CycleTracker)
-  - : This novice-level tutorial walks through the creation of a PWA to track menstrual cycles. Lessons include a walk through of the HTML, CSS, and JavaScript required to create a fully functional web app, setting up a testing environment, and complete explanations guiding the learner through upgrading the web app into a PWA; including developing and inspecting a manifest, adding a service worker, and using the service worker to delete stale caches.
+  - : This novice-level tutorial walks through the creation of a PWA to track menstrual cycles. Lessons include a walkthrough of the HTML, CSS, and JavaScript required to create a fully functional web app, setting up a testing environment, and complete explanations guiding the learner through upgrading the web app into a PWA; including developing and inspecting a manifest, adding a service worker, and using the service worker to delete stale caches.
 - [Deep dive into PWA](/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames)
   - : This intermediate-level tutorial walks through the creation of a PWA that lists information about games submitted to the A-Frame category in the [js13kGames 2017](https://js13kgames.com/2017/) competition. This tutorial includes all the basics for creating a PWA, with additional features, including notifications, push, and app performance.
 

@@ -73,7 +73,7 @@ If the proposed color doesn't work for your needs, you can change the color sche
 
 ![Triad color scheme selected](paletton4.png)
 
-Click on the greyish blue in the top-right. The color is `#556E8D`. This can be used as an accent color to make things stand out, such as for headlines, tabs highlights, or other indicators on the site:
+Click on the grayish blue in the top-right. The color is `#556E8D`. This can be used as an accent color to make things stand out, such as for headlines, tabs highlights, or other indicators on the site:
 
 ![Triad color scheme selected](paletton-color-detail.png)
 

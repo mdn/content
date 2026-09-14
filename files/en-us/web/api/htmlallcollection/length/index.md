@@ -3,6 +3,8 @@ title: "HTMLAllCollection: length property"
 short-title: length
 slug: Web/API/HTMLAllCollection/length
 page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.HTMLAllCollection.length
 ---
 

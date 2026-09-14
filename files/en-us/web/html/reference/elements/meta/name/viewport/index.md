@@ -67,11 +67,14 @@ The browser's {{glossary("viewport")}} is the area of the window in which web co
 
 Some mobile devices and other narrow screens render pages in a virtual window or viewport that is wider than the screen, and then shrink the rendered result down to fit the screen size. Users can then zoom and pan to look more closely at different areas of the page. For example, if a mobile screen has a width of 640px, pages might be rendered with a virtual viewport of 980px, and then it will be shrunk down to fit into the 640px space. This is done because not all pages are optimized for mobile and break (or at least look bad) when rendered at a small viewport width. This virtual viewport is a way to make non-mobile-optimized sites in general look better on narrow screen devices. However, this mechanism is not so good for pages that are optimized for narrow screens using [media queries](/en-US/docs/Web/CSS/Guides/Media_queries) — if the virtual viewport is 980px for example, media queries that kick in at 640px or 480px or less will never be used, limiting the effectiveness of such responsive design techniques. The viewport `<meta>` element mitigates this problem of virtual viewport on narrow screen devices.
 
-The most common setting is the following, which sets the viewport to match the device's width and displays content at 100% zoom:
+The recommended setting is the following, which sets the viewport to match the device's width:
 
 ```html
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width" />
 ```
+
+> [!NOTE]
+> Including `initial-scale=1.0` was historically necessary to prevent unintended zooming behaviors in older mobile browsers. While modern browsers don't require `initial-scale` to resolve this behavior, `initial-scale` is not entirely redundant and remains useful when defining custom scale defaults or fixed layout widths.
 
 Sites can set their viewport to a specific size. For example, the definition `"width=320, initial-scale=1"` can be used to fit precisely onto a small phone display in portrait mode. This can cause problems when the browser renders a page at a larger size. To fix this, browsers will expand the viewport width if necessary to fill the screen at the requested scale. This is especially useful on large-screen devices.
 
@@ -104,9 +107,7 @@ The following example indicates to the browser that the page should be rendered 
 The following `content` value uses multiple keywords that hint to the browser to use fullscreen mode, along with `viewport-fit`, which helps avoid display cutouts such as mobile device notches:
 
 ```html
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="viewport" content="width=device-width, viewport-fit=cover" />
 ```
 
 ### The effect of interactive UI widgets

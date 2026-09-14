@@ -43,7 +43,7 @@ When looking to contribute to the MDN project, you will find yourself in one of 
 
 - **If you are looking to contribute to the project**, you can find tasks under 'Issues' in any of the [MDN GitHub repositories](https://github.com/orgs/mdn/repositories) (for example, [`mdn/content` issues](https://github.com/mdn/content/issues)) and our [public GitHub project boards](https://github.com/orgs/mdn/projects).
   Make sure the issue isn't assigned to someone and no one has already opened a pull request for the task.
-  Issues labelled with `good first issue` are a good place to start.
+  Issues labeled with `good first issue` are a good place to start.
 
 - **If you have found a problem on MDN**, you should open an issue first.
   **Issues need a response from maintainers before you start working** so that you know a problem addressed by a pull request is valid and that your pull request will be accepted.

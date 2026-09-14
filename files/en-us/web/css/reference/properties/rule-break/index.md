@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`rule-break`** [CSS](/en-US/docs/Web/CSS) property sets the behavior for breaking column and row rules into segments where rows and column gaps intersect, setting {{cssxref("column-rule-break")}} and {{cssxref("row-rule-break")}} to the same value.
+The **`rule-break`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets the behavior for breaking column and row rules into segments where rows and column gaps intersect, setting {{cssxref("column-rule-break")}} and {{cssxref("row-rule-break")}} to the same value.
 
 {{InteractiveExample("CSS Demo: rule")}}
 

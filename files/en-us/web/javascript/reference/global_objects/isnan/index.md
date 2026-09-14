@@ -81,7 +81,7 @@ isNaN(new Date()); // false; Date objects can be converted to a number (timestam
 isNaN(new Date().toString()); // true; the string representation of a Date object cannot be parsed as a number
 
 // Arrays
-isNaN([]); // false; the primitive representation is "", which coverts to the number 0
+isNaN([]); // false; the primitive representation is "", which converts to the number 0
 isNaN([1]); // false; the primitive representation is "1"
 isNaN([1, 2]); // true; the primitive representation is "1,2", which cannot be parsed as number
 ```

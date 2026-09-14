@@ -23,7 +23,7 @@ After entering username and password, behind the GUI the SQL queries work as fol
 "SELECT Count(*) FROM Users WHERE Username=' " + txt.User.Text+" ' AND Password=' "+ txt.Password.Text+" ' ";
 ```
 
-Now suppose User enters the Username: admin and Password: passwd123, so after clicking on the Log in button, SQL query will run as follows:
+Now suppose User enters the Username: admin and Password: passwd123, so after clicking on the Login button, SQL query will run as follows:
 
 ```sql
 "SELECT Count(*) FROM Users WHERE Username=' admin ' AND Password=' passwd123 ' ";

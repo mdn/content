@@ -85,7 +85,7 @@ browser.history
   .then(onGot);
 ```
 
-Logs the URL and last visit time of the most recent visit to a page that contain the string "mozilla":
+Logs the URL and last visit time of the most recent visit to a page that contains the string "mozilla":
 
 ```js
 function onGot(historyItems) {

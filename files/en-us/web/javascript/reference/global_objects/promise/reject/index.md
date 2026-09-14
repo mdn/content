@@ -89,9 +89,12 @@ class NotPromise {
       (reason) => console.log("Rejected", reason),
     );
   }
+
+  static reject = Promise.reject;
 }
 
-Promise.reject.call(NotPromise, "foo"); // Logs "Rejected foo"
+const p = NotPromise.reject("foo"); // Logs "Rejected foo"
+// p is a NotPromise instance
 ```
 
 ## Specifications

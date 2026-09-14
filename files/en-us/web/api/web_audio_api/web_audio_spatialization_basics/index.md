@@ -11,7 +11,7 @@ The official term for this is **spatialization**, and this article will cover th
 
 ## Basics of spatialization
 
-In Web Audio, complex 3D spatializations are created using the {{domxref("PannerNode")}}, which in layman's terms is basically a whole lotta cool maths to make audio appear in 3D space.
+In Web Audio, complex 3D spatializations are created using the {{domxref("PannerNode")}}, which in layman's terms is basically a whole lotta cool math to make audio appear in 3D space.
 Think sounds flying over you, creeping up behind you, moving across in front of you.
 That sort of thing.
 
@@ -261,7 +261,7 @@ switch (direction) {
 ```
 
 Our rotation values are a little more involved, however, as we need to move the sound _around_.
-Not only do we have to update two axis values (e.g., if you rotate an object around the x-axis, you update the y and z coordinates for that object), but we also need to do some more maths for this.
+Not only do we have to update two axis values (e.g., if you rotate an object around the x-axis, you update the y and z coordinates for that object), but we also need to do some more math for this.
 The rotation is a circle and we need [`Math.sin`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/sin) and [`Math.cos`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cos) to help us draw that circle.
 
 Let's set up a rotation rate, which we'll convert into a radian range value for use in `Math.sin` and `Math.cos` later, when we want to figure out the new coordinates when we're rotating our boombox:
@@ -556,7 +556,7 @@ The values can be hard to manipulate sometimes and depending on your use case it
 
 > [!NOTE]
 > There are slight differences in the way the audio spatialization sounds across different browsers.
-> The panner node does some very involved maths under the hood;
+> The panner node does some very involved math under the hood;
 > there are a [number of tests here](https://wpt.fyi/results/webaudio/the-audio-api/the-pannernode-interface?label=stable&aligned=true) so you can keep track of the status of the inner workings of this node across different platforms.
 
 Again, you can [check out the final demo here](https://mdn.github.io/webaudio-examples/spatialization/), and the [final source code is here](https://github.com/mdn/webaudio-examples/tree/main/spatialization).

@@ -173,6 +173,18 @@ For more information, refer to the [CORS documentation](/en-US/docs/Web/HTTP/Gui
 - {{HTTPHeader("Content-Location")}}
   - : Indicates an alternate location for the returned data.
 
+## Message signatures
+
+- {{HTTPHeader("Accept-Signature")}}
+  - : The [`Accept-Signature`](https://www.rfc-editor.org/info/rfc9421/#section-5.1) header requests a signed response or subsequent request, specifying the components to sign and signature parameters.
+- {{HTTPHeader("Signature")}}
+  - : The [`Signature`](https://www.rfc-editor.org/info/rfc9421/#section-4.2) header contains one or more labeled signature values. Each label corresponds to an entry in `Signature-Input`.
+- {{HTTPHeader("Signature-Input")}}
+  - : The [`Signature-Input`](https://www.rfc-editor.org/info/rfc9421/#section-4.1) header identifies the ordered list of message components covered by each signature and its metadata, such as the creation time and key identifier.
+
+> [!NOTE]
+> These definitions follow RFC 9421. The [Signed HTTP Exchanges (SXG) draft](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html) also defines `Accept-Signature` and `Signature` with incompatible semantics, plus a distinct `Signed-Headers` header. However, the only browser SXG implementation, Chromium, does not support these as HTTP headers.
+
 ## Preferences
 
 Preferences can be sent by clients in requests to indicate optional behaviors for requests and responses.
@@ -501,8 +513,6 @@ See the [Topics API](/en-US/docs/Web/API/Topics_API) documentation for more info
 
 ### Other
 
-- {{HTTPHeader("Accept-Signature")}} {{experimental_inline}}
-  - : A client can send the [`Accept-Signature`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#name-the-accept-signature-header) header field to indicate intention to take advantage of any available signatures and to indicate what kinds of signatures it supports.
 - {{HTTPHeader("Early-Data")}} {{experimental_inline}}
   - : Indicates that the request has been conveyed in TLS early data.
 - {{HTTPHeader("Idempotency-Key")}} {{experimental_inline}}
@@ -510,10 +520,6 @@ See the [Topics API](/en-US/docs/Web/API/Topics_API) documentation for more info
 - {{HTTPHeader("Set-Login")}} {{experimental_inline}}
   - : Response header sent by a federated identity provider (IdP) to set its login status, meaning whether any users are logged into the IdP on the current browser or not.
     This is stored by the browser and used by the [FedCM API](/en-US/docs/Web/API/FedCM_API).
-- {{HTTPHeader("Signature")}} {{experimental_inline}}
-  - : The [`Signature`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#name-the-signature-header) header field conveys a list of signatures for an exchange, each one accompanied by information about how to determine the authority of and refresh that signature.
-- {{HTTPHeader("Signed-Headers")}} {{experimental_inline}}
-  - : The [`Signed-Headers`](https://wicg.github.io/webpackage/draft-yasskin-http-origin-signed-responses.html#name-the-signed-headers-header) header field identifies an ordered list of response header fields to include in a signature.
 - {{HTTPHeader("Speculation-Rules")}} {{experimental_inline}}
   - : Provides a list of URLs pointing to text resources containing [speculation rule](/en-US/docs/Web/API/Speculation_Rules_API) JSON definitions. When the response is an HTML document, these rules will be added to the document's speculation rule set.
 - {{HTTPHeader("Sec-Speculation-Tags")}} {{experimental_inline}}
@@ -530,7 +536,7 @@ See the [Topics API](/en-US/docs/Web/API/Topics_API) documentation for more info
 - {{HTTPHeader("X-Forwarded-Proto")}} {{non-standard_inline}}
   - : Identifies the protocol (HTTP or HTTPS) that a client used to connect to your proxy or load balancer.
 - {{HTTPHeader("X-DNS-Prefetch-Control")}} {{non-standard_inline}}
-  - : Controls DNS prefetching, a feature by which browsers proactively perform domain name resolution on both links that the user may choose to follow as well as URLs for items referenced by the document, including images, CSS, JavaScript, and so forth.
+  - : Controls DNS prefetching, a feature by which browsers proactively perform domain name resolution on both links that the user may choose to follow and URLs for items referenced by the document, including images, CSS, JavaScript, and so forth.
 - {{HTTPHeader("X-Robots-Tag")}} {{non-standard_inline}}
   - : The [`X-Robots-Tag`](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag) HTTP header is used to indicate how a web page is to be indexed within public search engine results. The header is equivalent to [`<meta name="robots">`](/en-US/docs/Web/HTML/Reference/Elements/meta/name/robots) elements.
 

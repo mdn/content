@@ -70,7 +70,7 @@ The interface also supports the following properties:
 ## Instance methods
 
 - {{domxref("PerformanceNavigationTiming.toJSON()")}}
-  - : Returns a JSON representation of the `PerformanceNavigationTiming` object.
+  - : Overrides the {{domxref("PerformanceEntry.toJSON()")}} method to return a JSON representation of the `PerformanceNavigationTiming` object.
 
 ## Specifications
 

@@ -94,12 +94,9 @@ counter-set: revert-layer;
 counter-set: unset;
 ```
 
-The `counter-set` property is specified as either one of the following:
-
-- A `<custom-ident>` naming the counter, followed optionally by an `<integer>`. You may specify as many counters to reset as you want, with each name or name-number pair separated by a space.
-- The keyword value `none`.
-
 ### Values
+
+This property is specified as either a space-separated list of `<custom-ident>` values, each optionally followed by an `<integer>`, or the keyword `none`:
 
 - {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
   - : The name of the counter to set.
