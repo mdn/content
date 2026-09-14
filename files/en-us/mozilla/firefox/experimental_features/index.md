@@ -575,11 +575,13 @@ This can be used to avoid collisions where multiple web components declare eleme
 The implementation includes:
 
 - `customElementRegistry` property on {{domxref("Document")}}, {{domxref("Element")}}, and {{domxref("ShadowRoot")}}.
+  The [`CustomElementRegistry()` constructor](/en-US/docs/Web/API/CustomElementRegistry/CustomElementRegistry) creates a new `CustomElementRegistry` object for scoped usage.
+
   ([Firefox bug 2018900](https://bugzil.la/2018900)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 150           | No                  |
+| Nightly           | 156           | Yes                 |
 | Developer Edition | 150           | No                  |
 | Beta              | 150           | No                  |
 | Release           | 150           | No                  |
