@@ -1,13 +1,13 @@
 ---
-title: Firefox 157 release notes for developers (Beta)
-short-title: Firefox 157 (Beta)
-slug: Mozilla/Firefox/Releases/157
+title: Firefox 158 release notes for developers (Nightly)
+short-title: Firefox 158 (Nightly)
+slug: Mozilla/Firefox/Releases/158
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
-This article provides information about the changes in Firefox 157 that affect developers.
-Firefox 157 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [September 29, 2026](https://whattrainisitnow.com/release/?version=157).
+This article provides information about the changes in Firefox 158 that affect developers.
+Firefox 158 is the current [Nightly version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [October 13, 2026](https://whattrainisitnow.com/release/?version=158).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress.
@@ -78,6 +78,6 @@ Firefox 157 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ## Experimental web features
 
-These features are shipping in Firefox 157 but are disabled by default.
+These features are shipping in Firefox 158 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
