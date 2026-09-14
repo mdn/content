@@ -162,7 +162,7 @@ You can alternatively use the {{cssxref("animation-timeline/scroll")}} functiona
 
 For more information, see [Firefox bug 1807685](https://bugzil.la/1807685), [Firefox bug 1804573](https://bugzil.la/1804573), [Firefox bug 1809005](https://bugzil.la/1809005), [Firefox bug 1676791](https://bugzil.la/1676791), [Firefox bug 1754897](https://bugzil.la/1754897), [Firefox bug 1817303](https://bugzil.la/1817303), and [Firefox bug 1737918](https://bugzil.la/1737918).
 
-The {{cssxref('timeline-scope')}}, {{cssxref('animation-range-start')}} and {{cssxref('animation-range-end')}} properties (and the {{cssxref('animation-range')}} shorthand property) are not yet supported. For more information, see [Firefox bug 1676779](https://bugzil.la/1676779).
+The {{cssxref('animation-range-start')}} and {{cssxref('animation-range-end')}} properties (and the {{cssxref('animation-range')}} shorthand property) are not yet supported. For more information, see [Firefox bug 1676779](https://bugzil.la/1676779).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -423,7 +423,7 @@ The {{cssxref("line-clamp")}} CSS property now works without the `-webkit-` vend
 
 ### Percentage values for `text-decoration-inset`
 
-The {{cssxref("text-decoration-inset")}} CSS property now supports percentages as values. The percentage value specifies the size of the inset as a percentage of the {{cssxref("font-size")}}. ([Firefox bug 2044602](https://bugzil.la/2044602)).
+The {{cssxref("text-decoration-inset")}} CSS property now supports percentages as values. The percentage value specifies the size of the inset as a percentage of the inline size of the decorating box or of each individual box fragment, depending on the value of {{cssxref("box-decoration-break")}}. ([Firefox bug 2044602](https://bugzil.la/2044602)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -438,6 +438,20 @@ The {{cssxref("text-decoration-inset")}} CSS property now supports percentages a
 ### `view-timeline` includes `view-timeline-inset`
 
 The {{cssxref("view-timeline")}} shorthand property now supports the {{cssxref("view-timeline-inset")}} property. The shorthand lets you specify start and/or end inset (or outset) values to adjust the position of the view progress timeline. ([Firefox bug 2046602](https://bugzil.la/2046602)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 155           | Yes                 |
+| Developer Edition | 155           | No                  |
+| Beta              | 155           | No                  |
+| Release           | 155           | No                  |
+
+- `layout.css.scroll-driven-animations.enabled`
+  - : Set to `true` to enable.
+
+### `timeline-scope` names are now global by default
+
+The default behavior of named timeline scoping has been updated to be global. This can be scoped to elements, and their subtree, using the {{cssxref("timeline-scope")}} CSS property and the value of either the {{cssxref("scroll-timeline-name")}} or {{cssxref("view-timeline-name")}} ([Firefox bug 2024012](https://bugzil.la/2024012)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -561,11 +575,13 @@ This can be used to avoid collisions where multiple web components declare eleme
 The implementation includes:
 
 - `customElementRegistry` property on {{domxref("Document")}}, {{domxref("Element")}}, and {{domxref("ShadowRoot")}}.
+  The [`CustomElementRegistry()` constructor](/en-US/docs/Web/API/CustomElementRegistry/CustomElementRegistry) creates a new `CustomElementRegistry` object for scoped usage.
+
   ([Firefox bug 2018900](https://bugzil.la/2018900)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 150           | No                  |
+| Nightly           | 156           | Yes                 |
 | Developer Edition | 150           | No                  |
 | Beta              | 150           | No                  |
 | Release           | 150           | No                  |
