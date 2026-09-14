@@ -72,7 +72,7 @@ sidebar: mdnsidebar
 
 The summary paragraph — start by naming the interface, saying what API it is part of, and saying what it does. This should ideally be one or two short sentences. You could copy most of this from the Interface's summary on the corresponding API landing page.
 
-> More than four or five paragraphs should be pushed into a description section before the examples.
+Keep the introductory content brief. All other explanations should be included in the "Description" section before the "Examples" section.
 
 `\{{InheritanceDiagram}}`
 
@@ -144,8 +144,7 @@ Listen to these events using {{DOMxRef("EventTarget.addEventListener", "addEvent
 
 ## Description
 
-> Add a more detailed detailed description of the interface if required.
-> Generally if the introduction at the top of a page is likely to extend more than a rendered page of text, reduce it to a few paragraphs and push the rest to a description.
+This is an optional section. If needed, include a more detailed explanation of the interface here.
 
 ## Examples
 
