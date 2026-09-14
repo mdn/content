@@ -11,7 +11,7 @@ The **`SVGLengthList`** interface defines a list of {{ domxref("SVGLength") }} o
 
 An `SVGLengthList` object can be designated as read only, which means that attempts to modify the object will result in an exception being thrown.
 
-An `SVGLengthList` object is indexable and can be accessed like an array.
+An `SVGLengthList` object is indexable and can be accessed like an array using [bracket notation](/en-US/docs/Web/JavaScript/Reference/Operators/Property_accessors#bracket_notation). Reading an index is equivalent to calling {{domxref("SVGLengthList.getItem", "getItem()")}}. Assigning to an index is equivalent to calling {{domxref("SVGLengthList.replaceItem", "replaceItem()")}}, including the exceptions it throws.
 
 ## Instance properties
 
