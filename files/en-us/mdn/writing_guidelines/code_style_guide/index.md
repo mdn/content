@@ -38,6 +38,8 @@ Some more general guidelines include:
 
 ### Browser support
 
+Do not specify supported browsers and their versions in code comments or prose, as this information quickly becomes outdated.
+
 When creating code examples for a technology that's not yet available in all major browsers, consider using [feature detection](/en-US/docs/Learn_web_development/Extensions/Testing/Feature_detection) to provide a fallback behavior or display a message indicating that the reader's browser doesn't support the demonstrated feature.
 
 Keep the rendered output of code examples visible even when the reader's browser doesn't support the demonstrated feature. This lets readers compare the code with its result and see how the example behaves without the feature. Display a browser-support message alongside the rendered output instead of hiding or removing it to explain why the result may appear different from the intended demonstration.
@@ -52,7 +54,7 @@ For example, in CSS code examples, use the [`@supports` at-rule with the `not` o
 
 #### CSS
 
-```css hidden live-sample___corner-shape-support
+```css live-sample___corner-shape-support
 body {
   font-family: "Helvetica", "Arial", sans-serif;
   width: 240px;
@@ -70,10 +72,6 @@ div {
 }
 
 @supports not (corner-shape: scoop) {
-  body {
-    all: unset !important;
-  }
-
   body::before {
     content: "Your browser does not support the 'corner-shape' property.";
     color: black;
@@ -96,10 +94,9 @@ div {
 
 {{EmbedLiveSample("corner-shape-support", "100%", "240")}}
 
-The following example uses the {{cssxref("corner-shape")}} property to show how this works. See the rendered output in different browsers to compare how the example appears when `corner-shape` is supported and when it isn't. Notice that the browser-support message appears and the example remains visible in browsers that don't support `corner-shape`.
-In your own examples, you can mark the browser-support CSS block as [`hidden`](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples#hiding_code) so its styles apply to the live sample without displaying the code block in the article.
+Compare the rendered output in different browsers to see how the example behaves when `corner-shape` is supported and when it isn't.
 
-Do not specify supported browsers and their versions in code comments or prose, as this information quickly becomes outdated.
+In your own examples, you can mark the browser-support CSS block as [`hidden`](/en-US/docs/MDN/Writing_guidelines/Page_structures/Live_samples#hiding_code) so its styles apply to the live sample without displaying the code block in the article.
 
 ## MDN code style and formatting
 
