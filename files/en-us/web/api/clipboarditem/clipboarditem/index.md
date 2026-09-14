@@ -49,7 +49,7 @@ This item is then written to the clipboard, using the {{domxref("Clipboard.write
 For an example that writes and reads back several MIME-type representations in one `ClipboardItem`, see [Reading multiple formats from the clipboard](/en-US/docs/Web/API/Clipboard/read#reading_multiple_formats_from_the_clipboard).
 
 > [!NOTE]
-> {{domxref("Clipboard.write()")}} takes an array of `ClipboardItem` objects, but if the underlying OS doesn't support writing multiple items, only the first item will be written 
+> {{domxref("Clipboard.write()")}} takes an array of `ClipboardItem` objects, but if the underlying OS doesn't support writing multiple items, only the first item will be written.
 > Note that some browser versions throw an exception if more than one item is passed in the array (check the [Browser compatibility](#browser_compatibility) table below).
 
 ```js
