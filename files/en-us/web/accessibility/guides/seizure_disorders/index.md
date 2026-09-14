@@ -594,6 +594,8 @@ The requirement for the `literal` property is taken from [WAI-Adapt: Help and Su
 
 ### ISO
 
+<!-- cSpell:ignore colour -->
+
 - [IEC 61966-2-2:2003(en)](https://www.iso.org/obp/ui/#iso:std:iec:61966:-2-2:ed-1:v1:en) Multimedia systems and equipment — Colour measurement and management — Part 2-2: Colour management — Extended RGB color space — scRGB
 
 ### Photosensitive Epilepsy Analysis Tool

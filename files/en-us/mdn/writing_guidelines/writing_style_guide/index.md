@@ -174,7 +174,7 @@ The following checklist is good to keep in mind while writing and reviewing cont
   It's important, then, to ensure that every page has its own content. The following suggestions can help you accomplish that:
   - **Explain more unique concepts**: Consider use cases where there might be more differences than one would think. For instance, in the case of documenting `width` and `height` properties, perhaps write about the ways horizontal space and vertical space are used differently, and provide a discussion about the appropriate concepts. Perhaps you can mention the use of `width` in terms of making room for a sidebar, while using `height` to handle vertical scrolling or footers. Including information about accessibility issues is a useful and important idea as well.
   - **Use different examples**: Examples in these situations are often even more similar than the body text because the examples may use both (or all) of the similar methods or properties to begin with, thereby requiring no real changes when reused. So throw out the example and write a new one, or at least provide multiple examples, with at least some of them different.
-  - **Add descriptions for examples**: Both an overview of what the example does as well as coverage of how it works, in an appropriate level of detail given the complexity of the topic and the target audience, should be included.
+  - **Add descriptions for examples**: Both an overview of what the example does and coverage of how it works, in an appropriate level of detail given the complexity of the topic and the target audience, should be included.
 
   The easiest way to avoid being overly similar is of course to write each article from scratch if time allows.
 

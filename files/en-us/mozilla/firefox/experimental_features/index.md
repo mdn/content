@@ -162,7 +162,7 @@ You can alternatively use the {{cssxref("animation-timeline/scroll")}} functiona
 
 For more information, see [Firefox bug 1807685](https://bugzil.la/1807685), [Firefox bug 1804573](https://bugzil.la/1804573), [Firefox bug 1809005](https://bugzil.la/1809005), [Firefox bug 1676791](https://bugzil.la/1676791), [Firefox bug 1754897](https://bugzil.la/1754897), [Firefox bug 1817303](https://bugzil.la/1817303), and [Firefox bug 1737918](https://bugzil.la/1737918).
 
-The {{cssxref('timeline-scope')}}, {{cssxref('animation-range-start')}} and {{cssxref('animation-range-end')}} properties (and the {{cssxref('animation-range')}} shorthand property) are not yet supported. For more information, see [Firefox bug 1676779](https://bugzil.la/1676779).
+The {{cssxref('animation-range-start')}} and {{cssxref('animation-range-end')}} properties (and the {{cssxref('animation-range')}} shorthand property) are not yet supported. For more information, see [Firefox bug 1676779](https://bugzil.la/1676779).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -449,9 +449,9 @@ The {{cssxref("view-timeline")}} shorthand property now supports the {{cssxref("
 - `layout.css.scroll-driven-animations.enabled`
   - : Set to `true` to enable.
 
-### `at-rule()` support queries
+### `timeline-scope` names are now global by default
 
-The [`at-rule()`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#at-rule) function in the {{cssxref("@supports")}} at-rule lets you test whether the browser supports a given CSS at-rule, for example `@supports at-rule(@scope)`. ([Firefox bug 2060754](https://bugzil.la/2060754)).
+The default behavior of named timeline scoping has been updated to be global. This can be scoped to elements, and their subtree, using the {{cssxref("timeline-scope")}} CSS property and the value of either the {{cssxref("scroll-timeline-name")}} or {{cssxref("view-timeline-name")}} ([Firefox bug 2024012](https://bugzil.la/2024012)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -459,6 +459,13 @@ The [`at-rule()`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#at-rule) func
 | Developer Edition | 155           | No                  |
 | Beta              | 155           | No                  |
 | Release           | 155           | No                  |
+
+- `layout.css.scroll-driven-animations.enabled`
+  - : Set to `true` to enable.
+
+### `at-rule()` support queries
+
+The [`at-rule()`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#at-rule) function in the {{cssxref("@supports")}} at-rule lets you test whether the browser supports a given CSS at-rule, for example `@supports at-rule(@scope)`. ([Firefox bug 2060754](https://bugzil.la/2060754)).
 
 - `layout.css.supports.at-rule.enabled`
   - : Set to `true` to enable.
@@ -481,6 +488,20 @@ When enabled, the [`href`](/en-US/docs/Web/MathML/Reference/Global_attributes/hr
 | Release           | 151           | No                  |
 
 - `mathml.href_link_on_non_anchor_element.disabled`
+  - : Set to `true` to enable.
+
+### Implement the `MathMLAnchorElement` interface
+
+When enabled, the MathML [`<a>`](/en-US/docs/Web/MathML/Reference/Element/a) element is correctly represented in the DOM by the [`MathMLAnchorElement`](/en-US/docs/Web/API/MathMLAnchorElement) interface rather than the generic [`MathMLElement`](/en-US/docs/Web/API/MathMLElement) interface. ([Firefox bug 2059312](https://bugzil.la/2059312)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 155           | Yes                 |
+| Developer Edition | 155           | No                  |
+| Beta              | 155           | No                  |
+| Release           | 155           | No                  |
+
+- `mathml.a.element.enabled`
   - : Set to `true` to enable.
 
 ## JavaScript

@@ -9,6 +9,8 @@ sidebar: htmlsidebar
 
 The **`<form>`** [HTML](/en-US/docs/Web/HTML) element represents a document section containing interactive controls for submitting information.
 
+It is possible to use the {{cssxref(':valid')}} and {{cssxref(':invalid')}} CSS [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) to style a `<form>` element based on whether the {{domxref("HTMLFormElement.elements", "elements")}} inside the form are valid.
+
 {{InteractiveExample("HTML Demo: &lt;form&gt;", "tabbed-standard")}}
 
 ```html interactive-example
@@ -46,8 +48,6 @@ label {
   padding-right: 10px;
 }
 ```
-
-It is possible to use the {{cssxref(':valid')}} and {{cssxref(':invalid')}} CSS [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) to style a `<form>` element based on whether the {{domxref("HTMLFormElement.elements", "elements")}} inside the form are valid.
 
 ## Attributes
 
