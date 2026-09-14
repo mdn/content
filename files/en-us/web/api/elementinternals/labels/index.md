@@ -19,29 +19,30 @@ A {{domxref("NodeList")}} containing all of the label elements associated with t
 - `NotSupportedError` {{domxref("DOMException")}}
   - : Thrown if the element does not have its `formAssociated` property set to `true`.
 
-## Accessibility
+## Accessibility concerns
 
 A {{HTMLElement("label")}} associated with a form-associated custom element is exposed to assistive technology in the same way as a label on a built-in form control.
 In Chrome and Firefox it provides the accessible name for the element.
 
 For a screen reader to reach that name, the element also has to be focusable.
-A custom element is not focusable by default, so it needs a [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute, or a shadow root created with `delegatesFocus: true` and a focusable element inside it.
+A custom element is not focusable by default.
+It needs a [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute, or a shadow root created with {{domxref("ShadowRoot.delegatesFocus", "delegatesFocus: true")}} and a focusable element inside it.
 
 Safari does not expose the label this way.
-VoiceOver does not read a `<label>` that is associated with a form-associated custom element ([WebKit bug 259124](https://bugs.webkit.org/show_bug.cgi?id=259124)), so an element that relies on the association alone has no accessible name in that combination.
+VoiceOver does not read a `<label>` linked to a form-associated custom element ([WebKit bug 259124](https://bugs.webkit.org/show_bug.cgi?id=259124)).
+An element that relies on the label association alone therefore has no accessible name in Safari.
 
 To give the element an accessible name in every browser, set {{domxref("ElementInternals.ariaLabel", "ariaLabel")}} on the element's internals as well as associating the label:
 
 ```js
 class CustomCheckbox extends HTMLElement {
   static formAssociated = true;
-  #internals;
 
   constructor() {
     super();
-    this.#internals = this.attachInternals();
-    this.#internals.role = "checkbox";
-    this.#internals.ariaLabel = "Join newsletter";
+    this.internals_ = this.attachInternals();
+    this.internals_.role = "checkbox";
+    this.internals_.ariaLabel = "Join newsletter";
   }
 }
 ```
@@ -81,8 +82,8 @@ console.log(element.internals_.labels); // NodeList [ label ]
 ```
 
 > [!NOTE]
-> A label is only listed once it has been parsed.
-> Reading `labels` from [`connectedCallback()`](/en-US/docs/Web/API/Web_components/Using_custom_elements#custom_element_lifecycle_callbacks) returns an empty list when the associated `<label>` comes after the element in the source, because the parser has not reached it yet.
+> A label is only included in `labels` once it has been parsed.
+> Reading `labels` from [`connectedCallback()`](/en-US/docs/Web/API/Web_components/Using_custom_elements#custom_element_lifecycle_callbacks) returns an empty `NodeList` when the associated `<label>` comes after the element in the source, because the parser has not reached it yet.
 
 ## Specifications
 
