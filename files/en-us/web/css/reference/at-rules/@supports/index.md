@@ -167,7 +167,7 @@ This named-feature checks if the browser supports transform-aware anchor-positio
 }
 ```
 
-#### `single-axis-scroll-container`
+##### `single-axis-scroll-container`
 
 This named-feature checks if the browser supports the ability to have single-axis scroll containers, where one axis is [`scroll`](/en-US/docs/Web/CSS/Reference/Properties/overflow#scroll) and the other is [`clip`](/en-US/docs/Web/CSS/Reference/Properties/overflow#clip).
 
