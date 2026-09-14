@@ -353,6 +353,7 @@ JLREQ
 JSEP
 JSON-ifiable
 jsonifier
+JSMSG
 jumpless
 JXON
 KACST
