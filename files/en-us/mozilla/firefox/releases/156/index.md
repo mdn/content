@@ -148,7 +148,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
   [Scoped custom element registries](/en-US/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries) are now supported, so that a shadow root can define custom elements that do not clash with those defined in the global registry.
   This release enables the feature by default in Nightly builds. ([Firefox bug 2064333](https://bugzil.la/2064333)).
 
-- **`named-feature()` support queries**: `layout.css.supports.at-rule.enabled`
+- **`named-feature()` support queries**: `layout.css.anchor-positioning.follows-transforms.enabled`
 
   The `named-feature()` function in the {{cssxref("@supports")}} at-rule lets you test whether the browser supports a feature that has no other detectable syntax, for example `@supports named-feature(anchor-position-follows-transforms)`.
   ([Firefox bug 2042977](https://bugzil.la/2042977) and [Firefox bug 2055354](https://bugzil.la/2055354)).
