@@ -43,7 +43,7 @@ getBBox(options)
 A {{domxref("DOMRect")}} object describing the bounding box in the user coordinate system of the element, regardless of any transformation applied to the element or its parents.
 
 > [!NOTE]
-> Firefox returns a legacy {{domxref("SVGRect")}} object, which has the same `x`, `y`, `width`, and `height` properties, but isn't a `DOMRect` instance.
+> Browsers currently return an {{domxref("SVGRect")}} object defined in SVG 1.1, which has the same `x`, `y`, `width`, and `height` properties, but isn't a `DOMRect` instance.
 
 ## Examples
 
