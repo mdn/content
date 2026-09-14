@@ -9,17 +9,11 @@ This page discusses how JavaScript modules are integrated with the web platform.
 
 ## Server configuration
 
-The first difference you will encounter when migrating web pages to modules is that you can no longer view your HTML using the `file://` protocol.
-
-Serve the directory containing your HTML and modules through a [local HTTP server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server), then open the page using the server's URL, such as `http://localhost:8000/`.
+The first difference you will encounter when migrating web pages to modules is that you can no longer view your HTML using the `file://` protocol. Serve the directory containing your HTML and modules through a [local HTTP server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server), then open the page using the server's URL, such as `http://localhost:8000/`.
 
 The server must send JavaScript modules with a JavaScript [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types), such as `Content-Type: text/javascript`. Check this for both `.js` and `.mjs` files. If an import fails with a MIME type error, inspect the response in your browser's network tools: a missing file or an HTML fallback page may have been returned instead of the module.
 
 Module requests use [CORS](/en-US/docs/Web/HTTP/Guides/CORS). When importing from another origin, that server must allow your page's origin through its CORS response headers, such as {{HTTPHeader("Access-Control-Allow-Origin")}}.
-
-- Within the same environment, a module is only executed once, even if it has been imported multiple times or referenced in multiple `<script>` tags.
-- There is no need to use the `defer` attribute (see [`<script>` attributes](/en-US/docs/Web/HTML/Reference/Elements/script#attributes)) when loading a module script; module scripts declared in the document without `async` are deferred automatically.
-- You need to pay attention to local testing — if you try to load the HTML file locally (i.e., with a `file://` URL), you'll run into CORS errors due to JavaScript module security requirements. You need to do your testing through a server.
 
 ## Applying modules to your HTML
 
@@ -54,9 +48,45 @@ You should generally define all your modules in separate files. Modules declared
 > Modules and their dependencies can be preloaded by specifying them in [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link) elements with [`rel="modulepreload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/modulepreload).
 > This can significantly reduce load time when the modules are used.
 
+Some other differences with traditional `<script>` elements:
+
+- Within the same environment, a module is only executed once, even if it has been imported multiple times or referenced in multiple `<script>` tags.
+- There is no need to use the `defer` attribute (see [`<script>` attributes](/en-US/docs/Web/HTML/Reference/Elements/script#attributes)) when loading a module script; module scripts declared in the document without `async` are deferred automatically.
+
 > [!NOTE]
 > In some module systems, you can use a module specifier like `modules/square` that isn't a relative or absolute path, and that doesn't have a file extension.
 > This kind of specifier can be used in a browser environment if you first define an [import map](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#importing_modules_using_import_maps).
+
+## Module specifiers on the web
+
+Module specifiers are the strings coming after the `from` keyword:
+
+```js
+import { name } from "./module.js";
+```
+
+In the [Modules](/en-US/docs/Web/JavaScript/Guide/Modules#named_imports) guide we already said that the module specifier format is runtime-dependent. Let's look at how they work in browsers.
+
+First of all, everything on the web is URL-based. Each module has its URL, so you can import a module by its absolute URL directly:
+
+```js
+import { name } from "https://example.com/js/modules/module.js";
+```
+
+The browser sends an HTTP request to that given URL, and if the server returns a successful response with `Content-Type: text/javascript`, then the module loading process continues.
+
+> [!NOTE]
+> There's a popular belief that "ESM requires file extensions in module specifiers". This is true and false. The JavaScript runtime does not _add_ an extension for you. If you write `import { name } from "https://example.com/modules/module";`, the browser still sends a request to the URL, without the `.js` extension. If that request succeeds with JavaScript content, the module is still loaded as usual. The only problem is that servers usually interpret extension-less requests to be requests for HTML files.
+
+Other URL schemes that you can use as resource locations are supported too, such as [`data:`](/en-US/docs/Web/URI/Reference/Schemes/data). Read the [`import` reference](/en-US/docs/Web/JavaScript/Reference/Statements/import#module_specifier_resolution) for more information.
+
+Always importing from absolute URLs has similar problems as using absolute URLs for link targets: they are long, they don't work if you move your site to another domain, and they don't work if you move your entire JavaScript asset path. The module specifier can also be a relative URL, similar to the [`href`](/en-US/docs/Web/HTML/Reference/Elements/a#href) attribute of {{HTMLElement("a")}} elements. The only difference is that all relative URLs must start with one of `/`, `./`, or `../`—i.e., you cannot use "bare" relative URLs like `modules/module.js`, but must write `./modules/module.js`. This is because "bare" URLs have special meanings in Node.js (they are resolved using the `node_modules` directory). To resolve bare URLs on the web, use [import maps](#importing_modules_using_import_maps).
+
+This URL is resolved relative to the URL of the current module, not the URL of the HTML document. For example, within a module at `https://example.com/js/main.js`, to import `https://example.com/js/modules/module.js`, write:
+
+```js
+import { name } from "./modules/module.js";
+```
 
 ## Importing modules using import maps
 
@@ -267,41 +297,74 @@ An import map like the one below then provides a mapping to the actual script fi
 If `dependency_script` changes, then its hash contained in the file name changes as well. In this case, we only need to update the import map to reflect the changed name of the module.
 We don't have to update the source of any JavaScript code that depends on it, because the specifier in the import statement does not change.
 
-## Locating resources relative to a module
+## Loading non-JavaScript resources
+
+The [Modules](/en-US/docs/Web/JavaScript/Guide/Modules#importing_json_modules) guide already introduces the [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) syntax, which allows you to import non-JavaScript resources, but the only resource type specified by the core language is `type: "json"`.
+
+```js
+import colors from "./colors.json" with { type: "json" };
+```
+
+On the web, there are additionally `type: "css"` and `type: "text"`, which imports CSS and text files as {{domxref("CSSStyleSheet")}} objects or strings.
+
+```js
+import styles from "./styles.css" with { type: "css" };
+import text from "./text.txt" with { type: "text" };
+
+document.adoptedStyleSheets = [styles];
+document.body.textContent = text;
+```
+
+While the core language spec does not say much about the `type` attribute in general (other than how `type: "json"` must result in a JSON module), the HTML spec requires browsers to implement strict module type checking for security reasons. If you specify `type: "json"` or `type: "css"`, the result must be served with the corresponding `Content-Type` (such as `application/json` or `text/css`). If you don't specify any type, the result also must be served as JavaScript or WebAssembly (`text/javascript` or `application/wasm`).
+
+In the example above with `type: "css"`, if this file turns out to be JavaScript (it is served with a `Content-Type` of `text/javascript`), the import will fail. This makes sure that you don't accidentally execute code where you don't intend to. Read the [import attribute](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) reference for more information.
+
+Other environments, including Node.js and Deno, often mimic web semantics, so they also require strict type matching.
+
+On the web, the `type` attribute also changes the request's [destination](/en-US/docs/Web/HTTP/Reference/Headers/Sec-Fetch-Dest), so even with the same string specifier, you may end up with different module content.
+
+```js
+import code from "./module";
+// This sends a request with Sec-Fetch-Dest: script
+// The server may respond with JavaScript: `export default 1;`
+
+import data from "./module" with { type: "json" };
+// This sends a request with Sec-Fetch-Dest: json
+// The server may respond with JSON: `{ "value": 1 }`
+
+import styles from "./module" with { type: "css" };
+// This sends a request with Sec-Fetch-Dest: style
+// The server may respond with CSS: `.value { color: green; }`
+
+import text from "./module" with { type: "text" };
+// This sends a request with Sec-Fetch-Dest: text
+// The server may respond with text: `Hello world!`
+```
+
+## The import.meta object
+
+The [Modules](/en-US/docs/Web/JavaScript/Guide/Modules#module_metadata) guide also introduced the [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta) object and mentioned that _all_ of its properties are host-defined.
 
 Use [`import.meta.url`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta) with the {{domxref("URL/URL", "URL()")}} constructor when a resource is located relative to your module:
 
 ```js
-// modules/getColors.js
-const colorsURL = new URL("../data/colors.json", import.meta.url);
-const response = await fetch(colorsURL);
-if (!response.ok) {
-  throw new Error(`Unable to load colors: ${response.status}`);
+// modules/set-user.js
+const apiURL = new URL("../api/set-user", import.meta.url);
+
+export async function setUser(name) {
+  const response = await fetch(apiURL, {
+    method: "POST",
+    body: JSON.stringify({ name }),
+  });
+  if (!response.ok) {
+    throw new Error(`Unable to set user: ${response.status}`);
+  }
 }
-const colors = await response.json();
-
-export default colors;
 ```
 
-In a window, a relative URL passed directly to `fetch()`, such as `fetch("../data/colors.json")`, is resolved against the document's base URL. It is not resolved relative to the JavaScript module containing the call. Constructing the URL explicitly makes the resource location independent of the page that imports the module.
+In a window, a relative URL passed directly to `fetch()`, such as `fetch("../api/set-user")`, is resolved against the document's base URL. It is not resolved relative to the JavaScript module containing the call. Constructing the URL explicitly makes the resource location independent of the page that imports the module.
 
-## Loading non-JavaScript resources
-
-One exciting feature that a unified module architecture brings is the ability to load non-JavaScript resources as modules. For example, you can import JSON as a JavaScript object, or import CSS as a {{domxref("CSSStyleSheet")}} object.
-
-You must explicitly declare what kind of resource you are importing. By default, the browser assumes that the resource is JavaScript, and will throw an error if the resolved resource is something else. To import JSON, CSS, or other types of resource, use the [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) syntax:
-
-```js
-import colors from "./colors.json" with { type: "json" };
-import styles from "./styles.css" with { type: "css" };
-```
-
-Browsers will also perform validation on the module type, and fail if, for example, `./data.json` does not resolve to a JSON file. This ensures that you don't accidentally execute code when you just intend to import data. Once imported successfully, you can now use the imported value as a normal JavaScript object or `CSSStyleSheet` object.
-
-```js
-console.log(colors.map((color) => color.value));
-document.adoptedStyleSheets = [styles];
-```
+To resolve a module specifier using the host's module resolution rules, use [`import.meta.resolve()`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta/resolve). For example, in a browser with an import map that defines `"shapes"`, `import.meta.resolve("shapes")` returns its resolved URL. Unlike `import()`, this resolves the specifier without loading or evaluating the module.
 
 ## See also
 

@@ -523,7 +523,7 @@ Still, it is considered good practice to put all your imports at the top of the 
 
 ## Importing JSON modules
 
-We have seen how to import from JavaScript modules, where data is exported with `export` statements. You can also import values from modules written in other languages, as long as the runtime environment knows how to interpret them. We will talk more about them in the [using modules on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web) guide, because they may not work everywhere, but there's one type of module that is guaranteed to be universally supported: JSON modules.
+We have seen how to import from JavaScript modules, where data is exported with `export` statements. You can also import values from modules written in other languages, as long as the runtime environment knows how to interpret them. The specification only specifies one other resource type: JSON modules.
 
 A JSON module is basically a standalone JSON file. When imported, it provides a single default export containing the parsed JSON value. You import it like this:
 
@@ -531,7 +531,7 @@ A JSON module is basically a standalone JSON file. When imported, it provides a 
 import data from "./data.json" with { type: "json" };
 ```
 
-Notice the extra `with { type: "json" }` at the end. This is an [import attribute](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) that tells the runtime environment to validate that the loaded file is indeed JSON. If this file turns out to be JavaScript (it is served with a `Content-Type` of `text/javascript`), the import will fail. It is optional in general, but is mandatory on the web and in other environments following web semantics (e.g., Node.js), for security reasons. Read the [import attribute](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) reference for more information. It is good practice to always declare the type of the module you are importing so it can work everywhere.
+Notice the extra `with { type: "json" }` at the end. This is an [import attribute](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) that tells the runtime environment to validate that the loaded file is indeed JSON. We will talk more about them in the [using modules on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#loading_non-javascript_resources) guide, because their semantics are not defined in the core language. You might be able to import JSON modules without `with { type: "json" }`. The only requirement is that if `with { type: "json" }` is specified, then the loaded module must be parsed as JSON. It is good practice to always declare the type of the module you are importing so it can work everywhere.
 
 ## Dynamic module loading
 
@@ -671,18 +671,20 @@ const triangle = new Module.Triangle(
 
 This is useful because the code within [`main.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/main.js) won't execute until the code in [`getColors.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/modules/getColors.js) has run. However it won't block other modules being loaded. For instance our [`canvas.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/modules/canvas.js) module will continue to load while `colors` is being fetched.
 
+Top-level `await` is not free; it has deep implications because it means a part of the [module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph) can only be loaded asynchronously. We'll talk more about what that implies in the [module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph) and [cross-platform modules](/en-US/docs/Web/JavaScript/Guide/Modules/Cross-platform_modules) guides.
+
 ## Module metadata
 
-Scripts are executed in the global context, so it can get information about its environment with global variables, such as {{domxref("Window.document")}} or {{domxref("Window.location")}}. Modules get their own execution context, so how can each module retrieve information about itself? This information is provided by the [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta) object, which is unique to each module. Its properties are defined by the host environment. In browsers and Node.js, `import.meta.url` provides the module's URL, which you can use to locate a resource relative to the module:
+Scripts are executed in the global context, so it can get information about its environment with global variables, such as {{domxref("Window.document")}} or {{domxref("Window.location")}}. Modules get their own execution context, so how can each module retrieve information about itself? This information is provided by the [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta) object, which is unique to each module. Its properties are defined by the host environment; the core language spec does not define any properties. See [Using modules on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#the_import.meta_object) for information about browsers, and [Authoring modules cross-platform](/en-US/docs/Web/JavaScript/Guide/Modules/Cross-platform_modules) for information about Node.js, bundlers, and more.
+
+Just as an example, in most web-like environments (browsers, Node.js, bundlers, etc.), `import.meta.url` provides the module's URL, which you can use to locate a resource relative to the module:
 
 ```js
 // modules/getColors.js
 const colorsURL = new URL("../data/colors.json", import.meta.url);
 ```
 
-This keeps the resource URL relative to `getColors.js` even when the module is imported from a page or module in another directory. See [Using modules on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#locating_resources_relative_to_a_module) for a browser example, and [Authoring modules cross-platform](/en-US/docs/Web/JavaScript/Guide/Modules/Cross-platform_modules#using_modules_in_node.js) for a Node.js example.
-
-To resolve a module specifier using the host's module resolution rules, use [`import.meta.resolve()`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta/resolve). For example, in a browser with an import map that defines `"shapes"`, `import.meta.resolve("shapes")` returns its resolved URL. Unlike `import()`, this resolves the specifier without loading or evaluating the module.
+This keeps the resource URL relative to `getColors.js` even when the module is imported from a page or module in another directory.
 
 ## Modules goals and non-goals
 

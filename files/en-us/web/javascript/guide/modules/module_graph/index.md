@@ -5,9 +5,17 @@ page-type: guide
 sidebar: jssidebar
 ---
 
+Through `import` and `export` declarations, JavaScript modules form a complex graph of dependencies. This guide talks about various concepts related to how modules are loaded, and how that impacts the way you structure and author your code.
+
 ## What is the module graph?
 
-Define modules as nodes and dependencies as directed edges. Include named imports, side-effect imports, and re-exports. Introduce entry modules and shared dependencies. Use one small diamond-shaped graph throughout: main imports a and b, which both import shared.
+In the [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) guide, we already showed a basic example of a module graph:
+
+![Diagram showing how modules are attached to web pages](/en-US/docs/Web/JavaScript/Guide/Modules/module-loading.svg)
+
+In this module graph, the nodes are the HTML file plus the different modules being imported (all modules here are JavaScript, but JSON, CSS, WebAssembly, etc. would all be valid). Each time you write `import ... from "module B"` (or `export ... from "module B"`) in `module A`, you create a directed edge from `module A` to `module B`. This can be any _graph_, not just a tree or a DAG (directed acyclic graph), because [cycles](#cyclic_imports) and diamond structures (where both modules import the same module, like above) are allowed.
+
+Each module graph needs a single entry point, from which the runtime starts discovering dependencies. In the example above, this entry point is the HTML file. In [Node.js](/en-US/docs/Web/JavaScript/Guide/Modules/Cross-platform_modules) (or other server-side runtimes), this entry point is the file you invoked `node` with. In workers, this is the file you passed to the {{domxref("Worker/Worker", "Worker()")}} constructor.
 
 ## The module loading process
 
