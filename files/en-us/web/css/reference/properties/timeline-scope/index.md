@@ -33,7 +33,7 @@ timeline-scope: unset;
 This property is specified as a keyword or a comma-separated list of custom timeline names:
 
 - `none`
-  - : There is no change in timeline scope. This is the default.
+  - : Applies no change to the timeline scope. This is the default.
 - `all`
   - : The names of all timelines defined by descendants are in scope for this element and its descendants.
 - `<dashed-ident>`
