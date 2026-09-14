@@ -591,7 +591,7 @@ Your finished HTML should look something like this:
 
 ## Grouping columns with `<colgroup>` and `<col>`
 
-There is a way to target entire table columns as a single entity, for example when applying styles to a table (which you'll learn about later, in [Styling tables](/en-US/docs/Learn_web_development/Core/Styling_basics/Tables)). As you get more experience with creating HTML tables, you'll find that applying a background color, for example, to every cell in a single column is harder than you might think. The {{htmlelement("colgroup")}} and {{htmlelement("col")}} elements provide a solution to this problem.
+There is a way to target entire table columns as a single entity, for example, when applying styles to a table (which you'll learn about later, in [Styling tables](/en-US/docs/Learn_web_development/Core/Styling_basics/Tables)). As you get more experience with creating HTML tables, you'll find that applying a background color, for example, to every cell in a single column is harder than you might think. The {{htmlelement("colgroup")}} and {{htmlelement("col")}} elements provide a solution to this problem.
 
 The `<colgroup>` element should be included as a child of the table, just after the opening `<table>` element. Inside the `<colgroup>` element you can include one or more `<col>` elements, which represent groups of columns. The `<col>` element can include a `span` attribute that indicates the number of columns in that group. It can also include global attributes such as `style` (if you want to target the group with inline styles) or `class` (if you want to target that group with CSS or JavaScript using a class name). The `<col>` elements represent the table columns from the start of the columns, for example from the left-hand side of a table written in a left-to-right language such as English.
 
@@ -731,9 +731,6 @@ td {
 - The `<col>` elements with a `column-fixed-width` class have a narrow fixed width set on them.
 - The `<col>` element with a `column-background-border` class has a solid background color and a thick border set on it.
 
-> [!NOTE]
-> A cell's own background is painted on top of the column's, so any background set on `<td>` or `<th>` hides the one coming from `<col>`. If you try this in the template from the start of this article, the column colors will not show up, because `minimal-table.css` gives `<th>` and alternating rows their own background colors. Remove those rules from your copy of the stylesheet to see the column backgrounds.
-
 You don't need to worry about how the CSS works for now; you'll learn about it in detail later on in our [CSS styling basics](/en-US/docs/Learn_web_development/Core/Styling_basics) module.
 
 Let's look at how the above code renders:
@@ -744,6 +741,36 @@ Notice how the different columns receive the styles specified in the classes.
 
 > [!NOTE]
 > Even though `<colgroup>` and `<col>` mainly facilitate styling, they are an HTML feature, so we've covered them here rather than in our CSS modules. It is also fair to say that they are a _limited_ feature — as shown on the [`<colgroup>` reference page](/en-US/docs/Web/HTML/Reference/Elements/colgroup#usage_notes), only a limited subset of styles can be applied to a `<col>` element, and most of the other settings that were historically available have been deprecated (removed, or flagged for removal).
+
+### Do `<col>` styles clash with other table styles?
+
+The answer is "yes". Styles set on tables are painted in the order of styles set on `<table>`, then `<col>`, then `<tr>`, then `<th>` and `<td>`. This means that styles set on table rows, headings, and cells will overwrite column styles.
+
+You can try this out by adding column styles to the [template example](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics#creating_your_first_table) you worked on earlier in the article. If you add the following to the HTML above the first `<tr>` tag:
+
+```html
+<colgroup>
+  <col span="2" style="border: 2px solid black; background-color: red" />
+</colgroup>
+```
+
+You'll see that the first two columns of the table get a `2px` `black` border, but they don't get a `red` background color. This is because the table headings and rows have the following styles set on them inside `minimal-table.css`, which override the column styles:
+
+```css
+th {
+  background-color: rgb(235 235 235);
+}
+
+tr:nth-child(even) td {
+  background-color: rgb(250 250 250);
+}
+
+tr:nth-child(odd) td {
+  background-color: rgb(220 220 220);
+}
+```
+
+Remove these `background-color` styles to see the `red` background color.
 
 ## Interactive recap of table concepts
 
