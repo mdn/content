@@ -153,6 +153,59 @@ Content-Type: application/json
 ]
 ```
 
+### Reusing a result and repeating a query
+
+A server can return both {{HTTPHeader("Content-Location")}} and {{HTTPHeader("Location")}} alongside the result, offering two different `GET`-addressable resources:
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Location: /contacts/stored-results/17
+Location: /contacts/stored-queries/42
+Last-Modified: Sat, 25 Aug 2012 23:34:45 GMT
+
+[
+  {
+    "surname": "Smith",
+    "givenname": "John",
+    "email": "smith@example.org"
+  },
+  {
+    "surname": "Jones",
+    "givenname": "Sally",
+    "email": "sally.jones@example.com"
+  }
+]
+```
+
+A `GET` to the `Content-Location` URI returns the stored result of that particular query, unchanged:
+
+```http
+GET /contacts/stored-results/17 HTTP/1.1
+Host: example.org
+Accept: application/json
+```
+
+A `GET` to the `Location` URI instead re-runs the query, so the result reflects current data.
+Here one contact has been removed since the original request, and the response carries an {{HTTPHeader("ETag")}} for use in later conditional requests:
+
+```http
+HTTP/1.1 200 OK
+Content-Type: application/json
+Last-Modified: Sun, 17 Nov 2024 16:12:01 GMT
+ETag: "42-1"
+
+[
+  {
+    "surname": "Smith",
+    "givenname": "John",
+    "email": "smith@example.org"
+  }
+]
+```
+
+A subsequent conditional `GET` sending `If-None-Match: "42-1"` then yields {{HTTPStatus("304", "304 Not Modified")}} while the result is unchanged.
+
 ## Specifications
 
 {{Specifications}}
