@@ -63,6 +63,26 @@ QUERY <request-target>["?"<query>] HTTP/1.1
 
 ## Description
 
+### Discovering support
+
+A resource advertises `QUERY` like any other method, through {{HTTPMethod("OPTIONS")}} and the {{HTTPHeader("Allow")}} response header:
+
+```http
+OPTIONS /contacts HTTP/1.1
+Host: example.org
+```
+
+```http
+HTTP/1.1 200 OK
+Allow: GET, QUERY, OPTIONS, HEAD
+```
+
+A client can also send the `QUERY` request without knowing in advance whether it is supported.
+The server either processes it, or responds {{HTTPStatus("405", "405 Method Not Allowed")}} with an `Allow` header listing the methods it does support.
+
+Which query _formats_ a resource accepts is advertised separately, through the {{HTTPHeader("Accept-Query")}} response header.
+Alternatively, a client can send the `QUERY` request and, on a {{HTTPStatus("415", "415 Unsupported Media Type")}} response, read the supported media types from the {{HTTPHeader("Accept")}} header of that response.
+
 ### Media types and error responses
 
 A server must reject a `QUERY` request whose {{HTTPHeader("Content-Type")}} is missing or inconsistent with the request content.
@@ -72,9 +92,6 @@ Servers are not allowed to guess the media type from the content itself, so the 
 - {{HTTPStatus("415", "415 Unsupported Media Type")}} if the media type is not supported by the resource, including when the type is understood in general but carries no meaning as a query to this resource.
 - {{HTTPStatus("422", "422 Unprocessable Content")}} if the media type is understood and the content matches it, but the query itself cannot be processed — for example, a syntactically valid SQL query naming a table that does not exist.
 - {{HTTPStatus("406", "406 Not Acceptable")}} if the client asked for a response media type through {{HTTPHeader("Accept")}} that the resource cannot produce.
-
-A client can discover which query formats a resource accepts from its {{HTTPHeader("Accept-Query")}} response header.
-Alternatively, it can send the `QUERY` request and, on a `415` response, read the supported media types from the {{HTTPHeader("Accept")}} header of that response.
 
 ### Equivalent resources
 
@@ -91,6 +108,9 @@ A successful response can point at them through two different headers:
 
 Neither resource is guaranteed to be permanent.
 If a later request to one of them fails, the client can fall back to repeating the original `QUERY` request with its original content.
+
+Because these URIs stand in for a query, a server handling sensitive request content should choose them so that they do not embed any sensitive part of that content.
+Otherwise the query is pushed back into a URI, losing the exposure benefit described in [Security considerations](#security_considerations).
 
 ### Redirection
 
@@ -114,8 +134,19 @@ A cache therefore has to read the entire request content before it can match a s
 Servers whose responses depend on the request content indicate this with the {{HTTPHeader("Vary")}} header, for example `Vary: Accept-Query, Content-Encoding, Content-Type`.
 
 To improve their hit rate, caches may normalize semantically insignificant differences in the request content before deriving the key, such as removing a content coding.
-A client that needs to prevent this can send {{HTTPHeader("Cache-Control")}} with the `no-transform` directive, though the directive is only advisory.
+This normalization has to match how the resource itself interprets the content.
+A cache that normalizes incorrectly, or in a way that differs significantly from the resource, can treat two requests as equivalent when they are not and serve the wrong response.
+A client that needs to prevent normalization can send {{HTTPHeader("Cache-Control")}} with the `no-transform` directive, though the directive is only advisory.
+
 Where a response supplies a `Location` header identifying an equivalent resource, clients can switch to `GET` for later requests and rely on ordinary `GET` caching instead.
+
+### Security considerations
+
+`QUERY` carries its input in the request content rather than in the URI.
+URIs are far more likely to be logged, retained in history, or inspected and processed by intermediaries than request content is, so moving a query out of the URI reduces how widely it is exposed.
+Where the query itself is confidential, this is a reason to prefer `QUERY` over `GET`.
+
+The benefit only holds if the rest of the exchange preserves it, so note the constraints on equivalent resource URIs and on cache normalization described above.
 
 ## Examples
 
