@@ -108,7 +108,7 @@ We set `--my-scroller` as the {{cssxref("scroll-timeline-name")}} on the scrolli
 }
 ```
 
-Next, we give the animated element some rudimentary styles and apply an animation to it using the {{cssxref("animation")}} shorthand property. We set the {{cssxref("animation-timeline")}} to the named scroll timeline: `--my-scroller`. To reiterate, animating the element based on the scroll progress of it's cousin element is only possible because we set `timeline-scope` on a mutual ancestor; the animated element is **not** a descendant of the scrolling element.
+Next, we give the animated element some rudimentary styles and apply an animation to it using the {{cssxref("animation")}} shorthand property. We set the {{cssxref("animation-timeline")}} to the named scroll timeline: `--my-scroller`. To reiterate, animating the element based on the scroll progress of its cousin element is only possible because we set `timeline-scope` on a mutual ancestor; the animated element is **not** a descendant of the scrolling element.
 
 ```css
 .box {
