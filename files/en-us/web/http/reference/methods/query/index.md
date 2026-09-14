@@ -13,6 +13,13 @@ This allows a `QUERY` request to be retried automatically without concern that i
 
 `QUERY` is useful when the query input is too large or complex for the target URI's query component.
 The request's {{HTTPHeader("Content-Type")}} header is required and determines how the request content is interpreted by the target resource.
+A resource advertises the query formats it accepts in its {{HTTPHeader("Accept-Query")}} response header.
+Alternatively, a client can send the `QUERY` request and, if the server responds {{HTTPStatus("415", "415 Unsupported Media Type")}}, read the supported media types from the {{HTTPHeader("Accept")}} header of that response.
+
+Responses to `QUERY` are {{Glossary("cacheable")}}, but only if the cache key incorporates the request content and its associated metadata, because the request URI alone no longer identifies the query.
+This means a cache must read the entire request content before it can match a stored response, making `QUERY` responses more involved to cache than {{HTTPMethod("GET")}} responses.
+Servers whose responses depend on the request content indicate this with the {{HTTPHeader("Vary")}} header, for example `Vary: Accept-Query, Content-Encoding, Content-Type`.
+Where a response supplies a {{HTTPHeader("Location")}} header identifying an equivalent resource, clients can use `GET` for subsequent requests and rely on ordinary `GET` caching instead.
 
 <table class="properties">
   <tbody>
@@ -114,3 +121,5 @@ Note that because `QUERY` isn't one of the CORS-safelisted methods, cross-origin
 - {{HTTPHeader("Content-Type")}}
 - {{HTTPHeader("Content-Location")}} and {{HTTPHeader("Location")}}
 - {{HTTPHeader("Allow")}}
+- {{HTTPHeader("Vary")}}
+- {{HTTPStatus("415", "415 Unsupported Media Type")}}
