@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.CSSStyleValue.toString
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`toString()`** method of the {{domxref("CSSStyleValue")}} interface is a {{Glossary("stringifier")}} that returns the value formatted as a string of standard CSS text.
 

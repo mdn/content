@@ -202,7 +202,6 @@ Root
 └── ARTICLE #3
   │
   ├── SECTION #4
-  ├────  ARTICLE #3 content
   ├── SECTION #5
   └── SECTION #6
 ```

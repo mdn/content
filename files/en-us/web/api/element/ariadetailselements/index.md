@@ -18,7 +18,7 @@ The [`aria-details`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/ari
 An array of subclasses of {{domxref("HTMLElement")}}.
 The inner text of these elements can be joined with spaces to get the accessible details.
 
-When read, the returned array is a static and read-only.
+When read, the returned array is static and read-only.
 When written, the assigned array is copied: subsequent changes to the array do not affect the value of the property.
 
 ## Description

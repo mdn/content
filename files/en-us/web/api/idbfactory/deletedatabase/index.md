@@ -8,19 +8,7 @@ browser-compat: api.IDBFactory.deleteDatabase
 
 {{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
-The **`deleteDatabase()`** method of the
-{{DOMxRef("IDBFactory")}} interface requests the deletion of a database. The method
-returns an {{DOMxRef("IDBOpenDBRequest")}} object immediately, and performs the deletion
-operation asynchronously.
-
-If the database is successfully deleted, then a `success` event is fired on
-the request object returned from this method, with its `result` set to
-`undefined`. If an error occurs while the database is being deleted, then an
-`error` event is fired on the request object that is returned from this
-method.
-
-When `deleteDatabase()` is called, any other open connections to this
-particular database will get a [versionchange](/en-US/docs/Web/API/IDBDatabase/versionchange_event) event.
+The **`deleteDatabase()`** method of the {{DOMxRef("IDBFactory")}} interface requests the deletion of a database. The method returns an {{DOMxRef("IDBOpenDBRequest")}} object immediately, and performs the deletion operation asynchronously.
 
 ## Syntax
 
@@ -52,16 +40,35 @@ An {{DOMxRef("IDBOpenDBRequest")}} on which subsequent events related to this re
 
 If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is `null`.
 
-## Examples
+## Description
+
+If the database is successfully deleted, then a `success` event is fired on the request object returned from `deleteDatabase()`, with its `result` set to `undefined`. If an error occurs during deletion, an `error` event is fired on the request object returned from this method.
+
+When `deleteDatabase()` is called, any other open connections to this particular database are sent a [`versionchange`](/en-US/docs/Web/API/IDBDatabase/versionchange_event) event, allowing them to close so that the deletion can proceed.
+
+If a connection is not closed in response to the `versionchange` event, the deletion is blocked: the request's `success` event does not fire, and a [`blocked`](/en-US/docs/Web/API/IDBOpenDBRequest/blocked_event) event is fired on the request instead. The deletion stays pending until every connection to the database is closed.
+
+To let it complete, close each connection. This is typically done by calling {{domxref("IDBDatabase.close()")}} from inside the `versionchange` event handler:
 
 ```js
-const DBDeleteRequest = window.indexedDB.deleteDatabase("toDoList");
+// db is an open connection (e.g. from a previous indexedDB.open() success)
+db.addEventListener("versionchange", () => {
+  db.close();
+});
+```
 
-DBDeleteRequest.onerror = (event) => {
+## Examples
+
+### Basic usage
+
+```js
+const dbDeleteRequest = indexedDB.deleteDatabase("toDoList");
+
+dbDeleteRequest.onerror = (event) => {
   console.error("Error deleting database.");
 };
 
-DBDeleteRequest.onsuccess = (event) => {
+dbDeleteRequest.onsuccess = (event) => {
   console.log("Database deleted successfully");
 
   console.log(event.result); // should be undefined

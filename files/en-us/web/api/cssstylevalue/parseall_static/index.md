@@ -10,6 +10,10 @@ browser-compat: api.CSSStyleValue.parseAll_static
 
 The **`parseAll()`** static method of the {{domxref("CSSStyleValue")}} interface sets all occurrences of a specific CSS property to the specified value and returns an array of {{domxref('CSSStyleValue')}} objects, each containing one of the supplied values.
 
+> [!NOTE]
+> This method cannot be called in {{domxref("Worker")}} or {{domxref("Worklet")}} contexts.
+> The rest of the `CSSStyleValue` interface remains available in workers and worklets.
+
 ## Syntax
 
 ```js-nolint

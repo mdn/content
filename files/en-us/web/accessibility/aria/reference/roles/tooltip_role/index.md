@@ -15,7 +15,7 @@ Tooltips provide contextual information about an element when that owning elemen
 
 A tooltip typically becomes visible, after a short delay of generally one to five seconds, in response to a mouse hover, or after the owning element receives keyboard focus. Just as it is opened automatically, without user request, it is closed automatically when the focus is lost or on mouse out. It must stay open when the mouse moves over the tooltip itself, and should also close when the user presses the <kbd>Escape</kbd> key.
 
-Because the tooltip itself never receives focus and is not in the tabbing order, a tooltip can not contain interactive elements like links, inputs, or buttons.
+Because the tooltip itself never receives focus and is not in the tabbing order, a tooltip cannot contain interactive elements like links, inputs, or buttons.
 
 The tooltip is not the appropriate role for the more information "i" icon, ⓘ. A tooltip is directly associated with the owning element. The ⓘ isn't 'described by' detailed information; the tool or control is.
 

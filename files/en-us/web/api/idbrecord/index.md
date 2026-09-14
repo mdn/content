@@ -35,7 +35,7 @@ _None._
 This example queries an {{domxref("IDBObjectStore")}} for up to 100 records whose keys come after `"myKey"`, with results sorted in reverse order.
 
 The code first creates a transaction on an {{domxref("IDBDatabase")}} named `db` (omitting the code to open the database), and then uses it to get an `IDBObjectStore` containing a contacts list.
-It then calls `getAllRecords()` on the object store, returning a {{domxref("IDBRequest")}} instance.
+It then calls `getAllRecords()` on the object store, returning an {{domxref("IDBRequest")}} instance.
 Event listeners are added to this request for the `success` and `error` events.
 On success, the result `event.target.result` is logged (this is also available as `request.result`).
 This result contains an array of `IDBRecord` instances.

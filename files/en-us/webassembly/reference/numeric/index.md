@@ -10,7 +10,7 @@ WebAssembly numeric instructions.
 ## Constants
 
 - [`const`](/en-US/docs/WebAssembly/Reference/Numeric/const)
-  - : Declare a constant numbers.
+  - : Declare a constant number.
 
 ## Comparison
 
@@ -48,7 +48,7 @@ WebAssembly numeric instructions.
 ## Arithmetic
 
 - [`add`](/en-US/docs/WebAssembly/Reference/Numeric/add)
-  - : Add up two numbers.
+  - : Add two numbers.
 - [`sub`](/en-US/docs/WebAssembly/Reference/Numeric/sub)
   - : Subtract one number from another number.
 - [`mul`](/en-US/docs/WebAssembly/Reference/Numeric/mul)
@@ -57,6 +57,17 @@ WebAssembly numeric instructions.
   - : Divide one number by another number.
 - [`rem`](/en-US/docs/WebAssembly/Reference/Numeric/rem)
   - : Calculate the remainder left over when one integer is divided by another integer.
+
+## Wide arithmetic
+
+- [`add128`](/en-US/docs/WebAssembly/Reference/Numeric/add128)
+  - : Add two 128-bit integers, represented by four 64-bit integers, to produce a 128-bit result represented by two 64-bit integers.
+- [`mul_wide_s`](/en-US/docs/WebAssembly/Reference/Numeric/mul_wide_s)
+  - : Multiply two signed 64-bit integers to produce a signed 128-bit result represented by two 64-bit integers.
+- [`mul_wide_u`](/en-US/docs/WebAssembly/Reference/Numeric/mul_wide_u)
+  - : Multiply two unsigned 64-bit integers to produce an unsigned 128-bit result represented by two 64-bit integers.
+- [`sub128`](/en-US/docs/WebAssembly/Reference/Numeric/sub128)
+  - : Subtract one 128-bit integer, represented by two 64-bit integers, from another to produce a 128-bit result represented by two 64-bit integers.
 
 ## Conversion
 
@@ -125,8 +136,17 @@ WebAssembly numeric instructions.
 - [`rotr`](/en-US/docs/WebAssembly/Reference/Numeric/rotr)
   - : Used for performing a bitwise right-rotate.
 - [`clz`](/en-US/docs/WebAssembly/Reference/Numeric/clz)
-  - : Count the amount of leading zeros in a numbers binary representation.
+  - : Count the number of leading zeros in a number's binary representation.
 - [`ctz`](/en-US/docs/WebAssembly/Reference/Numeric/ctz)
-  - : Count the amount of trailing zeros in a numbers binary representation.
+  - : Count the number of trailing zeros in a number's binary representation.
 - [`popcnt`](/en-US/docs/WebAssembly/Reference/Numeric/popcnt)
-  - : Count the total amount of 1s in a numbers binary representation.
+  - : Count the total amount of 1s in a number's binary representation.
+
+## Sign extension operations
+
+- [`extend8_s`](/en-US/docs/WebAssembly/Reference/Numeric/extend8_s)
+  - : Sign-extend the low 8 bits of an integer to propagate its sign throughout the entire value.
+- [`extend16_s`](/en-US/docs/WebAssembly/Reference/Numeric/extend16_s)
+  - : Sign-extend the low 16 bits of an integer to propagate its sign throughout the entire value.
+- [`extend32_s`](/en-US/docs/WebAssembly/Reference/Numeric/extend32_s)
+  - : Sign-extend the low 32 bits of a 64-bit integer to propagate its sign throughout the entire value.

@@ -18,7 +18,7 @@ The Contact Picker API allows users to select entries from their contact list an
 
 Access to contacts has long been a feature available within native applications. The Contacts Picker API brings that functionality to web applications.
 
-Use cases include selecting contacts to message via an email or chat application, selecting a contacts phone number for use with voice over IP (VOIP), or for discovering contacts who have already joined a social platform. User agents can also offer a consistent experience with other applications on a users device.
+Use cases include selecting contacts to message via an email or chat application, selecting a contact's phone number for use with voice over IP (VOIP), or for discovering contacts who have already joined a social platform. User agents can also offer a consistent experience with other applications on a user's device.
 
 When calling the {{domxref('ContactsManager.select', 'select')}} method of the {{domxref('ContactsManager')}} interface, the user is presented with a contact picker, whereby they can then select contact information to share with the web application. User interaction is required before permission to display the contact picker is granted and access to contacts is not persistent; the user must grant access every time a request is made by the application.
 

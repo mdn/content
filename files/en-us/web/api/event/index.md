@@ -97,7 +97,7 @@ Note that all event interfaces have names which end in "Event".
 - {{domxref("Event.target")}} {{ReadOnlyInline}}
   - : A reference to the object to which the event was originally dispatched.
 - {{domxref("Event.timeStamp")}} {{ReadOnlyInline}}
-  - : The time at which the event was created (in milliseconds). By specification, this value is time since epoch—but in reality, browsers' definitions vary. In addition, work is underway to change this to be a {{domxref("DOMHighResTimeStamp")}} instead.
+  - : A {{domxref("DOMHighResTimeStamp")}} representing the time at which the event was created, measured in milliseconds relative to the relevant global object's time origin.
 - {{domxref("Event.type")}} {{ReadOnlyInline}}
   - : The name identifying the type of the event.
 

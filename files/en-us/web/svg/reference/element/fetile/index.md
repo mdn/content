@@ -6,7 +6,7 @@ browser-compat: svg.elements.feTile
 sidebar: svgref
 ---
 
-The **`<feTile>`** [SVG](/en-US/docs/Web/SVG) filter primitive allows to fill a target rectangle with a repeated, tiled pattern of an input image. The effect is similar to the one of a {{SVGElement("pattern")}}.
+The **`<feTile>`** [SVG](/en-US/docs/Web/SVG) filter primitive allows you to fill a target rectangle with a repeated, tiled pattern of an input image. The effect is similar to the one of a {{SVGElement("pattern")}}.
 
 ## Usage context
 

@@ -579,7 +579,7 @@ You can find more information about WebGPU error handling in the explainer — s
 - {{domxref("GPUComputePassEncoder")}}
   - : Encodes commands related to controlling the compute shader stage, as issued by a {{domxref("GPUComputePipeline")}}. Part of the overall encoding activity of a {{domxref("GPUCommandEncoder")}}.
 - {{domxref("GPUQueue")}}
-  - : controls execution of encoded commands on the GPU.
+  - : Controls execution of encoded commands on the GPU.
 - {{domxref("GPURenderBundle")}}
   - : A container for pre-recorded bundles of commands (see {{domxref("GPURenderBundleEncoder")}}).
 - {{domxref("GPURenderBundleEncoder")}}

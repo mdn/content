@@ -28,7 +28,7 @@ Before starting this module, you don't need any previous JavaScript knowledge, b
 - [Storing the information you need — Variables](/en-US/docs/Learn_web_development/Core/Scripting/Variables)
   - : After reading the last couple of articles you should now know what JavaScript is, what it can do for you, how you use it alongside other web technologies, and what its main features look like from a high level. In this article, we will get down to the real basics, looking at how to work with the most basic building blocks of JavaScript — Variables.
 - [Basic math in JavaScript — numbers and operators](/en-US/docs/Learn_web_development/Core/Scripting/Math)
-  - : At this point in the course, we discuss maths in JavaScript — how we can combine operators and other features to successfully manipulate numbers to do our bidding.
+  - : At this point in the course, we discuss math in JavaScript — how we can combine operators and other features to successfully manipulate numbers to do our bidding.
 - [Handling text — strings in JavaScript](/en-US/docs/Learn_web_development/Core/Scripting/Strings)
   - : Next, we'll turn our attention to strings — this is what pieces of text are called in programming. In this article, we'll look at all the common things that you really ought to know about strings when learning JavaScript, such as creating strings, escaping quotes in strings, and joining them together.
 - [Useful string methods](/en-US/docs/Learn_web_development/Core/Scripting/Useful_string_methods)

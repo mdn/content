@@ -8,7 +8,7 @@ status:
 browser-compat: api.WorkletSharedStorage.get
 ---
 
-{{APIRef("Shared Storage API")}}{{deprecated_header}}
+{{APIRef("Shared Storage API")}}
 
 The **`get()`** method of the
 {{domxref("WorkletSharedStorage")}} interface retrieves a value from shared storage.

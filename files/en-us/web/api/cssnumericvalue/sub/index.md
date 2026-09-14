@@ -6,24 +6,27 @@ page-type: web-api-instance-method
 browser-compat: api.CSSNumericValue.sub
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`sub()`** method of the {{domxref("CSSNumericValue")}} interface subtracts a supplied number from the `CSSNumericValue`.
 
 ## Syntax
 
 ```js-nolint
-sub(number)
+sub()
+sub(number1)
+sub(number1, number2)
+sub(number1, number2, /* …, */ numberN)
 ```
 
 ### Parameters
 
-- `number`
-  - : Either a number or a {{domxref('CSSMathSum')}}.
+- `number1`, …, `numberN` {{optional_inline}}
+  - : Either a number or a {{domxref('CSSNumericValue')}}.
 
 ### Return value
 
-A {{domxref('CSSMathSum')}}
+A {{domxref('CSSMathSum')}}, or a {{domxref('CSSUnitValue')}} if `this` and every argument share the same unit.
 
 ### Exceptions
 
@@ -35,10 +38,7 @@ A {{domxref('CSSMathSum')}}
 ### Basic usage
 
 ```js
-let mathSum = CSS.px("23")
-  .sub(CSS.percent("4"))
-  .sub(CSS.cm("3"))
-  .sub(CSS.in("9"));
+let mathSum = CSS.px(23).sub(CSS.percent(4)).sub(CSS.cm(3)).sub(CSS.in(9));
 // Prints "calc(23px - 4% - 3cm - 9in)"
 console.log(mathSum.toString());
 ```

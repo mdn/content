@@ -251,9 +251,9 @@ Note that built-in operations expecting BigInts often truncate the BigInt to a f
 ## Static methods
 
 - {{jsxref("BigInt.asIntN()")}}
-  - : Clamps a BigInt value to a signed integer value, and returns that value.
+  - : Truncates a `BigInt` value to the given number of least significant bits and returns that value as a signed integer.
 - {{jsxref("BigInt.asUintN()")}}
-  - : Clamps a BigInt value to an unsigned integer value, and returns that value.
+  - : Truncates a `BigInt` value to the given number of least significant bits and returns that value as an unsigned integer.
 
 ## Instance properties
 
@@ -314,7 +314,7 @@ nthPrime(20n);
 ```
 
 > [!NOTE]
-> The `isPrime()` implementation is for demonstration only. For a real-world application, you would want to use a heavily memoized algorithm such as the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) to avoid repeated calculations.
+> The `isPrime()` implementation is for demonstration only. For a real-world application, you would want to use a heavily {{Glossary("Memoization", "memoized")}} algorithm such as the [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) to avoid repeated calculations.
 
 ## Specifications
 

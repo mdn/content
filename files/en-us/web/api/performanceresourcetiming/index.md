@@ -62,7 +62,7 @@ This interface extends the following {{domxref("PerformanceEntry")}} properties 
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
   - : Returns the resource's URL.
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} for the time a resource fetch started. This value is equivalent to {{domxref("PerformanceResourceTiming.fetchStart")}}.
+  - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} for the time a resource fetch started. If there are no HTTP redirects or their timing information is not exposed, this value is equivalent to {{domxref("PerformanceResourceTiming.fetchStart")}}. Otherwise, this value can be earlier than `fetchStart`.
 
 ### Timestamps
 
@@ -77,7 +77,7 @@ The interface supports the following timestamp properties which you can see in t
 - {{domxref('PerformanceResourceTiming.workerStart')}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMHighResTimeStamp")}} immediately before dispatching the {{domxref("FetchEvent")}} if a Service Worker thread is already running, or immediately before starting the Service Worker thread if it is not already running. If the resource is not intercepted by a Service Worker the property will always return 0.
 - {{domxref('PerformanceResourceTiming.fetchStart')}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts to fetch the resource.
+  - : A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts to fetch the resource. If there are no HTTP redirects or their timing information is not exposed, this value is equivalent to {{domxref("PerformanceEntry.startTime")}}. Otherwise, this value can be later than `startTime`.
 - {{domxref('PerformanceResourceTiming.domainLookupStart')}} {{ReadOnlyInline}}
   - : A {{domxref("DOMHighResTimeStamp")}} immediately before the browser starts the domain name lookup for the resource.
 - {{domxref('PerformanceResourceTiming.domainLookupEnd')}} {{ReadOnlyInline}}
@@ -127,7 +127,7 @@ Additionally, this interface exposes the following properties containing more in
 ## Instance methods
 
 - {{domxref("PerformanceResourceTiming.toJSON()")}}
-  - : Returns a JSON representation of the `PerformanceResourceTiming` object.
+  - : Overrides the {{domxref("PerformanceEntry.toJSON()")}} method to return a JSON representation of the `PerformanceResourceTiming` object.
 
 ## Examples
 

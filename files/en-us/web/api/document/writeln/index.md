@@ -8,7 +8,7 @@ status:
 browser-compat: api.Document.writeln
 ---
 
-{{ ApiRef("DOM") }}{{deprecated_header}}
+{{ ApiRef("DOM") }}
 
 > [!WARNING]
 > This method parses its input as HTML, writing the result into the DOM.

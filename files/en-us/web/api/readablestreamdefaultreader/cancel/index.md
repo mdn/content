@@ -54,7 +54,7 @@ stream has finished being read, at which point we return out of the recursive fu
 and print the entire stream to another part of the UI.
 
 When the stream is done (`if (done)`), we run `reader.cancel()`
-to cancel the stream, signalling that we don't need to use it any more.
+to cancel the stream, signaling that we don't need to use it any more.
 
 ```js
 function fetchStream() {

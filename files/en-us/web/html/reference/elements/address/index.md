@@ -112,9 +112,9 @@ Although it renders text with the same default styling as the {{HTMLElement("i")
           >flow content</a
         >, but always excluding <code>&#x3C;address></code> elements (according
         to the logical principle of symmetry, if
-        <code>&#x3C;address></code> tag, as a parent, can not have nested
+        <code>&#x3C;address></code> tag, as a parent, cannot have nested
         <code>&#x3C;address></code> element, then the same
-        <code>&#x3C;address></code> content can not have
+        <code>&#x3C;address></code> content cannot have
         <code>&#x3C;address></code> tag as its parent).
       </td>
     </tr>

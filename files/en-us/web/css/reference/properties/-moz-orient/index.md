@@ -28,6 +28,8 @@ The **`-moz-orient`** [CSS](/en-US/docs/Web/CSS) property specifies the orientat
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `inline`
   - : The element is rendered in the same direction as the axis of the text: horizontally for horizontal writing modes, vertically for vertical writing modes.
 - `block`

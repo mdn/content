@@ -7,7 +7,7 @@ browser-compat: css.properties.scroll-padding
 sidebar: cssref
 ---
 
-The **`scroll-padding`** [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) sets scroll padding on all sides of an element at once. It specifies offsets that define the optimal viewing region of a scrollport within a {{glossary("scroll container")}}.
+The **`scroll-padding`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets scroll padding on all sides of an element at once. It specifies offsets that define the optimal viewing region of a scrollport within a {{glossary("scroll container")}}.
 
 {{InteractiveExample("CSS Demo: scroll-padding")}}
 
@@ -121,6 +121,98 @@ While defined in the [CSS scroll snap](/en-US/docs/Web/CSS/Guides/Scroll_snap) m
 ## Formal syntax
 
 {{csssyntax}}
+
+## Examples
+
+### Preventing content from being hidden by a fixed header
+
+A common use case for `scroll-padding` is to prevent scrolling content from being hidden by a fixed-position header. This example demonstrates how to use `scroll-padding` for this purpose.
+
+#### HTML
+
+The header contains links to three sections on the page.
+
+```html
+<header>
+  <nav>
+    <a href="#section-1">Section 1</a>
+    <a href="#section-2">Section 2</a>
+    <a href="#section-3">Section 3</a>
+  </nav>
+</header>
+<main>
+  <section id="section-1">
+    <h2>Section 1</h2>
+    <p>Use the links in the header to jump to another section.</p>
+  </section>
+  <section id="section-2">
+    <h2>Section 2</h2>
+    <p>This heading remains visible below the fixed header.</p>
+  </section>
+  <section id="section-3">
+    <h2>Section 3</h2>
+    <p>This heading also remains visible below the fixed header.</p>
+  </section>
+</main>
+```
+
+#### CSS
+
+```css hidden
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eeeeee;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+section {
+  box-sizing: border-box;
+  padding: 1rem;
+  min-height: 60vh;
+}
+
+h2 {
+  margin-top: 0;
+}
+```
+
+The header is fixed to the top of the viewport and is `60px` tall. We set `scroll-padding` on the root element to reserve `60px` at the top of the viewport when scrolling to a section, with no offset on the other sides.
+
+```css
+html {
+  --navbar-height: 60px;
+
+  scroll-padding: var(--navbar-height) 0 0;
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  height: var(--navbar-height);
+  width: 100%;
+}
+```
+
+We add padding to the main content so the first section starts below the header on initial load.
+
+```css
+main {
+  padding-top: var(--navbar-height);
+}
+```
+
+#### Result
+
+Click the links in the header to jump between sections. Each section appears below the header, keeping its heading visible. Open this example in the playground, remove the `scroll-padding` line, and click the links again to see the header obscure the headings.
+
+{{EmbedLiveSample("Preventing content from being hidden by a fixed header", "100%", 300)}}
 
 ## Specifications
 

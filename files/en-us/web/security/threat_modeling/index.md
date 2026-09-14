@@ -136,7 +136,7 @@ We identify the mechanism by which assets move between components. They may be u
 - Contact form flow
 - Data flows to external services
 
-When data flows between a user and your application, or between your application and third party services, it moves across trusted boundaries that are controlled by different authorities. Attacks often happen between these unequally privileged components and we should make ourselves aware of these attack surfaces, identifying where validation, encryption or other security controls are necessary.
+When data flows between a user and your application, or between your application and third-party services, it moves across trusted boundaries that are controlled by different authorities. Attacks often happen between these unequally privileged components and we should make ourselves aware of these attack surfaces, identifying where validation, encryption or other security controls are necessary.
 
 To reference identified data flows, you index them with the letter F (F1, F2, F3, ...) in your threat model. Trust boundaries are usually visualized using a dashed line.
 
@@ -214,7 +214,7 @@ In our threat modeling above, we focus on the four key questions as defined in t
 
 ## See also
 
-- [Threat model frameworks an resources](/en-US/docs/Web/Security/Threat_modeling/Frameworks)
+- [Threat model frameworks and resources](/en-US/docs/Web/Security/Threat_modeling/Frameworks)
 - [Example threat model](/en-US/docs/Web/Security/Threat_modeling/Example_threat_model)
 - [Security](/en-US/docs/Web/Security)
 - [Threat Modeling Manifesto](https://www.threatmodelingmanifesto.org)

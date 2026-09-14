@@ -358,7 +358,7 @@ The following screenshot shows what the finished widescreen layout should look l
 To cause the layouts to display properly in mobile browsers, you need to add a viewport `<meta>` tag inside the `<head>` of the HTML document:
 
 ```html
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width" />
 ```
 
 The finished CSS should look something like this:

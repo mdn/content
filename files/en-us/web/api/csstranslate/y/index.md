@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.CSSTranslate.y
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`y`** property of the {{domxref("CSSTranslate")}} interface gets and sets the ordinate or y-axis of the translating vector.
 

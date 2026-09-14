@@ -3,12 +3,10 @@ title: "DeviceOrientationEvent: requestPermission() static method"
 short-title: requestPermission()
 slug: Web/API/DeviceOrientationEvent/requestPermission_static
 page-type: web-api-static-method
-status:
-  - experimental
 browser-compat: api.DeviceOrientationEvent.requestPermission_static
 ---
 
-{{APIRef("Device Orientation Events")}}{{SeeCompatTable}}{{securecontext_header}}
+{{APIRef("Device Orientation Events")}}{{securecontext_header}}
 
 The **`requestPermission()`** static method of the {{domxref("DeviceOrientationEvent")}} interface requests the user's permission to access device orientation data from the accelerometer and gyroscope sensors. It can also request permission to access magnetometer data when absolute orientation is needed. This method requires {{Glossary("transient activation")}}, meaning that it must be triggered by a UI event such as a button click.
 

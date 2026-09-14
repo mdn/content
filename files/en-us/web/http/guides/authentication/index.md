@@ -98,7 +98,7 @@ Some common authentication schemes include:
 - **SCRAM**
   - : See {{rfc(7804)}}
 - **AWS4-HMAC-SHA256**
-  - : See [AWS docs](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html). This scheme is used for AWS3 server authentication.
+  - : See [AWS docs](https://docs.aws.amazon.com/AmazonS3/latest/developerguide/sigv4-auth-using-authorization-header.html). This scheme is used for AWS3 server authentication.
 
 Schemes can differ in security strength and in their availability in client or server software.
 
@@ -114,7 +114,7 @@ The "Basic" HTTP authentication scheme is defined in {{rfc(7617)}}, which transm
 As the user ID and password are passed over the network as clear text (it is base64 encoded, but base64 is a reversible encoding), the basic authentication scheme is not secure.
 HTTPS/TLS should be used with basic authentication to prevent credential interception.
 
-In addition, sites that use HTTP Basic Auth are particularly vulnerable to [Cross-Site Request Forgery (CSRF)](/en-US/docs/Glossary/CSRF) attacks because the user credentials are sent in all requests regardless of origin (this differs cookie-based credential mechanisms, because cookies are commonly blocked in cross site requests).
+In addition, sites that use HTTP Basic Auth are particularly vulnerable to [Cross-Site Request Forgery (CSRF)](/en-US/docs/Glossary/CSRF) attacks because the user credentials are sent in all requests regardless of origin (this differs cookie-based credential mechanisms, because cookies are commonly blocked in cross-site requests).
 Sites should always use the POST requests when changing data, and include [CSRF tokens](/en-US/docs/Web/Security/Attacks/CSRF).
 
 Without these security enhancements, basic authentication should not be used to protect sensitive or valuable information.
@@ -153,7 +153,7 @@ location /status {
 
 ### Access using credentials in the URL
 
-Historically some sites would allow you to login using an encoded URL containing the username and the password as shown:
+Historically some sites would allow you to log in using an encoded URL containing the username and the password as shown:
 
 ```plain example-bad
 https://username:password@www.example.com/
