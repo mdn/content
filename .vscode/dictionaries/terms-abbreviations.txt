@@ -351,7 +351,6 @@ javascripting
 JFIF
 JLREQ
 JSEP
-JSMSG
 JSON-ifiable
 jsonifier
 jumpless
