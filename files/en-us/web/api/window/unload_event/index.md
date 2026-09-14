@@ -75,7 +75,7 @@ Permissions-Policy: unload=()
 
 Instead of `unload`, use the following events, both of which are compatible with the bfcache:
 
-- The [`visibilitychange`](/en-US/docs/Web/API/Document/visibilitychange_event) event, when {{domxref("Document.visibilityState")}} becomes `"hidden"`. This is the last event that is reliably fired, so it is the best place to save application state or send analytics data. Note that it also fires when the user switches to another tab, not only when they leave or close the page.
+- The [`visibilitychange`](/en-US/docs/Web/API/Document/visibilitychange_event) event is fired when {{domxref("Document.visibilityState")}} changes from `visible` to `hidden`, or vice versa. This is the last event that is reliably fired, so it is the best place to save application state or send analytics data. Note that `visibilitychange` is fired when the user switches to another tab, leaves the current page, or closes it.
 - The [`pagehide`](/en-US/docs/Web/API/Window/pagehide_event) event, if you're specifically trying to detect that the user is navigating away from the page. However, like `unload`, it is not reliably fired, especially on mobile, so prefer `visibilitychange` where possible.
 
 For example, instead of sending data in an `unload` listener:
