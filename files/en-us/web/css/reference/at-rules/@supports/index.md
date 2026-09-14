@@ -158,7 +158,7 @@ This function takes one predefined keyword and evaluates if a browser supports t
 > [!NOTE]
 > More features will be added rarely and only when there is real demand for feature testing something specific that would not be covered by more general testing methods.
 
-#### `anchor-position-follows-transforms`
+##### `anchor-position-follows-transforms`
 
 This named-feature checks if the browser supports transform-aware anchor-positioning.
 
