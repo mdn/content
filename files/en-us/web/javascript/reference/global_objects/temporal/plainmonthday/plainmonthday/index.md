@@ -1,5 +1,5 @@
 ---
-title: Temporal.PlainMonthDay()
+title: Temporal.PlainMonthDay() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/PlainMonthDay/PlainMonthDay
 page-type: javascript-constructor
 status:

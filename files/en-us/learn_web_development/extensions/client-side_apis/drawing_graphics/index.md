@@ -978,7 +978,7 @@ All {{htmlelement("input")}} types are well supported. If a browser doesn't supp
 
 It's now time to leave 2D behind, and take a quick look at 3D canvas. 3D canvas content is specified using the [WebGL API](/en-US/docs/Web/API/WebGL_API), which is a completely separate API from the 2D canvas API, even though they both render onto {{htmlelement("canvas")}} elements.
 
-WebGL is based on [OpenGL](/en-US/docs/Glossary/OpenGL) (Open Graphics Library), and allows you to communicate directly with the computer's [GPU](/en-US/docs/Glossary/GPU). As such, writing raw WebGL is closer to low level languages such as C++ than regular JavaScript; it is quite complex but incredibly powerful.
+WebGL is based on [OpenGL](/en-US/docs/Glossary/OpenGL) (Open Graphics Library), and allows you to communicate directly with the computer's [GPU](/en-US/docs/Glossary/GPU). As such, writing raw WebGL is closer to low-level languages such as C++ than regular JavaScript; it is quite complex but incredibly powerful.
 
 ### Using a library
 
