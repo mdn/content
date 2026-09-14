@@ -3,7 +3,7 @@ title: QUERY request method
 short-title: QUERY
 slug: Web/HTTP/Reference/Methods/QUERY
 page-type: http-method
-spec-urls: https://www.rfc-editor.org/info/rfc10008/#name-query-method
+spec-urls: https://www.rfc-editor.org/rfc/rfc10008.html#name-query-method
 sidebar: http
 ---
 

@@ -3,7 +3,7 @@ title: Accept-Query header
 short-title: Accept-Query
 slug: Web/HTTP/Reference/Headers/Accept-Query
 page-type: http-header
-spec-urls: https://www.rfc-editor.org/info/rfc10008/#name-the-accept-query-header-fie
+spec-urls: https://www.rfc-editor.org/rfc/rfc10008.html#name-the-accept-query-header-fie
 sidebar: http
 ---
 
