@@ -143,10 +143,10 @@ These features are shipping in Firefox 156 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
 
-- **Scoped custom element registries**: `dom.scoped-custom-element-registries.enabled`
+- **Scoped custom element registries** (Nightly): `dom.scoped-custom-element-registries.enabled`
 
-  A {{domxref("CustomElementRegistry")}} can be constructed and passed to {{domxref("Element.attachShadow()")}}, so that a shadow root can define custom elements that do not clash with those defined in the global registry.
-  In this release the feature is enabled by default in Nightly builds. ([Firefox bug 2064333](https://bugzil.la/2064333)).
+  [Scoped custom element registries](/en-US/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries) are now supported, so that a shadow root can define custom elements that do not clash with those defined in the global registry.
+  This release enables the feature by default in Nightly builds. ([Firefox bug 2064333](https://bugzil.la/2064333)).
 
 - **`named-feature()` support queries**: `layout.css.supports.at-rule.enabled`
 
