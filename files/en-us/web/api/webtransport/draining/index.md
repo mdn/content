@@ -74,7 +74,7 @@ migrateOnDraining(url, transport).then((newTransport) => {
 });
 ```
 
-Note that while we close the session above when draining is signalled, we would still need to handle the case when the session is closed by some other mechanism.
+Note that while we close the session above when draining is signaled, we would still need to handle the case when the session is closed by some other mechanism.
 This code waits on the promise returned by {{domxref("WebTransport.closed")}} and logs whether the session closed gracefully or unexpectedly.
 
 ```js
