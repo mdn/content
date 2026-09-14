@@ -155,26 +155,18 @@ The following table describes the available formats (`<font-format>` values) tha
 
 This function takes one predefined keyword and evaluates if a browser supports the specified named feature. This is to allow for feature support that cannot be tested for using the other `@supports` functions.
 
+```css
+@supports named-feature(anchor-position-follows-transform) {
+}
+```
+
 > [!NOTE]
 > More features will be added rarely and only when there is real demand for feature testing something specific that would not be covered by more general testing methods.
 
-##### `anchor-position-follows-transforms`
-
-This `named-feature()` checks if the browser supports transform-aware [anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning).
-
-```css
-@supports named-feature(anchor-position-follows-transforms) {
-}
-```
-
-##### `single-axis-scroll-container`
-
-This `named-feature()` checks if the browser supports the ability to have single-axis scroll containers, where one axis is either {{cssxref("overflow", "scroll", "#scroll")}}, or {{cssxref("overflow", "auto", "#auto")}}, or {{cssxref("overflow", "hidden", "#hidden")}} and the other is {{cssxref("overflow", "clip", "#clip")}}.
-
-```css
-@supports named-feature(single-axis-scroll-container) {
-}
-```
+- `anchor-position-follows-transforms`
+  - : This `named-feature()` checks if the browser supports transform-aware [anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning).
+- `single-axis-scroll-container`
+  - : This `named-feature()` checks if the browser supports the ability to have single-axis scroll containers, where one axis is either {{cssxref("overflow", "scroll", "#scroll")}}, or {{cssxref("overflow", "auto", "#auto")}}, or {{cssxref("overflow", "hidden", "#hidden")}} and the other is {{cssxref("overflow", "clip", "#clip")}}.
 
 ### The not operator
 
