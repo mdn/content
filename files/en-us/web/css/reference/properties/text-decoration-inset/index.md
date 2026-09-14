@@ -78,7 +78,7 @@ text-decoration-inset: unset;
 This property is specified as one or two of the following value or the keyword `auto`:
 
 - {{cssxref("length-percentage")}}
-  - : Specifies the amount to adjust the text decoration position by. Positive values inset the text decoration (make it shorter) while negative values outset the text decoration (make it longer). If one value is specified, it applies to both the text decoration start and end points. If two values are specified, the first one applies to the text decoration start point and the second one applies to the text decoration end point.
+  - : Specifies the amount to adjust the text decoration position by. Positive values inset the text decoration (make it shorter) while negative values outset the text decoration (make it longer). If one value is specified, it applies to both the text decoration start and end points. If two values are specified, the first one applies to the text decoration start point and the second one applies to the text decoration end point. Percentage values either refer to the total inline size of the {{glossary("decorating box")}} if {{cssxref("box-decoration-break")}} is set to {{cssxref("box-decoration-break", "slice", "#slice")}}, or to the inline size of each individual {{glossary("box fragment")}}, if it is set to {{cssxref("box-decoration-break", "clone", "#clone")}}.
 - `auto`
   - : The browser chooses a start and end inset amount to ensure that, if two decorated text boxes appear side-by-side, the appearance of a gap is created between their text decorations so they do not appear to have a single text decoration.
 
