@@ -1,8 +1,8 @@
 ---
-title: Firefox 155 release notes for developers (Stable)
-short-title: Firefox 155 (Stable)
+title: Firefox 155 release notes for developers
+short-title: Firefox 155
 slug: Mozilla/Firefox/Releases/155
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
