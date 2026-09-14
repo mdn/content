@@ -29,7 +29,10 @@ sidebar: cssref
 
 ### Values
 
-A {{Cssxref("&lt;color&gt;")}}.
+This property is specified as the following value:
+
+- {{Cssxref("&lt;color&gt;")}}
+  - : Defines the color of the highlight.
 
 ## Formal definition
 
