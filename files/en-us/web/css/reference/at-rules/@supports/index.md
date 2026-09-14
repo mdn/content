@@ -169,7 +169,7 @@ This `named-feature()` checks if the browser supports transform-aware [anchor po
 
 ##### `single-axis-scroll-container`
 
-This named-feature checks if the browser supports the ability to have single-axis scroll containers, where one axis is [`scroll`](/en-US/docs/Web/CSS/Reference/Properties/overflow#scroll) and the other is [`clip`](/en-US/docs/Web/CSS/Reference/Properties/overflow#clip).
+This `named-feature()` checks if the browser supports the ability to have single-axis scroll containers, where one axis is either {{cssxref("overflow", "scroll", "#scroll")}}, or {{cssxref("overflow", "auto", "#auto")}}, or {{cssxref("overflow", "hidden", "#hidden")}} and the other is {{cssxref("overflow", "clip", "#clip")}}.
 
 ```css
 @supports named-feature(single-axis-scroll-container) {
