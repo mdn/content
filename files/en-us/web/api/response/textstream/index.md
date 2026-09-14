@@ -3,10 +3,12 @@ title: "Response: textStream() method"
 short-title: textStream()
 slug: Web/API/Response/textStream
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Response.textStream
 ---
 
-{{APIRef("Fetch API")}}{{AvailableInWorkers}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}{{SeeCompatTable}}
 
 The **`textStream()`** method of the {{domxref("Response")}} interface returns a {{domxref("ReadableStream")}} that can be used to read the contents of the response body in chunks of UTF-8.
 
