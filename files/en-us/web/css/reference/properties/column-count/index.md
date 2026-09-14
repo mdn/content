@@ -75,9 +75,9 @@ This property is specified as a single value from the following list:
 
 ## Description
 
-Setting the `column-count` to a value greater than `1`, creates a multi-column layout. The element's content will be evenly distributed between the specified number of columns.
+Setting the `column-count` to a value greater than `1` creates a multi-column layout. The element's content will be evenly distributed between the specified number of columns.
 
-The `column-count` property, along with the {{cssxref("column-height")}}, and {{cssxref("column-width")}} properties, can also be set by using the {{cssxref("columns")}} shorthand.
+The `column-count` property, along with the {{cssxref("column-height")}} and {{cssxref("column-width")}} properties, can also be set by using the {{cssxref("columns")}} shorthand.
 
 ## Formal definition
 

@@ -79,9 +79,9 @@ This property is specified as one of the following values:
 
 The `column-width` property specifies the preferred column width in a multi-column layout. The container will have as many columns as can fit without any of them having a width less than the `column-width` value. If the width of the container is narrower than the specified value, the single column's width will be smaller than the declared column width.
 
-This property can help you create responsive designs that fit different screen sizes. Especially in the presence of the {{cssxref("column-count")}} property (which has precedence), you must specify all related length values to achieve an exact column width. In horizontal text these are {{cssxref('width')}}, `column-width`, {{cssxref('column-gap')}}, and {{cssxref('column-rule-width')}}.
+This property can help you create responsive designs that fit different screen sizes. Especially in the presence of the {{cssxref("column-count")}} property (which has precedence), you must specify all related length values to achieve an exact column width. In horizontal text, these are {{cssxref('width')}}, `column-width`, {{cssxref('column-gap')}}, and {{cssxref('column-rule-width')}}.
 
-The `column-width` property, along with the {{cssxref("column-height")}}, and {{cssxref("column-count")}} properties, can also be set by using the {{cssxref("columns")}} shorthand.
+The `column-width` property, along with the {{cssxref("column-height")}} and {{cssxref("column-count")}} properties, can also be set by using the {{cssxref("columns")}} shorthand.
 
 ## Formal definition
 

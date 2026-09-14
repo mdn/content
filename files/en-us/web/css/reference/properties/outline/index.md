@@ -92,9 +92,7 @@ This property is specified as one, two, or three values from the following list:
 
 ## Description
 
-The `outline` shorthand property sets the style, color, and width of an element's outline. It may be specified using one, two, or three of the values listed below.
-
-The order of the values does not matter. As with all shorthand properties, any omitted sub-values will be set to their [initial value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value).
+The `outline` shorthand property sets the style, color, and width of an element's outline. It can be specified using one, two, or three values. The order of the values does not matter. Any omitted sub-values are set to their [initial value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#initial_value).
 
 The outline will be invisible for many elements if its style is not defined. This is because the style defaults to `none`. A notable exception is `input` elements, which are given default styling by browsers.
 
