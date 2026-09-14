@@ -13,6 +13,7 @@ Despite its name, `Accept-Query` is sent by the server in a response, not by the
 `Accept-Query` is a structured field whose value is a list of media ranges (a media type that might include wildcards), each represented as a structured field string or token and optionally including structured field parameters.
 The order of media types in the list is not significant.
 Its value applies to every URI on the server with the same path, regardless of the URI's query component.
+If requests to the same resource return differing `Accept-Query` values, the most recently received value that is still fresh applies.
 
 <table class="properties">
   <tbody>
