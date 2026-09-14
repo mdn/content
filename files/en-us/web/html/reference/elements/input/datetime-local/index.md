@@ -9,6 +9,8 @@ sidebar: htmlsidebar
 
 {{htmlelement("input")}} elements of type **`datetime-local`** create input controls that let the user easily enter both a date and a time, including the year, month, and day as well as the time in hours and minutes.
 
+The control's UI varies in general from browser to browser. The control is intended to represent _a local date and time_, not necessarily _the user's local date and time_. In other words, the input allows any valid combination of year, month, day, hour, and minute—even if such a combination is invalid in the user's local time zone (such as the one hour within a daylight saving time spring-forward transition gap).
+
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;datetime-local&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
@@ -36,8 +38,6 @@ label {
   margin: 0.4rem 0;
 }
 ```
-
-The control's UI varies in general from browser to browser. The control is intended to represent _a local date and time_, not necessarily _the user's local date and time_. In other words, the input allows any valid combination of year, month, day, hour, and minute—even if such a combination is invalid in the user's local time zone (such as the one hour within a daylight saving time spring-forward transition gap).
 
 ## Value
 
