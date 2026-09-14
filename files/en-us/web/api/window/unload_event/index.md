@@ -61,7 +61,7 @@ Especially on mobile, the `unload` event is not reliably fired. For example, the
 
 Also, the `unload` event is not compatible with the [back/forward cache](https://web.dev/articles/bfcache) (bfcache), because many pages using this event assume that the page will not continue to exist after the event is fired. To combat this, some browsers (such as Firefox) will not place pages in the bfcache if they have unload listeners, and this is bad for performance.
 
-For these reasons, Chrome is [gradually changing its default behavior](https://developer.chrome.com/docs/web-platform/deprecating-unload) so that `unload` listeners are not run at all. A page that still depends on `unload` can opt back in using the `unload` directive of the {{HTTPHeader("Permissions-Policy")}} header:
+For these reasons, Chrome has [stopped firing `unload` events by default](https://developer.chrome.com/docs/web-platform/deprecating-unload). A page that still depends on `unload` can opt back in using the `unload` directive of the {{HTTPHeader("Permissions-Policy")}} header.
 
 ```http
 Permissions-Policy: unload=*
