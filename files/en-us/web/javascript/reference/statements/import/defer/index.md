@@ -60,7 +60,7 @@ function compileFile(path) {
 
 Unlike [`import source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/source), a deferred module is still linked up front. Linking up front lets the module loader resolve dependencies, catching missing dependencies or invalid imports before the module is used. Leaving the module unlinked avoids loading dependencies you may not need and allows you to control how it is instantiated.
 
-Unlike [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import), the deferred module is still fetched, parsed, and linked up front, again avoiding unnecessary async coloring. `import defer` also enjoys most benefits of a static declaration, such as better static analysis.
+Unlike [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import), the deferred module is still fetched, parsed, and linked up front, avoiding unnecessary [async coloring](https://journal.stuffwithstuff.com/2015/02/01/what-color-is-your-function/) (entire chain of function calls forced to become async). `import defer` also enjoys most benefits of a static declaration, such as better static analysis.
 
 Note that only the "namespace import" syntax is supported. You cannot use `import defer { property } from "./my-module.js"`, etc., because the execution is triggered by property access on the namespace object.
 
