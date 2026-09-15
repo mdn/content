@@ -2,21 +2,16 @@
 title: WebSocket API (WebSockets)
 slug: Web/API/WebSockets_API
 page-type: web-api-overview
-browser-compat:
-  - api.WebSocket
-  - api.WebSocketStream
+browser-compat: api.WebSocket
 ---
 
 {{DefaultAPISidebar("WebSockets API")}}{{AvailableInWorkers}}
 
 The **WebSocket API** makes it possible to open a two-way interactive communication session between the user's browser and a server. With this API, you can send messages to a server and receive responses without having to poll the server for a reply.
 
-The WebSocket API provides two alternative mechanisms for creating and using web socket connections: the {{domxref("WebSocket")}} interface and the {{domxref("WebSocketStream")}} interface.
+The `WebSocket` interface is stable and has good browser and server support. However it doesn't support [backpressure](/en-US/docs/Web/API/Streams_API/Concepts#backpressure). As a result, when messages arrive faster than the application can process them it will either fill up the device's memory by buffering those messages, become unresponsive due to 100% CPU usage, or both.
 
-- The `WebSocket` interface is stable and has good browser and server support. However it doesn't support [backpressure](/en-US/docs/Web/API/Streams_API/Concepts#backpressure). As a result, when messages arrive faster than the application can process them it will either fill up the device's memory by buffering those messages, become unresponsive due to 100% CPU usage, or both.
-- The `WebSocketStream` interface is a {{jsxref("Promise")}}-based alternative to `WebSocket`. It uses the [Streams API](/en-US/docs/Web/API/Streams_API) to handle receiving and sending messages, meaning that socket connections can take advantage of stream backpressure automatically, regulating the speed of reading or writing to avoid bottlenecks in the application. However, `WebSocketStream` is non-standard and currently only supported in one rendering engine.
-
-Additionally, the [WebTransport API](/en-US/docs/Web/API/WebTransport_API) is expected to replace the WebSocket API for many applications. WebTransport is a versatile, low-level API that provides backpressure and many other features not supported by either `WebSocket` or `WebSocketStream`, such as unidirectional streams, out-of-order delivery, and unreliable data transmission via datagrams. WebTransport is more complex to use than WebSockets and its cross-browser support is not as wide, but it enables the implementation of sophisticated solutions. If standard WebSocket connections are a good fit for your use case and you need wide browser compatibility, you should employ the WebSockets API to get up and running quickly. However, if your application requires a non-standard custom solution, then you should use the WebTransport API.
+The [WebTransport API](/en-US/docs/Web/API/WebTransport_API) is expected to replace the WebSocket API for many applications. WebTransport is a versatile, low-level API that provides backpressure and many other features not supported by `WebSocket`, such as unidirectional streams, out-of-order delivery, and unreliable data transmission via datagrams. WebTransport is more complex to use than WebSockets and its cross-browser support is not as wide, but it enables the implementation of sophisticated solutions. If standard WebSocket connections are a good fit for your use case and you need wide browser compatibility, you should employ the WebSockets API to get up and running quickly. However, if your application requires a non-standard custom solution, then you should use the WebTransport API.
 
 > [!NOTE]
 > If a page has an open WebSocket connection, the browser may not add it to the {{glossary("bfcache")}}. It's therefore good practice to close the connection when the user has finished with the page. See [working with the bfcache](/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications#working_with_the_bfcache).
@@ -25,8 +20,6 @@ Additionally, the [WebTransport API](/en-US/docs/Web/API/WebTransport_API) is ex
 
 - [`WebSocket`](/en-US/docs/Web/API/WebSocket)
   - : The primary interface for connecting to a WebSocket server and then sending and receiving data on the connection.
-- [`WebSocketStream`](/en-US/docs/Web/API/WebSocketStream) {{non-standard_inline}}
-  - : Promise-based interface for connecting to a WebSocket server; uses [streams](/en-US/docs/Web/API/Streams_API) to send and receive data on the connection.
 - [`CloseEvent`](/en-US/docs/Web/API/CloseEvent)
   - : The event sent by the WebSocket object when the connection closes.
 - [`MessageEvent`](/en-US/docs/Web/API/MessageEvent)
@@ -96,3 +89,4 @@ The HTTP headers are used in the [WebSocket handshake](/en-US/docs/Web/API/WebSo
 - [RFC 6455 — The WebSocket Protocol](https://datatracker.ietf.org/doc/html/rfc6455)
 - [WebSocket API Specification](https://websockets.spec.whatwg.org/)
 - [Server-Sent Events](/en-US/docs/Web/API/Server-sent_events)
+- [`WebSocketStream`](/en-US/docs/Web/API/WebSocketStream) {{non-standard_inline}}
