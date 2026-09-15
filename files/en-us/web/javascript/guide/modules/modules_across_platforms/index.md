@@ -187,7 +187,7 @@ This does _not_ always translate to named imports in ESM:
 import { area } from "./square.cjs";
 ```
 
-This is because the [module loading process](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#the_module_loading_process) requires modules to be linked before evaluation, which means Node must be able to tell if an export called `area` exists before it runs `square.cjs`. Therefore, it can only look for certain code patterns, like `module.exports = { area }` or `module.exports.area = ...`, but it will not 100% succeed, especially if CJS code was hand-written and modifies `module.exports` in a convoluted way. Most common compiler-produced CJS idioms can be correctly analyzed.
+This is because [modules must be linked before evaluated](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#from_module_source_to_execution), which means Node must be able to tell if an export called `area` exists before it runs `square.cjs`. Therefore, it can only look for certain code patterns, like `module.exports = { area }` or `module.exports.area = ...`, but it will not 100% succeed, especially if CJS code was hand-written and modifies `module.exports` in a convoluted way. Most common compiler-produced CJS idioms can be correctly analyzed.
 
 In the worst case, you may need to import the whole `module.exports` object, and then destructure it:
 
@@ -262,7 +262,7 @@ export function area(side) {
 }
 ```
 
-And run a transpiler. It may output the following:
+And run a transpiler to produce CJS. It may output the following:
 
 ```js
 // -- dist/square.js --
