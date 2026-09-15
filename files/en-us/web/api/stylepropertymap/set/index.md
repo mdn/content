@@ -30,6 +30,15 @@ set(property, value1, value2, /* …, */ valueN)
 
 None ({{jsxref("undefined")}}).
 
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if:
+    - `property` is not a valid CSS property.
+    - `property` is a single-valued property and more than one value is given.
+    - Any of `value1`, …, `valueN` is already associated with a different property (for example, a value read from one property's entry in a `StylePropertyMap`, then passed to `set()` for another property).
+    - Two or more values are given, and any of them is a {{domxref("CSSUnparsedValue")}} or {{domxref("CSSVariableReferenceValue")}} object.
+
 ## Examples
 
 ### Basic usage
@@ -51,3 +60,11 @@ buttonEl.attributeStyleMap.set("padding-top", CSS.px(10));
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("StylePropertyMap.append()")}}
+- {{domxref("StylePropertyMap.delete()")}}
+- {{domxref("StylePropertyMap.clear()")}}
+- [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)
