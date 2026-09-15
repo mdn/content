@@ -1,11 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 104" role="img" aria-labelledby="title description">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550 168" role="img" aria-labelledby="title description">
   <title id="title">A two-module dependency cycle</title>
-  <desc id="description">a.js imports b from b.js, and b.js imports a from a.js. Solid arrows point from each module specifier to the module it identifies, forming a cycle.</desc>
+  <desc id="description">a.js imports b from b.js, and b.js imports a from a.js. Solid arrows point from each module specifier to the module it identifies, forming a cycle. a.js exports const a = 2, and b.js exports const b = 1. Dashed arrows connect each imported identifier to its corresponding export in the other module.</desc>
   <style>
     text { fill: #6b7280; font-family: Menlo, Consolas, monospace; font-size: 12px; }
-    .specifier { fill: #08827e; font-weight: bold; }
+    .specifier, .identifier { fill: #08827e; font-weight: bold; }
     .outline { fill: none; stroke: #808080; stroke-width: 1; }
     .dependency { fill: none; stroke: #808080; stroke-width: 1; marker-end: url(#arrow); }
+    .binding { fill: none; stroke: #808080; stroke-width: 1; stroke-dasharray: 4 3; marker-end: url(#arrow); }
   </style>
   <defs>
     <marker id="arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
@@ -14,13 +15,23 @@
   </defs>
 
   <path class="dependency" d="M 193 40 V 14 H 400 V 30"/>
-  <path class="dependency" d="M 473 58 V 88 H 150 V 64"/>
+  <path class="dependency" d="M 473 58 V 124 H 150 V 100"/>
 
-  <path class="outline" d="M 70 30 H 250 V 64 H 20 V 30 H 28"/>
+  <path class="binding" d="M 102 58 V 72 H 412 V 78"/>
+  <path class="binding" d="M 382 58 V 64 H 132 V 78"/>
+
+  <path class="outline" d="M 70 30 H 250 V 100 H 20 V 30 H 28"/>
   <text x="34" y="34">a.js</text>
-  <text x="34" y="52">import { b } from <tspan class="specifier">"./b.js"</tspan>;</text>
+  <text x="34" y="52">import { <tspan class="identifier">b</tspan> } from <tspan class="specifier">"./b.js"</tspan>;</text>
+  <text x="34" y="88">export const <tspan class="identifier">a</tspan> = 2;</text>
 
-  <path class="outline" d="M 350 30 H 530 V 64 H 300 V 30 H 308"/>
+  <path class="outline" d="M 350 30 H 530 V 100 H 300 V 30 H 308"/>
   <text x="314" y="34">b.js</text>
-  <text x="314" y="52">import { a } from <tspan class="specifier">"./a.js"</tspan>;</text>
+  <text x="314" y="52">import { <tspan class="identifier">a</tspan> } from <tspan class="specifier">"./a.js"</tspan>;</text>
+  <text x="314" y="88">export const <tspan class="identifier">b</tspan> = 1;</text>
+
+  <path class="dependency" d="M 20 150 H 56"/>
+  <text x="66" y="154">Module dependency</text>
+  <path class="binding" d="M 270 150 H 306"/>
+  <text x="316" y="154">Binding connection</text>
 </svg>

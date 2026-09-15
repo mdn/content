@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 910 330" role="img" aria-labelledby="title description">
+  <title id="title">A loading failure stops discovery of further dependencies</title>
+  <desc id="description">A snapshot when config.js's request for non-existent.js fails. main.js and config.js have been fetched and parsed. formatters.js is still loading; its request can finish, but this traversal will not discover or request logger.js. The source of formatters.js and logger.js is shown for reference, not as source already processed by this traversal. Solid arrows are requests already issued; dotted arrows are dependencies not traversed. No modules are linked or evaluated.</desc>
+  <style>
+    text { fill: #6b7280; font-family: Menlo, Consolas, monospace; font-size: 12px; }
+    .specifier { fill: #08827e; font-weight: bold; }
+    .outline { fill: none; stroke: #808080; stroke-width: 1; }
+    .complete { stroke: #08827e; }
+    .pending { stroke: #a66b00; }
+    .failed { stroke: #c23b40; }
+    .failed-label { fill: #b32930; }
+    .unknown { stroke: #9ca3af; stroke-dasharray: 4 3; }
+    .status { text-anchor: end; paint-order: stroke; stroke: white; stroke-width: 4; stroke-linejoin: round; }
+    .complete-label { fill: #08827e; }
+    .pending-label { fill: #895900; }
+    .untraversed { stroke-dasharray: 2 4; }
+    .edge { fill: none; stroke: #808080; stroke-width: 1; marker-end: url(#arrow); }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 8 4 L 0 8" fill="none" stroke="#808080"/>
+    </marker>
+  </defs>
+
+  <rect x="20" y="30" width="330" height="88" fill="#edf8f5"/>
+  <rect x="390" y="30" width="500" height="116" fill="#fff8e6"/>
+  <rect x="20" y="186" width="280" height="98" fill="#edf8f5"/>
+  <rect x="560" y="186" width="270" height="80" fill="#f3f4f6"/>
+
+  <path class="edge" d="M 340 48 H 390"/>
+  <path class="edge" d="M 265 76 V 186"/>
+  <path class="edge untraversed" d="M 544 58 L 300 186"/>
+  <path class="edge untraversed" d="M 624 76 V 186"/>
+
+  <path class="outline complete" d="M 92 30 H 350 V 118 H 20 V 30 H 28"/>
+  <text x="34" y="34">main.js</text>
+  <text x="34" y="52">import { greet } from <tspan class="specifier">"./formatters.js"</tspan>;</text>
+  <text x="34" y="70">import config from <tspan class="specifier">"./config.js"</tspan>;</text>
+  <text x="34" y="106">greet("Josh", config.locale);</text>
+
+  <path class="outline pending" d="M 504 30 H 890 V 146 H 390 V 30 H 398"/>
+  <text x="404" y="34">formatters.js</text>
+  <text x="404" y="52">import config from <tspan class="specifier">"./config.js"</tspan>;</text>
+  <text x="404" y="70">import { log } from <tspan class="specifier">"./logger.js"</tspan>;</text>
+  <text x="404" y="98">export function greet(name, localeName = config.defaultLocale) {</text>
+  <text x="404" y="116" xml:space="preserve">  // ...</text>
+  <text x="404" y="134">}</text>
+
+  <path class="outline complete" d="M 106 186 H 300 V 284 H 20 V 186 H 28"/>
+  <text x="34" y="190">config.js</text>
+  <text x="34" y="208">import <tspan class="specifier">"./non-existent.js"</tspan>;</text>
+  <text x="34" y="236">export default {</text>
+  <text x="34" y="254" xml:space="preserve">  // ...</text>
+  <text x="34" y="272">};</text>
+
+  <path class="outline unknown" d="M 646 186 H 830 V 266 H 560 V 186 H 568"/>
+  <text x="574" y="190">logger.js</text>
+  <text x="574" y="208">export function log(message) {</text>
+  <text x="574" y="226" xml:space="preserve">  // ...</text>
+  <text x="574" y="244">}</text>
+
+  <path class="edge" d="M 238 204 H 330"/>
+  <path class="failed" d="M 338 198 L 350 210 M 350 198 L 338 210" fill="none" stroke-width="2" stroke-linecap="round"/>
+  <text class="failed-label" x="358" y="208">Failed</text>
+
+  <text class="status complete-label" x="350" y="22">Loaded</text>
+  <text class="status pending-label" x="890" y="22">Loading</text>
+  <text class="status complete-label" x="300" y="178">Loaded</text>
+  <text class="status" x="830" y="178">Undiscovered</text>
+
+  <path class="edge" d="M 20 312 H 52"/>
+  <text x="62" y="316">Request issued</text>
+  <path class="edge untraversed" d="M 200 312 H 232"/>
+  <text x="242" y="316">Dependency not traversed</text>
+</svg>

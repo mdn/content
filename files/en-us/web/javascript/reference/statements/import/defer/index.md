@@ -128,7 +128,7 @@ Merely referring to the namespace, assigning it to another variable, comparing i
 
 ### Top-level await
 
-Reading a namespace property is synchronous, so it cannot wait for asynchronous module evaluation. Modules that contain [top-level `await`](/en-US/docs/Web/JavaScript/Guide/Modules#top_level_await) are evaluated eagerly, along with the dependencies required to evaluate them. This includes modules reached through further deferred imports. The importing module waits for this asynchronous evaluation before running its own body.
+Reading a namespace property is synchronous, so it cannot wait for asynchronous module evaluation. Modules that contain [top-level `await`](/en-US/docs/Web/JavaScript/Guide/Modules#top-level_await) are evaluated eagerly, along with the dependencies required to evaluate them. This includes modules reached through further deferred imports. The importing module waits for this asynchronous evaluation before running its own body.
 
 If the directly imported module contains top-level `await`, its evaluation is not deferred. If only some of its dependencies contain top-level `await`, those dependencies are evaluated eagerly, but the synchronous parts of the graph that are not required for their evaluation can remain deferred. See [Deferring a module with an asynchronous dependency](#deferring_a_module_with_an_asynchronous_dependency).
 
@@ -138,7 +138,7 @@ Loading, parsing, and linking errors are not deferred. For example, a missing mo
 
 Errors thrown during deferred evaluation are thrown synchronously by the operation that triggers evaluation. You can catch them with [`try...catch`](/en-US/docs/Web/JavaScript/Reference/Statements/try...catch) around that operation. The error is cached: subsequent operations that trigger evaluation throw the same error instead of retrying the module's code. This also applies if another import previously caused the module's evaluation to fail.
 
-An operation that triggers evaluation throws a {{jsxref("TypeError")}} if the module or its dependencies are not ready for synchronous evaluation. This can happen with [cyclic imports](/en-US/docs/Web/JavaScript/Guide/Modules#cyclic_imports), when an access would require a module that is still being evaluated. An `import defer` declaration does not make every cyclic dependency safe to access during initialization. A readiness failure itself does not mark the requested module as having failed evaluation: a later access can succeed once its dependencies are ready.
+An operation that triggers evaluation throws a {{jsxref("TypeError")}} if the module or its dependencies are not ready for synchronous evaluation. This can happen with [cyclic imports](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#cyclic_imports), when an access would require a module that is still being evaluated. An `import defer` declaration does not make every cyclic dependency safe to access during initialization. A readiness failure itself does not mark the requested module as having failed evaluation: a later access can succeed once its dependencies are ready.
 
 ## Examples
 

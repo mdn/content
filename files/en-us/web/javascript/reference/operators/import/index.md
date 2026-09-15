@@ -76,7 +76,7 @@ Each of these syntaxes is considered a distinct type of expression.
 
 ### Module namespace object
 
-A _module namespace object_ is an object that describes all exports from a module. It is a static object that is created when the module is evaluated. There are two ways to access the module namespace object of a module: through a [namespace import](/en-US/docs/Web/JavaScript/Reference/Statements/import#namespace_import) (`import * as name from moduleName`), or through the fulfillment value of a dynamic import.
+A _module namespace object_ is an object that describes all exports from a module. It is a static object that is created when the module is linked, before it starts evaluating. There are two ways to access the module namespace object of a module: through a [namespace import](/en-US/docs/Web/JavaScript/Reference/Statements/import#namespace_import) (`import * as name from moduleName`), or through the fulfillment value of a dynamic import.
 
 The module namespace object is a [sealed](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed) object with [`null` prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects). This means all string keys of the object correspond to the exports of the module and there are never extra keys. All keys are [enumerable](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) in lexicographic order (i.e., the default behavior of [`Array.prototype.sort()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#description)), with the default export available as a key called `default`. In addition, the module namespace object has a [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property with the value `"Module"`, used in {{jsxref("Object.prototype.toString()")}}.
 
@@ -115,7 +115,7 @@ import("/my-module.js").then((mod2) => {
 > [!WARNING]
 > Do not export a function called `then()` from a module. This will cause the module to behave differently when imported dynamically than when imported statically.
 
-This aggressive caching ensures that a piece of JavaScript code is never executed more than once, even if it is imported multiple times. Future imports don't even result in HTTP requests or disk access. If you do need to re-import and re-evaluate a module without restarting the entire JavaScript environment, one possible trick is to use a unique query parameter in the module specifier. This works in non-browser runtimes that support URL specifiers too.
+This aggressive caching ensures that a piece of JavaScript code is never executed more than once, even if it is imported multiple times. Future imports (assuming previous success in the same environment) don't even result in HTTP requests or disk access. If you do need to re-import and re-evaluate a module without restarting the entire JavaScript environment, one possible trick is to use a unique query parameter in the module specifier. This works in non-browser runtimes that support URL specifiers too.
 
 ```js
 import(`/my-module.js?t=${Date.now()}`);
@@ -131,7 +131,9 @@ You can also use the [Fetch API](/en-US/docs/Web/API/Fetch_API) to fetch module 
 
 However, this is semantically not the same as dynamic import, because user-agent settings like [fetch destination](/en-US/docs/Web/API/Request/destination), [CSP](/en-US/docs/Web/HTTP/Guides/CSP), or [module resolution](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta/resolve) may not be applied correctly.
 
-Module namespace object caching only applies to modules that are loaded and linked _successfully_. A module is imported in three steps: loading (fetching the module), linking (mostly, parsing the module), and evaluating (executing the parsed code). Only evaluation failures are cached; if a module fails to load or link, the next import may try to load and link the module again. The browser may or may not cache the result of the fetch operation, but it should follow typical HTTP semantics, so handling such network failures should not be different from handling {{domxref("Window/fetch", "fetch()")}} failures.
+A module is imported in three steps: loading (fetching and parsing the module and its dependencies), linking (resolving imports and preparing bindings), and evaluating (executing the parsed code). Evaluation failures are cached, so subsequent imports of the same module propagate the error without executing it again. Linking can be retried, but the same graph of JavaScript module records will encounter the same linking error.
+
+Caching of loading failures depends on the host and the kind of failure. In browsers, the module map is separate from the HTTP cache. The [HTML specification](https://html.spec.whatwg.org/multipage/webappapis.html#fetch-a-single-module-script) requires failed fetches, including HTTP error responses, to be removed from the module map so a later import can retry. The HTTP cache may still supply a cached error response. Parse errors, however, are retained in the module map, so retrying the same module does not fetch corrected source.
 
 ## Examples
 
