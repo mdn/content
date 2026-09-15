@@ -50,7 +50,7 @@ For an example that writes and reads back several MIME-type representations in o
 
 > [!NOTE]
 > {{domxref("Clipboard.write()")}} takes an array of `ClipboardItem` objects, but if the underlying OS doesn't support writing multiple items, only the first item will be written.
-> Note that some browser versions throw an exception if more than one item is passed in the array (see [Browser compatibility](/en-US/docs/Web/API/Clipboard/write#browser_compatibility) in `Clipboard.write()`).
+> Some browser versions throw an exception if more than one item is passed in the array (see [Browser compatibility](/en-US/docs/Web/API/Clipboard/write#browser_compatibility) in `Clipboard.write()`).
 
 ```js
 async function writeClipImg() {

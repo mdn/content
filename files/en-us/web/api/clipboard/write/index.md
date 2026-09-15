@@ -8,11 +8,11 @@ browser-compat: api.Clipboard.write
 
 {{APIRef("Clipboard API")}} {{securecontext_header}}
 
-The **`write()`** method of the {{domxref("Clipboard")}} interface writes arbitrary {{domxref("ClipboardItem")}} data such as images and text to the clipboard, fulfilling the returned {{jsxref("Promise")}} on completion.
-This can be used to implement cut and copy functionality.
+The **`write()`** method of the {{domxref("Clipboard")}} interface is used to write data such as images, text, and custom types, to the system clipboard.
 
-The method can in theory write arbitrary data (unlike {{domxref("Clipboard.writeText", "writeText()")}}, which can only write text).
-Browsers commonly support writing text, HTML, and PNG image data.
+The method takes as an argument an array of {{domxref("ClipboardItem")}} instances, and returns a {{jsxref("Promise")}} that is fulfilled when the data is written.
+Each `ClipboardItem` can contain one or more representations of an object that has been copied, allowing apps that read the data to pick the format they prefer.
+This is more flexible than {{domxref("Clipboard.writeText", "writeText()")}}, which can only write text.
 
 ## Syntax
 
@@ -36,6 +36,13 @@ The promise is rejected if the clipboard is unable to write to the clipboard.
 
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if writing to the clipboard is not allowed.
+
+## Description
+
+Each item in the `data` array is a {{domxref("ClipboardItem")}} that can contain one or more representations of the data being written, keyed by {{Glossary("MIME type")}}.
+Providing multiple representations lets an app that later pastes the data pick the best format it understands.
+
+Browsers commonly support writing text, HTML, and PNG image data, and may support web custom formats (see the [Browser compatibility](/en-US/docs/Web/API/ClipboardItem#browser_compatibility) section of `ClipboardItem`).
 
 ## Security considerations
 

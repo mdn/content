@@ -10,7 +10,7 @@ browser-compat: api.Clipboard.read
 
 The **`read()`** method of the {{domxref("Clipboard")}} interface returns a {{jsxref("Promise")}} that fulfills with a copy of the clipboard's contents.
 
-Each item from the clipboard can provide different representations of the copied object, allowing apps to handle the types they understand, and gracefully fall back for types they don't.
+Each item from the clipboard can provide different representations of the copied object, allowing apps to handle the types they understand and gracefully fall back for types they don't.
 This is more flexible than {{domxref("Clipboard.readText", "readText()")}}, which can only return text.
 
 ## Syntax
@@ -43,10 +43,10 @@ A {{jsxref("Promise")}} that resolves with an array of {{domxref("ClipboardItem"
 The resolved promise is an array of {{domxref("ClipboardItem")}} instances representing the different items read from the clipboard.
 Each `ClipboardItem` can contain one or more representations of the copied object, keyed by [media type](/en-US/docs/Web/HTTP/Guides/MIME_types).
 A web app reads the formats in an item and selects the best representation that it understands.
-For example, an item for a custom data type on the clipboard might include the custom representation, a version in HTML, and a plain text version.
-An app that understands the format can fully comprehend it, while one that doesn't might still be able to use the text or HTML version.
+For example, an item for a custom data type on the clipboard might include a custom representation, an HTML version, and a plain text version.
+An app that understands the custom format can use it directly, while one that doesn't can fall back to the text or HTML version.
 
-Browsers commonly support reading text, HTML, and PNG image data, and may support web custom formats (see [browser compatibility](/en-US/docs/Web/API/ClipboardItem#browser_compatibility) in `ClipboardItem`).
+Browsers commonly support reading text, HTML, and PNG image data, and may support web custom formats (see the [Browser compatibility](/en-US/docs/Web/API/ClipboardItem#browser_compatibility) section of `ClipboardItem`).
 
 ## Security considerations
 
@@ -63,8 +63,8 @@ It then reads the clipboard back with `read()` and lists the returned formats.
 
 #### HTML
 
-First we define the `source` element which contains the HTML that we'll copy.
-Below that are the buttons that will be used to copy the HTML and to read (and log) the returned clipboard items.
+First we define the `source` element, which contains the HTML representation of the data that we'll copy.
+The buttons that follow are used to copy the HTML and to read (and log) the returned clipboard items.
 
 ```html
 <div id="source">
@@ -74,7 +74,7 @@ Below that are the buttons that will be used to copy the HTML and to read (and l
 <button id="inspect" type="button">Read clipboard item</button>
 ```
 
-Note that there is also hidden code for a logging panel below the buttons, which is not relevant to the example.
+There is also hidden logging-panel code, not relevant to the example.
 
 ```html hidden
 <pre id="log"></pre>
@@ -128,7 +128,7 @@ copyButton.addEventListener("click", async () => {
 });
 ```
 
-The "Read" button calls `read()`, then logs every MIME type each returned `ClipboardItem` carries, fetching each format's data with `getType()`.
+The "Read" button calls `read()` and logs every MIME type each returned `ClipboardItem` carries. It then fetches and logs each format's data with `getType()`.
 
 ```js
 const inspectButton = document.querySelector("#inspect");
@@ -153,7 +153,7 @@ inspectButton.addEventListener("click", async () => {
 #### Result
 
 First click the Copy button to copy the element as both text and HTML.
-Then click "Read clipboard item" to read it back and list the formats in the item.
+Then click the "Read clipboard item" button to read it back and list the formats in the item.
 
 {{EmbedLiveSample("Reading multiple formats from the clipboard", "100%", "320", "", "", "", "clipboard-read; clipboard-write")}}
 
