@@ -8,7 +8,7 @@ status:
 browser-compat: api.CompositionEvent.initCompositionEvent
 ---
 
-{{deprecated_header}}{{APIRef("UI Events")}}
+{{APIRef("UI Events")}}
 
 The **`initCompositionEvent()`**
 method of the {{domxref("CompositionEvent")}} interface initializes the attributes of a

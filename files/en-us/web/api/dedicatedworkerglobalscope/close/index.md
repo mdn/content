@@ -47,4 +47,4 @@ close();
 
 ## See also
 
-{{domxref("DedicatedWorkerGlobalScope")}}
+- {{domxref("DedicatedWorkerGlobalScope")}}

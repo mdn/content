@@ -8,13 +8,9 @@ browser-compat: api.DataTransferItemList.clear
 
 {{APIRef("HTML Drag and Drop API")}}
 
-The {{domxref("DataTransferItemList")}} method
-**`clear()`** removes all {{domxref("DataTransferItem")}}
-objects from the drag data items list, leaving the list empty.
+The **`clear()`** method of the {{domxref("DataTransferItemList")}} interface removes all {{domxref("DataTransferItem")}} objects from the drag data items list, leaving the list empty.
 
-The drag data store in which this list is kept is only writable while handling the
-{{domxref("HTMLElement/dragstart_event", "dragstart")}} event. While handling {{domxref("HTMLElement/drop_event", "drop")}}, the drag data store is
-in read-only mode, and this method silently does nothing. No exception is thrown.
+During a drag operation, this method can only be used in the handler for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event, because that's the only time the drag operation's data store is writable. Calling it from any other drag event does nothing. See [Modifying the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#modifying_the_drag_data_store) for details.
 
 ## Syntax
 

@@ -722,7 +722,7 @@ addListener();
 
 ### Improving scroll performance using passive listeners
 
-The following example shows the effect of setting `passive`. It includes a {{htmlelement("div")}} that contains some text, and a check box.
+The following example shows the effect of setting `passive`. It includes a {{htmlelement("div")}} that contains some text, and a checkbox.
 
 #### HTML
 

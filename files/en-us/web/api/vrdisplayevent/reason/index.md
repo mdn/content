@@ -9,7 +9,7 @@ status:
 browser-compat: api.VRDisplayEvent.reason
 ---
 
-{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("WebVR API")}}{{Non-standard_Header}}
 
 The **`reason`** read-only property of the {{domxref("VRDisplayEvent")}} interface returns a human-readable reason why the event was fired.
 

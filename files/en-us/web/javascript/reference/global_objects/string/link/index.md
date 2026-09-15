@@ -9,8 +9,6 @@ browser-compat: javascript.builtins.String.link
 sidebar: jsref
 ---
 
-{{Deprecated_Header}}
-
 The **`link()`** method of {{jsxref("String")}} values creates a string that embeds this string in an {{HTMLElement("a")}} element (`<a href="...">str</a>`), to be used as a hypertext link to another URL.
 
 > [!NOTE]

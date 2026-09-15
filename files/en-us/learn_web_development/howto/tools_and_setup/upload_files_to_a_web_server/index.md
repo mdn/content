@@ -87,7 +87,7 @@ To connect your SFTP client to the distant server, follow these steps:
 1. Choose _File > Site Manager…_ from the main menu.
 2. In the _Site Manager_ window, press the _New Site_ button, then fill in the site name as **demozilla** in the provided space.
 3. Fill in the SFTP server your host provided in the _Host:_ field.
-4. In the _Logon Type:_ drop down, choose _Normal_, then fill in your provided username and password in the relevant fields.
+4. In the _Logon Type:_ dropdown, choose _Normal_, then fill in your provided username and password in the relevant fields.
 5. Fill in the correct port and other information.
 
 Your window should look something like this:
@@ -134,7 +134,7 @@ It is seen as a more advanced tool than SFTP, because by default it is used on t
 rsync [-options] SOURCE user@x.x.x.x:DESTINATION
 ```
 
-- `-options` is a dash followed by a one or more letters, for example `-v` for verbose error messages, and `-b` to make backups. You can see the full list at the [rsync man page](https://linux.die.net/man/1/rsync) (search for "Options summary").
+- `-options` is a dash followed by one or more letters, for example `-v` for verbose error messages, and `-b` to make backups. You can see the full list at the [rsync man page](https://linux.die.net/man/1/rsync) (search for "Options summary").
 - `SOURCE` is the path to the local file or directory that you want to copy files over from.
 - `user@` is the credentials of the user on the remote server you want to copy files over to.
 - `x.x.x.x` is the IP address of the remote server.

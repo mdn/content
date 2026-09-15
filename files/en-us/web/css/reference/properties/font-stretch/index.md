@@ -91,9 +91,9 @@ font-stretch: revert-layer;
 font-stretch: unset;
 ```
 
-This property may be specified as a single keyword or {{cssxref("&lt;percentage&gt;")}} value.
-
 ### Values
+
+This property is specified as a single value from the following list:
 
 - `normal`
   - : Specifies a normally condensed font face.

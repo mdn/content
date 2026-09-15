@@ -4,11 +4,9 @@ slug: Web/SVG/Reference/Attribute/xlink:title
 page-type: svg-attribute
 status:
   - deprecated
-browser-compat: svg.global_attributes.xlink_title
+browser-compat: svg.elements.a.xlink_title
 sidebar: svgref
 ---
-
-{{Deprecated_Header}}
 
 The **`xlink:title`** attribute is used to describe the meaning of a link or resource in a human-readable fashion.
 

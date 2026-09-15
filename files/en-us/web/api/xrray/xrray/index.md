@@ -46,7 +46,7 @@ A newly-created {{domxref("XRRay")}} object.
 
 ### Creating `XRRay` objects
 
-The `XRRay()` constructor allows to creating new rays by either providing an `origin` point and a `direction` vector, or by passing in an {{domxref("XRRigidTransform")}} object.
+The `XRRay()` constructor allows you to create new rays by either providing an `origin` point and a `direction` vector, or by passing in an {{domxref("XRRigidTransform")}} object.
 
 ```js
 // Default configuration

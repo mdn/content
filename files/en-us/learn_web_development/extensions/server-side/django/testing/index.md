@@ -175,9 +175,9 @@ The new class defines two methods that you can use for pre-test configuration (f
 > [!NOTE]
 > The test classes also have a `tearDown()` method which we haven't used. This method isn't particularly useful for database tests, since the `TestCase` base class takes care of database teardown for you.
 
-Below those we have a number of test methods, which use `Assert` functions to test whether conditions are true, false or equal (`AssertTrue`, `AssertFalse`, `AssertEqual`). If the condition does not evaluate as expected then the test will fail and report the error to your console.
+Below those we have a number of test methods, which use `assert` functions to test whether conditions are true, false or equal (`assertTrue`, `assertFalse`, `assertEqual`). If the condition does not evaluate as expected then the test will fail and report the error to your console.
 
-The `AssertTrue`, `AssertFalse`, `AssertEqual` are standard assertions provided by **unittest**. There are other standard assertions in the framework, and also [Django-specific assertions](https://docs.djangoproject.com/en/5.0/topics/testing/tools/#assertions) to test if a view redirects (`assertRedirects`), to test if a particular template has been used (`assertTemplateUsed`), etc.
+The `assertTrue`, `assertFalse`, `assertEqual` are standard assertions provided by **unittest**. There are other standard assertions in the framework, and also [Django-specific assertions](https://docs.djangoproject.com/en/5.0/topics/testing/tools/#assertions) to test if a view redirects (`assertRedirects`), to test if a particular template has been used (`assertTemplateUsed`), etc.
 
 > [!NOTE]
 > You should **not** normally include **print()** functions in your tests as shown above. We do that here only so that you can see the order that the setup functions are called in the console (in the following section).
@@ -411,7 +411,7 @@ The patterns for testing the other models are similar so we won't continue to di
 
 ### Forms
 
-The philosophy for testing your forms is the same as for testing your models; you need to test anything that you've coded or your design specifies, but not the behavior of the underlying framework and other third party libraries.
+The philosophy for testing your forms is the same as for testing your models; you need to test anything that you've coded or your design specifies, but not the behavior of the underlying framework and other third-party libraries.
 
 Generally this means that you should test that the forms have the fields that you want, and that these are displayed with appropriate labels and help text. You don't need to verify that Django validates the field type correctly (unless you created your own custom field and validation) — i.e., you don't need to test that an email field only accepts emails. However you would need to test any additional validation that you expect to be performed on the fields and any messages that your code will generate for errors.
 
@@ -934,7 +934,7 @@ Django provides test APIs to check that the correct template is being called by 
 
 ## Other recommended test tools
 
-Django's test framework can help you write effective unit and integration tests — we've only scratched the surface of what the underlying **unittest** framework can do, let alone Django's additions (for example, check out how you can use [unittest.mock](https://docs.python.org/3/library/unittest.mock-examples.html) to patch third party libraries so you can more thoroughly test your own code).
+Django's test framework can help you write effective unit and integration tests — we've only scratched the surface of what the underlying **unittest** framework can do, let alone Django's additions (for example, check out how you can use [unittest.mock](https://docs.python.org/3/library/unittest.mock-examples.html) to patch third-party libraries so you can more thoroughly test your own code).
 
 While there are numerous other test tools that you can use, we'll just highlight two:
 

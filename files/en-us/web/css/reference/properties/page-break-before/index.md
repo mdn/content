@@ -9,8 +9,6 @@ browser-compat: css.properties.page-break-before
 sidebar: cssref
 ---
 
-{{deprecated_header}}
-
 > [!WARNING]
 > This property has been replaced by the {{cssxref("break-before")}} property.
 

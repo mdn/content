@@ -36,7 +36,7 @@ See {{domxref("StorageManager.getDirectory()")}}
 
 ```js
 document.requestStorageAccess({ getDirectory: true }).then(
-  (handle) => {
+  async (handle) => {
     console.log("getDirectory access granted");
     await handle.getDirectory();
   },

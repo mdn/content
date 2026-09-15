@@ -13,15 +13,18 @@ The **`set()`** method of the {{domxref("StylePropertyMap")}} interface changes 
 ## Syntax
 
 ```js-nolint
-set(property, value)
+set(property)
+set(property, value1)
+set(property, value1, value2)
+set(property, value1, value2, /* …, */ valueN)
 ```
 
 ### Parameters
 
 - `property`
   - : An identifier indicating the stylistic feature (e.g., font, width, background color) to change.
-- `value`
-  - : The value the given property should have.
+- `value1`, …, `valueN`
+  - : The value(s) the given property should have.
 
 ### Return value
 

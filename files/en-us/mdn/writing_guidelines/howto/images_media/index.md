@@ -78,7 +78,7 @@ Let's walk through an example:
    ```
 
 6. Now you're ready to create your
-   [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
+   [pull request](https://docs.github.com/en/pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
 
 ## Adding alternative text to images
 

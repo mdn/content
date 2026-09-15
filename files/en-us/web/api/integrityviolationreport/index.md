@@ -61,7 +61,7 @@ We can also see that the report was due to loading a script, and that it was tri
 }
 ```
 
-Violation reports may also sent as a JSON object in a {{httpmethod("POST")}} request to one or more configured [reporting server endpoints](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints).
+Violation reports may also be sent as a JSON object in a {{httpmethod("POST")}} request to one or more configured [reporting server endpoints](/en-US/docs/Web/API/Reporting_API#reporting_server_endpoints).
 Reporting server endpoint names are specified in the [`endpoints` list](/en-US/docs/Web/HTTP/Reference/Headers/Integrity-Policy#endpoints) when setting {{httpheader("Integrity-Policy")}} or {{httpheader("Integrity-Policy-Report-Only")}}.
 Valid endpoint names and their mapping to a particular URL are defined using the {{httpheader("Reporting-Endpoints")}} header.
 

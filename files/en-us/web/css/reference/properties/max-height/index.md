@@ -9,6 +9,8 @@ sidebar: cssref
 
 The **`max-height`** [CSS](/en-US/docs/Web/CSS) property sets the maximum height of an element. It prevents the [used value](/en-US/docs/Web/CSS/Guides/Cascade/Property_value_processing#used_value) of the {{cssxref("height")}} property from becoming larger than the value specified for `max-height`.
 
+`max-height` overrides {{cssxref("height")}}, but {{cssxref("min-height")}} overrides `max-height`.
+
 {{InteractiveExample("CSS Demo: max-height")}}
 
 ```css interactive-example-choice
@@ -45,8 +47,6 @@ max-height: 10px;
   color: white;
 }
 ```
-
-`max-height` overrides {{cssxref("height")}}, but {{cssxref("min-height")}} overrides `max-height`.
 
 ## Syntax
 
