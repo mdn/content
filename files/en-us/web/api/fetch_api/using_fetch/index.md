@@ -113,13 +113,15 @@ const request = new Request("https://example.org/post", {
   method: "POST",
   body: JSON.stringify({ username: "example" }),
 });
-
+async function main(){
 const response1 = await fetch(request);
 console.log(response1.status);
 
 // Will throw: "Body has already been consumed."
 const response2 = await fetch(request);
 console.log(response2.status);
+}
+main();
 ```
 
 Instead, you would need to {{domxref("Request.clone()", "create a clone", "", "nocode")}} of the request before sending it:
