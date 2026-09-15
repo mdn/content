@@ -40,7 +40,7 @@ No notable changes.
 
 ### JavaScript
 
-- {{jsxref("Promise.try()")}} now resolves the value returned by its callback using `PromiseResolve`, so a promise returned by the callback is passed through rather than wrapped in a new promise.
+- {{jsxref("Promise.try()")}} now resolves the callback's return value in the same way as {{jsxref("Promise.resolve()")}} does, so a promise returned by the callback is passed through unchanged instead of being wrapped in a new promise.
   `Promise.try(() => p)` is now the same promise as `p` when `p` is a native promise. This follows a normative change to the specification.
   ([Firefox bug 2062293](https://bugzil.la/2062293)).
 - [`using`](/en-US/docs/Web/JavaScript/Reference/Statements/using) declarations can no longer be reassigned, matching the const-like semantics required by the specification. Previously such a binding could be silently mutated.
