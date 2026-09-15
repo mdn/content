@@ -69,7 +69,6 @@ When a buffer plays, you will first hear the leftmost sample frame, then the one
 Here are a couple of simple examples:
 
 ```js
-const context = new AudioContext();
 const buffer = new AudioBuffer({
   numberOfChannels: 2,
   length: 22050,
@@ -87,7 +86,6 @@ const buffer = new AudioBuffer({
 If you use this call above, you will get a stereo buffer with two channels that, when played back on an {{domxref("AudioContext")}} running at 44100 Hz (very common, most normal sound cards run at this rate), will last for 0.5 seconds: 22,050 frames/44,100 Hz = 0.5 seconds.
 
 ```js
-const context = new AudioContext();
 const buffer = new AudioBuffer({
   numberOfChannels: 1,
   length: 22050,
