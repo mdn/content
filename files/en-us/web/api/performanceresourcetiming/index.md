@@ -105,6 +105,8 @@ Additionally, this interface exposes the following properties containing more in
 
 - {{domxref("PerformanceResourceTiming.contentType")}} {{ReadOnlyInline}}
   - : A string representing a minimized and standardized version of the MIME-type of the fetched resource.
+- {{domxref("PerformanceResourceTiming.contentEncoding")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+  - : A string representing the {{httpheader("Content-Encoding")}} of the fetched resource.
 - {{domxref('PerformanceResourceTiming.decodedBodySize')}} {{ReadOnlyInline}}
   - : A number that is the size (in octets) received from the fetch (HTTP or cache) of the message body, after removing any applied content encoding.
 - {{domxref("PerformanceResourceTiming.deliveryType")}} {{ReadOnlyInline}}
