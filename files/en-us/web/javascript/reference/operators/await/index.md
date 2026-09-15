@@ -161,7 +161,9 @@ Here is an example of a module using the [Fetch API](/en-US/docs/Web/API/Fetch_A
 
 ```js
 // fetch request
-const colors = fetch("../data/colors.json").then((response) => response.json());
+const colors = fetch(
+  "https://mdn.github.io/js-examples/module-examples/top-level-await/data/colors.json",
+).then((response) => response.json());
 
 export default await colors;
 ```

@@ -9,24 +9,132 @@ sidebar: jssidebar
 
 This guide gives you all you need to get started with JavaScript module syntax.
 
-## A background on modules
+## Module philosophy
+
+Before we look at what syntax is available inside modules, let's first talk at a high level about what modules are, how they are different from traditional scripts, and why you might need them.
+
+### A background on modules
 
 JavaScript programs started off pretty small — most of its usage in the early days was to do isolated scripting tasks, providing a bit of interactivity to your web pages where needed, so large scripts were generally not needed. Fast forward a few years and we now have complete applications being run in browsers with a lot of JavaScript, as well as JavaScript being used in other contexts ([Node.js](/en-US/docs/Glossary/Node.js), for example).
 
-Complex projects necessitate a mechanism for splitting JavaScript programs into separate modules that can be imported when needed. Node.js has had this ability for a long time, and there are a number of JavaScript libraries and frameworks that enable module usage (for example, other [CommonJS](https://en.wikipedia.org/wiki/CommonJS) and [AMD](https://github.com/amdjs/amdjs-api/blob/master/AMD.md)-based module systems like [RequireJS](https://requirejs.org/), [webpack](https://webpack.js.org/), and [Babel](https://babeljs.io/)).
+Complex projects necessitate a mechanism for splitting JavaScript programs into separate modules that can be imported when needed. Node.js has had this ability for a long time, and there are a number of JavaScript libraries and tools that enable module usage (for example, [AMD](https://github.com/amdjs/amdjs-api/blob/master/AMD.md) loaders like [RequireJS](https://requirejs.org/), bundlers like [Webpack](https://webpack.js.org/), and compilers like [Babel](https://babeljs.io/)).
 
-All modern browsers support module features natively without needing transpilation. It can only be a good thing — browsers can optimize loading of modules, making it more efficient than having to use a library and do all of that extra client-side processing and extra round trips. It does not obsolete bundlers like webpack, though — bundlers still do a good job at partitioning code into reasonably sized chunks, and are able to do other optimizations like minification, dead code elimination, and tree-shaking.
+All modern browsers support module features natively without needing transpilation. It can only be a good thing — browsers can optimize loading of modules, without requiring a library to handle module loading. It does not obsolete bundlers like Webpack, though — bundlers still do a good job at partitioning code into reasonably sized chunks, and are able to do other optimizations like minification, dead code elimination, and tree-shaking.
 
-## Introducing an example
+### What's a module?
 
-To demonstrate usage of modules, we've created a [set of examples](https://github.com/mdn/js-examples/tree/main/module-examples) that you can find on GitHub. These examples demonstrate a set of modules that create a [`<canvas>`](/en-US/docs/Web/HTML/Reference/Elements/canvas) element on a webpage, and then draw (and report information about) different shapes on the canvas.
+JavaScript code can be evaluated in two ways: as a _script_ (also called "classic script" or "traditional script") or as a _module_. There are two main differences:
 
-These are fairly trivial, but have been kept deliberately simple to demonstrate modules clearly.
+1. At parsing time, modules are parsed with a slightly different syntax. Namely, they are automatically in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), and you can only use {{jsxref("Statements/import", "import")}} and {{jsxref("Statements/export", "export")}} statements in modules.
+2. At runtime, modules are executed in their own scope, not in the global scope. This means that variables, functions, classes, etc. declared in a module are not visible outside the module unless they are either explicitly exported (so they can be imported in other modules), or are made available globally by attaching them to the global object (e.g., `window` in a browser). Uncaught errors from modules still show in the DevTools, but you'll not be able to access module-scoped variables in the JavaScript console.
+
+There are other differences, but they are specific to modules on the web. Find them in [Using modules on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web).
+
+Here is how scripts are traditionally attached to web pages:
+
+```html
+<head>
+  <script src="external-script.js"></script>
+</head>
+<body>
+  <!-- page content -->
+  <script src="external-script-2.js"></script>
+  <script>
+    // inline script
+  </script>
+</body>
+```
+
+```js
+// -- external-script.js --
+function $() {
+  // …
+}
+// …
+```
+
+```js
+// -- external-script-2.js --
+$.ajax(/* … */);
+// …
+```
+
+![Diagram showing how scripts are attached to web pages](script-loading.svg)
+
+Most notably, all classic scripts attached to the webpage are executed under the same scope—the global scope. Any variables, unless they are contained within other functions or blocks, can be accessed from anywhere later in the page. This can be both convenient and dangerous. Shown in this figure is how the second and third scripts are able to access the `$` variable declared in the first script, thanks to them all being in the global scope.
+
+This pattern is very convenient, but it gets unwieldy at scale:
+
+- Scope pollution and identifier conflicts become a big concern. Popular libraries like [jQuery](https://jquery.com/) and [Underscore](https://underscorejs.org/) put everything under special identifiers like `$` and `_` to minimize the risk, but many third-party libraries compete for common names like `map`, `merge`, `debounce`, etc.
+- All dependencies must be explicitly declared and managed by the author. If library A imports library B, then it's the application author's job to add a `<script>` element that loads library B and ensure that it happens before A.
+- It's hard to load libraries on demand: everything is loaded and initialized as soon as the page loads.
+
+Now, let us consider how this same code may look with modules. The first script, `external-script.js`, wants to share the variable `$` with the rest of the scripts. It is done above by putting the variable in the global scope. In the module version, we can export the variable and import it in the other scripts.
+
+```html
+<head>
+  <script type="module" src="external-script-2.js"></script>
+  <script type="module">
+    import { $ } from "./external-script.js";
+    // inline script
+  </script>
+</head>
+<body>
+  <!-- page content -->
+</body>
+```
+
+```js
+// -- external-script.js --
+function $() {
+  // …
+}
+// …
+export { $ };
+```
+
+```js
+// -- external-script-2.js --
+import { $ } from "./external-script.js";
+
+$.ajax(/* … */);
+// …
+```
+
+![Diagram showing how modules are attached to web pages](module-loading.svg)
+
+Whereas the script version formed a _linear_ order of dependencies where each piece of code has access to all of the code coming earlier, the module version forms a [_dependency graph_](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph) where each module explicitly declares the modules it relies on, and what variables it needs from those dependencies.
+
+As we said, modules are parsed differently from scripts—this means that the JavaScript engine needs to know whether to apply the module or script parsing rules. Hosts commonly specify this using an [_out-of-band signaling mechanism_](https://github.com/tc39/how-we-work/blob/main/terminology.md#out-of-band), where the behavior of the code is configured by information outside of the code itself. (This is different from [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), where the interpretation mode is declared inside the script with `"use strict"`.) There are many ways to give such information:
+
+- If this module is referenced from a `<script>` tag, you can use the `type="module"` attribute. Also see [Using modules on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web).
+- If you are using Node.js, you can use the `.mjs` file extension, or add `"type": "module"` to the closest `package.json` file. Also see [Modules across platforms](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms).
+- If this module is to be used as a worker, you can pass `type: "module"` when calling the {{domxref("Worker/Worker", "Worker()")}} constructor.
 
 > [!NOTE]
-> If you want to download the examples and run them locally, you'll need to run them through a local web server.
+> Certain runtimes, like Node.js, also have implicit module type detection if there's no explicit indication, based on whether the code uses syntax like `import`/`export` that's unavailable in non-modules. Browsers don't offer this.
 
-## Basic example structure
+### Aside — .mjs versus .js
+
+Throughout this article, we've used `.js` extensions for our module files, but in other resources you may see the `.mjs` extension used instead. [V8's documentation recommends this](https://v8.dev/features/modules#mjs), for example. The reasons given are:
+
+- You can tell if a file is a module or a script directly from the file, without looking at contextual clues like the HTML tag or the package.json.
+- Outside of browsers, it's almost universally accepted as directly entering module mode, including by runtimes such as [Node.js](https://nodejs.org/api/esm.html#esm_enabling) and build tools such as [Babel](https://babeljs.io/docs/options#sourcetype).
+
+For browsers, the difference is purely cosmetic. The file extension doesn't matter on the web—JavaScript is identified by the [`Content-Type`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Type) header, and modules are identified by the `type="module"` attribute in the `<script>` tag. To get modules to work correctly in a browser, you need to make sure that your server is serving them with a `Content-Type` header that contains a JavaScript MIME type such as `text/javascript`. If you don't, you'll get a strict MIME type checking error along the lines of "The server responded with a non-JavaScript MIME type" and the browser won't run your JavaScript.
+
+We decided to keep to `.js`. The main benefit is that the `.js` extension is much more widely understood than `.mjs`, and although the latter is catching up, you might always run into certain software that doesn't understand `.mjs`.
+
+- Most servers automatically set the correct type for `.js` files, but some don't for `.mjs` files. Servers that already serve `.mjs` files correctly include [GitHub Pages](https://pages.github.com/) and [`http-server`](https://github.com/http-party/http-server#readme) for Node.js. This is OK if you are using such an environment already, or if you aren't but you have access to configure your server to set the correct `Content-Type` for `.mjs` files. It could however cause confusion if you don't control the server you are serving files from, or are publishing files for public use, as we are here.
+- The file extension is used by many tools other than the HTTP server. It may be used by your editor, the operating system, static analysis tools, formatters, and more. `.mjs` may be less well-supported by toolings at large. For example, some operating systems might not recognize it, or try to replace it with something else, such as implicitly appending a `.js` extension when you try to open it.
+
+If you really value the clarity of using `.mjs` for modules versus using `.js` for "normal" JavaScript files, but don't want to run into the problem described above, you could always use `.mjs` during development and convert them to `.js` during your build step.
+
+## Working with examples
+
+To demonstrate usage of modules, we've created a [simple set of examples](https://github.com/mdn/js-examples/tree/main/module-examples) that you can find on GitHub. These examples demonstrate a simple set of modules that create a [`<canvas>`](/en-US/docs/Web/HTML/Reference/Elements/canvas) element on a webpage, and then draw (and report information about) different shapes on the canvas.
+
+These are fairly trivial, but have been kept deliberately simple to demonstrate modules clearly.
 
 In our first example (see [basic-modules](https://github.com/mdn/js-examples/tree/main/module-examples/basic-modules)) we have a file structure as follows:
 
@@ -41,43 +149,24 @@ modules/
 > [!NOTE]
 > All of the examples in this guide have basically the same structure; the above should start getting pretty familiar.
 
-The modules directory's two modules are described below:
+The `index.html` file only declares the DOM and [applies](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#applying_modules_to_your_html) the `main.js` module; all code we demonstrate subsequently concern only the `.js` files.
+
+The `modules` directory's two modules are described below:
 
 - `canvas.js` — contains functions related to setting up the canvas:
   - `create()` — creates a canvas with a specified `width` and `height` inside a wrapper [`<div>`](/en-US/docs/Web/HTML/Reference/Elements/div) with a specified ID, which is itself appended inside a specified parent element. Returns an object containing the canvas's 2D context and the wrapper's ID.
   - `createReportList()` — creates an unordered list appended inside a specified wrapper element, which can be used to output report data into. Returns the list's ID.
-
 - `square.js` — contains:
   - `name` — a constant containing the string 'square'.
   - `draw()` — draws a square on a specified canvas, with a specified size, position, and color. Returns an object containing the square's size, position, and color.
   - `reportArea()` — writes a square's area to a specific report list, given its length.
   - `reportPerimeter()` — writes a square's perimeter to a specific report list, given its length.
 
-### Aside — .mjs versus .js
+After you've downloaded these examples, [start a local server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server) and visit the `index.html` file.
 
-Throughout this article, we've used `.js` extensions for our module files, but in other resources you may see the `.mjs` extension used instead. [V8's documentation recommends this](https://v8.dev/features/modules#mjs), for example. The reasons given are:
+## Named exports
 
-- It is good for clarity, i.e., it makes it clear which files are modules, and which are regular JavaScript.
-- It ensures that your module files are parsed as a module by runtimes such as [Node.js](https://nodejs.org/api/esm.html#esm_enabling), and build tools such as [Babel](https://babeljs.io/docs/options#sourcetype).
-
-However, we decided to keep using `.js`, at least for the moment. To get modules to work correctly in a browser, you need to make sure that your server is serving them with a `Content-Type` header that contains a JavaScript MIME type such as `text/javascript`. If you don't, you'll get a strict MIME type checking error along the lines of "The server responded with a non-JavaScript MIME type" and the browser won't run your JavaScript. Most servers already set the correct type for `.js` files, but not yet for `.mjs` files. Servers that already serve `.mjs` files correctly include [GitHub Pages](https://pages.github.com/) and [`http-server`](https://github.com/http-party/http-server#readme) for Node.js.
-
-This is OK if you are using such an environment already, or if you aren't but you know what you are doing and have access (i.e., you can configure your server to set the correct [`Content-Type`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Type) for `.mjs` files). It could however cause confusion if you don't control the server you are serving files from, or are publishing files for public use, as we are here.
-
-For learning and portability purposes, we decided to keep to `.js`.
-
-If you really value the clarity of using `.mjs` for modules versus using `.js` for "normal" JavaScript files, but don't want to run into the problem described above, you could always use `.mjs` during development and convert them to `.js` during your build step.
-
-It is also worth noting that:
-
-- Some tools may never support `.mjs`.
-- The `<script type="module">` attribute is used to denote when a module is being pointed to, as described in [Applying the module to your HTML](#applying_the_module_to_your_html).
-
-## Exporting module features
-
-The first thing you do to get access to module features is export them. This is done using the {{jsxref("Statements/export", "export")}} statement.
-
-The easiest way to use it is to place it in front of any items you want exported out of the module, for example:
+Unlike scripts, where all variables declared at the top level are implicitly accessible to subsequent scripts, You must explicitly {{jsxref("Statements/export", "export")}} variables for them to be accessible in other modules. You can place this keyword in front of any [declaration](/en-US/docs/Web/JavaScript/Reference/Statements#what_are_statements_declarations_and_expressions)—including `var`, `let`, `const`, `function`, `class`, and more. They need to be top-level items: for example, you can't use `export` inside a function.
 
 ```js
 export const name = "square";
@@ -90,45 +179,32 @@ export function draw(ctx, length, x, y, color) {
 }
 ```
 
-You can export functions, `var`, `let`, `const`, and — as we'll see later — classes. They need to be top-level items: for example, you can't use `export` inside a function.
-
-A more convenient way of exporting all the items you want to export is to use a single export statement at the end of your module file, followed by a comma-separated list of the features you want to export wrapped in curly braces. For example:
+Equivalently, you can export things you already declared elsewhere inside this module by using `export` followed by a comma-separated list of variable names within curly braces:
 
 ```js
 export { name, draw, reportArea, reportPerimeter };
 ```
 
-## Importing features into your script
+## Named imports
 
-Once you've exported some features out of your module, you need to import them into your script to be able to use them. The simplest way to do this is as follows:
+Once you've exported some variables out of your module, you need to import them into another module to use them. You use the {{jsxref("Statements/import", "import")}} statement, followed by a comma-separated list of the names you want to import wrapped in curly braces, followed by the keyword `from`, followed by the _module specifier_.
 
 ```js
 import { name, draw, reportArea, reportPerimeter } from "./modules/square.js";
 ```
 
-You use the {{jsxref("Statements/import", "import")}} statement, followed by a comma-separated list of the features you want to import wrapped in curly braces, followed by the keyword `from`, followed by the _module specifier_.
-
-The _module specifier_ provides a string that the JavaScript environment can resolve to a path to the module file.
-In a browser, this could be a path relative to the site root, which for our `basic-modules` example would be `/js-examples/module-examples/basic-modules`.
-However, here we are instead using the dot (`.`) syntax to mean "the current location", followed by the relative path to the file we are trying to find. This is much better than writing out the entire absolute path each time, as relative paths are shorter and make the URL portable — the example will still work if you move it to a different location in the site hierarchy.
-
-So for example:
-
-```bash
-/js-examples/module-examples/basic-modules/modules/square.js
-```
-
-becomes
-
-```bash
-./modules/square.js
-```
-
 You can see such lines in action in [`main.js`](https://github.com/mdn/js-examples/blob/main/module-examples/basic-modules/main.js).
 
 > [!NOTE]
-> In some module systems, you can use a module specifier like `modules/square` that isn't a relative or absolute path, and that doesn't have a file extension.
-> This kind of specifier can be used in a browser environment if you first define an [import map](#importing_modules_using_import_maps).
+> The _module specifier_ is a string that points to the module that exports these variables. In a browser, this is usually the URL relative to the URL of the current module, similar to the [`href`](/en-US/docs/Web/HTML/Reference/Elements/a#href) attribute of {{HTMLElement("a")}} elements. For example, if our module above is served at `https://example.com/basic-modules/main.js`, and the `square.js` module is served at `https://example.com/basic-modules/modules/square.js`, then all of the following are equivalent:
+>
+> ```plain
+> "https://example.com/basic-modules/modules/square.js"
+> "/basic-modules/modules/square.js"
+> "./modules/square.js"
+> ```
+>
+> Different runtimes (browsers, Node, bundler, etc.) have different rules for the specifier format. You can read more about these differences in [Using modules on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#module_specifiers_on_the_web) and [Modules across platforms](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms).
 
 Once you've imported the features into your script, you can use them just like they were defined inside the same file. The following is found in `main.js`, below the import lines:
 
@@ -144,322 +220,31 @@ reportPerimeter(square.length, reportList);
 > [!NOTE]
 > The imported values are read-only views of the features that were exported. Similar to `const` variables, you cannot re-assign the variable that was imported, but you can still modify properties of object values. The value can only be re-assigned by the module exporting it. See the [`import` reference](/en-US/docs/Web/JavaScript/Reference/Statements/import#imported_values_can_only_be_modified_by_the_exporter) for an example.
 
-## Importing modules using import maps
+## Default exports and imports
 
-Above we saw how a browser can import a module using a module specifier that is either an absolute URL, or a relative URL that is resolved using the base URL of the document:
+The above export and import variables by their names. The names for each variable have to match between the exporter and the importer. You can definitely write functional module code using just named imports and exports. However, if you want to import from [non-ECMAScript modules](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms), these systems do not use named exports. In these systems, each module correspond to exactly one JavaScript value. To represent these types of modules, JavaScript provides a _default export_.
 
-```js
-import { name as circleName } from "https://example.com/shapes/circle.js";
-import { name as squareName, draw } from "./shapes/square.js";
-```
-
-[Import maps](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap) allow developers to instead specify almost any text they want in the module specifier when importing a module; the map provides a corresponding value that will replace the text when the module URL is resolved.
-
-For example, the `imports` key in the import map below defines a "module specifier map" JSON object where the property names can be used as module specifiers, and the corresponding values will be substituted when the browser resolves the module URL.
-The values must be absolute or relative URLs.
-Relative URLs are resolved to absolute URL addresses using the [base URL](/en-US/docs/Web/HTML/Reference/Elements/base) of the document containing the import map.
-
-```html
-<script type="importmap">
-  {
-    "imports": {
-      "shapes": "./shapes/square.js",
-      "shapes/square": "./modules/shapes/square.js",
-      "https://example.com/shapes/square.js": "./shapes/square.js",
-      "https://example.com/shapes/": "/shapes/square/",
-      "../shapes/square": "./shapes/square.js"
-    }
-  }
-</script>
-```
-
-The import map is defined using a [JSON object](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap#import_map_json_representation) inside a `<script>` element with the `type` attribute set to [`importmap`](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap).
-Note that an import map only applies to the document — the specification does not cover how to apply an import map in a worker or worklet context. <!-- https://github.com/WICG/import-maps/issues/2 -->
-
-With this map you can now use the property names above as module specifiers.
-If there is no trailing forward slash on the module specifier key then the whole module specifier key is matched and substituted.
-For example, below we match bare module names, and remap a URL to another path.
+Unlike named exports, default exports have no names associated with them. Each module can have up to one default export. To create a default export, instead of exporting a _declaration_ like `const` or `function`, you export an _expression_ instead, by prepending `export default` to it. For example, all of the following would work:
 
 ```js
-// Bare module names as module specifiers
-import { name as squareNameOne } from "shapes";
-import { name as squareNameTwo } from "shapes/square";
-
-// Remap a URL to another URL
-import { name as squareNameThree } from "https://example.com/shapes/square.js";
-```
-
-If the module specifier has a trailing forward slash then the value must have one as well, and the key is matched as a "path prefix".
-This allows remapping of whole classes of URLs.
-
-```js
-// Remap a URL as a prefix ( https://example.com/shapes/)
-import { name as squareNameFour } from "https://example.com/shapes/moduleshapes/square.js";
-```
-
-It is possible for multiple keys in an import map to be valid matches for a module specifier.
-For example, a module specifier of `shapes/circle/` could match the module specifier keys `shapes/` and `shapes/circle/`.
-In this case the browser will select the most specific (longest) matching module specifier key.
-
-Import maps allow modules to be imported using bare module names (as in Node.js), and can also simulate importing modules from packages, both with and without file extensions.
-While not shown above, they also allow particular versions of a library to be imported, based on the path of the script that is importing the module.
-Generally they let developers write more ergonomic import code, and make it easier to manage the different versions and dependencies of modules used by a site.
-This can reduce the effort required to use the same JavaScript libraries in both browser and server.
-
-The following sections expand on the various features outlined above.
-
-### Feature detection
-
-You can check support for import maps using the [`HTMLScriptElement.supports()`](/en-US/docs/Web/API/HTMLScriptElement/supports_static) static method (which is itself broadly supported):
-
-```js
-if (HTMLScriptElement.supports?.("importmap")) {
-  console.log("Browser supports import maps.");
-}
-```
-
-### Importing modules as bare names
-
-In some JavaScript environments, such as Node.js, you can use bare names for the module specifier.
-This works because the environment can resolve module names to a standard location in the file system.
-For example, you might use the following syntax to import the "square" module.
-
-```js
-import { name, draw, reportArea, reportPerimeter } from "square";
-```
-
-To use bare names on a browser you need an import map, which provides the information needed by the browser to resolve module specifiers to URLs (JavaScript will throw a `TypeError` if it attempts to import a module specifier that can't be resolved to a module location).
-
-Below you can see a map that defines a `square` module specifier key, which in this case maps to a relative address value.
-
-```html
-<script type="importmap">
-  {
-    "imports": {
-      "square": "./shapes/square.js"
-    }
-  }
-</script>
-```
-
-With this map we can now use a bare name when we import the module:
-
-```js
-import { name as squareName, draw } from "square";
-```
-
-### Remapping module paths
-
-Module specifier map entries, where both the specifier key and its associated value have a trailing forward slash (`/`), can be used as a path-prefix.
-This allows the remapping of a whole set of import URLs from one location to another.
-It can also be used to emulate working with "packages and modules", such as you might see in the Node ecosystem.
-
-> [!NOTE]
-> The trailing `/` indicates that the module specifier key can be substituted as _part_ of a module specifier.
-> If this is not present, the browser will only match (and substitute) the whole module specifier key.
-
-#### Packages of modules
-
-The following JSON import map definition maps `lodash` as a bare name, and the module specifier prefix `lodash/` to the path `/node_modules/lodash-es/` (resolved to the document base URL):
-
-```json
-{
-  "imports": {
-    "lodash": "/node_modules/lodash-es/lodash.js",
-    "lodash/": "/node_modules/lodash-es/"
-  }
-}
-```
-
-With this mapping you can import both the whole "package", using the bare name, and modules within it (using the path mapping):
-
-```js
-import _ from "lodash";
-import fp from "lodash/fp.js";
-```
-
-It is possible to import `fp` above without the `.js` file extension, but you would need to create a bare module specifier key for that file, such as `lodash/fp`, rather than using the path.
-This may be reasonable for just one module, but scales poorly if you wish to import many modules.
-
-#### General URL remapping
-
-A module specifier key doesn't have to be a path — it can also be an absolute URL (or a URL-like relative path like `./`, `../`, `/`).
-This may be useful if you want to remap a module that has absolute paths to a resource with your own local resources.
-
-```json
-{
-  "imports": {
-    "https://www.unpkg.com/moment/": "/node_modules/moment/"
-  }
-}
-```
-
-### Scoped modules for version management
-
-Ecosystems like Node use package managers such as npm to manage modules and their dependencies.
-The package manager ensures that each module is separated from other modules and their dependencies.
-As a result, while a complex application might include the same module multiple times with several different versions in different parts of the module graph, users do not need to think about this complexity.
-
-> [!NOTE]
-> You can also achieve version management using relative paths, but this is subpar because, among other things, this forces a particular structure on your project, and prevents you from using bare module names.
-
-Import maps similarly allow you to have multiple versions of dependencies in your application and refer to them using the same module specifier.
-You implement this with the `scopes` key, which allows you to provide module specifier maps that will be used depending on the path of the script performing the import.
-The example below demonstrates this.
-
-```json
-{
-  "imports": {
-    "cool-module": "/node_modules/cool-module/index.js"
-  },
-  "scopes": {
-    "/node_modules/dependency/": {
-      "cool-module": "/node_modules/some/other/location/cool-module/index.js"
-    }
-  }
-}
-```
-
-With this mapping, if a script with a URL that contains `/node_modules/dependency/` imports `cool-module`, the version in `/node_modules/some/other/location/cool-module/index.js` will be used.
-The map in `imports` is used as a fallback if there is no matching scope in the scoped map, or the matching scopes don't contain a matching specifier. For example, if `cool-module` is imported from a script with a non-matching scope path, then the module specifier map in `imports` will be used instead, mapping to the version in `/node_modules/cool-module/index.js`.
-
-Note that the path used to select a scope does not affect how the address is resolved.
-The value in the mapped path does not have to match the scopes path, and relative paths are still resolved to the base URL of the script that contains the import map.
-
-Just as for module specifier maps, you can have many scope keys, and these may contain overlapping paths.
-If multiple scopes match the referrer URL, then the most specific scope path is checked first (the longest scope key) for a matching specifier.
-The browsers will fall back to the next most specific matching scoped path if there is no matching specifier, and so on.
-If there is no matching specifier in any of the matching scopes, the browser checks for a match in the module specifier map in the `imports` key.
-
-### Improve caching by mapping away hashed filenames
-
-Script files used by websites often have hashed filenames to simplify caching.
-The downside of this approach is that if a module changes, any modules that import it using its hashed filename will also need to be updated/regenerated.
-This potentially results in a cascade of updates, which is wasteful of network resources.
-
-Import maps provide a convenient solution to this problem.
-Rather than depending on specific hashed filenames, applications and scripts instead depend on an un-hashed version of the module name (address).
-An import map like the one below then provides a mapping to the actual script file.
-
-```json
-{
-  "imports": {
-    "main_script": "/node/srcs/application-fg7744e1b.js",
-    "dependency_script": "/node/srcs/dependency-3qn7e4b1q.js"
-  }
-}
-```
-
-If `dependency_script` changes, then its hash contained in the file name changes as well. In this case, we only need to update the import map to reflect the changed name of the module.
-We don't have to update the source of any JavaScript code that depends on it, because the specifier in the import statement does not change.
-
-## Loading non-JavaScript resources
-
-One exciting feature that a unified module architecture brings is the ability to load non-JavaScript resources as modules. For example, you can import JSON as a JavaScript object, or import CSS as a {{domxref("CSSStyleSheet")}} object.
-
-You must explicitly declare what kind of resource you are importing. By default, the browser assumes that the resource is JavaScript, and will throw an error if the resolved resource is something else. To import JSON, CSS, or other types of resource, use the [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) syntax:
-
-```js
-import colors from "./colors.json" with { type: "json" };
-import styles from "./styles.css" with { type: "css" };
-```
-
-Browsers will also perform validation on the module type, and fail if, for example, `./data.json` does not resolve to a JSON file. This ensures that you don't accidentally execute code when you just intend to import data. Once imported successfully, you can now use the imported value as a normal JavaScript object or `CSSStyleSheet` object.
-
-```js
-console.log(colors.map((color) => color.value));
-document.adoptedStyleSheets = [styles];
-```
-
-## Applying the module to your HTML
-
-Now we just need to apply the `main.js` module to our HTML page. This is very similar to how we apply a regular script to a page, with a few notable differences.
-
-First of all, you need to include `type="module"` in the [`<script>`](/en-US/docs/Web/HTML/Reference/Elements/script) element, to declare this script as a module. To import the `main.js` script, we use this:
-
-```html
-<script type="module" src="main.js"></script>
-```
-
-You can also embed the module's script directly into the HTML file by placing the JavaScript code within the body of the `<script>` element:
-
-```html
-<script type="module">
-  /* JavaScript module code here */
-</script>
-```
-
-You can only use `import` and `export` statements inside modules, not regular scripts. An error will be thrown if your `<script>` element doesn't have the `type="module"` attribute and attempts to import other modules. For example:
-
-```html example-bad
-<script>
-  import _ from "lodash"; // SyntaxError: import declarations may only appear at top level of a module
-  // …
-</script>
-<script src="a-module-using-import-statements.js"></script>
-<!-- SyntaxError: import declarations may only appear at top level of a module -->
-```
-
-You should generally define all your modules in separate files. Modules declared inline in HTML can only import other modules, but anything they export will not be accessible by other modules (because they don't have a URL).
-
-> [!NOTE]
-> Modules and their dependencies can be preloaded by specifying them in [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link) elements with [`rel="modulepreload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/modulepreload).
-> This can significantly reduce load time when the modules are used.
-
-## Other differences between modules and classic scripts
-
-- You need to pay attention to local testing — if you try to load the HTML file locally (i.e., with a `file://` URL), you'll run into CORS errors due to JavaScript module security requirements. You need to do your testing through a server.
-- Also, note that you might get different behavior from sections of script defined inside modules as opposed to in classic scripts. This is because modules use {{jsxref("Strict_mode", "strict mode", "", 1)}} automatically.
-- There is no need to use the `defer` attribute (see [`<script>` attributes](/en-US/docs/Web/HTML/Reference/Elements/script#attributes)) when loading a module script; modules are deferred automatically.
-- Modules are only executed once, even if they have been referenced in multiple `<script>` tags.
-- Last but not least, let's make this clear — module features are imported into the scope of a single script — they aren't available in the global scope. Therefore, you will only be able to access imported features in the script they are imported into, and you won't be able to access them from the JavaScript console, for example. You'll still get syntax errors shown in the DevTools, but you'll not be able to use some of the debugging techniques you might have expected to use.
-
-Module-defined variables are scoped to the module unless explicitly attached to the global object. On the other hand, globally-defined variables are available within the module. For example, given the following code:
-
-```html
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Example page</title>
-    <link rel="stylesheet" href="" />
-  </head>
-  <body>
-    <div id="main"></div>
-    <script>
-      // A var statement creates a global variable.
-      var text = "Hello";
-    </script>
-    <script type="module" src="./render.js"></script>
-  </body>
-</html>
-```
-
-```js
-/* render.js */
-document.getElementById("main").innerText = text;
-```
-
-The page would still render `Hello`, because the global variables `text` and `document` are available in the module. (Also note from this example that a module doesn't necessarily need an import/export statement — the only thing needed is for the entry point to have `type="module"`.)
-
-## Default exports versus named exports
-
-The functionality we've exported so far has been comprised of **named exports** — each item (be it a function, `const`, etc.) has been referred to by its name upon export, and that name has been used to refer to it on import as well.
-
-There is also a type of export called the **default export** — this is designed to make it easy to have a default function provided by a module, and also helps JavaScript modules to interoperate with existing CommonJS and AMD module systems (as explained nicely in [ES6 In Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) by Jason Orendorff; search for "Default exports").
-
-Let's look at an example as we explain how it works. In our basic-modules `square.js` you can find a function called `randomSquare()` that creates a square with a random color, size, and position. We want to export this as our default, so at the bottom of the file we write this:
-
-```js
+// An object literal is an expression
+export default {
+  some: "object",
+};
+
+// An addition is an expression
+export default 1 + 1;
+
+// An identifier is also an expression
 export default randomSquare;
 ```
 
-Note the lack of curly braces.
+You can see the last version in our basic-modules `square.js`, which exports a function called `randomSquare()` that creates a square with a random color, size, and position. Note the lack of curly braces.
 
-We could instead prepend `export default` onto the function and define it as an anonymous function, like this:
+As a special case, functions and classes are exported as _declarations_, not expressions, and these declarations can be anonymous. So you can also default-export a function directly when you declare it:
 
 ```js
-export default function (ctx) {
+export default function randomSquare(ctx) {
   // …
 }
 ```
@@ -470,45 +255,13 @@ Over in our `main.js` file, we import the default function using this line:
 import randomSquare from "./modules/square.js";
 ```
 
-Again, note the lack of curly braces. This is because there is only one default export allowed per module, and we know that `randomSquare` is it. The above line is basically shorthand for:
+Again, note the lack of curly braces. This is because there is only one default export allowed per module, and we know that `randomSquare` is it. You can name this import however you want—it doesn't have to match the function name on the exporting side.
 
-```js
-import { default as randomSquare } from "./modules/square.js";
-```
-
-> [!NOTE]
-> The as syntax for renaming exported items is explained below in the [Renaming imports and exports](#renaming_imports_and_exports) section.
+Each module can simultaneously have zero or one default export and any number of named exports.
 
 ## Avoiding naming conflicts
 
 So far, our canvas shape drawing modules seem to be working OK. But what happens if we try to add a module that deals with drawing another shape, like a circle or triangle? These shapes would probably have associated functions like `draw()`, `reportArea()`, etc. too; if we tried to import different functions of the same name into the same top-level module file, we'd end up with conflicts and errors.
-
-Fortunately there are a number of ways to get around this. We'll look at these in the following sections.
-
-## Renaming imports and exports
-
-Inside your `import` and `export` statement's curly braces, you can use the keyword `as` along with a new feature name, to change the identifying name you will use for a feature inside the top-level module.
-
-So for example, both of the following would do the same job, albeit in a slightly different way:
-
-```js
-// -- module.js --
-export { function1 as newFunctionName, function2 as anotherNewFunctionName };
-
-// -- main.js --
-import { newFunctionName, anotherNewFunctionName } from "./modules/module.js";
-```
-
-```js
-// -- module.js --
-export { function1, function2 };
-
-// -- main.js --
-import {
-  function1 as newFunctionName,
-  function2 as anotherNewFunctionName,
-} from "./modules/module.js";
-```
 
 Let's look at a real example. In our [renaming](https://github.com/mdn/js-examples/tree/main/module-examples/renaming) directory you'll see the same module system as in the previous example, except that we've added `circle.js` and `triangle.js` modules to draw and report on circles and triangles.
 
@@ -528,7 +281,13 @@ import { name, draw, reportArea, reportPerimeter } from "./modules/triangle.js";
 
 The browser would throw an error such as "SyntaxError: redeclaration of import name" (Firefox).
 
-Instead we need to rename the imports so that they are unique:
+Fortunately there are a number of ways to get around this. We'll look at these in the following sections.
+
+### Renaming imports and exports
+
+Inside your `import` and `export` statement's curly braces, you can use the keyword `as` along with a new feature name, to change the identifying name you will use for a feature inside the top-level module.
+
+So in our renaming example, we can rename the imports so that they are unique:
 
 ```js
 import {
@@ -556,7 +315,7 @@ import {
 Note that you could solve the problem in the module files instead, e.g.
 
 ```js
-// in square.js
+// -- square.js --
 export {
   name as squareName,
   draw as drawSquare,
@@ -566,7 +325,7 @@ export {
 ```
 
 ```js
-// in main.js
+// -- main.js --
 import {
   squareName,
   drawSquare,
@@ -577,7 +336,15 @@ import {
 
 And it would work just the same. What style you use is up to you, however it arguably makes more sense to leave your module code alone, and make the changes in the imports. This especially makes sense when you are importing from third party modules that you don't have any control over.
 
-## Creating a module object
+By the way, you can use the same syntax for default exports too, by pretending that the export is named `default` (this is a [reserved word](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words), not an actually valid identifier name). The difference with `export default` is that this exports a _live binding_, not a static value. If you re-assign `randomSquare` in the exporter, only this form allows the importer to see the new value.
+
+```js
+import { default as randomSquare } from "./modules/square.js";
+
+export { randomSquare as default };
+```
+
+### Creating a module object
 
 The above method works OK, but it's a little messy and long-winded. An even better solution is to import each module's features inside a module object. The following syntax form does that:
 
@@ -618,7 +385,7 @@ Square.reportPerimeter(square.length, reportList);
 
 So you can now write the code just the same as before (as long as you include the object names where needed), and the imports are much neater.
 
-## Modules and classes
+### Modules and classes
 
 As we hinted at earlier, you can also export and import classes; this is another option for avoiding conflicts in your code, and is especially useful if you've already got your module code written in an object-oriented style.
 
@@ -661,14 +428,21 @@ square.reportPerimeter();
 
 ## Aggregating modules
 
-There will be times where you'll want to aggregate modules together. You might have multiple levels of dependencies, where you want to simplify things, combining several submodules into one parent module. This is possible using export syntax of the following forms in the parent module:
+We now have multiple modules, each doing a similar thing. If someone wants to use multiple of these, they have to write a separate import declaration for each:
 
 ```js
-export * from "x.js";
-export { name } from "x.js";
+import { Square } from "./modules/square.js";
+import { Circle } from "./modules/circle.js";
+import { Triangle } from "./modules/triangle.js";
 ```
 
-For an example, see our [module-aggregation](https://github.com/mdn/js-examples/tree/main/module-examples/module-aggregation) directory. In this example (based on our earlier classes example) we've got an extra module called `shapes.js`, which aggregates all the functionality from `circle.js`, `square.js`, and `triangle.js` together. We've also moved our submodules inside a subdirectory inside the `modules` directory called `shapes`. So the module structure in this example is:
+But it would be better if we can put all these exports into the same module, so no matter how many of these exports users need, they can grab all of them with one `import`.
+
+```js
+import { Square, Circle, Triangle } from "./modules/shapes.js";
+```
+
+In our [module-aggregation](https://github.com/mdn/js-examples/tree/main/module-examples/module-aggregation) example (based on our earlier classes example) we've got an extra module called `shapes.js`, which aggregates all the functionality from `circle.js`, `square.js`, and `triangle.js` together. This is called a "barrel module" because it doesn't do anything other than aggregating exports from all other modules. We've also moved our submodules inside a subdirectory inside the `modules` directory called `shapes`. So the module structure in this example is:
 
 ```plain
 modules/
@@ -680,13 +454,18 @@ modules/
     triangle.js
 ```
 
-In each of the submodules, the export is of the same form, e.g.
+You can make `shapes.js` like this:
 
 ```js
-export { Square };
+// -- shapes.js --
+import { Circle } from "./shapes/circle.js";
+import { Square } from "./shapes/square.js";
+import { Triangle } from "./shapes/triangle.js";
+
+export { Circle, Square, Triangle };
 ```
 
-Next up comes the aggregation part. Inside [`shapes.js`](https://github.com/mdn/js-examples/blob/main/module-examples/module-aggregation/modules/shapes.js), we include the following lines:
+These grab the exports from the individual submodules and effectively make them available from the `shapes.js` module. But there's no need to `import` something just to `export` it. You can use the `export ... from` syntax to directly import and re-export in one line.
 
 ```js
 export { Square } from "./shapes/square.js";
@@ -694,30 +473,72 @@ export { Triangle } from "./shapes/triangle.js";
 export { Circle } from "./shapes/circle.js";
 ```
 
-These grab the exports from the individual submodules and effectively make them available from the `shapes.js` module.
-
 > [!NOTE]
 > The exports referenced in `shapes.js` basically get redirected through the file and don't really exist there, so you won't be able to write any useful related code inside the same file.
 
-So now in the `main.js` file, we can get access to all three module classes by replacing
+Alternatively, you can replace `shapes.js` with the special `export * from` syntax:
 
 ```js
-import { Square } from "./modules/square.js";
-import { Circle } from "./modules/circle.js";
-import { Triangle } from "./modules/triangle.js";
+export * from "./shapes/square.js";
+export * from "./shapes/triangle.js";
+export * from "./shapes/circle.js";
 ```
 
-with the following single line:
+This re-exports _all_ exports (other than the default) from the target module as named exports of the current module, so if you export something else from `square.js`, you don't have to modify `shapes.js` as well. Only do this if you actually want `shapes.js` to re-export everything from `square.js`, or you may accidentally expose things.
+
+Almost all `import` syntaxes we've introduced have `export ... from` equivalents. The only exception is the default import `import x from "mod"`, for which `export x from "mod"` does not exist, and you must use the special `export { default } from` syntax.
 
 ```js
-import { Square, Circle, Triangle } from "./modules/shapes.js";
+export { x } from "mod";
+export { x as v } from "mod";
+export * as ns from "mod";
+export { default } from "mod";
 ```
+
+## Importing a module for its side effects
+
+Sometimes you want to run a module's initialization code without importing any of its exports, for example, to install a polyfill. Use an import with only a module specifier:
+
+```js
+import "./modules/polyfills.js";
+```
+
+See the [`import` reference](/en-US/docs/Web/JavaScript/Reference/Statements/import#import_a_module_for_its_side_effects_only) for more information.
+
+## Import declarations are hoisted
+
+Import declarations are [hoisted](/en-US/docs/Glossary/Hoisting). In this case, it means that the imported values are available in the module's code even before the place that declares them, and that the imported module's side effects are produced before the rest of the module's code starts running.
+
+So for example, in `main.js`, importing `Canvas` in the middle of the code would still work:
+
+```js
+// …
+const myCanvas = new Canvas("myCanvas", document.body, 480, 320);
+myCanvas.create();
+import { Canvas } from "./modules/canvas.js";
+myCanvas.createReportList();
+// …
+```
+
+Still, it is considered good practice to put all your imports at the top of the code, which makes it easier to analyze dependencies.
+
+## Importing JSON modules
+
+We have seen how to import from JavaScript modules, where data is exported with `export` statements. You can also import values from modules written in other languages, as long as the runtime environment knows how to interpret them. The specification only specifies one other resource type: JSON modules.
+
+A JSON module is basically a standalone JSON file. When imported, it provides a single default export containing the parsed JSON value. You import it like this:
+
+```js
+import data from "./data.json" with { type: "json" };
+```
+
+Notice the extra `with { type: "json" }` at the end. This is an [import attribute](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) that tells the runtime environment to validate that the loaded file is indeed JSON. We will talk more about them in the [using modules on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#loading_non-javascript_resources) guide, because their semantics are not defined in the core language. You might be able to import JSON modules without `with { type: "json" }`. The only requirement is that if `with { type: "json" }` is specified, then the loaded module must be parsed as JSON. It is good practice to always declare the type of the module you are importing so it can work everywhere.
 
 ## Dynamic module loading
 
-A recent addition to JavaScript modules functionality is dynamic module loading. This allows you to dynamically load modules only when they are needed, rather than having to load everything up front. This has some obvious performance advantages; let's read on and see how it works.
+You can also dynamically load modules only when they are needed, rather than having to load everything up front. This has some obvious performance advantages; let's read on and see how it works.
 
-This new functionality allows you to call [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import) as a function, passing it the path to the module as a parameter. It returns a {{jsxref("Promise")}}, which fulfills with a module object (see [Creating a module object](#creating_a_module_object)) giving you access to that object's exports. For example:
+The [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import) operator can be called with the path to the module as a parameter. It returns a {{jsxref("Promise")}}, which fulfills with a module object (see [Creating a module object](#creating_a_module_object)) giving you access to that object's exports. For example:
 
 ```js
 import("./modules/myModule.js").then((module) => {
@@ -727,7 +548,7 @@ import("./modules/myModule.js").then((module) => {
 
 > [!NOTE]
 > Dynamic import is permitted in the browser main thread, and in shared and dedicated workers.
-> However `import()` will throw if called in a service worker or worklet.
+> However `import()` will reject if called in a service worker or worklet.
 
 <!-- https://whatpr.org/html/6395/webappapis.html#hostimportmoduledynamically(referencingscriptormodule,-specifier,-promisecapability) -->
 
@@ -776,7 +597,7 @@ Another advantage of dynamic imports is that they are always available, even in 
 </script>
 ```
 
-## Top level await
+## Top-level await
 
 Top level await is a feature available within modules. This means the `await` keyword can be used. It allows modules to act as big [asynchronous functions](/en-US/docs/Learn_web_development/Extensions/Async_JS/Introducing) meaning code can be evaluated before use in parent modules, but without blocking sibling modules from loading.
 
@@ -798,7 +619,9 @@ Then we'll create a module called [`getColors.js`](https://github.com/mdn/js-exa
 
 ```js
 // fetch request
-const colors = fetch("../data/colors.json").then((response) => response.json());
+const colors = fetch(
+  "https://mdn.github.io/js-examples/module-examples/top-level-await/data/colors.json",
+).then((response) => response.json());
 
 export default await colors;
 ```
@@ -851,161 +674,43 @@ const triangle = new Module.Triangle(
 
 This is useful because the code within [`main.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/main.js) won't execute until the code in [`getColors.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/modules/getColors.js) has run. However it won't block other modules being loaded. For instance our [`canvas.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/modules/canvas.js) module will continue to load while `colors` is being fetched.
 
-## Import declarations are hoisted
+Top-level `await` is not free; it has deep implications because it means a part of the [module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph) can only be loaded asynchronously. We'll talk more about what that implies in the [module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph) and [cross-platform modules](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms) guides.
 
-Import declarations are [hoisted](/en-US/docs/Glossary/Hoisting). In this case, it means that the imported values are available in the module's code even before the place that declares them, and that the imported module's side effects are produced before the rest of the module's code starts running.
+## Module metadata
 
-So for example, in `main.js`, importing `Canvas` in the middle of the code would still work:
+Scripts are executed in the global context, so it can get information about its environment with global variables, such as {{domxref("Window.document")}} or {{domxref("Window.location")}}. Modules get their own execution context, so how can each module retrieve information about itself? This information is provided by the [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta) object, which is unique to each module. Its properties are defined by the host environment; the core language spec does not define any properties. See [Using modules on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#the_import.meta_object) for information about browsers, and [Modules across platforms](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms) for information about Node.js, bundlers, and more.
 
-```js
-// …
-const myCanvas = new Canvas("myCanvas", document.body, 480, 320);
-myCanvas.create();
-import { Canvas } from "./modules/canvas.js";
-myCanvas.createReportList();
-// …
-```
-
-Still, it is considered good practice to put all your imports at the top of the code, which makes it easier to analyze dependencies.
-
-## Cyclic imports
-
-Modules can import other modules, and those modules can import other modules, and so on. This forms a [directed graph](https://en.wikipedia.org/wiki/Directed_graph) called the "dependency graph". In an ideal world, this graph is [acyclic](https://en.wikipedia.org/wiki/Directed_acyclic_graph). In this case, the graph can be evaluated using a depth-first traversal.
-
-However, cycles are often inevitable. Cyclic import arises if module `a` imports module `b`, but `b` directly or indirectly depends on `a`. For example:
+Just as an example, in most web-like environments (browsers, Node.js, bundlers, etc.), `import.meta.url` provides the module's URL, which you can use to locate a resource relative to the module:
 
 ```js
-// -- a.js --
-import { b } from "./b.js";
-
-// -- b.js --
-import { a } from "./a.js";
-
-// Cycle:
-// a.js ───> b.js
-//  ^         │
-//  └─────────┘
+// modules/getColors.js
+const colorsURL = new URL("../data/colors.json", import.meta.url);
 ```
 
-Cyclic imports don't always fail. The imported variable's value is only retrieved when the variable is actually used (hence allowing [live bindings](/en-US/docs/Web/JavaScript/Reference/Statements/import#imported_values_can_only_be_modified_by_the_exporter)), and only if the variable remains uninitialized at that time will a [`ReferenceError`](/en-US/docs/Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init) be thrown.
+This keeps the resource URL relative to `getColors.js` even when the module is imported from a page or module in another directory.
 
-```js
-// -- a.js --
-import { b } from "./b.js";
+## Modules goals and non-goals
 
-setTimeout(() => {
-  console.log(b); // 1
-}, 10);
+This article introduces modules as they are defined in the ECMAScript spec. JavaScript modules are inherently tied to the host environment. They need to adapt to different I/O conditions, different architectures, and different engineering needs. As such, the core language only defines the following:
 
-export const a = 2;
+- The syntax for module features, such as [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) and [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) declarations, [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta), and the [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import) expression.
+- [Module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph) building, linking, and evaluation, including cycle detection.
+- The [module object](#creating_a_module_object)'s shape.
 
-// -- b.js --
-import { a } from "./a.js";
+The core language does _not_ care about the following:
 
-setTimeout(() => {
-  console.log(a); // 2
-}, 10);
+- The concept of "files". Although each module is conventionally a separate file, it could as well be an in-memory object, a dynamically fetched string, or anything that can be represented as a JavaScript value.
+- The structure of the module specifier string. It could be a URL, a file path, or any other identifier the host recognizes.
+- The properties of `import.meta`. All properties, including `import.meta.url`, are host-defined.
+- The module loading process. The host environment is responsible for fetching modules, including applying any [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with), subject to the language's requirements, such as those for JSON modules.
 
-export const b = 1;
-```
-
-In this example, both `a` and `b` are used asynchronously. Therefore, at the time the module is evaluated, neither `b` nor `a` is actually read, so the rest of the code is executed as normal, and the two `export` declarations produce the values of `a` and `b`. Then, after the timeout, both `a` and `b` are available, so the two `console.log` statements also execute as normal.
-
-If you change the code to use `a` synchronously, the module evaluation fails:
-
-```js
-// -- a.js (entry module) --
-import { b } from "./b.js";
-
-export const a = 2;
-
-// -- b.js --
-import { a } from "./a.js";
-
-console.log(a); // ReferenceError: Cannot access 'a' before initialization
-export const b = 1;
-```
-
-This is because when JavaScript evaluates `a.js`, it needs to first evaluate `b.js`, the dependency of `a.js`. However, `b.js` uses `a`, which is not yet available.
-
-On the other hand, if you change the code to use `b` synchronously but `a` asynchronously, the module evaluation succeeds:
-
-```js
-// -- a.js (entry module) --
-import { b } from "./b.js";
-
-console.log(b); // 1
-export const a = 2;
-
-// -- b.js --
-import { a } from "./a.js";
-
-setTimeout(() => {
-  console.log(a); // 2
-}, 10);
-export const b = 1;
-```
-
-This is because the evaluation of `b.js` completes normally, so the value of `b` is available when `a.js` is evaluated.
-
-You should usually avoid cyclic imports in your project, because they make your code more error-prone. Some common cycle-elimination techniques are:
-
-- Merge the two modules into one.
-- Move the shared code into a third module.
-- Move some code from one module to the other.
-
-However, cyclic imports can also occur if the libraries depend on each other, which is harder to fix.
-
-## Authoring "isomorphic" modules
-
-The introduction of modules encourages the JavaScript ecosystem to distribute and reuse code in a modular fashion. However, that doesn't necessarily mean a piece of JavaScript code can run in every environment. Suppose you discovered a module that generates SHA hashes of your user's password. Can you use it in the browser front end? Can you use it on your Node.js server? The answer is: it depends.
-
-Modules still have access to global variables, as demonstrated previously. If the module references globals like `window`, it can run in the browser, but will throw an error in your Node.js server, because `window` is not available there. Similarly, if the code requires access to `process` to be functional, it can only be used in Node.js.
-
-In order to maximize the reusability of a module, it is often advised to make the code "isomorphic" — that is, exhibits the same behavior in every runtime. This is commonly achieved in three ways:
-
-- Separate your modules into "core" and "binding". For the "core", focus on pure JavaScript logic like computing the hash, without any DOM, network, filesystem access, and expose utility functions. For the "binding" part, you can read from and write to the global context. For example, the "browser binding" may choose to read the value from an input box, while the "Node binding" may read it from `process.env`, but values read from either place will be piped to the same core function and handled in the same way. The core can be imported in every environment and used in the same way, while only the binding, which is usually lightweight, needs to be platform-specific.
-- Detect whether a particular global exists before using it. For example, if you test that `typeof window === "undefined"`, you know that you are probably in a Node.js environment, and should not read DOM.
-
-  ```js
-  // myModule.js
-  let password;
-  if (typeof process !== "undefined") {
-    // We are running in Node.js; read it from `process.env`
-    password = process.env.PASSWORD;
-  } else if (typeof window !== "undefined") {
-    // We are running in the browser; read it from the input box
-    password = document.getElementById("password").value;
-  }
-  ```
-
-  This is preferable if the two branches actually end up with the same behavior ("isomorphic"). If it's impossible to provide the same functionality, or if doing so involves loading significant amounts of code while a large part remains unused, better use different "bindings" instead.
-
-- Use a polyfill to provide a fallback for missing features. For example, if you want to use the [`fetch`](/en-US/docs/Web/API/Fetch_API) function, which is only supported in Node.js since v18, you can use a similar API, like the one provided by [`node-fetch`](https://www.npmjs.com/package/node-fetch). You can do so conditionally through dynamic imports:
-
-  ```js
-  // myModule.js
-  if (typeof fetch === "undefined") {
-    // We are running in Node.js; use node-fetch
-    globalThis.fetch = (await import("node-fetch")).default;
-  }
-  // …
-  ```
-
-  The [`globalThis`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/globalThis) variable is a global object that is available in every environment and is useful if you want to read or create global variables within modules.
-
-These practices are not unique to modules. Still, with the trend of code reusability and modularization, you are encouraged to make your code cross-platform so that it can be enjoyed by as many people as possible. Runtimes like Node.js are also actively implementing web APIs where possible to improve interoperability with the web.
-
-## Troubleshooting
-
-Here are a few tips that may help you if you are having trouble getting your modules to work. Feel free to add to the list if you discover more!
-
-- We mentioned this before, but to reiterate: `.mjs` files need to be loaded with a MIME-type of `text/javascript` (or another JavaScript-compatible MIME-type, but `text/javascript` is recommended), otherwise you'll get a strict MIME type checking error like "The server responded with a non-JavaScript MIME type".
-- If you try to load the HTML file locally (i.e., with a `file://` URL), you'll run into CORS errors due to JavaScript module security requirements. You need to do your testing through a server. GitHub pages is ideal as it also serves `.mjs` files with the correct MIME type.
-- Because `.mjs` is a non-standard file extension, some operating systems might not recognize it, or try to replace it with something else. For example, we found that macOS was silently adding on `.js` to the end of `.mjs` files and then automatically hiding the file extension. So all of our files were actually coming out as `x.mjs.js`. Once we turned off automatically hiding file extensions, and trained it to accept `.mjs`, it was OK.
+In reality, runtime environments like browsers, Node.js, and Deno often end up implementing the same set of features, so that code is more likely to work across platforms. This guide walks through an example that's run in the browser, but we focus on core concepts that are applicable to all environments. In the [using modules on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web) guide, we'll cover the specifics of module loading in browsers, especially import specifiers. Then, in the [Modules across platforms](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms) guide, we will go further and discuss how the module system is integrated with other environments.
 
 ## See also
 
+- [Using modules on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web)
+- [Understanding the module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph)
+- [Modules across platforms](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms)
 - [JavaScript modules](https://v8.dev/features/modules) on v8.dev (2018)
 - [ES modules: A cartoon deep-dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) on hacks.mozilla.org (2018)
 - [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) on hacks.mozilla.org (2015)

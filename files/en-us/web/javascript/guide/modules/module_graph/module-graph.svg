@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 910 286" role="img" aria-labelledby="title description">
+  <title id="title">Module graph for main.js, formatters.js, config.js, and logger.js</title>
+  <desc id="description">main.js imports greet from formatters.js and config from config.js. formatters.js also imports config from the same config.js module and log from logger.js. Arrows point from importing modules to their dependencies. Function and object bodies are omitted.</desc>
+  <style>
+    text { fill: #6b7280; font-family: Menlo, Consolas, monospace; font-size: 12px; }
+    .specifier { fill: #08827e; font-weight: bold; }
+    .outline { fill: none; stroke: #808080; stroke-width: 1; }
+    .edge { fill: none; stroke: #808080; stroke-width: 1; marker-end: url(#arrow); }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 8 4 L 0 8" fill="none" stroke="#808080"/>
+    </marker>
+  </defs>
+
+  <path class="edge" d="M 340 48 H 390"/>
+  <path class="edge" d="M 265 76 V 186"/>
+  <path class="edge" d="M 544 58 L 300 186"/>
+  <path class="edge" d="M 624 76 V 186"/>
+
+  <path class="outline" d="M 92 30 H 350 V 118 H 20 V 30 H 28"/>
+  <text x="34" y="34">main.js</text>
+  <text x="34" y="52">import { greet } from <tspan class="specifier">"./formatters.js"</tspan>;</text>
+  <text x="34" y="70">import config from <tspan class="specifier">"./config.js"</tspan>;</text>
+  <text x="34" y="106">greet("Josh", config.locale);</text>
+
+  <path class="outline" d="M 504 30 H 890 V 146 H 390 V 30 H 398"/>
+  <text x="404" y="34">formatters.js</text>
+  <text x="404" y="52">import config from <tspan class="specifier">"./config.js"</tspan>;</text>
+  <text x="404" y="70">import { log } from <tspan class="specifier">"./logger.js"</tspan>;</text>
+  <text x="404" y="98">export function greet(name, localeName = config.defaultLocale) {</text>
+  <text x="404" y="116" xml:space="preserve">  // ...</text>
+  <text x="404" y="134">}</text>
+
+  <path class="outline" d="M 106 186 H 300 V 256 H 20 V 186 H 28"/>
+  <text x="34" y="190">config.js</text>
+  <text x="34" y="208">export default {</text>
+  <text x="34" y="226" xml:space="preserve">  // ...</text>
+  <text x="34" y="244">};</text>
+
+  <path class="outline" d="M 646 186 H 830 V 266 H 560 V 186 H 568"/>
+  <text x="574" y="190">logger.js</text>
+  <text x="574" y="208">export function log(message) {</text>
+  <text x="574" y="226" xml:space="preserve">  // ...</text>
+  <text x="574" y="244">}</text>
+</svg>

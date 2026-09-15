@@ -101,8 +101,10 @@ export default function () { /* … */ }
 export default class { /* … */ }
 ```
 
+`export { myFunction as default }` exports a live binding, whereas `export default myFunction` evaluates `myFunction` and exports its value at that point. Later reassignment of `myFunction` only updates the default export in the first form.
+
 > [!NOTE]
-> Names for export declarations must be distinct from each other. Having exports with duplicate names or using more than one `default` export will result in a {{jsxref("SyntaxError")}} and prevent the module from being evaluated.
+> Names for export declarations must be distinct from each other. Having exports with duplicate names or using more than one `default` export will result in a {{jsxref("SyntaxError")}} and prevent the module from being [evaluated](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#evaluating_modules).
 
 The `export default` syntax allows any expression.
 
@@ -131,14 +133,14 @@ export default function () {
 Named exports are useful when you need to export several values. When importing this module, named exports must be referred to by the exact same name (optionally renaming it with `as`), but the default export can be imported with any name. For example:
 
 ```js
-// file test.js
+// -- test.js --
 const k = 12;
 export default k;
 ```
 
 ```js
 // some other file
-import m from "./test"; // note that we have the freedom to use import m instead of import k, because k was default export
+import m from "./test.js"; // note that we have the freedom to use import m instead of import k, because k was default export
 
 console.log(m); // 12
 ```
@@ -181,7 +183,7 @@ export { x as v } from "mod";
 export * as ns from "mod";
 ```
 
-There is also `export * from "mod"`, although there's no `import * from "mod"`. This re-exports all **named** exports from `mod` as the named exports of the current module, but the default export of `mod` is not re-exported. If there are two wildcard exports statements that implicitly re-export the same name, neither one is re-exported.
+There is also `export * from "mod"`, although there's no `import * from "mod"`. This re-exports all **named** exports from `mod` as the named exports of the current module, but the default export of `mod` is not re-exported. If two wildcard export statements implicitly re-export the same name from different bindings, the name is ambiguous and is omitted from the module namespace. If both resolve to the same binding, there is no ambiguity. An explicit export of that name takes precedence over wildcard exports.
 
 ```js
 // -- mod1.js --
@@ -200,7 +202,7 @@ import * as ns from "./barrel.js";
 console.log(ns.a); // undefined
 ```
 
-Attempting to import the duplicate name directly will throw an error.
+Attempting to import the ambiguous name directly will throw a syntax error during [linking](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#linking_modules), before evaluation starts.
 
 ```js
 import { a } from "./barrel.js";
@@ -235,7 +237,7 @@ export { default } from "./data.json" with { type: "json" };
 ```
 
 > [!NOTE]
-> The [`import defer * as ns`](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer) declaration has no re-exporting counterpart, despite `import * as ns` having one. Deferred re-exports are being developed in a [separate proposal](https://github.com/tc39/proposal-deferred-reexports), because they can also avoid loading unused modules, which requires additional tree-shaking semantics. You can instead [import and export in two separate statements](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer#exporting_a_deferred_namespace), although this immediately loads the module.
+> The [`import defer * as ns`](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer) declaration has no re-exporting counterpart, despite `import * as ns` having one. Deferred re-exports are being developed in a [separate proposal](https://github.com/tc39/proposal-deferred-reexports), because they can also avoid [loading](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#loading_the_graph) unused modules, which requires additional tree-shaking semantics. You can instead [import and export in two separate statements](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer#exporting_a_deferred_namespace), although this immediately loads the module.
 
 ## Examples
 
@@ -339,15 +341,15 @@ export { MyClass };
 // In parentModule.js
 // Only aggregating the exports from childModule1 and childModule2
 // to re-export them
-export { myFunction, myVariable } from "childModule1.js";
-export { MyClass } from "childModule2.js";
+export { myFunction, myVariable } from "./childModule1.js";
+export { MyClass } from "./childModule2.js";
 ```
 
 ```js
 // In top-level module
 // We can consume the exports from a single module since parentModule
 // "collected"/"bundled" them in a single source
-import { myFunction, myVariable, MyClass } from "parentModule.js";
+import { myFunction, myVariable, MyClass } from "./parentModule.js";
 ```
 
 ## Specifications
