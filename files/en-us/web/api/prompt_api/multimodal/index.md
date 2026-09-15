@@ -49,6 +49,7 @@ The Prompt API accepts several different formats for audio and image data:
 - Audio:
   - {{domxref("AudioBuffer")}}
   - {{jsxref("TypedArray")}}
+  - {{jsxref("DataView")}}
   - {{jsxref("ArrayBuffer")}}
   - {{domxref("Blob")}}
 - Image:
