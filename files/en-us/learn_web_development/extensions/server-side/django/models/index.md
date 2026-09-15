@@ -129,15 +129,14 @@ The following common arguments can be used when declaring many/most of the diffe
 - [primary_key](https://docs.djangoproject.com/en/5.0/ref/models/fields/#primary-key):
   If `True`, sets the current field as the primary key for the model (A primary key is a special database column designated to uniquely identify all the different table records).
   If no field is specified as the primary key, Django will automatically add a field for this purpose.
-  The type of auto-created primary key fields can be specified for each app in [`AppConfig.default_auto_field`](https://docs.djangoproject.com/en/5.0/ref/applications/#django.apps.AppConfig.default_auto_field) or globally in the [`DEFAULT_AUTO_FIELD`](https://docs.djangoproject.com/en/5.0/ref/settings/#std:setting-DEFAULT_AUTO_FIELD) setting.
+  The type of auto-created primary key fields can be specified for each app in [`AppConfig.default_auto_field`](https://docs.djangoproject.com/en/6.1/ref/applications/#django.apps.AppConfig.default_auto_field) or globally in the [`DEFAULT_AUTO_FIELD`](https://docs.djangoproject.com/en/6.1/ref/settings/#std:setting-DEFAULT_AUTO_FIELD) setting.
 
   > [!NOTE]
-  > Apps created using **manage.py** set the type of the primary key to a [BigAutoField](https://docs.djangoproject.com/en/5.0/ref/models/fields/#bigautofield).
-  > You can see this in the local library **catalog/apps.py** file:
+  > The type of the primary key defaults to [BigAutoField](https://docs.djangoproject.com/en/6.1/ref/models/fields/#bigautofield) — this has been the default value of the `DEFAULT_AUTO_FIELD` setting since Django 6.0, so you won't see it set explicitly in the local library's **catalog/apps.py** file:
   >
   > ```python
   > class CatalogConfig(AppConfig):
-  >   default_auto_field = 'django.db.models.BigAutoField'
+  >     name = 'catalog'
   > ```
 
 There are many other options — you can view the [full list of field options here](https://docs.djangoproject.com/en/5.0/ref/models/fields/#field-options).
@@ -408,18 +407,17 @@ class BookInstance(models.Model):
     imprint = models.CharField(max_length=200)
     due_back = models.DateField(null=True, blank=True)
 
-    LOAN_STATUS = (
-        ('m', 'Maintenance'),
-        ('o', 'On loan'),
-        ('a', 'Available'),
-        ('r', 'Reserved'),
-    )
+    class LoanStatus(models.TextChoices):
+        MAINTENANCE = 'm', 'Maintenance'
+        ON_LOAN = 'o', 'On loan'
+        AVAILABLE = 'a', 'Available'
+        RESERVED = 'r', 'Reserved'
 
     status = models.CharField(
         max_length=1,
-        choices=LOAN_STATUS,
+        choices=LoanStatus,
         blank=True,
-        default='m',
+        default=LoanStatus.MAINTENANCE,
         help_text='Book availability',
     )
 
@@ -436,7 +434,10 @@ We additionally declare a few new types of field:
 - `UUIDField` is used for the `id` field to set it as the `primary_key` for this model.
   This type of field allocates a globally unique value for each instance (one for every book you can find in the library).
 - `DateField` is used for the `due_back` date (at which the book is expected to become available after being borrowed or in maintenance). This value can be `blank` or `null` (needed for when the book is available). The model metadata (`Class Meta`) uses this field to order records when they are returned in a query.
-- `status` is a `CharField` that defines a choice/selection list. As you can see, we define a tuple containing tuples of key-value pairs and pass it to the choices argument. The value in a key/value pair is a display value that a user can select, while the keys are the values that are actually saved if the option is selected. We've also set a default value of 'm' (maintenance) as books will initially be created unavailable before they are stocked on the shelves.
+- `status` is a `CharField` that defines a choice/selection list.
+  We define the choices using a [`TextChoices`](https://docs.djangoproject.com/en/6.1/ref/models/fields/#enumeration-types) class (`LoanStatus`), where each named member (e.g., `MAINTENANCE`) pairs the value that is actually saved (`'m'`) with the human-readable label a user sees (`'Maintenance'`).
+  This lets the rest of our code refer to `BookInstance.LoanStatus.MAINTENANCE` by name instead of the raw string `'m'`, which is both easier to read and harder to get wrong.
+  We've also set the default status to `LoanStatus.MAINTENANCE`, as books will initially be created as unavailable before they are stocked on the shelves.
 
 The method `__str__()` represents the `BookInstance` object using a combination of its unique id and the associated `Book`'s title.
 
