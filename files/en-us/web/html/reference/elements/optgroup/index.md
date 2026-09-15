@@ -36,9 +36,6 @@ label {
 }
 ```
 
-> [!NOTE]
-> Optgroup elements may not be nested.
-
 ## Attributes
 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
@@ -47,6 +44,11 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
   - : If this Boolean attribute is set, none of the items in this option group is selectable. Often browsers gray out such control and it won't receive any browsing events, like mouse clicks or focus-related ones.
 - `label`
   - : The name of the group of options, which the browser can use when labeling the options in the user interface. This attribute is mandatory if this element is used.
+
+## Usage notes
+
+> [!NOTE]
+> Optgroup elements may not be nested.
 
 ## Examples
 
