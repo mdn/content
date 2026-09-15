@@ -20,7 +20,7 @@ new WebAssembly.Table(tableDescriptor, value)
 - `tableDescriptor`
   - : An object that can contain the following members:
     - `element`
-      - : A string representing the type of value to be stored in the table. This can have a value of `"anyfunc"` (functions) or `"externref"` (host references).
+      - : A string representing the type of value to be stored in the table. This can have a value of `"funcref"` (functions) or `"externref"` (host references).
     - `initial`
       - : The initial number of elements of the WebAssembly Table.
     - `maximum` {{optional_inline}}
@@ -55,7 +55,7 @@ In `table2.html`, we create a `WebAssembly.Table`:
 ```js
 const tbl = new WebAssembly.Table({
   initial: 2,
-  element: "anyfunc",
+  element: "funcref",
 });
 ```
 
