@@ -35,11 +35,6 @@ input::placeholder {
   placeholder="It must be 9 digits" />
 ```
 
-Only the subset of CSS properties that apply to the {{cssxref("::first-line")}} pseudo-element can be used in a rule using `::placeholder` in its selector.
-
-> [!NOTE]
-> In most browsers, the appearance of placeholder text is a translucent or light gray color by default.
-
 ## Syntax
 
 ```css
@@ -47,6 +42,13 @@ Only the subset of CSS properties that apply to the {{cssxref("::first-line")}} 
   /* ... */
 }
 ```
+
+## Description
+
+Only the subset of CSS properties that apply to the {{cssxref("::first-line")}} pseudo-element can be used in a rule using `::placeholder` in its selector.
+
+> [!NOTE]
+> In most browsers, the appearance of placeholder text is a translucent or light gray color by default.
 
 ## Accessibility
 

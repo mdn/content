@@ -98,9 +98,6 @@ transform: translate3d(5ch, 0.4in, 5em);
 }
 ```
 
-This transformation is characterized by a three-dimensional vector [tx, ty, tz]. Its coordinates define how much the element moves
-in each direction.
-
 ## Syntax
 
 ```css
@@ -146,6 +143,11 @@ translate3d(tx, ty, tz)
     </tr>
   </tbody>
 </table>
+
+## Description
+
+This transformation is characterized by a three-dimensional vector [tx, ty, tz]. Its coordinates define how much the element moves
+in each direction.
 
 ## Formal syntax
 

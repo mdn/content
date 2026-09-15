@@ -54,11 +54,6 @@ padding-right: 0;
 }
 ```
 
-An element's padding area is the space between its content and its border.
-
-> [!NOTE]
-> The {{cssxref("padding")}} property can be used to set paddings on all four sides of an element with a single declaration.
-
 ## Syntax
 
 ```css
@@ -86,6 +81,13 @@ The `padding-right` property is specified as a single value chosen from the list
   - : The size of the padding as a fixed value. Must be non-negative.
 - {{cssxref("&lt;percentage&gt;")}}
   - : The size of the padding as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block). Must be non-negative.
+
+## Description
+
+An element's padding area is the space between its content and its border.
+
+> [!NOTE]
+> The {{cssxref("padding")}} property can be used to set paddings on all four sides of an element with a single declaration.
 
 ## Formal definition
 

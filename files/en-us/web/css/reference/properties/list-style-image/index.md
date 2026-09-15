@@ -9,8 +9,6 @@ sidebar: cssref
 
 The **`list-style-image`** [CSS](/en-US/docs/Web/CSS) property sets an image to be used as the list item marker.
 
-It is often more convenient to use the shorthand {{ cssxref("list-style") }}.
-
 {{InteractiveExample("CSS Demo: list-style-image")}}
 
 ```css interactive-example-choice
@@ -72,9 +70,6 @@ hr {
 }
 ```
 
-> [!NOTE]
-> This property is applied to list items, i.e., elements with `{{cssxref("display")}}: list-item;` [by default](https://html.spec.whatwg.org/multipage/rendering.html#lists) this includes {{HTMLElement("li")}} elements. Because this property is inherited, it can be set on the parent element (normally {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to let it apply to all list items.
-
 ## Syntax
 
 ```css
@@ -103,6 +98,13 @@ This property is specified as a single value from the following list:
   - : A valid image to use as the marker.
 - `none`
   - : Specifies that no image is used as the marker. If this value is set, the marker defined in {{ Cssxref("list-style-type") }} will be used instead. This is the default value for {{cssxref("list-style")}}.
+
+## Description
+
+It is often more convenient to use the shorthand {{ cssxref("list-style") }}.
+
+> [!NOTE]
+> This property is applied to list items, i.e., elements with `{{cssxref("display")}}: list-item;` [by default](https://html.spec.whatwg.org/multipage/rendering.html#lists) this includes {{HTMLElement("li")}} elements. Because this property is inherited, it can be set on the parent element (normally {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to let it apply to all list items.
 
 ## Formal definition
 

@@ -61,10 +61,6 @@ margin-bottom: 0;
 }
 ```
 
-![The effect of the CSS margin-bottom property on the element box](margin-bottom.svg)
-
-This property has no effect on _non-[replaced](/en-US/docs/Glossary/Replaced_elements)_ inline elements, such as {{HTMLElement("span")}} or {{HTMLElement("code")}}.
-
 ## Syntax
 
 ```css
@@ -98,6 +94,12 @@ The `margin-bottom` property is specified as the keyword `auto`, or a `<length>`
   - : The size of the margin as a percentage, relative to the inline size (_width_ in a horizontal language, defined by {{cssxref("writing-mode")}}) of the [containing block](/en-US/docs/Web/CSS/Guides/Display/Containing_block).
 - `auto`
   - : The browser selects a suitable value to use. See {{cssxref("margin")}}.
+
+## Description
+
+![The effect of the CSS margin-bottom property on the element box](margin-bottom.svg)
+
+This property has no effect on _non-[replaced](/en-US/docs/Glossary/Replaced_elements)_ inline elements, such as {{HTMLElement("span")}} or {{HTMLElement("code")}}.
 
 ## Formal definition
 

@@ -54,11 +54,6 @@ transform: translateX(3ch);
 }
 ```
 
-> [!NOTE]
-> `translateX(tx)` is equivalent to
-> `translate(tx, 0)` or
-> `translate3d(tx, 0, 0)`.
-
 ## Syntax
 
 ```css
@@ -111,6 +106,13 @@ transform: translateX(50%);
     </tr>
   </tbody>
 </table>
+
+## Description
+
+> [!NOTE]
+> `translateX(tx)` is equivalent to
+> `translate(tx, 0)` or
+> `translate3d(tx, 0, 0)`.
 
 ## Formal syntax
 
