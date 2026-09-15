@@ -313,7 +313,7 @@ Select `between` as the `rule-visibility-items` value. This value only paints ru
 
 ### Understanding percentage values
 
-What a percentage value is relative to depends on the endpoint's location. Interior endpoint percentage values are relative to the width of the gap the cap endpoint touches, so generally relative to the {{cssxref("row-gap")}}, plus any additional spacing added due to {{cssxref("justify-content")}} or {{cssxref("align-content")}}. Percentages at container-edge endpoints are relative to `0`. For example, `column-rule-inset-cap: 50%` resolves to half the gap junction size at an interior cap and `0` at the container edges.
+What a percentage value is relative to depends on the endpoint's location. Interior endpoint percentage values are relative to the width of the gap the cap endpoint touches, so generally relative to the {{cssxref("row-gap")}}, plus any additional spacing added due to {{cssxref("align-content")}} values. Percentages at container-edge endpoints are relative to `0`. For example, `column-rule-inset-cap: 50%` resolves to half the gap junction size at an interior cap and `0` at the container edges.
 
 This example is not broken. When `rule-visibility-items` is set to `normal`, every column cap endpoint abuts the top or bottom edge of the container, so any percentage value set will be relative to `0`.
 
