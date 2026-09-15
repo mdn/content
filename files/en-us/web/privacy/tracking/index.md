@@ -11,11 +11,6 @@ sidebar: privacy
 
 The concept of tracking involves making a distinction between _first-party_ and _third-party_ resources. When a user visits a website, the browser's address bar displays the name of the {{glossary("site")}}, and the site's content itself confirms to the user who they are interacting with. Any resources served by this site, including documents, scripts, stylesheets, images, and so on, are first-party resources. Any other resources are third-party resources: they come from a different site, that the user might not have the intention of interacting with, and of whose existence the user might well be unaware.
 
-> [!NOTE]
-> When browsers define and implement policies around tracking, they need a {{glossary("site", "precise technical definition of a \"site\"")}}, and we will use that definition in this guide.
->
-> Usually, this technical definition maps onto the user's conception of a site, but it doesn't always. For example, `example.co.uk` and `example.ca` are different sites, but a user might think of them as the same site, expecting that when they share information with one, they share it with both. Since a user's expectations are a basic concept in privacy, browsers sometimes have to make allowances for cases like this.
-
 Common examples of third party resources are:
 
 - Subresources such as scripts or images that are loaded into the first party's document, for example using {{htmlelement("script")}} or {{htmlelement("img")}} tags, but that are served from a different site. In this case, the third-party resource is loaded into the first party's context.
@@ -32,15 +27,17 @@ This makes tracking especially problematic for privacy, because it violates the 
 
 In this section we'll look at the main methods that websites use to track users.
 
-We've split the methods into two categories:
+### Storing user identifiers
 
-- Methods that use web platform storage APIs to store the client-side state that the tracker uses to identify users.
+In this technique, the tracker stores an identifier for the user in the browser, and sends the identifier to the tracker's server whenever the user visits a page that embeds the tracker. This enables the tracker to maintain a list of pages that the user visits. This method is sometimes called _stateful_ tracking.
 
-- All other methods, including other more covert storage techniques and fingerprinting. These methods are collectively referred to as _covert tracking_, and are generally seen as more harmful to privacy, because they are harder for users and browsers to control.
+We can distinguish two sorts of stateful tracking:
 
-### Stateful tracking using storage APIs
+- Those that use client-side storage APIs, such as [local storage](/en-US/docs/Web/API/Web_Storage_API), [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), or [cookies](/en-US/docs/Web/HTTP/Guides/Cookies).
 
-In this technique, the tracker stores an identifier for the user in the browser, and sends the identifier to the tracker's server whenever the user visits a page that embeds the tracker. This enables the tracker to maintain a list of pages that the user visits.
+- Those that use other features of the web platform that are not generally intended for general-purpose storage, such as the browser's HTTP cache. In this guide, we will call this _covert stateful tracking_.
+
+#### Tracking using client-side storage APIs
 
 Trackers can use various different client-side storage APIs to store identifiers, such as [local storage](/en-US/docs/Web/API/Web_Storage_API) or [IndexedDB](/en-US/docs/Web/API/IndexedDB_API). Most often, though, trackers use [cookies](/en-US/docs/Web/HTTP/Guides/Cookies).
 
@@ -56,9 +53,47 @@ To use cookies, a tracker implements something like the following process:
 
 In this situation, the cookies that are exchanged are associated with a different site from the main page. The main page, whose URL is shown in the address bar, is the site that the user intends to visit, but the cookies are associated with the tracker's site. Cookies with this property are called _third-party cookies_, and much of the effort browsers put into preventing tracking involves blocking or restricting the use of third-party cookies.
 
-### Covert tracking
+#### Covert stateful tracking
 
-_Covert tracking_, sometimes called _unsanctioned tracking_, is tracking that uses any technique other than storage APIs.
+This is a variant of stateful tracking in which trackers don't use client-side storage APIs to store identifiers, but instead store identifiers in parts of the web platform that are not intended for general storage.
+
+For example: in {{glossary("HSTS", "HTTP Strict Transport Security (HSTS)")}}, a website informs the browser that it should always use [HTTPS](/en-US/docs/Web/Security/Defenses/Transport_Layer_Security) for connections, even if the scheme in the URL is HTTP. This gives a single domain the ability to store one bit of information: by registering a number of domains and forcing the browser to load resources from them, the tracker can encode a complete identifier. See [Protecting Against HSTS Abuse](https://webkit.org/blog/8146/protecting-against-hsts-abuse/) for more details of this technique.
+
+These stored identifiers are sometimes called "supercookies", because they will not be cleared when the browser clears cookies: that is the attraction of them for trackers.
+
+### Fingerprinting
+
+Fingerprinting is like stateful tracking, except that the identifier — the fingerprint — is not stored by the tracker, but is derived by collecting and combining distinguishing features of the user's environment. Elements of a fingerprint might include, for example:
+
+- The browser version
+- The user's timezone and preferred language
+- The set of video or audio codecs that are available on the system
+- The fonts installed on the system
+- The computer's display size and resolution
+
+The tracker can retrieve these elements by executing JavaScript and CSS on the device. It can then combine the elements to create a fingerprint, which is often enough to uniquely identify a single browser.
+
+### Navigational tracking
+
+Navigational tracking is the practice of using a navigation to transmit an identifier for a user from the linking site to the destination, typically by "decorating" the link with the identifier:
+
+```html
+<a href="https://cat-videos.example/resource?userId=123456">More cats!</a>
+```
+
+Navigational tracking is a little different from the other methods we've looked at, because the data is not shared with an invisible third party: it's passed from one first party site to another.
+
+### Bounce tracking
+
+Bounce tracking, also known as redirect tracking, is a variant of navigational tracking in which the link goes to the tracker, instead of the expected destination. The tracker can then set and receive its cookies, before immediately redirecting the browser to the destination that the user expected. This may happen so quickly that the user doesn't even notice.
+
+![Diagram showing redirect tracking.](redirect-tracking.svg)
+
+For trackers, the advantage of bounce tracking is that it works even if the browser has blocked or restricted third-party cookies. Because the browser has navigated to the tracker, the tracker is (temporarily) considered to be a first party, so is allowed to set and receive cookies even if third-party cookies are blocked.
+
+## Covert tracking
+
+Privacy researchers consider _covert tracking_ to consist of all forms of tracking except [those that use web platform storage APIs](#tracking_using_client-side_storage_apis).
 
 Any form of web tracking is usually harmful to privacy. However it is easier for users, browsers, and browser extensions to have some control over tracking that uses storage APIs, than tracking that uses more covert methods.
 
@@ -73,46 +108,6 @@ Even if users don't take advantage of these tools, privacy researchers and advoc
 Covert tracking is more harmful because by its nature it is hidden from user visibility and control.
 
 See the W3C's [Unsanctioned Web Tracking](https://www.w3.org/2001/tag/doc/unsanctioned-tracking/) for more details.
-
-In the rest of this section we will describe some covert tracking techniques.
-
-#### Covert stateful tracking
-
-This is a variant of stateful tracking in which trackers don't use client-side storage APIs to store identifiers, but instead store identifiers in parts of the web platform that are not intended for general storage.
-
-For example, in {{glossary("HSTS", "HTTP Strict Transport Security (HSTS)")}}, a website informs the browser that it should always use [HTTPS](/en-US/docs/Web/Security/Defenses/Transport_Layer_Security) for connections, even if the scheme in the URL is HTTP. This gives a single domain the ability to store one bit of information: by registering a number of domains and forcing the browser to load resources from them, the tracker can encode a complete identifier. See [Protecting Against HSTS Abuse](https://webkit.org/blog/8146/protecting-against-hsts-abuse/) for more details of this technique.
-
-These stored identifiers are sometimes called "supercookies", because they will not be cleared when the browser clears cookies: that is the attraction of them for trackers.
-
-#### Fingerprinting
-
-Fingerprinting is like stateful tracking, except that the identifier — the fingerprint — is not stored by the tracker, but is derived by collecting and combining distinguishing features of the user's environment. Elements of a fingerprint might include, for example:
-
-- The browser version
-- The user's timezone and preferred language
-- The set of video or audio codecs that are available on the system
-- The fonts installed on the system
-- The computer's display size and resolution
-
-The tracker can retrieve these elements by executing JavaScript and CSS on the device. It can then combine the elements to create a fingerprint, which is often enough to uniquely identify a single browser.
-
-#### Navigational tracking
-
-Navigational tracking is the practice of using a navigation to transmit an identifier for a user from the linking site to the destination, typically by "decorating" the link with the identifier:
-
-```html
-<a href="https://cat-videos.example/resource?userId=123456">More cats!</a>
-```
-
-Navigational tracking is a little different from the other methods we've looked at, because the data is not shared with an invisible third party: it's passed from one first party site to another.
-
-#### Bounce tracking
-
-Bounce tracking, also known as redirect tracking, is a variant of navigational tracking in which the link goes to the tracker, instead of the expected destination. The tracker can then set and receive its cookies, before immediately redirecting the browser to the destination that the user expected. This may happen so quickly that the user doesn't even notice.
-
-![Diagram showing redirect tracking.](redirect-tracking.svg)
-
-For trackers, the advantage of bounce tracking is that it works even if the browser has blocked or restricted third-party cookies. Because the browser has navigated to the tracker, the tracker is (temporarily) considered to be a first party, so is allowed to set and receive cookies even if third-party cookies are blocked.
 
 ## Anti-tracking
 
@@ -135,11 +130,11 @@ There are legitimate uses for the techniques that are used in tracking, and it c
 
 For example, when we talk about cross-site tracking, we use a {{glossary("site", "specific definition of \"site\"")}}. But there are situations in which users might consider two servers to represent the same entity, when they are technically different sites. This could be the case when a single organization has different sites in different countries, such as `example.co.uk` and `example.ca`. In a situation like this the user might expect that their login status or preferences would persist across both sites, and to do that, the sites have to implement cross-site tracking.
 
-Another situation in which sites have to exchange state is [federated login](/en-US/docs/Web/Security/Authentication/Federated_identity), in which the website that the user is trying to sign into needs to coordinate with the identity provider, and [implementations of this often rely on third-party cookies](/en-US/docs/Web/Security/Authentication/Federated_identity#third-party_cookies).
+Another situation in which sites have to exchange state is [federated login](/en-US/docs/Web/Security/Authentication/Federated_identity), in which the website that the user is trying to sign into needs to coordinate with the {{glossary("identity provider")}}, and [implementations of this often rely on third-party cookies](/en-US/docs/Web/Security/Authentication/Federated_identity#third-party_cookies).
 
 #### Anti-tracking and site reliability
 
-Even if a site is tracking users, using the techniques described above, the proper functioning of the site may depend on the tracker being allowed to work. For example, the site's main may assume that the tracker is present, and break if it isn't. If the tracker is just blocked, then the site won't work properly.
+Even if a site is tracking users, using the techniques described above, the proper functioning of the site may depend on the tracker being allowed to work. For example, the site's main may assume that the tracker is present, and break if it isn't. If the tracker is completely blocked, then the site won't work properly.
 
 In cases like this, browsers sometimes have to decide sometimes whether the harm caused by allowing the tracker is greater than the benefit that the website provides. This is part of the reason that browsers provide user-configurable levels of anti-tracking, so users can choose a trade-off based on their own values.
 
@@ -182,15 +177,31 @@ Partitioned storage makes access to a particular storage area dependent not only
 
 This is also referred to as _double-keying_: the storage for the embedded content is keyed (accessed) on the combination of the embedded content's origin and that of the top-level document.
 
-Partitioned storage can include not only general-purpose client-side storage APIs such as {{domxref("Window.localStorage", "local storage")}} or [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), but any other method that a tracker could use to persist state, including those that we classified as [covert stateful tracking](#covert_stateful_tracking), such as HSTS status. This would mean that, for example, a tracker embedded one page would not see the same set of HSTS statuses as the same tracker embedded in another page.
+Partitioned storage applies not only to [web platform storage APIs](#tracking_using_client-side_storage_apis) such as {{domxref("Window.localStorage", "local storage")}} or [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), but any other method that a tracker could use to persist state, including those that we classified as [covert stateful tracking](#covert_stateful_tracking), such as HSTS status or the HTTP cache. This would mean that, for example, a tracker embedded one page would not see the same set of HSTS statuses, or cached HTTP resources, as the same tracker embedded in another page.
 
-See [Client-Side Storage Partitioning](https://privacycg.github.io/storage-partitioning/) for more details.
+See [Client-Side Storage Partitioning](https://privacycg.github.io/storage-partitioning/) for more details, including a list of all the known browser state that should be affected by storage partitioning.
 
 #### Bounce tracking defenses
 
-We've seen that [Bounce tracking](#bounce_tracking), or redirect tracking, enables a tracker to act as a first party when writing to or reading from storage. In this was the tracker can evade restrictions on embedded content.
+We've seen that [Bounce tracking](#bounce_tracking), or redirect tracking, enables a tracker to act as a first party when writing to or reading from storage. In this way the tracker can evade restrictions on embedded content.
+
+The [Navigational Tracking Mitigations](https://privacycg.github.io/nav-tracking-mitigations/) specification describes one defense against bounce tracking. In this method:
+
+- The browser flags sites through which a navigation was redirected.
+- Periodically, the browser will check whether the user has directly interacted with flagged sites during a given time period, which is configurable, but the specification suggests that 45 days is appropriate. Interaction includes, for example, clicking buttons or providing input.
+- If a user has not interacted with a flagged site in the defined time period, then the browser deletes the site's storage.
+
+This defense is generally only applied when third-party cookies are blocked, or third-party storage is partitioned. The rationale for this is that bounce tracking is specifically a technique for evading restrictions on third-party storage, so if third-party storage is not restricted, there is no motivation for trackers to use it.
 
 #### Anti-fingerprinting
+
+To defend against fingerprinting, browsers try to minimize the amount of distinguishing information that they make available to websites. This is sometimes called the _fingerprinting surface_.
+
+To reduce the fingerprinting surface, browser APIs that can be used for fingerprinting are intentionally implemented so as to return less precise information. For example, the {{domxref("Navigator/hardwareConcurrency", "navigator.hardwareConcurrency")}} property returns the number of logical processors available to the browser. Rather than report the actual number, browsers may always report the same value, or always report one of two possible values.
+
+Coarsening the results in this way makes the APIs less useful, so combating fingerprinting is often a tradeoff between utility and privacy. Partly for this reason, browser often offer different levels of fingerprinting protection, enabling users to make their own tradeoff here. For example, in more privacy-conscious configurations a browser might always return the same value for the current time zone or locale, and modifications like this can have a significant impact on the reliability of websites.
+
+Defending against fingerprinting takes place both within individual browser vendors and in the web standards process. Standards developers are expected to consider the privacy implications of new Web APIs and factor defenses into their design. See [Mitigating Browser Fingerprinting in Web Specifications](https://www.w3.org/TR/fingerprinting-guidance/) to learn much more about this.
 
 ### Relaxing restrictions
 
