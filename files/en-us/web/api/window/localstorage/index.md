@@ -35,6 +35,8 @@ For documents loaded from `file:` URLs (that is, files opened in the browser dir
 
 In all current browsers, `localStorage` seems to return a different object for each `file:` URL. In other words, each `file:` URL seems to have its own unique local-storage area. But there are no guarantees about that behavior, so you shouldn't rely on it because, as mentioned above, the requirements for `file:` URLs remain undefined. So it's possible that browsers may change their `file:` URL handling for `localStorage` at any time. In fact some browsers _have_ changed their handling for it over time.
 
+In modern browsers, `localStorage` is also subject to [state partitioning](/en-US/docs/Web/Privacy/Guides/State_Partitioning). When `localStorage` is accessed from a third-party context (e.g., within an iframe embedded on a different top-level site), the storage is partitioned by both the origin and the top-level site. This means that data stored by `example.com` when loaded as a top-level site is not accessible to `example.com` when embedded as a third-party iframe on `other-site.com`.
+
 ## Examples
 
 The following snippet accesses the current domain's local {{DOMxRef("Storage")}} object and adds a data item to it using {{DOMxRef("Storage.setItem()")}}, or updates the item if one already exists for that key.
