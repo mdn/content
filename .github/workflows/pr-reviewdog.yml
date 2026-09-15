@@ -17,7 +17,7 @@ permissions:
 
 jobs:
   reviewdog:
-    if: github.repository == 'mdn/content'
+    if: github.repository_owner == 'mdn'
     runs-on: ubuntu-latest
     env:
       STATUS_PATH: repos/${{ github.repository }}/statuses/${{ github.event.workflow_run.head_sha }}
