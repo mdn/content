@@ -109,7 +109,7 @@ The above hides the tooltip with CSS in the default state or if the `hide-toolti
 
 ### Using a more information icon
 
-This example shows a tooltip when the ⓘ button is hovered or receives keyboard focus. The button has an accessible name and references the tooltip with `aria-describedby`, so the tip content is announced when the button receives focus. The input also references the tooltip with `aria-describedby`, because the information describes that control, even when the tooltip is hidden.
+This example shows a tooltip when the ⓘ button is hovered over or receives keyboard focus. The button has an {{glossary("accessible name")}} and references the tooltip with [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby), so the tooltip content is announced when the button receives focus. The input also references the tooltip with `aria-describedby`, because the information describes that control, even when the tooltip is hidden.
 
 ```html
 <label for="username">Username:</label>
