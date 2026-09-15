@@ -2,6 +2,12 @@
 title: preserveAspectRatio
 slug: Web/SVG/Reference/Attribute/preserveAspectRatio
 page-type: svg-attribute
+browser-compat:
+  - svg.elements.feImage.preserveAspectRatio
+  - svg.elements.image.preserveAspectRatio
+  - svg.elements.svg.preserveAspectRatio
+  - svg.elements.symbol.preserveAspectRatio
+  - svg.elements.view.preserveAspectRatio
 spec-urls:
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-feimage-preserveaspectratio
   - https://w3c.github.io/svgwg/svg2-draft/coords.html#PreserveAspectRatioAttribute
@@ -688,3 +694,7 @@ For {{SVGElement('view')}}, `preserveAspectRatio` indicates if a uniform scaling
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
