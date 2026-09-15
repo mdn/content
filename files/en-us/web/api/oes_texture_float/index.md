@@ -13,7 +13,7 @@ The **`OES_texture_float`** extension is part of the [WebGL API](/en-US/docs/Web
 WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
 > [!NOTE]
-> This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, the functionality of this extension is available on the WebGL2 context by default.
+> This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, floating-point texture formats and the `gl.FLOAT` texture data type are available in the core API, so this extension is not needed. However, making a floating-point texture color-renderable is a separate feature. In WebGL 2, use the {{domxref("EXT_color_buffer_float")}} extension for floating-point color buffers, or {{domxref("EXT_color_buffer_half_float")}} when 16-bit floating-point render targets are supported but 32-bit floating-point render targets are not.
 
 ## Extended methods
 
@@ -30,7 +30,9 @@ To use linear filtering on floating-point textures, enable the {{domxref("OES_te
 
 ## Floating-point color buffers
 
-This extension implicitly enables the {{domxref("WEBGL_color_buffer_float")}} extension (if supported), which allows rendering to 32-bit floating-point color buffers.
+In WebGL 1, this extension implicitly enables the {{domxref("WEBGL_color_buffer_float")}} extension (if supported), which allows rendering to 32-bit floating-point color buffers.
+
+In WebGL 2, use the {{domxref("EXT_color_buffer_float")}} extension for floating-point color buffers instead.
 
 ## Examples
 
