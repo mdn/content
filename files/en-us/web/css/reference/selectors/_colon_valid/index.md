@@ -44,8 +44,6 @@ input:valid {
 </form>
 ```
 
-This pseudo-class is useful for highlighting correct fields for the user.
-
 ## Syntax
 
 ```css

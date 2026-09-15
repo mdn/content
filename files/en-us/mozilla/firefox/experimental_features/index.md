@@ -162,7 +162,7 @@ You can alternatively use the {{cssxref("animation-timeline/scroll")}} functiona
 
 For more information, see [Firefox bug 1807685](https://bugzil.la/1807685), [Firefox bug 1804573](https://bugzil.la/1804573), [Firefox bug 1809005](https://bugzil.la/1809005), [Firefox bug 1676791](https://bugzil.la/1676791), [Firefox bug 1754897](https://bugzil.la/1754897), [Firefox bug 1817303](https://bugzil.la/1817303), and [Firefox bug 1737918](https://bugzil.la/1737918).
 
-The {{cssxref('timeline-scope')}}, {{cssxref('animation-range-start')}} and {{cssxref('animation-range-end')}} properties (and the {{cssxref('animation-range')}} shorthand property) are not yet supported. For more information, see [Firefox bug 1676779](https://bugzil.la/1676779).
+The {{cssxref('animation-range-start')}} and {{cssxref('animation-range-end')}} properties (and the {{cssxref('animation-range')}} shorthand property) are not yet supported. For more information, see [Firefox bug 1676779](https://bugzil.la/1676779).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -423,7 +423,7 @@ The {{cssxref("line-clamp")}} CSS property now works without the `-webkit-` vend
 
 ### Percentage values for `text-decoration-inset`
 
-The {{cssxref("text-decoration-inset")}} CSS property now supports percentages as values. The percentage value specifies the size of the inset as a percentage of the {{cssxref("font-size")}}. ([Firefox bug 2044602](https://bugzil.la/2044602)).
+The {{cssxref("text-decoration-inset")}} CSS property now supports percentages as values. The percentage value specifies the size of the inset as a percentage of the inline size of the decorating box or of each individual box fragment, depending on the value of {{cssxref("box-decoration-break")}}. ([Firefox bug 2044602](https://bugzil.la/2044602)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
@@ -449,6 +449,39 @@ The {{cssxref("view-timeline")}} shorthand property now supports the {{cssxref("
 - `layout.css.scroll-driven-animations.enabled`
   - : Set to `true` to enable.
 
+### `timeline-scope` names are now global by default
+
+The default behavior of named timeline scoping has been updated to be global. This can be scoped to elements, and their subtree, using the {{cssxref("timeline-scope")}} CSS property and the value of either the {{cssxref("scroll-timeline-name")}} or {{cssxref("view-timeline-name")}} ([Firefox bug 2024012](https://bugzil.la/2024012)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 155           | Yes                 |
+| Developer Edition | 155           | No                  |
+| Beta              | 155           | No                  |
+| Release           | 155           | No                  |
+
+- `layout.css.scroll-driven-animations.enabled`
+  - : Set to `true` to enable.
+
+### `named-feature()` support queries
+
+The `named-feature()` function in the {{cssxref("@supports")}} at-rule lets you test whether the browser supports a feature that has no other detectable syntax, for example `@supports named-feature(anchor-position-follows-transforms)`.
+([Firefox bug 2042977](https://bugzil.la/2042977) and [Firefox bug 2055354](https://bugzil.la/2055354)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 156           | No                  |
+| Developer Edition | 156           | No                  |
+| Beta              | 156           | No                  |
+| Release           | 156           | No                  |
+
+- `layout.css.supports.at-rule.enabled`
+  - : Set to `true` to enable.
+
+### `at-rule()` support queries
+
+The [`at-rule()`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#at-rule) function in the {{cssxref("@supports")}} at-rule lets you test whether the browser supports a given CSS at-rule, for example `@supports at-rule(@scope)`. It also works in the `supports()` function of {{cssxref("@import")}}. ([Firefox bug 2060754](https://bugzil.la/2060754)).
+
 ## SVG
 
 **No experimental features in this release cycle.**
@@ -467,6 +500,36 @@ When enabled, the [`href`](/en-US/docs/Web/MathML/Reference/Global_attributes/hr
 | Release           | 151           | No                  |
 
 - `mathml.href_link_on_non_anchor_element.disabled`
+  - : Set to `true` to enable.
+
+### Implement the `MathMLAnchorElement` interface
+
+When enabled, the MathML [`<a>`](/en-US/docs/Web/MathML/Reference/Element/a) element is correctly represented in the DOM by the [`MathMLAnchorElement`](/en-US/docs/Web/API/MathMLAnchorElement) interface rather than the generic [`MathMLElement`](/en-US/docs/Web/API/MathMLElement) interface. ([Firefox bug 2059312](https://bugzil.la/2059312)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 155           | Yes                 |
+| Developer Edition | 155           | No                  |
+| Beta              | 155           | No                  |
+| Release           | 155           | No                  |
+
+- `mathml.a.element.enabled`
+  - : Set to `true` to enable.
+
+### MathML `<a>` elements
+
+The MathML `<a>` element creates a hyperlink from MathML content, exposing the `MathMLAnchorElement` interface with the same URL component properties as HTML {{HTMLElement("a")}} elements.
+
+This release adds support for the `rel` and `relList` IDL attributes. ([Firefox bug 2063819](https://bugzil.la/2063819)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 156           | Yes                 |
+| Developer Edition | 156           | No                  |
+| Beta              | 156           | No                  |
+| Release           | 156           | No                  |
+
+- `mathml.a.element.enabled`
   - : Set to `true` to enable.
 
 ## JavaScript
@@ -547,11 +610,15 @@ This can be used to avoid collisions where multiple web components declare eleme
 The implementation includes:
 
 - `customElementRegistry` property on {{domxref("Document")}}, {{domxref("Element")}}, and {{domxref("ShadowRoot")}}.
-  ([Firefox bug 2018900](https://bugzil.la/2018900)).
+  The [`CustomElementRegistry()` constructor](/en-US/docs/Web/API/CustomElementRegistry/CustomElementRegistry) creates a new `CustomElementRegistry` object for scoped usage. ([Firefox bug 2018900](https://bugzil.la/2018900))
+
+From version 156:
+
+- [Scoped custom element registries](/en-US/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries) are now supported, so that a shadow root can define custom elements that do not clash with those defined in the global registry. ([Firefox bug 2064333](https://bugzil.la/2064333)).
 
 | Release channel   | Version added | Enabled by default? |
 | ----------------- | ------------- | ------------------- |
-| Nightly           | 150           | No                  |
+| Nightly           | 156           | Yes                 |
 | Developer Edition | 150           | No                  |
 | Beta              | 150           | No                  |
 | Release           | 150           | No                  |
@@ -770,6 +837,21 @@ Notifications have the [`requireInteraction`](/en-US/docs/Web/API/Notification/r
 | Release           | 117             | Windows only        |
 
 - `dom.webnotifications.requireinteraction.enabled`
+  - : Set to `true` to enable.
+
+### Container Timing API
+
+The Container Timing API reports when the contents of a container element are painted, letting you measure the render time of a region of the page rather than of the whole viewport.
+([Firefox bug 1940240](https://bugzil.la/1940240)).
+
+| Release channel   | Version changed | Enabled by default? |
+| ----------------- | --------------- | ------------------- |
+| Nightly           | 156             | No                  |
+| Developer Edition | 156             | No                  |
+| Beta              | 156             | No                  |
+| Release           | 156             | No                  |
+
+- `dom.enable_container_timing`
   - : Set to `true` to enable.
 
 ## Security and privacy

@@ -1,5 +1,5 @@
 ---
-title: Temporal.ZonedDateTime()
+title: Temporal.ZonedDateTime() constructor
 slug: Web/JavaScript/Reference/Global_Objects/Temporal/ZonedDateTime/ZonedDateTime
 page-type: javascript-constructor
 status:
