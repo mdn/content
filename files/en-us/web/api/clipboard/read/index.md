@@ -10,7 +10,7 @@ browser-compat: api.Clipboard.read
 
 The **`read()`** method of the {{domxref("Clipboard")}} interface returns a {{jsxref("Promise")}} that fulfills with a copy of the clipboard's contents.
 
-Each item from the clipboard can provide different representations of the copied object, allowing apps to handle the types they understand, and gracefully fallback for types they don't.
+Each item from the clipboard can provide different representations of the copied object, allowing apps to handle the types they understand, and gracefully fall back for types they don't.
 This is more flexible than {{domxref("Clipboard.readText", "readText()")}}, which can only return text.
 
 ## Syntax
@@ -58,7 +58,7 @@ Additional security requirements are covered in the [Security consideration](/en
 
 ### Reading multiple formats from the clipboard
 
-This example copies text to the clipboard as a single {{domxref("ClipboardItem")}} with two format representations: `text/html` and `text/plain`, and then reads them back.
+This example copies text to the clipboard as a single {{domxref("ClipboardItem")}} with two format representations: `text/html` and `text/plain`.
 It then reads the clipboard back with `read()` and lists the returned formats.
 
 #### HTML
