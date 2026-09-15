@@ -5,15 +5,17 @@ page-type: learn-module-chapter
 sidebar: learnsidebar
 ---
 
+{{PreviousMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Delete_author_form", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms")}}
+
 This final subarticle shows how to define a page to update `Book` objects. Form handling when updating a book is much like that for creating a book, except that you must populate the form in the `GET` route with values from the database.
 
 ## Controller—get route
 
-Open **/controllers/bookController.js**. Find the exported `book_update_get()` controller method and replace it with the following code.
+Open **controllers/bookController.js**. Find the exported `bookUpdateGet()` controller method and replace it with the following code.
 
 ```js
 // Display book update form on GET.
-exports.book_update_get = async (req, res, next) => {
+export const bookUpdateGet = async (req, res, next) => {
   // Get book, authors and genres for form.
   const [book, allAuthors, allGenres] = await Promise.all([
     Book.findById(req.params.id).populate("author").exec(),
@@ -54,11 +56,11 @@ We then mark the currently selected genres as checked and then render the **book
 
 ## Controller—post route
 
-Find the exported `book_update_post()` controller method, and replace it with the following code.
+Find the exported `bookUpdatePost()` controller method, and replace it with the following code.
 
 ```js
 // Handle book update on POST.
-exports.book_update_post = [
+export const bookUpdatePost = [
   // Convert the genre to an array.
   (req, res, next) => {
     if (!Array.isArray(req.body.genre)) {
@@ -137,7 +139,7 @@ First we validate and sanitize the book data from the form and use it to create 
 
 ## View
 
-There is no need to change the view for the form (**/views/book_form.pug**) as the same template works for both creating and updating the book.
+There is no need to change the view for the form (**views/book_form.pug**) as the same template works for both creating and updating the book.
 
 ## Add an update button
 
@@ -164,6 +166,4 @@ The form should look just like the _Create book_ page, only with a title of 'Upd
 > [!NOTE]
 > The other pages for updating objects can be implemented in much the same way. We've left that as a challenge.
 
-## Next steps
-
-- Return to [Express Tutorial Part 6: Working with forms](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms).
+{{PreviousMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Delete_author_form", "Learn_web_development/Extensions/Server-side/Express_Nodejs/forms")}}
