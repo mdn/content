@@ -7,7 +7,7 @@ browser-compat: api.CSSStyleDeclaration
 
 {{APIRef("CSSOM")}}
 
-The **`CSSStyleDeclaration`** interface is the base class for objects that represent CSS declaration blocks with different supported sets of CSS style information:
+The **`CSSStyleDeclaration`** interface of the [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) is the base class for objects that represent CSS declaration blocks with different supported sets of CSS style information:
 
 - {{domxref("CSSStyleProperties")}} — CSS styles declared in stylesheet ({{domxref("CSSStyleRule.style")}}), inline styles for an element such as {{DOMxRef("HTMLElement/style","HTMLElement")}}, {{domxref("SVGElement/style","SVGElement")}}, and {{domxref("MathMLElement/style","MathMLElement")}}, or the computed style for an element returned by {{DOMxRef("Window.getComputedStyle()")}}.
 - {{domxref("CSSPageDescriptors")}} — Styles for CSS [at-rules](/en-US/docs/Web/CSS/Guides/Syntax/At-rules).
