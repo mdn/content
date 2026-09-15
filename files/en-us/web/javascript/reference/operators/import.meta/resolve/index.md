@@ -34,7 +34,7 @@ const helperPath = import.meta.resolve("./lib/helper.js");
 console.log(helperPath); // "https://example.com/lib/helper.js"
 ```
 
-Note that `import.meta.resolve()` only performs resolution and does not attempt to load or import the resulting path. Therefore, its return value is the same _regardless of whether the returned path corresponds to a file that exists, and regardless of whether that file contains valid code for a module_. This allows `import.meta.resolve()` to be a _synchronous_ operation.
+Note that `import.meta.resolve()` only performs resolution and does not attempt to [load](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#loading_the_graph) or import the resulting module. In browsers, its return value is the same _regardless of whether the returned URL corresponds to a file that exists, and regardless of whether that file contains valid code for a module_. The operation is _synchronous_. Non-browser hosts may inspect the file system during resolution; for example, Node.js can read package metadata and check paths.
 
 It is different from [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import), because although both accept a module specifier as the first argument, `import.meta.resolve()` returns the path that _would be imported_ without making any attempt to access that path. Therefore, the following two are effectively the same code:
 

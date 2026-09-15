@@ -43,11 +43,11 @@ The `"module-name"` may be followed by a set of [import attributes](/en-US/docs/
 
 ## Description
 
-`import` declarations can only be present in modules, and only at the top-level (i.e., not inside blocks, functions, etc.). If an `import` declaration is encountered in non-module contexts (for example, `<script>` tags without `type="module"`, `eval`, `new Function`, which all have "script" or "function body" as parsing goals), a `SyntaxError` is thrown. To load modules in non-module contexts, use the [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import) syntax instead.
+`import` declarations can only be present in modules, and only at the top-level (i.e., not inside blocks, functions, etc.). If an `import` declaration is encountered in non-module contexts (for example, `<script>` tags without `type="module"`, `eval`, `new Function`, which all have "script" or "function body" as parsing goals), a `SyntaxError` is thrown. To [load](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#loading_the_graph) modules in non-module contexts, use the [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import) syntax instead.
 
 All imported bindings cannot be in the same scope as any other declaration, including {{jsxref("Statements/let", "let")}}, {{jsxref("Statements/const", "const")}}, {{jsxref("Statements/class", "class")}}, {{jsxref("Statements/function", "function")}}, {{jsxref("Statements/var", "var")}}, and `import` declaration.
 
-`import` declarations are designed to be syntactically rigid (for example, only string literal specifiers, only permitted at the top-level, all bindings must be identifiers), which allows modules to be statically analyzed and linked before getting evaluated. This is the key to making modules asynchronous by nature, powering features like [top-level await](/en-US/docs/Web/JavaScript/Guide/Modules#top-level_await).
+`import` declarations are designed to be syntactically rigid (for example, only string literal specifiers, only permitted at the top-level, all bindings must be identifiers), which allows modules to be statically analyzed and [linked](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#linking_modules) before getting [evaluated](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#evaluating_modules). This allows dependencies to be loaded asynchronously and supports features like [top-level await](/en-US/docs/Web/JavaScript/Guide/Modules#top-level_await).
 
 The `import` keyword may be followed by a "phase modifier" that stops the module import process at a particular phase:
 
@@ -104,7 +104,7 @@ import { "a-b" as a } from "/modules/my-module.js";
 
 #### Default import
 
-Default exports need to be imported with the corresponding default import syntax. This version directly imports the default:
+Default exports can be imported with the corresponding default import syntax. This version directly imports the default:
 
 ```js
 import myDefault from "/modules/my-module.js";
@@ -163,7 +163,7 @@ This is often used for [polyfills](/en-US/docs/Glossary/Polyfill), which mutate 
 
 ### Hoisting
 
-Import declarations are [hoisted](/en-US/docs/Glossary/Hoisting). In this case, that means that the identifiers the imports introduce are available in the entire module scope, and their side effects are produced before the rest of the module's code runs.
+Import declarations are [hoisted](/en-US/docs/Glossary/Hoisting). In this case, that means that the bindings the imports introduce are available in the entire module scope, and the imported modules' side effects are produced before the rest of the module's code runs. With [cyclic imports](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#cyclic_imports), an imported module may not have finished evaluating, so an imported binding may still be uninitialized.
 
 ```js
 myModule.doAllTheAmazingThings(); // myModule.doAllTheAmazingThings is imported by the next line
@@ -213,7 +213,7 @@ Absolute specifiers can be any kind of [URL](/en-US/docs/Web/URI) that resolve t
 
 - [`node:` URLs](https://nodejs.org/api/esm.html#node-imports) resolve to built-in Node.js modules. They are supported by Node and other runtimes that claim compatibility with Node, such as Bun.
 
-Bare specifiers, popularized by CommonJS, are resolved within the `node_modules` directory. For example, if you have `import x from "foo"`, then the runtime will look for the `foo` package within any `node_modules` directory in the parent directories of the current module. This behavior can be reproduced in browsers using [import maps](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#importing_modules_using_import_maps), which also enable you to customize resolution in other ways.
+Bare specifiers, popularized by CommonJS, are resolved according to host-specific rules. In Node.js, package names generally resolve to packages within `node_modules` directories. For example, if you have `import x from "foo"`, then Node.js searches for the `foo` package in `node_modules` directories starting from the current module's directory and continuing through its ancestors. Browsers require [import maps](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#importing_modules_using_import_maps) to resolve bare specifiers; these maps associate names with URLs rather than searching `node_modules` directories.
 
 The module resolution algorithm can also be executed programmatically using the [`import.meta.resolve`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta/resolve) function defined by the HTML spec.
 
@@ -282,7 +282,7 @@ setTimeout(() => {
 
 ### Importing non-JavaScript modules
 
-Non-JavaScript modules can also be imported using the `import` statement, but their types need to be explicitly declared using [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with). For example, to import a JSON module, you need to specify the `type: "json"` attribute.
+Non-JavaScript modules can also be imported using the `import` statement. Some module types need to be explicitly declared using [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with). For example, to import a JSON module, you need to specify the `type: "json"` attribute.
 
 ```js
 import data from "./data.json" with { type: "json" };

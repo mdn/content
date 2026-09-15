@@ -6,7 +6,7 @@ browser-compat: javascript.operators.import
 sidebar: jssidebar
 ---
 
-The **`import()`** syntax, commonly called _dynamic import_, is a function-like expression that allows loading an ECMAScript module asynchronously and dynamically into a potentially non-module environment.
+The **`import()`** syntax, commonly called _dynamic import_, is a function-like expression that allows [loading](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#loading_the_graph) an ECMAScript module asynchronously and dynamically into a potentially non-module environment.
 
 Unlike the [declaration-style counterpart](/en-US/docs/Web/JavaScript/Reference/Statements/import), dynamic imports are only evaluated when needed, and permit greater syntactic flexibility.
 
@@ -24,7 +24,7 @@ The `import()` call is a syntax that closely resembles a function call, but `imp
 ### Parameters
 
 - `moduleName`
-  - : The module to import from. The evaluation of the specifier is host-specified, but always follows the same algorithm as static [import declarations](/en-US/docs/Web/JavaScript/Reference/Statements/import).
+  - : The module to import from. The resolution of the specifier is host-specified, but always follows the same algorithm as static [import declarations](/en-US/docs/Web/JavaScript/Reference/Statements/import).
 - `options`
   - : An object containing import options. The following key is recognized:
     - `with`
@@ -34,19 +34,20 @@ The `import()` call is a syntax that closely resembles a function call, but `imp
 
 Returns a promise which:
 
-- If the referenced module is loaded and evaluated successfully, fulfills to a [module namespace object](#module_namespace_object): an object containing all exports from `moduleName`.
+- If the referenced module is loaded and [evaluated](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#evaluating_modules) successfully, fulfills to a [module namespace object](#module_namespace_object): an object containing all exports from `moduleName`.
 - If the [coercion to string](/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion) of `moduleName` throws, rejects with the thrown error.
-- If module fetching and loading fails for any reason, rejects with an implementation-defined error (Node uses a generic `Error`, while all browsers use `TypeError`). Common causes may include:
+- If module [fetching](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#loading_the_graph) fails, rejects with a host-defined error (Node typically uses `Error`, while browsers use `TypeError`). Common causes may include:
   - In a file-system-based module system (Node.js, for example), if accessing the file system fails (permission denied, file not found, etc.).
   - In a web-based module system (browsers, for example), if the network request fails (not connected to the Internet, CORS issue, etc.) or an HTTP error occurs (404, 500, etc.).
-- If evaluation of the referenced module throws, rejects with the thrown error.
+- If parsing or [linking](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#linking_modules) fails, rejects with the corresponding error, typically a {{jsxref("SyntaxError")}}.
+- If evaluation of the referenced module or one of its dependencies throws, rejects with the thrown error.
 
 > [!NOTE]
 > `import()` never synchronously throws an error.
 
 ## Description
 
-The import declaration syntax (`import something from "somewhere"`) is static and will always result in the imported module being evaluated at load time. Dynamic imports allow one to circumvent the syntactic rigidity of import declarations and load a module conditionally or on demand. The following are some reasons why you might need to use dynamic import:
+The import declaration syntax (`import something from "somewhere"`) is static and makes the imported module an eager dependency of the importing module. Dynamic imports allow one to circumvent the syntactic rigidity of import declarations and load a module conditionally or on demand. The following are some reasons why you might need to use dynamic import:
 
 - When importing statically significantly slows the loading of your code or increases your program's memory usage, and there is a low likelihood that you will need the code you are importing, or you will not need it until a later time.
 - When the module you are importing does not exist at load time.
@@ -56,7 +57,7 @@ The import declaration syntax (`import something from "somewhere"`) is static an
 
 Use dynamic import only when necessary. The static form is preferable for loading initial dependencies, and can benefit more readily from static analysis tools and [tree shaking](/en-US/docs/Glossary/Tree_shaking). If your only goal is to defer the execution of the loaded code until when it's used, consider using [`import defer`](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer).
 
-If your file is not run as a module (if it's referenced in an HTML file, the script tag must have `type="module"`), you will not be able to use static import declarations. On the other hand, the asynchronous dynamic import syntax is always available, allowing you to import modules into non-module environments.
+If your file is not run as a module (if it's referenced in an HTML file, the script tag must have `type="module"`), you will not be able to use static import declarations. On the other hand, the asynchronous dynamic import syntax is available in both scripts and modules, allowing you to import modules into non-module environments, subject to the execution-context restrictions below.
 
 The `options` parameter allows different kinds of import options. For example, [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with):
 
@@ -65,7 +66,7 @@ import("./data.json", { with: { type: "json" } });
 ```
 
 Dynamic module import is not permitted in all execution contexts.
-For example, `import()` can be used in the main thread, a shared worker, or a dedicated worker, but will throw if called within a [service worker](/en-US/docs/Web/API/Service_Worker_API) or a [worklet](/en-US/docs/Web/API/Worklet).
+For example, `import()` can be used in the main thread, a shared worker, or a dedicated worker, but its promise rejects if called within a [service worker](/en-US/docs/Web/API/Service_Worker_API) or a [worklet](/en-US/docs/Web/API/Worklet).
 
 "Phase modifiers" for `import` statements can also be used with dynamic imports:
 
@@ -76,7 +77,7 @@ Each of these syntaxes is considered a distinct type of expression.
 
 ### Module namespace object
 
-A _module namespace object_ is an object that describes all exports from a module. It is a static object that is created when the module is linked, before it starts evaluating. There are two ways to access the module namespace object of a module: through a [namespace import](/en-US/docs/Web/JavaScript/Reference/Statements/import#namespace_import) (`import * as name from moduleName`), or through the fulfillment value of a dynamic import.
+A _module namespace object_ is an object that describes all unambiguous exports from a module. Its exported names are fixed, but their values reflect live bindings. It is created when needed, which can be during linking, before the module is evaluated. There are two ways to access the module namespace object of a module: through a [namespace import](/en-US/docs/Web/JavaScript/Reference/Statements/import#namespace_import) (`import * as name from moduleName`), or through the fulfillment value of a dynamic import.
 
 The module namespace object is a [sealed](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed) object with [`null` prototype](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects). This means all string keys of the object correspond to the exports of the module and there are never extra keys. All keys are [enumerable](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) in lexicographic order (i.e., the default behavior of [`Array.prototype.sort()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#description)), with the default export available as a key called `default`. In addition, the module namespace object has a [`[Symbol.toStringTag]`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) property with the value `"Module"`, used in {{jsxref("Object.prototype.toString()")}}.
 

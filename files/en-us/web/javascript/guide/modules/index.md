@@ -229,7 +229,7 @@ Unlike named exports, default exports have no names associated with them. Each m
 ```js
 // An object literal is an expression
 export default {
-  some: "object";
+  some: "object",
 };
 
 // An addition is an expression
@@ -336,7 +336,7 @@ import {
 
 And it would work just the same. What style you use is up to you, however it arguably makes more sense to leave your module code alone, and make the changes in the imports. This especially makes sense when you are importing from third party modules that you don't have any control over.
 
-By the way, you can use the same syntax for default exports too, by pretending that the export is named `default` (this is a [reserved word](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words), not an actually valid identifier name).
+By the way, you can use the same syntax for default exports too, by pretending that the export is named `default` (this is a [reserved word](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words), not an actually valid identifier name). The difference with `export default` is that this exports a _live binding_, not a static value. If you re-assign `randomSquare` in the exporter, only this form allows the importer to see the new value.
 
 ```js
 import { default as randomSquare } from "./modules/square.js";
@@ -484,7 +484,7 @@ export * from "./shapes/triangle.js";
 export * from "./shapes/circle.js";
 ```
 
-This re-exports _all_ exports from the target module as named exports of the current module, so if you export something else from `square.js`, you don't have to modify `shapes.js` as well. Only do this if you actually want `shapes.js` to re-export everything from `square.js`, or you may accidentally expose things.
+This re-exports _all_ exports (other than the default) from the target module as named exports of the current module, so if you export something else from `square.js`, you don't have to modify `shapes.js` as well. Only do this if you actually want `shapes.js` to re-export everything from `square.js`, or you may accidentally expose things.
 
 Almost all `import` syntaxes we've introduced have `export ... from` equivalents. The only exception is the default import `import x from "mod"`, for which `export x from "mod"` does not exist, and you must use the special `export { default } from` syntax.
 
@@ -548,7 +548,7 @@ import("./modules/myModule.js").then((module) => {
 
 > [!NOTE]
 > Dynamic import is permitted in the browser main thread, and in shared and dedicated workers.
-> However `import()` will throw if called in a service worker or worklet.
+> However `import()` will reject if called in a service worker or worklet.
 
 <!-- https://whatpr.org/html/6395/webappapis.html#hostimportmoduledynamically(referencingscriptormodule,-specifier,-promisecapability) -->
 
@@ -619,7 +619,9 @@ Then we'll create a module called [`getColors.js`](https://github.com/mdn/js-exa
 
 ```js
 // fetch request
-const colors = fetch("../data/colors.json").then((response) => response.json());
+const colors = fetch(
+  "https://mdn.github.io/js-examples/module-examples/top-level-await/data/colors.json",
+).then((response) => response.json());
 
 export default await colors;
 ```

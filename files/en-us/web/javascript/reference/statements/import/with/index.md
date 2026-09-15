@@ -9,7 +9,7 @@ sidebar: jssidebar
 > [!NOTE]
 > A previous version of this proposal used the `assert` keyword instead of `with`. The assertion feature is now non-standard. Check the [browser compatibility table](#browser_compatibility) for details.
 
-The **import attributes** feature instructs the runtime about how a module should be loaded, including the behavior of module resolution, fetching, parsing, and evaluation. It's supported in [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declarations, [`export...from`](/en-US/docs/Web/JavaScript/Reference/Statements/export#re-exporting_aggregating) declarations, and dynamic [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import).
+The **import attributes** feature instructs the runtime about how a module should be [loaded](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#loading_the_graph), including the behavior of module resolution, [fetching](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#loading_the_graph), parsing, and [evaluation](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#evaluating_modules). It's supported in [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declarations, [`export...from`](/en-US/docs/Web/JavaScript/Reference/Statements/export#re-exporting_aggregating) declarations, and dynamic [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import).
 
 Attributes can be attached to any kind of `import`/`export from` statement, including default import, namespace import, etc. They follow the module specifier string and start with the `with` keyword. When used with `import()`, the attributes are specified in the `options` parameter as the `with` property.
 
@@ -54,7 +54,7 @@ The primary use case is to load non-JS modules, such as JSON modules and CSS mod
 import data from "https://example.com/data.json";
 ```
 
-On the web, each import statement results in an HTTP request. The response is then prepared into a JavaScript value and made available to the program by the runtime. For example, the response may look like this:
+On the web, loading an uncached module from an HTTP URL involves an HTTP request. The response is then prepared into a JavaScript value and made available to the program by the runtime. For example, the response may look like this:
 
 ```http
 HTTP/1.1 200 OK
@@ -68,7 +68,7 @@ Modules are identified and parsed only according to their served [media type (MI
 Import attributes fix this problem by allowing the author to explicitly specify how a module should be validated.
 In particular, the `type` attribute allows you to validate that the file is served with a particular media type, and fails the import if a different media type is used.
 
-For example, the code above can be written to specify that the expected type is `"json"` and the import would fail if it was served with the `text/javascript` (or any media type other than `application/json`):
+For example, the code above can be written to specify that the expected type is `"json"` and the import would fail if it was served with `text/javascript` (or any media type other than a JSON MIME type like `application/json`):
 
 ```js
 import data from "https://example.com/data.json" with { type: "json" };
@@ -77,7 +77,7 @@ import data from "https://example.com/data.json" with { type: "json" };
 The `type` attribute allows you to specify that modules are served as JSON, CSS, or plain text (and implicitly as JavaScript).
 
 Other attributes may also be supported, and [can affect the behavior of different parts of the loading process](#intended_semantics_for_import_attributes).
-A syntax error is thrown if an unknown attribute is used.
+A syntax error is thrown if an unknown attribute is used in a static import; a dynamic import rejects with a type error.
 
 ### Standard attributes
 
@@ -95,7 +95,7 @@ You can load JSON from a file into the `data` object using the following code:
 import data from "https://example.com/data.json" with { type: "json" };
 ```
 
-If the file is served with any other media type than `"application/json"`, the import will fail.
+If the file is served with any other media type than a JSON MIME type, the import will fail.
 
 The `type` attribute changes how the module is fetched (the browser sends the request with `{{HTTPHeader("Accept")}}: application/json` header), but does _not_ change how the module is parsed or evaluated. The runtime already knows to parse the module as JSON given the response MIME type. It only uses the attribute to do _after-the-fact_ checking that the `data.json` module is, in fact, a JSON module. For example, if the response header changes to `Content-Type: text/javascript` instead, the program will fail with a similar error as above.
 
@@ -144,7 +144,7 @@ If possible, prefer [`import source`](/en-US/docs/Web/JavaScript/Reference/State
 
 An attribute can change the runtime's behavior at every stage of the module loading process:
 
-- Resolution: the attribute is part of the module specifier (the string in the `from` clause). Therefore, given the same string path, different attributes may lead to entirely different modules being loaded. For example, [TypeScript supports the `resolution-mode` attribute](https://devblogs.microsoft.com/typescript/announcing-typescript-5-3/#stable-support-resolution-mode-in-import-types).
+- Resolution: the attributes are part of the module request, alongside the module specifier (the string in the `from` clause). Therefore, given the same string path, different attributes may lead to entirely different modules being loaded. For example, [TypeScript supports the `resolution-mode` attribute](https://devblogs.microsoft.com/typescript/announcing-typescript-5-3/#stable-support-resolution-mode-in-import-types).
 
   ```ts
   import type { TypeFromRequire } from "pkg" with {
