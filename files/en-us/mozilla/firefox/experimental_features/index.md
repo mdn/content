@@ -478,6 +478,10 @@ The `named-feature()` function in the {{cssxref("@supports")}} at-rule lets you 
 - `layout.css.anchor-positioning.follows-transforms.enabled`
   - : Set to `true` to enable.
 
+### `at-rule()` support queries
+
+The [`at-rule()`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#at-rule) function in the {{cssxref("@supports")}} at-rule lets you test whether the browser supports a given CSS at-rule, for example `@supports at-rule(@scope)`. It also works in the `supports()` function of {{cssxref("@import")}}. ([Firefox bug 2060754](https://bugzil.la/2060754)).
+
 ## SVG
 
 **No experimental features in this release cycle.**
@@ -508,6 +512,22 @@ When enabled, the MathML [`<a>`](/en-US/docs/Web/MathML/Reference/Element/a) ele
 | Developer Edition | 155           | No                  |
 | Beta              | 155           | No                  |
 | Release           | 155           | No                  |
+
+- `mathml.a.element.enabled`
+  - : Set to `true` to enable.
+
+### MathML `<a>` elements
+
+The MathML `<a>` element creates a hyperlink from MathML content, exposing the `MathMLAnchorElement` interface with the same URL component properties as HTML {{HTMLElement("a")}} elements.
+
+This release adds support for the `rel` and `relList` IDL attributes. ([Firefox bug 2063819](https://bugzil.la/2063819)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 156           | Yes                 |
+| Developer Edition | 156           | No                  |
+| Beta              | 156           | No                  |
+| Release           | 156           | No                  |
 
 - `mathml.a.element.enabled`
   - : Set to `true` to enable.
