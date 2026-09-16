@@ -65,7 +65,7 @@ You can mitigate these issues by always assigning {{domxref("TrustedHTML")}} obj
 This ensures that the input is passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup before it is injected.
 
 > [!NOTE]
-> {{domxref("Node.textContent")}} should be used when you know that the user provided content should be plain text.
+> {{domxref("Node.textContent")}} should be used when you know that the user-provided content should be plain text.
 > This prevents it being parsed as HTML.
 
 ## Examples

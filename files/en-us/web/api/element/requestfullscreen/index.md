@@ -76,7 +76,7 @@ The **`requestFullscreen()`** method issues an asynchronous request to display t
 
 The method requires permission.
 
-- If permission to enter full screen mode is granted, the returned {{JSxRef("Promise")}} will resolve and the element will receive a {{domxref("Element/fullscreenchange_event", "fullscreenchange")}} event to let it know that it's now in full screen mode.
+- If permission to enter fullscreen mode is granted, the returned {{JSxRef("Promise")}} will resolve and the element will receive a {{domxref("Element/fullscreenchange_event", "fullscreenchange")}} event to let it know that it's now in fullscreen mode.
 - If permission is denied, the promise is rejected and the element receives a {{domxref("Element/fullscreenerror_event", "fullscreenerror")}} event instead.
 
 If the element has been detached from the original document, then the document receives these events instead.
@@ -126,7 +126,7 @@ Fullscreen mode is controlled by the [Permissions-Policy](/en-US/docs/Web/HTTP/G
 
 The default allowlist for `screen-wake-lock` is `self`.
 This allows fullscreen usage in same-origin nested frames but prevents them in third-party content.
-Third party usage can be enabled by the server first setting the `Permissions-Policy` header to grant permission a particular third party origin.
+Third-party usage can be enabled by the server first setting the `Permissions-Policy` header to grant permission to a particular third-party origin.
 
 ```http
 Permissions-Policy: fullscreen=(self b.example.com)
@@ -283,7 +283,7 @@ kbd {
 #### Results
 
 Select the frame and press <kbd>Shift+F</kbd>.
-When the page displays full frame, note the temporary notification at the top of the page that explains how to exit full screen mode.
+When the page displays full frame, note the temporary notification at the top of the page that explains how to exit fullscreen mode.
 
 {{embedlivesample("Using keyboard lock", , "400", "", "", "", "fullscreen")}}
 

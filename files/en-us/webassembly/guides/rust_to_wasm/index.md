@@ -276,7 +276,7 @@ Let's build a website that uses our new npm package. Many people use npm package
 
 Let's create a new directory inside the `hello-wasm` directory called `site` to try it out.
 We haven't published the package to the npm registry yet, so we can install it from a local version using `npm i /path/to/package`.
-You may use [`npm link`](https://docs.npmjs.com/cli/v10/commands/npm-link/), but installing from a local path is convenient for this demo:
+You may use [`npm link`](https://docs.npmjs.com/cli/commands/npm-link/), but installing from a local path is convenient for this demo:
 
 ```bash
 mkdir site && cd site
@@ -394,7 +394,7 @@ hello-wasm-0.1.0.tgz
 [INFO]: 🎒  packed up your package!
 ```
 
-To publish to npm, you will need an [npm account](https://www.npmjs.com/) and authorize your machine using [`npm adduser`](https://docs.npmjs.com/cli/v10/commands/npm-adduser/).
+To publish to npm, you will need an [npm account](https://www.npmjs.com/) and authorize your machine using [`npm login`](https://docs.npmjs.com/cli/commands/npm-login/).
 When you are ready, you can publish using `wasm-pack`, which calls `npm publish` under the hood:
 
 ```bash
