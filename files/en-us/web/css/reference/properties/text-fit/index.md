@@ -66,6 +66,8 @@ The basic form of `text-fit` uses a single keyword:
 
 Specifically, the parts of a text node that are affected by this scaling (the **scalable parts**) are the text itself, excluding trailing whitespace, and spacing whose inline size is proportional to the text's `font-size`, such as percentage-based {{cssxref("letter-spacing")}} and {{cssxref("word-spacing")}}, and {{cssxref("text-autospace")}}. Other parts, including inline {{cssxref("border")}}, {{cssxref("margin")}}, and {{cssxref("padding")}}, are not scaled.
 
+The `text-fit` property does not affect a container's intrinsic size, which means that the text content cannot grow in cases where the container is sized by its content, for example using the {{cssxref("fit-content")}} keyword. Setting `text-fit` also doesn't change an element's computed `font-size`: the size adjustment is applied after the final rendering.
+
 ### How is the scaling factor calculated?
 
 The scaling factor is the ratio by which the scalable parts of a text line must be scaled in order for its inline content to fit exactly inside its containing box. The scaling factor for each line of a text node is calculated using a formula along these lines (the exact method for determining the scaling factor may differ between implementations):
@@ -121,6 +123,16 @@ This declaration on the other hand will shrink all lines of a text node by their
 ```css
 text-fit: shrink per-line 50%;
 ```
+
+## Accessibility
+
+When using `text-fit`, designs must be tested carefully at different viewport sizes to make sure the rendered font size doesn't become too small (or too large). This can lead to content becoming illegible, especially for people with visual impairments or in low vision conditions.
+
+In any case, text content should be resizable without loss of content or functionality; see [WCAG Success Criterion 1.4.4 Resize Text](https://www.w3.org/TR/WCAG22/#resize-text).
+
+Related guidance:
+
+- [MDN Understanding WCAG, Guideline 1.4: Make it easier for users to see and hear content including separating foreground from background](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 
 ## Formal definition
 
