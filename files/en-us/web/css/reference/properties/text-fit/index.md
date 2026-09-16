@@ -374,7 +374,7 @@ p::before {
 Adjust the slider up and down the scale, taking careful note of the behavior of each paragraph. You should note that:
 
 - The `consistent` paragraph's text lines always have the same `font-size` as one another throughout.
-- The `per-line` paragraph's text lines vary in `font-size` somewhat, which becomes more noticable at narrower widths. The last line's `font-size` is not scaled.
+- The `per-line` paragraph's text lines vary in `font-size` somewhat, which becomes more noticeable at narrower widths. The last line's `font-size` is not scaled.
 - The `per-line-all` paragraph's text lines vary in `font-size` somewhat, which includes the last line. This is very noticeable at widths that cause only one or two words to wrap onto the last line.
 
 ```css hidden live-sample___basic-text-fit live-sample___text-fit-percentages live-sample___multi-line-keywords
