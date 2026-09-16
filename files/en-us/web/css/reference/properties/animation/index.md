@@ -167,8 +167,7 @@ Consider providing a mechanism for pausing or disabling animation as well as usi
 
 ### Basic usage: a sunrise
 
-In this example, we demonstrate basic usage of the `animate` shorthand by animating a yellow sun across a light blue sky. The sun rises
-to the center of the viewport and then falls out of sight.
+In this example, we demonstrate basic usage of the `animatation` shorthand by animating a yellow sun across a light blue sky. The sun risesto the center of the viewport and then falls out of sight.
 
 #### HTML
 
