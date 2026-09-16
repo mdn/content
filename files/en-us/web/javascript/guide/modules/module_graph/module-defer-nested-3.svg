@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 490" role="img" aria-labelledby="title description">
+  <title id="title">Nested deferred imports: after the second timer</title>
+  <desc id="description">After the second timer. All seven modules are loaded and linked. Evaluated: a.js, b.js, c.js, e.js, f.js, g.js. Still linked but unevaluated: d.js. a.js defers b.js, b.js defers c.js, and c.js defers d.js. Other imports are ordinary static imports. Green boxes have evaluated; gray boxes with dashed borders remain linked.</desc>
+  <style>
+    text { fill: #6b7280; font-family: Menlo, Consolas, monospace; font-size: 12px; }
+    .specifier { fill: #08827e; font-weight: bold; }
+    .outline { fill: none; stroke: #9ca3af; stroke-dasharray: 4 3; }
+    .success { stroke: #08827e; stroke-dasharray: none; }
+    .status { text-anchor: end; paint-order: stroke; stroke: white; stroke-width: 4; stroke-linejoin: round; }
+    .teal { fill: #08827e; }
+    .edge { fill: none; stroke: #808080; marker-end: url(#arrow); }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 8 4 L 0 8" fill="none" stroke="#808080"/>
+    </marker>
+  </defs>
+  <rect x="20" y="30" width="410" height="70" fill="#edf8f5"/>
+  <rect x="500" y="30" width="440" height="124" fill="#edf8f5"/>
+  <rect x="500" y="220" width="440" height="106" fill="#edf8f5"/>
+  <rect x="500" y="400" width="440" height="70" fill="#f3f4f6"/>
+  <rect x="20" y="190" width="300" height="34" fill="#edf8f5"/>
+  <rect x="20" y="295" width="300" height="34" fill="#edf8f5"/>
+  <rect x="20" y="415" width="300" height="34" fill="#edf8f5"/>
+  <path class="edge" d="M 270 48 H 500"/>
+  <path class="edge" d="M 600 58 L 320 190"/>
+  <path class="edge" d="M 600 76 L 320 295"/>
+  <path class="edge" d="M 716 94 V 220"/>
+  <path class="edge" d="M 600 248 L 320 415"/>
+  <path class="edge" d="M 716 266 V 400"/>
+  <path class="edge" d="M 600 428 L 320 224"/>
+  <path class="edge" d="M 600 446 L 320 435"/>
+  <path class="outline success" d="M 68.8 30 H 430 V 100 H 20 V 30 H 28"/>
+  <text x="34" y="34">a.js</text>
+  <text class="status teal" x="430" y="22">Evaluated</text>
+  <text x="34" y="52" xml:space="preserve">import defer * as b from <tspan class="specifier">"./b.js"</tspan>;</text>
+  <text x="34" y="88" xml:space="preserve">setTimeout(() =&gt; b.x, 1000);</text>
+  <path class="outline success" d="M 548.8 30 H 940 V 154 H 500 V 30 H 508"/>
+  <text x="514" y="34">b.js</text>
+  <text class="status teal" x="940" y="22">Evaluated</text>
+  <text x="514" y="52" xml:space="preserve">import <tspan class="specifier">"./e.js"</tspan>;</text>
+  <text x="514" y="70" xml:space="preserve">import <tspan class="specifier">"./f.js"</tspan>;</text>
+  <text x="514" y="88" xml:space="preserve">import defer * as c from <tspan class="specifier">"./c.js"</tspan>;</text>
+  <text x="514" y="124" xml:space="preserve">setTimeout(() =&gt; c.x, 1000);</text>
+  <text x="514" y="142" xml:space="preserve">export const x = 1;</text>
+  <path class="outline success" d="M 548.8 220 H 940 V 326 H 500 V 220 H 508"/>
+  <text x="514" y="224">c.js</text>
+  <text class="status teal" x="940" y="212">Evaluated</text>
+  <text x="514" y="242" xml:space="preserve">import <tspan class="specifier">"./g.js"</tspan>;</text>
+  <text x="514" y="260" xml:space="preserve">import defer * as d from <tspan class="specifier">"./d.js"</tspan>;</text>
+  <text x="514" y="296" xml:space="preserve">setTimeout(() =&gt; d.x, 1000);</text>
+  <text x="514" y="314" xml:space="preserve">export const x = 1;</text>
+  <path class="outline" d="M 548.8 400 H 940 V 470 H 500 V 400 H 508"/>
+  <text x="514" y="404">d.js</text>
+  <text class="status" x="940" y="392">Linked</text>
+  <text x="514" y="422" xml:space="preserve">import <tspan class="specifier">"./e.js"</tspan>;</text>
+  <text x="514" y="440" xml:space="preserve">import <tspan class="specifier">"./g.js"</tspan>;</text>
+  <text x="514" y="458" xml:space="preserve">export const x = 1;</text>
+  <path class="outline success" d="M 68.8 190 H 320 V 224 H 20 V 190 H 28"/>
+  <text x="34" y="194">e.js</text>
+  <text class="status teal" x="320" y="182">Evaluated</text>
+  <text x="34" y="212" xml:space="preserve">export const x = 1;</text>
+  <path class="outline success" d="M 68.8 295 H 320 V 329 H 20 V 295 H 28"/>
+  <text x="34" y="299">f.js</text>
+  <text class="status teal" x="320" y="287">Evaluated</text>
+  <text x="34" y="317" xml:space="preserve">export const x = 1;</text>
+  <path class="outline success" d="M 68.8 415 H 320 V 449 H 20 V 415 H 28"/>
+  <text x="34" y="419">g.js</text>
+  <text class="status teal" x="320" y="407">Evaluated</text>
+  <text x="34" y="437" xml:space="preserve">export const x = 1;</text>
+</svg>

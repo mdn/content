@@ -168,7 +168,7 @@ const colors = fetch(
 export default await colors;
 ```
 
-Top-level `await` is not free; it has deep implications because it means a part of the [module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph) can only be loaded asynchronously. See the [module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#asynchronous_evaluation_with_top-level_await) guide for more information.
+Top-level `await` is not free; it has deep implications because it means a part of the [module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph) can only be loaded asynchronously. See the [module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#top-level_await_and_asynchronous_evaluation) guide for more information.
 
 ### Control flow effects of await
 

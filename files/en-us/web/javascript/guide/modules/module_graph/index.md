@@ -139,7 +139,7 @@ Adding `export { x } from "./first.js"` to `combined.js` resolves the ambiguity:
 
 ### Evaluating modules
 
-Now that all modules have their environment prepared, they are finally ready for evaluation. The host asks the engine to evaluate the entry module. The engine traverses the module graph yet again, using depth-first search. For now, assume no module uses [top-level `await`](#asynchronous_evaluation_with_top-level_await). Each time:
+Now that all modules have their environment prepared, they are finally ready for evaluation. The host asks the engine to evaluate the entry module. The engine traverses the module graph yet again, using depth-first search. For now, assume no module uses [top-level `await`](#top-level_await_and_asynchronous_evaluation). Each time:
 
 - The engine visits a module. If the module has already been evaluated successfully, it does not execute it again. If a previous evaluation failed, the engine propagates the recorded error instead. If the module is already being evaluated, the engine does not visit its dependencies again, avoiding infinite recursion in a cycle. Otherwise, it marks the module as currently evaluating.
 - The engine recursively evaluates each dependency using the same process, in the order their module requests appear in the source.
@@ -157,7 +157,7 @@ Moving the `import` declarations below the `greet()` call, while keeping their r
 
 If evaluation throws an uncaught error, it propagates through the dependent modules being evaluated, and the entry module's evaluation promise rejects. Effects of code that already ran are not undone, and the error is retained so subsequent evaluation attempts do not execute the failed module again.
 
-With top-level `await`, a module can suspend execution and delay modules that depend on it while other branches continue; we'll cover this in [asynchronous evaluation](#asynchronous_evaluation_with_top-level_await).
+With top-level `await`, a module can suspend execution and delay modules that depend on it while other branches continue; we'll cover this in [asynchronous evaluation](#top-level_await_and_asynchronous_evaluation).
 
 ## Errors during the module pipeline
 
@@ -225,7 +225,7 @@ import { log, missing } from "./logger.js";
 
 ![All modules have loaded. config.js and logger.js are linked; the missing import in formatters.js fails, and formatters.js and main.js return from linking to unlinked.](module-linking-error.svg)
 
-Note that linking is synchronous and side-effect-free. The host can do it after loading and before evaluation, and even retry it if it fails (although the same graph of JavaScript module records will encounter the same linking error). If a linking error occurs, this import does not start evaluation. Shared dependencies may already have been evaluated through another entry point.
+Note that linking is synchronous and side-effect-free. The host can do it after loading and before evaluation, and even retry it if it fails (although the same graph of JavaScript modules will encounter the same linking error). If a linking error occurs, this import does not start evaluation. Shared dependencies may already have been evaluated through another entry point.
 
 ### Errors from evaluation
 
@@ -253,7 +253,7 @@ We also add one more dependency before the existing imports in `main.js`, just t
 
 ![extra.js evaluates successfully; config.js throws, and config.js, formatters.js, and main.js are marked as evaluated with an error. logger.js remains linked but unevaluated.](module-evaluation-error.svg)
 
-The evaluated status means the evaluation attempt is finished, not necessarily that the module's body ran successfully—or at all. Because module evaluation has side effects, the engine guarantees that the same module record is only ever evaluated once, whether or not it encountered an error (including when its dependency errored). Subsequent imports that reuse this module record expose the same module namespace object on success, or propagate the recorded error on failure. The namespace object continues to expose live bindings. A new environment, such as a new page or worker, can load and evaluate the source again. Any effects of code that ran before the error are not undone.
+The _evaluated_ status means the evaluation attempt is finished, not necessarily that the module's body ran successfully—or at all. Because module evaluation has side effects, the engine guarantees that the same module is only ever evaluated once, whether or not it encountered an error (including when its dependency errored). Subsequent imports that reuse this module expose the same module namespace object on success, or propagate the recorded error on failure. The namespace object continues to expose live bindings. A new environment, such as a new page or worker, can load and evaluate the source again. Any effects of code that ran before the error are not undone.
 
 ## Cyclic imports
 
@@ -373,7 +373,7 @@ In graph theory, we know that any directed graph can be seen as an acyclic graph
 
 The end effect is that, in the case above, when `b.js` finishes evaluating, it is not marked as evaluated yet—it waits until `a.js` finishes.
 
-![b.js remains evaluating after its body finishes. When a.js throws, both modules become evaluated with the error recorded.](module-cycle-error-states.svg)
+![b.js remains evaluating after its body finishes. When a.js throws, both modules become evaluated with the error recorded.](module-cycle-error-correct.svg)
 
 ### Avoiding cyclic imports
 
@@ -385,7 +385,7 @@ You should usually avoid cyclic imports in your project, because they make your 
 
 However, cyclic imports can also occur if the libraries depend on each other, which is harder to fix.
 
-## Asynchronous evaluation with top-level await
+## Top-level await and asynchronous evaluation
 
 Modules can use [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await#top-level_await) at the top level, outside any function. This allows a module to finish asynchronous initialization before modules that depend on it execute. Previously, our [evaluation](#evaluating_modules) is synchronous; now, we must make it asynchronous too, which has lots of implications about side-effect ordering and errors.
 
@@ -493,7 +493,7 @@ Suppose the asynchronous operations finish in the following order:
 
 Unlike the synchronous cycles discussed earlier, the modules in an asynchronous SCC do not necessarily transition to _evaluated_ together. Each can finish at a different time. To preserve the component's overall outcome, the engine associates its modules with a _cycle root_: the first module visited in that SCC, `a.js` in our case. Imports that encounter the component after its initial traversal use this root to wait for the component's completion and check for an evaluation error. A module's body finishing successfully does not, by itself, mean that the whole component can be imported successfully.
 
-For example, suppose `c.js` fails while `b.js` is still awaiting. The error propagates to `a.js`, whose body never starts, and the entry point's evaluation promise rejects. `b.js` can still finish successfully; its ongoing work is not canceled. Nevertheless, a later dynamic import of `b.js` rejects with the error recorded on the cycle root `a.js`. The successful execution of `b.js` does not erase the component's failure.
+For example, suppose `c.js` fails while `b.js` is still awaiting. The error propagates to `a.js`, whose body never starts, and the entry point's evaluation promise rejects. `b.js` keeps executing. Nevertheless, a later dynamic import of `b.js` rejects with the error recorded on the cycle root `a.js`. The successful execution of `b.js` does not erase the component's failure.
 
 ![After c.js fails, a.js and c.js are evaluated with an error, evaluation of b.js is still in progress, and d.js and e.js have evaluated successfully.](module-async-cycle-error.svg)
 
@@ -531,14 +531,145 @@ import "./a.js";
 
 Similarly in this case, `b.js` waits for the dynamic import in `a.js` to complete, but the dynamic import can only complete when `b.js` finishes executing.
 
-## Dynamic imports and the graph
+## Dynamic imports
 
-Explain when import() starts loading, what must finish before its promise fulfills, and how it can reach an existing module or load additional modules. Contrast conditional loading with static dependencies. Include repeated and concurrent imports.
+Everything introduced so far uses static `import` with the entry point being the entry point to the whole application (the `node` command line, the HTML file, etc.), so the loading and linking happens before any user code is run. A [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import), `import()`, instead starts an import when user code execution reaches the expression, with the requested module as the entry point. This allows you to dynamically _augment_ the module graph after the initial graph is already up and running (or—with top-level `await`—_while_ the initial graph is evaluating).
 
-## Module identity, caching, and failures
+For example, we can change the original `main.js` to listen for data from Node.js's [`process.stdin`](https://nodejs.org/api/process.html#processstdin), and import `formatters.js` only when the user types `Hi` and presses Enter:
 
-Consolidate what "the same module" means: resolved identity, relevant attributes, and separate environments. Distinguish module caching from HTTP caching. Organize errors by phase—resolution/loading, parsing, linking, evaluation—and explain propagation and retry behavior with host-specific qualifications.
+```js
+import config from "./config.js";
+
+process.stdin.on("data", async (data) => {
+  if (data.toString().trim() !== "Hi") return;
+  const { greet } = await import("./formatters.js");
+  greet("Josh", config.locale);
+});
+```
+
+Initially, loading `main.js` discovers `config.js`. Registering the listener completes `main.js`'s evaluation without loading `formatters.js`. When the listener receives `Hi`, another loading process starts from `formatters.js` and discovers its imports of `config.js` and `logger.js`. In this case, `config.js` is already available and is reused, while `logger.js` needs to be loaded too, assuming nothing else has requested it. The new branch therefore joins the existing graph at `config.js`, reusing the same module.
+
+![A double-line arrow shows the dynamic import from main.js to formatters.js. Single-line arrows show static dependencies. The added formatters.js and logger.js modules are highlighted in teal. The existing main.js and config.js are light gray. formatters.js imports the same config.js already used by main.js.](module-dynamic-import.svg)
+
+Augmentation of the module graph can encounter existing modules in any state, and that state is preserved—loading modules keep loading, loaded modules aren't re-fetched, linked modules aren't re-linked, evaluated modules are never re-evaluated (including if the previous one had an error). In the example above, `config.js` has already evaluated, so only `logger.js` and `formatters.js` need to execute. The dynamically imported module itself may also already exist in the module graph and get reused.
+
+Dynamic import is async, because the loading may need to fetch new modules and evaluation may need to wait for top-level `await`. The `import()` promise resolves when the requested module's evaluation finishes successfully.
+
+The new traversal can also reach the module that called `import()` (`main.js`, for example). Because dynamic imports do not constitute dependency edges (they are only entry points), this does not create a cycle. However, if the caller uses top-level `await` to wait for that import, neither can finish, as shown in the [deadlock example](#deadlocks).
+
+## Module caching
+
+_Module caching_ means reusing a module's identity and state. Repeated successful requests from the same importer, with the same specifier and import attributes, must refer to the same module. Different requests can also refer to the same module, such as when two modules import the same dependency. The host determines how requests map to module identities; see [Module caching on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#module_caching) for browser-specific rules.
+
+This means importers share the module's bindings, including changes made after evaluation. For example, this `counter.js` module keeps a count:
+
+```js
+export let count = 0;
+
+export function increment() {
+  count++;
+}
+```
+
+Another module can access the same counter through both static and dynamic imports. The namespace object is shared too.
+
+```js
+import * as counter from "./counter.js";
+
+counter.increment();
+
+const sameCounter = await import("./counter.js");
+console.log(sameCounter === counter); // true
+console.log(sameCounter.count); // 1
+
+sameCounter.increment();
+console.log(counter.count); // 2
+```
+
+JavaScript provides no standard API for clearing the module cache. If callers need independent state, the module can export a function that creates it:
+
+```js
+export function createCounter() {
+  let count = 0;
+  return {
+    increment() {
+      return ++count;
+    },
+  };
+}
+```
+
+Alternatively, you can add a useless query or fragment to your URL specifier (see [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import#module_namespace_object)).
 
 ## Controlling import phases
 
-Finish with source imports and deferred evaluation as applications of the lifecycle already explained. A comparison table should show what each form loads, links, evaluates, and returns. Link to the detailed references and distinguish implementation availability from the source-import and deferred-evaluation proposals.
+Ordinary `import` declarations trigger the whole [load-link-evaluate process](#from_module_source_to_execution). _Import phase modifiers_ let the importer pause the process at a certain stage. The importer itself can continue through linking and evaluation later, when it actually needs to.
+
+With [`import source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/source), the process is stopped before _loading_ (although the target module itself is loaded). The imported value is a [_module source object_](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AbstractModuleSource), which can be linked and evaluated using other mechanisms. Using JavaScript source imports as defined by the [ECMAScript Module Phase Imports proposal](https://github.com/tc39/proposal-esm-phase-imports):
+
+```js
+// -- main.js --
+import source formattersSource from "./formatters.js";
+import config from "./config.js";
+
+process.stdin.on("data", async (data) => {
+  if (data.toString().trim() !== "Hi") return;
+  const { greet } = await import(formattersSource);
+  greet("Josh", config.locale);
+});
+```
+
+After `main.js` evaluates, `formatters.js` has been parsed, but its dependencies have not been traversed through the source import. `logger.js` has not been requested. `config.js` has evaluated because `main.js` imports it normally:
+
+![main.js and config.js have evaluated. The source import reaches formatters.js, which is parsed but not linked or evaluated. Its dependencies have not been traversed: logger.js is not loaded, while config.js is already available through main.js.](module-source-phase.svg)
+
+When the listener receives `Hi`, it passes the module source object to `import()`. This starts loading `formatters.js`'s dependencies, reusing `config.js` and loading `logger.js`, then links and evaluates the remaining modules. The promise fulfills with the namespace after evaluation succeeds. Repeated `Hi` inputs reuse the same module instance, without causing another evaluation.
+
+With [`import defer`](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer), the process is stopped before _evaluation_ (but asynchronous evaluation, if any, remains eager). The imported value is a [_deferred module namespace object_](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer#deferred_module_namespace_object). For example:
+
+```js
+// -- main.js --
+import defer * as formatters from "./formatters.js";
+import config from "./config.js";
+
+process.stdin.on("data", (data) => {
+  if (data.toString().trim() !== "Hi") return;
+  formatters.greet("Josh", config.locale);
+});
+```
+
+Assuming the original synchronous modules and no other imports, `main.js` can finish evaluating with `formatters.js` and `logger.js` still linked but unevaluated. `config.js` evaluates because `main.js` also imports it normally:
+
+![main.js and config.js have evaluated. formatters.js and logger.js are linked but unevaluated. The deferred branch stops before evaluation, while its shared dependency config.js is already evaluated through the ordinary import from main.js.](module-defer-phase.svg)
+
+When the listener receives `Hi`, reading `formatters.greet` triggers synchronous evaluation of `logger.js` and then `formatters.js`, reusing the already evaluated `config.js`. If evaluation throws, the property access throws. Loading and linking errors, however, have already been checked before `main.js` executes.
+
+Deferred imports can also be nested, creating a pausing boundary at each `defer`. In the following example, `a.js` defers `b.js`, which defers `c.js`, which in turn defers `d.js`. The other imports are ordinary imports. All modules are synchronous. Each timer reads a property of a deferred namespace, triggering the next stage of evaluation. Each timer has a one-second delay measured from when it is scheduled, so the stages occur roughly 1, 2, and 3 seconds after startup.
+
+At startup, all seven modules are loaded and linked, but only `a.js` evaluates. It schedules a timer without accessing `b`'s properties:
+
+![After startup, a.js is evaluated. b.js, c.js, d.js, e.js, f.js, and g.js are linked but unevaluated.](module-defer-nested-1.svg)
+
+When the first timer runs, reading `b.x` evaluates `e.js`, `f.js`, and then `b.js`. Evaluating `b.js` schedules another timer. Its deferred import of `c.js` does not evaluate it, so `c.js`, `d.js`, and `g.js` remain linked:
+
+![After the first timer, a.js, e.js, f.js, and b.js are evaluated. c.js, d.js, and g.js remain linked.](module-defer-nested-2.svg)
+
+When the second timer runs, reading `c.x` evaluates `g.js` and then `c.js`. Evaluating `c.js` schedules the third timer, without accessing `d`'s properties yet:
+
+![After the second timer, g.js and c.js have also evaluated. Only d.js remains linked but unevaluated.](module-defer-nested-3.svg)
+
+When the third timer runs, reading `d.x` evaluates `d.js`, reusing the already evaluated `e.js` and `g.js`. All modules have now evaluated:
+
+![After the third timer, all seven modules are evaluated. d.js reuses e.js and g.js.](module-defer-nested-4.svg)
+
+As explained in [Tainting effects of top-level await](#tainting_effects_of_top-level_await), modules containing top-level `await` and their dependencies must execute eagerly, immediately following the initial linking. Only the remaining synchronous execution can stay deferred.
+
+For both kinds of phase modifiers, note that the modifier acts on the _import_, not on the _target module_. This means another ordinary import can cause the same module to evaluate earlier, and no separate cache entries are created for deferred and eager imports of the same module. For more information, see the caching semantics of [`import defer`](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer#caching_semantics) and [`import source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/source#caching_semantics).
+
+Just like `import` is to `import()`, `import source` and `import defer` declarations also have dynamic [`import.source()`](/en-US/docs/Web/JavaScript/Reference/Operators/import/source) and [`import.defer()`](/en-US/docs/Web/JavaScript/Reference/Operators/import/defer) forms, which start their requests when the expressions evaluate.
+
+## See also
+
+- [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules)
+- [Using modules on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web)
+- [Modules across platforms](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms)

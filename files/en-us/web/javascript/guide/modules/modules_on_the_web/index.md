@@ -341,6 +341,37 @@ import text from "./module" with { type: "text" };
 // The server may respond with text: `Hello world!`
 ```
 
+## Module caching
+
+[Module caching](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#module_caching) lets imports reuse a module and its state. On the web, the HTML specification defines which requests share a module.
+
+In browsers, the [module map](https://html.spec.whatwg.org/multipage/webappapis.html#module-map) uses the resolved request URL and the module type as its key. Different specifier strings can therefore identify the same module. For example, although the following two requests use different string specifiers, they point to the same module (assuming there's no import map that changes the resolution):
+
+```js
+// -- https://example.com/main.js --
+import * as config1 from "./config.js";
+import * as config2 from "https://example.com/config.js";
+
+console.log(config1 === config2); // true
+```
+
+The module type, selected through [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with), is also part of the key, so requesting a URL with `{ type: "json" }` does not reuse the entry for that URL without a `type` (which is implicitly JavaScript). Separate documents and workers have separate module maps, so importing a module in a page and in its worker does not share the module's variables between them.
+
+Module caching is separate from [HTTP caching](/en-US/docs/Web/HTTP/Guides/Caching). HTTP caching can reuse response bytes; module caching reuses the module's identity and state. A new document can evaluate a module again even if its source comes from the HTTP cache. Conversely, `Cache-Control: no-store` does not make an already evaluated module execute again on each import.
+
+Browsers treat URLs with different query strings or fragments as different module identities, even if they retrieve identical source code:
+
+```js
+import * as config1 from "./config.js?version=1";
+import * as config2 from "./config.js?version=2";
+
+console.log(config1 === config2); // false
+```
+
+This creates two module instances from the same source code. Any further dependencies are still shared—if both instances import `"./logger.js"`, that specifier still resolves to the same URL from both, so they share `logger.js`.
+
+For [loading errors](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#errors_from_loading), the [HTML specification](https://html.spec.whatwg.org/multipage/webappapis.html#fetch-a-single-module-script) requires failed fetches, including HTTP error responses, to be removed from the module map so a later import can retry. The HTTP cache may still supply a cached error response. Parse errors, however, are retained in the module map, so retrying the same module does not fetch corrected source.
+
 ## The import.meta object
 
 The [Modules](/en-US/docs/Web/JavaScript/Guide/Modules#module_metadata) guide also introduced the [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta) object and mentioned that _all_ of its properties are host-defined.
