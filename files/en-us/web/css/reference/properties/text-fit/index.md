@@ -7,7 +7,7 @@ browser-compat: css.properties.text-fit
 sidebar: cssref
 ---
 
-The **`text-fit`** [CSS](/en-US/docs/Web/CSS) property can be used to scale the rendered font size of text nodes (and other inline content) so that they fit exactly within the inline dimension of their containing boxes, optionally up or down to a specified **scaling factor**.
+The **`text-fit`** [CSS](/en-US/docs/Web/CSS) property can be used to scale the rendered font size of text nodes (and other inline content) so that they fit exactly within the inline dimension of their containing boxes, optionally limited by a maximum or minimum **scaling factor**.
 
 ## Syntax
 
