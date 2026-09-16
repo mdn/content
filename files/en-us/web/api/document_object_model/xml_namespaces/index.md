@@ -317,7 +317,9 @@ console.log(child2.prefix); // mdn
 console.log(child2.localName); // child
 ```
 
-The idea is the same for attributes. {{domxref("Document.createAttribute()")}} always takes a local name and creates an `Attr` node in the `null` namespace. Most attributes parsed from XML source code live in the `null` namespace anyway (if there's no explicit prefix), but if you do want to use an explicit namespace, you should use {{domxref("Document.createAttributeNS()")}} instead.
+The {{domxref("DOMImplementation/createDocument", "document.implementation.createDocument()")}} method creates an {{domxref("XMLDocument")}}. It takes a `namespaceURI` and a `qualifiedName`, which are used to initialize the {{domxref("Document/documentElement", "documentElement")}}.
+
+The idea is the same for attributes. {{domxref("Document.createAttribute()")}} always takes a local name and creates an `Attr` node in the `null` namespace. Most attributes parsed from XML source code live in the `null` namespace anyway (if there's no explicit prefix), but if you do want to use an explicit namespace, you should use {{domxref("Document.createAttributeNS()")}} instead, which also takes `namespaceURI` and `qualifiedName`.
 
 Note that the prefix, after parsing, has no significance and does not need to be declared with `xmlns:`. It is just a piece of data stored inside the node. For example, above we used the `mdn:` prefix without ever declaring it with `xmlns:mdn`. The namespaced creation methods like `createElementNS` and `createAttributeNS` do enforce certain invariants.
 
