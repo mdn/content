@@ -79,7 +79,7 @@ inset-inline-start: anchor-size(width);
 /* <percentage>s of the width or height of the containing block */
 inset-inline-start: 10%;
 
-/* Keyword values */
+/* Keyword value */
 inset-inline-start: auto;
 
 /* Global values */

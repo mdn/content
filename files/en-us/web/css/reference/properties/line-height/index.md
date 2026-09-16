@@ -50,7 +50,7 @@ line-height: 32px;
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 line-height: normal;
 
 /* Unitless values: use this number multiplied

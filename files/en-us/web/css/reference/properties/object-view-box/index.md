@@ -67,7 +67,7 @@ object-view-box: none;
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 object-view-box: none;
 
 /* <basic-shape-rect> functions */

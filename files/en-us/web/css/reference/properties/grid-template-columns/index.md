@@ -59,7 +59,7 @@ grid-template-columns: 8ch auto;
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 grid-template-columns: none;
 
 /* <track-list> values */

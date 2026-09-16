@@ -78,7 +78,7 @@ inset-block-start: calc(anchor-size(--my-anchor height, 70px) * 2);
 /* <percentage>s of the width or height of the containing block */
 inset-block-start: 10%;
 
-/* Keyword values */
+/* Keyword value */
 inset-block-start: auto;
 
 /* Global values */

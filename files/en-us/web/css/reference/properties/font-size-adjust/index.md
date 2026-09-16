@@ -14,7 +14,7 @@ Legibility can become an issue when the first-choice {{ Cssxref("font-family") }
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 font-size-adjust: none;
 
 /* One value: <number> or from-font */

@@ -12,7 +12,7 @@ The **`scroll-timeline-name`** [CSS](/en-US/docs/Web/CSS) property is used to de
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 scroll-timeline-name: none;
 
 /* Named timeline */

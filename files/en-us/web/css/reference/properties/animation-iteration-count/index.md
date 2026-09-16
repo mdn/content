@@ -109,7 +109,7 @@ update();
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 animation-iteration-count: infinite;
 
 /* <number> values */

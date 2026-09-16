@@ -59,7 +59,7 @@ grid-template-rows: 3ch auto minmax(10px, 60px);
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 grid-template-rows: none;
 
 /* <track-list> values */

@@ -12,7 +12,7 @@ The **`view-timeline-name`** [CSS](/en-US/docs/Web/CSS) property specifies the n
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 view-timeline-name: none;
 
 /* Custom identifier */

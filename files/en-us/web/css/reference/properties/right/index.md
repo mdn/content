@@ -73,7 +73,7 @@ right: anchor-size(--my-anchor height, 65px);
 /* <percentage>s of the width of the containing block */
 right: 10%;
 
-/* Keyword values */
+/* Keyword value */
 right: auto;
 
 /* Global values */

@@ -12,7 +12,7 @@ The **`line-clamp`** [CSS](/en-US/docs/Web/CSS) property allows limiting of the 
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 line-clamp: none;
 
 /* <integer> value only */

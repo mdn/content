@@ -73,7 +73,7 @@ left: calc(anchor-size(--my-anchor inline, 100px) * 2);
 /* <percentage>s of the width of the containing block */
 left: 10%;
 
-/* Keyword values */
+/* Keyword value */
 left: auto;
 
 /* Global values */

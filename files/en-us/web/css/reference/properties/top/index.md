@@ -86,7 +86,7 @@ top: anchor-size(--my-anchor self-block, 10%);
 /* <percentage>s of the height of the containing block */
 top: 10%;
 
-/* Keyword values */
+/* Keyword value */
 top: auto;
 
 /* Global values */

@@ -55,7 +55,7 @@ backdrop-filter: sepia(90%);
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 backdrop-filter: none;
 
 /* URL to SVG filter */
