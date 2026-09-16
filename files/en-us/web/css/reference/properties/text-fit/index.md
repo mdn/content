@@ -50,7 +50,7 @@ Specified as one the keywords `none`, `grow`, or `shrink`, plus optionally one o
   - : All of the lines of the text node are scaled with their own scaling factor. The last line of the text node, and any lines that end in a forced break (for example, due to a {{htmlelement("br")}} element) have no text scaling applied. This keyword has no effect if `none` is specified as the first keyword.
 - `per-line-all`
   - : All of the lines of the text node are scaled with their own scaling factor, including the last line and lines that end in a forced break. This keyword has no effect if `none` is specified as the first keyword.
-- {{cssxref("percentage")}}
+- {{cssxref("&lt;percentage&gt;")}}
   - : Specifies the maximum (when `grow` is specified) or minimum (when `shrink` is specified) scaling factor. This must be `100%` or greater if `grow` is specified, or between `0%` and `100%` inclusive if `shrink` is specified, otherwise the percentage has no effect.
 
 ## Description
