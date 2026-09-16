@@ -14,7 +14,7 @@ This property applies to any SVG shape or text-content element (see {{SVGAttr("s
 ## Syntax
 
 ```css
-/* Keyword */
+/* Keyword values */
 stroke-dashoffset: none;
 
 /* Length and percentage values */

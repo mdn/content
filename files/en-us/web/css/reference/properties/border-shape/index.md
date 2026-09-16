@@ -16,7 +16,7 @@ The **`border-shape`** [CSS](/en-US/docs/Web/CSS) property defines an element's 
 ## Syntax
 
 ```css
-/* Keyword */
+/* Keyword values */
 border-shape: none;
 
 /* Single <basic-shape> value */

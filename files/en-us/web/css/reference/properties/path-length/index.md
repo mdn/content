@@ -22,7 +22,7 @@ The `path-length` property only applies to {{SVGElement("circle")}}, {{SVGElemen
 ## Syntax
 
 ```css
-/* Keywords */
+/* Keyword values */
 path-length: none;
 
 /* <length> values */
