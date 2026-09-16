@@ -86,7 +86,7 @@ inset-block: 10em anchor-size(--my-anchor height, 10%);
 /* <percentage>s of the width or height of the containing block */
 inset-block: 10% 5%;
 
-/* Keyword value */
+/* Keyword values */
 inset-block: auto;
 
 /* Global values */

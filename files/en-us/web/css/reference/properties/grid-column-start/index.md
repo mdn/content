@@ -61,7 +61,7 @@ grid-column-start: span 2;
 ## Syntax
 
 ```css
-/* Keyword value */
+/* Keyword values */
 grid-column-start: auto;
 
 /* <custom-ident> value */

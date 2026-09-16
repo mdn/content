@@ -92,7 +92,7 @@ inset: anchor-size(block) calc(anchor(50%) + 10px) auto
 /* <percentage>s of the width (left/right) or height (top/bottom) of the containing block */
 inset: 10% 5% 5% 5%;
 
-/* Keyword value */
+/* Keyword values */
 inset: auto;
 
 /* Global values */

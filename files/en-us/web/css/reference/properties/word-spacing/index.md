@@ -57,7 +57,7 @@ section {
 ## Syntax
 
 ```css
-/* Keyword value */
+/* Keyword values */
 word-spacing: normal;
 
 /* <length> values */

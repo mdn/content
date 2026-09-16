@@ -79,7 +79,7 @@ inset-inline-end: anchor-size(height);
 /* <percentage>s of the width or height of the containing block */
 inset-inline-end: 10%;
 
-/* Keyword value */
+/* Keyword values */
 inset-inline-end: auto;
 
 /* Global values */

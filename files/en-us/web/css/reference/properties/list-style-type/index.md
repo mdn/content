@@ -106,7 +106,7 @@ list-style-type: "-";
 /* Identifier matching an @counter-style rule */
 list-style-type: custom-counter-style;
 
-/* Keyword value */
+/* Keyword values */
 list-style-type: none;
 
 /* Global values */

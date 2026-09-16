@@ -61,7 +61,7 @@ grid-row-end: span 3;
 ## Syntax
 
 ```css
-/* Keyword value */
+/* Keyword values */
 grid-row-end: auto;
 
 /* <custom-ident> values */

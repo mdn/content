@@ -12,7 +12,7 @@ The **`mask-border-width`** [CSS](/en-US/docs/Web/CSS) property sets the width o
 ## Syntax
 
 ```css
-/* Keyword value */
+/* Keyword values */
 mask-border-width: auto;
 
 /* <length> value */

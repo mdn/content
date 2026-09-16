@@ -130,7 +130,7 @@ For a positioned box (that is, one with any `position` other than `static`), the
 ## Syntax
 
 ```css
-/* Keyword value */
+/* Keyword values */
 z-index: auto;
 
 /* <integer> values */

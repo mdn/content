@@ -14,7 +14,7 @@ The {{cssxref("mask-border-slice")}} property is used to divide the source image
 ## Syntax
 
 ```css
-/* Keyword value */
+/* Keyword values */
 mask-border-source: none;
 
 /* <image> values */

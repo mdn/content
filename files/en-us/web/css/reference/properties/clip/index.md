@@ -17,7 +17,7 @@ The **`clip`** [CSS](/en-US/docs/Web/CSS) property defines a visible portion of 
 ## Syntax
 
 ```css
-/* Keyword value */
+/* Keyword values */
 clip: auto;
 
 /* <shape> values */

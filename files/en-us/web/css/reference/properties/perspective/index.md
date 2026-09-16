@@ -100,7 +100,7 @@ perspective: 5.5cm;
 ## Syntax
 
 ```css
-/* Keyword value */
+/* Keyword values */
 perspective: none;
 
 /* <length> values */

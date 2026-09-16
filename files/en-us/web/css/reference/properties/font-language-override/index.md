@@ -16,7 +16,7 @@ The `font-language-override` property lets you override the typeface behavior fo
 ## Syntax
 
 ```css
-/* Keyword value */
+/* Keyword values */
 font-language-override: normal;
 
 /* <string> values */

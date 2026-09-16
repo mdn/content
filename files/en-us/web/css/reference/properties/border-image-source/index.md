@@ -59,7 +59,7 @@ border-image-source: none;
 ## Syntax
 
 ```css
-/* Keyword value */
+/* Keyword values */
 border-image-source: none;
 
 /* <image> values */

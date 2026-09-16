@@ -113,7 +113,7 @@ list-style: url("img/pip.svg") inside;
 /* three values */
 list-style: lower-roman url("img/shape.png") outside;
 
-/* Keyword value */
+/* Keyword values */
 list-style: none;
 
 /* Global values */

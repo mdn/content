@@ -73,7 +73,7 @@ bottom: anchor-size(width);
 /* <percentage>s of the height of the containing block */
 bottom: 10%;
 
-/* Keyword value */
+/* Keyword values */
 bottom: auto;
 
 /* Global values */

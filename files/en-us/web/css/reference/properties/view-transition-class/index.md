@@ -16,7 +16,7 @@ The **`view-transition-class`** [CSS](/en-US/docs/Web/CSS) property provides the
 view-transition-class: card;
 view-transition-class: card fast-slide;
 
-/* Keyword value */
+/* Keyword values */
 view-transition-class: none;
 
 /* Global values */

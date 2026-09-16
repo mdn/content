@@ -55,7 +55,7 @@ border-image-width: 20% 8%;
 ## Syntax
 
 ```css
-/* Keyword value */
+/* Keyword values */
 border-image-width: auto;
 
 /* <length> value */

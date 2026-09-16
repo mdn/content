@@ -82,7 +82,7 @@ inset-inline: 400px anchor-size(--my-anchor height, 100px);
 /* <percentage>s of the width or height of the containing block */
 inset-inline: 10% 5%;
 
-/* Keyword value */
+/* Keyword values */
 inset-inline: auto;
 
 /* Global values */

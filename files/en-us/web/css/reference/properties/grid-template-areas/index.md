@@ -78,7 +78,7 @@ grid-template-areas:
 ## Syntax
 
 ```css
-/* Keyword value */
+/* Keyword values */
 grid-template-areas: none;
 
 /* <string> values */

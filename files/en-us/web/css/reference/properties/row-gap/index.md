@@ -58,7 +58,7 @@ row-gap: 20px;
 ## Syntax
 
 ```css
-/* Keyword value */
+/* Keyword values */
 row-gap: normal;
 
 /* <length-percentage> value */

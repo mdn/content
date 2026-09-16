@@ -12,7 +12,7 @@ The **`mask-image`** [CSS](/en-US/docs/Web/CSS) property sets the image that is 
 ## Syntax
 
 ```css
-/* Keyword value */
+/* Keyword values */
 mask-image: none;
 
 /* <mask-source> value */

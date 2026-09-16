@@ -50,7 +50,7 @@ column-width: 8rem;
 ## Syntax
 
 ```css
-/* Keyword value */
+/* Keyword values */
 column-count: auto;
 
 /* <integer> value */
