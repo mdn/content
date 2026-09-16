@@ -1,18 +1,13 @@
 ---
-title: Firefox 156 release notes for developers (Beta)
-short-title: Firefox 156 (Beta)
+title: Firefox 156 release notes for developers (Stable)
+short-title: Firefox 156 (Stable)
 slug: Mozilla/Firefox/Releases/156
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 156 that affect developers.
-Firefox 156 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [September 15, 2026](https://whattrainisitnow.com/release/?version=156).
-
-> [!NOTE]
-> The release notes for this Firefox version are still a work in progress.
-
-<!-- Authors: Please uncomment any headings you are writing notes for -->
+Firefox 156 was released on [September 15, 2026](https://whattrainisitnow.com/release/?version=156).
 
 ## Changes for web developers
 
@@ -31,15 +26,9 @@ Firefox 156 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - Fixed the position of the "Device Settings" modal in [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html).
   ([Firefox bug 2062153](https://bugzil.la/2062153)).
 
-<!-- ### HTML -->
+### HTML
 
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### MathML -->
-
-<!-- #### Removals -->
+No notable changes.
 
 ### SVG
 
@@ -47,8 +36,6 @@ Firefox 156 is the current [Beta version of Firefox](https://www.firefox.com/en-
   ([Firefox bug 2066045](https://bugzil.la/2066045)).
 - The {{domxref("SVGSVGElement.currentScale")}} setter is now a no-op on a nested `<svg>` element, as required by the specification. It continues to work on the outermost `<svg>` element.
   ([Firefox bug 2063188](https://bugzil.la/2063188)).
-
-<!-- #### Removals -->
 
 ### CSS
 
@@ -63,8 +50,6 @@ Firefox 156 is the current [Beta version of Firefox](https://www.firefox.com/en-
   Use {{cssxref("scrollbar-width")}} and {{cssxref("scrollbar-color")}} instead.
   ([Firefox bug 2062782](https://bugzil.la/2062782)).
 
-<!-- #### Removals -->
-
 ### JavaScript
 
 - {{jsxref("Promise.try()")}} now resolves the value returned by its callback using `PromiseResolve`, so a promise returned by the callback is passed through rather than wrapped in a new promise.
@@ -73,19 +58,11 @@ Firefox 156 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - [`using`](/en-US/docs/Web/JavaScript/Reference/Statements/using) declarations can no longer be reassigned, matching the const-like semantics required by the specification. Previously such a binding could be silently mutated.
   ([Firefox bug 2040286](https://bugzil.la/2040286)).
 
-<!-- #### Removals -->
-
-<!-- ### HTTP -->
-
-<!-- #### Removals -->
-
 ### Security
 
 - The `ffdhe2048` and `ffdhe3072` finite-field Diffie-Hellman groups are no longer offered by default in TLS handshakes.
   Servers that support only these groups will fail to negotiate a connection; nearly all servers support ECDHE key exchange instead.
   ([Firefox bug 1992340](https://bugzil.la/1992340)).
-
-<!-- #### Removals -->
 
 ### APIs
 
@@ -107,12 +84,6 @@ Firefox 156 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - The `alwaysNegotiateDataChannels` member of the configuration object passed to the {{domxref("RTCPeerConnection.RTCPeerConnection", "RTCPeerConnection()")}} constructor is now supported. When set to `true`, the SDP produced by the connection always includes a data channel m-line, so {{domxref("RTCPeerConnection.createDataChannel()")}} can be called later without requiring a new round of negotiation. The member defaults to `false`, is returned by {{domxref("RTCPeerConnection.getConfiguration()")}}, and cannot be changed by {{domxref("RTCPeerConnection.setConfiguration()")}}. ([Firefox bug 2062561](https://bugzil.la/2062561)).
 
-<!-- #### Removals -->
-
-<!-- ### WebAssembly -->
-
-<!-- #### Removals -->
-
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
 #### General
@@ -132,10 +103,6 @@ Firefox 156 is the current [Beta version of Firefox](https://www.firefox.com/en-
 ## Changes for add-on developers
 
 - The [`theme`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) manifest key adds the `backgrounds_area` property. This property enables a theme to specify where its background images and gradients are drawn. Setting it to `"window"` draws them across the whole browser window, while `"top_toolbars"` restricts them to the horizontal toolbars at the top of the window. When `backgrounds_area` is omitted or set to `"auto"`, Firefox chooses the area based on `properties.additional_backgrounds_alignment`. ([Firefox bug 2059526](https://bugzil.la/2059526))
-
-<!-- ### Removals -->
-
-<!-- ### Other -->
 
 ## Experimental web features
 
