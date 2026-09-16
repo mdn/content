@@ -3,7 +3,7 @@ title: "promote_low_f32x4: Wasm SIMD conversion instruction"
 short-title: promote_low_f32x4
 slug: WebAssembly/Reference/SIMD/conversion/promote_low_f32x4
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.promote_low_f32x4
+browser-compat: webassembly.instructions.promote_low_f32x4
 sidebar: webassemblysidebar
 ---
 
@@ -65,7 +65,3 @@ value_type.promote_low_f32x4
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD conversion instructions](/en-US/docs/WebAssembly/Reference/SIMD/conversion)

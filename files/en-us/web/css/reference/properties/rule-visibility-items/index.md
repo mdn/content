@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`rule-visibility-items`** [CSS](/en-US/docs/Web/CSS) shorthand property defines whether rule segments are painted in both row and column gaps adjacent to empty areas.
+The **`rule-visibility-items`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property defines whether rule segments are painted in both row and column gaps adjacent to empty areas.
 
 ## Constituent properties
 
@@ -82,6 +82,8 @@ rule-visibility-items: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `all`
   - : Rules should be painted in all gap segments, regardless of whether adjacent areas contain an item.

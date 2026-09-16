@@ -73,7 +73,7 @@ Next, you should configure your server to map the .pac filename extension to the
 
 > [!NOTE]
 >
-> - The JavaScript function should always be saved to a file by itself but not be embedded in a HTML file or any other file.
+> - The JavaScript function should always be saved to a file by itself but not be embedded in an HTML file or any other file.
 > - The examples at the end of this document are complete. There is no additional syntax needed to save it into a file and use it. (Of course, the JavaScripts must be edited to reflect your site's domain name and/or subnets.)
 
 ## Predefined functions and environment

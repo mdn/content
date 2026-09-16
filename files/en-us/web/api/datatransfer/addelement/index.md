@@ -11,13 +11,9 @@ browser-compat: api.DataTransfer.addElement
 
 {{APIRef("HTML Drag and Drop API")}}{{SeeCompatTable}}{{Non-standard_header}}
 
-The **`DataTransfer.addElement()`** method sets the drag source
-to the given element. This element will be the element to which {{domxref("HTMLElement/drag_event", "drag")}} and
-{{domxref("HTMLElement/dragend_event", "dragend")}} events are fired, and not the default target (the node that was
-dragged).
+The **`addElement()`** method of the {{domxref("DataTransfer")}} interface sets the drag source to the given element. This element will be the element to which {{domxref("HTMLElement/drag_event", "drag")}} and {{domxref("HTMLElement/dragend_event", "dragend")}} events are fired, and not the default target (the node that was dragged).
 
-> [!NOTE]
-> This method is Firefox-specific.
+During a drag operation, this method can only be used in the handler for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event, because that's the only time the drag operation's data store is writable. Calling it from any other drag event throws a `NoModificationAllowedError` {{domxref("DOMException")}}. See [Modifying the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#modifying_the_drag_data_store) for details.
 
 ## Syntax
 
@@ -33,6 +29,11 @@ addElement(element)
 ### Return value
 
 None ({{jsxref("undefined")}}).
+
+### Exceptions
+
+- `NoModificationAllowedError` {{domxref("DOMException")}}
+  - : Thrown if the drag data store is not in read/write mode.
 
 ## Examples
 

@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLFontElement.size
 ---
 
-{{deprecated_header}}{{ APIRef("HTML DOM") }}
+{{ APIRef("HTML DOM") }}
 
 The obsolete
 **`HTMLFontElement.size`** property is a

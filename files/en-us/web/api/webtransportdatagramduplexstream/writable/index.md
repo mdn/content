@@ -9,11 +9,13 @@ status:
 browser-compat: api.WebTransportDatagramDuplexStream.writable
 ---
 
-{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}{{deprecated_header}}{{non-standard_header}}
+{{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}{{non-standard_header}}
 
 The **`writable`** read-only property of the {{domxref("WebTransportDatagramDuplexStream")}} interface returns a {{domxref("WritableStream")}} instance that can be used to unreliably write outgoing datagrams to the stream.
 
 "Unreliably" means that transmission of data is not guaranteed, nor is arrival in a specific order. This is fine in some situations and provides very fast delivery. For example, you might want to transmit regular game state updates where each message supersedes the last one that arrives, and order is not important.
+
+{{domxref("WebTransportDatagramDuplexStream.createWritable", "createWritable()")}} should be used by preference.
 
 ## Value
 
@@ -25,7 +27,7 @@ See the main {{domxref("WebTransportDatagramDuplexStream")}} interface page.
 
 ## Specifications
 
-{{Specifications}}
+This feature has been removed from the specification.
 
 ## Browser compatibility
 

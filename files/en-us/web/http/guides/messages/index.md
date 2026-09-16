@@ -272,7 +272,7 @@ In requests, there are the following pseudo-headers:
 
 In responses, there is only one pseudo-header, and that's the `:status` which provides the code of the response.
 
-We can make a HTTP/2 request using [nghttp](https://github.com/nghttp2/nghttp2) to fetch `example.com`, which will print out the request in a form that's more readable.
+We can make an HTTP/2 request using [nghttp](https://github.com/nghttp2/nghttp2) to fetch `example.com`, which will print out the request in a form that's more readable.
 You can make the request using this command where the `-n` option discards the downloaded data and `-v` is for 'verbose' output, showing reception and transmission of frames:
 
 ```bash

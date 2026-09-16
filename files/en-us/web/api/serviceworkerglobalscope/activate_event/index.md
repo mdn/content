@@ -28,10 +28,6 @@ An {{domxref("ExtendableEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("ExtendableEvent")}}
 
-## Event properties
-
-_Doesn't implement any specific properties, but inherits properties from its parent, {{domxref("Event")}}._
-
 ## Examples
 
 The following snippet shows how you could use an `activate` event handler to upgrade a cache.

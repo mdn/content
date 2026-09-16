@@ -83,7 +83,7 @@ console.log("Stream complete");
 summaryOutput.textContent = summary;
 ```
 
-## Cancelling operations and destroying instances
+## Canceling operations and destroying instances
 
 You can cancel a pending `create()`, `summarize()`, or `summarizeStreaming()` operation using an {{domxref("AbortController")}}, with the associated {{domxref("AbortSignal")}} being included inside the method options object as a `signal` property value. For example, aborting a `Summarizer.create()` operation would look like this:
 

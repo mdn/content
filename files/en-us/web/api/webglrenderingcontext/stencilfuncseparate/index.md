@@ -12,7 +12,7 @@ The **`WebGLRenderingContext.stencilFuncSeparate()`** method of
 the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets the front and/or back
 function and reference value for stencil testing.
 
-Stencilling enables and disables drawing on a per-pixel basis. It is typically used in
+Stenciling enables and disables drawing on a per-pixel basis. It is typically used in
 multipass rendering to achieve special effects.
 
 ## Syntax

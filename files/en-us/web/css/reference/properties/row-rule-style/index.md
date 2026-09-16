@@ -3,9 +3,13 @@ title: "`row-rule-style` CSS property"
 short-title: row-rule-style
 slug: Web/CSS/Reference/Properties/row-rule-style
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.row-rule-style
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`row-rule-style`** [CSS](/en-US/docs/Web/CSS) property defines the line style of the lines drawn between rows in multi-row grid, flex, and multi-col layouts.
 
@@ -79,7 +83,7 @@ row-rule-style: unset;
 The `row-rule-style` property accepts a comma-separated list of values, including:
 
 - `<line-style>`
-  - : A {{cssxref("&lt;line-style&gt;")}}: one of `none`, `hidden`, `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset`, or `outset`. The default value is`none`.
+  - : A {{cssxref("&lt;line-style&gt;")}}: one of `none`, `hidden`, `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset`, or `outset`. The default value is `none`.
 
 - `<repeat-line-style>`
   - : A {{cssxref("repeat()")}} function, with the first argument being an {{cssxref("&lt;integer&gt;")}} of `1` or more, and subsequent arguments being {{cssxref("&lt;line-style&gt;")}} values. The integer specifies how many times the `<line-style>` values should be repeated.
@@ -201,8 +205,6 @@ This example demonstrates using the `repeat()` function within the `row-rule-sty
 
 ```css live-sample___func live-sample___auto
 ul {
-  --base: 0.5vw;
-  --secondary: 1vw;
   row-rule-style: double, repeat(3, inset, dashed), double;
 }
 ```

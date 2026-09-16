@@ -9,6 +9,8 @@ sidebar: cssref
 
 The **`text-decoration-line`** [CSS](/en-US/docs/Web/CSS) property sets the kind of decoration that is used on text in an element, such as an underline or overline.
 
+When setting multiple line-decoration properties at once, it may be more convenient to use the {{cssxref("text-decoration")}} shorthand property instead.
+
 {{InteractiveExample("CSS Demo: text-decoration-line")}}
 
 ```css interactive-example-choice
@@ -59,8 +61,6 @@ p {
 }
 ```
 
-When setting multiple line-decoration properties at once, it may be more convenient to use the {{cssxref("text-decoration")}} shorthand property instead.
-
 ## Syntax
 
 ```css
@@ -85,9 +85,9 @@ text-decoration-line: revert-layer;
 text-decoration-line: unset;
 ```
 
-The `text-decoration-line` property is specified as `none`, or **one or more** space-separated values from the list below.
-
 ### Values
+
+This property is specified either as `none` or a space-separated list of keyword values chosen from the list below:
 
 - `none`
   - : Produces no text decoration.

@@ -1,12 +1,13 @@
 ---
-title: "rem: Wasm text instruction"
+title: "rem: Wasm numeric instruction"
 short-title: rem
 slug: WebAssembly/Reference/Numeric/rem
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.rem
 sidebar: webassemblysidebar
 ---
 
-The **`rem`** instructions, short for _remainder_, are used to calculate the remainder left over when one integer is divided by another integer, similar to the **`%`** operator in other languages. The **`rem`** instructions are only available for the integer types and not for the floating point types.
+The **`rem`** [numeric instructions](/en-US/docs/WebAssembly/Reference/Numeric), short for _remainder_, are used to calculate the remainder left over when one integer is divided by another integer, similar to the **`%`** operator in other languages. The **`rem`** instructions are only available for the integer types and not for the floating point types.
 
 {{InteractiveExample("Wat Demo: rem", "tabbed-taller")}}
 
@@ -49,3 +50,11 @@ i32.rem
 | `i32.rem_u` | `0x70`        |
 | `i64.rem_s` | `0x81`        |
 | `i64.rem_u` | `0x82`        |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

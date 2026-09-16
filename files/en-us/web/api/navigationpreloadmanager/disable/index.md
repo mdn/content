@@ -59,4 +59,4 @@ addEventListener("activate", (event) => {
 
 ## See also
 
-{{domxref("NavigationPreloadManager.enable()")}}
+- {{domxref("NavigationPreloadManager.enable()")}}

@@ -31,6 +31,11 @@ A string. The return value depends on the subtype of the `PerformanceEntry` obje
 
     The entry instance will be a {{domxref("PerformanceEventTiming")}} object.
 
+- `interaction-contentful-paint`
+  - : Reports the largest paint an element triggered on screen after an interaction.
+
+    The entry instance will be a {{domxref("InteractionContentfulPaint")}} object.
+
 - `largest-contentful-paint`
   - : Reports the largest paint an element triggered on screen.
 
@@ -75,6 +80,11 @@ A string. The return value depends on the subtype of the `PerformanceEntry` obje
   - : Reports timing information for resources in a document.
 
     The entry instance will be a {{domxref("PerformanceResourceTiming")}} object.
+
+- `soft-navigation`
+  - : Reports the paints triggered on screen after a user interaction and a URL update triggered a {{Glossary("soft navigation")}}.
+
+    The entry instance will be a {{domxref("PerformanceSoftNavigation")}} object.
 
 - `taskattribution`
   - : Reports the type of work that contributed significantly to the long task.

@@ -7,7 +7,7 @@ browser-compat: css.properties.overflow
 sidebar: cssref
 ---
 
-The **`overflow`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) sets the desired behavior when content does not fit in the element's padding box (overflows) in the horizontal and/or vertical direction.
+The **`overflow`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets the desired behavior when content does not fit in the element's padding box (overflows) in the horizontal and/or vertical direction.
 
 {{InteractiveExample("CSS Demo: overflow")}}
 
@@ -79,9 +79,9 @@ overflow: revert-layer;
 overflow: unset;
 ```
 
-The `overflow` property is specified as one or two {{CSSXref("overflow_value", "&lt;overflow&gt;")}} keyword values.
-
 ### Values
+
+This property is specified as one or two space-separated {{CSSXref("overflow_value", "&lt;overflow&gt;")}} keyword values:
 
 - `visible`
   - : Overflow content is not clipped and may be visible outside the element's padding box. The element box is not a {{glossary("scroll container")}}. This is the default value.

@@ -81,7 +81,7 @@ The animation is initially paused so that we can start it in JavaScript.
 .progress-bar {
   width: 100%;
   height: 20px;
-  background: #eee;
+  background: #eeeeee;
   border-radius: 4px;
   overflow: hidden;
 }

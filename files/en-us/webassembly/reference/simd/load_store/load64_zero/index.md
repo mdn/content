@@ -3,7 +3,7 @@ title: "load64_zero: Wasm SIMD load/store instruction"
 short-title: load64_zero
 slug: WebAssembly/Reference/SIMD/load_store/load64_zero
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.load64_zero
+browser-compat: webassembly.instructions.load64_zero
 sidebar: webassemblysidebar
 ---
 
@@ -76,7 +76,3 @@ v128.load64_zero mem_idx offset=int align=int
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD load/store instructions](/en-US/docs/WebAssembly/Reference/SIMD/load_store)

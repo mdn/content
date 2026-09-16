@@ -46,7 +46,7 @@ A very small subset of useful named character references along with their unicod
 | €         | `&euro;`        | U+020AC            |
 | °         | `&deg;`         | U+000B0            |
 
-The full list of HTML named character references [can found in the HTML specification here](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references).
+The full list of HTML named character references [can be found in the HTML specification here](https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references).
 
 ## See also
 

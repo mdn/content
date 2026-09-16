@@ -1,12 +1,13 @@
 ---
-title: "rotl: Wasm text instruction"
+title: "rotl: Wasm numeric instruction"
 short-title: rotl
 slug: WebAssembly/Reference/Numeric/rotl
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.rotl
 sidebar: webassemblysidebar
 ---
 
-The **`rotl`** instructions, short for _rotate-left_, are used for performing a bitwise left-rotate.
+The **`rotl`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _rotate-left_, is used for performing a bitwise left-rotate.
 
 {{InteractiveExample("Wat Demo: rotl", "tabbed-taller")}}
 
@@ -64,3 +65,11 @@ i32.rotl
 | ----------- | ------------- |
 | `i32.rotl`  | `0x77`        |
 | `i64.rotl`  | `0x89`        |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

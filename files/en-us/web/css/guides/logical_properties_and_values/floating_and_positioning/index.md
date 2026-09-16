@@ -100,7 +100,7 @@ CSS positioning generally allows us to position an element in a manner relative 
 
 These properties take a length or a percentage as a value, and relate to the user's screen dimensions.
 
-In the below example, the `inset-block-start` and `inset-inline-end` properties are used to position the blue box using absolute positioning inside the area with the grey dotted border, which has `position: relative`. Change the `writing-mode` property to `vertical-rl`, or add `direction: rtl`, and see how the flow relative box stays with the text direction.
+In the below example, the `inset-block-start` and `inset-inline-end` properties are used to position the blue box using absolute positioning inside the area with the gray dotted border, which has `position: relative`. Change the `writing-mode` property to `vertical-rl`, or add `direction: rtl`, and see how the flow relative box stays with the text direction.
 
 ```html live-sample___positioning-inset
 <div class="container">

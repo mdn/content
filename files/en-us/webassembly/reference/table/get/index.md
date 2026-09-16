@@ -3,12 +3,11 @@ title: "get: Wasm table instruction"
 short-title: get
 slug: WebAssembly/Reference/Table/get
 page-type: webassembly-instruction
-browser-compat: webassembly.reference-types
-spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-table
+browser-compat: webassembly.instructions.table_get
 sidebar: webassemblysidebar
 ---
 
-The **`table.get`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) retrieves the reference stored at a particular table index.
+The **`table.get`** [table instruction](/en-US/docs/WebAssembly/Reference/Table) retrieves the reference stored at a particular table index.
 
 {{InteractiveExample("Wat Demo: table.get", "tabbed-taller")}}
 
@@ -64,7 +63,7 @@ table.get identifier
     - `name`
       - : An identifying name [set for the table](/en-US/docs/WebAssembly/Reference/Definitions/table#name) when it was first created. This must begin with a `$` symbol, for example `$my_table`.
     - `index`
-      - : The table's index number, for example `0` for the first table in the wasm script, `1` for the second, etc.
+      - : The table's index number, for example `0` for the first table in the wasm module, `1` for the second, etc.
 
     If the `identifier` is omitted, it will default to `0`.
 

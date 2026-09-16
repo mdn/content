@@ -1,12 +1,13 @@
 ---
-title: "shr_u: Wasm text instruction"
+title: "shr_u: Wasm numeric instruction"
 short-title: shr_u
 slug: WebAssembly/Reference/Numeric/shr_u
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.shr_u
 sidebar: webassemblysidebar
 ---
 
-The **`shr_u`** instructions, short for _shift-right unsigned_, are used for performing a bitwise right-shift on unsigned integers, similar to the **`>>>`** operator in other languages.
+The **`shr_u`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _shift-right unsigned_, is used for performing a bitwise right-shift on unsigned integers, similar to the **`>>>`** operator in other languages.
 
 {{InteractiveExample("Wat Demo: shr_u", "tabbed-taller")}}
 
@@ -149,6 +150,14 @@ The output is as follows:
 {{embedlivesample("simd_shr_u", "100%", 100)}}
 
 The result is `22`, because the value stored in lane `6` of the input value is `91`. Once shifted right by two positions, the output value's lane `6` will contain the value `22`.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

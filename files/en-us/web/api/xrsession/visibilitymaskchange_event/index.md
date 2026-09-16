@@ -32,21 +32,6 @@ An {{domxref("XRVisibilityMaskChangeEvent")}}. Inherits from {{domxref("Event")}
 
 {{InheritanceDiagram("XRVisibilityMaskChangeEvent")}}
 
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref("XRVisibilityMaskChangeEvent.eye", "eye")}} {{ReadOnlyInline}}
-  - : The eye the mask applies to.
-- {{domxref("XRVisibilityMaskChangeEvent.index", "index")}} {{ReadOnlyInline}}
-  - : The index of the current {{domxref("XRView")}} in the {{domxref("XRViewerPose.views")}} array.
-- {{domxref("XRVisibilityMaskChangeEvent.indices", "indices")}} {{ReadOnlyInline}}
-  - : An array of indices specifying the vertices in the `vertices` array that should be drawn to display the currently visible part of the scene displayed in the `XRView`. If this array is empty, the whole region of the `XRView` will be drawn.
-- {{domxref("XRVisibilityMaskChangeEvent.session", "session")}} {{ReadOnlyInline}}
-  - : The {{domxref("XRSession")}} to which the event refers.
-- {{domxref("XRVisibilityMaskChangeEvent.vertices", "vertices")}} {{ReadOnlyInline}}
-  - : An array of coordinates representing the vertices required to draw the entire scene displayed in the `XRView`. If this array is empty, the whole region of the `XRView` will be drawn.
-
 ## Examples
 
 ### Three.js example

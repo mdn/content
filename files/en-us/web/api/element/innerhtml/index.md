@@ -44,7 +44,7 @@ This is to prevent a potential security vulnerability ([mutation XSS](https://ww
 
 ### Shadow DOM considerations
 
-The serialization of the DOM tree read from the property does not include {{glossary("shadow tree", "shadow roots")}} — if you want to get a HTML string that includes shadow roots, you must instead use the {{domxref("Element.getHTML()")}} or {{domxref("ShadowRoot.getHTML()")}} methods.
+The serialization of the DOM tree read from the property does not include {{glossary("shadow tree", "shadow roots")}} — if you want to get an HTML string that includes shadow roots, you must instead use the {{domxref("Element.getHTML()")}} or {{domxref("ShadowRoot.getHTML()")}} methods.
 
 Similarly, when setting element content using `innerHTML`, the HTML string is parsed into DOM elements that do not contain shadow roots.
 So for example [`<template>`](/en-US/docs/Web/HTML/Reference/Elements/template) is parsed into as {{domxref("HTMLTemplateElement")}}, whether or not the [`shadowrootmode`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootmode) attribute is specified.
@@ -65,7 +65,7 @@ You can mitigate these issues by always assigning {{domxref("TrustedHTML")}} obj
 This ensures that the input is passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup before it is injected.
 
 > [!NOTE]
-> {{domxref("Node.textContent")}} should be used when you know that the user provided content should be plain text.
+> {{domxref("Node.textContent")}} should be used when you know that the user-provided content should be plain text.
 > This prevents it being parsed as HTML.
 
 ## Examples

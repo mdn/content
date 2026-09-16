@@ -34,7 +34,7 @@ const quotient = a / b;
 // RangeError: BigInt division by zero
 ```
 
-Instead, check if the divisor is `0n` first, and either issue an error with a better message, or fallback to a different value, like `Infinity` or `undefined`.
+Instead, check if the divisor is `0n` first, and either issue an error with a better message, or fall back to a different value, like `Infinity` or `undefined`.
 
 ```js example-good
 const a = 1n;

@@ -130,6 +130,14 @@ The referenced block must declare a result type that matches the pushed `exnref`
 )
 ```
 
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
 ## See also
 
 - [`throw`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw) instruction

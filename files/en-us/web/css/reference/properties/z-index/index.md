@@ -147,9 +147,9 @@ z-index: revert-layer;
 z-index: unset;
 ```
 
-The `z-index` property is specified as either the keyword `auto` or an `<integer>`.
-
 ### Values
+
+This property is specified as one of the following values:
 
 - `auto`
   - : The box does not establish a new local stacking context. The stack level of the generated box in the current stacking context is `0`.

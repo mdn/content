@@ -16,7 +16,7 @@ If the attribute is present, it can have one of the following forms:
 > [!NOTE]
 > The strings "true" and "false" are invalid values. To set the attribute to `false`, the attribute should be omitted altogether. Though modern browsers treat _any_ string value as `true`, you should not rely on that behavior.
 
-Here's an example of a HTML boolean attribute `checked`:
+Here's an example of an HTML boolean attribute `checked`:
 
 ```html
 <!-- The following checkboxes will be checked on initial rendering -->

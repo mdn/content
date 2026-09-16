@@ -1,12 +1,13 @@
 ---
-title: "trunc_f64_u: Wasm text instruction"
+title: "trunc_f64_u: Wasm numeric instruction"
 short-title: trunc_f64_u
 slug: WebAssembly/Reference/Numeric/trunc_f64_u
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.trunc_f64_u
 sidebar: webassemblysidebar
 ---
 
-The **`trunc_f64_u`** instruction removes the fractional part of an `f64` value and outputs it as an unsigned integer.
+The **`trunc_f64_u`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) removes the fractional part of an `f64` value and outputs it as an unsigned integer.
 
 This is a separate instruction, [`trunc`](/en-US/docs/WebAssembly/Reference/Numeric/trunc), which removes the fractional part of a float and outputs a float.
 
@@ -67,6 +68,14 @@ value_type.trunc_f64_u
 | ----------------- | ------------- | --------------------------- |
 | `i32.trunc_f64_u` | `0xab`        | `i32.trunc_f64_u` => `0xab` |
 | `i64.trunc_f64_u` | `0xb1`        | `i64.trunc_f64_u` => `0xb1` |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Window.beforeprint_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`beforeprint`** event is fired when the associated document is about to be printed or previewed for printing.
 

@@ -3,7 +3,7 @@ title: "add_sat_s: Wasm SIMD arithmetic instruction"
 short-title: add_sat_s
 slug: WebAssembly/Reference/SIMD/arithmetic/add_sat_s
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.add_sat_s
+browser-compat: webassembly.instructions.add_sat_s
 sidebar: webassemblysidebar
 ---
 
@@ -79,4 +79,3 @@ value_type.add_sat_s
 ## See also
 
 - [`add`](/en-US/docs/WebAssembly/Reference/Numeric/add)
-- [SIMD arithmetic instructions](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic)

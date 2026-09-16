@@ -83,7 +83,7 @@ The following deprecated historical errors don't have an error name but instead 
 - `InvalidNodeTypeError` {{experimental_inline}}
   - : The node is incorrect or has an incorrect ancestor for this operation. (Legacy code value: `24` and legacy constant name: `INVALID_NODE_TYPE_ERR`)
 - `DataCloneError` {{experimental_inline}}
-  - : The object can not be cloned. (Legacy code value: `25` and legacy constant name: `DATA_CLONE_ERR`)
+  - : The object cannot be cloned. (Legacy code value: `25` and legacy constant name: `DATA_CLONE_ERR`)
 - `EncodingError` {{experimental_inline}}
   - : The encoding or decoding operation failed (No legacy code value and constant name).
 - `NotReadableError` {{experimental_inline}}

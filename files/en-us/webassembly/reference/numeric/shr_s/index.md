@@ -1,12 +1,13 @@
 ---
-title: "shr_s: Wasm text instruction"
+title: "shr_s: Wasm numeric instruction"
 short-title: shr_s
 slug: WebAssembly/Reference/Numeric/shr_s
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.shr_s
 sidebar: webassemblysidebar
 ---
 
-The **`shr_s`** instructions, short for _shift-right signed_, are used for performing a bitwise right-shift on signed integers, similar to the **`>>>`** operator in other languages.
+The **`shr_s`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _shift-right signed_, is used for performing a bitwise right-shift on signed integers, similar to the **`>>>`** operator in other languages.
 
 {{InteractiveExample("Wat Demo: shr_s", "tabbed-taller")}}
 
@@ -149,6 +150,14 @@ The output is as follows:
 {{embedlivesample("simd_shr_s", "100%", 100)}}
 
 The result is `22`, because the value stored in lane `6` of the input value is `91`. Once shifted right by two positions, the output value's lane `6` will contain the value `22`.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

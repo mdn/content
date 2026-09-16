@@ -26,11 +26,11 @@ This example shows how to get and set the `ariaBrailleLabel` property.
 
 #### HTML
 
-First we define a button with label text "3 out of 5 stars" and an `aria-braillelabel` attribute with a value of `"\*\*\*"`.
+First we define a button with label text "3 out of 5 stars" and an `aria-braillelabel` attribute with a value of `"***"`.
 This allows a braille display to show "btn \*\*\*" in braille rather than the more verbose "btn gra 3 out of 5 stars".
 
 ```html
-<button id="button" aria-braillelabel="\*\*\*">3 out of 5 stars</button>
+<button id="button" aria-braillelabel="***">3 out of 5 stars</button>
 ```
 
 ```html hidden

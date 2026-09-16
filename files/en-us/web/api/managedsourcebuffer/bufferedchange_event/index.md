@@ -30,15 +30,6 @@ A {{domxref("BufferedChangeEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("BufferedChangeEvent")}}
 
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref("BufferedChangeEvent.addedRanges", "addedRanges")}} {{ReadOnlyInline}}
-  - : A {{domxref("TimeRanges")}} object representing the time ranges that were added to the buffer.
-- {{domxref("BufferedChangeEvent.removedRanges", "removedRanges")}} {{ReadOnlyInline}}
-  - : A {{domxref("TimeRanges")}} object representing the time ranges that were removed from the buffer.
-
 ## Examples
 
 ### Tracking buffered range changes
