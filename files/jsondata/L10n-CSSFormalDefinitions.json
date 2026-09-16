@@ -4838,5 +4838,302 @@
     "pt-BR": "elementos ‘text’",
     "zh-CN": "“text” 元素",
     "zh-TW": "「text」元素"
+  },
+  "As for the corresponding physical property": {
+    "en-US": "As for the corresponding physical property"
+  },
+  "Converted to <number>": {
+    "en-US": "Converted to <number>"
+  },
+  "Depending on the value of box-decoration-break, either refer to the inline size of the decorating box or of each individual box fragment": {
+    "en-US": "Depending on the value of box-decoration-break, either refer to the inline size of the decorating box or of each individual box fragment"
+  },
+  "N/a": {
+    "en-US": "N/a"
+  },
+  "Not resolved": {
+    "en-US": "Not resolved"
+  },
+  "Refer to corresponding dimension of the border box.": {
+    "en-US": "Refer to corresponding dimension of the border box."
+  },
+  "Refer to the size of containing block": {
+    "en-US": "Refer to the size of containing block"
+  },
+  "Relative to width/height of the border image area": {
+    "en-US": "Relative to width/height of the border image area"
+  },
+  "Same as column-rule-inset and row-rule-inset": {
+    "en-US": "Same as column-rule-inset and row-rule-inset"
+  },
+  "Same as column-rule-inset-cap and row-rule-inset-cap": {
+    "en-US": "Same as column-rule-inset-cap and row-rule-inset-cap"
+  },
+  "Same as column-rule-inset-cap, column-rule-inset-junction, row-rule-inset-cap, and row-rule-inset-junction": {
+    "en-US": "Same as column-rule-inset-cap, column-rule-inset-junction, row-rule-inset-cap, and row-rule-inset-junction"
+  },
+  "Same as column-rule-inset-cap-start, column-rule-inset-cap-end, column-rule-inset-junction-start, column-rule-inset-junction-end, row-rule-inset-cap-start, row-rule-inset-cap-end, row-rule-inset-junction-start, and row-rule-inset-junction-end": {
+    "en-US": "Same as column-rule-inset-cap-start, column-rule-inset-cap-end, column-rule-inset-junction-start, column-rule-inset-junction-end, row-rule-inset-cap-start, row-rule-inset-cap-end, row-rule-inset-junction-start, and row-rule-inset-junction-end"
+  },
+  "Same as column-rule-inset-cap-start, column-rule-inset-junction-start, column-rule-inset-cap-end, column-rule-inset-junction-end, row-rule-inset-cap-start, row-rule-inset-junction-start, row-rule-inset-cap-end, and row-rule-inset-junction-end": {
+    "en-US": "Same as column-rule-inset-cap-start, column-rule-inset-junction-start, column-rule-inset-cap-end, column-rule-inset-junction-end, row-rule-inset-cap-start, row-rule-inset-junction-start, row-rule-inset-cap-end, and row-rule-inset-junction-end"
+  },
+  "Same as column-rule-inset-end and row-rule-inset-end": {
+    "en-US": "Same as column-rule-inset-end and row-rule-inset-end"
+  },
+  "Same as column-rule-inset-junction and row-rule-inset-junction": {
+    "en-US": "Same as column-rule-inset-junction and row-rule-inset-junction"
+  },
+  "Same as column-rule-inset-start and row-rule-inset-start": {
+    "en-US": "Same as column-rule-inset-start and row-rule-inset-start"
+  },
+  "Same as column-rule-visibility-items and row-rule-visibility-items": {
+    "en-US": "Same as column-rule-visibility-items and row-rule-visibility-items"
+  },
+  "The computed value for auto is auto. For <color> values, see CSS Color 4 § 15. Resolving <color> Values.": {
+    "en-US": "The computed value for auto is auto. For <color> values, see CSS Color 4 § 15. Resolving <color> Values."
+  },
+  "a set of zero to two keywords indicating which sides to trim": {
+    "en-US": "a set of zero to two keywords indicating which sides to trim"
+  },
+  "absolute length or keyword specified": {
+    "en-US": "absolute length or keyword specified"
+  },
+  "absolute length, snapped as a border width": {
+    "en-US": "absolute length, snapped as a border width"
+  },
+  "as <basic-shape> if possible, otherwise discrete": {
+    "en-US": "as <basic-shape> if possible, otherwise discrete"
+  },
+  "as integer": {
+    "en-US": "as integer"
+  },
+  "block containers [CSS2], flex containers [CSS-FLEXBOX-1], grid containers [CSS-GRID-1], and table grid boxes [CSS-TABLES-3]": {
+    "en-US": "block containers [CSS2], flex containers [CSS-FLEXBOX-1], grid containers [CSS-GRID-1], and table grid boxes [CSS-TABLES-3]"
+  },
+  "block containers, multi-column containers": {
+    "en-US": "block containers, multi-column containers"
+  },
+  "by computed value type; normal animates as oblique 0deg": {
+    "en-US": "by computed value type; normal animates as oblique 0deg"
+  },
+  "computed relative to 1em": {
+    "en-US": "computed relative to 1em"
+  },
+  "declarative images": {
+    "en-US": "declarative images"
+  },
+  "grid containers and multicol containers": {
+    "en-US": "grid containers and multicol containers"
+  },
+  "grid containers, flex containers, and grid lanes containers": {
+    "en-US": "grid containers, flex containers, and grid lanes containers"
+  },
+  "grid containers, flex containers, multicol containers, and grid lanes containers": {
+    "en-US": "grid containers, flex containers, multicol containers, and grid lanes containers"
+  },
+  "grid lanes containers": {
+    "en-US": "grid lanes containers"
+  },
+  "inline-level boxes that establish an independent formatting context": {
+    "en-US": "inline-level boxes that establish an independent formatting context"
+  },
+  "list of absolute lengths, snapped as a border width": {
+    "en-US": "list of absolute lengths, snapped as a border width"
+  },
+  "list, each item a string and/or <generic-font-family> keywords": {
+    "en-US": "list, each item a string and/or <generic-font-family> keywords"
+  },
+  "list, each item either a CSS identifier or the keyword none": {
+    "en-US": "list, each item either a CSS identifier or the keyword none"
+  },
+  "map to the range [0,1]": {
+    "en-US": "map to the range [0,1]"
+  },
+  "multi-column containers, flex containers, grid containers, and grid lanes containers": {
+    "en-US": "multi-column containers, flex containers, grid containers, and grid lanes containers"
+  },
+  "multi-line flex containers": {
+    "en-US": "multi-line flex containers"
+  },
+  "n/a (see prose)": {
+    "en-US": "n/a (see prose)"
+  },
+  "none, or a list consisting of absolute lengths, or percentages as specified": {
+    "en-US": "none, or a list consisting of absolute lengths, or percentages as specified"
+  },
+  "refer to corresponding dimension of the content area": {
+    "en-US": "refer to corresponding dimension of the content area"
+  },
+  "refer to default value": {
+    "en-US": "refer to default value"
+  },
+  "refer to height of background positioning area minus height of background image": {
+    "en-US": "refer to height of background positioning area minus height of background image"
+  },
+  "refer to inherited value": {
+    "en-US": "refer to inherited value"
+  },
+  "refer to inline-size of background positioning area minus inline-size of background image": {
+    "en-US": "refer to inline-size of background positioning area minus inline-size of background image"
+  },
+  "refer to length of border-edge side": {
+    "en-US": "refer to length of border-edge side"
+  },
+  "refer to logical width of containing block": {
+    "en-US": "refer to logical width of containing block"
+  },
+  "refer to parent element’s font size": {
+    "en-US": "refer to parent element’s font size"
+  },
+  "refer to size of background positioning area minus size of background image": {
+    "en-US": "refer to size of background positioning area minus size of background image"
+  },
+  "refer to size of background positioning area minus size of background image; see text": {
+    "en-US": "refer to size of background positioning area minus size of background image; see text"
+  },
+  "refer to size of containing block; see prose": {
+    "en-US": "refer to size of containing block; see prose"
+  },
+  "refer to size of mask painting area minus size of mask layer image; see text background-position [CSS3BG]": {
+    "en-US": "refer to size of mask painting area minus size of mask layer image; see text background-position [CSS3BG]"
+  },
+  "refer to size of the border image": {
+    "en-US": "refer to size of the border image"
+  },
+  "refer to size of the mask border image": {
+    "en-US": "refer to size of the mask border image"
+  },
+  "refer to the crossing gap width": {
+    "en-US": "refer to the crossing gap width"
+  },
+  "refer to the height of the current SVG viewport (see Units)": {
+    "en-US": "refer to the height of the current SVG viewport (see Units)"
+  },
+  "refer to the inline size of the containing block": {
+    "en-US": "refer to the inline size of the containing block"
+  },
+  "refer to the normalized diagonal of the current SVG viewport (see Units)": {
+    "en-US": "refer to the normalized diagonal of the current SVG viewport (see Units)"
+  },
+  "refer to the size of reference box": {
+    "en-US": "refer to the size of reference box"
+  },
+  "refer to the size of the current viewport (see Units)": {
+    "en-US": "refer to the size of the current viewport (see Units)"
+  },
+  "refer to the size of the reference box": {
+    "en-US": "refer to the size of the reference box"
+  },
+  "refer to the used value of line-height": {
+    "en-US": "refer to the used value of line-height"
+  },
+  "refer to the width of the current SVG viewport (see Units)": {
+    "en-US": "refer to the width of the current SVG viewport (see Units)"
+  },
+  "refer to the width of the line box": {
+    "en-US": "refer to the width of the line box"
+  },
+  "refer to width and height of element itself": {
+    "en-US": "refer to width and height of element itself"
+  },
+  "refer to width of background positioning area minus width of background image": {
+    "en-US": "refer to width of background positioning area minus width of background image"
+  },
+  "refers to block container’s own inline-axis inner size": {
+    "en-US": "refers to block container’s own inline-axis inner size"
+  },
+  "refers to length of the line box": {
+    "en-US": "refers to length of the line box"
+  },
+  "relative to border-box": {
+    "en-US": "relative to border-box"
+  },
+  "relative to logical width of (last fragment of) initial letter": {
+    "en-US": "relative to logical width of (last fragment of) initial letter"
+  },
+  "relative to the corresponding dimension of the relevant scrollport": {
+    "en-US": "relative to the corresponding dimension of the relevant scrollport"
+  },
+  "relative to the corresponding dimension of the scroll container’s scrollport": {
+    "en-US": "relative to the corresponding dimension of the scroll container’s scrollport"
+  },
+  "relative to the corresponding dimension of the specified timeline range center subject, else relative to the start of the animation attachment range": {
+    "en-US": "relative to the corresponding dimension of the specified timeline range center subject, else relative to the start of the animation attachment range"
+  },
+  "relative to the flex container’s inner main size": {
+    "en-US": "relative to the flex container’s inner main size"
+  },
+  "relative to the grid-axis content box size of the grid lanes container": {
+    "en-US": "relative to the grid-axis content box size of the grid lanes container"
+  },
+  "relative to the offset path length": {
+    "en-US": "relative to the offset path length"
+  },
+  "relative to the scaled viewport size": {
+    "en-US": "relative to the scaled viewport size"
+  },
+  "relative to the scroll container’s scrollport": {
+    "en-US": "relative to the scroll container’s scrollport"
+  },
+  "relative to the specified named timeline range if one was specified, else to the entire timeline": {
+    "en-US": "relative to the specified named timeline range if one was specified, else to the entire timeline"
+  },
+  "relative to the width and the height of the element’s reference box": {
+    "en-US": "relative to the width and the height of the element’s reference box"
+  },
+  "relative to the width of the reference box (for the first value) or the height (for the second value)": {
+    "en-US": "relative to the width of the reference box (for the first value) or the height (for the second value)"
+  },
+  "relative to used font-size": {
+    "en-US": "relative to used font-size"
+  },
+  "relative to width/height of containing block": {
+    "en-US": "relative to width/height of containing block"
+  },
+  "relative to width/height of the mask border image area": {
+    "en-US": "relative to width/height of the mask border image area"
+  },
+  "repeatable list, see § 4.7 Interpolation of list values.": {
+    "en-US": "repeatable list, see § 4.7 Interpolation of list values."
+  },
+  "replaced elements (but see below for details)": {
+    "en-US": "replaced elements (but see below for details)"
+  },
+  "see text": {
+    "en-US": "see text"
+  },
+  "see § 2.3 Percentages In gap Properties": {
+    "en-US": "see § 2.3 Percentages In gap Properties"
+  },
+  "specified keyword, or computed <basic-shape> function": {
+    "en-US": "specified keyword, or computed <basic-shape> function"
+  },
+  "specified keywords or computed <percentage> value": {
+    "en-US": "specified keywords or computed <percentage> value"
+  },
+  "specified value, with <length>s made absolute.": {
+    "en-US": "specified value, with <length>s made absolute."
+  },
+  "the guaranteed-invalid value": {
+    "en-US": "the guaranteed-invalid value"
+  },
+  "the keyword none or one or more of size, layout, style, paint": {
+    "en-US": "the keyword none or one or more of size, layout, style, paint"
+  },
+  "the keyword none, or an absolute length": {
+    "en-US": "the keyword none, or an absolute length"
+  },
+  "the keyword none, the keyword all, or a list of CSS identifiers": {
+    "en-US": "the keyword none, the keyword all, or a list of CSS identifiers"
+  },
+  "the keyword normal, or a color scheme support": {
+    "en-US": "the keyword normal, or a color scheme support"
+  },
+  "the specified integer, computed": {
+    "en-US": "the specified integer, computed"
+  },
+  "‘path’, ‘circle’, ‘ellipse’, ‘line’, ‘polygon’, ‘polyline’, ‘rect’": {
+    "en-US": "‘path’, ‘circle’, ‘ellipse’, ‘line’, ‘polygon’, ‘polyline’, ‘rect’"
   }
 }
