@@ -166,7 +166,7 @@ After you've downloaded these examples, [start a local server](/en-US/docs/Learn
 
 ## Named exports
 
-Unlike scripts, where all variables declared at the top level are implicitly accessible to subsequent scripts, You must explicitly {{jsxref("Statements/export", "export")}} variables for them to be accessible in other modules. You can place this keyword in front of any [declaration](/en-US/docs/Web/JavaScript/Reference/Statements#what_are_statements_declarations_and_expressions)—including `var`, `let`, `const`, `function`, `class`, and more. They need to be top-level items: for example, you can't use `export` inside a function.
+Unlike scripts, where all variables declared at the top level are implicitly accessible to subsequent scripts, you must explicitly {{jsxref("Statements/export", "export")}} variables for them to be accessible in other modules. You can place this keyword in front of any [declaration](/en-US/docs/Web/JavaScript/Reference/Statements#what_are_statements_declarations_and_expressions)—including `var`, `let`, `const`, `function`, `class`, and more. They need to be top-level items: for example, you can't use `export` inside a function.
 
 ```js
 export const name = "square";
@@ -222,7 +222,7 @@ reportPerimeter(square.length, reportList);
 
 ## Default exports and imports
 
-The above export and import variables by their names. The names for each variable have to match between the exporter and the importer. You can definitely write functional module code using just named imports and exports. However, if you want to import from [non-ECMAScript modules](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms), these systems do not use named exports. In these systems, each module correspond to exactly one JavaScript value. To represent these types of modules, JavaScript provides a _default export_.
+The above export and import variables by their names. The names for each variable have to match between the exporter and the importer. You can definitely write functional module code using just named imports and exports. However, if you want to import from [non-ECMAScript modules](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms), these systems do not use named exports. In these systems, each module corresponds to exactly one JavaScript value. To represent these types of modules, JavaScript provides a _default export_. This has other use cases, such as modules that are built around one main value—a single class or function—where the default export lets each importer pick its own local name without knowing what the exporting module calls it.
 
 Unlike named exports, default exports have no names associated with them. Each module can have up to one default export. To create a default export, instead of exporting a _declaration_ like `const` or `function`, you export an _expression_ instead, by prepending `export default` to it. For example, all of the following would work:
 
@@ -335,7 +335,7 @@ import {
 
 And it would work just the same. What style you use is up to you, however it arguably makes more sense to leave your module code alone, and make the changes in the imports. This especially makes sense when you are importing from third party modules that you don't have any control over.
 
-By the way, you can use the same syntax for default exports too, by pretending that the export is named `default` (this is a [reserved word](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words), not an actually valid identifier name). The difference with `export default` is that this exports a _live binding_, not a static value. If you re-assign `randomSquare` in the exporter, only this form allows the importer to see the new value.
+By the way, you can use the same syntax for default exports too, by referring to the export name `default` (this is a [reserved word](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words), not an actually valid identifier name). The difference with `export default randomSquare;` is that this exports the existing _live binding_, instead of capturing the value of the expression. If you re-assign `randomSquare` in the exporter, this form allows the importer to see the new value. Named default function and class declarations, such as `export default function randomSquare() {}`, also export live bindings.
 
 ```js
 import { default as randomSquare } from "./modules/square.js";
@@ -343,9 +343,9 @@ import { default as randomSquare } from "./modules/square.js";
 export { randomSquare as default };
 ```
 
-### Creating a module object
+### Creating a module namespace object
 
-The above method works OK, but it's a little messy and long-winded. An even better solution is to import each module's features inside a module object. The following syntax form does that:
+The above method works OK, but it's a little messy and long-winded. An even better solution is to import each module's features inside a _module namespace object_. The following syntax form does that:
 
 ```js
 import * as Module from "./modules/module.js";
@@ -520,7 +520,7 @@ Still, it is considered good practice to put all your imports at the top of the 
 
 ## Importing JSON modules
 
-We have seen how to import from JavaScript modules, where data is exported with `export` statements. You can also import values from modules written in other languages, as long as the runtime environment knows how to interpret them. The specification only specifies one other resource type: JSON modules.
+We have seen how to import from JavaScript modules, where data is exported with `export` statements. You can also import values from modules written in other languages, as long as the runtime environment knows how to interpret them. The specification only specifies two other resource types: JSON modules and [text modules](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#text_modules_type_text). Here, we look at JSON modules, which are more common.
 
 A JSON module is basically a standalone JSON file. When imported, it provides a single default export containing the parsed JSON value. You import it like this:
 
@@ -530,11 +530,17 @@ import data from "./data.json" with { type: "json" };
 
 Notice the extra `with { type: "json" }` at the end. This is an [import attribute](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) that tells the runtime environment to validate that the loaded file is indeed JSON. We will talk more about them in the [using modules on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#loading_non-javascript_resources) guide, because their semantics are not defined in the core language. You might be able to import JSON modules without `with { type: "json" }`. The only requirement is that if `with { type: "json" }` is specified, then the loaded module must be parsed as JSON. It is good practice to always declare the type of the module you are importing so it can work everywhere.
 
+Text modules work similarly and result in strings.
+
+```js
+import text from "./text.txt" with { type: "text" };
+```
+
 ## Dynamic module loading
 
 You can also dynamically load modules only when they are needed, rather than having to load everything up front. This has some obvious performance advantages; let's read on and see how it works.
 
-The [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import) operator can be called with the path to the module as a parameter. It returns a {{jsxref("Promise")}}, which fulfills with a module object (see [Creating a module object](#creating_a_module_object)) giving you access to that object's exports. For example:
+The [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import) operator can be called with the path to the module as a parameter. It returns a {{jsxref("Promise")}}, which fulfills with a module namespace object (see [Creating a module namespace object](#creating_a_module_namespace_object)) giving you access to that object's exports. For example:
 
 ```js
 import("./modules/myModule.js").then((module) => {
@@ -578,7 +584,7 @@ squareBtn.addEventListener("click", () => {
 });
 ```
 
-Note that, because the promise fulfillment returns a module object, the class is then made a subfeature of the object, hence we now need to access the constructor with `Module.` prepended to it, e.g., `Module.Square( /* … */ )`.
+Note that, because the promise fulfillment returns a module namespace object, the class is then made a subfeature of the object, hence we now need to access the constructor with `Module.` prepended to it, e.g., `Module.Square( /* … */ )`.
 
 Another advantage of dynamic imports is that they are always available, even in script environments. Therefore, if you have an existing `<script>` tag in your HTML that doesn't have `type="module"`, you can still reuse code distributed as modules by dynamically importing it.
 
@@ -595,7 +601,7 @@ Another advantage of dynamic imports is that they are always available, even in 
 
 ## Top-level await
 
-Top level await is a feature available within modules. This means the `await` keyword can be used. It allows modules to act as big [asynchronous functions](/en-US/docs/Learn_web_development/Extensions/Async_JS/Introducing) meaning code can be evaluated before use in parent modules, but without blocking sibling modules from loading.
+Top-level `await` is a feature available within modules: the `await` keyword can be used at the top level, outside any async function. It allows a module to act as a big [asynchronous function](/en-US/docs/Learn_web_development/Extensions/Async_JS/Introducing), meaning it can finish asynchronous work before modules that depend on it execute, without blocking the evaluation of sibling modules that don't depend on it.
 
 Let's take a look at an example. You can find all the files and code described in this section within the [`top-level-await`](https://github.com/mdn/js-examples/tree/main/module-examples/top-level-await) directory, which extends from the previous examples.
 
@@ -667,9 +673,9 @@ const triangle = new Module.Triangle(
 );
 ```
 
-This is useful because the code within [`main.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/main.js) won't execute until the code in [`getColors.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/modules/getColors.js) has run. However it won't block other modules being loaded. For instance our [`canvas.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/modules/canvas.js) module will continue to load while `colors` is being fetched.
+This is useful because the code within [`main.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/main.js) won't execute until the code in [`getColors.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/modules/getColors.js) has run. However, it doesn't hold up the evaluation of independent modules: our [`canvas.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/modules/canvas.js) module still evaluates while `colors` is being fetched.
 
-Top-level `await` is not free; it has deep implications because it means a part of the [module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph) can only be loaded asynchronously. See the [module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#top-level_await_and_asynchronous_evaluation) guide for more information.
+Top-level `await` is not free; it has deep implications because it means a part of the [module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph) can only be evaluated asynchronously. See the [module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#top-level_await_and_asynchronous_evaluation) guide for more information.
 
 ## Module metadata
 
@@ -690,7 +696,7 @@ This article introduces modules as they are defined in the ECMAScript spec. Java
 
 - The syntax for module features, such as [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) and [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) declarations, [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta), and the [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import) expression.
 - [Module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph) building, linking, and evaluation, including cycle detection.
-- The [module object](#creating_a_module_object)'s shape.
+- The [module namespace object](#creating_a_module_namespace_object)'s shape.
 
 The core language does _not_ care about the following:
 

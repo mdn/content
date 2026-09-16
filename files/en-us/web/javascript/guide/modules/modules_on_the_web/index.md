@@ -13,7 +13,7 @@ The first difference you will encounter when migrating web pages to modules is t
 
 The server must send JavaScript modules with a JavaScript [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types), such as `Content-Type: text/javascript`. Check this for both `.js` and `.mjs` files. If an import fails with a MIME type error, inspect the response in your browser's network tools: a missing file or an HTML fallback page may have been returned instead of the module.
 
-Module requests use [CORS](/en-US/docs/Web/HTTP/Guides/CORS). When importing from another origin, that server must allow your page's origin through its CORS response headers, such as {{HTTPHeader("Access-Control-Allow-Origin")}}.
+Module requests use [CORS](/en-US/docs/Web/HTTP/Guides/CORS). When importing from another origin, that server must allow your page's origin through its CORS response headers, such as {{HTTPHeader("Access-Control-Allow-Origin")}}. By default, cross-origin module requests are sent without credentials such as cookies. Setting the [`crossorigin="use-credentials"`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute on the `<script>` element sends credentials, provided the server's CORS headers allow it (this applies to the whole graph fetched through that script). [Subresource integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) via the [`integrity`](/en-US/docs/Web/HTML/Reference/Attributes/integrity) attribute also works for module scripts, but the attribute only covers the entry module. Integrity metadata for its dependencies can be provided through an import map's `integrity` key.
 
 ## Applying modules to your HTML
 
@@ -52,10 +52,21 @@ Some other differences with traditional `<script>` elements:
 
 - Within the same environment, a module is only executed once, even if it has been imported multiple times or referenced in multiple `<script>` tags.
 - There is no need to use the `defer` attribute (see [`<script>` attributes](/en-US/docs/Web/HTML/Reference/Elements/script#attributes)) when loading a module script; module scripts declared in the document without `async` are deferred automatically.
+- Adding the `async` attribute makes the module graph evaluate as soon as it has finished loading, without waiting for HTML parsing to complete and without any ordering guarantee relative to other scripts. Unlike for classic scripts, `async` works on inline module scripts too.
 
 > [!NOTE]
 > In some module systems, you can use a module specifier like `modules/square` that isn't a relative or absolute path, and that doesn't have a file extension.
 > This kind of specifier can be used in a browser environment if you first define an [import map](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#importing_modules_using_import_maps).
+
+## Modules in workers
+
+Documents aren't the only place where modules run: [workers](/en-US/docs/Web/API/Web_Workers_API) can be modules too. You need to opt into modules by passing `type: "module"` to the {{domxref("Worker/Worker", "Worker()")}} or {{domxref("SharedWorker/SharedWorker", "SharedWorker()")}} constructor, or to {{domxref("ServiceWorkerContainer/register", "navigator.serviceWorker.register()")}}:
+
+```js
+const worker = new Worker("./worker.js", { type: "module" });
+```
+
+The worker's file becomes the entry point of its own module graph. Inside a module worker, calling {{domxref("WorkerGlobalScope/importScripts", "importScripts()")}} throws a `TypeError`—use `import` declarations instead. Note that dynamic `import()` is not available in service workers, so all of a module service worker's code must be reachable through static imports. [Worklets](/en-US/docs/Web/API/Worklet) load their code with `addModule()`, which is always a module.
 
 ## Module specifiers on the web
 
@@ -80,7 +91,7 @@ The browser sends an HTTP request to that given URL, and if the server returns a
 
 Other URL schemes that you can use as resource locations are supported too, such as [`data:`](/en-US/docs/Web/URI/Reference/Schemes/data). Read the [`import` reference](/en-US/docs/Web/JavaScript/Reference/Statements/import#module_specifier_resolution) for more information.
 
-Always importing from absolute URLs has similar problems as using absolute URLs for link targets: they are long, they don't work if you move your site to another domain, and they don't work if you move your entire JavaScript asset path. The module specifier can also be a relative URL, similar to the [`href`](/en-US/docs/Web/HTML/Reference/Elements/a#href) attribute of {{HTMLElement("a")}} elements. The only difference is that all relative URLs must start with one of `/`, `./`, or `../`—i.e., you cannot use "bare" relative URLs like `modules/module.js`, but must write `./modules/module.js`. This is because "bare" URLs have special meanings in Node.js (they are resolved using the `node_modules` directory). To resolve bare URLs on the web, use [import maps](#importing_modules_using_import_maps).
+Always importing from absolute URLs has similar problems as using absolute URLs for link targets: they are long, they don't work if you move your site to another domain, and they don't work if you move your entire JavaScript asset path. The module specifier can also be a relative URL, similar to the [`href`](/en-US/docs/Web/HTML/Reference/Elements/a#href) attribute of {{HTMLElement("a")}} elements. The only difference is that all relative URLs must start with one of `/`, `./`, or `../`—i.e., you cannot use "bare" relative URLs like `modules/module.js`, but must write `./modules/module.js`. It reserves bare specifiers so they can be given special meaning—the ecosystem convention, popularized by Node.js, was that a bare name like `"jquery"` refers to a package. On the web, that special meaning is now assigned by [import maps](#importing_modules_using_import_maps). A bare specifier not remapped by an import map throws a `TypeError`.
 
 This URL is resolved relative to the URL of the current module, not the URL of the HTML document. For example, within a module at `https://example.com/js/main.js`, to import `https://example.com/js/modules/module.js`, write:
 
@@ -264,7 +275,7 @@ The example below demonstrates this.
 }
 ```
 
-With this mapping, if a script with a URL that contains `/node_modules/dependency/` imports `cool-module`, the version in `/node_modules/some/other/location/cool-module/index.js` will be used.
+With this mapping, if a script with a URL that starts with the absolute URL obtained by resolving `/node_modules/dependency/` against the import map's base URL imports `cool-module`, the version in `/node_modules/some/other/location/cool-module/index.js` will be used.
 The map in `imports` is used as a fallback if there is no matching scope in the scoped map, or the matching scopes don't contain a matching specifier. For example, if `cool-module` is imported from a script with a non-matching scope path, then the module specifier map in `imports` will be used instead, mapping to the version in `/node_modules/cool-module/index.js`.
 
 Note that the path used to select a scope does not affect how the address is resolved.
@@ -299,23 +310,21 @@ We don't have to update the source of any JavaScript code that depends on it, be
 
 ## Loading non-JavaScript resources
 
-The [Modules](/en-US/docs/Web/JavaScript/Guide/Modules#importing_json_modules) guide already introduces the [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) syntax, which allows you to import non-JavaScript resources, but the only resource type specified by the core language is `type: "json"`.
+The [Modules](/en-US/docs/Web/JavaScript/Guide/Modules#importing_json_modules) guide already introduces the [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) syntax, which allows you to import non-JavaScript resources. The resource types specified by the core language are `type: "json"` and `type: "text"`.
 
 ```js
 import colors from "./colors.json" with { type: "json" };
 ```
 
-On the web, there are additionally `type: "css"` and `type: "text"`, which imports CSS and text files as {{domxref("CSSStyleSheet")}} objects or strings.
+On the web, there is additionally `type: "css"`, which imports CSS files as {{domxref("CSSStyleSheet")}} objects.
 
 ```js
 import styles from "./styles.css" with { type: "css" };
-import text from "./text.txt" with { type: "text" };
 
 document.adoptedStyleSheets = [styles];
-document.body.textContent = text;
 ```
 
-While the core language spec does not say much about the `type` attribute in general (other than how `type: "json"` must result in a JSON module), the HTML spec requires browsers to implement strict module type checking for security reasons. If you specify `type: "json"` or `type: "css"`, the result must be served with the corresponding `Content-Type` (such as `application/json` or `text/css`). If you don't specify any type, the result also must be served as JavaScript or WebAssembly (`text/javascript` or `application/wasm`).
+While the core language spec does not say much about the `type` attribute in general (other than how `type: "json"` must result in a JSON module and `type: "text"` must result in a text module), the HTML spec requires browsers to implement strict module type checking for security reasons. If you specify `type: "json"` or `type: "css"`, the result must be served with the corresponding `Content-Type` (such as `application/json` or `text/css`). If you don't specify any type, the result also must be served as JavaScript or WebAssembly (`text/javascript` or `application/wasm`).
 
 In the example above with `type: "css"`, if this file turns out to be JavaScript (it is served with a `Content-Type` of `text/javascript`), the import will fail. This makes sure that you don't accidentally execute code where you don't intend to. Read the [import attribute](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) reference for more information.
 

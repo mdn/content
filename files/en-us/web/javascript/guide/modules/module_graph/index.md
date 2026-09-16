@@ -357,6 +357,30 @@ export const b = 1;
 
 This is because the evaluation of `b.js` completes normally, so the value of `b` is available when `a.js` is evaluated.
 
+Function declarations are much more resilient in cycles, because they are initialized during [linking](#linking_modules), before any module body runs. Just like how {{glossary("hoisting")}} allows two functions to call each other regardless of their declaration order, link-time initialization allows the same to happen across module boundaries.
+
+```js
+// -- a.js (entry module) --
+import { isEven } from "./b.js";
+
+export function isOdd(n) {
+  return n !== 0 && isEven(n - 1);
+}
+```
+
+```js
+// -- b.js --
+import { isOdd } from "./a.js";
+
+console.log(isEven(5)); // false
+
+export function isEven(n) {
+  return n === 0 || isOdd(n - 1);
+}
+```
+
+Even though there's no asynchronous waiting, the `isOdd` binding in `a.js` was already initialized with its function object during linking, before `a.js`'s body has run. These modules only export function declarations, and their functions do not read any state initialized during module evaluation, so they can safely call each other. Reading an uninitialized `let`, `const`, or `class` binding would still throw, even if that binding were private to an exported function's module.
+
 ### Errors with cyclic imports
 
 The problem becomes more complicated when there's a linking or evaluation error. Suppose we add `throw new Error("Evaluation failed");` after `export const a = 2;` in the two-module cycle above. A naïve traversal would mark `b.js` as evaluated successfully before executing `a.js`, which then throws:
@@ -387,7 +411,7 @@ However, cyclic imports can also occur if the libraries depend on each other, wh
 
 ## Top-level await and asynchronous evaluation
 
-Modules can use [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await#top-level_await) at the top level, outside any function. This allows a module to finish asynchronous initialization before modules that depend on it execute. Previously, our [evaluation](#evaluating_modules) is synchronous; now, we must make it asynchronous too, which has lots of implications about side-effect ordering and errors.
+Modules can use [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await#top-level_await) at the top level, outside any function. This allows a module to finish asynchronous initialization before modules that depend on it execute. Previously, our [evaluation](#evaluating_modules) was synchronous; now, we must make it asynchronous too, which has lots of implications about side-effect ordering and errors.
 
 For example, suppose we change `config.js` to retrieve its configuration from a server, which returns the same object as in our original example:
 
@@ -424,9 +448,9 @@ Top-level `await` therefore affects more than the module that contains it: it ma
 
 ![An application module graph. Config and Database contain top-level await and are dark teal. Their transitive importers Auth, Reports, Documents, Router, Dashboard, Editor, and App are light teal. Help, Routes, Charts, Toolbar, Markdown, Tokens, Format, Icons, Parse, and Codec have synchronous dependency subgraphs and are gray.](module-async-propagation.svg)
 
-This matters when an API needs evaluation to finish synchronously. In Node.js, [`require()` can load an ES module](https://nodejs.org/api/modules.html#loading-ecmascript-modules-using-require) only if its entire dependency graph is synchronous. A module with top-level `await` "taints" every module above it (in other words, imports it), so they cannot be synchronously imported with `require()`. In the graph above, `require()` can load `Help`, but it cannot load `Router`, even though `Router` itself contains no `await`.
+This matters when an API needs evaluation to finish synchronously. In Node.js, [`require()` can load an ES module](https://nodejs.org/api/modules.html#loading-ecmascript-modules-using-require) only if its entire dependency graph is synchronous. A module with top-level `await` "taints" every module above it (in other words, everything that imports it), so they cannot be synchronously imported with `require()`. In the graph above, `require()` can load `Help`, but it cannot load `Router`, even though `Router` itself contains no `await`.
 
-Similarly, [`import defer`](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer#top-level_await) can only defer synchronous execution, because accessing a property on its namespace must be able to finish evaluation synchronously. For `import defer`, the "tainting" happens in the other direction: anything _below_ the module with top-level `await` (in other words, imported by it) cannot be deferred. The remaining synchronous execution can stay deferred. For example, if another module uses `import defer` to import `App` in the graph above, `Config` and `Database`, together with their dependencies `Parse` and `Codec`, evaluate before that importer's body runs. The bodies of `App` and its remaining dependencies can stay deferred. Although the ancestors of `Config` and `Database` depend on asynchronous evaluation, their own bodies do not contain top-level `await` and can execute synchronously once those dependencies have finished.
+Similarly, [`import defer`](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer#top-level_await) can only defer synchronous execution, because accessing a property on its namespace must be able to finish evaluation synchronously. For `import defer`, the "tainting" happens in the other direction: anything _below_ the module with top-level `await` (in other words, everything it imports) cannot be deferred. The remaining synchronous execution can stay deferred. For example, if another module uses `import defer` to import `App` in the graph above, `Config` and `Database`, together with their dependencies `Parse` and `Codec`, evaluate before that importer's body runs. The bodies of `App` and its remaining dependencies can stay deferred. Although the ancestors of `Config` and `Database` depend on asynchronous evaluation, their own bodies do not contain top-level `await` and can execute synchronously once those dependencies have finished.
 
 Adding top-level `await` to an existing module can be a breaking change for its importers, even if its exports remain unchanged. It delays their entire bodies, including statements written before their `import` declarations, while independent modules can continue executing. This can alter the execution order of sibling modules.
 
@@ -462,7 +486,7 @@ Now suppose `settings.js` introduces top-level `await`:
 export const locale = await Promise.resolve("en-US");
 ```
 
-`setup.js` now waits for `settings.js`, including the assignment written before its `import` declaration. Meanwhile, `display.js` executes and logs `undefined`, assuming `appLocale` was not already defined. The order of imports in `entry.js` does not make `display.js` wait for `setup.js` to finish.
+`setup.js` now waits for `settings.js` before executing the assignment to `globalThis.appLocale`. Meanwhile, `display.js` executes and logs `undefined`, assuming `appLocale` was not already defined. The order of imports in `entry.js` does not make `display.js` wait for `setup.js` to finish.
 
 To preserve the required ordering, make `display.js` explicitly depend on `setup.js`. This is safe because a module is only evaluated once per application.
 
@@ -605,7 +629,7 @@ Alternatively, you can add a useless query or fragment to your URL specifier (se
 
 Ordinary `import` declarations trigger the whole [load-link-evaluate process](#from_module_source_to_execution). _Import phase modifiers_ let the importer pause the process at a certain stage. The importer itself can continue through linking and evaluation later, when it actually needs to.
 
-With [`import source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/source), the process is stopped before _loading_ (although the target module itself is loaded). The imported value is a [_module source object_](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AbstractModuleSource), which can be linked and evaluated using other mechanisms. Using JavaScript source imports as defined by the [ECMAScript Module Phase Imports proposal](https://github.com/tc39/proposal-esm-phase-imports):
+With [`import source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/source), the process is stopped partway through _loading_: the requested module itself is fetched and parsed, but its dependencies are not requested. The imported value is a [_module source object_](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AbstractModuleSource), which can be linked and evaluated using other mechanisms. Using JavaScript source imports as defined by the [ECMAScript Module Phase Imports proposal](https://github.com/tc39/proposal-esm-phase-imports):
 
 ```js
 // -- main.js --

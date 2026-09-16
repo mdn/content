@@ -155,7 +155,7 @@ However, if `promisedFunction()` does throw an error synchronously, the error wo
 
 ### Top-level await
 
-You can use the `await` keyword on its own (outside of an async function) at the top level of a [module](/en-US/docs/Web/JavaScript/Guide/Modules). This means that modules with child modules that use `await` will wait for the child modules to execute before they themselves run, all while not blocking other child modules from loading.
+You can use the `await` keyword on its own (outside of an async function) at the top level of a [module](/en-US/docs/Web/JavaScript/Guide/Modules). This means that modules with child modules that use `await` will wait for the child modules to execute before they themselves run, all while not blocking sibling modules that don't depend on those child modules from executing.
 
 Here is an example of a module using the [Fetch API](/en-US/docs/Web/API/Fetch_API) and specifying await within the [`export`](/en-US/docs/Web/JavaScript/Reference/Statements/export) statement. Any modules that include this will wait for the fetch to resolve before running any code.
 
@@ -168,7 +168,7 @@ const colors = fetch(
 export default await colors;
 ```
 
-Top-level `await` is not free; it has deep implications because it means a part of the [module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph) can only be loaded asynchronously. See the [module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#top-level_await_and_asynchronous_evaluation) guide for more information.
+Top-level `await` is not free; it has deep implications because it means a part of the [module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph) can only be evaluated asynchronously. See the [module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#top-level_await_and_asynchronous_evaluation) guide for more information.
 
 ### Control flow effects of await
 

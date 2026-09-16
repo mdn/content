@@ -33,7 +33,7 @@ import "module-name";
 - `module-name`
   - : The module to import from. Only single- and double-quoted string literals are allowed. The evaluation of the specifier is host-specified. Most hosts align with browsers and resolve the specifiers as URLs relative to the current module URL (see [`import.meta.url`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta)). Node, bundlers, and other non-browser environments often define their own features on top of this, so you should find documentation for them to understand the exact rules. The [module specifier resolution](#module_specifier_resolution) section also has more information.
 - `name`
-  - : Name of the module object that will be used as a kind of namespace when referring to the imports. Must be a valid JavaScript identifier.
+  - : Name of the [module namespace object](/en-US/docs/Web/JavaScript/Reference/Operators/import#module_namespace_object) that will be used as a kind of namespace when referring to the imports. Must be a valid JavaScript identifier.
 - `exportN`
   - : Name of the exports to be imported. The name can be either an identifier or a string literal, depending on what `module-name` declares to export. If it is a string literal, it must be aliased to a valid identifier.
 - `aliasN`
