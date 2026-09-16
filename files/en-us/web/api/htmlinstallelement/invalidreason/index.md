@@ -21,7 +21,12 @@ You can query the {{domxref("HTMLInstallElement.isValid")}} property to check wh
 The empty string (`""`) if the element does not have an active blocker, or one of the following values (in priority order):
 
 - `illegal_subframe`
-  - : The `<install>` element is nested inside a {{htmlelement("fencedframe")}} element.
+  - : The `<install>` element is nested inside an {{htmlelement("iframe")}} or {{htmlelement("fencedframe")}} element.
+
+    Permanent blocker.
+
+- `illegal_sandbox`
+  - : The `<install>` element is inside sandboxed content.
 
     Permanent blocker.
 
@@ -55,13 +60,7 @@ The empty string (`""`) if the element does not have an active blocker, or one o
 
     Temporary blocker.
 
-- `type_invalid`
-  - : xxx ?
-
-    Temporary blocker.
-
 These invalid reasons are listed in priority order, from highest to lowest.
-If multiple blockers are active, the `invalidReason` value returned will be the value representing the highest-priority active blocker.
 
 Also note that the descriptions above include a "blocker type" for each invalid reason, which is one of the following:
 

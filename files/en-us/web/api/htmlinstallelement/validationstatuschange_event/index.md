@@ -10,7 +10,7 @@ browser-compat: api.HTMLInstallElement.validationstatuschange_event
 
 {{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
-The **`validationstatuschange`** event of the {{domxref("HTMLInstallElement")}} interface is fired whenever the {{htmlelement("install")}} element's {{domxref("HTMLInstallElement.isValid", "isValid")}} value changes.
+The **`validationstatuschange`** event of the {{domxref("HTMLInstallElement")}} interface is fired whenever the {{htmlelement("install")}} element's validation state changes, which can include changes to {{domxref("HTMLInstallElement.isValid", "isValid")}} or the reported {{domxref("HTMLInstallElement.invalidReason", "invalidReason")}}.
 
 This occurs as a result of a [blocker](/en-US/docs/Web/HTML/Reference/Elements/install#install_blocking) being added to or removed from an `<install>` element.
 

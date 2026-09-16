@@ -14,6 +14,8 @@ The **`manifest`** property of the {{domxref("HTMLInstallElement")}} interface g
 
 It reflects the value of the `<install>` [`manifest`](/en-US/docs/Web/HTML/Reference/Elements/install#manifest) attribute.
 
+`manifest` URLs can be absolute or relative. If a relative URL is specified, it is resolved against the current document's base URL.
+
 ## Value
 
 A string representing the web app manifest of the PWA to be installed.

@@ -41,6 +41,10 @@ The `id` manifest member serves as a unique identifier for your web app. It allo
 
 The `id` can also be used by services that collect lists of web apps to uniquely identify applications.
 
+### Computed manifests
+
+If your manifest doesn't include an `id` field, the browser will use a computed `id` value to identify the app. This can be found in your browser developer tools. For example, open the Chrome/Edge developer tools _Application_ panel, select the _Manifest_ option, and scan the page for the _Computed App ID_ field.
+
 ### Usage notes
 
 A few key points to remember while using the `id` member:

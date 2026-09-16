@@ -18,16 +18,18 @@ The **`<install>`** [HTML](/en-US/docs/Web/HTML) element creates a button that, 
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `manifest` {{experimental_inline}}
-  - : A string equal to an absolute URL pointing to the [web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) of the PWA to be installed. If this is omitted, the browser will attempt to install the current document as a PWA.
+  - : A string equal to a URL pointing to the [web app manifest](/en-US/docs/Web/Progressive_web_apps/Manifest) of the PWA to be installed. If this is omitted, the browser will attempt to install the current document as a PWA.
 
 - `manifestId` {{experimental_inline}}
-  - : A string equal to an absolute URL representing the ID of the PWA to be installed. This can be omitted if the manifest at `manifest` contains an [`id`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/id) field.
+  - : A string equal to a URL representing the ID of the PWA to be installed. This can be omitted if the `manifest` attribute is also omitted, or if `manifest` is included and the referenced manifest contains a valid [`id`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/id) field.
+
+    If the `manifestId` attribute is included without the `manifest` attribute, installation will fail ({{domxref("InstallResultEvent.result")}} will equal `invalid_data`).
 
 ## Description
 
 The `<install>` element provides a declarative browser-defined control that instructs the browser to install a [progressive web app (PWA)](/en-US/docs/Glossary/Progressive_web_apps) on the user's device. In Chrome, for example, the button features an installation icon (the same as the PWA install controls on the browser UI) and intuitive text ("Install" in English content).
 
-This uses the same permission flow as the browser's built-in install functionality, but it has some advantages. It allows the developer to create an install experience that is more consistent across supporting browsers, has greater flexibility as to where it can be implemented, and is easier to discover.
+This uses the same installation confirmation dialog as the browser's built-in install functionality, but it has some advantages. It allows the developer to create an install experience that is more consistent across supporting browsers, has greater flexibility as to where it can be implemented, and is easier to discover.
 
 > [!NOTE]
 > There is an equivalent DOM method, {{domxref("Navigator.install()")}}, which provides a programmatic mechanism to create such an install button.
@@ -74,8 +76,27 @@ There are three distinct usage contexts in which `<install>` is useful:
    </p>
    ```
 
-> [!NOTE]
-> The above snippets assume that the referenced manifests specify an [`id`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/id) field. If they don't, then the manifest `id` must be specified in the `<install>` element's [`manifestId`](#manifestid) attribute.
+You can specify absolute or relative URLs for `manifest` and `manifestId` values. If a relative URL is specified, it is resolved against the current document's base URL.
+
+### Including a `manifestId`
+
+The snippets in the previous section don't include `manifestId` attributes in the `<install>` elements. They assume that the referenced manifests specify an [`id`](/en-US/docs/Web/Progressive_web_apps/Manifest/Reference/id) field, in which case `manifestId` attributes are not required.
+
+If your manifest doesn't include an `id` field, the browser will use a computed `id` value to identify the app, which you must specify in the `<install>` element's `manifestId` attribute. This supplies an explicit expected ID; if this does not match the ID of the app, installation will fail ({{domxref("InstallResultEvent.result")}} will equal `invalid_data`).
+
+For example:
+
+```html
+<p>
+  Install app1:
+  <install
+    manifest="https://example1.com/app/manifest.json"
+    manifestId="https://example1.com/app/index.html">
+  </install>
+</p>
+```
+
+The `manifestId` can be found in your browser developer tools. For example, open the Chrome/Edge developer tools _Application_ panel, select the _Manifest_ option, and scan the page for the _Computed App ID_ field.
 
 ### Criteria for installing a PWA via `<install>`
 
@@ -83,6 +104,7 @@ For an app to be installed via an `<install>` element, the following criteria mu
 
 - The app must meet the basic PWA [installability](/en-US/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#installability) criteria, namely, it must have a valid manifest and must be served over HTTPS, or from a `localhost` address.
 - The app must have a manifest ID available, either in the manifest file `id` field, or provided in the `<install>` element's `manifestId` attribute.
+- The `<install>` element must be included in a top-level browsing context. It won't function when embeded in an {{htmlelement("iframe")}}.
 
 ### Setting the button language
 
@@ -127,11 +149,9 @@ Finally, refer to [`<geolocation>` > Accessibility restrictions](/en-US/docs/Web
 
 The `<install>` element is restricted to [secure contexts](/en-US/docs/Web/Security/Defenses/Secure_Contexts) (HTTPS).
 
-Access to the API is also controlled via the {{httpheader("Permissions-Policy/web-app-installation", "web-app-installation")}} {{httpheader("Permissions-Policy")}} directive.
-
 ## Examples
 
-TBD
+See our [PWA install demos](https://mdn.github.io/pwa-examples/install-demos/).
 
 ## Technical summary
 
@@ -167,8 +187,8 @@ TBD
     <tr>
       <th scope="row">Implicit ARIA role</th>
       <td>
-        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
-          >No corresponding role</a
+        <a href="/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/button_role"
+          ><code>button</code></a
         >
       </td>
     </tr>
@@ -197,4 +217,3 @@ TBD
 
 - {{domxref("HTMLInstallElement")}}
 - {{domxref("Navigator.install()")}}
-- The {{httpheader("Permissions-Policy/web-app-installation", "web-app-installation")}} [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy)

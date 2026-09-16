@@ -14,6 +14,8 @@ The **`manifestId`** property of the {{domxref("HTMLInstallElement")}} interface
 
 It reflects the value of the `<install>` [`manifestId`](/en-US/docs/Web/HTML/Reference/Elements/install#manifestId) attribute.
 
+`manifestId`s can be absolute or relative URLs. If a relative URL is specified, it is resolved against the current document's base URL.
+
 ## Value
 
 A string representing the ID of the PWA to be installed, or `null` if no `manifestId` attribute was set on the `<install>` element.
