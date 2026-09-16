@@ -7,7 +7,7 @@ browser-compat: css.properties.counter-reset
 sidebar: cssref
 ---
 
-The **`counter-reset`** [CSS](/en-US/docs/Web/CSS) property creates named [CSS counters](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters) and initializes them to a specific value, optionally marking the counter as reversed.
+The **`counter-reset`** [CSS](/en-US/docs/Web/CSS) property creates named [CSS counters](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters) and initializes them to a specific value, optionally setting the counter as reversed.
 
 {{InteractiveExample("CSS Demo: counter-reset")}}
 
@@ -67,18 +67,18 @@ h2::before {
 ## Syntax
 
 ```css
-/* Keyword */
+/* Keyword value */
 counter-reset: none;
 
-/* Single counter */
+/* Regular counters with default initial values */
 counter-reset: my-counter;
 counter-reset: another-counter;
 
-/* Initialize counter */
+/* Regular counters with initial value */
 counter-reset: my-counter -3;
 counter-reset: another-counter 15;
 
-/* Reversed counter */
+/* Reversed counters */
 counter-reset: reversed(my-counter);
 counter-reset: reversed(my-counter) 3;
 counter-reset: reversed(another-counter) 15;
@@ -97,30 +97,30 @@ counter-reset: unset;
 
 ### Values
 
-This property is specified as a space-separated list of names or name-value pairs, or the keyword `none`.
+This property is specified as a space-separated list of counter or reversed counter names, each optionally followed by an `<integer>`, or the keyword `none`.
 
 - {{cssxref("&lt;custom-ident&gt;")}}
-  - : Specifies the counter name to create and initialized. The `reversed()` functional notation can be used to mark the counter reversed.
+  - : Specifies the counter name to create and initialize. The `reversed()` functional notation can be used to create a reversed counter.
 - {{cssxref("&lt;integer&gt;")}}
   - : The initial value to set on the newly created counter.
     Defaults to `0` if not specified, or to the number of elements in the case of `reversed()`.
 - `none`
-  - : Specifies that no counter initialization should occur.
+  - : Specifies that no counters are created.
 
 ## Description
 
-The `counter-reset` property can be used to create and initialize named [counters](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters), optionally marking the counter as a reversed counter. It can be used to create counters that count up from one to the number of elements, as well as those that count down from the number of elements to one.
+The `counter-reset` property can be used to create and initialize named [counters](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters) or reversed counters to number elements in ascending or descending order.
 
-The `none` value specifies that no counter initialization should occur. It can be used to override the creation of the named counter declared within a selector block with lower specificity.
+The `none` value can be used to override the creation of the named counter declared within a selector block with lower specificity.
 
 > [!WARNING]
 > There is [a difference between `counter-reset` and `counter-set` properties](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters#difference_between_counter-set_and_counter-reset). After creating a counter using `counter-reset`, you can adjust its value by using the {{cssxref("counter-set")}} property. This is counterintuitive because, despite its name, the `counter-reset` property is used for creating and initializing counters, while the `counter-set` property is used for resetting the value of an existing counter.
 
-Multiple counters can be created by separated each with a space. Counters can be a standalone name or a space-separated name-value pair. The `counter-reset` property accepts a list of one or more space-separated counter names or the keyword `none`. For counter names, regular counters use the format `<counter-name>`, and reversed counters use `reversed(<counter-name>)`, where `<counter-name>` is a {{cssxref("custom-ident", "&lt;custom-ident&gt;")}} or `list-item` for the built-in {{HTMLElement("ol")}} counter. Optionally, each counter name can be followed by an `<integer>` to set its initial value.
+Separate multiple counter names or name-value pairs with spaces. For counter names, regular counters use the format `<counter-name>` and reversed counters use the format `reversed(<counter-name>)`, where `<counter-name>` is a {{cssxref("custom-ident", "&lt;custom-ident&gt;")}} or `list-item` for the built-in {{HTMLElement("ol")}} counter. 
 
 ### Default initial values
 
-The default initial values of both regular and reversed counters enable implementing the two most common numbering patterns: counting up from one to the number of elements and counting down from the number of elements to one, incrementing or decrementing by one, respectively. By including a counter value for a named counter, your counter can count up or down, starting at that integer value. The increment can be adjusted with the {{cssxref("counter-increment")}} property.
+The default initial values of regular and reversed counters enable implementing the two most common numbering patterns: counting up from `1` to the number of elements and counting down from the number of elements to `1`, with increments or decrements of `1`. By specifying an initial value for a named counter, you can change its starting value. The increment or decrement can be adjusted with the {{cssxref("counter-increment")}} property.
 
 This example creates three counters. The `chapter` and `page` counters are set to the initial default value of `0`, while the `section` is set to `4`:
 
@@ -130,9 +130,9 @@ h1 {
 }
 ```
 
-Reversed counters created without an `<integer>` start with the value equal to the number of elements in the set, counting down so the last element in the set is `1`.
+For reversed counters created without an `<integer>`, start with the value equal to the number of elements in the set, counting down so the last element in the set is `1`.
 
-This example creates three counters: two reversed counters, `chapter` and `section`, and a regular counter named `pages`. The `chapter` counter is initialized as the number of elements, `section` as `10`, and `pages` as `0`, the initial default value.
+This example creates two reversed counters, `chapter` and `section`, and a regular counter, `pages`. The `chapter` counter is initialized as the number of elements, `section` as `10`, and `pages` to its default initial value of `0`.
 
 ```css
 h1 {
@@ -186,11 +186,11 @@ ol {
 
 {{EmbedLiveSample("Overriding the list-item counter", 140, 300)}}
 
-The first item is numbered 4. This is similar to the effect of writing [`<ol start="4">`](/en-US/docs/Web/HTML/Reference/Elements/ol#start) in HTML.
+The first item is numbered `4`. This is similar to the effect of writing [`<ol start="4">`](/en-US/docs/Web/HTML/Reference/Elements/ol#start) in HTML.
 
 ### Using a reverse counter
 
-In this example, the `reversed()` function is used to created a reversed counter named 'priority' used to number five tasks.
+In this example, the `reversed()` function is used to create a reversed counter named 'priority' that numbers five tasks.
 
 #### HTML
 
@@ -208,7 +208,7 @@ We include an unordered list ({{htmlelement("ul")}}) containing five list items 
 
 #### CSS
 
-We create a reversed counter named `priority` on the `<ul>`, and remove the default bullets. We set the counter to decrement on every `<li>`. We than add generated content to print the counter before the content in every `<li>`.
+We create a reversed counter named `priority` on the `<ul>` and remove the default bullets. We decrement the counter by `1` on each `<li>`. We then use generated content to display the counter value before each list item's content.
 
 ```css
 .stack {
@@ -235,9 +235,11 @@ li::before {
 }
 ```
 
+#### Result
+
 {{EmbedLiveSample("Using a reverse counter", 140, 150)}}
 
-The items are numbered in reversed order from 5 to 1. Notice in the code we haven't specified the counter's initial value. The browser automatically calculates the initial value at layout-time using the counter increment value.
+The items are numbered in reverse order from `5` to `1`. Notice that we haven't specified the counter's initial value. The browser automatically calculates the initial value at layout time using the counter increment value.
 
 ## Specifications
 
