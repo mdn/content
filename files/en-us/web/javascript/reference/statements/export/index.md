@@ -243,10 +243,8 @@ export { default } from "./data.json" with { type: "json" };
 
 ### Using named exports
 
-In a module `my-module.js`, we could include the following code:
-
 ```js
-// module "my-module.js"
+// -- my-module.js --
 function cube(x) {
   return x * x * x;
 }
@@ -291,7 +289,7 @@ It is important to note the following:
 If we want to export a single value representing an entire module, we could use a default export:
 
 ```js
-// module "cube.js"
+// -- cube.js --
 
 export default function cube(x) {
   return x * x * x;
@@ -318,7 +316,7 @@ Let's take an example where we have the following hierarchy:
 This is what it would look like using code snippets:
 
 ```js
-// In childModule1.js
+// -- childModule1.js --
 function myFunction() {
   console.log("Hello!");
 }
@@ -327,7 +325,7 @@ export { myFunction, myVariable };
 ```
 
 ```js
-// In childModule2.js
+// -- childModule2.js --
 class MyClass {
   constructor(x) {
     this.x = x;
@@ -338,7 +336,7 @@ export { MyClass };
 ```
 
 ```js
-// In parentModule.js
+// -- parentModule.js --
 // Only aggregating the exports from childModule1 and childModule2
 // to re-export them
 export { myFunction, myVariable } from "./childModule1.js";
@@ -346,7 +344,7 @@ export { MyClass } from "./childModule2.js";
 ```
 
 ```js
-// In top-level module
+// -- top-level module --
 // We can consume the exports from a single module since parentModule
 // "collected"/"bundled" them in a single source
 import { myFunction, myVariable, MyClass } from "./parentModule.js";

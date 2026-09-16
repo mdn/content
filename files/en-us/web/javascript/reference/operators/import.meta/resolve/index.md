@@ -28,7 +28,7 @@ Returns a string corresponding to the path that would be imported if the argumen
 `import.meta.resolve()` allows a script to access the _module specifier resolution_ algorithm for a name, like this:
 
 ```js
-// Script at https://example.com/main.js
+// -- https://example.com/main.js --
 
 const helperPath = import.meta.resolve("./lib/helper.js");
 console.log(helperPath); // "https://example.com/lib/helper.js"
@@ -103,14 +103,14 @@ This means that `import.meta.resolve()` is not required to be implemented by all
 `import.meta.resolve()` is particularly valuable for APIs that take a path to a script file as an argument, such as the [`Worker()`](/en-US/docs/Web/API/Worker/Worker) constructor:
 
 ```js
-// main.js
+// -- main.js --
 const workerPath = import.meta.resolve("./worker.js");
 const worker = new Worker(workerPath, { type: "module" });
 worker.addEventListener("message", console.log);
 ```
 
 ```js
-// worker.js
+// -- worker.js --
 self.postMessage("hello!");
 ```
 

@@ -387,7 +387,149 @@ However, cyclic imports can also occur if the libraries depend on each other, wh
 
 ## Asynchronous evaluation with top-level await
 
-Extend the running example with one asynchronous dependency. Show which importers wait and which independent branches can proceed. Cover rejected initialization and, briefly, circular waiting involving await import(). The main guide can retain its introductory syntax example.
+Modules can use [`await`](/en-US/docs/Web/JavaScript/Reference/Operators/await#top-level_await) at the top level, outside any function. This allows a module to finish asynchronous initialization before modules that depend on it execute. Previously, our [evaluation](#evaluating_modules) is synchronous; now, we must make it asynchronous too, which has lots of implications about side-effect ordering and errors.
+
+For example, suppose we change `config.js` to retrieve its configuration from a server, which returns the same object as in our original example:
+
+```js
+// -- config.js --
+const response = await fetch("https://example.com/config.json");
+if (!response.ok) {
+  throw new Error(`Failed to fetch configuration: ${response.status}`);
+}
+export default await response.json();
+```
+
+The other modules don't need to change: the module system automatically waits for `config.js` to finish before executing their bodies and executing their dependents like `main.js`.
+
+Previously, a module is either evaluated, unevaluated, or in an SCC and waiting for other modules to evaluate. Now, a module can also be _in progress_. It covers both modules whose own asynchronous execution is in progress and modules waiting for asynchronous dependencies. A module can therefore have this status without containing an `await` expression.
+
+The engine still traverses dependencies depth-first, in the order their module requests appear in the source. However, it no longer needs to finish executing one branch before visiting another. For an acyclic graph, the process is:
+
+- The engine visits a module's dependencies, as before. If a dependency is still in progress, the engine records that this module must wait for it, but continues visiting the other dependencies.
+- Once all dependencies have been visited and none is in progress, the engine starts the module's body. A module with top-level `await` executes until it reaches an `await`, then suspends until the awaited value settles. It remains in progress until its entire body finishes, including any further `await` expressions.
+- A module whose dependencies are still in progress is also in progress and waits without executing any of its body, even the code before its first `await`. This also applies to modules that have no top-level `await` themselves.
+- When a module finishes successfully, the engine checks which waiting importers can now execute. An importer starts only after all the dependencies it was waiting for have finished successfully. If several modules become ready together, the engine uses the evaluation order established by the depth-first traversal to decide which to start first.
+
+> [!NOTE]
+> When multiple asynchronous modules are simultaneously executing (for example if `logger.js` also contains a top-level `await`), the behavior is the same as executing two async functions concurrently: each `await` yields out the current job and allows the other module to resume. See [control flow effects of `await`](/en-US/docs/Web/JavaScript/Reference/Operators/await#control_flow_effects_of_await).
+
+In our example, the engine reaches `config.js` through `main.js` and `formatters.js`. It starts the fetch and suspends `config.js` at the first `await`. It then visits and evaluates `logger.js`, which doesn't depend on the configuration. `formatters.js` must wait for `config.js`, and `main.js` must wait for both `formatters.js` and `config.js`. After the response body has been parsed and `config.js` finishes, `formatters.js` executes, followed by `main.js`, which calls `greet()`.
+
+![While config.js awaits its fetch, config.js, formatters.js, and main.js are in progress, shown in amber. logger.js has evaluated successfully, shown in green.](module-async-evaluation.svg)
+
+### Tainting effects of top-level await
+
+Top-level `await` therefore affects more than the module that contains it: it makes the evaluation of every module that transitively imports it asynchronous too. In the following module graph, only `Config` and `Database` contain top-level `await`, but `Auth`, `Reports`, `Documents`, `Router`, `Dashboard`, `Editor`, and `App` all depend on their asynchronous completion. The other branches can still evaluate synchronously.
+
+![An application module graph. Config and Database contain top-level await and are dark teal. Their transitive importers Auth, Reports, Documents, Router, Dashboard, Editor, and App are light teal. Help, Routes, Charts, Toolbar, Markdown, Tokens, Format, Icons, Parse, and Codec have synchronous dependency subgraphs and are gray.](module-async-propagation.svg)
+
+This matters when an API needs evaluation to finish synchronously. In Node.js, [`require()` can load an ES module](https://nodejs.org/api/modules.html#loading-ecmascript-modules-using-require) only if its entire dependency graph is synchronous. A module with top-level `await` "taints" every module above it (in other words, imports it), so they cannot be synchronously imported with `require()`. In the graph above, `require()` can load `Help`, but it cannot load `Router`, even though `Router` itself contains no `await`.
+
+Similarly, [`import defer`](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer#top-level_await) can only defer synchronous execution, because accessing a property on its namespace must be able to finish evaluation synchronously. For `import defer`, the "tainting" happens in the other direction: anything _below_ the module with top-level `await` (in other words, imported by it) cannot be deferred. The remaining synchronous execution can stay deferred. For example, if another module uses `import defer` to import `App` in the graph above, `Config` and `Database`, together with their dependencies `Parse` and `Codec`, evaluate before that importer's body runs. The bodies of `App` and its remaining dependencies can stay deferred. Although the ancestors of `Config` and `Database` depend on asynchronous evaluation, their own bodies do not contain top-level `await` and can execute synchronously once those dependencies have finished.
+
+Adding top-level `await` to an existing module can be a breaking change for its importers, even if its exports remain unchanged. It delays their entire bodies, including statements written before their `import` declarations, while independent modules can continue executing. This can alter the execution order of sibling modules.
+
+For example, these modules rely on the order of sibling imports to initialize a global variable before reading it:
+
+```js
+// -- entry.js --
+import "./setup.js";
+import "./display.js";
+```
+
+```js
+// -- setup.js --
+import { locale } from "./settings.js";
+
+globalThis.appLocale = locale;
+```
+
+```js
+// -- settings.js --
+export const locale = "en-US";
+```
+
+```js
+// -- display.js --
+console.log(globalThis.appLocale); // "en-US"
+```
+
+Now suppose `settings.js` introduces top-level `await`:
+
+```js
+// -- settings.js --
+export const locale = await Promise.resolve("en-US");
+```
+
+`setup.js` now waits for `settings.js`, including the assignment written before its `import` declaration. Meanwhile, `display.js` executes and logs `undefined`, assuming `appLocale` was not already defined. The order of imports in `entry.js` does not make `display.js` wait for `setup.js` to finish.
+
+To preserve the required ordering, make `display.js` explicitly depend on `setup.js`. This is safe because a module is only evaluated once per application.
+
+```js
+// -- display.js --
+import "./setup.js";
+
+console.log(globalThis.appLocale); // "en-US"
+```
+
+The same issue can occur if `setup.js` and `display.js` are entry points of separate `<script type="module">` elements in that order. The explicit import ensures that `display.js` waits for setup in that case too.
+
+### Handling cycles with top-level await
+
+Cycles require an additional distinction between the static dependency graph and the dependencies that evaluation actually waits for. Consider the [asynchronous example in the specification](https://tc39.es/ecma262/multipage/ecmascript-language-scripts-and-modules.html#sec-example-cyclic-module-record-graphs), with `a.js` as the entry point and all five modules containing top-level `await`:
+
+![An asynchronous module graph: a.js imports b.js and c.js; b.js imports d.js; c.js imports d.js and e.js; and d.js imports a.js. Every module contains top-level await.](module-async-cycle.svg)
+
+The modules `a.js`, `b.js`, `c.js`, and `d.js` form one SCC. The engine first visits `a.js`, `b.js`, and `d.js`. When it encounters `d.js`'s import of `a.js`, it breaks out of the cycle as before. At this point, `a.js` has not yet been recorded as awaiting asynchronous completion, so this edge does not make `d.js` wait for `a.js`. `d.js` starts executing. The engine then visits the other branch through `c.js`, finds that `d.js` is pending, and starts `e.js`.
+
+Suppose the asynchronous operations finish in the following order:
+
+- `e.js` finishes. `c.js` still waits for `d.js`, so no other module starts yet.
+- `d.js` finishes. Both `b.js` and `c.js` are now ready. `b.js` starts first, following the traversal's evaluation order, but when it suspends at `await`, `c.js` can start too.
+- `c.js` finishes. `a.js` still waits for `b.js`.
+- `b.js` finishes. `a.js` can now start executing its body.
+- `a.js` finishes. The entry point's evaluation promise fulfills.
+
+Unlike the synchronous cycles discussed earlier, the modules in an asynchronous SCC do not necessarily transition to _evaluated_ together. Each can finish at a different time. To preserve the component's overall outcome, the engine associates its modules with a _cycle root_: the first module visited in that SCC, `a.js` in our case. Imports that encounter the component after its initial traversal use this root to wait for the component's completion and check for an evaluation error. A module's body finishing successfully does not, by itself, mean that the whole component can be imported successfully.
+
+For example, suppose `c.js` fails while `b.js` is still awaiting. The error propagates to `a.js`, whose body never starts, and the entry point's evaluation promise rejects. `b.js` can still finish successfully; its ongoing work is not canceled. Nevertheless, a later dynamic import of `b.js` rejects with the error recorded on the cycle root `a.js`. The successful execution of `b.js` does not erase the component's failure.
+
+![After c.js fails, a.js and c.js are evaluated with an error, evaluation of b.js is still in progress, and d.js and e.js have evaluated successfully.](module-async-cycle-error.svg)
+
+### Deadlocks
+
+You can have deadlocks with modules containing top-level await:
+
+```js
+// -- a.js --
+import { resolve } from "./b.js";
+
+resolve();
+```
+
+```js
+// -- b.js --
+const { promise, resolve } = Promise.withResolvers();
+export { resolve };
+await promise;
+```
+
+If evaluation starts at `a.js`, it waits for `b.js` to finish before executing its body. But `b.js` awaits a promise that only the call to `resolve()` in `a.js` can fulfill. Neither evaluation can complete. The module algorithm does not automatically reject the promises to break this deadlock.
+
+The above may look contrived. A more realistic situation is when you wait on a dynamic import of a module that depends on the current module.
+
+```js
+// -- a.js --
+await import("./b.js");
+```
+
+```js
+// -- b.js --
+import "./a.js";
+```
+
+Similarly in this case, `b.js` waits for the dynamic import in `a.js` to complete, but the dynamic import can only complete when `b.js` finishes executing.
 
 ## Dynamic imports and the graph
 

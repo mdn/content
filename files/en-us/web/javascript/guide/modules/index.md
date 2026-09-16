@@ -249,9 +249,8 @@ export default function randomSquare(ctx) {
 }
 ```
 
-Over in our `main.js` file, we import the default function using this line:
-
 ```js
+// -- main.js --
 import randomSquare from "./modules/square.js";
 ```
 
@@ -411,9 +410,8 @@ which we then export:
 export { Square };
 ```
 
-Over in [`main.js`](https://github.com/mdn/js-examples/blob/main/module-examples/classes/main.js), we import it like this:
-
 ```js
+// -- main.js --
 import { Square } from "./modules/square.js";
 ```
 
@@ -453,8 +451,6 @@ modules/
     square.js
     triangle.js
 ```
-
-You can make `shapes.js` like this:
 
 ```js
 // -- shapes.js --
@@ -630,9 +626,8 @@ Notice the last export line here.
 
 We're using the keyword `await` before specifying the constant `colors` to export. This means any other modules which include this one will wait until `colors` has been downloaded and parsed before using it.
 
-Let's include this module in our [`main.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/main.js) file:
-
 ```js
+// -- main.js --
 import colors from "./modules/getColors.js";
 import { Canvas } from "./modules/canvas.js";
 
@@ -674,7 +669,7 @@ const triangle = new Module.Triangle(
 
 This is useful because the code within [`main.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/main.js) won't execute until the code in [`getColors.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/modules/getColors.js) has run. However it won't block other modules being loaded. For instance our [`canvas.js`](https://github.com/mdn/js-examples/blob/main/module-examples/top-level-await/modules/canvas.js) module will continue to load while `colors` is being fetched.
 
-Top-level `await` is not free; it has deep implications because it means a part of the [module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph) can only be loaded asynchronously. We'll talk more about what that implies in the [module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph) and [cross-platform modules](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms) guides.
+Top-level `await` is not free; it has deep implications because it means a part of the [module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph) can only be loaded asynchronously. See the [module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#asynchronous_evaluation_with_top-level_await) guide for more information.
 
 ## Module metadata
 
@@ -683,7 +678,7 @@ Scripts are executed in the global context, so it can get information about its 
 Just as an example, in most web-like environments (browsers, Node.js, bundlers, etc.), `import.meta.url` provides the module's URL, which you can use to locate a resource relative to the module:
 
 ```js
-// modules/getColors.js
+// -- modules/getColors.js --
 const colorsURL = new URL("../data/colors.json", import.meta.url);
 ```
 

@@ -44,17 +44,17 @@ Using query parameters in the `import` specifier allows module-specific argument
 The `index.mjs` module is able to retrieve the `someURLInfo` parameter through `import.meta`:
 
 ```js
-// index.mjs
+// -- index.mjs --
 new URL(import.meta.url).searchParams.get("someURLInfo"); // 5
 ```
 
 The same applies when a module imports another:
 
 ```js
-// index.mjs
+// -- index.mjs --
 import "./index2.mjs?someURLInfo=5";
 
-// index2.mjs
+// -- index2.mjs --
 new URL(import.meta.url).searchParams.get("someURLInfo"); // 5
 ```
 

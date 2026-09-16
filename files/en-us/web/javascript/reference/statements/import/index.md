@@ -90,7 +90,7 @@ import { reallyReallyLongModuleExportName as shortName } from "/modules/my-modul
 A module may also export a member as a string literal which is not a valid identifier, in which case you must alias it in order to use it in the current module.
 
 ```js
-// /modules/my-module.js
+// -- /modules/my-module.js --
 const a = 1;
 export { a as "a-b" };
 ```
@@ -184,7 +184,7 @@ There are three types of specifiers widely recognized, as implemented by the HTM
 The most notable caveat for relative specifiers, especially for people familiar with the [CommonJS](https://wiki.commonjs.org/wiki/CommonJS) conventions, is that browsers forbid one specifier to implicitly resolve to many potential candidates. In CommonJS, if you have `main.js` and `utils/index.js`, then all of the following will import the "default export" from `utils/index.js`:
 
 ```js
-// main.js
+// -- main.js --
 const utils = require("./utils"); // Omit the "index.js" file name
 const utils = require("./utils/index"); // Omit only the ".js" extension
 const utils = require("./utils/index.js"); // The most explicit form
@@ -224,7 +224,7 @@ The module resolution algorithm can also be executed programmatically using the 
 In this example, we create a re-usable module that exports a function to get all primes within a given range.
 
 ```js
-// getPrimes.js
+// -- getPrimes.js --
 /**
  * Returns a list of prime numbers that are smaller than `max`.
  */
@@ -258,7 +258,7 @@ The identifier being imported is a _live binding_, because the module exporting 
 You can also observe the new value through the [module namespace object](/en-US/docs/Web/JavaScript/Reference/Operators/import#module_namespace_object).
 
 ```js
-// my-module.js
+// -- my-module.js --
 export let myValue = 1;
 setTimeout(() => {
   myValue = 2;
@@ -266,7 +266,7 @@ setTimeout(() => {
 ```
 
 ```js
-// main.js
+// -- main.js --
 import { myValue } from "/modules/my-module.js";
 import * as myModule from "/modules/my-module.js";
 

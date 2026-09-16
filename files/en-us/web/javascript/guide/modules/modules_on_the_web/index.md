@@ -348,7 +348,7 @@ The [Modules](/en-US/docs/Web/JavaScript/Guide/Modules#module_metadata) guide al
 Use [`import.meta.url`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta) with the {{domxref("URL/URL", "URL()")}} constructor when a resource is located relative to your module:
 
 ```js
-// modules/set-user.js
+// -- modules/set-user.js --
 const apiURL = new URL("../api/set-user", import.meta.url);
 
 export async function setUser(name) {

@@ -153,7 +153,7 @@ function promisedFunction() {
 
 However, if `promisedFunction()` does throw an error synchronously, the error won't be caught by the `catch()` handler. In this case, the `try...catch` statement is necessary.
 
-### Top level await
+### Top-level await
 
 You can use the `await` keyword on its own (outside of an async function) at the top level of a [module](/en-US/docs/Web/JavaScript/Guide/Modules). This means that modules with child modules that use `await` will wait for the child modules to execute before they themselves run, all while not blocking other child modules from loading.
 
@@ -167,6 +167,8 @@ const colors = fetch(
 
 export default await colors;
 ```
+
+Top-level `await` is not free; it has deep implications because it means a part of the [module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph) can only be loaded asynchronously. See the [module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#asynchronous_evaluation_with_top-level_await) guide for more information.
 
 ### Control flow effects of await
 
