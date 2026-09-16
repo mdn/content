@@ -1,45 +1,26 @@
 ---
-title: Firefox 156 release notes for developers (Beta)
-short-title: Firefox 156 (Beta)
+title: Firefox 156 release notes for developers (Stable)
+short-title: Firefox 156 (Stable)
 slug: Mozilla/Firefox/Releases/156
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 156 that affect developers.
-Firefox 156 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [September 15, 2026](https://whattrainisitnow.com/release/?version=156).
-
-> [!NOTE]
-> The release notes for this Firefox version are still a work in progress.
-
-<!-- Authors: Please uncomment any headings you are writing notes for -->
+Firefox 156 was released on [September 15, 2026](https://whattrainisitnow.com/release/?version=156).
 
 ## Changes for web developers
 
 ### Developer Tools
 
-- The [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) now resolves substitution functions — {{cssxref("var")}}, {{cssxref("attr")}}, and {{cssxref("env")}} — when computing the steps shown for a declaration, so a value that comes from a custom property or an attribute is traced to its source rather than shown unresolved.
-  ([Firefox bug 2041622](https://bugzil.la/2041622)).
 - The viewport size readout in the Inspector's highlighter no longer rounds the width and height, which previously reported a misleading size at fractional zoom levels or on high-density displays.
   ([Firefox bug 2055445](https://bugzil.la/2055445)).
 - DevTools can now connect to a debugger server up to three versions older than the client, up from the previous limit. This matters when remotely debugging an older Firefox or GeckoView build.
   ([Firefox bug 2064221](https://bugzil.la/2064221)).
-- Fixed the rulers highlighter remaining visible after being turned off, when the Inspector was not the selected panel.
-  ([Firefox bug 2063982](https://bugzil.la/2063982)).
-- Fixed <kbd>F2</kbd> invoking "Edit as HTML" on nodes that do not support it, and showing stale content from a previous edit.
-  ([Firefox bug 2064213](https://bugzil.la/2064213)).
-- Fixed the position of the "Device Settings" modal in [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html).
-  ([Firefox bug 2062153](https://bugzil.la/2062153)).
 
-<!-- ### HTML -->
+### HTML
 
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### MathML -->
-
-<!-- #### Removals -->
+No notable changes.
 
 ### SVG
 
@@ -47,8 +28,6 @@ Firefox 156 is the current [Beta version of Firefox](https://www.firefox.com/en-
   ([Firefox bug 2066045](https://bugzil.la/2066045)).
 - The {{domxref("SVGSVGElement.currentScale")}} setter is now a no-op on a nested `<svg>` element, as required by the specification. It continues to work on the outermost `<svg>` element.
   ([Firefox bug 2063188](https://bugzil.la/2063188)).
-
-<!-- #### Removals -->
 
 ### CSS
 
@@ -58,12 +37,6 @@ Firefox 156 is the current [Beta version of Firefox](https://www.firefox.com/en-
   the correct line is trimmed when an inline box on the last line is fragmented ([Firefox bug 2063909](https://bugzil.la/2063909)),
   and trimming on an inline box no longer removes its border and padding ([Firefox bug 2064596](https://bugzil.la/2064596)).
   Note that {{cssxref("text-box-trim")}} still has no effect in combination with {{cssxref("line-clamp")}}.
-- {{cssxref("@supports")}} no longer reports support for the `::-webkit-scrollbar` pseudo-element, so `@supports selector(::-webkit-scrollbar)` is now false.
-  Sites commonly used this as a signal that `::-webkit-scrollbar-thumb` could be styled, which Firefox does not implement, so claiming support led to worse styling than reporting the gap.
-  Use {{cssxref("scrollbar-width")}} and {{cssxref("scrollbar-color")}} instead.
-  ([Firefox bug 2062782](https://bugzil.la/2062782)).
-
-<!-- #### Removals -->
 
 ### JavaScript
 
@@ -73,19 +46,11 @@ Firefox 156 is the current [Beta version of Firefox](https://www.firefox.com/en-
 - [`using`](/en-US/docs/Web/JavaScript/Reference/Statements/using) declarations can no longer be reassigned, matching the const-like semantics required by the specification. Previously such a binding could be silently mutated.
   ([Firefox bug 2040286](https://bugzil.la/2040286)).
 
-<!-- #### Removals -->
-
-<!-- ### HTTP -->
-
-<!-- #### Removals -->
-
 ### Security
 
 - The `ffdhe2048` and `ffdhe3072` finite-field Diffie-Hellman groups are no longer offered by default in TLS handshakes.
   Servers that support only these groups will fail to negotiate a connection; nearly all servers support ECDHE key exchange instead.
   ([Firefox bug 1992340](https://bugzil.la/1992340)).
-
-<!-- #### Removals -->
 
 ### APIs
 
@@ -107,12 +72,6 @@ Firefox 156 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - The `alwaysNegotiateDataChannels` member of the configuration object passed to the {{domxref("RTCPeerConnection.RTCPeerConnection", "RTCPeerConnection()")}} constructor is now supported. When set to `true`, the SDP produced by the connection always includes a data channel m-line, so {{domxref("RTCPeerConnection.createDataChannel()")}} can be called later without requiring a new round of negotiation. The member defaults to `false`, is returned by {{domxref("RTCPeerConnection.getConfiguration()")}}, and cannot be changed by {{domxref("RTCPeerConnection.setConfiguration()")}}. ([Firefox bug 2062561](https://bugzil.la/2062561)).
 
-<!-- #### Removals -->
-
-<!-- ### WebAssembly -->
-
-<!-- #### Removals -->
-
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
 #### General
@@ -132,10 +91,6 @@ Firefox 156 is the current [Beta version of Firefox](https://www.firefox.com/en-
 ## Changes for add-on developers
 
 - The [`theme`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) manifest key adds the `backgrounds_area` property. This property enables a theme to specify where its background images and gradients are drawn. Setting it to `"window"` draws them across the whole browser window, while `"top_toolbars"` restricts them to the horizontal toolbars at the top of the window. When `backgrounds_area` is omitted or set to `"auto"`, Firefox chooses the area based on `properties.additional_backgrounds_alignment`. ([Firefox bug 2059526](https://bugzil.la/2059526))
-
-<!-- ### Removals -->
-
-<!-- ### Other -->
 
 ## Experimental web features
 
