@@ -55,7 +55,7 @@ Specified as one of the keywords `none`, `grow`, or `shrink`, plus optionally on
 
 ## Description
 
-A common web design challenge is getting headings and other text features to fit neatly within their containing boxes, regardless of layout or viewport size. The most typical use case is getting a horizonal text heading to fit the width of its containing box perfectly. Complex {{cssxref("font-size")}} calculations and JavaScript workarounds were historically used to achieve this.
+A common web design challenge is getting headings and other text features to fit neatly within their containing boxes, regardless of layout or viewport size. The most typical use case is getting a horizontal text heading to fit the width of its containing box perfectly. Complex {{cssxref("font-size")}} calculations and JavaScript workarounds were historically used to achieve this.
 
 The `text-fit` property provides a convenient CSS-only solution, adjusting the rendered font size of the text by a specific scaling factor to fit the space available, rather than justifying it like the {{cssxref("text-align")}} property's `justify` value does.
 
