@@ -44,28 +44,39 @@ Source values are stored as-is. If a value is a promise, the array contains that
 
 ### Using toArray()
 
-This example collects the coordinates of the first three button clicks and displays them as an array in click order.
+This example collects the coordinates of the first three button clicks and displays them as an array in click order. Click Restart after the stream ends to try again.
 
 ```html hidden live-sample___basic-toArray
 <button>Click me</button>
 <p>Waiting for clicks</p>
+<button id="restart" disabled>Restart</button>
 ```
 
 ```js live-sample___basic-toArray
 const btn = document.querySelector("button");
 const output = document.querySelector("p");
 
-btn
-  .when("click")
-  .take(3)
-  .map((event) => ({ x: event.clientX, y: event.clientY }))
-  .toArray()
-  .then((result) => {
-    output.textContent = JSON.stringify(result);
-  });
+const restart = document.querySelector("#restart");
+
+function start() {
+  restart.disabled = true;
+  output.textContent = "Waiting for clicks";
+  btn
+    .when("click")
+    .take(3)
+    .map((event) => ({ x: event.clientX, y: event.clientY }))
+    .toArray()
+    .then((result) => {
+      restart.disabled = false;
+      output.textContent = JSON.stringify(result);
+    });
+}
+
+restart.when("click").subscribe(start);
+start();
 ```
 
-{{EmbedLiveSample("basic-toArray", "100%", "100px")}}
+{{EmbedLiveSample("basic-toArray", "", 140)}}
 
 ## Specifications
 

@@ -44,27 +44,38 @@ If the selected value is a promise, the returned promise adopts its eventual sta
 
 ### Using last()
 
-This example waits for three button clicks, then displays the coordinates of the last click.
+This example waits for three button clicks, then displays the coordinates of the last click. Click Restart after the stream ends to try again.
 
 ```html hidden live-sample___basic-last
 <button>Click me</button>
 <p>Waiting for clicks</p>
+<button id="restart" disabled>Restart</button>
 ```
 
 ```js live-sample___basic-last
 const btn = document.querySelector("button");
 const output = document.querySelector("p");
 
-btn
-  .when("click")
-  .take(3)
-  .last()
-  .then((result) => {
-    output.textContent = `${result.clientX},${result.clientY}`;
-  });
+const restart = document.querySelector("#restart");
+
+function start() {
+  restart.disabled = true;
+  output.textContent = "Waiting for clicks";
+  btn
+    .when("click")
+    .take(3)
+    .last()
+    .then((result) => {
+      restart.disabled = false;
+      output.textContent = `${result.clientX},${result.clientY}`;
+    });
+}
+
+restart.when("click").subscribe(start);
+start();
 ```
 
-{{EmbedLiveSample("basic-last", "100%", "100px")}}
+{{EmbedLiveSample("basic-last", "", 140)}}
 
 ## Specifications
 

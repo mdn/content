@@ -42,12 +42,13 @@ If `callback` throws an exception, it is passed to `subscriber.error()`. An asyn
 
 ### Observing element size
 
-This example reports a resizable panel's dimensions using a custom observable backed by {{domxref("ResizeObserver")}}. Clicking Stop unsubscribes and disconnects the observer. See [Observing element size](/en-US/docs/Web/API/Observable_API/Creating_observables#example_observing_element_size) for the guide example.
+This example reports a resizable panel's dimensions using a custom observable backed by {{domxref("ResizeObserver")}}. Clicking Stop unsubscribes and disconnects the observer. Click Restart to observe the panel again. See [Observing element size](/en-US/docs/Web/API/Observable_API/Creating_observables#example_observing_element_size) for a more detailed explanation.
 
 ```html hidden live-sample___constructor-resize
 <div id="panel">Drag the corner to resize.</div>
 <p></p>
 <button>Stop</button>
+<button id="restart" disabled>Restart</button>
 ```
 
 ```css hidden live-sample___constructor-resize
@@ -73,12 +74,25 @@ const sizes = new Observable((subscriber) => {
   subscriber.addTeardown(() => observer.disconnect());
 });
 
-sizes.takeUntil(btn.when("click")).subscribe(({ width, height }) => {
-  output.textContent = `${Math.round(width)} × ${Math.round(height)} pixels`;
-});
+const restart = document.querySelector("#restart");
+
+function start() {
+  restart.disabled = true;
+  sizes.takeUntil(btn.when("click")).subscribe({
+    next({ width, height }) {
+      output.textContent = `${Math.round(width)} × ${Math.round(height)} pixels`;
+    },
+    complete() {
+      restart.disabled = false;
+    },
+  });
+}
+
+restart.when("click").subscribe(start);
+start();
 ```
 
-{{EmbedLiveSample("constructor-resize", "100%", "250px")}}
+{{EmbedLiveSample("constructor-resize", "", 250)}}
 
 ## Specifications
 

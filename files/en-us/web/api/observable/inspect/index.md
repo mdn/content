@@ -52,11 +52,12 @@ The callbacks run synchronously. Returned promises are not awaited, and their re
 
 ### Using inspect()
 
-This example counts the first three button clicks. The `inspect()` callbacks log the subscription's start, each event before the count is updated, and the final count when the subscription completes.
+This example counts the first three button clicks. The `inspect()` callbacks log the subscription's start, each event before the count is updated, and the final count when the subscription completes. Click Restart after the stream ends to try again.
 
 ```html hidden live-sample___basic-inspect
 <button>Click me</button>
 <p>Click count: 0</p>
+<button id="restart" disabled>Restart</button>
 ```
 
 ```js live-sample___basic-inspect
@@ -70,32 +71,43 @@ function increment() {
   para.textContent = `Click count: ${countValue}`;
 }
 
-btn
-  .when("click")
-  .take(3)
-  .inspect({
-    subscribe: () => {
-      console.log(`Subscription started`);
-    },
-    next: (e) => {
-      console.log(`Count value before click: ${countValue}`);
-      console.log(`Event type: ${e.type}`);
-    },
-    complete: () => {
-      console.log(`Final count value: ${countValue}`);
-    },
-  })
-  .subscribe({
-    next: increment,
-    complete: () => {
-      para.textContent = `No more clicks!`;
-    },
-  });
+const restart = document.querySelector("#restart");
+
+function start() {
+  restart.disabled = true;
+  countValue = 0;
+  para.textContent = "Click count: 0";
+  btn
+    .when("click")
+    .take(3)
+    .inspect({
+      subscribe() {
+        console.log(`Subscription started`);
+      },
+      next(e) {
+        console.log(`Count value before click: ${countValue}`);
+        console.log(`Event type: ${e.type}`);
+      },
+      complete() {
+        console.log(`Final count value: ${countValue}`);
+      },
+    })
+    .subscribe({
+      next: increment,
+      complete() {
+        para.textContent = `No more clicks!`;
+        restart.disabled = false;
+      },
+    });
+}
+
+restart.when("click").subscribe(start);
+start();
 ```
 
 Open the browser's console and click the button three times to see the logged notifications.
 
-{{EmbedLiveSample("basic-inspect", "100%", "80px")}}
+{{EmbedLiveSample("basic-inspect", "", 140)}}
 
 ## Specifications
 

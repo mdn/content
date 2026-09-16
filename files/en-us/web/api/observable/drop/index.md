@@ -58,7 +58,7 @@ function increment() {
 btn.when("click").drop(3).subscribe(increment);
 ```
 
-{{EmbedLiveSample("basic-drop", "100%", "80px")}}
+{{EmbedLiveSample("basic-drop", "", 80)}}
 
 ## Specifications
 

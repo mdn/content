@@ -14,6 +14,8 @@ The **Observable API** provides a mechanism for handling streams of values, incl
 
 ## Concepts and usage
 
+### Events and reactive programming
+
 Events are fundamental to web development and JavaScript programming at large. Events originate from {{domxref("EventTarget")}} objects:
 
 ```js
@@ -30,6 +32,8 @@ This paradigm is known as _reactive programming_, where actions are carried out 
 - _Multiple pulls_: The initiator pauses and resumes execution of the data source, eventually receiving multiple values. [Iterators](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) implement this: in `const result1 = iterator.next(); const result2 = iterator.next();`, the caller of the `next()` method is the initiator, which pulls multiple values from the iterator.
 - _Multiple pushes_: The initiator sends multiple values, and the receiver pauses execution in between receiving those values. Events implement this: in `element.addEventListener("click", handler);`, the element is the initiator, which calls the `handler` function multiple times as the user clicks on the element, sending multiple event objects.
 
+### Composing event streams
+
 The problem with the `addEventListener()` model is that there's no neat way to _compose_ event handlers. Each handler is executed in isolation and doesn't inherently have knowledge about the other events in a sequence. For example, if you want to do something specifically for a `mousemove` event that happens after a `mousedown` event, you have to manage any shared state yourself, leading to complex and fragile code.
 
 The Observable API addresses this problem by declaratively creating and manipulating streams of events using methods such as {{domxref("Observable.map()")}} and {{domxref("Observable.filter()")}}. It doesn't fundamentally replace the event-driven model, but rather changes the way you organize your code, much like how promises changed the way asynchronous code is written compared to traditional callbacks.
@@ -37,13 +41,21 @@ The Observable API addresses this problem by declaratively creating and manipula
 > [!NOTE]
 > The Observable API is not inherently related to the event API. While event handling is a major use case for observables, observables can represent any stream of data, not just events. Because of this, the observable API is actually more like a language primitive than a web-exclusive API, just like {{jsxref("Promise")}} or {{jsxref("Iterator")}}. It is specified outside of TC39 for historical reasons, like {{domxref("AbortController")}} or [streams](/en-US/docs/Web/API/Streams_API).
 
+### Obtaining observables
+
 In the Observable API, an **observable** represents a stream of values, and an **observer** receives its notifications through callbacks. Typically, you use methods on the {{domxref("Observable")}} interface to transform and consume values from observables. If you are the implementor of an observable, you use the {{domxref("Subscriber")}} interface to send values to the observers. There are three main ways to obtain observables:
 
 - The {{domxref("EventTarget.when()")}} method returns an {{domxref("Observable")}} representing a stream of events fired on the `EventTarget`. You may also have libraries that return observables.
 - You can create your own custom observables using the {{domxref("Observable.Observable", "Observable()")}} constructor.
 - You can convert objects such as [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [iterables](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) into observables using the static {{domxref("Observable.from_static", "Observable.from()")}} method.
 
-An observable can be transformed using various methods that return new observables, such as {{domxref("Observable.map()")}} and {{domxref("Observable.filter()")}}. Finally, to start receiving values from an observable, you subscribe to it using the {{domxref("Observable.subscribe()")}} method, or aggregate all values using methods like {{domxref("Observable.reduce()")}}. You can also unsubscribe from an observable using an {{domxref("AbortController")}} or certain methods like {{domxref("Observable.takeUntil()")}}. Observables are _lazy_ — they don't start producing values until they have at least one subscriber.
+### Transforming, subscribing, and unsubscribing
+
+An observable can be transformed using various methods that return new observables, such as {{domxref("Observable.map()")}} and {{domxref("Observable.filter()")}}.
+
+To start receiving values from an observable, you subscribe to it using the {{domxref("Observable.subscribe()")}} method, or aggregate all values using methods like {{domxref("Observable.reduce()")}}. Observables are _lazy_ — they don't start producing values until they have at least one subscriber.
+
+You can also unsubscribe from an observable using an {{domxref("AbortController")}} or certain methods like {{domxref("Observable.takeUntil()")}}.
 
 Let's consider a brief example:
 

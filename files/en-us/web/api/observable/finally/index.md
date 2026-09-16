@@ -42,29 +42,53 @@ If `callback` throws an exception, it is reported to the global object without c
 
 ### Using finally()
 
-This example displays mouse coordinates until the Stop button is clicked. The `finally()` callback adds a message when coordinate reporting ends.
+This example displays mouse coordinates until the Stop button is clicked. The `finally()` callback adds a message when coordinate reporting ends. Click Restart after the stream ends to try again.
 
 ```html hidden live-sample___basic-finally
 <button>Stop</button>
 <p>Move the mouse</p>
+<button id="restart" disabled>Restart</button>
+```
+
+```css hidden live-sample___basic-finally
+html {
+  height: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  min-height: 100%;
+  margin: 0;
+  padding: 8px;
+}
 ```
 
 ```js live-sample___basic-finally
 const btn = document.querySelector("button");
 const output = document.querySelector("p");
 
-document.body
-  .when("mousemove")
-  .takeUntil(btn.when("click"))
-  .finally(() => {
-    output.textContent += " — Reporting stopped.";
-  })
-  .subscribe((event) => {
-    output.textContent = `${event.clientX},${event.clientY}`;
-  });
+const restart = document.querySelector("#restart");
+
+function start() {
+  restart.disabled = true;
+  output.textContent = "Move the mouse";
+  document.body
+    .when("mousemove")
+    .takeUntil(btn.when("click"))
+    .finally(() => {
+      restart.disabled = false;
+      output.textContent += " — Reporting stopped.";
+    })
+    .subscribe((event) => {
+      output.textContent = `${event.clientX},${event.clientY}`;
+    });
+}
+
+restart.when("click").subscribe(start);
+start();
 ```
 
-{{EmbedLiveSample("basic-finally", "100%", "100px")}}
+{{EmbedLiveSample("basic-finally", "", 140)}}
 
 ## Specifications
 

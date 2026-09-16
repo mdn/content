@@ -57,60 +57,84 @@ If an observer callback throws an exception, it is reported to the global object
 
 ### Receiving values and completion
 
-This example displays the coordinates of the first three button clicks, then a completion message. The observer's `next` callback handles each value, and its `complete` callback handles the end of the stream.
+This example displays the coordinates of the first three button clicks, then a completion message. The observer's `next` callback handles each value, and its `complete` callback handles the end of the stream. Click Restart to try again after completion.
 
 ```html hidden live-sample___basic-subscribe
 <button>Click me</button>
 <p>Waiting for clicks</p>
+<button id="restart" disabled>Restart</button>
 ```
 
 ```js live-sample___basic-subscribe
 const btn = document.querySelector("button");
 const output = document.querySelector("p");
+const restart = document.querySelector("#restart");
 
-btn
-  .when("click")
-  .take(3)
-  .subscribe({
-    next: (event) => {
-      output.textContent = `${event.clientX},${event.clientY}`;
-    },
-    complete: () => {
-      output.textContent += " — Complete.";
-    },
-  });
+function start() {
+  restart.disabled = true;
+  output.textContent = "Waiting for clicks";
+  btn
+    .when("click")
+    .take(3)
+    .subscribe({
+      next(event) {
+        output.textContent = `${event.clientX},${event.clientY}`;
+      },
+      complete() {
+        restart.disabled = false;
+        output.textContent += " — Complete.";
+      },
+    });
+}
+
+restart.when("click").subscribe(start);
+start();
 ```
 
-{{EmbedLiveSample("basic-subscribe", "100%", "100px")}}
+{{EmbedLiveSample("basic-subscribe", "", 140)}}
 
 ### Unsubscribing
 
-This example displays mouse coordinates until the Stop button is clicked. Aborting removes the observer without calling a completion callback.
+This example displays mouse coordinates until the Stop button is clicked. Aborting removes the observer without calling a completion callback. Click Restart to subscribe again.
 
 ```html hidden live-sample___unsubscribe
 <button>Stop</button>
 <p>Move the mouse</p>
+<button id="restart" disabled>Restart</button>
 ```
 
 ```js live-sample___unsubscribe
 const btn = document.querySelector("button");
 const output = document.querySelector("p");
-const controller = new AbortController();
+const restart = document.querySelector("#restart");
 
-document.body.when("mousemove").subscribe(
-  (event) => {
-    output.textContent = `${event.clientX},${event.clientY}`;
-  },
-  { signal: controller.signal },
-);
+function start() {
+  restart.disabled = true;
+  output.textContent = "Move the mouse";
+  const controller = new AbortController();
 
-btn
-  .when("click")
-  .take(1)
-  .subscribe(() => controller.abort());
+  document.body.when("mousemove").subscribe(
+    (event) => {
+      output.textContent = `${event.clientX},${event.clientY}`;
+    },
+    { signal: controller.signal },
+  );
+
+  btn
+    .when("click")
+    .take(1)
+    .subscribe(() => {
+      controller.abort();
+      output.textContent += " — Stopped";
+      restart.disabled = false;
+    });
+}
+
+restart.when("click").subscribe(start);
+start();
 ```
 
-{{EmbedLiveSample("unsubscribe", "100%", "100px")}}
+{{EmbedLiveSample("unsubscribe", "", 140)}}
 
 ## Specifications
 

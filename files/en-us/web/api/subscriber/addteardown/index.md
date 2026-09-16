@@ -10,7 +10,7 @@ browser-compat: api.Subscriber.addTeardown
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`addTeardown()`** method of the {{domxref("Subscriber")}} interface registers a callback to clean up resources when the subscription ends. This happens when {{domxref("Subscriber.complete()")}} or {{domxref("Subscriber.error()")}} is called, or when all observers [unsubscribe](/en-US/docs/Web/API/Observable_API/Using_observables#unsubscribing_from_an_observable).
+The **`addTeardown()`** method of the {{domxref("Subscriber")}} interface registers a callback to clean up resources when the subscription ends. This happens when either {{domxref("Subscriber.complete()")}} or {{domxref("Subscriber.error()")}} is called, or when all observers [unsubscribe](/en-US/docs/Web/API/Observable_API/Using_observables#unsubscribing_from_an_observable).
 
 > [!NOTE]
 > This shared-subscription behavior may change. A [proposal to give each observer its own `Subscriber`](https://github.com/WICG/observable/issues/217) would make each subscription start a separate execution instead of reusing an active subscription.
@@ -42,6 +42,8 @@ If the subscriber is already inactive when `addTeardown()` is called, the suppli
 
 ### Callback order
 
+This example registers two teardown callbacks before completion and one afterward. The first two run in reverse registration order, before the observer's `complete()` callback; the last runs immediately when it is registered.
+
 ```js
 const observable = new Observable((subscriber) => {
   subscriber.addTeardown(() => console.log("First registered"));
@@ -51,7 +53,9 @@ const observable = new Observable((subscriber) => {
 });
 
 observable.subscribe({
-  complete: () => console.log("Complete"),
+  complete() {
+    console.log("Complete");
+  },
 });
 
 // Second registered

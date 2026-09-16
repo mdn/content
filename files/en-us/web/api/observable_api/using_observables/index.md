@@ -12,10 +12,10 @@ Before proceeding, you may wish to read the [Observable API overview](/en-US/doc
 
 ## Obtaining an observable
 
-{{domxref("Observable")}} objects (commonly called **observables**) represent a stream of values that can be observed and transformed. There are three main ways to obtain observables:
+{{domxref("Observable")}} objects (commonly called **observables**) represent a stream of values that can be observed and transformed. The code that supplies these values is the **producer**, and the code that subscribes to receive and use them is the **consumer**. There are three main ways to obtain observables:
 
 - The {{domxref("EventTarget.when()")}} method returns an {{domxref("Observable")}} representing a stream of events fired on the `EventTarget`. You may also have libraries that return observables.
-- You can create your own custom observables using the {{domxref("Observable.Observable", "Observable()")}} constructor.
+- You can create your own custom observables using the {{domxref("Observable.Observable", "Observable()")}} constructor. See [Creating custom observables](/en-US/docs/Web/API/Observable_API/Creating_observables) for more information.
 - You can convert objects such as [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [iterables](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) into observables using the static {{domxref("Observable.from_static", "Observable.from()")}} method.
 
 On the web, `EventTarget` objects are perhaps the most common use case of observables. The basic idea is this: wherever you have been writing `addEventListener(eventType, handler)`, you can now write `when(eventType).subscribe(handler)` to achieve the same effect. For example, here is how you can listen for `click` events on the document body using `when()`:
@@ -26,26 +26,28 @@ document.body.when("click").subscribe((event) => {
 });
 ```
 
-To learn how to produce your own stream of values with the `Observable()` constructor, see [Creating custom observables](/en-US/docs/Web/API/Observable_API/Creating_observables).
+This not merely a syntactic difference. Observables let you compose operations such as filtering events, transforming their data, and stopping a stream when another event occurs. Beyond events, you can use the same operations with promises, iterables, and custom streams, such as the timer and element-size notifications examples shown in [Creating custom observables](/en-US/docs/Web/API/Observable_API/Creating_observables).
 
 ## Transforming an observable
 
-An observable is a stream of values. Naturally, you can transform this stream into a new stream. These methods parallel what you might already be familiar with from {{jsxref("Iterator")}} or {{jsxref("Array")}}.
+An observable is a stream of values that you can transform into a new stream. An `Observable` object has several transform methods that resemble what you may already know from {{jsxref("Iterator")}} or {{jsxref("Array")}}.
 
 | {{domxref("Observable")}} method      | {{jsxref("Iterator")}} equivalent | Description                                                                                         |
 | ------------------------------------- | --------------------------------- | --------------------------------------------------------------------------------------------------- |
 | {{domxref("Observable.drop()")}}      | {{jsxref("Iterator.drop()")}}     | Skips the first `n` values from the source observable.                                              |
 | {{domxref("Observable.filter()")}}    | {{jsxref("Iterator.filter()")}}   | Skips values that don't match a predicate function.                                                 |
 | {{domxref("Observable.flatMap()")}}   | {{jsxref("Iterator.flatMap()")}}  | Maps each value to an observable, then flattens the resulting observables into a single observable. |
-| {{domxref("Observable.inspect()")}}   | N/A                               | Like `subscribe()`, but only "taps into" the stream and allows further chaining.                    |
+| {{domxref("Observable.inspect()")}}   | N/A                               | Calls callbacks to inspect values and the subscription lifecycle, while allowing further chaining.  |
 | {{domxref("Observable.map()")}}       | {{jsxref("Iterator.map()")}}      | Maps each value to a new value using a mapping function.                                            |
-| {{domxref("Observable.switchMap()")}} | N/A                               | Maps each value to an observable and unsubscribes from the previous inner observable.               |
+| {{domxref("Observable.switchMap()")}} | N/A                               | Maps each value to an inner observable and emits values from only the latest inner observable.      |
 | {{domxref("Observable.take()")}}      | {{jsxref("Iterator.take()")}}     | Takes only the first `n` values from the source observable.                                         |
 | {{domxref("Observable.takeUntil()")}} | N/A                               | Like `take()`, but stops when a second observable emits a value.                                    |
 
+These methods can be chained together to apply multiple transformations. You then subscribe to the final observable to receive the transformed values.
+
 In the following example, we print the mouse coordinates to the screen whenever the mouse is moved over a couple of {{htmlelement("div")}} elements. We won't show the HTML because it just includes the `<div>` elements plus a single {{htmlelement("p")}} element to display the data.
 
-```html hidden live-sample___basic-when-example live-sample___find-example live-sample___abort-example
+```html hidden live-sample___basic-when-example live-sample___abort-example
 <div></div>
 <div></div>
 <p></p>
@@ -53,7 +55,7 @@ In the following example, we print the mouse coordinates to the screen whenever 
 
 In the example CSS, we give the `<div>` elements a {{cssxref("height")}}, {{cssxref("background-color")}}, and {{cssxref("margin-bottom")}}:
 
-```css live-sample___basic-when-example live-sample___find-example live-sample___abort-example
+```css live-sample___basic-when-example live-sample___abort-example
 div {
   height: 150px;
   background-color: purple;
@@ -82,16 +84,16 @@ We then specify a pipeline:
 - {{domxref("Observable.filter()")}} filters the events passed through the pipeline to only events fired on the {{htmlelement("div")}} element (tested using the {{domxref("Element.matches()")}} method) and not other `body` descendants.
 - {{domxref("Observable.map()")}} maps the fired `mousemove` event objects to new objects containing the coordinates of the mouse cursor when the event was fired.
 
-Finally, {{domxref("Observable.subscribe()")}} subscribes to the observable, passing a handler function called each time a `mousemove` event passes the filter.
+Finally, {{domxref("Observable.subscribe()")}} subscribes to the observable. We pass a callback function to the `subscribe()` method. This callback is called each time a `mousemove` event passes the filter.
 
 The rendered output looks like this:
 
-{{EmbedLiveSample("basic-when-example", "100%", "380px")}}
+{{EmbedLiveSample("basic-when-example", "", 380)}}
 
 Try moving the mouse over the top of the example; the coordinates are printed to the `<p>` only when the `<div>` elements are moved over, not the areas outside the `<div>`s.
 
 > [!NOTE]
-> Observables are "lazy" — events don't start being passed through them, nor do they queue any data, until they have at least one subscriber. For example, in the above example, if you remove the `subscribe()` method call and add logs inside the `filter()` and `map()` methods, you will see that they don't log anything. Once `subscribe()` is called at the end of the pipeline, all previous observables in this chain also become subscribed and start processing data.
+> Observables are "lazy" — events don't start being passed through them, nor do they queue any data, until they have at least one subscriber. In the previous example, if you remove the `subscribe()` method call and add logs inside the `filter()` and `map()` methods, you will see that they don't log anything. Once `subscribe()` is called at the end of the pipeline, all previous observables in the chain also become subscribed and start processing data.
 
 ### Working with inner observables
 
@@ -102,18 +104,23 @@ Some operations produce another stream for each source value: a click might star
 
 Both methods convert the mapper's result using {{domxref("Observable.from_static", "Observable.from()")}}, so the mapper can also return a promise, iterable, or async iterable. A promise contributes its fulfillment value and then completes; a rejection becomes an error in the inner observable. In contrast, `map()` forwards a returned promise as a value without awaiting it.
 
-For example, suppose a page has a search input and a results element, and `/search` returns JSON. An async mapper lets us fetch and parse each response as one operation:
+The following live example searches a small list of fruit names. Type into the search field to start a search; the simulated response takes one second, so you can type again while a previous search is pending. An async mapper lets us treat each search as one operation:
 
-```js
+```html live-sample___search-example
+<label>Search fruit: <input type="search" /></label>
+<p id="results">Type a fruit name</p>
+```
+
+```js live-sample___search-example
 const searchInput = document.querySelector("input[type='search']");
 const results = document.querySelector("#results");
 
 async function search(query) {
-  const response = await fetch(`/search?q=${encodeURIComponent(query)}`);
-  if (!response.ok) {
-    throw new Error(`Search failed: ${response.status}`);
-  }
-  return response.json();
+  const fruits = ["Apple", "Apricot", "Banana", "Cherry", "Pear"];
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+  return fruits.filter((fruit) =>
+    fruit.toLowerCase().includes(query.toLowerCase()),
+  );
 }
 
 const queries = searchInput.when("input").map(() => searchInput.value);
@@ -126,6 +133,20 @@ queries.switchMap(search).subscribe({
     results.textContent = error.message;
   },
 });
+```
+
+{{EmbedLiveSample("search-example", "", 100)}}
+
+In a real search app, `search()` could fetch and parse a JSON response instead:
+
+```js
+async function search(query) {
+  const response = await fetch(`/search?q=${encodeURIComponent(query)}`);
+  if (!response.ok) {
+    throw new Error(`Search failed: ${response.status}`);
+  }
+  return response.json();
+}
 ```
 
 If another input event arrives before the previous search finishes, the previous result is no longer forwarded. However, unsubscribing from an observable created from a promise does not cancel the work behind that promise: the previous request can still finish. To cancel the request itself, return a custom observable that passes `subscriber.signal` to `fetch()`, as shown in [Canceling asynchronous work](/en-US/docs/Web/API/Observable_API/Creating_observables#canceling_asynchronous_work).
@@ -144,6 +165,8 @@ document.body
 
 You can also pass an object with `subscribe`, `next`, `error`, `complete`, and `abort` callbacks to inspect the subscription's lifecycle. An `inspect()` callback can affect the pipeline if it throws; for example, an exception in its `next` callback becomes an error in the returned observable.
 
+See the {{domxref("Observable.inspect()", "inspect()")}} reference for details.
+
 ## Aggregating values
 
 The previously introduced group of methods return another observable, allowing you to chain multiple transformations together. You can then subscribe to the final observable to receive the transformed values.
@@ -161,29 +184,53 @@ But you don't always want to process each value individually. Sometimes you are 
 | {{domxref("Observable.some()")}}    | {{jsxref("Iterator.some()")}}     | Returns `true` when the predicate returns `true` for any value; `false` otherwise.  |
 | {{domxref("Observable.toArray()")}} | {{jsxref("Iterator.toArray()")}}  | Collects all values into an array.                                                  |
 
-All these methods return promises for the results described above. Depending on the method, the promise fulfills as soon as the result is determined or when the observable completes (we'll see later what it means for an observable to complete). It can also reject, for example if the observable errors or the subscription is aborted.
+All these methods return promises that fulfill with the described results. Depending on the method, the promise fulfills as soon as the result is determined or when the [observable completes](#subscribing_to_an_observable). It can also reject, for example, if the observable errors or the subscription is aborted.
 
 Unlike the transformation methods, these aggregation methods implicitly subscribe: the pipeline starts receiving values as soon as one of these methods is called.
 
+This example searches for the first mouse position beyond `200` on both axes within a single panel. Until a match is found, it displays the current position (also demonstrating how `inspect()` works). Click Restart after finding a match to try again.
+
+```html live-sample___find-example
+<div id="target">Move the pointer beyond 200,200.</div>
+<p></p>
+<button disabled>Restart</button>
+```
+
+```css live-sample___find-example
+#target {
+  height: 300px;
+  background-color: lavender;
+}
+```
+
 ```js live-sample___find-example
+const target = document.querySelector("#target");
 const outputElem = document.querySelector("p");
+const restart = document.querySelector("button");
 
-outputElem.textContent = "Move the mouse around...";
+function start() {
+  restart.disabled = true;
+  outputElem.textContent = "Move the mouse around...";
+  target
+    .when("mousemove")
+    .map((event) => ({ x: event.offsetX, y: event.offsetY }))
+    .inspect(({ x, y }) => {
+      outputElem.textContent = `Target of 200,200 not yet reached (current ${x},${y})`;
+    })
+    .find(({ x, y }) => x > 200 && y > 200)
+    .then(({ x, y }) => {
+      outputElem.textContent = `Target coordinates found: ${x},${y}`;
+      restart.disabled = false;
+    });
+}
 
-const result = document.body
-  .when("mousemove")
-  .filter((e) => e.target.matches("div"))
-  .map((e) => ({ x: e.clientX, y: e.clientY }))
-  .find((e) => e.x > 100 && e.y > 100);
-
-result.then((coords) => {
-  outputElem.textContent = `Target coordinates found: ${coords.x},${coords.y}`;
-});
+restart.when("click").subscribe(start);
+start();
 ```
 
 The rendered output looks like this:
 
-{{EmbedLiveSample("find-example", "100%", "380px")}}
+{{EmbedLiveSample("find-example", "", 430)}}
 
 ## Subscribing to an observable
 
@@ -191,20 +238,19 @@ We already showed basic `subscribe()` usage in the previous sections, but let's 
 
 Just like a promise can send notifications either as "fulfilled" or "rejected", an observable can also send multiple types of notifications to its subscribers, each one corresponding to a different method you can pass into `subscribe()`.
 
-- `next(value)`: Called whenever a new value is available from the observable. In the examples above, we passed a single function into `subscribe()`, which is shorthand for passing an object with just a `next` method.
-- `error(err)`: Called when the observable signals an error. Exceptions thrown by the observer's own callbacks are reported to the global object instead.
-- `complete()`: Called when the observable has finished sending values. We'll discuss this more in the [Creating custom observables](/en-US/docs/Web/API/Observable_API/Creating_observables) guide. Event streams are infinite, but can become finite by calling `take()` or `takeUntil()`.
+- `next(value)`: Called whenever a new value is available in the observable stream. In the examples above, we passed a single function into `subscribe()`, which is shorthand for passing an object with just a `next()` method.
+- `error(err)`: Called when the observable signals an error. Exceptions thrown by the observer's own callbacks are reported as uncaught errors to the {{glossary("global object")}} instead of passed to this `error()` callback.
+- `complete()`: Called when the observable has finished sending values. We'll discuss this more in the [Creating custom observables](/en-US/docs/Web/API/Observable_API/Creating_observables) guide. Event streams are infinite, but can be made finite by calling `take()` or `takeUntil()`.
 
-For example, here's how you could modify the previous example to also log when the observable completes (although this observable doesn't actually "complete"):
+For example, this observable completes after three clicks and logs a completion message:
 
 ```js
 document.body
-  .when("mousemove")
-  .filter((e) => e.target.matches("div"))
-  .map((e) => ({ x: e.clientX, y: e.clientY }))
+  .when("click")
+  .take(3)
   .subscribe({
-    next(p) {
-      outputElem.textContent = `${p.x},${p.y}`;
+    next(event) {
+      console.log("Clicked at", event.clientX, event.clientY);
     },
     complete() {
       console.log("Observable complete");
@@ -212,10 +258,7 @@ document.body
   });
 ```
 
-Internally, each active observable subscription has a list of _observers_ — objects containing any of these three callbacks. You can call `subscribe()` multiple times on the same observable to register multiple observers. Concurrent observers share the subscription, and each receives values emitted while it is subscribed; previously emitted values are not replayed to new observers. This differs from sharing an iterator, where each consumer's `next()` call advances the same iterator rather than broadcasting a value to all consumers.
-
-> [!NOTE]
-> This shared-subscription behavior may change. A [proposal to give each observer its own `Subscriber`](https://github.com/WICG/observable/issues/217) would make each subscription start a separate execution instead of reusing an active subscription.
+Internally, each active observable subscription has a list of _observers_ — objects containing zero or more of these three callbacks. You can call `subscribe()` multiple times on the same observable to register multiple observers. For example:
 
 ```js
 const clickObservable = document.body.when("click");
@@ -230,45 +273,68 @@ clickObservable.subscribe((e) => {
 // For every click, both observers will be called
 ```
 
+Concurrent observers share the subscription, and each receives values emitted while it is subscribed; previously emitted values are not replayed to new observers. This differs from sharing an iterator, where each consumer's `next()` call advances the same iterator rather than broadcasting a value to all consumers.
+
+> [!NOTE]
+> This shared-subscription behavior may change. A [proposal to give each observer its own `Subscriber`](https://github.com/WICG/observable/issues/217) would make each subscription start a separate execution instead of reusing an active subscription.
+>
+> For this particular example, the behavior would be the same, but each `subscribe()` call will register a new `click` event listener instead of reusing the same event listener.
+
 ## Unsubscribing from an observable
 
-An observer can also be unsubscribed from the observable, which means its callbacks will no longer be called. If an observable has no more observers, its shared subscription becomes inactive and its teardown callbacks run. These callbacks release resources, such as the event listener registered by `when()`. Custom observables must implement this cleanup themselves, as described in [Creating custom observables](/en-US/docs/Web/API/Observable_API/Creating_observables#teardown).
+An observer can also be unsubscribed from the observable, which means its callbacks will no longer be called. If an observable has no more observers, its shared subscription becomes inactive, and it runs callbacks known as _teardown callbacks_. These callbacks release resources, such as the event listener registered by `when()`. Custom observables must implement this cleanup themselves, as described in [Creating custom observables](/en-US/docs/Web/API/Observable_API/Creating_observables#teardown).
 
 The canonical way to unsubscribe from an observable is to use an {{domxref("AbortController")}}. With this method, you can unsubscribe mid-way through observable data processing, at any point you like. To do this, you create an `AbortController` and pass its {{domxref("AbortController.signal", "signal")}} when you call `subscribe()`. You can then call {{domxref("AbortController.abort()")}} on the controller, which unsubscribes all observers associated with that signal.
 
-For example, we can modify our earlier [Basic `when()` example](#transforming_an_observable) to unsubscribe when the user clicks anywhere on the page. This means the output will stop updating.
+For example, we can modify our earlier [Basic `when()` example](#transforming_an_observable) to unsubscribe when the user clicks anywhere on the page. This means the output will stop updating. Click Restart to start a new subscription.
+
+```html hidden live-sample___abort-example
+<button disabled>Restart</button>
+```
 
 ```js live-sample___abort-example
 const outputElem = document.querySelector("p");
-// Create controller
-const controller = new AbortController();
+const restart = document.querySelector("button");
 
-document.body
-  .when("mousemove")
-  .filter((e) => e.target.matches("div"))
-  .map((e) => ({ x: e.clientX, y: e.clientY }))
-  .subscribe(
-    (p) => {
-      outputElem.textContent = `${p.x},${p.y}`;
-    },
-    // Register observer with signal
-    { signal: controller.signal },
-  );
+function start() {
+  restart.disabled = true;
+  outputElem.textContent = "Move the mouse over a purple area";
+  // Create controller
+  const controller = new AbortController();
 
-document.body
-  .when("click")
-  .take(1)
-  .subscribe(() => {
-    // Unsubscribe on click
-    controller.abort();
-  });
+  document.body
+    .when("mousemove")
+    .filter((e) => e.target.matches("div"))
+    .map((e) => ({ x: e.clientX, y: e.clientY }))
+    .subscribe(
+      (p) => {
+        outputElem.textContent = `${p.x},${p.y}`;
+      },
+      // Register observer with signal
+      { signal: controller.signal },
+    );
+
+  document.body
+    .when("click")
+    .filter((event) => event.target !== restart)
+    .take(1)
+    .subscribe(() => {
+      // Unsubscribe on click
+      controller.abort();
+      outputElem.textContent += " — Stopped. Click Restart to try again.";
+      restart.disabled = false;
+    });
+}
+
+restart.when("click").subscribe(start);
+start();
 ```
 
-{{EmbedLiveSample("abort-example", "100%", "380px")}}
+{{EmbedLiveSample("abort-example", "", 430)}}
 
 The `take(1)` call completes the click stream after the first click, removing its event listener. This is similar to using `{ once: true }` with `addEventListener()`.
 
-In this example, the abort condition is triggered by another observable emitting a value: `document.body.when("click")`. In this case, you can use the `takeUntil()` method to achieve the same effect in a more declarative way. The `takeUntil()` method returns an observable (it's one of the [transformation methods](#transforming_an_observable)), so it can be inserted in the pipeline to specify a condition under which you would like the unsubscribe action to occur. The following code achieves the same effect as the previous example:
+In the next example, another observable emits a value to trigger the abort condition: `document.body.when("click")`. The `takeUntil()` method is a [transformation method](#transforming_an_observable) and therefore returns an observable. This means you can insert it in the pipeline to specify a condition under which the unsubscribe action occurs. The following code achieves the same effect as the previous example:
 
 ```js
 const outputElem = document.querySelector("p");
@@ -284,13 +350,14 @@ document.body
   });
 ```
 
-The `takeUntil()` method [converts](/en-US/docs/Web/API/Observable/from_static) the input to an observable, so you can even pass a promise to unsubscribe when the promise fulfills.
+> [!NOTE]
+> The `takeUntil()` method [converts](/en-US/docs/Web/API/Observable/from_static) its input to an observable. You can pass a promise to stop when it fulfills, or sync/async iterables for when they produce the first value, if any. Check {{domxref("Observable/from_static", "Observable.from()")}} for how it does the conversion.
 
 An `AbortController` lets you unsubscribe at any point in your code. Separate controllers let you unsubscribe observers independently. Aborting does not call the observer's `complete` callback. In contrast, `takeUntil()` completes the observable it returns and notifies that observable's observers through their `complete` callbacks. Other observers subscribed directly to the source observable remain subscribed.
 
 ## Handling errors
 
-An error ends the affected subscription. Errors from a source propagate through the pipeline, and exceptions thrown by transformation callbacks, such as a `map()` mapper or `filter()` predicate, become errors in the returned observable. An observer's `error` callback reports or handles the failure, but does not resume that subscription. If it has no `error` callback, the error is reported to the global object.
+An error ends the affected subscription. Errors from a source propagate through the pipeline, and exceptions thrown by transformation callbacks, such as a `map()` mapper or `filter()` predicate, become errors in the returned observable. An observer's `error` callback reports or handles the failure, but does not resume the subscription. If the observer has no `error` callback, the error is reported as an uncaught error to the {{glossary("global object")}}.
 
 {{domxref("Observable.catch()")}} lets a pipeline recover by subscribing to a replacement stream. Its callback receives the error and returns an observable, or any value convertible by `Observable.from()`. For example, returning `[]` completes the replacement without emitting a value. It does not retry the failed source.
 
@@ -309,11 +376,54 @@ queries
   });
 ```
 
-Here, `catch()` handles only the inner request's failure. Its empty replacement completes, while the outer subscription continues listening for input. Placing `catch()` after `switchMap()` would instead replace the entire search pipeline: returning `[]` there would complete it and stop listening for input. The same distinction applies to `flatMap()`.
+Here, `catch()` handles only the inner request's failure. Its empty replacement completes, while the outer subscription continues listening for input. Placing `catch()` after `switchMap()` would instead replace the entire search pipeline: returning `[]` there would complete it and stop listening for input.
+
+```js
+queries
+  .switchMap(search)
+  .catch((error) => {
+    results.textContent = error.message;
+    return [];
+  })
+  .subscribe({
+    next(data) {
+      results.textContent = JSON.stringify(data);
+    },
+    complete() {
+      console.log("Search pipeline ended");
+    },
+  });
+```
+
+The same distinction applies to `flatMap()`.
 
 This does not handle failures from requests that `switchMap()` has already unsubscribed from. If such a request's promise later rejects, `Observable.from()` reports the error to the global object because its subscriber is inactive; the `catch()` callback is no longer subscribed. To cancel obsolete requests and avoid reporting their cancellation as an error, use the custom `fetchJSON()` producer in [Canceling asynchronous work](/en-US/docs/Web/API/Observable_API/Creating_observables#canceling_asynchronous_work), which checks `subscriber.active` before forwarding a rejection.
 
 Exceptions thrown by callbacks passed to `subscribe()` are different: they are reported to the global object, rather than becoming errors that a pipeline's `catch()` can recover from. Similarly, an async `next` callback's returned promise is not awaited; handle its rejections yourself, or use `flatMap()` or `switchMap()` to incorporate the asynchronous work into the pipeline.
+
+For example, a pipeline's `catch()` does not handle an exception thrown by its observer:
+
+```js
+Observable.from([1, 2, 3])
+  .catch(() => [0])
+  .subscribe(() => {
+    throw new Error("Reported as an uncaught error on window");
+  });
+```
+
+If an observer has foreseeable error conditions, handle its failure explicitly:
+
+```js
+queries.subscribe(async (query) => {
+  try {
+    results.textContent = JSON.stringify(await search(query));
+  } catch (error) {
+    results.textContent = error.message;
+  }
+});
+```
+
+Unlike the `switchMap()` version, this version handles failures, but does not discard outdated results.
 
 ### Running cleanup
 
@@ -327,7 +437,7 @@ document.body
   .subscribe((event) => console.log(event.target));
 ```
 
-The callback runs after the third click ends the subscription. It would also run if the subscription were aborted early. Like `Subscriber.addTeardown()`, it does not await a returned promise. Use `finally()` to attach cleanup when composing a pipeline; use `addTeardown()` when implementing the producer's own resource cleanup, as described in [Creating custom observables](/en-US/docs/Web/API/Observable_API/Creating_observables#teardown).
+In the previous snippet, the `finally()` callback runs after the subscription ends (after three clicks, as specified by `take(3)`). It will also run if the subscription is aborted early. It does not await a returned promise. Use `finally()` to attach cleanup when composing a pipeline; use `addTeardown()` to implement the producer's own resource cleanup, as described in [Creating custom observables](/en-US/docs/Web/API/Observable_API/Creating_observables#teardown).
 
 ## Example: canvas drawing
 
@@ -414,7 +524,7 @@ const sizeOutput = document.querySelector("output");
 const colorInput = document.querySelector("[type='color']");
 ```
 
-Next, we synchronize the canvas's {{domxref("HTMLCanvasElement.width","width")}} and {{domxref("HTMLCanvasElement.height","height")}} to the {{domxref("Element.clientWidth", "clientWidth")}}/{{domxref("Element.clientHeight", "clientHeight")}} of the `<body>`. This is implemented in the `sizeCanvas()` function. It is called when the app starts and whenever the window resizes, using `when("resize").subscribe(sizeCanvas)`. For this event handler, this has the same effect as `addEventListener("resize", sizeCanvas)`. Setting the canvas dimensions also clears the drawing.
+Next, we synchronize the canvas's {{domxref("HTMLCanvasElement.width","width")}} and {{domxref("HTMLCanvasElement.height","height")}} to the {{domxref("Element.clientWidth", "clientWidth")}}/{{domxref("Element.clientHeight", "clientHeight")}} of the `<body>`. This is implemented in the `sizeCanvas()` function. It is called when the app starts and whenever the window resizes, using `when("resize").subscribe(sizeCanvas)` (which has the same effect as `addEventListener("resize", sizeCanvas)`). Setting the canvas dimensions also clears the drawing.
 
 ```js live-sample___canvas-example
 function sizeCanvas() {
@@ -474,7 +584,7 @@ function finishDraw() {
 }
 ```
 
-Finally, we create an observable for [`mousedown`](/en-US/docs/Web/API/Element/mousedown_event) events on the `<canvas>`. For each press of the primary mouse button, {{domxref("Observable.flatMap()")}} subscribes to a stream of `mousemove` events that ends when the button is released. We listen for `mouseup` on the document so drawing also stops if the mouse is released outside the canvas. We then use {{domxref("Observable.map()")}} to extract the mouse coordinates and `subscribe()` to pass them to `draw()`.
+Finally, we create an observable for [`mousedown`](/en-US/docs/Web/API/Element/mousedown_event) events on the `<canvas>`. For each press of the primary mouse button, {{domxref("Observable.flatMap()")}} subscribes to a stream of `mousemove` events that ends when the button is released. We listen for `mouseup` on the `document` object so drawing also stops if the mouse is released outside the canvas. We then use {{domxref("Observable.map()")}} to extract the mouse coordinates and `subscribe()` to pass them to `draw()`.
 
 ```js live-sample___canvas-example
 canvas
@@ -505,7 +615,7 @@ The final effect is that we react to `mousemove` events (just like our first exa
 
 The example renders like this:
 
-{{EmbedLiveSample("canvas-example", "100%", "320px")}}
+{{EmbedLiveSample("canvas-example", "", 320)}}
 
 ## See also
 

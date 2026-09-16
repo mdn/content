@@ -12,13 +12,6 @@ browser-compat: api.Subscriber.error
 
 The **`error()`** method of the {{domxref("Subscriber")}} interface closes the subscription and notifies observers of an error.
 
-Calling this method sets {{domxref("Subscriber.active", "active")}} to `false`, aborts {{domxref("Subscriber.signal", "signal")}}, and runs the registered [teardown callbacks](/en-US/docs/Web/API/Subscriber/addTeardown). It then synchronously invokes each observer's `error` callback supplied to {{domxref("Observable.subscribe()")}}, passing the error value. The observers' `complete` callbacks are not invoked.
-
-> [!NOTE]
-> This shared-subscription behavior may change. A [proposal to give each observer its own `Subscriber`](https://github.com/WICG/observable/issues/217) would make each subscription start a separate execution instead of reusing an active subscription.
-
-If an observer has no `error` callback, the error is reported to the global object. Calling `error()` on an already inactive subscriber also reports the error to the global object. Calling this method does not throw the error back to the caller or stop execution of the producer's code.
-
 ## Syntax
 
 ```js-nolint
@@ -33,6 +26,15 @@ error(error)
 ### Return value
 
 None ({{jsxref("undefined")}}).
+
+## Description
+
+Calling this method sets {{domxref("Subscriber.active", "active")}} to `false`, aborts {{domxref("Subscriber.signal", "signal")}}, and runs the registered [teardown callbacks](/en-US/docs/Web/API/Subscriber/addTeardown). It then synchronously invokes each observer's `error` callback, as supplied in the `observer` object passed to {{domxref("Observable.subscribe()")}}, passing the error value. The observers' `complete` callbacks are not invoked.
+
+> [!NOTE]
+> This shared-subscription behavior may change. A [proposal to give each observer its own `Subscriber`](https://github.com/WICG/observable/issues/217) would make each subscription start a separate execution instead of reusing an active subscription.
+
+If an observer has no `error` callback, the error is reported to the global object. Calling `error()` on an already inactive subscriber also reports the error to the global object. Calling this method does not throw the error back to the caller or stop execution of the producer's code.
 
 ## Examples
 
@@ -57,9 +59,7 @@ const observable = new Observable((subscriber) => {
     if (regex.test(value)) {
       subscriber.next(value);
     } else {
-      subscriber.error(
-        `Error: "${value}" must contain one or more ASCII digits only`,
-      );
+      subscriber.error(`Error: "${value}" must contain ASCII digits only`);
       return;
     }
   }
@@ -78,13 +78,13 @@ Finally, we subscribe to the observable using an {{domxref("Observable.subscribe
 
 ```js
 observable.subscribe({
-  next: (value) => {
+  next(value) {
     console.log(value);
   },
-  error: (error) => {
+  error(error) {
     console.log(error);
   },
-  complete: () => {
+  complete() {
     console.log("Checking complete. No errors found.");
   },
 });
@@ -122,7 +122,7 @@ The final console output will look something like this:
 1234
 354567
 87654
-Error: "gg567" must contain one or more ASCII digits only
+Error: "gg567" must contain ASCII digits only
 ```
 
 ## Specifications

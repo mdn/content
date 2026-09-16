@@ -16,6 +16,8 @@ The **`active`** read-only property of the {{domxref("Subscriber")}} interface i
 
 A boolean that is `true` while the subscription is active and `false` after it ends.
 
+## Description
+
 A subscriber becomes inactive when {{domxref("Subscriber.complete()")}} or {{domxref("Subscriber.error()")}} is called, or when all observers [unsubscribe](/en-US/docs/Web/API/Observable_API/Using_observables#unsubscribing_from_an_observable). Unsubscribing one observer does not make the subscriber inactive if other observers remain. The value is already `false` when teardown callbacks and the observers' `complete` or `error` callbacks run.
 
 > [!NOTE]
@@ -27,9 +29,9 @@ If an already aborted signal is passed to {{domxref("Observable.subscribe()")}} 
 
 ### Demonstrating the value of `active` throughout the lifecycle
 
-This example counts from 1 to 10 and displays whether the subscription is active. The start button is disabled while the count runs. The abort button lets the user stop the count early.
+This example counts from 1 to 10 and displays whether the subscription is active.
 
-```html live-sample___basic-active
+```html hidden live-sample___basic-active
 <button class="count">Start count</button>
 <button class="abort" disabled>Abort count</button>
 <p class="countOutput">Count not started</p>
@@ -74,10 +76,10 @@ function init() {
 
   observable.subscribe(
     {
-      next: (value) => {
+      next(value) {
         outputElem.textContent = value;
       },
-      complete: () => {
+      complete() {
         outputElem.textContent = "Count complete";
       },
     },
@@ -94,9 +96,7 @@ abortBtn.addEventListener("click", () => {
 
 The signal passed to `subscribe()` lets the abort button unsubscribe the observer. Aborting does not invoke the observer's `complete` callback, so the abort button's handler sets the output to "Count aborted" itself.
 
-#### Result
-
-{{EmbedLiveSample("basic-active", "100%", "120px")}}
+{{EmbedLiveSample("basic-active", "", 120)}}
 
 Press the start button to begin a count. The `active` value becomes `true` when the subscription starts and `false` when it completes or is aborted.
 

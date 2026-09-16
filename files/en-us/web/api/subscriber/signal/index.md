@@ -16,6 +16,8 @@ The **`signal`** read-only property of the {{domxref("Subscriber")}} interface p
 
 An internally created {{domxref("AbortSignal")}}. It is aborted when {{domxref("Subscriber.complete()")}} or {{domxref("Subscriber.error()")}} is called, or when all observers unsubscribe.
 
+## Description
+
 This is a different object from any signal passed to {{domxref("Observable.subscribe()")}}. A signal passed to `subscribe()` controls the observers subscribed with that signal; `subscriber.signal` tracks the shared subscription. When one observer unsubscribes, `subscriber.signal` is not aborted if other observers are still subscribed.
 
 > [!NOTE]
@@ -52,8 +54,12 @@ const observable = new Observable((subscriber) => {
 const controller = new AbortController();
 observable.subscribe(
   {
-    next: (data) => console.log(data),
-    error: (error) => console.error(error),
+    next(data) {
+      console.log(data);
+    },
+    error(error) {
+      console.error(error);
+    },
   },
   { signal: controller.signal },
 );

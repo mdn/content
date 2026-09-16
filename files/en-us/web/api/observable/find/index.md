@@ -54,29 +54,40 @@ If the selected value is a promise, the returned promise adopts its eventual sta
 
 ### Using find()
 
-This example finds the first Shift-click among up to three button clicks and displays its coordinates. If no click matches, it displays a message instead.
+This example finds the first Shift-click among up to three button clicks and displays its coordinates. If no click matches, it displays a message instead. Click Restart after the stream ends to try again.
 
 ```html hidden live-sample___basic-find
 <button>Click me</button>
 <p>Waiting for clicks</p>
+<button id="restart" disabled>Restart</button>
 ```
 
 ```js live-sample___basic-find
 const btn = document.querySelector("button");
 const output = document.querySelector("p");
 
-btn
-  .when("click")
-  .take(3)
-  .find((event) => event.shiftKey)
-  .then((result) => {
-    output.textContent = result
-      ? `${result.clientX},${result.clientY}`
-      : "No Shift-click found.";
-  });
+const restart = document.querySelector("#restart");
+
+function start() {
+  restart.disabled = true;
+  output.textContent = "Waiting for clicks";
+  btn
+    .when("click")
+    .take(3)
+    .find((event) => event.shiftKey)
+    .then((result) => {
+      restart.disabled = false;
+      output.textContent = result
+        ? `${result.clientX},${result.clientY}`
+        : "No Shift-click found.";
+    });
+}
+
+restart.when("click").subscribe(start);
+start();
 ```
 
-{{EmbedLiveSample("basic-find", "100%", "100px")}}
+{{EmbedLiveSample("basic-find", "", 140)}}
 
 ## Specifications
 

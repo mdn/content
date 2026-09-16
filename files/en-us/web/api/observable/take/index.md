@@ -37,11 +37,12 @@ If `amount` is `0`, the returned observable completes immediately when subscribe
 
 ### Using take()
 
-This example counts the first five button clicks. On the fifth click, the count is replaced by a completion message, and subsequent clicks are ignored.
+This example counts the first five button clicks. On the fifth click, the count is replaced by a completion message, and subsequent clicks are ignored. Click Restart after the stream ends to try again.
 
 ```html hidden live-sample___basic-take
 <button>Click me</button>
 <p>Click count: 0</p>
+<button id="restart" disabled>Restart</button>
 ```
 
 ```js live-sample___basic-take
@@ -55,18 +56,29 @@ function increment() {
   para.textContent = `Click count: ${countValue}`;
 }
 
-btn
-  .when("click")
-  .take(5)
-  .subscribe({
-    next: increment,
-    complete: () => {
-      para.textContent = `Count finished!`;
-    },
-  });
+const restart = document.querySelector("#restart");
+
+function start() {
+  restart.disabled = true;
+  countValue = 0;
+  para.textContent = "Click count: 0";
+  btn
+    .when("click")
+    .take(5)
+    .subscribe({
+      next: increment,
+      complete() {
+        restart.disabled = false;
+        para.textContent = `Count finished!`;
+      },
+    });
+}
+
+restart.when("click").subscribe(start);
+start();
 ```
 
-{{EmbedLiveSample("basic-take", "100%", "80px")}}
+{{EmbedLiveSample("basic-take", "", 140)}}
 
 ## Specifications
 

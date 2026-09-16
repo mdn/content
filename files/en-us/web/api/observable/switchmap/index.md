@@ -76,7 +76,7 @@ btn
 
 Switching to an empty array unsubscribes from the counter and clears its interval. The button's click subscription stays active, so the next click starts a new count from `1`.
 
-{{EmbedLiveSample("toggle-stream", "100%", "100px")}}
+{{EmbedLiveSample("toggle-stream", "", 100)}}
 
 ### Eager lookahead search
 

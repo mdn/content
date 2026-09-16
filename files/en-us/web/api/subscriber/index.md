@@ -11,13 +11,6 @@ browser-compat: api.Subscriber
 
 The **`Subscriber`** interface of the [Observable API](/en-US/docs/Web/API/Observable_API) represents a subscription to a stream of observable values, and contains methods to manage the [lifecycle](/en-US/docs/Web/API/Observable_API/Creating_observables#creating_an_observable) of that subscription.
 
-A `Subscriber` object is passed to the callback supplied to the {{domxref("Observable.Observable", "Observable()")}} constructor when the first observer subscribes. Additional observers share this `Subscriber` while it is active. After the subscription completes, errors, or all observers unsubscribe, the next subscription invokes the callback with a new `Subscriber`. You cannot construct a `Subscriber` directly.
-
-> [!NOTE]
-> This shared-subscription behavior may change. A [proposal to give each observer its own `Subscriber`](https://github.com/WICG/observable/issues/217) would make each subscription start a separate execution instead of reusing an active subscription.
-
-The producer calls `Subscriber.next()`, `Subscriber.error()`, and `Subscriber.complete()` to send values and notifications to observers. The observers define how to handle these notifications through the corresponding callbacks passed to {{domxref("Observable.subscribe()")}}. The producer can also register cleanup callbacks with {{domxref("Subscriber.addTeardown()")}}.
-
 {{InheritanceDiagram}}
 
 ## Instance properties
@@ -30,13 +23,22 @@ The producer calls `Subscriber.next()`, `Subscriber.error()`, and `Subscriber.co
 ## Instance methods
 
 - {{domxref("Subscriber.addTeardown", "addTeardown()")}} {{Experimental_Inline}}
-  - : Registers a callback to clean up resources when the subscription ends.
+  - : Registers a callback to clean up resources when the subscription completes, errors, or all observers unsubscribe.
 - {{domxref("Subscriber.complete", "complete()")}} {{Experimental_Inline}}
   - : Closes the subscription and notifies observers that the stream has completed successfully.
 - {{domxref("Subscriber.error", "error()")}} {{Experimental_Inline}}
   - : Closes the subscription and notifies observers of an error.
 - {{domxref("Subscriber.next", "next()")}} {{Experimental_Inline}}
   - : Sends a value to the observers of the subscription.
+
+## Description
+
+A `Subscriber` object is passed to the callback supplied to the {{domxref("Observable.Observable", "Observable()")}} constructor when the first observer subscribes. Additional observers share this `Subscriber` while it is active. After the subscription completes, errors, or all observers unsubscribe, the next subscription invokes the callback with a new `Subscriber`. You cannot construct a `Subscriber` directly.
+
+> [!NOTE]
+> This shared-subscription behavior may change. A [proposal to give each observer its own `Subscriber`](https://github.com/WICG/observable/issues/217) would make each subscription start a separate execution instead of reusing an active subscription.
+
+The producer calls `Subscriber.next()`, `Subscriber.error()`, and `Subscriber.complete()` to send values and notifications to observers. The observers define how to handle these notifications through the corresponding callbacks passed to {{domxref("Observable.subscribe()")}}. The producer can also register cleanup callbacks with {{domxref("Subscriber.addTeardown()")}}.
 
 ## Examples
 
@@ -85,10 +87,10 @@ btn.addEventListener("click", () => {
   });
 
   observable.subscribe({
-    next: (value) => {
+    next(value) {
       outputElem.textContent = value;
     },
-    complete: () => {
+    complete() {
       outputElem.textContent = "Count complete";
     },
   });
@@ -106,7 +108,7 @@ Inside the `click` event handler function:
 
 The example renders like so:
 
-{{EmbedLiveSample("basic-observer", "100%", "80px")}}
+{{EmbedLiveSample("basic-observer", "", 80)}}
 
 Press the button. Every 500 milliseconds, the current count is printed to the page. After displaying `10`, the next interval callback completes the subscription and displays "Count complete".
 

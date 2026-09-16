@@ -10,7 +10,7 @@ browser-compat: api.Observable.from_static
 
 {{APIRef("Observable API")}}{{SeeCompatTable}}
 
-The **`from()`** static method of the {{domxref("Observable")}} interface returns an observable converted from a promise, iterable, or async iterable, or returns an existing observable unchanged.
+The **`from()`** static method of the {{domxref("Observable")}} interface returns an observable converted from a promise, iterable, or async iterable; existing observables are returned unchanged.
 
 ## Syntax
 
@@ -44,33 +44,72 @@ Errors while iterating become errors in the observable.
 
 Calling `from()` does not subscribe to the returned observable. However, converting an existing promise does not defer the work that created it. Unsubscribing also does not cancel that work. If the promise rejects after the subscriber becomes inactive, the error is reported to the global object.
 
+Many methods that take observables, such as {{domxref("Observable.takeUntil()")}}, implicitly convert the argument to observables, so you can pass promises, iterables, and async iterables as well.
+
 ## Examples
+
+### Converting a synchronous iterable
+
+Calling `from()` creates the observable without starting iteration. In this example, subscribing delivers all array values and the completion notification before `subscribe()` returns:
+
+```js
+const observable = Observable.from([1, 2, 3]);
+
+console.log("Before subscribing");
+observable.subscribe({
+  next(value) {
+    console.log(value);
+  },
+  complete() {
+    console.log("Complete");
+  },
+});
+console.log("After subscribing");
+
+// Before subscribing
+// 1
+// 2
+// 4
+// Complete
+// After subscribing
+```
 
 ### Converting a promise
 
-This example converts a promise for the first button click into an observable. It displays the click's coordinates, then a completion message.
+This example converts a promise for the first button click into an observable. It displays the click's coordinates, then a completion message. Click Restart after the stream ends to try again.
 
 ```html hidden live-sample___from-promise
 <button>Click me</button>
 <p>Waiting for a click</p>
+<button id="restart" disabled>Restart</button>
 ```
 
 ```js live-sample___from-promise
 const btn = document.querySelector("button");
 const output = document.querySelector("p");
-const firstClick = btn.when("click").first();
+const restart = document.querySelector("#restart");
 
-Observable.from(firstClick).subscribe({
-  next: (event) => {
-    output.textContent = `${event.clientX},${event.clientY}`;
-  },
-  complete: () => {
-    output.textContent += " — Complete.";
-  },
-});
+function start() {
+  restart.disabled = true;
+  output.textContent = "Waiting for a click";
+  const firstClick = btn.when("click").first();
+
+  Observable.from(firstClick).subscribe({
+    next(event) {
+      output.textContent = `${event.clientX},${event.clientY}`;
+    },
+    complete() {
+      restart.disabled = false;
+      output.textContent += " — Complete.";
+    },
+  });
+}
+
+restart.when("click").subscribe(start);
+start();
 ```
 
-{{EmbedLiveSample("from-promise", "100%", "100px")}}
+{{EmbedLiveSample("from-promise", "", 140)}}
 
 ### Converting an async iterable
 
@@ -85,9 +124,15 @@ if (!response.ok) {
 const textStream = response.body.pipeThrough(new TextDecoderStream());
 
 Observable.from(textStream).subscribe({
-  next: (chunk) => console.log(chunk),
-  error: (error) => console.error("Reading failed:", error),
-  complete: () => console.log("Stream complete"),
+  next(chunk) {
+    console.log(chunk);
+  },
+  error(error) {
+    console.error("Reading failed:", error);
+  },
+  complete() {
+    console.log("Stream complete");
+  },
 });
 ```
 

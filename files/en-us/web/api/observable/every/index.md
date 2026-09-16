@@ -52,27 +52,38 @@ If `predicate` throws an exception, the operation unsubscribes from the source.
 
 ### Using every()
 
-This example checks whether Shift is held for each of the first three button clicks. It reports `false` as soon as a click fails the test, or `true` after all three pass.
+This example checks whether Shift is held for each of the first three button clicks. It reports `false` as soon as a click fails the test, or `true` after all three pass. Click Restart after the stream ends to try again.
 
 ```html hidden live-sample___basic-every
 <button>Click me</button>
 <p>Waiting for clicks</p>
+<button id="restart" disabled>Restart</button>
 ```
 
 ```js live-sample___basic-every
 const btn = document.querySelector("button");
 const output = document.querySelector("p");
 
-btn
-  .when("click")
-  .take(3)
-  .every((event) => event.shiftKey)
-  .then((result) => {
-    output.textContent = result;
-  });
+const restart = document.querySelector("#restart");
+
+function start() {
+  restart.disabled = true;
+  output.textContent = "Waiting for clicks";
+  btn
+    .when("click")
+    .take(3)
+    .every((event) => event.shiftKey)
+    .then((result) => {
+      restart.disabled = false;
+      output.textContent = result;
+    });
+}
+
+restart.when("click").subscribe(start);
+start();
 ```
 
-{{EmbedLiveSample("basic-every", "100%", "100px")}}
+{{EmbedLiveSample("basic-every", "", 140)}}
 
 ## Specifications
 

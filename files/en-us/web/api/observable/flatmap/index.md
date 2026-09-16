@@ -70,7 +70,7 @@ target
   });
 ```
 
-{{EmbedLiveSample("basic-flatMap", "100%", "200px")}}
+{{EmbedLiveSample("basic-flatMap", "", 200)}}
 
 For a more complete example, see [Canvas drawing](/en-US/docs/Web/API/Observable_API/Using_observables#example_canvas_drawing).
 

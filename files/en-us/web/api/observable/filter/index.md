@@ -73,7 +73,7 @@ function reportCoords(e) {
 }
 ```
 
-{{EmbedLiveSample("basic-filter", "100%", "360px")}}
+{{EmbedLiveSample("basic-filter", "", 360)}}
 
 ## Specifications
 

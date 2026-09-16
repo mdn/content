@@ -12,20 +12,23 @@ Before proceeding, read [Using observables](/en-US/docs/Web/API/Observable_API/U
 
 ## Creating an observable
 
-Like Promises, observables are created with a callback. The callback's job is to do work and push data to its subscribers. This callback isn't called immediately: it's called when the first observer subscribes, either by `subscribe()`, by one of the [aggregation methods](/en-US/docs/Web/API/Observable_API/Using_observables#aggregating_values), or by subscribing to a downstream observable created by a [transformation method](/en-US/docs/Web/API/Observable_API/Using_observables#transforming_an_observable). It receives a {{domxref("Subscriber")}} object. You can call methods on this object to dispatch data to all observers subscribed to the observable. Additional observers share the same underlying subscription until it completes, errors, or all observers unsubscribe. After that, the callback is called again when the next observer subscribes.
+Like promises, observables are created by passing a callback to the {{domxref("Observable.Observable", "Observable()")}} constructor. The callback's job is to do work and push data to the observable's subscribers. The callback isn't called immediately: it's called when the first observer subscribes, either via `subscribe()`, an [aggregation method](/en-US/docs/Web/API/Observable_API/Using_observables#aggregating_values), or subscribing to a downstream observable created by a [transformation method](/en-US/docs/Web/API/Observable_API/Using_observables#transforming_an_observable).
+
+The `Observable()` callback receives a {{domxref("Subscriber")}} object. You can call methods on this object to dispatch data to all observers subscribed to the observable. Additional observers share the same underlying subscription until it completes, errors, or all observers unsubscribe. After that, the callback is called again when the next observer subscribes.
 
 > [!NOTE]
 > This shared-subscription behavior may change. A [proposal to give each observer its own `Subscriber`](https://github.com/WICG/observable/issues/217) would make each subscription start a separate execution instead of reusing an active subscription.
 
-- `next(value)`: Sends a value to each observer's `next` callback. This can be called any number of times while the subscription is active.
-- `complete()`: Ends the subscription successfully and calls each observer's `complete` callback without arguments.
-- `error(error)`: Ends the subscription with an error and passes the error to each observer's `error` callback. If an observer has no `error` callback, the error is reported to the global object.
+The `Subscriber` object has the following methods:
 
-With a subscription set up, the producer can send any number of values by calling `subscriber.next()`, optionally followed by a call to `subscriber.complete()` or `subscriber.error()` to signal that the stream of data is finished.
+- {{domxref("Subscriber.next", "next(value)")}}: Sends a value to each observer's `next` callback. This can be called any number of times while the subscription is active.
+- {{domxref("Subscriber.complete", "complete()")}}: Ends the subscription successfully and calls each observer's `complete` callback without arguments.
+- {{domxref("Subscriber.error", "error(error)")}}: Ends the subscription with an error and passes the error to each observer's `error` callback. If an observer has no `error` callback, the error is reported as an uncaught error to the {{glossary("global object")}}.
+- {{domxref("Subscriber.addTeardown", "addTeardown(callback)")}}: Registers a callback to clean up resources when the subscription ends. See [Teardown](#teardown) for details.
 
-There's another `addTeardown()` method; we'll look at that in the [Teardown](#teardown) section.
+With a subscription set up, the custom observable can send any number of values by calling `subscriber.next()`, optionally followed by a call to `subscriber.complete()` or `subscriber.error()` to signal that the stream of data is finished.
 
-In this example, we will print the numbers 1 to 10 to the page, then print a message to say that the count is complete. We won't show the HTML because it just includes a single `<p>` element to display the count, and a {{htmlelement("button")}} to start the count.
+In this example, we print the numbers 1 to 10 to the page, then print a message to say that the count is complete. We won't show the HTML because it just includes a single `<p>` element to display the count and a {{htmlelement("button")}} to start the count.
 
 ```html hidden live-sample___basic-constructor-example live-sample___basic-teardown-example
 <button>Start count</button>
@@ -52,9 +55,9 @@ function makeTimer(timerInterval, iterations = Infinity) {
 ```
 
 > [!NOTE]
-> This function is not production-ready at this point! Read on to [Teardown](#teardown) to see why.
+> This function is not currently production-ready! It allows multiple intervals to be created when the user clicks the button multiple times before the count finishes. We'll fix this problem in the [Teardown](#teardown) section.
 
-Next, we define an `init()` function inside which we subscribe to the observable by calling `Observable.subscribe()`. The object passed to `subscribe()` defines the observer's callbacks: `next` prints the value received from the producer to the `<p>` element, and `complete` displays a completion message.
+Next, we define an `init()` function in which we subscribe to the observable by calling `Observable.subscribe()`. The object passed to `subscribe()` defines the observer's callbacks: `next()` prints the value received from the producer to the `<p>` element, and `complete()` displays a completion message.
 
 ```js hidden live-sample___basic-constructor-example live-sample___basic-teardown-example
 const outputElem = document.querySelector("p");
@@ -74,7 +77,7 @@ function init() {
 }
 ```
 
-Finally, the `init()` function is called in response to the [`click`](/en-US/docs/Web/API/Element/click_event) event on the `<button>`, using `when()` and `subscribe()`.
+Finally, the `init()` function is called in response to the [`click`](/en-US/docs/Web/API/Element/click_event) event on the `<button>` element, using `when()` and `subscribe()`.
 
 ```js live-sample___basic-constructor-example
 btn.when("click").subscribe(init);
@@ -82,7 +85,7 @@ btn.when("click").subscribe(init);
 
 The rendered output looks like this:
 
-{{EmbedLiveSample("basic-constructor-example", "100%", "80px")}}
+{{EmbedLiveSample("basic-constructor-example", "", 80)}}
 
 Click the button. Every 500 milliseconds, the value of `i` is printed to the page and then incremented by 1. On the next interval after printing `10`, the subscription completes and the paragraph displays "Count complete; click to restart."
 
@@ -91,7 +94,9 @@ Click the button. Every 500 milliseconds, the value of `i` is printed to the pag
 
 ## Teardown
 
-The [previous example](#creating_an_observable) is not production-ready because subscribing to each new `makeTimer()` observable creates a new interval. If the user clicks the `<button>` multiple times, multiple intervals will be created, all trying to update the same `<p>` element. To fix this, we need to unsubscribe from the previous observable and clear its interval before starting a new count. First, we'll use an `AbortController` to unsubscribe when the user clicks the button again.
+The [previous example](#creating_an_observable) is not production-ready because subscribing to each new `makeTimer()` observable creates a new interval. If the user clicks the `<button>` multiple times, they will create multiple intervals, all trying to update the same `<p>` element. To fix this, we need to unsubscribe from the previous observable and clear its interval before starting a new count.
+
+First of all, we'll use an `AbortController` to unsubscribe when the user clicks the button again:
 
 ```js live-sample___basic-teardown-example
 let controller;
@@ -115,7 +120,9 @@ function init() {
 btn.when("click").subscribe(init);
 ```
 
-The problem with this is that while the `makeTimer()` observable is stopped, the interval created inside it is not cleared until it reaches `11`. This is fine for our example because the interval will eventually clear itself, but in a real-world scenario this could lead to memory leaks and unexpected behavior. To fix this, we need to make sure that `clearInterval` is deterministically called when the observable becomes inactive, not just when it reaches the termination point. We do this by adding a _teardown_ to the observable. The teardown logic is passed as a callback to {{domxref("Subscriber.addTeardown()")}}.
+The `makeTimer()` observable is stopped, but unfortunately, the interval created inside it is not cleared until the count reaches `11`. This is fine for our example because the interval will eventually clear itself, but in a real-world scenario this could lead to memory leaks and unexpected behavior. We need to make sure that `clearInterval` is called deterministically when the observable becomes inactive, not just when it reaches the termination point. We do this by adding a _teardown_ to the observable.
+
+The teardown logic is passed as a callback to {{domxref("Subscriber.addTeardown()")}}:
 
 ```js live-sample___basic-teardown-example
 function makeTimer(timerInterval, iterations = Infinity) {
@@ -142,9 +149,9 @@ In this case, the teardown callback clears the interval via {{domxref("Window.cl
 
 The example now renders like so:
 
-{{EmbedLiveSample("basic-teardown-example", "100%", "80px")}}
+{{EmbedLiveSample("basic-teardown-example", "", 80)}}
 
-Press the `<button>` while the count is running; the count will stop immediately and restart from `1`.
+Press the `<button>` while the count is running; the count will restart from `1`.
 
 ## Producing values synchronously
 
@@ -163,8 +170,12 @@ const numbers = new Observable((subscriber) => {
 
 console.log("Before subscribing");
 numbers.take(3).subscribe({
-  next: (value) => console.log(value),
-  complete: () => console.log("Complete"),
+  next(value) {
+    console.log(value);
+  },
+  complete() {
+    console.log("Complete");
+  },
 });
 console.log("After subscribing");
 
@@ -178,7 +189,7 @@ console.log("After subscribing");
 
 After receiving three values, `take(3)` completes its output and unsubscribes from `numbers`. With no observers remaining, the producer's {{domxref("Subscriber.active", "active")}} property becomes `false`. Checking it before each iteration stops the producer from doing unnecessary work. This check also handles a subscription started with an already aborted signal.
 
-Calling `subscriber.complete()` or `subscriber.error()` does not stop the producer's JavaScript execution. Use `return`, `break`, or an `active` check to stop producing values when appropriate. Likewise, cancellation that must interrupt synchronous production needs to be available before `subscribe()` is called, for example through an `AbortSignal` supplied in its options.
+Calling `subscriber.complete()` or `subscriber.error()` does not stop the producer's JavaScript execution. Use `return`, `break`, or a `Subscriber.active` check to stop producing values when appropriate. Functionality intended to interrupt synchronous production needs to be available before `subscribe()` is called, such as through an `AbortSignal` supplied in its options.
 
 ## Canceling asynchronous work
 
@@ -211,7 +222,7 @@ function fetchJSON(url) {
 
 If the subscription ends while the request or response body is pending, aborting `subscriber.signal` cancels that work and causes the fetch or body-reading promise to reject. The rejection handler checks `subscriber.active` before forwarding the error: calling `subscriber.error()` after cancellation would report the error to the global object. While the subscription is active, request and JSON-parsing failures are forwarded to its observers.
 
-The constructor callback itself is not `async`. Its return value is ignored, so returning a promise would not make the observable wait for it or automatically forward its rejection. Instead, this example explicitly calls `next()`, `complete()`, and `error()` from the promise handlers.
+The `Observable()` constructor callback is not asynchronous. Its return value is ignored, so returning a promise would not make the observable wait for it or automatically forward its rejection. Instead, this example explicitly calls `next()`, `complete()`, and `error()` from the promise handlers.
 
 We can use `fetchJSON()` in a search pipeline like the one in [Using observables](/en-US/docs/Web/API/Observable_API/Using_observables#working_with_inner_observables). Suppose the page contains a search input and a results element:
 
@@ -241,11 +252,13 @@ Custom observables can wrap APIs that deliver notifications through callbacks. I
 
 ### HTML and CSS
 
-The markup contains a resizable panel and a paragraph to display its dimensions. The {{cssxref("resize")}} property lets the user resize the panel by dragging its corner.
+The markup contains a resizable panel and a paragraph to display its dimensions, as well as the Stop and Restart buttons. The {{cssxref("resize")}} property lets the user resize the panel by dragging its corner.
 
 ```html live-sample___resize-example
 <div id="panel">Drag my corner to resize me.</div>
 <p id="dimensions"></p>
+<button>Stop</button>
+<button id="restart" disabled>Restart</button>
 ```
 
 ```css live-sample___resize-example
@@ -264,7 +277,9 @@ The markup contains a resizable panel and a paragraph to display its dimensions.
 
 ### JavaScript
 
-Inside the custom observable's callback, we create a `ResizeObserver` and start observing the panel. Each notification passes the panel's content rectangle to {{domxref("Subscriber.next()")}}. We also register a teardown callback to disconnect the `ResizeObserver` when the subscription ends.
+Inside a custom observable's callback, we create a `ResizeObserver` and start observing the panel. Each notification passes the panel's content rectangle to {{domxref("Subscriber.next()")}}. We also register a teardown callback to disconnect the `ResizeObserver` when the subscription ends.
+
+In this example, clicking Stop completes the stream returned by `takeUntil()` and unsubscribes its only observer from `sizes`, triggering the teardown. Clicking Restart starts a new subscription and creates a new `ResizeObserver`.
 
 ```js live-sample___resize-example
 const panel = document.getElementById("panel");
@@ -278,16 +293,30 @@ const sizes = new Observable((subscriber) => {
   subscriber.addTeardown(() => observer.disconnect());
 });
 
-sizes.subscribe(({ width, height }) => {
-  dimensions.textContent = `Content size: ${Math.round(width)} × ${Math.round(height)} pixels`;
-});
+const stop = document.querySelector("button");
+const restart = document.querySelector("#restart");
+
+function start() {
+  restart.disabled = true;
+  sizes.takeUntil(stop.when("click")).subscribe({
+    next({ width, height }) {
+      dimensions.textContent = `Content size: ${Math.round(width)} × ${Math.round(height)} pixels`;
+    },
+    complete() {
+      restart.disabled = false;
+    },
+  });
+}
+
+restart.when("click").subscribe(start);
+start();
 ```
 
 Subscribing starts the `ResizeObserver`, which reports the initial size and subsequent size changes. The subscription callback displays these dimensions outside the panel so updating the output does not affect the observed element's size.
 
 ### Result
 
-{{EmbedLiveSample("resize-example", "100%", "280px")}}
+{{EmbedLiveSample("resize-example", "", 280)}}
 
 ## See also
 

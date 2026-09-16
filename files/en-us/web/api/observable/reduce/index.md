@@ -57,27 +57,38 @@ If `reducer` throws an exception, the operation unsubscribes from the source.
 
 ### Using reduce()
 
-This example counts the first five button clicks with an accumulator, then displays the total when the stream completes.
+This example counts the first five button clicks with an accumulator, then displays the total when the stream completes. Click Restart after the stream ends to try again.
 
 ```html hidden live-sample___basic-reduce
 <button>Click me</button>
 <p>Waiting for clicks</p>
+<button id="restart" disabled>Restart</button>
 ```
 
 ```js live-sample___basic-reduce
 const btn = document.querySelector("button");
 const output = document.querySelector("p");
 
-btn
-  .when("click")
-  .take(5)
-  .reduce((count) => count + 1, 0)
-  .then((result) => {
-    output.textContent = `Total clicks: ${result}`;
-  });
+const restart = document.querySelector("#restart");
+
+function start() {
+  restart.disabled = true;
+  output.textContent = "Waiting for clicks";
+  btn
+    .when("click")
+    .take(5)
+    .reduce((count) => count + 1, 0)
+    .then((result) => {
+      restart.disabled = false;
+      output.textContent = `Total clicks: ${result}`;
+    });
+}
+
+restart.when("click").subscribe(start);
+start();
 ```
 
-{{EmbedLiveSample("basic-reduce", "100%", "100px")}}
+{{EmbedLiveSample("basic-reduce", "", 140)}}
 
 ## Specifications
 

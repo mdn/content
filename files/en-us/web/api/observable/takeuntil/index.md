@@ -40,16 +40,19 @@ The notifier is subscribed to before the source. If it emits a value or errors s
 
 A notifier error completes the returned observable successfully; it is not forwarded as an error.
 
+You can technically pass a synchronous iterable as the `value`, but the converted observable either never emits if the iterable is empty (and `takeUntil()` never unsubscribes), or it immediately emits if the iterable is non-empty (and `takeUntil()` immediately unsubscribes).
+
 ## Examples
 
 ### Using takeUntil()
 
-This example displays the mouse coordinates when the pointer moves over either of two `<div>` elements. Clicking anywhere in the example completes the observable and stops coordinate reporting.
+This example displays the mouse coordinates when the pointer moves over either of two `<div>` elements. Clicking anywhere in the example completes the observable and stops coordinate reporting. Click Restart after the stream ends to try again.
 
 ```html hidden live-sample___basic-takeUntil
 <div></div>
 <div></div>
 <p></p>
+<button id="restart" disabled>Restart</button>
 ```
 
 ```css hidden live-sample___basic-takeUntil
@@ -63,19 +66,35 @@ div {
 ```js live-sample___basic-takeUntil
 const outputElem = document.querySelector("p");
 
-document.body
-  .when("mousemove")
-  .filter((e) => e.target.matches("div"))
-  .map((e) => ({ x: e.clientX, y: e.clientY }))
-  .takeUntil(document.body.when("click"))
-  .subscribe(reportCoords);
+const restart = document.querySelector("#restart");
 
-function reportCoords(e) {
-  outputElem.textContent = `${e.x},${e.y}`;
+function start() {
+  restart.disabled = true;
+  outputElem.textContent = "Move the mouse";
+  document.body
+    .when("mousemove")
+    .filter((e) => e.target.matches("div"))
+    .map((e) => ({ x: e.clientX, y: e.clientY }))
+    .takeUntil(
+      document.body.when("click").filter((event) => event.target !== restart),
+    )
+    .subscribe({
+      next: reportCoords,
+      complete() {
+        restart.disabled = false;
+      },
+    });
+
+  function reportCoords(e) {
+    outputElem.textContent = `${e.x},${e.y}`;
+  }
 }
+
+restart.when("click").subscribe(start);
+start();
 ```
 
-{{EmbedLiveSample("basic-takeUntil", "100%", "360px")}}
+{{EmbedLiveSample("basic-takeUntil", "", 430)}}
 
 ## Specifications
 

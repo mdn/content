@@ -44,26 +44,37 @@ If the selected value is a promise, the returned promise adopts its eventual sta
 
 ### Using first()
 
-This example displays the coordinates of the first button click, then stops listening.
+This example displays the coordinates of the first button click, then stops listening. Click Restart after the stream ends to try again.
 
 ```html hidden live-sample___basic-first
 <button>Click me</button>
 <p>Waiting for clicks</p>
+<button id="restart" disabled>Restart</button>
 ```
 
 ```js live-sample___basic-first
 const btn = document.querySelector("button");
 const output = document.querySelector("p");
 
-btn
-  .when("click")
-  .first()
-  .then((result) => {
-    output.textContent = `${result.clientX},${result.clientY}`;
-  });
+const restart = document.querySelector("#restart");
+
+function start() {
+  restart.disabled = true;
+  output.textContent = "Waiting for clicks";
+  btn
+    .when("click")
+    .first()
+    .then((result) => {
+      restart.disabled = false;
+      output.textContent = `${result.clientX},${result.clientY}`;
+    });
+}
+
+restart.when("click").subscribe(start);
+start();
 ```
 
-{{EmbedLiveSample("basic-first", "100%", "100px")}}
+{{EmbedLiveSample("basic-first", "", 140)}}
 
 ## Specifications
 

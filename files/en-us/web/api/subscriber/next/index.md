@@ -12,11 +12,6 @@ browser-compat: api.Subscriber.next
 
 The **`next()`** method of the {{domxref("Subscriber")}} interface sends a value to each observer of the subscription, invoking its `next` callback synchronously. These callbacks are supplied to {{domxref("Observable.subscribe()")}}.
 
-If the subscriber is no longer {{domxref("Subscriber.active", "active")}}, this method does nothing. An exception thrown by an observer's `next` callback is reported to the global object; it does not call that observer's `error` callback or stop delivery to other observers.
-
-> [!NOTE]
-> This shared-subscription behavior may change. A [proposal to give each observer its own `Subscriber`](https://github.com/WICG/observable/issues/217) would make each subscription start a separate execution instead of reusing an active subscription.
-
 ## Syntax
 
 ```js-nolint
@@ -31,6 +26,13 @@ next(value)
 ### Return value
 
 None ({{jsxref("undefined")}}).
+
+## Description
+
+If the subscriber is no longer {{domxref("Subscriber.active", "active")}}, this method does nothing. An exception thrown by an observer's `next` callback is reported to the global object; it does not call that observer's `error` callback or stop delivery to other observers.
+
+> [!NOTE]
+> This shared-subscription behavior may change. A [proposal to give each observer its own `Subscriber`](https://github.com/WICG/observable/issues/217) would make each subscription start a separate execution instead of reusing an active subscription.
 
 ## Examples
 

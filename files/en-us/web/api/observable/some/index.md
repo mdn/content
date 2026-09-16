@@ -52,27 +52,38 @@ If `predicate` throws an exception, the operation unsubscribes from the source.
 
 ### Using some()
 
-This example checks whether Shift is held for any of the first three button clicks. It reports `true` as soon as a click passes the test, or `false` after all three fail.
+This example checks whether Shift is held for any of the first three button clicks. It reports `true` as soon as a click passes the test, or `false` after all three fail. Click Restart after the stream ends to try again.
 
 ```html hidden live-sample___basic-some
 <button>Click me</button>
 <p>Waiting for clicks</p>
+<button id="restart" disabled>Restart</button>
 ```
 
 ```js live-sample___basic-some
 const btn = document.querySelector("button");
 const output = document.querySelector("p");
 
-btn
-  .when("click")
-  .take(3)
-  .some((event) => event.shiftKey)
-  .then((result) => {
-    output.textContent = result;
-  });
+const restart = document.querySelector("#restart");
+
+function start() {
+  restart.disabled = true;
+  output.textContent = "Waiting for clicks";
+  btn
+    .when("click")
+    .take(3)
+    .some((event) => event.shiftKey)
+    .then((result) => {
+      restart.disabled = false;
+      output.textContent = result;
+    });
+}
+
+restart.when("click").subscribe(start);
+start();
 ```
 
-{{EmbedLiveSample("basic-some", "100%", "100px")}}
+{{EmbedLiveSample("basic-some", "", 140)}}
 
 ## Specifications
 

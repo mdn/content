@@ -88,7 +88,7 @@ target
 
 Placing `catch()` inside {{domxref("Observable.switchMap", "switchMap()")}} keeps the error within the inner stream. The empty array completes that stream without emitting another value.
 
-{{EmbedLiveSample("catch-drag", "100%", "200px")}}
+{{EmbedLiveSample("catch-drag", "", 200)}}
 
 ## Specifications
 

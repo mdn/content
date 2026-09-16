@@ -52,29 +52,40 @@ If `callback` throws an exception, the operation unsubscribes from the source.
 
 ### Using forEach()
 
-This example displays the coordinates of each of the first three button clicks, then adds a completion message.
+This example displays the coordinates of each of the first three button clicks, then adds a completion message. Click Restart after the stream ends to try again.
 
 ```html hidden live-sample___basic-forEach
 <button>Click me</button>
 <p>Waiting for clicks</p>
+<button id="restart" disabled>Restart</button>
 ```
 
 ```js live-sample___basic-forEach
 const btn = document.querySelector("button");
 const output = document.querySelector("p");
 
-btn
-  .when("click")
-  .take(3)
-  .forEach((event, index) => {
-    output.textContent = `Click ${index + 1}: ${event.clientX},${event.clientY}`;
-  })
-  .then(() => {
-    output.textContent += " — Count complete.";
-  });
+const restart = document.querySelector("#restart");
+
+function start() {
+  restart.disabled = true;
+  output.textContent = "Waiting for clicks";
+  btn
+    .when("click")
+    .take(3)
+    .forEach((event, index) => {
+      output.textContent = `Click ${index + 1}: ${event.clientX},${event.clientY}`;
+    })
+    .then(() => {
+      restart.disabled = false;
+      output.textContent += " — Count complete.";
+    });
+}
+
+restart.when("click").subscribe(start);
+start();
 ```
 
-{{EmbedLiveSample("basic-forEach", "100%", "100px")}}
+{{EmbedLiveSample("basic-forEach", "", 140)}}
 
 ## Specifications
 
