@@ -12,7 +12,9 @@ The **`createOffer()`** method of the {{domxref("RTCPeerConnection")}} interface
 
 The SDP offer includes information about any {{domxref("MediaStreamTrack")}} objects already attached to the WebRTC session, codec, and options supported by the browser, and any candidates already gathered by the {{Glossary("ICE")}} agent, for the purpose of being sent over the signaling channel to a potential peer to request a connection or to update the configuration of an existing connection.
 
-Add tracks and create data channels before calling `createOffer()`. The offer describes the connection as it is when `createOffer()` is called, so any changes made afterwards are not included in the negotation (the {{domxref("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event is fired if you make changes that requires a new offer).
+Add tracks and create data channels before calling `createOffer()`. The offer describes the connection as it is when `createOffer()` is called, so any changes made afterwards are not included in the negotiation (the {{domxref("RTCPeerConnection/negotiationneeded_event", "negotiationneeded")}} event is fired if you make changes that requires a new offer).
+
+You can avoid the renegotiation triggered by creating a data channel after your first `createOffer()` call by setting `alwaysNegotiateDataChannels` to `true` in the {{domxref("RTCPeerConnection.RTCPeerConnection", "RTCPeerConnection()")}} constructor. This specifies that the application negotiates data channels in the {{glossary("SDP")}} offer before creating an {{domxref("RTCDataChannel")}}.
 
 ## Syntax
 

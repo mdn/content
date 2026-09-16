@@ -168,7 +168,7 @@ In addition, if a WebRTC error occurs while configuring or accessing the media, 
 
 It's important to keep in mind that you can't create the `parameters` object yourself and expect it to work.
 Instead, you _must_ first call {{domxref("RTCRtpSender.getParameters", "getParameters()")}}, modify the received parameters object, then pass that object into `setParameters()`.
-WebRTC uses the parameters object's `transactionId` property to ensure that when you set parameters, your changes are based on the most recent parameters rather than an out of date configuration.
+WebRTC uses the parameters object's `transactionId` property to ensure that when you set parameters, your changes are based on the most recent parameters rather than an out-of-date configuration.
 
 ## Examples
 

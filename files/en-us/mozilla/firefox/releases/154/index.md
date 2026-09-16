@@ -91,7 +91,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **Percentage values for `text-decoration-inset`**: `layout.css.text-decoration-inset-percentage.enabled`
 
-  The {{cssxref("text-decoration-inset")}} CSS property now supports percentages as values. The percentage value specifies the size of the inset as a percentage of the {{cssxref("font-size")}}. ([Firefox bug 2044602](https://bugzil.la/2044602)).
+  The {{cssxref("text-decoration-inset")}} CSS property now supports percentages as values. The percentage value specifies the size of the inset as a percentage of the inline size of the decorating box or of each individual box fragment, depending on the value of {{cssxref("box-decoration-break")}}. ([Firefox bug 2044602](https://bugzil.la/2044602)).
 
 - **Calculating a value based upon `progress()`**: `layout.css.progress-function.enabled`
 

@@ -1,8 +1,8 @@
 ---
-title: Firefox 155 release notes for developers (Stable)
-short-title: Firefox 155 (Stable)
+title: Firefox 155 release notes for developers
+short-title: Firefox 155
 slug: Mozilla/Firefox/Releases/155
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
@@ -45,6 +45,11 @@ No notable changes.
   This is the new name for the {{cssxref("font-stretch")}} property, which continues to work as a legacy alias.
   Note that computed style enumeration now returns `font-width` rather than `font-stretch`.
   ([Firefox bug 1911075](https://bugzil.la/1911075)).
+- Partial support for the non-standard {{cssxref("::-webkit-scrollbar")}} pseudo-element, added in [Firefox 153](/en-US/docs/Mozilla/Firefox/Releases/153#css), is now limited to a small list of sites rather than to the whole web. Firefox maintains this list in the `layout.css.fake-webkit-scrollbar.enabled-domains` preference. The domain of the document is matched against the entries in the list; if it doesn't match any entry, `@supports selector(::-webkit-scrollbar)` returns `false`.
+
+  This restriction reverses the Firefox 153 change, which introduced partial support for `::-webkit-scrollbar` across all sites and caused broken scrollbars on some sites. These sites relied on styling with other `::-webkit-scrollbar-*` pseudo-elements, which Firefox doesn't support. The only declarations Firefox acts on are `display: none`, which hides the scrollbar, and a non-zero `width` or `height`, which turns off overlay scrollbars for that scroll container.
+
+  Use the standard {{cssxref("scrollbar-color")}} and {{cssxref("scrollbar-width")}} properties to style scrollbars in Firefox. ([Firefox bug 2061547](https://bugzil.la/2061547)).
 
 ### JavaScript
 
@@ -181,3 +186,11 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **`view-timeline` includes `view-timeline-inset`**: `layout.css.scroll-driven-animations.enabled`
 
   The {{cssxref("view-timeline")}} shorthand property now supports the {{cssxref("view-timeline-inset")}} property. The shorthand lets you specify start and/or end inset (or outset) values to adjust the position of the view progress timeline. ([Firefox bug 2046602](https://bugzil.la/2046602)).
+
+- **The `MathMLAnchorElement` interface**: `mathml.a.element.enabled`
+
+  The MathML [`<a>`](/en-US/docs/Web/MathML/Reference/Element/a) element is now correctly represented in the DOM by the [`MathMLAnchorElement`](/en-US/docs/Web/API/MathMLAnchorElement) interface rather than the generic [`MathMLElement`](/en-US/docs/Web/API/MathMLElement) interface. ([Firefox bug 2059312](https://bugzil.la/2059312)).
+
+- **`timeline-scope` names are now global by default**: `layout.css.scroll-driven-animations.enabled`
+
+  The default behavior of named timeline scoping has been updated to be global. This can be scoped to elements, and their subtree, using the {{cssxref("timeline-scope")}} CSS property and the value of either the {{cssxref("scroll-timeline-name")}} or {{cssxref("view-timeline-name")}} ([Firefox bug 2024012](https://bugzil.la/2024012)).
