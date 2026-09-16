@@ -169,7 +169,7 @@ Cap segments are impacted by the {{cssxref("rule-visibility-items")}} properties
 
 In the following demonstration, the row segments painted in the row gaps in the first and last columns end in cap endpoints at the container's left and right edges. With `row-rule-inset-cap: 16px` set, these row segment cap endpoints are inset by `16px`. Change the inset `<length>` value to better visualize which segments start or end in cap segment endpoints.
 
-```html live-sample___caps live-sample___percent
+```html live-sample___caps live-sample___percents
 <ul id="ul">
   <li>1</li>
   <li>2</li>
