@@ -135,7 +135,7 @@ This property is specified as a one or two values from the following list:
 
 ## Description
 
-The `row-rule-inset-cap` shorthand property can be used to set the {{cssxref("row-rule-inset-cap-end")}} and {{cssxref("row-rule-inset-cap-start")}} properties, insetting or outsetting both the left and right edges of [cap segment endpoints](#understanding_cap_end) in a single declaration.
+The `row-rule-inset-cap` shorthand property can be used to set the {{cssxref("row-rule-inset-cap-start")}} and {{cssxref("row-rule-inset-cap-end")}} properties, insetting or outsetting both the left and right edges of [cap segment endpoints](#understanding_cap_end) in a single declaration.
 
 If one value is specified, both properties are set to that value. If two values are specified, `-start` is set to the first value and `-end` is set to the second. The default value is `0`, which in the case of cap endpoints, is the same as `overlap-join`. Positive values reduce, or inset, the segment size, while negative values increase, or outset, it.
 
