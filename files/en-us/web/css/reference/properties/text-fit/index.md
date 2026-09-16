@@ -36,7 +36,7 @@ text-fit: unset;
 
 ### Values
 
-Specified as one the keywords `none`, `grow`, or `shrink`, plus optionally one of the keywords `consistent`, `per-line`, or `per-line-all`, plus an optional {{cssxref("percentage")}} value, separated by spaces. The components must be specified in this order.
+Specified as one of the keywords `none`, `grow`, or `shrink`, plus optionally one of the keywords `consistent`, `per-line`, or `per-line-all`, plus an optional {{cssxref("percentage")}} value, separated by spaces. The components must be specified in this order.
 
 - `none`
   - : The default value. No text scaling is applied.
