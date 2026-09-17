@@ -124,7 +124,7 @@ rule-inset-cap: unset;
 
 ### Values
 
-This property is specified as a single value from the following list:
+This property is specified as one or two values from the following list:
 
 - `overlap-join`
   - : Resolves to `0`.

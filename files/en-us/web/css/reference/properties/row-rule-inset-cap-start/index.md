@@ -131,11 +131,11 @@ Row rules are painted within a row gap as one or more segments, with segments oc
 - Adjacent flex items or flex lines in flex layouts, depending on the `flex-direction`.
 - Adjacent rows in multi-col layouts, which may exist when {{cssxref("column-height")}} is set to a {{cssxref("&lt;length>")}}.
 
-The `row-rule-inset-cap-start` property can be used to inset the start end of [cap segment endpoints](#understanding_cap_end), at the container's content start edge and cap endpoints where no rule segments intersect. The default value is `0`, which is the same as `overlap-join`. Positive values reduce the segment size, while negative values increase it.
+The `row-rule-inset-cap-start` property insets the start of [cap segment endpoints](#understanding_cap_end) at the container's content start edge and at cap endpoints where no rule segments intersect. The default value is `0`, which is the same as `overlap-join`. Positive values reduce the segment size, while negative values increase it.
 
-Length `row-rule-inset-cap-start` values inset the start, the left side of the segment in left-to-right writing modes, of both interior and start edge cap segment endpoints by the value specified. Negative length values create an outset, with container-edge cap segments extending beyond the container's start edge.
+Length `row-rule-inset-cap-start` values inset the start of both interior and start-edge cap segment endpoints by the specified value. Negative length values create an outset, with container-edge cap segments extending beyond the container's start edge.
 
-[Percentage value](#understanding_percentage_values) insets for interior cap segments are relative to the size of the {{cssxref("column-gap")}}. For cap segments that start at the edge of the container, percentage values are relative to `0`, so are always `0px`.
+[Percentage value](#understanding_percentage_values) insets for interior cap segments are relative to the size of the {{cssxref("column-gap")}}. For cap segments at the container start edge, percentage values are relative to `0`, so they are always `0px`.
 
 The `row-rule-inset-cap-start` property is a constituent property of several [shorthand properties](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties):
 
@@ -151,11 +151,14 @@ All of these shorthand properties, along with their `-end`, `-junction`, and `co
 
 A _cap segment endpoint_ is any segment endpoint that is not a junction segment endpoint. This includes endpoints at the container's content edges, as well as endpoints at a gap junction where no other rule segments are present.
 
-The `row-rule-inset-cap-start` controls the inset of the start edge of row cap segment endpoints. In left-to-right writing modes, the property can be used to shrink or extend the left end of row rule segments abutting the left edge of the container and the left end of row rule segments whose left side abuts an interior gaps where no other row or column rule segments are present.
+The `row-rule-inset-cap-start` controls the start inset of row rules with cap endpoints. The property can shrink or extend the start of:
+
+- Row rule segments abutting the container start edge.
+- Row rule segments whose left side abuts an interior gap where no other row or column rule segments are present.
 
 Row cap segment endpoints are affected by the {{cssxref("rule-visibility-items")}} properties, which define whether row- and column-rule segments are painted in gaps adjacent to empty areas. As row cap segment endpoints only exist at the edge of the container and at interior gaps where no other row or column rule segments are present, whether segments are painted (or would otherwise be painted if the `rule` were set to a visible value), impacts which row segments are cap start segments.
 
-In the following demonstration, the left-most segments of the row rules abutting the container edge, start in a cap endpoint. With `row-rule-inset-cap-start: -32px` set and the start of all the cap segment being against the left edge of the container, the rows are all outset by `32px`. As row rules don't impact the box model, these protruding lines have no impact on the layout of the container or the rest of the content. Change the inset `<length>` value to better visualize which segments start in cap segment endpoints.
+In the following demonstration, the leftmost segments of the row rules abutting the container edge start in a cap endpoint. With `row-rule-inset-cap-start: -32px` set, these endpoints are all outset by `32px`. As row rules don't impact the box model, these protruding lines don't affect the content's layout. Change the inset `<length>` value to better visualize which segments start with cap segment endpoints.
 
 ```html hidden live-sample___caps live-sample___percents
 <ul id="ul">
@@ -312,7 +315,7 @@ This example isn't broken; all the cap segments start at the container's edge, s
 
 {{EmbedLiveSample("percents", "", "350")}}
 
-The slider only has an effect when the `rule-visibility-items` value is set to `between`, and then only on the single inner cap endpoint segment this value creates. The row rule with a `double` style has two cap start segments - the left most rule segment and the segment between `12` and `16`. For this segment only, the percentage offset is relative to the size of the {{cssxref("column-gap")}} width, which in this case is `20px`. Setting `100%` insets the start of the cap segment by `20px`. Setting `-200%` outset the segment by `40px`, with the rule segment being drawn through the `20px` gap, and `20px` protruding into the previous column.
+The slider only has an effect when the `rule-visibility-items` value is set to `between`, and then only on the single inner cap endpoint segment that this value creates — the segment between `12` and `16`. For this segment only, the percentage offset is relative to the size of the {{cssxref("column-gap")}} width, which in this case is `20px`. Setting `100%` insets the start of the cap segment by `20px`. Setting `-200%` outsets the segment by `40px`, with the rule segment drawn through the `20px` gap and into the previous column.
 
 ## Formal definition
 
