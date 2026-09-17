@@ -32,7 +32,7 @@ Call {{domxref("RTCDTMFSender.insertDTMF()")}} to enqueue tones. The `RTCRtpSend
 Each time a tone starts playing out, the `RTCDTMFSender` receives a [`tonechange`](/en-US/docs/Web/API/RTCDTMFSender/tonechange_event) event with a {{domxref("RTCDTMFToneChangeEvent.tone", "tone")}} property naming that tone, which is an opportunity to update interface elements, for example. When the tone buffer is empty, indicating that all the tones have been sent, a `tonechange` event with its `tone` property set to `""` (an empty string) is delivered.
 
 > [!NOTE]
-> Older code may use the deprecated, non-standard {{domxref("RTCPeerConnection.createDTMFSender()")}} method instead. Firefox and Safari never implemented it, and Chrome is removing it. Use {{domxref("RTCRtpSender.dtmf")}} in new code.
+> Older code might be using the deprecated, non-standard {{domxref("RTCPeerConnection.createDTMFSender()")}} method instead. Firefox and Safari never implemented it, and Chrome is removing it. Use {{domxref("RTCRtpSender.dtmf")}} in new code.
 
 If you'd like to know more about how this works, read {{RFC(3550, "RTP: A Transport Protocol for Real-Time Applications")}} and {{RFC(4733, "RTP Payload for DTMF Digits, Telephony Tones, and Telephony Signals")}}. The details of how DTMF payloads are handled on RTP are beyond the scope of this article. Instead, we'll focus on how to use DTMF within the context of an {{domxref("RTCPeerConnection")}} by studying how an example works.
 
