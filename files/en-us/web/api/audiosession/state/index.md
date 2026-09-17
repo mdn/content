@@ -62,5 +62,5 @@ navigator.audioSession.addEventListener("statechange", () => {
 ## See also
 
 - {{domxref("AudioSession")}}
-- {{domxref("AudioSession/statechange_event", "statechange")}}
+- {{domxref("AudioSession/statechange_event", "statechange")}} event
 - [Audio Session API](/en-US/docs/Web/API/Audio_Session_API)
