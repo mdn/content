@@ -291,7 +291,7 @@ Note that the audio in videos can be controlled by the `muted` content attribute
 
 ### Control speed
 
-This seems obvious, but because there are so many MIME types, the mechanisms for handling them varies greatly, and for that reason there's not a one-size-fits-all solution to the problem. This is further complicated by the fact that even how files are classified complicates how they should be handled. For example, the .gif file format is usually understood to be an image, but is also considered a video file format in some circles because of its ability to be animated. For a comprehensive listing of media types, please visit [IANA.org's page for Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml).
+This seems obvious, but because there are so many MIME types, the mechanisms for handling them varies greatly, and for that reason there's not a one-size-fits-all solution to the problem. This is further complicated by the fact that even how files are classified complicates how they should be handled. For example, the .gif file format is usually understood to be an image, but is also considered a video file format in some circles because of its ability to be animated. For a comprehensive listing of media types, please visit [IANA.org's page for Media Types](https://www.iana.org/assignments/media-types).
 
 The methods for sniffing them out is not a casual exercise. You may be interested in following the [MIME Sniffing](https://mimesniff.spec.whatwg.org/) standard at whatwg.org. Just about every kind of image can be animated; how they are animated varies, and therefore, the control of the animation varies.
 
@@ -593,6 +593,8 @@ The requirement for the `literal` property is taken from [WAI-Adapt: Help and Su
 - [Accessibility Master List](https://ds.gpii.net/learn/accessibility-masterlist) Gregg Vanderheiden Ph.D. Editor
 
 ### ISO
+
+<!-- cSpell:ignore colour -->
 
 - [IEC 61966-2-2:2003(en)](https://www.iso.org/obp/ui/#iso:std:iec:61966:-2-2:ed-1:v1:en) Multimedia systems and equipment — Colour measurement and management — Part 2-2: Colour management — Extended RGB color space — scRGB
 

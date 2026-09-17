@@ -72,9 +72,9 @@ To make this easier we'll first install a node version manager, and then we'll u
 ### Windows
 
 There are a number of node version managers for Windows.
-Here we use [nvm-windows](https://github.com/coreybutler/nvm-windows), which is highly respected among node developers.
+Here we use [nvm-windows](https://github.com/nvm-windows/nvm), which is highly respected among node developers.
 
-Install the latest version using your installer of choice from the [nvm-windows/releases](https://github.com/coreybutler/nvm-windows/releases) page.
+Install the latest version using your installer of choice from the [nvm-windows/releases](https://github.com/nvm-windows/nvm/releases) page.
 After `nvm-windows` has installed, open a command prompt (or PowerShell) and enter the following command to download the most recent LTS version of nodejs and npm:
 
 ```bash
@@ -91,7 +91,7 @@ nvm use 22.17.0
 > [!NOTE]
 > If you get "Access Denied" warnings, you will need to run this command in a prompt with administration permissions.
 
-Use the command `nvm --help` to find out other command line options, such as listing all available node versions, and all downloaded NVM versions.
+Use the command `nvm --help` to find out other command-line options, such as listing all available node versions, and all downloaded NVM versions.
 
 ### Ubuntu and macOS
 
@@ -113,7 +113,7 @@ You can set a particular version as the _current version_ with the command below
 nvm use 22.17.0
 ```
 
-Use the command `nvm --help` to find out other command line options.
+Use the command `nvm --help` to find out other command-line options.
 These are often similar to, or the same as, those offered by `nvm-windows`.
 
 ### Testing your Node.js and npm installation

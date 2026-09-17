@@ -7,7 +7,7 @@ browser-compat: api.RTCStatsReport.type_peer-connection
 
 {{APIRef("WebRTC")}}
 
-The **`RTCPeerConnectionStats`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) provides information about the high level peer connection ({{domxref("RTCPeerConnection")}}).
+The **`RTCPeerConnectionStats`** dictionary of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) provides information about the high-level peer connection ({{domxref("RTCPeerConnection")}}).
 
 In particular, it provides the number of unique data channels that have been opened, and the number of opened channels that have been closed.
 This allows the current number of open channels to be calculated.

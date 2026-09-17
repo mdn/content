@@ -12,7 +12,7 @@ The **`vector-effect`** [CSS](/en-US/docs/Web/CSS) property suppresses specific 
 ## Syntax
 
 ```css
-/* Keywords */
+/* Keyword values */
 vector-effect: none;
 vector-effect: non-scaling-stroke;
 
