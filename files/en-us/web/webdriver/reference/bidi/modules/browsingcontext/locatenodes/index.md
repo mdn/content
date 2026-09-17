@@ -112,15 +112,16 @@ The `params` field contains:
   - : An object that controls the amount of detail to include in the response for each matched node.
     It can contain the following fields:
     - `includeShadowTree` {{optional_inline}}
-      - : A string that specifies whether shadow roots are included in the response (see the `shadowRoot` field described in the [Return value](#return_value) section).
+      - : A string that specifies whether descendants of shadow roots are included in the response (see the `shadowRoot` field described in the [Return value](#return_value) section).
         It can take one of the following values:
-        - `"none"`: Shadow roots are not included.
+        - `"none"`: Descendants of shadow roots are not included.
           This is the default.
-        - `"all"`: Both open shadow roots (accessible from JavaScript outside the root) and closed shadow roots (not accessible from JavaScript outside the root) are included.
-        - `"open"`: Only open shadow roots are included.
+        - `"all"`: Descendants of both open shadow roots (accessible from JavaScript outside the root) and closed shadow roots (not accessible from JavaScript outside the root) are included.
+        - `"open"`: Descendants of only open shadow roots are included.
     - `maxDomDepth` {{optional_inline}}
       - : A non-negative integer, or `null` for unlimited, that specifies the number of levels of descendant nodes included for each matched node in the response (see the `children` field described in the [Return value](#return_value) section).
         The default is `0`, which excludes descendants.
+        This limit also applies to descendants of shadow roots included by `includeShadowTree`.
     - `maxObjectDepth` {{optional_inline}}
       - : A non-negative integer, or `null` for unlimited, that specifies the number of levels of nested objects included when serializing a node's JavaScript properties.
         The default is `null`.
@@ -131,7 +132,7 @@ The `params` field contains:
     - `handle` {{optional_inline}}
       - : A string that contains a handle to a JavaScript object, such as one retained from an earlier [`script.evaluate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate) or [`script.callFunction`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/callFunction) response.
     - `sharedId`
-      - : A string that contains the ID of a previously returned node, such as one from an earlier `browsingContext.locateNodes` response.
+      - : A string that contains the ID of a previously returned node, such as one from an earlier `browsingContext.locateNodes` or [`script.evaluate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate) response.
 
     > [!NOTE]
     > `startNodes` cannot be used if `locator.type` is `"context"`.
@@ -219,11 +220,13 @@ You can use these references in later commands, such as in `startNodes` in a sub
 
 As an alternative to this command, you can use [`script.evaluate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate), though it requires writing the appropriate JavaScript code.
 
+### Controlling the returned detail
+
 When locating nodes, you can specify three limits to control the amount of data returned in the response:
 
 - `maxNodeCount` is a top-level parameter that controls the number of matched nodes returned overall.
   This controls the breadth of the search result.
-- The other two parameters, `maxDomDepth` and `maxObjectDepth`, both in the `serializationOptions` object, control the depth of the data returned for each matched node.
+- The other two limits, `maxDomDepth` and `maxObjectDepth`, are fields of the `serializationOptions` parameter that control the depth of the data returned for each matched node (as in [`script.evaluate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate#controlling_the_returned_detail)):
   - `maxDomDepth` controls the number of levels of DOM descendants included in each matched node's `children` field.
   - `maxObjectDepth` controls the number of levels of nested JavaScript object properties included when representing non-node values in the response.
 
