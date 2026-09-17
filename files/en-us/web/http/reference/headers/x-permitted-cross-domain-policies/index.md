@@ -91,4 +91,4 @@ Documented in the [Adobe Cross Domain Policy File Specification](https://www.ado
 - [Practical security implementation guides](/en-US/docs/Web/Security/Practical_implementation_guides)
 - [HTTP Observatory](/en-US/observatory/) header testing tool
 - [Cross Domain Configuration](https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/xdomain.html) on adobe.com
-- [X-Permitted-Cross-Domain-Policies](https://github.com/OWASP/www-project-secure-headers/blob/master/tab_headers.md#x-permitted-cross-domain-policies) in OWASP Secure Headers Project
+- [X-Permitted-Cross-Domain-Policies](https://owasp.github.io/www-project-secure-headers/response-headers/#x-permitted-cross-domain-policies) in OWASP Secure Headers Project
