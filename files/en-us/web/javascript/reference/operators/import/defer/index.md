@@ -34,7 +34,7 @@ Like regular [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import#
 ### Using import.defer()
 
 > [!NOTE]
-> It's guaranteed that `await`ing the resulting promise never accidentally calls an exported `then` method—a gotcha associated with the [regular module namespace object](/en-US/docs/Web/JavaScript/Reference/Operators/import#module_namespace_object)—because the deferred module namespace object never exposes a property called `then`.
+> It's guaranteed that awaiting the resulting promise never accidentally calls an exported `then` method—a gotcha associated with the [regular module namespace object](/en-US/docs/Web/JavaScript/Reference/Operators/import#module_namespace_object)—because the deferred module namespace object never exposes a property called `then`.
 
 ```js
 const ts = await import.defer("typescript");
