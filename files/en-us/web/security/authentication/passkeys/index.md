@@ -82,7 +82,7 @@ Next, the RP's front-end code calls {{domxref("CredentialsContainer.get()")}}. I
 
 Next, the browser finds passkeys matching the given criteria: if it finds more than one, it may ask the user to choose one. The authenticator which stores this passkey will typically ask the user to authorize the use of this passkey, including [user verification](#user_verification) if this is requested by the RP and supported by the authenticator.
 
-The authenticator will then use the passkey's private key to create a digitally signed [assertion](#assertions), including the challenge and other data.
+The authenticator will then use the passkey's private key to create a digitally signed [assertion](/en-US/docs/Web/API/AuthenticatorAssertionResponse), including the challenge and other data.
 
 The RP's front-end sends the assertion to the server, which verifies the signature using the public key it stored. If verification is successful, then the user can be signed in.
 
@@ -185,7 +185,7 @@ With the scope rules for passkeys, though, a site served from `https://examp1e.c
 
 ### Origin verification
 
-The signed [assertion](#assertions) returned by an authenticator includes information about the context of the caller:
+The signed [assertion](/en-US/docs/Web/API/AuthenticatorAssertionResponse) returned by an authenticator includes information about the context of the caller:
 
 - The {{glossary("origin")}} of the document that called {{domxref("CredentialsContainer.get()")}}.
 - If the caller was embedded as an {{htmlelement("iframe")}}, whether the caller had the same origin as the top-level document.
