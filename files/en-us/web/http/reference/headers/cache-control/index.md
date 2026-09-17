@@ -50,13 +50,13 @@ The following table lists the standard `Cache-Control` directives:
 | Request                               | Response                                            |
 | ------------------------------------- | --------------------------------------------------- |
 | [`max-age`](#max-age_2)               | [`max-age`](#max-age)                               |
-| [`max-stale`](#max-stale_2)           | -                                                   |
-| [`min-fresh`](#min-fresh_2)           | -                                                   |
+| [`max-stale`](#max-stale)             | -                                                   |
+| [`min-fresh`](#min-fresh)             | -                                                   |
 | -                                     | [`s-maxage`](#s-maxage)                             |
 | [`no-cache`](#no-cache_2)             | [`no-cache`](#no-cache)                             |
 | [`no-store`](#no-store_2)             | [`no-store`](#no-store)                             |
 | [`no-transform`](#no-transform_2)     | [`no-transform`](#no-transform)                     |
-| [`only-if-cached`](#only-if-cached_2) | -                                                   |
+| [`only-if-cached`](#only-if-cached)   | -                                                   |
 | -                                     | [`must-revalidate`](#must-revalidate)               |
 | -                                     | [`proxy-revalidate`](#proxy-revalidate)             |
 | -                                     | [`must-understand`](#must-understand)               |
