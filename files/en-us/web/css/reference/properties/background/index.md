@@ -68,6 +68,8 @@ This property resets the following CSS properties to their initial values:
 
 - {{cssxref("background-blend-mode")}}
 
+## Syntax
+
 ```css
 /* Using a <background-color> */
 background: green;
