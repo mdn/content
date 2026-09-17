@@ -128,7 +128,7 @@ text-fit: shrink per-line 50%;
 
 When using `text-fit`, designs must be tested carefully at different viewport sizes to make sure the rendered font size doesn't become too small (or too large). This can lead to content becoming illegible, especially for people with visual impairments or in low vision conditions.
 
-In any case, text content should be resizable without loss of content or functionality; see [WCAG Success Criterion 1.4.4 Resize Text](https://www.w3.org/TR/WCAG22/#resize-text).
+In any case, text content should be resizable without loss of content or functionality; see [WCAG Success Criterion 1.4.4 Resize Text](https://w3c.github.io/wcag/guidelines/22/#resize-text).
 
 Related guidance:
 
