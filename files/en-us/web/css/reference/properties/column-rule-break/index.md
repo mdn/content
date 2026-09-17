@@ -77,7 +77,7 @@ column-rule-break: intersection;
 ## Syntax
 
 ```css
-/* Keywords */
+/* Keyword values */
 column-rule-break: none;
 column-rule-break: normal;
 column-rule-break: intersection;

@@ -96,7 +96,7 @@ column-rule-inset-cap-end: overlap-join;
 ## Syntax
 
 ```css
-/* Keywords */
+/* Keyword value */
 column-rule-inset-cap-end: overlap-join;
 
 /* <length-percentage> values */
