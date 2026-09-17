@@ -22,7 +22,7 @@ The text must be enclosed in the `<textPath>` element and its {{SVGAttr("href")}
   - : Where length adjustment should be applied to the text: the space between glyphs, or both the space and the glyphs themselves.
     _Value type_: `spacing` | `spacingAndGlyphs`; _Default value_: `spacing`; _Animatable_: **yes**
 - {{SVGAttr("method")}}
-  - : Which method to render individual glyphs along the path.
+  - : Which method to render individual glyphs along the path. This attribute currently has no effect on text rendering in browsers—both values are rendered as `align`.
     _Value type_: `align` | `stretch`; _Default value_: `align`; _Animatable_: **yes**
 - {{SVGAttr("path")}} {{Experimental_Inline}}
   - : The path on which the text should be rendered.
