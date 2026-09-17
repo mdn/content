@@ -13,18 +13,10 @@ Firefox 156 was released on [September 15, 2026](https://whattrainisitnow.com/re
 
 ### Developer Tools
 
-- The [Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) now resolves substitution functions — {{cssxref("var")}}, {{cssxref("attr")}}, and {{cssxref("env")}} — when computing the steps shown for a declaration, so a value that comes from a custom property or an attribute is traced to its source rather than shown unresolved.
-  ([Firefox bug 2041622](https://bugzil.la/2041622)).
 - The viewport size readout in the Inspector's highlighter no longer rounds the width and height, which previously reported a misleading size at fractional zoom levels or on high-density displays.
   ([Firefox bug 2055445](https://bugzil.la/2055445)).
 - DevTools can now connect to a debugger server up to three versions older than the client, up from the previous limit. This matters when remotely debugging an older Firefox or GeckoView build.
   ([Firefox bug 2064221](https://bugzil.la/2064221)).
-- Fixed the rulers highlighter remaining visible after being turned off, when the Inspector was not the selected panel.
-  ([Firefox bug 2063982](https://bugzil.la/2063982)).
-- Fixed <kbd>F2</kbd> invoking "Edit as HTML" on nodes that do not support it, and showing stale content from a previous edit.
-  ([Firefox bug 2064213](https://bugzil.la/2064213)).
-- Fixed the position of the "Device Settings" modal in [Responsive Design Mode](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html).
-  ([Firefox bug 2062153](https://bugzil.la/2062153)).
 
 ### HTML
 
@@ -45,10 +37,6 @@ No notable changes.
   the correct line is trimmed when an inline box on the last line is fragmented ([Firefox bug 2063909](https://bugzil.la/2063909)),
   and trimming on an inline box no longer removes its border and padding ([Firefox bug 2064596](https://bugzil.la/2064596)).
   Note that {{cssxref("text-box-trim")}} still has no effect in combination with {{cssxref("line-clamp")}}.
-- {{cssxref("@supports")}} no longer reports support for the `::-webkit-scrollbar` pseudo-element, so `@supports selector(::-webkit-scrollbar)` is now false.
-  Sites commonly used this as a signal that `::-webkit-scrollbar-thumb` could be styled, which Firefox does not implement, so claiming support led to worse styling than reporting the gap.
-  Use {{cssxref("scrollbar-width")}} and {{cssxref("scrollbar-color")}} instead.
-  ([Firefox bug 2062782](https://bugzil.la/2062782)).
 
 ### JavaScript
 
@@ -115,7 +103,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
   [Scoped custom element registries](/en-US/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries) are now supported, so that a shadow root can define custom elements that do not clash with those defined in the global registry.
   This release enables the feature by default in Nightly builds. ([Firefox bug 2064333](https://bugzil.la/2064333)).
 
-- **`named-feature()` support queries**: `layout.css.supports.at-rule.enabled`
+- **`named-feature()` support queries**: `layout.css.anchor-positioning.follows-transforms.enabled`
 
   The `named-feature()` function in the {{cssxref("@supports")}} at-rule lets you test whether the browser supports a feature that has no other detectable syntax, for example `@supports named-feature(anchor-position-follows-transforms)`.
   ([Firefox bug 2042977](https://bugzil.la/2042977) and [Firefox bug 2055354](https://bugzil.la/2055354)).
@@ -124,8 +112,3 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   The Container Timing API reports when the contents of a container element are painted, letting you measure the render time of a region of the page rather than of the whole viewport.
   ([Firefox bug 1940240](https://bugzil.la/1940240)).
-
-- **MathML `<a>` elements**: `mathml.a.element.enabled`
-
-  The MathML `<a>` element creates a hyperlink from MathML content, exposing the `MathMLAnchorElement` interface with the same URL component properties as HTML {{HTMLElement("a")}} elements.
-  This release adds support for the `rel` and `relList` IDL attributes. ([Firefox bug 2063819](https://bugzil.la/2063819)).
