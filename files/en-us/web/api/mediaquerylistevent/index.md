@@ -7,7 +7,7 @@ browser-compat: api.MediaQueryListEvent
 
 {{APIRef("CSSOM view API")}}
 
-The `MediaQueryListEvent` object stores information on the changes that have happened to a {{DOMxRef("MediaQueryList")}} object — instances are available as the event object on a function referenced by a {{DOMxRef("MediaQueryList.change_event", "change")}} event.
+The `MediaQueryListEvent` interface of the [CSSOM view API](/en-US/docs/Web/API/CSSOM_view_API) represents the event object for the {{DOMxRef("MediaQueryList.change_event", "change")}} event fired on a {{DOMxRef("MediaQueryList")}}.
 
 {{InheritanceDiagram}}
 

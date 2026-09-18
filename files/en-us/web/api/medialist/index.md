@@ -7,7 +7,7 @@ browser-compat: api.MediaList
 
 {{APIRef("CSSOM")}}
 
-The **`MediaList`** interface represents the media queries of a stylesheet, e.g., those set using a {{htmlelement("link")}} element's `media` attribute.
+The **`MediaList`** interface of the [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) represents the media queries of a stylesheet, e.g., those set using a {{htmlelement("link")}} element's `media` attribute.
 
 > [!NOTE]
 > `MediaList` is a live list; updating the list using properties or methods listed below will immediately update the behavior of the document.
