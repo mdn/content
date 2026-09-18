@@ -77,7 +77,7 @@ Proxy-Authorization: <type> <credentials>
 
 The general HTTP authentication framework is the base for a number of authentication schemes.
 
-IANA maintains a [list of authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml), but there are other schemes offered by host services, such as Amazon AWS.
+IANA maintains a [list of authentication schemes](https://www.iana.org/assignments/http-authschemes), but there are other schemes offered by host services, such as Amazon AWS.
 
 Some common authentication schemes include:
 

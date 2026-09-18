@@ -3,10 +3,12 @@ title: "MathMLAnchorElement: hostname property"
 short-title: hostname
 slug: Web/API/MathMLAnchorElement/hostname
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.MathMLAnchorElement.hostname
 ---
 
-{{APIRef("MathML")}}
+{{APIRef("MathML")}}{{SeeCompatTable}}
 
 The **`hostname`** property of the {{domxref("MathMLAnchorElement")}} interface is a string containing either the {{glossary("domain name")}} or {{glossary("IP address")}} of the [`<a>`](/en-US/docs/Web/MathML/Reference/Element/a) element's `href`. If the URL does not have a hostname, this property contains an empty string, `""`. IPv4 and IPv6 addresses are normalized, such as stripping leading zeros, and domain names are converted to [IDN](https://en.wikipedia.org/wiki/Internationalized_domain_name).
 

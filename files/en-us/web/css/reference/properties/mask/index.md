@@ -22,6 +22,17 @@ This property is a shorthand for the following CSS properties:
 - {{cssxref("mask-repeat")}}
 - {{cssxref("mask-size")}}
 
+### Reset-only sub-properties
+
+This property resets the following CSS properties to their initial values:
+
+- {{cssxref("mask-border-mode")}}
+- {{cssxref("mask-border-outset")}}
+- {{cssxref("mask-border-repeat")}}
+- {{cssxref("mask-border-slice")}}
+- {{cssxref("mask-border-source")}}
+- {{cssxref("mask-border-width")}}
+
 ## Syntax
 
 ```css
