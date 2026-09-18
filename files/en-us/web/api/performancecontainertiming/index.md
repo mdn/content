@@ -9,7 +9,8 @@ browser-compat: api.PerformanceContainerTiming
 
 {{APIRef("Performance API")}}{{SeeCompatTable}}
 
-The **`PerformanceContainerTiming`** interface of the [Performance API](/en-US/docs/Web/API/Performance_API) contains rendering timing information for containers of content that a developer has annotated with the [`containertiming`](/en-US/docs/Web/HTML/Reference/Global_attributes/containertiming) attribute for observation.
+The **`PerformanceContainerTiming`** interface of the [Performance API](/en-US/docs/Web/API/Performance_API) represents a single update of the timing information for the painting of elements within a container.
+A developer can observe a stream of these objects to analyze the rendering behaviour of a component built from multiple elements.
 
 `PerformanceContainerTiming` inherits from {{domxref("PerformanceEntry")}}.
 
@@ -29,21 +30,24 @@ This interface directly defines the following properties:
   - : Returns the {{domxref("HTMLElement")}} that contributed the largest newly-painted area in the frame that generated this entry, or `null` if there is none.
 - {{domxref("PerformanceContainerTiming.paintTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the rendering phase ended and the paint phase started.
+    It is useful for comparing results across browsers.
 - {{domxref("PerformanceContainerTiming.presentationTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the container's newly-painted content was actually drawn on the screen.
+    The value is implementation dependent, and therefore useful primarily for comparing results from a single browser.
 - {{domxref("PerformanceContainerTiming.rootElement")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Returns the {{domxref("HTMLElement")}} that is the container root — the element carrying the `containertiming` attribute that this entry describes — or `null` if there is none.
+  - : Returns the {{domxref("HTMLElement")}} that is the container root, or `null`.
+    This is the element to which the [`containertiming`](/en-US/docs/Web/HTML/Reference/Global_attributes/containertiming) attribute was applied.
 - {{domxref("PerformanceContainerTiming.size")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns an integer representing the cumulative area, in square CSS pixels, of all the content painted in the container since it was registered as a container root.
 
-It also extends the following {{domxref("PerformanceEntry")}} properties, qualifying and constraining them as described:
+These inherited {{domxref("PerformanceEntry")}} properties are constrained as described:
 
 - {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Always returns `0`, as `duration` does not apply to this interface.
+  - : Returns `0` (`duration` does not apply to this interface).
 - {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Always returns `"container"`.
+  - : Returns the string `"container"`.
 - {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : Always returns the empty string.
+  - : Returns the empty string (`""`).
 - {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : Returns the value of this entry's {{domxref("PerformanceContainerTiming.paintTime", "paintTime")}}.
 
@@ -54,11 +58,67 @@ It also extends the following {{domxref("PerformanceEntry")}} properties, qualif
 
 ## Description
 
-The Container Timing API extends the idea behind the {{domxref("PerformanceElementTiming", "Element Timing API")}} from measuring the render time of individual elements to measuring whole containers of content, such as cards, widgets, or sections that are made up of multiple elements.
-As applications are increasingly built from components, developers need to measure the performance of these content blocks as a whole — for example, a "time to first tweet" metric — rather than tracking each of their individual elements separately, which is what {{domxref("PerformanceElementTiming", "Element Timing")}} and {{domxref("LargestContentfulPaint", "Largest Contentful Paint")}} are built for.
-A browser-native API like this is also more efficient and reliable than a hand-rolled solution built with a {{domxref("MutationObserver")}} and manual rectangle tracking.
-Because a browser generally can't know when a whole section of content has finished rendering — more content, such as an asynchronously-loaded image, could always still be on its way — container timing doesn't report one final, terminal event.
-Instead, it reports a stream of candidate entries that update as the container keeps painting.
+The Container Timing API gives web developers tools to measure rendering timestamps for groups of elements within a container.
+It is useful for analyzing the time to display a web component as a whole, such as a UI widget made up of multiple sub elements, as these can't be represented effectively by observers that track the paint time of individual elements or the whole page.
+
+In order to be able to observe events from a container we add the [`containertiming`](/en-US/docs/Web/HTML/Reference/Global_attributes/containertiming) attribute to that element, specifying an identifier for the container.
+The element then becomes the _container root element_, or simply the "container root".
+Any paints of the nested element will subsequently contribute to timing updates, but not the element itself.
+
+You can set any HTML element as a container, but not SVG or MathML elements.
+Note thought that some elements can't contain other elements, such as `<hr>` or `<img>`, so even though you cn make these containers they can't contain elements, an so can't generate timing updates.
+
+The following HTML shows how this works.
+It defines a card-style component built from an {{htmlelement("article")}} element with a number of other nested elements:
+
+```html
+<article containertiming="cool-card">
+  <header>
+    <img src="avatar.jpg" alt="" />
+    <span class="username">@username</span>
+  </header>
+  <p>Chat text.</p>
+  <div containertimingignore>
+    <!-- third-party "suggested for you" widget -->
+  </div>
+</article>
+```
+
+The `<article>` is turned into a container root identified as `"cool-card"` by its `containertiming` attribute.
+Paints from its avatar image, username, and chat text all contribute to the container's timing updates.
+
+The nested `<div>` has the [`containertimingignore`](/en-US/docs/Web/HTML/Reference/Global_attributes/containertimingignore), which prevents paints from that element and its descendants from contributing to the timing updates.
+This is useful for excluding updates when part of the container isn't relevant: such as an advertisement that is displayed inside your card, but that doesn't stop it being usable.
+
+You can then observe the events from "cool-card" using the PerformanceObserver, in the same way as for other Performance timing APIs.
+
+```js
+Insert example. Include feature checking. Add at end.
+
+
+if (PerformanceObserver.supportedEntryTypes.includes("container")) {
+  // PerformanceContainerTiming supported
+} else {
+  // Not supported
+}
+
+
+```
+
+Note that we test if the container timing API is supported at all by checking if {{domxref("PerformanceObserver.supportedEntryTypes_static", "PerformanceObserver.supportedEntryTypes")}} includes `"container"`.:
+
+<!--
+
+- Elements tha are `display: none` don't paint.
+- Container root in shadow root doesn't contribute entries.
+- Roots in iframes don't contribute to ancestors.
+-->
+
+<!--
+
+Each container reports at most one entry for each rendering frame while new areas are being painted in the visible viewport.
+This allows developers to build up an understanding of when each element is rendered.
+-->
 
 ### Container roots and contribution
 
@@ -78,16 +138,38 @@ If the attribute is later re-added (or the element is reconnected while the attr
 Because of this, the `containertiming` attribute should be set before the element is added to the document: adding it retroactively only captures paints that happen afterward, not any content already painted.
 A container's painted region is also tracked in viewport coordinates: if the container root moves later, for example due to a layout change, the rectangles already accumulated for it aren't retroactively adjusted to follow it.
 
-### Entries, batching, and accumulated data
+### When are entries generated?
 
-At most one `PerformanceContainerTiming` entry is generated per container root per rendering frame, so a container that keeps painting new content over multiple frames generates a sequence of candidate entries rather than one final result.
+PerformanceContainerTiming is needed because the elements inside a container are painted
+
+A container typically paints its descendant elements over multiple frames, with different parts completing at different times - this is why
+
+At most one `PerformanceContainerTiming` entry is generated per container root per rendering frame.
+A container has descendants that paint new areas over multiple frames generates a sequence of candidate entries rather than one final result.
+
 Because each entry in that sequence reflects a different paint, its {{domxref("PerformanceContainerTiming.paintTime", "paintTime")}} and inherited {{domxref("PerformanceEntry.startTime", "startTime")}} change from one entry to the next — but {{domxref("PerformanceContainerTiming.firstRenderTime", "firstRenderTime")}} doesn't: it stays fixed at the time of the container's very first paint, across every entry reported for that container root.
 Each entry's {{domxref("PerformanceContainerTiming.intersectionRect", "intersectionRect")}} and {{domxref("PerformanceContainerTiming.size", "size")}} describe the container's accumulated painted region since it was registered (not just the change in the current frame).
-An entry is only generated when a paint adds genuinely new area to that accumulated region: repainting content that's already been painted — for example, a color change within the same bounds — doesn't add anything new, so it doesn't generate an entry.
-This is why `intersectionRect` and `size` only ever grow, or stay the same, from one entry to the next; they never shrink.
+
+The browser maintains this accumulated painted region as a record separate from the rendering pipeline, used solely to decide whether a paint should generate a new entry: the first time an element in the container paints, its painted area is clipped to the visual viewport and added to the region, and an entry is only generated when that addition makes the region bigger.
+Changes that don't grow the region — and so don't generate an entry — include a paint that's fully clipped outside the viewport, a repaint of an area that's already in the region, and scrolling a previously off-screen (and already-painted) element into view without it repainting.
+This is why `intersectionRect` and `size` only ever grow, or stay the same, from one entry to the next; they never shrink — and it's also why content that becomes visible purely through scrolling won't necessarily produce an entry of its own.
 Beyond that, there's no minimum size or visibility threshold for what counts as new — even a one-pixel expansion of the painted area queues a new entry — so an application that wants to ignore insignificant updates needs to filter them out itself, for example by comparing `size` between successive entries.
-Support for container timing can be feature-detected by checking whether {{domxref("PerformanceObserver.supportedEntryTypes_static", "PerformanceObserver.supportedEntryTypes")}} includes `"container"`.
-{{domxref("PerformanceContainerTiming.lastPaintedElement", "lastPaintedElement")}} is intended as a debugging aid for figuring out what's driving updates in a large or complex container, rather than as a performance metric in its own right — it exists so that developers aren't left depending on implementation-specific paint ordering.
+
+### Scratchpad: table/sequence
+
+> [!NOTE]
+> Draft content for review — delete this heading, and whichever of the diagram or table below isn't kept, once we've decided how to present this.
+
+The following sequence diagram and table both walk through the same four rendering frames for the hero container used in the examples on this page, showing when a paint grows the accumulated painted region (and so generates an entry) and when it doesn't.
+
+![Sequence diagram showing four rendering frames for a hero container: two frames that paint new content and generate entries, a repaint that doesn't, and a final frame that paints more new content and generates another entry.](scratchpad-sequence.svg)
+
+| Frame | What happens                                                            | Does the accumulated region grow?           | Entry generated?                       |
+| ----- | ----------------------------------------------------------------------- | ------------------------------------------- | -------------------------------------- |
+| 1     | The container's `<h2>` paints for the first time.                       | Yes — first paint, clipped to the viewport. | Yes — Entry 1.                         |
+| 2     | A new `<p>` is appended and paints inside the viewport.                 | Yes — new area added.                       | Yes — Entry 2, `size` increases.       |
+| 3     | The same `<p>`'s text color changes (a repaint within the same bounds). | No — that area is already in the region.    | No entry.                              |
+| 4     | Another `<p>` is appended and paints.                                   | Yes — new area added.                       | Yes — Entry 3, `size` increases again. |
 
 ## Examples
 

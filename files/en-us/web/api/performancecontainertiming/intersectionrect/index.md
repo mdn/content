@@ -12,7 +12,7 @@ browser-compat: api.PerformanceContainerTiming.intersectionRect
 
 The **`intersectionRect`** read-only property of the {{domxref("PerformanceContainerTiming")}} interface returns the bounding rectangle of the container's accumulated painted region, calculated since the container root was registered.
 
-Th region may include gaps where no painting has occurred and may omit regions that were painted while outside the viewport.
+The region may include gaps where no painting has occurred and may omit regions that were painted while outside the viewport.
 Paired with the {{domxref("PerformanceContainerTiming.size", "size")}} property, which provides the accumulated painted area, it provides a useful _indication_ of how much of a container has rendered and become visible so far.
 It can also be used during debugging to confirm whether a container's content is painting inside the viewport.
 

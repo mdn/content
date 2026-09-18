@@ -10,11 +10,13 @@ browser-compat: api.PerformanceContainerTiming.rootElement
 
 {{APIRef("Performance API")}}{{SeeCompatTable}}
 
-The **`rootElement`** read-only property of the {{domxref("PerformanceContainerTiming")}} interface returns the container root — the element carrying the [`containertiming`](/en-US/docs/Web/HTML/Reference/Global_attributes/containertiming) attribute that this entry describes.
+The **`rootElement`** read-only property of the {{domxref("PerformanceContainerTiming")}} interface returns the container root element.
+This is the {{domxref("HTMLElement")}} that to which the [`containertiming`](/en-US/docs/Web/HTML/Reference/Global_attributes/containertiming) attribute was applied.
+It can be `null` if the object is read after the element has been removed and garbage collected.
 
 ## Value
 
-An {{domxref("HTMLElement")}}, or `null` if there is none.
+An {{domxref("HTMLElement")}}, or `null`.
 
 ## Examples
 
