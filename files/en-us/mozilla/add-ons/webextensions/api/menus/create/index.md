@@ -51,8 +51,8 @@ browser.menus.create(
 
     - `contexts` {{optional_inline}}
       - : `array` of {{WebExtAPIRef('menus.ContextType')}}. Array of contexts in which this menu item will appear. If this option is omitted:
-        - if the item's parent has contexts set, then this item will inherit its parent's contexts
-        - otherwise, the item is given a context array of \["page"].
+        - in Chrome, this menu will get context array of \["page"].
+        - in Firefox, if the item has parent specified by `parentId` which has contexts set, then this item will inherit its parent's contexts. Otherwise, the item is given a context array of \["page"].
 
     - `documentUrlPatterns` {{optional_inline}}
       - : `array` of `string`. Lets you restrict the item to apply only to documents whose URL matches one of the given [match patterns](/en-US/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). This applies to frames as well.
