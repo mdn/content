@@ -89,9 +89,6 @@ button.addEventListener("click", () => {
 });
 ```
 
-> [!NOTE]
-> Early versions of the spec called this property `motion-rotation`.
-
 ## Syntax
 
 ```css
@@ -122,6 +119,11 @@ offset-rotate: unset;
   - : If `auto` is followed by an {{cssxref("angle")}}, the computed value of the angle is added to the computed value of `auto`.
 - `reverse`
   - : The element is rotated similar to `auto`, except it faces the opposite direction. It is the same as specifying a value of `auto 180deg`.
+
+## Description
+
+> [!NOTE]
+> Early versions of the spec called this property `motion-rotation`.
 
 ## Formal definition
 

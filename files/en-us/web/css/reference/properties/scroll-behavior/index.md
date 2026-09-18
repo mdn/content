@@ -63,10 +63,6 @@ scroll-page {
 }
 ```
 
-Note that any other scrolls, such as those performed by the user, are not affected by this property. When this property is specified on the root element, it applies to the viewport instead. This property specified on the `body` element will _not_ propagate to the viewport.
-
-User agents are allowed to ignore this property.
-
 ## Syntax
 
 ```css
@@ -90,6 +86,12 @@ This property is specified as one of the following keyword values:
   - : The scrolling box scrolls instantly.
 - `smooth`
   - : The scrolling box scrolls in a smooth fashion using a user-agent-defined easing function over a user-agent-defined period of time. User agents should follow platform conventions, if any.
+
+## Description
+
+Note that any other scrolls, such as those performed by the user, are not affected by this property. When this property is specified on the root element, it applies to the viewport instead. This property specified on the `body` element will _not_ propagate to the viewport.
+
+User agents are allowed to ignore this property.
 
 ## Formal definition
 

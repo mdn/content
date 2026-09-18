@@ -42,9 +42,6 @@ select:focus {
 </form>
 ```
 
-> [!NOTE]
-> This pseudo-class applies only to the focused element itself. Use {{CSSxRef(":focus-within")}} if you want to select an element that _contains_ a focused element.
-
 ## Syntax
 
 ```css
@@ -52,6 +49,11 @@ select:focus {
   /* ... */
 }
 ```
+
+## Description
+
+> [!NOTE]
+> This pseudo-class applies only to the focused element itself. Use {{CSSxRef(":focus-within")}} if you want to select an element that _contains_ a focused element.
 
 ## Accessibility
 

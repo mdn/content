@@ -37,12 +37,6 @@ section {
 }
 ```
 
-_Kerning_ affects how letters are spaced. In _well-kerned_ fonts, this feature makes character spacing more uniform and pleasant to read by reducing white space between certain character combinations.
-
-In the image below, for instance, the examples on the left do not use kerning, while the ones on the right do:
-
-![Example of font-kerning](font-kerning.png)
-
 ## Syntax
 
 ```css
@@ -68,6 +62,14 @@ This property is specified as one of the following keyword values:
   - : Font kerning information stored in the font must be applied.
 - `none`
   - : Font kerning information stored in the font is disabled.
+
+## Description
+
+_Kerning_ affects how letters are spaced. In _well-kerned_ fonts, this feature makes character spacing more uniform and pleasant to read by reducing white space between certain character combinations.
+
+In the image below, for instance, the examples on the left do not use kerning, while the ones on the right do:
+
+![Example of font-kerning](font-kerning.png)
 
 ## Formal definition
 
