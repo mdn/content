@@ -3,15 +3,11 @@ title: "Permissions-Policy: clipboard-read directive"
 short-title: clipboard-read
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/clipboard-read
 page-type: http-permissions-policy-directive
-status:
-  - non-standard
 browser-compat: http.headers.Permissions-Policy.clipboard-read
 sidebar: http
 ---
 
-{{non-standard_header}}
-
-The HTTP {{HTTPHeader('Permissions-Policy')}} header `clipboard-read` directive controls whether the current document is allowed to read data from the system clipboard using the {{domxref("Clipboard.read", "read()")}} and {{domxref("Clipboard.readText", "readText()")}} methods of the [Clipboard API](/en-US/docs/Web/API/Clipboard_API), without further user permission.
+The HTTP {{HTTPHeader('Permissions-Policy')}} header `clipboard-read` directive controls whether the current document is allowed to read data from the system clipboard using the {{domxref("Clipboard.read", "read()")}} and {{domxref("Clipboard.readText", "readText()")}} methods of the [Clipboard API](/en-US/docs/Web/API/Clipboard_API).
 
 Specifically, where a defined policy blocks usage of this feature, `read()` and `readText()` calls will reject with a `NotAllowedError` {{domxref("DOMException")}}.
 
