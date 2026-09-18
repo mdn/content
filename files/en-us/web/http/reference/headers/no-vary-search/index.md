@@ -56,8 +56,7 @@ Any difference in the query string makes it a different URL: a different paramet
 This is often stricter than necessary.
 Query parameters are frequently used for things that don't change the response the server sends, such as analytics tags and values that only client-side JavaScript acts on.
 A page may also build its query string in an inconsistent parameter order.
-The browser has no way to know what is relevant, so it fetches from the network whenever it sees a query string it hasn't requested before.
-It does this even when the new response duplicates one the browser has already cached.
+The browser has no way to know what is relevant, so it fetches from the network and caches the result whenever it sees a query string it hasn't requested before.
 
 `No-Vary-Search` gives the server a way to tell the browser whether parameter order matters, and which parameters (if any) affect the returned response.
 Where the rules allow it, the browser can then serve a stored response for a URL it has not fetched before.
