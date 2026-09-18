@@ -22,7 +22,7 @@ SVG's `<a>` element is a container, which means you can create a link around tex
 - {{SVGAttr("href")}}
   - : The {{Glossary("URL")}} or URL fragment the hyperlink points to.
     _Value type_: **[\<URL>](/en-US/docs/Web/SVG/Guides/Content_type#url)**; _Default value_: _none_; _Animatable_: **yes**
-- [`hreflang`](/en-US/docs/Web/HTML/Reference/Elements/a#hreflang)
+- {{SVGAttr("hreflang")}}
   - : The human language of the URL or URL fragment that the hyperlink points to.
     _Value type_: **\<string>**; _Default value_: _none_; _Animatable_: **no**
 - [`interestfor`](/en-US/docs/Web/HTML/Reference/Elements/a#interestfor) {{experimental_inline}} {{non-standard_inline}}
