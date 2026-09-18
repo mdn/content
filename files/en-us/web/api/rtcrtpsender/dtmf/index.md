@@ -9,7 +9,6 @@ browser-compat: api.RTCRtpSender.dtmf
 {{APIRef("WebRTC")}}
 
 The read-only **`dtmf`** property on the {{domxref("RTCRtpSender")}} interface returns an {{domxref("RTCDTMFSender")}} you can use to send {{Glossary("DTMF")}} tones on this sender's audio track.
-See [Using DTMF](/en-US/docs/Web/API/WebRTC_API/Using_DTMF) for a full example.
 
 ## Value
 
