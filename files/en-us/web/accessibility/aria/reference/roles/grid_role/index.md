@@ -52,14 +52,14 @@ A grid widget contains one or more rows with one or more cells of thematically r
 
 Cell elements have the role [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role), unless they are a row or column header, in which case, the elements are [`rowheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role) and [`columnheader`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role), respectively. Cell elements need to be owned by elements with a [`row`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) role. Rows can be grouped using the [`rowgroup`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role) role.
 
-If the grid is used as an interactive widget, [keyboard interactions](#keyboard_interactions) need to be implemented.
+The grid is an interactive widget, so [keyboard interactions](#keyboard_interactions) need to be implemented.
 
 ### Associated ARIA roles, states, and properties
 
 #### Roles
 
 - [treegrid](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role) (subclass)
-  - : If a grid has columns that can be expanded or collapsed, a treegrid can be used.
+  - : If a grid has rows that can be expanded or collapsed to show or hide child rows, a treegrid can be used.
 - [row](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
   - : A row inside the grid.
 - [rowgroup](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role)
@@ -72,7 +72,7 @@ If the grid is used as an interactive widget, [keyboard interactions](#keyboard_
 - [aria-multiselectable](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable)
   - : If `aria-multiselectable` is set to `true`, multiple items in the grid can be selected. The default value is `false`.
 - [aria-readonly](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly)
-  - : If the user can navigate the grid but not change the value or values of the grid, the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly) should be set to `true`. The default value is `false`.
+  - : If the grid provides cell content editing but editing is unavailable for all cells, the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly) can be set to `true`. The default value is `false`, but omitting the attribute does not imply that the grid contains editable content. Omit the attribute if the grid does not provide cell content editing. The value set on the grid propagates to its gridcells and can be overridden on individual gridcells. The attribute only informs assistive technologies; it does not enable or disable editing.
 
 > [!NOTE]
 > For many use cases, an HTML {{HTMLElement('table')}} element is sufficient as it and the various table elements already include many ARIA roles.
