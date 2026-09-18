@@ -21,10 +21,10 @@ The **`random()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Ref
 
 ```css interactive-example
 .box {
-  rotate: random(element-shared, 0deg, 360deg);
-  width: random(element-shared, 50px, 300px);
-  background-color: hsl(random(element-shared, 0, 360) 50% 50%);
-  height: random(element-shared, 50px, 300px);
+  rotate: random(property-scoped, 0deg, 360deg);
+  width: random(property-scoped, 50px, 300px);
+  background-color: hsl(random(property-scoped, 0, 360) 50% 50%);
+  height: random(property-scoped, 50px, 300px);
 }
 
 @supports not (order: random(1, 2)) {
@@ -46,31 +46,35 @@ random(0deg, 360deg)
 random(0, 100, 10)
 random(0rad, 1turn, 30deg)
 
-/* With base value */
+/* With <random-key> */
 random(auto, 0, 360)
-random(element-shared, 0s, 5s)
+random(property-scoped, 0s, 5s)
 random(--unique-base, 400px, 100px)
 random(fixed 0.5, 1em, 40vw)
-random(--unique-base element-shared, 100dpi, 300dpi)
+random(--unique-base property-scoped, 100dpi, 300dpi)
 
-/* With base and step values */
-random(element-shared, 0deg, 360deg, 45deg)
+/* With <random-key> and step interval */
+random(property-scoped, 0deg, 360deg, 45deg)
 random(--my-base, 1em, 3rem, 2px)
 ```
 
 ### Parameters
 
-- `<random-value-sharing>` {{optional_inline}}
+- `<random-key>` {{optional_inline}}
   - : Controls which `random()` functions in the document will share a random base value and which will get distinct values.
-    This can be one of the following values, or both a custom key and the keyterm `element-shared`, separated by a space:
+    This is one of the following values. The `*-scoped` keywords can optionally be combined with a `<dashed-ident>`, separated by a space:
     - `auto`
-      - : Each use of `random()` in an element's style gets its own unique random base value.
+      - : The random function generates independent random values by default. The random cache name, and thus the result, varies across every `random()` instance in a multi-component value, across different properties, and across different elements. This default `<random-key>` value is equivalent to specifying `element-scoped property-index-scoped`.
+    - `element-scoped`
+      - : Adds an element-specific identifier to the random cache name, so different elements get different random values.
+    - `property-scoped`
+      - : Adds the property name to the random cache name, so different properties get different random values. Shorthand declarations use the shorthand property's name.
+    - `property-index-scoped`
+      - : Adds the property name and the index of the `random()` function among all random functions used in the same property value to the random cache name, so multiple instances in the same declaration each get different random values.
     - {{cssxref("dashed-ident")}}
-      - : A custom key (e.g., `--my-random-key`) for sharing the same random base value across properties of an element.
-    - `element-shared`
-      - : A random base value is shared across all elements for the same property using this key term. This base value is independent from the `random()` functions included in the values of other properties on that same element, unless the random functions also include the same custom key.
+      - : A custom name for the random cache key (e.g., `--my-random-key`). When used alone, the same random base value is shared across all elements and properties that use the same identifier. When combined with a `*-scoped` keyword, the sharing behavior is determined by the keyword.
     - `fixed <number>`
-      - : Specifies a base value between `0` and `1`, inclusive, for the random value to be generated from.
+      - : Bypasses the random cache name and uses the `<number>` — between `0` and `1`, inclusive of 0, exclusive of 1 — as the seed's value.
 
 - `<calc-sum>, <calc-sum>`
   - : Two required, comma-separated, `<number>`, `<dimension>`, or `<percentage>` values, or calculations resolving to one of these types, defining the minimum and maximum values, respectively. Both values must be resolvable to the same [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types). If the maximum is less than the minimum, the function will return the first `<calc-sum>` value.
@@ -84,7 +88,7 @@ Returns a random `<number>`, `<dimension>`, or `<percentage>` between the minimu
 
 ## Description
 
-The `random(SEED, MIN, MAX, STEP)` function specifies the minimum and maximum values and optional step increments, starting at the minimum value. The function generates a random result within the range specified. The seed, an [optional `<random-value-sharing>`](#random-value-sharing) parameter, enables sharing or varying random base values across different properties and elements.
+The `random(SEED, MIN, MAX, STEP)` function specifies the minimum and maximum values and optional step increments, starting at the minimum value. The function generates a random result within the range specified. The seed, an [optional `<random-key>`](#random-key) parameter, enables sharing or varying random base values across different properties and elements.
 
 The minimum, maximum and step values specified must be of the same data type for the function to be valid. While the units in the two to three `<calc-sum>` parameters don't need to be the same, they do need to be of the same data type, such as {{cssxref("number")}}, {{cssxref("percentage")}}, {{cssxref("length")}}, {{cssxref("angle")}}, {{cssxref("time")}}, or {{cssxref("frequency")}}, to be valid.
 
@@ -92,24 +96,47 @@ The minimum, maximum and step values specified must be of the same data type for
 
 The random base value works like a [seed for randomness](/en-US/docs/Glossary/RNG). It's a starting number that is used to generate the final random result. When two `random()` functions share the same base value, their results vary together in a predictable pattern. When they have different base values, their results are completely independent of each other.
 
-The optional first `<random-value-sharing>` parameter controls how the random base value is shared. Sharing enables reusing the same randomly generated value, a necessity for some design effects. The value can be set to use `auto`, the `element-shared` keyword, a custom {{cssxref("dashed-ident")}} , or `fixed <number>`. Including a custom {{cssxref("dashed-ident")}} with the `element-shared` keyword, space-separated, is also valid.
+The optional first `<random-key>` parameter controls how the random base value is shared. It can be `auto`, a scope keyword (`element-scoped`, `property-scoped`, or `property-index-scoped`), a custom {{cssxref("dashed-ident")}}, `fixed <number>`, or a `<dashed-ident>` paired with a scope keyword.
 
-#### The `element-shared` keyword
+#### Scope keywords
 
-All `random()` functions with the `element-shared` keyword share the same random base value for a single property across all elements. For example, when the following is declared, `.a`, `.b`, and `.c` will be identically sized rectangles, all three having the same random width and all three having the same, independently-generated random height:
+Used on their own, the scope keywords control sharing without a custom name:
+
+- `property-scoped` shares a base value across all elements, per property.
+- `element-scoped` gives each element its own base value, per property.
+- `property-index-scoped` works like `property-scoped`, but also separates `random()` calls by position within a shorthand.
+
+`property-scoped` makes `.a`, `.b`, and `.c` identical rectangles, since every element gets the same width and the same height:
 
 ```css
 .a,
 .b,
 .c {
-  width: random(element-shared, 10px, 200px);
-  height: random(element-shared, 10px, 200px);
+  width: random(property-scoped, 10px, 200px);
+  height: random(property-scoped, 10px, 200px);
 }
 ```
 
+Using `element-scoped` instead would give each element its own independently sized width and height.
+
+`property-index-scoped` is useful in shorthands, where each position needs its own shared value:
+
+```css
+.a,
+.b,
+.c {
+  margin: random(property-index-scoped, 5px, 40px)
+    random(property-index-scoped, 5px, 40px)
+    random(property-index-scoped, 5px, 40px)
+    random(property-index-scoped, 5px, 40px);
+}
+```
+
+All three elements get the same top margin, the same right margin, and so on, but the four margin values differ from each other.
+
 #### Custom names
 
-When you specify a `<dashed-ident>` (e.g., `--custom-name`), each element in an element's styles with the same name shares the same random base value, and ones with different `<dashed-ident>` values will be assigned distinct random base values. When the following is declared, `.a`, `.b`, and `.c` will all be squares, because within each element, all properties that reference the same ident will share the same base value. Therefore, the width of each will be the same as its height. Note that, in this case, `.a`, `.b`, and `.c` will have distinct sizes because the base value sharing is between properties of an element, not between elements.
+A `<dashed-ident>` (e.g., `--custom-name`) used alone shares its base value globally: any `random()` call anywhere in the document with the same identifier gets the same result. This makes `.a`, `.b`, and `.c` identical squares, since every `width` and `height` resolves to the same value:
 
 ```css
 .a,
@@ -120,16 +147,25 @@ When you specify a `<dashed-ident>` (e.g., `--custom-name`), each element in an 
 }
 ```
 
-#### Setting both `<dashed-ident>` and `element-shared`
-
-Combining a `<dashed-ident>` with `element-shared` (e.g., `random(--custom-name element-shared, 0, 100)`) shares the random base value across both the elements and the properties that use the same `<random-value-sharing>` parameter. Given the following, `.a`, `.b`, and `.c` will all be squares of the same size:
+Pair a `<dashed-ident>` with a scope keyword to narrow that sharing. `property-scoped` keeps it global across elements but separates it by property:
 
 ```css
 .a,
 .b,
 .c {
-  width: random(--custom-name element-shared, , 10px, 200px);
-  height: random(--custom-name element-shared, 10px, 200px);
+  width: random(--custom-name property-scoped, 10px, 200px);
+  height: random(--custom-name property-scoped, 10px, 200px);
+}
+```
+
+`element-scoped` instead keeps `width` and `height` linked within each element, but gives each element its own value, so `.a`, `.b`, and `.c` become squares of different sizes:
+
+```css
+.a,
+.b,
+.c {
+  width: random(--custom-name element-scoped, 10px, 200px);
+  height: random(--custom-name element-scoped, 10px, 200px);
 }
 ```
 
@@ -153,7 +189,7 @@ When the first parameter is omitted, or explicitly set to `auto`, an ident is au
 }
 ```
 
-When the `<random-value-sharing>` defaults or is explicitly set to `auto`, the user agent auto-generates a seed name, or _generated value sharing identifier_, following consistent rules based on property name and order. Because of this, `random()` functions can end up with the same seed name and, therefore, the same random base value. In this example, the generated value sharing identifier for the `random()` function in the `width` property value is the same for `.foo` as for `.foo:hover`, so the value won't change between states. Similarly, the first two `random()` functions in both `margin` declarations have the same generated value sharing identifier, meaning the first two values in the `margin` shorthand will be unchanged when hovered; on hover, `bar`'s top and right margins will remain the same, but the bottom and left margins will get independent random values. To get an independent value for each `random()` function, provide a unique {{cssxref("dashed-ident")}}.
+When the `<random-key>` defaults or is explicitly set to `auto`, the user agent auto-generates a seed name, or _generated value sharing identifier_, following consistent rules based on property name and order. Because of this, `random()` functions can end up with the same seed name and, therefore, the same random base value. In this example, the generated value sharing identifier for the `random()` function in the `width` property value is the same for `.foo` as for `.foo:hover`, so the value won't change between states. Similarly, the first two `random()` functions in both `margin` declarations have the same generated value sharing identifier, meaning the first two values in the `margin` shorthand will be unchanged when hovered; on hover, `bar`'s top and right margins will remain the same, but the bottom and left margins will get independent random values. To get an independent value for each `random()` function, provide a unique {{cssxref("dashed-ident")}}.
 
 ### Custom properties
 
@@ -215,7 +251,7 @@ We include five badges, one using the `desaturated` class and two using the `uni
 
 #### CSS
 
-We render the five badges as circles. We use the `random()` function within an {{cssxref("color_value/hsl()")}} color function to define the {{cssxref("angle")}} of the {{cssxref("hue")}}. We set `element-shared` to share the random base value between the default `badge` and the `desaturated` one, so it is a less saturated version of the same {{cssxref("hue")}}. We then override the `unique` badges to have a truly random `hue` by letting the base value sharing parameter default to `auto`.
+We render the five badges as circles. We use the `random()` function within an {{cssxref("color_value/hsl()")}} color function to define the {{cssxref("angle")}} of the {{cssxref("hue")}}. We set `property-scoped` to share the random base value between the default `badge` and the `desaturated` one, so it is a less saturated version of the same {{cssxref("hue")}}. We then override the `unique` badges to have a truly random `hue` by letting the base value sharing parameter default to `auto`.
 
 ```css
 .badge {
@@ -223,10 +259,10 @@ We render the five badges as circles. We use the `random()` function within an {
   width: 5em;
   aspect-ratio: 1/1;
   border-radius: 50%;
-  background: hsl(random(element-shared, 0, 360) 50% 50%);
+  background: hsl(random(property-scoped, 0, 360) 50% 50%);
 }
 .badge.desaturated {
-  background: hsl(random(element-shared, 0, 360) 10% 50%);
+  background: hsl(random(property-scoped, 0, 360) 10% 50%);
 }
 .badge.unique {
   background: hsl(random(0, 360) 50% 50%);
@@ -251,7 +287,7 @@ We render the five badges as circles. We use the `random()` function within an {
 
 ### Random value sharing between properties
 
-In this example, we create a starry backdrop to demonstrate using a `<dashed-ident>` to share a seed value between properties of an element.
+In this example, we create a starry backdrop to demonstrate combining a `<dashed-ident>` with `element-scoped` to share a random base value between properties within each individual element, without sharing it across elements.
 
 #### HTML
 
@@ -267,7 +303,7 @@ We include five particles, all sharing the same class name.
 
 #### CSS
 
-Every particle has the same styles. We use the `random()` function for the {{cssxref("height")}}, {{cssxref("width")}}, {{cssxref("top")}}, and {{cssxref("left")}} values to randomly size and position each particle. We use a `<dashed-ident>` as the base value for the `height` and `width`, meaning the size of the particles are independent of each other, within a specified range, but each particle's `height` will be the same as it's `width`. We allow the base value to resolve to `auto` for the `top` and `left` properties, so the base value for each property and element is independent of each other.
+Every particle has the same styles. We use the `random()` function for the {{cssxref("height")}}, {{cssxref("width")}}, {{cssxref("top")}}, and {{cssxref("left")}} values to randomly size and position each particle. We pair a `<dashed-ident>` with `element-scoped` for `height` and `width`, so each particle is a circle (its height matches its width) but sized independently of the others. `top` and `left` are left at the default `auto`, so each axis is positioned independently.
 
 ```css
 body {
@@ -278,8 +314,8 @@ body {
   border-radius: 50%;
   background: white;
   position: fixed;
-  width: random(--particle-size, 0.25em, 1em);
-  height: random(--particle-size, 0.25em, 1em);
+  width: random(--particle-size element-scoped, 0.25em, 1em);
+  height: random(--particle-size element-scoped, 0.25em, 1em);
   top: random(0%, 100%);
   left: random(0%, 100%);
   animation: move 1s alternate-reverse infinite;
