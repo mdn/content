@@ -486,10 +486,10 @@ Create the HTML file **/django-locallibrary-tutorial/catalog/templates/catalog/b
     {% for copy in book.bookinstance_set.all %}
       <hr />
       <p
-        class="{% if copy.status == 'a' %}text-success{% elif copy.status == 'm' %}text-danger{% else %}text-warning{% endif %}">
+        class="{% if copy.status == copy.LoanStatus.AVAILABLE %}text-success{% elif copy.status == copy.LoanStatus.MAINTENANCE %}text-danger{% else %}text-warning{% endif %}">
         \{{ copy.get_status_display }}
       </p>
-      {% if copy.status != 'a' %}
+      {% if copy.status != copy.LoanStatus.AVAILABLE %}
         <p><strong>Due to be returned:</strong> \{{ copy.due_back }}</p>
       {% endif %}
       <p><strong>Imprint:</strong> \{{ copy.imprint }}</p>
@@ -580,12 +580,15 @@ The second interesting (and non-obvious) thing in the template is where we displ
 Astute readers will note that the method `BookInstance.get_status_display()` that we use to get the status text does not appear elsewhere in the code.
 
 ```django
- <p class="{% if copy.status == 'a' %}text-success{% elif copy.status == 'm' %}text-danger{% else %}text-warning{% endif %}">
+ <p class="{% if copy.status == copy.LoanStatus.AVAILABLE %}text-success{% elif copy.status == copy.LoanStatus.MAINTENANCE %}text-danger{% else %}text-warning{% endif %}">
  \{{ copy.get_status_display }} </p>
 ```
 
 This function is automatically created because `BookInstance.status` is a [choices field](https://docs.djangoproject.com/en/5.0/ref/models/fields/#choices).
 Django automatically creates a method `get_foo_display()` for every choices field `foo` in a model, which can be used to get the current value of the field.
+
+> [!NOTE]
+> `copy.LoanStatus` resolves to the `LoanStatus` class we defined on `BookInstance` (see [Django Tutorial Part 3: Using models](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Models)), so `copy.LoanStatus.AVAILABLE` is the same value as the stored code `'a'`. Comparing against the named member instead of the raw code makes the template easier to read, and Django's `TextChoices` classes are specifically designed to be safe to reference like this from templates.
 
 ## What does it look like?
 
