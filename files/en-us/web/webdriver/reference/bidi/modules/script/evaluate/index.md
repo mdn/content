@@ -196,7 +196,7 @@ The following fields are available in the `result` object in the response, depen
               This is the actual count, even if the `children` field is missing.
           - `children` {{optional_inline}}
             - : An array of child node objects, each with fields such as `sharedId`, `type`, and `value`.
-              Descendants are included up to the level specified by `maxDomDepth` in the [`serializationOptions`](#serializationoptions) parameter of the `script.evaluate` command.
+              Descendants are included up to the level specified by `maxDomDepth` in the [`serializationOptions`](#serializationoptions) parameter.
           - `localName` {{optional_inline}}
             - : A string that contains the local name of the node.
               For an HTML element, this is the tag name in lowercase.
