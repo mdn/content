@@ -155,6 +155,18 @@ Use-As-Dictionary: match="/js/app.*.js"
 
 From here the process is similar to the previous example when a matching resources is requested.
 
+## Dictionary freshness
+
+A stored dictionary is only used while the response that delivered it is still [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age), or may still be served stale under the {{HTTPHeader("Cache-Control")}} [`stale-while-revalidate`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#stale-while-revalidate) directive. The browser takes the dictionary's lifetime from the caching headers of the response that carried the {{HTTPHeader("Use-As-Dictionary")}} header, so that response's `Cache-Control` value decides whether the dictionary is stored at all, and for how long:
+
+- A response that must be revalidated before reuse ([`no-cache`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#no-cache), [`must-revalidate`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#must-revalidate)) or that may not be stored (`no-store`) is never used as a dictionary, whatever other directives it carries.
+- `max-age=0` combined with `stale-while-revalidate=<seconds>` does register the dictionary, and the `stale-while-revalidate` window is the dictionary's lifetime.
+- [`s-maxage`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#s-maxage) has no effect here, because the browser is a private cache.
+
+This matters most for HTML documents, which are often served with `no-cache` or `must-revalidate` so that the browser always revalidates them: such a document cannot offer itself as a dictionary for its next version, however the `match` pattern is written.
+
+The failure is silent. The `Use-As-Dictionary` header is accepted without error, and a later request that matches the pattern simply carries no {{HTTPHeader("Available-Dictionary")}} header. Chrome's DevTools reports the reason on the offering response ("The response can't be used as a dictionary because its freshness is expired"), which is the place to look when a dictionary is never offered back.
+
 ## Creating dictionary-compressed responses
 
 Dictionary-compressed responses can use either the Brotli or ZStandard algorithms, with two extra requirements: they must also include a magic header and embedded dictionary hash.
