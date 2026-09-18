@@ -74,7 +74,7 @@ counter-reset: none;
 counter-reset: my-counter;
 counter-reset: another-counter;
 
-/* Regular counters with initial value */
+/* Regular counters with an initial value */
 counter-reset: my-counter -3;
 counter-reset: another-counter 15;
 
@@ -97,12 +97,12 @@ counter-reset: unset;
 
 ### Values
 
-This property is specified as a space-separated list of counter or reversed counter names, each optionally followed by an `<integer>`, or the keyword `none`.
+This property is specified as a space-separated list of counter or reversed counter names, each optionally followed by an `<integer>`, or the keyword `none`:
 
 - {{cssxref("&lt;custom-ident&gt;")}}
   - : Specifies the counter name to create and initialize. The `reversed()` functional notation can be used to create a reversed counter.
 - {{cssxref("&lt;integer&gt;")}}
-  - : The initial value to set on the newly created counter.
+  - : Specifies the initial value to set on the newly created counter.
     Defaults to `0` if not specified, or to the number of elements in the case of `reversed()`.
 - `none`
   - : Specifies that no counters are created.
@@ -111,7 +111,7 @@ This property is specified as a space-separated list of counter or reversed coun
 
 The `counter-reset` property can be used to create and initialize named [counters](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters) or reversed counters to number elements in ascending or descending order.
 
-The `none` value can be used to override the creation of the named counter declared within a selector block with lower specificity.
+The `none` value can be used to override a `counter-reset` declaration in a rule with lower specificity.
 
 > [!WARNING]
 > There is [a difference between `counter-reset` and `counter-set` properties](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters#difference_between_counter-set_and_counter-reset). After creating a counter using `counter-reset`, you can adjust its value by using the {{cssxref("counter-set")}} property. This is counterintuitive because, despite its name, the `counter-reset` property is used for creating and initializing counters, while the `counter-set` property is used for resetting the value of an existing counter.
@@ -120,9 +120,9 @@ Separate multiple counter names or name-value pairs with spaces. For counter nam
 
 ### Default initial values
 
-The default initial values of regular and reversed counters enable implementing the two most common numbering patterns: counting up from `1` to the number of elements and counting down from the number of elements to `1`, with increments or decrements of `1`. By specifying an initial value for a named counter, you can change its starting value. The increment or decrement can be adjusted with the {{cssxref("counter-increment")}} property.
+The default initial values of regular and reversed counters enable implementing the two most common numbering patterns: counting up from `1` to the number of elements and counting down from the number of elements to `1`, with increments or decrements of `1`. By specifying an initial value for a named counter, you can change its starting value. The increment or decrement can be adjusted by using the {{cssxref("counter-increment")}} property.
 
-This example creates three counters. The `chapter` and `page` counters are set to the initial default value of `0`, while the `section` is set to `4`:
+The following example creates three counters. The `chapter` and `page` counters are set to the initial default value of `0`, while `section` is set to `4`:
 
 ```css
 h1 {
@@ -190,7 +190,7 @@ The first item is numbered `4`. This is similar to the effect of writing [`<ol s
 
 ### Using a reverse counter
 
-In this example, the `reversed()` function is used to create a reversed counter named 'priority' that numbers five tasks.
+In this example, the `reversed()` function is used to create a reversed counter named `priority` that numbers five tasks.
 
 #### HTML
 
