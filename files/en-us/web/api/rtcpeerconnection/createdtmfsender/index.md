@@ -32,6 +32,8 @@ A new {{domxref("RTCDTMFSender")}} object.
 
 ## Examples
 
+### Using createDTMFSender()
+
 This example creates a new DTMF sender associated with the specified track.
 
 ```js
@@ -43,7 +45,9 @@ async function getDtmfSender() {
 }
 ```
 
-Write this instead, using the {{domxref("RTCRtpSender.dtmf")}} property of the sender returned by {{domxref("RTCPeerConnection.addTrack()")}}:
+### Using RTCRtpSender.dtmf instead
+
+The previous example can be rewritten using the {{domxref("RTCRtpSender.dtmf")}} property of the sender returned by {{domxref("RTCPeerConnection.addTrack()")}}:
 
 ```js
 async function getDtmfSender() {

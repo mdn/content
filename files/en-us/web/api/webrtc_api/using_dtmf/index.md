@@ -27,9 +27,9 @@ A given {{domxref("RTCPeerConnection")}} can have multiple media tracks sent or 
 
 Read the sender's {{domxref("RTCRtpSender.dtmf", "dtmf")}} property to get the {{domxref("RTCDTMFSender")}} for that track. Only audio senders have one; video senders return `null`.
 
-Call {{domxref("RTCDTMFSender.insertDTMF()")}} to enqueue tones. The `RTCRtpSender` sends them to the other peer as packets alongside the track's audio data. Since the tones ride along with the audio, the connection must be connected and sending, and the two peers must have negotiated the `audio/telephone-event` codec. Until then, {{domxref("RTCDTMFSender.canInsertDTMF", "canInsertDTMF")}} is `false` and `insertDTMF()` throws an `InvalidStateError`. Waiting for the connection state to become `connected`, as the example below does, is usually enough.
+Call {{domxref("RTCDTMFSender.insertDTMF()")}} to enqueue tones. The `RTCRtpSender` sends them to the other peer as packets alongside the track's audio data. Since the tones ride along with the audio, the connection must be connected and sending, and the two peers must have negotiated the `audio/telephone-event` codec. Until then, {{domxref("RTCDTMFSender.canInsertDTMF", "canInsertDTMF")}} is `false` and `insertDTMF()` throws an `InvalidStateError`. Waiting for the connection state to become `connected` is usually enough.
 
-Each time a tone starts playing out, the `RTCDTMFSender` receives a [`tonechange`](/en-US/docs/Web/API/RTCDTMFSender/tonechange_event) event with a {{domxref("RTCDTMFToneChangeEvent.tone", "tone")}} property naming that tone, which is an opportunity to update interface elements, for example. When the tone buffer is empty, indicating that all the tones have been sent, a `tonechange` event with its `tone` property set to `""` (an empty string) is delivered.
+Each time a tone starts playing out, the `RTCDTMFSender` receives a [`tonechange`](/en-US/docs/Web/API/RTCDTMFSender/tonechange_event) event whose {{domxref("RTCDTMFToneChangeEvent.tone", "tone")}} property names that tone. This is an opportunity to update interface elements, for example. When the tone buffer is empty, indicating that all the tones have been sent, a `tonechange` event with its `tone` property set to `""` (an empty string) is delivered.
 
 > [!NOTE]
 > Older code might be using the deprecated, non-standard {{domxref("RTCPeerConnection.createDTMFSender()")}} method instead. Firefox and Safari never implemented it, and Chrome is removing it. Use {{domxref("RTCRtpSender.dtmf")}} in new code.
@@ -89,9 +89,9 @@ These are, in order:
 - `dialString`
   - : The DTMF string the caller will send when the "Dial" button is clicked.
 - `dialButton`, `logElement`, and `audioElement`
-  - : The elements from the HTML above: the button that starts the call, the box we log status messages to, and the `<audio>` element that plays the audio the receiver gets.
+  - : The elements from the HTML section: the button that starts the call, the box we log status messages to, and the `<audio>` element that plays the audio the receiver gets.
 - `callerPC` and `receiverPC`
-  - : The {{domxref("RTCPeerConnection")}} objects representing the caller and the receiver, respectively. These get created when the call starts up, in our `connectAndDial()` function, as shown in [Starting the connection process](#starting_the_connection_process) below.
+  - : The {{domxref("RTCPeerConnection")}} objects representing the caller and the receiver, respectively. These get created when the call starts up, in our `connectAndDial()` function, as shown in [Starting the connection process](#starting_the_connection_process).
 - `dtmfSender`
   - : The {{domxref("RTCDTMFSender")}} we send the tones on. We get it from the caller's audio sender in `connectAndDial()`.
 
@@ -142,7 +142,7 @@ async function connectAndDial() {
 }
 ```
 
-First we create both `RTCPeerConnection` objects: `callerPC` for the caller and `receiverPC` for the receiving end of the call.
+First we create both `RTCPeerConnection` objects: `callerPC` for the caller and `receiverPC` for the receiver.
 
 Then we add event listeners. The caller's [`negotiationneeded`](/en-US/docs/Web/API/RTCPeerConnection/negotiationneeded_event) event tells us to negotiate the connection, and its [`connectionstatechange`](/en-US/docs/Web/API/RTCPeerConnection/connectionstatechange_event) event tells us when the connection is up, which is when we dial. Each connection's [`icecandidate`](/en-US/docs/Web/API/RTCPeerConnection/icecandidate_event) event hands us a candidate to pass to the other peer. The receiver's [`track`](/en-US/docs/Web/API/RTCPeerConnection/track_event) event fires when the incoming audio arrives, and we attach its stream to the `<audio>` element to play it.
 
@@ -168,7 +168,7 @@ async function negotiate() {
 }
 ```
 
-Calling {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} with no arguments creates the right description for the connection's current state — an offer for the caller, an answer for the receiver — so we don't need `createOffer()` or `createAnswer()` here. The steps are:
+Calling {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription()")}} with no parameters creates the right description for the connection's current state — an offer for the caller, an answer for the receiver — so we don't need `createOffer()` or `createAnswer()`. The steps are:
 
 1. The caller sets its local description, which produces an offer.
 2. The receiver takes that offer as its remote description, so it knows how the caller is configured.
@@ -178,7 +178,7 @@ Calling {{domxref("RTCPeerConnection.setLocalDescription", "setLocalDescription(
 
 #### Exchanging ICE candidates
 
-Each time a connection's ICE layer comes up with a candidate, it fires an [`icecandidate`](/en-US/docs/Web/API/RTCPeerConnection/icecandidate_event) event. Normally you'd send the candidate to the other peer over your signaling channel. Here both peers are in the same page, so we hand the candidate directly to the other connection with {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}.
+Each time a connection's ICE layer comes up with a candidate, it fires an [`icecandidate`](/en-US/docs/Web/API/RTCPeerConnection/icecandidate_event) event. Normally you'd send the candidate to the other peer over your signaling channel. In this example, both peers are in the same page, so we hand the candidate directly to the other connection with {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}.
 
 ```js
 async function addCandidate(pc, candidate) {
@@ -212,7 +212,7 @@ Our call to {{domxref("RTCDTMFSender.insertDTMF", "insertDTMF()")}} specifies no
 
 #### When a tone finishes playing
 
-Each time a DTMF tone plays, a [`tonechange`](/en-US/docs/Web/API/RTCDTMFSender/tonechange_event) event is delivered to the `RTCDTMFSender`. The event listener for these is implemented as the `handleToneChange()` function.
+Each time a DTMF tone plays, a [`tonechange`](/en-US/docs/Web/API/RTCDTMFSender/tonechange_event) event is delivered to the `RTCDTMFSender`. The event listener for `tonechange` events is implemented as the `handleToneChange()` function.
 
 ```js
 function handleToneChange(event) {
@@ -235,9 +235,9 @@ function handleToneChange(event) {
 
 The [`tonechange`](/en-US/docs/Web/API/RTCDTMFSender/tonechange_event) event is used both to indicate when an individual tone has played and when all tones have finished playing. The event's {{domxref("RTCDTMFToneChangeEvent.tone", "tone")}} property is a string indicating which tone just played. If all tones have finished playing, `tone` is an empty string; when that's the case, {{domxref("RTCDTMFSender.toneBuffer")}} is empty.
 
-In this example, we log to the screen which tone just played. In a more advanced application, you might update the user interface, for example, to indicate which note is currently playing.
+In this example, we log to the screen which tone just played. In a more advanced application, you might update the user interface, for example, to indicate which tone is currently playing.
 
-On the other hand, if the tone buffer is empty, our example is designed to disconnect the call. For each connection we stop every track we're sending, by calling {{domxref("MediaStreamTrack.stop", "stop()")}} on each {{domxref("RTCRtpSender")}}'s track, then close the connection with {{domxref("RTCPeerConnection.close", "close()")}}. Closing a connection also ends the tracks it was receiving.
+On the other hand, if the tone buffer is empty, our example is designed to disconnect the call. For each connection, we call {{domxref("MediaStreamTrack.stop", "stop()")}} on each {{domxref("RTCRtpSender")}}'s track to stop everything we're sending, then close the connection with {{domxref("RTCPeerConnection.close", "close()")}}. Closing a connection also ends the tracks it was receiving.
 
 Then we pause the {{HTMLElement("audio")}} element and set its {{domxref("HTMLMediaElement.srcObject", "srcObject")}} to `null`, which detaches the audio stream from it.
 

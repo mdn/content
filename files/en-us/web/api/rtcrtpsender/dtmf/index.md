@@ -19,7 +19,7 @@ Each audio sender gets its own `RTCDTMFSender` when it's created, so a connectio
 Senders for video tracks return `null`.
 
 A non-`null` `dtmf` doesn't mean you can send tones yet.
-Tones travel in the RTP stream alongside the audio, so the sender must be connected, sending, and have negotiated the `audio/telephone-event` codec with the other peer.
+Tones travel in the RTP stream alongside the audio, so the sender must be connected and sending, and the two peers must have negotiated the `audio/telephone-event` codec.
 Check {{domxref("RTCDTMFSender.canInsertDTMF", "canInsertDTMF")}} for that, or handle the `InvalidStateError` that {{domxref("RTCDTMFSender.insertDTMF", "insertDTMF()")}} throws.
 
 ## Examples
@@ -74,8 +74,8 @@ const audioSenders = pc.getSenders().filter((sender) => sender.dtmf);
 
 ## See also
 
-- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Using DTMF with WebRTC](/en-US/docs/Web/API/WebRTC_API/Using_DTMF)
 - {{domxref("RTCDTMFSender")}}
 - {{domxref("RTCRtpSender")}}
 - {{domxref("RTCPeerConnection")}}
+- [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
+- [Using DTMF with WebRTC](/en-US/docs/Web/API/WebRTC_API/Using_DTMF)
