@@ -11,6 +11,8 @@ The **`text-decoration-color`** [CSS](/en-US/docs/Web/CSS) property sets the col
 
 The color applies to decorations, such as underlines, overlines, strikethroughs, and wavy lines like those used to mark misspellings, in the scope of the property's value.
 
+CSS does not provide a direct mechanism for specifying a unique color for each line type. This effect can nevertheless be achieved by nesting elements, applying a different line type to each element (with the {{cssxref("text-decoration-line")}} property), and specifying the line color (with `text-decoration-color`) on a per-element basis.
+
 {{InteractiveExample("CSS Demo: text-decoration-color")}}
 
 ```css interactive-example-choice
@@ -52,8 +54,6 @@ p {
   text-decoration-line: underline;
 }
 ```
-
-CSS does not provide a direct mechanism for specifying a unique color for each line type. This effect can nevertheless be achieved by nesting elements, applying a different line type to each element (with the {{cssxref("text-decoration-line")}} property), and specifying the line color (with `text-decoration-color`) on a per-element basis.
 
 ## Syntax
 

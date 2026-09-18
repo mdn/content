@@ -61,7 +61,7 @@ Linear gradients change along a straight line. To insert one, you create a {{SVG
 
 {{ EmbedLiveSample('Linear_Gradient','120','280') }}
 
-Above is an example of a linear gradient being applied to a `<rect>` element. Inside the linear gradient are several {{SVGElement('stop')}} nodes. These nodes tell the gradient what color it should be at certain positions by specifying an `offset` attribute for the position, and a `stop-color` attribute. This can be assigned directly or through CSS. The two methods have been intermixed for the purposes of this example. For instance, this one tells the gradient to start at the color red, change to transparent-black in the middle, and end at the color blue. You can insert as many stop colors as you like to create a blend that's as beautiful or hideous as you need, but the offsets should always increase from 0% (or 0 if you want to drop the % sign) to 100% (or 1). Duplicate values will use the stop that is assigned furthest down the XML tree. Also, like with fill and stroke, you can specify a `stop-opacity` attribute to set the opacity at that position (again, in FF3 you can also use rgba values to do this).
+Above is an example of a linear gradient being applied to a `<rect>` element. Inside the linear gradient are several {{SVGElement('stop')}} nodes. These nodes tell the gradient what color it should be at certain positions by specifying an `offset` attribute for the position, and a `stop-color` attribute. This can be assigned directly or through CSS. The two methods have been intermixed for the purposes of this example. For instance, this one tells the gradient to start at the color red, change to transparent-black in the middle, and end at the color blue. You can insert as many stop colors as you like to create a blend that's as beautiful or hideous as you need, but the offsets should always increase from 0% (or 0 if you want to drop the % sign) to 100% (or 1). Duplicate values will use the stop that is assigned furthest down the XML tree. Also, like with fill and stroke, you can specify a `stop-opacity` attribute to set the opacity at that position.
 
 ```svg
 <stop offset="100%" stop-color="yellow" stop-opacity="0.5"/>
@@ -167,13 +167,7 @@ The second point is called the focal point and is defined by the `fx` and `fy` a
     stroke="black"
     stroke-width="2" />
 
-  <circle
-    cx="60"
-    cy="60"
-    r="50"
-    fill="transparent"
-    stroke="white"
-    stroke-width="2" />
+  <circle cx="60" cy="60" r="50" fill="none" stroke="white" stroke-width="2" />
   <circle cx="35" cy="35" r="2" fill="white" stroke="white" />
   <circle cx="60" cy="60" r="2" fill="white" stroke="white" />
   <text x="38" y="40" fill="white" font-family="sans-serif" font-size="10pt">

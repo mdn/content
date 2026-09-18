@@ -82,7 +82,7 @@ This includes any prompt messages sent to it via the {{domxref("LanguageModel.cr
 > [!NOTE]
 > The browser doesn't store session information across browser reloads by default. To restore session context after a reload or browser restart, you will have to implement a mechanism to save the conversation and restore it using a server-side solution or a client-side mechanism such as [Web Storage](/en-US/docs/Web/API/Web_Storage_API). Such an example is covered in [Preserving sessions across reloads](/en-US/docs/Web/API/Prompt_API/Preserving_sessions).
 
-The [`expectedInputs`](/en-US/docs/Web/API/LanguageModel/create_static#expectedinputs) and [`expectedOutputs`](/en-US/docs/Web/API/LanguageModel/create_static#expectedOutputs) parameters specify the types of input and output and the input/output languages you are expecting to provide to and receive from the AI prompt.
+The [`expectedInputs`](/en-US/docs/Web/API/LanguageModel/create_static#expectedinputs) and [`expectedOutputs`](/en-US/docs/Web/API/LanguageModel/create_static#expectedoutputs) parameters specify the types of input and output and the input/output languages you are expecting to provide to and receive from the AI prompt.
 
 The Prompt API handles text inputs and outputs by default, but it is multimodal — you can also give it images and audio inputs, for example to ask it to describe an image or transcribe an audio file. See [Multimodal prompts](/en-US/docs/Web/API/Prompt_API/Multimodal) for more details.
 
@@ -189,7 +189,7 @@ await secondClone.prompt("Another question, please.");
 
 Creating a new session via `clone()` is also a common way to get around the problem of running out of tokens.
 
-## Cancelling operations and destroying instances
+## Canceling operations and destroying instances
 
 You can cancel pending `prompt()`, `clone()` and other operations using an {{domxref("AbortController")}}, with the associated {{domxref("AbortSignal")}} being included inside the method options object as a `signal` property value. For example, aborting a `LanguageModel.prompt()` operation via a button press could look like this:
 
@@ -415,17 +415,16 @@ async function getSession() {
       expectedInputs: [{ type: "text", languages: ["en"] }],
       expectedOutputs: [{ type: "text", languages: ["en"] }],
     });
-  } else {
-    return await LanguageModel.create({
-      expectedInputs: [{ type: "text", languages: ["en"] }],
-      expectedOutputs: [{ type: "text", languages: ["en"] }],
-      monitor(monitor) {
-        monitor.addEventListener("downloadprogress", (e) => {
-          promptOutput.textContent = `Downloading model data ${Math.floor(e.loaded * 100)}%`;
-        });
-      },
-    });
   }
+  return await LanguageModel.create({
+    expectedInputs: [{ type: "text", languages: ["en"] }],
+    expectedOutputs: [{ type: "text", languages: ["en"] }],
+    monitor(monitor) {
+      monitor.addEventListener("downloadprogress", (e) => {
+        promptOutput.textContent = `Downloading model data ${Math.floor(e.loaded * 100)}%`;
+      });
+    },
+  });
 }
 ```
 
@@ -533,17 +532,16 @@ async function getSession() {
       expectedInputs: [{ type: "text", languages: ["en"] }],
       expectedOutputs: [{ type: "text", languages: ["en"] }],
     });
-  } else {
-    return await LanguageModel.create({
-      expectedInputs: [{ type: "text", languages: ["en"] }],
-      expectedOutputs: [{ type: "text", languages: ["en"] }],
-      monitor(monitor) {
-        monitor.addEventListener("downloadprogress", (e) => {
-          promptOutput.textContent = `Downloading model data ${Math.floor(e.loaded * 100)}%`;
-        });
-      },
-    });
   }
+  return await LanguageModel.create({
+    expectedInputs: [{ type: "text", languages: ["en"] }],
+    expectedOutputs: [{ type: "text", languages: ["en"] }],
+    monitor(monitor) {
+      monitor.addEventListener("downloadprogress", (e) => {
+        promptOutput.textContent = `Downloading model data ${Math.floor(e.loaded * 100)}%`;
+      });
+    },
+  });
 }
 ```
 

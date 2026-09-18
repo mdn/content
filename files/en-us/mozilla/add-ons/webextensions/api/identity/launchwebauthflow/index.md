@@ -13,7 +13,7 @@ This function's only mandatory parameter is the service provider's authorization
 - authenticates the user with the service provider, if necessary (that is: if they are not already signed in)
 - asks the user to authorize the extension to access the requested data, if necessary (that is: if the user has not already authorized the extension)
 
-Note that if neither authentication or authorization are needed, then this function will complete silently, without any user interaction.
+Note that if neither authentication nor authorization are needed, then this function will complete silently, without any user interaction.
 
 This function also takes an optional parameter `interactive`: if this is omitted or set to false, then the flow is forced to complete silently. In this case, if the user has to authenticate or authorize, then the operation will just fail.
 

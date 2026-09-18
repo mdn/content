@@ -12,7 +12,7 @@ The **`contain-intrinsic-width`** [CSS](/en-US/docs/Web/CSS) property sets the w
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 contain-intrinsic-width: none;
 
 /* <length> values */

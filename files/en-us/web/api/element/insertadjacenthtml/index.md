@@ -81,7 +81,7 @@ The method does not perform any sanitization to remove XSS-unsafe elements such 
 When inserting HTML into a page using `insertAdjacentHTML()`, you should pass {{domxref("TrustedHTML")}} objects instead of strings, and [enforce trusted types](/en-US/docs/Web/API/Trusted_Types_API#using_a_csp_to_enforce_trusted_types) using the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) CSP directive.
 This ensures that the input is passed through a transformation function, which has the chance to [sanitize](/en-US/docs/Web/Security/Attacks/XSS#sanitization) the input to remove potentially dangerous markup before it is injected.
 
-The {{domxref("Element.insertAdjacentText()")}} method or {{domxref("Node.textContent")}} should be used when you know that the user provided content should be plain text.
+The {{domxref("Element.insertAdjacentText()")}} method or {{domxref("Node.textContent")}} should be used when you know that the user-provided content should be plain text.
 This inserts the input as raw text instead of parsing it as HTML.
 
 ## Examples
@@ -129,7 +129,7 @@ if (typeof trustedTypes === "undefined")
 
 Next we define a policy named `some-content-policy` to create {{domxref("TrustedHTML")}} objects from the input (we should also enforce the `some-content-policy` using CSP).
 The code implements no-op policy in order to allow this example to work without a third-party dependency.
-Your own application code should use a third party library such as the "DOMPurify" library to return sanitized content from the untrusted input.
+Your own application code should use a third-party library such as the "DOMPurify" library to return sanitized content from the untrusted input.
 
 ```js
 const policy = trustedTypes.createPolicy("some-content-policy", {

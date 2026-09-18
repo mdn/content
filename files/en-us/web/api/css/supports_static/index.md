@@ -20,7 +20,7 @@ CSS.supports(supportCondition)
 
 ### Parameters
 
-There are two distinct sets of parameters. The first one allows to test the support of
+There are two distinct sets of parameters. The first one allows you to test the support of
 a pair _property-value_:
 
 - `propertyName`
@@ -66,5 +66,5 @@ For more examples and syntax features, see the {{cssxref("@supports")}} at-rule.
 
 - The {{cssxref("@supports")}} at-rule that allows for the same functionality but in a
   declarative way.
-- The {{domxref("CSSSupportsRule")}} CSSOM class allowing to manipulate
+- The {{domxref("CSSSupportsRule")}} CSSOM class allowing you to manipulate
   {{cssxref("@supports")}} at-rules.

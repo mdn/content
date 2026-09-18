@@ -29,7 +29,7 @@ If you are creating a `textbox` using any other element, `placeholder` is not su
 The placeholder hint should be shown to the user whenever the control's value is empty, including when a value is deleted.
 
 > [!NOTE]
-> ARIA is only modify the accessibility tree for an element and therefore how assistive technology presents the content to your users. ARIA doesn't change anything about an elements function or behavior. When not using semantic HTML elements for their intended purpose and default functionality, you must use JavaScript to manage behavior.
+> ARIA only modifies the accessibility tree for an element and therefore how assistive technology presents the content to your users. ARIA doesn't change anything about an element's function or behavior. When not using semantic HTML elements for their intended purpose and default functionality, you must use JavaScript to manage behavior.
 
 The `aria-placeholder` is used in addition to, not instead of, a label. They have different purposes and different functionality. A label explains what kind of information is expected. Placeholder text provides a hint about the expected value.
 

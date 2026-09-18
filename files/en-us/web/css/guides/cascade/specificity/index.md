@@ -72,7 +72,7 @@ input:focus {
 
 ### Three-column comparison
 
-Once the specificity values of the relevant selectors are determined, the number of selector components in each column are compared, from left to right.
+Once the specificity values of the relevant selectors are determined, the number of selector components in each column is compared, from left to right.
 
 ```css
 #myElement {

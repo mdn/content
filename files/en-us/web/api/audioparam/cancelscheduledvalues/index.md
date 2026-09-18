@@ -21,7 +21,7 @@ cancelScheduledValues(startTime)
 
 - `startTime`
   - : A double representing the time (in seconds) after the {{ domxref("AudioContext") }}
-    was first created after which all scheduled changes will be cancelled.
+    was first created after which all scheduled changes will be canceled.
 
 ### Return value
 

@@ -41,7 +41,7 @@ This live example demonstrates how you can convert an async iterable to a `Reada
 
 #### HTML
 
-The HTML is consists of single `<pre>` element, which is used for logging.
+The HTML consists of a single `<pre>` element, which is used for logging.
 
 ```html
 <pre id="log"></pre>

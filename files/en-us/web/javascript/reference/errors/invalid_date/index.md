@@ -21,13 +21,12 @@ RangeError: Invalid Date (Safari)
 
 ## What went wrong?
 
-You are converting an [invalid date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) value to an ISO date string. This usually happens in one of three ways:
-
-- Calling the {{jsxref("Date/toISOString", "toISOString()")}} method
-- Calling the {{jsxref("Date/toJSON", "toJSON()")}} method, which implicitly calls `toISOString`
-- Using {{jsxref("JSON.stringify()")}} to stringify the date, which implicitly calls `toJSON`
+You are converting an [invalid date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) value to an ISO date string by calling the {{jsxref("Date/toISOString", "toISOString()")}} method.
 
 An _invalid date_ is produced when you attempt to parse an invalid date string, or set the timestamp to an out-of-bounds value. Invalid dates usually cause all date methods to return {{jsxref("NaN")}} or other special values. However, such dates do not have valid ISO string representations, so an error is thrown when you attempt to do so.
+
+> [!NOTE]
+> {{jsxref("Date/toJSON", "toJSON()")}} does not throw this error. It checks whether the date is finite before formatting it, and returns `null` for an invalid date instead of calling `toISOString()`. {{jsxref("JSON.stringify()")}}, which calls `toJSON()`, therefore serializes an invalid date as `null` rather than throwing.
 
 ## Examples
 
@@ -36,8 +35,6 @@ An _invalid date_ is produced when you attempt to parse an invalid date string, 
 ```js example-bad
 const invalid = new Date("nothing");
 invalid.toISOString(); // RangeError: invalid date
-invalid.toJSON(); // RangeError: invalid date
-JSON.stringify({ date: invalid }); // RangeError: invalid date
 ```
 
 However, most other methods return special values:
@@ -45,6 +42,8 @@ However, most other methods return special values:
 ```js example-bad
 invalid.toString(); // "Invalid Date"
 invalid.getDate(); // NaN
+invalid.toJSON(); // null
+JSON.stringify({ date: invalid }); // '{"date":null}'
 ```
 
 For more details, see the {{jsxref("Date.parse()")}} documentation.

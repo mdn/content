@@ -93,7 +93,7 @@ body {
 
 section,
 .change-me {
-  border: 2px solid #666;
+  border: 2px solid #666666;
   padding: 10px;
 }
 

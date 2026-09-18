@@ -6,7 +6,7 @@ browser-compat: javascript.regular_expressions.named_capturing_group
 sidebar: jssidebar
 ---
 
-A **named capturing group** is a particular kind of [capturing group](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group) that allows to give a name to the group. The group's matching result can later be identified by this name instead of by its index in the pattern.
+A **named capturing group** is a particular kind of [capturing group](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Capturing_group) that allows you to give a name to the group. The group's matching result can later be identified by this name instead of by its index in the pattern.
 
 ## Syntax
 

@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Window.innerHeight
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
 The read-only **`innerHeight`** property of the
 {{domxref("Window")}} interface returns the interior height of the window in pixels,

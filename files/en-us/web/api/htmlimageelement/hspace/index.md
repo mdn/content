@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLImageElement.hspace
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 The _deprecated_ **`hspace`** property of the {{domxref("HTMLImageElement")}} interface specifies the number of pixels of empty space to leave empty on the left and right sides of the {{HTMLElement("img")}} element when laying out the page. It reflects the `<img>` element's [`hspace`](/en-US/docs/Web/HTML/Reference/Elements/img#hspace) content attribute.
 

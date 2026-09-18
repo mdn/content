@@ -10,7 +10,7 @@ browser-compat: css.properties.-moz-float-edge
 sidebar: cssref
 ---
 
-{{Non-standard_header}}{{Deprecated_Header}}
+{{Non-standard_header}}
 
 The non-standard **`-moz-float-edge`** [CSS](/en-US/docs/Web/CSS) property specifies whether the height and width properties of the element include the margin, border, or padding thickness.
 
@@ -24,10 +24,14 @@ The non-standard **`-moz-float-edge`** [CSS](/en-US/docs/Web/CSS) property speci
 /* Global values */
 -moz-float-edge: inherit;
 -moz-float-edge: initial;
+-moz-float-edge: revert;
+-moz-float-edge: revert-layer;
 -moz-float-edge: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `content-box`
   - : The height and width properties include the content, but not the padding, border or margin.

@@ -37,7 +37,7 @@ LanguageModel.create(options)
             - `tool-response`
               - : The result of a tool invocation.
         - `languages` {{optional_inline}}
-          - : An array of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `en`, `fr`, `ja`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
+          - : An array of strings containing [BCP 47](https://www.rfc-editor.org/info/rfc5646/) language tags (for example, `en`, `fr`, `ja`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
     - `expectedOutputs`
       - : An array of objects representing the required output modalities and languages.
         Each object can include the following properties:
@@ -54,7 +54,7 @@ LanguageModel.create(options)
             - `tool-response`
               - : The result of a tool invocation.
         - `languages` {{optional_inline}}
-          - : An array of strings containing [BCP 47](https://www.rfc-editor.org/rfc/rfc5646) language tags (for example, `en`, `fr`, `ja`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
+          - : An array of strings containing [BCP 47](https://www.rfc-editor.org/info/rfc5646/) language tags (for example, `en`, `fr`, `ja`) that the session is expected to handle for this content type. The user agent uses this list to determine whether the model supports the specified languages and to select appropriate model components or fine-tunings.
     - `initialPrompts`
       - : An array of objects representing messages passed during the creation of a language model session. This allows the model to "remember" instructions or previous dialogue without resending them with every new query. Each object can include the following properties:
         - `role`
@@ -258,7 +258,7 @@ const session = await LanguageModel.create({
         },
         required: ["location"],
       },
-      execute: async (...args) => {
+      async execute(...args) {
         const location = args[0];
         return await getWeatherData(location);
       },
@@ -270,7 +270,7 @@ const response = await session.prompt("What's the weather like in Tokyo?");
 console.log(response);
 ```
 
-### Cancelling a session
+### Canceling a session
 
 The following example enables a user to cancel a prompt. It does this by first creating an {{domxref("AbortController")}} and assigning its `abort()` method to a cancel button's click handler. Next, it calls `create()` and passes `AbortController.signal` as the `signal` property.
 
@@ -291,7 +291,7 @@ const session = await LanguageModel.create({
 });
 ```
 
-See also [Using the Prompt API > Cancelling operations and destroying instances](/en-US/docs/Web/API/Prompt_API/Using#cancelling_operations_and_destroying_instances).
+See also [Using the Prompt API > Canceling operations and destroying instances](/en-US/docs/Web/API/Prompt_API/Using#canceling_operations_and_destroying_instances).
 
 ## Specifications
 

@@ -3,9 +3,13 @@ title: Iterator.prototype.windows()
 short-title: windows()
 slug: Web/JavaScript/Reference/Global_Objects/Iterator/windows
 page-type: javascript-instance-method
+status:
+  - experimental
 browser-compat: javascript.builtins.Iterator.windows
 sidebar: jsref
 ---
+
+{{SeeCompatTable}}
 
 The **`windows()`** method of {{jsxref("Iterator")}} instances returns a new [iterator helper object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator#iterator_helper_objects) that yields a sliding window of elements. Each time the helper is iterated, it yields an array removing the first element from the previous iteration and adding the next element from the original iterator.
 

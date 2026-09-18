@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLTableCellElement.ch
 ---
 
-{{APIRef("HTML DOM")}}{{deprecated_header}}
+{{APIRef("HTML DOM")}}
 
 The **`ch`** property of the {{domxref("HTMLTableCellElement")}} interface does nothing. It reflects the `char` attribute of the cell element.
 

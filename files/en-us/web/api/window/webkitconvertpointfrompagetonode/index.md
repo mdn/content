@@ -9,7 +9,7 @@ status:
 browser-compat: api.Window.webkitConvertPointFromPageToNode
 ---
 
-{{APIRef}}{{Deprecated_Header}}{{Non-standard_header}}
+{{APIRef("HTML DOM")}}{{Non-standard_header}}
 
 Given a {{domxref("WebKitPoint")}} specified in the page's coordinate system, the
 {{domxref("Window")}} method **`webkitConvertPointFromPageToNode()`**

@@ -33,7 +33,7 @@ We start with some HTML: a paragraph with a link, as well as a definition list t
 
 #### JavaScript
 
-We add JavaScript to grab our unstyled link and return back a definition list of all the default CSS property values impacting the link using `computedStyleMap()`.
+We add JavaScript to grab our unstyled link and return a definition list of all the default CSS property values impacting the link using `computedStyleMap()`.
 
 ```js
 // Get the element
@@ -128,7 +128,7 @@ You'll note that custom properties retain the value as written in the stylesheet
 
 ### CSSUnitValue and CSSKeywordValue
 
-The power of the CSS Typed OM is that values are separate from units; parsing and concatenating string values may become be a thing of the past. Every CSS property in a style map has a value. If the value is a keyword, the object returned is a [`CSSKeywordValue`](/en-US/docs/Web/API/CSSKeywordValue). If the value is numeric, a [`CSSUnitValue`](/en-US/docs/Web/API/CSSUnitValue) is returned.
+The power of the CSS Typed OM is that values are separate from units; parsing and concatenating string values may become a thing of the past. Every CSS property in a style map has a value. If the value is a keyword, the object returned is a [`CSSKeywordValue`](/en-US/docs/Web/API/CSSKeywordValue). If the value is numeric, a [`CSSUnitValue`](/en-US/docs/Web/API/CSSUnitValue) is returned.
 
 `CSSKeywordValue` is a class that defines keywords like `inherit`, `initial`, `unset`, and other strings you don't quote, such as `auto` and `grid`. This subclass gives you a `value` property via {{domxref("cssKeywordValue.value")}}.
 

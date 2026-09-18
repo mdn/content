@@ -3,10 +3,12 @@ title: "PerformanceSoftNavigation: presentationTime property"
 short-title: presentationTime
 slug: Web/API/PerformanceSoftNavigation/presentationTime
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.PerformanceSoftNavigation.presentationTime
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`presentationTime`** read-only property of the {{domxref("PerformanceSoftNavigation")}} interface returns the {{domxref("DOMHighResTimeStamp","timestamp")}} of when the painted pixels were actually drawn on the screen.
 
@@ -14,7 +16,7 @@ The `presentationTime` is optional — some browsers may always return `0` or no
 
 ## Value
 
-A {{domxref("DOMHighResTimeStamp")}} or {{jsxref("operators/null", "null")}} if the value is not exposed.
+A {{domxref("DOMHighResTimeStamp")}} or {{jsxref("Operators/null", "null")}} if the value is not exposed.
 
 ## Examples
 
@@ -23,10 +25,11 @@ This example uses a {{domxref("PerformanceObserver")}} to log new `soft-navigati
 ```js
 const observer = new PerformanceObserver((list) => {
   for (const entry of list.getEntries()) {
-    console.log('Soft Nav:', entry.startTime, entry.paintTime);
+    console.log("Soft Nav:", entry.startTime, entry.paintTime);
   }
 });
 observer.observe({ type: "soft-navigation", buffered: true });
+```
 
 ## Specifications
 
@@ -39,4 +42,3 @@ observer.observe({ type: "soft-navigation", buffered: true });
 ## See also
 
 - {{domxref("LargestContentfulPaint.presentationTime")}}
-```

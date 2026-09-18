@@ -8,7 +8,7 @@ status:
 browser-compat: api.WorkletSharedStorage.remainingBudget
 ---
 
-{{APIRef("Shared Storage API")}}{{deprecated_header}}
+{{APIRef("Shared Storage API")}}
 
 The **`remainingBudget()`** method of the
 {{domxref("WorkletSharedStorage")}} interface returns the remaining navigation budget for the current origin.

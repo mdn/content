@@ -3,10 +3,12 @@ title: "InteractionContentfulPaint: paintTime property"
 short-title: paintTime
 slug: Web/API/InteractionContentfulPaint/paintTime
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.InteractionContentfulPaint.paintTime
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`paintTime`** read-only property of the {{domxref("InteractionContentfulPaint")}} interface returns the {{domxref("DOMHighResTimeStamp","timestamp")}} of when the rendering phase ended and the paint phase started.
 
@@ -23,10 +25,15 @@ This example uses a {{domxref("PerformanceObserver")}} to log new `interaction-c
 ```js
 const observer = new PerformanceObserver((list) => {
   for (const entry of list.getEntries()) {
-    console.log('Interaction Contentful Paint:', entry.startTime, entry.paintTime);
+    console.log(
+      "Interaction Contentful Paint:",
+      entry.startTime,
+      entry.paintTime,
+    );
   }
 });
 observer.observe({ type: "interaction-contentful-paint", buffered: true });
+```
 
 ## Specifications
 
@@ -39,4 +46,3 @@ observer.observe({ type: "interaction-contentful-paint", buffered: true });
 ## See also
 
 - {{domxref("LargestContentfulPaint.presentationTime")}}
-```

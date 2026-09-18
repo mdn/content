@@ -3,10 +3,12 @@ title: "PerformanceSoftNavigation: paintTime property"
 short-title: paintTime
 slug: Web/API/PerformanceSoftNavigation/paintTime
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.PerformanceSoftNavigation.paintTime
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`paintTime`** read-only property of the {{domxref("PerformanceSoftNavigation")}} interface returns the {{domxref("DOMHighResTimeStamp","timestamp")}} of when the rendering phase ended and the paint phase started.
 
@@ -23,10 +25,11 @@ This example uses a {{domxref("PerformanceObserver")}} to log new `soft-navigati
 ```js
 const observer = new PerformanceObserver((list) => {
   for (const entry of list.getEntries()) {
-    console.log('Soft Nav:', entry.startTime, entry.paintTime);
+    console.log("Soft Nav:", entry.startTime, entry.paintTime);
   }
 });
 observer.observe({ type: "soft-navigation", buffered: true });
+```
 
 ## Specifications
 
@@ -39,4 +42,3 @@ observer.observe({ type: "soft-navigation", buffered: true });
 ## See also
 
 - {{domxref("LargestContentfulPaint.presentationTime")}}
-```

@@ -67,7 +67,7 @@ canvas specified. The coordinates of the rectangle's top-left corner are
 ### Exceptions
 
 - `IndexSizeError` {{domxref("DOMException")}}
-  - : Thrown if either `sw` or `sh` are zero.
+  - : Thrown if either `sw` or `sh` is zero.
 - `SecurityError` {{domxref("DOMException")}}
   - : The canvas contains or may contain pixels which were loaded from an origin other
     than the one from which the document itself was loaded.

@@ -31,7 +31,7 @@ async function initTransport(url) {
   // Initialize transport connection
   const transport = new WebTransport(url);
 
-  // Once ready fulfils the connection can be used
+  // Once ready fulfills the connection can be used
   // Prior to this the reliability is "pending"
   await transport.ready;
 

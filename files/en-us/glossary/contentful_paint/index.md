@@ -15,7 +15,7 @@ The types of paints considered contentful also differ slightly between metrics:
 
 - FCP is intended to measure when the page starts to load. It therefore [includes most elements that paint](https://w3c.github.io/paint-timing/#contentful) including {{htmlelement("canvas")}} and `<svg>` elements. Skeleton screens using only `<div>` elements would not count as contentful.
 - LCP is intended to measure when the page is mostly loaded and ready for the user, so it tries to ensure there is meaningful content before triggering. It has stricter criteria than FCP, only counting [timing-eligible](https://w3c.github.io/paint-timing/#timing-eligible) elements as contentful. It therefore doesn't include `<canvas>` or `<svg>` elements, since those are more difficult to measure in terms of when (or even if) they are representative of the largest content drawn on the page. Furthermore, LCP also excludes low-entropy images.
-- Other metrics like {{domxref("InteractionContentfulPaint", "Interaction Contentful Paint")}}, {{domxref("PerformanceSoftNavigation", "soft navigations")}}, {{domxref("PerformanceElementTiming", "Element Timing")}}, and the upcoming [Container Timing](https://github.com/WICG/container-timing) are closer to the LCP model with some small differences like low-entropy images not being excluded.
+- Other metrics like [Interaction Contentful Paint](/en-US/docs/Web/API/InteractionContentfulPaint), [soft navigations](/en-US/docs/Web/API/PerformanceSoftNavigation), [Element Timing](/en-US/docs/Web/API/PerformanceElementTiming), and the upcoming [Container Timing](https://github.com/WICG/container-timing) are closer to the LCP model with some small differences like low-entropy images not being excluded.
 
 ## See also
 
