@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1010 339" role="img" aria-labelledby="title description">
+  <title id="title">A source import stops before dependency loading and linking</title>
+  <desc id="description">main.js imports the source of formatters.js and imports config.js normally. main.js and config.js have evaluated. formatters.js is parsed but not linked or evaluated. The source import does not traverse its dependencies. The faded arrows show the untraversed imports of config.js and logger.js; logger.js has not been requested. main.js registers a listener for Hi on standard input. Function and object bodies are omitted where they do not affect the example.</desc>
+  <style>
+    text { fill: #6b7280; font-family: Menlo, Consolas, monospace; font-size: 12px; }
+    .outline { stroke: #808080; stroke-width: 1; fill: none; }
+    .success { stroke: #08827e; }
+    .parsed { stroke: #7560a8; }
+    .parsed-label { fill: #7560a8; }
+    .paused { stroke: #9ca3af; stroke-dasharray: 4 3; }
+    .status { text-anchor: end; font-size: 12px; }
+    .teal { fill: #08827e; }
+    .specifier { fill: #08827e; font-weight: bold; }
+    .edge { fill: none; stroke: #808080; marker-end: url(#arrow); }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 8 4 L 0 8" fill="none" stroke="#808080"/>
+    </marker>
+  </defs>
+  <rect x="20" y="30" width="440" height="160" fill="#edf8f5"/>
+  <path class="outline success" d="M 90.4 30 H 460 V 190 H 20 V 30 H 28"/>
+  <text x="34" y="34">main.js</text>
+  <text class="status teal" x="460" y="22">Evaluated</text>
+  <rect x="500" y="30" width="490" height="116" fill="#f2eef8"/>
+  <path class="outline parsed" d="M 613.6 30 H 990 V 146 H 500 V 30 H 508"/>
+  <text x="514" y="34">formatters.js</text>
+  <text class="status parsed-label" x="990" y="22">Parsed</text>
+  <rect x="20" y="239" width="280" height="70" fill="#edf8f5"/>
+  <path class="outline success" d="M 104.8 239 H 300 V 309 H 20 V 239 H 28"/>
+  <text x="34" y="243">config.js</text>
+  <text class="status teal" x="300" y="231">Evaluated</text>
+  <rect x="660" y="239" width="300" height="80" fill="#fafafa"/>
+  <path class="outline paused" d="M 744.8 239 H 960 V 319 H 660 V 239 H 668"/>
+  <text x="674" y="243">logger.js</text>
+  <text class="status " x="960" y="231">Not loaded</text>
+  <path class="edge" d="M 420.6 48 H 500"/>
+  <path class="edge" d="M 265 76 L 210 239"/>
+  <path class="edge" d="M 654 58 L 300 239" opacity="0.35"/>
+  <path class="edge" d="M 734 76 V 239" opacity="0.35"/>
+  <text x="34" y="52">import source formattersSource from <tspan class="specifier">"./formatters.js"</tspan>;</text>
+  <text x="34" y="70">import config from <tspan class="specifier">"./config.js"</tspan>;</text>
+  <text x="34" y="106" xml:space="preserve">process.stdin.on("data", async (data) =&gt; {</text>
+  <text x="34" y="124" xml:space="preserve">  if (data.toString().trim() !== "Hi") return;</text>
+  <text x="34" y="142" xml:space="preserve">  const { greet } = await import(formattersSource);</text>
+  <text x="34" y="160" xml:space="preserve">  greet("Josh", config.locale);</text>
+  <text x="34" y="178" xml:space="preserve">});</text>
+  <text x="514" y="52">import config from <tspan class="specifier">"./config.js"</tspan>;</text>
+  <text x="514" y="70">import { log } from <tspan class="specifier">"./logger.js"</tspan>;</text>
+  <text x="514" y="98" xml:space="preserve">export function greet(name, localeName = config.defaultLocale) {</text>
+  <text x="514" y="116" xml:space="preserve">  // ...</text>
+  <text x="514" y="134" xml:space="preserve">}</text>
+  <text x="34" y="261" xml:space="preserve">export default {</text>
+  <text x="34" y="279" xml:space="preserve">  // ...</text>
+  <text x="34" y="297" xml:space="preserve">};</text>
+  <text x="674" y="261" xml:space="preserve">export function log(message) {</text>
+  <text x="674" y="279" xml:space="preserve">  // ...</text>
+  <text x="674" y="297" xml:space="preserve">}</text>
+</svg>
