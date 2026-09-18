@@ -40,6 +40,8 @@ The [Performance guides](/en-US/docs/Web/Performance/Guides) are resources that 
     The critical rendering path includes the [Document Object Model](/en-US/docs/Web/API/Document_Object_Model) (DOM), [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model) (CSSOM), render tree and layout.
 - [Lazy loading](/en-US/docs/Web/Performance/Guides/Lazy_loading)
   - : **Lazy loading** is a strategy to identify resources as non-blocking (non-critical) and load these only when needed. It's a way to shorten the length of the [critical rendering path](/en-US/docs/Web/Performance/Guides/Critical_rendering_path), which translates into reduced page load times.
+- [Back/forward cache (bfcache)](/en-US/docs/Web/Performance/Guides/bfcache)
+  - : The **bfcache** stores a complete page snapshot in memory so that back and forward navigations restore instantly. This guide explains how it works, how it differs from HTTP caching, and how to ensure your pages are eligible.
 - [Speculative loading](/en-US/docs/Web/Performance/Guides/Speculative_loading)
   - : **Speculative loading** refers to the practice of performing navigation actions (such as DNS fetching, fetching resources, or rendering documents) before the associated pages are actually visited, based on predictions as to what pages the user is most likely to visit next.
 - [Performance budgets](/en-US/docs/Web/Performance/Guides/Performance_budgets)
