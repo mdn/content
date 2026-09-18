@@ -48,12 +48,16 @@ Calling [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Mod
 - [`browsingContext.contextCreated`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/contextCreated)
 - [`browsingContext.contextDestroyed`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/contextDestroyed)
 - [`browsingContext.domContentLoaded`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/domContentLoaded)
+- [`browsingContext.downloadEnd`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/downloadEnd)
+- [`browsingContext.downloadWillBegin`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/downloadWillBegin)
 - [`browsingContext.fragmentNavigated`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/fragmentNavigated)
 - [`browsingContext.historyUpdated`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/historyUpdated)
 - [`browsingContext.load`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/load)
 - [`browsingContext.navigationCommitted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationCommitted)
 - [`browsingContext.navigationFailed`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationFailed)
 - [`browsingContext.navigationStarted`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationStarted)
+- [`browsingContext.userPromptClosed`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/userPromptClosed)
+- [`browsingContext.userPromptOpened`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/userPromptOpened)
 
 ## Specifications
 
