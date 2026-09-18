@@ -34,19 +34,16 @@ No-Vary-Search: key-order, params, except=("param1" "param2")
 ## Directives
 
 - `key-order` {{optional_inline}}
-  - : Indicates that the order of parameters in a URL does not affect the content of the returned response.
+  - : Indicates that the browser should not create a separate cache entry for a response if the order in which parameters appear in the URL is the only difference.
 - `params` {{optional_inline}}
   - : Either a boolean or a list of strings:
-    - As a boolean (`params`), it indicates that no parameter affects the content of the returned response.
-      Separate cache entries are therefore not needed for any combination or order of parameters.
-    - As an inner list of space-separated strings (`params=("param1" "param2")`), it indicates the parameters that do not affect the content of the returned response.
-      Responses for URLs that differ only by the listed parameters should not be cached as separate entries.
-      Other parameters may affect the response, so URLs that differ by them should be cached separately.
+    - As a boolean (`params`), it indicates that the browser should not create separate cache entries for responses that differ only by the presence, order, or value of any parameter.
+    - As an inner list of space-separated strings (`params=("param1" "param2")`), it indicates that the browser should not create separate cache entries for responses that differ only by the presence, order, or value of the listed parameters.
+      Other parameters may still cause the response to be cached separately.
 - `except` {{optional_inline}}
-  - : An inner list of space-separated strings (`except=("param1" "param2")`) that indicates the specific parameters that change the content of the returned response.
-    These are the only parameters for which a different value should result in the response being cached as separate entries.
+  - : An inner list of space-separated strings (`except=("param1" "param2")`) that indicates the parameters for which a different value should cause the browser to create a separate cache entry.
     A boolean `params` directive has to be included for it to take effect (`params, except=("param1" "param2")`).
-    The presence of other parameters that are not in the `except=` list _won't_ cause URLs to be cached as separate entries.
+    The presence of other parameters that are not in the `except=` list should not cause the browser to create a separate cache entry.
 
 ## Description
 
