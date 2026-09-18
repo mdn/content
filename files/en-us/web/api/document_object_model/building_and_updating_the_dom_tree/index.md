@@ -6,284 +6,385 @@ page-type: guide
 
 {{DefaultAPISidebar("DOM")}}
 
-This article is an overview of some powerful, fundamental DOM level 1 methods and how to use them from JavaScript. You will learn how to create, access and control, and remove HTML elements dynamically. The DOM methods presented here are not specific to HTML; they also apply to XML. The demonstrations provided here will work fine in any modern browser.
+In [Anatomy of the DOM](/en-US/docs/Web/API/Document_Object_Model/Anatomy_of_the_DOM), we introduced the shape of the DOM tree. In [Selection and traversal](/en-US/docs/Web/API/Document_Object_Model/Selection_and_traversal_on_the_DOM_tree), we introduced methods for efficient reading of this tree. This guide introduces methods for _modification_ of this tree.
+
+## Creating nodes
+
+When adding new content or building DOM trees from scratch, we need to first create the node before updating its data. Each [node type](/en-US/docs/Web/API/Document_Object_Model/Anatomy_of_the_DOM#the_node_interface_and_its_subclasses) has a different API for creation.
+
+There aren't many reasons to create a new {{domxref("Document")}} node—usually, you just want to replace the contents in the current document. But in case you want to do that, the {{domxref("document.implementation")}} property gives access to a {{domxref("DOMImplementation")}} object, which mainly allows you to create new documents. The {{domxref("DOMImplementation/createHTMLDocument", "document.implementation.createHTMLDocument()")}} method is convenient in that it constructs the full starter tree for a well-formed HTML document, with necessary elements such as {{HTMLElement("html")}}, {{HTMLElement("head")}}, {{HTMLElement("body")}}, and {{HTMLElement("title")}}. It accepts an optional string argument, which is used to populate the content of the {{HTMLElement("title")}} element:
+
+```js
+const newDoc = document.implementation.createHTMLDocument("My new document");
+console.log(newDoc);
+// <!DOCTYPE html>
+// <html>
+//   <head>
+//     <title>My new document</title>
+//   </head>
+//   <body></body>
+// </html>
+```
+
+The {{domxref("DOMImplementation/createDocument", "document.implementation.createDocument()")}} method creates an {{domxref("XMLDocument")}}. Instead of using the HTML doctype and `<html>` root element, you can choose your own doctype and root element. Since this guide doesn't talk about XML, we won't use this method ([XML namespaces](/en-US/docs/Web/API/Document_Object_Model/XML_namespaces) discusses this further).
+
+You can also use the {{domxref("Document/Document", "Document()")}} constructor directly to create a new, empty document. It takes no arguments, and results in a {{domxref("Document")}} with no content.
+
+To create {{domxref("DocumentType")}} nodes, you can use {{domxref("DOMImplementation/createDocumentType", "document.implementation.createDocumentType()")}}, passing three arguments corresponding to the [data properties of `DocumentType`](/en-US/docs/Web/API/Document_Object_Model/Anatomy_of_the_DOM#documenttype): `name`, `publicId`, `systemId`. But again, this is rarely needed unless you are creating a full document from scratch.
+
+All other nodes can be created via methods on the {{domxref("Document")}} object. Some of them also have constructors, but using the {{domxref("Document")}} methods works consistently.
+
+| Node type                            | Creation method                                                                                           | Constructor                                                                                                                   |
+| ------------------------------------ | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| {{domxref("Element")}}               | {{domxref("Document/createElement", "document.createElement(tagName)")}}                                  | N/A                                                                                                                           |
+| {{domxref("Text")}}                  | {{domxref("Document/createTextNode", "document.createTextNode(data)")}}                                   | {{domxref("Text/Text", "new Text(data)")}}                                                                                    |
+| {{domxref("Comment")}}               | {{domxref("Document/createComment", "document.createComment(data)")}}                                     | {{domxref("Comment/Comment", "new Comment(data)")}}                                                                           |
+| {{domxref("CDATASection")}}          | {{domxref("Document/createCDATASection", "document.createCDATASection(data)")}}                           | N/A                                                                                                                           |
+| {{domxref("ProcessingInstruction")}} | {{domxref("Document/createProcessingInstruction", "document.createProcessingInstruction(target, data)")}} | {{domxref("ProcessingInstruction/ProcessingInstruction", "new ProcessingInstruction(target, data)")}} {{experimental_inline}} |
+| {{domxref("Attr")}}                  | {{domxref("Document/createAttribute", "document.createAttribute(name)")}}                                 | N/A                                                                                                                           |
+
+`createCDATASection()` is only available on XML documents; calling it on an HTML document throws a `NotSupportedError` {{domxref("DOMException")}}.
+
+If you already have an existing node and want to create a copy of it, you can use {{domxref("Node/cloneNode", "node.cloneNode()")}}. It takes an optional boolean argument, `deep`, which indicates whether to clone just the node itself (`false`, the default), or its child nodes recursively as well (`true`).
+
+```js
+const original = document.createElement("div");
+original.className = "my-class";
+original.textContent = "Hello";
+
+const clone = original.cloneNode(true);
+console.log(clone.outerHTML); // <div class="my-class">Hello</div>
+
+const shallowClone = original.cloneNode(false);
+console.log(shallowClone.outerHTML); // <div class="my-class"></div>
+```
+
+But creating a node is just the beginning. Afterwards, you want to add child nodes, set attributes, and finally insert the new node into the document tree. We will look at these steps next.
+
+## Altering element attributes
+
+If you already have an {{domxref("Attr")}} node (either created with {{domxref("Document/createAttribute", "document.createAttribute()")}} or retrieved from an existing element), you can directly set its `value`, and insert it into an element's {{domxref("Element/attributes", "attributes")}} using {{domxref("NamedNodeMap/setNamedItem", "setNamedItem()")}}. It adds the attribute to the element, replacing and returning the existing `Attr` node if an attribute with the same name already exists.
+
+```js
+const element = document.createElement("div");
+const attr = document.createAttribute("data-example");
+attr.value = "my value";
+element.attributes.setNamedItem(attr);
+console.log(element.outerHTML);
+// <div data-example="my value"></div>
+```
+
+But there's a catch: if the `Attr` node is already attached to another element, the two elements cannot share it. You must either first detach it using {{domxref("NamedNodeMap/removeNamedItem", "removeNamedItem()")}}, or explicitly clone the attribute.
+
+```js
+const element1 = document.createElement("div");
+const element2 = document.createElement("div");
+const attr = document.createAttribute("data-example");
+attr.value = "my value";
+element1.attributes.setNamedItem(attr);
+// Now attr is attached to element1
+element2.attributes.setNamedItem(attr);
+// Uncaught DOMException: Attribute already in use
+
+element2.attributes.setNamedItem(attr.cloneNode(true)); // Works fine
+// Alternatively:
+element2.attributes.setNamedItem(
+  element1.attributes.removeNamedItem("data-example"),
+);
+```
+
+The `setNamedItem` and `removeNamedItem` methods also have their counterparts on `Element`, which are {{domxref("element.setAttributeNode()")}} and {{domxref("element.removeAttributeNode()")}}.
+
+It's a rare case that you have an existing {{domxref("Attr")}} node to work with. More commonly, you just have the attribute's name and value as strings. In that case, you can use {{domxref("element.setAttribute()")}} and {{domxref("element.removeAttribute()")}} directly:
+
+```js
+const element = document.createElement("div");
+element.setAttribute("data-example", "my value");
+console.log(element.outerHTML);
+// <div data-example="my value"></div>
+
+element.removeAttribute("data-example");
+console.log(element.outerHTML);
+// <div></div>
+```
+
+There's a convenience method, {{domxref("element.toggleAttribute()")}}, which adds the attribute if it doesn't exist, or removes it if it does. It takes an optional second boolean argument, which if provided forces the attribute to be added (`true`) or removed (`false`).
+
+```js
+const element = document.createElement("div");
+element.toggleAttribute("data-example"); // Attribute not present, so it is added
+console.log(element.outerHTML); // <div data-example=""></div>
+element.toggleAttribute("data-example"); // Attribute present, so it is removed
+console.log(element.outerHTML); // <div></div>
+```
+
+But it's often even more convenient to use [attribute reflection](/en-US/docs/Web/API/Document_Object_Model/Reflected_attributes) instead. The `Element` interface itself defines the {{domxref("Element/id", "id")}} and {{domxref("Element/className", "className")}} properties for manipulating the `id` and `class` attributes. Most standard HTML attributes have corresponding properties on the {{domxref("HTMLElement")}} interface and its subclasses. Similarly, standard SVG attributes are reflected on the {{domxref("SVGElement")}} interface and its subclasses. For example, the [`data-*`](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) attributes are reflected via the {{domxref("HTMLElement/dataset", "dataset")}} property:
+
+```js
+const element = document.createElement("div");
+element.dataset.example = "my value";
+console.log(element.outerHTML);
+// <div data-example="my value"></div>
+delete element.dataset.example;
+console.log(element.outerHTML);
+// <div></div>
+```
+
+The attributes that contain a space-separated list of tokens, such as [`class`](/en-US/docs/Web/HTML/Reference/Global_attributes/class) and [`rel`](/en-US/docs/Web/HTML/Reference/Attributes/rel), are reflected by {{domxref("DOMTokenList")}} properties, such as {{domxref("Element/classList", "classList")}} and {{domxref("HTMLLinkElement/relList", "relList")}}. These properties provide convenient methods for adding, removing, toggling, and replacing tokens in the list.
+
+```js
+const element = document.createElement("div");
+element.classList.add("class1");
+element.classList.add("class2");
+console.log(element.outerHTML);
+// <div class="class1 class2"></div>
+element.classList.remove("class1");
+console.log(element.outerHTML);
+// <div class="class2"></div>
+```
+
+## Altering text content
+
+Next, we consider updating the text content of an existing element. You can go the hard way of creating new `Text` nodes and then inserting them into the element children (see [Altering child nodes](#altering_child_nodes)). But if you are starting with an empty element, an easier way is to use the {{domxref("Node/textContent", "textContent")}} property of the {{domxref("Node")}} interface. Setting this property replaces all existing child nodes with a single new `Text` node containing the specified string, or with no nodes if the string is empty.
+
+```js
+const element = document.createElement("div");
+element.textContent = "Hello, world!";
+console.log(element.outerHTML);
+// <div>Hello, world!</div>
+```
+
+Here's a nice trick: to create an element and initialize its attributes and text content together, you can use the {{jsxref("Object.assign()")}} method, which is equivalent to assigning each of the properties one by one.
+
+```js
+const element = Object.assign(document.createElement("div"), {
+  id: "greeting",
+  className: "message",
+  textContent: "Hello, world!",
+});
+console.log(element.outerHTML);
+// <div id="greeting" class="message">Hello, world!</div>
+```
+
+Setting `textContent` will remove all of the node's existing contents. If you just want to update one of the child text nodes without removing it, you need to manipulate the data in that specific `Text` node directly. The methods for this are defined on the {{domxref("CharacterData")}} interface, which {{domxref("Text")}} inherits from: {{domxref("CharacterData/appendData", "appendData()")}}, {{domxref("CharacterData/insertData", "insertData()")}}, {{domxref("CharacterData/deleteData", "deleteData()")}}, and {{domxref("CharacterData/replaceData", "replaceData()")}}. `replaceData(offset, count, data)` is the most general of these, allowing you to replace a range of characters with new text. `appendData(data)` is equivalent to `replaceData(length, 0, data)`; `insertData(offset, data)` is equivalent to `replaceData(offset, 0, data)`; and `deleteData(offset, count)` is equivalent to `replaceData(offset, count, "")`.
+
+```js
+const element = document.createElement("div");
+element.innerHTML = "Hello, <strong>world</strong>!";
+const textNode = element.childNodes[0]; // "Hello, "
+textNode.replaceData(0, 5, "Hi");
+console.log(element.outerHTML);
+// <div>Hi, <strong>world</strong>!</div>
+```
+
+Because these methods are defined on {{domxref("CharacterData")}}, they also work on other node types that inherit from it, including {{domxref("Comment")}}, {{domxref("CDATASection")}}, and {{domxref("ProcessingInstruction")}}.
+
+## Altering child nodes
+
+The {{domxref("Node")}} interface defines several methods for manipulating the child list. Just like data in a text node, you can insert, append, remove, or replace child nodes, using {{domxref("Node/insertBefore", "insertBefore()")}}, {{domxref("Node/appendChild", "appendChild()")}}, {{domxref("Node/removeChild", "removeChild()")}}, and {{domxref("Node/replaceChild", "replaceChild()")}} respectively.
+
+```js
+const parent = document.createElement("div");
+const child1 = document.createElement("p");
+child1.textContent = "1";
+const child2 = document.createElement("p");
+child2.textContent = "2";
+const child3 = document.createElement("p");
+child3.textContent = "3";
+parent.appendChild(child1); // <div><p>1</p></div>
+parent.appendChild(child2); // <div><p>1</p><p>2</p></div>
+parent.removeChild(child1); // <div><p>2</p></div>
+parent.replaceChild(child3, child2); // <div><p>3</p></div>
+parent.insertBefore(child1, child3); // <div><p>1</p><p>3</p></div>
+```
 
 > [!NOTE]
-> This guide demonstrates both generic DOM methods and methods specific to HTML elements.
+> Removing or replacing a node detaches it from the tree but does not destroy the node object. If you still have a reference to the node, you can continue to modify it and insert it elsewhere, as the example does with `child1` after calling `removeChild()`.
 
-## Creating an HTML table dynamically
+There's another set of more modern methods for adding children: {{domxref("Element/prepend", "prepend()")}}, {{domxref("Element/append", "append()")}}, {{domxref("Element/replaceChildren", "replaceChildren()")}}. Compared to the four methods above, there are three important differences:
 
-### Example
-
-In this example we add a new table to the page when a button is clicked.
-
-#### HTML
-
-```html
-<input type="button" value="Generate a table" />
-```
-
-#### JavaScript
+1. Instead of being defined on {{domxref("Node")}}, these methods are defined only on the node types that can have children: {{domxref("Element")}}, {{domxref("Document")}}, and {{domxref("DocumentFragment")}}.
+2. They can take multiple arguments, allowing multiple children to be inserted at once.
+3. In addition to node objects, they can also take strings as arguments, which are automatically converted to `Text` nodes.
 
 ```js
-function generateTable() {
-  // creates a <table> element and a <tbody> element
-  const tbl = document.createElement("table");
-  const tblBody = document.createElement("tbody");
-
-  // creating all cells
-  for (let i = 0; i < 2; i++) {
-    // creates a table row
-    const row = document.createElement("tr");
-
-    for (let j = 0; j < 2; j++) {
-      // Create a <td> element and a text node, make the text
-      // node the contents of the <td>, and put the <td> at
-      // the end of the table row
-      const cell = document.createElement("td");
-      const cellText = document.createTextNode(`cell in row ${i}, column ${j}`);
-      cell.appendChild(cellText);
-      row.appendChild(cell);
-    }
-
-    // add the row to the end of the table body
-    tblBody.appendChild(row);
-  }
-
-  // put the <tbody> in the <table>
-  tbl.appendChild(tblBody);
-  // appends <table> into <body>
-  document.body.appendChild(tbl);
-  // sets the border attribute of tbl to '2'
-  tbl.setAttribute("border", "2");
-}
-
-document
-  .querySelector("input[type='button']")
-  .addEventListener("click", generateTable);
+const parent = document.createElement("div");
+parent.append("world!");
+parent.prepend("Hello, ");
+console.log(parent.outerHTML);
+// <div>Hello, world!</div>
+parent.replaceChildren(
+  Object.assign(document.createElement("p"), {
+    textContent: "This is a new content.",
+  }),
+);
+console.log(parent.outerHTML);
+// <div><p>This is a new content.</p></div>
 ```
 
-```css hidden
-table {
-  margin: 1rem auto;
-}
+To remove all child nodes of an `Element`, you can use `element.textContent = ""`.
 
-td {
-  padding: 0.5rem;
-}
-```
-
-#### Result
-
-{{ EmbedLiveSample('Example') }}
-
-### Explanation
-
-Note the order in which we created the elements and the text node:
-
-1. First we created the `<table>` element.
-2. Next, we created the `<tbody>` element, which is a child of the `<table>` element.
-3. Next, we used a loop to create the `<tr>` elements, which are children of the `<tbody>` element.
-4. For each `<tr>` element, we used a loop to create the `<td>` elements, which are children of `<tr>` elements.
-5. For each `<td>` element, we then created the text node with the table cell's text.
-
-Once we have created the `<table>`, `<tbody>`, `<tr>`, and `<td>` elements, and then the text node, we then append each object to its parent in the opposite order:
-
-1. First, we attach each text node to its parent `<td>` element using
-
-   ```js
-   cell.appendChild(cellText);
-   ```
-
-2. Next, we attach each `<td>` element to its parent `<tr>` element using
-
-   ```js
-   row.appendChild(cell);
-   ```
-
-3. Next, we attach each `<tr>` element to the parent `<tbody>` element using
-
-   ```js
-   tblBody.appendChild(row);
-   ```
-
-4. Next, we attach the `<tbody>` element to its parent `<table>` element using
-
-   ```js
-   tbl.appendChild(tblBody);
-   ```
-
-5. Next, we attach the `<table>` element to its parent `<body>` element using
-
-   ```js
-   document.body.appendChild(tbl);
-   ```
-
-Remember this technique. You will use it frequently in programming for the W3C DOM. First, you create elements from the top down; then you attach the children to the parents from the bottom up.
-
-Here's the HTML markup generated by the JavaScript code:
-
-```html
-<table border="2">
-  <tbody>
-    <tr>
-      <td>cell is row 0 column 0</td>
-      <td>cell is row 0 column 1</td>
-    </tr>
-    <tr>
-      <td>cell is row 1 column 0</td>
-      <td>cell is row 1 column 1</td>
-    </tr>
-  </tbody>
-</table>
-```
-
-Here's the DOM object tree generated by the code for the `<table>` element and its child elements:
-
-![How a DOM object tree is generated from the main element and its children](sample1-tabledom.jpg)
-
-You can build this table and its internal child elements by using just a few DOM methods. Remember to keep in mind the tree model for the structures you are planning to create; this will make it easier to write the necessary code. In the `<table>` tree of Figure 1 the element `<table>` has one child: the element `<tbody>`. `<tbody>` has two children. Each `<tbody>`'s child (`<tr>`) has two children (`<td>`). Finally, each `<td>` has one child: a text node.
-
-## Setting the background color of a paragraph
-
-### Example
-
-In this example we change the background color of a paragraph when a button is clicked.
-
-#### HTML
-
-```html
-<body>
-  <input type="button" value="Set paragraph background color" />
-  <p>hi</p>
-  <p>hello</p>
-</body>
-```
-
-#### JavaScript
+Calling any of these methods requires you to already have a reference to the parent node. This may not always be convenient. If you have a reference to a _child_ node, you can still insert new nodes before or after it, replace it, or remove it from its parent, using {{domxref("Element/before", "before()")}}, {{domxref("Element/after", "after()")}}, {{domxref("Element/replaceWith", "replaceWith()")}}, and {{domxref("Element/remove", "remove()")}} respectively.
 
 ```js
-function setBackground() {
-  // now, get all the p elements in the document
-  const paragraphs = document.getElementsByTagName("p");
-
-  // get the second paragraph from the list
-  const secondParagraph = paragraphs[1];
-
-  // set the inline style
-  secondParagraph.style.background = "red";
-}
-
-document.querySelector("input").addEventListener("click", setBackground);
+const parent = document.createElement("div");
+const child = document.createElement("p");
+child.textContent = "Hello, world!";
+parent.appendChild(child);
+child.before("Greetings!");
+child.after("Thank you!");
+console.log(parent.outerHTML); // <div>Greetings!<p>Hello, world!</p>Thank you!</div>
+child.replaceWith(" ");
+console.log(parent.outerHTML); // <div>Greetings! Thank you!</div>
 ```
 
-#### Result
+These methods, like `prepend()`, `append()`, and `replaceChildren()`, can also take multiple arguments, and automatically convert strings to `Text` nodes. They are only defined on nodes that can have parents: {{domxref("DocumentType")}}, {{domxref("Element")}}, and {{domxref("CharacterData")}}.
 
-{{ EmbedLiveSample('Example_2') }}
-
-### Explanation
-
-`getElementsByTagName(tagNameValue)` is a method available in any DOM {{domxref("Element")}} or the root {{domxref("Document")}} element. When called, it returns an array with all of the element's descendants matching the tag name. The first element of the list is located at position `[0]` in the array.
-
-We've performed following steps:
-
-1. First, we get all the `p` elements in the document:
-
-   ```js
-   const paragraphs = document.getElementsByTagName("p");
-   ```
-
-2. Then we get the second paragraph element from the list of `p` elements:
-
-   ```js
-   const secondParagraph = paragraphs[1];
-   ```
-
-   ![A paragraph element is added as a new sibling to an existing paragraph in a DOM tree](sample2a2.jpg)
-
-3. Finally, we set background color to red using the {{domxref("HTMLElement.style", "style")}} property of the {{domxref("HTMLParagraphElement", "paragraph")}} object:
-
-   ```js
-   secondParagraph.style.background = "red";
-   ```
-
-### Creating TextNodes with document.createTextNode("..")
-
-Use the document object to invoke the `createTextNode` method and create your text node. You just need to pass the text content. The return value is an object that represents the text node.
+There are two specialized methods defined for {{domxref("Element")}}: {{domxref("Element/insertAdjacentElement", "insertAdjacentElement()")}} and {{domxref("Element/insertAdjacentText", "insertAdjacentText()")}}. These methods also insert a new element or text node relative to an existing element, but take an argument specifying the position relative to the existing element. If it's `"beforebegin"` or `"afterend"`, the new node is inserted as a sibling before or after the existing element (like `before()`/`after()`). If it's `"afterbegin"` or `"beforeend"`, the new node is inserted as the first or last child of the existing element (like `prepend()`/`append()`).
 
 ```js
-myTextNode = document.createTextNode("world");
+const parent = document.createElement("div");
+const child = document.createElement("p");
+child.textContent = "Test";
+parent.appendChild(child);
+child.insertAdjacentText("beforebegin", "text before");
+child.insertAdjacentText("afterend", "text after");
+child.insertAdjacentElement("afterbegin", document.createElement("strong"));
+child.insertAdjacentElement("beforeend", document.createElement("em"));
+console.log(parent.outerHTML);
+// <div>text before<p><strong></strong>Test<em></em></p>text after</div>
 ```
 
-This means that you have created a node of the type `TEXT_NODE` (a piece of text) whose text data is `"world"`, and `myTextNode` is your reference to this node object. To insert this text into your HTML page, you need to make this text node a child of some other node element.
+If the new child node is already attached to another parent, it is first removed from that parent before being inserted into the new parent. Removing and re-inserting a node resets its state, such as [animation](/en-US/docs/Web/CSS/CSS_animations) and [transition](/en-US/docs/Web/CSS/CSS_transitions) state. The {{domxref("Element/moveBefore", "moveBefore()")}} method can move an already-connected node within the same document without resetting its state. Like `prepend()`, `append()`, and `replaceChildren()`, `moveBefore()` is defined on `Element`, `Document`, and `DocumentFragment`.
 
-### Inserting Elements with appendChild(..)
+At all times, the tree [invariants](/en-US/docs/Glossary/Invariant) introduced in [Anatomy of the DOM](/en-US/docs/Web/API/Document_Object_Model/Anatomy_of_the_DOM) are maintained:
 
-So, by calling `secondParagraph.appendChild(node_element)`, you are making the element a new child of the second `<p>` element.
+- The child to be inserted cannot be an ancestor of the parent node.
+- When calling `node.appendChild(newChild)`, or `node.insertBefore(newChild, referenceChild)`, `node` must be one of the node types that can have children (`Document`, `DocumentFragment`, or `Element`).
+- If the parent is a `Document`, then the new child must be an `Element`, `DocumentType`, `ProcessingInstruction`, or `Comment`, or a `DocumentFragment` whose children meet these constraints. Furthermore, only one `Element` and one `DocumentType` node can exist as children, and the `DocumentType` node must come before the `Element` node.
+- If the parent is a `DocumentFragment` or `Element`, the new child must be a `DocumentFragment`, `Element`, or `CharacterData` node. Inserting a `DocumentFragment` inserts its children, which must themselves be `Element` or `CharacterData` nodes.
+- When calling with a reference child, the reference child must be an existing child of the parent node.
+
+If any of these invariants are violated, a `DOMException` is thrown.
+
+## Merging and splitting text node children
+
+Though this can't happen when parsed from an HTML document, it is possible to have multiple adjacent `Text` node children after some DOM manipulations. These `Text` nodes visually appear as a single block of text, but they are separate nodes in the DOM tree. This can lead to unexpected behavior when manipulating the text content.
+
+The {{domxref("Text/wholeText", "wholeText")}} property of the {{domxref("Text")}} interface returns the concatenated text content of all adjacent `Text` nodes.
 
 ```js
-secondParagraph.appendChild(myTextNode);
+const parent = document.createElement("div");
+parent.append("Hello, ");
+parent.append("world!");
+const firstTextNode = parent.childNodes[0];
+console.log(firstTextNode.data); // "Hello, "
+console.log(firstTextNode.wholeText); // "Hello, world!"
 ```
 
-After testing this sample, note that the words hello and world are together: helloworld. So visually, when you see the HTML page it seems like the two text nodes hello and world are a single node, but remember that in the document model, there are two nodes. The second node is a new node of type `TEXT_NODE`, and it is the second child of the second `<p>` tag. The following figure shows the recently created Text Node object inside the document tree.
+You can split a `Text` node into two nodes at a particular position using {{domxref("Text/splitText", "splitText()")}}, which allows you to insert nodes in between. You can also merge adjacent `Text` nodes using {{domxref("Node/normalize", "normalize()")}} on the parent node, which combines all contiguous `Text` nodes into the first one.
 
-![Text nodes in a paragraph element as individual siblings in the DOM tree.](sample2b2.jpg)
+```js
+const parent = document.createElement("div");
+parent.append("Hello, ");
+parent.append("world!");
+parent.normalize();
+console.log(parent.childNodes.length); // 1
+console.log(parent.childNodes[0].data); // "Hello, world!"
+```
+
+## Using DocumentFragment
+
+We've been mentioning the {{domxref("DocumentFragment")}} node type a lot, but we haven't formally introduced it yet. It is another node type, with {{domxref("Node/nodeType", "nodeType")}} value `Node.DOCUMENT_FRAGMENT_NODE` (`11`). It implements the `Node` interface and has the same children constraints as {{domxref("Element")}}. When a `DocumentFragment` is passed to an insertion method, the fragment itself is not inserted. Instead, its children are inserted in its place, and the `DocumentFragment` is emptied.
+
+You can create a `DocumentFragment` using {{domxref("Document/createDocumentFragment", "document.createDocumentFragment()")}}, or the {{domxref("DocumentFragment/DocumentFragment", "new DocumentFragment()")}} constructor. Here's an example of using it to batch-insert multiple child nodes into an element:
+
+```js
+const parent = document.createElement("div");
+const fragment = document.createDocumentFragment();
+const child1 = document.createElement("p");
+child1.textContent = "Child 1";
+fragment.appendChild(child1);
+const child2 = document.createElement("p");
+child2.textContent = "Child 2";
+fragment.appendChild(child2);
+parent.appendChild(fragment);
+console.log(parent.outerHTML);
+// <div><p>Child 1</p><p>Child 2</p></div>
+console.log(fragment.childNodes.length); // 0
+console.log(parent.childNodes.length); // 2
+```
+
+As noted in the {{domxref("DocumentFragment")}} documentation, the performance benefit of `DocumentFragment` is overstated—inserting children into a `DocumentFragment` and then inserting the `DocumentFragment` into the document tree is not significantly faster than inserting the children directly into the document tree. The main advantages of using `DocumentFragment` are:
+
+- It allows functions to return multiple nodes as a single object that is readily insertable, unlike an array of nodes.
+- {{domxref("ShadowRoot")}} nodes inherit from `DocumentFragment`, so understanding how to work with `DocumentFragment` is necessary for working with [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM), which is beyond the scope of this guide.
+- When using the HTML {{HTMLElement("template")}} element, you can declaratively create a reusable `DocumentFragment` in HTML markup:
+
+```html live-sample___template
+<template id="my-template">
+  <p>Template content 1</p>
+  <p>Template content 2</p>
+</template>
+<div id="container1"></div>
+<div id="container2"></div>
+```
+
+```js live-sample___template
+const template = document.getElementById("my-template");
+const container1 = document.getElementById("container1");
+const container2 = document.getElementById("container2");
+
+// template.content is a DocumentFragment
+container1.appendChild(document.importNode(template.content, true));
+container2.appendChild(document.importNode(template.content, true));
+```
+
+{{EmbedLiveSample("template", "", 200)}}
+
+## Node connectivity
+
+When a node is created, it is not connected to the document tree, but it is usually _owned_ by a document. You can check whether a node is connected to a document, either directly or through a shadow tree, using the {{domxref("Node/isConnected", "isConnected")}} property of the {{domxref("Node")}} interface.
+
+```js
+const element = document.createElement("div");
+console.log(element.isConnected); // false
+document.body.appendChild(element);
+console.log(element.isConnected); // true
+```
+
+You can check which document owns a node using the {{domxref("Node/ownerDocument", "ownerDocument")}} property of the {{domxref("Node")}} interface.
+
+- `Document` nodes own themselves, but their `ownerDocument` is `null`.
+- Nodes created with methods on a `Document` are owned by that document.
+- Nodes created with constructors are owned by the current global `document`.
+
+```js
+const doc1 = document.implementation.createHTMLDocument("Doc 1");
+const element1 = doc1.createElement("div");
+console.log(element1.ownerDocument === doc1); // true
+const text1 = new Text("Hello");
+console.log(text1.ownerDocument === document); // true
+```
+
+To transfer a node between documents, use {{domxref("Document/importNode", "document.importNode()")}} or {{domxref("Document/adoptNode", "document.adoptNode()")}}. `importNode()` creates a copy owned by the calling document, leaving the original node unchanged. Its second argument controls whether descendants are copied: pass `true` for a deep copy, or `{ selfOnly: true }` option to copy only the node itself. `adoptNode()` instead removes the original node from its parent, changes the `ownerDocument` of the node and its descendants, and returns the same node. Neither method inserts the resulting node into the document tree.
 
 > [!NOTE]
-> `createTextNode()` and `appendChild()` is a simple way to include white space between the words _hello_ and _world_. Another important note is that the `appendChild` method will append the child after the last child, just like the word _world_ has been added after the word _hello_. So if you want to append a text node between _hello_ and _world_, you will need to use `insertBefore` instead of `appendChild`.
+> Avoid using `Node.cloneNode()` if the cloned node will be used in another document, because new node is created in the context of the current document. The {{domxref("Node.cloneNode()")}} reference provides more information.
 
-### Creating New Elements with the document object and the createElement(..) method
+## Example: building an element tree using DOM APIs
 
-You can create new HTML elements or any other element you want with `createElement`. For example, if you want to create a new `<p>` element as a child of the `<body>` element, you can use the `myBody` in the previous example and append a new element node. To create a node call `document.createElement("tagname")`. For example:
-
-```js
-myNewPTagNode = document.createElement("p");
-myBody.appendChild(myNewPTagNode);
-```
-
-![How a new node element is appended to the text node object inside the document tree](sample2c.jpg)
-
-### Removing nodes with the removeChild(..) method
-
-Nodes can be removed. The following code removes text node `myTextNode` (containing the word "world") from the second `<p>` element, `secondParagraph`.
-
-```js
-secondParagraph.removeChild(myTextNode);
-```
-
-Text node `myTextNode` (containing the word "world") still exists. The following code attaches `myTextNode` to the recently created `<p>` element, `myNewPTagNode`.
-
-```js
-myNewPTagNode.appendChild(myTextNode);
-```
-
-The final state for the modified object tree looks like this:
-
-![Creating and appending a new node element to the object tree text structure](sample2d.jpg)
-
-## Creating a table dynamically
-
-The following figure shows the table object tree structure for the table created in the sample.
-
-### Reviewing the HTML Table structure
+We combine the techniques we learned above to create a table and add it to the page. The following figure shows the table object tree structure for the table created in the example.
 
 ![The HTML table object tree structure after adding new node elements](sample1-tabledom.jpg)
 
-### Creating element nodes and inserting them into the document tree
-
 The basic steps to create the table are:
 
-- Get the body object (first item of the document object).
+- Get the document's body element.
 - Create all the elements.
 - Finally, append each child according to the table structure (as in the above figure).
 
-> [!NOTE]
-> At the end of the script, there is a new line of code. The table's `border` property was set using another DOM method, `setAttribute()`. `setAttribute()` has two arguments: the attribute name and the attribute value. You can set any attribute of any element using the `setAttribute` method.
-
 ```js
-// get the reference for the body
-const myBody = document.getElementsByTagName("body")[0];
-
 // creates <table> and <tbody> elements
 const myTable = document.createElement("table");
 const myTableBody = document.createElement("tbody");
@@ -312,75 +413,153 @@ for (let j = 0; j < 3; j++) {
 // appends <tbody> into <table>
 myTable.appendChild(myTableBody);
 // appends <table> into <body>
-myBody.appendChild(myTable);
-// sets the border attribute of myTable to 2;
-myTable.setAttribute("border", "2");
+document.body.appendChild(myTable);
 ```
 
-## Manipulating the table with DOM and CSS
+## Modifying the DOM tree using HTML DOM and CSSOM
 
-### Getting a text node from the table
+The DOM APIs described above work across document types. Other web platform APIs augment them with operations designed for HTML documents and their presentation.
 
-This example introduces two new DOM attributes. First it uses the `childNodes` attribute to get the list of child nodes of myCell. The `childNodes` list includes all child nodes, regardless of what their name or type is. Like `getElementsByTagName()`, it returns a list of nodes.
+### Updating inline styles with the CSSOM
 
-The differences are that (a) `getElementsByTagName()` only returns elements of the specified tag name; and (b) `childNodes` includes all descendants at any level, not just immediate children.
+The [CSS object model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) augments HTML elements with the {{domxref("HTMLElement/style", "style")}} property. It returns a live {{domxref("CSSStyleProperties")}} object that represents the element's inline [`style`](/en-US/docs/Web/HTML/Reference/Global_attributes/style) attribute. You can update individual CSS properties on this object using camel-cased names, such as `backgroundColor`, without replacing the element's other inline styles.
 
-Once you have the returned list, use `[x]` method to retrieve the desired child item. This example stores in `myCellText` the text node of the second cell in the second row of the table.
+For predefined presentation states, it is often better to define the styles in a stylesheet and use {{domxref("Element/classList", "classList")}} to change the element's classes. The `style` property is useful when an inline value needs to be calculated or changed directly.
 
-Then, to display the results in this example, it creates a new text node whose content is the data of `myCellText`, and appends it as a child of the `<body>` element.
+In this example, we change the background color of the second paragraph when the button is clicked.
+
+```html live-sample___set-background
+<button type="button">Set paragraph background color</button>
+<p>First paragraph</p>
+<p>Second paragraph</p>
+```
+
+```js live-sample___set-background
+const button = document.querySelector("button");
+const paragraphs = document.querySelectorAll("p");
+
+button.addEventListener("click", () => {
+  paragraphs[1].style.backgroundColor = "red";
+});
+```
+
+{{EmbedLiveSample("set-background")}}
+
+### Parsing and serializing HTML
+
+When content is already available as an HTML string, the HTML DOM provides APIs that invoke the HTML parser instead of requiring you to create every node individually. Getting the {{domxref("Element/innerHTML", "innerHTML")}} property serializes an element's descendants as an HTML string. Setting it parses the supplied markup in the element's context and replaces all of the element's descendants with the resulting nodes.
+
+Like `insertAdjacentElement()`, the {{domxref("Element/insertAdjacentHTML", "insertAdjacentHTML()")}} method also inserts nodes at one of the same four positions: `"beforebegin"`, `"afterbegin"`, `"beforeend"`, or `"afterend"`. It takes raw HTML and parses it to get the nodes to insert. Unlike appending to `innerHTML`, it does not serialize and reparse the element's existing descendants.
+
+```js
+const container = document.createElement("div");
+container.innerHTML = "<p>Hello, <strong>world</strong>!</p>";
+container.insertAdjacentHTML("beforeend", "<p>Welcome!</p>");
+console.log(container.outerHTML);
+// <div><p>Hello, <strong>world</strong>!</p><p>Welcome!</p></div>
+```
+
+`innerHTML` and `insertAdjacentHTML()` are [injection sinks](/en-US/docs/Web/API/Trusted_Types_API#concepts_and_usage). They do not sanitize their input, so passing an attacker-controlled string can enable [cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS), for example through event handler attributes in the injected markup.
+
+- If the input is intended to be plain text, use {{domxref("Node/textContent", "textContent")}} or {{domxref("Element/insertAdjacentText", "insertAdjacentText()")}} so it is not parsed as markup.
+- If untrusted input must contain markup, sanitize it with a well-maintained sanitizer. You use the [`require-trusted-types-for`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for) Content Security Policy directive to enable [Trusted Types](/en-US/docs/Web/API/Trusted_Types_API), and pass {{domxref("TrustedHTML")}} objects.
+
+### Using specialized HTML DOM APIs
+
+The [HTML DOM API](/en-US/docs/Web/API/HTML_DOM_API) defines the various interfaces for HTML elements. The interfaces for common HTML element trees provide convenience methods that are often more direct and less error-prone than manipulating the generic DOM tree. Similar specialized APIs are available for SVG and MathML elements.
+
+This example builds the exact same table tree as the [Building an element tree using DOM APIs](#example_building_an_element_tree_using_dom_apis) using the methods on {{domxref("HTMLTableElement")}}, {{domxref("HTMLTableRowElement")}}, etc.
+
+```js
+const myTable = document.createElement("table");
+const myTableBody = myTable.createTBody();
+
+for (let j = 0; j < 3; j++) {
+  const myCurrentRow = myTableBody.insertRow();
+
+  for (let i = 0; i < 4; i++) {
+    const myCurrentCell = myCurrentRow.insertCell();
+    myCurrentCell.textContent = `cell is row ${j}, column ${i}`;
+  }
+}
+
+document.body.appendChild(myTable);
+```
+
+The {{domxref("HTMLTableElement/createTBody", "createTBody()")}} method creates a {{HTMLElement("tbody")}} element and inserts it into the table. Similarly, {{domxref("HTMLTableSectionElement/insertRow", "insertRow()")}} creates and inserts a {{HTMLElement("tr")}} element, and {{domxref("HTMLTableRowElement/insertCell", "insertCell()")}} creates and inserts a {{HTMLElement("td")}} element. These methods return the element they inserted, so the example can immediately update or add children to it.
+
+## Observing DOM changes
+
+Changes to an observed node or its descendants can be detected using the {{domxref("MutationObserver")}} API. This allows you to run custom code in response to nodes being added or removed, attributes changing, or character data being modified. Changes outside the observed target, or outside its descendants when `subtree` is `false`, are not reported.
 
 > [!NOTE]
-> If your object is a text node, you can use the data attribute and retrieve the text content of the node.
+> Usually, if you are manipulating the DOM yourself, you don't need `MutationObserver` at all because you can just execute code _while_ you update the DOM tree. Only use it if you have external actors working on your DOM tree, like if you writing an extension or you allow users to update the page.
+
+You use an observer in three steps:
+
+- Create an observer by passing a callback to the {{domxref("MutationObserver/MutationObserver", "MutationObserver()")}} constructor.
+- Call {{domxref("MutationObserver/observe", "observe()")}} with the node to watch and the kinds of changes to report. Now each time a DOM change happens, the callback runs asynchronously and receives an array of {{domxref("MutationRecord")}} objects.
+- Call {{domxref("MutationObserver/disconnect", "disconnect()")}} to stop observing all targets and discard any queued records. The observer can be reused by calling `observe()` again.
 
 ```js
-const myBody = document.getElementsByTagName("body")[0];
-const myTable = myBody.getElementsByTagName("table")[0];
-const myTableBody = myTable.getElementsByTagName("tbody")[0];
-const myRow = myTableBody.getElementsByTagName("tr")[1];
-const myCell = myRow.getElementsByTagName("td")[1];
+const container = document.createElement("div");
+document.body.appendChild(container);
 
-// first item element of the childNodes list of myCell
-const myCellText = myCell.childNodes[0];
-
-// content of currentText is the data content of myCellText
-const currentText = document.createTextNode(myCellText.data);
-myBody.appendChild(currentText);
-```
-
-### Getting an attribute value
-
-At the end of sample1 there is a call to `setAttribute` on the `myTable` object. This call was used to set the border property of the table. To retrieve the value of the attribute, use the `getAttribute` method:
-
-```js
-myTable.getAttribute("border");
-```
-
-### Hiding a column by changing style properties
-
-Once you have the object in your JavaScript variable, you can set `style` properties directly. The following code is a modified version in which each cell of the second column is hidden and each cell of the first column is changed to have a red background. Note that the `style` property was set directly.
-
-```js
-const myBody = document.getElementsByTagName("body")[0];
-const myTable = document.createElement("table");
-const myTableBody = document.createElement("tbody");
-
-for (let row = 0; row < 2; row++) {
-  const myCurrentRow = document.createElement("tr");
-  for (let col = 0; col < 2; col++) {
-    const myCurrentCell = document.createElement("td");
-    const currentText = document.createTextNode(`cell is: ${row}${col}`);
-    myCurrentCell.appendChild(currentText);
-    myCurrentRow.appendChild(myCurrentCell);
-    // set the cell background color
-    // if the column is 0. If the column is 1 hide the cell
-    if (col === 0) {
-      myCurrentCell.style.background = "red";
-    } else {
-      myCurrentCell.style.display = "none";
+const observer = new MutationObserver((records) => {
+  for (const record of records) {
+    if (record.type === "childList") {
+      console.log("Added nodes:", record.addedNodes);
+      console.log("Removed nodes:", record.removedNodes);
+    } else if (record.type === "attributes") {
+      console.log(`${record.attributeName} changed from ${record.oldValue}`);
+    } else if (record.type === "characterData") {
+      console.log(`Text changed from ${record.oldValue}`);
     }
   }
-  myTableBody.appendChild(myCurrentRow);
-}
-myTable.appendChild(myTableBody);
-myBody.appendChild(myTable);
+});
+
+observer.observe(container, {
+  childList: true,
+  attributes: true,
+  characterData: true,
+  subtree: true,
+  attributeOldValue: true,
+  characterDataOldValue: true,
+});
+
+const paragraph = document.createElement("p");
+container.appendChild(paragraph); // A childList mutation
+paragraph.setAttribute("class", "intro"); // An attributes mutation
+paragraph.textContent = "Hello"; // A childList mutation
+paragraph.firstChild.data = "Welcome"; // A characterData mutation
 ```
+
+The options passed to `observe()` determine which records are created. The observer must be configured to watch at least one of `childList`, `attributes`, or `characterData`; otherwise, `observe()` throws a `TypeError`.
+
+- `attributes` defaults to `true` if `attributeOldValue` or `attributeFilter` is specified. `attributeOldValue` includes the previous value in {{domxref("MutationRecord/oldValue", "oldValue")}}, `attributeFilter` limits attribute records to the listed attribute names.
+- `characterData` defaults to `true` if `characterDataOldValue` is specified. `characterDataOldValue` includes the previous value in {{domxref("MutationRecord/oldValue", "oldValue")}}.
+
+Each mutation record's {{domxref("MutationRecord/type", "type")}} identifies the kind of change. Its {{domxref("MutationRecord/target", "target")}} is the node whose children, attributes, or character data changed.
+
+- For `childList` records, {{domxref("MutationRecord/addedNodes", "addedNodes")}} and {{domxref("MutationRecord/removedNodes", "removedNodes")}} contain the affected nodes, while {{domxref("MutationRecord/previousSibling", "previousSibling")}} and {{domxref("MutationRecord/nextSibling", "nextSibling")}} describe their position.
+- For `attributes` records, {{domxref("MutationRecord/attributeName", "attributeName")}} and {{domxref("MutationRecord/attributeNamespace", "attributeNamespace")}} identify the changed attribute.
+- For `characterData` records, there are no special properties by default, although you can enable `characterDataOldValue` to observe the `oldValue`.
+
+Call {{domxref("MutationObserver/takeRecords", "takeRecords()")}} to remove and synchronously retrieve records that are queued but have not yet been delivered to the callback.
+
+## Summary
+
+Here are all the features we've introduced so far. With these methods, you can build any DOM tree shape that you desire.
+
+- To create documents: the {{domxref("Document/Document", "Document()")}} constructor, and the {{domxref("DOMImplementation/createHTMLDocument", "createHTMLDocument()")}}, {{domxref("DOMImplementation/createDocument", "createDocument()")}}, and {{domxref("DOMImplementation/createDocumentType", "createDocumentType()")}} methods.
+- To create other node types: {{domxref("Document/createElement", "createElement()")}}, {{domxref("Document/createTextNode", "createTextNode()")}}, {{domxref("Document/createComment", "createComment()")}}, {{domxref("Document/createCDATASection", "createCDATASection()")}}, {{domxref("Document/createProcessingInstruction", "createProcessingInstruction()")}}, {{domxref("Document/createAttribute", "createAttribute()")}}, and {{domxref("Document/createDocumentFragment", "createDocumentFragment()")}}, as well as the constructors available for some node types.
+- To copy or transfer nodes: {{domxref("Node.cloneNode()")}}, {{domxref("document.importNode()")}}, and {{domxref("document.adoptNode()")}}. Use `cloneNode()` for cloning in the same document, and `document.importNode()` for transferring across documents.
+- To modify element attributes: {{domxref("Element/setAttribute", "setAttribute()")}}, {{domxref("Element/removeAttribute", "removeAttribute()")}}, {{domxref("Element/toggleAttribute", "toggleAttribute()")}}, {{domxref("Element/setAttributeNode", "setAttributeNode()")}}, and {{domxref("Element/removeAttributeNode", "removeAttributeNode()")}}, as well as reflected properties such as {{domxref("Element/id", "id")}}, {{domxref("Element/className", "className")}}, and {{domxref("Element/classList", "classList")}}.
+- To modify character data: {{domxref("Node/textContent", "textContent")}}, and the {{domxref("CharacterData/appendData", "appendData()")}}, {{domxref("CharacterData/insertData", "insertData()")}}, {{domxref("CharacterData/deleteData", "deleteData()")}}, and {{domxref("CharacterData/replaceData", "replaceData()")}} methods.
+- To modify a node's children: {{domxref("Node/insertBefore", "insertBefore()")}}, {{domxref("Node/appendChild", "appendChild()")}}, {{domxref("Node/replaceChild", "replaceChild()")}}, and {{domxref("Node/removeChild", "removeChild()")}}. The newer {{domxref("Element/prepend", "prepend()")}}, {{domxref("Element/append", "append()")}}, and {{domxref("Element/replaceChildren", "replaceChildren()")}} methods can insert multiple nodes and strings.
+- To modify a node relative to its parent or siblings: {{domxref("Element/before", "before()")}}, {{domxref("Element/after", "after()")}}, {{domxref("Element/replaceWith", "replaceWith()")}}, {{domxref("Element/remove", "remove()")}}, {{domxref("Element/insertAdjacentElement", "insertAdjacentElement()")}}, and {{domxref("Element/insertAdjacentText", "insertAdjacentText()")}}. The {{domxref("Element/moveBefore", "moveBefore()")}} method moves a node without resetting its state.
+- To work with adjacent text nodes: {{domxref("Text/wholeText", "wholeText")}}, {{domxref("Text/splitText", "splitText()")}}, and {{domxref("Node/normalize", "normalize()")}}.
+- The {{domxref("DocumentFragment")}} node groups multiple nodes for insertion without itself becoming part of the resulting tree.
+- The {{domxref("Node/isConnected", "isConnected")}} and {{domxref("Node/ownerDocument", "ownerDocument")}} properties describe a node's connection to and ownership by a document.
+- Downstream HTML DOM and CSSOM APIs provide specialized element interfaces and operations tailored to particular element types.
+- To observe DOM changes: the {{domxref("MutationObserver")}} interface and the {{domxref("MutationRecord")}} objects delivered to its callback.
