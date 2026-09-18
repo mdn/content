@@ -478,7 +478,39 @@ There has been a lot written about best practices for writing tests. You can fin
 
 In addition, we should mention test results/reporting — we've been reporting results in our above examples using simple `console.log()` statements, but this is all done in JavaScript, so you can use whatever test running and reporting system you want, be it [Mocha](https://mochajs.org/), [Chai](https://www.chaijs.com/), or some other tool. Let's work through a quick example:
 
-1. Make a local copy of our [`mocha_test.js`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/selenium/mocha_test.js) example inside your project directory. Put it inside a subfolder called `test`. This example uses a long chain of promises to run all the steps required in our test — the promise-based methods WebDriver uses need to resolve for it to work properly.
+1. Create a new file inside your project directory called `mocha_test.js`; put it inside a subfolder called `test`. Give it the following content:
+
+   ```js
+   "use strict";
+
+   const assert = require("assert");
+
+   const { Builder, Capabilities, By } = require("selenium-webdriver");
+
+   describe("Alert", () => {
+     it("should have the correct text content - this is from the first button", (done) => {
+       let driver = new Builder()
+         .withCapabilities(Capabilities.firefox())
+         .build();
+
+       driver
+         .get(
+           "http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html",
+         )
+         .then(() => driver.findElement(By.css("button:nth-of-type(1)")))
+         .then((button) => button.click())
+         .then(() => driver.switchTo().alert())
+         .then((alert) => alert.getText())
+         .then((text) => assert.equal(text, "This is from the first button"))
+         .then(() => driver.quit())
+         .then(done)
+         .catch((err) => done(err));
+     });
+   });
+   ```
+
+   This example uses a long chain of promises to run all the steps required in our test — the promise-based methods WebDriver uses need to resolve for it to work properly.
+
 2. Install the mocha test harness by running the following command inside your project directory:
 
    ```bash
