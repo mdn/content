@@ -2,6 +2,19 @@
 title: x
 slug: Web/SVG/Reference/Attribute/x
 page-type: svg-attribute
+browser-compat:
+  - svg.elements.fePointLight.x
+  - svg.elements.feSpotLight.x
+  - svg.elements.filter.x
+  - svg.elements.foreignObject.x
+  - svg.elements.image.x
+  - svg.elements.mask.x
+  - svg.elements.pattern.x
+  - svg.elements.rect.x
+  - svg.elements.svg.x
+  - svg.elements.text.x
+  - svg.elements.tspan.x
+  - svg.elements.use.x
 spec-urls:
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-filter-x
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fespotlight-x
@@ -1255,6 +1268,10 @@ svg {
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
