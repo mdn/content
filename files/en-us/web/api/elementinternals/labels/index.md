@@ -29,7 +29,7 @@ A custom element is not focusable by default.
 It needs a [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute, or a shadow root created with {{domxref("ShadowRoot.delegatesFocus", "delegatesFocus: true")}} and a focusable element inside it.
 
 Safari does not expose the label this way.
-VoiceOver does not read a `<label>` linked to a form-associated custom element ([WebKit bug 259124](https://bugs.webkit.org/show_bug.cgi?id=259124)).
+VoiceOver does not read a `<label>` linked to a form-associated custom element ([WebKit bug 259124](https://webkit.org/b/259124)).
 An element that relies on the label association alone therefore has no accessible name in Safari.
 
 To give the element an accessible name in every browser, set {{domxref("ElementInternals.ariaLabel", "ariaLabel")}} on the element's internals as well as associating the label:

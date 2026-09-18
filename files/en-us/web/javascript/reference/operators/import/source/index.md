@@ -2,9 +2,13 @@
 title: import.source()
 slug: Web/JavaScript/Reference/Operators/import/source
 page-type: javascript-language-feature
+status:
+  - experimental
 browser-compat: javascript.operators.import.import_source
 sidebar: jssidebar
 ---
+
+{{SeeCompatTable}}
 
 The **`import.source()`** syntax behaves like regular [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import) syntax, except that it results in an object that represents the module's compiled source code. The module is [fetched and compiled](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#loading_the_graph), but its dependencies are not loaded and it is not [linked](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#linking_modules) or [evaluated](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#evaluating_modules). It can be imperatively evaluated later, such as by using [dynamic import](/en-US/docs/Web/JavaScript/Reference/Operators/import) or [`WebAssembly.instantiate()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static).
 

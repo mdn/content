@@ -65,12 +65,14 @@ The server may also indicate that it wants to drain the connection prior to clos
 When this happens, the client should start closing streams, and create a new session if it needs to continue its work.
 You can detect this using the {{domxref("WebTransport.draining")}} promise, which fulfills once the server signals that the session is entering the draining state:
 
-````js
+```js
 async function watchForDraining(transport) {
   // Fulfills when the server signals that the session is draining
   await transport.draining;
 
   console.log("The session is draining: avoid opening new streams.");
+}
+```
 
 ### Negotiating an application protocol
 
@@ -98,7 +100,7 @@ async function initTransport(url) {
     console.error(`Connection failed: ${error}`);
   }
 }
-````
+```
 
 ### Unreliable transmission via datagrams
 

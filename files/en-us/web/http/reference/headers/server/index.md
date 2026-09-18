@@ -58,4 +58,4 @@ Server: Apache/2.4.1 (Unix)
 
 - {{HTTPHeader("Allow")}}
 - [HTTP Observatory](/en-US/observatory)
-- [Prevent information disclosure via HTTP headers](https://owasp.org/www-project-secure-headers/index.html#prevent-information-disclosure-via-http-headers) - OWASP Secure Headers Project
+- [Prevent information disclosure via HTTP headers](https://owasp.github.io/www-project-secure-headers/best-practices/#prevent-information-disclosure-via-http-headers) - OWASP Secure Headers Project

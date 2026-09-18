@@ -71,7 +71,7 @@ margin-inline-end: 5%; /* relative to the nearest block container's width */
 margin-inline-end: anchor-size(height);
 margin-inline-end: calc(anchor-size(--my-anchor self-inline, 25px) / 5);
 
-/* Keyword values */
+/* Keyword value */
 margin-inline-end: auto;
 
 /* Global values */

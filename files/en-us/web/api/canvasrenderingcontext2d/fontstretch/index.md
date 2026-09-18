@@ -42,7 +42,7 @@ const ctx = canvas.getContext("2d");
 The next step in the example is to load a variable font that can be varied in the width axis.
 This is needed because `fontStretch` can only stretch a font that contains information about how glyphs are drawn when stretched — otherwise text will be drawn using the closest available font stretch value for the font, which will often be the normal width.
 
-In this case we use [`FontFace`](/en-US/docs/Web/API/FontFace) to define a font face for the [Inconsolata](https://fonts.google.com/specimen/Inconsolata/tester) Google Font, which supports font widths from 50% to 200% (allowing us to demonstrate `fontStretch` values from `ultra-condensed` to `ultra-expanded`).
+In this case we use [`FontFace`](/en-US/docs/Web/API/FontFace) to define a font face for the [Inconsolata](https://fonts.google.com/specimen/Inconsolata) Google Font, which supports font widths from 50% to 200% (allowing us to demonstrate `fontStretch` values from `ultra-condensed` to `ultra-expanded`).
 We then add this to the document's [`FontFaceSet`](/en-US/docs/Web/API/FontFaceSet) ([`document.fonts`](/en-US/docs/Web/API/Document/fonts)) so that it can be used for drawing.
 
 ```js
