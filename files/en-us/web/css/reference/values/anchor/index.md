@@ -143,8 +143,6 @@ When using `anchor()` to position [popovers](/en-US/docs/Web/HTML/Reference/Glob
 }
 ```
 
-The CSS working group is [looking at ways to avoid requiring this workaround](https://github.com/w3c/csswg-drafts/issues/10258).
-
 ### Using `anchor()` inside `calc()`
 
 When the `anchor()` function refers to a side of the default anchor, you can include a {{cssxref("margin")}} to create spacing between the edges of the anchor and the positioned element as needed. Alternatively, you can include the `anchor()` function within a {{cssxref("calc")}} function to add spacing.

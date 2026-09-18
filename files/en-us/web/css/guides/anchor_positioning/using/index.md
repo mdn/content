@@ -100,6 +100,9 @@ In some cases, an implicit anchor reference will be made between two elements, d
 - A {{htmlelement("select")}} element and its dropdown picker are opted into [customizable select element](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) functionality via the {{cssxref("appearance")}} property `base-select` value. In this case, an implicit popover-invoker relationship is created between the two, which also means they'll have an implicit anchor reference.
 
 > [!NOTE]
+> See [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) for more information on positioning elements relative to their implicit anchors.
+
+> [!NOTE]
 > The methods above associate an anchor with an element, but they are not yet tethered. To tether them together, the positioned element needs to be positioned relative to its anchor, which is done with CSS.
 
 ### Removing an anchor association
@@ -360,6 +363,9 @@ This gives us the following result:
 {{ EmbedLiveSample("`anchor()` example", "100%", "250") }}
 
 The positioned element is `5px` below and `5px` to the right of the anchor element. If you scroll the document up and down, the positioned element maintains its position relative to the anchor element — it is fixed to the anchor element, not the viewport.
+
+> [!NOTE]
+> When positioning elements relative to [implicit anchors](#implicit_anchor_association) using `anchor()`, some additional steps are required, such as resetting default positioning property values, and setting `position-anchor: auto` to opt-in to the implicit association. See [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) for more information.
 
 ### Setting a `position-area`
 
