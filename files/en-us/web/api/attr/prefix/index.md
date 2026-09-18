@@ -8,57 +8,58 @@ browser-compat: api.Attr.prefix
 
 {{APIRef("DOM")}}
 
-The read-only **`prefix`** property of the {{domxref("Attr")}} returns the namespace prefix of the attribute, or `null` if no prefix is specified.
-
-The prefix is always in lower case, whatever case is used at the attribute creation.
+The **`prefix`** read-only property of the {{domxref("Attr")}} interface returns the [namespace prefix](/en-US/docs/Web/API/Document_Object_Model/XML_namespaces#element_and_attribute_names_in_the_dom) of an attribute, or `null` if no prefix is specified.
 
 > [!NOTE]
-> Only XML supports namespaces. HTML does not. That means that the prefix of an attribute of an HTML element will always be `null`.
-
-Also, only the `xml` (for the `xml:lang` attribute), `xlink` (for the `xlink:href`, `xlink:show`, `xlink:target` and `xlink:title` attributes) and `xpath` namespaces are supported, and only on SVG and MathML elements.
+> The HTML parser special-cases several prefixed attribute names, but only on SVG and MathML elements: `xlink:actuate`, `xlink:arcrole`, `xlink:href`, `xlink:role`, `xlink:show`, `xlink:title`, `xlink:type`, `xml:lang`, `xml:space`, `xmlns:xlink`. For all other attributes, the prefix is simply seen as a part of the local name.
 
 ## Value
 
-A string containing the prefix of the namespace the attribute belongs too. If none, it returns `null`.
+A string or `null`.
 
-## Example
+## Examples
 
-### HTML
+### Reading the prefix
 
-```html
-<svg xml:lang="en-US" class="struct" height="1" width="1">Click me</svg>
-<label xml:lang="en-US" class="struct"></label>
-
-<p>
-  <button>Show value for &lt;svg&gt;</button>
-  <button>Show value for &lt;label&gt;</button>
-</p>
-
-<p>
-  Prefix of the attribute <code>xml:lang</code>:
-  <output id="result">None.</output>
-</p>
-```
-
-### JavaScript
+We use {{domxref("DOMParser")}} to create an XML document.
 
 ```js
-const elements = document.querySelectorAll(".struct");
-const buttons = document.querySelectorAll("button");
-const outputEl = document.querySelector("#result");
-
-let i = 0;
-for (const button of buttons) {
-  const element = elements[i];
-  button.addEventListener("click", () => {
-    const attribute = element.attributes[0];
-    outputEl.value = attribute.prefix;
-  });
-  i++;
-}
+const doc = new DOMParser().parseFromString(
+  `<parent xmlns:mdn="https://developer.mozilla.org/" mdn:status="ready" />`,
+  "application/xml",
+);
+const status = doc.querySelector("parent").getAttributeNode("mdn:status");
+console.log(status.prefix); // mdn
 ```
 
-{{ EmbedLiveSample('Example','100%',100) }}
+### Namespace prefixes in HTML documents
+
+[The HTML syntax supports prefixes only for a fixed set of attributes on SVG and MathML elements](/en-US/docs/Web/API/Document_Object_Model/XML_namespaces#namespace_syntax_in_html). For other attributes, a colon is part of the local name rather than a namespace separator.
+
+```html
+<svg xml:lang="en-US" mdn:status="ready"></svg>
+```
+
+```js
+const svg = document.querySelector("svg");
+
+console.log(svg.getAttributeNode("xml:lang").prefix); // xml
+console.log(svg.getAttributeNode("mdn:status").prefix); // null
+```
+
+However, this is only a parser restriction; you can create prefixed attributes using [`document.createAttributeNS()`](/en-US/docs/Web/API/Document/createAttributeNS) or [`element.setAttributeNS()`](/en-US/docs/Web/API/Element/setAttributeNS) and attach them to the HTML DOM without problems. These methods do not normalize internal casing even when the namespace is HTML.
+
+```js
+const status = document.createAttributeNS(
+  "http://www.w3.org/1999/xhtml",
+  "Mdn:Status",
+);
+document.body.setAttributeNode(status);
+
+console.log(status.name); // Mdn:Status
+console.log(status.prefix); // Mdn
+console.log(status.localName); // Status
+```
 
 ## Specifications
 
@@ -70,5 +71,8 @@ for (const button of buttons) {
 
 ## See also
 
-- The properties {{domxref("Attr.name")}}, returning the qualified name of the attribute, and {{domxref("Attr.localName")}}, its local name.
-- The {{domxref("Element.prefix()")}} property, returning the namespace prefix of an {{domxref("Element")}}.
+- [XML namespaces](/en-US/docs/Web/API/Document_Object_Model/XML_namespaces)
+- {{domxref("Attr.name")}}
+- {{domxref("Attr.namespaceURI")}}
+- {{domxref("Attr.localName")}}
+- {{domxref("Element.prefix")}}

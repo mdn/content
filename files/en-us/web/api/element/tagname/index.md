@@ -6,53 +6,65 @@ page-type: web-api-instance-property
 browser-compat: api.Element.tagName
 ---
 
-{{ApiRef("DOM")}}
+{{APIRef("DOM")}}
 
-The **`tagName`** read-only property
-of the {{domxref("Element")}} interface returns the tag name of the element on which
-it's called.
+The **`tagName`** read-only property of the {{domxref("Element")}} interface returns the [qualified name](/en-US/docs/Web/API/Document_Object_Model/XML_namespaces#element_and_attribute_names_in_the_dom) of an element. It is the element's local name by itself when the element has no prefix, or the prefix and local name separated by a colon when it does.
 
-For example, if the element is an {{HTMLElement("img")}}, its
-`tagName` property is `IMG` (for HTML documents; it may be cased
-differently for XML/XHTML documents). Note: You can use the {{domxref("Element.localName", "localName")}} property
-to access the Element's local name — which for the case in the example is `img` (lowercase).
+For {{domxref("Element")}} objects, the value of `tagName` is the same as the value of the {{domxref("Node.nodeName", "nodeName")}} property the element object inherits from {{domxref("Node")}}.
 
 ## Value
 
-A string indicating the element's tag name. This string's capitalization depends on the
-document type:
+A string.
 
-- For DOM trees which represent HTML documents, the returned tag name is always in the
-  canonical upper-case form. For example, `tagName` called on a
-  {{HTMLElement("div")}} element returns `"DIV"`.
-- The tag names of elements in an XML DOM tree are returned in the same case in which
-  they're written in the original XML file. If an XML document includes a tag
-  `"<SomeTag>"`, then the `tagName` property's value is
-  `"SomeTag"`.
-
-For {{domxref("Element")}} objects, the value of `tagName` is the same as
-the value of the {{domxref("Node.nodeName", "nodeName")}} property the element object
-inherits from {{domxref("Node")}}.
+For an HTML element in an HTML document, `tagName` returns the qualified name in uppercase. Use {{domxref("Element.localName", "localName")}} to obtain the internally-stored name without this uppercase conversion.
 
 ## Examples
 
-### HTML
+### Reading the tagName
 
-```html
-<span id="born">When I was born…</span>
-```
-
-### JavaScript
+We use {{domxref("DOMParser")}} to create an XML document.
 
 ```js
-const span = document.getElementById("born");
-console.log(span.tagName);
+const doc = new DOMParser().parseFromString(
+  `<parent xmlns:mdn="https://developer.mozilla.org/"><mdn:child /></parent>`,
+  "application/xml",
+);
+const child = doc.querySelector("child");
+console.log(child.tagName); // mdn:child
 ```
 
-In XHTML (or any other XML format), the original case will be maintained, so
-`"span"` would be output in case the original tag name was created lowercase.
-In HTML, `"SPAN"` would be output instead regardless of the case used while
-creating the original document.
+### Tag names in HTML documents
+
+In an HTML document, `tagName` converts the qualified names of elements in the HTML namespace to uppercase. Elements in other namespaces, such as SVG, preserve the internally-stored casing.
+
+```xml
+<svg>
+  <linearGradient id="gradient"></linearGradient>
+</svg>
+```
+
+```js
+console.log(document.body.tagName); // BODY
+
+const gradient = document.querySelector("#gradient");
+console.log(gradient.tagName); // linearGradient
+```
+
+This distinction also applies to elements created programmatically. An element in the HTML namespace has an uppercase `tagName`, while an element in the SVG namespace does not:
+
+```js
+const htmlElement = document.createElementNS(
+  "http://www.w3.org/1999/xhtml",
+  "Mdn:Child",
+);
+const svgElement = document.createElementNS(
+  "http://www.w3.org/2000/svg",
+  "Mdn:Child",
+);
+
+console.log(htmlElement.tagName); // MDN:CHILD
+console.log(svgElement.tagName); // Mdn:Child
+```
 
 ## Specifications
 
@@ -64,4 +76,8 @@ creating the original document.
 
 ## See also
 
+- [XML namespaces](/en-US/docs/Web/API/Document_Object_Model/XML_namespaces)
 - {{domxref("Element.localName")}}
+- {{domxref("Element.namespaceURI")}}
+- {{domxref("Element.prefix")}}
+- {{domxref("Attr.name")}}
