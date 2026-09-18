@@ -583,6 +583,23 @@ The assertions are unaffected by the [`m`](/en-US/docs/Web/JavaScript/Reference/
 - `javascript.options.experimental.regexp_buffer_boundaries`
   - : Set to `true` to enable on Nightly.
 
+### TC39 Export `*` default proposal
+
+The [Export `*` default proposal](https://github.com/tc39/proposal-export-star-default) allows [`export * from`](/en-US/docs/Web/JavaScript/Reference/Statements/export#re-exporting_aggregating) declarations to re-export a module's default export along with its named exports. Without this, `export * from` skips a module's default export.
+([Firefox bug 2065611](https://bugzil.la/2065611)).
+
+Note that this proposal is at a very early stage, and subject to change.
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 157           | No                  |
+| Developer Edition | 157           | No                  |
+| Beta              | 157           | No                  |
+| Release           | —             | —                   |
+
+- `javascript.options.experimental.export_star_default`
+  - : Set to `true` to enable.
+
 ## APIs
 
 ### Crash Reporting
