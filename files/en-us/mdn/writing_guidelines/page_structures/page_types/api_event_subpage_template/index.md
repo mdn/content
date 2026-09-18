@@ -103,6 +103,9 @@ addEventListener("NameOfTheEvent", (event) => { })
 onNameOfTheEvent = (event) => { }
 ```
 
+> [!NOTE]
+> These two methods are not exactly equivalent. Assigning to `onNameOfTheEvent` replaces the existing handler added using this method, while `addEventListener()` always adds a new listener. See [Interaction of multiple event listeners](/en-US/docs/Web/API/Document_Object_Model/Events#interaction_of_multiple_event_handlers).
+
 ## Event type
 
 If the event has a special type, mention it along with its inheritance. If not, indicate that it is a generic event:
@@ -137,6 +140,8 @@ Note that we use the plural "Examples" even if the page only contains one exampl
 Each example must have an H3 heading (`###`) naming the example. The heading should be descriptive of what the example is doing. For example, "A simple example" does not say anything about the example and therefore, not a good heading. The heading should be concise. For a longer description, use the paragraph after the heading.
 
 See our guide on how to add [code examples](/en-US/docs/MDN/Writing_guidelines/Page_structures/Code_examples) for more information.
+
+If you want to demonstrate both `addEventListener` and `onEvent`, avoid claiming or implying that the two examples are equivalent. Ideally, always explicitly add a parenthetical saying "but note that this replaces other event listeners added using `onEvent`, if any".
 
 > [!NOTE]
 > Sometimes you will want to link to examples given on another page.
