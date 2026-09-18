@@ -343,6 +343,21 @@ To make channel value calculations work in relative colors, all origin color cha
 
 Check the different [color function pages](/en-US/docs/Web/CSS/Guides/Colors#functions) for the specifics of what their origin channel values resolve to.
 
+## Origin colors outside the sRGB gamut
+
+Converting an origin color to the output color space does not clamp its channels to that space's usual range. For example, `color(display-p3 1 0.5 0.5)` is inside the Display P3 gamut but outside sRGB. Its red channel, expressed on the `rgb()` scale, is approximately `273.86`, greater than `255`.
+
+```css
+.very-red {
+  --origin: color(display-p3 1 0.5 0.5);
+  background-color: rgb(from var(--origin) calc(r - 1) g b);
+}
+```
+
+The calculation uses that out-of-range value, so the red value ends up as `272.86`. The green and blue values remain approximately `117.96` and `123.17`. Whether this color can be rendered accurately depends on the display's capability.
+
+This is not equivalent to writing `rgb(272.86 117.96 123.17)`, because the `rgb()` notation clamps out-of-range channels.
+
 ## Checking for browser support
 
 You can check that a browser supports relative color syntax by running it through a {{cssxref("@supports")}} at-rule.
