@@ -24,6 +24,9 @@ None.
 
 Returns `true` if the element's value has no validity problems; otherwise, returns `false`.
 
+> [!NOTE]
+> If the button is not a submit button (for instance, if `type="button"` or `type="reset"`), the element is barred from [constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation). In this case, `reportValidity()` always returns `true` and no validation UI is displayed.
+
 ### Examples
 
 This far fetched example demonstrates how a button can be made invalid.
