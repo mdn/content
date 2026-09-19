@@ -10,6 +10,9 @@ browser-compat: api.HTMLButtonElement.setCustomValidity
 
 The **`setCustomValidity()`** method of the {{DOMxRef("HTMLButtonElement")}} interface sets the custom validity message for the {{htmlelement("button")}} element. Use the empty string to indicate that the element does _not_ have a custom validity error.
 
+> [!NOTE]
+> Per the HTML specification, only submit buttons (`type="submit"`, or buttons where the `type` attribute is omitted) are candidates for [constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation). Non-submit buttons (`type="button"` or `type="reset"`) are barred from constraint validation (their {{domxref("HTMLButtonElement.willValidate", "willValidate")}} property is `false`), so setting a custom error on them will not trigger browser validation UI or prevent form submission.
+
 ## Syntax
 
 ```js-nolint
