@@ -275,7 +275,9 @@ This example demonstrates the [`returnValue`](/en-US/docs/Web/API/HTMLDialogElem
 
 This example opens a modal dialog when the "Show the dialog" button is activated. The dialog contains a form with a {{HTMLElement("select")}} and two {{HTMLElement("button")}} elements, which default to `type="submit"`. An event listener updates the value of the "Confirm" button when the select option changes. If the "Confirm" button is activated to close the dialog, the current value of the button is the return value. If the dialog is closed by pressing the "Cancel" button, the `returnValue` is `cancel`.
 
-When the dialog is closed, the return value is displayed under the "Show the dialog" button. If the dialog is closed by pressing the <kbd>Esc</kbd> key, the `returnValue` is not updated, and the `close` event doesn't occur, so the text in the {{HTMLElement("output")}} is not updated.
+When the dialog is closed, the return value is displayed under the "Show the dialog" button.
+
+If the dialog is closed by pressing the <kbd>Esc</kbd> key, the browser issues a close request: a {{domxref("HTMLDialogElement.cancel_event", "cancel")}} event fires first (which can be prevented via `event.preventDefault()`), followed by the {{domxref("HTMLDialogElement.close_event", "close")}} event. If the `cancel` event is not canceled, the dialog closes and the `close` event fires, displaying the current `returnValue` (the initial default value, since no button with an updated value was selected).
 
 #### HTML
 
@@ -333,6 +335,12 @@ favDialog.addEventListener("close", (e) => {
     favDialog.returnValue === "default"
       ? "No return value."
       : `ReturnValue: ${favDialog.returnValue}.`; // Have to check for "default" rather than empty string
+});
+
+// A "cancel" event fires when the dialog is dismissed with the Esc key.
+// Calling event.preventDefault() inside a "cancel" listener would prevent the dialog from closing.
+favDialog.addEventListener("cancel", (event) => {
+  // Can optionally prevent closing: event.preventDefault();
 });
 
 // Prevent the "confirm" button from the default behavior of submitting the form, and close the dialog with the `close()` method, which triggers the "close" event.

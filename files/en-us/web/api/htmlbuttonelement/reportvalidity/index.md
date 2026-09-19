@@ -8,7 +8,7 @@ browser-compat: api.HTMLButtonElement.reportValidity
 
 {{APIRef("HTML DOM")}}
 
-The **`reportValidity()`** method of the {{domxref("HTMLButtonElement")}} interface performs the same validity checking steps as the {{domxref("HTMLButtonElement.checkValidity", "checkValidity()")}} method. In addition, if the {{domxref("HTMLElement/invalid_event", "invalid")}} event is not canceled, the browser displays the problem to the user.
+The **`reportValidity()`** method of the {{domxref("HTMLButtonElement")}} interface performs the same validity checking steps as the {{domxref("HTMLButtonElement.checkValidity", "checkValidity()")}} method. In addition, if the {{domxref("HTMLInputElement/invalid_event", "invalid")}} event is not canceled, the browser displays the problem to the user.
 
 ## Syntax
 
@@ -23,6 +23,9 @@ None.
 ### Return value
 
 Returns `true` if the element's value has no validity problems; otherwise, returns `false`.
+
+> [!NOTE]
+> If the button is not a submit button (for instance, if `type="button"` or `type="reset"`), the element is barred from [constraint validation](/en-US/docs/Web/HTML/Guides/Constraint_validation). In this case, `reportValidity()` always returns `true` and no validation UI is displayed.
 
 ### Examples
 

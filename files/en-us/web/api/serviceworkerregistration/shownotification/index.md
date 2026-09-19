@@ -44,8 +44,8 @@ showNotification(title, options)
             See {{domxref("Notification.navigate")}} for more information.
 
     - `badge` {{optional_inline}} {{experimental_inline}}
-      - : A string containing the URL of the image used to represent the notification when there isn't enough space to display the notification itself; for example, the Android Notification Bar.
-        On Android devices, the badge should accommodate devices up to 4x resolution, about 96x96px, and the image will be automatically masked.
+      - : A string containing the URL of a small, monochrome icon used to represent the notification when space is constrained (such as in the Android status bar or collapsed notification drawer).
+        On mobile platforms, the badge should accommodate high-density displays (typically 96×96px or 4× resolution) and is automatically masked by the operating system.
     - `body` {{optional_inline}}
       - : A string representing the body text of the notification, which is displayed below the title.
         The default is the empty string.
@@ -57,9 +57,9 @@ showNotification(title, options)
       - : The direction in which to display the notification.
         It defaults to `auto`, which just adopts the browser's language setting behavior, but you can override that behavior by setting values of `ltr` and `rtl` (although most browsers seem to ignore these settings.)
     - `icon` {{optional_inline}}
-      - : A string containing the URL of an icon to be displayed in the notification.
+      - : A string containing the URL of a small square icon (such as an application logo, sender avatar, or service mark) displayed prominently next to the notification title and body text in the notification center or popup banner (typically 192×192px or larger).
     - `image` {{optional_inline}} {{experimental_inline}}
-      - : A string containing the URL of an image to be displayed in the notification.
+      - : A string containing the URL of a larger content preview image (such as a shared photo, media thumbnail, screenshot, or article hero image) displayed inline inside the notification card when expanded.
     - `lang` {{optional_inline}}
       - : The notification's language, as specified using a string representing a {{glossary("BCP 47 language tag")}}.
         The default is the empty string.
@@ -161,8 +161,10 @@ Each action includes a `title`, which is usually rendered as button text on the 
 
 ```js
 registration.showNotification("New Message", {
-  body: "You've got mail.",
-  icon: "/images/icon.png",
+  body: "You've got mail from Alice.",
+  icon: "/images/sender-avatar.png",
+  badge: "/images/monochrome-badge.png",
+  image: "/images/attachment-preview.jpg",
   actions: [
     { action: "reply", title: "Reply" },
     { action: "dismiss", title: "Dismiss" },
