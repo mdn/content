@@ -24,7 +24,7 @@ They correspond to three of four equality algorithms in JavaScript:
 - [SameValue](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-samevalue): `Object.is()`
 - [SameValueZero](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-samevaluezero): used by many built-in operations
 
-Note that the distinction between these all have to do with their handling of primitives; none of them compares whether the parameters are conceptually similar in structure. For any non-primitive objects `x` and `y` which have the same structure but are distinct objects themselves, all of the above forms will evaluate to `false`.
+Note that all of these distinctions have to do with their handling of primitives; none of them compares whether the parameters are conceptually similar in structure. For any non-primitive objects `x` and `y` which have the same structure but are distinct objects themselves, all of the above forms will evaluate to `false`.
 
 Comparing the contents of distinct objects or arrays recursively is called {{glossary("deep equality")}}. JavaScript does not provide a general deep comparison operator; libraries and host APIs can provide comparison utilities with different rules.
 
