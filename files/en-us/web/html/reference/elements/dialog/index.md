@@ -337,6 +337,12 @@ favDialog.addEventListener("close", (e) => {
       : `ReturnValue: ${favDialog.returnValue}.`; // Have to check for "default" rather than empty string
 });
 
+// A "cancel" event fires when the dialog is dismissed with the Esc key.
+// Calling event.preventDefault() inside a "cancel" listener would prevent the dialog from closing.
+favDialog.addEventListener("cancel", (event) => {
+  // Can optionally prevent closing: event.preventDefault();
+});
+
 // Prevent the "confirm" button from the default behavior of submitting the form, and close the dialog with the `close()` method, which triggers the "close" event.
 confirmBtn.addEventListener("click", (event) => {
   event.preventDefault(); // We don't want to submit this fake form
