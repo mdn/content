@@ -161,8 +161,10 @@ Each action includes a `title`, which is usually rendered as button text on the 
 
 ```js
 registration.showNotification("New Message", {
-  body: "You've got mail.",
-  icon: "/images/icon.png",
+  body: "You've got mail from Alice.",
+  icon: "/images/sender-avatar.png",
+  badge: "/images/monochrome-badge.png",
+  image: "/images/attachment-preview.jpg",
   actions: [
     { action: "reply", title: "Reply" },
     { action: "dismiss", title: "Dismiss" },
