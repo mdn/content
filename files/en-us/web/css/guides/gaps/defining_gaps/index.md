@@ -7,7 +7,7 @@ spec-urls: https://drafts.csswg.org/css-gaps/
 sidebar: cssref
 ---
 
-When creating [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), [grid](/en-US/docs/Web/CSS/Guides/Grid_layout), and [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout) layouts using [CSS gap properties](/en-US/docs/Web/CSS/Guides/Gaps#properties), you can define and control gaps between columns and rows.
+When creating [grid](/en-US/docs/Web/CSS/Guides/Grid_layout), [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout) layouts using [CSS gap properties](/en-US/docs/Web/CSS/Guides/Gaps#properties), you can define and control gaps between columns and rows.
 
 The {{cssxref("margin")}} and {{cssxref("padding")}} properties specify visual spacing around individual boxes. Using the [properties](/en-US/docs/Web/CSS/Guides/Gaps#properties) in the CSS gaps module, you can specify spacing between adjacent boxes in layouts that have {{glossary("gutters")}} and gaps.
 
@@ -21,12 +21,6 @@ The {{cssxref("gap")}} property, and its {{cssxref("row-gap")}} and {{cssxref("c
 
 A _gap_ is either a _column gap_ or a _row gap_. Their definitions vary by layout type. For all layout types, any gap disappears when it coincides with a fragmentation break.
 
-### Flex container gaps
-
-Flex containers are created by setting {{cssxref("display")}} to `flex` or `inline-flex` on an element containing multiple children. By default, flex items are laid out in a single, non-wrapping row. The default gap between adjacent flex items and, if wrapping, between adjacent columns or rows, is `0`. Whether a flex container with multiple items has columns, rows, or both depends on the flow and wrapping set using the {{cssxref("flex-flow")}} shorthand.
-
-You can add gaps between adjacent flex items along the main axis. If the {{cssxref("flex-flow")}} property is set to `row wrap` or `row-reverse wrap`, _column gap_ refers to the gutter between adjacent flex items and _row gap_ refers to the gutter between flex rows. If `flex-flow` is set to `column wrap` or `column-reverse wrap`, _row gap_ refers to the gutter between adjacent flex items and _column gap_ refers to the gutter between flex rows.
-
 ### Grid container gaps
 
 In the context of a grid container, _row gaps_ and _column gaps_ refer to the gutters between grid rows and grid columns, respectively. The width of the gaps makes the affected grid lines behave as though they acquired thickness: the grid track between two grid lines is the space between the gutters that represent them. By default, the width of the gap is `0` in both directions.
@@ -38,6 +32,12 @@ For example, if `gap: 20px` is set on a 4x4 grid of `100px` by `100px` boxes, th
 Gutter gaps set the minimum spacing between items: additional spacing may be added by {{cssxref("justify-content")}} and {{cssxref("align-content")}} property values, increasing the size of the corresponding gaps.
 
 Gutters appear only between tracks of the implicit grid. If a grid is fragmented between tracks, no gutter spacing is added between those tracks. There is no gutter before the first track or after the last track. If a track is collapsed, it has no gutter.
+
+### Flex container gaps
+
+Flex containers are created by setting {{cssxref("display")}} to `flex` or `inline-flex` on an element containing multiple children. By default, flex items are laid out in a single, non-wrapping row. The default gap between adjacent flex items and, if wrapping, between adjacent columns or rows, is `0`. Whether a flex container with multiple items has columns, rows, or both depends on the flow and wrapping set using the {{cssxref("flex-flow")}} shorthand.
+
+You can add gaps between adjacent flex items along the main axis. If the {{cssxref("flex-flow")}} property is set to `row wrap` or `row-reverse wrap`, _column gap_ refers to the gutter between adjacent flex items and _row gap_ refers to the gutter between flex rows. If `flex-flow` is set to `column wrap` or `column-reverse wrap`, _row gap_ refers to the gutter between adjacent flex items and _column gap_ refers to the gutter between flex rows.
 
 ### Multi-col gaps
 
