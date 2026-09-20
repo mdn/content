@@ -101,7 +101,7 @@ The column gap may contain a visible separator as a [gap decoration](/en-US/docs
 
 The `column-gap` property, along with the {{cssxref("row-gap")}} property, can also be set by using the {{cssxref("gap")}} shorthand, which sets both `row-gap` and `column-gap` in one declaration, in that order.
 
-The `column-gap` property replaced the `grid-column-gap` property, which was was initially defined in [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) for creating gaps between grid columns. `grid-column-gap` is now an alias for `column-gap`.
+The `column-gap` property replaced the `grid-column-gap` property, which was initially defined in [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) for creating gaps between grid columns. `grid-column-gap` is now an alias for `column-gap`.
 
 ## Formal definition
 
