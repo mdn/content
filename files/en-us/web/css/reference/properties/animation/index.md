@@ -73,9 +73,9 @@ This property resets the following CSS properties to their initial values:
 
 - {{cssxref("animation-range-end")}}
 - {{cssxref("animation-range-start")}}
-- {{cssxref("animation-delay-end")}}
+- `animation-delay-end`
 - {{cssxref("animation-composition")}}
-- {{cssxref("animation-trigger")}}
+- `animation-trigger`
 
 ## Syntax
 
