@@ -210,10 +210,10 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
   {{domxref("SubtleCrypto")}} gains the post-quantum ML-KEM key encapsulation mechanism, along with the `encapsulateKey`, `encapsulateBits`, `decapsulateKey`, and `decapsulateBits` key usages.
   This release enables the feature by default in Nightly builds. ([Firefox bug 1943614](https://bugzil.la/1943614)).
 
-- **`export *` forwarding the default export**: `javascript.options.experimental.export_star_default`
+- **`export * from "mod"` exports the default export**: `javascript.options.experimental.export_star_default`
 
-  The [TC39 export star default proposal](https://tc39.es/proposal-export-star-default/) makes [`export * from "mod"`](/en-US/docs/Web/JavaScript/Reference/Statements/export#re-exporting__aggregating) also provide `mod`'s default export, which it currently omits.
-  Note that this preference only takes effect in Nightly builds. ([Firefox bug 2065611](https://bugzil.la/2065611)).
+  The [TC39 export `*` default proposal](https://tc39.es/proposal-export-star-default/) makes [`export * from "mod"`](/en-US/docs/Web/JavaScript/Reference/Statements/export#re-exporting__aggregating) also provide the module's default export, which it currently omits.
+  Note that this preference can only be set in Nightly builds. ([Firefox bug 2065611](https://bugzil.la/2065611)).
 
 - **`Notification.navigate()`**: `dom.webnotifications.navigate.enabled`
 
