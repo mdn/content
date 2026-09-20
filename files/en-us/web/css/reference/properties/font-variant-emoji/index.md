@@ -102,6 +102,7 @@ This example shows how you can render an emoji in its `text` or `emoji` presenta
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    font-family: "Noto Color Emoji", "Segoe UI Emoji", "Apple Color Emoji";
   }
   .emoji > div {
     font-size: 2rem;
