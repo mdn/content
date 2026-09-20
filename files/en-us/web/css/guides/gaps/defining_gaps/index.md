@@ -53,7 +53,7 @@ The effect of the definition depends on whether the container uses flexbox, grid
 
 You can add visible separators to gaps; these are called gap decorations. If you add decorative rules for gaps between columns, rows, or both, they appear in the middle of their gap but have no effect on the size of the gap. These decorative lines are added to the otherwise "empty space" by using the {{cssxref("rule")}} shorthand or its constituent properties.
 
-### With grid
+### Gaps in grid layouts
 
 With grid containers, the `gap` property defines the size of the gutters between vertical and horizontal tracks. The shorthand property is specified as a value for `<'row-gap'>`, followed optionally by a value for `<'column-gap'>`. If only one value is declared, that value applies to both.
 
@@ -85,7 +85,7 @@ Select different `gap` values to see the effect of each:
 
 {{EmbedLiveSample("grid_gap", "", "420")}}
 
-### With flex
+### Gaps in flexbox layouts
 
 With flex containers, the `gap` property defines the space between both flex items and flex lines. Whether the first value is the gap between flex items or between flex lines depends on the direction.
 
