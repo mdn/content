@@ -163,7 +163,7 @@ All of these shorthand properties, along with their `-junction` and `column-` eq
 
 A _cap segment endpoint_ is any segment endpoint that is not a junction segment endpoint. This includes endpoints at the container's content edges, as well as endpoints at a gap junction where no other column or row segments are present.
 
-The `row-rule-inset-cap` property can reduce or extend the left, right, or both ends of row segments at the left and right edges of the container and the row segment end at any interior junction where no other segments are present.
+The `row-rule-inset-cap` property can outset or inset the start and end of row rules at the container edge, and the start and end of interior row segments where no other segments are present.
 
 Cap segments are impacted by the {{cssxref("rule-visibility-items")}} properties, which define whether row- and column-rule segments are painted in gaps adjacent to empty areas (or would otherwise be painted if the `rule` were set to a visible value). Changing the value from `auto` to `between` and `around` values can lead to additional interior cap segments.
 

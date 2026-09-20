@@ -323,9 +323,9 @@ visibility.addEventListener("change", () => {
 
 Setting `-32px` outsets the end of all the row rules by `32px`: the lines are drawn `32px` past the right edge of the container. As row rules don't impact the box model, these lines have no impact on the layout of the container or the rest of the content. If `0px` is set, the end of the row rules will align with the edge of the container. This is the default.
 
-The double line-style row rules, which appear when the `rule-visibility-items` is set to `between`, end in cap endpoints. The `between` value only paints rules in a gap segments between two adjacent areas occupied by an item. Because the row rule segments above items `22` and `24` end at intersections with no other row or column rule segments present, these are cap endpoints, and therefore affected by the `row-rule-inset-cap-end` property.
+The double line-style row rule segments, which appear when the `rule-visibility-items` is set to `between`, add a cap endpoint. The `between` value only paints rules in a gap segments between two adjacent areas occupied by an item. Because the row rule segment above items `24` ends at an intersection with no other row or column rule segments present, this is a cap endpoint, and therefore affected by the `row-rule-inset-cap-end` property. The segment above item `22` ends at a gap junction where a rule segment is present, so is a not a cap endpoint. There are fewer segments abutting the right edge of the container, but the remaining segment, between `6` and `12`, remains a cap endpoint.
 
-The rule segments abutting the right edge of the container (only the segment between `6` and `12`, in this case) are always row-rule cap ends, so they are always inset by the value of the `row-rule-inset-cap-end` property.
+The rule segments abutting the right edge of the container (only the segment between `6` and `12`, in when set to `between`) are always row-rule cap ends, so they are always inset by the value of the `row-rule-inset-cap-end` property.
 
 ### Understanding percentage values
 
@@ -333,7 +333,7 @@ What length a percentage value is relative to depends on the location of the end
 
 {{EmbedLiveSample("percents", "", "400")}}
 
-Select `around` as the `rule-visibility-items` value. The first two rows end at the container edge, so the row rule cap end, the row rule segment between items `6` and `12`, has is not inset, as any percent value at the container edge resolves to `0` inset. The row-rule segments that don't have a segment to the right end at interior gaps where column rule segments are present, so these row segments are not cap segment endpoints and are not affected by the property.
+If you select `around` as the `rule-visibility-items` value, the only cap segment endpoints are at the edge of the container, so percentage value insets continue to resolve to `0`.
 
 Select `between` as the `rule-visibility-items` value. We now have a row rule end cap affected by the inset — see the segment between grid items `18` and `24`! This segment ends at an interior gap where no other rule segments are present, so the percentage inset is relative to the size of the {{cssxref("column-gap")}} width, which in this case is `20px`. Setting `100%` insets the end by `20px`. Setting `-200%` will outset the segment by `40px`, with the lines drawn through the `20px` gap into the next column.
 

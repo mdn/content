@@ -126,13 +126,13 @@ This property is specified as a single value from the following list:
 
 ## Description
 
+The `column-rule-inset-cap-start` property can be used to inset the start edge of [cap segment endpoints](#understanding_cap_end). The default value is `0`, which is the same as `overlap-join`. Positive values reduce the segment size, while negative values increase it.
+
 Column rules are painted within a column gap as one or more segments, with segments occurring between:
 
 - Adjacent columns in CSS grid layouts.
 - Flex items or flex lines in flex layouts, depending on the `flex-direction`.
 - Columns in multi-col layouts.
-
-The `column-rule-inset-cap-start` property can be used to inset the start edge of [cap segment endpoints](#understanding_cap_end). The default value is `0`, which is the same as `overlap-join`. Positive values reduce the segment size, while negative values increase it.
 
 Length `column-rule-inset-cap-start` values inset segments by the specified value — for both interior and end edge cap segments. Negative length values create an outset, with end edge cap segments extending beyond the container's start edge.
 
@@ -152,9 +152,9 @@ All of these shorthand properties, along with their `-end`, `-junction`, and `ro
 
 A _cap segment endpoint_ is any segment endpoint that is not a junction segment endpoint. This includes endpoints at the container's content edges, as well as endpoints at a gap junction where no other rule segments are present.
 
-The `column-rule-inset-cap-start` controls the inset of the start edge of column cap segment endpoints. In other words, the property can be used to shrink or extend the top edge of column rule segments occurring at interior gaps where no other column or row rule segments are present or at the start edge of the container.
+The `column-rule-inset-cap-start` property controls the inset of the top edge of column cap segment endpoints, allowing the segments to be shrunk or extended. In other words, the property can be used to shrink or extend the top edge of column rule segments that abut the top edge of the container and the segments whose top ends at an interior gaps where no other column or row rule segments are present.
 
-Column cap segment endpoints are not affected by the value of the `column-rule-break` property value settings, which only control junction segment breaks. They are, however, affected by the {{cssxref("rule-visibility-items")}} properties, which defines whether column- and row-rule segments are painted in gaps adjacent to empty areas.
+Column cap segment endpoints are not affected by the value of the `column-rule-break` property value settings, which only control junction segment breaks. They are, however, affected by the {{cssxref("rule-visibility-items")}} properties, which define whether column- and row-rule segments are painted in gaps adjacent to empty areas.
 
 Column cap segment endpoints only exist at the edge of the container and at interior gaps where no other column or row rule segments are present, whether segments are painted (or would otherwise be painted if the `rule` were set to a visible value), impacts which column segments are cap start segments.
 
@@ -301,7 +301,7 @@ Selecting `around` as the `rule-visibility-items` value paints rules in a gap se
 
 ### Understanding percentage values
 
-What length a percentage value is relative to depends on the location of the endpoint. Interior endpoint percentage values are relative to the gap width at the cap endpoint, so relative to the {{cssxref("row-gap")}} if abutting a rule gap, `0` otherwise, as when the cap segment endpoint is at the container's start edge, it abuts an edge, not a gap, so the percentage is relative to `0`, and always computes to `0`.
+The length a percentage value is relative to depends on the endpoint location. Interior endpoint percentage values are relative to the width of the gap at the cap endpoint, so relative to the {{cssxref("row-gap")}} if abutting a rule gap, and `0` at the top edge of the container.
 
 This example isn't broken; all the cap segments start at the container's edge, so all the insets are `0` by default.
 
@@ -474,5 +474,4 @@ Change the size of the inset.
 - {{cssxref("rule-overlap")}}
 - {{cssxref("rule-visibility-items")}}
 - {{cssxref("rule")}} shorthand
-
 - [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module
