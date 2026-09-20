@@ -7,47 +7,49 @@ spec-urls: https://drafts.csswg.org/css-gaps/
 sidebar: cssref
 ---
 
-When creating [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout), [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) layouts, using [CSS gap properties](/en-US/docs/Web/CSS/Guides/Gaps#properties), you can define and control gaps between columns and rows.
+When creating [flexbox](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), [grid](/en-US/docs/Web/CSS/Guides/Grid_layout), and [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout) layouts using [CSS gap properties](/en-US/docs/Web/CSS/Guides/Gaps#properties), you can define and control gaps between columns and rows.
 
-While {{cssxref("margin")}} and {{cssxref("padding")}} specify visual spacing around individual boxes, the properties in the [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module enable specifying the spacing between adjacent boxes within a given layout context for layouts that have {{glossary("gutters")}} and gaps.
+The {{cssxref("margin")}} and {{cssxref("padding")}} properties specify visual spacing around individual boxes. Using the [properties](/en-US/docs/Web/CSS/Guides/Gaps#properties) in the CSS gaps module, you can specify spacing between adjacent boxes in layouts that have {{glossary("gutters")}} and gaps.
 
-This guide explains column and row gaps by layout type, defining gaps, and understanding percentages as a `gap` value.
+This guide explains column and row gaps in different layout types, how to define gaps, and how to use percentages as a `gap` value.
 
 ## Understanding gaps
 
-While margin and padding can specify spacing around individual boxes, it's sometimes more convenient to globally specify spacing between adjacent boxes within a given layout context, particularly when the spacing is different between sibling boxes as opposed to between the first/last box and the container's edge.
+While margin and padding can specify spacing around individual boxes, it's sometimes more convenient to specify spacing between adjacent boxes within a given layout. This is particularly true when the spacing between sibling boxes differs from the spacing between the first or last box and the container's edge.
 
-The {{cssxref("gap")}} property, and its {{cssxref("row-gap")}} and {{cssxref("column-gap")}} sub-properties, provide this functionality for multi-column, flex, and grid layout. A _gap_ is either a _column gap_ or _row gap_, whose definition varies by layout type. For all layout types, any gap disappears when it coincides with a fragmentation break.
+The {{cssxref("gap")}} property, and its {{cssxref("row-gap")}} and {{cssxref("column-gap")}} sub-properties, provide this functionality for flex, grid, and multi-column layouts.
+
+A _gap_ is either a _column gap_ or a _row gap_. Their definitions vary by layout type. For all layout types, any gap disappears when it coincides with a fragmentation break.
 
 ### Flex container gaps
 
-Flex containers are created by setting {{cssxref("display")}} to `flex` or `inline-flex` on an element containing multiple children. By default, flex items are laid out in one, non-wrapping row. By default, the gap between adjacent cells and, if wrapping, between adjacent columns or rows, is `0`. Whether a multi-item flex container has columns or rows, or both, depends on the flow and wrapping, set with the {{cssxref("flex-flow")}} shorthand.
+Flex containers are created by setting {{cssxref("display")}} to `flex` or `inline-flex` on an element containing multiple children. By default, flex items are laid out in a single, non-wrapping row. The default gap between adjacent flex items and, if wrapping, between adjacent columns or rows, is `0`. Whether a flex container with multiple items has columns, rows, or both depends on the flow and wrapping set using the {{cssxref("flex-flow")}} shorthand.
 
-Gaps can be made to occur between adjacent items in the main axis. If the `flex-flex` is set to `row wrap` or `row-reverse wrap`, _column gaps_ refers to the gutter between adjacent items and _row gaps_ refers to the gutter between flex rows. If the `flex-flex` is set to `column wrap` or `column-reverse wrap`, _row gaps_ refers to the gutter between adjacent items and _column gaps_ refers to the gutter between flex rows.
+You can add gaps between adjacent flex items along the main axis. If the {{cssxref("flex-flow")}} property is set to `row wrap` or `row-reverse wrap`, _column gap_ refers to the gutter between adjacent flex items and _row gap_ refers to the gutter between flex rows. If `flex-flow` is set to `column wrap` or `column-reverse wrap`, _row gap_ refers to the gutter between adjacent flex items and _column gap_ refers to the gutter between flex rows.
 
 ### Grid container gaps
 
-In the context of a grid container, _row gaps_ and _column gaps_ refer to the gutters between grid rows and grid columns, respectively. The effect of the width of the gaps is as though the affected grid lines acquired thickness: the grid track between two grid lines is the space between the gutters that represent them. By default, the width of the gap is `0` in both directions.
+In the context of a grid container, _row gaps_ and _column gaps_ refer to the gutters between grid rows and grid columns, respectively. The width of the gaps makes the affected grid lines behave as though they acquired thickness: the grid track between two grid lines is the space between the gutters that represent them. By default, the width of the gap is `0` in both directions.
 
 The effect of positive `gap` values is as though the grid lines acquired thickness: the grid track between two grid lines is the space between the gutters that represent them. For the purpose of track sizing, each gutter is treated as an extra, empty, fixed-size track of the specified size, which is spanned by any grid items that span across its corresponding grid line. If a grid item spans multiple rows or columns, for the purpose of track sizing, the gutter is treated as an extra, empty, fixed-size track of the specified size, added to the dimension in the spanning direction. For example, if `gap: 20px` is set on a 4x4 grid of 100px by 100px boxes, the grid would be 460px by 460px. While each box is 100px by 100px, if a grid item spans two horizontal rows, it's height is `220px`. If it spans three, it has a height of `340px`. If it spans all four, it has a height of `460px`.
 
-Gutter gaps effect a minimum spacing between items: additional spacing may be added by {{cssxref("justify-content")}} and {{cssxref("align-content")}} property values, increasing the size of the corresponding gaps.
+Gutter gaps set the minimum spacing between items: additional spacing may be added by {{cssxref("justify-content")}} and {{cssxref("align-content")}} property values, increasing the size of the corresponding gaps.
 
-Gutters only appear between tracks of the implicit grid. If a grid is fragmented between tracks, no gutter spacing is added between those tracks. There is no gutter before the first track or after the last track, and if a track is collapsed, it will have no gutter.
+Gutters appear only between tracks of the implicit grid. If a grid is fragmented between tracks, no gutter spacing is added between those tracks. There is no gutter before the first track or after the last track. If a track is collapsed, it has no gutter.
 
 ### Multi-col gaps
 
-Multi-col containers are block-level elements with more than one column created by setting the {{cssxref("column-count")}} to a value greater than `1`. By default, columns are laid out in a single row, with a `1em` wide _column gap_ as a gutter between adjacent column. The _row gap_ is the gutter between rows of column boxes established by setting a {{cssxref("column-height")}} that requires columns to wrap, creating additional rows.
+Multi-col containers are block-level elements with more than one column created by setting the {{cssxref("column-count")}} to a value greater than `1`. By default, columns are laid out in a single row, with a `1em` wide _column gap_ between adjacent columns. The _row gap_ is the gutter between rows of column boxes established by setting a {{cssxref("column-height")}} that requires columns to wrap, creating additional rows.
 
-## The `gap` shorthand
+## Using the `gap` shorthand
 
 The {{cssxref("row-gap")}} property sets the size of the gap ({{glossary("gutters","gutter")}}) between an element's rows. The {{cssxref("column-gap")}} property sets the size between an element's columns. Each property value can each be specified as a `<length>`, a `<percentage>`, or the keyword `normal`. Percentage values are calculated against the [content box](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#content_area) size of the container element for that dimension.
 
-The {{cssxref("gap")}} shorthand defines the gaps between both rows and columns, specified as a value for as one or two values. While the default value for is `normal` for both sub-properties, if only one value is declared, that value applies to both.
+The {{cssxref("gap")}} shorthand defines the gaps between both rows and columns and accepts one or two values. The default value is `normal` for both sub-properties. If only one value is declared, that value applies to both.
 
-The effect of the definition depending on whether the container is a grid container, a flexbox container, or a multi-column layout container.
+The effect of the definition depends on whether the container uses flexbox, grid, or multi-column layout.
 
-Gaps may contain visible separators as gap decorations. If there are decorative rules between the columns, rows, or both, they will appear in the middle of their gap, but have no effect on the gaps' size. These decorative lines are added to the otherwise "empty space" by using the {{cssxref("rule")}} shorthand or its constituent properties.
+You can add visible separators to gaps; these are called gap decorations. If you add decorative rules for gaps between columns, rows, or both, they appear in the middle of their gap but have no effect on the size of the gap. These decorative lines are added to the otherwise "empty space" by using the {{cssxref("rule")}} shorthand or its constituent properties.
 
 ### With grid
 
@@ -183,6 +185,8 @@ i:nth-of-type(7n) {
 
 {{EmbedLiveSample("flex_gap", "", "900")}}
 
+### Gaps in multi-column layouts
+
 In [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout), the property defines the gutter between columns and rows of columns. The first value defines the gap between adjacent column boxes, while the second value defines the size of the gutter between rows of column boxes, if multiple rows were established by the {{cssxref("column-height")}} property.
 
 We create a multi-col container with the `columns` shorthand property, setting a maximum `column-count` of seven columns, with the minimum width of each column being 2.5 ems, with a `column-height` of `2.35em` which will enable row creation. We also added a thin rule in the middle of the gap using the {{cssxref("rule")}} property:
@@ -296,7 +300,7 @@ label {
 }
 ```
 
-## Percentages
+## Specifying gap values as percentages
 
 When a container has a fixed size, percentage values for column or row gaps are relative the width and height of the container, respectively.
 
