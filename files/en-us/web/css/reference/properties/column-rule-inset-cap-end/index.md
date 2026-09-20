@@ -96,7 +96,7 @@ column-rule-inset-cap-end: overlap-join;
 ## Syntax
 
 ```css
-/* Keywords */
+/* Keyword value */
 column-rule-inset-cap-end: overlap-join;
 
 /* <length-percentage> values */
@@ -270,9 +270,9 @@ inset.addEventListener("input", () => {
 ```js hidden live-sample___caps
 visibility.addEventListener("change", () => {
   ul.style.ruleVisibilityItems = `${visibility.value}`;
-  if (visibility.value == "between") {
+  if (visibility.value === "between") {
     ul.style.columnRuleStyle = "repeat(2, solid), double";
-  } else if (visibility.value == "around") {
+  } else if (visibility.value === "around") {
     ul.style.columnRuleStyle = "repeat(3, solid), repeat(2, double)";
   } else {
     ul.style.columnRuleStyle = "solid";
@@ -283,9 +283,9 @@ visibility.addEventListener("change", () => {
 ```js hidden live-sample___percents
 visibility.addEventListener("change", () => {
   ul.style.ruleVisibilityItems = `${visibility.value}`;
-  if (visibility.value == "between") {
+  if (visibility.value === "between") {
     ul.style.columnRuleStyle = "repeat(2, inset), double, repeat(2, solid)";
-  } else if (visibility.value == "around") {
+  } else if (visibility.value === "around") {
     ul.style.columnRuleStyle = "repeat(3, inset), repeat(2, double)";
   } else {
     ul.style.columnRuleStyle = "solid";

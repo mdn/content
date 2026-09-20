@@ -3,10 +3,12 @@ title: "MathMLAnchorElement: search property"
 short-title: search
 slug: Web/API/MathMLAnchorElement/search
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.MathMLAnchorElement.search
 ---
 
-{{APIRef("MathML")}}
+{{APIRef("MathML")}}{{SeeCompatTable}}
 
 The **`search`** property of the {{domxref("MathMLAnchorElement")}} interface is a search string, also called a _query string_, that is a string containing a `"?"` followed by the parameters of the [`<a>`](/en-US/docs/Web/MathML/Reference/Element/a) element's `href`. If the URL does not have a search query, this property contains an empty string, `""`.
 

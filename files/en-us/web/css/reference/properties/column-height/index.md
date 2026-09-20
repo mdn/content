@@ -16,7 +16,7 @@ The **`column-height`** [CSS](/en-US/docs/Web/CSS) property specifies the height
 ## Syntax
 
 ```css
-/* Keyword */
+/* Keyword value */
 column-height: auto;
 
 /* <length> value */

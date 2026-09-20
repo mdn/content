@@ -3,10 +3,12 @@ title: "MathMLAnchorElement: host property"
 short-title: host
 slug: Web/API/MathMLAnchorElement/host
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.MathMLAnchorElement.host
 ---
 
-{{APIRef("MathML")}}
+{{APIRef("MathML")}}{{SeeCompatTable}}
 
 The **`host`** property of the {{domxref("MathMLAnchorElement")}} interface is a string containing the host, which is the {{domxref("MathMLAnchorElement.hostname", "hostname")}}, and then, if the {{glossary("port")}} of the URL is nonempty, a `":"`, followed by the {{domxref("MathMLAnchorElement.port", "port")}} of the URL. If the URL does not have a `hostname`, this property contains an empty string, `""`.
 
