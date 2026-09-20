@@ -31,7 +31,9 @@ You can add gaps between adjacent flex items along the main axis. If the {{cssxr
 
 In the context of a grid container, _row gaps_ and _column gaps_ refer to the gutters between grid rows and grid columns, respectively. The width of the gaps makes the affected grid lines behave as though they acquired thickness: the grid track between two grid lines is the space between the gutters that represent them. By default, the width of the gap is `0` in both directions.
 
-The effect of positive `gap` values is as though the grid lines acquired thickness: the grid track between two grid lines is the space between the gutters that represent them. For the purpose of track sizing, each gutter is treated as an extra, empty, fixed-size track of the specified size, which is spanned by any grid items that span across its corresponding grid line. If a grid item spans multiple rows or columns, for the purpose of track sizing, the gutter is treated as an extra, empty, fixed-size track of the specified size, added to the dimension in the spanning direction. For example, if `gap: 20px` is set on a 4x4 grid of 100px by 100px boxes, the grid would be 460px by 460px. While each box is 100px by 100px, if a grid item spans two horizontal rows, it's height is `220px`. If it spans three, it has a height of `340px`. If it spans all four, it has a height of `460px`.
+For the purpose of track sizing, each gutter is treated as an extra, empty, fixed-size track of the specified size. A grid item that spans multiple rows or columns also spans the gutters between them.
+
+For example, if `gap: 20px` is set on a 4x4 grid of `100px` by `100px` boxes, the grid would be `460px` by `460px`. While each box is `100px` by `100px`, a grid item that spans two horizontal rows has a height of `220px`. If it spans three, its height is `340px`. If it spans all four, its height is `460px`.
 
 Gutter gaps set the minimum spacing between items: additional spacing may be added by {{cssxref("justify-content")}} and {{cssxref("align-content")}} property values, increasing the size of the corresponding gaps.
 
