@@ -272,6 +272,17 @@ li {
   grid-column: 5 / 6;
   grid-row: 4 / 5;
 }
+@layer no-support {
+  @supports not (row-rule-inset-cap-end: 16px) {
+    body::before {
+      content: "Your browser doesn't support the row-rule-inset-cap-end property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
 ```
 
 ```css hidden live-sample___percents
@@ -450,6 +461,17 @@ output {
 }
 p {
   margin-top: 2.5em;
+}
+@layer no-support {
+  @supports not (row-rule-inset-cap-end: 16px) {
+    body::before {
+      content: "Your browser doesn't support the row-rule-inset-cap-end property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
 }
 ```
 

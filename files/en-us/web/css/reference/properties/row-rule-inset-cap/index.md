@@ -277,6 +277,17 @@ li:nth-of-type(16) {
 li:nth-of-type(17) {
   grid-column: 6/7;
 }
+@layer no-support {
+  @supports not (row-rule-inset-cap: 16px) {
+    body::before {
+      content: "Your browser doesn't support the row-rule-inset-cap property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
 ```
 
 ```css hidden live-sample___percents
@@ -458,6 +469,17 @@ output {
 }
 p {
   margin-top: 2.5em;
+}
+@layer no-support {
+  @supports not (row-rule-inset-cap: 16px) {
+    body::before {
+      content: "Your browser doesn't support the row-rule-inset-cap property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
 }
 ```
 

@@ -252,6 +252,17 @@ output {
 p {
   margin-top: 2.5em;
 }
+@layer no-support {
+  @supports not (rule-inset-cap: 16px) {
+    body::before {
+      content: "Your browser doesn't support the rule-inset-cap property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
 ```
 
 ```js hidden
@@ -383,6 +394,17 @@ li:nth-of-type(16) {
 li:nth-of-type(17) {
   display: none;
   grid-area: 5 / 6 / 6 / 7;
+}
+@layer no-support {
+  @supports not (rule-inset-cap: 16px) {
+    body::before {
+      content: "Your browser doesn't support the rule-inset-cap property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
 }
 ```
 
