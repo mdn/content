@@ -45,7 +45,7 @@ Multi-col containers are block-level elements with more than one column created 
 
 ## Using the `gap` shorthand
 
-The {{cssxref("row-gap")}} property sets the size of the gap ({{glossary("gutters","gutter")}}) between an element's rows. The {{cssxref("column-gap")}} property sets the size between an element's columns. Each property value can each be specified as a `<length>`, a `<percentage>`, or the keyword `normal`. Percentage values are calculated against the [content box](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#content_area) size of the container element for that dimension.
+The {{cssxref("row-gap")}} property sets the size of the gap ({{glossary("gutters","gutter")}}) between an element's rows. The {{cssxref("column-gap")}} property sets the size between an element's columns. Each property value can be specified as a `<length>`, a `<percentage>`, or the keyword `normal`. Percentage values are calculated against the [content box](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#content_area) size of the container element for that dimension.
 
 The {{cssxref("gap")}} shorthand defines the gaps between both rows and columns and accepts one or two values. The default value is `normal` for both sub-properties. If only one value is declared, that value applies to both.
 
