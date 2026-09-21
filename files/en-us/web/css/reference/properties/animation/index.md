@@ -67,17 +67,30 @@ This property is a shorthand for the following CSS properties:
 - {{cssxref("animation-play-state")}}
 - {{cssxref("animation-timeline")}}
 
+### Reset-only sub-properties
+
+This property resets the following CSS properties to their initial values:
+
+- {{cssxref("animation-range-end")}}
+- {{cssxref("animation-range-start")}}
+- {{cssxref("animation-delay-end")}}
+- {{cssxref("animation-composition")}}
+- {{cssxref("animation-trigger")}}
+
 ## Syntax
 
 ```css
-/* @keyframes duration | easing-function | delay |
+/* Duration | easing-function | delay |
 iteration-count | direction | fill-mode | play-state | name */
 animation: 3s ease-in 1s 2 reverse both paused slide-in;
 
-/* @keyframes duration | easing-function | delay | name */
+/* Duration | easing-function | delay | name */
 animation: 3s linear 1s slide-in;
 
-/* two animations */
+/* Duration | name */
+animation: 3s slide-in;
+
+/* Multiple animations */
 animation:
   3s linear slide-in,
   3s ease-out 5s slide-out;
@@ -85,7 +98,7 @@ animation:
 
 ### Values
 
-One or more single `<animation>` declarations, separated by commas, with each `<animation>` including:
+This property is specified as a comma-separated list of `<animation>` values, with each value being a space-separated list of the following values:
 
 - `<keyframes-name>` or `none`
   - : The name of a {{cssxref("@keyframes")}} at-rules that specifies the animation to apply to an element. The initial value for {{cssxref("animation-name")}} is `none`.
@@ -167,8 +180,7 @@ Consider providing a mechanism for pausing or disabling animation as well as usi
 
 ### Basic usage: a sunrise
 
-In this example, we demonstrate basic usage of the `animate` shorthand by animating a yellow sun across a light blue sky. The sun rises
-to the center of the viewport and then falls out of sight.
+In this example, we demonstrate basic usage of the `animation` shorthand by animating a yellow sun across a light blue sky. The sun rises to the center of the viewport and then falls out of sight.
 
 #### HTML
 
@@ -360,4 +372,6 @@ is overridden by the bounce animation.
 ## See also
 
 - [Using CSS animations](/en-US/docs/Web/CSS/Guides/Animations/Using)
+- [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module
 - JavaScript {{domxref("AnimationEvent")}} API

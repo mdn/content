@@ -56,7 +56,7 @@ function delayed(value, timeout) {
   return new Promise((res) => setTimeout(() => res(value), timeout));
 }
 
-const sym = Symbol();
+const sym = Symbol("example");
 
 const promises = {
   a: delayed("a", 500),

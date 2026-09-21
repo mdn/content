@@ -14,7 +14,7 @@ The read-only **`vertices`** property of the {{domxref("XRVisibilityMaskChangeEv
 
 ## Value
 
-A {{domxref("Float32Array")}}.
+A {{jsxref("Float32Array")}}.
 
 ## Description
 
