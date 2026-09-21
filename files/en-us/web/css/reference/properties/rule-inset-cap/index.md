@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`rule-inset-cap`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property can be used to offset the start and end of column and row rule segment [cap endpoints](#understanding_cap_end) to the same value.
+The **`rule-inset-cap`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property can be used to offset the start and end of column and row rule segment [cap endpoints](#understanding_cap_end) in a single declaration.
 
 {{InteractiveExample("CSS Demo: rule")}}
 
@@ -108,11 +108,16 @@ This property is a shorthand for the following CSS properties:
 /* Keywords */
 rule-inset-cap: overlap-join;
 
-/* <length-percentage> values */
+/* One <length-percentage> value */
 rule-inset-cap: 0;
 rule-inset-cap: 1em;
 rule-inset-cap: -5px;
 rule-inset-cap: -25%;
+
+/* Two <length-percentage> values */
+rule-inset-cap: 0 1em;
+rule-inset-cap: -5px -25%;
+rule-inset-cap: -0.5em overlap-join;
 
 /* Global values */
 rule-inset-cap: inherit;
@@ -129,11 +134,11 @@ This property is specified as one or two values from the following list:
 - `overlap-join`
   - : Resolves to `0`.
 - {{cssxref("length-percentage")}}
-  - : Specifies the size of the inset. Percentage values are relative to the cap endpoint, which resolves to `0` at the container's edge, is relative to the height of the `row-gap` interior column segment caps, or relative to the height of the `column-gap` for interious row segment cap ends.
+  - : Specifies the size of the inset. Percentage values resolve to `0` for caps at the container's edge. For interior gaps, percentages are relative to the height of the adjacent `row-gap` for column segment caps, or the width of the adjacent `column-gap` for row segment caps.
 
 ## Description
 
-The `rule-inset-cap` shorthand property sets the {{cssxref("column-rule-inset-cap")}} and {{cssxref("row-rule-inset-cap")}} properties to the same value, insetting [cap segment endpoints](#understanding_cap_end) by the specified value. Positive values reduce the segment size, while negative values increase them.
+The `rule-inset-cap` shorthand property sets the {{cssxref("column-rule-inset-cap")}} and {{cssxref("row-rule-inset-cap")}} properties to the same value, insetting cap segment endpoints by the specified value. Positive values reduce the segment size, while negative values increase them.
 
 The `rule-inset-cap` property, along with the {{cssxref("rule-inset-junction")}} property, can be set using the {{cssxref("rule-inset")}} shorthand.
 
@@ -338,7 +343,7 @@ We also include a {{htmlelement("select")}} element with an {{htmlelement("optio
 
 #### CSS
 
-We create a grid container by setting the {{cssxref("display")}} to grid, creating 6 columns with {{cssxref("grid-template-columns")}}, and adding a `20px` {{cssxref("gap")}}. We use the {{cssxref("rule")}} property to define our rules, overriding the color of for our row rules with the {{cssxref("row-rule-color")}} property. We set the {{cssxref("rule-break")}} property to make the rules break at each intersection, to make each rule segment distinct. We explicitly set the {{cssxref("display")}} to the default value of `normal`. We then use the `rule-inset-cap` property to inset all the cap segment endpoints by `16px`.
+We create a grid container by setting the {{cssxref("display")}} to grid, creating 6 columns with {{cssxref("grid-template-columns")}}, and adding a `20px` {{cssxref("gap")}}. We use the {{cssxref("rule")}} property to define our rules, overriding the row rule color with the {{cssxref("row-rule-color")}} property. We set the {{cssxref("rule-break")}} property to break the rules at each intersection, making each rule segment distinct. We explicitly set {{cssxref("rule-visibility-items")}} to the default value of `normal`. We then use the `rule-inset-cap` property to inset all the cap segment endpoints by `16px`.
 
 ```css
 ul {
@@ -428,7 +433,7 @@ visibility.addEventListener("change", () => {
 
 {{EmbedLiveSample("Inner cap segments", "", "400")}}
 
-Select `between` from the dropdown to only paint rule segments when both adjacent grid areas contain a grid item, then change the value of the inset.
+Select `between` from the dropdown to only paint rule segments when both adjacent grid areas contain a grid item, thereby creating interior cap segments. Then change the value of the inset.
 
 ## Specifications
 
