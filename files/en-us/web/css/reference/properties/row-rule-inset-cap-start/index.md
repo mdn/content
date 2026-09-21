@@ -319,7 +319,7 @@ In this case, the `around` value of the `rule-visibility-items` property, which 
 
 ### Understanding percentage values
 
-The length a percentage value is relative to depends on the endpoint location. Interior endpoint percentage values are relative to the width of the gap at the cap endpoint, so relative to the {{cssxref("column-gap")}} if abutting a rule gap, and `0` at the top edge of the container.
+The length a percentage value is relative to depends on the endpoint location. Interior endpoint percentage values are relative to the width of the gap at the cap endpoint, so relative to the {{cssxref("column-gap")}} if abutting a rule gap, and `0` at the edge of the container.
 
 This example isn't broken; all the cap segments start at the container's edge, so all the insets are `0` by default.
 

@@ -340,7 +340,9 @@ The rule segments abutting the right edge of the container (only the segment bet
 
 ### Understanding percentage values
 
-What length a percentage value is relative to depends on the location of the endpoint. Interior endpoint percentage values are relative to the width of the gap at the cap endpoint, so relative to the {{cssxref("column-gap")}} if abutting a gap or `0` if abutting the edge of the container. In this demonstration, these endpoints are denoted by the inset, dark and light lines.
+The length a percentage value is relative to depends on the endpoint location. Interior endpoint percentage values are relative to the width of the gap at the cap endpoint, so relative to the {{cssxref("column-gap")}} if abutting a rule gap, and `0` at the top edge of the container.
+
+This example isn't broken; all the cap segments end at the container's edge, so all the insets are `0` by default.
 
 {{EmbedLiveSample("percents", "", "400")}}
 

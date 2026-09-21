@@ -315,7 +315,9 @@ Select `between` as the `rule-visibility-items` value, which paints rules in gap
 
 ### Understanding percentage values
 
-What length a percentage value is relative to depends on the endpoint's location. Interior endpoint percentage values are relative to the gap width at the cap endpoint, so relative to the {{cssxref("row-gap")}} if abutting a rule gap. In this demonstration, these endpoints are denoted by the inset, dark and light, line style. If the cap segment endpoint is at the container's edge, the percentage is relative to `0`, so it always computes to `0` (which is why only the `between` value has an effect).
+The length a percentage value is relative to depends on the endpoint location. Interior endpoint percentage values are relative to the width of the gap at the cap endpoint, so relative to the {{cssxref("row-gap")}} if abutting a rule gap, and `0` at the bottom edge of the container.
+
+In this demonstration, these endpoints are denoted by the inset, dark and light, line style. If the cap segment endpoint is at the container's edge, the percentage is relative to `0`, so it always computes to `0` (which is why only the `between` value has an effect).
 
 {{EmbedLiveSample("percents", "", "300")}}
 
