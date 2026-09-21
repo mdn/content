@@ -23,30 +23,31 @@ This property is a shorthand for the following CSS properties:
 ## Syntax
 
 ```css
-/* Keyword */
+/* Keywords */
 timeline-trigger-active-range: normal;
 timeline-trigger-active-range: auto;
 
-/* Range start value only */
-/* Single value */
-timeline-trigger-active-range: 0%;
-timeline-trigger-active-range: 0px;
+/* Range start only */
+/* Offset only */
+timeline-trigger-active-range: 10%;
+timeline-trigger-active-range: 40px;
+/* Named timeline only */
 timeline-trigger-active-range: cover;
-/* Two values */
+/* Named timeline and offset value */
 timeline-trigger-active-range: exit 10%;
 timeline-trigger-active-range: contain 50px;
 
-/* Range start and end values */
-/* Two values */
+/* Range start and end */
 timeline-trigger-active-range: 5% 95%;
 timeline-trigger-active-range: entry exit;
 timeline-trigger-active-range: auto 10%;
 timeline-trigger-active-range: 10% normal;
-/* Three values */
+/* Offset on start only */
+timeline-trigger-active-range: entry 10% 90%;
+/* Offset on end only */
 timeline-trigger-active-range: contain contain 90%;
 timeline-trigger-active-range: 200px exit 600px;
-timeline-trigger-active-range: entry 10% 90%;
-/* Four values */
+/* Named timeline and offset for both start and end */
 timeline-trigger-active-range: entry 0% exit 50%;
 timeline-trigger-active-range: contain 100px contain 90%;
 
