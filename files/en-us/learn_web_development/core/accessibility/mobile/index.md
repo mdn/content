@@ -282,7 +282,7 @@ let initialMouseX = null;
 
 let initialMouseY = null;
 
-var initialBoxX, initialBoxY, rAF;
+let initialBoxX, initialBoxY, rAF;
 
 div.addEventListener("mousedown", () => {
   initialBoxX = div.offsetLeft;
@@ -302,10 +302,10 @@ function movePanel() {
 
     let offsetX = initialBoxX + mouseMoveX;
     let offsetY = initialBoxY + mouseMoveY;
-    console.log(offsetX + " " + offsetY);
+    console.log(`${offsetX} ${offsetY}`);
 
-    div.style.left = offsetX + "px";
-    div.style.top = offsetY + "px";
+    div.style.left = `${offsetX}px`;
+    div.style.top = `${offsetY}px`;
   }
 
   rAF = requestAnimationFrame(movePanel);
@@ -391,8 +391,8 @@ function movePanel() {
     let offsetX = initialBoxX + posMoveX;
     let offsetY = initialBoxY + posMoveY;
 
-    div.style.left = offsetX + "px";
-    div.style.top = offsetY + "px";
+    div.style.left = `${offsetX}px`;
+    div.style.top = `${offsetY}px`;
   }
 
   rAF = requestAnimationFrame(movePanel);

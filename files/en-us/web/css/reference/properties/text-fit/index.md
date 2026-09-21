@@ -3,9 +3,13 @@ title: "`text-fit` CSS property"
 short-title: text-fit
 slug: Web/CSS/Reference/Properties/text-fit
 page-type: css-property
+status:
+  - experimental
 browser-compat: css.properties.text-fit
 sidebar: cssref
 ---
+
+{{SeeCompatTable}}
 
 The **`text-fit`** [CSS](/en-US/docs/Web/CSS) property can be used to scale the rendered font size of text nodes (and other inline content) so that they fit exactly within the inline dimension of their containing boxes, optionally limited by a maximum or minimum **scaling factor**.
 
