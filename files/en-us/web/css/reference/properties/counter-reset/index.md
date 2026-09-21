@@ -132,7 +132,7 @@ h1 {
 
 For reversed counters created without an `<integer>`, start with the value equal to the number of elements in the set, counting down so the last element in the set is `1`.
 
-This example creates two reversed counters, `chapter` and `section`, and a regular counter, `pages`. The `chapter` counter is initialized as the number of elements, `section` as `10`, and `pages` to its default initial value of `0`.
+The following example creates two reversed counters, `chapter` and `section`, and a regular counter, `pages`. The initial value of the `chapter` counter is calculated automatically. The `section` counter starts at `10`, and `pages` uses the default initial value of `0`.
 
 ```css
 h1 {
