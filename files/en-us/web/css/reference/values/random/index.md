@@ -63,7 +63,7 @@ random(--my-base, 1em, 3rem, 2px)
 The `random(seed, min, max, step) function accepts two to four comma-separated expressions as its parameters.
 
 - `<random-key>` {{optional_inline}}
-  - : Controls which `random()` functions in the document will share a random base value and which will get distinct values.
+  - : Controls which `random()` functions in the document will share a random base value, or _seed_, and which will get distinct values.
     Specified as one of the following values:
     - `auto`
       - : The random function generates independent random values by default. The random cache name, and thus the result, varies across every `random()` instance in a multi-component value, across different properties, and across different elements. This default `<random-key>` value is equivalent to specifying `element-scoped property-index-scoped`.
