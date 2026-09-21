@@ -185,7 +185,7 @@ ol {
 
 #### Result
 
-{{EmbedLiveSample("Overriding the list-item counter", 140, 300)}}
+{{EmbedLiveSample("Overriding the list-item counter", 140, 200)}}
 
 The first item is numbered `4`. This is similar to the effect of writing [`<ol start="4">`](/en-US/docs/Web/HTML/Reference/Elements/ol#start) in HTML.
 
