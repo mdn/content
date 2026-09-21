@@ -149,6 +149,11 @@ Each of the pages below contains detailed information about a math function's sy
   - : Calculates the logarithm of a number.
 - {{cssxref("exp()")}}
   - : Calculates `e` raised to the power of a number.
+ 
+### Random value functions
+
+- {{cssxref("random")}}
+  - : Generates a random value between a minimum and maximum value.
 
 ### Sign-related functions
 
