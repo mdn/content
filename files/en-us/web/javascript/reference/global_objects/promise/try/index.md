@@ -64,9 +64,6 @@ For the built-in `Promise()` constructor, errors thrown from the executor are au
 Promise.try(func);
 ```
 
-> [!NOTE]
-> `Promise.try()` was originally specified and implemented to work like the `new Promise()` version, unconditionally creating a new promise, but this is no longer the case.
-
 Note that `Promise.try()` is _not_ equivalent to this, despite being highly similar:
 
 ```js
