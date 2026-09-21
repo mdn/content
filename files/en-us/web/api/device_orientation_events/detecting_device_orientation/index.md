@@ -90,6 +90,8 @@ The value reported for each axis indicates the amount of rotation around a given
 
 This example will work on any browser supporting the {{domxref("Window.deviceorientation_event", "deviceorientation")}} event and running on a device able to detect its orientation.
 
+Before trying the example, make sure that motion sensor access is enabled for the site in your browser settings. If your browser implements `DeviceOrientationEvent.requestPermission()`, you must also request permission from a user gesture as described in [Requesting permission](#requesting_permission).
+
 So let's imagine a ball in a garden:
 
 ```html
