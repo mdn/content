@@ -121,7 +121,7 @@ The `property-scoped` keyword makes `.a`, `.b`, and `.c` identical rectangles, s
 
 Using `element-scoped` instead would give each element its own independently sized width and height.
 
-`property-index-scoped` is useful in shorthands, where each position needs its own shared value:
+The `property-index-scoped` keyword is useful in shorthands, where each position needs its own shared value:
 
 ```css
 .a,
