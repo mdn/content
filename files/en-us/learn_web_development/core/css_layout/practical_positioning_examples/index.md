@@ -297,7 +297,7 @@ First of all, we need some additional HTML to represent the webpage's main conte
 
 ### Changes to the existing CSS
 
-Next we need to make some small changes to the existing CSS, to get the info-box placed and positioned. Change your `.info-box` rule to get rid of `margin: 0 auto;` (we no longer want the info-box centered), add {{cssxref("position", "position: fixed;")}}, and stick it to the {{cssxref("top")}} of the browser viewport.
+Next we need to make some small changes to the existing CSS, to get the info-box placed and positioned. Add {{cssxref("position", "position: fixed;")}} to your `.info-box` rule and stick it to the {{cssxref("top")}} of the browser viewport. Once the info-box is fixed, `margin: 0 auto;` no longer centers it, so remove that declaration.
 
 It should now look like this:
 
