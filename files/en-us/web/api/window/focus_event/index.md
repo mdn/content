@@ -8,7 +8,7 @@ browser-compat: api.Window.focus_event
 
 {{APIRef("UI Events")}}
 
-The **`focus`** event fires when an element has received focus.
+The **`focus`** event fires when the window has received focus.
 
 The opposite of `focus` is {{domxref("Window/blur_event", "blur")}}.
 
