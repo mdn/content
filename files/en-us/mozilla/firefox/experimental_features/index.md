@@ -850,6 +850,21 @@ The Container Timing API reports when the contents of a container element are pa
 - `dom.enable_container_timing`
   - : Set to `true` to enable.
 
+### Web custom formats in the Async Clipboard API
+
+The [Clipboard API](/en-US/docs/Web/API/Clipboard_API) API supports custom clipboard formats, allowing web apps to write and read custom MIME types prefixed with `"web "` using the {{domxref("Clipboard.write()")}} and {{domxref("Clipboard.read()")}} methods, respectively.
+This is supported on desktop from Firefox 154 and on Android from Firefox 156 ([Firefox bug 1956304](https://bugzil.la/1956304) and [Firefox bug 2048545](https://bugzil.la/2048545)).
+
+| Release channel   | Version changed | Enabled by default? |
+| ----------------- | --------------- | ------------------- |
+| Nightly           | 154             | Yes (desktop only)  |
+| Developer Edition | 154             | No                  |
+| Beta              | 154             | No                  |
+| Release           | 154             | No                  |
+
+- `clipboard.customFormatSupport.enabled`
+  - : Set to `true` to enable.
+
 ## Security and privacy
 
 ### Insecure page labeling

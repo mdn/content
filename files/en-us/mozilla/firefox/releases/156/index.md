@@ -112,3 +112,8 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   The Container Timing API reports when the contents of a container element are painted, letting you measure the render time of a region of the page rather than of the whole viewport.
   ([Firefox bug 1940240](https://bugzil.la/1940240)).
+
+- **Web custom formats in the Async Clipboard API** (Nightly): `clipboard.customFormatSupport.enabled`
+
+  The [Clipboard API](/en-US/docs/Web/API/Clipboard_API) now supports web custom formats on Android, allowing {{domxref("ClipboardItem")}} objects to carry custom MIME types prefixed with `"web "`, such as `"web text/foo"`.
+  Support for other platforms was added in Firefox 154. ([Firefox bug 2048545](https://bugzil.la/2048545)).
