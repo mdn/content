@@ -166,7 +166,7 @@ A _cap segment endpoint_ is any segment endpoint that is not a junction segment 
 
 The `column-rule-inset-cap` property can reduce or extend the top, bottom, or both ends of column segments at the top and bottom edge of the container and the segment end at any interior junction where no other segments are present.
 
-Column cap segments are impacted by the {{cssxref("rule-visibility-items")}} properties, which define whether column- and row-rule segments are painted in gaps adjacent to empty areas, such as grid areas containing no grid items. Changing the value from `auto` to `between` and `around` values can lead to additional interior cap segments.
+Column cap segments are impacted by the {{cssxref("rule-visibility-items")}} properties, which define whether row- and column-rule segments are painted in gaps adjacent to empty areas. Changing the value from `auto` to `between` or `around` can create additional interior cap segments.
 
 In the following demonstration, the top of the column segments in the top row and the bottom of the column segments in the bottom row start and end in cap endpoints, respectively. With `column-rule-inset-cap: 16px` set, all the column segment cap endpoints are inset by `16px`. Change the inset `<length>` value to better visualize which segments start or end in cap segment endpoints.
 

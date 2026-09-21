@@ -154,7 +154,7 @@ The `row-rule-inset-cap-start` controls the start inset of row rules with cap en
 - Row rule segments abutting the container start edge.
 - Row rule segments whose left side abuts an interior gap where no other row or column rule segments are present.
 
-Row cap segments are impacted by the {{cssxref("rule-visibility-items")}} properties, which define whether column- and row-rule segments are painted in gaps adjacent to empty areas, such as grid areas containing no grid items. Changing the value from `auto` to `between` and `around` can lead to the creation interior cap segments and the disappearance of container-edge abutting ones.
+Row cap segments are impacted by the {{cssxref("rule-visibility-items")}} properties, which define whether row- and column-rule segments are painted in gaps adjacent to empty areas. Changing the value from `auto` to `between` or `around` can create additional interior cap segments.
 
 In the following demonstration, the leftmost segments of the row rules abutting the container edge start in a cap endpoint. With `row-rule-inset-cap-start: -32px` set, these endpoints are all outset by `32px`. As row rules don't impact the box model, these protruding lines don't affect the content's layout. Change the inset `<length>` value to better visualize which segments start with cap segment endpoints.
 

@@ -165,7 +165,7 @@ A _cap segment endpoint_ is any segment endpoint that is not a junction segment 
 
 The `row-rule-inset-cap` property can outset or inset the start and end of row rules at the container edge, and the start and end of interior row segments where no other segments are present.
 
-Cap segments are impacted by the {{cssxref("rule-visibility-items")}} properties, which define whether row- and column-rule segments are painted in gaps adjacent to empty areas (or would otherwise be painted if the `rule` were set to a visible value). Changing the value from `auto` to `between` and `around` values can lead to additional interior cap segments.
+Cap segments are impacted by the {{cssxref("rule-visibility-items")}} properties, which define whether row- and column-rule segments are painted in gaps adjacent to empty areas. Changing the value from `auto` to `between` or `around` can create additional interior cap segments.
 
 In the following demonstration, the rows end in cap endpoints at the container's left and right edges. With `row-rule-inset-cap: 16px` set, these endpoints are inset by `16px`. Change the inset `<length>` value to better visualize which segments start or end with cap segment endpoints.
 
