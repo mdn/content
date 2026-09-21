@@ -80,7 +80,7 @@ random(--my-base, 1em, 3rem, 2px)
   - : Two required, comma-separated, `<number>`, `<dimension>`, or `<percentage>` values, or calculations resolving to one of these types, defining the minimum and maximum values, respectively. Both values must be resolvable to the same [data type](/en-US/docs/Web/CSS/Reference/Values/Data_types). If the maximum is less than the minimum, the function will return the first `<calc-sum>` value.
 
 - `<calc-sum>` {{optional_inline}}
-  - : The optional third `<calc-sum>`, preceded by a comma, specifies the step interval. If present, and of the same data type as the two comma-separated minimum and maximum `<calc-sum>` values, it defines the return value to be minimum value or at increments of the step value from the minimum value, up to the maximum value.
+  - : Specifies the step interval. If present, and of the same data type as the two comma-separated minimum and maximum `<calc-sum>` values, it defines the return value to be the minimum value or at increments of the step value from the minimum value, up to the maximum value.
 
 ### Return value
 
