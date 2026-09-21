@@ -138,7 +138,7 @@ This property is specified as one or two values from the following list:
 
 ## Description
 
-The `rule-inset-cap` shorthand property sets the {{cssxref("column-rule-inset-cap")}} and {{cssxref("row-rule-inset-cap")}} properties to the same value, insetting cap segment endpoints by the specified value. Positive values reduce the segment size, while negative values increase them.
+The `rule-inset-cap` shorthand property sets the {{cssxref("column-rule-inset-cap")}} and {{cssxref("row-rule-inset-cap")}} properties to the same value, insetting cap segment endpoints by the specified value. Positive values reduce the segment size, while negative values increase it.
 
 The `rule-inset-cap` property, along with the {{cssxref("rule-inset-junction")}} property, can be set using the {{cssxref("rule-inset")}} shorthand.
 
@@ -154,7 +154,7 @@ The `rule-inset-cap` property, along with the {{cssxref("rule-inset-junction")}}
 
 ### Basic usage
 
-This example demonstrates setting `rule-inset-cap` to inset the endpoints of cap segments on flex containers.
+This example shows how to set `rule-inset-cap` to inset the endpoints of cap segments on flex containers.
 
 #### HTML
 
@@ -200,7 +200,7 @@ This example demonstrates setting `rule-inset-cap` to inset the endpoints of cap
 
 #### CSS
 
-We use the {{cssxref("display")}} property to turn the `.flexbox` elements into flex containers. We balance the items into three flex lines using with {{cssxref("flex-wrap")}} and {{cssxref("flex-line-count")}}. We define a light blue {{cssxref("rule")}} to be painted in both row and column gaps, then overwrite the {{cssxref("column-rule-color")}}, setting darker `blue` vertical gap decorations. Finally, we set the `rule-inset-cap` to `16px`.
+We use the {{cssxref("display")}} property to turn the `.flexbox` elements into flex containers. We balance the items into three flex lines using {{cssxref("flex-wrap")}} and {{cssxref("flex-line-count")}}. We define a light blue {{cssxref("rule")}} to paint in both row and column gaps, then override the {{cssxref("column-rule-color")}}, setting darker `blue` vertical gap decorations. Finally, we set the `rule-inset-cap` to `16px`.
 
 ```css
 .flexbox {
@@ -291,7 +291,7 @@ Change the size of the inset.
 
 ### Inner cap segments
 
-This example demonstrates setting `rule-inset-cap` to inset the endpoints of cap segments on a grid container, and how the {{cssxref("rule-visibility-items")}} property can turn inner endpoints into cap segment endpoints.
+This example shows how to set `rule-inset-cap` to inset the endpoints of cap segments on a grid container, and how the {{cssxref("rule-visibility-items")}} property can turn inner endpoints into cap segment endpoints.
 
 #### HTML
 
@@ -334,7 +334,7 @@ We also include a {{htmlelement("select")}} element with an {{htmlelement("optio
 
 <p>
   <label
-    >Change the size of the inset.
+    >Change the inset size.
     <input type="range" min="-40" max="16" value="0" id="inset" data-unit="px"
   /></label>
   <output id="o"></output>
@@ -433,7 +433,7 @@ visibility.addEventListener("change", () => {
 
 {{EmbedLiveSample("Inner cap segments", "", "400")}}
 
-Select `between` from the dropdown to only paint rule segments when both adjacent grid areas contain a grid item, thereby creating interior cap segments. Then change the value of the inset.
+Select `between` from the dropdown to only paint rule segments when both adjacent grid areas contain a grid item, thereby creating interior cap segments. Then change the inset value.
 
 ## Specifications
 
