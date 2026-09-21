@@ -480,7 +480,7 @@ inset.addEventListener("input", () => {
 
 {{EmbedLiveSample("Basic usage", "", "330")}}
 
-Change the size of the inset. Note how only the column segments grow and shrink at their cap ends — the ends that don't intersect other column or row segments.
+Change the size of the inset. Note how only the column segments grow and shrink only at their segment cap ends — the ends that don't intersect other column or row segments.
 
 ## Specifications
 

@@ -500,7 +500,7 @@ inset.addEventListener("input", () => {
 
 {{EmbedLiveSample("Basic usage", "", "330")}}
 
-Change the size of the inset. Note how only the row-segment grow and shrink at their cap ends, either their left side, their right side, or both directions, on the ends that don't intersect other column or row segments.
+Change the size of the inset. Note how the row segments grow and shrink only at segment cap ends, either their left side, their right side, or both directions, on the ends that don't intersect other column or row segments.
 
 ## Specifications
 
