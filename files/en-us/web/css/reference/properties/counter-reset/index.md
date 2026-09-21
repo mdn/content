@@ -103,7 +103,7 @@ This property is specified as a space-separated list of counter or reversed coun
   - : Specifies the counter name to create and initialize. The `reversed()` functional notation can be used to create a reversed counter.
 - {{cssxref("&lt;integer&gt;")}}
   - : Specifies the initial value to set on the newly created counter.
-    Defaults to `0` if not specified, or to the number of elements in the case of `reversed()`.
+    Defaults to `0` if not specified, or no starting number in the case of `reversed()`.
 - `none`
   - : Specifies that no counters are created.
 
@@ -120,7 +120,7 @@ Separate multiple counter names or name-value pairs with spaces. For counter nam
 
 ### Default initial values
 
-The default initial values of regular and reversed counters enable implementing the two most common numbering patterns: counting up from `1` to the number of elements and counting down from the number of elements to `1`, with increments or decrements of `1`. By specifying an initial value for a named counter, you can change its starting value. The increment or decrement can be adjusted by using the {{cssxref("counter-increment")}} property.
+Declraing regular and reversed counters without include an integer implement the two most common numbering patterns: counting up from `1` to the number of elements and counting down from the number of elements to `1`, with increments or decrements of `1`. By specifying an initial value for a named counter, you can change its starting value. The increment or decrement can be adjusted by using the {{cssxref("counter-increment")}} property.
 
 The following example creates three counters. The `chapter` and `page` counters are set to the initial default value of `0`, while `section` is set to `4`:
 
@@ -130,13 +130,14 @@ h1 {
 }
 ```
 
-For reversed counters created without an `<integer>`, start with the value equal to the number of elements in the set, counting down so the last element in the set is `1`.
+Reversed counters created without an `<integer>` count down so the last element in the set is `-1`. To count down the elements so that the last element is set to `1`, set the `counter-increment` on that named counter to `-1`.
 
-The following example creates two reversed counters, `chapter` and `section`, and a regular counter, `pages`. The initial value of the `chapter` counter is calculated automatically. The `section` counter starts at `10`, and `pages` uses the default initial value of `0`.
+The following example creates two reversed counters, `chapter` and `section`, and a regular counter, `pages`. The `section` counter starts at `10`, and `pages` uses the default initial value of `0`. The initial value of the `chapter` counter is calculated automatically, decrementing the value each time an `<h1>` is encountered, with the `chapter` counter having a value of `1` on the last `<h1>`.
 
 ```css
 h1 {
   counter-reset: reversed(chapter) reversed(section) 10 pages;
+  counter-increment: chapter -1;
 }
 ```
 
@@ -239,7 +240,7 @@ li::before {
 
 {{EmbedLiveSample("Using a reverse counter", 140, 150)}}
 
-The items are numbered in reverse order from `5` to `1`. Notice that we haven't specified the counter's initial value. The browser automatically calculates the initial value at layout time using the counter increment value.
+The items are numbered in reverse order from `5` to `1`. Notice that we haven't specified the counter's initial value. The browser automatically calculates the initial value at layout time.
 
 ## Specifications
 
