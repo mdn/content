@@ -169,7 +169,7 @@ To reference identified stakeholders, you index them with the letter S (S1, S2, 
 
 Now that we've modeled our environment, we can start thinking about what can go wrong with it. Threats can be identified in different ways and one common way is to look at threat lists. For example, we could start by taking a look at threat maps or rely on external threat lists such as OWASP top ten or others.
 
-- [OWASP top ten](https://owasp.org/Top10/2025/)
+- [OWASP top ten](https://top10.owasp.org/2025/)
 - Security consideration sections in web platform specifications as well as on MDN Web Docs.
 
 For a web application, this might include cross-site scripting, cross-site request forgery, account takeover, or data leakage via third-party scripts.
