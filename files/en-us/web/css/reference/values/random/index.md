@@ -108,7 +108,7 @@ Used on their own, the scope keywords control sharing without a custom name:
 - `element-scoped` gives each element its own base value, per property.
 - `property-index-scoped` works like `property-scoped`, but also separates `random()` calls by position within a shorthand.
 
-`property-scoped` makes `.a`, `.b`, and `.c` identical rectangles, since every element gets the same width and the same height:
+The `property-scoped` keyword makes `.a`, `.b`, and `.c` identical rectangles, since every element gets the same `width` value and the same `height` value:
 
 ```css
 .a,
