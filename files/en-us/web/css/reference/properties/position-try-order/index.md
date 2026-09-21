@@ -12,7 +12,7 @@ The **`position-try-order`** [CSS](/en-US/docs/Web/CSS) property allows you to p
 ## Syntax
 
 ```css
-/* Keywords */
+/* Keyword values */
 position-try-order: normal;
 position-try-order: most-height;
 position-try-order: most-width;

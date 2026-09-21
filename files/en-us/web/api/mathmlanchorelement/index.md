@@ -2,10 +2,12 @@
 title: MathMLAnchorElement
 slug: Web/API/MathMLAnchorElement
 page-type: web-api-interface
+status:
+  - experimental
 browser-compat: api.MathMLAnchorElement
 ---
 
-{{APIRef("MathML")}}
+{{APIRef("MathML")}}{{SeeCompatTable}}
 
 The **`MathMLAnchorElement`** interface represents MathML [`<a>`](/en-US/docs/Web/MathML/Reference/Element/a) (hyperlink) elements and provides properties for getting and setting various features of such elements.
 
@@ -15,33 +17,33 @@ The **`MathMLAnchorElement`** interface represents MathML [`<a>`](/en-US/docs/We
 
 _Inherits properties from its parent, {{domxref("MathMLElement")}}._
 
-- {{domxref("MathMLAnchorElement.hash")}}
+- {{domxref("MathMLAnchorElement.hash")}} {{experimental_inline}}
   - : A string representing the fragment identifier, including the leading hash mark (`#`), if any, in the referenced URL.
-- {{domxref("MathMLAnchorElement.host")}}
+- {{domxref("MathMLAnchorElement.host")}} {{experimental_inline}}
   - : A string representing the hostname and port (if it's not the default port) in the referenced URL.
-- {{domxref("MathMLAnchorElement.hostname")}}
+- {{domxref("MathMLAnchorElement.hostname")}} {{experimental_inline}}
   - : A string representing the hostname in the referenced URL.
-- {{domxref("MathMLAnchorElement.href")}}
+- {{domxref("MathMLAnchorElement.href")}} {{experimental_inline}}
   - : A string that is the result of parsing the element's [`href`](/en-US/docs/Web/MathML/Reference/Element/a#href) attribute relative to the document, containing a valid URL of a linked resource.
-- {{domxref("MathMLAnchorElement.hreflang")}}
+- {{domxref("MathMLAnchorElement.hreflang")}} {{experimental_inline}}
   - : A string that reflects the element's [`hreflang`](/en-US/docs/Web/MathML/Reference/Element/a#hreflang) attribute, indicating the language of the linked resource.
-- {{domxref("MathMLAnchorElement.origin")}} {{ReadOnlyInline}}
+- {{domxref("MathMLAnchorElement.origin")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns a string containing the origin of the URL, that is its scheme, its domain and its port.
-- {{domxref("MathMLAnchorElement.password")}}
+- {{domxref("MathMLAnchorElement.password")}} {{experimental_inline}}
   - : A string containing the password specified before the domain name.
-- {{domxref("MathMLAnchorElement.pathname")}}
+- {{domxref("MathMLAnchorElement.pathname")}} {{experimental_inline}}
   - : A string containing an initial `/` followed by the path of the URL, not including the query string or fragment.
-- {{domxref("MathMLAnchorElement.port")}}
+- {{domxref("MathMLAnchorElement.port")}} {{experimental_inline}}
   - : A string representing the port component, if any, of the referenced URL.
-- {{domxref("MathMLAnchorElement.protocol")}}
+- {{domxref("MathMLAnchorElement.protocol")}} {{experimental_inline}}
   - : A string representing the protocol component, including trailing colon (`:`), of the referenced URL.
-- {{domxref("MathMLAnchorElement.search")}}
+- {{domxref("MathMLAnchorElement.search")}} {{experimental_inline}}
   - : A string representing the search element, including leading question mark (`?`), if any, of the referenced URL.
-- {{domxref("MathMLAnchorElement.target")}}
+- {{domxref("MathMLAnchorElement.target")}} {{experimental_inline}}
   - : A string that reflects the element's [`target`](/en-US/docs/Web/MathML/Reference/Element/a#target) attribute, indicating where to display the linked resource.
-- {{domxref("MathMLAnchorElement.type")}}
+- {{domxref("MathMLAnchorElement.type")}} {{experimental_inline}}
   - : A string that reflects the element's [`type`](/en-US/docs/Web/MathML/Reference/Element/a#type) attribute, indicating the MIME type of the linked resource.
-- {{domxref("MathMLAnchorElement.username")}}
+- {{domxref("MathMLAnchorElement.username")}} {{experimental_inline}}
   - : A string containing the username specified before the domain name.
 
 ## Examples
