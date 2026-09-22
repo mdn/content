@@ -4,6 +4,7 @@ slug: Web/SVG/Reference/Attribute/lengthAdjust
 page-type: svg-attribute
 browser-compat:
   - svg.elements.text.lengthAdjust
+  - svg.elements.textPath.lengthAdjust
   - svg.elements.tspan.lengthAdjust
 sidebar: svgref
 ---
