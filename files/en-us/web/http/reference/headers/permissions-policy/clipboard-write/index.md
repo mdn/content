@@ -40,21 +40,26 @@ It can do so by delivering the following HTTP response header to define a Permis
 Permissions-Policy: clipboard-write=(self "https://example.com")
 ```
 
-SecureCorp Inc. must also include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on each `<iframe>` element where `clipboard-write` is to be allowed:
+This enables `clipboard-write` in the top-level document, and also by default in same-origin iframes (because if the `allow` attribute is not specified on and `<iframe>` the default allowlist of `self` controls delegation).
+The header also allows delegation to `https://example.com`, but that origin needs to be granted the feature explicitly, because it isn't present in default allowlist.
+
+SecureCorp Inc. must therefore include an {{HTMLElement('iframe','allow','#Attributes')}} attribute for that origin on each `<iframe>` element where `clipboard-write` is to be allowed:
 
 ```html
 <iframe src="https://example.com/copy-widget" allow="clipboard-write"></iframe>
 ```
 
 > [!NOTE]
-> Specifying the `Permissions-Policy` header in this manner disallows `clipboard-write` for other origins, even if they are allowed by the `<iframe>` `allow` attribute.
+> When the header specifies an allowlist, that allowlist is the maximum set of origins the feature can be delegated to.
+> An `allow` attribute cannot grant the feature to an origin outside it.
 
 ### Using the default policy
 
-If an allowlist for `clipboard-write` is not defined by a `Permissions-Policy` response header, user agents will apply the default allowlist `self`.
-In this mode, `clipboard-write` is automatically allowed in the top-level browsing context and same-origin iframes, but not in cross-origin iframes.
+If no `Permissions-Policy` header sets an allowlist for `clipboard-write`, the default allowlist `self` applies.
+This enables the feature in the top-level document and in same-origin iframes, but not in cross-origin iframes.
+Because no header restricts delegation, an `allow` attribute can enable the feature in any cross-origin iframe.
 
-To allow `clipboard-write` in a cross-origin iframe, include an {{HTMLElement('iframe','allow','#Attributes')}} attribute on the `<iframe>` element:
+To allow `clipboard-write` in a cross-origin iframe, include it in the iframe's {{HTMLElement('iframe','allow','#Attributes')}} attribute on the `<iframe>` element:
 
 ```html
 <iframe src="https://other.com/share-widget" allow="clipboard-write"></iframe>
