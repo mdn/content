@@ -57,6 +57,16 @@ This property is a shorthand for the following CSS properties:
 - {{cssxref("border-style")}}
 - {{cssxref("border-color")}}
 
+### Reset-only sub-properties
+
+This property resets the following CSS properties to their initial values:
+
+- {{cssxref("border-image-outset")}}
+- {{cssxref("border-image-repeat")}}
+- {{cssxref("border-image-slice")}}
+- {{cssxref("border-image-source")}}
+- {{cssxref("border-image-width")}}
+
 ## Syntax
 
 ```css

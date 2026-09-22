@@ -96,7 +96,7 @@ nameOfTheMethod(parameter1, parameter2)
   - : etc.
 
 > [!NOTE]
-> This section is mandatory. If there aren't any parameters, put `None.` instead of the definition list.
+> This section is mandatory. If there aren't any parameters, put "None." instead of the definition list.
 
 ### Return value
 

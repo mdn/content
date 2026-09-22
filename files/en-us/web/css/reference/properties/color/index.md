@@ -62,7 +62,7 @@ color: hwb(152deg 0% 58% / 70%);
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 color: currentColor;
 
 /* <named-color> values */

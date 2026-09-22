@@ -95,7 +95,7 @@ margin: 5% anchor-size(width);
 margin: calc(anchor-size(width) / 4) 1em 0
   anchor-size(--my-anchor self-inline, 50px);
 
-/* Keyword values */
+/* Keyword value */
 margin: auto;
 
 /* Global values */

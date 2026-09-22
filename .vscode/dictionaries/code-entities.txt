@@ -250,6 +250,8 @@ externref
 extmul
 fangsong
 fencedframe
+ffdhe2048
+ffdhe3072
 fgets
 filecheck
 FILLMODE_FILL_WINDOW

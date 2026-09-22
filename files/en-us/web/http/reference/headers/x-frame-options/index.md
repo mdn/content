@@ -88,7 +88,7 @@ To configure IIS to send the `X-Frame-Options` header, add this to your site's `
 </system.webServer>
 ```
 
-For more information, see the [Microsoft support article on setting this configuration using the IIS Manager](https://support.microsoft.com/en-US/security/mitigating-framesniffing-with-the-x-frame-options-header) user interface.
+For more information, see the [Microsoft support article on setting this configuration using the IIS Manager](https://support.microsoft.com/en-us/security/mitigating-framesniffing-with-the-x-frame-options-header) user interface.
 
 ### Configuring HAProxy
 
