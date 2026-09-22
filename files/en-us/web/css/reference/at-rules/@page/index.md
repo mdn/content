@@ -34,11 +34,17 @@ The **`@page`** at-rule is a CSS at-rule used to modify different aspects of pri
   size: a4 landscape;
 }
 
+/* Displays page number in the top right margin box */
 @page {
-  /* margin box at top right showing page number */
   @top-right {
     content: "Page " counter(pageNumber);
   }
+}
+
+/* Clamp the page margins so that the content
+   stays within the printable page area  */
+@page {
+  page-margin-safety: clamp;
 }
 ```
 
@@ -48,6 +54,8 @@ The `@page` at-rule can contain only page descriptors and [margin at-rules](#mar
 
 - {{cssxref("margin")}}
   - : Specifies the page margins. Individual margin properties {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, and {{cssxref("margin-left")}} can also be used.
+- [`page-margin-safety`](/en-US/docs/Web/CSS/Reference/At-rules/@page/page-margin-safety)
+  - : Constrains page margins so that the content stays within the printable page area.
 - [`page-orientation`](/en-US/docs/Web/CSS/Reference/At-rules/@page/page-orientation)
   - : Specifies the orientation of the page. This does not affect the layout of the page; the rotation is applied after the layout in the output medium.
 - [`size`](/en-US/docs/Web/CSS/Reference/At-rules/@page/size)
@@ -138,28 +146,12 @@ The @page rule defines properties of the page box. The `@page` at-rule can be ac
 
 ### Related properties
 
-The `@page` at-rule, allows the user to assign a name to the rule, which is then called in a declaration using the `page` property.
+The `@page` at-rule allows the user to assign a name to the rule, which is then called in a declaration using the `page` property.
 
 - {{Cssxref("page")}}
-  - : Allows a selector to use a user-defined **named page**
+  - : Allows a selector to use a user-defined **named page**.
 
-## Formal syntax
-
-{{csssyntax}}
-
-Where the `<page-body>` includes:
-
-- page-properties
-- page-margin properties
-
-and `<pseudo-page>` represents these pseudo-classes:
-
-- {{Cssxref(":blank")}}
-- {{Cssxref(":first")}}
-- {{Cssxref(":left")}}
-- {{Cssxref(":right")}}
-
-## Margin at-rules
+### Margin at-rules
 
 The margin at-rules are used inside of the `@page` at-rule. They each target a different section of the document printed page, styling the area of the printed page based on the property values set in the style block:
 
@@ -275,13 +267,29 @@ The page-margin properties are the set of CSS properties can be set in any indiv
 
 </details>
 
-## Named pages
+### Named pages
 
 Named pages enable performing per-page layout and adding [page-breaks](/en-US/docs/Web/CSS/Guides/Fragmentation) in a declarative manner when printing.
 
 Named pages can be applied using the {{Cssxref("page")}} property. This allows the user to create different page configurations for use in print layouts.
 
 An example of this can be found on the [`page`](/en-US/docs/Web/CSS/Reference/Properties/page#examples) examples.
+
+## Formal syntax
+
+{{csssyntax}}
+
+Where the `<page-body>` includes:
+
+- page-properties
+- page-margin properties
+
+and `<pseudo-page>` represents these pseudo-classes:
+
+- {{Cssxref(":blank")}}
+- {{Cssxref(":first")}}
+- {{Cssxref(":left")}}
+- {{Cssxref(":right")}}
 
 ## Examples
 
