@@ -44,7 +44,7 @@ The promise may reject with the following:
     - The `options` object is specified, but the `manifest` property is omitted.
     - The `manifest` or `manifestId` values are invalid or empty.
 
-The following exceptions can be thrown synchromously:
+The following exceptions can be thrown synchronously:
 
 - `InvalidStateError` {{domxref("DOMException")}}
   - : The `install()` method was invoked in an embedded `<iframe>` or during prerendering.

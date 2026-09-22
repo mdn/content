@@ -18,7 +18,7 @@ You can query the {{domxref("HTMLInstallElement.isValid")}} property to check wh
 
 ## Value
 
-The empty string (`""`) if the element does not have an active blocker, or one of the following values (in priority order):
+The empty string (`""`) if the element does not have an active blocker, or one of the following values:
 
 - `illegal_subframe`
   - : The `<install>` element is nested inside an {{htmlelement("iframe")}} or {{htmlelement("fencedframe")}} element.
@@ -60,9 +60,7 @@ The empty string (`""`) if the element does not have an active blocker, or one o
 
     Temporary blocker.
 
-These invalid reasons are listed in priority order, from highest to lowest.
-
-Also note that the descriptions above include a "blocker type" for each invalid reason, which is one of the following:
+The descriptions above include a "blocker type" for each invalid reason, which is one of the following:
 
 - Permanent
   - : The `<install>` element is permanently invalid until the developer updates the code to stop the blocker occurring.
