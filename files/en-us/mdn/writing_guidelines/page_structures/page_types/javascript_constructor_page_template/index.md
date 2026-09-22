@@ -108,7 +108,7 @@ For constructors, also include the following note:
   - : etc.
 
 > [!NOTE]
-> This section is mandatory. If there aren't any parameters, put `None.` instead of the definition list.
+> This section is mandatory. If there aren't any parameters, put "None." instead of the definition list.
 
 ### Return value
 

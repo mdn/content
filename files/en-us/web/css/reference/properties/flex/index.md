@@ -69,7 +69,7 @@ This property is a shorthand for the following CSS properties:
 ## Syntax
 
 ```css
-/* Keyword value */
+/* Keyword values */
 flex: none; /* 0 0 auto */
 
 /* One value, unitless number: flex-grow
