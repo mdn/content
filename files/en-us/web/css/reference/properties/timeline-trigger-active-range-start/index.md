@@ -264,7 +264,7 @@ The `.trigger` element creates the `.animated` element's trigger via the followi
 
 - A {{cssxref("timeline-trigger-name")}} with value `--t`, which is equal to the identifier referenced in the `.animated` element's `animation-trigger` property value, associating the two together.
 - A {{cssxref("timeline-trigger-source")}} with value [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
-- A {{cssxref("timeline-trigger-activation-range")}} of `contain 50% contain 100%`. The `contain` range spans from when the trigger element has completely entered the viewport to when it starts to leave. This value sets the trigger's activation range to start `50%` through it and end at `100%`.
+- A {{cssxref("timeline-trigger-activation-range")}} of `contain 50% contain 100%`. The `contain` range spans from when the trigger element has completely entered the viewport to when it starts to leave. This value sets the trigger's activation range to start at `50%` of the way through it, and end at `100%`.
 
 The `.trigger.longer` element creates the `.animated.longer` element's trigger via the following properties:
 
