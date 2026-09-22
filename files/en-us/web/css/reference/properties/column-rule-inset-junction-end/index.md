@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`column-rule-inset-junction-end`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the bottom of column rule segment [junction endpoints](#understanding_junction_end) at gap junctions where rule segments intersect.
+The **`column-rule-inset-junction-end`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the bottom endpoints of column rule segments that are [junction endpoints](#understanding_junction_end); that is, endpoints at gap junctions where rule segments intersect.
 
 {{InteractiveExample("CSS Demo: rule")}}
 
@@ -104,7 +104,7 @@ This property is specified as a single value from the following list:
 
 ## Description
 
-The `column-rule-inset-junction-end` property can be used to inset or outset the bottom of [junction segment endpoints](#understanding_junction_end). The default value is `0`. Positive values reduce the segment size, while negative values and [the `overlap-join` keyword](#the_overlap-join_value) increase it.
+The `column-rule-inset-junction-end` property can be used to inset or outset [junction segment endpoints](#understanding_junction_end) occurring at the bottom of column rule segments. The default value is `0`. Positive values reduce the segment size, while negative values and [the `overlap-join` keyword](#the_overlap-join_value) increase it.
 
 Column rules are painted within a column gap as one or more segments, with segments occurring between:
 
@@ -112,21 +112,21 @@ Column rules are painted within a column gap as one or more segments, with segme
 - Adjacent flex items or flex lines in flex layouts, depending on the `flex-direction`.
 - Adjacent columns in multi-col layouts.
 
-Whether a column rule spans multiple rows or is broken into multiple segments is defined by the {{cssxref("column-rule-break")}} property, with interior breaks between column rule segments being the size of the {{cssxref("row-gap")}}. A junction end occurs at the bottom of every column segment when the bottom of the segment ends at a gap junction where other column or rule segments are present (or would otherwise be present if.
+Whether a column rule spans multiple rows or is broken into multiple segments is defined by the {{cssxref("column-rule-break")}} property; interior breaks between column rule segments are the size of the {{cssxref("row-gap")}}. A junction end occurs at the bottom of every column segment where the segment's bottom ends at a gap junction with other column or rule segments present.
 
 The `column-rule-inset-junction-end` property is a constituent property of several [shorthand properties](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties):
 
-- To set the inset of the start and end junctions, the `column-rule-inset-junction-end` property, along with the {{cssxref("column-rule-inset-junction-start")}} property, can be set using the {{cssxref("column-rule-inset-junction")}} shorthand.
+- To inset top and bottom column segment junction endpoints, the `column-rule-inset-junction-end` property, along with the {{cssxref("column-rule-inset-junction-start")}} property, can be set using the {{cssxref("column-rule-inset-junction")}} shorthand.
 
-- To set the ends of all column segments, the `column-rule-inset-junction-end` property, along with the {{cssxref("column-rule-inset-cap-end")}} property, can be set using the {{cssxref("column-rule-inset-end")}} shorthand.
+- To inset all bottom column segment endpoints, the `column-rule-inset-junction-end` property, along with the {{cssxref("column-rule-inset-cap-end")}} property, can be set using the {{cssxref("column-rule-inset-end")}} shorthand.
 
-- To set the same values for row and column junction endpoints, the `column-rule-inset-junction-end` property, along with the {{cssxref("row-rule-inset-junction-end")}} property, can be set using the {{cssxref("rule-inset-junction-end")}} shorthand.
+- To inset bottom column segment junction endpoints and right row segment junction endpoints, the `column-rule-inset-junction-end` property, along with the {{cssxref("row-rule-inset-junction-end")}} property, can be set using the {{cssxref("rule-inset-junction-end")}} shorthand.
 
 All of these shorthand properties, along with their `-start`, `-cap`, and `row-` equivalents, can be set using the {{cssxref("rule-inset")}} shorthand.
 
 ### Understanding junction endpoints
 
-A _junction segment endpoint_ is any segment endpoint at an interior gap that ends at a gap intersection where other rule or column segments are present. The `column-rule-inset-junction-end` property controls the inset of the bottom edge of column junction segment endpoints, allowing the segments to be shrunk or extended.
+A _junction segment endpoint_ is any segment endpoint at an interior gap that ends at a gap intersection where other rule or column segments are present. The `column-rule-inset-junction-end` property controls the inset of the bottom edge of column junction segments, allowing the segments to be shrunk or extended.
 
 Length `column-rule-inset-junction-end` values inset segments by the specified value. Negative length values create an outset, extending the bottom end of the junction segment. Percentage values are relative to the size of the {{cssxref("row-gap")}}. Setting `-50%` outsets the bottom of the junction segment half way through the row gap below the segment, no matter how wide the row gap is.
 
@@ -267,17 +267,19 @@ visibility.addEventListener("change", () => {
 
 {{EmbedLiveSample("junctions", "", "300")}}
 
-If you set `0px` as the value, the end of the column rules will align with the end of the row, abutting the row gap. This is the default. Note how only the bottom end of the segments ending in the middle of the grid are changed when the property value changes. The segments in the bottom row do not changes; these are _cap endpoints_, and not affected by the `column-rule-inset-junction-end` property.
+If you set `0px` as the value, the end of the column rules will align with the end of the row, abutting the row gap. This is the default. Note how only the bottom ends of the segments in the middle of the grid change when the property value changes. The segments in the bottom row do not change: these are _cap endpoints_, and are not affected by the `column-rule-inset-junction-end` property.
 
-Select `around` as the `rule-visibility-items` value. This value paints rules in a gap segment if at least one of the two adjacent areas is occupied by an item. Because the double line-style column rule segments which appear when the `rule-visibility-items` is set to `around` (and `between`) end at an interior intersection where one or more row-rule segments are present, these column segments are junction segment endpoints.
+Select `around` as the `rule-visibility-items` value. This value paints rules in a gap segment if a segment occupies at least one of the two adjacent areas. The double line-style column rule segments that appear when the `rule-visibility-items` property is set to `around` end at an interior intersection where one or more row-rule segments are present; these column segments are junction segment endpoints.
 
-Select `between` as the `rule-visibility-items` value, which paints rules in gap segments only if both adjacent areas are occupied by an item. The endpoints at the container edge and interior endpoints where no other column or row segments are present are _cap segment endpoints_, not junction segment endpoints. The double line-style column rule segments now end at an interior intersection where no other rule segments are present, so these column segments are cap segment endpoints, and are therefore not affected by the `column-rule-inset-junction-end` property.
+Select `between` as the `rule-visibility-items` value, which paints rules in gap segments only if a segment occupies both adjacent areas. The double line-style column rule segments now end at an interior intersection where no other rule segments are present: these column segments are _cap segment endpoints_ and therefore aren't affected by the `column-rule-inset-junction-end` property.
 
 ### The `overlap-join` value
 
-The `overlap-join` value outsets the bottom end of interior segments so the bottom end of the segment aligns with the bottom of the row-rule it intersects. The value resolves to half the size of the {{cssxref("row-gap")}} (which would extend it to the middle of the gap) plus half the width of the row rule.
+The `overlap-join` value outsets the bottom end of interior segments so they align with the bottom of the intersected row-rule. The value resolves to half the {{cssxref("row-gap")}} size (which would extend it to the middle of the gap) plus half the row rule width.
 
-When `column-rule-inset-junction-end` is set to the `overlap-join` keyword value, the bottom end of the junction end segments extends down into the row gap to meet, or 'join', the bottom edge of the row rule painted in that gap.
+When `column-rule-inset-junction-end` is set to the `overlap-join` keyword value, the bottom ends of the junction end segments extend down into the row gap to meet, or "join", the bottom edge of the row rule painted in that gap.
+
+In the following live example, `column-rule-inset-junction-end` is set to `overlap-join`:
 
 ```html hidden
 <p>
@@ -434,7 +436,7 @@ We use the {{cssxref("display")}} property to turn the `.flexbox` elements into 
 }
 ```
 
-We also set the {{cssxref("flex-direction")}} on the `.column` container, to change the main axis of the flex container, and make the items flow in columns rather than rows.
+We also set the {{cssxref("flex-direction")}} on the `.column` container to `column`, changing the main axis of the flex container to run up and down the page and making the items flow in columns rather than rows.
 
 ```css
 .column {
@@ -496,7 +498,7 @@ inset.addEventListener("input", () => {
 
 {{EmbedLiveSample("Basic usage", "", "330")}}
 
-Change the size of the inset. Note that when the column rule is a single column segment that goes from the top of the container to the bottom of the container, the segment has two cap endpoints, and no junction endpoints, so does not change when the `column-rule-inset-junction-end` value changes.
+Change the size of the inset. Note that in the right-hand example, where the column rule is a single segment that goes from top to bottom, the segment has two cap endpoints and no junction endpoints. Therefore, changing the `column-rule-inset-junction-end` value does not affect this example.
 
 ## Specifications
 
