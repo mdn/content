@@ -15,23 +15,11 @@ The **`console.timeStamp()`** static method adds a marker to a performance recor
 ## Syntax
 
 ```js-nolint
-console.timeStamp(label);
-console.timeStamp(label, start, end, trackName, trackGroup, color, data);
+console.timeStamp(label)
+console.timeStamp(label, start, end, trackName, trackGroup, color, data)
 ```
 
 ### Parameters
-
-- `color` {{Optional_Inline}} {{Experimental_Inline}}
-  - : A string for the display color of the entry. Must be one of `"primary"`, `"primary-light"`, `"primary-dark"`, `"secondary"`, `"secondary-light"`, `"secondary-dark"`, `"tertiary"`, `"tertiary-light"`, `"tertiary-dark"`, `"error"`.
-
-- `data` {{Optional_Inline}} {{Experimental_Inline}}
-  - : An object with additional data to display. URLs may automatically be turned into links by some browsers.
-
-> [!NOTE]
-> Support for the `data` parameter varies across browsers and their DevTools implementations. For example, in some versions of Chrome, this data may not appear in the Performance panel.
-
-- `end` {{Optional_Inline}} {{Experimental_Inline}}
-  - : A string referencing a previously defined `timeStamp` label or a timestamp ({{domxref("DOMHighResTimeStamp")}}) to be used as the end time.
 
 - `label` {{Optional_Inline}}
   - : Label for the timestamp.
@@ -39,11 +27,20 @@ console.timeStamp(label, start, end, trackName, trackGroup, color, data);
 - `start` {{Optional_Inline}} {{Experimental_Inline}}
   - : A string referencing a previously defined `timeStamp` label or a timestamp ({{domxref("DOMHighResTimeStamp")}}) to be used as the start time.
 
+- `end` {{Optional_Inline}} {{Experimental_Inline}}
+  - : A string referencing a previously defined `timeStamp` label or a timestamp ({{domxref("DOMHighResTimeStamp")}}) to be used as the end time.
+
 - `trackName` {{Optional_Inline}} {{Experimental_Inline}}
   - : The name of the custom track used to display the timestamp data
 
 - `trackGroup` {{Optional_Inline}} {{Experimental_Inline}}
   - : The group of the custom track used to display the timestamp data
+
+- `color` {{Optional_Inline}} {{Experimental_Inline}}
+  - : A string for the display color of the entry. Must be one of `"primary"`, `"primary-light"`, `"primary-dark"`, `"secondary"`, `"secondary-light"`, `"secondary-dark"`, `"tertiary"`, `"tertiary-light"`, `"tertiary-dark"`, `"error"`.
+
+- `data` {{Optional_Inline}} {{Experimental_Inline}}
+  - : An object with additional data to display. URLs may automatically be turned into links by some browsers.
 
 ### Return value
 
