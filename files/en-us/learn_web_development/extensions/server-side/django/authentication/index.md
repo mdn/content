@@ -549,7 +549,7 @@ borrower = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL
 > ```
 
 While we're here, let's add a property that we can call from our templates to tell if a particular book instance is overdue.
-While we could calculate this in the template itself, using a [property](https://docs.python.org/3/library/functions.html#property) as shown below will be much more efficient.
+While we could calculate this in the template itself, using a [property](https://docs.python.org/3/builtins/functions.html#property) as shown below will be much more efficient.
 
 Add this somewhere near the top of the file:
 

@@ -83,7 +83,7 @@ This property is a shorthand for the following CSS properties:
 ## Syntax
 
 ```css
-/* Keywords */
+/* Keyword values */
 rule-break: none;
 rule-break: normal;
 rule-break: intersection;

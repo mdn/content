@@ -19,5 +19,5 @@ In physical mail and in online communication, MITM attacks are tough to defend. 
 
 - [Manipulator in the middle (MITM)](/en-US/docs/Web/Security/Attacks/MITM)
 - [Attacks](/en-US/docs/Web/Security/Attacks)
-- OWASP: [Manipulator in the middle attack](https://owasp.org/www-community/attacks/Manipulator-in-the-middle_attack)
+- OWASP: [Manipulator in the middle attack](https://community.owasp.org/attacks/Manipulator-in-the-middle_attack)
 - Wikipedia: [Man-in-the-middle attack](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)
