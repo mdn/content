@@ -13,13 +13,13 @@ The concept of tracking involves making a distinction between _first-party_ and 
 
 Common examples of third party resources are:
 
-- Subresources such as scripts or images that are loaded into the first party's document, for example using {{htmlelement("script")}} or {{htmlelement("img")}} tags, but that are served from a different site. In this case, the third-party resource is loaded into the first party's context.
+- Subresources such as scripts or images that are loaded into the first party's document, for example using {{htmlelement("script")}} or {{htmlelement("img")}} tags, but that are served from a different site.
 
-- Resources that are loaded into a separate document which is served from a different site and embedded in the first party's document inside an {{htmlelement("iframe")}}. In this case, the third-party resource is loaded into its own context, which is isolated from the first party according to the rules of the [same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy).
+- A separate document, along with its own subresources, which is served from a different site and embedded in the first party's document inside an {{htmlelement("iframe")}}. In this case, the third-party document is loaded into its own context, which is isolated from the first party according to the rules of the [same-origin policy](/en-US/docs/Web/Security/Defenses/Same-origin_policy).
 
-![Diagram showing first- and third-party resources.](first-third-party.svg)
+![Diagram showing first- and third-party resources.](first-and-third-party.svg)
 
-Because trackers collect a user's activity across the sites that the user visits, then they generally operate as third parties: specifically, the client side of the tracker is a resource embedded in first-party pages that the user visits.
+Because trackers collect a user's activity across the sites that the user visits, then they generally operate as third parties: specifically, the client side of the tracker is a third-party resource embedded in first-party pages that the user visits.
 
 This makes tracking especially problematic for privacy, because it violates the principle of _transparency_: that the user should be aware of how their personal data is shared, and with whom. Because the user is directly interacting with the first party, it's more reasonable to assume that they intend to share any data that they share with that party. But typically the involvement of a third party is not apparent to the user, and so the fact that it may be collecting data about them is also not apparent.
 
@@ -205,9 +205,19 @@ Defending against fingerprinting takes place both within individual browser vend
 
 ### Relaxing restrictions
 
+In [Challenges of anti-tracking](#challenges_of_anti-tracking), we saw that restricting the use of tracking techniques too strictly can prevent legitimate use cases for them, and can also harm site reliability.
+
+We'll finish this survey of anti-tracking techniques by looking at two methods browsers have for _relaxing_ the restrictions that they impose on websites, in an attempt to avoid these problems.
+
 #### Heuristic approaches
 
+In these techniques, browsers identify patterns in which the user is actively involved in an interaction involving a third party, and in particular, that suggest that the interaction serves one of the [legitimate uses for tracking techniques](#legitimate_uses_for_tracking_techniques), such as federated login. When the browser identifies a pattern like this, it might relax the restrictions on storage that it otherwise imposes on third-party content.
+
 #### Storage Access API
+
+The [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) enables a script to request [unpartitioned](#partitioned_storage) storage access, by calling the {{domxref("Document.requestStorageAccess()")}} API.
+
+This API requires the caller to have [transient activation](/en-US/docs/Web/Security/Defenses/User_activation#transient_activation). In the API's implementation, the browser may decide whether to grant access by asking the user, but may also apply its own rules, including indications that the third party is participating in federated login and any custom rules that grant or deny unpartitioned storage access.
 
 ## Anti-tracking policies in browsers
 
