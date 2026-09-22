@@ -746,7 +746,7 @@ Notice how the different columns receive the styles specified in the classes.
 
 The answer is "yes". Styles set on tables are painted in the order of styles set on `<table>`, then `<col>`, then `<tr>`, then `<th>` and `<td>`. This means that styles set on table rows, headings, and cells will overwrite column styles.
 
-Try this out by adding column styles to the [template example](/en-US/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics#creating_your_first_table) you worked on earlier in the article. If you add the following to the HTML above the first `<tr>` tag:
+Try this out by adding column styles to the [template example](#creating_your_first_table) you worked on earlier in the article. If you add the following to the HTML above the first `<tr>` tag:
 
 ```html
 <colgroup>
