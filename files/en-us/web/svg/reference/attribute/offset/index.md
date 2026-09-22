@@ -6,9 +6,14 @@ browser-compat: svg.elements.stop.offset
 sidebar: svgref
 ---
 
-The **`offset`** attribute indicates the position of a gradient color along a linear gradient vector on a {{SVGElement("stop")}} element, or a fractional vector of the distance between the edge of a smaller/innermost circular shape and the edge of a larger/outermost circular shape.
+The **`offset`** attribute defines where a gradient stop is placed along a gradient vector, or the offset value used in a component transfer function.
+
+- On a {{SVGElement("stop")}} element, it indicates the position of a gradient color along a linear gradient vector, or a fractional vector of the distance between the edge of a smaller/innermost circular shape and the edge of a larger/outermost circular shape.
+- On component transfer function elements ({{SVGElement("feFuncR")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncB")}}, and {{SVGElement("feFuncA")}}), it defines a constant added to the result of the `gamma` transfer function, while having no effect for other `type` values.
 
 ## Example
+
+### Gradient stop offset
 
 ```css hidden
 html,
@@ -35,7 +40,73 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample("Example", 150, '100%')}}
+{{EmbedLiveSample("gradient_stop_offset", 150, '100%')}}
+
+### Component transfer offset
+
+```html
+<svg viewBox="0 0 200 40" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="gamma-filter">
+      <feComponentTransfer>
+        <feFuncR type="gamma" amplitude="2" exponent="3" offset="0.2" />
+        <feFuncG type="gamma" amplitude="2" exponent="3" offset="0.3" />
+        <feFuncB type="gamma" amplitude="2" exponent="3" offset="0.5" />
+      </feComponentTransfer>
+    </filter>
+  </defs>
+  <text x="60" y="25" filter="url(#gamma-filter)">GammaFunc</text>
+</svg>
+```
+
+{{EmbedLiveSample("component_transfer_offset", 150, '100%')}}
+
+## Usage notes
+
+### Stop
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code>number</code> | <code>percentage</code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
+
+### Component transfer functions
+
+> [!NOTE]
+> Only applies when `type` is set to `gamma`, ignored for `identity`, `table`, `discrete`, and `linear`.
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">Value</th>
+      <td>
+        <code>number</code>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Default value</th>
+      <td><code>0</code></td>
+    </tr>
+    <tr>
+      <th scope="row">Animatable</th>
+      <td>Yes</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Specifications
 
@@ -47,5 +118,9 @@ svg {
 
 ## See also
 
-- CSS {{cssxref("offset")}} property
 - {{SVGElement("stop")}}
+- {{SVGElement("feComponentTransfer")}}
+- {{SVGElement("feFuncR")}}
+- {{SVGElement("feFuncG")}}
+- {{SVGElement("feFuncB")}}
+- {{SVGElement("feFuncA")}}
