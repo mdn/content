@@ -56,14 +56,14 @@ The entries for each directive are comma separated.
     - `self`
       - : The feature will be allowed in this document, and in all nested browsing contexts (`<iframe>`s) in the same origin only. The feature is not allowed in cross-origin documents in nested browsing contexts. `self` can be considered shorthand for `https://your-site.example.com`. The equivalent for `<iframe>` `allow` attributes is `self`.
     - `src`
-      - : The feature will be allowed in this `<iframe>`, as long as the document loaded into it comes from the same origin as the URL in its {{HTMLElement('iframe','src','#Attributes')}} attribute. This value is only used in the `<iframe>` `allow` attribute, and is the _default_ `allowlist` value for a feature listed in `allow` without one — for example, `allow="geolocation"` is equivalent to `allow="geolocation 'src'"`.
+      - : The feature will be allowed in this `<iframe>`, as long as the document loaded into it comes from the same origin as the URL in its {{HTMLElement('iframe','src','#Attributes')}} attribute. This value is only used in the `<iframe>` `allow` attribute, and is the _default_ value for a feature listed without an explicit allowlist value — for example, `allow="geolocation"` is equivalent to `allow="geolocation 'src'"`.
     - `"<origin>"`
       - : The feature is allowed for specific origins (for example, `"https://a.example.com"`). Origins should be separated by spaces. Note that origins in `<iframe>` allow attributes are not quoted.
 
     The values `*` and `()` may only be used on their own, while `self` and `src` may be used in combination with one or more origins.
 
     > [!NOTE]
-    > Directives have a default allowlist, specified on the individual [directive reference pages](#directives), which applies when the directive is not explicitly listed in a policy.
+    > Directives have a default allowlist, which applies when the directive is not explicitly listed in a policy; the specific default for each directive is given on its [directive reference page](#directives).
     > See [Default allowlists](/en-US/docs/Web/HTTP/Guides/Permissions_Policy#default_allowlists) for how this interacts with the `Permissions-Policy` header and the `<iframe>` `allow` attribute.
 
 - `report-to=<endpoint>` {{optional_inline}}
