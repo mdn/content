@@ -95,33 +95,37 @@ In this case, only the top page margin is constrained:
 
 ### Basic usage
 
-This example shows how to use the `page-margin-safety` descriptor to stop your page content from being cut off while printing.
+This example shows how to use the `page-margin-safety` descriptor to stop your page content from being cut off while printing. We present two versions of the same example, one with the `page-margin-safety` descriptor applied, and one without.
 
 #### HTML
 
 The HTML features a "print" {{htmlelement("button")}} and a {{htmlelement("p")}} element containing content.
 
-```html live-sample___page-margin-safety
+```html live-sample___page-margin-safety-1 live-sample___page-margin-safety-2
 <button id="print">Print</button>
 <p>This is my page content.</p>
 ```
 
 #### CSS
 
-We set `page-margin-safety: add` inside the `@page` descriptor to ensure that the page content will all be inside the printable area during printing, even though we have deliberately set the {{htmlelement("body")}} element's {{cssxref("margin")}} to `0`.
+We have deliberately set the {{htmlelement("body")}} element's {{cssxref("margin")}} to `0`:
 
-```css live-sample___page-margin-safety
-@page {
-  page-margin-safety: add;
-}
-
+```css live-sample___page-margin-safety-1 live-sample___page-margin-safety-2
 body {
   margin: 0;
   border: 10px solid red;
 }
 ```
 
-```css hidden live-sample___page-margin-safety
+In the second live example, we set `page-margin-safety: add` inside the `@page` descriptor to ensure that the page content will all be inside the printable area during printing.
+
+```css live-sample___page-margin-safety-2
+@page {
+  page-margin-safety: add;
+}
+```
+
+```css hidden live-sample___page-margin-safety-1 live-sample___page-margin-safety-2
 * {
   box-sizing: border-box;
 }
@@ -149,7 +153,7 @@ p {
 }
 ```
 
-```js hidden live-sample___page-margin-safety
+```js hidden live-sample___page-margin-safety-1 live-sample___page-margin-safety-2
 const printButton = document.querySelector("#print");
 printButton.addEventListener("click", () => {
   window.print();
@@ -158,9 +162,17 @@ printButton.addEventListener("click", () => {
 
 #### Result
 
-{{EmbedLiveSample("page-margin-safety", "100%", "300", , , , , "allow-modals")}}
+The first live example doesn't have the `page-margin-safety` descriptor applied:
 
-Click the print button and examine the page inset during printing. An inset has been added around the page content due to the `@page` at-rule.
+{{EmbedLiveSample("page-margin-safety-1", "100%", "300", , , , , "allow-modals")}}
+
+Click the print button and examine the page inset during printing.
+
+The second live example **does** have the `page-margin-safety` descriptor applied:
+
+{{EmbedLiveSample("page-margin-safety-2", "100%", "300", , , , , "allow-modals")}}
+
+Again, click the print button and examine the page inset during printing. You should see that some extra inset has been added around the page content due to the `page-margin-safety` descriptor inside the `@page` at-rule.
 
 ## Specifications
 
