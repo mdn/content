@@ -26,9 +26,11 @@ With service workers, the following steps are generally observed for initial ins
 
 ### Initial installation
 
-1. The service worker code is fetched and then registered using [`serviceWorkerContainer.register()`](/en-US/docs/Web/API/ServiceWorkerContainer/register). If successful, the service worker is executed in a [`ServiceWorkerGlobalScope`](/en-US/docs/Web/API/ServiceWorkerGlobalScope); this is basically a special kind of worker context, running off the main script execution thread, with no DOM access. The service worker is now ready to process events.
+In this example, two pages are already open before the first service worker is registered. One of the pages calls [`serviceWorkerContainer.register()`](/en-US/docs/Web/API/ServiceWorkerContainer/register), which initiates the process.
 
-   ![Registration of the first service worker, showing its scope and two open clients.](sw-registration.svg)
+1. The service worker code is fetched and then registered. If successful, the service worker is executed in a [`ServiceWorkerGlobalScope`](/en-US/docs/Web/API/ServiceWorkerGlobalScope); this is basically a special kind of worker context, running off the main script execution thread, with no DOM access. The service worker is now ready to process events.
+
+   ![Registration of the first service worker, showing its parsed state, scope, and two open, uncontrolled clients.](sw-registration.svg)
 
 2. Installation takes place. An `install` event is always the first one sent to a service worker (this can be used to start the process of populating an IndexedDB, and caching site assets). During this step, the application is preparing to make everything available for use offline.
 
@@ -44,13 +46,15 @@ With service workers, the following steps are generally observed for initial ins
 
 5. After activation, the service worker will control pages opened within its scope. Existing documents will have to be reloaded to actually be controlled, because a document starts life with or without a service worker and maintains that for its lifetime. To override this default behavior and adopt open pages, a service worker can call [`clients.claim()`](/en-US/docs/Web/API/Clients/claim).
 
-   ![Clients change: a new client opens and is controlled by the activated service worker, while the two existing clients remain open.](sw-activated.svg)
+   ![A new client opens and is controlled by the activated service worker, while the two existing clients remain open and uncontrolled.](sw-activated.svg)
 
-### Replacement
+### Replacing an existing service worker
+
+This independent example starts with one open client controlled by version 1. It illustrates the default waiting behavior when replacing an existing service worker.
 
 1. Whenever a new version of a service worker is fetched, this cycle happens again. The previous version remains active and continues to control its clients.
 
-   ![Version 2 is fetched while version 1 remains active and controls an open client.](sw-replacement-fetched.svg)
+   ![The open client calls register(), and version 2 is parsed while version 1 remains activated and controls the client.](sw-replacement-fetched.svg)
 
 2. Installation takes place for the new version. Its `install` handler can populate a new cache while the old version continues to use its existing cache.
 
@@ -64,11 +68,11 @@ With service workers, the following steps are generally observed for initial ins
 
    The new service worker can call [`skipWaiting()`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/skipWaiting) to ask to be activated without waiting for open pages to be closed. It then takes over the pages controlled by the old version.
 
-   ![Clients change: the client controlled by version 1 closes. Version 1 is retired, and version 2 receives activate and deletes the old cache.](sw-replacement-activation.svg)
+   ![The client controlled by version 1 closes. Version 1 is retired, and version 2 receives activate and deletes the old cache.](sw-replacement-activation.svg)
 
 5. After activation, newly opened pages within the registration's scope are controlled by the new version.
 
-   ![Clients change: a new client opens and is controlled by version 2, which uses its new cache.](sw-replacement-activated.svg)
+   ![A new client opens and is controlled by version 2, which uses its new cache.](sw-replacement-activated.svg)
 
 ### Service worker events
 
