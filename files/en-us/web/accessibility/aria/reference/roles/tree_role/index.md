@@ -22,13 +22,13 @@ ARIA tree views are navigated primarily with arrow keys on the keyboard instead 
 > [!WARNING]
 > Tree views use navigation more similar to native applications than to web applications. For this reason, consider alternative options to address the functionality you need before creating a tree view.
 
+In trees that [use `aria-selected` to indicate selection](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role#selection), set it to `true` on all selected tree items and `false` on all selectable tree items that are not selected. Omit the attribute from tree items that are not selectable.
+
 ### Single and multiple select trees
 
 Trees can be "single-select", allowing users to choose just one item for an action, or "multi-select", where users are able to select more than one item for an action. In multi-select trees, the `tree` has [`aria-multiselectable`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable) set to true. Otherwise, `aria-multiselectable` is either set to `false` or the default value of `false` is implied. In both cases, to be keyboard accessible, focus must be managed for all tree descendants.
 
 In some implementations of single-select tree, the focused item also has a selected state; this is known as "selection follows focus". When a single-select tree receives focus, if none of the tree items are selected before the tree receives focus, focus is set on the first node. If a tree item is selected before the tree receives focus, focus is set on the selected tree item.
-
-In trees that [use `aria-selected` to indicate selection](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role#selection), set it to `true` on all selected tree items and `false` on all selectable tree items that are not selected. Omit the attribute from tree items that are not selectable.
 
 When a multi-select tree receives focus, if none of the tree items are selected before the tree receives focus, focus is set on the first tree item. If one or more tree items are selected before the tree receives focus, focus is set on the first selected node.
 
