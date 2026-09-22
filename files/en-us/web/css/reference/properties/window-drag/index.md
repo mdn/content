@@ -33,7 +33,7 @@ This property is specified as one of the following keyword values:
 - `move`
   - : Selected elements are window drag areas.
 
-### Description
+## Description
 
 When a PWA is installed, it is possible to remove most of the application window titlebar to only leave the mandatory items such as the minimize and close buttons, then put custom web content into the freed up space. This is done by:
 
@@ -43,15 +43,9 @@ When a PWA is installed, it is possible to remove most of the application window
 
 One remaining issue is that you will want to set the custom content so that you can drag appropriate sections to move the application window, which is expected behavior. This is achieved by setting the custom content's `window-drag` property to `move`, in which case a window move operation is performed and no events (for example pointer or mouse events) are fired during a dragging gesture on the content.
 
-If you want to make certain child elements behave normally and not initiate a window move operation on drag, you can turn this behavior off by setting `window-drag` to `none`.
+The `window-drag` property is inherited by default. Therefore, if you want to make certain child elements behave normally and not initiate a window move operation on drag, you must turn this behavior off by setting `window-drag` to `none`.
 
-The `window-drag` property is a standardized version of the older non-standard `app-region` property, which is kept for backwards-compatibility purposes, with and without a `-webkit-` prefix. If you need to support older browser versions, it is advisable to include all three variants:
-
-```css
--webkit-app-region: drag;
-app-region: drag;
-window-drag: move;
-```
+The `window-drag` property is a standardized version of the older, legacy `app-region` and `-webkit-app-region` properties. Sites still using the legacy properties are advised to switch usage to the standardized `window-drag` property for stability and interoperability between browsers.
 
 > [!NOTE]
 > The `app-region` property uses `drag` in place of `move` and `no-drag` in place of `none`.
@@ -125,19 +119,13 @@ Finally, we set the titlebar `<div>` element's `window-drag` property to `move` 
 
 ```css
 #titlebar {
-  -webkit-app-region: drag;
-  app-region: drag;
   window-drag: move;
 }
 
 #titlebar * {
-  -webkit-app-region: no-drag;
-  app-region: no-drag;
   window-drag: none;
 }
 ```
-
-We have also included equivalent `-webkit-app-region` and `app-region` values to provide window drag support in older browsers.
 
 ## Specifications
 
