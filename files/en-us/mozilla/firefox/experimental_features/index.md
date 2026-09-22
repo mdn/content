@@ -478,10 +478,6 @@ The `named-feature()` function in the {{cssxref("@supports")}} at-rule lets you 
 - `layout.css.anchor-positioning.follows-transforms.enabled`
   - : Set to `true` to enable.
 
-### `at-rule()` support queries
-
-The [`at-rule()`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#at-rule) function in the {{cssxref("@supports")}} at-rule lets you test whether the browser supports a given CSS at-rule, for example `@supports at-rule(@scope)`. It also works in the `supports()` function of {{cssxref("@import")}}. ([Firefox bug 2060754](https://bugzil.la/2060754)).
-
 ## SVG
 
 **No experimental features in this release cycle.**

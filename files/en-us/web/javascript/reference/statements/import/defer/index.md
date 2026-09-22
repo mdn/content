@@ -10,7 +10,7 @@ sidebar: jssidebar
 
 {{SeeCompatTable}}
 
-The **`import defer`** declaration behaves like regular [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declarations, except that it results in a [deferred module namespace object](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer#deferred_module_namespace_object). The module and its dependencies are [fetched](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#loading_the_graph) and [linked](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#linking_modules) up front, but their synchronous [evaluation](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#evaluating_modules) is deferred until the namespace's properties are accessed. Modules that use [top-level `await`](#top-level_await) are evaluated eagerly.
+The **`import defer`** declaration behaves like regular [`import`](/en-US/docs/Web/JavaScript/Reference/Statements/import) declarations, except that it results in a [deferred module namespace object](#deferred_module_namespace_object). The module and its dependencies are [fetched](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#loading_the_graph) and [linked](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#linking_modules) up front, but their synchronous [evaluation](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph#evaluating_modules) is deferred until the namespace's properties are accessed. Modules that use [top-level `await`](#top-level_await) are evaluated eagerly.
 
 ## Syntax
 
