@@ -22,7 +22,7 @@ ARIA tree views are navigated primarily with arrow keys on the keyboard instead 
 > [!WARNING]
 > Tree views use navigation more similar to native applications than to web applications. For this reason, consider alternative options to address the functionality you need before creating a tree view.
 
-In trees that [use `aria-selected` to indicate selection](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role#selection), set it to `true` on all selected tree items and `false` on all selectable tree items that are not selected. Omit the attribute from tree items that are not selectable.
+For more information about how individual tree nodes should be marked up, see [`treeitem`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role).
 
 ### Single and multiple select trees
 
@@ -36,19 +36,11 @@ In multi-select trees, the selected state is always independent of the focus. Fo
 
 ### Tree hierarchy
 
-In a tree view, the `tree` node is the root node; it can have child, grandchild, and further descendant `treeitem` nodes.
-
-Each element serving as a tree node has role `treeitem`, except for the root tree node which has a role of `tree`. A `tree` does not have a parent `tree` node - it is the root node. If a node is both nested in a tree and has descendant tree items, then it has the role `treeitem` and the [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) attribute; `aria-expanded="false"` is set when the node is in a closed state, `aria-expanded="true"` is set when the node is in an open state.
-
-`treeitem` nodes can be direct children of the `tree` root node, nested within a `treeitem` node, or, optionally nested in a [`group`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/group_role) element, which, when nested in a `tree` is an expandable collection of treeitem elements.
-
-Do not include `aria-expanded` on end nodes — those without tree item children — as that would incorrectly describe the node as a parent node to assistive technologies.
+In a tree view, the `tree` element is the container for the hierarchy of `treeitem` nodes. Each element serving as a tree node has role `treeitem`. The top-level tree items are root nodes; they can have child, grandchild, and further descendant tree items.
 
 ### DOM placement and presence
 
-All treeitems are contained in or owned by an element with role `tree`. If there are any tree items that are not direct descendants of the `tree` in the markup, include [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) on the owning tree container to include elements that are not DOM children of the container. These non-child owned elements will appear in the reading order in the sequence they are referenced and after any tree items that are DOM children. Scripts that manage focus need to ensure the visual focus order matches this assistive technology reading order.
-
-If the complete set of available nodes is not present in the DOM due to dynamic loading as the user moves focus in or scrolls the tree, each node has [`aria-level`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level), [`aria-setsize`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize), and [`aria-posinset`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset) specified.
+All treeitems are contained in or owned by an element with role `tree`. If there are any root nodes that are not contained in the `tree` in the DOM, include [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) on the owning tree container to reference them. These non-child owned elements will appear in the reading order in the sequence they are referenced and after any tree items that are DOM children. Scripts that manage focus need to ensure the visual focus order matches this assistive technology reading order.
 
 ### Accessible name
 
@@ -93,7 +85,7 @@ For a vertically oriented `tree`, which is the default orientation:
 <ul>
 <li>When focus is on an open node, closes the node.
 <li>When focus is on a child node that is also either an end node or a closed node, moves focus to its parent node.
-<li>When focus is on a closed tree, does nothing.
+<li>When focus is on a root node that is also either an end node or a closed node, does nothing.
 </td>
 </tr>
 <tr>
@@ -118,7 +110,7 @@ For a vertically oriented `tree`, which is the default orientation:
 </tr>
 <tr>
 <td><kbd>Enter</kbd></td>
-<td>Performs the default action of the currently focused node. For parent nodes, it opens or closes the node. In single-select trees, if the node has no children, selects the current node if not already selected (which is the default action).
+<td>Performs the default action of the currently focused node. For parent nodes, opening or closing the node is one possible default action. In single-select trees where selection does not follow focus, the default action typically selects the current node if not already selected.
 </td>
 </tr>
 <tr>
