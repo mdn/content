@@ -43,7 +43,7 @@ The Observable API addresses this problem by declaratively creating and manipula
 
 ### Obtaining observables
 
-In the Observable API, an **observable** represents a stream of values, and an **observer** receives its notifications through callbacks. Typically, you use methods on the {{domxref("Observable")}} interface to transform and consume values from observables. If you are the implementor of an observable, you use the {{domxref("Subscriber")}} interface to send values to the observers. There are three main ways to obtain observables:
+In the Observable API, an **observable** represents a stream of values, and an **observer** receives its notifications through callbacks. The code that sends values is called the _producer_, while the code that makes use of these values is called the _consumer_. You typically write the consumer code by using methods on the {{domxref("Observable")}} interface to transform and consume values from observables. If you are the implementor of an observable, you write the producer code by using the {{domxref("Subscriber")}} interface to send values to the observers. There are three main ways to obtain observables:
 
 - The {{domxref("EventTarget.when()")}} method returns an {{domxref("Observable")}} representing a stream of events fired on the `EventTarget`. You may also have libraries that return observables.
 - You can create your own custom observables using the {{domxref("Observable.Observable", "Observable()")}} constructor.
@@ -53,7 +53,7 @@ In the Observable API, an **observable** represents a stream of values, and an *
 
 An observable can be transformed using various methods that return new observables, such as {{domxref("Observable.map()")}} and {{domxref("Observable.filter()")}}.
 
-To start receiving values from an observable, you subscribe to it using the {{domxref("Observable.subscribe()")}} method, or aggregate all values using methods like {{domxref("Observable.reduce()")}}. Observables are _lazy_ — they don't start producing values until they have at least one subscriber.
+To start receiving values from an observable, you subscribe to it using the {{domxref("Observable.subscribe()")}} method, or aggregate all values using [promise-returning methods](/en-US/docs/Web/API/Observable#promise-returning_instance_methods) like {{domxref("Observable.reduce()")}}. Observables are _lazy_ — they don't start producing values until they have at least one subscriber.
 
 You can also unsubscribe from an observable using an {{domxref("AbortController")}} or certain methods like {{domxref("Observable.takeUntil()")}}.
 
@@ -75,8 +75,7 @@ We then specify a pipeline:
 
 - {{domxref("Observable.filter()")}} filters the events passed through the pipeline to only events fired on the {{htmlelement("body")}} element (tested using the {{domxref("Element.matches()")}} method) and not its descendants.
 - {{domxref("Observable.map()")}} maps the fired `mousedown` event objects to new objects containing the coordinates of the mouse cursor when the event was fired.
-
-Finally, {{domxref("Observable.subscribe()")}} subscribes to the observable. Its callback logs the mouse coordinates to the console each time a `mousedown` event passes the filter.
+- {{domxref("Observable.subscribe()")}} subscribes to the observable. Its callback logs the mouse coordinates to the console each time a `mousedown` event passes the filter.
 
 You may notice that this paradigm is very similar to [iterators](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols), where we can also transform with [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/map) and [`filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/filter) and consume with `next()` and [`toArray()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Iterator/toArray). Indeed, both observables and iterators represent streams of data; the key difference, as previously stated, is that iterators are pull-based (the consumer decides when to receive values), while observables are push-based (the producer decides when to send values).
 
