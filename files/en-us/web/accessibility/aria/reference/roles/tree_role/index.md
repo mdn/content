@@ -28,7 +28,7 @@ Trees can be "single-select", allowing users to choose just one item for an acti
 
 In some implementations of single-select tree, the focused item also has a selected state; this is known as "selection follows focus". When a single-select tree receives focus, if none of the tree items are selected before the tree receives focus, focus is set on the first node. If a tree item is selected before the tree receives focus, focus is set on the selected tree item.
 
-In both single-select and multi-select trees that use [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) to indicate selection, set it to `true` on all selected tree items and `false` on all selectable tree items that are not selected. Omit the attribute from tree items that are not selectable.
+In trees that [use `aria-selected` to indicate selection](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role#selection), set it to `true` on all selected tree items and `false` on all selectable tree items that are not selected. Omit the attribute from tree items that are not selectable.
 
 When a multi-select tree receives focus, if none of the tree items are selected before the tree receives focus, focus is set on the first tree item. If one or more tree items are selected before the tree receives focus, focus is set on the first selected node.
 
