@@ -16,15 +16,15 @@ The **`column-rule-inset-cap-end`** [CSS](/en-US/docs/Web/CSS) property can be u
 {{InteractiveExample("CSS Demo: rule")}}
 
 ```css interactive-example-choice
+column-rule-inset-cap-end: -20px;
+```
+
+```css interactive-example-choice
 column-rule-inset-cap-end: 0;
 ```
 
 ```css interactive-example-choice
 column-rule-inset-cap-end: 1em;
-```
-
-```css interactive-example-choice
-column-rule-inset-cap-end: -20px;
 ```
 
 ```css interactive-example-choice
