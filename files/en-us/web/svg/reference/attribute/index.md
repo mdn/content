@@ -186,7 +186,7 @@ Below is a list of all of the attributes available in SVG, along with links to r
 
 - {{SVGAttr("r")}}
 - {{SVGAttr("radius")}}
-- {{SVGAttr("referrerPolicy")}}
+- {{SVGAttr("referrerpolicy")}}
 - {{SVGAttr("refX")}}
 - {{SVGAttr("refY")}}
 - {{SVGAttr("rel")}}
