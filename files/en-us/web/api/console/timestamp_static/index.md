@@ -55,10 +55,6 @@ To see the marker, start a performance recording before the call occurs. Marker 
 
 This method does not log elapsed time to the console or create a {{domxref("PerformanceEntry")}}. Use {{domxref("console/time_static", "console.time()")}} and {{domxref("console/timeEnd_static", "console.timeEnd()")}} for console timers, or {{domxref("Performance.mark", "performance.mark()")}} and {{domxref("Performance.measure", "performance.measure()")}} for standard entries that your application can observe and read.
 
-You can optionally supply an argument to label the timestamp, and this label will then be shown alongside the marker.
-
-Some browsers have further extended this `console.timeStamp()` method to allow additional, optional parameters to be provided as part of its extensibility API that surfaces these in performance traces. See the [Chrome's extensibility API documentation](https://developer.chrome.com/docs/devtools/performance/extension#inject_your_data_with_consoletimestamp) for more information.
-
 ## Examples
 
 ### Basic usage
