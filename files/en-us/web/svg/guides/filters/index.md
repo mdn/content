@@ -1,7 +1,7 @@
 ---
-title: SVG filters
+title: Applying effects with SVG filters
 short-title: Filters
-slug: Web/SVG/Guides/SVG_filters
+slug: Web/SVG/Guides/Filters
 page-type: guide
 sidebar: svgref
 ---
