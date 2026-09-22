@@ -63,10 +63,10 @@ source.addEventListener("dragstart", (ev) => {
   // Add this element's id to the drag payload so the drop handler will
   // know which element to add to its tree
   const dataList = ev.dataTransfer.items;
-  dataList.add(ev.target.id, "text/plain");
+  dataList.add("text/plain", ev.target.id);
   // Add some other items to the drag payload
-  dataList.add("<p>Paragraph…</p>", "text/html");
-  dataList.add("http://www.example.org", "text/uri-list");
+  dataList.add("text/html", "<p>Paragraph…</p>");
+  dataList.add("text/uri-list", "http://www.example.org");
 });
 
 source.addEventListener("dragend", (ev) => {

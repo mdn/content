@@ -15,17 +15,17 @@ During a drag operation, this method can only be used in the handler for the {{d
 ## Syntax
 
 ```js-nolint
-add(data, type)
+add(type, data)
 add(file)
 ```
 
 ### Parameters
 
-- `data`
-  - : A string representing the drag item's data.
 - `type`
   - : A string of the drag item's type. Some example types are
     `text/html` and `text/plain`.
+- `data`
+  - : A string representing the drag item's data.
 - `file`
   - : A {{domxref("File")}} object. No type needs to be given in this case.
 
@@ -85,10 +85,10 @@ source.addEventListener("dragstart", (ev) => {
   // Add this element's id to the drag payload so the drop handler will
   // know which element to add to its tree
   const dataList = ev.dataTransfer.items;
-  dataList.add(ev.target.id, "text/plain");
+  dataList.add("text/plain", ev.target.id);
   // Add some other items to the drag payload
-  dataList.add("<p>Paragraph…</p>", "text/html");
-  dataList.add("http://www.example.org", "text/uri-list");
+  dataList.add("text/html", "<p>Paragraph…</p>");
+  dataList.add("text/uri-list", "http://www.example.org");
 });
 
 source.addEventListener("dragend", (ev) => {

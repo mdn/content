@@ -40,7 +40,7 @@ To add text data to the drag data store, the "new way" uses the {{domxref("DataT
 ```js
 function dragstartHandler(ev) {
   // New way: add(data, type)
-  ev.dataTransfer.items.add(ev.target.innerText, "text/plain");
+  ev.dataTransfer.items.add("text/plain", ev.target.innerText);
   // Old way: setData(type, data)
   ev.dataTransfer.setData("text/html", ev.target.outerHTML);
 }
@@ -182,7 +182,7 @@ Note that the scenarios below refer to the _intention_ and not the _behavior_. F
 For dragging text, use the `text/plain` type, with the dragged string as the value. For example:
 
 ```js
-event.dataTransfer.items.add("This is text to drag", "text/plain");
+event.dataTransfer.items.add("text/plain", "This is text to drag");
 ```
 
 You should always add data of the `text/plain` type as a fallback for applications or drop targets that do not support other types, unless there is no logical text alternative. Always add this `text/plain` type last, as it is the least specific and shouldn't be preferred.
@@ -205,8 +205,8 @@ Dragged hyperlinks should include data of two types: `text/uri-list`, and `text/
 As usual, set the `text/plain` type last, as a fallback for the `text/uri-list` type. For example:
 
 ```js
-event.dataTransfer.items.add("https://www.mozilla.org", "text/uri-list");
-event.dataTransfer.items.add("https://www.mozilla.org", "text/plain");
+event.dataTransfer.items.add("text/uri-list", "https://www.mozilla.org");
+event.dataTransfer.items.add("text/plain", "https://www.mozilla.org");
 ```
 
 To drag multiple links, separate each link inside the `text/uri-list` data with a CRLF linebreak. Lines that begin with a number sign (`#`) are comments, and should not be considered URLs. You can use comments to indicate the purpose of a URL, the title associated with a URL, or other data.
@@ -242,8 +242,8 @@ Direct image dragging (that is, the data is the pixel content) is not common, an
 As with links, the data for the `text/plain` type should also contain the URL. However, a `data:` URL is not usually useful in a text context, so you may wish to exclude the `text/plain` data in this situation.
 
 ```js
-event.dataTransfer.items.add(imageURL, "text/uri-list");
-event.dataTransfer.items.add(imageURL, "text/plain");
+event.dataTransfer.items.add("text/uri-list", imageURL);
+event.dataTransfer.items.add("text/plain", imageURL);
 ```
 
 By default, when an {{HTMLElement("img")}} element is dragged, the following data items are created:
@@ -266,8 +266,8 @@ A common way to transfer the element is to use the `text/html` type containing s
 You may also include a plain text representation of the HTML or XML data using the `text/plain` type. The data should be just the text without any of the source tags or attributes. For instance:
 
 ```js
-event.dataTransfer.items.add(element.outerHTML, "text/html");
-event.dataTransfer.items.add(element.innerText, "text/plain");
+event.dataTransfer.items.add("text/html", element.outerHTML);
+event.dataTransfer.items.add("text/plain", element.innerText);
 ```
 
 You can also use other types that you invent for custom purposes. Strive to always include a `text/plain` alternative, unless the dragged object is specific to a particular site or application. In this case, the custom type ensures that the data cannot be dropped elsewhere.
