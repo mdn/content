@@ -24,13 +24,13 @@ A string.
 
 ```js
 // An <a id="myAnchor" href="https://developer.mozilla.org:443/en-US/docs/HTMLAnchorElement"> element is in the document
-const anchor = document.getElementByID("myAnchor");
+const anchor = document.getElementById("myAnchor");
 anchor.port; // returns ''
 ```
 
 ```js
 // Another <a id="myAnchor" href="https://developer.mozilla.org:8888/en-US/docs/HTMLAnchorElement"> element is in the document
-const anchor = document.getElementByID("myAnchor");
+const anchor = document.getElementById("myAnchor");
 anchor.port; // Returns:'8888'
 ```
 
