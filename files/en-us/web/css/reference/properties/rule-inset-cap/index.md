@@ -70,6 +70,7 @@ rule-inset-cap: overlap-join;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   rule: solid thick magenta;
+  column-rule-color: rebeccapurple;
   gap: 1em;
   rule-overlap: column-over-row;
   rule-visibility-items: between;
@@ -210,7 +211,7 @@ We use the {{cssxref("display")}} property to turn the `.flexbox` elements into 
 }
 ```
 
-We also set the {{cssxref("flex-direction")}} on the `.column` container to make its items flow in columns rather than rows. The rest of the CSS is hidden for brevity.
+We also set the {{cssxref("flex-direction")}} on the `.column` container to make its items flow in columns rather than rows. We've hidden the other CSS styles, and the code that make the form interactive, for brevity.
 
 ```css
 .column {

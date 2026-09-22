@@ -69,6 +69,7 @@ row-rule-inset-cap-start: overlap-join;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   rule: solid thick magenta;
+  row-rule-color: rebeccapurple;
   gap: 1em;
   rule-overlap: row-over-column;
   rule-visibility-items: between;
