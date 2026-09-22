@@ -74,7 +74,7 @@ The recommended setting is the following, which sets the viewport to match the d
 ```
 
 > [!NOTE]
-> Including `initial-scale=1.0` was historically necessary to prevent unintended zooming behaviors in older mobile browsers. While modern browsers don't require `initial-scale` to resolve this behavior, `initial-scale` is not entirely redundant and remains useful when defining custom scale defaults or fixed layout widths.
+> This example omits `initial-scale=1`, a common practice that's usually unnecessary. When it is omitted, the browser determines the initial zoom level automatically and may zoom out when content overflows the viewport. The amount of scaling is browser-dependent and may depend on both the content's width and height. Add `initial-scale=1` if overflowing content causes unwanted shrinking and you want the page to start at 100% zoom instead.
 
 Sites can set their viewport to a specific size. For example, the definition `"width=320, initial-scale=1"` can be used to fit precisely onto a small phone display in portrait mode. This can cause problems when the browser renders a page at a larger size. To fix this, browsers will expand the viewport width if necessary to fill the screen at the requested scale. This is especially useful on large-screen devices.
 
