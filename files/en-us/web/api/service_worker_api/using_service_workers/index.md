@@ -22,16 +22,55 @@ Service workers are enabled by default in all modern browsers. To run code using
 
 ## Basic architecture
 
-With service workers, the following steps are generally observed for basic setup:
+With service workers, the following steps are generally observed for initial installation and for replacing an existing service worker. The diagrams show an example that populates versioned caches during installation and removes old caches during activation.
+
+### Initial installation
 
 1. The service worker code is fetched and then registered using [`serviceWorkerContainer.register()`](/en-US/docs/Web/API/ServiceWorkerContainer/register). If successful, the service worker is executed in a [`ServiceWorkerGlobalScope`](/en-US/docs/Web/API/ServiceWorkerGlobalScope); this is basically a special kind of worker context, running off the main script execution thread, with no DOM access. The service worker is now ready to process events.
-2. Installation takes place. An `install` event is always the first one sent to a service worker (this can be used to start the process of populating an IndexedDB, and caching site assets). During this step, the application is preparing to make everything available for use offline.
-3. When the `install` handler completes, the service worker is considered installed. At this point a previous version of the service worker may be active and controlling open pages. Because we don't want two different versions of the same service worker running at the same time, the new version is not yet active.
-4. Once all pages controlled by the old version of the service worker have closed, it's safe to retire the old version, and the newly installed service worker receives an `activate` event. The primary use of `activate` is to clean up resources used in previous versions of the service worker. The new service worker can call [`skipWaiting()`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/skipWaiting) to ask to be activated immediately without waiting for open pages to be closed. The new service worker will then receive `activate` immediately, and will take over any open pages.
-5. After activation, the service worker will now control pages, but only those that were opened after the `register()` is successful. In other words, documents will have to be reloaded to actually be controlled, because a document starts life with or without a service worker and maintains that for its lifetime. To override this default behavior and adopt open pages, a service worker can call [`clients.claim()`](/en-US/docs/Web/API/Clients/claim).
-6. Whenever a new version of a service worker is fetched, this cycle happens again and the remains of the previous version are cleaned during the new version's activation.
 
-![lifecycle diagram](sw-lifecycle.svg)
+   ![Registration of the first service worker, showing its scope and two open clients.](sw-registration.svg)
+
+2. Installation takes place. An `install` event is always the first one sent to a service worker (this can be used to start the process of populating an IndexedDB, and caching site assets). During this step, the application is preparing to make everything available for use offline.
+
+   ![The install event populates a cache while the same two clients remain open.](sw-installation.svg)
+
+3. When installation completes successfully, the service worker is considered installed.
+
+   ![The service worker is installed, with a populated cache, but does not yet control clients.](sw-installed.svg)
+
+4. Because this is the first service worker, it receives an `activate` event without waiting for open pages to close. The `activate` handler can finish setting up the service worker.
+
+   ![The activate event finishes setup while the same two existing clients remain open.](sw-activation.svg)
+
+5. After activation, the service worker will control pages opened within its scope. Existing documents will have to be reloaded to actually be controlled, because a document starts life with or without a service worker and maintains that for its lifetime. To override this default behavior and adopt open pages, a service worker can call [`clients.claim()`](/en-US/docs/Web/API/Clients/claim).
+
+   ![Clients change: a new client opens and is controlled by the activated service worker, while the two existing clients remain open.](sw-activated.svg)
+
+### Replacement
+
+1. Whenever a new version of a service worker is fetched, this cycle happens again. The previous version remains active and continues to control its clients.
+
+   ![Version 2 is fetched while version 1 remains active and controls an open client.](sw-replacement-fetched.svg)
+
+2. Installation takes place for the new version. Its `install` handler can populate a new cache while the old version continues to use its existing cache.
+
+   ![Version 2 receives the install event and populates a new cache while version 1 continues to control the same client.](sw-replacement-installation.svg)
+
+3. When installation completes successfully, the new version waits while the old version is still controlling clients. The new version is not yet active.
+
+   ![Version 2 is installed and waiting, with its new cache ready, while version 1 still controls the open client.](sw-replacement-waiting.svg)
+
+4. Once all pages controlled by the old version of the service worker have closed and the old version has finished handling pending events, it's safe to retire the old version, and the newly installed service worker receives an `activate` event. The primary use of `activate` is to clean up resources used in previous versions of the service worker, such as the old cache in this example.
+
+   The new service worker can call [`skipWaiting()`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/skipWaiting) to ask to be activated without waiting for open pages to be closed. It then takes over the pages controlled by the old version.
+
+   ![Clients change: the client controlled by version 1 closes. Version 1 is retired, and version 2 receives activate and deletes the old cache.](sw-replacement-activation.svg)
+
+5. After activation, newly opened pages within the registration's scope are controlled by the new version.
+
+   ![Clients change: a new client opens and is controlled by version 2, which uses its new cache.](sw-replacement-activated.svg)
+
+### Service worker events
 
 Here is a summary of the available service worker events:
 
