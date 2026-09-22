@@ -287,6 +287,92 @@ Region Capture doesn't have the same level of restrictions as Element Capture â€
 
 However, there are still restrictions on the elements that can be used as crop targets. For the full list, see the [`CropTarget.fromElement()`](/en-US/docs/Web/API/CropTarget/fromElement_static#element) reference page.
 
+## Taking a screenshot
+
+To save a still screenshot without displaying a video, use {{domxref("ImageCapture.grabFrame()")}} to obtain an {{domxref("ImageBitmap")}} directly from the captured track. You can draw this bitmap to a canvas and encode it as a PNG using {{domxref("HTMLCanvasElement.toBlob()")}}.
+
+The following variation uses Element Capture to take a screenshot of the `demo` element when the user clicks a button. It requires support for both Element Capture and `ImageCapture.grabFrame()`. It uses the same `#demo` CSS from [Restrictions on the Element Capture API](#restrictions_on_the_element_capture_api).
+
+```html live-sample___screenshot
+<button id="screenshot">Save screenshot</button>
+<a id="download" download="screenshot.png" hidden>Download screenshot</a>
+<div id="demo">
+  <h2>Some kind of demo</h2>
+  <p>This is the content to capture.</p>
+</div>
+```
+
+```css hidden live-sample___screenshot
+#demo {
+  isolation: isolate;
+  transform-style: flat;
+  background-color: white;
+}
+```
+
+The click handler requests screen-sharing permission, restricts the track to the target element, and grabs one frame. The `finally` block stops sharing and releases the bitmap even if an error occurs.
+
+```js live-sample___screenshot
+const screenshotElem = document.getElementById("screenshot");
+const downloadElem = document.getElementById("download");
+const demoElem = document.getElementById("demo");
+let screenshotURL;
+
+screenshotElem.addEventListener("click", async () => {
+  screenshotElem.disabled = true;
+  let stream;
+  let bitmap;
+
+  try {
+    stream = await navigator.mediaDevices.getDisplayMedia({
+      video: true,
+      audio: false,
+      preferCurrentTab: true,
+    });
+    const [track] = stream.getVideoTracks();
+    const restrictionTarget = await RestrictionTarget.fromElement(demoElem);
+    await track.restrictTo(restrictionTarget);
+    bitmap = await new ImageCapture(track).grabFrame();
+
+    const canvas = document.createElement("canvas");
+    canvas.width = bitmap.width;
+    canvas.height = bitmap.height;
+    canvas.getContext("2d").drawImage(bitmap, 0, 0);
+    const blob = await new Promise((resolve) => {
+      canvas.toBlob(resolve, "image/png");
+    });
+    if (!blob) {
+      throw new Error("Could not create the screenshot.");
+    }
+
+    if (screenshotURL) {
+      URL.revokeObjectURL(screenshotURL);
+    }
+    screenshotURL = URL.createObjectURL(blob);
+    downloadElem.href = screenshotURL;
+    downloadElem.hidden = false;
+    downloadElem.click();
+  } catch (err) {
+    console.error(err);
+  } finally {
+    stream?.getTracks().forEach((track) => track.stop());
+    bitmap?.close();
+    screenshotElem.disabled = false;
+  }
+});
+```
+
+Click **Save screenshot** and select the current tab in the browser's sharing dialog. Once the PNG is ready, the code initiates its download. The download link also remains available to save the image again. Its [blob URL](/en-US/docs/Web/URI/Reference/Schemes/blob) is retained until another screenshot replaces it.
+
+{{EmbedLiveSample("screenshot", "", 200, "", "", "", "display-capture")}}
+
+To use Region Capture instead, replace the `RestrictionTarget.fromElement()` and `restrictTo()` calls with:
+
+```js
+const cropTarget = await CropTarget.fromElement(demoElem);
+await track.cropTo(cropTarget);
+```
+
 ## See also
 
 - [Capture a video stream from any element](https://developer.chrome.com/docs/web-platform/element-capture) on developer.chrome.com (2025)
