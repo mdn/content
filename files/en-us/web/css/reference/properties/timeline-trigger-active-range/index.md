@@ -23,30 +23,31 @@ This property is a shorthand for the following CSS properties:
 ## Syntax
 
 ```css
-/* Keyword */
+/* Keywords */
 timeline-trigger-active-range: normal;
 timeline-trigger-active-range: auto;
 
-/* Range start value only */
-/* Single value */
-timeline-trigger-active-range: 0%;
-timeline-trigger-active-range: 0px;
+/* Range start only */
+/* Offset only */
+timeline-trigger-active-range: 10%;
+timeline-trigger-active-range: 40px;
+/* Named timeline only */
 timeline-trigger-active-range: cover;
-/* Two values */
+/* Named timeline and offset value */
 timeline-trigger-active-range: exit 10%;
 timeline-trigger-active-range: contain 50px;
 
-/* Range start and end values */
-/* Two values */
+/* Range start and end */
 timeline-trigger-active-range: 5% 95%;
 timeline-trigger-active-range: entry exit;
 timeline-trigger-active-range: auto 10%;
 timeline-trigger-active-range: 10% normal;
-/* Three values */
+/* Offset on start only */
+timeline-trigger-active-range: entry 10% 90%;
+/* Offset on end only */
 timeline-trigger-active-range: contain contain 90%;
 timeline-trigger-active-range: 200px exit 600px;
-timeline-trigger-active-range: entry 10% 90%;
-/* Four values */
+/* Named timeline and offset for both start and end */
 timeline-trigger-active-range: entry 0% exit 50%;
 timeline-trigger-active-range: contain 100px contain 90%;
 
@@ -76,11 +77,9 @@ Percentages are relative to the length of the named timeline range if one is spe
 
 ## Description
 
-The `timeline-trigger-active-range` property can be used to explicitly specify the start or start and end of a trigger's active range, which means the timeline range along the associated scrollport within which a [CSS scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) trigger will stay active once activated. The start and end values can be specified as a timeline range, offset, or both.
+The `timeline-trigger-active-range` property can be used to explicitly specify the start or start and end of a trigger's active range, which is the range along the associated scrollport within which a [CSS scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) trigger will stay active once activated. The start and end values can each be specified as a timeline range, offset, or both.
 
-This is useful in situations where you want an animation to be triggered in a small activation range, but then you want the trigger to stay active within a larger range. The trigger will only deactivate when the tracked element leaves the active range.
-
-The default value is `auto`, which sets the `timeline-trigger-active-range` value to the same as the {{cssxref("timeline-trigger-activation-range")}}.
+The default value is `auto`, which sets the `timeline-trigger-active-range` value to the same as the {{cssxref("timeline-trigger-activation-range")}}, meaning the active range is the same as the activation range. Setting an active range that is longer than the activation range is useful in situations where you want an animation to be triggered in a small activation range, but then you want the trigger to stay active within a larger range. The trigger will only deactivate when the tracked element leaves the active range.
 
 A value of `normal` sets the active range to the default named range. The default named range depends on the {{cssxref("timeline-trigger-source")}}: it is equivalent to `cover` for a [view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) and `scroll` for a [scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#scroll_progress_timelines). The default offset values are `0% 100%`. Therefore, `normal` resolves to either `cover 0% cover 100%` or `scroll 0% scroll 100%`.
 
