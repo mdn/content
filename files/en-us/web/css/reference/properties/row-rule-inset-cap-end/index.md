@@ -130,7 +130,7 @@ This property is specified as a single value from the following list:
 
 ## Description
 
-The `row-rule-inset-cap-end` property can be used to inset the end edge of row rule [cap segment endpoints](#understanding_cap_end) at the container's content end edge and cap endpoints where no rule segments intersect. The default value is `0`, which is the same as `overlap-join`. Positive values reduce the row rule segment size, while negative values increase it.
+The `row-rule-inset-cap-end` property can be used to inset the end edge of row rule [cap segment endpoints](#understanding_cap_end) at the container's end edge and cap endpoints where no rule segments intersect. The default value is `0`, which is the same as `overlap-join`. Positive values reduce the row rule segment size, while negative values increase it.
 
 Row rules are painted within a row gap as one or more segments, with segments occurring between:
 
@@ -150,9 +150,7 @@ The `row-rule-inset-cap-end` property is a constituent property of several [shor
 
 - To inset the ends of all row segments, the `row-rule-inset-cap-end` property, along with the {{cssxref("row-rule-inset-junction-end")}} property, can be set using the {{cssxref("row-rule-inset-end")}} shorthand.
 
-- To inset the ends of column and row cap segments, the `row-rule-inset-cap-end` property, along with the {{cssxref("column-rule-inset-cap-end")}} property, can be set using the {{cssxref("rule-inset-cap-end")}} shorthand.
-
-All of these shorthand properties, along with their `-start`, `-junction`, and `column-` equivalents, can be set using the {{cssxref("rule-inset")}} shorthand.
+All segment endpoints, including this property's `-start`, `-junction`, and `column-` equivalents, can be set using the {{cssxref("rule-inset")}} shorthand.
 
 ### Understanding cap end
 
@@ -334,9 +332,9 @@ visibility.addEventListener("change", () => {
 
 Setting `-32px` outsets the end of all the row rules by `32px`: the lines are drawn `32px` past the right edge of the container. As row rules don't impact the box model, these lines have no impact on the layout of the container or the rest of the content. If `0px` is set, the end of the row rules will align with the edge of the container. This is the default.
 
-The double line-style row rule segments, which appear when the `rule-visibility-items` is set to `between`, add a cap endpoint. The `between` value only paints rules in a gap segments between two adjacent areas occupied by an item. Because the row rule segment above items `24` ends at an intersection with no other row or column rule segments present, this is a cap endpoint, and therefore affected by the `row-rule-inset-cap-end` property. The segment above item `22` ends at a gap junction where a rule segment is present, so is a not a cap endpoint. There are fewer segments abutting the right edge of the container, but the remaining segment, between `6` and `12`, remains a cap endpoint.
+The double line-style row rule segments, which appear when the `rule-visibility-items` property is set to `between`, add a cap endpoint. The `between` value only paints rules in gap segments between two adjacent areas occupied by an item. Because the row rule segment above item `24` ends at an intersection with no other row or column rule segments present, this is a cap endpoint, and therefore is affected by the `row-rule-inset-cap-end` property. The segment above item `22` ends at a gap junction where a rule segment is present, so it is not a cap endpoint. There are fewer segments abutting the right edge of the container, but the remaining segment, between `6` and `12`, remains a cap endpoint.
 
-The rule segments abutting the right edge of the container (only the segment between `6` and `12`, in when set to `between`) are always row-rule cap ends, so they are always inset by the value of the `row-rule-inset-cap-end` property.
+Rule segments abutting the end edge of the container are always row-rule cap end segments affected by the value of the `row-rule-inset-cap-end` property.
 
 ### Understanding percentage values
 

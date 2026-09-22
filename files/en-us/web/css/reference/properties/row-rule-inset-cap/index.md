@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`row-rule-inset-cap`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property can be used to offset the row rule segment [cap endpoints](#understanding_cap_end) at the container's content left and right edges, and endpoints where the segments don't intersect other column or row segments.
+The **`row-rule-inset-cap`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property can be used to offset the row rule segment [cap endpoints](#understanding_cap_endpoints) at the container's left and right edges, and endpoints where the segments don't intersect other column or row segments.
 
 {{InteractiveExample("CSS Demo: rule")}}
 
@@ -135,7 +135,7 @@ This property is specified as a one or two values from the following list:
 
 ## Description
 
-The `row-rule-inset-cap` shorthand property can be used to set the {{cssxref("row-rule-inset-cap-start")}} and {{cssxref("row-rule-inset-cap-end")}} properties, insetting or outsetting both the left and right edges of [cap segment endpoints](#understanding_cap_end) in a single declaration.
+The `row-rule-inset-cap` shorthand property can be used to set the {{cssxref("row-rule-inset-cap-start")}} and {{cssxref("row-rule-inset-cap-end")}} properties, insetting or outsetting both the left and right edges of [cap segment endpoints](#understanding_cap_endpoints) in a single declaration.
 
 If one value is specified, both properties are set to that value. If two values are specified, `-start` is set to the first value and `-end` is set to the second. The default value is `0`, which in the case of cap endpoints, is the same as `overlap-join`. Positive values reduce, or inset, the segment size, while negative values increase, or outset, it.
 
@@ -147,19 +147,19 @@ Row rules are painted within a row gap as one or more segments, with segments oc
 
 Whether a row rule spans multiple columns or is broken into multiple segments is defined by the {{cssxref("row-rule-break")}} property, with interior breaks between row rule segments generally being the size of the {{cssxref("column-gap")}}.
 
-Length `row-rule-inset-cap` values inset segments by the specified value. Negative length values create an outset, making the segment wider and causing end-edge cap segments to extend beyond the container's edge.
+Length `row-rule-inset-cap` values inset segments by the specified value. Negative length values create an outset, making the segment wider and causing cap segments on the left and right edges of the container to extend beyond the container's edge.
 
 [Percentage values](#understanding_percentage_values) are relative to the size of the {{cssxref("column-gap")}} for interior segments. Setting `-50%` will extend the segment to the middle of the gap, while `-100%` will extend the segment across the entire gap. For cap segments at the container's edge, percentage values are relative to `0`, so percentage values have no effect on cap segment endpoints at the container's edge.
 
 The `row-rule-inset-cap` property is a constituent property of a few [shorthand properties](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties):
 
-- To insets the left and right sides of all row segments, the `row-rule-inset-cap` property, along with the {{cssxref("row-rule-inset-junction")}} property, can be set using the {{cssxref("row-rule-inset")}} shorthand.
+- To inset the left and right sides of all row segments, the `row-rule-inset-cap` property, along with the {{cssxref("row-rule-inset-junction")}} property, can be set using the {{cssxref("row-rule-inset")}} shorthand.
 
 - To inset both row and column cap segment endpoints, the `row-rule-inset-cap` property, along with the {{cssxref("column-rule-inset-cap")}} property, can be set using the {{cssxref("rule-inset-cap")}} shorthand.
 
-All of these shorthand properties, along with their `-junction` and `column-` equivalents, can be set using the {{cssxref("rule-inset")}} shorthand.
+All segment endpoints, including this property's `-junction` and `column-` equivalents, can be set using the {{cssxref("rule-inset")}} shorthand.
 
-### Understanding cap end
+### Understanding cap endpoints
 
 A _cap segment endpoint_ is any segment endpoint that is not a junction segment endpoint. This includes endpoints at the container's content edges, as well as endpoints at a gap junction where no other column or row segments are present.
 
@@ -167,9 +167,9 @@ The `row-rule-inset-cap` property can outset or inset the start and end of row r
 
 Cap segments are impacted by the {{cssxref("rule-visibility-items")}} properties, which define whether row- and column-rule segments are painted in gaps adjacent to empty areas. Changing the value from `auto` to `between` or `around` can create additional interior cap segments.
 
-In the following demonstration, the rows end in cap endpoints at the container's left and right edges. With `row-rule-inset-cap: 16px` set, these endpoints are inset by `16px`. Change the inset `<length>` value to better visualize which segments start or end with cap segment endpoints.
+In the following demonstration, the rows end in cap endpoints at the container's left and right edges. With `row-rule-inset-cap: -32px` set, these endpoints are outset by `32px`. Change the inset `<length>` value to better visualize which segments start or end with cap segment endpoints.
 
-```html live-sample___caps live-sample___percents
+```html hidden live-sample___caps live-sample___percents
 <ul id="ul">
   <li>1</li>
   <li>2</li>
@@ -338,9 +338,9 @@ visibility.addEventListener("change", () => {
 
 Setting `0px` aligns the row rule ends with the left and right container edges. This is the default.
 
-Select `between` as the `rule-visibility-items` value. This value paints rules in gap segments only if the two adjacent areas are occupied by items. Again, we have row rule cap endpoints at the left and right edges of the container. The third row rule, denoted with a double-line style, has two additional cap endpoints: the right side of the segment between `11` and `15` and the left side of the segment between `12` and `16`. These do not meet any other rule segments; therefore, they are affected by the `row-rule-inset-cap-start` property.
+Select `between` as the `rule-visibility-items` value. This value paints rules in gap segments only if the two adjacent areas are occupied by items. Again, we have row rule cap endpoints at the start edge of the container, but now we have none at the end edge. The third row rule, denoted with a double-line style, has two additional cap endpoints: the end-side of the segment between `11` and `15` and the start-side of the segment between `12` and `16`. These do not meet any other rule segments; therefore, they are affected by the `row-rule-inset-cap-start` property.
 
-In this case, the `around` value of the `rule-visibility-items` property, which paints rules in a gap segment as long as one adjacent area is occupied by an item, did not create addition cap segment endpoints. All the interior segment endpoints end in junctions where there are column segments, thus creating junction, not cap, segment endpoints. Junction endpoints can be inset using the {{cssxref("row-rule-inset-junction")}} shorthand property.
+In this case, the `around` value of the `rule-visibility-items` property, which paints rules in a gap segment as long as one adjacent area is occupied by an item, did not create additional cap segment endpoints. All the interior segment endpoints end in junctions where there are column segments, thus creating junction, not cap, segment endpoints. Junction endpoints can be inset using the {{cssxref("row-rule-inset-junction")}} shorthand property.
 
 ### Understanding percentage values
 
@@ -500,7 +500,7 @@ inset.addEventListener("input", () => {
 
 {{EmbedLiveSample("Basic usage", "", "330")}}
 
-Change the size of the inset. Note how the row segments grow and shrink only at segment cap ends, either their left side, their right side, or both directions, on the ends that don't intersect other column or row segments.
+Change the size of the inset. Note how the row segments grow and shrink only at segment cap ends, either their left side, their right side, or both directions — the ends that don't intersect other row or column segments.
 
 ## Specifications
 

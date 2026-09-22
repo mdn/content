@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`rule-inset-cap`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property can be used to offset the start and end of column and row rule segment [cap endpoints](#understanding_cap_end) in a single declaration.
+The **`rule-inset-cap`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property can be used to offset the start and end of column and row rule segment [cap endpoints](#understanding_cap_end).
 
 {{InteractiveExample("CSS Demo: rule")}}
 
@@ -108,16 +108,11 @@ This property is a shorthand for the following CSS properties:
 /* Keywords */
 rule-inset-cap: overlap-join;
 
-/* One <length-percentage> value */
+/* A <length-percentage> value */
 rule-inset-cap: 0;
 rule-inset-cap: 1em;
 rule-inset-cap: -5px;
 rule-inset-cap: -25%;
-
-/* Two <length-percentage> values */
-rule-inset-cap: 0 1em;
-rule-inset-cap: -5px -25%;
-rule-inset-cap: -0.5em overlap-join;
 
 /* Global values */
 rule-inset-cap: inherit;
@@ -129,7 +124,7 @@ rule-inset-cap: unset;
 
 ### Values
 
-This property is specified as one or two values from the following list:
+This property is specified from the following list:
 
 - `overlap-join`
   - : Resolves to `0`.
@@ -138,7 +133,7 @@ This property is specified as one or two values from the following list:
 
 ## Description
 
-The `rule-inset-cap` shorthand property sets the {{cssxref("column-rule-inset-cap")}} and {{cssxref("row-rule-inset-cap")}} properties to the same value, insetting cap segment endpoints by the specified value. Positive values reduce the segment size, while negative values increase it.
+The `rule-inset-cap` shorthand property sets the {{cssxref("column-rule-inset-cap")}} and {{cssxref("row-rule-inset-cap")}} properties, insetting cap segment endpoints by the specified values. Positive values reduce the segment size, while negative values increase it.
 
 The `rule-inset-cap` property, along with the {{cssxref("rule-inset-junction")}} property, can be set using the {{cssxref("rule-inset")}} shorthand.
 
