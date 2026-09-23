@@ -264,7 +264,7 @@ The `.trigger` element creates the `.animated` element's trigger via the followi
 
 - A {{cssxref("timeline-trigger-name")}} with value `--t`, which is equal to the identifier referenced in the `.animated` element's `animation-trigger` property value, associating the two together.
 - A {{cssxref("timeline-trigger-source")}} with value [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
-- A {{cssxref("timeline-trigger-activation-range")}} of `contain 50% contain 100%`. The `contain` range spans from when the trigger element has completely entered the viewport to when it starts to leave. This value sets the trigger's activation range to start at `50%` of the way through the contain range, which occurs when the tracked element's bottom ege is half-way through the scrollport, and ends at `100%`, when the element's top edge first exits the scrollport.
+- A {{cssxref("timeline-trigger-activation-range")}} of `contain 50% contain 100%`. The `contain` range spans from when the trigger element has completely entered the scrollport to when it starts to leave. This value sets the trigger's activation range to start at `50%` of the way through the contain range, which occurs when the tracked element's bottom ege is half-way through the scrollport, and ends at `100%`, when the element's top edge first exits the scrollport.
 
 The `.trigger.longer` element creates the `.animated.longer` element's trigger via the following properties:
 
@@ -303,7 +303,7 @@ The `.trigger.longer` element creates the `.animated.longer` element's trigger v
 
 {{EmbedLiveSample("basic-example", "100%", "240")}}
 
-Try scrolling the content up. Both animations start playing when the tracked `.trigger` elements get to around the middle of the viewport and stop playing when they start to leave the viewport at the top edge.
+Try scrolling the content up. Both animations start playing when the tracked `.trigger` elements get to around the middle of the scrollport and stop playing when they start to leave the scrollport at the top edge.
 
 After the animations start playing, but before they stop playing, if you then scroll downward again, the first animation immediately pauses when the trigger goes bottom edge passes the midpoint of the scrollport, whereas the second animation doesn't pause until its trigger element starts to leave the scrollport at the scrollport's bottom edge. This is because the active range extends how long the trigger remains active, but does not change where activation and deactivation occur.
 

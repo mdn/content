@@ -291,12 +291,12 @@ The `.trigger` element creates the `.animated` element's trigger via the followi
 
 - A {{cssxref("timeline-trigger-name")}} with value `--t`, which is equal to the identifier referenced in the `.animated` element's `animation-trigger` property value, associating the two together.
 - A {{cssxref("timeline-trigger-source")}} with value [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
-- A {{cssxref("timeline-trigger-activation-range")}} of `contain 25% contain 75%`. The `contain` range spans from when the trigger element has completely entered the viewport to when it starts to leave. This value sets the trigger's activation range to start `25%` of the way through the `contain` range and end `75%` of the way through the range. In other words, the activation range is when the tracked element is in the middle half of the scrollport.
+- A {{cssxref("timeline-trigger-activation-range")}} of `contain 25% contain 75%`. The `contain` range spans from when the trigger element has completely entered the scrollport to when it starts to leave. This value sets the trigger's activation range to start `25%` of the way through the `contain` range and end `75%` of the way through the range. In other words, the activation range is when the tracked element is in the middle half of the scrollport.
 
 The `.trigger.longer` element creates the `.animated.longer` element's trigger via the following properties:
 
 - A {{cssxref("timeline-trigger-name")}} with value `--longerT` (overriding the `--t`), which is equal to the identifier referenced in the `.animated.longer` element's `animation-trigger` property value, associating the two together.
-- A `timeline-trigger-active-range` of `cover 0% cover 100%`. The `cover` range spans from when the trigger element starts to enter the viewport to when it has completely left. In other words, the active range is when any part of the tracked element is in the scrollport.
+- A `timeline-trigger-active-range` of `cover 0% cover 100%`. The `cover` range spans from when the trigger element starts to enter the scrollport to when it has completely left. In other words, the active range is when any part of the tracked element is in the scrollport.
 
 ```css live-sample___basic-example
 .trigger {
@@ -329,7 +329,7 @@ The `.trigger.longer` element creates the `.animated.longer` element's trigger v
 
 {{EmbedLiveSample("basic-example", "100%", "240")}}
 
-Try scrolling the content up. Both animations start playing when the tracked `.trigger` elements get to around a quarter of the way up the viewport. Continue scrolling. The first animation pauses when its trigger element gets 75% of the way through the scrollport, whereas the second animation doesn't pause until its trigger element has completely left the viewport.
+Try scrolling the content up. Both animations start playing when the tracked `.trigger` elements get to around a quarter of the way up the scrollport. Continue scrolling. The first animation pauses when its trigger element gets 75% of the way through the scrollport, whereas the second animation doesn't pause until its trigger element has completely left the scrollport.
 
 This is because the active range extends how long the trigger remains active, but does not change where activation and deactivation occur.
 
