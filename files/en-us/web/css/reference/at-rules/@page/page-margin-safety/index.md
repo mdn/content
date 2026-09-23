@@ -45,12 +45,12 @@ This descriptor is specified as one of the following keywords:
 
 Most printers have a small region along the edge of the page that is unprintable, typically due to the printer's paper handling mechanism. The `page-margin-safety` descriptor can be set inside a web document `@page` at-rule to constain the page's outer margins, making sure that the page content stays within the page's printable area during printing. The margins are constrained relative to a value called the [`safe-printable-inset`](#the_safe-printable-inset).
 
-The constrained margins are those that are adjacent to one of the edges of a page. All other margins are not affected.
+The constrained margins are those that are adjacent to one of the edges of a page. No other margins are affected.
 
 Two values are available for `page-margin-safety`:
 
 - The `clamp` value is used to constrain page margins to the larger of the `safe-printable-inset` value and the margin's resolved value. This ensures that the margin will be set to a minimum value that still ensures content will print safely, but the margin's own set value will be used if it is larger than the minimum.
-- The `add` value is used to increase the set margin value by the `safe-printable-inset` value, providing extra spacing and making sure the margins are larger than the minimum.
+- The `add` value is used to increase the set margin value by the `safe-printable-inset` value, guaranteeing extra spacing regardless of the margin value.
 
 ## The safe-printable-inset
 
@@ -58,7 +58,7 @@ The browser is able to determine a width for each page margin from the underlyin
 
 The value of the `safe-printable-inset` depends on how a printer operates:
 
-- Some printers don't have a uniform unprintable region along each of the four paper edges. Different edges may have a different width unprintable region, and the printer may rotate the print output at its own discretion. The browser therefore may not know which edge will be fed first into the printer, or what orientation the sheet of paper has. In such cases, the width of each edge's unprintable region is collected, and `safe-printable-inset` for each side of the page is set to the largest of those values.
+- Some printers don't have a uniform unprintable region along each of the four paper edges. Different edges may have unprintable regions with different widths, and the printer may rotate the print output at its own discretion. The browser therefore may not know which edge will be fed first into the printer, or what orientation the sheet of paper has. In such cases, the width of each edge's unprintable region is collected, and `safe-printable-inset` for each side of the page is set to the largest of those values.
 - Some printers return such information reliably. If the user agent can trust that the four values are usable individually, and that no rotation will be applied, each side of the page will use its own `safe-printable-inset` value returned from the OS.
 
 ## Constraining specific margins
