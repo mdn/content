@@ -240,6 +240,7 @@ Below is a list of all of the attributes available in SVG, along with links to r
 - {{SVGAttr("text-overflow")}}
 - {{SVGAttr("text-rendering")}}
 - {{SVGAttr("textLength")}}
+- {{SVGAttr("title")}}
 - {{SVGAttr("to")}}
 - {{SVGAttr("transform")}}
 - {{SVGAttr("transform-origin")}}
