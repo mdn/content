@@ -159,7 +159,7 @@ From here the process is similar to the previous example when a matching resourc
 
 The response that carries the {{HTTPHeader("Use-As-Dictionary")}} header also decides, through its {{HTTPHeader("Cache-Control")}} header, whether the browser stores the dictionary and for how long. The browser uses a stored dictionary only while that response is still [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age), or while the [`stale-while-revalidate`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#stale-while-revalidate) directive still allows the response to be served stale. In practice:
 
-- [`no-cache`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#no-cache) or [`no-store`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#no-store) stops the browser from storing the dictionary, whatever other directives the response carries.
+- Specifying [`no-cache`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#no-cache) or [`no-store`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#no-store) stops the browser from storing the dictionary, regardless of any other directives the response carries.
 - `max-age=0` combined with `stale-while-revalidate=<seconds>` still lets the browser store the dictionary, which then lasts as long as the `stale-while-revalidate` window.
 - [`must-revalidate`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#must-revalidate) cancels any `stale-while-revalidate` window, so the dictionary lasts only as long as `max-age`. With `max-age=0`, the browser never stores it.
 - [`s-maxage`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#s-maxage) does not apply, because the browser is a private cache.
