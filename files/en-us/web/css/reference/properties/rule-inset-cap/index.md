@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`rule-inset-cap`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property can be used to offset the start and end of column and row rule segment [cap endpoints](#understanding_cap_end).
+The **`rule-inset-cap`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property can be used to offset the start and end of column and row rule segment [cap endpoints](#understanding_cap_end) to the same values.
 
 {{InteractiveExample("CSS Demo: rule")}}
 
@@ -115,6 +115,11 @@ rule-inset-cap: 1em;
 rule-inset-cap: -5px;
 rule-inset-cap: -25%;
 
+/* Two values */
+rule-inset-cap: 0 20px;
+rule-inset-cap: 1em -5px;
+rule-inset-cap: overlap-join -25%;
+
 /* Global values */
 rule-inset-cap: inherit;
 rule-inset-cap: initial;
@@ -125,7 +130,7 @@ rule-inset-cap: unset;
 
 ### Values
 
-This property is specified from the following list:
+This property is specified as one or two values from the following list:
 
 - `overlap-join`
   - : Resolves to `0`.
@@ -134,7 +139,11 @@ This property is specified from the following list:
 
 ## Description
 
-The `rule-inset-cap` shorthand property sets the {{cssxref("column-rule-inset-cap")}} and {{cssxref("row-rule-inset-cap")}} properties, insetting cap segment endpoints by the specified values. Positive values reduce the segment size, while negative values increase it.
+The `rule-inset-cap` shorthand property can be used to set the {{cssxref("row-rule-inset-cap")}} and {{cssxref("column-rule-inset-cap")}} properties to the same value in a single declaration, insetting row and column cap segment endpoints by the specified values.
+
+If one value is specified, both the start and end cap segment endpoints are set to that value. If two values are specified, the start of the row and column cap segment endpoints are set to the first value and the endof the row and column cap segment endpoints are set to the second.
+
+The default value is `0`, which, in the case of cap endpoints, is the same as `overlap-join`. Positive values reduce the segment size, while negative values increase it.
 
 The `rule-inset-cap` property, along with the {{cssxref("rule-inset-junction")}} property, can be set using the {{cssxref("rule-inset")}} shorthand.
 
@@ -285,6 +294,134 @@ inset.addEventListener("input", () => {
 
 Change the size of the inset.
 
+### Setting two values
+
+#### HTML
+
+```html hidden
+<p>
+  <label
+    >Change the <code>row-rule-inset-cap</code> value.
+    <input type="range" min="-40" max="40" value="40" id="row" data-unit="px"
+  /></label>
+  <output id="og">40px</output>
+</p>
+<p>
+  <label
+    >Change the <code>column-rule-inset-cap</code> value.
+    <input type="range" min="-40" max="40" value="-40" id="col" data-unit="px"
+  /></label>
+  <output id="ow">-40px</output>
+</p>
+```
+
+Our HTML includes an unordered list ({{htmlelement("ul")}}) with nine list items ({{htmlelement("li")}}):
+
+```html
+<ul>
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+  <li>9</li>
+</ul>
+```
+
+The user interface used to select different the values and the JavaScript that enables the interactivity have been hidden for brevity.
+
+#### CSS
+
+We create a grid container by setting the {{cssxref("display")}} to grid, creating 4 columns with {{cssxref("grid-template-columns")}}, and adding a `30px` {{cssxref("gap")}}. We use the {{cssxref("row-rule")}} and {{cssxref("column-rule")}} properties to define our rules. We then use the `rule-inset-cap` property to inset the start cap segment endpoints by `40px` and outset all the end cap segment endpoints with a value of `-40px`.
+
+We also set the 6th grid item to span two columns.
+
+```css
+ul {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 30px;
+  row-rule: 16px solid olive;
+  column-rule: 10px solid palegoldenrod;
+
+  rule-inset-cap: 40px -40px;
+}
+li:nth-of-type(6) {
+  grid-column-end: span 2;
+}
+```
+
+```css hidden
+ul {
+  width: calc(95vw - 80px);
+  border: 1px solid;
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+  place-items: center;
+}
+li {
+  place-content: center;
+  text-align: center;
+  font-family: sans-serif;
+  background-color: #ededed;
+  padding: 5vw;
+  width: 100%;
+  box-sizing: border-box;
+}
+li:nth-of-type(6) {
+  padding: 2em 0;
+}
+li code {
+  display: block;
+  margin: 0 auto;
+  text-align: left;
+  background-color: #fcfcfc;
+  width: calc(47.5vw - 40px);
+}
+output {
+  font-family: monospace;
+}
+input {
+  accent-color: olive;
+}
+```
+
+```js
+const ul = document.querySelector("ul");
+const rowSize = document.getElementById("row");
+const og = document.getElementById("og");
+const colSize = document.getElementById("col");
+const ow = document.getElementById("ow");
+const cell = document.querySelector("li:nth-of-type(6)");
+let text = "";
+const update = function () {
+  ul.style.ruleInsetCap = text = `${rowSize.value}px ${colSize.value}px`;
+  cell.innerHTML = `<code>rule-inset-cap: ${text};</code>`;
+};
+
+update();
+
+rowSize.addEventListener("input", () => {
+  og.innerText = `${rowSize.value}px`;
+  update();
+});
+
+colSize.addEventListener("input", () => {
+  ow.innerText = `${colSize.value}px`;
+  update();
+});
+```
+
+#### Result
+
+{{EmbedLiveSample("Setting two value", "", "500")}}
+
+Change the inset values for the starts and ends of the cap segment endpoints.
+
 ### Inner cap segments
 
 This example shows how to set `rule-inset-cap` to inset the endpoints of cap segments on a grid container, and how the {{cssxref("rule-visibility-items")}} property can turn inner endpoints into cap segment endpoints.
@@ -341,6 +478,8 @@ We also include a {{htmlelement("select")}} element with an {{htmlelement("optio
 
 We create a grid container by setting the {{cssxref("display")}} to grid, creating 6 columns with {{cssxref("grid-template-columns")}}, and adding a `20px` {{cssxref("gap")}}. We use the {{cssxref("rule")}} property to define our rules, overriding the row rule color with the {{cssxref("row-rule-color")}} property. We set the {{cssxref("rule-break")}} property to break the rules at each intersection, making each rule segment distinct. We explicitly set {{cssxref("rule-visibility-items")}} to the default value of `normal`. We then use the `rule-inset-cap` property to inset all the cap segment endpoints by `16px`.
 
+We also set the seventh list item to span two columns using the {{cssxref("grid-column-end")}} property.
+
 ```css
 ul {
   display: grid;
@@ -352,6 +491,10 @@ ul {
   rule-visibility-items: normal;
 
   rule-inset-cap: 16px;
+}
+
+li:nth-of-type(7) {
+  grid-column-end: span 2;
 }
 ```
 
@@ -429,7 +572,7 @@ visibility.addEventListener("change", () => {
 
 {{EmbedLiveSample("Inner cap segments", "", "400")}}
 
-Select `between` from the dropdown to only paint rule segments when both adjacent grid areas contain a grid item, thereby creating interior cap segments. Then change the inset value.
+Select `between` from the dropdown to only paint rule segments when both adjacent grid areas contain a grid item, thereby creating interior cap segments. Then change the inset value to better enable viewing which segment endpoints are cap segment endpoints.
 
 ## Specifications
 
