@@ -47,7 +47,7 @@ To use cookies, a tracker implements something like the following process:
 
 1. The target pages embed a third-party resource served by the tracker. For example, this might be an image or an {{htmlelement("iframe")}} containing an advertisement.
 2. When the user loads one of the target pages, the browser makes a request to the tracker's server for the third-party resource. If the request doesn't already contain any cookies, the tracker's server generates an identifier for the user and sets it as a cookie in the response.
-3. The next time this user loads one of the target pages, the browser again makes a request to the tracker's server for the third-party resource. The request contains the cookie that the server previously set: the server now knows that the same user (or at least, the same browser) visited both pages.
+3. The next time this user loads one of the target pages, the browser again makes a request to the tracker's server for the third-party resource. The request contains the cookie that the server previously set: the server now knows that the same user (or at least, the same browser profile) visited both pages.
 
 ![Diagram showing how a tracker users third-party cookies.](tracking-cookies.svg)
 
