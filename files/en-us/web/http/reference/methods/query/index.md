@@ -164,8 +164,7 @@ This lets a client re-run an expensive query while avoiding the cost of transfer
 Responses to `QUERY` are {{Glossary("cacheable")}}, but the cache key must incorporate the request content and its associated metadata, because the request URI alone no longer identifies the query.
 A cache must therefore read the entire request content before it can match a stored response, which makes caching `QUERY` requests more involved than caching `GET` requests.
 Servers whose responses depend on the request content indicate this with the {{HTTPHeader("Vary")}} header.
-`Vary` tells caches that the response depends on more than the URI (here, on the listed header fields), so a stored response can only be reused for a request whose values for those fields match.
-For example:
+`Vary` tells caches that the response depends on more than the URI. In the following example, a stored response can only be reused for a request whose listed header field values match.
 
 ```http
 Vary: Accept-Query, Content-Encoding, Content-Type
