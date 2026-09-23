@@ -364,7 +364,7 @@ screenshotElem.addEventListener("click", async () => {
 
 Click **Save screenshot** and select the current tab in the browser's sharing dialog. Once the PNG is ready, the code initiates its download. The download link also remains available to save the image again. Its [blob URL](/en-US/docs/Web/URI/Reference/Schemes/blob) is retained until another screenshot replaces it.
 
-{{EmbedLiveSample("screenshot", "", 200, "", "", "", "display-capture")}}
+{{EmbedLiveSample("screenshot", "", 200, "", "", "", "display-capture; camera")}}
 
 To use Region Capture instead, replace the `RestrictionTarget.fromElement()` and `restrictTo()` calls with:
 
