@@ -13,7 +13,7 @@ sidebar: http
 
 The HTTP **`Use-As-Dictionary`** response header lists the matching criteria that the {{glossary("Compression Dictionary Transport")}} dictionary can be used for, for future requests.
 
-The browser uses the dictionary only while the response that carries this header is [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age), or while `stale-while-revalidate` still allows that response to be served stale. A response sent with `no-cache`, `no-store` or `must-revalidate` is never used as a dictionary. See [Dictionary freshness](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport#dictionary_freshness) for more details.
+The browser uses the dictionary only while the response that carries this header is [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age), or while `stale-while-revalidate` still allows that response to be served stale. A response sent with `no-cache` or `no-store` is never used as a dictionary, and one sent with `must-revalidate` is used only until its `max-age` runs out. See [Dictionary freshness](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport#dictionary_freshness) for more details.
 
 See the [Compression Dictionary Transport guide](/en-US/docs/Web/HTTP/Guides/Compression_dictionary_transport) for more information.
 
