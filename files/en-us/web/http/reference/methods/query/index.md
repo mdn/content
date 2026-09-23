@@ -51,18 +51,18 @@ QUERY <request-target>["?"<query>] HTTP/1.1
     This is an absolute path (e.g., `/path/to/resource`) in requests to an origin server, and an absolute URL in requests to proxies (e.g., `https://example.com/path/to/resource`).
 - `<query>` {{optional_inline}}
   - : An optional URI query component preceded by a question mark (`?`).
-    This helps identify the queried resource; the query itself is defined by the request content and its media type.
+    This helps identify the queried resource; the request content and its media type define the actual query.
 
 ## Description
 
 The `QUERY` method asks the target resource to run a query operation within its own scope and return the result. This is in contrast to {{HTTPMethod("GET")}}, which asks for a representation of the resource identified by the target URI.
-The request content and its {{HTTPHeader("Content-Type")}} define the query; the target resource determines what the query is run against, such as a database table, a search index, or a collection exposed by an API.
+The request content and its {{HTTPHeader("Content-Type")}} define the query; the target resource determines what the query is run against, for example a database table, a search index, or a collection exposed by an API.
 
-Because the query travels in the request content rather than the URI, it is not constrained by the length and encoding limits that apply to a URI query component.
+Because the query travels in the request content rather than the URI, it isn't constrained by the length and encoding limits that apply to a URI query component.
 It is also less widely exposed than a query in the URI; see [Security considerations](#security_considerations) for details.
 
 `QUERY` is not a replacement for `GET` in every case.
-When a query is small enough to fit in the URI, `GET` remains a good choice, and it produces a URL that can be bookmarked, linked to, and cached without extra work.
+When a query is small enough to fit in the URI, `GET` remains a good choice: it produces a URL that can be bookmarked, linked to, and cached without extra work.
 `QUERY` is particularly useful when the URI becomes impractical, such as for large or structured queries like a SQL statement or a JSONPath expression, or for queries that should not be exposed in the URI.
 
 In carrying content, `QUERY` resembles {{HTTPMethod("POST")}}, but unlike `POST` it is explicitly {{Glossary("Safe/HTTP", "safe")}} and {{Glossary("Idempotent", "idempotent")}}.
@@ -90,7 +90,7 @@ A client could send the `QUERY` request without knowing in advance whether it is
 The server will either process it or respond with {{HTTPStatus("405", "405 Method Not Allowed")}}, along with an `Allow` header listing the methods it does support.
 
 Which query _formats_ a resource accepts is advertised separately, through the {{HTTPHeader("Accept-Query")}} response header.
-The client can read the accepted formats from the `Accept-Query` header or, alternatively, send the `QUERY` request with its desired format and read the supported media types from the {{HTTPHeader("Accept")}} header of the resulting {{HTTPStatus("415", "415 Unsupported Media Type")}} response.
+The client can read the accepted formats from the `Accept-Query` header or send the `QUERY` request with its desired format and read the supported media types from the {{HTTPHeader("Accept")}} header of the resulting {{HTTPStatus("415", "415 Unsupported Media Type")}} response.
 
 For example, a resource might advertise the formats it accepts like this:
 
@@ -114,10 +114,10 @@ SELECT surname, email FROM contacts LIMIT 10
 ### Media types and error responses
 
 A server must reject a `QUERY` request whose {{HTTPHeader("Content-Type")}} is missing or inconsistent with the request content.
-Servers are not allowed to guess the media type from the content itself. The response depends on how the request is malformed:
+Servers cannot guess the media type from the content itself. The response depends on how the request is malformed:
 
 - {{HTTPStatus("400", "400 Bad Request")}}: The request carries no media type information, or the declared media type is inconsistent with the actual content.
-- {{HTTPStatus("415", "415 Unsupported Media Type")}}: The media type is not supported by the resource. This includes situations where the type is understood in general but carries no meaning as a query to this resource.
+- {{HTTPStatus("415", "415 Unsupported Media Type")}}: The media type is not supported by the resource. This includes cases where the type is understood in general but carries no meaning as a query to this resource.
 - {{HTTPStatus("422", "422 Unprocessable Content")}}: The media type is understood, and the content matches it, but the query itself cannot be processed — for example, a syntactically valid SQL query naming a table that does not exist.
 - {{HTTPStatus("406", "406 Not Acceptable")}}: The client asked for a response media type through {{HTTPHeader("Accept")}} that the resource cannot produce.
 
@@ -125,7 +125,7 @@ Servers are not allowed to guess the media type from the content itself. The res
 
 The _equivalent resource_ of a `QUERY` request is a resource that represents that request, including its target and its content, and that responds to `GET`.
 Its purpose is to let a client repeat the same query later with a plain `GET` request, without resending the query content.
-In effect it is the resource that `QUERY` addresses, with the request content folded into its identity.
+In effect, it is the resource that `QUERY` addresses, with the request content folded into its identity.
 
 The equivalent resource always exists conceptually, but servers do not have to give it a URI.
 When a server does, a successful response to a `QUERY` request can point to it, and to a stored copy of the result, through two different headers:
@@ -133,12 +133,12 @@ When a server does, a successful response to a `QUERY` request can point to it, 
 - {{HTTPHeader("Content-Location")}}: Identifies a resource holding **the result of the query just performed**.
   A `GET` to that URI retrieves the same results again.
 - {{HTTPHeader("Location")}}: Identifies the equivalent resource, which **re-runs the same query**.
-  A `GET` to that URI repeats the operation against current data, without resending the query content, so the result may differ from the original response.
+  A `GET` to that URI repeats the operation against current data without resending the query content; therefore, the result may differ from the original response.
 
 Neither resource is guaranteed to be permanent.
 If a later request to one of them fails, the client can fall back to repeating the original `QUERY` request with its original content.
 
-Because these URIs stand in for a query, a server handling sensitive request content should generate them so that they do not embed any sensitive part of that content.
+Because these URIs stand in for a query, a server handling sensitive request content should generate them so they don't embed any sensitive part of that content.
 If it doesn't, the query is pushed back into a URI, losing the exposure benefit described in [Security considerations](#security_considerations).
 
 ### Redirection
@@ -149,7 +149,7 @@ Historically, clients following a {{HTTPStatus("301")}} or {{HTTPStatus("302")}}
 This does **not** apply to `QUERY`: for all four status codes above, the redirected request is still a `QUERY` request with the same content.
 
 A {{HTTPStatus("303", "303 See Other")}} response means the query can instead be satisfied by a plain `GET` to the URI in `Location`.
-No query result is returned with the `303` itself, which lets the server hand back an equivalent resource without computing the answer inline.
+The `303` itself doesn't include a query result, allowing the server to hand back an equivalent resource without computing the answer inline.
 
 ### Conditional requests
 
@@ -170,7 +170,7 @@ Vary: Accept-Query, Content-Encoding, Content-Type
 ```
 
 To improve their hit rate, caches may normalize semantically insignificant differences in the request content before deriving the key, such as removing a content encoding.
-This normalization has to match how the resource itself interprets the content.
+This normalization matches how the resource itself interprets the content.
 A cache that normalizes incorrectly, or in a way that differs significantly from the resource, can treat two requests as equivalent when they are not and serve the wrong response.
 A client that needs to prevent normalization can send {{HTTPHeader("Cache-Control")}} with the `no-transform` directive, though the directive is only advisory.
 
@@ -179,7 +179,7 @@ Where a response supplies a `Location` header identifying an equivalent resource
 ### Security considerations
 
 `QUERY` carries its input in the request content rather than in the URI.
-A URI is more likely to be logged, or otherwise processed by intermediaries, than the request content is, so moving a query out of the URI reduces how widely it is exposed.
+A URI is more likely to be logged or otherwise processed by intermediaries than the request content, so moving a query out of the URI reduces how widely it is exposed.
 Where the query itself is confidential, this is a reason to prefer `QUERY` over `GET`.
 
 The benefit only holds if the rest of the exchange preserves it, so note the constraints on [equivalent resource URIs](#equivalent_resources) and on [cache normalization](#caching) described above.
