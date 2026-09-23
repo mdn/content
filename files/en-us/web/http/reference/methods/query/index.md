@@ -7,7 +7,7 @@ spec-urls: https://www.rfc-editor.org/rfc/rfc10008.html#name-query-method
 sidebar: http
 ---
 
-The **`QUERY`** HTTP method initiates a server-side query.
+The `QUERY` HTTP method initiates a server-side query. It requests that the target resource process the request content in a safe and idempotent manner, returning the result in the response.
 Where {{HTTPMethod("GET")}} asks for a representation of the resource identified by the target URI, `QUERY` asks the target resource to run a query operation within its own scope and return the result.
 The request content and its {{HTTPHeader("Content-Type")}} define the query; the target resource determines what the query is run against.
 
