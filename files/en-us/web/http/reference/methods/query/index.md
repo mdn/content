@@ -86,11 +86,11 @@ HTTP/1.1 200 OK
 Allow: GET, QUERY, OPTIONS, HEAD
 ```
 
-A client could send the `QUERY` request without knowing in advance whether it is supported.
+A client could send the `QUERY` request without knowing if it's supported.
 The server will either process it or respond with {{HTTPStatus("405", "405 Method Not Allowed")}}, along with an `Allow` header listing the methods it does support.
 
 Which query _formats_ a resource accepts is advertised separately, through the {{HTTPHeader("Accept-Query")}} response header.
-The client can read the accepted formats from the `Accept-Query` header or send the `QUERY` request with its desired format and read the supported media types from the {{HTTPHeader("Accept")}} header of the resulting {{HTTPStatus("415", "415 Unsupported Media Type")}} response.
+The client can read the accepted formats from the `Accept-Query` header.
 
 For example, a resource might advertise the formats it accepts like this:
 
@@ -110,6 +110,8 @@ Accept: application/json
 
 SELECT surname, email FROM contacts LIMIT 10
 ```
+
+Alternatively, the client can send the `QUERY` request with its desired format and read the supported media types from the {{HTTPHeader("Accept")}} header of the resulting {{HTTPStatus("415", "415 Unsupported Media Type")}} response.
 
 ### Media types and error responses
 
