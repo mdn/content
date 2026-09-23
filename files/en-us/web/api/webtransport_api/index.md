@@ -45,6 +45,25 @@ async function initTransport(url) {
 }
 ```
 
+### Server-side implementation
+
+A WebTransport connection requires a server that supports WebTransport over HTTP/3. The URL passed to the {{domxref("WebTransport.WebTransport", "WebTransport()")}} constructor identifies the WebTransport server resource that the client wants to connect to.
+
+To establish a WebTransport session, the client sends an HTTP extended `CONNECT` request to the server. The request identifies the WebTransport server resource using the `:authority` and `:path` values. For browser clients, the request also includes an `Origin` header, which the server must verify before accepting the session.
+
+If the server accepts the request, the WebTransport session is established. The client and server can then exchange data using bidirectional streams, unidirectional streams, and datagrams.
+
+The [WebTransport over HTTP/3 specification](https://datatracker.ietf.org/doc/draft-ietf-webtrans-http3/) describes the protocol and server requirements in more detail.
+
+You can use an existing WebTransport implementation to handle the server-side protocol details. For example:
+
+- **Go:** [webtransport-go](https://github.com/quic-go/webtransport-go) provides a WebTransport implementation based on quic-go, with client and server examples.
+- **Python:** [Google Chrome's WebTransport server example](https://github.com/GoogleChrome/samples/blob/gh-pages/webtransport/webtransport_server.py) demonstrates a server based on the `aioquic` library.
+- **Rust:** [wtransport](https://github.com/BiagioFesta/wtransport) provides an asynchronous WebTransport implementation with server examples.
+- **Node.js:** [webtransport](https://github.com/fails-components/webtransport) provides WebTransport support for Node.js, including server and client implementations.
+
+These libraries can handle the WebTransport protocol, allowing application code to focus on the data exchanged between the client and server.
+
 ### Closing the connection
 
 You can respond to the connection closing by waiting for the {{domxref("WebTransport.closed")}} promise to fulfill. Errors returned by WebTransport operations are of type {{domxref("WebTransportError")}}, and contain additional data on top of the standard {{domxref("DOMException")}} set.
