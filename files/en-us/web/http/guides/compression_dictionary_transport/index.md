@@ -165,7 +165,7 @@ A stored dictionary is only used while the response that delivered it is still [
 
 This matters most for HTML documents, which are often served with `no-cache` or `must-revalidate` so that the browser always revalidates them: such a document cannot offer itself as a dictionary for its next version, however the `match` pattern is written.
 
-The failure is silent. The `Use-As-Dictionary` header is accepted without error, and a later request that matches the pattern carries no {{HTTPHeader("Available-Dictionary")}} header. Chrome's developer tools report the reason on the offering response ("The response can't be used as a dictionary because its freshness is expired"), which is the place to look when a dictionary is never offered back.
+The failure is silent. The `Use-As-Dictionary` header is accepted without error, and a later request that matches the pattern carries no {{HTTPHeader("Available-Dictionary")}} header. In Chrome, the reason is reported in the [Issues panel](https://developer.chrome.com/docs/devtools/issues) of the developer tools, not the Network panel: an issue reading "The response can't be used as a dictionary because its freshness is expired" names the response that offered the dictionary. That is the place to look when a dictionary is never offered back.
 
 ## Creating dictionary-compressed responses
 
