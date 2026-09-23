@@ -125,12 +125,12 @@ Servers cannot guess the media type from the content itself. The response depend
 
 ### Equivalent resources
 
-The _equivalent resource_ of a `QUERY` request is a resource that represents that request, including its target and its content, and that responds to `GET`.
+The _equivalent resource_ of a `QUERY` request is a resource that responds to `GET` and represents the `QUERY` request, including its target and its content.
 Its purpose is to let a client repeat the same query later with a plain `GET` request, without resending the query content.
 In effect, it is the resource that `QUERY` addresses, with the request content folded into its identity.
 
 The equivalent resource always exists conceptually, but servers do not have to give it a URI.
-When a server does, a successful response to a `QUERY` request can point to it, and to a stored copy of the result, through two different headers:
+When a server represents it at a URI, a successful response to a `QUERY` request can point to it, and to a stored copy of the result, through two different headers:
 
 - {{HTTPHeader("Content-Location")}}: Identifies a resource holding **the result of the query just performed**.
   A `GET` to that URI retrieves the same results again.
@@ -138,9 +138,9 @@ When a server does, a successful response to a `QUERY` request can point to it, 
   A `GET` to that URI repeats the operation against current data without resending the query content; therefore, the result may differ from the original response.
 
 Neither resource is guaranteed to be permanent.
-If a later request to one of them fails, the client can fall back to repeating the original `QUERY` request with its original content.
+If a subsequent request to one of them fails, the client can fall back to repeating the original `QUERY` request with its original content.
 
-Because these URIs stand in for a query, a server handling sensitive request content should generate them so they don't embed any sensitive part of that content.
+Because these URIs stand in for a query, a server handling sensitive request content should generate them without embedding any sensitive part of the content.
 If it doesn't, the query is pushed back into a URI, losing the exposure benefit described in [Security considerations](#security_considerations).
 
 ### Redirection
