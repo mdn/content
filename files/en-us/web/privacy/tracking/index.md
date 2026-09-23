@@ -177,7 +177,7 @@ Partitioned storage makes access to a particular storage area dependent not only
 
 This is also referred to as _double-keying_: the storage for the embedded content is keyed (accessed) on the combination of the embedded content's origin and that of the top-level document.
 
-Partitioned storage applies not only to [web platform storage APIs](#tracking_using_client-side_storage_apis) such as {{domxref("Window.localStorage", "local storage")}} or [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), but any other method that a tracker could use to persist state, including those that we classified as [covert stateful tracking](#covert_stateful_tracking), such as HSTS status or the HTTP cache. This would mean that, for example, a tracker embedded in one page would not see the same set of HSTS statuses, or cached HTTP resources, as the same tracker embedded in another page.
+Partitioned storage applies not only to [web platform storage APIs](#tracking_using_client-side_storage_apis) such as cookies, {{domxref("Window.localStorage", "local storage")}} or [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), but also to any other method that a tracker could use to persist state, including those that we classified as [covert stateful tracking](#covert_stateful_tracking), such as HSTS status or the HTTP cache. This would mean that, for example, a tracker embedded in one page would not see the same set of HSTS statuses, or cached HTTP resources, as the same tracker embedded in another page.
 
 See [Client-Side Storage Partitioning](https://privacycg.github.io/storage-partitioning/) for more details, including a list of all the known browser state that should be affected by storage partitioning.
 
