@@ -60,7 +60,7 @@ This property is specified as a comma-separated list of the following values:
 
 ## Description
 
-The `timeline-trigger-active-range-end` property can be used to explicitly specify the end of a trigger's [active range](/en-US/docs/Web/CSS/Reference/Properties/timeline-trigger-active-range#description) that is equal to or further along the timeline than the end of the trigger's activation range.
+The `timeline-trigger-active-range-end` property can be used to explicitly set the end of a trigger's [active range](/en-US/docs/Web/CSS/Reference/Properties/timeline-trigger-active-range#description) to a value equal to or further along the timeline than the end of the trigger's activation range.
 
 The _active range_ is the range within which a trigger remains activated once activation occurs. By default, the active range ends where the activation range ends, with deactivation occurring when the tracked element leaves the activation range. This property creates a buffer zone and is used to prevent premature resetting when a user scrolls back and forth across the activation's endpoint. Only when a tracked element moves out of the active range does the trigger become inactive.
 
@@ -110,7 +110,7 @@ In this case, `--my-trigger` will use the `110%` range end and `--my-other-trigg
 
 ### Basic usage
 
-This example demonstrates the effect of extending a trigger's active range comparing two identical triggered animations, with the end of one of the scroll-triggered animation trigger's active range's outset using the `timeline-trigger-active-range-end` property.
+This example demonstrates the effect of extending a trigger's active range. It compares two identical triggered animations, with the end of one animation trigger's active range outset using the `timeline-trigger-active-range-end` property.
 
 #### HTML
 
