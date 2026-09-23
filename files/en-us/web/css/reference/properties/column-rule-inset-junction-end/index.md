@@ -218,6 +218,17 @@ li {
   width: 100%;
   box-sizing: border-box;
 }
+@layer no-support {
+  @supports not (column-rule-inset-junction-end: 16px) {
+    body::before {
+      content: "Your browser doesn't support the column-rule-inset-junction-end property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
 ```
 
 ```css hidden live-sample___percents
@@ -338,6 +349,17 @@ li {
   padding: 2em;
   width: 100%;
   box-sizing: border-box;
+}
+@layer no-support {
+  @supports not (column-rule-inset-junction-end: 16px) {
+    body::before {
+      content: "Your browser doesn't support the column-rule-inset-junction-end property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
 }
 ```
 
@@ -478,6 +500,17 @@ output {
 }
 p {
   margin-top: 2.5em;
+}
+@layer no-support {
+  @supports not (column-rule-inset-junction-end: 16px) {
+    body::before {
+      content: "Your browser doesn't support the column-rule-inset-junction-end property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
 }
 ```
 
