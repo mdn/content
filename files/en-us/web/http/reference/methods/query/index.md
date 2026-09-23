@@ -8,14 +8,6 @@ sidebar: http
 ---
 
 The `QUERY` HTTP method initiates a server-side query. It requests that the target resource process the request content in a safe and idempotent manner, returning the result in the response.
-The `QUERY` method asks the target resource to run a query operation within its own scope and return the result. This is in contrast to {{HTTPMethod("GET")}}, which asks for a representation of the resource identified by the target URI.
-The request content and its {{HTTPHeader("Content-Type")}} define the query; the target resource determines what the query is run against.
-
-Because the query travels in the request content rather than the URI, it is not constrained by the length and encoding limits that apply to a URI query component.
-This makes `QUERY` a good fit for queries that are too large or too structured to express there, such as a SQL statement or a JSONPath expression.
-
-In carrying content, `QUERY` resembles {{HTTPMethod("POST")}}, but unlike `POST` it is explicitly {{Glossary("Safe/HTTP", "safe")}} and {{Glossary("Idempotent", "idempotent")}}.
-A client neither requests nor expects any change to the target resource; you can therefore retry `QUERY` requests after a connection failure without concern for additional effects.
 
 <table class="properties">
   <tbody>
@@ -62,6 +54,19 @@ QUERY <request-target>["?"<query>] HTTP/1.1
     This helps identify the queried resource; the query itself is defined by the request content and its media type.
 
 ## Description
+
+The `QUERY` method asks the target resource to run a query operation within its own scope and return the result. This is in contrast to {{HTTPMethod("GET")}}, which asks for a representation of the resource identified by the target URI.
+The request content and its {{HTTPHeader("Content-Type")}} define the query; the target resource determines what the query is run against, such as a database table, a search index, or a collection exposed by an API.
+
+Because the query travels in the request content rather than the URI, it is not constrained by the length and encoding limits that apply to a URI query component.
+It is also less widely exposed than a query in the URI; see [Security considerations](#security_considerations) for details.
+
+`QUERY` is not a replacement for `GET` in every case.
+When a query is small enough to fit in the URI, `GET` remains a good choice, and it produces a URL that can be bookmarked, linked to, and cached without extra work.
+`QUERY` is particularly useful when the URI becomes impractical, such as for large or structured queries like a SQL statement or a JSONPath expression, or for queries that should not be exposed in the URI.
+
+In carrying content, `QUERY` resembles {{HTTPMethod("POST")}}, but unlike `POST` it is explicitly {{Glossary("Safe/HTTP", "safe")}} and {{Glossary("Idempotent", "idempotent")}}.
+A client neither requests nor expects any change to the target resource; you can therefore retry `QUERY` requests after a connection failure without concern for additional effects.
 
 ### Discovering support
 
