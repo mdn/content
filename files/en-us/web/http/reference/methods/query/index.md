@@ -92,6 +92,25 @@ The server will either process it or respond with {{HTTPStatus("405", "405 Metho
 Which query _formats_ a resource accepts is advertised separately, through the {{HTTPHeader("Accept-Query")}} response header.
 The client can read the accepted formats from the `Accept-Query` header or, alternatively, send the `QUERY` request with its desired format and read the supported media types from the {{HTTPHeader("Accept")}} header of the resulting {{HTTPStatus("415", "415 Unsupported Media Type")}} response.
 
+For example, a resource might advertise the formats it accepts like this:
+
+```http
+HTTP/1.1 200 OK
+Allow: GET, QUERY, OPTIONS, HEAD
+Accept-Query: application/x-www-form-urlencoded, application/sql
+```
+
+A client can then send a `QUERY` request in one of those formats:
+
+```http
+QUERY /contacts HTTP/1.1
+Host: example.org
+Content-Type: application/sql
+Accept: application/json
+
+SELECT surname, email FROM contacts LIMIT 10
+```
+
 ### Media types and error responses
 
 A server must reject a `QUERY` request whose {{HTTPHeader("Content-Type")}} is missing or inconsistent with the request content.
@@ -104,11 +123,12 @@ Servers are not allowed to guess the media type from the content itself. The res
 
 ### Equivalent resources
 
-The _equivalent resource_ for a `QUERY` request is a resource that responds to `GET`, represents that request and its target, and takes the request content and metadata into account.
+The _equivalent resource_ of a `QUERY` request is a resource that represents that request, including its target and its content, and that responds to `GET`.
+Its purpose is to let a client repeat the same query later with a plain `GET` request, without resending the query content.
 In effect it is the resource that `QUERY` addresses, with the request content folded into its identity.
 
-Servers are not obliged to give equivalent resources a URI, but when they do, those resources become reachable with `GET`.
-A successful response can point at them through two different headers:
+The equivalent resource always exists conceptually, but servers do not have to give it a URI.
+When a server does, a successful response to a `QUERY` request can point to it, and to a stored copy of the result, through two different headers:
 
 - {{HTTPHeader("Content-Location")}}: Identifies a resource holding **the result of the query just performed**.
   A `GET` to that URI retrieves the same results again.
@@ -118,14 +138,15 @@ A successful response can point at them through two different headers:
 Neither resource is guaranteed to be permanent.
 If a later request to one of them fails, the client can fall back to repeating the original `QUERY` request with its original content.
 
-Because these URIs stand in for a query, a server handling sensitive request content should choose them so that they do not embed any sensitive part of that content.
+Because these URIs stand in for a query, a server handling sensitive request content should generate them so that they do not embed any sensitive part of that content.
 If it doesn't, the query is pushed back into a URI, losing the exposure benefit described in [Security considerations](#security_considerations).
 
 ### Redirection
 
 A server can respond to `QUERY` indirectly by redirecting the client.
 With {{HTTPStatus("301", "301 Moved Permanently")}}, {{HTTPStatus("308", "308 Permanent Redirect")}}, {{HTTPStatus("302", "302 Found")}} or {{HTTPStatus("307", "307 Temporary Redirect")}}, the client is expected to send a similar `QUERY` request to the URI given in {{HTTPHeader("Location")}}.
-The historical exception that turns a redirected `POST` into a `GET` after a `301` or `302` does **not** apply to `QUERY`: the method is preserved in all four cases.
+Historically, clients following a {{HTTPStatus("301")}} or {{HTTPStatus("302")}} redirect have been allowed to change a `POST` request into a `GET` request.
+This does **not** apply to `QUERY`: for all four status codes above, the redirected request is still a `QUERY` request with the same content.
 
 A {{HTTPStatus("303", "303 See Other")}} response means the query can instead be satisfied by a plain `GET` to the URI in `Location`.
 No query result is returned with the `303` itself, which lets the server hand back an equivalent resource without computing the answer inline.
@@ -140,7 +161,13 @@ This lets a client re-run an expensive query while avoiding the cost of transfer
 
 Responses to `QUERY` are {{Glossary("cacheable")}}, but the cache key must incorporate the request content and its associated metadata, because the request URI alone no longer identifies the query.
 A cache must therefore read the entire request content before it can match a stored response, which makes caching `QUERY` requests more involved than caching `GET` requests.
-Servers whose responses depend on the request content indicate this with the {{HTTPHeader("Vary")}} header, for example `Vary: Accept-Query, Content-Encoding, Content-Type`.
+Servers whose responses depend on the request content indicate this with the {{HTTPHeader("Vary")}} header.
+`Vary` tells caches that the response depends on more than the URI (here, on the listed header fields), so a stored response can only be reused for a request whose values for those fields match.
+For example:
+
+```http
+Vary: Accept-Query, Content-Encoding, Content-Type
+```
 
 To improve their hit rate, caches may normalize semantically insignificant differences in the request content before deriving the key, such as removing a content encoding.
 This normalization has to match how the resource itself interprets the content.
@@ -155,7 +182,7 @@ Where a response supplies a `Location` header identifying an equivalent resource
 A URI is more likely to be logged, or otherwise processed by intermediaries, than the request content is, so moving a query out of the URI reduces how widely it is exposed.
 Where the query itself is confidential, this is a reason to prefer `QUERY` over `GET`.
 
-The benefit only holds if the rest of the exchange preserves it, so note the constraints on equivalent resource URIs and on cache normalization described above.
+The benefit only holds if the rest of the exchange preserves it, so note the constraints on [equivalent resource URIs](#equivalent_resources) and on [cache normalization](#caching) described above.
 
 ## Examples
 
@@ -195,7 +222,7 @@ Content-Type: application/json
 
 ### Reusing a result and repeating a query
 
-A server can return both {{HTTPHeader("Content-Location")}} and {{HTTPHeader("Location")}} alongside the result, offering two different `GET`-addressable resources:
+A server can return both {{HTTPHeader("Content-Location")}} and {{HTTPHeader("Location")}} alongside the result, offering two different `GET`-addressable resources: a stored copy of this result, and the [equivalent resource](#equivalent_resources), which re-runs the query:
 
 ```http
 HTTP/1.1 200 OK
