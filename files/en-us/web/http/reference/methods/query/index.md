@@ -181,9 +181,9 @@ Where a response supplies a `Location` header identifying an equivalent resource
 
 `QUERY` carries its input in the request content rather than in the URI.
 A URI is more likely to be logged or otherwise processed by intermediaries than the request content, so moving a query out of the URI reduces how widely it is exposed.
-Where the query itself is confidential, this is a reason to prefer `QUERY` over `GET`.
+For this reason, `QUERY` should be preferred over `GET` for confidential queries.
 
-The benefit only holds if the rest of the exchange preserves it, so note the constraints on [equivalent resource URIs](#equivalent_resources) and on [cache normalization](#caching) described above.
+The benefit only holds if the rest of the exchange preserves it; note the constraints on [equivalent resource URIs](#equivalent_resources) and [cache normalization](#caching) described above.
 
 ## Examples
 
