@@ -130,7 +130,7 @@ h1 {
 }
 ```
 
-Reversed counters created without an `<integer>` count down so the last element in the set is `-1`. To count down the elements so that the last element is set to `1`, set the `counter-increment` on that named counter to `-1`.
+Reversed counters created without an `<integer>` have an automatically calculated initial value. With `counter-increment` set to `-1` for the named counter on each element, the counter decrements by `1`, ending at `1` on the last element in the set.
 
 The following example creates two reversed counters, `chapter` and `section`, and a regular counter, `pages`. The `section` counter starts at `10`, and `pages` uses the default initial value of `0`. The initial value of the `chapter` counter is calculated automatically. The counter is decremented by `1` each time an `<h1>` is encountered, so its value is `1` on the last `<h1>`.
 
