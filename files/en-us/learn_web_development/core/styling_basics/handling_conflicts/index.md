@@ -255,7 +255,7 @@ Click on the "Play" button to open the example in the MDN Playground, then follo
 
    The third `<a>` element's `color` is set to `initial`, which means it uses the initial value of the property (in this case black) and not the browser default for links, which is blue.
 
-   The fourth `<a>` element's `color` is set to `unset`, which unsets any `color` value applied to the `<a>` element, in the browser's stylesheet or elsewhere. This means that the `<a>` element adopts the `color` of its parent `<li>` element: `green`.
+   The fourth `<a>` element's `color` is set to `unset`, which unsets any `color` value applied to the `<a>` element in the browser's stylesheet or elsewhere. Because `color` is inheritable, `unset` causes the `<a>` element to adopt the `color` of its parent `<li>` element: `green`.
 
 3. Which of the links will change color if you define a new `color` for all of the `<a>` elements — for example `a { color: hotpink; }`? Think of what the answer might be, and then add the rule at the bottom of the CSS.
 
