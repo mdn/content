@@ -303,9 +303,9 @@ The `.trigger.longer` element creates the `.animated.longer` element's trigger v
 
 {{EmbedLiveSample("basic-example", "100%", "240")}}
 
-Try scrolling the content up. Both animations start playing when the tracked `.trigger` elements first enter into view. The animation of one element pauses when the trigger is at 50% of the `contain` timeline, which occurs when the triggers are vertically centered in the scrollport. The other element pauses only when the trigger has fully exited the viewport.
+Try scrolling the content up. Both animations start playing when the tracked `.trigger` elements first enter into view. The animation of one element pauses when the trigger is at `50%` of the `contain` timeline, which occurs when the triggers are vertically centered in the scrollport. The other element only pauses when the trigger has fully exited the viewport.
 
-When you scroll downward again, after both animations have paused, the animations will both restart playing when the trigger elements reach the `50%` point. This is because the active range extends how long the trigger remains active, but does not change where activation and deactivation occur.
+When you scroll downward again, after both animations have paused, the animations will both restart playing when the trigger elements reach the `50%` point. This is because the active range extends how long the trigger remains active, but does not change where activation occurs.
 
 ## Specifications
 
