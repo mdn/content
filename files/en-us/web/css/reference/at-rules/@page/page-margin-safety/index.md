@@ -49,8 +49,21 @@ The constrained margins are those that are adjacent to one of the edges of a pag
 
 Two values are available for `page-margin-safety`:
 
-- The `clamp` value is used to constrain page margins to the larger of the `safe-printable-inset` value and the margin's resolved value. This ensures that the margin will be set to a minimum value that still ensures content will print safely, but the margin's own set value will be used if it is larger than the minimum.
-- The `add` value is used to increase the set margin value by the `safe-printable-inset` value, guaranteeing extra spacing regardless of the margin value.
+- The `clamp` value is used to constrain page margins to the larger of the `safe-printable-inset` value and the margin's resolved value. This ensures that the margin will be set to a minimum value that still ensures page content will print safely, but the margin's own set value will be used if it is larger than the minimum.
+- The `add` value is used to increase the set margin value by the `safe-printable-inset` value, guaranteeing extra spacing regardless of the margin value. The use case for `add` is to make sure page margin box content can be printed safely, for example, the generated content in the following snippet:
+  ```css
+  @page {
+    margin: 0;
+    margin-top: 3em;
+    page-margin-safety: add;
+    border: thin dotted;
+
+    @top-center {
+      font-size: 3em;
+      content: "\c5g";
+    }
+  }
+  ```
 
 ## The safe-printable-inset
 
@@ -117,11 +130,20 @@ body {
 }
 ```
 
-In the second live example, we set `page-margin-safety: add` inside the `@page` descriptor to ensure that the page content will all be inside the printable area during printing.
+In the first live example, we set `margin: 0` inside a `@page` at-rule to push the content out to the edge of the printed page:
+
+```css live-sample___page-margin-safety-1
+@page {
+  margin: 0;
+}
+```
+
+The second live example's `@page` at-rule also includes `margin: 0`, but in addition we set `page-margin-safety: clamp` to ensure that the page content will all be inside the printable area during printing:
 
 ```css live-sample___page-margin-safety-2
 @page {
-  page-margin-safety: add;
+  margin: 0;
+  page-margin-safety: clamp;
 }
 ```
 
@@ -172,7 +194,7 @@ The second live example **does** have the `page-margin-safety` descriptor applie
 
 {{EmbedLiveSample("page-margin-safety-2", "100%", "300", , , , , "allow-modals")}}
 
-Again, click the print button and examine the page inset during printing. You should see that some extra inset has been added around the page content due to the `page-margin-safety` descriptor inside the `@page` at-rule.
+Again, click the print button and examine the page inset during printing. Note the inset that has been added around the page content in the second case, due to the `page-margin-safety` descriptor inside the `@page` at-rule.
 
 ## Specifications
 
