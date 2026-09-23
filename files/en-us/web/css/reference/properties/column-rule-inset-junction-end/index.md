@@ -122,7 +122,7 @@ The `column-rule-inset-junction-end` property is a constituent property of sever
 
 - To inset bottom column segment junction endpoints and right row segment junction endpoints, the `column-rule-inset-junction-end` property, along with the {{cssxref("row-rule-inset-junction-end")}} property, can be set using the {{cssxref("rule-inset-junction-end")}} shorthand.
 
-All segment endpoints, including this property's `-start`, `-junction`, and `row-` equivalents, can be set using the {{cssxref("rule-inset")}} shorthand.
+All segment endpoints, including this property's `-start`, `-cap`, and `row-` equivalents, can be set using the {{cssxref("rule-inset")}} shorthand.
 
 ### Understanding junction endpoints
 
