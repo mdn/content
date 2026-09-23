@@ -130,7 +130,7 @@ h1 {
 }
 ```
 
-Reversed counters created without an `<integer>` have an automatically calculated initial value. The browser counts the number of elements in the set, with the calculated initial value ensuring that, if the `counter-increment` is set to `-1`, thereby decrementing the named counter by `1` on each element, the counter will be at `1` on the last element in the set.
+Reversed counters created without an `<integer>` have an automatically calculated initial value. The browser counts the number of elements in the set, with the calculated initial value ensuring that if the `counter-increment` is set to `-1`, thereby decrementing the named counter by `1` for each element, the counter will be at `1` on the last element in the set.
 
 The following example creates two reversed counters, `chapter` and `section`, and a regular counter, `pages`. The `section` counter starts at `10`, and `pages` uses the default initial value of `0`. The initial value of the `chapter` counter is calculated automatically. The counter is decremented by `1` each time an `<h2>` is encountered, so its value is `1` on the last `<h2>`.
 
