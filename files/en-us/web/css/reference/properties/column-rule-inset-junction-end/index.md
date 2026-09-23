@@ -280,9 +280,9 @@ visibility.addEventListener("change", () => {
 
 If you set `0px` as the value, the end of the column rules will align with the end of the row, abutting the row gap. This is the default. Note how only the bottom ends of the segments in the middle of the grid change when the property value changes. The segments in the bottom row do not change: these are _cap endpoints_, and are not affected by the `column-rule-inset-junction-end` property.
 
-Select `around` as the `rule-visibility-items` value. This value paints rules in a gap segment if a segment occupies at least one of the two adjacent areas. The double line-style column rule segments that appear when the `rule-visibility-items` property is set to `around` end at an interior intersection where one or more row-rule segments are present; these column segments are junction segment endpoints.
+Select `around` as the `rule-visibility-items` value. This value paints rules in a gap segment if an item occupies at least one of the two adjacent areas. The double line-style column rule segments that appear when the `rule-visibility-items` property is set to `around` end at an interior intersection where one or more row-rule segments are present; these column segments are junction segment endpoints.
 
-Select `between` as the `rule-visibility-items` value, which paints rules in gap segments only if a segment occupies both adjacent areas. The double line-style column rule segments now end at an interior intersection where no other rule segments are present: these column segments are _cap segment endpoints_ and therefore aren't affected by the `column-rule-inset-junction-end` property.
+Select `between` as the `rule-visibility-items` value, which paints rules in gap segments only if items occupy both adjacent areas. The double line-style column rule segments now end at an interior intersection where no other rule segments are present: these column segments are _cap segment endpoints_ and therefore aren't affected by the `column-rule-inset-junction-end` property.
 
 ### The `overlap-join` value
 
