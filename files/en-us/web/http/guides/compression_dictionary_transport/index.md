@@ -157,15 +157,15 @@ From here the process is similar to the previous example when a matching resourc
 
 ## Dictionary freshness
 
-A stored dictionary is only used while the response that delivered it is still [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age), or may still be served stale under the {{HTTPHeader("Cache-Control")}} [`stale-while-revalidate`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#stale-while-revalidate) directive. The browser takes the dictionary's lifetime from the caching headers of the response that carried the {{HTTPHeader("Use-As-Dictionary")}} header. That response's `Cache-Control` value therefore decides whether the dictionary is stored at all, and for how long:
+The response that carries the {{HTTPHeader("Use-As-Dictionary")}} header also decides, through its {{HTTPHeader("Cache-Control")}} header, whether the browser stores the dictionary and for how long. The browser uses a stored dictionary only while that response is still [fresh](/en-US/docs/Web/HTTP/Guides/Caching#fresh_and_stale_based_on_age), or while the [`stale-while-revalidate`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#stale-while-revalidate) directive still allows the response to be served stale. In practice:
 
-- A response that must be revalidated before reuse ([`no-cache`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#no-cache), [`must-revalidate`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#must-revalidate)) or that may not be stored (`no-store`) is never used as a dictionary, whatever other directives it carries.
-- `max-age=0` combined with `stale-while-revalidate=<seconds>` registers the dictionary, and the `stale-while-revalidate` window is the dictionary's lifetime.
-- [`s-maxage`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#s-maxage) has no effect here, because the browser is a private cache.
+- A response that must be revalidated before it is reused ([`no-cache`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#no-cache), [`must-revalidate`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#must-revalidate)) or that may not be stored (`no-store`) is never used as a dictionary, whatever other directives it carries.
+- `max-age=0` combined with `stale-while-revalidate=<seconds>` still lets the browser store the dictionary, which then lasts as long as the `stale-while-revalidate` window.
+- [`s-maxage`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#s-maxage) does not apply, because the browser is a private cache.
 
-This matters most for HTML documents, which are often served with `no-cache` or `must-revalidate` so that the browser always revalidates them. Such a document cannot offer itself as a dictionary for its next version, however the `match` pattern is written.
+HTML documents are affected most, because servers often send them with `no-cache` or `must-revalidate` so that the browser always revalidates them. Such a document cannot offer itself as a dictionary for its next version, however the `match` pattern is written.
 
-The failure is silent. The `Use-As-Dictionary` header is accepted without error, and a later request that matches the pattern carries no {{HTTPHeader("Available-Dictionary")}} header. When a dictionary is never offered back, Chrome reports the reason in the [Issues panel](https://developer.chrome.com/docs/devtools/issues) of its developer tools. The issue reads "The response can't be used as a dictionary because its freshness is expired", and it names the response that offered the dictionary.
+In each of these cases, the browser drops the dictionary silently. It accepts the `Use-As-Dictionary` header without an error, yet a later request that matches the pattern carries no {{HTTPHeader("Available-Dictionary")}} header. Chrome reports the reason in the [Issues panel](https://developer.chrome.com/docs/devtools/issues) of its developer tools. The issue reads "The response can't be used as a dictionary because its freshness is expired", and it names the response that offered the dictionary.
 
 ## Creating dictionary-compressed responses
 
