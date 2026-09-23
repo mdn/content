@@ -161,7 +161,7 @@ The response that carries the {{HTTPHeader("Use-As-Dictionary")}} header also de
 
 - Specifying [`no-cache`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#no-cache) or [`no-store`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#no-store) stops the browser from storing the dictionary, regardless of any other directives the response carries.
 - Specifying `max-age=0` combined with `stale-while-revalidate=<seconds>` still lets the browser store the dictionary, which then lasts as long as the `stale-while-revalidate` window.
-- [`must-revalidate`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#must-revalidate) cancels any `stale-while-revalidate` window, so the dictionary lasts only as long as `max-age`. With `max-age=0`, the browser never stores it.
+- Specifying [`must-revalidate`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#must-revalidate) cancels any `stale-while-revalidate` window, so the dictionary lasts only as long as `max-age`. With `max-age=0`, the browser never stores it.
 - The [`s-maxage`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#s-maxage) directive doesn't apply because the browser is a private cache.
 
 HTML documents are affected most, because servers often send them with `no-cache` or `max-age=0, must-revalidate` so that the browser always revalidates them. Such a document cannot offer itself as a dictionary for its next version, however the `match` pattern is written.
