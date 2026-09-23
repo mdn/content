@@ -171,7 +171,7 @@ Vary: Accept-Query, Content-Encoding, Content-Type
 ```
 
 To improve their hit rate, caches may normalize semantically insignificant differences in the request content before deriving the key, such as removing a content encoding.
-This normalization matches how the resource itself interprets the content.
+This normalization is safe only if it matches how the resource itself interprets the content.
 A cache that normalizes incorrectly, or in a way that differs significantly from the resource, can treat two requests as equivalent when they are not and serve the wrong response.
 A client that needs to prevent normalization can send {{HTTPHeader("Cache-Control")}} with the `no-transform` directive, though the directive is only advisory.
 
@@ -181,7 +181,7 @@ Where a response supplies a `Location` header identifying an equivalent resource
 
 `QUERY` carries its input in the request content rather than in the URI.
 A URI is more likely to be logged or otherwise processed by intermediaries than the request content, so moving a query out of the URI reduces how widely it is exposed.
-For this reason, `QUERY` should be preferred over `GET` for confidential queries.
+For this reason, `QUERY` should be considered over `GET` for confidential queries.
 
 The benefit only holds if the rest of the exchange preserves it; note the constraints on [equivalent resource URIs](#equivalent_resources) and [cache normalization](#caching) described above.
 
