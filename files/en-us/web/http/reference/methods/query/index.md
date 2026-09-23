@@ -8,14 +8,14 @@ sidebar: http
 ---
 
 The `QUERY` HTTP method initiates a server-side query. It requests that the target resource process the request content in a safe and idempotent manner, returning the result in the response.
-Where {{HTTPMethod("GET")}} asks for a representation of the resource identified by the target URI, `QUERY` asks the target resource to run a query operation within its own scope and return the result.
+The `QUERY` method asks the target resource to run a query operation within its own scope and return the result. This is in contrast to {{HTTPMethod("GET")}}, which asks for a representation of the resource identified by the target URI.
 The request content and its {{HTTPHeader("Content-Type")}} define the query; the target resource determines what the query is run against.
 
 Because the query travels in the request content rather than the URI, it is not constrained by the length and encoding limits that apply to a URI query component.
 This makes `QUERY` a good fit for queries that are too large or too structured to express there, such as a SQL statement or a JSONPath expression.
 
 In carrying content, `QUERY` resembles {{HTTPMethod("POST")}}, but unlike `POST` it is explicitly {{Glossary("Safe/HTTP", "safe")}} and {{Glossary("Idempotent", "idempotent")}}.
-A client neither requests nor expects any change to the target resource, so a `QUERY` request can be retried or repeated after a connection failure without concern that it will have an additional effect.
+A client neither requests nor expects any change to the target resource; you can therefore retry `QUERY` requests after a connection failure without concern for additional effects.
 
 <table class="properties">
   <tbody>
@@ -59,39 +59,43 @@ QUERY <request-target>["?"<query>] HTTP/1.1
     This is an absolute path (e.g., `/path/to/resource`) in requests to an origin server, and an absolute URL in requests to proxies (e.g., `https://example.com/path/to/resource`).
 - `<query>` {{optional_inline}}
   - : An optional URI query component preceded by a question mark (`?`).
-    It helps identify the resource being queried; the query operation itself is defined by the request content and its media type.
+    This helps identify the queried resource; the query itself is defined by the request content and its media type.
 
 ## Description
 
 ### Discovering support
 
-A resource advertises `QUERY` like any other method, through {{HTTPMethod("OPTIONS")}} and the {{HTTPHeader("Allow")}} response header:
+A resource advertises `QUERY` like any other method, through the {{HTTPMethod("OPTIONS")}} method and the {{HTTPHeader("Allow")}} response header.
+
+A client might query a resource for its options like this:
 
 ```http
 OPTIONS /contacts HTTP/1.1
 Host: example.org
 ```
 
+The resource might respond like this to indicate that it accepts `QUERY` requests:
+
 ```http
 HTTP/1.1 200 OK
 Allow: GET, QUERY, OPTIONS, HEAD
 ```
 
-A client can also send the `QUERY` request without knowing in advance whether it is supported.
-The server either processes it, or responds {{HTTPStatus("405", "405 Method Not Allowed")}} with an `Allow` header listing the methods it does support.
+A client could send the `QUERY` request without knowing in advance whether it is supported.
+The server will either process it or respond with {{HTTPStatus("405", "405 Method Not Allowed")}}, along with an `Allow` header listing the methods it does support.
 
 Which query _formats_ a resource accepts is advertised separately, through the {{HTTPHeader("Accept-Query")}} response header.
-Alternatively, a client can send the `QUERY` request and, on a {{HTTPStatus("415", "415 Unsupported Media Type")}} response, read the supported media types from the {{HTTPHeader("Accept")}} header of that response.
+The client can read the accepted formats from the `Accept-Query` header or, alternatively, send the `QUERY` request with its desired format and read the supported media types from the {{HTTPHeader("Accept")}} header of the resulting {{HTTPStatus("415", "415 Unsupported Media Type")}} response.
 
 ### Media types and error responses
 
 A server must reject a `QUERY` request whose {{HTTPHeader("Content-Type")}} is missing or inconsistent with the request content.
-Servers are not allowed to guess the media type from the content itself, so the response depends on how the request is malformed:
+Servers are not allowed to guess the media type from the content itself. The response depends on how the request is malformed:
 
-- {{HTTPStatus("400", "400 Bad Request")}} if the request carries no media type information, or if the declared media type is inconsistent with the actual content.
-- {{HTTPStatus("415", "415 Unsupported Media Type")}} if the media type is not supported by the resource, including when the type is understood in general but carries no meaning as a query to this resource.
-- {{HTTPStatus("422", "422 Unprocessable Content")}} if the media type is understood and the content matches it, but the query itself cannot be processed — for example, a syntactically valid SQL query naming a table that does not exist.
-- {{HTTPStatus("406", "406 Not Acceptable")}} if the client asked for a response media type through {{HTTPHeader("Accept")}} that the resource cannot produce.
+- {{HTTPStatus("400", "400 Bad Request")}}: The request carries no media type information, or the declared media type is inconsistent with the actual content.
+- {{HTTPStatus("415", "415 Unsupported Media Type")}}: The media type is not supported by the resource. This includes situations where the type is understood in general but carries no meaning as a query to this resource.
+- {{HTTPStatus("422", "422 Unprocessable Content")}}: The media type is understood, and the content matches it, but the query itself cannot be processed — for example, a syntactically valid SQL query naming a table that does not exist.
+- {{HTTPStatus("406", "406 Not Acceptable")}}: The client asked for a response media type through {{HTTPHeader("Accept")}} that the resource cannot produce.
 
 ### Equivalent resources
 
@@ -101,16 +105,16 @@ In effect it is the resource that `QUERY` addresses, with the request content fo
 Servers are not obliged to give equivalent resources a URI, but when they do, those resources become reachable with `GET`.
 A successful response can point at them through two different headers:
 
-- {{HTTPHeader("Content-Location")}} identifies a resource holding **the result of the query just performed**.
+- {{HTTPHeader("Content-Location")}}: Identifies a resource holding **the result of the query just performed**.
   A `GET` to that URI retrieves the same results again.
-- {{HTTPHeader("Location")}} identifies the equivalent resource, which **re-runs the same query**.
+- {{HTTPHeader("Location")}}: Identifies the equivalent resource, which **re-runs the same query**.
   A `GET` to that URI repeats the operation against current data, without resending the query content, so the result may differ from the original response.
 
 Neither resource is guaranteed to be permanent.
 If a later request to one of them fails, the client can fall back to repeating the original `QUERY` request with its original content.
 
 Because these URIs stand in for a query, a server handling sensitive request content should choose them so that they do not embed any sensitive part of that content.
-Otherwise the query is pushed back into a URI, losing the exposure benefit described in [Security considerations](#security_considerations).
+If it doesn't, the query is pushed back into a URI, losing the exposure benefit described in [Security considerations](#security_considerations).
 
 ### Redirection
 
@@ -124,16 +128,16 @@ No query result is returned with the `303` itself, which lets the server hand ba
 ### Conditional requests
 
 The selected representation of a `QUERY` request is the same as that of a `GET` to its equivalent resource.
-A conditional `QUERY` therefore behaves as expected: the query results are returned only if the condition in headers such as {{HTTPHeader("If-None-Match")}} or {{HTTPHeader("If-Modified-Since")}} is met, and a {{HTTPStatus("304", "304 Not Modified")}} is returned otherwise.
+A conditional `QUERY` therefore behaves as expected: the query results are returned only if the condition in headers such as {{HTTPHeader("If-None-Match")}} or {{HTTPHeader("If-Modified-Since")}} is met; a {{HTTPStatus("304", "304 Not Modified")}} is returned otherwise.
 This lets a client re-run an expensive query while avoiding the cost of transferring an unchanged result.
 
 ### Caching
 
 Responses to `QUERY` are {{Glossary("cacheable")}}, but the cache key must incorporate the request content and its associated metadata, because the request URI alone no longer identifies the query.
-A cache therefore has to read the entire request content before it can match a stored response, which makes caching `QUERY` more involved than caching `GET`.
+A cache must therefore read the entire request content before it can match a stored response, which makes caching `QUERY` requests more involved than caching `GET` requests.
 Servers whose responses depend on the request content indicate this with the {{HTTPHeader("Vary")}} header, for example `Vary: Accept-Query, Content-Encoding, Content-Type`.
 
-To improve their hit rate, caches may normalize semantically insignificant differences in the request content before deriving the key, such as removing a content coding.
+To improve their hit rate, caches may normalize semantically insignificant differences in the request content before deriving the key, such as removing a content encoding.
 This normalization has to match how the resource itself interprets the content.
 A cache that normalizes incorrectly, or in a way that differs significantly from the resource, can treat two requests as equivalent when they are not and serve the wrong response.
 A client that needs to prevent normalization can send {{HTTPHeader("Cache-Control")}} with the `no-transform` directive, though the directive is only advisory.
@@ -235,7 +239,7 @@ ETag: "42-1"
 ]
 ```
 
-A subsequent conditional `GET` sending `If-None-Match: "42-1"` then yields {{HTTPStatus("304", "304 Not Modified")}} while the result is unchanged.
+A subsequent conditional `GET` request sending `If-None-Match: "42-1"` will yield {{HTTPStatus("304", "304 Not Modified")}} if the result is unchanged.
 
 ## Specifications
 
