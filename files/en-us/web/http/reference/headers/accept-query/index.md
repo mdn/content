@@ -31,6 +31,7 @@ If requests to the same resource return differing `Accept-Query` values, the mos
 Accept-Query: <media-type>/<subtype>
 Accept-Query: "<media-type>/<subtype>"
 
+// Wildcards
 Accept-Query: <media-type>/*
 Accept-Query: */*
 
@@ -61,8 +62,6 @@ Accept-Query: <media-type>/<subtype>;<parameter>="<value>"
     For example, `image/*` corresponds to `image/png`, `image/svg`, `image/gif`, and other image types.
 - `*/*`
   - : Any media type.
-    Together with `<media-type>/*`, this is one of only two wildcard forms the header allows.
-    A wildcard type with a concrete subtype, such as `*/json`, is not permitted.
 - `;<parameter>=<value>`
   - : A media type parameter, such as `;charset="UTF-8"`, mapped to a structured field parameter on the preceding media range.
     Parameter values are themselves tokens or strings.
