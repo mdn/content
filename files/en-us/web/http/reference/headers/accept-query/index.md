@@ -27,18 +27,18 @@ If requests to the same resource return differing `Accept-Query` values, the mos
 ## Syntax
 
 ```http
-// As a token, or as an equivalent quoted string
+// Token or equivalent quoted string
 Accept-Query: <media-type>/<subtype>
 Accept-Query: "<media-type>/<subtype>"
 
-// Wildcards
+// Tokens including wildcards
 Accept-Query: <media-type>/*
 Accept-Query: */*
 
 // Comma-separated list of media ranges in any order, mixing tokens and strings
 Accept-Query: <media-type>/<subtype>, "<media-type-2>/<subtype-2>", <media-type-3>/*
 
-// Media type parameters are expressed as structured field parameters
+// Media type parameters expressed as structured field parameters
 Accept-Query: <media-type>/<subtype>;<parameter>=<value>
 Accept-Query: <media-type>/<subtype>;<parameter>="<value>"
 ```
