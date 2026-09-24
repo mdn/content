@@ -192,7 +192,7 @@ We've seen that [Bounce tracking](#bounce_tracking), or redirect tracking, enabl
 The [Navigational Tracking Mitigations](https://privacycg.github.io/nav-tracking-mitigations/) specification describes one defense against bounce tracking. In this method:
 
 - The browser flags sites through which a navigation was redirected.
-- Periodically, the browser will check whether the user has directly interacted with flagged sites during a given time period, which is configurable, but the specification suggests that 45 days is appropriate. Interaction includes, for example, clicking buttons or providing input.
+- Periodically, the browser will check whether the user has directly interacted with flagged sites during a given time period. The time period is configurable, but the specification suggests that 45 days is appropriate. Interaction includes, for example, clicking buttons or providing input.
 - If a user has not interacted with a flagged site in the defined time period, then the browser deletes the site's storage.
 
 This defense is generally only applied when third-party cookies are blocked, or third-party storage is partitioned. The rationale for this is that bounce tracking is specifically a technique for evading restrictions on third-party storage, so if third-party storage is not restricted, there is no motivation for trackers to use it.
