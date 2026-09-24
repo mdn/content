@@ -141,7 +141,7 @@ This property is specified as one or two values from the following list:
 
 The `rule-inset-cap` shorthand property can be used to set the {{cssxref("row-rule-inset-cap")}} and {{cssxref("column-rule-inset-cap")}} properties to the same value in a single declaration, insetting row and column cap segment endpoints by the specified values.
 
-If one value is specified, both the start and end cap segment endpoints are set to that value. If two values are specified, the start of the row and column cap segment endpoints are set to the first value and the endof the row and column cap segment endpoints are set to the second.
+If you specify one value, both the start and end cap segment endpoints are set to that value. If you specify two values, the row and column cap start segment endpoints are set to the first value, and the row and column cap end segment endpoints are set to the second value.
 
 The default value is `0`, which, in the case of cap endpoints, is the same as `overlap-join`. Positive values reduce the segment size, while negative values increase it.
 
