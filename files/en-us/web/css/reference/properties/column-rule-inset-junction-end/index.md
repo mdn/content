@@ -469,7 +469,8 @@ We also set the {{cssxref("flex-direction")}} on the `.column` container to `col
 The rest of the CSS is hidden for brevity.
 
 ```css hidden
-h1, article {
+h1,
+article {
   font-family: sans-serif;
   text-align: center;
 }
