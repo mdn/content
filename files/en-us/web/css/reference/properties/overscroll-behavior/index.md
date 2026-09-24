@@ -188,7 +188,11 @@ In this example there are 4 buttons that launch a dialog, each dialog has a diff
 </dialog>
 <dialog id="dialog-none" popover>
   <code>overscroll-behavior: none;</code>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa odio voluptatum minus dolorem assumenda nemo quos autem culpa, pariatur illo deserunt ea nam commodi fugiat ipsum quam alias suscipit facilis?</p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa odio
+    voluptatum minus dolorem assumenda nemo quos autem culpa, pariatur illo
+    deserunt ea nam commodi fugiat ipsum quam alias suscipit facilis?
+  </p>
 </dialog>
 ```
 
