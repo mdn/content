@@ -164,7 +164,11 @@ In this example there are 4 buttons that launch a dialog, each dialog has a diff
 <div class="force-scroll"></div>
 <dialog id="dialog-auto" popover>
   <code>overscroll-behavior: auto;</code>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa odio voluptatum minus dolorem assumenda nemo quos autem culpa, pariatur illo deserunt ea nam commodi fugiat ipsum quam alias suscipit facilis?</p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa odio
+    voluptatum minus dolorem assumenda nemo quos autem culpa, pariatur illo
+    deserunt ea nam commodi fugiat ipsum quam alias suscipit facilis?
+  </p>
 </dialog>
 <dialog id="dialog-contain" popover>
   <code>overscroll-behavior: contain;</code>
