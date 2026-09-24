@@ -247,7 +247,7 @@ Click one of the buttons to see that behavior applied to the dialog that appears
 
 {{EmbedLiveSample("overscroll-behavior_on_dialog_elements", "300", "180")}}
 
-An alternate example of controlling scroll of "chat" window can be seen on the [`overscroll-behavior-y`](http://localhost:5042/en-US/docs/Web/CSS/Reference/Properties/overscroll-behavior-y#preventing_an_underlying_element_from_scrolling) property.
+An alternate example of controlling scroll of "chat" window can be seen on the [`overscroll-behavior-y`](/en-US/docs/Web/CSS/Reference/Properties/overscroll-behavior-y#preventing_an_underlying_element_from_scrolling) property.
 
 ## Specifications
 
