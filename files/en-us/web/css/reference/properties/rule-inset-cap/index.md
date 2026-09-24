@@ -229,7 +229,8 @@ We also set the {{cssxref("flex-direction")}} on the `.column` container to make
 ```
 
 ```css hidden
-body {
+h1,
+article {
   font-family: sans-serif;
   text-align: center;
 }
@@ -387,6 +388,17 @@ output {
 }
 input {
   accent-color: olive;
+}
+@layer no-support {
+  @supports not (rule-inset-cap: 16px) {
+    body::before {
+      content: "Your browser doesn't support the rule-inset-cap property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
 }
 ```
 
