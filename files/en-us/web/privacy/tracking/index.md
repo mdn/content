@@ -110,7 +110,7 @@ For trackers, the advantage of bounce tracking is that it works even if the brow
 
 ## Covert tracking
 
-Privacy researchers consider _covert tracking_ to consist of all forms of tracking except [those that use web platform storage APIs](#tracking_using_client-side_storage_apis).
+Privacy researchers consider _covert tracking_ to consist of all forms of tracking except [those that use web platform storage APIs](#tracking_using_client-side_storage_apis). This includes [covert stateful tracking](#covert_stateful_tracking), [fingerprinting](#fingerprinting), and [navigational tracking](#navigational_tracking).
 
 Any form of web tracking is usually harmful to privacy. However it is easier for users, browsers, and browser extensions to have some control over tracking that uses storage APIs, than tracking that uses more covert methods.
 
