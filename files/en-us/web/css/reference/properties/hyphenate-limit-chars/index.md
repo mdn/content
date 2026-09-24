@@ -47,7 +47,7 @@ This property is specified as one to three numeric or `auto` values:
 
 - `auto`
 
-  - : A keyword that lets the user agent choose appropriate values for the current layout.
+  - Specifies the user agent to choose appropriate values for the current layout. This is the default.
 
 ## Description
 
