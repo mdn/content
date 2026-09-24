@@ -37,6 +37,9 @@ The `Document` object `selectionchange` event is fired when:
 
 The event object itself does not contain the updated selection details. You can retrieve the current selection by calling {{domxref("Document.getSelection()", "document.getSelection()")}} within your event listener.
 
+> [!NOTE]
+> When you change the selection programmatically, for example by calling {{domxref("Selection.collapse()")}}, the selection updates immediately, but the `selectionchange` event is queued as a task. Its listeners run later, after the current script finishes executing. This contrasts with events such as `focus` and `click`, whose listeners run synchronously when triggered by {{domxref("HTMLElement.focus()", "focus()")}} and {{domxref("HTMLElement.click()", "click()")}}, respectively.
+
 This event differs significantly from the `selectionchange` event fired on {{HTMLElement("input")}} and {{HTMLElement("textarea")}} text controls:
 
 - Document selections use DOM node positions and require {{domxref("Document.getSelection()")}} for inspection. Text inputs maintain independent selections within their internal text values, using character offsets inspected via `selectionStart`, `selectionEnd`, and `selectionDirection`.

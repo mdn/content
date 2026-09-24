@@ -72,7 +72,7 @@ input:focus {
 
 ### Three-column comparison
 
-Once the specificity values of the relevant selectors are determined, the number of selector components in each column are compared, from left to right.
+Once the specificity values of the relevant selectors are determined, the number of selector components in each column is compared, from left to right.
 
 ```css
 #myElement {
@@ -179,7 +179,7 @@ p,
 }
 ```
 
-In the above code block the complex selector `p, #fakeId` the specificity is taken from `#fakeId` and also the `span`, so this create a specificity of `1-0-1` for both `p span` and `#fakeId span`. This is the equivalent specificity as the `:is(p, #fakeId) span` selector.
+In the above code block the complex selector `p, #fakeId` the specificity is taken from `#fakeId` and also the `span`, so this creates a specificity of `1-0-1` for both `p span` and `#fakeId span`. This is the equivalent specificity as the `:is(p, #fakeId) span` selector.
 
 Generally, you want to keep specificity down to a minimum, but if you need to increase an element's specificity for a particular reason, these three pseudo-classes can help.
 
@@ -349,12 +349,12 @@ To remove the perceived need for `!important`, you can do one of the following:
 
 All these methods are covered in preceding sections.
 
-If you're unable to remove `!important` flags from an authors style sheet, the only solution to overriding the important styles is by using `!important`. Creating a [cascade layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer) of important declaration overrides is an excellent solution. Two ways of doing this include:
+If you're unable to remove `!important` flags from an author's style sheet, the only solution to overriding the important styles is by using `!important`. Creating a [cascade layer](/en-US/docs/Web/CSS/Reference/At-rules/@layer) of important declaration overrides is an excellent solution. Two ways of doing this include:
 
 #### Method 1
 
 1. Create a separate, short style sheet containing only important declarations specifically overriding any important declarations you were unable to remove.
-2. Import this stylesheet as the first import in your CSS using `layer()`, including the `@import` statement, before linking to other stylesheets. This is to ensure that the important overrides is imported as the first layer.
+2. Import this stylesheet as the first import in your CSS using `layer()`, including the `@import` statement, before linking to other stylesheets. This is to ensure that the important overrides are imported as the first layer.
 
 ```css
 @import "importantOverrides.css" layer();

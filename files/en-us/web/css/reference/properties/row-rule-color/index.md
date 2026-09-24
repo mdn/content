@@ -100,7 +100,7 @@ The `row-rule-color` property accepts a comma-separated list of values, includin
 
 The `row-rule-color` property defines the colors of any lines drawn in the gaps between rows in [multi-column](/en-US/docs/Web/CSS/Guides/Multicol_layout), [flex](/en-US/docs/Web/CSS/Guides/Flexible_box_layout), and [grid](/en-US/docs/Web/CSS/Guides/Grid_layout) containers with more than one row.
 
-The value is a comma-separated list of components, which can include `<line-color>`, `<repeated-line-color>`, and `<auto-repeat-line-color>` types.
+The value is a comma-separated list of components, which can include `<line-color>`, `<repeat-line-color>`, and `<auto-repeat-line-color>` types.
 
 The `row-rule-color`, along with the {{cssxref("row-rule-width")}} and {{cssxref("row-rule-style")}} properties, can be set using the {{cssxref("row-rule")}} shorthand. The `row-rule-color`, along with the {{cssxref("column-rule-color")}} property, can also be set using the {{cssxref("rule-color")}} shorthand.
 
@@ -242,11 +242,11 @@ The flex container has six rows, so five gutters. The `repeat()` function repeat
 
 This example demonstrates using `auto`, instead of an integer, within the `repeat()` function.
 
-Using `repeat(auto, <color>)`, we set all the lines to be almost transparent black (`#0003`), except the first and last, which we set to a solid `black`.
+Using `repeat(auto, <color>)`, we set all the lines to be almost transparent black (`#00000033`), except the first and last, which we set to a solid `black`.
 
 ```css live-sample___auto
 ul {
-  row-rule-color: black, repeat(auto, #0003), black;
+  row-rule-color: black, repeat(auto, #00000033), black;
 }
 ```
 

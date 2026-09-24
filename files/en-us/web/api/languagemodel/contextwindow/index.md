@@ -26,6 +26,7 @@ The following example uses a function to verify that context is available before
 
 ```js
 const promptText = "Let me ask you an interesting question...";
+const session = await LanguageModel.create();
 
 async function contextAvailable(promptText) {
   if (session.contextWindow === Infinity) {
@@ -36,8 +37,6 @@ async function contextAvailable(promptText) {
 
   return needed <= remaining;
 }
-
-const session = await LanguageModel.create();
 
 if (await contextAvailable(promptText)) {
   const response = await session.prompt(promptText);

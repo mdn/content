@@ -219,7 +219,7 @@ self.addEventListener("fetch", (event) => {
         // Return the cached response if it's available.
         return cachedResponse;
       }
-      // Respond with a HTTP 404 response status.
+      // Respond with an HTTP 404 response status.
       return new Response(null, { status: 404 });
     })(),
   );

@@ -8,8 +8,7 @@ browser-compat: api.HTMLTableRowElement.deleteCell
 
 {{APIRef("HTML DOM")}}
 
-The **`deleteCell()`** method of the {{domxref("HTMLTableRowElement")}} interface removes a
-specific row cell from a given {{htmlelement("tr")}}.
+The **`deleteCell()`** method of the {{domxref("HTMLTableRowElement")}} interface removes a specific row cell from a given {{htmlelement("tr")}}.
 
 ## Syntax
 
@@ -20,7 +19,7 @@ deleteCell(index)
 ### Parameters
 
 - `index`
-  - : The cell index of the cell to remove. If `index` is `-1` or equal to the number of cells, the last cell of the row is removed.
+  - : The index of the cell to remove in the {{domxref("HTMLTableRowElement.cells", "cells")}} collection. If `index` is `-1`, the last cell of the row is removed.
 
 ### Return value
 
@@ -29,12 +28,11 @@ None ({{jsxref("undefined")}}).
 ### Exceptions
 
 - `IndexSizeError` {{domxref("DOMException")}}
-  - : Thrown if `index` is greater than the number of cells or if it is smaller than `-1`.
+  - : Thrown if `index` is greater than or equal to the number of cells or smaller than `-1`.
 
 ## Examples
 
-This example uses {{domxref("HTMLTableRowElement.insertCell()")}} to append a new cell to a
-row.
+This example uses {{domxref("HTMLTableRowElement.insertCell()")}} to append a new cell to a row.
 
 ### HTML
 
@@ -127,4 +125,5 @@ removeButton.addEventListener("click", () => {
 ## See also
 
 - {{domxref("HTMLTableElement.insertRow()")}}
+- {{domxref("HTMLTableRowElement.insertCell()")}}
 - The HTML element representing cells: {{domxref("HTMLTableCellElement")}}

@@ -31,7 +31,7 @@ LanguageDetector.create(options)
       - : A callback function with a {{domxref("CreateMonitor")}} argument that enables monitoring download progress of the AI model.
     - `signal` {{optional_inline}}
       - : An {{domxref("AbortSignal")}} object instance, which allows a `create()` operation to be aborted via the associated {{domxref("AbortController")}}. The exact effect is dependent on when {{domxref("AbortController.abort()")}} is called:
-        - If `abort()` is called before the `create()` promise resolves, the `create()` operation is cancelled.
+        - If `abort()` is called before the `create()` promise resolves, the `create()` operation is canceled.
         - If `abort()` is called after the `create()` promise fulfills, it has the same effect as calling {{domxref("LanguageDetector.destroy()")}}: The resources assigned to the resulting `LanguageDetector` instance are released, and any ongoing and subsequent `LanguageDetector` method calls will reject with an `AbortError`.
 
 ### Return value
@@ -45,7 +45,7 @@ A {{jsxref("Promise")}} that fulfills with a `LanguageDetector` object instance.
 - `NetworkError` {{domxref("DOMException")}}
   - : Thrown if:
     - The network was not available to download the AI model.
-    - The user has cancelled the AI model download.
+    - The user has canceled the AI model download.
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if:
     - Usage of the method is blocked by a {{httpheader('Permissions-Policy/language-detector','language-detector')}} {{httpheader("Permissions-Policy")}}.

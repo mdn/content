@@ -33,12 +33,12 @@ The initial values listed in the specification are:
   - : The original navigation that created the current document errored, and storing the resulting error document in the bfcache was prevented.
 - `"parser-aborted"`
   - : The current document never finished its initial HTML parsing, and storing the unfinished document in the bfcache was prevented.
-- `"websocket"`
+- `"websocket"` {{experimental_inline}}
   - : While unloading, an open [WebSocket](/en-US/docs/Web/API/WebSockets_API) connect was shut down, so the page was not in a stable state that could be stored in the bfcache.
 
 Additional blocking reasons may be used by some browsers, for example:
 
-- `"unload-listener"`
+- `"unload-listener"` {{experimental_inline}}
   - : The page registers an [`unload`](/en-US/docs/Web/API/Window/unload_event) handler, which prevents bfcache usage. This serves as a useful warning, as `unload` is deprecated. See [usage notes](/en-US/docs/Web/API/Window/unload_event#usage_notes) for more information.
 - `"response-cache-control-no-store"`
   - : The page uses `no-store` as a {{httpheader("Cache-Control")}} header value.

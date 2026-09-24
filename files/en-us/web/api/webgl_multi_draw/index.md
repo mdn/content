@@ -9,7 +9,7 @@ browser-compat: api.WEBGL_multi_draw
 {{APIRef("WebGL")}}
 
 The **`WEBGL_multi_draw`** extension is part of the
-[WebGL API](/en-US/docs/Web/API/WebGL_API) and allows to render more
+[WebGL API](/en-US/docs/Web/API/WebGL_API) and allows you to render more
 than one primitive with a single function call. This can improve a WebGL application's performance
 as it reduces binding costs in the renderer and speeds up GPU thread time with uniform data.
 

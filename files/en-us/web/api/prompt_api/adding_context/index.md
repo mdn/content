@@ -343,24 +343,23 @@ async function getSession() {
         },
       ],
     });
-  } else {
-    return await LanguageModel.create({
-      expectedInputs: [{ type: "text", languages: ["en"] }],
-      expectedOutputs: [{ type: "text", languages: ["en"] }],
-      initialPrompts: [
-        {
-          role: "system",
-          content:
-            "In each case, respond with a short paragraph that pokes fun at the person's name in a sarcastic manner. Include a rating out of 10 at the end of the paragraph. The response should be cheeky, but not rude or offensive.",
-        },
-      ],
-      monitor(monitor) {
-        monitor.addEventListener("downloadprogress", (e) => {
-          promptOutput.textContent = `Downloading model data ${Math.floor(e.loaded * 100)}%`;
-        });
-      },
-    });
   }
+  return await LanguageModel.create({
+    expectedInputs: [{ type: "text", languages: ["en"] }],
+    expectedOutputs: [{ type: "text", languages: ["en"] }],
+    initialPrompts: [
+      {
+        role: "system",
+        content:
+          "In each case, respond with a short paragraph that pokes fun at the person's name in a sarcastic manner. Include a rating out of 10 at the end of the paragraph. The response should be cheeky, but not rude or offensive.",
+      },
+    ],
+    monitor(monitor) {
+      monitor.addEventListener("downloadprogress", (e) => {
+        promptOutput.textContent = `Downloading model data ${Math.floor(e.loaded * 100)}%`;
+      });
+    },
+  });
 }
 ```
 
@@ -618,17 +617,16 @@ async function getSession() {
       expectedInputs: [{ type: "text", languages: ["en"] }],
       expectedOutputs: [{ type: "text", languages: ["en"] }],
     });
-  } else {
-    return await LanguageModel.create({
-      expectedInputs: [{ type: "text", languages: ["en"] }],
-      expectedOutputs: [{ type: "text", languages: ["en"] }],
-      monitor(monitor) {
-        monitor.addEventListener("downloadprogress", (e) => {
-          promptOutput.textContent = `Downloading model data ${Math.floor(e.loaded * 100)}%`;
-        });
-      },
-    });
   }
+  return await LanguageModel.create({
+    expectedInputs: [{ type: "text", languages: ["en"] }],
+    expectedOutputs: [{ type: "text", languages: ["en"] }],
+    monitor(monitor) {
+      monitor.addEventListener("downloadprogress", (e) => {
+        promptOutput.textContent = `Downloading model data ${Math.floor(e.loaded * 100)}%`;
+      });
+    },
+  });
 }
 ```
 
@@ -792,17 +790,16 @@ async function getSession() {
       expectedInputs: [{ type: "text", languages: ["en"] }],
       expectedOutputs: [{ type: "text", languages: ["en"] }],
     });
-  } else {
-    return await LanguageModel.create({
-      expectedInputs: [{ type: "text", languages: ["en"] }],
-      expectedOutputs: [{ type: "text", languages: ["en"] }],
-      monitor(monitor) {
-        monitor.addEventListener("downloadprogress", (e) => {
-          promptOutput.textContent = `Downloading model data ${Math.floor(e.loaded * 100)}%`;
-        });
-      },
-    });
   }
+  return await LanguageModel.create({
+    expectedInputs: [{ type: "text", languages: ["en"] }],
+    expectedOutputs: [{ type: "text", languages: ["en"] }],
+    monitor(monitor) {
+      monitor.addEventListener("downloadprogress", (e) => {
+        promptOutput.textContent = `Downloading model data ${Math.floor(e.loaded * 100)}%`;
+      });
+    },
+  });
 }
 ```
 

@@ -65,5 +65,5 @@ console.log(shadow.querySelector("my-element").textContent);
 - {{domxref("CustomElementRegistry")}}
 - {{domxref("CustomElementRegistry.CustomElementRegistry()", "CustomElementRegistry()")}} constructor
 - {{domxref("Element.attachShadow()")}}
-- [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)
+- [Scoped custom element registries](/en-US/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries) in [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)
 - [Using shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)

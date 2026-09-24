@@ -19,7 +19,7 @@ new WebAssembly.Global(descriptor, value)
 ### Parameters
 
 - `descriptor`
-  - : An object, which contains two properties:
+  - : An object containing two properties:
     - `value`
       - : A string representing the data type of the global. This can be any one of:
         - `i32`: A 32-bit integer.
@@ -33,7 +33,18 @@ new WebAssembly.Global(descriptor, value)
 
 - `value`
   - : The value the variable contains. This can be any value, as long as its type matches the variable's data type.
-    If no value is specified, a typed `0` value is used where the value of `descriptor.value` is one of `i32`, `i64`, `f32`, or `f64`, and `null` is used if `descriptor.value` is `externref` or `anyfunc`.
+    If no value is specified:
+    - a typed `0` value is used if `descriptor.value` is `i32`, `i64`, `f32`, or `f64`
+    - a reference to `undefined` is used if `descriptor.value` is `externref`
+    - `null` is used if `descriptor.value` is `funcref`
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if any of these conditions is met:
+    - `descriptor` is not an object.
+    - `descriptor.value` is missing or not a valid value type (such as `"v128"`).
+    - `value` is specified but cannot be converted to the WebAssembly type named by `descriptor.value`.
 
 ## Examples
 

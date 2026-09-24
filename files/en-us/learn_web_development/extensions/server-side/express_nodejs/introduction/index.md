@@ -38,7 +38,7 @@ From a web server development perspective Node has a number of benefits:
 - JavaScript is a relatively new programming language and benefits from improvements in language design when compared to other traditional web-server languages (e.g., Python, PHP, etc.) Many other new and popular languages compile/convert into JavaScript so you can also use TypeScript, CoffeeScript, ClojureScript, Scala, LiveScript, etc.
 - The node package manager (npm) provides access to hundreds of thousands of reusable packages. It also has best-in-class dependency resolution and can also be used to automate most of the build toolchain.
 - Node.js is portable. It is available on Microsoft Windows, macOS, Linux, Solaris, FreeBSD, OpenBSD, WebOS, and NonStop OS. Furthermore, it is well-supported by many web hosting providers, that often provide specific infrastructure and documentation for hosting Node sites.
-- It has a very active third party ecosystem and developer community, with lots of people who are willing to help.
+- It has a very active third-party ecosystem and developer community, with lots of people who are willing to help.
 
 You can use Node.js to create a simple web server using the Node HTTP package.
 
@@ -46,7 +46,7 @@ You can use Node.js to create a simple web server using the Node HTTP package.
 
 The following example creates a web server that listens for any kind of HTTP request on the URL `http://127.0.0.1:8000/` — when a request is received, the script will respond with the string: "Hello World". If you have already installed node, you can follow these steps to try out the example:
 
-1. Open Terminal (on Windows, open the command line utility)
+1. Open Terminal (on Windows, open the command-line utility)
 2. Create the folder where you want to save the program, for example, `test-node` and then enter it by entering the following command into your terminal:
 
    ```bash
@@ -102,7 +102,7 @@ Other common web-development tasks are not directly supported by Node itself. If
 - Set common web application settings like the port to use for connecting, and the location of templates that are used for rendering the response.
 - Add additional request processing "middleware" at any point within the request handling pipeline.
 
-While _Express_ itself is fairly minimalist, developers have created compatible middleware packages to address almost any web development problem. There are libraries to work with cookies, sessions, user logins, URL parameters, `POST` data, security headers, and _many_ more. You can find a list of middleware packages maintained by the Express team at [Express Middleware](https://expressjs.com/en/resources/middleware/) (along with a list of some popular 3rd party packages).
+While _Express_ itself is fairly minimalist, developers have created compatible middleware packages to address almost any web development problem. There are libraries to work with cookies, sessions, user logins, URL parameters, `POST` data, security headers, and _many_ more. You can find a list of middleware packages maintained by the Express team at [Express Middleware](https://expressjs.com/en/resources/middleware/) (along with a list of some popular third-party packages).
 
 > [!NOTE]
 > This flexibility is a double edged sword. There are middleware packages to address almost any problem or requirement, but working out the right packages to use can sometimes be a challenge. There is also no "right way" to structure an application, and many examples you might find on the Internet are not optimal, or only show a small part of what you need to do in order to develop a web application.
@@ -141,7 +141,7 @@ The following sections explain some of the common things you'll see when working
 
 ### Helloworld Express
 
-First lets consider the standard Express [Hello World](https://expressjs.com/en/starter/hello-world/) example (we discuss each part of this below, and in the following sections).
+First let's consider the standard Express [Hello World](https://expressjs.com/en/starter/hello-world/) example (we discuss each part of this below, and in the following sections).
 
 > [!NOTE]
 > If you have Node and Express already installed (or if you install them as shown in the [next article](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment)), you can save this code in a text file called **app.js** and run it in a bash command prompt by calling:
@@ -331,9 +331,9 @@ Middleware is used extensively in Express apps, for tasks from serving static fi
 > [!NOTE]
 > The middleware can perform any operation, execute any code, make changes to the request and response object, and it can _also end the request-response cycle_. If it does not end the cycle then it must call `next()` to pass control to the next middleware function (or the request will be left hanging).
 
-Most apps will use _third-party_ middleware in order to simplify common web development tasks like working with cookies, sessions, user authentication, accessing request `POST` and JSON data, logging, etc. You can find a [list of middleware packages maintained by the Express team](https://expressjs.com/en/resources/middleware/) (which also includes other popular 3rd party packages). Other Express packages are available on the npm package manager.
+Most apps will use _third-party_ middleware in order to simplify common web development tasks like working with cookies, sessions, user authentication, accessing request `POST` and JSON data, logging, etc. You can find a [list of middleware packages maintained by the Express team](https://expressjs.com/en/resources/middleware/) (which also includes other popular third-party packages). Other Express packages are available on the npm package manager.
 
-To use third party middleware you first need to install it into your app using npm.
+To use third-party middleware you first need to install it into your app using npm.
 For example, to install the [morgan](https://expressjs.com/en/resources/middleware/morgan/) HTTP request logger middleware, you'd do this:
 
 ```bash
@@ -531,7 +531,7 @@ In a later topic we'll use the _Express Application Generator_, which creates a 
 
 Congratulations, you've completed the first step in your Express/Node journey! You should now understand Express and Node's main benefits, and roughly what the main parts of an Express app might look like (routes, middleware, error handling, and template code). You should also understand that with Express being an unopinionated framework, the way you pull these parts together and the libraries that you use are largely up to you!
 
-Of course Express is deliberately a very lightweight web application framework, so much of its benefit and potential comes from third party libraries and features. We'll look at those in more detail in the following articles. In our next article we're going to look at setting up a Node development environment, so that you can start seeing some Express code in action.
+Of course Express is deliberately a very lightweight web application framework, so much of its benefit and potential comes from third-party libraries and features. We'll look at those in more detail in the following articles. In our next article we're going to look at setting up a Node development environment, so that you can start seeing some Express code in action.
 
 ## See also
 

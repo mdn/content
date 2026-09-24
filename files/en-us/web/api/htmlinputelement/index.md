@@ -117,7 +117,7 @@ Some properties only apply to input element types that support the corresponding
   - : A boolean that represents the default state of a radio button or checkbox as originally specified in HTML that created this object.
 
 - {{domxref("HTMLInputElement.indeterminate", "indeterminate")}}
-  - : A boolean that represents whether the checkbox or radio button is in indeterminate state. For checkboxes, the effect is that the appearance of the checkbox is obscured/greyed in some way as to indicate its state is indeterminate (not checked but not unchecked). Does not affect the value of the `checked` attribute, and clicking the checkbox will set the value to false.
+  - : A boolean that represents whether the checkbox or radio button is in indeterminate state. For checkboxes, the effect is that the appearance of the checkbox is obscured/grayed in some way as to indicate its state is indeterminate (not checked but not unchecked). Does not affect the value of the `checked` attribute, and clicking the checkbox will set the value to false.
 
 ### Instance properties that apply only to elements of type image
 

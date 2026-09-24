@@ -8,8 +8,6 @@ browser-compat: svg.global_attributes.xml_lang
 sidebar: svgref
 ---
 
-{{Deprecated_Header}}
-
 The **`xml:lang`** attribute specifies the primary language used in contents and attributes containing text content of particular elements.
 
 It is a universal attribute allowed in all XML dialects to mark up the natural human language that an element contains.

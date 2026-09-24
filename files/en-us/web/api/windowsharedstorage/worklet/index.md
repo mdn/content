@@ -8,7 +8,7 @@ status:
 browser-compat: api.WindowSharedStorage.worklet
 ---
 
-{{APIRef("Shared Storage API")}}{{deprecated_header}}
+{{APIRef("Shared Storage API")}}
 
 The **`worklet`** read-only property of the
 {{domxref("WindowSharedStorage")}} interface contains the {{domxref("SharedStorageWorklet")}} instance representing the shared storage worklet for the current origin.

@@ -18,7 +18,7 @@ The main problem this article focuses on is cross-site scripting ({{Glossary("Cr
 CSP can also help to fix other problems, which are covered in other articles:
 
 - Preventing [clickjacking](/en-US/docs/Web/Security/Attacks/Clickjacking) by stopping your site being embedded into {{htmlelement("iframe")}} elements. This is done using the CSP [`frame-ancestors`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors) directive.
-- Preventing [manipulator-in-the-middle](/en-US/docs/Web/Security/Attacks/MITM) (MiTM) attacks by upgrading any HTTP connections to HTTPS. This is helped by the CSP [`upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/upgrade-insecure-requests) directive. See [Upgrading insecure requests](/en-US/docs/Web/HTTP/Guides/CSP#upgrading_insecure_requests).
+- Preventing [manipulator in the middle](/en-US/docs/Web/Security/Attacks/MITM) (MiTM) attacks by upgrading any HTTP connections to HTTPS. This is helped by the CSP [`upgrade-insecure-requests`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/upgrade-insecure-requests) directive. See [Upgrading insecure requests](/en-US/docs/Web/HTTP/Guides/CSP#upgrading_insecure_requests).
 
 ## Solution
 
@@ -31,7 +31,7 @@ Strict CSPs also:
 - Disable all object embeds via `object-src 'none'`.
 - Disable uses of the `<base>` element to set a base URI via `base-uri 'none';`.
 
-Strict CSPs are preferred over [location-based](/en-US/docs/Web/HTTP/Guides/CSP#location-based_policies) policies, also called allowlist policies, where you specify which domains scripts can be run from. This is because allowlist policies often end up allowing unsafe domains, which defeats the entire point of having a CSP, and they can get very large and unwieldy, especially if you are trying to permit services that require many third party scripts to function.
+Strict CSPs are preferred over [location-based](/en-US/docs/Web/HTTP/Guides/CSP#location-based_policies) policies, also called allowlist policies, where you specify which domains scripts can be run from. This is because allowlist policies often end up allowing unsafe domains, which defeats the entire point of having a CSP, and they can get very large and unwieldy, especially if you are trying to permit services that require many third-party scripts to function.
 
 ### Steps for implementing CSP
 

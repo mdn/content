@@ -9,7 +9,7 @@ sidebar: http
 A **media type** (formerly known as a **Multipurpose Internet Mail Extensions or MIME type**) indicates the nature and format of a document, file, or assortment of bytes.
 MIME types are defined and standardized in IETF's {{RFC(6838)}}.
 
-The [Internet Assigned Numbers Authority (IANA)](https://www.iana.org/) is responsible for all official MIME types, and you can find the most up-to-date and complete list at their [Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml) page.
+The [Internet Assigned Numbers Authority (IANA)](https://www.iana.org/) is responsible for all official MIME types, and you can find the most up-to-date and complete list at their [Media Types](https://www.iana.org/assignments/media-types) page.
 
 > [!WARNING]
 > Browsers use the MIME type, _not the file extension_, to determine how to process a URL,
@@ -59,12 +59,12 @@ The discrete types currently registered with the IANA are:
   - : Any kind of binary data that doesn't fall explicitly into one of the other types;
     either data that will be executed or interpreted in some way or binary data that requires a specific application or category of application to use.
     Generic binary data (or binary data whose true type is unknown) is `application/octet-stream`.
-    Other common examples include `application/pdf`, `application/pkcs8`, and `application/zip`.
-    [(See application type registry at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#application)
+    Other common examples include `application/pdf`, `application/pkcs8`, `application/wasm`, and `application/zip`.
+    [(See application type registry at IANA)](https://www.iana.org/assignments/media-types#application)
 - `audio`
   - : Audio or music data. Examples include `audio/mpeg`,
     `audio/vorbis`.
-    [(See audio type registry at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#audio)
+    [(See audio type registry at IANA)](https://www.iana.org/assignments/media-types#audio)
 - `example`
   - : Reserved for use as a placeholder in examples showing how to use MIME types.
     These should never be used outside of sample code listings and documentation.
@@ -72,22 +72,22 @@ The discrete types currently registered with the IANA are:
     for instance, in an example related to working with audio on the web, the MIME type `audio/example` can be used to indicate that the type is a placeholder and should be replaced with an appropriate one when using the code in the real world.
 - `font`
   - : Font/typeface data. Common examples include `font/woff`, `font/ttf`, and `font/otf`.
-    [(See font type registry at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#font)
+    [(See font type registry at IANA)](https://www.iana.org/assignments/media-types#font)
 - `image`
   - : Image or graphical data including both bitmap and vector still images as well as
     animated versions of still image formats such as animated {{Glossary("GIF")}} or APNG.
     Common examples are `image/jpeg`, `image/png`, and `image/svg+xml`.
-    [(See image type registry at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#image)
+    [(See image type registry at IANA)](https://www.iana.org/assignments/media-types#image)
 - `model`
   - : Model data for a 3D object or scene. Examples include `model/3mf` and `model/vrml`.
-    [(See model type registry at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#model)
+    [(See model type registry at IANA)](https://www.iana.org/assignments/media-types#model)
 - `text`
   - : Text-only data including any human-readable content, source code, or textual data such as comma-separated value (CSV) formatted data.
     Examples include: `text/plain`, `text/csv`, and `text/html`.
-    [(See text type registry at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#text)
+    [(See text type registry at IANA)](https://www.iana.org/assignments/media-types#text)
 - `video`
   - : Video data or files, such as MP4 movies (`video/mp4`).
-    [(See video type registry at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#video)
+    [(See video type registry at IANA)](https://www.iana.org/assignments/media-types#video)
 
 For text documents without a specific subtype, `text/plain` should be used.
 Similarly, for binary documents without a specific or known subtype, `application/octet-stream` should be used.
@@ -108,12 +108,12 @@ There are two multipart types:
   - : A message that encapsulates other messages. This can be used, for instance, to represent an email that includes a forwarded message as part of its data,
     or to allow sending very large messages in chunks as if it were multiple messages.
     Examples include `message/rfc822` (for forwarded or replied-to message quoting) and `message/partial` to allow breaking a large message into smaller ones automatically to be reassembled by the recipient.
-    [(See message type registry at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#message)
+    [(See message type registry at IANA)](https://www.iana.org/assignments/media-types#message)
 - `multipart`
   - : Data that consists of multiple components which may individually have different MIME types.
     Examples include `multipart/form-data` (for data produced using the {{domxref("FormData")}} API) and `multipart/byteranges` (defined in {{RFC(7233, "", "5.4.1")}} and used with {{Glossary("HTTP")}}'s {{HTTPStatus(206)}}
     "Partial Content" response returned when the fetched data is only part of the content, such as is delivered using the {{HTTPHeader("Range")}} header).
-    [(See multipart type registry at IANA)](https://www.iana.org/assignments/media-types/media-types.xhtml#multipart)
+    [(See multipart type registry at IANA)](https://www.iana.org/assignments/media-types#multipart)
 
 ## Important MIME types for Web developers
 
@@ -154,7 +154,7 @@ Including any parameter in the `type` attribute, such as `charset=utf-8`, is the
 Note that setting `type="text/javascript"` is no longer necessary; this is the default for `<script>` elements, so you may omit the `type` attribute entirely in this case.
 In contrast, when using the HTTP {{httpheader("Content-Type")}} header you may optionally specify the `charset` parameter as usual.
 
-For more information see: [IANA Media Types registry](https://www.iana.org/assignments/media-types/media-types.xhtml#text), [RFC 9239](https://www.rfc-editor.org/info/rfc9239/), and the [HTML specification](https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages:text/javascript).
+For more information see: [IANA Media Types registry](https://www.iana.org/assignments/media-types#text), [RFC 9239](https://www.rfc-editor.org/info/rfc9239/), and the [HTML specification](https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages:text/javascript).
 
 #### Legacy JavaScript MIME types
 

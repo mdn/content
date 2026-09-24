@@ -86,9 +86,11 @@ class NotPromise {
       (reason) => console.log("Rejected", reason),
     );
   }
+
+  static withResolvers = Promise.withResolvers;
 }
 
-const { promise, resolve, reject } = Promise.withResolvers.call(NotPromise);
+const { promise, resolve, reject } = NotPromise.withResolvers();
 resolve("hello");
 // Logs: Resolved hello
 ```

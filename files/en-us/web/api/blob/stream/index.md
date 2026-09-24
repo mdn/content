@@ -8,7 +8,7 @@ browser-compat: api.Blob.stream
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
 
-The **`stream()`** method of the {{domxref("Blob")}} interface returns a {{domxref("ReadableStream")}} which upon reading returns the data contained within the `Blob`.
+The **`stream()`** method of the {{domxref("Blob")}} interface returns a {{domxref("ReadableStream")}} which upon reading returns the data contained within the `Blob` as chunks of raw bytes.
 
 ## Syntax
 
@@ -41,6 +41,8 @@ several interesting capabilities:
   `ReadableStream` objects, each of which returns the contents of the
   `Blob`.
 - Call the returned stream's {{domxref("ReadableStream.pipeThrough", "pipeThrough()")}} method to pipe the stream through a {{domxref("TransformStream")}} or any other readable and writable pair.
+  > [!NOTE]
+  > {{domxref("Blob.textStream()")}} is a useful shortcut that immediately returns a `ReadableStream` of UTF-8 text chunks.
 
 ## Specifications
 

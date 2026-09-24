@@ -80,18 +80,16 @@ The function waits for the result of a call to {{domxref("RTCPeerConnection.getS
 It then returns the statistics, or `null`, using the data in the report.
 
 ```js
-async function numberOpenConnections (peerConnection) {
+async function getTransportStats(peerConnection) {
   const stats = await peerConnection.getStats();
-  let transportStats = null;
 
-  stats.forEach((report) => {
+  for (const report of stats.values()) {
     if (report.type === "transport") {
-      transportStats = report;
-      break;
+      return report;
     }
-  });
+  }
 
-return transportStats
+  return null;
 }
 ```
 

@@ -118,7 +118,7 @@ At this point, this document should be rendered blank.
 To begin, let's take a look at an example that draws two intersecting rectangles, one of which has alpha transparency. We'll explore how this works in more detail in later examples. Update your `script` element content to this:
 
 ```html hidden
-<canvas id="canvas" width="150" height="150"></canvas>
+<canvas id="my-canvas" width="150" height="150"></canvas>
 ```
 
 ```css hidden
@@ -129,7 +129,7 @@ canvas {
 
 ```js
 function draw() {
-  const canvas = document.getElementById("canvas");
+  const canvas = document.getElementById("my-canvas");
   const ctx = canvas.getContext("2d");
 
   ctx.fillStyle = "rgb(200 0 0)";

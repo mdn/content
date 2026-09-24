@@ -14,7 +14,7 @@ It's possible that the glossary will never be complete because the web is always
 By contributing new entries or fixing problems, you can help us update the glossary and fill-in gaps.
 
 Contributing to the glossary is an easy way to help make the web more understandable for everyone.
-You don't need high level technical skills.
+You don't need high-level technical skills.
 Glossary entries are intended to be straightforward and brief.
 
 ## How to write an entry

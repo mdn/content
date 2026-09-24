@@ -7,7 +7,7 @@ browser-compat: css.properties.column-rule
 sidebar: cssref
 ---
 
-The **`column-rule`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the width, style, and color of the lines drawn between columns in multi-column grid, flex, and multi-col layouts.
+The **`column-rule`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets the width, style, and color of the lines drawn between columns in multi-column grid, flex, and multi-col layouts.
 
 {{InteractiveExample("CSS Demo: column-rule")}}
 
@@ -96,7 +96,7 @@ column-rule: unset;
 
 ### Values
 
-The `column-rule` property accepts a comma-separated list of values, including:
+This property is specified as a comma-separated list of values. Each value can be one of the following value types:
 
 - `<gap-rule>`
   - : Specified as one, two, or three of the values listed below, in any order.

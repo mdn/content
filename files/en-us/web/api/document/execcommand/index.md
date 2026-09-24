@@ -9,7 +9,7 @@ status:
 browser-compat: api.Document.execCommand
 ---
 
-{{ApiRef("DOM")}}{{deprecated_header}}{{non-standard_header}}
+{{ApiRef("DOM")}}{{non-standard_header}}
 
 > [!NOTE]
 > Although the `execCommand()` method is deprecated, there are still some valid use cases that do not yet have viable alternatives. For example, unlike direct DOM manipulation, modifications performed by `execCommand()` preserve the undo buffer (edit history). For these use cases, you can still use this method, but test to ensure cross-browser compatibility, such as by using {{domxref("document.queryCommandSupported()")}}.
@@ -80,7 +80,7 @@ execCommand(commandName, showDefaultUI, valueArgument)
     - `insertHorizontalRule`
       - : Inserts a {{HTMLElement("hr")}} element at the insertion point, or replaces the selection with it.
     - `insertHTML`
-      - : Inserts an {{domxref("TrustedHTML")}} instance or string of HTML markup at the insertion point (deletes selection).
+      - : Inserts a {{domxref("TrustedHTML")}} instance or string of HTML markup at the insertion point (deletes selection).
         This requires valid HTML markup.
 
         > [!WARNING]
