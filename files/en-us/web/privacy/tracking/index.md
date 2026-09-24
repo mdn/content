@@ -11,9 +11,28 @@ The motivation for tracking is that the record of a user's browsing history is v
 
 In this guide we'll describe the main techniques that are used to track users, and the mechanisms that browsers have adopted to protect users from trackers.
 
+## Tracker architecture
+
+The tracker's goal is to assemble a record of sites that the user has visited, and potentially other information about their browsing activities.
+
+Typically (but [not always](#navigational_tracking)), a tracker's architecture consists of a server, which maintains the information about tracked users, and a client component, which is embedded in a large number of web pages belonging to sites that the user might visit.
+
+The tracker generally has a good reason to encourage other sites to embed its client: for example, the tracker might operate a social media site, and might provide small client-side components that other sites can embed, that enable users to share the embedding page on their social media profile.
+
+When the user loads a page that embeds the client, the client is able to communicate with the server, and the server can record the fact that the user has visited this page.
+
+The embedded client has a way to identify the browser in which it's loaded: most often, it does this by storing an identifier in the browser's client-side storage. Whenever the user loads a page that embeds the client, the client communicates with the server, which adds the page to the list of pages associated with this user.
+
+![Diagram showing tracker architecture.](tracker-architecture.svg)
+
+This architecture has a couple of properties that are worth exploring in a little more detail:
+
+- The tracker client is a [_third-party resource_](#first_and_third_parties) that's embedded in pages that the user visits.
+- The tracker client is able to access its own [storage location](#client-side_storage) on the user's device.
+
 ## First and third parties
 
-The concept of tracking involves making a distinction between _first-party_ and _third-party_ resources. When a user visits a website, the browser's address bar displays the name of the {{glossary("site")}}, and the site's content itself confirms to the user who they are interacting with. Any resources served by this site, including documents, scripts, stylesheets, images, and so on, are first-party resources. Any other resources are third-party resources: they come from a different site, that the user might not have the intention of interacting with, and of whose existence the user might well be unaware.
+When a user visits a website, the browser's address bar displays the name of the {{glossary("site")}}, and the site's content itself confirms to the user who they are interacting with. Any resources served by this site, including documents, scripts, stylesheets, images, and so on, are _first-party resources_. Any other resources are _third-party resources_: they come from a different site, that the user might not have the intention of interacting with, and of whose existence the user might well be unaware.
 
 Common examples of third party resources are:
 
@@ -23,17 +42,11 @@ Common examples of third party resources are:
 
 ![Diagram showing first- and third-party resources.](first-and-third-party.svg)
 
-Because trackers collect a user's activity across the sites that the user visits, then they generally operate as third parties: specifically, the client side of the tracker is a third-party resource embedded in first-party pages that the user visits.
-
 This makes tracking especially problematic for privacy, because it violates the principle of _transparency_: that the user should be aware of how their personal data is shared, and with whom. Because the user is directly interacting with the first party, it's more reasonable to assume that they intend to share any data that they share with that party. But typically the involvement of a third party is not apparent to the user, and so the fact that it may be collecting data about them is also not apparent.
 
-## Tracking techniques
+## Client-side storage
 
-In this section we'll look at the main methods that websites use to track users.
-
-### Storing user identifiers
-
-In this technique, the tracker stores an identifier for the user in the browser, and sends the identifier to the tracker's server whenever the user visits a page that embeds the tracker. This enables the tracker to maintain a list of pages that the user visits. This method is sometimes called _stateful_ tracking.
+We've seen that trackers often store an identifier for the user in the browser, and send the identifier to the tracker's server whenever the user visits a page that embeds the tracker. This enables the tracker to maintain a list of pages that the user visits. This type of tracking is sometimes called _stateful_ tracking.
 
 We can distinguish two sorts of stateful tracking:
 
@@ -41,7 +54,7 @@ We can distinguish two sorts of stateful tracking:
 
 - Those that use other features of the web platform that are not generally intended for general-purpose storage, such as the browser's HTTP cache. In this guide, we will call this _covert stateful tracking_.
 
-#### Tracking using client-side storage APIs
+### Tracking using client-side storage APIs
 
 Trackers can use various different client-side storage APIs to store identifiers, such as [local storage](/en-US/docs/Web/API/Web_Storage_API) or [IndexedDB](/en-US/docs/Web/API/IndexedDB_API). Most often, though, trackers use [cookies](/en-US/docs/Web/HTTP/Guides/Cookies).
 
@@ -57,7 +70,7 @@ To use cookies, a tracker implements something like the following process:
 
 In this situation, the cookies that are exchanged are associated with a different site from the main page. The main page, whose URL is shown in the address bar, is the site that the user intends to visit, but the cookies are associated with the tracker's site. Cookies with this property are called _third-party cookies_, and much of the effort browsers put into preventing tracking involves blocking or restricting the use of third-party cookies.
 
-#### Covert stateful tracking
+### Covert stateful tracking
 
 This is a variant of stateful tracking in which trackers don't use client-side storage APIs to store identifiers, but instead store identifiers in parts of the web platform that are not intended for general storage.
 
@@ -67,7 +80,7 @@ These stored identifiers are sometimes called "supercookies", because they will 
 
 ### Fingerprinting
 
-Fingerprinting is like stateful tracking, except that the identifier — the fingerprint — is not stored by the tracker, but is derived by collecting and combining distinguishing features of the user's environment. Elements of a fingerprint might include, for example:
+Fingerprinting is like covert stateful tracking, except that the identifier — the fingerprint — is not stored by the tracker, but is derived by collecting and combining distinguishing features of the user's environment. Elements of a fingerprint might include, for example:
 
 - The browser version
 - The user's timezone and preferred language
@@ -77,7 +90,7 @@ Fingerprinting is like stateful tracking, except that the identifier — the fin
 
 The tracker can retrieve these elements by executing JavaScript and CSS on the device. It can then combine the elements to create a fingerprint, which is often enough to uniquely identify a single browser.
 
-### Navigational tracking
+## Navigational tracking
 
 Navigational tracking is the practice of using a navigation to transmit an identifier for a user from the linking site to the destination, typically by "decorating" the link with the identifier:
 
@@ -85,7 +98,7 @@ Navigational tracking is the practice of using a navigation to transmit an ident
 <a href="https://cat-videos.example/resource?userId=123456">More cats!</a>
 ```
 
-Navigational tracking is a little different from the other methods we've looked at, because the data is not shared with an invisible third party: it's passed from one first party site to another.
+Navigational tracking is a little different from the other methods we've looked at: it doesn't necessarily use an embedded third-party resource, and the data is not always shared with an invisible third party: it may be passed from one first party site to another.
 
 ### Bounce tracking
 
@@ -165,7 +178,7 @@ For this reason, completely blocking trackers is often not the default behavior,
 
 #### Blocking storage APIs
 
-As a less drastic measure, browsers may allow the resource to load but prevent it from reading or writing any storage on the device, including cookies, local storage, IndexedDB, or any caches. This should be effective against any tracking that depends on [storing identifiers using web storage APIs](#stateful_tracking_using_storage_apis).
+As a less drastic measure, browsers may allow the resource to load but prevent it from reading or writing any storage on the device, including cookies, local storage, IndexedDB, or any caches. This should be effective against any tracking that depends on [storing identifiers using web storage APIs](#client-side_storage).
 
 #### Partitioned storage
 
@@ -222,7 +235,5 @@ In these techniques, browsers identify patterns in which the user is actively in
 The [Storage Access API](/en-US/docs/Web/API/Storage_Access_API) enables a script to request [unpartitioned](#partitioned_storage) storage access, by calling the {{domxref("Document.requestStorageAccess()")}} API.
 
 This API requires the caller to have [transient activation](/en-US/docs/Web/Security/Defenses/User_activation#transient_activation). In the API's implementation, the browser may decide whether to grant access by asking the user, but may also apply its own rules, including indications that the third party is participating in federated login and any custom rules that grant or deny unpartitioned storage access.
-
-## Anti-tracking policies in browsers
 
 ## See also
