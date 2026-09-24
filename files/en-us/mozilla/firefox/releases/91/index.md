@@ -58,4 +58,4 @@ No changes
 
 ## Changes for add-on developers
 
-- The `menus` and `contextMenus` APIs now support the same set of values in {{WebExtAPIRef("menus.ContextType")}}. This means that `tools_menu` is now also supported in the `contextMenus` namespace ([Firefox bug 1706398](https://bugzil.la/1706398#c11)).
+- The `menus` and `contextMenus` APIs now support the same values in {{WebExtAPIRef("menus.ContextType")}}. This means that `tools_menu` is also supported in the `contextMenus` namespace ([Firefox bug 1706398](https://bugzil.la/1706398#c11)).
