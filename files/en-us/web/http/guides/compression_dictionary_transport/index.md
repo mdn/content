@@ -166,7 +166,7 @@ The response that carries the {{HTTPHeader("Use-As-Dictionary")}} header also de
 
 HTML documents are affected most because servers often send them with `no-cache` or `max-age=0, must-revalidate` so that the browser always revalidates them. Such a document cannot offer itself as a dictionary for its next version, regardless of how the `match` pattern is written.
 
-In each of these cases, the browser drops the dictionary silently. It accepts the `Use-As-Dictionary` header without an error, yet a later request that matches the pattern carries no {{HTTPHeader("Available-Dictionary")}} header. Chrome reports the reason in the [Issues panel](https://developer.chrome.com/docs/devtools/issues) of its developer tools. The issue reads "The response can't be used as a dictionary because its freshness is expired", and it names the response that offered the dictionary.
+When this is the case, the browser silently drops the dictionary. It accepts the `Use-As-Dictionary` header without an error, yet a later request that matches the pattern carries no {{HTTPHeader("Available-Dictionary")}} header. Chrome reports the reason in the [Issues panel](https://developer.chrome.com/docs/devtools/issues) of its developer tools. The issue reads "The response can't be used as a dictionary because its freshness is expired", along with the name of the response that offered the dictionary.
 
 ## Creating dictionary-compressed responses
 
