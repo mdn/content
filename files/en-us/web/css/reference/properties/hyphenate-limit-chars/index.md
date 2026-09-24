@@ -43,7 +43,7 @@ This property is specified as one to three numeric or `auto` values:
 
 - `<number>`
 
-  - : One or more numeric values that specify the minimum word length for hyphenation and the minimum number of characters before and after the hyphen.
+  - : Specifies either the number of characters for the minimum word length for hyphenation, the minimum number of characters before the hyphen, or the minimum number of characters after the hyphen.
 
 - `auto`
 
