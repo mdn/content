@@ -293,7 +293,7 @@ To save a still screenshot without displaying a video, use {{domxref("ImageCaptu
 
 The following variation uses Element Capture to take a screenshot of the `demo` element when the user clicks a button. It requires support for both Element Capture and `ImageCapture.grabFrame()`. It uses the same `#demo` CSS from [Restrictions on the Element Capture API](#restrictions_on_the_element_capture_api).
 
-```html live-sample___screenshot
+```html
 <button id="screenshot">Save screenshot</button>
 <a id="download" download="screenshot.png" hidden>Download screenshot</a>
 <div id="demo">
@@ -302,17 +302,9 @@ The following variation uses Element Capture to take a screenshot of the `demo` 
 </div>
 ```
 
-```css hidden live-sample___screenshot
-#demo {
-  isolation: isolate;
-  transform-style: flat;
-  background-color: white;
-}
-```
-
 The click handler requests screen-sharing permission, restricts the track to the target element, and grabs one frame. The `finally` block stops sharing and releases the bitmap even if an error occurs.
 
-```js live-sample___screenshot
+```js
 const screenshotElem = document.getElementById("screenshot");
 const downloadElem = document.getElementById("download");
 const demoElem = document.getElementById("demo");
@@ -362,9 +354,7 @@ screenshotElem.addEventListener("click", async () => {
 });
 ```
 
-Click **Save screenshot** and select the current tab in the browser's sharing dialog. Once the PNG is ready, the code initiates its download. The download link also remains available to save the image again. Its [blob URL](/en-US/docs/Web/URI/Reference/Schemes/blob) is retained until another screenshot replaces it.
-
-{{EmbedLiveSample("screenshot", "", 200, "", "", "", "display-capture; camera")}}
+See the demo at [Element Capture screenshot example](https://mdn.github.io/dom-examples/screen-capture-api/element-screenshot/) (also see the [source code](https://github.com/mdn/dom-examples/tree/main/screen-capture-api/element-screenshot)). Click **Save screenshot** and select the tab containing the example in the browser's sharing dialog. Once the PNG is ready, the code initiates its download. The download link also remains available to save the image again. Its [blob URL](/en-US/docs/Web/URI/Reference/Schemes/blob) is retained until another screenshot replaces it.
 
 To use Region Capture instead, replace the `RestrictionTarget.fromElement()` and `restrictTo()` calls with:
 
