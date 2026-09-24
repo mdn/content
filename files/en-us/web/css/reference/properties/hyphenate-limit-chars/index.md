@@ -53,7 +53,11 @@ This property is specified as one to three values from the following list:
 
 The `hyphenate-limit-chars` property provides fine-grained control over hyphenation in text. This control enables you to avoid awkward hyphenations and set appropriate hyphenation for different languages, which, in turn, allows for better typography.
 
-One to three `<number>` values can be specified. If one value is specified, it sets the minimum word length before words should be hyphenated, while the minimum number of characters before and after the hyphen are set to `auto`. If two values are specified, the first value sets the minimum word length and the second sets the minimum number of characters before the hyphen; the minimum number of characters after the hyphen is set equal to the second value. If three values are specified, they set the minimum word length, the minimum number of characters before the hyphen, and the minimum number of characters after the hyphen, respectively.
+The property accepts one to three values, each an `<integer>` or the keyword `auto`, specifying the number of characters for the minimum word length for hyphenation, the minimum number of characters before the hyphen, and the minimum number of characters after the hyphen, in that order. If fewer than three values are set, the omitted values default to `auto`:
+
+- If one`<integer>` is specified, it sets the word length for the minimum number of characters a word must have in order for it to be able to be hyphenated, while the minimum number of characters before and after the hyphen are set to `auto`.
+- If two values are specified, the first value sets the minimum word length and the second sets the minimum number of characters before the hyphen; the minimum number of characters after the hyphen is set equal to the second value. 
+- If three values are specified, they set the minimum word length, the minimum number of characters before the hyphen, and the minimum number of characters after the hyphen, respectively.
 
 For `auto`, the user agent will choose an appropriate value for the current layout. Unless the user agent can calculate a better value, the following default values will be used:
 
