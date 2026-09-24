@@ -40,7 +40,6 @@ hyphenate-limit-chars: unset;
 This property is specified as one to three values from the following list:
 
 - {{cssxref("integer")}}
-
   - : Specifies either the number of characters for the minimum word length for hyphenation, the minimum number of characters before the hyphen, or the minimum number of characters after the hyphen.
 
 - `auto`
