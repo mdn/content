@@ -164,7 +164,7 @@ The response that carries the {{HTTPHeader("Use-As-Dictionary")}} header also de
 - Specifying [`must-revalidate`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#must-revalidate) cancels any `stale-while-revalidate` window, so the dictionary lasts only as long as `max-age`. With `max-age=0`, the browser never stores it.
 - The [`s-maxage`](/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control#s-maxage) directive doesn't apply because the browser is a private cache.
 
-HTML documents are affected most, because servers often send them with `no-cache` or `max-age=0, must-revalidate` so that the browser always revalidates them. Such a document cannot offer itself as a dictionary for its next version, however the `match` pattern is written.
+HTML documents are affected most because servers often send them with `no-cache` or `max-age=0, must-revalidate` so that the browser always revalidates them. Such a document cannot offer itself as a dictionary for its next version, regardless of how the `match` pattern is written.
 
 In each of these cases, the browser drops the dictionary silently. It accepts the `Use-As-Dictionary` header without an error, yet a later request that matches the pattern carries no {{HTTPHeader("Available-Dictionary")}} header. Chrome reports the reason in the [Issues panel](https://developer.chrome.com/docs/devtools/issues) of its developer tools. The issue reads "The response can't be used as a dictionary because its freshness is expired", and it names the response that offered the dictionary.
 
