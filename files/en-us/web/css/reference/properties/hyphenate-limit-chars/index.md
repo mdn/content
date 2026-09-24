@@ -39,7 +39,7 @@ hyphenate-limit-chars: unset;
 
 ### Values
 
-This property is specified as one to three numeric or `auto` values:
+This property is specified as one to three values from the following list:
 
 - `<number>`
 
