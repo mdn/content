@@ -120,7 +120,7 @@ The `overscroll-behavior` property is specified as one or two keywords chosen fr
 Two keywords specifies the `overscroll-behavior` value on the `x` and `y` axes respectively. If only one value is specified, both x and y are assumed to have the same value.
 
 - `auto`
-  - : Allows the default behavior at a scroll boundary. Scrolling may continue in an ancestor scroll container.
+  - : Allows the default behavior at a scroll boundary. Scrolling may continue in an another scroll container.
 - `contain`
   - : Prevents scrolling from continuing outside the scroll container. "Bounce" effects may still occur.
 - `chain`
