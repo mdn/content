@@ -331,11 +331,11 @@ Our HTML includes an unordered list ({{htmlelement("ul")}}) with nine list items
 </ul>
 ```
 
-The user interface used to select different the values and the JavaScript that enables the interactivity have been hidden for brevity.
+The user interface for selecting different values and the JavaScript that enables the interactivity have been hidden for brevity.
 
 #### CSS
 
-We create a grid container by setting the {{cssxref("display")}} to grid, creating 4 columns with {{cssxref("grid-template-columns")}}, and adding a `30px` {{cssxref("gap")}}. We use the {{cssxref("row-rule")}} and {{cssxref("column-rule")}} properties to define our rules. We then use the `rule-inset-cap` property to inset the start cap segment endpoints by `40px` and outset all the end cap segment endpoints with a value of `-40px`.
+We create a grid container by setting the {{cssxref("display")}} to grid, creating 4 columns with {{cssxref("grid-template-columns")}}, and adding a `30px` {{cssxref("gap")}}. We use the {{cssxref("row-rule")}} and {{cssxref("column-rule")}} properties to define our rules. We then use the `rule-inset-cap` property to inset the start cap segment endpoints by `40px` and outset the end cap segment endpoints by `-40px`.
 
 We also set the 6th grid item to span two columns.
 
@@ -572,7 +572,7 @@ visibility.addEventListener("change", () => {
 
 {{EmbedLiveSample("Inner cap segments", "", "400")}}
 
-Select `between` from the dropdown to only paint rule segments when both adjacent grid areas contain a grid item, thereby creating interior cap segments. Then change the inset value to better enable viewing which segment endpoints are cap segment endpoints.
+Select `between` from the dropdown to paint only rule segments when both adjacent grid areas contain a grid item, thereby creating interior cap segments. Now change the inset value to visualize which segment endpoints are cap segment endpoints.
 
 ## Specifications
 
