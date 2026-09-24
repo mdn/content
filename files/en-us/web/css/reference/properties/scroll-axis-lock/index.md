@@ -31,11 +31,11 @@ The `scroll-axis-lock` property value is specified as one of the following value
 - `auto`
   - : The default value. The user agent may lock scrolling gestures to one axis.
 - `none`
-  - : The default value. The user agent must not lock scrolling gestures to one axis.
+  - : The user agent must not lock scrolling gestures to one axis.
 
 ## Description
 
-Browsers often lock scrolling gestures to one axis of a scrollport, when the gesture starts with significantly more movement along one axis than the other. This improves the user experience in cases where the user relies on scrolling in one direction only. Examples include cases where the user is manipulating multiple controls along a single line, or wants to trace round the edges of a shape with straight perpendicular lines. However, it is inconvenient in cases where the environment would benefit from always being diagonally scrollable, such as a large scale drawing or mapping app.
+When a scrolling gesture is initiated on a scrollport, and it starts with significantly more movement along one axis than the other, browsers often lock scrolling to the axis with the greater movement. This improves the user experience in cases where the user relies on scrolling in one direction only. Examples include cases where the user is manipulating multiple controls along a single line, or wants to trace round the edges of a shape with straight perpendicular lines. However, it is inconvenient in cases where the environment would benefit from always being diagonally scrollable, such as a large scale drawing or mapping app.
 
 The `scroll-axis-lock` property allows the developer to opt out of the browser scroll lock behavior in cases where it is not wanted, by setting its value to `none`.
 
@@ -51,7 +51,7 @@ The `scroll-axis-lock` property allows the developer to opt out of the browser s
 
 ### Basic usage
 
-This example demnonstrates the effect of `scroll-axis-lock`.
+This example demonstrates the effect of `scroll-axis-lock`.
 
 #### HTML
 
@@ -87,7 +87,7 @@ input:checked ~ div {
 }
 ```
 
-```css live-sample___axis-lock
+```css hidden live-sample___axis-lock
 @supports not (scroll-axis-lock: none) {
   body::before {
     content: "Your browser does not support the scroll-axis-lock property.";
@@ -106,7 +106,7 @@ input:checked ~ div {
 
 {{EmbedLiveSample("axis-lock","100%","340")}}
 
-Using a device where scroll locking occurs, such as a touchscreen phone, start a scrolling gesture to scroll the `<div>` content horizontally; change from moving horizontally to moving diagonally up or down during the gesture, without removing your finger. You should see that the scrolling is locked horizontally, and no vertical movement will occur.
+Using a device where scroll locking occurs, such as a touchscreen phone, start a scrolling gesture to scroll the `<div>` content horizontally, then gradually change from moving horizontally to moving diagonally up or down during the gesture, without removing your finger. You should see that the scrolling is locked horizontally, and no vertical movement will occur.
 
 Now check the checkbox, and try the gesture again. With the `scroll-axis-lock` set to `none`, scroll locking will not occur, and the scrolling should follow the exact path of your finger.
 
