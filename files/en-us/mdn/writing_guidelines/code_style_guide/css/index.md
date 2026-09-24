@@ -20,7 +20,7 @@ Prettier formats all the code and keeps the style consistent. Nevertheless, ther
 
 ### Plan your CSS
 
-Before diving in and writing huge chunks of CSS, plan your styles carefully. What general styles are going to be needed, what different layouts do you need to create, what specific overrides need to be created, and are they reusable? Above all, you need to try to **avoid too much overriding**. If you keep finding yourself writing styles and then cancelling them again a few rules down, you probably need to rethink your strategy.
+Before diving in and writing huge chunks of CSS, plan your styles carefully. What general styles are going to be needed, what different layouts do you need to create, what specific overrides need to be created, and are they reusable? Above all, you need to try to **avoid too much overriding**. If you keep finding yourself writing styles and then canceling them again a few rules down, you probably need to rethink your strategy.
 
 ### Use modern CSS features when supported
 

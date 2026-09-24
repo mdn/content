@@ -83,7 +83,7 @@ If `aria-labelledby` were used, the screen reader would read it. In this case, o
 
 ### All descendants are presentational
 
-There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in an `img`. To deal with this limitation, browsers, automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) to all descendant elements of any `img` element as it is a role that does not support semantic children.
+There are some types of user interface components that, when represented in a platform accessibility API, can only contain text. Accessibility APIs do not have a way of representing semantic elements contained in an `img`. To deal with this limitation, browsers automatically apply role [`presentation`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) to all descendant elements of any `img` element as it is a role that does not support semantic children.
 
 For example, consider the following `img` element, which contains a heading.
 

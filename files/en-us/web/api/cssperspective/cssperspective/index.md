@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.CSSPerspective.CSSPerspective
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`CSSPerspective()`** constructor creates a new {{domxref("CSSPerspective")}} object representing the {{cssxref("transform-function/perspective", "perspective()")}} value of the individual {{CSSXref('transform')}} property in CSS.
 

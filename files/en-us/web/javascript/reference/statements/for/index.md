@@ -175,7 +175,7 @@ The scoping effect of the initialization block can be understood as if the decla
 
 So re-assigning the new variables within `afterthought` does not affect the bindings from the previous iteration.
 
-A new lexical scope is also created after `initialization`, just before `condition` is evaluated for the first time. These details can be observed by creating closures, which allow to get hold of a binding at any particular point. For example, in this code a closure created within the `initialization` section does not get updated by re-assignments of `i` in the `afterthought`:
+A new lexical scope is also created after `initialization`, just before `condition` is evaluated for the first time. These details can be observed by creating closures, which allow you to get hold of a binding at any particular point. For example, in this code a closure created within the `initialization` section does not get updated by re-assignments of `i` in the `afterthought`:
 
 ```js
 for (let i = 0, getI = () => i; i < 3; i++) {

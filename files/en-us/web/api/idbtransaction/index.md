@@ -83,8 +83,6 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 
 ## Mode constants
 
-{{Deprecated_Header}}
-
 > [!WARNING]
 > These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ([Firefox bug 888598](https://bugzil.la/888598))
 
@@ -101,14 +99,14 @@ Transactions can have one of three modes:
   <tbody>
     <tr>
       <td>
-        <code><a>READ_ONLY</a></code>
+        <code>READ_ONLY</code>
       </td>
       <td>"readonly" (0 in Chrome)</td>
       <td><p>Allows data to be read but not changed.</p></td>
     </tr>
     <tr>
       <td>
-        <code><a>READ_WRITE</a></code>
+        <code>READ_WRITE</code>
       </td>
       <td>"readwrite" (1 in Chrome)</td>
       <td>
@@ -118,7 +116,7 @@ Transactions can have one of three modes:
     </tr>
     <tr>
       <td>
-        <code><a>VERSION_CHANGE</a></code>
+        <code>VERSION_CHANGE</code>
       </td>
       <td>"versionchange" (2 in Chrome)</td>
       <td>

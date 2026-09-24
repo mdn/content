@@ -160,7 +160,9 @@ The values listed in [the specification](https://html.spec.whatwg.org/multipage/
 - `"parser-aborted"`
   - : The current document never finished its initial HTML parsing, and storing the unfinished document in the bfcache was prevented.
 - `"websocket"`
-  - : While unloading, an open [WebSocket](/en-US/docs/Web/API/WebSockets_API) connect was shut down, so the page was not in a stable state that could be stored in the bfcache.
+  - : While unloading, an open [WebSocket](/en-US/docs/Web/API/WebSockets_API) connection was shut down, so the page was not in a stable state that could be stored in the bfcache.
+
+    In [some browsers](#browser_compatibility), active WebSockets do not block pages from entering the bfcache. In such cases, the WebSocket connections are disconnected upon entry, and can be reconnected when the page is restored. In Chrome, for example, when a page is restored from the bfcache, the browser fires the [`error`](/en-US/docs/Web/API/WebSocket/error_event) and [`close`](/en-US/docs/Web/API/WebSocket/close_event) events, enabling an application to trigger its existing logic to reconnect to the WebSocket.
 
 ### User-agent specific blocking reasons
 

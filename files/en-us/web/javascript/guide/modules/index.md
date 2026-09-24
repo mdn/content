@@ -283,7 +283,7 @@ This may be reasonable for just one module, but scales poorly if you wish to imp
 
 #### General URL remapping
 
-A module specifier key doesn't have to be path — it can also be an absolute URL (or a URL-like relative path like `./`, `../`, `/`).
+A module specifier key doesn't have to be a path — it can also be an absolute URL (or a URL-like relative path like `./`, `../`, `/`).
 This may be useful if you want to remap a module that has absolute paths to a resource with your own local resources.
 
 ```json

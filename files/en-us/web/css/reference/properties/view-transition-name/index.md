@@ -16,7 +16,7 @@ The **`view-transition-name`** [CSS](/en-US/docs/Web/CSS) property specifies the
 view-transition-name: header;
 view-transition-name: figure-caption;
 
-/* Keyword value */
+/* Keyword values */
 view-transition-name: none;
 view-transition-name: match-element;
 

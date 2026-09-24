@@ -30,14 +30,14 @@ timeline-scope: unset;
 
 ### Values
 
-Allowed values for `timeline-scope` are:
+This property is specified as a keyword or a comma-separated list of custom timeline names:
 
 - `none`
-  - : There is no change in timeline scope. This is the default.
+  - : Applies no change to the timeline scope. This is the default.
 - `all`
-  - : The names of all timelines defined by descendants are in scope for this element and its descendants.
+  - : Sets the scope so that any timeline names set on the element or in its subtree are matched only by elements within the same subtree.
 - `<dashed-ident>`
-  - : Specifies the name of an existing named timeline (i.e., declared using {{cssxref("scroll-timeline-name")}} or {{cssxref("view-timeline-name")}}) defined on a descendant element. This increases the timeline scope to the current element and to any of its descendants.
+  - : Specifies one or more comma-separated timeline names that are declared using {{cssxref("scroll-timeline-name")}} or {{cssxref("view-timeline-name")}}. Sets the scope so that when the specified `scroll-timeline-name` or `view-timeline-name` values are set on the element or in its subtree, they are matched only by elements within the same subtree.
 
 ## Description
 
@@ -45,7 +45,7 @@ The `timeline-scope` property modifies the scope of a named animation timeline. 
 
 The value of the `timeline-scope` is the name of a timeline defined on a descendant element; this changes the scope of the timeline to include the targeted element and its descendants. In other words, that element on which the `timeline-scope` property is defined, and all of its descendant elements, can be controlled using that timeline.
 
-If no timeline (or more than one timeline) exists with the name given for the `timeline-scope` value, an inactive timeline with the specified name is created. The `timeline-scope` property only works with named timelines, and therefore can not be used in conjunction with anonymous timelines created using the {{cssxref("animation-timeline/view", "view()")}} or {{cssxref("animation-timeline/scroll", "scroll()")}} animation timeline functions.
+If no timeline (or more than one timeline) exists with the name given for the `timeline-scope` value, an inactive timeline with the specified name is created. The `timeline-scope` property only works with named timelines, and therefore cannot be used in conjunction with anonymous timelines created using the {{cssxref("animation-timeline/view", "view()")}} or {{cssxref("animation-timeline/scroll", "scroll()")}} animation timeline functions.
 
 ## Formal definition
 
@@ -108,7 +108,7 @@ We set `--my-scroller` as the {{cssxref("scroll-timeline-name")}} on the scrolli
 }
 ```
 
-Next, we give the animated element some rudimentary styles and apply an animation to it using the {{cssxref("animation")}} shorthand property. We set the {{cssxref("animation-timeline")}} to the named scroll timeline: `--my-scroller`. To reiterate, animating the element based on the scroll progress of it's cousin element is only possible because we set `timeline-scope` on a mutual ancestor; the animated element is **not** a descendant of the scrolling element.
+Next, we give the animated element some rudimentary styles and apply an animation to it using the {{cssxref("animation")}} shorthand property. We set the {{cssxref("animation-timeline")}} to the named scroll timeline: `--my-scroller`. To reiterate, animating the element based on the scroll progress of its cousin element is only possible because we set `timeline-scope` on a mutual ancestor; the animated element is **not** a descendant of the scrolling element.
 
 ```css
 .box {

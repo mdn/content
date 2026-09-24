@@ -30,6 +30,8 @@ dynamic-range-limit: unset;
 
 ### Values
 
+This property is specified as a single value from the following list:
+
 - `standard`
   - : Specifies the maximum luminance as High Dynamic Range (HDR) reference white, which is the CSS color `white`.
 - `no-limit`

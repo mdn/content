@@ -61,7 +61,7 @@ No notable changes.
 
 #### WebDriver BiDi
 
-- Implemented the `emulation.setUserAgentOverride` command, which allows to override the user-agent string used by the browser either for a set of contexts, user contexts or globally. ([Firefox bug 1987935](https://bugzil.la/1987935)).
+- Implemented the `emulation.setUserAgentOverride` command, which allows you to override the user-agent string used by the browser either for a set of contexts, user contexts or globally. ([Firefox bug 1987935](https://bugzil.la/1987935)).
 - Implemented the `browsingContext.downloadEnd` event, which is emitted when a download finishes (whether it is successful or canceled) ([Firefox bug 1970293](https://bugzil.la/1970293)).
 - Updated the `destination` property of the `network.beforeRequestSent` event to `document` for top-level navigations. ([Firefox bug 1985552](https://bugzil.la/1985552)).
 - Updated the `browsingContext` download events to reuse the same navigation id as the previous `browsingContext.navigationStarted` event. ([Firefox bug 1986938](https://bugzil.la/1986938)).

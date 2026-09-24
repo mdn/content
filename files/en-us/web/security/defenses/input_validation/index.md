@@ -56,7 +56,7 @@ Applications typically implement syntactic validation using the type-checking fe
 
 To implement semantic validation, they can use various methods including range checking, checking a value against a set of allowed values, or, for more complex cases, regular expressions.
 
-Note that regular expressions can be hard to get right, and some expressions may make an application vulnerable to [denial of service attacks](https://owasp.org/www-community/attacks/Regular_expression_Denial_of_Service_-_ReDoS). For this reason, it's usually better to use well-regarded third party validation libraries. One popular choice is [validator.js](https://github.com/validatorjs/validator.js).
+Note that regular expressions can be hard to get right, and some expressions may make an application vulnerable to [denial of service attacks](https://community.owasp.org/attacks/Regular_expression_Denial_of_Service_-_ReDoS). For this reason, it's usually better to use well-regarded third party validation libraries. One popular choice is [validator.js](https://github.com/validatorjs/validator.js).
 
 ### When to validate
 

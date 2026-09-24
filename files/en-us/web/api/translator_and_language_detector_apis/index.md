@@ -35,6 +35,8 @@ See [Using the Translator and Language Detector APIs](/en-US/docs/Web/API/Transl
 
 ## Interfaces
 
+- {{domxref("CreateMonitor")}} {{Experimental_Inline}}
+  - : Provides information on the progress of an AI model download, for example a language pack or some fine-tuning data.
 - {{domxref("LanguageDetector")}} {{Experimental_Inline}}
   - : Contains all the language detection functionality, including checking AI model availability, creating a new `LanguageDetector` instance, using it to detect a language, and more.
 - {{domxref("Translator")}} {{Experimental_Inline}}

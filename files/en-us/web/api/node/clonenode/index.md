@@ -39,6 +39,8 @@ cloneNode(deep)
     Note that `deep` has no effect on {{glossary("void element", "void elements")}},
     such as the {{HTMLElement("img")}} and {{HTMLElement("input")}} elements.
 
+    It defaults to `false`.
+
 ### Return value
 
 The new {{domxref("Node")}} cloned.

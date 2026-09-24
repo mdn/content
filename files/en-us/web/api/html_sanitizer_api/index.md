@@ -237,7 +237,7 @@ If a sanitizer is also supplied, the transformation function will be run first, 
 
 Note that the behavior of the transformation function in this case will depend on the website policy (which might be to reject all use of the unsafe methods).
 
-### Third party sanitization libraries
+### Third-party sanitization libraries
 
 Prior to the Sanitizer API, developers typically filtered input strings using third-party libraries such as [DOMPurify](https://github.com/cure53/DOMPurify), perhaps called from transformation functions in trusted types.
 

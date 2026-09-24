@@ -7,7 +7,7 @@ browser-compat: css.properties.font
 sidebar: cssref
 ---
 
-The **`font`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) sets all the different properties of an element's font. Alternatively, it sets an element's font to a system font.
+The **`font`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets all the different properties of an element's font. Alternatively, it sets an element's font to a system font.
 
 {{InteractiveExample("CSS Demo: font")}}
 
@@ -81,6 +81,24 @@ This property is a shorthand for the following CSS properties:
 - {{cssxref("font-variant")}}
 - {{cssxref("font-weight")}}
 - {{cssxref("line-height")}}
+
+### Reset-only sub-properties
+
+This property resets the following CSS properties to their initial values:
+
+- {{cssxref("font-feature-settings")}}
+- {{cssxref("font-kerning")}}
+- {{cssxref("font-language-override")}}
+- {{cssxref("font-optical-sizing")}}
+- {{cssxref("font-size-adjust")}}
+- {{cssxref("font-variant-alternates")}}
+- {{cssxref("font-variant-caps")}}
+- {{cssxref("font-variant-east-asian")}}
+- {{cssxref("font-variant-emoji")}}
+- {{cssxref("font-variant-ligatures")}}
+- {{cssxref("font-variant-numeric")}}
+- {{cssxref("font-variant-position")}}
+- {{cssxref("font-variation-settings")}}
 
 ## Syntax
 

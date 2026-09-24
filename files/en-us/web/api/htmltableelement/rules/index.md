@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLTableElement.rules
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement.rules`** property indicates which cell
 borders to render in the table.

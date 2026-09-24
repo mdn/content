@@ -11,13 +11,13 @@ The effect is the same as if the nodes were deeply cloned into a non-exposed DOM
 
 ## Usage context
 
-{{SVGInfo}}
+{{svginfo}}
 
 ## Attributes
 
 - {{SVGAttr("href")}}
   - : The URL to an element/fragment that needs to be duplicated. See [Usage notes](#usage_notes) for details on common pitfalls.<br/> _Value type_: [**`<URL>`**](/en-US/docs/Web/SVG/Guides/Content_type#url); _Default value_: none; _Animatable_: **yes**
-- {{SVGAttr("xlink:href")}} {{Deprecated_Inline}}
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
   - : An [`<IRI>`](/en-US/docs/Web/SVG/Guides/Content_type#iri) reference to an element/fragment that needs to be duplicated. If both {{SVGAttr("href")}} and {{SVGAttr("xlink:href")}} are present, the value given by {{SVGAttr("href")}} is used.<br/> _Value type_: [**`<IRI>`**](/en-US/docs/Web/SVG/Guides/Content_type#iri); _Default value_: none; _Animatable_: **yes**
     > [!WARNING]
     > Since SVG 2, the {{SVGAttr("xlink:href")}} attribute is deprecated in favor of {{SVGAttr("href")}}. See {{SVGAttr("xlink:href")}} page for more information.

@@ -20,7 +20,7 @@ MDN Web Docs is an open-source project. The sections outlined below describe our
   - : The "Learn web development" section of MDN is aimed specifically at folks learning the basic fundamentals of web development, and as such, requires a different approach to the rest of MDN's content. This article provides guidelines for writing learning content.
 
 - [How to write for MDN Web Docs](/en-US/docs/MDN/Writing_guidelines/Howto)
-  - : This section covers all the information for creating and editing pages, including certain processes and techniques we adhere to. This section provides information about getting started, a general overview into how pages are structured, and where to find how-tos on specific tasks. This section includes topics such as:
+  - : This section covers all the information for creating and editing pages, including certain processes and techniques we adhere to. This section provides information about getting started, a general overview of how pages are structured, and where to find how-tos on specific tasks. This section includes topics such as:
     - [How to research a technology](/en-US/docs/MDN/Writing_guidelines/Howto/Research_technology)
       - : This section provides some handy tips for researching a technology you are documenting.
 

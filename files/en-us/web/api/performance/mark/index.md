@@ -131,3 +131,10 @@ performance.mark("navigationStart");
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("Performance.measure", "performance.measure()")}}
+- {{domxref("console/timeStamp_static", "console.timeStamp()")}}
+- {{domxref("console/time_static", "console.time()")}}
+- {{domxref("console/timeEnd_static", "console.timeEnd()")}}

@@ -3,10 +3,12 @@ title: "MediaStreamTrackProcessor: totalFrames property"
 short-title: totalFrames
 slug: Web/API/MediaStreamTrackProcessor/totalFrames
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.MediaStreamTrackProcessor.totalFrames
 ---
 
-{{APIRef("Insertable Streams for MediaStreamTrack API")}}
+{{APIRef("Insertable Streams for MediaStreamTrack API")}}{{SeeCompatTable}}
 
 The **`totalFrames`** property of the {{domxref("MediaStreamTrackProcessor")}} interface returns a number indicating how many frames have been received by the processor in total.
 
@@ -59,4 +61,4 @@ document.querySelector("button").addEventListener("click", init);
 
 ## See also
 
-{{domxref("MediaStreamTrackProcessor.discardedframes")}}
+- {{domxref("MediaStreamTrackProcessor.discardedFrames")}}

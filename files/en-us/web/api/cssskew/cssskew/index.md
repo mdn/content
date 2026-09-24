@@ -6,7 +6,7 @@ page-type: web-api-constructor
 browser-compat: api.CSSSkew.CSSSkew
 ---
 
-{{APIRef("CSS Typed Object Model API")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
 The **`CSSSkew()`** constructor creates a new {{domxref("CSSSkew")}} object which represents the {{cssxref("transform-function/skew", "skew()")}} value of the individual {{CSSXRef('transform')}} property in CSS.
 

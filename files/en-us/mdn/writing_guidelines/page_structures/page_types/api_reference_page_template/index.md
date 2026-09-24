@@ -52,7 +52,6 @@ sidebar: mdnsidebar
 > These macros are automatically added by the toolchain (there is no need to add/remove):
 >
 > - `\{{SeeCompatTable}}` — this generates a **This is an experimental technology** banner that indicates the technology is [experimental](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental). If it is experimental, and the technology is hidden behind a pref in Firefox, you should also fill in an entry for it in the [Experimental features in Firefox](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
-> - `\{{Deprecated_Header}}` — this generates a **Deprecated** banner that indicates the technology is [deprecated](/en-US/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated).
 > - `\{{Non-standard_Header}}` — this generates a **Non-standard** banner that indicates that the feature is not part of any specification.
 >
 > You should update or delete the following macros according to the advice below:
@@ -69,9 +68,11 @@ sidebar: mdnsidebar
 >
 > _Remember to remove this whole explanatory note before publishing._
 
-{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SecureContext_Header}}{{AvailableInWorkers}}{{SeeCompatTable}}{{Non-standard_Header}}
 
 The summary paragraph — start by naming the interface, saying what API it is part of, and saying what it does. This should ideally be one or two short sentences. You could copy most of this from the Interface's summary on the corresponding API landing page.
+
+Keep the introductory content brief. All other explanations should be included in the "Description" section before the "Examples" section.
 
 `\{{InheritanceDiagram}}`
 
@@ -140,6 +141,10 @@ Listen to these events using {{DOMxRef("EventTarget.addEventListener", "addEvent
   - : Fired when (include the description of when the event fires).
     Also available via the `oneventname2` property.
     If the event is not experimental/deprecated/non-standard, remove the related macro calls.
+
+## Description
+
+This is an optional section. If needed, include a more detailed explanation of the interface here.
 
 ## Examples
 

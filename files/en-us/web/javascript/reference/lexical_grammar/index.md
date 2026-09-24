@@ -160,7 +160,7 @@ lbl: console.log(1); // Label
 In JavaScript, identifiers are commonly made of alphanumeric characters, underscores (`_`), and dollar signs (`$`). Identifiers are not allowed to start with numbers. However, JavaScript identifiers are not only limited to {{Glossary("ASCII")}} — many Unicode code points are allowed as well. Namely:
 
 - Start characters can be any character in the [ID_Start](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BID_Start%7D) category plus `_` and `$`.
-- After the first character, you can use any character in the [ID_Continue](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BID_Continue%7D) category plus U+200C (ZWNJ) and U+200D (ZWJ).
+- After the first character, you can use any character in the [ID_Continue](https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%5Cp%7BID_Continue%7D) category, which contains U+200C (ZWNJ) and U+200D (ZWJ).
 
 > [!NOTE]
 > If, for some reason, you need to parse some JavaScript source yourself, do not assume all identifiers follow the pattern `/[A-Za-z_$][\w$]*/` (i.e., ASCII-only)! The range of identifiers can be described by the regex `/[$_\p{ID_Start}][$\p{ID_Continue}]*/u` (excluding unicode escape sequences).
@@ -172,7 +172,7 @@ const 你好 = "Hello";
 console.log(\u4f60\u597d); // Hello
 ```
 
-Not all places accept the full range of identifiers. Certain syntaxes, such as function declarations, function expressions, and variable declarations require using identifiers names that are not [reserved words](#reserved_words).
+Not all places accept the full range of identifiers. Certain syntaxes, such as function declarations, function expressions, and variable declarations require using identifier names that are not [reserved words](#reserved_words).
 
 ```js-nolint example-bad
 function import() {} // Illegal: import is a reserved word.
@@ -604,7 +604,7 @@ for (
 ) {}
 ```
 
-Semicolons are also never inserted as [empty statements](/en-US/docs/Web/JavaScript/Reference/Statements/Empty). For example, in the code below, if a semicolon is inserted after ")", then the code would be valid, with an empty statement as the `if` body and the `const` declaration being a separate statement. However, because automatically inserted semicolons cannot become empty statements, this causes a [declaration](/en-US/docs/Web/JavaScript/Reference/Statements#difference_between_statements_and_declarations) to become the body of the `if` statement, which is not valid.
+Semicolons are also never inserted as [empty statements](/en-US/docs/Web/JavaScript/Reference/Statements/Empty). For example, in the code below, if a semicolon is inserted after ")", then the code would be valid, with an empty statement as the `if` body and the `const` declaration being a separate statement. However, because automatically inserted semicolons cannot become empty statements, this causes a [declaration](/en-US/docs/Web/JavaScript/Reference/Statements#what_are_statements_declarations_and_expressions) to become the body of the `if` statement, which is not valid.
 
 ```js-nolint example-bad
 if (Math.random() > 0.5)

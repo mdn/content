@@ -75,7 +75,7 @@ section {
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 clip-path: none;
 
 /* <clip-source> values */

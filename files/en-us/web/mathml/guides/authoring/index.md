@@ -80,7 +80,7 @@ Alternatively, you can also just display a warning at the top of the page for br
 ```
 
 > [!NOTE]
-> These small scripts perform feature detection (of the [mspace](/en-US/docs/Web/MathML/Reference/Element/mspace) or [mpadded](/en-US/docs/Web/MathML/Reference/Element/mpadded) elements) which is preferred over [browser sniffing](/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent). Also, they are distributed under an open source license, so feel free to copy them on your own server and adapt them to your need.
+> These small scripts perform feature detection (of the [mspace](/en-US/docs/Web/MathML/Reference/Element/mspace) or [mpadded](/en-US/docs/Web/MathML/Reference/Element/mpadded) elements) which is preferred over [browser sniffing](/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent). Also, they are distributed under an open-source license, so feel free to copy them on your own server and adapt them to your need.
 
 #### Mathematical fonts
 
@@ -183,7 +183,7 @@ For authors unfamiliar with LaTeX, alternative input methods are available such 
 
 ### Command-line programs
 
-Instead of generating MathML expression at page load, you can instead rely on command line tools. This will result in pages with static MathML content that will load faster. Let's consider again a page `input.html` with content from [client-side conversion](#client-side_conversion):
+Instead of generating MathML expression at page load, you can instead rely on command-line tools. This will result in pages with static MathML content that will load faster. Let's consider again a page `input.html` with content from [client-side conversion](#client-side_conversion):
 
 ```html
 <!doctype html>
@@ -234,7 +234,7 @@ After running that command, a file `output.html` containing the following HTML o
 There are more sophisticated tools that aim at converting an arbitrary LaTeX document into a document with MathML content. For example, using [LaTeXML](https://math.nist.gov/~BMiller/LaTeXML/) the following commands will convert `foo.tex` into an HTML or EPUB document:
 
 ```bash
-latexmlc --dest foo.html foo.tex # Generate a HTML document foo.html
+latexmlc --dest foo.html foo.tex # Generate an HTML document foo.html
 latexmlc --dest foo.epub foo.tex # Generate an EPUB document foo.epub
 ```
 

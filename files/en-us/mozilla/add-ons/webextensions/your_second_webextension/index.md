@@ -21,7 +21,8 @@ To implement this, you:
 
 - **Define an `action`, which is a [button](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) attached to the Firefox toolbar**.
   For the button you supply:
-  - An icon, called "beasts-32.png".
+  - A default icon, and icons to use when Firefox displays light and dark text.
+  - A tooltip.
   - A popup to open when the user presses the button. The popup includes HTML, CSS, and JavaScript.
 
 - **Define an icon for the extension**, called "beasts-48.png". The Add-ons Manager displays this icon with the extension's details.
@@ -92,17 +93,14 @@ Now create a file called "manifest.json", and give it this content:
 
 - The first three keys ([`manifest_version`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version), [`name`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name), and [`version`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version)) are mandatory and contain basic metadata for the extension.
 - [`description`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) is required in Safari, otherwise it's optional. However, it's a good idea to set this property, as it's displayed in the browser's extension manager (for example, `about:addons` in Firefox).
-- [`homepage_url`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url) is optional, but recommended: it provide useful information about the extension.
+- [`homepage_url`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url) is optional, but recommended: it provides useful information about the extension.
 - [`icons`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) is optional but recommended; it lets you specify an icon for the extension.
 - [`browser_specific_settings`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) is required.
   - The `gecko` property provides addons.mozilla.org and Firefox with extra configuration information about the extension:
   - [`id`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#id) defines a unique identifier for the extension. This ID is needed before an extension can be published on addons.mozilla.org (AMO).
   - [`data_collection_permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings#data_collection_permissions) provides information on whether the extension collects and transmits personally identifiable information. This example doesn't collect or transmit any data.
 - [`permissions`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) lists permissions the extension needs. In this example, the extension asks for the [`activeTab` permission](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
-- [`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) specifies the toolbar button. You supply three pieces of information here, all of which are optional:
-  - `default_icon` points to the button's icon.
-  - `default_title` provides text for a tooltip displayed for the action button.
-  - `default_popup` points to an HTML file included with the extension that defines the popups content.
+- [`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) specifies the toolbar button, its icons, tooltip, and popup. See [The toolbar button](#the_toolbar_button) for details of the properties used in this example.
 - [`web_accessible_resources`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) lists files that you want to make accessible to web pages. As the extension replaces the page's content with images packaged in the extension, you need to make those images accessible to the page.
 
 Note that all paths given are relative to the manifest.json file.
@@ -124,15 +122,30 @@ If you choose to supply an icon, it should be 48x48 pixels. You can supply a 96x
 
 ### The toolbar button
 
-The toolbar button also needs an icon, and manifest.json specifies that it is at "icons/beasts-32.png".
+You add and customize a toolbar button using the [`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) key. The key and all its properties are optional. However, when using a toolbar button, you specify properties to customize the button and, when needed, add a popup that appears when the button is clicked. This example uses:
 
-Save an icon named "beasts-32.png" in the "icons" directory. You could use [the one from the example](https://raw.githubusercontent.com/mdn/webextensions-examples/main/beastify/icons/beasts-32.png), which is taken from the [IconBeast Lite icon set](https://www.iconbeast.com/free/) and used under its [license](https://www.iconbeast.com/faq/).
+- `default_icon` that points to the button's default icon.
+- `theme_icons` that provides alternative icons for themes:
+  - `light` specifies the icon (`icons/beasts-32-light.png`) used when light text is displayed (usually when a dark theme is active).
+  - `dark` specifies the icon (`icons/beasts-32.png`) used when dark text is displayed (usually when a light theme is active).
+  - `size` specifies the icon's size, in pixels.
+- `default_title` provides the text of the tooltip Firefox displays when the user hovers over the button.
+- `default_popup` points to the popup's HTML file. See [The popup](#the_popup) for details.
+
+Save your icons in the "icons" directory or use those from the example source code on GitHub:
+
+- [beasts-32.png](https://raw.githubusercontent.com/mdn/webextensions-examples/main/beastify/icons/beasts-32.png)
+- [beasts-32-light.png](https://raw.githubusercontent.com/mdn/webextensions-examples/main/beastify/icons/beasts-32-light.png)
+
+Both icons are based on one from the [IconBeast Lite icon set](https://www.iconbeast.com/free/) and used under its [license](https://www.iconbeast.com/faq/).
 
 ### The popup
 
-If you don't supply a popup, when the user clicks the toolbar button, Firefox dispatches a click event to your extension. If you supply a popup, when the user clicks the toolbar button the popup opens, and Firefox doesn't dispatch a click event.
+Toolbar buttons let you add a popup that opens when the user clicks the toolbar button.
 
-For this example, you want a popup. The function of the popup is to enable the user to choose one of three beasts.
+If you don't supply a popup, clicking the button dispatches a {{WebExtAPIRef("action.onClicked")}} event to your extension. Your extension uses this event to trigger the functionality associated with the button.
+
+For this example, you want a popup. The popup lets the user choose one of three beasts.
 
 Create a directory called "popup" under the extension root. This directory is where you create the popup's code. The popup consists of three files:
 
@@ -458,6 +471,7 @@ beastify/
 
     icons/
         beasts-32.png
+        beasts-32-light.png
         beasts-48.png
 
     popup/
