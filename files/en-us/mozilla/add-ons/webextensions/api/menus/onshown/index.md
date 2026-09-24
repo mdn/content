@@ -110,11 +110,11 @@ Events have three functions:
 
 ## Examples
 
-This example listens for the context menu to be shown over a link, then updates the `openLabelledId` menu item with the link's hostname:
+This example listens for the context menu to be shown over a link, then updates the `openLabeledId` menu item with the link's hostname:
 
 ```js
 function updateMenuItem(linkHostname) {
-  browser.menus.update(openLabelledId, {
+  browser.menus.update(openLabeledId, {
     title: `Open (${linkHostname})`,
   });
   browser.menus.refresh();

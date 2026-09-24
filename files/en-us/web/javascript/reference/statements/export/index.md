@@ -213,6 +213,9 @@ The following is syntactically invalid despite its import equivalent:
 export DefaultExport from "bar.js"; // Invalid
 ```
 
+> [!NOTE]
+> Due to the lack of this syntax, [`import source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/source) also has no re-exporting counterpart.
+
 The correct way of doing this is to rename the export:
 
 ```js
@@ -230,6 +233,9 @@ export { default, function2 } from "bar.js";
 ```js
 export { default } from "./data.json" with { type: "json" };
 ```
+
+> [!NOTE]
+> The [`import defer * as ns`](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer) declaration has no re-exporting counterpart, despite `import * as ns` having one. Deferred re-exports are being developed in a [separate proposal](https://github.com/tc39/proposal-deferred-reexports), because they can also avoid loading unused modules, which requires additional tree-shaking semantics. You can instead [import and export in two separate statements](/en-US/docs/Web/JavaScript/Reference/Statements/import/defer#exporting_a_deferred_namespace), although this immediately loads the module.
 
 ## Examples
 

@@ -54,7 +54,7 @@ box-shadow:
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 box-shadow: none;
 
 /* A color and two length values */

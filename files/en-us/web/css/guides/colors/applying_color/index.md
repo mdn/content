@@ -129,7 +129,7 @@ div {
 }
 ```
 
-The `.wrapper` class is used to assign styles to the {{HTMLElement("div")}} that encloses all of our other content. This establishes the height of the container using {{cssxref("height")}}, allowing the width of this block-level element to default to 100% of its parent. Setting the {{cssxref("display")}} to `flex` and adding a `10px` {{cssxref("gap")}} creates a flex container to lay out the children side by side with a gap between all the container's children. We use {{cssxref("flex")}} to let the flex children grow to fill the container; it doesn't effect the flex container itself.
+The `.wrapper` class is used to assign styles to the {{HTMLElement("div")}} that encloses all of our other content. This establishes the height of the container using {{cssxref("height")}}, allowing the width of this block-level element to default to 100% of its parent. Setting the {{cssxref("display")}} to `flex` and adding a `10px` {{cssxref("gap")}} creates a flex container to lay out the children side by side with a gap between all the container's children. We use {{cssxref("flex")}} to let the flex children grow to fill the container; it doesn't affect the flex container itself.
 
 Of more interest to our discussion here is the use of the {{cssxref("border")}} property to establish a border around the outside edge of the element. This border is a solid line, 6 pixels wide, in the [named color](/en-US/docs/Web/CSS/Reference/Values/named-color) `mediumturquoise`.
 
