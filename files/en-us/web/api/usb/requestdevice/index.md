@@ -35,6 +35,8 @@ requestDevice(options)
         - `subclassCode`
         - `protocolCode`
         - `serialNumber`
+    - `exclusionFilters` {{optional_inline}}
+      - : An array of filter objects for devices to exclude from the pairing flow. These objects have the same properties as those in `filters`. Exclusion takes priority over inclusion.
 
 ### Return value
 
@@ -64,6 +66,24 @@ const filters = [
 ];
 navigator.usb
   .requestDevice({ filters })
+  .then((usbDevice) => {
+    console.log(`Product name: ${usbDevice.productName}`);
+  })
+  .catch((e) => {
+    console.error(`There is no device. ${e}`);
+  });
+```
+
+### Excluding devices
+
+The following example requests a device with vendor ID `0x1209`, excluding devices with product ID `0xa850`:
+
+```js
+navigator.usb
+  .requestDevice({
+    filters: [{ vendorId: 0x1209 }],
+    exclusionFilters: [{ vendorId: 0x1209, productId: 0xa850 }],
+  })
   .then((usbDevice) => {
     console.log(`Product name: ${usbDevice.productName}`);
   })
