@@ -72,6 +72,7 @@ Firefox 158 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 ## Changes for add-on developers
 
+- [`publicSuffix.isKnownSuffix()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/publicSuffix/isKnownSuffix) now throws an error when passed an invalid hostname, instead of returning `false`. ([Firefox bug 2066620](https://bugzil.la/2066620))
 - Adds [`runtime.getVersion()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getVersion) to return the extension's version as declared in the manifest. ([Firefox bug 1992418](https://bugzil.la/1992418))
 
 <!-- ### Removals -->
