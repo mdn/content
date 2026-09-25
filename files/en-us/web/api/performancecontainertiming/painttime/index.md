@@ -11,7 +11,7 @@ browser-compat: api.PerformanceContainerTiming.paintTime
 The **`paintTime`** read-only property of the {{domxref("PerformanceContainerTiming")}} interface returns a timestamp that represents when the rendering phase ended and the paint phase started.
 
 This property is a broadly interoperable metric for indicating the time to paint, and can therefore be used when comparing behavior across browsers.
-For single-browser testing you can {{domxref("PerformanceContainerTiming.presentationTime", "presentationTime")}} instead.
+For single-browser testing, you can use {{domxref("PerformanceContainerTiming.presentationTime", "presentationTime")}} instead.
 
 ## Value
 

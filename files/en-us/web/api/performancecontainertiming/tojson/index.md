@@ -34,7 +34,7 @@ This example demonstrates how the `toJSON()` method is used.
 
 #### HTML
 
-First we define a {{htmlelement("section")}} element that is marked as a container root with the `containertiming` attribute identified as `"hero"`.
+First we define a {{htmlelement("section")}} element that is marked as a container root identified as `"hero"` by its `containertiming` attribute.
 The section contains two other elements that will be drawn, resulting in a container performance entry.
 
 ```html
@@ -69,7 +69,7 @@ function log(text) {
 
 #### JavaScript
 
-The following code first checks if there are any `"container"` entries: if not, it logs that the feature is not supported.
+The following code first checks whether the browser supports `"container"` entries: if not, it logs that the feature is not supported.
 It then creates a {{domxref("PerformanceObserver")}} that logs each entry, calling the `toJSON()` method directly to get the JSON object.
 The observer is then started, filtering only for entries of type `"container"`.
 
@@ -88,13 +88,12 @@ if (PerformanceObserver.supportedEntryTypes.includes("container")) {
 
 #### Result
 
-The JSON output is displayed below in the log, after the elements.
+The JSON output is displayed in the log that follows the elements.
 
 {{EmbedLiveSample("Using the toJSON method", "100%", 500)}}
 
-Note that in this case only one entry is logged, even though the container root has two child elements.
+Note that in this case only one entry is logged, even though the container root has two child elements, because both elements paint in the container's first frame.
 The browser emits at most one `PerformanceContainerTiming` entry for every container root on each rendering frame (aggregating every element that paints during that frame).
-In this case elements paint in the container's first frame and are logged as one entry.
 
 The entry should look something like this:
 

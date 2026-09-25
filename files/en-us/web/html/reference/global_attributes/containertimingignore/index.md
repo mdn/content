@@ -16,6 +16,8 @@ In the DOM, this attribute is reflected as {{domxref("HTMLElement.containerTimin
 
 ### Excluding a subtree from a container's timing
 
+In this example, the {{htmlelement("div")}} and its contents are excluded from the `"hero"` container's timing, while the image still contributes to it.
+
 ```html
 <section containertiming="hero">
   <img src="hero.jpg" alt="" />
@@ -25,7 +27,7 @@ In the DOM, this attribute is reflected as {{domxref("HTMLElement.containerTimin
 </section>
 ```
 
-For examples on how to use the Container Timing API to get timing information, see {{domxref("PerformanceContainerTiming")}}.
+For examples of how to use the Container Timing API to get timing information, see {{domxref("PerformanceContainerTiming")}}.
 
 ## Specifications
 

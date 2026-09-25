@@ -25,7 +25,7 @@ This example demonstrates that `firstRenderTime` stays fixed at the container's 
 
 #### HTML
 
-First define a {{htmlelement("section")}} element that is marked as a container root with the `containertiming` attribute identified as `"hero"`, along with a button to reset the example.
+First define a {{htmlelement("section")}} element that is marked as a container root identified as `"hero"` by its `containertiming` attribute, along with a button to reset the example.
 
 ```html
 <button id="reset">Reset</button>
@@ -59,8 +59,8 @@ function log(text) {
 
 #### JavaScript
 
-The following code first checks if there are any `"container"` entries: if not, it logs that the feature is not supported.
-It then creates a {{domxref("PerformanceObserver")}} that logs each entry's {{domxref("PerformanceContainerTiming.lastPaintedElement", "lastPaintedElement")}}, and its `firstRenderTime`, {{domxref("PerformanceContainerTiming.paintTime", "paintTime")}} and {{domxref("PerformanceEntry.startTime", "startTime")}}.
+The following code first checks whether the browser supports `"container"` entries: if not, it logs that the feature is not supported.
+It then creates a {{domxref("PerformanceObserver")}} that logs each entry's {{domxref("PerformanceContainerTiming.lastPaintedElement", "lastPaintedElement")}}, and its `firstRenderTime`, {{domxref("PerformanceContainerTiming.paintTime", "paintTime")}}, and {{domxref("PerformanceEntry.startTime", "startTime")}}.
 
 ```js
 const container = document.querySelector("section");
@@ -105,7 +105,7 @@ Last of all we add a click event handler to reset the example by reloading the p
 
 ```js
 document.querySelector("#reset").addEventListener("click", () => {
-  window.location.reload(true);
+  window.location.reload();
 });
 ```
 
@@ -113,7 +113,7 @@ document.querySelector("#reset").addEventListener("click", () => {
 
 A new paragraph is added every second.
 Each paragraph should trigger a new log where the `firstRenderTime` stays the same but the other properties change value.
-Click "Reset" to restart the example.
+Click the **Reset** button to restart the example.
 
 {{EmbedLiveSample("Observing that firstRenderTime stays fixed", "100%", 400)}}
 
