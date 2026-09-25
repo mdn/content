@@ -82,7 +82,7 @@ Select different `gap` values to see how they change the spacing between rows an
 }
 ```
 
-{{EmbedLiveSample("grid_gap", "", "420")}}
+{{EmbedLiveSample("grid_gap", "", "390")}}
 
 ### Gaps in flexbox layouts
 
@@ -197,6 +197,15 @@ In this example, we create a multi-col container using the `columns` shorthand p
   columns: 7 1em / 2.35em;
   width: 450px;
   rule: 1px solid #ccc;
+}
+@supports (column-height: 1em;) {
+  body::before {
+      content: "Your browser doesn't the column height property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
 }
 ```
 
