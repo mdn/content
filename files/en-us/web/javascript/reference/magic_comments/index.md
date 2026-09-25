@@ -12,7 +12,7 @@ Usually, the presence or absence of magic comments doesn't change the program's 
 To avoid collision with regular comments, magic comments are usually marked by _sigils_, such as a leading `#` or `@` character: `//# my-setting-name` or `//@ my-setting-name`. The exact syntax varies between comment types.
 
 > [!NOTE]
-> _Pragmas_ are usually placed at the beginning of the file and inform compilers or engines about the entire script. _Annotations_ may be placed anywhere and apply to a specific construct. _Directives_ are generic terms but may be ambiguous with the JavaScript `"use strict"` style convention. In our writing, we use them interchangeably.
+> There's no universal name for this type of feature, and the "alternatives" we listed may have subtle differences: _pragmas_ are usually placed at the beginning of the file and inform compilers or engines about the entire script; _annotations_ may be placed anywhere and apply to a specific construct; _directives_ are generic terms but may be ambiguous with the JavaScript `"use strict"` style convention. In our writing, we use all these words interchangeably.
 
 ## Compile hint pragmas
 
