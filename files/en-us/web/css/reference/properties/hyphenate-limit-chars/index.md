@@ -9,8 +9,6 @@ sidebar: cssref
 
 The **`hyphenate-limit-chars`** [CSS](/en-US/docs/Web/CSS) property specifies the minimum word length to allow hyphenation of words as well as the minimum number of characters before and after the hyphen.
 
-This property provides you with fine-grained control over hyphenation in text. This control enables you to avoid awkward hyphenations and set appropriate hyphenation for different languages, which, in turn, allows for better typography.
-
 ## Syntax
 
 ```css
@@ -39,16 +37,26 @@ hyphenate-limit-chars: unset;
 
 ### Values
 
-This property is specified as one to three numeric or `auto` values:
+This property is specified as one to three values from the following list:
 
-- `<number> <number> <number>`
-  - : The first value is the minimum word length before words should be hyphenated. The second value is the minimum number of characters before the hyphen. The third value is the minimum number of characters after the hyphen.
-- `<number> <number>`
-  - : The first value is the minimum word length before words should be hyphenated. The second value is the minimum number of characters before the hyphen. The minimum number of characters after the hyphen will be set equal to the second value.
-- `<number>`
-  - : The value is the minimum word length before words should be hyphenated. The minimum number of characters before and after the hyphen will be set to `auto`.
+- {{cssxref("integer")}}
+  - : Specifies either the number of characters for the minimum word length for hyphenation, the minimum number of characters before the hyphen, or the minimum number of characters after the hyphen.
 
-If `auto` is set for any of the values, the user agent will choose an appropriate value for the current layout. Unless the user agent can calculate a better value, the following default values will be used:
+- `auto`
+
+  - Specifies the user agent to choose appropriate values for the current layout. This is the default.
+
+## Description
+
+The `hyphenate-limit-chars` property provides fine-grained control over hyphenation in text. This control enables you to avoid awkward hyphenations and set appropriate hyphenation for different languages, which, in turn, allows for better typography.
+
+The property accepts one to three values, each an `<integer>` or the keyword `auto`, specifying the number of characters for the minimum word length for hyphenation, the minimum number of characters before the hyphen, and the minimum number of characters after the hyphen, in that order. If fewer than three values are set, the omitted values default to `auto`:
+
+- If one`<integer>` is specified, it sets the word length for the minimum number of characters a word must have in order for it to be able to be hyphenated, while the minimum number of characters before and after the hyphen are set to `auto`.
+- If two values are specified, the first value sets the minimum word length and the second sets the minimum number of characters both before and after the hyphen; the omitted third value defaults to the second value.
+- If three values are specified, they set the minimum word length, the minimum number of characters before the hyphen, and the minimum number of characters after the hyphen, respectively.
+
+For `auto`, the user agent will choose an appropriate value for the current layout. Unless the user agent can calculate a better value, the following default values will be used:
 
 - Minimum word length to allow hyphenation: 5
 - Minimum number of characters before the hyphen: 2
