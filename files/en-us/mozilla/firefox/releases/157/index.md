@@ -85,3 +85,8 @@ Firefox 157 is the current [Beta version of Firefox](https://www.firefox.com/en-
 These features are shipping in Firefox 157 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **`export * from "mod"` exports the default export**: `javascript.options.experimental.export_star_default`
+
+  The [TC39 export `*` default proposal](https://tc39.es/proposal-export-star-default/) makes [`export * from "mod"`](/en-US/docs/Web/JavaScript/Reference/Statements/export#re-exporting__aggregating) also provide the module's default export, which it currently omits.
+  Note that this preference can only be set in Nightly builds. ([Firefox bug 2065611](https://bugzil.la/2065611)).
