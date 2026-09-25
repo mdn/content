@@ -12,7 +12,7 @@ In the [Anatomy of the DOM](/en-US/docs/Web/API/Document_Object_Model/Anatomy_of
 
 The [Anatomy of the DOM](/en-US/docs/Web/API/Document_Object_Model/Anatomy_of_the_DOM) guide introduces the tree structure of the DOM. The tree has a root, and each node has a (possibly empty) list of children. The document root is a {{domxref("Document")}} node, while {{domxref("Element")}} nodes form the backbone of this tree.
 
-![The DOM as a tree-like representation of a document that has a root and node elements containing content](/en-US/docs/Web/API/Document_Object_Model/using_the_w3c_dom_level_1_core-doctree.jpg)
+![The DOM as a tree-like representation of a document that has a root and node elements containing content](/en-US/docs/Web/API/Document_Object_Model/example-dom-tree.svg)
 
 There are many ways to [traverse a tree](https://en.wikipedia.org/wiki/Tree_traversal), but the DOM only exposes one order: pre-order DFS, which is called _document order_ or _tree order_. In pseudo-code, pre-order works like this:
 
