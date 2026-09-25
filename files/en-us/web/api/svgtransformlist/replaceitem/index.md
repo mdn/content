@@ -16,6 +16,8 @@ The inserted item is the item itself and not a copy.
 
 - If the item is already in this list, note that the `index` of the item to replace is before the removal of the item.
 
+Assigning to an index of the list has the same effect as calling this method, except that there is no return value.
+
 ## Syntax
 
 ```js-nolint

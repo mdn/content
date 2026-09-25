@@ -106,7 +106,7 @@ rotate: 3 0.5 2 45deg;
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 rotate: none;
 
 /* Angle value */

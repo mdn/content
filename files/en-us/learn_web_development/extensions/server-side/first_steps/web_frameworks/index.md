@@ -272,13 +272,13 @@ Rails has been used for high profile sites, including: [Basecamp](https://baseca
 
 [Laravel](https://laravel.com/) is a web application framework with expressive, elegant syntax. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- [Simple, fast routing engine](https://laravel.com/framework/docs/routing).
+- [Powerful dependency injection container](https://laravel.com/framework/docs/container).
+- Multiple back-ends for [session](https://laravel.com/framework/docs/session) and [cache](https://laravel.com/framework/docs/cache) storage.
+- Expressive, intuitive [database ORM](https://laravel.com/framework/docs/eloquent).
+- Database agnostic [schema migrations](https://laravel.com/framework/docs/migrations).
+- [Robust background job processing](https://laravel.com/framework/docs/queues).
+- [Real-time event broadcasting](https://laravel.com/framework/docs/broadcasting).
 
 Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
 
@@ -315,7 +315,7 @@ It can be used for small problems but its strength is building larger scale appl
 
 ## Summary
 
-This article has shown that web frameworks can make it easier to develop and maintain server-side code. It has also provided a high level overview of a few popular frameworks, and discussed criteria for choosing a web application framework. You should now have at least an idea of how to choose a web framework for your own server-side development. If not, then don't worry — later on in the course we'll give you detailed tutorials on Django and Express to give you some experience of actually working with a web framework.
+This article has shown that web frameworks can make it easier to develop and maintain server-side code. It has also provided a high-level overview of a few popular frameworks, and discussed criteria for choosing a web application framework. You should now have at least an idea of how to choose a web framework for your own server-side development. If not, then don't worry — later on in the course we'll give you detailed tutorials on Django and Express to give you some experience of actually working with a web framework.
 
 For the next article in this module we'll change direction slightly and consider web security.
 
