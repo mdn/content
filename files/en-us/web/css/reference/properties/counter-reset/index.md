@@ -7,7 +7,7 @@ browser-compat: css.properties.counter-reset
 sidebar: cssref
 ---
 
-The **`counter-reset`** [CSS](/en-US/docs/Web/CSS) property creates named [CSS counters](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters) and initializes them to a specific value, optionally setting the counter as reversed.
+The **`counter-reset`** [CSS](/en-US/docs/Web/CSS) property creates named [CSS counters](/en-US/docs/Web/CSS/Guides/Counter_styles/Using_counters) and initializes their values. It can create both regular and reversed counters.
 
 {{InteractiveExample("CSS Demo: counter-reset")}}
 
@@ -103,7 +103,7 @@ This property is specified as a space-separated list of counter or reversed coun
   - : Specifies the counter name to create and initialize. The `reversed()` functional notation can be used to create a reversed counter.
 - {{cssxref("&lt;integer&gt;")}}
   - : Specifies the initial value to set on the newly created counter.
-    If not specified, defaults to `0` for regular counters; the initial value is calculated based on the number of elements for reversed counters.
+    If not specified, defaults to `0` for regular counters. The initial value for reversed counters is calculated automatically.
 - `none`
   - : Specifies that no counters are created.
 
