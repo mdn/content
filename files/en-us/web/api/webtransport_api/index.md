@@ -47,7 +47,7 @@ async function initTransport(url) {
 
 ### Server implementation
 
-A WebTransport connection requires a server that supports WebTransport over HTTP/3. To establish a WebTransport session over HTTP/3, the client sends an extended `CONNECT` request, which needs to contain the `:protocol: webtransport` pseudo-header. For browser clients, the request also includes an `Origin` header, which the server must verify before accepting the session. The server accepts the session by sending a successful (2xx) response. The client and server can then exchange data using multiple bidirectional streams, unidirectional streams, and datagrams associated with that session.
+A WebTransport connection requires a supporting server. To establish a session, the client sends an extended `CONNECT` request with a `:protocol` pseudo-header identifying WebTransport. For browser clients, the request also includes an `Origin` header, which the server must verify before accepting the session. (This is automatically handled by the `WebTransport()` constructor.) The server accepts the session by sending a successful (2xx) response. The client and server can then exchange data using multiple bidirectional streams, unidirectional streams, and datagrams associated with that session.
 
 The [WebTransport over HTTP/3 specification](https://datatracker.ietf.org/doc/draft-ietf-webtrans-http3/) describes the protocol and server requirements in more detail.
 
@@ -59,7 +59,9 @@ You should use a WebTransport library to handle the server-side protocol details
 - **Node.js**: [`@fails-components/webtransport`](https://github.com/fails-components/webtransport)
 - **Deno**: [built-in WebTransport support](https://docs.deno.com/examples/web_transport/) (unstable)
 
-For all our client examples, we'll provide minimal server examples using the Node.js webtransport package. Here's an example server for the [initial connection](#initial_connection) example:
+For all our client examples, we'll provide minimal server examples using the Node.js `@fails-components/webtransport` package. Code written with other libraries or languages may look substantially different.
+
+Here's an example server for the [initial connection](#initial_connection) example:
 
 ```js
 import { randomBytes } from "node:crypto";
@@ -121,7 +123,7 @@ async function closeTransport(transport) {
 }
 ```
 
-On the server, call `session.close()` to close the session:
+In `@fails-components/webtransport`, call `session.close()` to close the session:
 
 ```js
 session.close({ closeCode: 0, reason: "Work complete" });
@@ -129,7 +131,7 @@ await session.closed;
 ```
 
 The server may also indicate that it wants to drain the connection prior to closing, perhaps due to management of the underlying transport.
-For example, in the Node.js package, this is done with `session.notifySessionDraining()`.
+For example, in `@fails-components/webtransport`, this is done with `session.notifySessionDraining()`.
 When this happens, the client should start closing streams, and create a new session if it needs to continue its work.
 You can detect this using the {{domxref("WebTransport.draining")}} promise, which fulfills once the server signals that the session is entering the draining state:
 
@@ -170,7 +172,7 @@ async function initTransport(url) {
 }
 ```
 
-On the server, when the library parses the headers, it special cases `header["wt-available-protocols"]` and converts the value into an array. For example, you can replace `server.setRequestCallback(acceptRequest)` with the following to select the first protocol supported by the server:
+When the `@fails-components/webtransport` library parses the headers, it special cases `header["wt-available-protocols"]` and converts the value into an array. For example, you can replace `server.setRequestCallback(acceptRequest)` with the following to reject malformed values and select the first protocol supported by the server:
 
 ```js
 const supportedProtocols = new Set(["chat", "file-transfer"]);
@@ -182,6 +184,9 @@ server.setRequestCallback(async (request) => {
   }
 
   const offeredProtocols = request.header["wt-available-protocols"] ?? [];
+  if (!Array.isArray(offeredProtocols)) {
+    return { ...response, status: 400 };
+  }
   const selectedProtocol = offeredProtocols.find((protocol) =>
     supportedProtocols.has(protocol),
   );
@@ -205,7 +210,7 @@ writer.write(data1);
 writer.write(data2);
 ```
 
-On the server, read these datagrams from `session.datagrams.readable`:
+In `@fails-components/webtransport`, read these datagrams from `session.datagrams.readable`:
 
 ```js
 for await (const data of session.datagrams.readable) {
@@ -229,7 +234,7 @@ async function readData() {
 }
 ```
 
-To send datagrams for this client code to read, obtain a writer on the server:
+In `@fails-components/webtransport`, to send datagrams for this client code to read, obtain a writer:
 
 ```js
 const writer = session.datagrams.createWritable().getWriter();
@@ -271,7 +276,7 @@ async function writeData() {
 
 Note also the use of the {{domxref("WritableStreamDefaultWriter.close()")}} method to close the stream once all data has been sent.
 
-On the server, each item in `session.incomingUnidirectionalStreams` is a readable stream carrying data from the client. Start a separate reader for each stream so that a stream waiting for data does not prevent the server from accepting another:
+In `@fails-components/webtransport`, each item in `session.incomingUnidirectionalStreams` is a readable stream carrying data from the client. Start a separate reader for each stream so that a stream waiting for data does not prevent the server from accepting another:
 
 ```js
 async function receiveStream(stream) {
@@ -320,7 +325,7 @@ async function receiveUnidirectional() {
 }
 ```
 
-To supply a stream for the client's `receiveUnidirectional()` and `readData()` functions, create a unidirectional stream on the server and write to it:
+In `@fails-components/webtransport`, to supply a stream for the client's `receiveUnidirectional()` and `readData()` functions, create a unidirectional stream and write to it:
 
 ```js
 const stream = await session.createUnidirectionalStream();
@@ -349,15 +354,6 @@ async function setUpBidirectional() {
 
   // …
   return stream;
-}
-```
-
-On the server, accept the client-created streams from `session.incomingBidirectionalStreams`. Each has a `readable` side for data from the client and a `writable` side for data to the client:
-
-```js
-for await (const stream of session.incomingBidirectionalStreams) {
-  // Echo received bytes back to the client. Each stream is handled separately.
-  stream.readable.pipeTo(stream.writable).catch(console.error);
 }
 ```
 
@@ -390,12 +386,23 @@ async function writeData(writable) {
 }
 ```
 
-The server's echo handler above pairs with both functions: `pipeTo()` reads the bytes sent by `writeData()` and writes them back for `readData()`. Run the client functions concurrently so that reading can proceed while writing:
+Run the client functions concurrently so that reading can proceed while writing:
 
 ```js
 const stream = await setUpBidirectional();
 await Promise.all([readData(stream.readable), writeData(stream.writable)]);
 ```
+
+In `@fails-components/webtransport`, accept the client-created streams from `session.incomingBidirectionalStreams`. Each has a `readable` side for data from the client and a `writable` side for data to the client:
+
+```js
+for await (const stream of session.incomingBidirectionalStreams) {
+  // Echo received bytes back to the client. Each stream is handled separately.
+  stream.readable.pipeTo(stream.writable).catch(console.error);
+}
+```
+
+This handler pairs with both functions: `pipeTo()` reads the bytes sent by `writeData()` and writes them back for `readData()`.
 
 If the server opens a bidirectional stream to transmit data to and receive it from the client, this can be accessed via the {{domxref("WebTransport.incomingBidirectionalStreams")}} property, which returns a {{domxref("ReadableStream")}} of `WebTransportBidirectionalStream` objects. Each one can be used to read and write {{jsxref("Uint8Array")}} instances as shown above. However, as with the unidirectional example, you need an initial function to read the bidirectional stream in the first place:
 
