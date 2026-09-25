@@ -419,13 +419,17 @@ You'll be able to test the password reset functionality from the link in the log
 Note that you won't be able to test account logout yet, because logout requests must be sent as a `POST` rather than a `GET` request.
 
 > [!NOTE]
-> The password reset system requires that your website supports email, which is beyond the scope of this article, so this part **won't work yet**. To allow testing, put the following line at the end of your settings.py file. This logs any emails sent to the console (so you can copy the password reset link from the console).
+> The password reset system requires that your website supports email, which is beyond the scope of this article, so this part **won't work yet**. To allow testing, put the following lines at the end of your settings.py file. This logs any emails sent to the console (so you can copy the password reset link from the console).
 >
 > ```python
-> EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+> MAILERS = {
+>     'default': {
+>         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
+>     },
+> }
 > ```
 >
-> For more information, see [Sending email](https://docs.djangoproject.com/en/5.0/topics/email/) (Django docs).
+> For more information, see [Sending email](https://docs.djangoproject.com/en/6.1/topics/email/) (Django docs).
 
 ## Testing against authenticated users
 
@@ -461,7 +465,7 @@ As you can see, we use `if` / `else` / `endif` template tags to conditionally di
 
 We create the login link URL using the `url` template tag and the name of the `login` URL configuration. Note also how we have appended `?next=\{{ request.path }}` to the end of the URL. What this does is add a URL parameter `next` containing the address (URL) of the _current_ page, to the end of the linked URL. After the user has successfully logged in, the view will use this `next` value to redirect the user back to the page where they first clicked the login link.
 
-The logout template code is different, because from Django 5 to log out you must `POST` to the `admin:logout` URL, using a form with a button.
+The logout template code is different, because from Django 5 to log out you must `POST` to the `logout` URL, using a form with a button.
 By default this would render as a button, but you can style the button to display as a link.
 For this example we're using _Bootstrap_, so we make the button look like a link by applying `class="btn btn-link"`.
 You also need to append the following styles to **/django-locallibrary-tutorial/catalog/static/css/styles.css** in order to correctly position the logout link next to all the other sidebar links:
@@ -626,12 +630,12 @@ class LoanedBooksByUserListView(LoginRequiredMixin,generic.ListView):
     def get_queryset(self):
         return (
             BookInstance.objects.filter(borrower=self.request.user)
-            .filter(status__exact='o')
+            .filter(status__exact=BookInstance.LoanStatus.ON_LOAN)
             .order_by('due_back')
         )
 ```
 
-In order to restrict our query to just the `BookInstance` objects for the current user, we re-implement `get_queryset()` as shown above. Note that "o" is the stored code for "on loan" and we order by the `due_back` date so that the oldest items are displayed first.
+In order to restrict our query to just the `BookInstance` objects for the current user, we re-implement `get_queryset()` as shown above. Note that `BookInstance.LoanStatus.ON_LOAN` is the stored code for "on loan" and we order by the `due_back` date so that the oldest items are displayed first.
 
 ### URL conf for on loan books
 
@@ -685,10 +689,10 @@ Open the base template (**/django-locallibrary-tutorial/catalog/templates/base_g
    {% if user.is_authenticated %}
    <li>User: \{{ user.get_username }}</li>
 
-   <li><a href="{% url 'my-borrowed' %}">My Borrowed</a></li>
+   <li><a href="{% url 'my-borrowed' %}">My borrowed</a></li>
 
    <li>
-     <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
+     <form id="logout-form" method="post" action="{% url 'logout' %}">
        {% csrf_token %}
        <button type="submit" class="btn btn-link">Logout</button>
      </form>
