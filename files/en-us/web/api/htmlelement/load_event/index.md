@@ -65,7 +65,11 @@ This example prints to the screen whenever the {{HtmlElement("img")}} element su
 ### HTML
 
 ```html
-<img id="image" alt="MDN logo" width="72" />
+<img
+  id="image"
+  src="/shared-assets/images/examples/favicon144.png"
+  alt="MDN logo"
+  width="72" />
 <div><button>Reload</button></div>
 ```
 
@@ -79,7 +83,6 @@ image.onload = () => {
 };
 
 document.querySelector("button").addEventListener("click", reload);
-reload();
 
 function reload() {
   image.src = "/shared-assets/images/examples/favicon144.png";
@@ -88,7 +91,7 @@ function reload() {
 
 ### Result
 
-The example sets the image's source after registering the handler so that it receives the initial `load` event as well as events from the Reload button.
+The example's `<img>` element contains an `src` attribute in the markup, so the image may load before the `load` event listener attaches. Clicking "reload" is guaranteed to trigger the event listener.
 
 {{EmbedLiveSample("Example", "100%", "200")}}
 
