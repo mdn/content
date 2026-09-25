@@ -88,7 +88,7 @@ Some notes worth calling out:
 
 - The `getElementById()` method matches IDs case-sensitively. The `getElementsByClassName()` method also matches case-sensitively, except in [quirks mode](/en-US/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode), where matching is ASCII case-insensitive.
 - In HTML documents, `getElementsByTagName()` lowercases the argument when matching HTML elements. Non-HTML elements (e.g., SVG) are still matched case-sensitively. In XML documents, all tag-name matching is case-sensitive. Note that the `tagName` of an HTML element in an HTML document is returned in uppercase, but internally it's still stored in lowercase.
-- The `class` attribute's value is a space-separated token list, and you can also specify a space-separated list for `getElementsByClassName()`. The `visitor` tests for a subset-of relationship: an element is matched if all of these class names are present on the element (extra class names on the element are also allowed).
+- The `class` attribute's value is a space-separated list of one or more class names. You can also specify a space-separated list for `getElementsByClassName()`, and the `visitor` tests for a subset-of relationship. That is, an element is matched if all of these class names are present on the element, and extra class names on the element are also allowed.
 - The `getElementsByTagName()` method takes the special `"*"` value to get all elements (i.e., apply no filtering).
 
 If you are familiar with [CSS selectors](/en-US/docs/Web/CSS/Guides/Selectors), these methods are the DOM equivalents of the ID, class, type, and universal selectors:
@@ -119,7 +119,12 @@ The `getElementById()` method is also available on {{domxref("DocumentFragment")
 
 ## Selecting elements with CSS selectors
 
-You can also directly use CSS selectors to select elements. Two methods are available on {{domxref("Document")}}, {{domxref("DocumentFragment")}}, and {{domxref("Element")}}: {{domxref("document.querySelector()")}} and {{domxref("document.querySelectorAll()")}}. Both methods search descendants, excluding the node on which they are called. The `querySelector()` method returns the first matching element; the `querySelectorAll()` method returns all matching elements in a _static {{domxref("NodeList")}}_. Again, we'll more formally introduce this collection in [Working with collections](#working_with_collections).
+You can also directly use CSS selectors to select elements. Two methods are available on {{domxref("Document")}}:
+
+- {{domxref("document.querySelector()")}}
+- {{domxref("document.querySelectorAll()")}}
+
+Both methods search descendants, excluding the node on which they are called. The `querySelector()` method returns the first matching element; the `querySelectorAll()` method returns all matching elements in a _static {{domxref("NodeList")}}_. Again, we'll more formally introduce this collection in [Working with collections](#working_with_collections).
 
 The selector methods accept [selectors](/en-US/docs/Web/CSS/Guides/Selectors) to determine what element or elements should be returned. This includes [selector lists](/en-US/docs/Web/CSS/Reference/Selectors/Selector_list) so you can group multiple selectors in a single query.
 
@@ -166,7 +171,7 @@ There are only two things to watch out for:
   // document.getElementById(id) needs no escaping.
   ```
 
-Calling `querySelector()` or `querySelectorAll()` on an element limits the returned elements to its descendants, but the selector is applied in the context of the entire document. For example, given this HTML:
+Both querying methods are also available on {{domxref("DocumentFragment")}} and {{domxref("Element")}}. Calling `querySelector()` or `querySelectorAll()` on an element limits the returned elements to its descendants, but the selector is applied in the context of the entire document. For example, given this HTML:
 
 ```html
 <div>
@@ -300,11 +305,22 @@ for (const descendant of element.querySelectorAll("*")) {
 }
 ```
 
-However, this is quite limited: you cannot visit non-elements like text or comments, and you cannot avoid visiting a particular subtree without writing complicated selectors. The DOM provides two interfaces for general traversal: {{domxref("NodeIterator")}} and {{domxref("TreeWalker")}}. Create these objects using {{domxref("Document/createNodeIterator", "document.createNodeIterator()")}} or {{domxref("Document/createTreeWalker", "document.createTreeWalker()")}}. Both methods take the same three arguments:
+However, this is quite limited: you cannot visit non-elements like text or comments, and you cannot avoid visiting a particular subtree without writing complicated selectors. The DOM provides two interfaces for general traversal: {{domxref("NodeIterator")}} and {{domxref("TreeWalker")}}. Create these objects using {{domxref("Document/createNodeIterator", "document.createNodeIterator()")}} or {{domxref("Document/createTreeWalker", "document.createTreeWalker()")}}. For example, the following example traverses all nodes, including text and comments:
+
+```js
+const nodeIterator = document.createNodeIterator(document);
+let node = nodeIterator.nextNode();
+while (node) {
+  console.log(node.nodeName);
+  node = nodeIterator.nextNode();
+}
+```
+
+Both methods take the same three arguments:
 
 - `root`: The node at which the traversal is rooted.
-- `whatToShow` {{optional_inline}}: Specifies which node types to return. A node that's not shown can still have descendants that are shown. It defaults to `NodeFilter.SHOW_ALL`.
-- `filter` {{optional_inline}}: A function, or an object with an `acceptNode(node)` method. The function can decide if a node should be skipped, and if so, whether its descendants should be skipped too (only for `TreeWalker`). It defaults to `null`, meaning no additional filtering.
+- `whatToShow` {{optional_inline}}: Specifies which node types to visit. A node that's not visited can still have descendants that are visited. It defaults to `NodeFilter.SHOW_ALL`.
+- `filter` {{optional_inline}}: A function, or an object with an `acceptNode(node)` method, to further restrict the nodes that get visited. The function can decide if a node should be skipped, and if so, whether its descendants should be skipped too (only for `TreeWalker`). It defaults to `null`, meaning no additional filtering.
 
 Both objects expose these settings through their read-only `root`, `whatToShow`, and `filter` properties.
 
