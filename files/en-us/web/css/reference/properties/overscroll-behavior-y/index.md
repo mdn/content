@@ -31,12 +31,16 @@ The `overscroll-behavior-y` property is specified as a keyword chosen from the l
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `auto`
-  - : The default scroll overflow behavior occurs as normal.
+  - : Allows the default behavior at a scroll boundary. Scrolling may continue in an another scroll container.
 - `contain`
-  - : Default scroll overflow behavior (e.g., "bounce" effects) is observed inside the element where this value is set. However, no {{Glossary("Scroll_chaining", "scroll chaining")}} occurs on neighboring scrolling areas; the underlying elements will not scroll. The `contain` value disables native browser navigation, including the vertical pull-to-refresh gesture and horizontal swipe navigation.
+  - : Prevents scrolling from continuing outside the scroll container. "Bounce" effects may still occur.
+- `chain`
+  - : Allows scrolling to continue outside the scroll container, but prevents overscroll "bounce" effects
 - `none`
-  - : No scroll chaining occurs to neighboring scrolling areas, and default scroll overflow behavior is prevented.
+  - : Prevents scrolling from continuing outside the scroll container and also prevents overscroll "bounce" effects.
 
 ## Formal definition
 
@@ -48,7 +52,13 @@ The `overscroll-behavior-y` property is specified as a keyword chosen from the l
 
 ## Examples
 
-### Preventing an underlying element from scrolling vertically
+### Preventing an underlying element from scrolling
+
+In our [overscroll-behavior example](https://mdn.github.io/css-examples/overscroll-behavior/) (see the [source code](https://github.com/mdn/css-examples/tree/main/overscroll-behavior) also), we present a full-page list of fake contacts, and a dialog box containing a chat window.
+
+![A popup chat window titled 'Active chat', showing a conversation between Chris and Bob. Behind the chat window is a contact list titled 'overscroll-behavior demo'.](example.png)
+
+Both of these areas scroll; normally if you scrolled the chat window until you hit a scroll boundary, the underlying contacts window would start to scroll too, which is not desirable. This can be stopped using `overscroll-behavior-y` (`overscroll-behavior` would also work) on the chat window, like this:
 
 ```css
 .messages {
@@ -58,7 +68,14 @@ The `overscroll-behavior-y` property is specified as a keyword chosen from the l
 }
 ```
 
-See {{cssxref("overscroll-behavior")}} for a full example and explanation.
+We also wanted to get rid of the standard overscroll effects when the contacts are scrolled to the top or bottom (e.g., Chrome on Android refreshes the page when you scroll past the top boundary). This can be prevented by setting `overscroll-behavior: none` on the {{htmlelement("html")}} element:
+
+```css
+html {
+  margin: 0;
+  overscroll-behavior: none;
+}
+```
 
 ## Specifications
 
