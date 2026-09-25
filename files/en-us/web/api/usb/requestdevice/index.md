@@ -36,7 +36,7 @@ requestDevice(options)
         - `protocolCode`
         - `serialNumber`
     - `exclusionFilters` {{optional_inline}}
-      - : An array of filter objects for devices to exclude from the pairing flow. These objects have the same properties as those in `filters`. Exclusion takes priority over inclusion.
+      - : An array of filter objects representing devices to exclude from the pairing flow. These objects have the same properties as those in `filters`. Exclusion takes priority over inclusion.
 
 ### Return value
 
@@ -76,7 +76,7 @@ navigator.usb
 
 ### Excluding devices
 
-The following example requests a device with vendor ID `0x1209`, excluding devices with product ID `0xa850`:
+The following example requests a device with vendor ID `0x1209`; it excludes devices with that vendor ID that have the product ID `0xa850`:
 
 ```js
 navigator.usb
