@@ -120,7 +120,21 @@ sidebar:
       - link: /Web/WebDriver/Reference/BiDi/Modules/permissions
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/script
+        details: closed
         code: true
+        children:
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/script#commands
+            title: Commands
+          - link: /Web/WebDriver/Reference/BiDi/Modules/script/getRealms
+            code: true
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/script#events
+            title: Events
+          - link: /Web/WebDriver/Reference/BiDi/Modules/script/realmCreated
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/script/realmDestroyed
+            code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/session
         details: closed
         code: true
