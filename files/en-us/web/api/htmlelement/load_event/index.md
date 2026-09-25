@@ -8,7 +8,7 @@ browser-compat: api.HTMLElement.load_event
 
 {{APIRef("HTML DOM")}}
 
-The **`load`** event fires for elements containing a resource when the resource has successfully loaded. Currently, the list of supported HTML elements are: {{HTMLElement("body")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, and {{HTMLElement("track")}}.
+The **`load`** event fires for elements containing a resource when the resource has successfully loaded. Currently, the list of supported HTML elements are: {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}}, and {{HTMLElement("track")}}.
 
 > [!NOTE]
 > The `load` event on {{domxref("HTMLBodyElement#event_handlers", "HTMLBodyElement")}} is actually an alias for the {{domxref("Window/load_event", "window.onload")}} event. Therefore, the `load` event will only fire on the `<body>` element once all of the document's resources have loaded or errored. However, for the sake of clarity, it is recommended that the event handler is attached to the `window` object directly rather than on `HTMLBodyElement`.
@@ -29,11 +29,17 @@ onload = (event) => { }
 
 A generic {{domxref("Event")}}.
 
-## Handling resources that have already loaded
+## Usage notes
+
+### Handling resources that have already loaded
 
 A resource may finish loading before your script registers a `load` event listener. In that case, the listener will not receive the event that has already fired.
 
-For an image, you can also check its {{domxref("HTMLImageElement.complete", "complete")}} and {{domxref("HTMLImageElement.naturalWidth", "naturalWidth")}} properties after registering the listener. The following example handles an image that is still loading or has already loaded successfully:
+For example, an image in the HTML may load while the browser is still receiving and parsing the rest of the document, before it reaches a subsequent script that registers the listener. The listener can also be registered too late if the script is loaded asynchronously or deferred, or if it waits for {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} before registering the listener. Server-rendered HTML using frameworks such as React or Vue can have the same issue because event handlers written in JSX or templates are compiled into JavaScript calls, not HTML event handler attributes.
+
+There are some ways to ensure that the event handler is registered as soon as possible, before the resource loads. For example, you can use an [HTML event handler attribute](/en-US/docs/Web/HTML/Reference/Attributes#event_handler_attributes) if you don't mind its undesirable aspects, or you can dynamically create the whole element in JavaScript and make sure the event listener is attached before starting the load (such as by assigning to `src` for images).
+
+Alternatively, when registering the event handler, you can check if the resource has already loaded—and if so, immediately trigger the handler. For an image, you can check its {{domxref("HTMLImageElement.complete", "complete")}} and {{domxref("HTMLImageElement.naturalWidth", "naturalWidth")}} properties after registering the listener. `complete` checks that the request completed; `naturalWidth > 0` ensures that an actual image was loaded.
 
 ```js
 const image = document.getElementById("image");
@@ -51,8 +57,6 @@ if (image.complete && image.naturalWidth > 0) {
   handleLoaded();
 }
 ```
-
-The `complete` property can also be `true` for an image that failed to load or has no source, so checking it alone is not sufficient. The `handled` flag prevents the callback's work from running twice if the image is complete but its `load` event has not yet been dispatched. This example handles the image once; it does not handle subsequent changes to its source.
 
 ## Examples
 
