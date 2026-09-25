@@ -48,6 +48,8 @@ A {{JSxRef("Promise")}} that resolves with an instance of {{DOMxRef("USBDevice")
 
 ## Examples
 
+### Requesting specific USB devices
+
 The following example looks for one of two USB devices. Notice that two product IDs are
 specified. Both are passed to `requestDevice()`. This triggers a user-agent
 flow that prompts the user to select a device for pairing. Only the selected device is
