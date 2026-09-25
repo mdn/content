@@ -19,29 +19,43 @@ Like all the `devtools` APIs, this API is only available to code running in the 
 
 ## Types
 
+- [`devtools.panels.Button`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/Button)
+  - : A button created by the extension.
 - [`devtools.panels.ElementsPanel`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel)
   - : Represents the HTML/CSS inspector in the browser's devtools.
 - [`devtools.panels.ExtensionPanel`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel)
   - : Represents a devtools panel created by the extension.
 - [`devtools.panels.ExtensionSidebarPane`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane)
   - : Represents a pane that an extension has added to the HTML/CSS inspector in the browser's devtools.
+- [`devtools.panels.SourcesPanel`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/SourcesPanel)
+  - : Represents the sources panel.
 
 ## Properties
 
 - [`devtools.panels.elements`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/elements)
   - : A reference to an [`ElementsPanel`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel) object.
+- [`devtools.panels.sources`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/sources)
+  - : A reference to an [`SourcesPanel`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/SourcesPanel) object.
 - [`devtools.panels.themeName`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/themeName)
-  - : The name of the current devtools theme.
+  - : The name of the active devtools theme.
 
 ## Functions
 
 - [`devtools.panels.create()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/create)
-  - : Creates a new devtools panel.
+  - : Creates a devtools panel.
+- [`devtools.panels.openResource()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/openResource)
+  - : Opens a URL in a devtools panel.
+- [`devtools.panels.setOpenResourceHandler()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/setOpenResourceHandler)
+  - : Specifies the function to call when the user clicks a resource link in the devtools window.
 
 ## Events
 
 - [`devtools.panels.onThemeChanged`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/onThemeChanged)
-  - : Fired when the devtools theme changes.
+  - : Fires when the devtools theme changes.
+
+## Example extensions
+
+- [devtools-panels](https://github.com/mdn/webextensions-examples/tree/master/devtools-panels)
 
 {{WebExtExamples("h2")}}
 
