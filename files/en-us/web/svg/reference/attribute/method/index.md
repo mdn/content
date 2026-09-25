@@ -8,6 +8,9 @@ sidebar: svgref
 
 The **`method`** attribute indicates the method by which text should be rendered along the path of a {{SVGElement("textPath")}} element.
 
+> [!NOTE]
+> This attribute currently has no effect on text rendering in browsers. Text is rendered as if `method="align"` were specified, even when the value is `stretch`.
+
 You can use this attribute with the following SVG elements:
 
 - {{SVGElement("textPath")}}
@@ -34,9 +37,9 @@ For {{SVGElement("textPath")}}, `method` indicates the method by which text shou
 </table>
 
 - align
-  - : This value indicates that the characters should be rendered so that they are not stretched or warped. The characters are rotated, scaled and stretched when they are rendered. As a result, for fonts with connected characters (e.g., cursive fonts), the connections may not align properly when text is rendered along the path.
+  - : This value indicates that the characters should be rendered so that they are not stretched or warped. The characters are rotated, scaled and translated when they are rendered. As a result, for fonts with connected characters (e.g., cursive fonts), the connections may not align properly when text is rendered along the path.
 - stretch
-  - : This value indicates that the character outlines will be converted into paths, and then stretched and possibly warped. With this approach, connected characters, such as in cursive fonts, will maintain their connections.
+  - : This value is rendered the same as `align` in browsers. The SVG specification defines it to indicate that the character outlines will be converted into paths, and then stretched and possibly warped. With this approach, connected characters, such as in cursive fonts, would maintain their connections.
 
 ## Specifications
 
