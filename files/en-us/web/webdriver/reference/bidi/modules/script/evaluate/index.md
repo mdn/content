@@ -54,7 +54,7 @@ The `params` field contains:
   - : A boolean that indicates how a promise returned by an expression is handled.
     - `true`: If the expression evaluates to a promise, the browser waits for the promise to settle and returns the resolved value.
       If the promise is rejected, the rejection reason is reported as an exception.
-    - `false`: The browser returns the promise object without waiting for the promise to settle.
+    - `false`: If the expression evaluates to a promise, the browser returns the promise object without waiting for the promise to settle.
 - `expression`
   - : A string that contains the JavaScript expression to evaluate.
 - `resultOwnership` {{optional_inline}}
@@ -232,8 +232,9 @@ The following fields are available in the `result` object in the response, depen
 - [`invalid argument`](/en-US/docs/Web/WebDriver/Reference/Errors/InvalidArgument)
   - : A required parameter is missing or has an invalid type.
 - `no such frame`
-  - : No context with the given `context` ID is found.
-    This error is also returned when no realm with the given `realm` ID is found.
+  - : Thrown in any of the following cases:
+    - No context with the given context ID is found.
+    - No realm with the given realm ID is found.
 
 ## Description
 
