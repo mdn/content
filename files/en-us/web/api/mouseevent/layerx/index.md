@@ -3,12 +3,10 @@ title: "MouseEvent: layerX property"
 short-title: layerX
 slug: Web/API/MouseEvent/layerX
 page-type: web-api-instance-property
-status:
-  - non-standard
 browser-compat: api.MouseEvent.layerX
 ---
 
-{{APIRef("Pointer Events")}}{{Non-standard_Header}}
+{{APIRef("Pointer Events")}}
 
 The **`MouseEvent.layerX`** read-only property returns the
 horizontal coordinate of the event relative to the current layer.
