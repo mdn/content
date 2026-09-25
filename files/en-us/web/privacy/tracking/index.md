@@ -5,7 +5,7 @@ page-type: guide
 sidebar: privacy
 ---
 
-**Tracking** is the practice of collecting and correlating information about a user's activities across multiple websites. This enables the tracker to build a profile of the user, which may include, or enable the tracker to deduce a great deal of personal information about them.
+**Tracking** is the practice of collecting and correlating information about a user's activities across multiple websites. This enables the tracker to build a profile of the user, which may include, or enable the tracker to deduce, a great deal of personal information about them.
 
 The motivation for tracking is that the record of a user's browsing history is valuable, especially to the advertising industry, as it enables them to serve ads that are highly targeted to a person's interests. However, tracking is one of the most significant web privacy problems, and as a result, browsers and browser extensions have attempted to prevent websites from tracking users.
 
