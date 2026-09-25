@@ -5,9 +5,9 @@ page-type: guide
 sidebar: jssidebar
 ---
 
-**Magic comments** (also called **comments directives**, **Magic comments**, **annotations**, etc.) are special types of [comments](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#comments) that are recognized by certain engines, bundlers, type checkers, debuggers, etc. (collectively referred to as _consumers_) to enable opt-in functionality. Due to their nature as comments, they are ignored by consumers that don't understand them.
+**Magic comments** (also called **comment directives**, **annotations**, etc.) are special types of [comments](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#comments) that are recognized by certain engines, bundlers, type checkers, debuggers, etc. (collectively referred to as _consumers_) to enable opt-in functionality. Because they're comments, consumers that don't understand them ignore them.
 
-Usually, magic comments are employed in contexts where their presence or absence do not alter the runtime behavior of the program—such as optimizing, enabling/disabling static checking, or providing additional metadata. _Directives_ are strings that do alter runtime behavior, including the standard [`"use strict"`](/en-US/docs/Web/JavaScript/Reference/Strict_mode) directive to opt into strict mode, React's [`"use server"` and `"use client"`](https://react.dev/reference/rsc/use-server) to determine if a component is executed server-side or client-side, etc.
+Usually, the presence or absence of magic comments doesn't change the program's runtime behavior—for example, they may optimize execution, enable/disable static checking, or provide additional metadata. This contrasts with _directives_, which are strings that do alter runtime behavior. Examples include the standard [`"use strict"`](/en-US/docs/Web/JavaScript/Reference/Strict_mode) directive to opt into strict mode and React's [`"use server"` and `"use client"`](https://react.dev/reference/rsc/use-server) directives that determine if a component is executed server-side or client-side.
 
 To avoid collision with regular comments, magic comments are usually marked by _sigils_, such as a leading `#` or `@` character: `//# my-setting-name` or `//@ my-setting-name`. The exact syntax varies between comment types.
 
@@ -30,12 +30,12 @@ The following pragma enables eager compilation of all functions in the current s
 
 The syntax and placement requirements are as follows:
 
-- This comment must placed at the beginning of the script before any code (not even whitespace; only other comments, single-line or block, are allowed to precede).
+- This comment must be placed at the beginning of the script before any code or whitespace (only other comments, single-line or block, are allowed to precede it).
 - The comment can be either a line comment or a block comment.
 - There must be no space between `#` and `//` or `/*`.
 - There can be any amount of whitespace before and after `allFunctionsCalledOnLoad`.
 
-This indicates that the functions in the file are likely to be called during page load, like the following:
+In the following example, the magic comment indicates that the functions in the file are likely to be called during page load:
 
 ```js
 //# allFunctionsCalledOnLoad
@@ -61,7 +61,7 @@ See also [Faster JavaScript Startup with Explicit Compile Hints](https://v8.dev/
 
 Source map annotations associate JavaScript code with source files, making generated, evaluated, or minified code easier to debug.
 
-They ae specified in the TC39 specification [ECMA-426 Source map format](https://tc39.es/ecma426/).
+They are specified in the TC39 specification [ECMA-426 Source map format](https://tc39.es/ecma426/).
 
 ### Source URLs
 
@@ -73,13 +73,13 @@ The following annotation gives a piece of code a URL identifier.
 
 The syntax and placement requirements are as follows:
 
-- This comment must placed at the _end_ of the script _after_ any code (other single-line comments, whitespace, and line terminators are allowed to follow).
+- This comment be must placed at the _end_ of the script _after_ any code (other single-line comments, whitespace, and line terminators are allowed to follow it).
 - The comment must be a line comment.
-- The sigil might be a `@` instead of `#`, but `#` is preferred (`//@` might conflict with Internet Explorer pragmas).
+- The sigil may be a `@` instead of `#`, but `#` is preferred (`//@` might conflict with [Internet Explorer pragmas](#legacy_conditional_compilation)).
 - There can be any amount of whitespace before and after `sourceURL=<url>`.
-- The `<url>` must not contain whitespace (they should be {{glossary("Percent-encoding", "percent-encoded")}} as `%20`).
+- The `<url>` must not contain whitespace characters (they should be {{glossary("Percent-encoding", "percent-encoded")}} as `%20`).
 
-This is especially useful for code not originating from resources already associated with URLs, such as code executed with {{jsxref("Global_Objects/eval", "eval()")}}:
+Source URLs are especially useful for code not originating from resources already associated with URLs, such as code executed with {{jsxref("Global_Objects/eval", "eval()")}}:
 
 ```js
 eval(
@@ -96,7 +96,7 @@ Uncaught Error: error
     <anonymous> debugger eval code:1
 ```
 
-This annotation is used by many features, primarily associated with debugging:
+This annotation is used by many features and is primarily associated with debugging:
 
 - Console/debugger output, as demonstrated above.
 - The `Error` {{jsxref("Error/stack", "stack")}} property.
@@ -144,6 +144,7 @@ const point = /*#__PURE__*/ createPoint(1, 2);
 Without the annotation, the bundler may need to keep the function call even if the result variable, `point`, isn't used:
 
 ```js
+// -- Compiler output --
 function createPoint(x, y) {
   return { x, y };
 }
@@ -167,7 +168,7 @@ In this example, the `createPoint()` call is pure, and bundlers know that evalua
 
 See also [esbuild's pure annotations](https://esbuild.github.io/api/#pure) and [Terser's annotations](https://terser.org/docs/miscellaneous/#annotations).
 
-Some bundlers also recognizes `/*#__NO_SIDE_EFFECTS__*/` and `/*@__NO_SIDE_EFFECTS__*/`, which annotate a function declaration, or a supported variable declaration containing a function, so calls to that function can be treated as side-effect-free:
+Some bundlers also recognize `/*#__NO_SIDE_EFFECTS__*/` and `/*@__NO_SIDE_EFFECTS__*/`, which annotate a function declaration, or a supported variable declaration containing a function, so calls to that function can be treated as side-effect-free:
 
 ```js
 /*#__NO_SIDE_EFFECTS__*/
@@ -185,9 +186,9 @@ There are two important minimization techniques which may be unsafe to apply: _i
 You can use `/*@__INLINE__*/` and `/*@__NOINLINE__*/` on particular function calls to opt-in or opt-out of inlining. Things to consider:
 
 - Inlining may improve call performance because it avoids pushing/popping stack frames. However, the engine itself is capable of inlining and source-level inlining may change its decisions in unpredictable ways.
-- Inlining may decrease the bundle size if the function is only used once, and or increase it if the function is used many times. Minimizers usually make decisions that optimize bundle size.
+- Inlining may decrease the bundle size if the function is used only once, and increase it if the function is used many times. Minimizers usually make decisions that optimize bundle size.
 
-During property mangling, the minimizer globally replaces property names with shorter strings (while keeping distinct property names distinct). This is unsafe because the object may be accessible to the outside (passed to external functions, returned from exported functions, etc.), so they are usually opt-in. If you opt into mangling, you probably want to constrain to name patterns that are known to be internal, such as names prefixed with underscores.
+During property mangling, the minimizer globally replaces property names with shorter strings (while keeping distinct property names distinct). This is unsafe because the object may be accessible outside (passed to external functions, returned from exported functions, etc.), so they are usually opt-in. If you opt into mangling, you probably want to constrain mangling to name patterns known to be internal, such as names prefixed with underscores.
 
 The `/*@__KEY__*/` annotation marks a string literal as a property name to rename. By default, the minimizer can only check for specific syntaxes, so strings passed to arbitrary functions must be explicitly marked.
 
