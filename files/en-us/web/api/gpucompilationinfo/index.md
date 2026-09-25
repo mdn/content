@@ -31,7 +31,7 @@ struct VertexOut {
 
 @vertex
 fn vertex_main(@location(0) position: vec4f,
-               @location(1) color: vec4f -> VertexOut
+               @location(1) color: vec4f) -> VertexOut
 {
   var output : VertexOut;
   output.position = position;
