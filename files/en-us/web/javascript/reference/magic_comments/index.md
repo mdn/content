@@ -5,7 +5,7 @@ page-type: guide
 sidebar: jssidebar
 ---
 
-**Magic comments** (also called **comment directives**, **annotations**, etc.) are special types of [comments](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#comments) that are recognized by certain engines, bundlers, type checkers, debuggers, etc. (collectively referred to as _consumers_) to enable opt-in functionality. Because they're comments, consumers that don't understand them ignore them.
+**Magic comments** (also called **comment directives**, **annotations**, etc.) are special types of [comments](/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#comments) that are recognized by certain engines, bundlers, type checkers, debuggers, etc. (collectively referred to as _consumers_) to enable opt-in functionality. Because they're comments, consumers that don't understand them ignore them. This article introduces the various types of magic comments commonly seen in JavaScript source code and their intended consumers.
 
 Usually, the presence or absence of magic comments doesn't change the program's runtime behavior—for example, they may optimize execution, enable/disable static checking, or provide additional metadata. This contrasts with _directives_, which are strings that do alter runtime behavior. Examples include the standard [`"use strict"`](/en-US/docs/Web/JavaScript/Reference/Strict_mode) directive to opt into strict mode and React's [`"use server"` and `"use client"`](https://react.dev/reference/rsc/use-server) directives that determine if a component is executed server-side or client-side.
 
