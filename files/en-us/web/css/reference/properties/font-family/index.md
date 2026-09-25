@@ -132,6 +132,9 @@ font-family: "Gill Sans Extrabold", sans-serif;
 
         For example: Brush Script MT, Brush Script Std, Lucida Calligraphy, Lucida Handwriting, Apple Chancery, cursive.
 
+        > [!NOTE]
+        > On Windows, browsers use Comic Sans MS as the `cursive` font, a casual font with completely disconnected glyphs.
+
     - `fantasy`
       - : Fantasy fonts are primarily decorative fonts that contain playful representations of characters.
 
