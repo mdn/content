@@ -25,6 +25,8 @@ In the DOM, this attribute is reflected as {{domxref("HTMLElement.containerTimin
 </section>
 ```
 
+For examples on how to use the Container Timing API to get timing information, see {{domxref("PerformanceContainerTiming")}}.
+
 ## Specifications
 
 {{Specifications}}

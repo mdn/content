@@ -18,7 +18,7 @@ A string.
 
 ## Examples
 
-### Logging the value of `containerTiming`
+### Marking an element as a container
 
 In this example, adding the [`containertiming`](/en-US/docs/Web/HTML/Reference/Global_attributes/containertiming) attribute to the {{htmlelement("section")}} element sets it up as a container root.
 
@@ -28,14 +28,7 @@ In this example, adding the [`containertiming`](/en-US/docs/Web/HTML/Reference/G
 </section>
 ```
 
-You can get the string value of the `containertiming` HTML attribute by calling `el.containerTiming`.
-
-```js
-const el = document.getElementById("hero-section");
-console.log(el.containerTiming); // "hero"
-```
-
-For a more complete example on how to use the Container Timing API, see {{domxref("PerformanceContainerTiming")}}.
+For examples on how to use the Container Timing API to get timing information, see {{domxref("PerformanceContainerTiming")}}.
 
 ## Specifications
 

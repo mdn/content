@@ -24,17 +24,17 @@ This example demonstrates that `rootElement` always returns the same container r
 
 #### HTML
 
-First we define a {{htmlelement("section")}} element that is marked as a container root with the `containertiming` attribute identified as `"hero"`, along with two buttons: one to add more content to the container, and one to reset it.
+First we define a {{htmlelement("section")}} element that is marked as a container root with the `containertiming` attribute identified as `"hero"`, along with a button to reset the example.
 
 ```html
+<button id="reset">Reset</button>
 <section containertiming="hero">
   <h2>Hero content</h2>
 </section>
-<button id="add">Add element</button>
-<button id="reset">Reset</button>
 ```
 
 Note that there is also hidden HTML (and code) for displaying log information.
+New log entries are added at the top of the log.
 
 ```html hidden
 <pre id="log"></pre>
@@ -52,8 +52,7 @@ Note that there is also hidden HTML (and code) for displaying log information.
 ```js hidden
 const logElement = document.querySelector("#log");
 function log(text) {
-  logElement.innerText = `${logElement.innerText}${text}\n`;
-  logElement.scrollTop = logElement.scrollHeight;
+  logElement.innerText = `${text}\n${logElement.innerText}`;
 }
 ```
 
@@ -64,7 +63,6 @@ It then creates a {{domxref("PerformanceObserver")}} that logs each entry's `roo
 
 ```js
 const container = document.querySelector("section");
-let count = 0;
 
 if (PerformanceObserver.supportedEntryTypes.includes("container")) {
   const observer = new PerformanceObserver((list) => {
@@ -78,16 +76,28 @@ if (PerformanceObserver.supportedEntryTypes.includes("container")) {
 }
 ```
 
-We then define click event handlers to add a new paragraph to the container, triggering a new paint event and timing entry, and to reset the example.
+We then use {{domxref("Window.setInterval()", "setInterval()")}} to add a new paragraph to the container every second, stopping after five paragraphs.
+Each paragraph triggers a new paint and timing entry.
+Note that we add content on a timer rather than when the user clicks a button, because no entries are reported after the user interacts with the page (see [Reporting stops after scrolling or user input](/en-US/docs/Web/API/PerformanceContainerTiming#reporting_stops_after_scrolling_or_user_input)).
 
 ```js
-document.querySelector("#add").addEventListener("click", () => {
+const maxParagraphs = 5;
+let count = 0;
+
+const timer = setInterval(() => {
   count++;
   const paragraph = document.createElement("p");
   paragraph.textContent = `New paragraph ${count}`;
   container.appendChild(paragraph);
-});
+  if (count >= maxParagraphs) {
+    clearInterval(timer);
+  }
+}, 1000);
+```
 
+Last of all we add a click event handler to reset the example by reloading the page.
+
+```js
 document.querySelector("#reset").addEventListener("click", () => {
   window.location.reload(true);
 });
@@ -95,11 +105,11 @@ document.querySelector("#reset").addEventListener("click", () => {
 
 #### Result
 
-Click "Add element" to add new elements.
-Each element should trigger a new log confirming that `rootElement` still refers to the same container root.
-Then click "Reset" to restart the example.
+A new paragraph is added every second.
+Each paragraph should trigger a new log confirming that `rootElement` still refers to the same container root.
+Click "Reset" to restart the example.
 
-{{EmbedLiveSample("Logging the root element of a container", "100%", 400)}}
+{{EmbedLiveSample("Logging the root element of a container", "100%", 550)}}
 
 ## Specifications
 

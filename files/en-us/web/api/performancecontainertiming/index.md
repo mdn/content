@@ -60,6 +60,7 @@ This interface gives web developers tools to measure rendering timestamps for gr
 It is useful for analyzing the time to display a web component as a whole, such as a UI widget made up of multiple sub elements, as these can't be represented effectively by observers that track the paint time of individual elements, or those than track loading of the whole page.
 
 A container that paints its nested elements over multiple frames generates a sequence of `PerformanceContainerTiming` entries: at most one per rendering frame.
+The sequence ends when the user scrolls or interacts with the page (see [Reporting stops after scrolling or user input](#reporting_stops_after_scrolling_or_user_input)).
 
 Each entry in the sequence reflects a different paint, so the {{domxref("PerformanceContainerTiming.paintTime", "paintTime")}} and inherited {{domxref("PerformanceEntry.startTime", "startTime")}} change from one entry to the next ({{domxref("PerformanceContainerTiming.firstRenderTime", "firstRenderTime")}} is the same across every entry reported for that container root since it was registered).
 The {{domxref("PerformanceContainerTiming.intersectionRect", "intersectionRect")}} and {{domxref("PerformanceContainerTiming.size", "size")}} describe the container's accumulated painted region since it was registered, while the {{domxref("PerformanceContainerTiming.lastPaintedElement")}} indicates the element that contributed most to the current entry.
@@ -138,13 +139,24 @@ This includes:
 - A paint that's fully clipped away
 - An element that repaints an area that is already in the region
 - A repaint of an element after its first paint
-- Scrolling an element into view that was outside the viewport when it was first rendered
-
-This last point means that the accumulated painted region may not precisely reflect all parts of the container, and that you will not get entries for elements in the container even though they later become visible on screen.
-You may however get entries if you add an element in the container to a previously clipped area.
 
 In addition, entries are not generated for content inside a [shadow tree](/en-US/docs/Web/API/Web_components/Using_shadow_DOM), even if the container root itself is inside that shadow tree.
 Container timing also doesn't cross frame boundaries: content inside a cross-origin {{htmlelement("iframe")}} isn't exposed to a container root in the parent frame.
+
+No entries are generated at all after the user scrolls or interacts with the page, as described in the next section.
+
+### Reporting stops after scrolling or user input
+
+Entries are only reported until the user first scrolls or interacts with the page, such as by clicking or pressing a key.
+Scrolling includes scrolling any scrollable element in the page, as well as scrolling the page itself.
+After that, no further entries are generated.
+
+This is because the API is designed to measure how long it takes for content to appear as it loads.
+Once the user has interacted with the page, times measured from the {{domxref("Performance.timeOrigin", "time origin")}} include time spent by the user, so they are no longer a useful measure of rendering performance.
+
+This also means that the accumulated painted region only ever includes content that was painted inside the viewport before the user scrolled.
+Content that is outside the viewport when it is painted, such as content below the fold, is never reported, even if the user later scrolls it into view.
+The {{domxref("PerformanceContainerTiming.intersectionRect", "intersectionRect")}} and {{domxref("PerformanceContainerTiming.size", "size")}} therefore indicate how much of the container rendered within the viewport, rather than how much of the whole container rendered.
 
 ### Container lifecycle
 
@@ -183,7 +195,7 @@ Note that there is also hidden HTML (and code) for displaying log information.
 
 ```css hidden
 #log {
-  height: 150px;
+  height: 50px;
   overflow: scroll;
   padding: 0.5rem;
   border: 1px solid black;
@@ -222,25 +234,25 @@ if (PerformanceObserver.supportedEntryTypes.includes("container")) {
 
 The log below shows the `identifier`, `size`, and `startTime` reported for each of the two containers.
 
-{{EmbedLiveSample("Observing container render times", "100%", 250)}}
+{{EmbedLiveSample("Observing container render times", "100%", 200)}}
 
 ### Observing how entries change as a container grows
 
-This example logs the properties an entry for a single container that you can grow by pressing a button.
+This example logs the properties of each entry for a single container, which grows as new content is added to it on a timer.
 
 #### HTML
 
-First we define a {{htmlelement("section")}} element that is marked as a container root with the `containertiming` attribute identified as `"hero"`, along with two buttons: one to add more content to the container, and one to reset it.
+First we define a {{htmlelement("section")}} element that is marked as a container root with the `containertiming` attribute identified as `"hero"`, along with a button to reset the example.
 
 ```html
+<button id="reset">Reset</button>
 <section containertiming="hero">
   <h2>Hero content</h2>
 </section>
-<button id="add">Add element</button>
-<button id="reset">Reset</button>
 ```
 
 Note that there is also hidden HTML (and code) for displaying log information.
+New log entries are added at the top of the log.
 
 ```html hidden
 <pre id="log"></pre>
@@ -258,20 +270,18 @@ Note that there is also hidden HTML (and code) for displaying log information.
 ```js hidden
 const logElement = document.querySelector("#log");
 function log(text) {
-  logElement.innerText = `${logElement.innerText}${text}\n`;
-  logElement.scrollTop = logElement.scrollHeight;
+  logElement.innerText = `${text}\n${logElement.innerText}`;
 }
 ```
 
 #### JavaScript
 
 The following code first checks if there are any `"container"` entries: if not, it logs that the feature is not supported.
-It then creates a {{domxref("PerformanceObserver")}} that logs a numbered line for each entry and its properties.
+It then creates a {{domxref("PerformanceObserver")}} that logs a numbered set of lines for each entry and its properties.
 The `presentationTime` is implementation-dependent, so the code logs `n/a` when the browser doesn't provide a value (the property may be `null` or `0`).
 
 ```js
 const container = document.querySelector("section");
-let count = 0;
 let entryNumber = 0;
 
 const formatTime = (time) => (time ? time.toFixed(1) : "n/a");
@@ -283,15 +293,15 @@ if (PerformanceObserver.supportedEntryTypes.includes("container")) {
     for (const entry of list.getEntries()) {
       const rect = entry.intersectionRect;
       log(
-        `#${++entryNumber} id: ${entry.identifier}, rootElement: ${formatElement(entry.rootElement)}, firstRenderTime: ${formatTime(entry.firstRenderTime)}`,
+        [
+          `#${++entryNumber} id: ${entry.identifier}, rootElement: ${formatElement(entry.rootElement)}, firstRenderTime: ${formatTime(entry.firstRenderTime)}`,
+          `  paintTime: ${formatTime(entry.paintTime)}`,
+          `  presentationTime: ${formatTime(entry.presentationTime)}`,
+          `  size: ${entry.size}`,
+          `  intersectionRect: ${rect.width.toFixed(1)}(w) x ${rect.height.toFixed(1)}(h)`,
+          `  lastPaintedElement: ${formatElement(entry.lastPaintedElement)}`,
+        ].join("\n"),
       );
-      log(`  paintTime: ${formatTime(entry.paintTime)}`);
-      log(`  presentationTime: ${formatTime(entry.presentationTime)}`);
-      log(`  size: ${entry.size}`);
-      log(
-        `  intersectionRect: ${rect.width.toFixed(1)}(w) x ${rect.height.toFixed(1)}(h)`,
-      );
-      log(`  lastPaintedElement: ${formatElement(entry.lastPaintedElement)}`);
     }
   });
   observer.observe({ type: "container", buffered: true });
@@ -300,17 +310,30 @@ if (PerformanceObserver.supportedEntryTypes.includes("container")) {
 }
 ```
 
-We then define click event handlers to add a new paragraph to the container, triggering a new paint event and timing entry, and to reset the example.
+We then use {{domxref("Window.setInterval()", "setInterval()")}} to add a new paragraph to the container every second, stopping after five paragraphs.
+Each paragraph triggers a new paint and timing entry.
 The paragraphs have increasing amounts of text, so the painted area grows by a different amount each time.
 
+Note that we add content on a timer rather than when the user clicks a button, because no entries are reported after the user interacts with the page.
+
 ```js
-document.querySelector("#add").addEventListener("click", () => {
+const maxParagraphs = 5;
+let count = 0;
+
+const timer = setInterval(() => {
   count++;
   const paragraph = document.createElement("p");
-  paragraph.textContent = `New paragraph ${count}. ${"Some more text. ".repeat(count * 3)}`;
+  paragraph.textContent = `New paragraph ${count}. ${"Text. ".repeat(count * 3)}`;
   container.appendChild(paragraph);
-});
+  if (count >= maxParagraphs) {
+    clearInterval(timer);
+  }
+}, 1000);
+```
 
+Last of all we add a click event handler to reset the example by reloading the page.
+
+```js
 document.querySelector("#reset").addEventListener("click", () => {
   window.location.reload(true);
 });
@@ -318,10 +341,138 @@ document.querySelector("#reset").addEventListener("click", () => {
 
 #### Result
 
-Click "Add element" to add new paragraphs, and compare the values in each log entry.
+A new paragraph is added every second: compare the values in each log entry as the container grows.
 Click "Reset" to restart the example.
 
-{{EmbedLiveSample("Observing how entries change as a container grows", "100%", 400)}}
+Note that if you click, press a key, or scroll inside the example, no further entries are reported until you reset it.
+
+{{EmbedLiveSample("Observing how entries change as a container grows", "100%", 600)}}
+
+### Observing that scrolling stops reporting
+
+This example demonstrates that entries stop being reported for a container after the user scrolls, even though new content is still being painted into it.
+
+#### HTML
+
+First we define a small scrollable {{htmlelement("div")}}, a button to reset the example, and a {{htmlelement("section")}} element that is marked as a container root with the `containertiming` attribute identified as `"hero"`.
+
+```html
+<div id="scroll-box">
+  <p>Scroll this box to stop reporting.</p>
+  <p>Keep scrolling…</p>
+  <p>…nearly there…</p>
+  <p>…end of the box.</p>
+</div>
+<button id="reset">Reset</button>
+<section containertiming="hero">
+  <h2>Hero content</h2>
+</section>
+```
+
+```css
+#scroll-box {
+  width: 250px;
+  height: 3rem;
+  overflow: auto;
+  border: 1px solid black;
+}
+
+section p {
+  margin: 0;
+}
+```
+
+Note that there is also hidden HTML (and code) for displaying log information.
+New log entries are added at the top of the log.
+
+```html hidden
+<pre id="log"></pre>
+```
+
+```css hidden
+#log {
+  height: 150px;
+  overflow: scroll;
+  padding: 0.5rem;
+  border: 1px solid black;
+}
+```
+
+```js hidden
+const logElement = document.querySelector("#log");
+function log(text) {
+  logElement.innerText = `${text}\n${logElement.innerText}`;
+}
+```
+
+#### JavaScript
+
+The following code first checks if there are any `"container"` entries: if not, it logs that the feature is not supported.
+It then creates a {{domxref("PerformanceObserver")}} that logs the `size` and `paintTime` of each entry.
+
+```js
+const container = document.querySelector("section");
+
+if (PerformanceObserver.supportedEntryTypes.includes("container")) {
+  const observer = new PerformanceObserver((list) => {
+    for (const entry of list.getEntries()) {
+      log(
+        `Entry: size: ${entry.size}, paintTime: ${entry.paintTime.toFixed(1)}`,
+      );
+    }
+  });
+  observer.observe({ type: "container", buffered: true });
+} else {
+  log("This feature is not supported by your browser.");
+}
+```
+
+We then use {{domxref("Window.setInterval()", "setInterval()")}} to add a new paragraph to the container every second, stopping after ten paragraphs.
+Each paragraph is logged when it is added, so you can see whether it is followed by a new entry.
+
+```js
+const maxParagraphs = 10;
+let count = 0;
+
+const timer = setInterval(() => {
+  count++;
+  const paragraph = document.createElement("p");
+  paragraph.textContent = `New paragraph ${count}`;
+  container.appendChild(paragraph);
+  log(`Added paragraph ${count}`);
+  if (count >= maxParagraphs) {
+    clearInterval(timer);
+  }
+}, 1000);
+```
+
+Next we log the first time the user scrolls the scrollable `<div>`, so you can see when reporting stops.
+
+```js
+document.querySelector("#scroll-box").addEventListener(
+  "scroll",
+  () => {
+    log("Scrolled: no further entries expected");
+  },
+  { once: true },
+);
+```
+
+Last of all we add a click event handler to reset the example by reloading the page.
+
+```js
+document.querySelector("#reset").addEventListener("click", () => {
+  window.location.reload(true);
+});
+```
+
+#### Result
+
+At first, each added paragraph is followed by a new entry.
+Scroll the box at any point: paragraphs are still added after that, but no further entries are logged.
+Click "Reset" to restart the example.
+
+{{EmbedLiveSample("Observing that scrolling stops reporting", "100%", 550)}}
 
 ## Specifications
 
