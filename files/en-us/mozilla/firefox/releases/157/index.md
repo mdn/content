@@ -35,6 +35,7 @@ Firefox 157 is the current [Beta version of Firefox](https://www.firefox.com/en-
 ### CSS
 
 - The [`at-rule()`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#at-rule) function in the {{cssxref("@supports")}} at-rule lets you test whether the browser supports a given CSS at-rule, for example @supports at-rule(@scope). It also works in the [`supports()`](/en-US/docs/Web/CSS/Reference/At-rules/@import#supports-condition) function of {{cssxref("@import")}} CSS at-rule. ([Firefox bug 2060755](https://bugzil.la/2060755)).
+- The {{cssxref("overscroll-behavior")}} shorthand property and the {{cssxref("overscroll-behavior-block")}}, {{cssxref("overscroll-behavior-inline")}}, {{cssxref("overscroll-behavior-x")}} and {{cssxref("overscroll-behavior-y")}} longhand properties now support the [`chain`](/en-US/docs/Web/CSS/Reference/Properties/overscroll-behavior#chain) value. This gives all the options for controlling what happens when an in page element has scroll. The `chain` value adds the ability for the scroll to pass to another scrollable area, but does not allow the browsers default behavior (such as "bounce") when reaching the boundary. ([Firefox bug 2036966](https://bugzil.la/2036966)).
 
 <!-- #### Removals -->
 
