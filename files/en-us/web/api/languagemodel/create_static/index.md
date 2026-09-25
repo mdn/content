@@ -270,7 +270,7 @@ const response = await session.prompt("What's the weather like in Tokyo?");
 console.log(response);
 ```
 
-### Cancelling a session
+### Canceling a session
 
 The following example enables a user to cancel a prompt. It does this by first creating an {{domxref("AbortController")}} and assigning its `abort()` method to a cancel button's click handler. Next, it calls `create()` and passes `AbortController.signal` as the `signal` property.
 
@@ -291,7 +291,7 @@ const session = await LanguageModel.create({
 });
 ```
 
-See also [Using the Prompt API > Cancelling operations and destroying instances](/en-US/docs/Web/API/Prompt_API/Using#cancelling_operations_and_destroying_instances).
+See also [Using the Prompt API > Canceling operations and destroying instances](/en-US/docs/Web/API/Prompt_API/Using#canceling_operations_and_destroying_instances).
 
 ## Specifications
 

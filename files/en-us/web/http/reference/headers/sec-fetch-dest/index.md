@@ -53,6 +53,7 @@ Sec-Fetch-Dest: script
 Sec-Fetch-Dest: serviceworker
 Sec-Fetch-Dest: sharedworker
 Sec-Fetch-Dest: style
+Sec-Fetch-Dest: text
 Sec-Fetch-Dest: track
 Sec-Fetch-Dest: video
 Sec-Fetch-Dest: webidentity
@@ -88,7 +89,7 @@ Servers should ignore this header if it contains any other value.
 - `image`
   - : The destination is an image. This might originate from an HTML {{HTMLElement("img")}}, SVG {{SVGElement("image")}}, CSS {{cssxref("background-image")}}, CSS {{cssxref("cursor")}}, CSS {{cssxref("list-style-image")}}, etc.
 - `json`
-  - : The destination is JSON. This might originate from [importing a module from JavaScript with the `type: "json"` attribute](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#importing_json_modules_with_the_type_attribute).
+  - : The destination is JSON. This might originate from a JavaScript [`import with { type: "json" }`](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#json_modules_type_json).
 - `manifest`
   - : The destination is a manifest. This might originate from an HTML [\<link rel=manifest>](/en-US/docs/Web/HTML/Reference/Attributes/rel/manifest).
 - `object`
@@ -104,7 +105,9 @@ Servers should ignore this header if it contains any other value.
 - `sharedworker`
   - : The destination is a shared worker. This might originate from a {{domxref("SharedWorker")}}.
 - `style`
-  - : The destination is a style. This might originate from an HTML {{HTMLElement("link","&lt;link rel=stylesheet&gt;")}} or a CSS {{cssxref("@import")}}.
+  - : The destination is a style. This might originate from an HTML {{HTMLElement("link","&lt;link rel=stylesheet&gt;")}}, a CSS {{cssxref("@import")}}, or a JavaScript [`import with { type: "css" }`](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#css_modules_type_css).
+- `text`
+  - : The destination is plain text. This might originate from a JavaScript [`import with { type: "text" }`](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#text_modules_type_text).
 - `track`
   - : The destination is an HTML text track. This might originate from an HTML {{HTMLElement("track")}} tag.
 - `video`

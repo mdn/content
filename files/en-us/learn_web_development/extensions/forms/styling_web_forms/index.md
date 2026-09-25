@@ -62,6 +62,8 @@ The article [Advanced form styling](/en-US/docs/Learn_web_development/Extensions
 - Date-related controls such as [`<input type="datetime-local">`](/en-US/docs/Web/HTML/Reference/Elements/input/datetime-local)
 - [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range)
 - [`<input type="file">`](/en-US/docs/Web/HTML/Reference/Elements/input/file)
+  > [!NOTE]
+  > The button that opens the file picker can be styled with {{cssxref("::file-selector-button")}}. The text beside it, which names the selected file, cannot.
 - Elements involved in creating dropdown widgets, including {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} and {{HTMLElement("datalist")}}.
   > [!NOTE]
   > Some browsers now support [Customizable select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), a set of HTML and CSS features that together enable full customization of `<select>` elements and their contents just like any regular DOM elements.
@@ -400,7 +402,7 @@ textarea {
 }
 ```
 
-When one of these fields gains focus, we highlight them with a light grey, transparent, background (it is always important to have focus style, for usability and keyboard accessibility):
+When one of these fields gains focus, we highlight them with a light gray, transparent, background (it is always important to have focus style, for usability and keyboard accessibility):
 
 ```css
 input:focus,

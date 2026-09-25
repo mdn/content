@@ -8725,6 +8725,7 @@
 /en-US/docs/Web/API/FetchEvent.respondWith(any_value)	/en-US/docs/Web/API/FetchEvent/respondWith
 /en-US/docs/Web/API/FetchEvent/client	/en-US/docs/Web/API/FetchEvent/clientId
 /en-US/docs/Web/API/FetchEvent/navigationPreload	/en-US/docs/Web/API/FetchEvent/preloadResponse
+/en-US/docs/Web/API/FetchEvent/replacesClientId	/en-US/docs/Web/API/FetchEvent
 /en-US/docs/Web/API/FetchEvent_clone	/en-US/docs/Web/API/FetchEvent
 /en-US/docs/Web/API/FetchSignal	/en-US/docs/Web/API/AbortSignal
 /en-US/docs/Web/API/FetchSignal/aborted	/en-US/docs/Web/API/AbortSignal/aborted
@@ -15053,6 +15054,7 @@
 /en-US/docs/Web/HTTP/Range_requests	/en-US/docs/Web/HTTP/Guides/Range_requests
 /en-US/docs/Web/HTTP/Redirections	/en-US/docs/Web/HTTP/Guides/Redirections
 /en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy/document-domain	/en-US/docs/Web/HTTP/Reference/Headers/Permissions-Policy
+/en-US/docs/Web/HTTP/Reference/Status/102	/en-US/docs/Web/HTTP/Reference/Status#102_processing
 /en-US/docs/Web/HTTP/Resources_and_URIs	/en-US/docs/Web/HTTP/Guides/MIME_types
 /en-US/docs/Web/HTTP/Resources_and_specifications	/en-US/docs/Web/HTTP/Reference/Resources_and_specifications
 /en-US/docs/Web/HTTP/Response_codes	/en-US/docs/Web/HTTP/Reference/Status
@@ -15061,7 +15063,7 @@
 /en-US/docs/Web/HTTP/Status	/en-US/docs/Web/HTTP/Reference/Status
 /en-US/docs/Web/HTTP/Status/100	/en-US/docs/Web/HTTP/Reference/Status/100
 /en-US/docs/Web/HTTP/Status/101	/en-US/docs/Web/HTTP/Reference/Status/101
-/en-US/docs/Web/HTTP/Status/102	/en-US/docs/Web/HTTP/Reference/Status/102
+/en-US/docs/Web/HTTP/Status/102	/en-US/docs/Web/HTTP/Reference/Status#102_processing
 /en-US/docs/Web/HTTP/Status/103	/en-US/docs/Web/HTTP/Reference/Status/103
 /en-US/docs/Web/HTTP/Status/200	/en-US/docs/Web/HTTP/Reference/Status/200
 /en-US/docs/Web/HTTP/Status/201	/en-US/docs/Web/HTTP/Reference/Status/201

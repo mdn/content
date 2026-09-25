@@ -416,7 +416,7 @@ Git (and GitHub) use repositories ("repos") as the top level "bucket" for storin
 Repositories can be public, in which case the code is visible to everyone on the internet, or private, in which case they are restricted to the owning organization or user account.
 
 All work is done on a particular "branch" of code in your repo.
-When you want to backup some changes to a branch you can create a "commit", which stores all changes since your last commit to the current branch.
+When you want to back up some changes to a branch you can create a "commit", which stores all changes since your last commit to the current branch.
 
 The repo is created with a default branch named "main". You can spawn other branches off this using git, which initially have all the commits of the original branch.
 You can evolve branches separately by adding commits, and then later on use a "Pull Request" (PR) on GitHub to merge changes from one branch to another.

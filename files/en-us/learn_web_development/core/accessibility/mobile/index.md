@@ -282,7 +282,7 @@ let initialMouseX = null;
 
 let initialMouseY = null;
 
-var initialBoxX, initialBoxY, rAF;
+let initialBoxX, initialBoxY, rAF;
 
 div.addEventListener("mousedown", () => {
   initialBoxX = div.offsetLeft;
@@ -302,10 +302,10 @@ function movePanel() {
 
     let offsetX = initialBoxX + mouseMoveX;
     let offsetY = initialBoxY + mouseMoveY;
-    console.log(offsetX + " " + offsetY);
+    console.log(`${offsetX} ${offsetY}`);
 
-    div.style.left = offsetX + "px";
-    div.style.top = offsetY + "px";
+    div.style.left = `${offsetX}px`;
+    div.style.top = `${offsetY}px`;
   }
 
   rAF = requestAnimationFrame(movePanel);
@@ -326,7 +326,7 @@ function stopMove() {
 However, if you try to drag it with your finger on a touchscreen device, it won't work. To enable other forms of control, you need to use different, yet equivalent events — for example, touch events work on touchscreen devices:
 
 ```js
-div.addEventListener("ontouchstart", (e) => {
+div.addEventListener("touchstart", (e) => {
   initialBoxX = div.offsetLeft;
   initialBoxY = div.offsetTop;
   positionHandler(e);
@@ -370,7 +370,7 @@ div.addEventListener("mousedown", () => {
   movePanel();
 });
 
-div.addEventListener("ontouchstart", (e) => {
+div.addEventListener("touchstart", (e) => {
   initialBoxX = div.offsetLeft;
   initialBoxY = div.offsetTop;
   positionHandler(e);
@@ -391,8 +391,8 @@ function movePanel() {
     let offsetX = initialBoxX + posMoveX;
     let offsetY = initialBoxY + posMoveY;
 
-    div.style.left = offsetX + "px";
-    div.style.top = offsetY + "px";
+    div.style.left = `${offsetX}px`;
+    div.style.top = `${offsetY}px`;
   }
 
   rAF = requestAnimationFrame(movePanel);

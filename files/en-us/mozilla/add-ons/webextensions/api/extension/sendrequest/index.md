@@ -8,8 +8,6 @@ browser-compat: webextensions.api.extension.sendRequest
 sidebar: addonsidebar
 ---
 
-{{Deprecated_Header}}
-
 > [!WARNING]
 > This method has been deprecated. Use {{WebExtAPIRef("runtime.sendMessage")}} instead.
 

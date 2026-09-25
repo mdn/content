@@ -66,7 +66,7 @@ A {{jsxref("Promise")}} that resolves with a {{jsxref("String")}} containing the
 ### Exceptions
 
 - `AbortError` {{domxref("DOMException")}}
-  - : Thrown if the operation was cancelled via the `signal` option.
+  - : Thrown if the operation was canceled via the `signal` option.
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if usage of the method is blocked by a {{httpheader("Permissions-Policy/language-model", "language-model")}} {{httpheader("Permissions-Policy")}}.
 - `NotSupportedError` {{domxref("DOMException")}}
@@ -128,7 +128,7 @@ console.log(reply2); // "Your name is Alex."
 
 ### Constrained JSON output
 
-The following example shows how do pass JSON to the `responseConstraint` option to specify that you want an array returned by the call to `prompt()`.
+The following example shows how to pass JSON to the `responseConstraint` option to specify that you want an array returned by the call to `prompt()`.
 
 ```js
 const session = await LanguageModel.create();
@@ -151,7 +151,7 @@ console.log(planets); // ["Mercury", "Venus", "Earth"]
 
 See also [Adding context with initial and ongoing prompt inputs > Adding response constraints](/en-US/docs/Web/API/Prompt_API/Adding_context#adding_response_constraints).
 
-### Cancelling a prompt
+### Canceling a prompt
 
 The following example shows how to enable a user to cancel a prompt with a button. It does this by creating an {{domxref("AbortController")}}. Its `abort()` is callable from a button's `click` handler. For this to work, a reference to the controller's `signal` property must be passed to `prompt()`.
 
@@ -173,14 +173,14 @@ try {
   console.log(response);
 } catch (err) {
   if (err.name === "AbortError") {
-    console.log("prompt was cancelled.");
+    console.log("prompt was canceled.");
   } else {
     console.error("An unexpected error occurred:", err);
   }
 }
 ```
 
-See also [Using the Prompt API > Cancelling operations and destroying instances](/en-US/docs/Web/API/Prompt_API/Using#cancelling_operations_and_destroying_instances).
+See also [Using the Prompt API > Canceling operations and destroying instances](/en-US/docs/Web/API/Prompt_API/Using#canceling_operations_and_destroying_instances).
 
 ## Specifications
 

@@ -116,31 +116,45 @@ if ("mediaSession" in navigator) {
 }
 ```
 
+### Playing and pausing audio
+
 The following example sets up two functions for playing and pausing, then uses them as callbacks with the relevant action handlers.
 
+#### HTML
+
+```html
+<audio id="audio" controls src="/shared-assets/audio/guitar.mp3"></audio>
+<p><output id="status">No media session action received yet.</output></p>
+```
+
+#### JavaScript
+
+The action handlers update the output element when they run.
+
 ```js
+const audioEl = document.getElementById("audio");
+const statusEl = document.getElementById("status");
+
 const actionHandlers = [
-  // play
   [
     "play",
     async () => {
-      // play our audio
-      await audioEl.play();
-      // set playback state
-      navigator.mediaSession.playbackState = "playing";
-      // update our status element
-      updateStatus(allMeta[index], "Action: play  |  Track is playing…");
+      // Play our audio; with a custom play handler, this doesn't happen
+      // automatically
+      try {
+        await audioEl.play();
+        statusEl.textContent = "Action: play | Track is playing…";
+      } catch (error) {
+        statusEl.textContent = `Unable to play audio: ${error.message}`;
+      }
     },
   ],
   [
     "pause",
     () => {
-      // pause out audio
+      // Pause our audio
       audioEl.pause();
-      // set playback state
-      navigator.mediaSession.playbackState = "paused";
-      // update our status element
-      updateStatus(allMeta[index], "Action: pause  |  Track has been paused…");
+      statusEl.textContent = "Action: pause | Track has been paused…";
     },
   ],
 ];
@@ -149,10 +163,16 @@ for (const [action, handler] of actionHandlers) {
   try {
     navigator.mediaSession.setActionHandler(action, handler);
   } catch (error) {
-    console.log(`The media session action "${action}" is not supported yet.`);
+    statusEl.textContent = `Unable to register the "${action}" action: ${error.message}`;
   }
 }
 ```
+
+#### Result
+
+Start playback using the audio controls, then use your device's media keys or browser or operating system media controls to play or pause the audio. The available controls depend on your browser and device. The output element shows which media session action handler ran.
+
+{{EmbedLiveSample("Playing and pausing audio", "100%", 150)}}
 
 ### Using action handlers to control a slide presentation
 

@@ -18,7 +18,7 @@ The main difference is that the property can be used to provide label text from 
 An array of elements.
 The inner text of these elements can be joined with spaces to get the accessible name.
 
-When read, the returned array is a static and read-only.
+When read, the returned array is static and read-only.
 When written, the assigned array is copied: subsequent changes to the array do not affect the value of the property.
 
 ## Description

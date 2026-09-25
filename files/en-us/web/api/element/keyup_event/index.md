@@ -16,6 +16,8 @@ The event target of a key event is the currently focused element which is proces
 
 The event target might change between different key events. For example, the `keydown` target for pressing the <kbd>Tab</kbd> key would be different from the `keyup` target, because the focus has changed.
 
+Because the event fires after the key is released, modifier-key properties ({{domxref("KeyboardEvent/ctrlKey", "ctrlKey")}}, {{domxref("KeyboardEvent/altKey", "altKey")}}, {{domxref("KeyboardEvent/shiftKey", "shiftKey")}}, and {{domxref("KeyboardEvent/metaKey", "metaKey")}}) reflect the state after release. For example, `ctrlKey` is `false` on the `keyup` event for the <kbd>Control</kbd> key itself. If another key is released while the <kbd>Control</kbd> key remains pressed, `ctrlKey` is `true` on that key's `keyup` event.
+
 ## Syntax
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.

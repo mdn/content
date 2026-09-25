@@ -84,7 +84,7 @@ span {
 To complete the task:
 
 1. Give the element with an id of `special` a yellow background.
-2. Give the element with a class of `alert` a `2px` solid grey border.
+2. Give the element with a class of `alert` a `2px` solid gray border.
 3. If the element with a class of `alert` also has a class of `stop`, make the background red.
 4. If the element with a class of `alert` also has a class of `go`, make the background green.
 
@@ -274,7 +274,7 @@ To complete the task:
 1. Make any paragraph that directly follows an `<h2>` element red.
 2. Style list items that are a direct child of the `<ul>` with a class of `list` as follows:
    - Remove their bullets.
-   - Give them a `1px` grey bottom border.
+   - Give them a `1px` gray bottom border.
 
 The starting point of the task looks like this:
 

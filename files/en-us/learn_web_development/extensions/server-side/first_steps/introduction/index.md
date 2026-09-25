@@ -84,7 +84,7 @@ Client-side code is written using [HTML](/en-US/docs/Learn_web_development/Core/
 
 Web developers can't control what browser every user might be using to view a website — browsers provide inconsistent levels of compatibility with client-side code features, and part of the challenge of client-side programming is handling differences in browser support gracefully.
 
-Server-side code can be written in any number of programming languages — examples of popular server-side web languages include PHP, Python, Ruby, C#, and JavaScript (NodeJS). The server-side code has full access to the server operating system and the developer can choose what programming language (and specific version) they wish to use.
+Server-side code can be written in any number of programming languages — examples of popular server-side web languages include PHP, Python, Ruby, C#, and JavaScript (Node.js). The server-side code has full access to the server operating system and the developer can choose what programming language (and specific version) they wish to use.
 
 Developers typically write their code using **web frameworks**. Web frameworks are collections of functions, objects, rules and other code constructs designed to solve common problems, speed up development, and simplify the different types of tasks faced in a particular domain.
 
@@ -148,7 +148,7 @@ Server-side programming allows sites to restrict access to authorized users and 
 Real-world examples include social-networking sites which allow users to determine who can see the content they post to the site, and whose content appears in their feed.
 
 > [!NOTE]
-> Consider other real examples where access to content is controlled. For example, what can you see if you go to the online site for your bank? Log in to your account — what additional information can you see and modify? What information can you see that only the bank can change?
+> Consider other real examples where access to content is controlled. For example, what can you see if you go to the online site for your bank? Log into your account — what additional information can you see and modify? What information can you see that only the bank can change?
 
 ### Store session/state information
 

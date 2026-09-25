@@ -7,7 +7,7 @@ browser-compat: css.properties.border-width
 sidebar: cssref
 ---
 
-The **`border-width`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property sets the width of an element's border.
+The **`border-width`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets the width of an element's border.
 
 {{InteractiveExample("CSS Demo: border-width")}}
 

@@ -1588,6 +1588,10 @@
       "inh": "HTMLElement",
       "impl": []
     },
+    "HTMLCameraElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
     "HTMLCanvasElement": {
       "inh": "HTMLElement",
       "impl": []
@@ -1732,6 +1736,10 @@
       "inh": "HTMLElement",
       "impl": []
     },
+    "HTMLMicrophoneElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
     "HTMLModelElement": {
       "inh": "HTMLElement",
       "impl": []
@@ -1872,6 +1880,10 @@
       "inh": "HTMLElement",
       "impl": []
     },
+    "HTMLUserMediaElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
     "HTMLVideoElement": {
       "inh": "HTMLMediaElement",
       "impl": []
@@ -1998,6 +2010,10 @@
     },
     "Instance": {
       "inh": "",
+      "impl": []
+    },
+    "InteractionContentfulPaint": {
+      "inh": "PerformanceEntry",
       "impl": []
     },
     "IntersectionObserver": {
@@ -2228,6 +2244,10 @@
       "inh": "AudioNode",
       "impl": []
     },
+    "MediaStreamTrackAudioStats": {
+      "inh": "",
+      "impl": []
+    },
     "MediaStreamTrackEvent": {
       "inh": "Event",
       "impl": []
@@ -2237,6 +2257,10 @@
       "impl": []
     },
     "MediaStreamTrackProcessor": {
+      "inh": "",
+      "impl": []
+    },
+    "MediaStreamTrackVideoStats": {
       "inh": "",
       "impl": []
     },
@@ -2662,6 +2686,10 @@
     },
     "PerformanceServerTiming": {
       "inh": "",
+      "impl": []
+    },
+    "PerformanceSoftNavigation": {
+      "inh": "PerformanceEntry",
       "impl": []
     },
     "PerformanceTiming": {
@@ -4358,6 +4386,10 @@
     },
     "XRGPUBinding": {
       "inh": "",
+      "impl": []
+    },
+    "XRGPUDepthInformation": {
+      "inh": "XRDepthInformation",
       "impl": []
     },
     "XRGPUSubImage": {

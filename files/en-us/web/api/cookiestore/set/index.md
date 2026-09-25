@@ -57,7 +57,7 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when setting 
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : Thrown if the origin can not be {{glossary("Serialization", "serialized")}} to a URL.
+  - : Thrown if the origin cannot be {{glossary("Serialization", "serialized")}} to a URL.
 - {{jsxref("TypeError")}}
   - : Thrown if:
     - Both the `expires` and `maxAge` properties are set.
@@ -119,6 +119,17 @@ async function cookieTest() {
   console.log(cookie);
 }
 ```
+
+### Setting cookies with the same name
+
+These calls create two separate cookies because their paths differ:
+
+```js
+await cookieStore.set({ name: "theme", value: "light", path: "/" });
+await cookieStore.set({ name: "theme", value: "dark", path: "/docs" });
+```
+
+On a page under `/docs/`, {{domxref("CookieStore.getAll()", 'cookieStore.getAll("theme")')}} can retrieve both cookies. Calling `cookieStore.set("theme", "blue")` updates the cookie at the default path `/`, leaving the `/docs` cookie unchanged.
 
 ## Specifications
 

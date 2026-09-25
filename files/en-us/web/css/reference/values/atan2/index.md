@@ -47,7 +47,7 @@ Given two values `x` and `y`, the function `atan2(y, x)` calculates and returns 
 
 ### Rotate elements
 
-The `atan2()` function can be used to {{cssxref("transform-function/rotate", "rotate")}} elements as it return an {{cssxref("angle")}} .
+The `atan2()` function can be used to {{cssxref("transform-function/rotate", "rotate")}} elements as it returns an {{cssxref("angle")}}.
 
 #### HTML
 

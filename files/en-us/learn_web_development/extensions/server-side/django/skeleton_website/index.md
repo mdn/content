@@ -349,9 +349,9 @@ At this point, we know that Django is working!
 > [!NOTE]
 > The example page demonstrates a great Django feature — automated debug logging. Whenever a page cannot be found, Django displays an error screen with useful information or any error raised by the code. In this case, we can see that the URL we've supplied doesn't match any of our URL patterns (as listed). Logging is turned off in production (which is when we put the site live on the Web), in which case a less informative but more user-friendly page will be served.
 
-## Don't forget to backup to GitHub
+## Don't forget to back up to GitHub
 
-We've just done some significant work, so now is a good time to backup the project using GitHub.
+We've just done some significant work, so now is a good time to back up the project using GitHub.
 
 First move the _content_ of the top level **locallibrary** folder into the **django_local_library** folder that you [created as a local GitHub repository](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/development_environment#clone_the_repo_to_your_local_computer) when setting up the development environment.
 This will include **manage.py**, the **locallibrary** subfolder, the **catalog** subfolder, and anything else inside the top level folder.
