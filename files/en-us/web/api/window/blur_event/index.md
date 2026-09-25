@@ -8,7 +8,7 @@ browser-compat: api.Window.blur_event
 
 {{APIRef("UI Events")}}
 
-The **`blur`** event fires when the window has lost focus.
+The **`blur`** event fires when the window has lost focus,, for example when the user moves focus from the page to the address bar. Focus may previously have been on the document's viewport or on an element within it.
 
 The opposite of `blur` is {{domxref("Window/focus_event", "focus")}}.
 
@@ -82,8 +82,6 @@ window.addEventListener("focus", play);
 ## Browser compatibility
 
 {{Compat}}
-
-The value of {{DOMxRef("Document.activeElement")}} varies across browsers while this event is being handled ([Firefox bug 452307](https://bugzil.la/452307)): IE10 sets it to the element that the focus will move to, while Firefox and Chrome often set it to the `body` of the document.
 
 ## See also
 
