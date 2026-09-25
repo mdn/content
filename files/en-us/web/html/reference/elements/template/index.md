@@ -722,6 +722,7 @@ Later on, a new `<template for="title">` could be inserted into the DOM to repla
 
 ## See also
 
+- [Processing instructions guide](/en-US/docs/Web/HTML/Guides/Processing_instructions)
 - [`part`](/en-US/docs/Web/HTML/Reference/Global_attributes/part) and [`exportparts`](/en-US/docs/Web/HTML/Reference/Global_attributes/exportparts) HTML attributes
 - {{HTMLElement("slot")}} HTML element
 - {{CSSXref(":has-slotted")}}, {{CSSXref(":host")}}, {{CSSXref(":host_function", ":host()")}}, and {{CSSXref(":host-context", ":host-context()")}} CSS pseudo-classes

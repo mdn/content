@@ -141,5 +141,6 @@ console.log(pi.getAttribute("my-data2"));
 
 ## See also
 
+- [Processing instructions guide](/en-US/docs/Web/HTML/Guides/Processing_instructions)
 - [document.createProcessingInstruction()](/en-US/docs/Web/API/Document/createProcessingInstruction)
 - The [DOM API](/en-US/docs/Web/API/Document_Object_Model)
