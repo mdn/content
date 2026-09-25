@@ -58,7 +58,13 @@ Once you understand these, you already understand a big part of DOM selection an
 
 ## Selecting elements by ID, class, or tag name
 
-There are three main ways to identify an element: its [`id`](/en-US/docs/Web/API/Element/id), [`className`](/en-US/docs/Web/API/Element/className), and [`tagName`](/en-US/docs/Web/API/Element/tagName). The {{domxref("Document")}} interface provides three methods to select by these three identifiers: {{domxref("document.getElementById()")}}, {{domxref("document.getElementsByClassName()")}}, and {{domxref("document.getElementsByTagName()")}}. As the names suggest, `getElementById()` returns the reference to a single element (or `null` if no element is found), while `getElementsByClassName()` and `getElementsByTagName()` return collections of elements. The collection is a _live {{domxref("HTMLCollection")}}_; we will discuss this further in [Working with collections](#working_with_collections).
+There are three main ways to identify an element: its [`id`](/en-US/docs/Web/API/Element/id), [`className`](/en-US/docs/Web/API/Element/className), and [`tagName`](/en-US/docs/Web/API/Element/tagName). The {{domxref("Document")}} interface provides three methods to select by these three identifiers:
+
+- {{domxref("document.getElementById()")}}
+- {{domxref("document.getElementsByClassName()")}}
+- {{domxref("document.getElementsByTagName()")}}
+
+As the names suggest, `getElementById()` returns the reference to a single element (or `null` if no element is found), while `getElementsByClassName()` and `getElementsByTagName()` return collections of elements. The collection is a _live {{domxref("HTMLCollection")}}_; we will discuss this further in [Working with collections](#working_with_collections).
 
 Each element's `id` should be unique within the document (but [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) are separate documents and therefore have their own scopes). As long as you uphold that requirement in your code, you will always get the element you intend with `getElementById()`. However, `id` attributes are used very sparingly because they are hard to be kept globally unique. Therefore, in real applications, you will often find `getElementsByClassName()` and `getElementsByTagName()` (or the [querying methods](#selecting_elements_with_css_selectors) we will introduce soon) more practical.
 
@@ -152,7 +158,7 @@ document.querySelectorAll("div");
 There are only two things to watch out for:
 
 - The `getElementsByClassName()` and `getElementsByTagName()` methods return live collections, while `querySelectorAll()` returns a static collection (see [Live and static collections](#live_and_static_collections)). Usually, the static collection's behavior is what you want.
-- The selector string must be valid CSS selector syntax; otherwise, the method throws a `SyntaxError` {{domxref("DOMException")}}. An HTML ID or class name is not necessarily a valid CSS identifier. Use {{domxref("CSS/escape_static", "CSS.escape()")}} when inserting such a value into an ID or class selector:
+- The selector string must be valid CSS selector syntax; otherwise, the method throws a `SyntaxError` {{domxref("DOMException")}}. An HTML ID or class name is not necessarily a valid [CSS identifier](/en-US/docs/Web/CSS/Reference/Values/ident). Use {{domxref("CSS/escape_static", "CSS.escape()")}} when inserting such a value into an ID or class selector:
 
   ```js
   const id = "item:42";
@@ -173,7 +179,7 @@ Calling `querySelector()` or `querySelectorAll()` on an element limits the retur
 </div>
 ```
 
-A selector like `div p` still matches the first note, because this `p` is indeed nested in a `div`, although that `div` is outside of the search root. Use {{cssxref(":scope")}} so that the selector is only applied within the search root:
+A selector like `div p` still matches the first note, because this `p` is indeed nested in a `div`, although that `div` is outside of the search root. Use {{cssxref(":scope")}} to apply the selector only within the search root:
 
 ```js
 const main = document.getElementById("main");
@@ -195,7 +201,12 @@ console.log(innerNote.closest("section").id); // "main"
 
 ## Working with collections
 
-We already introduced two types of collections: _live {{domxref("HTMLCollection")}}_ as returned by `getElementsByClassName()` and `getElementsByTagName()`, and _static {{domxref("NodeList")}}_ as returned by `querySelectorAll()`. A `NodeList` can contain any type of node, while an `HTMLCollection` contains only elements (but the elements don't actually have to be HTML elements). You are perhaps already familiar with the {{domxref("Node.childNodes")}} property, which is also a `NodeList`. The `NodeList` returned by `querySelectorAll()` contains only elements because that method selects elements.
+We already introduced two types of collections:
+
+- _live {{domxref("HTMLCollection")}}_ as returned by `getElementsByClassName()` and `getElementsByTagName()`
+- _static {{domxref("NodeList")}}_ as returned by `querySelectorAll()`
+
+A `NodeList` can contain any type of node, while an `HTMLCollection` contains only elements (but the elements don't actually have to be HTML elements). You are perhaps already familiar with the {{domxref("Node.childNodes")}} property, which is also a `NodeList`. The `NodeList` returned by `querySelectorAll()` contains only elements because that method selects elements.
 
 Both interfaces are [array-like](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#array-like_objects), meaning that they have a `length` property and support indexed access. They also support [iteration](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols).
 
