@@ -61,9 +61,13 @@ You should use a WebTransport library to handle the server-side protocol details
 
 For all our client examples, we'll provide minimal server examples using the Node.js `@fails-components/webtransport` package. Code written with other libraries or languages may look substantially different.
 
+> [!NOTE]
+> Server-side JavaScript examples will be marked with `// -- server.js --`. JavaScript examples without this comment are client-side code.
+
 Here's an example server for the [initial connection](#initial_connection) example:
 
 ```js
+// -- server.js --
 import { randomBytes } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { Http3Server } from "@fails-components/webtransport";
@@ -126,6 +130,7 @@ async function closeTransport(transport) {
 In `@fails-components/webtransport`, call `session.close()` to close the session:
 
 ```js
+// -- server.js --
 session.close({ closeCode: 0, reason: "Work complete" });
 await session.closed;
 ```
@@ -175,6 +180,7 @@ async function initTransport(url) {
 When the `@fails-components/webtransport` library parses the headers, it special cases `header["wt-available-protocols"]` and converts the value into an array. For example, you can replace `server.setRequestCallback(acceptRequest)` with the following to reject malformed values and select the first protocol supported by the server:
 
 ```js
+// -- server.js --
 const supportedProtocols = new Set(["chat", "file-transfer"]);
 
 server.setRequestCallback(async (request) => {
@@ -213,6 +219,7 @@ writer.write(data2);
 In `@fails-components/webtransport`, read these datagrams from `session.datagrams.readable`:
 
 ```js
+// -- server.js --
 for await (const data of session.datagrams.readable) {
   console.log(data); // A Uint8Array sent by the client.
 }
@@ -237,6 +244,7 @@ async function readData() {
 In `@fails-components/webtransport`, to send datagrams for this client code to read, obtain a writer:
 
 ```js
+// -- server.js --
 const writer = session.datagrams.createWritable().getWriter();
 try {
   await writer.write(new Uint8Array([65, 66, 67]));
@@ -279,6 +287,7 @@ Note also the use of the {{domxref("WritableStreamDefaultWriter.close()")}} meth
 In `@fails-components/webtransport`, each item in `session.incomingUnidirectionalStreams` is a readable stream carrying data from the client. Start a separate reader for each stream so that a stream waiting for data does not prevent the server from accepting another:
 
 ```js
+// -- server.js --
 async function receiveStream(stream) {
   for await (const data of stream) {
     console.log(data); // A Uint8Array sent by the client.
@@ -328,6 +337,7 @@ async function receiveUnidirectional() {
 In `@fails-components/webtransport`, to supply a stream for the client's `receiveUnidirectional()` and `readData()` functions, create a unidirectional stream and write to it:
 
 ```js
+// -- server.js --
 const stream = await session.createUnidirectionalStream();
 const writer = stream.getWriter();
 await writer.write(new Uint8Array([65, 66, 67]));
@@ -396,6 +406,7 @@ await Promise.all([readData(stream.readable), writeData(stream.writable)]);
 In `@fails-components/webtransport`, accept the client-created streams from `session.incomingBidirectionalStreams`. Each has a `readable` side for data from the client and a `writable` side for data to the client:
 
 ```js
+// -- server.js --
 for await (const stream of session.incomingBidirectionalStreams) {
   // Echo received bytes back to the client. Each stream is handled separately.
   stream.readable.pipeTo(stream.writable).catch(console.error);
@@ -425,6 +436,7 @@ async function receiveBidirectional() {
 To pair with `receiveBidirectional()`, the server creates a stream, sends data, and closes its sending side before reading the client's reply. Closing the sending side allows the client's `readData()` call to finish so that it can call `writeData()`:
 
 ```js
+// -- server.js --
 const stream = await session.createBidirectionalStream();
 const writer = stream.writable.getWriter();
 await writer.write(new Uint8Array([65, 66, 67]));
