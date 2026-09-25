@@ -8,10 +8,9 @@ browser-compat: api.Notification.icon
 
 {{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
-The **`icon`** read-only property of the
-{{domxref("Notification")}} interface contains the URL of an icon to be displayed as
-part of the notification, as specified in the `icon` option of the
-{{domxref("Notification.Notification","Notification()")}} constructor.
+The **`icon`** read-only property of the {{domxref("Notification")}} interface returns a string containing the URL of a small image that reinforces the notification — for example, an app logo or a photo of the message sender. It is displayed alongside the notification title and body.
+
+See [Notifications with different images](/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification#notifications_with_different_images) for a comparison of the three image options.
 
 ## Value
 
