@@ -28,44 +28,33 @@ For more information see [When are entries generated](/en-US/docs/Web/API/Perfor
 
 ### Observing that only visible paints are counted
 
-This example demonstrates that adding content while the container is in view creates an entry, while adding an entry outside the view does not (even if you scroll it into view).
+This example demonstrates that content only creates an entry if some of it is visible when painted: once new content is added below the visible area of the container, no more entries are created.
 It also demonstrates that the `intersectionRect` and `size` values only ever increase.
 
 #### HTML
 
-The container root ({{htmlelement("section")}}, identified as `"hero"`) sits inside a scrollable `<div>` that acts as a small, fixed-size viewport for the example.
-A tall spacer below the container lets you scroll the container itself out of that viewport, and back in again.
+The container root ({{htmlelement("section")}}, identified as `"hero"`) sits inside a fixed-height `<div>` that hides any content that overflows it.
+There is also a button to reset the example.
 
 ```html
+<button id="reset">Reset</button>
 <div id="wrapper">
   <section containertiming="hero">
     <h2>Hero content</h2>
   </section>
-  <div id="spacer">Scrolling down moves the container out of view</div>
 </div>
-<button id="add">Add element</button>
-<button id="scroll-out">Scroll container out of view</button>
-<button id="scroll-in">Scroll container into view</button>
-<button id="reset">Reset</button>
 ```
 
 ```css
 #wrapper {
   height: 150px;
-  overflow: auto;
+  overflow: hidden;
   border: 1px solid black;
-}
-
-#spacer {
-  height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: gray;
 }
 ```
 
 Note that there is also hidden HTML (and code) for displaying log information.
+New log entries are added at the top of the log.
 
 ```html hidden
 <pre id="log"></pre>
@@ -83,8 +72,7 @@ Note that there is also hidden HTML (and code) for displaying log information.
 ```js hidden
 const logElement = document.querySelector("#log");
 function log(text) {
-  logElement.innerText = `${logElement.innerText}${text}\n`;
-  logElement.scrollTop = logElement.scrollHeight;
+  logElement.innerText = `${text}\n${logElement.innerText}`;
 }
 ```
 
@@ -94,21 +82,14 @@ The following code first checks if there are any `"container"` entries: if not, 
 It then creates a {{domxref("PerformanceObserver")}} that logs each entry's `intersectionRect` and `size`.
 
 ```js
-const wrapper = document.querySelector("#wrapper");
 const container = document.querySelector("section");
-let count = 0;
-let lastSize = 0;
 
 if (PerformanceObserver.supportedEntryTypes.includes("container")) {
   const observer = new PerformanceObserver((list) => {
     for (const entry of list.getEntries()) {
-      const neverDecreased = entry.size >= lastSize;
       log(
-        `Entry:  size: ${entry.size}, rectWidth: ${entry.intersectionRect.width}, rectHeight: ${entry.intersectionRect.height}`,
+        `Entry: size: ${entry.size}, rectWidth: ${entry.intersectionRect.width}, rectHeight: ${entry.intersectionRect.height}`,
       );
-      //log(`  intersectionRect: ${JSON.stringify(entry.intersectionRect)}`);
-
-      lastSize = entry.size;
     }
   });
   observer.observe({ type: "container", buffered: true });
@@ -117,28 +98,29 @@ if (PerformanceObserver.supportedEntryTypes.includes("container")) {
 }
 ```
 
-We then define click event handlers for adding a new paragraph to the container, for scrolling the container out of (and back into) view, and for resetting the example.
-Each handler logs the action taken, so you can see whether it was followed by a new entry.
+We then use {{domxref("Window.setInterval()", "setInterval()")}} to add a new paragraph to the container every second, stopping after six paragraphs.
+Each paragraph is logged when it is added, so you can see whether it is followed by a new entry.
+Note that we add content on a timer rather than when the user clicks a button, because no entries are reported after the user interacts with the page (see [Reporting stops after scrolling or user input](/en-US/docs/Web/API/PerformanceContainerTiming#reporting_stops_after_scrolling_or_user_input)).
 
 ```js
-document.querySelector("#add").addEventListener("click", () => {
+const maxParagraphs = 6;
+let count = 0;
+
+const timer = setInterval(() => {
   count++;
   const paragraph = document.createElement("p");
   paragraph.textContent = `New paragraph ${count}`;
-  log(`Clicked "Add element" (paragraph ${count})`);
   container.appendChild(paragraph);
-});
+  log(`Added paragraph ${count}`);
+  if (count >= maxParagraphs) {
+    clearInterval(timer);
+  }
+}, 1000);
+```
 
-document.querySelector("#scroll-out").addEventListener("click", () => {
-  log('Clicked "Scroll container out of view"');
-  wrapper.scrollTo(0, wrapper.scrollHeight);
-});
+Last of all we add a click event handler to reset the example by reloading the page.
 
-document.querySelector("#scroll-in").addEventListener("click", () => {
-  log('Clicked "Scroll container into view"');
-  wrapper.scrollTo(0, 0);
-});
-
+```js
 document.querySelector("#reset").addEventListener("click", () => {
   window.location.reload(true);
 });
@@ -146,9 +128,10 @@ document.querySelector("#reset").addEventListener("click", () => {
 
 #### Result
 
-The container starts in view, so the first click of "Add element" should be followed by a new log entry.
-If you continue to add elements you will see that you get entries until they start being created offscreen: scrolling up does not trigger them.
-Click "Reset" to restart the example and observe similar behavior if you scroll the container out of view before adding the elements.
+A new paragraph is added every second.
+The first few paragraphs are painted inside the wrapper, so each is followed by an entry with a larger `size` and `intersectionRect`.
+Once paragraphs are added below the bottom edge of the wrapper, they are clipped away, and are not followed by new entries.
+Click "Reset" to restart the example.
 
 {{EmbedLiveSample("Observing that only visible paints are counted", "100%", 500)}}
 

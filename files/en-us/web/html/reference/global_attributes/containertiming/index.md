@@ -7,10 +7,11 @@ browser-compat: html.global_attributes.containertiming
 sidebar: htmlsidebar
 ---
 
-The **`containertiming`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) marks an element as a _container root_, for which which {{domxref("PerformanceContainerTiming")}} entries can be observed by {{domxref("PerformanceObserver")}} objects using the `"container"` type.
+The **`containertiming`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) marks an element as a _container root_, for which {{domxref("PerformanceContainerTiming")}} entries can be observed by {{domxref("PerformanceObserver")}} objects using the `"container"` type.
 
 Its value is a string that identifies the container.
-Any paints to new areas inside the container root's subtree contributes to the container's timing (content painted inside the container root itself is excluded, as is repaints to already painted areas).
+Any paints to new areas inside the container root's subtree contribute to the container's timing (content painted inside the container root itself is excluded, as are repaints to already painted areas).
+Timing entries are only reported until the user scrolls or interacts with the page.
 Descendant subtrees can be excluded from a container's timing using the [`containertimingignore`](/en-US/docs/Web/HTML/Reference/Global_attributes/containertimingignore) attribute.
 For more details, see the {{domxref("PerformanceContainerTiming")}} interface.
 
