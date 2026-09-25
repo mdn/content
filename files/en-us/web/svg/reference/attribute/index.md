@@ -186,7 +186,7 @@ Below is a list of all of the attributes available in SVG, along with links to r
 
 - {{SVGAttr("r")}}
 - {{SVGAttr("radius")}}
-- {{SVGAttr("referrerPolicy")}}
+- {{SVGAttr("referrerpolicy")}}
 - {{SVGAttr("refX")}}
 - {{SVGAttr("refY")}}
 - {{SVGAttr("rel")}}
@@ -240,6 +240,7 @@ Below is a list of all of the attributes available in SVG, along with links to r
 - {{SVGAttr("text-overflow")}}
 - {{SVGAttr("text-rendering")}}
 - {{SVGAttr("textLength")}}
+- {{SVGAttr("title")}}
 - {{SVGAttr("to")}}
 - {{SVGAttr("transform")}}
 - {{SVGAttr("transform-origin")}}
@@ -273,7 +274,7 @@ Below is a list of all of the attributes available in SVG, along with links to r
 - {{SVGAttr("xlink:actuate")}}
 - {{SVGAttr("xlink:arcrole")}}
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
-- {{SVGAttr("xlink:role")}}
+- `xlink:role`
 - {{SVGAttr("xlink:show")}}
 - {{SVGAttr("xlink:title")}}
 - {{SVGAttr("xlink:type")}}
@@ -321,7 +322,7 @@ The XLink attributes can reference resources.
 
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
 - {{SVGAttr("xlink:type")}} {{deprecated_inline}}
-- {{SVGAttr("xlink:role")}} {{deprecated_inline}}
+- `xlink:role` {{deprecated_inline}}
 - {{SVGAttr("xlink:arcrole")}} {{deprecated_inline}}
 - {{SVGAttr("xlink:title")}} {{deprecated_inline}}
 - {{SVGAttr("xlink:show")}} {{deprecated_inline}}
