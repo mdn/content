@@ -40,7 +40,7 @@ text-fit: unset;
 
 ### Values
 
-Specified as one of the keywords `none`, `grow`, or `shrink`, plus optionally one of the keywords `consistent`, `per-line`, or `per-line-all`, plus an optional {{cssxref("percentage")}} value, separated by spaces. The components must be specified in this order.
+This property is specified as a space-separated list of up to three values that can include the following:
 
 - `none`
   - : The default value. No text scaling is applied.
@@ -56,6 +56,8 @@ Specified as one of the keywords `none`, `grow`, or `shrink`, plus optionally on
   - : All of the lines of the text node are scaled with their own scaling factor, including the last line and lines that end in a forced break. This keyword has no effect if `none` is specified as the first keyword.
 - {{cssxref("&lt;percentage&gt;")}}
   - : Specifies the maximum (when `grow` is specified) or minimum (when `shrink` is specified) scaling factor. This must be `100%` or greater if `grow` is specified, or between `0%` and `100%` inclusive if `shrink` is specified, otherwise the percentage has no effect.
+
+The first, mandatory, value can be `none`, `grow`, or `shrink`. The second, optional, value can be `consistent`, `per-line`, or `per-line-all`. The third, optional value is a {{cssxref("percentage")}}. The components must be specified in this order.
 
 ## Description
 
