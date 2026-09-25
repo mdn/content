@@ -50,7 +50,52 @@ To begin with, let's put together a basic function.
 > [!NOTE]
 > For function naming conventions, you should follow the same rules as [variable naming conventions](/en-US/docs/Learn_web_development/Core/Scripting/Variables#an_aside_on_variable_naming_rules). This is fine, as you can tell them apart — function names appear with parentheses after them, and variables don't.
 
-1. Start by accessing the [function-start.html](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-start.html) file and making a local copy. You'll see that the HTML is simple — the body contains just a single button. We've also provided some basic CSS to style the custom message box, and an empty {{htmlelement("script")}} element to put our JavaScript in.
+1. Start by creating a new HTML file on your local file system, and adding the following code to it:
+
+   ```html
+   <!DOCTYPE html>
+   <html lang="en-US">
+     <head>
+       <meta charset="utf-8" />
+       <meta name="viewport" content="width=device-width" />
+       <title>Function start</title>
+       <style>
+         .msgBox {
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%, -50%);
+           width: 200px;
+           background: #eee;
+         }
+
+         .msgBox p {
+           line-height: 1.5;
+           padding: 10px 20px;
+           color: #333;
+         }
+
+         .msgBox button {
+           background: none;
+           border: none;
+           position: absolute;
+           top: 0;
+           right: 0;
+           font-size: 1.1rem;
+           color: #aaa;
+         }
+       </style>
+     </head>
+     <body>
+       <button>Display message box</button>
+
+       <script></script>
+     </body>
+   </html>
+   ```
+
+   The HTML is simple — the body contains just a single `<button>`. We've also provided some basic CSS to style the custom message box, and an empty {{htmlelement("script")}} element to put our JavaScript in.
+
 2. Next, add the following inside the `<script>` element:
 
    ```js
@@ -80,6 +125,8 @@ To begin with, let's put together a basic function.
 
    closeBtn.addEventListener("click", () => body.removeChild(panel));
    ```
+
+### Explaining the function code
 
 This is quite a lot of code to go through, so we'll walk you through it bit by bit.
 
@@ -233,7 +280,7 @@ As it stands, the function is still not very useful — we don't want to just sh
 
 On to the next parameter. This one is going to involve slightly more work — we are going to set it so that depending on what the `msgType` parameter is set to, the function will display a different icon and a different background color.
 
-1. First of all, download the icons needed for this exercise ([warning](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/icons/warning.png) and [chat](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/icons/chat.png)) from GitHub. Save them in a new folder called `icons` in the same location as your HTML file.
+1. First of all, download the icons needed for this exercise ([warning](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/icons/warning.png) and [chat](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/icons/chat.png)) from GitHub. Save them in the same location as your HTML file.
 
    > [!NOTE]
    > The warning and chat icons were originally found on iconfinder.com, and designed by Nazarrudin Ansyari — Thanks! (The actual icon pages were since moved or removed.)
@@ -262,10 +309,10 @@ On to the next parameter. This one is going to involve slightly more work — we
 
    ```js
    if (msgType === "warning") {
-     msg.style.backgroundImage = 'url("icons/warning.png")';
+     msg.style.backgroundImage = 'url("warning.png")';
      panel.style.backgroundColor = "red";
    } else if (msgType === "chat") {
-     msg.style.backgroundImage = 'url("icons/chat.png")';
+     msg.style.backgroundImage = 'url("chat.png")';
      panel.style.backgroundColor = "aqua";
    } else {
      msg.style.paddingLeft = "20px";
@@ -289,8 +336,91 @@ On to the next parameter. This one is going to involve slightly more work — we
 
    You can see how useful our (now not so) little function is becoming.
 
+## Final result
+
+If you followed all the steps above, your example should render like so:
+
+```html hidden live-sample___final-result
+<button>Display message box</button>
+```
+
+```css hidden live-sample___final-result
+.msgBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 242px;
+  border-radius: 10px;
+  background-color: #eee;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(0 0 0 / 0),
+    rgb(0 0 0 / 0.1)
+  );
+}
+
+.msgBox p {
+  line-height: 1.5;
+  padding: 10px 20px;
+  color: #333;
+  padding-left: 82px;
+  background-position: 25px center;
+  background-repeat: no-repeat;
+}
+
+.msgBox button {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.1rem;
+  color: #aaa;
+}
+```
+
+```js hidden live-sample___final-result
+const btn = document.querySelector("button");
+btn.addEventListener("click", () =>
+  displayMessage("Brian: Hi there, how are you today?", "chat"),
+);
+
+function displayMessage(msgText, msgType) {
+  const html = document.querySelector("html");
+
+  const panel = document.createElement("div");
+  panel.setAttribute("class", "msgBox");
+  html.appendChild(panel);
+
+  const msg = document.createElement("p");
+  msg.textContent = msgText;
+  panel.appendChild(msg);
+
+  const closeBtn = document.createElement("button");
+  closeBtn.textContent = "x";
+  panel.appendChild(closeBtn);
+
+  closeBtn.onclick = function () {
+    panel.parentNode.removeChild(panel);
+  };
+
+  if (msgType === "warning") {
+    msg.style.backgroundImage = "url(warning.png)";
+    panel.style.backgroundColor = "red";
+  } else if (msgType === "chat") {
+    msg.style.backgroundImage = "url(chat.png)";
+    panel.style.backgroundColor = "aqua";
+  } else {
+    msg.style.paddingLeft = "20px";
+  }
+}
+```
+
+{{embedlivesample("final-result","100%", "300")}}
+
 > [!NOTE]
-> If you have trouble getting the example to work, feel free to check your code against the [finished version on GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-stage-4.html) ([see it running live](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-stage-4.html) also), or ask us for help.
+> If you have trouble getting the example to work, feel free to check your code against our finished version — click the Play button in the rendered example to view the full source code in the MDN Playground.
 
 ## Summary
 
