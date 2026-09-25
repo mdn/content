@@ -96,7 +96,7 @@ This property is specified as a single keyword from the following list:
 - `none`
   - : There are no breaks in row rules when they intersect column gaps; rather, a continuous row rule is painted the whole width of the container, from edge to edge.
 - `normal`
-  - : In grid and flex containers, behaves as `none`. In multi-col, behaves as `none`. This is the default value.
+  - : In grid, flex containers, and multi-col layout, behaves as `none`. This is the default value.
 - `intersection`
   - : Row rules always break when they intersect column gaps, with row rule segments starting and ending at container and gap edges.
 
