@@ -384,7 +384,6 @@ Liskov
 Lorc
 Lorde
 Loycom
-Luxon
 Léonie
 Macknik
 Macromedia
