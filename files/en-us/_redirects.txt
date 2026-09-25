@@ -16276,6 +16276,7 @@
 /en-US/docs/Web/SVG/Element/use	/en-US/docs/Web/SVG/Reference/Element/use
 /en-US/docs/Web/SVG/Element/view	/en-US/docs/Web/SVG/Reference/Element/view
 /en-US/docs/Web/SVG/Element/vkern	/en-US/docs/Web/CSS/Reference/At-rules/@font-face
+/en-US/docs/Web/SVG/Guides/SVG_filters	/en-US/docs/Web/SVG/Guides/Filters
 /en-US/docs/Web/SVG/Index	/en-US/docs/Web/SVG
 /en-US/docs/Web/SVG/Linking	/en-US/docs/Web/SVG/Guides/Linking
 /en-US/docs/Web/SVG/Namespaces_Crash_Course	/en-US/docs/Web/SVG/Guides/Namespaces_crash_course
@@ -16356,7 +16357,7 @@
 /en-US/docs/Web/SVG/Tutorial/Paths	/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths
 /en-US/docs/Web/SVG/Tutorial/Patterns	/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Patterns
 /en-US/docs/Web/SVG/Tutorial/Positions	/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Positions
-/en-US/docs/Web/SVG/Tutorial/SVG_Filters_Tutorial	/en-US/docs/Web/SVG/Guides/SVG_filters
+/en-US/docs/Web/SVG/Tutorial/SVG_Filters_Tutorial	/en-US/docs/Web/SVG/Guides/Filters
 /en-US/docs/Web/SVG/Tutorial/SVG_Image_Tag	/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Image_element
 /en-US/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction	/en-US/docs/Web/SVG/Guides/SVG_in_HTML
 /en-US/docs/Web/SVG/Tutorial/SVG_and_CSS	/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/SVG_and_CSS
@@ -16368,7 +16369,7 @@
 /en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations_	/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_transformations
 /en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes_	/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Fills_and_strokes
 /en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started_	/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started
-/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/SVG_Filters_Tutorial	/en-US/docs/Web/SVG/Guides/SVG_filters
+/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/SVG_Filters_Tutorial	/en-US/docs/Web/SVG/Guides/Filters
 /en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/SVG_In_HTML_Introduction	/en-US/docs/Web/SVG/Guides/SVG_in_HTML
 /en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/SVG_fonts	/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Using_fonts
 /en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/SVG_image_element	/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Image_element
