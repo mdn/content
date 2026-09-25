@@ -172,12 +172,14 @@ Overview: [Internationalization](/en-US/docs/Web/JavaScript/Guide/Internationali
 
 Overview: [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules)
 
-- [Exporting](/en-US/docs/Web/JavaScript/Guide/Modules#exporting_module_features)
-- [Importing](/en-US/docs/Web/JavaScript/Guide/Modules#importing_features_into_your_script)
-- [Default exports](/en-US/docs/Web/JavaScript/Guide/Modules#default_exports_versus_named_exports)
-- [Renaming features](/en-US/docs/Web/JavaScript/Guide/Modules#renaming_imports_and_exports)
-- [Aggregating modules](/en-US/docs/Web/JavaScript/Guide/Modules#aggregating_modules)
+- [Exporting](/en-US/docs/Web/JavaScript/Guide/Modules#named_exports)
+- [Importing](/en-US/docs/Web/JavaScript/Guide/Modules#named_imports)
+- [Default exports and imports](/en-US/docs/Web/JavaScript/Guide/Modules#default_exports_and_imports)
+- [Avoiding naming conflicts](/en-US/docs/Web/JavaScript/Guide/Modules#avoiding_naming_conflicts)
+- [Importing JSON modules](/en-US/docs/Web/JavaScript/Guide/Modules#importing_json_modules)
 - [Dynamic module loading](/en-US/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading)
+- [Top-level await](/en-US/docs/Web/JavaScript/Guide/Modules#top-level_await)
+- [Module metadata](/en-US/docs/Web/JavaScript/Guide/Modules#module_metadata)
 
 ## Advanced topics
 
