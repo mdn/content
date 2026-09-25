@@ -17,7 +17,7 @@ Gaps and their decorations have evolved. Originally, column gaps and their decor
 
 Grid layout has always supported gaps between rows and columns, but originally did not support decorations in those gutters. Before rules were expanded to all gap-aware layouts, painting lines in the gaps between rows and columns in grid and flexbox required hacks, such as backgrounds images, adding borders on all items, and even absolutely positioned overlays. Fortunately CSS has evolved. CSS gap module properties support defining column and row gaps for all gap-aware layout containers, and defining visible separators, called _gap decorations_, painted in the middle of gaps in both horizontal and vertical gutters, that don't impact the box model.
 
-This example demonstrates the basic gap decoration features, with a gap between the grid rows and columns containing a dashed lime and solid darkviolet rule, respectively.
+This example demonstrates the basic gap decoration features, with a gap between the grid rows and columns containing a lime and darkviolet rule, respectively.
 
 ```css live-sample___basic live-sample___overlap live-sample___breaking live-sample___ends live-sample___visibility
 .grid {
@@ -28,7 +28,7 @@ This example demonstrates the basic gap decoration features, with a gap between 
 
   gap: 1.5rem;
   column-rule: thick solid darkviolet;
-  row-rule: thick dashed lime;
+  row-rule: thick solid lime;
 }
 ```
 
@@ -70,7 +70,7 @@ This example demonstrates the basic gap decoration features, with a gap between 
 </div>
 ```
 
-{{EmbedLiveSample("Basic", "", "200")}}
+{{EmbedLiveSample("Basic", "", "210")}}
 
 While {{cssxref("margin")}} and {{cssxref("padding")}} specify visual spacing around individual boxes, the properties in this module enable specifying the spacing between adjacent boxes within a given layout context for layouts that have {{glossary("gutters")}} and gaps, when the spacing is different between sibling boxes as opposed to between the first box, last box, and the container's edge. You can show rules in every gap or in a subset of gaps, defining fully animatable rule widths, colors, and insets.
 
@@ -91,14 +91,14 @@ While these properties may seem intuitive at first, the default size and how [pe
 
 We can control the width, color and style or rule lines either by column or row, via the `rule` shorthand that sets both at once, or via rule component properties that set a line feature for both column rules and row rules.
 
-All the properties in this section accept a comma-separated list of values, allowing for varying gap decorations within a container. You can use the `repeat()` function within the list to define a set number of repetitions, or to automatically add as many repetitions as needed to provide a value for every line drawn.
+All the properties in this section accept a comma-separated list of values, allowing for varying gap decorations within a container. You can use the {{cssxref("repeat()")}} function within the list to define a set number of repetitions, or to automatically add as many repetitions as needed to provide a value for every line drawn.
 
 ### Column rule properties
 
 Each `column-rule-*` property accepts a comma-separated list, optionally including `repeat()` values, of the following types:
 
 - {{cssxref("column-rule")}}
-  - : Shorthand defining the `<line-width>` `<line-style>` and `<color>` of the column decoration line
+  - : Shorthand defining the {{cssxref("line-width")}} {{cssxref("line-style")}} and {{cssxref("&lt;color&gt;")}} of the column decoration line
 - {{cssxref("column-rule-color")}}
   - : A {{cssxref("&lt;color&gt;")}}: The color of the rule drawn in column gaps. The default is `currentcolor`.
 - {{cssxref("column-rule-style")}}
@@ -153,7 +153,7 @@ This example is the same as the first example, but we set the row rules to break
 }
 ```
 
-{{EmbedLiveSample("Breaking", "", "200")}}
+{{EmbedLiveSample("Breaking", "", "210")}}
 
 - {{cssxref("column-rule-break")}}
   - : The keywords `none`, `normal`, or `intersection`, defining whether the rule breaks across column gaps or runs continuous.
@@ -166,13 +166,12 @@ This example is the same as the first example, but we set the row rules to break
 
 ### Overlapping
 
-If our rules and columns don't break, they'll overlap. We can control whether the row rules are painted on top of the column rules, or the other way around.
+If row and column rules don't break, they overlap at junction intersections. We can control whether the row rules are painted on top of the column rules, or the other way around.
 
-This example is almost the same as the first example on this page, but we've made the `row-rule-style` solid and set the column rules to be painted over the row rules when they intersect.
+This example is almost the same as the first example on this page, but we've set the column rules to be painted over the row rules when they intersect.
 
 ```css live-sample___overlap
 .grid {
-  row-rule-style: solid;
   rule-overlap: column-over-row;
 }
 ```
@@ -185,12 +184,12 @@ This example is almost the same as the first example on this page, but we've mad
 }
 ```
 
-{{EmbedLiveSample("overlap", "", "200")}}
+{{EmbedLiveSample("overlap", "", "210")}}
 
 - {{cssxref("rule-overlap")}}
   - : The keyword `row-over-column` or `column-over-row`. Sets the paint order for overlapping gap decorations, when a column rule and row rule intersect.
 
-Every rule has a beginning and an end, or start and end _cap_. When you have gap decorations in both columns and rows, every rule will intersect another rule at a _junction_. We can control these end points and intersections, defining whether the lines are painted to the end of the container or inset, whether the row rules are painted on top of the column rules when they intersect, or if the column rules on top of the row rule, or even if one direction should have a continuous line, with the other dimension being offset from the junction.
+Every rule has a beginning and an end, or start and end _cap_. When you have gap decorations in both columns and rows, column rules intersect row rules at _junctions_. We can control the intersections and segment end points, defining whether the lines are painted to the end of the container or inset, whether the row rules are painted on top of the column rules when they intersect, or if the column rules on top of the row rule, or even if one direction should have a continuous line, with the other dimension breaks at every junction while being offset from that junction.
 
 The properties in this section can be used to offset the start and end points of gap decorations relative to the segment endpoints which would normally determine where decorations start and end. A `*-junction` segment endpoint is a segment endpoint at a gap junction where it would otherwise meet another gap decoration segment. A `*-cap` segment endpoint is a segment endpoint that is not a junction segment endpoint. This is generally, but not limited to, the container's inline and block edges. A cap endpoint may also occur when a segment is not painted, such as because of a `rule-visibility-*` declaration.
 
@@ -309,7 +308,7 @@ In this example, the vertical decorations are continuous but inset on the ends. 
 
 ## Decoration visibility
 
-We can also define whether You can control whether a gap decoration segment is painted in portions of gaps adjacent to empty areas.
+We can also define whether a gap decoration segment is painted in portions of gaps adjacent to empty areas.
 
 In this example, note how the segments around the sections without grid items have no rules painted.
 
