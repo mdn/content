@@ -9,17 +9,23 @@ sidebar: htmlsidebar
 
 The **`containertiming`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) marks an element as a _container root_, for which {{domxref("PerformanceContainerTiming")}} entries can be observed by {{domxref("PerformanceObserver")}} objects using the `"container"` type.
 
-Its value is a string that identifies the container.
 Any paints to new areas inside the container root's subtree contribute to the container's timing (content painted inside the container root itself is excluded, as are repaints to already painted areas).
-Timing entries are only reported until the user scrolls or interacts with the page.
+Timing entries are reported only until the user scrolls or interacts with the page.
 Descendant subtrees can be excluded from a container's timing using the [`containertimingignore`](/en-US/docs/Web/HTML/Reference/Global_attributes/containertimingignore) attribute.
 For more details, see the {{domxref("PerformanceContainerTiming")}} interface.
 
 In the DOM, this attribute is reflected as {{domxref("HTMLElement.containerTiming")}}.
 
+## Value
+
+A string that identifies the container.
+This is returned in {{domxref("PerformanceContainerTiming.identifier")}}.
+
 ## Examples
 
 ### Marking a container root
+
+This example marks two elements as container roots, identified as `"hero"` and `"product-list"`.
 
 ```html
 <section containertiming="hero">

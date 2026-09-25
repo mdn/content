@@ -16,19 +16,17 @@ A {{domxref("DOMRectReadOnly")}}.
 
 ## Description
 
-The **`intersectionRect`** represents the bounding rectangle of the container's accumulated painted region, calculated since the container root was registered.
-
-The region may include gaps where no painting has occurred and may omit regions that were painted while outside the viewport.
-Paired with the {{domxref("PerformanceContainerTiming.size", "size")}} property, which provides the accumulated painted area, it provides a useful _indication_ of how much of a container has rendered and become visible so far.
+The region defined by `intersectionRect` may include gaps where no painting has occurred, and omits content that was outside the viewport when it was painted.
+Paired with the {{domxref("PerformanceContainerTiming.size", "size")}} property, which gives the accumulated painted area, it provides a useful _indication_ of how much of a container has rendered and become visible so far.
 It can also be used during debugging to confirm whether a container's content is painting inside the viewport.
 
-For more information see [When are entries generated](/en-US/docs/Web/API/PerformanceContainerTiming#when_are_entries_generated) in `PerformanceContainerTiming`.
+For more information, see [When are entries generated?](/en-US/docs/Web/API/PerformanceContainerTiming#when_are_entries_generated) in `PerformanceContainerTiming`.
 
 ## Examples
 
 ### Observing that only visible paints are counted
 
-This example demonstrates that content only creates an entry if some of it is visible when painted: once new content is added below the visible area of the container, no more entries are created.
+This example demonstrates that content creates an entry only if some of it is visible when painted: once new content is added below the visible area of the container, no more entries are created.
 It also demonstrates that the `intersectionRect` and `size` values only ever increase.
 
 #### HTML
@@ -44,6 +42,10 @@ There is also a button to reset the example.
   </section>
 </div>
 ```
+
+#### CSS
+
+The CSS gives the wrapper a fixed height and hides any content that overflows it.
 
 ```css
 #wrapper {
@@ -78,7 +80,7 @@ function log(text) {
 
 #### JavaScript
 
-The following code first checks if there are any `"container"` entries: if not, it logs that the feature is not supported.
+The following code first checks whether the browser supports `"container"` entries: if not, it logs that the feature is not supported.
 It then creates a {{domxref("PerformanceObserver")}} that logs each entry's `intersectionRect` and `size`.
 
 ```js
@@ -122,7 +124,7 @@ Last of all we add a click event handler to reset the example by reloading the p
 
 ```js
 document.querySelector("#reset").addEventListener("click", () => {
-  window.location.reload(true);
+  window.location.reload();
 });
 ```
 
@@ -131,7 +133,7 @@ document.querySelector("#reset").addEventListener("click", () => {
 A new paragraph is added every second.
 The first few paragraphs are painted inside the wrapper, so each is followed by an entry with a larger `size` and `intersectionRect`.
 Once paragraphs are added below the bottom edge of the wrapper, they are clipped away, and are not followed by new entries.
-Click "Reset" to restart the example.
+Click the **Reset** button to restart the example.
 
 {{EmbedLiveSample("Observing that only visible paints are counted", "100%", 500)}}
 

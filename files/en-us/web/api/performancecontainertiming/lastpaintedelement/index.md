@@ -8,23 +8,33 @@ browser-compat: api.PerformanceContainerTiming.lastPaintedElement
 
 {{APIRef("Performance API")}}
 
-The **`lastPaintedElement`** read-only property of the {{domxref("PerformanceContainerTiming")}} interface returns the element that contributed the largest newly-painted area in the frame that generated this entry.
-
-This might be used during debugging to identify which specific piece of content is causing a large or complex container to keep generating entries.
+The **`lastPaintedElement`** read-only property of the {{domxref("PerformanceContainerTiming")}} interface returns the element that contributed the largest newly painted area in the frame that generated this entry.
 
 ## Value
 
 An {{domxref("HTMLElement")}}, or `null` if there is none.
 
+## Description
+
+The `lastPaintedElement` is chosen separately for each entry, from the elements that painted in the rendering frame that generated it.
+For each of these elements, the browser works out how much _new_ area its paint adds to the container's [accumulated painted region](/en-US/docs/Web/API/PerformanceContainerTiming#when_are_entries_generated): that is, the part of the painted area that isn't already in the region.
+The element that adds the most new area is the `lastPaintedElement`.
+
+This means that the property doesn't necessarily indicate the last element to paint, or the largest element that painted in the frame.
+
+If container roots are nested, paints inside the inner container root also contribute to the outer one, so the `lastPaintedElement` of an outer container's entry may be inside an inner container root.
+
+The property might be used during debugging to identify which specific piece of content is causing a large or complex container to keep generating entries.
+
 ## Examples
 
 ### Logging the last painted element of a container
 
-This example demonstrates how `lastPaintedElement` identifies the element responsible for the largest newly-painted area in each frame.
+This example demonstrates how `lastPaintedElement` identifies the element responsible for the largest newly painted area in each frame.
 
 #### HTML
 
-First we define a {{htmlelement("section")}} element that is marked as a container root with the `containertiming` attribute identified as `"hero"`, along with a button to reset the example.
+First we define a {{htmlelement("section")}} element that is marked as a container root identified as `"hero"` by its `containertiming` attribute, along with a button to reset the example.
 
 ```html
 <button id="reset">Reset</button>
@@ -58,7 +68,7 @@ function log(text) {
 
 #### JavaScript
 
-The following code first checks if there are any `"container"` entries: if not, it logs that the feature is not supported.
+The following code first checks whether the browser supports `"container"` entries: if not, it logs that the feature is not supported.
 It then creates a {{domxref("PerformanceObserver")}} that logs each entry's `lastPaintedElement`.
 
 ```js
@@ -101,15 +111,15 @@ Last of all we add a click event handler to reset the example by reloading the p
 
 ```js
 document.querySelector("#reset").addEventListener("click", () => {
-  window.location.reload(true);
+  window.location.reload();
 });
 ```
 
 #### Result
 
 A new paragraph is added every second.
-Each paragraph should trigger a new log showing that the newly-added paragraph is the `lastPaintedElement` for that entry.
-Click "Reset" to restart the example.
+Each paragraph should trigger a new log showing that the newly added paragraph is the `lastPaintedElement` for that entry.
+Click the **Reset** button to restart the example.
 
 {{EmbedLiveSample("Logging the last painted element of a container", "100%", 550)}}
 

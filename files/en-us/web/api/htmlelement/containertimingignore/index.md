@@ -30,14 +30,14 @@ In this example, adding the [`containertimingignore`](/en-US/docs/Web/HTML/Refer
 </section>
 ```
 
-We can use this code to check and log the set value.
+We can then read the property and log its value:
 
 ```js
 const el = document.getElementById("ignored");
 console.log(el.containerTimingIgnore); // true
 ```
 
-For examples on how to use the Container Timing API to get timing information, see {{domxref("PerformanceContainerTiming")}}.
+For examples of how to use the Container Timing API to get timing information, see {{domxref("PerformanceContainerTiming")}}.
 
 ## Specifications
 

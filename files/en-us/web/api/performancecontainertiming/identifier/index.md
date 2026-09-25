@@ -61,7 +61,7 @@ function log(text) {
 
 #### JavaScript
 
-The following code first checks if there are any `"container"` entries: if not, it logs that the feature is not supported.
+The following code first checks whether the browser supports `"container"` entries: if not, it logs that the feature is not supported.
 It then creates a {{domxref("PerformanceObserver")}} that logs the `identifier` and {{domxref("PerformanceEntry.startTime", "startTime")}} of each entry, allowing the two containers to be told apart.
 
 ```js
@@ -79,7 +79,7 @@ if (PerformanceObserver.supportedEntryTypes.includes("container")) {
 
 #### Result
 
-The log below shows the `identifier` and `startTime` reported for each of the two containers.
+The following log shows the `identifier` and `startTime` reported for each of the two containers.
 Note that the start time is the same in this case, as they are painted in the same frame.
 
 {{EmbedLiveSample("Using identifier to distinguish containers", "100%", 250)}}

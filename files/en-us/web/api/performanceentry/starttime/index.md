@@ -17,6 +17,8 @@ A {{domxref("DOMHighResTimeStamp")}} representing the first timestamp when the
 
 The meaning of this property depends on the value of this performance entry's {{domxref("PerformanceEntry.entryType","entryType")}}:
 
+- `container`
+  - : The value of this entry's {{domxref("PerformanceContainerTiming.paintTime", "paintTime")}}.
 - `element`
   - : Either the value of this entry's {{domxref("PerformanceElementTiming.renderTime", "renderTime")}} if it is not `0`, otherwise the value of this entry's {{domxref("PerformanceElementTiming.loadTime", "loadTime")}}.
 - `event`
