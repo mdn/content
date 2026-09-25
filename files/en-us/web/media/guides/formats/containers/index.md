@@ -1156,6 +1156,10 @@ This can be used to offer various versions of a video that can be selected depen
 
 In the example shown here, a video is offered to the browser in two formats: WebM and MP4.
 
+The video is offered first in WebM format (with the [`type`](/en-US/docs/Web/HTML/Reference/Elements/source#type) attribute set to `video/webm`).
+If the {{Glossary("user agent")}} can't play that, it moves on to the next option, whose `type` is specified as `video/mp4`.
+If neither of those can be played, the text "This browser does not support the HTML video element." is presented.
+
 {{InteractiveExample("HTML Demo: &lt;source&gt;", "tabbed-standard")}}
 
 ```html interactive-example
@@ -1169,10 +1173,6 @@ In the example shown here, a video is offered to the browser in two formats: Web
   video.
 </video>
 ```
-
-The video is offered first in WebM format (with the [`type`](/en-US/docs/Web/HTML/Reference/Elements/source#type) attribute set to `video/webm`).
-If the {{Glossary("user agent")}} can't play that, it moves on to the next option, whose `type` is specified as `video/mp4`.
-If neither of those can be played, the text "This browser does not support the HTML video element." is presented.
 
 ## Specifications
 
