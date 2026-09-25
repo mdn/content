@@ -59,10 +59,6 @@ margin-left: 0;
 }
 ```
 
-The vertical margins of two adjacent boxes may fuse. This is called [_margin collapsing_](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing).
-
-In the rare cases where width is overconstrained (i.e., when all of `width`, `margin-left`, `border`, `padding`, the content area, and `margin-right` are defined), `margin-left` is ignored, and will have the same calculated value as if the `auto` value was specified.
-
 ## Syntax
 
 ```css
@@ -187,6 +183,12 @@ The `margin-left` property is specified as the keyword `auto`, or a `<length>`, 
         </tr>
       </tbody>
     </table>
+
+## Description
+
+The vertical margins of two adjacent boxes may fuse. This is called [_margin collapsing_](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing).
+
+In the rare cases where width is overconstrained (i.e., when all of `width`, `margin-left`, `border`, `padding`, the content area, and `margin-right` are defined), `margin-left` is ignored, and will have the same calculated value as if the `auto` value was specified.
 
 ## Formal definition
 
