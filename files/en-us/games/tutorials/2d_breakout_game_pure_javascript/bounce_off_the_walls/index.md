@@ -26,10 +26,10 @@ The essential logic is as follows:
 
 ```js
 if (hittingLeftBoundary || hittingRightBoundary) {
-  ballVel.x = -ballVel.x;
+  ball.vel.x = -ball.vel.x;
 }
 if (hittingTopBoundary || hittingBottomBoundary) {
-  ballVel.y = -ballVel.y;
+  ball.vel.y = -ball.vel.y;
 }
 ```
 
@@ -38,13 +38,69 @@ We just need to replace each of the variables in the conditions with the right e
 > [!NOTE]
 > Imagine the following: the ball moves to the left, overlaps with the wall (the `x` coordinate is negative), and reverses the direction. However, the next frame happens so quickly that the ball has not fully left the wall yet (the `x` coordinate is still negative). Without this condition, it would trigger another collision and reverse direction yet again. This is known as [collision jitter](https://docs.flatredball.com/flatredball/tutorials/code-tutorials/collision-jitter), a common bug in games, especially old ones that don't use established game engines. We solve it by adding the "is moving to the left" condition; it can also be solved by implementing the "overlap-avoiding adjustment" above.
 
-To get the left edge of the ball, we need to subtract its half-width from the center position, similar to how we obtain the coordinates for `drawImage()`. For convenience we'll define `const rx = ball.width / 2` so we can reuse it for all other calculations. Note that `rx` has to be defined _inside_ the `draw` function, because `ball.width` is only available after the image has been loaded, but top-level code is executed before that.
+To get the left edge of the ball, we need to subtract its half-width from the center position, similar to how we obtain the coordinates for `drawImage()`.
 
 ```js
-const hittingLeftBoundary = ballPos.x - rx <= 0 && ballVel.x < 0;
+const hittingLeftBoundary = ball.pos.x - ball.size.w / 2 <= 0 && ball.vel.x < 0;
 ```
 
-The implementations for the other three boundaries are left as exercise; remember that the right boundary has an `x` coordinate of 480, while the top and bottom boundaries have `y` coordinates of 0 and 320, respectively.
+The implementations for the other three boundaries are left as exercise; remember that the right boundary has an `x` coordinate of `canvas.width`, while the top and bottom boundaries have `y` coordinates of 0 and `canvas.height`, respectively.
+
+> [!NOTE]
+> Here, we are approximating the ball as a square centered at `ball.pos`, with size `ball.size.w` by `ball.size.h` (these are dimensions of the PNG image), because squares are easier to calculate for overlap than arbitrary geometric shapes. This is known as a _hitbox_. An object can also have many hitboxes if its geometry is complex. Because our PNG asset has no padding, the image-based hitbox pretty accurately circumscribes the rendered circle, save for the extra space on the four corners. The more complex your object is, the harder it is to create an accurate set of hitboxes while maintaining good performance.
+
+## Incorporating collision handling
+
+We decide to keep the collision handling logic outside of objects, because most collisions happen between two objects, and we may also want to control when and how it happens. The `Ball` class is only responsible for providing the `hitbox`:
+
+```js
+class Ball {
+  // …
+  get hitbox() {
+    return {
+      left: this.pos.x - this.size.w / 2,
+      right: this.pos.x + this.size.w / 2,
+      top: this.pos.y - this.size.h / 2,
+      bottom: this.pos.y + this.size.h / 2,
+    };
+  }
+}
+```
+
+The getter calculates the edges from the ball's current position and size whenever we read `ball.hitbox`. This avoids storing a second set of coordinates that we would need to update whenever the ball moves.
+
+Now add the collision handler outside the class. It takes an object exposing `hitbox` and `vel`, along with the world's width and height:
+
+```js
+function handleWallCollisions(object, width, height) {
+  const hitbox = object.hitbox;
+  const hittingLeftBoundary = hitbox.left <= 0 && object.vel.x < 0;
+  const hittingRightBoundary = hitbox.right >= width && object.vel.x > 0;
+  const hittingTopBoundary = hitbox.top <= 0 && object.vel.y < 0;
+  const hittingBottomBoundary = hitbox.bottom >= height && object.vel.y > 0;
+
+  if (hittingLeftBoundary || hittingRightBoundary) {
+    object.vel.x = -object.vel.x;
+  }
+  if (hittingTopBoundary || hittingBottomBoundary) {
+    object.vel.y = -object.vel.y;
+  }
+}
+```
+
+Inside the main `draw()` function, call the handler immediately after `ball.move(dt)`:
+
+```js
+if (lastTimestamp !== null) {
+  const dt = timestamp - lastTimestamp;
+  ball.move(dt);
+  handleWallCollisions(ball, canvas.width, canvas.height);
+}
+lastTimestamp = timestamp;
+ball.draw();
+```
+
+The game loop now moves the ball, handles wall collisions, and then draws it. The current collision algorithm is very simple and allows the aforementioned "temporary penetration". Later, when we add more objects, we will be upgrading this algorithm.
 
 ## Compare your code
 
@@ -76,46 +132,81 @@ canvas {
 ```js hidden
 const canvas = document.getElementById("game-canvas");
 const ctx = canvas.getContext("2d");
-
-const ball = new Image();
-ball.src =
-  "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/ball.png";
-
-const ballPos = { x: 50, y: 50 };
 let lastTimestamp = null;
-const ballVel = { x: 0.15, y: 0.15 };
 
-Promise.all([ball].map((img) => img.decode())).then(() =>
+class Ball {
+  asset;
+  ctx;
+  size = { w: undefined, h: undefined };
+  pos = { x: 50, y: 50 };
+  vel = { x: 0.15, y: 0.15 };
+  constructor(url, ctx) {
+    this.asset = new Image();
+    this.asset.src = url;
+    this.ctx = ctx;
+  }
+  async preload() {
+    await this.asset.decode();
+    this.size.w = this.asset.width;
+    this.size.h = this.asset.height;
+  }
+  get hitbox() {
+    return {
+      left: this.pos.x - this.size.w / 2,
+      right: this.pos.x + this.size.w / 2,
+      top: this.pos.y - this.size.h / 2,
+      bottom: this.pos.y + this.size.h / 2,
+    };
+  }
+  draw() {
+    this.ctx.drawImage(
+      this.asset,
+      this.pos.x - this.size.w / 2,
+      this.pos.y - this.size.h / 2,
+    );
+  }
+  move(dt) {
+    this.pos.x += this.vel.x * dt;
+    this.pos.y += this.vel.y * dt;
+  }
+}
+
+const ball = new Ball(
+  "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/ball.png",
+  ctx,
+);
+
+Promise.all([ball].map((obj) => obj.preload())).then(() =>
   requestAnimationFrame(draw),
 );
 
 function draw(timestamp) {
-  const rx = ball.width / 2;
-  const ry = ball.height / 2;
-
   ctx.fillStyle = "#eeeeee";
-  ctx.fillRect(0, 0, 480, 320);
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
   if (lastTimestamp !== null) {
     const dt = timestamp - lastTimestamp;
-    ballPos.x += ballVel.x * dt;
-    ballPos.y += ballVel.y * dt;
+    ball.move(dt);
+    handleWallCollisions(ball, canvas.width, canvas.height);
   }
   lastTimestamp = timestamp;
-  ctx.drawImage(ball, ballPos.x - rx, ballPos.y - ry);
-
-  const hittingLeftBoundary = ballPos.x - rx <= 0 && ballVel.x < 0;
-  const hittingRightBoundary = ballPos.x + rx >= 480 && ballVel.x > 0;
-  const hittingTopBoundary = ballPos.y - ry <= 0 && ballVel.y < 0;
-  const hittingBottomBoundary = ballPos.y + ry >= 320 && ballVel.y > 0;
-  if (hittingLeftBoundary || hittingRightBoundary) {
-    ballVel.x = -ballVel.x;
-  }
-  if (hittingTopBoundary || hittingBottomBoundary) {
-    ballVel.y = -ballVel.y;
-  }
-  // continue adding things here...
+  ball.draw();
 
   requestAnimationFrame(draw);
+}
+
+function handleWallCollisions(object, width, height) {
+  const hitbox = object.hitbox;
+  const hittingLeftBoundary = hitbox.left <= 0 && object.vel.x < 0;
+  const hittingRightBoundary = hitbox.right >= width && object.vel.x > 0;
+  const hittingTopBoundary = hitbox.top <= 0 && object.vel.y < 0;
+  const hittingBottomBoundary = hitbox.bottom >= height && object.vel.y > 0;
+
+  if (hittingLeftBoundary || hittingRightBoundary) {
+    object.vel.x = -object.vel.x;
+  }
+  if (hittingTopBoundary || hittingBottomBoundary) {
+    object.vel.y = -object.vel.y;
+  }
 }
 ```
 

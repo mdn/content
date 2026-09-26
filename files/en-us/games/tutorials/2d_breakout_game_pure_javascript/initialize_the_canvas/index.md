@@ -39,7 +39,7 @@ And create a new `js` directory in the same location as your `index.html` file, 
 const canvas = document.getElementById("game-canvas");
 const ctx = canvas.getContext("2d");
 ctx.fillStyle = "#eeeeee";
-ctx.fillRect(0, 0, 480, 320);
+ctx.fillRect(0, 0, canvas.width, canvas.height);
 ```
 
 ## Walking through what we have so far
@@ -119,7 +119,7 @@ canvas {
 const canvas = document.getElementById("game-canvas");
 const ctx = canvas.getContext("2d");
 ctx.fillStyle = "#eeeeee";
-ctx.fillRect(0, 0, 480, 320);
+ctx.fillRect(0, 0, canvas.width, canvas.height);
 ```
 
 {{EmbedLiveSample("compare your code", "", 480, , , , , "allow-modals")}}
