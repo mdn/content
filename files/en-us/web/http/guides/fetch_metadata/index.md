@@ -24,7 +24,7 @@ The [Fetch metadata specification](https://w3c.github.io/webappsec-fetch-metadat
 - {{HTTPHeader("Sec-Fetch-User")}}
 - {{HTTPHeader("Sec-Fetch-Dest")}}
 
-Like all `Sec-` prefixed headers, these are {{glossary("forbidden request header", "forbidden request headers")}}, which means they can't be set or modified by the website's front-end code.
+Like all `Sec-` prefixed headers, these are {{glossary("forbidden request header", "forbidden request headers")}}, which means they can't be set or modified by the website's front-end code. Also, fetch metadata headers are only sent in requests to [potentially trustworthy URLs](/en-US/docs/Web/Security/Defenses/Secure_Contexts#potentially_trustworthy_urls), so servers on non-secure (`http://`) origins will not receive these headers.
 
 ### Sec-Fetch-Dest
 
