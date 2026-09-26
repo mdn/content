@@ -3,13 +3,9 @@ title: "`margin-trim` CSS property"
 short-title: margin-trim
 slug: Web/CSS/Reference/Properties/margin-trim
 page-type: css-property
-status:
-  - experimental
 browser-compat: css.properties.margin-trim
 sidebar: cssref
 ---
-
-{{SeeCompatTable}}
 
 The `margin-trim` property allows the container to trim the margins of its children where they adjoin the container's edges.
 
