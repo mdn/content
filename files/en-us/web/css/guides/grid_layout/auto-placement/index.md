@@ -63,7 +63,7 @@ As you can see with the above example, if you create a grid without placing any 
 
 The default for automatically created rows in the implicit grid is for them to be _auto-sized_. This means that they will size themselves to contain the content added to them without causing an overflow.
 
-The size of these rows can be controlled using the property {{cssxref("grid-auto-rows")}} property. For example, to make all rows 100px tall, you can use `grid-auto-rows: 100px;`:
+The size of these rows can be controlled using the {{cssxref("grid-auto-rows")}} property. For example, to make all rows 100px tall, you can use `grid-auto-rows: 100px;`:
 
 ```css hidden
 body {
