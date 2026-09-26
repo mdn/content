@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}
 
-This is the **3rd step** out of 13 of the [creating a Breakout game in pure JavaScript tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Now that motion physics have been introduced, we can start implementing collision detection into the game—first we'll look at the walls.
+This is the **3rd step** out of 12 of the [creating a Breakout game in pure JavaScript tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Now that motion physics have been introduced, we can start implementing collision detection into the game—first we'll look at the walls.
 
 ## Bouncing off the world boundaries
 
@@ -161,8 +161,10 @@ class Ball {
   }
   async preload() {
     await this.asset.decode();
-    this.size.w = this.asset.width;
-    this.size.h = this.asset.height;
+    if (this.size.w === undefined) {
+      this.size.w = this.asset.width;
+      this.size.h = this.asset.height;
+    }
   }
   get hitbox() {
     return {

@@ -5,9 +5,9 @@ page-type: guide
 sidebar: games
 ---
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Game_over", "Games/Tutorials/2D_breakout_game_Phaser/Collision_detection")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Game_over", "Games/Tutorials/2D_breakout_game_Phaser/The_score")}}
 
-This is the **9th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Let's explore how to create a group of bricks and print them on the screen using a loop. Building the brick field is a little bit more complicated than adding a single object to the screen, although likely less complicated to do with Phaser than in pure JavaScript.
+This is the **9th step** out of 15 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Let's explore how to create a group of bricks and print them on the screen using a loop. Building the brick field is a little bit more complicated than adding a single object to the screen, although likely less complicated to do with Phaser than in pure JavaScript.
 
 ## New properties
 
@@ -127,6 +127,40 @@ Each `brickX` position is worked out as `bricksLayout.width` plus `bricksLayout.
 
 If you reload `index.html` at this point, you should see the bricks printed on screen, at an even distance from one another.
 
+## Brick/Ball collision detection
+
+Now onto the next challenge—the collision detection between the ball and the bricks. Luckily enough, we can use the physics engine to check collisions not only between single objects (like the ball and the paddle), but also between an object and the group.
+
+First, add a new line inside your `update()` method that detects a collision between the ball and bricks, as shown below:
+
+```js
+class ExampleScene extends Phaser.Scene {
+  // ...
+  update() {
+    this.physics.collide(this.ball, this.paddle);
+    this.physics.collide(this.ball, this.bricks, (ball, brick) =>
+      this.hitBrick(ball, brick),
+    );
+    this.paddle.x = this.input.x || this.scale.width * 0.5;
+    // ...
+  }
+  // ...
+}
+```
+
+The ball's position is calculated against the positions of all the bricks in the group. The third, optional parameter is the function executed when a collision occurs. This function is called by Phaser with two arguments—the first one is the ball, which we explicitly passed to the collide method, and the second one is the single brick from the bricks group that the ball is colliding with. Here we implement the behavior in a method called `hitBrick()`. Create this new method at the end of the `ExampleScene` class, just before the closing brace `}`, as follows:
+
+```js
+class ExampleScene extends Phaser.Scene {
+  // ...
+  hitBrick(ball, brick) {
+    brick.destroy();
+  }
+}
+```
+
+And that's it! Reload your code, and you should see the new collision detection working just as required.
+
 ## Compare your code
 
 Here's what you should have so far, running live. To view its source code, click the "Play" button.
@@ -183,6 +217,10 @@ class ExampleScene extends Phaser.Scene {
   }
   update() {
     this.physics.collide(this.ball, this.paddle);
+    this.physics.collide(this.ball, this.bricks, (ball, brick) =>
+      this.hitBrick(ball, brick),
+    );
+
     this.paddle.x = this.input.x || this.scale.width * 0.5;
     const ballIsOutOfBounds = !Phaser.Geom.Rectangle.Overlaps(
       this.physics.world.bounds,
@@ -226,6 +264,10 @@ class ExampleScene extends Phaser.Scene {
       }
     }
   }
+
+  hitBrick(ball, brick) {
+    brick.destroy();
+  }
 }
 
 const config = {
@@ -250,6 +292,6 @@ const game = new Phaser.Game(config);
 
 ## Next steps
 
-Something is missing though. The ball goes through the bricks without stopping—we need proper [collision detection](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Collision_detection).
+We can hit the bricks and remove them, which is a nice addition to the gameplay already. It would be even better to count the destroyed bricks and increment [the score](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score) as a result.
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Game_over", "Games/Tutorials/2D_breakout_game_Phaser/Collision_detection")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Game_over", "Games/Tutorials/2D_breakout_game_Phaser/The_score")}}

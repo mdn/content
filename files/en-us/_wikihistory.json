@@ -512,10 +512,6 @@
     "modified": "2020-10-27T19:37:08.095Z",
     "contributors": ["escattone", "wbamberg", "chrisdavidmills", "end3r"]
   },
-  "Games/Tutorials/2D_breakout_game_Phaser/Collision_detection": {
-    "modified": "2020-10-27T19:40:22.466Z",
-    "contributors": ["escattone", "wbamberg", "chrisdavidmills", "end3r"]
-  },
   "Games/Tutorials/2D_breakout_game_Phaser/Extra_lives": {
     "modified": "2020-10-27T19:40:46.630Z",
     "contributors": [
@@ -663,25 +659,6 @@
       "gbharatwaj",
       "trevorh",
       "end3r"
-    ]
-  },
-  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Collision_detection": {
-    "modified": "2020-10-27T19:50:40.665Z",
-    "contributors": [
-      "escattone",
-      "yumetodo",
-      "chrisdavidmills",
-      "raymondjplante",
-      "m1sh2",
-      "wbamberg",
-      "kundan333",
-      "monop",
-      "RishYang",
-      "tseidler",
-      "fscholz",
-      "gbharatwaj",
-      "end3r",
-      "trevorh"
     ]
   },
   "Games/Tutorials/2D_breakout_game_pure_JavaScript/Finishing_up": {

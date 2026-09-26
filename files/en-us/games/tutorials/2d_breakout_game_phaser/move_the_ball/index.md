@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen", "Games/Tutorials/2D_breakout_game_Phaser/Physics")}}
 
-This is the **4th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). We have our blue ball printed on screen, but it's doing nothing—it would be cool to make it move somehow. This article covers how to do just that.
+This is the **4th step** out of 15 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). We have our blue ball printed on screen, but it's doing nothing—it would be cool to make it move somehow. This article covers how to do just that.
 
 ## Updating the ball's position on each frame
 

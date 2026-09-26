@@ -5,9 +5,9 @@ page-type: guide
 sidebar: games
 ---
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Collision_detection", "Games/Tutorials/2D_breakout_game_Phaser/Win_the_game")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_Phaser/Win_the_game")}}
 
-This is the **11th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). In this article, we'll add a scoring system to our game. Having a score can also make the game more interesting—you can try to beat your own high score, or your friend's.
+This is the **11th step** out of 15 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). In this article, we'll add a scoring system to our game. Having a score can also make the game more interesting—you can try to beat your own high score, or your friend's.
 
 We will use a separate property for storing the score and Phaser's `text()` method to print it out onto the screen.
 
@@ -202,4 +202,4 @@ const game = new Phaser.Game(config);
 
 We now have a scoring system, but what's the point of playing and keeping score if you can't win? Let's see how we can add a victory state, allowing us to [win the game](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Win_the_game).
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Collision_detection", "Games/Tutorials/2D_breakout_game_Phaser/Win_the_game")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_Phaser/Win_the_game")}}

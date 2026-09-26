@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Scaling", "Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball")}}
 
-This is the **3rd step** out of 16 in the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). In this article, we'll look at how to add sprites into our gameworld. Our game will feature a ball rolling around the screen, bouncing off a paddle, and destroying bricks to earn points—familiar, huh?
+This is the **3rd step** out of 15 in the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). In this article, we'll look at how to add sprites into our gameworld. Our game will feature a ball rolling around the screen, bouncing off a paddle, and destroying bricks to earn points—familiar, huh?
 
 ## Having a ball
 

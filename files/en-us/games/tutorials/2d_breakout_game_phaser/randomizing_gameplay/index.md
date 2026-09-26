@@ -7,7 +7,7 @@ sidebar: games
 
 {{Previous("Games/Tutorials/2D_breakout_game_Phaser/Buttons")}}
 
-This is the **16th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Our game appears to be completed, but if you look close enough, you'll notice that the ball is bouncing off the paddle at the same angle throughout the whole game. This means that every game is quite similar. To fix this and improve playability, we should make the rebound angles more random, and in this article we'll look at how.
+This is the **16th step** out of 15 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Our game appears to be completed, but if you look close enough, you'll notice that the ball is bouncing off the paddle at the same angle throughout the whole game. This means that every game is quite similar. To fix this and improve playability, we should make the rebound angles more random, and in this article we'll look at how.
 
 ## Making rebounds more random
 

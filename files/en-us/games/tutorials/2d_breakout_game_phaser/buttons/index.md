@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens", "Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay")}}
 
-This is the **15th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Instead of starting the game right away, we can leave that decision to the player by adding a Start button they can press. Let's investigate how to do that.
+This is the **15th step** out of 15 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Instead of starting the game right away, we can leave that decision to the player by adding a Start button they can press. Let's investigate how to do that.
 
 ## New properties
 

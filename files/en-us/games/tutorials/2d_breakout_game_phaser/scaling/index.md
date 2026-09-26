@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework", "Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}
 
-This is the **2nd step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). We'll be working on scaling, which refers to how the game canvas will scale on different screen sizes. We can make the game scale to fit on any screen size by configuring `scale` during initialization, so we don't have to worry about it later.
+This is the **2nd step** out of 15 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). We'll be working on scaling, which refers to how the game canvas will scale on different screen sizes. We can make the game scale to fit on any screen size by configuring `scale` during initialization, so we don't have to worry about it later.
 
 ## The Phaser scale object
 

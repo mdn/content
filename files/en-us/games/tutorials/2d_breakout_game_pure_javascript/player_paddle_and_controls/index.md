@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over")}}
 
-This is the **4th step** out of 13 of the [creating a Breakout game in pure JavaScript tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). We have the ball moving and bouncing off the walls, but it quickly gets boring—there's no interactivity! We need a way to introduce gameplay, so in this article, we'll create a paddle to move around and hit the ball with.
+This is the **4th step** out of 12 of the [creating a Breakout game in pure JavaScript tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). We have the ball moving and bouncing off the walls, but it quickly gets boring—there's no interactivity! We need a way to introduce gameplay, so in this article, we'll create a paddle to move around and hit the ball with.
 
 ## Rendering the paddle
 
@@ -27,8 +27,10 @@ class GameObject {
   }
   async preload() {
     await this.asset.decode();
-    this.size.w = this.asset.width;
-    this.size.h = this.asset.height;
+    if (this.size.w === undefined) {
+      this.size.w = this.asset.width;
+      this.size.h = this.asset.height;
+    }
   }
   get hitbox() {
     const left = this.pos.x - this.size.w * this.origin.x;
@@ -109,6 +111,9 @@ paddle.draw();
 The paddle is now positioned right where we want it to be. Now, to make the ball bounce off the paddle, we have to implement collision physics between them.
 
 ## Adding physics
+
+> [!NOTE]
+> We are moving faster here than the rest of the tutorial, because this part is exactly where a framework like [Phaser](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls) does for us. Usually, you would not be implementing any of the physics and just need to register the paddle as a collider.
 
 Unlike walls, the paddle is a finite rectangle, so it can be hit from all four edges (or even on the corner) and—in the super rare case, if the ball is fast enough—can even be passed through. Instead of checking for overlap after moving the ball, we will implement _continuous collision detection_, which calculates the first instant it comes into contact with the surface between the frames, so we never lose information about which surface is touched first.
 
@@ -253,9 +258,6 @@ if (lastTimestamp !== null) {
 
 This calculation assumes that the ball starts inside the canvas without overlapping any collider, and that the colliders stay still during each call to `moveBall()`.
 
-> [!NOTE]
-> This part is exactly where a framework like [Phaser](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls) can save us from trouble, because it implements all of the physics and we just need to register the paddle as a collider.
-
 ## Controlling the paddle
 
 The next problem is that we can't move the paddle. To fix that, we can use the system's pointer input (mouse or touch, depending on the platform) and set the paddle position to where the pointer position is.
@@ -371,8 +373,10 @@ class GameObject {
   }
   async preload() {
     await this.asset.decode();
-    this.size.w = this.asset.width;
-    this.size.h = this.asset.height;
+    if (this.size.w === undefined) {
+      this.size.w = this.asset.width;
+      this.size.h = this.asset.height;
+    }
   }
   get hitbox() {
     const left = this.pos.x - this.size.w * this.origin.x;

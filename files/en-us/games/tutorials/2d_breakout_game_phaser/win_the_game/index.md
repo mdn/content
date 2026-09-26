@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/The_score", "Games/Tutorials/2D_breakout_game_Phaser/Extra_lives")}}
 
-This is the **12th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Implementing winning in our game is quite easy: if you happen to destroy all the bricks, then you win.
+This is the **12th step** out of 15 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Implementing winning in our game is quite easy: if you happen to destroy all the bricks, then you win.
 
 ## How to win?
 

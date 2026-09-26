@@ -3498,6 +3498,8 @@
 /en-US/docs/Games/Techniques/Publishing_games/Game_promotion	/en-US/docs/Games/Publishing_games/Game_promotion
 /en-US/docs/Games/Techniques/Tilemaps/SquareTiles	/en-US/docs/Games/Techniques/Tilemaps
 /en-US/docs/Games/Techniques/Tilemaps/SquareTiles/Square_tilemaps_implementation:_Static_maps	/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Static_maps
+/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Collision_detection	/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field#brickball_collision_detection
+/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Collision_detection	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field#brickball_collision_detection
 /en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Paddle_and_keyboard_controls	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls
 /en-US/docs/Games/Tutorials/Touch_Event_Horizon	/en-US/docs/Games/Tutorials
 /en-US/docs/Games/WebRTC_data_channels	/en-US/docs/Games/Techniques/WebRTC_data_channels
@@ -3507,7 +3509,7 @@
 /en-US/docs/Games/Workflows/2D_breakout_game_Phaser/Bounce_off_the_walls	/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls
 /en-US/docs/Games/Workflows/2D_breakout_game_Phaser/Build_the_brick_field	/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field
 /en-US/docs/Games/Workflows/2D_breakout_game_Phaser/Buttons	/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Buttons
-/en-US/docs/Games/Workflows/2D_breakout_game_Phaser/Collision_detection	/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Collision_detection
+/en-US/docs/Games/Workflows/2D_breakout_game_Phaser/Collision_detection	/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field#brickball_collision_detection
 /en-US/docs/Games/Workflows/2D_breakout_game_Phaser/Extra_lives	/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Extra_lives
 /en-US/docs/Games/Workflows/2D_breakout_game_Phaser/Game_over	/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Game_over
 /en-US/docs/Games/Workflows/2D_breakout_game_Phaser/Initialize_the_framework	/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework
@@ -3522,7 +3524,7 @@
 /en-US/docs/Games/Workflows/2D_breakout_game_pure_JavaScript	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript
 /en-US/docs/Games/Workflows/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls
 /en-US/docs/Games/Workflows/2D_breakout_game_pure_JavaScript/Build_the_brick_field	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field
-/en-US/docs/Games/Workflows/2D_breakout_game_pure_JavaScript/Collision_detection	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Collision_detection
+/en-US/docs/Games/Workflows/2D_breakout_game_pure_JavaScript/Collision_detection	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field#brickball_collision_detection
 /en-US/docs/Games/Workflows/2D_breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 /en-US/docs/Games/Workflows/2D_breakout_game_pure_JavaScript/Finishing_up	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Finishing_up
 /en-US/docs/Games/Workflows/2D_breakout_game_pure_JavaScript/Game_over	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over
@@ -3533,7 +3535,7 @@
 /en-US/docs/Games/Workflows/Breakout_game_from_scratch	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript
 /en-US/docs/Games/Workflows/Breakout_game_from_scratch/Bounce_off_the_walls	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls
 /en-US/docs/Games/Workflows/Breakout_game_from_scratch/Build_the_brick_field	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field
-/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Collision_detection	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Collision_detection
+/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Collision_detection	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field#brickball_collision_detection
 /en-US/docs/Games/Workflows/Breakout_game_from_scratch/Create_the_Canvas_and_draw_on_it	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
 /en-US/docs/Games/Workflows/Breakout_game_from_scratch/Finishing_up	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Finishing_up
 /en-US/docs/Games/Workflows/Breakout_game_from_scratch/Game_over	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over

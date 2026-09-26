@@ -5,253 +5,436 @@ page-type: guide
 sidebar: games
 ---
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Collision_detection")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_breakout_game_pure_JavaScript/The_score")}}
 
-This is the **6th step** out of 10 of the [Gamedev Canvas tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). You can find the source code as it would look after completing this lesson at [Gamedev-Canvas-workshop/lesson6.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson06.html).
+This is the **6th step** out of 12 of the [creating a Breakout game in pure JavaScript tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Let's explore how to create a group of bricks and print them on the screen using a loop. Building the brick field is a little bit more complicated than adding a single object to the screen.
 
-After modifying the gameplay mechanics, we are now able to lose — this is great as it means the game is finally feeling more like a game. However, it will quickly get boring if all you do is bounce the ball off the walls and the paddle. What a breakout game really needs is some bricks to destroy with the ball, and this is what we'll create now!
+## Drawing the bricks
 
-## Setting up the brick variables
-
-The overall aim of this lesson is to render a few lines of code for the bricks, using a nested loop that works through a two-dimensional array. First however we need to set up some variables to define information about the bricks such as their width and height, rows and columns, etc. Add the following lines to your code below the variables which you have previously declared in your program.
+Like the `Ball` and `Paddle`, the `Brick` is also backed by the `GameObject` class. A brick has no default position or size and must be explicitly specified in the constructor. Because the size is already explicitly specified, the `preload()` method will not override it with the image's dimensions. Because the bricks have explicit dimensions, we can use the extra `dWidth` and `dHeight` parameters of {{domxref("CanvasRenderingContext2D/drawImage", "ctx.drawImage()")}}, which automatically scales the image if it's not already of the desired dimensions.
 
 ```js
-const brickRowCount = 3;
-const brickColumnCount = 5;
-const brickWidth = 75;
-const brickHeight = 20;
-const brickPadding = 10;
-const brickOffsetTop = 30;
-const brickOffsetLeft = 30;
-```
-
-Here we've defined the number of rows and columns of bricks, their width and height, the padding between the bricks so they won't touch each other and a top and left offset so they won't start being drawn right from the edge of the Canvas.
-
-We will hold all our bricks in a two-dimensional array. It will contain the brick columns (c), which in turn will contain the brick rows (r), which in turn will each contain an object containing the `x` and `y` position to paint each brick on the screen. Add the following just below your variables:
-
-```js
-const bricks = [];
-for (let c = 0; c < brickColumnCount; c++) {
-  bricks[c] = [];
-  for (let r = 0; r < brickRowCount; r++) {
-    bricks[c][r] = { x: 0, y: 0 };
+class Brick extends GameObject {
+  constructor(url, ctx, x, y, w, h) {
+    super(url, ctx);
+    this.pos = { x, y };
+    this.size = { w, h };
+  }
+  draw() {
+    const { left, top } = this.hitbox;
+    this.ctx.drawImage(this.asset, left, top, this.size.w, this.size.h);
   }
 }
 ```
 
-The code above will loop through the rows and columns and create the new bricks. NOTE that the brick objects will also be used for collision detection purposes later.
+You also need to [grab the brick image](https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/brick.png) and save it in your `/img` directory.
 
-## Brick drawing logic
-
-Now let's create a function to loop through all the bricks in the array and draw them on the screen. Our code might look like this:
+We will place all the code for drawing the bricks inside an `initBricks` function to keep it separated from the rest of the code. Add a call to `initBricks` below `colliders.push(paddle);`:
 
 ```js
-function drawBricks() {
-  for (let c = 0; c < brickColumnCount; c++) {
-    for (let r = 0; r < brickRowCount; r++) {
-      bricks[c][r].x = 0;
-      bricks[c][r].y = 0;
-      ctx.beginPath();
-      ctx.rect(0, 0, brickWidth, brickHeight);
-      ctx.fillStyle = "#0095DD";
-      ctx.fill();
-      ctx.closePath();
-    }
+// …
+const paddle = new Paddle("img/paddle.png", ctx);
+colliders.push(paddle);
+const bricks = initBricks();
+// …
+```
+
+Now on to the function itself. Add the `initBricks` function at the end of the `script.js` file. To begin with, we add the `bricksLayout` object, as this will come in handy very soon:
+
+```js
+function initBricks() {
+  const bricksLayout = {
+    width: 50,
+    height: 20,
+    count: {
+      row: 3,
+      col: 7,
+    },
+    offset: {
+      top: 50,
+      left: 60,
+    },
+    padding: 10,
+  };
+  const bricks = [];
+  // continue adding here...
+  return bricks;
+}
+```
+
+This `bricksLayout` holds all the information we need: the width and height of a single brick, the number of rows and columns of bricks we will see on the screen, the top and left offset (the location on the canvas where we start to draw the bricks), and the padding between each row and column of bricks.
+
+Now, let's start creating the bricks themselves. We can loop through the rows and columns to create a new brick on each iteration—add the following nested loop below the previous line of code:
+
+```js
+for (let c = 0; c < bricksLayout.count.col; c++) {
+  for (let r = 0; r < bricksLayout.count.row; r++) {
+    const brickX =
+      c * (bricksLayout.width + bricksLayout.padding) +
+      bricksLayout.offset.left;
+    const brickY =
+      r * (bricksLayout.height + bricksLayout.padding) +
+      bricksLayout.offset.top;
+
+    const newBrick = new Brick(
+      "img/brick.png",
+      ctx,
+      brickX,
+      brickY,
+      bricksLayout.width,
+      bricksLayout.height,
+    );
+    bricks.push(newBrick);
   }
 }
 ```
 
-Again, we're looping through the rows and columns to set the `x` and `y` position of each brick, and we're also painting a brick on the Canvas — size `brickWidth` x `brickHeight` — with each loop iteration. The problem is that we're painting them all in one place, at coordinates `(0,0)`. What we need to do is include some calculations that will work out the `x` and `y` position of each brick for each loop iteration:
+Each `brickX` position is worked out as `bricksLayout.width` plus `bricksLayout.padding`, multiplied by the column number, `c`, plus the `bricksLayout.offset.left`; the logic for the `brickY` is identical except that it uses the values for row number, `r`, `bricksLayout.height`, and `bricksLayout.offset.top`. Now every single brick can be placed in its correct place, with padding between each brick, and drawn at an offset from the left and top Canvas edges.
+
+Finally, we can draw these bricks to the screen inside the `draw()` function. Add the following below the `paddle.draw()` call:
 
 ```js
-const brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
-const brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
+for (const brick of bricks) {
+  brick.draw();
+}
 ```
 
-Each `brickX` position is worked out as `brickWidth` + `brickPadding`, multiplied by the column number, `c`, plus the `brickOffsetLeft`; the logic for the brickY is identical except that it uses the values for row number, `r`, `brickHeight`, and `brickOffsetTop`. Now every single brick can be placed in its correct place row and column, with padding between each brick, drawn at an offset from the left and top canvas edges.
+If you reload `index.html` at this point, you should see the bricks printed on screen, at an even distance from one another.
 
-The final version of the `drawBricks()` function, after assigning the `brickX` and `brickY` values as the coordinates instead of `(0,0)` each time, will look like this — add this into your code below the `drawPaddle()` function:
+## Brick/Ball collision detection
+
+Now onto the next challenge—the collision detection between the ball and the bricks. Luckily enough, we already implemented a very generic collision system, so we can simply wire our bricks to it.
+
+First, register each brick as a collider, right below the `initBricks()` call:
 
 ```js
-function drawBricks() {
-  for (let c = 0; c < brickColumnCount; c++) {
-    for (let r = 0; r < brickRowCount; r++) {
-      const brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
-      const brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
-      bricks[c][r].x = brickX;
-      bricks[c][r].y = brickY;
-      ctx.beginPath();
-      ctx.rect(brickX, brickY, brickWidth, brickHeight);
-      ctx.fillStyle = "#0095DD";
-      ctx.fill();
-      ctx.closePath();
-    }
+const bricks = initBricks();
+for (const brick of bricks) {
+  colliders.push(brick);
+}
+```
+
+Add a `onCollide()` method to each brick, which removes itself from the `bricks` and `colliders` collections:
+
+```js
+class Brick extends GameObject {
+  // …
+  onCollide() {
+    bricks.splice(bricks.indexOf(this), 1);
+    colliders.splice(colliders.indexOf(this), 1);
   }
 }
 ```
 
-## Actually drawing the bricks
+The brick needs to be gone as soon as possible, so that the ball doesn't bounce off it.
 
-The last thing to do in this lesson is to add a call to `drawBricks()` somewhere in the `draw()` function, preferably at the beginning, between the clearing of the Canvas and drawing the ball. Add the following just above the `drawBall()` call:
-
-```js
-drawBricks();
-```
+And that's it! Reload your code, and you should see the new collision detection working just as required.
 
 ## Compare your code
 
-At this point, the game has got a little more interesting again:
+Here's what you should have so far, running live. To view its source code, click the "Play" button.
 
 ```html hidden
-<canvas id="myCanvas" width="480" height="320"></canvas>
-<button id="runButton">Start game</button>
+<canvas id="game-canvas" width="480" height="320"></canvas>
 ```
 
 ```css hidden
-canvas {
-  background: #eeeeee;
+* {
+  padding: 0;
+  margin: 0;
 }
-button {
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+canvas {
   display: block;
+  width: min(100vw, 150vh);
+  height: auto;
+  touch-action: none;
 }
 ```
 
 ```js hidden
-const canvas = document.getElementById("myCanvas");
+const canvas = document.getElementById("game-canvas");
 const ctx = canvas.getContext("2d");
-const ballRadius = 10;
+let lastTimestamp = null;
 
-let x = canvas.width / 2;
-let y = canvas.height - 30;
+const baseWallHitbox = {
+  left: -Infinity,
+  right: Infinity,
+  top: -Infinity,
+  bottom: Infinity,
+};
 
-let dx = 2;
-let dy = -2;
+const colliders = [
+  { hitbox: { ...baseWallHitbox, right: 0 } },
+  { hitbox: { ...baseWallHitbox, left: canvas.width } },
+  { hitbox: { ...baseWallHitbox, bottom: 0 } },
+];
 
-const paddleHeight = 10;
-const paddleWidth = 75;
-
-let paddleX = (canvas.width - paddleWidth) / 2;
-let rightPressed = false;
-let leftPressed = false;
-
-let interval = 0;
-
-const brickRowCount = 3;
-const brickColumnCount = 5;
-const brickWidth = 75;
-const brickHeight = 20;
-const brickPadding = 10;
-const brickOffsetTop = 30;
-const brickOffsetLeft = 30;
-
-let bricks = [];
-for (let c = 0; c < brickColumnCount; c++) {
-  bricks[c] = [];
-  for (let r = 0; r < brickRowCount; r++) {
-    bricks[c][r] = { x: 0, y: 0 };
+class GameObject {
+  asset;
+  ctx;
+  size = { w: undefined, h: undefined };
+  pos = { x: 0, y: 0 };
+  origin = { x: 0.5, y: 0.5 };
+  constructor(url, ctx) {
+    this.asset = new Image();
+    this.asset.src = url;
+    this.ctx = ctx;
   }
-}
-
-document.addEventListener("keydown", keyDownHandler);
-document.addEventListener("keyup", keyUpHandler);
-
-function keyDownHandler(e) {
-  if (e.key === "Right" || e.key === "ArrowRight") {
-    rightPressed = true;
-  } else if (e.key === "Left" || e.key === "ArrowLeft") {
-    leftPressed = true;
+  async preload() {
+    await this.asset.decode();
+    if (this.size.w === undefined) {
+      this.size.w = this.asset.width;
+      this.size.h = this.asset.height;
+    }
   }
-}
-
-function keyUpHandler(e) {
-  if (e.key === "Right" || e.key === "ArrowRight") {
-    rightPressed = false;
-  } else if (e.key === "Left" || e.key === "ArrowLeft") {
-    leftPressed = false;
+  get hitbox() {
+    const left = this.pos.x - this.size.w * this.origin.x;
+    const top = this.pos.y - this.size.h * this.origin.y;
+    return {
+      left,
+      right: left + this.size.w,
+      top,
+      bottom: top + this.size.h,
+    };
   }
+  draw() {
+    const { left, top } = this.hitbox;
+    this.ctx.drawImage(this.asset, left, top);
+  }
+  onCollide() {}
 }
 
-function drawBall() {
-  ctx.beginPath();
-  ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
-  ctx.fillStyle = "#0095DD";
-  ctx.fill();
-  ctx.closePath();
-}
-function drawPaddle() {
-  ctx.beginPath();
-  ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
-  ctx.fillStyle = "#0095DD";
-  ctx.fill();
-  ctx.closePath();
-}
-function drawBricks() {
-  for (let c = 0; c < brickColumnCount; c++) {
-    for (let r = 0; r < brickRowCount; r++) {
-      let brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
-      let brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
-      bricks[c][r].x = brickX;
-      bricks[c][r].y = brickY;
-      ctx.beginPath();
-      ctx.rect(brickX, brickY, brickWidth, brickHeight);
-      ctx.fillStyle = "#0095DD";
-      ctx.fill();
-      ctx.closePath();
+class Ball extends GameObject {
+  pos = { x: undefined, y: undefined };
+  vel = { x: 0.15, y: -0.15 };
+  move(dt) {
+    this.pos.x += this.vel.x * dt;
+    this.pos.y += this.vel.y * dt;
+  }
+  onCollide({ x, y }) {
+    if (x) {
+      this.vel.x = -this.vel.x;
+    }
+    if (y) {
+      this.vel.y = -this.vel.y;
     }
   }
 }
 
-function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  drawBricks();
-  drawBall();
-  drawPaddle();
-
-  if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
-    dx = -dx;
+class Paddle extends GameObject {
+  origin = { x: 0.5, y: 1 };
+  constructor(url, ctx) {
+    super(url, ctx);
+    this.pos = { x: ctx.canvas.width / 2, y: ctx.canvas.height - 5 };
   }
-  if (y + dy < ballRadius) {
-    dy = -dy;
-  } else if (y + dy > canvas.height - ballRadius) {
-    if (x > paddleX && x < paddleX + paddleWidth) {
-      if ((y -= paddleHeight)) {
-        dy = -dy;
-      }
-    } else {
-      alert("GAME OVER");
-      document.location.reload();
-      clearInterval(interval); // Needed for Chrome to end game
-    }
-  }
-
-  if (rightPressed && paddleX < canvas.width - paddleWidth) {
-    paddleX += 7;
-  } else if (leftPressed && paddleX > 0) {
-    paddleX -= 7;
-  }
-
-  x += dx;
-  y += dy;
 }
 
-function startGame() {
-  interval = setInterval(draw, 10);
+class Brick extends GameObject {
+  constructor(url, ctx, x, y, w, h) {
+    super(url, ctx);
+    this.pos = { x, y };
+    this.size = { w, h };
+  }
+  draw() {
+    const { left, top } = this.hitbox;
+    this.ctx.drawImage(this.asset, left, top, this.size.w, this.size.h);
+  }
+  onCollide() {
+    bricks.splice(bricks.indexOf(this), 1);
+    colliders.splice(colliders.indexOf(this), 1);
+  }
 }
 
-const runButton = document.getElementById("runButton");
-runButton.addEventListener("click", () => {
-  startGame();
-  runButton.disabled = true;
+const ball = new Ball(
+  "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/ball.png",
+  ctx,
+);
+const paddle = new Paddle(
+  "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/paddle.png",
+  ctx,
+);
+colliders.push(paddle);
+const bricks = initBricks();
+for (const brick of bricks) {
+  colliders.push(brick);
+}
+
+canvas.addEventListener("pointermove", (event) => {
+  if (paddle.size.w === undefined) {
+    return;
+  }
+  const bounds = canvas.getBoundingClientRect();
+  const x = ((event.clientX - bounds.left) * canvas.width) / bounds.width;
+  paddle.pos.x = Math.max(
+    paddle.size.w / 2,
+    Math.min(canvas.width - paddle.size.w / 2, x),
+  );
 });
+
+Promise.all([ball, paddle].map((obj) => obj.preload())).then(() => {
+  ball.pos.x = paddle.pos.x;
+  ball.pos.y = paddle.hitbox.top - ball.size.h / 2;
+  requestAnimationFrame(draw);
+});
+
+function draw(timestamp) {
+  ctx.fillStyle = "#eeeeee";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  if (lastTimestamp !== null) {
+    const dt = timestamp - lastTimestamp;
+    moveBall(dt);
+  }
+  lastTimestamp = timestamp;
+  ball.draw();
+  paddle.draw();
+  for (const brick of bricks) {
+    brick.draw();
+  }
+
+  requestAnimationFrame(draw);
+}
+
+function getCollision(moving, velocity, obstacle, dt) {
+  const width = moving.right - moving.left;
+  const height = moving.bottom - moving.top;
+  const movingPos = { x: moving.left, y: moving.top };
+  const left = obstacle.left - width;
+  const right = obstacle.right;
+  const top = obstacle.top - height;
+  const bottom = obstacle.bottom;
+  const hit = { time: dt, x: null, y: null };
+
+  function checkFace(axis, coordinate, min, max, direction) {
+    if (velocity[axis] * direction <= 0) {
+      return;
+    }
+    const time = (coordinate - movingPos[axis]) / velocity[axis];
+    if (time < 0 || time > hit.time) {
+      return;
+    }
+    const otherAxis = axis === "x" ? "y" : "x";
+    const otherPosition = movingPos[otherAxis] + velocity[otherAxis] * time;
+    if (otherPosition < min || otherPosition > max) {
+      return;
+    }
+    if (time < hit.time) {
+      hit.x = null;
+      hit.y = null;
+    }
+    hit.time = time;
+    hit[axis] = coordinate;
+  }
+
+  checkFace("x", left, top, bottom, 1);
+  checkFace("x", right, top, bottom, -1);
+  checkFace("y", top, left, right, 1);
+  checkFace("y", bottom, left, right, -1);
+
+  return hit.x === null && hit.y === null ? null : hit;
+}
+
+function moveBall(dt) {
+  while (dt > 0) {
+    // Avoid repeatedly triggering the getter
+    const ballHitbox = ball.hitbox;
+    let hitTime = dt;
+    let hitX = null;
+    let hitY = null;
+    let contacts = [];
+
+    for (const collider of colliders) {
+      const hit = getCollision(ballHitbox, ball.vel, collider.hitbox, hitTime);
+      if (hit === null) {
+        continue;
+      }
+      if (hit.time < hitTime) {
+        hitX = null;
+        hitY = null;
+        contacts = [];
+      }
+      hitTime = hit.time;
+      hitX = hit.x ?? hitX;
+      hitY = hit.y ?? hitY;
+      contacts.push({ collider, hit });
+    }
+
+    ball.move(hitTime);
+    dt -= hitTime;
+
+    const ballIsOutOfBounds = ball.hitbox.bottom > canvas.height;
+    if (ballIsOutOfBounds) {
+      // Game over logic
+      location.reload();
+    }
+
+    if (contacts.length === 0) {
+      break;
+    }
+    // Snap the position to the point of contact to avoid floating point errors
+    if (hitX !== null) {
+      ball.pos.x = hitX + ball.size.w / 2;
+    }
+    if (hitY !== null) {
+      ball.pos.y = hitY + ball.size.h / 2;
+    }
+
+    ball.onCollide({ x: hitX !== null, y: hitY !== null });
+    for (const { collider, hit } of contacts) {
+      collider.onCollide?.({ x: hit.x !== null, y: hit.y !== null });
+    }
+  }
+}
+
+function initBricks() {
+  const bricksLayout = {
+    width: 50,
+    height: 20,
+    count: {
+      row: 3,
+      col: 7,
+    },
+    offset: {
+      top: 50,
+      left: 60,
+    },
+    padding: 10,
+  };
+  const bricks = [];
+  for (let c = 0; c < bricksLayout.count.col; c++) {
+    for (let r = 0; r < bricksLayout.count.row; r++) {
+      const brickX =
+        c * (bricksLayout.width + bricksLayout.padding) +
+        bricksLayout.offset.left;
+      const brickY =
+        r * (bricksLayout.height + bricksLayout.padding) +
+        bricksLayout.offset.top;
+
+      const newBrick = new Brick(
+        "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/brick.png",
+        ctx,
+        brickX,
+        brickY,
+        bricksLayout.width,
+        bricksLayout.height,
+      );
+      bricks.push(newBrick);
+    }
+  }
+  return bricks;
+}
 ```
 
-{{embedlivesample("compare_your_code", 600, 360)}}
-
-> [!NOTE]
-> Try changing the number of bricks in a row or a column, or their positions.
+{{EmbedLiveSample("compare your code", "", 480, , , , , "allow-modals")}}
 
 ## Next steps
 
-So now we have bricks! But the ball isn't interacting with them at all — we'll change that as we continue to the seventh chapter: [Collision detection](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Collision_detection).
+We can hit the bricks and remove them, which is a nice addition to the gameplay already. It would be even better to count the destroyed bricks and increment [the score](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/The_score) as a result.
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Collision_detection")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_breakout_game_pure_JavaScript/The_score")}}

@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls", "Games/Tutorials/2D_breakout_game_Phaser/Game_over")}}
 
-This is the **7th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). We have the ball moving and bouncing off the walls, but it quickly gets boring—there's no interactivity! We need a way to introduce gameplay, so in this article, we'll create a paddle to move around and hit the ball with.
+This is the **7th step** out of 15 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). We have the ball moving and bouncing off the walls, but it quickly gets boring—there's no interactivity! We need a way to introduce gameplay, so in this article, we'll create a paddle to move around and hit the ball with.
 
 ## Rendering the paddle
 

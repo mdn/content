@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
 
-This is the **2nd step** out of 13 of the [creating a Breakout game in pure JavaScript tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). In this article, we'll look at how to add sprites into our gameworld. Our game will feature a ball rolling around the screen, bouncing off a paddle, and destroying bricks to earn points.
+This is the **2nd step** out of 12 of the [creating a Breakout game in pure JavaScript tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). In this article, we'll look at how to add sprites into our gameworld. Our game will feature a ball rolling around the screen, bouncing off a paddle, and destroying bricks to earn points.
 
 Doing this involves two steps: loading the ball's asset, and rendering it at the correct position as the ball moves. Technically, we will be painting the ball on the screen, clearing it and then painting it again in a slightly different position every frame to make the impression of movement — just like how movement works with the movies.
 
@@ -64,8 +64,10 @@ class Ball {
   }
   async preload() {
     await this.asset.decode();
-    this.size.w = this.asset.width;
-    this.size.h = this.asset.height;
+    if (this.size.w === undefined) {
+      this.size.w = this.asset.width;
+      this.size.h = this.asset.height;
+    }
   }
 }
 ```
@@ -204,8 +206,10 @@ class Ball {
   }
   async preload() {
     await this.asset.decode();
-    this.size.w = this.asset.width;
-    this.size.h = this.asset.height;
+    if (this.size.w === undefined) {
+      this.size.w = this.asset.width;
+      this.size.h = this.asset.height;
+    }
   }
   draw() {
     this.ctx.drawImage(
