@@ -75,7 +75,7 @@ For example, support for the `userVerifyingPlatformAuthenticator` capability ind
 A web application could use this to display a fingerprint icon if the capability is supported, or a password input if it is not.
 If biometric login is required, then it could instead provide notification that the site cannot authenticate using this browser or device.
 Similarly, `conditionalGet` indicates that the client supports conditional mediation when signing in a user, which means the browser can provide auto-filled discoverable credentials in a login form (for example an autocompleting text field or a drop-down list), along with a sign-in button.
-The `conditionalCreate` capability indicates that the client supports automatic passkey creation during a passkey sign-in, without requiring another prominent modal interaction.
+The `conditionalCreate` capability indicates that the client supports automatic passkey creation during a sign-in ceremony the user agent has mediated, without requiring another prominent modal interaction.
 
 If the value of a given capability is present in the returned object, then `true` indicates that the capability is currently supported, and `false` indicates that it is not.
 However, if a key is not present for a particular capability, no assumptions can be made about the availability of the associated feature.
