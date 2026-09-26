@@ -207,7 +207,12 @@ This essentially enables a website to provide a unified autofill, including both
 
 ### Automatic passkey creation
 
-Conditional mediation can also be used when creating a credential, but its behavior differs from the [autofill UI](#autofill_ui) used for authentication. With a conditional {{domxref("CredentialsContainer.create()", "create()")}} request, the user agent may create a passkey without additional prominent modal interaction if the user has previously consented to credential creation and the user agent recently mediated an authentication. This is also called _conditional create_ or _automatic passkey creation_.
+Conditional mediation can also be used when creating a credential, but its behavior differs from the [autofill UI](#autofill_ui) used for authentication. With a conditional {{domxref("CredentialsContainer.create()", "create()")}} request, the user agent may create a passkey without additional prominent modal interaction, provided that two conditions hold:
+
+- The user has previously agreed to passkey creation on this site: in an earlier visit, they approved registering a passkey, so the user agent has standing consent to create credentials for this origin.
+- The user agent recently mediated an authentication: the user just signed in with a passkey in a mediated ceremony — in practice, the conditional [autofill UI](#autofill_ui) — rather than with a password or another non-passkey flow.
+
+If either condition is not met, `create()` rejects with `NotAllowedError`. This is also called _conditional create_ or _automatic passkey creation_.
 
 Use {{domxref("PublicKeyCredential.getClientCapabilities_static", "PublicKeyCredential.getClientCapabilities()")}} to check whether the client supports conditional creation, then set the top-level [`mediation`](/en-US/docs/Web/API/CredentialsContainer/create#mediation) option to `"conditional"` alongside the `publicKey` creation options:
 
@@ -233,7 +238,7 @@ if (capabilities.conditionalCreate) {
 }
 ```
 
-The capability check only reports client support. If the user agent did not recently mediate an authentication or does not have consent to create the credential, `create()` rejects with `NotAllowedError`. The resulting credential is otherwise registered with the relying party server like a public key credential created with the standard modal flow.
+The capability check only reports client support. If the user agent did not just mediate a passkey sign-in or the user has not previously agreed to passkey creation on this site, `create()` rejects with `NotAllowedError`. The resulting credential is otherwise registered with the relying party server like a public key credential created with the standard modal flow.
 
 ### Discoverable credential synchronization methods
 
