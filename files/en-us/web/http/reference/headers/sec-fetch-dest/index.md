@@ -12,6 +12,8 @@ That is the initiator of the original fetch request, which is where (and how) th
 
 This allows servers to determine whether to service a request based on whether it is appropriate for how it is _expected_ to be used. For example, a request with an `audio` destination should request audio data, not some other type of resource (for example, a document that includes sensitive user information).
 
+The header is only included in requests to [potentially trustworthy URLs](/en-US/docs/Web/Security/Defenses/Secure_Contexts#potentially_trustworthy_urls).
+
 <table class="properties">
   <tbody>
     <tr>

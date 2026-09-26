@@ -13,6 +13,8 @@ In other words, this header tells a server whether a request for a resource is c
 
 Same-origin requests would usually be allowed by default, but what happens for requests from other origins may further depend on what resource is being requested, or information in another fetch metadata request header. By default, requests that are not accepted should be rejected with a {{HTTPStatus("403")}} response code.
 
+The header is only included in requests to [potentially trustworthy URLs](/en-US/docs/Web/Security/Defenses/Secure_Contexts#potentially_trustworthy_urls).
+
 <table class="properties">
   <tbody>
     <tr>
