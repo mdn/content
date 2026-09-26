@@ -39,20 +39,18 @@ hyphenate-limit-chars: unset;
 
 ### Values
 
-This property is specified as one to three numeric or `auto` values:
+This property is specified as one to three values from the following list:
 
-- `<number> <number> <number>`
-  - : The first value is the minimum word length before words should be hyphenated. The second value is the minimum number of characters before the hyphen. The third value is the minimum number of characters after the hyphen.
-- `<number> <number>`
-  - : The first value is the minimum word length before words should be hyphenated. The second value is the minimum number of characters before the hyphen. The minimum number of characters after the hyphen will be set equal to the second value.
-- `<number>`
-  - : The value is the minimum word length before words should be hyphenated. The minimum number of characters before and after the hyphen will be set to `auto`.
-
-If `auto` is set for any of the values, the user agent will choose an appropriate value for the current layout. Unless the user agent can calculate a better value, the following default values will be used:
-
-- Minimum word length to allow hyphenation: 5
-- Minimum number of characters before the hyphen: 2
-- Minimum number of characters after the hyphen: 2
+- `auto`
+  - : The user agent chooses an appropriate value for the current layout. Unless the user agent can calculate a better value, the following default values are used:
+    - Minimum word length to allow hyphenation: 5
+    - Minimum number of characters before the hyphen: 2
+    - Minimum number of characters after the hyphen: 2
+- {{cssxref("integer")}}
+  - : A number of characters. What it limits depends on its position:
+    - The first value is the minimum word length before words should be hyphenated.
+    - The second value is the minimum number of characters before the hyphen. If it is omitted, it is set to `auto`.
+    - The third value is the minimum number of characters after the hyphen. If it is omitted, it is set equal to the second value.
 
 Note that if a word is too short to meet the given constraints, it will not be hyphenated. For example, given a value like `hyphenate-limit-chars: auto 3 4`, words shorter than 7 characters will never be hyphenated, since it is impossible to have 3 characters before the hyphen and 4 characters after it.
 
