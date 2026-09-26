@@ -1,13 +1,64 @@
 ---
-title: Win the game
-slug: Games/Tutorials/2D_breakout_game_Phaser/Win_the_game
+title: Track the score and win
+slug: Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win
 page-type: guide
 sidebar: games
 ---
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/The_score", "Games/Tutorials/2D_breakout_game_Phaser/Extra_lives")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_Phaser/Extra_lives")}}
 
-This is the **9th step** out of 13 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Implementing winning in our game is quite easy: if you happen to destroy all the bricks, then you win.
+This is the **8th step** out of 12 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). In this article, we'll add a scoring system to our game. Having a score can also make the game more interesting—you can try to beat your own high score, or your friend's. We also add a winning condition, which is if you happen to destroy all the bricks.
+
+We will use a separate property for storing the score and Phaser's `text()` method to print it out onto the screen.
+
+## New properties
+
+Add two new properties right after the previously defined ones:
+
+```js
+class ExampleScene extends Phaser.Scene {
+  // ... previous property definitions ...
+  scoreText;
+  score = 0;
+  // ... rest of the class ...
+}
+```
+
+## Adding score text to the game display
+
+Now add this line at the end of the `create()` method:
+
+```js
+this.scoreText = this.add.text(5, 5, "Points: 0", {
+  font: "18px Arial",
+  color: "#0095dd",
+});
+```
+
+The `text()` method can take four parameters:
+
+- The x and y coordinates to draw the text at.
+- The actual text that will be rendered.
+- The font style to render the text with.
+
+The last parameter looks very similar to CSS styling. In our case, the score text will be blue, sized at 18 pixels, and use the Arial font.
+
+## Updating the score when bricks are destroyed
+
+We will increase the number of points every time the ball hits a brick and update the `scoreText` to display the current score. This can be done using the `setText()` method—add the two new lines seen below to the `hitBrick()` method:
+
+```js
+class ExampleScene extends Phaser.Scene {
+  // ...
+  hitBrick(ball, brick) {
+    brick.destroy();
+    this.score += 10;
+    this.scoreText.setText(`Points: ${this.score}`);
+  }
+}
+```
+
+That's it for now—reload your `index.html` and check that the score updates on every brick hit.
 
 ## How to win?
 
@@ -175,4 +226,4 @@ const game = new Phaser.Game(config);
 
 Both losing and winning are implemented, so the core gameplay of our game is finished. Now let's add something extra—we'll give the player three [lives](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Extra_lives) instead of one.
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/The_score", "Games/Tutorials/2D_breakout_game_Phaser/Extra_lives")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_Phaser/Extra_lives")}}

@@ -570,11 +570,7 @@
     "modified": "2020-10-27T19:37:28.337Z",
     "contributors": ["escattone", "wbamberg", "chrisdavidmills", "end3r"]
   },
-  "Games/Tutorials/2D_breakout_game_Phaser/The_score": {
-    "modified": "2020-10-27T19:45:46.988Z",
-    "contributors": ["escattone", "wbamberg", "chrisdavidmills", "end3r"]
-  },
-  "Games/Tutorials/2D_breakout_game_Phaser/Win_the_game": {
+  "Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win": {
     "modified": "2020-10-27T19:46:12.559Z",
     "contributors": [
       "escattone",

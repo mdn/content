@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser", "Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball")}}
 
-This is the first of 13 tutorials to learn how to use [Gamedev Phaser](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Before we can start writing the game's functionality, we need to create a basic structure to render the game inside. This can be done using HTML—the Phaser framework will generate the required {{htmlelement("canvas")}} element.
+This is the first of 12 tutorials to learn how to use [Gamedev Phaser](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Before we can start writing the game's functionality, we need to create a basic structure to render the game inside. This can be done using HTML—the Phaser framework will generate the required {{htmlelement("canvas")}} element.
 
 ## The game's HTML
 

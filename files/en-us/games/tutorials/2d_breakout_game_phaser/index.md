@@ -29,12 +29,11 @@ We have chosen Phaser for this project because it has good browser support, an a
 5. [Player paddle and controls](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls)
 6. [Game over](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Game_over)
 7. [Build the brick field](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field)
-8. [The score](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score)
-9. [Win the game](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Win_the_game)
-10. [Extra lives](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Extra_lives)
-11. [Animations and tweens](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens)
-12. [Buttons](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Buttons)
-13. [Randomizing gameplay](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay)
+8. [Track the score and win](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win)
+9. [Extra lives](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Extra_lives)
+10. [Animations and tweens](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens)
+11. [Buttons](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Buttons)
+12. [Randomizing gameplay](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay)
 
 ## Next steps
 

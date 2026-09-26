@@ -26,12 +26,11 @@ To get the most out of this series of articles, you should already have basic to
 4. [Player paddle and controls](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls)
 5. [Game over](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over)
 6. [Build the brick field](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field)
-7. [The score](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score)
-8. [Win the game](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Win_the_game)
-9. [Extra lives](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Extra_lives)
-10. [Animations and tweens](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens)
-11. [Buttons](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Buttons)
-12. [Randomizing gameplay](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay)
+7. [Track the score and win](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win)
+8. [Extra lives](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Extra_lives)
+9. [Animations and tweens](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens)
+10. [Buttons](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Buttons)
+11. [Randomizing gameplay](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay)
 
 ## Next steps
 
