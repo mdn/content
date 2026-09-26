@@ -91,18 +91,6 @@ An origin is potentially trustworthy if has:
 
 This is essentially intended to capture: origins that use a secure transport across the network, local origins, and origins that the browser considers authenticated for some other reason (for example, those used by browser extensions).
 
-### Potentially trustworthy URLs
-
-A **potentially trustworthy URL** is one that is from a [potentially trustworthy origin](#potentially_trustworthy_origins), or:
-
-- whose URL is `about:blank` or `about:srcdoc`, both of which inherit trustworthiness from their creator's origin.
-- whose scheme is a `blob:` URL, which inherits trustworthiness from its creator's origin.
-- whose scheme is `data:`, in which case the content is inline rather than network-delivered.
-
-While potentially trustworthy origins are used to make trust decisions about access to features generally allowed only to secure contexts, potentially trustworthy URLs are used to determine whether a request is allowed to include potentially private data.
-For example, [Fetch Metadata request headers](/en-US/docs/Glossary/Fetch_metadata_request_header) are only sent in requests to potentially trustworthy URLs.
-This means servers on non-secure `http://` URLs may not receive these headers.
-
 ## Feature detection
 
 Pages can check whether they are in a secure context or not by using the {{domxref("Window.isSecureContext")}} or {{domxref("WorkerGlobalScope.isSecureContext")}} property.
