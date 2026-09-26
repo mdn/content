@@ -78,7 +78,7 @@ class ExampleScene extends Phaser.Scene {
 }
 ```
 
-We count the number of bricks that are still alive, using the `countAlive()` method on `this.bricks`. If there are no more bricks left alive, then we display the winning message, restarting the game once the alert is dismissed.
+We count the number of bricks that are still active, using the `countActive()` method on `this.bricks`. If there are no more active bricks, then we display the winning message, restarting the game once the alert is dismissed.
 
 ## Compare your code
 

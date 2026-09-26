@@ -54,6 +54,9 @@ class ExampleScene extends Phaser.Scene {
   livesText;
   lifeLostText;
 
+  playing = false;
+  startButton;
+
   preload() {
     this.load.setBaseURL(
       "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser",

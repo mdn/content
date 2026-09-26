@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework", "Games/Tutorials/2D_breakout_game_Phaser/Physics")}}
 
-This is the **2nd step** out of 12 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). In this article, we'll look at how to add sprites into our gameworld. Our game will feature a ball rolling around the screen, bouncing off a paddle, and destroying bricks to earn points.
+This is the **2nd step** out of 12 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). In this article, we'll look at how to load a ball sprite, add it to our gameworld, and move it across the screen. Our game will feature a ball rolling around the screen, bouncing off a paddle, and destroying bricks to earn points.
 
 Doing this involves two steps: loading the ball's asset, and rendering it at the correct position as the ball moves.
 
@@ -32,6 +32,7 @@ class ExampleScene extends Phaser.Scene {
   preload() {
     this.load.image("ball", "img/ball.png");
   }
+  // ...
 }
 ```
 

@@ -27,7 +27,7 @@ These respectively will store the number of lives, the text label that displays 
 
 ## Defining the new text labels
 
-Defining the texts looks like something we already did in [the score](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win) lesson. Add the following lines below the existing `scoreText` definition inside your `create()` method:
+Defining the texts looks like something we already did in the [Track the score and win](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win) lesson. Add the following lines below the existing `scoreText` definition inside your `create()` method:
 
 ```js
 this.livesText = this.add.text(
