@@ -23,19 +23,18 @@ We have chosen Phaser for this project because it has good browser support, an a
 ## Lesson details
 
 1. [Initialize the framework](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework)
-2. [Load the assets and print them on screen](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen)
-3. [Move the ball](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball)
-4. [Physics](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Physics)
-5. [Bounce off the walls](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls)
-6. [Player paddle and controls](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls)
-7. [Game over](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Game_over)
-8. [Build the brick field](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field)
-9. [The score](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score)
-10. [Win the game](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Win_the_game)
-11. [Extra lives](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Extra_lives)
-12. [Animations and tweens](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens)
-13. [Buttons](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Buttons)
-14. [Randomizing gameplay](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay)
+2. [Move the ball](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball)
+3. [Physics](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Physics)
+4. [Bounce off the walls](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls)
+5. [Player paddle and controls](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls)
+6. [Game over](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Game_over)
+7. [Build the brick field](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field)
+8. [The score](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score)
+9. [Win the game](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Win_the_game)
+10. [Extra lives](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Extra_lives)
+11. [Animations and tweens](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens)
+12. [Buttons](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Buttons)
+13. [Randomizing gameplay](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay)
 
 ## Next steps
 

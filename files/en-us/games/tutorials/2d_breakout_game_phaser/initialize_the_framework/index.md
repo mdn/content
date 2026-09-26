@@ -5,9 +5,9 @@ page-type: guide
 sidebar: games
 ---
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser", "Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser", "Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball")}}
 
-This is the first of 14 tutorials to learn how to use [Gamedev Phaser](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Before we can start writing the game's functionality, we need to create a basic structure to render the game inside. This can be done using HTML—the Phaser framework will generate the required {{htmlelement("canvas")}} element.
+This is the first of 13 tutorials to learn how to use [Gamedev Phaser](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Before we can start writing the game's functionality, we need to create a basic structure to render the game inside. This can be done using HTML—the Phaser framework will generate the required {{htmlelement("canvas")}} element.
 
 ## The game's HTML
 
@@ -132,6 +132,6 @@ const game = new Phaser.Game(config);
 
 ## Next steps
 
-Now we've set up the basic HTML and learned a bit about Phaser initialization, let's continue to the second lesson and work out how to [load the assets and print them on screen](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen).
+Now we've set up the basic HTML and learned a bit about Phaser initialization, let's continue to the second lesson and work out how to [render a ball and move it](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball).
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser", "Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser", "Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball")}}
