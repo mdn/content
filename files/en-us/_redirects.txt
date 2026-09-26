@@ -3498,6 +3498,7 @@
 /en-US/docs/Games/Techniques/Publishing_games/Game_promotion	/en-US/docs/Games/Publishing_games/Game_promotion
 /en-US/docs/Games/Techniques/Tilemaps/SquareTiles	/en-US/docs/Games/Techniques/Tilemaps
 /en-US/docs/Games/Techniques/Tilemaps/SquareTiles/Square_tilemaps_implementation:_Static_maps	/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Static_maps
+/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Paddle_and_keyboard_controls	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls
 /en-US/docs/Games/Tutorials/Touch_Event_Horizon	/en-US/docs/Games/Tutorials
 /en-US/docs/Games/WebRTC_data_channels	/en-US/docs/Games/Techniques/WebRTC_data_channels
 /en-US/docs/Games/Workflows	/en-US/docs/Games/Tutorials
@@ -3527,7 +3528,7 @@
 /en-US/docs/Games/Workflows/2D_breakout_game_pure_JavaScript/Game_over	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over
 /en-US/docs/Games/Workflows/2D_breakout_game_pure_JavaScript/Mouse_controls	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Mouse_controls
 /en-US/docs/Games/Workflows/2D_breakout_game_pure_JavaScript/Move_the_ball	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball
-/en-US/docs/Games/Workflows/2D_breakout_game_pure_JavaScript/Paddle_and_keyboard_controls	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
+/en-US/docs/Games/Workflows/2D_breakout_game_pure_JavaScript/Paddle_and_keyboard_controls	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls
 /en-US/docs/Games/Workflows/2D_breakout_game_pure_JavaScript/Track_the_score_and_win	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win
 /en-US/docs/Games/Workflows/Breakout_game_from_scratch	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript
 /en-US/docs/Games/Workflows/Breakout_game_from_scratch/Bounce_off_the_walls	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls
@@ -3538,7 +3539,7 @@
 /en-US/docs/Games/Workflows/Breakout_game_from_scratch/Game_over	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over
 /en-US/docs/Games/Workflows/Breakout_game_from_scratch/Mouse_controls	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Mouse_controls
 /en-US/docs/Games/Workflows/Breakout_game_from_scratch/Move_the_ball	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball
-/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Paddle_and_keyboard_controls	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
+/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Paddle_and_keyboard_controls	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls
 /en-US/docs/Games/Workflows/Breakout_game_from_scratch/Track_the_score_and_win	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win
 /en-US/docs/Games/Workflows/HTML5_Gamedev_Phaser_Device_Orientation	/en-US/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation
 /en-US/docs/Games/Workflows/Touch_Event_Horizon	/en-US/docs/Games/Tutorials

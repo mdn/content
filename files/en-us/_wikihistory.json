@@ -465,183 +465,6 @@
       "groovecoder"
     ]
   },
-  "Games/Tutorials/2D_breakout_game_pure_JavaScript": {
-    "modified": "2020-10-27T19:49:04.623Z",
-    "contributors": [
-      "escattone",
-      "JoeParrilla",
-      "wbamberg",
-      "jswisher",
-      "jolosan",
-      "cristianvnica",
-      "chrisdavidmills",
-      "Twoteka",
-      "Jeremie",
-      "end3r",
-      "fscholz",
-      "rabimba"
-    ]
-  },
-  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls": {
-    "modified": "2020-10-27T19:49:44.781Z",
-    "contributors": [
-      "escattone",
-      "wbamberg",
-      "rydash",
-      "chrisdavidmills",
-      "allisonlu",
-      "fscholz",
-      "gbharatwaj",
-      "end3r",
-      "Sheppy"
-    ]
-  },
-  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field": {
-    "modified": "2020-10-27T19:50:27.345Z",
-    "contributors": [
-      "escattone",
-      "ro-kl",
-      "raymondjplante",
-      "wbamberg",
-      "yumetodo",
-      "chrisdavidmills",
-      "SphinxKnight",
-      "HongchenLiu",
-      "daniel.stormont",
-      "landrey",
-      "allisonlu",
-      "kundan333",
-      "RishYang",
-      "Yuri-Predborskiy",
-      "fscholz",
-      "gbharatwaj",
-      "trevorh",
-      "end3r"
-    ]
-  },
-  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Collision_detection": {
-    "modified": "2020-10-27T19:50:40.665Z",
-    "contributors": [
-      "escattone",
-      "yumetodo",
-      "chrisdavidmills",
-      "raymondjplante",
-      "m1sh2",
-      "wbamberg",
-      "kundan333",
-      "monop",
-      "RishYang",
-      "tseidler",
-      "fscholz",
-      "gbharatwaj",
-      "end3r",
-      "trevorh"
-    ]
-  },
-  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Finishing_up": {
-    "modified": "2020-10-27T19:51:34.936Z",
-    "contributors": [
-      "escattone",
-      "raymondjplante",
-      "wbamberg",
-      "yumetodo",
-      "chrisdavidmills",
-      "BryanL",
-      "haydenvaniderstine",
-      "sammbeller",
-      "KashyK",
-      "end3r",
-      "fscholz",
-      "gbharatwaj",
-      "everythingisok",
-      "trevorh"
-    ]
-  },
-  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over": {
-    "modified": "2020-10-27T19:50:12.655Z",
-    "contributors": [
-      "escattone",
-      "vinocha8",
-      "JoeParrilla",
-      "InfinityBuddha",
-      "raymondjplante",
-      "wbamberg",
-      "chrisdavidmills",
-      "DevGator",
-      "end3r",
-      "kundan333",
-      "monop",
-      "fscholz",
-      "gbharatwaj",
-      "trevorh"
-    ]
-  },
-  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Mouse_controls": {
-    "modified": "2020-10-27T19:51:05.570Z",
-    "contributors": [
-      "escattone",
-      "raymondjplante",
-      "RafeyIqbalRahman",
-      "chrisdavidmills",
-      "PushpitaPikuDey",
-      "devluk",
-      "wbamberg",
-      "yumetodo",
-      "baterson",
-      "fscholz",
-      "jsn1004",
-      "everythingisok",
-      "trevorh",
-      "end3r"
-    ]
-  },
-  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball": {
-    "modified": "2020-10-27T19:49:31.981Z",
-    "contributors": [
-      "escattone",
-      "xiongkaiwu",
-      "wbamberg",
-      "chrisdavidmills",
-      "ronoc4",
-      "RishYang",
-      "Jeremie",
-      "fscholz",
-      "end3r",
-      "trevorh"
-    ]
-  },
-  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Paddle_and_keyboard_controls": {
-    "modified": "2020-10-27T19:49:59.012Z",
-    "contributors": [
-      "escattone",
-      "ItsHipsterNoah",
-      "J-MDO",
-      "RachelM",
-      "Maxgy",
-      "raymondjplante",
-      "wbamberg",
-      "chrisdavidmills",
-      "fscholz",
-      "ddbeck",
-      "trevorh",
-      "end3r"
-    ]
-  },
-  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win": {
-    "modified": "2020-10-27T19:50:53.157Z",
-    "contributors": [
-      "escattone",
-      "raymondjplante",
-      "wbamberg",
-      "yumetodo",
-      "chrisdavidmills",
-      "monop",
-      "fscholz",
-      "desertmonkey",
-      "end3r",
-      "trevorh"
-    ]
-  },
   "Games/Tutorials/2D_breakout_game_Phaser": {
     "modified": "2020-10-27T19:35:38.011Z",
     "contributors": [
@@ -788,6 +611,117 @@
       "end3r"
     ]
   },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript": {
+    "modified": "2020-10-27T19:49:04.623Z",
+    "contributors": [
+      "escattone",
+      "JoeParrilla",
+      "wbamberg",
+      "jswisher",
+      "jolosan",
+      "cristianvnica",
+      "chrisdavidmills",
+      "Twoteka",
+      "Jeremie",
+      "end3r",
+      "fscholz",
+      "rabimba"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls": {
+    "modified": "2020-10-27T19:49:44.781Z",
+    "contributors": [
+      "escattone",
+      "wbamberg",
+      "rydash",
+      "chrisdavidmills",
+      "allisonlu",
+      "fscholz",
+      "gbharatwaj",
+      "end3r",
+      "Sheppy"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field": {
+    "modified": "2020-10-27T19:50:27.345Z",
+    "contributors": [
+      "escattone",
+      "ro-kl",
+      "raymondjplante",
+      "wbamberg",
+      "yumetodo",
+      "chrisdavidmills",
+      "SphinxKnight",
+      "HongchenLiu",
+      "daniel.stormont",
+      "landrey",
+      "allisonlu",
+      "kundan333",
+      "RishYang",
+      "Yuri-Predborskiy",
+      "fscholz",
+      "gbharatwaj",
+      "trevorh",
+      "end3r"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Collision_detection": {
+    "modified": "2020-10-27T19:50:40.665Z",
+    "contributors": [
+      "escattone",
+      "yumetodo",
+      "chrisdavidmills",
+      "raymondjplante",
+      "m1sh2",
+      "wbamberg",
+      "kundan333",
+      "monop",
+      "RishYang",
+      "tseidler",
+      "fscholz",
+      "gbharatwaj",
+      "end3r",
+      "trevorh"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Finishing_up": {
+    "modified": "2020-10-27T19:51:34.936Z",
+    "contributors": [
+      "escattone",
+      "raymondjplante",
+      "wbamberg",
+      "yumetodo",
+      "chrisdavidmills",
+      "BryanL",
+      "haydenvaniderstine",
+      "sammbeller",
+      "KashyK",
+      "end3r",
+      "fscholz",
+      "gbharatwaj",
+      "everythingisok",
+      "trevorh"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over": {
+    "modified": "2020-10-27T19:50:12.655Z",
+    "contributors": [
+      "escattone",
+      "vinocha8",
+      "JoeParrilla",
+      "InfinityBuddha",
+      "raymondjplante",
+      "wbamberg",
+      "chrisdavidmills",
+      "DevGator",
+      "end3r",
+      "kundan333",
+      "monop",
+      "fscholz",
+      "gbharatwaj",
+      "trevorh"
+    ]
+  },
   "Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas": {
     "modified": "2020-10-27T19:49:17.911Z",
     "contributors": [
@@ -801,6 +735,72 @@
       "Jeremie",
       "fscholz",
       "jswisher",
+      "trevorh"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Mouse_controls": {
+    "modified": "2020-10-27T19:51:05.570Z",
+    "contributors": [
+      "escattone",
+      "raymondjplante",
+      "RafeyIqbalRahman",
+      "chrisdavidmills",
+      "PushpitaPikuDey",
+      "devluk",
+      "wbamberg",
+      "yumetodo",
+      "baterson",
+      "fscholz",
+      "jsn1004",
+      "everythingisok",
+      "trevorh",
+      "end3r"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball": {
+    "modified": "2020-10-27T19:49:31.981Z",
+    "contributors": [
+      "escattone",
+      "xiongkaiwu",
+      "wbamberg",
+      "chrisdavidmills",
+      "ronoc4",
+      "RishYang",
+      "Jeremie",
+      "fscholz",
+      "end3r",
+      "trevorh"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls": {
+    "modified": "2020-10-27T19:49:59.012Z",
+    "contributors": [
+      "escattone",
+      "ItsHipsterNoah",
+      "J-MDO",
+      "RachelM",
+      "Maxgy",
+      "raymondjplante",
+      "wbamberg",
+      "chrisdavidmills",
+      "fscholz",
+      "ddbeck",
+      "trevorh",
+      "end3r"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win": {
+    "modified": "2020-10-27T19:50:53.157Z",
+    "contributors": [
+      "escattone",
+      "raymondjplante",
+      "wbamberg",
+      "yumetodo",
+      "chrisdavidmills",
+      "monop",
+      "fscholz",
+      "desertmonkey",
+      "end3r",
       "trevorh"
     ]
   },
