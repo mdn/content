@@ -305,7 +305,7 @@ for (const descendant of element.querySelectorAll("*")) {
 }
 ```
 
-However, this is quite limited: you cannot visit non-elements like text or comments, and you cannot avoid visiting a particular subtree without writing complicated selectors. The DOM provides two interfaces for general traversal: {{domxref("NodeIterator")}} and {{domxref("TreeWalker")}}. Create these objects using {{domxref("Document/createNodeIterator", "document.createNodeIterator()")}} or {{domxref("Document/createTreeWalker", "document.createTreeWalker()")}}. For example, the following example traverses all nodes, including text and comments:
+However, this is quite limited: you cannot visit non-elements like text or comments, and you cannot avoid visiting a particular subtree without writing complicated selectors. The DOM provides two interfaces for general traversal: {{domxref("NodeIterator")}} and {{domxref("TreeWalker")}}. For example, the following example traverses all nodes, including text and comments:
 
 ```js
 const nodeIterator = document.createNodeIterator(document);
@@ -316,7 +316,7 @@ while (node) {
 }
 ```
 
-Both methods take the same three arguments:
+To create a `NodeIterator` or `TreeWalker`, call {{domxref("Document/createNodeIterator", "document.createNodeIterator()")}} or {{domxref("Document/createTreeWalker", "document.createTreeWalker()")}}, respectively. Both methods take the same three arguments:
 
 - `root`: The node at which the traversal is rooted.
 - `whatToShow` {{optional_inline}}: Specifies which node types to visit. A node that's not visited can still have descendants that are visited. It defaults to `NodeFilter.SHOW_ALL`.
