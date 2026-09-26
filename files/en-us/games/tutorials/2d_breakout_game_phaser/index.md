@@ -15,9 +15,12 @@ To get the most out of this series of articles, you should already have basic to
 
 ![Gameplay screen from the game MDN Breakout created with Phaser where you can use your paddle to bounce the ball and destroy the brick field, with keeping the points and lives.](mdn-breakout-phaser.png)
 
-## Lesson details
+> [!NOTE]
+> This guide has a sister guide: [2D breakout game using pure JavaScript](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). They follow essentially the same steps and arrive at visually identical results.
 
-All the lessons—and the different versions of the [MDN Breakout game](https://end3r.github.io/Gamedev-Phaser-Content-Kit/demos/lesson16.html) we are building together—are [available on GitHub](https://end3r.github.io/Gamedev-Phaser-Content-Kit/demos/):
+We have chosen Phaser for this project because it has good browser support, an active community, and a good set of plugins. Frameworks speed up development time and help take care of the boring parts, allowing you to concentrate on the fun stuff. However, frameworks are not always perfect, so if something unexpected happens or you want to write some functionality that the framework does not provide, you will need some pure JavaScript knowledge.
+
+## Lesson details
 
 1. [Initialize the framework](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework)
 2. [Scaling](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Scaling)
@@ -35,10 +38,6 @@ All the lessons—and the different versions of the [MDN Breakout game](https://
 14. [Animations and tweens](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens)
 15. [Buttons](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Buttons)
 16. [Randomizing gameplay](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay)
-
-As a note on learning paths—starting with pure JavaScript is the best way to get a solid knowledge of web game development. If you are not already familiar with pure JavaScript game development, we would suggest that you first work through this series' counterpart, [2D breakout game using pure JavaScript](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript).
-
-After that, you can pick any framework you like and use it for your projects; we have chosen Phaser as it has good browser support, an active community, and a good set of plugins. Frameworks speed up development time and help take care of the boring parts, allowing you to concentrate on the fun stuff. However, frameworks are not always perfect, so if something unexpected happens or you want to write some functionality that the framework does not provide, you will need some pure JavaScript knowledge.
 
 ## Next steps
 
