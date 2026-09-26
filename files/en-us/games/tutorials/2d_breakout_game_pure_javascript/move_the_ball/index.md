@@ -5,193 +5,170 @@ page-type: guide
 sidebar: games
 ---
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
 
-This is the **2nd step** out of 10 of the [Gamedev Canvas tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). You can find the source code as it should look after completing this lesson at [Gamedev-Canvas-workshop/lesson2.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson02.html).
+This is the **2nd step** out of 13 of the [creating a Breakout game in pure JavaScript tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). In this article, we'll look at how to add sprites into our gameworld. Our game will feature a ball rolling around the screen, bouncing off a paddle, and destroying bricks to earn points.
 
-You already know how to draw a ball from working through the previous article, so now let's make it move. Technically, we will be painting the ball on the screen, clearing it and then painting it again in a slightly different position every frame to make the impression of movement — just like how movement works with the movies.
+Doing this involves two steps: loading the ball's asset, and rendering it at the correct position as the ball moves. Technically, we will be painting the ball on the screen, clearing it and then painting it again in a slightly different position every frame to make the impression of movement — just like how movement works with the movies.
 
 ## Defining a drawing loop
 
-To keep constantly updating the canvas drawing on each frame, we need to define a drawing function that will run over and over again, with a different set of variable values each time to change sprite positions, etc. You can run a function over and over again using a JavaScript timing function.
-Later on in the tutorial, we'll see how {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} helps with drawing, but we'll start with {{domxref("Window.setInterval", "setInterval()")}} at first to create some looping logic.
+To keep constantly updating the canvas drawing on each frame, we need to define a drawing function that will run over and over again, with a different set of variable values each time to change sprite positions, etc.
 
-Delete all the JavaScript you currently have inside your HTML file except for the first two lines, and add the following below them. The `draw()` function will be executed within `setInterval` every 10 milliseconds:
+You may want to use {{domxref("Window.setInterval", "setInterval()")}} to schedule the function to run every few milliseconds (say, 10, which would be 100 frames per second). This works, but it causes problems:
 
-```js
-function draw() {
-  // drawing code
-}
-setInterval(draw, 10);
-```
+1. Timers are inexact, so you cannot assume that the function will be called at exactly 10-millisecond intervals.
+2. If your rendering function is slow and takes more than 10 milliseconds to paint the frame, it will miss the next tick, and these lags add up, causing the game's time to be out of sync with real-world time.
 
-Thanks to the infinite nature of `setInterval` the `draw()` function will be called every 10 milliseconds forever, or until we stop it. Now, let's draw the ball — add the following inside your `draw()` function:
+You can still use `setInterval`—or `setTimeout`—which has the benefit of being able to configure the frame rate, but you have to implement some logic to pace the timeouts to avoid the issues above. For simplicity, we'll use {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}}, which lets the browser automatically call the rendering function the next time it's available for redrawing. The function receives a timestamp, telling us how much time has elapsed since the last frame, so we can decide the distance that the ball should have traveled in the meantime.
+
+Replace your `script.js` file content with the following:
 
 ```js
-ctx.beginPath();
-ctx.arc(50, 50, 10, 0, Math.PI * 2);
-ctx.fillStyle = "#0095DD";
-ctx.fill();
-ctx.closePath();
-```
+const canvas = document.getElementById("game-canvas");
+const ctx = canvas.getContext("2d");
 
-Try your updated code now — the ball should be repainted on every frame.
+requestAnimationFrame(draw);
 
-## Making it move
+function draw(timestamp) {
+  ctx.fillStyle = "#eeeeee";
+  ctx.fillRect(0, 0, 480, 320);
+  // continue adding things here...
 
-You won't notice the ball being repainted constantly at the moment, as it's not moving. Let's change that. First, instead of a hardcoded position at (50,50) we will define a starting point at the bottom center part of the Canvas in variables called `x` and `y`, then use those to define the position the circle is drawn at.
-
-First, add the following two lines above your `draw()` function, to define `x` and `y`:
-
-```js
-let x = canvas.width / 2;
-let y = canvas.height - 30;
-```
-
-Next update the `draw()` function to use the x and y variables in the {{domxref("CanvasRenderingContext2D.arc()","arc()")}} method, as shown in the following highlighted line:
-
-```js
-function draw() {
-  ctx.beginPath();
-  ctx.arc(x, y, 10, 0, Math.PI * 2);
-  ctx.fillStyle = "#0095DD";
-  ctx.fill();
-  ctx.closePath();
+  requestAnimationFrame(draw);
 }
 ```
 
-Now comes the important part: we want to add a small value to `x` and `y` after every frame has been drawn to make it appear that the ball is moving. Let's define these small values as `dx` and `dy` and set their values to 2 and -2 respectively. Add the following below your x and y variable definitions:
+Now the game is already running in a loop when you reload the HTML. However, we haven't defined any moving parts, so it has no visible effects yet.
+
+## Loading the ball sprite
+
+Our ball will be represented by a PNG image. We will be using {{domxref("CanvasRenderingContext2D/drawImage", "ctx.drawImage()")}} to rendering the PNG to the canvas. Among the many types of input data it takes, we will use an {{domxref("HTMLImageElement")}}, because it automatically handles the fetching and decoding for us.
+
+> [!NOTE]
+> You can of course draw a filled circle directly on the canvas, using {{domxref("CanvasRenderingContext2D/arcTo", "ctx.arcTo()")}} and {{domxref("CanvasRenderingContext2D/fill", "ctx.fill()")}}, but in a real game your ball is probably more complex than a single circle, so eventually you will want to use a separate picture asset anyway.
+
+We start by _preloading_ the image when the application starts. Replace the `requestAnimationFrame(draw);` call above the `draw` function definition with the following:
 
 ```js
-let dx = 2;
-let dy = -2;
+const ball = new Image();
+ball.src = "img/ball.png";
+
+Promise.all([ball].map((img) => img.decode())).then(() =>
+  requestAnimationFrame(draw),
+);
 ```
 
-The last thing to do is to update `x` and `y` with our `dx` and `dy` variable on every frame, so the ball will be painted in the new position on every update. Add the following two new lines indicated below to your `draw()` function:
+The {{domxref("HTMLImageElement/Image", "Image()")}} constructor creates an `HTMLImageElement` without attaching it to the DOM (we won't be rendering the `<img>` element itself, only using it to paint the canvas). The assignment to {{domxref("HTMLImageElement/src", "src")}} initiates the request for the `ball.png` image. Then, we call `[ball].map((img) => img.decode())`, which gets an array of promises from {{domxref("HTMLImageElement/decode", "decode()")}} methods. Each promise fulfills when the corresponding image is successfully fetched and decoded. The {{jsxref("Promise.all()")}} function turns this array of promises into a single promise that fulfills when all images decode successfully. If that happens, then we start drawing using `requestAnimationFrame(draw)`.
+
+Of course, to load the image, it must be available in our code directory. [Grab the ball image from our assets website](https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/ball.png), and save it inside an `/img` directory in the same place as your `index.html` file.
+
+Now, to show it on the screen, we call `drawImage()`, passing both the `ball` image and the x and y coordinates of the canvas where we want it added. Add the following to your `draw()` function:
 
 ```js
-function draw() {
-  ctx.beginPath();
-  ctx.arc(x, y, 10, 0, Math.PI * 2);
-  ctx.fillStyle = "#0095DD";
-  ctx.fill();
-  ctx.closePath();
-  x += dx;
-  y += dy;
-}
+ctx.drawImage(ball, 50, 50);
 ```
 
-Save your code again and try it in your browser. This works OK, although it appears that the ball is leaving a trail behind it:
+That's it—if you load your `index.html` file, you will see the image already loaded and rendered on the canvas!
 
-![A blue line that indicates where the ball has been](ball-trail.png)
+## Updating the ball's position on each frame
 
-## Clearing the canvas before each frame
-
-The ball is leaving a trail because we're painting a new circle on every frame without removing the previous one. Don't worry, because there's a method to clear canvas content: {{domxref("CanvasRenderingContext2D.clearRect()","clearRect()")}}. This method takes four parameters: the x and y coordinates of the top left corner of a rectangle, and the x and y coordinates of the bottom right corner of a rectangle. The whole area covered by this rectangle will be cleared of any content previously painted there.
-
-Add the following highlighted new line to the `draw()` function:
+Currently, each `draw()` invocation paints the ball in exactly the same place, so the ball appears stationary. We can maintain separate state variables tracking the ball's position. Just above the `function draw()` definition, add the following:
 
 ```js
-function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.beginPath();
-  ctx.arc(x, y, 10, 0, Math.PI * 2);
-  ctx.fillStyle = "#0095DD";
-  ctx.fill();
-  ctx.closePath();
-  x += dx;
-  y += dy;
-}
+let ballX = 50;
+let ballY = 50;
 ```
 
-Save your code and try again, and this time you'll see the ball move without a trail. Every 10 milliseconds the canvas is cleared, the blue circle (our ball) will be drawn on a given position and the `x` and `y` values will be updated for the next frame.
+We'll update the ball's position on every call of `draw()`. To maintain a constant speed of the ball, we need to work out how much to displace it from the last position, using the formula `dx = vx * dt`, where `vx` is its speed along the x axis and `dt` is the time elapsed since the last `draw()` call. Because each time the `draw()` function receives a `timestamp`, we can compare it with the previous iteration to get `dt`. For `vx` and `vy`, we'll set them to 0.15, meaning that the ball moves 150 pixels in both the x and y directions every second.
 
-## Cleaning up our code
-
-We will be adding more and more commands to the `draw()` function in the next few articles, so it's good to keep it as minimal and clean as possible. Let's start by moving the ball drawing code to a separate function.
-
-Replace the existing draw() function with the following two functions:
+Continue adding below `let ballY = 50`:
 
 ```js
-function drawBall() {
-  ctx.beginPath();
-  ctx.arc(x, y, 10, 0, Math.PI * 2);
-  ctx.fillStyle = "#0095DD";
-  ctx.fill();
-  ctx.closePath();
-}
-
-function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  drawBall();
-  x += dx;
-  y += dy;
-}
+let lastTimestamp = null;
+const ballVX = 0.15;
+const ballVY = 0.15;
 ```
+
+Within the `draw()` function, replace `ctx.drawImage(ball, 50, 50);` with the following:
+
+```js
+if (lastTimestamp !== null) {
+  const dt = timestamp - lastTimestamp;
+  ballX += ballVX * dt;
+  ballY += ballVY * dt;
+}
+lastTimestamp = timestamp;
+ctx.drawImage(ball, ballX, ballY);
+```
+
+The code above adds the calculated displacement to the variables representing the ball coordinates on the canvas, on each frame. Reload `index.html` and you should see the ball rolling across the screen.
 
 ## Compare your code
 
-You can check the finished code for this article in the live demo below and play with it to understand better how it works.
+Here's what you should have so far, running live. To view its source code, click the "Play" button.
 
-> [!NOTE]
-> Live samples run automatically on these pages, so we've added a "start game" button.
-> This is useful to avoid games starting automatically and triggering alerts or other events too often.
-
-```html
-<canvas id="myCanvas" width="480" height="320"></canvas>
-<button id="runButton">Start game</button>
+```html hidden
+<canvas id="game-canvas" width="480" height="320"></canvas>
 ```
 
-```css
+```css hidden
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
 canvas {
-  background: #eeeeee;
-}
-button {
   display: block;
+  width: min(100vw, 150vh);
+  height: auto;
 }
 ```
 
-```js
-const canvas = document.getElementById("myCanvas");
+```js hidden
+const canvas = document.getElementById("game-canvas");
 const ctx = canvas.getContext("2d");
-let x = canvas.width / 2;
-let y = canvas.height - 30;
-const dx = 2;
-const dy = -2;
 
-function drawBall() {
-  ctx.beginPath();
-  ctx.arc(x, y, 10, 0, Math.PI * 2);
-  ctx.fillStyle = "#0095DD";
-  ctx.fill();
-  ctx.closePath();
+const ball = new Image();
+ball.src =
+  "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/ball.png";
+
+let ballX = 50;
+let ballY = 50;
+let lastTimestamp = null;
+const ballVX = 0.15;
+const ballVY = 0.15;
+
+Promise.all([ball].map((img) => img.decode())).then(() =>
+  requestAnimationFrame(draw),
+);
+
+function draw(timestamp) {
+  ctx.fillStyle = "#eeeeee";
+  ctx.fillRect(0, 0, 480, 320);
+  if (lastTimestamp !== null) {
+    const dt = timestamp - lastTimestamp;
+    ballX += ballVX * dt;
+    ballY += ballVY * dt;
+  }
+  lastTimestamp = timestamp;
+  ctx.drawImage(ball, ballX, ballY);
+  // continue adding things here...
+
+  requestAnimationFrame(draw);
 }
-
-function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  drawBall();
-  x += dx;
-  y += dy;
-}
-
-function startGame() {
-  setInterval(draw, 10);
-}
-
-const runButton = document.getElementById("runButton");
-runButton.addEventListener("click", () => {
-  startGame();
-  runButton.disabled = true;
-});
 ```
 
-{{embedlivesample("compare_your_code", 600, 350)}}
-
-> [!NOTE]
-> Try changing the speed of the moving ball, or the direction it moves in.
+{{EmbedLiveSample("compare your code", "", 480, , , , , "allow-modals")}}
 
 ## Next steps
 
-We've drawn our ball and gotten it moving, but it keeps disappearing off the edge of the canvas. In the third chapter we'll explore how to make it [bounce off the walls](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls).
+Now we can move to the next lesson and see how to make the ball [bounce off the walls](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls).
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls")}}

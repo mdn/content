@@ -23,7 +23,7 @@ class ExampleScene extends Phaser.Scene {
 }
 ```
 
-The code above adds 1 to the `x` and `y` properties representing the ball coordinates on the canvas, on each frame. Reload index.html and you should see the ball rolling across the screen.
+The code above adds 1 to the `x` and `y` properties representing the ball coordinates on the canvas, on each frame. Reload `index.html` and you should see the ball rolling across the screen.
 
 ## Compare your code
 

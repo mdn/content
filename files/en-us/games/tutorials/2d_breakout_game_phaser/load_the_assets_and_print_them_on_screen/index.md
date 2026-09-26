@@ -22,7 +22,7 @@ class ExampleScene extends Phaser.Scene {
 
 ## Loading the ball sprite
 
-With Phaser, Loading images and printing them on our canvas is less complex than doing so using pure JavaScript. To load the asset, we will use the `Phaser.Scene`'s `load.image()` method, available as `this.load.image`. Add the following new line inside the `preload()` method:
+With Phaser, loading images and printing them on our canvas is less complex than doing so using pure JavaScript. To load the asset, we will use the `Phaser.Scene`'s `load.image()` method, available as `this.load.image`. Add the following new line inside the `preload()` method:
 
 ```js
 class ExampleScene extends Phaser.Scene {
