@@ -3499,6 +3499,7 @@
 /en-US/docs/Games/Techniques/Tilemaps/SquareTiles	/en-US/docs/Games/Techniques/Tilemaps
 /en-US/docs/Games/Techniques/Tilemaps/SquareTiles/Square_tilemaps_implementation:_Static_maps	/en-US/docs/Games/Techniques/Tilemaps/Square_tilemaps_implementation:_Static_maps
 /en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Collision_detection	/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field#brickball_collision_detection
+/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Scaling	/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework
 /en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Collision_detection	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field#brickball_collision_detection
 /en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Paddle_and_keyboard_controls	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls
 /en-US/docs/Games/Tutorials/Touch_Event_Horizon	/en-US/docs/Games/Tutorials
@@ -3518,7 +3519,7 @@
 /en-US/docs/Games/Workflows/2D_breakout_game_Phaser/Physics	/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Physics
 /en-US/docs/Games/Workflows/2D_breakout_game_Phaser/Player_paddle_and_controls	/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Player_paddle_and_controls
 /en-US/docs/Games/Workflows/2D_breakout_game_Phaser/Randomizing_gameplay	/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay
-/en-US/docs/Games/Workflows/2D_breakout_game_Phaser/Scaling	/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Scaling
+/en-US/docs/Games/Workflows/2D_breakout_game_Phaser/Scaling	/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework
 /en-US/docs/Games/Workflows/2D_breakout_game_Phaser/The_score	/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score
 /en-US/docs/Games/Workflows/2D_breakout_game_Phaser/Win_the_game	/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Win_the_game
 /en-US/docs/Games/Workflows/2D_breakout_game_pure_JavaScript	/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript

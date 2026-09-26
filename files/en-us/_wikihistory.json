@@ -583,16 +583,6 @@
     "modified": "2020-10-27T19:37:28.337Z",
     "contributors": ["escattone", "wbamberg", "chrisdavidmills", "end3r"]
   },
-  "Games/Tutorials/2D_breakout_game_Phaser/Scaling": {
-    "modified": "2020-10-27T19:44:45.536Z",
-    "contributors": [
-      "escattone",
-      "wbamberg",
-      "DavidScales",
-      "chrisdavidmills",
-      "end3r"
-    ]
-  },
   "Games/Tutorials/2D_breakout_game_Phaser/The_score": {
     "modified": "2020-10-27T19:45:46.988Z",
     "contributors": ["escattone", "wbamberg", "chrisdavidmills", "end3r"]

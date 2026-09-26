@@ -5,9 +5,9 @@ page-type: guide
 sidebar: games
 ---
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser", "Games/Tutorials/2D_breakout_game_Phaser/Scaling")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser", "Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}
 
-This is the first of 15 tutorials to learn how to use [Gamedev Phaser](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Before we can start writing the game's functionality, we need to create a basic structure to render the game inside. This can be done using HTML—the Phaser framework will generate the required {{htmlelement("canvas")}} element.
+This is the first of 14 tutorials to learn how to use [Gamedev Phaser](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Before we can start writing the game's functionality, we need to create a basic structure to render the game inside. This can be done using HTML—the Phaser framework will generate the required {{htmlelement("canvas")}} element.
 
 ## The game's HTML
 
@@ -46,6 +46,11 @@ const config = {
   width: 480,
   height: 320,
   scene: ExampleScene,
+  scale: {
+    mode: Phaser.Scale.FIT,
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+  },
+  backgroundColor: "#eeeeee",
 };
 
 const game = new Phaser.Game(config);
@@ -71,6 +76,8 @@ The {{htmlelement("canvas")}} element is generated automatically by the framewor
   - `preload` takes care of preloading the assets
   - `create` is executed once when everything is loaded and ready
   - `update` is executed on every frame.
+- How the game canvas will be scaled. Here, `mode: Phaser.Scale.FIT` scales the canvas to fit the available space while keeping the aspect ratio untouched. Depending on the aspect ratio, it may not cover the entire space. The other property, `autoCenter`, is responsible for aligning the canvas element horizontally and vertically, so it always centers the canvas on the screen regardless of size.
+- The background color, which is a really light gray, instead of the default black.
 
 ## Running the application
 
@@ -111,6 +118,11 @@ const config = {
   width: 480,
   height: 320,
   scene: ExampleScene,
+  scale: {
+    mode: Phaser.Scale.FIT,
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+  },
+  backgroundColor: "#eeeeee",
 };
 
 const game = new Phaser.Game(config);
@@ -120,6 +132,6 @@ const game = new Phaser.Game(config);
 
 ## Next steps
 
-Now we've set up the basic HTML and learned a bit about Phaser initialization, let's continue to the second lesson and learn about [scaling](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Scaling).
+Now we've set up the basic HTML and learned a bit about Phaser initialization, let's continue to the second lesson and work out how to [load the assets and print them on screen](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen).
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser", "Games/Tutorials/2D_breakout_game_Phaser/Scaling")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser", "Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}
