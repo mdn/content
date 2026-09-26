@@ -66,13 +66,18 @@ Firefox 157 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 <!-- #### Removals -->
 
-<!-- ### WebDriver conformance (WebDriver BiDi, Marionette) -->
+### WebDriver conformance (WebDriver BiDi, Marionette)
 
-<!-- #### General -->
+#### General
 
-<!-- #### WebDriver BiDi -->
+- From now on, the recommended preferences will be restored at a different stage to avoid them being restored in the wrong profile.
+  ([Firefox bug 2066531](https://bugzil.la/2066531)).
 
-<!-- #### Marionette -->
+#### WebDriver BiDi
+
+- Updated `browser.setDownloadBehavior` command to require `destinationFolder` parameter when calling the command with `type=”allowed”`,
+  which aligns us with the specification. In order to restore the default behavior without having to specify a folder, clients should call
+  `browser.setDownloadBehavior` with null instead. ([Firefox bug 2069952](https://bugzil.la/2069952)).
 
 ## Changes for add-on developers
 
