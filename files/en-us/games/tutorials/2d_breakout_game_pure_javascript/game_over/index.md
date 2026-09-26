@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field")}}
 
-This is the **5th step** out of 12 of the [creating a Breakout game in pure JavaScript tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). To make the game more interesting, we can introduce the ability to lose—if you don't hit the ball before it reaches the bottom edge of the screen, it will be game over.
+This is the **5th step** out of 11 of the [creating a Breakout game in pure JavaScript tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). To make the game more interesting, we can introduce the ability to lose—if you don't hit the ball before it reaches the bottom edge of the screen, it will be game over.
 
 ## How to lose
 

@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win")}}
 
-This is the **6th step** out of 12 of the [creating a Breakout game in pure JavaScript tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Let's explore how to create a group of bricks, print them on the screen using a loop, and remove them when the ball hits them. Building the brick field is a little bit more complicated than adding a single object to the screen.
+This is the **6th step** out of 11 of the [creating a Breakout game in pure JavaScript tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Let's explore how to create a group of bricks, print them on the screen using a loop, and remove them when the ball hits them. Building the brick field is a little bit more complicated than adding a single object to the screen.
 
 ## Drawing the bricks
 

@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball")}}
 
-This is the first of 12 tutorials to learn how to use [create a Breakout game in pure JavaScript](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Before we can start writing the game's functionality, we need to create a basic structure to render the game inside. This can be done using the {{htmlelement("canvas")}} element.
+This is the first of 11 tutorials to learn how to use [create a Breakout game in pure JavaScript](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Before we can start writing the game's functionality, we need to create a basic structure to render the game inside. This can be done using the {{htmlelement("canvas")}} element.
 
 ## The game's HTML
 
