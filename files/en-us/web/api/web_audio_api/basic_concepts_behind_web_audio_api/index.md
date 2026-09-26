@@ -69,8 +69,7 @@ When a buffer plays, you will first hear the leftmost sample frame, then the one
 Here are a couple of simple examples:
 
 ```js
-const context = new AudioContext();
-const buffer = new AudioBuffer(context, {
+const buffer = new AudioBuffer({
   numberOfChannels: 2,
   length: 22050,
   sampleRate: 44100,
@@ -87,8 +86,7 @@ const buffer = new AudioBuffer(context, {
 If you use this call above, you will get a stereo buffer with two channels that, when played back on an {{domxref("AudioContext")}} running at 44100 Hz (very common, most normal sound cards run at this rate), will last for 0.5 seconds: 22,050 frames/44,100 Hz = 0.5 seconds.
 
 ```js
-const context = new AudioContext();
-const buffer = new AudioBuffer(context, {
+const buffer = new AudioBuffer({
   numberOfChannels: 1,
   length: 22050,
   sampleRate: 22050,
@@ -346,7 +344,7 @@ When the numbers of channels of the input and the output don't match, up-mixing,
 
 In general, we get the output over time to produce audio visualizations, usually reading its gain or frequency data. Then, using a graphical tool, we turn the obtained data into a visual representation, such as a graph. The Web Audio API has an {{domxref("AnalyserNode")}} available that doesn't alter the audio signal passing through it. Additionally, it outputs the audio data, allowing us to process it via a technology such as {{htmlelement("canvas")}}.
 
-![Without modifying the audio stream, the node allows to get the frequency and time-domain data associated with it, using an FFT.](fttaudiodata_en.svg)
+![Without modifying the audio stream, the node allows you to get the frequency and time-domain data associated with it, using an FFT.](fttaudiodata_en.svg)
 
 You can grab data using the following methods:
 

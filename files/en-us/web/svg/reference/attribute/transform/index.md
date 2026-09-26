@@ -237,7 +237,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('Example_3', '100%', 200)}}
+{{EmbedLiveSample('Translate', '100%', 200)}}
 
 ### Scale
 

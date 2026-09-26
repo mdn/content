@@ -171,7 +171,7 @@ When approaching tests there are a good deal of ways to approach the problem:
 - End-to-end testing, which involves your visitor clicking a thing and some other thing happening.
 - Integration testing, which basically says "does one block of code still work when connected to another block?"
 - Unit testing, where small and specific bits of functionality are tested to see if they do what they are supposed to do.
-- [And many more types](https://en.wikipedia.org/wiki/Functional_testing). Also, see our [cross browser testing module](/en-US/docs/Learn_web_development/Extensions/Testing) for a bunch of useful testing information.
+- [And many more types](https://en.wikipedia.org/wiki/Functional_testing). Also, see our [cross-browser testing module](/en-US/docs/Learn_web_development/Extensions/Testing) for a bunch of useful testing information.
 
 Remember also that tests are not limited to JavaScript; tests can be run against the rendered DOM, user interactions, CSS, and even how a page looks.
 
@@ -259,7 +259,7 @@ Let's get started.
    git push origin main
    ```
 
-   In some cases you might want to test the result of the built code (since this isn't quite the original code we wrote), so the test might need to be run after the build command. You'll need to consider all these individual aspects whilst you're working on your own projects.
+   In some cases you might want to test the result of the built code (since this isn't quite the original code we wrote), so the test might need to be run after the build command. You'll need to consider all these individual aspects while you're working on your own projects.
 
 Finally, a minute or so after pushing, GitHub Pages will deploy the project update. But only if it passes the test that was introduced.
 

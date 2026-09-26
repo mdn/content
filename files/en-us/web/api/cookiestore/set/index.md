@@ -39,7 +39,7 @@ Or
     - `name`
       - : A string with the name of a cookie.
     - `partitioned` {{Optional_Inline}}
-      - : A boolean value that defaults to `false`. If set to `true`, the set cookie will be a partitioned cookie. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies) for more information.
+      - : A boolean value that defaults to `false`. If set to `true`, the set cookie will be a partitioned cookie. See [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies) for more information.
     - `path` {{Optional_Inline}}
       - : A string containing the path of the cookie. Defaults to `/`.
     - `sameSite` {{Optional_Inline}}
@@ -57,7 +57,7 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when setting 
 ### Exceptions
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : Thrown if the origin can not be {{glossary("Serialization", "serialized")}} to a URL.
+  - : Thrown if the origin cannot be {{glossary("Serialization", "serialized")}} to a URL.
 - {{jsxref("TypeError")}}
   - : Thrown if:
     - Both the `expires` and `maxAge` properties are set.
@@ -119,6 +119,17 @@ async function cookieTest() {
   console.log(cookie);
 }
 ```
+
+### Setting cookies with the same name
+
+These calls create two separate cookies because their paths differ:
+
+```js
+await cookieStore.set({ name: "theme", value: "light", path: "/" });
+await cookieStore.set({ name: "theme", value: "dark", path: "/docs" });
+```
+
+On a page under `/docs/`, {{domxref("CookieStore.getAll()", 'cookieStore.getAll("theme")')}} can retrieve both cookies. Calling `cookieStore.set("theme", "blue")` updates the cookie at the default path `/`, leaving the `/docs` cookie unchanged.
 
 ## Specifications
 

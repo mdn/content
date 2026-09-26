@@ -408,7 +408,7 @@ Installing a text editor is usually quite straightforward. The method varies bas
 
 When you install a new text editor, your OS will probably continue to open text files with its default editor until you change the _[file association](https://en.wikipedia.org/wiki/File_association)._ These instructions will help you specify that your OS should open files in your preferred editor when you double-click them:
 
-- [Windows](https://support.microsoft.com/en-us/windows)
+- [Windows](https://support.microsoft.com/en-us/windows/)
 
 - [macOS](https://support.apple.com/guide/mac-help/choose-an-app-to-open-a-file-on-mac-mh35597/mac)
 

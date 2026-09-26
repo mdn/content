@@ -75,7 +75,7 @@ We include the `<meta name="text-scale" content="scale">` element in the documen
 <html lang="en-US">
   <head>
     <meta name="text-scale" content="scale" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width" />
   </head>
   <body>
     <p class="text-scale">
@@ -96,7 +96,7 @@ We include the `<meta name="text-scale" content="scale">` element in the documen
 <!doctype html>
 <html lang="en-US">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width" />
   </head>
   <body>
     <p class="text-scale">
@@ -153,10 +153,10 @@ Like the previous example, our markup again includes the `<meta name="text-scale
 
 ```html live-sample___text-scale-layout
 <!doctype html>
-<html>
+<html lang="en-US">
   <head>
     <meta name="text-scale" content="scale" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width" />
   </head>
   <body>
     <main>Main content</main>

@@ -9,7 +9,7 @@ status:
 browser-compat: api.Window.vrdisplaydisconnect_event
 ---
 
-{{APIRef("Window")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("Window")}}{{Non-standard_Header}}
 
 The **`vrdisplaydisconnect`** event of the [WebVR API](/en-US/docs/Web/API/WebVR_API) is fired when a compatible VR display is disconnected from the computer.
 
@@ -30,15 +30,6 @@ onvrdisplaydisconnect = (event) => { }
 A {{domxref("VRDisplayEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("VRDisplayEvent")}}
-
-## Event properties
-
-_`VRDisplayEvent` also inherits properties from its parent object, {{domxref("Event")}}._
-
-- {{domxref("VRDisplayEvent.display")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
-  - : The {{domxref("VRDisplay")}} associated with this event.
-- {{domxref("VRDisplayEvent.reason")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
-  - : A human-readable reason why the event was fired.
 
 ## Examples
 

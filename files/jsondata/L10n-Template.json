@@ -25,6 +25,35 @@
     "zh-TW": "實驗性質"
   },
 
+  "baseline_discouraged_title": {
+    "de": "Veraltet. Nicht empfohlen für neue Webseiten.",
+    "en-US": "Deprecated. Not for use in new websites.",
+    "fr": "Obsolète. Ne pas utiliser sur de nouveaux sites web.",
+    "ko": "지원이 중단되었습니다. 새로운 웹사이트에서 사용하지 마세요.",
+    "zh-CN": "已弃用。请不要在新的网站中使用。",
+    "zh-TW": "已棄用。請不要在新的網站中使用。"
+  },
+
+  "baseline_discouraged_abbreviation": {
+    "de": "Veraltet",
+    "en-US": "Deprecated",
+    "es": "Obsoleto",
+    "fr": "Obsolète",
+    "ja": "非推奨",
+    "ko": "지원이 중단되었습니다",
+    "ru": "Устарело",
+    "zh-CN": "已弃用",
+    "zh-TW": "已棄用"
+  },
+
+  "baseline_removing_title": {
+    "en-US": "Deprecated. Pending removal from browsers."
+  },
+
+  "baseline_removing_abbreviation": {
+    "en-US": "Deprecated, pending removal"
+  },
+
   "deprecated_badge_title": {
     "de": "Veraltet. Nicht empfohlen für neue Webseiten.",
     "en-US": "Deprecated. Not for use in new websites.",

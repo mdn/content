@@ -63,6 +63,8 @@ The sections below list all available regex syntaxes, grouped by their syntactic
 
 Assertions are constructs that test whether the string meets a certain condition at the specified position, but not consume characters. Assertions cannot be [quantified](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Quantifier).
 
+- [Buffer boundary assertion: `\A`, `\z`, `\Z`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Buffer_boundary_assertion)
+  - : Asserts that the current position in the string is strictly at the start or end of the entire string (`\Z` also allows a trailing newline), regardless of the presence of the `m` flag.
 - [Input boundary assertion: `^`, `$`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Input_boundary_assertion)
   - : Asserts that the current position is the start or end of input, or start or end of a line if the `m` flag is set.
 - [Lookahead assertion: `(?=...)`, `(?!...)`](/en-US/docs/Web/JavaScript/Reference/Regular_expressions/Lookahead_assertion)
@@ -116,11 +118,13 @@ _Escape sequences_ in regexes refer to any kind of syntax formed by `\` followed
 
 | Escape sequence | Followed by                                                       | Meaning                                                                                                                |
 | --------------- | ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `\A`            | None                                                              | [Buffer boundary assertion][BBA]                                                                                       |
 | `\B`            | None                                                              | [Non-word-boundary assertion][WBA]                                                                                     |
 | `\D`            | None                                                              | [Character class escape][CCE] representing non-digit characters                                                        |
 | `\P`            | `{`, a Unicode property and/or value, then `}`                    | [Unicode character class escape][UCCE] representing characters without the specified Unicode property                  |
 | `\S`            | None                                                              | [Character class escape][CCE] representing non-white-space characters                                                  |
 | `\W`            | None                                                              | [Character class escape][CCE] representing non-word characters                                                         |
+| `\Z`            | None                                                              | [Buffer boundary assertion][BBA]                                                                                       |
 | `\b`            | None                                                              | [Word boundary assertion][WBA]; inside [character classes][CC], represents U+0008 (BACKSPACE)                          |
 | `\c`            | A letter from `A` to `Z` or `a` to `z`                            | A [character escape][CE] representing the control character with value equal to the letter's character value modulo 32 |
 | `\d`            | None                                                              | [Character class escape][CCE] representing digit characters (`0` to `9`)                                               |
@@ -136,8 +140,10 @@ _Escape sequences_ in regexes refer to any kind of syntax formed by `\` followed
 | `\v`            | None                                                              | [Character escape][CE] representing U+000B (LINE TABULATION)                                                           |
 | `\w`            | None                                                              | [Character class escape][CCE] representing word characters (`A` to `Z`, `a` to `z`, `0` to `9`, `_`)                   |
 | `\x`            | 2 hexadecimal digits                                              | [Character escape][CE] representing the character with the given value                                                 |
+| `\z`            | None                                                              | [Buffer boundary assertion][BBA]                                                                                       |
 | `\0`            | None                                                              | [Character escape][CE] representing U+0000 (NULL)                                                                      |
 
+[BBA]: /en-US/docs/Web/JavaScript/Reference/Regular_expressions/Buffer_boundary_assertion
 [CC]: /en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class
 [CCE]: /en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape
 [CE]: /en-US/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape

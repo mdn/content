@@ -59,7 +59,7 @@ If the grid is used as an interactive widget, [keyboard interactions](#keyboard_
 #### Roles
 
 - [treegrid](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role) (subclass)
-  - : If a grid has columns that can expanded or collapsed, a treegrid can be used.
+  - : If a grid has columns that can be expanded or collapsed, a treegrid can be used.
 - [row](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
   - : A row inside the grid.
 - [rowgroup](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role)

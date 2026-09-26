@@ -15,12 +15,12 @@ The `spinbutton` role indicates that the element is an input widget that restric
 
 The spinbutton represents the range of possible values. The value of the spinbutton input represents the current value.
 
-Spinbuttons often have three components, including a text field that displays the current value, an increment button, and a decrement button. The text field is usually the only focusable component because the increment and decrement functions are keyboard accessible via arrow keys. Typically, the text field also allows users to directly edit the value.
+Spinbuttons often have three components, including a text field that displays the current value, an increment button, and a decrement button. The text field is usually the only focusable component because the increment and decrement functions are keyboard-accessible via arrow keys. Typically, the text field also allows users to directly edit the value.
 
 In addition to including the [`tabindex`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute to enable spinbutton focus, keyboard and pointer device support must be implemented. Directional keys such as the arrow keys must be supported for keyboard users. Changing the value when increment and decrement buttons are clicked must be supported for pointing devices. See [keyboard interactions](#keyboard_interactions) below.
 
 > [!NOTE]
-> It is recommended to use [`<input type="number">`](/en-US/docs/Web/HTML/Reference/Elements/input/number) element, or other input types for dates and time that also implicitly have the `role="spinbutton"` semantic, rather than the `spinbutton` role. User agents provide stylized widget for the these input elements which provide default increment, decrement, and native range limiting functionality. When using non-semantic elements, all features of the native semantic element need to be recreated with ARIA attributes, JavaScript, and CSS.
+> It is recommended to use [`<input type="number">`](/en-US/docs/Web/HTML/Reference/Elements/input/number) element, or other input types for dates and time that also implicitly have the `role="spinbutton"` semantic, rather than the `spinbutton` role. User agents provide stylized widgets for these input elements which provide default increment, decrement, and native range limiting functionality. When using non-semantic elements, all features of the native semantic element need to be recreated with ARIA attributes, JavaScript, and CSS.
 
 ### ARIA range widget options
 
@@ -32,7 +32,7 @@ The [`meter`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role) rol
 
 The `slider` role, similar to HTML's `input` of type `range`, [`<input type="range">`](/en-US/docs/Web/HTML/Reference/Elements/input/range), is a read-write input range. Sliders allow users to select a value between the predefined minimum and maximum values. The user selects a value by moving a slider thumb along a horizontal or vertical slider to select a value.
 
-While all three of these ranges have the same ARIA states and properties, the `spinbutton` role is the only read-write range: it is the only one whose value changes via user interaction. As such, it must be able to receive focus. In addition, keyboard interaction, mouse clicks, and touch interaction must be supported.
+The `spinbutton` role is also read-write: the range of discrete values it provides is selected via user interaction. Like `slider` controls, `spinbutton` widgets must be able to receive focus and support keyboard, pointer, and touch interaction.
 
 > [!WARNING]
 > To change the spinbutton value, touch-based assistive technologies need to respond to user gestures for increasing and decreasing the value by synthesizing key events.

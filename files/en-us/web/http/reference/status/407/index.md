@@ -2,7 +2,7 @@
 title: 407 Proxy Authentication Required
 slug: Web/HTTP/Reference/Status/407
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.407
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#status.407
 sidebar: http
 ---
 

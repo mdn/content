@@ -2,7 +2,7 @@
 title: 421 Misdirected Request
 slug: Web/HTTP/Reference/Status/421
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#name-421-misdirected-request
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#name-421-misdirected-request
 sidebar: http
 ---
 

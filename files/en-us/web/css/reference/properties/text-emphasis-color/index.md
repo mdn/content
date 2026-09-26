@@ -65,6 +65,8 @@ text-emphasis-color: unset;
 
 ### Values
 
+This property is specified as one `<color>` value:
+
 - `<color>`
   - : Defines the color of the emphasis marks. If no color is present, it defaults to `currentColor`.
 

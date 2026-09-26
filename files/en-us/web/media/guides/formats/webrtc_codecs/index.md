@@ -109,6 +109,13 @@ In addition to the mandatory codecs, some browsers support additional codecs as 
         <p>Firefox 136 supports AV1 for simulcast and the <a href="/en-US/docs/Web/API/WebRTC_API/Protocols#dependency_descriptor_rtp_header_extension">DD RTP header extension</a>.</p>
       </td>
     </tr>
+    <tr>
+      <th id="h265_table" scope="row"><a href="#hevc_h.265">HEVC / H.265</th>
+      <td>—</td>
+      <td>
+        Chrome (136+).
+      </td>
+    </tr>
   </tbody>
 </table>
 
@@ -127,6 +134,10 @@ The network payload format for sharing VP8 using {{Glossary("RTP")}} (such as wh
 Support for AVC's Constrained Baseline (CB) profile is required in all fully-compliant WebRTC implementations. CB is a subset of the main profile, and is specifically designed for low-complexity, low-delay applications such as mobile video and videoconferencing, as well as for platforms with lower performing video processing capabilities.
 
 Our [overview of AVC](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#avc_h.264) and its features can be found in the main video codec guide.
+
+### HEVC / H.265
+
+Our [overview of HEVC](/en-US/docs/Web/Media/Guides/Formats/Video_codecs#hevc_h.265) and its features can be found in the main video codec guide.
 
 #### Special parameter support requirements
 
@@ -365,12 +376,13 @@ function changeVideoCodec(mimeType) {
     let recvCodecs = RTCRtpReceiver.getCapabilities(kind).codecs;
 
     if (kind === "video") {
-      sendCodecs = preferCodec(mimeType);
-      recvCodecs = preferCodec(mimeType);
+      sendCodecs = preferCodec(sendCodecs, mimeType);
+      recvCodecs = preferCodec(recvCodecs, mimeType);
       transceiver.setCodecPreferences([...sendCodecs, ...recvCodecs]);
     }
   });
 
+  // Manually trigger a new negotiation (setCodecPreferences() does not automatically do so).
   peerConnection.onnegotiationneeded();
 }
 ```
@@ -391,10 +403,9 @@ The `preferCodec()` function called by the code above looks like this to move a 
 function preferCodec(codecs, mimeType) {
   let otherCodecs = [];
   let sortedCodecs = [];
-  let count = codecs.length;
 
   codecs.forEach((codec) => {
-    if (codec.mimeType === mimeType) {
+    if (codec.mimeType.toLowerCase() === mimeType.toLowerCase()) {
       sortedCodecs.push(codec);
     } else {
       otherCodecs.push(codec);

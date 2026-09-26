@@ -19,6 +19,8 @@ Languages outside the realm of the Web platform, like XUL through the `XULElemen
 
 _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, and by extension that interface's parent, {{DOMxRef("EventTarget")}}._
 
+- {{DOMxRef("Element.activeViewTransition")}} {{ReadOnlyInline}} {{experimental_inline}}
+  - : Returns a {{domxref("ViewTransition")}} instance representing the [view transition](/en-US/docs/Web/API/View_Transition_API) currently active on an element.
 - {{DOMxRef("Element.assignedSlot")}} {{ReadOnlyInline}}
   - : Returns a {{DOMxRef("HTMLSlotElement")}} representing the {{htmlelement("slot")}} the node is inserted in.
 - {{DOMxRef("Element.attributes")}} {{ReadOnlyInline}}
@@ -107,7 +109,7 @@ _The `Element` interface also includes the following properties._
 - {{domxref("Element.ariaColIndex")}}
   - : A string reflecting the [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) attribute, which defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.
 - {{domxref("Element.ariaColIndexText")}}
-  - : A string reflecting the [`aria-colindextext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindextext) attribute, which defines a human readable text alternative of aria-colindex.
+  - : A string reflecting the [`aria-colindextext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindextext) attribute, which defines a human-readable text alternative of aria-colindex.
 - {{domxref("Element.ariaColSpan")}}
   - : A string reflecting the [`aria-colspan`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colspan) attribute, which defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.
 - {{domxref("Element.ariaCurrent")}}
@@ -159,7 +161,7 @@ _The `Element` interface also includes the following properties._
 - {{domxref("Element.ariaRowIndex")}}
   - : A string reflecting the [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex) attribute, which defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.
 - {{domxref("Element.ariaRowIndexText")}}
-  - : A string reflecting the [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindextext) attribute, which defines a human readable text alternative of aria-rowindex.
+  - : A string reflecting the [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindextext) attribute, which defines a human-readable text alternative of aria-rowindex.
 - {{domxref("Element.ariaRowSpan")}}
   - : A string reflecting the [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowspan) attribute, which defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.
 - {{domxref("Element.ariaSelected")}}
@@ -300,7 +302,7 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
 - {{DOMxRef("Element.requestFullscreen()")}}
   - : Asynchronously asks the browser to make the element fullscreen.
 - {{DOMxRef("Element.requestPointerLock()")}}
-  - : Allows to asynchronously ask for the pointer to be locked on the given element.
+  - : Allows you to asynchronously ask for the pointer to be locked on the given element.
 - {{domxref("Element.scroll()")}}
   - : Scrolls to a particular set of coordinates inside a given element.
 - {{domxref("Element.scrollBy()")}}
@@ -327,6 +329,8 @@ _`Element` inherits methods from its parents {{DOMxRef("Node")}}, and its own pa
   - : Parses a string of HTML into a document fragment, without sanitization, which then replaces the element's original subtree in the DOM. The HTML string may include declarative shadow roots, which would be parsed as template elements if the HTML was set using [`Element.innerHTML`](/en-US/docs/Web/API/Element/innerHTML).
 - {{DOMxRef("Element.setPointerCapture()")}}
   - : Designates a specific element as the capture target of future [pointer events](/en-US/docs/Web/API/Pointer_events).
+- {{DOMxRef("Element.startViewTransition()")}} {{experimental_inline}}
+  - : Starts a new same-document (SPA) [element-scoped](/en-US/docs/Web/API/View_Transition_API/Using_element-scoped) [view transition](/en-US/docs/Web/API/View_Transition_API) and returns a {{domxref("ViewTransition")}} object to represent it.
 - {{DOMxRef("Element.toggleAttribute()")}}
   - : Toggles a boolean attribute, removing it if it is present and adding it if it is not present, on the specified element.
 
@@ -506,7 +510,7 @@ Listen to these events using `addEventListener()` or by assigning an event liste
 ### Transition events
 
 - {{domxref("Element/transitioncancel_event", "transitioncancel")}}
-  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/Guides/Transitions) has been cancelled.
+  - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/Guides/Transitions) has been canceled.
 - {{domxref("Element/transitionend_event", "transitionend")}}
   - : An {{domxref("Event")}} fired when a [CSS transition](/en-US/docs/Web/CSS/Guides/Transitions) has finished playing.
 - {{domxref("Element/transitionrun_event", "transitionrun")}}

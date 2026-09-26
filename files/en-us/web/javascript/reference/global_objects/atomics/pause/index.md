@@ -15,22 +15,15 @@ The **`Atomics.pause()`** static method provides a micro-wait primitive that hin
 
 ```js-nolint
 Atomics.pause()
-Atomics.pause(durationHint)
 ```
 
 ### Parameters
 
-- `durationHint` {{optional_inline}}
-  - : An integer that an implementation may use to determine how long to wait. For a value `n + 1`, an implementation waits at least as long as it does for a given value `n`. The exact number has no physical meaning. There may be an internal upper bound on the maximum amount of time paused on the order of tens to hundreds of nanoseconds. This can be used to implement a [backoff strategy](#backoff_strategies) by increasing the `durationHint` passed in. There is no guarantee that an implementation will make use of this hint.
+None.
 
 ### Return value
 
 None ({{jsxref("undefined")}}).
-
-### Exceptions
-
-- {{jsxref("TypeError")}}
-  - : Thrown if `durationHint` is not an integer or `undefined`.
 
 ## Examples
 
@@ -66,25 +59,6 @@ do {
 // This can only be called in a worker thread,
 // because the main thread cannot be blocked
 Atomics.wait(i32, 0, 1);
-```
-
-### Backoff strategies
-
-The `durationHint` parameter can be used to implement backoff strategies. For example, a thread can start with a small hint and increase it exponentially on each iteration. This is preferable to calling `pause()` many times because in un-JITed code, function calls themselves have a high overhead.
-
-> [!NOTE]
-> Implementations may not actually use `durationHint` at all and always wait for a constant time.
-
-```js
-// Exponential backoff
-for (let hint = 1; hint < 1000; hint *= 2) {
-  Atomics.pause(hint);
-}
-
-// Linear backoff
-for (let hint = 1; hint < 100; hint++) {
-  Atomics.pause(hint);
-}
 ```
 
 ## Specifications

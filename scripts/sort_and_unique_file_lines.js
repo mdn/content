@@ -37,7 +37,7 @@ for (const filePath of filePaths) {
     return a < b ? -1 : a > b ? 1 : 0;
   });
 
-  for (let i = 0; i < lines.length; ) {
+  for (let i = 0; i < lines.length;) {
     const line = lines[i];
     if (line.trim() !== "") {
       uniq.push(line);

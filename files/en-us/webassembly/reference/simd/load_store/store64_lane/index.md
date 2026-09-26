@@ -3,7 +3,7 @@ title: "store64_lane: Wasm SIMD load/store instruction"
 short-title: store64_lane
 slug: WebAssembly/Reference/SIMD/load_store/store64_lane
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.store64_lane
+browser-compat: webassembly.instructions.store64_lane
 sidebar: webassemblysidebar
 ---
 
@@ -81,7 +81,3 @@ v128.store64_lane mem_idx offset=int align=int lane_idx
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD load/store instructions](/en-US/docs/WebAssembly/Reference/SIMD/load_store)

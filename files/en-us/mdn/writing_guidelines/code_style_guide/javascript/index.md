@@ -116,7 +116,7 @@ Comments are critical to writing good code examples. They clarify the intent of 
 
 Single-line comments are marked with `//`, as opposed to block comments enclosed between `/* … */`.
 
-In general, use single-line comments to comment code. Writers must mark each line of the comment with `//`, so that it's easier to notice commented-out code visually. In addition, this convention allows to comment out sections of code using `/* … */` while debugging.
+In general, use single-line comments to comment code. Writers must mark each line of the comment with `//`, so that it's easier to notice commented-out code visually. In addition, this convention allows you to comment out sections of code using `/* … */` while debugging.
 
 - Leave a space between the slashes and the comment. Start with a capital letter, like a sentence, but don't end the comment with a period.
 

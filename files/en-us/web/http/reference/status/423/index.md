@@ -2,7 +2,7 @@
 title: 423 Locked
 slug: Web/HTTP/Reference/Status/423
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc4918#section-11.3
+spec-urls: https://www.rfc-editor.org/info/rfc4918/#section-11.3
 sidebar: http
 ---
 

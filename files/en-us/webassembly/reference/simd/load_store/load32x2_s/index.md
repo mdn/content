@@ -3,7 +3,7 @@ title: "load32x2_s: Wasm SIMD load/store instruction"
 short-title: load32x2_s
 slug: WebAssembly/Reference/SIMD/load_store/load32x2_s
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.load32x2_s
+browser-compat: webassembly.instructions.load32x2_s
 sidebar: webassemblysidebar
 ---
 
@@ -76,7 +76,3 @@ v128.load32x2_s mem_idx offset=int align=int
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD load/store instructions](/en-US/docs/WebAssembly/Reference/SIMD/load_store)

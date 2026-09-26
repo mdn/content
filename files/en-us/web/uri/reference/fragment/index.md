@@ -3,7 +3,7 @@ title: URI fragment
 short-title: Fragment
 slug: Web/URI/Reference/Fragment
 page-type: uri-component
-spec-urls: https://www.rfc-editor.org/rfc/rfc3986.html#section-3.5
+spec-urls: https://www.rfc-editor.org/info/rfc3986/#section-3.5
 sidebar: urlsidebar
 ---
 

@@ -78,8 +78,7 @@ We could extend the initial example on the page to also identify a paragraph tha
   <pre>
 `
         let awesome = ['music', 'cats', 'nature', 'ice cream'];
-      `</pre
-  >
+      `</pre>
   <p id="figure-1">Figure 1: The four layers of awesome.</p>
 </div>
 ```
@@ -99,8 +98,7 @@ If at all possible, you should use the appropriate semantic HTML elements to mar
   <pre>
 `
     let awesome = ['music', 'cats', 'nature', 'ice cream'];
-  `</pre
-  >
+  `</pre>
   <figcaption>Figure 1: The four layers of awesome.</figcaption>
 </figure>
 ```

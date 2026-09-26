@@ -280,7 +280,7 @@ l10n:
     Deprecated_features: Устаревшие возможности
   fr:
     Technology_overview: Aperçu des technologies JavaScript
-    Tutorials: Tutoriels
+    Tutorials: Tutoriels et guides
     Guide: Guide JavaScript
     Guide_Introduction: Introduction
     Guide_Grammar: Types et grammaire
@@ -288,22 +288,22 @@ l10n:
     Guide_Loops: Boucles et itération
     Guide_Functions: Fonctions
     Guide_Expressions: Expressions et opérateurs
-    Guide_Numbers: Numbers and strings
-    Guide_Dates: Representing dates & times
+    Guide_Numbers: Nombres et chaînes de caractères
+    Guide_Dates: Représentation des dates et heures
     Guide_RegExp: Expressions rationnelles
     Guide_Indexed_collections: Collections indexées
     Guide_keyed_collections: Collections avec clés
     Guide_Objects: Manipuler les objets
-    Guide_Classes: Using classes
+    Guide_Classes: Utiliser les classes
     Guide_Promises: Utiliser les promesses
     Guide_Typed_arrays: Tableaux typés en JavaScript
     Guide_Iterators_generators: Itérateurs et générateurs
-    Guide_Resource_management: Resource management
-    Guide_Internationalization: Internationalization
+    Guide_Resource_management: Gestion des ressources
+    Guide_Internationalization: Internationalisation
     Guide_Meta: Métaprogrammation
     Guide_Modules: Modules JavaScript
     Intermediate: Intermédiaire
-    Language_overview: Language overview
+    Language_overview: Aperçu du langage
     Data_structures: Structures de données en JavaScript
     Equality: Différents tests d'égalité
     Closures: Fermetures (closures)
@@ -319,9 +319,9 @@ l10n:
     Classes: Classes
     Errors: Erreurs
     More: Divers
-    Execution_model: Execution model
+    Execution_model: Modèle d'exécution
     Lexical_grammar: Grammaire lexicale
-    Enumerability: Rattachement des propriétés
+    Enumerability: Énumérabilité et rattachement des propriétés
     Iteration_protocols: Protocoles d'itération
     Template_strings: Gabarits de chaînes de caractères
     Trailing_commas: Virgules finales

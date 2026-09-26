@@ -78,7 +78,7 @@ The `<dialog>` must be turned into a popover by adding the `popover` attribute.
 You can then use `popovertarget` on a button/input to indicate the target popover, and `popovertargetaction` to specify the action to occur on the popover when the button is clicked.
 Note that, because the dialog is a popover, it will be non-modal, so you can close it by clicking outside the dialog.
 
-The HTML below shows how to apply the attributes to a `<button>` element so it can be pressed to show and hide a modal `<dialog>` with an `id` of "my-dialog".
+The HTML below shows how to apply the attributes to a `<button>` element so it can be pressed to show and hide a non-modal `<dialog>` with an `id` of "my-dialog".
 
 ```html
 <button popovertarget="my-dialog">Open dialog</button>
@@ -308,7 +308,7 @@ When the dialog is closed, the return value is displayed under the "Show the dia
 
 #### JavaScript
 
-The dialog is opened using using an event listener on the "Show the dialog" button, which calls {{domxref("HTMLDialogElement.showModal()")}} when the button is clicked.
+The dialog is opened using an event listener on the "Show the dialog" button, which calls {{domxref("HTMLDialogElement.showModal()")}} when the button is clicked.
 
 The dialog is closed when the "Cancel" button is clicked, because the `<button>` includes the [`formmethod="dialog"`](/en-US/docs/Web/HTML/Reference/Elements/input/submit#formmethod) attribute.
 When a form's method is [`dialog`](#additional_notes), the state of the form is saved but not submitted, and the dialog gets closed (the attribute overrides the {{HTMLElement("form")}}'s default {{HTTPMethod("GET")}} method).

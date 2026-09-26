@@ -60,7 +60,7 @@ console.log("Failed to open the specified link");
 - {{domxref("console/timeLog_static", "console.timeLog()")}}
   - : Logs the value of the specified [timer](#timers) to the console.
 - {{domxref("console/timeStamp_static", "console.timeStamp()")}} {{Non-standard_inline}}
-  - : Adds a marker to the browser performance tool's timeline ([Chrome](https://developer.chrome.com/docs/devtools/performance/reference) or [Firefox](https://profiler.firefox.com/docs/#/./guide-ui-tour-timeline)).
+  - : Adds a marker to a performance recording in developer tools that support it. Recording and display depend on the browser and profiling tool.
 - {{domxref("console/trace_static", "console.trace()")}}
   - : Outputs a [stack trace](#stack_traces).
 - {{domxref("console/warn_static", "console.warn()")}}

@@ -24,7 +24,9 @@ They correspond to three of four equality algorithms in JavaScript:
 - [SameValue](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-samevalue): `Object.is()`
 - [SameValueZero](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-samevaluezero): used by many built-in operations
 
-Note that the distinction between these all have to do with their handling of primitives; none of them compares whether the parameters are conceptually similar in structure. For any non-primitive objects `x` and `y` which have the same structure but are distinct objects themselves, all of the above forms will evaluate to `false`.
+Note that the distinctions between these all have to do with their handling of primitives; none of them compares whether the parameters are conceptually similar in structure. For any non-primitive objects `x` and `y` which have the same structure but are distinct objects themselves, all of the above forms will evaluate to `false`.
+
+Comparing the contents of distinct objects or arrays recursively is called {{glossary("deep equality")}}. JavaScript does not provide a general deep comparison operator; libraries and host APIs can provide comparison utilities with different rules.
 
 ## Strict equality using ===
 
@@ -212,13 +214,16 @@ const b2f = (x) => new Float64Array(x.buffer)[0];
 // Get a byte representation of NaN
 const n = f2b(NaN);
 // Change the first bit, which is the sign bit and doesn't matter for NaN
-n[0] = 1;
+n[7] |= 0x80;
 const nan2 = b2f(n);
 console.log(nan2); // NaN
 console.log(Object.is(nan2, NaN)); // true
 console.log(f2b(NaN)); // Uint8Array(8) [0, 0, 0, 0, 0, 0, 248, 127]
-console.log(f2b(nan2)); // Uint8Array(8) [1, 0, 0, 0, 0, 0, 248, 127]
+console.log(f2b(nan2)); // Uint8Array(8) [0, 0, 0, 0, 0, 0, 248, 255]
 ```
+
+> [!NOTE]
+> Implementations are allowed to canonicalize the bit representation of `NaN`, so `nan2`, when converted back to floating point, may have the same bit representation as the original `NaN`.
 
 ## See also
 

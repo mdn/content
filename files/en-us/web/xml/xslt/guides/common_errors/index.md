@@ -7,7 +7,7 @@ sidebar: xmlsidebar
 
 ## MIME types
 
-Your server needs to send both the source and the stylesheet with a XML mime type, `text/xml` or `application/xml`. To find out the current type, load the file in Mozilla and look at the page info. Or use a download tool, those usually tell the mime type.
+Your server needs to send both the source and the stylesheet with an XML mime type, `text/xml` or `application/xml`. To find out the current type, load the file in Mozilla and look at the page info. Or use a download tool, those usually tell the mime type.
 
 In Firefox 6 and forward, you can also use the official XSLT mimetype: `application/xslt+xml`.
 

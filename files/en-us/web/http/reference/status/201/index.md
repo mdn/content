@@ -2,7 +2,7 @@
 title: 201 Created
 slug: Web/HTTP/Reference/Status/201
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.201
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#status.201
 sidebar: http
 ---
 

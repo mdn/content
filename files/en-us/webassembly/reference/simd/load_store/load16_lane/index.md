@@ -3,7 +3,7 @@ title: "load16_lane: Wasm SIMD load/store instruction"
 short-title: load16_lane
 slug: WebAssembly/Reference/SIMD/load_store/load16_lane
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.load16_lane
+browser-compat: webassembly.instructions.load16_lane
 sidebar: webassemblysidebar
 ---
 
@@ -82,7 +82,3 @@ v128.load16_lane mem_idx offset=int align=int lane_value
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [SIMD load/store instructions](/en-US/docs/WebAssembly/Reference/SIMD/load_store)

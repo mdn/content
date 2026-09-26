@@ -3,12 +3,10 @@ title: "HTMLTemplateElement: shadowRootSlotAssignment property"
 short-title: shadowRootSlotAssignment
 slug: Web/API/HTMLTemplateElement/shadowRootSlotAssignment
 page-type: web-api-instance-property
-status:
-  - experimental
 browser-compat: api.HTMLTemplateElement.shadowRootSlotAssignment
 ---
 
-{{APIRef("Web Components")}}{{SeeCompatTable}}
+{{APIRef("Web Components")}}
 
 The **`shadowRootSlotAssignment`** property of the {{domxref("HTMLTemplateElement")}} interface indicates whether the element has been configured to use [named or unnamed slot assignment](/en-US/docs/Web/API/Web_components/Using_templates_and_slots#named_and_manual_slot_assignment).
 
@@ -40,7 +38,7 @@ const isShadowRootSlotAssignmentSupported = Object.hasOwn(
 );
 ```
 
-The value of `isShadowRootSlotAssignmentSupported` could then be used to fallback to attaching the shadow root with {{domxref("Element.attachShadow()")}}, or to inform the user of what browser versions they need to use.
+The value of `isShadowRootSlotAssignmentSupported` could then be used to fall back to attaching the shadow root with {{domxref("Element.attachShadow()")}}, or to inform the user of what browser versions they need to use.
 
 Note that if you're using named slot assignment there is no need to feature check for `shadowrootslotassignment`, because named assignment is supported by default.
 

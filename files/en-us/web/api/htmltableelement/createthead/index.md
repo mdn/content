@@ -8,16 +8,9 @@ browser-compat: api.HTMLTableElement.createTHead
 
 {{APIRef("HTML DOM")}}
 
-The **`createTHead()`** method of
-{{domxref("HTMLTableElement")}} objects returns the {{HTMLElement("thead")}} element
-associated with a given {{HtmlElement("table")}}. If no header exists in the table, this
-method creates it, and then returns it.
+The **`createTHead()`** method of the {{domxref("HTMLTableElement")}} interface creates a {{HTMLElement("thead")}} element, inserts it before the first element child of the given {{HTMLElement("table")}} that's neither a {{HTMLElement("caption")}} nor a {{HTMLElement("colgroup")}}, or as the last child if no such insertion location is found, and returns it. If the table already has a `<thead>` element child, this method returns the first such child without creating one.
 
-> [!NOTE]
-> If no header exists, `createTHead()` inserts a new
-> header directly into the table. The header does not need to be added separately as
-> would be the case if {{domxref("Document.createElement()")}} had been used to create
-> the new `<thead>` element.
+When creation is needed, this method creates and inserts the element directly, without requiring separate calls to methods such as {{domxref("Document.createElement()")}} and {{domxref("Node.insertBefore()")}}.
 
 ## Syntax
 
@@ -31,12 +24,12 @@ None.
 
 ### Return value
 
-{{domxref("HTMLTableSectionElement")}}
+An {{domxref("HTMLTableSectionElement")}} (which is always a `thead`).
 
 ## Examples
 
 ```js
-let myHead = myTable.createTHead();
+const myHead = myTable.createTHead();
 // Now this should be true: myHead === myTable.tHead
 ```
 
@@ -47,3 +40,10 @@ let myHead = myTable.createTHead();
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("HTMLTableElement.createCaption()")}}
+- {{domxref("HTMLTableElement.createTBody()")}}
+- {{domxref("HTMLTableElement.createTFoot()")}}
+- {{domxref("HTMLTableElement.deleteTHead()")}}

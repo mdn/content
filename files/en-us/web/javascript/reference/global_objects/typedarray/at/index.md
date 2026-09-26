@@ -64,7 +64,7 @@ console.log(lastItem); // 18
 
 ### Comparing methods
 
-Here we compare different ways to select the penultimate (last but one) item of a {{jsxref("TypedArray")}}. Whilst all below methods are valid, it highlights the succinctness and readability of the `at()` method.
+Here we compare different ways to select the penultimate (last but one) item of a {{jsxref("TypedArray")}}. While all below methods are valid, it highlights the succinctness and readability of the `at()` method.
 
 ```js
 // Our typed array with values

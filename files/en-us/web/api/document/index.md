@@ -66,7 +66,7 @@ _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventT
 - {{DOMxRef("Document.fragmentDirective")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("FragmentDirective")}} for the current document.
 - {{DOMxRef("Document.fullscreenElement")}} {{ReadOnlyInline}}
-  - : The element that's currently in full screen mode for this document.
+  - : The element that's currently in fullscreen mode for this document.
 - {{DOMxRef("Document.head")}} {{ReadOnlyInline}}
   - : Returns the {{HTMLElement("head")}} element of the current document.
 - {{DOMxRef("Document.hidden")}} {{ReadOnlyInline}}
@@ -329,7 +329,7 @@ The `Document` interface for HTML documents inherit from the {{DOMxRef("HTMLDocu
 
 _This interface also inherits from the {{DOMxRef("Node")}} and {{DOMxRef("EventTarget")}} interfaces._
 
-- {{domxref("Document/parseHTML_static", "Document.parseHTML()")}} {{experimental_inline}}
+- {{domxref("Document/parseHTML_static", "Document.parseHTML()")}}
   - : Creates a new `Document` object from a string of HTML in an XSS-safe manner with sanitization.
 - {{domxref("Document/parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")}}
   - : Creates a new `Document` object from a string of HTML without performing sanitization.

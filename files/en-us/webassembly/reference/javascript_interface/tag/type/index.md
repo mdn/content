@@ -35,9 +35,9 @@ console.log(tag.type());
 
 The object logged to the console will look like so:
 
-```js
+```json
 {
-  parameters: ["i32", "i64"];
+  "parameters": ["i32", "i64"]
 }
 ```
 

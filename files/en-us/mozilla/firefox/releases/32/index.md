@@ -59,7 +59,7 @@ Highlights:
 - To match the spec and the evolution of the CSS syntax, minor changes have been done to {{domxref("CSS.escape_static", "CSS.escape()")}}. The identifier now can begins with `'--'` and the second dash must not be escaped. Also vendor identifier are no more escaped. ([Firefox bug 1008719](https://bugzil.la/1008719))
 - To complete our Hit Regions implementation, `MouseEvent.region` has been implemented ([Firefox bug 979692](https://bugzil.la/979692)).
 - The {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}} method is now enabled by default ([Firefox bug 1004579](https://bugzil.la/1004579)).
-- The {{domxref("Navigator.doNotTrack")}} properties now returns `'1'` or `'0'`, reflecting the HTTP value, instead of `'yes'` or `'no'` ([Firefox bug 887703](https://bugzil.la/887703)).
+- The {{domxref("Navigator.doNotTrack")}} property now returns `'1'` or `'0'`, reflecting the HTTP value, instead of `'yes'` or `'no'` ([Firefox bug 887703](https://bugzil.la/887703)).
 - [XMLHttpRequest.responseURL](/en-US/docs/Web/API/XMLHttpRequest/responseURL) was implemented ([Firefox bug 998076](https://bugzil.la/998076)).
 
 ### MathML

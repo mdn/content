@@ -286,7 +286,7 @@ This code calculates squares for the numbers from 1 to 9, and writes out the res
 
 Let's break down the `for (let i = 1; i < 10; i++)` line into its three pieces:
 
-1. `let i = 1`: the counter variable, `i`, starts at `1`. Note that we have to use `let` for the counter, because we're reassigning it each time we go round the loop.
+1. `let i = 1`: the counter variable, `i`, starts at `1`. Note that we have to use `let` for the counter, because we're incrementing it with `i++` (which is a reassignment) each time we go round the loop.
 2. `i < 10`: keep going round the loop for as long as `i` is smaller than `10`.
 3. `i++`: add one to `i` each time round the loop.
 

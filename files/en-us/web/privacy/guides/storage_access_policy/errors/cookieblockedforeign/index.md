@@ -5,7 +5,7 @@ page-type: guide
 sidebar: privacy
 ---
 
-A request to access cookies or storage was blocked because it came from a third-party (a different origin) and content blocking is enabled.
+A request to access cookies or storage was blocked because it came from a third party (a different origin) and content blocking is enabled.
 
 ## Message
 

@@ -33,7 +33,7 @@ let executeUserScript = browser.userScripts.execute(
         - `allFrames` {{optional_inline}}
           - : `boolean`. If set to `true`, the script is injected into all available frames. Defaults to `false`, in which the script is only injected into the top frame.
         - `documentIds` {{optional_inline}}
-          - : `array` of `string`. The IDs of the documents to inject into. Must not be specified if `frameIds` is set.
+          - : `array` of `string`. The IDs of the documents to inject into. Must not be specified if `frameIds` is set. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
         - `frameIds` {{optional_inline}}
           - : `array` of `integer`. The IDs of the frames to inject into. Must not be specified if `documentIds` is set.
         - `tabId`
@@ -48,7 +48,7 @@ let executeUserScript = browser.userScripts.execute(
 A {{JSxRef("Promise")}} fulfilled with an array of objects describing the outcome of the injection with these properties:
 
 - `documentId`
-  - : `string`. Document ID associated with the injection.
+  - : `string`. Document ID associated with the injection. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
 - `error` {{optional_inline}}
   - : `string`. Error message if any. This is mutually exclusive with `result`
 - `frameId`

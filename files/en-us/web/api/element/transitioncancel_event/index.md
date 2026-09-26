@@ -26,17 +26,6 @@ A {{domxref("TransitionEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("TransitionEvent")}}
 
-## Event properties
-
-_Also inherits properties from its parent {{domxref("Event")}}_.
-
-- {{domxref("TransitionEvent.propertyName")}} {{ReadOnlyInline}}
-  - : A string containing the name CSS property associated with the transition.
-- {{domxref("TransitionEvent.elapsedTime")}} {{ReadOnlyInline}}
-  - : A `float` giving the amount of time the transition has been running, in seconds, when this event fired. This value is not affected by the {{cssxref("transition-delay")}} property.
-- {{domxref("TransitionEvent.pseudoElement")}} {{ReadOnlyInline}}
-  - : A string, starting with `::`, containing the name of the [pseudo-element](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-elements) the animation runs on. If the transition doesn't run on a pseudo-element but on the element, an empty string: `''`.
-
 ## Examples
 
 This code gets an element that has a transition defined and adds a listener to the `transitioncancel` event:
@@ -109,7 +98,7 @@ el.addEventListener("transitionend", () => {
 
 {{ EmbedLiveSample('Live_example', '100%', '150px') }}
 
-The `transitioncancel` event is fired if the transition is cancelled in either direction after the `transitionrun` event occurs and before the `transitionend` is fired.
+The `transitioncancel` event is fired if the transition is canceled in either direction after the `transitionrun` event occurs and before the `transitionend` is fired.
 
 If there is no transition delay or duration, if both are 0s or neither is declared, there is no transition, and none of the transition events are fired.
 

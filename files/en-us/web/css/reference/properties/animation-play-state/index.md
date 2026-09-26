@@ -81,6 +81,8 @@ animation-play-state: unset;
 
 ### Values
 
+This property is specified as a comma-separated list of the following keyword values:
+
 - `running`
   - : The **animation** is currently **playing**.
 - `paused`

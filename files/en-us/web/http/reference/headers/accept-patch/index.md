@@ -3,7 +3,7 @@ title: Accept-Patch header
 short-title: Accept-Patch
 slug: Web/HTTP/Reference/Headers/Accept-Patch
 page-type: http-header
-spec-urls: https://www.rfc-editor.org/rfc/rfc5789#section-3.1
+spec-urls: https://www.rfc-editor.org/info/rfc5789/#section-3.1
 sidebar: http
 ---
 
@@ -14,7 +14,7 @@ The header should appear in {{HTTPMethod("OPTIONS")}} requests to a resource tha
 An `Accept-Patch` header in a response to any request method implicitly means that a `PATCH` is allowed on the target resource in the request.
 
 > [!NOTE]
-> IANA maintains [a list of official content encodings](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding).
+> IANA maintains [a list of official content encodings](https://www.iana.org/assignments/http-parameters#content-coding).
 > The `bzip` and `bzip2` encodings are non-standard but may be used in some cases, particularly for legacy support.
 
 <table class="properties">

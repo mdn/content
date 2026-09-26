@@ -8,7 +8,7 @@ status:
 browser-compat: api.Document.xmlEncoding
 ---
 
-{{APIRef("DOM")}}{{deprecated_header}}
+{{APIRef("DOM")}}
 
 Returns the encoding as determined by the XML declaration. Should be `null` if unspecified or unknown.
 

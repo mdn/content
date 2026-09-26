@@ -30,13 +30,6 @@ A {{domxref("ContentIndexEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("ContentIndexEvent")}}
 
-## Event properties
-
-_In addition to the properties listed below, this interface inherits the properties of its parent interface, {{domxref("Event")}}._
-
-- {{domxref("ContentIndexEvent.id", "id")}} {{ReadOnlyInline}}
-  - : A string which identifies the deleted content index via it's `id`.
-
 ## Examples
 
 The following example uses a `contentdelete` event handler to remove cached content related to the deleted index item.

@@ -2,7 +2,7 @@
 title: 500 Internal Server Error
 slug: Web/HTTP/Reference/Status/500
 page-type: http-status-code
-spec-urls: https://www.rfc-editor.org/rfc/rfc9110#status.500
+spec-urls: https://www.rfc-editor.org/info/rfc9110/#status.500
 sidebar: http
 ---
 

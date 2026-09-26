@@ -16,7 +16,7 @@ The **`inputQuota`** read-only property of the {{domxref("Translator")}} interfa
 
 A number specifying the available input quota.
 
-This number is implementation-dependant. For example, it might be {{jsxref("Infinity")}} if there are no limits beyond the user's memory and the maximum length of JavaScript strings, or it might be a number of tokens in the case of AI models that use a token/credits scheme.
+This number is implementation-dependent. For example, it might be {{jsxref("Infinity")}} if there are no limits beyond the user's memory and the maximum length of JavaScript strings, or it might be a number of tokens in the case of AI models that use a token/credits scheme.
 
 The only guarantee is that `inputQuota` - {{domxref("Translator.measureInputUsage", "measureInputUsage()")}} will be non-negative if there is sufficient quota to translate the text.
 

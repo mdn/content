@@ -1,12 +1,13 @@
 ---
-title: "xor: Wasm text instruction"
+title: "xor: Wasm numeric instruction"
 short-title: xor
 slug: WebAssembly/Reference/Numeric/xor
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.xor
 sidebar: webassemblysidebar
 ---
 
-The **`xor`** instruction is used for performing a bitwise XOR, similar to the **`^`** operator in other languages.
+The **`xor`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) is used for performing a bitwise XOR, similar to the **`^`** operator in other languages.
 
 {{InteractiveExample("Wat Demo: xor", "tabbed-taller")}}
 
@@ -146,3 +147,11 @@ The output is as follows:
       -------------------
 XOR = 0000 0010 1001 1110 = 670
 ```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

@@ -1037,7 +1037,7 @@ selectList.forEach((select) => {
     deactivateSelect(select);
   });
 
-  // Loose focus if the user hits `esc`
+  // Lose focus if the user hits `esc`
   select.addEventListener("keyup", (event) => {
     // deactivate on keyup of `esc`
     if (event.key === "Escape") {
@@ -1682,7 +1682,7 @@ function updateValue(select, index) {
 }
 ```
 
-It might have seemed simpler to let a screen reader focus on the off-screen select and ignore our stylized one, but this is not an accessible solution. Screen readers are not limited to blind people; people with low vision and even perfect vision use them as well. For this reason, you can not have the screen reader focus on an off-screen element.
+It might have seemed simpler to let a screen reader focus on the off-screen select and ignore our stylized one, but this is not an accessible solution. Screen readers are not limited to blind people; people with low vision and even perfect vision use them as well. For this reason, you cannot have the screen reader focus on an off-screen element.
 
 Below is the final result of all these changes (you'll get a better feel for this by trying it with an assistive technology such as [NVDA](https://www.nvaccess.org/) or [VoiceOver](https://www.apple.com/accessibility/features/?vision)).
 
@@ -2057,4 +2057,4 @@ Here are a few libraries you should consider before coding your own:
 - [AXE accessible custom select dropdowns](https://www.webaxe.org/accessible-custom-select-dropdowns/)
 - [msDropDown](https://github.com/marghoobsuleman/ms-Dropdown)
 
-If you do create alternative controls via radio buttons, your own JavaScript, or with a 3rd party library, ensure it is accessible and feature-proof; that is, it needs to be able to work better with a variety of browsers whose compatibility with the Web standards they use vary. Have fun!
+If you do create alternative controls via radio buttons, your own JavaScript, or with a third-party library, ensure it is accessible and feature-proof; that is, it needs to be able to work better with a variety of browsers whose compatibility with the Web standards they use vary. Have fun!

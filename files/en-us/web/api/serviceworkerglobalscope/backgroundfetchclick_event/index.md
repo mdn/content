@@ -30,13 +30,6 @@ A {{domxref("BackgroundFetchEvent")}}.
 
 {{InheritanceDiagram("BackgroundFetchEvent")}}
 
-## Event properties
-
-_Inherits properties from its parent, {{domxref("ExtendableEvent")}}._
-
-- {{domxref("BackgroundFetchEvent.registration")}}
-  - : Returns the {{domxref("BackgroundFetchRegistration")}} whose progress dialog the user clicked on.
-
 ## Description
 
 When a [background fetch](/en-US/docs/Web/API/Background_Fetch_API) operation starts, the browser shows a UI element to the user to indicate the progress of the operation. If the user clicks this element, the browser starts the service worker, if necessary, and fires the `backgroundfetchclick` event in the service worker's global scope.

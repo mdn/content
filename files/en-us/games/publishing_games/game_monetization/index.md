@@ -51,7 +51,7 @@ This approach is less strict — you can sell a license to multiple publishers. 
 
 ### Subscriptions
 
-There's also an option to get a passive, monthly revenue via a subscription deal. Instead of getting a one-time payment you can get a small amount of money per game, per month — it can be something around 20-50 USD per month, per game. It's normally up to you if you want to get all the money in a lump sum or get it per month. Remember that it can be cancelled, so it's not an indefinitely working solution.
+There's also an option to get a passive, monthly revenue via a subscription deal. Instead of getting a one-time payment you can get a small amount of money per game, per month — it can be something around 20-50 USD per month, per game. It's normally up to you if you want to get all the money in a lump sum or get it per month. Remember that it can be canceled, so it's not an indefinitely working solution.
 
 ### Ad revenue
 

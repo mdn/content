@@ -1,12 +1,13 @@
 ---
-title: "or: Wasm text instruction"
+title: "or: Wasm numeric instruction"
 short-title: or
 slug: WebAssembly/Reference/Numeric/or
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.or
 sidebar: webassemblysidebar
 ---
 
-The **`or`** instruction is used for performing a bitwise OR, similar to the **`|`** operator in other languages.
+The **`or`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) is used for performing a bitwise OR, similar to the **`|`** operator in other languages.
 
 {{InteractiveExample("Wat Demo: or", "tabbed-taller")}}
 
@@ -146,3 +147,11 @@ The output is as follows:
       -------------------
  OR = 0000 0011 1001 1110 = 926
 ```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

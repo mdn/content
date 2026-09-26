@@ -21,17 +21,15 @@ let gettingFrame = browser.webNavigation.getFrame(
 ### Parameters
 
 - `details`
-  - : `object`. Information about the frame to retrieve information about. Must include one of `tabId`, `frameId`, or `documentId`.
+  - : `object`. Information about the frame to retrieve. Must include either `documentId`, or `tabId` and `frameId`.
     - `tabId` {{optional_inline}}
-      - : `integer`. The ID of the tab in which the frame is.
+      - : `integer`. The ID of the tab in which the frame is. Required if `documentId` is not specified.
     - `processId` {{optional_inline}} {{deprecated_inline}}
       - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process running the renderer for this tab.
     - `frameId` {{optional_inline}}
-      - : `integer`. The ID of the frame in the given tab.
+      - : `integer`. The ID of the frame in the given tab. Required if `documentId` is not specified.
     - `documentId` {{optional_inline}}
-      - : `string`. The UUID of the frame's document.
-
-Must include one of
+      - : `string`. The UUID of the frame's document. If `tabId` and `frameId` are also specified, the frame is only returned if all properties match. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
 
 ### Return value
 
@@ -46,9 +44,9 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 - `parentFrameId`
   - : `integer`. ID of this frame's parent. This is -1 if there is no parent frame: that is, if this frame is the top-level browsing context in the tab.
 - `documentId`
-  - : `string`. A UUID of the frame's document.
+  - : `string`. A UUID of the frame's document. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
 - `parentDocumentId`
-  - : `string`. A UUID of the parent document owning the frame. Not set if there is no parent.
+  - : `string`. A UUID of the parent document owning the frame. Not set if there is no parent. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
 - `documentLifecycle`
   - : `string`. The lifecycle the document is in. Returns the values `"prerender"`, `"active"`, `"cached"`, or `"pending_deletion"`.
 

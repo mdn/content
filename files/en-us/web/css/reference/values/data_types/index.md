@@ -192,6 +192,7 @@ The [CSS shapes](/en-US/docs/Web/CSS/Guides/Shapes) and [CSS borders and box dec
 - {{cssxref("length")}}
 - {{cssxref("length-percentage")}}
 - {{cssxref("line-style")}}
+- {{cssxref("line-width")}}
 - {{cssxref("named-color")}}
 - {{cssxref("number")}}
 - {{cssxref("overflow_value", "&lt;overflow&gt;")}}

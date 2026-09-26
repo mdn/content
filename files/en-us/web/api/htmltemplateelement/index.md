@@ -22,6 +22,8 @@ _This interface inherits the properties of {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLTemplateElement.content", "content")}} {{ReadOnlyInline}}
   - : A read-only {{domxref("DocumentFragment")}} which contains the DOM subtree representing the {{HTMLElement("template")}} element's template contents.
+- {{domxref("HTMLTemplateElement.htmlFor", "htmlFor")}} {{Experimental_Inline}}
+  - : A string reflecting the [`for`](/en-US/docs/Web/HTML/Reference/Elements/template#for) HTML attribute, containing the ID of the Processing Instruction marker to replace with the contents of this `<template>` element.
 - {{domxref("HTMLTemplateElement.shadowRootMode", "shadowRootMode")}}
   - : A string that reflects the value of the [`shadowrootmode`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootmode) attribute of the associated `<template>` element.
 - {{domxref("HTMLTemplateElement.shadowRootDelegatesFocus", "shadowRootDelegatesFocus")}}
@@ -32,7 +34,7 @@ _This interface inherits the properties of {{domxref("HTMLElement")}}._
   - : A string that reflects the value of the [`shadowrootcustomelementregistry`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootcustomelementregistry) attribute of the associated `<template>` element, indicating that the declarative shadow root will use a scoped {{domxref("CustomElementRegistry")}}.
 - {{domxref("HTMLTemplateElement.shadowRootSerializable", "shadowRootSerializable")}}
   - : A boolean that reflects the value of the [`shadowrootserializable`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootserializable) attribute of the associated `<template>` element.
-- {{domxref("HTMLTemplateElement.shadowRootSlotAssignment", "shadowRootSlotAssignment")}} {{experimental_inline}}
+- {{domxref("HTMLTemplateElement.shadowRootSlotAssignment", "shadowRootSlotAssignment")}}
   - : A string that reflects the value of the [`shadowrootslotassignment`](/en-US/docs/Web/HTML/Reference/Elements/template#shadowrootslotassignment) attribute of the associated `<template>` element.
 
 ## Instance methods

@@ -47,7 +47,7 @@ The {{HTTPHeader("Content-Length")}} header is also helpful as it indicates the 
 
 ## Requesting a specific range from a server
 
-If the server supports range requests, you can specify which part (or parts) of the document you want the server to return by including the {{HTTPHeader("Range")}} header in a HTTP request.
+If the server supports range requests, you can specify which part (or parts) of the document you want the server to return by including the {{HTTPHeader("Range")}} header in an HTTP request.
 
 ### Single part ranges
 

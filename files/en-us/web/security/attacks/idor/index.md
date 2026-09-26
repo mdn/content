@@ -48,7 +48,7 @@ app.get("/user/id/:id", (req, res) => {
 });
 ```
 
-Instead, you should implement rules to authorize access to user information. For example, only render the user page if the logged-in user id matches with the requested user id. Otherwise return a HTTP {{HTTPStatus("401")}} `Unauthorized` response.
+Instead, you should implement rules to authorize access to user information. For example, only render the user page if the logged-in user id matches with the requested user id. Otherwise return an HTTP {{HTTPStatus("401")}} `Unauthorized` response.
 
 ```js
 app.get("/user/id/:id", (req, res) => {

@@ -22,7 +22,7 @@ The selection process, or the _capabilities negotiation_, is done through `alway
 
 ### `alwaysMatch`
 
-As the name suggests, capabilities described inside the `alwaysMatch` capabilities object are features you _require_ the session to have. If the server can not provide what features you require, it will fail.
+As the name suggests, capabilities described inside the `alwaysMatch` capabilities object are features you _require_ the session to have. If the server cannot provide what features you require, it will fail.
 
 If for example you ask for Firefox version 62 on a system that only has 60 installed, the session creation will fail:
 
@@ -144,5 +144,5 @@ But because there is only one `firstMatch` arm, and we know that session creatio
 
 ## See also
 
-- [New Session](/en-US/docs/Web/WebDriver/Reference/Commands/NewSession) command
-- [Delete Session](/en-US/docs/Web/WebDriver/Reference/Commands/NewSession) command
+- [New Session](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/NewSession) command
+- [Delete Session](/en-US/docs/Web/WebDriver/Reference/Classic/Commands/DeleteSession) command

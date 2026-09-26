@@ -11,28 +11,25 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-> [!NOTE]
+> [!WARNING]
 > This feature is not supported by any user agent and its specifics are subject to change.
 
-The **`prefers-reduced-data`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features) is used to detect if the user has requested the web content that consumes less internet traffic.
+The **`prefers-reduced-data`** [CSS](/en-US/docs/Web/CSS) [media feature](/en-US/docs/Web/CSS/Reference/At-rules/@media#media_features) is used to detect if the user has requested web content that consumes less internet traffic.
+
+The browser typically achieves this by querying the underlying operating system's preferences for reduced data.
 
 ## Syntax
 
 - `no-preference`
-  - : Indicates that the user has made no preference known to the system. This keyword value evaluates as false in the boolean context.
+  - : Indicates that the user has made no preference known to the system. This keyword evaluates to false in the Boolean context.
 - `reduce`
-  - : Indicates that user has expressed the preference for lightweight alternate content.
-
-## User preferences
-
-Currently no user agent implements this feature, although various operating systems do support such preferences and if this media query is ever implemented user agents will likely rely on the settings provided by the operating system.
+  - : Indicates that the user has expressed a preference for lightweight alternate content.
 
 ## Examples
 
-> [!NOTE]
-> No browser currently implements this feature so the following example will not work.
+### Basic usage
 
-In this example the `montserrat-regular.woff2` font file will neither be preloaded nor downloaded if the user prefers reduced data, in this case the "[system font stack](https://css-tricks.com/snippets/css/system-font-stack/)" will serve as the fallback font:
+In this example, the `montserrat-regular.woff2` font file will neither be preloaded nor downloaded if the user prefers reduced data; in this case, the "[system font stack](https://css-tricks.com/snippets/css/system-font-stack/)" will serve as the fallback font:
 
 ### HTML
 

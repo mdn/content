@@ -8,8 +8,6 @@ browser-compat: mathml.global_attributes.mathsize
 sidebar: mathmlref
 ---
 
-{{Deprecated_Header}}
-
 The **`mathsize`** [global attribute](/en-US/docs/Web/MathML/Reference/Global_attributes) sets the [font-size](/en-US/docs/Web/CSS/Reference/Properties/font-size) of a MathML element.
 
 > [!NOTE]

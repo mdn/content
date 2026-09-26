@@ -11,7 +11,7 @@ Autoplay blocking is _not_ applied to {{HTMLElement("video")}} elements when the
 
 ## Autoplay and autoplay blocking
 
-The term **autoplay** refers to any feature that causes media to begin to play without the user specifically requesting that playback begin. This includes both the use of HTML attributes to autoplay media as well as the use of JavaScript code to start playback outside the context of handling user input.
+The term **autoplay** refers to any feature that causes media to begin to play without the user specifically requesting that playback begin. This includes both the use of HTML attributes to autoplay media and the use of JavaScript code to start playback outside the context of handling user input.
 
 That means that both of the following are considered autoplay behavior, and are therefore subject to the browser's autoplay blocking policy:
 
@@ -92,7 +92,7 @@ if (navigator.getAutoplayPolicy("mediaelement") === "allowed") {
   video.muted = true;
 } else if (navigator.getAutoplayPolicy("mediaelement") === "disallowed") {
   // Set a default placeholder image.
-  video.poster = "http://example.com/poster_image_url";
+  video.poster = "https://example.com/poster_image_url";
 }
 ```
 
@@ -107,7 +107,7 @@ if (navigator.getAutoplayPolicy(video) === "allowed") {
   video.muted = true;
 } else if (navigator.getAutoplayPolicy(video) === "disallowed") {
   // Set a default placeholder image.
-  video.poster = "http://example.com/poster_image_url";
+  video.poster = "https://example.com/poster_image_url";
 }
 ```
 

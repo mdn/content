@@ -1,12 +1,13 @@
 ---
-title: "ge: Wasm text instruction"
+title: "ge: Wasm numeric instruction"
 short-title: ge
 slug: WebAssembly/Reference/Numeric/ge
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.ge
 sidebar: webassemblysidebar
 ---
 
-The **`ge`** instruction, short for _greater or equal_, checks if a floating point number is greater than or equal to another floating point number.
+The **`ge`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _greater or equal_, checks if a floating point number is greater than or equal to another floating point number.
 
 Integer types have separate greater than or equal to signed ([**`ge_s`**](/en-US/docs/WebAssembly/Reference/Numeric/ge_s)) and unsigned ([**`ge_u`**](/en-US/docs/WebAssembly/Reference/Numeric/ge_u)) instructions.
 
@@ -142,6 +143,14 @@ The output is as follows:
 {{embedlivesample("simd_ge", "100%", 100)}}
 
 The result is `1` because the value stored in lane `3` of the first input value is greater than or equal to the value stored in lane `3` of the second input value.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

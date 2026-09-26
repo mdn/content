@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.Window.length
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 Returns the number of frames (either {{HTMLElement("frame")}} or
 {{HTMLElement("iframe")}} elements) in the window.

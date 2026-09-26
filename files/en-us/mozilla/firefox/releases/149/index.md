@@ -47,7 +47,7 @@ Firefox 149 was released on [March 24, 2026](https://whattrainisitnow.com/releas
   A serialized version of the report objects can also be sent to a reporting server specified in the corresponding HTTP header — endpoint names and corresponding URLs must first be defined in the {{httpheader('Reporting-Endpoints')}} or {{httpheader('Report-To')}} HTTP response headers.
   ([Firefox bug 1976074](https://bugzil.la/1976074), [Firefox bug 2008916](https://bugzil.la/2008916)).
 
-- Up to Firefox 148, `structuredClone.call(iframe.contentWindow)` incorrectly created objects in the caller's [realm](/en-US/docs/Web/JavaScript/Reference/Execution_model#realms) instead of the iframe's realm. The implementation now instantiates objects in the `this` realm, so the method's behavior more closely matched the specification ([Firefox bug 2017797](https://bugzil.la/2017797)).
+- Up to Firefox 148, `structuredClone.call(iframe.contentWindow)` incorrectly created objects in the caller's [realm](/en-US/docs/Web/JavaScript/Reference/Execution_model#realms) instead of the iframe's realm. The implementation now instantiates objects in the `this` realm, so the method's behavior more closely matches the specification ([Firefox bug 2017797](https://bugzil.la/2017797)).
 
 #### DOM
 
@@ -137,6 +137,10 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **`@container style()` queries** (Nightly): `layout.css.style-queries.enabled`
 
   The [`@container`](/en-US/docs/Web/CSS/Reference/At-rules/@container) CSS at-rule supports [`style()`](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries) queries. This allows you to check if a container has a valid CSS declaration, a CSS property, or a custom property, and apply styles to its children accordingly. ([Firefox bug 2014404](https://bugzil.la/2014404)).
+
+- **base-select value for appearance CSS property**: `dom.select.customizable_select.enabled` and `layout.css.appearance-base.enabled`
+
+  The [`base-select`](/en-US/docs/Web/CSS/Reference/Properties/appearance#base-select) value for the {{cssxref("appearance")}} CSS property, relevant only to the {{htmlelement("select")}} element and {{cssxref("::picker()", "::picker(select)")}} pseudo-element, allows you to fully style them. Currently only styling of the `<select>` element is supported. Styling of the `::picker(select)` pseudo-element will be added in future versions. This feature is part of the [Customizable Select elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select) work. Two preferences need be enabled to use it. ([Firefox bug 1974787](https://bugzil.la/1974787)).
 
 - **CSS Typed Object Model Level 1**: `layout.css.typed-om.enabled`
 

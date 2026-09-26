@@ -54,7 +54,7 @@ const myErrorTag = new WebAssembly.Tag({ parameters: ["i32"] });
 // Import the tag and the log function into the module
 const env = {
   my_error: myErrorTag,
-  log: () => {
+  log() {
     console.log("An error was caught!");
   },
 };
@@ -115,6 +115,14 @@ In the case of `catch_all`, the referenced block doesn't need to declare a resul
   ...
 )
 ```
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

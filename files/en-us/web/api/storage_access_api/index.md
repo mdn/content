@@ -52,13 +52,13 @@ Because there is a risk of exposing data intended for one site to other sites, b
 This is in contrast to _partitioned_ cookies, where embedded resources under each top-level site are given a unique cookie storage space, isolated from those of other sites.
 Since there is no privacy risk, because it is not possible to track users across sites via partitioned cookies, browsers send partitioned cookies in requests and make them available to embedded resources.
 Note however that, because the cookies aren't shared between sites, they are also not automatically synchronized across sites.
-Browsers have various mechanisms to partition third-party cookie access, for example [Firefox Total Cookie Protection](https://blog.mozilla.org/en/mozilla/firefox-rolls-out-total-cookie-protection-by-default-to-all-users-worldwide/) and [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies).
+Browsers have various mechanisms to partition third-party cookie access, for example [Firefox Total Cookie Protection](https://blog.mozilla.org/en/mozilla/firefox-rolls-out-total-cookie-protection-by-default-to-all-users-worldwide/) and [Cookies Having Independent Partitioned State (CHIPS)](/en-US/docs/Web/Privacy/Guides/Third-party_cookies/Partitioned_cookies).
 
 When we talk about third-party cookies in the context of the Storage Access API, we implicitly mean _unpartitioned_ third-party cookies.
 
 ### How it works
 
-Third party content embedded in an {{htmlelement("iframe")}} that needs to access cookie or other unpartitioned state can request access using the Storage Access API as follows:
+Third-party content embedded in an {{htmlelement("iframe")}} that needs to access cookie or other unpartitioned state can request access using the Storage Access API as follows:
 
 1. {{domxref("Document.hasStorageAccess()")}} can be called to check if the embedded content already has access to unpartitioned cookies.
 2. If not, {{domxref("Document.requestStorageAccess()")}} can be called with {{Glossary("transient activation")}} to request the `storage-access` permission.

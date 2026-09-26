@@ -5,7 +5,7 @@ page-type: glossary-definition
 sidebar: glossarysidebar
 ---
 
-**Application-Layer Protocol Negotiation** (**ALPN**) is a {{Glossary("TLS")}} extension (defined in [RFC 7301](https://www.rfc-editor.org/rfc/rfc7301)) for identifying what application-layer protocol is negotiating the encrypted connection, without requiring additional round trips to do so.
+**Application-Layer Protocol Negotiation** (**ALPN**) is a {{Glossary("TLS")}} extension (defined in [RFC 7301](https://www.rfc-editor.org/info/rfc7301/)) for identifying what application-layer protocol is negotiating the encrypted connection, without requiring additional round trips to do so.
 
 | Protocol                                  | Identification sequence                                |
 | ----------------------------------------- | ------------------------------------------------------ |
@@ -18,4 +18,4 @@ sidebar: glossarysidebar
 
 - [Performance resource timing `nextHopProtocol`](/en-US/docs/Web/API/PerformanceResourceTiming/nextHopProtocol) property
 - [PerformanceObserver API](/en-US/docs/Web/API/PerformanceObserver)
-- [IANA registered ALPN identifiers](https://www.iana.org/assignments/tls-extensiontype-values/tls-extensiontype-values.xhtml#alpn-protocol-ids)
+- [IANA registered ALPN identifiers](https://www.iana.org/assignments/tls-extensiontype-values#alpn-protocol-ids)

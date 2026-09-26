@@ -8,11 +8,9 @@ browser-compat: api.DataTransferItemList.add
 
 {{APIRef("HTML Drag and Drop API")}}
 
-The **`DataTransferItemList.add()`** method creates a new
-{{domxref("DataTransferItem")}} using the specified data and adds it to the drag data
-list. The item may be a {{domxref("File")}} or a string of a
-given type. If the item is successfully added to the list, the newly-created
-{{domxref("DataTransferItem")}} object is returned.
+The **`add()`** method of the {{domxref("DataTransferItemList")}} interface creates a new {{domxref("DataTransferItem")}} using the specified data and adds it to the drag data list. The item may be a {{domxref("File")}} or a string of a given type. If the item is successfully added to the list, the newly-created {{domxref("DataTransferItem")}} object is returned.
+
+During a drag operation, this method can only be used in the handler for the {{domxref("HTMLElement/dragstart_event", "dragstart")}} event, because that's the only time the drag operation's data store is writable. Calling it from any other drag event returns `null` without adding an item. See [Modifying the drag data store](/en-US/docs/Web/API/HTML_Drag_and_Drop_API/Drag_data_store#modifying_the_drag_data_store) for details.
 
 ## Syntax
 
@@ -108,17 +106,17 @@ target.addEventListener("drop", (ev) => {
   ev.preventDefault();
   // Loop through the dropped items and log their data
   for (const item of event.dataTransfer.items) {
-    if (item.kind === "string" && item.type.match("^text/plain")) {
+    if (item.kind === "string" && item.type === "text/plain") {
       // This item is the target node
       item.getAsString((s) => {
         ev.target.appendChild(document.getElementById(s));
       });
-    } else if (item.kind === "string" && item.type.match("^text/html")) {
+    } else if (item.kind === "string" && item.type === "text/html") {
       // Drag data item is HTML
       item.getAsString((s) => {
         console.log(`… Drop: HTML = ${s}`);
       });
-    } else if (item.kind === "string" && item.type.match("^text/uri-list")) {
+    } else if (item.kind === "string" && item.type === "text/uri-list") {
       // Drag data item is URI
       item.getAsString((s) => {
         console.log(`… Drop: URI = ${s}`);

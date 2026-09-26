@@ -1,12 +1,13 @@
 ---
-title: "reinterpret: Wasm text instruction"
+title: "reinterpret: Wasm numeric instruction"
 short-title: reinterpret
 slug: WebAssembly/Reference/Numeric/reinterpret
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.reinterpret
 sidebar: webassemblysidebar
 ---
 
-The **`reinterpret`** instructions are used to reinterpret the bits of a number as a different type.
+The **`reinterpret`** [numeric instructions](/en-US/docs/WebAssembly/Reference/Numeric) are used to reinterpret the bits of a number as a different type.
 
 {{InteractiveExample("Wat Demo: reinterpret", "tabbed-taller")}}
 
@@ -53,3 +54,11 @@ i32.reinterpret_f32
 | `i64.reinterpret_f64` | `0xbd`        |
 | `f32.reinterpret_i32` | `0xbe`        |
 | `f64.reinterpret_i64` | `0xbf`        |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

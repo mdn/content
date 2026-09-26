@@ -3,7 +3,7 @@ title: "sub_sat_u: Wasm SIMD arithmetic instruction"
 short-title: sub_sat_u
 slug: WebAssembly/Reference/SIMD/arithmetic/sub_sat_u
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.sub_sat_u
+browser-compat: webassembly.instructions.sub_sat_u
 sidebar: webassemblysidebar
 ---
 
@@ -79,4 +79,3 @@ value_type.sub_sat_u
 ## See also
 
 - [`sub`](/en-US/docs/WebAssembly/Reference/Numeric/sub)
-- [SIMD arithmetic instructions](/en-US/docs/WebAssembly/Reference/SIMD/arithmetic)

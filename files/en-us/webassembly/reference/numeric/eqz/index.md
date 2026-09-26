@@ -1,12 +1,13 @@
 ---
-title: "eqz: Wasm text instruction"
+title: "eqz: Wasm numeric instruction"
 short-title: eqz
 slug: WebAssembly/Reference/Numeric/eqz
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.eqz
 sidebar: webassemblysidebar
 ---
 
-The **`eqz`** instruction checks if a number is equal to zero.
+The **`eqz`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric) checks if a number is equal to zero.
 
 {{InteractiveExample("Wat Demo: eqz", "tabbed-taller")}}
 
@@ -67,6 +68,14 @@ value_type.eqz
 | ----------- | ------------- | ---------------------- |
 | `i32.eqz`   | `0x45`        | `i32.eqz` => `0x45`    |
 | `i64.eqz`   | `0x50`        | `i64.eqz` => `0x50`    |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

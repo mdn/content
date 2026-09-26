@@ -30,6 +30,7 @@ The [logical properties and values module](/en-US/docs/Web/CSS/Guides/Logical_pr
 - {{cssxref("contain-intrinsic-inline-size")}}
 - {{cssxref("contain-intrinsic-size")}}
 - {{cssxref("contain-intrinsic-width")}}
+- {{cssxref("frame-sizing")}}
 - {{cssxref("height")}}
 - {{cssxref("max-height")}}
 - {{cssxref("max-width")}}

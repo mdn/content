@@ -42,7 +42,7 @@ This theory is not essential to writing web code in the short term, but before l
 
 Computers connected to the internet are called **clients** and **servers**. A simplified diagram of how they interact might look like this:
 
-![Two circles representing client and server. An arrow labelled request is going from client to server, and an arrow labelled responses is going from server to client](simple-client-server.png)
+![Two circles representing client and server. An arrow labeled request is going from client to server, and an arrow labeled responses is going from server to client](simple-client-server.png)
 
 - Clients are the typical web user's internet-connected devices (for example, your computer connected to your Wi-Fi, or your phone connected to your mobile network) and web-accessing software available on those devices (usually a web browser like Firefox or Chrome).
 - Servers are computers that store webpages, sites, or apps. When a client wants to access a webpage, a copy of the webpage code is downloaded from the server to the client machine, where it is rendered by the browser and displayed to the user.

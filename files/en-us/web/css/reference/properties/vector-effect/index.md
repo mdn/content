@@ -12,7 +12,7 @@ The **`vector-effect`** [CSS](/en-US/docs/Web/CSS) property suppresses specific 
 ## Syntax
 
 ```css
-/* Keywords */
+/* Keyword values */
 vector-effect: none;
 vector-effect: non-scaling-stroke;
 
@@ -25,6 +25,8 @@ vector-effect: unset;
 ```
 
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `none`
   - : No vector effects are applied to the element, meaning it will be fully affected by transforms as normal.

@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLMenuElement.compact
 ---
 
-{{ApiRef("HTML DOM")}}{{Deprecated_Header}}
+{{ApiRef("HTML DOM")}}
 
 The **`compact`** property of the {{domxref("HTMLMenuElement")}} interface indicates that spacing between list items should be reduced. The exact handling of the `compact` attribute is browser-specific. Instead of using this property, consider using CSS {{cssxref("line-height")}} instead.
 

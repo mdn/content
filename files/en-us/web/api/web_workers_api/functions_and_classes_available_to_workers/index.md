@@ -51,6 +51,7 @@ The following Web APIs are available to workers:
 - {{domxref("Content Index API", "", "", "nocode")}}
 - {{domxref("Cookie Store API", "", "", "nocode")}} (service workers only)
 - {{domxref("CSS Font Loading API", "", "", "nocode")}}
+- {{domxref("CSS Typed Object Model API", "", "", "nocode")}} (excluding {{domxref("StylePropertyMap")}})
 - {{domxref("Encoding API", "", "", "nocode")}}
 - {{domxref("Fetch API", "", "", "nocode")}}
 - {{domxref("File API", "", "", "nocode")}}

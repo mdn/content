@@ -60,7 +60,7 @@ Angular is a component-based framework which uses declarative HTML templates. At
 
 After working on and learning from the original [AngularJS](https://angularjs.org/) project, Evan You released [Vue](https://vuejs.org/) in 2014. Vue is the youngest of the big four, but has enjoyed a recent uptick in popularity.
 
-Vue, like [AngularJS](https://angularjs.org/), extends HTML with some of its own code. Apart from that, it mainly relies on modern, standard JavaScript.
+Vue, like Angular, extends HTML with some of its own code. Apart from that, it mainly relies on modern, standard JavaScript.
 
 ### React
 

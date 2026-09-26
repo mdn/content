@@ -29,8 +29,10 @@ The [Payment Request API's](/en-US/docs/Web/API/Payment_Request_API) **`PaymentR
 
 ## Static methods
 
+- {{domxref('PaymentRequest.getSecurePaymentConfirmationCapabilities_static', 'PaymentRequest.getSecurePaymentConfirmationCapabilities()')}} {{experimental_inline}}
+  - : Returns an object indicating which capabilities of the [Secure payment confirmation](/en-US/docs/Web/API/Payment_Request_API/Using_secure_payment_confirmation) feature are supported by the current browser.
 - {{domxref('PaymentRequest.securePaymentConfirmationAvailability_static', 'PaymentRequest.securePaymentConfirmationAvailability()')}} {{experimental_inline}}
-  - : Indicates whether the [Secure payment confirmation](/en-US/docs/Web/API/Payment_Request_API/Using_secure_payment_confirmation) feature is available.
+  - : Indicates whether the Secure payment confirmation feature is available in the current browser.
 
 ## Instance methods
 

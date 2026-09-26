@@ -30,6 +30,7 @@ adlm
 advertisementreceived
 afrc
 afterscriptexecute
+aioquic
 alaw
 allowdirs
 allowevents
@@ -41,6 +42,7 @@ android-safetynet
 animalfound
 anims
 anonid
+anyref
 apacheconf
 apachectl
 appcache
@@ -55,6 +57,7 @@ armeabi
 armn
 armnlow
 armv81
+arrayref
 arrowpanel
 assetlinks
 associationlist
@@ -139,7 +142,9 @@ congres
 connectionavailable
 contentaccessible
 contentdelete
+contentoccluded
 contentvisibilityautostatechange
+contextoverflow
 controlslist
 cookiechange
 cpanel-dcv
@@ -165,12 +170,15 @@ ctrz
 Cubehelix
 currententrychange
 currentscreenchange
+customelementregistry
 cwrap
 daala
 dangi
+dataidx
 deviceproximity
 devtools.aboutdebugging
 devtools.errorconsole
+DfltDwnld
 diak
 dialogtext
 diffe
@@ -187,6 +195,7 @@ dom.abortablepromise
 dom.closewatcher
 dom.documentpip
 dom.element.customstateset
+dom.headingoffset
 dom.input.dirpicker
 dom.media.webcodecs
 dom.performance.event_timing.enable_interactionid
@@ -216,6 +225,7 @@ ehtml
 EISU
 elementname
 elementtiming
+elemidx
 elems
 emailtracking
 emcc
@@ -228,6 +238,7 @@ enable-tracejit
 enableiOES
 endstreaming
 enterpictureinpicture
+eqref
 equalsize
 EquationiOES
 ethi
@@ -240,6 +251,8 @@ externref
 extmul
 fangsong
 fencedframe
+ffdhe2048
+ffdhe3072
 fgets
 filecheck
 FILLMODE_FILL_WINDOW
@@ -286,6 +299,8 @@ hanidays
 hanidec
 hansfin
 hantfin
+headingoffset
+headingreset
 hebr
 highp
 hiliteColor
@@ -339,6 +354,7 @@ jpanyear
 jsapi.h
 jscript
 jsdouble
+JSMSG_INCOMPATIBLE_PROTO
 jspubtd.h
 jsref
 jssidebar
@@ -527,6 +543,9 @@ nsIURL
 nsIXSLT
 nsPIDOMWindow
 nsresult
+nullexternref
+nullfuncref
+nullref
 nums
 OEM_CUSEL
 OEM_ENLW
@@ -543,6 +562,7 @@ oncanmakepayment
 oncharacterboundsupdate
 onclipboardchange
 oncontentvisibilityautostatechange
+oncontextoverflow
 oncurrententrychange
 oncurrentscreenchange
 ondequeue
@@ -551,6 +571,7 @@ ondownloadprogress
 onefive
 onendstreaming
 ongesturestart
+onInputCancelled
 oninterest
 onlocation
 onloseinterest
@@ -575,6 +596,7 @@ ontextformatupdate
 ontextupdate
 onuncapturederror
 onvalidationstatuschange
+onvisibilitymaskchange
 onwebkitmouseforcewillbegin
 onzoomlevelchange
 opendocument
@@ -637,6 +659,7 @@ preg_replace
 premkproject
 prerenderingchange
 presentationml
+pressuresource
 prettyping
 previousslide
 previoustrack
@@ -777,6 +800,7 @@ svgref
 svgz
 tabbox
 tabbrowser
+tableidx
 tabs-closebutton
 tabular-nums
 tagidx
@@ -790,6 +814,7 @@ testingbot-api
 texlive
 texlive-fontsextra
 textformatupdate
+TEXTPATH_SIDETYPE
 textupdate
 TEXTUREI
 thickmathspace
@@ -837,6 +862,7 @@ urlsidebar
 urpmi
 usedtx
 useinbandfec
+useraction
 usercontext-content
 userhash
 userproximity
@@ -860,6 +886,7 @@ viewsource.css
 VIRTUALENVWRAPPER
 virtualkeyboardpolicy
 virtuals
+visibilitymaskchange
 VK_CRSEL
 VK_EREOF
 VK_EXSEL
@@ -924,6 +951,7 @@ workon
 WORKON_HOME
 writingsuggestions
 wtai
+wtransport
 x-abiword
 X-cept-Encoding
 x-ms-aria-flowfrom

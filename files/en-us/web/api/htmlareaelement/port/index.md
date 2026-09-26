@@ -24,13 +24,13 @@ A string.
 
 ```js
 // An <area id="myArea" href="https://developer.mozilla.org:443/en-US/docs/HTMLAreaElement"> element is in the document
-const area = document.getElementByID("myArea");
+const area = document.getElementById("myArea");
 area.port; // Returns ''
 ```
 
 ```js
 // Another <area id="myArea" href="https://developer.mozilla.org:8888/en-US/docs/HTMLAreaElement"> element is in the document
-const area = document.getElementByID("myArea");
+const area = document.getElementById("myArea");
 area.port; // Returns:'8888'
 ```
 
