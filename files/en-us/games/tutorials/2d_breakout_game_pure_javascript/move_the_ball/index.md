@@ -66,43 +66,47 @@ Of course, to load the image, it must be available in our code directory. [Grab 
 Now, to show it on the screen, we call `drawImage()`, passing both the `ball` image and the x and y coordinates of the canvas where we want it added. Add the following to your `draw()` function:
 
 ```js
-ctx.drawImage(ball, 50, 50);
+ctx.drawImage(ball, 50 - ball.width / 2, 50 - ball.height / 2);
 ```
+
+> [!NOTE]
+> The coordinates you pass to `drawImage()` is the coordinates of the _top-left corner_ of the image. In practice, it's often more convenient to track the _center_ of objects, so that all directions can be processed in the same way (especially for [collision detection](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls)). Therefore, we specify the intended coordinates for the _center_ of the ball as `(50, 50)`, and subtract `ball.width / 2` and `ball.height / 2` to get the corresponding locations of the top-left corner.
 
 That's it—if you load your `index.html` file, you will see the image already loaded and rendered on the canvas!
 
 ## Updating the ball's position on each frame
 
-Currently, each `draw()` invocation paints the ball in exactly the same place, so the ball appears stationary. We can maintain separate state variables tracking the ball's position. Just above the `function draw()` definition, add the following:
+Currently, each `draw()` invocation paints the ball in exactly the same place, so the ball appears stationary. We can maintain a separate state variable tracking the position of the ball's center. Just above the `function draw()` definition, add the following:
 
 ```js
-let ballX = 50;
-let ballY = 50;
+const ballPos = { x: 50, y: 50 };
 ```
 
 We'll update the ball's position on every call of `draw()`. To maintain a constant speed of the ball, we need to work out how much to displace it from the last position, using the formula `dx = vx * dt`, where `vx` is its speed along the x axis and `dt` is the time elapsed since the last `draw()` call. Because each time the `draw()` function receives a `timestamp`, we can compare it with the previous iteration to get `dt`. For `vx` and `vy`, we'll set them to 0.15, meaning that the ball moves 150 pixels in both the x and y directions every second.
 
-Continue adding below `let ballY = 50`:
+Continue adding below `const ballPos`:
 
 ```js
 let lastTimestamp = null;
-const ballVX = 0.15;
-const ballVY = 0.15;
+const ballVel = { x: 0.15, y: 0.15 };
 ```
 
-Within the `draw()` function, replace `ctx.drawImage(ball, 50, 50);` with the following:
+Within the `draw()` function, replace the `ctx.drawImage()` call with the following:
 
 ```js
 if (lastTimestamp !== null) {
   const dt = timestamp - lastTimestamp;
-  ballX += ballVX * dt;
-  ballY += ballVY * dt;
+  ballPos.x += ballVel.x * dt;
+  ballPos.y += ballVel.y * dt;
 }
 lastTimestamp = timestamp;
-ctx.drawImage(ball, ballX, ballY);
+ctx.drawImage(ball, ballPos.x - ball.width / 2, ballPos.y - ball.height / 2);
 ```
 
-The code above adds the calculated displacement to the variables representing the ball coordinates on the canvas, on each frame. Reload `index.html` and you should see the ball rolling across the screen.
+The code above adds the calculated displacement to the ball's coordinates on the canvas, on each frame. Reload `index.html` and you should see the ball rolling across the screen.
+
+> [!NOTE]
+> The canvas isn't automatically cleared every time `draw()` is called. The previous position of the ball is removed because we redraw the whole background with `ctx.fillRect(0, 0, 480, 320)`, which lays over any existing content. If you remove that line, you'll see the ball leaving behind a trail.
 
 ## Compare your code
 
@@ -139,11 +143,9 @@ const ball = new Image();
 ball.src =
   "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/ball.png";
 
-let ballX = 50;
-let ballY = 50;
+const ballPos = { x: 50, y: 50 };
 let lastTimestamp = null;
-const ballVX = 0.15;
-const ballVY = 0.15;
+const ballVel = { x: 0.15, y: 0.15 };
 
 Promise.all([ball].map((img) => img.decode())).then(() =>
   requestAnimationFrame(draw),
@@ -154,11 +156,11 @@ function draw(timestamp) {
   ctx.fillRect(0, 0, 480, 320);
   if (lastTimestamp !== null) {
     const dt = timestamp - lastTimestamp;
-    ballX += ballVX * dt;
-    ballY += ballVY * dt;
+    ballPos.x += ballVel.x * dt;
+    ballPos.y += ballVel.y * dt;
   }
   lastTimestamp = timestamp;
-  ctx.drawImage(ball, ballX, ballY);
+  ctx.drawImage(ball, ballPos.x - ball.width / 2, ballPos.y - ball.height / 2);
   // continue adding things here...
 
   requestAnimationFrame(draw);

@@ -5,163 +5,124 @@ page-type: guide
 sidebar: games
 ---
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}
 
-This is the **3rd step** out of 10 of the [Gamedev Canvas tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). You can find the source code as it should look after completing this lesson at [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html).
+This is the **3rd step** out of 13 of the [creating a Breakout game in pure JavaScript tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Now that motion physics have been introduced, we can start implementing collision detection into the game—first we'll look at the walls.
 
-It is nice to see our ball moving, but it quickly disappears from the screen, limiting the fun we can have with it! To overcome that we will implement some collision detection (which will be explained [later](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Collision_detection) in more detail) to make the ball bounce off the four edges of the Canvas.
+## Bouncing off the world boundaries
 
-## Simple collision detection
+The [law of reflection](<https://en.wikipedia.org/wiki/Reflection_(physics)>) tells us that, in an ideal world, when a ball hits a flat surface like a wall, it would reflect back—the velocity component perpendicular to the wall is reversed, while the component parallel to the wall is preserved. For example, if the ball hits the lower boundary while flying towards the lower right, it should reflect and fly towards the upper right.
 
-To detect the collision we will check whether the ball is touching (colliding with) the wall, and if so, we will change the direction of its movement accordingly.
+We'll perform the collision detection right after the position update. The ball's motion will be updated like this, assuming it's directly moving to the left with `vx = -1`:
 
-To enable the calculations, let's define a variable called `ballRadius` that will hold the radius of the drawn circle and be used for calculations. Add this to your code, somewhere below the existing variable declarations:
+1. Frame 1: at `x = 1`, `vx = -1`
+2. Frame 2: at `x = 0`; collision detected, so velocity becomes `vx = 1`
+3. Frame 3: at `x = 1`, `vx = 1`
 
-```js
-const ballRadius = 10;
-```
+> [!NOTE]
+> At frame 2, it's possible for `x` to be less than 0, for example if `vx = -2`, so the ball overlaps with the wall. Because this only sustains for no more than a few frames, most game engines will tolerate it because it makes calculation significantly easier. You can also adjust the ball's position to avoid overlap, like setting `x = 0` whenever `x <= 0`.
 
-Now update the line that draws the ball inside the `drawBall()` function to this:
-
-```js
-ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
-```
-
-### Bouncing off the top and bottom
-
-There are four walls to bounce the ball off — let's focus on the top one first. We need to check, on every frame, whether the ball is touching the top edge of the Canvas — if yes, we'll reverse the ball movement so it will start to move in the opposite direction and stay within the visible boundaries. Remembering that the coordinate system starts from the top left, we can come up with something like this:
+The essential logic is as follows:
 
 ```js
-if (y + dy < 0) {
-  dy = -dy;
+if (hittingLeftBoundary || hittingRightBoundary) {
+  ballVel.x = -ballVel.x;
+}
+if (hittingTopBoundary || hittingBottomBoundary) {
+  ballVel.y = -ballVel.y;
 }
 ```
 
-If the `y` value of the ball position is lower than zero, change the direction of the movement on the `y` axis by setting it equal to itself, reversed. If the ball was moving upwards with a speed of 2 pixels per frame, now it will be moving "up" with a speed of -2 pixels, which actually equals to moving down at a speed of 2 pixels per frame.
+We just need to replace each of the variables in the conditions with the right expressions. Take the left boundary as an example. Its `x` coordinate is 0, meaning that whenever the left edge of the ball has an `x` coordinate less than or equal to 0 and it's moving to the left, we know that it has hit the boundary.
 
-The code above would deal with the ball bouncing off the top edge, so now let's think about the bottom edge:
+> [!NOTE]
+> Imagine the following: the ball moves to the left, overlaps with the wall (the `x` coordinate is negative), and reverses the direction. However, the next frame happens so quickly that the ball has not fully left the wall yet (the `x` coordinate is still negative). Without this condition, it would trigger another collision and reverse direction yet again. This is known as [collision jitter](https://docs.flatredball.com/flatredball/tutorials/code-tutorials/collision-jitter), a common bug in games, especially old ones that don't use established game engines. We solve it by adding the "is moving to the left" condition; it can also be solved by implementing the "overlap-avoiding adjustment" above.
 
-```js
-if (y + dy > canvas.height) {
-  dy = -dy;
-}
-```
-
-If the ball's `y` position is greater than the height of the Canvas (remember that we count the `y` values from the top left, so the top edge starts at 0 and the bottom edge is at 320 pixels, the Canvas' height), then bounce it off the bottom edge by reversing the `y` axis movement as before.
-
-We could merge those two statements into one to save on code verbosity:
+To get the left edge of the ball, we need to subtract its half-width from the center position, similar to how we obtain the coordinates for `drawImage()`. For convenience we'll define `const rx = ball.width / 2` so we can reuse it for all other calculations. Note that `rx` has to be defined _inside_ the `draw` function, because `ball.width` is only available after the image has been loaded, but top-level code is executed before that.
 
 ```js
-if (y + dy > canvas.height || y + dy < 0) {
-  dy = -dy;
-}
+const hittingLeftBoundary = ballPos.x - rx <= 0 && ballVel.x < 0;
 ```
 
-If either of the two statements is `true`, reverse the movement of the ball.
-
-### Bouncing off the left and right
-
-We have the top and bottom edge covered, so let's think about the left and right ones. It is very similar actually, all you have to do is to repeat the statements for `x` instead of `y`:
-
-```js
-if (x + dx > canvas.width || x + dx < 0) {
-  dx = -dx;
-}
-
-if (y + dy > canvas.height || y + dy < 0) {
-  dy = -dy;
-}
-```
-
-At this point you should insert the above code block into the draw() function, just before the closing curly brace.
-
-### The ball keeps disappearing into the wall!
-
-Test your code at this point, and you will be impressed — now we have a ball that bounced off all four edges of the canvas! We have another problem however — when the ball hits each wall it sinks into it slightly before changing direction:
-
-![skyblue ball disappearing into the top of the white wall.](ball-in-wall.png)
-
-This is because we're calculating the collision point of the wall and the center of the ball, while we should be doing it for its circumference. The ball should bounce right after if touches the wall, not when it's already halfway in the wall, so let's adjust our statements a bit to include that. Update the last code you added to this:
-
-```js
-if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
-  dx = -dx;
-}
-if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
-  dy = -dy;
-}
-```
-
-When the distance between the center of the ball and the edge of the wall is exactly the same as the radius of the ball, it will change the movement direction. Subtracting the radius from one edge's width and adding it onto the other gives us the impression of the proper collision detection — the ball bounces off the walls as it should do.
+The implementations for the other three boundaries are left as exercise; remember that the right boundary has an `x` coordinate of 480, while the top and bottom boundaries have `y` coordinates of 0 and 320, respectively.
 
 ## Compare your code
 
-Let's again check the finished code for this part against what you've got, and have a play:
+Here's what you should have so far, running live. To view its source code, click the "Play" button.
 
 ```html hidden
-<canvas id="myCanvas" width="480" height="320"></canvas>
-<button id="runButton">Start game</button>
+<canvas id="game-canvas" width="480" height="320"></canvas>
 ```
 
 ```css hidden
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
 canvas {
-  background: #eeeeee;
-}
-button {
   display: block;
+  width: min(100vw, 150vh);
+  height: auto;
 }
 ```
 
-```js
-const canvas = document.getElementById("myCanvas");
+```js hidden
+const canvas = document.getElementById("game-canvas");
 const ctx = canvas.getContext("2d");
-const ballRadius = 10;
-let x = canvas.width / 2;
-let y = canvas.height - 30;
-let dx = 2;
-let dy = -2;
 
-function drawBall() {
-  ctx.beginPath();
-  ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
-  ctx.fillStyle = "#0095DD";
-  ctx.fill();
-  ctx.closePath();
-}
+const ball = new Image();
+ball.src =
+  "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/ball.png";
 
-function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  drawBall();
+const ballPos = { x: 50, y: 50 };
+let lastTimestamp = null;
+const ballVel = { x: 0.15, y: 0.15 };
 
-  if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
-    dx = -dx;
+Promise.all([ball].map((img) => img.decode())).then(() =>
+  requestAnimationFrame(draw),
+);
+
+function draw(timestamp) {
+  const rx = ball.width / 2;
+  const ry = ball.height / 2;
+
+  ctx.fillStyle = "#eeeeee";
+  ctx.fillRect(0, 0, 480, 320);
+  if (lastTimestamp !== null) {
+    const dt = timestamp - lastTimestamp;
+    ballPos.x += ballVel.x * dt;
+    ballPos.y += ballVel.y * dt;
   }
-  if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
-    dy = -dy;
+  lastTimestamp = timestamp;
+  ctx.drawImage(ball, ballPos.x - rx, ballPos.y - ry);
+
+  const hittingLeftBoundary = ballPos.x - rx <= 0 && ballVel.x < 0;
+  const hittingRightBoundary = ballPos.x + rx >= 480 && ballVel.x > 0;
+  const hittingTopBoundary = ballPos.y - ry <= 0 && ballVel.y < 0;
+  const hittingBottomBoundary = ballPos.y + ry >= 320 && ballVel.y > 0;
+  if (hittingLeftBoundary || hittingRightBoundary) {
+    ballVel.x = -ballVel.x;
   }
+  if (hittingTopBoundary || hittingBottomBoundary) {
+    ballVel.y = -ballVel.y;
+  }
+  // continue adding things here...
 
-  x += dx;
-  y += dy;
+  requestAnimationFrame(draw);
 }
-
-function startGame() {
-  setInterval(draw, 10);
-}
-
-const runButton = document.getElementById("runButton");
-runButton.addEventListener("click", () => {
-  startGame();
-  runButton.disabled = true;
-});
 ```
 
-{{embedlivesample("compare_your_code", 600, 360)}}
-
-> [!NOTE]
-> Try changing the color of the ball to a random color every time it hits the wall.
+{{EmbedLiveSample("compare your code", "", 480, , , , , "allow-modals")}}
 
 ## Next steps
 
-We've now got to the stage where our ball is both moving and staying on the game board. In the fourth chapter we'll look at implementing a controllable paddle — see [Paddle and keyboard controls](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Paddle_and_keyboard_controls).
+This is starting to look more like a game now, but we can't control it in any way—it's high time we introduced the [player paddle and controls](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls).
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls")}}
