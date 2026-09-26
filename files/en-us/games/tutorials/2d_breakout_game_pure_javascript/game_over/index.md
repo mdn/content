@@ -107,6 +107,7 @@ class GameObject {
     const { left, top } = this.hitbox;
     this.ctx.drawImage(this.asset, left, top);
   }
+  onCollide() {}
 }
 
 class Ball extends GameObject {
@@ -115,6 +116,14 @@ class Ball extends GameObject {
   move(dt) {
     this.pos.x += this.vel.x * dt;
     this.pos.y += this.vel.y * dt;
+  }
+  onCollide({ x, y }) {
+    if (x) {
+      this.vel.x = -this.vel.x;
+    }
+    if (y) {
+      this.vel.y = -this.vel.y;
+    }
   }
 }
 
@@ -209,23 +218,27 @@ function getCollision(moving, velocity, obstacle, dt) {
 
 function moveBall(dt) {
   while (dt > 0) {
-    const ballBounds = ball.hitbox;
+    // Avoid repeatedly triggering the getter
+    const ballHitbox = ball.hitbox;
     let hitTime = dt;
     let hitX = null;
     let hitY = null;
+    let contacts = [];
 
     for (const collider of colliders) {
-      const hit = getCollision(ballBounds, ball.vel, collider.hitbox, hitTime);
+      const hit = getCollision(ballHitbox, ball.vel, collider.hitbox, hitTime);
       if (hit === null) {
         continue;
       }
       if (hit.time < hitTime) {
         hitX = null;
         hitY = null;
+        contacts = [];
       }
       hitTime = hit.time;
       hitX = hit.x ?? hitX;
       hitY = hit.y ?? hitY;
+      contacts.push({ collider, hit });
     }
 
     ball.move(hitTime);
@@ -237,16 +250,20 @@ function moveBall(dt) {
       location.reload();
     }
 
+    if (contacts.length === 0) {
+      break;
+    }
+    // Snap the position to the point of contact to avoid floating point errors
     if (hitX !== null) {
       ball.pos.x = hitX + ball.size.w / 2;
-      ball.vel.x = -ball.vel.x;
     }
     if (hitY !== null) {
       ball.pos.y = hitY + ball.size.h / 2;
-      ball.vel.y = -ball.vel.y;
     }
-    if (hitX === null && hitY === null) {
-      break;
+
+    ball.onCollide({ x: hitX !== null, y: hitY !== null });
+    for (const { collider, hit } of contacts) {
+      collider.onCollide?.({ x: hit.x !== null, y: hit.y !== null });
     }
   }
 }

@@ -44,6 +44,7 @@ class GameObject {
     const { left, top } = this.hitbox;
     this.ctx.drawImage(this.asset, left, top);
   }
+  onCollide() {}
 }
 
 class Ball extends GameObject {
@@ -53,12 +54,20 @@ class Ball extends GameObject {
     this.pos.x += this.vel.x * dt;
     this.pos.y += this.vel.y * dt;
   }
+  onCollide({ x, y }) {
+    if (x) {
+      this.vel.x = -this.vel.x;
+    }
+    if (y) {
+      this.vel.y = -this.vel.y;
+    }
+  }
 }
 ```
 
-`Ball` inherits the constructor, `preload()`, `hitbox`, and `draw()` from `GameObject`. It adds its initial position, velocity, and `move()` method.
+The `origin` defines which point on the image is placed at `pos`, as a fraction of its width and height. The default `(0.5, 0.5)` places the center there. The base class also defines an empty `onCollide()` method to ensure that all objects have one. If an object doesn't react to collisions—like the paddle—it can inherit this default method.
 
-The `origin` defines which point on the image is placed at `pos`, as a fraction of its width and height. The default `(0.5, 0.5)` places the center there.
+`Ball` inherits the constructor, `preload()`, `hitbox`, and `draw()` from `GameObject`. It adds its initial position, velocity, `move()`, and the `onCollide()` response from the previous lesson.
 
 Now add a `Paddle` class below `Ball`:
 
@@ -180,7 +189,7 @@ Immediately after creating the paddle, register the `paddle` too:
 colliders.push(paddle);
 ```
 
-Next, replace the old `handleWallCollisions()` function with the `moveBall()` function. It coordinates collision handling, repeatedly calling `getCollision()` and advancing the ball until the specified `dt` has elapsed. Each time, it finds the next obstacle that the ball will collide into (`hit.time` is the smallest), moves the ball right to the point of contact, reverses the velocity, and proceeds with the remaining time.
+Next, replace the old `handleWallCollisions()` function with the `moveBall()` function. It coordinates collision handling, repeatedly calling `getCollision()` and advancing the ball until the specified `dt` has elapsed. Each time, it finds the next obstacle(s) that the ball will collide into (`hit.time` is the smallest), moves the ball right to the point of contact, calls the collision responses, and proceeds with the remaining time.
 
 ```js
 function moveBall(dt) {
@@ -190,8 +199,9 @@ function moveBall(dt) {
     let hitTime = dt;
     let hitX = null;
     let hitY = null;
+    let contacts = [];
 
-    for (const collider of C) {
+    for (const collider of colliders) {
       const hit = getCollision(ballHitbox, ball.vel, collider.hitbox, hitTime);
       if (hit === null) {
         continue;
@@ -199,26 +209,31 @@ function moveBall(dt) {
       if (hit.time < hitTime) {
         hitX = null;
         hitY = null;
+        contacts = [];
       }
       hitTime = hit.time;
       hitX = hit.x ?? hitX;
       hitY = hit.y ?? hitY;
+      contacts.push({ collider, hit });
     }
 
     ball.move(hitTime);
     dt -= hitTime;
 
+    if (contacts.length === 0) {
+      break;
+    }
+    // Snap the position to the point of contact to avoid floating point errors
     if (hitX !== null) {
-      // Snap the position to the point of contact to avoid floating point errors
       ball.pos.x = hitX + ball.size.w / 2;
-      ball.vel.x = -ball.vel.x;
     }
     if (hitY !== null) {
       ball.pos.y = hitY + ball.size.h / 2;
-      ball.vel.y = -ball.vel.y;
     }
-    if (hitX === null && hitY === null) {
-      break;
+
+    ball.onCollide({ x: hitX !== null, y: hitY !== null });
+    for (const { collider, hit } of contacts) {
+      collider.onCollide?.({ x: hit.x !== null, y: hit.y !== null });
     }
   }
 }
@@ -373,6 +388,7 @@ class GameObject {
     const { left, top } = this.hitbox;
     this.ctx.drawImage(this.asset, left, top);
   }
+  onCollide() {}
 }
 
 class Ball extends GameObject {
@@ -381,6 +397,14 @@ class Ball extends GameObject {
   move(dt) {
     this.pos.x += this.vel.x * dt;
     this.pos.y += this.vel.y * dt;
+  }
+  onCollide({ x, y }) {
+    if (x) {
+      this.vel.x = -this.vel.x;
+    }
+    if (y) {
+      this.vel.y = -this.vel.y;
+    }
   }
 }
 
@@ -475,38 +499,46 @@ function getCollision(moving, velocity, obstacle, dt) {
 
 function moveBall(dt) {
   while (dt > 0) {
-    const ballBounds = ball.hitbox;
+    // Avoid repeatedly triggering the getter
+    const ballHitbox = ball.hitbox;
     let hitTime = dt;
     let hitX = null;
     let hitY = null;
+    let contacts = [];
 
     for (const collider of colliders) {
-      const hit = getCollision(ballBounds, ball.vel, collider.hitbox, hitTime);
+      const hit = getCollision(ballHitbox, ball.vel, collider.hitbox, hitTime);
       if (hit === null) {
         continue;
       }
       if (hit.time < hitTime) {
         hitX = null;
         hitY = null;
+        contacts = [];
       }
       hitTime = hit.time;
       hitX = hit.x ?? hitX;
       hitY = hit.y ?? hitY;
+      contacts.push({ collider, hit });
     }
 
     ball.move(hitTime);
     dt -= hitTime;
 
+    if (contacts.length === 0) {
+      break;
+    }
+    // Snap the position to the point of contact to avoid floating point errors
     if (hitX !== null) {
       ball.pos.x = hitX + ball.size.w / 2;
-      ball.vel.x = -ball.vel.x;
     }
     if (hitY !== null) {
       ball.pos.y = hitY + ball.size.h / 2;
-      ball.vel.y = -ball.vel.y;
     }
-    if (hitX === null && hitY === null) {
-      break;
+
+    ball.onCollide({ x: hitX !== null, y: hitY !== null });
+    for (const { collider, hit } of contacts) {
+      collider.onCollide?.({ x: hit.x !== null, y: hit.y !== null });
     }
   }
 }

@@ -13,6 +13,22 @@ This is the **3rd step** out of 13 of the [creating a Breakout game in pure Java
 
 The [law of reflection](<https://en.wikipedia.org/wiki/Reflection_(physics)>) tells us that, in an ideal world, when a ball hits a flat surface like a wall, it would reflect back—the velocity component perpendicular to the wall is reversed, while the component parallel to the wall is preserved. For example, if the ball hits the lower boundary while flying towards the lower right, it should reflect and fly towards the upper right.
 
+We can implement this logic as another method on `Ball`. This method receives two boolean flags indicating whether the ball hit a vertical wall, a horizontal wall, or both (in which case it reflects back along the same path).
+
+```js
+class Ball {
+  // …
+  onCollide({ x, y }) {
+    if (x) {
+      this.vel.x = -this.vel.x;
+    }
+    if (y) {
+      this.vel.y = -this.vel.y;
+    }
+  }
+}
+```
+
 We'll perform the collision detection right after the position update. The ball's motion will be updated like this, assuming it's directly moving to the left with `vx = -1`:
 
 1. Frame 1: at `x = 1`, `vx = -1`
@@ -25,11 +41,10 @@ We'll perform the collision detection right after the position update. The ball'
 The essential logic is as follows:
 
 ```js
-if (hittingLeftBoundary || hittingRightBoundary) {
-  ball.vel.x = -ball.vel.x;
-}
-if (hittingTopBoundary || hittingBottomBoundary) {
-  ball.vel.y = -ball.vel.y;
+const x = hittingLeftBoundary || hittingRightBoundary;
+const y = hittingTopBoundary || hittingBottomBoundary;
+if (x || y) {
+  ball.onCollide({ x, y });
 }
 ```
 
@@ -51,7 +66,7 @@ The implementations for the other three boundaries are left as exercise; remembe
 
 ## Incorporating collision handling
 
-We decide to keep the collision handling logic outside of objects, because most collisions happen between two objects, and we may also want to control when and how it happens. The `Ball` class is only responsible for providing the `hitbox`:
+We keep collision detection outside of objects, because most collisions happen between two objects, and we may also want to control when and how it happens. The `Ball` class is only responsible for providing the `hitbox` and the `onCollide()` response. We implement `hitbox` as a getter:
 
 ```js
 class Ball {
@@ -69,7 +84,7 @@ class Ball {
 
 The getter calculates the edges from the ball's current position and size whenever we read `ball.hitbox`. This avoids storing a second set of coordinates that we would need to update whenever the ball moves.
 
-Now add the collision handler outside the class. It takes an object exposing `hitbox` and `vel`, along with the world's width and height:
+Now add the collision handler outside the class. It takes an object exposing `hitbox`, `vel`, and `onCollide()`, along with the world's width and height:
 
 ```js
 function handleWallCollisions(object, width, height) {
@@ -79,11 +94,10 @@ function handleWallCollisions(object, width, height) {
   const hittingTopBoundary = hitbox.top <= 0 && object.vel.y < 0;
   const hittingBottomBoundary = hitbox.bottom >= height && object.vel.y > 0;
 
-  if (hittingLeftBoundary || hittingRightBoundary) {
-    object.vel.x = -object.vel.x;
-  }
-  if (hittingTopBoundary || hittingBottomBoundary) {
-    object.vel.y = -object.vel.y;
+  const x = hittingLeftBoundary || hittingRightBoundary;
+  const y = hittingTopBoundary || hittingBottomBoundary;
+  if (x || y) {
+    object.onCollide({ x, y });
   }
 }
 ```
@@ -169,6 +183,14 @@ class Ball {
     this.pos.x += this.vel.x * dt;
     this.pos.y += this.vel.y * dt;
   }
+  onCollide({ x, y }) {
+    if (x) {
+      this.vel.x = -this.vel.x;
+    }
+    if (y) {
+      this.vel.y = -this.vel.y;
+    }
+  }
 }
 
 const ball = new Ball(
@@ -201,11 +223,10 @@ function handleWallCollisions(object, width, height) {
   const hittingTopBoundary = hitbox.top <= 0 && object.vel.y < 0;
   const hittingBottomBoundary = hitbox.bottom >= height && object.vel.y > 0;
 
-  if (hittingLeftBoundary || hittingRightBoundary) {
-    object.vel.x = -object.vel.x;
-  }
-  if (hittingTopBoundary || hittingBottomBoundary) {
-    object.vel.y = -object.vel.y;
+  const x = hittingLeftBoundary || hittingRightBoundary;
+  const y = hittingTopBoundary || hittingBottomBoundary;
+  if (x || y) {
+    object.onCollide({ x, y });
   }
 }
 ```
