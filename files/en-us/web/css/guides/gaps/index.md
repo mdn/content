@@ -453,6 +453,8 @@ When the column rule is larger than the column gap, the decorative line appears 
 
 ## Guides
 
+- [Overview of CSS gap decoration propertie](/en-US/docs/Web/CSS/Guides/Gaps/Overview)
+  - : Overview of all the featured introduced in the CSS gaps module.
 - [Styling columns](/en-US/docs/Web/CSS/Guides/Multicol_layout/Styling_columns)
   - : Guide to styling columns and managing spacing between columns.
 - [Handling content breaks in multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout/Handling_content_breaks)
