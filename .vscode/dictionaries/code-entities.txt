@@ -310,6 +310,7 @@ hmnp
 horizontalstrike
 hsides
 htdocs
+htmlcollection
 htmlsidebar
 htmlspecialchars
 HTMLWBRElement
