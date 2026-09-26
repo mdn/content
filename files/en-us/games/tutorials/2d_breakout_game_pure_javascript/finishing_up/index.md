@@ -1,13 +1,13 @@
 ---
 title: Finishing up
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Finishing_up
 page-type: guide
 sidebar: games
 ---
 
-{{Previous("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
+{{Previous("Games/Tutorials/2D_breakout_game_pure_JavaScript/Mouse_controls")}}
 
-This is the **10th and final step** of the [Gamedev Canvas tutorial](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). You can find the source code as it should look after completing this lesson at [Gamedev-Canvas-workshop/lesson10.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html).
+This is the **10th and final step** of the [Gamedev Canvas tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). You can find the source code as it should look after completing this lesson at [Gamedev-Canvas-workshop/lesson10.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html).
 
 There's always room for improvements in any game we write. For example, we can offer more than one life to the player. They could make a mistake or two and still be able to finish the game. We could also improve our code rendering.
 
@@ -298,6 +298,6 @@ runButton.addEventListener("click", () => {
 
 You've finished all the lessons - congratulations! By this point, you should now know the basics of canvas manipulation and the logic behind 2D games. Now it's a good time to learn some frameworks and continue game development. You can check out this series' counterpart, [2D breakout game using Phaser](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser) or the [Cyber Orb built in Phaser](/en-US/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation) tutorial. You can also look through the [Games section on MDN](/en-US/docs/Games) for inspiration and more knowledge.
 
-You could also go back to [this tutorial series' index page](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Have fun coding!
+You could also go back to [this tutorial series' index page](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Have fun coding!
 
-{{Previous("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
+{{Previous("Games/Tutorials/2D_breakout_game_pure_JavaScript/Mouse_controls")}}

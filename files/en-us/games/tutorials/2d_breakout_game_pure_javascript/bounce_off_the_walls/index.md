@@ -1,15 +1,15 @@
 ---
 title: Bounce off the walls
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls
 page-type: guide
 sidebar: games
 ---
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
 
-This is the **3rd step** out of 10 of the [Gamedev Canvas tutorial](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). You can find the source code as it should look after completing this lesson at [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html).
+This is the **3rd step** out of 10 of the [Gamedev Canvas tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). You can find the source code as it should look after completing this lesson at [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html).
 
-It is nice to see our ball moving, but it quickly disappears from the screen, limiting the fun we can have with it! To overcome that we will implement some collision detection (which will be explained [later](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection) in more detail) to make the ball bounce off the four edges of the Canvas.
+It is nice to see our ball moving, but it quickly disappears from the screen, limiting the fun we can have with it! To overcome that we will implement some collision detection (which will be explained [later](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Collision_detection) in more detail) to make the ball bounce off the four edges of the Canvas.
 
 ## Simple collision detection
 
@@ -162,6 +162,6 @@ runButton.addEventListener("click", () => {
 
 ## Next steps
 
-We've now got to the stage where our ball is both moving and staying on the game board. In the fourth chapter we'll look at implementing a controllable paddle — see [Paddle and keyboard controls](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls).
+We've now got to the stage where our ball is both moving and staying on the game board. In the fourth chapter we'll look at implementing a controllable paddle — see [Paddle and keyboard controls](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Paddle_and_keyboard_controls).
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}

@@ -1,13 +1,13 @@
 ---
 title: Game over
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over
 page-type: guide
 sidebar: games
 ---
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field")}}
 
-This is the **5th step** out of 10 of the [Gamedev Canvas tutorial](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). You can find the source code as it should look after completing this lesson at [Gamedev-Canvas-workshop/lesson5.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html).
+This is the **5th step** out of 10 of the [Gamedev Canvas tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). You can find the source code as it should look after completing this lesson at [Gamedev-Canvas-workshop/lesson5.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html).
 
 It's fun to watch the ball bouncing off the walls and be able to move the paddle around, but other than that the game does nothing and doesn't have any progression or end goal. It would be good from the gameplay point of view to be able to lose. The logic behind losing in breakout is that if you miss the ball with the paddle and let it reach the bottom edge of the screen, then it's game over.
 
@@ -196,6 +196,6 @@ runButton.addEventListener("click", () => {
 
 ## Next steps
 
-We're doing quite well so far and our game is starting to feel a lot more worth playing now that you can lose! But it is still missing something. Let's move on to the sixth chapter — [Build the brick field](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field) — and create some bricks for the ball to destroy.
+We're doing quite well so far and our game is starting to feel a lot more worth playing now that you can lose! But it is still missing something. Let's move on to the sixth chapter — [Build the brick field](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field) — and create some bricks for the ball to destroy.
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field")}}

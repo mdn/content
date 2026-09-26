@@ -20,7 +20,7 @@ To get the most out of this series of articles, you should already have basic to
 
 ## Lesson details
 
-1. [Initialize the framework](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework)
+1. [Initialize the canvas](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas)
 2. [Scaling](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Scaling)
 3. [Load the assets and print them on screen](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen)
 4. [Move the ball](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball)

@@ -465,7 +465,7 @@
       "groovecoder"
     ]
   },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript": {
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript": {
     "modified": "2020-10-27T19:49:04.623Z",
     "contributors": [
       "escattone",
@@ -482,7 +482,7 @@
       "rabimba"
     ]
   },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls": {
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls": {
     "modified": "2020-10-27T19:49:44.781Z",
     "contributors": [
       "escattone",
@@ -496,7 +496,7 @@
       "Sheppy"
     ]
   },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field": {
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field": {
     "modified": "2020-10-27T19:50:27.345Z",
     "contributors": [
       "escattone",
@@ -519,7 +519,7 @@
       "end3r"
     ]
   },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection": {
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Collision_detection": {
     "modified": "2020-10-27T19:50:40.665Z",
     "contributors": [
       "escattone",
@@ -538,23 +538,7 @@
       "trevorh"
     ]
   },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it": {
-    "modified": "2020-10-27T19:49:17.911Z",
-    "contributors": [
-      "escattone",
-      "wbamberg",
-      "chrisdavidmills",
-      "end3r",
-      "xGabey",
-      "antorajees",
-      "aaronagray",
-      "Jeremie",
-      "fscholz",
-      "jswisher",
-      "trevorh"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up": {
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Finishing_up": {
     "modified": "2020-10-27T19:51:34.936Z",
     "contributors": [
       "escattone",
@@ -573,7 +557,7 @@
       "trevorh"
     ]
   },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over": {
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over": {
     "modified": "2020-10-27T19:50:12.655Z",
     "contributors": [
       "escattone",
@@ -592,7 +576,7 @@
       "trevorh"
     ]
   },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls": {
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Mouse_controls": {
     "modified": "2020-10-27T19:51:05.570Z",
     "contributors": [
       "escattone",
@@ -611,7 +595,7 @@
       "end3r"
     ]
   },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball": {
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball": {
     "modified": "2020-10-27T19:49:31.981Z",
     "contributors": [
       "escattone",
@@ -626,7 +610,7 @@
       "trevorh"
     ]
   },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls": {
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Paddle_and_keyboard_controls": {
     "modified": "2020-10-27T19:49:59.012Z",
     "contributors": [
       "escattone",
@@ -643,7 +627,7 @@
       "end3r"
     ]
   },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win": {
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win": {
     "modified": "2020-10-27T19:50:53.157Z",
     "contributors": [
       "escattone",
@@ -802,6 +786,22 @@
       "ekoontz",
       "chrisdavidmills",
       "end3r"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas": {
+    "modified": "2020-10-27T19:49:17.911Z",
+    "contributors": [
+      "escattone",
+      "wbamberg",
+      "chrisdavidmills",
+      "end3r",
+      "xGabey",
+      "antorajees",
+      "aaronagray",
+      "Jeremie",
+      "fscholz",
+      "jswisher",
+      "trevorh"
     ]
   },
   "Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation": {

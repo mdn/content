@@ -41,7 +41,7 @@ class ExampleScene extends Phaser.Scene {
 
 And that's it! Reload your code, and you should see the new collision detection working just as required.
 
-You would expect to have to write a lot more calculations of your own to implement collision detection when using [pure JavaScript](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection). That's the beauty of using the framework—you can leave a lot of boring code to Phaser, and focus on the most fun and interesting parts of making a game.
+You would expect to have to write a lot more calculations of your own to implement collision detection when using [pure JavaScript](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Collision_detection). That's the beauty of using the framework—you can leave a lot of boring code to Phaser, and focus on the most fun and interesting parts of making a game.
 
 ## Compare your code
 
