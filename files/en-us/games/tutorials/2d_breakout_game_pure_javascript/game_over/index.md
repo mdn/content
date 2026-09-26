@@ -5,197 +5,257 @@ page-type: guide
 sidebar: games
 ---
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field")}}
 
-This is the **5th step** out of 10 of the [Gamedev Canvas tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). You can find the source code as it should look after completing this lesson at [Gamedev-Canvas-workshop/lesson5.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html).
+This is the **5th step** out of 13 of the [creating a Breakout game in pure JavaScript tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). To make the game more interesting, we can introduce the ability to lose—if you don't hit the ball before it reaches the bottom edge of the screen, it will be game over.
 
-It's fun to watch the ball bouncing off the walls and be able to move the paddle around, but other than that the game does nothing and doesn't have any progression or end goal. It would be good from the gameplay point of view to be able to lose. The logic behind losing in breakout is that if you miss the ball with the paddle and let it reach the bottom edge of the screen, then it's game over.
+## How to lose
 
-## Implementing game over
+To provide the ability to lose, we will disable the ball's collision with the bottom edge of the screen. Remove the last entry, `{ hitbox: { ...baseWallHitbox, top: canvas.height } }`, from the `colliders` list.
 
-Let's try to implement game over in our game. Here's the piece of code from the third lesson where we made the ball bounce off the walls:
-
-```js
-if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
-  dx = -dx;
-}
-
-if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
-  dy = -dy;
-}
-```
-
-Instead of allowing the ball to bounce off all four walls, let's only allow three now — left, top and right. Hitting the bottom wall will end the game. We'll edit the second if block so it's an if else block that will trigger our "game over" state upon the ball colliding with the bottom edge of the canvas. For now we'll show an alert message and restarting the game by reloading the page.
-
-First, add a declaration for the `interval` variable at the top level, before any functions:
+This will make the three walls (top, left, and right) bounce the ball back, but the fourth (bottom) will disappear, letting the ball fall off the screen if the paddle misses it. We need a way to detect this and act accordingly. Add the following lines to `moveBall()`, right after `dt -= hitTime`:
 
 ```js
-let interval = 0;
-```
-
-Then, replace where you initially called `setInterval()`:
-
-```js
-setInterval(draw, 10);
-```
-
-with:
-
-```js
-interval = setInterval(draw, 10);
-```
-
-Then replace the second if statement with the following:
-
-```js
-if (y + dy < ballRadius) {
-  dy = -dy;
-} else if (y + dy > canvas.height - ballRadius) {
-  alert("GAME OVER");
-  document.location.reload();
-  clearInterval(interval); // Needed for Chrome to end game
+const ballIsOutOfBounds = ball.hitbox.bottom > canvas.height;
+if (ballIsOutOfBounds) {
+  // Game over logic
+  alert("Game over!");
+  location.reload();
 }
 ```
 
-## Letting the paddle hit the ball
+Adding those lines will check if the ball sticks out of the world (in our case, the canvas) bounds and then show an alert. When you click on the resulting alert, the page will reload, allowing you to play again.
 
-The last thing to do in this lesson is to create some kind of collision detection between the ball and the paddle, so it can bounce off it and get back into the play area. The easiest thing to do is to check whether the center of the ball is between the left and right edges of the paddle. Update the last bit of code you modified again, to the following:
-
-```js
-if (y + dy < ballRadius) {
-  dy = -dy;
-} else if (y + dy > canvas.height - ballRadius) {
-  if (x > paddleX && x < paddleX + paddleWidth) {
-    dy = -dy;
-  } else {
-    alert("GAME OVER");
-    document.location.reload();
-    clearInterval(interval);
-  }
-}
-```
-
-If the ball hits the bottom edge of the Canvas we need to check whether it hits the paddle. If so, then it bounces off just like you'd expect; if not, then the game is over as before.
+> [!NOTE]
+> The UX here is quite sketchy because [`alert()`](/en-US/docs/Web/API/Window/alert) shows a system dialog and blocks the game. In a real game, you would probably want to design your own modal dialog using {{HTMLElement("dialog")}}.
+>
+> Also, we will later add a ["Start" button](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Buttons), but here our game starts immediately when the page loads, so you may "lose" before you even start playing. To prevent the annoying dialog, we will remove the `alert()` call from now on.
 
 ## Compare your code
 
-See how your code compares to the live sample below:
+Here's what you should have so far, running live. To view its source code, click the "Play" button.
 
 ```html hidden
-<canvas id="myCanvas" width="480" height="320"></canvas>
-<button id="runButton">Start game</button>
+<canvas id="game-canvas" width="480" height="320"></canvas>
 ```
 
 ```css hidden
-canvas {
-  background: #eeeeee;
+* {
+  padding: 0;
+  margin: 0;
 }
-button {
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+canvas {
   display: block;
+  width: min(100vw, 150vh);
+  height: auto;
+  touch-action: none;
 }
 ```
 
 ```js hidden
-const canvas = document.getElementById("myCanvas");
+const canvas = document.getElementById("game-canvas");
 const ctx = canvas.getContext("2d");
-const ballRadius = 10;
+let lastTimestamp = null;
 
-let x = canvas.width / 2;
-let y = canvas.height - 30;
-let dx = 2;
-let dy = -2;
+const baseWallHitbox = {
+  left: -Infinity,
+  right: Infinity,
+  top: -Infinity,
+  bottom: Infinity,
+};
 
-const paddleHeight = 10;
-const paddleWidth = 75;
+const colliders = [
+  { hitbox: { ...baseWallHitbox, right: 0 } },
+  { hitbox: { ...baseWallHitbox, left: canvas.width } },
+  { hitbox: { ...baseWallHitbox, bottom: 0 } },
+];
 
-let paddleX = (canvas.width - paddleWidth) / 2;
-let rightPressed = false;
-let leftPressed = false;
-
-let interval = 0;
-
-document.addEventListener("keydown", keyDownHandler);
-document.addEventListener("keyup", keyUpHandler);
-
-function keyDownHandler(e) {
-  if (e.key === "Right" || e.key === "ArrowRight") {
-    rightPressed = true;
-  } else if (e.key === "Left" || e.key === "ArrowLeft") {
-    leftPressed = true;
+class GameObject {
+  asset;
+  ctx;
+  size = { w: undefined, h: undefined };
+  pos = { x: 0, y: 0 };
+  origin = { x: 0.5, y: 0.5 };
+  constructor(url, ctx) {
+    this.asset = new Image();
+    this.asset.src = url;
+    this.ctx = ctx;
+  }
+  async preload() {
+    await this.asset.decode();
+    this.size.w = this.asset.width;
+    this.size.h = this.asset.height;
+  }
+  get hitbox() {
+    const left = this.pos.x - this.size.w * this.origin.x;
+    const top = this.pos.y - this.size.h * this.origin.y;
+    return {
+      left,
+      right: left + this.size.w,
+      top,
+      bottom: top + this.size.h,
+    };
+  }
+  draw() {
+    const { left, top } = this.hitbox;
+    this.ctx.drawImage(this.asset, left, top);
   }
 }
 
-function keyUpHandler(e) {
-  if (e.key === "Right" || e.key === "ArrowRight") {
-    rightPressed = false;
-  } else if (e.key === "Left" || e.key === "ArrowLeft") {
-    leftPressed = false;
+class Ball extends GameObject {
+  pos = { x: undefined, y: undefined };
+  vel = { x: 0.15, y: -0.15 };
+  move(dt) {
+    this.pos.x += this.vel.x * dt;
+    this.pos.y += this.vel.y * dt;
   }
 }
 
-function drawBall() {
-  ctx.beginPath();
-  ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
-  ctx.fillStyle = "#0095DD";
-  ctx.fill();
-  ctx.closePath();
-}
-function drawPaddle() {
-  ctx.beginPath();
-  ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
-  ctx.fillStyle = "#0095DD";
-  ctx.fill();
-  ctx.closePath();
-}
-
-function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  drawBall();
-  drawPaddle();
-
-  if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
-    dx = -dx;
+class Paddle extends GameObject {
+  origin = { x: 0.5, y: 1 };
+  constructor(url, ctx) {
+    super(url, ctx);
+    this.pos = { x: ctx.canvas.width / 2, y: ctx.canvas.height - 5 };
   }
-  if (y + dy < ballRadius) {
-    dy = -dy;
-  } else if (y + dy > canvas.height - ballRadius) {
-    if (x > paddleX && x < paddleX + paddleWidth) {
-      dy = -dy;
-    } else {
-      alert("GAME OVER");
-      document.location.reload();
-      clearInterval(interval); // Needed for Chrome to end game
+}
+
+const ball = new Ball(
+  "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/ball.png",
+  ctx,
+);
+const paddle = new Paddle(
+  "https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/paddle.png",
+  ctx,
+);
+colliders.push(paddle);
+
+canvas.addEventListener("pointermove", (event) => {
+  if (paddle.size.w === undefined) {
+    return;
+  }
+  const bounds = canvas.getBoundingClientRect();
+  const x = ((event.clientX - bounds.left) * canvas.width) / bounds.width;
+  paddle.pos.x = Math.max(
+    paddle.size.w / 2,
+    Math.min(canvas.width - paddle.size.w / 2, x),
+  );
+});
+
+Promise.all([ball, paddle].map((obj) => obj.preload())).then(() => {
+  ball.pos.x = paddle.pos.x;
+  ball.pos.y = paddle.hitbox.top - ball.size.h / 2;
+  requestAnimationFrame(draw);
+});
+
+function draw(timestamp) {
+  ctx.fillStyle = "#eeeeee";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  if (lastTimestamp !== null) {
+    const dt = timestamp - lastTimestamp;
+    moveBall(dt);
+  }
+  lastTimestamp = timestamp;
+  ball.draw();
+  paddle.draw();
+
+  requestAnimationFrame(draw);
+}
+
+function getCollision(moving, velocity, obstacle, dt) {
+  const width = moving.right - moving.left;
+  const height = moving.bottom - moving.top;
+  const movingPos = { x: moving.left, y: moving.top };
+  const left = obstacle.left - width;
+  const right = obstacle.right;
+  const top = obstacle.top - height;
+  const bottom = obstacle.bottom;
+  const hit = { time: dt, x: null, y: null };
+
+  function checkFace(axis, coordinate, min, max, direction) {
+    if (velocity[axis] * direction <= 0) {
+      return;
+    }
+    const time = (coordinate - movingPos[axis]) / velocity[axis];
+    if (time < 0 || time > hit.time) {
+      return;
+    }
+    const otherAxis = axis === "x" ? "y" : "x";
+    const otherPosition = movingPos[otherAxis] + velocity[otherAxis] * time;
+    if (otherPosition < min || otherPosition > max) {
+      return;
+    }
+    if (time < hit.time) {
+      hit.x = null;
+      hit.y = null;
+    }
+    hit.time = time;
+    hit[axis] = coordinate;
+  }
+
+  checkFace("x", left, top, bottom, 1);
+  checkFace("x", right, top, bottom, -1);
+  checkFace("y", top, left, right, 1);
+  checkFace("y", bottom, left, right, -1);
+
+  return hit.x === null && hit.y === null ? null : hit;
+}
+
+function moveBall(dt) {
+  while (dt > 0) {
+    const ballBounds = ball.hitbox;
+    let hitTime = dt;
+    let hitX = null;
+    let hitY = null;
+
+    for (const collider of colliders) {
+      const hit = getCollision(ballBounds, ball.vel, collider.hitbox, hitTime);
+      if (hit === null) {
+        continue;
+      }
+      if (hit.time < hitTime) {
+        hitX = null;
+        hitY = null;
+      }
+      hitTime = hit.time;
+      hitX = hit.x ?? hitX;
+      hitY = hit.y ?? hitY;
+    }
+
+    ball.move(hitTime);
+    dt -= hitTime;
+
+    const ballIsOutOfBounds = ball.hitbox.bottom > canvas.height;
+    if (ballIsOutOfBounds) {
+      // Game over logic
+      location.reload();
+    }
+
+    if (hitX !== null) {
+      ball.pos.x = hitX + ball.size.w / 2;
+      ball.vel.x = -ball.vel.x;
+    }
+    if (hitY !== null) {
+      ball.pos.y = hitY + ball.size.h / 2;
+      ball.vel.y = -ball.vel.y;
+    }
+    if (hitX === null && hitY === null) {
+      break;
     }
   }
-
-  if (rightPressed && paddleX < canvas.width - paddleWidth) {
-    paddleX += 7;
-  } else if (leftPressed && paddleX > 0) {
-    paddleX -= 7;
-  }
-
-  x += dx;
-  y += dy;
 }
-
-function startGame() {
-  interval = setInterval(draw, 10);
-}
-
-const runButton = document.getElementById("runButton");
-runButton.addEventListener("click", () => {
-  startGame();
-  runButton.disabled = true;
-});
 ```
 
-{{embedlivesample("compare_your_code", 600, 360)}}
-
-> [!NOTE]
-> Try making the ball move faster when it hits the paddle.
+{{EmbedLiveSample("compare your code", "", 480, , , , , "allow-modals")}}
 
 ## Next steps
 
-We're doing quite well so far and our game is starting to feel a lot more worth playing now that you can lose! But it is still missing something. Let's move on to the sixth chapter — [Build the brick field](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field) — and create some bricks for the ball to destroy.
+Now the basic gameplay is in place, let's make it more interesting by introducing bricks to smash—it's time to [build the brick field](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field).
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Paddle_and_keyboard_controls", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field")}}

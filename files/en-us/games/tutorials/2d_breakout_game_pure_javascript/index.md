@@ -24,7 +24,7 @@ To get the most out of this series of articles, you should already have basic to
 2. [Move the ball](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball)
 3. [Bounce off the walls](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls)
 4. [Player paddle and controls](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls)
-5. [Game over](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Game_over)
+5. [Game over](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over)
 6. [Build the brick field](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field)
 7. [Collision detection](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Collision_detection)
 8. [The score](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score)
