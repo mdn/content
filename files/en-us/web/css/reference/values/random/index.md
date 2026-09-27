@@ -128,7 +128,7 @@ Combining a `<dashed-ident>` with `element-shared` (e.g., `random(--custom-name 
 .a,
 .b,
 .c {
-  width: random(--custom-name element-shared, , 10px, 200px);
+  width: random(--custom-name element-shared, 10px, 200px);
   height: random(--custom-name element-shared, 10px, 200px);
 }
 ```
