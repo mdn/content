@@ -39,6 +39,8 @@ const bricks = initBricks();
 // …
 ```
 
+And make sure that the game waits for the bricks to preload before starting the game, by adding `, ...bricks` to the array inside `Promise.all()`.
+
 Now on to the function itself. Add the `initBricks` function at the end of the `script.js` file. To begin with, we add the `bricksLayout` object, as this will come in handy very soon:
 
 ```js
@@ -91,7 +93,7 @@ for (let c = 0; c < bricksLayout.count.col; c++) {
 
 Each `brickX` position is worked out as `bricksLayout.width` plus `bricksLayout.padding`, multiplied by the column number, `c`, plus the `bricksLayout.offset.left`; the logic for the `brickY` is identical except that it uses the values for row number, `r`, `bricksLayout.height`, and `bricksLayout.offset.top`. Now every single brick can be placed in its correct place, with padding between each brick, and drawn at an offset from the left and top Canvas edges.
 
-Finally, we can draw these bricks to the screen inside the `draw()` function. Add the following below the `paddle.draw()` call:
+Finally, we can draw these bricks to the screen inside the `update()` function. Add the following below the `paddle.draw()` call:
 
 ```js
 for (const brick of bricks) {
@@ -278,26 +280,26 @@ canvas.addEventListener("pointermove", (event) => {
   );
 });
 
-Promise.all([ball, paddle].map((obj) => obj.preload())).then(() => {
+Promise.all([ball, paddle, ...bricks].map((obj) => obj.preload())).then(() => {
   ball.pos.x = paddle.pos.x;
   ball.pos.y = paddle.hitbox.top - ball.size.h / 2;
-  requestAnimationFrame(draw);
+  requestAnimationFrame(update);
 });
 
-function draw(timestamp) {
+function update(timestamp) {
+  const dt = lastTimestamp === null ? 0 : timestamp - lastTimestamp;
+  lastTimestamp = timestamp;
+  moveBall(dt);
+
   ctx.fillStyle = "#eeeeee";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-  if (lastTimestamp !== null) {
-    moveBall(timestamp - lastTimestamp);
-  }
-  lastTimestamp = timestamp;
   ball.draw();
   paddle.draw();
   for (const brick of bricks) {
     brick.draw();
   }
 
-  requestAnimationFrame(draw);
+  requestAnimationFrame(update);
 }
 
 function getCollision(moving, velocity, obstacle, dt) {
@@ -371,6 +373,7 @@ function moveBall(dt) {
     if (ballIsOutOfBounds) {
       // Game over logic
       location.reload();
+      return;
     }
 
     if (contacts.length === 0) {

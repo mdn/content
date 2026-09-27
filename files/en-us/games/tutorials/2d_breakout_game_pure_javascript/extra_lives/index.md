@@ -47,7 +47,7 @@ function drawStatus() {
 
 The three labels share the same font and color. We use `textAlign` and `textBaseline` to position the score at the top left, the lives at the top right, and the life lost message in the center (if `showLifeLostText` is `true`).
 
-In `draw()`, replace the `drawScore()` call with `drawStatus()`.
+In `update()`, replace the `drawScore()` call with `drawStatus()`.
 
 ## The lives handling code
 
@@ -57,6 +57,7 @@ To implement lives in our game, let's first change the behavior when the ball ge
 if (ballIsOutOfBounds) {
   // Game over logic
   location.reload();
+  return;
 }
 ```
 
@@ -255,19 +256,19 @@ canvas.addEventListener("pointermove", (event) => {
   );
 });
 
-Promise.all([ball, paddle].map((obj) => obj.preload())).then(() => {
+Promise.all([ball, paddle, ...bricks].map((obj) => obj.preload())).then(() => {
   ball.pos.x = paddle.pos.x;
   ball.pos.y = paddle.hitbox.top - ball.size.h / 2;
-  requestAnimationFrame(draw);
+  requestAnimationFrame(update);
 });
 
-function draw(timestamp) {
+function update(timestamp) {
+  const dt = lastTimestamp === null ? 0 : timestamp - lastTimestamp;
+  lastTimestamp = timestamp;
+  moveBall(dt);
+
   ctx.fillStyle = "#eeeeee";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-  if (lastTimestamp !== null) {
-    moveBall(timestamp - lastTimestamp);
-  }
-  lastTimestamp = timestamp;
   ball.draw();
   paddle.draw();
   for (const brick of bricks) {
@@ -281,7 +282,7 @@ function draw(timestamp) {
     return;
   }
 
-  requestAnimationFrame(draw);
+  requestAnimationFrame(update);
 }
 
 function drawStatus() {

@@ -102,15 +102,11 @@ function handleWallCollisions(object, width, height) {
 }
 ```
 
-Inside the main `draw()` function, call the handler immediately after `ball.move()`:
+Inside the main `update()` function, call the handler immediately after `ball.move()`:
 
 ```js
-if (lastTimestamp !== null) {
-  ball.move(timestamp - lastTimestamp);
-  handleWallCollisions(ball, canvas.width, canvas.height);
-}
-lastTimestamp = timestamp;
-ball.draw();
+ball.move(dt);
+handleWallCollisions(ball, canvas.width, canvas.height);
 ```
 
 The game loop now moves the ball, handles wall collisions, and then draws it. The current collision algorithm is very simple and allows the aforementioned "temporary penetration". Later, when we add more objects, we will be upgrading this algorithm.
@@ -200,20 +196,20 @@ const ball = new Ball(
 );
 
 Promise.all([ball].map((obj) => obj.preload())).then(() =>
-  requestAnimationFrame(draw),
+  requestAnimationFrame(update),
 );
 
-function draw(timestamp) {
+function update(timestamp) {
+  const dt = lastTimestamp === null ? 0 : timestamp - lastTimestamp;
+  lastTimestamp = timestamp;
+  ball.move(dt);
+  handleWallCollisions(ball, canvas.width, canvas.height);
+
   ctx.fillStyle = "#eeeeee";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-  if (lastTimestamp !== null) {
-    ball.move(timestamp - lastTimestamp);
-    handleWallCollisions(ball, canvas.width, canvas.height);
-  }
-  lastTimestamp = timestamp;
   ball.draw();
 
-  requestAnimationFrame(draw);
+  requestAnimationFrame(update);
 }
 
 function handleWallCollisions(object, width, height) {

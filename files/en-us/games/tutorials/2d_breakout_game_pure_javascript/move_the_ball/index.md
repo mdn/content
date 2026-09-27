@@ -28,14 +28,14 @@ Replace your `script.js` file content with the following:
 const canvas = document.getElementById("game-canvas");
 const ctx = canvas.getContext("2d");
 
-requestAnimationFrame(draw);
+requestAnimationFrame(update);
 
-function draw(timestamp) {
+function update(timestamp) {
   ctx.fillStyle = "#eeeeee";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   // continue adding things here...
 
-  requestAnimationFrame(draw);
+  requestAnimationFrame(update);
 }
 ```
 
@@ -74,17 +74,17 @@ class Ball {
 
 The {{domxref("HTMLImageElement/Image", "Image()")}} constructor creates an `HTMLImageElement` without attaching it to the DOM (we won't be rendering the `<img>` element itself, only using it to paint the canvas). The assignment to {{domxref("HTMLImageElement/src", "src")}} initiates the request for the `ball.png` image. The `preload()` function calls {{domxref("HTMLImageElement/decode", "decode()")}}, which returns a promise that fulfills when the corresponding image is successfully fetched and decoded. After that happens, we can save the image's dimensions for later calculation.
 
-Replace the `requestAnimationFrame(draw);` call above the `draw` function definition with the following:
+Replace the `requestAnimationFrame(update);` call above the `update` function definition with the following:
 
 ```js
 const ball = new Ball("img/ball.png", ctx);
 
 Promise.all([ball].map((obj) => obj.preload())).then(() =>
-  requestAnimationFrame(draw),
+  requestAnimationFrame(update),
 );
 ```
 
-We call `Promise.all([ball].map((obj) => obj.preload()))`, which gets a single promise that fulfills when all assets preload successfully. If that happens, then we start drawing using `requestAnimationFrame(draw)`.
+We call `Promise.all([ball].map((obj) => obj.preload()))`, which gets a single promise that fulfills when all assets preload successfully. If that happens, then we start drawing using `requestAnimationFrame(update)`.
 
 Of course, to load the image, it must be available in our code directory. [Grab the ball image from our assets website](https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/ball.png), and save it inside an `/img` directory in the same place as your `index.html` file.
 
@@ -106,7 +106,7 @@ That's it—if you load your `index.html` file, you will see the image already l
 
 ## Updating the ball's position on each frame
 
-Currently, each `draw()` invocation paints the ball in exactly the same place, so the ball appears stationary. We can maintain separate state fields tracking the position and velocity of the ball's center. Just below the existing field declarations in `class Ball`, add definitions for `pos` and `vel`, and replace the `draw()` function so it uses those coordinates:
+Currently, each `ball.draw()` invocation paints the ball in exactly the same place, so the ball appears stationary. We can maintain separate state fields tracking the position and velocity of the ball's center. Just below the existing field declarations in `class Ball`, add definitions for `pos` and `vel`, and replace the `draw()` method so it uses those coordinates:
 
 ```js
 class Ball {
@@ -125,7 +125,7 @@ class Ball {
 }
 ```
 
-The velocity is set to 0.15 along both axes, meaning that the ball moves 150 pixels in both the x and y directions every second. We'll update the ball's position on every call of `draw()`. We need to work out how much to displace it from the last position, using the formula `dx = vx * dt`, where `vx` is its speed along the x axis and `dt` is the time elapsed since the last `draw()` call. Because each time the `draw()` function receives a `timestamp`, we can compare it with the previous iteration to get `dt`. Add the following to the class:
+The velocity is set to 0.15 along both axes, meaning that the ball moves 150 pixels in both the x and y directions every second. We'll update the ball's position on every call of `update()`. We need to work out how much to displace it from the last position, using the formula `dx = vx * dt`, where `vx` is its speed along the x axis and `dt` is the time elapsed since the last `update()` call. Because each time the `update()` function receives a `timestamp`, we can compare it with the previous iteration to get `dt`. Add the following to the class:
 
 ```js
 class Ball {
@@ -145,20 +145,24 @@ Add the following, right after `const ctx`:
 let lastTimestamp = null;
 ```
 
-Within the `draw()` function, we can now call `ball.move()` and `ball.draw()` to let the class update itself, while the `draw()` function only keeps track of the time:
+Within the `update()` function, we can now call `ball.move()` and `ball.draw()` to let the class update itself, while the `update()` function only keeps track of the time:
 
 ```js
-if (lastTimestamp !== null) {
-  ball.move(timestamp - lastTimestamp);
-}
+const dt = lastTimestamp === null ? 0 : timestamp - lastTimestamp;
 lastTimestamp = timestamp;
+ball.move(dt);
+
+ctx.fillStyle = "#eeeeee";
+ctx.fillRect(0, 0, canvas.width, canvas.height);
 ball.draw();
 ```
+
+On the first frame, `lastTimestamp` is `null`, so `dt` is zero and the ball stays at its initial position. On later frames, `dt` is the time elapsed since the previous frame.
 
 Reload `index.html` and you should see the ball rolling across the screen.
 
 > [!NOTE]
-> The canvas isn't automatically cleared every time `draw()` is called. The previous position of the ball is removed because we redraw the whole background with `ctx.fillRect(0, 0, canvas.width, canvas.height)`, which lays over any existing content. If you remove that line, you'll see the ball leaving behind a trail.
+> The canvas isn't automatically cleared every time `update()` is called. The previous position of the ball is removed because we redraw the whole background with `ctx.fillRect(0, 0, canvas.width, canvas.height)`, which lays over any existing content. If you remove that line, you'll see the ball leaving behind a trail.
 
 ## Compare your code
 
@@ -229,19 +233,19 @@ const ball = new Ball(
 );
 
 Promise.all([ball].map((obj) => obj.preload())).then(() =>
-  requestAnimationFrame(draw),
+  requestAnimationFrame(update),
 );
 
-function draw(timestamp) {
+function update(timestamp) {
+  const dt = lastTimestamp === null ? 0 : timestamp - lastTimestamp;
+  lastTimestamp = timestamp;
+  ball.move(dt);
+
   ctx.fillStyle = "#eeeeee";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-  if (lastTimestamp !== null) {
-    ball.move(timestamp - lastTimestamp);
-  }
-  lastTimestamp = timestamp;
   ball.draw();
 
-  requestAnimationFrame(draw);
+  requestAnimationFrame(update);
 }
 ```
 

@@ -21,6 +21,7 @@ if (ballIsOutOfBounds) {
   // Game over logic
   alert("Game over!");
   location.reload();
+  return;
 }
 ```
 
@@ -162,20 +163,20 @@ canvas.addEventListener("pointermove", (event) => {
 Promise.all([ball, paddle].map((obj) => obj.preload())).then(() => {
   ball.pos.x = paddle.pos.x;
   ball.pos.y = paddle.hitbox.top - ball.size.h / 2;
-  requestAnimationFrame(draw);
+  requestAnimationFrame(update);
 });
 
-function draw(timestamp) {
+function update(timestamp) {
+  const dt = lastTimestamp === null ? 0 : timestamp - lastTimestamp;
+  lastTimestamp = timestamp;
+  moveBall(dt);
+
   ctx.fillStyle = "#eeeeee";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-  if (lastTimestamp !== null) {
-    moveBall(timestamp - lastTimestamp);
-  }
-  lastTimestamp = timestamp;
   ball.draw();
   paddle.draw();
 
-  requestAnimationFrame(draw);
+  requestAnimationFrame(update);
 }
 
 function getCollision(moving, velocity, obstacle, dt) {
@@ -249,6 +250,7 @@ function moveBall(dt) {
     if (ballIsOutOfBounds) {
       // Game over logic
       location.reload();
+      return;
     }
 
     if (contacts.length === 0) {

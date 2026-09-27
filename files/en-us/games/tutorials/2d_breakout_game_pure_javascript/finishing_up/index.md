@@ -29,7 +29,7 @@ function drawLives() {
 }
 ```
 
-Instead of ending the game immediately, we will decrease the number of lives until they are no longer available. We can also reset the ball and the paddle positions when the player begins with their next life. So, in the `draw()` function replace the following three lines:
+Instead of ending the game immediately, we will decrease the number of lives until they are no longer available. We can also reset the ball and the paddle positions when the player begins with their next life. So, in the `update()` function replace the following three lines:
 
 ```js
 alert("GAME OVER");
@@ -58,7 +58,7 @@ Now, when the ball hits the bottom edge of the screen, we're subtracting one lif
 
 ### Rendering the lives display
 
-Now you need to add a call to `drawLives()` inside the `draw()` function and add it below the `drawScore()` call.
+Now you need to add a call to `drawLives()` inside the `update()` function and add it below the `drawScore()` call.
 
 ```js
 drawLives();
@@ -69,13 +69,13 @@ drawLives();
 Now let's work on something that is not connected to the game mechanics, but to the way it is being rendered. {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} helps the browser render the game better than the fixed frame rate we currently have implemented using {{domxref("Window.setInterval", "setInterval()")}}. Replace the following line:
 
 ```js
-interval = setInterval(draw, 10);
+interval = setInterval(update, 10);
 ```
 
 with:
 
 ```js
-draw();
+update();
 ```
 
 and remove each instance of:
@@ -84,13 +84,13 @@ and remove each instance of:
 clearInterval(interval); // Needed for Chrome to end game
 ```
 
-Then, at the very bottom of the `draw()` function (just before the closing curly brace), add in the following line, which causes the `draw()` function to call itself over and over again:
+Then, at the very bottom of the `update()` function (just before the closing curly brace), add in the following line, which causes the `update()` function to call itself over and over again:
 
 ```js
-requestAnimationFrame(draw);
+requestAnimationFrame(update);
 ```
 
-The `draw()` function is now getting executed again and again within a `requestAnimationFrame()` loop, but instead of the fixed 10 milliseconds frame rate, we are giving control of the frame rate back to the browser. It will sync the frame rate accordingly and render the shapes only when needed. This produces a more efficient, smoother animation loop than the older `setInterval()` method.
+The `update()` function is now getting executed again and again within a `requestAnimationFrame()` loop, but instead of the fixed 10 milliseconds frame rate, we are giving control of the frame rate back to the browser. It will sync the frame rate accordingly and render the shapes only when needed. This produces a more efficient, smoother animation loop than the older `setInterval()` method.
 
 ## Compare your code
 
@@ -239,7 +239,7 @@ function drawLives() {
   ctx.fillText(`Lives: ${lives}`, canvas.width - 65, 20);
 }
 
-function draw() {
+function update() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   drawBricks();
   drawBall();
@@ -279,12 +279,12 @@ function draw() {
 
   x += dx;
   y += dy;
-  requestAnimationFrame(draw);
+  requestAnimationFrame(update);
 }
 
 const runButton = document.getElementById("runButton");
 runButton.addEventListener("click", () => {
-  draw();
+  update();
   runButton.disabled = true;
 });
 ```

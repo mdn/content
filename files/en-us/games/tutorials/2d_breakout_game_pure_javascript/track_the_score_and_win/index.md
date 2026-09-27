@@ -31,17 +31,17 @@ function drawScore() {
 
 The {{domxref("CanvasRenderingContext2D/fillText", "ctx.fillText()")}} method takes the text to render and the x and y coordinates to draw it at. In our case, the score text will be blue, sized at 18 pixels, and use the Arial font. Setting `textBaseline` to `"top"` positions the top of the text at the given y coordinate.
 
-Call `drawScore()` inside `draw()`, after drawing the bricks:
+Call `drawScore()` inside `update()`, after drawing the bricks:
 
 ```js
-function draw(timestamp) {
+function update(timestamp) {
   // ...
   for (const brick of bricks) {
     brick.draw();
   }
   drawScore();
 
-  requestAnimationFrame(draw);
+  requestAnimationFrame(update);
 }
 ```
 
@@ -64,12 +64,13 @@ That's it for now—reload your `index.html` and check that the score updates on
 
 ## How to win?
 
-Add the following new code into your `draw()` function, after the `drawScore()` call:
+Add the following new code into your `update()` function, after the `drawScore()` call:
 
 ```js
 if (bricks.length === 0) {
   alert("You won the game, congratulations!");
   location.reload();
+  return;
 }
 ```
 
@@ -237,19 +238,19 @@ canvas.addEventListener("pointermove", (event) => {
   );
 });
 
-Promise.all([ball, paddle].map((obj) => obj.preload())).then(() => {
+Promise.all([ball, paddle, ...bricks].map((obj) => obj.preload())).then(() => {
   ball.pos.x = paddle.pos.x;
   ball.pos.y = paddle.hitbox.top - ball.size.h / 2;
-  requestAnimationFrame(draw);
+  requestAnimationFrame(update);
 });
 
-function draw(timestamp) {
+function update(timestamp) {
+  const dt = lastTimestamp === null ? 0 : timestamp - lastTimestamp;
+  lastTimestamp = timestamp;
+  moveBall(dt);
+
   ctx.fillStyle = "#eeeeee";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-  if (lastTimestamp !== null) {
-    moveBall(timestamp - lastTimestamp);
-  }
-  lastTimestamp = timestamp;
   ball.draw();
   paddle.draw();
   for (const brick of bricks) {
@@ -263,7 +264,7 @@ function draw(timestamp) {
     return;
   }
 
-  requestAnimationFrame(draw);
+  requestAnimationFrame(update);
 }
 
 function drawScore() {
@@ -344,6 +345,7 @@ function moveBall(dt) {
     if (ballIsOutOfBounds) {
       // Game over logic
       location.reload();
+      return;
     }
 
     if (contacts.length === 0) {

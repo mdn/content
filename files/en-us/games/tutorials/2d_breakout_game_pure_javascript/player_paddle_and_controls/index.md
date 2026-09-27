@@ -98,7 +98,7 @@ Also add `paddle` to the array inside `Promise.all()`:
 
 ```js
 Promise.all([ball, paddle].map((obj) => obj.preload())).then(() =>
-  requestAnimationFrame(draw),
+  requestAnimationFrame(update),
 );
 ```
 
@@ -247,12 +247,12 @@ function moveBall(dt) {
 > [!NOTE]
 > This loop could potentially process many collisions within one frame, causing a lag. People sometimes limit the number of collisions allowed within a frame, and discard the remaining `dt` once that limit is reached, allowing the game to be repainted sooner but causing the object to move more slowly.
 
-Inside `draw()`, replace the calls to `ball.move()` and `handleWallCollisions()` with a call to `moveBall()`:
+Inside `update()`, replace the calls to `ball.move()` and `handleWallCollisions()` with a call to `moveBall()`:
 
 ```js
-if (lastTimestamp !== null) {
-  moveBall(timestamp - lastTimestamp);
-}
+const dt = lastTimestamp === null ? 0 : timestamp - lastTimestamp;
+lastTimestamp = timestamp;
+moveBall(dt);
 ```
 
 This calculation assumes that the ball starts inside the canvas without overlapping any collider, and that the colliders stay still during each call to `moveBall()`.
@@ -306,7 +306,7 @@ The horizontal velocity stays the same. We change the vertical velocity from `0.
 Promise.all([ball, paddle].map((obj) => obj.preload())).then(() => {
   ball.pos.x = paddle.pos.x;
   ball.pos.y = paddle.hitbox.top - ball.size.h / 2;
-  requestAnimationFrame(draw);
+  requestAnimationFrame(update);
 });
 ```
 
@@ -444,20 +444,20 @@ canvas.addEventListener("pointermove", (event) => {
 Promise.all([ball, paddle].map((obj) => obj.preload())).then(() => {
   ball.pos.x = paddle.pos.x;
   ball.pos.y = paddle.hitbox.top - ball.size.h / 2;
-  requestAnimationFrame(draw);
+  requestAnimationFrame(update);
 });
 
-function draw(timestamp) {
+function update(timestamp) {
+  const dt = lastTimestamp === null ? 0 : timestamp - lastTimestamp;
+  lastTimestamp = timestamp;
+  moveBall(dt);
+
   ctx.fillStyle = "#eeeeee";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
-  if (lastTimestamp !== null) {
-    moveBall(timestamp - lastTimestamp);
-  }
-  lastTimestamp = timestamp;
   ball.draw();
   paddle.draw();
 
-  requestAnimationFrame(draw);
+  requestAnimationFrame(update);
 }
 
 function getCollision(moving, velocity, obstacle, dt) {
