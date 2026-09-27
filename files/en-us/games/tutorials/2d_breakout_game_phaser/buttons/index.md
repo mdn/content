@@ -52,6 +52,8 @@ this.startButton = this.add.sprite(
 
 In addition to the parameters we passed to the other `add.sprite` calls (such as when we added the ball and paddle), this time we also pass the frame number, which is `0` in this case. This means that the first frame of the spritesheet will be used for the button's initial appearance.
 
+## Handling button input
+
 To make the button respond to various inputs such as mouse clicks, we need to add the following lines right after the previous `add.sprite` call:
 
 ```js
@@ -92,6 +94,8 @@ First, we call `setInteractive` on the button to make it respond to pointer even
 - `pointerdown`—when the button is pressed, we change the button's frame to `2`, the third frame of the spritesheet.
 - `pointerout`—when the pointer moves out of the button, we change the button's frame back to `0`, the first frame of the spritesheet.
 - `pointerup`—when the button is released, we call the `startGame` method to start the game.
+
+## Starting the game
 
 Now, we need to define the `startGame()` method referenced in the code above:
 
