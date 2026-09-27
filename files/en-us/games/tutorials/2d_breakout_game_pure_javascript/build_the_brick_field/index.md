@@ -11,7 +11,39 @@ This is the **6th step** out of 11 of the [creating a Breakout game in pure Java
 
 ## Drawing the bricks
 
-Like the `Ball` and `Paddle`, the `Brick` is also backed by the `GameObject` class. A brick has no default position or size and must be explicitly specified in the constructor. Because the size is already explicitly specified, the `preload()` method will not override it with the image's dimensions. Because the bricks have explicit dimensions, we can use the extra `dWidth` and `dHeight` parameters of {{domxref("CanvasRenderingContext2D/drawImage", "ctx.drawImage()")}}, which automatically scales the image if it's not already of the desired dimensions.
+All the bricks use the same image, so we can create and decode it once and share it among them. Add a static `assets` map and a `url` field to `GameObject`, and replace its constructor and `preload()` method:
+
+```js
+class GameObject {
+  static assets = new Map();
+  url;
+  // …
+  constructor(url, ctx) {
+    this.url = url;
+    this.ctx = ctx;
+  }
+  async preload() {
+    if (!GameObject.assets.has(this.url)) {
+      const asset = new Image();
+      asset.src = this.url;
+      GameObject.assets.set(
+        this.url,
+        asset.decode().then(() => asset),
+      );
+    }
+    this.asset = await GameObject.assets.get(this.url);
+    if (this.size.w === undefined) {
+      this.size.w = this.asset.width;
+      this.size.h = this.asset.height;
+    }
+  }
+  // …
+}
+```
+
+The cache maps each URL to a promise that resolves to the decoded image. The first `preload()` call for a URL creates the image and starts decoding it; later calls await the same promise and receive the same image. Each object still has its own position and size.
+
+Like the `Ball` and `Paddle`, the `Brick` is also backed by the `GameObject` class. A brick has no default position or size and must be explicitly specified in the constructor. Because the bricks have explicit dimensions, we can use the extra `dWidth` and `dHeight` parameters of {{domxref("CanvasRenderingContext2D/drawImage", "ctx.drawImage()")}}, which automatically scales the image if it's not already of the desired dimensions.
 
 ```js
 class Brick extends GameObject {
@@ -39,7 +71,7 @@ const bricks = initBricks();
 // …
 ```
 
-And make sure that the game waits for the bricks to preload before starting the game, by adding `, ...bricks` to the array inside `Promise.all()`.
+And make sure that the game waits for the bricks to preload before starting the game, by adding `, ...bricks` to the array inside `Promise.all()`. These calls share the cached decode promise, so the brick image is only decoded once.
 
 Now on to the function itself. Add the `initBricks` function at the end of the `script.js` file. To begin with, we add the `bricksLayout` object, as this will come in handy very soon:
 
@@ -179,18 +211,27 @@ const colliders = [
 ];
 
 class GameObject {
+  static assets = new Map();
+  url;
   asset;
   ctx;
   size = { w: undefined, h: undefined };
   pos = { x: 0, y: 0 };
   origin = { x: 0.5, y: 0.5 };
   constructor(url, ctx) {
-    this.asset = new Image();
-    this.asset.src = url;
+    this.url = url;
     this.ctx = ctx;
   }
   async preload() {
-    await this.asset.decode();
+    if (!GameObject.assets.has(this.url)) {
+      const asset = new Image();
+      asset.src = this.url;
+      GameObject.assets.set(
+        this.url,
+        asset.decode().then(() => asset),
+      );
+    }
+    this.asset = await GameObject.assets.get(this.url);
     if (this.size.w === undefined) {
       this.size.w = this.asset.width;
       this.size.h = this.asset.height;

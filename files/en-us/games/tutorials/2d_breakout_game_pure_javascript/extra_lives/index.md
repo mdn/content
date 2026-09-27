@@ -154,18 +154,27 @@ const colliders = [
 ];
 
 class GameObject {
+  static assets = new Map();
+  url;
   asset;
   ctx;
   size = { w: undefined, h: undefined };
   pos = { x: 0, y: 0 };
   origin = { x: 0.5, y: 0.5 };
   constructor(url, ctx) {
-    this.asset = new Image();
-    this.asset.src = url;
+    this.url = url;
     this.ctx = ctx;
   }
   async preload() {
-    await this.asset.decode();
+    if (!GameObject.assets.has(this.url)) {
+      const asset = new Image();
+      asset.src = this.url;
+      GameObject.assets.set(
+        this.url,
+        asset.decode().then(() => asset),
+      );
+    }
+    this.asset = await GameObject.assets.get(this.url);
     if (this.size.w === undefined) {
       this.size.w = this.asset.width;
       this.size.h = this.asset.height;
