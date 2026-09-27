@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`rule-inset-cap`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property can be used to offset the column and row rule segment [cap endpoints](#understanding_cap_end) to the same value.
+The **`rule-inset-cap`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property can be used to offset the column and row rule segment [cap endpoints](/en-US/docs/Web/CSS/Reference/Properties/column-rule-inset-cap-start#understanding_cap_start) to the same value.
 
 {{InteractiveExample("CSS Demo: rule")}}
 
