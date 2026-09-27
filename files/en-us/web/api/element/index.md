@@ -63,7 +63,7 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
   - : An `Element`, the element immediately following the given one in the tree, or `null` if there's no sibling node.
 - {{DOMxRef("Element.outerHTML")}}
   - : A string representing the markup of the element including its content. When used as a setter, replaces the element with nodes parsed from the given string.
-- {{DOMxRef("Element.part")}}
+- {{DOMxRef("Element.part")}} {{ReadOnlyInline}}
   - : Represents the part identifier(s) of the element (i.e., set using the `part` attribute), returned as a {{domxref("DOMTokenList")}}.
 - {{DOMxRef("Element.prefix")}} {{ReadOnlyInline}}
   - : A string representing the namespace prefix of the element, or `null` if no prefix is specified.
