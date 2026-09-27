@@ -247,12 +247,11 @@ function moveBall(dt) {
 > [!NOTE]
 > This loop could potentially process many collisions within one frame, causing a lag. People sometimes limit the number of collisions allowed within a frame, and discard the remaining `dt` once that limit is reached, allowing the game to be repainted sooner but causing the object to move more slowly.
 
-Inside `draw()`, replace the calls to `ball.move(dt)` and `handleWallCollisions()` with a call to `moveBall()`:
+Inside `draw()`, replace the calls to `ball.move()` and `handleWallCollisions()` with a call to `moveBall()`:
 
 ```js
 if (lastTimestamp !== null) {
-  const dt = timestamp - lastTimestamp;
-  moveBall(dt);
+  moveBall(timestamp - lastTimestamp);
 }
 ```
 
@@ -452,8 +451,7 @@ function draw(timestamp) {
   ctx.fillStyle = "#eeeeee";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   if (lastTimestamp !== null) {
-    const dt = timestamp - lastTimestamp;
-    moveBall(dt);
+    moveBall(timestamp - lastTimestamp);
   }
   lastTimestamp = timestamp;
   ball.draw();

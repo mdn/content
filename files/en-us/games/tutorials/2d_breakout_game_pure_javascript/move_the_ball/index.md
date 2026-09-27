@@ -149,8 +149,7 @@ Within the `draw()` function, we can now call `ball.move()` and `ball.draw()` to
 
 ```js
 if (lastTimestamp !== null) {
-  const dt = timestamp - lastTimestamp;
-  ball.move(dt);
+  ball.move(timestamp - lastTimestamp);
 }
 lastTimestamp = timestamp;
 ball.draw();
@@ -237,8 +236,7 @@ function draw(timestamp) {
   ctx.fillStyle = "#eeeeee";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   if (lastTimestamp !== null) {
-    const dt = timestamp - lastTimestamp;
-    ball.move(dt);
+    ball.move(timestamp - lastTimestamp);
   }
   lastTimestamp = timestamp;
   ball.draw();

@@ -169,8 +169,7 @@ function draw(timestamp) {
   ctx.fillStyle = "#eeeeee";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   if (lastTimestamp !== null) {
-    const dt = timestamp - lastTimestamp;
-    moveBall(dt);
+    moveBall(timestamp - lastTimestamp);
   }
   lastTimestamp = timestamp;
   ball.draw();

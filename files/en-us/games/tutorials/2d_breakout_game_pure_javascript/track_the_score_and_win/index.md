@@ -24,6 +24,7 @@ function drawScore() {
   ctx.font = "18px Arial";
   ctx.fillStyle = "#0095dd";
   ctx.textBaseline = "top";
+  ctx.textAlign = "left";
   ctx.fillText(`Points: ${score}`, 5, 5);
 }
 ```
@@ -246,8 +247,7 @@ function draw(timestamp) {
   ctx.fillStyle = "#eeeeee";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   if (lastTimestamp !== null) {
-    const dt = timestamp - lastTimestamp;
-    moveBall(dt);
+    moveBall(timestamp - lastTimestamp);
   }
   lastTimestamp = timestamp;
   ball.draw();

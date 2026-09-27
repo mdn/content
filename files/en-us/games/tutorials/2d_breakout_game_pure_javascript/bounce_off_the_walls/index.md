@@ -102,12 +102,11 @@ function handleWallCollisions(object, width, height) {
 }
 ```
 
-Inside the main `draw()` function, call the handler immediately after `ball.move(dt)`:
+Inside the main `draw()` function, call the handler immediately after `ball.move()`:
 
 ```js
 if (lastTimestamp !== null) {
-  const dt = timestamp - lastTimestamp;
-  ball.move(dt);
+  ball.move(timestamp - lastTimestamp);
   handleWallCollisions(ball, canvas.width, canvas.height);
 }
 lastTimestamp = timestamp;
@@ -208,8 +207,7 @@ function draw(timestamp) {
   ctx.fillStyle = "#eeeeee";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   if (lastTimestamp !== null) {
-    const dt = timestamp - lastTimestamp;
-    ball.move(dt);
+    ball.move(timestamp - lastTimestamp);
     handleWallCollisions(ball, canvas.width, canvas.height);
   }
   lastTimestamp = timestamp;
