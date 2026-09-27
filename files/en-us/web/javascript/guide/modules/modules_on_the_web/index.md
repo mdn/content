@@ -5,23 +5,25 @@ page-type: guide
 sidebar: jssidebar
 ---
 
-This page discusses how JavaScript modules are integrated with the web platform. Features discussed here are defined in the HTML spec and other web specifications, instead of by the core language, and they are generally only relevant to webpages. If you are writing modules for other environments, you may want to read the [Using modules](/en-US/docs/Web/JavaScript/Guide/Modules) and [Authoring cross-platform modules](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms) guides instead.
+This page discusses how JavaScript modules are integrated with the web platform. Features discussed here are defined in the HTML spec and other web specifications, instead of by the core language, and they are generally only relevant to webpages. If you are writing modules for other environments, you may want to read the [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules) and [Authoring cross-platform modules](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms) guides instead.
 
 ## Server configuration
 
 The first difference you will encounter when migrating web pages to modules is that you can no longer view your HTML using the `file://` protocol. Serve the directory containing your HTML and modules through a [local HTTP server](/en-US/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server), then open the page using the server's URL, such as `http://localhost:8000/`.
 
-The server must send JavaScript modules with a JavaScript [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types), such as `Content-Type: text/javascript`. Check this for both `.js` and `.mjs` files. If an import fails with a MIME type error, inspect the response in your browser's network tools: a missing file or an HTML fallback page may have been returned instead of the module.
+The reason for this is that module requests use [CORS](/en-US/docs/Web/HTTP/Guides/CORS), and `file://` URLs are never same-origin. When importing from another origin, that server must allow your page's origin through its CORS response headers, such as {{HTTPHeader("Access-Control-Allow-Origin")}}. By default, cross-origin module requests are sent without credentials such as cookies. Setting the [`crossorigin="use-credentials"`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute on the `<script>` element sends credentials, provided the server's CORS headers allow it (this applies to the whole graph fetched through that script).
 
-Module requests use [CORS](/en-US/docs/Web/HTTP/Guides/CORS). When importing from another origin, that server must allow your page's origin through its CORS response headers, such as {{HTTPHeader("Access-Control-Allow-Origin")}}. By default, cross-origin module requests are sent without credentials such as cookies. Setting the [`crossorigin="use-credentials"`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute on the `<script>` element sends credentials, provided the server's CORS headers allow it (this applies to the whole graph fetched through that script). [Subresource integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) via the [`integrity`](/en-US/docs/Web/HTML/Reference/Attributes/integrity) attribute also works for module scripts, but the attribute only covers the entry module. Integrity metadata for its dependencies can be provided through an import map's `integrity` key.
+The server must send JavaScript modules with a JavaScript [MIME type](/en-US/docs/Web/HTTP/Guides/MIME_types), such as `Content-Type: text/javascript`. Check this for both `.js` and `.mjs` files. If an import fails with a MIME type error, inspect the response in your browser's network tools: a missing file or an HTML fallback page may have been returned instead of the module.
 
 ## Applying modules to your HTML
 
-First of all, you need to include `type="module"` in the [`<script>`](/en-US/docs/Web/HTML/Reference/Elements/script) element, to declare this script as a module. To import the `main.js` script, we use this:
+To declare a script is a module in the [`<script>`](/en-US/docs/Web/HTML/Reference/Elements/script) element, you need to include `type="module"`. For example, to import the `main.js` script, we use this:
 
 ```html
 <script type="module" src="main.js"></script>
 ```
+
+Only the entry point needs a `<script type="module">` element: any modules it imports are loaded as modules automatically, so you don't need to add a `<script>` element just to declare something as a module.
 
 You can also embed the module's script directly into the HTML file by placing the JavaScript code within the body of the `<script>` element:
 
@@ -31,32 +33,30 @@ You can also embed the module's script directly into the HTML file by placing th
 </script>
 ```
 
+You should generally define all your modules in separate files. Modules declared inline in HTML can only import other modules, but anything they export will not be accessible by other modules (because they don't have a URL).
+
 You can only use `import` and `export` statements inside modules, not regular scripts. An error will be thrown if your `<script>` element doesn't have the `type="module"` attribute and attempts to import other modules. For example:
 
 ```html example-bad
 <script>
-  import _ from "lodash"; // SyntaxError: import declarations may only appear at top level of a module
+  import mod from "./mod.js"; // SyntaxError: import declarations may only appear at top level of a module
   // ...
 </script>
 <script src="a-module-using-import-statements.js"></script>
 <!-- SyntaxError: import declarations may only appear at top level of a module -->
 ```
 
-You should generally define all your modules in separate files. Modules declared inline in HTML can only import other modules, but anything they export will not be accessible by other modules (because they don't have a URL).
+[Subresource integrity](/en-US/docs/Web/Security/Defenses/Subresource_Integrity) via the [`integrity`](/en-US/docs/Web/HTML/Reference/Attributes/integrity) attribute also works for module scripts, but the attribute only covers the entry module. Integrity metadata for its dependencies can be provided through an import map's `integrity` key.
 
 > [!NOTE]
 > Modules and their dependencies can be preloaded by specifying them in [`<link>`](/en-US/docs/Web/HTML/Reference/Elements/link) elements with [`rel="modulepreload"`](/en-US/docs/Web/HTML/Reference/Attributes/rel/modulepreload).
 > This can significantly reduce load time when the modules are used.
 
-Some other differences with traditional `<script>` elements:
+If you are already familiar with traditional `<script>` elements, here are some more behavior differences to look out for:
 
 - Within the same environment, a module is only executed once, even if it has been imported multiple times or referenced in multiple `<script>` tags.
 - There is no need to use the `defer` attribute (see [`<script>` attributes](/en-US/docs/Web/HTML/Reference/Elements/script#attributes)) when loading a module script; module scripts declared in the document without `async` are deferred automatically.
 - Adding the `async` attribute makes the module graph evaluate as soon as it has finished loading, without waiting for HTML parsing to complete and without any ordering guarantee relative to other scripts. Unlike for classic scripts, `async` works on inline module scripts too.
-
-> [!NOTE]
-> In some module systems, you can use a module specifier like `modules/square` that isn't a relative or absolute path, and that doesn't have a file extension.
-> This kind of specifier can be used in a browser environment if you first define an [import map](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#importing_modules_using_import_maps).
 
 ## Modules in workers
 
@@ -66,7 +66,9 @@ Documents aren't the only place where modules run: [workers](/en-US/docs/Web/API
 const worker = new Worker("./worker.js", { type: "module" });
 ```
 
-The worker's file becomes the entry point of its own module graph. Inside a module worker, calling {{domxref("WorkerGlobalScope/importScripts", "importScripts()")}} throws a `TypeError`—use `import` declarations instead. Note that dynamic `import()` is not available in service workers, so all of a module service worker's code must be reachable through static imports. [Worklets](/en-US/docs/Web/API/Worklet) load their code with `addModule()`, which is always a module.
+The worker's file becomes the entry point of its own [module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph).
+
+You can only use `import` declarations or `import()` to import other modules inside a module worker. Calling {{domxref("WorkerGlobalScope/importScripts", "importScripts()")}} throws a `TypeError`. Note that dynamic `import()` is not available in service workers, so all of a module service worker's code must be reachable through static imports. [Worklets](/en-US/docs/Web/API/Worklet) load their code with `addModule()`, which is always a module.
 
 ## Module specifiers on the web
 
@@ -87,13 +89,13 @@ import { name } from "https://example.com/js/modules/module.js";
 The browser sends an HTTP request to that given URL, and if the server returns a successful response with `Content-Type: text/javascript`, then the module loading process continues.
 
 > [!NOTE]
-> There's a popular belief that "ESM requires file extensions in module specifiers". This is true and false. The JavaScript runtime does not _add_ an extension for you. If you write `import { name } from "https://example.com/modules/module";`, the browser still sends a request to the URL, without the `.js` extension. If that request succeeds with JavaScript content, the module is still loaded as usual. The only problem is that servers usually interpret extension-less requests to be requests for HTML files.
+> There's a popular belief that "ESM requires file extensions in module specifiers". This is true and false. The JavaScript runtime does not _add_ an extension for you. If you write `import { name } from "https://example.com/modules/module";`, the browser still sends a request to the URL, without the `.js` extension. If that request succeeds with JavaScript content, the module is still loaded as usual. The only problem is that servers usually interpret extension-less requests to be requests for HTML files, so you almost always need extra configuration to get it serve a JavaScript file for that.
 
 Other URL schemes that you can use as resource locations are supported too, such as [`data:`](/en-US/docs/Web/URI/Reference/Schemes/data). Read the [`import` reference](/en-US/docs/Web/JavaScript/Reference/Statements/import#module_specifier_resolution) for more information.
 
 Always importing from absolute URLs has similar problems as using absolute URLs for link targets: they are long, they don't work if you move your site to another domain, and they don't work if you move your entire JavaScript asset path. The module specifier can also be a relative URL, similar to the [`href`](/en-US/docs/Web/HTML/Reference/Elements/a#href) attribute of {{HTMLElement("a")}} elements. The only difference is that all relative URLs must start with one of `/`, `./`, or `../`—i.e., you cannot use "bare" relative URLs like `modules/module.js`, but must write `./modules/module.js`. It reserves bare specifiers so they can be given special meaning—the ecosystem convention, popularized by Node.js, was that a bare name like `"jquery"` refers to a package. On the web, that special meaning is now assigned by [import maps](#importing_modules_using_import_maps). A bare specifier not remapped by an import map throws a `TypeError`.
 
-This URL is resolved relative to the URL of the current module, not the URL of the HTML document. For example, within a module at `https://example.com/js/main.js`, to import `https://example.com/js/modules/module.js`, write:
+The URL in the module specifier is resolved relative to the URL of the current module, not the URL of the HTML document. For example, within a module at `https://example.com/js/main.js`, to import `https://example.com/js/modules/module.js`, write:
 
 ```js
 import { name } from "./modules/module.js";
@@ -129,7 +131,7 @@ Relative URLs are resolved to absolute URL addresses using the [base URL](/en-US
 ```
 
 The import map is defined using a [JSON object](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap#import_map_json_representation) inside a `<script>` element with the `type` attribute set to [`importmap`](/en-US/docs/Web/HTML/Reference/Elements/script/type/importmap).
-Note that an import map only applies to the document — the specification does not cover how to apply an import map in a worker or worklet context. <!-- https://github.com/WICG/import-maps/issues/2 -->
+Note that an import map only applies to the document — the specification does not define how to apply an import map in a worker or worklet context. <!-- https://github.com/WICG/import-maps/issues/2 -->
 
 With this map you can now use the property names above as module specifiers.
 If there is no trailing forward slash on the module specifier key then the whole module specifier key is matched and substituted.

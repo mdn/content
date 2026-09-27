@@ -17,9 +17,9 @@ Before we look at what syntax is available inside modules, let's first talk at a
 
 JavaScript programs started off pretty small — most of its usage in the early days was to do isolated scripting tasks, providing a bit of interactivity to your web pages where needed, so large scripts were generally not needed. Fast forward a few years and we now have complete applications being run in browsers with a lot of JavaScript, as well as JavaScript being used in other contexts ([Node.js](/en-US/docs/Glossary/Node.js), for example).
 
-Complex projects necessitate a mechanism for splitting JavaScript programs into separate modules that can be imported when needed. Node.js has had this ability for a long time, and there are a number of JavaScript libraries and tools that enable module usage (for example, [AMD](https://github.com/amdjs/amdjs-api/blob/master/AMD.md) loaders like [RequireJS](https://requirejs.org/), bundlers like [Webpack](https://webpack.js.org/), and compilers like [Babel](https://babeljs.io/)).
+Complex projects necessitate a mechanism for splitting JavaScript programs into separate modules: units of code that can be imported when needed. Node.js has had this ability for a long time, and there are a number of JavaScript libraries and tools that enable module usage (for example, [AMD](https://github.com/amdjs/amdjs-api/blob/master/AMD.md) loaders like [RequireJS](https://requirejs.org/), bundlers like [Webpack](https://webpack.js.org/), and compilers like [Babel](https://babeljs.io/)).
 
-All modern browsers support module features natively without needing transpilation. It can only be a good thing — browsers can optimize loading of modules, without requiring a library to handle module loading. It does not obsolete bundlers like Webpack, though — bundlers still do a good job at partitioning code into reasonably sized chunks, and are able to do other optimizations like minification, dead code elimination, and tree-shaking.
+All modern browsers support module features natively without needing transpilation. It can only be a good thing — browsers can automatically handle the module loading process, without requiring a library. It does not obsolete bundlers like Webpack, though — bundlers still do a good job at partitioning code into reasonably sized chunks, and are able to do other optimizations like minification, dead code elimination, and {{glossary("tree shaking")}}.
 
 ### What's a module?
 
@@ -114,6 +114,20 @@ As we said, modules are parsed differently from scripts—this means that the Ja
 > [!NOTE]
 > Certain runtimes, like Node.js, also have implicit module type detection if there's no explicit indication, based on whether the code uses syntax like `import`/`export` that's unavailable in non-modules. Browsers don't offer this.
 
+Modules still have access to global variables. For example, a module can use a variable declared by a classic script:
+
+```html
+<script>
+  var text = "Hello";
+</script>
+<script type="module" src="render.js"></script>
+```
+
+```js
+// -- render.js --
+document.body.textContent = text;
+```
+
 ### Aside — .mjs versus .js
 
 Throughout this article, we've used `.js` extensions for our module files, but in other resources you may see the `.mjs` extension used instead. [V8's documentation recommends this](https://v8.dev/features/modules#mjs), for example. The reasons given are:
@@ -147,7 +161,7 @@ modules/
 ```
 
 > [!NOTE]
-> All of the examples in this guide have basically the same structure; the above should start getting pretty familiar.
+> All of the examples in this guide have essentially this same structure.
 
 The `index.html` file only declares the DOM and [applies](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#applying_modules_to_your_html) the `main.js` module; all code we demonstrate subsequently concern only the `.js` files.
 
@@ -222,7 +236,7 @@ reportPerimeter(square.length, reportList);
 
 ## Default exports and imports
 
-The above export and import variables by their names. The names for each variable have to match between the exporter and the importer. You can definitely write functional module code using just named imports and exports. However, if you want to import from [non-ECMAScript modules](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms), these systems do not use named exports. In these systems, each module corresponds to exactly one JavaScript value. To represent these types of modules, JavaScript provides a _default export_. This has other use cases, such as modules that are built around one main value—a single class or function—where the default export lets each importer pick its own local name without knowing what the exporting module calls it.
+The previous sections show how you export and import variables by their names. The names for each variable have to match between the exporter and the importer. You can write functional module code using just named imports and exports. However, if you want to import from [non-ESM modules](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms) (like CommonJS or non-JavaScript files), these systems do not use named exports. In these systems, each module corresponds to exactly one JavaScript value. To represent these types of modules, JavaScript provides a _default export_. This has other use cases, such as modules that are built around one main value—a single class or function—where the default export lets each importer pick its own local name without knowing what the exporting module calls it.
 
 Unlike named exports, default exports have no names associated with them. Each module can have up to one default export. To create a default export, instead of exporting a _declaration_ like `const` or `function`, you export an _expression_ instead, by prepending `export default` to it. For example, all of the following would work:
 
@@ -520,7 +534,7 @@ Still, it is considered good practice to put all your imports at the top of the 
 
 ## Importing JSON modules
 
-We have seen how to import from JavaScript modules, where data is exported with `export` statements. You can also import values from modules written in other languages, as long as the runtime environment knows how to interpret them. The specification only specifies two other resource types: JSON modules and [text modules](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#text_modules_type_text). Here, we look at JSON modules, which are more common.
+We have seen how to import from JavaScript modules, where data is exported with `export` statements. You can also import values from modules written in other languages, as long as the runtime environment knows how to interpret them. The specification only defines two other resource types: JSON modules and [text modules](/en-US/docs/Web/JavaScript/Reference/Statements/import/with#text_modules_type_text). Here, we look at JSON modules, which are more common.
 
 A JSON module is basically a standalone JSON file. When imported, it provides a single default export containing the parsed JSON value. You import it like this:
 
@@ -690,7 +704,7 @@ const colorsURL = new URL("../data/colors.json", import.meta.url);
 
 This keeps the resource URL relative to `getColors.js` even when the module is imported from a page or module in another directory.
 
-## Modules goals and non-goals
+## Language versus host responsibilities
 
 This article introduces modules as they are defined in the ECMAScript spec. JavaScript modules are inherently tied to the host environment. They need to adapt to different I/O conditions, different architectures, and different engineering needs. As such, the core language only defines the following:
 

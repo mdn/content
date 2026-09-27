@@ -180,6 +180,9 @@ Overview: [JavaScript modules](/en-US/docs/Web/JavaScript/Guide/Modules)
 - [Dynamic module loading](/en-US/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading)
 - [Top-level await](/en-US/docs/Web/JavaScript/Guide/Modules#top-level_await)
 - [Module metadata](/en-US/docs/Web/JavaScript/Guide/Modules#module_metadata)
+- [Using modules on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web)
+- [Understanding the module graph](/en-US/docs/Web/JavaScript/Guide/Modules/Module_graph)
+- [Modules across platforms](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms)
 
 ## Advanced topics
 

@@ -511,7 +511,7 @@ Even if your project is JavaScript, you should still consider publishing a hand-
 
 The introduction of modules encourages the JavaScript ecosystem to distribute and reuse code in a modular fashion. However, that doesn't necessarily mean a piece of JavaScript code can run in every environment. Suppose you discovered a module that generates SHA hashes of your user's password. Can you use it in the browser front end? Can you use it on your Node.js server? The answer is: it depends.
 
-Modules still have access to global variables, as demonstrated previously. If the module references globals like `window`, it can run in the browser, but will throw an error in your Node.js server, because `window` is not available there. Similarly, if the code requires access to `process` to be functional, it can only be used in Node.js.
+Modules still have access to global variables, as demonstrated in [What's a module?](/en-US/docs/Web/JavaScript/Guide/Modules#whats_a_module). If the module references globals like `window`, it can run in the browser, but will throw an error in your Node.js server, because `window` is not available there. Similarly, if the code requires access to `process` to be functional, it can only be used in Node.js.
 
 In order to maximize the reusability of a module, it is often advised to make the code "isomorphic" — that is, it exhibits the same behavior in every runtime. This is commonly achieved in three ways:
 
