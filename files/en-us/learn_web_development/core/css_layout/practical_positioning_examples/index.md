@@ -305,7 +305,6 @@ It should now look like this:
 .info-box {
   width: 452px;
   height: 400px;
-  margin: 0 auto;
   position: fixed;
   top: 0;
 }
