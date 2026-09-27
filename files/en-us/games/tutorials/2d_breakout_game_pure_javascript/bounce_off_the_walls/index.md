@@ -148,7 +148,7 @@ class Ball {
   ctx;
   size = { w: undefined, h: undefined };
   pos = { x: 50, y: 50 };
-  vel = { x: 0.15, y: 0.15 };
+  vel = { x: 150, y: 150 };
   constructor(url, ctx) {
     this.asset = new Image();
     this.asset.src = url;
@@ -200,7 +200,7 @@ Promise.all([ball].map((obj) => obj.preload())).then(() =>
 );
 
 function update(timestamp) {
-  const dt = lastTimestamp === null ? 0 : timestamp - lastTimestamp;
+  const dt = lastTimestamp === null ? 0 : (timestamp - lastTimestamp) / 1000;
   lastTimestamp = timestamp;
   ball.move(dt);
   handleWallCollisions(ball, canvas.width, canvas.height);

@@ -49,7 +49,7 @@ class Ball extends GameObject {
       return;
     }
     this.wobbleTime += dt;
-    if (this.wobbleTime >= this.wobbleFrames.length * (1000 / 24)) {
+    if (this.wobbleTime >= this.wobbleFrames.length * (1 / 24)) {
       this.wobbleTime = null;
     }
   }
@@ -57,7 +57,7 @@ class Ball extends GameObject {
     const frame =
       this.wobbleTime === null
         ? 0
-        : this.wobbleFrames[Math.floor(this.wobbleTime / (1000 / 24))];
+        : this.wobbleFrames[Math.floor(this.wobbleTime / (1 / 24))];
     const { left, top } = this.hitbox;
     this.ctx.drawImage(
       this.asset,
@@ -74,7 +74,7 @@ class Ball extends GameObject {
 }
 ```
 
-The `playWobble()` method starts the animation, or restarts it if it's already playing. The `updateAnimation()` method advances it using elapsed time in milliseconds. We play the animation at 24 frames per second, so each frame lasts `1000 / 24` milliseconds.
+The `playWobble()` method starts the animation, or restarts it if it's already playing. The `updateAnimation()` method advances it using elapsed time in seconds. We play the animation at 24 frames per second, so each frame lasts `1 / 24` seconds.
 
 The overridden `draw()` method uses the nine-argument form of {{domxref("CanvasRenderingContext2D/drawImage", "ctx.drawImage()")}}. The first four numbers after the image select a rectangle from the spritesheet; the last four position and size that rectangle on the canvass.
 
@@ -114,7 +114,7 @@ class Brick extends GameObject {
     this.size = { w, h };
   }
   draw() {
-    const scale = 1 - Math.min(this.shrinkTime / 200, 1);
+    const scale = 1 - Math.min(this.shrinkTime / 0.2, 1);
     const width = this.size.w * scale;
     const height = this.size.h * scale;
     this.ctx.drawImage(
@@ -134,7 +134,7 @@ class Brick extends GameObject {
 }
 ```
 
-The `shrinkTime` property records how long the brick has been shrinking, in milliseconds. We want the tween to last for 200 milliseconds, so dividing it by 200 gives the progress from 0 to 1. Subtracting that progress from 1 gives a scale that decreases linearly from full size to zero. The drawing coordinates keep the shrinking image centered on the brick's original position.
+The `shrinkTime` property records how long the brick has been shrinking, in seconds. We want the tween to last for 0.2 seconds, so dividing it by 0.2 gives the progress from 0 to 1. Subtracting that progress from 1 gives a scale that decreases linearly from full size to zero. The drawing coordinates keep the shrinking image centered on the brick's original position.
 
 Now, after the brick is removed from the gameplay, it's still kept track of within `disappearingBricks` so it can be animated.
 
@@ -144,14 +144,14 @@ Replace `update()` with the following to advance both effects on every frame:
 
 ```js
 function update(timestamp) {
-  const dt = lastTimestamp === null ? 0 : timestamp - lastTimestamp;
+  const dt = lastTimestamp === null ? 0 : (timestamp - lastTimestamp) / 1000;
   lastTimestamp = timestamp;
 
   ball.updateAnimation(dt);
   for (let i = disappearingBricks.length - 1; i >= 0; i--) {
     const brick = disappearingBricks[i];
     brick.shrinkTime += dt;
-    if (brick.shrinkTime >= 200) {
+    if (brick.shrinkTime >= 0.2) {
       disappearingBricks.splice(i, 1);
     }
   }
@@ -267,7 +267,7 @@ class Ball extends GameObject {
   wobbleFrames = [0, 1, 0, 2, 0, 1, 0, 2, 0];
   wobbleTime = null;
   pos = { x: undefined, y: undefined };
-  vel = { x: 0.15, y: -0.15 };
+  vel = { x: 150, y: -150 };
   move(dt) {
     this.pos.x += this.vel.x * dt;
     this.pos.y += this.vel.y * dt;
@@ -288,7 +288,7 @@ class Ball extends GameObject {
       return;
     }
     this.wobbleTime += dt;
-    if (this.wobbleTime >= this.wobbleFrames.length * (1000 / 24)) {
+    if (this.wobbleTime >= this.wobbleFrames.length * (1 / 24)) {
       this.wobbleTime = null;
     }
   }
@@ -296,7 +296,7 @@ class Ball extends GameObject {
     const frame =
       this.wobbleTime === null
         ? 0
-        : this.wobbleFrames[Math.floor(this.wobbleTime / (1000 / 24))];
+        : this.wobbleFrames[Math.floor(this.wobbleTime / (1 / 24))];
     const { left, top } = this.hitbox;
     this.ctx.drawImage(
       this.asset,
@@ -331,7 +331,7 @@ class Brick extends GameObject {
     this.size = { w, h };
   }
   draw() {
-    const scale = 1 - Math.min(this.shrinkTime / 200, 1);
+    const scale = 1 - Math.min(this.shrinkTime / 0.2, 1);
     const width = this.size.w * scale;
     const height = this.size.h * scale;
     this.ctx.drawImage(
@@ -383,14 +383,14 @@ Promise.all([ball, paddle, ...bricks].map((obj) => obj.preload())).then(() => {
 });
 
 function update(timestamp) {
-  const dt = lastTimestamp === null ? 0 : timestamp - lastTimestamp;
+  const dt = lastTimestamp === null ? 0 : (timestamp - lastTimestamp) / 1000;
   lastTimestamp = timestamp;
 
   ball.updateAnimation(dt);
   for (let i = disappearingBricks.length - 1; i >= 0; i--) {
     const brick = disappearingBricks[i];
     brick.shrinkTime += dt;
-    if (brick.shrinkTime >= 200) {
+    if (brick.shrinkTime >= 0.2) {
       disappearingBricks.splice(i, 1);
     }
   }
@@ -455,7 +455,7 @@ function ballLeaveScreen() {
     "pointerdown",
     () => {
       showLifeLostText = false;
-      ball.vel = { x: 0.15, y: -0.15 };
+      ball.vel = { x: 150, y: -150 };
       lastTimestamp = null;
     },
     { once: true },

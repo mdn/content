@@ -51,7 +51,7 @@ class GameObject {
 
 class Ball extends GameObject {
   pos = { x: 50, y: 50 };
-  vel = { x: 0.15, y: 0.15 };
+  vel = { x: 150, y: 150 };
   move(dt) {
     this.pos.x += this.vel.x * dt;
     this.pos.y += this.vel.y * dt;
@@ -250,7 +250,7 @@ function moveBall(dt) {
 Inside `update()`, replace the calls to `ball.move()` and `handleWallCollisions()` with a call to `moveBall()`:
 
 ```js
-const dt = lastTimestamp === null ? 0 : timestamp - lastTimestamp;
+const dt = lastTimestamp === null ? 0 : (timestamp - lastTimestamp) / 1000;
 lastTimestamp = timestamp;
 moveBall(dt);
 ```
@@ -295,12 +295,12 @@ We have the paddle working as expected, so let's position the ball on it. After 
 ```js
 class Ball extends GameObject {
   pos = { x: undefined, y: undefined };
-  vel = { x: 0.15, y: -0.15 };
+  vel = { x: 150, y: -150 };
   // …
 }
 ```
 
-The horizontal velocity stays the same. We change the vertical velocity from `0.15` to `-0.15` so the ball starts by moving up instead of down. We can't know the position ahead of time, because we need to put it on top of the paddle, which requires loading the paddle first. Replace the existing `Promise.all()` block with the following:
+The horizontal velocity stays the same. We change the vertical velocity from `150` to `-150` so the ball starts by moving up instead of down. We can't know the position ahead of time, because we need to put it on top of the paddle, which requires loading the paddle first. Replace the existing `Promise.all()` block with the following:
 
 ```js
 Promise.all([ball, paddle].map((obj) => obj.preload())).then(() => {
@@ -396,7 +396,7 @@ class GameObject {
 
 class Ball extends GameObject {
   pos = { x: undefined, y: undefined };
-  vel = { x: 0.15, y: -0.15 };
+  vel = { x: 150, y: -150 };
   move(dt) {
     this.pos.x += this.vel.x * dt;
     this.pos.y += this.vel.y * dt;
@@ -448,7 +448,7 @@ Promise.all([ball, paddle].map((obj) => obj.preload())).then(() => {
 });
 
 function update(timestamp) {
-  const dt = lastTimestamp === null ? 0 : timestamp - lastTimestamp;
+  const dt = lastTimestamp === null ? 0 : (timestamp - lastTimestamp) / 1000;
   lastTimestamp = timestamp;
   moveBall(dt);
 

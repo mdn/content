@@ -1,240 +1,29 @@
 ---
-title: Buttons
-slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Buttons
+title: Randomizing gameplay
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Randomizing_gameplay
 page-type: guide
 sidebar: games
 ---
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Animations_and_tweens", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Randomizing_gameplay")}}
+{{Previous("Games/Tutorials/2D_breakout_game_pure_JavaScript/Buttons")}}
 
-This is the **10th step** out of 11 of the [creating a Breakout game in pure JavaScript tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Instead of starting the game right away, we can leave that decision to the player by adding a Start button they can press. Let's investigate how to do that.
+This is the **11th step** out of 11 of the [creating a Breakout game in pure JavaScript tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Our game appears to be completed, but if you look close enough, you'll notice that the ball is bouncing off the paddle at the same angle throughout the whole game. This means that every game is quite similar. To fix this and improve playability, we should make the rebound angles more random, and in this article we'll look at how.
 
-## New variables
+## Making rebounds more random
 
-We will need a boolean variable representing whether the game has started and an `AbortController` to remove the button's event listeners when it does. Add these lines below your other top-level variables:
-
-```js
-let playing = false;
-const buttonControls = new AbortController();
-```
-
-## Adding the button to the game
-
-We can load the button spritesheet the same way we loaded the ball's wobble animation. Add a `Button` class after your other game object classes:
+We can change the ball's velocity depending on the exact spot it hits the paddle, by modifying the `x` velocity each time the paddle's `onCollide()` method is run using a line along the lines of the below. Add this new line to your code now, and try it out.
 
 ```js
-class Button extends GameObject {
-  size = { w: 120, h: 40 };
-  frame = 0;
-  constructor(url, ctx) {
-    super(url, ctx);
-    this.pos = { x: ctx.canvas.width / 2, y: ctx.canvas.height / 2 };
-  }
-}
-```
-
-The button is centered on the canvas. Its `frame` property selects the normal (0), hover (1), or pressed (2) image.
-
-The `draw()` method calculates the frame's column and row in the spritesheet and draws just that frame, like we did for the ball.
-
-```js
-class Button extends GameObject {
+class Paddle extends GameObject {
   // …
-  draw() {
-    const columns = Math.floor(this.asset.width / this.size.w);
-    const { left, top } = this.hitbox;
-    this.ctx.drawImage(
-      this.asset,
-      (this.frame % columns) * this.size.w,
-      Math.floor(this.frame / columns) * this.size.h,
-      this.size.w,
-      this.size.h,
-      left,
-      top,
-      this.size.w,
-      this.size.h,
-    );
+  onCollide() {
+    ball.playWobble();
+    ball.vel.x = -5 * (this.pos.x - ball.pos.x);
   }
 }
 ```
 
-Create the button below the ball, paddle, and brick definitions:
-
-```js
-const startButton = new Button("img/button.png", ctx);
-```
-
-You also need to [grab the button spritesheet](https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_pure_JavaScript/button.png), and save it in your `/img` directory.
-
-In `update()`, add the following after `drawStatus()` to show the button until the game starts:
-
-```js
-if (!playing) {
-  startButton.draw();
-}
-```
-
-## Handling button input
-
-Handling button input is a bit painful, because we are dealing with a canvas instead of native HTML elements. We have to implement hitbox testing, animation, and event handling all manually.
-
-The `containsPointer()` method converts the pointer's coordinates into canvas coordinates, and then performs a hitbox test:
-
-```js
-class Button extends GameObject {
-  // …
-  containsPointer(event) {
-    const bounds = this.ctx.canvas.getBoundingClientRect();
-    const x =
-      ((event.clientX - bounds.left) * this.ctx.canvas.width) / bounds.width;
-    const y =
-      ((event.clientY - bounds.top) * this.ctx.canvas.height) / bounds.height;
-    const { left, right, top, bottom } = this.hitbox;
-    return x >= left && x <= right && y >= top && y <= bottom;
-  }
-}
-```
-
-Add a `initButtonControls()` function at the bottom of the script, which will register pointer event listeners that control the button. Everything that follows in this section, unless stated otherwise, will be appended to ths function's body.
-
-```js
-function initButtonControls() {
-  // Add code here
-}
-```
-
-Start by definition `options`, which contains the `signal` used to remove these listeners once the game starts. Also track the pointer ID so that only the pointer that pressed the button can activate it.
-
-```js
-const options = { signal: buttonControls.signal };
-let pressedPointer = null;
-```
-
-Moving outside the button resets the frame index (which sets the button to its default appearance). Releasing a press outside cancels the press. These gestures can be performed in multiple ways, so add them as reusable functions.
-
-```js
-function resetFrame(event) {
-  if (pressedPointer === null || pressedPointer === event.pointerId) {
-    startButton.frame = 0;
-  }
-}
-function cancelPress(event) {
-  if (event.pointerId === pressedPointer) {
-    pressedPointer = null;
-    resetFrame(event);
-  }
-}
-```
-
-Next, define the `pointermove` handler. Its job is to set the frame index—i.e., change the button's appearance—if it's hovered over. If a pointer is already pressed down, the other pointers are ignored and do not register as additional hovers.
-
-```js
-canvas.addEventListener(
-  "pointermove",
-  (event) => {
-    if (pressedPointer !== null && pressedPointer !== event.pointerId) {
-      return;
-    }
-    if (startButton.containsPointer(event)) {
-      startButton.frame = pressedPointer === null ? 1 : 2;
-    } else {
-      resetFrame(event);
-    }
-  },
-  options,
-);
-```
-
-Next, define the `pointerdown` handler. Its job is also to set the frame index to the pressed-down appearance, and also record the `pressedPointer`. This only happens if there's no other pointer currently being pressed and it's a left-click for a mouse or similar device. Pointer capture lets the canvas continue receiving pointer events even if the pointer has moved outside of its bounds.
-
-```js
-canvas.addEventListener(
-  "pointerdown",
-  (event) => {
-    if (
-      event.button !== 0 ||
-      pressedPointer !== null ||
-      !startButton.containsPointer(event)
-    ) {
-      return;
-    }
-    pressedPointer = event.pointerId;
-    startButton.frame = 2;
-    canvas.setPointerCapture(event.pointerId);
-  },
-  options,
-);
-```
-
-Next, define the `pointerdown` handler. Its job is to actually start the game, but only if the pointer was released while still hovering over the button—otherwise, the press is considered canceled.
-
-```js
-canvas.addEventListener(
-  "pointerup",
-  (event) => {
-    if (event.pointerId !== pressedPointer) {
-      return;
-    }
-    if (startButton.containsPointer(event)) {
-      pressedPointer = null;
-      startGame();
-    } else {
-      cancelPress(event);
-    }
-  },
-  options,
-);
-```
-
-Finally, the pointer leaving the canvas, a native pointer cancel gesture, or the pointer capture set by the `pointerdown` listener should all trigger resetting/cancellation. These events aren't filtered by the hitbox, because they must also clean up presses that leave the button.
-
-```js
-canvas.addEventListener("pointerleave", resetFrame, options);
-canvas.addEventListener("pointercancel", cancelPress, options);
-canvas.addEventListener("lostpointercapture", cancelPress, options);
-```
-
-We register these listeners only after loading the assets. Replace the existing preload call with the following, which also loads the button image:
-
-```js
-Promise.all(
-  [ball, paddle, ...bricks, startButton].map((obj) => obj.preload()),
-).then(() => {
-  ball.pos.x = paddle.pos.x;
-  ball.pos.y = paddle.hitbox.top - ball.size.h / 2;
-  initButtonControls();
-  requestAnimationFrame(update);
-});
-```
-
-## Starting the game
-
-Now, we need to define the `startGame()` function referenced in the code above:
-
-```js
-function startGame() {
-  buttonControls.abort();
-  ball.vel = { x: 150, y: -150 };
-  playing = true;
-  lastTimestamp = null;
-}
-```
-
-When the button is pressed, we remove all button listeners, set the ball's initial velocity, and set the `playing` property to `true`. We also reset `lastTimestamp` so its first movement update doesn't include time before the button was released.
-
-Finally for this section, go back into your `Ball` class, find the `vel = { x: 150, y: -150 }` line, and replace it with `vel = { x: 0, y: 0 }`. You only want the ball to move when the button is pressed, not before!
-
-## Keeping the paddle still before the game starts
-
-It works as expected, but we can still move the paddle when the game hasn't started yet, which looks a bit silly. To stop this, we can take advantage of the `playing` property and make the paddle movable only when the game has started. To do that, add `!playing` to the guard in the existing paddle `pointermove` listener like so:
-
-```js
-if (!playing || paddle.size.w === undefined) {
-  return;
-}
-```
-
-That way the paddle is immovable after everything is loaded and prepared, but before the start of the actual game.
+It's a little bit of magic—the new velocity is higher, the larger the distance between the center of the paddle and the place where the ball hits it. Also, the direction (left or right) is determined by that value—if the ball hits the left side of the paddle, it will bounce left, whereas hitting the right side will bounce it to the right. It ended up that way because of a little bit of experimentation with the given values; you can do your own experimentation and see what happens. It's not completely random of course, but it does make the gameplay a bit more unpredictable and therefore more interesting.
 
 ## Compare your code
 
@@ -381,6 +170,7 @@ class Paddle extends GameObject {
   }
   onCollide() {
     ball.playWobble();
+    ball.vel.x = -5 * (this.pos.x - ball.pos.x);
   }
 }
 
@@ -772,8 +562,22 @@ function initButtonControls() {
 
 {{EmbedLiveSample("compare your code", "", 480, , , , , "allow-modals")}}
 
-## Next steps
+## Summary
 
-The last thing we will do in this article series is make the gameplay even more interesting by adding some [randomization](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Randomizing_gameplay) to the way the ball bounces off the paddle.
+You've finished all the lessons—congratulations! By this point you would have learned the basics of Phaser and the logic behind simple 2D games.
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Animations_and_tweens", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Randomizing_gameplay")}}
+### Exercises to follow
+
+You can do a lot more in the game—add whatever you feel would be best to make it more fun and interesting. Below are some suggestions as to how you could expand our little game, to get you started:
+
+- Add a second ball or paddle.
+- Change the color of the background on every hit.
+- Change the images and use your own.
+- Grant extra bonus points if bricks are destroyed rapidly, several-in-a-row (or other bonuses of your choosing).
+- Create levels with different brick layouts.
+
+You can even try to extract the reusable bits of this project and build a game engine of your own, just like [Phaser](https://docs.phaser.io/).
+
+You could also go back to [this tutorial series' index page](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript).
+
+{{Previous("Games/Tutorials/2D_breakout_game_pure_JavaScript/Buttons")}}

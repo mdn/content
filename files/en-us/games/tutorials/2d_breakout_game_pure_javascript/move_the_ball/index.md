@@ -113,7 +113,7 @@ class Ball {
   // …
   size = { w: undefined, h: undefined };
   pos = { x: 50, y: 50 };
-  vel = { x: 0.15, y: 0.15 };
+  vel = { x: 150, y: 150 };
   // …
   draw() {
     this.ctx.drawImage(
@@ -125,7 +125,7 @@ class Ball {
 }
 ```
 
-The velocity is set to 0.15 along both axes, meaning that the ball moves 150 pixels in both the x and y directions every second. We'll update the ball's position on every call of `update()`. We need to work out how much to displace it from the last position, using the formula `dx = vx * dt`, where `vx` is its speed along the x axis and `dt` is the time elapsed since the last `update()` call. Because each time the `update()` function receives a `timestamp`, we can compare it with the previous iteration to get `dt`. Add the following to the class:
+The velocity is set to 150 pixels per second along both axes. We'll update the ball's position on every call of `update()`. We need to work out how much to displace it from the last position, using the formula `dx = vx * dt`, where `vx` is its speed along the x axis and `dt` is the time elapsed since the last `update()` call. Because each time the `update()` function receives a `timestamp`, we can compare it with the previous iteration to get `dt`. Add the following to the class:
 
 ```js
 class Ball {
@@ -148,7 +148,7 @@ let lastTimestamp = null;
 Within the `update()` function, we can now call `ball.move()` and `ball.draw()` to let the class update itself, while the `update()` function only keeps track of the time:
 
 ```js
-const dt = lastTimestamp === null ? 0 : timestamp - lastTimestamp;
+const dt = lastTimestamp === null ? 0 : (timestamp - lastTimestamp) / 1000;
 lastTimestamp = timestamp;
 ball.move(dt);
 
@@ -157,7 +157,7 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 ball.draw();
 ```
 
-On the first frame, `lastTimestamp` is `null`, so `dt` is zero and the ball stays at its initial position. On later frames, `dt` is the time elapsed since the previous frame.
+On the first frame, `lastTimestamp` is `null`, so `dt` is zero and the ball stays at its initial position. On later frames, `dt` is the time elapsed since the previous frame, in seconds. The timestamps are in milliseconds, so we divide their difference by 1000 to match the velocity units.
 
 Reload `index.html` and you should see the ball rolling across the screen.
 
@@ -201,7 +201,7 @@ class Ball {
   ctx;
   size = { w: undefined, h: undefined };
   pos = { x: 50, y: 50 };
-  vel = { x: 0.15, y: 0.15 };
+  vel = { x: 150, y: 150 };
   constructor(url, ctx) {
     this.asset = new Image();
     this.asset.src = url;
@@ -237,7 +237,7 @@ Promise.all([ball].map((obj) => obj.preload())).then(() =>
 );
 
 function update(timestamp) {
-  const dt = lastTimestamp === null ? 0 : timestamp - lastTimestamp;
+  const dt = lastTimestamp === null ? 0 : (timestamp - lastTimestamp) / 1000;
   lastTimestamp = timestamp;
   ball.move(dt);
 

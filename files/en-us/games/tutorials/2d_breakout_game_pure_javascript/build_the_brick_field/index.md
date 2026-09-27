@@ -215,7 +215,7 @@ class GameObject {
 
 class Ball extends GameObject {
   pos = { x: undefined, y: undefined };
-  vel = { x: 0.15, y: -0.15 };
+  vel = { x: 150, y: -150 };
   move(dt) {
     this.pos.x += this.vel.x * dt;
     this.pos.y += this.vel.y * dt;
@@ -287,7 +287,7 @@ Promise.all([ball, paddle, ...bricks].map((obj) => obj.preload())).then(() => {
 });
 
 function update(timestamp) {
-  const dt = lastTimestamp === null ? 0 : timestamp - lastTimestamp;
+  const dt = lastTimestamp === null ? 0 : (timestamp - lastTimestamp) / 1000;
   lastTimestamp = timestamp;
   moveBall(dt);
 
