@@ -37,7 +37,7 @@ This property is specified as one of the following keyword values:
 - `contain`
   - : Prevents scrolling from continuing outside the scroll container. "Bounce" effects may still occur.
 - `chain`
-  - : Allows scrolling to continue outside the scroll container, but prevents overscroll "bounce" effects
+  - : Allows scrolling to continue outside the scroll container, but prevents overscroll "bounce" effects.
 - `none`
   - : Prevents scrolling from continuing outside the scroll container and also prevents overscroll "bounce" effects.
 
