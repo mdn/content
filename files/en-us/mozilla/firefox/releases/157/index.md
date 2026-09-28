@@ -1,57 +1,28 @@
 ---
-title: Firefox 157 release notes for developers (Beta)
-short-title: Firefox 157 (Beta)
+title: Firefox 157 release notes for developers (Stable)
+short-title: Firefox 157 (Stable)
 slug: Mozilla/Firefox/Releases/157
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 157 that affect developers.
-Firefox 157 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [September 29, 2026](https://whattrainisitnow.com/release/?version=157).
-
-> [!NOTE]
-> The release notes for this Firefox version are still a work in progress.
-
-<!-- Authors: Please uncomment any headings you are writing notes for -->
+Firefox 157 was released on [September 29, 2026](https://whattrainisitnow.com/release/?version=157).
 
 ## Changes for web developers
 
-<!-- ### Developer Tools -->
+### HTML
 
-<!-- ### HTML -->
-
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### MathML -->
-
-<!-- #### Removals -->
-
-<!-- ### SVG -->
-
-<!-- #### Removals -->
+No notable changes.
 
 ### CSS
 
 - The [`at-rule()`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#at-rule) function in the {{cssxref("@supports")}} at-rule lets you test whether the browser supports a given CSS at-rule, for example @supports at-rule(@scope). It also works in the [`supports()`](/en-US/docs/Web/CSS/Reference/At-rules/@import#supports-condition) function of {{cssxref("@import")}} CSS at-rule. ([Firefox bug 2060755](https://bugzil.la/2060755)).
 - The {{cssxref("overscroll-behavior")}} shorthand property and the {{cssxref("overscroll-behavior-block")}}, {{cssxref("overscroll-behavior-inline")}}, {{cssxref("overscroll-behavior-x")}} and {{cssxref("overscroll-behavior-y")}} longhand properties now support the [`chain`](/en-US/docs/Web/CSS/Reference/Properties/overscroll-behavior#chain) value. The `chain` value allows scrolling to pass to another scrollable area, but does not allow the browser's default overscroll behavior (such as "bounce") when reaching the boundary. ([Firefox bug 2036966](https://bugzil.la/2036966)).
 
-<!-- #### Removals -->
+### JavaScript
 
-<!-- ### JavaScript -->
-
-<!-- No notable changes. -->
-
-<!-- #### Removals -->
-
-<!-- ### HTTP -->
-
-<!-- #### Removals -->
-
-<!-- ### Security -->
-
-<!-- #### Removals -->
+No notable changes.
 
 ### APIs
 
@@ -60,14 +31,6 @@ Firefox 157 is the current [Beta version of Firefox](https://www.firefox.com/en-
 #### DOM
 
 - The {{domxref("Animation.reverse()")}} method and the {{domxref("Animation.playbackRate")}} property now match the [Web Animations](/en-US/docs/Web/API/Web_Animations_API) specification in two cases. First, calling `reverse()` on an animation whose `playbackRate` is `0` now plays the animation. This updates its {{domxref("Animation.startTime", "startTime")}} and {{domxref("Animation.currentTime", "currentTime")}} while leaving `playbackRate` at `0`. Previously, the call had no effect. Second, switching `playbackRate` between a positive and a negative value on a [scroll-driven animation](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) now mirrors the animation's `startTime` to the opposite end of the timeline. As a result, the reversed animation still falls within the scroll range. Previously, `startTime` was left unchanged, which is only correct for time-based timelines such as {{domxref("DocumentTimeline")}}. This adjustment applies when the animation has a `startTime` and a finite duration. ([Firefox bug 2046973](https://bugzil.la/2046973)).
-
-<!-- #### Media, WebRTC, and Web Audio -->
-
-<!-- #### Removals -->
-
-<!-- ### WebAssembly -->
-
-<!-- #### Removals -->
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -83,10 +46,6 @@ Firefox 157 is the current [Beta version of Firefox](https://www.firefox.com/en-
   `browser.setDownloadBehavior` with null instead. ([Firefox bug 2069952](https://bugzil.la/2069952)).
 
 ## Changes for add-on developers
-
-<!-- ### Removals -->
-
-<!-- ### Other -->
 
 ## Experimental web features
 
