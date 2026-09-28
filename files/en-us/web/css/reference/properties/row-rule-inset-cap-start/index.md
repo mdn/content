@@ -228,7 +228,6 @@ In the following demonstration, the leftmost segments of the row rules abutting 
 ```css hidden live-sample___caps live-sample___percents
 ul {
   display: grid;
-  margin: 0 20px;
   grid-template-columns: repeat(6, auto);
   list-style-type: none;
   gap: 20px;

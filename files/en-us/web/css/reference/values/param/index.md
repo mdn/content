@@ -131,7 +131,7 @@ In this example the SVG attributes are updated by passing the `param()` function
 .foo {
   background-image: url(
     "square.svg"
-    param(--color1, slategrey),
+    param(--color1, slategrey)
     param(--color2, lightgrey)
   );
 }
