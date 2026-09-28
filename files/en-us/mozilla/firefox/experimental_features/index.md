@@ -914,7 +914,7 @@ The `ML-KEM-512`, `ML-KEM-768`, and `ML-KEM-1024` algorithm names are supported,
 
 ### Web custom formats in the Async Clipboard API
 
-The [Clipboard API](/en-US/docs/Web/API/Clipboard_API) API supports custom clipboard formats, allowing web apps to write and read custom MIME types prefixed with `"web "` using the {{domxref("Clipboard.write()")}} and {{domxref("Clipboard.read()")}} methods, respectively.
+The [Clipboard API](/en-US/docs/Web/API/Clipboard_API) supports custom clipboard formats, allowing web apps to write and read custom MIME types prefixed with `"web "` using the {{domxref("Clipboard.write()")}} and {{domxref("Clipboard.read()")}} methods, respectively.
 This is supported on desktop from Firefox 154 and on Android from Firefox 156 ([Firefox bug 1956304](https://bugzil.la/1956304) and [Firefox bug 2048545](https://bugzil.la/2048545)).
 
 | Release channel   | Version changed | Enabled by default? |
