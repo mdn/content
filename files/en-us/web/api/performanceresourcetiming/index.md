@@ -49,6 +49,12 @@ For example, to allow `https://developer.mozilla.org` to see resource timing inf
 Timing-Allow-Origin: https://developer.mozilla.org
 ```
 
+The `Timing-Allow-Origin` header protects timing information for any cross-origin resource. A resource that passes the [CORS](/en-US/docs/Web/HTTP/Guides/CORS) check still needs `Timing-Allow-Origin` to expose these properties.
+
+Other properties describe the response itself rather than its timing, and are protected by CORS instead of `Timing-Allow-Origin`. The `contentType`, `encodedBodySize`, `decodedBodySize`, and `responseStatus` properties return `0` or an empty string for cross-origin resources unless the resource was requested using CORS and passed the CORS check.
+
+For cross-origin {{HTMLElement("iframe")}} elements that fail the `Timing-Allow-Origin` check, the browser reports a fallback entry in which `responseEnd` is the time at which the iframe finished loading completely, including its subresources. See [Cross-origin iframes](/en-US/docs/Web/API/PerformanceResourceTiming/responseEnd#cross-origin_iframes) for more information.
+
 ## Instance properties
 
 ### Inherited from `PerformanceEntry`
