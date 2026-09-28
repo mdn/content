@@ -35,7 +35,7 @@ A `ConstantSourceNode` has no inputs and exactly one monaural (one-channel) outp
 
 _Inherits properties from its parent interface, {{domxref("AudioScheduledSourceNode")}}, and adds the following properties:_
 
-- {{domxref("ConstantSourceNode.offset", "offset")}}
+- {{domxref("ConstantSourceNode.offset", "offset")}} {{ReadOnlyInline}}
   - : An {{domxref("AudioParam")}} which specifies the value that this source continuously outputs. The default value is 1.0.
 
 ### Events
