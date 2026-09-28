@@ -1,17 +1,17 @@
 ---
-title: "VRStageParameters: sizeY property"
-short-title: sizeY
-slug: Web/API/VRStageParameters/sizeY
+title: "VRStageParameters: sizeZ property"
+short-title: sizeZ
+slug: Web/API/VRStageParameters/sizeZ
 page-type: web-api-instance-property
 status:
   - deprecated
   - non-standard
-browser-compat: api.VRStageParameters.sizeY
+browser-compat: api.VRStageParameters.sizeZ
 ---
 
 {{APIRef("WebVR API")}}{{Non-standard_Header}}
 
-The **`sizeY`** read-only property of the {{domxref("VRStageParameters")}} interface _returns the depth_ of the play-area bounds in meters.
+The **`sizeZ`** read-only property of the {{domxref("VRStageParameters")}} interface _returns the depth_ of the play-area bounds in meters.
 
 > [!NOTE]
 > This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).

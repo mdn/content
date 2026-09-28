@@ -10625,6 +10625,7 @@
 /en-US/docs/Web/API/VRPositionState/orientation	/en-US/docs/Web/API/VRPose/orientation
 /en-US/docs/Web/API/VRPositionState/position	/en-US/docs/Web/API/VRPose/position
 /en-US/docs/Web/API/VRPositionState/timeStamp	/en-US/docs/Web/API/VRPose
+/en-US/docs/Web/API/VRStageParameters/sizeY	/en-US/docs/Web/API/VRStageParameters/sizeZ
 /en-US/docs/Web/API/ValidityState/ValidityState.patternMismatch	/en-US/docs/Web/API/ValidityState/patternMismatch
 /en-US/docs/Web/API/ValidityState/pattern	/en-US/docs/Web/HTML/Reference/Attributes/pattern
 /en-US/docs/Web/API/ValidityState/underUnderflow	/en-US/docs/Web/API/ValidityState/rangeUnderflow

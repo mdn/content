@@ -61528,7 +61528,7 @@
     "modified": "2020-10-15T21:46:05.619Z",
     "contributors": ["fscholz", "chrisdavidmills"]
   },
-  "Web/API/VRStageParameters/sizeY": {
+  "Web/API/VRStageParameters/sizeZ": {
     "modified": "2020-10-15T21:46:06.658Z",
     "contributors": ["fscholz", "chrisdavidmills"]
   },
