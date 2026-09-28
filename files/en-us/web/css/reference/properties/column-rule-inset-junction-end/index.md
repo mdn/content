@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`column-rule-inset-junction-end`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the bottom endpoints of column rule segments that are [junction endpoints](#understanding_junction_end); that is, endpoints at gap junctions where rule segments intersect.
+The **`column-rule-inset-junction-end`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the bottom endpoints of column rule segments that are [junction endpoints](#understanding_junction_endpoints); that is, endpoints at gap junctions where rule segments intersect.
 
 {{InteractiveExample("CSS Demo: rule")}}
 
@@ -104,7 +104,7 @@ This property is specified as a single value from the following list:
 
 ## Description
 
-The `column-rule-inset-junction-end` property can be used to inset or outset [junction segment endpoints](#understanding_junction_end) occurring at the bottom of column rule segments. The default value is `0`. Positive values reduce the segment size, while negative values and [the `overlap-join` keyword](#the_overlap-join_value) increase it.
+The `column-rule-inset-junction-end` property can be used to inset or outset [junction segment endpoints](#understanding_junction_endpoints) occurring at the bottom of column rule segments. The default value is `0`. Positive values reduce the segment size, while negative values and [the `overlap-join` keyword](#the_overlap-join_value) increase it.
 
 Column rules are painted within a column gap as one or more segments, with segments occurring between:
 
@@ -441,8 +441,7 @@ This example demonstrates setting `column-rule-inset-junction-end` to inset the 
 
 #### CSS
 
-We use the {{cssxref("display")}} property to turn the `.flexbox` elements into flex containers. We balance the items into three flex lines using {{cssxref("flex-wrap")}} and {{cssxref("flex-line-count")}}. We define a light blue {{cssxref("rule")}} to paint both row and column gaps, then overwrite the {{cssxref("column-rule-color")}}, setting darker `blue` column gap decorations. We also set the {{cssxref("
-  rule-overlap")}} property to `column-over-row` to ensure the column segments are drawn on top of the row segments when the segments overlap. Finally, we set the `column-rule-inset-junction-end` to `16px`.
+We use the {{cssxref("display")}} property to turn the `.flexbox` elements into flex containers. We balance the items into three flex lines using {{cssxref("flex-wrap")}} and {{cssxref("flex-line-count")}}. We define a light blue {{cssxref("rule")}} to paint both row and column gaps, then overwrite the {{cssxref("column-rule-color")}}, setting darker `blue` column gap decorations. We also set the {{cssxref("rule-overlap")}} property to `column-over-row` to ensure the column segments are drawn on top of the row segments when the segments overlap. Finally, we set the `column-rule-inset-junction-end` to `16px`.
 
 ```css
 .flexbox {
