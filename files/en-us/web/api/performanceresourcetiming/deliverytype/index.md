@@ -19,7 +19,7 @@ A string, which can be one of the following values:
 - `"navigational-prefetch"` {{experimental_inline}} {{non-standard_inline}}
   - : The resource was retrieved from a prefetched response stored in an in-memory cache via the [Speculation Rules API](/en-US/docs/Web/API/Speculation_Rules_API).
 - `""` (empty string)
-  - : Returned if none of the above delivery types apply.
+  - : Returned if none of the above delivery types apply. Also returned for cross-origin resources that don't pass the {{HTTPHeader("Timing-Allow-Origin")}} check, even if they were retrieved from the cache.
 
 ## Examples
 

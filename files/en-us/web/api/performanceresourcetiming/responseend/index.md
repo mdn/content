@@ -12,21 +12,17 @@ The **`responseEnd`** read-only property returns a {{domxref("DOMHighResTimeStam
 
 ## Value
 
-A {{domxref("DOMHighResTimeStamp")}} immediately after the browser receives the last
-byte of the resource or immediately before the transport connection is closed, whichever
-comes first.
+A {{domxref("DOMHighResTimeStamp")}} immediately after the browser receives the last byte of the resource or immediately before the transport connection is closed, whichever comes first.
 
 ## Description
 
-Unlike many other `PerformanceResourceTiming` properties, the `responseEnd` property is available for cross-origin requests without the need of the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header.
-
-However, for cross-origin {{HTMLElement("iframe")}} elements, it may measure a later point in time, as discussed in the following section.
+The `responseEnd` property is available for cross-origin requests without the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header, except for cross-origin {{HTMLElement("iframe")}} elements.
 
 ### Cross-origin iframes
 
-If an {{HTMLElement("iframe")}} loads a cross-origin document that isn't served with a {{HTTPHeader("Timing-Allow-Origin")}} header that allows the embedding page, the precise time time at which the iframe's document finished downloading isn't reported, because it could reveal how the user interacted with the frame.
+For a cross-origin {{HTMLElement("iframe")}}, `responseEnd` is the time immediately after the browser receives the last byte of the iframe's document only if the document is served with a {{HTTPHeader("Timing-Allow-Origin")}} header that allows the embedding page.
 
-Instead, the browser reports a fallback entry once the iframe's {{domxref("Window/load_event", "load")}} event fires.
+Without this header, the precise time isn't reported, because it could reveal how the user interacted with the frame. Instead, the browser reports a fallback entry once the iframe's {{domxref("Window/load_event", "load")}} event fires.
 In this entry, {{domxref("PerformanceEntry.startTime", "startTime")}} is the time the iframe started navigating, and `responseEnd` is the time the iframe finished loading completely, including all of its subresources.
 The other timestamps, as well as the {{domxref("PerformanceResourceTiming.encodedBodySize", "encodedBodySize")}} and {{domxref("PerformanceResourceTiming.decodedBodySize", "decodedBodySize")}} properties, are `0`.
 
