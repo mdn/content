@@ -127,6 +127,8 @@ grid-area: unset;
 
 ## Description
 
+The `grid-area` property defines the area occupied by one item inside the grid layout.
+
 If four `<grid-line>` values are specified, `grid-row-start` is set to the first value, `grid-column-start` is set to the second value, `grid-row-end` is set to the third value, and `grid-column-end` is set to the fourth value.
 
 When `grid-column-end` is omitted, if `grid-column-start` is a {{cssxref("&lt;custom-ident&gt;")}}, `grid-column-end` is set to that `<custom-ident>`; otherwise, it is set to `auto`.

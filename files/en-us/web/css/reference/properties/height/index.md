@@ -96,10 +96,9 @@ height: unset;
 
 ## Description
 
-The {{cssxref("min-height")}} and {{cssxref("max-height")}} properties override `height`.
+The `height` property sets the height of an element. The {{cssxref("min-height")}} and {{cssxref("max-height")}} properties override `height`.
 
-> [!NOTE]
-> As a geometric property, `height` also applies to the {{SVGElement("svg")}}, {{SVGElement("rect")}}, {{SVGElement("image")}}, and {{SVGElement("foreignObject")}} SVG elements, with `auto` resolving to `0` and percent values being relative to the SVG viewport height for `<rect>`. The CSS `height` property value overrides any SVG {{SVGAttr("height")}} attribute value set on the SVG element.
+As a geometric property, `height` also applies to the {{SVGElement("svg")}}, {{SVGElement("rect")}}, {{SVGElement("image")}}, and {{SVGElement("foreignObject")}} SVG elements, with `auto` resolving to `0` and percent values being relative to the SVG viewport height for `<rect>`. The CSS `height` property value overrides any SVG {{SVGAttr("height")}} attribute value set on the SVG element.
 
 ## Accessibility
 

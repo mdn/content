@@ -89,7 +89,7 @@ This property is specified as one of the following keyword values:
 
 ## Description
 
-Note that any other scrolls, such as those performed by the user, are not affected by this property. When this property is specified on the root element, it applies to the viewport instead. This property specified on the `body` element will _not_ propagate to the viewport.
+The `scroll-behavior` customizes whether the scroll container scrolls instantly or smoothly when jumping due to navigation or scrolling APIs. Note that any other scrolls, such as those performed by the user, are not affected by this property. When this property is specified on the root element, it applies to the viewport instead. This property specified on the `body` element will _not_ propagate to the viewport.
 
 User agents are allowed to ignore this property.
 

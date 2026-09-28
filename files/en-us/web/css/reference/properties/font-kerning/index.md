@@ -65,7 +65,7 @@ This property is specified as one of the following keyword values:
 
 ## Description
 
-_Kerning_ affects how letters are spaced. In _well-kerned_ fonts, this feature makes character spacing more uniform and pleasant to read by reducing white space between certain character combinations.
+The `font-kerning` property enables or disables _kerning_, which affects how letters are spaced. In _well-kerned_ fonts, this feature makes character spacing more uniform and pleasant to read by reducing white space between certain character combinations.
 
 In the image below, for instance, the examples on the left do not use kerning, while the ones on the right do:
 

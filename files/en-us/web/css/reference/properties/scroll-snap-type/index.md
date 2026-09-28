@@ -123,6 +123,8 @@ This property is specified as one or two of the following keyword values:
 
 ## Description
 
+The `scroll-snap-type` property customizes where and how the scroll container can snap.
+
 If the content in the scroll port changes — for example, if content is added, moved, deleted, or resized — the scroll container will re-snap to the previously snapped content if that content is still present.
 
 If the value of a scroll snap-related property, such as `scroll-snap-type` or {{cssxref("scroll-margin")}}, is changed, the scroll container will re-snap based on the current value of `scroll-snap-type`.

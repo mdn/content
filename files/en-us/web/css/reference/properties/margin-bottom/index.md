@@ -97,9 +97,11 @@ The `margin-bottom` property is specified as the keyword `auto`, or a `<length>`
 
 ## Description
 
+The `margin-bottom` property sets the [margin area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#margin_area) on the bottom of an element.
+
 ![The effect of the CSS margin-bottom property on the element box](margin-bottom.svg)
 
-This property has no effect on _non-[replaced](/en-US/docs/Glossary/Replaced_elements)_ inline elements, such as {{HTMLElement("span")}} or {{HTMLElement("code")}}.
+It has no effect on _non-[replaced](/en-US/docs/Glossary/Replaced_elements)_ inline elements, such as {{HTMLElement("span")}} or {{HTMLElement("code")}}.
 
 ## Formal definition
 

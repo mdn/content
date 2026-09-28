@@ -95,7 +95,7 @@ This property is specified as one of the following keyword values:
 
 ## Description
 
-A _floating element_ is one where the computed value of `float` is not `none`.
+The `float` property enables floating an element to the left or right side of its container. A _floating element_ is one where the computed value of `float` is not `none`.
 
 As `float` implies the use of the block layout, it modifies the computed value of the {{cssxref("display")}} values, in some cases:
 
