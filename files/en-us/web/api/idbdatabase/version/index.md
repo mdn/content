@@ -8,10 +8,7 @@ browser-compat: api.IDBDatabase.version
 
 {{ APIRef("IndexedDB") }} {{AvailableInWorkers}}
 
-The **`version`** property of the {{domxref("IDBDatabase")}}
-interface is a 64-bit integer
-that contains the version of the connected database.
-When a database is first created, this attribute is an empty string.
+The **`version`** read-only property of the {{domxref("IDBDatabase")}} interface is a 64-bit integer that contains the version of the connected database. When a database is first created, this attribute is an empty string.
 
 ## Value
 
