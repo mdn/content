@@ -8,9 +8,7 @@ browser-compat: api.WorkerNavigator.appCodeName
 
 {{APIRef("HTML DOM")}}{{AvailableInWorkers("worker")}}
 
-The value of the **`WorkerNavigator.appCodeName`** property is
-always `"Mozilla"`, in any browser. This property is kept only for
-compatibility purposes.
+The **`appCodeName`** read-only property of the {{domxref("WorkerNavigator")}} interface is always `"Mozilla"`, in any browser. This property is kept only for compatibility purposes.
 
 > [!NOTE]
 > Do not rely on this property to return a real

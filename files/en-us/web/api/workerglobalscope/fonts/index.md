@@ -8,7 +8,7 @@ browser-compat: api.WorkerGlobalScope.fonts
 
 {{APIRef("CSS Font Loading API")}}{{AvailableInWorkers("worker")}}
 
-The **`fonts`** property of the {{domxref("WorkerGlobalScope")}} interface returns the {{domxref("FontFaceSet")}} interface of the worker.
+The **`fonts`** read-only property of the {{domxref("WorkerGlobalScope")}} interface returns the {{domxref("FontFaceSet")}} interface of the worker.
 
 This property is part of the [CSS Font Loading API](/en-US/docs/Web/API/CSS_Font_Loading_API).
 

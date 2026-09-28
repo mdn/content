@@ -8,8 +8,7 @@ browser-compat: api.HTMLMediaElement.ended
 
 {{APIRef("HTML DOM")}}
 
-The **`HTMLMediaElement.ended`** property indicates whether the media
-element has ended playback.
+The **`ended`** read-only property of the {{domxref("HTMLMediaElement")}} interface indicates whether the media element has ended playback.
 
 ## Value
 
