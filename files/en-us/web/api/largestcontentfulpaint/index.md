@@ -44,7 +44,7 @@ It also extends the following {{domxref("PerformanceEntry")}} properties, qualif
 ## Instance methods
 
 - {{domxref("LargestContentfulPaint.toJSON()")}}
-  - : Overrides the {{domxref("PerformanceEntry.toJSON()")}} method to return a JSON representation of the `LargestContentfulPaint` object.
+  - : Returns a JSON-serializable plain object representing the `LargestContentfulPaint` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Description
 
