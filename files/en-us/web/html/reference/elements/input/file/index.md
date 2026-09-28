@@ -215,7 +215,7 @@ In this example, we'll present a slightly more advanced file chooser that takes 
 The HTML looks like so:
 
 ```html
-<form method="post" enctype="multipart/form-data">
+<div class="file-picker">
   <div>
     <label for="image_uploads">Choose images to upload (PNG, JPG)</label>
     <input
@@ -229,9 +229,9 @@ The HTML looks like so:
     <p>No files currently selected for upload</p>
   </div>
   <div>
-    <button>Submit</button>
+    <button type="button">Submit</button>
   </div>
-</form>
+</div>
 ```
 
 ```css hidden
@@ -239,18 +239,18 @@ html {
   font-family: sans-serif;
 }
 
-form {
+.file-picker {
   background: #cccccc;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid black;
 }
 
-form ol {
+.file-picker ol {
   padding-left: 0;
 }
 
-form li,
+.file-picker li,
 div > p {
   background: #eeeeee;
   display: flex;
@@ -260,18 +260,18 @@ div > p {
   border: 1px solid black;
 }
 
-form img {
+.file-picker img {
   height: 64px;
   order: 1;
 }
 
-form p {
+.file-picker p {
   line-height: 32px;
   padding-left: 10px;
 }
 
-form label,
-form button {
+.file-picker label,
+.file-picker button {
   background-color: #7f9ccb;
   padding: 5px 10px;
   border-radius: 5px;
@@ -280,14 +280,14 @@ form button {
   height: auto;
 }
 
-form label:hover,
-form button:hover {
+.file-picker label:hover,
+.file-picker button:hover {
   background-color: #2d5ba3;
   color: white;
 }
 
-form label:active,
-form button:active {
+.file-picker label:active,
+.file-picker button:active {
   background-color: #0d3f8f;
   color: white;
 }
@@ -406,9 +406,8 @@ function returnFileSize(number) {
 > The "KB" and "MB" units here use the [SI prefix](https://en.wikipedia.org/wiki/Binary_prefix) convention of 1KB = 1000B, similar to macOS. Different systems represent file sizes differently—for example, Ubuntu uses IEC prefixes where 1KiB = 1024B, while RAM specifications often use SI prefixes to represent powers of two (1KB = 1024B). For this reason, we used `1e3` (`1000`) and `1e6` (`100000`) instead of `1024` and `1048576`. In your application, you should communicate the unit system clearly to your users if the exact size is important.
 
 ```js hidden
-const button = document.querySelector("form button");
-button.addEventListener("click", (e) => {
-  e.preventDefault();
+const button = document.querySelector(".file-picker button");
+button.addEventListener("click", () => {
   const para = document.createElement("p");
   para.append("Image uploaded!");
   preview.replaceChildren(para);

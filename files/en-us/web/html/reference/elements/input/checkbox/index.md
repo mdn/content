@@ -228,37 +228,35 @@ function updateDisplay() {
 ```
 
 ```html live-sample___indeterminate_state
-<form>
-  <fieldset>
-    <legend>Complete the recipe</legend>
-    <div>
-      <input type="checkbox" id="enchantment" name="enchantment" />
-      <label for="enchantment">Enchantment table</label>
-      <ul>
-        <li>
-          <input type="checkbox" id="book" name="ingredient" value="book" />
-          <label for="book">Book</label>
-        </li>
-        <li>
-          <input
-            type="checkbox"
-            id="diamonds"
-            name="ingredient"
-            value="diamonds" />
-          <label for="diamonds">Diamonds (x2)</label>
-        </li>
-        <li>
-          <input
-            type="checkbox"
-            id="obsidian"
-            name="ingredient"
-            value="obsidian" />
-          <label for="obsidian">Obsidian (x4)</label>
-        </li>
-      </ul>
-    </div>
-  </fieldset>
-</form>
+<fieldset>
+  <legend>Complete the recipe</legend>
+  <div>
+    <input type="checkbox" id="enchantment" name="enchantment" />
+    <label for="enchantment">Enchantment table</label>
+    <ul>
+      <li>
+        <input type="checkbox" id="book" name="ingredient" value="book" />
+        <label for="book">Book</label>
+      </li>
+      <li>
+        <input
+          type="checkbox"
+          id="diamonds"
+          name="ingredient"
+          value="diamonds" />
+        <label for="diamonds">Diamonds (x2)</label>
+      </li>
+      <li>
+        <input
+          type="checkbox"
+          id="obsidian"
+          name="ingredient"
+          value="obsidian" />
+        <label for="obsidian">Obsidian (x4)</label>
+      </li>
+    </ul>
+  </div>
+</fieldset>
 ```
 
 {{EmbedLiveSample("indeterminate_state", "", 200)}}

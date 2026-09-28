@@ -189,24 +189,15 @@ Let's have a look at a minimal example:
 
 ```html
 <search>
-  <form>
-    <div>
-      <input
-        type="search"
-        id="mySearch"
-        name="q"
-        placeholder="Search the site…"
-        aria-label="Search through site content" />
-      <button>Search</button>
-    </div>
-  </form>
+  <div>
+    <input
+      type="search"
+      id="mySearch"
+      name="q"
+      placeholder="Search the site…"
+      aria-label="Search through site content" />
+  </div>
 </search>
-```
-
-```js hidden
-document.querySelector("form").addEventListener("submit", (event) => {
-  event.preventDefault();
-});
 ```
 
 You can see how this is rendered below:
