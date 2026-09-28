@@ -68,67 +68,6 @@ monthControl.value = "2001-06";
 
 {{EmbedLiveSample("Setting_the_value_using_JavaScript", 600, 60)}}
 
-## Usage notes
-
-The control's UI varies in general from browser to browser; at the moment support is patchy, with only Chrome/Opera and Edge on desktop — and most modern mobile browser versions — having usable implementations.
-In browsers that don't support `month` inputs, the control degrades gracefully to [`<input type="text">`](/en-US/docs/Web/HTML/Reference/Elements/input/text), although there may be automatic validation of the entered text to ensure it's formatted as expected.
-
-For those of you using a browser that doesn't support `month`, the screenshot below shows what it looks like in Chrome and Opera.
-Clicking the down arrow on the right-hand side brings up a date picker that lets you select the month and year.
-
-![Month control on Chrome browser](month-control-chrome.png)
-
-The Microsoft Edge `month` control looks like this:
-
-![Month control on Edge browser](month-control-edge.png)
-
-Date-related inputs (including `month`) sound convenient at first glance; they promise an easy UI for choosing dates, and they normalize the data format sent to the server, regardless of the user's locale.
-However, there are issues with `<input type="month">` because at this time, many major browsers don't yet support it.
-
-We'll look at basic and more complex uses of `<input type="month">`, then offer advice on mitigating the browser support issue in the section [Handling browser support](#handling_browser_support)).
-
-### Basic uses of month
-
-The most basic use of `<input type="month">` involves a basic {{HTMLElement("input")}} and {{htmlelement("label")}} element combination, as seen below:
-
-```html
-<form>
-  <label for="bday-month">What month were you born in?</label>
-  <input id="bday-month" type="month" name="bday-month" />
-</form>
-```
-
-{{EmbedLiveSample('Basic_uses_of_month', 600, 40)}}
-
-### Setting maximum and minimum dates
-
-You can use the [`min`](/en-US/docs/Web/HTML/Reference/Elements/input#min) and [`max`](/en-US/docs/Web/HTML/Reference/Elements/input#max) attributes to restrict the range of dates that the user can choose.
-In the following example we specify a minimum month of `1900-01` and a maximum month of `2013-12`:
-
-```html
-<form>
-  <label for="bday-month">What month were you born in?</label>
-  <input
-    id="bday-month"
-    type="month"
-    name="bday-month"
-    min="1900-01"
-    max="2013-12" />
-</form>
-```
-
-{{EmbedLiveSample('Setting_maximum_and_minimum_dates', 600, 40)}}
-
-The result here is that:
-
-- Only months between in January 1900 and December 2013 can be selected; months outside that range can't be scrolled to in the control.
-- Depending on what browser you are using, you might find that months outside the specified range might not be selectable in the month picker (e.g., Edge), or invalid (see [Validation](#validation)) but still available (e.g., Chrome).
-
-### Controlling input size
-
-`<input type="month">` doesn't support form sizing attributes such as [`size`](/en-US/docs/Web/HTML/Reference/Elements/input#size).
-You'll have to resort to [CSS](/en-US/docs/Web/CSS) for sizing needs.
-
 ## Additional attributes
 
 In addition to the attributes common to {{HTMLElement("input")}} elements, month inputs offer the following attributes.
@@ -174,6 +113,55 @@ A string value of `any` means that no stepping is implied, and any value is allo
 
 > [!NOTE]
 > When the data entered by the user doesn't adhere to the stepping configuration, the {{Glossary("user agent")}} may round to the nearest valid value, preferring numbers in the positive direction when there are two equally close options.
+
+## Using month inputs
+
+Date-related inputs (including `month`) sound convenient at first glance; they promise an easy UI for choosing dates, and they normalize the data format sent to the server, regardless of the user's locale.
+However, there are issues with `<input type="month">` because at this time, many major browsers don't yet support it.
+
+We'll look at basic and more complex uses of `<input type="month">`, then offer advice on mitigating the browser support issue in the section [Handling browser support](#handling_browser_support).
+
+### Basic uses of month
+
+The most basic use of `<input type="month">` involves a basic {{HTMLElement("input")}} and {{htmlelement("label")}} element combination, as seen below:
+
+```html
+<form>
+  <label for="bday-month">What month were you born in?</label>
+  <input id="bday-month" type="month" name="bday-month" />
+</form>
+```
+
+{{EmbedLiveSample('Basic_uses_of_month', 600, 40)}}
+
+### Setting maximum and minimum dates
+
+You can use the [`min`](/en-US/docs/Web/HTML/Reference/Elements/input#min) and [`max`](/en-US/docs/Web/HTML/Reference/Elements/input#max) attributes to restrict the range of dates that the user can choose.
+In the following example we specify a minimum month of `1900-01` and a maximum month of `2013-12`:
+
+```html
+<form>
+  <label for="bday-month">What month were you born in?</label>
+  <input
+    id="bday-month"
+    type="month"
+    name="bday-month"
+    min="1900-01"
+    max="2013-12" />
+</form>
+```
+
+{{EmbedLiveSample('Setting_maximum_and_minimum_dates', 600, 40)}}
+
+The result here is that:
+
+- Only months between in January 1900 and December 2013 can be selected; months outside that range can't be scrolled to in the control.
+- Depending on what browser you are using, you might find that months outside the specified range might not be selectable in the month picker (e.g., Edge), or invalid (see [Validation](#validation)) but still available (e.g., Chrome).
+
+### Controlling input size
+
+`<input type="month">` doesn't support form sizing attributes such as [`size`](/en-US/docs/Web/HTML/Reference/Elements/input#size).
+You'll have to resort to [CSS](/en-US/docs/Web/CSS) for sizing needs.
 
 ## Validation
 
@@ -254,8 +242,19 @@ input:valid + span::after {
 
 ## Handling browser support
 
-As mentioned above, the major problem with using date inputs at the time of writing is that many major browsers don't yet implement them all; only Chrome/Opera and Edge support it on desktop, and most modern browsers on mobile.
-As an example, the `month` picker on Chrome for Android looks like this:
+The control's UI varies in general from browser to browser; at the moment support is patchy, with only Chrome/Opera and Edge on desktop — and most modern mobile browser versions — having usable implementations.
+In browsers that don't support `month` inputs, the control degrades gracefully to [`<input type="text">`](/en-US/docs/Web/HTML/Reference/Elements/input/text), although there may be automatic validation of the entered text to ensure it's formatted as expected.
+
+For those of you using a browser that doesn't support `month`, the screenshot below shows what it looks like in Chrome and Opera.
+Clicking the down arrow on the right-hand side brings up a date picker that lets you select the month and year.
+
+![Month control on Chrome browser](month-control-chrome.png)
+
+The Microsoft Edge `month` control looks like this:
+
+![Month control on Edge browser](month-control-edge.png)
+
+The `month` picker on Chrome for Android looks like this:
 
 ![Month picker on Chrome for Android](month-android.png)
 

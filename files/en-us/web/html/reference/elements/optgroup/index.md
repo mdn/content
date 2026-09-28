@@ -9,8 +9,6 @@ sidebar: htmlsidebar
 
 The **`<optgroup>`** [HTML](/en-US/docs/Web/HTML) element creates a grouping of options within a {{HTMLElement("select")}} element.
 
-In [customizable `<select>` elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), the {{htmlelement("legend")}} element is allowed as a child of `<optgroup>`, to provide a label that is easy to target and style. This replaces any text set in the `<optgroup>` element's `label` attribute, and it has the same semantics.
-
 {{InteractiveExample("HTML Demo: &lt;optgroup&gt;", "tabbed-standard")}}
 
 ```html interactive-example
@@ -47,8 +45,9 @@ This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Glo
 
 ## Usage notes
 
-> [!NOTE]
-> Optgroup elements may not be nested.
+Optgroup elements may not be nested.
+
+In [customizable `<select>` elements](/en-US/docs/Learn_web_development/Extensions/Forms/Customizable_select), the {{htmlelement("legend")}} element is allowed as a child of `<optgroup>`, to provide a label that is easy to target and style. This replaces any text set in the `<optgroup>` element's `label` attribute, and it has the same semantics.
 
 ## Examples
 
