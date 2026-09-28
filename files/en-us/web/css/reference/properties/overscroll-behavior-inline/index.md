@@ -16,6 +16,7 @@ See {{cssxref("overscroll-behavior")}} for a full explanation.
 ```css
 /* Keyword values */
 overscroll-behavior-inline: auto; /* default */
+overscroll-behavior-inline: chain;
 overscroll-behavior-inline: contain;
 overscroll-behavior-inline: none;
 
