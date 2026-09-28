@@ -84,11 +84,11 @@ The library translates `gapi.client.drive.files.list()` into an HTTP request and
 
 ### They usually require API keys
 
-Security for browser APIs tends to be handled by permission prompts, as [discussed in our first article](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction#they_have_additional_security_mechanisms_where_appropriate). The purpose of these is so that the user knows what is going on in the websites they visit and is less likely to fall victim to someone using an API in a malicious way.
+Security for browser APIs tends to be handled by permission prompts, as [discussed in our first article](/en-US/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction#they_have_additional_security_mechanisms_where_appropriate). The purpose of these is to let the user know what is happening on the websites they visit and to make them less likely to fall victim to someone maliciously using an API.
 
 Third-party APIs have a slightly different permissions system — they tend to use developer keys to allow developers access to the API functionality, which is more to protect the API vendor than the user.
 
-Requiring a key enables the API provider to hold users of the API accountable for their actions. When the developer has registered for a key, they are then known to the API provider, and action can be taken if they start to do anything malicious with the API (such as tracking people's location or trying to spam the API with loads of requests to stop it working, for example). The easiest action would be to just revoke their API privileges.
+Requiring a key enables the API provider to hold developers using the API accountable for their actions. When the developer registers a key, the API provider can identify them and can take action if the developer starts to do anything malicious with the API (such as tracking people's location or spamming the API with loads of requests to stop it from working). The easiest action is to revoke the developer's API privileges.
 
 You'll find a line similar to the following in the YouTube API example:
 
@@ -101,7 +101,7 @@ This line specifies an API or developer key to use in your application — the d
 Other APIs may require that you include the key in a slightly different way, but the pattern is relatively similar for most of them.
 
 > [!WARNING]
-> Protect API keys like you would protect your passwords. Unless explicitly permitted by the API vendor's documentation, never, ever, embed API keys in your frontend code. Otherwise, any visitor of your website will be able to extract the API key and abuse it, possibly leaking sensitive information or getting you banned from the API. You should always set up your own backend and _proxy_ the request—that is, your server communicates with the third-party API with the API key, while your user communicates with your own server. The API key only lives on your server.
+> Protect API keys like you would protect your passwords. Unless explicitly permitted by the API vendor's documentation, never, ever, embed API keys in your frontend code. Otherwise, any visitor to your website can extract the API key and abuse it, possibly leaking sensitive information or getting you banned from using the API. Always set up your own backend and _proxy_ the request—that is, your server communicates with the third-party API using the API key, while your user communicates with your own server. The API key only lives on your server.
 >
 > It also goes without saying that you should never commit them to your public GitHub repositories. If you accidentally expose a key, immediately revoke it and get a new one.
 
@@ -111,7 +111,7 @@ Not all APIs need API keys. Some APIs provide functionality that is both open-ac
 
 As already mentioned, all APIs ultimately become HTTP requests, but some APIs provide SDKs while others expect you to handle the request yourself.
 
-For the latter case, the APIs are usually designed in a [**RESTful**](https://en.wikipedia.org/wiki/REST) fashion. This is a paradigm where the client is _stateless_ (i.e., each request is made in isolation), sends requests to specific URLs using specific HTTP verbs (`GET`, `POST`, etc.) to carry out specific actions, and provides the input for each action as either URL parameters or the request body.
+For the latter case, the APIs are usually designed in a [**RESTful**](https://en.wikipedia.org/wiki/REST) fashion. This is a paradigm where the client is _stateless_ (i.e., each request is made in isolation), sends requests to specific URLs using specific HTTP verbs (`GET`, `POST`, etc.) to carry out specific actions, and sends the input for each action via URL parameters or the request body.
 
 Let's look at the [GitHub REST API](https://docs.github.com/en/rest). This API allows you to retrieve information about GitHub repositories and display it on your site.
 
@@ -285,9 +285,9 @@ For example, searching for `cats` without dates produces a URL like this:
 https://api.github.com/search/repositories?q=cats+is%3Apublic&page=1&per_page=10
 ```
 
-The `headers` object specifies the response format and API version. The {{HTTPHeader("Authorization")}} header is worth of attention: this is the standard way to transfer API keys. Here we use the `Bearer` scheme.
+The `headers` object specifies the response format and API version. The {{HTTPHeader("Authorization")}} header is worthy of your attention: this is the standard way to transfer API keys. Here we use the `Bearer` scheme.
 
-The REST API will return us data in JSON format because we requested it with `Accept: "application/vnd.github+json"`, so we parse it using [`response.json()`](/en-US/docs/Web/API/Response/json). The JSON's shape can also be found in GitHub's [Search repositories endpoint documentation](https://docs.github.com/en/rest/search/search#search-repositories).
+The REST API returns data in JSON format because we requested it with `Accept: "application/vnd.github+json"`; we then parse it using [`response.json()`](/en-US/docs/Web/API/Response/json). The JSON's shape can also be found in GitHub's [Search repositories endpoint documentation](https://docs.github.com/en/rest/search/search#search-repositories).
 
 > [!NOTE]
 > If you receive a `401` error, check for a mistyped, expired, or revoked token. A `403` or `429` error can indicate a rate limit, in which case you should wait before trying again, rather than repeatedly clicking Search, which only worsens the situation. See GitHub's [troubleshooting guidance](https://docs.github.com/en/rest/using-the-rest-api/troubleshooting-the-rest-api).
@@ -339,7 +339,7 @@ The code reads the JSON response body and converts the result to a DOM tree.
 
 ### Wiring up the pagination buttons
 
-These event listeners request the next or previous page when the buttons are clicked:
+We provide event listeners that listen for the "Previous page" and "Next page" buttons being clicked, and request the next or previous results page as appropriate:
 
 ```js live-sample___github-search
 nextBtn.addEventListener("click", () => {
@@ -393,7 +393,7 @@ nav {
 We also built another example for you to study and learn from — see our [YouTube video search example](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/youtube/).
 
 > [!NOTE]
-> The linked example doesn't work, because this is a frontend-only demo, and as we said, never embed API keys in frontend. To run searches, you need to set up a local copy with your own API key as described below.
+> The linked example doesn't work because it doesn't contain a valid API key; as we said, you should never share API keys in published frontend code. To run the demo, set up a local copy with your own API key as described below.
 
 This uses two related APIs:
 
