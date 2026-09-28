@@ -11,8 +11,6 @@ browser-compat: api.HTMLStyleElement.sheet
 The read-only **`sheet`** property of the {{domxref("HTMLStyleElement")}} interface
 contains the stylesheet associated with that element.
 
-A {{DOMxref("CSSStyleSheet")}} is always associated with a {{domxref("HTMLStyleElement")}}, unless its `type` attribute is not `text/css`.
-
 ## Value
 
 A {{DOMxRef("CSSStyleSheet")}} object, or `null` if none is associated with the element.
