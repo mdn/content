@@ -243,7 +243,7 @@ Click one of the buttons to see that behavior applied to the dialog that appears
 - `auto`: if you overscroll the dialog you will see the content "bounce" and if you then continue to scroll you will see the background scroll too.
 - `contain`: if you overscroll the dialog you will see the content "bounce" and if you then continue to scroll you will see the background does not scroll.
 - `chain`: if you overscroll the dialog you will see that the content does not "bounce" and if you then continue to scroll you will see the background scroll too.
-- `contain`: if you overscroll the dialog you will see that the content does not "bounce" and if you then continue to scroll you will see the background does not scroll.
+- `none`: if you overscroll the dialog you will see that the content does not "bounce" and if you then continue to scroll you will see the background does not scroll.
 
 {{EmbedLiveSample("overscroll-behavior_on_dialog_elements", "300", "180")}}
 
