@@ -28,25 +28,45 @@ Unsupported constraints are omitted, so reading their properties returns {{jsxre
 Available properties are:
 
 - [`aspectRatio`](/en-US/docs/Web/API/MediaTrackConstraints/aspectRatio)
+  - : The user agent supports constraining the aspect ratio (width divided by height) of video tracks.
 - [`autoGainControl`](/en-US/docs/Web/API/MediaTrackConstraints/autoGainControl)
+  - : The user agent supports specifying whether automatic gain control is enabled for audio tracks.
 - [`channelCount`](/en-US/docs/Web/API/MediaTrackConstraints/channelCount)
+  - : The user agent supports constraining the number of audio channels, such as one for mono or two for stereo.
 - [`deviceId`](/en-US/docs/Web/API/MediaTrackConstraints/deviceId)
+  - : The user agent supports selecting a media source by its device ID.
 - [`displaySurface`](/en-US/docs/Web/API/MediaTrackConstraints/displaySurface)
+  - : The user agent supports specifying a preferred display surface type (browser tab, window, or monitor) for screen capture.
 - [`echoCancellation`](/en-US/docs/Web/API/MediaTrackConstraints/echoCancellation)
+  - : The user agent supports specifying whether echo cancellation is enabled for audio tracks.
 - [`facingMode`](/en-US/docs/Web/API/MediaTrackConstraints/facingMode)
+  - : The user agent supports specifying the direction a camera faces, such as toward the user or their environment.
 - [`frameRate`](/en-US/docs/Web/API/MediaTrackConstraints/frameRate)
+  - : The user agent supports constraining the frame rate of video tracks, in frames per second.
 - [`groupId`](/en-US/docs/Web/API/MediaTrackConstraints/groupId)
+  - : The user agent supports selecting a media source by its group ID, which identifies sources belonging to the same physical device.
 - [`height`](/en-US/docs/Web/API/MediaTrackConstraints/height)
+  - : The user agent supports constraining the height of video tracks.
 - [`latency`](/en-US/docs/Web/API/MediaTrackConstraints/latency)
+  - : The user agent supports constraining the latency of audio tracks, in seconds.
 - [`logicalSurface`](/en-US/docs/Web/API/MediaTrackConstraints/logicalSurface)
+  - : The user agent supports specifying whether screen capture uses logical display surfaces, which may not be entirely visible onscreen.
 - [`noiseSuppression`](/en-US/docs/Web/API/MediaTrackConstraints/noiseSuppression)
+  - : The user agent supports specifying whether noise suppression is enabled for audio tracks.
 - [`resizeMode`](/en-US/docs/Web/API/MediaTrackConstraints#resizemode)
+  - : The user agent supports specifying whether cropping and downscaling can be used to derive a video track's resolution and frame rate.
 - [`restrictOwnAudio`](/en-US/docs/Web/API/MediaTrackConstraints/restrictOwnAudio) {{Experimental_Inline}}
+  - : The user agent supports specifying whether system audio originating from the capturing tab is filtered out of screen capture.
 - [`sampleRate`](/en-US/docs/Web/API/MediaTrackConstraints/sampleRate)
+  - : The user agent supports constraining the sample rate of audio tracks.
 - [`sampleSize`](/en-US/docs/Web/API/MediaTrackConstraints/sampleSize)
+  - : The user agent supports constraining the sample size of audio tracks, in bits per linear sample.
 - [`suppressLocalAudioPlayback`](/en-US/docs/Web/API/MediaTrackConstraints/suppressLocalAudioPlayback) {{Experimental_Inline}}
+  - : The user agent supports specifying whether audio playing in a captured tab continues to play through the user's local speakers.
 - [`volume`](/en-US/docs/Web/API/MediaTrackConstraints/volume) {{Deprecated_Inline}} {{Non-standard_Inline}}
+  - : The user agent supports constraining the volume of audio tracks, from 0.0 (silence) to 1.0 (the highest supported volume).
 - [`width`](/en-US/docs/Web/API/MediaTrackConstraints/width)
+  - : The user agent supports constraining the width of video tracks.
 
 ## Examples
 

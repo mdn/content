@@ -12,7 +12,7 @@ The {{domxref("MediaTrackConstraints")}} dictionary's **`aspectRatio`** property
 {{domxref("MediaTrackSettings.aspectRatio", "aspectRatio")}} constrainable property.
 
 If needed, you can determine whether or not this constraint is supported by checking
-the value of [`aspectRatio`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#return_value) as returned by a
+the value of [`aspectRatio`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#aspectratio) as returned by a
 call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
 is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 

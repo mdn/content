@@ -14,7 +14,7 @@ describing the requested or mandatory constraints placed upon the value of the
 {{domxref("MediaTrackSettings.groupId", "groupId")}} constrainable property.
 
 If needed, you can determine whether or not this constraint is supported by checking
-the value of [`groupId`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#return_value) as returned by a call
+the value of [`groupId`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#groupid) as returned by a call
 to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is
 unnecessary since browsers will ignore any constraints they're unfamiliar with.
 

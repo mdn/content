@@ -11,7 +11,7 @@ browser-compat: api.MediaStreamTrack.applyConstraints.noiseSuppression_constrain
 The {{domxref("MediaTrackConstraints")}} dictionary's **`noiseSuppression`** property is a [`ConstrainBoolean`](/en-US/docs/Web/API/MediaTrackConstraints#constrainboolean) describing the requested or mandatory constraints placed upon the value of the {{domxref("MediaTrackSettings.noiseSuppression","noiseSuppression")}} constrainable property.
 
 If needed, you can determine whether or not this constraint is supported by checking
-the value of [`noiseSuppression`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#return_value) as returned
+the value of [`noiseSuppression`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#noisesuppression) as returned
 by a call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically
 this is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 

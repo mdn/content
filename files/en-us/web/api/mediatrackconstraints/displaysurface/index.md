@@ -12,7 +12,7 @@ The {{domxref("MediaTrackConstraints")}} dictionary's **`displaySurface`** prope
 
 This is set by the application to identify to the user agent the type of display surface (`window`, `browser`, or `monitor`) preferred by the application. It has no effect on what the user can choose to share, but may be used to present the options in a different order.
 
-If needed, you can determine whether or not this constraint is supported by checking the value of [`displaySurface`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#return_value) as returned by a call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is unnecessary since browsers will ignore any constraints they're unfamiliar with.
+If needed, you can determine whether or not this constraint is supported by checking the value of [`displaySurface`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#displaysurface) as returned by a call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
 ## Value
 

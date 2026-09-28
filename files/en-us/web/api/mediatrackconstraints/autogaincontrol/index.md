@@ -12,7 +12,7 @@ The {{domxref("MediaTrackConstraints")}} dictionary's **`autoGainControl`** prop
 upon the value of the {{domxref("MediaTrackSettings.autoGainControl", "autoGainControl")}} constrainable property.
 
 If needed, you can determine whether or not this constraint is supported by checking
-the value of [`autoGainControl`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#return_value) as returned
+the value of [`autoGainControl`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#autogaincontrol) as returned
 by a call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically
 this is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 

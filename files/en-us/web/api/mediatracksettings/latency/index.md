@@ -21,7 +21,7 @@ This is, of course, an approximation, since latency can vary for many reasons in
 CPU, transmission, and storage overhead.
 
 If needed, you can determine whether or not this constraint is supported by checking
-the value of [`latency`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#return_value) as returned by a call
+the value of [`latency`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#latency) as returned by a call
 to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is
 unnecessary since browsers will ignore any constraints they're unfamiliar with.
 

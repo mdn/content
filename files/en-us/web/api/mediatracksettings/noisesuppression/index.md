@@ -23,7 +23,7 @@ feature is typically used on microphones, although it is technically possible it
 be provided by other input sources as well.
 
 If needed, you can determine whether or not this constraint is supported by checking
-the value of [`noiseSuppression`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#return_value) as returned
+the value of [`noiseSuppression`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#noisesuppression) as returned
 by a call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically
 this is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
