@@ -377,13 +377,11 @@ Flexbox is particularly useful when it comes to styling form controls. Forms hav
 Flexbox makes this type of layout achievable with just a few declarations. The `<label>`, `<input>` and `<button>` are contained in a wrapper that is set to `display: flex`. The flex properties allow the `<input>` field to grow, while the button and label do not grow. The text input field will grow and shrink depending on the space available.
 
 ```html live-sample___label-input-button
-<form class="example">
-  <div class="wrapper">
-    <label for="text">Label</label>
-    <input id="text" type="text" />
-    <input type="submit" value="Send" />
-  </div>
-</form>
+<div class="wrapper">
+  <label for="text">Label</label>
+  <input id="text" type="text" />
+  <button type="button">Send</button>
+</div>
 ```
 
 ```css live-sample___label-input-button
@@ -405,7 +403,7 @@ Flexbox makes this type of layout achievable with just a few declarations. The `
   border-right: 1px solid rgb(96 139 168);
   flex: 1 1 auto;
 }
-.wrapper input[type="submit"] {
+.wrapper button {
   background-color: rgb(96 139 168);
   color: white;
 }

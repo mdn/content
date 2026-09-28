@@ -12,8 +12,7 @@ The **`:checked`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS
 {{InteractiveExample("CSS Demo: :checked", "tabbed-shorter")}}
 
 ```css interactive-example
-label,
-input[type="submit"] {
+label {
   display: block;
   margin-top: 1em;
 }
@@ -25,26 +24,22 @@ input:checked {
 ```
 
 ```html interactive-example
-<form>
-  <p>How did you find out about us?</p>
-  <label
-    ><input name="origin" type="radio" value="google" checked /> Google</label
-  >
-  <label><input name="origin" type="radio" value="facebook" /> Facebook</label>
-  <p>Please agree to our terms:</p>
+<p>How did you find out about us?</p>
+<label
+  ><input name="origin" type="radio" value="google" checked /> Google</label
+>
+<label><input name="origin" type="radio" value="facebook" /> Facebook</label>
+<p>Please agree to our terms:</p>
 
-  <label
-    ><input name="newsletter" type="checkbox" checked /> I want to subscribe to
-    a personalized newsletter.</label
-  >
+<label
+  ><input name="newsletter" type="checkbox" checked /> I want to subscribe to a
+  personalized newsletter.</label
+>
 
-  <label
-    ><input name="privacy" type="checkbox" /> I have read and I agree to the
-    Privacy Policy.</label
-  >
-
-  <input type="submit" value="Submit form" />
-</form>
+<label
+  ><input name="privacy" type="checkbox" /> I have read and I agree to the
+  Privacy Policy.</label
+>
 ```
 
 The user can engage this state by checking/selecting an element, or disengage it by unchecking/deselecting the element.
