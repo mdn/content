@@ -56,7 +56,7 @@ myMap.set("bar", "baz");
 
 ### Using the set() with chaining
 
-Since the `set()` method returns back the same `Map` object, you can chain the method call like below:
+Since the `set()` method returns the same `Map` object, you can chain the method call like below:
 
 ```js
 // Add new elements to the map with chaining.

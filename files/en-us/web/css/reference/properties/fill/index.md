@@ -19,7 +19,7 @@ If subpaths are open, `fill` closes the path before painting, as if a "closepath
 ## Syntax
 
 ```css
-/* keywords */
+/* Keyword values */
 fill: none;
 fill: context-fill;
 fill: context-stroke;

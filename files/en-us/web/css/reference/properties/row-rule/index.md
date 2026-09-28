@@ -103,7 +103,7 @@ row-rule: unset;
 
 ### Values
 
-The `row-rule` property accepts a comma-separated list of values, including:
+This property is specified as a comma-separated list of values. Each value can be one of the following value types:
 
 - `<gap-rule>`
   - : Specified as one, two, or three of the values listed below, in any order.

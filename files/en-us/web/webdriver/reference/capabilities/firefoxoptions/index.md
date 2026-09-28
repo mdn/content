@@ -94,7 +94,7 @@ default locations of Firefox are:
 
 ### `args` (array of strings)
 
-Command line arguments to pass to the Firefox binary. These must include the leading dash (`-`) where
+Command-line arguments to pass to the Firefox binary. These must include the leading dash (`-`) where
 required, e.g., `["-headless"]`.
 
 To have geckodriver pick up an existing [profile](#profile_string) on the local filesystem, you may pass

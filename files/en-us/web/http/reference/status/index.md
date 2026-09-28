@@ -210,5 +210,5 @@ The status codes listed below are defined by [RFC 9110](https://httpwg.org/specs
 ## See also
 
 - [List of HTTP status codes on Wikipedia](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
-- [IANA official registry of HTTP status codes](https://www.iana.org/assignments/http-status-codes/http-status-codes.xhtml)
+- [IANA official registry of HTTP status codes](https://www.iana.org/assignments/http-status-codes)
 - [rfc4918 '102 Processing' removal notes](https://www.rfc-editor.org/info/rfc4918/#section-21.4)

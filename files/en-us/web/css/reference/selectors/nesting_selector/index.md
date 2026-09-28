@@ -15,14 +15,24 @@ If not used in nested style rule, the `&` nesting selector represents the [scopi
 
 ## Syntax
 
-```css
+```css-nolint
+/* Nested directly — adds whitespace (descendant) */
 parentRule {
-  /* parent rule style properties */
-  & childRule {
-    /* child rule style properties */
-  }
+  & childRule { }
+}
+
+/* Attached to parent — no whitespace (e.g., pseudo-class, compound selector) */
+parentRule {
+  &:pseudo-class { }
+}
+
+/* Reversed context — & placed after another selector */
+parentRule {
+  otherRule & { }
 }
 ```
+
+## Description
 
 ### `&` nesting selector and whitespace
 
@@ -237,7 +247,7 @@ This example uses nested CSS styling.
 
 ### Using `&` outside nested rule
 
-If not used in nested style rule, the `&` nesting selector represents the [scoping root](/en-US/docs/Web/CSS/Reference/Selectors/:scope).
+If not used in a nested style rule, `&` represents the [scoping root](/en-US/docs/Web/CSS/Reference/Selectors/:scope). In this case, all styles apply to the [document](/en-US/docs/Web/API/Document).
 
 ```html
 <p>Hover over the output box to change document's background color.</p>
@@ -255,8 +265,6 @@ If not used in nested style rule, the `&` nesting selector represents the [scopi
 ```
 
 #### Result
-
-In this case, all the styles apply to [document](/en-US/docs/Web/API/Document).
 
 {{EmbedLiveSample('Usage_outside_nested_rule','100%','65')}}
 

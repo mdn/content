@@ -18,4 +18,4 @@ All XSS attacks depend on a website doing two things:
 ## See also
 
 - [Cross-site scripting (XSS)](/en-US/docs/Web/Security/Attacks/XSS)
-- [Cross-site scripting on OWASP](https://owasp.org/www-community/attacks/xss/)
+- [Cross-site scripting on OWASP](https://community.owasp.org/attacks/xss/)

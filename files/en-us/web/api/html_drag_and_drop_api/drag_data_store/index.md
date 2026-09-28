@@ -274,7 +274,7 @@ You can also use other types that you invent for custom purposes. Strive to alwa
 
 ### Dragging files from an operating system file explorer
 
-When the dragged item is a file, an item of kind `file` is added to the drag data. The `type` is set to the MIME type of the file (as provided by the operating system), or `application/octet-stream` if the type is unknown. Currently, dragged files can only originate outside of the browser, such as from a file explorer.
+When the dragged item is a file, an item of kind `file` is added to the drag data. The MIME type is usually determined based on the extension without inspecting the file's contents. All browsers return an empty string when the MIME type cannot be determined, although the specification requires `application/octet-stream`. Currently, dragged files can only originate outside of the browser, such as from a file explorer.
 
 Firefox also adds a non-standard text item of type `application/x-moz-file` containing the full path of the file on the user's file system. Unless within privileged code (such as an extension), its value is the empty string.
 

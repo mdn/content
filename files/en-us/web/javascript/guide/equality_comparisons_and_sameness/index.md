@@ -24,7 +24,7 @@ They correspond to three of four equality algorithms in JavaScript:
 - [SameValue](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-samevalue): `Object.is()`
 - [SameValueZero](https://tc39.es/ecma262/multipage/abstract-operations.html#sec-samevaluezero): used by many built-in operations
 
-Note that the distinction between these all have to do with their handling of primitives; none of them compares whether the parameters are conceptually similar in structure. For any non-primitive objects `x` and `y` which have the same structure but are distinct objects themselves, all of the above forms will evaluate to `false`.
+Note that the distinctions between these all have to do with their handling of primitives; none of them compares whether the parameters are conceptually similar in structure. For any non-primitive objects `x` and `y` which have the same structure but are distinct objects themselves, all of the above forms will evaluate to `false`.
 
 Comparing the contents of distinct objects or arrays recursively is called {{glossary("deep equality")}}. JavaScript does not provide a general deep comparison operator; libraries and host APIs can provide comparison utilities with different rules.
 
@@ -206,7 +206,7 @@ Relying on {{jsxref("Object.is")}} when the sign of zeros is not taken into acco
 
 ### Caveat: Object.is() and NaN
 
-The {{jsxref("Object.is")}} specification treats all instances of {{jsxref("NaN")}} as the same object. However, since [typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) are available, we can have distinct floating point representations of `NaN` which don't behave identically in all contexts. For example:
+{{jsxref("Object.is()")}} treats all instances of {{jsxref("NaN")}} as the same value. However, since [typed arrays](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) are available, we can have distinct floating point representations of `NaN` which don't behave identically in all contexts. For example:
 
 ```js
 const f2b = (x) => new Uint8Array(new Float64Array([x]).buffer);

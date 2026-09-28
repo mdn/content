@@ -33,6 +33,8 @@ The **`-webkit-text-stroke-width`** [CSS](/en-US/docs/Web/CSS) property specifie
 
 ### Values
 
+This property is specified as the following value:
+
 - `<line-width>`
   - : The width of the stroke.
 

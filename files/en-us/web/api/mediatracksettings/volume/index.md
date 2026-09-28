@@ -21,7 +21,7 @@ calling either {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} or
 {{domxref("MediaStreamTrack.applyConstraints()")}}.
 
 If needed, you can determine whether or not this constraint is supported by checking
-the value of {{domxref("MediaTrackSupportedConstraints.volume")}} as returned by a call
+the value of [`volume`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#volume) as returned by a call
 to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is
 unnecessary since browsers will ignore any constraints they're unfamiliar with.
 

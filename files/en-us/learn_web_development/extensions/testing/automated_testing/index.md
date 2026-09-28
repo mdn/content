@@ -344,7 +344,7 @@ There's a lot more you can do with Gulp. The [Gulp plugin directory](https://gul
 There are many other task runners available. We certainly aren't trying to say that Gulp is the best solution out there, but it works for us and it is fairly accessible to beginners. You could also try using other solutions:
 
 - Grunt works in a very similar way to Gulp, except that it relies on tasks specified in a config file, rather than using written JavaScript. See [Getting started with Grunt for more details.](https://gruntjs.com/getting-started)
-- You can also run tasks directly using npm scripts located inside your `package.json` file, without needing to install any kind of extra task runner system. This works on the premise that things like Gulp plugins are basically wrappers around command line tools. So, if you can work out how to run the tools using the command line, you can then run them using npm scripts. It is a bit trickier to work with, but can be rewarding for those who are strong with their command line skills. [Why npm scripts?](https://css-tricks.com/why-npm-scripts/) provides a good introduction with a good deal of further information.
+- You can also run tasks directly using npm scripts located inside your `package.json` file, without needing to install any kind of extra task runner system. This works on the premise that things like Gulp plugins are basically wrappers around command-line tools. So, if you can work out how to run the tools using the command line, you can then run them using npm scripts. It is a bit trickier to work with, but can be rewarding for those who are strong with their command-line skills. [Why npm scripts?](https://css-tricks.com/why-npm-scripts/) provides a good introduction with a good deal of further information.
 
 ## Using commercial testing services to speed up browser testing
 
@@ -592,7 +592,7 @@ When signed in, follow the 'Getting started' guide on the top-left of the page:
 3. When you start testing, a loading screen will appear, and an environment spins up running the device/browser combination you chose.
    You can then start to remotely test the website running in the chosen browser.
 
-You can do quite a lot at this point, like share a test URL so someone else can observe the test remotely, copy text/notes to a remote clipboard, take a screenshot, test in full screen mode, and more.
+You can do quite a lot at this point, like share a test URL so someone else can observe the test remotely, copy text/notes to a remote clipboard, take a screenshot, test in fullscreen mode, and more.
 
 Once you stop the session, you'll return to the _Live_ tab, where you'll see an entry for each of the previous manual sessions you started.
 Clicking on one of these entries shows more data for the session.
@@ -674,7 +674,7 @@ The [TestingBot dashboard](https://testingbot.com/members) lists the various opt
    - Change the screen resolution
    - Copy text/notes to a remote clipboard
    - Take, edit, and download screenshots
-   - Test in full screen mode.
+   - Test in fullscreen mode.
 
 Once you stop the session, you'll return to the _Live Web Testing_ page, where you'll see an entry for each of the previous manual sessions you started. Clicking on one of these entries shows more data for the session. Here you can download any screenshots you took, watch a video of the test, and view logs for the session.
 

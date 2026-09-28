@@ -63,7 +63,7 @@ _`Element` inherits properties from its parent interface, {{DOMxRef("Node")}}, a
   - : An `Element`, the element immediately following the given one in the tree, or `null` if there's no sibling node.
 - {{DOMxRef("Element.outerHTML")}}
   - : A string representing the markup of the element including its content. When used as a setter, replaces the element with nodes parsed from the given string.
-- {{DOMxRef("Element.part")}}
+- {{DOMxRef("Element.part")}} {{ReadOnlyInline}}
   - : Represents the part identifier(s) of the element (i.e., set using the `part` attribute), returned as a {{domxref("DOMTokenList")}}.
 - {{DOMxRef("Element.prefix")}} {{ReadOnlyInline}}
   - : A string representing the namespace prefix of the element, or `null` if no prefix is specified.
@@ -109,7 +109,7 @@ _The `Element` interface also includes the following properties._
 - {{domxref("Element.ariaColIndex")}}
   - : A string reflecting the [`aria-colindex`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) attribute, which defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.
 - {{domxref("Element.ariaColIndexText")}}
-  - : A string reflecting the [`aria-colindextext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindextext) attribute, which defines a human readable text alternative of aria-colindex.
+  - : A string reflecting the [`aria-colindextext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindextext) attribute, which defines a human-readable text alternative of aria-colindex.
 - {{domxref("Element.ariaColSpan")}}
   - : A string reflecting the [`aria-colspan`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colspan) attribute, which defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.
 - {{domxref("Element.ariaCurrent")}}
@@ -161,7 +161,7 @@ _The `Element` interface also includes the following properties._
 - {{domxref("Element.ariaRowIndex")}}
   - : A string reflecting the [`aria-rowindex`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex) attribute, which defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.
 - {{domxref("Element.ariaRowIndexText")}}
-  - : A string reflecting the [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindextext) attribute, which defines a human readable text alternative of aria-rowindex.
+  - : A string reflecting the [`aria-rowindextext`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindextext) attribute, which defines a human-readable text alternative of aria-rowindex.
 - {{domxref("Element.ariaRowSpan")}}
   - : A string reflecting the [`aria-rowspan`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowspan) attribute, which defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.
 - {{domxref("Element.ariaSelected")}}

@@ -13,12 +13,10 @@ sidebar: cssref
 
 The **`column-height`** [CSS](/en-US/docs/Web/CSS) property specifies the height of the columns in a [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout).
 
-The {{cssxref("columns")}} shorthand property can be used to set the `column-height`, {{cssxref("column-count")}}, and {{cssxref("column-width")}} property values in a single declaration.
-
 ## Syntax
 
 ```css
-/* Keyword */
+/* Keyword value */
 column-height: auto;
 
 /* <length> value */
@@ -52,6 +50,8 @@ Without `column-height`, if the height of the multi-col content exceeds the view
 The `column-height` property, along with {{cssxref("column-wrap")}}, allows you to set a specific height for the columns and wrap them onto a new row of columns when the container edge is reached.
 
 The default value of `column-wrap` is `auto`, which resolves to `wrap` when `column-height` is set to a `<length>` value; `wrap` allows the fixed-height columns to wrap onto multiple rows. When `column-height` is equal to `auto`, `column-wrap: auto` resolves to `nowrap`, allowing the columns to overflow horizontally if a fixed container height is set. As a result of this default behavior, generally you don't need to explicitly set the `column-wrap` property.
+
+The `column-height` property, along with the {{cssxref("column-count")}} and {{cssxref("column-width")}} properties, can also be set by using the {{cssxref("columns")}} shorthand.
 
 ## Formal definition
 
@@ -149,10 +149,11 @@ The HTML, which contains multiple paragraphs of content from the MDN HTML, CSS, 
   appearance (CSS) or behavior (JavaScript).
 </p>
 <p>
-  "Hypertext" refers to links that connect web pages to one another, either
-  within a single website or between websites. Links are a fundamental aspect of
-  the Web. By uploading content to the Internet and linking it to pages created
-  by other people, you become an active participant in the World Wide Web.
+  "Hypertext" refers to text containing links that connect web pages to one
+  another, either within a single website or between websites. Links are a
+  fundamental aspect of the Web. By uploading content to the Internet and
+  linking it to pages created by other people, you become an active participant
+  in the World Wide Web.
 </p>
 <p>
   HTML uses "markup" to annotate text, images, and other content for display in
