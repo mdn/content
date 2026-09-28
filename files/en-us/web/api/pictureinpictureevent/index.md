@@ -20,7 +20,7 @@ The **`PictureInPictureEvent`** interface represents picture-in-picture-related 
 
 _This interface also inherits properties from its parent {{domxref("Event")}}_.
 
-- {{domxref("PictureInPictureEvent.pictureInPictureWindow")}}
+- {{domxref("PictureInPictureEvent.pictureInPictureWindow")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("PictureInPictureWindow")}} the event relates to.
 
 ## Instance methods
