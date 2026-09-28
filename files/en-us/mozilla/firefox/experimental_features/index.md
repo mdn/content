@@ -852,6 +852,21 @@ Notifications have the [`requireInteraction`](/en-US/docs/Web/API/Notification/r
 - `dom.webnotifications.requireinteraction.enabled`
   - : Set to `true` to enable.
 
+### `navigate` option for notifications
+
+The `navigate` option of the {{domxref("Notification.Notification", "Notification()")}} constructor and {{domxref("ServiceWorkerRegistration.showNotification()")}} takes a URL to open when the user clicks the notification, so you no longer need a click handler just to open a page. The new read-only {{domxref("Notification.navigate")}} property returns that URL. When the option is set, the {{domxref("Notification.click_event", "click")}} and {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} events no longer fire for that notification. Each entry in the {{domxref("Notification.actions", "actions")}} option can set its own `navigate` URL, and an action button without one still fires `notificationclick` rather than using the notification's URL.
+([Firefox bug 2066184](https://bugzil.la/2066184)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 157           | No                  |
+| Developer Edition | 157           | No                  |
+| Beta              | 157           | No                  |
+| Release           | 157           | No                  |
+
+- `dom.webnotifications.navigate.enabled`
+  - : Set to `true` to enable.
+
 ### Sanitizing HTML while parsing
 
 Methods that sanitize HTML with the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API), such as {{domxref("Element.setHTML()")}}, now drop unwanted elements and attributes as the markup is parsed, instead of parsing all of it first and then cleaning up afterwards. The result is the same, except that neighboring text now lands in a single text node instead of being split across several. ([Firefox bug 2062652](https://bugzil.la/2062652)).
