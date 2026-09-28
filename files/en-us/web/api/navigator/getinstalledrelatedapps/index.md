@@ -59,7 +59,7 @@ A {{JSxRef("Promise")}} that fulfills with an array of objects representing any 
     - `"play"`: A [Google Play Store](https://play.google.com/store/games) app.
     - `"chromeos_play"`: A [ChromeOS Play](https://support.google.com/googleplay/answer/7021273) app.
     - `"webapp"`: A [Progressive Web App](/en-US/docs/Web/Progressive_web_apps).
-    - `"windows"`: A [Windows Store](https://apps.microsoft.com/?rtc=1&hl=en-us&gl=us) app.
+    - `"windows"`: A [Windows Store](https://apps.microsoft.com/?rtc=1&hl=en-US&gl=US) app.
     - `"f-droid"`: An [F-Droid](https://f-droid.org/) app.
     - `"amazon"`: An [Amazon App Store](https://www.amazon.com/gp/browse.html?node=2350149011) app.
 - `url` {{optional_inline}}

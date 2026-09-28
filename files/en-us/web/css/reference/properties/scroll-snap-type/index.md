@@ -108,6 +108,8 @@ scroll-snap-type: unset;
 
 ### Values
 
+This property is specified as one or two of the following keyword values:
+
 - `none`
   - : When the visual {{Glossary("viewport")}} of this scroll container is scrolled, it must ignore snap points.
 - `x`

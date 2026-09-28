@@ -30,13 +30,13 @@ This second article in our [Express Tutorial](/en-US/docs/Learn_web_development/
 
 ## Overview
 
-This article shows how you can create a "skeleton" website using the [Express Application Generator](https://expressjs.com/en/starter/generator.html) tool, which you can then populate with site-specific routes, views/templates, and database calls. In this case, we'll use the tool to create the framework for our [Local Library website](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website), to which we'll later add all the other code needed by the site. The process is extremely simple, requiring only that you invoke the generator on the command line with a new project name, optionally also specifying the site's template engine and CSS generator.
+This article shows how you can create a "skeleton" website using the [Express Application Generator](https://expressjs.com/en/starter/generator/) tool, which you can then populate with site-specific routes, views/templates, and database calls. In this case, we'll use the tool to create the framework for our [Local Library website](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website), to which we'll later add all the other code needed by the site. The process is extremely simple, requiring only that you invoke the generator on the command line with a new project name, optionally also specifying the site's template engine and CSS generator.
 
 The following sections show you how to call the application generator, and provides a little explanation about the different view/CSS options. We'll also explain how the skeleton website is structured. At the end, we'll show how you can run the website to verify that it works.
 
 > [!NOTE]
 >
-> - The _Express Application Generator_ is not the only generator for Express applications, and the generated project is not the only viable way to structure your files and directories. The generated site does however have a modular structure that is easy to extend and understand. For information about a _minimal_ Express application, see [Hello world example](https://expressjs.com/en/starter/hello-world.html) (Express docs).
+> - The _Express Application Generator_ is not the only generator for Express applications, and the generated project is not the only viable way to structure your files and directories. The generated site does however have a modular structure that is easy to extend and understand. For information about a _minimal_ Express application, see [Hello world example](https://expressjs.com/en/starter/hello-world/) (Express docs).
 > - The _Express Application Generator_ declares most variables using `var`.
 >   We have changed most of these to [`const`](/en-US/docs/Web/JavaScript/Reference/Statements/const) (and a few to [`let`](/en-US/docs/Web/JavaScript/Reference/Statements/let)) in the tutorial, because we want to demonstrate modern JavaScript practice.
 > - This tutorial uses the version of _Express_ and other dependencies that are defined in the **package.json** created by the _Express Application Generator_.
@@ -88,7 +88,7 @@ You can also choose a view (template) engine using `--view` and/or a CSS generat
 The _Express Application Generator_ allows you to configure a number of popular view/templating engines, including [EJS](https://www.npmjs.com/package/ejs), [Hbs](https://github.com/pillarjs/hbs), [Pug](https://pugjs.org/api/getting-started.html) (Jade), [Twig](https://www.npmjs.com/package/twig), and [Vash](https://www.npmjs.com/package/vash), although it chooses Jade by default if you don't specify a view option. Express itself can also support a large number of other templating languages [out of the box](https://github.com/expressjs/express/wiki#template-engines).
 
 > [!NOTE]
-> If you want to use a template engine that isn't supported by the generator then see [Using template engines with Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs) and the documentation for your target view engine.
+> If you want to use a template engine that isn't supported by the generator then see [Using template engines with Express](https://expressjs.com/en/guide/using-template-engines/) (Express docs) and the documentation for your target view engine.
 
 Generally speaking, you should select a templating engine that delivers all the functionality you need and allows you to be productive sooner — or in other words, in the same way that you choose any other component! Some of the things to consider when comparing template engines:
 
@@ -121,7 +121,7 @@ As with templating engines, you should use the stylesheet engine that will allow
 
 ### What database should I use?
 
-The generated code doesn't use/include any databases. _Express_ apps can use any [database mechanism](https://expressjs.com/en/guide/database-integration.html) supported by _Node_ (_Express_ itself doesn't define any specific additional behavior/requirements for database management).
+The generated code doesn't use/include any databases. _Express_ apps can use any [database mechanism](https://expressjs.com/en/guide/database-integration/) supported by _Node_ (_Express_ itself doesn't define any specific additional behavior/requirements for database management).
 
 We'll discuss how to integrate with a database in a later article.
 
@@ -415,7 +415,7 @@ npm install
 
 ### www file
 
-The file **/bin/www** is the application entry point! The very first thing this does is `require()` the "real" application entry point (**app.js**, in the project root) that sets up and returns the [`express()`](https://expressjs.com/en/api.html) application object.
+The file **/bin/www** is the application entry point! The very first thing this does is `require()` the "real" application entry point (**app.js**, in the project root) that sets up and returns the [`express()`](https://expressjs.com/en/api/) application object.
 `require()` is the [CommonJS way](https://nodejs.org/api/modules.html) to import JavaScript code, JSON, and other files into the current file.
 Here we specify **app.js** module using a relative path and omit the optional (.**js**) file extension.
 
@@ -432,7 +432,7 @@ const app = require("../app");
 > [!NOTE]
 > Node.js 14 and later support ES6 `import` statements for importing JavaScript (ECMAScript) modules.
 > To use this feature you have to add `"type": "module"` to your Express **package.json** file, all the modules in your application have to use `import` rather than `require()`, and for _relative imports_ you must include the file extension (for more information see the [Node documentation](https://nodejs.org/api/esm.html#introduction)).
-> While there are benefits to using `import`, this tutorial uses `require()` in order to match [the Express documentation](https://expressjs.com/en/starter/hello-world.html).
+> While there are benefits to using `import`, this tutorial uses `require()` in order to match [the Express documentation](https://expressjs.com/en/starter/hello-world/).
 
 The remainder of the code in this file sets up a node HTTP server with `app` set to a specific port (defined in an environment variable or 3000 if the variable isn't defined), and starts listening and reporting server errors and connections. For now you don't really need to know anything else about the code (everything in this file is "boilerplate"), but feel free to review it if you're interested.
 
@@ -481,7 +481,7 @@ app.set("view engine", "pug");
 ```
 
 The next set of functions call `app.use()` to add the _middleware_ libraries that we imported above into the request handling chain.
-For example, `express.json()` and `express.urlencoded()` are needed to populate [`req.body`](https://expressjs.com/en/api.html#req.body) with the form fields.
+For example, `express.json()` and `express.urlencoded()` are needed to populate [`req.body`](https://expressjs.com/en/api/#req.body) with the form fields.
 After these libraries we also use the `express.static` middleware, which makes _Express_ serve all the static files in the **/public** directory in the project root.
 
 ```js
@@ -558,7 +558,7 @@ One thing of interest above is that the callback function has the third argument
 
 ### Views (templates)
 
-The views (templates) are stored in the **/views** directory (as specified in **app.js**) and are given the file extension **.pug**. The method [`Response.render()`](https://expressjs.com/en/5x/api.html#res.render) is used to render a specified template along with the values of named variables passed in an object, and then send the result as a response. In the code below from **/routes/index.js** you can see how that route renders a response using the template "index" passing the template variable "title".
+The views (templates) are stored in the **/views** directory (as specified in **app.js**) and are given the file extension **.pug**. The method [`Response.render()`](https://expressjs.com/en/5x/api/#res.render) is used to render a specified template along with the values of named variables passed in an object, and then send the result as a response. In the code below from **/routes/index.js** you can see how that route renders a response using the template "index" passing the template variable "title".
 
 ```js
 /* GET home page. */
@@ -589,7 +589,7 @@ Next, we'll start modifying the skeleton so that it works as a library website.
 
 ## See also
 
-- [Express application generator](https://expressjs.com/en/starter/generator.html) (Express docs)
-- [Using template engines with Express](https://expressjs.com/en/guide/using-template-engines.html) (Express docs)
+- [Express application generator](https://expressjs.com/en/starter/generator/) (Express docs)
+- [Using template engines with Express](https://expressjs.com/en/guide/using-template-engines/) (Express docs)
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}

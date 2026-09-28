@@ -137,7 +137,7 @@ If you wish to invest money in testing, there are also commercial tools that can
 It is often a good idea to test on prerelease versions of browsers; see the following links:
 
 - [Firefox Developer Edition](https://www.firefox.com/en-US/channel/desktop/developer/)
-- [Microsoft Edge Insider](https://www.microsoft.com/en-us/edge/download/insider)
+- [Microsoft Edge Insider](https://explore.microsoft.com/en-us/edge/download/insider)
 - [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/)
 - [Chrome Canary](https://www.google.com/chrome/canary/)
 - [Opera Developer](https://www.opera.com/opera/developer)
@@ -167,6 +167,6 @@ Just to reiterate on what was said above, if you discover bugs in browsers, you 
 
 ## Summary
 
-This article should have given you a high-level understanding of the most important concepts you need to know about cross browser testing. Armed with this knowledge, you are now ready to move on and start learning about Cross-browser testing strategies.
+This article should have given you a high-level understanding of the most important concepts in cross-browser testing. Armed with this knowledge, you're ready to move on and start learning about cross-browser testing strategies.
 
 {{NextMenu("Learn_web_development/Extensions/Testing/Testing_strategies", "Learn_web_development/Extensions/Testing")}}

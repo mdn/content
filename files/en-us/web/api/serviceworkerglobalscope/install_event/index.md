@@ -28,10 +28,6 @@ An {{domxref("ExtendableEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("ExtendableEvent")}}
 
-## Event properties
-
-_Doesn't implement any specific properties, but inherits properties from its parent, {{domxref("Event")}}._
-
 ## Examples
 
 The following snippet shows how an `install` event handler can be used to populate a cache with a number of responses, which the service worker can then use to serve assets offline:

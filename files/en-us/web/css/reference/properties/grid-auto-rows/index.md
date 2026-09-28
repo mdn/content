@@ -9,6 +9,8 @@ sidebar: cssref
 
 The **`grid-auto-rows`** [CSS](/en-US/docs/Web/CSS) property specifies the size of an implicitly-created grid row {{glossary("grid tracks", "track")}} or pattern of tracks.
 
+If a grid item is positioned into a row that is not explicitly sized by {{cssxref("grid-template-rows")}}, implicit {{glossary("grid", "grid")}} tracks are created to hold it. This can happen either by explicitly positioning into a row that is out of range, or by the auto-placement algorithm creating additional rows.
+
 {{InteractiveExample("CSS Demo: grid-auto-rows")}}
 
 ```css interactive-example-choice
@@ -61,8 +63,6 @@ grid-auto-rows: minmax(30px, auto);
   font-size: 13px;
 }
 ```
-
-If a grid item is positioned into a row that is not explicitly sized by {{cssxref("grid-template-rows")}}, implicit {{glossary("grid", "grid")}} tracks are created to hold it. This can happen either by explicitly positioning into a row that is out of range, or by the auto-placement algorithm creating additional rows.
 
 ## Syntax
 

@@ -16,7 +16,7 @@ This module includes the scroll container scroll-padding properties to adjust th
 ## Scroll snap in action
 
 To view scroll snapping in the box below, scroll up-and-down and left-and-right through the grid of 45 numbered boxes in the scrollable viewport.
-Click "Play" in the example below to view the or edit the source in the MDN Playground:
+Click "Play" in the example below to view or edit the source in the MDN Playground:
 
 ```js hidden live-sample___scroll_snap
 const positions = ["start", "center", "end"];

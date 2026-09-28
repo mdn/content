@@ -30,6 +30,8 @@ scroll-initial-target: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `none`
   - : The element is not an initial scroll target.
 - `nearest`

@@ -31,7 +31,7 @@ togglePopover(options)
 A boolean (`force`) or an options object:
 
 - `force` {{optional_inline}}
-  - : A boolean, which causes `togglePopover()` to behave like {{domxref("HTMLElement.showPopover", "showPopover()")}} or {{domxref("HTMLElement.hidePopover", "hidePopover()")}}, except that it doesn't throw an exception if the popover is already in the target state.
+  - : A boolean, which causes `togglePopover()` to behave like {{domxref("HTMLElement.showPopover", "showPopover()")}} or {{domxref("HTMLElement.hidePopover", "hidePopover()")}}.
     - If set to `true`, the popover is shown if it was initially hidden. If it was initially shown, nothing happens.
     - If set to `false`, the popover is hidden if it was initially shown. If it was initially hidden, nothing happens.
 - `options` {{optional_inline}}
@@ -42,6 +42,11 @@ A boolean (`force`) or an options object:
       - : An {{domxref("HTMLElement")}} reference; programmatically defines the invoker of the popover associated with the toggle action, that is, its control element. Establishing a relationship between a popover and its invoker using the `source` option has two useful effects:
         - The browser places the popover in a logical position in the keyboard focus navigation order when shown. This makes the popover more accessible to keyboard users (see also [Popover accessibility features](/en-US/docs/Web/API/Popover_API/Using#popover_accessibility_features)).
         - The browser creates an implicit anchor reference between the two, making it very convenient to position popovers relative to their controls using [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning). See [Popover anchor positioning](/en-US/docs/Web/API/Popover_API/Using#popover_anchor_positioning) for more details.
+
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if this method is called while another popover is already in the process of being shown or hidden (e.g., within a `beforetoggle` event listener).
 
 ### Return value
 

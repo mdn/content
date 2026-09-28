@@ -31,21 +31,6 @@ A {{domxref("MessageEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MessageEvent")}}
 
-## Event properties
-
-_Also inherits properties from its parent interface, {{domxref("Event")}}._
-
-- {{domxref("MessageEvent.data")}} {{ReadOnlyInline}}
-  - : The data sent by the message emitter.
-- {{domxref("MessageEvent.origin")}} {{ReadOnlyInline}}
-  - : A string representing the origin of the message emitter.
-- {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
-  - : A string representing a unique ID for the event.
-- {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
-  - : A reference to the message emitter, one of {{glossary("WindowProxy")}}, {{domxref("MessagePort")}}, or {{domxref("ServiceWorker")}}.
-- {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
-  - : An array of {{domxref("MessagePort")}} objects representing the ports associated with the channel the message is being sent through (where appropriate, e.g., in channel messaging or when sending a message to a shared worker).
-
 ## Examples
 
 For a given {{domxref("RTCDataChannel")}}, `dc`, created for a peer connection using its {{domxref("RTCPeerConnection.createDataChannel", "createDataChannel()")}} method, this code sets up a handler for incoming messages and acts on them by adding the data contained within the message to the current document as a new {{HTMLElement("p")}} (paragraph) element.

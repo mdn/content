@@ -64,7 +64,7 @@ This interface also supports the following properties:
 ## Instance methods
 
 - {{domxref("PerformanceLongTaskTiming.toJSON()")}} {{Experimental_Inline}}
-  - : Returns a JSON representation of the `PerformanceLongTaskTiming` object.
+  - : Overrides the {{domxref("PerformanceEntry.toJSON()")}} method to return a JSON representation of the `PerformanceLongTaskTiming` object.
 
 ## Examples
 

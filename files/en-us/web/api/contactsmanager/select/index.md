@@ -41,7 +41,7 @@ select(properties, options)
 
 ### Return value
 
-Returns a {{jsxref('Promise')}} that resolves with an array of objects containing contact information. Each object represents a single contact may contain the following properties:
+Returns a {{jsxref('Promise')}} that resolves with an array of objects containing contact information. Each object represents a single contact and may contain the following properties:
 
 - `address`
   - : An {{jsxref("Array")}} of {{domxref("ContactAddress")}} objects, each containing specifics of a unique physical address.
@@ -50,9 +50,9 @@ Returns a {{jsxref('Promise')}} that resolves with an array of objects containin
 - `icon`
   - : An array of {{domxref("Blob")}} objects containing images of an individual.
 - `name`
-  - : An array strings, each containing a unique name of an individual.
+  - : An array of strings, each containing a unique name of an individual.
 - `tel`
-  - : An array strings, each containing a unique phone number of an individual.
+  - : An array of strings, each containing a unique phone number of an individual.
 
 ### Exceptions
 

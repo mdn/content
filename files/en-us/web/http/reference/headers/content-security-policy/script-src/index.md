@@ -195,7 +195,7 @@ Policies for inline resources with hashes like `script-src 'sha256-{HASHED_INLIN
 ```
 
 Instead of allowing `'unsafe-inline'`, you can use the `'unsafe-hashes'` source expression if code can't be updated to equivalent {{domxref("EventTarget.addEventListener", "addEventListener")}} calls.
-Given a HTML page that includes the following inline event handler:
+Given an HTML page that includes the following inline event handler:
 
 ```html
 <!-- I want to use addEventListener, but I can't :( -->

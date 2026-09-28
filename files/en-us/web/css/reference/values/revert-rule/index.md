@@ -60,7 +60,7 @@ p {
 
 p.special {
   color: revert-rule;
-  border: 1px solid currentcolor;
+  border: 1px solid currentColor;
 }
 ```
 

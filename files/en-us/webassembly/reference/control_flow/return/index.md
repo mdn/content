@@ -3,13 +3,14 @@ title: "return: Wasm text instruction"
 short-title: return
 slug: WebAssembly/Reference/Control_flow/return
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.return
 sidebar: webassemblysidebar
 ---
 
 **`return`** returns from a function.
 
 - If there are no values left on the stack, it returns nothing/void.
-- If there are the same amount of values left on the stack as specified in the function's type signature, it returns those values.
+- If there are the same number of values left on the stack as specified in the function's type signature, it returns those values.
 - If there are more values than the function's return type specifies, then the topmost N values are returned, and the remaining values on the stack are discarded.
 
 {{InteractiveExample("Wat Demo: return", "tabbed-taller")}}
@@ -52,3 +53,11 @@ return
 | Instruction | Binary opcode |
 | ----------- | ------------- |
 | `return`    | `0x0f`        |
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}

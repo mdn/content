@@ -136,6 +136,8 @@ animation-fill-mode: unset;
 
 ### Values
 
+This property is specified as a comma-separated list of the following keyword values:
+
 - `none`
   - : The animation will not apply any styles to the target when it's not executing. The element will instead be displayed using any other CSS rules applied to it. This is the default value.
 - `forwards`

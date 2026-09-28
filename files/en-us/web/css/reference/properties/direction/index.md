@@ -69,6 +69,8 @@ direction: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `ltr`
   - : Text and other elements go from left to right. This is the default value.
 - `rtl`

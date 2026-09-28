@@ -11,11 +11,11 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`corner-shape`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property specifies the shape of a box's corners, within the area specified by its {{cssxref("border-radius")}} property value.
+The **`corner-shape`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property specifies the shape of a box's corners, within the area specified by its {{cssxref("border-radius")}} property value.
 
 ## Constituent properties
 
-The `corner-shape` property is a shorthand for the following physical properties:
+This property is a shorthand for the following physical properties:
 
 - {{cssxref("corner-top-left-shape")}}
 - {{cssxref("corner-top-right-shape")}}
@@ -59,7 +59,7 @@ The `corner-shape` property may be specified using one, two, three, or four {{cs
 
 ## Description
 
-The `corner-shape` property is used to modify the shape of rounded corners created by the {{cssxref("border-radius")}} property and its associated longhands. Already-rounded corners can be further customized in terms of the degree of rounding applied to them, allowing the creation of, for example, bevelled, notched, and squircle corners. Borders, outlines, shadows, and background effects applied to the container will follow the defined corner shape.
+The `corner-shape` property is used to modify the shape of rounded corners created by the {{cssxref("border-radius")}} property and its associated longhands. Already-rounded corners can be further customized in terms of the degree of rounding applied to them, allowing the creation of, for example, beveled, notched, and squircle corners. Borders, outlines, shadows, and background effects applied to the container will follow the defined corner shape.
 
 If a `border-radius` is not applied to a container, or the `border-radius` resolves to `0`, `corner-shape` will have no effect.
 
@@ -117,7 +117,7 @@ div {
 }
 ```
 
-### Properties that follow the corner shape
+### Properties that follow `corner-shape`
 
 The following properties all follow the shape of the corner when set on the container:
 
@@ -130,6 +130,12 @@ The following properties all follow the shape of the corner when set on the cont
 - {{cssxref("backdrop-filter")}}
 
 See [Demonstration of properties that follow the `corner-shape`](#demonstration_of_properties_that_follow_the_corner-shape) for some examples.
+
+### Interaction with `border-shape`
+
+The `corner-shape` property has no effect when the {{cssxref("border-shape")}} property is set on an element. This is because `border-shape` is incompatible with `border-radius`: when `border-shape` is set, any specified `border-radius` is ignored; `corner-shape` depends on `border-radius` and therefore has no effect either.
+
+If you want to use shaped corners in a `border-shape`, you will have to draw them directly as part of the shape.
 
 ## Formal definition
 
@@ -628,7 +634,8 @@ The rendered result looks like this:
 
 ## See also
 
-- {{Cssxref("border-radius")}}
+- {{cssxref("border-radius")}}
+- {{cssxref("border-shape")}}
 - [CSS borders and box decorations](/en-US/docs/Web/CSS/Guides/Borders_and_box_decorations) module
 - [CSS backgrounds and borders](/en-US/docs/Web/CSS/Guides/Backgrounds_and_borders) module
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module

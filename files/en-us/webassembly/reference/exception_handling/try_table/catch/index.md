@@ -131,6 +131,14 @@ When the exception is caught, the block branched to specifies the same data type
 )
 ```
 
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
+
 ## See also
 
 - [`throw`](/en-US/docs/WebAssembly/Reference/Exception_handling/throw) instruction

@@ -86,7 +86,7 @@ caption {
 This element includes the [global attributes](/en-US/docs/Web/HTML/Reference/Global_attributes).
 
 - `colspan`
-  - : Contains a non-negative integer value that indicates how many columns the data cell spans or extends. The default value is `1`. User agents dismiss values higher than 1000 as incorrect, setting to the default value (`1`).
+  - : Contains a non-negative integer value that indicates how many columns the data cell spans or extends. The default value is `1`. Values higher than `1000` are clipped to `1000`.
 - `headers`
   - : Contains a list of space-separated strings, each corresponding to the `id` attribute of the {{HTMLElement("th")}} elements that provide headings for this table cell.
 - `rowspan`

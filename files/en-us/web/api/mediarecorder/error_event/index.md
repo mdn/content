@@ -28,13 +28,6 @@ A {{domxref("MediaRecorderErrorEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("MediaRecorderErrorEvent")}}
 
-## Event properties
-
-_Inherits properties from its parent interface, {{domxref("Event")}}_.
-
-- {{domxref("MediaRecorderErrorEvent.error", "error")}} {{ReadOnlyInline}}
-  - : A {{domxref("DOMException")}} containing information about the error that occurred.
-
 ## Description
 
 ### Trigger

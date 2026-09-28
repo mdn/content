@@ -90,7 +90,7 @@ Libraries such as [React Testing Library](https://testing-library.com/docs/react
 
 While routing is traditionally handled by a server and not an application on the user's computer, it is possible to configure a web application to read and update the browser's location, and render certain user interfaces. This is called _client-side routing_. It's possible to create many unique routes for your application (such as `/home`, `/dashboard`, or `/login`).
 
-[React Router](https://reactrouter.com/) is the most popular and most robust client-side routing library for React. It allows developers to define the routes of their application, and associate components with those routes . It also provides a number of useful hooks and components for managing the browser's location and history.
+[React Router](https://reactrouter.com/) is the most popular and most robust client-side routing library for React. It allows developers to define the routes of their application, and associate components with those routes. It also provides a number of useful hooks and components for managing the browser's location and history.
 
 > [!NOTE]
 > Client-side routing can make your application feel fast, but it poses a number of accessibility problems, especially for people who rely on assistive technology. You can read more about this in Marcy Sutton's article, ["The Implications of Client-Side Routing"](https://testingaccessibility.com/implications-of-client-side-routing).

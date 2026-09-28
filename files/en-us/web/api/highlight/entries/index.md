@@ -29,7 +29,7 @@ A new iterator object that contains an array of `[range, range]` for each `Abstr
 
 ## Examples
 
-The code snippet below shows how create a new highlight with two ranges, and then log the ranges by using the iterator returned by the `entries()` method:
+The code snippet below shows how to create a new highlight with two ranges, and then log the ranges by using the iterator returned by the `entries()` method:
 
 ```js
 const text = new Text("Time is an illusion. Lunchtime doubly so.");

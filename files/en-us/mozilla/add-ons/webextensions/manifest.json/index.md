@@ -43,7 +43,6 @@ These are the `manifest.json` keys; these keys are available in Manifest V2 and 
 - [incognito](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/incognito)
 - [manifest_version](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version)
 - [name](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name)
-- [offline_enabled](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/offline_enabled) (Not supported in Firefox)
 - [omnibox](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox)
 - [optional_host_permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_host_permissions) (Manifest V3 and above)
 - [optional_permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions)
@@ -52,6 +51,7 @@ These are the `manifest.json` keys; these keys are available in Manifest V2 and 
 - [page_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) (Manifest V2 only in Chrome)
 - [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)
 - [protocol_handlers](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers) (Firefox only)
+- [sandbox](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sandbox)
 - [short_name](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/short_name)
 - [sidebar_action](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action)
 - [storage](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/storage) (Not supported in Firefox)
@@ -167,4 +167,4 @@ For complete example extensions, see [Example extensions](/en-US/docs/Mozilla/Ad
 
 ## See also
 
-{{WebExtAPIRef("permissions")}} JavaScript API
+- {{WebExtAPIRef("permissions")}} JavaScript API

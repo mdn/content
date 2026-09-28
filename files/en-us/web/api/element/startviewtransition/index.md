@@ -77,14 +77,14 @@ The HTML includes a {{htmlelement("section")}} element to represent the slidesho
 
 ```html live-sample___basic_usage
 <p>
-  I'm baby xOXO bespoke cupidatat PBR&B, affogato cronut 3 wolf moon ea narwhal
-  asymmetrical.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam lectus.
+  Set sit amet ipsum mauris.
 </p>
 <section>Slide 1</section>
 <button>Update slide</button>
 <p>
-  Kombucha laborum tempor iceland pour-over. Keytar in echo park gorpcore
-  bespoke.
+  Maecenas congue ligula as quam viverra nec consectetur ant hendrerit. Donec et
+  mollis dolor.
 </p>
 ```
 

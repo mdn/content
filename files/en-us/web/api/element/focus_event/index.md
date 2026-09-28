@@ -30,13 +30,6 @@ A {{domxref("FocusEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxref(
 
 {{InheritanceDiagram("FocusEvent")}}
 
-## Event properties
-
-_This interface also inherits properties from its parent {{domxref("UIEvent")}}, and indirectly from {{domxref("Event")}}._
-
-- {{domxref("FocusEvent.relatedTarget")}}
-  - : The element losing focus, if any.
-
 ## Examples
 
 ### Simple example

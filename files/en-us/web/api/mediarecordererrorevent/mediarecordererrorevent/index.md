@@ -9,7 +9,7 @@ status:
 browser-compat: api.MediaRecorderErrorEvent.MediaRecorderErrorEvent
 ---
 
-{{APIRef("MediaStream Recording")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("MediaStream Recording")}}{{Non-standard_Header}}
 
 The
 **`MediaRecorderErrorEvent()`** constructor creates a new {{domxref("MediaRecorderErrorEvent")}} object

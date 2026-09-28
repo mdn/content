@@ -6,13 +6,9 @@ page-type: web-api-instance-method
 browser-compat: api.CSSNumericValue.type
 ---
 
-{{APIRef("CSS Typed OM")}}
+{{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`type()`** method of the
-{{domxref("CSSNumericValue")}} interface returns the type of
-`CSSNumericValue`, one of `angle`, `flex`,
-`frequency`, `length`, `resolution`,
-`percent`, `percentHint`, or `time`.
+The **`type()`** method of the {{domxref("CSSNumericValue")}} interface returns the type of `CSSNumericValue`, one of `angle`, `flex`, `frequency`, `length`, `resolution`, `percent`, `percentHint`, or `time`.
 
 ## Syntax
 
@@ -46,6 +42,8 @@ The `percentHint` property is a string that indicates the type of value that the
 None.
 
 ## Examples
+
+### Basic usage
 
 ```js
 let mathSum = CSS.px("23")

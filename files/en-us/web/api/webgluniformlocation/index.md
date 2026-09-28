@@ -18,7 +18,7 @@ The `WebGLUniformLocation` object does not define any methods or properties of i
 
 ## Examples
 
-### Getting an uniform location
+### Getting a uniform location
 
 ```js
 const canvas = document.getElementById("canvas");

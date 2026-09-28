@@ -30,6 +30,8 @@ view-transition-scope: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `none`
   - : The initial value. Discoverability of elements to snapshot during a view transition is not limited to any specific subtree.
 - `all`
@@ -91,7 +93,7 @@ body {
 
 section,
 .change-me {
-  border: 2px solid #666;
+  border: 2px solid #666666;
   padding: 10px;
 }
 
@@ -162,7 +164,7 @@ function handleClick(e) {
 Click the "Update DOM" button to see the view transition. Now try the following:
 
 1. Inspect one of the `<div>` elements.
-2. In the Styles panel in your browser's developer tools, uncheck the `view-transition-scope: all;` declaration to unapply it.
+2. In the Styles panel in your browser's developer tools, uncheck the `view-transition-scope: all;` declaration to disable it.
 3. Now switch to the JavaScript Console.
 4. Click the "Update DOM" button again.
 

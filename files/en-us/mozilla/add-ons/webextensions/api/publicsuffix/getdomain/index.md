@@ -79,8 +79,8 @@ browser.publicSuffix.getDomain("co.uk", { allowPlainSuffix: true });
 Using `allowUnknownSuffix` to handle private or local domains:
 
 ```js
-browser.publicSuffix.getDomain("mydevice.local", { allowUnknownSuffix: true });
-// "mydevice.local"
+browser.publicSuffix.getDomain("my-device.local", { allowUnknownSuffix: true });
+// "my-device.local"
 
 browser.publicSuffix.getDomain("host.intranet", { allowUnknownSuffix: true });
 // "host.intranet"

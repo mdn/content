@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Window.resizeBy
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
 The **`Window.resizeBy()`** method resizes the current window
 by a specified amount.

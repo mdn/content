@@ -69,9 +69,9 @@ border-bottom-color: revert-layer;
 border-bottom-color: unset;
 ```
 
-The `border-bottom-color` property is specified as a single value.
-
 ### Values
+
+This property is specified as one value:
 
 - {{cssxref("&lt;color&gt;")}}
   - : The color of the bottom border.

@@ -62,9 +62,9 @@ color-scheme: revert-layer;
 color-scheme: unset;
 ```
 
-The `color-scheme` property's value must be one of the following keywords.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `normal`
   - : Indicates that the element can be rendered using the page's [color scheme](/en-US/docs/Web/HTML/Reference/Elements/meta/name/color-scheme) settings. If the page does not have a color scheme set, the element is rendered using the page's default color settings.

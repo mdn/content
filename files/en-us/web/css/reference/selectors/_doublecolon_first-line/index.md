@@ -97,7 +97,7 @@ Only a small subset of CSS properties can be used with the `::first-line` pseudo
 
 {{EmbedLiveSample('styling_first_line_of_a_paragraph', 350, 130)}}
 
-### Styling the first line of a SVG text element
+### Styling the first line of an SVG text element
 
 In this example, we style the first line of an SVG {{SVGElement("text")}} element using the `::first-line` pseudo-element.
 

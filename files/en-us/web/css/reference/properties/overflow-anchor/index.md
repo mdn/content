@@ -118,6 +118,8 @@ overflow-anchor: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `auto`
   - : The element becomes a potential anchor when adjusting scroll position.
 - `none`

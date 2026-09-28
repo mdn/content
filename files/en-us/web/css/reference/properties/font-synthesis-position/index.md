@@ -34,6 +34,8 @@ font-synthesis-position: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `auto`
   - : Indicates that a missing position typeface may be synthesized by the browser if needed.
 - `none`

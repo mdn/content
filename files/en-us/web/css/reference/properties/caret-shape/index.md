@@ -73,6 +73,8 @@ caret-shape: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `auto`
   - : The default value. The browser determines the caret shape. This typically follows platform conventions and may change based on context.
 

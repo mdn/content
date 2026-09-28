@@ -118,7 +118,7 @@ Next, we add a `click` event listener to the play button so that when it is clic
 
 - Create a new {{domxref("AudioContext")}} and disable the play button so it can't be pressed again.
 - Run some feature detection code that checks if the {{domxref("AudioContext.playbackStats")}} property exists. If it doesn't, we display a "Your browser doesn't support `AudioPlaybackStats`." message in a list item in the output list, and `return` out of the function.
-- Create a basic audio graph consisting of of an {{domxref("OscillatorNode")}} and a {{domxref("GainNode")}} and start the oscillator playing.
+- Create a basic audio graph consisting of an {{domxref("OscillatorNode")}} and a {{domxref("GainNode")}} and start the oscillator playing.
 - Enable the stats button and give it a `click` event listener so that when it is clicked, we write the different stats available in the audio context's `AudioPlaybackStats` object into a text string and display it in a list item in the output list.
 - Enable the reset button and give it a `click` event listener so that when it is clicked, we run the {{domxref("AudioPlaybackStats.resetLatency()")}} method.
 

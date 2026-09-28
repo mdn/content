@@ -31,18 +31,11 @@ A {{domxref("SensorErrorEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("SensorErrorEvent")}}
 
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref('SensorErrorEvent.error', 'error')}} {{ReadOnlyInline}}
-  - : Returns the {{domxref('DOMException')}} that has been thrown.
-
 ## Examples
 
 ### Log accelerometer exceptions
 
-This example adds an event listener to log errors occurred on an {{domxref("Accelerometer")}}.
+This example adds an event listener to log errors that occurred on an {{domxref("Accelerometer")}}.
 
 ```js
 const acl = new Accelerometer({ frequency: 60 });

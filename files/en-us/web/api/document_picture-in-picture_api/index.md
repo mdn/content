@@ -74,3 +74,7 @@ See [Document Picture-in-Picture API Example](https://mdn.github.io/dom-examples
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Picture-in-Picture API](/en-US/docs/Web/API/Picture-in-Picture_API)

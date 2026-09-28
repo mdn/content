@@ -1,12 +1,13 @@
 ---
-title: "le_u: Wasm text instruction"
+title: "le_u: Wasm numeric instruction"
 short-title: le_u
 slug: WebAssembly/Reference/Numeric/le_u
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.le_u
 sidebar: webassemblysidebar
 ---
 
-The **`le_u`** instruction, short for _less or equal unsigned_, checks if an unsigned integer is less than or equal to another unsigned integer.
+The **`le_u`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _less or equal unsigned_, checks if an unsigned integer is less than or equal to another unsigned integer.
 
 There are other `le` instructions available:
 
@@ -147,6 +148,14 @@ The output is as follows:
 {{embedlivesample("simd_le_u", "100%", 100)}}
 
 The result is `0` because the value stored in lane `3` of the first input value is not less than or equal to the value stored in lane `3` of the second input value.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

@@ -10,7 +10,7 @@ browser-compat: http.headers.Attribution-Reporting-Register-Trigger
 sidebar: http
 ---
 
-{{deprecated_header}}{{non-standard_header}}
+{{non-standard_header}}
 
 The HTTP **`Attribution-Reporting-Register-Trigger`** {{Glossary("response header")}} registers a page feature as an [attribution trigger](/en-US/docs/Web/API/Attribution_Reporting_API/Registering_triggers). This header is included as part of a response to a request that contains the {{HTTPHeader("Attribution-Reporting-Eligible")}} header.
 

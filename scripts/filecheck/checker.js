@@ -5,7 +5,6 @@ import os from "node:os";
 import { eachLimit } from "async";
 import cliProgress from "cli-progress";
 import { fdir } from "fdir";
-import fse from "fs-extra";
 import { temporaryDirectory } from "tempy";
 import * as cheerio from "cheerio";
 import { fileTypeFromFile } from "file-type";
@@ -185,16 +184,13 @@ export async function checkFile(filePath, options = {}) {
     }
   }
 
-  // The image has to be mentioned in the adjacent index.html document
+  // The image has to be mentioned in the adjacent index.md document
   const parentPath = path.dirname(filePath);
-  const htmlFilePath = path.join(parentPath, "index.html");
-  const mdFilePath = path.join(parentPath, "index.md");
-  const docFilePath = (await fse.exists(htmlFilePath))
-    ? htmlFilePath
-    : (await fse.exists(mdFilePath))
-      ? mdFilePath
-      : null;
-  if (!docFilePath) {
+  const docFilePath = path.join(parentPath, "index.md");
+  let rawContent;
+  try {
+    rawContent = await fs.readFile(docFilePath, "utf-8");
+  } catch {
     throw new FixableError(
       `${getRelativePath(
         filePath,
@@ -204,9 +200,6 @@ export async function checkFile(filePath, options = {}) {
   }
 
   // The image must be mentioned (as a string) in the content
-  const rawContent = docFilePath
-    ? await fs.readFile(docFilePath, "utf-8")
-    : null;
   if (!rawContent.includes(path.basename(filePath))) {
     throw new FixableError(
       `${getRelativePath(
@@ -297,7 +290,7 @@ async function checkCompression(filePath, options) {
             0,
           )}% smaller.`,
         );
-        fse.copyFileSync(compressed.destinationPath, filePath);
+        await fs.copyFile(compressed.destinationPath, filePath);
       } else {
         throw new FixableError(
           `${filePath} is ${formatSize(
@@ -310,7 +303,7 @@ async function checkCompression(filePath, options) {
       }
     }
   } finally {
-    fse.removeSync(tempdir);
+    await fs.rm(tempdir, { recursive: true, force: true });
   }
 }
 

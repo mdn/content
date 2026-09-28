@@ -29,6 +29,10 @@ sidebar:
       - /Web/CSS/Guides/Backgrounds_and_borders/Using_multiple_backgrounds
       - /Web/CSS/Guides/Backgrounds_and_borders/Resizing_background_images
       - /Web/CSS/Guides/Backgrounds_and_borders/Scaling_SVG_backgrounds
+  - title: Borders_and_box_decorations
+    details: closed
+    children:
+      - /Web/CSS/Guides/Borders_and_box_decorations/Border_shape_nav_menu
   - title: Box alignment
     details: closed
     children:
@@ -153,7 +157,7 @@ sidebar:
       - /Web/CSS/Guides/Grid_layout/Accessibility
       - /Web/CSS/Guides/Grid_layout/Common_grid_layouts
       - /Web/CSS/Guides/Grid_layout/Subgrid
-      - /Web/CSS/Guides/Grid_layout/Masonry_layout
+      - /Web/CSS/Guides/Grid_layout/Grid_lanes
   - title: Images
     details: closed
     children:
@@ -342,7 +346,12 @@ sidebar:
     code: true
   - type: listSubPages
     path: /Web/CSS/Reference/At-rules
-    tags: css-at-rule
+    tags:
+      - css-at-rule
+      - css-at-rule-descriptor
+      - css-media-feature
+    depth: 2
+    nested: true
     link: /Web/CSS/Reference/At-rules
     title: At-rules
     details: closed
@@ -415,6 +424,7 @@ l10n:
     Anchor_positioning: Anchor positioning
     Animations: Animations
     Backgrounds_and_Borders: Backgrounds and borders
+    Borders_and_box_decorations: Borders and box decorations
     Box_model: Box model
     Cascade: Cascade
     Colors: Colors

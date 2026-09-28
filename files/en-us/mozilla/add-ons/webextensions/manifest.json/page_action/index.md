@@ -111,7 +111,7 @@ The `page_action` key is an object that may have any of three properties, all op
 - `default_popup` {{optional_inline}}
   - : `String`. The path to an HTML file containing the specification of the popup. The HTML file may include CSS and JavaScript files using `<link>` and `<script>` elements, just like a normal web page.
 
-    However, don't use `<script>` with embedded code, because you'll get a Content Violation Policy error. Instead, `<script>` must use the `src` attribute to load a separate script file.
+    However, don't use `<script>` with embedded code, because you'll get a Content Security Policy error. Instead, `<script>` must use the `src` attribute to load a separate script file.
 
     Unlike a normal web page, JavaScript running in the popup can access all the [WebExtension APIs](/en-US/docs/Mozilla/Add-ons/WebExtensions/API) (subject to the extension having the appropriate [permissions](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)). This is a [localizable property](/en-US/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 

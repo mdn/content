@@ -28,22 +28,6 @@ An {{domxref("RTCPeerConnectionIceErrorEvent")}}. Inherits from {{domxref("Event
 
 {{InheritanceDiagram("RTCPeerConnectionIceErrorEvent")}}
 
-## Event properties
-
-_The `RTCPeerConnectionIceErrorEvent` interface includes the properties found on the {{domxref("Event")}} interface, as well as the following properties:_
-
-- {{domxref("RTCPeerConnectionIceErrorEvent.address", "address")}} {{ReadOnlyInline}}
-  - : A string providing the local IP address used to communicate with the {{Glossary("STUN")}} or {{Glossary("TURN")}} server being used to negotiate the connection, or `null` if the local IP address has not yet been exposed as part of a local ICE candidate.
-- {{domxref("RTCPeerConnectionIceErrorEvent.errorCode", "errorCode")}} {{ReadOnlyInline}}
-  - : A positive integer value stating the numeric [STUN error code](https://www.iana.org/assignments/stun-parameters/stun-parameters.xhtml#stun-parameters-6) returned by the STUN or TURN server. If no host candidate can reach the server, this property is set to the number 701, which is outside the range of valid STUN error codes. This value is reported only once per server URL, and only while the {{domxref("RTCPeerConnection.iceGatheringState", "iceGatheringState")}} is `gathering`.
-- {{domxref("RTCPeerConnectionIceErrorEvent.errorText", "errorText")}} {{ReadOnlyInline}}
-  - : A string containing the STUN reason text returned by the STUN or TURN server. If communication with the STUN or TURN server couldn't be established at all, this string will be a browser-specific string explaining the error.
-- {{domxref("RTCPeerConnectionIceErrorEvent.port", "port")}} {{ReadOnlyInline}}
-  - : A positive integer value giving the port number over which communication with the STUN or TURN server is taking place, using the IP address given in [`address`](#address).
-    This is `null` if the connection hasn't been established (that is, if `address` is `null`).
-- {{domxref("RTCPeerConnectionIceErrorEvent.url", "url")}} {{ReadOnlyInline}}
-  - : A string indicating the URL of the STUN or TURN server with which the error occurred.
-
 ## Examples
 
 ### Basic usage

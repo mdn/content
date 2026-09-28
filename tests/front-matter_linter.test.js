@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import path from "node:path";
 import { fileURLToPath } from "node:url";
 import test from "node:test";
 import assert from "node:assert/strict";
@@ -59,7 +60,7 @@ test("Front-matter linter", async (t) => {
     options.fix = false;
     let result = await checkFrontMatter(filePath, options);
     const expected =
-      "tests/front-matter_test_files/attribute_order.md\n\t " +
+      `${path.join("tests", "front-matter_test_files", "attribute_order.md")}\n\t ` +
       "Front matter attributes are not in required order: " +
       "title->short-title->slug->page-type->status->browser-compat->spec-urls";
     assert.deepStrictEqual(result, [null, expected, null]);
@@ -75,7 +76,7 @@ test("Front-matter linter", async (t) => {
     options.fix = false;
     const result = await checkFrontMatter(filePath, options);
     const expected =
-      "Error: tests/front-matter_test_files/values.md\n" +
+      `Error: ${path.join("tests", "front-matter_test_files", "values.md")}\n` +
       "'page-type' property must be equal to one of the allowed values:\n" +
       "\tlanding-page, guide, web-api-method\n" +
       "Front matter must match 'then' schema\n" +
@@ -93,7 +94,7 @@ test("Front-matter linter", async (t) => {
     options.fix = true;
     const result = await checkFrontMatter(filePath, options);
     const expected =
-      "Error: tests/front-matter_test_files/prettify.md\n" +
+      `Error: ${path.join("tests", "front-matter_test_files", "prettify.md")}\n` +
       "property 'title' must not have more than 120 characters";
     assert.deepStrictEqual(result, [expected, null, validContent]);
   });
@@ -105,7 +106,7 @@ test("Front-matter linter", async (t) => {
     options.fix = false;
     let result = await checkFrontMatter(filePath, options);
     const expected =
-      "Error: tests/front-matter_test_files/unknown_attribute.md\n" +
+      `Error: ${path.join("tests", "front-matter_test_files", "unknown_attribute.md")}\n` +
       "'tags' property is not expected to be here";
     assert.deepStrictEqual(result, [expected, null, null]);
 

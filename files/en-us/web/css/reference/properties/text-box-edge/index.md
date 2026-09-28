@@ -9,11 +9,6 @@ sidebar: cssref
 
 The **`text-box-edge`** [CSS](/en-US/docs/Web/CSS) property specifies an amount of space to trim from a text element's block container.
 
-Vertical spacing differs between fonts, making consistent typesetting historically challenging on the web. The `text-box-edge` property — along with its counterpart property {{cssxref("text-box-trim")}}, which specifies which edge(s) to trim space from — makes consistent typesetting easier to achieve. The `text-box-edge` property has no effect if `text-box-trim` is not set or is set to `none`.
-
-> [!NOTE]
-> The {{cssxref("text-box")}} shorthand property can be used to specify the `text-box-edge` and `text-box-trim` values in a single declaration.
-
 ## Syntax
 
 ```css
@@ -50,6 +45,10 @@ The `text-box-edge` property value is specified as `auto` or a {{cssxref("&lt;te
 
 ## Description
 
+The `text-box-edge` property specifies an amount of space to trim from a text element's block container.
+
+Vertical spacing differs between fonts, making consistent typesetting historically challenging on the web. The `text-box-edge` property — along with its counterpart property {{cssxref("text-box-trim")}}, which specifies which edge(s) to trim space from — makes consistent typesetting easier to achieve. The `text-box-edge` property has no effect if `text-box-trim` is not set or is set to `none`.
+
 The height of text-only content is relative to the height of the font. In digital font files, the height contains all characters, including capital letters, ascenders, descenders, etc. Different fonts have different base line-heights, meaning that lines of text with the same `font-size` will produce line boxes of differing heights, affecting the appearance of spacing between lines.
 
 The `text-box-edge` property allows you to trim space from the start and/or end edge of the text's block container. This can include the {{glossary("leading")}} at the text's block-start edge and block-end edges and the spacing defined inside the font (as described above). It does this by specifying a {{cssxref("&lt;text-edge&gt;")}} value that indicates the over edge and under edge to trim the space to.
@@ -57,6 +56,8 @@ The `text-box-edge` property allows you to trim space from the start and/or end 
 Which edge(s) to trim space from is specified using the {{cssxref("text-box-trim")}} property. For example, you can choose to trim space from the over edge or the under edge of the text's block container, or both.
 
 These properties make it much easier to control text spacing in the block direction.
+
+The `text-box-edge` property, along with the {{cssxref("text-box-trim")}} property, can also be set by using the {{cssxref("text-box")}} shorthand.
 
 ## Formal definition
 

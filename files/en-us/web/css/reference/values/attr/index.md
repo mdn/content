@@ -90,7 +90,7 @@ The parameters are:
 - `<attr-type>`
   - : Specifies how the attribute value is parsed into a CSS value. This can be the `raw-string` keyword, a {{cssxref("type()")}} function, or a CSS dimension unit (specified using an `<attr-unit>` identifier). When omitted, it defaults to `raw-string`.
     - `raw-string`
-      - : The `raw-string` keyword causes the attribute's literal value to be treated as the value of a CSS string, with no CSS parsing performed (including CSS escapes, whitespace removal, comments, etc). The `<fallback-value>` is only used if the attribute is omitted; specifying an empty value doesn't trigger the fallback.
+      - : The `raw-string` keyword causes the attribute's literal value to be treated as the value of a CSS string, with no CSS parsing performed (including CSS escapes, whitespace removal, comments, etc.). The `<fallback-value>` is only used if the attribute is omitted; specifying an empty value doesn't trigger the fallback.
 
         ```css
         attr(data-name raw-string, "stranger")

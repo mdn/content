@@ -17,7 +17,7 @@ _This interface also inherits properties from its parent interface, {{domxref("S
 
 - {{domxref("SVGTextPathElement.href")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedString")}} corresponding to the {{SVGAttr("href")}} or {{SVGAttr("xlink:href")}} attribute of the given element.
-- {{domxref("SVGTextPathElement.side")}} {{ReadOnlyInline}}
+- {{domxref("SVGTextPathElement.side")}} {{ReadOnlyInline}} {{experimental_inline}} {{non-standard_inline}}
   - : An {{domxref("SVGAnimatedEnumeration")}} corresponding to the {{SVGAttr("side")}} attribute of the given element.
     Allowed values are specified by the [`TEXTPATH_SIDETYPE_*`](#textpath_sidetype_unknown) constants defined on this interface.
 - {{domxref("SVGTextPathElement.startOffset")}} {{ReadOnlyInline}}
@@ -124,7 +124,7 @@ function log(text) {
 
 The code below toggles the `side.baseVal` property on the `textPath`, causing the text to swap sides.
 
-First we define a function to log each of the properties of the the path element, and call it to log the initial state on load.
+First we define a function to log each of the properties of the path element, and call it to log the initial state on load.
 The `side.baseVale` property is logged first, and demonstrates how the enumerated constants may be read and interpreted (this is done in a `try...catch` block, because `side` is not supported in all browsers).
 The other properties of the text path are also logged, but as raw values of their associated `baseVal` property.
 

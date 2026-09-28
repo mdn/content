@@ -76,8 +76,8 @@ In your extension's `manifest.json` file, declare `host_permissions` for the dom
 Add a mechanism to enter the registration JSON. In this case, a pop-up; you could also use an extension page. This example uses a simple `popup.html` with a `textarea` for the JSON input and two buttons: one for registration and one for authentication.
 
 ```html
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en-US">
   <head>
     <meta charset="UTF-8" />
     <title>WebAuthn Extension</title>

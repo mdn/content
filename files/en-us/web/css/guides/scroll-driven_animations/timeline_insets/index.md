@@ -71,7 +71,7 @@ The following diagram illustrates the position of the subject at the `0%` and `1
 
 {{EmbedLiveSample("svg_view", "100%", "720")}}
 
-The yellow subject elements represents the position of the element when the `from` keyframe is applied, which is the animation range's `0%` progress mark. The red represents the location of the animated element relative to the scrollport when the `to` keyframe is applied, which is the end of the animation, or the `100%` progress mark. The grey represents the scrollport.
+The yellow subject elements represents the position of the element when the `from` keyframe is applied, which is the animation range's `0%` progress mark. The red represents the location of the animated element relative to the scrollport when the `to` keyframe is applied, which is the end of the animation, or the `100%` progress mark. The gray represents the scrollport.
 
 By default, the element animates while it is "in view", but this default definition of "in view" may not fit your needs. Fortunately, we can control which edges define the edges of the animation attachment range and then offset the start and end of that range with the animation range properties.
 
@@ -111,9 +111,9 @@ article {
   background-image: linear-gradient(
     to top,
     transparent calc(var(--start) - 1px),
-    #ccc calc(var(--start) - 1px) calc(var(--start) + 1px),
+    #cccccc calc(var(--start) - 1px) calc(var(--start) + 1px),
     transparent calc(var(--start) + 1px) calc(var(--end) - 1px),
-    #ccc calc(var(--end) - 1px) calc(var(--end) + 1px),
+    #cccccc calc(var(--end) - 1px) calc(var(--end) + 1px),
     transparent calc(var(--end) + 1px)
   );
 }
@@ -257,9 +257,9 @@ article {
     background-image: linear-gradient(
       to top,
       transparent 49.5px,
-      #666 49.5px 50.5px,
+      #666666 49.5px 50.5px,
       transparent 50.5px 99.5px,
-      #666 99.5px 100.5px,
+      #666666 99.5px 100.5px,
       transparent 100.5px
     );
     background-origin: content-box;
@@ -356,9 +356,9 @@ i {
   background-image: linear-gradient(
     to bottom,
     transparent calc(20% - 1px),
-    #3333 calc(20% - 1px) calc(20% + 1px),
+    #33333333 calc(20% - 1px) calc(20% + 1px),
     transparent calc(20% + 1px) calc(60% - 1px),
-    #3333 calc(60% - 1px) calc(60% + 1px),
+    #33333333 calc(60% - 1px) calc(60% + 1px),
     transparent calc(60% + 1px)
   );
 }
@@ -380,11 +380,11 @@ article {
     linear-gradient(
       to top,
       transparent 0 calc(var(--containerHeight) * 0.2 - 0.5px),
-      #3333 calc(var(--containerHeight) * 0.2 - 0.5px)
+      #33333333 calc(var(--containerHeight) * 0.2 - 0.5px)
         calc(var(--containerHeight) * 0.2 + 0.5px),
       transparent calc(var(--containerHeight) * 0.2 + 0.5px)
         calc(var(--containerHeight) * 0.6 - 0.5px),
-      #3333 calc(var(--containerHeight) * 0.6 - 0.5px)
+      #33333333 calc(var(--containerHeight) * 0.6 - 0.5px)
         calc(var(--containerHeight) * 0.6 + 0.5px),
       transparent 0 calc(var(--containerHeight) * 0.6 + 0.5px)
     );
@@ -402,7 +402,7 @@ Only when the element is `50px` tall is the top of the subject still in the scro
 
 Based on the height of our subjects, the `20%` mark is either `60px`, `100px`, or `150px` from the end edge of the scrollport (marked by the green line, which is always in the scrollport), and the `60%` mark is `180px`, `300px`, or `450px` from the same point (marked with a red line, but only visible for the `50px` subject).
 
-For illustrative purposes, there are two light grey lines crossing the container `20%` and `60%` of the way through the scrollport, which are `50px` and `150px` from the bottom of the scrollport, respectively. As the `animation-range-*` percentages are relative to the timeline range, not the scrollport, these lines only show how the percentages **don't** align. We've also included two horizontal light grey lines going across each subject at their own `20%` and `60%` marks. These lines align with the scrollport's light grey lines when each subjects animation starts and ends.
+For illustrative purposes, there are two light gray lines crossing the container `20%` and `60%` of the way through the scrollport, which are `50px` and `150px` from the bottom of the scrollport, respectively. As the `animation-range-*` percentages are relative to the timeline range, not the scrollport, these lines only show how the percentages **don't** align. We've also included two horizontal light gray lines going across each subject at their own `20%` and `60%` marks. These lines align with the scrollport's light gray lines when each subjects animation starts and ends.
 
 The following image demonstrates where the subject elements are located when the animation starts (the `0%` keyframe) and ends (the `100% keyframe`).
 This image includes the insets from the animation timeline in the previous demonstration and the timeline without insets for comparison.
@@ -444,13 +444,13 @@ This image includes the insets from the animation timeline in the previous demon
 
 {{EmbedLiveSample("svg_insets2", "100%", "710")}}
 
-As before, the yellow represents the position of the element when the `from` keyframe is applied, the red represents the location when the `to` keyframe is applied, and the grey represents the scrollport. The striped areas are where the red and yellow element representations overlap. For illustrative purposes, we've added dashed black horizontal lines `20%` and `60%` way through the scrollport, starting from the bottom.
+As before, the yellow represents the position of the element when the `from` keyframe is applied, the red represents the location when the `to` keyframe is applied, and the gray represents the scrollport. The striped areas are where the red and yellow element representations overlap. For illustrative purposes, we've added dashed black horizontal lines `20%` and `60%` way through the scrollport, starting from the bottom.
 
-The animation only begins when the element reaches the `20%` mark along the animation attachment range. This point is `60px`, `100px`, or `150px` from the bottom edge of the scroll port, depending on the the size of the element. The location of the subject element at this point, representing the position of the element when the `from` or `0%` keyframe is applied, is shown in yellow.
+The animation only begins when the element reaches the `20%` mark along the animation attachment range. This point is `60px`, `100px`, or `150px` from the bottom edge of the scroll port, depending on the size of the element. The location of the subject element at this point, representing the position of the element when the `from` or `0%` keyframe is applied, is shown in yellow.
 
 The red represents the location of the animated element relative to the scrollport when the `to` or `100%` keyframe is applied, which is the end of the animation. This point is either `180px`, `300px`, or `450px` from the bottom edge of the scrollport, depending on the subject size. The animation occurs when the element is between the `to` and the `from` positions.
 
-You may have noticed something interesting about the dashed horizontal lines: when the animation starts, the line that is `20%` from the end edge of the viewport is `20%` from the _top_ of the subject element and the line that is `60%` from the end edge of the viewport is `60%` from the _top_ of the subject element when the animation ends. This is what was illustrated by the very light grey lines in the live demo for this example.
+You may have noticed something interesting about the dashed horizontal lines: when the animation starts, the line that is `20%` from the end edge of the viewport is `20%` from the _top_ of the subject element and the line that is `60%` from the end edge of the viewport is `60%` from the _top_ of the subject element when the animation ends. This is what was illustrated by the very light gray lines in the live demo for this example.
 
 ### Subject size matters
 
@@ -478,7 +478,7 @@ body .animated_element {
 
 The animation lasts `40%` of the animation-attachment range. As you scroll, note how the larger the subject, the longer the range. With exit-crossing, the animation range is not cropped; it is the size of the subject even if the subject is larger than the viewport, with the range abutting the start edge of the scrollport, and extending off the end edge if the subject is larger than the scrollport.
 
-With the `-20%` and `20%` insets, the `50px` subject's will animation over `20px`: the animation starts when the subject's end is `-10px` from range start, or `60px` from exiting the screen, and ends when the subject's end is `40px` from exiting the screen. The middle subject will animate over `100px`: the animation starts when the subject end is `-50px` from range start, which is `50px` off of the scrollport's end edge, and ends when the subject's end is `50px` into the scrollport. The large subject animates over `200px`, starting when the bottom is `600px` from the the container's start edge, with only `150px` in view, and ends when the bottom is 400px from that start edge, when `100px` have scrolled off the start edge.
+With the `-20%` and `20%` insets, the `50px` subject's will animation over `20px`: the animation starts when the subject's end is `-10px` from range start, or `60px` from exiting the screen, and ends when the subject's end is `40px` from exiting the screen. The middle subject will animate over `100px`: the animation starts when the subject end is `-50px` from range start, which is `50px` off of the scrollport's end edge, and ends when the subject's end is `50px` into the scrollport. The large subject animates over `200px`, starting when the bottom is `600px` from the container's start edge, with only `150px` in view, and ends when the bottom is 400px from that start edge, when `100px` have scrolled off the start edge.
 
 ### Percentages equal to the scrollport
 
@@ -585,6 +585,7 @@ line {
 ```
 
 ```html hidden live-sample___initial live-sample___entry_exit live-sample___inset_percent live-sample___inset_length live-sample___inset_cover live-sample___inset_contain live-sample___cover_contain live-sample___exit_length_negative live-sample___entry_crossing live-sample___exit_crossing
+<main>
   <article>
     <p>&nbsp;</p>
     <p>&nbsp;</p>

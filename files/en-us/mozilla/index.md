@@ -23,7 +23,7 @@ Surf, stream and get work done on servers in over 30 countries for a secure inte
 
 Access all your email, calendars, and contacts in one fast app. Filter and organize them the way you like.
 
-[**Download Thunderbird**](https://www.thunderbird.net/download/?utm_source=developer.mozilla.org&utm_medium=referral&utm_campaign=mdn-mozilla-products)
+[**Download Thunderbird**](https://www.thunderbird.net/en-US/download/?utm_source=developer.mozilla.org&utm_medium=referral&utm_campaign=mdn-mozilla-products)
 
 ## Mozilla New Products
 

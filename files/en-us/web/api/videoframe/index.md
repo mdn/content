@@ -26,7 +26,7 @@ This means that a frame can be created from an image or video element.
 
 A second constructor enables the creation of a `VideoFrame` from its binary pixel representation in an {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}.
 
-Created frames may then turned into a media track, for example with the {{domxref("MediaStreamTrackGenerator")}} interface that creates a media track from a stream of frames.
+Created frames may then be turned into a media track, for example with the {{domxref("MediaStreamTrackGenerator")}} interface that creates a media track from a stream of frames.
 
 ## Constructor
 

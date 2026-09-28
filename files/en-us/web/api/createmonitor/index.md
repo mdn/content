@@ -9,12 +9,13 @@ browser-compat: api.CreateMonitor
 
 {{APIRef("Summarizer API")}}{{SeeCompatTable}}{{securecontext_header}}
 
-The **`CreateMonitor`** interface provides information on the progress of an AI model download or some fine-tuning data for the model.
+The **`CreateMonitor`** interface provides information on the progress of an AI model download, for example a language pack or some fine-tuning data.
 
 It can be used via:
 
-- {{domxref("Summarizer.create_static", "Summarizer.create()")}}
 - {{domxref("LanguageDetector.create_static", "LanguageDetector.create()")}}
+- {{domxref("LanguageModel.create_static", "LanguageModel.create()")}}
+- {{domxref("Summarizer.create_static", "Summarizer.create()")}}
 - {{domxref("Translator.create_static", "Translator.create()")}}
 
 {{InheritanceDiagram}}
@@ -56,5 +57,7 @@ const summary = await summarizer.summarize(myText);
 
 ## See also
 
+- [Using the Prompt API](/en-US/docs/Web/API/Prompt_API/Using)
 - [Using the Summarizer API](/en-US/docs/Web/API/Summarizer_API/Using)
+- [Using the Translator and Language Detector APIs](/en-US/docs/Web/API/Translator_and_Language_Detector_APIs/Using)
 - [Web AI demos](https://chrome.dev/web-ai-demos/) on chrome.dev.

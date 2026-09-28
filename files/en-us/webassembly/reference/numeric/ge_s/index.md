@@ -1,12 +1,13 @@
 ---
-title: "ge_s: Wasm text instruction"
+title: "ge_s: Wasm numeric instruction"
 short-title: ge_s
 slug: WebAssembly/Reference/Numeric/ge_s
 page-type: webassembly-instruction
+browser-compat: webassembly.instructions.ge_s
 sidebar: webassemblysidebar
 ---
 
-The **`ge_s`** instruction, short for _greater or equal signed_, checks if a signed integer is greater than or equal to another signed integer.
+The **`ge_s`** [numeric instruction](/en-US/docs/WebAssembly/Reference/Numeric), short for _greater or equal signed_, checks if a signed integer is greater than or equal to another signed integer.
 
 There are other `ge` instructions available:
 
@@ -149,6 +150,14 @@ The output is as follows:
 {{embedlivesample("simd_ge_s", "100%", 100)}}
 
 The result is `1` because the value stored in lane `3` of the first input value is greater than or equal to the value stored in lane `3` of the second input value.
+
+## Specifications
+
+{{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

@@ -42,7 +42,7 @@ In general, if it's an open web technology, we document it on MDN Web Docs. This
 
 If a feature is implemented by multiple browsers and either accepted as standard or is progressing towards standardization, then yes, we definitely document it here. If a feature is still very experimental and not implemented in multiple browsers and/or liable to change, then it is still suitable for inclusion but may not be seen as a priority for the writing team to work on.
 
-In other words, web technologies to be documented on MDN Web Docs should fulfil all of the following criteria:
+In other words, web technologies to be documented on MDN Web Docs should fulfill all of the following criteria:
 
 - Be on a standards track.
 - Be specified in a specification published by a reliable standards body.

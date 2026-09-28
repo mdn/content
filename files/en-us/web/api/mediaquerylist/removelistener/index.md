@@ -8,7 +8,7 @@ status:
 browser-compat: api.MediaQueryList.removeListener
 ---
 
-{{APIRef("CSSOM view API")}}{{Deprecated_Header}}
+{{APIRef("CSSOM view API")}}
 
 The **`removeListener()`** method of the
 {{DOMxRef("MediaQueryList")}} interface removes a listener from the

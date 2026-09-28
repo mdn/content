@@ -301,17 +301,43 @@
       "overview": ["CSS Typed OM API"],
       "guides": ["/docs/Web/API/CSS_Typed_OM_API/Guide"],
       "interfaces": [
-        "CSSKeywordValue",
         "CSSImageValue",
+        "CSSKeywordValue",
+        "CSSMathClamp",
+        "CSSMathInvert",
+        "CSSMathMax",
+        "CSSMathMin",
+        "CSSMathNegate",
+        "CSSMathProduct",
+        "CSSMathSum",
+        "CSSMathValue",
+        "CSSMatrixComponent",
+        "CSSNumericArray",
         "CSSNumericValue",
-        "CSSStyleValue",
+        "CSSPerspective",
         "CSSPositionValue",
+        "CSSRotate",
+        "CSSScale",
+        "CSSSkew",
+        "CSSSkewX",
+        "CSSSkewY",
+        "CSSStyleValue",
+        "CSSTransformComponent",
         "CSSTransformValue",
+        "CSSTranslate",
+        "CSSUnitValue",
         "CSSUnparsedValue",
-        "StylePropertyMap"
+        "CSSVariableReferenceValue",
+        "StylePropertyMap",
+        "StylePropertyMapReadOnly"
       ],
-      "methods": [],
-      "properties": [],
+      "methods": ["Element.computedStyleMap", "CSS.factory_functions_static"],
+      "properties": [
+        "HTMLElement.attributeStyleMap",
+        "SVGElement.attributeStyleMap",
+        "MathMLElement.attributeStyleMap",
+        "CSSStyleRule.styleMap"
+      ],
       "events": []
     },
     "CSSOM": {
@@ -737,20 +763,7 @@
         "/docs/Web/API/CSS_Typed_OM_API/Guide",
         "/docs/Web/API/CSS_Painting_API/Guide"
       ],
-      "interfaces": [
-        "CSSImageValue",
-        "CSSKeywordValue",
-        "CSSMathValue",
-        "CSSNumericValue",
-        "CSSPositionValue",
-        "CSSStyleValue",
-        "CSSTransformValue",
-        "CSSUnitValue",
-        "CSSUnparsedValue",
-        "PaintWorkletGlobalScope",
-        "StylePropertyMap",
-        "Worklet"
-      ],
+      "interfaces": ["PaintWorkletGlobalScope", "Worklet"],
       "methods": ["CSS.registerProperty_static", "Worklet.addModule"],
       "properties": [],
       "events": []
@@ -988,6 +1001,7 @@
         "IDBKeyRange",
         "IDBObjectStore",
         "IDBOpenDBRequest",
+        "IDBRecord",
         "IDBRequest",
         "IDBTransaction",
         "IDBVersionChangeEvent"
@@ -1099,7 +1113,6 @@
         "MediaStreamTrackEvent",
         "MediaTrackConstraints",
         "MediaTrackSettings",
-        "MediaTrackSupportedConstraints",
         "OverconstrainedError"
       ],
       "methods": [
@@ -1217,6 +1230,7 @@
       ],
       "interfaces": [
         "EventCounts",
+        "InteractionContentfulPaint",
         "LargestContentfulPaint",
         "LayoutShift",
         "LayoutShiftAttribution",
@@ -1238,6 +1252,7 @@
         "PerformanceResourceTiming",
         "PerformanceScriptTiming",
         "PerformanceServerTiming",
+        "PerformanceSoftNavigation",
         "PerformanceTiming",
         "TaskAttributionTiming",
         "VisibilityStateEntry"
@@ -1413,6 +1428,19 @@
       "properties": ["HTMLIFrameElement.privateToken"],
       "events": []
     },
+    "Prompt API": {
+      "overview": ["Prompt API"],
+      "guides": [
+        "/docs/Web/API/Prompt_API/Using",
+        "/docs/Web/API/Prompt_API/Adding_context",
+        "/docs/Web/API/Prompt_API/Preserving_sessions",
+        "/docs/Web/API/Prompt_API/Multimodal"
+      ],
+      "interfaces": ["CreateMonitor", "LanguageModel"],
+      "methods": [],
+      "properties": [],
+      "events": []
+    },
     "Push API": {
       "overview": ["Push API"],
       "guides": ["/docs/Web/API/Push_API/Best_Practices"],
@@ -1479,7 +1507,10 @@
         "CropTarget",
         "RestrictionTarget"
       ],
-      "methods": ["MediaDevices.getDisplayMedia()"],
+      "methods": [
+        "MediaDevices.getDisplayMedia()",
+        "MediaDevices.getSupportedConstraints()"
+      ],
       "properties": [
         "MediaTrackConstraints.displaySurface",
         "MediaTrackConstraints.logicalSurface",
@@ -1487,10 +1518,7 @@
         "MediaTrackSettings.cursor",
         "MediaTrackSettings.displaySurface",
         "MediaTrackSettings.logicalSurface",
-        "MediaTrackSettings.suppressLocalAudioPlayback",
-        "MediaTrackSupportedConstraints.displaySurface",
-        "MediaTrackSupportedConstraints.logicalSurface",
-        "MediaTrackSupportedConstraints.suppressLocalAudioPlayback"
+        "MediaTrackSettings.suppressLocalAudioPlayback"
       ],
       "events": []
     },

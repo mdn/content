@@ -9,7 +9,7 @@ status:
 browser-compat: api.Window.vrdisplaydeactivate_event
 ---
 
-{{APIRef("Window")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{APIRef("Window")}}{{Non-standard_Header}}
 
 The **`vrdisplaydeactivate`** event of the [WebVR API](/en-US/docs/Web/API/WebVR_API) is fired when a VR display can no longer be presented to, for example if an HMD has gone into standby or sleep mode due to a period of inactivity.
 
@@ -33,15 +33,6 @@ onvrdisplaydeactivate = (event) => { }
 A {{domxref("VRDisplayEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("VRDisplayEvent")}}
-
-## Event properties
-
-_`VRDisplayEvent` also inherits properties from its parent object, {{domxref("Event")}}._
-
-- {{domxref("VRDisplayEvent.display")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
-  - : The {{domxref("VRDisplay")}} associated with this event.
-- {{domxref("VRDisplayEvent.reason")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
-  - : A human-readable reason why the event was fired.
 
 ## Examples
 

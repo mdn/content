@@ -36,7 +36,7 @@ Highlights:
 ### HTML
 
 - A new {{glossary("ARIA")}} role, `switch`, is now supported ([Firefox bug 1136563](https://bugzil.la/1136563)).
-- Support for `<link rel="preconnect">` allowing to anticipate a future connection without revealing any information has been implemented ([Firefox bug 1135160](https://bugzil.la/1135160)).
+- Support for `<link rel="preconnect">` allowing you to anticipate a future connection without revealing any information has been implemented ([Firefox bug 1135160](https://bugzil.la/1135160)).
 
 ### JavaScript
 

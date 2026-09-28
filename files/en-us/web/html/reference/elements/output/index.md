@@ -29,6 +29,8 @@ The `<output>` value, name, and contents are NOT submitted during form submissio
 
 Many browsers implement this element as an [`aria-live`](/en-US/docs/Web/Accessibility/ARIA/Guides/Live_regions) region. Assistive technology will thereby announce the results of UI interactions posted inside it without requiring that focus is switched away from the controls that produce those results.
 
+Live-region updates are generally announced as plain text, so links, buttons, and other semantics nested inside `<output>` may not be conveyed in the announcement.
+
 ## Examples
 
 In the following example, the form provides a slider whose value can range between `0` and `100`, and an {{HTMLElement("input")}} element into which you can enter a second number. The two numbers are added together, and the result is displayed in the `<output>` element each time the value of any of the controls changes.

@@ -360,18 +360,18 @@ A basic data table can be written with very simple markup, for example:
     <td>Pronouns</td>
   </tr>
   <tr>
-    <td>Gabriel</td>
-    <td>13</td>
+    <td>Xavier</td>
+    <td>23</td>
     <td>he/him</td>
   </tr>
   <tr>
-    <td>Elva</td>
+    <td>Tina</td>
     <td>8</td>
     <td>she/her</td>
   </tr>
   <tr>
-    <td>Freida</td>
-    <td>5</td>
+    <td>Sam</td>
+    <td>17</td>
     <td>she/her</td>
   </tr>
 </table>

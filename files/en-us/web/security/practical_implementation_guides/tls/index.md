@@ -12,7 +12,7 @@ sidebar: security
 
 ### Problem
 
-If data is sent over the web unencrypted, it can be intercepted by third parties, who can access and modify the data — this is often known as a [manipulator-in-the-middle](/en-US/docs/Glossary/MitM) (MiTM) attack. MiTM attacks have severe consequences for the security of your system.
+If data is sent over the web unencrypted, it can be intercepted by third parties, who can access and modify the data — this is often known as a [manipulator in the middle](/en-US/docs/Glossary/MitM) (MiTM) attack. MiTM attacks have severe consequences for the security of your system.
 
 All requests and responses should therefore be sent over HTTPS, which uses TLS to encrypt the data. The modern web practically enforces this — all browsers are moving towards requiring [HTTPS](/en-US/docs/Glossary/HTTPS) by default, and many web features can only be used in a [secure context](/en-US/docs/Web/Security/Defenses/Secure_Contexts).
 
@@ -96,7 +96,7 @@ Redirect `site.example.org` from HTTP to HTTPS, using Apache:
 
 ### Problem
 
-To prevent [manipulator-in-the-middle](/en-US/docs/Glossary/MitM) (MiTM) attacks, browsers should only connect to sites via HTTPS.
+To prevent [manipulator in the middle](/en-US/docs/Glossary/MitM) (MiTM) attacks, browsers should only connect to sites via HTTPS.
 
 ### Solution
 

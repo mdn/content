@@ -87,6 +87,8 @@ clear: unset;
 
 ### Values
 
+This property is specified as one of the following keyword values:
+
 - `none`
   - : Is a keyword indicating that the element is _not_ moved down to clear past floating elements.
 - `left`

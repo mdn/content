@@ -64,7 +64,7 @@ The `then()` method schedules callback functions for the eventual completion of 
 
 For more information about the `onRejected` handler, see the {{jsxref("Promise/catch", "catch()")}} reference.
 
-`then()` returns a new promise object but mutates the promise object it's called on, appending the handlers to an internal list. Therefore the handler is retained by the original promise and its lifetime is at least as long as the original promise's lifetime. For example, the following example will eventually run out of memory even though the returned promise is not retained:
+`then()` returns a new promise object but mutates the promise object it's called on, appending the handlers to an internal list if the promise is pending. Therefore the handler is retained by the original promise for as long as that promise remains pending and reachable. For example, the following example will eventually run out of memory even though the returned promise is not retained:
 
 ```js
 const pendingPromise = new Promise(() => {});

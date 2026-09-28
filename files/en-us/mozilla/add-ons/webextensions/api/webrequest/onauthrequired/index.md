@@ -122,7 +122,7 @@ Events have three functions:
     > `webRequest.onAuthRequired` is only called for HTTP and HTTPS/TLS proxy servers requiring authentication, not for SOCKS proxy servers requiring authentication.
 - `method`
   - : `string`. Standard HTTP method (For example, `"GET"` or `"POST"`).
-- `parentDocumentId`{{optional_inline}}
+- `parentDocumentId` {{optional_inline}}
   - : `string`. A UUID of the parent document owning the frame. Not set if there is no parent. See the [Work with documentId](/en-US/docs/Mozilla/Add-ons/WebExtensions/Work_with_documentId) article for more information.
 - `parentFrameId`
   - : `integer`. ID of the frame that contains the frame that sent the request. Set to `-1` if no parent frame exists.

@@ -75,9 +75,9 @@ Our HTML includes a {{htmlelement("section")}} element containing several paragr
 ```html
 <div>
   <button class="scroll">scroll() to 1000</button>
-  <button class="scrollto">scrollTo() top</button>
-  <button class="scrollby">scrollBy() 200</button>
-  <button class="scrollintoview">Scroll last &lt;p&gt; into view</button>
+  <button class="scroll-to">scrollTo() top</button>
+  <button class="scroll-by">scrollBy() 200</button>
+  <button class="scroll-into-view">Scroll last &lt;p&gt; into view</button>
 </div>
 
 <section>...</section>
@@ -137,7 +137,7 @@ The rest of the CSS is not shown, for brevity.
 We start by grabbing references to the `<button>` that runs the `scrollTo()` operation, the toolbar `<div>`, and the scrolling `<section>`:
 
 ```js
-const scrollToBtn = document.querySelector(".scrollto");
+const scrollToBtn = document.querySelector(".scroll-to");
 const toolbar = document.querySelector("div");
 const section = document.querySelector("section");
 ```
@@ -153,7 +153,7 @@ function isInterrupted(interrupted) {
 }
 ```
 
-When the button is clicked, we immediately apply the `fade-out` class to the toolbar, causing it to fade out. We then run `scrollTo(0, 0)` on the `<section>` to scroll its content to the top, `await`ing its promise resolution as we do so and storing the `result` in a constant. When the promise has resolved, we call `isInterrupted()` to report that the scroll operation has finished and whether it was interrupted. Finally, we apply the `fade-in` class to the toolbar, causing it to fade back in again.
+When the button is clicked, we immediately apply the `fade-out` class to the toolbar, causing it to fade out. We then run `scrollTo(0, 0)` on the `<section>` to scroll its content to the top, awaiting its promise resolution as we do so and storing the `result` in a constant. When the promise has resolved, we call `isInterrupted()` to report that the scroll operation has finished and whether it was interrupted. Finally, we apply the `fade-in` class to the toolbar, causing it to fade back in again.
 
 ```js
 scrollToBtn.addEventListener("click", async () => {

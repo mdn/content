@@ -14,10 +14,10 @@ The **`alpha()`** [CSS](/en-US/docs/Web/CSS) [function](/en-US/docs/Web/CSS/Refe
 ```css
 /* Replace alpha with a fixed value */
 alpha(from red / 50%)
-alpha(from var(--mycolor) / 80%)
+alpha(from var(--my-color) / 80%)
 
 /* Derive alpha relative to the origin color's alpha */
-alpha(from var(--mycolor) / calc(alpha * 0.5))
+alpha(from var(--my-color) / calc(alpha * 0.5))
 ```
 
 ### Parameters
@@ -25,8 +25,8 @@ alpha(from var(--mycolor) / calc(alpha * 0.5))
 - `from <color>`
   - : The [relative color](/en-US/docs/Web/CSS/Guides/Colors/Using_relative_colors) syntax keyword `from` followed by any valid {{cssxref("&lt;color&gt;")}} value, defining the **origin color**. The color components of the origin color are carried through to the result unchanged; only the alpha channel is affected.
 
-- `/ <alpha-value>` {{optional_inline}}
-  - : An {{cssxref("&lt;alpha-value&gt;")}} specifying the alpha of the output color. This can be a `<number>` between `0` and `1`, a `<percentage>` between `0%` and `100%`, or a {{cssxref("calc()")}} expression. Within this value, the keyword **`alpha`** may be used to refer to the alpha channel of the origin color as a `<number>` (where `1.0` is equivalent to `100%`). If this argument is omitted, the alpha of the origin color is used unchanged.
+- `/ <alpha-value>`
+  - : An {{cssxref("&lt;alpha-value&gt;")}} specifying the alpha of the output color. This can be a `<number>` between `0` and `1`, a `<percentage>` between `0%` and `100%`, or a {{cssxref("calc()")}} expression. Within this value, the keyword **`alpha`** may be used to refer to the alpha channel of the origin color as a `<number>` (where `1.0` is equivalent to `100%`).
 
 ### Return value
 
@@ -42,6 +42,10 @@ Unlike general [relative color syntax](/en-US/docs/Web/CSS/Guides/Colors/Using_r
 
 The return value is always in the same color space as the origin color. For example, if the origin color is an [`oklch()`](/en-US/docs/Web/CSS/Reference/Values/color_value/oklch) color, the result will also be resolved in OKLCh, with the same lightness, chroma, and hue.
 
+## Formal syntax
+
+{{CSSSyntax}}
+
 ## Examples
 
 ### Replacing the alpha of a color
@@ -55,18 +59,18 @@ In this example, we specify two colors. The second color is defined by passing t
 
 ```css live-sample___replace-alpha
 :root {
-  --mycolor: oklch(60% 0.25 315 / 0.3);
+  --my-color: oklch(60% 0.25 315 / 0.3);
 
   /* Same color, but with alpha set to 80% */
-  --mycolor-80: alpha(from var(--mycolor) / 80%);
+  --my-color-80: alpha(from var(--my-color) / 80%);
 }
 
 .box1 {
-  background-color: var(--mycolor);
+  background-color: var(--my-color);
 }
 
 .box2 {
-  background-color: var(--mycolor-80);
+  background-color: var(--my-color-80);
 }
 ```
 
@@ -100,18 +104,18 @@ This example is very similar to the previous one, except that this time the alph
 
 ```css live-sample___derive-alpha
 :root {
-  --mycolor: oklch(60% 0.25 315 / 0.8);
+  --my-color: oklch(60% 0.25 315 / 0.8);
 
-  /* Half the opacity of --mycolor */
-  --mycolor-half-opacity: alpha(from var(--mycolor) / calc(alpha * 0.5));
+  /* Half the opacity of --my-color */
+  --my-color-half-opacity: alpha(from var(--my-color) / calc(alpha * 0.5));
 }
 
 .box1 {
-  background-color: var(--mycolor);
+  background-color: var(--my-color);
 }
 
 .box2 {
-  background-color: var(--mycolor-half-opacity);
+  background-color: var(--my-color-half-opacity);
 }
 ```
 
@@ -160,7 +164,6 @@ body {
     background-color: wheat;
     padding: 1rem 0;
     text-align: center;
-    padding: 1rem 0;
 
     z-index: 1;
     position: fixed;

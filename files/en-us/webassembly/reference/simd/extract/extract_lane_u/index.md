@@ -3,7 +3,7 @@ title: "extract_lane_u: Wasm SIMD extract instruction"
 short-title: extract_lane_u
 slug: WebAssembly/Reference/SIMD/extract/extract_lane_u
 page-type: webassembly-instruction
-browser-compat: webassembly.simd.extract_lane_u
+browser-compat: webassembly.instructions.extract_lane_u
 sidebar: webassemblysidebar
 ---
 

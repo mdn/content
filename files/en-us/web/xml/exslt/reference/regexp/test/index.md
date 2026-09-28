@@ -27,7 +27,7 @@ The character flags are:
 - `g`
   - : Global match. Has no effect for this function; it's allowed for consistency with other regexp functions.
 - `i`
-  - : Case insensitive match<. If this flag is specified, the match is performed in a case insensitive fashion.
+  - : Case-insensitive match. If this flag is specified, the match is performed in a case-insensitive fashion.
 
 ### Return value
 

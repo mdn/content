@@ -84,9 +84,9 @@ list-style-position: revert-layer;
 list-style-position: unset;
 ```
 
-The `list-style-position` property is specified as one of the keyword values listed below.
-
 ### Values
+
+This property is specified as one of the following keyword values:
 
 - `inside`
   - : The {{cssxref("::marker")}} is the first element among the list item's contents.

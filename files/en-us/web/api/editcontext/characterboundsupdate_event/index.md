@@ -32,15 +32,6 @@ oncharacterboundsupdate = (event) => { }
 
 A {{domxref("CharacterBoundsUpdateEvent")}}. Inherits from {{domxref("Event")}}.
 
-## Event properties
-
-_In addition to the properties listed below, properties from the parent interface, {{domxref("Event")}}, are available._
-
-- {{domxref('CharacterBoundsUpdateEvent.rangeStart')}} {{readonlyinline}}
-  - : The offset of the first character within the editable region text for which the operating system needs the bounds.
-- {{domxref('CharacterBoundsUpdateEvent.rangeEnd')}} {{readonlyinline}}
-  - : The offset of the last character within the editable region text for which the operating system needs the bounds.
-
 ## Examples
 
 ### Updating the character bounds when needed

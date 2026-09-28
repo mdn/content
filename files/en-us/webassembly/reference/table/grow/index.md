@@ -3,12 +3,11 @@ title: "grow: Wasm table instruction"
 short-title: grow
 slug: WebAssembly/Reference/Table/grow
 page-type: webassembly-instruction
-browser-compat: webassembly.reference-types
-spec-urls: https://webassembly.github.io/spec/core/syntax/instructions.html#syntax-instr-table
+browser-compat: webassembly.instructions.table_grow
 sidebar: webassemblysidebar
 ---
 
-The **`table.grow`** [Table instruction](/en-US/docs/WebAssembly/Reference/Table) increases the size of a table by a specified number of elements.
+The **`table.grow`** [table instruction](/en-US/docs/WebAssembly/Reference/Table) increases the size of a table by a specified number of elements.
 
 {{InteractiveExample("Wat Demo: table.grow", "tabbed-taller")}}
 
@@ -66,7 +65,7 @@ table.grow identifier
     - `name`
       - : An identifying name [set for the table](/en-US/docs/WebAssembly/Reference/Definitions/table#name) when it was first created. This must begin with a `$` symbol, for example `$my_table`.
     - `index`
-      - : The table's index number, for example `0` for the first table in the wasm script, `1` for the second, etc.
+      - : The table's index number, for example `0` for the first table in the wasm module, `1` for the second, etc.
 
     If the `identifier` is omitted, it will default to `0`.
 
