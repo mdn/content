@@ -30,7 +30,7 @@ A `DOMQuad` is a collection of four `DOMPoint`s defining the corners of an arbit
 - {{domxref("DOMQuad.getBounds()")}}
   - : Returns a {{domxref("DOMRect")}} object with the coordinates and dimensions of the `DOMQuad` object.
 - {{domxref("DOMQuad.toJSON()")}}
-  - : Returns a JSON representation of the `DOMQuad` object.
+  - : Returns a JSON-serializable plain object representing the `DOMQuad` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Static methods
 
