@@ -107,3 +107,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 - **Sanitizing HTML while parsing**: `dom.security.sanitizer.while-parsing`
 
   Methods that sanitize HTML with the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API), such as {{domxref("Element.setHTML()")}}, now remove unwanted elements and attributes as the markup is parsed, instead of parsing all of the markup first and cleaning up the resulting DOM tree afterwards. The result is the same, except that neighboring text now lands in a single text node instead of being split across several. ([Firefox bug 2062652](https://bugzil.la/2062652)).
+
+- **Key encapsulation in Web Crypto**: `dom.webcrypto.encapsulation.enabled`
+
+  The [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) supports ML-KEM, an algorithm that lets two parties agree on a shared secret key. It is designed to stay secure against attacks by quantum computers. {{domxref("SubtleCrypto")}} has the new `encapsulateKey()`, `encapsulateBits()`, `decapsulateKey()`, and `decapsulateBits()` methods, with matching {{domxref("CryptoKey.usages", "key usages")}}. The supported algorithm names include `ML-KEM-512`, `ML-KEM-768`, and `ML-KEM-1024`. {{domxref("SubtleCrypto.importKey()")}} and {{domxref("SubtleCrypto.exportKey()")}} also accept the new `raw-public` and `raw-seed` key formats. This feature is enabled by default in Nightly builds. ([Firefox bug 1943614](https://bugzil.la/1943614)).
