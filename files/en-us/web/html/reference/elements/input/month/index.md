@@ -138,10 +138,8 @@ We'll look at basic and more complex uses of `<input type="month">`, then offer 
 The most basic use of `<input type="month">` involves a basic {{HTMLElement("input")}} and {{htmlelement("label")}} element combination, as seen below:
 
 ```html
-<form>
-  <label for="bday-month">What month were you born in?</label>
-  <input id="bday-month" type="month" name="bday-month" />
-</form>
+<label for="bday-month">What month were you born in?</label>
+<input id="bday-month" type="month" name="bday-month" />
 ```
 
 {{EmbedLiveSample('Basic_uses_of_month', 600, 40)}}
@@ -152,15 +150,13 @@ You can use the [`min`](/en-US/docs/Web/HTML/Reference/Elements/input#min) and [
 In the following example we specify a minimum month of `1900-01` and a maximum month of `2013-12`:
 
 ```html
-<form>
-  <label for="bday-month">What month were you born in?</label>
-  <input
-    id="bday-month"
-    type="month"
-    name="bday-month"
-    min="1900-01"
-    max="2013-12" />
-</form>
+<label for="bday-month">What month were you born in?</label>
+<input
+  id="bday-month"
+  type="month"
+  name="bday-month"
+  min="1900-01"
+  max="2013-12" />
 ```
 
 {{EmbedLiveSample('Setting_maximum_and_minimum_dates', 600, 40)}}
@@ -204,6 +200,12 @@ Let's look at an example; here we've set minimum and maximum dates, and also mad
     <input type="submit" value="Submit form" />
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 If you try to submit the form without both the month and year specified (or with a date outside the set bounds), the browser displays an error.
@@ -299,6 +301,12 @@ For example, try viewing the following demo in a browser that doesn't support `m
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 {{ EmbedLiveSample('Handling_browser_support', 600, 100) }}
 
 If you try submitting it, you'll see that the browser now displays an error message (and highlights the input as invalid) if your entry doesn't match the pattern `nnnn-nn`, where `n` is a number from 0 to 9.
@@ -345,42 +353,40 @@ The first is a native `month` input, and the other is a pair of {{HTMLElement("s
 
 ### HTML
 
-The form that requests the month and year looks like this:
+The HTML that requests the month and year looks like this:
 
 ```html
-<form>
-  <div class="nativeDatePicker">
-    <label for="month-visit">What month would you like to visit us?</label>
-    <input type="month" id="month-visit" name="month-visit" />
-    <span class="validity"></span>
+<div class="nativeDatePicker">
+  <label for="month-visit">What month would you like to visit us?</label>
+  <input type="month" id="month-visit" name="month-visit" />
+  <span class="validity"></span>
+</div>
+<p class="fallbackLabel">What month would you like to visit us?</p>
+<div class="fallbackDatePicker">
+  <div>
+    <span>
+      <label for="month">Month:</label>
+      <select id="month" name="month">
+        <option selected>January</option>
+        <option>February</option>
+        <option>March</option>
+        <option>April</option>
+        <option>May</option>
+        <option>June</option>
+        <option>July</option>
+        <option>August</option>
+        <option>September</option>
+        <option>October</option>
+        <option>November</option>
+        <option>December</option>
+      </select>
+    </span>
+    <span>
+      <label for="year">Year:</label>
+      <select id="year" name="year"></select>
+    </span>
   </div>
-  <p class="fallbackLabel">What month would you like to visit us?</p>
-  <div class="fallbackDatePicker">
-    <div>
-      <span>
-        <label for="month">Month:</label>
-        <select id="month" name="month">
-          <option selected>January</option>
-          <option>February</option>
-          <option>March</option>
-          <option>April</option>
-          <option>May</option>
-          <option>June</option>
-          <option>July</option>
-          <option>August</option>
-          <option>September</option>
-          <option>October</option>
-          <option>November</option>
-          <option>December</option>
-        </select>
-      </span>
-      <span>
-        <label for="year">Year:</label>
-        <select id="year" name="year"></select>
-      </span>
-    </div>
-  </div>
-</form>
+</div>
 ```
 
 The {{HTMLElement("div")}} with the ID `nativeDatePicker` uses the `month` input type to request the month and year, while the `<div>` with the ID `fallbackDatePicker` instead uses a pair of `<select>` elements.

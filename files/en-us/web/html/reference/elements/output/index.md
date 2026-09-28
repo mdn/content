@@ -43,6 +43,12 @@ In the following example, the form provides a slider whose value can range betwe
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 ```js
 const form = document.getElementById("example-form");
 const a = form.elements["a"];

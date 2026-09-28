@@ -136,19 +136,16 @@ The value must be a non-negative decimal number. If not provided, or an invalid 
 ### Basic example
 
 ```html
-<form>
-  <div>
-    <input type="search" id="mySearch" name="q" />
-    <button>Search</button>
-  </div>
-</form>
+<div>
+  <input type="search" id="mySearch" name="q" />
+</div>
 ```
 
 This renders like so:
 
 {{EmbedLiveSample("Basic_example", 600, 40)}}
 
-`q` is the most common `name` given to search inputs, although it's not mandatory. When submitted, the data name/value pair sent to the server will be `q=searchTerm`.
+`q` is the most common `name` given to search inputs, although it's not mandatory. If this input is included in a form and submitted, the data name/value pair sent to the server will be `q=searchTerm`.
 
 > [!NOTE]
 > You must remember to set a [`name`](/en-US/docs/Web/HTML/Reference/Elements/input#name) for your input, otherwise nothing will be submitted.
@@ -170,16 +167,9 @@ At this point, let's look at some useful techniques you can apply to your search
 You can provide a useful placeholder inside your search input that could give a hint on what to do using the [`placeholder`](/en-US/docs/Web/HTML/Reference/Elements/input#placeholder) attribute. Look at the following example:
 
 ```html
-<form>
-  <div>
-    <input
-      type="search"
-      id="mySearch"
-      name="q"
-      placeholder="Search the site…" />
-    <button>Search</button>
-  </div>
-</form>
+<div>
+  <input type="search" id="mySearch" name="q" placeholder="Search the site…" />
+</div>
 ```
 
 You can see how the placeholder is rendered below:
@@ -213,6 +203,12 @@ Let's have a look at a minimal example:
 </search>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 You can see how this is rendered below:
 
 {{EmbedLiveSample("Search_form_labels_and_accessibility", 600, 40)}}
@@ -227,17 +223,14 @@ There is no visual difference from the previous example, but screen reader users
 The physical size of the input box can be controlled using the [`size`](/en-US/docs/Web/HTML/Reference/Elements/input#size) attribute. With it, you can specify the number of characters the input box can display at a time. In this example, for instance, the search box is 30 characters wide:
 
 ```html
-<form>
-  <div>
-    <input
-      type="search"
-      id="mySearch"
-      name="q"
-      placeholder="Search the site…"
-      size="30" />
-    <button>Search</button>
-  </div>
-</form>
+<div>
+  <input
+    type="search"
+    id="mySearch"
+    name="q"
+    placeholder="Search the site…"
+    size="30" />
+</div>
 ```
 
 The result is this wider input box:
@@ -288,6 +281,12 @@ You can use the [`required`](/en-US/docs/Web/HTML/Reference/Elements/input#requi
     <span class="validity"></span>
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 ```css hidden
@@ -343,6 +342,12 @@ The example below requires that the entered value be 4–8 characters in length.
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 ```css hidden
 input {
   margin-right: 10px;
@@ -389,6 +394,12 @@ Let's look at an example. Say we wanted to provide a product ID search form, and
     <span class="validity"></span>
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 ```css hidden

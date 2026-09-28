@@ -29,6 +29,12 @@ It is possible to use the {{cssxref(':valid')}} and {{cssxref(':invalid')}} CSS 
 </form>
 ```
 
+```js interactive-example
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 ```css interactive-example
 form.form-example {
   display: table;
@@ -141,6 +147,14 @@ The following attributes control behavior during form submission.
     <label><input type="radio" name="radio" value="no" /> No</label>
   </fieldset>
 </form>
+```
+
+```js hidden
+document.querySelectorAll("form").forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+  });
+});
 ```
 
 ### Result

@@ -23,6 +23,12 @@ sidebar: htmlsidebar
 </form>
 ```
 
+```js interactive-example
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 ```css interactive-example
 .controls {
   padding-top: 1rem;
@@ -99,6 +105,12 @@ We'll begin by creating a basic reset button:
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 This renders like so:
 
 {{EmbedLiveSample("A_basic_reset_button", 650, 100)}}
@@ -121,6 +133,12 @@ In this example, <kbd>r</kbd> is specified as the access key (you'll need to pre
     <input type="reset" value="Reset the form" accesskey="r" />
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 {{EmbedLiveSample("Adding_a_reset_keyboard_shortcut", 650, 100)}}

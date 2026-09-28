@@ -147,20 +147,17 @@ To make a checkbox checked by default, you give it the `checked` attribute. See 
 The following example shows how to make a checkbox look and act like an on/off switch.
 
 ```html
-<form>
-  <fieldset>
-    <legend>Adjust your setting</legend>
-    <div>
-      <label for="theme">Dark mode</label>
-      <input type="checkbox" name="theme" id="theme" switch checked />
-    </div>
-    <div>
-      <label for="notifications">Notifications</label>
-      <input type="checkbox" name="notifications" id="notifications" switch />
-    </div>
-    <button type="submit">Submit</button>
-  </fieldset>
-</form>
+<fieldset>
+  <legend>Adjust your setting</legend>
+  <div>
+    <label for="theme">Dark mode</label>
+    <input type="checkbox" name="theme" id="theme" switch checked />
+  </div>
+  <div>
+    <label for="notifications">Notifications</label>
+    <input type="checkbox" name="notifications" id="notifications" switch />
+  </div>
+</fieldset>
 ```
 
 > [!NOTE]
@@ -277,7 +274,7 @@ The following example is an extended version of the "multiple checkboxes" exampl
 ### HTML
 
 ```html
-<form>
+<div class="interests">
   <fieldset>
     <legend>Choose your interests</legend>
     <div>
@@ -321,11 +318,8 @@ The following example is an extended version of the "multiple checkboxes" exampl
         name="other"
         aria-label="Other interest" />
     </div>
-    <div>
-      <button type="submit">Submit form</button>
-    </div>
   </fieldset>
-</form>
+</div>
 ```
 
 ### CSS
@@ -335,7 +329,7 @@ html {
   font-family: sans-serif;
 }
 
-form {
+.interests {
   width: 600px;
   margin: 0 auto;
 }
