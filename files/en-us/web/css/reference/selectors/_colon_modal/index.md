@@ -72,17 +72,17 @@ Examples of elements that will prevent user interaction with the rest of the pag
 
 ### Styling a modal dialog
 
-This example styles a modal dialog that opens when the "Show the dialog" button is activated. This example has been built on top of the {{HTMLElement("dialog")}} element [example](/en-US/docs/Web/HTML/Reference/Elements/dialog#handling_the_return_value_from_the_dialog).
+This example styles a modal dialog that opens when the "Show the dialog" button is activated. This example is adapted from the {{HTMLElement("dialog")}} element [example](/en-US/docs/Web/HTML/Reference/Elements/dialog#handling_the_return_value_from_the_dialog).
 
 ```html hidden
 <!-- A modal dialog containing a form -->
 <dialog id="favDialog">
-  <form>
+  <form method="dialog">
     <p>
       <label>
         Favorite animal:
         <select>
-          <option value="nothing">Choose…</option>
+          <option>Choose…</option>
           <option>Brine shrimp</option>
           <option>Red panda</option>
           <option>Spider monkey</option>
@@ -90,16 +90,14 @@ This example styles a modal dialog that opens when the "Show the dialog" button 
       </label>
     </p>
     <div>
-      <button value="cancel" formmethod="dialog">Cancel</button>
-      <button id="requestCloseBtn">Cancel with requestClose</button>
-      <button id="confirmBtn">Confirm</button>
+      <button>Cancel</button>
+      <button>Confirm</button>
     </div>
   </form>
 </dialog>
 <p>
   <button id="showDialog">Show the dialog</button>
 </p>
-<output></output>
 ```
 
 #### CSS
@@ -117,35 +115,9 @@ The `:modal` pseudo-class selects the dialog opened with `showModal()`, giving i
 ```js hidden
 const showButton = document.getElementById("showDialog");
 const favDialog = document.getElementById("favDialog");
-const outputBox = document.querySelector("output");
-const selectEl = favDialog.querySelector("select");
-const requestCloseBtn = favDialog.querySelector("#requestCloseBtn");
-const confirmBtn = favDialog.querySelector("#confirmBtn");
 
-// "Show the dialog" button opens the <dialog> modally
 showButton.addEventListener("click", () => {
   favDialog.showModal();
-});
-
-// From Escape key or requestClose()
-favDialog.addEventListener("cancel", () => {
-  favDialog.returnValue = "cancelEvent";
-});
-
-// Display the return value whenever the dialog closes
-favDialog.addEventListener("close", () => {
-  outputBox.value = `ReturnValue: ${favDialog.returnValue}.`;
-});
-
-requestCloseBtn.addEventListener("click", (event) => {
-  event.preventDefault();
-  favDialog.requestClose("requestClose");
-});
-
-// Close the dialog with the selected animal
-confirmBtn.addEventListener("click", (event) => {
-  event.preventDefault();
-  favDialog.close(selectEl.value);
 });
 ```
 
