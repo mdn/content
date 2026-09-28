@@ -160,7 +160,7 @@ Next, we add an `input` event handler to the range slider so that, when its valu
 
 ```js live-sample___path-length-animation
 slider.addEventListener("input", () => {
-  output.textContent = slider.value;
+  output.textContent = `${slider.value}px`;
   rootElem.style.setProperty("--path-length", `${slider.value}px`);
 });
 ```
