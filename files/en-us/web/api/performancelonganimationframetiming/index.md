@@ -48,7 +48,7 @@ It also extends the following {{domxref("PerformanceEntry")}} properties, qualif
 ## Instance methods
 
 - {{domxref("PerformanceLongAnimationFrameTiming.toJSON()")}} {{Experimental_Inline}}
-  - : Overrides the {{domxref("PerformanceEntry.toJSON()")}} method to return a JSON representation of the `PerformanceLongAnimationFrameTiming` object.
+  - : Returns a JSON-serializable plain object representing the `PerformanceLongAnimationFrameTiming` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Description
 

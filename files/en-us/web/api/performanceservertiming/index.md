@@ -23,7 +23,7 @@ This interface is restricted to the same origin, but you can use the {{HTTPHeade
 ## Instance methods
 
 - {{domxref('PerformanceServerTiming.toJSON()')}}
-  - : Returns a JSON representation of the `PerformanceServerTiming` object.
+  - : Returns a JSON-serializable plain object representing the `PerformanceServerTiming` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Examples
 

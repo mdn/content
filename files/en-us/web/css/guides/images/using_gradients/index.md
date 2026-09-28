@@ -209,30 +209,12 @@ div {
   background: linear-gradient(
     to left,
     lime 20%,
-    red 30%,
-    red 45%,
-    cyan 55%,
-    cyan 70%,
-    yellow 80%
-  );
-  background: linear-gradient(
-    to left,
-    lime 20%,
     red 30% 45%,
     cyan 55% 70%,
     yellow 80%
   );
 }
 .multiposition-stop2 {
-  background: linear-gradient(
-    to left,
-    lime 25%,
-    red 25%,
-    red 50%,
-    cyan 50%,
-    cyan 75%,
-    yellow 75%
-  );
   background: linear-gradient(
     to left,
     lime 25%,
@@ -248,8 +230,6 @@ div {
 In the first example above, the lime goes from the 0% mark, which is implied, to the 20% mark, transitions from lime to red over the next 10% of the width of the gradient, reach solid red at the 30% mark, and staying solid red up until 45% through the gradient, where it fades to cyan, being fully cyan for 15% of the gradient, and so on.
 
 In the second example, the second color stop for each color is at the same location as the first color stop for the adjacent color, creating a striped effect.
-
-In both examples, the gradient is written twice: the first is the CSS Images Level 3 method of repeating the color for each stop and the second example is the CSS Images Level 4 multiple color stop method of including two color-stop-lengths in a linear-color-stop declaration.
 
 ### Controlling the progression of a gradient using color hints
 
@@ -796,7 +776,7 @@ div {
 
 ### Plaid gradient
 
-To create plaid we include several overlapping gradients with transparency. In the first background declaration we listed every color stop separately. The second background property declaration using the multiple position color stop syntax:
+To create plaid we include several overlapping gradients with transparency. We use the multiple position color stop syntax:
 
 ```html hidden
 <div class="plaid-gradient"></div>
@@ -811,52 +791,6 @@ div {
 
 ```css
 .plaid-gradient {
-  background:
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 50px,
-      rgb(255 127 0 / 25%) 50px,
-      rgb(255 127 0 / 25%) 56px,
-      transparent 56px,
-      transparent 63px,
-      rgb(255 127 0 / 25%) 63px,
-      rgb(255 127 0 / 25%) 69px,
-      transparent 69px,
-      transparent 116px,
-      rgb(255 206 0 / 25%) 116px,
-      rgb(255 206 0 / 25%) 166px
-    ),
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 50px,
-      rgb(255 127 0 / 25%) 50px,
-      rgb(255 127 0 / 25%) 56px,
-      transparent 56px,
-      transparent 63px,
-      rgb(255 127 0 / 25%) 63px,
-      rgb(255 127 0 / 25%) 69px,
-      transparent 69px,
-      transparent 116px,
-      rgb(255 206 0 / 25%) 116px,
-      rgb(255 206 0 / 25%) 166px
-    ),
-    repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 5px,
-      rgb(143 77 63 / 25%) 5px,
-      rgb(143 77 63 / 25%) 10px
-    ),
-    repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 5px,
-      rgb(143 77 63 / 25%) 5px,
-      rgb(143 77 63 / 25%) 10px
-    );
-
   background:
     repeating-linear-gradient(
       90deg,

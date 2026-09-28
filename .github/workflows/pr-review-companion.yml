@@ -39,7 +39,8 @@ jobs:
       - name: Identify PR
         id: identify-pr
         run: |
-          PR_NUMBER=$(gh api "repos/$HEAD_REPO/commits/$HEAD_SHA/pulls" --jq ".[] | select(.base.repo.full_name == \"$BASE_REPO\") | .number")
+          PR_NUMBER=$(gh api "repos/$HEAD_REPO/commits/$HEAD_SHA/pulls" \
+            --jq "[.[] | select(.base.repo.full_name == \"$BASE_REPO\" and .head.sha == \"$HEAD_SHA\") | .number] | first // empty")
           echo "number=$PR_NUMBER" >> $GITHUB_OUTPUT
         env:
           BASE_REPO: ${{ github.repository }}
