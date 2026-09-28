@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Animations_and_tweens", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Randomizing_gameplay")}}
 
-This is the **10th step** out of 11 of the [creating a Breakout game in pure JavaScript tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Instead of starting the game right away, we can leave that decision to the player by adding a Start button they can press. Let's investigate how to do that.
+This is the **10th step** out of 11 of the [creating a Breakout game using pure JavaScript tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Instead of starting the game right away, we can leave that decision to the player by adding a Start button they can press. Let's investigate how to do that.
 
 ## New variables
 

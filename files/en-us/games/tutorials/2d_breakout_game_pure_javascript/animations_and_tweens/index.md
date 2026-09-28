@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Buttons")}}
 
-This is the **9th step** out of 11 of the [creating a Breakout game in pure JavaScript tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). We'll explore how to implement animations and tweens in our game, to make the game look more juicy and alive. This will result in a better, more entertaining experience.
+This is the **9th step** out of 11 of the [creating a Breakout game using pure JavaScript tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). We'll explore how to implement animations and tweens in our game, to make the game look more juicy and alive. This will result in a better, more entertaining experience.
 
 ## Animations
 

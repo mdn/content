@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Animations_and_tweens")}}
 
-This is the **8th step** out of 11 of the [creating a Breakout game in pure JavaScript tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). In this article, we'll implement a lives system, so that the player can continue playing until they have lost three lives, not just one, which makes the game enjoyable for longer.
+This is the **8th step** out of 11 of the [creating a Breakout game using pure JavaScript tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). In this article, we'll implement a lives system, so that the player can continue playing until they have lost three lives, not just one, which makes the game enjoyable for longer.
 
 ## New variables
 

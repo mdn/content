@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_Phaser/Extra_lives")}}
 
-This is the **8th step** out of 12 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). In this article, we'll add a scoring system to our game. Having a score can make the game more interesting—you can try to beat your own high score, or your friend's. We also add a winning condition, which is if you happen to destroy all the bricks.
+This is the **8th step** out of 12 of the [creating a Breakout game using Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). In this article, we'll add a scoring system to our game. Having a score can make the game more interesting—you can try to beat your own high score, or your friend's. We also add a winning condition, which is if you happen to destroy all the bricks.
 
 We will use a separate property for storing the score and Phaser's `text()` method to print it out onto the screen.
 

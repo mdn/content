@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives")}}
 
-This is the **7th step** out of 11 of the [creating a Breakout game in pure JavaScript tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). In this article, we'll add a scoring system to our game. Having a score can make the game more interesting—you can try to beat your own high score, or your friend's. We also add a winning condition, which is if you happen to destroy all the bricks.
+This is the **7th step** out of 11 of the [creating a Breakout game using pure JavaScript tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). In this article, we'll add a scoring system to our game. Having a score can make the game more interesting—you can try to beat your own high score, or your friend's. We also add a winning condition, which is if you happen to destroy all the bricks.
 
 ## Adding score text to the game display
 

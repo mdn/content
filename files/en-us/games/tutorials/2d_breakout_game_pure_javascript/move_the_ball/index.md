@@ -7,9 +7,9 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls")}}
 
-This is the **2nd step** out of 11 of the [creating a Breakout game in pure JavaScript tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). In this article, we'll look at how to add sprites into our gameworld. Our game will feature a ball rolling around the screen, bouncing off a paddle, and destroying bricks to earn points.
+This is the **2nd step** out of 11 of the [creating a Breakout game using pure JavaScript tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). In this article, we'll look at how to add sprites into our gameworld. Our game will feature a ball rolling around the screen, bouncing off a paddle, and destroying bricks to earn points.
 
-Doing this involves two steps: loading the ball's asset, and rendering it at the correct position as the ball moves. Technically, we will be painting the ball on the screen, clearing it and then painting it again in a slightly different position every frame to make the impression of movement — just like how movement works with the movies.
+Handling the ball involves two steps: loading the ball asset and rendering it at the correct position as it moves. Technically, we will be painting the ball on the screen, clearing it and then painting it again in a slightly different position every frame to make the impression of movement — just like how movement works with the movies.
 
 ## Defining a drawing loop
 
@@ -167,6 +167,8 @@ Reload `index.html` and you should see the ball rolling across the screen.
 ## Compare your code
 
 Here's what you should have so far, running live. To view its source code, click the "Play" button.
+
+If you can't see the ball, try refreshing the page—the ball probably has gone off the screen.
 
 ```html hidden
 <canvas id="game-canvas" width="480" height="320"></canvas>

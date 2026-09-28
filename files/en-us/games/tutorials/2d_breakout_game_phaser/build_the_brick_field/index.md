@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Game_over", "Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win")}}
 
-This is the **7th step** out of 12 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Let's explore how to create a group of bricks, print them on the screen using a loop, and remove them when the ball hits them. Building the brick field is a little bit more complicated than adding a single object to the screen, although likely less complicated to do with Phaser than in pure JavaScript.
+This is the **7th step** out of 12 of the [creating a Breakout game using Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Let's explore how to create a group of bricks, print them on the screen using a loop, and remove them when the ball hits them. Building the brick field is a little bit more complicated than adding a single object to the screen, although likely less complicated to do with Phaser than in pure JavaScript.
 
 ## New properties
 

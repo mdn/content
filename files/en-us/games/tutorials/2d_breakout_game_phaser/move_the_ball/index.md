@@ -7,9 +7,9 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Initialize_the_framework", "Games/Tutorials/2D_breakout_game_Phaser/Physics")}}
 
-This is the **2nd step** out of 12 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). In this article, we'll look at how to load a ball sprite, add it to our gameworld, and move it across the screen. Our game will feature a ball rolling around the screen, bouncing off a paddle, and destroying bricks to earn points.
+This is the **2nd step** out of 12 of the [creating a Breakout game using Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). In this article, we'll look at how to load a ball sprite, add it to our gameworld, and move it across the screen. Our game will feature a ball rolling around the screen, bouncing off a paddle, and destroying bricks to earn points.
 
-Doing this involves two steps: loading the ball's asset, and rendering it at the correct position as the ball moves.
+Handling the ball involves two steps: loading the ball asset and rendering it at the correct position as it moves.
 
 ## Having a ball
 
@@ -40,7 +40,7 @@ The first parameter gives the asset its name that will be used across our game c
 
 Of course, to load the image, it must be available in our code directory. [Grab the ball image from our assets website](https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/ball.png), and save it inside an `/img` directory in the same place as your `index.html` file.
 
-Now, to show it on the screen, we will use another `Phaser.Scene`'s method called `add.sprite()`; add the following new line inside the `create()` method:
+Now, to show it on the screen, we will use another `Phaser.Scene` method called `add.sprite()`; add the following new line inside the `create()` method:
 
 ```js
 class ExampleScene extends Phaser.Scene {
@@ -73,6 +73,8 @@ The code above adds 1 to the `x` and `y` properties representing the ball coordi
 ## Compare your code
 
 Here's what you should have so far, running live. To view its source code, click the "Play" button.
+
+If you can't see the ball, try refreshing the page—the ball probably has gone off the screen.
 
 ```html hidden
 <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.90.0/phaser.js"></script>
