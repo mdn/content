@@ -121,11 +121,11 @@ When you want to use a third-party API, it is essential to find out where the do
 
 When reading documentation for REST APIs, focus on these five questions:
 
-1. What HTTP method to use for the task
+1. What [HTTP method](/en-US/docs/Web/HTTP/Reference/Methods) to use for the task
 2. What URL endpoint to request for the task
 3. What payload the endpoint expects, and in which format (JSON body, XML body, query parameters, etc.)
-4. What response the endpoint returns, and in which format
-5. What non-200 status codes it may return, and what each one means
+4. What [status codes](/en-US/docs/Web/HTTP/Reference/Status) it may return, and what each one means
+5. What's contained in the response body, and in which format
 
 ### Get a personal access token
 
@@ -134,7 +134,7 @@ For this exercise, create a **personal access token (PAT)** to authenticate your
 1. Sign in to your GitHub account, or [sign up for one](https://github.com/signup) if you don't already have one.
 2. Follow GitHub's instructions for [creating a fine-grained personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token). Give it a descriptive name (such as "MDN 3rd party API lesson") and a short expiration (if you don't expect to continue using it after this lesson), and select your own account as the resource owner.
 3. Under **Repository access**, select **Public repositories**. Leave additional permissions unset: searching public repositories doesn't require any.
-4. Click **Generate token** and copy the token. You'll enter it in the form in the live example below, rather than adding it to your source code.
+4. Click **Generate token** and copy the token. You'll enter it in the form in the [live example](#try_the_example), rather than adding it to your source code.
 
 This example will be slightly different from how API keys are typically used: the website will ask the user to submit their own key and perform the action on their behalf, so it doesn't need its own API key and doesn't need a server to proxy requests.
 
