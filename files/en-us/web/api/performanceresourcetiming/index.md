@@ -37,11 +37,11 @@ The properties of this interface allow you to calculate certain resource timing 
 
 By default only 250 resource timing entries are buffered. For more information see the [resource buffer sizes](/en-US/docs/Web/API/Performance_API/Resource_timing#managing_resource_buffer_sizes) of the Resource Timing guide.
 
-### Cross-origin timing information
+### Cross-origin restrictions
 
-Many of the resource timing properties are restricted to return `0` or an empty string when the resource is a cross-origin request. To expose cross-origin timing information, the {{HTTPHeader("Timing-Allow-Origin")}} HTTP response header needs to be set.
-
-The properties which are returned as `0` by default when loading a resource from an origin other than the one of the web page itself: `redirectStart`, `redirectEnd`, `domainLookupStart`, `domainLookupEnd`, `connectStart`, `connectEnd`, `secureConnectionStart`, `requestStart`, and `responseStart`.
+Timing information for a cross-origin resource is restricted unless the resource passes the {{HTTPHeader("Timing-Allow-Origin")}} check.
+This applies to the following properties, which return `0` or an empty string by default when loading a resource from an origin other than the one of the web page itself: `redirectStart`, `redirectEnd`, `workerStart`, `domainLookupStart`, `domainLookupEnd`, `connectStart`, `connectEnd`, `secureConnectionStart`, `requestStart`, `firstInterimResponseStart`, `responseStart`, `finalResponseHeadersStart`, `nextHopProtocol`, `transferSize`, and `deliveryType`.
+Even a resource that passes the [CORS](/en-US/docs/Web/HTTP/Guides/CORS) check still needs `Timing-Allow-Origin` to expose them.
 
 For example, to allow `https://developer.mozilla.org` to see resource timing information, the cross-origin resource should send:
 
@@ -49,11 +49,14 @@ For example, to allow `https://developer.mozilla.org` to see resource timing inf
 Timing-Allow-Origin: https://developer.mozilla.org
 ```
 
-The `Timing-Allow-Origin` header protects timing information for any cross-origin resource. A resource that passes the [CORS](/en-US/docs/Web/HTTP/Guides/CORS) check still needs `Timing-Allow-Origin` to expose these properties.
+Other properties describe the response itself rather than its timing, and depend on the CORS check instead of the `Timing-Allow-Origin` check.
+The `contentType`, `encodedBodySize`, `decodedBodySize`, and `responseStatus` properties return `0` or an empty string for cross-origin resources unless the resource was requested in `cors` [mode](/en-US/docs/Web/API/Request/mode) and passed the CORS check.
+The exception is navigations of frames such as {{HTMLElement("iframe")}}: because these don't use CORS, their body sizes are exposed if the frame's document passes the `Timing-Allow-Origin` check.
+The `transferSize` property depends on both checks: it's `0` without `Timing-Allow-Origin`, and it excludes the body size if the resource doesn't pass the CORS check.
 
-Other properties describe the response itself rather than its timing, and are protected by CORS instead of `Timing-Allow-Origin`. The `contentType`, `encodedBodySize`, `decodedBodySize`, and `responseStatus` properties return `0` or an empty string for cross-origin resources unless the resource was requested using CORS and passed the CORS check.
-
-For cross-origin {{HTMLElement("iframe")}} elements that fail the `Timing-Allow-Origin` check, the browser reports a fallback entry in which `responseEnd` is the time at which the iframe finished loading completely, including its subresources. See [Cross-origin iframes](/en-US/docs/Web/API/PerformanceResourceTiming/responseEnd#cross-origin_iframes) for more information.
+If the document in a cross-origin {{HTMLElement("iframe")}} fails the `Timing-Allow-Origin` check, the browser reports a fallback entry.
+In this entry, `responseEnd` is the time at which the iframe finished loading, including its subresources.
+See [Cross-origin iframes](/en-US/docs/Web/API/PerformanceResourceTiming/responseEnd#cross-origin_iframes) for more information.
 
 ## Instance properties
 
@@ -128,7 +131,7 @@ Additionally, this interface exposes the following properties containing more in
 - {{domxref('PerformanceResourceTiming.responseStatus')}} {{ReadOnlyInline}}
   - : A number representing the HTTP response status code returned when fetching the resource.
 - {{domxref('PerformanceResourceTiming.transferSize')}} {{ReadOnlyInline}}
-  - : A number representing the size (in octets) of the fetched resource. The size includes the response header fields plus the response payload body.
+  - : A number representing the size (in octets) of the fetched resource. This is the size of the response body plus a fixed value that stands in for the size of the response headers.
 - {{domxref('PerformanceResourceTiming.serverTiming')}} {{ReadOnlyInline}}
   - : An array of {{domxref("PerformanceServerTiming")}} entries containing server timing metrics.
 
