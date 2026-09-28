@@ -21,10 +21,9 @@ The `decodedBodySize` property can have the following values:
 
 Content size information for a cross-origin resource is restricted unless the resource passes the [CORS](/en-US/docs/Web/HTTP/Guides/CORS) check, so if the value of the `decodedBodySize` property is `0`, the resource might be a cross-origin request.
 
-For example, an {{HTMLElement("img")}} element without the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute loads its image using a `no-cors` request, so the content size of a cross-origin image loaded this way is reported as `0`.
-
-To expose cross-origin content size information, the resource must be requested in `cors` [mode](/en-US/docs/Web/API/Request/mode): for example, by using {{domxref("Window/fetch", "fetch()")}} or by setting the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute on the element that loads it.
-The response must then pass the CORS check, which requires it to include an appropriate {{HTTPHeader("Access-Control-Allow-Origin")}} header.
+To expose cross-origin content size information, the resource must be requested in `cors` [mode](/en-US/docs/Web/API/Request/mode), and the response must pass the CORS check, which requires it to include an appropriate {{HTTPHeader("Access-Control-Allow-Origin")}} header.
+Requests made with {{domxref("Window/fetch", "fetch()")}} use `cors` mode by default.
+Elements such as {{HTMLElement("img")}} use `no-cors` mode unless the [`crossorigin`](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) attribute is set, so a cross-origin image loaded without it has a content size of `0`.
 
 To allow `https://developer.mozilla.org` to see content sizes, the cross-origin resource should send:
 
