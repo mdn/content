@@ -43,7 +43,6 @@ In these reference articles, you'll find the fundamental information you'll need
 - {{domxref("MediaStreamTrackEvent")}}
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaTrackSettings")}}
-- {{domxref("MediaTrackSupportedConstraints")}}
 - {{domxref("OverconstrainedError")}}
 
 ## Events
