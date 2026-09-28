@@ -18,7 +18,7 @@ provided when calling either {{domxref("MediaDevices.getUserMedia", "getUserMedi
 or {{domxref("MediaStreamTrack.applyConstraints()")}}.
 
 If needed, you can determine whether or not this constraint is supported by checking
-the value of {{domxref("MediaTrackSupportedConstraints.facingMode")}} as returned by a
+the value of [`facingMode`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#return_value) as returned by a
 call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
 is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 

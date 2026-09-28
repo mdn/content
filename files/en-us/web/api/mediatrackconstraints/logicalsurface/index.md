@@ -17,7 +17,7 @@ such as occluded windows or the complete content of windows which are large enou
 require scrolling to see their entire contents.
 
 If needed, you can determine whether or not this constraint is supported by checking
-the value of {{domxref("MediaTrackSupportedConstraints.logicalSurface")}} as returned by
+the value of [`logicalSurface`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#return_value) as returned by
 a call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this
 is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
@@ -64,4 +64,3 @@ entirely onscreen, or may even be entirely offscreen.
 - [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
-- {{domxref("MediaTrackSupportedConstraints")}}

@@ -17,7 +17,7 @@ describing the requested or mandatory constraints placed upon the value of the
 {{domxref("MediaTrackSettings.volume", "volume")}} constrainable property.
 
 If needed, you can determine whether or not this constraint is supported by checking
-the value of {{domxref("MediaTrackSupportedConstraints.volume")}} as returned by a call
+the value of [`volume`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#return_value) as returned by a call
 to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is
 unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
@@ -51,5 +51,4 @@ See the [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API
 - [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
-- {{domxref("MediaTrackSupportedConstraints")}}
 - {{domxref("MediaStreamTrack")}}
