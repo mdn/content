@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`column-rule-inset-cap-start`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the top of column rule segment [cap endpoints](#understanding_cap_start) at the container's start edge, and cap endpoints where no rule segments intersect.
+The **`column-rule-inset-cap-start`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the top of column rule segment [cap endpoints](/en-US/docs/Web/CSS/Reference/Properties/column-rule-inset-cap#understanding_cap_endpoints) at the container's start edge, and cap endpoints where no rule segments intersect.
 
 {{InteractiveExample("CSS Demo: rule")}}
 
@@ -127,7 +127,7 @@ This property is specified as a single value from the following list:
 
 ## Description
 
-The `column-rule-inset-cap-start` property can be used to inset the start edge of [cap segment endpoints](#understanding_cap_start). The default value is `0`, which is the same as `overlap-join`. Positive values reduce the segment size, while negative values increase it.
+The `column-rule-inset-cap-start` property can be used to inset the start edge of [cap segment endpoints](/en-US/docs/Web/CSS/Reference/Properties/column-rule-inset-cap#understanding_cap_endpoints). The default value is `0`, which is the same as `overlap-join`. Positive values reduce the segment size, while negative values increase it.
 
 Column rules are painted within a column gap as one or more segments, with segments occurring between:
 

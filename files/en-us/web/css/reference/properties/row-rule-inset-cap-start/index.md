@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`row-rule-inset-cap-start`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the start of row rule segment [cap endpoints](#understanding_cap_start).
+The **`row-rule-inset-cap-start`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the start of row rule segment [cap endpoints](/en-US/docs/Web/CSS/Reference/Properties/column-rule-inset-cap#understanding_cap_endpoints).
 
 {{InteractiveExample("CSS Demo: rule")}}
 
@@ -126,7 +126,7 @@ This property is specified as a single value from the following list:
 
 ## Description
 
-The `row-rule-inset-cap-start` property insets the start of [cap segment endpoints](#understanding_cap_start) at the container's start edge and at cap endpoints where no rule segments intersect. The default value is `0`, which is the same as `overlap-join`. Positive values reduce the segment size, while negative values increase it.
+The `row-rule-inset-cap-start` property insets the start of [cap segment endpoints](/en-US/docs/Web/CSS/Reference/Properties/column-rule-inset-cap#understanding_cap_endpoints) at the container's start edge and at cap endpoints where no rule segments intersect. The default value is `0`, which is the same as `overlap-join`. Positive values reduce the segment size, while negative values increase it.
 
 Row rules are painted within a row gap as one or more segments, with segments occurring between:
 
