@@ -51,7 +51,6 @@ Timing-Allow-Origin: https://developer.mozilla.org
 
 Other properties describe the response itself rather than its timing, and depend on the CORS check instead of the `Timing-Allow-Origin` check.
 The `contentType`, `encodedBodySize`, `decodedBodySize`, and `responseStatus` properties return `0` or an empty string for cross-origin resources unless the resource was requested in `cors` [mode](/en-US/docs/Web/API/Request/mode) and passed the CORS check.
-The exception is navigations of frames such as {{HTMLElement("iframe")}}: because these don't use CORS, their body sizes are exposed if the frame's document passes the `Timing-Allow-Origin` check.
 The `transferSize` property depends on both checks: it's `0` without `Timing-Allow-Origin`, and it excludes the body size if the resource doesn't pass the CORS check.
 
 If the document in a cross-origin {{HTMLElement("iframe")}} fails the `Timing-Allow-Origin` check, the browser reports a fallback entry.
