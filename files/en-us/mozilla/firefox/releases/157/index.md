@@ -57,7 +57,9 @@ Firefox 157 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 - The [WebGPU](/en-US/docs/Web/API/WebGPU_API) `TRANSIENT_ATTACHMENT` [texture usage type](/en-US/docs/Web/API/GPUTexture/usage#value) is now supported. This enables creating memory-efficient attachments that are only used within the current render pass. Related render pass operations stay in tile memory, which avoids VRAM traffic and can avoid VRAM allocation for the textures. ([Firefox bug 2005061](https://bugzil.la/2005061)).
 
-<!-- #### DOM -->
+#### DOM
+
+- The {{domxref("Animation.reverse()")}} method and the {{domxref("Animation.playbackRate")}} property now match the [Web Animations](/en-US/docs/Web/API/Web_Animations_API) specification in two cases. First, calling `reverse()` on an animation whose `playbackRate` is `0` now plays the animation. This updates its {{domxref("Animation.startTime", "startTime")}} and {{domxref("Animation.currentTime", "currentTime")}} while leaving `playbackRate` at `0`. Previously, the call had no effect. Second, switching `playbackRate` between a positive and a negative value on a [scroll-driven animation](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) now mirrors the animation's `startTime` to the opposite end of the timeline. As a result, the reversed animation still falls within the scroll range. Previously, `startTime` was left unchanged, which is only correct for time-based timelines such as {{domxref("DocumentTimeline")}}. This adjustment applies when the animation has a `startTime` and a finite duration. ([Firefox bug 2046973](https://bugzil.la/2046973)).
 
 <!-- #### Media, WebRTC, and Web Audio -->
 
