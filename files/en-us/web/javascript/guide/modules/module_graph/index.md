@@ -63,10 +63,10 @@ export function log(message) {
 
 ### Loading the graph
 
-Module loading is the part that requires a close collaboration between the host (Node) and the engine (V8). Each time:
+Module loading is the part that requires a close collaboration between the host (Node) and the engine (V8). For each module request:
 
 - The host receives a _module request_, containing the module specifier and import attributes, if any. The host loads the respective module's source code (such as by mapping it to a file system location and reading that file's content).
-  - This step can be further broken down to two steps: [specifier resolution](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#module_specifiers_on_the_web) and actually sending the request, which may be an HTTP request in browsers or a file system access in Node.
+  - This step can be further broken down into two steps: [specifier resolution](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#module_specifiers_on_the_web) and actually sending the request, which may be an HTTP request in browsers or a file system access in Node.
   - The entry point is slightly different: there's usually no specifier resolution. For example, the `main.js` command-line argument is directly read as a file path, and the `src` attribute of `<script>` elements is directly read as a URL; neither are module specifiers. The fetching process might also be slightly different.
 - The host gives the engine the module source code. The engine parses the source code and collects all `import` and `export from` declarations, which create new module requests. (If the source is not JavaScript, the host may ask some other parser to process the source code instead.)
 - All these module requests are given to the host and the host starts the whole process again, possibly handling multiple requests concurrently.
@@ -81,7 +81,7 @@ In this particular example:
 - The host finds out that `./config.js` was already requested by `main.js` and skips it (although it's still loading), and starts loading `logger.js`.
 - The loading for both `logger.js` and `config.js` finishes; neither contains further requests.
 
-After this step, the module graph is already established, all modules have been loaded and parsed, but no JavaScript module bodies have been executed by this loading process.
+After this step, the module graph is already established. All modules have been loaded and parsed, but no JavaScript module bodies have been executed by this loading process.
 
 ![Module graph](module-graph.svg)
 
@@ -89,7 +89,7 @@ After this step, the module graph is already established, all modules have been 
 
 After the graph has finished loading successfully, the host asks the engine to _link_ the entry module. The main goal of linking is to set up the [module environment](/en-US/docs/Glossary/Scope), i.e., the various {{glossary("binding", "bindings")}}, including the bindings to be exported. Each imported name is resolved to the place where it's actually defined and exported, potentially going through multiple layers of `export from` declarations. All modules in the graph need to be linked before they can be evaluated, so that importing a name that isn't exported on the other side can be caught early, before any code starts evaluating. It also makes subsequent evaluation easier because it avoids walking the module graph many times as each imported name gets used.
 
-During the linking phase, the engine traverses the module graph using depth-first search. Each time:
+During the linking phase, the engine traverses the module graph using depth-first search. For each module request:
 
 - The engine visits a module. If the module is already linked, or is already being linked (which happens with [cyclic imports](#cyclic_imports)), the engine does not process it again. Otherwise, the engine marks the module as currently linking.
 - The engine recursively links each of the module's dependencies using the same process. Unlike loading, linking is fully synchronous and deterministic: dependencies are visited in the order their module requests appear in the source.
@@ -139,12 +139,12 @@ Adding `export { x } from "./first.js"` to `combined.js` resolves the ambiguity:
 
 ### Evaluating modules
 
-Now that all modules have their environment prepared, they are finally ready for evaluation. The host asks the engine to evaluate the entry module. The engine traverses the module graph yet again, using depth-first search. For now, assume no module uses [top-level `await`](#top-level_await_and_asynchronous_evaluation). Each time:
+Now that all modules have their environment prepared, they are finally ready for evaluation. The host asks the engine to evaluate the entry module. The engine traverses the module graph yet again, using depth-first search. For now, assume no module uses [top-level `await`](#top-level_await_and_asynchronous_evaluation). For each module request:
 
 - The engine visits a module. If the module has already been evaluated successfully, it does not execute it again. If a previous evaluation failed, the engine propagates the recorded error instead. If the module is already being evaluated, the engine does not visit its dependencies again, avoiding infinite recursion in a cycle. Otherwise, it marks the module as currently evaluating.
 - The engine recursively evaluates each dependency using the same process, in the order their module requests appear in the source.
 - After visiting all dependencies, the engine executes the module body. Variable initializers run, initializing the bindings prepared during linking, and other statements execute in source order. Imported names access the bindings connected during linking. In a cycle, a dependency's body may not have executed yet, so an imported binding may still be uninitialized; we'll discuss this [later](#cyclic_imports).
-- After the module body finishes successfully, the module is marked as evaluated. In a cycle, modules in the same strongly connected component are marked as evaluated together once their bodies have finished.
+- After the module body finishes successfully, the module is marked as evaluated. In a cycle, modules in the same [strongly connected component](#errors_with_cyclic_imports) are marked as evaluated together once their bodies have finished.
 
 In our example:
 
@@ -195,7 +195,7 @@ This assumes a fresh load without preloading or another entry point requesting t
 
 ![Loading stops after non-existent.js fails: main.js and config.js have been fetched and parsed, formatters.js is still loading, and logger.js has not been discovered or requested.](module-loading-error.svg)
 
-Retry behavior depends on the host and the kind of failure. In browsers, the module map is separate from the HTTP cache. The [HTML specification](https://html.spec.whatwg.org/multipage/webappapis.html#fetch-a-single-module-script) requires failed fetches, including HTTP error responses, to be removed from the module map so a later import can retry. The HTTP cache may still supply a cached error response. Parse errors, however, are retained in the module map, so retrying the same module does not fetch corrected source. Unlike module loading, {{domxref("Window/fetch", "fetch()")}} does not reject merely because the response has an HTTP error status.
+Retry behavior depends on the host and the kind of failure. For browser-specific retry behavior, see [Module caching on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#module_caching). Unlike module loading, {{domxref("Window/fetch", "fetch()")}} does not reject merely because the response has an HTTP error status.
 
 Linking is only performed if _all_ modules in the graph completed loading. A graph partially loaded due to errors is never linked.
 
@@ -257,9 +257,9 @@ The _evaluated_ status means the evaluation attempt is finished, not necessarily
 
 ## Cyclic imports
 
-The module dependency graph is traversed using DFS twice for linking and evaluation (loading can traverse branches concurrently in a non-deterministic order, and cycles do not affect it any more than normal shared dependencies do). This strategy works well for acyclic dependency graphs, like the example presented above. Even the case where two modules import the same module is minimally problematic—there's always a well-defined "end" (`config.js` and `logger.js`) from where we can work backwards. We just need to be careful not to link or evaluate the same module twice.
+The module dependency graph is traversed using depth-first search (DFS) twice for linking and evaluation (loading can traverse branches concurrently in a non-deterministic order, and cycles do not affect it any more than normal shared dependencies do). This strategy works well for acyclic dependency graphs, like the example presented above. Even the case where two modules import the same module is minimally problematic—there's always a well-defined "end" (`config.js` and `logger.js`) from where we can work backwards. We just need to be careful not to link or evaluate the same module twice.
 
-However, cycles are often inevitable. Cyclic import arises if module `a` imports module `b`, but `b` directly or indirectly depends on `a`. For example, consider the simplest two-module cycle:
+However, cycles are often inevitable. A cyclic import arises if module `a` imports module `b`, but `b` directly or indirectly depends on `a`. For example, consider the simplest two-module cycle:
 
 ```js
 // -- a.js --
@@ -387,7 +387,7 @@ The problem becomes more complicated when there's a linking or evaluation error.
 
 ![A naïve traversal marks b.js as evaluated before a.js throws. A red circled question mark challenges b.js's successful status.](module-cycle-error.svg)
 
-In this example, if `a.js` fails to link or evaluate, we don't want to mark `b.js` as successful even though it has finished its own linking and evaluating—because its success is contingent on the success of `a.js`, a dependency of it! Therefore, in a cycle, we must mark all modules as succeeding or failing together.
+In this example, if `a.js` fails to link or evaluate, we don't want to mark `b.js` as successful even though it has finished its own linking and evaluating—because its success is contingent on the success of `a.js`, a dependency of `b.js`! Therefore, in a cycle, we must mark all modules as succeeding or failing together.
 
 The precise term we are looking for is a _strongly connected component_ (SCC). An SCC is a maximal group of modules where every module can reach every other module. An SCC can consist of a single cycle or a union of cycles that share vertices, as long as the group is maximal:
 
@@ -426,7 +426,7 @@ export default await response.json();
 
 The other modules don't need to change: the module system automatically waits for `config.js` to finish before executing their bodies and executing their dependents like `main.js`.
 
-Previously, a module is either evaluated, unevaluated, or in an SCC and waiting for other modules to evaluate. Now, a module can also be _in progress_. It covers both modules whose own asynchronous execution is in progress and modules waiting for asynchronous dependencies. A module can therefore have this status without containing an `await` expression.
+Previously, a module was either evaluated, unevaluated, or in an SCC and waiting for other modules to evaluate. Now, a module can also be _in progress_. This status covers both modules whose own asynchronous execution is in progress and modules waiting for asynchronous dependencies. A module can therefore have this status without containing an `await` expression.
 
 The engine still traverses dependencies depth-first, in the order their module requests appear in the source. However, it no longer needs to finish executing one branch before visiting another. For an acyclic graph, the process is:
 
@@ -575,7 +575,7 @@ Initially, loading `main.js` discovers `config.js`. Registering the listener com
 
 ![A double-line arrow shows the dynamic import from main.js to formatters.js. Single-line arrows show static dependencies. The added formatters.js and logger.js modules are highlighted in teal. The existing main.js and config.js are light gray. formatters.js imports the same config.js already used by main.js.](module-dynamic-import.svg)
 
-Augmentation of the module graph can encounter existing modules in any state, and that state is preserved—loading modules keep loading, loaded modules aren't re-fetched, linked modules aren't re-linked, evaluated modules are never re-evaluated (including if the previous one had an error). In the example above, `config.js` has already evaluated, so only `logger.js` and `formatters.js` need to execute. The dynamically imported module itself may also already exist in the module graph and get reused.
+Augmentation of the module graph can encounter existing modules in any state, and that state is preserved—loading modules keep loading, loaded modules aren't re-fetched, linked modules aren't re-linked, evaluated modules are never re-evaluated (including if the previous evaluation threw an error). In the example above, `config.js` has already evaluated, so only `logger.js` and `formatters.js` need to execute. The dynamically imported module itself may also already exist in the module graph and get reused.
 
 Dynamic import is async, because the loading may need to fetch new modules and evaluation may need to wait for top-level `await`. The `import()` promise resolves when the requested module's evaluation finishes successfully.
 
@@ -623,13 +623,16 @@ export function createCounter() {
 }
 ```
 
-Alternatively, you can add a useless query or fragment to your URL specifier (see [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import#module_namespace_object)).
+Alternatively, you can add an arbitrary query or fragment to your URL specifier (see [`import()`](/en-US/docs/Web/JavaScript/Reference/Operators/import#module_namespace_object)).
 
 ## Controlling import phases
 
 Ordinary `import` declarations trigger the whole [load-link-evaluate process](#from_module_source_to_execution). _Import phase modifiers_ let the importer pause the process at a certain stage. The importer itself can continue through linking and evaluation later, when it actually needs to.
 
-With [`import source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/source), the process is stopped partway through _loading_: the requested module itself is fetched and parsed, but its dependencies are not requested. The imported value is a [_module source object_](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AbstractModuleSource), which can be linked and evaluated using other mechanisms. Using JavaScript source imports as defined by the [ECMAScript Module Phase Imports proposal](https://github.com/tc39/proposal-esm-phase-imports):
+With [`import source`](/en-US/docs/Web/JavaScript/Reference/Statements/import/source), the process is stopped partway through _loading_: the requested module itself is fetched and parsed, but its dependencies are not requested. The imported value is a [_module source object_](/en-US/docs/Web/JavaScript/Reference/Global_Objects/AbstractModuleSource), which can be linked and evaluated using other mechanisms. The following example uses JavaScript source imports:
+
+> [!NOTE]
+> JavaScript source imports and passing a module source object to `import()` are still proposed features, defined by the [ECMAScript Module Phase Imports proposal](https://github.com/tc39/proposal-esm-phase-imports).
 
 ```js
 // -- main.js --

@@ -11,7 +11,7 @@ This guide gives you all you need to get started with JavaScript module syntax.
 
 ## Module philosophy
 
-Before we look at what syntax is available inside modules, let's first talk at a high level about what modules are, how they are different from traditional scripts, and why you might need them.
+Before we look at what syntax is available inside modules, let's first talk at a high level about what modules are, how they differ from traditional scripts, and why you might need them.
 
 ### A background on modules
 
@@ -26,7 +26,7 @@ All modern browsers support module features natively without needing transpilati
 JavaScript code can be evaluated in two ways: as a _script_ (also called "classic script" or "traditional script") or as a _module_. There are two main differences:
 
 1. At parsing time, modules are parsed with a slightly different syntax. Namely, they are automatically in [strict mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), and you can only use {{jsxref("Statements/import", "import")}} and {{jsxref("Statements/export", "export")}} statements in modules.
-2. At runtime, modules are executed in their own scope, not in the global scope. This means that variables, functions, classes, etc. declared in a module are not visible outside the module unless they are either explicitly exported (so they can be imported in other modules), or are made available globally by attaching them to the global object (e.g., `window` in a browser). Uncaught errors from modules still show in the DevTools, but you'll not be able to access module-scoped variables in the JavaScript console.
+2. At runtime, modules are executed in their own scope, not in the global scope. This means that variables, functions, classes, etc. declared in a module are not visible outside the module unless they are either explicitly exported (so they can be imported in other modules), or are made available globally by attaching them to the global object (e.g., `window` in a browser). Uncaught errors from modules still show in the DevTools, but you won't be able to access module-scoped variables in the JavaScript console.
 
 There are other differences, but they are specific to modules on the web. Find them in [Using modules on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web).
 
@@ -140,7 +140,7 @@ For browsers, the difference is purely cosmetic. The file extension doesn't matt
 We decided to keep to `.js`. The main benefit is that the `.js` extension is much more widely understood than `.mjs`, and although the latter is catching up, you might always run into certain software that doesn't understand `.mjs`.
 
 - Most servers automatically set the correct type for `.js` files, but some don't for `.mjs` files. Servers that already serve `.mjs` files correctly include [GitHub Pages](https://pages.github.com/) and [`http-server`](https://github.com/http-party/http-server#readme) for Node.js. This is OK if you are using such an environment already, or if you aren't but you have access to configure your server to set the correct `Content-Type` for `.mjs` files. It could however cause confusion if you don't control the server you are serving files from, or are publishing files for public use, as we are here.
-- The file extension is used by many tools other than the HTTP server. It may be used by your editor, the operating system, static analysis tools, formatters, and more. `.mjs` may be less well-supported by toolings at large. For example, some operating systems might not recognize it, or try to replace it with something else, such as implicitly appending a `.js` extension when you try to open it.
+- The file extension is used by many tools other than the HTTP server. It may be used by your editor, the operating system, static analysis tools, formatters, and more. `.mjs` may be less well-supported by tooling at large. For example, some operating systems might not recognize it, or try to replace it with something else, such as implicitly appending a `.js` extension when you try to open it.
 
 If you really value the clarity of using `.mjs` for modules versus using `.js` for "normal" JavaScript files, but don't want to run into the problem described above, you could always use `.mjs` during development and convert them to `.js` during your build step.
 
@@ -163,7 +163,7 @@ modules/
 > [!NOTE]
 > All of the examples in this guide have essentially this same structure.
 
-The `index.html` file only declares the DOM and [applies](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#applying_modules_to_your_html) the `main.js` module; all code we demonstrate subsequently concern only the `.js` files.
+The `index.html` file only declares the DOM and [applies](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#applying_modules_to_your_html) the `main.js` module; all code we demonstrate subsequently concerns only the `.js` files.
 
 The `modules` directory's two modules are described below:
 
@@ -236,7 +236,7 @@ reportPerimeter(square.length, reportList);
 
 ## Default exports and imports
 
-The previous sections show how you export and import variables by their names. The names for each variable have to match between the exporter and the importer. You can write functional module code using just named imports and exports. However, if you want to import from [non-ESM modules](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms) (like CommonJS or non-JavaScript files), these systems do not use named exports. In these systems, each module corresponds to exactly one JavaScript value. To represent these types of modules, JavaScript provides a _default export_. This has other use cases, such as modules that are built around one main value—a single class or function—where the default export lets each importer pick its own local name without knowing what the exporting module calls it.
+The examples above export and import variables by name. The names for each variable have to match between the exporter and the importer. You can write functional module code using just named imports and exports. However, if you want to import from [non-ESM modules](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms) (like CommonJS or non-JavaScript files), these systems do not use named exports. In these systems, each module corresponds to exactly one JavaScript value. To represent these types of modules, JavaScript provides a _default export_. This has other use cases, such as modules that are built around one main value—a single class or function—where the default export lets each importer pick its own local name without knowing what the exporting module calls it.
 
 Unlike named exports, default exports have no names associated with them. Each module can have up to one default export. To create a default export, instead of exporting a _declaration_ like `const` or `function`, you export an _expression_ instead, by prepending `export default` to it. For example, all of the following would work:
 
@@ -270,7 +270,7 @@ import randomSquare from "./modules/square.js";
 
 Again, note the lack of curly braces. This is because there is only one default export allowed per module, and we know that `randomSquare` is it. You can name this import however you want—it doesn't have to match the function name on the exporting side.
 
-Each module can simultaneously have zero or one default export and any number of named exports.
+Named exports and default export can coexist in the same module.
 
 ## Avoiding naming conflicts
 
@@ -440,7 +440,7 @@ square.reportPerimeter();
 
 ## Aggregating modules
 
-We now have multiple modules, each doing a similar thing. If someone wants to use multiple of these, they have to write a separate import declaration for each:
+We now have multiple modules, each doing a similar thing. If someone wants to use several of these, they have to write a separate import declaration for each:
 
 ```js
 import { Square } from "./modules/square.js";
@@ -448,7 +448,7 @@ import { Circle } from "./modules/circle.js";
 import { Triangle } from "./modules/triangle.js";
 ```
 
-But it would be better if we can put all these exports into the same module, so no matter how many of these exports users need, they can grab all of them with one `import`.
+But it would be better if we could put all these exports into the same module, so no matter how many of these exports users need, they can grab all of them with one `import`.
 
 ```js
 import { Square, Circle, Triangle } from "./modules/shapes.js";
@@ -530,7 +530,7 @@ myCanvas.createReportList();
 // …
 ```
 
-Still, it is considered good practice to put all your imports at the top of the code, which makes it easier to analyze dependencies.
+However, it is considered good practice to put all your imports at the top of the code, which makes it easier to analyze dependencies.
 
 ## Importing JSON modules
 
@@ -542,7 +542,7 @@ A JSON module is basically a standalone JSON file. When imported, it provides a 
 import data from "./data.json" with { type: "json" };
 ```
 
-Notice the extra `with { type: "json" }` at the end. This is an [import attribute](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) that tells the runtime environment to validate that the loaded file is indeed JSON. We will talk more about them in the [using modules on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#loading_non-javascript_resources) guide, because their semantics are not defined in the core language. You might be able to import JSON modules without `with { type: "json" }`. The only requirement is that if `with { type: "json" }` is specified, then the loaded module must be parsed as JSON. It is good practice to always declare the type of the module you are importing so it can work everywhere.
+Notice the extra `with { type: "json" }` at the end. This is an [import attribute](/en-US/docs/Web/JavaScript/Reference/Statements/import/with) that tells the runtime environment to validate that the loaded file is indeed JSON. We will talk more about them in the [Using modules on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#loading_non-javascript_resources) guide, because their semantics are not defined in the core language. You might be able to import JSON modules without `with { type: "json" }`. The only requirement is that if `with { type: "json" }` is specified, then the loaded module must be parsed as JSON. It is good practice to always declare the type of the module you are importing so it can work everywhere.
 
 Text modules work similarly and result in strings.
 
@@ -693,7 +693,7 @@ Top-level `await` is not free; it has deep implications because it means a part 
 
 ## Module metadata
 
-Scripts are executed in the global context, so it can get information about its environment with global variables, such as {{domxref("Window.document")}} or {{domxref("Window.location")}}. Modules get their own execution context, so how can each module retrieve information about itself? This information is provided by the [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta) object, which is unique to each module. Its properties are defined by the host environment; the core language spec does not define any properties. See [Using modules on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#the_import.meta_object) for information about browsers, and [Modules across platforms](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms) for information about Node.js, bundlers, and more.
+Scripts are executed in the global context, so they can get information about their environment with global variables, such as {{domxref("Window.document")}} or {{domxref("Window.location")}}. Each module also has its own execution context which is accessed via a module-specific [`import.meta`](/en-US/docs/Web/JavaScript/Reference/Operators/import.meta) object. The properties of this object are defined by the host environment; the core language spec does not define any properties. See [Using modules on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#the_import.meta_object) for information about browsers, and [Modules across platforms](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms) for information about Node.js, bundlers, and more.
 
 Just as an example, in most web-like environments (browsers, Node.js, bundlers, etc.), `import.meta.url` provides the module's URL, which you can use to locate a resource relative to the module:
 
@@ -719,7 +719,7 @@ The core language does _not_ care about the following:
 - The properties of `import.meta`. All properties, including `import.meta.url`, are host-defined.
 - The module loading process. The host environment is responsible for fetching modules, including applying any [import attributes](/en-US/docs/Web/JavaScript/Reference/Statements/import/with), subject to the language's requirements, such as those for JSON modules.
 
-In reality, runtime environments like browsers, Node.js, and Deno often end up implementing the same set of features, so that code is more likely to work across platforms. This guide walks through an example that's run in the browser, but we focus on core concepts that are applicable to all environments. In the [using modules on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web) guide, we'll cover the specifics of module loading in browsers, especially import specifiers. Then, in the [Modules across platforms](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms) guide, we will go further and discuss how the module system is integrated with other environments.
+In reality, runtime environments like browsers, Node.js, and Deno often end up implementing the same set of features, so that code is more likely to work across platforms. This guide walks through an example that's run in the browser, but we focus on core concepts that are applicable to all environments. In the [Using modules on the web](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web) guide, we'll cover the specifics of module loading in browsers, especially import specifiers. Then, in the [Modules across platforms](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_across_platforms) guide, we will go further and discuss how the module system is integrated with other environments.
 
 ## See also
 

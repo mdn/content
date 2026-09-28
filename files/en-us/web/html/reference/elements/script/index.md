@@ -255,7 +255,7 @@ import { name as circleName } from "circle";
 import { name as squareName, draw } from "square";
 ```
 
-For more examples of what you can do with import maps, see the [Importing modules using import maps](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#importing_modules_using_import_maps)) section in the JavaScript modules guide.
+For more examples of what you can do with import maps, see the [Importing modules using import maps](/en-US/docs/Web/JavaScript/Guide/Modules/Modules_on_the_web#importing_modules_using_import_maps) section in the Using modules on the web guide.
 
 ### Embedding data in HTML
 
