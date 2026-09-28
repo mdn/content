@@ -45,7 +45,7 @@ When serializing, you can configure the fractional second digits, whether to dis
 
 ## Constructor
 
-- {{jsxref("Temporal/PlainDateTime/PlainDateTime", "Temporal.PlainDateTime()")}} {{experimental_inline}}
+- {{jsxref("Temporal/PlainDateTime/PlainDateTime", "Temporal.PlainDateTime()")}}
   - : Creates a new `Temporal.PlainDateTime` object by directly supplying the underlying data.
 
 ## Static methods

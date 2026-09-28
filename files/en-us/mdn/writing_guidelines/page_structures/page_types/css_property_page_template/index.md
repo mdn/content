@@ -100,6 +100,16 @@ This property is a shorthand for the following logical properties:
 This property is a shorthand for the following physical properties:
 ```
 
+### Reset-only sub-properties
+
+Add this section only for shorthand properties, such as [animation](/en-US/docs/Web/CSS/Reference/Properties/animation), to list all the longhand properties that are reset-only (reset by the shorthand, but not settable by it).
+
+Introduce the properties with the following intro:
+
+```md
+This property resets the following CSS properties to their initial values:
+```
+
 ## Syntax
 
 Include the common use cases as a code block and describe the component subvalues that make up a complete value.

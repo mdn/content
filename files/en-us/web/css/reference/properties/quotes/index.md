@@ -51,7 +51,7 @@ q {
 ## Syntax
 
 ```css
-/* Keyword value */
+/* Keyword values */
 quotes: none;
 quotes: auto;
 

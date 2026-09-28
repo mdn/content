@@ -475,12 +475,8 @@ The `named-feature()` function in the {{cssxref("@supports")}} at-rule lets you 
 | Beta              | 156           | No                  |
 | Release           | 156           | No                  |
 
-- `layout.css.supports.at-rule.enabled`
+- `layout.css.anchor-positioning.follows-transforms.enabled`
   - : Set to `true` to enable.
-
-### `at-rule()` support queries
-
-The [`at-rule()`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#at-rule) function in the {{cssxref("@supports")}} at-rule lets you test whether the browser supports a given CSS at-rule, for example `@supports at-rule(@scope)`. It also works in the `supports()` function of {{cssxref("@import")}}. ([Firefox bug 2060754](https://bugzil.la/2060754)).
 
 ## SVG
 
@@ -582,6 +578,23 @@ The assertions are unaffected by the [`m`](/en-US/docs/Web/JavaScript/Reference/
 
 - `javascript.options.experimental.regexp_buffer_boundaries`
   - : Set to `true` to enable on Nightly.
+
+### TC39 export `*` default proposal
+
+The [TC39 export `*` default proposal](https://github.com/tc39/proposal-export-star-default) allows [`export * from`](/en-US/docs/Web/JavaScript/Reference/Statements/export#re-exporting_aggregating) declarations to re-export a module's default export along with its named exports. Without this, `export * from` skips a module's default export.
+([Firefox bug 2065611](https://bugzil.la/2065611)).
+
+Note that this proposal is at a very early stage and subject to change.
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 157           | No                  |
+| Developer Edition | 157           | No                  |
+| Beta              | 157           | No                  |
+| Release           | —             | —                   |
+
+- `javascript.options.experimental.export_star_default`
+  - : Set to `true` to enable.
 
 ## APIs
 
@@ -839,6 +852,35 @@ Notifications have the [`requireInteraction`](/en-US/docs/Web/API/Notification/r
 - `dom.webnotifications.requireinteraction.enabled`
   - : Set to `true` to enable.
 
+### `navigate` option for notifications
+
+The `navigate` option of the {{domxref("Notification.Notification", "Notification()")}} constructor and {{domxref("ServiceWorkerRegistration.showNotification()")}} takes a URL to open when the user clicks the notification, so you no longer need a click handler just to open a page. The new read-only {{domxref("Notification.navigate")}} property returns that URL. When the option is set, the {{domxref("Notification.click_event", "click")}} and {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} events no longer fire for that notification. Each entry in the {{domxref("Notification.actions", "actions")}} option can set its own `navigate` URL, and an action button without one still fires `notificationclick` rather than using the notification's URL.
+([Firefox bug 2066184](https://bugzil.la/2066184)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 157           | No                  |
+| Developer Edition | 157           | No                  |
+| Beta              | 157           | No                  |
+| Release           | 157           | No                  |
+
+- `dom.webnotifications.navigate.enabled`
+  - : Set to `true` to enable.
+
+### Sanitizing HTML while parsing
+
+Methods that sanitize HTML with the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API), such as {{domxref("Element.setHTML()")}}, now drop unwanted elements and attributes as the markup is parsed, instead of parsing all of it first and then cleaning up afterwards. The result is the same, except that neighboring text now lands in a single text node instead of being split across several. ([Firefox bug 2062652](https://bugzil.la/2062652)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 157           | No                  |
+| Developer Edition | 157           | No                  |
+| Beta              | 157           | No                  |
+| Release           | 157           | No                  |
+
+- `dom.security.sanitizer.while-parsing`
+  - : Set to `true` to enable.
+
 ### Container Timing API
 
 The Container Timing API reports when the contents of a container element are painted, letting you measure the render time of a region of the page rather than of the whole viewport.
@@ -852,6 +894,22 @@ The Container Timing API reports when the contents of a container element are pa
 | Release           | 156             | No                  |
 
 - `dom.enable_container_timing`
+  - : Set to `true` to enable.
+
+### Key encapsulation in Web Crypto
+
+The [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) supports ML-KEM, an algorithm that lets two parties agree on a shared secret key, and that is designed to stay secure against attacks by quantum computers. One party passes the other party's public key to the {{domxref("SubtleCrypto")}} methods `encapsulateKey()` or `encapsulateBits()`, which return the shared key along with a ciphertext to send to the other party. The other party passes that ciphertext and their own private key to `decapsulateKey()` or `decapsulateBits()` to arrive at the same shared key.
+
+The `ML-KEM-512`, `ML-KEM-768`, and `ML-KEM-1024` algorithm names are supported, along with the matching {{domxref("CryptoKey.usages", "key usages")}} and the new `raw-public` and `raw-seed` key formats for {{domxref("SubtleCrypto.importKey()")}} and {{domxref("SubtleCrypto.exportKey()")}}. ([Firefox bug 1943614](https://bugzil.la/1943614)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 157           | Yes                 |
+| Developer Edition | 157           | No                  |
+| Beta              | 157           | No                  |
+| Release           | 157           | No                  |
+
+- `dom.webcrypto.encapsulation.enabled`
   - : Set to `true` to enable.
 
 ## Security and privacy

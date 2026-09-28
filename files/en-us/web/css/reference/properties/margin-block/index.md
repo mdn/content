@@ -84,7 +84,7 @@ margin-block: 10px; /* sets both start and end values */
 margin-block: anchor-size(inline);
 margin-block: calc(anchor-size(width) / 4) 1em;
 
-/* Keyword values */
+/* Keyword value */
 margin-block: auto;
 
 /* Global values */

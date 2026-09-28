@@ -12,7 +12,7 @@ The **`text-box-trim`** [CSS](/en-US/docs/Web/CSS) property specifies which of t
 ## Syntax
 
 ```css
-/* Keywords */
+/* Keyword values */
 text-box-trim: none;
 text-box-trim: trim-both;
 text-box-trim: trim-start;

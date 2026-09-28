@@ -68,4 +68,4 @@ So due to (1) each single quote (') in the input string is replaced with double 
 ## See also
 
 - [SQL injection](https://en.wikipedia.org/wiki/SQL_injection) on Wikipedia
-- [Explanation of SQL injection](https://owasp.org/www-community/attacks/SQL_Injection) on OWASP (Open Web Application Security Project)
+- [Explanation of SQL injection](https://community.owasp.org/attacks/SQL_Injection) on OWASP (Open Web Application Security Project)

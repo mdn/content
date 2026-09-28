@@ -154,9 +154,9 @@ The tooltip is positioned below the icon. Padding above the text bubble bridges 
   margin: 0;
   padding: 0.75rem;
   border-radius: 0.25rem;
-  background: #222;
+  background: #222222;
   color: white;
-  box-shadow: 0 2px 6px #0004;
+  box-shadow: 0 2px 6px #00000044;
 }
 
 [role="tooltip"]::before {
@@ -165,7 +165,7 @@ The tooltip is positioned below the icon. Padding above the text bubble bridges 
   top: 0;
   right: 0.5rem;
   border-right: 0.5rem solid transparent;
-  border-bottom: 0.5rem solid #222;
+  border-bottom: 0.5rem solid #222222;
   border-left: 0.5rem solid transparent;
 }
 ```

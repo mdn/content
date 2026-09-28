@@ -166,8 +166,8 @@ Pair a `<dashed-ident>` with a scope keyword to narrow that sharing. `property-s
 .a,
 .b,
 .c {
-  width: random(--custom-name element-scoped, 10px, 200px);
-  height: random(--custom-name element-scoped, 10px, 200px);
+  width: random(--custom-name element-shared, 10px, 200px);
+  height: random(--custom-name element-shared, 10px, 200px);
 }
 ```
 

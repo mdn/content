@@ -71,7 +71,7 @@ margin-right: 5%; /* relative to the nearest block container's width */
 margin-right: anchor-size(self-block);
 margin-right: calc(anchor-size(--my-anchor height, 20px) / 4);
 
-/* Keyword values */
+/* Keyword value */
 margin-right: auto;
 
 /* Global values */
