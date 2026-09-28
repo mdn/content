@@ -96,3 +96,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   The [TC39 export `*` default proposal](https://tc39.es/proposal-export-star-default/) makes [`export * from "mod"`](/en-US/docs/Web/JavaScript/Reference/Statements/export#re-exporting__aggregating) also provide the module's default export, which it currently omits.
   Note that this preference can only be set in Nightly builds. ([Firefox bug 2065611](https://bugzil.la/2065611)).
+
+- **Key encapsulation in Web Crypto**: `dom.webcrypto.encapsulation.enabled`
+
+  The [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) supports ML-KEM, an algorithm that lets two parties agree on a shared secret key, and that is designed to stay secure against attacks by quantum computers. {{domxref("SubtleCrypto")}} has the new `encapsulateKey()`, `encapsulateBits()`, `decapsulateKey()`, and `decapsulateBits()` methods, the matching {{domxref("CryptoKey.usages", "key usages")}}, and the `ML-KEM-512`, `ML-KEM-768`, and `ML-KEM-1024` algorithm names. {{domxref("SubtleCrypto.importKey()")}} and {{domxref("SubtleCrypto.exportKey()")}} also accept the new `raw-public` and `raw-seed` key formats. This feature is enabled by default in Nightly builds. ([Firefox bug 1943614](https://bugzil.la/1943614)).
