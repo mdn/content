@@ -106,14 +106,14 @@ requestCloseButton.addEventListener("click", () => {
   dialog.requestClose();
 });
 
-// Fired when requestClose() is called
-// Prevent the dialog from closing by calling event.preventDefault()
+// Fired when a close request is received
 dialog.addEventListener("cancel", (event) => {
   log(`dialog cancel event fired (cancelable: ${event.cancelable})`);
-  // Uncomment the next two lines to prevent the dialog from closing
-  // when the event is cancelable.
-  // if (event.cancelable) event.preventDefault();
-  // log("dialog close canceled");
+  if (event.cancelable) {
+    // Uncomment the next two lines to prevent the dialog from closing
+    // log("dialog close canceled");
+    // event.preventDefault();
+  }
 });
 
 dialog.addEventListener("close", (event) => {
