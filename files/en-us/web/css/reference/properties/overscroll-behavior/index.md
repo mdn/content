@@ -245,7 +245,7 @@ Click one of the buttons to see that behavior applied to the dialog that appears
 - `chain`: if you overscroll the dialog you will see that the content does not "bounce" and if you then continue to scroll you will see the background scroll too.
 - `none`: if you overscroll the dialog you will see that the content does not "bounce" and if you then continue to scroll you will see the background does not scroll.
 
-{{EmbedLiveSample("overscroll-behavior_on_dialog_elements", "300", "180")}}
+{{EmbedLiveSample("overscroll-behavior_on_dialog_elements", "100%", "180")}}
 
 An alternate example of controlling scroll of "chat" window can be seen on the [`overscroll-behavior-y`](/en-US/docs/Web/CSS/Reference/Properties/overscroll-behavior-y#preventing_an_underlying_element_from_scrolling) property.
 
