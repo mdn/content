@@ -748,6 +748,7 @@ submatch
 submatches
 subminor
 subminute
+subpackages
 subpages
 subpanels
 subpattern
