@@ -33,9 +33,9 @@ param(--color3, green);
 - `<declaration_value>` {{optional_inline}}
   - : A `<declaration_value>` is the value of the attribute being updated. If the `<declaration-value>` is omitted, it represents an empty value.
 
-## Formal definition
+## Formal syntax
 
-{{CSSInfo}}
+{{CSSSyntax}}
 
 ## Examples
 

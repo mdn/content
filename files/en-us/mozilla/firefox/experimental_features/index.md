@@ -475,12 +475,8 @@ The `named-feature()` function in the {{cssxref("@supports")}} at-rule lets you 
 | Beta              | 156           | No                  |
 | Release           | 156           | No                  |
 
-- `layout.css.supports.at-rule.enabled`
+- `layout.css.anchor-positioning.follows-transforms.enabled`
   - : Set to `true` to enable.
-
-### `at-rule()` support queries
-
-The [`at-rule()`](/en-US/docs/Web/CSS/Reference/At-rules/@supports#at-rule) function in the {{cssxref("@supports")}} at-rule lets you test whether the browser supports a given CSS at-rule, for example `@supports at-rule(@scope)`. It also works in the `supports()` function of {{cssxref("@import")}}. ([Firefox bug 2060754](https://bugzil.la/2060754)).
 
 ## SVG
 
@@ -582,6 +578,23 @@ The assertions are unaffected by the [`m`](/en-US/docs/Web/JavaScript/Reference/
 
 - `javascript.options.experimental.regexp_buffer_boundaries`
   - : Set to `true` to enable on Nightly.
+
+### TC39 export `*` default proposal
+
+The [TC39 export `*` default proposal](https://github.com/tc39/proposal-export-star-default) allows [`export * from`](/en-US/docs/Web/JavaScript/Reference/Statements/export#re-exporting_aggregating) declarations to re-export a module's default export along with its named exports. Without this, `export * from` skips a module's default export.
+([Firefox bug 2065611](https://bugzil.la/2065611)).
+
+Note that this proposal is at a very early stage and subject to change.
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 157           | No                  |
+| Developer Edition | 157           | No                  |
+| Beta              | 157           | No                  |
+| Release           | —             | —                   |
+
+- `javascript.options.experimental.export_star_default`
+  - : Set to `true` to enable.
 
 ## APIs
 

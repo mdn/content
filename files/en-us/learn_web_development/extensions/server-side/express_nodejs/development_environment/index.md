@@ -72,9 +72,9 @@ To make this easier we'll first install a node version manager, and then we'll u
 ### Windows
 
 There are a number of node version managers for Windows.
-Here we use [nvm-windows](https://github.com/coreybutler/nvm-windows), which is highly respected among node developers.
+Here we use [nvm-windows](https://github.com/nvm-windows/nvm), which is highly respected among node developers.
 
-Install the latest version using your installer of choice from the [nvm-windows/releases](https://github.com/coreybutler/nvm-windows/releases) page.
+Install the latest version using your installer of choice from the [nvm-windows/releases](https://github.com/nvm-windows/nvm/releases) page.
 After `nvm-windows` has installed, open a command prompt (or PowerShell) and enter the following command to download the most recent LTS version of nodejs and npm:
 
 ```bash

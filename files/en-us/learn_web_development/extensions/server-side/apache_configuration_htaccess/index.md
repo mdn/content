@@ -385,7 +385,7 @@ Nonetheless, you should ensure that you send the `X-Frame-Options` header for al
 
 There is no policy that fits all websites, the example below is meant as guidelines for you to modify for your site.
 
-To make your CSP implementation easier, you can use an online [CSP header generator](https://report-uri.com/home/generate/). You should also use a [validator](https://csp-evaluator.withgoogle.com/) to make sure your header does what you want it to do.
+To make your CSP implementation easier, you can use an online [CSP header generator](https://report-uri.com/tools/csp-builder). You should also use a [validator](https://csp-evaluator.withgoogle.com/) to make sure your header does what you want it to do.
 
 ```apacheconf
 <IfModule mod_headers.c>
@@ -501,7 +501,7 @@ Use services like the ones below to check your `Referrer-Policy`:
 
 ## Disable `TRACE` HTTP Method
 
-The [TRACE](/en-US/docs/Web/HTTP/Reference/Methods/TRACE) method, while seemingly harmless, can be successfully leveraged in some scenarios to steal legitimate users' credentials. See [A Cross-Site Tracing (XST) attack](https://owasp.org/www-community/attacks/Cross_Site_Tracing) and [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/06-Test_HTTP_Methods#test-xst-potential)
+The [TRACE](/en-US/docs/Web/HTTP/Reference/Methods/TRACE) method, while seemingly harmless, can be successfully leveraged in some scenarios to steal legitimate users' credentials. See [A Cross-Site Tracing (XST) attack](https://community.owasp.org/attacks/Cross_Site_Tracing) and [OWASP Web Security Testing Guide](https://owasp.github.io/www-project-web-security-testing-guide/v41/4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/06-Test_HTTP_Methods#test-xst-potential)
 
 Modern browsers now prevent TRACE requests made via JavaScript, however, other ways of sending TRACE requests with browsers have been discovered, such as using Java.
 

@@ -281,7 +281,7 @@ const sizePicker = document.querySelector('input[type="range"]');
 const output = document.querySelector(".output");
 const clearBtn = document.querySelector('input[type="button"]');
 
-// covert degrees to radians
+// convert degrees to radians
 function degToRad(degrees) {
   return (degrees * Math.PI) / 180;
 }

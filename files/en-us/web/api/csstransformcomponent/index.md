@@ -7,7 +7,7 @@ browser-compat: api.CSSTransformComponent
 
 {{APIRef("CSS Typed Object Model API")}} {{AvailableInWorkers}}
 
-The **`CSSTransformComponent`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) is the base interface for objects that represent individual {{cssxref("transform-function", "transform functions")}}, such as [`rotate()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/rotate) and [`scale()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/scale).
+The **`CSSTransformComponent`** interface of the [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Object_Model) is the base interface for objects that represent individual [transform functions](/en-US/docs/Web/CSS/Reference/Values/transform-function), such as [`rotate()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/rotate) and [`scale()`](/en-US/docs/Web/CSS/Reference/Values/transform-function/scale).
 
 ## Instance properties
 

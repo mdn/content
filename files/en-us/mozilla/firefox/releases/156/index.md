@@ -40,7 +40,7 @@ No notable changes.
 
 ### JavaScript
 
-- {{jsxref("Promise.try()")}} now resolves the value returned by its callback using `PromiseResolve`, so a promise returned by the callback is passed through rather than wrapped in a new promise.
+- {{jsxref("Promise.try()")}} now resolves the callback's return value in the same way as {{jsxref("Promise.resolve()")}} does, so a promise returned by the callback is passed through unchanged instead of being wrapped in a new promise.
   `Promise.try(() => p)` is now the same promise as `p` when `p` is a native promise. This follows a normative change to the specification.
   ([Firefox bug 2062293](https://bugzil.la/2062293)).
 - [`using`](/en-US/docs/Web/JavaScript/Reference/Statements/using) declarations can no longer be reassigned, matching the const-like semantics required by the specification. Previously such a binding could be silently mutated.
@@ -103,7 +103,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
   [Scoped custom element registries](/en-US/docs/Web/API/Web_components/Using_custom_elements#scoped_custom_element_registries) are now supported, so that a shadow root can define custom elements that do not clash with those defined in the global registry.
   This release enables the feature by default in Nightly builds. ([Firefox bug 2064333](https://bugzil.la/2064333)).
 
-- **`named-feature()` support queries**: `layout.css.supports.at-rule.enabled`
+- **`named-feature()` support queries**: `layout.css.anchor-positioning.follows-transforms.enabled`
 
   The `named-feature()` function in the {{cssxref("@supports")}} at-rule lets you test whether the browser supports a feature that has no other detectable syntax, for example `@supports named-feature(anchor-position-follows-transforms)`.
   ([Firefox bug 2042977](https://bugzil.la/2042977) and [Firefox bug 2055354](https://bugzil.la/2055354)).
@@ -112,8 +112,3 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   The Container Timing API reports when the contents of a container element are painted, letting you measure the render time of a region of the page rather than of the whole viewport.
   ([Firefox bug 1940240](https://bugzil.la/1940240)).
-
-- **MathML `<a>` elements**: `mathml.a.element.enabled`
-
-  The MathML `<a>` element creates a hyperlink from MathML content, exposing the `MathMLAnchorElement` interface with the same URL component properties as HTML {{HTMLElement("a")}} elements.
-  This release adds support for the `rel` and `relList` IDL attributes. ([Firefox bug 2063819](https://bugzil.la/2063819)).
