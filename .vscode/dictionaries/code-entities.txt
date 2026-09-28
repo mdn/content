@@ -281,6 +281,7 @@ gestureend
 gesturestart
 GETMATCHEDRULES
 gfx.offscreencanvas
+givenname
 Glat
 globoff
 Gloc
