@@ -65,12 +65,12 @@ img {
 
 ## Images and forms 2
 
-In this task, you have a basic form.
+In this task, you have a search field and button.
 
 To complete the task:
 
 1. Use attribute selectors to target the search field and button inside `.my-form`.
-2. Make the form field and button use the same text size as the rest of the form.
+2. Make the form field and button use the same text size as the rest of the container.
 3. Give the form field and button `10px` of padding.
 4. Give the button a background of `rebeccapurple`, white foreground, no border and rounded corners of 5px.
 
@@ -81,21 +81,13 @@ The starting point of the task looks like this:
 Here's the underlying code for this starting point:
 
 ```html live-sample___images-forms2-start live-sample___images-forms2-finish
-<form action="" class="my-form" method="post">
+<div class="my-form">
   <div>
     <label for="fldSearch">Keywords</label>
     <input id="fldSearch" name="keywords" type="search" />
-    <input name="btnSubmit" type="submit" value="Search" />
+    <input name="btnSubmit" type="button" value="Search" />
   </div>
-</form>
-```
-
-```js hidden live-sample___images-forms2-start live-sample___images-forms2-finish live-sample___forms-2
-document.querySelectorAll("form").forEach((form) => {
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-  });
-});
+</div>
 ```
 
 ```css live-sample___images-forms2-start live-sample___images-forms2-finish
@@ -128,7 +120,7 @@ Here's an example solution for the task:
   font-size: inherit;
 }
 
-.my-form input[type="submit"] {
+.my-form input[type="button"] {
   padding: 10px;
   font-size: inherit;
   background-color: rebeccapurple;
@@ -157,35 +149,33 @@ The starting point of the task looks like this:
 Here's the underlying code for this starting point:
 
 ```html hidden live-sample___forms-2
-<form>
-  <h2>Edit your preferences</h2>
-  <ul>
-    <li>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" />
-    </li>
-    <li>
-      <label for="website">Website:</label>
-      <input type="url" id="website" name="website" />
-    </li>
-    <li>
-      <label for="phone">Phone number:</label>
-      <input type="tel" id="phone" name="phone" />
-    </li>
-    <li>
-      <label for="food">Favorite food:</label>
-      <select name="food" id="food">
-        <option>Salad</option>
-        <option>Curry</option>
-        <option>Pizza</option>
-        <option>Fajitas</option>
-      </select>
-    </li>
-    <li>
-      <button>Update preferences</button>
-    </li>
-  </ul>
-</form>
+<h2>Edit your preferences</h2>
+<ul>
+  <li>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" />
+  </li>
+  <li>
+    <label for="website">Website:</label>
+    <input type="url" id="website" name="website" />
+  </li>
+  <li>
+    <label for="phone">Phone number:</label>
+    <input type="tel" id="phone" name="phone" />
+  </li>
+  <li>
+    <label for="food">Favorite food:</label>
+    <select name="food" id="food">
+      <option>Salad</option>
+      <option>Curry</option>
+      <option>Pizza</option>
+      <option>Fajitas</option>
+    </select>
+  </li>
+  <li>
+    <button type="button">Update preferences</button>
+  </li>
+</ul>
 ```
 
 ```css live-sample___forms-2

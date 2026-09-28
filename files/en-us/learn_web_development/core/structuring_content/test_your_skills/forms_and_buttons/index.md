@@ -61,7 +61,7 @@ Here's the underlying code for this starting point:
 </form>
 ```
 
-```js hidden live-sample___forms-buttons-1 live-sample___forms-buttons-1-finished live-sample___forms-buttons-2 live-sample___forms-buttons-2-finished live-sample___forms-buttons-3 live-sample___forms-buttons-3-finished live-sample___forms-buttons-4 live-sample___forms-buttons-4-finished live-sample___forms-buttons-5 live-sample___forms-buttons-5-finished live-sample___forms-buttons-6 live-sample___forms-buttons-6-finished
+```js hidden live-sample___forms-buttons-1-finished live-sample___forms-buttons-6 live-sample___forms-buttons-6-finished
 document.querySelectorAll("form").forEach((form) => {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -116,37 +116,34 @@ The starting point of the task looks like this:
 Here's the underlying code for this starting point:
 
 ```html live-sample___forms-buttons-2
-<form>
-  <fieldset>
-    <legend>Who is your favorite pony?</legend>
-    <ul>
-      <li>
-        <label for="pinkie">Pinkie Pie</label>
-      </li>
-      <li>
-        <label for="rainbow">Rainbow Dash</label>
-      </li>
-      <li>
-        <label for="twilight">Twilight Sparkle</label>
-      </li>
-    </ul>
-  </fieldset>
-  <fieldset>
-    <legend>Hotdog preferences</legend>
-    <ul>
-      <li>
-        <label for="vegan">Vegan</label>
-      </li>
-      <li>
-        <label for="onions">Onions</label>
-      </li>
-    </ul>
-  </fieldset>
-  <button>Submit</button>
-</form>
+<fieldset>
+  <legend>Who is your favorite pony?</legend>
+  <ul>
+    <li>
+      <label for="pinkie">Pinkie Pie</label>
+    </li>
+    <li>
+      <label for="rainbow">Rainbow Dash</label>
+    </li>
+    <li>
+      <label for="twilight">Twilight Sparkle</label>
+    </li>
+  </ul>
+</fieldset>
+<fieldset>
+  <legend>Hotdog preferences</legend>
+  <ul>
+    <li>
+      <label for="vegan">Vegan</label>
+    </li>
+    <li>
+      <label for="onions">Onions</label>
+    </li>
+  </ul>
+</fieldset>
 ```
 
-The updated form should look like this:
+The updated controls should look like this:
 
 {{ EmbedLiveSample("forms-buttons-2-finished", "100%", 360) }}
 
@@ -156,48 +153,45 @@ The updated form should look like this:
 Your finished HTML should look something like this:
 
 ```html live-sample___forms-buttons-2-finished
-<form>
-  <fieldset>
-    <legend>Who is your favorite pony?</legend>
-    <ul>
-      <li>
-        <label for="pinkie">Pinkie Pie</label>
-        <input type="radio" id="pinkie" name="pony" value="pinkie" checked />
-      </li>
-      <li>
-        <label for="rainbow">Rainbow Dash</label>
-        <input type="radio" id="rainbow" name="pony" value="rainbow" />
-      </li>
-      <li>
-        <label for="twilight">Twilight Sparkle</label>
-        <input type="radio" id="twilight" name="pony" value="twilight" />
-      </li>
-    </ul>
-  </fieldset>
-  <fieldset>
-    <legend>Hotdog preferences</legend>
-    <ul>
-      <li>
-        <label for="vegan">Vegan</label>
-        <input type="checkbox" id="vegan" name="hotdog_vegan" />
-      </li>
-      <li>
-        <label for="onions">Onions</label>
-        <input type="checkbox" id="onions" name="hotdog_onions" />
-      </li>
-      <li>
-        <label for="mustard">Mustard</label>
-        <input type="checkbox" id="mustard" name="hotdog_mustard" />
-      </li>
+<fieldset>
+  <legend>Who is your favorite pony?</legend>
+  <ul>
+    <li>
+      <label for="pinkie">Pinkie Pie</label>
+      <input type="radio" id="pinkie" name="pony" value="pinkie" checked />
+    </li>
+    <li>
+      <label for="rainbow">Rainbow Dash</label>
+      <input type="radio" id="rainbow" name="pony" value="rainbow" />
+    </li>
+    <li>
+      <label for="twilight">Twilight Sparkle</label>
+      <input type="radio" id="twilight" name="pony" value="twilight" />
+    </li>
+  </ul>
+</fieldset>
+<fieldset>
+  <legend>Hotdog preferences</legend>
+  <ul>
+    <li>
+      <label for="vegan">Vegan</label>
+      <input type="checkbox" id="vegan" name="hotdog_vegan" />
+    </li>
+    <li>
+      <label for="onions">Onions</label>
+      <input type="checkbox" id="onions" name="hotdog_onions" />
+    </li>
+    <li>
+      <label for="mustard">Mustard</label>
+      <input type="checkbox" id="mustard" name="hotdog_mustard" />
+    </li>
 
-      <li>
-        <label for="ketchup">Ketchup</label>
-        <input type="checkbox" id="ketchup" name="hotdog_ketchup" />
-      </li>
-    </ul>
-  </fieldset>
-  <button>Submit</button>
-</form>
+    <li>
+      <label for="ketchup">Ketchup</label>
+      <input type="checkbox" id="ketchup" name="hotdog_ketchup" />
+    </li>
+  </ul>
+</fieldset>
 ```
 
 </details>
@@ -218,29 +212,24 @@ The starting point of the task looks like this:
 Here's the underlying code for this starting point:
 
 ```html live-sample___forms-buttons-3
-<form>
-  <h2>Edit your preferences</h2>
-  <ul>
-    <li>
-      <label for="email">Email</label>
-    </li>
-    <li>
-      <label for="website">Website</label>
-    </li>
-    <li>
-      <label for="phone">Phone number</label>
-    </li>
-    <li>
-      <label for="fave-color">Favorite color</label>
-    </li>
-    <li>
-      <button>Update preferences</button>
-    </li>
-  </ul>
-</form>
+<h2>Edit your preferences</h2>
+<ul>
+  <li>
+    <label for="email">Email</label>
+  </li>
+  <li>
+    <label for="website">Website</label>
+  </li>
+  <li>
+    <label for="phone">Phone number</label>
+  </li>
+  <li>
+    <label for="fave-color">Favorite color</label>
+  </li>
+</ul>
 ```
 
-The updated form should look like this:
+The updated controls should look like this:
 
 {{ EmbedLiveSample("forms-buttons-3-finished", "100%", 250) }}
 
@@ -250,30 +239,25 @@ The updated form should look like this:
 Your finished HTML should look something like this:
 
 ```html live-sample___forms-buttons-3-finished
-<form>
-  <h2>Edit your preferences</h2>
-  <ul>
-    <li>
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" />
-    </li>
-    <li>
-      <label for="website">Website</label>
-      <input type="url" id="website" name="website" />
-    </li>
-    <li>
-      <label for="phone">Phone number</label>
-      <input type="tel" id="phone" name="phone" />
-    </li>
-    <li>
-      <label for="fave-color">Favorite color</label>
-      <input type="color" id="fave-color" name="fave-color" />
-    </li>
-    <li>
-      <button>Update preferences</button>
-    </li>
-  </ul>
-</form>
+<h2>Edit your preferences</h2>
+<ul>
+  <li>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" />
+  </li>
+  <li>
+    <label for="website">Website</label>
+    <input type="url" id="website" name="website" />
+  </li>
+  <li>
+    <label for="phone">Phone number</label>
+    <input type="tel" id="phone" name="phone" />
+  </li>
+  <li>
+    <label for="fave-color">Favorite color</label>
+    <input type="color" id="fave-color" name="fave-color" />
+  </li>
+</ul>
 ```
 
 </details>
@@ -295,21 +279,16 @@ The starting point of the task looks like this:
 Here's the underlying code for this starting point:
 
 ```html live-sample___forms-buttons-4
-<form>
-  <ul>
-    <li>
-      <label for="food">Pick your favorite food:</label>
+<ul>
+  <li>
+    <label for="food">Pick your favorite food:</label>
 
-      Salad Curry Pizza Fajitas Biscuits Crisps Fruit Breadsticks
-    </li>
-    <li>
-      <button>Submit choice</button>
-    </li>
-  </ul>
-</form>
+    Salad Curry Pizza Fajitas Biscuits Crisps Fruit Breadsticks
+  </li>
+</ul>
 ```
 
-The updated form should look like this:
+The updated controls should look like this:
 
 {{ EmbedLiveSample("forms-buttons-4-finished", "100%", 120) }}
 
@@ -319,30 +298,25 @@ The updated form should look like this:
 Your finished HTML should look something like this:
 
 ```html live-sample___forms-buttons-4-finished
-<form>
-  <ul>
-    <li>
-      <label for="food">Pick your favorite food:</label>
-      <select name="food" id="food">
-        <optgroup label="mains">
-          <option>Salad</option>
-          <option>Curry</option>
-          <option>Pizza</option>
-          <option>Fajitas</option>
-        </optgroup>
-        <optgroup label="snacks">
-          <option>Biscuits</option>
-          <option>Crisps</option>
-          <option>Fruit</option>
-          <option>Breadsticks</option>
-        </optgroup>
-      </select>
-    </li>
-    <li>
-      <button>Submit choice</button>
-    </li>
-  </ul>
-</form>
+<ul>
+  <li>
+    <label for="food">Pick your favorite food:</label>
+    <select name="food" id="food">
+      <optgroup label="mains">
+        <option>Salad</option>
+        <option>Curry</option>
+        <option>Pizza</option>
+        <option>Fajitas</option>
+      </optgroup>
+      <optgroup label="snacks">
+        <option>Biscuits</option>
+        <option>Crisps</option>
+        <option>Fruit</option>
+        <option>Breadsticks</option>
+      </optgroup>
+    </select>
+  </li>
+</ul>
 ```
 
 </details>
@@ -364,22 +338,20 @@ The starting point of the task looks like this:
 Here's the underlying code for this starting point:
 
 ```html live-sample___forms-buttons-5
-<form>
-  Name:
-  <input type="text" id="name" name="name" />
+Name:
+<input type="text" id="name" name="name" />
 
-  Age:
-  <input type="number" id="age" name="age" />
+Age:
+<input type="number" id="age" name="age" />
 
-  Comment:
-  <input type="text" id="comment" name="comment" />
+Comment:
+<input type="text" id="comment" name="comment" />
 
-  Email:
-  <input type="email" id="email" name="email" />
-</form>
+Email:
+<input type="email" id="email" name="email" />
 ```
 
-The updated form should look like this:
+The updated controls should look like this:
 
 {{ EmbedLiveSample("forms-buttons-5-finished", "100%", 300) }}
 
@@ -389,34 +361,32 @@ The updated form should look like this:
 Your finished HTML should look something like this:
 
 ```html live-sample___forms-buttons-5-finished
-<form>
-  <fieldset>
-    <legend>Personal details</legend>
-    <ul>
-      <li>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" />
-      </li>
-      <li>
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" />
-      </li>
-    </ul>
-  </fieldset>
-  <fieldset>
-    <legend>Comment information</legend>
-    <ul>
-      <li>
-        <label for="comment">Comment:</label>
-        <input type="text" id="comment" name="comment" />
-      </li>
-      <li>
-        <label for="email">Email (include if you want a reply):</label>
-        <input type="email" id="email" name="email" />
-      </li>
-    </ul>
-  </fieldset>
-</form>
+<fieldset>
+  <legend>Personal details</legend>
+  <ul>
+    <li>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" />
+    </li>
+    <li>
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" />
+    </li>
+  </ul>
+</fieldset>
+<fieldset>
+  <legend>Comment information</legend>
+  <ul>
+    <li>
+      <label for="comment">Comment:</label>
+      <input type="text" id="comment" name="comment" />
+    </li>
+    <li>
+      <label for="email">Email (include if you want a reply):</label>
+      <input type="email" id="email" name="email" />
+    </li>
+  </ul>
+</fieldset>
 ```
 
 </details>

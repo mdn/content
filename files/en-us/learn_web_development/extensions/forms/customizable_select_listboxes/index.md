@@ -21,28 +21,26 @@ In the previous article we talked about "dropdown" `<select>` elements, which ar
 The following live example illustrates the difference:
 
 ```html hidden live-sample___select-comparison
-<form>
-  <p>
-    <label for="pet-select">Select pet dropdown:</label><br />
-    <select id="pet-select">
-      <option value="cat">Cat</option>
-      <option value="dog">Dog</option>
-      <option value="chicken">Chicken</option>
-      <option value="fish">Fish</option>
-      <option value="Hamster">Hamster</option>
-    </select>
-  </p>
-  <p>
-    <label for="pet-select2">Select pets listbox:</label><br />
-    <select id="pet-select2" multiple>
-      <option value="cat">Cat</option>
-      <option value="dog">Dog</option>
-      <option value="chicken">Chicken</option>
-      <option value="fish">Fish</option>
-      <option value="hamster">Hamster</option>
-    </select>
-  </p>
-</form>
+<p>
+  <label for="pet-select">Select pet dropdown:</label><br />
+  <select id="pet-select">
+    <option value="cat">Cat</option>
+    <option value="dog">Dog</option>
+    <option value="chicken">Chicken</option>
+    <option value="fish">Fish</option>
+    <option value="Hamster">Hamster</option>
+  </select>
+</p>
+<p>
+  <label for="pet-select2">Select pets listbox:</label><br />
+  <select id="pet-select2" multiple>
+    <option value="cat">Cat</option>
+    <option value="dog">Dog</option>
+    <option value="chicken">Chicken</option>
+    <option value="fish">Fish</option>
+    <option value="hamster">Hamster</option>
+  </select>
+</p>
 ```
 
 ```css hidden live-sample___select-comparison

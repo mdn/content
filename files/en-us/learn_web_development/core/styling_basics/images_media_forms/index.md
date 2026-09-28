@@ -238,30 +238,22 @@ Elements that allow for text input such as `<input type="text">`, the more speci
 
 In the example below, we have styled some text inputs using CSS. You can see that things such as borders, margins and padding all apply as you would expect. We are using attribute selectors to target the different input types.
 
-Try editing the example to change how the form looks by adjusting the borders, adding background colors to the fields, and changing fonts and padding.
+Try editing the example to change how the controls look by adjusting the borders, adding background colors to the fields, and changing fonts and padding.
 
 ```html live-sample___form
-<form>
+<div class="controls">
   <div><label for="name">Name</label> <input id="name" type="text" /></div>
   <div><label for="email">Email</label> <input id="email" type="email" /></div>
 
-  <div class="buttons"><input type="submit" value="Submit" /></div>
-</form>
-```
-
-```js hidden live-sample___form
-document.querySelectorAll("form").forEach((form) => {
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-  });
-});
+  <div class="buttons"><input type="button" value="Submit" /></div>
+</div>
 ```
 
 ```css hidden live-sample___form
 body {
   font-family: sans-serif;
 }
-form > div {
+.controls > div {
   display: flex;
 }
 
@@ -283,7 +275,7 @@ input[type="email"] {
   width: 80%;
 }
 
-input[type="submit"] {
+input[type="button"] {
   border: 3px solid #333333;
   background-color: #999999;
   border-radius: 5px;
@@ -292,8 +284,8 @@ input[type="submit"] {
   color: white;
 }
 
-input[type="submit"]:hover,
-input[type="submit"]:focus {
+input[type="button"]:hover,
+input[type="button"]:focus {
   background-color: #333333;
 }
 ```

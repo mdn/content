@@ -58,30 +58,28 @@ The {{cssxref("appearance")}} property was created as a way to control what OS- 
 For example, let's take the following controls:
 
 ```html
-<form>
-  <p>
-    <label for="search">search: </label>
-    <input id="search" name="search" type="search" />
-  </p>
-  <p>
-    <label for="text">text: </label>
-    <input id="text" name="text" type="text" />
-  </p>
-  <p>
-    <label for="date">date: </label>
-    <input id="date" name="date" type="datetime-local" />
-  </p>
-  <p>
-    <label for="radio">radio: </label>
-    <input id="radio" name="radio" type="radio" />
-  </p>
-  <p>
-    <label for="checkbox">checkbox: </label>
-    <input id="checkbox" name="checkbox" type="checkbox" />
-  </p>
-  <p><input type="submit" value="submit" /></p>
-  <p><input type="button" value="button" /></p>
-</form>
+<p>
+  <label for="search">search: </label>
+  <input id="search" name="search" type="search" />
+</p>
+<p>
+  <label for="text">text: </label>
+  <input id="text" name="text" type="text" />
+</p>
+<p>
+  <label for="date">date: </label>
+  <input id="date" name="date" type="datetime-local" />
+</p>
+<p>
+  <label for="radio">radio: </label>
+  <input id="radio" name="radio" type="radio" />
+</p>
+<p>
+  <label for="checkbox">checkbox: </label>
+  <input id="checkbox" name="checkbox" type="checkbox" />
+</p>
+<p><input type="submit" value="submit" /></p>
+<p><input type="button" value="button" /></p>
 ```
 
 Applying the following CSS to them removes system-level styling.
@@ -96,7 +94,7 @@ The following live example shows you what they look like in your system — defa
 
 ```html hidden live-sample___appearance-tester
 <div>
-  <form>
+  <div class="controls">
     <div>
       <label for="search1">search: </label>
       <input id="search1" name="search1" type="search" />
@@ -119,10 +117,10 @@ The following live example shows you what they look like in your system — defa
     </div>
     <div><input type="submit" value="submit" /></div>
     <div><input type="button" value="button" /></div>
-  </form>
+  </div>
 </div>
 <div class="appearance">
-  <form>
+  <div class="controls">
     <div>
       <label for="search2">search: </label>
       <input id="search2" name="search2" type="search" />
@@ -145,16 +143,8 @@ The following live example shows you what they look like in your system — defa
     </div>
     <div><input type="submit" value="submit" /></div>
     <div><input type="button" value="button" /></div>
-  </form>
+  </div>
 </div>
-```
-
-```js hidden live-sample___appearance-tester live-sample___ugly-styling live-sample___styled-file-picker
-document.querySelectorAll("form").forEach((form) => {
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-  });
-});
 ```
 
 ```css hidden live-sample___appearance-tester
@@ -165,11 +155,11 @@ body {
 }
 
 body,
-form > div {
+.controls > div {
   display: flex;
 }
 
-form > div {
+.controls > div {
   margin-bottom: 20px;
 }
 
@@ -199,30 +189,28 @@ input[type="search"]:not(:focus, :active)::-webkit-search-cancel-button {
 If you only want to style the primary tint color of checkboxes, radio buttons, or range sliders, the {{cssxref("accent-color")}} will do it without requiring `appearance: none`. This is useful for basic styling cases, as the controls maintain their OS-level styling, but with an altered main color.
 
 ```html live-sample___accent-color
-<form>
-  <fieldset>
-    <legend>Fruit preferences</legend>
+<fieldset>
+  <legend>Fruit preferences</legend>
 
-    <p>
-      <label>
-        <input type="checkbox" name="fruit" value="cherry" checked />
-        I like cherry
-      </label>
-    </p>
-    <p>
-      <label>
-        <input type="radio" name="favorite" value="banana" checked />
-        Banana is my favorite
-      </label>
-    </p>
-    <p>
-      <label>
-        How much do you like fruit?
-        <input type="range" name="amount" min="0" max="10" value="7" />
-      </label>
-    </p>
-  </fieldset>
-</form>
+  <p>
+    <label>
+      <input type="checkbox" name="fruit" value="cherry" checked />
+      I like cherry
+    </label>
+  </p>
+  <p>
+    <label>
+      <input type="radio" name="favorite" value="banana" checked />
+      Banana is my favorite
+    </label>
+  </p>
+  <p>
+    <label>
+      How much do you like fruit?
+      <input type="range" name="amount" min="0" max="10" value="7" />
+    </label>
+  </p>
+</fieldset>
 ```
 
 ```css live-sample___accent-color
@@ -244,30 +232,28 @@ A much better approach is to remove the default appearance of checkboxes and rad
 Let's take this example HTML:
 
 ```html live-sample___checkboxes-styled
-<form>
-  <fieldset>
-    <legend>Fruit preferences</legend>
+<fieldset>
+  <legend>Fruit preferences</legend>
 
-    <p>
-      <label>
-        <input type="checkbox" name="fruit" value="cherry" />
-        I like cherry
-      </label>
-    </p>
-    <p>
-      <label>
-        <input type="checkbox" name="fruit" value="banana" disabled />
-        I can't like banana
-      </label>
-    </p>
-    <p>
-      <label>
-        <input type="checkbox" name="fruit" value="strawberry" />
-        I like strawberry
-      </label>
-    </p>
-  </fieldset>
-</form>
+  <p>
+    <label>
+      <input type="checkbox" name="fruit" value="cherry" />
+      I like cherry
+    </label>
+  </p>
+  <p>
+    <label>
+      <input type="checkbox" name="fruit" value="banana" disabled />
+      I can't like banana
+    </label>
+  </p>
+  <p>
+    <label>
+      <input type="checkbox" name="fruit" value="strawberry" />
+      I like strawberry
+    </label>
+  </p>
+</fieldset>
 ```
 
 Let's style these with a custom checkbox design. We'll start by removing the original checkbox styles:
@@ -338,7 +324,7 @@ If you are prepared to live with some differences in look and feel, you can use 
 Take the following example, which shows a number of the "ugly" form features in action:
 
 ```html hidden live-sample___ugly-styling
-<form>
+<div class="controls">
   <div>
     <label for="select">Select box:</label>
     <div class="select-wrapper">
@@ -397,8 +383,8 @@ Take the following example, which shows a number of the "ugly" form features in 
       75
     </meter>
   </div>
-  <div><button>Submit?</button></div>
-</form>
+  <div><button type="button">Submit?</button></div>
+</div>
 ```
 
 {{EmbedLiveSample("ugly-styling", '100%', 750)}}
@@ -414,7 +400,7 @@ body {
   max-width: 400px;
 }
 
-form > div {
+.controls > div {
   margin-bottom: 20px;
 }
 
@@ -647,10 +633,8 @@ Inputs of type file are generally OK — it is fairly easy to create something t
 The button you press to open the file picker can be styled with the {{cssxref("::file-selector-button")}} pseudo-element, which accepts the same properties as any other button:
 
 ```html live-sample___file-selector-button
-<form>
-  <label for="avatar">Choose a profile picture</label>
-  <input id="avatar" name="avatar" type="file" />
-</form>
+<label for="avatar">Choose a profile picture</label>
+<input id="avatar" name="avatar" type="file" />
 ```
 
 ```css live-sample___file-selector-button
@@ -701,14 +685,14 @@ label[for="file"]:active {
 You can see the result of the above CSS styling in the live example below.
 
 ```html hidden live-sample___styled-file-picker
-<form>
+<div class="controls">
   <div>
     <label for="file">Choose a file to upload</label>
     <input id="file" name="file" type="file" multiple />
     <ul id="file-list"></ul>
   </div>
-  <div><button>Submit?</button></div>
-</form>
+  <div><button type="button">Submit?</button></div>
+</div>
 ```
 
 ```css hidden live-sample___styled-file-picker
@@ -720,7 +704,7 @@ body {
   max-width: 400px;
 }
 
-form > div {
+.controls > div {
   margin-bottom: 20px;
 }
 
