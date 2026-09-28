@@ -206,7 +206,7 @@ First, of all, add the following rule to style the `.panels` {{htmlelement("div"
 }
 ```
 
-Finally for this section, we will style the individual {{htmlelement("article")}} elements that comprise our panels. The first rule we'll add will absolutely {{cssxref("position")}} the panels, and make them all sit flush to the {{cssxref("top")}} and {{cssxref("left")}} of their {{htmlelement("div")}} container — this part is key to this whole layout feature, as it makes the panels sit on top of one another. The rule also gives the panels the same set height as the container, and gives the content some padding, a text {{cssxref("color")}}, and a {{cssxref("background-color")}}.
+Finally, we will style the individual {{htmlelement("article")}} elements that make up our panels. The first rule we'll add will absolutely {{cssxref("position")}} the panels, and make them all sit flush to the {{cssxref("top")}} and {{cssxref("left")}} of their {{htmlelement("div")}} container — this part is key to this whole layout feature, as it makes the panels sit on top of one another. The rule also sets the panels to the same height as the container and adds padding, a text {{cssxref("color")}}, and a {{cssxref("background-color")}}.
 
 ```css
 .info-box [role="tabpanel"] {
@@ -220,7 +220,7 @@ Finally for this section, we will style the individual {{htmlelement("article")}
 }
 ```
 
-The second rule we'll add here makes it so that a panel with a class of `is-hidden` set on it will be hidden. Again, we'll add/remove this class using JavaScript at the appropriate time. When a tab is selected the corresponding panel will have its `is-hidden` class removed and all other panels will have `is-hidden` class set, thus only one panel will be visible at a time.
+The second rule we'll add here makes it so that a panel with a class of `is-hidden` set on it will be hidden. Again, we'll add/remove this class using JavaScript at the appropriate time. When a tab is selected, the corresponding panel will have its `is-hidden` class removed, and all other panels will have `is-hidden` class set, thus only one panel will be visible at a time.
 
 ```css
 .info-box [role="tabpanel"].is-hidden {
@@ -242,7 +242,7 @@ This code does the following:
 - When a `TabsManual` object is created, in the constructor all the tab and panel references are collected in `tabs` and `tabpanels` variables, so we can easily do things to them later on.
 - The constructor also registers [`click`](/en-US/docs/Web/API/Element/click_event) and [`keydown`](/en-US/docs/Web/API/Element/keydown_event) event handlers on all the tabs. The event handlers include logic about what should happen when a tab is selected using a click or keypress.
 - In the `setSelectedTab(currentTab)` function, the following occurs:
-  - A `for` loop is used to cycle through all the tabs and deselect them by setting `aria-selected` property to `false` and by setting `is-hidden` class on corresponding panels.
+  - A `for` loop is used to cycle through all the tabs and deselect them by setting `aria-selected` property to `false` and by setting `is-hidden` class on the corresponding panels.
   - On the selected tab (`currentTab`) the `aria-selected` is set to `true` and `is-hidden` class is removed from the corresponding panel.
 
 - The code also has logic to support keyboard navigation using `Left arrow`, `Right arrow`, `Home`, and `End` keys.
@@ -297,7 +297,7 @@ First of all, we need some additional HTML to represent the webpage's main conte
 
 ### Changes to the existing CSS
 
-Next, we need to change the existing CSS to place and position the info-box. Add {{cssxref("position", "position: fixed;")}} to your `.info-box` rule to stick it to the {{cssxref("top")}} of the browser viewport. Once the info-box is fixed-positioned, `margin: 0 auto;` no longer centers it, so remove that declaration.
+Next, we need to change the existing CSS to position the info-box. Add {{cssxref("position", "position: fixed;")}} to your `.info-box` rule to stick it to the {{cssxref("top")}} of the browser viewport. Once the info-box is fixed-positioned, `margin: 0 auto;` no longer centers it, so remove that declaration.
 
 It should now look like this:
 
