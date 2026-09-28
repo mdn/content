@@ -90,6 +90,14 @@ Here's the underlying code for this starting point:
 </form>
 ```
 
+```js hidden live-sample___images-forms2-start live-sample___images-forms2-finish live-sample___forms-2
+document.querySelectorAll("form").forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+  });
+});
+```
+
 ```css live-sample___images-forms2-start live-sample___images-forms2-finish
 body {
   font: 1.2em / 1.5 sans-serif;

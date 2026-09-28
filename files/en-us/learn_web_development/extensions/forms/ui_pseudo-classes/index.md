@@ -353,7 +353,7 @@ button {
 }
 ```
 
-```js hidden live-sample___required-optional-generated
+```js hidden live-sample___optional-required-styles live-sample___required-optional-generated
 const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();

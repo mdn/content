@@ -361,6 +361,12 @@ Let's put these ideas into practice and build a slightly more involved form — 
 
 We applied some extra CSS to the finished form below. If you'd like to make changes to the appearance of your form, you can copy styles from [the example](/en-US/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form/Example) or visit [Styling web forms](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms).
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 {{EmbedLiveSample("building_a_form_structure","100%",620)}}
 
 ## Summary

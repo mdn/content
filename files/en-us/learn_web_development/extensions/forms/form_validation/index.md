@@ -183,7 +183,7 @@ input:valid {
 }
 ```
 
-```js hidden live-sample___the-required-attribute live-sample___validate-regular-expression live-sample___constraining-values
+```js hidden live-sample___simple-start-file live-sample___the-required-attribute live-sample___validate-regular-expression live-sample___constraining-values
 const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -377,6 +377,12 @@ First, some HTML:
 </form>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 And now some CSS to style the HTML:
 
 ```css
@@ -557,6 +563,12 @@ We start with the HTML {{htmlelement("form")}} below.
   <input type="email" id="mail" />
   <button>Submit</button>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 The validation code is shown below.

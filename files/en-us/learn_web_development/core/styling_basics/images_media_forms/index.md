@@ -249,6 +249,14 @@ Try editing the example to change how the form looks by adjusting the borders, a
 </form>
 ```
 
+```js hidden live-sample___form
+document.querySelectorAll("form").forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+  });
+});
+```
+
 ```css hidden live-sample___form
 body {
   font-family: sans-serif;

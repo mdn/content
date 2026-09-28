@@ -271,29 +271,27 @@ In this section we'll walk through a more complex example, which provides a cont
 
 ### HTML
 
-In the markup, we include a {{htmlelement("form")}} that contains a heading and a wrapper {{htmlelement("div")}}. Inside the wrapper, we include three more `<div>` elements that respectively contain a text {{htmlelement("input")}} representing our filter field, a listbox {{htmlelement("select")}}, and a link. The `<select>` will be populated with {{htmlelement("option")}} elements representing our contact choices via JavaScript.
+In the markup, we include a heading and a wrapper {{htmlelement("div")}}. Inside the wrapper, we include three more `<div>` elements that respectively contain a text {{htmlelement("input")}} representing our filter field, a listbox {{htmlelement("select")}}, and a link. The `<select>` will be populated with {{htmlelement("option")}} elements representing our contact choices via JavaScript.
 
 ```html live-sample___complex-listbox
-<form>
-  <h2>Contact select</h2>
-  <div class="wrapper">
-    <div class="filter">
-      <input
-        type="text"
-        aria-label="Filter contacts"
-        placeholder="Filter by name, e.g. amara" />
-    </div>
-    <div class="options">
-      <select
-        multiple
-        name="contact-select"
-        aria-label="Select contacts"></select>
-    </div>
-    <div class="edit">
-      <a href="#">Edit contacts</a>
-    </div>
+<h2>Contact select</h2>
+<div class="wrapper">
+  <div class="filter">
+    <input
+      type="text"
+      aria-label="Filter contacts"
+      placeholder="Filter by name, e.g. amara" />
   </div>
-</form>
+  <div class="options">
+    <select
+      multiple
+      name="contact-select"
+      aria-label="Select contacts"></select>
+  </div>
+  <div class="edit">
+    <a href="#">Edit contacts</a>
+  </div>
+</div>
 ```
 
 ### CSS

@@ -192,6 +192,14 @@ WAI-ARIA adds the [`role` attribute](https://w3c.github.io/aria/#role_definition
 </footer>
 ```
 
+```js hidden live-sample___aria-website-no-roles live-sample___aria-website-roles
+document.querySelectorAll("form").forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+  });
+});
+```
+
 ```css hidden live-sample___aria-website-no-roles
 /* || General setup */
 

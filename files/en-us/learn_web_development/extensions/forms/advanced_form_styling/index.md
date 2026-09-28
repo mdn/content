@@ -149,6 +149,14 @@ The following live example shows you what they look like in your system — defa
 </div>
 ```
 
+```js hidden live-sample___appearance-tester live-sample___ugly-styling live-sample___styled-file-picker
+document.querySelectorAll("form").forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+  });
+});
+```
+
 ```css hidden live-sample___appearance-tester
 body {
   margin: 20px auto;

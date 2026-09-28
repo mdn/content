@@ -61,6 +61,14 @@ Here's the underlying code for this starting point:
 </form>
 ```
 
+```js hidden live-sample___forms-buttons-1 live-sample___forms-buttons-1-finished live-sample___forms-buttons-2 live-sample___forms-buttons-2-finished live-sample___forms-buttons-3 live-sample___forms-buttons-3-finished live-sample___forms-buttons-4 live-sample___forms-buttons-4-finished live-sample___forms-buttons-5 live-sample___forms-buttons-5-finished live-sample___forms-buttons-6 live-sample___forms-buttons-6-finished
+document.querySelectorAll("form").forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+  });
+});
+```
+
 The updated form should look like this:
 
 {{ EmbedLiveSample("forms-buttons-1-finished", "100%", 150) }}
