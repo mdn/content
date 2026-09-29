@@ -8,7 +8,7 @@ browser-compat: api.XMLHttpRequest.readyState
 
 {{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
 
-The **XMLHttpRequest.readyState** property returns the state an XMLHttpRequest client is in. An XHR client exists in one of the following states:
+The **`readyState`** read-only property of the {{domxref("XMLHttpRequest")}} interface returns the state an XMLHttpRequest client is in. An XHR client exists in one of the following states:
 
 | Value | State              | Description                                                     |
 | ----- | ------------------ | --------------------------------------------------------------- |

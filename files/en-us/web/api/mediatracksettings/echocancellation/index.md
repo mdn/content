@@ -24,7 +24,7 @@ the sound being produced on the speakers from being included in the input track
 generated from the microphone.
 
 If needed, you can determine whether or not this constraint is supported by checking
-the value of {{domxref("MediaTrackSupportedConstraints.echoCancellation")}} as returned
+the value of [`echoCancellation`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#echocancellation) as returned
 by a call to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically
 this is unnecessary since browsers will ignore any constraints they're unfamiliar with.
 

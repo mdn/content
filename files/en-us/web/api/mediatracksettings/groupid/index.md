@@ -17,7 +17,7 @@ to comply with your specified constraints for this property's value as described
 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}.
 
 If needed, you can determine whether or not this constraint is supported by checking
-the value of {{domxref("MediaTrackSupportedConstraints.groupId")}} as returned by a call
+the value of [`groupId`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#groupid) as returned by a call
 to {{domxref("MediaDevices.getSupportedConstraints()")}}. However, typically this is
 unnecessary since browsers will ignore any constraints they're unfamiliar with.
 
