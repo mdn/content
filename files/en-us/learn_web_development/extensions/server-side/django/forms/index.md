@@ -535,7 +535,7 @@ If you are successful, the default form will look like this:
 
 The form with an invalid value entered will look like this:
 
-![Same form as above with an error message: invalid date - renewal in the past](forms_example_renew_invalid.png)
+![Same form as above with an error message: invalid date - renewal more than 4 weeks ahead](forms_example_renew_invalid.png)
 
 The list of all books with renew links will look like this:
 
