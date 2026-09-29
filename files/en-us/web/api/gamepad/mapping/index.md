@@ -8,9 +8,7 @@ browser-compat: api.Gamepad.mapping
 
 {{APIRef("Gamepad API")}}
 
-The **`Gamepad.mapping`** property of the
-{{domxref("Gamepad")}} interface returns a string indicating whether the browser has
-remapped the controls on the device to a known layout.
+The **`mapping`** read-only property of the {{domxref("Gamepad")}} interface returns a string indicating whether the browser has remapped the controls on the device to a known layout.
 
 The currently supported known layouts are:
 

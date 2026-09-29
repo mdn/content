@@ -322,9 +322,9 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 ### Focus events
 
 - {{domxref("Window/blur_event", "blur")}}
-  - : Fired when an element has lost focus.
+  - : Fired when the window has lost focus.
 - {{domxref("Window/focus_event", "focus")}}
-  - : Fired when an element has gained focus.
+  - : Fired when the window has gained focus.
 
 ### Gamepad events
 

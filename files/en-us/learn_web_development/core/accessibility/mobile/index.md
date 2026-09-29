@@ -247,7 +247,7 @@ html {
 }
 
 body {
-  background: #ffe;
+  background: #ffffee;
   margin: 0;
 }
 

@@ -75,7 +75,7 @@ The example shows a three-column track grid with new rows created at a minimum o
 
 {{EmbedLiveSample("Grid_layout_in_action", "100%", "460")}}
 
-This sample animation uses {{cssxref("display")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}}, and {{cssxref("gap")}} to create the grid, and {{cssxref("grid-column")}} and {{cssxref("grid-row")}} to position items within in the grid. To view and edit the HTML and CSS used, click the 'Play' at the top right of the example.
+This sample animation uses {{cssxref("display")}}, {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}}, and {{cssxref("gap")}} to create the grid, and {{cssxref("grid-column")}} and {{cssxref("grid-row")}} to position items within the grid. To view and edit the HTML and CSS used, click the 'Play' at the top right of the example.
 
 ## Reference
 
@@ -135,7 +135,7 @@ This sample animation uses {{cssxref("display")}}, {{cssxref("grid-template-colu
   - : Placing grid items using named template areas.
 
 - [Grid layout using named grid lines](/en-US/docs/Web/CSS/Guides/Grid_layout/Named_grid_lines)
-  - : Combining names and track sizes; placing grid items by defining named grid lined and template areas.
+  - : Combining names and track sizes; placing grid items by defining named grid lines and template areas.
 
 - [Auto-placement in grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout/Auto-placement)
   - : How grid positions items that don't have any placement properties declared.
