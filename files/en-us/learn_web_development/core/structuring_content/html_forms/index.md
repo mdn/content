@@ -155,7 +155,7 @@ This is rendered as follows:
 
 {{EmbedLiveSample("form-anatomy", "100%", "200", , , , , "allow-forms")}}
 
-If you click "Sign me up!" immediately, you'll see a validation error because no data was entered. If you fill out the fields with a name and email address, then click "Sign me up!", nothing happens—because we have prevented the form from actually submitting, which would navigate away from this page.
+If you click "Sign me up!" right away, you'll see a validation error because you didn't enter any data. If you fill out the fields with a name and email address, and then click "Sign me up!", nothing happens—this is because we prevent the form from submitting, which would navigate you away from this page.
 
 Before moving on, copy the previous HTML code listing into a new HTML file using your [code editor](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Code_editors) and open it in a new browser tab.
 

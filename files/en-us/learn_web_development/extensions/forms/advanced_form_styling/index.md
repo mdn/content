@@ -417,7 +417,7 @@ select {
 .select-wrapper::after {
   content: "▼";
   font-size: 1rem;
-  top: 3px;
+  top: 6px;
   right: 10px;
   position: absolute;
 }
