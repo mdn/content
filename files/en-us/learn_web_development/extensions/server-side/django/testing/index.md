@@ -236,6 +236,7 @@ Here we see that we had one test failure, and we can see exactly what function f
 > The most important thing to learn from the test output above is that it is much more valuable if you use descriptive/informative names for your objects and methods.
 
 The output of the `print()` functions shows how the `setUpTestData()` method is called once for the class and `setUp()` is called before each method.
+The `.` and `F` characters show that a test passed or failed, and appear at the start of the next line of `print()` output.
 Again, remember that normally you would not add this kind of `print()` to your tests.
 
 The next sections show how you can run specific tests, and how to control how much information the tests display.
