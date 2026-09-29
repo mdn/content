@@ -128,12 +128,10 @@ Then open **/locallibrary/settings.py** and insert the following code after `BAS
 import os
 from dotenv import load_dotenv
 
-env_path = os.path.join(BASE_DIR, ".env")
-if os.path.exists(env_path):
-    load_dotenv(env_path)
+load_dotenv(BASE_DIR / ".env")
 ```
 
-This loads the `.env` file from the root of the web application.
+This loads the `.env` file from the root of the web application, if the file exists.
 Variables defined as `KEY=VALUE` in the file are imported when the key is used in `os.environ.get('<KEY>'', '<DEFAULT VALUE>')`, if defined.
 
 > [!NOTE]
@@ -173,6 +171,11 @@ A full checklist of settings you might want to change is provided in [Deployment
 python3 manage.py check --deploy
 ```
 
+> [!NOTE]
+> This command reports an error (`mail.E001`) because the `MAILERS` setting uses the console email backend that we added for [testing password reset](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Authentication#testing_the_new_authentication_pages).
+> This backend writes emails to the server log instead of sending them.
+> For a real site you would replace it with a production email backend, such as SMTP, which is beyond the scope of this tutorial.
+
 ### Gunicorn
 
 [Gunicorn](https://gunicorn.org/) is a pure-Python HTTP server that is commonly used for serving Django WSGI applications.
@@ -197,7 +200,7 @@ In this case we'll use a Postgres database that is also hosted on Railway, but y
 
 The database connection information will be supplied to Django using an environment variable named `DATABASE_URL`.
 Rather than hard-coding this information into Django, we'll use the [dj-database-url](https://pypi.org/project/dj-database-url/) package to parse the `DATABASE_URL` environment variable and automatically convert it to Django's desired configuration format.
-In addition to installing the _dj-database-url_ package we'll also need to install [psycopg2](https://www.psycopg.org/), as Django needs this to interact with Postgres databases.
+In addition to installing the _dj-database-url_ package we'll also need to install [psycopg](https://www.psycopg.org/psycopg3/), as Django needs this to interact with Postgres databases.
 
 #### dj-database-url
 
@@ -227,23 +230,23 @@ if 'DATABASE_URL' in os.environ:
 Django will now use the database configuration in `DATABASE_URL` if the environment variable is set; otherwise it uses the default SQLite database.
 The value `conn_max_age=500` makes the connection persistent, which is far more efficient than recreating the connection on every request cycle (this is optional and can be removed if needed).
 
-#### psycopg2
+#### psycopg
 
-<!-- Django 4.2 now supports Psycopg (3) : https://docs.djangoproject.com/en/6.1/releases/4.2/#psycopg-3-support
-  But didn't work on Railway!
-  Try again to update in next release.
--->
-
-Django needs _psycopg2_ to work with Postgres databases.
+Django needs _psycopg_ (version 3) to work with Postgres databases.
 Install it locally so that it becomes part of our [requirements](#requirements) for Railway to set up on the remote server:
 
 ```bash
-pip3 install psycopg2-binary
+pip3 install "psycopg[binary]"
 ```
+
+The `[binary]` option installs a version of _psycopg_ that includes the Postgres client libraries, so you don't need to install them separately.
+
+> [!NOTE]
+> Django also supports the older _psycopg2_ library, but recommends _psycopg_ (version 3), and says that support for _psycopg2_ is likely to be removed in future.
 
 Note that Django will use the SQLite database during development by default, unless `DATABASE_URL` is set.
 You can switch to Postgres completely and use the same hosted database for development and production by setting the same environment variable in your development environment (Railway makes it easy to use the same environment for production and development).
-Alternatively you can also install and use a [self-hosted Postgres database](https://www.psycopg.org/docs/install.html) on your local computer.
+Alternatively you can also install and use a [self-hosted Postgres database](https://www.postgresql.org/download/) on your local computer.
 
 ### Serving static files in production
 
@@ -332,12 +335,16 @@ Just add the following to the bottom of **/locallibrary/settings.py**:
 # Static file serving.
 # https://whitenoise.readthedocs.io/en/stable/django.html#add-compression-and-caching-support
 STORAGES = {
-    # ...
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
 ```
+
+The `STORAGES` setting replaces Django's default storage configuration, so we need to include the `"default"` storage (used for files that users upload) as well as the `"staticfiles"` storage that we want to change.
 
 You don't need to do anything else to configure _WhiteNoise_ because it uses your project settings for `STATIC_ROOT` and `STATIC_URL` by default.
 
@@ -355,13 +362,14 @@ After installing all the different dependencies above, your **requirements.txt**
 Please delete any other dependencies not listed below, unless you've explicitly added them for this application.
 
 ```plain
-Django==6.1.0
-dj-database-url==2.1.0
-gunicorn==21.2.0
-psycopg2-binary==2.9.9
-wheel==0.38.1
-whitenoise==6.6.0
-python-dotenv==1.0.1
+Django==6.1.1
+dj-database-url==3.1.2
+gunicorn==26.2.0
+psycopg==3.3.6
+psycopg-binary==3.3.6
+wheel==0.48.0
+whitenoise==6.12.0
+python-dotenv==1.2.3
 ```
 
 ### Update your application repository in GitHub
