@@ -1,47 +1,84 @@
 ---
-title: Collision detection
-slug: Games/Tutorials/2D_breakout_game_Phaser/Collision_detection
+title: Track the score and win
+slug: Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win
 page-type: guide
 sidebar: games
 ---
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_Phaser/The_score")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_Phaser/Extra_lives")}}
 
-This is the **10th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Now onto the next challenge—the collision detection between the ball and the bricks. Luckily enough, we can use the physics engine to check collisions not only between single objects (like the ball and the paddle), but also between an object and the group.
+This is the **8th step** out of 12 of the [creating a Breakout game using Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). In this article, we'll add a scoring system to our game. Having a score can make the game more interesting—you can try to beat your own high score, or your friend's. We also add a winning condition, which is if you happen to destroy all the bricks.
 
-## Brick/Ball collision detection
+We will use a separate property for storing the score and Phaser's `text()` method to print it out onto the screen.
 
-The physics engine makes everything a lot easier—we just need to add two simple pieces of code. First, add a new line inside your `update()` method that detects a collision between the ball and bricks, as shown below:
+## New properties
+
+Add two new properties right after the previously defined ones:
 
 ```js
 class ExampleScene extends Phaser.Scene {
-  // ...
-  update() {
-    this.physics.collide(this.ball, this.paddle);
-    this.physics.collide(this.ball, this.bricks, (ball, brick) =>
-      this.hitBrick(ball, brick),
-    );
-    this.paddle.x = this.input.x || this.scale.width * 0.5;
-    // ...
-  }
-  // ...
+  // ... previous property definitions ...
+  scoreText;
+  score = 0;
+  // ... rest of the class ...
 }
 ```
 
-The ball's position is calculated against the positions of all the bricks in the group. The third, optional parameter is the function executed when a collision occurs. This function is called by Phaser with two arguments—the first one is the ball, which we explicitly passed to the collide method, and the second one is the single brick from the bricks group that the ball is colliding with. Here we implement the behavior in a method called `hitBrick()`. Create this new method at the end of the `ExampleScene` class, just before the closing brace `}`, as follows:
+## Adding score text to the game display
+
+Now add this line at the end of the `create()` method:
+
+```js
+this.scoreText = this.add.text(5, 5, "Points: 0", {
+  font: "18px Arial",
+  color: "#0095dd",
+});
+```
+
+The `text()` method can take four parameters:
+
+- The x and y coordinates to draw the text at.
+- The actual text that will be rendered.
+- The font style to render the text with.
+
+The last parameter looks very similar to CSS styling. In our case, the score text will be blue, sized at 18 pixels, and use the Arial font.
+
+## Updating the score when bricks are destroyed
+
+We will increase the number of points every time the ball hits a brick and update the `scoreText` to display the current score. This can be done using the `setText()` method—add the two new lines seen below to the `hitBrick()` method:
 
 ```js
 class ExampleScene extends Phaser.Scene {
   // ...
   hitBrick(ball, brick) {
     brick.destroy();
+    this.score += 10;
+    this.scoreText.setText(`Points: ${this.score}`);
   }
 }
 ```
 
-And that's it! Reload your code, and you should see the new collision detection working just as required.
+That's it for now—reload your `index.html` and check that the score updates on every brick hit.
 
-You would expect to have to write a lot more calculations of your own to implement collision detection when using [pure JavaScript](/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection). That's the beauty of using the framework—you can leave a lot of boring code to Phaser, and focus on the most fun and interesting parts of making a game.
+## How to win?
+
+Add the following new code into your `update()` method:
+
+```js
+class ExampleScene extends Phaser.Scene {
+  // ...
+  update() {
+    // ...
+    if (this.bricks.countActive() === 0) {
+      alert("You won the game, congratulations!");
+      location.reload();
+    }
+  }
+  // ...
+}
+```
+
+We count the number of bricks that are still active, using the `countActive()` method on `this.bricks`. If there are no more active bricks, then we display the winning message, restarting the game once the alert is dismissed.
 
 ## Compare your code
 
@@ -63,6 +100,8 @@ class ExampleScene extends Phaser.Scene {
   ball;
   paddle;
   bricks;
+  scoreText;
+  score = 0;
 
   preload() {
     this.load.setBaseURL(
@@ -96,6 +135,11 @@ class ExampleScene extends Phaser.Scene {
     this.paddle.body.setImmovable(true);
 
     this.initBricks();
+
+    this.scoreText = this.add.text(5, 5, "Points: 0", {
+      font: "18px Arial",
+      color: "#0095dd",
+    });
   }
   update() {
     this.physics.collide(this.ball, this.paddle);
@@ -110,6 +154,10 @@ class ExampleScene extends Phaser.Scene {
     );
     if (ballIsOutOfBounds) {
       // Game over logic
+      location.reload();
+    }
+    if (this.bricks.countActive() === 0) {
+      alert("You won the game, congratulations!");
       location.reload();
     }
   }
@@ -149,6 +197,8 @@ class ExampleScene extends Phaser.Scene {
 
   hitBrick(ball, brick) {
     brick.destroy();
+    this.score += 10;
+    this.scoreText.setText(`Points: ${this.score}`);
   }
 }
 
@@ -174,6 +224,6 @@ const game = new Phaser.Game(config);
 
 ## Next steps
 
-We can hit the bricks and remove them, which is a nice addition to the gameplay already. It would be even better to count the destroyed bricks and increment [the score](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/The_score) as a result.
+Both losing and winning are implemented, so the core gameplay of our game is finished. Now let's add something extra—we'll give the player three [lives](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Extra_lives) instead of one.
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_Phaser/The_score")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Build_the_brick_field", "Games/Tutorials/2D_breakout_game_Phaser/Extra_lives")}}

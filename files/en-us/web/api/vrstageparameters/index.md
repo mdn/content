@@ -23,7 +23,7 @@ This interface is accessible through the {{domxref("VRDisplay.stageParameters")}
   - : Contains a matrix that transforms the sitting-space view matrices of {{domxref("VRFrameData")}} to standing-space.
 - {{domxref("VRStageParameters.sizeX")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : _Returns the width_ of the play-area bounds in meters.
-- {{domxref("VRStageParameters.sizeY")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
+- {{domxref("VRStageParameters.sizeZ")}} {{Deprecated_Inline}} {{ReadOnlyInline}} {{Non-standard_Inline}}
   - : _Returns the depth_ of the play-area bounds in meters.
 
 ## Examples
@@ -44,7 +44,7 @@ navigator.getVRDisplays().then((displays) => {
     info.innerText = `
 Sitting to standing transform: ${stageParams.sittingToStandingTransform}
 Play area width (m): ${stageParams.sizeX}
-Play area depth (m): ${stageParams.sizeY}`;
+Play area depth (m): ${stageParams.sizeZ}`;
     info.insertBefore(
       document.createElement("strong"),
       info.firstChild,
