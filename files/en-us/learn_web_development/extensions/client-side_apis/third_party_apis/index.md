@@ -7,7 +7,7 @@ sidebar: learnsidebar
 
 {{PreviousMenu("Learn_web_development/Extensions/Client-side_APIs/Client-side_storage", "Learn_web_development/Extensions/Client-side_APIs")}}
 
-The APIs we've covered so far are built into the browser, but not all APIs are. Many large websites and services such as Google, GitHub, YouTube, Spotify, etc. provide APIs allowing developers to make use of their data (e.g., displaying information about your repositories on your blog) or services (e.g., using Google login to log in your users). This article looks at the difference between browser APIs and third-party APIs and shows some typical uses of the latter.
+The APIs we've covered so far are built into the browser, but not all APIs are. Many large websites and services such as Google, GitHub, YouTube, Spotify, etc. provide APIs allowing developers to make use of their data (e.g., displaying information about your repositories on your blog) or services (e.g., using Google login to log in your users). This article explains the difference between browser APIs and third-party APIs and shows some typical uses of the latter.
 
 <table>
   <tbody>
@@ -32,7 +32,7 @@ The APIs we've covered so far are built into the browser, but not all APIs are. 
 
 ## What are third-party APIs?
 
-Third-party APIs are APIs provided by third parties — generally companies such as Spotify or Google — to allow you to access their functionality via JavaScript and use it on your site. One example is using YouTube's APIs to search for videos and display them on your pages.
+Third-party APIs are APIs provided by third parties — generally companies such as Spotify or Google — to allow you to access their functionality via JavaScript and use it on your site. One example is YouTube's APIs, which can search for videos and display them on your pages.
 
 Let's look at how third-party APIs differ from browser APIs.
 
@@ -49,9 +49,9 @@ const audioSource = audioCtx.createMediaElementSource(audioElement);
 // etc.
 ```
 
-Third-party APIs, on the other hand, are located on third-party servers. To access them from JavaScript you first need to connect to the API functionality and make it available on your page.
+Third-party APIs, on the other hand, are located on third-party servers. To access them from JavaScript, you first need to connect to the API functionality and make it available on your page.
 
-All third-party APIs ultimately connect to their servers using HTTP. But manually making {{domxref("Window/fetch", "fetch()")}} calls and is awkward and prone to breaking changes, so usually they provide functionality wrapped in functions, known as a Software Development Kit (SDK). The SDK constructs the HTTP payload, sends the request to the right endpoint, parses the response, etc., so you write as little code as possible and only supply the necessary data.
+All third-party APIs ultimately connect to their servers using HTTP. But manually making {{domxref("Window/fetch", "fetch()")}} calls is awkward and prone to breaking changes, so usually they provide functionality wrapped in functions, known as a Software Development Kit (SDK). The SDK constructs the HTTP payload, sends the request to the right endpoint, parses the response, etc., so you write as little code as possible and only supply the necessary data.
 
 Traditionally, the SDK is provided by embedding an external script in a {{htmlelement("script")}} element, which registers the library as a global variable. More modern APIs usually provide them as [modules](/en-US/docs/Web/JavaScript/Guide/Modules) that you can import, sometimes distributed through package managers like [npm](https://docs.npmjs.com/).
 
@@ -96,7 +96,7 @@ You'll find a line similar to the following in the YouTube API example:
 gapi.client.setApiKey("YOUR-API-KEY-HERE");
 ```
 
-This line specifies an API or developer key to use in your application — the developer of the application must apply to get a key, and then include it in their code to be allowed access to the API's functionality. In our example we've just provided a placeholder.
+This line specifies an API or developer key to use in your application — the application developer must apply to get a key, and then include it in their code to be allowed access to the API's functionality. In our example, we've just provided a placeholder.
 
 Other APIs may require that you include the key in a slightly different way, but the pattern is relatively similar for most of them.
 
@@ -105,7 +105,7 @@ Other APIs may require that you include the key in a slightly different way, but
 >
 > It also goes without saying that you should never commit them to your public GitHub repositories. If you accidentally expose a key, immediately revoke it and get a new one.
 
-Not all APIs need API keys. Some APIs provide functionality that is both open-access and already used at a high volume, so granting API access doesn't really add much to the server load (although they may still be rate-limited). Examples include [GitHub REST API](https://docs.github.com/en/rest) (see next), [Wikipedia's APIs](https://www.mediawiki.org/wiki/API:Main_page) for article content, and the [Stack Exchange API](https://api.stackexchange.com/docs) for questions and answers.
+Not all APIs need API keys. Some APIs provide open-access, high-volume functionality, so granting API access doesn't really add much to the server load (although they may still be rate-limited). Examples include [GitHub REST API](https://docs.github.com/en/rest) (see next), [Wikipedia's APIs](https://www.mediawiki.org/wiki/API:Main_page) for article content, and the [Stack Exchange API](https://api.stackexchange.com/docs) for questions and answers.
 
 ## A RESTful API — GitHub
 
@@ -117,7 +117,7 @@ Let's look at the [GitHub REST API](https://docs.github.com/en/rest). This API a
 
 ### Find the documentation
 
-When you want to use a third-party API, it is essential to find out where the documentation is, so you can find out what features the API has, how you use them, etc. For this example, we'll use GitHub's [Search repositories endpoint](https://docs.github.com/en/rest/search/search#search-repositories).
+When you want to use a third-party API, find the documentation so you can review the API's features and how to use them. For this example, we'll use GitHub's [Search repositories endpoint](https://docs.github.com/en/rest/search/search#search-repositories).
 
 When reading documentation for REST APIs, focus on these five questions:
 
@@ -136,7 +136,7 @@ For this exercise, create a **personal access token (PAT)** to authenticate your
 3. Under **Repository access**, select **Public repositories**. Leave additional permissions unset: searching public repositories doesn't require any.
 4. Click **Generate token** and copy the token. You'll enter it in the form in the [live example](#try_the_example), rather than adding it to your source code.
 
-This example will be slightly different from how API keys are typically used: the website will ask the user to submit their own key and perform the action on their behalf, so it doesn't need its own API key and doesn't need a server to proxy requests.
+This example uses API keys differently from their typical usage: the website asks the user to submit their own key and perform the action on their behalf, so it doesn't need its own API key or a server to proxy requests.
 
 > [!WARNING]
 > Once again, treat this PAT like your password. Only share your PAT with websites you trust, and give it really narrowly-scoped permissions and a short expiration date so it won't get abused. Our example sends the token directly from your browser to GitHub and does not save it in browser storage or send it to other servers.
@@ -145,7 +145,7 @@ GitHub also allows unauthenticated searches of public repositories, with a lower
 
 ### Set up the example
 
-The app will allow you to type in a search term and optional start and end dates for repository creation, then display the matching repositories.
+The app allows you to type in a search term and optional start and end dates for repository creation, then displays matching repositories.
 
 The HTML defines the search form, a status message, a results section, and pagination buttons:
 
@@ -277,7 +277,7 @@ async function fetchResults(page) {
 }
 ```
 
-GitHub's REST API uses standard HTTP verbs to distinguish action types. Because this is a read operation, we perform a `GET` request (the default for `fetch()`). The `GET` request has no body, so all input is provided via query parameters. We add them via the {{domxref("URL")}} object's `searchParams` property: the search query (`q`), page number (`page`), and number of results per page (`per_page`).
+GitHub's REST API uses standard HTTP verbs to distinguish action types. Because this is a read operation, we perform a `GET` request (the default for `fetch()`). The `GET` request has no body, so input is provided via query parameters. We add them via the {{domxref("URL")}} object's `searchParams` property: the search query (`q`), page number (`page`), and number of results per page (`per_page`).
 
 For example, searching for `cats` without dates produces a URL like this:
 
@@ -290,7 +290,7 @@ The `headers` object specifies the response format and API version. The {{HTTPHe
 The REST API returns data in JSON format because we requested it with `Accept: "application/vnd.github+json"`; we then parse it using [`response.json()`](/en-US/docs/Web/API/Response/json). The JSON's shape can also be found in GitHub's [Search repositories endpoint documentation](https://docs.github.com/en/rest/search/search#search-repositories).
 
 > [!NOTE]
-> If you receive a `401` error, check for a mistyped, expired, or revoked token. A `403` or `429` error can indicate a rate limit, in which case you should wait before trying again, rather than repeatedly clicking Search, which only worsens the situation. See GitHub's [troubleshooting guidance](https://docs.github.com/en/rest/using-the-rest-api/troubleshooting-the-rest-api).
+> If you receive a `401` error, check for a mistyped, expired, or revoked token. A `403` or `429` error can indicate a rate limit, in which case you should wait before trying again rather than repeatedly clicking Search, which only worsens the situation. See GitHub's [troubleshooting guidance](https://docs.github.com/en/rest/using-the-rest-api/troubleshooting-the-rest-api).
 
 After a successful request, `fetchResults()` updates `pageNumber` and enables the appropriate buttons. The Previous page button is disabled on the first page. The search endpoint exposes at most 1,000 results, so `fetchResults()` uses this limit and `total_count` to decide when to disable the Next page button.
 
@@ -351,7 +351,7 @@ previousBtn.addEventListener("click", () => {
 });
 ```
 
-GitHub's page numbers start at 1. We've requested 10 results per page, so page 2 contains the next 10 results, and so on. The current page number is recorded by `pageNumber`, and is updated only after the request was successful.
+GitHub's page numbers start at 1. We've requested 10 results per page, so page 2 contains the next 10 results, and so on. The current page number is recorded in `pageNumber` and updated only after a successful request.
 
 ### Try the example
 
@@ -398,15 +398,15 @@ We also built another example for you to study and learn from — see our [YouTu
 This uses two related APIs:
 
 - The [YouTube Data API](https://developers.google.com/youtube/v3/docs/) to search for YouTube videos and return results.
-- The [YouTube IFrame Player API](https://developers.google.com/youtube/iframe_api_reference) to display the returned video examples inside IFrame video players so you can watch them.
+- The [YouTube IFrame Player API](https://developers.google.com/youtube/iframe_api_reference) to display the returned video examples inside iframe video players so you can watch them.
 
-This example is interesting because it shows two related third-party APIs being used together to build an app. The first one is a RESTful API, while the second one provides JavaScript methods to control a video player. This example uses JavaScript libraries for both APIs: the client library for the Data API handles making the HTTP requests and returning the results.
+This example is interesting because it shows two related third-party APIs being used together to build an app. The first one is a RESTful API, while the second one provides JavaScript methods to control a video player. This example uses JavaScript libraries for both APIs: the client library for the Data API handles the HTTP requests and returns the results.
 
 ![A screenshot of a sample YouTube video search using two related APIs. The left side of the image has a sample search query using the YouTube Data API. The right side of the image displays the search results using the YouTube Iframe Player API.](youtube-example.png)
 
 We are not going to say too much more about this example in the article — [the source code](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/youtube) has detailed comments inserted inside it to explain how it works.
 
-The Data API provides a default daily [quota](https://developers.google.com/youtube/v3/getting-started#quota) for projects that enable it. Requests consume this quota, so the number of searches you can perform is limited.
+The Data API provides a default daily [quota](https://developers.google.com/youtube/v3/getting-started#quota) for projects that enable it. Requests consume this quota, so you can perform a limited number of searches.
 
 To get it running, you'll need to:
 
