@@ -53,7 +53,7 @@ This property is specified as a space-separated list of one to three values from
 - {{cssxref("&lt;percentage&gt;")}}
   - : Specifies the maximum (when `grow` is specified) or minimum (when `shrink` is specified) scaling factor. This must be `100%` or greater if `grow` is specified, or between `0%` and `100%` inclusive if `shrink` is specified, otherwise the percentage has no effect.
 
-The first, mandatory, value can be `none`, `grow`, or `shrink`. The second, optional, value can be `consistent`, `per-line`, or `per-line-all`. The third, optional value is a {{cssxref("percentage")}}. The components must be specified in this order.
+The mandatory first value can be `none`, `grow`, or `shrink`. The optional second value can be `consistent`, `per-line`, or `per-line-all`. The optional {{cssxref("percentage")}} value is declared last. The components must be specified in this order.
 
 ## Description
 
