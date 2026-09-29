@@ -410,7 +410,7 @@ input:focus:invalid {
 
 This renders as follows:
 
-{{EmbedLiveSample("full-example", "100%", 420)}}
+{{EmbedLiveSample("full-example", "100%", 480)}}
 
 You can also press the **Play** button to open the example in MDN Playground and edit the source code there.
 
