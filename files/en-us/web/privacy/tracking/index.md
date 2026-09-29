@@ -110,7 +110,7 @@ For trackers, the advantage of bounce tracking is that it works even if the brow
 
 ## Covert tracking
 
-Privacy researchers consider _covert tracking_ to consist of all forms of tracking except [those that use web platform storage APIs](#tracking_using_client-side_storage_apis). This includes [covert stateful tracking](#covert_stateful_tracking), [fingerprinting](#fingerprinting), and [navigational tracking](#navigational_tracking).
+_Covert tracking_ is tracking whose operation is intended to be hidden from user visibility and control. This excludes tracking that uses [web platform storage APIs](#tracking_using_client-side_storage_apis), but includes [covert stateful tracking](#covert_stateful_tracking) and [fingerprinting](#fingerprinting). It may also include [bounce tracking](#bounce_tracking).
 
 Any form of web tracking is usually harmful to privacy. However it is easier for users, browsers, and browser extensions to have some control over tracking that uses storage APIs, than tracking that uses more covert methods.
 
@@ -122,7 +122,7 @@ For example:
 
 Even if users don't take advantage of these tools, privacy researchers and advocates can use them to identify and highlight tracking. This helps the development of tools and regulations that can help protect the privacy of all users.
 
-Covert tracking is more harmful because by its nature it is hidden from user visibility and control.
+Covert tracking is more harmful because it attempts to evade this kind of visibility and control.
 
 See the W3C's [Unsanctioned Web Tracking](https://www.w3.org/2001/tag/doc/unsanctioned-tracking/) for more details.
 
@@ -151,9 +151,9 @@ Another situation in which sites have to exchange state is [federated login](/en
 
 #### Anti-tracking and site reliability
 
-Even if a site is tracking users, using the techniques described above, the proper functioning of the site may depend on the tracker being allowed to work. For example, the site's main may assume that the tracker is present, and break if it isn't. If the tracker is completely blocked, then the site won't work properly.
+Even if a site is tracking users, using the techniques described above, the proper functioning of the site may depend on the tracker being allowed to work. For example, the site's code may assume that the tracker is present, and break if it isn't. If the tracker is completely blocked, then the site won't work properly.
 
-In cases like this, browsers sometimes have to decide sometimes whether the harm caused by allowing the tracker is greater than the benefit that the website provides. This is part of the reason that browsers provide user-configurable levels of anti-tracking, so users can choose a trade-off based on their own values.
+In cases like this, browsers sometimes have to decide whether the harm caused by allowing the tracker is greater than the benefit that the website provides. This is part of the reason that browsers provide user-configurable levels of anti-tracking, so users can choose a trade-off based on their own values.
 
 ### Anti-tracking techniques
 
