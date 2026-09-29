@@ -200,12 +200,12 @@ In this example, we create a multi-col container using the `columns` shorthand p
 }
 @supports (column-height: 1em;) {
   body::before {
-      content: "Your browser doesn't the column height property";
-      background-color: wheat;
-      display: block;
-      text-align: center;
-      padding: 1rem 0;
-    }
+    content: "Your browser doesn't the column height property";
+    background-color: wheat;
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
+  }
 }
 ```
 
