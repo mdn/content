@@ -216,7 +216,7 @@ The instructions below show the platform specific commands as they work on more 
 
 ## Using Django inside a Python virtual environment
 
-We'll create our virtual environments using [venv](https://docs.python.org/3/library/venv.html), the virtual environment tool built into Python itself (Python has included _venv_ since version 3.3, so there's nothing extra to install beyond what you set up above). This is also what the [Django project itself recommends](https://docs.djangoproject.com/en/6.1/intro/contributing/#installing-python).
+We'll create our virtual environments using [venv](https://docs.python.org/3/library/venv.html), the virtual environment tool built into Python itself (Python has included _venv_ since version 3.3, so there's nothing extra to install beyond what you set up above). This is also what the [Django project itself recommends](https://docs.djangoproject.com/en/6.1/intro/contributing/#getting-a-copy-of-django-s-development-version).
 
 > [!NOTE]
 > On Ubuntu you must have already installed the `python3-venv` package for this to work (see the Ubuntu Python installation instructions above). On macOS and Windows, _venv_ is included automatically when you install Python from python.org, so there's no separate setup step for those platforms.

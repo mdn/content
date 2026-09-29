@@ -229,7 +229,7 @@ The value `conn_max_age=500` makes the connection persistent, which is far more 
 
 #### psycopg2
 
-<!-- Django 4.2 now supports Psycopg (3) : https://docs.djangoproject.com/en/5.0/releases/4.2/#psycopg-3-support
+<!-- Django 4.2 now supports Psycopg (3) : https://docs.djangoproject.com/en/6.1/releases/4.2/#psycopg-3-support
   But didn't work on Railway!
   Try again to update in next release.
 -->
