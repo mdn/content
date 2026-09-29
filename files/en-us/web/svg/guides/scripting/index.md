@@ -6,7 +6,7 @@ page-type: guide
 sidebar: svgref
 ---
 
-SVG elements are part of the DOM, so the APIs you already use for HTML — {{domxref("Document.querySelector", "querySelector()")}}, {{domxref("EventTarget.addEventListener", "addEventListener()")}}, {{domxref("Element.setAttribute", "setAttribute()")}} — work on SVG too. This guide covers the parts that are specific to SVG:
+SVG elements are part of the DOM, so the [DOM APIs](/en-US/docs/Web/API/Document_Object_Model) you might already be using with HTML — {{domxref("Document.querySelector", "querySelector()")}}, {{domxref("EventTarget.addEventListener", "addEventListener()")}}, {{domxref("Element.setAttribute", "setAttribute()")}} — work on SVG too. This guide covers the parts that are specific to SVG:
 
 - Where scripts in an SVG run, and where they don't.
 - Creating SVG elements from script, which needs the SVG namespace.
@@ -32,8 +32,13 @@ Wherever the script lives, the same DOM APIs are available. Here an SVG `<script
   xmlns="http://www.w3.org/2000/svg">
   <circle id="dot" cx="50" cy="50" r="40" fill="steelblue" />
   <script>
+    let colorIndex = 0;
     document.getElementById("dot").addEventListener("click", (event) => {
-      event.target.setAttribute("fill", "lightskyblue");
+      colorIndex = (colorIndex + 1) % 2;
+      event.target.setAttribute(
+        "fill",
+        ["steelblue", "lightskyblue"][colorIndex],
+      );
     });
   </script>
 </svg>
@@ -48,7 +53,7 @@ Click the circle to run the script:
 
 ## Creating SVG elements
 
-SVG elements live in the SVG namespace, `http://www.w3.org/2000/svg`, so they must be created with {{domxref("Document.createElementNS()")}}.
+SVG elements live in the SVG namespace, `http://www.w3.org/2000/svg`. The {{domxref("Document.createElement()")}} method never creates elements in this namespace, so SVG elements must be created with {{domxref("Document.createElementNS()")}}.
 
 This example starts with an empty `<svg>` element, so everything it draws comes from the script:
 
@@ -76,17 +81,17 @@ The result is a circle the markup never mentioned:
 
 {{EmbedLiveSample("Creating_SVG_elements", "100%", 130)}}
 
-Using {{domxref("Document.createElement()")}} instead creates an unknown HTML element that happens to be named `circle`: it will be inserted into the tree but render nothing, leaving the graphic as empty as its markup.
+Using `document.createElement("circle")` here creates an unknown HTML element that happens to be named `circle`: it will be inserted into the tree but render nothing, leaving the graphic as empty as its markup.
 
-Attributes don't need the same treatment. Apart from a few legacy ones such as the deprecated `xlink:href`, SVG attributes are not namespaced, so plain {{domxref("Element.setAttribute()")}} is correct. {{domxref("Element.setAttributeNS()")}} with a `null` namespace does the same thing more verbosely.
+Attributes don't need the same treatment. Apart from a few legacy ones such as the deprecated `xlink:href`, SVG attributes are not namespaced, so plain {{domxref("Element.setAttribute()")}} suffices. {{domxref("Element.setAttributeNS()")}} with a `null` namespace does the same thing more verbosely.
+
+Read the [XML namespaces](/en-US/docs/Web/API/Document_Object_Model/XML_namespaces) guide for a more in-depth analysis.
 
 ## Handling events
 
-SVG uses the same event model as HTML. Attach listeners with `addEventListener()`. Events bubble up through the SVG tree, so you can put a single listener on the root `<svg>` element and identify the shape that was clicked from {{domxref("Event.target", "event.target")}}.
+All DOM uses the same [event model](/en-US/docs/Web/API/Document_Object_Model/Events), so event handling in SVG is the same as HTML. Attach listeners with `addEventListener()`. Events bubble up through the SVG tree, so you can put a single listener on the root `<svg>` element and identify the shape that was clicked from {{domxref("Event.target", "event.target")}}.
 
 Call {{domxref("Event.preventDefault()")}} to suppress a browser default that gets in the way: for example, the text selection that happens while dragging a shape, or the navigation that follows a click on a shape wrapped in an {{SVGElement("a")}} element you want to handle in script.
-
-### Keeping state with a `handleEvent` object
 
 Instead of a function, you can pass [any object that implements a `handleEvent()` method](/en-US/docs/Web/API/EventTarget/addEventListener#the_event_listener_callback) to `addEventListener()`, which is a convenient way to store per-shape state next to the code that handles its events.
 
@@ -136,7 +141,7 @@ Click either circle to toggle its color:
 
 Pointer events report coordinates in CSS pixels relative to the viewport, but the shapes are positioned in the user coordinate system set up by {{SVGAttr("viewBox")}}. The two differ by the SVG's position on the page, and by a scale factor whenever the SVG isn't displayed at exactly the size of its `viewBox`.
 
-This example makes the scale factor visible: the `viewBox` is 100 by 50 user units displayed at 400 by 200 CSS pixels, so one user unit is four CSS pixels. The markup has a background rectangle, a marker for the script to move, and an {{HTMLElement("output")}} for the numbers:
+This example makes the scale factor visible. The `viewBox` is 100 by 50 user units displayed at 400 by 200 CSS pixels, so one user unit is four CSS pixels along both dimensions. The markup has a background rectangle, a marker for the script to move, and an {{HTMLElement("output")}} for the numbers:
 
 ```html
 <svg
@@ -165,7 +170,7 @@ output {
 }
 ```
 
-To convert a point, build a {{domxref("DOMPoint")}} from the event coordinates and transform it by the inverse of the element's screen coordinate matrix, which {{domxref("SVGGraphicsElement.getScreenCTM()")}} returns. {{domxref("DOMMatrixReadOnly.inverse()")}} produces the matrix that undoes that transform, and {{domxref("DOMPointReadOnly.matrixTransform()")}} applies it, returning a point whose `x` and `y` are in user units:
+The {{domxref("SVGGraphicsElement.getScreenCTM()")}} method returns a _screen coordinate transformation matrix_ (screen CTM), which, when applied to a {{domxref("DOMPoint")}} in the user coordinate space, gives the same point in screen coordinate space. Here, we already have the event coordinates in the screen coordinate space, so to do the reverse transformation, we apply the [_inverse_](/en-US/docs/Web/API/DOMMatrixReadOnly/inverse) of the screen CTM using {{domxref("DOMPointReadOnly.matrixTransform()")}} applies it.
 
 ```js
 const svg = document.getElementById("grid");
@@ -189,17 +194,17 @@ Compare the two coordinate pairs as you move the pointer:
 
 {{EmbedLiveSample("Converting_pointer_coordinates_to_user_units", "100%", 280)}}
 
-The marker follows the pointer wherever the graphic ends up on the page, because `getScreenCTM()` reports the element's current position and scale. Subtracting a fixed offset instead would break as soon as the page is scrolled or the graphic is resized.
+Using `getScreenCTM()` is much more robust than doing the same scaling and shifting yourself, because it automatically updates if the SVG element's size or position on the screen changes.
 
-## Adding and removing elements
+## Adding and removing elements according to click position
 
 This example puts the pieces together: one listener on the root `<svg>` element adds a circle where you click, or removes the circle you clicked on.
 
-The markup is an empty canvas with a background rectangle, which gives the clicks something to land on:
+The markup is an empty SVG with a background rectangle, which gives the clicks something to land on:
 
 ```html
 <svg
-  id="canvas"
+  id="diagram"
   viewBox="0 0 300 150"
   width="300"
   height="150"
@@ -218,40 +223,56 @@ The click listener checks what was clicked: a circle is removed, and a click any
 
 ```js
 const svgNS = "http://www.w3.org/2000/svg";
-const canvas = document.getElementById("canvas");
+const diagram = document.getElementById("diagram");
 
 function toUserSpace(svg, event) {
   const point = new DOMPoint(event.clientX, event.clientY);
   return point.matrixTransform(svg.getScreenCTM().inverse());
 }
 
-canvas.addEventListener("click", (event) => {
+diagram.addEventListener("click", (event) => {
   if (event.target.localName === "circle") {
     event.target.remove();
     return;
   }
 
-  const { x, y } = toUserSpace(canvas, event);
+  const { x, y } = toUserSpace(diagram, event);
   const circle = document.createElementNS(svgNS, "circle");
   circle.setAttribute("cx", x);
   circle.setAttribute("cy", y);
   circle.setAttribute("r", 12);
   circle.setAttribute("fill", "steelblue");
-  canvas.append(circle);
+  diagram.append(circle);
 });
 ```
 
 Because the click listener is on the root `<svg>` element, it sees clicks on every shape inside it, and `event.target` says which one. The comparison uses {{domxref("Element.localName", "localName")}}, which is the element's name without any namespace prefix, so it also matches in a standalone SVG file that writes its elements as `<svg:circle>`.
 
-Click the canvas to add a circle, or click a circle to remove it:
+Click the SVG to add a circle, or click a circle to remove it:
 
 {{EmbedLiveSample("Adding_and_removing_elements", "100%", 200)}}
 
 ## Styling from script
 
-Anything that can be set as a presentation attribute can also be set as a style, and the CSSOM works the same way as it does for HTML. This example starts with two identical circles and styles them from script:
+There are two ways to style SVG elements: with [presentation attributes](/en-US/docs/Web/SVG/Reference/Attribute#presentation_attributes) and with CSS. Both can be scripted.
 
-```html
+To apply styles using presentation attributes, either set the attribute using general DOM methods:
+
+```js
+circle.setAttribute("fill-opacity", 0.5);
+```
+
+To apply styles using CSS, use techniques you are already familiar with from HTML, such as using the [CSSOM](/en-US/docs/Web/API/CSS_Object_Model) like {{domxref("SVGElement.style")}}:
+
+```js
+circle.style.fillOpacity = 0.5;
+```
+
+Presentation attributes are treated as author-origin declarations with a specificity of zero, inserted at the start of the author style sheet, so any rule in a style sheet overrides them. On the other hand, inline styles set with `element.style` have the highest precedence and overrides everything in separate stylesheets.
+
+This example starts with two identical circles:
+
+```html live-sample___script-styling
 <svg
   viewBox="0 0 220 100"
   width="220"
@@ -261,11 +282,12 @@ Anything that can be set as a presentation attribute can also be set as a style,
   <circle id="right" cx="160" cy="50" r="40" fill="steelblue" />
 </svg>
 <button id="apply">Apply styles</button>
+<button id="reset">Reset styles</button>
 ```
 
 The style sheet defines a `selected` class for the script to apply:
 
-```css
+```css live-sample___script-styling
 .selected {
   stroke: crimson;
   stroke-width: 4;
@@ -276,7 +298,7 @@ Both circles are made translucent through the {{domxref("SVGElement.style", "sty
 
 The right-hand circle also gets a class added with {{domxref("Element.classList", "classList")}}, which lets the style sheet do the rest:
 
-```js
+```js live-sample___script-styling
 const left = document.getElementById("left");
 const right = document.getElementById("right");
 
@@ -285,14 +307,16 @@ document.getElementById("apply").addEventListener("click", () => {
   right.style.setProperty("fill-opacity", "0.5");
   right.classList.add("selected");
 });
+document.getElementById("reset").addEventListener("click", () => {
+  left.style.removeProperty("fill-opacity");
+  right.style.removeProperty("fill-opacity");
+  right.classList.remove("selected");
+});
 ```
 
 Both circles end up equally translucent, and only the right-hand one gets the outline:
 
-{{EmbedLiveSample("Styling_from_script", "100%", 180)}}
-
-> [!NOTE]
-> Presentation attributes are treated as author-origin declarations with a specificity of zero, inserted at the start of the author style sheet. Any rule in a style sheet therefore overrides them, so a `fill` declaration in CSS beats a `fill` attribute in the markup, and setting `element.style` beats both.
+{{EmbedLiveSample("script-styling", "100%", 180)}}
 
 ## Scripting an embedded SVG document
 
@@ -383,7 +407,7 @@ The box, the dot, and the numbers all come from the measurements:
 
 {{EmbedLiveSample("Geometry_and_animated_values_in_the_SVG_DOM", "100%", 260)}}
 
-The dashed box hugs the path itself rather than its stroke, which is `getBBox()` ignoring stroke width: half the 4-unit stroke falls outside the box on every side.
+The dashed box encloses the path itself rather than its stroke—you can see bits of the stroke protruding outside the rectangle wherever they intersect. This is due to `getBBox()` ignoring stroke width.
 
 ## See also
 
