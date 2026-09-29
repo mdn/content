@@ -212,22 +212,14 @@ For this site, we'll put our HTML pages in the **templates/registration/** direc
 > ```
 
 To make the **templates** directory visible to the template loader we need to add it in the template search path.
-Open the project settings (**/django-locallibrary-tutorial/locallibrary/settings.py**).
-
-Then import the `os` module (add the following line near the top of the file if it isn't already present).
-
-```python
-import os # needed by code below
-```
-
-Update the `TEMPLATES` section's `'DIRS'` line as shown:
+Open the project settings (**/django-locallibrary-tutorial/locallibrary/settings.py**) and update the `TEMPLATES` section's `'DIRS'` line as shown:
 
 ```python
     # …
     TEMPLATES = [
       {
        # …
-       'DIRS': [os.path.join(BASE_DIR, 'templates')],
+       'DIRS': [BASE_DIR / 'templates'],
        'APP_DIRS': True,
        # …
 ```
@@ -296,7 +288,7 @@ LOGIN_REDIRECT_URL = '/'
 
 ### Logout template
 
-If you navigate to the logout URL (`http://127.0.0.1:8000/accounts/logout/`) then you'll get an error because Django 5 does not allow logout using `GET`, only `POST`.
+If you navigate to the logout URL (`http://127.0.0.1:8000/accounts/logout/`) then you'll get an error because Django does not allow logout using `GET`, only `POST`.
 We'll add a form you can use to log out in a minute, but first we'll create the page that users are taken to after logging out.
 
 Create and open **/django-locallibrary-tutorial/templates/registration/logged_out.html**. Copy in the text below:
@@ -465,7 +457,7 @@ As you can see, we use `if` / `else` / `endif` template tags to conditionally di
 
 We create the login link URL using the `url` template tag and the name of the `login` URL configuration. Note also how we have appended `?next=\{{ request.path }}` to the end of the URL. What this does is add a URL parameter `next` containing the address (URL) of the _current_ page, to the end of the linked URL. After the user has successfully logged in, the view will use this `next` value to redirect the user back to the page where they first clicked the login link.
 
-The logout template code is different, because from Django 5 to log out you must `POST` to the `logout` URL, using a form with a button.
+The logout template code is different, because in Django you must `POST` to the `logout` URL, using a form with a button.
 By default this would render as a button, but you can style the button to display as a link.
 For this example we're using _Bootstrap_, so we make the button look like a link by applying `class="btn btn-link"`.
 You also need to append the following styles to **/django-locallibrary-tutorial/catalog/static/css/styles.css** in order to correctly position the logout link next to all the other sidebar links:
@@ -514,6 +506,11 @@ class MyView(LoginRequiredMixin, View):
     login_url = '/login/'
     redirect_field_name = 'redirect_to'
 ```
+
+> [!NOTE]
+> If most of your site should only be available to logged-in users, you can instead add [`LoginRequiredMiddleware`](https://docs.djangoproject.com/en/6.1/ref/middleware/#django.contrib.auth.middleware.LoginRequiredMiddleware) to the `MIDDLEWARE` list in your settings (after `AuthenticationMiddleware`).
+> This requires users to log in for every view by default, and you then mark the public views with the [`login_not_required`](https://docs.djangoproject.com/en/6.1/topics/auth/default/#django.contrib.auth.decorators.login_not_required) decorator.
+> We don't use it for the _LocalLibrary_ because most of the library views should be open.
 
 For additional detail, check out the [Django docs here](https://docs.djangoproject.com/en/6.1/topics/auth/default/#limiting-access-to-logged-in-users).
 
