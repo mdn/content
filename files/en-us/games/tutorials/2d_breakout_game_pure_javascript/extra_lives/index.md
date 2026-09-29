@@ -1,168 +1,108 @@
 ---
-title: Build the brick field
-slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field
+title: Extra lives
+slug: Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives
 page-type: guide
 sidebar: games
 ---
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Animations_and_tweens")}}
 
-This is the **6th step** out of 11 of the [creating a Breakout game using pure JavaScript tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). Let's explore how to create a group of bricks, print them on the screen using a loop, and remove them when the ball hits them. Building the brick field is a little bit more complicated than adding a single object to the screen.
+This is the **8th step** out of 11 of the [creating a Breakout game using pure JavaScript tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript). In this article, we'll implement a lives system, so that the player can continue playing until they have lost three lives, not just one, which makes the game enjoyable for longer.
 
-## Drawing the bricks
+## New variables
 
-All the bricks use the same image, so we can create and decode it once and share it among them. Add a static `assets` map and a `url` field to `GameObject`, and replace its constructor and `preload()` method:
+Add two new variables below `let score = 0;` to store the number of lives and whether to display the life lost message:
 
 ```js
-class GameObject {
-  static assets = new Map();
-  url;
-  // …
-  constructor(url, ctx) {
-    this.url = url;
-    this.ctx = ctx;
-  }
-  async preload() {
-    if (!GameObject.assets.has(this.url)) {
-      const asset = new Image();
-      asset.src = this.url;
-      GameObject.assets.set(
-        this.url,
-        asset.decode().then(() => asset),
-      );
-    }
-    this.asset = await GameObject.assets.get(this.url);
-    if (this.size.w === undefined) {
-      this.size.w = this.asset.width;
-      this.size.h = this.asset.height;
-    }
-  }
-  // …
-}
+let lives = 3;
+let showLifeLostText = false;
 ```
 
-The cache maps each URL to a promise that resolves to the decoded image. The first `preload()` call for a URL creates the image and starts decoding it; later calls await the same promise and receive the same image. Each object still has its own position and size.
+## Drawing the text labels
 
-Like the `Ball` and `Paddle`, the `Brick` is also backed by the `GameObject` class. A brick has no default position or size and must be explicitly specified in the constructor. Because the bricks have explicit dimensions, we can use the extra `dWidth` and `dHeight` parameters of {{domxref("CanvasRenderingContext2D/drawImage", "ctx.drawImage()")}}, which automatically scales the image if it's not already of the desired dimensions.
-
-```js
-class Brick extends GameObject {
-  constructor(url, ctx, x, y, w, h) {
-    super(url, ctx);
-    this.pos = { x, y };
-    this.size = { w, h };
-  }
-  draw() {
-    const { left, top } = this.hitbox;
-    this.ctx.drawImage(this.asset, left, top, this.size.w, this.size.h);
-  }
-}
-```
-
-You also need to [grab the brick image](https://mdn.github.io/shared-assets/images/examples/2D_breakout_game_Phaser/brick.png) and save it in your `/img` directory.
-
-We will place all the code for drawing the bricks inside an `initBricks` function to keep it separated from the rest of the code. Add a call to `initBricks` below `colliders.push(paddle);`:
+Drawing the texts looks like something we already did in the [Track the score and win](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win) lesson. Replace `drawScore()` with a `drawStatus()` function that draws the score, the remaining lives, and a message when the player loses a life:
 
 ```js
-// …
-const paddle = new Paddle("img/paddle.png", ctx);
-colliders.push(paddle);
-const bricks = initBricks();
-// …
-```
+function drawStatus() {
+  ctx.font = "18px Arial";
+  ctx.fillStyle = "#0095dd";
+  ctx.textBaseline = "top";
+  ctx.textAlign = "left";
+  ctx.fillText(`Points: ${score}`, 5, 5);
 
-And make sure that the game waits for the bricks to preload before starting the game, by adding `, ...bricks` to the array inside `Promise.all()`. These calls share the cached decode promise, so the brick image is only decoded once.
+  ctx.textAlign = "right";
+  ctx.fillText(`Lives: ${lives}`, canvas.width - 5, 5);
 
-Now on to the function itself. Add the `initBricks` function at the end of the `script.js` file. To begin with, we add the `bricksLayout` object, as this will come in handy very soon:
-
-```js
-function initBricks() {
-  const bricksLayout = {
-    width: 50,
-    height: 20,
-    count: {
-      row: 3,
-      col: 7,
-    },
-    offset: {
-      top: 50,
-      left: 60,
-    },
-    padding: 10,
-  };
-  const bricks = [];
-  // continue adding here...
-  return bricks;
-}
-```
-
-This `bricksLayout` holds all the information we need: the width and height of a single brick, the number of rows and columns of bricks we will see on the screen, the top and left offset (the location on the canvas where we start to draw the bricks), and the padding between each row and column of bricks.
-
-Now, let's start creating the bricks themselves. We can loop through the rows and columns to create a new brick on each iteration—add the following nested loop below the previous line of code:
-
-```js
-for (let c = 0; c < bricksLayout.count.col; c++) {
-  for (let r = 0; r < bricksLayout.count.row; r++) {
-    const brickX =
-      c * (bricksLayout.width + bricksLayout.padding) +
-      bricksLayout.offset.left;
-    const brickY =
-      r * (bricksLayout.height + bricksLayout.padding) +
-      bricksLayout.offset.top;
-
-    const newBrick = new Brick(
-      "img/brick.png",
-      ctx,
-      brickX,
-      brickY,
-      bricksLayout.width,
-      bricksLayout.height,
+  if (showLifeLostText) {
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(
+      "Life lost, click to continue",
+      canvas.width / 2,
+      canvas.height / 2,
     );
-    bricks.push(newBrick);
   }
 }
 ```
 
-Each `brickX` position is worked out as `bricksLayout.width` plus `bricksLayout.padding`, multiplied by the column number, `c`, plus the `bricksLayout.offset.left`; the logic for the `brickY` is identical except that it uses the values for row number, `r`, `bricksLayout.height`, and `bricksLayout.offset.top`. Now every single brick can be placed in its correct place, with padding between each brick, and drawn at an offset from the left and top Canvas edges.
+The three labels share the same font and color. We use `textAlign` and `textBaseline` to position the score at the top left, the lives at the top right, and the life lost message in the center (if `showLifeLostText` is `true`).
 
-Finally, we can draw these bricks to the screen inside the `update()` function. Add the following below the `paddle.draw()` call:
+In `update()`, replace the `drawScore()` call with `drawStatus()`.
+
+## The lives handling code
+
+To implement lives in our game, let's first change the behavior when the ball gets out of bounds. Instead of restarting right away:
 
 ```js
-for (const brick of bricks) {
-  brick.draw();
+if (ballIsOutOfBounds) {
+  // Game over logic
+  location.reload();
+  return;
 }
 ```
 
-If you reload `index.html` at this point, you should see the bricks printed on screen, at an even distance from one another.
-
-## Brick/Ball collision detection
-
-Now onto the next challenge—the collision detection between the ball and the bricks. Luckily enough, we already implemented a very generic collision system, so we can simply wire our bricks to it.
-
-First, register each brick as a collider, right below the `initBricks()` call:
+We will call a new function called `ballLeaveScreen()`; delete the previous lines (shown above) and replace it with the following line:
 
 ```js
-const bricks = initBricks();
-for (const brick of bricks) {
-  colliders.push(brick);
+if (ballIsOutOfBounds) {
+  ballLeaveScreen();
+  return;
 }
 ```
 
-Add a `onCollide()` method to each brick, which removes itself from the `bricks` and `colliders` collections:
+The `return` stops processing the remaining movement and collisions for this frame after the ball leaves the screen.
+
+We want to decrease the number of lives every time the ball leaves the canvas. Add the `ballLeaveScreen()` function to your code:
 
 ```js
-class Brick extends GameObject {
-  // …
-  onCollide() {
-    bricks.splice(bricks.indexOf(this), 1);
-    colliders.splice(colliders.indexOf(this), 1);
+function ballLeaveScreen() {
+  lives--;
+  if (lives === 0) {
+    // Game over logic
+    location.reload();
+    return;
   }
+
+  paddle.pos.x = canvas.width / 2;
+  ball.pos.x = paddle.pos.x;
+  ball.pos.y = paddle.hitbox.top - ball.size.h / 2;
+  ball.vel = { x: 0, y: 0 };
+  showLifeLostText = true;
+  canvas.addEventListener(
+    "pointerdown",
+    () => {
+      showLifeLostText = false;
+      ball.vel = { x: 150, y: -150 };
+      lastTimestamp = null;
+    },
+    { once: true },
+  );
 }
 ```
 
-The brick needs to be gone as soon as possible, so that the ball doesn't bounce off it.
+Instead of instantly printing out the alert when you lose a life, we first subtract one life from the current number and check if it's a non-zero value. If yes, then the player still has some lives left and can continue to play—they will see the life lost message, the ball and paddle positions will be reset on the screen, and on the next input (click or touch) the message will be hidden and the ball will start to move again.
 
-And that's it! Reload your code, and you should see the new collision detection working just as required.
+When the number of available lives reaches zero, the game is over, and the game over alert message will be shown.
 
 ## Compare your code
 
@@ -196,6 +136,9 @@ canvas {
 const canvas = document.getElementById("game-canvas");
 const ctx = canvas.getContext("2d");
 let lastTimestamp = null;
+let score = 0;
+let lives = 3;
+let showLifeLostText = false;
 
 const baseWallHitbox = {
   left: -Infinity,
@@ -292,6 +235,7 @@ class Brick extends GameObject {
   onCollide() {
     bricks.splice(bricks.indexOf(this), 1);
     colliders.splice(colliders.indexOf(this), 1);
+    score += 10;
   }
 }
 
@@ -339,8 +283,60 @@ function update(timestamp) {
   for (const brick of bricks) {
     brick.draw();
   }
+  drawStatus();
+
+  if (bricks.length === 0) {
+    alert("You won the game, congratulations!");
+    location.reload();
+    return;
+  }
 
   requestAnimationFrame(update);
+}
+
+function drawStatus() {
+  ctx.font = "18px Arial";
+  ctx.fillStyle = "#0095dd";
+  ctx.textBaseline = "top";
+  ctx.textAlign = "left";
+  ctx.fillText(`Points: ${score}`, 5, 5);
+
+  ctx.textAlign = "right";
+  ctx.fillText(`Lives: ${lives}`, canvas.width - 5, 5);
+
+  if (showLifeLostText) {
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(
+      "Life lost, click to continue",
+      canvas.width / 2,
+      canvas.height / 2,
+    );
+  }
+}
+
+function ballLeaveScreen() {
+  lives--;
+  if (lives === 0) {
+    // Game over logic
+    location.reload();
+    return;
+  }
+
+  paddle.pos.x = canvas.width / 2;
+  ball.pos.x = paddle.pos.x;
+  ball.pos.y = paddle.hitbox.top - ball.size.h / 2;
+  ball.vel = { x: 0, y: 0 };
+  showLifeLostText = true;
+  canvas.addEventListener(
+    "pointerdown",
+    () => {
+      showLifeLostText = false;
+      ball.vel = { x: 150, y: -150 };
+      lastTimestamp = null;
+    },
+    { once: true },
+  );
 }
 
 function getCollision(moving, velocity, obstacle, dt) {
@@ -383,7 +379,7 @@ function getCollision(moving, velocity, obstacle, dt) {
 }
 
 function moveBall(dt) {
-  while (dt > 0) {
+  while (dt > 0 && bricks.length > 0) {
     // Avoid repeatedly triggering the getter
     const ballHitbox = ball.hitbox;
     let hitTime = dt;
@@ -412,8 +408,7 @@ function moveBall(dt) {
 
     const ballIsOutOfBounds = ball.hitbox.bottom > canvas.height;
     if (ballIsOutOfBounds) {
-      // Game over logic
-      location.reload();
+      ballLeaveScreen();
       return;
     }
 
@@ -478,6 +473,6 @@ function initBricks() {
 
 ## Next steps
 
-We can hit the bricks and remove them, which is a nice addition to the gameplay already. It would be even better to [track the score and win](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win) when all the bricks are destroyed.
+Lives made the game more forgiving—if you lose one life, you still have two more left and can continue to play. Now let's expand the look and feel of the game by adding [animations and tweens](/en-US/docs/Games/Tutorials/2D_breakout_game_pure_JavaScript/Animations_and_tweens).
 
-{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win")}}
+{{PreviousNext("Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_breakout_game_pure_JavaScript/Animations_and_tweens")}}
