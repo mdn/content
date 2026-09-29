@@ -107,7 +107,7 @@ class BookListView(generic.ListView):
 
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get the context
-        context = super(BookListView, self).get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
         # Create any data and add it to the context
         context['some_data'] = 'This is just some data'
         return context
@@ -537,17 +537,17 @@ This method is needed because you declare a `ForeignKey` (one-to many) field onl
 > [!NOTE]
 > Here we use `all()` to get all records (the default). While you can use the `filter()` method to get a subset of records in code, you can't do this directly in templates because you can't specify arguments to functions.
 >
-> Beware also that if you don't define an order (on your class-based view or model), you will also see errors from the development server like this one:
+> Beware also that if you don't define an order (on your class-based view or model), you will also see warnings from the development server like this one:
 >
 > ```plain
-> [29/May/2017 18:37:53] "GET /catalog/books/?page=1 HTTP/1.1" 200 1637
-> /foo/local_library/venv/lib/python3.5/site-packages/django/views/generic/list.py:99: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<Author: Ortiz, David>, <Author: H. McRaven, William>, <Author: Leigh, Melinda>]>
->   allow_empty_first_page=allow_empty_first_page, **kwargs)
+> /foo/local_library/venv/lib/python3.12/site-packages/django/views/generic/list.py:91: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <class 'catalog.models.Author'> QuerySet.
+>   return self.paginator_class(
+> [29/Sep/2026 18:37:53] "GET /catalog/authors/ HTTP/1.1" 200 1637
 > ```
 >
 > That happens because the [paginator object](https://docs.djangoproject.com/en/6.1/topics/pagination/#the-paginator-class) expects to see some ORDER BY being executed on your underlying database. Without it, it can't be sure the records being returned are actually in the right order!
 >
-> This tutorial hasn't covered **Pagination** (yet!), but since you can't use `sort_by()` and pass a parameter (the same with `filter()` described above) you will have to choose between three choices:
+> This tutorial hasn't covered **Pagination** (yet!), but since you can't use `order_by()` and pass a parameter (the same with `filter()` described above) you will have to choose between three choices:
 >
 > 1. Add an `ordering` inside a `class Meta` declaration on your model.
 > 2. Add a `queryset` attribute in your custom class-based view, specifying an `order_by()`.
@@ -642,13 +642,13 @@ Copy in the following pagination block immediately following the `{% endblock %}
         <div class="pagination">
             <span class="page-links">
                 {% if page_obj.has_previous %}
-                    <a href="\{{ request.path }}?page=\{{ page_obj.previous_page_number }}">previous</a>
+                    <a href="{% querystring page=page_obj.previous_page_number %}">previous</a>
                 {% endif %}
                 <span class="page-current">
                     Page \{{ page_obj.number }} of \{{ page_obj.paginator.num_pages }}.
                 </span>
                 {% if page_obj.has_next %}
-                    <a href="\{{ request.path }}?page=\{{ page_obj.next_page_number }}">next</a>
+                    <a href="{% querystring page=page_obj.next_page_number %}">next</a>
                 {% endif %}
             </span>
         </div>
@@ -658,7 +658,7 @@ Copy in the following pagination block immediately following the `{% endblock %}
 
 The `page_obj` is a [Page](https://docs.djangoproject.com/en/6.1/ref/paginator/#django.core.paginator.Page) object that will exist if pagination is being used on the current page. It allows you to get all the information about the current page, previous pages, how many pages there are, etc.
 
-We use `\{{ request.path }}` to get the current page URL for creating the pagination links. This is useful because it is independent of the object that we're paginating.
+We use the [`querystring`](https://docs.djangoproject.com/en/6.1/ref/templates/builtins/#querystring) template tag to create the pagination links. This takes the query parameters of the current URL, sets `page` to the value we pass in, and returns the result as a query string such as `?page=2`. A link that only contains a query string goes to the current page, so the same code works for any list we paginate. Any other query parameters in the current URL, such as search filters, are kept.
 
 That's it!
 
