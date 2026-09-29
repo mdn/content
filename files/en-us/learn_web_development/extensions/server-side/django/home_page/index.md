@@ -343,7 +343,8 @@ You can add an image into the page in a similar way, for example:
 <img
   src="{% static 'images/local_library_model_uml.png' %}"
   alt="UML diagram"
-  style="width:555px;height:540px;" />
+  width="555"
+  height="540" />
 ```
 
 > [!NOTE]

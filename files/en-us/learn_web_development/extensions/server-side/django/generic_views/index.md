@@ -480,7 +480,7 @@ Create the HTML file **/django-locallibrary-tutorial/catalog/templates/catalog/b
   <p><strong>Language:</strong> \{{ book.language }}</p>
   <p><strong>Genre:</strong> \{{ book.genre.all|join:", " }}</p>
 
-  <div style="margin-left:20px;margin-top:20px">
+  <div class="ms-4 mt-4">
     <h4>Copies</h4>
 
     {% for copy in book.bookinstance_set.all %}

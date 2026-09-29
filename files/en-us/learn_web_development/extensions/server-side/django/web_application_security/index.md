@@ -65,7 +65,7 @@ If you view the page HTML source code, you can see that the dangerous characters
 
 ```html
 <h1>
-  Author: Boon&lt;script&gt;alert(&#39;Test alert&#39;);&lt;/script&gt;, David
+  Author: Boon&lt;script&gt;alert(&#x27;Test alert&#x27;);&lt;/script&gt;, David
   (Boonie)
 </h1>
 ```
@@ -73,6 +73,49 @@ If you view the page HTML source code, you can see that the dangerous characters
 Using Django templates protects you against the majority of XSS attacks. However it is possible to turn off this protection, and the protection isn't automatically applied to all tags that wouldn't normally be populated by user input (for example, the `help_text` in a form field is usually not user-supplied, so Django doesn't escape those values).
 
 It is also possible for XSS attacks to originate from other untrusted source of data, such as cookies, Web services or uploaded files (whenever the data is not sufficiently sanitized before including in a page). If you're displaying data from these sources, then you may need to add your own sanitization code.
+
+### Content Security Policy (CSP)
+
+[Content Security Policy](/en-US/docs/Web/HTTP/Guides/CSP) (CSP) provides an additional layer of protection against XSS and other injection attacks.
+A CSP is an HTTP header that tells the browser which sources of content, such as scripts, stylesheets, and images, a page is allowed to load.
+If an attacker manages to inject a script into a page, the browser will refuse to run it unless it comes from an allowed source.
+
+From Django 6.0 you can set a CSP using Django's built-in [`ContentSecurityPolicyMiddleware`](https://docs.djangoproject.com/en/6.1/ref/middleware/#django.middleware.csp.ContentSecurityPolicyMiddleware).
+To enable it for the LocalLibrary, open **/django-locallibrary-tutorial/locallibrary/settings.py** and add the middleware to the end of the `MIDDLEWARE` list:
+
+```python
+MIDDLEWARE = [
+    # …
+    'django.middleware.csp.ContentSecurityPolicyMiddleware',
+]
+```
+
+Then define the policy using the [`SECURE_CSP`](https://docs.djangoproject.com/en/6.1/ref/settings/#std-setting-SECURE_CSP) setting:
+
+```python
+# Content Security Policy: only allow resources from this site,
+# plus the Bootstrap stylesheet from the jsDelivr CDN.
+from django.utils.csp import CSP
+
+SECURE_CSP = {
+    "default-src": [CSP.SELF],
+    "style-src": [CSP.SELF, "https://cdn.jsdelivr.net"],
+}
+```
+
+The `default-src` directive only allows the browser to load resources from our own site (`CSP.SELF` is the `'self'` source).
+The `style-src` directive also allows stylesheets from the CDN that serves the Bootstrap CSS used by our base template.
+
+Because this policy doesn't allow inline scripts or styles, the browser also blocks `<script>` elements, `style` attributes, and similar code embedded in the page, which is exactly the kind of code that an XSS attack injects.
+This is why the LocalLibrary templates use CSS classes rather than `style` attributes.
+If you do need an inline script, Django can generate a _nonce_ that allows it to run, as described in [How to use Django's Content Security Policy](https://docs.djangoproject.com/en/6.1/howto/csp/#nonce-config).
+
+Run the development server and open your browser developer tools on any page.
+You should see the `Content-Security-Policy` header in the response, and no CSP errors in the console.
+
+> [!NOTE]
+> You can use the [`SECURE_CSP_REPORT_ONLY`](https://docs.djangoproject.com/en/6.1/ref/settings/#std-setting-SECURE_CSP_REPORT_ONLY) setting to try out a policy before you enforce it.
+> The browser then reports violations in the console, but doesn't block anything.
 
 ### Cross-site request forgery (CSRF) protection
 
