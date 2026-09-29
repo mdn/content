@@ -204,25 +204,27 @@ Run the tests in the root directory of _LocalLibrary_. You should see an output 
 ```bash
 > python3 manage.py test
 
+Found 3 test(s).
 Creating test database for alias 'default'...
+System check identified no issues (0 silenced).
 setUpTestData: Run once to set up non-modified data for all class methods.
 setUp: Run once for every test method to set up clean data.
 Method: test_false_is_false.
-setUp: Run once for every test method to set up clean data.
+.setUp: Run once for every test method to set up clean data.
 Method: test_false_is_true.
-setUp: Run once for every test method to set up clean data.
+FsetUp: Run once for every test method to set up clean data.
 Method: test_one_plus_one_equals_two.
 .
 ======================================================================
-FAIL: test_false_is_true (catalog.tests.tests_models.YourTestClass)
+FAIL: test_false_is_true (catalog.tests.test_models.YourTestClass.test_false_is_true)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
-  File "D:\GitHub\django_tmp\library_w_t_2\locallibrary\catalog\tests\tests_models.py", line 22, in test_false_is_true
+  File "/home/user/django-locallibrary-tutorial/catalog/tests/test_models.py", line 21, in test_false_is_true
     self.assertTrue(False)
 AssertionError: False is not true
 
 ----------------------------------------------------------------------
-Ran 3 tests in 0.075s
+Ran 3 tests in 0.001s
 
 FAILED (failures=1)
 Destroying test database for alias 'default'...
@@ -437,13 +439,12 @@ class RenewBookForm(forms.Form):
         return data
 ```
 
-Open our **/catalog/tests/test_forms.py** file and replace any existing code with the following test code for the `RenewBookForm` form. We start by importing our form and some Python and Django libraries to help test time-related functionality. We then declare our form test class in the same way as we did for models, using a descriptive name for our `TestCase`-derived test class.
+Open our **/catalog/tests/test_forms.py** file and replace any existing code with the following test code for the `RenewBookForm` form. We start by importing our form and Python's `datetime` library to help test time-related functionality. We then declare our form test class in the same way as we did for models, using a descriptive name for our `TestCase`-derived test class.
 
 ```python
 import datetime
 
 from django.test import TestCase
-from django.utils import timezone
 
 from catalog.forms import RenewBookForm
 
@@ -472,7 +473,7 @@ class RenewBookFormTest(TestCase):
         self.assertTrue(form.is_valid())
 
     def test_renew_form_date_max(self):
-        date = timezone.localtime() + datetime.timedelta(weeks=4)
+        date = datetime.date.today() + datetime.timedelta(weeks=4)
         form = RenewBookForm(data={'renewal_date': date})
         self.assertTrue(form.is_valid())
 ```
@@ -547,7 +548,7 @@ class AuthorListViewTest(TestCase):
 
     def test_lists_all_authors(self):
         # Get second page and confirm it has (exactly) remaining 3 items
-        response = self.client.get(reverse('authors')+'?page=2')
+        response = self.client.get(reverse('authors'), query_params={'page': 2})
         self.assertEqual(response.status_code, 200)
         self.assertTrue('is_paginated' in response.context)
         self.assertTrue(response.context['is_paginated'] == True)
@@ -590,15 +591,13 @@ class LoanedBooksByUserListView(LoginRequiredMixin, generic.ListView):
         return BookInstance.objects.filter(borrower=self.request.user).filter(status__exact=BookInstance.LoanStatus.ON_LOAN).order_by('due_back')
 ```
 
-Add the following test code to **/catalog/tests/test_views.py**. Here we first use `SetUp()` to create some user login accounts and `BookInstance` objects (along with their associated books and other records) that we'll use later in the tests. Half of the books are borrowed by each test user, but we've initially set the status of all books to "maintenance". We've used `SetUp()` rather than `setUpTestData()` because we'll be modifying some of these objects later.
+Add the following test code to **/catalog/tests/test_views.py**. Here we first use `setUp()` to create some user login accounts and `BookInstance` objects (along with their associated books and other records) that we'll use later in the tests. Half of the books are borrowed by each test user, but we've initially set the status of all books to "maintenance". We've used `setUp()` rather than `setUpTestData()` because we'll be modifying some of these objects later.
 
 > [!NOTE]
 > The `setUp()` code below creates a book with a specified `Language`, but _your_ code may not include the `Language` model as this was created as a _challenge_. If this is the case, comment out the parts of the code that create or import Language objects. You should also do this in the `RenewBookInstancesViewTest` section that follows.
 
 ```python
 import datetime
-
-from django.utils import timezone
 
 # Get user model from settings
 from django.contrib.auth import get_user_model
@@ -635,7 +634,7 @@ class LoanedBookInstancesByUserListViewTest(TestCase):
         # Create 30 BookInstance objects
         number_of_book_copies = 30
         for book_copy in range(number_of_book_copies):
-            return_date = timezone.localtime() + datetime.timedelta(days=book_copy%5)
+            return_date = datetime.date.today() + datetime.timedelta(days=book_copy%5)
             the_borrower = test_user1 if book_copy % 2 else test_user2
             status = BookInstance.LoanStatus.MAINTENANCE
             BookInstance.objects.create(
