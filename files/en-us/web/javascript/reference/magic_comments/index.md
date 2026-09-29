@@ -50,7 +50,7 @@ Without the hint, the engine may defer compilation of a function until it is cal
 
 Eager compilation offers the following benefits:
 
-- It avoids double parsing: During initialization, the engine already does "light parsing" to know where the function starts and ends, and it can reuse the same syntax tree to continue parsing the function body.
+- It avoids double parsing: During initialization, the engine already does "light parsing" to know where the function starts and ends, and it has to do another full parse when the function is called. When the function can be compiled eagerly, the engine does the full parse up front, without a separate round of light parsing.
 - It can be parallelized: During execution, if a function call triggers lazy compilation, the compilation must block the main thread to preserve synchronicity. Script loading is asynchronous and therefore parsing can be more efficiently scheduled, and even happen as the script gets fetched.
 
 However, compiling functions that are never called can waste time and memory. Like everything about performance, you must do benchmarks and weigh the different tradeoffs. The good heuristic is, as the pragma itself says: only enable this mode if the functions are _called on load_.
