@@ -36,7 +36,7 @@ No notable changes.
 
 #### General
 
-- From now on, the recommended preferences will be restored at a different stage to avoid them being restored in the wrong profile.
+- From now on, the recommended preferences will be restored at a different stage during shutdown.
   ([Firefox bug 2066531](https://bugzil.la/2066531)).
 
 #### WebDriver BiDi
