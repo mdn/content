@@ -566,7 +566,7 @@ for (const constraint in supportedConstraints) {
   if (Object.hasOwn(supportedConstraints, constraint)) {
     const elem = document.createElement("li");
 
-    elem.innerHTML = `<code><a href='https://developer.mozilla.org/docs/Web/API/MediaTrackSupportedConstraints/${constraint}' target='_blank'>${constraint}</a></code>`;
+    elem.innerHTML = `<code><a href='https://developer.mozilla.org/docs/Web/API/MediaDevices/getSupportedConstraints#${constraint.toLowerCase()}' target='_blank'>${constraint}</a></code>`;
     supportedConstraintList.appendChild(elem);
   }
 }
