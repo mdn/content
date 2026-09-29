@@ -949,7 +949,7 @@ There are a lot more models and views we can test. As a challenge, try to create
 class AuthorCreate(PermissionRequiredMixin, CreateView):
     model = Author
     fields = ['first_name', 'last_name', 'date_of_birth', 'date_of_death']
-    initial = {'date_of_death': '11/11/2023'}
+    initial = {'date_of_death': datetime.date(2023, 11, 11)}
     permission_required = 'catalog.add_author'
 ```
 

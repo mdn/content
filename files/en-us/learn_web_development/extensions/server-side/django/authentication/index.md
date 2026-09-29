@@ -321,11 +321,8 @@ This is the form used to get the user's email address (for sending the password 
 
 {% block content %}
   <form action="" method="post">
-  {% csrf_token %}
-  {% if form.email.errors %}
-    \{{ form.email.errors }}
-  {% endif %}
-      <p>\{{ form.email }}</p>
+    {% csrf_token %}
+    \{{ form }}
     <input type="submit" class="btn btn-default btn-lg" value="Reset password">
   </form>
 {% endblock %}
@@ -363,23 +360,9 @@ This page is where you enter your new password after clicking the link in the pa
     {% if validlink %}
         <p>Please enter (and confirm) your new password.</p>
         <form action="" method="post">
-        {% csrf_token %}
-            <table>
-                <tr>
-                    <td>\{{ form.new_password1.errors }}
-                        <label for="id_new_password1">New password:</label></td>
-                    <td>\{{ form.new_password1 }}</td>
-                </tr>
-                <tr>
-                    <td>\{{ form.new_password2.errors }}
-                        <label for="id_new_password2">Confirm password:</label></td>
-                    <td>\{{ form.new_password2 }}</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td><input type="submit" value="Change my password"></td>
-                </tr>
-            </table>
+            {% csrf_token %}
+            \{{ form }}
+            <input type="submit" value="Change my password">
         </form>
     {% else %}
         <h1>Password reset failed</h1>

@@ -413,9 +413,7 @@ Create the template referenced in the view (**/catalog/templates/catalog/book_re
 
   <form action="" method="post">
     {% csrf_token %}
-    <table>
-    \{{ form.as_table }}
-    </table>
+    \{{ form }}
     <input type="submit" value="Submit">
   </form>
 {% endblock %}
@@ -434,52 +432,52 @@ All that's left is the `\{{ form }}` template variable, which we passed to the t
 Perhaps unsurprisingly, when used as shown this provides the default rendering of all the form fields, including their labels, widgets, and help text — the rendering is as shown below:
 
 ```html
-<tr>
-  <th><label for="id_renewal_date">Renewal date:</label></th>
-  <td>
-    <input
-      id="id_renewal_date"
-      name="renewal_date"
-      type="text"
-      value="2023-11-08"
-      required />
-    <br />
-    <span class="helptext">
-      Enter date between now and 4 weeks (default 3 weeks).
-    </span>
-  </td>
-</tr>
+<div>
+  <label for="id_renewal_date">Renewal date:</label>
+  <div class="helptext" id="id_renewal_date_helptext">
+    Enter a date between now and 4 weeks (default 3).
+  </div>
+  <input
+    type="text"
+    name="renewal_date"
+    value="2023-11-08"
+    required
+    aria-describedby="id_renewal_date_helptext"
+    id="id_renewal_date" />
+</div>
 ```
 
 > [!NOTE]
-> It is perhaps not obvious because we only have one field, but, by default, every field is defined in its own table row. This same rendering is provided if you reference the template variable `\{{ form.as_table }}`.
+> It is perhaps not obvious because we only have one field, but, by default, every field is defined in its own `<div>` element. This same rendering is provided if you reference the template variable `\{{ form.as_div }}`.
 
-If you were to enter an invalid date, you'd additionally get a list of the errors rendered on the page (see `error-list` below).
+If you were to enter an invalid date, you'd additionally get a list of the errors rendered on the page (see `errorlist` below).
+Note how the `aria-describedby` attribute links the input to both the help text and the error message, so that they are announced by screen readers.
 
 ```html
-<tr>
-  <th><label for="id_renewal_date">Renewal date:</label></th>
-  <td>
-    <ul class="error-list">
-      <li>Invalid date - renewal in past</li>
-    </ul>
-    <input
-      id="id_renewal_date"
-      name="renewal_date"
-      type="text"
-      value="2023-11-08"
-      required />
-    <br />
-    <span class="helptext">
-      Enter date between now and 4 weeks (default 3 weeks).
-    </span>
-  </td>
-</tr>
+<div>
+  <label for="id_renewal_date">Renewal date:</label>
+  <div class="helptext" id="id_renewal_date_helptext">
+    Enter a date between now and 4 weeks (default 3).
+  </div>
+  <ul class="errorlist" id="id_renewal_date_error">
+    <li>Invalid date - renewal in past</li>
+  </ul>
+  <input
+    type="text"
+    name="renewal_date"
+    value="2023-11-08"
+    required
+    aria-invalid="true"
+    aria-describedby="id_renewal_date_helptext id_renewal_date_error"
+    id="id_renewal_date" />
+</div>
 ```
 
 #### Other ways of using form template variable
 
-Using `\{{ form.as_table }}` as shown above, each field is rendered as a table row. You can also render each field as a list item (using `\{{ form.as_ul }}`) or as a paragraph (using `\{{ form.as_p }}`).
+Using `\{{ form }}` as shown above, each field is rendered inside a `<div>` element. You can also render each field as a table row (using `\{{ form.as_table }}`, inside your own `<table>` element), as a list item (using `\{{ form.as_ul }}`), or as a paragraph (using `\{{ form.as_p }}`).
+
+You can also render the fields individually. For example, [`\{{ form.renewal_date.as_field_group }}`](https://docs.djangoproject.com/en/6.1/ref/forms/api/#django.forms.BoundField.as_field_group) renders the label, help text, errors, and widget for just the `renewal_date` field, using the same layout as `\{{ form }}`.
 
 It is also possible to have complete control over the rendering of each part of the form, by indexing its properties using dot notation. So, for example, we can access a number of separate items for our `renewal_date` field:
 
@@ -630,12 +628,13 @@ Open the views file (**django-locallibrary-tutorial/catalog/views.py**) and appe
 ```python
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
+from django.db.models import RestrictedError
 from .models import Author
 
 class AuthorCreate(PermissionRequiredMixin, CreateView):
     model = Author
     fields = ['first_name', 'last_name', 'date_of_birth', 'date_of_death']
-    initial = {'date_of_death': '11/11/2023'}
+    initial = {'date_of_death': datetime.date(2023, 11, 11)}
     permission_required = 'catalog.add_author'
 
 class AuthorUpdate(PermissionRequiredMixin, UpdateView):
@@ -653,7 +652,7 @@ class AuthorDelete(PermissionRequiredMixin, DeleteView):
         try:
             self.object.delete()
             return HttpResponseRedirect(self.success_url)
-        except Exception as e:
+        except RestrictedError:
             return HttpResponseRedirect(
                 reverse("author-delete", kwargs={"pk": self.object.pk})
             )
@@ -668,7 +667,7 @@ The `AuthorDelete` class doesn't need to display any of the fields, so these don
 We also set a `success_url` (as shown above), because there is no obvious default URL for Django to navigate to after successfully deleting the `Author`. Above we use the [`reverse_lazy()`](https://docs.djangoproject.com/en/6.1/ref/urlresolvers/#reverse-lazy) function to redirect to our author list after an author has been deleted — `reverse_lazy()` is a lazily executed version of `reverse()`, used here because we're providing a URL to a class-based view attribute.
 
 If deletion of authors should always succeed that would be it.
-Unfortunately deleting an `Author` will cause an exception if the author has an associated book, because our [`Book` model](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Models#book_model) specifies `on_delete=models.RESTRICT` for the author `ForeignKey` field.
+Unfortunately deleting an `Author` will raise a [`RestrictedError`](https://docs.djangoproject.com/en/6.1/ref/exceptions/#django.db.models.RestrictedError) exception if the author has an associated book, because our [`Book` model](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Models#book_model) specifies `on_delete=models.RESTRICT` for the author `ForeignKey` field.
 To handle this case the view overrides the [`form_valid()`](https://docs.djangoproject.com/en/6.1/ref/class-based-views/mixins-editing/#django.views.generic.edit.FormMixin.form_valid) method so that if deleting the `Author` succeeds it redirects to the `success_url`, but if not, it just redirects back to the same form.
 We'll update the template below to make clear that you can't delete an `Author` instance that is used in any `Book`.
 
@@ -698,15 +697,13 @@ Create the template file `django-locallibrary-tutorial/catalog/templates/catalog
 {% block content %}
 <form action="" method="post">
   {% csrf_token %}
-  <table>
-    \{{ form.as_table }}
-  </table>
+  \{{ form }}
   <input type="submit" value="Submit" />
 </form>
 {% endblock %}
 ```
 
-This is similar to our previous forms and renders the fields using a table. Note also how again we declare the `{% csrf_token %}` to ensure that our forms are resistant to CSRF attacks.
+This is similar to our previous forms and renders the fields using `\{{ form }}`. Note also how again we declare the `{% csrf_token %}` to ensure that our forms are resistant to CSRF attacks.
 
 The "delete" view expects to find a template named with the format `[model_name]_confirm_delete.html` (again, you can change the suffix using `template_name_suffix` in your view).
 Create the template file `django-locallibrary-tutorial/catalog/templates/catalog/author_confirm_delete.html` and copy the text below.
@@ -723,7 +720,7 @@ Create the template file `django-locallibrary-tutorial/catalog/templates/catalog
 <p>You can't delete this author until all their books have been deleted:</p>
 <ul>
   {% for book in author.book_set.all %}
-    <li><a href="{% url 'book-detail' book.pk %}">\{{book}}</a> (\{{book.bookinstance_set.all.count}})</li>
+    <li><a href="{% url 'book-detail' book.pk %}">\{{book}}</a> (\{{ book.bookinstance_set.count }})</li>
   {% endfor %}
 </ul>
 
