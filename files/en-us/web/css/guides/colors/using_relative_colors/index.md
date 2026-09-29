@@ -345,7 +345,7 @@ Check the different [color function pages](/en-US/docs/Web/CSS/Guides/Colors#fun
 
 ## Origin colors outside the sRGB gamut
 
-Converting an origin color to the output color space does not clamp its channels to that space's usual range. For example, `color(display-p3 1 0.5 0.5)` is inside the Display P3 gamut but outside sRGB. Its red channel, expressed on the `rgb()` scale, is approximately `273.86`, greater than `255`.
+Converting an origin color to the output color space does not clamp its channels to that space's usual range. For example, `color(display-p3 1 0.5 0.5)` is inside the Display P3 gamut but outside sRGB. Its red channel, expressed on the `rgb()` scale, is approximately `273.86`, which is greater than `255`.
 
 ```css
 .very-red {
