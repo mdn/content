@@ -183,7 +183,7 @@ input:valid {
 }
 ```
 
-```js hidden live-sample___simple-start-file live-sample___the-required-attribute live-sample___validate-regular-expression live-sample___constraining-values
+```js hidden live-sample___simple-start-file live-sample___the-required-attribute live-sample___validate-regular-expression live-sample___constraining-values live-sample___full-example live-sample___extending-built-in-form-validation
 const form = document.querySelector("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -331,7 +331,7 @@ Numeric input types, like `number`, `range` and `date`, can also take the [`step
 Here is a full example to show usage of HTML's built-in validation features.
 First, some HTML:
 
-```html
+```html live-sample___full-example
 <form>
   <p>Please complete all required (*) fields.</p>
   <fieldset>
@@ -377,15 +377,9 @@ First, some HTML:
 </form>
 ```
 
-```js hidden
-document.querySelector("form").addEventListener("submit", (event) => {
-  event.preventDefault();
-});
-```
-
 And now some CSS to style the HTML:
 
-```css
+```css live-sample___full-example
 form {
   font: 1em sans-serif;
   max-width: 320px;
@@ -416,7 +410,7 @@ input:focus:invalid {
 
 This renders as follows:
 
-{{EmbedLiveSample("Full_example", "100%", 420)}}
+{{EmbedLiveSample("full-example", "100%", 420)}}
 
 You can also press the **Play** button to open the example in MDN Playground and edit the source code there.
 
@@ -557,18 +551,12 @@ It is also possible to use all of the built-in form validation, and then add to 
 Here we demonstrate how you can extend the built in [`<input type="email">`](/en-US/docs/Web/HTML/Reference/Elements/input/email) validation to only accept addresses with the `@example.com` domain.
 We start with the HTML {{htmlelement("form")}} below.
 
-```html
+```html live-sample___extending-built-in-form-validation
 <form>
   <label for="mail">Email address (@example.com only):</label>
   <input type="email" id="mail" />
   <button>Submit</button>
 </form>
-```
-
-```js hidden
-document.querySelector("form").addEventListener("submit", (event) => {
-  event.preventDefault();
-});
 ```
 
 The validation code is shown below.
@@ -578,7 +566,7 @@ This ensures that all the normal built-in validation checks are run while the en
 
 Once the email address is valid, the code adds a custom constraint, calling `setCustomValidity()` with an error message if the address does not end with `@example.com`.
 
-```js
+```js live-sample___extending-built-in-form-validation
 const email = document.getElementById("mail");
 
 email.addEventListener("input", (event) => {
@@ -597,7 +585,7 @@ email.addEventListener("input", (event) => {
 
 Try submitting an invalid email address, a valid email address that doesn't end in `@example.com`, and one that does end in `@example.com`.
 
-{{EmbedLiveSample("extending built-in form validation", "", 200, , , , , "allow-forms")}}
+{{EmbedLiveSample("extending-built-in-form-validation", "", 200, , , , , "allow-forms")}}
 
 #### A more detailed example
 
