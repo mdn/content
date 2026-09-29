@@ -40,7 +40,7 @@ In a tree view, the `tree` element is the container for the hierarchy of `treeit
 
 ### DOM placement and presence
 
-All treeitems are contained in or owned by an element with role `tree`. If there are any root nodes that are not contained in the `tree` in the DOM, include [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) on the owning tree container to reference them. These non-child owned elements will appear in the reading order in the sequence they are referenced and after any tree items that are DOM children. Scripts that manage focus need to ensure the visual focus order matches this assistive technology reading order.
+All treeitems are contained in or owned by an element with role `tree`. If there are any root nodes that are not contained in the `tree` in the DOM, include [`aria-owns`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) on the owning tree container to reference them. These non-descendant owned elements will appear in the reading order in the sequence they are referenced and after any tree items that are DOM descendants. Scripts that manage focus need to ensure the visual focus order matches this assistive technology reading order.
 
 ### Accessible name
 
@@ -110,7 +110,7 @@ For a vertically oriented `tree`, which is the default orientation:
 </tr>
 <tr>
 <td><kbd>Enter</kbd></td>
-<td>Performs the default action of the currently focused node. For parent nodes, opening or closing the node is one possible default action. In single-select trees where selection does not follow focus, the default action typically selects the current node if not already selected.
+<td>Performs the default action of the currently focused node. For parent nodes, opening or closing the node is one possible default action. In single-select trees, where selection does not follow focus, the default action typically selects the current node if it is not already selected.
 </td>
 </tr>
 <tr>

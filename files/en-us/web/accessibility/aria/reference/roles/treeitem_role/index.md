@@ -17,7 +17,7 @@ A [`tree`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role) is a hi
 
 An example of a `tree` is a file system selection user interface: a tree view displaying folders and files. Each folder and file is a `treeitem`. Folder items, which are `treeitem` elements, can be expanded to reveal the contents of the folder—which may be files, folders, or both, and are all `treeitems`—and collapsed, hiding its contents.
 
-In a tree hierarchy, the top-level `treeitem` nodes are _root nodes_. All nodes have the role of `treeitem`, whether or not they have children. A `treeitem` that is a parent is a **parent node**. A `treeitem` that is not a parent is an _end node_.
+In a tree hierarchy, the top-level `treeitem` nodes are _root nodes_. A `treeitem` that is a parent is a **parent node**. A `treeitem` that is not a parent is an _end node_.
 
 Tree items that have children can be expanded or collapsed, showing and hiding their children. A parent node that is expanded so its child nodes are visible is an **open node**. A parent node that is collapsed so the child nodes are not visible is a **closed node**.
 
