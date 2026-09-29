@@ -17,16 +17,14 @@ The `params` field in the event notification is an object with the following fie
   - : A string that contains the ID of the [context](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext#contexts) that has the user prompt.
 - `defaultValue` {{optional_inline}}
   - : A string that contains the default value of the {{domxref("Window.prompt", "prompt()")}} dialog.
-    This field is included only when the [`type`](#type) field value is `"prompt"` and the page provided a default value that is not an empty string.
+    This field is included only when the [`type`](#type) field value is `"prompt"` and the default value is not `null`.
 - `handler`
   - : A string that indicates how the prompt will be handled.
     The behavior is set by the [`unhandledPromptBehavior`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new#unhandledpromptbehavior) capability for the session, or overridden per user context with [`browser.createUserContext`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/createUserContext).
     It has one of the following values:
     - `"accept"`: The browser will accept the prompt.
     - `"dismiss"`: The browser will dismiss the prompt.
-    - `"ignore"`: The browser will leave the prompt open for the client to handle.
-
-    If the value is `"ignore"`, the prompt stays open until the client closes it with [`browsingContext.handleUserPrompt`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/handleUserPrompt).
+    - `"ignore"`: The browser will leave the prompt open for the client to close using [`browsingContext.handleUserPrompt`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/handleUserPrompt).
 - `message`
   - : A string that contains the message displayed in the prompt.
 - `type`
@@ -41,7 +39,7 @@ The `params` field in the event notification is an object with the following fie
 
 ### Receiving an event when an alert opens
 
-Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `browsingContext.userPromptOpened` active.
+With a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), suppose a session is created via [`session.new`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new) with the `default` field of the [`unhandledPromptBehavior`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new#unhandledpromptbehavior) capability set to `"ignore"` so that the browser leaves dialogs open for the client to handle. Also assume that a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `browsingContext.userPromptOpened` is active.
 
 Suppose a page calls `alert("Are you sure?")`.
 The browser sends the following notification:
@@ -61,7 +59,7 @@ The browser sends the following notification:
 
 ### Receiving an event when a prompt with a default value opens
 
-Using the same connection and session as in the previous example, suppose a page calls `prompt("Enter your name:", "Jane Doe")`.
+Using the same connection, session, and subscription as in the first example, suppose a page calls `prompt("Enter your name:", "Jane Doe")`.
 
 The browser sends the following notification:
 
@@ -81,7 +79,7 @@ The browser sends the following notification:
 
 ### Receiving an event when a beforeunload dialog opens
 
-Using the same connection and session as in the first example, suppose the client uses the [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) command to navigate away from a page that listens for the `beforeunload` event.
+Using the same connection, session, and subscription as in the first example, suppose the client uses the [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) command to navigate away from a page that listens for the `beforeunload` event.
 
 When the dialog opens, before the navigation completes, the browser sends the following notification:
 
@@ -98,7 +96,8 @@ When the dialog opens, before the navigation completes, the browser sends the fo
 }
 ```
 
-Because the `handler` value is `"ignore"`, the dialog stays open until you close it with the [`browsingContext.handleUserPrompt`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/handleUserPrompt) command.
+The session's `unhandledPromptBehavior` capability setting also applies to the handling of the `beforeunload` dialogs, so the notification in this example reports a `handler` value of `"ignore"`.
+The dialog stays open until the client closes it with the [`browsingContext.handleUserPrompt`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/handleUserPrompt) command.
 
 ## Specifications
 

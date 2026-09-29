@@ -29,14 +29,14 @@ The `params` field in the event notification is an object with the following fie
     - `"confirm"`: A {{domxref("Window.confirm", "confirm()")}} dialog.
     - `"prompt"`: A {{domxref("Window.prompt", "prompt()")}} dialog.
 - `userText` {{optional_inline}}
-  - : A string that contains the text entered by the user before the prompt was closed.
-    This field is included only when the `type` field value is `"prompt"`.
+  - : A string that contains the text that was in the prompt dialog before it was closed.
+    This field is included only when the [`type`](#type) field value is `"prompt"` and the [`accepted`](#accepted) field value is `true`.
 
 ## Examples
 
 ### Receiving an event when an alert is accepted
 
-Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `browsingContext.userPromptClosed` active.
+With a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), suppose a session is created via [`session.new`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new) with the `default` field of the `unhandledPromptBehavior` capability set to `"ignore"` so that the browser leaves dialogs open for the client to handle. Also assume that a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `browsingContext.userPromptClosed` is active.
 
 Suppose an `alert()` dialog is accepted.
 The browser sends the following notification:
@@ -46,8 +46,8 @@ The browser sends the following notification:
   "type": "event",
   "method": "browsingContext.userPromptClosed",
   "params": {
-    "context": "93ee5bd6-d256-4608-a002-9a8995cc0e5f",
     "accepted": true,
+    "context": "93ee5bd6-d256-4608-a002-9a8995cc0e5f",
     "type": "alert"
   }
 }
@@ -55,7 +55,7 @@ The browser sends the following notification:
 
 ### Receiving an event when a prompt is closed with entered text
 
-Using the same connection and session, suppose a `prompt()` dialog is accepted after text is typed into it.
+Using the same connection, session, and subscription as in the first example, suppose a `prompt()` dialog is accepted after text is typed into it.
 The browser sends the following notification:
 
 ```json
@@ -63,8 +63,8 @@ The browser sends the following notification:
   "type": "event",
   "method": "browsingContext.userPromptClosed",
   "params": {
-    "context": "93ee5bd6-d256-4608-a002-9a8995cc0e5f",
     "accepted": true,
+    "context": "93ee5bd6-d256-4608-a002-9a8995cc0e5f",
     "type": "prompt",
     "userText": "Jane Doe"
   }
@@ -73,7 +73,7 @@ The browser sends the following notification:
 
 ### Receiving an event when a beforeunload dialog is accepted
 
-Using the same connection and session, suppose the client uses the [`browsingContext.handleUserPrompt`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/handleUserPrompt) command with `accept` set to `true` to close a `beforeunload` dialog.
+Using the same connection, session, and subscription as in the first example, suppose the client uses the [`browsingContext.handleUserPrompt`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/handleUserPrompt) command with `accept` set to `true` to close a `beforeunload` dialog.
 
 When the dialog closes, the browser sends the following notification:
 
@@ -82,8 +82,8 @@ When the dialog closes, the browser sends the following notification:
   "type": "event",
   "method": "browsingContext.userPromptClosed",
   "params": {
-    "context": "93ee5bd6-d256-4608-a002-9a8995cc0e5f",
     "accepted": true,
+    "context": "93ee5bd6-d256-4608-a002-9a8995cc0e5f",
     "type": "beforeunload"
   }
 }

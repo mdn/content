@@ -31,7 +31,7 @@ The `params` field in the event notification is an object with the following fie
 
 ## Description
 
-A download is initiated either by activating a link that has the [`download`](/en-US/docs/Web/HTML/Reference/Elements/a#download) attribute or by a response to a network request with a [`Content-Disposition`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Disposition) header that indicates the resource as an attachment.
+A download can start in several ways. For example, it can start when a link with the [`download`](/en-US/docs/Web/HTML/Reference/Elements/a#download) attribute is activated. It can also start when the browser receives a response with a [`Content-Disposition`](/en-US/docs/Web/HTTP/Reference/Headers/Content-Disposition) header that marks the resource as an attachment.
 
 After this event fires, the browser determines whether to allow the download and where to save it, based on the download behavior configured using [`browser.setDownloadBehavior`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/setDownloadBehavior).
 

@@ -42,8 +42,8 @@ The value of `status` determines which additional fields are present.
 
 Assume you have a [WebDriver BiDi connection](/en-US/docs/Web/WebDriver/How_to/Create_BiDi_connection), an [active session](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/new), and a [subscription](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/session/subscribe) to `browsingContext.downloadEnd` active.
 
-Suppose a download finishes saving to disk.
-The browser sends the following notification:
+Suppose a download finishes and the browser saves the file to disk.
+The browser then sends the following notification:
 
 ```json
 {
@@ -52,20 +52,19 @@ The browser sends the following notification:
   "params": {
     "context": "93ee5bd6-d256-4608-a002-9a8995cc0e5f",
     "download": "6bfa8781-e33c-4f2c-8e63-4d0f6dc5d1a1",
+    "filepath": "/home/user/Downloads/report.pdf",
     "navigation": "0e2f4d20-8f0a-4de7-9749-1b12a0d6c8b0",
     "status": "complete",
     "timestamp": 1737033601500,
-    "url": "https://example.com/files/report.pdf",
-    "filepath": "/home/user/Downloads/report.pdf"
+    "url": "https://example.com/files/report.pdf"
   }
 }
 ```
 
 ### Receiving an event when a download is canceled
 
-Consider the same connection, session, and subscription as in the previous example.
-
-However, suppose the `type` field in the [`browser.setDownloadBehavior`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/setDownloadBehavior) configuration is set to `"denied"`, causing the browser to reject the download rather than save it.
+Using the same connection, session, and subscription as in the previous example, suppose the [`type`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browser/setDownloadBehavior#type) field of the `downloadBehavior` object passed to the `browser.setDownloadBehavior` command is set to `"denied"`.
+This causes the browser to reject the download rather than save it.
 In this case, the browser sends the following notification:
 
 ```json
