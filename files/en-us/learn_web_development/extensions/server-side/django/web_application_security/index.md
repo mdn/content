@@ -108,7 +108,7 @@ The `style-src` directive also allows stylesheets from the CDN that serves the B
 
 Because this policy doesn't allow inline scripts or styles, the browser also blocks `<script>` elements, `style` attributes, and similar code embedded in the page, which is exactly the kind of code that an XSS attack injects.
 This is why the LocalLibrary templates use CSS classes rather than `style` attributes.
-If you do need an inline script, Django can generate a _nonce_ that allows it to run, as described in [How to use Django's Content Security Policy](https://docs.djangoproject.com/en/6.1/howto/csp/#nonce-config).
+If you do need an inline script, Django can generate a [nonce](/en-US/docs/Web/HTTP/Guides/CSP#nonces) that you add to the script using its [`nonce`](/en-US/docs/Web/HTML/Reference/Global_attributes/nonce) attribute to allow it to run, as described in [How to use Django's Content Security Policy](https://docs.djangoproject.com/en/6.1/howto/csp/#nonce-config).
 
 Run the development server and open your browser developer tools on any page.
 You should see the `Content-Security-Policy` header in the response, and no CSP errors in the console.
