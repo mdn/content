@@ -28,7 +28,7 @@ The **`VideoColorSpace`** interface of the {{domxref('WebCodecs API','','',' ')}
 ## Instance methods
 
 - {{domxref("VideoColorSpace.toJSON()")}}
-  - : Returns a JSON representation of the `VideoColorSpace` object.
+  - : Returns a JSON-serializable plain object representing the `VideoColorSpace` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Examples
 

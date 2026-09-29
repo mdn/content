@@ -124,7 +124,7 @@ The following code snippet shows how you can measure a text and get its width.
 
 ```js
 function draw() {
-  const ctx = document.getElementById("canvas").getContext("2d");
+  const ctx = document.getElementById("my-canvas").getContext("2d");
   const text = ctx.measureText("foo"); // TextMetrics object
   text.width; // 16;
 }

@@ -69,7 +69,7 @@ For video tracks only:
 - `width`
   - : A range object, containing a `min` and a `max` property (both containing a non-negative integer), describing the supported width range in pixels.
 - `resizeMode`
-  - : An array of strings that indicates how the user agent may derive the desired resolution from the camera resolution.See {{domxref("MediaTrackConstraints.resizeMode")}} for supported values. The value `"none"` is always included.
+  - : An array of strings that indicates how the user agent may derive the desired resolution from the camera resolution. See {{domxref("MediaTrackConstraints.resizeMode")}} for supported values. The value `"none"` is always included.
 
 For more information about what each property means, see {{domxref("MediaTrackConstraints")}}.
 

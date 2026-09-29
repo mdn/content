@@ -34,4 +34,4 @@ If you need to refresh yourself on such basics, we'd recommend the following res
 - [Dealing with files](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files)
   - : This article discusses some issues you should be aware of with file systems so you can set up a sensible file structure for your website.
 - [Command line crash course](/en-US/docs/Learn_web_development/Getting_started/Environment_setup/Command_line)
-  - : This article provides an introduction to the terminal, the essential commands you'll need to enter into it, how to chain commands together, and how to add your own command line interface (CLI) tools.
+  - : This article provides an introduction to the terminal, the essential commands you'll need to enter into it, how to chain commands together, and how to add your own command-line interface (CLI) tools.

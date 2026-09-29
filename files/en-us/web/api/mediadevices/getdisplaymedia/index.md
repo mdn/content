@@ -70,7 +70,7 @@ getDisplayMedia(options)
         - `exclude`: Hints that system audio should be excluded from the choices shown.
 
         Browsers may ignore this hint and determine which audio sources to offer, sometimes based on operating system constraints.
-        For this reaason the returned stream might contain no audio track even when `audio` is `true` and `systemAudio` is `include`.
+        For this reason the returned stream might contain no audio track even when `audio` is `true` and `systemAudio` is `include`.
         In Chrome ([documentation](https://developer.chrome.com/docs/web-platform/screen-sharing-controls#systemAudio)), `systemAudio: "include"` does not guarantee that system audio will be available, but `systemAudio: "exclude"` prevents system audio from being offered when sharing a screen (audio from a shared browser tab or window may still be available).
     - `windowAudio` {{Experimental_Inline}} {{optional_inline}}
       - : An enumerated value that hints to the browser what audio sharing option the user should be presented with alongside window sharing options. Possible values are:

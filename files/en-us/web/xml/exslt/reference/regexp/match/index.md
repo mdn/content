@@ -27,7 +27,7 @@ The character flags are:
 - `g`
   - : Global match. The submatches from every match in the string are returned. If this flag isn't specified, only the submatches from the first match are returned.
 - `i`
-  - : Case insensitive match. If this flag is specified, the match is performed in a case insensitive fashion.
+  - : Case-insensitive match. If this flag is specified, the match is performed in a case-insensitive fashion.
 
 ### Return value
 

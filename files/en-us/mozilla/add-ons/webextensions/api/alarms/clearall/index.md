@@ -22,7 +22,10 @@ None.
 
 ### Return value
 
-A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a boolean. This will be `true` if any alarms were cleared, `false` otherwise. Note that Chrome always passes `true` here.
+A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with a boolean. This is `true` if any alarms were cleared, `false` otherwise.
+
+> [!NOTE]
+> Chrome always passes `true` and Safari `undefined`. The return type is subject to change and may always return `undefined` for all browsers in the future. It is best to not rely on the return type.
 
 ## Examples
 

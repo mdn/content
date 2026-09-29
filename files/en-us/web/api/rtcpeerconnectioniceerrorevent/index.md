@@ -28,7 +28,7 @@ _The `RTCPeerConnectionIceErrorEvent` interface includes the properties found on
 - {{domxref("RTCPeerConnectionIceErrorEvent.address", "address")}} {{ReadOnlyInline}}
   - : A string providing the local IP address used to communicate with the {{Glossary("STUN")}} or {{Glossary("TURN")}} server being used to negotiate the connection, or `null` if the local IP address has not yet been exposed as part of a local ICE candidate.
 - {{domxref("RTCPeerConnectionIceErrorEvent.errorCode", "errorCode")}} {{ReadOnlyInline}}
-  - : A positive integer value stating the numeric [STUN error code](https://www.iana.org/assignments/stun-parameters/stun-parameters.xhtml#stun-parameters-6) returned by the STUN or TURN server, or 701 if no host candidate can reach the server.
+  - : A positive integer value stating the numeric [STUN error code](https://www.iana.org/assignments/stun-parameters#stun-parameters-6) returned by the STUN or TURN server, or 701 if no host candidate can reach the server.
 - {{domxref("RTCPeerConnectionIceErrorEvent.errorText", "errorText")}} {{ReadOnlyInline}}
   - : A string containing the STUN reason text returned by the STUN or TURN server, or a browser-specific string explaining why communication with the server could not be established.
 - {{domxref("RTCPeerConnectionIceErrorEvent.port", "port")}} {{ReadOnlyInline}}

@@ -33,7 +33,7 @@ We start with some HTML: a paragraph with a link, as well as a definition list t
 
 #### JavaScript
 
-We add JavaScript to grab our unstyled link and return back a definition list of all the default CSS property values impacting the link using `computedStyleMap()`.
+We add JavaScript to grab our unstyled link and return a definition list of all the default CSS property values impacting the link using `computedStyleMap()`.
 
 ```js
 // Get the element

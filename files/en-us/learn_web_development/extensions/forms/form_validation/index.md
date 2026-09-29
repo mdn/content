@@ -75,7 +75,7 @@ There are two different types of client-side validation that you'll encounter on
 - **JavaScript form validation**
   JavaScript is generally included to enhance or customize HTML form validation.
 
-Client side validation can be accomplished with little to no JavaScript. HTML validation is faster than JavaScript, but is less customizable than JavaScript validation. It is generally recommended to begin your forms using robust HTML features, then enhance the user experience with JavaScript as needed.
+Client-side validation can be accomplished with little to no JavaScript. HTML validation is faster than JavaScript, but is less customizable than JavaScript validation. It is generally recommended to begin your forms using robust HTML features, then enhance the user experience with JavaScript as needed.
 
 ## Using built-in form validation
 

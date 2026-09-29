@@ -35,15 +35,22 @@ new ViewTimeline(options)
       - : A value or array of values representing an adjustment to the position of the scrollport (see {{glossary("Scroll container")}} for more details) in which the subject is deemed to be visible. Possible values are:
         - `"auto"`: The default box position is used.
         - A string: If a string is specified, it can consist of one or two values equal to `auto` or a CSS {{cssxref("length-percentage")}} value. To put it another way, the string should be a valid {{cssxref("view-timeline-inset")}} value.
-        - An array of one or two values, which can be `"auto"` or a suitable {{domxref("CSSNumericValue")}} to represent a length or percentage offset (for example `CSS.px()` or `CSS.percent()`. If an array is provided, the first value represents the start inset (which affects the {{domxref("ViewTimeline.endOffset")}} value) and the second value represents the end inset (which affects the {{domxref("ViewTimeline.startOffset")}} value).
+        - An array of one or two values, which can be `"auto"` or a suitable {{domxref("CSSNumericValue")}} representing an absolute length or percentage offset.
+          For example `CSS.px(20)` or `CSS.percent(10)` are allowed, but numeric values like `CSS.em(2)` that define relative units are not permitted.
 
-        If the array has only one value, it is duplicated.
+          If an array is provided, the first value represents the start inset (which affects the {{domxref("ViewTimeline.endOffset")}} value) and the second value represents the end inset (which affects the {{domxref("ViewTimeline.startOffset")}} value).
+          If the array has only one value, it is duplicated.
 
-        If omitted, `inset` defaults to `auto`.
+        The default value is `auto`.
 
 ### Return value
 
 A new {{domxref("ViewTimeline")}} object instance.
+
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if `inset` is an array with zero or more than two values, if an array value is a keyword other than `"auto"`, or if a {{domxref("CSSNumericValue")}} array value does not resolve to an absolute length or percentage, such as when a relative unit like `em` or `vh` is used.
 
 ## Examples
 

@@ -31,15 +31,15 @@ function dropHandler(ev) {
   console.log("Drop");
   ev.preventDefault();
   for (const item of ev.dataTransfer.items) {
-    if (item.kind === "string" && item.type.match("^text/plain")) {
+    if (item.kind === "string" && item.type === "text/plain") {
       // This item is the target node
       item.getAsString((s) => {
         ev.target.appendChild(document.getElementById(s));
       });
-    } else if (item.kind === "string" && item.type.match("^text/html")) {
+    } else if (item.kind === "string" && item.type === "text/html") {
       // Drag data item is HTML
       console.log("… Drop: HTML");
-    } else if (item.kind === "file" && item.type.match("^image/")) {
+    } else if (item.kind === "file" && item.type.startsWith("image/")) {
       // Drag data item is an image file
       const f = item.getAsFile();
       console.log("… Drop: File");

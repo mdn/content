@@ -12,7 +12,7 @@ The **`animation-timeline`** [CSS](/en-US/docs/Web/CSS) property specifies the t
 ## Syntax
 
 ```css
-/* Keyword */
+/* Keyword values */
 animation-timeline: none;
 animation-timeline: auto;
 

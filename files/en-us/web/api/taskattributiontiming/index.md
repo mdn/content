@@ -44,7 +44,7 @@ This interface also supports the following properties:
 ## Instance methods
 
 - {{domxref("TaskAttributionTiming.toJSON()")}} {{Experimental_Inline}}
-  - : Returns a JSON representation of the `TaskAttributionTiming` object.
+  - : Returns a JSON-serializable plain object representing the `TaskAttributionTiming` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Specifications
 

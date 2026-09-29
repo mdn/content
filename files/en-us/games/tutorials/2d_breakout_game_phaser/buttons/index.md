@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Animations_and_tweens", "Games/Tutorials/2D_breakout_game_Phaser/Randomizing_gameplay")}}
 
-This is the **15th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Instead of starting the game right away, we can leave that decision to the player by adding a Start button they can press. Let's investigate how to do that.
+This is the **11th step** out of 12 of the [creating a Breakout game using Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). Instead of starting the game right away, we can leave that decision to the player by adding a Start button they can press. Let's investigate how to do that.
 
 ## New properties
 
@@ -52,6 +52,8 @@ this.startButton = this.add.sprite(
 
 In addition to the parameters we passed to the other `add.sprite` calls (such as when we added the ball and paddle), this time we also pass the frame number, which is `0` in this case. This means that the first frame of the spritesheet will be used for the button's initial appearance.
 
+## Handling button input
+
 To make the button respond to various inputs such as mouse clicks, we need to add the following lines right after the previous `add.sprite` call:
 
 ```js
@@ -92,6 +94,8 @@ First, we call `setInteractive` on the button to make it respond to pointer even
 - `pointerdown`—when the button is pressed, we change the button's frame to `2`, the third frame of the spritesheet.
 - `pointerout`—when the pointer moves out of the button, we change the button's frame back to `0`, the first frame of the spritesheet.
 - `pointerup`—when the button is released, we call the `startGame` method to start the game.
+
+## Starting the game
 
 Now, we need to define the `startGame()` method referenced in the code above:
 
@@ -157,6 +161,9 @@ class ExampleScene extends Phaser.Scene {
   lives = 3;
   livesText;
   lifeLostText;
+
+  playing = false;
+  startButton;
 
   preload() {
     this.load.setBaseURL(

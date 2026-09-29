@@ -105,4 +105,4 @@ This means that if a consumer exercises one of their other rights under CCPA, th
 
 - [General Data Protection Regulation (GDPR)](/en-US/docs/Web/Privacy/Regulations/GDPR)
 - [California Consumer Privacy Act (CCPA)](https://www.oag.ca.gov/privacy/ccpa) via oag.ca.gov ([pdf](https://cppa.ca.gov/regulations/pdf/20230329_final_regs_text.pdf))
-- [Global Privacy Control specification](https://www.w3.org/TR/gpc) via w3.org
+- [Global Privacy Control specification](https://w3c.github.io/gpc/)

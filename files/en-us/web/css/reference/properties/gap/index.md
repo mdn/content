@@ -69,16 +69,15 @@ This property is a shorthand for the following CSS properties:
 ## Syntax
 
 ```css
-/* Keyword value */
-gap: normal;
-
 /* One value */
+gap: normal;
 gap: 20px;
 gap: 1em;
 gap: 3vmin;
 gap: 0.5cm;
 gap: 16%;
 gap: 100%;
+gap: thick;
 gap: calc(10% + 20px);
 
 /* Two values */
@@ -88,7 +87,10 @@ gap: 3vmin 2vmax;
 gap: 0.5cm 2mm;
 gap: 16% 100%;
 gap: 21px 82%;
+gap: normal thin;
+gap: thin thick;
 gap: calc(20px + 10%) calc(10% - 5px);
+gap: calc(20px + 10%) medium;
 
 /* Global values */
 gap: inherit;
@@ -100,18 +102,20 @@ gap: unset;
 
 ### Values
 
+This property is specified as one or two values from the following list:
+
 - `normal`
-  - : A value of `1em` on multi-column containers and `0` in all other contexts.
-- {{CSSxRef("&lt;length&gt;")}}
-  - : The size of the gap as a non-negative {{CSSxRef("&lt;length&gt;")}} value.
-- {{CSSxRef("&lt;percentage&gt;")}}
-  - : The size of the gap as a non-negative {{CSSxRef("&lt;percentage&gt;")}} value relative to the [content box](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#content_area) size of the container element in that dimension.
+  - : Sets the gap to `1em` in multi-column layouts and to `0` in all other contexts. This is the default value.
+- {{cssxref("&lt;line-width&gt;")}}
+  - : Sets the size of the gap using the keywords `thin`, `medium`, or `thick`, or a positive {{cssxref("length")}} value.
+- {{CSSxRef("length-percentage")}}
+  - : Sets the gap to a non-negative {{CSSxRef("&lt;length&gt;")}} or {{CSSxRef("&lt;percentage&gt;")}} value.
 
 ## Description
 
 The `gap` property defines gaps between columns and rows, with the effect of the definition depending on whether the container is a grid container, a flexbox container, or a multi-column layout container.
 
-The shorthand property is specified as a value for `<'row-gap'>`, followed optionally by a value for `<'column-gap'>`. While the default value is `normal` for both sub-properties, if only one value is declared, that value applies to both. Both `<'row-gap'>` and `<'column-gap'>` can each be specified as a `<length>`, a `<percentage>`, or the keyword `normal`.
+The shorthand accepts one or two values. A single value sets both the `row-gap` and the `column-gap`. Two values set `row-gap` first, then `column-gap`. The default value is `normal` for both sub-properties; but if you declare only one value, it applies to both.
 
 Percentage gap values are always calculated against the [content box](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#content_area) size of the container element. The behavior is well-defined and consistent across layout modes when the container size is definite.
 
@@ -121,7 +125,7 @@ Gaps may contain visible separators as gap decorations. If there are decorative 
 
 ### In grid layouts
 
-In [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout), the `gap` property defines the space between rows and columns. The first value defines the gutter between rows, and the second defines the gutter between columns. If only one value is included, that value is used for both dimensions.
+In [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout), the `gap` property defines the space between rows and columns. If two values are included, the first value defines the gutter between rows, and the second defines the gutter between columns.
 
 Percentage values are calculated against the [content box](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#content_area) size of the container element. Cyclic percentage sizes resolve against zero for determining {{glossary("intrinsic size")}} contributions but resolve against the grid container's content box when laying out the contents. Two examples below demonstrate percentage gap values with [explicit container size](#percentage_gap_value_and_explicit_container_size) and [implicit container size](#percentage_gap_value_and_implicit_container_size) in the examples section.
 
@@ -375,7 +379,9 @@ In case of the flex layout, the percentage gap always results in zero value.
 
 - {{CSSxRef("row-gap")}}
 - {{CSSxRef("column-gap")}}
+- {{CSSxRef("rule")}}
 - [Basic concepts of grid layout: gutters](/en-US/docs/Web/CSS/Guides/Grid_layout/Basic_concepts#gutters)
+- [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module
 - [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) module
 - [CSS flexible box layout](/en-US/docs/Web/CSS/Guides/Flexible_box_layout) module
 - [CSS grid layout](/en-US/docs/Web/CSS/Guides/Grid_layout) module

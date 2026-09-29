@@ -8,7 +8,7 @@ status:
 browser-compat: api.PerformanceEntry.navigationId
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`navigationId`** read-only property of the {{domxref("PerformanceEntry")}} interface returns the ID of the navigation that this paint happened under.
 

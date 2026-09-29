@@ -12,6 +12,8 @@ The **`KeyboardEvent.ctrlKey`** read-only property returns a
 boolean value that indicates if the <kbd>control</kbd> key was pressed
 (`true`) or not (`false`) when the event occurred.
 
+When the <kbd>Control</kbd> key itself is pressed or released, this property is `true` for its {{domxref("Element/keydown_event", "keydown")}} event and `false` for its {{domxref("Element/keyup_event", "keyup")}} event, because both events fire _after_ the state change.
+
 ## Value
 
 A boolean value.

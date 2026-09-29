@@ -47,7 +47,7 @@ returned promise with a {{domxref("DOMException")}}, specifically, one of the fo
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the session has already ended.
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : Thrown if there is an unreasonable amount of requests. Some user agents might limit usage for privacy reasons.
+  - : Thrown if there is an unreasonable number of requests. Some user agents might limit usage for privacy reasons.
 
 ## Examples
 

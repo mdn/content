@@ -53,7 +53,7 @@ No notable changes.
 
 - Added support for `wheel` input source for [Actions](https://w3c.github.io/webdriver/webdriver-spec.html#actions), which is associated with a wheel-type input device ([Firefox bug 1746601](https://bugzil.la/1746601)).
 
-- Added support for opening and closing tabs in GeckoView based applications (eg. Firefox for Android) ([Firefox bug 1506782](https://bugzil.la/1506782)).
+- Added support for opening and closing tabs in GeckoView based applications (e.g., Firefox for Android) ([Firefox bug 1506782](https://bugzil.la/1506782)).
 
 ## Changes for add-on developers
 

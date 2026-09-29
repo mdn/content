@@ -224,7 +224,7 @@ Input Assistance guidelines aim to reduce the likelihood that users, especially 
 
 ### Convey automated error detection
 
-Users need to be alerted to the error and informed of what is wrong. If there is client side error detection, observe the following guidelines to make the error as effective as possible when conveyed to the user:
+Users need to be alerted to the error and informed of what is wrong. If there is client-side error detection, observe the following guidelines to make the error as effective as possible when conveyed to the user:
 
 - The error must be described in the text.
 - Ensure that the error message is as specific as possible.

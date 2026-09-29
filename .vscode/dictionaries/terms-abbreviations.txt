@@ -297,6 +297,7 @@ HILN
 hindwings
 hissy
 hitbox
+hitboxes
 hitmap
 HOBA
 holodeck
@@ -623,6 +624,7 @@ RFCOMM
 RGTC
 romcoms
 roundoff
+RSAES-OAEP
 RSAOAEP
 RSASSA
 RTCWEB

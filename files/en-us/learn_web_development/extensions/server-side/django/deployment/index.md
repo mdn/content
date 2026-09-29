@@ -518,7 +518,7 @@ We'll also configure the default database and collect static files so that they 
 
    Note the details, as you'll need them to test your site.
 
-### Setup the web app
+### Set up the web app
 
 After getting the local library sources and installing the dependencies in a virtual environment, we need to tell PythonAnywhere how to find them and use them as a web app.
 

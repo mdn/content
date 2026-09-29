@@ -16,7 +16,7 @@ There are two types of timing performance entries:
 
 The browser provides certain information (called _performance entries_) to the browser's performance timeline for you. This includes, for example, entries provided by the [Resource Timing API](/en-US/docs/Web/API/Performance_API/Resource_timing) that determine the time it takes to fetch a resource like an image.
 
-The browser, however, can not determine what is going on in your application. For example, when a user clicks a button or performs a specific task within your application, there is no high-precision performance measurement. The User Timing API is an extension to the browser's performance timeline and helps you to measure and record performance data that is custom to your application.
+The browser, however, cannot determine what is going on in your application. For example, when a user clicks a button or performs a specific task within your application, there is no high-precision performance measurement. The User Timing API is an extension to the browser's performance timeline and helps you to measure and record performance data that is custom to your application.
 
 The advantage of using this API, over calls to {{jsxref("Date.now()")}} or {{domxref("performance.now()")}}, is that you can give the markers a name and that it integrates well with performance tooling. Browser's developer tools can display performance marks in Performance Panels, and it also works with other performance APIs like {{domxref("PerformanceObserver")}} objects.
 
