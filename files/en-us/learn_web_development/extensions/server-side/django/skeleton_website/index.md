@@ -247,7 +247,7 @@ Add the following lines to the bottom of the file:
 # Add URL maps to redirect the base URL to our application
 from django.views.generic import RedirectView
 urlpatterns += [
-    path('', RedirectView.as_view(url='catalog/', permanent=True)),
+    path('', RedirectView.as_view(url='/catalog/', permanent=True)),
 ]
 ```
 
@@ -340,7 +340,7 @@ python3 manage.py runserver
 
 Once the server is running, you can view the site by navigating to `http://127.0.0.1:8000/` in your local web browser. You should see a site error page that looks like this:
 
-![Django Debug page (Django 4.2)](django_404_debug_page.png)
+![Django Debug page](django_404_debug_page.png)
 
 Don't worry! This error page is expected because we don't have any pages/urls defined in the `catalog.urls` module (which we're redirected to when we get a URL to the root of the site).
 

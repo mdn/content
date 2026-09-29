@@ -98,7 +98,7 @@ class Author(models.Model):
         return reverse('author-detail', args=[str(self.id)])
 
     def __str__(self):
-        return '%s, %s' % (self.last_name, self.first_name)
+        return f'{self.last_name}, {self.first_name}'
 ```
 
 Similarly, you should check that the custom methods `get_absolute_url()` and `__str__()` behave as required because they are your code/business logic. In the case of `get_absolute_url()` you can trust that the Django `reverse()` method has been implemented properly, so what you're testing is that the associated view has actually been defined.
@@ -739,7 +739,8 @@ To demonstrate, let's write some tests for the view used to renew books (`renew_
 ```python
 from catalog.forms import RenewBookForm
 
-@permission_required('catalog.can_mark_returned')
+@login_required
+@permission_required('catalog.can_mark_returned', raise_exception=True)
 def renew_book_librarian(request, pk):
     """View function for renewing a specific BookInstance by librarian."""
     book_instance = get_object_or_404(BookInstance, pk=pk)
@@ -748,7 +749,7 @@ def renew_book_librarian(request, pk):
     if request.method == 'POST':
 
         # Create a form instance and populate it with data from the request (binding):
-        book_renewal_form = RenewBookForm(request.POST)
+        form = RenewBookForm(request.POST)
 
         # Check if the form is valid:
         if form.is_valid():
@@ -762,10 +763,10 @@ def renew_book_librarian(request, pk):
     # If this is a GET (or any other method) create the default form
     else:
         proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
-        book_renewal_form = RenewBookForm(initial={'renewal_date': proposed_renewal_date})
+        form = RenewBookForm(initial={'renewal_date': proposed_renewal_date})
 
     context = {
-        'book_renewal_form': book_renewal_form,
+        'form': form,
         'book_instance': book_instance,
     }
 
