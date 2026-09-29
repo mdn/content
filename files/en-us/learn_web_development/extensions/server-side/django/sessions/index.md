@@ -165,7 +165,7 @@ Add the line shown at the bottom of the following block to your main HTML templa
 
 Note that we use the Django built-in template tag [pluralize](https://docs.djangoproject.com/en/6.1/ref/templates/builtins/#pluralize) to add an "s" when the page has been visited multiple time**s**.
 
-Save your changes and restart the test server. Every time you refresh the page, the number should update.
+Save your changes and refresh the home page. The number should go up each time.
 
 ## Summary
 
