@@ -10,7 +10,7 @@ browser-compat: api.AbortSignal.throwIfAborted
 
 The **`throwIfAborted()`** method throws the signal's abort {{domxref("AbortSignal.reason", "reason")}} if the signal has been aborted; otherwise it does nothing.
 
-An API that needs to support aborting can accept an {{domxref("AbortSignal")}} object and use `throwIfAborted()` to test and throw when the [`abort`](/en-US/docs/Web/API/AbortSignal/abort_event) event is signalled.
+An API that needs to support aborting can accept an {{domxref("AbortSignal")}} object and use `throwIfAborted()` to test and throw when the [`abort`](/en-US/docs/Web/API/AbortSignal/abort_event) event is signaled.
 
 This method can also be used to abort operations at particular points in code, rather than passing to functions that take a signal.
 

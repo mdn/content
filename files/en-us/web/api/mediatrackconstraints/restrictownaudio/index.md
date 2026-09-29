@@ -15,7 +15,7 @@ The {{domxref("MediaTrackConstraints")}} dictionary's **`restrictOwnAudio`** pro
 This property controls whether system audio originating from the capturing tab is filtered out of screen capture, allowing for cleaner screen recordings in some cases. For example, if the capturing web page itself is playing embedded audio or video, that audio would be included in the capture. Since this could lead to an undesirable echo or interfere with the intended audio sources from other tabs or applications, removing it from the capture is desirable.
 
 If needed, you can determine whether or not this constraint is supported by checking
-the value of {{domxref("MediaTrackSupportedConstraints.restrictOwnAudio")}}, as returned
+the value of [`restrictOwnAudio`](/en-US/docs/Web/API/MediaDevices/getSupportedConstraints#restrictownaudio), as returned
 by {{domxref("MediaDevices.getSupportedConstraints()")}}. However,
 this is rarely necessary since browsers typically ignore any constraints they don't recognize.
 
@@ -56,5 +56,4 @@ The [Constraint exerciser](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Con
 - [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
-- {{domxref("MediaTrackSupportedConstraints")}}
 - {{domxref("MediaStreamTrack")}}

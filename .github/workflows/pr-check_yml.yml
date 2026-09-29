@@ -8,7 +8,9 @@ on:
       - package.json
       - package-lock.json
       - "*.yml"
+      - "*.yaml"
       - "**/*.yml"
+      - "**/*.yaml"
 
 # No GITHUB_TOKEN permissions, as we only use it to increase API limit.
 permissions: {}
@@ -33,5 +35,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Lint markdown files
+      - name: Lint yml files
         run: npm run lint:yml

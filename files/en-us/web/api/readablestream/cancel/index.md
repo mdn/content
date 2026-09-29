@@ -105,7 +105,7 @@ fetch(url)
             matchFoundAt + toMatch.length + contextAfter,
           ),
         );
-        log("Cancelling fetch");
+        log("Canceling fetch");
         reader.cancel();
         return;
       } else {

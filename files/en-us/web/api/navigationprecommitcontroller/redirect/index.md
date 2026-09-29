@@ -32,7 +32,7 @@ redirect(url, options)
             - If the original navigation occurred as a result of a {{domxref("Navigation.navigate()")}} call, the value will be whatever was specified in the `navigate()` call's [`history`](/en-US/docs/Web/API/Navigation/navigate#history) option.
             - Otherwise, the value used is usually `push`, but it will become `replace` if the redirect points to the same URL as the pre-navigation URL.
         - `push`
-          - : Adds a new {{domxref("NavigationHistoryEntry")}} to the navigation history, and clears any available forward navigation (that is, if the user previously navigated to other locations, then used the back button to return back through the history before initiating the navigation that caused the redirect).
+          - : Adds a new {{domxref("NavigationHistoryEntry")}} to the navigation history, and clears any available forward navigation (that is, if the user previously navigated to other locations, then used the back button to return through the history before initiating the navigation that caused the redirect).
         - `replace`
           - : Replaces the {{domxref("Navigation.currentEntry")}} with the resulting new `NavigationHistoryEntry`.
 

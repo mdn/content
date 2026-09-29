@@ -8,13 +8,9 @@ status:
 browser-compat: api.CSSStyleSheet.rules
 ---
 
-{{APIRef("CSSOM")}}{{deprecated_header}}
+{{APIRef("CSSOM")}}
 
-**`rules`** is a _deprecated_
-_legacy property_ of the {{domxref("CSSStyleSheet")}} interface. Functionally
-identical to the preferred {{domxref("CSSStyleSheet.cssRules", "cssRules")}} property,
-it provides access to a live-updating list of the CSS rules comprising the
-stylesheet.
+The **`rules`** read-only property of the {{domxref("CSSStyleSheet")}} interface is a _deprecated_ _legacy property_. Functionally identical to the preferred {{domxref("CSSStyleSheet.cssRules", "cssRules")}} property, it provides access to a live-updating list of the CSS rules comprising the stylesheet.
 
 > [!NOTE]
 > As a legacy property, you should not use `rules` and

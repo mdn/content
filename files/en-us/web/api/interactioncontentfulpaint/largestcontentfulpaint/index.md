@@ -3,10 +3,12 @@ title: "InteractionContentfulPaint: largestContentfulPaint property"
 short-title: largestContentfulPaint
 slug: Web/API/InteractionContentfulPaint/largestContentfulPaint
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.InteractionContentfulPaint.largestContentfulPaint
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`largestContentfulPaint`** read-only property of the {{domxref("PerformanceSoftNavigation")}} interface returns the current largest {{domxref("LargestContentfulPaint")}} relevant to this soft navigation.
 

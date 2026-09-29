@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLTableElement.border
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement.border`** property represents the
 border width of the {{HtmlElement("table")}} element.

@@ -7,7 +7,7 @@ status:
 browser-compat: api.WindowSharedStorage
 ---
 
-{{APIRef("Shared Storage API")}}{{deprecated_header}}
+{{APIRef("Shared Storage API")}}
 
 The **`WindowSharedStorage`** interface of the {{domxref("Shared Storage API", "Shared Storage API", "", "nocode")}} represents the shared storage for a particular origin within a standard browsing context.
 
@@ -17,7 +17,7 @@ The **`WindowSharedStorage`** interface of the {{domxref("Shared Storage API", "
 
 ## Instance properties
 
-- {{domxref("WindowSharedStorage.worklet", "worklet")}} {{deprecated_inline}}
+- {{domxref("WindowSharedStorage.worklet", "worklet")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Contains the {{domxref("SharedStorageWorklet")}} instance representing the shared storage worklet for the current origin. `SharedStorageWorklet` includes the {{domxref("Worklet.addModule", "addModule()")}} method, which is used to add a module to the shared storage worklet.
 
 ## Instance methods

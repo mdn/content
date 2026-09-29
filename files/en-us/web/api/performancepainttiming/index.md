@@ -28,26 +28,26 @@ Like other Performance APIs, this API extends {{domxref("PerformanceEntry")}}.
 
 This interface directly defines the following properties:
 
-- {{domxref("PerformancePaintTiming.paintTime")}}
+- {{domxref("PerformancePaintTiming.paintTime")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the rendering phase ended and the paint phase started.
-- {{domxref("PerformancePaintTiming.presentationTime")}}
+- {{domxref("PerformancePaintTiming.presentationTime")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the painted pixels were actually drawn on the screen.
 
 It also extends the following {{domxref("PerformanceEntry")}} properties, qualifying and constraining them as described:
 
-- {{domxref("PerformanceEntry.entryType")}}
+- {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}}
   - : Returns `"paint"`.
-- {{domxref("PerformanceEntry.name")}}
+- {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
   - : Returns either `"first-paint"` or `"first-contentful-paint"`.
-- {{domxref("PerformanceEntry.startTime")}}
+- {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("DOMHighResTimeStamp","timestamp")}} when the paint occurred.
-- {{domxref("PerformanceEntry.duration")}}
+- {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
   - : Returns 0.
 
 ## Instance methods
 
 - {{domxref("PerformancePaintTiming.toJSON()")}}
-  - : Returns a JSON representation of the `PerformancePaintTiming` object.
+  - : Returns a JSON-serializable plain object representing the `PerformancePaintTiming` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Examples
 

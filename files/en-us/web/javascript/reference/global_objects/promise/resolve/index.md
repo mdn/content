@@ -196,9 +196,12 @@ class NotPromise {
       (reason) => console.log("Rejected", reason),
     );
   }
+
+  static resolve = Promise.resolve;
 }
 
-Promise.resolve.call(NotPromise, "foo"); // Logs "Resolved foo"
+const p = NotPromise.resolve("foo"); // Logs "Resolved foo"
+// p is a NotPromise instance
 ```
 
 The ability to flatten nested thenables is implemented by the `resolve` function of the `Promise()` constructor, so if you call it on another constructor, nested thenables may not be flattened, depending on how that constructor implements its `resolve` function.
@@ -215,7 +218,8 @@ const thenable = {
   },
 };
 
-Promise.resolve.call(NotPromise, thenable); // Logs "Resolved { then: [Function: then] }"
+const p = NotPromise.resolve(thenable); // Logs "Resolved { then: [Function: then] }"
+// p is a NotPromise instance
 ```
 
 ## Specifications

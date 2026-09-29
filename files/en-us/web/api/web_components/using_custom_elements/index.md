@@ -282,7 +282,7 @@ For a complete example showing the use of `attributeChangedCallback()`, see [Lif
 
 ### Custom states and custom state pseudo-class CSS selectors
 
-Built in HTML elements can have different _states_, such as "hover", "disabled", and "read only".
+Built-in HTML elements can have different _states_, such as "hover", "disabled", and "read only".
 Some of these states can be set as attributes using HTML or JavaScript, while others are internal, and cannot.
 Whether external or internal, commonly these states have corresponding CSS [pseudo-classes](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) that can be used to select and style the element when it is in a particular state.
 
@@ -523,7 +523,7 @@ Many modern browsers implement an optimization for {{htmlelement("style")}} tags
 
 ### Customized built-in elements
 
-Now let's have a look at a customized built in element example. This example extends the built-in {{HTMLElement("ul")}} element to support expanding and collapsing the list items.
+Now let's have a look at a customized built-in element example. This example extends the built-in {{HTMLElement("ul")}} element to support expanding and collapsing the list items.
 
 - [See the example running live](https://mdn.github.io/web-components-examples/expanding-list-web-component/)
 - [See the source code](https://github.com/mdn/web-components-examples/tree/main/expanding-list-web-component)

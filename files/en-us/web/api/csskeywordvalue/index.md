@@ -64,7 +64,7 @@ The CSS initially sets the element to `flex`, which forces it to display full-wi
 
 The code first gets a handle to the "Set initial" button and adds a listener to handle the click event when it is pressed.
 
-The listener then gets the element's inline styles using {{domxref(Element.attributeStyleMap)}}, and sets the `display` attribute with a newly constructed `CSSKeywordValue`.
+The listener then gets the element's inline styles using {{domxref("HTMLElement.attributeStyleMap")}}, and sets the `display` attribute with a newly constructed `CSSKeywordValue`.
 It then logs the value of that keyword to the console.
 
 ```js

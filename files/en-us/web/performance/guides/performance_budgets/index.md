@@ -47,7 +47,7 @@ During development, there are a few tools to run checks against new or modified 
 - A module bundler (e.g., [webpack](https://webpack.js.org/)), has [performance features](https://webpack.js.org/configuration/performance/) that will notify you when assets exceed specified limits.
 - [Bundlesize](https://github.com/siddharthkp/bundlesize), allows you to define and run file size checks in your {{glossary("continuous integration")}} (CI) pipeline.
 
-File size checks are the first line of defense against regressions but translating size back into time metrics can be difficult since development environments could be missing 3rd party scripts, and optimizations commonly provided by a [CDN](/en-US/docs/Glossary/CDN).
+File size checks are the first line of defense against regressions but translating size back into time metrics can be difficult since development environments could be missing third-party scripts, and optimizations commonly provided by a [CDN](/en-US/docs/Glossary/CDN).
 
 The first step is to define a development baseline for each branch to compare to and the precision of the difference between development and production can be used as a goal towards better match the live environment.
 

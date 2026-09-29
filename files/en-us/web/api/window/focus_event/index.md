@@ -6,9 +6,9 @@ page-type: web-api-event
 browser-compat: api.Window.focus_event
 ---
 
-{{APIRef}}
+{{APIRef("UI Events")}}
 
-The **`focus`** event fires when an element has received focus.
+The **`focus`** event fires when the window has received focus, such as when focus transitions from the address bar into the page. Focus can be on the document's viewport or on an element within it.
 
 The opposite of `focus` is {{domxref("Window/blur_event", "blur")}}.
 

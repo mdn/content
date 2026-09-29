@@ -8,7 +8,7 @@ status:
 browser-compat: api.Range.detach
 ---
 
-{{ApiRef("DOM")}}{{deprecated_header}}
+{{ApiRef("DOM")}}
 
 The **`Range.detach()`** method does nothing. It used to
 disable the {{domxref("Range")}} object and enable the browser to release associated

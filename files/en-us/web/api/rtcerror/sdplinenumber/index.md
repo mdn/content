@@ -6,7 +6,7 @@ page-type: web-api-instance-property
 browser-compat: api.RTCError.sdpLineNumber
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`sdpLineNumber`** read-only property of the {{domxref("RTCError")}} interface specifies the {{Glossary("SDP")}} message line number where a syntax error occurred.
 

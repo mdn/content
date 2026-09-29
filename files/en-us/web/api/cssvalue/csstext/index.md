@@ -9,7 +9,7 @@ status:
 browser-compat: api.CSSValue.cssText
 ---
 
-{{APIRef("CSSOM")}}{{Deprecated_header}}{{non-standard_header}}
+{{APIRef("CSSOM")}}{{non-standard_header}}
 
 The **`cssText`** property of the {{domxref("CSSValue")}}
 interface represents the current computed CSS property value.

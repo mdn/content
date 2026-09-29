@@ -2,10 +2,12 @@
 title: HTMLAllCollection
 slug: Web/API/HTMLAllCollection
 page-type: web-api-interface
+status:
+  - deprecated
 browser-compat: api.HTMLAllCollection
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{APIRef("DOM")}}
 
 The **`HTMLAllCollection`** interface represents a collection of _all_ of the document's elements, accessible by index (like an array) and by the element's [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id). It is returned by the {{domxref("document.all")}} property.
 
@@ -13,14 +15,14 @@ The **`HTMLAllCollection`** interface represents a collection of _all_ of the do
 
 ## Instance properties
 
-- {{domxref("HTMLAllCollection.length")}} {{ReadOnlyInline}}
+- {{domxref("HTMLAllCollection.length")}} {{ReadOnlyInline}} {{deprecated_inline}}
   - : Returns the number of items in the collection.
 
 ## Instance methods
 
-- {{domxref("HTMLAllCollection.item()")}}
+- {{domxref("HTMLAllCollection.item()")}} {{deprecated_inline}}
   - : Returns the element located at the specified offset into the collection, or the element with the specified value for its `id` or `name` attribute. Returns `null` if no element is found.
-- {{domxref("HTMLAllCollection.namedItem()")}}
+- {{domxref("HTMLAllCollection.namedItem()")}} {{deprecated_inline}}
   - : Returns the first [element](/en-US/docs/Web/API/Element) in the collection whose [`id`](/en-US/docs/Web/HTML/Reference/Global_attributes/id) or `name` attribute match the given string name, or `null` if no element matches.
 
 ## Usage in JavaScript

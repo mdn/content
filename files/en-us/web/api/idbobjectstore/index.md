@@ -33,7 +33,7 @@ The **`IDBObjectStore`** interface of the [IndexedDB API](/en-US/docs/Web/API/In
 - {{domxref("IDBObjectStore.createIndex()")}}
   - : Creates a new index during a version upgrade, returning a new {{domxref("IDBIndex")}} object in the connected database.
 - {{domxref("IDBObjectStore.delete()")}}
-  - : returns an {{domxref("IDBRequest")}} object and, in a separate thread, deletes the store object selected by the specified key. This is for deleting individual records out of an object store.
+  - : Returns an {{domxref("IDBRequest")}} object and, in a separate thread, deletes the store object selected by the specified key. This is for deleting individual records out of an object store.
 - {{domxref("IDBObjectStore.deleteIndex()")}}
   - : Destroys the specified index in the connected database, used during a version upgrade.
 - {{domxref("IDBObjectStore.get()")}}

@@ -317,7 +317,7 @@ There are three possible values for this property: `round`, `bevel` and `miter`.
 - `bevel`
   - : Fills an additional triangular area between the common endpoint of connected segments, and the separate outside rectangular corners of each segment.
 - `miter`
-  - : Connected segments are joined by extending their outside edges to connect at a single point, with the effect of filling an additional lozenge-shaped area. This setting is effected by the `miterLimit` property which is explained below.
+  - : Connected segments are joined by extending their outside edges to connect at a single point, with the effect of filling an additional lozenge-shaped area. This setting is affected by the `miterLimit` property which is explained below.
 
 The example below draws three different paths, demonstrating each of these three `lineJoin` property settings; the output is shown above.
 

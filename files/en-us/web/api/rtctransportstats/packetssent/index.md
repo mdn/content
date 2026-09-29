@@ -12,7 +12,7 @@ The **`packetsSent`** property of the {{domxref("RTCTransportStats")}} dictionar
 
 ## Value
 
-A positive integer indicating the number of packets sent on the transport.
+A non-negative integer indicating the number of packets sent on the transport.
 
 ## Specifications
 

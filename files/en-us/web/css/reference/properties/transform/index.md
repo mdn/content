@@ -58,7 +58,7 @@ transform: scale(0.5) translate(-100%, -100%);
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 transform: none;
 
 /* Function values */

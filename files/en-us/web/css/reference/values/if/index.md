@@ -430,7 +430,7 @@ Note how the styling is applied. Test out the conditional styling for the first 
 
 ### Controlling a color scheme with `if()`
 
-This demo shows how you can start to have some real fun with CSS `if()` functions. Amongst other things, we use `if()` functions to conditionally set the values of some custom properties, enabling us to control the entire color scheme!
+This demo shows how you can start to have some real fun with CSS `if()` functions. Among other things, we use `if()` functions to conditionally set the values of some custom properties, enabling us to control the entire color scheme!
 
 #### HTML
 
@@ -518,7 +518,7 @@ body {
 }
 ```
 
-We then set the `--scheme` custom property to match the `<article>` element's `class` name. The class will set by our JavaScript when a new value is selected in our `<select>` element. You'll see the significance of the custom element value in the next CSS block.
+We then set the `--scheme` custom property to match the `<article>` element's `class` name. The class will be set by our JavaScript when a new value is selected in our `<select>` element. You'll see the significance of the custom element value in the next CSS block.
 
 ```css live-sample___color-scheme
 .ice {

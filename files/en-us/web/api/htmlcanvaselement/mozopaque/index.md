@@ -9,7 +9,7 @@ status:
 browser-compat: api.HTMLCanvasElement.mozOpaque
 ---
 
-{{APIRef("Canvas API")}}{{deprecated_header}}{{non-standard_header}}
+{{APIRef("Canvas API")}}{{non-standard_header}}
 
 The non-standard **`HTMLCanvasElement.mozOpaque`** property is
 a boolean value reflecting the [`moz-opaque`](/en-US/docs/Web/HTML/Reference/Elements/canvas#moz-opaque) HTML

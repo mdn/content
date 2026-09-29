@@ -3,10 +3,12 @@ title: "ProcessingInstruction: getAttribute() method"
 short-title: getAttribute()
 slug: Web/API/ProcessingInstruction/getAttribute
 page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.ProcessingInstruction.getAttribute
 ---
 
-{{APIRef("DOM")}}
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
 The **`getAttribute()`** method of the
 {{domxref("ProcessingInstruction")}} interface returns the value of a specified attribute on the

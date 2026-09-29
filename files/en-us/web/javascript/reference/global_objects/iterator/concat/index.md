@@ -58,7 +58,7 @@ function* concat(...iterables) {
 }
 ```
 
-Like `yield*`, `Iterator.concat()` doesn't support arguments that are not iterable (i.e., doesn't have the `[Symbol.iterator]()` method). This is because `Iterator.concat()` always takes ownership over its iterators and [closes](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#returnvalue) open iterators when the method exits. With iterable arguments, `Iterator.concat()` acquires iterators one-by-one and just closes the current iterator when the iteration is stopped. With iterator arguments, it's not clear whether the caller or `Iterator.concat()` should be responsible for closing the iterators, especially the ones that `Iterator.concat()` hasn't reached, so the method simply disallows non-iterable arguments.
+Like `yield*`, `Iterator.concat()` doesn't support arguments that are not iterable (i.e., don't have the `[Symbol.iterator]()` method). This is because `Iterator.concat()` always takes ownership over its iterators and [closes](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#returnvalue) open iterators when the method exits. With iterable arguments, `Iterator.concat()` acquires iterators one-by-one and just closes the current iterator when the iteration is stopped. With iterator arguments, it's not clear whether the caller or `Iterator.concat()` should be responsible for closing the iterators, especially the ones that `Iterator.concat()` hasn't reached, so the method simply disallows non-iterable arguments.
 
 ## Examples
 

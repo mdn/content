@@ -73,7 +73,7 @@ This element only includes the [global attributes](/en-US/docs/Web/HTML/Referenc
 
 ## Notes
 
-Although the `<small>` element, like the {{htmlelement("b")}} and {{htmlelement("i")}} elements, may be perceived to violate the principle of separation between structure and presentation, all three are valid in HTML. Authors are encouraged to use their best judgement when determining whether to use `<small>` or CSS.
+Although the `<small>` element, like the {{htmlelement("b")}} and {{htmlelement("i")}} elements, may be perceived to violate the principle of separation between structure and presentation, all three are valid in HTML. Authors are encouraged to use their best judgment when determining whether to use `<small>` or CSS.
 
 ## Technical summary
 

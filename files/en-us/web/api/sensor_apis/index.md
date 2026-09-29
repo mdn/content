@@ -34,7 +34,7 @@ Sensor interfaces are only proxies for the underlying device sensors. Consequent
 
 Therefore, feature detection for sensor APIs must include both detection of the APIs themselves and [defensive programming strategies (see below)](#defensive_programming).
 
-The examples below show three methods for detecting sensor APIs. Additionally you can put object instantiation inside a {{jsxref('statements/try...catch', 'try...catch')}} block. Notice that detection through the {{domxref('Navigator')}} interface is not one of the available options.
+The examples below show three methods for detecting sensor APIs. Additionally you can put object instantiation inside a {{jsxref('Statements/try...catch', 'try...catch')}} block. Notice that detection through the {{domxref('Navigator')}} interface is not one of the available options.
 
 ```js
 if (typeof Gyroscope === "function") {
@@ -58,7 +58,7 @@ As stated in Feature Detection, checking for a particular sensor API is insuffic
 - Listening for errors thrown during its use.
 - Handling the errors gracefully so that the user experience is enhanced rather than degraded.
 
-The code example below illustrates these principles. The {{jsxref('statements/try...catch', 'try...catch')}} block catches errors thrown during sensor instantiation. It listens for {{domxref('Sensor.error_event', 'error')}} events to catch errors thrown during use. The only time anything is shown to the user is when [permissions](/en-US/docs/Web/API/Permissions_API) need to be requested and when the sensor type isn't supported by the device.
+The code example below illustrates these principles. The {{jsxref('Statements/try...catch', 'try...catch')}} block catches errors thrown during sensor instantiation. It listens for {{domxref('Sensor.error_event', 'error')}} events to catch errors thrown during use. The only time anything is shown to the user is when [permissions](/en-US/docs/Web/API/Permissions_API) need to be requested and when the sensor type isn't supported by the device.
 
 In addition, this feature may be blocked by a [Permissions Policy](/en-US/docs/Web/HTTP/Guides/Permissions_Policy) set on your server.
 

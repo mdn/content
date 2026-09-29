@@ -39,7 +39,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-The code snippet below shows how create a new highlight with two ranges, and then log the ranges by using the `forEach()` method:
+The code snippet below shows how to create a new highlight with two ranges, and then log the ranges by using the `forEach()` method:
 
 ```js
 function logRanges(range, key, highlight) {

@@ -54,12 +54,14 @@ Cell elements have the role [`gridcell`](/en-US/docs/Web/Accessibility/ARIA/Refe
 
 If the grid is used as an interactive widget, [keyboard interactions](#keyboard_interactions) need to be implemented.
 
+An accessible name is strongly recommended for the `grid` role, although not required by ARIA. Use [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) to reference a visible label, or [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) if no visible label is present.
+
 ### Associated ARIA roles, states, and properties
 
 #### Roles
 
 - [treegrid](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role) (subclass)
-  - : If a grid has columns that can expanded or collapsed, a treegrid can be used.
+  - : If a grid has columns that can be expanded or collapsed, a treegrid can be used.
 - [row](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
   - : A row inside the grid.
 - [rowgroup](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role)

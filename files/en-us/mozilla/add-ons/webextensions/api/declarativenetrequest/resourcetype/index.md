@@ -19,7 +19,7 @@ Values of this type are strings. Possible values are:
 - `font`
   - : Web fonts loaded for a {{cssxref("@font-face")}} CSS rule.
 - `image`
-  - : Resources loaded to be rendered as image, except for `imageset` on browsers that support that type (see browser compatibility below).
+  - : Resources loaded to be rendered as images, except for `imageset` on browsers that support that type (see browser compatibility below).
 - `imageset`
   - : Images loaded by a {{HTMLElement("picture")}} element or given in an `<img>` element's [`srcset`](/en-US/docs/Web/HTML/Reference/Elements/img#srcset) attribute.
 - `json`

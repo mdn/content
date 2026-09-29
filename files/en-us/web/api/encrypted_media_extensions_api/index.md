@@ -42,7 +42,7 @@ The Encrypted Media Extensions API extends the following APIs, adding the listed
 #### Navigator
 
 - {{domxref("Navigator.requestMediaKeySystemAccess()")}}
-  - : Returns a {{jsxref('Promise')}} that fulfils to a {{domxref('MediaKeySystemAccess')}} object that can be used to access a particular media key system, which can in turn be used to create keys for decrypting a media stream.
+  - : Returns a {{jsxref('Promise')}} that fulfills to a {{domxref('MediaKeySystemAccess')}} object that can be used to access a particular media key system, which can in turn be used to create keys for decrypting a media stream.
 
 ## Specifications
 

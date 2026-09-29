@@ -60,7 +60,7 @@ console.log(result.image);
 
 ### Partial decoding of a progressive image frame
 
-The following example decodes the first frame repeatedly until its complete:
+The following example decodes the first frame repeatedly until it's complete:
 
 ```js
 let complete = false;

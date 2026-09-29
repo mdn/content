@@ -3,10 +3,12 @@ title: "PerformanceSoftNavigation: interactionId property"
 short-title: interactionId
 slug: Web/API/PerformanceSoftNavigation/interactionId
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.PerformanceSoftNavigation.interactionId
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`interactionId`** read-only property of the {{domxref("PerformanceSoftNavigation")}} interface returns the {{domxref("PerformanceEventTiming.interactionId", "interactionId")}} of the {{domxref("PerformanceEventTiming")}} entry representing the interaction that resulted in the soft navigation.
 

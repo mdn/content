@@ -6,7 +6,7 @@ page-type: web-api-event
 browser-compat: api.Window.offline_event
 ---
 
-{{APIRef}}
+{{APIRef("HTML DOM")}}
 
 The **`offline`** event of the {{domxref("Window")}} interface is fired when the browser has lost access to the network and the value of {{domxref("Navigator.onLine")}} switches to `false`.
 

@@ -542,7 +542,7 @@ If the authenticator doesn't support PRF at all, the result for the `get()` call
 
 ## Specifications
 
-There are a number of places that WebAuthn extensions are specified. IANA's [WebAuthn Extension Identifiers](https://www.iana.org/assignments/webauthn/webauthn.xhtml#webauthn-extension-ids) provides a registry of all extensions, but bear in mind that some may be deprecated.
+There are a number of places that WebAuthn extensions are specified. IANA's [WebAuthn Extension Identifiers](https://www.iana.org/assignments/webauthn#webauthn-extension-ids) provides a registry of all extensions, but bear in mind that some may be deprecated.
 
 {{Specifications}}
 

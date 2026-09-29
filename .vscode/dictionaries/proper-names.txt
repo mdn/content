@@ -36,6 +36,7 @@ Artur
 Arun
 Ashlyn
 Ashok
+Ashwood
 Audiocogs
 Audre
 Austerstræti
@@ -172,6 +173,7 @@ Dottoro
 Downey
 Dragomir
 Drasner
+Draymoor
 Dutton
 Dwan
 Dwyane
@@ -212,6 +214,8 @@ Exocoetidae
 Fadeyev
 Fairchild
 FDCP
+Fenwick
+Ferngate
 Firefogg
 Firesheep
 Firestore
@@ -221,7 +225,6 @@ Flagfox
 Flavio
 Flickr
 flowplayer
-Fontsquirrel
 François
 Frederik
 Frida
@@ -241,6 +244,7 @@ Gordo
 Gorman
 Grahl
 Grande-Dixence
+Graywolf
 Graywolf9
 Grigsby
 Grissom
@@ -460,6 +464,7 @@ Neocities
 Nixpacks
 Noida
 Norah
+Northbridge
 Novak
 Nurek
 Nuxt
@@ -526,6 +531,7 @@ Rauschmayer
 Realtek
 Recep
 Redbeard
+Redcliffe
 Reis
 Rekapi
 Remy
