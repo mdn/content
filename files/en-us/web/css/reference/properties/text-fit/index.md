@@ -36,7 +36,7 @@ text-fit: unset;
 
 ### Values
 
-This property is specified as a space-separated list of up to three values that can include the following:
+This property is specified as a space-separated list of one to three values from the following list:
 
 - `none`
   - : The default value. No text scaling is applied.
