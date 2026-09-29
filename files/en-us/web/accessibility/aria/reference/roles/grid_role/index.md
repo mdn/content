@@ -72,7 +72,7 @@ The grid is an interactive widget, so [keyboard interactions](#keyboard_interact
 - [aria-multiselectable](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable)
   - : If `aria-multiselectable` is set to `true`, multiple items in the grid can be selected. The default value is `false`.
 - [aria-readonly](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly)
-  - : If the grid provides cell content editing but editing is unavailable for all cells, the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly) can be set to `true`. The default value is `false`, but omitting the attribute does not imply that the grid contains editable content. Omit the attribute if the grid does not provide cell content editing. The value set on the grid propagates to its gridcells and can be overridden on individual gridcells. The attribute only informs assistive technologies; it does not enable or disable editing.
+  - : If the grid provides cell content editing but editing is unavailable for all cells, the [`aria-readonly`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly) can be set to `true`. The default value is `false`, but omitting the attribute does not imply that the grid contains editable content. Omit the attribute if the grid does not provide cell content editing. The value set on the grid propagates to its gridcells and can be overridden on individual gridcells.
 
 > [!NOTE]
 > For many use cases, an HTML {{HTMLElement('table')}} element is sufficient as it and the various table elements already include many ARIA roles.
