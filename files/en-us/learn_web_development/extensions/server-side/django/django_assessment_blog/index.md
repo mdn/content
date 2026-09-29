@@ -188,7 +188,7 @@ In addition you should write some basic tests to verify:
 
 - All model fields have the correct label and length.
 - All models have the expected object name (e.g., `__str__()` returns the expected value).
-- Models have the expected URL for individual Blog and Comment records (e.g., `get_absolute_url()` returns the expected URL).
+- Models have the expected URL for individual Blog and BlogAuthor records (e.g., `get_absolute_url()` returns the expected URL).
 - The BlogListView (all-blog page) is accessible at the expected location (e.g., /blog/blogs)
 - The BlogListView (all-blog page) is accessible at the expected named URL (e.g., 'blogs')
 - The BlogListView (all-blog page) uses the expected template (e.g., the default)
@@ -268,7 +268,7 @@ Some general hints:
 1. The index page can be implemented as a basic function view and template (just like for the locallibrary).
 2. The list view for blog posts and bloggers, and the detail view for blog posts can be created using the [generic list and detail views](/en-US/docs/Learn_web_development/Extensions/Server-side/Django/Generic_views).
 3. The list of blog posts for a particular author can be created by using a generic blog list view and filtering for blog objects that match the specified author.
-   - You will have to implement `get_queryset(self)` to do the filtering (much like in our library class `LoanedBooksAllListView`) and get the author information from the URL.
+   - You will have to implement `get_queryset(self)` to do the filtering (much like in our library class `LoanedBooksByUserListView`) and get the author information from the URL.
    - You will also need to pass the name of the author to the page in the context. To do this in a class-based view you need to implement `get_context_data()` (discussed below).
 
 4. The _add comment_ form can be created using a function-based view (and associated model and form) or using a generic `CreateView`. If you use a `CreateView` (recommended) then:
@@ -285,7 +285,7 @@ Some general hints:
              #Associate comment with blog based on passed id
              form.instance.blog=get_object_or_404(Blog, pk = self.kwargs['pk'])
              # Call super-class form validation behavior
-             return super(BlogCommentCreate, self).form_valid(form)
+             return super().form_valid(form)
      ```
 
    - You will need to provide a success URL to redirect to after the form validates; this should be the original blog. To do this you will need to override `get_success_url()` and "reverse" the URL for the original blog. You can get the required blog ID using the `self.kwargs` attribute, as shown in the `form_valid()` method above.
@@ -298,7 +298,7 @@ class SomeView(generic.ListView):
 
     def get_context_data(self, **kwargs):
         # Call the base implementation first to get a context
-        context = super(SomeView, self).get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
         # Get the blogger object from the "pk" URL parameter and add it to the context
         context['blogger'] = get_object_or_404(BlogAuthor, pk = self.kwargs['pk'])
         return context
