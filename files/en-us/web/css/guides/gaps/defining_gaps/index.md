@@ -389,8 +389,6 @@ For gaps in grid layout, percentage values are treated as `auto` during intrinsi
 
 In flexbox layouts, the percentage gaps are treated as `0` or ignored during intrinsic sizing. The gap is applied only after sizing. As the container's block size is `auto`, the percentage row gaps resolve against `0`; so `1%` or `5%` of `0` is `0`. Percentage values are effectively ignored - the `row-gap` is `0` for both flexbox and multi-col layouts.
 
-<!--You can show rules in every gap or in a subset of gaps, defining fully animatable rule widths, colors, and insets.-->
-
 ## See also
 
 - [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module
