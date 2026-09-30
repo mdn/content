@@ -38,21 +38,13 @@ Assistive technologies should switch context back to document mode, possibly int
 
 In contrast to the [`article`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/article_role) role, the `document` role does not have any relation to other elements with a document role, it merely has a relationship to the containing composite widget. An article can have associated articles.
 
-### Associated WAI-ARIA roles, states, and properties
-
-- [`aria-expanded`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded)
-  - : Include with a value of `true` or `false` if the document element is collapsible, to indicate if the document is currently expanded or collapsed. Other values include the default `undefined` which means the document is not collapsible.
-
-- tabindex="0"
-  - : Used to make it focusable so the assistive technology user can tab to it and start reading right away.
-
 ### Keyboard interactions
 
 The element should be made focusable by setting the `tabindex="0"` attribute / value pair on it. This way, the user can tab to it, reading mode is invoked automatically, and the content can be read right away.
 
 ### Required JavaScript features
 
-None, except as required by any attributes. For example, if the `document` is collapsible, then the state and the value of `aria-expanded` must be maintained.
+None.
 
 ## Examples
 
