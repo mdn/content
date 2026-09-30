@@ -86,7 +86,7 @@ See [Using HTML form validation](/en-US/docs/Web/HTML/Guides/Constraint_validati
 
 ## Server-side validation
 
-On the server side, applications should, if possible, use the validation functions provided by their framework of choice, such as Django's [validators](https://docs.djangoproject.com/en/6.0/ref/validators/).
+On the server side, applications should, if possible, use the validation functions provided by their framework of choice, such as Django's [validators](https://docs.djangoproject.com/en/stable/ref/validators/).
 
 It's especially important to pay attention to validation failures which could not have been made by a user interacting with the site's front end: for example, a {{htmlelement("select")}} element containing an option that was not provided in the form's HTML. Failures like this are strong indicators that an attacker is deliberately crafting invalid input.
 

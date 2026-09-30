@@ -118,7 +118,7 @@ In the left-to-right list items — those with `dir="ltr"` set on the element it
 
 ```css
 .box:hover {
-  cursor: image("sprite.png#xywh=32,64,16,16");
+  cursor: image("sprite.png#xywh=32,64,16,16"), auto;
 }
 ```
 

@@ -68,7 +68,7 @@ In terms of statistics, the World Health Organization estimates that "285 millio
 
 ### People with hearing impairments
 
-[Deaf and hard-of-hearing (DHH)](https://www.nad.org/resources/american-sign-language/community-and-culture-frequently-asked-questions/) people have various levels of hearing loss ranging from mild to profound. Although some do use AT (see [Assistive Devices for People with Hearing, Voice, Speech, or Language Disorders](https://www.nidcd.nih.gov/health/assistive-devices-people-hearing-voice-speech-or-language-disorders)), they are not widespread.
+[Deaf and hard-of-hearing (DHH)](https://www.who.int/news-room/fact-sheets/detail/deafness-and-hearing-loss) people have various levels of hearing loss ranging from mild to profound. Although some do use AT (see [Assistive Devices for People with Hearing, Voice, Speech, or Language Disorders](https://www.nidcd.nih.gov/health/assistive-devices-people-hearing-voice-speech-or-language-disorders)), they are not widespread.
 
 To provide access, textual alternatives must be provided. Videos should be manually captioned, and transcripts should be provided for audio content. Furthermore, due to high levels of [language deprivation](https://stoneharborstaffing.com/blog/language-deprivation#:~:text=Language%20deprivation%20is%20the%20term,therefore%20not%20exposed%20to%20language.) in DHH populations, [text simplification should be considered](https://circlcenter.org/collaborative-research-automatic-text-simplification-and-reading-assistance-to-support-self-directed-learning-by-deaf-and-hard-of-hearing-computing-workers/).
 
@@ -76,7 +76,7 @@ Deaf and hard-of-hearing people also represent a significant userbase — "466 m
 
 ### People with mobility impairments
 
-These people have disabilities concerning movement, which might involve purely physical issues (such as loss of limb or paralysis), or neurological/genetic disorders that lead to weakness or loss of control in limbs. Some people might have difficulty making the exact hand movements required to use a mouse, while others might be more severely affected, perhaps being significantly paralyzed to the point where they need to use a [head pointer](https://www.performancehealth.com/adjustable-headpointer) to interact with computers.
+These people have disabilities concerning movement, which might involve purely physical issues (such as loss of limb or paralysis), or neurological/genetic disorders that lead to weakness or loss of control in limbs. Some people might have difficulty making the exact hand movements required to use a mouse, while others might be more severely affected, perhaps being significantly paralyzed to the point where they need to use a [head pointer](https://support.performancehealth.com/support/solutions/articles/69000742400-adjustable-head-pointer) to interact with computers.
 
 This kind of disability can also be a result of old age, rather than any specific trauma or condition, and it could also result from hardware limitations — some users might not have a mouse.
 

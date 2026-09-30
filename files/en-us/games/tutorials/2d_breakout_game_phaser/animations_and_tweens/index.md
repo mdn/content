@@ -7,7 +7,7 @@ sidebar: games
 
 {{PreviousNext("Games/Tutorials/2D_breakout_game_Phaser/Extra_lives", "Games/Tutorials/2D_breakout_game_Phaser/Buttons")}}
 
-This is the **14th step** out of 16 of the [Gamedev Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). We'll explore how to implement Phaser animations and tweens in our game, to make the game look more juicy and alive. This will result in a better, more entertaining experience.
+This is the **10th step** out of 12 of the [creating a Breakout game using Phaser tutorial](/en-US/docs/Games/Tutorials/2D_breakout_game_Phaser). We'll explore how to implement Phaser animations and tweens in our game, to make the game look more juicy and alive. This will result in a better, more entertaining experience.
 
 ## Animations
 

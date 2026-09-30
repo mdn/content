@@ -30,6 +30,7 @@ adlm
 advertisementreceived
 afrc
 afterscriptexecute
+aioquic
 alaw
 allowdirs
 allowevents
@@ -250,6 +251,8 @@ externref
 extmul
 fangsong
 fencedframe
+ffdhe2048
+ffdhe3072
 fgets
 filecheck
 FILLMODE_FILL_WINDOW
@@ -269,6 +272,7 @@ funcref
 funcrefs
 fwdred
 fwid
+gapi
 gara
 gattserverdisconnected
 geometrychange
@@ -948,6 +952,7 @@ workon
 WORKON_HOME
 writingsuggestions
 wtai
+wtransport
 x-abiword
 X-cept-Encoding
 x-ms-aria-flowfrom

@@ -72,7 +72,7 @@ These properties are listed in the order in which they occur during the navigati
 _The `PerformanceTiming`_ _interface doesn't inherit any methods._
 
 - {{domxref("PerformanceTiming.toJSON()")}} {{Deprecated_Inline}}
-  - : Returns a [JSON object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) representing this `PerformanceTiming` object.
+  - : Returns a JSON-serializable plain object representing the `PerformanceTiming` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Specifications
 
