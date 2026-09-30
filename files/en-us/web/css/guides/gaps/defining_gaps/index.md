@@ -190,7 +190,7 @@ i:nth-of-type(7n) {
 
 In [CSS multi-column layouts](/en-US/docs/Web/CSS/Guides/Multicol_layout), the `gap` property defines the gutter between columns and between rows of columns. The first value defines the gap between rows of column boxes, if multiple rows are established by the {{cssxref("column-height")}} property. The second value defines the gap between adjacent column boxes.
 
-In this example, we create a multi-col container using the `columns` shorthand property, setting a maximum `column-count` of seven columns and a minimum column width of `2.5em`. A `column-height` of `2.35em` enables the creation of additional rows. We also add a thin rule in the middle of the gap using the {{cssxref("rule")}} property:
+In this example, we create a multi-col container using the `columns` shorthand property, setting a maximum of seven columns and a minimum column width of `1em`. A column height of `2.35em` enables the creation of additional rows. We also add a thin decorative rule in the middle of the gap using the {{cssxref("rule")}} property:
 
 ```css hidden live-sample___col_gap
 .container {
@@ -198,9 +198,9 @@ In this example, we create a multi-col container using the `columns` shorthand p
   width: 450px;
   rule: 1px solid #ccc;
 }
-@supports (column-height: 1em;) {
+@supports not (column-height: 1em) {
   body::before {
-    content: "Your browser doesn't the column height property";
+    content: "Your browser does not support the column-height property.";
     background-color: wheat;
     display: block;
     text-align: center;
@@ -228,7 +228,7 @@ By default, there is a `1em` gap between rows and columns. Change this by select
 
 {{EmbedLiveSample("col_gap", "", "820")}}
 
-The gutters may appear larger than the gap size defined because the letters don't fill up the allotted space. The rule is in the middle of the gap, either 0.25em or 1.5em from the block and inline starts of the column and row's content depending on the setting selected. The extra white-space is at block- and inline-end, making the gaps look larger than they are.
+The gutters may appear larger than the specified gap size because the letters don't fill the allotted space. The decorative rule appears in the middle of the gap, either `0.25em` or `1.5em` from the block and inline starts of the column and row's content depending on the setting selected. The extra whitespace is at block- and inline-end, making the gaps look larger than they are.
 
 ```html hidden live-sample___grid_gap live-sample___flex_gap
 <fieldset>
@@ -312,9 +312,9 @@ label {
 
 ## Specifying gap values as percentages
 
-When a container has a fixed size, percentage values for column or row gaps are relative the width and height of the container, respectively.
+When a container has a fixed size, column and row gaps specified as percentages are calculated relative to the width and height of the container, respectively.
 
-In this example, the size of the container is set. Select different gap sizes, set using percentage values,and change the layout type to confirm that percentages are relative to the defined size of the container element in that dimension, for column-gaps that are either 3px or 15px wide and row gaps that are either 6px or 30px tall, even if the contents overflow the container.
+In this example, the size of the container is set. Select different gap sizes as percentage values, and change the layout type to see how the gaps are calculated relative to the container's size. Column gaps of `1%` and `5%` are `3px` and `15px` wide, respectively. Row gaps of `1%` and `5%` are `6px` and `30px` tall, respectively. These gap sizes apply even if the contents overflow the container.
 
 ```css live-sample___percent_gap
 .container {
@@ -327,7 +327,7 @@ In this example, the size of the container is set. Select different gap sizes, s
 
 {{EmbedLiveSample("percent_gap", "", "800")}}
 
-You'll note that when you set the `gap` property to a single value, when the `column-gap` and the `row-gap` have the same percent set, the row gap is twice the size of the column gap because the container is twice as tall as it is wide.
+Note that if you set the `gap` property to a single percentage value, the row gap is twice the size of the column gap because the container is twice as tall as it is wide.
 
 ```css hidden live-sample___percent_gap live-sample___percent_gap2
 fieldset {
@@ -369,8 +369,8 @@ p {
 }
 ```
 
-If we don't have a defined height or width, the behavior of percents for gap values is very different. If the container has a fixed width, percent gaps are predictable.
-Because if the container is auto‑sized, percent gaps could become circular - with the gap depending on the container size, but the container size depends on the gap - browsers treat percent gaps as `auto` (effectively `0`) during intrinsic sizing.
+If we don't have a defined height or width for the container, the behavior of percentage gap values is very different. If the container has a fixed width, percentage gap values are predictable.
+If the container is auto‑sized, percentage gaps could create a circular dependency: the gaps depend on the container's size, but the container's size depends on the gaps. Browsers treat percentage gap values as `auto` (effectively `0`) during intrinsic sizing.
 
 ```css live-sample___percent_gap2
 .container {
@@ -387,7 +387,7 @@ In the example, the width of the container is constrained by the containing bloc
 
 With grid, percent gaps are treated as `auto` during intrinsic sizing, so the gap is collapsed until the sie of the container is determined. This means the size of the container is determined based solely on the dimensions of the content. If the example renders six rows of grid cells, there will be five row gaps, meaning the last row of grid items will overflow the background by either `6%` or `30%`, depending on whether the gap is set to `1%` or `5%`.
 
-With flexbox, the percent gaps are treated as `0`, or ignored, during intrinsic sizing. The gap is only applied only after sizing. As the container's block size is `auto`, the percentage row gaps resolve against `0`; so `1%` or `5%` of `0` is `0`. Percentage values are effectively ignored - the `row-gap` is `0` - for both flex and multi-col layouts.
+In flexbox layouts, the percentage gaps are treated as `0` or ignored during intrinsic sizing. The gap is applied only after sizing. As the container's block size is `auto`, the percentage row gaps resolve against `0`; so `1%` or `5%` of `0` is `0`. Percentage values are effectively ignored - the `row-gap` is `0` for both flexbox and multi-col layouts.
 
 <!--You can show rules in every gap or in a subset of gaps, defining fully animatable rule widths, colors, and insets.-->
 
