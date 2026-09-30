@@ -555,6 +555,38 @@ Tracks containing video shared from a user's screen (regardless of whether the s
     - If the captured display surface is being displayed on a standard resolution screen where physical pixel dimensions are about the same as CSS pixel dimensions, `screenPixelRatio` will return a value of `1`.
     - If, however, the captured display surface is being displayed on a high-dpi resolution screen where physical pixel dimensions are about double the CSS pixel dimensions, `screenPixelRatio` will return a value of `2`.
 
+## Examples
+
+### Basic `screenPixelRatio` usage
+
+In this example, the application defines a constant `RESOLUTION_LIMIT`, which represents the scaling factor beyond which the sending application should send video at the logical resolution rather than the physical resolution.
+
+When `screenPixelRatio` exceeds this limit, the application uses the `screenPixelRatio` value to calculate the logical resolution from the physical resolution, and then constrains the captured {{domxref("MediaStreamTrack")}} to the logical resolution.
+
+```js
+const RESOLUTION_LIMIT = 1.5;
+
+async function startCapture() {
+  const stream = await navigator.mediaDevices.getDisplayMedia({
+    video: true,
+  });
+  const track = stream.getVideoTracks()[0];
+  const settings = track.getSettings();
+  const capabilities = track.getCapabilities();
+
+  if (settings.screenPixelRatio > RESOLUTION_LIMIT) {
+    const physicalWidth = capabilities.width.max;
+    const physicalHeight = capabilities.height.max;
+    const logicalWidth = physicalWidth / settings.screenPixelRatio;
+    const logicalHeight = physicalHeight / settings.screenPixelRatio;
+    await track.applyConstraints({
+      width: logicalWidth,
+      height: logicalHeight,
+    });
+  }
+}
+```
+
 ## Specifications
 
 {{Specifications}}
