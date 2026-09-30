@@ -41,11 +41,9 @@ The **`MediaTrackSettings`** dictionary is used to return the current values con
 
 To learn more about how constraints and settings work, see [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints).
 
-## Instance properties
-
 Some or all of the following will be included in the object, either because it's not supported by the browser or because it's not available due to context. For example, because {{Glossary("RTP")}} doesn't provide some of these values during negotiation of a WebRTC connection, a track associated with a {{domxref("RTCPeerConnection")}} will not include certain values, such as `facingMode` or `groupId`.
 
-### Instance properties of all media tracks
+#### Properties of all media tracks
 
 - `deviceId`
   - : A string indicating the current value of the {{domxref("MediaTrackConstraints.deviceId", "deviceId")}} property. The device ID is an origin-unique string identifying the source of the track; this is usually a [GUID](https://en.wikipedia.org/wiki/Universally_unique_identifier). This value is specific to the source of the track's data and is not usable for setting constraints; it can, however, be used for initially selecting media when calling {{domxref("MediaDevices.getUserMedia()")}}.
@@ -126,7 +124,7 @@ Some or all of the following will be included in the object, either because it's
     which the groupId is useful when calling `applyConstraints()`, since the
     value can't be changed.
 
-### Instance properties of audio tracks
+#### Properties of audio tracks
 
 - `autoGainControl`
   - : A Boolean which indicates the current value of the {{domxref("MediaTrackConstraints.autoGainControl", "autoGainControl")}} property, which is `true` if automatic gain control is enabled and is `false` otherwise.
@@ -333,7 +331,7 @@ Some or all of the following will be included in the object, either because it's
     A double-precision floating-point number indicating the volume, from 0.0 to 1.0, of the
     audio track as currently configured.
 
-### Instance properties of video tracks
+#### Properties of video tracks
 
 - `aspectRatio`
   - : A double-precision floating point value indicating the current value of the {{domxref("MediaTrackConstraints.aspectRatio", "aspectRatio")}} property, specified precisely to 10 decimal places. This is the width of the image in pixels divided by its height in pixels. Common values include 1.3333333333 (for the classic television 4:3 "standard" {{glossary("aspect ratio")}}, also used on tablets such as Apple's iPad), 1.7777777778 (for the 16:9 high-definition widescreen aspect ratio), and 1.6 (for the 16:10 aspect ratio common among widescreen computers and tablets).
@@ -453,7 +451,7 @@ Some or all of the following will be included in the object, either because it's
     - `"crop-and-scale"`
       - : The track's resolution might be the result of the user agent using cropping or downscaling from a higher camera resolution.
 
-### Instance properties of shared screen tracks
+#### Properties of shared screen tracks
 
 Tracks containing video shared from a user's screen (regardless of whether the screen data comes from the entire screen or a portion of a screen, like a window or tab) are generally treated like video tracks, with the exception that they also support the following added settings:
 
@@ -594,3 +592,15 @@ async function startCapture() {
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
+- [Screen Capture API](/en-US/docs/Web/API/Screen_Capture_API)
+- [Capabilities, constraints, and settings](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
+- [Using the screen capture API](/en-US/docs/Web/API/Screen_Capture_API/Using_Screen_Capture)
+- {{domxref("MediaDevices.getDisplayMedia()")}}
+- {{domxref("MediaStreamTrack.getConstraints()")}}
+- {{domxref("MediaStreamTrack.applyConstraints()")}}
+- {{domxref("MediaStreamTrack.getSettings()")}}
+- {{domxref("MediaDevices.getUserMedia()")}}
