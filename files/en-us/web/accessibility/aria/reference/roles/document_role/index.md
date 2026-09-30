@@ -40,7 +40,7 @@ In contrast to the [`article`](/en-US/docs/Web/Accessibility/ARIA/Reference/Role
 
 ### Keyboard interactions
 
-The element should be made focusable by setting the `tabindex="0"` attribute / value pair on it. This way, the user can tab to it, reading mode is invoked automatically, and the content can be read right away.
+The element needs to be focusable so that assistive technologies can switch to reading mode when it receives focus. The HTML [`tabindex="0"`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute makes it focusable and adds it to the tab order, so the user can tab to it and read the content right away.
 
 ### Required JavaScript features
 
@@ -52,7 +52,7 @@ An example is Gmail and the single conversation view. GMail is a web application
 
 ## Best practices
 
-Always make sure an item with the document role is focusable, by setting the `tabindex` attribute with a value of 0. That will also include it in the tab order.
+Always make sure an element with the `document` role is focusable. Setting `tabindex="0"` is the most common way to do this, but it also adds the element to the tab order, which might not match how users navigate the rest of the widget. If the containing widget manages focus with arrow keys, for example with a [roving `tabindex`](/en-US/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets#technique_1_roving_tabindex), make sure users can discover how to reach the document content and how to return to the widget afterward.
 
 ### Added benefits
 
