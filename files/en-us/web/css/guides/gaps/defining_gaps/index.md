@@ -385,7 +385,7 @@ If the container is auto‑sized, percentage gaps could create a circular depend
 
 In the example, the width of the container is constrained by the containing block, while the height is not.
 
-With grid, percent gaps are treated as `auto` during intrinsic sizing, so the gap is collapsed until the sie of the container is determined. This means the size of the container is determined based solely on the dimensions of the content. If the example renders six rows of grid cells, there will be five row gaps, meaning the last row of grid items will overflow the background by either `6%` or `30%`, depending on whether the gap is set to `1%` or `5%`.
+For gaps in grid layout, percentage values are treated as `auto` during intrinsic sizing, so the gap is collapsed until the size of the container is determined. This means the size of the container is determined based solely on the dimensions of the content. If the example renders six rows of grid cells, there will be five row gaps, meaning the last row of grid items will overflow the background by either `5%` or `25%`, depending on whether the gap is set to `1%` or `5%`.
 
 In flexbox layouts, the percentage gaps are treated as `0` or ignored during intrinsic sizing. The gap is applied only after sizing. As the container's block size is `auto`, the percentage row gaps resolve against `0`; so `1%` or `5%` of `0` is `0`. Percentage values are effectively ignored - the `row-gap` is `0` for both flexbox and multi-col layouts.
 
