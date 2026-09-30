@@ -410,10 +410,10 @@ const colSize = document.getElementById("col");
 const ow = document.getElementById("ow");
 const cell = document.querySelector("li:nth-of-type(6)");
 let text = "";
-const update = function () {
+function update() {
   ul.style.ruleInsetCap = text = `${rowSize.value}px ${colSize.value}px`;
   cell.innerHTML = `<code>rule-inset-cap: ${text};</code>`;
-};
+}
 
 update();
 
