@@ -25,7 +25,7 @@ A string representing the given date-time in the [RFC 9557 format](/en-US/docs/W
 
 ## Description
 
-The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `Temporal.PlainDateTime` object is stringified. This method is generally intended to, by default, usefully serialize `Temporal.PlainDateTime` objects during [JSON](/en-US/docs/Glossary/JSON) serialization, which can then be deserialized using the {{jsxref("Temporal/PlainDateTime/from", "Temporal.PlainDateTime.from()")}} function as the reviver of {{jsxref("JSON.parse()")}}.
+The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `Temporal.PlainDateTime` object is stringified. This method is generally intended to, by default, usefully serialize `Temporal.PlainDateTime` objects during [JSON](/en-US/docs/Glossary/JSON) serialization, which can then be deserialized using the {{jsxref("Temporal/PlainDateTime/from", "Temporal.PlainDateTime.from()")}} function within the reviver of {{jsxref("JSON.parse()")}}.
 
 ## Examples
 
