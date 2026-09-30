@@ -36,8 +36,6 @@ Because ATs with reading mode default to that mode for all elements except for t
 
 Assistive technologies should switch context back to document mode, possibly intercepting from controls rewired for the parent's dynamic context, re-enabling the standard input events, such as Up or Down arrow keyboard events, to control the reading cursor.
 
-In contrast to the [`article`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/article_role) role, the `document` role does not have any relation to other elements with a document role, it merely has a relationship to the containing composite widget. An article can have associated articles.
-
 ### Keyboard interactions
 
 The element needs to be focusable so that assistive technologies can switch to reading mode when it receives focus. The HTML [`tabindex="0"`](/en-US/docs/Web/HTML/Reference/Global_attributes/tabindex) attribute makes it focusable and adds it to the tab order, so the user can tab to it and read the content right away.
