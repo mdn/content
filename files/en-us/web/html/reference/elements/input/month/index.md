@@ -42,7 +42,12 @@ Setting the [`value`](/en-US/docs/Web/HTML/Reference/Elements/input#value) attri
 
 ```html
 <label for="bday-month">What month were you born in?</label>
-<input id="bday-month" type="month" name="bday-month" value="2001-06" pattern="[0-1]\d-\d{4}" />
+<input
+  id="bday-month"
+  type="month"
+  name="bday-month"
+  value="2001-06"
+  pattern="[0-1]\d-\d{4}" />
 ```
 
 {{EmbedLiveSample('Setting_a_default_value', 600, 60)}}
