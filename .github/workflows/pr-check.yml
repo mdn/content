@@ -1,0 +1,143 @@
+name: PR checks
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event_name }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  changes:
+    runs-on: ubuntu-latest
+    outputs:
+      cspell_lists: ${{ steps.filter.outputs.cspell_lists }}
+      javascript: ${{ steps.filter.outputs.javascript }}
+      json: ${{ steps.filter.outputs.json }}
+      lint_content: ${{ steps.filter.outputs.lint_content }}
+      redirects: ${{ steps.filter.outputs.redirects }}
+      scripts: ${{ steps.filter.outputs.scripts }}
+      url_issues: ${{ steps.filter.outputs.url_issues }}
+      yml: ${{ steps.filter.outputs.yml }}
+    steps:
+      - uses: dorny/paths-filter@ceb8a2b8f2d89434be7ff52d3de7ec3738c5cc9d # v4.0.3
+        id: filter
+        with:
+          filters: |
+            shared: &shared
+              - .github/workflows/pr-check.yml
+              - .nvmrc
+            cspell_lists:
+              - *shared
+              - .github/workflows/pr-check_cspell_lists.yml
+              - .vscode/dictionaries/*
+              - scripts/sort_and_unique_file_lines.js
+            javascript:
+              - *shared
+              - .github/workflows/pr-check_javascript.yml
+              - package.json
+              - package-lock.json
+              - "*.js"
+              - "*.mjs"
+              - "**/*.js"
+              - "**/*.mjs"
+            json:
+              - *shared
+              - .github/workflows/pr-check_json.yml
+              - "*.json"
+              - "*.jsonc"
+              - "**/*.json"
+              - "**/*.jsonc"
+            lint_content:
+              - *shared
+              - .github/workflows/pr-check-lint_content.yml
+              - "*.md"
+              - files/**/*.md
+            redirects:
+              - *shared
+              - .github/workflows/pr-check_redirects.yml
+              - files/**
+            scripts:
+              - *shared
+              - .github/workflows/pr-check_scripts.yml
+              - package.json
+              - package-lock.json
+            url_issues:
+              - *shared
+              - .github/workflows/pr-check_url-issues.yml
+              - package.json
+              - package-lock.json
+              - files/**/*.md
+              - scripts/log-url-issues.js
+            yml:
+              - *shared
+              - .github/workflows/pr-check_yml.yml
+              - package.json
+              - package-lock.json
+              - "*.yml"
+              - "*.yaml"
+              - "**/*.yml"
+              - "**/*.yaml"
+
+  cspell_lists:
+    needs: changes
+    if: needs.changes.outputs.cspell_lists == 'true'
+    uses: ./.github/workflows/pr-check_cspell_lists.yml
+
+  javascript:
+    needs: changes
+    if: needs.changes.outputs.javascript == 'true'
+    uses: ./.github/workflows/pr-check_javascript.yml
+
+  json:
+    needs: changes
+    if: needs.changes.outputs.json == 'true'
+    uses: ./.github/workflows/pr-check_json.yml
+
+  lint_content:
+    needs: changes
+    if: needs.changes.outputs.lint_content == 'true'
+    uses: ./.github/workflows/pr-check-lint_content.yml
+
+  redirects:
+    needs: changes
+    if: needs.changes.outputs.redirects == 'true'
+    uses: ./.github/workflows/pr-check_redirects.yml
+
+  scripts:
+    needs: changes
+    if: needs.changes.outputs.scripts == 'true'
+    uses: ./.github/workflows/pr-check_scripts.yml
+
+  url_issues:
+    needs: changes
+    if: needs.changes.outputs.url_issues == 'true'
+    uses: ./.github/workflows/pr-check_url-issues.yml
+
+  yml:
+    needs: changes
+    if: needs.changes.outputs.yml == 'true'
+    uses: ./.github/workflows/pr-check_yml.yml
+
+  # The only required status check: skipped checks pass, failures and cancellations do not.
+  all-checks-passed-or-skipped:
+    if: always()
+    needs:
+      - changes
+      - cspell_lists
+      - javascript
+      - json
+      - lint_content
+      - redirects
+      - scripts
+      - url_issues
+      - yml
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fail if any check did not pass
+        if: contains(needs.*.result, 'failure') || contains(needs.*.result, 'cancelled')
+        run: exit 1

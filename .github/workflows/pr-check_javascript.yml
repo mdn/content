@@ -1,16 +1,7 @@
 name: JavaScript lint
 
 on:
-  pull_request:
-    paths:
-      - .github/workflows/pr-check_javascript.yml
-      - .nvmrc
-      - package.json
-      - package-lock.json
-      - "*.js"
-      - "*.mjs"
-      - "**/*.js"
-      - "**/*.mjs"
+  workflow_call:
 
 # No GITHUB_TOKEN permissions, as we only use it to increase API limit.
 permissions: {}
