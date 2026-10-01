@@ -71,7 +71,7 @@ _This interface doesn't inherit any methods. None of the following methods alter
 - {{domxref("DOMMatrixReadOnly.toFloat64Array()")}}
   - : Returns a new {{jsxref("Float64Array")}} of double-precision floating-point numbers, containing all 16 elements which comprise the matrix.
 - {{domxref("DOMMatrixReadOnly.toJSON()")}}
-  - : Returns a JSON representation of the `DOMMatrixReadOnly` object.
+  - : Returns a JSON-serializable plain object representing the `DOMMatrixReadOnly` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 - {{domxref("DOMMatrixReadOnly.toString()")}}
   - : Creates and returns a string representation of the matrix in CSS matrix syntax, using the appropriate CSS matrix notation.
 - {{domxref("DOMMatrixReadOnly.transformPoint()")}}

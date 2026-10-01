@@ -30,6 +30,7 @@ adlm
 advertisementreceived
 afrc
 afterscriptexecute
+aioquic
 alaw
 allowdirs
 allowevents
@@ -271,6 +272,7 @@ funcref
 funcrefs
 fwdred
 fwid
+gapi
 gara
 gattserverdisconnected
 geometrychange
@@ -950,6 +952,7 @@ workon
 WORKON_HOME
 writingsuggestions
 wtai
+wtransport
 x-abiword
 X-cept-Encoding
 x-ms-aria-flowfrom

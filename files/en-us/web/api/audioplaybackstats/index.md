@@ -68,7 +68,7 @@ It is possible to retrieve the immediate playout latency of the audio context vi
 - {{domxref("AudioPlaybackStats.resetLatency()")}} {{experimental_inline}}
   - : Resets the start of the interval during which latency statistics are measured to the current time.
 - {{domxref("AudioPlaybackStats.toJSON()")}} {{experimental_inline}}
-  - : A {{Glossary("Serialization","serializer")}} that returns a JSON representation of the `AudioPlaybackStats` object.
+  - : Returns a JSON-serializable plain object representing the `AudioPlaybackStats` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Examples
 

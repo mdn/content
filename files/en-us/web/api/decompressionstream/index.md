@@ -16,9 +16,9 @@ The **`DecompressionStream`** interface of the {{domxref('Compression Streams AP
 
 ## Instance properties
 
-- {{domxref("DecompressionStream.readable")}}
+- {{domxref("DecompressionStream.readable")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("ReadableStream")}} instance controlled by this object.
-- {{domxref("DecompressionStream.writable")}}
+- {{domxref("DecompressionStream.writable")}} {{ReadOnlyInline}}
   - : Returns the {{domxref("WritableStream")}} instance controlled by this object.
 
 ## Examples

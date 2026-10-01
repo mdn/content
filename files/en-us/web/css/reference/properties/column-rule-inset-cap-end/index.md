@@ -11,9 +11,13 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`column-rule-inset-cap-end`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the bottom of column rule segment [cap endpoints](#understanding_cap_end) at the container's content end edge, and cap endpoints where no rule segments intersect.
+The **`column-rule-inset-cap-end`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the bottom of column rule segment [cap endpoints](#understanding_cap_end) at the container's end edge, and cap endpoints where no rule segments intersect.
 
 {{InteractiveExample("CSS Demo: rule")}}
+
+```css interactive-example-choice
+column-rule-inset-cap-end: -20px;
+```
 
 ```css interactive-example-choice
 column-rule-inset-cap-end: 0;
@@ -21,10 +25,6 @@ column-rule-inset-cap-end: 0;
 
 ```css interactive-example-choice
 column-rule-inset-cap-end: 1em;
-```
-
-```css interactive-example-choice
-column-rule-inset-cap-end: -20px;
 ```
 
 ```css interactive-example-choice
@@ -68,6 +68,7 @@ column-rule-inset-cap-end: overlap-join;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   rule: solid thick magenta;
+  column-rule-color: rebeccapurple;
   gap: 1em;
   rule-overlap: column-over-row;
   rule-visibility-items: between;
@@ -140,13 +141,13 @@ Length `column-rule-inset-cap-end` values inset segments by the specified value 
 
 The `column-rule-inset-cap-end` property is a constituent property of several [shorthand properties](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties):
 
-- To set the inset of the start and end caps, the `column-rule-inset-cap-end` property, along with the {{cssxref("column-rule-inset-cap-start")}} property, can be set using the {{cssxref("column-rule-inset-cap")}} shorthand.
+- To inset the start and end caps, the `column-rule-inset-cap-end` property, along with the {{cssxref("column-rule-inset-cap-start")}} property, can be set using the {{cssxref("column-rule-inset-cap")}} shorthand.
 
-- To set the ends of all column segments, the `column-rule-inset-cap-end` property, along with the {{cssxref("column-rule-inset-junction-end")}} property, can be set using the {{cssxref("column-rule-inset-end")}} shorthand.
+- To inset the ends of all column segments, the `column-rule-inset-cap-end` property, along with the {{cssxref("column-rule-inset-junction-end")}} property, can be set using the {{cssxref("column-rule-inset-end")}} shorthand.
 
-- To set the same values for row and column cap and junction endpoints, the `column-rule-inset-end` property, along with the {{cssxref("row-rule-inset-end")}} property, can be set using the {{cssxref("rule-inset-end")}} shorthand.
+- To inset all row and column cap and junction endpoints, the `column-rule-inset-end` property, along with the {{cssxref("row-rule-inset-end")}} property, can be set using the {{cssxref("rule-inset-end")}} shorthand.
 
-All of these shorthand properties, along with their `-start`, `-junction`, and `row-` equivalents, can be set using the {{cssxref("rule-inset")}} shorthand.
+All segment endpoints, including this property's `-start`, `-junction`, and `row-` equivalents, can be set using the {{cssxref("rule-inset")}} shorthand.
 
 ### Understanding cap end
 
@@ -246,6 +247,18 @@ li {
   width: 100%;
   box-sizing: border-box;
 }
+
+@layer no-support {
+  @supports not (column-rule-inset-cap-end: 16px) {
+    body::before {
+      content: "Your browser doesn't support the column-rule-inset-cap-end property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
 ```
 
 ```css hidden live-sample___percents
@@ -295,15 +308,17 @@ visibility.addEventListener("change", () => {
 
 {{EmbedLiveSample("caps", "", "300")}}
 
-Setting `16px` insets the end of all the column rules by 16px. If `0px` is set, the end of the column rules will align with the end of the container. This is the default. Setting `-32px` outsets the segments by `32px`, with the lines being drawn `32px` past the end edge of the container. As column rules don't impact the box model, these lines have no impact on the layout of the container or the rest of the content.
+Change the inset. If `0px` is set, the end of the column rules will align with the end of the container. This is the default. Setting `-32px` outsets the segments by `32px`, with the lines being drawn `32px` past the end edge of the container. As column rules don't impact the box model, these lines have no impact on the layout of the container or the rest of the content.
 
-Select `around` as the `rule-visibility-items` value. This value paints rules in a gap segment if at least one of the two adjacent areas is occupied by an item. The double line-style column rules, which appear when the `rule-visibility-items` is set to `around` (and `between`) do not end in a cap endpoint. The last two column rules end at interior gaps where row rule segments are present, so these column segments are not cap segment endpoints, and are therefore not affected by the `column-rule-inset-cap-end` property.
+Select `around` as the `rule-visibility-items` value. This value paints rules in a gap segment if at least one of the two adjacent areas is occupied by an item. The double line-style column rules, which appear when the `rule-visibility-items` property is set to `around` do not end in a cap endpoint. The last two column rules end at interior gaps where row rule segments are present, so these column segments are not cap segment endpoints. Therefore, the `column-rule-inset-cap-end` property does not affect those segment endpoints.
 
 Select `between` as the `rule-visibility-items` value, which paints rules in gap segments only if both adjacent areas are occupied by an item. The last row rule in the second row gutter ends at the third column gap. The third column rule ends at an interior gap where a row rule segment is present, so this column segment is not a cap segment endpoint and is not affected by the `column-rule-inset-cap-end` property. The last two column rules, however, end at interior gaps where no other rule segments are present, so these column segments are cap segment endpoints and therefore are affected by the `column-rule-inset-cap-end` property.
 
 ### Understanding percentage values
 
-What length a percentage value is relative to depends on the endpoint's location. Interior endpoint percentage values are relative to the gap width at the cap endpoint, so relative to the {{cssxref("row-gap")}} if abutting a rule gap. In this demonstration, these endpoints are denoted by the inset, dark and light, line style. If the cap segment endpoint is at the container's edge, the percentage is relative to `0`, so it always computes to `0` (which is why only the `between` value has an effect).
+The length a percentage value is relative to depends on the endpoint location. Interior endpoint percentage values are relative to the width of the gap at the cap endpoint, so relative to the {{cssxref("row-gap")}} if abutting a rule gap, and `0` at the bottom edge of the container.
+
+In this demonstration, these endpoints are denoted by the inset, dark and light, line style. If the cap segment endpoint is at the container's edge, the percentage is relative to `0`, so it always computes to `0` (which is why only the `between` value has an effect).
 
 {{EmbedLiveSample("percents", "", "300")}}
 
@@ -428,6 +443,17 @@ output {
 }
 p {
   margin-top: 2.5em;
+}
+@layer no-support {
+  @supports not (column-rule-inset-cap-end: 16px) {
+    body::before {
+      content: "Your browser doesn't support the column-rule-inset-cap-end property";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
 }
 ```
 
