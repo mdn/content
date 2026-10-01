@@ -199,10 +199,6 @@ Try playing with the example now:
 
 {{ EmbedLiveSample('Validation', 600, 120) }}
 
-Here's a screenshot for those of you who aren't using a supporting browser:
-
-![Month required prompt on Chrome browser](month-required.png)
-
 Here's the CSS used in the above example.
 Here we make use of the {{cssxref(":valid")}} and {{cssxref(":invalid")}} CSS properties to style the input based on whether the current value is valid.
 We had to put the icons on a {{htmlelement("span")}} next to the input, not on the input itself, because in Chrome the generated content is placed inside the form control, and can't be styled or shown effectively.
@@ -242,23 +238,9 @@ input:valid + span::after {
 
 ## Handling browser support
 
-The control's UI varies in general from browser to browser; at the moment support is patchy, with only Chrome/Opera and Edge on desktop — and most modern mobile browser versions — having usable implementations.
-In browsers that don't support `month` inputs, the control degrades gracefully to [`<input type="text">`](/en-US/docs/Web/HTML/Reference/Elements/input/text), although there may be automatic validation of the entered text to ensure it's formatted as expected.
+The control's UI varies in general from browser to browser; at the moment support is patchy, with only Chromium browsers on desktop and mobile browsers having usable implementations. The control is usually presented as either a calendar-like grid or two wheel pickers.
 
-For those of you using a browser that doesn't support `month`, the screenshot below shows what it looks like in Chrome and Opera.
-Clicking the down arrow on the right-hand side brings up a date picker that lets you select the month and year.
-
-![Month control on Chrome browser](month-control-chrome.png)
-
-The Microsoft Edge `month` control looks like this:
-
-![Month control on Edge browser](month-control-edge.png)
-
-The `month` picker on Chrome for Android looks like this:
-
-![Month picker on Chrome for Android](month-android.png)
-
-Non-supporting browsers gracefully degrade to a text input, but this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.
+In browsers that don't support `month` inputs, the control degrades gracefully to [`<input type="text">`](/en-US/docs/Web/HTML/Reference/Elements/input/text), although there may be automatic validation of the entered text to ensure it's formatted as expected. But this creates problems both in terms of consistency of user interface (the presented control will be different), and data handling.
 
 The second problem is the more serious of the two.
 As mentioned earlier, with a `month` input the actual value is always normalized to the format `yyyy-mm`.
