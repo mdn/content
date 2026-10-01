@@ -98,7 +98,7 @@ There are eight `<animation-action>` values, each providing different animation 
 
 Setting `play-forwards play-backwards` is a common pattern, often used to "animate in" an element when its trigger becomes active, for example by scrolling it into view, and then "animate out" the element again when the trigger becomes inactive, for example by scrolling it out of view.
 
-The `play-once` action is generally used on its own or as part of `play-once pause`; setting `play-once` as the activation action causes the animation to play only once when it scrolls into view. Adding `pause` on deactivation pauses the animation when the trigger scrolls out of its activation range, restarting it from where it was paused if re-activated.
+The `play-once` action is generally used on its own or as part of `play-once pause`; setting `play-once` as the activation action causes the animation to play only once when it scrolls into view. Adding `pause` on deactivation pauses the animation when the trigger scrolls out of its active range; if the trigger is re-activated, the animation will restart from where it was paused.
 
 See the {{cssxref("animation-action")}} data type for examples and more about each keyword value.
 
