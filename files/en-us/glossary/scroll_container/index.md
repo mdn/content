@@ -5,11 +5,19 @@ page-type: glossary-definition
 sidebar: glossarysidebar
 ---
 
-A **scroll container** is an element box in which content can be scrolled, whether or not scroll bars are present. A user agent adds scroll bars to an element box to make it a scroll container when the CSS {{cssxref("overflow")}} property is set to `scroll` or when `overflow` is set to `auto` _and_ the content overflows the container.
+A **scroll container** is an element box whose content can be scrolled, whether or not scroll bars are present. An element box becomes a scroll container when its {{cssxref("overflow")}} property (or {{cssxref("overflow-x")}} or {{cssxref("overflow-y")}}) is set to `scroll`, `auto`, or `hidden`.
 
-When the content of an element box overflows its bounding box, users can use scroll bars to scroll through the clipped content that is otherwise hidden from view.
+Each scroll container `overflow` value controls when scroll bars are shown:
 
-A scroll container includes a scrollport and scroll bars.
+- `scroll`: scroll bars are always shown, if the platform displays them.
+- `auto`: scroll bars are shown only when the content overflows the box.
+- `hidden`: no scroll bars are shown, and the user can't scroll the content directly, but it can still be scrolled programmatically, for example with {{domxref("Element.scrollTo()")}} or by focusing an element inside it.
+
+Because scroll container status comes from the `overflow` value, it affects layout even when nothing overflows, for example a scroll container that is a flex item has an automatic minimum size of `0`.
+
+When the content of a scroll container overflows its bounding box, the clipped content that would otherwise be hidden from view can be scrolled through, using scroll bars or other input such as touch or the mouse wheel.
+
+A scroll container has a scrollport, the visible area through which the content is scrolled, and may have scroll bars.
 
 ## Scrollport
 
