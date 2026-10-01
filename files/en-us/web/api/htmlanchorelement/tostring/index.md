@@ -8,9 +8,7 @@ browser-compat: api.HTMLAnchorElement.toString
 
 {{ApiRef("URL API")}}
 
-The **`HTMLAnchorElement.toString()`** {{Glossary("stringifier")}}
-method returns a string containing the whole URL. It is a read-only
-version of {{domxref("HTMLAnchorElement.href")}}.
+The **`HTMLAnchorElement.toString()`** {{Glossary("stringifier")}} method returns a string containing the whole URL, which is the same value as {{domxref("HTMLAnchorElement.href")}}.
 
 ## Syntax
 
