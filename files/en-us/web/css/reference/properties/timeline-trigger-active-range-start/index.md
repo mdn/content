@@ -16,7 +16,7 @@ The **`timeline-trigger-active-range-start`** [CSS](/en-US/docs/Web/CSS) propert
 ## Syntax
 
 ```css
-/* Keyword */
+/* Keywords */
 timeline-trigger-active-range-start: auto;
 timeline-trigger-active-range-start: normal;
 
@@ -34,7 +34,7 @@ timeline-trigger-active-range-start: contain 100px;
 
 /* Multiple range start values */
 timeline-trigger-active-range-start:
-  contain,
+  contain -10px,
   entry 5%;
 
 /* Global values */
@@ -52,7 +52,7 @@ This property is specified as a comma-separated list of the following values:
 - `auto`
   - : Specifies the value of the {{cssxref("timeline-trigger-activation-range-start")}} property. This is the default value.
 - `normal`
-  - : Specifies the start, or `0%`, of the `normal` range. Equivalent to `cover 0%` for a [view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) {{cssxref("timeline-trigger-source")}}, and `scroll 0%` for a [scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#scroll_progress_timelines) `timeline-trigger-source`.
+  - : Specifies the start, or `0%`, of the `normal` range. Equivalent to `cover 0%` for a [view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) {{cssxref("timeline-trigger-source")}}, and `scroll 0%` for a [scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#scroll_progress_timelines).
 - {{cssxref("length-percentage")}}
   - : Specifies a length or percentage value measured from the beginning of the `normal` timeline. Percentages are relative to the length of the [`normal`](#normal) timeline range.
 - {{cssxref("timeline-range-name")}}
@@ -62,20 +62,20 @@ This property is specified as a comma-separated list of the following values:
 
 ## Description
 
-The `timeline-trigger-active-range-start` property can be used to explicitly set the start of a trigger's [active range](/en-US/docs/Web/CSS/Reference/Properties/timeline-trigger-active-range#description) to a value equal to or preceding the start of the trigger's activation range.
+The `timeline-trigger-active-range-start` property can be used to explicitly set the start of a trigger's [active range](/en-US/docs/Web/CSS/Reference/Properties/timeline-trigger-active-range#description) to a value equal to or preceding the {{cssxref("timeline-trigger-activation-range-start")}}, which specifies the start of the trigger's activation range.
 
-The _active range_ is the range within which a trigger remains activated once activation occurs. By default, the active range starts where the activation range starts, with activation occurring when the tracked element enters the activation range. This property creates a buffer zone and is used to prevent premature resetting when a user scrolls back and forth across the activation's starting point. Only when a tracked element moves out of the active range does the trigger become inactive.
+The _active range_ is the range within which a trigger remains activated once activation occurs. Activation occurs when the tracked element enters the _activation range_ and deactivation occurs when it leaves the _activate_ range. By default, the active range starts where the activation range starts. This property creates a buffer zone and is used to prevent premature resetting when a user scrolls back and forth across the activation's starting point. Only when a tracked element moves out of the _active range_ does the trigger become inactive.
 
 The default value of `timeline-trigger-active-range-start` is `auto`, which sets the value to the same named range and offset as the {{cssxref("timeline-trigger-activation-range-start")}}. When specified as a timeline range, offset, or both, this property sets the start of the active range to a point that is independent from the `timeline-trigger-activation-range-start` value. If the range start position doesn't extend the activation range, it has no effect.
 
-The value of `normal` sets the start of the active range to the start of the default named range, resolving to either [`cover 0%`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#cover) for a view progress timeline source or [`scroll 0%`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#scroll) for a scroll progress timeline source.
+The value of `normal` sets the start of the active range to the start of the default named range, resolving to either [`cover 0%`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#cover) when the {{cssxref("timeline-trigger-source")}} is set to a [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view) function, which sets the timeline trigger as a view progress timeline, or [`scroll 0%`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#scroll) for a [`scroll()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/scroll) function as the `timeline-trigger-source`.
 
 Other values of the `timeline-trigger-active-range-start` property can be used to set:
 
 - An offset from the `normal` range
   - : A `<length>` or `<percentage>` value specifies an offset from the beginning of the `normal` timeline of [`cover`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#cover) or [`scroll`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#scroll). Negative values outset the start, resulting in a longer active range. Positive values inset the start of the active range, making it shorter.
 - The start of a specific named range
-  - : A `<timeline-range-name>` value specifies a `0%` offset along the named timeline range, which is `cover`, `contain`, `entry`, `exit`, `entry-crossing`, `exit-crossing`, or `scroll`. See [Understanding timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names).
+  - : A `<timeline-range-name>` value specifies a `0%` offset along the named timeline range, which can be either `cover`, `contain`, `entry`, `exit`, `entry-crossing`, `exit-crossing`, or `scroll`. See [Understanding timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names).
 - An offset from a specific named range
   - : When both a `<timeline-range-name>` and `<length>` or `<percentage>` value are specified, the start is offset by the distance specified from the start of the named range. Percentage values are relative to the range specified. See [Setting insets using percentages](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets#setting_insets_using_percentages)
 
@@ -303,9 +303,9 @@ The `.trigger.longer` element creates the `.animated.longer` element's trigger v
 
 {{EmbedLiveSample("basic-example", "100%", "240")}}
 
-Try scrolling the content up. Both animations start playing when the tracked `.trigger` elements get to around the middle of the scrollport and stop playing when they start to leave the scrollport at the top edge.
+Try scrolling the content up. Both animations start playing when the tracked `.trigger` elements get to the middle of the scrollport and stop playing when they start to leave the top edge of the scrollport.
 
-After the animations start playing, but before they stop playing, if you then scroll downward again, the first animation immediately pauses when the trigger's bottom edge passes the midpoint of the scrollport. The second animation however doesn't pause until its trigger element starts to leave the scrollport at its bottom edge. This is because the active range extends how long the trigger remains active, but does not change where activation and deactivation occur.
+If you then scroll downward, both animations start playing when they are fully in the scrollport, with the top edge of the tracked elements abutting the top edge of the scrollport. The first animation pauses when the tracked element exits the activation range, when it passes the center of the scrollport. The second animation doesn't pause until its trigger element starts to leave the scrollport at its bottom edge. This is because the active range on the second animation extends how long the trigger remains active.
 
 ## Specifications
 
