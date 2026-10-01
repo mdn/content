@@ -141,7 +141,7 @@ When multiple values are specified in a comma-separated `timeline-trigger-active
 
 ### Basic usage
 
-This example demonstrates the effect of extending a trigger's active range by comparing a triggered animation with an active range that is longer than its activation range against an identical triggered animation with a `timeline-trigger-active-range` property set.
+This example demonstrates the effect of extending a trigger's active range by comparing a triggered animation with a longer active range than its activation range against an identical triggered animation with no `timeline-trigger-active-range` property set.
 
 #### HTML
 
