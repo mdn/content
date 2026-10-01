@@ -23,7 +23,7 @@ This property is a shorthand for the following CSS properties:
 ## Syntax
 
 ```css
-/* Keywords */
+/* Keyword */
 timeline-trigger-activation-range: normal;
 
 /* Range start only */
@@ -68,49 +68,46 @@ timeline-trigger-activation-range: unset;
 This property is specified as a comma-separated list of animation ranges. Each animation range is specified as a {{cssxref("timeline-trigger-activation-range-start")}} value, and optionally, a {{cssxref("timeline-trigger-activation-range-end")}} value.
 
 - `<'timeline-trigger-activation-range-start'>`
-  - : The keyword `normal`, a {{cssxref("length-percentage")}}, a {{cssxref("timeline-range-name")}}, or a `<timeline-range-name>` `<length-percentage>` pair, representing the {{cssxref("timeline-trigger-activation-range-start")}}. If a `<timeline-range-name>` is set without a `<length-percentage>`, the `<length-percentage>` defaults to `0%`.
+  - : The keyword `normal`, a {{cssxref("length-percentage")}}, a {{cssxref("timeline-range-name")}}, or a `<timeline-range-name>` followed by a `<length-percentage>`, representing the {{cssxref("timeline-trigger-activation-range-start")}}. If a `<timeline-range-name>` is set without a `<length-percentage>`, the `<length-percentage>` defaults to `0%`.
 - `<'timeline-trigger-activation-range-end'>`
-  - : The keyword `normal`, a `<length-percentage>`, a `<timeline-range-name>`, or a `<timeline-range-name>` `<length-percentage>` pair, representing the {{cssxref("timeline-trigger-activation-range-end")}}. If a `<timeline-range-name>` is set without a `<length-percentage>`, the `<length-percentage>` defaults to `100%`.
+  - : The keyword `normal`, a `<length-percentage>`, a `<timeline-range-name>`, or a `<timeline-range-name>` followed by a `<length-percentage>`, representing the {{cssxref("timeline-trigger-activation-range-end")}}. If a `<timeline-range-name>` is set without a `<length-percentage>`, the `<length-percentage>` defaults to `100%`.
 
 Percentages are relative to the length of the named timeline range if one is specified, or the timeline represented by `normal` if not.
 
 ## Description
 
-The `timeline-trigger-activation-range` property can be used to explicitly specify the start or start and end of a trigger's activation range, which means the timeline range along the associated scrollport within which a [CSS scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) trigger will activate.
+The `timeline-trigger-activation-range` property can be used to explicitly specify the start or start and end of a trigger's activation range. The property sets both the {{cssxref("timeline-trigger-activation-range-start")}} and {{cssxref("timeline-trigger-activation-range-end")}} properties in one declaration, with each specified as a timeline range, offset, or both. Start and end offsets are both measured from the start of their ranges.
 
-In other words, the `timeline-trigger-activation-range` property can be used to set the {{cssxref("timeline-trigger-activation-range-start")}} and {{cssxref("timeline-trigger-activation-range-end")}} properties both in one declaration. The start and end values can each be specified as a timeline range, offset, or both.
+A trigger's activation range is the range along the associated scrollport within which a [CSS scroll-triggered animation](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations) trigger will activate. Activation occurs when the tracked element enters the _activation range_, and deactivation occurs when it leaves the _active range_.
 
-A value of `normal` sets the activation range to the default named range. The default named range depends on the {{cssxref("timeline-trigger-source")}}: it is equivalent to `cover` for a [view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) and `scroll` for a [scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#scroll_progress_timelines). The default offset values are `0% 100%`. Therefore, `normal` resolves to either `cover 0% cover 100%` or `scroll 0% scroll 100%`.
+The default value is `normal`, which sets the activation range to the default named range. The default named range depends on the {{cssxref("timeline-trigger-source")}}: it is equivalent to `cover` for a [view progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#view_progress_timelines) and `scroll` for a [scroll progress timeline](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timelines#scroll_progress_timelines). The default offset values are `0% 100%`. Therefore, `normal` resolves to either `cover 0% cover 100%` or `scroll 0% scroll 100%`.
 
-The `timeline-trigger-activation-range` property can be used to set:
+By default, the active range is the same as the activation range. If you wish to make the active range longer than the activation range, you can do so using the {{cssxref("timeline-trigger-active-range-start")}} and {{cssxref("timeline-trigger-active-range-end")}} properties, or the {{cssxref("timeline-trigger-active-range")}} shorthand. Making the active range longer than the activation range is useful when you want to trigger an animation in a small activation range, but you want the trigger to stay active within a larger range.
+
+Other `timeline-trigger-activation-range` values can be used to set:
 
 - Start and end offsets from the `normal` range
   - : A `<length>` or `<percentage>` value specifies an offset from the beginning of the `normal` timeline, which again defaults to [`cover`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#cover) for a view progress timeline source, and [`scroll`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#scroll) for a scroll progress timeline source. Negative values outset the start and end, resulting in a longer activation range. Positive values inset the start and end of the activation range, making it shorter.
 - Specific named ranges
-  - : `<timeline-range-name>` values specify `0%` (for start) and `100%` (for end) offsets along the named timeline ranges, which can be `cover`, `contain`, `entry`, `exit`, `entry-crossing`, `exit-crossing`, or `scroll`. See [Understanding timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names).
-- Offset from specific named ranges
-  - : When both a `<timeline-range-name>` and `<length>` or `<percentage>` value are specified for the start and end values, they are offset by the distances specified the named ranges. Percentage values are relative to the range specified. See [Setting insets using percentages](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets#setting_insets_using_percentages).
+  - : If a `<timeline-range-name>` values is set without including an offset, the offset defaults to `0%` for start and `100%` for end values. The named timeline ranges include `cover`, `contain`, `entry`, `exit`, `entry-crossing`, `exit-crossing`, and `scroll`. See [Understanding timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names).
+- Offsets from specific named ranges
+  - : When both a `<timeline-range-name>` and `<length>` or `<percentage>` value are specified, they are offset by the distances specified the named ranges. Percentage values are relative to the range specified. See [Setting insets using percentages](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets#setting_insets_using_percentages).
 
-> [!NOTE]
-> Specified start and end offsets are both measured from the start of the range.
-
-In each component of a `timeline-trigger-activation-range` value, the `<timeline-range-name>` value must come before the `<length>` or `<percentage>` offset. In the following example, you might think that `timeline-trigger-activation-range-start` is being set to `contain`, and `timeline-trigger-activation-range-end` is being set to `50%`, but this is not the case. Instead, `timeline-trigger-activation-range-start` is being set to `contain 50%`:
+In each component of a `timeline-trigger-activation-range` value, the `<timeline-range-name>` value must come before the `<length>` or `<percentage>` offset. In the following example, you might think that `timeline-trigger-activation-range-start` is set to `contain`, and `timeline-trigger-activation-range-end` is set to `50%`, but this is not the case. Instead, `timeline-trigger-activation-range-start` is set to `contain 50%` while `timeline-trigger-activation-range-end` defaults to `auto`:
 
 ```css
 timeline-trigger-activation-range: contain 50%;
 ```
 
-To set `timeline-trigger-activation-range-start` to `contain` and `timeline-trigger-activation-range-end` to `50%`, you'd have to do the following, assuming that the timeline source is a view progress timeline (which defaults to `cover` as explained earlier):
+To set `timeline-trigger-activation-range-start` to `contain` and `timeline-trigger-activation-range-end` to `50%`, explicitly set `0%`, which is the default start offset:
 
 ```css
-timeline-trigger-activation-range: contain cover 50%;
+timeline-trigger-activation-range: contain 0% 50%;
 ```
 
 The `timeline-trigger-activation-range` property, along with the {{cssxref("timeline-trigger-name")}}, {{cssxref("timeline-trigger-source")}}, and {{cssxref("timeline-trigger-active-range")}} properties, can also be set using the {{cssxref("timeline-trigger")}} shorthand.
 
-The `timeline-trigger-activation-range` value is also the default value for the trigger's active range; use the {{cssxref("timeline-trigger-active-range")}} property to set this value.
-
-### `timeline-trigger-activation-range` explicit and default values
+### Explicit and default values or `timeline-trigger-activation-range`
 
 In terms of explicit and default values, `timeline-trigger-activation-range` works in exactly the same way as the {{cssxref("animation-range")}} property. See the following for more information:
 
@@ -119,20 +116,11 @@ In terms of explicit and default values, `timeline-trigger-activation-range` wor
 
 ### Specifying multiple ranges
 
-When you specify multiple comma-separated values in a single `timeline-trigger-activation-range` declaration, they apply to the timeline triggers in the order in which they appear in the {{cssxref("timeline-trigger-name")}} property. When the number of triggers and `timeline-trigger-activation-range-start` property values do not match, they are applied in the same way as [multiple animation property values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values).
+When multiple values are specified in a comma-separated `timeline-trigger-activation-range` declaration, each value applies to a timeline trigger in the order in which the names appear in the {{cssxref("timeline-trigger-name")}} property. When the number of triggers and `timeline-trigger-activation-range` property values do not match, they are applied in the same way as [multiple animation property values](/en-US/docs/Web/CSS/Guides/Animations/Using#setting_multiple_animation_property_values):
 
-For example, if multiple `timeline-trigger-name` values are set, but only a single `timeline-trigger-activation-range` value is set, the `timeline-trigger-activation-range` will apply to all the `timeline-trigger-name`s. If two or more `timeline-trigger-activation-range` values are set, they will cycle between the `timeline-trigger-name`s until every timeline trigger has a `timeline-trigger-activation-range` value set.
-
-Consider these declarations:
-
-```css
-timeline-trigger-name: --my-trigger, --my-other-trigger, --another-trigger;
-timeline-trigger-activation-range:
-  contain,
-  entry 0% exit 50%;
-```
-
-In this case, `--my-trigger` will use the `contain` range and `--my-other-trigger` will use the `entry 0% exit 50%` range. As there are three names but only two ranges, the ranges are cycled, so the third trigger name, `--another-trigger`, will use the `contain` range.
+- If the number of `timeline-trigger-activation-range` values exceeds the number of `timeline-trigger-name` values, the excess range values are discarded.
+- If the number of trigger names is greater than the number of ranges, the `timeline-trigger-activation-range` values are cycled until every `timeline-trigger-name` value has a `timeline-trigger-activation-range` value set.
+- If multiple `timeline-trigger-name` values are set, but only one `timeline-trigger-activation-range` value is set, the `timeline-trigger-activation-range` will apply to all the `timeline-trigger-name`s.
 
 ## Formal definition
 
@@ -304,7 +292,7 @@ Try scrolling the content up and down. In either direction, the animation starts
 
 ### Comparing multiple range values
 
-This example is identical to the previous example, except that it allows you to select different activation ranges and then compare their effects.
+This example is identical to the previous example, except that it allows you to select different activation ranges and compare their effects.
 
 #### HTML
 
@@ -407,7 +395,7 @@ select {
 
 {{EmbedLiveSample("compare-multiple-values", "100%", "240")}}
 
-Try selecting different range values from the `<select>` dropdown and then for each one scrolling the tracked `.trigger` element up through the scrollport to see where the animated element starts and stops rotating. This will give you an idea of each activation range's effect.
+Try selecting different range values from the `<select>` dropdown and then for each one scrolling the tracked `.trigger` element up through the scrollport to see where the animated element starts and stops rotating.
 
 ## Specifications
 

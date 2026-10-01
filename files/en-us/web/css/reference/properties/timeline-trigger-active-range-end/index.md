@@ -77,7 +77,7 @@ Other values of the `timeline-trigger-active-range-end` property can be used to 
 - The end of a specific named range
   - : A `<timeline-range-name>` value specifies a `100%` offset from the start of the named timeline range, which is either `cover`, `contain`, `entry`, `exit`, `entry-crossing`, `exit-crossing`, or `scroll`. See [Understanding timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names).
 - An offset from a specific named range
-  - : When both a `<timeline-range-name>` and `<length>` or `<percentage>` value are specified, the end is offset by the distance specified from the start of the named range. Percentage values are relative to the range specified. See [Setting insets using percentages](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets#setting_insets_using_percentages)
+  - : When both a `<timeline-range-name>` and `<length>` or `<percentage>` value are specified, the end is offset by the distance specified from the start of the named range. Percentage values are relative to the range specified. See [Setting insets using percentages](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets#setting_insets_using_percentages).
 
 If the value is set to a point prior to the end of the activation range, the value of the `timeline-trigger-activation-range-end` is used, as if the value were set to `auto`.
 

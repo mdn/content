@@ -77,7 +77,7 @@ Other values of the `timeline-trigger-active-range-start` property can be used t
 - The start of a specific named range
   - : A `<timeline-range-name>` value specifies a `0%` offset along the named timeline range, which is either `cover`, `contain`, `entry`, `exit`, `entry-crossing`, `exit-crossing`, or `scroll`. See [Understanding timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names).
 - An offset from a specific named range
-  - : When both a `<timeline-range-name>` and `<length>` or `<percentage>` value are specified, the start is offset by the distance specified from the start of the named range. Percentage values are relative to the range specified. See [Setting insets using percentages](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets#setting_insets_using_percentages)
+  - : When both a `<timeline-range-name>` and `<length>` or `<percentage>` value are specified, the start is offset by the distance specified from the start of the named range. Percentage values are relative to the range specified. See [Setting insets using percentages](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets#setting_insets_using_percentages).
 
 The `timeline-trigger-active-range-start` property, along with the {{cssxref("timeline-trigger-active-range-end")}} property, can also be set using the {{cssxref("timeline-trigger-active-range")}} shorthand, which in turn can be set using the {{cssxref("timeline-trigger")}} shorthand.
 
