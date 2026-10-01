@@ -163,7 +163,7 @@ Radio buttons look and operate in a similar manner to the push buttons on old-fa
 
 ![Shows what radio buttons looked like in the olden days.](old-radio.jpg)
 
-[Checkboxes](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox) are similar to radio buttons, but with an important distinction: radio buttons are designed for selecting one value out of a set, whereas checkboxes let you turn individual values on and off. Where multiple controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.
+Radio buttons are similar to [checkboxes](/en-US/docs/Web/HTML/Reference/Elements/input/checkbox), but with an important distinction: radio buttons are designed for selecting one value out of a set, whereas checkboxes let you turn individual values on and off. Where multiple controls exist, radio buttons allow one to be selected out of them all, whereas checkboxes allow multiple values to be selected.
 
 We already covered the fundamentals of radio buttons above. Let's now look at the other common radio-button-related features and techniques you may need to know about.
 
