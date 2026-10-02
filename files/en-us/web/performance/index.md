@@ -42,6 +42,8 @@ The [Performance guides](/en-US/docs/Web/Performance/Guides) are resources that 
   - : **Lazy loading** is a strategy to identify resources as non-blocking (non-critical) and load these only when needed. It's a way to shorten the length of the [critical rendering path](/en-US/docs/Web/Performance/Guides/Critical_rendering_path), which translates into reduced page load times.
 - [Speculative loading](/en-US/docs/Web/Performance/Guides/Speculative_loading)
   - : **Speculative loading** refers to the practice of performing navigation actions (such as DNS fetching, fetching resources, or rendering documents) before the associated pages are actually visited, based on predictions as to what pages the user is most likely to visit next.
+- [Fetch priority](/en-US/docs/Web/Performance/Guides/Fetch_priority)
+  - : **Fetch priority** is how important a browser considers a resource request to be, compared with the other requests a page makes. Adjusting it helps the resources needed for the first render arrive sooner.
 - [Performance budgets](/en-US/docs/Web/Performance/Guides/Performance_budgets)
   - : A performance budget is a limit to prevent regressions. It can apply to a file, a file type, all files loaded on a page, a specific metric (e.g., [Time to Interactive](/en-US/docs/Glossary/Time_to_interactive)), a custom metric (e.g., Time to Hero Element), or a threshold over a period of time.
 - [Performance Monitoring: RUM vs. synthetic monitoring](/en-US/docs/Web/Performance/Guides/Rum-vs-Synthetic)
