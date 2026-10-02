@@ -47,6 +47,8 @@ No notable changes.
 
 ## Changes for add-on developers
 
+- {{WebExtAPIRef("alarms.clearAll()")}} now fulfills its promise with `undefined` instead of a boolean. ([Firefox bug 2067229](https://bugzil.la/2067229))
+
 ## Experimental web features
 
 These features are shipping in Firefox 157 but are disabled by default.
