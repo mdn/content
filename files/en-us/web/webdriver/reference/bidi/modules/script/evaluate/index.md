@@ -17,11 +17,11 @@ For expressions that evaluate to a promise, you can wait for the promise to sett
 {
   "method": "script.evaluate",
   "params": {
+    "awaitPromise": false,
     "expression": "document.title",
     "target": {
       "realm": "7c37f4c0-abcd-1234-ef56-789012345678"
-    },
-    "awaitPromise": false
+    }
   }
 }
 
@@ -29,17 +29,17 @@ For expressions that evaluate to a promise, you can wait for the promise to sett
 {
   "method": "script.evaluate",
   "params": {
+    "awaitPromise": true,
     "expression": "document.querySelector('button')",
+    "resultOwnership": "root",
+    "serializationOptions": {
+      "includeShadowTree": "open",
+      "maxDomDepth": 1,
+      "maxObjectDepth": 2
+    },
     "target": {
       "context": "93ee5bd6-d256-4608-a002-9a8995cc0e5f",
       "sandbox": "myAutomationSandbox"
-    },
-    "awaitPromise": true,
-    "resultOwnership": "root",
-    "serializationOptions": {
-      "maxDomDepth": 1,
-      "maxObjectDepth": 2,
-      "includeShadowTree": "open"
     },
     "userActivation": true
   }
@@ -93,7 +93,7 @@ The `params` field contains:
         Realm IDs are returned by the [`script.getRealms`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/getRealms) command.
     - `sandbox` {{optional_inline}}
       - : A string that contains the name of the [sandbox realm](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script#sandbox_realms) in which to evaluate the expression.
-        For a non-empty name, the sandbox realm is created with the specified name if it doesn't already exist.
+        For a non-empty name, the browser creates a sandbox realm with that name in the specified context if one doesn't already exist.
         For an empty name (`""`), the expression is evaluated in the realm of the active document instead.
         This field is available only when the `target` object contains a `context` field.
 - `userActivation` {{optional_inline}}
@@ -295,11 +295,11 @@ Send the following message to evaluate the expression in that realm:
   "id": 1,
   "method": "script.evaluate",
   "params": {
+    "awaitPromise": false,
     "expression": "document.title",
     "target": {
       "realm": "93ee5bd6-d256-4608-a002-9a8995cc0e5f"
-    },
-    "awaitPromise": false
+    }
   }
 }
 ```
@@ -311,12 +311,12 @@ The browser responds as follows, where the response's outer `result` object has 
   "id": 1,
   "type": "success",
   "result": {
-    "type": "success",
     "realm": "93ee5bd6-d256-4608-a002-9a8995cc0e5f",
     "result": {
       "type": "string",
       "value": "Example Domain"
-    }
+    },
+    "type": "success"
   }
 }
 ```
@@ -332,11 +332,11 @@ Using the same connection and session as in the previous example, obtain the tab
   "id": 2,
   "method": "script.evaluate",
   "params": {
+    "awaitPromise": false,
     "expression": "document.querySelector(\".price\").textContent",
     "target": {
       "context": "ceb33cd1-a9a3-46e7-a79d-3c1a3d4d754c"
-    },
-    "awaitPromise": false
+    }
   }
 }
 ```
@@ -350,15 +350,12 @@ The top-level `"type": "success"` indicates that the command succeeded, even tho
   "id": 2,
   "type": "success",
   "result": {
-    "type": "exception",
-    "realm": "93ee5bd6-d256-4608-a002-9a8995cc0e5f",
     "exceptionDetails": {
       "columnNumber": 9,
-      "lineNumber": 0,
-      "text": "TypeError: can't access property \"textContent\", document.querySelector(...) is null",
       "exception": {
         "type": "error"
       },
+      "lineNumber": 0,
       "stackTrace": {
         "callFrames": [
           {
@@ -368,8 +365,11 @@ The top-level `"type": "success"` indicates that the command succeeded, even tho
             "url": "https://example.com/"
           }
         ]
-      }
-    }
+      },
+      "text": "TypeError: can't access property \"textContent\", document.querySelector(...) is null"
+    },
+    "realm": "93ee5bd6-d256-4608-a002-9a8995cc0e5f",
+    "type": "exception"
   }
 }
 ```
