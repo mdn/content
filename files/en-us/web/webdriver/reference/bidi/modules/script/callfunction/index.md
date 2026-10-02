@@ -16,11 +16,11 @@ The `script.callFunction` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Mod
 {
   "method": "script.callFunction",
   "params": {
+    "awaitPromise": false,
     "functionDeclaration": "() => document.title",
     "target": {
       "context": "93ee5bd6-d256-4608-a002-9a8995cc0e5f"
-    },
-    "awaitPromise": false
+    }
   }
 }
 
@@ -28,18 +28,24 @@ The `script.callFunction` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Mod
 {
   "method": "script.callFunction",
   "params": {
-    "functionDeclaration": "function (quantity) { return this.price * quantity; }",
-    "target": {
-      "context": "93ee5bd6-d256-4608-a002-9a8995cc0e5f",
-      "sandbox": "myAutomationSandbox"
-    },
-    "awaitPromise": false,
     "arguments": [
       {
         "type": "number",
         "value": 3
       }
     ],
+    "awaitPromise": false,
+    "functionDeclaration": "function (quantity) { return this.price * quantity; }",
+    "resultOwnership": "root",
+    "serializationOptions": {
+      "includeShadowTree": "open",
+      "maxDomDepth": 1,
+      "maxObjectDepth": 2
+    },
+    "target": {
+      "context": "93ee5bd6-d256-4608-a002-9a8995cc0e5f",
+      "sandbox": "myAutomationSandbox"
+    },
     "this": {
       "type": "object",
       "value": [
@@ -51,12 +57,6 @@ The `script.callFunction` [command](/en-US/docs/Web/WebDriver/Reference/BiDi/Mod
           }
         ]
       ]
-    },
-    "resultOwnership": "root",
-    "serializationOptions": {
-      "maxDomDepth": 1,
-      "maxObjectDepth": 2,
-      "includeShadowTree": "open"
     },
     "userActivation": true
   }
@@ -184,7 +184,7 @@ The `params` field contains:
         Realm IDs are returned by the [`script.getRealms`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/getRealms) command.
     - `sandbox` {{optional_inline}}
       - : A string that contains the name of the [sandbox realm](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script#sandbox_realms) in which to call the function.
-        For a non-empty name, the sandbox realm is created with the specified name if it doesn't already exist.
+        For a non-empty name, the browser creates a sandbox realm with that name in the specified context if one doesn't already exist.
         For an empty name (`""`), the function is called in the realm of the active document instead.
         This field is available only when the `target` object contains a `context` field.
 - `this` {{optional_inline}}
@@ -377,11 +377,6 @@ Send the following message to call the function with the heading element and "We
   "id": 1,
   "method": "script.callFunction",
   "params": {
-    "functionDeclaration": "(element, text) => { element.textContent = text; return element.textContent; }",
-    "target": {
-      "context": "93ee5bd6-d256-4608-a002-9a8995cc0e5f"
-    },
-    "awaitPromise": false,
     "arguments": [
       {
         "sharedId": "a1b2c3d4-e5f6-4708-9a1b-2c3d4e5f6071"
@@ -390,7 +385,12 @@ Send the following message to call the function with the heading element and "We
         "type": "string",
         "value": "Welcome back"
       }
-    ]
+    ],
+    "awaitPromise": false,
+    "functionDeclaration": "(element, text) => { element.textContent = text; return element.textContent; }",
+    "target": {
+      "context": "93ee5bd6-d256-4608-a002-9a8995cc0e5f"
+    }
   }
 }
 ```
@@ -402,12 +402,12 @@ The browser responds as follows, where the response's outer `result` object has 
   "id": 1,
   "type": "success",
   "result": {
-    "type": "success",
     "realm": "7c37f4c0-abcd-1234-ef56-789012345678",
     "result": {
       "type": "string",
       "value": "Welcome back"
-    }
+    },
+    "type": "success"
   }
 }
 ```
@@ -432,20 +432,20 @@ Set `this` to a reference containing the object's handle and `arguments` to an a
   "id": 2,
   "method": "script.callFunction",
   "params": {
-    "functionDeclaration": "function (increment) { this.count += increment; return this.count; }",
-    "target": {
-      "context": "93ee5bd6-d256-4608-a002-9a8995cc0e5f"
-    },
-    "awaitPromise": false,
-    "this": {
-      "handle": "f1e2d3c4-b5a6-4978-8b9c-0d1e2f3a4b5c"
-    },
     "arguments": [
       {
         "type": "number",
         "value": 3
       }
-    ]
+    ],
+    "awaitPromise": false,
+    "functionDeclaration": "function (increment) { this.count += increment; return this.count; }",
+    "target": {
+      "context": "93ee5bd6-d256-4608-a002-9a8995cc0e5f"
+    },
+    "this": {
+      "handle": "f1e2d3c4-b5a6-4978-8b9c-0d1e2f3a4b5c"
+    }
   }
 }
 ```
@@ -457,12 +457,12 @@ The browser responds as follows, where the nested `result` object contains the u
   "id": 2,
   "type": "success",
   "result": {
-    "type": "success",
     "realm": "7c37f4c0-abcd-1234-ef56-789012345678",
     "result": {
       "type": "number",
       "value": 5
-    }
+    },
+    "type": "success"
   }
 }
 ```
