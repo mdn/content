@@ -17,7 +17,7 @@ Because scroll container status comes from the `overflow` value, it affects layo
 
 When the content of a scroll container overflows its bounding box, the clipped content that would otherwise be hidden from view can be scrolled through, using scroll bars or other input such as touch or the mouse wheel.
 
-A scroll container has a scrollport, the visible area through which the content is scrolled, and may have scroll bars.
+A scroll container has a scrollport, the visible area through which the content is scrolled.
 
 ## Scrollport
 
