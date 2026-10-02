@@ -36,7 +36,7 @@ That leaves you with two separate problems. A resource can be found late, or it 
 
 ## Using the `fetchpriority` attribute
 
-The [`fetchpriority`](/en-US/docs/Web/HTML/Reference/Attributes/fetchpriority) attribute tells the browser how important a resource is compared with other resources of the same type. You can use it on {{htmlelement("img")}}, {{htmlelement("link")}}, and {{htmlelement("script")}} elements, but not on {{htmlelement("iframe")}}. It takes `high`, `low`, or `auto`, which is the default. Firefox also supports a non-standard, experimental {{svgattr("fetchpriority")}} attribute on some SVG elements.
+The [`fetchpriority`](/en-US/docs/Web/HTML/Reference/Attributes/fetchpriority) attribute tells the browser how important a resource is compared with other resources of the same type. You can use it on {{htmlelement("img")}}, {{htmlelement("link")}}, and {{htmlelement("script")}} elements, but not on {{htmlelement("iframe")}}. It takes `high`, `low`, or `auto`, which is the default. Some SVG elements have a non-standard, experimental {{svgattr("fetchpriority")}} attribute too.
 
 The value is relative, not absolute. In Chrome, `fetchpriority` raises or lowers a resource's default priority by an amount that depends on the resource, rather than setting it to a fixed level. A stylesheet in the `<head>` with `fetchpriority="low"` only drops from Highest to High, while an image with `fetchpriority="high"` jumps from Low straight to High.
 
