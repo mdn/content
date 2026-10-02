@@ -2,14 +2,11 @@
 title: method
 slug: Web/SVG/Reference/Attribute/method
 page-type: svg-attribute
-spec-urls: https://w3c.github.io/svgwg/svg2-draft/text.html#TextPathElementMethodAttribute
+browser-compat: svg.elements.textPath.method
 sidebar: svgref
 ---
 
 The **`method`** attribute indicates the method by which text should be rendered along the path of a {{SVGElement("textPath")}} element.
-
-> [!NOTE]
-> This attribute currently has no effect on text rendering in browsers. Text is rendered as if `method="align"` were specified, even when the value is `stretch`.
 
 You can use this attribute with the following SVG elements:
 
@@ -44,6 +41,10 @@ For {{SVGElement("textPath")}}, `method` indicates the method by which text shou
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
