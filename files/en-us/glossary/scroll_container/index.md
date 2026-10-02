@@ -19,7 +19,7 @@ A scroll container always:
 - Scts as the reference box for descendants with {{cssxref("position")}} set to `sticky`.
 - Has an automatic minimum size of 0 when it is a flex or grid item, so it can shrink smaller than its content.
 
-### Scrollport
+## Scrollport
 
 A scroll container has a **scrollport** — this is the visible part of a scroll container and coincides with the scroll container's padding box. Scrolling moves content into and out of the scrollport for viewing.
 
