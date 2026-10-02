@@ -85,11 +85,11 @@ The default value is `normal`, which sets the activation range to the default na
 Other `timeline-trigger-activation-range` values can be used to set:
 
 - Start and end offsets from the `normal` range
-  - : A `<length>` or `<percentage>` value specifies an offset from the beginning of the `normal` timeline, which again defaults to [`cover`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#cover) for a `view()` progress timeline source, and [`scroll`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#scroll) for a `scroll()` progress timeline source. Negative values outset the start and end, resulting in a longer activation range. Positive values inset the start and end of the activation range, making it shorter.
+  - : A `<length>` or `<percentage>` value specifies an offset from the beginning of the `normal` timeline, which again defaults to [`cover`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#cover) for a `view()` progress timeline source, and [`scroll`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#scroll) for a `scroll()` progress timeline source. Negative values outset the start and end, resulting in a longer activation range. Positive values inset the start and end of the activation range, shortening it.
 - Specific named ranges
   - : If a `<timeline-range-name>` values is set without including an offset, the offset defaults to `0%` for start and `100%` for end values. The named timeline ranges include `cover`, `contain`, `entry`, `exit`, `entry-crossing`, `exit-crossing`, and `scroll`. See [Understanding timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names).
 - Offsets from specific named ranges
-  - : When both a `<timeline-range-name>` and `<length>` or `<percentage>` value are specified for the start or end, the value is specified length or percentage offset from the start of the named range. Percentage values are relative to the full length of the named range specified. See [Setting insets using percentages](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets#setting_insets_using_percentages).
+  - : When both a `<timeline-range-name>` and `<length>` or `<percentage>` value are specified for the start or end, the value is specified as a length or percentage offset from the start of the named range. Percentage values are relative to the full length of the named range specified. See [Setting insets using percentages](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_insets#setting_insets_using_percentages).
 
 In each component of a `timeline-trigger-activation-range` value, the `<timeline-range-name>` value must come before the `<length>` or `<percentage>` offset. In the following example, you might think `timeline-trigger-activation-range-start` is set to `contain` and `timeline-trigger-activation-range-end` is set to `50%`, but that is not the case. Instead, `timeline-trigger-activation-range-start` is set to `contain 50%` while `timeline-trigger-activation-range-end` defaults to `normal`:
 
@@ -335,7 +335,7 @@ selectElem.addEventListener("change", () => {
 
 #### CSS
 
-The CSS is the same as for the previous example, except we've omitted the `timeline-trigger-activation-range` value. This means that until a range value is selected, the range will default to `normal` which is `cover 0% cover 100%` in this case.
+The CSS is the same as for the previous example, except we've omitted the `timeline-trigger-activation-range` value. This means that until a range value is selected, the range will default to `normal`, which is `cover 0% cover 100%` in this case.
 
 ```css hidden live-sample___compare-multiple-values
 form {
