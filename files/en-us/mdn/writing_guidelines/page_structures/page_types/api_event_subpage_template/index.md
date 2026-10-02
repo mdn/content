@@ -95,16 +95,17 @@ You could copy most of this from the property's summary on the corresponding API
 
 ## Syntax
 
-Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
+Assign to the [event handler property](/en-US/docs/Web/API/Document_Object_Model/Events#using_onevent_properties) of the interface:
 
 ```js-nolint
-addEventListener("NameOfTheEvent", (event) => { })
-
 onNameOfTheEvent = (event) => { }
 ```
 
-> [!NOTE]
-> These two methods are not exactly equivalent. Assigning to `onNameOfTheEvent` replaces the existing handler added using this method, while `addEventListener()` always adds a new listener. See [Interaction of multiple event listeners](/en-US/docs/Web/API/Document_Object_Model/Events#interaction_of_multiple_event_handlers).
+Or use the event name in {{domxref("EventTarget/addEventListener", "addEventListener()")}}:
+
+```js-nolint
+addEventListener("NameOfTheEvent", (event) => { })
+```
 
 ## Event type
 
