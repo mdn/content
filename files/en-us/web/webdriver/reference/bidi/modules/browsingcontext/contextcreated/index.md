@@ -11,7 +11,7 @@ The `browsingContext.contextCreated` [event](/en-US/docs/Web/WebDriver/Reference
 
 ## Event data
 
-The `params` field in the event notification is a context object with the following fields:
+The `params` field in the event notification is an object with the following fields:
 
 - `children`
   - : An array of [context objects](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree#contexts) that represents child contexts.

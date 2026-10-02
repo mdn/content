@@ -34,11 +34,11 @@ You can optionally filter the list by [context](/en-US/docs/Web/WebDriver/Refere
 The `params` field can contain:
 
 - `context` {{optional_inline}}
-  - : A string that contains the ID of the context that has the realms you want.
+  - : A string that contains the ID of the context whose realms you want to list.
     Context IDs are returned by commands such as [`browsingContext.getTree`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/getTree).
     If not specified, realms of all contexts are returned.
 - `type` {{optional_inline}}
-  - : A string that contains the [type of realm](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script#types_of_realms) you want.
+  - : A string that contains the [type of realm](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script#types_of_realms) you want to list.
     It can take one of the following values:
     - `"window"`: A realm whose global object is a {{domxref("Window")}}.
       This includes [sandbox realms](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script#sandbox_realms).
@@ -70,7 +70,7 @@ The `result` object in the response contains the following field:
     - `realm`
       - : A string that contains the ID of the realm.
     - `sandbox` {{optional_inline}}
-      - : A string that contains the name of the sandbox realm.
+      - : A string that contains the name of the [sandbox realm](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script#sandbox_realms).
         This field is included only for a sandbox realm, which is of type `"window"`.
     - `type`
       - : A string that indicates the type of realm.
@@ -86,8 +86,8 @@ The `result` object in the response contains the following field:
 
 ## Description
 
-The `script.getRealms` command is a way to discover realm IDs, which you can then pass to commands such as [`script.evaluate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate), [`script.callFunction`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/callFunction), or [`script.disown`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/disown) instead of a context ID.
-Since worker realms have no associated context ID, referring to a realm directly is the only way to run a script in a worker.
+The `script.getRealms` command lets you discover realm IDs, which you can then pass to commands such as [`script.evaluate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/evaluate), [`script.callFunction`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/callFunction), or [`script.disown`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/disown) instead of a context ID.
+Since worker and worklet realms have no associated context ID, referring to a realm directly is the only way to run a script in them.
 
 A context can have several realms, so filtering by `context` can return the realm of the active document, any sandbox realms, and any realms of the workers that the document owns.
 The realms of child contexts are not included.

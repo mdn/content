@@ -24,10 +24,12 @@ This event fires when a document is unloaded, which happens when its [context](/
 Unloading a document destroys the realm of the document and the realms of its worklets, so the event fires once for each of them.
 The event also fires when a worker reaches the end of its lifecycle or is terminated.
 
-The event contains only the realm ID, so if you need to know the context or worker to which a realm belongs, refer to [`script.realmCreated`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/realmCreated) or [`script.getRealms`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/getRealms).
-A realm ID is no longer valid after this event fires, and you don't need to release the objects of that realm with [`script.disown`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/disown) because they are released together with the realm.
+The event payload contains only the realm ID.
+If you need to identify the context or worker to which the realm belonged, match this ID against the realm information previously received from [`script.realmCreated`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/realmCreated) or retrieved using [`script.getRealms`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/getRealms).
 
-Unlike [`script.realmCreated`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/realmCreated), this event is never replayed, so it fires only for the realms that are destroyed after you subscribe to this event.
+After this event fires, the ID of the destroyed realm is no longer valid. The realm's objects are also released when it is destroyed, so you don't need to release them using [`script.disown`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/disown).
+
+Unlike [`script.realmCreated`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/realmCreated), this event is never replayed; it fires only for realms destroyed after you subscribe to it.
 
 ## Examples
 
