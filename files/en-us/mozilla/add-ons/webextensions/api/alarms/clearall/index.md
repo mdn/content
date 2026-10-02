@@ -1,4 +1,4 @@
- ---
+---
 title: alarms.clearAll()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/clearAll
 page-type: webextension-api-function
