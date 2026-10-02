@@ -314,9 +314,9 @@ When a form's method is [`dialog`](#additional_notes), the state of the form is 
 Without an `action`, submitting the form via the default {{HTTPMethod("GET")}} method causes a page to reload.
 For the other two buttons, we use JavaScript to prevent the submission with {{domxref("event.preventDefault()")}} and close the dialog with {{domxref("HTMLDialogElement.close()")}} or {{domxref("HTMLDialogElement.requestClose()")}}.
 
-When the dialog is closed, the return value is displayed under the "Show the dialog" button. If the dialog is closed by pressing the <kbd>Esc</kbd> key, a `cancel` event gets triggered, and finally a `close` event occurs. In this example, the `cancel` event listener sets `returnValue` to `cancelEvent`, and the `close` event listener updates the text in the {{HTMLElement("output")}} with the final `returnValue`.
+If the dialog is closed by pressing the <kbd>Esc</kbd> key or the `requestClose()` button, a `cancel` event gets triggered first, giving code a chance to prevent closure in some cases. In this example, the `cancel` event listener doesn't cancel the event; it just sets `returnValue` to `"cancelEvent"`. This value is only observable when pressing the <kbd>Esc</kbd> key, because the argument passed to `requestClose()`, `"requestClose"`, overwrites `returnValue` just before the `close` event listener gets called.
 
-If the "Cancel with requestClose" button is activated, an event listener calls {{domxref("HTMLDialogElement.requestClose()")}} with `requestClose` as its argument. This also triggers the `cancel` event listener, but the argument then overrides `returnValue` before the `close` event occurs.
+However the dialog is closed, the `close` event listener updates the text in the {{HTMLElement("output")}} with the final `returnValue`.
 
 ```js
 const showButton = document.getElementById("showDialog");
@@ -331,16 +331,6 @@ showButton.addEventListener("click", () => {
   favDialog.showModal();
 });
 
-// From Escape key or requestClose()
-favDialog.addEventListener("cancel", () => {
-  favDialog.returnValue = "cancelEvent";
-});
-
-// Display the return value whenever the dialog closes
-favDialog.addEventListener("close", () => {
-  outputBox.value = `ReturnValue: ${favDialog.returnValue}.`;
-});
-
 requestCloseBtn.addEventListener("click", (event) => {
   event.preventDefault();
   favDialog.requestClose("requestClose");
@@ -350,6 +340,16 @@ requestCloseBtn.addEventListener("click", (event) => {
 confirmBtn.addEventListener("click", (event) => {
   event.preventDefault();
   favDialog.close(selectEl.value);
+});
+
+// From Escape key or requestClose()
+favDialog.addEventListener("cancel", () => {
+  favDialog.returnValue = "cancelEvent";
+});
+
+// Display the return value whenever the dialog closes
+favDialog.addEventListener("close", () => {
+  outputBox.value = `ReturnValue: ${favDialog.returnValue}.`;
 });
 ```
 
