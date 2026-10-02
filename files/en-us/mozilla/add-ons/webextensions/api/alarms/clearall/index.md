@@ -1,4 +1,4 @@
----
+ ---
 title: alarms.clearAll()
 slug: Mozilla/Add-ons/WebExtensions/API/alarms/clearAll
 page-type: webextension-api-function
@@ -23,7 +23,7 @@ None.
 A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) fulfilled with `undefined`.
 
 > [!NOTE]
-> Before Firefox 157, the promise was fulfilled with a boolean: `true` if any alarms were cleared and `false` otherwise. Chrome fulfills the promise with `true` and Safari with `undefined`. Don't rely on the fulfillment value. See [w3c/webextensions#1055](https://github.com/w3c/webextensions/issues/1055) for details.
+> Before Firefox 157, the promise was fulfilled with a boolean: `true` if any alarms were cleared and `false` otherwise. Before Chrome 157, the promise always fulfilled with `true`. Safari always fulfills the promise with `undefined`. Don't rely on the fulfillment value. See [w3c/webextensions#1055](https://github.com/w3c/webextensions/issues/1055) for details.
 
 ## Examples
 
