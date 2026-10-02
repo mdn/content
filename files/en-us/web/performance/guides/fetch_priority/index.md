@@ -100,8 +100,8 @@ There's no `priority` property on {{domxref("Request")}} objects, so you can't r
 In this example, an article page needs two pieces of data. The article text is what the reader came for, and the comments sit below it.
 
 ```js
-async function getJSON(request) {
-  const response = await request;
+async function getJSON(responsePromise) {
+  const response = await responsePromise;
   if (!response.ok) {
     throw new Error(`HTTP error: ${response.status}`);
   }
@@ -110,13 +110,13 @@ async function getJSON(request) {
 
 async function loadArticlePage(id) {
   // Start both requests together
-  const articleRequest = fetch(`/api/articles/${id}`, { priority: "high" });
-  const commentsRequest = fetch(`/api/articles/${id}/comments`, {
+  const articlePromise = fetch(`/api/articles/${id}`, { priority: "high" });
+  const commentsPromise = fetch(`/api/articles/${id}/comments`, {
     priority: "low",
   });
 
-  renderArticle(await getJSON(articleRequest));
-  renderComments(await getJSON(commentsRequest));
+  renderArticle(await getJSON(articlePromise));
+  renderComments(await getJSON(commentsPromise));
 }
 ```
 
