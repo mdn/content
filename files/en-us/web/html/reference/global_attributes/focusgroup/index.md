@@ -606,5 +606,6 @@ Activate the button to show the popover. Now tab to the menu and note how the fo
 
 ## See also
 
-- [`focusgroupstart`](/docs/Web/HTML/Reference/Global_attributes/focusgroupstart)
+- [`focusgroupstart`](/docs/Web/HTML/Reference/Global_attributes/focusgroupstart) attribute
+- {{domxref("HTMLElement.focusGroup")}}
 - [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles)

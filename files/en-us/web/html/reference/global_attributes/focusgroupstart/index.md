@@ -11,7 +11,7 @@ sidebar: htmlsidebar
 
 {{SeeCompatTable}}
 
-The **`focusgroupstart`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) marks the first item to receive focus on entering a [`focusgroup`](/en-US/docs/Web/HTML/Reference/Global_attributes/focusgroup), when set on a focusable child of the group.
+The **`focusgroupstart`** [global attribute](/en-US/docs/Web/HTML/Reference/Global_attributes) marks the first item to receive focus on entering a [`focusgroup`](/en-US/docs/Web/HTML/Reference/Global_attributes/focusgroup), when set on a focusable descendant of the group.
 
 ## Values
 
@@ -23,7 +23,7 @@ When the [`focusgroup`](/en-US/docs/Web/HTML/Reference/Global_attributes/focusgr
 
 The `focusgroupstart` attribute can be set on a different focusable descendant to cause that element to receive the initial focus instead.
 
-Each contiguous run of focusgroup items is called a **focusgroup segment**, and each segment can have one `focusgroupstart` attribute set. Usually, each focusgroup has one segment, but sometimes a focusgroup will have multiple segments, for example when [opting some items out of the focusgroup](#opting_out_of_a_focusgroup) using `focusgroup="none"`.
+Each contiguous run of focusgroup items is called a **focusgroup segment**, and each segment can have one `focusgroupstart` attribute set. Usually, each focusgroup has one segment, but sometimes a focusgroup will have multiple segments, for example when [opting items out of a focusgroup](#opting_out_of_a_focusgroup) using `focusgroup="none"`.
 
 ## Examples
 
@@ -68,7 +68,7 @@ Tab to the toolbar, and note how the first item focused is the fourth button.
 
 ### Opting out of a focusgroup
 
-In this example we show how opt certain focusable descendants out of a focusgroup using a child container with `focusgroup="none"` set on it. This creates a focusgroup with multiple segments, each of which can be given their own `focusgroupstart`.
+In this example we show how to opt some focusable descendants out of a focusgroup using a child focusgroup with `focusgroup="none"` set on it. This creates a focusgroup with multiple segments, each of which can be given their own `focusgroupstart`.
 
 #### HTML
 
@@ -113,5 +113,6 @@ The focusgroup is split into two segments — "One" and "Two", and "Five" and "S
 
 ## See also
 
-- [`focusgroup`](/docs/Web/HTML/Reference/Global_attributes/focusgroup)
+- [`focusgroup`](/docs/Web/HTML/Reference/Global_attributes/focusgroup) attribute
+- {{domxref("HTMLElement.focusGroupStart")}}
 - [ARIA roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles)
