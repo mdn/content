@@ -23,7 +23,7 @@ Either way, you get the same kind of wrapper for the underlying function. From a
 Let's look at an example to clear things up (you can find this on GitHub as [table-set.html](https://github.com/mdn/webassembly-examples/blob/main/other-examples/table-set.html); see it [running live also](https://mdn.github.io/webassembly-examples/other-examples/table-set.html), and check out the Wasm [text representation](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/table.wat)):
 
 ```js
-const otherTable = new WebAssembly.Table({ element: "anyfunc", initial: 2 });
+const otherTable = new WebAssembly.Table({ element: "funcref", initial: 2 });
 
 WebAssembly.instantiateStreaming(fetch("table.wasm")).then((obj) => {
   const tbl = obj.instance.exports.tbl;
