@@ -38,7 +38,7 @@ const url = "{%wasm-url%}";
 await WebAssembly.instantiateStreaming(fetch(url), { console });
 ```
 
-## Syntax
+## WAT syntax
 
 ```plain
 value_type.trunc_f32_s
@@ -51,16 +51,25 @@ value_type.trunc_f32_s
 - `trunc_f32_s`
   - : The `trunc_f32_s` instruction. Must always be included after the `value_type` and a period (`.`).
 
-### Type
+### Immediates
+
+None.
+
+### Operand stack
 
 ```plain
-[input] -> [output]
+[input:f32] -> [output:i32]
+[input:f32] -> [output:i64]
 ```
 
 - `input`
   - : The input floating point number.
 - `output`
   - : The output integer.
+
+### Traps
+
+If the `input` value is [`NaN`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN), `+` or `-` [`infinity`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity), or outside the `output` value's range, the instruction traps.
 
 ### Binary encoding
 
