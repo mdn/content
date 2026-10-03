@@ -51,10 +51,6 @@ p {
 }
 ```
 
-If the specified decoration has a specific semantic meaning, like a line-through line meaning that some text has been deleted, authors are encouraged to denote this meaning using an HTML tag, like {{ HTMLElement("del") }} or {{ HTMLElement("s") }}. As browsers can disable styling in some cases, the semantic meaning won't disappear in such a situation.
-
-When setting multiple line-decoration properties at once, it may be more convenient to use the {{cssxref("text-decoration")}} shorthand property instead.
-
 ## Syntax
 
 ```css
@@ -87,6 +83,12 @@ text-decoration-style: unset;
   - : Draws a wavy line.
 - \-moz-none
   - : Draws no line. Use {{cssxref("text-decoration-line", "text-decoration-line: none")}} instead.
+
+## Description
+
+If the specified decoration has a specific semantic meaning, like a line-through line meaning that some text has been deleted, authors are encouraged to denote this meaning using an HTML tag, like {{ HTMLElement("del") }} or {{ HTMLElement("s") }}. As browsers can disable styling in some cases, the semantic meaning won't disappear in such a situation.
+
+When setting multiple line-decoration properties at once, it may be more convenient to use the {{cssxref("text-decoration")}} shorthand property instead.
 
 ## Formal definition
 

@@ -7,7 +7,7 @@ browser-compat: css.properties.overflow-wrap
 sidebar: cssref
 ---
 
-The **`overflow-wrap`** [CSS](/en-US/docs/Web/CSS) property applies to text, setting whether the browser should insert line breaks within an otherwise unbreakable string to prevent text from overflowing its line box.
+The **`overflow-wrap`** [CSS](/en-US/docs/Web/CSS) property applies to text, setting whether the browser should insert line breaks within an otherwise unbreakable string to prevent text from overflowing its line box. In contrast to {{cssxref("word-break")}}, `overflow-wrap` will only create a break if an entire word cannot be placed on its own line without overflowing.
 
 > [!NOTE]
 > The property was originally a nonstandard and unprefixed Microsoft extension called `word-wrap`, and was implemented by most browsers with the same name. It has since been renamed to `overflow-wrap`, with `word-wrap` being an alias.
@@ -48,9 +48,6 @@ overflow-wrap: break-word;
   height: 200px;
 }
 ```
-
-> [!NOTE]
-> In contrast to {{cssxref("word-break")}}, `overflow-wrap` will only create a break if an entire word cannot be placed on its own line without overflowing.
 
 ## Syntax
 

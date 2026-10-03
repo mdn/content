@@ -46,11 +46,6 @@ label {
 </form>
 ```
 
-This pseudo-class is useful for styling fields that are not required to submit a form.
-
-> [!NOTE]
-> The {{cssxref(":required")}} pseudo-class selects _required_ form fields.
-
 ## Syntax
 
 ```css
@@ -58,6 +53,13 @@ This pseudo-class is useful for styling fields that are not required to submit a
   /* ... */
 }
 ```
+
+## Description
+
+This pseudo-class is useful for styling fields that are not required to submit a form.
+
+> [!NOTE]
+> The {{cssxref(":required")}} pseudo-class selects _required_ form fields.
 
 ## Accessibility
 
