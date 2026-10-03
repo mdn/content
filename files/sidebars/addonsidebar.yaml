@@ -46,6 +46,7 @@ sidebar:
     details: closed
     children:
       - /Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
+      - /Mozilla/Add-ons/WebExtensions/Cross-origin_network_requests
       - /Mozilla/Add-ons/WebExtensions/Modify_a_web_page
       - /Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page
       - /Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts
