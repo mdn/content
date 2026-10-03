@@ -10,7 +10,7 @@ spec-urls: https://wicg.github.io/window-controls-overlay/
 
 {{DefaultAPISidebar("Window Controls Overlay API")}}{{SeeCompatTable}}
 
-The Window Controls Overlay API gives Progressive Web Apps installed on desktop operating systems the ability to hide the default window title bar and display their own content
+The Window Controls Overlay API gives [Progressive Web Apps](/en-US/docs/Web/Progressive_web_apps) (PWAs) installed on desktop operating systems the ability to hide the default window title bar and display their own content
 over the full surface area of the app window, turning the control buttons (maximize, minimize, and close) into an overlay.
 
 ## Opting-in to the feature
@@ -41,11 +41,6 @@ The part of the title bar that normally contains the application name is hidden,
 
 PWAs can use the API to position content in this area, and avoid having content hidden behind the control buttons overlay, similar to how web authors can account for the presence of notches on certain mobile devices.
 
-## CSS environment variables
-
-Progressive Web Apps can position their web content in the area that the title bar normally occupies by using the `titlebar-area-x`, `titlebar-area-y`, `titlebar-area-width`, and `titlebar-area-height` CSS environment variables.
-See [Using env() to ensure content is not obscured by window control buttons in desktop PWAs](/en-US/docs/Web/CSS/Reference/Values/env#using_env_to_ensure_content_is_not_obscured_by_window_control_buttons_in_desktop_pwas).
-
 ## Interfaces
 
 - {{domxref("WindowControlsOverlay")}} {{Experimental_Inline}}
@@ -57,6 +52,13 @@ See [Using env() to ensure content is not obscured by window control buttons in 
 
 - {{domxref("Navigator.windowControlsOverlay")}}
   - : Returns the {{domxref("WindowControlsOverlay")}} interface, which exposes information about the title bar geometry in desktop Progressive Web Apps.
+
+## Related CSS features
+
+- [`titlebar-area-*`](/en-US/docs/Web/CSS/Reference/Values/env#titlebar-area-x) `env()` variables
+  - : Enables positioning PWA content in the area that the title bar normally occupies. See [Using env() to ensure content is not obscured by window control buttons in desktop PWAs](/en-US/docs/Web/CSS/Reference/Values/env#using_env_to_ensure_content_is_not_obscured_by_window_control_buttons_in_desktop_pwas).
+- {{cssxref("window-drag")}}
+  - : Specifies elements that can be dragged to move the application window of an installed PWA with an active window controls overlay.
 
 ## Specifications
 
