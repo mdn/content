@@ -7,7 +7,7 @@ browser-compat: api.CSSStartingStyleRule
 
 {{ APIRef("CSSOM") }}
 
-The **`CSSStartingStyleRule`** interface of the [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model) represents a CSS {{CSSxRef("@starting-style")}} at-rule.
+The **`CSSStartingStyleRule`** interface of the of the [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) represents a CSS {{CSSxRef("@starting-style")}} at-rule.
 
 {{InheritanceDiagram}}
 

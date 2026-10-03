@@ -7,26 +7,11 @@ browser-compat: api.CSSStyleSheet
 
 {{APIRef("CSSOM")}}
 
-The **`CSSStyleSheet`** interface represents a single [CSS](/en-US/docs/Web/CSS) stylesheet, and lets you inspect and modify the list of rules contained in the stylesheet. It inherits properties and methods from its parent, {{domxref("StyleSheet")}}.
+The **`CSSStyleSheet`** interface of the [CSS Object Model (CSSOM)](/en-US/docs/Web/API/CSS_Object_Model) represents a single [CSS](/en-US/docs/Web/CSS) stylesheet.
+
+It can be used to inspect and modify the list of rules contained in the stylesheet.
 
 {{InheritanceDiagram}}
-
-A stylesheet consists of a collection of {{domxref("CSSRule")}} objects representing each of the rules in the stylesheet. The rules are contained in a {{domxref("CSSRuleList")}}, which can be obtained from the stylesheet's {{domxref("CSSStyleSheet.cssRules", "cssRules")}} property.
-
-For example, one rule might be a {{domxref("CSSStyleRule")}} object containing a style such as:
-
-```css
-h1,
-h2 {
-  font-size: 16pt;
-}
-```
-
-Another rule might be an _at-rule_ such as {{cssxref("@import")}} or {{cssxref("@media")}}, and so forth.
-
-See the [Obtaining a StyleSheet](#obtaining_a_stylesheet) section for the various ways a `CSSStyleSheet` object can be obtained. A `CSSStyleSheet` object can also be directly constructed. The constructor, and the {{domxref("CSSStyleSheet.replace()")}}, and {{domxref("CSSStyleSheet.replaceSync()")}} methods are newer additions to the specification, enabling _Constructable Stylesheets_.
-
-To apply a `CSSStyleSheet` to a document or shadow root, assign it to the {{domxref("Document.adoptedStyleSheets")}} or {{domxref("ShadowRoot.adoptedStyleSheets")}} property, respectively.
 
 ## Constructor
 
@@ -78,7 +63,26 @@ _These methods are legacy methods as introduced by Microsoft; these are maintain
 - {{domxref("CSSStyleSheet.removeRule", "removeRule()")}} {{Deprecated_Inline}}
   - : Functionally identical to {{domxref("CSSStyleSheet.deleteRule", "deleteRule()")}}; removes the rule at the specified index from the stylesheet's rule list.
 
-## Obtaining a StyleSheet
+## Description
+
+A stylesheet consists of a collection of {{domxref("CSSRule")}} objects representing each of the rules in the stylesheet. The rules are contained in a {{domxref("CSSRuleList")}}, which can be obtained from the stylesheet's {{domxref("CSSStyleSheet.cssRules", "cssRules")}} property.
+
+For example, one rule might be a {{domxref("CSSStyleRule")}} object containing a style such as:
+
+```css
+h1,
+h2 {
+  font-size: 16pt;
+}
+```
+
+Another rule might be an _at-rule_ such as {{cssxref("@import")}} or {{cssxref("@media")}}, and so forth.
+
+See the [Obtaining a StyleSheet](#obtaining_a_stylesheet) section for the various ways a `CSSStyleSheet` object can be obtained. A `CSSStyleSheet` object can also be directly constructed. The constructor, and the {{domxref("CSSStyleSheet.replace()")}}, and {{domxref("CSSStyleSheet.replaceSync()")}} methods are newer additions to the specification, enabling _Constructable Stylesheets_.
+
+To apply a `CSSStyleSheet` to a document or shadow root, assign it to the {{domxref("Document.adoptedStyleSheets")}} or {{domxref("ShadowRoot.adoptedStyleSheets")}} property, respectively.
+
+### Obtaining a StyleSheet
 
 A stylesheet is associated with at most one {{domxref("Document")}}, which it applies to (unless {{domxref("StyleSheet.disabled", "disabled", "", 1)}}). A list of `CSSStyleSheet` objects for a given document can be obtained using the {{domxref("Document.styleSheets")}} property. A specific style sheet can also be accessed from its _owner_ object (`Node` or `CSSImportRule`), if any.
 
