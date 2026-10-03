@@ -1,5 +1,5 @@
 ---
-title: management.onEnabled()
+title: management.onEnabled
 slug: Mozilla/Add-ons/WebExtensions/API/management/onEnabled
 page-type: webextension-api-event
 browser-compat: webextensions.api.management.onEnabled
