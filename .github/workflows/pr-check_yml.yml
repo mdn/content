@@ -1,16 +1,7 @@
 name: Lint YAML
 
 on:
-  pull_request:
-    paths:
-      - .github/workflows/pr-check_yml.yml
-      - .nvmrc
-      - package.json
-      - package-lock.json
-      - "*.yml"
-      - "*.yaml"
-      - "**/*.yml"
-      - "**/*.yaml"
+  workflow_call:
 
 # No GITHUB_TOKEN permissions, as we only use it to increase API limit.
 permissions: {}
