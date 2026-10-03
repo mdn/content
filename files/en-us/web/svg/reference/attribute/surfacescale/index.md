@@ -2,6 +2,9 @@
 title: surfaceScale
 slug: Web/SVG/Reference/Attribute/surfaceScale
 page-type: svg-attribute
+browser-compat:
+  - svg.elements.feDiffuseLighting.surfaceScale
+  - svg.elements.feSpecularLighting.surfaceScale
 spec-urls:
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fediffuselighting-surfacescale
   - https://drafts.csswg.org/filter-effects-1/#element-attrdef-fespecularlighting-surfacescale
@@ -95,6 +98,10 @@ For {{SVGElement("feDiffuseLighting")}}, `surfaceScale` defines the height of th
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

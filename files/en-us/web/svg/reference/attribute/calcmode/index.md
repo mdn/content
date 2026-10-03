@@ -2,6 +2,7 @@
 title: calcMode
 slug: Web/SVG/Reference/Attribute/calcMode
 page-type: svg-attribute
+browser-compat: svg.elements.animateMotion.calcMode
 spec-urls: https://svgwg.org/specs/animations/#CalcModeAttribute
 sidebar: svgref
 ---
@@ -50,6 +51,10 @@ You can use this attribute with the following SVG elements:
 ## Specifications
 
 {{Specifications}}
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 
