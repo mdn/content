@@ -51,7 +51,7 @@ The `PerformanceEntry` instances will always be one of the following subclasses:
 - {{domxref("PerformanceEntry.toJSON","PerformanceEntry.toJSON()")}}
   - : Returns a JSON-serializable plain object representing the `PerformanceEntry` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
-## Example
+## Examples
 
 ### Working with performance entries
 
