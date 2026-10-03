@@ -924,7 +924,7 @@ This is supported on desktop from Firefox 154 and on Android from Firefox 156 ([
 | Beta              | 154             | No                  |
 | Release           | 154             | No                  |
 
-- `clipboard.customFormatSupport.enabled`
+- `dom.clipboard.customFormatSupport.enabled`
   - : Set to `true` to enable.
 
 ## Security and privacy
