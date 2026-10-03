@@ -8,7 +8,9 @@ browser-compat: api.DOMRectReadOnly.toJSON
 
 {{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
-The {{domxref("DOMRectReadOnly")}} method `toJSON()` returns a {{Glossary("JSON")}} representation of the `DOMRectReadOnly` object.
+The **`toJSON()`** method of the {{domxref("DOMRectReadOnly")}} interface returns a JSON-serializable plain object representing the `DOMRectReadOnly` object.
+
+The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `DOMRectReadOnly` object is stringified. This method is generally intended to, by default, usefully serialize `DOMRectReadOnly` objects during [JSON](/en-US/docs/Glossary/JSON) serialization, which can then be deserialized using the {{domxref("DOMRectReadOnly/fromRect_static", "DOMRectReadOnly.fromRect()")}} function within the reviver of {{jsxref("JSON.parse()")}}.
 
 ## Syntax
 
@@ -22,18 +24,56 @@ None.
 
 ### Return value
 
-A new object whose properties are set to the values in the `DOMRectReadOnly` on which the method was called.
+A JSON-serializable plain object, containing the following properties:
+
+- {{domxref("DOMRectReadOnly/x", "x")}}
+- {{domxref("DOMRectReadOnly/y", "y")}}
+- {{domxref("DOMRectReadOnly/width", "width")}}
+- {{domxref("DOMRectReadOnly/height", "height")}}
+- {{domxref("DOMRectReadOnly/top", "top")}}
+- {{domxref("DOMRectReadOnly/right", "right")}}
+- {{domxref("DOMRectReadOnly/bottom", "bottom")}}
+- {{domxref("DOMRectReadOnly/left", "left")}}
+
+Each property's value is copied as-is.
 
 ## Examples
 
-This example creates a {{domxref("DOMRectReadOnly")}} that represents a rectangle at position `(10, 20)` with a width of `100` and a height of `50`. It then calls `toJSON()` to obtain a JSON representation of the rectangle.
+### Calling toJSON() directly
+
+Calling `toJSON()` directly returns a plain object containing the `DOMRectReadOnly` object's properties.
 
 ```js
 const rect = new DOMRectReadOnly(10, 20, 100, 50);
 
-const rectJSON = rect.toJSON();
+const json = rect.toJSON();
+console.log(json);
+// { x: 10, y: 20, width: 100, height: 50, top: 20, right: 110, bottom: 70, left: 10 }
+console.log(typeof json); // "object"
+```
+
+### Serializing to a JSON string
+
+The `DOMRectReadOnly` object from the previous example is automatically serialized by {{jsxref("JSON.stringify()")}}, which calls the `toJSON()` method.
+
+```js
+const rectJSON = JSON.stringify(rect);
 console.log(rectJSON);
-// Output: { x: 10, y: 20, width: 100, height: 50, top: 20, right: 110, bottom: 70, left: 10 }
+```
+
+This would log a JSON string like so (formatted for readability):
+
+```json
+{
+  "x": 10,
+  "y": 20,
+  "width": 100,
+  "height": 50,
+  "top": 20,
+  "right": 110,
+  "bottom": 70,
+  "left": 10
+}
 ```
 
 ## Specifications
