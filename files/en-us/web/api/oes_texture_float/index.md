@@ -13,7 +13,9 @@ The **`OES_texture_float`** extension is part of the [WebGL API](/en-US/docs/Web
 WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. For more information, see also [Using Extensions](/en-US/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/en-US/docs/Web/API/WebGL_API/Tutorial).
 
 > [!NOTE]
-> This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, floating-point texture formats and the `gl.FLOAT` texture data type are available in the core API, so this extension is not needed. However, making a floating-point texture color-renderable is a separate feature. In WebGL 2, use the {{domxref("EXT_color_buffer_float")}} extension for floating-point color buffers, or {{domxref("EXT_color_buffer_half_float")}} when 16-bit floating-point render targets are supported but 32-bit floating-point render targets are not.
+> This extension is only available to {{domxref("WebGLRenderingContext", "WebGL1", "", 1)}} contexts. In {{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}, floating-point texture formats and the `gl.FLOAT` texture data type are available by default (and you must pair it with a sized internal format such as `gl.RGBA32F`).
+>
+> In WebGL 2, you still need extensions to make a floating-point texture color-renderable: use the {{domxref("EXT_color_buffer_float")}} extension for floating-point color buffers, or {{domxref("EXT_color_buffer_half_float")}} when 16-bit floating-point render targets are supported but 32-bit floating-point render targets are not.
 
 ## Extended methods
 
