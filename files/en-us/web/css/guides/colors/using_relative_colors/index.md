@@ -343,6 +343,24 @@ To make channel value calculations work in relative colors, all origin color cha
 
 Check the different [color function pages](/en-US/docs/Web/CSS/Guides/Colors#functions) for the specifics of what their origin channel values resolve to.
 
+### Channel values outside the output range
+
+Channel values are not limited to the usual range of the output color function. When the origin color lies outside the gamut of the output color function, its channel values resolve to numbers outside that range, and relative color syntax uses them as they are: they are not clamped or gamut-mapped.
+
+For example, `color(display-p3 1 0.5 0.5)` is a pink that lies inside the display-p3 gamut but outside the sRGB gamut that `rgb()` uses. In the following declaration, the `r` channel of the origin color resolves to about `273.86`, which is above the `0` to `255` range of `rgb()`:
+
+```css
+color: rgb(from color(display-p3 1 0.5 0.5) calc(r - 1) g b);
+```
+
+Subtracting `1` gives about `272.86`, and the result keeps that value rather than clamping it to `255`. The computed value is equivalent to:
+
+```css
+color: color(srgb 1.07006 0.462581 0.483011);
+```
+
+Relative colors created with `rgb()` are serialized as `color(srgb ...)` values, a form that can represent channel values outside the `0` to `1` range. Writing the same channel values in an absolute color, such as `rgb(272.86 117.96 123.17)`, gives a different result, because absolute `rgb()` channel values are clamped to the `0` to `255` range when they are parsed.
+
 ## Checking for browser support
 
 You can check that a browser supports relative color syntax by running it through a {{cssxref("@supports")}} at-rule.
