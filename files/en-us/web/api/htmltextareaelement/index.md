@@ -125,13 +125,10 @@ textarea.no-scrollbars {
 #### HTML
 
 ```html
-<form>
-  <fieldset>
-    <legend>Your comments</legend>
-    <p><textarea class="no-scrollbars"></textarea></p>
-    <p><input type="submit" value="Send" /></p>
-  </fieldset>
-</form>
+<fieldset>
+  <legend>Your comments</legend>
+  <p><textarea class="no-scrollbars"></textarea></p>
+</fieldset>
 ```
 
 {{EmbedLiveSample('Autogrowing_textarea_example', 600, 300)}}
@@ -141,8 +138,9 @@ textarea.no-scrollbars {
 Insert some HTML tags in a textarea:
 
 ```js live-sample___insert-html
+const textArea = document.querySelector("#myTextArea");
+
 function insert(startTag, endTag) {
-  const textArea = document.myForm.myTextArea;
   const start = textArea.selectionStart;
   const end = textArea.selectionEnd;
   const oldText = textArea.value;
@@ -165,7 +163,7 @@ function insertURL() {
   if (newURL) {
     insert(`<a href="${newURL}">`, "</a>");
   } else {
-    document.myForm.myTextArea.focus();
+    textArea.focus();
   }
 }
 
@@ -191,21 +189,19 @@ Decorate the span to behave like a link:
 ```
 
 ```html live-sample___insert-html
-<form name="myForm">
-  <p>
-    [
-    <span class="intLink" id="format-strong"><strong>Bold</strong></span> |
-    <span class="intLink" id="format-em"><em>Italic</em></span> |
-    <span class="intLink" id="format-link">URL</span> |
-    <span class="intLink" id="format-code">code</span> ]
-  </p>
+<p>
+  [
+  <span class="intLink" id="format-strong"><strong>Bold</strong></span> |
+  <span class="intLink" id="format-em"><em>Italic</em></span> |
+  <span class="intLink" id="format-link">URL</span> |
+  <span class="intLink" id="format-code">code</span> ]
+</p>
 
-  <p>
-    <textarea name="myTextArea" rows="10" cols="50">
+<p>
+  <textarea id="myTextArea" name="myTextArea" rows="10" cols="50">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis, arcu vitae adipiscing placerat, nisl lectus accumsan nisi, vitae iaculis sem neque vel lectus. Praesent tristique commodo lorem quis fringilla. Sed ac tellus eros. 
-    </textarea>
-  </p>
-</form>
+  </textarea>
+</p>
 ```
 
 {{EmbedLiveSample('insert-html', , '300', , , , , 'allow-modals')}}

@@ -49,6 +49,12 @@ Invalid values:
 <ul id="log"></ul>
 ```
 
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
+```
+
 ### JavaScript
 
 ```js

@@ -32,19 +32,17 @@ select:focus-visible {
 ```
 
 ```html interactive-example
-<form>
-  <p>Which flavor would you like to order?</p>
-  <label>Full Name: <input name="firstName" type="text" /></label>
-  <label
-    >Flavor:
-    <select name="flavor">
-      <option>Cherry</option>
-      <option>Green Tea</option>
-      <option>Moose Tracks</option>
-      <option>Mint Chip</option>
-    </select>
-  </label>
-</form>
+<p>Which flavor would you like to order?</p>
+<label>Full Name: <input name="firstName" type="text" /></label>
+<label
+  >Flavor:
+  <select name="flavor">
+    <option>Cherry</option>
+    <option>Green Tea</option>
+    <option>Moose Tracks</option>
+    <option>Mint Chip</option>
+  </select>
+</label>
 ```
 
 ## Syntax

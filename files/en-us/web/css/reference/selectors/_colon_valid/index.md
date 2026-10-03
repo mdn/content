@@ -27,21 +27,19 @@ input:valid {
 ```
 
 ```html interactive-example
-<form>
-  <label for="email">Email Address:</label>
-  <input id="email" name="email" type="email" value="na@me@example.com" />
+<label for="email">Email Address:</label>
+<input id="email" name="email" type="email" value="na@me@example.com" />
 
-  <label for="secret">Secret Code: (lower case letters)</label>
-  <input id="secret" name="secret" type="text" value="test" pattern="[a-z]+" />
+<label for="secret">Secret Code: (lower case letters)</label>
+<input id="secret" name="secret" type="text" value="test" pattern="[a-z]+" />
 
-  <label for="age">Your age: (18+)</label>
-  <input id="age" name="age" type="number" value="5" min="18" />
+<label for="age">Your age: (18+)</label>
+<input id="age" name="age" type="number" value="5" min="18" />
 
-  <label
-    ><input name="tos" type="checkbox" required checked /> - Do you agree to
-    ToS?</label
-  >
-</form>
+<label
+  ><input name="tos" type="checkbox" required checked /> - Do you agree to
+  ToS?</label
+>
 ```
 
 ## Syntax
@@ -66,30 +64,25 @@ The color green is commonly used to indicate valid input. People who have certai
 In this example, we include extra `<span>` elements to generate content that indicates valid or invalid data:
 
 ```html
-<form>
-  <fieldset>
-    <legend>Feedback form</legend>
-    <p>Required fields are labeled with "required".</p>
-    <div>
-      <label for="fname">First name: </label>
-      <input id="fname" name="fname" type="text" required />
-      <span></span>
-    </div>
-    <div>
-      <label for="lname">Last name: </label>
-      <input id="lname" name="lname" type="text" required />
-      <span></span>
-    </div>
-    <div>
-      <label for="email">
-        Email address (include if you want a response):
-      </label>
-      <input id="email" name="email" type="email" />
-      <span></span>
-    </div>
-    <div><button>Submit</button></div>
-  </fieldset>
-</form>
+<fieldset>
+  <legend>Feedback form</legend>
+  <p>Required fields are labeled with "required".</p>
+  <div>
+    <label for="fname">First name: </label>
+    <input id="fname" name="fname" type="text" required />
+    <span></span>
+  </div>
+  <div>
+    <label for="lname">Last name: </label>
+    <input id="lname" name="lname" type="text" required />
+    <span></span>
+  </div>
+  <div>
+    <label for="email"> Email address (include if you want a response): </label>
+    <input id="email" name="email" type="email" />
+    <span></span>
+  </div>
+</fieldset>
 ```
 
 To provide these indicators, we use the following CSS:
@@ -117,7 +110,6 @@ fieldset > div {
   flex-flow: row wrap;
 }
 
-button,
 label,
 input {
   display: block;
@@ -148,11 +140,6 @@ input:required + span::after {
   padding: 5px 10px;
   top: -26px;
   left: -70px;
-}
-
-button {
-  width: 60%;
-  margin: 0 auto;
 }
 ```
 

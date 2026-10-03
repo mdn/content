@@ -30,20 +30,17 @@ Returns `true` if the element's value has no validity problems; otherwise, retur
 
 #### HTML
 
-We include a form containing a required number field and two buttons: one to check the form and the other to submit it.
+We include a required number field and a button to report its validity.
 
 ```html
-<form action="#" method="post">
-  <p>
-    <label for="age">Your (21 to 65) </label>
-    <input type="number" name="age" required id="age" min="21" max="65" />
-  </p>
-  <p>
-    <button type="submit">Submit</button>
-    <button type="button" id="report">reportValidity()</button>
-  </p>
-  <p id="log"></p>
-</form>
+<p>
+  <label for="age">Your (21 to 65) </label>
+  <input type="number" name="age" required id="age" min="21" max="65" />
+</p>
+<p>
+  <button type="button" id="report">reportValidity()</button>
+</p>
+<p id="log"></p>
 ```
 
 #### JavaScript
@@ -83,18 +80,15 @@ This example demonstrates how a custom error message can cause a `false` return 
 We add a "Fix me" button to the HTML from the previous example.
 
 ```html hidden
-<form action="#" method="post">
-  <p>
-    <label for="age">Your (21 to 65) </label>
-    <input type="number" name="age" required id="age" min="21" max="65" />
-  </p>
-  <p>
-    <button type="submit">Submit</button>
-    <button type="button" id="report">reportValidity()</button>
-    <button type="button" id="fix">Fix issues</button>
-  </p>
-  <p id="log"></p>
-</form>
+<p>
+  <label for="age">Your (21 to 65) </label>
+  <input type="number" name="age" required id="age" min="21" max="65" />
+</p>
+<p>
+  <button type="button" id="report">reportValidity()</button>
+  <button type="button" id="fix">Fix issues</button>
+</p>
+<p id="log"></p>
 ```
 
 #### JavaScript
