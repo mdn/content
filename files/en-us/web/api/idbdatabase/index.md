@@ -55,11 +55,11 @@ The following events are available to `IDBDatabase` via event bubbling from {{do
 
 ## Example
 
-In the following code snippet, we open a database asynchronously ({{domxref("IDBFactory")}}), handle success and error cases, and create a new object store in the case that an upgrade is needed (`IDBDatabase`). For a complete working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
+In the following code snippet, we open a database asynchronously ({{domxref("IDBFactory")}}), handle success and error cases, and create or update the object store in the case that an upgrade is needed (`IDBDatabase`). For a complete working example, see our [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) app ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/)).
 
 ```js
 // Let us open our database
-const DBOpenRequest = window.indexedDB.open("toDoList", 4);
+const DBOpenRequest = window.indexedDB.open("toDoList", 2);
 
 // these two event handlers act on the IDBDatabase object,
 // when the database is opened successfully, or not
@@ -69,7 +69,7 @@ DBOpenRequest.onerror = (event) => {
 };
 
 DBOpenRequest.onsuccess = (event) => {
-  node.appendChild(document.createElement("li")).textContent =
+  note.appendChild(document.createElement("li")).textContent =
     "Database initialized.";
 
   // store the result of opening the database in the db
@@ -82,7 +82,7 @@ DBOpenRequest.onsuccess = (event) => {
 };
 
 // This event handles the event whereby a new version of
-// the database needs to be created Either one has not
+// the database needs to be created. Either one has not
 // been created before, or a new version number has been
 // submitted via the window.indexedDB.open line above
 
@@ -94,25 +94,36 @@ DBOpenRequest.onupgradeneeded = (event) => {
       "Error loading database.";
   };
 
-  // Create an objectStore for this database using
-  // IDBDatabase.createObjectStore
+  // event.oldVersion is the version the user already has: 0 if the
+  // database is being created for the first time. Apply each upgrade
+  // step the user hasn't had yet, so that both new users and users
+  // with an older version end up with the same database.
 
-  const objectStore = db.createObjectStore("toDoList", {
-    keyPath: "taskTitle",
-  });
+  if (event.oldVersion < 1) {
+    // Version 1: create an objectStore for this database using
+    // IDBDatabase.createObjectStore, and define what data items
+    // it will contain
+    const objectStore = db.createObjectStore("toDoList", {
+      keyPath: "taskTitle",
+    });
 
-  // define what data items the objectStore will contain
+    objectStore.createIndex("hours", "hours", { unique: false });
+    objectStore.createIndex("minutes", "minutes", { unique: false });
+    objectStore.createIndex("day", "day", { unique: false });
+    objectStore.createIndex("month", "month", { unique: false });
+    objectStore.createIndex("year", "year", { unique: false });
+  }
 
-  objectStore.createIndex("hours", "hours", { unique: false });
-  objectStore.createIndex("minutes", "minutes", { unique: false });
-  objectStore.createIndex("day", "day", { unique: false });
-  objectStore.createIndex("month", "month", { unique: false });
-  objectStore.createIndex("year", "year", { unique: false });
-
-  objectStore.createIndex("notified", "notified", { unique: false });
+  if (event.oldVersion < 2) {
+    // Version 2: add an index to the object store created in version 1.
+    // Calling createObjectStore() again here would throw, because the
+    // store already exists, so get it from the upgrade transaction
+    const objectStore = DBOpenRequest.transaction.objectStore("toDoList");
+    objectStore.createIndex("notified", "notified", { unique: false });
+  }
 
   note.appendChild(document.createElement("li")).textContent =
-    "Object store created.";
+    "Database upgraded.";
 };
 ```
 
