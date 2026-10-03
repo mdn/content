@@ -476,10 +476,6 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 - [jPlayer](https://jPlayer.org/): Gratis and Open Source (MIT Licensed.)
 - [mediaelement.js](https://www.mediaelementjs.com/): Gratis and Open Source (MIT Licensed.)
 
-### Web Audio API
-
-- [AudioContext monkeypatch](https://github.com/cwilso/AudioContext-MonkeyPatch): A polyfill for older versions of the Web Audio API; Open Source (Apache 2 Licensed.)
-
 ## Guides
 
 - [Creating a cross-browser video player](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)

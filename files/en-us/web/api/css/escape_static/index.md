@@ -68,4 +68,3 @@ const element = document.querySelector(`a[href="#${CSS.escape(fragment)}"]`);
 ## See also
 
 - The {{DOMxRef("CSS")}} interface where this static method resides.
-- [A polyfill for the CSS.escape](https://github.com/mathiasbynens/CSS.escape/blob/master/css.escape.js)
