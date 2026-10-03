@@ -1,5 +1,5 @@
 ---
-title: getLastChecked
+title: captivePortal.getLastChecked()
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/getLastChecked
 page-type: webextension-api-function
 browser-compat: webextensions.api.captivePortal.getLastChecked
