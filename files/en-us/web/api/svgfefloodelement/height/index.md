@@ -35,6 +35,6 @@ console.log(verticalSize.baseVal.value); // the `height` value
 ## See also
 
 - {{domxref("SVGFEFloodElement.width")}}
-- [SVG filter tutorial](/en-US/docs/Web/SVG/Guides/SVG_filters)
+- [Applying effects with SVG filters](/en-US/docs/Web/SVG/Guides/Filters)
 - CSS {{cssxref("blend-mode")}} data type
 - CSS {{cssxref("mix-blend-mode")}} property
