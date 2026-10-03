@@ -537,6 +537,9 @@ The parameter of each `style()` is a single `<style-feature>`. A **`<style-featu
 }
 ```
 
+> [!NOTE]
+> Browsers currently only support custom properties as style features. Queries for regular CSS properties and declarations, such as `style(color: green)` or `not style(background-color: red)`, never match. See [Style query CSS declarations and properties](/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#style_query_css_declarations_and_properties).
+
 A style feature without a value evaluates to true if the computed value is different from the initial value for the given property.
 
 If the `<style-feature>` passed as the `style()` function's argument is a declaration, the style query evaluates to true if the declaration's value is the same as the computed value of that property for the container being queried. Otherwise, it resolves to false.
