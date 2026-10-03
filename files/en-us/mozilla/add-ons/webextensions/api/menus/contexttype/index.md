@@ -45,7 +45,7 @@ Values of this type are strings. The item is displayed when the given context ap
     From Firefox 63, clicking the menu item on a tab grants the [activeTab](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) permission for the tab clicked, even if that isn't the currently active tab.
 
 - `tools_menu`
-  - : The item will be added to the browser's tools menu. Note that this is only available if you access `ContextType` through the `menus` namespace. It is not available if you access it through the `contextMenus` namespace.
+  - : The item is added to the browser's tools menu.
 - `video`
   - : Applies when the user context-clicks a [video](/en-US/docs/Web/HTML/Reference/Elements/video) element.
 
