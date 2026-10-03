@@ -25,6 +25,11 @@ getAll(property)
 
 An array of {{domxref("CSSStyleValue")}} objects.
 
+### Exceptions
+
+- {{jsxref("TypeError")}}
+  - : Thrown if `property` is not a valid CSS property name.
+
 ## Examples
 
 ### Basic usage
@@ -51,3 +56,11 @@ console.log(allBkImages); // logs an array with each background image as an item
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("StylePropertyMapReadOnly.entries()")}}
+- {{domxref("StylePropertyMapReadOnly.get()")}}
+- {{domxref("StylePropertyMapReadOnly.has()")}}
+- [Using the CSS Typed OM](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
+- [CSS Typed Object Model API](/en-US/docs/Web/API/CSS_Typed_OM_API)
