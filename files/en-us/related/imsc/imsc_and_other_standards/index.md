@@ -21,21 +21,18 @@ IMSC is unrelated to [WebVTT](https://w3c.github.io/webvtt/), and does not use t
 
 ## Active IMSC versions
 
-Two versions of IMSC are in use today:
+Four versions of IMSC are in use today:
 
-- [IMSC 1.0.1](https://www.w3.org/TR/ttml-imsc1.0.1/)
-- [IMSC 1.1](https://www.w3.org/TR/ttml-imsc1.1/)
+- [IMSC 1.0.1](https://www.w3.org/standards/history/ttml-imsc1.0.1/)
+- [IMSC 1.1](https://www.w3.org/standards/history/ttml-imsc1.1/)
+- [IMSC 1.2](https://www.w3.org/standards/history/ttml-imsc1.2/)
+- [IMSC Text Profile 1.3](https://w3c.github.io/imsc/imsc1/spec/ttml-ww-profiles.html)
 
-IMSC 1.1 was designed such that valid IMSC 1.0.1 documents are valid IMSC 1.1 documents and will render as intended on an IMSC 1.1 renderer. It does however add important features on top of IMSC 1.0.1:
+These versions are backwards compatible, so old profiles continue to work on software that support new versions. IMSC 1.3 does not define image profiles.
 
-- Japanese text layout features such as ruby.
-- Support for author-controlled luminance when compositing onto absolute luminance High-Dynamic Range video.
-- Support for stereoscopic 3D.
+IMSC 1.0.1 and 1.1 are still relevant because widely used platforms and tools, including [imscJS](https://github.com/sandflow/imscJS), [dash.js](https://dashif.org/dash.js/pages/developers/dependencies.html), and [AWS Elemental MediaConvert](https://docs.aws.amazon.com/mediaconvert/latest/ug/imsc-captions-support.html), only have documented support for these older versions.
 
-> [!NOTE]
-> IMSC 1.1 also deprecates, but does not prohibit, a limited number features that have no practical use or for which better alternatives exist.
-
-In summary, authors are encouraged to create IMSC 1.0.1 documents if possible and for maximal compatibility, and implementers are encouraged to implement support for IMSC 1.1 for worldwide coverage.
+For details about the version history, see the specifications' summaries of substantive changes for [IMSC 1.1](https://www.w3.org/TR/ttml-imsc1.1/#substantive-changes-summary), [IMSC 1.2](https://www.w3.org/TR/ttml-imsc1.2/#substantive-changes-summary), and [IMSC Text Profile 1.3](https://w3c.github.io/imsc/imsc1/spec/ttml-ww-profiles.html#substantive-changes-summary).
 
 ## Summary
 
