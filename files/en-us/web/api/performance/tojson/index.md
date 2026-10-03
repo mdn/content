@@ -8,7 +8,9 @@ browser-compat: api.Performance.toJSON
 
 {{APIRef("Performance API")}}{{AvailableInWorkers}}
 
-The **`toJSON()`** method of the {{domxref("Performance")}} interface is a {{Glossary("Serialization","serializer")}}; it returns a JSON representation of the {{domxref("Performance")}} object.
+The **`toJSON()`** method of the {{domxref("Performance")}} interface returns a JSON-serializable plain object representing the `Performance` object.
+
+The `toJSON()` method is automatically called by {{jsxref("JSON.stringify()")}} when a `Performance` object is stringified. This method is generally intended to, by default, usefully serialize `Performance` objects during [JSON](/en-US/docs/Glossary/JSON) serialization.
 
 ## Syntax
 
@@ -22,24 +24,41 @@ None.
 
 ### Return value
 
-A {{jsxref("JSON")}} object that is the serialization of the {{domxref("Performance")}} object.
+A JSON-serializable plain object, containing the following properties:
 
-The returned JSON doesn't contain the {{domxref("Performance.eventCounts", "eventCounts")}} property because it is of type {{domxref("EventCounts")}}, which doesn't provide a `toJSON()` operation.
+- {{domxref("Performance/timeOrigin", "timeOrigin")}}
+- {{domxref("Performance/timing", "timing")}}
+- {{domxref("Performance/navigation", "navigation")}}
+
+When passed to {{jsxref("JSON.stringify()")}}, the `timing` and `navigation` properties are serialized using {{domxref("PerformanceTiming/toJSON", "PerformanceTiming.toJSON()")}} and {{domxref("PerformanceNavigation/toJSON", "PerformanceNavigation.toJSON()")}}, respectively. The `timeOrigin` value is copied as-is.
+
+The returned object doesn't contain the {{domxref("Performance.eventCounts", "eventCounts")}} property because it is of type {{domxref("EventCounts")}}, which doesn't provide a `toJSON()` operation.
 
 > [!NOTE]
-> The JSON object contains the serialization of the deprecated {{domxref("performance.timing")}} and {{domxref("performance.navigation")}} properties. To get a JSON representation of the newer {{domxref("PerformanceNavigationTiming")}} interface, call {{domxref("PerformanceNavigationTiming.toJSON()")}} instead.
+> In a window context, the returned object includes the deprecated {{domxref("performance.timing")}} and {{domxref("performance.navigation")}} properties. These properties are not available in workers. To get a JSON representation of the newer {{domxref("PerformanceNavigationTiming")}} interface, call {{domxref("PerformanceNavigationTiming.toJSON()")}} instead.
 
 ## Examples
 
-### Using the toJSON method
+### Calling toJSON() directly
 
-In this example, calling `performance.toJSON()` returns a JSON representation of the `Performance` object.
+Calling `toJSON()` directly on `performance` returns a plain object. You can access its properties, which is the same as accessing them on the original object.
 
 ```js
-performance.toJSON();
+const json = performance.toJSON();
+console.log(json); // A plain object
+console.log(typeof json); // "object"
+console.log(json.timeOrigin); // Same value as performance.timeOrigin
 ```
 
-This would log a JSON object like so:
+### Serializing to a JSON string
+
+In this example, the `Performance` object is automatically serialized by {{jsxref("JSON.stringify()")}}, which calls the `toJSON()` method.
+
+```js
+console.log(JSON.stringify(performance));
+```
+
+This would log a JSON string like so (formatted for readability):
 
 ```json
 {
@@ -73,8 +92,6 @@ This would log a JSON object like so:
   }
 }
 ```
-
-To get a JSON string, you can use [`JSON.stringify(performance)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) directly; it will call `toJSON()` automatically.
 
 ## Specifications
 
