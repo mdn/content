@@ -145,7 +145,7 @@ td {
     <tr>
       <td>
         <img
-          class="svgFilter"
+          class="filter"
           src="https://mdn.github.io/shared-assets/images/examples/progress-pride-flag.jpg"
           alt="Pride flag" />
       </td>
