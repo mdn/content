@@ -28,7 +28,7 @@ These attributes are [enumerated](/en-US/docs/Glossary/Enumerated), and have the
 
 An invalid keyword and an empty string will be handled as the `anonymous` keyword.
 
-By default (that is, when the attribute is not specified), CORS is not used at all. The user agent will not ask for permission for full access to the resource and in the case of a cross-origin request, certain limitations will be applied based on the type of element concerned:
+By default (that is, when the attribute is not specified), resources are generally fetched without CORS, except [module scripts](/en-US/docs/Web/HTML/Reference/Elements/script/type#module) which always use CORS (with `same-origin` credentials mode). The user agent will not ask for permission for full access to the resource and in the case of a cross-origin request, certain limitations will be applied based on the type of element concerned:
 
 <table class="no-markdown">
   <tbody>
