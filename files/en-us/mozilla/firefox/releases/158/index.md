@@ -52,7 +52,7 @@ Firefox 158 is the current [Beta version of Firefox](https://www.firefox.com/en-
 
 ### APIs
 
-- {{domxref("WebTransport.getStats()")}} is now supported. ([Firefox bug 2007202](https://bugzil.la/2007165)).
+- {{domxref("WebTransport.getStats()")}} is now supported. ([Firefox bug 2007202](https://bugzil.la/2007202)).
 
 <!-- #### DOM -->
 
