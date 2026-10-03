@@ -139,6 +139,9 @@ To implement these fonts in your demo, follow these steps:
    font-family: "zantrokeregular", serif;
    ```
 
+> [!NOTE]
+> The example above includes both WOFF2 and WOFF to demonstrate how to provide a fallback font format. For modern websites, you should generally provide WOFF2 only. Include WOFF as a fallback if you need to support older browsers that do not support WOFF2.
+
 You should end up with a demo page with some nice fonts. Because different fonts are created at different sizes, you may have to adjust the size, spacing, etc., to improve the look and feel.
 
 ![The finished design of a Web font exercise. The page has two headings and three paragraphs. The page contains different fonts and text at different sizes.](web-font-example.png)
