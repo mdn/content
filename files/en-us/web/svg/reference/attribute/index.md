@@ -79,6 +79,8 @@ Below is a list of all of the attributes available in SVG, along with links to r
 - {{SVGAttr("filterUnits")}}
 - {{SVGAttr("flood-color")}}
 - {{SVGAttr("flood-opacity")}}
+- {{SVGAttr("focusgroup")}}
+- {{SVGAttr("focusgroupstart")}}
 - {{SVGAttr("font-family")}}
 - {{SVGAttr("font-size")}}
 - {{SVGAttr("font-size-adjust")}}
