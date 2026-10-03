@@ -15,6 +15,8 @@ This method updates the {{domxref("HTMLTextAreaElement.selectionStart")}}, {{dom
 > [!NOTE]
 > While `setSelectionRange()` updates the selection properties immediately, the visual selection highlight only appears when the `<textarea>` is focused. Focusing the element will also fire a `selectionchange` event.
 
+If `selectionStart` and `selectionEnd` are equal, no text is selected, and the method instead places the caret (text cursor) at that position.
+
 To select **all** of the text of an `<textarea>` element, use the {{domxref("HTMLTextAreaElement.select()")}} method.
 
 ## Syntax
