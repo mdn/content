@@ -110,5 +110,5 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **Container Timing API**: `dom.enable_container_timing`
 
-  The Container Timing API reports when the contents of a container element are painted, letting you measure the render time of a region of the page rather than of the whole viewport.
+  The [Container Timing API](/en-US/docs/Web/API/PerformanceContainerTiming) reports when the contents of a container element are painted, letting you measure the render time of a region of the page rather than of the whole viewport.
   ([Firefox bug 1940240](https://bugzil.la/1940240)).

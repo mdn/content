@@ -16,6 +16,11 @@ All supported `entryTypes` are available using the static property {{domxref("Pe
 
 A string. The return value depends on the subtype of the `PerformanceEntry` object. Some subtypes have more than one `entryType`.
 
+- `container`
+  - : Reports render time of groups of elements within a container.
+
+    The entry instance will be a {{domxref("PerformanceContainerTiming")}} object.
+
 - `element`
   - : Reports load time of elements.
 

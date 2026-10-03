@@ -31,6 +31,7 @@ The meaning of this property depends on the value of this performance entry's {{
 
 For the following entry types, `duration` is not applicable, and in this case the value is always `0`:
 
+- `container`
 - `element`
 - `largest-contentful-paint`
 - `layout-shift`
