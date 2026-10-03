@@ -89,10 +89,8 @@ By default, `<input type="time">` does not apply any validation to entered value
 The most basic use of `<input type="time">` involves a basic `<input>` and {{htmlelement("label")}} element combination, as seen below:
 
 ```html
-<form>
-  <label for="appointment-time">Choose an appointment time: </label>
-  <input id="appointment-time" type="time" name="appointment-time" />
-</form>
+<label for="appointment-time">Choose an appointment time: </label>
+<input id="appointment-time" type="time" name="appointment-time" />
 ```
 
 {{EmbedLiveSample('Basic_uses_of_time', 600, 40)}}
@@ -102,19 +100,17 @@ The most basic use of `<input type="time">` involves a basic `<input>` and {{htm
 In this example, we create an interface element for choosing time using the native picker created with `<input type="time">`:
 
 ```html
-<form>
-  <label for="appointment-time">
-    Choose an appointment time (opening hours 12:00 to 18:00):
-  </label>
-  <input
-    id="appointment-time"
-    type="time"
-    name="appointment-time"
-    min="12:00"
-    max="18:00"
-    required />
-  <span class="validity"></span>
-</form>
+<label for="appointment-time">
+  Choose an appointment time (opening hours 12:00 to 18:00):
+</label>
+<input
+  id="appointment-time"
+  type="time"
+  name="appointment-time"
+  min="12:00"
+  max="18:00"
+  required />
+<span class="validity"></span>
 ```
 
 ```css
@@ -178,14 +174,12 @@ In this example, you can see the time input's value by entering a time and seein
 First, a look at the HTML. We include a label and input, and add a {{HTMLElement("p")}} element with a {{HTMLElement("span")}} to display the value of the `time` input:
 
 ```html
-<form>
-  <label for="startTime">Start time: </label>
-  <input type="time" id="startTime" />
-  <p>
-    Value of the <code>time</code> input:
-    <code>"<span id="value">n/a</span>"</code>.
-  </p>
-</form>
+<label for="startTime">Start time: </label>
+<input type="time" id="startTime" />
+<p>
+  Value of the <code>time</code> input:
+  <code>"<span id="value">n/a</span>"</code>.
+</p>
 ```
 
 The JavaScript code adds code to the time input to watch for the {{domxref("Element/input_event", "input")}} event, which is triggered every time the contents of an input element change. When this happens, the contents of the `<span>` are replaced with the new value of the input element.
@@ -210,10 +204,8 @@ You can use the [`step`](/en-US/docs/Web/HTML/Reference/Elements/input#step) att
 It takes an integer value defining the number of seconds you want to increment by; the default value is 60 seconds. With this as the default, most user agent time UIs display hours and minutes but not seconds. Including the [`step`](/en-US/docs/Web/HTML/Reference/Elements/input#step) attribute with any numeric value other than a value divisible by `60` adds seconds to the UI, if the `min` or `max` value has not already caused the seconds to be visible.
 
 ```html
-<form>
-  <label for="appointment-time">Choose an appointment time: </label>
-  <input id="appointment-time" type="time" name="appointment-time" step="2" />
-</form>
+<label for="appointment-time">Choose an appointment time: </label>
+<input id="appointment-time" type="time" name="appointment-time" step="2" />
 ```
 
 {{EmbedLiveSample('Using_the_step_attribute', 600, 40)}}
@@ -225,18 +217,16 @@ To specify minutes or hours as a step, specify the number of minutes or hours in
 You can use the [`min`](/en-US/docs/Web/HTML/Reference/Elements/input#min) and [`max`](/en-US/docs/Web/HTML/Reference/Elements/input#max) attributes to restrict the valid times that can be chosen by the user. In the following example we are setting a minimum time of `12:00` and a maximum time of `18:00`:
 
 ```html
-<form>
-  <label for="appointment-time">
-    Choose an appointment time (opening hours 12:00 to 18:00):
-  </label>
-  <input
-    id="appointment-time"
-    type="time"
-    name="appointment-time"
-    min="12:00"
-    max="18:00" />
-  <span class="validity"></span>
-</form>
+<label for="appointment-time">
+  Choose an appointment time (opening hours 12:00 to 18:00):
+</label>
+<input
+  id="appointment-time"
+  type="time"
+  name="appointment-time"
+  min="12:00"
+  max="18:00" />
+<span class="validity"></span>
 ```
 
 {{ EmbedLiveSample('Setting_maximum_and_minimum_times', 600, 40) }}
@@ -317,6 +307,12 @@ Let's look at an example; here we've set minimum and maximum times, and also mad
     <input type="submit" value="Submit form" />
   </div>
 </form>
+```
+
+```js hidden
+document.querySelector("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+});
 ```
 
 If you try to submit the form with an incomplete time (or with a time outside the set bounds), the browser displays an error. Try playing with the example now:
