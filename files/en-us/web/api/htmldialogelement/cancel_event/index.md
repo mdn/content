@@ -19,7 +19,10 @@ Close requests might be triggered by:
 - Calling the {{domxref("HTMLDialogElement.requestClose()", "requestClose()")}} method
 - The back button on mobile platforms
 
-This event is cancelable and does not bubble.
+The event does not bubble. Whether it is cancelable depends on how the close request was triggered.
+Calls to {{domxref("HTMLDialogElement.requestClose()", "requestClose()")}} fire a cancelable event.
+Platform close requests, such as pressing <kbd>Esc</kbd>, are only cancelable when allowed by user activation.
+If a platform close request is canceled, a subsequent close request without intervening user activation may fire a non-cancelable `cancel` event and close the dialog.
 
 ## Syntax
 
@@ -44,7 +47,8 @@ The following example shows a button that, when clicked, opens a {{htmlelement("
 You can trigger the `cancel` event by either clicking the _Request Close_ button to close the dialog (via the {{domxref("HTMLDialogElement.requestClose()", "requestClose()")}} method) or by pressing the <kbd>Esc</kbd> key.
 
 Note that the `cancel` event handler logs the event and then returns, allowing the dialog to close (which in turn causes the `close` event to be emitted).
-You can uncomment the line containing `event.preventDefault()` to cancel the event.
+If the event is cancelable, you can uncomment the line containing `event.preventDefault()` to cancel it.
+The example also logs the value of `event.cancelable`, so you can observe when a platform close request cannot be canceled.
 
 #### HTML
 
@@ -102,13 +106,14 @@ requestCloseButton.addEventListener("click", () => {
   dialog.requestClose();
 });
 
-// Fired when requestClose() is called
-// Prevent the dialog from closing by calling event.preventDefault()
+// Fired when a close request is received
 dialog.addEventListener("cancel", (event) => {
-  log("dialog cancel event fired");
-  // Uncomment the next two lines to prevent the dialog from closing
-  // log("dialog close canceled");
-  // event.preventDefault();
+  log(`dialog cancel event fired (cancelable: ${event.cancelable})`);
+  if (event.cancelable) {
+    // Uncomment the next two lines to prevent the dialog from closing
+    // log("dialog close canceled");
+    // event.preventDefault();
+  }
 });
 
 dialog.addEventListener("close", (event) => {
