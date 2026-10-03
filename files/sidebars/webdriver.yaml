@@ -121,6 +121,12 @@ sidebar:
         code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/script
         code: true
+        children:
+          - type: section
+            link: /Web/WebDriver/Reference/BiDi/Modules/script#commands
+            title: Commands
+          - link: /Web/WebDriver/Reference/BiDi/Modules/script/evaluate
+            code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/session
         details: closed
         code: true

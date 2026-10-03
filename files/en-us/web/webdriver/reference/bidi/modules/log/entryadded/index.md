@@ -32,7 +32,19 @@ All log entry objects include the following fields:
     - `userContext` {{optional_inline}}
       - : A string that contains the ID of the user context in which the script-related event occurred.
 - `stackTrace` {{optional_inline}}
-  - : An object with a `callFrames` array that represents the [JavaScript stack](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/script/stackTrace) at the point the entry was created. Each item in the array is a stack frame with the following fields: `columnNumber`, `functionName`, `lineNumber`, and `url`.
+  - : An object that represents the JavaScript stack at the point the log entry was created.
+    It contains the following field:
+    - `callFrames`
+      - : An array of zero or more stack-frame objects.
+        Each object contains the following fields:
+        - `columnNumber`
+          - : A non-negative integer that contains the zero-based column number of the executed code.
+        - `functionName`
+          - : A string that contains the name of the executing function.
+        - `lineNumber`
+          - : A non-negative integer that contains the zero-based line number of the executed code.
+        - `url`
+          - : A string that contains the URL of the script.
 - `text`
   - : A string that contains the log message or `null` if not available. For console entries, it is the concatenation of all stringified arguments joined by spaces, and for JavaScript errors, it is generally the error message.
     The exact format is browser-dependent, so don't rely on this value for assertions in tests.
