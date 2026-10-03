@@ -8,9 +8,7 @@ browser-compat: api.VideoTrack.kind
 
 {{APIRef("HTML DOM")}}
 
-The **`kind`** property contains a
-string indicating the category of video contained in the
-**{{domxref("VideoTrack")}}**.
+The **`kind`** read-only property of the {{domxref("VideoTrack")}} interface contains a string indicating the category of video contained in the **{{domxref("VideoTrack")}}**.
 
 The `kind` can be used
 to determine the scenarios in which specific tracks should be enabled or disabled. See

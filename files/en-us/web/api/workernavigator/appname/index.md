@@ -8,9 +8,7 @@ browser-compat: api.WorkerNavigator.appName
 
 {{APIRef("HTML DOM")}}{{AvailableInWorkers("worker")}}
 
-The value of the **`WorkerNavigator.appName`** property is always
-`"Netscape"`, in any browser. This property is kept only for compatibility
-purposes.
+The **`appName`** read-only property of the {{domxref("WorkerNavigator")}} interface is always `"Netscape"`, in any browser. This property is kept only for compatibility purposes.
 
 > [!NOTE]
 > Do not rely on this property to return a real browser name. All browsers return `"Netscape"` as the value of this property.
