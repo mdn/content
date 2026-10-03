@@ -11,6 +11,7 @@ This article demonstrates how to use the [Fullscreen API](/en-US/docs/Web/API/Fu
 ## Activating fullscreen mode
 
 Given an element that you'd like to present in fullscreen mode (such as a {{HTMLElement("video")}}, for example), you can present it in fullscreen mode by calling its {{DOMxRef("Element.requestFullscreen", "requestFullscreen()")}} method.
+The user has to interact with the page or a UI element in order for this feature to work (it requires [Transient user activation](/en-US/docs/Web/Security/Defenses/User_activation))
 
 Let's consider this {{HTMLElement("video")}} element:
 
@@ -47,11 +48,96 @@ It's not guaranteed that you'll be able to switch into fullscreen mode. For exam
 > [!NOTE]
 > Fullscreen requests need to be called from within an event handler or otherwise they will be denied.
 
+## Browser keyboard locking
+
+Some applications want to use use keys or key-combinations that the are normally handled by the browser or the underlying OS.
+For example, a game might want to use the <kbd>Esc</kbd> key to invoke a menu instead of exiting fullscreen mode.
+
+Keyboard locking mode allows you exit fullscreen mode using a long-press of the normal exit key (usually <kbd>Esc</kbd>), and intercept and handle other keys you might not otherwise be able to, including the normal exit key!
+
+The HTML below shows a video element we might want to display full screen.
+
+```html
+<p>
+  The video element below shows a time-lapse of a flower blooming. You can
+  toggle fullscreen on and off using <kbd>Enter</kbd> or
+  <kbd>Shift+F</kbd> (uppercase "F"). The embedded document needs to have
+  <a
+    href="https://developer.mozilla.org/en-US/docs/Web/API/Element/focus_event">
+    focus
+  </a>
+  for the example to work.
+</p>
+
+<video controls loop src="/shared-assets/videos/flower.mp4" width="420"></video>
+```
+
+```css hidden
+body {
+  font-family:
+    "Benton Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  margin: 2em;
+}
+
+video::backdrop {
+  background-color: #444488;
+}
+button {
+  display: block;
+}
+kbd {
+  border: 2px solid #cdcdcd;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 0 #cdcdcd;
+  font-size: 0.825rem;
+  padding: 0.25rem;
+}
+```
+
+The following code adds an `click` event handler for the video element that calls `requestFullscreen({ keyboardLock: "browser" }))` if <kbd>Enter</kbd> or <kbd>Shift+F</kbd> are pressed when not in fullscreen mode.
+Setting the [`options.keyboardLock`](#keyboardlock) to `"browser"` is what activates keyboard lock.
+When we're in fullscreen mode we check if the <kbd>Escape</kbd> key was pressed and call `event.preventDefault()` to disable the default action (which would be to exit fullscreen mode).
+
+```js
+const video = document.querySelector("video");
+document.addEventListener("keydown", (event) => {
+  // Check if we're in fullscreen mode
+  if (document.fullscreenElement) {
+    // Cancel exiting via the Escape key
+    if (event.key === "Escape") {
+      event.preventDefault();
+      // Do whatever else you might want to do when escape is pressed
+    }
+  } else if (event.key === "Enter" || event.key === "F") {
+    // Open full screen if Enter or F is pressed and not already fullscreen.
+    // Note that "F" is case-sensitive (uppercase).
+    video.requestFullscreen({ keyboardLock: "browser" }).catch((err) => {
+      console.error(`Error enabling fullscreen: ${err.message}`);
+    });
+  }
+});
+```
+
+You can see this in operation below.
+Select the frame and press <kbd>Shift+F</kbd>.
+When the page displays full frame, note the temporary notification at the top of the page that explains how to exit full screen mode.
+
+On [browsers that support the `keyboardLock` option](/en-US/docs/Web/API/Element/requestFullscreen#browser_compatibility) you will need a long-press to exit full screen mode.
+On other browsers you will be able to exit with the normal key.
+
+{{embedlivesample("Browser keyboard locking", , "400", "", "", "", "fullscreen")}}
+
 ## Getting out of full screen mode
 
-The user always has the ability to exit fullscreen mode of their own accord; see [Things your users want to know](#things_your_users_want_to_know). You can also do so programmatically by calling the {{DOMxRef("Document.exitFullscreen()")}} method.
+Browers provide a mechanism for users to manually exit fullscreen mode, and the method is displayed in a transient notification when fullscreen mode is entered.
+This method is commonly the <kbd>Esc</kbd> key (or a long-press of the <kbd>Esc</kbd> when in [browser keyboard lock mode](/en-US/docs/Web/API/Element/requestFullscreen#keyboard_locking)).
 
-If there are multiple elements in fullscreen mode, calling `exitFullscreen()` only exits the topmost element, revealing the next element below it. Pressing <kbd>Esc</kbd> or <kbd>F11</kbd> exits all fullscreen elements.
+A browser may support other keys or key-combinations for exiting fullscreen mode, such as <kbd>F11</kbd> or <kbd>Alt+Tab</kbd>.
+It can also exit fullscreen mode for any other reason it chooses, such as when navigating to another page, changing tabs, or switching to another application.
+
+You can programmatically exit fullscreen mode by calling the {{DOMxRef("Document.exitFullscreen()")}} method.
+If there are multiple elements in fullscreen mode, calling `exitFullscreen()` only exits the topmost element, revealing the next element below it.
+Pressing the browser-specific exit key that was shown in the notifiction when entering fullscreen mode (usually <kbd>Esc</kbd>) exits all fullscreen elements.
 
 ## Other information
 
@@ -66,25 +152,11 @@ The {{DOMxRef("Document")}} provides some additional information that can be use
 
 Some mobile browsers while in fullscreen mode ignore viewport meta-tag settings and block user scaling; for example: a "pinch to zoom" gesture may not work on a page presented in fullscreen mode — even if, when not in fullscreen mode, the page can be scaled using pinch to zoom.
 
-## Things your users want to know
-
-You'll want to be sure to let your users know that they can press the <kbd>Esc</kbd> key (or <kbd>F11</kbd>) to exit fullscreen mode.
-
-In addition, navigating to another page, changing tabs, or switching to another application (using, for example, <kbd>Alt</kbd>-<kbd>Tab</kbd>) while in fullscreen mode exits fullscreen mode as well.
-
 ## Example
 
 The [mdn/dom-examples GitHub repo](https://github.com/mdn/) has a complete example of the Fullscreen API.
 
 [Run the example](https://mdn.github.io/dom-examples/fullscreen-api/index.html) and [browse the source code](https://github.com/mdn/dom-examples/tree/main/fullscreen-api).
-
-## Specifications
-
-{{Specifications}}
-
-## Browser compatibility
-
-{{Compat}}
 
 ## See also
 
