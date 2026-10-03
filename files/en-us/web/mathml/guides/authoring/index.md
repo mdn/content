@@ -59,29 +59,6 @@ Each MathML equation is represented by a root [`math`](/en-US/docs/Web/MathML/Re
 > [!NOTE]
 > Some email or instant messaging clients are able to send and receive messages in the HTML format. It is thus possible to embed mathematical formulas inside such messages, as long as MathML tags are not filtered out by markup sanitizers.
 
-#### Fallback for browsers without MathML support
-
-It is recommended to provide a fallback mechanism for browsers without MathML support. If your document contains only basic mathematical formulas then a small [mathml.css](https://github.com/fred-wang/mathml.css) stylesheet might be enough. To load it conditionally, just insert one line in your document header:
-
-```html
-<script src="https://fred-wang.github.io/mathml.css/mspace.js"></script>
-```
-
-If you need more complex constructions, you might instead consider using the heavier [MathJax](https://www.mathjax.org/) library as a MathML polyfill:
-
-```html
-<script src="https://fred-wang.github.io/mathjax.js/mpadded-min.js"></script>
-```
-
-Alternatively, you can also just display a warning at the top of the page for browsers without good MathML support and let the users choose between one of the fallback above:
-
-```html
-<script src="https://fred-wang.github.io/mathml-warning.js/mpadded-min.js"></script>
-```
-
-> [!NOTE]
-> These small scripts perform feature detection (of the [mspace](/en-US/docs/Web/MathML/Reference/Element/mspace) or [mpadded](/en-US/docs/Web/MathML/Reference/Element/mpadded) elements) which is preferred over [browser sniffing](/en-US/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent). Also, they are distributed under an open-source license, so feel free to copy them on your own server and adapt them to your need.
-
 #### Mathematical fonts
 
 As explained on the [MathML Fonts](/en-US/docs/Web/MathML/Guides/Fonts) article, mathematical fonts are instrumental to render MathML content.
@@ -236,13 +213,6 @@ There are more sophisticated tools that aim at converting an arbitrary LaTeX doc
 ```bash
 latexmlc --dest foo.html foo.tex # Generate an HTML document foo.html
 latexmlc --dest foo.epub foo.tex # Generate an EPUB document foo.epub
-```
-
-`latexmlc` accepts a `--javascript` parameter that you can use to include one of the [fallback scripts](#fallback_for_browsers_without_mathml_support) mentioned above:
-
-```bash
-latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathml.css/mspace.js foo.tex  # Add the CSS fallback
-latexmlc --dest foo.html --javascript=https://fred-wang.github.io/mathjax.js/mpadded-min.js foo.tex # Add the MathJax fallback
 ```
 
 > [!NOTE]
