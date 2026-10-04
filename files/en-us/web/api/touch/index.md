@@ -42,6 +42,13 @@ _This interface has no parent, and doesn't inherit or implement other properties
 - {{domxref("Touch.target")}} {{ReadOnlyInline}}
   - : Returns the {{ domxref("Element")}} on which the touch point started when it was first placed on the surface, even if the touch point has since moved outside the interactive area of that element or even been removed from the document.
 
+> [!NOTE]
+> The coordinate properties differ in more than just their origin. `clientX`/`clientY` and `pageX`/`pageY` are measured in CSS pixels — the same units used for layout — so dragging across an element that is 1px wide changes those coordinates by 1, no matter how far the page is pinch-zoomed.
+>
+> `screenX`/`screenY` are measured in screen-space CSS pixels instead. When the page is not zoomed, one client or page pixel matches one screen pixel. Once the page is pinch-zoomed, screen pixels become smaller than CSS pixels, so dragging across a 1px-wide element changes `screenX`/`screenY` by more than 1.
+>
+> This zoom behavior has been observed in Chrome on Android; it has not been confirmed across all mobile browsers, and the Touch Events specification does not define it. See [Coordinate systems](/en-US/docs/Web/API/CSSOM_view_API/Coordinate_systems) for more information about the coordinate systems these properties belong to.
+
 ### Touch area
 
 - {{domxref("Touch.radiusX")}} {{ReadOnlyInline}}
