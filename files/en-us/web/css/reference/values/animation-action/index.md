@@ -117,7 +117,7 @@ When combining `play-once` with `pause`, the animation will play on activation a
 animation-trigger: --t play-once pause;
 ```
 
-If you combine `play-once` with `replay`, the animation will play on activation, then play again from the beginning on deactivation. It won't exceed its iteration count on any playthrough, but it will play again on subsequent deactivations because we reset the animation to the start each time. On subsequent activations, however, the animation will not play again.
+If you combine `play-once` with `replay`, the animation will play on activation, then play again from the beginning on deactivation. It won't exceed its iteration count on any play- through, but it will play again on subsequent deactivations because we reset the animation to the start each time. On subsequent activations, however, the animation will not play again.
 
 ```css
 animation-trigger: --t play-once replay;
@@ -279,7 +279,7 @@ Our markup contains two {{htmlelement("div")}} elements, one to animate and one 
 
 #### CSS
 
-We give the `.animated` `<div>` element a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the scrollport so we can see when its animation starts and stops.
+We give the `.animated` element a {{cssxref("position")}} of `fixed`, positioning it near the top-left of the scrollport so we can see when its animation starts and stops.
 
 ```css hidden live-sample___basic-example
 body {
@@ -305,7 +305,7 @@ div {
 ```
 
 ```css live-sample___basic-example
-div.animated {
+.animated {
   position: fixed;
   top: 25px;
   left: 25px;
@@ -326,22 +326,22 @@ Next, we define the {{cssxref("@keyframes")}} for a `rotate` animation:
 }
 ```
 
-The `.animated` `<div>` has the `rotate` `animation` applied. We then give it an `animation-trigger` value that references a `timeline-trigger-name` of `--t` with two `<animation-action>` values, `play-forwards` and `play-backwards`. These specify that the animation will play on activation and play in reverse on deactivation.
+The `.animated` element has the `rotate` animation applied. We then give it an `animation-trigger` value that references a `timeline-trigger-name` of `--t` with two `<animation-action>` values, `play-forwards` and `play-backwards`. These specify that the animation will play on activation and play in reverse on deactivation.
 
 ```css live-sample___basic-example
-div.animated {
+.animated {
   animation: rotate 1.5s infinite linear both;
   animation-trigger: --t play-forwards play-backwards;
 }
 ```
 
-The `.trigger` `<div>` element creates the animated `<div>`'s trigger using a `timeline-trigger` value of `--t view()`. This value includes the identifier referenced in the animated `<div>`'s `animation-trigger` property value (the `timeline-trigger-name`), associating the two together. It also includes:
+The `.trigger` element creates the animated `<div>`'s trigger using a `timeline-trigger` value of `--t view()`. This value includes the identifier referenced in the animated `<div>`'s `animation-trigger` property value (the `timeline-trigger-name`), associating the two together. It also includes:
 
 - A `timeline-trigger-source` value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
-- A {{cssxref("timeline-trigger-activation-range")}} value of [`contain`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#contain), which means that the trigger will activate when the `.trigger` `<div>` is fully inside the scrollport, and deactivate when it stops being fully inside the scrollport.
+- A {{cssxref("timeline-trigger-activation-range")}} value of [`contain`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#contain), which means that the trigger will activate when the `.trigger` element is fully inside the scrollport. As the {{cssxref("timeline-trigger-active-range")}} defaults to the activation range, it deactivates when it stops being fully inside the scrollport.
 
 ```css live-sample___basic-example
-div.trigger {
+.trigger {
   timeline-trigger: --t view() contain;
 }
 ```
@@ -470,7 +470,7 @@ div {
 }
 ```
 
-Next, we set the `<section>` element to create an animation trigger, with a `timeline-trigger` value of `--t view() contain 20% contain 80%`. There is nothing unusual here, except that we've set a {{cssxref("timeline-trigger-activation-range")}} value to `contain 20% contain 80%`. This means the trigger activates when the `<section>` element has scrolled around `20%` of the way up the scrollport, and deactivates when it has scrolled around `80%` of the way up the scrollport. This allows you to see the `<animation-action>` effects more clearly than if the activation range covered the entire scrollport.
+Next, we set the `<section>` element to create an animation trigger, with a `timeline-trigger` value of `--t view() contain 20% contain 80%`. There is nothing unusual here, except that we've set a {{cssxref("timeline-trigger-activation-range")}} value and defaulted the {{cssxref("timeline-trigger-active-range")}} to `contain 20% contain 80%`. This means the trigger activates when the `<section>` element has scrolled around `20%` of the way up the scrollport, and deactivates when it has scrolled around `80%` of the way up the scrollport. This allows you to see the `<animation-action>` effects more clearly than if the activation range covered the entire scrollport.
 
 ```css live-sample___different-effects
 section {
