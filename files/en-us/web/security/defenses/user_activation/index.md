@@ -27,7 +27,7 @@ If an activation has been triggered, the user agent differentiates between two t
 
 ## Comparison between transient and sticky activation
 
-The difference between transient and sticky activation is that transient activation only lasts for a short while, and may in some cases be consumed (deactivated) when a protected feature is used, while sticky activation persists until the end of the session.
+The difference between transient and sticky activation is that transient activation only lasts for a short while, and may in some cases be consumed (deactivated) when a protected feature is used, while sticky activation persists until the window is closed, and is also carried over to same-origin navigations and traversals.
 
 Gating features on transient activation ensures that they are only available if directly triggered by a user.
 Sticky activation, by contrast, is primarily used to restrict features that should not automatically trigger on page load, such as popups.

@@ -6,7 +6,7 @@ sidebar: glossarysidebar
 ---
 
 **Sticky activation** (or "sticky user activation") is a window state that indicates a user has meaningfully and directly interacted with the window since page load.
-Once active, the state lasts for the duration of the session.
+Once set, the state stays enabled for the lifetime of the window.
 
 The state is enabled following any user interaction, when the window has focus, that results in the browser generating one or more of the following:
 
@@ -22,6 +22,16 @@ For example, it can be used to ensure that controlled features in cross-origin f
 See [Features gated by user activation](/en-US/docs/Web/Security/Defenses/User_activation) for more information.
 
 The {{domxref("UserActivation.hasBeenActive")}} property can be used to programmatically check the current window's sticky activation state.
+
+## Sticky activation across navigations
+
+Sticky activation is carried over to same-origin navigations and traversals.
+When a document in a frame navigates to a same-origin URL, the new document inherits the previous document's sticky activation instead of starting out inactive, so a user who has already interacted with a site does not have to interact again after following a same-origin link.
+
+The state is only carried into the navigated frame: it is copied from that frame's previous `Window`, and is not propagated to parent frames or iframes.
+
+> [!NOTE]
+> This carry-over behavior was added to the [HTML Standard](https://github.com/whatwg/html/pull/11454) and is being implemented in browsers, so it may not yet be available everywhere.
 
 ## See also
 
