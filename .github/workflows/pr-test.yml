@@ -131,7 +131,7 @@ jobs:
 
           ARGS=()
           for file in "${files_to_build[@]}"; do
-            ARGS+=("-f" "$PWD/$file")
+            ARGS+=("$PWD/$file")
           done
 
           npx @mdn/rari build --no-basic --json-issues --data-issues "${ARGS[@]}"
