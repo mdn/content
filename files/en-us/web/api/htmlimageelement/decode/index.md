@@ -12,6 +12,9 @@ The **`decode()`** method of the {{domxref("HTMLImageElement")}} interface retur
 
 This can be used to initiate loading of the image prior to attaching it to an element in the DOM (or adding it to the DOM as a new element), so that the image can be rendered immediately upon being added to the DOM. This, in turn, prevents the rendering of the next frame after adding the image to the DOM from causing a delay while the image loads.
 
+> [!NOTE]
+> For images with [`loading="lazy"`](/en-US/docs/Web/API/HTMLImageElement/loading), calling `decode()` before the image has loaded does **not** initiate loading. The returned promise rejects with an `EncodingError` {{domxref("DOMException")}} in Firefox, while Chrome waits for the image to load. To use `decode()` reliably with a lazy-loaded image, wait for the {{domxref("HTMLElement/load_event", "`load`")}} event first — calling `decode()` from an `onload` handler works as expected in both browsers.
+
 ## Syntax
 
 ```js-nolint
