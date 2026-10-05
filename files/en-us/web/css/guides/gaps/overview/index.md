@@ -15,7 +15,7 @@ This guide provides an overview of the features introduced in the specification,
 
 The CSS gap properties enable drawing lines in the center of each gutter in multi-column, grid, and flexbox layouts. While {{cssxref("margin")}} and {{cssxref("padding")}} specify visual spacing around individual boxes, the properties in the CSS gaps module enable specifying the spacing between adjacent boxes within a given layout context for layouts that have {{glossary("gutters")}} and gaps. You can show rules in every gap or in a subset of gaps, defining fully animatable rule widths, colors, and insets.
 
-Gaps and their decorations have evolved. Originally, column gaps and their decorations were limited only to [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout). While we could define the width, color, and line style of column rules in multi-column containers, all rules had to match; the only option spanned the full block dimension, and it was limited only to columns and only in multi-column layouts.
+Gaps and their decorations have evolved. Originally, column gaps and their decorations were limited only to [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout). While we could define the width, color, and line style of column rules in multi-column containers, all rules had to match; the only option spanned the full block dimension, and it was limited to columns and only in multi-column layouts.
 
 Grid layout has always supported gaps between rows and columns, but it originally didn't support decorations in those gutters. Before rules expanded to all gap-aware layouts, painting lines in the gaps between rows and columns in grid and flexbox layouts required hacks such as background images, borders on all items, and even absolutely positioned overlays. Fortunately, CSS has evolved. CSS gap module properties let you define column and row gaps for all gap-aware layout containers and add visible separators, called _gap decorations_, painted in the middle of gaps in both horizontal and vertical gutters that don't affect the box model.
 
@@ -209,7 +209,7 @@ In this example, the vertical decorations are continuous but inset on the ends. 
 ### Column inset properties
 
 - {{cssxref("column-rule-inset")}}
-  - : Shorthand for {{cssxref("column-rule-inset-cap")}} and {{cssxref("column-rule-inset-junction")}}; one to four `<inset-value>` values offsetting the starts and ends of column rule segments. Sets the cap start and cap end offsets and junction start and junction end offsets, defining where decoration segments start and end. If you set the cap insets to different values from the junction insets, separate them with a slash (`/`).
+  - : Shorthand for {{cssxref("column-rule-inset-cap")}} and {{cssxref("column-rule-inset-junction")}}; one to four `<inset-value>` values offsetting the starts and ends of column rule segments. Sets the cap start and end offsets and junction start and end offsets, defining where decoration segments start and end. If you set the cap insets to different values from the junction insets, separate them with a slash (`/`).
 
 - {{cssxref("column-rule-inset-cap")}}
   - : One or two `<inset-value>` values setting the `column-rule-inset-cap-start` and the `column-rule-inset-cap-end` values. If you specify only one value, both properties are set to that value. If two values are specified, `column-rule-inset-cap-start` is set to the first value and `column-rule-inset-cap-end` is set to the second value.
@@ -322,9 +322,9 @@ In this example, note how the segments around the sections without grid items ha
 
 ## Overlapping
 
-If row and column rules don't break, they overlap at junction intersections. We can control whether the row rules are painted on top of the column rules, or the other way around.
+If row and column rules don't break, they overlap at junction intersections. We can control whether row rules are painted on top of column rules, or vice versa.
 
-Expanding on the first example in this page, we've set the column rules to be painted over the row rules when they intersect.
+Expanding on the first example on this page, we've set the column rules to be painted over the row rules when they intersect.
 
 ```css live-sample___overlap
 .grid {
