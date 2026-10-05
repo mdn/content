@@ -1,5 +1,5 @@
 ---
-title: declarativeNetRequest.updateEnabledRulesets
+title: declarativeNetRequest.updateEnabledRulesets()
 slug: Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest/updateEnabledRulesets
 page-type: webextension-api-function
 browser-compat: webextensions.api.declarativeNetRequest.updateEnabledRulesets

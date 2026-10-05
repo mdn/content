@@ -46,8 +46,8 @@ Let's explore how to use multiple-column layout — often referred to as _multic
         max-width: 900px;
         margin: 2em auto;
         font:
-          0.9em/1.2 Arial,
-          Helvetica,
+          0.9em/1.2 "Arial",
+          "Helvetica",
           sans-serif;
       }
     </style>

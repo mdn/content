@@ -272,6 +272,7 @@ funcref
 funcrefs
 fwdred
 fwid
+gapi
 gara
 gattserverdisconnected
 geometrychange
@@ -521,6 +522,7 @@ noautohide
 nodownload
 nofullscreen
 noimageindex
+NOINLINE
 nolint
 noremoteplayback
 nosniff

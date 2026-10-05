@@ -396,7 +396,7 @@ body {
   float: left;
   margin-left: 2.08333333%;
   width: 6.25%;
-  background: rgb(255, 150, 150);
+  background: rgb(255 150 150);
 }
 
 /* Two column widths (12.5%) plus one gutter width (2.08333333%) */
@@ -514,7 +514,7 @@ body {
   float: left;
   margin-left: 2.08333333%;
   width: 6.25%;
-  background: rgb(255, 150, 150);
+  background: rgb(255 150 150);
 }
 
 .col.span2 {
@@ -658,7 +658,7 @@ body {
   float: left;
   margin-left: 2.08333333%;
   width: 6.25%;
-  background: rgb(255, 150, 150);
+  background: rgb(255 150 150);
 }
 
 /* Two column widths (12.5%) plus one gutter width (2.08333333%) */
@@ -797,7 +797,7 @@ body {
   margin-bottom: 1em;
   width: 6.25%;
   flex: 1 1 auto;
-  background: rgb(255, 150, 150);
+  background: rgb(255 150 150);
 }
 
 .col.span2 {

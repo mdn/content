@@ -1,13 +1,13 @@
 ---
-title: Firefox 158 release notes for developers (Nightly)
-short-title: Firefox 158 (Nightly)
+title: Firefox 158 release notes for developers (Beta)
+short-title: Firefox 158 (Beta)
 slug: Mozilla/Firefox/Releases/158
 page-type: firefox-release-notes-active
 sidebar: firefox
 ---
 
 This article provides information about the changes in Firefox 158 that affect developers.
-Firefox 158 is the current [Nightly version of Firefox](https://www.firefox.com/en-US/channel/desktop/#nightly) and ships on [October 13, 2026](https://whattrainisitnow.com/release/?version=158).
+Firefox 158 is the current [Beta version of Firefox](https://www.firefox.com/en-US/channel/desktop/#beta) and ships on [October 13, 2026](https://whattrainisitnow.com/release/?version=158).
 
 > [!NOTE]
 > The release notes for this Firefox version are still a work in progress.
@@ -50,7 +50,9 @@ Firefox 158 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 <!-- #### Removals -->
 
-<!-- ### APIs -->
+### APIs
+
+- {{domxref("WebTransport.getStats()")}} is now supported, and returns statistics for the transport's underlying connection and its datagrams. ([Firefox bug 2007202](https://bugzil.la/2007202)).
 
 <!-- #### DOM -->
 
@@ -72,7 +74,7 @@ Firefox 158 is the current [Nightly version of Firefox](https://www.firefox.com/
 
 ## Changes for add-on developers
 
-- {{WebExtAPIRef("publicSuffix.isKnownSuffix()")}} now throws an error when passed an invalid hostname, instead of returning`false`. ([Firefox bug 2066620](https://bugzil.la/2066620))
+- {{WebExtAPIRef("publicSuffix.isKnownSuffix()")}} now throws an error when passed an invalid hostname, instead of returning `false`. ([Firefox bug 2066620](https://bugzil.la/2066620))
 - Adds [`runtime.getVersion()`](/en-US/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getVersion) to return the extension's version as declared in the manifest. ([Firefox bug 1992418](https://bugzil.la/1992418))
 
 <!-- ### Removals -->

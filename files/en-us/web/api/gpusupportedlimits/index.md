@@ -15,6 +15,8 @@ The **`GPUSupportedLimits`** interface of the {{domxref("WebGPU API", "WebGPU AP
 
 The following limits are represented by properties in a `GPUSupportedLimits` object. See the [Limits](https://gpuweb.github.io/gpuweb/#limits) section of the specification for detailed descriptions of what the limits relate to.
 
+All properties are read-only.
+
 | Limit name                                                                                                                                                                                                                                                            | Default value            |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
 | `maxTextureDimension1D`                                                                                                                                                                                                                                               | 8192                     |

@@ -54,7 +54,7 @@ const point = DOMPointReadOnly.fromPoint({ x: 100, y: 100, z: 50, w: 1.0 });
 - {{domxref("DOMPointReadOnly.matrixTransform", "matrixTransform()")}}
   - : Applies a matrix transform specified as an object to the `DOMPointReadOnly` object.
 - {{domxref("DOMPointReadOnly.toJSON()", "toJSON()")}}
-  - : Returns a JSON representation of the `DOMPointReadOnly` object.
+  - : Returns a JSON-serializable plain object representing the `DOMPointReadOnly` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Specifications
 

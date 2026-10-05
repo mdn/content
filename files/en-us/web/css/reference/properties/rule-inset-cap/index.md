@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`rule-inset-cap`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property can be used to offset the column and row rule segment [cap endpoints](#understanding_cap_end) to the same value.
+The **`rule-inset-cap`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property can be used to offset the column and row rule segment [cap endpoints](/en-US/docs/Web/CSS/Reference/Properties/column-rule-inset-cap#understanding_cap_endpoints) to the same value.
 
 {{InteractiveExample("CSS Demo: rule")}}
 
@@ -410,10 +410,10 @@ const colSize = document.getElementById("col");
 const ow = document.getElementById("ow");
 const cell = document.querySelector("li:nth-of-type(6)");
 let text = "";
-const update = function () {
+function update() {
   ul.style.ruleInsetCap = text = `${rowSize.value}px ${colSize.value}px`;
   cell.innerHTML = `<code>rule-inset-cap: ${text};</code>`;
-};
+}
 
 update();
 

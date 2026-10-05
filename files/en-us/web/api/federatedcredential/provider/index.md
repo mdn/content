@@ -10,9 +10,7 @@ browser-compat: api.FederatedCredential.provider
 
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}{{SecureContext_Header}}
 
-The **`provider`** property of the
-{{domxref("FederatedCredential")}} interface returns a string
-containing a credential's federated identity provider.
+The **`provider`** read-only property of the {{domxref("FederatedCredential")}} interface returns a string containing a credential's federated identity provider.
 
 ## Value
 
