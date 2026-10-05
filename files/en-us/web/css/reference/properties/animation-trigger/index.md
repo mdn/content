@@ -81,7 +81,7 @@ If an element has an animation _and_ an `animation-trigger` set on it, but no sc
 
 ### Defining the triggered animation actions
 
-The `animation-trigger` value must include one or two {{cssxref("animation-action")}} keywords after the `<dashed-ident>` to specify the animation behavior when the trigger is activated and deactivated. If two `<animation-action>`s are specified, the first is the activation action and the second is the deactivation action. If only one `<animation-action>` is set, this is the activation action, and there is nothing happens on deactivation.
+The `animation-trigger` value must include one or two {{cssxref("animation-action")}} keywords after the `<dashed-ident>` to specify the animation behavior when the trigger is activated and deactivated. If two `<animation-action>`s are specified, the first is the activation action and the second is the deactivation action. If only one `<animation-action>` is set, this is the activation action, and nothing happens on deactivation.
 
 For example:
 
@@ -438,7 +438,7 @@ We also specify a `timeline-trigger` value of `--t view() contain` on the `<div>
 
 - A {{cssxref("timeline-trigger-name")}} value: A `<dashed-ident>` identifier referenced in the `animation-trigger` property.
 - A {{cssxref("timeline-trigger-source")}} value: The [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view) value sets the timeline trigger to a view progress timeline tracking the element inside its nearest scrolling ancestor element.
-- A {{cssxref("timeline-trigger-activation-range")}} value: The {{cssxref("timeline-range-name")}} of [`contain`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#contain) sets the trigger to activate when the `<div>` is fully inside the scrollport. Because we didn't set a value for the {{cssxref("timeline-trigger-active-range")}} component, the active range is the same as the activation range, so it deactivates when it starts to exit the scrollport. See [Understanding timeline range names](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations/Timeline_range_names) for more information.
+- A {{cssxref("timeline-trigger-activation-range")}} value: The {{cssxref("timeline-range-name")}} value of [`contain`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#contain) sets the trigger to activate when the `<div>` is fully inside the scrollport. Because we didn't set a value for the {{cssxref("timeline-trigger-active-range")}} component, the active range is the same as the activation range, so it deactivates when it starts to exit the scrollport.
 
 ```css live-sample___same-element
 div {
