@@ -128,7 +128,7 @@ body.no-focusgroup::before {
 
 #### JavaScript
 
-In our script, we grab a reference to the `focusgroup` container and test whether its {{domxref("SVG Element.focusGroup")}} property exists. If not, we set a class on the `<body>` element that causes a "not supported" banner to render.
+In our script, we grab a reference to the `focusgroup` container and test whether its {{domxref("SVGElement.focusGroup")}} property exists. If not, we set a class on the `<body>` element that causes a "not supported" banner to render.
 
 ```js live-sample___basic-usage-toolbar
 const focusgroupElem = document.querySelector("[focusgroup]");

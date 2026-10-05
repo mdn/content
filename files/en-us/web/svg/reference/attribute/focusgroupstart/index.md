@@ -128,7 +128,7 @@ body.no-focusgroup::before {
 
 #### JavaScript
 
-In our script, we grab a reference to the `focusgroup` container and test whether its {{domxref("SVG Element.focusGroup")}} property exists. If not, we set a class on the `<body>` element that causes a "not supported" banner to render.
+In our script, we grab a reference to the `focusgroup` container and test whether its {{domxref("SVGElement.focusGroup")}} property exists. If not, we set a class on the `<body>` element that causes a "not supported" banner to render.
 
 ```js live-sample___basic-usage-toolbar
 const focusgroupElem = document.querySelector("[focusgroup]");
@@ -153,6 +153,6 @@ Tab to the toolbar, and note how the focusgroup's item focus can then be moved u
 
 ## See also
 
-- {{SVGAttr("focusgroupstart")}} SVG attribute
-- [`focusgroup`](/en-US/docs/Web/HTML/Reference/Global_attributes/focusgroup) HTML attribute
+- {{SVGAttr("focusgroup")}} SVG attribute
+- [`focusgroupstart`](/en-US/docs/Web/HTML/Reference/Global_attributes/focusgroupstart) HTML attribute
 - {{domxref("SVGElement.focusGroup")}}
