@@ -1,6 +1,6 @@
 ---
 title: "`rule-overlap` CSS property"
-short-title: rule
+short-title: rule-overlap
 slug: Web/CSS/Reference/Properties/rule-overlap
 page-type: css-property
 status:
@@ -13,7 +13,7 @@ sidebar: cssref
 
 The **`rule-overlap`** [CSS](/en-US/docs/Web/CSS) property sets the paint order for overlapping gap decorations, defining whether the column rule or row rule is painted on top when the two intersect.
 
-{{InteractiveExample("CSS Demo: rule")}}
+{{InteractiveExample("CSS Demo: rule-overlap")}}
 
 ```css interactive-example-choice
 rule-overlap: row-over-column;
@@ -125,6 +125,7 @@ We create a list of 75 items. Most of the HTML is hidden for brevity.
   <li>1</li>
   <li>2</li>
   <li>3</li>
+  <li>4</li>
   <li>5</li>
   <li>6</li>
   <li>7</li>
@@ -198,7 +199,10 @@ We create a list of 75 items. Most of the HTML is hidden for brevity.
   <li>75</li>
 </ul>
 <p>
-  <label><input type="checkbox"> set to <code>rule-overlap: row-over-column;</label>
+  <label
+    ><input type="checkbox" /> set to
+    <code>rule-overlap: row-over-column;</code></label
+  >
 </p>
 ```
 
