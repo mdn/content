@@ -349,7 +349,7 @@ ul {
 
 #### Result
 
-{{EmbedLiveSample("Multiple", "", "600")}}
+{{EmbedLiveSample("Multiple", "", "440")}}
 
 There are nine column gutters and six row gutters, but only three colors in our color list, so the list gets repeated, with the first, fourth, and seventh lines being blue.
 

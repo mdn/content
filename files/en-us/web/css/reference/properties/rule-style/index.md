@@ -336,7 +336,7 @@ ul {
 
 #### Result
 
-{{EmbedLiveSample("Multiple", "", "600")}}
+{{EmbedLiveSample("Multiple", "", "440")}}
 
 There are more values than gutters for both the rows and columns; the last values are not used in each case.
 
