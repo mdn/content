@@ -214,7 +214,7 @@ img {
 
 By default, the {{domxref("ViewTimeline")}} created by the `view()` function tracks the position of the `<img>` element across the block-axis of the nearest parent scroller. The element that is tracked, in this case the `<img>`, is the **subject** or the **tracked element**.
 
-By default, the triggers are activated and deactivated when the tracked element is scrolled to the start and end of the timeline range respectively, in the block direction, causing the `<figcaption>` animation to play forwards and play backwards. Activation occurs when the tracked element enters the [**activation range**](/en-US/docs/Web/CSS/Reference/Properties/timeline-trigger-activation-range#description), and deactivation occurs when the tracked element leaves the [**active range**](/en-US/docs/Web/CSS/Reference/Properties/timeline-trigger-active-range#description). When the `timeline-trigger-source` is set `view()`, the default activation and active ranges resolves to `cover`, which is from the point when the tracked element's start border edge starts to enter the scrollport to the point when the tracked element's end border edge completely exits the scrollport.
+By default, the triggers are activated and deactivated when the tracked element is scrolled to the start and end of the timeline range respectively, in the block direction, causing the `<figcaption>` animation to play forwards and play backwards. Activation occurs when the tracked element enters the [**activation range**](/en-US/docs/Web/CSS/Reference/Properties/timeline-trigger-activation-range#description), and deactivation occurs when the tracked element leaves the [**active range**](/en-US/docs/Web/CSS/Reference/Properties/timeline-trigger-active-range#description). When the `timeline-trigger-source` is set `view()`, the default activation and active ranges resolve to `cover`, which is from the point when the tracked element's start border edge starts to enter the scrollport to the point when the tracked element's end border edge completely exits the scrollport.
 
 The example renders like so:
 
@@ -247,9 +247,9 @@ In this case, the `<figcaption>` fades into view when it, rather than the image,
 
 ## Adjusting the trigger activation range
 
-In the previous examples, the trigger activates (`fade-in` starts) as soon as a block edge of the tracked element enters the scrollport at one edge, and deactivates (fade-out starts: `fade-in` is played backwards) when the tracked element has finished exiting the scrollport at the opposite edge. As a result, the fade out is never visible. This is because the default activation and active ranges {{cssxref("timeline-range-name")}} when using `view()` as the `timeline-trigger-source` are both `cover`.
+In the previous examples, the trigger activates (`fade-in` starts) as soon as a block edge of the tracked element enters the scrollport at one edge, and deactivates (fade-out starts: `fade-in` is played backwards) when the tracked element has finished exiting the scrollport at the opposite edge. As a result, the fade out is never visible. This is because the default activation and active ranges (see {{cssxref("timeline-range-name")}}) when using `view()` as the `timeline-trigger-source` are both `cover`.
 
-To make the fade out animation visible, we can offset the start and end of the activation range using the {{cssxref("timeline-trigger-activation-range-start")}} and {{cssxref("timeline-trigger-activation-range-end")}} properties, respectively, or the {{cssxref("timeline-trigger-activation-range")}} shorthand to set both values in a single declaration. Each of these properties can take as values:
+To make the fade out animation visible, we can offset the start and end of the activation range using the {{cssxref("timeline-trigger-activation-range-start")}} and {{cssxref("timeline-trigger-activation-range-end")}} properties, respectively, or the {{cssxref("timeline-trigger-activation-range")}} shorthand to set both values in a single declaration. Each of these properties can take the following values:
 
 - The `normal` default value.
 - A {{cssxref("length-percentage")}} value to specify a point along the default range.
@@ -459,11 +459,11 @@ This example renders like so:
 
 {{embedlivesample("set-active-range", "100%", 500)}}
 
-Scroll the images into view, and then scroll them carefully up and down. Note how both captions fade into view at the same time, at a point roughly one third up the embedded page. The first caption fades out slightly further up, whereas the second caption doesn't fade out until it has been moved completely out of the scrollport. This is because both `<img>` triggers have the same _activation_ range, while only the second one has an _active_ range that is much larger than the activation range applied to it.
+Scroll the images into view, and then scroll them carefully up and down. Note how both captions fade into view at the same time, at a point roughly one third up the embedded page. The first caption fades out slightly further up, whereas the second caption doesn't fade out until it has been moved completely out of the scrollport. This is because both `<img>` triggers have the same _activation_ range, while the second one has a much larger _active_ range applied to it than the activation range.
 
 ## The timeline-trigger shorthand
 
-So far, we've written all the CSS for our scroll-triggered animation as a mixture of shorthand and longhand properties in order to best explain each of the properties and their values. However, this is cumbersome and wordy. Now that you've understood the concepts, we can use the {{cssxref("timeline-trigger")}} shorthand to create the shortest possible equivalent. You'll likely opt for this shorthand in your future projects.
+So far, we've written all the CSS for our scroll-triggered animation as a mixture of shorthand and longhand properties, to effectively explain each of the properties and their values. However, this is cumbersome and wordy. Now that you've understood the concepts, we can use the {{cssxref("timeline-trigger")}} shorthand to create the shortest possible equivalent. You'll likely opt for this shorthand in your future projects.
 
 Taking these declarations as an example:
 
