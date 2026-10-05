@@ -212,16 +212,15 @@ What we need is a way for our program to:
 3. Have the function execute the operation in a way that does not block the main thread, for example by starting a new thread.
 4. Notify us with the result of the operation when it eventually completes.
 
-This is what asynchronous APIs enable us to do.
+This is what asynchronous APIs enable us to do. The rest of this module explains how these approaches are implemented in JavaScript.
 
-> [!NOTE]
-> There are two types of long-running tasks: those that are capabilities provided by the browser API, and those that you implement yourself in JavaScript.
->
-> Almost all long-running task primitives provided by the browser are already asynchronous, such as making HTTP requests using `fetch()`, querying [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), or [encrypting data](/en-US/docs/Web/API/SubtleCrypto/encrypt). They never block the main thread; you interact with them using events, callbacks, or [promises](/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises), as you will see coming up next.
->
-> Our `generatePrimes()` function, however, is custom JavaScript. Wrapping the call in a promise does not move those calculations to another thread, so it still blocks the main thread while it runs. To make it async, we need to explicitly create a thread using a [web worker](/en-US/docs/Learn_web_development/Extensions/Async_JS/Introducing_workers). This will come later in the tutorial, and it is more involved in JavaScript than just calling existing asynchronous primitives.
+### Types of long-running tasks and how to approach them
 
-The rest of this module explains how these approaches are implemented in JavaScript.
+There are two types of long-running tasks: those that are capabilities provided by the browser API, and those that you implement yourself in JavaScript.
+
+Almost all long-running task primitives provided by the browser are already asynchronous, such as making HTTP requests using `fetch()`, querying [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), or [encrypting data](/en-US/docs/Web/API/SubtleCrypto/encrypt). They never block the main thread; you interact with them using events, callbacks, or [promises](/en-US/docs/Learn_web_development/Extensions/Async_JS/Promises), as you will see coming up next.
+
+Our `generatePrimes()` function, however, is custom JavaScript. Wrapping the call in a promise does not move those calculations to another thread, so it still blocks the main thread while it runs. To make it async, we need to explicitly create a thread using a [web worker](/en-US/docs/Learn_web_development/Extensions/Async_JS/Introducing_workers). This will come later in the tutorial, and it is more involved in JavaScript than just calling existing asynchronous primitives.
 
 ## Event handlers
 
