@@ -545,7 +545,6 @@ Change the size of the inset. Note that in the right-hand example, where the col
 
 - {{cssxref("column-rule-inset-junction-start")}}
 - {{cssxref("column-rule-inset-junction")}} shorthand
-- {{cssxref("rule-inset-junction-start")}} shorthand
 - {{cssxref("column-rule-inset")}} shorthand
 - {{cssxref("rule-inset")}} shorthand
 - {{cssxref("column-rule-break")}}

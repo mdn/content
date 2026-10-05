@@ -582,7 +582,6 @@ Change the size of the inset. Note that in the right-hand example, where the row
 
 - {{cssxref("row-rule-inset-junction-start")}}
 - {{cssxref("row-rule-inset-junction")}} shorthand
-- {{cssxref("rule-inset-junction-start")}} shorthand
 - {{cssxref("row-rule-inset")}} shorthand
 - {{cssxref("rule-inset")}} shorthand
 - {{cssxref("row-rule-break")}}

@@ -543,7 +543,6 @@ Change the size of the inset. Note that in example, where the column rule is a s
 
 - {{cssxref("column-rule-inset-junction-end")}}
 - {{cssxref("column-rule-inset-junction")}} shorthand
-- {{cssxref("rule-inset-junction-start")}} shorthand
 - {{cssxref("column-rule-inset")}} shorthand
 - {{cssxref("rule-inset")}} shorthand
 - {{cssxref("column-rule-break")}}
