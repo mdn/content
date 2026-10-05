@@ -522,6 +522,7 @@ noautohide
 nodownload
 nofullscreen
 noimageindex
+NOINLINE
 nolint
 noremoteplayback
 nosniff
