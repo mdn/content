@@ -53,7 +53,7 @@ To begin with, create a new HTML file on your local file system and add the foll
       This example requires you to enter commands in your browser's JavaScript
       console (see
       <a
-        href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools"
+        href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools"
         >What are browser developer tools</a
       >
       for more information).
