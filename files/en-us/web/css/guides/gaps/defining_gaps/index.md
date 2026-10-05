@@ -180,7 +180,7 @@ i:nth-of-type(7n) {
   <label
     ><input type="radio" value="flex2" name="dir" />Flexbox (columns)</label
   >
-  <label><input type="radio" value="mult" name="dir" />Multi-col</label>
+  <label><input type="radio" value="multicol" name="dir" />Multi-col</label>
 </fieldset>
 ```
 
@@ -364,7 +364,7 @@ p {
   display: flex;
   flex-flow: column wrap;
 }
-:has([value="mult"]:checked) p {
+:has([value="multicol"]:checked) p {
   columns: 5 2em / 2.35em;
 }
 ```
