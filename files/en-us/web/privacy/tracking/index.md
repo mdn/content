@@ -70,6 +70,9 @@ To use cookies, a tracker implements something like the following process:
 
 In this situation, the cookies that are exchanged are associated with a different site from the main page. The main page, whose URL is shown in the address bar, is the site that the user intends to visit, but the cookies are associated with the tracker's site. Cookies with this property are called _third-party cookies_, and much of the effort browsers put into preventing tracking involves blocking or restricting the use of third-party cookies.
 
+> [!NOTE]
+> Third-party cookies are sometimes called _cross-site cookies_, and this term is often preferred, since it is more descriptive.
+
 ### Covert stateful tracking
 
 This is a variant of stateful tracking in which trackers don't use client-side storage APIs to store identifiers, but instead store identifiers in parts of the web platform that are not intended for general storage.
@@ -147,7 +150,7 @@ There are legitimate uses for the techniques that are used in tracking, and it c
 
 For example, when we talk about cross-site tracking, we use a {{glossary("site", "specific definition of \"site\"")}}. But there are situations in which users might consider two servers to represent the same entity, when they are technically different sites. This could be the case when a single organization has different sites in different countries, such as `example.co.uk` and `example.ca`. In a situation like this the user might expect that their login status or preferences would persist across both sites, and to do that, the sites have to implement something that, technically, falls under our definition of tracking.
 
-Another situation in which sites have to exchange state is [federated login](/en-US/docs/Web/Security/Authentication/Federated_identity), in which the website that the user is trying to sign into needs to coordinate with the {{glossary("identity provider")}}, and [implementations of this often rely on third-party cookies](/en-US/docs/Web/Security/Authentication/Federated_identity#third-party_cookies).
+Another situation in which sites have to exchange state is [federated login](/en-US/docs/Web/Security/Authentication/Federated_identity), in which the website that the user is trying to sign into needs to coordinate with the {{glossary("identity provider")}}, and [implementations of this sometimes rely on third-party cookies](/en-US/docs/Web/Security/Authentication/Federated_identity#third-party_cookies).
 
 #### Anti-tracking and site reliability
 
@@ -159,16 +162,16 @@ In cases like this, browsers sometimes have to decide whether the harm caused by
 
 In this section we'll give an overview of the main defenses that browsers deploy against tracking. Browsers typically use some combination of these techniques, and will apply different techniques in different situations and configurations (for example, if the user has private browsing enabled).
 
-#### Tracker lists
+#### Lists of known trackers
 
-A tracker list is a list of domains that are known to host trackers. Trackers may be classified according to the purpose of the tracking and/or the techniques they use. When processing requests for resources, browsers consult the list and decide whether to block the resource load entirely or to limit its capabilities.
+Browsers sometimes identify trackers using a list of domains that are known to host trackers. Trackers may be classified according to the purpose of the tracking and/or the techniques they use. When processing requests for resources, browsers consult the list and decide whether to block the resource load entirely or to limit its capabilities.
 
 The advantages of using tracker lists are that:
 
 - They enable a browser to discriminate between trackers and websites that use tracking techniques for legitimate purposes. This allows the browser to use more aggressive measures against the tracker.
 - They enable a browser to restrict trackers without needing to identify specific techniques.
 
-The main disadvantage is that they need constant maintenance. Several major browsers use the lists maintained by [Disconnect](https://disconnect.me/trackerprotection).
+The main disadvantage is that they need constant maintenance.
 
 #### Blocking known trackers
 
