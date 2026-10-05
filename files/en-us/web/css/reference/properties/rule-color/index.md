@@ -315,7 +315,7 @@ li {
 
 #### Result
 
-{{EmbedLiveSample("Basic", "", "600")}}
+{{EmbedLiveSample("Basic", "", "440")}}
 
 ### Multiple color values
 
@@ -349,7 +349,7 @@ ul {
 
 #### Result
 
-{{EmbedLiveSample("Multiple", "", "600")}}
+{{EmbedLiveSample("Multiple", "", "440")}}
 
 There are nine column gutters and six row gutters, but only three colors in our color list, so the list gets repeated, with the first, fourth, and seventh lines being blue.
 
@@ -381,7 +381,7 @@ ul {
 
 #### Result
 
-{{EmbedLiveSample("repeat", "", "600")}}
+{{EmbedLiveSample("Repeat", "", "440")}}
 
 The grid has 10 columns and 7 rows, creating 9 column and 6 row gutters. The `repeat()` function repeats the two contained mixed colors three times, creating a color list with eight colors in all. While there is a lot of CSS to create the four colors, at least we didn't have to write out all eight `color-mix()` functions. Since there are more column gutters than list colors, the colors are repeated for the column gutters. As there are fewer row gutters than colors, the last two colors in the list are not used for the row gutters.
 
@@ -399,7 +399,7 @@ ul {
 
 #### Result
 
-{{EmbedLiveSample("auto", "", "600")}}
+{{EmbedLiveSample("auto", "", "440")}}
 
 Even though there are more column rule lines than row rule lines, the `<auto-repeat-line-color>` value enables the creation of this symmetric effect.
 
