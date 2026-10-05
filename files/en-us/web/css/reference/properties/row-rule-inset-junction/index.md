@@ -334,7 +334,7 @@ We include the {{htmlelement("ul")}} element as a container with several {{htmle
 
 We turn the `<ul>` into a grid container by setting the {{cssxref("display")}} property to `grid`. The {{cssxref("grid-template-columns")}} specifies the grid have six columns. We remove the bullets with {{cssxref("list-style-type")}} and set the column and rows gaps to `20px` with the {{cssxref("gap")}} shorthand. We set the color, size and line style of all the rules using the {{cssxref("rule")}} shorthand, then change the color of just the column rules with the {{cssxref("column-rule-color")}} property.
 
-We break the row rules at every intersecting using the {{cssxref("row-rule-break")}} property. If the rows didn't break, there would be no row junction segments to style!
+We break the row rules at every intersecting using the {{cssxref("row-rule-break")}} property. If the row rules didn't break, there would be no row junction segments to style!
 
 Finally, we set the start of each row junction to be inset by `16px` and the end to not be inset using the `row-rule-inset-junction` property.
 
