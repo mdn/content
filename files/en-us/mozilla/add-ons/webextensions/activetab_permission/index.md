@@ -224,7 +224,7 @@ In all browsers, closing the tab revokes access. However, same-document navigati
 For navigations that load a new document, the behavior differs:
 
 - **Chrome**: access persists while the tab stays on the same origin, including across reloads. It's revoked when the tab navigates to a different origin.
-- **Safari**: access persists while the tab stays on the same host, including across reloads. It's revoked when the tab navigates to a different host.
+- **Safari**: access persists while the tab stays on the same host or one of its subdomains, including across reloads. It's revoked when the tab navigates to any other host.
 - **Firefox**: access is tied to the document that was in the tab when the user action occurred. Any navigation resulting in a new document ends the access, and the user must repeat the user action. If that document returns from the [back/forward cache](/en-US/docs/Glossary/bfcache), its access is restored.
 
 ### Other differences
