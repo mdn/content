@@ -147,7 +147,7 @@ The `row-rule-inset-junction-start` property is a constituent property of severa
 
 - To inset all row segment endpoints, the `row-rule-inset-junction-start` property, along with the {{cssxref("row-rule-inset-cap-start")}} property, can be set using the {{cssxref("row-rule-inset-start")}} shorthand.
 
-- To inset the start of row segment junction endpoints and bottom of column segment junction endpoints, the `row-rule-inset-junction-start` property, along with the {{cssxref("column-rule-inset-junction-start")}} property, can be set using the {{cssxref("rule-inset-junction-start")}} shorthand.
+- To inset top, bottom, left, and right segment junction endpoints the `row-rule-inset-junction` shorthand property, along with the {{cssxref("column-rule-inset-junction")}} shorthand property, can be set using the {{cssxref("rule-inset-junction")}} shorthand.
 
 All segment endpoints, including this property's `-end`, `-cap`, and `column-` equivalents, can be set using the {{cssxref("rule-inset")}} shorthand.
 

@@ -147,7 +147,7 @@ The `row-rule-inset-junction-end` property is a constituent property of several 
 
 - To inset all row segment endpoints, the `row-rule-inset-junction-end` property, along with the {{cssxref("row-rule-inset-cap-end")}} property, can be set using the {{cssxref("row-rule-inset-end")}} shorthand.
 
-- To inset the end of row segment junction endpoints and bottom of column segment junction endpoints, the `row-rule-inset-junction-end` property, along with the {{cssxref("column-rule-inset-junction-end")}} property, can be set using the {{cssxref("rule-inset-junction-end")}} shorthand.
+- To inset top, bottom, left, and right segment junction endpoints the `row-rule-inset-junction` shorthand property, along with the {{cssxref("column-rule-inset-junction")}} shorthand property, can be set using the {{cssxref("rule-inset-junction")}} shorthand.
 
 All segment endpoints, including this property's `-start`, `-cap`, and `column-` equivalents, can be set using the {{cssxref("rule-inset")}} shorthand.
 
