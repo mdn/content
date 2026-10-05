@@ -280,31 +280,21 @@ Whereas CSS uses {{htmlelement("link")}} elements to apply external stylesheets 
 The example should render like so:
 
 ```html hidden live-sample___apply-javascript-internal
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Internal JavaScript example</title>
-  </head>
-  <body>
-    <button>Click me</button>
+<button>Click me</button>
 
-    <script>
-      function createParagraph() {
-        const para = document.createElement("p");
-        para.textContent = "You clicked the button!";
-        document.body.appendChild(para);
-      }
+<script>
+  function createParagraph() {
+    const para = document.createElement("p");
+    para.textContent = "You clicked the button!";
+    document.body.appendChild(para);
+  }
 
-      const buttons = document.querySelectorAll("button");
+  const buttons = document.querySelectorAll("button");
 
-      for (const button of buttons) {
-        button.addEventListener("click", createParagraph);
-      }
-    </script>
-  </body>
-</html>
+  for (const button of buttons) {
+    button.addEventListener("click", createParagraph);
+  }
+</script>
 ```
 
 {{embedlivesample("apply-javascript-internal", "100%", "200")}}

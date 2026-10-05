@@ -138,7 +138,7 @@ First, create a new HTML file on your local file system, and add the following c
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>Random color example — event handler attribute</title>
+    <title>Random color example — addEventListener()</title>
     <style>
       button {
         margin: 10px;

@@ -135,16 +135,14 @@ Test criteria for this feature could be written like so:
 
 A and B grade:
 
-- Button should be activatable by the user's primary control mechanism, whatever it is — this should include mouse, keyboard, and touch.
-- Toggling the button should make the information box appear/disappear.
-- The text should be readable.
+- The question mark button should be activatable by the user's primary control mechanism, whatever it is — this should include mouse, keyboard, and touch.
+- Activating the button should make the information box appear/disappear.
+- The Information text in the sliding panel should be readable.
 - Visually impaired users using screen readers should be able to access the text.
 
 A-grade:
 
-- The information box should animate smoothly as it appears/disappears.
-
-You might notice that the button isn't usable with only the keyboard. We could remedy this using JavaScript to implement a keyboard control for the toggle, or use some other approach.
+- The sliding panel should animate smoothly as it appears/disappears.
 
 These test criteria are useful, because:
 

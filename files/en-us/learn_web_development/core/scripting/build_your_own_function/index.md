@@ -387,11 +387,11 @@ btn.addEventListener("click", () =>
 );
 
 function displayMessage(msgText, msgType) {
-  const html = document.querySelector("html");
+  const body = document.body;
 
   const panel = document.createElement("div");
   panel.setAttribute("class", "msgBox");
-  html.appendChild(panel);
+  body.appendChild(panel);
 
   const msg = document.createElement("p");
   msg.textContent = msgText;
@@ -401,9 +401,7 @@ function displayMessage(msgText, msgType) {
   closeBtn.textContent = "x";
   panel.appendChild(closeBtn);
 
-  closeBtn.onclick = function () {
-    panel.parentNode.removeChild(panel);
-  };
+  closeBtn.addEventListener("click", () => body.removeChild(panel));
 
   if (msgType === "warning") {
     msg.style.backgroundImage = "url(warning.png)";
