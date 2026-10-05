@@ -117,7 +117,7 @@ When combining `play-once` with `pause`, the animation will play on activation a
 animation-trigger: --t play-once pause;
 ```
 
-If you combine `play-once` with `replay`, the animation will play on activation, then play again from the beginning on deactivation. It won't exceed its iteration count on any play- through, but it will play again on subsequent deactivations because we reset the animation to the start each time. On subsequent activations, however, the animation will not play again.
+If you combine `play-once` with `replay`, the animation will play on activation, then play again from the beginning on deactivation. It won't exceed its iteration count on any playthrough, but it will play again on subsequent deactivations because we reset the animation to the start each time. On subsequent activations, however, the animation will not play again.
 
 ```css
 animation-trigger: --t play-once replay;
@@ -338,7 +338,7 @@ The `.animated` element has the `rotate` animation applied. We then give it an `
 The `.trigger` element creates the animated `<div>`'s trigger using a `timeline-trigger` value of `--t view()`. This value includes the identifier referenced in the animated `<div>`'s `animation-trigger` property value (the `timeline-trigger-name`), associating the two together. It also includes:
 
 - A `timeline-trigger-source` value of [`view()`](/en-US/docs/Web/CSS/Reference/Properties/animation-timeline/view), which sets the timeline trigger as a view progress timeline, and the element providing the timeline trigger as the nearest scrolling ancestor element.
-- A {{cssxref("timeline-trigger-activation-range")}} value of [`contain`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#contain), which means that the trigger will activate when the `.trigger` element is fully inside the scrollport. As the {{cssxref("timeline-trigger-active-range")}} defaults to the activation range, it deactivates when it stops being fully inside the scrollport.
+- A {{cssxref("timeline-trigger-activation-range")}} value of [`contain`](/en-US/docs/Web/CSS/Reference/Values/timeline-range-name#contain), which means that the trigger will activate when the `.trigger` element is fully inside the scrollport. Because {{cssxref("timeline-trigger-active-range")}} defaults to `auto`, its value is the same as the activation range; the trigger therefore deactivates when it stops being fully inside the scrollport.
 
 ```css live-sample___basic-example
 .trigger {
