@@ -60,7 +60,7 @@ random(--my-base, 1em, 3rem, 2px)
 
 ### Parameters
 
-The `random(seed, min, max, step) function accepts two to four comma-separated expressions as its parameters.
+The `random(seed, min, max, step)` function accepts two to four comma-separated expressions as its parameters.
 
 - `<random-key>` {{optional_inline}}
   - : Controls which `random()` functions in the document will share a random base value, or _seed_, and which will get distinct values.
