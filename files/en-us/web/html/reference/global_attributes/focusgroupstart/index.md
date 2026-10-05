@@ -97,6 +97,27 @@ span {
 }
 ```
 
+```css hidden live-sample___basic-usage live-sample___focusgroup-opt-out
+body.no-focusgroup::before {
+  font-family: sans-serif;
+  content: "Your browser does not support focusgroup/focusgroupstart.";
+  background-color: wheat;
+  text-align: center;
+  padding: 1rem 0;
+
+  z-index: 1;
+  position: fixed;
+  inset: 30% 0 auto;
+}
+```
+
+```js hidden live-sample___basic-usage live-sample___focusgroup-opt-out
+const focusgroupElem = document.querySelector("[focusgroup]");
+if (!focusgroupElem.focusGroup) {
+  document.body.className = "no-focusgroup";
+}
+```
+
 #### Result
 
 {{embedlivesample("focusgroup-opt-out", "100%", 100)}}

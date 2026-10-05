@@ -552,7 +552,7 @@ div > button:focus {
 }
 ```
 
-```css hidden live-sample___basic-usage-toolbar
+```css hidden live-sample___basic-usage-toolbar live-sample___vertical-menu
 body.no-focusgroup::before {
   font-family: sans-serif;
   content: "Your browser does not support focusgroup.";

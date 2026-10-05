@@ -115,7 +115,7 @@ svg {
 
 body.no-focusgroup::before {
   font-family: sans-serif;
-  content: "Your browser does not support focusgroup.";
+  content: "Your browser does not support focusgroup/focusgroupstart.";
   background-color: wheat;
   text-align: center;
   padding: 1rem 0;
