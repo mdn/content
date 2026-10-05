@@ -208,13 +208,13 @@ We create a list of 75 items. Most of the HTML is hidden for brevity.
 
 #### CSS
 
-We define the unordered list as a 10-column container, create columns and rows with the {{cssxref("grid-template-columns")}} property, and set {{cssxref("list-style-type")}} to `none` to remove the bullets. We include a {{cssxref("gap")}} of `20px` to provide enough room between the columns and rows to fit our `20px` solid column and row rules.
+We define the unordered list as a 10-column container, create columns and rows with the {{cssxref("grid-template-columns")}} property, and define an empty string for the {{cssxref("list-style-type")}} to to remove the bullets. We include a {{cssxref("gap")}} of `20px` to provide enough room between the columns and rows to fit our `20px` solid column and row rules.
 
 ```css live-sample___basic
 ul {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  list-style-type: none;
+  list-style-type: "";
   gap: 20px;
 
   row-rule: 20px solid palegoldenrod;
@@ -222,21 +222,24 @@ ul {
 
   rule-overlap: column-over-row;
 }
-li {
-  text-align: center;
-  aspect-ratio: 1;
-}
 ```
+
+The rest of the CSS has been hidden for brevity.
 
 ```css hidden live-sample___basic
 :has(:checked) ul {
   rule-overlap: row-over-column;
 }
+li {
+  text-align: center;
+  aspect-ratio: 1;
+  line-height: 1.5em;
+}
 ```
 
 #### Result
 
-{{EmbedLiveSample("Basic", "", "600")}}
+{{EmbedLiveSample("Basic", "", "625")}}
 
 ## Specifications
 
