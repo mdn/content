@@ -72,7 +72,7 @@ The `random(seed, min, max, step)` function accepts two to four comma-separated 
     - `element-scoped`
       - : Adds an element-specific identifier to the random cache name, so if applied over multiple properties (e.g., `width` and `height`) both properties use the same value, but each element (e.g., `<div>`) gets a different random values.
     - `property-scoped`
-      - : Adds the property name to the random cache name, so if applied over multiple properties (e.g. `width` and `height`) both properties gets a different random value, but each element (e.g. `<div>`) uses the same random values.
+      - : Adds the property name to the random cache name, so if applied over multiple properties (e.g., `width` and `height`) both properties gets a different random value, but each element (e.g., `<div>`) uses the same random values.
     - `property-index-scoped`
       - : Adds the property name and the index of the `random()` function among all random functions used in the same property value to the random cache name, so multiple instances in the same declaration each get different random values.
     - {{cssxref("dashed-ident")}}
