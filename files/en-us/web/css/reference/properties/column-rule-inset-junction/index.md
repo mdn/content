@@ -406,7 +406,7 @@ const ow = document.getElementById("ow");
 const cell = document.querySelector("li:nth-of-type(8)");
 let text = "";
 function update() {
-  ul.style.endumnRuleInsetJunction =
+  ul.style.columnRuleInsetJunction =
     text = `${startSize.value}px ${endSize.value}px`;
   cell.innerHTML = `<code>rule-inset-cap: ${text};</code>`;
 }
