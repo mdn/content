@@ -145,7 +145,7 @@ In this section we'll describe two considerations that make it impractical for b
 
 There are legitimate uses for the techniques that are used in tracking, and it can be hard for the browser to determine whether a particular usage is legitimate or not.
 
-For example, when we talk about cross-site tracking, we use a {{glossary("site", "specific definition of \"site\"")}}. But there are situations in which users might consider two servers to represent the same entity, when they are technically different sites. This could be the case when a single organization has different sites in different countries, such as `example.co.uk` and `example.ca`. In a situation like this the user might expect that their login status or preferences would persist across both sites, and to do that, the sites have to implement cross-site tracking.
+For example, when we talk about cross-site tracking, we use a {{glossary("site", "specific definition of \"site\"")}}. But there are situations in which users might consider two servers to represent the same entity, when they are technically different sites. This could be the case when a single organization has different sites in different countries, such as `example.co.uk` and `example.ca`. In a situation like this the user might expect that their login status or preferences would persist across both sites, and to do that, the sites have to implement something that, technically, falls under our definiton of tracking.
 
 Another situation in which sites have to exchange state is [federated login](/en-US/docs/Web/Security/Authentication/Federated_identity), in which the website that the user is trying to sign into needs to coordinate with the {{glossary("identity provider")}}, and [implementations of this often rely on third-party cookies](/en-US/docs/Web/Security/Authentication/Federated_identity#third-party_cookies).
 
@@ -188,15 +188,15 @@ Recall that an embedded third-party tracker can store and retrieve the user's id
 
 ![Diagram showing how a tracker can correlate data scross sites using unpartitioned storage.](unpartitioned-storage.svg)
 
-Partitioned storage makes access to a particular storage area dependent not only on the embedded resource's origin, but also on the origin of the top-level document. That means that a tracker from `tracker.com` will access a different storage area, depending on the page in which it is embedded. This in turn means that the tracker can't correlate these two instances.
+Partitioned storage makes access to a particular storage area dependent not only on the embedded resource's origin, but also on the top-level document's site. That means that a tracker from `tracker.com` will access a different storage area, depending on the page in which it is embedded. This in turn means that the tracker can't correlate these two instances.
 
 ![Diagram showing how a tracker can't correlate data scross sites when it is using partitioned storage.](partitioned-storage.svg)
 
-This is also referred to as _double-keying_: the storage for the embedded content is keyed (accessed) on the combination of the embedded content's origin and that of the top-level document.
+This is also referred to as _double-keying_: the storage for the embedded content is keyed (accessed) on the combination of the embedded content's origin and the top-level document's site.
 
-Partitioned storage applies not only to [web platform storage APIs](#tracking_using_client-side_storage_apis) such as cookies, {{domxref("Window.localStorage", "local storage")}} or [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), but also to any other method that a tracker could use to persist state, including those that we classified as [covert stateful tracking](#covert_stateful_tracking), such as HSTS status or the HTTP cache. This would mean that, for example, a tracker embedded in one page would not see the same set of HSTS statuses, or cached HTTP resources, as the same tracker embedded in another page.
+Partitioned storage can be applied not only to [web platform storage APIs](#tracking_using_client-side_storage_apis) such as cookies, {{domxref("Window.localStorage", "local storage")}} or [IndexedDB](/en-US/docs/Web/API/IndexedDB_API), but also to other methods that a tracker could use to persist state, including those that we classified as [covert stateful tracking](#covert_stateful_tracking) the HTTP cache. This would mean that, for example, a tracker embedded in one page would not see the same set of cached HTTP resources as the same tracker embedded in another page.
 
-See [Client-Side Storage Partitioning](https://privacycg.github.io/storage-partitioning/) for more details, including a list of all the known browser state that should be affected by storage partitioning.
+See [Client-Side Storage Partitioning](https://privacycg.github.io/storage-partitioning/) for more details, including a list of all the known browser state that could be affected by storage partitioning.
 
 #### Bounce tracking defenses
 
