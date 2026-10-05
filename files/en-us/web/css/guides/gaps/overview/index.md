@@ -244,7 +244,6 @@ In this example, the vertical decorations are continuous but inset on the ends. 
 
 - {{cssxref("column-rule-inset-cap-start")}}
   - : The same vocabulary as `column-rule-inset-cap-end`, defining the space between the start of the segment and the start edge of the container or a gap junction where no other gap decoration segment exists.
- 
 - {{cssxref("column-rule-inset-end")}}
   - : An `<inset-value>`. Sets the `column-rule-inset-cap-end` and `column-rule-inset-junction-end` to the same value.
 
