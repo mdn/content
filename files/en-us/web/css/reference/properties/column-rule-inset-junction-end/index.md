@@ -13,7 +13,7 @@ sidebar: cssref
 
 The **`column-rule-inset-junction-end`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the bottom endpoints of column rule segments that are [junction endpoints](#understanding_junction_endpoints); that is, endpoints at gap junctions where rule segments intersect.
 
-{{InteractiveExample("CSS Demo: rule")}}
+{{InteractiveExample("CSS Demo: column-rule-inset-junction-end")}}
 
 ```css interactive-example-choice
 column-rule-inset-junction-end: 0;
@@ -98,7 +98,7 @@ column-rule-inset-junction-end: unset;
 This property is specified as a single value from the following list:
 
 - `overlap-join`
-  - : Specifies the junction segment should extend across the row-rule, resolving to half the {{cssxref("row-gap")}} value plus half the used {{cssxref("row-rule-width")}} value.
+  - : Specifies that the junction segment should extend across the row-rule, resolving to half the {{cssxref("row-gap")}} value plus half the used {{cssxref("row-rule-width")}} value.
 - {{cssxref("length-percentage")}}
   - : Specifies the size of the inset. Percentage values are relative to the junction endpoint, which is the `row-gap` value.
 
@@ -398,6 +398,8 @@ Change the size of the {{cssxref("row-rule-width")}} and the {{cssxref("row-gap"
 This example demonstrates setting `column-rule-inset-junction-end` to inset the end edge of junction segments on flex containers.
 
 #### HTML
+
+The markup includes two {{htmlelement("div")}} elements, each containing seven children. The only difference is between the two containers is the second one has an added `column` class.
 
 ```html
 <h1>Insetting junction column rule endpoints</h1>

@@ -227,6 +227,8 @@ ul {
 }
 ```
 
+#### Result
+
 {{EmbedLiveSample("Repeat", "", "180")}}
 
 ### Using the `repeat()` function
@@ -238,6 +240,8 @@ ul {
   column-rule-style: solid, repeat(3, inset, outset), solid;
 }
 ```
+
+#### Result
 
 {{EmbedLiveSample("func", "", "180")}}
 
@@ -254,6 +258,8 @@ ul {
   column-rule-style: solid, repeat(auto, groove), solid;
 }
 ```
+
+#### Result
 
 {{EmbedLiveSample("auto", "", "180")}}
 

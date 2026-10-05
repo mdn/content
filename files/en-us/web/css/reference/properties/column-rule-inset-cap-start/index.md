@@ -13,7 +13,7 @@ sidebar: cssref
 
 The **`column-rule-inset-cap-start`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the top of column rule segment [cap endpoints](/en-US/docs/Web/CSS/Reference/Properties/column-rule-inset-cap#understanding_cap_endpoints) at the container's start edge, and cap endpoints where no rule segments intersect.
 
-{{InteractiveExample("CSS Demo: rule")}}
+{{InteractiveExample("CSS Demo: column-rule-inset-cap-start")}}
 
 <!-- negative example must come first -->
 
@@ -339,6 +339,8 @@ Setting `100%` insets the start of the cap segments by `20px`. Setting `-200%` w
 This example demonstrates setting `column-rule-inset-cap-start` to inset the start edge of cap segments on flex containers.
 
 #### HTML
+
+The markup includes two {{htmlelement("div")}} elements, each containing seven children. The only difference is between the two containers is the second one has an added `column` class.
 
 ```html
 <h1>Insetting cap column rule endpoints</h1>

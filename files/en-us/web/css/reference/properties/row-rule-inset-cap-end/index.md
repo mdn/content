@@ -13,7 +13,7 @@ sidebar: cssref
 
 The **`row-rule-inset-cap-end`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the end of row rule segment [cap endpoints](#understanding_cap_end).
 
-{{InteractiveExample("CSS Demo: rule")}}
+{{InteractiveExample("CSS Demo: row-rule-inset-cap-end")}}
 
 ```css interactive-example-choice
 row-rule-inset-cap-end: -20px;
@@ -364,6 +364,8 @@ Select `between` as the `rule-visibility-items` value. We now have a row rule en
 This example demonstrates setting `row-rule-inset-cap-end` to inset the end edge of cap segments on flex containers.
 
 #### HTML
+
+The markup includes two {{htmlelement("div")}} elements, each containing seven children. The only difference is between the two containers is the second one has an added `column` class.
 
 ```html
 <h1>Insetting cap row rule endpoints</h1>

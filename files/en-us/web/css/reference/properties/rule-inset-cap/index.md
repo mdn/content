@@ -13,7 +13,7 @@ sidebar: cssref
 
 The **`rule-inset-cap`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property can be used to offset the column and row rule segment [cap endpoints](/en-US/docs/Web/CSS/Reference/Properties/column-rule-inset-cap#understanding_cap_endpoints) to the same value.
 
-{{InteractiveExample("CSS Demo: rule")}}
+{{InteractiveExample("CSS Demo: rule-inset-cap")}}
 
 <!-- negative example must come first -->
 
@@ -162,6 +162,8 @@ The `rule-inset-cap` property, along with the {{cssxref("rule-inset-junction")}}
 This example shows how to set `rule-inset-cap` to inset the endpoints of cap segments on flex containers.
 
 #### HTML
+
+The markup includes two {{htmlelement("div")}} elements, each containing seven children. The only difference is between the two containers is the second one has an added `column` class.
 
 ```html
 <h1>Insetting cap endpoints</h1>

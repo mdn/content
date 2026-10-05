@@ -13,7 +13,7 @@ sidebar: cssref
 
 The **`column-rule-inset-cap`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property can be used to offset the column rule segment [cap endpoints](#understanding_cap_endpoints) at the container's start and end edges, and endpoints where the segments don't intersect other row or column segments.
 
-{{InteractiveExample("CSS Demo: rule")}}
+{{InteractiveExample("CSS Demo: column-rule-inset-cap")}}
 
 ```css interactive-example-choice
 column-rule-inset-cap: -20px;
@@ -349,6 +349,8 @@ Select `between` as the `rule-visibility-items` value. The first two column rule
 This example demonstrates setting `column-rule-inset-cap` to inset the column rule cap segment endpoints on flex containers.
 
 #### HTML
+
+The markup includes two {{htmlelement("div")}} elements, each containing seven children. The only difference is between the two containers is the second one has an added `column` class.
 
 ```html
 <h1>Insetting cap column rule endpoints</h1>
