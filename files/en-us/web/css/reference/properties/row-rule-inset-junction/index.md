@@ -11,9 +11,9 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`row-rule-inset-junction`** ** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property can be used to offset both the left and right endpoints of row rule segments that are [junction endpoints](#understanding_junction_endpoints); that is, endpoints at gap junctions where rule segments intersect.
+The **`row-rule-inset-junction`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property can be used to offset both the left and right endpoints of row rule segments that are [junction endpoints](#understanding_junction_endpoints); that is, endpoints at gap junctions where rule segments intersect.
 
-{{InteractiveExample("CSS Demo: rule")}}
+{{InteractiveExample("CSS Demo: row-rule-inset-junction")}}
 
 ```css interactive-example-choice
 row-rule-inset-junction: 0;
@@ -110,7 +110,7 @@ row-rule-inset-junction: unset;
 This property is specified as one or two values from the following list:
 
 - `overlap-join`
-  - : Specifies the junction segment should extend across the column-rule, resolving to half the {{cssxref("column-gap")}} value plus half the used {{cssxref("column-rule-width")}} value.
+  - : Specifies that the junction segment should extend across the column-rule, resolving to half the {{cssxref("column-gap")}} value plus half the used {{cssxref("column-rule-width")}} value.
 - {{cssxref("length-percentage")}}
   - : Specifies the size of the inset. Percentage values are relative to the junction endpoint, which is the `column-gap` value.
 
@@ -143,6 +143,8 @@ All segment endpoints, including this property's `-cap` and `-column` equivalent
 This example demonstrates setting `row-rule-inset-junction` to inset the edges of junction segments on flex containers.
 
 #### HTML
+
+The markup includes two {{htmlelement("div")}} elements, each containing seven children. The only difference is between the two containers is the second one has an added `column` class.
 
 ```html
 <h1>Insetting junction row rule endpoints</h1>
@@ -332,9 +334,9 @@ We include the {{htmlelement("ul")}} element as a container with several {{htmle
 
 #### CSS
 
-We turn the `<ul>` into a grid container by setting the {{cssxref("display")}} property to `grid`. The {{cssxref("grid-template-columns")}} specifies the grid have six columns. We remove the bullets with {{cssxref("list-style-type")}} and set the column and rows gaps to `20px` with the {{cssxref("gap")}} shorthand. We set the color, size and line style of all the rules using the {{cssxref("rule")}} shorthand, then change the color of just the column rules with the {{cssxref("column-rule-color")}} property.
+We turn the `<ul>` into a grid container by setting the {{cssxref("display")}} property to `grid`. The {{cssxref("grid-template-columns")}} property specifies that the grid has six columns. We remove the bullets with {{cssxref("list-style-type")}} and set the row and column gaps to `20px` with the {{cssxref("gap")}} shorthand. We set the color, size, and line style of all the rules using the {{cssxref("rule")}} shorthand, then change just the row rule color with the {{cssxref("column-rule-color")}} property.
 
-We break the row rules at every intersecting using the {{cssxref("row-rule-break")}} property. If the row rules didn't break, there would be no row junction segments to style!
+We break the row rules at every intersection using the {{cssxref("row-rule-break")}} property. If the row rules didn't break, there would be no row junction segments to style!
 
 Finally, we set the start of each row junction to be inset by `16px` and the end to not be inset using the `row-rule-inset-junction` property.
 
@@ -427,6 +429,8 @@ endSize.addEventListener("input", () => {
   update();
 });
 ```
+
+#### Result
 
 {{EmbedLiveSample("junctions", "", "500")}}
 
