@@ -235,6 +235,17 @@ li {
   aspect-ratio: 1;
   line-height: 1.5em;
 }
+@layer no-support {
+  @supports not (rule-overlap: row-over-column) {
+    body::before {
+      content: "Your browser doesn't support the rule-overlap shorthand";
+      background-color: wheat;
+      display: block;
+      text-align: center;
+      padding: 1rem 0;
+    }
+  }
+}
 ```
 
 #### Result
