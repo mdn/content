@@ -315,7 +315,7 @@ Using the {{cssxref("animation")}} shorthand, each `.animated` element is given 
 }
 ```
 
-The `.trigger` elements are set as triggers for the `.animated` elements by giving them a {{cssxref("timeline-trigger-name")}} value that references the same identifier, `--t`, and a {{cssxref("timeline-trigger-source")}} of `view()`. We set the {{cssxref("timeline-trigger-activation-range")}} to `contain`, so activation and deactivation occur while the trigger is still visible. We also set some rudimentary styles to make them stand out from the rest of the text.
+The `.trigger` elements are set as triggers for the `.animated` elements by giving them a {{cssxref("timeline-trigger-name")}} value that references the same identifier, `--t`, and a {{cssxref("timeline-trigger-source")}} of `view()`. We set the {{cssxref("timeline-trigger-activation-range")}} to `contain` and let the {{cssxref("timeline-trigger-active-range")}} default to the same value. As a result, activation and deactivation occur while the trigger is still visible. We also set some rudimentary styles to make them stand out from the rest of the text.
 
 ```css live-sample___trigger-scope
 .trigger {

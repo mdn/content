@@ -271,7 +271,7 @@ The `.trigger` element creates the `.animated` element's trigger using a `timeli
 
 {{EmbedLiveSample("basic-example", "100%", "240")}}
 
-Try scrolling the content. The rotation will start when the tracked element enters the `entry` range: when the `.trigger` first enters the bottom of the scrollport. The animation won't stop until the `.trigger` has completely exited the scrollport.
+Try scrolling the content. The rotation will start when the tracked element enters the `entry` range: when the `.trigger` element first enters the bottom of the scrollport. The animation won't stop until the `.trigger` element has completely exited the scrollport.
 
 ### Multiple timeline-trigger values
 
