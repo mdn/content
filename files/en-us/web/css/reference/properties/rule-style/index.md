@@ -319,7 +319,7 @@ li {
 
 #### Result
 
-{{EmbedLiveSample("Basic", "", "600")}}
+{{EmbedLiveSample("Basic", "", "440")}}
 
 ### Multiple values
 
@@ -336,7 +336,7 @@ ul {
 
 #### Result
 
-{{EmbedLiveSample("Multiple", "", "600")}}
+{{EmbedLiveSample("Multiple", "", "440")}}
 
 There are more values than gutters for both the rows and columns; the last values are not used in each case.
 
@@ -352,7 +352,7 @@ ul {
 }
 ```
 
-{{EmbedLiveSample("Repeat", "", "600")}}
+{{EmbedLiveSample("Repeat", "", "440")}}
 
 ### Using the `repeat()` function
 
@@ -364,7 +364,7 @@ ul {
 }
 ```
 
-{{EmbedLiveSample("func", "", "600")}}
+{{EmbedLiveSample("func", "", "440")}}
 
 The `repeat()` function repeats two style values three times, creating a list of eight style values. The styles are repeated for the columns; however, the last values in the list are discarded for the rows.
 
@@ -380,7 +380,7 @@ ul {
 }
 ```
 
-{{EmbedLiveSample("auto", "", "600")}}
+{{EmbedLiveSample("auto", "", "440")}}
 
 Even though there are more column rule lines than row rule lines, the `<auto-repeat-line-color>` enables the creation of this symmetric effect.
 
@@ -413,4 +413,5 @@ Even though there are more column rule lines than row rule lines, the `<auto-rep
 - {{cssxref("column-rule-style")}}
 - {{cssxref("row-rule-style")}}
 - {{cssxref("rule")}} shorthand
+- [Defining CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps)
 - [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module
