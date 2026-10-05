@@ -73,10 +73,10 @@ The syntax does get a bit more complex than this. We'll go into more detail belo
 Here are some important things to bear in mind about web fonts:
 
 1. Fonts generally aren't free to use without restrictions. You have to pay for them and/or follow other license conditions, such as crediting the font creator in your code (or on your site). You shouldn't steal fonts and use them without giving proper credit.
-2. All major browsers support WOFF/WOFF2 (Web Open Font Format versions 1 and 2). Even older browsers such as IE9 (released in 2011) support the WOFF format.
+2. All modern browsers support WOFF2 (Web Open Font Format version 2), so it is the format we'll use in this article.
 3. WOFF2 supports the entirety of the TrueType and OpenType specifications, including variable fonts, chromatic fonts, and font collections.
-4. The order in which you list font files is important. If you provide the browser with a list of multiple font files to download, the browser will choose the first font file it can use. That's why the format you list first should be the preferred format — that is, WOFF2 — with the older formats listed after that. Browsers that don't understand one format will then fall back to the next format in the list.
-5. If you need to work with legacy browsers, you should provide EOT (Embedded Open Type), TTF (TrueType Font), and SVG web fonts for download. This article explains how to use the Transfonter webfont generator to create the required files.
+4. It is a good idea to provide as few web font files as possible. Using only the formats you need reduces the number of files your site has to serve and helps keep font downloads smaller.
+5. If you need to support older browsers in a real-world project, you may also need to provide WOFF. Check the {{cssxref("@font-face")}} [browser compatibility table](/en-US/docs/Web/CSS/Reference/At-rules/@font-face#browser_compatibility) to see how far back WOFF and WOFF2 support goes.
 
 You can use the [Firefox Font Editor](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_fonts/index.html) to investigate and manipulate the fonts in use on your page, whether they are web fonts or not.
 
@@ -103,8 +103,9 @@ Now you'll need to generate the required code (and font formats). For each font,
 1. Make sure you have satisfied any licensing requirements if you are going to use this in a commercial and/or Web project.
 2. Go to the Transfonter [webfont generator](https://transfonter.org/).
 3. Upload your two font files using the _Upload your fonts_ button.
-4. Click _Convert_.
-5. Click _Download_.
+4. Make sure only the **WOFF2** checkbox is checked; uncheck **WOFF**.
+5. Click _Convert_.
+6. Click _Download_.
 
 After the ZIP file is downloaded, unzip it and move it into the same directory as your HTML and CSS.
 
@@ -112,7 +113,7 @@ After the ZIP file is downloaded, unzip it and move it into the same directory a
 
 Inside the unzipped directory, you'll see some useful items:
 
-- Two versions of each font: the `.woff`, `.woff2` files.
+- A `.woff2` version of each font.
 - A demo HTML file for each font — load these in your browser to see what the font will look like in different usage contexts.
 - A `stylesheet.css` file, which contains the generated @font-face code you'll need.
 
@@ -126,9 +127,7 @@ To implement these fonts in your demo, follow these steps:
    ```css
    @font-face {
      font-family: "zantrokeregular";
-     src:
-       url("fonts/zantroke-webfont.woff2") format("woff2"),
-       url("fonts/zantroke-webfont.woff") format("woff");
+     src: url("fonts/zantroke-webfont.woff2") format("woff2");
      font-weight: normal;
      font-style: normal;
      font-display: swap;
@@ -139,8 +138,10 @@ To implement these fonts in your demo, follow these steps:
    font-family: "zantrokeregular", serif;
    ```
 
+   The generic `serif` family provides a system-font fallback if the web font cannot be loaded. Keeping the number of web font files and formats to a minimum also helps performance by reducing the resources the browser needs to fetch.
+
 > [!NOTE]
-> The example above includes both WOFF2 and WOFF to demonstrate how to provide a fallback font format. For modern websites, you should generally provide WOFF2 only. Include WOFF as a fallback if you need to support older browsers that do not support WOFF2.
+> If you need to support older browsers that do not support WOFF2, you may also need to provide WOFF. Check the {{cssxref("@font-face")}} [browser compatibility table](/en-US/docs/Web/CSS/Reference/At-rules/@font-face#browser_compatibility) to see how far back WOFF and WOFF2 support goes.
 
 You should end up with a demo page with some nice fonts. Because different fonts are created at different sizes, you may have to adjust the size, spacing, etc., to improve the look and feel.
 
@@ -173,9 +174,7 @@ Let's explore that `@font-face` syntax generated for you by Transfonter. The rul
 ```css
 @font-face {
   font-family: "zantrokeregular";
-  src:
-    url("zantroke-webfont.woff2") format("woff2"),
-    url("zantroke-webfont.woff") format("woff");
+  src: url("zantroke-webfont.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -185,7 +184,7 @@ Let's explore that `@font-face` syntax generated for you by Transfonter. The rul
 Let's go through it to see what it does:
 
 - `font-family`: This line specifies the name you want to refer to the font as. This can be anything you like as long as you use it consistently throughout your CSS.
-- `src`: These lines specify the paths to the font files to be imported into your CSS (the `url` part), and the format of each font file (the `format` part). The latter part in each case is optional, but it is useful to declare because it allows browsers to determine which font they can use more quickly. Multiple declarations can be listed, separated by commas. Because the browser will search through them according to the rules of the cascade, it's best to state your preferred formats, like WOFF2, at the beginning.
+- `src`: This line specifies the path to the font file to be imported into your CSS (the `url` part), and the font format (the `format` part). The latter part is optional, but it is useful to declare because it allows browsers to determine whether they can use the font more quickly. If you need to support older browsers, you can list additional font sources separated by commas, with your preferred format such as WOFF2 first.
 - {{cssxref("@font-face/font-weight", "font-weight")}}/{{cssxref("@font-face/font-style", "font-style")}}: These lines specify what weight the font has and whether it is italic or not. If you are importing multiple weights of the same font, you can specify what their weight/style is and then use different values of `font-weight`/`font-style` to choose between them, rather than having to give all the members of the font family different names. [@font-face tip: define font-weight and font-style to keep your CSS simple](https://www.456bereastreet.com/archive/201012/font-face_tip_define_font-weight_and_font-style_to_keep_your_css_simple/) by Roger Johansson shows what to do in more detail.
 - {{cssxref("@font-face/font-display", "font-display")}}: This line specifies how the font is displayed while it is loading.
 
