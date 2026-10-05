@@ -356,7 +356,7 @@ The final output sentence isn't very well-formed:
 
 {{embedlivesample("for-of-loop-cats", "100%", "60")}}
 
-We'd prefer a grammatically-correct sentence, which means handling the last cat differently:
+We'd prefer a grammatically correct sentence, which means handling the last cat differently:
 
 ```plain
 My favorite big cats are Leopard, Serval, Jaguar, Tiger, Caracal, and Lion.
