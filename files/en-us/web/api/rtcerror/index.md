@@ -5,7 +5,7 @@ page-type: web-api-interface
 browser-compat: api.RTCError
 ---
 
-{{APIRef("WebRTC")}}
+{{APIRef("WebRTC")}}{{AvailableInWorkers("window_and_dedicated")}}
 
 The **`RTCError`** interface of the [WebRTC API](/en-US/docs/Web/API/WebRTC_API) describes an error which has occurred while handling RTC operations.
 It's based upon the standard {{domxref("DOMException")}} interface that describes general DOM errors.

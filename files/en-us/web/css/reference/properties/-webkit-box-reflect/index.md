@@ -38,6 +38,8 @@ The **`-webkit-box-reflect`** [CSS](/en-US/docs/Web/CSS) property lets you refle
 
 ### Values
 
+This property is specified as a space-separated list of the following values:
+
 - `above`_,_ `below`_,_ `right`_,_ `left`
   - : Are keywords indicating in which direction the reflection is to happen.
 - {{CSSxRef("&lt;length&gt;")}}

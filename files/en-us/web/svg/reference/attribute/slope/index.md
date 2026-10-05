@@ -58,8 +58,7 @@ In this example, a gradient box has two text elements with linear filters applie
   width="8cm"
   height="4cm"
   viewBox="0 0 800 400"
-  xmlns="http://www.w3.org/2000/svg"
-  version="1.1">
+  xmlns="http://www.w3.org/2000/svg">
   <title>Examples of feComponentTransfer operations</title>
   <desc>
     Text strings showing the effects of the slope attribute of the

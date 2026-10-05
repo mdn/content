@@ -61,4 +61,4 @@ document.querySelector("button").addEventListener("click", init);
 
 ## See also
 
-{{domxref("MediaStreamTrackProcessor.discardedframes")}}
+- {{domxref("MediaStreamTrackProcessor.discardedFrames")}}

@@ -48,7 +48,7 @@ This interface also supports the following properties:
 ## Instance methods
 
 - {{domxref("LayoutShift.toJSON()")}} {{Experimental_Inline}}
-  - : Converts the properties to JSON.
+  - : Returns a JSON-serializable plain object representing the `LayoutShift` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Examples
 

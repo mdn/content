@@ -268,7 +268,7 @@ ul {
     color-mix(in lch decreasing hue, var(--base) 58%, var(--mixin));
 }
 li {
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
 }
 ```
 
@@ -282,11 +282,11 @@ The grid has nine cells across, so eight gutters. The `repeat()` function repeat
 
 This example demonstrates using `auto`, instead of an integer, within the `repeat()` function.
 
-We use the same HTML and CSS as in the previous examples, but override the `column-rule-color` value. Here, we use `repeat(auto, <color>)` to set all the lines to be almost transparent black (`#0003`), except the first and last, which we set to a solid `black`.
+We use the same HTML and CSS as in the previous examples, but override the `column-rule-color` value. Here, we use `repeat(auto, <color>)` to set all the lines to be almost transparent black (`#00000033`), except the first and last, which we set to a solid `black`.
 
 ```css live-sample___auto
 ul {
-  column-rule-color: black, repeat(auto, #0003), black;
+  column-rule-color: black, repeat(auto, #00000033), black;
 }
 ```
 

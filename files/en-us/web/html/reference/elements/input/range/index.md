@@ -11,6 +11,8 @@ sidebar: htmlsidebar
 
 Because this kind of widget is imprecise, it should only be used if the control's exact value isn't important.
 
+If the user's browser doesn't support type `range`, it will fall back and treat it as a `{{HTMLElement('input/text', 'text')}}` input.
+
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;range&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
@@ -46,8 +48,6 @@ input {
   margin: 0.4rem;
 }
 ```
-
-If the user's browser doesn't support type `range`, it will fall back and treat it as a `{{HTMLElement('input/text', 'text')}}` input.
 
 ## Value
 

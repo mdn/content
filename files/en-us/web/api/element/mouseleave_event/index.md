@@ -32,6 +32,20 @@ A {{domxref("MouseEvent")}}. Inherits from {{domxref("UIEvent")}} and {{domxref(
 
 {{InheritanceDiagram("MouseEvent")}}
 
+## Description
+
+### Behavior of `mouseleave` events
+
+![mouseleave behavior diagram](mouseleave.png)
+
+One `mouseleave` event is sent to each element of the hierarchy when leaving them. Here four events are sent to the four elements of the hierarchy when the pointer moves from the text to an area outside of the most outer div represented here.
+
+### Behavior of `mouseout` events
+
+![mouseout behavior diagram](mouseout.png)
+
+One single `mouseout` event is sent to the deepest element of the DOM tree, then it bubbles up the hierarchy until it is canceled by a handler or reaches the root.
+
 ## Examples
 
 The [`mouseout`](/en-US/docs/Web/API/Element/mouseout_event#examples) documentation has an example illustrating the difference between `mouseout` and `mouseleave`.

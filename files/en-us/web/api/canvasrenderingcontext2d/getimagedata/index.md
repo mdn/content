@@ -61,10 +61,13 @@ canvas specified. The coordinates of the rectangle's top-left corner are
 `(sx, sy)`, while the coordinates of the bottom corner are
 `(sx + sw - 1, sy + sh - 1)`.
 
+> [!NOTE]
+> With certain privacy settings (such as fingerprinting protection), random subtle noise is introduced to the `getImageData()` result to prevent the website from inferring the user's rendering device. Therefore, `putImageData()` and `getImageData()` may not round-trip.
+
 ### Exceptions
 
 - `IndexSizeError` {{domxref("DOMException")}}
-  - : Thrown if either `sw` or `sh` are zero.
+  - : Thrown if either `sw` or `sh` is zero.
 - `SecurityError` {{domxref("DOMException")}}
   - : The canvas contains or may contain pixels which were loaded from an origin other
     than the one from which the document itself was loaded.
@@ -130,13 +133,13 @@ The optional `pixelFormat` setting allows you to get image data in the desired p
 ```js
 const context = canvas.getContext("2d");
 
-const imageData = context.getImageData(0, 0, 1, 1);
-console.log(imageData.pixelFormat); // "rgba-unorm8"
+const defaultImageData = context.getImageData(0, 0, 1, 1);
+console.log(defaultImageData.pixelFormat); // "rgba-unorm8"
 
-const imageData = context.getImageData(0, 0, 1, 1, {
+const float16ImageData = context.getImageData(0, 0, 1, 1, {
   pixelFormat: "rgba-float16",
 });
-console.log(imageData.pixelFormat); // "rgba-float16"
+console.log(float16ImageData.pixelFormat); // "rgba-float16"
 ```
 
 ## Specifications

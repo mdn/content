@@ -9,6 +9,8 @@ sidebar: htmlsidebar
 
 The **`<del>`** [HTML](/en-US/docs/Web/HTML) element represents a range of text that has been deleted from a document. This can be used when rendering "track changes" or source code diff information, for example. The {{HTMLElement("ins")}} element can be used for the opposite purpose: to indicate text that has been added to the document.
 
+This element is often (but need not be) rendered by applying a strike-through style to the text.
+
 {{InteractiveExample("HTML Demo: &lt;del&gt;", "tabbed-standard")}}
 
 ```html interactive-example
@@ -36,8 +38,6 @@ blockquote {
   font-size: 1rem;
 }
 ```
-
-This element is often (but need not be) rendered by applying a strike-through style to the text.
 
 ## Attributes
 
@@ -75,7 +75,6 @@ del::after {
 
 Some people who use screen readers deliberately disable announcing content that creates extra verbosity. Because of this, it is important to not abuse this technique and only apply it in situations where not knowing content has been deleted would adversely affect understanding.
 
-- [Short note on making your mark (more accessible) | Vispero](https://vispero.com/resources/short-note-on-making-your-mark-more-accessible/)
 - [Tweaking Text Level Styles | Adrian Roselli](https://adrianroselli.com/2017/12/tweaking-text-level-styles.html)
 
 ## Examples

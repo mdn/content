@@ -9,7 +9,7 @@ status:
 browser-compat: api.SharedStorage.append
 ---
 
-{{APIRef("Shared Storage API")}}{{deprecated_header}}{{non-standard_header}}
+{{APIRef("Shared Storage API")}}{{non-standard_header}}
 
 The **`append()`** method of the {{domxref("SharedStorage")}} interface appends a string to the value of an existing key-value pair in the current origin's shared storage.
 

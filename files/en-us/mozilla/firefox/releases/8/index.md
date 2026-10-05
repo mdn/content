@@ -33,7 +33,7 @@ Firefox 8 was released on November 8, 2011. This article provides information bo
 - Fixed a bug that caused pressing delete or backspace at the beginning of a {{ domxref("HTMLelement.contenteditable", "contenteditable") }} area to affect the previous `contenteditable` block if one is present.
 - {{ domxref("Document.getSelection()") }} now returns the same `Selection` object as {{ domxref("window.getSelection()") }}, instead of _stringifying_ it.
 - The HTML5 `selectionDirection` property makes it possible to define the direction of the selection in an editable text.
-- {{ domxref("HTMLMediaElement") }} now have a `seekable` property that return a {{ domxref("TimeRanges") }} object.
+- {{ domxref("HTMLMediaElement") }} now has a `seekable` property that returns a {{ domxref("TimeRanges") }} object.
 - The {{ domxref("HTMLMediaElement.preload") }} attribute now correctly reflects as an _enumerated value_.
 - [`crossOrigin` property](/en-US/docs/Web/HTML/Reference/Attributes/crossorigin) defaults to "Anonymous" when an invalid value is used.
 - {{ domxref("navigator.cookieEnabled") }} now returns correct information when the default cookie setting is overridden on a per-site basis.

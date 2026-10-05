@@ -24,7 +24,7 @@ A string.
 
 ```js
 // An <a id="myAnchor" href="https://anonymous:flabada@developer.mozilla.org/en-US/docs/HTMLAnchorElement"> is in the document
-const anchor = document.getElementByID("myAnchor");
+const anchor = document.getElementById("myAnchor");
 anchor.password; // returns 'flabada'
 ```
 

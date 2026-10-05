@@ -81,7 +81,7 @@ class PluginHost {
     this.#disposables = disposables;
   }
 
-  [Symbol.asyncDispose]() {
+  async [Symbol.asyncDispose]() {
     if (this.#disposed) {
       return;
     }

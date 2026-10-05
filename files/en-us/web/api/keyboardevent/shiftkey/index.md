@@ -14,6 +14,8 @@ boolean value that indicates if the <kbd>shift</kbd> key was pressed
 
 The pressing of the shift key may change the {{domxref("KeyboardEvent/key", "key")}} of the event too. For example, pressing <kbd>B</kbd> generates `key: "b"`, while simultaneously pressing <kbd>Shift</kbd> generates `key: "B"`.
 
+When the <kbd>Shift</kbd> key itself is pressed or released, this property is `true` for its {{domxref("Element/keydown_event", "keydown")}} event and `false` for its {{domxref("Element/keyup_event", "keyup")}} event, because both events fire _after_ the state change.
+
 ## Value
 
 A boolean value.

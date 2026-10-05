@@ -1,5 +1,6 @@
 ---
-title: revert-rule
+title: "`revert-rule` CSS keyword"
+short-title: revert-rule
 slug: Web/CSS/Reference/Values/revert-rule
 page-type: css-keyword
 browser-compat: css.types.global_keywords.revert-rule
@@ -60,7 +61,7 @@ p {
 
 p.special {
   color: revert-rule;
-  border: 1px solid currentcolor;
+  border: 1px solid currentColor;
 }
 ```
 

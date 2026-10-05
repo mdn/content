@@ -171,7 +171,7 @@ This approach reduces the scope of a rule. The rule will only apply to that part
 
 You can apply multiple classes to an element and target them individually, or only select the element when all of the classes in the selector are present. This can be helpful when building up components that can be combined in different ways on your site.
 
-In the example below, we have a `<div>` that contains a note. The grey border is applied when the box has a class of `notebox`. If it also has a class of `warning` or `danger`, we change the {{cssxref("border-color")}}.
+In the example below, we have a `<div>` that contains a note. The gray border is applied when the box has a class of `notebox`. If it also has a class of `warning` or `danger`, we change the {{cssxref("border-color")}}.
 
 We can tell the browser that we only want to match the element if it has two classes applied by chaining them together with no white space between them. You'll see that the last `<div>` doesn't get any styling applied, as it only has the `danger` class. To get any styles applied, it needs the `notebox` class as well.
 

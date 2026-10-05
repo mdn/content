@@ -465,199 +465,6 @@
       "groovecoder"
     ]
   },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript": {
-    "modified": "2020-10-27T19:49:04.623Z",
-    "contributors": [
-      "escattone",
-      "JoeParrilla",
-      "wbamberg",
-      "jswisher",
-      "jolosan",
-      "cristianvnica",
-      "chrisdavidmills",
-      "Twoteka",
-      "Jeremie",
-      "end3r",
-      "fscholz",
-      "rabimba"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls": {
-    "modified": "2020-10-27T19:49:44.781Z",
-    "contributors": [
-      "escattone",
-      "wbamberg",
-      "rydash",
-      "chrisdavidmills",
-      "allisonlu",
-      "fscholz",
-      "gbharatwaj",
-      "end3r",
-      "Sheppy"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field": {
-    "modified": "2020-10-27T19:50:27.345Z",
-    "contributors": [
-      "escattone",
-      "ro-kl",
-      "raymondjplante",
-      "wbamberg",
-      "yumetodo",
-      "chrisdavidmills",
-      "SphinxKnight",
-      "HongchenLiu",
-      "daniel.stormont",
-      "landrey",
-      "allisonlu",
-      "kundan333",
-      "RishYang",
-      "Yuri-Predborskiy",
-      "fscholz",
-      "gbharatwaj",
-      "trevorh",
-      "end3r"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection": {
-    "modified": "2020-10-27T19:50:40.665Z",
-    "contributors": [
-      "escattone",
-      "yumetodo",
-      "chrisdavidmills",
-      "raymondjplante",
-      "m1sh2",
-      "wbamberg",
-      "kundan333",
-      "monop",
-      "RishYang",
-      "tseidler",
-      "fscholz",
-      "gbharatwaj",
-      "end3r",
-      "trevorh"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it": {
-    "modified": "2020-10-27T19:49:17.911Z",
-    "contributors": [
-      "escattone",
-      "wbamberg",
-      "chrisdavidmills",
-      "end3r",
-      "xGabey",
-      "antorajees",
-      "aaronagray",
-      "Jeremie",
-      "fscholz",
-      "jswisher",
-      "trevorh"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up": {
-    "modified": "2020-10-27T19:51:34.936Z",
-    "contributors": [
-      "escattone",
-      "raymondjplante",
-      "wbamberg",
-      "yumetodo",
-      "chrisdavidmills",
-      "BryanL",
-      "haydenvaniderstine",
-      "sammbeller",
-      "KashyK",
-      "end3r",
-      "fscholz",
-      "gbharatwaj",
-      "everythingisok",
-      "trevorh"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over": {
-    "modified": "2020-10-27T19:50:12.655Z",
-    "contributors": [
-      "escattone",
-      "vinocha8",
-      "JoeParrilla",
-      "InfinityBuddha",
-      "raymondjplante",
-      "wbamberg",
-      "chrisdavidmills",
-      "DevGator",
-      "end3r",
-      "kundan333",
-      "monop",
-      "fscholz",
-      "gbharatwaj",
-      "trevorh"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls": {
-    "modified": "2020-10-27T19:51:05.570Z",
-    "contributors": [
-      "escattone",
-      "raymondjplante",
-      "RafeyIqbalRahman",
-      "chrisdavidmills",
-      "PushpitaPikuDey",
-      "devluk",
-      "wbamberg",
-      "yumetodo",
-      "baterson",
-      "fscholz",
-      "jsn1004",
-      "everythingisok",
-      "trevorh",
-      "end3r"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball": {
-    "modified": "2020-10-27T19:49:31.981Z",
-    "contributors": [
-      "escattone",
-      "xiongkaiwu",
-      "wbamberg",
-      "chrisdavidmills",
-      "ronoc4",
-      "RishYang",
-      "Jeremie",
-      "fscholz",
-      "end3r",
-      "trevorh"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls": {
-    "modified": "2020-10-27T19:49:59.012Z",
-    "contributors": [
-      "escattone",
-      "ItsHipsterNoah",
-      "J-MDO",
-      "RachelM",
-      "Maxgy",
-      "raymondjplante",
-      "wbamberg",
-      "chrisdavidmills",
-      "fscholz",
-      "ddbeck",
-      "trevorh",
-      "end3r"
-    ]
-  },
-  "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win": {
-    "modified": "2020-10-27T19:50:53.157Z",
-    "contributors": [
-      "escattone",
-      "raymondjplante",
-      "wbamberg",
-      "yumetodo",
-      "chrisdavidmills",
-      "monop",
-      "fscholz",
-      "desertmonkey",
-      "end3r",
-      "trevorh"
-    ]
-  },
   "Games/Tutorials/2D_breakout_game_Phaser": {
     "modified": "2020-10-27T19:35:38.011Z",
     "contributors": [
@@ -705,10 +512,6 @@
     "modified": "2020-10-27T19:37:08.095Z",
     "contributors": ["escattone", "wbamberg", "chrisdavidmills", "end3r"]
   },
-  "Games/Tutorials/2D_breakout_game_Phaser/Collision_detection": {
-    "modified": "2020-10-27T19:40:22.466Z",
-    "contributors": ["escattone", "wbamberg", "chrisdavidmills", "end3r"]
-  },
   "Games/Tutorials/2D_breakout_game_Phaser/Extra_lives": {
     "modified": "2020-10-27T19:40:46.630Z",
     "contributors": [
@@ -745,19 +548,6 @@
       "Jeremie"
     ]
   },
-  "Games/Tutorials/2D_breakout_game_Phaser/Load_the_assets_and_print_them_on_screen": {
-    "modified": "2020-10-27T19:42:26.985Z",
-    "contributors": [
-      "escattone",
-      "wbamberg",
-      "end3r",
-      "chrisdavidmills",
-      "jamesdhurd",
-      "kitihounel",
-      "CheetahBongos",
-      "Yuri-Predborskiy"
-    ]
-  },
   "Games/Tutorials/2D_breakout_game_Phaser/Move_the_ball": {
     "modified": "2020-10-27T19:42:52.810Z",
     "contributors": ["escattone", "wbamberg", "chrisdavidmills", "end3r"]
@@ -780,21 +570,7 @@
     "modified": "2020-10-27T19:37:28.337Z",
     "contributors": ["escattone", "wbamberg", "chrisdavidmills", "end3r"]
   },
-  "Games/Tutorials/2D_breakout_game_Phaser/Scaling": {
-    "modified": "2020-10-27T19:44:45.536Z",
-    "contributors": [
-      "escattone",
-      "wbamberg",
-      "DavidScales",
-      "chrisdavidmills",
-      "end3r"
-    ]
-  },
-  "Games/Tutorials/2D_breakout_game_Phaser/The_score": {
-    "modified": "2020-10-27T19:45:46.988Z",
-    "contributors": ["escattone", "wbamberg", "chrisdavidmills", "end3r"]
-  },
-  "Games/Tutorials/2D_breakout_game_Phaser/Win_the_game": {
+  "Games/Tutorials/2D_breakout_game_Phaser/Track_the_score_and_win": {
     "modified": "2020-10-27T19:46:12.559Z",
     "contributors": [
       "escattone",
@@ -802,6 +578,161 @@
       "ekoontz",
       "chrisdavidmills",
       "end3r"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript": {
+    "modified": "2020-10-27T19:49:04.623Z",
+    "contributors": [
+      "escattone",
+      "JoeParrilla",
+      "wbamberg",
+      "jswisher",
+      "jolosan",
+      "cristianvnica",
+      "chrisdavidmills",
+      "Twoteka",
+      "Jeremie",
+      "end3r",
+      "fscholz",
+      "rabimba"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Bounce_off_the_walls": {
+    "modified": "2020-10-27T19:49:44.781Z",
+    "contributors": [
+      "escattone",
+      "wbamberg",
+      "rydash",
+      "chrisdavidmills",
+      "allisonlu",
+      "fscholz",
+      "gbharatwaj",
+      "end3r",
+      "Sheppy"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Build_the_brick_field": {
+    "modified": "2020-10-27T19:50:27.345Z",
+    "contributors": [
+      "escattone",
+      "ro-kl",
+      "raymondjplante",
+      "wbamberg",
+      "yumetodo",
+      "chrisdavidmills",
+      "SphinxKnight",
+      "HongchenLiu",
+      "daniel.stormont",
+      "landrey",
+      "allisonlu",
+      "kundan333",
+      "RishYang",
+      "Yuri-Predborskiy",
+      "fscholz",
+      "gbharatwaj",
+      "trevorh",
+      "end3r"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Extra_lives": {
+    "modified": "2020-10-27T19:51:34.936Z",
+    "contributors": [
+      "escattone",
+      "raymondjplante",
+      "wbamberg",
+      "yumetodo",
+      "chrisdavidmills",
+      "BryanL",
+      "haydenvaniderstine",
+      "sammbeller",
+      "KashyK",
+      "end3r",
+      "fscholz",
+      "gbharatwaj",
+      "everythingisok",
+      "trevorh"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Game_over": {
+    "modified": "2020-10-27T19:50:12.655Z",
+    "contributors": [
+      "escattone",
+      "vinocha8",
+      "JoeParrilla",
+      "InfinityBuddha",
+      "raymondjplante",
+      "wbamberg",
+      "chrisdavidmills",
+      "DevGator",
+      "end3r",
+      "kundan333",
+      "monop",
+      "fscholz",
+      "gbharatwaj",
+      "trevorh"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Initialize_the_canvas": {
+    "modified": "2020-10-27T19:49:17.911Z",
+    "contributors": [
+      "escattone",
+      "wbamberg",
+      "chrisdavidmills",
+      "end3r",
+      "xGabey",
+      "antorajees",
+      "aaronagray",
+      "Jeremie",
+      "fscholz",
+      "jswisher",
+      "trevorh"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Move_the_ball": {
+    "modified": "2020-10-27T19:49:31.981Z",
+    "contributors": [
+      "escattone",
+      "xiongkaiwu",
+      "wbamberg",
+      "chrisdavidmills",
+      "ronoc4",
+      "RishYang",
+      "Jeremie",
+      "fscholz",
+      "end3r",
+      "trevorh"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Player_paddle_and_controls": {
+    "modified": "2020-10-27T19:49:59.012Z",
+    "contributors": [
+      "escattone",
+      "ItsHipsterNoah",
+      "J-MDO",
+      "RachelM",
+      "Maxgy",
+      "raymondjplante",
+      "wbamberg",
+      "chrisdavidmills",
+      "fscholz",
+      "ddbeck",
+      "trevorh",
+      "end3r"
+    ]
+  },
+  "Games/Tutorials/2D_breakout_game_pure_JavaScript/Track_the_score_and_win": {
+    "modified": "2020-10-27T19:50:53.157Z",
+    "contributors": [
+      "escattone",
+      "raymondjplante",
+      "wbamberg",
+      "yumetodo",
+      "chrisdavidmills",
+      "monop",
+      "fscholz",
+      "desertmonkey",
+      "end3r",
+      "trevorh"
     ]
   },
   "Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation": {
@@ -6185,30 +6116,6 @@
     "modified": "2020-09-25T22:34:22.129Z",
     "contributors": ["chrisdavidmills", "CodeDotJS"]
   },
-  "Learn_web_development/Core/Frameworks_libraries/Ember_conditional_footer": {
-    "modified": "2020-09-03T05:31:37.623Z",
-    "contributors": ["Rafael_Green", "chrisdavidmills"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Ember_getting_started": {
-    "modified": "2020-08-06T07:27:06.082Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Ember_interactivity_events_state": {
-    "modified": "2020-08-06T07:26:59.624Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Ember_resources": {
-    "modified": "2020-08-06T07:26:47.135Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Ember_routing": {
-    "modified": "2020-08-06T07:26:51.530Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Ember_structure_componentization": {
-    "modified": "2020-08-06T07:27:03.636Z",
-    "contributors": ["chrisdavidmills"]
-  },
   "Learn_web_development/Core/Frameworks_libraries/Introduction": {
     "modified": "2020-09-08T07:18:11.161Z",
     "contributors": [
@@ -6279,85 +6186,6 @@
   "Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning": {
     "modified": "2020-09-08T16:44:12.600Z",
     "contributors": ["terrymorse", "chrisdavidmills", "codeability"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning": {
-    "modified": "2020-12-01T21:39:23.352Z",
-    "contributors": ["seneca", "chrisdavidmills"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Svelte_TypeScript": {
-    "modified": "2020-10-29T07:18:00.018Z",
-    "contributors": ["haond10adp", "chrisdavidmills"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Svelte_components": {
-    "modified": "2020-10-07T20:21:51.724Z",
-    "contributors": ["seneca", "Rafael_Green", "chrisdavidmills", "opensas"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Svelte_deployment_next": {
-    "modified": "2020-09-20T04:24:34.950Z",
-    "contributors": ["Rafael_Green", "chrisdavidmills"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started": {
-    "modified": "2020-09-11T14:25:08.477Z",
-    "contributors": ["Rafael_Green", "chrisdavidmills", "opensas"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Svelte_reactivity_lifecycle_accessibility": {
-    "modified": "2020-10-24T06:16:59.643Z",
-    "contributors": [
-      "haond10adp",
-      "SphinxKnight",
-      "Rafael_Green",
-      "chrisdavidmills",
-      "opensas"
-    ]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Svelte_stores": {
-    "modified": "2020-12-11T07:44:13.494Z",
-    "contributors": [
-      "Mishra-Suraj",
-      "haond10adp",
-      "Rafael_Green",
-      "chrisdavidmills"
-    ]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Svelte_variables_props": {
-    "modified": "2020-10-20T01:35:26.842Z",
-    "contributors": ["haond10adp", "Rafael_Green", "chrisdavidmills"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_computed_properties": {
-    "modified": "2020-09-08T10:27:40.979Z",
-    "contributors": ["Rafael_Green", "chrisdavidmills", "clintbingo"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_conditional_rendering": {
-    "modified": "2020-08-06T07:26:12.722Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_first_component": {
-    "modified": "2020-09-05T08:38:17.788Z",
-    "contributors": ["Rafael_Green", "chrisdavidmills"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_getting_started": {
-    "modified": "2020-08-06T07:26:44.679Z",
-    "contributors": ["chrisdavidmills", "taiwoayanleye"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_methods_events_models": {
-    "modified": "2020-10-05T06:56:15.162Z",
-    "contributors": ["JohnnyMu-Cn", "chrisdavidmills"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_refs_focus_management": {
-    "modified": "2020-08-06T07:26:09.176Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists": {
-    "modified": "2020-09-15T11:22:44.422Z",
-    "contributors": ["chrisdavidmills", "technicalflaw"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_resources": {
-    "modified": "2020-08-06T07:26:03.837Z",
-    "contributors": ["chrisdavidmills"]
-  },
-  "Learn_web_development/Core/Frameworks_libraries/Vue_styling": {
-    "modified": "2020-08-06T07:26:25.263Z",
-    "contributors": ["chrisdavidmills"]
   },
   "Learn_web_development/Core/Scripting": {
     "modified": "2020-07-16T22:29:47.255Z",
@@ -34141,10 +33969,6 @@
       "keerthanak17"
     ]
   },
-  "Web/API/FetchEvent/replacesClientId": {
-    "modified": "2020-10-15T22:12:49.655Z",
-    "contributors": ["Wind1808", "jpmedley", "chrisdavidmills"]
-  },
   "Web/API/FetchEvent/request": {
     "modified": "2020-10-15T21:32:47.797Z",
     "contributors": [
@@ -45564,172 +45388,6 @@
   "Web/API/MediaTrackSettings/width": {
     "modified": "2020-10-15T21:50:02.880Z",
     "contributors": ["sideshowbarker", "fscholz", "Sheppy"]
-  },
-  "Web/API/MediaTrackSupportedConstraints": {
-    "modified": "2020-10-15T21:49:11.793Z",
-    "contributors": ["Sheppy", "guidou", "fscholz"]
-  },
-  "Web/API/MediaTrackSupportedConstraints/aspectRatio": {
-    "modified": "2020-12-11T05:47:21.687Z",
-    "contributors": [
-      "bershanskiy",
-      "sideshowbarker",
-      "Jib",
-      "fscholz",
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaTrackSupportedConstraints/autoGainControl": {
-    "modified": "2020-12-11T05:49:36.724Z",
-    "contributors": [
-      "bershanskiy",
-      "sideshowbarker",
-      "Jib",
-      "Puddingsan",
-      "fscholz",
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaTrackSupportedConstraints/channelCount": {
-    "modified": "2020-12-11T05:53:46.408Z",
-    "contributors": [
-      "bershanskiy",
-      "sideshowbarker",
-      "Jib",
-      "fscholz",
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaTrackSupportedConstraints/deviceId": {
-    "modified": "2020-12-11T05:46:26.819Z",
-    "contributors": [
-      "bershanskiy",
-      "sideshowbarker",
-      "Jib",
-      "fscholz",
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaTrackSupportedConstraints/displaySurface": {
-    "modified": "2020-10-15T22:12:36.463Z",
-    "contributors": ["sideshowbarker", "Sheppy"]
-  },
-  "Web/API/MediaTrackSupportedConstraints/echoCancellation": {
-    "modified": "2020-12-11T05:52:36.097Z",
-    "contributors": [
-      "bershanskiy",
-      "sideshowbarker",
-      "Jib",
-      "fscholz",
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaTrackSupportedConstraints/facingMode": {
-    "modified": "2020-12-11T05:51:09.590Z",
-    "contributors": [
-      "bershanskiy",
-      "mfuji09",
-      "sideshowbarker",
-      "Jib",
-      "Sheppy",
-      "fscholz"
-    ]
-  },
-  "Web/API/MediaTrackSupportedConstraints/frameRate": {
-    "modified": "2020-12-11T05:50:48.091Z",
-    "contributors": [
-      "bershanskiy",
-      "sideshowbarker",
-      "Jib",
-      "fscholz",
-      "rileym7",
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaTrackSupportedConstraints/groupId": {
-    "modified": "2020-12-11T05:54:14.945Z",
-    "contributors": [
-      "bershanskiy",
-      "sideshowbarker",
-      "Jib",
-      "fscholz",
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaTrackSupportedConstraints/height": {
-    "modified": "2020-12-11T05:50:22.829Z",
-    "contributors": [
-      "bershanskiy",
-      "sideshowbarker",
-      "Jib",
-      "fscholz",
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaTrackSupportedConstraints/latency": {
-    "modified": "2020-12-11T05:53:01.475Z",
-    "contributors": [
-      "bershanskiy",
-      "sideshowbarker",
-      "Jib",
-      "fscholz",
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaTrackSupportedConstraints/logicalSurface": {
-    "modified": "2020-10-15T22:12:39.100Z",
-    "contributors": ["sideshowbarker", "Sheppy"]
-  },
-  "Web/API/MediaTrackSupportedConstraints/noiseSuppression": {
-    "modified": "2020-12-11T05:53:24.540Z",
-    "contributors": [
-      "bershanskiy",
-      "sideshowbarker",
-      "Jib",
-      "Puddingsan",
-      "fscholz",
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaTrackSupportedConstraints/sampleRate": {
-    "modified": "2020-12-11T05:52:04.255Z",
-    "contributors": [
-      "bershanskiy",
-      "sideshowbarker",
-      "Jib",
-      "fscholz",
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaTrackSupportedConstraints/sampleSize": {
-    "modified": "2020-12-11T05:52:20.572Z",
-    "contributors": [
-      "bershanskiy",
-      "sideshowbarker",
-      "Jib",
-      "fscholz",
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaTrackSupportedConstraints/volume": {
-    "modified": "2020-12-11T05:51:42.663Z",
-    "contributors": [
-      "bershanskiy",
-      "sideshowbarker",
-      "Jib",
-      "fscholz",
-      "Sheppy"
-    ]
-  },
-  "Web/API/MediaTrackSupportedConstraints/width": {
-    "modified": "2020-12-11T05:50:03.403Z",
-    "contributors": [
-      "bershanskiy",
-      "sideshowbarker",
-      "Jib",
-      "fscholz",
-      "Sheppy"
-    ]
   },
   "Web/API/Media_Capabilities_API": {
     "modified": "2020-10-15T22:07:14.380Z",
@@ -61635,7 +61293,7 @@
     "modified": "2020-10-15T21:46:05.619Z",
     "contributors": ["fscholz", "chrisdavidmills"]
   },
-  "Web/API/VRStageParameters/sizeY": {
+  "Web/API/VRStageParameters/sizeZ": {
     "modified": "2020-10-15T21:46:06.658Z",
     "contributors": ["fscholz", "chrisdavidmills"]
   },

@@ -143,7 +143,7 @@ Pseudo-elements start with a double colon `::`. `::before` is an example of a ps
 > [!NOTE]
 > Some early pseudo-elements used the single colon syntax, so you may sometimes see this in code or examples. Modern browsers support the early pseudo-elements with single- or double-colon syntax for backwards compatibility.
 
-For example, if you wanted to select the first line of a paragraph you could wrap it in a `<span>` element and use an element selector; however, that would fail if the number of words you had wrapped were longer or shorter than the parent element's width. As we tend not to know how many words will fit on a line — as that will change if the screen width or font-size changes — it is impossible to robustly do this by adding HTML.
+For example, if you wanted to select the first line of a paragraph, you could wrap it in a `<span>` element and use an element selector; however, that would fail if the words you had wrapped were longer or shorter than the parent element's width. As we tend not to know how many words will fit on a line — as that will change if the screen width or font-size changes — it is impossible to robustly do this by adding HTML.
 
 The `::first-line` pseudo-element selector will do this for you reliably — if the number of words increases or decreases it will still only select the first line.
 

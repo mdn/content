@@ -8,7 +8,7 @@ status:
 browser-compat: api.RTCPeerConnectionIceEvent.url
 ---
 
-{{APIRef("WebRTC")}}{{deprecated_header}}
+{{APIRef("WebRTC")}}
 
 The read-only **`url`** property of the {{domxref("RTCPeerConnectionIceEvent")}} interface returns the URL of the {{Glossary("STUN")}} or {{Glossary("TURN")}} server used to gather the ICE candidate that caused the event. If the candidate was not gathered from a {{Glossary("STUN")}} or {{Glossary("TURN")}} server, the value is `null`.
 

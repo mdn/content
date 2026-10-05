@@ -7,7 +7,7 @@ status:
 browser-compat: api.SVGAnimateColorElement
 ---
 
-{{APIRef("SVG")}}{{deprecated_header}}
+{{APIRef("SVG")}}
 
 The **`SVGAnimateColorElement`** interface corresponds to the `<animateColor>` element.
 

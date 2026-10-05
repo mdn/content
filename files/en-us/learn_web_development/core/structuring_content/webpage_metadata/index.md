@@ -199,6 +199,8 @@ To further enrich your site design, you can add references to custom icons in yo
 
 The humble favicon has been around for many years. It is the first icon of this type: a 16-pixel square icon used in multiple places. You may see (depending on the browser) favicons displayed in the browser tab containing each open page, and next to bookmarked pages in the bookmarks panel.
 
+![A schematic browser window with two tabs, each containing a favicon to the left of the page title: the MDN logo in the active "MDN Web Docs" tab and a book icon in the "Another page" tab.](favicon.svg)
+
 A favicon can be added to your page by:
 
 1. Saving it in a supported format such as `.ico`, `.gif`, or `.png` somewhere inside your website folder structure.

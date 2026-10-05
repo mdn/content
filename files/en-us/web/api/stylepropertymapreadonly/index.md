@@ -12,8 +12,8 @@ Retrieve an instance of this interface using {{domxref('Element.computedStyleMap
 
 ## Instance properties
 
-- {{domxref('StylePropertyMapReadOnly.size')}}
-  - : Returns an unsigned long integer containing the size of the `StylePropertyMapReadOnly` object.
+- {{domxref('StylePropertyMapReadOnly.size')}} {{ReadOnlyInline}}
+  - : Returns an unsigned integer containing the size of the `StylePropertyMapReadOnly` object.
 
 ## Instance methods
 
@@ -57,7 +57,7 @@ p {
 }
 ```
 
-We add JavaScript to grab our paragraph and return back a definition list of all the default CSS property values using {{domxref('Element.computedStyleMap()')}}.
+We add JavaScript to grab our paragraph and return a definition list of all the default CSS property values using {{domxref('Element.computedStyleMap()')}}.
 
 ```js
 // get the element

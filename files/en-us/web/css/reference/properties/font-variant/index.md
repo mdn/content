@@ -7,7 +7,7 @@ browser-compat: css.properties.font-variant
 sidebar: cssref
 ---
 
-The **`font-variant`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) allows you to set all the font variants for a font.
+The **`font-variant`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property allows you to set all the font variants for a font.
 
 You can also set the `<font-variant-css2>` values of `font-variant` defined in CSS Level 2.1, (that is, `normal` or `small-caps`), by using the {{cssxref("font")}} shorthand.
 
@@ -103,6 +103,8 @@ font-variant: unset;
 ```
 
 ### Values
+
+This property is specified as a space-separated list of the following values:
 
 - `normal`
   - : Specifies a normal font face. Each longhand property has an initial value of `normal`.

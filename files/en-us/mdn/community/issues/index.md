@@ -251,7 +251,7 @@ Next, set the following labels where possible:
     - There are instructions, either from the author or the triager, about what _exactly_ needs to be written (preferably verbatim text, or a step-by-step guide).
     - The fix targets one single page (so the contributor can easily fix it via the web interface).
     - The fix does not involve writing significant new content or code, which may require deeper technical understanding.
-  - `help wanted`: Set this label if the issue requires help from someone who knows about or is familiar with the topic. This is a popular label, and some contributors use it to search for issues to work on in open source projects in their areas of familiarity or expertise.
+  - `help wanted`: Set this label if the issue requires help from someone who knows about or is familiar with the topic. This is a popular label, and some contributors use it to search for issues to work on in open-source projects in their areas of familiarity or expertise.
   - `accepting PR`: Add this neutral label if the issue is not as straightforward as a `good first issue`, but not so complex or niche to require a `help wanted` label.
 
   If an issue doesn't have any of the these labels, it generally indicates that community contributions are discouraged for the issue. This may be the case when further discussion is needed, the work requires someone familiar with MDN editorial conventions to take it on, or a team member intends to work on it. Contributors can still work on these issues if they are familiar enough with the process.
@@ -279,6 +279,6 @@ If an issue does not map to any actionable task, you should consider closing the
 
 When an issue reports a problem that is already tracked elsewhere, you can close the issue. They don't have to be exact duplicates; if the issue is similar enough to an existing issue, they can be merged as a single issue that's fixed together.
 
-If there is a GitHub issue that tracks the same problem, click the drop down next to the **Close issue** button, select **Close as duplicate**, and paste the URL of the other issue. If the duplication is apparent, no comment is necessary; otherwise, post a comment explaining why the issues are duplicates.
+If there is a GitHub issue that tracks the same problem, click the dropdown next to the **Close issue** button, select **Close as duplicate**, and paste the URL of the other issue. If the duplication is apparent, no comment is necessary; otherwise, post a comment explaining why the issues are duplicates.
 
 If the problem is tracked but not via a GitHub issue (such as [web docs backlog](https://openwebdocs.github.io/web-docs-backlog/all/)), you can [close the issue as not planned](#closing_an_issue_as_not_planned), post a comment, and add the `closed: duplicate` label. This label is optional for issues closed via the **Close as duplicate** option, but helps with searching for duplicate issues later.

@@ -22,7 +22,7 @@ This happens in two common cases:
 As long as the `identity;q=0` or `*;q=0` directives do not explicitly forbid the `identity` value that means no encoding, the server must never return a {{HTTPStatus("406", "406 Not Acceptable")}} error.
 
 > [!NOTE]
-> IANA maintains [a list of official content encodings](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding).
+> IANA maintains [a list of official content encodings](https://www.iana.org/assignments/http-parameters#content-coding).
 > The `bzip` and `bzip2` encodings are non-standard, but may be used in some cases, particularly for legacy support.
 
 <table class="properties">

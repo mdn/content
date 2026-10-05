@@ -23,7 +23,7 @@ A transceiver is uniquely identified using its {{domxref("RTCRtpTransceiver.mid"
 - {{domxref("RTCRtpTransceiver.direction", "direction")}}
   - : A string which is used to set the transceiver's desired direction.
 - {{domxref("RTCRtpTransceiver.mid", "mid")}} {{ReadOnlyInline}}
-  - : The media ID of the m-line associated with this transceiver. This association is established, when possible, whenever either a local or remote description is applied. This field is `null` if neither a local or remote description has been applied, or if its associated m-line is rejected by either a remote offer or any answer.
+  - : The media ID of the m-line associated with this transceiver. This association is established, when possible, whenever either a local or remote description is applied. This field is `null` before a description containing the corresponding m-line is applied, or if a rollback undoes that association.
 - {{domxref("RTCRtpTransceiver.receiver", "receiver")}} {{ReadOnlyInline}}
   - : The {{domxref("RTCRtpReceiver")}} object that handles receiving and decoding incoming media.
 - {{domxref("RTCRtpTransceiver.sender", "sender")}} {{ReadOnlyInline}}

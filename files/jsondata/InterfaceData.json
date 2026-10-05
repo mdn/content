@@ -1588,6 +1588,10 @@
       "inh": "HTMLElement",
       "impl": []
     },
+    "HTMLCameraElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
     "HTMLCanvasElement": {
       "inh": "HTMLElement",
       "impl": []
@@ -1692,6 +1696,10 @@
       "inh": "HTMLElement",
       "impl": []
     },
+    "HTMLInstallElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
     "HTMLLabelElement": {
       "inh": "HTMLElement",
       "impl": []
@@ -1729,6 +1737,10 @@
       "impl": []
     },
     "HTMLMeterElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
+    "HTMLMicrophoneElement": {
       "inh": "HTMLElement",
       "impl": []
     },
@@ -1872,6 +1884,10 @@
       "inh": "HTMLElement",
       "impl": []
     },
+    "HTMLUserMediaElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
     "HTMLVideoElement": {
       "inh": "HTMLMediaElement",
       "impl": []
@@ -1996,8 +2012,16 @@
       "inh": "ExtendableEvent",
       "impl": []
     },
+    "InstallResultEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "Instance": {
       "inh": "",
+      "impl": []
+    },
+    "InteractionContentfulPaint": {
+      "inh": "PerformanceEntry",
       "impl": []
     },
     "IntersectionObserver": {
@@ -2228,6 +2252,10 @@
       "inh": "AudioNode",
       "impl": []
     },
+    "MediaStreamTrackAudioStats": {
+      "inh": "",
+      "impl": []
+    },
     "MediaStreamTrackEvent": {
       "inh": "Event",
       "impl": []
@@ -2237,6 +2265,10 @@
       "impl": []
     },
     "MediaStreamTrackProcessor": {
+      "inh": "",
+      "impl": []
+    },
+    "MediaStreamTrackVideoStats": {
       "inh": "",
       "impl": []
     },
@@ -2662,6 +2694,10 @@
     },
     "PerformanceServerTiming": {
       "inh": "",
+      "impl": []
+    },
+    "PerformanceSoftNavigation": {
+      "inh": "PerformanceEntry",
       "impl": []
     },
     "PerformanceTiming": {
@@ -3780,6 +3816,14 @@
       "inh": "Event",
       "impl": []
     },
+    "ToolActivatedEvent": {
+      "inh": "Event",
+      "impl": []
+    },
+    "ToolCancelEvent": {
+      "inh": "Event",
+      "impl": []
+    },
     "Touch": {
       "inh": "",
       "impl": []
@@ -4358,6 +4402,10 @@
     },
     "XRGPUBinding": {
       "inh": "",
+      "impl": []
+    },
+    "XRGPUDepthInformation": {
+      "inh": "XRDepthInformation",
       "impl": []
     },
     "XRGPUSubImage": {

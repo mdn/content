@@ -77,7 +77,7 @@ scroll-padding-inline-end: 2em;
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 scroll-padding-inline-end: auto;
 
 /* <length> values */

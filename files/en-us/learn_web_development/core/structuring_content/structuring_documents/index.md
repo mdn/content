@@ -79,7 +79,7 @@ To implement such semantic mark up, HTML provides dedicated tags that you can us
 
 ### Exploring the code for our example
 
-The example seen above is represented by the following code (you can also [find the example in our GitHub repository](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/document_and_website_structure/index.html)). We'd like you to look at the listing below to see what parts make up each section of the visual output.
+The example seen above is represented by the following code (you can also [find the code in our GitHub repository](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/document_and_website_structure/index.html), and [view the example live](https://mdn.github.io/learning-area/html/introduction-to-html/document_and_website_structure/)). We'd like you to look at the listing below to see what parts make up each section of the visual output.
 
 ```html
 <!doctype html>

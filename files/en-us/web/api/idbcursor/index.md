@@ -47,8 +47,6 @@ You can have an unlimited number of cursors at the same time. You always get the
 
 ## Constants
 
-{{Deprecated_Header}}
-
 > [!WARNING]
 > These constants are no longer available — they were removed in Gecko 25. You should use the string constants directly instead. ([Firefox bug 891944](https://bugzil.la/891944))
 

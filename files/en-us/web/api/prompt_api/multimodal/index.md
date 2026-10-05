@@ -48,7 +48,8 @@ The Prompt API accepts several different formats for audio and image data:
 
 - Audio:
   - {{domxref("AudioBuffer")}}
-  - {{domxref("ArrayBufferView")}}
+  - {{jsxref("TypedArray")}}
+  - {{jsxref("DataView")}}
   - {{jsxref("ArrayBuffer")}}
   - {{domxref("Blob")}}
 - Image:
@@ -105,7 +106,7 @@ The file to describe is chosen using an [`<input type="file">`](/en-US/docs/Web/
 }
 
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Helvetica", "Arial";
 }
 
 body {
@@ -126,7 +127,7 @@ img {
   display: block;
   flex: 1;
   max-width: 300px;
-  border: 1px solid #999;
+  border: 1px solid #999999;
 }
 
 form div {
@@ -199,7 +200,7 @@ async function init() {
 }
 ```
 
-The `getSession()` function works the same as in other examples ([`getSession()` is explained here](/en-US/docs/Web/API/Prompt_API/Using#complete_example:~:text=Now%20we%20define%20the%20getSession%28%29%20function)), except that we include `image` in our `expectedInputs` option as well as `text`:
+The `getSession()` function works the same as in other examples ([`getSession()` is explained here](/en-US/docs/Web/API/Prompt_API/Using#:~:text=Now%20we%20define%20the%20getSession%28%29%20function)), except that we include `image` in our `expectedInputs` option as well as `text`:
 
 ```js
 return await LanguageModel.create({
@@ -225,7 +226,6 @@ function getImage() {
 
   imgElem.addEventListener("error", () => {
     promptOutput.innerHTML = `<span class="error">Image not loaded!</span>`;
-    return;
   });
 
   imgElem.addEventListener("load", () => {
@@ -237,7 +237,7 @@ function getImage() {
 }
 ```
 
-The `handleSubmission()` function uses the same flow as previous examples to prompt the language model and retrieve its output ([see explanation](/en-US/docs/Web/API/Prompt_API/Using#complete_example:~:text=Next%2C%20inside%20a%20try%20block%2C%20we)). The main difference is that in the `prompt()` call inputs, we first ask the API to describe the image, and then pass it a reference to the `<img>` element itself.
+The `handleSubmission()` function uses the same flow as previous examples to prompt the language model and retrieve its output ([see explanation](/en-US/docs/Web/API/Prompt_API/Using#:~:text=Next%2C%20inside%20a%20try%20block%2C%20we)). The main difference is that in the `prompt()` call inputs, we first ask the API to describe the image, and then pass it a reference to the `<img>` element itself.
 
 ```js live-sample___multimodal
 async function handleSubmission(e) {
@@ -296,17 +296,16 @@ async function getSession() {
       expectedInputs: [{ type: "text", languages: ["en"] }, { type: "image" }],
       expectedOutputs: [{ type: "text", languages: ["en"] }],
     });
-  } else {
-    return await LanguageModel.create({
-      expectedInputs: [{ type: "text", languages: ["en"] }, { type: "image" }],
-      expectedOutputs: [{ type: "text", languages: ["en"] }],
-      monitor(monitor) {
-        monitor.addEventListener("downloadprogress", (e) => {
-          promptOutput.textContent = `Downloading model data ${Math.floor(e.loaded * 100)}%`;
-        });
-      },
-    });
   }
+  return await LanguageModel.create({
+    expectedInputs: [{ type: "text", languages: ["en"] }, { type: "image" }],
+    expectedOutputs: [{ type: "text", languages: ["en"] }],
+    monitor(monitor) {
+      monitor.addEventListener("downloadprogress", (e) => {
+        promptOutput.textContent = `Downloading model data ${Math.floor(e.loaded * 100)}%`;
+      });
+    },
+  });
 }
 ```
 

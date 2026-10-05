@@ -7,7 +7,7 @@ browser-compat: css.properties.list-style
 sidebar: cssref
 ---
 
-The **`list-style`** [CSS](/en-US/docs/Web/CSS) [shorthand property](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) allows you to set all the list style properties at once.
+The **`list-style`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property allows you to set all the list style properties at once.
 
 {{InteractiveExample("CSS Demo: list-style")}}
 
@@ -86,8 +86,6 @@ hr {
 }
 ```
 
-The values of this property are applied to list items, including {{HTMLElement("li")}} elements and elements with `{{cssxref("display")}}: list-item;`. Because this property is inherited, it can be set on a parent element (normally {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make the same list styling apply to all the nested items.
-
 ## Constituent properties
 
 This property is a shorthand for the following CSS properties:
@@ -131,21 +129,56 @@ The `list-style` property is specified as one, two, or three values in any order
 ### Values
 
 - {{cssxref("list-style-type")}}
-  - : A `<counter-style>`, {{cssxref("string")}}, or `none`. If omitted in the shorthand, the default `disc` value is used. See {{cssxref("list-style-type")}}.
+  - : A `<counter-style>`, {{cssxref("string")}}, or `none`. If omitted in the shorthand, it defaults to `disc`. See {{cssxref("list-style-type")}}.
 - {{cssxref("list-style-image")}}
-  - : An {{cssxref("image")}} or `none`. If omitted, the default `none` value is used. See {{cssxref("list-style-image")}}.
+  - : An {{cssxref("image")}} or `none`. If omitted, it defaults to `none`. See {{cssxref("list-style-image")}}.
 - {{cssxref("list-style-position")}}
-  - : Either `inside` or `outside`. If omitted, the default `outside` value is used. See {{cssxref("list-style-position")}}.
+  - : Either `inside` or `outside`. If omitted, it defaults to `outside`. See {{cssxref("list-style-position")}}.
 - `none`
   - : No list style is used.
 
-## Formal definition
+## Description
 
-{{cssinfo}}
+The `list-style` property lets you customize the appearance of list items. The values of this property are applied to list items, including {{HTMLElement("li")}} elements and elements with `{{cssxref("display")}}: list-item;`.
 
-## Formal syntax
+### List style inheritance
 
-{{csssyntax}}
+Because the {{cssxref("list-style-type")}} longhand property is inherited, `list-style` can be set on a parent element (normally {{HTMLElement("ol")}} or {{HTMLElement("ul")}}) to make the same list styling apply to its list items. However, user-agent stylesheets set `list-style-type` on `<ul>`, `<ol>`, and {{HTMLElement("menu")}} elements, so nested lists use these default values instead of inheriting the ancestor list's `list-style`. The {{cssxref("list-style-position")}} and {{cssxref("list-style-image")}} values normally inherit into nested lists. To make nested lists inherit the marker type as well, set `list-style` or `list-style-type` to `inherit` on the nested list elements.
+
+For example, in cases like this:
+
+```html live-sample___list-style-inherit
+<ul>
+  <li>One</li>
+  <li>Two</li>
+  <li>
+    Three
+    <ul>
+      <li>Four</li>
+      <li>Five</li>
+      <li>Six</li>
+    </ul>
+  </li>
+</ul>
+```
+
+Where a custom style is set on the outer list:
+
+```css live-sample___list-style-inherit
+body > ul {
+  list-style: square;
+}
+```
+
+The inner list won't inherit the custom style unless you set it to inherit:
+
+```css live-sample___list-style-inherit
+ul ul {
+  list-style: inherit;
+}
+```
+
+{{embedlivesample("list-style-inherit", "100%", "200")}}
 
 ## Accessibility
 
@@ -180,6 +213,14 @@ These CSS workarounds should only be used when an HTML solution is unavailable, 
 - [VoiceOver and list-style-type: none](https://gerardkcohen.me/writing/2017/voiceover-list-style-type.html) (2017)
 - [Understanding WCAG: Create content that can be presented in different ways](/en-US/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.3_—_create_content_that_can_be_presented_in_different_ways)
 - [Understanding success criterion 1.3.1: Info and relationships | WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
+
+## Formal definition
+
+{{cssinfo}}
+
+## Formal syntax
+
+{{csssyntax}}
 
 ## Examples
 
