@@ -48,7 +48,9 @@ random(0rad, 1turn, 30deg)
 
 /* With <random-key> */
 random(auto, 0, 360)
+random(element-scoped, 0s, 5s)
 random(property-scoped, 0s, 5s)
+random(property-index-scoped, 0s, 5s)
 random(--unique-base, 400px, 100px)
 random(fixed 0.5, 1em, 40vw)
 random(--unique-base property-scoped, 100dpi, 300dpi)
