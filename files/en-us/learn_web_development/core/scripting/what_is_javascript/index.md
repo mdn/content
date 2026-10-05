@@ -339,18 +339,7 @@ This works great, but what if we wanted to put our JavaScript in an external fil
 The webpage works just the same as before, but now we've got our JavaScript in an external file:
 
 ```html hidden live-sample___apply-javascript-external
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>External JavaScript example</title>
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <button>Click me</button>
-  </body>
-</html>
+<button>Click me</button>
 ```
 
 {{embedlivesample("apply-javascript-external", "100%", "200")}}
