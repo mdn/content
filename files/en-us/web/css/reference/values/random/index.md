@@ -68,7 +68,7 @@ The `random(seed, min, max, step)` function accepts two to four comma-separated 
     - `auto`
       - : The `auto` value is the default and is what is applied if the `<random-key>` is excluded. This random function generates independent random values. The random cache name, and thus the result, varies across every `random()` instance in a multi-component value, across different properties, and across different elements. This is equivalent to specifying `element-scoped property-index-scoped`.
     - `element-scoped`
-      - : Adds an element-specific identifier to the random cache name, so different elements get different random values.
+      - : Adds an element-specific identifier to the random cache name, so if applied over multiple properties (e.g. `width` and `height`) both properties use the same value, but each element (e.g. `<div>`) gets a different random values.
     - `property-scoped`
       - : Adds the property name to the random cache name, so different properties get different random values. Shorthand declarations use the shorthand property's name.
     - `property-index-scoped`
