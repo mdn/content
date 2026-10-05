@@ -36,7 +36,7 @@ No notable changes.
 
 #### General
 
-- From now on, the recommended preferences will be restored at a different stage to avoid them being restored in the wrong profile.
+- From now on, the recommended preferences will be restored at a different stage during shutdown.
   ([Firefox bug 2066531](https://bugzil.la/2066531)).
 
 #### WebDriver BiDi
@@ -46,6 +46,8 @@ No notable changes.
   `browser.setDownloadBehavior` with null instead. ([Firefox bug 2069952](https://bugzil.la/2069952)).
 
 ## Changes for add-on developers
+
+- {{WebExtAPIRef("alarms.clearAll()")}} now fulfills its promise with `undefined` instead of a boolean. ([Firefox bug 2067229](https://bugzil.la/2067229))
 
 ## Experimental web features
 

@@ -123,6 +123,8 @@ sidebar:
         title: Execution_model
       - link: /Web/JavaScript/Reference/Lexical_grammar
         title: Lexical_grammar
+      - link: /Web/JavaScript/Reference/Magic_comments
+        title: Magic_comments
       - link: /Web/JavaScript/Reference/Iteration_protocols
         title: Iteration_protocols
       - link: /Web/JavaScript/Reference/Strict_mode
@@ -177,6 +179,7 @@ l10n:
     More: Sonstiges
     Execution_model: Execution model
     Lexical_grammar: Lexikalische Grammatik
+    Magic_comments: Magic comments
     Enumerability: Aufzählbarkeit und Eigentum von Eigenschaften
     Iteration_protocols: Iterationsprotokolle
     Template_strings: Template-Literale
@@ -225,6 +228,7 @@ l10n:
     More: Misc
     Execution_model: Execution model
     Lexical_grammar: Lexical grammar
+    Magic_comments: Magic comments
     Enumerability: Enumerability and ownership of properties
     Iteration_protocols: Iteration protocols
     Template_strings: Template literals
@@ -273,6 +277,7 @@ l10n:
     More: Ещё
     Execution_model: Execution model
     Lexical_grammar: Лексическая грамматика
+    Magic_comments: Magic comments
     Enumerability: Перечисляемость и принадлежность свойств
     Iteration_protocols: Протоколы перебора
     Template_strings: Шаблонные строки
@@ -321,6 +326,7 @@ l10n:
     More: Divers
     Execution_model: Modèle d'exécution
     Lexical_grammar: Grammaire lexicale
+    Magic_comments: Magic comments
     Enumerability: Énumérabilité et rattachement des propriétés
     Iteration_protocols: Protocoles d'itération
     Template_strings: Gabarits de chaînes de caractères
@@ -369,6 +375,7 @@ l10n:
     More: 更多
     Execution_model: 运行模型
     Lexical_grammar: 词法文法
+    Magic_comments: 魔法注释
     Enumerability: 属性的可枚举性和所有权
     Iteration_protocols: 迭代协议
     Template_strings: 模板字符串
@@ -417,6 +424,7 @@ l10n:
     More: その他
     Execution_model: 実行モデル
     Lexical_grammar: 字句文法
+    Magic_comments: Magic comments
     Enumerability: プロパティの列挙可能性と所有権
     Iteration_protocols: 反復処理プロトコル
     Template_strings: テンプレート文字列
@@ -465,6 +473,7 @@ l10n:
     More: 기타
     Execution_model: Execution model
     Lexical_grammar: Lexical 문법
+    Magic_comments: Magic comments
     Enumerability: 열거성과 속성의 소유권
     Iteration_protocols: Iteration 프로토콜
     Template_strings: 템플릿 리터럴
@@ -513,6 +522,7 @@ l10n:
     More: Mais conteúdo
     Execution_model: Execution model
     Lexical_grammar: Gramática léxica
+    Magic_comments: Magic comments
     Enumerability: Enumerabilidade e domínio de propriedades
     Iteration_protocols: Protocolos de iteração
     Template_strings: Template literals
