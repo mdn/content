@@ -161,7 +161,7 @@ This sample animation uses {{cssxref("display")}}, {{cssxref("grid-template-colu
 - [Box alignment in CSS grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
   - : How box alignment works in the context of grid layout.
 
-- [Defining gaps](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps)
+- [Defining CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps)
   - : Understanding and defining gaps in grid, flexbox, and multi-column layouts, including how percentage values are resolved.
 
 ## Related features

@@ -338,5 +338,5 @@ ul {
 - {{cssxref("row-rule-width")}}
 - {{cssxref("rule-width")}} shorthand
 - {{cssxref("rule")}} shorthand
-- [Guide: defining CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps)
+- [Defining CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps)
 - [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module

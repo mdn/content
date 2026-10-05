@@ -413,5 +413,5 @@ Even though there are more column rule lines than row rule lines, the `<auto-rep
 - {{cssxref("column-rule-style")}}
 - {{cssxref("row-rule-style")}}
 - {{cssxref("rule")}} shorthand
-- [Guide: defining CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps)
+- [Defining CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps)
 - [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module
