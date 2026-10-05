@@ -483,7 +483,7 @@ gap.addEventListener("input", () => {
 
 #### Result
 
-{{EmbedLiveSample("Basic", "", "600")}}
+{{EmbedLiveSample("Basic", "", "440")}}
 
 Make the column gaps wider and note how the breaks between row segments grow. Bring the column gap width down to `0px`, and notice how the row decoration appears continuous. It isn't! The `0px` gap between segments may not be visible, but the segments still start and end at the gap, so any offsets set with `row-rule-inset` properties will still be applied.
 
