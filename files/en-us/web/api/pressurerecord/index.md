@@ -23,7 +23,7 @@ The **`PressureRecord`** interface is part of the [Compute Pressure API](/en-US/
 ## Instance methods
 
 - {{domxref("PressureRecord.toJSON()")}} {{experimental_inline}}
-  - : Returns a JSON representation of the `PressureRecord` object.
+  - : Returns a JSON-serializable plain object representing the `PressureRecord` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Examples
 

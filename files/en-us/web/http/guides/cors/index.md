@@ -362,7 +362,7 @@ Note that cookies set in CORS responses are subject to normal third-party cookie
 
 Cookies set in CORS requests and responses are subject to normal third-party cookie policies.
 
-Third-party cookie policies may prevent third party cookies being sent in requests, effectively stopping a site from making credentialed requests even if permitted by the third party server (using `Access-Control-Allow-Credentials`).
+Third-party cookie policies may prevent third-party cookies being sent in requests, effectively stopping a site from making credentialed requests even if permitted by the third-party server (using `Access-Control-Allow-Credentials`).
 The default policy differs between browsers, but may be set using the [SameSite](/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) attribute.
 
 Even if credentialed requests are allowed, a browser may be configured to reject all third-party cookies in responses.

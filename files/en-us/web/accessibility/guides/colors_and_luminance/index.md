@@ -117,7 +117,7 @@ As we saw, one color within the same color space may be expressed in many ways. 
 
 RGB is hardware-oriented, reflecting the use of CRTs. Many developers and designers prefer the intuitiveness of {{cssxref("color_value/hsl")}} notation. Fortunately, browsers convert from RGB to HSL automatically, and shift-clicking on colors in browser developer tools provides conversion functionality.
 
-In addition to developer tools, many tools can convert RGB to HSL for you and provide both the RGB hexadecimal and CSS function syntax. A great example of a tool that converts colors for you is Tom Jewett's "[mini color selector](https://colortutorial.design/microColorsC.html)" with HSL, RGB, and Hex options for checking contrast in the browser. Note that developer tools color pickers and this tool all provide WCAG [color contrast](https://webaim.org/resources/contrastchecker/) values.
+In addition to developer tools, many tools can convert RGB to HSL for you and provide both the RGB hexadecimal and CSS function syntax. Many color pickers also provide WCAG [color contrast](https://webaim.org/resources/contrastchecker/) values.
 
 ![Color picker with HSL and RGB, with color contrast values.](microcolorsc.jpg)
 
@@ -196,7 +196,7 @@ Luminance provides for fine vision details, including differentiating edges and 
 
 For accessibility, this means that luminance contrast is critically important for text. Color, as in hue and colorfulness, is important for _distinguishing_ items such as different lines on a map or bars in a graph.
 
-Another essential point to consider is the color or luminance that is surrounding a color. Colors appear differently depending on what is surrounding them. In the following image, both the yellow dots and the grey squares are the same sRGB color. Context-sensitive color perception makes them appear different; your brain's image processing adjusts the perception based on what it thinks is in shadow or not.
+Another essential point to consider is the color or luminance that is surrounding a color. Colors appear differently depending on what is surrounding them. In the following image, both the yellow dots and the gray squares are the same sRGB color. Context-sensitive color perception makes them appear different; your brain's image processing adjusts the perception based on what it thinks is in shadow or not.
 
 ![An image of a checkerboard, where identical colors look different if they are in shadow](yellowdotcheckershadow_dlyon.png)
 

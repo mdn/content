@@ -8,7 +8,7 @@ status:
 browser-compat: api.HTMLStyleElement.type
 ---
 
-{{APIRef("HTML DOM")}} {{Deprecated_Header}}
+{{APIRef("HTML DOM")}}
 
 The **`HTMLStyleElement.type`** property returns the type of the current style.
 The value mirrors the [HTML `<style>` element's `type` attribute](/en-US/docs/Web/HTML/Reference/Elements/style#type).

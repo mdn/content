@@ -27,7 +27,7 @@ Block elements in a horizontal writing mode such as English, lay out vertically,
 
 ![Inline direction is horizontal. Block direction is vertical.](mdn-horizontal.png)
 
-In a vertical writing mode then would lay out horizontally.
+In a vertical writing mode they would lay out horizontally.
 
 ![Inline direction is vertical. Block direction is horizontal.](mdn-vertical.png)
 

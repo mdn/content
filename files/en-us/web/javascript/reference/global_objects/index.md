@@ -145,6 +145,7 @@ Control abstractions can help to structure code, especially async code (without 
 
 ### Reflection
 
+- {{jsxref("AbstractModuleSource")}}
 - {{jsxref("Reflect")}}
 - {{jsxref("Proxy")}}
 

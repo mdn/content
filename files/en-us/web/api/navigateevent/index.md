@@ -37,7 +37,7 @@ _Inherits properties from its parent, {{DOMxRef("Event")}}._
 - {{domxref("NavigateEvent.navigationType", "navigationType")}} {{ReadOnlyInline}}
   - : Returns the type of the navigation — `push`, `reload`, `replace`, or `traverse`.
 - {{domxref("NavigateEvent.signal", "signal")}} {{ReadOnlyInline}}
-  - : Returns an {{domxref("AbortSignal")}}, which will become aborted if the navigation is cancelled (e.g., by the user pressing the browser's "Stop" button, or another navigation starting and thus cancelling the ongoing one).
+  - : Returns an {{domxref("AbortSignal")}}, which will become aborted if the navigation is canceled (e.g., by the user pressing the browser's "Stop" button, or another navigation starting and thus canceling the ongoing one).
 - {{domxref("NavigateEvent.sourceElement", "sourceElement")}} {{ReadOnlyInline}}
   - : When the navigation was initiated by an element (for example clicking a link), returns an {{domxref("Element")}} object representing the initiating element.
 - {{domxref("NavigateEvent.userInitiated", "userInitiated")}} {{ReadOnlyInline}}

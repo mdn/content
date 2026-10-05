@@ -45,7 +45,7 @@ Using `addEventListener()`:
 const para = document.querySelector("p");
 
 para.addEventListener("pointercancel", (event) => {
-  console.log("Pointer event cancelled");
+  console.log("Pointer event canceled");
 });
 ```
 
@@ -55,7 +55,7 @@ Using the `onpointercancel` event handler property:
 const para = document.querySelector("p");
 
 para.onpointercancel = (event) => {
-  console.log("Pointer event cancelled");
+  console.log("Pointer event canceled");
 };
 ```
 

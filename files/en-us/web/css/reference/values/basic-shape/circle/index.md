@@ -75,7 +75,7 @@ border-shape: circle(60%);
       - : The radius is the length from the center of the circle to the farthest corner of the reference box, so that the circle's boundary passes through that corner.
 
 - `<position>`
-  - : Moves the center of the circle. May be a {{cssxref("length")}}, or a {{cssxref("percentage")}}, or a values such as `left`. The `<position>` value defaults to center if omitted.
+  - : Moves the center of the circle. May be a {{cssxref("length")}}, or a {{cssxref("percentage")}}, or a value such as `left`. The `<position>` value defaults to center if omitted.
 
 ## Formal syntax
 
@@ -186,7 +186,7 @@ This is the gradient that we will clip using the `circle()` (we do this by setti
   width: 640px;
   height: 480px;
   overflow: hidden;
-  border: 1px solid #888;
+  border: 1px solid #888888;
 }
 
 .refbox {

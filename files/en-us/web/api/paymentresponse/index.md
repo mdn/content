@@ -37,7 +37,7 @@ The **`PaymentResponse`** interface of the [Payment Request API](/en-US/docs/Web
 - {{domxref('PaymentResponse.complete()')}}
   - : Notifies the user agent that the user interaction is over. This causes any remaining user interface to be closed. This method should only be called after the Promise returned by the {{domxref('PaymentRequest.show()')}} method.
 - {{domxref("PaymentResponse.toJSON()")}}
-  - : Returns a [JSON object](/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON) representing this `PaymentResponse` object.
+  - : Returns a JSON-serializable plain object representing the `PaymentResponse` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Events
 

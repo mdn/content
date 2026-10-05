@@ -3,6 +3,8 @@ title: "XSLTProcessor: clearParameters() method"
 short-title: clearParameters()
 slug: Web/API/XSLTProcessor/clearParameters
 page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.XSLTProcessor.clearParameters
 ---
 

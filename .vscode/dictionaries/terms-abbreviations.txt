@@ -61,7 +61,8 @@ barcodes
 barebones
 bfcache
 BGRA
-Bignums
+bignum
+bignums
 bikeshedding
 bilevel
 bioinformatics
@@ -191,6 +192,7 @@ doorhanger
 dotless
 downsampled
 downsampling
+DPIA
 dragonfish
 DSCP
 DTLSL
@@ -295,6 +297,7 @@ HILN
 hindwings
 hissy
 hitbox
+hitboxes
 hitmap
 HOBA
 holodeck
@@ -317,6 +320,7 @@ iconset
 idents
 IDOR
 IERS
+immediates
 IMSC
 Indo-Pacific
 inferencing
@@ -592,6 +596,7 @@ redisplaying
 refbox
 regionless
 reimplementation
+relatedly
 remarketing
 remotable
 renderable
@@ -619,6 +624,7 @@ RFCOMM
 RGTC
 romcoms
 roundoff
+RSAES-OAEP
 RSAOAEP
 RSASSA
 RTCWEB
@@ -890,6 +896,7 @@ unlayered
 unlocalized
 unmaps
 unminified
+unmutes
 unmuting
 unobserves
 unpartitioned
@@ -897,6 +904,7 @@ unpinch
 unprefix
 unprefixing
 unprioritized
+unpunctuated
 unreadably
 unregisters
 unregistration

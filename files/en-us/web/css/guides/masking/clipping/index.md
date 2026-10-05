@@ -40,7 +40,7 @@ To visually clip an element, the `clip-path` property is set to either a [`<geom
 
 ### Geometry boxes
 
-The `clip-path` hides everything outside of the clipped region. The most basic clipping is done via a geometry box. You can clip an element based on it's margin, border, padding, or content. The effects of these visual box values can achieved via other CSS properties, such as setting the {{cssxref("border-color")}} to transparent and the {{cssxref("background-origin")}} to the desired visual box. We're looking at these values mostly because these values are using in conjunction with the shape functions, which we'll look at later, to define the origin of the shape clip path.
+The `clip-path` hides everything outside of the clipped region. The most basic clipping is done via a geometry box. You can clip an element based on its margin, border, padding, or content. The effects of these visual box values can be achieved via other CSS properties, such as setting the {{cssxref("border-color")}} to transparent and the {{cssxref("background-origin")}} to the desired visual box. We're looking at these values mostly because these values are used in conjunction with the shape functions, which we'll look at later, to define the origin of the shape clip path.
 
 [Understanding the reference box](/en-US/docs/Web/CSS/Guides/Shapes/Using_shape-outside#the_reference_box) used by CSS shapes is important when using `clip-path`, especially with [basic shapes](#clipping_to_basic_shapes), as the reference box defines a shape's coordinate system.
 
@@ -252,7 +252,7 @@ The `clip-path` property's support of {{cssxref("basic-shape")}} values provides
 
 The size and position of these shapes are defined by the `<geometry-box>` value, which defaults to border-box being used as the reference box if the `clip-path` value includes a shape without the `<geometry-box>` component value.
 
-Some of these functions appear to only provide basic predefined clipping options. They may appear to replicate effects you can created with {{cssxref("border-radius")}}, but if you [toggled the `border-radius`](#visual_box_values) property in the previous example, you may have noticed the power of CSS clipping. Shapes provide even more control. For example, `inset()` enables clipping a rectangle with precise margins. The real power and control comes with `path()`, `shape()`, and even `polygon()`, which allows for custom multi-point shapes.
+Some of these functions appear to only provide basic predefined clipping options. They may appear to replicate effects you can create with {{cssxref("border-radius")}}, but if you [toggled the `border-radius`](#visual_box_values) property in the previous example, you may have noticed the power of CSS clipping. Shapes provide even more control. For example, `inset()` enables clipping a rectangle with precise margins. The real power and control comes with `path()`, `shape()`, and even `polygon()`, which allows for custom multi-point shapes.
 
 ### Creating polygons
 

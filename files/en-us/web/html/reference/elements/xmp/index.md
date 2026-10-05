@@ -9,8 +9,6 @@ browser-compat: html.elements.xmp
 sidebar: htmlsidebar
 ---
 
-{{deprecated_header}}
-
 ## Summary
 
 The **`<xmp>`** [HTML](/en-US/docs/Web/HTML) element renders text between the start and end tags without interpreting the HTML in between and using a monospaced font. The HTML2 specification recommended that it should be rendered wide enough to allow 80 characters per line.

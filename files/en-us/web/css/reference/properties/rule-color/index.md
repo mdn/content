@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`rule-color`** [CSS](/en-US/docs/Web/CSS) property defines the colors of the lines drawn between columns and rows in multi-column grid, flex, and multi-col layouts, setting the colors of the column and row rules to the same value.
+The **`rule-color`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property defines the colors of the lines drawn between columns and rows in multi-column grid, flex, and multi-col layouts, setting the colors of the column and row rules to the same value.
 
 {{InteractiveExample("CSS Demo: rule-color")}}
 
@@ -315,7 +315,7 @@ li {
 
 #### Result
 
-{{EmbedLiveSample("Basic", "", "600")}}
+{{EmbedLiveSample("Basic", "", "440")}}
 
 ### Multiple color values
 
@@ -349,7 +349,7 @@ ul {
 
 #### Result
 
-{{EmbedLiveSample("Multiple", "", "600")}}
+{{EmbedLiveSample("Multiple", "", "440")}}
 
 There are nine column gutters and six row gutters, but only three colors in our color list, so the list gets repeated, with the first, fourth, and seventh lines being blue.
 
@@ -381,7 +381,7 @@ ul {
 
 #### Result
 
-{{EmbedLiveSample("repeat", "", "600")}}
+{{EmbedLiveSample("Repeat", "", "440")}}
 
 The grid has 10 columns and 7 rows, creating 9 column and 6 row gutters. The `repeat()` function repeats the two contained mixed colors three times, creating a color list with eight colors in all. While there is a lot of CSS to create the four colors, at least we didn't have to write out all eight `color-mix()` functions. Since there are more column gutters than list colors, the colors are repeated for the column gutters. As there are fewer row gutters than colors, the last two colors in the list are not used for the row gutters.
 
@@ -389,17 +389,17 @@ The grid has 10 columns and 7 rows, creating 9 column and 6 row gutters. The `re
 
 This example demonstrates using `auto`, instead of an integer, within the `repeat()` function.
 
-We use the same HTML and CSS as in the previous examples, but override the `rule-color` value. Here, we use `repeat(auto, <color>)` to set all the lines to be almost transparent black (`#0003`), except the first and last, which we set to a solid `black`.
+We use the same HTML and CSS as in the previous examples, but override the `rule-color` value. Here, we use `repeat(auto, <color>)` to set all the lines to be almost transparent black (`#00000033`), except the first and last, which we set to a solid `black`.
 
 ```css live-sample___auto
 ul {
-  rule-color: black, repeat(auto, #0003), black;
+  rule-color: black, repeat(auto, #00000033), black;
 }
 ```
 
 #### Result
 
-{{EmbedLiveSample("auto", "", "600")}}
+{{EmbedLiveSample("auto", "", "440")}}
 
 Even though there are more column rule lines than row rule lines, the `<auto-repeat-line-color>` value enables the creation of this symmetric effect.
 
@@ -437,4 +437,5 @@ Even though there are more column rule lines than row rule lines, the `<auto-rep
 - {{cssxref("row-rule-color")}}
 - {{cssxref("column-rule-color")}}
 - {{cssxref("rule")}} shorthand
+- [Defining CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps)
 - [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module

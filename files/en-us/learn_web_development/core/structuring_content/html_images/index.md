@@ -87,9 +87,6 @@ The previous code snippet, either with the absolute or the relative URL, will gi
 > [!NOTE]
 > Elements like {{htmlelement("img")}} and {{htmlelement("video")}} are sometimes referred to as **replaced elements**. This is because the element's content and size are defined by an external resource (like an image or video file), not by the contents of the element itself. You can read more about them at {{ glossary("replaced elements")}}.
 
-> [!NOTE]
-> You can find the finished example from this section [running on GitHub](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html) (see the [source code](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/images-in-html/index.html) too.)
-
 ### Alternative text
 
 The next attribute we'll look at is `alt`. Its value is supposed to be a textual description of the image, for use in situations where the image cannot be seen/displayed or takes a long time to render because of a slow internet connection. For example, our above code could be modified like so:
@@ -222,16 +219,8 @@ It is better to include such supporting information in the main article text, ra
 It is now your turn to play! This task will get you to embed an image.
 
 1. Click **"Play"** in the code block below to edit the example in the MDN Playground.
-2. Edit the existing {{htmlelement("img")}} tag so that it embeds the image located at the following URL:
-
-   ```url
-   https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg
-   ```
-
-   > [!NOTE]
-   > Earlier we said to never hotlink to images on other servers without permission, but this image is on our GitHub repo, so it is OK.
-
-3. Add an `alt` attribute to the image. You can check that the alt text works by temporarily misspelling the image URL.
+2. Edit the existing {{htmlelement("img")}} element so that it embeds the image `dinosaur_small.jpg`.
+3. Add an `alt` attribute to the image. You can check that the alt text works by temporarily misspelling the image filename.
 4. Set the image's correct `width` and `height` (hint: it is `200px` wide and `171px` high), then experiment with other values to see what the effect is.
 5. Set a `title` on the image.
 
@@ -250,7 +239,7 @@ Your finished HTML should look something like this:
 
 ```html
 <img
-  src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
+  src="dinosaur_small.jpg"
   alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"
   width="200"
   height="171"
@@ -380,7 +369,7 @@ If you make a mistake, you can clear your work using the _Reset_ button in the M
 
 ```html live-sample___images-2
 <img
-  src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
+  src="dinosaur_small.jpg"
   alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"
   width="200"
   height="171"
@@ -397,7 +386,7 @@ Your finished HTML should look like this:
 ```html
 <figure>
   <img
-    src="https://raw.githubusercontent.com/mdn/learning-area/master/html/multimedia-and-embedding/images-in-html/dinosaur_small.jpg"
+    src="dinosaur_small.jpg"
     alt="The head and torso of a dinosaur skeleton; it has a large head with long sharp teeth"
     width="200"
     height="171" />

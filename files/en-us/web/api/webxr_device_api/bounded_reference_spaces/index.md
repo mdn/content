@@ -59,7 +59,7 @@ Before creating a project that relies on bounded reference spaces, it's importan
 
 ### Safely creating a bounded-preferred space
 
-Before actually attempting to create a bounded reference space, you need to create a session that supports them. Since not all hardware supports bounded reference spaces, you should made sure to support bounded reference spaces as an option rather than as a required feature unless you have special knowledge of the environment in which your code will run. You can create a session that supports a `bounded-floor` reference space if available by using code such as the following:
+Before actually attempting to create a bounded reference space, you need to create a session that supports them. Since not all hardware supports bounded reference spaces, you should make sure to support bounded reference spaces as an option rather than as a required feature unless you have special knowledge of the environment in which your code will run. You can create a session that supports a `bounded-floor` reference space if available by using code such as the following:
 
 ```js
 async function onActivateXRButton(event) {
@@ -161,4 +161,3 @@ The new transform is passed into `getOffsetReferenceSpace()` to obtain a referen
 - [Spatial tracking in WebXR](/en-US/docs/Web/API/WebXR_Device_API/Spatial_tracking)
 - [Movement, orientation, and motion](/en-US/docs/Web/API/WebXR_Device_API/Movement_and_motion)
 - [Inputs and input sources](/en-US/docs/Web/API/WebXR_Device_API/Inputs)
-- [Supporting gamepads in WebXR applications](/en-US/docs/Web/API/WebXR_Device_API/Gamepads)

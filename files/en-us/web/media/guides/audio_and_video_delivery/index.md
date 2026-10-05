@@ -37,7 +37,7 @@ The code above will create an audio player that attempts to preload as much audi
 > [!NOTE]
 > The `preload` attribute may be ignored by some mobile browsers.
 
-For further info see [Cross Browser Audio Basics (HTML Audio In Detail)](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Cross-browser_audio_basics#html_audio_in_detail)
+For further info see [Cross-browser Audio Basics (HTML Audio In Detail)](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Cross-browser_audio_basics#html_audio_in_detail)
 
 ### HTML video
 
@@ -94,7 +94,7 @@ We set the source of the audio depending on the type of audio file the browser s
 > [!NOTE]
 > Play will be ignored by most browsers unless issued by a user-initiated event.
 
-It's also possible to feed an {{ htmlelement("audio") }} element a base64 encoded WAV file, allowing to generate audio on the fly:
+It's also possible to feed an {{ htmlelement("audio") }} element a base64 encoded WAV file, allowing you to generate audio on the fly:
 
 ```html
 <audio id="player" src="data:audio/x-wav;base64,UklGRvC…"></audio>
@@ -483,7 +483,7 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 ## Guides
 
 - [Creating a cross-browser video player](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)
-  - : A guide to creating a basic cross browser video player using the {{ htmlelement("video") }} element.
+  - : A guide to creating a basic cross-browser video player using the {{ htmlelement("video") }} element.
 - [Video player styling basics](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics)
   - : With the cross-browser video player put in place in the previous article, this article now looks at providing some basic, responsive styling for the player.
 - [Adding captions and subtitles to HTML video](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
@@ -500,7 +500,7 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 ### Streaming media
 
 - [Live streaming web audio and video](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Live_streaming_web_audio_and_video)
-  - : Live streaming technology is often employed to relay live events such as sports, concerts and more generally TV and Radio programmes that are output live. Often shortened to just streaming, live streaming is the process of transmitting media 'live' to computers and devices. This is a fairly complex and nascent subject with a lot of variables, so in this article we'll introduce you to the subject and let you know how you can get started.
+  - : Live streaming technology is often employed to relay live events such as sports, concerts and more generally TV and Radio programs that are output live. Often shortened to just streaming, live streaming is the process of transmitting media 'live' to computers and devices. This is a fairly complex and nascent subject with a lot of variables, so in this article we'll introduce you to the subject and let you know how you can get started.
 - [Setting up adaptive streaming media sources](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources)
   - : Let's say you want to set up an adaptive streaming media source on a server, to be consumed inside an HTML media element. How would you do that? This article explains how, looking at two of the most common formats: MPEG-DASH and HLS (HTTP Live Streaming.)
 - [DASH Adaptive Streaming for HTML 5 Video](/en-US/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming)
@@ -508,8 +508,8 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 
 ### Advanced topics
 
-- [Web Audio API cross browser support](/en-US/docs/Web/API/Web_Audio_API/Best_practices#cross_browser_legacy_support)
-  - : A guide to writing cross browser Web Audio API code.
+- [Web Audio API cross-browser support](/en-US/docs/Web/API/Web_Audio_API/Best_practices#cross_browser_legacy_support)
+  - : A guide to writing cross-browser Web Audio API code.
 - [Easy audio capture with the MediaRecorder API](https://hacks.mozilla.org/2014/06/easy-audio-capture-with-the-mediarecorder-api/)
   - : Explains the basics of using the MediaStream Recording API to directly record a media stream.
 

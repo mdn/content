@@ -20,7 +20,7 @@ mask-clip: fill-box;
 mask-clip: stroke-box;
 mask-clip: view-box;
 
-/* Keyword values */
+/* Keyword value */
 mask-clip: no-clip;
 
 /* Multiple values */

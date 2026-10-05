@@ -64,7 +64,7 @@ A {{jsxref("Promise")}} that resolves with `undefined` when the content has been
 ### Exceptions
 
 - `AbortError` {{domxref("DOMException")}}
-  - : Thrown if the operation was cancelled via the `signal` option.
+  - : Thrown if the operation was canceled via the `signal` option.
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if usage of the method is blocked by a {{httpheader("Permissions-Policy/language-model", "language-model")}} {{httpheader("Permissions-Policy")}}.
 - `NotSupportedError` {{domxref("DOMException")}}

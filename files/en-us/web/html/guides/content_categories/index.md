@@ -332,8 +332,8 @@ Some elements belong to this category only under specific conditions:
 - {{HTMLElement("audio")}}, if the [`controls`](/en-US/docs/Web/HTML/Reference/Elements/audio#controls) attribute is present
 - {{HTMLElement("dl")}}, if the element's children include at least one name-value group
 - {{HTMLElement("input")}}, if the [type](/en-US/docs/Web/HTML/Reference/Elements/input#type) attribute is not in the hidden state
-- {{HTMLElement("ol")}}, if it's children include at least one {{HTMLElement("li")}} element
-- {{HTMLElement("ul")}}, if it's children include at least one {{HTMLElement("li")}} element
+- {{HTMLElement("ol")}}, if its children include at least one {{HTMLElement("li")}} element
+- {{HTMLElement("ul")}}, if its children include at least one {{HTMLElement("li")}} element
 
 ## Elements without a category
 

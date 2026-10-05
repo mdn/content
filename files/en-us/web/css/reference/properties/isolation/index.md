@@ -9,6 +9,8 @@ sidebar: cssref
 
 The **`isolation`** [CSS](/en-US/docs/Web/CSS) property determines whether an element must create a new {{glossary("stacking context")}}.
 
+This property is especially helpful when used in conjunction with {{cssxref("mix-blend-mode")}} and {{cssxref("z-index")}}.
+
 {{InteractiveExample("CSS Demo: isolation")}}
 
 ```css interactive-example-choice
@@ -46,8 +48,6 @@ isolation: isolate;
   color: #8245a3;
 }
 ```
-
-This property is especially helpful when used in conjunction with {{cssxref("mix-blend-mode")}} and {{cssxref("z-index")}}.
 
 ## Syntax
 

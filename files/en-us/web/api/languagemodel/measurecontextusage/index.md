@@ -70,7 +70,7 @@ A {{jsxref("Promise")}} that resolves with a {{jsxref("Number")}} representing t
 ### Exceptions
 
 - `AbortError` {{domxref("DOMException")}}
-  - : Thrown if the operation was cancelled via the `signal` option.
+  - : Thrown if the operation was canceled via the `signal` option.
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if usage of the method is blocked by a {{httpheader("Permissions-Policy/language-model", "language-model")}} {{httpheader("Permissions-Policy")}}.
 - `NotSupportedError` {{domxref("DOMException")}}
@@ -98,6 +98,7 @@ The following example uses a function to verify that context is available before
 
 ```js
 const promptText = "Let me ask you an interesting question...";
+const session = await LanguageModel.create();
 
 async function contextAvailable(promptText) {
   const remaining = session.contextWindow - session.contextUsage;
@@ -105,8 +106,6 @@ async function contextAvailable(promptText) {
 
   return needed <= remaining;
 }
-
-const session = await LanguageModel.create();
 
 if (await contextAvailable(promptText)) {
   const response = await session.prompt(promptText);

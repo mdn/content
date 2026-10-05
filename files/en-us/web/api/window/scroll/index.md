@@ -6,7 +6,7 @@ page-type: web-api-instance-method
 browser-compat: api.Window.scroll
 ---
 
-{{APIRef}}
+{{APIRef("CSSOM view API")}}
 
 The **`scroll()`** method of the {{domxref("Window")}} interface scrolls the window to a particular place in the document.
 
