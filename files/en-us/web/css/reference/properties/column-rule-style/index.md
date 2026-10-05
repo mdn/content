@@ -219,6 +219,8 @@ As there are more values (10) than gutters (8), the `none` and `hidden` values a
 
 This example demonstrates how, when there are fewer values in the list of styles than column rules, the values are repeated.
 
+#### CSS
+
 Using the same HTML and CSS as in the previous example, we include three comma-separated styles as the `column-rule-style` value:
 
 ```css live-sample___repeat
@@ -233,7 +235,11 @@ ul {
 
 ### Using the `repeat()` function
 
-This example demonstrates using the `repeat()` function within the `column-rule-style` property value. We use the same HTML and CSS as in the previous examples. We include a `repeat()` function, setting the list of two `<line-style>` values to be repeated 3 times.
+This example demonstrates using the `repeat()` function within the `column-rule-style` property value.
+
+#### CSS
+
+We use the same HTML and CSS as in the previous examples. We include a `repeat()` function, setting the list of two `<line-style>` values to be repeated 3 times.
 
 ```css live-sample___func live-sample___auto
 ul {
@@ -250,6 +256,8 @@ The flex container has six columns, so five gutters. The `repeat()` function rep
 ### Using `auto` within `repeat()`
 
 This example demonstrates using `auto` instead of an integer within the `repeat()` function.
+
+#### CSS
 
 Using `repeat(auto, <line-style>)` we set all column rules to `groove`, except the first and last, which we set to `solid`.
 
