@@ -204,7 +204,7 @@ We create a list of 75 items. Most of the HTML is hidden for brevity.
 
 #### CSS
 
-We define the unordered list as a 10-column container, creating columns and rows with the {{cssxref("grid-template-columns")}} property and setting {{cssxref("list-style-type")}} to `none` to remove the bullets. We include a {{cssxref("gap")}} of `20px` to provide enough room between the columns and rows to fit our `20px` solid column and row rules.
+We define the unordered list as a 10-column container, create columns and rows with the {{cssxref("grid-template-columns")}} property, and set {{cssxref("list-style-type")}} to `none` to remove the bullets. We include a {{cssxref("gap")}} of `20px` to provide enough room between the columns and rows to fit our `20px` solid column and row rules.
 
 ```css live-sample___basic
 ul {
