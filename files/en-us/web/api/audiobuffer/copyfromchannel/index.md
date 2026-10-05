@@ -38,7 +38,7 @@ None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
-- `IndexSizeError`
+- `IndexSizeError` {{domxref("DOMException")}}
   - : One of the input parameters has a value that is outside the accepted range:
     - The value of `channelNumber` specifies a channel number
       which doesn't exist (that is, it's greater than or equal to the value of
