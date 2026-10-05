@@ -111,12 +111,12 @@ body {
 
 [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module
 
+- {{cssxref("column-gap")}}
+- {{cssxref("row-gap")}}
 - {{cssxref("gap")}} shorthand
-  - {{cssxref("column-gap")}}
-  - {{cssxref("row-gap")}}
+- {{cssxref("column-rule")}}
+- {{cssxref("row-rule")}}
 - {{cssxref("rule")}} shorthand
-  - {{cssxref("column-rule")}}
-  - {{cssxref("row-rule")}}
 - {{cssxref("rule-color")}}
 - {{cssxref("rule-inset")}}
 - {{cssxref("rule-overlap")}}
