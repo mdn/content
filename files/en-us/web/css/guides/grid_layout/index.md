@@ -161,6 +161,9 @@ This sample animation uses {{cssxref("display")}}, {{cssxref("grid-template-colu
 - [Box alignment in CSS grid layout](/en-US/docs/Web/CSS/Guides/Box_alignment/In_grid_layout)
   - : How box alignment works in the context of grid layout.
 
+- [Defining gaps](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps)
+  - : Understanding and defining gaps in grid, flexbox, and multi-column layouts, including how percentage values are resolved.
+
 ## Related features
 
 [CSS display](/en-US/docs/Web/CSS/Guides/Display) module
@@ -182,9 +185,19 @@ This sample animation uses {{cssxref("display")}}, {{cssxref("grid-template-colu
 
 [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module
 
-- {{cssxref("column-gap")}}
-- {{cssxref("gap")}}
-- {{cssxref("row-gap")}}
+- {{cssxref("gap")}} shorthand
+  - {{cssxref("column-gap")}}
+  - {{cssxref("row-gap")}}
+- {{cssxref("rule")}} shorthand
+  - {{cssxref("column-rule")}}
+  - {{cssxref("row-rule")}}
+- {{cssxref("rule-break")}}
+- {{cssxref("rule-color")}}
+- {{cssxref("rule-inset")}}
+- {{cssxref("rule-overlap")}}
+- {{cssxref("rule-style")}}
+- {{cssxref("rule-visibility-items")}}
+- {{cssxref("rule-width")}}
 
 [CSS box sizing](/en-US/docs/Web/CSS/Guides/Box_sizing) module
 

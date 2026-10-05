@@ -90,6 +90,8 @@ body {
   - : Learn how to use flexbox layout to create web layouts.
 - [Box alignment in flexbox](/en-US/docs/Web/CSS/Guides/Box_alignment/In_flexbox)
   - : Details features of [CSS box alignment](/en-US/docs/Web/CSS/Guides/Box_alignment) which are specific to flexbox.
+- [Defining gaps](/en-US/docs/Web/CSS/Guides/Gaps/Defining_gaps)
+  - : Understanding and defining gaps in grid, flexbox, and multi-column layouts, including how percentage values are resolved.
 
 ## Related concepts
 
@@ -109,9 +111,17 @@ body {
 
 [CSS gaps](/en-US/docs/Web/CSS/Guides/Gaps) module
 
-- {{cssxref("column-gap")}}
-- {{cssxref("gap")}}
-- {{cssxref("row-gap")}}
+- {{cssxref("gap")}} shorthand
+  - {{cssxref("column-gap")}}
+  - {{cssxref("row-gap")}}
+- {{cssxref("rule")}} shorthand
+  - {{cssxref("column-rule")}}
+  - {{cssxref("row-rule")}}
+- {{cssxref("rule-color")}}
+- {{cssxref("rule-inset")}}
+- {{cssxref("rule-overlap")}}
+- {{cssxref("rule-style")}}
+- {{cssxref("rule-width")}}
 
 [CSS box sizing](/en-US/docs/Web/CSS/Guides/Box_sizing) module
 
