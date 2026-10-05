@@ -43,7 +43,7 @@ _Also inherits methods from its parent interface, {{domxref("CSSStyleValue")}}._
 
 ## Description
 
-Each item in a `CSSTransformValue` is a {{domxref("CSSTransformComponent")}}-derived object, such as a {{domxref("CSSScale")}} or {{domxref("CSSTranslate")}}, representing a single {{cssxref("transform-function", "transform function")}} object.
+Each item in a `CSSTransformValue` is a {{domxref("CSSTransformComponent")}}-derived object, such as a {{domxref("CSSScale")}} or {{domxref("CSSTranslate")}}, representing a single [transform function](/en-US/docs/Web/CSS/Reference/Values/transform-function) object.
 
 The {{domxref("CSSTransformValue.CSSTransformValue", "CSSTransformValue()")}} constructor throws a {{jsxref("TypeError")}} if given an empty array — a `CSSTransformValue` always contains at least one component.
 

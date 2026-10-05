@@ -104,7 +104,7 @@ scale: 1.2 1.2 2;
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 scale: none;
 
 /* Single values */

@@ -59,6 +59,10 @@ Left values are the destination of an assignment.
   - : The `super` keyword calls the parent constructor or allows accessing properties of the parent object.
 - {{jsxref("Operators/import", "import()")}}
   - : The `import()` syntax allows loading a module asynchronously and dynamically into a potentially non-module environment.
+- {{jsxref("Operators/import/defer", "import.defer()")}}
+  - : The `import.defer()` syntax loads a module dynamically, deferring synchronous evaluation until the returned namespace's properties are accessed.
+- {{jsxref("Operators/import/source", "import.source()")}}
+  - : The `import.source()` syntax results in an object representing the module's compiled source, without loading its dependencies, linking it, or evaluating it.
 
 ### Increment and decrement
 

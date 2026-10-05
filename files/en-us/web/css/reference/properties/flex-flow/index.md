@@ -104,7 +104,12 @@ flex-flow: unset;
 
 ### Values
 
-See {{cssxref("flex-direction")}} and {{cssxref("flex-wrap")}} for details on the values.
+This property is specified as a space-separated list of keywords of the following types:
+
+- {{cssxref("flex-direction")}}
+  - : A keyword specifying the main axis and direction of how flex items are placed in the flex container.
+- {{cssxref("flex-wrap")}}
+  - : One or two keywords specifying whether flex items can wrap onto multiple lines, and, if wrapping is allowed, sets the direction that lines are stacked and whether they are balanced.
 
 ## Description
 

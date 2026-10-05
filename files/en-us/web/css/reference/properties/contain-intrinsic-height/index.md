@@ -12,7 +12,7 @@ The **`contain-intrinsic-height`** [CSS](/en-US/docs/Web/CSS) property sets the 
 ## Syntax
 
 ```css
-/* Keyword values */
+/* Keyword value */
 contain-intrinsic-height: none;
 
 /* <length> values */

@@ -42,7 +42,7 @@ If you don't have your own navigation elements, use the `minimal-ui` display mod
 
 ## Customize your app depending on the display mode
 
-When you define a display mode other than `browser` in your web app manifest, it only applies when the application is installed. Like any other webpage, a manifest's `display` member has no effect when the PWA is not installed. You can check the display mode at runtime to detect if the app is installed or not.
+When you define a display mode other than `browser` in your web app manifest, it only applies when the application is installed. Like any other webpage, a manifest's `display` member has no effect when the PWA is not installed.
 
 Using the CSS {{cssxref("@media/display-mode", "display-mode")}} media feature or the {{domxref("Window.matchMedia()")}} JavaScript feature, you can selectively apply CSS styles or run JavaScript code in your app based on its display mode.
 
@@ -60,7 +60,7 @@ Here is an example showing how to use the {{cssxref("@media")}} CSS at-rule to o
 }
 ```
 
-In this example, the `.app-button` element will be hidden by default unless the display mode is set to `standalone`, which happens if the `display` manifest member was set to `standalone` and the app is installed on the user's device.
+In this example, the `.app-button` element will be hidden by default unless the app is currently displayed in `standalone` mode.
 
 Here is another example showing how to use the {{domxref("window.matchMedia()")}} method to detect if the `standalone` display mode is enabled:
 
@@ -69,6 +69,13 @@ function isStandaloneApp() {
   return window.matchMedia("(display-mode: standalone)").matches;
 }
 ```
+
+> [!NOTE]
+> There is no reliable, cross-browser way for a PWA to determine whether it is installed, and the display mode does not neatly map to the installation status:
+>
+> - An installed PWA can still be opened in a browser tab and thus not `standalone`.
+> - A PWA can be displayed as `fullscreen` instead (which would hide the status bar, including the battery percentage, network connectivity, etc.).
+> - An ordinary webpage can also be displayed as `fullscreen`.
 
 ## See also
 

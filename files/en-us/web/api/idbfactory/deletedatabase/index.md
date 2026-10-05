@@ -38,7 +38,7 @@ deleteDatabase(name, options)
 
 An {{DOMxRef("IDBOpenDBRequest")}} on which subsequent events related to this request are fired.
 
-If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is `null`.
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is `undefined`.
 
 ## Description
 
@@ -71,7 +71,7 @@ dbDeleteRequest.onerror = (event) => {
 dbDeleteRequest.onsuccess = (event) => {
   console.log("Database deleted successfully");
 
-  console.log(event.result); // should be undefined
+  console.log(dbDeleteRequest.result); // undefined
 };
 ```
 

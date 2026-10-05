@@ -9,12 +9,6 @@ sidebar: cssref
 
 The **`position-try-fallbacks`** [CSS](/en-US/docs/Web/CSS) property enables you to specify a list of one or more alternative **position try fallback options** for anchor-positioned elements to be placed relative to their associated anchor elements. When the element would otherwise overflow its inset-modified containing block, the browser will try placing the positioned element in these different fallback positions, in the order provided, until it finds a value that stops it from overflowing its container or the viewport.
 
-> [!NOTE]
-> The {{cssxref("position-try")}} shorthand property can be used to specify {{cssxref("position-try-order")}} and `position-try-fallbacks` values in a single declaration.
-
-> [!NOTE]
-> This property was originally named and supported in Chromium browsers as `position-try-options`, with the same property values. Until `position-try-fallbacks` is supported, use the {{cssxref("position-try")}} shorthand instead.
-
 ## Syntax
 
 ```css
@@ -55,6 +49,8 @@ The `position-try-fallbacks` property may be specified as either the keyword val
 
 ### Values
 
+This property is specified as the keyword `none` or a comma-separated list of the following values:
+
 - `none`
   - : The default value. There are no position try fallback options set.
 - `<try-tactic>`
@@ -70,9 +66,6 @@ The `position-try-fallbacks` property may be specified as either the keyword val
 - {{cssxref("dashed-ident")}}
   - : Adds a custom {{cssxref("@position-try")}} option to the fallback options list, the identifying name of which matches the specified `dashed-ident`. If no custom position option exists with that name, the option is ignored.
 
-> [!NOTE]
-> Multiple options can be specified, separated by commas.
-
 ## Description
 
 Anchor-positioned elements should always appear in a convenient place for the user to interact with, if at all possible, regardless of where their anchor is positioned. To stop the positioned element from overflowing the viewport, it is often necessary to change its location when its anchor gets close to the edge of its containing element or the viewport.
@@ -83,6 +76,8 @@ If no option can be found that will place the positioned element completely on-s
 
 > [!NOTE]
 > In some situations you might want to just hide overflowing positioned elements, which can be achieved using the {{cssxref("position-visibility")}} property. In most cases however it is better to keep them on-screen and usable.
+
+The `position-try-fallbacks` property, along with the {{cssxref("position-try-order")}} property, can also be set by using the {{cssxref("position-try")}} shorthand.
 
 For detailed information on anchor features and position try fallback usage, see the [CSS anchor positioning](/en-US/docs/Web/CSS/Guides/Anchor_positioning) module and the [Fallback options and conditional hiding for overflow](/en-US/docs/Web/CSS/Guides/Anchor_positioning/Try_options_hiding) guide.
 

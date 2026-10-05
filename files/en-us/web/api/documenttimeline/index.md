@@ -20,7 +20,7 @@ The **`DocumentTimeline`** interface of the [Web Animations API](/en-US/docs/Web
 
 _This interface inherits its property from its parent, {{domxref("AnimationTimeline")}}._
 
-- {{domxref("AnimationTimeline.currentTime")}}
+- {{domxref("AnimationTimeline.currentTime")}} {{ReadOnlyInline}}
   - : Returns the time value in milliseconds for this timeline or `null` if it is inactive.
 
 ## Specifications

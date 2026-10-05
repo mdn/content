@@ -8,7 +8,7 @@ browser-compat: api.SVGElement.viewportElement
 
 {{APIRef("SVG")}}
 
-The **`viewportElement`** property of the {{DOMxRef("SVGElement")}} interface represents the `SVGElement` which established the current viewport. Often the nearest ancestor {{SVGElement("svg")}} element. `null` if the given element is the outermost `<svg>` element.
+The **`viewportElement`** read-only property of the {{domxref("SVGElement")}} interface represents the `SVGElement` which established the current viewport. Often the nearest ancestor {{SVGElement("svg")}} element. `null` if the given element is the outermost `<svg>` element.
 
 ## Value
 

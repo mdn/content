@@ -91,7 +91,44 @@ white-space: nowrap;
 
 The `text-overflow` property only affects content that is overflowing a block container element in its _inline_ progression direction (not text overflowing at the bottom of a box, for example).
 
-The `text-overflow` property may be specified using one or two values. If one value is given, it specifies overflow behavior for the end of the line (the right end for left-to-right text, the left end for right-to-left text). If two values are given, the first specifies overflow behavior for the left end of the line, and the second specifies it for the right end of the line. The property accepts either a keyword value (`clip` or `ellipsis`) or a `<string>` value.
+The `text-overflow` property may be specified using one or two values. If one value is given, it specifies overflow behavior for the end of the line (the right end for left-to-right text, the left end for right-to-left text). If two values are given, the first specifies overflow behavior for the left end of the line, and the second specifies it for the right end of the line.
+
+### `ellipsis` behaving as `clip` for editable elements
+
+When `text-overflow: ellipsis` is applied to editable elements such as textual {{htmlelement("input")}}, {{htmlelement("textarea")}}, and [`contenteditable`](/en-US/docs/Web/HTML/Reference/Global_attributes/contenteditable) elements, browsers generally treat it as `text-overflow: clip`, either all the time or when the element is focused. The exact behavior differs across browsers; see [Browser compatibility](#browser_compatibility).
+
+This behavior is to ensure that the text can be moved through and edited, even when overflowing. If the overflowing text remained covered by an ellipsis, it would not be visible or editable.
+
+You can see the behavior in the following live example, which has this CSS applied:
+
+```css live-sample___ellipsis-as-clip
+p[contenteditable],
+input,
+textarea {
+  width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+```
+
+```html hidden live-sample___ellipsis-as-clip
+<p contenteditable="">
+  contenteditable paragraph. The text in here is overflowing.
+</p>
+
+<hr />
+
+<input type="text" value="Text input. The text in here is overflowing." />
+
+<hr />
+
+<textarea>Textarea. The text in here is overflowing.</textarea>
+```
+
+{{embedlivesample("ellipsis-as-clip", "100%", "200")}}
+
+Focus the different elements and try editing their text content.
 
 ## Formal definition
 

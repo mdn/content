@@ -5,13 +5,13 @@ page-type: mdn-community-guide
 sidebar: mdnsidebar
 ---
 
-If you've not worked on an open source project (OSP) before, it is a good idea to read this article before starting to contribute to MDN Web Docs and other open source projects.
+If you've not worked on an open-source project (OSP) before, it is a good idea to read this article before starting to contribute to MDN Web Docs and other open-source projects.
 There are a few behaviors to adopt that will help you and the other project contributors feel valued and safe, and stay productive.
-This article won't teach you everything about contributing to open source; the aim is to cover foundational topics for taking part in open source communities.
+This article won't teach you everything about contributing to open source; the aim is to cover foundational topics for taking part in open-source communities.
 
 ## Think about why you are contributing to an OSP
 
-Before you start contributing to an open source project, ask yourself why you want to do that.
+Before you start contributing to an open-source project, ask yourself why you want to do that.
 It's fine if the answer to this question is "I want something to do with my time", but even better reasons might include:
 
 - I want to improve my skills.
@@ -26,7 +26,7 @@ Having a clear set of reasons for contributing will make you more productive and
 ## Be polite, be kind, avoid incendiary or offensive language
 
 We could abbreviate this to "be kind".
-This is our number one bit of advice for anyone starting open source contributions.
+This is our number one bit of advice for anyone starting open-source contributions.
 Be kind to the other contributors on the project, and it will be a happier and more productive place.
 
 - Thank people if they help you.
@@ -40,7 +40,7 @@ Beyond that, don't make assumptions, such as:
 
 - Knowledge of the project and the technologies used to build it
 - Gender, sexuality, age, languages spoken, location, political views, religion, or other personal attributes
-- Experience with open source projects
+- Experience with open-source projects
 - Confidence level
 - Expectations
 - Sense of humor

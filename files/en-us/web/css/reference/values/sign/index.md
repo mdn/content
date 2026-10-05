@@ -48,7 +48,7 @@ For example, in {{cssxref("background-position")}} positive percentages resolve 
 
 ```css
 div {
-  background-position: sign(10%);
+  background-position: calc(sign(10%) * 1px);
 }
 ```
 

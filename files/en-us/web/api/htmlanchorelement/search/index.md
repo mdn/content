@@ -14,13 +14,7 @@ This property can be set to change the query string of the URL. When setting, a 
 
 The query is {{Glossary("Percent-encoding", "percent-encoded")}} when setting but not percent-decoded when reading.
 
-Modern browsers provide
-[`URLSearchParams`](/en-US/docs/Web/API/URLSearchParams/get#examples)
-and
-[`URL.searchParams`](/en-US/docs/Web/API/URL/searchParams#examples)
-to make it easy to parse out the parameters from the query string.
-
-See {{domxref("URL.search")}} for more information.
+The {{domxref("URL.searchParams")}} property is a {{domxref("URLSearchParams")}} object that enables parsing the parameters from the query string. See also {{domxref("URL.search")}}.
 
 ## Value
 

@@ -28,7 +28,7 @@ The [WebXR Device API](/en-US/docs/Web/API/WebXR_Device_API)'s **`XRView`** inte
 
 ## Instance methods
 
-- {{domxref("XRView.requestViewportScale", "requestViewportScale()")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{domxref("XRView.requestViewportScale", "requestViewportScale()")}} {{Experimental_Inline}}
   - : Requests that the user agent should set the requested viewport scale for this viewport to the requested value.
 
 ## Usage notes
