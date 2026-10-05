@@ -13,7 +13,9 @@ This guide provides an overview of the features introduced in the specification,
 
 ## Overview
 
-Gaps and their decorations have evolved. Originally, column gaps and their decorations were limited only to [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout). While we could define the width, color, and line style of column rules in multi-column containers, all rules had to match; the only option spanned the full block dimension, and it was limited to columns and multi-column layouts. The supported decorations between multi-column columns were also limited. The CSS gap properties enable drawing lines in the center of each gutter in multi-column, grid, and flexbox layouts.
+The CSS gap properties enable drawing lines in the center of each gutter in multi-column, grid, and flexbox layouts. While {{cssxref("margin")}} and {{cssxref("padding")}} specify visual spacing around individual boxes, the properties in the CSS gaps module enable specifying the spacing between adjacent boxes within a given layout context for layouts that have {{glossary("gutters")}} and gaps. You can show rules in every gap or in a subset of gaps, defining fully animatable rule widths, colors, and insets.
+
+Gaps and their decorations have evolved. Originally, column gaps and their decorations were limited only to [CSS multi-column layout](/en-US/docs/Web/CSS/Guides/Multicol_layout). While we could define the width, color, and line style of column rules in multi-column containers, all rules had to match; the only option spanned the full block dimension, and it was limited only to columns and only in multi-column layouts.
 
 Grid layout has always supported gaps between rows and columns, but it originally didn't support decorations in those gutters. Before rules expanded to all gap-aware layouts, painting lines in the gaps between rows and columns in grid and flexbox layouts required hacks such as background images, borders on all items, and even absolutely positioned overlays. Fortunately, CSS has evolved. CSS gap module properties let you define column and row gaps for all gap-aware layout containers and add visible separators, called _gap decorations_, painted in the middle of gaps in both horizontal and vertical gutters that don't affect the box model.
 
@@ -71,8 +73,6 @@ This example demonstrates the basic gap decoration features, with a gap between 
 ```
 
 {{EmbedLiveSample("Basic", "", "210")}}
-
-While {{cssxref("margin")}} and {{cssxref("padding")}} specify visual spacing around individual boxes, the properties in the CSS gaps module enable specifying the spacing between adjacent boxes within a given layout context for layouts that have {{glossary("gutters")}} and gaps. You can show rules in every gap or in a subset of gaps, defining fully animatable rule widths, colors, and insets.
 
 ## Gap properties
 
@@ -163,31 +163,6 @@ Expanding on the first example, we set the row rules to break when they intersec
 
 - {{cssxref("rule-break")}}
   - : A `column-rule-break` value. Sets `column-rule-break` and `row-rule-break` to the same value.
-
-### Overlapping
-
-If row and column rules don't break, they overlap at junction intersections. We can control whether the row rules are painted on top of the column rules, or the other way around.
-
-Expanding on the first example, we've set the column rules to be painted over the row rules when they intersect.
-
-```css live-sample___overlap
-.grid {
-  rule-overlap: column-over-row;
-}
-```
-
-```css hidden live-sample___overlap
-@supports not (rule-overlap: row-over-column) {
-  body::before {
-    content: "Your browser doesn't support the rule-overlap property ";
-  }
-}
-```
-
-{{EmbedLiveSample("overlap", "", "210")}}
-
-- {{cssxref("rule-overlap")}}
-  - : The keyword `row-over-column` or `column-over-row`. Sets the paint order for overlapping gap decorations when column rules and row rules intersect.
 
 Every rule has a beginning and an end, or start and end _cap_. When you have gap decorations in both columns and rows, column rules intersect row rules at interior _junctions_. We can control the intersections and segment end points, defining whether the lines are painted to the end of the container or inset, whether the row rules are painted on top of the column rules when they intersect, or if the column rules are on top of the row rules, or even if one direction should have a continuous line, with the other dimension breaking at every junction while being offset from that junction.
 
@@ -344,6 +319,31 @@ In this example, note how the segments around the sections without grid items ha
   - : The same vocabulary as `column-rule-visibility-items`. Sets decorations to be painted in all row-gap segments, only in a gap segment if at least one row area adjacent to the gap segment has an item, or only if both row areas adjacent to the gap segment have an item.
 - {{cssxref("rule-visibility-items")}}
   - : The same vocabulary as `column-rule-visibility-items`. Sets `column-rule-visibility-items` and `row-rule-visibility-items` to the same value.
+
+## Overlapping
+
+If row and column rules don't break, they overlap at junction intersections. We can control whether the row rules are painted on top of the column rules, or the other way around.
+
+Expanding on the first example in this page, we've set the column rules to be painted over the row rules when they intersect.
+
+```css live-sample___overlap
+.grid {
+  rule-overlap: column-over-row;
+}
+```
+
+```css hidden live-sample___overlap
+@supports not (rule-overlap: row-over-column) {
+  body::before {
+    content: "Your browser doesn't support the rule-overlap property ";
+  }
+}
+```
+
+{{EmbedLiveSample("overlap", "", "210")}}
+
+- {{cssxref("rule-overlap")}}
+  - : The keyword `row-over-column` or `column-over-row`. Sets the paint order for overlapping gap decorations when column rules and row rules intersect.
 
 ## See also
 
