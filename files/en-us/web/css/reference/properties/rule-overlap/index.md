@@ -208,7 +208,7 @@ We create a list of 75 items. Most of the HTML is hidden for brevity.
 
 #### CSS
 
-We define the unordered list as a 10-column container, create columns and rows with the {{cssxref("grid-template-columns")}} property, and define an empty string for the {{cssxref("list-style-type")}} to to remove the bullets. We include a {{cssxref("gap")}} of `20px` to provide enough room between the columns and rows to fit our `20px` solid column and row rules.
+We define the unordered list as a 10-column container, create columns and rows with the {{cssxref("grid-template-columns")}} property, and define an empty string for the {{cssxref("list-style-type")}} to to remove the bullets. We include a {{cssxref("gap")}} of `20px` to provide enough room between the columns and rows to fit our `20px` solid column and row rules. Finally, we use the `rule-overlap` property to draw the column rules on top of the row rules.
 
 ```css live-sample___basic
 ul {
@@ -251,6 +251,8 @@ li {
 #### Result
 
 {{EmbedLiveSample("Basic", "", "625")}}
+
+Check the box to toggle the value of the `rule-overlap` property.
 
 ## Specifications
 
