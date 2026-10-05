@@ -279,7 +279,6 @@ In this example, the vertical decorations are continuous but inset on the ends. 
 
 - {{cssxref("row-rule-inset-junction")}}
   - : One or two `<inset-value>` values setting the `row-rule-inset-junction-start` and the `row-rule-inset-junction-end` values. If you specify only one value, both properties are set to that value. If two values are specified, `row-rule-inset-junction-start` is set to the first value and `row-rule-inset-junction-end` is set to the second value.
- 
 - {{cssxref("row-rule-inset-junction-end")}}
   - : The same vocabulary as `column-rule-inset-junction-end`, defining the space between the end of the segment and the end edge of the container or the end of the segment and the start edge of the column gap at column gutters where no other gap decoration segment exists.
 
