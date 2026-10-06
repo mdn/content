@@ -8,14 +8,14 @@ sidebar: learnsidebar
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Grids", "Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension", "Learn_web_development/Core/CSS_layout")}}
 
-The aim of this skill test is to help you assess whether you understand how a [grid and grid items](/en-US/docs/Learn_web_development/Core/CSS_layout/Grids) behave. You will be working through several small tasks that use different elements of the material you have just covered.
+This skill test aims to help you assess whether you understand how a [grid and grid items](/en-US/docs/Learn_web_development/Core/CSS_layout/Grids) behave. You will work through several small tasks that use different elements of the material you have just covered.
 
 > [!NOTE]
 > To get help, read our [Test your skills](/en-US/docs/Learn_web_development#test_your_skills) usage guide. You can also reach out to us using one of our [communication channels](/en-US/docs/MDN/Community/Communication_channels).
 
 ## CSS grids 1
 
-In this task, we want you to create a grid into which the four child elements will be auto-placed. The grid should have three columns that share the available space equally, with a `20px` gap between the column and row tracks. After that, try adding more child elements inside the parent container with the `grid` class and see how they behave by default.
+In this task, we want you to create a grid into which four child elements will be auto-placed. The grid should have three columns that share the available space equally, with a `20px` gap between the column and row tracks. After that, add more child elements inside the parent container with the `grid` class and see how they behave by default.
 
 The starting point of the task looks like this:
 
@@ -131,8 +131,8 @@ The layout should look like this after you complete the task:
 <details>
 <summary>Click here to show the solution</summary>
 
-It is possible to layer items by way of them occupying the same grid cells.
-One option is to use the shorthands below, however it would be correct to use the longhand `grid-row-start` for example.
+It is possible for multiple items to occupy the same grid cells and layer on top of each other.
+One option is to use the shorthands below; however, it would be correct to use the longhand `grid-row-start` for example.
 
 ```css live-sample___grid2-finish
 .item1 {
@@ -146,7 +146,7 @@ One option is to use the shorthands below, however it would be correct to use th
 }
 ```
 
-For the bonus question, one way of achieving this is to use `order`, which we've encountered in the flexbox tutorial.
+For the bonus question, one way to achieve this is via the `order` property, which we encountered in the flexbox tutorial.
 
 ```css live-sample___grid2-finish
 .item1 {
@@ -243,7 +243,7 @@ Each part of the layout needs a name using the `grid-area` property and `grid-te
 
 ## CSS grids 4
 
-In this task, you will need to use both grid layout and flexbox to recreate the finished layout. The gap between the column and row tracks should be `10px`. You do not need to make any changes to the HTML in order to achieve this.
+In this task, you will need to use both grid layout and flexbox to recreate the finished layout. The gap between the column and row tracks should be `10px`. You don't need to change the HTML to achieve this.
 
 The starting point of the task looks like this:
 
@@ -349,8 +349,8 @@ The layout should look like this after you complete the task:
 <details>
 <summary>Click here to show the solution</summary>
 
-The container will need to be a grid layout, as we have alignment in rows and columns - two-dimensional.
-The `<ul>` needs to be a flex container as tags (`<li>` elements) are not lined up in columns, only in rows and they are centered in the space with the alignment property `justify-content` set to `center`.
+The container needs to be a grid layout, as the cards are aligned in two dimensions — rows and columns.
+The `<ul>` needs to be a flex container, as the tags (`<li>` elements) are aligned in one dimension — rows only — and they are centered in the space with the alignment property `justify-content` set to `center`.
 
 ```css live-sample___grid4-finish
 .container {
