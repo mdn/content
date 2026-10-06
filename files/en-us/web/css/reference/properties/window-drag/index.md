@@ -66,17 +66,17 @@ Our [Custom titlebar example](https://mdn.github.io/pwa-examples/custom-titlebar
 
 #### HTML
 
-We have included a {{htmlelement("div")}} element containing some content for our titlebar. We've deliberately included some interactive content to give you an idea of what's possible.
+We have included a {{htmlelement("header")}} element containing some content for our titlebar. We've deliberately included some interactive content to give you an idea of what's possible.
 
 ```html
-<div id="titlebar">
+<header id="titlebar">
   <label for="super">Super</label>
   <input type="radio" id="super" name="superlative" value="super" checked />
   <label for="smashing">Smashing</label>
   <input type="radio" id="smashing" name="superlative" value="smashing" />
   <label for="great">Great</label>
   <input type="radio" id="great" name="superlative" value="great" />
-</div>
+</header>
 ```
 
 #### Manifest
