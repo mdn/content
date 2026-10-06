@@ -13,7 +13,7 @@ sidebar: cssref
 
 The **`row-rule-inset-cap-start`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the start of row rule segment [cap endpoints](/en-US/docs/Web/CSS/Reference/Properties/column-rule-inset-cap#understanding_cap_endpoints).
 
-{{InteractiveExample("CSS Demo: rule")}}
+{{InteractiveExample("CSS Demo: row-rule-inset-cap-start")}}
 
 <!-- negative example must come first -->
 
@@ -342,6 +342,8 @@ The slider only has an effect when the `rule-visibility-items` value is set to `
 This example demonstrates setting `row-rule-inset-cap-start` to inset the start edge of cap segments on flex containers.
 
 #### HTML
+
+The markup includes two {{htmlelement("div")}} elements, each containing seven children. The only difference between the two containers is that the second one has an added `column` class.
 
 ```html
 <h1>Insetting cap row rule endpoints</h1>
