@@ -343,7 +343,7 @@ This example demonstrates setting `row-rule-inset-cap-start` to inset the start 
 
 #### HTML
 
-The markup includes two {{htmlelement("div")}} elements, each containing seven children. The only difference is between the two containers is the second one has an added `column` class.
+The markup includes two {{htmlelement("div")}} elements, each containing seven children. The only difference between the two containers is that the second one has an added `column` class.
 
 ```html
 <h1>Insetting cap row rule endpoints</h1>
