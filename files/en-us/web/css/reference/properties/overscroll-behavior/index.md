@@ -196,7 +196,7 @@ In this example there are 4 buttons that launch a dialog, each dialog has a diff
 </dialog>
 ```
 
-### CSS
+#### CSS
 
 ```css hidden
 ::backdrop {
