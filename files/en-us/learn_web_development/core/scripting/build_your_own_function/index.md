@@ -38,10 +38,7 @@ alert("This is a message");
 
 The `alert()` function takes a single argument — the string that is displayed in the alert box. Try varying the string to change the message.
 
-The `alert()` function is limited: you can alter the message, but you can't easily vary anything else, such as the color, icon, or anything else. We'll build one that will prove to be more fun.
-
-> [!NOTE]
-> This example should work in all modern browsers fine, but the styling might look a bit funny in slightly older browsers. We'd recommend you do this exercise in a modern browser like Firefox, Opera, or Chrome.
+The `alert()` function is limited: you can alter the message, but you can't easily vary anything else such as the color or icon. We'll build one that will prove to be more fun.
 
 ## The basic function
 
@@ -66,7 +63,13 @@ To begin with, let's put together a basic function.
            left: 50%;
            transform: translate(-50%, -50%);
            width: 200px;
-           background: #eee;
+           border-radius: 10px;
+           background-color: #eee;
+           background-image: linear-gradient(
+             to bottom,
+             rgb(0 0 0 / 0),
+             rgb(0 0 0 / 0.1)
+           );
          }
 
          .msgBox p {
@@ -136,7 +139,7 @@ The first line selects the {{htmlelement("body")}} element by using the [DOM API
 const body = document.body;
 ```
 
-The next section uses a DOM API function called {{domxref("document.createElement()")}} to create a {{htmlelement("div")}} element and store a reference to it in a constant called `panel`. This element will be the outer container of our message box.
+The next section uses a DOM API function called {{domxref("Document.createElement()")}} to create a {{htmlelement("div")}} element and store a reference to it in a constant called `panel`. This element will be the outer container of our message box.
 
 We then use yet another DOM API function called {{domxref("Element.setAttribute()")}} to set a `class` attribute on our panel with a value of `msgBox`. This is to make it easier to style the element — if you look at the CSS on the page, you'll see that we are using a `.msgBox` class selector to style the message box and its contents.
 
@@ -162,7 +165,7 @@ panel.appendChild(closeBtn);
 
 Finally, we call {{domxref("EventTarget/addEventListener", "addEventListener()")}} to add a function that will be called when the user clicks the "close" button. The code will delete the whole panel from the page — to close the message box.
 
-Briefly, the `addEventListener()` method can be called on any element on the page, and is usually passed two arguments: the name of an event and a function to run when the event occurs. In this case, the event name is `click`, meaning that when the user clicks the button, the function will run. You'll learn a lot more about events in our [events article](/en-US/docs/Learn_web_development/Core/Scripting/Events). The line inside the function uses the {{domxref("Node.removeChild()", "removeChild()")}} method to specify that we want to remove a specific child element of the `<body>` element: in this case, the panel `<div>`.
+Briefly, the `addEventListener()` method can be called on any element on the page, and is usually passed two arguments: the name of an event and a function to run when the event occurs. In this case, the event name is `click`, meaning that when the user clicks the button, the function will run. You'll learn a lot more about events in our [events article](/en-US/docs/Learn_web_development/Core/Scripting/Events). The code inside the function uses the {{domxref("Node.removeChild()", "removeChild()")}} method to specify that we want to remove a specific child element of the `<body>` element: in this case, the panel `<div>`.
 
 ```js
 closeBtn.addEventListener("click", () => body.removeChild(panel));
@@ -221,7 +224,7 @@ You might be wondering why we haven't included the parentheses after the functio
 btn.addEventListener("click", displayMessage());
 ```
 
-and saving and reloading, you'll see that the message box appears without the button being clicked! The parentheses in this context are sometimes called the "function invocation operator". You only use them when you want to run the function immediately in the current scope. In the same respect, the code inside the anonymous function is not run immediately, as it is inside the function scope.
+and saving and reloading, you'll see that the message box appears without the button being clicked! The parentheses in this context are sometimes called the "function invocation operator". You only use them when you want to run the function immediately in the current scope.
 
 If you tried the last experiment, make sure to undo the last change before carrying on.
 
@@ -280,7 +283,7 @@ As it stands, the function is still not very useful — we don't want to just sh
 
 On to the next parameter. This one is going to involve slightly more work — we are going to set it so that depending on what the `msgType` parameter is set to, the function will display a different icon and a different background color.
 
-1. First of all, download the icons needed for this exercise ([warning](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/icons/warning.png) and [chat](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/icons/chat.png)) from GitHub. Save them in the same location as your HTML file.
+1. First of all, download the icons needed for this exercise ([warning](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/icons/warning.png) and [chat](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/icons/chat.png)) from GitHub. In each case, click the download button and save them in the same location as your HTML file.
 
    > [!NOTE]
    > The warning and chat icons were originally found on iconfinder.com, and designed by Nazarrudin Ansyari — Thanks! (The actual icon pages were since moved or removed.)
@@ -297,10 +300,16 @@ On to the next parameter. This one is going to involve slightly more work — we
    width: 242px;
    ```
 
-3. Next, add the following lines inside the `.msgBox p { }` rule:
+3. Next, inside the `.msgBox p { }` rule, update the following line:
 
    ```css
-   padding-left: 82px;
+   padding: 10px 20px;
+   ```
+
+   to
+
+   ```css
+   padding: 10px 20px 10px 82px;
    background-position: 25px center;
    background-repeat: no-repeat;
    ```
@@ -309,10 +318,10 @@ On to the next parameter. This one is going to involve slightly more work — we
 
    ```js
    if (msgType === "warning") {
-     msg.style.backgroundImage = 'url("warning.png")';
+     msg.style.backgroundImage = "url(warning.png)";
      panel.style.backgroundColor = "red";
    } else if (msgType === "chat") {
-     msg.style.backgroundImage = 'url("chat.png")';
+     msg.style.backgroundImage = "url(chat.png)";
      panel.style.backgroundColor = "aqua";
    } else {
      msg.style.paddingLeft = "20px";
@@ -324,14 +333,21 @@ On to the next parameter. This one is going to involve slightly more work — we
 5. Let's test out our updated function, try updating the `displayMessage()` call from this:
 
    ```js
-   displayMessage("Woo, this is a different message!");
+   btn.addEventListener("click", () =>
+     displayMessage("Woo, this is a different message!");
+   );
    ```
 
    to one of these:
 
    ```js
-   displayMessage("Your inbox is almost full — delete some mails", "warning");
-   displayMessage("Brian: Hi there, how are you today?", "chat");
+   btn.addEventListener("click", () =>
+     displayMessage("Your inbox is almost full — delete some mails", "warning"),
+   );
+
+   btn.addEventListener("click", () =>
+     displayMessage("Brian: Hi there, how are you today?", "chat"),
+   );
    ```
 
    You can see how useful our (now not so) little function is becoming.
@@ -362,11 +378,10 @@ If you followed all the steps above, your example should render like so:
 
 .msgBox p {
   line-height: 1.5;
-  padding: 10px 20px;
-  color: #333;
-  padding-left: 82px;
+  padding: 10px 20px 10px 82px;
   background-position: 25px center;
   background-repeat: no-repeat;
+  color: #333;
 }
 
 .msgBox button {
