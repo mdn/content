@@ -56,6 +56,7 @@ describe("checking files", () => {
 });
 
 async function createImageFile(t, extension, input) {
+  // Brackets guard against glob-like path handling, e.g. `rotate3d()/transform.png`.
   const directory = await fsPromises.mkdtemp(
     path.join(os.tmpdir(), "filecheck-[images]()-"),
   );
