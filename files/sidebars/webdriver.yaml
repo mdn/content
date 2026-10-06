@@ -74,6 +74,10 @@ sidebar:
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/domContentLoaded
             code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/downloadEnd
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/downloadWillBegin
+            code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/fragmentNavigated
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/historyUpdated
@@ -85,6 +89,10 @@ sidebar:
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationFailed
             code: true
           - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigationStarted
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/userPromptClosed
+            code: true
+          - link: /Web/WebDriver/Reference/BiDi/Modules/browsingContext/userPromptOpened
             code: true
       - link: /Web/WebDriver/Reference/BiDi/Modules/emulation
         code: true
