@@ -22,7 +22,7 @@ None.
 
 ### Return value
 
-Returns `true` if the element's value has no validity problems; otherwise, returns `false`.
+Returns `true` if the element's value has no validity problems or if it's not a candidate for constraint validation; otherwise, returns `false`.
 
 ### Examples
 
