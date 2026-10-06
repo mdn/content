@@ -144,7 +144,7 @@ This example demonstrates setting `row-rule-inset-junction` to inset the edges o
 
 #### HTML
 
-The markup includes two {{htmlelement("div")}} elements, each containing seven children. The only difference is between the two containers is the second one has an added `column` class.
+The markup includes two {{htmlelement("div")}} elements, each containing seven children. The only difference between the two containers is that the second one has an added `column` class.
 
 ```html
 <h1>Insetting junction row rule endpoints</h1>
@@ -282,7 +282,7 @@ Change the size of the inset. Note that when the row rule is a single segment th
 
 ### With grid layout
 
-This example demonstrates using the `row-rule-inset-junction` to inset start and end row junction segment endpoints to two different values on a grid container.
+This example demonstrates using the `row-rule-inset-junction` to inset the start and end row junction segment endpoints to two different values on a grid container.
 
 #### HTML
 
@@ -334,7 +334,7 @@ We include the {{htmlelement("ul")}} element as a container with several {{htmle
 
 #### CSS
 
-We turn the `<ul>` into a grid container by setting the {{cssxref("display")}} property to `grid`. The {{cssxref("grid-template-columns")}} property specifies that the grid has six columns. We remove the bullets with {{cssxref("list-style-type")}} and set the row and column gaps to `20px` with the {{cssxref("gap")}} shorthand. We set the color, size, and line style of all the rules using the {{cssxref("rule")}} shorthand, then change just the row rule color with the {{cssxref("column-rule-color")}} property.
+We turn the `<ul>` into a grid container by setting the {{cssxref("display")}} property to `grid`. The {{cssxref("grid-template-columns")}} property specifies that the grid has six columns. We remove the bullets with {{cssxref("list-style-type")}} and set the row and column gaps to `20px` with the {{cssxref("gap")}} shorthand. We set the color, size, and line style of all the rules using the {{cssxref("rule")}} shorthand, then change just the column rule color with the {{cssxref("column-rule-color")}} property.
 
 We break the row rules at every intersection using the {{cssxref("row-rule-break")}} property. If the row rules didn't break, there would be no row junction segments to style!
 
