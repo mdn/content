@@ -104,7 +104,7 @@ Note that values of `0` and `0%` are equivalent to `1`/`100%` — they result in
 
 The {{cssxref("transform-function/scale", "transform: scale()")}} and {{cssxref("scale")}} transform features can be used as an alternative to the `zoom` property. They both scale elements up and down in size, but their effects differ slightly:
 
-- Scale transforms are applied after the page rendering has completed, therefore they do not affect the position and layout of surrounding elements. The `zoom` property on the other hand is applied during the rendering process, therefore it does affect surrounding elements.
+- The `zoom` property affects the element's [box-model](/en-US/docs/Web/CSS/Guides/Box_model/Introduction), affecting layout. In contrast, scale transforms create their own [stacking contexts](/en-US/docs/Web/CSS/Guides/Positioned_layout/Stacking_context); therefore, they don't affect layout or the position of surrounding elements. 
 - As a result, changes to the `zoom` property will cause {{cssxref("overflow")}} if the content gets bigger than its container.
 - The `zoom` property has no effect on {{cssxref("length")}} property values with computed values that are `auto` or a `<percentage>`.
 - Scale transforms cause elements to scale from their center by default (this behavior can be changed using the {{CSSXRef("transform-origin")}} property). The `zoom` property always causes elements to scale for their top-left corner.
