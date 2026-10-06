@@ -20,7 +20,7 @@ Every `SVGAngle` object operates in one of two modes:
 
 ## Instance properties
 
-- {{domxref("SVGAngle.unitType")}}
+- {{domxref("SVGAngle.unitType")}} {{ReadOnlyInline}}
   - : The type of the value as specified by one of the `SVG_ANGLETYPE_*` constants defined on this interface.
 - {{domxref("SVGAngle.value")}}
   - : The value as a floating point value, in user units. Setting this attribute will cause `valueInSpecifiedUnits` and `valueAsString` to be updated automatically to reflect this setting.

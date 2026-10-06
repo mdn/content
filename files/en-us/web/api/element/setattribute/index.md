@@ -178,7 +178,7 @@ You can press the "Toggle" button to disable and enable the "helloButton".
 
 ### Setting unsafe attributes
 
-In this example we'll show how you might mitigate the risks of calling `setAttributes()` to set the {{domxref("HTMLIFrameElement.srcdoc", "srcdoc")}} attribute on an {{htmlelement("iframe")}}.
+In this example we'll show how you might mitigate the risks of calling `setAttribute()` to set the {{domxref("HTMLIFrameElement.srcdoc", "srcdoc")}} attribute on an {{htmlelement("iframe")}}.
 This attribute sets the source HTML of a frame, and can hence inject potentially untrusted or unsafe code into the DOM.
 
 The approach would be similar for setting {{domxref("HTMLScriptElement.src","src")}} on HTML script elements, {{domxref("SVGScriptElement.href","href")}} on SVG script elements, and the `onXxxx` event handler attributes: the main difference is that you pass them different trusted type objects.

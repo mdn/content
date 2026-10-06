@@ -7,7 +7,7 @@ browser-compat: css.properties.scroll-snap-align
 sidebar: cssref
 ---
 
-The `scroll-snap-align` property specifies the box's snap position as an alignment of its [snap area](/en-US/docs/Glossary/Scroll_snap#snap_area) (as the {{glossary("alignment subject")}}) within its snap container's snap port (as the {{glossary("alignment container")}}).
+The **`scroll-snap-align`** [CSS](/en-US/docs/Web/CSS) property specifies the box's snap position as an alignment of its [snap area](/en-US/docs/Glossary/Scroll_snap#snap_area).
 
 {{InteractiveExample("CSS Demo: scroll-snap-align")}}
 
@@ -97,7 +97,7 @@ scroll-snap-align: unset;
 
 ### Values
 
-One or two values can be specified for the `scroll-snap-align` property. If one value is set, it is applied to both the block and inline axes. If two values are set, the first value controls the block axis and the second value controls the inline axis.
+This property is specified as one or two of the following keyword values, space-separated:
 
 - `none`
   - : The box does not define a snap position in that axis.
@@ -107,6 +107,12 @@ One or two values can be specified for the `scroll-snap-align` property. If one 
   - : The end alignment of this box's scroll snap area, within the scroll container's snapport is a snap position in this axis.
 - `center`
   - : The center alignment of this box's scroll snap area, within the scroll container's snapport is a snap position in this axis.
+
+## Description
+
+The `scroll-snap-align` property specifies the box's snap position as an alignment of its [snap area](/en-US/docs/Glossary/Scroll_snap#snap_area) (as the {{glossary("alignment subject")}}) within its snap container's snap port (as the {{glossary("alignment container")}}).
+
+One or two values can be specified for the `scroll-snap-align` property. If one value is set, it is applied to both the block and inline axes. If two values are set, the first value controls the block axis and the second value controls the inline axis.
 
 ## Formal definition
 

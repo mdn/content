@@ -41,7 +41,7 @@ class Base {
 
 You cannot call `super()` in a class method, even if that method is called from the constructor:
 
-```js example-ba
+```js example-bad
 class Base {}
 
 class Derived extends Base {

@@ -13,7 +13,7 @@ sidebar: cssref
 
 The **`column-rule-break`** [CSS](/en-US/docs/Web/CSS) property sets the behavior for breaking column rules into segments wherever column rules intersect row gaps.
 
-{{InteractiveExample("CSS Demo: rule")}}
+{{InteractiveExample("CSS Demo: column-rule-break")}}
 
 ```css interactive-example-choice
 column-rule-break: none;
@@ -77,7 +77,7 @@ column-rule-break: intersection;
 ## Syntax
 
 ```css
-/* Keywords */
+/* Keyword values */
 column-rule-break: none;
 column-rule-break: normal;
 column-rule-break: intersection;

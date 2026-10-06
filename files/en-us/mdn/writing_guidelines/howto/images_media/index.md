@@ -78,7 +78,7 @@ Let's walk through an example:
    ```
 
 6. Now you're ready to create your
-   [pull request](https://docs.github.com/en/pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).
+   [pull request](https://docs.github.com/en/pull-requests/how-tos/create-pull-requests/creating-a-pull-request).
 
 ## Adding alternative text to images
 
@@ -213,10 +213,6 @@ The recording steps using this tool are pretty simple:
 5. Perform whatever actions you want to record.
 6. Press the _Stop_ button.
 7. Choose _File_ > _Export As..._ > _1080p_ from the main menu to save as hi definition.
-
-### Other resources
-
-- [How to Add Custom Callouts to Screencast Videos in ScreenFlow](https://photography.tutsplus.com/tutorials/how-to-add-custom-callouts-to-screencast-videos-in-screenflow--cms-27122)
 
 ### Workflow for creating videos
 

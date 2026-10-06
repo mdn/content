@@ -3,10 +3,12 @@ title: "HTMLTemplateElement: htmlFor property"
 short-title: content
 slug: Web/API/HTMLTemplateElement/htmlFor
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.HTMLTemplateElement.htmlFor
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("HTML DOM")}}{{SeeCompatTable}}
 
 The **`htmlFor`** property of the {{domxref("HTMLTemplateElement")}} interface is the ID of the Processing Instruction marker to replace with the contents of the associated `<template>` element. It reflects the value of, and is used to set and get the [`for`](/en-US/docs/Web/HTML/Reference/Elements/template#for) content attribute.
 

@@ -13,7 +13,7 @@ sidebar: cssref
 
 The **`rule-break`** [CSS](/en-US/docs/Web/CSS) [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) property sets the behavior for breaking column and row rules into segments where rows and column gaps intersect, setting {{cssxref("column-rule-break")}} and {{cssxref("row-rule-break")}} to the same value.
 
-{{InteractiveExample("CSS Demo: rule")}}
+{{InteractiveExample("CSS Demo: rule-break")}}
 
 ```css interactive-example-choice
 rule-break: none;
@@ -83,7 +83,7 @@ This property is a shorthand for the following CSS properties:
 ## Syntax
 
 ```css
-/* Keywords */
+/* Keyword values */
 rule-break: none;
 rule-break: normal;
 rule-break: intersection;

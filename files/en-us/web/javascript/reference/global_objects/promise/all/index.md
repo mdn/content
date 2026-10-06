@@ -51,6 +51,8 @@ The `Promise.all()` method is one of the [promise concurrency](/en-US/docs/Web/J
 
 Like other promise combinators, `Promise.all()` immediately marks all promises as "handled" when it is called (by calling their `.then()` methods). Subsequent rejections after the first rejection will be ignored, and will not trigger any `unhandledrejection` events.
 
+Rejecting the returned promise does not cancel the remaining operations or unsubscribe the handlers attached to their promises. Repeatedly passing a long-lived pending promise to `Promise.all()` can accumulate handlers on that promise even when another input rejects each time.
+
 ## Examples
 
 ### Using Promise.all()

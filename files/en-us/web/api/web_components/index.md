@@ -75,7 +75,7 @@ The basic approach for implementing a web component generally looks something li
 - CSS pseudo-classes
   - : Pseudo-classes relating specifically to custom elements:
     - {{cssxref(":defined")}}
-      - : Matches any element that is defined, including built in elements and custom elements defined with `CustomElementRegistry.define()`.
+      - : Matches any element that is defined, including built-in elements and custom elements defined with `CustomElementRegistry.define()`.
     - {{cssxref(":host")}}
       - : Selects the shadow host of the [shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) containing the CSS it is used inside.
     - {{cssxref(":host", ":host()")}}

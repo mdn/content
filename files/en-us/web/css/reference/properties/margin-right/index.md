@@ -9,6 +9,8 @@ sidebar: cssref
 
 The **`margin-right`** [CSS](/en-US/docs/Web/CSS) property sets the [margin area](/en-US/docs/Web/CSS/Guides/Box_model/Introduction#margin_area) on the right side of an element. A positive value places it farther from its neighbors, while a negative value places it closer.
 
+The vertical margins of two adjacent boxes may fuse. This is called [_margin collapsing_](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing).
+
 {{InteractiveExample("CSS Demo: margin-right")}}
 
 ```css interactive-example-choice
@@ -59,8 +61,6 @@ margin-right: 0;
 }
 ```
 
-The vertical margins of two adjacent boxes may fuse. This is called [_margin collapsing_](/en-US/docs/Web/CSS/Guides/Box_model/Margin_collapsing).
-
 ## Syntax
 
 ```css
@@ -71,7 +71,7 @@ margin-right: 5%; /* relative to the nearest block container's width */
 margin-right: anchor-size(self-block);
 margin-right: calc(anchor-size(--my-anchor height, 20px) / 4);
 
-/* Keyword values */
+/* Keyword value */
 margin-right: auto;
 
 /* Global values */

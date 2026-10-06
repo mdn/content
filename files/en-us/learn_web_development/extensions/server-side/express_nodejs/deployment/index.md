@@ -503,7 +503,7 @@ Next we will set up a Railway account, install our website and a database, and t
 To start using Railway you will first need to create an account:
 
 - Go to [railway.com](https://railway.com/) and click the **Login** link in the top toolbar.
-- Select GitHub in the popup to login using your GitHub credentials
+- Select GitHub in the popup to log in using your GitHub credentials
 - You may then need to go to your email and verify your account.
 - You'll then be logged in to the Railway.com dashboard: <https://railway.com/dashboard>.
 
@@ -557,7 +557,7 @@ Select the **New** button, which is used to add services to the current project.
 
 Select **Database** when prompted about the type of service to add:
 
-![Railway popup showing options for a new service, such as database, GitHub repo, empty service etc](railway_database_add.png)
+![Railway popup showing options for a new service, such as database, GitHub repo, empty service, etc.](railway_database_add.png)
 
 Then select **Add MongoDB** to start adding the database
 

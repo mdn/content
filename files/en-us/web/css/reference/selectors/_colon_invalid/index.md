@@ -9,6 +9,8 @@ sidebar: cssref
 
 The **`:invalid`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Reference/Selectors/Pseudo-classes) represents any {{HTMLElement("form")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}} or other {{HTMLElement("form")}} element whose contents fail to [validate](/en-US/docs/Web/HTML/Guides/Constraint_validation).
 
+This pseudo-class is useful for highlighting field errors for the user.
+
 {{InteractiveExample("CSS Demo: :invalid", "tabbed-shorter")}}
 
 ```css interactive-example
@@ -42,8 +44,6 @@ input:invalid {
   >
 </form>
 ```
-
-This pseudo-class is useful for highlighting field errors for the user.
 
 ## Syntax
 

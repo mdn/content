@@ -21,13 +21,13 @@ Examples include:
 - Row and column headers in a spreadsheet.
 - The total value in a shopping cart.
 
-If the non-changeable value shouldn't be able to receive focus, use [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled) instead.
+If the element is unavailable for interaction, use [`aria-disabled`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled) instead.
 
 > [!NOTE]
 > When using semantic HTML form controls, if you set the `readonly` attribute, you don't need to include `aria-readonly="true"`.
 
 > [!NOTE]
-> The value of `<input type="checkbox">` can not be edited making `readonly` not relevant. However, when creating checkboxes with `role="checkbox"` the `aria-readonly` attribute _is_ supported.
+> The value of `<input type="checkbox">` cannot be edited making `readonly` not relevant. However, when creating checkboxes with `role="checkbox"` the `aria-readonly` attribute _is_ supported.
 
 ## Values
 

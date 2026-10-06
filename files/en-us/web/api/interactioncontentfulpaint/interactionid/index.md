@@ -8,7 +8,7 @@ status:
 browser-compat: api.InteractionContentfulPaint.interactionId
 ---
 
-{{APIRef("Performance API")}}
+{{APIRef("Performance API")}}{{SeeCompatTable}}
 
 The **`interactionId`** read-only property of the {{domxref("InteractionContentfulPaint")}} interface returns the {{domxref("PerformanceEventTiming.interactionId", "interactionId")}} of the {{domxref("PerformanceEventTiming")}} entry representing the interaction that resulted in the paint.
 

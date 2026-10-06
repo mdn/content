@@ -11,11 +11,11 @@ browser-compat: api.Window.fullScreen
 {{APIRef}}{{Non-standard_Header}}
 
 The **`fullScreen`** property of the `Window`
-interface indicates whether the window is displayed in full screen mode or not.
+interface indicates whether the window is displayed in fullscreen mode or not.
 
 ## Value
 
-A boolean value with `true` meaning that the window is in full-screen mode and `false` meaning it isn't.
+A boolean value with `true` meaning that the window is in fullscreen mode and `false` meaning it isn't.
 
 ## Notes
 

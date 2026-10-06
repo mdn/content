@@ -52,7 +52,7 @@ The result is that a delegated ink trail is drawn ahead of the default browser r
 #### HTML
 
 ```html
-<canvas id="canvas"></canvas>
+<canvas id="my-canvas"></canvas>
 <div id="div">Delegated ink trail should match the color of this div.</div>
 ```
 
@@ -70,6 +70,7 @@ div {
 #### JavaScript
 
 ```js
+const canvas = document.getElementById("my-canvas");
 const ctx = canvas.getContext("2d");
 const presenter = navigator.ink.requestPresenter({ presentationArea: canvas });
 let moveCnt = 0;

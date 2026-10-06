@@ -159,7 +159,7 @@ There is a specific type of agile methodology called **scrum**, which has a fixe
 - The scrum master holds short daily **stand-up meetings** where everyone talks about the progress they've made and any issues they might be having, so problems can be caught early.
 - At end of each sprint, the scrum master holds a retrospective meeting to review what went well, what didn't go so well, and what lessons can be learned before the next sprint.
 
-Another type of agile methodology is called **kanban**, which has less rules than scrum, doesn't use sprints, and tends to focus more on the continuous improvement aspects of agile. Kanban is particularly useful for managing continuous processes that don't have a clear defined end, such as customer support tickets.
+Another type of agile methodology is called **kanban**, which has fewer rules than scrum, doesn't use sprints, and tends to focus more on the continuous improvement aspects of agile. Kanban is particularly useful for managing continuous processes that don't have a clear defined end, such as customer support tickets.
 
 ### Kanban boards
 
@@ -183,7 +183,6 @@ Track the progress of a complete project from start to finish — try it with yo
 ## See also
 
 - [What is a Tech Stack and How Do They Work?](https://www.mongodb.com/resources/basics/technology-stack), mongodb.com
-- [Website development team structure: roles and processes](https://www.truemark.dev/blog/web-development-team-structure-role-process/), truemark.dev (2017)
 - [Agile vs. Waterfall](https://www.productplan.com/learn/agile-vs-waterfall), ProductPlan
 - [What is Scrum?](https://www.scrum.org/learning-series/what-is-scrum/), scrum.org
 

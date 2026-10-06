@@ -162,7 +162,7 @@ In Firefox:
 In Safari:
 
 - The `"clipboardWrite"` permission is only supported in extension contexts (not content scripts).
-- The `"clipboardRead"` permission isn't support.
+- The `"clipboardRead"` permission isn't supported.
 
 ## Browser compatibility
 

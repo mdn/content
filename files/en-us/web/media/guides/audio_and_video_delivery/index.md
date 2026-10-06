@@ -37,7 +37,7 @@ The code above will create an audio player that attempts to preload as much audi
 > [!NOTE]
 > The `preload` attribute may be ignored by some mobile browsers.
 
-For further info see [Cross Browser Audio Basics (HTML Audio In Detail)](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Cross-browser_audio_basics#html_audio_in_detail)
+For further info see [Cross-browser Audio Basics (HTML Audio In Detail)](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Cross-browser_audio_basics#html_audio_in_detail)
 
 ### HTML video
 
@@ -483,7 +483,7 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 ## Guides
 
 - [Creating a cross-browser video player](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)
-  - : A guide to creating a basic cross browser video player using the {{ htmlelement("video") }} element.
+  - : A guide to creating a basic cross-browser video player using the {{ htmlelement("video") }} element.
 - [Video player styling basics](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Video_player_styling_basics)
   - : With the cross-browser video player put in place in the previous article, this article now looks at providing some basic, responsive styling for the player.
 - [Adding captions and subtitles to HTML video](/en-US/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
@@ -508,8 +508,8 @@ A number of audio and video JavaScript libraries exist. The most popular librari
 
 ### Advanced topics
 
-- [Web Audio API cross browser support](/en-US/docs/Web/API/Web_Audio_API/Best_practices#cross_browser_legacy_support)
-  - : A guide to writing cross browser Web Audio API code.
+- [Web Audio API cross-browser support](/en-US/docs/Web/API/Web_Audio_API/Best_practices#cross_browser_legacy_support)
+  - : A guide to writing cross-browser Web Audio API code.
 - [Easy audio capture with the MediaRecorder API](https://hacks.mozilla.org/2014/06/easy-audio-capture-with-the-mediarecorder-api/)
   - : Explains the basics of using the MediaStream Recording API to directly record a media stream.
 

@@ -174,7 +174,7 @@ These technologies are not considered to be "web standards" — they are develop
 Another way that client-side and server-side languages are often described is **static** and **dynamic**:
 
 - A plain HTML file is stored on the server. When requested, it is delivered to the client, unchanged, and rendered by the browser. Because it does not change, it is referred to as "static".
-- When server-side code (for example, a Python script or an ASP.NET page) generates some HTML containing data and returns that HTML to the client, the contents of the HTML change depending on what the server-side code does. It is therefore referred to as "dynamic".
+- Server-side code (such as a Python script or an ASP.NET page) generates HTML content that varies depending on what data is passed to it, and then returns that HTML to the client. It is therefore referred to as "dynamic". For example, the same weather forecast page can show different data depending on whether the weather is sunny or rainy, what location the user is in, and what their preferences are (some users may want to see pollen count and humidity, whereas others might not care about that data and might select preferences to hide it).
 
 There is often a bit of overlap between the concepts of static and dynamic code. Server-side languages usually define HTML structures inside a template file, which tend to be mostly static HTML with some special dynamic sections included that change depending on what data needs to be inserted.
 
