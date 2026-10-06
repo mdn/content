@@ -344,6 +344,8 @@ There are more values than gutters for both the rows and columns; the last value
 
 This example demonstrates how, when there are fewer values in the list of styles than column and row rules, the values are repeated.
 
+#### CSS
+
 Using the same HTML and CSS as in the previous example, we include three comma-separated styles as the `rule-style` value:
 
 ```css live-sample___repeat
@@ -352,17 +354,25 @@ ul {
 }
 ```
 
+#### Result
+
 {{EmbedLiveSample("Repeat", "", "440")}}
 
 ### Using the `repeat()` function
 
-This example demonstrates using the `repeat()` function within the `rule-style` property value. We use the same HTML and CSS as in the previous examples. We include a `repeat()` function that sets a list of two `<line-style>` values to be repeated 3 times.
+This example demonstrates using the `repeat()` function within the `rule-style` property value.
+
+#### CSS
+
+We use the same HTML and CSS as in the previous examples. We include a `repeat()` function that sets a list of two `<line-style>` values to be repeated 3 times.
 
 ```css live-sample___func
 ul {
   rule-style: solid, repeat(3, inset, outset), solid;
 }
 ```
+
+#### Result
 
 {{EmbedLiveSample("func", "", "440")}}
 
@@ -372,6 +382,8 @@ The `repeat()` function repeats two style values three times, creating a list of
 
 This example demonstrates using `auto` instead of an integer within the `repeat()` function.
 
+#### CSS
+
 Using `repeat(auto, <line-style>)`, we set all column and row rules to `groove`, except the first and last, which we set to `solid`.
 
 ```css live-sample___auto
@@ -379,6 +391,8 @@ ul {
   rule-style: solid, repeat(auto, groove), solid;
 }
 ```
+
+#### Result
 
 {{EmbedLiveSample("auto", "", "440")}}
 
