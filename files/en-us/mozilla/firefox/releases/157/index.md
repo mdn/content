@@ -36,7 +36,7 @@ No notable changes.
 
 #### General
 
-- From now on, the recommended preferences will be restored at a different stage to avoid them being restored in the wrong profile.
+- From now on, the recommended preferences will be restored at a different stage during shutdown.
   ([Firefox bug 2066531](https://bugzil.la/2066531)).
 
 #### WebDriver BiDi
@@ -47,6 +47,8 @@ No notable changes.
 
 ## Changes for add-on developers
 
+- {{WebExtAPIRef("alarms.clearAll()")}} now fulfills its promise with `undefined` instead of a boolean. ([Firefox bug 2067229](https://bugzil.la/2067229))
+
 ## Experimental web features
 
 These features are shipping in Firefox 157 but are disabled by default.
@@ -55,7 +57,7 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **`export * from "mod"` includes the default export**: `javascript.options.experimental.export_star_default`
 
-  The [TC39 export `*` default proposal](https://tc39.es/proposal-export-star-default/) makes [`export * from "mod"`](/en-US/docs/Web/JavaScript/Reference/Statements/export#re-exporting__aggregating) also provide the module's default export, which it currently omits.
+  The [TC39 export `*` default proposal](https://tc39.es/proposal-export-star-default/) makes [`export * from "mod"`](/en-US/docs/Web/JavaScript/Reference/Statements/export#re-exporting_aggregating) also provide the module's default export, which it currently omits.
   Note that this preference can only be set in Nightly builds. ([Firefox bug 2065611](https://bugzil.la/2065611)).
 
 - **`navigate` option for notifications**: `dom.webnotifications.navigate.enabled`
@@ -69,4 +71,4 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **Key encapsulation in Web Crypto**: `dom.webcrypto.encapsulation.enabled`
 
-  The [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) supports ML-KEM, an algorithm that lets two parties agree on a shared secret key. It is designed to stay secure against attacks by quantum computers. {{domxref("SubtleCrypto")}} has the new `encapsulateKey()`, `encapsulateBits()`, `decapsulateKey()`, and `decapsulateBits()` methods, with matching {{domxref("CryptoKey.usages", "key usages")}}. The supported algorithm names include `ML-KEM-512`, `ML-KEM-768`, and `ML-KEM-1024`. {{domxref("SubtleCrypto.importKey()")}} and {{domxref("SubtleCrypto.exportKey()")}} also accept the new `raw-public` and `raw-seed` key formats. This feature is enabled by default in Nightly builds. ([Firefox bug 1943614](https://bugzil.la/1943614)).
+  The [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) supports ML-KEM, an algorithm that lets two parties agree on a shared secret key. It is designed to stay secure against attacks by quantum computers. {{domxref("SubtleCrypto")}} has the new `encapsulateKey()`, `encapsulateBits()`, `decapsulateKey()`, and `decapsulateBits()` methods, with matching {{domxref("CryptoKey.usages", "usages")}}. The supported algorithm names include `ML-KEM-512`, `ML-KEM-768`, and `ML-KEM-1024`. {{domxref("SubtleCrypto.importKey()")}} and {{domxref("SubtleCrypto.exportKey()")}} also accept the new `raw-public` and `raw-seed` key formats. This feature is enabled by default in Nightly builds. ([Firefox bug 1943614](https://bugzil.la/1943614)).

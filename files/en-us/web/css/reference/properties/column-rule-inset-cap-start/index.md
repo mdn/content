@@ -294,7 +294,7 @@ inset.addEventListener("input", () => {
 ```js hidden live-sample___caps live-sample___percents
 visibility.addEventListener("change", () => {
   ul.style.ruleVisibilityItems = `${visibility.value}`;
-  if (visibility.value == "between") {
+  if (visibility.value === "between") {
     ul.style.columnRuleStyle = "solid, repeat(2, double)";
   } else {
     ul.style.columnRuleStyle = "solid";
