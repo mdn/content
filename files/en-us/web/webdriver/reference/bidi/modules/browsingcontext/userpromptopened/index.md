@@ -79,7 +79,7 @@ The browser sends the following notification:
 
 ### Receiving an event when a beforeunload dialog opens
 
-Using the same connection, session, and subscription as in the first example, suppose the client uses the [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) command to navigate away from a page that listens for the `beforeunload` event.
+Using the same connection, session, and subscription as in the first example, suppose the client uses the [`browsingContext.navigate`](/en-US/docs/Web/WebDriver/Reference/BiDi/Modules/browsingContext/navigate) command to navigate away from a page with a [`beforeunload`](/en-US/docs/Web/API/Window/beforeunload_event) event handler that prompts for confirmation before leaving the page.
 
 When the dialog opens, before the navigation completes, the browser sends the following notification:
 
