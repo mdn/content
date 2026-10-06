@@ -23,7 +23,7 @@ _Inherits properties from its ancestor, {{domxref("Credential")}}._
   - : A string specifying the [config file](/en-US/docs/Web/API/FedCM_API/IDP_integration#provide_a_config_file_and_endpoints) URL of the {{glossary("Identity provider", "IdP")}} used for sign-in.
 - {{domxref("IdentityCredential.isAutoSelected")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : A boolean value that indicates whether the federated sign-in was carried out using [auto-reauthentication](/en-US/docs/Web/API/FedCM_API/RP_sign-in#auto-reauthentication) (i.e., without user mediation) or not.
-- {{domxref("IdentityCredential.token")}} {{experimental_inline}}
+- {{domxref("IdentityCredential.token")}} {{ReadOnlyInline}} {{experimental_inline}}
   - : Returns the token used to validate the associated sign-in.
 
 ## Static methods
