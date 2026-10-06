@@ -352,8 +352,6 @@ The layout should look like this after you complete the task:
 The container will need to be a grid layout, as we have alignment in rows and columns - two-dimensional.
 The `<ul>` needs to be a flex container as tags (`<li>` elements) are not lined up in columns, only in rows and they are centered in the space with the alignment property `justify-content` set to `center`.
 
-You may try to use flexbox on the container and restrict the cards with percentage values. You may also try to make the items into a grid layout in which case, note that the items are not aligned in two dimensions so flexbox isn't the best choice.
-
 ```css live-sample___grid4-finish
 .container {
   display: grid;
