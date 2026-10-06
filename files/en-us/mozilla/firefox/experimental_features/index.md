@@ -478,6 +478,20 @@ The `named-feature()` function in the {{cssxref("@supports")}} at-rule lets you 
 - `layout.css.anchor-positioning.follows-transforms.enabled`
   - : Set to `true` to enable.
 
+### `random()` CSS function
+
+The {{cssxref("random")}} CSS function generates a random value within a specified range, optionally limiting the possible values to step size intervals between those limits and the ability to scope the random value to elements and properties. ([Firefox bug 2071165](https://bugzil.la/2071165)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 159           | Yes                 |
+| Developer Edition | 158           | No                  |
+| Beta              | 158           | No                  |
+| Release           | 158           | No                  |
+
+- `layout.css.random.enabled`
+  - : Set to `true` to enable.
+
 ## SVG
 
 **No experimental features in this release cycle.**

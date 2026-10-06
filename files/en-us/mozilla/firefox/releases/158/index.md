@@ -86,3 +86,8 @@ Firefox 158 is the current [Beta version of Firefox](https://www.firefox.com/en-
 These features are shipping in Firefox 158 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **`random()` CSS function**: `layout.css.random.enabled`
+
+  The {{cssxref("random")}} CSS function generates a random value within a specified range, optionally limiting the possible values to step size intervals between those limits and the ability to scope the random value to elements and properties.
+  ([Firefox bug 2071165](https://bugzil.la/2071165)).
