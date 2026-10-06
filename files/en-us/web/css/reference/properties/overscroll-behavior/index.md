@@ -236,7 +236,7 @@ In this example there are 4 buttons that launch a dialog, each dialog has a diff
 }
 ```
 
-### Result
+#### Result
 
 Click one of the buttons to see that behavior applied to the dialog that appears, when you scroll within the dialog:
 
