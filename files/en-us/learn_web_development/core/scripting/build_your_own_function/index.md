@@ -130,7 +130,7 @@ To begin with, let's put together a basic function.
 
 This is quite a lot of code to go through, so we'll walk you through it bit by bit.
 
-The first line selects the {{htmlelement("body")}} element by using the [DOM API](/en-US/docs/Web/API/Document_Object_Model) to get the [`body`](/en-US/docs/Web/API/Document/body) property of the global [`document`](/en-US/docs/Web/API/Document/body) object, and assigning that to a constant called `body`, so we can do things to it later on:
+The first line selects the {{htmlelement("body")}} element by using the [DOM API](/en-US/docs/Web/API/Document_Object_Model) to get the [`body`](/en-US/docs/Web/API/Document/body) property of the global [`document`](/en-US/docs/Web/API/Document) object, and assigning that to a constant called `body`, so we can do things to it later on:
 
 ```js
 const body = document.body;
