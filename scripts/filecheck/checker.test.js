@@ -217,14 +217,14 @@ describe("compressing images", () => {
   });
 
   it("rejects images that remain oversized after compression", async (t) => {
-    const pixels = Buffer.alloc(1024 * 1024 * 3);
+    const pixels = Buffer.alloc(800 * 800 * 3);
     let seed = 1;
     for (let i = 0; i < pixels.length; i++) {
       seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0;
       pixels[i] = seed >>> 24;
     }
     const original = await sharp(pixels, {
-      raw: { width: 1024, height: 1024, channels: 3 },
+      raw: { width: 800, height: 800, channels: 3 },
     })
       .png({ compressionLevel: 0 })
       .toBuffer();
