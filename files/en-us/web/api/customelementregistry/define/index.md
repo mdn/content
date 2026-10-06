@@ -77,6 +77,8 @@ To define an autonomous custom element, you should omit the `options` parameter.
 
 To define a customized built-in element, you must pass the `options` parameter with its `extends` property set to the name of the built-in element that you are extending, and this must correspond to the interface that your custom element class definition inherits from. For example, to customize the {{htmlelement("p")}} element, you must pass `{extends: "p"}` to `define()`, and the class definition for your element must inherit from {{domxref("HTMLParagraphElement")}}.
 
+When `define()` is called, existing HTML elements connected to an associated document, including those in shadow trees, are automatically [upgraded](/en-US/docs/Web/API/CustomElementRegistry/upgrade) if they use this registry and match the definition.
+
 ### Valid custom element names
 
 Custom element names must:
@@ -168,3 +170,4 @@ We could then use it in an HTML page like this:
 ## See also
 
 - [Using custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements)
+- {{domxref("CustomElementRegistry.upgrade()")}}
