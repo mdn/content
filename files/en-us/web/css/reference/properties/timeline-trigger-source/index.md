@@ -378,5 +378,5 @@ The animation will start when the tracked element scrolls `600px` upwards.
 - {{cssxref("animation-action")}} type
 - {{cssxref("trigger-scope")}}
 - [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
-- [CSS animation triggers](/en-US/docs/Web/CSS/Guides/Animation_triggers/) module
+- [CSS animation triggers](/en-US/docs/Web/CSS/Guides/Animation_triggers) module
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module

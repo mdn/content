@@ -202,4 +202,4 @@ Developers can set and get HTTP headers using `fetch()` in order to provide appl
 - {{HTTPHeader("Content-Digest")}}, {{HTTPHeader("Want-Content-Digest")}}, {{HTTPHeader("Want-Repr-Digest")}}
 - {{HTTPHeader("ETag")}}
 - {{HTTPHeader("Content-Encoding")}}
-- [Digital Signatures for APIs](https://developer.ebay.com/develop/guides/digital-signatures-for-apis) SDK guide uses `Content-Digest`s for digital signatures in HTTP calls (developer.ebay.com)
+- [Digital Signatures for APIs](https://developer.ebay.com/develop/guides/sell/digital-signatures-for-apis) SDK guide uses `Content-Digest`s for digital signatures in HTTP calls (developer.ebay.com)
