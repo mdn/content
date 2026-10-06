@@ -126,7 +126,7 @@ div.none {
 /* scroll-snap alignment for children */
 div > div {
   scroll-snap-align: center;
-  scroll-initial-target: always;
+  scroll-snap-stop: always;
 }
 ```
 

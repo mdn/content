@@ -43,7 +43,7 @@ It may be useful to refer to the Universal Postal Union website's [Addressing S4
 ## Instance methods
 
 - {{domxref('PaymentAddress.toJSON()')}} {{Deprecated_Inline}} {{Non-standard_Inline}}
-  - : A standard serializer that returns a JSON representation of the `PaymentAddress` object's properties.
+  - : Returns a JSON-serializable plain object representing the `PaymentAddress` object. Automatically called by {{jsxref("JSON.stringify()")}}.
 
 ## Examples
 

@@ -46,7 +46,7 @@ _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 - {{domxref("HTMLLinkElement.sizes")}} {{ReadOnlyInline}}
   - : A {{domxref("DOMTokenList")}} that reflects the [`sizes`](/en-US/docs/Web/HTML/Reference/Elements/link#sizes) HTML attribute, as a list of tokens.
 - {{domxref("HTMLLinkElement.sheet")}} {{ReadOnlyInline}}
-  - : Returns the {{domxref("StyleSheet")}} object associated with the given element, or `null` if there is none.
+  - : Returns the {{domxref("CSSStyleSheet")}} object associated with the given element, or `null` if there is none.
 - {{domxref("HTMLLinkElement.type")}}
   - : A string representing the MIME type of the linked resource.
 

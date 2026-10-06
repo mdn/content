@@ -1,8 +1,8 @@
 ---
-title: Firefox 156 release notes for developers (Stable)
-short-title: Firefox 156 (Stable)
+title: Firefox 156 release notes for developers
+short-title: Firefox 156
 slug: Mozilla/Firefox/Releases/156
-page-type: firefox-release-notes-active
+page-type: firefox-release-notes
 sidebar: firefox
 ---
 
@@ -40,7 +40,7 @@ No notable changes.
 
 ### JavaScript
 
-- {{jsxref("Promise.try()")}} now resolves the value returned by its callback using `PromiseResolve`, so a promise returned by the callback is passed through rather than wrapped in a new promise.
+- {{jsxref("Promise.try()")}} now resolves the callback's return value in the same way as {{jsxref("Promise.resolve()")}} does, so a promise returned by the callback is passed through unchanged instead of being wrapped in a new promise.
   `Promise.try(() => p)` is now the same promise as `p` when `p` is a native promise. This follows a normative change to the specification.
   ([Firefox bug 2062293](https://bugzil.la/2062293)).
 - [`using`](/en-US/docs/Web/JavaScript/Reference/Statements/using) declarations can no longer be reassigned, matching the const-like semantics required by the specification. Previously such a binding could be silently mutated.
@@ -112,3 +112,8 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
   The Container Timing API reports when the contents of a container element are painted, letting you measure the render time of a region of the page rather than of the whole viewport.
   ([Firefox bug 1940240](https://bugzil.la/1940240)).
+
+- **Web custom formats in the Async Clipboard API** (Nightly): `dom.clipboard.customFormatSupport.enabled`
+
+  The [Clipboard API](/en-US/docs/Web/API/Clipboard_API) now supports web custom formats on Android, allowing {{domxref("ClipboardItem")}} objects to carry custom MIME types prefixed with `"web "`, such as `"web text/foo"`.
+  Support for other platforms was added in Firefox 154. ([Firefox bug 2048545](https://bugzil.la/2048545)).

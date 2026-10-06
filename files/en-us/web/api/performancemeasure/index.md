@@ -13,18 +13,18 @@ browser-compat: api.PerformanceMeasure
 
 ## Instance properties
 
-- {{domxref("PerformanceMeasure.detail")}}
+- {{domxref("PerformanceMeasure.detail")}} {{ReadOnlyInline}}
   - : Contains arbitrary metadata about the measure.
 
 This interface extends the following {{domxref("PerformanceEntry")}} properties by qualifying/constraining the properties as follows:
 
-- {{domxref("PerformanceEntry.entryType")}}
+- {{domxref("PerformanceEntry.entryType")}} {{ReadOnlyInline}}
   - : Returns `"measure"`.
-- {{domxref("PerformanceEntry.name")}}
+- {{domxref("PerformanceEntry.name")}} {{ReadOnlyInline}}
   - : Returns the name given to the measure when it was created via a call to {{domxref("Performance.measure()","performance.measure()")}}.
-- {{domxref("PerformanceEntry.startTime")}}
+- {{domxref("PerformanceEntry.startTime")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMHighResTimeStamp","timestamp")}} given to the measure when {{domxref("Performance.measure()","performance.measure()")}} was called.
-- {{domxref("PerformanceEntry.duration")}}
+- {{domxref("PerformanceEntry.duration")}} {{ReadOnlyInline}}
   - : Returns a {{domxref("DOMHighResTimeStamp")}} that is the duration of the measure (typically, the measure's end mark timestamp minus its start mark timestamp).
 
 ## Instance methods

@@ -12,7 +12,7 @@ The **`unit`** read-only property of the {{domxref("CSSUnitValue")}} interface r
 
 ## Value
 
-A string indicating the unit type, such as `"em"`, `"px"`, `"%"`, etc.
+A string indicating the unit type, such as `"em"`, `"px"`, `"percent"`, etc.
 
 ## Examples
 

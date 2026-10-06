@@ -483,7 +483,7 @@ doSomething(() => {
 console.log(value); // 1 or 2?
 ```
 
-On the other hand, promises are a form of [inversion of control](https://en.wikipedia.org/wiki/Inversion_of_control) — the API implementor does not control when the callback gets called. Instead, the job of maintaining the callback queue and deciding when to call the callbacks is delegated to the promise implementation, and both the API user and API developer automatically gets strong semantic guarantees, including:
+On the other hand, promises are a form of [inversion of control](https://en.wikipedia.org/wiki/Inversion_of_control) — the API implementor does not control when the callback gets called. Instead, the job of maintaining the callback queue and deciding when to call the callbacks is delegated to the promise implementation, and both the API user and API developer automatically get strong semantic guarantees, including:
 
 - Callbacks added with [`then()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) will never be invoked before the [completion of the current run](/en-US/docs/Web/JavaScript/Reference/Execution_model#run-to-completion) of the JavaScript event loop.
 - These callbacks will be invoked even if they were added _after_ the success or failure of the asynchronous operation that the promise represents.

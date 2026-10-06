@@ -23,14 +23,14 @@ When using non-semantic elements as radio buttons, you must ensure your users ca
 
 Some `radiogroup` implementations initialize the set with all buttons in the unchecked state. Once a `radio` in a `radiogroup` is checked, it is generally not possible to return to an all-unchecked state.
 
-The `radiogroup` must have an accessible name either by a visible label referenced by [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) or has a label specified with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label). If elements provide additional information about the radio group, those elements are referenced by the `radiogroup` element with the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) property.
+An accessible name is strongly recommended for the `radiogroup` role, although not required by ARIA. Provide it either by a visible label referenced by [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) or by a label specified with [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label). If elements provide additional information about the radio group, those elements are referenced by the `radiogroup` element with the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) property.
 
 ### Associated WAI-ARIA roles, states, and properties
 
 - [`radio`](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role) role
   - : One of a group of checkable buttons, in a `radiogroup`, where no more than one of the buttons can be checked at a time.
 - [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) / [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
-  - : The `radiogroup` must have an accessible name either by a visible label referenced by `aria-labelledby` or has a label specified with `aria-label`.
+  - : Provide an accessible name for the `radiogroup` either by a visible label referenced by `aria-labelledby` or by a label specified with `aria-label`. This is strongly recommended, although not required by ARIA.
 - [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
   - : Reference to elements providing additional information about the `radiogroup`
 - [`aria-required`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required)
