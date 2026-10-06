@@ -49,7 +49,7 @@ The {{cssxref("gap")}} shorthand defines gaps between both rows and columns and 
 
 The effect of the definition depends on whether the container uses grid, flexbox, or multi-column layout.
 
-You can add visible separators to gaps; these are called gap decorations. If you add decorative rules for gaps between columns, rows, or both, they appear in the middle of their gap but have no effect on the size of the gap, nor do they effect the size of the container. These gap decorations are added to the otherwise "empty space" by using the {{cssxref("rule")}} shorthand or its constituent properties.
+You can add visible separators to gaps; these are called gap decorations. If you add decorative rules for gaps between columns, rows, or both, they appear in the middle of their gap but have no effect on the size of the gap, nor do they affect the size of the container. These gap decorations are added to the otherwise "empty space" by using the {{cssxref("rule")}} shorthand or its constituent properties.
 
 ### Gaps in grid layouts
 
