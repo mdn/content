@@ -236,6 +236,7 @@ async function checkCompression(filePath, options) {
     } else if (extension === ".png") {
       image.png({ palette: true, compressionLevel: 9 });
     } else if (extension === ".gif") {
+      // Never reuse a frame's palette for the next frame, to keep frames exact.
       image.gif({ interPaletteMaxError: 0 });
     }
     compressed = await image.toBuffer();
