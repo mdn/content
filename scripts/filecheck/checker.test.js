@@ -4,7 +4,7 @@ import os from "node:os";
 import path from "node:path";
 import assert from "node:assert/strict";
 import { fileURLToPath } from "node:url";
-import { describe, it } from "node:test";
+import { beforeEach, describe, it } from "node:test";
 
 import sharp from "sharp";
 import isSvg from "is-svg";
@@ -60,7 +60,6 @@ async function createImageFile(t, extension, input) {
     path.join(os.tmpdir(), "filecheck-[images]()-"),
   );
   t.after(() => fsPromises.rm(directory, { recursive: true, force: true }));
-  t.mock.method(console, "log", () => {});
   const filename = `image.${extension}`;
   const filePath = path.join(directory, filename);
   await fsPromises.writeFile(path.join(directory, "index.md"), filename);
@@ -92,6 +91,11 @@ function addGifComment(input) {
 }
 
 describe("compressing images", () => {
+  beforeEach((t) => {
+    // Silence the "Compressed ..." output of --save-compression.
+    t.mock.method(console, "log", () => {});
+  });
+
   const cases = [
     ...["jpg", "jpeg"].map((extension) => ({
       name: extension,
