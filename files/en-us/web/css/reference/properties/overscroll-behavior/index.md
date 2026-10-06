@@ -150,7 +150,7 @@ A {{Glossary("Scroll_container", "scroll container")}} that has no scrollable ov
 
 ### `overscroll-behavior` on `<dialog>` elements
 
-In this example there are 4 buttons that launch a dialog, each dialog has a different `overscroll-behavior` value. There is also a `<div>` that forces the content to be larger that the container so that the scroll affect of the page can be seen.
+In this example there are 4 buttons that launch a dialog, each dialog has a different `overscroll-behavior` value. There is also a `<div>` that forces the content to be larger than the container so that the scroll effect of the page can be seen.
 
 #### HTML
 
