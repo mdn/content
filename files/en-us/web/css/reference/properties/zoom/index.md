@@ -82,7 +82,7 @@ This property is specified as one of the following values:
 - {{cssxref("&lt;number&gt;")}}
   - : A positive `<number>` value specifies a numeric zoom factor, with `1` being equivalent to original size. Values larger than `1` zoom in, while values smaller than `1` zoom out. `0` behaves as `1`.
 - `normal` {{non-standard_inline}}
-  - : Renders the element at its original size; equivalent to `1`.
+  - : Resolves to `1`.
 - `reset` {{non-standard_inline}} {{deprecated_inline}}
   - : Resets the value to `1` and prevents the element from being zoomed if the user applies non-pinch-based zooming (for example, using the <kbd>Ctrl</kbd> - <kbd>-</kbd> or <kbd>Ctrl</kbd> + <kbd>+</kbd> keyboard shortcuts).
 
