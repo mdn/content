@@ -120,7 +120,7 @@ The `overscroll-behavior` property is specified as one or two keywords chosen fr
 Two keywords specifies the `overscroll-behavior` value on the `x` and `y` axes respectively. If only one value is specified, both x and y are assumed to have the same value.
 
 - `auto`
-  - : Allows the default behavior at a scroll boundary. Scrolling may continue in an another scroll container.
+  - : Allows the default behavior at a scroll boundary. Scrolling may continue in another scroll container.
 - `chain`
   - : Allows scrolling to continue outside the scroll container, but prevents overscroll "bounce" effects.
 - `contain`
@@ -150,9 +150,9 @@ A {{Glossary("Scroll_container", "scroll container")}} that has no scrollable ov
 
 ### `overscroll-behavior` on `<dialog>` elements
 
-In this example there are 4 buttons that launch a dialog, each dialog has a different `overscroll-behavior` value. There is also a `<div>` that forces the content to be larger that the container so that the scroll affect of the page can be seen.
+In this example there are 4 buttons that launch a dialog, each dialog has a different `overscroll-behavior` value. There is also a `<div>` that forces the content to be larger than the container so that the scroll effect of the page can be seen.
 
-### HTML
+#### HTML
 
 ```html
 <div class="buttons">
@@ -196,7 +196,7 @@ In this example there are 4 buttons that launch a dialog, each dialog has a diff
 </dialog>
 ```
 
-### CSS
+#### CSS
 
 ```css hidden
 ::backdrop {
@@ -236,7 +236,7 @@ In this example there are 4 buttons that launch a dialog, each dialog has a diff
 }
 ```
 
-### Result
+#### Result
 
 Click one of the buttons to see that behavior applied to the dialog that appears, when you scroll within the dialog:
 

@@ -33,7 +33,7 @@ overscroll-behavior-y: unset;
 This property is specified as one of the following keyword values:
 
 - `auto`
-  - : Allows the default behavior at a scroll boundary. Scrolling may continue in an another scroll container.
+  - : Allows the default behavior at a scroll boundary. Scrolling may continue in another scroll container.
 - `chain`
   - : Allows scrolling to continue outside the scroll container, but prevents overscroll "bounce" effects.
 - `contain`
@@ -67,12 +67,12 @@ Both of these areas scroll; normally if you scrolled the chat window until you h
 }
 ```
 
-We also wanted to get rid of the standard overscroll effects when the contacts are scrolled to the top or bottom (e.g., Chrome on Android refreshes the page when you scroll past the top boundary). This can be prevented by setting `overscroll-behavior: none` on the {{htmlelement("html")}} element:
+We also wanted to get rid of the standard overscroll effects when the contacts are scrolled to the top or bottom (e.g., Chrome on Android refreshes the page when you scroll past the top boundary). This can be prevented by setting `overscroll-behavior-y: none` on the {{htmlelement("html")}} element:
 
 ```css
 html {
   margin: 0;
-  overscroll-behavior: none;
+  overscroll-behavior-y: none;
 }
 ```
 

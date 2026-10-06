@@ -852,6 +852,35 @@ Notifications have the [`requireInteraction`](/en-US/docs/Web/API/Notification/r
 - `dom.webnotifications.requireinteraction.enabled`
   - : Set to `true` to enable.
 
+### `navigate` option for notifications
+
+The `navigate` option of the {{domxref("Notification.Notification", "Notification()")}} constructor and {{domxref("ServiceWorkerRegistration.showNotification()")}} takes a URL to open when the user clicks the notification, so you no longer need a click handler just to open a page. The new read-only {{domxref("Notification.navigate")}} property returns that URL. When the option is set, the {{domxref("Notification.click_event", "click")}} and {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} events no longer fire for that notification. Each entry in the {{domxref("Notification.actions", "actions")}} option can set its own `navigate` URL, and an action button without one still fires `notificationclick` rather than using the notification's URL.
+([Firefox bug 2066184](https://bugzil.la/2066184)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 157           | No                  |
+| Developer Edition | 157           | No                  |
+| Beta              | 157           | No                  |
+| Release           | 157           | No                  |
+
+- `dom.webnotifications.navigate.enabled`
+  - : Set to `true` to enable.
+
+### Sanitizing HTML while parsing
+
+Methods that sanitize HTML with the [HTML Sanitizer API](/en-US/docs/Web/API/HTML_Sanitizer_API), such as {{domxref("Element.setHTML()")}}, now drop unwanted elements and attributes as the markup is parsed, instead of parsing all of it first and then cleaning up afterwards. The result is the same, except that neighboring text now lands in a single text node instead of being split across several. ([Firefox bug 2062652](https://bugzil.la/2062652)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 157           | No                  |
+| Developer Edition | 157           | No                  |
+| Beta              | 157           | No                  |
+| Release           | 157           | No                  |
+
+- `dom.security.sanitizer.while-parsing`
+  - : Set to `true` to enable.
+
 ### Container Timing API
 
 The Container Timing API reports when the contents of a container element are painted, letting you measure the render time of a region of the page rather than of the whole viewport.
@@ -865,6 +894,37 @@ The Container Timing API reports when the contents of a container element are pa
 | Release           | 156             | No                  |
 
 - `dom.enable_container_timing`
+  - : Set to `true` to enable.
+
+### Key encapsulation in Web Crypto
+
+The [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) supports ML-KEM, an algorithm that lets two parties agree on a shared secret key, and that is designed to stay secure against attacks by quantum computers. One party passes the other party's public key to the {{domxref("SubtleCrypto")}} methods `encapsulateKey()` or `encapsulateBits()`, which return the shared key along with a ciphertext to send to the other party. The other party passes that ciphertext and their own private key to `decapsulateKey()` or `decapsulateBits()` to arrive at the same shared key.
+
+The `ML-KEM-512`, `ML-KEM-768`, and `ML-KEM-1024` algorithm names are supported, along with the matching {{domxref("CryptoKey.usages", "usages")}} and the new `raw-public` and `raw-seed` key formats for {{domxref("SubtleCrypto.importKey()")}} and {{domxref("SubtleCrypto.exportKey()")}}. ([Firefox bug 1943614](https://bugzil.la/1943614)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 157           | Yes                 |
+| Developer Edition | 157           | No                  |
+| Beta              | 157           | No                  |
+| Release           | 157           | No                  |
+
+- `dom.webcrypto.encapsulation.enabled`
+  - : Set to `true` to enable.
+
+### Web custom formats in the Async Clipboard API
+
+The [Clipboard API](/en-US/docs/Web/API/Clipboard_API) supports custom clipboard formats, allowing web apps to write and read custom MIME types prefixed with `"web "` using the {{domxref("Clipboard.write()")}} and {{domxref("Clipboard.read()")}} methods, respectively.
+This is supported on desktop from Firefox 154 and on Android from Firefox 156 ([Firefox bug 1956304](https://bugzil.la/1956304) and [Firefox bug 2048545](https://bugzil.la/2048545)).
+
+| Release channel   | Version changed | Enabled by default? |
+| ----------------- | --------------- | ------------------- |
+| Nightly           | 154             | Yes (desktop only)  |
+| Developer Edition | 154             | No                  |
+| Beta              | 154             | No                  |
+| Release           | 154             | No                  |
+
+- `dom.clipboard.customFormatSupport.enabled`
   - : Set to `true` to enable.
 
 ## Security and privacy

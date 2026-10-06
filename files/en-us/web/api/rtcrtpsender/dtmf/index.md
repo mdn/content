@@ -40,7 +40,7 @@ async function dial(tones) {
   const dtmfSender = sender.dtmf;
 
   dtmfSender.addEventListener("tonechange", (event) => {
-    if (event.tone == "") {
+    if (event.tone === "") {
       console.log("Finished sending tones.");
     } else {
       console.log(`Sent tone: ${event.tone}`);
@@ -48,7 +48,7 @@ async function dial(tones) {
   });
 
   pc.addEventListener("connectionstatechange", () => {
-    if (pc.connectionState == "connected" && dtmfSender.canInsertDTMF) {
+    if (pc.connectionState === "connected" && dtmfSender.canInsertDTMF) {
       dtmfSender.insertDTMF(tones);
     }
   });

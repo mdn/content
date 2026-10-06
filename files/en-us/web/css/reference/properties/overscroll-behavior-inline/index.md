@@ -33,7 +33,7 @@ overscroll-behavior-inline: unset;
 This property is specified as one of the following keyword values:
 
 - `auto`
-  - : Allows the default behavior at a scroll boundary. Scrolling may continue in an another scroll container.
+  - : Allows the default behavior at a scroll boundary. Scrolling may continue in another scroll container.
 - `chain`
   - : Allows scrolling to continue outside the scroll container, but prevents overscroll "bounce" effects.
 - `contain`
