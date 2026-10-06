@@ -188,7 +188,7 @@ describe("compressing images", () => {
     );
   });
 
-  it("applies EXIF orientation before removing metadata", async (t) => {
+  it("keeps EXIF orientation while removing other metadata", async (t) => {
     const original = await createImage()
       .resize(64, 32)
       .withMetadata({ orientation: 6 })
@@ -200,9 +200,10 @@ describe("compressing images", () => {
     const filePath = await createImageFile(t, "jpg", original);
     await checkFile(filePath, { saveCompression: true });
     const metadata = await sharp(filePath).metadata();
-    assert.equal(metadata.width, 32);
-    assert.equal(metadata.height, 64);
-    assert.equal(metadata.orientation, undefined);
+    assert.equal(metadata.width, 64);
+    assert.equal(metadata.height, 32);
+    assert.equal(metadata.orientation, 6);
+    assert.ok(metadata.exif.length < 256);
   });
 
   it("saves oversized images that compress below the size limit", async (t) => {

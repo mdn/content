@@ -230,7 +230,12 @@ async function checkCompression(filePath, options) {
       optimize(input.toString(), { path: filePath }).data,
     );
   } else {
-    const image = sharp(input, { animated: true }).autoOrient();
+    const image = sharp(input, { animated: true });
+    // Metadata is stripped, so write the orientation back to keep it exact.
+    const { orientation } = await image.metadata();
+    if (orientation && orientation !== 1) {
+      image.withExif({ IFD0: { Orientation: String(orientation) } });
+    }
     if (extension === ".jpg" || extension === ".jpeg") {
       image.jpeg({ quality: 75, mozjpeg: true });
     } else if (extension === ".png") {
