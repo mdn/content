@@ -186,8 +186,7 @@ The `result` object in the response contains the following fields:
         - `shadowRoot` {{optional_inline}}
           - : An object that describes the [shadow root](/en-US/docs/Web/API/Element/shadowRoot) attached to the node.
             The object has the same fields as each node object in `nodes`, including `sharedId`, `type`, and `value`.
-
-            The value of this field is `null` when the returned node has no shadow root or when the shadow root is excluded using the `includeShadowTree` setting.
+            The value of this field is `null` when the returned node has no shadow root.
 
 ### Errors
 

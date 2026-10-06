@@ -211,8 +211,8 @@ The following fields are available in the `result` object in the response, depen
           - `nodeType`
             - : A non-negative integer that represents the type of node, such as `1` for an element or `3` for a text node.
           - `nodeValue` {{optional_inline}}
-            - : A string that contains the value of the node, such as the text of a text node or the data of a comment node.
-              This field is absent for element and document nodes.
+            - : A string that contains the [value of the node](/en-US/docs/Web/API/Node/nodeValue), such as the text of a text node or the data of a comment node.
+              This field is absent for nodes with a `nodeValue` of `null`, such as element, document, and shadow root nodes.
           - `shadowRoot` {{optional_inline}}
             - : An object that describes the shadow root attached to the node, with fields such as `sharedId`, `type`, and `value`.
               This field is `null` when the returned element has no shadow root.
