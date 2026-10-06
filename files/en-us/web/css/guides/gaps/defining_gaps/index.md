@@ -3,7 +3,6 @@ title: Defining CSS gaps
 short-title: Defining gaps
 slug: Web/CSS/Guides/Gaps/Defining_gaps
 page-type: guide
-spec-urls: https://drafts.csswg.org/css-gaps/
 sidebar: cssref
 ---
 
@@ -196,7 +195,7 @@ In this example, we create a multi-col container using the `columns` shorthand p
 .container {
   columns: 7 1em / 2.35em;
   width: 450px;
-  rule: 1px solid #ccc;
+  rule: 1px solid #cccccc;
 }
 @supports not (column-height: 1em) {
   body::before {
@@ -300,7 +299,7 @@ The gutters may appear larger than the specified gap size because the letters do
   font-weight: bold;
 }
 i {
-  background-color: #ccc;
+  background-color: #cccccc;
   text-align: center;
 }
 label {
@@ -320,8 +319,8 @@ In this example, the size of the container is set. Select different gap sizes as
 .container {
   width: 300px;
   height: 600px;
-  background-color: #eee;
-  rule: 1px dotted #666;
+  background-color: #eeeeee;
+  rule: 1px dotted #666666;
 }
 ```
 
@@ -374,8 +373,8 @@ If the container is auto‑sized, percentage gaps could create a circular depend
 
 ```css live-sample___percent_gap2
 .container {
-  background-color: #eee;
-  rule: 1px dotted #666;
+  background-color: #eeeeee;
+  rule: 1px dotted #666666;
   height: auto;
   width: auto;
 }

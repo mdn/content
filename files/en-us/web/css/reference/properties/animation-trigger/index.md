@@ -642,4 +642,4 @@ Try scrolling the content up and down, and note how the animation activates and 
 - [Using CSS scroll-triggered animations](/en-US/docs/Web/CSS/Guides/Animation_triggers/Using_scroll-triggered_animations)
 - [CSS animation triggers](/en-US/docs/Web/CSS/Guides/Animation_triggers) module
 - [CSS animations](/en-US/docs/Web/CSS/Guides/Animations) module
-- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/scroll-driven_animations) module
+- [CSS scroll-driven animations](/en-US/docs/Web/CSS/Guides/Scroll-driven_animations) module

@@ -17,7 +17,7 @@ Observables have several methods that return a new observable, and these methods
 
 There are three main ways to obtain observables:
 
-- The {{domxref("EventTarget.when()")}} method returns an {{domxref("Observable")}} representing a stream of events fired on the `EventTarget`. You may also have libraries that return observables.
+- The {{domxref("EventTarget.when()")}} method returns an `Observable` representing a stream of events fired on the `EventTarget`. You may also have libraries that return observables.
 - You can create your own custom observables using the {{domxref("Observable.Observable", "Observable()")}} constructor.
 - You can convert objects such as [promises](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) and [iterables](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) into observables using the static {{domxref("Observable.from_static", "Observable.from()")}} method.
 
