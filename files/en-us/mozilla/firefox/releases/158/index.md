@@ -86,3 +86,8 @@ Firefox 158 is the current [Beta version of Firefox](https://www.firefox.com/en-
 These features are shipping in Firefox 158 but are disabled by default.
 To experiment with them, search for the appropriate preference on the `about:config` page and set it to `true`.
 You can find more such features on the [Experimental features](/en-US/docs/Mozilla/Firefox/Experimental_features) page.
+
+- **`corner-shape` properties**: `layout.css.corner-shape.enabled`
+
+  The {{cssxref("corner-shape")}} shorthand property, and the longhand properties, now support the {{cssxref("corner-shape-value")}} values and {{cssxref("superellipse")}} function.
+([Firefox bug 2070927](https://bugzil.la/2070927)).

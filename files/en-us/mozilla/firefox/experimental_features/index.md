@@ -478,6 +478,21 @@ The `named-feature()` function in the {{cssxref("@supports")}} at-rule lets you 
 - `layout.css.anchor-positioning.follows-transforms.enabled`
   - : Set to `true` to enable.
 
+### `corner-shape` properties
+
+The {{cssxref("corner-shape")}} shorthand property, and the longhand properties, now support the {{cssxref("corner-shape-value")}} values and {{cssxref("superellipse")}} function.
+([Firefox bug 2070927](https://bugzil.la/2070927)).
+
+| Release channel   | Version added | Enabled by default? |
+| ----------------- | ------------- | ------------------- |
+| Nightly           | 158           | Yes                 |
+| Developer Edition | 157           | No                  |
+| Beta              | 157           | No                  |
+| Release           | 157           | No                  |
+
+- `layout.css.corner-shape.enabled`
+  - : Set to `true` to enable.
+
 ## SVG
 
 **No experimental features in this release cycle.**
