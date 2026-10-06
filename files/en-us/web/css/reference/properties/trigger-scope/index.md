@@ -262,7 +262,7 @@ p {
 }
 
 section {
-  background: #eee;
+  background: #eeeeee;
   padding: 10px 20px;
   margin-top: 20px;
 }
