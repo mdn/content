@@ -32,7 +32,7 @@ Accept-Ranges: none
 
 - `<range-unit>`
   - : The range unit that the server supports, although `bytes` is the only range unit formally defined by {{RFC("7233")}}.
-    Range units are registered in the [HTTP Range Unit Registry](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#range-units).
+    Range units are registered in the [HTTP Range Unit Registry](https://www.iana.org/assignments/http-parameters#range-units).
 - `none`
   - : No range unit is supported.
     This is equivalent to omitting the header and is, therefore, rarely used.
@@ -57,4 +57,4 @@ Accept-Ranges: bytes
 - [HTTP range requests](/en-US/docs/Web/HTTP/Guides/Range_requests) guide
 - [HTTP conditional requests](/en-US/docs/Web/HTTP/Guides/Conditional_requests) guide
 - {{HTTPHeader("Range")}}, {{HTTPHeader("If-Range")}} request headers
-- [IANA HTTP Range Unit Registry](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#range-units)
+- [IANA HTTP Range Unit Registry](https://www.iana.org/assignments/http-parameters#range-units)

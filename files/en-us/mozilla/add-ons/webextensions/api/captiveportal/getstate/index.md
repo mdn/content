@@ -1,5 +1,5 @@
 ---
-title: getState
+title: captivePortal.getState()
 slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/getState
 page-type: webextension-api-function
 browser-compat: webextensions.api.captivePortal.getState

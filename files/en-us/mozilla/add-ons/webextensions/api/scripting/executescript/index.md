@@ -37,6 +37,8 @@ let results = await browser.scripting.executeScript(
       - : `array` of `string`. An array of path of the JS files to inject, relative to the extension's root directory. Exactly one of `files` and `func` must be specified.
     - `func` {{optional_inline}}
       - : `function`. A JavaScript function to inject. This function is serialized and then deserialized for injection. This means that any bound parameters and execution context are lost. Exactly one of `files` and `func` must be specified.
+
+        The function is serialized from its source text, which must be a valid function expression. Use a function declaration, function expression, or arrow function. A function defined using [method syntax](/en-US/docs/Web/JavaScript/Reference/Functions/Method_definitions), such as `method() {}` in an object literal or class, doesn't serialize to a valid function expression, so it fails to run. Firefox returns a `SyntaxError` in the `error` property of the `InjectionResult`, while Chrome only reports the error in the target tab's console.
     - `injectImmediately` {{optional_inline}}
       - : `boolean`. Whether the injection into the target is triggered as soon as possible, but not necessarily prior to page load.
     - `target`
@@ -48,7 +50,7 @@ let results = await browser.scripting.executeScript(
 
 A {{JSxRef("Promise")}} that fulfills with an array of `InjectionResult` objects, which represent the result of the injected script in every injected frame.
 
-The promise is rejected if the injection fails, such as when the injection target is invalid. When script execution has started, its result is included in the result, whether successful (as `result`) or unsuccessfully (as `error`).
+The promise is rejected if the injection fails, such as when the injection target is invalid. After injection has started, the promise fulfills even if the script fails to parse or throws an error. In that case, the `InjectionResult` for the frame contains the error in its `error` property rather than a `result`. To handle all failures, catch the rejected promise and check the `error` property of each result.
 
 Each `InjectionResult` object has these properties:
 
@@ -76,12 +78,12 @@ The script result must be a [structured cloneable](/en-US/docs/Web/API/Web_Worke
 
 ## Examples
 
-This example executes a one-line code snippet in the active tab:
+This example executes a one-line code snippet in the active tab. It catches the promise rejection that occurs if the injection fails, and checks each result for an error from running the script:
 
 ```js
 browser.action.onClicked.addListener(async (tab) => {
   try {
-    await browser.scripting.executeScript({
+    const results = await browser.scripting.executeScript({
       target: {
         tabId: tab.id,
       },
@@ -89,6 +91,11 @@ browser.action.onClicked.addListener(async (tab) => {
         document.body.style.border = "5px solid green";
       },
     });
+    for (const { frameId, error } of results) {
+      if (error) {
+        console.error(`script failed in frame ${frameId}: ${error}`);
+      }
+    }
   } catch (err) {
     console.error(`failed to execute script: ${err}`);
   }

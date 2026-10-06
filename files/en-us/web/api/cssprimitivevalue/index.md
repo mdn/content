@@ -76,7 +76,7 @@ _Inherits properties from its parent, {{DOMxRef("CSSValue")}}_.
 - {{DOMxRef("CSSPrimitiveValue.getStringValue()")}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : This method is used to get the string value. If the CSS value doesn't contain a string value, a {{DOMxRef("DOMException")}} is raised.
 - {{DOMxRef("CSSPrimitiveValue.setFloatValue()")}} {{Deprecated_Inline}} {{non-standard_inline}}
-  - : A method to set the float value with a specified unit. If the property attached with this value can not accept the specified unit or the float value, the value will be unchanged and a {{DOMxRef("DOMException")}} will be raised.
+  - : A method to set the float value with a specified unit. If the property attached with this value cannot accept the specified unit or the float value, the value will be unchanged and a {{DOMxRef("DOMException")}} will be raised.
 - {{DOMxRef("CSSPrimitiveValue.setStringValue()")}} {{Deprecated_Inline}} {{non-standard_inline}}
   - : A method to set the string value with the specified unit. If the property attached to this value can't accept the specified unit or the string value, the value will be unchanged and a {{DOMxRef("DOMException")}} will be raised.
 

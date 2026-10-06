@@ -9,6 +9,8 @@ sidebar: cssref
 
 The **`font-variant-numeric`** [CSS](/en-US/docs/Web/CSS) property controls the usage of alternate glyphs for numbers, fractions, and ordinal markers.
 
+<!-- Source Sans Pro doesn't support stacked-fractions -->
+
 {{InteractiveExample("CSS Demo: font-variant-numeric", "taller")}}
 
 ```css interactive-example-choice
@@ -42,8 +44,6 @@ font-variant-numeric: proportional-nums;
 ```css interactive-example-choice
 font-variant-numeric: diagonal-fractions;
 ```
-
-<!-- Source Sans Pro doesn't support stacked-fractions -->
 
 ```html interactive-example
 <section id="default-example">

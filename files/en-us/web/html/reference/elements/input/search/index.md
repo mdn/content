@@ -497,7 +497,7 @@ button {
   flex: 1;
   height: 30px;
   padding: 0 1em;
-  background: #333;
+  background: #333333;
   border: 0;
   color: white;
 }

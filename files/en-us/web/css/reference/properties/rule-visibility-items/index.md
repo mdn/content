@@ -67,7 +67,7 @@ cite {
 ## Syntax
 
 ```css
-/* Keywords */
+/* Keyword values */
 rule-visibility-items: all;
 rule-visibility-items: around;
 rule-visibility-items: between;
@@ -175,7 +175,7 @@ li {
 
 #### Result
 
-{{EmbedLiveSample("Basic", "", "230")}}
+{{EmbedLiveSample("Basic", "", "380")}}
 
 ## Specifications
 

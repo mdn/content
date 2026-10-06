@@ -99,7 +99,7 @@ Threat modeling tools can make it easier to create diagrams, visualize data flow
 
 It is important to note that you do not need expensive and powerful tools in order to create an effective threat model. What is important is the methodical approach and discussion around your system. Overly complex diagrams can actually be detrimental if they don't promote and support that discussion.
 
-- [OWASP Threat Dragon](https://owasp.org/www-project-threat-dragon/)
+- [OWASP Threat Dragon](https://owasp.org/projects/threat-dragon)
 - [Microsoft Threat Modeling Tool](https://learn.microsoft.com/en-us/azure/security/develop/threat-modeling-tool)
 
 ## See also

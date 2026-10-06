@@ -8,7 +8,7 @@ browser-compat: api.WebTransportDatagramsWritable.sendGroup
 
 {{APIRef("WebTransport API")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
-The **`sendGroup`** property of the {{domxref("WebTransportDatagramsWritable")}} interface gets or sets the {{domxref("WebTransportSendGroup")}} that this `WebTransportDatagramsWritable` is grouped under for the purposes of {{domxref("WebTransportDatagramsWritable.sendOrder", "sendOrder")}} prioritization.
+The **`sendGroup`** property of the {{domxref("WebTransportDatagramsWritable")}} interface represents the {{domxref("WebTransportSendGroup")}} that this `WebTransportDatagramsWritable` is grouped under for the purposes of {{domxref("WebTransportDatagramsWritable.sendOrder", "sendOrder")}} prioritization.
 
 Within a group, bytes queued for sending on streams and datagrams with a higher `sendOrder` are sent before any bytes from lower-priority ones.
 Different groups are expected to be treated as equals for the purposes of bandwidth allocation — though the precise way bandwidth is divided between groups is implementation-defined.
@@ -16,6 +16,12 @@ Different groups are expected to be treated as equals for the purposes of bandwi
 ## Value
 
 A `WebTransportSendGroup` object, or `null` to specify the default send group.
+The default value is `null`.
+
+### Exceptions
+
+- `InvalidStateError` {{domxref("DOMException")}}
+  - : Thrown if set to a `WebTransportSendGroup` that is associated with a different `WebTransport` object than this stream.
 
 ## Examples
 
@@ -49,5 +55,5 @@ writer.write(data).catch(() => {});
 
 ## See also
 
-- [Using WebTransport](https://developer.chrome.com/docs/capabilities/web-apis/webtransport)
 - {{domxref("Streams API", "Streams API", "", "nocode")}}
+- [Using WebTransport](https://developer.chrome.com/docs/capabilities/web-apis/webtransport)

@@ -55,7 +55,7 @@ When serializing the value for shorthand properties, its constituent longhand pr
 div {
   position: absolute; /* keyword */
   rotate: 1rad; /* <angle> */
-  color: hsl(240 100% 50%); /* <color> */
+  color: hsl(240 50% 50%); /* <color> */
   background-color: hsl(120 50% 50% / 0.3); /* <color> with alpha */
   border-color: lab(10 -120 -120); /* <color> in non-sRGB space */
   margin: 2em; /* relative <length> */
@@ -130,7 +130,7 @@ The following examples demonstrate how different color formats are serialized wh
 }
 
 .hsl {
-  background-color: hsl(240 100% 50%);
+  background-color: hsl(240 50% 50%);
 }
 
 .lab {

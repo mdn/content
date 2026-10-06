@@ -25,7 +25,7 @@ When a browser requests a resource from a (third party) server, that [cross-orig
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width" />
     <link rel="dns-prefetch" href="https://fonts.googleapis.com/" />
     <!-- and all other head elements -->
   </head>
