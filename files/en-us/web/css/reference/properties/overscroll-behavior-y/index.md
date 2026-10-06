@@ -28,18 +28,16 @@ overscroll-behavior-y: revert-layer;
 overscroll-behavior-y: unset;
 ```
 
-The `overscroll-behavior-y` property is specified as a keyword chosen from the list of values below.
-
 ### Values
 
 This property is specified as one of the following keyword values:
 
 - `auto`
   - : Allows the default behavior at a scroll boundary. Scrolling may continue in an another scroll container.
-- `contain`
-  - : Prevents scrolling from continuing outside the scroll container. "Bounce" effects may still occur.
 - `chain`
   - : Allows scrolling to continue outside the scroll container, but prevents overscroll "bounce" effects.
+- `contain`
+  - : Prevents scrolling from continuing outside the scroll container. "Bounce" effects may still occur.
 - `none`
   - : Prevents scrolling from continuing outside the scroll container and also prevents overscroll "bounce" effects.
 
