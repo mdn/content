@@ -91,6 +91,28 @@ To group options under a heading, use an {{HTMLElement("optgroup")}}; an {{HTMLE
 
 ### Selecting multiple options
 
+A `<select>` element with the [`multiple`](/en-US/docs/Web/HTML/Reference/Attributes/multiple) attribute lets the user choose zero or more options. How the control is rendered depends on the [`size`](#size) attribute:
+
+- If `size` is greater than `1` (or `multiple` is set and `size` is omitted, which defaults to `4`), browsers show a scrolling list box.
+- If `size` is `1`, supporting browsers show a drop-down that still lets the user select more than one option. This is the opt-in for a multi-select drop-down. Browsers that don't support this rendering yet may show a single-line list box instead.
+
+Whichever rendering is used, make sure to inform users that more than one option can be selected.
+
+The following example uses `<select multiple size="1">` to request a drop-down that allows multiple selection:
+
+```html
+<label for="flavors">Choose one or more ice cream flavors:</label>
+<select id="flavors" name="flavors" multiple size="1">
+  <option value="chocolate">Chocolate</option>
+  <option value="strawberry">Strawberry</option>
+  <option value="vanilla">Vanilla</option>
+</select>
+```
+
+{{EmbedLiveSample("Selecting_multiple_options", "", "100")}}
+
+#### Selecting options in a list box
+
 On a desktop computer, there are a number of ways to select multiple options in a `<select>` element with a `multiple` attribute and a `size` attribute greater than `1`.
 
 Mouse users can hold the <kbd>Ctrl</kbd> (<kbd>Command</kbd> on macOS) or <kbd>Shift</kbd> key (depending on what makes sense for your operating system) and then click multiple options to select/deselect them.
