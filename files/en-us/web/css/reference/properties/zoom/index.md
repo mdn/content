@@ -78,7 +78,7 @@ zoom: unset;
 This property is specified as one of the following values:
 
 - {{cssxref("&lt;percentage&gt;")}}
-  - : A positive `<percentage>` value specifies a percentage zoom factor, with `100%` being equivalent to original size. Values larger than `100%` zoom in, while values smaller than `100%` zoom out. `0%` behaves as `100%`.
+  - : A positive `<percentage>` value specifies a percentage zoom factor, with `100%` being equivalent to original size. Values larger than `100%` zoom in, while values smaller than `100%` zoom out. Setting `0%` behaves as `100%`.
 - {{cssxref("&lt;number&gt;")}}
   - : A positive `<number>` value specifies a numeric zoom factor, with `1` being equivalent to original size. Values larger than `1` zoom in, while values smaller than `1` zoom out. `0` behaves as `1`.
 - `normal` {{non-standard_inline}}
