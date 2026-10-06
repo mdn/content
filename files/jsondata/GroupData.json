@@ -1113,7 +1113,6 @@
         "MediaStreamTrackEvent",
         "MediaTrackConstraints",
         "MediaTrackSettings",
-        "MediaTrackSupportedConstraints",
         "OverconstrainedError"
       ],
       "methods": [
@@ -1188,6 +1187,17 @@
       "interfaces": ["NetworkInformation"],
       "methods": [],
       "properties": ["Navigator.connection", "WorkerNavigator.connection"],
+      "events": []
+    },
+    "Observable API": {
+      "overview": ["Observable API"],
+      "guides": [
+        "/docs/Web/API/Observable_API/Using_observables",
+        "/docs/Web/API/Observable_API/Creating_observables"
+      ],
+      "interfaces": ["Observable", "Subscriber"],
+      "methods": ["EventTarget.when()"],
+      "properties": [],
       "events": []
     },
     "Page Visibility API": {
@@ -1508,7 +1518,10 @@
         "CropTarget",
         "RestrictionTarget"
       ],
-      "methods": ["MediaDevices.getDisplayMedia()"],
+      "methods": [
+        "MediaDevices.getDisplayMedia()",
+        "MediaDevices.getSupportedConstraints()"
+      ],
       "properties": [
         "MediaTrackConstraints.displaySurface",
         "MediaTrackConstraints.logicalSurface",
@@ -1516,10 +1529,7 @@
         "MediaTrackSettings.cursor",
         "MediaTrackSettings.displaySurface",
         "MediaTrackSettings.logicalSurface",
-        "MediaTrackSettings.suppressLocalAudioPlayback",
-        "MediaTrackSupportedConstraints.displaySurface",
-        "MediaTrackSupportedConstraints.logicalSurface",
-        "MediaTrackSupportedConstraints.suppressLocalAudioPlayback"
+        "MediaTrackSettings.suppressLocalAudioPlayback"
       ],
       "events": []
     },

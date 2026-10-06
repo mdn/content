@@ -129,7 +129,7 @@ Note that properties which are objects (e.g., for overriding the prototype of bu
   - : Returns the number of pixels that the document has already been scrolled vertically.
 - {{domxref("Window.self")}} {{ReadOnlyInline}}
   - : Returns an object reference to the window object itself.
-- {{domxref("Window.sessionStorage")}}
+- {{domxref("Window.sessionStorage")}} {{ReadOnlyInline}}
   - : Returns a reference to the session storage object used to store data that may only be accessed by the origin that created it.
 - {{domxref("Window.sharedStorage")}} {{ReadOnlyInline}} {{SecureContext_Inline}} {{deprecated_inline}} {{non-standard_inline}}
   - : Returns the {{domxref("WindowSharedStorage")}} object for the current origin. This is the main entry point for writing data to shared storage using the [Shared Storage API](/en-US/docs/Web/API/Shared_Storage_API).
@@ -322,9 +322,9 @@ Listen to these events using [`addEventListener()`](/en-US/docs/Web/API/EventTar
 ### Focus events
 
 - {{domxref("Window/blur_event", "blur")}}
-  - : Fired when an element has lost focus.
+  - : Fired when the window has lost focus.
 - {{domxref("Window/focus_event", "focus")}}
-  - : Fired when an element has gained focus.
+  - : Fired when the window has gained focus.
 
 ### Gamepad events
 

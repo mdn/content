@@ -16,7 +16,7 @@ The **`SharedStorageWorkletGlobalScope`** interface of the {{domxref("Shared Sto
 
 ## Instance properties
 
-- {{domxref("SharedStorageWorkletGlobalScope.sharedStorage", "sharedStorage")}} {{deprecated_inline}} {{non-standard_inline}}
+- {{domxref("SharedStorageWorkletGlobalScope.sharedStorage", "sharedStorage")}} {{ReadOnlyInline}} {{deprecated_inline}} {{non-standard_inline}}
   - : Contains an instance of the {{domxref("WorkletSharedStorage")}} object, representing the shared storage for a particular origin as exposed in a worklet context.
 
 ## Instance methods

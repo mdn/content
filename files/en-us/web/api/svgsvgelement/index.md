@@ -27,17 +27,17 @@ _This interface also inherits properties from its parent, {{domxref("SVGGraphics
   - : An {{domxref("SVGAnimatedRect")}} corresponding to the {{SVGAttr("viewBox")}} attribute of the given {{SVGElement("svg")}} element.
 - {{domxref("SVGSVGElement.preserveAspectRatio")}} {{ReadOnlyInline}}
   - : An {{domxref("SVGAnimatedPreserveAspectRatio")}} corresponding to the {{SVGAttr("preserveAspectRatio")}} attribute of the given {{SVGElement("svg")}} element.
-- {{domxref("SVGSVGElement.pixelUnitToMillimeterX")}} {{Deprecated_Inline}}
+- {{domxref("SVGSVGElement.pixelUnitToMillimeterX")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : A float representing the size of the pixel unit (as defined by CSS2) along the x-axis of the viewport, which represents a unit somewhere in the range of 70dpi to 120dpi, and, on systems that support this, might actually match the characteristics of the target medium. On systems where it is impossible to know the size of a pixel, a suitable default pixel size is provided.
-- {{domxref("SVGSVGElement.pixelUnitToMillimeterY")}} {{Deprecated_Inline}}
+- {{domxref("SVGSVGElement.pixelUnitToMillimeterY")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : A float representing the size of a pixel unit along the y-axis of the viewport.
-- {{domxref("SVGSVGElement.screenPixelToMillimeterX")}} {{Deprecated_Inline}}
+- {{domxref("SVGSVGElement.screenPixelToMillimeterX")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : User interface (UI) events in DOM Level 2 indicate the screen positions at which the given UI event occurred. When the browser actually knows the physical size of a "screen unit", this float attribute will express that information; otherwise, user agents will provide a suitable default value (such as `.28mm`).
-- {{domxref("SVGSVGElement.screenPixelToMillimeterY")}} {{Deprecated_Inline}}
+- {{domxref("SVGSVGElement.screenPixelToMillimeterY")}} {{ReadOnlyInline}} {{Deprecated_Inline}}
   - : Corresponding size of a screen pixel along the y-axis of the viewport.
-- {{domxref("SVGSVGElement.useCurrentView")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- {{domxref("SVGSVGElement.useCurrentView")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : The initial view (i.e., before magnification and panning) of the current innermost SVG document fragment can be either the "standard" view, i.e., based on attributes on the {{SVGElement("svg")}} element such as {{SVGAttr("viewBox")}} or on a "custom" view (i.e., a hyperlink into a particular {{SVGElement("view")}} or other element). If the initial view is the "standard" view, then this attribute is `false`. If the initial view is a "custom" view, then this attribute is `true`.
-- {{domxref("SVGSVGElement.currentView")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
+- {{domxref("SVGSVGElement.currentView")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : An {{domxref("SVGViewSpec")}} defining the initial view (i.e., before magnification and panning) of the current innermost SVG document fragment. The meaning depends on the situation: If the initial view was a "standard" view, then:
     - the values for `viewBox`, `preserveAspectRatio`, and `zoomAndPan` within `currentView` will match the values for the corresponding DOM attributes that are on `SVGSVGElement` directly
     - the value for `transform` within `currentView` will be `null`

@@ -20,9 +20,9 @@ The **`VideoTrackGenerator`** interface of the [Insertable Streams for MediaStre
 
 - {{domxref("VideoTrackGenerator.muted")}} {{Experimental_Inline}}
   - : A Boolean property to temporarily halt or resume the generation of video frames in the output track.
-- {{domxref("VideoTrackGenerator.track")}} {{Experimental_Inline}}
+- {{domxref("VideoTrackGenerator.track")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The output {{domxref("MediaStreamTrack")}}.
-- {{domxref("VideoTrackGenerator.writable")}} {{Experimental_Inline}}
+- {{domxref("VideoTrackGenerator.writable")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : The input {{domxref("WritableStream")}}.
 
 ## Examples

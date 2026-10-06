@@ -3,10 +3,12 @@ title: "MathMLAnchorElement: target property"
 short-title: target
 slug: Web/API/MathMLAnchorElement/target
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.MathMLAnchorElement.target
 ---
 
-{{APIRef("MathML")}}
+{{APIRef("MathML")}}{{SeeCompatTable}}
 
 The **`target`** property of the {{domxref("MathMLAnchorElement")}} interface is a string that indicates where to display the linked resource.
 

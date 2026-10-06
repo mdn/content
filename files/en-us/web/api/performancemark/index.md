@@ -20,7 +20,7 @@ Entries of this type are typically created by calling {{domxref("Performance.mar
 
 ## Instance properties
 
-- {{domxref("PerformanceMark.detail")}}
+- {{domxref("PerformanceMark.detail")}} {{ReadOnlyInline}}
   - : Contains arbitrary metadata about the measure.
 
 This interface extends the following {{domxref("PerformanceEntry")}} properties by qualifying/constraining the properties as follows:

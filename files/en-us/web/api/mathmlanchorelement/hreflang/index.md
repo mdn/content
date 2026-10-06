@@ -3,10 +3,12 @@ title: "MathMLAnchorElement: hreflang property"
 short-title: hreflang
 slug: Web/API/MathMLAnchorElement/hreflang
 page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.MathMLAnchorElement.hreflang
 ---
 
-{{APIRef("MathML")}}
+{{APIRef("MathML")}}{{SeeCompatTable}}
 
 The **`hreflang`** property of the {{domxref("MathMLAnchorElement")}} interface is a string that is the language of the linked resource.
 
