@@ -249,7 +249,6 @@ async function checkCompression(filePath, options) {
   const formattedMax = formatSize(MAX_FILE_SIZE);
   const formattedAfter = formatSize(sizeAfter);
 
-  // this check should only be done if we want to save the compressed file
   if (sizeAfter > MAX_FILE_SIZE) {
     throw new Error(
       `${getRelativePath(
