@@ -44,7 +44,7 @@ The following shows registering an example worklet module. This should be in a s
 js file. Note that `registerPaint()` is called without a reference to
 `PaintWorkletGlobalScope`. The file itself is loaded
 through `CSS.paintWorklet.addModule()` (documented here on the parent class
-of PaintWorklet, at {{domxref('Worklet.addModule()')}}.
+of PaintWorklet, at {{domxref('Worklet.addModule()')}}).
 
 ```js
 /* checkboardWorklet.js */
