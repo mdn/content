@@ -71,7 +71,7 @@ registration.showNotification("You have a new email", {
 
 The actions will be presented to the user in the notification, for example as buttons they can press or options they can select.
 
-When the user clicks a persistent notification, the {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event is fired in the service worker's global scope. If the user selected an action, it is given as the {{domxref("NotificationEvent.action", "action")}} property of the event passed into the `notificationclick` handler, and the service worker can use it to decide what to do:
+When the user clicks a persistent notification, the {{domxref("ServiceWorkerGlobalScope.notificationclick_event", "notificationclick")}} event is fired in the service worker's global scope (unless its [`navigate` property is set](#providing_a_navigation_url)). If the user selected an action, it is given as the {{domxref("NotificationEvent.action", "action")}} property of the event passed into the `notificationclick` handler, and the service worker can use it to decide what to do:
 
 ```js
 self.addEventListener("notificationclick", (event) => {
@@ -117,6 +117,12 @@ To meet this use case you need to use persistent notifications, because web page
 However, if your notification is managed by a service worker, then when the user interacts with the notification, the browser will automatically resume your service worker and fire its `notificationclick` event.
 
 On mobile devices, the situation for non-persistent notifications is even more challenging, because a mobile browser might stop a page from running as soon as it is put in the background. For this reason, Chromium-based browsers don't support non-persistent notifications at all on mobile, and the `Notification()` constructor will throw an exception.
+
+### Providing a navigation URL
+
+When you create a notification, you can pass it a {{domxref("Notification.navigate", "navigate")}} option whose value is a URL. If you do this, then when the user clicks the notification, then the browser will not fire the `notificationclick` or `click` events, but will instead navigate to the given page. This enables websites to handle this common use case without needing to add an explicit event handler.
+
+You can also set `navigate` options on individual [`action`](/en-US/docs/Web/API/ServiceWorkerRegistration/showNotification#action) objects. When the user selects an action with a `navigate` property, then the browser will navigate to its navigation URL.
 
 ## Interfaces
 
