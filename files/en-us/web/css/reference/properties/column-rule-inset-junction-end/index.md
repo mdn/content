@@ -396,7 +396,7 @@ Change the size of the {{cssxref("row-rule-width")}} and the {{cssxref("row-gap"
 
 ### Basic usage
 
-This example demonstrates setting `column-rule-inset-junction-end` to inset the end edge of junction segments on flex containers.
+This example demonstrates setting `column-rule-inset-junction-end` to inset the end edge of column junction segments on flex containers.
 
 #### HTML
 

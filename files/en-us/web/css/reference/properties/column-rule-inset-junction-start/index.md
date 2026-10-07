@@ -394,9 +394,11 @@ Change the size of the {{cssxref("row-rule-width")}} and the {{cssxref("row-gap"
 
 ### Basic usage
 
-This example demonstrates setting `column-rule-inset-junction-start` to inset the start edge of junction segments on flex containers.
+This example demonstrates setting `column-rule-inset-junction-start` to inset the start edge of column junction segments on flex containers.
 
 #### HTML
+
+The markup includes two {{htmlelement("div")}} elements, each containing seven children. The only difference between the two containers is that the second one has an added `column` class.
 
 ```html
 <h1>Insetting junction column rule endpoints</h1>

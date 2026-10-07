@@ -433,9 +433,11 @@ Change the size of the {{cssxref("column-rule-width")}} and the {{cssxref("colum
 
 ### Basic usage
 
-This example demonstrates setting `row-rule-inset-junction-end` to inset the end edge of junction segments on flex containers.
+This example demonstrates setting `row-rule-inset-junction-end` to inset the end edge of row junction segments on flex containers.
 
 #### HTML
+
+The markup includes two {{htmlelement("div")}} elements, each containing seven children. The only difference between the two containers is that the second one has an added `column` class.
 
 ```html
 <h1>Insetting junction row rule endpoints</h1>

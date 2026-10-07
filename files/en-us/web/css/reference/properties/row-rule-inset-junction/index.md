@@ -141,7 +141,7 @@ All segment endpoints, including this property's `-cap` and `-column` equivalent
 
 ### Basic usage
 
-This example demonstrates setting `row-rule-inset-junction` to inset the edges of junction segments on flex containers.
+This example demonstrates setting `row-rule-inset-junction` to inset the edges of row junction segments on flex containers.
 
 #### HTML
 
