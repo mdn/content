@@ -256,7 +256,7 @@ We've hidden the rest of the CSS for brevity.
 Note the following:
 
 - As the first flex container doesn't have the `balance` keyword set in its `flex-wrap` value, its children are not given a balanced distribution and its `flex-line-count` value is ignored.
-- The second flex container's `flex-line-count: 3` declaration doesn't effect the layout of the flex children; as the flex items are by default distributed over four flex lines, any value of `4` or less has no effect.
+- The second flex container's `flex-line-count: 3` declaration doesn't affect the layout of the flex children; as the flex items are by default distributed over four flex lines, any value of `4` or less has no effect.
 
 ### Creating balanced columns
 
