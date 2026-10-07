@@ -222,5 +222,4 @@ These constraints apply to the `video` property of the object passed into {{domx
 - {{domxref("MediaDevices.getUserMedia()")}}
 - {{domxref("MediaDevices.getDisplayMedia()")}}
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
-- {{domxref("MediaTrackSupportedConstraints")}}
 - {{domxref("MediaStreamTrack.getSettings()")}}

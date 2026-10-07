@@ -8,9 +8,7 @@ browser-compat: api.Gamepad.index
 
 {{APIRef("Gamepad API")}}
 
-The **`Gamepad.index`** property of the {{domxref("Gamepad") }}
-interface returns an integer that is auto-incremented to be unique for each device
-currently connected to the system.
+The **`index`** read-only property of the {{domxref("Gamepad")}} interface returns an integer that is auto-incremented to be unique for each device currently connected to the system.
 
 This can be used to distinguish multiple controllers; a gamepad that is disconnected
 and reconnected will retain the same index.

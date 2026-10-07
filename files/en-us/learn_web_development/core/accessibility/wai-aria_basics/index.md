@@ -64,7 +64,7 @@ The problem here is that visually they work, but screen readers can't make any s
 [WAI-ARIA](https://w3c.github.io/aria/) (Web Accessibility Initiative - Accessible Rich Internet Applications) is a specification written by the W3C, defining a set of additional HTML attributes that can be applied to elements to provide additional semantics and improve accessibility wherever it is lacking. There are three main features defined in the spec:
 
 - [Roles](/en-US/docs/Web/Accessibility/ARIA/Reference/Roles)
-  - : These define what an element is or does. Many of these are so-called landmark roles, which largely duplicate the semantic value of structural elements, such as `role="navigation"` ({{htmlelement("nav")}}), `role="banner"` (document {{htmlelement("header")}}), `role="complementary"` ({{htmlelement("aside")}}) or , `role="search"` ({{htmlelement("search")}}). Some other roles describe different page structures that do not have elements with that match those roles, such as `role="tablist"`, and `role="tabpanel"`, which are commonly found in UIs.
+  - : These define what an element is or does. Many of these are so-called landmark roles, which largely duplicate the semantic value of structural elements, such as `role="navigation"` ({{htmlelement("nav")}}), `role="banner"` (document {{htmlelement("header")}}), `role="complementary"` ({{htmlelement("aside")}}), or `role="search"` ({{htmlelement("search")}}). Some other roles describe different page structures that do not have elements with that match those roles, such as `role="tablist"`, and `role="tabpanel"`, which are commonly found in UIs.
 - Properties
   - : These define properties of elements, which can be used to give them extra meaning or semantics. As an example, `aria-required="true"` specifies that a form input needs to be filled in order to be valid, whereas `aria-labelledby="label"` allows you to put an ID on an element, then reference it as being the label for anything else on the page, including multiple elements, which is not possible using `<label for="input">`. As an example, you could use `aria-labelledby` to specify that a key description contained in a {{htmlelement("div")}} is the label for multiple table cells, or you could use it as an alternative to image alt text — specify existing information on the page as an image's alt text, rather than having to repeat it inside the `alt` attribute. You can see an example of this at [Text alternatives](/en-US/docs/Learn_web_development/Core/Accessibility/HTML#text_alternatives).
 - States
@@ -139,12 +139,12 @@ WAI-ARIA adds the [`role` attribute](https://w3c.github.io/aria/#role_definition
       <li><a href="#">Contact</a></li>
     </ul>
 
-    <!-- A Search form is another common non-linear way to navigate through a website. -->
+    <!-- A search box is another common non-linear way to navigate through a website. -->
 
-    <form>
+    <div class="search-controls">
       <input type="search" name="q" placeholder="Search query" />
-      <input type="submit" value="Go!" />
-    </form>
+      <input type="button" value="Go!" />
+    </div>
   </nav>
 </header>
 
@@ -296,7 +296,8 @@ nav a {
   color: black;
 }
 
-nav form {
+nav .search-controls,
+nav search {
   flex: 1;
   display: flex;
   align-items: center;
@@ -312,7 +313,7 @@ input[type="search"] {
   flex: 3;
 }
 
-input[type="submit"] {
+input[type="button"] {
   flex: 1;
   margin-left: 1rem;
   background: #333333;
@@ -353,19 +354,19 @@ footer {
 If you try testing the example with a screen reader in a modern browser, you'll already get some useful information. For example, VoiceOver gives you the following:
 
 - On the `<header>` element — "banner, 2 items" (it contains a heading and the `<nav>`).
-- On the `<nav>` element — "navigation 2 items" (it contains a list and a form).
+- On the `<nav>` element — "navigation 2 items" (it contains a list and search controls).
 - On the `<main>` element — "main 2 items" (it contains an article and an aside).
 - On the `<aside>` element — "complementary 2 items" (it contains a heading and a list).
-- On the search form input — "Search query, insertion at beginning of text".
+- On the search input — "Search query, insertion at beginning of text".
 - On the `<footer>` element — "footer 1 item".
 
 If you go to VoiceOver's landmarks menu (accessed using VoiceOver key + U and then using the cursor keys to cycle through the menu choices), you'll see that most of the elements are nicely listed so they can be accessed quickly.
 
 ![Mac's VoiceOver menu for quick accessibility. Landmarks header and landmarks list including banner, navigation, main, and complementary.](landmarks-list.png)
 
-However, we could do better here. The search form is a really important landmark that people will want to find, but it is not listed in the landmarks menu or treated like a notable landmark beyond the actual input being called out as a search input (`<input type="search">`).
+However, we could do better here. The search area is a really important landmark that people will want to find, but it is not listed in the landmarks menu or treated like a notable landmark beyond the actual input being called out as a search input (`<input type="search">`).
 
-To mark the form as a landmark, you can either wrap it with the {{htmlelement("search")}} element or give it ARIA `role="search"`. As a general rule, use HTML semantics where possible and only use ARIA where there is no HTML equivalent.
+To mark the search area as a landmark, you can either wrap it with the {{htmlelement("search")}} element or give it ARIA `role="search"`. As a general rule, use HTML semantics where possible and only use ARIA where there is no HTML equivalent.
 
 ```html live-sample___aria-website-roles
 <header>
@@ -381,17 +382,15 @@ To mark the form as a landmark, you can either wrap it with the {{htmlelement("s
       <li><a href="#">Contact</a></li>
     </ul>
 
-    <!-- A Search form is another common non-linear way to navigate through a website. -->
+    <!-- A search box is another common non-linear way to navigate through a website. -->
 
     <search>
-      <form>
-        <input
-          type="search"
-          name="q"
-          placeholder="Search query"
-          aria-label="Search through site content" />
-        <input type="submit" value="Go!" />
-      </form>
+      <input
+        type="search"
+        name="q"
+        placeholder="Search query"
+        aria-label="Search through site content" />
+      <input type="button" value="Go!" />
     </search>
   </nav>
 </header>
@@ -549,7 +548,8 @@ nav a {
   color: black;
 }
 
-nav form {
+nav .search-controls,
+nav search {
   flex: 1;
   display: flex;
   align-items: center;
@@ -565,7 +565,7 @@ input[type="search"] {
   flex: 3;
 }
 
-input[type="submit"] {
+input[type="button"] {
   flex: 1;
   margin-left: 1rem;
   background: #333333;
@@ -613,9 +613,7 @@ Most importantly, we have used semantic HTML that gives meaning and roles to the
       …
     </ul>
     <search>
-      <form>
-        <!-- search form -->
-      </form>
+      <!-- search controls -->
     </search>
   </nav>
 </header>
@@ -640,7 +638,7 @@ We've also given you a bonus feature in this example — the {{htmlelement("inpu
 
 Now if we use VoiceOver to look at this example, we get some improvements:
 
-- The search form is called out as a separate item, both when browsing through the page, and in the Landmarks menu.
+- The search area is called out as a separate item, both when browsing through the page, and in the Landmarks menu.
 - The label text contained in the `aria-label` attribute is read out when the form input is highlighted.
 
 If you need to support older browsers such as IE8; it is worth including ARIA roles for that purpose. And if for some reason your site is built using just `<div>`s, you should definitely include the ARIA roles to provide these much needed semantics!

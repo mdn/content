@@ -11,9 +11,9 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`row-rule-inset-cap-start`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the start of row rule segment [cap endpoints](#understanding_cap_end).
+The **`row-rule-inset-cap-start`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the start of row rule segment [cap endpoints](/en-US/docs/Web/CSS/Reference/Properties/column-rule-inset-cap#understanding_cap_endpoints).
 
-{{InteractiveExample("CSS Demo: rule")}}
+{{InteractiveExample("CSS Demo: row-rule-inset-cap-start")}}
 
 <!-- negative example must come first -->
 
@@ -126,7 +126,7 @@ This property is specified as a single value from the following list:
 
 ## Description
 
-The `row-rule-inset-cap-start` property insets the start of [cap segment endpoints](#understanding_cap_end) at the container's start edge and at cap endpoints where no rule segments intersect. The default value is `0`, which is the same as `overlap-join`. Positive values reduce the segment size, while negative values increase it.
+The `row-rule-inset-cap-start` property insets the start of [cap segment endpoints](/en-US/docs/Web/CSS/Reference/Properties/column-rule-inset-cap#understanding_cap_endpoints) at the container's start edge and at cap endpoints where no rule segments intersect. The default value is `0`, which is the same as `overlap-join`. Positive values reduce the segment size, while negative values increase it.
 
 Row rules are painted within a row gap as one or more segments, with segments occurring between:
 
@@ -228,7 +228,6 @@ In the following demonstration, the leftmost segments of the row rules abutting 
 ```css hidden live-sample___caps live-sample___percents
 ul {
   display: grid;
-  margin: 0 20px;
   grid-template-columns: repeat(6, auto);
   list-style-type: none;
   gap: 20px;
@@ -302,7 +301,7 @@ inset.addEventListener("input", () => {
 ```js hidden live-sample___caps live-sample___percents
 visibility.addEventListener("change", () => {
   ul.style.ruleVisibilityItems = `${visibility.value}`;
-  if (visibility.value == "between") {
+  if (visibility.value === "between") {
     ul.style.rowRuleStyle = "repeat(2, solid), double";
   } else {
     ul.style.rowRuleStyle = "solid";
@@ -343,6 +342,8 @@ The slider only has an effect when the `rule-visibility-items` value is set to `
 This example demonstrates setting `row-rule-inset-cap-start` to inset the start edge of cap segments on flex containers.
 
 #### HTML
+
+The markup includes two {{htmlelement("div")}} elements, each containing seven children. The only difference between the two containers is that the second one has an added `column` class.
 
 ```html
 <h1>Insetting cap row rule endpoints</h1>

@@ -214,10 +214,6 @@ The recording steps using this tool are pretty simple:
 6. Press the _Stop_ button.
 7. Choose _File_ > _Export As..._ > _1080p_ from the main menu to save as hi definition.
 
-### Other resources
-
-- [How to Add Custom Callouts to Screencast Videos in ScreenFlow](https://photography.tutsplus.com/tutorials/how-to-add-custom-callouts-to-screencast-videos-in-screenflow--cms-27122)
-
 ### Workflow for creating videos
 
 The following sections describe the general steps you'd want to follow to create a video and add it to an MDN Web Docs article.

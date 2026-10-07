@@ -13,7 +13,7 @@ sidebar: cssref
 
 The **`row-rule-inset-cap-end`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the end of row rule segment [cap endpoints](#understanding_cap_end).
 
-{{InteractiveExample("CSS Demo: rule")}}
+{{InteractiveExample("CSS Demo: row-rule-inset-cap-end")}}
 
 ```css interactive-example-choice
 row-rule-inset-cap-end: -20px;
@@ -306,9 +306,9 @@ inset.addEventListener("input", () => {
 ```js hidden live-sample___caps
 visibility.addEventListener("change", () => {
   ul.style.ruleVisibilityItems = `${visibility.value}`;
-  if (visibility.value == "between") {
+  if (visibility.value === "between") {
     ul.style.rowRuleStyle = "repeat(2, solid), double";
-  } else if (visibility.value == "around") {
+  } else if (visibility.value === "around") {
     ul.style.rowRuleStyle = "repeat(3, solid), repeat(2, double)";
   } else {
     ul.style.rowRuleStyle = "solid";
@@ -319,9 +319,9 @@ visibility.addEventListener("change", () => {
 ```js hidden live-sample___percents
 visibility.addEventListener("change", () => {
   ul.style.ruleVisibilityItems = `${visibility.value}`;
-  if (visibility.value == "between") {
+  if (visibility.value === "between") {
     ul.style.rowRuleStyle = "repeat(2, inset), double, repeat(2, solid)";
-  } else if (visibility.value == "around") {
+  } else if (visibility.value === "around") {
     ul.style.rowRuleStyle = "repeat(3, inset), repeat(2, double)";
   } else {
     ul.style.rowRuleStyle = "solid";
@@ -364,6 +364,8 @@ Select `between` as the `rule-visibility-items` value. We now have a row rule en
 This example demonstrates setting `row-rule-inset-cap-end` to inset the end edge of cap segments on flex containers.
 
 #### HTML
+
+The markup includes two {{htmlelement("div")}} elements, each containing seven children. The only difference between the two containers is that the second one has an added `column` class.
 
 ```html
 <h1>Insetting cap row rule endpoints</h1>

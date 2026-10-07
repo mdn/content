@@ -91,13 +91,15 @@ The Screen Capture API adds properties to the following dictionaries defined by 
 - {{domxref("MediaTrackSettings.screenPixelRatio")}}
   - : A number representing the ratio of the physical size of a pixel on the captured display surface (displayed at its physical resolution) to the logical size of a CSS pixel on the capturing screen (displayed at its logical resolution). It cannot be used as a constraint or capability.
 
-### MediaTrackSupportedConstraints
+### MediaDevices.getSupportedConstraints()
 
-- {{domxref("MediaTrackSupportedConstraints.displaySurface")}}
+There are three additional properties in the object returned by {{domxref("MediaDevices.getSupportedConstraints()")}}.
+
+- `displaySurface`
   - : A boolean, which is `true` if the current environment supports the {{domxref("MediaTrackConstraints.displaySurface")}} constraint.
-- {{domxref("MediaTrackSupportedConstraints.logicalSurface")}}
+- `logicalSurface`
   - : A boolean, which is `true` if the current environment supports the constraint {{domxref("MediaTrackConstraints.logicalSurface")}}.
-- {{domxref("MediaTrackSupportedConstraints.suppressLocalAudioPlayback")}}
+- `suppressLocalAudioPlayback`
   - : A boolean, which is `true` if the current environment supports the constraint {{domxref("MediaTrackConstraints.suppressLocalAudioPlayback")}}.
 
 ## Security considerations

@@ -15,9 +15,9 @@ An `SVGTransformList` is indexable and can be accessed like an array using [brac
 
 ## Instance properties
 
-- {{domxref("SVGTransformList.numberOfItems", "numberOfItems")}}
+- {{domxref("SVGTransformList.numberOfItems", "numberOfItems")}} {{ReadOnlyInline}}
   - : The number of items in the list.
-- {{domxref("SVGTransformList.length", "length")}}
+- {{domxref("SVGTransformList.length", "length")}} {{ReadOnlyInline}}
   - : The number of items in the list.
 
 ## Instance methods

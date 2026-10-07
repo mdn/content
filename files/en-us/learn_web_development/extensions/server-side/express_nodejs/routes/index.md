@@ -304,10 +304,10 @@ The URLs that we're ultimately going to need for our pages are listed below, whe
 
 - `catalog/` — The home/index page.
 - `catalog/<objects>/` — The list of all books, bookinstances, genres, or authors (e.g., /`catalog/books/`, /`catalog/genres/`, etc.)
-- `catalog/<object>/<id>` — The detail page for a specific book, bookinstance, genre, or author with the given `_id` field value (e.g., `/catalog/book/584493c1f4887f06c0e67d37)`.
-- `catalog/<object>/create` — The form to create a new book, bookinstance, genre, or author (e.g., `/catalog/book/create)`.
-- `catalog/<object>/<id>/update` — The form to update a specific book, bookinstance, genre, or author with the given `_id` field value (e.g., `/catalog/book/584493c1f4887f06c0e67d37/update)`.
-- `catalog/<object>/<id>/delete` — The form to delete a specific book, bookinstance, genre, or author with the given `_id` field value (e.g., `/catalog/book/584493c1f4887f06c0e67d37/delete)`.
+- `catalog/<object>/<id>` — The detail page for a specific book, bookinstance, genre, or author with the given `_id` field value (e.g., `/catalog/book/584493c1f4887f06c0e67d37`).
+- `catalog/<object>/create` — The form to create a new book, bookinstance, genre, or author (e.g., `/catalog/book/create`).
+- `catalog/<object>/<id>/update` — The form to update a specific book, bookinstance, genre, or author with the given `_id` field value (e.g., `/catalog/book/584493c1f4887f06c0e67d37/update`).
+- `catalog/<object>/<id>/delete` — The form to delete a specific book, bookinstance, genre, or author with the given `_id` field value (e.g., `/catalog/book/584493c1f4887f06c0e67d37/delete`).
 
 The first home page and list pages don't encode any additional information. While the results returned will depend on the model type and the content in the database, the queries run to get the information will always be the same (similarly the code run for object creation will always be similar).
 

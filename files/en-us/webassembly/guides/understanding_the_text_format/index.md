@@ -2,6 +2,12 @@
 title: Understanding WebAssembly text format
 slug: WebAssembly/Guides/Understanding_the_text_format
 page-type: guide
+browser-compat:
+  - webassembly.multiMemory
+  - webassembly.bulk-memory-operations
+  - webassembly.reference-types
+  - webassembly.multi-value
+  - webassembly.threads-and-atomics
 sidebar: webassemblysidebar
 ---
 
@@ -593,7 +599,7 @@ Memory 2 data
 You can find the full source on GitHub as [multi-memory.html](https://github.com/mdn/webassembly-examples/blob/main/understanding-text-format/multi-memory.html) ([also see it live](https://mdn.github.io/webassembly-examples/understanding-text-format/multi-memory.html))
 
 > [!NOTE]
-> See [`webassembly.multiMemory` in the home page](/en-US/docs/WebAssembly#webassembly.multimemory) for browser compatibility information for this feature.
+> See [`webassembly.multiMemory`](#webassembly.multiMemory) for browser compatibility information for this feature.
 
 ### WebAssembly tables
 
@@ -807,7 +813,7 @@ Each of the modules that is being compiled can import the same memory and table 
 Bulk memory operations are a newer addition to the language. Seven new built-in operations are provided for bulk memory operations, such as copying and initializing, to allow WebAssembly to model native functions like `memcpy` and `memmove` in a more efficient, performant way.
 
 > [!NOTE]
-> See [`webassembly.bulk-memory-operations` in the home page](/en-US/docs/WebAssembly#webassembly.bulk-memory-operations) for browser compatibility information.
+> See [`webassembly.bulk-memory-operations`](#webassembly.bulk-memory-operations) for browser compatibility information.
 
 The new operations are:
 
@@ -848,14 +854,14 @@ The [reference types proposal](https://github.com/WebAssembly/reference-types/bl
 > The [wasm-bindgen](https://rustwasm.github.io/docs/wasm-bindgen/) documentation contains some useful information on how to take advantage of `externref` from Rust.
 
 > [!NOTE]
-> See [`webassembly.reference-types` in the home page](/en-US/docs/WebAssembly#webassembly.reference-types) for browser compatibility information.
+> See [`webassembly.reference-types`](#webassembly.reference-types) for browser compatibility information.
 
 ## Multi-value WebAssembly
 
 Another more recent addition to the language is WebAssembly multi-value, meaning that WebAssembly functions can now return multiple values, and instruction sequences can consume and produce multiple stack values.
 
 > [!NOTE]
-> See [`webassembly.multi-value` in the home page](/en-US/docs/WebAssembly#webassembly.multi-value) for browser compatibility information.
+> See [`webassembly.multi-value`](#webassembly.multi-value) for browser compatibility information.
 
 At the time of writing (June 2020) this is at an early stage, and the only multi-value instructions available are calls to functions that themselves return multiple values. For example:
 
@@ -881,7 +887,7 @@ WebAssembly Threads allow WebAssembly Memory objects to be shared across multipl
 The threads proposal has two parts: shared memories and atomic memory accesses.
 
 > [!NOTE]
-> See [`webassembly.threads-and-atomics` in the home page](/en-US/docs/WebAssembly#webassembly.threads-and-atomics) for browser compatibility information.
+> See [`webassembly.threads-and-atomics` in the home page](#webassembly.threads-and-atomics) for browser compatibility information.
 
 ### Shared memories
 
@@ -924,6 +930,10 @@ Several new Wasm instructions have been added that can be used to implement high
 ## Summary
 
 This finishes our high-level tour of the major components of the WebAssembly text format and how they get reflected in the WebAssembly JS API.
+
+## Browser compatibility
+
+{{Compat}}
 
 ## See also
 

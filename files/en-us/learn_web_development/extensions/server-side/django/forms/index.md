@@ -563,7 +563,7 @@ class RenewBookModelForm(ModelForm):
 ```
 
 > [!NOTE]
-> You can also include all fields in the form using `fields = '__all__'`, or you can use `exclude` (instead of `fields`) to specify the fields _not_ to include from the model).
+> You can also include all fields in the form using `fields = '__all__'`, or you can use `exclude` (instead of `fields`) to specify the fields _not_ to include from the model.
 >
 > Neither approach is recommended because new fields added to the model are then automatically included in the form (without the developer necessarily considering possible security implications).
 

@@ -1696,6 +1696,10 @@
       "inh": "HTMLElement",
       "impl": []
     },
+    "HTMLInstallElement": {
+      "inh": "HTMLElement",
+      "impl": []
+    },
     "HTMLLabelElement": {
       "inh": "HTMLElement",
       "impl": []
@@ -2006,6 +2010,10 @@
     },
     "InstallEvent": {
       "inh": "ExtendableEvent",
+      "impl": []
+    },
+    "InstallResultEvent": {
+      "inh": "Event",
       "impl": []
     },
     "Instance": {
@@ -3805,6 +3813,14 @@
       "impl": []
     },
     "ToggleEvent": {
+      "inh": "Event",
+      "impl": []
+    },
+    "ToolActivatedEvent": {
+      "inh": "Event",
+      "impl": []
+    },
+    "ToolCancelEvent": {
       "inh": "Event",
       "impl": []
     },

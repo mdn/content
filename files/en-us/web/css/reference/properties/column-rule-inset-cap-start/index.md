@@ -11,9 +11,9 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`column-rule-inset-cap-start`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the top of column rule segment [cap endpoints](#understanding_cap_end) at the container's start edge, and cap endpoints where no rule segments intersect.
+The **`column-rule-inset-cap-start`** [CSS](/en-US/docs/Web/CSS) property can be used to offset the top of column rule segment [cap endpoints](/en-US/docs/Web/CSS/Reference/Properties/column-rule-inset-cap#understanding_cap_endpoints) at the container's start edge, and cap endpoints where no rule segments intersect.
 
-{{InteractiveExample("CSS Demo: rule")}}
+{{InteractiveExample("CSS Demo: column-rule-inset-cap-start")}}
 
 <!-- negative example must come first -->
 
@@ -127,7 +127,7 @@ This property is specified as a single value from the following list:
 
 ## Description
 
-The `column-rule-inset-cap-start` property can be used to inset the start edge of [cap segment endpoints](#understanding_cap_end). The default value is `0`, which is the same as `overlap-join`. Positive values reduce the segment size, while negative values increase it.
+The `column-rule-inset-cap-start` property can be used to inset the start edge of [cap segment endpoints](/en-US/docs/Web/CSS/Reference/Properties/column-rule-inset-cap#understanding_cap_endpoints). The default value is `0`, which is the same as `overlap-join`. Positive values reduce the segment size, while negative values increase it.
 
 Column rules are painted within a column gap as one or more segments, with segments occurring between:
 
@@ -294,7 +294,7 @@ inset.addEventListener("input", () => {
 ```js hidden live-sample___caps live-sample___percents
 visibility.addEventListener("change", () => {
   ul.style.ruleVisibilityItems = `${visibility.value}`;
-  if (visibility.value == "between") {
+  if (visibility.value === "between") {
     ul.style.columnRuleStyle = "solid, repeat(2, double)";
   } else {
     ul.style.columnRuleStyle = "solid";
@@ -339,6 +339,8 @@ Setting `100%` insets the start of the cap segments by `20px`. Setting `-200%` w
 This example demonstrates setting `column-rule-inset-cap-start` to inset the start edge of cap segments on flex containers.
 
 #### HTML
+
+The markup includes two {{htmlelement("div")}} elements, each containing seven children. The only difference between the two containers is that the second one has an added `column` class.
 
 ```html
 <h1>Insetting cap column rule endpoints</h1>

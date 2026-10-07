@@ -13,7 +13,7 @@ sidebar: cssref
 
 The **`row-rule-inset-cap`** [shorthand](/en-US/docs/Web/CSS/Guides/Cascade/Shorthand_properties) [CSS](/en-US/docs/Web/CSS) property can be used to offset the row rule segment [cap endpoints](#understanding_cap_endpoints) at the container's left and right edges, and endpoints where the segments don't intersect other column or row segments.
 
-{{InteractiveExample("CSS Demo: rule")}}
+{{InteractiveExample("CSS Demo: row-rule-inset-cap")}}
 
 ```css interactive-example-choice
 row-rule-inset-cap: -20px;
@@ -238,7 +238,6 @@ In the following demonstration, the rows end in cap endpoints at the container's
 ```css hidden live-sample___caps live-sample___percents
 ul {
   display: grid;
-  margin: 0 20px;
   grid-template-columns: repeat(6, auto);
   list-style-type: none;
   gap: 20px;
@@ -311,9 +310,9 @@ inset.addEventListener("input", () => {
 ```js hidden live-sample___caps
 visibility.addEventListener("change", () => {
   ul.style.ruleVisibilityItems = `${visibility.value}`;
-  if (visibility.value == "between") {
+  if (visibility.value === "between") {
     ul.style.rowRuleStyle = "repeat(2, solid), double";
-  } else if (visibility.value == "around") {
+  } else if (visibility.value === "around") {
     ul.style.rowRuleStyle = "repeat(3, solid), repeat(2, double)";
   } else {
     ul.style.rowRuleStyle = "solid";
@@ -324,9 +323,9 @@ visibility.addEventListener("change", () => {
 ```js hidden live-sample___percents
 visibility.addEventListener("change", () => {
   ul.style.ruleVisibilityItems = `${visibility.value}`;
-  if (visibility.value == "between") {
+  if (visibility.value === "between") {
     ul.style.rowRuleStyle = "repeat(2, inset), double, repeat(2, solid)";
-  } else if (visibility.value == "around") {
+  } else if (visibility.value === "around") {
     ul.style.rowRuleStyle = "repeat(3, inset), repeat(2, double)";
   } else {
     ul.style.rowRuleStyle = "solid";
@@ -369,6 +368,8 @@ Select `between` as the `rule-visibility-items` value. As in the previous demons
 This example demonstrates setting `row-rule-inset-cap` to inset the row rule cap segment endpoints on flex containers.
 
 #### HTML
+
+The markup includes two {{htmlelement("div")}} elements, each containing seven children. The only difference between the two containers is that the second one has an added `column` class.
 
 ```html
 <h1>Insetting cap row rule endpoints</h1>
