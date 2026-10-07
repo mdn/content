@@ -528,7 +528,7 @@ This header doesn't provide any value, and in some cases, the information it pro
 </IfModule>
 ```
 
-If you can, you should disable the `X-Powered-By` header from the language/framework level (e.g.: for PHP, you can do that by setting the following in `php.ini`).
+If you can, you should disable the `X-Powered-By` header at the language/framework level. For example, in PHP, you can do that by setting the following in `php.ini`:
 
 ```ini
 expose_php = off;
