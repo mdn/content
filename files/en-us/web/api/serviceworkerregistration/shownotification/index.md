@@ -8,9 +8,7 @@ browser-compat: api.ServiceWorkerRegistration.showNotification
 
 {{APIRef("Web Notifications")}}{{SecureContext_Header}} {{AvailableInWorkers}}
 
-The **`showNotification()`** method of the
-{{domxref("ServiceWorkerRegistration")}} interface creates a notification on an active
-service worker.
+{{domxref("ServiceWorkerRegistration")}} interface creates a [persistent notification](/en-US/docs/Web/API/Notifications_API#persistent_notifications) associated with this service worker registration.
 
 ## Syntax
 
@@ -150,7 +148,7 @@ self.addEventListener("notificationclick", (event) => {
 });
 ```
 
-You can also retrieve details of the {{domxref("Notification")}}s that have been fired from the current service worker using {{domxref("ServiceWorkerRegistration.getNotifications()")}}.
+You can also retrieve details of the notifications that have been fired from the current service worker using {{domxref("ServiceWorkerRegistration.getNotifications()")}}.
 
 ### Notifications with actions and action handlers
 

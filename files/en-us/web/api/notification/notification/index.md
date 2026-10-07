@@ -8,11 +8,11 @@ browser-compat: api.Notification.Notification
 
 {{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
 
-The **`Notification()`** constructor creates a new {{domxref("Notification")}} object instance, which represents a user notification.
+The **`Notification()`** constructor creates a new {{domxref("Notification")}} object instance, which represents a [non-persistent notification](/en-US/docs/Web/API/Notifications_API#non-persistent_notifications).
 
 > [!WARNING]
 > This constructor throws a {{jsxref("TypeError")}} when called in nearly all mobile browsers.
-> Instead, you need to register a service worker and use {{domxref("ServiceWorkerRegistration.showNotification()")}}.
+> Instead, you need to create a [persistent notification](/en-US/docs/Web/API/Notifications_API#persistent_notifications) by calling {{domxref("ServiceWorkerRegistration.showNotification()")}}, and use a service worker to handle any user interaction with the notification.
 
 ## Syntax
 
