@@ -42,7 +42,7 @@ All properties are read-only.
 | `minStorageBufferOffsetAlignment`                                                                                                                                                                                                                                     | 256 bytes                |
 | `maxVertexBuffers`                                                                                                                                                                                                                                                    | 8                        |
 | `maxBufferSize`                                                                                                                                                                                                                                                       | 268435456 bytes (256 MB) |
-| `maxVertexAttributes`                                                                                                                                                                                                                                                 | 16 (30 in Chrome)        |
+| `maxVertexAttributes`                                                                                                                                                                                                                                                 | 16                       |
 | `maxVertexBufferArrayStride`                                                                                                                                                                                                                                          | 2048 bytes               |
 | `maxInterStageShaderComponents` {{deprecated_inline}} {{non-standard_inline}} (use `maxInterStageShaderVariables` instead, see [deprecation notice](https://developer.chrome.com/blog/new-in-webgpu-133#deprecate_maxinterstageshadercomponents_limit) for more info) | 60                       |
 | `maxInterStageShaderVariables`                                                                                                                                                                                                                                        | 16                       |
@@ -66,6 +66,14 @@ If your GPU's actual limit is 16384, the browser will still report 8192.
 Given that different browsers will handle this differently and the tier values may change over time, it is hard to provide an accurate account of what limit values to expect — thorough testing is advised.
 
 Note that when calling {{domxref("GPUAdapter.requestDevice()")}} to request a {{domxref("GPUDevice")}} that meets some minimum requirements ("limits"), you pass an object that has the same property names as `GPUSupportedLimits`.
+
+### Maximum versus default values
+
+Generally, the default values listed in the [Instance properties](#instance_properties) table are also the maximum allowed values for those limits. In cases where this is not true, we will list differing maximum values in the [browser compatibility table](#browser_compatibility), but we will also list them here for ease of use:
+
+| Limit name            | Maximum requestable |
+| --------------------- | ------------------- |
+| `maxVertexAttributes` | 30 in Chrome        |
 
 ## Examples
 
