@@ -64,24 +64,25 @@ In the future, WebAssembly modules will be [loadable just like ES modules](https
 
 ## How do I use WebAssembly in my app?
 
-Above we talked about the raw primitives that WebAssembly adds to the Web platform: a binary format for code and APIs for loading and running this binary code. Now let's talk about how we can use these primitives in practice.
+As we mentioned from the start, you don't write Wasm by hand, because Wasm is a binary format. Rather, you write code in a high-level programming language (usually statically typed) you are already familiar with, and use a compiler to output Wasm. Some common input sources are:
 
-The WebAssembly ecosystem is at a nascent stage; more tools will undoubtedly emerge going forward. Right now, there are four main entry points:
-
+- Using a compiler that targets WebAssembly.
 - Porting a C/C++ application with [Emscripten](https://emscripten.org/).
-- Writing or generating WebAssembly directly at the assembly level.
-- Writing a Rust application and targeting WebAssembly as its output.
-- Using [AssemblyScript](https://www.assemblyscript.org/) which looks similar to TypeScript and compiles to WebAssembly binary.
+- Directly writing the text format (WAT).
 
 Let's talk about these options:
 
+### Using a compiler targeting WebAssembly
+
+Many existing compilers now support Wasm as a compilation target. For example, [Clang/LLVM](https://clang.llvm.org/) supports Wasm output with `--target=wasm32`. You can test this out online in the [Compiler Explorer](https://godbolt.org/) if you select a Clang compiler (like the most recent x86-64 Clang) and pass `--target=wasm32` in the compiler options.
+
+It is also possible to write Rust code and compile over to WebAssembly, thanks to the tireless work of the Rust WebAssembly Working Group. You can get started with installing the necessary toolchain, compiling a sample Rust program to a WebAssembly npm package, and using that in a sample web app, over at our [Compiling from Rust to WebAssembly](/en-US/docs/WebAssembly/Guides/Rust_to_Wasm) article.
+
+For web developers who want to try WebAssembly without needing to learn the details of C or Rust, staying in the comfort of a familiar language like TypeScript, [AssemblyScript](https://www.assemblyscript.org/) will be the best option. Because of the dynamic nature of JavaScript, even ordinary type annotations of TypeScript may not actually be compilable, so AssemblyScript only supports a strict variant of TypeScript. It still allows you to keep using TypeScript-compatible tooling you are familiar with — such as Prettier, ESLint, VS Code IntelliSense, etc.
+
 ### Porting from C/C++
 
-Two of the many options for creating Wasm code are an online compiler or [Emscripten](https://emscripten.org/). For example, [Compiler Explorer](https://godbolt.org/) can compile C or C++ to Wasm in the browser if you select a Clang compiler and pass `--target=wasm32`.
-
-Online compilers are great for people who are trying to figure out where to start, but they lack some of the tooling and optimizations of Emscripten.
-
-The Emscripten tool is able to take just about any C/C++ source code and compile it into a Wasm module, plus the necessary JavaScript "glue" code for loading and running the module, and an HTML document to display the results of the code.
+Unlike compilers, the Emscripten tool is a full toolchain—basically, it emulates a collection of platform APIs the C/C++ code may call so that the application's behavior is also preserved when running in a browser. In addition to a Wasm module, it also generates the necessary JavaScript "glue" code for loading and running the module, and an HTML document to display the results of the code.
 
 ![Diagram: Emscripten compiles C/C++ source code and into a Wasm module, an HTML document along with the JavaScript glue code.](emscripten-diagram.png)
 
@@ -109,14 +110,6 @@ Do you want to build your own compiler, or your own tools, or make a JavaScript 
 In the same fashion as physical assembly languages, the WebAssembly binary format has a text representation — the two have a 1:1 correspondence. You can write or generate this format by hand and then convert it into the binary format with any of several [WebAssembly text-to-binary tools](https://webassembly.org/getting-started/advanced-tools/).
 
 For a simple guide on how to do this, see our [Converting WebAssembly text format to Wasm](/en-US/docs/WebAssembly/Guides/Text_format_to_Wasm) article.
-
-### Writing Rust Targeting WebAssembly
-
-It is also possible to write Rust code and compile over to WebAssembly, thanks to the tireless work of the Rust WebAssembly Working Group. You can get started with installing the necessary toolchain, compiling a sample Rust program to a WebAssembly npm package, and using that in a sample web app, over at our [Compiling from Rust to WebAssembly](/en-US/docs/WebAssembly/Guides/Rust_to_Wasm) article.
-
-### Using AssemblyScript
-
-For web developers who want to try WebAssembly without needing to learn the details of C or Rust, staying in the comfort of a familiar language like TypeScript, AssemblyScript will be the best option. AssemblyScript compiles a strict variant of TypeScript to WebAssembly, allowing web developers to keep using TypeScript-compatible tooling they are familiar with — such as Prettier, ESLint, VS Code IntelliSense, etc. You can check its documentation on <https://www.assemblyscript.org/>.
 
 ## Summary
 
