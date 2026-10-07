@@ -878,7 +878,7 @@ Add the following tests to the bottom of the test class. These check that only u
         self.assertTemplateUsed(response, 'catalog/book_renew_librarian.html')
 ```
 
-Add the next test method, as shown below. This checks that the initial date for the form is three weeks in the future. Note how we are able to access the value of the initial value of the form field (`response.context['form'].initial['renewal_date'])`.
+Add the next test method, as shown below. This checks that the initial date for the form is three weeks in the future. Note how we are able to access the value of the initial value of the form field (`response.context['form'].initial['renewal_date']`).
 
 ```python
     def test_form_renewal_date_initially_has_date_three_weeks_in_future(self):
