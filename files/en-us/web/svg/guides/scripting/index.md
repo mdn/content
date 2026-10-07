@@ -126,7 +126,7 @@ output {
 }
 ```
 
-The {{domxref("SVGGraphicsElement.getScreenCTM()")}} method returns a _screen coordinate transformation matrix_ (screen CTM), which, when applied to a {{domxref("DOMPoint")}} in the user coordinate space, gives the same point in screen coordinate space. Here, we already have the event coordinates in the screen coordinate space, so to do the reverse transformation, we apply the [_inverse_](/en-US/docs/Web/API/DOMMatrixReadOnly/inverse) of the screen CTM to the point using {{domxref("DOMPointReadOnly.matrixTransform()")}}.
+The {{domxref("SVGGraphicsElement.getScreenCTM()")}} method returns a _screen coordinate transformation matrix_ (screen CTM), which, when applied to a {{domxref("DOMPoint")}} in the user coordinate space, gives the same point in client coordinate space (confusingly, not screen coordinate space). Here, we already have the event coordinates in the client coordinate space, so to do the reverse transformation, we apply the [_inverse_](/en-US/docs/Web/API/DOMMatrixReadOnly/inverse) of the screen CTM to the point using {{domxref("DOMPointReadOnly.matrixTransform()")}}.
 
 ```js
 const svg = document.getElementById("grid");
@@ -224,7 +224,7 @@ To apply styles using CSS, use techniques you are already familiar with from HTM
 circle.style.fillOpacity = 0.5;
 ```
 
-Presentation attributes are treated as author-origin declarations with a specificity of zero, inserted at the start of the author style sheet, so any rule in a style sheet overrides them. On the other hand, inline styles set with `element.style` have the highest precedence and override everything in separate style sheets.
+Presentation attributes are treated as author-origin declarations with a specificity of zero, inserted at the start of the author style sheet, so any rule in a style sheet overrides them. On the other hand, inline styles set with `element.style` take precedence over normal style sheet declarations.
 
 This example starts with two identical circles:
 
