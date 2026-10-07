@@ -18,7 +18,7 @@ One common solution is to overlay simplified, invisible objects atop the objects
 
 ## Real-world hit testing
 
-The acronym "LIDAR" has multiple definitions depending on specifics of how it's implemented, but the end result is the same. Most commonly, it refers to "_Laser Imaging, Detection, And Ranging_" or "_LIght Detection and Ranging_").
+The acronym "LIDAR" has multiple definitions depending on specifics of how it's implemented, but the end result is the same. Most commonly, it refers to "_Laser Imaging, Detection, And Ranging_" or "_LIght Detection and Ranging_".
 
 Testing for collisions with the real world is a different problem, which may involve not only interpreting the imagery from the device's camera (if available) but also potentially multiple additional sensors. Some devices include infrared sensors to help range objects, and others provide powerful [LIDAR](https://en.wikipedia.org/wiki/LIDAR) systems, which use lasers (usually infrared lasers, which can't be seen by the human eye) to determine range to objects in the world.
 
