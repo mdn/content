@@ -89,5 +89,5 @@ You can find more such features on the [Experimental features](/en-US/docs/Mozil
 
 - **`corner-shape` properties**: `layout.css.corner-shape.enabled`
 
-  The {{cssxref("corner-shape")}} shorthand property, and the longhand properties, now support the {{cssxref("corner-shape-value")}} values and {{cssxref("superellipse")}} function.
+  The {{cssxref("corner-shape")}} shorthand property and its constituent longhand properties are now supported in Nightly. These properties let you customize corner shapes using one of the {{cssxref("corner-shape-value")}} keyword values or the {{cssxref("superellipse")}} function.
   ([Firefox bug 2070927](https://bugzil.la/2070927)).
