@@ -11,7 +11,7 @@ sidebar: cssref
 
 {{SeeCompatTable}}
 
-The **`rule-overlap`** [CSS](/en-US/docs/Web/CSS) property sets the paint order for overlapping gap decorations, defining whether the column rule or row rule is painted on top when the two intersect.
+The **`rule-overlap`** [CSS](/en-US/docs/Web/CSS) property specifies which rule is painted on top when column rules and row rules intersect.
 
 {{InteractiveExample("CSS Demo: rule-overlap")}}
 
@@ -88,9 +88,9 @@ rule-overlap: unset;
 This property is specified as a single keyword from the following list:
 
 - `row-over-column`
-  - : Row rules are painted above column rules. This is the default value.
+  - : Specifies that row rules are painted over column rules. This is the default value.
 - `column-over-row`
-  - : Column rules are painted above row rules.
+  - : Specifies that column rules are painted over row rules.
 
 ## Formal definition
 
@@ -104,7 +104,7 @@ This property is specified as a single keyword from the following list:
 
 ### Basic usage
 
-In this example, we use the `rule-overlap` property to define the column rules to be painted on top of the row rules.
+In this example, we use the `rule-overlap` property to paint column rules on top of row rules.
 
 #### HTML
 
@@ -208,7 +208,7 @@ We create a list of 75 items. Most of the HTML is hidden for brevity.
 
 #### CSS
 
-We define the unordered list as a 10-column container, create columns and rows with the {{cssxref("grid-template-columns")}} property, and define an empty string for the {{cssxref("list-style-type")}} to to remove the bullets. We include a {{cssxref("gap")}} of `20px` to provide enough room between the columns and rows to fit our `20px` solid column and row rules. Finally, we use the `rule-overlap` property to draw the column rules on top of the row rules.
+We define the unordered list as a 10-column grid container using the {{cssxref("grid-template-columns")}} property. We set {{cssxref("list-style-type")}} to an empty string to remove the bullets. We include a {{cssxref("gap")}} of `20px` to provide enough room between the columns and rows to fit our `20px` solid column and row rules. Finally, we use the `rule-overlap` property to draw the column rules on top of the row rules.
 
 ```css live-sample___basic
 ul {
@@ -238,7 +238,7 @@ li {
 @layer no-support {
   @supports not (rule-overlap: row-over-column) {
     body::before {
-      content: "Your browser doesn't support the rule-overlap shorthand";
+      content: "Your browser doesn't support the rule-overlap property.";
       background-color: wheat;
       display: block;
       text-align: center;
@@ -252,7 +252,7 @@ li {
 
 {{EmbedLiveSample("Basic", "", "625")}}
 
-Check the box to toggle the value of the `rule-overlap` property.
+Select the checkbox to toggle the value of the `rule-overlap` property.
 
 ## Specifications
 
