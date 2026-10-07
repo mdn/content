@@ -77,12 +77,9 @@ Let's talk about these options:
 
 ### Porting from C/C++
 
-Two of the many options for creating Wasm code are an online Wasm assembler or [Emscripten](https://emscripten.org/). There are a number of online Wasm assembler choices, such as:
+Two of the many options for creating Wasm code are an online compiler or [Emscripten](https://emscripten.org/). For example, [Compiler Explorer](https://godbolt.org/) can compile C or C++ to Wasm in the browser if you select a Clang compiler and pass `--target=wasm32`.
 
-- [WasmFiddle++](https://anonyco.github.io/WasmFiddlePlusPlus/)
-- [WasmExplorer](https://mbebenita.github.io/WasmExplorer/)
-
-These are great resources for people who are trying to figure out where to start, but they lack some of the tooling and optimizations of Emscripten.
+Online compilers are great for people who are trying to figure out where to start, but they lack some of the tooling and optimizations of Emscripten.
 
 The Emscripten tool is able to take just about any C/C++ source code and compile it into a Wasm module, plus the necessary JavaScript "glue" code for loading and running the module, and an HTML document to display the results of the code.
 
