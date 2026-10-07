@@ -52,25 +52,25 @@ The different code types can call each other as required — the [WebAssembly Ja
 There are several key concepts needed to understand how WebAssembly runs in the browser. All of these concepts are reflected 1:1 in the [WebAssembly JavaScript API](/en-US/docs/WebAssembly/Reference/JavaScript_interface).
 
 - **Module**: Represents a WebAssembly binary that has been compiled by the browser into executable machine code. A Module is stateless and thus, like a [`Blob`](/en-US/docs/Web/API/Blob), can be explicitly shared between windows and workers (via [`postMessage()`](/en-US/docs/Web/API/MessagePort/postMessage)). A Module declares imports and exports just like an ES module.
-- **Memory**: A growable chunk that contains the linear array of bytes read and written by WebAssembly's low-level memory access instructions.
-- **Table**: A resizable typed array of references (e.g., to functions) that could not otherwise be stored as raw bytes in Memory (for safety and portability reasons).
-- **Instance**: A Module paired with all the state it uses at runtime including a Memory, Table, and set of imported values. An Instance is like an ES module that has been loaded into a particular global with a particular set of imports.
+- **Memory**: A growable buffer that contains the linear array of bytes read and written by WebAssembly's low-level memory access instructions.
+- **Table**: A growable array of references (e.g., to functions) that could not otherwise be stored as raw bytes in Memory (for safety and portability reasons).
+- **Instance**: A Module paired with all the state it uses at runtime including Memories, Tables, and imported values. An Instance is like an ES module that has been loaded into a particular global with a particular set of imports.
 
 The JavaScript API provides developers with the ability to create modules, memories, tables, and instances. Given a WebAssembly instance, JavaScript code can synchronously call its exports, which are exposed as normal JavaScript functions. Arbitrary JavaScript functions can also be synchronously called by WebAssembly code by passing in those JavaScript functions as the imports to a WebAssembly instance.
 
 Since JavaScript has complete control over how WebAssembly code is downloaded, compiled and run, JavaScript developers could even think of WebAssembly as just a JavaScript feature for efficiently generating high-performance functions.
 
-In the future, WebAssembly modules will be [loadable just like ES modules](https://github.com/WebAssembly/esm-integration) (using `<script type='module'>` and regular `import` declarations), meaning that JavaScript will be able to fetch, compile, and import a WebAssembly module as easily as an ES module.
+In the future, WebAssembly modules will be [loadable just like ES modules](https://github.com/WebAssembly/esm-integration) (using `<script type="module">` and regular `import` declarations), meaning that JavaScript will be able to fetch, compile, and import a WebAssembly module as easily as an ES module.
 
 ## How do I use WebAssembly in my app?
 
-As we mentioned from the start, WebAssembly is not primarily intended to be written by hand. Usually, you write code in a high-level, statically typed language and use a compiler to output Wasm. For C/C++ applications, you can also port its whole execution environment using [Emscripten](https://emscripten.org/). In rare cases, you can also directly write the text format (WAT).
+As we mentioned from the start, WebAssembly is not primarily intended to be written by hand. Usually, you write code in a high-level, statically typed language and use a compiler to output Wasm. For a C/C++ application, you can also port its whole execution environment using [Emscripten](https://emscripten.org/). In rare cases, you can also directly write the text format (WAT).
 
 Let's talk about these options.
 
 ### Using a compiler targeting WebAssembly
 
-Many existing compilers now support Wasm as a compilation target. For example, [Clang/LLVM](https://clang.llvm.org/) supports Wasm output with `--target=wasm32`. You can test this out online in the [Compiler Explorer](https://godbolt.org/) by selecting the "WebAssembly Clang" compiler. The explorer outputs LLVM's WebAssembly assembly syntax, which is slightly different from actual WAT.
+Many existing compilers now support Wasm as a compilation target. For example, [Clang/LLVM](https://clang.llvm.org/) supports Wasm output with `--target=wasm32`. You can test this out online in the [Compiler Explorer](https://godbolt.org/) by selecting the "WebAssembly Clang" compiler. Note that the explorer outputs LLVM's Wasm assembly syntax, which is different from actual WAT.
 
 It is also possible to write Rust code and compile over to WebAssembly, thanks to the tireless work of the Rust WebAssembly Working Group. You can get started with installing the necessary toolchain, compiling a sample Rust program to a WebAssembly npm package, and using that in a sample web app, over at our [Compiling from Rust to WebAssembly](/en-US/docs/WebAssembly/Guides/Rust_to_Wasm) article.
 
