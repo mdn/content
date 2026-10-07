@@ -490,6 +490,7 @@ The {{cssxref("random")}} CSS function generates a random value within a specifi
 | Release           | 158           | No                  |
 
 - `layout.css.random.enabled`
+
 ### `corner-shape` properties
 
 The {{cssxref("corner-shape")}} shorthand property and its constituent longhand properties are now supported in Nightly. These properties let you customize corner shapes using one of the {{cssxref("corner-shape-value")}} keyword values or the {{cssxref("superellipse")}} function.
